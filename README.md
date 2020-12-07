@@ -6,7 +6,7 @@ Styled (and unstyled) UI Components for Tailwind CSS users
 # Install  
 
 ```
-npm i ivyui postcss-cli postcss-import postcss-nested
+npm i ivyui
 ```
 
 ## Add plugin and preset to `tailwind.config.js`
