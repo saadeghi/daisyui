@@ -1,6 +1,6 @@
 
 :root {
-  
+
   /* color variants */
   /* color values are HSL */
   --color-default: 0, 0%, 100%;
@@ -39,7 +39,7 @@
   /* border-radius variants */
   --rounded-box: 1rem;
   --rounded-btn: 0.5rem;
-  --rounded-badge: 0.25rem;
+  --rounded-badge: 9999px;
 }
 
 [data-theme='dark'] {

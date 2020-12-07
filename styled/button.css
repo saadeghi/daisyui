@@ -4,7 +4,10 @@
   &.active {
     @apply bg-content-700 border-content-700;
   }
-  &:focus {
+  &:active:hover{
+    @apply transform scale-95;
+  }
+  &:focus-visible {
     box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-content-700));
   }
 
@@ -15,7 +18,7 @@
     &.active {
       @apply bg-primary-darken border-primary-darken;
     }
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-primary));
     }
   }
@@ -25,7 +28,7 @@
     &.active {
       @apply bg-secondary-darken border-secondary-darken;
     }
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-secondary));
     }
   }
@@ -35,7 +38,7 @@
     &.active {
       @apply bg-accent-darken border-accent-darken;
     }
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-accent));
     }
   }
@@ -45,7 +48,7 @@
     &.active {
       @apply bg-content-200 border-content-200 text-content-600;
     }
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-content-200));
     }
   }
@@ -55,7 +58,7 @@
     &.active {
       @apply underline bg-transparent border-transparent;
     }
-    &:focus {
+    &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-primary));
     }
   }

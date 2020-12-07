@@ -12,16 +12,7 @@
 
   /* outline */
   &.outline {
-    @apply bg-transparent text-content-600;
-    &.primary {
-      @apply text-primary;
-    }
-    &.secondary {
-      @apply text-secondary;
-    }
-    &.accent {
-      @apply text-accent;
-    }
+    @apply bg-transparent text-content-600 border-content-600;
   }
 }
 .btn .badge {
