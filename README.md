@@ -9,8 +9,8 @@ Unstyled *(or styled)* UI component library for [Tailwind CSS](https://tailwindc
 It's all based on tailwind so you can customize everything with utility classes and [purge](https://tailwindcss.com/docs/optimizing-for-production#purge-css-options) all unused class names.
 ### What's included?
 When you add **DaisyUI** as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `btn`, `card`, `alert`, etc...  
-If you use the unstyled version, it has no color or visual style so you can fully style the components with Tailwind utility classes. If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind classes.
-###Concepts
+If you use the unstyled version, it has no color or visual style so you can fully style the components with Tailwind utility classes. If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind classes.  
+### Concepts
 - **Typography, spacing, layout** You will handle these with tailwind classes.
 - **Colors and theming** You should ditch Tailwind's default and multi-purpose color set and set your custom set of colors for a DaisyUI project. ([Color guide - will be added soon](#))
 - **Components** (like button, card, etc...) DaisyUI will handle this
