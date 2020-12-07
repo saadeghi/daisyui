@@ -1,7 +1,6 @@
 .form-control{
-  @apply flex flex-col;
   label{
-    @apply px-1 flex items-center justify-between py-2;
+    @apply px-1 py-2;
     .label-text{
       @apply text-sm text-content-500;
     }
@@ -13,9 +12,8 @@
     }
   }
   input[type=text]{
-    @apply bg-default px-6 leading-loose text-lg h-12 rounded-btn border border-content-300 transition duration-200 ease-in-out;
+    @apply bg-default px-6 leading-loose text-lg h-12 rounded-btn border border-content-300;
     &:focus {
-      @apply relative outline-none;
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-content-300));
     }
   }
@@ -23,7 +21,6 @@
     input[type=text]{
       @apply border-info;
       &:focus {
-        @apply relative outline-none;
         box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-info));
       }
     }
@@ -32,7 +29,6 @@
     input[type=text]{
       @apply border-success;
       &:focus {
-        @apply relative outline-none;
         box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-success));
       }
     }
@@ -41,7 +37,6 @@
     input[type=text]{
       @apply border-warning;
       &:focus {
-        @apply relative outline-none;
         box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-warning));
       }
     }
@@ -50,7 +45,6 @@
     input[type=text]{
       @apply border-error;
       &:focus {
-        @apply relative outline-none;
         box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-error));
       }
     }

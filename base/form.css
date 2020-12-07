@@ -1,0 +1,12 @@
+.form-control{
+  @apply flex flex-col;
+  label{
+    @apply flex items-center justify-between;
+  }
+  input[type=text]{
+    @apply transition duration-200 ease-in-out;
+    &:focus {
+      @apply relative outline-none;
+    }
+  }
+}
