@@ -1,5 +1,5 @@
 module.exports = ({ addComponents, theme }) => {
     addComponents(
-        require("./dist/base.js")
+        require("./dist/styled.js")
     )
 }

@@ -106,6 +106,20 @@
     margin-right: 0.75rem;
   }
 
+.badge {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
 .btn {
   cursor: pointer;
   display: flex;
@@ -272,4 +286,62 @@
 
 .btn-group > input[type="radio"].btn:before {
     content: attr(data-title);
+  }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.card.side {
+    flex-direction: row;
+  }
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+.card:not(.side) > figure, .card:not(.side) > figure > * {
+    width: 100%;
+  }
+
+.card.side {
+    align-items: stretch;
+  }
+
+.card-actions {
+    display: flex;
+    align-items: flex-start;
+  }
+
+.card.image-full {
+    display: grid;
+  }
+
+.card.image-full:before {
+      position: relative;
+      content: "";
+    }
+
+.card.image-full:before, .card.image-full > * {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+
+.card.image-full > figure img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+
+.card.side.image-full > figure img {
+    width: 100%;
+  }
+
+.card.image-full > .card-body {
+    position: relative;
   }

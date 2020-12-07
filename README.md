@@ -13,7 +13,8 @@ npm i daisyui
 ```
 module.exports = {
   plugins: [
-    require('daisyui'),
+    require('daisyui/styled'), // 🌼 for styled UI
+    // require('daisyui'), // for base UI only
   ],
   presets: [
     require('daisyui/preset')
@@ -23,7 +24,11 @@ module.exports = {
 ```
 
 # Or use a CDN
+🌼 styled version
 ```
 <link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.min.css" />
-
+```
+unstyled version
+```
+<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.min.css" />
 ```

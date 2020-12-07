@@ -106,6 +106,20 @@
     margin-right: 0.75rem;
   }
 
+.badge {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
 .btn {
   cursor: pointer;
   display: flex;
@@ -272,6 +286,64 @@
 
 .btn-group > input[type="radio"].btn:before {
     content: attr(data-title);
+  }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.card.side {
+    flex-direction: row;
+  }
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+.card:not(.side) > figure, .card:not(.side) > figure > * {
+    width: 100%;
+  }
+
+.card.side {
+    align-items: stretch;
+  }
+
+.card-actions {
+    display: flex;
+    align-items: flex-start;
+  }
+
+.card.image-full {
+    display: grid;
+  }
+
+.card.image-full:before {
+      position: relative;
+      content: "";
+    }
+
+.card.image-full:before, .card.image-full > * {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+
+.card.image-full > figure img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+
+.card.side.image-full > figure img {
+    width: 100%;
+  }
+
+.card.image-full > .card-body {
+    position: relative;
   }
 
 :root {
@@ -513,19 +585,8 @@
   border-color: hsla(var(--color-content-600), var(--tw-border-opacity, 1));
   border-radius: var(--rounded-badge, 0.25rem);
   border-width: 1px;
-  display: inline-block;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  line-height: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   --tw-text-opacity: 1;
   color: hsla(var(--color-content-100), var(--tw-text-opacity, 1));
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
 }
 
 .badge.primary {
@@ -1002,40 +1063,16 @@
   border-color: hsla(var(--color-content-200), var(--tw-border-opacity, 1));
   border-radius: var(--rounded-box, 1rem);
   border-width: 1px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
 }
 
-.card.side {
-    flex-direction: row;
-  }
-
 .card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
     padding: 2rem;
-  }
-
-.card:not(.side) > figure, .card:not(.side) > figure > * {
-    width: 100%;
-  }
-
-.card.side {
-    align-items: stretch;
   }
 
 .card-title {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin-bottom: 0.75rem;
-  }
-
-.card-actions {
-    display: flex;
-    align-items: flex-start;
   }
 
 .card-actions:first-child {
@@ -1046,36 +1083,14 @@
     margin-top: 1.5rem;
   }
 
-.card.image-full {
-    display: grid;
-  }
-
 .card.image-full:before {
       --tw-bg-opacity: 1;
       background-color: hsla(var(--color-content-900), var(--tw-bg-opacity, 1));
       opacity: 0.75;
-      position: relative;
       z-index: 10;
-      content: "";
     }
-
-.card.image-full:before, .card.image-full > * {
-      grid-column-start: 1;
-      grid-row-start: 1;
-    }
-
-.card.image-full > figure img {
-      height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover;
-    }
-
-.card.side.image-full > figure img {
-    width: 100%;
-  }
 
 .card.image-full > .card-body {
-    position: relative;
     --tw-text-opacity: 1;
     color: hsla(var(--color-content-100), var(--tw-text-opacity, 1));
     z-index: 20;

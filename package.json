@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "0.1.02",
+  "version": "0.1.03",
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
   "main": "index",
   "typings": "index",
@@ -31,6 +31,7 @@
     "postcss": "postcss base.css -o dist/base.css && postcss styled.css -o dist/styled.css",
     "min": " MINIFY=true postcss base.css -o dist/base.min.css && MINIFY=true postcss styled.css -o dist/styled.min.css",
     "json": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs",
-    "dev": "npm run postcss && npm run json"
+    "dev": "npm run postcss && npm run json",
+    "build": "npm run postcss && npm run json && npm run min"
   }
 }
