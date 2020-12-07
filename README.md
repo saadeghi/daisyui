@@ -110,7 +110,7 @@ If you want to use your custom colors, you need to define the color values in yo
 - [x] Badge
 - [ ] Banner
 - [ ] Breadcrumb
-- [x] Button
+- [x] [Button](docs/button.md)
 - [x] Button group
 - [x] Card
 - [ ] Chat bubble
