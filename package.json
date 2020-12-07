@@ -4,6 +4,12 @@
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
   "main": "index",
   "typings": "index",
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saadeghi/daisyui.git"
