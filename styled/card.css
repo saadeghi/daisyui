@@ -1,23 +1,10 @@
 .card {
-  @apply flex flex-col relative rounded-box border border-content-200 overflow-hidden;
-  &.side {
-    @apply flex-row;
-  }
+  @apply rounded-box border border-content-200;
   &-body {
-    @apply flex flex-col flex-auto p-8;
-  }
-  &:not(.side) > figure,
-  &:not(.side) > figure > * {
-    @apply w-full;
-  }
-  &.side {
-    @apply items-stretch;
+    @apply p-8;
   }
   &-title {
     @apply mb-3 text-xl;
-  }
-  &-actions {
-    @apply flex items-start;
   }
   &-actions:first-child {
     @apply mb-2;
@@ -26,23 +13,11 @@
     @apply mt-6;
   }
   &.image-full {
-    @apply grid;
     &:before {
-      @apply bg-content-900 z-10 relative opacity-75;
-      content: "";
+      @apply bg-content-900 z-10 opacity-75;
     }
-    &:before,
-    & > * {
-      @apply row-start-1 col-start-1;
-    }
-    & > figure img {
-      @apply object-cover h-full;
-    }
-  }
-  &.side.image-full > figure img {
-    @apply w-full;
   }
   &.image-full > &-body {
-    @apply text-content-100 z-20 relative;
+    @apply text-content-100 z-20;
   }
 }

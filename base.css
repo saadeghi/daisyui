@@ -1,3 +1,5 @@
 @import "./base/accordion";
 @import "./base/alert";
+@import "./base/badge";
 @import "./base/button";
+@import "./base/card";

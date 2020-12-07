@@ -1,0 +1,3 @@
+.badge {
+  @apply inline-block leading-4 text-sm px-2 transition duration-200 ease-in-out;
+}

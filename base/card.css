@@ -1,0 +1,39 @@
+.card {
+  @apply flex flex-col relative overflow-hidden;
+  &.side {
+    @apply flex-row;
+  }
+  &-body {
+    @apply flex flex-col flex-auto;
+  }
+  &:not(.side) > figure,
+  &:not(.side) > figure > * {
+    @apply w-full;
+  }
+  &.side {
+    @apply items-stretch;
+  }
+  &-actions {
+    @apply flex items-start;
+  }
+  &.image-full {
+    @apply grid;
+    &:before {
+      @apply relative;
+      content: "";
+    }
+    &:before,
+    & > * {
+      @apply row-start-1 col-start-1;
+    }
+    & > figure img {
+      @apply object-cover h-full;
+    }
+  }
+  &.side.image-full > figure img {
+    @apply w-full;
+  }
+  &.image-full > &-body {
+    @apply relative;
+  }
+}

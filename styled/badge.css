@@ -1,5 +1,5 @@
 .badge {
-  @apply inline-block bg-content-600 border border-content-600 text-content-100 rounded-badge leading-4 text-sm px-2 transition duration-200 ease-in-out;
+  @apply bg-content-600 border border-content-600 text-content-100 rounded-badge;
   &.primary {
     @apply bg-primary border-primary text-content-primary;
   }
