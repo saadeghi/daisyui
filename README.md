@@ -1,27 +1,74 @@
 # DaisyUI 🌼
 
-Unstyled *(or styled)* UI component library for [Tailwind CSS](https://tailwindcss.com/) users
+Unstyled *(and styled)* UI component library for [Tailwind CSS](https://tailwindcss.com/) users
+  
+<details>
+<summary>
+  Why do I need it?
+</summary>
 
-### Why?
-[Utility first](https://tailwindcss.com/docs/utility-first) is fast and scalable but developing a scalable design system with utility first is messy, time consuming hard to manage. So why not put all basic skeleton of your UI components in one place and use it on all your design systems then use the power of utility first everywhere?  
-### How?
-**DaisyUI** provides basic and unstyled component classes that you can use for almost all design systems. It also has an optional style that you can use if you don't want to fully design your components.  
-It's all based on tailwind so you can customize everything with utility classes and [purge](https://tailwindcss.com/docs/optimizing-for-production#purge-css-options) all unused class names.
-### What's included?
-When you add **DaisyUI** as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `btn`, `card`, `alert`, etc...  
-If you use the unstyled version, it has no color or visual style so you can fully style the components with Tailwind utility classes. If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind classes.  
-### Concepts
-- **Typography, spacing, layout** You will handle these with tailwind classes.
-- **Colors and theming** You should ditch Tailwind's default and multi-purpose color set and set your custom set of colors for a DaisyUI project. ([Color guide - will be added soon](#))
-- **Components** (like button, card, etc...) DaisyUI will handle this
+> [↗︎ Utility first](https://tailwindcss.com/docs/utility-first) is fast and scalable but developing a scalable design system with utility first is messy, time consuming hard to manage. So why not put all basic skeleton of your UI components in one place and use it on all your design systems then use the power of utility first everywhere?  
+  
+</details>
+  
+<details>
+<summary>
+  How does it work?
+</summary>
 
-# Install  
+> **DaisyUI** provides basic and unstyled component classes that you can use for almost all design systems. It also has an optional style that you can use if you don't want to fully design your components.  
+> It's all based on tailwind so you can customize everything with utility classes and [↗︎ purge](https://tailwindcss.com/docs/optimizing-for-production#purge-css-options) all unused class names.  
+  
+</details>
+  
+<details>
+<summary>
+  What's included?
+</summary>
+ 
+> When you add **DaisyUI** as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `btn`, `card`, `alert`, etc...  
+> If you use the unstyled version, it has no color or visual style so you can fully style the components with Tailwind utility classes. If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind classes.  
+  
+</details>
+  
+<details>
+<summary>
+  Concepts
+</summary>
+
+> - **Typography, spacing, layout** You will handle these with tailwind classes. We suggest using the official [↗︎ Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography) plugin
+> - **Colors and theming** You should ditch Tailwind's default and multi-purpose color set and set your custom set of colors for a DaisyUI project. ([↗︎ Theming guide](docs/theming.md))
+> - **Components** (like button, card, etc...) DaisyUI will handle this  
+  
+</details>
+  
+<details>
+<summary>
+  What is "preset"
+</summary>
+
+```
+module.exports = {
+  // ...
+  presets: [
+    require('daisyui/preset')
+  ],
+}
+
+```
+> When you add DaisyUI preset it will replaces default tailwind colors with a set of semantic color set that is themeable and can be configed with CSS variables.  
+> `daisyui/preset` also adds a few `borderRadius` that is used in components. They are also configurable with CSS variables.
+
+</details>
+  
+
+## 1. Install  
 
 ```
 npm i daisyui
 ```
 
-### Add plugin and preset to `tailwind.config.js`
+#### then add plugin and preset to `tailwind.config.js`
 ```
 module.exports = {
   plugins: [
@@ -34,17 +81,25 @@ module.exports = {
 }
 
 ```
-
-# Or use a CDN
-🌼 styled version
+<details>
+<summary>
+  Or use a CDN
+</summary>
+  
+- 🌼 styled version
 ```
 <link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.min.css" />
 ```
-unstyled version
+- unstyled version
 ```
 <link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.min.css" />
 ```
+</details>
 
+### 2. Set up the colors for your design system (optional)
+  
+If you want to use your custom colors, you need to define the color values in your css. Colors must be themeable so we're using CSS Variables.  
+[↗︎ Theming guide](docs/theming.md)
 
 # Components  
 - [x] Accordion
