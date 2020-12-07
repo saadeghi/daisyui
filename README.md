@@ -21,3 +21,9 @@ module.exports = {
 }
 
 ```
+
+# Or use a CDN
+```
+<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.min.css" />
+
+```
