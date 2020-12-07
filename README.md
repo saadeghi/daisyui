@@ -9,7 +9,7 @@ Styled (and unstyled) UI Components for Tailwind CSS users
 npm i daisyui
 ```
 
-## Add plugin and preset to `tailwind.config.js`
+### Add plugin and preset to `tailwind.config.js`
 ```
 module.exports = {
   plugins: [
@@ -32,3 +32,51 @@ unstyled version
 ```
 <link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.min.css" />
 ```
+
+
+# Components  
+- [x] Accordion
+- [x] Alert
+- [ ] App bar
+- [ ] Avatar
+- [ ] Avatar group
+- [x] Badge
+- [ ] Banner
+- [ ] Breadcrumb
+- [x] Button
+- [x] Button group
+- [x] Card
+- [ ] Chat bubble
+- [ ] Comment
+- [ ] Divider
+- [ ] Empty placeholder
+- [ ] Form
+  - [ ] Dropdown
+  - [ ] Select
+  - [x] Text input
+  - [ ] Text area
+  - [ ] Checkbox
+  - [ ] Radio
+  - [ ] Range slider
+  - [ ] Switch
+  - [ ] Upload
+- [ ] Loading
+- [x] Menu
+- [ ] Navbar
+- [ ] Modal
+- [ ] Pagination
+- [ ] Progress
+- [ ] Progress indicator
+- [ ] Skeleton placeholder
+- [ ] Statistic
+- [ ] Steps
+- [ ] Tag
+- [ ] Tabs
+- [ ] Timeline
+- [ ] Toast
+- [ ] Tooltip
+
+# Todo
+- [ ] Add all components
+- [ ] Complete documents
+- [ ] Add demo for components
