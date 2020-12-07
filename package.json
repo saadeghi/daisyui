@@ -1,19 +1,19 @@
 {
-  "name": "ivyui",
-  "version": "0.1.0",
+  "name": "daisyui",
+  "version": "0.1.01",
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
   "main": "index",
   "typings": "index",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saadeghi/ivyui.git"
+    "url": "git+https://github.com/saadeghi/daisyui.git"
   },
   "author": "Pouya Saadeghi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saadeghi/ivyui/issues"
+    "url": "https://github.com/saadeghi/daisyui/issues"
   },
-  "homepage": "https://github.com/saadeghi/ivyui#readme",
+  "homepage": "https://github.com/saadeghi/daisyui#readme",
   "dependencies": {
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.0.4",
