@@ -1,5 +1,5 @@
 .badge {
-  @apply bg-content-600 border border-content-600 text-content-100 rounded-badge;
+  @apply bg-content-600 border border-content-600 text-content-100 text-sm rounded-badge;
   &.primary {
     @apply bg-primary border-primary text-content-primary;
   }
@@ -10,9 +10,26 @@
     @apply bg-accent border-accent text-content-accent;
   }
 
-  /* outline */
+  &.ghost {
+    @apply bg-content-200 border-content-200 text-content-600;
+  }
+
   &.outline {
     @apply bg-transparent text-content-600 border-content-600;
+  }
+
+
+  &.info {
+    @apply bg-opacity-20 bg-info border-transparent text-info;
+  }
+  &.success {
+    @apply bg-opacity-20 bg-success border-transparent text-success;
+  }
+  &.warning {
+    @apply bg-opacity-20 bg-warning border-transparent text-warning;
+  }
+  &.error {
+    @apply bg-opacity-20 bg-error border-transparent text-error;
   }
 }
 .btn .badge {
