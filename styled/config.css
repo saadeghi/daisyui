@@ -76,14 +76,14 @@
   --color-content-accent: 0, 0%, 0%;
 
   --color-content--900: 0, 0%, 100%;
-  --color-content--800: 0, 0%, 100%;
-  --color-content--700: 0, 0%, 100%;
-  --color-content--600: 0, 0%, 40%;
-  --color-content--500: 0, 0%, 40%;
+  --color-content--800: 0, 0%, 80%;
+  --color-content--700: 0, 0%, 70%;
+  --color-content--600: 0, 0%, 60%;
+  --color-content--500: 0, 0%, 50%;
   --color-content--400: 0, 0%, 40%;
-  --color-content--300: 0, 0%, 0%;
-  --color-content--200: 0, 0%, 0%;
-  --color-content--100: 0, 0%, 0%;
+  --color-content--300: 0, 0%, 30%;
+  --color-content--200: 0, 0%, 20%;
+  --color-content--100: 0, 0%, 10%;
 
 
   /* border-radius variants */
