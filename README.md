@@ -131,7 +131,7 @@ If you want to use your custom colors, you need to define the color values in yo
 - [x] Menu
 - [ ] Navbar
 - [ ] Modal
-- [ ] Pagination
+- [x] Pagination
 - [ ] Progress
 - [ ] Progress indicator
 - [ ] Skeleton placeholder
