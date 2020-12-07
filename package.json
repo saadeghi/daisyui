@@ -3,6 +3,14 @@
   "version": "0.1.11",
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
   "main": "index",
+  "files": [
+    "dist/base.css",
+    "dist/base.js",
+    "dist/base.min.css",
+    "dist/styled.css",
+    "dist/styled.js",
+    "dist/styled.min.css"
+  ],
   "typings": "index",
   "publishConfig": {
     "access": "public",
