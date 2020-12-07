@@ -1,0 +1,275 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+  .accordion li{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .accordion li .accordion-title{
+      cursor: pointer;
+      margin-bottom: 0px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      position: relative;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
+  .accordion li .accordion-body {
+      max-height: 0px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 0px;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
+  .accordion li input {
+      display: none;
+    }
+  .accordion li input:checked ~ .accordion-body {
+          max-height: 100vh;
+        }
+  .accordion.arrow li input {
+        display: none;
+      }
+  .accordion.arrow li input:checked + .accordion-title:after{
+              transform: rotate(225deg);
+            }
+  .accordion.arrow li .accordion-title:after{
+          display: block;
+          height: 0.5rem;
+          position: absolute;
+          width: 0.5rem;
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 300ms;
+        }
+  .accordion.arrow li .accordion-title .btn.accordion.arrow li .accordion-title .btn:after {
+            width: 100%;
+          }
+  .accordion.arrow li .accordion-title:after {
+          top: 1.5rem;
+          right: 1.5rem;
+          content: '';
+          transform-origin: 75% 75%;
+          transform: rotate(45deg);
+          box-shadow: 2px 2px;
+        }
+  .accordion.plus li input {
+        display: none;
+      }
+  .accordion.plus li input:checked + .accordion-title:after{
+              content: '−'
+            }
+  .accordion.plus li .accordion-title:after{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 1.5rem;
+          position: absolute;
+          width: 1.5rem;
+          top: 1rem;
+          right: 1rem;
+          content: '+';
+        }
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2rem;
+  padding: 0.75rem;
+  position: relative;
+}
+
+.alert>*{
+    flex-shrink: 0;
+  }
+
+.alert>label{
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    position: relative;
+  }
+
+/* disabled */
+
+.btn.disabled, .btn[disabled] {
+    pointer-events: none;
+  }
+
+/* sizes */
+
+.btn.wide {
+    width: 16rem;
+  }
+
+.btn.lg {
+    height: 4rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    line-height: 2;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+.btn {
+    height: 3rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    line-height: 2;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+.btn.sm {
+    height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    line-height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+.btn.xs {
+    height: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    line-height: 1.625;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+/* block */
+
+.btn.block {
+    width: 100%;
+  }
+
+/* shapes */
+
+.btn.square.xs {
+      height: 1.5rem;
+      padding: 0px;
+      width: 1.5rem;
+    }
+
+.btn.square.sm {
+      height: 2rem;
+      padding: 0px;
+      width: 2rem;
+    }
+
+.btn.square {
+      height: 3rem;
+      padding: 0px;
+      width: 3rem;
+    }
+
+.btn.square.lg {
+      height: 4rem;
+      padding: 0px;
+      width: 4rem;
+    }
+
+.btn.circle.xs {
+      border-radius: 9999px;
+      height: 1.5rem;
+      padding: 0px;
+      width: 1.5rem;
+    }
+
+.btn.circle.sm {
+      border-radius: 9999px;
+      height: 2rem;
+      padding: 0px;
+      width: 2rem;
+    }
+
+.btn.circle {
+      border-radius: 9999px;
+      height: 3rem;
+      padding: 0px;
+      width: 3rem;
+    }
+
+.btn.circle.lg {
+      border-radius: 9999px;
+      height: 4rem;
+      padding: 0px;
+      width: 4rem;
+    }
+
+/* loading */
+
+.btn.loading, .btn.loading:hover {
+      pointer-events: none;
+    }
+
+.btn.loading:before {
+      border-radius: 9999px;
+      height: 1rem;
+      margin-right: 0.5rem;
+      width: 1rem;
+      -webkit-animation: spin 1s linear infinite;
+              animation: spin 1s linear infinite;
+      content: "";
+      border: 2px solid;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: var(--color-content-100);
+      border-right-color: var(--color-content-100);
+    }
+
+/* group */
+
+.btn-group {
+  display: flex;
+}
+
+.btn-group > input[type="radio"].btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+.btn-group > input[type="radio"].btn:before {
+    content: attr(data-title);
+  }
