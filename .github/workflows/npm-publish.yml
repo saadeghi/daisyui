@@ -17,12 +17,12 @@ jobs:
         uses: actions/checkout@v2.3.4
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
-        with: 
+        with:
             node-version: 12
-            registery-url: https://registery.npmjs.org
+            registry-url: https://registery.npmjs.org
       - name: publish
         run: npm publish
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-        
+
