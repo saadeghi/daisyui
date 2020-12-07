@@ -1,0 +1,68 @@
+.accordion {
+  @apply flex flex-col;
+  li{
+    @apply overflow-hidden flex flex-col;
+    .accordion-title{
+      @apply transition-all ease-in-out duration-300 cursor-pointer mb-0 pb-4 pt-4 px-4 relative;
+    }
+    .accordion-body {
+      max-height: 0px;
+      @apply transition-all ease-in-out duration-300 pb-0 px-4;
+    }
+    input {
+      @apply hidden;
+      &:checked {
+        & ~ .accordion-body {
+          @apply max-h-screen;
+        }
+      }
+    }
+  }
+  &.arrow{
+    li{
+      input {
+        @apply hidden;
+        &:checked {
+          & + .accordion-title {
+            &:after{
+              transform: rotate(225deg);
+            }
+          }
+        }
+      }
+      .accordion-title{
+        &:after{
+          @apply transition-all ease-in-out duration-300 w-2 h-2 block absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          content: '';
+          transform-origin: 75% 75%;
+          transform: rotate(45deg);
+          box-shadow: 2px 2px;
+        }
+      }
+    }
+  }
+  &.plus{
+    li{
+      input {
+        @apply hidden;
+        &:checked {
+          & + .accordion-title {
+            &:after{
+              content: '−'
+            }
+          }
+        }
+      }
+      .accordion-title{
+        &:after{
+          @apply w-6 h-6 absolute flex items-center justify-center;
+          top: 1rem;
+          right: 1rem;
+          content: '+';
+        }
+      }
+    }
+  }
+}

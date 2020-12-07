@@ -1,0 +1,176 @@
+
+:root {
+  
+  /* color variants */
+  /* color values are HSL */
+  --color-default: 0, 0%, 100%;
+
+  --color-primary: 340, 82%, 52%;
+  --color-primary-lighten: 340, 82%, 62%;
+  --color-primary-darken: 340, 82%, 42%;
+
+  --color-secondary: 262, 52%, 46%;
+  --color-secondary-lighten: 262, 52%, 56%;
+  --color-secondary-darken: 262, 52%, 36%;
+
+  --color-accent: 199, 98%, 48%;
+  --color-accent-lighten: 199, 98%, 58%;
+  --color-accent-darken: 199, 98%, 38%;
+
+  --color-content-primary: 0, 0%, 100%;
+  --color-content-secondary: 0, 0%, 100%;
+  --color-content-accent: 0, 0%, 100%;
+
+  --color-content--100: 220, 14%, 96%;
+  --color-content--200: 228, 14%, 93%;
+  --color-content--300: 220, 15%, 84%;
+  --color-content--400: 218, 14%, 65%;
+  --color-content--500: 220, 14%, 46%;
+  --color-content--600: 220, 14%, 37%;
+  --color-content--700: 219, 14%, 28%;
+  --color-content--800: 222, 13%, 19%;
+  --color-content--900: 223, 14%, 10%;
+
+  --color-info: 207, 90%, 54%;
+  --color-success: 174, 100%, 29%;
+  --color-warning: 36, 100%, 50%;
+  --color-error: 14, 100%, 57%;
+
+  /* border-radius variants */
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 0.25rem;
+}
+
+[data-theme='dark'] {
+  --color-default: 223, 14%, 10%;
+
+  --color-content--900: 210, 20%, 98%;
+  --color-content--800: 220, 14%, 96%;
+  --color-content--700: 228, 14%, 93%;
+  --color-content--600: 220, 15%, 84%;
+  --color-content--500: 218, 14%, 65%;
+  --color-content--400: 220, 14%, 46%;
+  --color-content--300: 220, 14%, 37%;
+  --color-content--200: 219, 14%, 28%;
+  --color-content--100: 222, 13%, 19%;
+}
+
+[data-theme='black'] {
+  --color-default: 0, 0%, 0%;
+
+  --color-primary: 0, 0%, 100%;
+  --color-primary-lighten: 0, 0%, 100%;
+  --color-primary-darken: 0, 0%, 100%;
+
+  --color-secondary: 0, 0%, 100%;
+  --color-secondary-lighten: 0, 0%, 100%;
+  --color-secondary-darken: 0, 0%, 100%;
+
+  --color-accent: 0, 0%, 100%;
+  --color-accent-lighten: 0, 0%, 100%;
+  --color-accent-darken: 0, 0%, 100%;
+
+  --color-content-primary: 0, 0%, 0%;
+  --color-content-secondary: 0, 0%, 0%;
+  --color-content-accent: 0, 0%, 0%;
+
+  --color-content--900: 0, 0%, 100%;
+  --color-content--800: 0, 0%, 100%;
+  --color-content--700: 0, 0%, 100%;
+  --color-content--600: 0, 0%, 40%;
+  --color-content--500: 0, 0%, 40%;
+  --color-content--400: 0, 0%, 40%;
+  --color-content--300: 0, 0%, 0%;
+  --color-content--200: 0, 0%, 0%;
+  --color-content--100: 0, 0%, 0%;
+
+
+  /* border-radius variants */
+  --rounded-btn: 0;
+  --rounded-box: 0;
+  --rounded-badge: 0;
+
+}
+
+[data-theme='retro'] {
+  --color-default: 45, 47%, 80%;
+
+  --color-primary: 3, 74%, 66%;
+  --color-primary-lighten: 3, 74%, 76%;
+  --color-primary-darken: 3, 74%, 56%;
+
+  --color-secondary: 145, 27%, 62%;
+  --color-secondary-lighten: 145, 27%, 72%;
+  --color-secondary-darken: 145, 27%, 52%;
+
+  --color-accent: 49, 67%, 66%;
+  --color-accent-lighten: 49, 67%, 76%;
+  --color-accent-darken: 49, 67%, 56%;
+
+  --color-content-primary: 345, 5%, 15%;
+  --color-content-secondary: 345, 5%, 15%;
+  --color-content-accent: 345, 5%, 15%;
+
+  --color-content--900: 345, 5%, 15%;
+  --color-content--800: 41, 13%, 24%;
+  --color-content--700: 42, 17%, 42%;
+  --color-content--600: 41, 19%, 47%;
+  --color-content--500: 42, 20%, 52%;
+  --color-content--400: 42, 26%, 57%;
+  --color-content--300: 42, 36%, 65%;
+  --color-content--200: 45, 37%, 72%;
+  --color-content--100: 46, 42%, 76%;
+}
+
+
+[data-theme='dracula'] {
+  --color-default: 233, 13%, 13%;
+
+  --color-primary: 330, 100%, 75%;
+  --color-primary-lighten: 330, 100%, 85%;
+  --color-primary-darken: 330, 100%, 65%;
+
+  --color-secondary: 115, 100%, 75%;
+  --color-secondary-lighten: 115, 100%, 85%;
+  --color-secondary-darken: 115, 100%, 65%;
+
+  --color-accent: 60, 100%, 75%;
+  --color-accent-lighten: 60, 100%, 85%;
+  --color-accent-darken: 60, 100%, 65%;
+
+  --color-content-primary: 233, 13%, 13%;
+  --color-content-secondary: 233, 13%, 13%;
+  --color-content-accent: 233, 13%, 13%;
+
+  --color-content--900: 250, 100%, 75%;
+  --color-content--800: 250, 100%, 75%;
+  --color-content--700: 250, 100%, 75%;
+  --color-content--600: 250, 100%, 75%;
+  --color-content--500: 251, 43%, 85%;
+  --color-content--400: 251, 43%, 85%;
+  --color-content--300: 245, 14%, 15%;
+  --color-content--200: 245, 14%, 15%;
+  --color-content--100: 245, 14%, 15%;
+}
+
+[data-theme='christmas'] {
+
+  --color-primary: 354, 62%, 54%;
+  --color-primary-lighten: 354, 62%, 64%;
+  --color-primary-darken: 354, 62%, 44%;
+
+  --color-secondary: 163, 38%, 54%;
+  --color-secondary-lighten: 163, 38%, 64%;
+  --color-secondary-darken: 163, 38%, 44%;
+
+  --color-accent: 39, 91%, 58%;
+  --color-accent-lighten: 39, 91%, 68%;
+  --color-accent-darken: 39, 91%, 48%;
+
+  --color-content-primary: 0, 0%, 100%;
+  --color-content-secondary: 0, 0%, 100%;
+  --color-content-accent: 0, 0%, 100%;
+
+
+}

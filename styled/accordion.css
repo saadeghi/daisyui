@@ -1,0 +1,65 @@
+.accordion {
+  & > * + *{
+    .accordion-title{
+      &:before{
+        content: '';
+        top: -1rem;
+        @apply block h-px bg-content-100 relative;
+      }
+    }
+  }
+  li{
+    @apply -mb-px rounded-box;
+    .accordion-title{
+      @apply rounded-box;
+      &:hover{
+        @apply bg-content-100;
+      }
+    }
+    .accordion-body {
+      @apply rounded-box;
+    }
+    input {
+      &:checked {
+        & + .accordion-title {
+          @apply rounded-b-none bg-content-100 mt-1;
+          &:before{
+            @apply bg-transparent;
+          }
+        }
+        & ~ .accordion-body {
+          @apply bg-content-100 rounded-t-none pb-4 mb-1;
+        }
+      }
+    }
+  }
+  &.bordered{
+    & > * + *{
+      .accordion-title{
+        &:before{
+          content: none;
+        }
+      }
+    }
+    li{
+      .accordion-title{
+        @apply rounded-none;
+      }
+      .accordion-body{
+        @apply rounded-none;
+      }
+      @apply border border-content-200 mb-2;
+      input {
+        @apply hidden;
+        &:checked {
+          & + .accordion-title {
+            @apply mt-0;
+          }
+          & ~ .accordion-body {
+            @apply mb-0;
+          }
+        }
+      }
+    }
+  }
+}

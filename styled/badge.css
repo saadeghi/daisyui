@@ -1,0 +1,85 @@
+.badge {
+  @apply inline-block bg-content-600 border border-content-600 text-content-100 rounded-badge leading-4 text-sm px-2 transition duration-200 ease-in-out;
+  &.primary {
+    @apply bg-primary border-primary text-content-primary;
+  }
+  &.secondary {
+    @apply bg-secondary border-secondary text-content-secondary;
+  }
+  &.accent {
+    @apply bg-accent border-accent text-content-accent;
+  }
+
+  /* outline */
+  &.outline {
+    @apply bg-transparent text-content-600;
+    &.primary {
+      @apply text-primary;
+    }
+    &.secondary {
+      @apply text-secondary;
+    }
+    &.accent {
+      @apply text-accent;
+    }
+  }
+}
+.btn .badge {
+  @apply bg-default text-content-600 border-transparent;
+  &.outline {
+    @apply bg-transparent text-content-100 border-content-100;
+  }
+}
+
+.btn.outline {
+  .badge {
+    @apply bg-content-600 text-content-100 border-content-600;
+  }
+  &.primary .badge {
+    @apply bg-primary text-content-primary border-primary;
+  }
+  &.secondary .badge {
+    @apply bg-secondary text-content-secondary border-secondary;
+  }
+  &.accent .badge {
+    @apply bg-accent text-content-accent border-accent;
+  }
+
+  .badge.outline {
+    @apply bg-transparent text-content-600 border-content-600;
+  }
+  &.primary .badge.outline {
+    @apply bg-transparent text-primary border-primary;
+  }
+  &.secondary .badge.outline {
+    @apply bg-transparent text-secondary border-secondary;
+  }
+  &.accent .badge.outline {
+    @apply bg-transparent text-accent border-accent;
+  }
+
+  &:hover .badge {
+    @apply bg-content-100 text-content-700 border-content-100;
+    &.outline {
+      @apply bg-content-700 text-content-100 border-content-100;
+    }
+  }
+  &.primary:hover .badge {
+    @apply bg-content-primary text-primary border-content-primary;
+    &.outline {
+      @apply bg-primary text-content-primary border-content-primary;
+    }
+  }
+  &.secondary:hover .badge {
+    @apply bg-content-secondary text-secondary border-content-secondary;
+    &.outline {
+      @apply bg-secondary text-content-secondary border-content-secondary;
+    }
+  }
+  &.accent:hover .badge {
+    @apply bg-content-accent text-accent border-content-accent;
+    &.outline {
+      @apply bg-accent text-content-accent border-content-accent;
+    }
+  }
+}

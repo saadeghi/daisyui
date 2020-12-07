@@ -1,0 +1,36 @@
+{
+  "name": "ivyui",
+  "version": "0.1.0",
+  "description": "Styled and unstyled UI Components based on Tailwind CSS",
+  "main": "index",
+  "typings": "index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saadeghi/ivyui.git"
+  },
+  "author": "Pouya Saadeghi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saadeghi/ivyui/issues"
+  },
+  "homepage": "https://github.com/saadeghi/ivyui#readme",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.0.4",
+    "postcss": "^8.1.10",
+    "postcss-nested": "^5.0.1",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^8.3.0",
+    "postcss-import": "^13.0.0",
+    "prejss-cli": "^0.3.3"
+  },
+  "scripts": {
+    "postcss": "postcss base.css -o dist/base.css && postcss styled.css -o dist/styled.css",
+    "min": " MINIFY=true postcss base.css -o dist/base.min.css && MINIFY=true postcss styled.css -o dist/styled.min.css",
+    "json": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs",
+    "dev": "npm run postcss && npm run json"
+  }
+}

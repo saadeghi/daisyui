@@ -1,0 +1,9 @@
+.alert {
+  @apply relative p-3 flex justify-between items-center leading-8;
+  &>*{
+    @apply flex-shrink-0;
+  }
+  &>label{
+    @apply flex-grow my-0 mx-3 flex-shrink;
+  }
+}

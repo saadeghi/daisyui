@@ -1,0 +1,100 @@
+.menu {
+  @apply flex flex-col overflow-hidden bg-content-100;
+  &.horizontal{
+    @apply flex-row inline-flex;
+    li{
+      @apply flex-row;
+      &.bordered{
+        a, span{
+          @apply border-l-0 border-b-4 border-primary;
+        }
+      }
+    }
+  }
+  li{
+    @apply flex flex-col items-stretch;
+    a, span{
+      @apply text-content-700 flex px-5 py-4 text-sm transition ease-in-out duration-200;
+    }
+    a{
+      @apply cursor-pointer hover:bg-content-200 hover:text-content-900;
+      &:focus {
+        @apply outline-none bg-content-200 text-content-900;
+      }
+    }
+    &.disabled{
+      &>a, &>span{
+        @apply text-content-400 cursor-auto hover:bg-content-100;
+      }
+    }
+    &.bordered{
+      a, span{
+        @apply border-l-4 border-primary;
+      }
+    }
+    &.hover-bordered{
+      a{
+        @apply border-l-4 border-transparent hover:border-primary;
+      }
+    }
+    &.active{
+      a, span{
+        @apply bg-content-600 hover:bg-content-700 text-content-100;
+      }
+    }
+    &.primary{
+      a, span{
+        @apply bg-primary hover:bg-primary-darken text-content-primary;
+      }
+    }
+    &.secondary{
+      a, span{
+        @apply bg-secondary hover:bg-secondary-darken text-content-secondary;
+      }
+    }
+    &.accent{
+      a, span{
+        @apply bg-accent hover:bg-accent-darken text-content-accent;
+      }
+    }
+    &.ghost{
+      a, span{
+        @apply bg-content-200 hover:bg-content-300;
+      }
+    }
+  }
+  ul{
+    a, span{
+      @apply pl-10;
+    }
+    ul{
+      a, span{
+        @apply pl-16;
+      }
+    }
+  }
+  &.compact{
+    li{
+      a, span{
+        @apply py-2;
+      }
+    }
+  }
+  &.wide{
+    li{
+      a, span{
+        @apply px-10;
+      }
+      ul{
+        a, span{
+          @apply px-16;
+        }
+        ul{
+          a, span{
+            @apply px-24;
+          }
+        }
+      }
+    }
+  }
+}
