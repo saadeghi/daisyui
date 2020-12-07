@@ -1,4 +1,4 @@
-# IvyUI 🌿
+# DaisyUI 🌼
 
 Styled (and unstyled) UI Components for Tailwind CSS users
 
@@ -6,17 +6,17 @@ Styled (and unstyled) UI Components for Tailwind CSS users
 # Install  
 
 ```
-npm i ivyui
+npm i daisyui
 ```
 
 ## Add plugin and preset to `tailwind.config.js`
 ```
 module.exports = {
   plugins: [
-    require('ivyui'),
+    require('daisyui'),
   ],
   presets: [
-    require('ivyui/preset')
+    require('daisyui/preset')
   ],
 }
 
