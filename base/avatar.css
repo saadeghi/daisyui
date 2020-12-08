@@ -1,0 +1,14 @@
+.avatar{
+  @apply relative inline-block;
+  &>div{
+    @apply overflow-hidden block;
+  }
+  img{
+    @apply object-cover w-full h-full;
+  }
+  &.placeholder{
+    &>div{
+      @apply flex items-center justify-center
+    }
+  }
+}
