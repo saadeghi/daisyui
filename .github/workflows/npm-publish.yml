@@ -23,7 +23,7 @@ jobs:
       - id: check
         uses: EndBug/version-check@v1
         with:
-            file-url: https://unpkg.com/your-package@latest/package.json
+            file-url: https://unpkg.com/theme-change@latest/package.json
             static-checking: localIsNew
       - run: npm install
       - name: build
