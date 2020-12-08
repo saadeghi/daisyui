@@ -108,7 +108,7 @@ If you want to use your custom colors, you need to define the color values in yo
 - [x] Accordion
 - [x] Alert
 - [ ] App bar
-- [ ] Avatar
+- [x] Avatar
 - [ ] Avatar group
 - [x] Badge
 - [ ] Banner
