@@ -2,16 +2,14 @@
   "name": "daisyui",
   "version": "0.1.12",
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
-  "main": "index",
+  "main": "base.js",
+  "typings": "base.js",
   "files": [
-    "dist/base.css",
-    "dist/base.js",
-    "dist/base.min.css",
-    "dist/styled.css",
-    "dist/styled.js",
-    "dist/styled.min.css"
+    "dist",
+    "base.js",
+    "styled.js",
+    "preset.js"
   ],
-  "typings": "index",
   "publishConfig": {
     "access": "public",
     "branches": [
