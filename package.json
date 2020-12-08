@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
   "main": "base.js",
   "typings": "base.js",
