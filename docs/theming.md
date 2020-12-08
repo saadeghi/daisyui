@@ -56,15 +56,15 @@ You can set up 3 values of H,S,L for each color in your CSS file. It can be your
   --color-content-secondary: 0, 0%, 100%;
   --color-content-accent: 0, 0%, 100%;
 
-  --color-content--100: 220, 14%, 96%;
-  --color-content--200: 228, 14%, 93%;
-  --color-content--300: 220, 15%, 84%;
-  --color-content--400: 218, 14%, 65%;
-  --color-content--500: 220, 14%, 46%;
-  --color-content--600: 220, 14%, 37%;
-  --color-content--700: 219, 14%, 28%;
-  --color-content--800: 222, 13%, 19%;
-  --color-content--900: 223, 14%, 10%;
+  --color-content-100: 220, 14%, 96%;
+  --color-content-200: 228, 14%, 93%;
+  --color-content-300: 220, 15%, 84%;
+  --color-content-400: 218, 14%, 65%;
+  --color-content-500: 220, 14%, 46%;
+  --color-content-600: 220, 14%, 37%;
+  --color-content-700: 219, 14%, 28%;
+  --color-content-800: 222, 13%, 19%;
+  --color-content-900: 223, 14%, 10%;
 
   --color-info: 207, 90%, 54%;
   --color-success: 174, 100%, 29%;
@@ -75,15 +75,15 @@ You can set up 3 values of H,S,L for each color in your CSS file. It can be your
 [data-theme='dark'] {
   --color-default: 223, 14%, 10%;
 
-  --color-content--900: 210, 20%, 98%;
-  --color-content--800: 220, 14%, 96%;
-  --color-content--700: 228, 14%, 93%;
-  --color-content--600: 220, 15%, 84%;
-  --color-content--500: 218, 14%, 65%;
-  --color-content--400: 220, 14%, 46%;
-  --color-content--300: 220, 14%, 37%;
-  --color-content--200: 219, 14%, 28%;
-  --color-content--100: 222, 13%, 19%;
+  --color-content-900: 210, 20%, 98%;
+  --color-content-800: 220, 14%, 96%;
+  --color-content-700: 228, 14%, 93%;
+  --color-content-600: 220, 15%, 84%;
+  --color-content-500: 218, 14%, 65%;
+  --color-content-400: 220, 14%, 46%;
+  --color-content-300: 220, 14%, 37%;
+  --color-content-200: 219, 14%, 28%;
+  --color-content-100: 222, 13%, 19%;
 }
 ```
 
@@ -110,18 +110,32 @@ You can add any other themes
   --color-content-secondary: 345, 5%, 15%;
   --color-content-accent: 345, 5%, 15%;
 
-  --color-content--900: 345, 5%, 15%;
-  --color-content--800: 41, 13%, 24%;
-  --color-content--700: 42, 17%, 42%;
-  --color-content--600: 41, 19%, 47%;
-  --color-content--500: 42, 20%, 52%;
-  --color-content--400: 42, 26%, 57%;
-  --color-content--300: 42, 36%, 65%;
-  --color-content--200: 45, 37%, 72%;
-  --color-content--100: 46, 42%, 76%;
+  --color-content-900: 345, 5%, 15%;
+  --color-content-800: 41, 13%, 24%;
+  --color-content-700: 42, 17%, 42%;
+  --color-content-600: 41, 19%, 47%;
+  --color-content-500: 42, 20%, 52%;
+  --color-content-400: 42, 26%, 57%;
+  --color-content-300: 42, 36%, 65%;
+  --color-content-200: 45, 37%, 72%;
+  --color-content-100: 46, 42%, 76%;
 }
 ```
 
 ## How to change theme?
 You just need to add `data-theme='dark'` to your `<body>`.
 Easiest way to handle it with JavaScript is to this tiny library: [↗︎ theme-change](https://github.com/saadeghi/theme-change)
+
+## Fixing PurgeCSS issue
+⚠️ If you're using [Purge CSS](https://purgecss.com/), you might need to [safe list](https://purgecss.com/safelisting.html#in-the-css-directly) your CSS using the comments below because your secondary themes will be purged
+```
+/*! purgecss start ignore */
+
+[data-theme='dark'] {
+  ...
+}
+
+/*! purgecss end ignore */
+```
+
+---
