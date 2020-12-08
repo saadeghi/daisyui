@@ -28,6 +28,7 @@ jobs:
         run: npm run build
       - name: publish
         run: npm publish
+        if: steps.check.outputs.changed == 'true'
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
