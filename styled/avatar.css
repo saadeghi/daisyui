@@ -1,0 +1,18 @@
+.avatar{
+  &.online{
+    &:before{
+      content: '';
+      @apply block w-2 h-2 bg-success rounded-full ring ring-default absolute;
+      top: 5%;
+      right: 5%;
+    }
+  }
+  &.offline{
+    &:before{
+      content: '';
+      @apply block w-2 h-2 bg-content-300 rounded-full ring ring-default absolute;
+      top: 5%;
+      right: 5%;
+    }
+  }
+}
