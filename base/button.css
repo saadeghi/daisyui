@@ -75,8 +75,8 @@
       border: 2px solid;
       border-top-color: transparent;
       border-left-color: transparent;
-      border-bottom-color: var(--color-content-100);
-      border-right-color: var(--color-content-100);
+      border-bottom-color: hsl(var(--color-content-100));
+      border-right-color: hsl(var(--color-content-100));
     }
   }
 }

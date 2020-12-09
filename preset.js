@@ -267,7 +267,7 @@ module.exports = {
       borderRadius: {
         "box": "var(--rounded-box, 1rem)",
         "btn": "var(--rounded-btn, 0.5rem)",
-        "badge": "var(--rounded-badge, 0.25rem)",
+        "badge": "var(--rounded-badge, 9999px)",
       },
       typography: {
         DEFAULT: {
@@ -284,7 +284,4 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    // require('@tailwindcss/typography'),
-  ],
 }
