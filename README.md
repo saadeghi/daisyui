@@ -2,6 +2,7 @@
 
 [![logo](https://user-images.githubusercontent.com/7342023/101421491-a0313380-3909-11eb-8dd6-6037753af051.png)](#)
 
+See components in action 👉 https://daisyui.netlify.app/  
 
 Unstyled *(and styled)* UI component library for [Tailwind CSS](https://tailwindcss.com/) users
   
