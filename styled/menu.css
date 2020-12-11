@@ -1,5 +1,4 @@
 .menu {
-  @apply bg-content-100;
   &.horizontal{
     li{
       &.bordered{
@@ -9,9 +8,17 @@
       }
     }
   }
+  .menu-label{
+    a, span{
+      @apply py-1 text-xs text-content-400;
+    }
+  }
+  &[class*="p-"] li a{
+    @apply rounded-btn;
+  }
   li{
     a, span{
-      @apply text-content-700 px-5 py-4 text-sm;
+      @apply text-content-700 px-5 py-3;
     }
     a{
       @apply hover:bg-content-200 hover:text-content-900;
@@ -34,41 +41,9 @@
         @apply border-l-4 border-transparent hover:border-primary;
       }
     }
-    &.active{
-      a, span{
-        @apply bg-content-600 hover:bg-content-700 text-content-100;
-      }
-    }
-    &.primary{
-      a, span{
-        @apply bg-primary hover:bg-primary-darken text-content-primary;
-      }
-    }
-    &.secondary{
-      a, span{
-        @apply bg-secondary hover:bg-secondary-darken text-content-secondary;
-      }
-    }
-    &.accent{
-      a, span{
-        @apply bg-accent hover:bg-accent-darken text-content-accent;
-      }
-    }
-    &.ghost{
-      a, span{
-        @apply bg-content-200 hover:bg-content-300;
-      }
-    }
   }
   ul{
-    a, span{
-      @apply pl-10;
-    }
-    ul{
-      a, span{
-        @apply pl-16;
-      }
-    }
+    @apply pl-6;
   }
   &.compact{
     li{

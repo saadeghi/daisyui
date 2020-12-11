@@ -1,5 +1,5 @@
 .badge {
-  @apply bg-content-600 border border-content-600 text-content-100 text-sm rounded-badge;
+  @apply bg-content-600 border border-content-600 text-content-100 rounded-badge;
   &.primary {
     @apply bg-primary border-primary text-content-primary;
   }

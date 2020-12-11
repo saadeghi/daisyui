@@ -9,7 +9,7 @@
   li{
     @apply flex flex-col items-stretch;
     a, span{
-      @apply flex px-5 py-4 text-sm transition ease-in-out duration-200;
+      @apply flex items-center transition ease-in-out duration-200;
     }
     a{
       @apply cursor-pointer;
