@@ -8,7 +8,7 @@
       }
     }
   }
-  .menu-label{
+  .menu-title{
     a, span{
       @apply py-1 text-xs text-content-400;
     }
@@ -21,9 +21,9 @@
       @apply text-content-700 px-5 py-3;
     }
     a{
-      @apply hover:bg-content-200 hover:text-content-900;
+      @apply hover:bg-primary hover:bg-opacity-5 hover:text-primary;
       &:focus {
-        @apply bg-content-200 text-content-900;
+        @apply bg-primary bg-opacity-5 text-primary;
       }
     }
     &.disabled{
@@ -48,24 +48,7 @@
   &.compact{
     li{
       a, span{
-        @apply py-2;
-      }
-    }
-  }
-  &.wide{
-    li{
-      a, span{
-        @apply px-10;
-      }
-      ul{
-        a, span{
-          @apply px-16;
-        }
-        ul{
-          a, span{
-            @apply px-24;
-          }
-        }
+        @apply py-2 text-sm;
       }
     }
   }
