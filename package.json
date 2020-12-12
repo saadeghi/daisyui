@@ -39,8 +39,8 @@
     "prejss-cli": "^0.3.3"
   },
   "scripts": {
-    "postcss": "postcss base.css -o dist/base.css && postcss styled.css -o dist/styled.css",
-    "min": " MINIFY=true postcss base.css -o dist/base.min.css && MINIFY=true postcss styled.css -o dist/styled.min.css",
+    "postcss": "postcss base/index.css -o dist/base.css && postcss styled/index.css -o dist/styled.css",
+    "min": " MINIFY=true postcss base/index.css -o dist/base.min.css && MINIFY=true postcss styled/index.css -o dist/styled.min.css",
     "json": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs",
     "dev": "npm run postcss && npm run json",
     "build": "npm run postcss && npm run json && npm run min"
