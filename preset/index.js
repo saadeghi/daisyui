@@ -4,5 +4,6 @@ module.exports = {
     require('./typography'),
     require('./borderRadius'),
     require('./fontSize'),
+    require('./minHeight'),
   ],
 }

@@ -1,5 +1,5 @@
 .btn {
-  @apply flex items-center justify-center text-center cursor-pointer select-none transition duration-200 ease-in-out;
+  @apply flex flex-wrap items-center justify-center text-center cursor-pointer select-none transition duration-200 ease-in-out;
   &:focus {
     @apply relative outline-none;
   }
@@ -15,16 +15,16 @@
     @apply w-64;
   }
   &.lg {
-    @apply px-10 leading-loose text-xl h-16;
+    @apply px-10 leading-loose text-xl min-h-16;
   }
   & {
-    @apply px-6 leading-loose text-lg h-12;
+    @apply px-6 leading-loose text-lg min-h-12;
   }
   &.sm {
-    @apply px-4 leading-8 text-base h-8;
+    @apply px-4 leading-8 text-base min-h-8;
   }
   &.xs {
-    @apply px-2 text-sm leading-relaxed h-6;
+    @apply px-2 text-sm leading-relaxed min-h-6;
   }
 
   /* block */
@@ -82,7 +82,7 @@
 }
 /* group */
 .btn-group {
-  @apply flex;
+  @apply flex flex-wrap;
   & > input[type="radio"].btn {
     @apply appearance-none;
   }
