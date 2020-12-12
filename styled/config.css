@@ -85,6 +85,10 @@
   --color-content--200: 0, 0%, 20%;
   --color-content--100: 0, 0%, 10%;
 
+  --color-info: 240, 100%, 50%;
+  --color-success: 120, 100%, 25%;
+  --color-warning: 60, 100%, 50%;
+  --color-error: 0, 100%, 50%;
 
   /* border-radius variants */
   --rounded-btn: 0;
