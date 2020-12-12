@@ -8,11 +8,6 @@
       }
     }
   }
-  .menu-title{
-    a, span{
-      @apply py-1 text-xs text-content-400;
-    }
-  }
   &[class*="p-"] li a{
     @apply rounded-btn;
   }
@@ -46,10 +41,13 @@
     @apply pl-6;
   }
   &.compact{
-    li{
-      a, span{
-        @apply py-2 text-sm;
-      }
+    a, span{
+      @apply py-2 text-sm;
+    }
+  }
+  .menu-title{
+    a, span{
+      @apply py-1 text-2xs text-content-400;
     }
   }
 }

@@ -269,6 +269,9 @@ module.exports = {
         "btn": "var(--rounded-btn, 0.5rem)",
         "badge": "var(--rounded-badge, 9999px)",
       },
+      fontSize: {
+        '2xs': '.7rem',
+      },
       typography: {
         DEFAULT: {
           css: {
