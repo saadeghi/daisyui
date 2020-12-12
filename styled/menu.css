@@ -16,9 +16,9 @@
       @apply text-content-700 px-5 py-3;
     }
     a{
-      @apply hover:bg-primary hover:bg-opacity-5 hover:text-primary;
+      @apply hover:bg-primary hover:bg-opacity-20 hover:text-primary;
       &:focus {
-        @apply bg-primary bg-opacity-5 text-primary;
+        @apply bg-primary bg-opacity-20 text-primary;
       }
     }
     &.disabled{
