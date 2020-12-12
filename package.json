@@ -6,9 +6,9 @@
   "typings": "base.js",
   "files": [
     "dist",
+    "preset",
     "base.js",
-    "styled.js",
-    "preset.js"
+    "styled.js"
   ],
   "publishConfig": {
     "access": "public",
