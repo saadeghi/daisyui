@@ -108,6 +108,7 @@ If you want to use your custom colors, you need to define the color values in yo
 # Components  
 - [x] Accordion
 - [x] Alert
+- [ ] Artboard
 - [ ] App bar
 - [x] Avatar
 - [ ] Avatar group
