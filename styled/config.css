@@ -5,13 +5,13 @@
   /* color values are HSL */
   --color-default: 0, 0%, 100%;
 
-  --color-primary: 340, 82%, 52%;
-  --color-primary-lighten: 340, 82%, 62%;
-  --color-primary-darken: 340, 82%, 42%;
+  --color-primary: 262, 52%, 46%;
+  --color-primary-lighten: 262, 52%, 56%;
+  --color-primary-darken: 262, 52%, 36%;
 
-  --color-secondary: 262, 52%, 46%;
-  --color-secondary-lighten: 262, 52%, 56%;
-  --color-secondary-darken: 262, 52%, 36%;
+  --color-secondary: 340, 82%, 52%;
+  --color-secondary-lighten: 340, 82%, 62%;
+  --color-secondary-darken: 340, 82%, 42%;
 
   --color-accent: 199, 98%, 48%;
   --color-accent-lighten: 199, 98%, 58%;

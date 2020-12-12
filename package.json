@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/saadeghi/daisyui#readme",
   "dependencies": {
-    "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.0.4",
     "postcss": "^8.1.10",
     "postcss-nested": "^5.0.1",
