@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
   "main": "base.js",
   "typings": "base.js",
@@ -26,17 +26,15 @@
     "url": "https://github.com/saadeghi/daisyui/issues"
   },
   "homepage": "https://github.com/saadeghi/daisyui#readme",
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^10.0.4",
+    "cssnano": "^4.1.10",
     "postcss": "^8.1.10",
     "postcss-nested": "^5.0.1",
-    "tailwindcss": "^2.0.1"
-  },
-  "devDependencies": {
-    "cssnano": "^4.1.10",
     "postcss-cli": "^8.3.0",
     "postcss-import": "^13.0.0",
-    "prejss-cli": "^0.3.3"
+    "prejss-cli": "^0.3.3",
+    "tailwindcss": "^2.0.1"
   },
   "scripts": {
     "postcss": "postcss base/index.css -o dist/base.css && postcss styled/index.css -o dist/styled.css",
