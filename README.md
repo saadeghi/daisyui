@@ -1,10 +1,14 @@
+<center>
+
+[![logo](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg)](#)  
+
+Unstyled *(and styled)* UI component library based on [Tailwind CSS](https://tailwindcss.com/)
+
+[![](https://img.shields.io/badge/DEMO-blue?style=for-the-badge)](https://daisyui.netlify.app/)
+
+</center>
+
 # DaisyUI 🌼
-
-[![logo](https://user-images.githubusercontent.com/7342023/101421491-a0313380-3909-11eb-8dd6-6037753af051.png)](#)
-
-See components in action 👉 https://daisyui.netlify.app/  
-
-Unstyled *(and styled)* UI component library for [Tailwind CSS](https://tailwindcss.com/) users
   
 <details>
 <summary>
@@ -72,7 +76,7 @@ module.exports = {
 npm i daisyui
 ```
 
-#### then add plugin and preset to `tailwind.config.js`
+Then add plugin and preset to `tailwind.config.js`
 ```
 module.exports = {
   plugins: [
