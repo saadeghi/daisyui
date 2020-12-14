@@ -38,7 +38,7 @@ npm i daisyui
 ```
 
 Then add plugin and preset to `tailwind.config.js`
-```
+```js
 module.exports = {
   plugins: [
     require('daisyui/styled'), // 🎨 for styled UI
@@ -125,7 +125,7 @@ If you want to use your custom colors , you need to define the color values in y
   What is "preset"
 </summary>
 
-```
+```js
 module.exports = {
   // ...
   presets: [
@@ -149,7 +149,7 @@ module.exports = {
 > You're not forced to use all the components. Unused components will be purged anyway.  
 > If you use the `base` style, you can fully design elements using your custom css and add custom classes to existing DaisyUI components.  
 > For example, you can style your button this way:
-```
+```css
 .btn{
   @apply font-normal rounded-full border-4 shadow-md;
 }

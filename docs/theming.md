@@ -36,7 +36,7 @@ DaisyUI uses HSL color system for better theming. Every color variable must be t
 ## Example
 You can set up 3 values of H,S,L for each color in your CSS file. It can be your main Tailwind `CSS` file or a file you `@import` to your main CSS file
 
-```
+```css
 
 :root {
 
@@ -92,7 +92,7 @@ You can set up 3 values of H,S,L for each color in your CSS file. It can be your
 As you can see, we are keeping brand colors for `dark` theme and only changing `default` color and `content` colors so it's the same theme with dark mode. The lightest colors are now the darkest ones and the text colors are light instead.
 
 You can add any other themes
-```
+```css
 [data-theme='retro'] {
   --color-default: 45, 47%, 80%;
 
