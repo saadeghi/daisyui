@@ -149,7 +149,7 @@ module.exports = {
 > You're not forced to use all the components. Unused components will be purged anyway.  
 > If you use the `base` style, you can fully design elements using your custom css and add custom classes to existing DaisyUI components.  
 > For example, you can style your button this way:
-```css
+```postcss
 .btn{
   @apply font-normal rounded-full border-4 shadow-md;
 }
