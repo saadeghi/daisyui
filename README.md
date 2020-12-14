@@ -5,7 +5,7 @@
 Modern CSS components for [Tailwind CSS ↗︎][tailwind-url]  
 Styled + unstyled UI components  
 Scalable, [Themeable][theming-url] and designer-friendly  
-[ [demo ↗︎]([demo-url]) ]
+[ [demo ↗︎][demo-url] ]
   
 [![][tweet]][tweet-url]  
 
@@ -18,7 +18,7 @@ Scalable, [Themeable][theming-url] and designer-friendly
 
 
 # 🌼 Demo   
-[See all components]([demo-url]) ↗︎
+[See all components][demo-url] ↗︎
 
 # 👩‍💻 Use   
 ## 1. Install  
