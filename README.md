@@ -50,11 +50,11 @@ module.exports = {
   
 🎨 styled version
 ```
-<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.css" />
 ```
 📐 unstyled version
 ```
-<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.css" />
 ```
 </details>
 
@@ -216,8 +216,8 @@ Please share
 
 
 [install-size]: https://badgen.net/packagephobia/publish/daisyui?label=package%20install%20size&icon=npm&color=purple
-[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.min.css?label=base.css%20size&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.min.css?label=styled.css%20size&color=purple
+[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css%20size&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=styled.css%20size&color=purple
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
@@ -226,8 +226,8 @@ Please share
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://packagephobia.com/result?p=daisyui
-[base-css-url]: https://unpkg.com/daisyui@latest/dist/base.min.css
-[styled-css-url]: https://unpkg.com/daisyui@latest/dist/styled.min.css
+[base-css-url]: https://unpkg.com/daisyui@latest/dist/base.css
+[styled-css-url]: https://unpkg.com/daisyui@latest/dist/styled.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui

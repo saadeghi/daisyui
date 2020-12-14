@@ -11,6 +11,6 @@ module.exports = {
     require('tailwindcss')('tailwind.config.js'),
     require('postcss-nested')({ bubble: ['screen'] }),
     require('autoprefixer'),
-    ...process.env.MINIFY === 'true' ? [cssnano] : [],
+    cssnano,
   ]
 }
