@@ -1,15 +1,96 @@
-<center>
+<div align="center">
 
-[![logo](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg)](#)  
+[![](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg)](#)  
 
-Unstyled *(and styled)* UI component library based on [Tailwind CSS](https://tailwindcss.com/)
+Unstyled (and styled) UI component library based on [Tailwind CSS](https://tailwindcss.com/)
 
-[![](https://img.shields.io/badge/DEMO-blue?style=for-the-badge)](https://daisyui.netlify.app/)
+[![][tweet]][tweet-url]  
 
-</center>
+</div>
 
 # DaisyUI 🌼
+
+[![][install-size]][install-size-url] 
+[![][base-css]][base-css-url]
+[![][styled-css]][styled-css-url]
   
+[![][build]][build-url]
+[![][npm]][npm-url]
+[![][dl]][npm-url]
+[![][commit]][gh-url]
+[![][license]][license-url]
+
+
+[install-size]: https://badgen.net/packagephobia/publish/daisyui?label=package%20install%20size&icon=npm&color=purple
+[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.min.css?label=base.css%20size&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.min.css?label=styled.css%20size&color=purple
+[build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
+[npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
+[dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
+[commit]: https://badgen.net/github/last-commit/saadeghi/daisyui?icon=github&color=purple
+[license]: https://badgen.net/github/license/saadeghi/daisyui?color=purple
+[tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
+
+[install-size-url]: https://packagephobia.com/result?p=daisyui
+[base-css-url]: https://unpkg.com/daisyui@latest/dist/base.min.css
+[styled-css-url]: https://unpkg.com/daisyui@latest/dist/styled.min.css
+[license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
+[npm-url]: https://www.npmjs.com/package/daisyui
+[gh-url]: https://github.com/saadeghi/daisyui
+[build-url]: https://github.com/saadeghi/daisyui/actions
+[tweet-url]: https://twitter.com/intent/tweet?text=Checkout%20DaisyUI%20on%20github%20https://github.com/saadeghi/daisyui
+
+# Demo   
+↗︎ [See all components](https://daisyui.netlify.app/)
+
+# Get Started   
+## 1. Install  
+
+You need [TailwindCSS 2.0+](https://github.com/tailwindlabs/tailwindcss) of course.
+
+```
+npm i daisyui
+```
+
+Then add plugin and preset to `tailwind.config.js`
+```
+module.exports = {
+  plugins: [
+    require('daisyui/styled'), // 🌼 for styled UI
+    // require('daisyui'), // for base UI only
+  ],
+  presets: [
+    require('daisyui/preset')
+  ],
+}
+
+```
+<details>
+<summary>
+  Or use a CDN
+</summary>
+  
+- 🌼 styled version
+```
+<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.min.css" />
+```
+- unstyled version
+```
+<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.min.css" />
+```
+</details>
+
+---
+
+## 2. Set up the colors for your design system (optional)
+  
+If you want to use your custom colors , you need to define the color values in your css. Colors must be themeable so we're using CSS Variables.  
+[↗︎ Theming guide and examples](docs/theming.md)
+
+
+# FAQ
+
+
 <details>
 <summary>
   Why do I need it?
@@ -69,47 +150,14 @@ module.exports = {
 
 </details>
   
-
-## 1. Install  
-
-```
-npm i daisyui
-```
-
-Then add plugin and preset to `tailwind.config.js`
-```
-module.exports = {
-  plugins: [
-    require('daisyui/styled'), // 🌼 for styled UI
-    // require('daisyui'), // for base UI only
-  ],
-  presets: [
-    require('daisyui/preset')
-  ],
-}
-
-```
-<details>
-<summary>
-  Or use a CDN
-</summary>
-  
-- 🌼 styled version
-```
-<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.min.css" />
-```
-- unstyled version
-```
-<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.min.css" />
-```
-</details>
-
-### 2. Set up the colors for your design system (optional)
-  
-If you want to use your custom colors, you need to define the color values in your css. Colors must be themeable so we're using CSS Variables.  
-[↗︎ Theming guide](docs/theming.md)
+---
 
 # Components  
+<details>
+<summary>
+  Show
+</summary>
+
 - [x] Accordion
 - [x] Alert
 - [ ] Artboard
@@ -151,8 +199,10 @@ If you want to use your custom colors, you need to define the color values in yo
 - [ ] Timeline
 - [ ] Toast
 - [ ] Tooltip
+</details>
 
-# Todo
-- [ ] Add all components
-- [ ] Complete documents
-- [ ] Add demo for components
+---
+
+Please share  
+[![][tweet]][tweet-url]  
+
