@@ -1,6 +1,8 @@
 # Theming guide
 DaisyUI is fully themeable, powered by CSS variables.
 
+[![](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/colors.png)](#) 
+
 ## Colors
 If you want to use your custom colors, you need to define the color values in your css. Colors must be themeable so we're using CSS Variables. 
 

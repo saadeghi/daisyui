@@ -81,7 +81,7 @@ If you want to use your custom colors , you need to define the color values in y
   Why do I need it?
 </summary>
 
-> [Utility first ↗︎](https://tailwindcss.com/docs/utility-first) is fast and scalable but developing a scalable design system with utility first is messy, time consuming hard to manage. So why not put all basic skeleton of your UI components in one place and use it on all your design systems then use the power of utility first everywhere?  
+> [Utility first ↗︎](https://tailwindcss.com/docs/utility-first) is fast and scalable but developing a design system with utility first is messy and hard to manage when your codebase gets larger. So why not use a single `.btn` class for all your buttons instead of repeating ~15 utility classes on all your files? This way you can make sure all your components are sharing the same CSS and they respect the same design rules.  
   
 </details>
   
@@ -90,8 +90,9 @@ If you want to use your custom colors , you need to define the color values in y
   How does it work?
 </summary>
 
-> **DaisyUI** provides basic and unstyled component classes that you can use for almost all design systems. It also has an optional style that you can use if you don't want to fully design your components.  
-> It's all based on tailwind so you can customize everything with utility classes and [purge ↗︎](https://tailwindcss.com/docs/optimizing-for-production#purge-css-options) all unused class names.  
+> **DaisyUI** provides basic/unstyled component classes that you can use for almost all design systems. You will need different `.btn` sizes for every project so you can have a basic style that predefined `.xs`, `.sm`, `.lg` sizes for your `.btn` but it has no color or additianal styles.  
+> **DaisyUI** also has an optional `styled` version that is useful if you don't want to fully design your components but you want to use custom colors.  
+> **DaisyUI** is based on tailwind so you can customize everything with utility classes and [purge ↗︎](https://tailwindcss.com/docs/optimizing-for-production#purge-css-options) all unused class names.  
   
 </details>
   
@@ -100,7 +101,7 @@ If you want to use your custom colors , you need to define the color values in y
   What's included?
 </summary>
  
-> When you add **DaisyUI** as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `btn`, `card`, `alert`, etc...  
+> When you add `daisyui/styled` as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `.btn`, `.card`, `.alert`, etc...  
 > If you use the unstyled version, it has no color or visual style so you can fully style the components with Tailwind utility classes. If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind classes.  
   
 </details>
@@ -110,11 +111,14 @@ If you want to use your custom colors , you need to define the color values in y
   Concepts
 </summary>
 
-> - **Typography, spacing, layout** You will handle these with tailwind classes. We suggest using the official [Tailwind Typography ↗︎](https://github.com/tailwindlabs/tailwindcss-typography) plugin
-> - **Colors and theming** You should ditch Tailwind's default and multi-purpose color set and set your custom set of colors for a DaisyUI project. ([Theming guide ↗︎][theming-url])
-> - **Components** (like button, card, etc...) DaisyUI will handle this  
+> **Typography, spacing, layout**  
+  You will handle these with Tailwind classes. We suggest using the official [Tailwind Typography ↗︎](https://github.com/tailwindlabs/tailwindcss-typography) plugin
+> **Colors and theming**  
+  You should ditch Tailwind's default and multi-purpose color set and set your custom set of colors for a DaisyUI project. ([Theming guide ↗︎][theming-url])
+> **Components**  
+  (like button, card, etc...) DaisyUI will handle this, so you don't need to use many utility classes to build a button. you just use `.btn`  
   
-</details>
+</details>  
   
 <details>
 <summary>
@@ -135,9 +139,27 @@ module.exports = {
 
 </details>
   
+
+<details>
+<summary>
+  Extending and customizing
+</summary>
+
+> You can use Tailwind utility classes anywhere. So your button element can look like `<a class="px-16 m-5 opacity-50 btn">` 
+> You're not forced to use all the components. Unused components will be purged anyway.  
+> If you use the `base` style, you can fully design elements using your custom css and add custom classes to existing DaisyUI components.  
+> For example, you can style your button this way:
+```
+.btn{
+  @apply font-normal rounded-full border-4 shadow-md;
+}
+```
+  
+</details>
+
 ---
 
-# 🎛 Components  
+# 🎛 List of components  
 <details>
 <summary>
   Show
