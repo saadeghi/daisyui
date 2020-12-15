@@ -39,6 +39,7 @@
   "scripts": {
     "postcss": "postcss base/index.css -o dist/base.css && postcss styled/index.css -o dist/styled.css",
     "json": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs",
-    "build": "npm run postcss && npm run json"
+    "build": "npm run postcss && npm run json",
+    "add": "touch base/$npm_config_name.css && touch styled/$npm_config_name.css && echo '@import \"./'$npm_config_name'\";' >> base/index.css && echo '@import \"./'$npm_config_name'\";' >> styled/index.css && open base/$npm_config_name.css && open styled/$npm_config_name.css"
   }
 }
