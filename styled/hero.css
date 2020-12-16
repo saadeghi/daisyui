@@ -1,0 +1,21 @@
+.hero{
+  &.overlay{
+    &:before{
+      @apply bg-content-900 bg-opacity-50;
+    }
+  }
+  &.overlay{
+    .hero-content{
+      @apply text-content-100;
+    }
+  }
+  &-content{
+    @apply p-4;
+    .hero-text{
+      @apply max-w-3xl mx-4;
+    }
+    .hero-figure{
+      @apply mx-4;
+    }
+  }
+}

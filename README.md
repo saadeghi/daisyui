@@ -184,6 +184,7 @@ module.exports = {
   - [ ] Range slider
   - [ ] Switch
   - [ ] Upload
+- [x] Hero
 - [ ] Loading
 - [x] Menu
 - [ ] Navbar

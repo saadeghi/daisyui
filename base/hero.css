@@ -1,0 +1,18 @@
+.hero{
+  @apply flex relative w-full bg-cover bg-center justify-center items-center;
+  &.overlay{
+    &:before{
+      content: '';
+      @apply absolute inset-0;
+    }
+  }
+  &-content{
+    @apply items-center flex z-0;
+    .hero-text{
+      @apply flex flex-col items-start;
+      &.center{
+        @apply items-center;
+      }
+    }
+  }
+}
