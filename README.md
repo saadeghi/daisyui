@@ -2,7 +2,7 @@
 
 [![][logo-url]](#)  
 
-Modern CSS components for [Tailwind CSS ↗︎][tailwind-url]  
+CSS components for [Tailwind CSS ↗︎][tailwind-url]  
 Styled + unstyled UI components  
 Scalable, [Themeable][theming-url] and designer-friendly  
 [ [demo ↗︎][demo-url] ]

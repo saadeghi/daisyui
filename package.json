@@ -1,7 +1,31 @@
 {
   "name": "daisyui",
-  "version": "0.2.2",
-  "description": "Styled and unstyled UI Components based on Tailwind CSS",
+  "version": "0.2.3",
+  "description": "CSS components for Tailwind CSS",
+  "author": "Pouya Saadeghi",
+  "license": "MIT",
+  "homepage": "https://github.com/saadeghi/daisyui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saadeghi/daisyui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saadeghi/daisyui/issues"
+  },
+  "keywords": [
+    "design-system",
+    "tailwindcss",
+    "components",
+    "ui-library",
+    "component",
+    "framework",
+    "tailwind",
+    "theming",
+    "postcss",
+    "design",
+    "css",
+    "ui"
+  ],
   "main": "base.js",
   "typings": "base.js",
   "files": [
@@ -16,16 +40,26 @@
       "master"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saadeghi/daisyui.git"
+  "postcss": {
+    "plugins": {
+      "postcss-import": [],
+      "tailwindcss": "tailwind.config.js",
+      "postcss-nested": {
+        "bubble": [
+          "screen"
+        ]
+      },
+      "autoprefixer": [],
+      "cssnano": {
+        "preset": [
+          "default",
+          {
+            "mergeRules": false
+          }
+        ]
+      }
+    }
   },
-  "author": "Pouya Saadeghi",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/saadeghi/daisyui/issues"
-  },
-  "homepage": "https://github.com/saadeghi/daisyui#readme",
   "devDependencies": {
     "autoprefixer": "^10.0.4",
     "cssnano": "^4.1.10",
@@ -35,6 +69,9 @@
     "postcss-nested": "^5.0.1",
     "prejss-cli": "^0.3.3",
     "tailwindcss": "^2.0.1"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^2.0.0"
   },
   "scripts": {
     "postcss": "postcss base/index.css -o dist/base.css && postcss styled/index.css -o dist/styled.css",
