@@ -1,0 +1,9 @@
+.navbar{
+  @apply flex items-center;
+  &-action{
+    @apply flex flex-none;
+  }
+  &-content{
+    @apply flex flex-1;
+  }
+}
