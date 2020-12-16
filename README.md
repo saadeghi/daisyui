@@ -167,7 +167,7 @@ module.exports = {
 - [x] Badge
 - [ ] Banner
 - [ ] Breadcrumb
-- [x] [Button](docs/button.md)
+- [x] Button
 - [x] Button group
 - [x] Card
 - [ ] Chat bubble
@@ -187,7 +187,7 @@ module.exports = {
 - [x] Hero
 - [ ] Loading
 - [x] Menu
-- [ ] Navbar
+- [x] Navbar
 - [ ] Modal
 - [x] Pagination
 - [ ] Progress
