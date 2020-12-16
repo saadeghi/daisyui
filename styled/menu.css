@@ -13,7 +13,7 @@
   }
   li{
     a, span{
-      @apply text-content-700 px-5 py-3;
+      @apply text-current px-5 py-3;
     }
     a{
       @apply hover:bg-primary hover:bg-opacity-20 hover:text-primary;
