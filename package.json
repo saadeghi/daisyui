@@ -43,7 +43,7 @@
   "postcss": {
     "plugins": {
       "postcss-import": [],
-      "tailwindcss": "tailwind.config.js",
+      "tailwindcss": "preset/index.js",
       "postcss-nested": {
         "bubble": [
           "screen"
