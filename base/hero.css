@@ -6,13 +6,13 @@
       @apply absolute inset-0;
     }
   }
-  &-content{
-    @apply items-center flex z-0;
-    .hero-text{
-      @apply flex flex-col items-start;
-      &.center{
-        @apply items-center;
-      }
+}
+.hero-content{
+  @apply items-center flex z-0;
+  .hero-text{
+    @apply flex flex-col items-start;
+    &.center{
+      @apply items-center;
     }
   }
 }

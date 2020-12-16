@@ -9,13 +9,13 @@
       @apply text-content-100;
     }
   }
-  &-content{
-    @apply p-4;
-    .hero-text{
-      @apply max-w-3xl mx-4;
-    }
-    .hero-figure{
-      @apply mx-4;
-    }
+}
+.hero-content{
+  @apply p-4;
+  .hero-text{
+    @apply max-w-3xl mx-4;
+  }
+  .hero-figure{
+    @apply mx-4;
   }
 }
