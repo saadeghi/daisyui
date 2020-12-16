@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Styled and unstyled UI Components based on Tailwind CSS",
   "main": "base.js",
   "typings": "base.js",
@@ -30,9 +30,9 @@
     "autoprefixer": "^10.0.4",
     "cssnano": "^4.1.10",
     "postcss": "^8.1.10",
-    "postcss-nested": "^5.0.1",
     "postcss-cli": "^8.3.0",
     "postcss-import": "^13.0.0",
+    "postcss-nested": "^5.0.1",
     "prejss-cli": "^0.3.3",
     "tailwindcss": "^2.0.1"
   },

@@ -1,8 +1,6 @@
 const cssnano = require('cssnano')({
-  preset: ['default', {
-      discardComments: {
-          removeAll: true,
-      },
+  preset: ['default', { 
+    mergeRules : false,
   }]
 })
 module.exports = {
