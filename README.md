@@ -160,7 +160,7 @@ module.exports = {
 
 - [x] Accordion
 - [x] Alert
-- [ ] Artboard
+- [x] Artboard
 - [ ] App bar
 - [x] Avatar
 - [ ] Avatar group
