@@ -13,35 +13,35 @@ This gives us the opportunity to create multiple themes using a few CSS variable
 |  | Name | CSS variable | Example | Description |
 | - | - | - | - | - |
 | **Base color** |
-| <span style="color:hsl(0, 0%, 100%)">████</span> | default | `--d` | `bg-default` | The base color of your design system |
+| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | default | `--d` | `bg-default` | The base color of your design system |
 | **Brand colors** |
-| <span style="color:hsl(259, 94%, 61%)">████</span> | primary-lighten | `--p1` | `bg-primary-lighten` | Brand color (lighten) |
-| <span style="color:hsl(259, 94%, 51%)">████</span> | primary | `--p2` | `bg-primary` | Brand color |
-| <span style="color:hsl(259, 94%, 41%)">████</span> | primary-darken | `--p3` | `bg-primary-darken` | Brand color (darken) |
-| <span style="color:hsl(314, 100%, 57%)">████</span> | secondary-lighten | `--s1` | `bg-secondary-lighten` | Secondary color (lighten) |
-| <span style="color:hsl(314, 100%, 47%)">████</span> | secondary | `--s2` | `bg-secondary` | Secondary color |
-| <span style="color:hsl(314, 100%, 37%)">████</span> | secondary-darken | `--s3` | `bg-secondary-darken` | Secondary color (darken) |
-| <span style="color:hsl(174, 60%, 61%)">████</span> | accent-lighten | `--a1` | `bg-accent-lighten` | Accent color (lighten) |
-| <span style="color:hsl(174, 60%, 51%)">████</span> | accent | `--a2` | `bg-accent` | Accent color |
-| <span style="color:hsl(174, 60%, 41%)">████</span> | accent-darken | `--a3` | `bg-accent-darken` | Accent color (darken) |
+| ![#793ef9](https://via.placeholder.com/15/793ef9/000000?text=+) | primary-lighten | `--p1` | `bg-primary-lighten` | Brand color (lighten) |
+| ![#570df8](https://via.placeholder.com/15/570df8/000000?text=+) | primary | `--p2` | `bg-primary` | Brand color |
+| ![#4506cb](https://via.placeholder.com/15/4506cb/000000?text=+) | primary-darken | `--p3` | `bg-primary-darken` | Brand color (darken) |
+| ![#ff24cc](https://via.placeholder.com/15/ff24cc/000000?text=+) | secondary-lighten | `--s1` | `bg-secondary-lighten` | Secondary color (lighten) |
+| ![#f000b8](https://via.placeholder.com/15/f000b8/000000?text=+) | secondary | `--s2` | `bg-secondary` | Secondary color |
+| ![#bd0091](https://via.placeholder.com/15/bd0091/000000?text=+) | secondary-darken | `--s3` | `bg-secondary-darken` | Secondary color (darken) |
+| ![#60d7cb](https://via.placeholder.com/15/60d7cb/000000?text=+) | accent-lighten | `--a1` | `bg-accent-lighten` | Accent color (lighten) |
+| ![#37cdbe](https://via.placeholder.com/15/37cdbe/000000?text=+) | accent | `--a2` | `bg-accent` | Accent color |
+| ![#2aa79b](https://via.placeholder.com/15/2aa79b/000000?text=+) | accent-darken | `--a3` | `bg-accent-darken` | Accent color (darken) |
 | **Content colors** |
-| <span style="color:hsl(220, 14%, 96%)">████</span> | content-100 | `--c1` | `bg-content-100` | Neutral colors, for content |
-| <span style="color:hsl(228, 14%, 93%)">████</span> | content-200 | `--c2` | `bg-content-200` |  |
-| <span style="color:hsl(220, 15%, 84%)">████</span> | content-300 | `--c3` | `bg-content-300` |  |
-| <span style="color:hsl(218, 14%, 65%)">████</span> | content-400 | `--c4` | `bg-content-400` |  |
-| <span style="color:hsl(220, 14%, 46%)">████</span> | content-500 | `--c5` | `bg-content-500` |  |
-| <span style="color:hsl(220, 14%, 37%)">████</span> | content-600 | `--c6` | `bg-content-600` |  |
-| <span style="color:hsl(219, 14%, 28%)">████</span> | content-700 | `--c7` | `bg-content-700` |  |
-| <span style="color:hsl(222, 13%, 19%)">████</span> | content-800 | `--c8` | `bg-content-800` |  |
-| <span style="color:hsl(223, 14%, 10%)">████</span> | content-900 | `--c9` | `bg-content-900` |  |
-| <span style="color:hsl(0, 0%, 100%)">████</span> | content-primary | `--cp` | `bg-content-primary` | Foreground contnet color to use on a `primary` color |
-| <span style="color:hsl(0, 0%, 100%)">████</span> | content-secondary | `--cs` | `bg-content-secondary` | Foreground contnet color to use on a `secondary` color |
-| <span style="color:hsl(0, 0%, 100%)">████</span> | content-accent | `--ca` | `bg-content-accent` | Foreground contnet color to use on an `accent` color |
+| ![#f3f4f6](https://via.placeholder.com/15/f3f4f6/000000?text=+) | content-100 | `--c1` | `bg-content-100` | Neutral colors, for content |
+| ![#ebecf0](https://via.placeholder.com/15/ebecf0/000000?text=+) | content-200 | `--c2` | `bg-content-200` |  |
+| ![#d0d4dc](https://via.placeholder.com/15/d0d4dc/000000?text=+) | content-300 | `--c3` | `bg-content-300` |  |
+| ![#99a2b2](https://via.placeholder.com/15/99a2b2/000000?text=+) | content-400 | `--c4` | `bg-content-400` |  |
+| ![#657086](https://via.placeholder.com/15/657086/000000?text=+) | content-500 | `--c5` | `bg-content-500` |  |
+| ![#515a6c](https://via.placeholder.com/15/515a6c/000000?text=+) | content-600 | `--c6` | `bg-content-600` |  |
+| ![#3d4451](https://via.placeholder.com/15/3d4451/000000?text=+) | content-700 | `--c7` | `bg-content-700` |  |
+| ![#2a2e37](https://via.placeholder.com/15/2a2e37/000000?text=+) | content-800 | `--c8` | `bg-content-800` |  |
+| ![#16181d](https://via.placeholder.com/15/16181d/000000?text=+) | content-900 | `--c9` | `bg-content-900` |  |
+| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | content-primary | `--cp` | `bg-content-primary` | Foreground color to use on `primary` |
+| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | content-secondary | `--cs` | `bg-content-secondary` | Foreground color to use on `secondary` |
+| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | content-accent | `--ca` | `bg-content-accent` | Foreground color to use on `accent` |
 | **State colors** |
-| <span style="color:hsl(207, 90%, 54%)">████</span> | info | `--in` | `bg-info` | For showing an `info` message|
-| <span style="color:hsl(174, 100%, 29%)">████</span> | success | `--su` | `bg-success` | For showing a `success` message|
-| <span style="color:hsl(36, 100%, 50%)">████</span> | warning | `--wa` | `bg-warning` | For showing a `warning` message|
-| <span style="color:hsl(14, 100%, 57%)">████</span> | error | `--er` | `bg-error` | For showing an `error` message|
+| ![#2094f3](https://via.placeholder.com/15/2094f3/000000?text=+) | info | `--in` | `bg-info` | For showing an `info` message|
+| ![#009485](https://via.placeholder.com/15/009485/000000?text=+) | success | `--su` | `bg-success` | For showing a `success` message|
+| ![#ff9900](https://via.placeholder.com/15/ff9900/000000?text=+) | warning | `--wa` | `bg-warning` | For showing a `warning` message|
+| ![#ff5724](https://via.placeholder.com/15/ff5724/000000?text=+) | error | `--er` | `bg-error` | For showing an `error` message|
 
 
 ## HSL Colors
