@@ -70,13 +70,12 @@
       @apply pointer-events-none;
     }
     &:before {
-      @apply animate-spin h-4 w-4 rounded-full mr-2;
+      @apply animate-spin h-4 w-4 rounded-full mr-2 border-2;
       content: "";
-      border: 2px solid;
       border-top-color: transparent;
       border-left-color: transparent;
-      border-bottom-color: hsl(var(--c7));
-      border-right-color: hsl(var(--c7));
+      border-bottom-color: currentColor;
+      border-right-color: currentColor;
     }
   }
 }

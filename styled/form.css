@@ -22,35 +22,30 @@
     }
   }
   &:focus {
-    box-shadow: 0 0 0 2px hsl(var(--d)),
-      0 0 0 4px hsl(var(--c3));
+    @apply ring-2 ring-offset-2 ring-content-300 ring-offset-default;
   }
   &-info {
     @apply border-info;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--d)),
-        0 0 0 4px hsl(var(--in));
+      @apply ring-info;
     }
   }
   &-success {
     @apply border-success;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--d)),
-        0 0 0 4px hsl(var(--su));
+      @apply ring-success;
     }
   }
   &-warning {
     @apply border-warning;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--d)),
-        0 0 0 4px hsl(var(--wa));
+      @apply ring-warning;
     }
   }
   &-error {
     @apply border-error;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--d)),
-        0 0 0 4px hsl(var(--er));
+      @apply ring-error;
     }
   }
 }
