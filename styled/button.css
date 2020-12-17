@@ -12,7 +12,7 @@
       @apply bg-content-200 border-content-200;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-content-600));
+      box-shadow: 0 0 0 2px hsl(var(--d)), 0 0 0 4px hsl(var(--c6));
     }
   }
   /* brand colors */
@@ -23,7 +23,7 @@
       @apply bg-primary-darken border-primary-darken;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-primary));
+      box-shadow: 0 0 0 2px hsl(var(--d)), 0 0 0 4px hsl(var(--p2));
     }
   }
   &-secondary {
@@ -33,7 +33,7 @@
       @apply bg-secondary-darken border-secondary-darken;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-secondary));
+      box-shadow: 0 0 0 2px hsl(var(--d)), 0 0 0 4px hsl(var(--s2));
     }
   }
   &-accent {
@@ -43,7 +43,7 @@
       @apply bg-accent-darken border-accent-darken;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-accent));
+      box-shadow: 0 0 0 2px hsl(var(--d)), 0 0 0 4px hsl(var(--a2));
     }
   }
   /* btn variants */
@@ -54,7 +54,7 @@
       @apply bg-default bg-opacity-5 border-opacity-0 text-opacity-80;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-content-200));
+      box-shadow: 0 0 0 2px hsl(var(--d)), 0 0 0 4px hsl(var(--c2));
     }
   }
   &-link {
@@ -64,7 +64,7 @@
       @apply underline bg-transparent border-transparent;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-primary));
+      box-shadow: 0 0 0 2px hsl(var(--d)), 0 0 0 4px hsl(var(--p2));
     }
   }
 
@@ -117,37 +117,37 @@
       @apply h-3 w-3;
     }
     &.btn-primary:before {
-      border-bottom-color: hsl(var(--color-content-primary));
-      border-right-color: hsl(var(--color-content-primary));
+      border-bottom-color: hsl(var(--cp));
+      border-right-color: hsl(var(--cp));
     }
     &.btn-secondary:before {
-      border-bottom-color: hsl(var(--color-content-secondary));
-      border-right-color: hsl(var(--color-content-secondary));
+      border-bottom-color: hsl(var(--cs));
+      border-right-color: hsl(var(--cs));
     }
     &.btn-accent:before {
-      border-bottom-color: hsl(var(--color-content-accent));
-      border-right-color: hsl(var(--color-content-accent));
+      border-bottom-color: hsl(var(--ca));
+      border-right-color: hsl(var(--ca));
     }
     &.btn-ghost:before {
-      border-bottom-color: hsl(var(--color-content-400));
-      border-right-color: hsl(var(--color-content-400));
+      border-bottom-color: hsl(var(--c4));
+      border-right-color: hsl(var(--c4));
     }
     &.btn-outline {
       &:before {
-        border-bottom-color: hsl(var(--color-content-600));
-        border-right-color: hsl(var(--color-content-600));
+        border-bottom-color: hsl(var(--c6));
+        border-right-color: hsl(var(--c6));
       }
       &.btn-primary:before {
-        border-bottom-color: hsl(var(--color-primary));
-        border-right-color: hsl(var(--color-primary));
+        border-bottom-color: hsl(var(--p2));
+        border-right-color: hsl(var(--p2));
       }
       &.btn-secondary:before {
-        border-bottom-color: hsl(var(--color-secondary));
-        border-right-color: hsl(var(--color-secondary));
+        border-bottom-color: hsl(var(--s2));
+        border-right-color: hsl(var(--s2));
       }
       &.btn-accent:before {
-        border-bottom-color: hsl(var(--color-accent));
-        border-right-color: hsl(var(--color-accent));
+        border-bottom-color: hsl(var(--a2));
+        border-right-color: hsl(var(--a2));
       }
     }
   }

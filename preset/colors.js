@@ -6,262 +6,262 @@ module.exports = {
 
         "default": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-default), ${opacityValue})`
+            return `hsla(var(--d), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-default), var(${opacityVariable}, 1))`
+            return `hsla(var(--d), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-default))`
+          return `hsl(var(--d))`
         },
 
         "primary": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-primary), ${opacityValue})`
+            return `hsla(var(--p2), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-primary), var(${opacityVariable}, 1))`
+            return `hsla(var(--p2), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-primary))`
+          return `hsl(var(--p2))`
         },
 
         "primary-lighten": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-primary-lighten), ${opacityValue})`
+            return `hsla(var(--p1), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-primary-lighten), var(${opacityVariable}, 1))`
+            return `hsla(var(--p1), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-primary-lighten))`
+          return `hsl(var(--p1))`
         },
 
         "primary-darken": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-primary-darken), ${opacityValue})`
+            return `hsla(var(--p3), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-primary-darken), var(${opacityVariable}, 1))`
+            return `hsla(var(--p3), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-primary-darken))`
+          return `hsl(var(--p3))`
         },
 
         "secondary": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-secondary), ${opacityValue})`
+            return `hsla(var(--s2), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-secondary), var(${opacityVariable}, 1))`
+            return `hsla(var(--s2), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-secondary))`
+          return `hsl(var(--s2))`
         },
 
         "secondary-lighten": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-secondary-lighten), ${opacityValue})`
+            return `hsla(var(--s1), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-secondary-lighten), var(${opacityVariable}, 1))`
+            return `hsla(var(--s1), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-secondary-lighten))`
+          return `hsl(var(--s1))`
         },
 
         "secondary-darken": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-secondary-darken), ${opacityValue})`
+            return `hsla(var(--s3), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-secondary-darken), var(${opacityVariable}, 1))`
+            return `hsla(var(--s3), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-secondary-darken))`
+          return `hsl(var(--s3))`
         },
 
         "accent": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-accent), ${opacityValue})`
+            return `hsla(var(--a2), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-accent), var(${opacityVariable}, 1))`
+            return `hsla(var(--a2), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-accent))`
+          return `hsl(var(--a2))`
         },
 
         "accent-lighten": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-accent-lighten), ${opacityValue})`
+            return `hsla(var(--a1), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-accent-lighten), var(${opacityVariable}, 1))`
+            return `hsla(var(--a1), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-accent-lighten))`
+          return `hsl(var(--a1))`
         },
 
         "accent-darken": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-accent-darken), ${opacityValue})`
+            return `hsla(var(--a3), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-accent-darken), var(${opacityVariable}, 1))`
+            return `hsla(var(--a3), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-accent-darken))`
+          return `hsl(var(--a3))`
         },
 
         "info": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-info), ${opacityValue})`
+            return `hsla(var(--in), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-info), var(${opacityVariable}, 1))`
+            return `hsla(var(--in), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-info))`
+          return `hsl(var(--in))`
         },
 
         "success": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-success), ${opacityValue})`
+            return `hsla(var(--su), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-success), var(${opacityVariable}, 1))`
+            return `hsla(var(--su), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-success))`
+          return `hsl(var(--su))`
         },
 
         "warning": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-warning), ${opacityValue})`
+            return `hsla(var(--wa), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-warning), var(${opacityVariable}, 1))`
+            return `hsla(var(--wa), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-warning))`
+          return `hsl(var(--wa))`
         },
 
         "error": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-error), ${opacityValue})`
+            return `hsla(var(--er), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-error), var(${opacityVariable}, 1))`
+            return `hsla(var(--er), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-error))`
+          return `hsl(var(--er))`
         },
 
         "content-primary": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-primary), ${opacityValue})`
+            return `hsla(var(--cp), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-primary), var(${opacityVariable}, 1))`
+            return `hsla(var(--cp), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-primary))`
+          return `hsl(var(--cp))`
         },
 
         "content-secondary": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-secondary), ${opacityValue})`
+            return `hsla(var(--cs), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-secondary), var(${opacityVariable}, 1))`
+            return `hsla(var(--cs), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-secondary))`
+          return `hsl(var(--cs))`
         },
 
         "content-accent": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-accent), ${opacityValue})`
+            return `hsla(var(--ca), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-accent), var(${opacityVariable}, 1))`
+            return `hsla(var(--ca), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-accent))`
+          return `hsl(var(--ca))`
         },
 
         "content-100": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-100), ${opacityValue})`
+            return `hsla(var(--c1), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-100), var(${opacityVariable}, 1))`
+            return `hsla(var(--c1), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-100))`
+          return `hsl(var(--c1))`
         },
 
         "content-200": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-200), ${opacityValue})`
+            return `hsla(var(--c2), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-200), var(${opacityVariable}, 1))`
+            return `hsla(var(--c2), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-200))`
+          return `hsl(var(--c2))`
         },
 
         "content-300": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-300), ${opacityValue})`
+            return `hsla(var(--c3), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-300), var(${opacityVariable}, 1))`
+            return `hsla(var(--c3), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-300))`
+          return `hsl(var(--c3))`
         },
 
         "content-400": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-400), ${opacityValue})`
+            return `hsla(var(--c4), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-400), var(${opacityVariable}, 1))`
+            return `hsla(var(--c4), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-400))`
+          return `hsl(var(--c4))`
         },
 
         "content-500": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-500), ${opacityValue})`
+            return `hsla(var(--c5), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-500), var(${opacityVariable}, 1))`
+            return `hsla(var(--c5), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-500))`
+          return `hsl(var(--c5))`
         },
 
         "content-600": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-600), ${opacityValue})`
+            return `hsla(var(--c6), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-600), var(${opacityVariable}, 1))`
+            return `hsla(var(--c6), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-600))`
+          return `hsl(var(--c6))`
         },
 
         "content-700": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-700), ${opacityValue})`
+            return `hsla(var(--c7), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-700), var(${opacityVariable}, 1))`
+            return `hsla(var(--c7), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-700))`
+          return `hsl(var(--c7))`
         },
 
         "content-800": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-800), ${opacityValue})`
+            return `hsla(var(--c8), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-800), var(${opacityVariable}, 1))`
+            return `hsla(var(--c8), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-800))`
+          return `hsl(var(--c8))`
         },
 
         "content-900": ({ opacityVariable, opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `hsla(var(--color-content-900), ${opacityValue})`
+            return `hsla(var(--c9), ${opacityValue})`
           }
           if (opacityVariable !== undefined) {
-            return `hsla(var(--color-content-900), var(${opacityVariable}, 1))`
+            return `hsla(var(--c9), var(${opacityVariable}, 1))`
           }
-          return `hsl(var(--color-content-900))`
+          return `hsl(var(--c9))`
         },
       },
     },
