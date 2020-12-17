@@ -1,9 +1,9 @@
 .navbar{
   @apply flex items-center;
-  &-action{
-    @apply flex flex-none;
-  }
-  &-content{
+  &-grow{
     @apply flex flex-1;
+  }
+  &-grow-0{
+    @apply flex flex-none;
   }
 }
