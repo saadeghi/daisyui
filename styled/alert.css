@@ -1,5 +1,8 @@
 .alert {
-  @apply rounded-box bg-content-100 p-2;
+  @apply rounded-box bg-content-100 p-4;
+  &-sm{
+    @apply p-2;
+  }
   &-info {
     @apply bg-opacity-20 bg-info text-info;
   }

@@ -1,8 +1,10 @@
 .artboard{
+  @apply w-full;
   &-demo{
-    @apply flex items-center justify-center;
+    @apply flex flex-col items-center justify-center;
   }
   &.phone{
+    width: 320px;
     &-1{
       width: 320px;
       height: 568px;

@@ -1,5 +1,5 @@
 .btn {
-  @apply font-normal rounded-btn border;
+  @apply font-normal border font-semibold uppercase;
   &:active:hover{
     @apply transform scale-95;
   }
@@ -8,7 +8,7 @@
   & {
     @apply bg-content-100 border-content-100 text-content-800;
     &:hover,
-    &.active {
+    &-active {
       @apply bg-content-200 border-content-200;
     }
     &:focus-visible {
@@ -16,30 +16,30 @@
     }
   }
   /* brand colors */
-  &.primary {
+  &-primary {
     @apply bg-primary border-primary text-content-primary;
     &:hover,
-    &.active {
+    &.btn-active {
       @apply bg-primary-darken border-primary-darken;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-primary));
     }
   }
-  &.secondary {
+  &-secondary {
     @apply bg-secondary border-secondary text-content-secondary;
     &:hover,
-    &.active {
+    &.btn-active {
       @apply bg-secondary-darken border-secondary-darken;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-secondary));
     }
   }
-  &.accent {
+  &-accent {
     @apply bg-accent border-accent text-content-accent;
     &:hover,
-    &.active {
+    &.btn-active {
       @apply bg-accent-darken border-accent-darken;
     }
     &:focus-visible {
@@ -47,20 +47,20 @@
     }
   }
   /* btn variants */
-  &.ghost {
-    @apply border-transparent border text-content-400 bg-transparent;
+  &-ghost {
+    @apply border-transparent border text-current text-opacity-60 bg-transparent;
     &:hover,
-    &.active {
-      @apply bg-content-200 border-content-200 text-content-600;
+    &.btn-active {
+      @apply bg-default bg-opacity-5 border-opacity-0 text-opacity-80;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-content-200));
     }
   }
-  &.link {
+  &-link {
     @apply bg-transparent border-transparent text-primary;
     &:hover,
-    &.active {
+    &.btn-active {
       @apply underline bg-transparent border-transparent;
     }
     &:focus-visible {
@@ -69,24 +69,24 @@
   }
 
   /* outline */
-  &.outline {
+  &-outline {
     @apply bg-transparent text-content-600 border-current;
     &:hover {
       @apply bg-content-600 text-content-100 border-content-600;
     }
-    &.primary {
+    &.btn-primary {
       @apply text-primary;
       &:hover {
         @apply bg-primary-darken text-content-primary border-primary-darken;
       }
     }
-    &.secondary {
+    &.btn-secondary {
       @apply text-secondary;
       &:hover {
         @apply bg-secondary-darken text-content-secondary border-secondary-darken;
       }
     }
-    &.accent {
+    &.btn-accent {
       @apply text-accent;
       &:hover {
         @apply bg-accent-darken text-content-accent border-accent-darken;
@@ -95,7 +95,7 @@
   }
 
   /* disabled */
-  &.disabled,
+  &-disabled,
   &[disabled] {
     @apply bg-content-100 border-content-100 text-content-300;
   }
@@ -104,48 +104,48 @@
 
   /* loading */
   &.loading {
-    &.square:before,
-    &.circle:before {
+    &.btn-square:before,
+    &.btn-circle:before {
       @apply mr-0;
     }
-    &.xl:before,
-    &.lg:before {
+    &.btn-xl:before,
+    &.btn-lg:before {
       @apply h-5 w-5;
     }
-    &.sm:before,
-    &.xs:before {
+    &.btn-sm:before,
+    &.btn-xs:before {
       @apply h-3 w-3;
     }
-    &.primary:before {
+    &.btn-primary:before {
       border-bottom-color: hsl(var(--color-content-primary));
       border-right-color: hsl(var(--color-content-primary));
     }
-    &.secondary:before {
+    &.btn-secondary:before {
       border-bottom-color: hsl(var(--color-content-secondary));
       border-right-color: hsl(var(--color-content-secondary));
     }
-    &.accent:before {
+    &.btn-accent:before {
       border-bottom-color: hsl(var(--color-content-accent));
       border-right-color: hsl(var(--color-content-accent));
     }
-    &.ghost:before {
+    &.btn-ghost:before {
       border-bottom-color: hsl(var(--color-content-400));
       border-right-color: hsl(var(--color-content-400));
     }
-    &.outline {
+    &.btn-outline {
       &:before {
         border-bottom-color: hsl(var(--color-content-600));
         border-right-color: hsl(var(--color-content-600));
       }
-      &.primary:before {
+      &.btn-primary:before {
         border-bottom-color: hsl(var(--color-primary));
         border-right-color: hsl(var(--color-primary));
       }
-      &.secondary:before {
+      &.btn-secondary:before {
         border-bottom-color: hsl(var(--color-secondary));
         border-right-color: hsl(var(--color-secondary));
       }
-      &.accent:before {
+      &.btn-accent:before {
         border-bottom-color: hsl(var(--color-accent));
         border-right-color: hsl(var(--color-accent));
       }
@@ -155,7 +155,7 @@
 /* group */
 .btn-group {
   & > input[type="radio"]:checked.btn,
-  & > .active.btn {
+  & > .btn-active {
     @apply bg-primary border-primary text-content-primary;
   }
   & > .btn:not(:first-child) {
