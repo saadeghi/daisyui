@@ -5,6 +5,18 @@
   }
   input[type=text]{
     @apply transition duration-200 ease-in-out;
+    &.lg{
+      @apply px-6 h-16;
+    }
+    &{
+      @apply px-4 h-12;
+    }
+    &.sm{
+      @apply px-3 h-8;
+    }
+    &.xs{
+      @apply px-2 h-6;
+    }
     &:focus {
       @apply relative outline-none;
     }

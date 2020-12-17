@@ -1,52 +1,56 @@
-.form-control{
-  label{
-    @apply px-1 py-2;
-    .label-text{
-      @apply text-sm text-content-500;
-    }
-    .label-text-alt{
-      @apply text-xs text-content-400;
-    }
-    a{
-      @apply hover:text-content-800;
-    }
+.label {
+  @apply px-1 py-2;
+  &-text {
+    @apply text-sm text-content-500;
   }
-  input[type=text]{
-    @apply bg-default px-6 leading-loose text-lg h-12 rounded-btn border border-content-300;
+  &-text-alt {
+    @apply text-xs text-content-400;
+  }
+  a {
+    @apply hover:text-content-800;
+  }
+}
+.input-text {
+  @apply bg-default leading-loose text-lg rounded-btn border border-opacity-0 border-content-300;
+  &.bordered {
+    @apply border-opacity-100;
+  }
+  &.ghost {
+    @apply bg-opacity-5;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-content-300));
+      @apply bg-opacity-10 shadow-none;
     }
   }
-  &.info{
-    input[type=text]{
-      @apply border-info;
-      &:focus {
-        box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-info));
-      }
+  &:focus {
+    box-shadow: 0 0 0 2px hsl(var(--color-default)),
+      0 0 0 4px hsl(var(--color-content-300));
+  }
+  &-info {
+    @apply border-info;
+    &:focus {
+      box-shadow: 0 0 0 2px hsl(var(--color-default)),
+        0 0 0 4px hsl(var(--color-info));
     }
   }
-  &.success{
-    input[type=text]{
-      @apply border-success;
-      &:focus {
-        box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-success));
-      }
+  &-success {
+    @apply border-success;
+    &:focus {
+      box-shadow: 0 0 0 2px hsl(var(--color-default)),
+        0 0 0 4px hsl(var(--color-success));
     }
   }
-  &.warning{
-    input[type=text]{
-      @apply border-warning;
-      &:focus {
-        box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-warning));
-      }
+  &-warning {
+    @apply border-warning;
+    &:focus {
+      box-shadow: 0 0 0 2px hsl(var(--color-default)),
+        0 0 0 4px hsl(var(--color-warning));
     }
   }
-  &.error{
-    input[type=text]{
-      @apply border-error;
-      &:focus {
-        box-shadow: 0 0 0 2px hsl(var(--color-default)), 0 0 0 4px hsl(var(--color-error));
-      }
+  &-error {
+    @apply border-error;
+    &:focus {
+      box-shadow: 0 0 0 2px hsl(var(--color-default)),
+        0 0 0 4px hsl(var(--color-error));
     }
   }
 }
