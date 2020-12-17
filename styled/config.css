@@ -144,14 +144,14 @@
   --color-content-secondary: 233, 13%, 13%;
   --color-content-accent: 233, 13%, 13%;
 
-  --color-content--900: 250, 100%, 75%;
-  --color-content--800: 250, 100%, 75%;
+  --color-content--900: 251, 100%, 90%;
+  --color-content--800: 251, 100%, 80%;
   --color-content--700: 250, 100%, 75%;
-  --color-content--600: 250, 100%, 75%;
-  --color-content--500: 251, 43%, 85%;
-  --color-content--400: 251, 43%, 85%;
-  --color-content--300: 245, 14%, 15%;
-  --color-content--200: 245, 14%, 15%;
+  --color-content--600: 245, 23%, 54%;
+  --color-content--500: 245, 23%, 49%;
+  --color-content--400: 245, 23%, 42%;
+  --color-content--300: 245, 20%, 27%;
+  --color-content--200: 245, 13%, 21%;
   --color-content--100: 245, 14%, 15%;
 }
 
