@@ -1,6 +1,6 @@
 .artboard{
   &-demo{
-    @apply flex items-center justify-center rounded-lg shadow bg-default text-content-400;
+    @apply flex items-center justify-center;
   }
   &.phone{
     &-1{

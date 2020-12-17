@@ -1,0 +1,5 @@
+.artboard{
+  &-demo{
+    @apply rounded-lg shadow bg-default text-content-400;
+  }
+}
