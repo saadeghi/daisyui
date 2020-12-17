@@ -1,8 +1,5 @@
 /*! purgecss start ignore */
 :root {
-
-  /* color variants */
-  /* color values are HSL */
   --color-default: 0, 0%, 100%;
 
   --color-primary: 259, 94%, 51%;
