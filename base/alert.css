@@ -1,15 +1,9 @@
 .alert {
-  @apply relative p-3 flex flex-col md:flex-row justify-between items-center leading-8;
-  &-content{
-    @apply flex-1 flex;
-    &>*{
-      @apply flex-wrap;
-    }
+  @apply flex flex-col justify-between items-center md:flex-row space-y-2 md:space-y-0;
+  &-grow{
+    @apply flex flex-1;
   }
-  &-action{
-    @apply flex-none flex;
-  }
-  &>label{
-    @apply flex-grow my-0 mx-3 flex-shrink;
+  &-grow-0{
+    @apply flex flex-none;
   }
 }

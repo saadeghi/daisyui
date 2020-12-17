@@ -1,15 +1,15 @@
 .alert {
-  @apply rounded-box bg-content-100;
-  &.info {
+  @apply rounded-box bg-content-100 p-2;
+  &-info {
     @apply bg-opacity-20 bg-info text-info;
   }
-  &.success {
+  &-success {
     @apply bg-opacity-20 bg-success text-success;
   }
-  &.warning {
+  &-warning {
     @apply bg-opacity-20 bg-warning text-warning;
   }
-  &.error {
+  &-error {
     @apply bg-opacity-20 bg-error text-error;
   }
 }
