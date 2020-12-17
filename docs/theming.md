@@ -1,6 +1,15 @@
 # Theming guide
 DaisyUI is themeable, powered by CSS variables.
 
+## Table of contents
+- [Why we're not using default colors?](#why-were-not-using-default-colors)
+- [Color role names](#color-role-names)
+- [HSL format](#hsl-format)
+- [How to customize themes](#how-to-customize-themes)
+- [Respecting default color scheme](#respecting-default-color-scheme)
+- [How to active/change themes theme?](#how-to-activechange-themes-theme)
+- [Fixing PurgeCSS issue](#fixing-purgecss-issue)
+
 [![](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/colors.png)](#) 
 
 ## Why we're not using default colors?
@@ -44,7 +53,7 @@ This gives us the opportunity to create multiple themes using a few CSS variable
 | ![#ff5724](https://via.placeholder.com/15/ff5724/000000?text=+) | error | `--er` | `bg-error` | For showing an `error` message|
 
 
-## HSL Colors
+## HSL format
 DaisyUI uses HSL color system for better theming. Every color variable must be the 3 values of HSL (hue, saturation, lightness) 
 
 Example:
