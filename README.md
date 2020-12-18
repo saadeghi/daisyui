@@ -254,8 +254,7 @@ Please share
 
 
 
-
-[install-size]: https://badgen.net/packagephobia/publish/daisyui?label=package%20install%20size&icon=npm&color=purple
+[install-size]: https://badgen.net/bundlephobia/min/daisyui?&color=purple
 [base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css%20size&color=purple
 [styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=styled.css%20size&color=purple
 [full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css%20size&color=purple
@@ -266,7 +265,7 @@ Please share
 [license]: https://badgen.net/github/license/saadeghi/daisyui?color=purple
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
-[install-size-url]: https://packagephobia.com/result?p=daisyui
+[install-size-url]: https://bundlephobia.com/result?p=daisyui
 [base-css-url]: https://unpkg.com/daisyui@latest/dist/base.css
 [styled-css-url]: https://unpkg.com/daisyui@latest/dist/styled.css
 [full-css-url]: https://unpkg.com/daisyui@latest/dist/full.css
