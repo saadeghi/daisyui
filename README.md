@@ -111,7 +111,7 @@ Add your custom colors in your CSS file
 </summary>
 
 > Instead of using lots of utility classes for all elements, use component classes like `.btn`, `.card`, `.navbar`, etc... for your common elements to make sure all your elements use same style  
-> Instead of using general-purpose colors names like `blue-600` or `gray-100` use semantic role names like `primary`, `content-300` or `info`. This way, you can change primary color of your whole project using a single CSS variable; no need to replace all color classes in all files. You can also define multiple themes (not just dark-mode) using CSS variables.  
+> Instead of using general-purpose color names like `blue-600` or `gray-100` use semantic role names like `primary`, `content-300` or `info`. This way, you can change primary color of your whole project using a single CSS variable; no need to replace all color classes in all files. You can also define multiple themes (not just dark-mode) using CSS variables.  
   
 </details>
   
@@ -142,18 +142,20 @@ Add your custom colors in your CSS file
   Concepts
 </summary>
 
-> **spacing, layout, Typography**  
-  You will handle these with Tailwind classes. We suggest using the official [Tailwind Typography ↗︎](https://github.com/tailwindlabs/tailwindcss-typography) plugin
+> **Spacing, layout, Typography**  
+  You will handle these with Tailwind utility classes. It's easy to create any layout with flexbox or grid. Also for spacing (margins, paddings, etc...), Tailwind classes are perfect for the job. For typography, I suggest using the official [Tailwind Typography ↗︎](https://github.com/tailwindlabs/tailwindcss-typography) plugin.  
+    
 > **Colors and theming**  
-  You should ditch Tailwind's general-purpose colors and add your custom set of colors for a DaisyUI project. (Why? 👉 [Theming guide ↗︎][theming-url])
+  Instead of using Tailwind's general-purpose colors we use a custom/themeable set of color names (Why? 👉 [Theming guide ↗︎][theming-url])  
+    
 > **Components**  
-  (like button, card, etc...) DaisyUI will handle this, so you don't need to use many utility classes to build a button. Just use `.btn`  
+  DaisyUI has component classes for every component (button, card, etc...) so you don't need to use many utility classes to build a button. Just use a `.btn` class.  
   
 </details>  
   
 <details>
 <summary>
-  What is "preset"
+  What is "preset"?
 </summary>
 
 ```js
@@ -165,8 +167,9 @@ module.exports = {
 }
 
 ```
-> When you add DaisyUI preset it will replaces default tailwind colors with a set of semantic color set that is themeable and can be configed with CSS variables.  
-> `daisyui/preset` also adds a few `borderRadius` that is used in components. They are also configurable with CSS variables.
+> When you add DaisyUI preset it will add:
+> A set of [semantic color names][theming-url] (as utility classes)  
+> A few additional utility classes that are used by components (like border-radius, min-height, etc...)
 
 </details>
   
@@ -176,11 +179,11 @@ module.exports = {
   Extending and customizing
 </summary>
 
-> You can add set multiple custom themes using a few CSS variable.
-> You can use Tailwind utility classes anywhere. So your button element can look like `<a class="px-16 m-5 shadow-md btn">` 
+> You can define multiple custom themes using a few CSS variable.  
+> You can use Tailwind utility classes anywhere. So your button element can look like `<a class="px-16 m-5 shadow-md btn">`  
 > You're not forced to use all the components. Unused components will be purged anyway.  
 > If you use the `base` style, you can fully design elements using Tailwind utility classes or Tailwind's `@apply` directive.  
-> For example, you can style your button this way:
+> For example, you can style your button this way:  
 ```postcss
 .btn{
   @apply px-16 m-5 shadow-md;
