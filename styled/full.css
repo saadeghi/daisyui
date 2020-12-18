@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@import "./index";
+@tailwind utilities;
+
