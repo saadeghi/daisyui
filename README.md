@@ -23,9 +23,6 @@ Scalable, [Themeable][theming-url] and designer-friendly
 # 👩‍💻 Use   
 ## 1. Install  
 
-You need [`TailwindCSS 2.0+`][tailwind-url] ↗︎  
-Install package:
-
 ```
 npm i daisyui
 ```
@@ -41,30 +38,69 @@ module.exports = {
     require('daisyui/preset')
   ],
 }
-
 ```
+
+
 <details>
 <summary>
   Or use a CDN
 </summary>
-  
-🎨 styled version
-```
-<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/styled.css" />
-```
-📐 unstyled version
-```
-<link rel="stylesheet" href="https://unpkg.com/daisyui@latest/dist/base.css" />
-```
+(Not recommended for production)  
+
+| Version | Description | URL |
+| - | - | - |
+| **Base** <br/> [![][base-css]][base-css-url] | Unstyled domponents <br/><sup>(Basic layout, no color, no visual style)</sup> | `https://unpkg.com/daisyui@latest/dist/base.css` |
+| **Styled** <br/> [![][styled-css]][styled-css-url] | DaisyUI Styled domponents <br/><sup>(But you can't use DaisyUI colors on other elements)</sup> | `https://unpkg.com/daisyui@latest/dist/styled.css` |
+| **Full** <br/> [![][full-css]][full-css-url] | Tailwind default style + DaisyUI styled domponents <br/><sup>(But it's a large file for production)</sup> | `https://unpkg.com/daisyui@latest/dist/full.css` |
+
+
 </details>
 
 ---
 
-## 2. Set up the colors for your design system (optional)
+## 2. Customize theme and colors (optional)
   
-If you want to use your custom colors , you need to define the color values in your css. Colors must be themeable so we're using CSS Variables.  
-[Theming guide and examples][theming-url] ↗︎
+Add your custom colors in your CSS file  
+[ [Theming guide and examples][theming-url] ↗︎ ]
 
+<details>
+<summary>
+  Quick example
+</summary>
+
+```css
+/* Values are HSL (hue, saturation, lightness) */
+:root {
+  --d: 0, 0%, 100%; /* default color */
+  --p1: 340, 82%, 62%; /* Primary color - light */
+  --p2: 340, 82%, 52%; /* Primary color - normal */
+  --p3: 340, 82%, 42%; /* Primary color - dark */
+  --s1: 262, 52%, 56%; /* Secondary color - light */
+  --s2: 262, 52%, 46%; /* Secondary color - normal */
+  --s3: 262, 52%, 36%; /* Secondary color - dark */
+  --a1: 199, 98%, 58%; /* Accent color - light */
+  --a2: 199, 98%, 48%; /* Accent color - normal */
+  --a3: 199, 98%, 38%; /* Accent color - dark */
+  --c1: 220, 14%, 96%; /* Content colors */
+  --c2: 228, 14%, 93%;
+  --c3: 220, 15%, 84%;
+  --c4: 218, 14%, 65%;
+  --c5: 220, 14%, 46%;
+  --c6: 220, 14%, 37%;
+  --c7: 219, 14%, 28%;
+  --c8: 222, 13%, 19%;
+  --c9: 223, 14%, 10%;
+  --cp: 0, 0%, 100%; /* Foreground content color to use on a primary color */
+  --cs: 0, 0%, 100%; /* Foreground content color to use on a secondary color */
+  --ca: 0, 0%, 100%; /* Foreground content color to use on a accent color */
+  --in: 207, 90%, 54%; /* Info */
+  --su: 174, 100%, 29%; /* Success */
+  --wa: 36, 100%, 50%; /* Warning */
+  --er: 14, 100%, 57%; /* Error */
+}
+```
+
+</details>
 
 # 🤔 FAQ
 
@@ -74,7 +110,8 @@ If you want to use your custom colors , you need to define the color values in y
   Why do I need it?
 </summary>
 
-> [Utility first ↗︎](https://tailwindcss.com/docs/utility-first) is fast and scalable but developing a design system with utility first is messy and hard to manage when your codebase gets larger. So why not use a single `.btn` class for all your buttons instead of repeating ~15 utility classes on all your files? This way you can make sure all your components are sharing the same CSS and they respect the same design rules.  
+> Instead of using lots of utility classes for all elements, use component classes like `.btn`, `.card`, `.navbar`, etc... for your common elements to make sure all your elements use same style  
+> Instead of using general-purpose colors names like `blue-600` or `gray-100` use semantic role names like `primary`, `content-300` or `info`. This way, you can change primary color of your whole project using a single CSS variable; no need to replace all color classes in all files. You can also define multiple themes (not just dark-mode) using CSS variables.  
   
 </details>
   
@@ -84,7 +121,7 @@ If you want to use your custom colors , you need to define the color values in y
 </summary>
 
 > **DaisyUI** provides basic/unstyled component classes that you can use for almost all design systems. You will need different `.btn` sizes for every project so you can have a basic style that predefined `.xs`, `.sm`, `.lg` sizes for your `.btn` but it has no color or additianal styles.  
-> **DaisyUI** also has an optional `styled` version that is useful if you don't want to fully design your components but you want to use custom colors.  
+> **DaisyUI** also has an optional `styled` version that is useful if you don't want to fully design your components but you want to use custom color themes.  
 > **DaisyUI** is based on tailwind so you can customize everything with utility classes and [purge ↗︎](https://tailwindcss.com/docs/optimizing-for-production#purge-css-options) all unused class names.  
   
 </details>
@@ -95,7 +132,8 @@ If you want to use your custom colors , you need to define the color values in y
 </summary>
  
 > When you add `daisyui/styled` as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `.btn`, `.card`, `.alert`, etc...  
-> If you use the unstyled version, it has no color or visual style so you can fully style the components with Tailwind utility classes. If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind classes.  
+> If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind utility classes.  
+> If you use the base (unstyled) version, it has no color or visual style so you can fully style the components with Tailwind utility classes or Tailwind's `@apply` directive. 
   
 </details>
   
@@ -104,12 +142,12 @@ If you want to use your custom colors , you need to define the color values in y
   Concepts
 </summary>
 
-> **Typography, spacing, layout**  
+> **spacing, layout, Typography**  
   You will handle these with Tailwind classes. We suggest using the official [Tailwind Typography ↗︎](https://github.com/tailwindlabs/tailwindcss-typography) plugin
 > **Colors and theming**  
-  You should ditch Tailwind's default and multi-purpose color set and set your custom set of colors for a DaisyUI project. ([Theming guide ↗︎][theming-url])
+  You should ditch Tailwind's general-purpose colors and add your custom set of colors for a DaisyUI project. (Why? 👉 [Theming guide ↗︎][theming-url])
 > **Components**  
-  (like button, card, etc...) DaisyUI will handle this, so you don't need to use many utility classes to build a button. you just use `.btn`  
+  (like button, card, etc...) DaisyUI will handle this, so you don't need to use many utility classes to build a button. Just use `.btn`  
   
 </details>  
   
@@ -138,13 +176,14 @@ module.exports = {
   Extending and customizing
 </summary>
 
-> You can use Tailwind utility classes anywhere. So your button element can look like `<a class="px-16 m-5 opacity-50 btn">` 
+> You can add set multiple custom themes using a few CSS variable.
+> You can use Tailwind utility classes anywhere. So your button element can look like `<a class="px-16 m-5 shadow-md btn">` 
 > You're not forced to use all the components. Unused components will be purged anyway.  
-> If you use the `base` style, you can fully design elements using your custom css and add custom classes to existing DaisyUI components.  
+> If you use the `base` style, you can fully design elements using Tailwind utility classes or Tailwind's `@apply` directive.  
 > For example, you can style your button this way:
 ```postcss
 .btn{
-  @apply font-normal rounded-full border-4 shadow-md;
+  @apply px-16 m-5 shadow-md;
 }
 ```
   
@@ -219,6 +258,7 @@ Please share
 [install-size]: https://badgen.net/packagephobia/publish/daisyui?label=package%20install%20size&icon=npm&color=purple
 [base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css%20size&color=purple
 [styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=styled.css%20size&color=purple
+[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css%20size&color=purple
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
@@ -229,6 +269,7 @@ Please share
 [install-size-url]: https://packagephobia.com/result?p=daisyui
 [base-css-url]: https://unpkg.com/daisyui@latest/dist/base.css
 [styled-css-url]: https://unpkg.com/daisyui@latest/dist/styled.css
+[full-css-url]: https://unpkg.com/daisyui@latest/dist/full.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui

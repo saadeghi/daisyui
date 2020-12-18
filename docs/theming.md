@@ -14,7 +14,7 @@ DaisyUI is themeable, powered by CSS variables.
 
 ## Why we're not using default colors?
 `Tailwind CSS` provides a wide range of colors and it won't limit your choice when you're styling your page but DaisyUI is about focusing on design systems and if you're creating a design system, you need to define your brand colors, set a design guideline and only use the chosen colors.  
-Instead of using tailwind's general-purpose colors line `blue-600`, `green-200` or `gray-100` we use semantic role names like `primary`, `content-300` or `info`. This way, we can assign a color value to each role just use the role name in our markup (like `<div class='bg-primary'>`). Your markup doesn't care what color is `primary` and you can change primary color of your whole project using a CSS variable.  
+Instead of using tailwind's general-purpose colors like `blue-600`, `green-200` or `gray-100` we use semantic role names like `primary`, `content-300` or `info`. This way, we can assign a color value to each role just use the role name in our markup (like `<div class='bg-primary'>`). Your markup doesn't care what color is `primary` and you can change primary color of your whole project using a CSS variable.  
 This gives us the opportunity to create multiple themes using a few CSS variables.
 
 ## Color role names
