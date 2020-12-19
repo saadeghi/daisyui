@@ -232,7 +232,7 @@ module.exports = {
 - [x] Navbar
 - [ ] Modal
 - [x] Pagination
-- [ ] Progress
+- [x] Progress
 - [ ] Progress indicator
 - [ ] Skeleton placeholder
 - [ ] Statistic
