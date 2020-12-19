@@ -1,4 +1,4 @@
-.progress[value]{
+.progress{
   @apply rounded-full h-2;
   &::-webkit-progress-bar{
     @apply bg-content-900 bg-opacity-10 rounded-full;
