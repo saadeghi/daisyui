@@ -71,32 +71,32 @@ Add your custom colors in your CSS file
 ```css
 /* Values are HSL (hue, saturation, lightness) */
 :root {
-  --d: 0, 0%, 100%; /* default color */
-  --p1: 340, 82%, 62%; /* Primary color - light */
-  --p2: 340, 82%, 52%; /* Primary color - normal */
-  --p3: 340, 82%, 42%; /* Primary color - dark */
-  --s1: 262, 52%, 56%; /* Secondary color - light */
-  --s2: 262, 52%, 46%; /* Secondary color - normal */
-  --s3: 262, 52%, 36%; /* Secondary color - dark */
-  --a1: 199, 98%, 58%; /* Accent color - light */
-  --a2: 199, 98%, 48%; /* Accent color - normal */
-  --a3: 199, 98%, 38%; /* Accent color - dark */
-  --c1: 220, 14%, 96%; /* Content colors */
-  --c2: 228, 14%, 93%;
-  --c3: 220, 15%, 84%;
-  --c4: 218, 14%, 65%;
-  --c5: 220, 14%, 46%;
-  --c6: 220, 14%, 37%;
-  --c7: 219, 14%, 28%;
-  --c8: 222, 13%, 19%;
-  --c9: 223, 14%, 10%;
-  --cp: 0, 0%, 100%; /* Foreground content color to use on a primary color */
-  --cs: 0, 0%, 100%; /* Foreground content color to use on a secondary color */
-  --ca: 0, 0%, 100%; /* Foreground content color to use on a accent color */
-  --in: 207, 90%, 54%; /* Info */
-  --su: 174, 100%, 29%; /* Success */
-  --wa: 36, 100%, 50%; /* Warning */
-  --er: 14, 100%, 57%; /* Error */
+  --d: 0 0% 100%; /* default color */
+  --p1: 340 82% 62%; /* Primary color - light */
+  --p2: 340 82% 52%; /* Primary color - normal */
+  --p3: 340 82% 42%; /* Primary color - dark */
+  --s1: 262 52% 56%; /* Secondary color - light */
+  --s2: 262 52% 46%; /* Secondary color - normal */
+  --s3: 262 52% 36%; /* Secondary color - dark */
+  --a1: 199 98% 58%; /* Accent color - light */
+  --a2: 199 98% 48%; /* Accent color - normal */
+  --a3: 199 98% 38%; /* Accent color - dark */
+  --c1: 220 14% 96%; /* Content colors */
+  --c2: 228 14% 93%;
+  --c3: 220 15% 84%;
+  --c4: 218 14% 65%;
+  --c5: 220 14% 46%;
+  --c6: 220 14% 37%;
+  --c7: 219 14% 28%;
+  --c8: 222 13% 19%;
+  --c9: 223 14% 10%;
+  --cp: 0 0% 100%; /* Foreground content color to use on a primary color */
+  --cs: 0 0% 100%; /* Foreground content color to use on a secondary color */
+  --ca: 0 0% 100%; /* Foreground content color to use on a accent color */
+  --in: 207 90% 54%; /* Info */
+  --su: 174 100% 29%; /* Success */
+  --wa: 36 100% 50%; /* Warning */
+  --er: 14 100% 57%; /* Error */
 }
 ```
 

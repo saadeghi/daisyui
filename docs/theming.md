@@ -62,7 +62,7 @@ Example:
 3 values are Hue, Saturation, Lightness
 Will be used for hsl() CSS color 
 */
---p2: 340, 82%, 52%;
+--p2: 340 82% 52%;
 
 ```
 
@@ -72,54 +72,54 @@ You can set up 3 values of H,S,L for each color in your CSS file. It can be your
 ```css
 
 :root {
-  --d: 0, 0%, 100%; /* default color */
+  --d: 0 0% 100%; /* default color */
 
-  --p1: 340, 82%, 62%; /* Primary color - light */
-  --p2: 340, 82%, 52%; /* Primary color - normal */
-  --p3: 340, 82%, 42%; /* Primary color - dark */
+  --p1: 340 82% 62%; /* Primary color - light */
+  --p2: 340 82% 52%; /* Primary color - normal */
+  --p3: 340 82% 42%; /* Primary color - dark */
 
-  --s1: 262, 52%, 56%; /* Secondary color - light */
-  --s2: 262, 52%, 46%; /* Secondary color - normal */
-  --s3: 262, 52%, 36%; /* Secondary color - dark */
+  --s1: 262 52% 56%; /* Secondary color - light */
+  --s2: 262 52% 46%; /* Secondary color - normal */
+  --s3: 262 52% 36%; /* Secondary color - dark */
 
-  --a1: 199, 98%, 58%; /* Accent color - light */
-  --a2: 199, 98%, 48%; /* Accent color - normal */
-  --a3: 199, 98%, 38%; /* Accent color - dark */
+  --a1: 199 98% 58%; /* Accent color - light */
+  --a2: 199 98% 48%; /* Accent color - normal */
+  --a3: 199 98% 38%; /* Accent color - dark */
 
-  --c1: 220, 14%, 96%; /* Content colors */
-  --c2: 228, 14%, 93%;
-  --c3: 220, 15%, 84%;
-  --c4: 218, 14%, 65%;
-  --c5: 220, 14%, 46%;
-  --c6: 220, 14%, 37%;
-  --c7: 219, 14%, 28%;
-  --c8: 222, 13%, 19%;
-  --c9: 223, 14%, 10%;
+  --c1: 220 14% 96%; /* Content colors */
+  --c2: 228 14% 93%;
+  --c3: 220 15% 84%;
+  --c4: 218 14% 65%;
+  --c5: 220 14% 46%;
+  --c6: 220 14% 37%;
+  --c7: 219 14% 28%;
+  --c8: 222 13% 19%;
+  --c9: 223 14% 10%;
 
-  --cp: 0, 0%, 100%; /* Foreground content color to use on a primary color */
-  --cs: 0, 0%, 100%; /* Foreground content color to use on a secondary color */
-  --ca: 0, 0%, 100%; /* Foreground content color to use on a accent color */
+  --cp: 0 0% 100%; /* Foreground content color to use on a primary color */
+  --cs: 0 0% 100%; /* Foreground content color to use on a secondary color */
+  --ca: 0 0% 100%; /* Foreground content color to use on a accent color */
 
-  --in: 207, 90%, 54%; /* Info */
-  --su: 174, 100%, 29%; /* Success */
-  --wa: 36, 100%, 50%; /* Warning */
-  --er: 14, 100%, 57%; /* Error */
+  --in: 207 90% 54%; /* Info */
+  --su: 174 100% 29%; /* Success */
+  --wa: 36 100% 50%; /* Warning */
+  --er: 14 100% 57%; /* Error */
 }
 
 /* Let's add a second theme */
 
 [data-theme='dark'] {
-  --d: 223, 14%, 10%;
+  --d: 223 14% 10%;
 
-  --c9: 210, 20%, 98%;
-  --c8: 220, 14%, 96%;
-  --c7: 228, 14%, 93%;
-  --c6: 220, 15%, 84%;
-  --c5: 218, 14%, 65%;
-  --c4: 220, 14%, 46%;
-  --c3: 220, 14%, 37%;
-  --c2: 219, 14%, 28%;
-  --c1: 222, 13%, 19%;
+  --c9: 210 20% 98%;
+  --c8: 220 14% 96%;
+  --c7: 228 14% 93%;
+  --c6: 220 15% 84%;
+  --c5: 218 14% 65%;
+  --c4: 220 14% 46%;
+  --c3: 220 14% 37%;
+  --c2: 219 14% 28%;
+  --c1: 222 13% 19%;
 }
 ```
 
@@ -128,33 +128,33 @@ As you can see, we are not overwriting brand colors for `dark` theme and only ch
 You can add more themes
 ```css
 [data-theme='retro'] {
-  --d: 45, 47%, 80%;
+  --d: 45 47% 80%;
 
-  --p2: 3, 74%, 66%;
-  --p1: 3, 74%, 76%;
-  --p3: 3, 74%, 56%;
+  --p2: 3 74% 66%;
+  --p1: 3 74% 76%;
+  --p3: 3 74% 56%;
 
-  --s2: 145, 27%, 62%;
-  --s1: 145, 27%, 72%;
-  --s3: 145, 27%, 52%;
+  --s2: 145 27% 62%;
+  --s1: 145 27% 72%;
+  --s3: 145 27% 52%;
 
-  --a2: 49, 67%, 66%;
-  --a1: 49, 67%, 76%;
-  --a3: 49, 67%, 56%;
+  --a2: 49 67% 66%;
+  --a1: 49 67% 76%;
+  --a3: 49 67% 56%;
 
-  --cp: 345, 5%, 15%;
-  --cs: 345, 5%, 15%;
-  --ca: 345, 5%, 15%;
+  --cp: 345 5% 15%;
+  --cs: 345 5% 15%;
+  --ca: 345 5% 15%;
 
-  --c9: 345, 5%, 15%;
-  --c8: 41, 13%, 24%;
-  --c7: 42, 17%, 42%;
-  --c6: 41, 19%, 47%;
-  --c5: 42, 20%, 52%;
-  --c4: 42, 26%, 57%;
-  --c3: 42, 36%, 65%;
-  --c2: 45, 37%, 72%;
-  --c1: 46, 42%, 76%;
+  --c9: 345 5% 15%;
+  --c8: 41 13% 24%;
+  --c7: 42 17% 42%;
+  --c6: 41 19% 47%;
+  --c5: 42 20% 52%;
+  --c4: 42 26% 57%;
+  --c3: 42 36% 65%;
+  --c2: 45 37% 72%;
+  --c1: 46 42% 76%;
 }
 ```
 
