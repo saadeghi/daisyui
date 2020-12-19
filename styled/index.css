@@ -1,5 +1,4 @@
 @import "../base";
-@import "./config";
 @import "./components/accordion";
 @import "./components/alert";
 @import "./components/avatar";
