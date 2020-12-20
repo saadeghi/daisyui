@@ -1,7 +1,7 @@
 .form-control{
   @apply flex flex-col;
   label{
-    @apply flex items-center justify-between;
+    @apply flex items-center justify-between select-none;
   }
   input[type=text]{
     @apply transition duration-200 ease-in-out;

@@ -1,0 +1,16 @@
+.checkbox{
+
+  & ~ .checkbox-mark{
+    @apply flex select-none cursor-pointer items-center justify-center transition duration-200 ease-in-out;
+    &:before{
+      @apply transition duration-200 ease-in-out;
+      content: '';
+      display: block;
+    }
+  }
+  &:checked{
+  }
+  &:focus {
+    @apply outline-none;
+  }
+}

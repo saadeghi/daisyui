@@ -1,0 +1,112 @@
+.checkbox{
+  @apply appearance-none opacity-0 w-0 h-0 absolute;
+  & ~ .checkbox-mark{
+    @apply w-6 h-6 rounded-btn border border-content-200 shadow-inner;
+    &:before{
+      width: 7px;
+      height: 14px;
+      transform: rotate(45deg)translate(-2px, -1px)scale(.75);
+      border-bottom: 3px solid;
+      border-right: 3px solid;
+      @apply border-transparent;
+    }
+  }
+  &:hover {
+    & ~ .checkbox-mark{
+      @apply border-content-300;
+      &:before{
+        @apply border-content-100;
+      }
+    }
+  }
+  &:focus-visible {
+    & ~ .checkbox-mark{
+      @apply ring-2 ring-offset-2 ring-offset-default ring-content-200;
+    }
+  }
+  &:checked{
+    &,
+    &:hover{
+      & ~ .checkbox-mark{
+        @apply bg-content-600 border-content-600 text-default shadow-none;
+        &:before{
+          animation: checkmark .4s ease-in-out;
+          transform: rotate(45deg)translate(-2px, -1px)scale(1);
+          @apply border-default;
+        }
+      }
+    }
+    &:focus-visible {
+      & ~ .checkbox-mark{
+        @apply ring-content-600;
+      }
+    }
+  }
+  &-primary{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .checkbox-mark{
+          @apply bg-primary border-primary text-content-primary;
+          &:before{
+            @apply border-content-primary;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .checkbox-mark{
+          @apply ring-primary;
+        }
+      }
+    }
+  }
+  &-secondary{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .checkbox-mark{
+          @apply bg-secondary border-secondary text-content-secondary;
+          &:before{
+            @apply border-content-secondary;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .checkbox-mark{
+          @apply ring-secondary;
+        }
+      }
+    }
+  }
+  &-accent{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .checkbox-mark{
+          @apply bg-accent border-accent text-content-accent;
+          &:before{
+            @apply border-content-accent;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .checkbox-mark{
+          @apply ring-accent;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes checkmark {
+  30% {
+    transform: rotate(45deg)translate(-2px, -1px)scale(1.2);
+  }
+  50% {
+    transform: rotate(45deg)translate(-2px, -1px)scale(0.8);
+  }
+  100% {
+    transform: rotate(45deg)translate(-2px, -1px)scale(1);
+  }
+}
