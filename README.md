@@ -13,8 +13,8 @@ Scalable, [Themeable][theming-url] and designer-friendly
 
 # DaisyUI
 
-[![][install-size]][install-size-url] [![][base-css]][base-css-url] [![][styled-css]][styled-css-url]  
-[![][build]][build-url] [![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]
+[![][build]][build-url] [![][install-size]][install-size-url] [![][base-css]][base-css-url] [![][styled-css]][styled-css-url]  
+[![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]
 
 
 # 🌼 Demo   
@@ -221,7 +221,7 @@ module.exports = {
   - [ ] Select
   - [x] Text input
   - [ ] Text area
-  - [ ] Checkbox
+  - [x] Checkbox
   - [ ] Radio
   - [ ] Range slider
   - [ ] Switch
