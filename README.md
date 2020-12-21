@@ -211,11 +211,14 @@ module.exports = {
 - [ ] Breadcrumb
 - [x] Button
 - [x] Button group
+- [ ] Calendar
 - [x] Card
 - [ ] Chat bubble
 - [ ] Comment
+- [ ] Countdown
 - [ ] Divider
 - [ ] Empty placeholder
+- [ ] Footer
 - [ ] Form
   - [ ] Dropdown
   - [ ] Select
@@ -224,7 +227,7 @@ module.exports = {
   - [x] Checkbox
   - [ ] Radio
   - [ ] Range slider
-  - [ ] Switch
+  - [x] Togggle
   - [ ] Upload
 - [x] Hero
 - [ ] Loading
