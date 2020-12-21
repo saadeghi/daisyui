@@ -1,10 +1,13 @@
 .card {
-  @apply rounded-box border border-content-200;
+  @apply rounded-box;
+  &.bordered{
+    @apply border border-content-200;
+  }
   &-body {
     @apply p-8;
   }
   &-title {
-    @apply mb-3 text-xl;
+    @apply mb-3 text-xl font-semibold;
   }
   &-actions:first-child {
     @apply mb-2;
