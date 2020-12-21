@@ -1,0 +1,105 @@
+.toggle{
+  @apply appearance-none opacity-0 w-0 h-0 absolute;
+  & ~ .toggle-mark{
+    @apply w-12 h-6 rounded-full border border-content-200 shadow-inner;
+    &:before{
+      @apply w-5 h-5 m-px rounded-full bg-content-300;
+      animation: togglemark-off .4s ease-in-out;
+    }
+  }
+  &:hover {
+    & ~ .toggle-mark{
+      @apply border-content-300;
+      &:before{
+        @apply border-content-100;
+      }
+    }
+  }
+  &:focus-visible {
+    & ~ .toggle-mark{
+      @apply ring-2 ring-offset-2 ring-offset-default ring-content-200;
+    }
+  }
+  &:checked{
+    &,
+    &:hover{
+      & ~ .toggle-mark{
+        @apply bg-default border-content-300 bg-opacity-20;
+        &:before{
+          @apply bg-content-500 transform translate-x-6	;
+          animation: togglemark-on .4s ease-in-out;
+        }
+      }
+    }
+    &:focus-visible {
+      & ~ .toggle-mark{
+        @apply ring-content-600;
+      }
+    }
+  }
+  &-primary{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .toggle-mark{
+          @apply bg-primary border-primary bg-opacity-20 border-opacity-10;
+          &:before{
+            @apply bg-primary;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .toggle-mark{
+          @apply ring-primary;
+        }
+      }
+    }
+  }
+  &-secondary{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .toggle-mark{
+          @apply bg-secondary border-secondary bg-opacity-20 border-opacity-10;
+          &:before{
+            @apply bg-secondary;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .toggle-mark{
+          @apply ring-secondary;
+        }
+      }
+    }
+  }
+  &-accent{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .toggle-mark{
+          @apply bg-accent border-accent bg-opacity-20 border-opacity-10;
+          &:before{
+            @apply bg-accent;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .toggle-mark{
+          @apply ring-accent;
+        }
+      }
+    }
+  }
+}
+
+@keyframes togglemark-off {
+  50% {
+    margin-left: -3px;
+  }
+}
+@keyframes togglemark-on {
+  50% {
+    margin-left: 4px;
+  }
+}
