@@ -1,0 +1,39 @@
+.input-text {
+  @apply bg-default leading-loose text-lg rounded-btn border border-opacity-0 border-content-300;
+  &.bordered {
+    @apply border-opacity-100;
+  }
+  &.ghost {
+    @apply bg-opacity-5;
+    &:focus {
+      @apply bg-opacity-10 shadow-none;
+    }
+  }
+  &:focus {
+    @apply ring-2 ring-offset-2 ring-content-300 ring-offset-default;
+  }
+  &-info {
+    @apply border-info;
+    &:focus {
+      @apply ring-info;
+    }
+  }
+  &-success {
+    @apply border-success;
+    &:focus {
+      @apply ring-success;
+    }
+  }
+  &-warning {
+    @apply border-warning;
+    &:focus {
+      @apply ring-warning;
+    }
+  }
+  &-error {
+    @apply border-error;
+    &:focus {
+      @apply ring-error;
+    }
+  }
+}
