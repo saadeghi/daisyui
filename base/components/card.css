@@ -1,7 +1,7 @@
 .card {
   @apply flex flex-col relative overflow-hidden;
   &.side {
-    @apply flex-row;
+    @apply lg:flex-row;
   }
   &-body {
     @apply flex flex-col flex-auto;

@@ -8,7 +8,7 @@
   }
 }
 .hero-content{
-  @apply items-center flex z-0;
+  @apply items-center flex flex-col lg:flex-row-reverse z-0 space-y-4 lg:space-y-0;
   .hero-text{
     @apply flex flex-col items-start;
     &.center{
