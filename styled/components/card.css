@@ -3,6 +3,14 @@
   &.bordered{
     @apply border border-content-200;
   }
+  &.compact{
+    .card-body {
+      @apply p-4 text-sm;
+    }
+    .card-title {
+      @apply mb-1;
+    }
+  }
   &-body {
     @apply p-8;
   }
