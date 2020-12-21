@@ -227,7 +227,7 @@ module.exports = {
   - [x] Checkbox
   - [ ] Radio
   - [ ] Range slider
-  - [x] Togggle
+  - [x] Toggle
   - [ ] Upload
 - [x] Hero
 - [ ] Loading
