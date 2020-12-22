@@ -162,7 +162,10 @@ You can add more themes
 If you want to show dark mode for people who are using a dark mode on their OS:
 ```css
 @media (prefers-color-scheme: dark){
-  /* your dark theme here */
+  :root{
+    --d: 223 14% 10%;
+    /* ...rest of colors */
+  }
 }
 ```
 
