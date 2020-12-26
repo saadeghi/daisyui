@@ -69,9 +69,9 @@ module.exports = {
 
 | Version | Description | URL |
 | - | - | - |
-| **Base** <br/> [![][base-css]][base-css-url] | Unstyled domponents <br/><sup>(Basic layout, no color, no visual style)</sup> | `https://unpkg.com/daisyui@latest/dist/base.css` |
-| **Styled** <br/> [![][styled-css]][styled-css-url] | DaisyUI Styled domponents <br/><sup>(But you can't use DaisyUI colors on other elements)</sup> | `https://unpkg.com/daisyui@latest/dist/styled.css` |
-| **Full** <br/> [![][full-css]][full-css-url] | Tailwind default style + DaisyUI styled domponents <br/><sup>(But it's a large file for production)</sup> | `https://unpkg.com/daisyui@latest/dist/full.css` |
+| **Base** <br/> [![][base-css]][base-css-url] | Unstyled UI components <br/><sup>(Basic layout, no color, no visual style)</sup> | `https://unpkg.com/daisyui@latest/dist/base.css` |
+| **Styled** <br/> [![][styled-css]][styled-css-url] | DaisyUI Styled UI components <br/><sup>(But you can't use DaisyUI colors on other elements)</sup> | `https://unpkg.com/daisyui@latest/dist/styled.css` |
+| **Full** <br/> [![][full-css]][full-css-url] | Tailwind default style + DaisyUI styled UI components <br/><sup>(But it's a large file for production)</sup> | `https://unpkg.com/daisyui@latest/dist/full.css` |
 
 
 </details>
