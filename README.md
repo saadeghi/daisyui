@@ -2,10 +2,9 @@
 
 [![][logo-url]](#)  
 
-CSS components for [Tailwind CSS ↗︎][tailwind-url]  
-Styled + unstyled UI components  
-Scalable, [Themeable][theming-url] and designer-friendly  
-[ [demo ↗︎][demo-url] ]
+**UI Components for Tailwind CSS**  
+Themeable, Scalable and Designer-Friendly  
+[ [See all components][demo-url] ]
   
 [![][tweet]][tweet-url]  
 
@@ -16,12 +15,33 @@ Scalable, [Themeable][theming-url] and designer-friendly
 [![][build]][build-url] [![][install-size]][install-size-url] [![][base-css]][base-css-url] [![][styled-css]][styled-css-url]  
 [![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]
 
+---
 
-# 🌼 Demo   
-[See all components][demo-url] ↗︎
+## 🔗 Links
+- 👉 [See all components][demo-url]
+- ⛹️‍♀️ [Tailwind Play - Try it online][tw-play-url]
+- 📘 [Theming guide][theming-url]
+- 📘 [List of components][components-url]
+- 📘 [FAQ][faq-url]
+- 🐙 [GitHub][gh-url]
+- 📦 [NPM][npm-url]
 
-# 👩‍💻 Use   
-## 1. Install  
+---
+
+## 🌼 Features   
+- **CSS components**: Use classes like `btn`, `card`, ...
+- **Designer-friendly**: DaisyUI has 2 versions:
+  - **Styled**: Beatiful UI library, no need to design elements.
+  - **Base**: Only skeleton of components. No style, no colors.
+- **Scalable**: You know all your components are sharing the same style
+- **Customizable**: Customize the style of elements with Tailwind utility classes.
+- **Themeable**: Add multiple themes or change colors with a CSS variable.
+- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`, ... just like your design system defines.  
+[ [read more][faq-url] ]
+
+---
+
+## 👩‍💻 Install   
 
 ```
 npm i daisyui
@@ -58,9 +78,8 @@ module.exports = {
 
 ---
 
-## 2. Customize theme and colors (optional)
-  
-Add your custom colors in your CSS file  
+## 🎨 Customize theme and colors (optional)  
+Add your custom colors in CSS file  
 [ [Theming guide and examples][theming-url] ↗︎ ]
 
 <details>
@@ -102,151 +121,6 @@ Add your custom colors in your CSS file
 
 </details>
 
-# 🤔 FAQ
-
-
-<details>
-<summary>
-  Why do I need it?
-</summary>
-
-> Instead of using lots of utility classes for all elements, use component classes like `.btn`, `.card`, `.navbar`, etc... for your common elements to make sure all your elements use same style  
-> Instead of using general-purpose color names like `blue-600` or `gray-100` use semantic role names like `primary`, `content-300` or `info`. This way, you can change primary color of your whole project using a single CSS variable; no need to replace all color classes in all files. You can also define multiple themes (not just dark-mode) using CSS variables.  
-  
-</details>
-  
-<details>
-<summary>
-  How does it work?
-</summary>
-
-> **DaisyUI** provides basic/unstyled component classes that you can use for almost all design systems. You will need different `.btn` sizes for every project so you can have a basic style that predefined `.xs`, `.sm`, `.lg` sizes for your `.btn` but it has no color or additianal styles.  
-> **DaisyUI** also has an optional `styled` version that is useful if you don't want to fully design your components but you want to use custom color themes.  
-> **DaisyUI** is based on tailwind so you can customize everything with utility classes and [purge ↗︎](https://tailwindcss.com/docs/optimizing-for-production#purge-css-options) all unused class names.  
-  
-</details>
-  
-<details>
-<summary>
-  What's included?
-</summary>
- 
-> When you add `daisyui/styled` as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `.btn`, `.card`, `.alert`, etc...  
-> If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind utility classes.  
-> If you use the base (unstyled) version, it has no color or visual style so you can fully style the components with Tailwind utility classes or Tailwind's `@apply` directive. 
-  
-</details>
-  
-<details>
-<summary>
-  Concepts
-</summary>
-
-> **Spacing, layout, Typography**  
-  You will handle these with Tailwind utility classes. It's easy to create any layout with flexbox or grid. Also for spacing (margins, paddings, etc...), Tailwind classes are perfect for the job. For typography, I suggest using the official [Tailwind Typography ↗︎](https://github.com/tailwindlabs/tailwindcss-typography) plugin.  
-    
-> **Colors and theming**  
-  Instead of using Tailwind's general-purpose colors we use a custom/themeable set of color names (Why? 👉 [Theming guide ↗︎][theming-url])  
-    
-> **Components**  
-  DaisyUI has component classes for every component (button, card, etc...) so you don't need to use many utility classes to build a button. Just use a `.btn` class.  
-  
-</details>  
-  
-<details>
-<summary>
-  What is "preset"?
-</summary>
-
-```js
-module.exports = {
-  // ...
-  presets: [
-    require('daisyui/preset')
-  ],
-}
-
-```
-> When you add DaisyUI preset it will add:
-> A set of [semantic color names][theming-url] (as utility classes)  
-> A few additional utility classes that are used by components (like border-radius, min-height, etc...)
-
-</details>
-  
-
-<details>
-<summary>
-  Extending and customizing
-</summary>
-
-> You can define multiple custom themes using a few CSS variable.  
-> You can use Tailwind utility classes anywhere. So your button element can look like `<a class="px-16 m-5 shadow-md btn">`  
-> You're not forced to use all the components. Unused components will be purged anyway.  
-> If you use the `base` style, you can fully design elements using Tailwind utility classes or Tailwind's `@apply` directive.  
-> For example, you can style your button this way:  
-```postcss
-.btn{
-  @apply px-16 m-5 shadow-md;
-}
-```
-  
-</details>
-
----
-
-# 🎛 List of components  
-<details>
-<summary>
-  Show
-</summary>
-
-- [x] Accordion
-- [x] Alert
-- [x] Artboard
-- [ ] App bar
-- [x] Avatar
-- [ ] Avatar group
-- [x] Badge
-- [ ] Banner
-- [ ] Breadcrumb
-- [x] Button
-- [x] Button group
-- [ ] Calendar
-- [x] Card
-- [ ] Chat bubble
-- [ ] Comment
-- [ ] Countdown
-- [ ] Divider
-- [ ] Empty placeholder
-- [ ] Footer
-- [ ] Form
-  - [ ] Dropdown
-  - [ ] Select
-  - [x] Text input
-  - [ ] Text area
-  - [x] Checkbox
-  - [ ] Radio
-  - [ ] Range slider
-  - [x] Toggle
-  - [ ] Upload
-- [x] Hero
-- [ ] Loading
-- [x] Menu
-- [x] Navbar
-- [ ] Modal
-- [x] Pagination
-- [x] Progress
-- [ ] Progress indicator
-- [ ] Skeleton placeholder
-- [ ] Statistic
-- [ ] Steps
-- [ ] Tag
-- [ ] Tabs
-- [ ] Timeline
-- [ ] Toast
-- [ ] Tooltip
-</details>
-
 ---
   
 <div align="center">
@@ -278,10 +152,13 @@ Please share
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
+[tw-play-url]: https://play.tailwindcss.com/hn9vnQsIn2
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=Checkout%20DaisyUI%20on%20github%20https://github.com/saadeghi/daisyui
 
 [theming-url]: https://github.com/saadeghi/daisyui/blob/master/docs/theming.md
+[faq-url]: https://github.com/saadeghi/daisyui/blob/master/docs/faq.md
+[components-url]: https://github.com/saadeghi/daisyui/blob/master/docs/components.md
 [demo-url]: https://daisyui.netlify.app/
 [tailwind-url]: https://tailwindcss.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg
