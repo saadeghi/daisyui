@@ -3,8 +3,13 @@ DaisyUI is themeable, powered by CSS variables.
 
 ## Table of contents
 - [Why we're not using default colors?](#why-were-not-using-default-colors)
-- [Color role names](#color-role-names)
+- [Semantic color names](#semantic-color-names)
 - [HSL format](#hsl-format)
+- [Using default themes](#using-default-themes)
+  - [List of default themes](#list-of-default-themes)
+  - [Using default themes from npm package](#using-default-themes-from-npm-package)
+  - [Using default themes from CDN](#using-default-themes-from-CDN)
+  - [Set up custom border radius for each theme](#set-up-custom-border-radius-for-each-theme)
 - [How to customize themes](#how-to-customize-themes)
 - [Respecting default color scheme](#respecting-default-color-scheme)
 - [How to active/change themes theme?](#how-to-activechange-themes-theme)
@@ -17,40 +22,40 @@ DaisyUI is themeable, powered by CSS variables.
 Instead of using tailwind's general-purpose colors like `blue-600`, `green-200` or `gray-100` we use semantic role names like `primary`, `content-300` or `info`. This way, we can assign a color value to each role just use the role name in our markup (like `<div class='bg-primary'>`). Your markup doesn't care what color is `primary` and you can change primary color of your whole project using a CSS variable.  
 This gives us the opportunity to create multiple themes using a few CSS variables.
 
-## Color role names
+## Semantic color names
 
 |  | Name | CSS variable | Example | Description |
 | - | - | - | - | - |
 | **Base color** |
-| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | default | `--d` | `bg-default` | The base color of your design system |
+| ![#ffffff](http://via.placeholder.com/15/ffffff/000000?text=+) | default | `--d` | `bg-default` | The base color of your design system |
 | **Brand colors** |
-| ![#793ef9](https://via.placeholder.com/15/793ef9/000000?text=+) | primary-lighten | `--p1` | `bg-primary-lighten` | Brand color (lighten) |
-| ![#570df8](https://via.placeholder.com/15/570df8/000000?text=+) | primary | `--p2` | `bg-primary` | Brand color |
-| ![#4506cb](https://via.placeholder.com/15/4506cb/000000?text=+) | primary-darken | `--p3` | `bg-primary-darken` | Brand color (darken) |
-| ![#ff24cc](https://via.placeholder.com/15/ff24cc/000000?text=+) | secondary-lighten | `--s1` | `bg-secondary-lighten` | Secondary color (lighten) |
-| ![#f000b8](https://via.placeholder.com/15/f000b8/000000?text=+) | secondary | `--s2` | `bg-secondary` | Secondary color |
-| ![#bd0091](https://via.placeholder.com/15/bd0091/000000?text=+) | secondary-darken | `--s3` | `bg-secondary-darken` | Secondary color (darken) |
-| ![#60d7cb](https://via.placeholder.com/15/60d7cb/000000?text=+) | accent-lighten | `--a1` | `bg-accent-lighten` | Accent color (lighten) |
-| ![#37cdbe](https://via.placeholder.com/15/37cdbe/000000?text=+) | accent | `--a2` | `bg-accent` | Accent color |
-| ![#2aa79b](https://via.placeholder.com/15/2aa79b/000000?text=+) | accent-darken | `--a3` | `bg-accent-darken` | Accent color (darken) |
+| ![#793ef9](http://via.placeholder.com/15/793ef9/000000?text=+) | primary-lighten | `--p1` | `bg-primary-lighten` | Brand color (lighten) |
+| ![#570df8](http://via.placeholder.com/15/570df8/000000?text=+) | primary | `--p2` | `bg-primary` | Brand color |
+| ![#4506cb](http://via.placeholder.com/15/4506cb/000000?text=+) | primary-darken | `--p3` | `bg-primary-darken` | Brand color (darken) |
+| ![#ff24cc](http://via.placeholder.com/15/ff24cc/000000?text=+) | secondary-lighten | `--s1` | `bg-secondary-lighten` | Secondary color (lighten) |
+| ![#f000b8](http://via.placeholder.com/15/f000b8/000000?text=+) | secondary | `--s2` | `bg-secondary` | Secondary color |
+| ![#bd0091](http://via.placeholder.com/15/bd0091/000000?text=+) | secondary-darken | `--s3` | `bg-secondary-darken` | Secondary color (darken) |
+| ![#60d7cb](http://via.placeholder.com/15/60d7cb/000000?text=+) | accent-lighten | `--a1` | `bg-accent-lighten` | Accent color (lighten) |
+| ![#37cdbe](http://via.placeholder.com/15/37cdbe/000000?text=+) | accent | `--a2` | `bg-accent` | Accent color |
+| ![#2aa79b](http://via.placeholder.com/15/2aa79b/000000?text=+) | accent-darken | `--a3` | `bg-accent-darken` | Accent color (darken) |
 | **Content colors** |
-| ![#f3f4f6](https://via.placeholder.com/15/f3f4f6/000000?text=+) | content-100 | `--c1` | `bg-content-100` | Neutral colors, for content |
-| ![#ebecf0](https://via.placeholder.com/15/ebecf0/000000?text=+) | content-200 | `--c2` | `bg-content-200` |  |
-| ![#d0d4dc](https://via.placeholder.com/15/d0d4dc/000000?text=+) | content-300 | `--c3` | `bg-content-300` |  |
-| ![#99a2b2](https://via.placeholder.com/15/99a2b2/000000?text=+) | content-400 | `--c4` | `bg-content-400` |  |
-| ![#657086](https://via.placeholder.com/15/657086/000000?text=+) | content-500 | `--c5` | `bg-content-500` |  |
-| ![#515a6c](https://via.placeholder.com/15/515a6c/000000?text=+) | content-600 | `--c6` | `bg-content-600` |  |
-| ![#3d4451](https://via.placeholder.com/15/3d4451/000000?text=+) | content-700 | `--c7` | `bg-content-700` |  |
-| ![#2a2e37](https://via.placeholder.com/15/2a2e37/000000?text=+) | content-800 | `--c8` | `bg-content-800` |  |
-| ![#16181d](https://via.placeholder.com/15/16181d/000000?text=+) | content-900 | `--c9` | `bg-content-900` |  |
-| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | content-primary | `--cp` | `bg-content-primary` | Foreground color to use on `primary` |
-| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | content-secondary | `--cs` | `bg-content-secondary` | Foreground color to use on `secondary` |
-| ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) | content-accent | `--ca` | `bg-content-accent` | Foreground color to use on `accent` |
+| ![#f3f4f6](http://via.placeholder.com/15/f3f4f6/000000?text=+) | content-100 | `--c1` | `bg-content-100` | Neutral colors, for content |
+| ![#ebecf0](http://via.placeholder.com/15/ebecf0/000000?text=+) | content-200 | `--c2` | `bg-content-200` |  |
+| ![#d0d4dc](http://via.placeholder.com/15/d0d4dc/000000?text=+) | content-300 | `--c3` | `bg-content-300` |  |
+| ![#99a2b2](http://via.placeholder.com/15/99a2b2/000000?text=+) | content-400 | `--c4` | `bg-content-400` |  |
+| ![#657086](http://via.placeholder.com/15/657086/000000?text=+) | content-500 | `--c5` | `bg-content-500` |  |
+| ![#515a6c](http://via.placeholder.com/15/515a6c/000000?text=+) | content-600 | `--c6` | `bg-content-600` |  |
+| ![#3d4451](http://via.placeholder.com/15/3d4451/000000?text=+) | content-700 | `--c7` | `bg-content-700` |  |
+| ![#2a2e37](http://via.placeholder.com/15/2a2e37/000000?text=+) | content-800 | `--c8` | `bg-content-800` |  |
+| ![#16181d](http://via.placeholder.com/15/16181d/000000?text=+) | content-900 | `--c9` | `bg-content-900` |  |
+| ![#ffffff](http://via.placeholder.com/15/ffffff/000000?text=+) | content-primary | `--cp` | `bg-content-primary` | Foreground color to use on `primary` |
+| ![#ffffff](http://via.placeholder.com/15/ffffff/000000?text=+) | content-secondary | `--cs` | `bg-content-secondary` | Foreground color to use on `secondary` |
+| ![#ffffff](http://via.placeholder.com/15/ffffff/000000?text=+) | content-accent | `--ca` | `bg-content-accent` | Foreground color to use on `accent` |
 | **State colors** |
-| ![#2094f3](https://via.placeholder.com/15/2094f3/000000?text=+) | info | `--in` | `bg-info` | For showing an `info` message|
-| ![#009485](https://via.placeholder.com/15/009485/000000?text=+) | success | `--su` | `bg-success` | For showing a `success` message|
-| ![#ff9900](https://via.placeholder.com/15/ff9900/000000?text=+) | warning | `--wa` | `bg-warning` | For showing a `warning` message|
-| ![#ff5724](https://via.placeholder.com/15/ff5724/000000?text=+) | error | `--er` | `bg-error` | For showing an `error` message|
+| ![#2094f3](http://via.placeholder.com/15/2094f3/000000?text=+) | info | `--in` | `bg-info` | For showing an `info` message|
+| ![#009485](http://via.placeholder.com/15/009485/000000?text=+) | success | `--su` | `bg-success` | For showing a `success` message|
+| ![#ff9900](http://via.placeholder.com/15/ff9900/000000?text=+) | warning | `--wa` | `bg-warning` | For showing a `warning` message|
+| ![#ff5724](http://via.placeholder.com/15/ff5724/000000?text=+) | error | `--er` | `bg-error` | For showing an `error` message|
 
 
 ## HSL format
@@ -66,8 +71,57 @@ Will be used for hsl() CSS color
 
 ```
 
+## Using default themes
+DaisyUI gives you a few (optional) color themes.
+You can see default themes at [daisyui.netlify.app](https://daisyui.netlify.app/)  
+
+#### List of default themes
+- `dark`
+- `light`
+- `black`
+- `cyberpunk`
+- `dracula`
+- `valentine`
+- `retro`
+- `synthwave`
+
+#### Using default themes from npm package
+On `tailwind.config.js` file, you need to safelist `/data-theme$/` for purge options *and* you need to add `require('daisyui/themes')` to tailwind plugins.  
+This adds [themes.css](https://unpkg.com/daisyui@latest/dist/themes.css) to your CSS file and also prevents purging inactive themes.  
+```js
+module.exports = {
+  purge: {
+    content: ['PATH_TO_YOU_FILES'],
+    options: {
+      safelist: [
+        /data-theme$/, // 👈 
+      ]
+    },
+  },
+  plugins: [
+    require('daisyui/styled'),
+    require('daisyui/themes'), // 👈
+  ],
+  presets: [
+    require('daisyui/preset'),
+  ],
+}
+```
+and you need to add `data-theme='YOUR_THEME_NAME'` to `<html>` tag.  
+```
+<html data-theme="dark">
+```
+I suggest using [them-change](https://github.com/saadeghi/theme-change) for this, so you can switch themes and save selected theme in local storage.
+
+#### Using default themes from CDN
+Alternatively you can load default themes from cdn
+```
+<link href="https://unpkg.com/daisyui@latest/dist/themes.css" rel="stylesheet" type="text/css" />
+```
+
 ## How to customize themes
-You can set up 3 values of H,S,L for each color in your CSS file. It can be your main Tailwind `CSS` file or a file you `@import` to your main CSS file
+You can set up 3 values of H,S,L for each color in your CSS file. It can be your main Tailwind `CSS` file or a file you `@import` to your main CSS file.  
+You can easily do this on [DaisyUI Color Generator](https://daisyui.netlify.app/core/colors)
 
 ```css
 
@@ -157,8 +211,15 @@ You can add more themes
   --c1: 46 42% 76%;
 }
 ```
+#### Set up custom border radius for each theme
+You can also customize border-radius of elements for each theme. DaisyUI components use 3 additional border-radius values:  
+```css
+  --rounded-box: 1rem; /* used for cards and other big elements */
+  --rounded-btn: 0.5rem; /* used for buttons and similar elements */
+  --rounded-badge: 9999px; /* used for badges and other small elements */
+```
 
-## Respecting default color scheme
+## Respecting OS color scheme
 If you want to show dark mode for people who are using a dark mode on their OS:
 ```css
 @media (prefers-color-scheme: dark){
@@ -169,7 +230,7 @@ If you want to show dark mode for people who are using a dark mode on their OS:
 }
 ```
 
-## How to active/change themes theme?
+## How to active/change themes?
 You just need to add `data-theme='dark'` to your `<body>`.
 Easiest way to handle it with JavaScript is to this tiny library: [↗︎ theme-change](https://github.com/saadeghi/theme-change)
 

@@ -47,7 +47,7 @@ Themeable, Scalable and Designer-Friendly
 npm i daisyui
 ```
 
-Then add plugin and preset to `tailwind.config.js`
+Then add **plugin** and **preset** to `tailwind.config.js`
 ```js
 module.exports = {
   plugins: [
