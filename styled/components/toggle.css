@@ -1,15 +1,15 @@
 .toggle{
   @apply appearance-none opacity-0 w-0 h-0 absolute;
   & ~ .toggle-mark{
-    @apply w-12 h-6 rounded-full border border-content-200 shadow-inner;
+    @apply w-12 h-6 rounded-badge border border-content-300 shadow-inner;
     &:before{
-      @apply w-5 h-5 m-px rounded-full bg-content-300;
+      @apply w-5 h-5 m-px rounded-badge bg-content-300;
       animation: togglemark-off .4s ease-in-out;
     }
   }
   &:hover {
     & ~ .toggle-mark{
-      @apply border-content-300;
+      @apply border-content-400;
       &:before{
         @apply border-content-100;
       }

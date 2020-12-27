@@ -1,11 +1,11 @@
 .checkbox{
   @apply appearance-none opacity-0 w-0 h-0 absolute;
   & ~ .checkbox-mark{
-    @apply w-6 h-6 rounded-btn border border-content-200 shadow-inner;
+    @apply w-6 h-6 rounded-btn border border-content-300 shadow-inner;
     &:before{
       width: 7px;
       height: 14px;
-      transform: rotate(45deg)translate(-2px, -1px)scale(.75);
+      transform: rotate(45deg)translate(-1px, -1px)scale(.75);
       border-bottom: 3px solid;
       border-right: 3px solid;
       @apply border-transparent;
@@ -13,7 +13,7 @@
   }
   &:hover {
     & ~ .checkbox-mark{
-      @apply border-content-300;
+      @apply border-content-400;
       &:before{
         @apply border-content-100;
       }
@@ -31,7 +31,7 @@
         @apply bg-content-600 border-content-600 text-default shadow-none;
         &:before{
           animation: checkmark .4s ease-in-out;
-          transform: rotate(45deg)translate(-2px, -1px)scale(1);
+          transform: rotate(45deg)translate(-1px, -1px)scale(1);
           @apply border-default;
         }
       }
@@ -101,12 +101,12 @@
 
 @keyframes checkmark {
   30% {
-    transform: rotate(45deg)translate(-2px, -1px)scale(1.2);
+    transform: rotate(45deg)translate(-1px, -1px)scale(1.2);
   }
   50% {
-    transform: rotate(45deg)translate(-2px, -1px)scale(0.8);
+    transform: rotate(45deg)translate(-1px, -1px)scale(0.8);
   }
   100% {
-    transform: rotate(45deg)translate(-2px, -1px)scale(1);
+    transform: rotate(45deg)translate(-1px, -1px)scale(1);
   }
 }
