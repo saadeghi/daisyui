@@ -11,8 +11,8 @@ DaisyUI is themeable, powered by CSS variables.
   - [Using default themes from CDN](#using-default-themes-from-CDN)
   - [Set up custom border radius for each theme](#set-up-custom-border-radius-for-each-theme)
 - [How to customize themes](#how-to-customize-themes)
-- [Respecting default color scheme](#respecting-default-color-scheme)
-- [How to active/change themes theme?](#how-to-activechange-themes-theme)
+- [Respecting OS color scheme](#respecting-os-color-scheme)
+- [How to enable/change themes theme?](#how-to-enablechange-themes-theme)
 - [Fixing PurgeCSS issue](#fixing-purgecss-issue)
 
 [![](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/colors.png)](#) 
