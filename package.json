@@ -32,7 +32,8 @@
     "dist",
     "preset",
     "base.js",
-    "styled.js"
+    "styled.js",
+    "themes.js"
   ],
   "publishConfig": {
     "access": "public",
