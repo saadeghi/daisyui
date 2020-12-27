@@ -230,7 +230,7 @@ If you want to show dark mode for people who are using a dark mode on their OS:
 }
 ```
 
-## How to active/change themes?
+## How to enable/change themes?
 You just need to add `data-theme='dark'` to your `<body>`.
 Easiest way to handle it with JavaScript is to this tiny library: [↗︎ theme-change](https://github.com/saadeghi/theme-change)
 
