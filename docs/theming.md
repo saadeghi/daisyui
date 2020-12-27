@@ -12,7 +12,7 @@ DaisyUI is themeable, powered by CSS variables.
   - [Set up custom border radius for each theme](#set-up-custom-border-radius-for-each-theme)
 - [How to customize themes](#how-to-customize-themes)
 - [Respecting OS color scheme](#respecting-os-color-scheme)
-- [How to enable/change themes theme?](#how-to-enablechange-themes-theme)
+- [How to enable/change themes theme?](#how-to-enablechange-themes)
 - [Fixing PurgeCSS issue](#fixing-purgecss-issue)
 
 [![](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/colors.png)](#) 
