@@ -29,6 +29,7 @@
   "main": "base.js",
   "typings": "base.js",
   "files": [
+    "docs",
     "dist",
     "preset",
     "base.js",
