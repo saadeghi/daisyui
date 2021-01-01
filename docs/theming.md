@@ -102,9 +102,11 @@ module.exports = {
     require('daisyui/styled'),
     require('daisyui/themes'), // 👈
   ],
-  presets: [
-    require('daisyui/preset'),
-  ],
+  theme: {
+    extend: {
+      colors: require('daisyui/colors'),
+    },
+  },
 }
 ```
 and you need to add `data-theme='YOUR_THEME_NAME'` to `<html>` tag.  

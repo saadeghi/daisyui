@@ -87,23 +87,6 @@ For typography, I suggest using the official [Tailwind Typography ↗︎](https:
 
 
 
-## What is `preset`?
-
-You need to add `daisyui/preset` to `tailwind.config.js`  
-It adds DaisyUI semantic color names and a few additional utility classes that are used on components (like border-radius, min-height, etc...)
-
-```js
-module.exports = {
-  // ...
-  presets: [
-    require('daisyui/preset')
-  ],
-}
-
-```
-
-
-  
 
 
 

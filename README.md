@@ -47,16 +47,21 @@ Themeable, Scalable and Designer-Friendly
 npm i daisyui
 ```
 
-Then add **plugin** and **preset** to `tailwind.config.js`
+Then add DaisyUI to `tailwind.config.js`
 ```js
 module.exports = {
+  
   plugins: [
-    require('daisyui/styled'), // 🎨 for styled UI
-    // require('daisyui'), // for base UI only
+    require('daisyui/styled'), // or require('daisyui') for unstyled UI
   ],
-  presets: [
-    require('daisyui/preset')
-  ],
+
+  // OPTIONAL: if you want to use DaisyUI colors everywhere
+  theme: {
+    extend: {
+      colors: require('daisyui/colors'),
+    },
+  },
+
 }
 ```
 
