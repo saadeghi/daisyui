@@ -29,10 +29,9 @@
   "main": "base.js",
   "typings": "base.js",
   "files": [
-    "docs",
     "dist",
-    "preset",
     "base.js",
+    "colors.js",
     "styled.js",
     "themes.js"
   ],
