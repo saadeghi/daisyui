@@ -19,12 +19,12 @@ Themeable, Scalable and Designer-Friendly
 
 ## 🔗 Links
 - 👉 [See all components][demo-url]
-- ⛹️‍♀️ [Tailwind Play - Try it online][tw-play-url]
+- ⛹️‍♀️ Try it online: [Tailwind Play][tw-play-url] / [Codepen][codepen-url]
 - 📘 [Theming guide][theming-url]
 - 📘 [List of components][components-url]
 - 📘 [FAQ][faq-url]
-- 🐙 [GitHub][gh-url]
-- 📦 [NPM][npm-url]
+- 📦 Source: [GitHub][gh-url] / [NPM][npm-url]
+- 📦 CDN: [Unpkg][unpkg-url] / [JSdeliver][jsdeliver-url]
 
 ---
 
@@ -157,7 +157,10 @@ Please share
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
-[tw-play-url]: https://play.tailwindcss.com/hn9vnQsIn2
+[tw-play-url]: https://play.tailwindcss.com/908kXKMIeO
+[codepen-url]: https://codepen.io/saadeghi/pen/gOwWKvv
+[unpkg-url]: https://unpkg.com/browse/daisyui/
+[jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=Checkout%20DaisyUI%20on%20github%20https://github.com/saadeghi/daisyui
 
