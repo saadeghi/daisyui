@@ -28,17 +28,11 @@ let colorValues = {
 }
 
 let colorObject = {
-  theme: {
-    extend: {
-      colors: {
-        "transparent": "transparent",
-      },
-    },
-  },
+  "transparent": "transparent",
 }
 
 for (const [key, item] of Object.entries(colorValues)) {
-  colorObject["theme"]["extend"]["colors"][key] = ({ opacityVariable, opacityValue }) => {
+  colorObject[key] = ({ opacityVariable, opacityValue }) => {
     if (opacityValue !== undefined) {
       return `hsla(var(--`+ item['name'] +`, `+ item['value'] +`) / ${opacityValue})`
     }
