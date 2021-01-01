@@ -1,5 +1,5 @@
 .btn {
-  @apply flex flex-wrap items-center justify-center text-center cursor-pointer select-none transition duration-200 ease-in-out rounded-btn;
+  @apply inline-flex flex-wrap items-center justify-center text-center cursor-pointer select-none transition duration-200 ease-in-out rounded-btn;
   &:focus {
     @apply relative outline-none;
   }
