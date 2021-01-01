@@ -1,5 +1,6 @@
 :root {
   .prose{
+    color: inherit;
     a,
     ol > li::before,
     blockquote,
