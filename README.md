@@ -4,7 +4,7 @@
 
 **UI Components for Tailwind CSS**  
 Themeable, Scalable and Designer-Friendly  
-[ [See all components][demo-url] ]
+[ [See all components][netlify-url] ]
   
 [![][tweet]][tweet-url]  
 
@@ -18,7 +18,7 @@ Themeable, Scalable and Designer-Friendly
 ---
 
 ## 🔗 Links
-- 👉 [See all components][demo-url]
+- 👉 Demo and samples [Netlify][netlify-url] / [Github][gh-pages-url]
 - ⛹️‍♀️ Try it online: [Tailwind Play][tw-play-url] / [Codepen][codepen-url]
 - 📘 [Theming guide][theming-url]
 - 📘 [List of components][components-url]
@@ -167,7 +167,8 @@ Please share
 [theming-url]: https://github.com/saadeghi/daisyui/blob/master/docs/theming.md
 [faq-url]: https://github.com/saadeghi/daisyui/blob/master/docs/faq.md
 [components-url]: https://github.com/saadeghi/daisyui/blob/master/docs/components.md
-[demo-url]: https://daisyui.netlify.app/
+[netlify-url]: https://daisyui.netlify.app/
+[gh-pages-url]: https://saadeghi.github.io/daisyui-demo/
 [tailwind-url]: https://tailwindcss.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg
 
