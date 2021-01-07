@@ -1,6 +1,6 @@
 .accordion {
   @apply flex flex-col;
-  li{
+  &-item{
     @apply overflow-hidden flex flex-col;
     .accordion-title{
       @apply transition-all ease-in-out duration-300 cursor-pointer mb-0 pb-4 pt-4 px-4 relative;
@@ -10,19 +10,18 @@
       @apply transition-all ease-in-out duration-300 pb-0 px-4;
     }
     input {
-      @apply hidden;
-      &:checked {
+      @apply appearance-none opacity-0 w-0 h-0 absolute;
+      &:checked, &:focus-visible {
         & ~ .accordion-body {
           @apply max-h-screen;
         }
       }
     }
   }
-  &.arrow{
-    li{
+  &-arrow{
+    .accordion-item{
       input {
-        @apply hidden;
-        &:checked {
+        &:checked, &:focus-visible {
           & + .accordion-title {
             &:after{
               transform: rotate(225deg);
@@ -43,11 +42,10 @@
       }
     }
   }
-  &.plus{
-    li{
+  &-plus{
+    .accordion-item{
       input {
-        @apply hidden;
-        &:checked {
+        &:checked, &:focus-visible {
           & + .accordion-title {
             &:after{
               content: '−'

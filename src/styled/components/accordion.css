@@ -8,7 +8,7 @@
       }
     }
   }
-  li{
+  &-item{
     @apply -mb-px rounded-box;
     .accordion-title{
       @apply rounded-box;
@@ -20,7 +20,12 @@
       @apply rounded-box;
     }
     input {
-      &:checked {
+      &:focus-visible{
+        & + .accordion-title {
+          @apply bg-content-100;
+        }
+      }
+      &:checked, &:focus-visible {
         & + .accordion-title {
           @apply rounded-b-none bg-content-100 mt-1;
           &:before{
@@ -33,7 +38,7 @@
       }
     }
   }
-  &.bordered{
+  &-bordered{
     & > * + *{
       .accordion-title{
         &:before{
@@ -41,7 +46,7 @@
         }
       }
     }
-    li{
+    .accordion-item{
       .accordion-title{
         @apply rounded-none;
       }
@@ -50,8 +55,7 @@
       }
       @apply border border-content-200 mb-2;
       input {
-        @apply hidden;
-        &:checked {
+        &:checked, &:focus-visible {
           & + .accordion-title {
             @apply mt-0;
           }
