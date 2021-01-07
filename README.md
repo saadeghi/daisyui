@@ -30,12 +30,12 @@ Themeable, Scalable and Designer-Friendly
 
 ## 🌼 Features   
 - **CSS components**: Use classes like `btn`, `card`, ...
-- **Designer-friendly**: DaisyUI has 2 versions:
+- **Designer-friendly**: DaisyUI comes in 2 versions:
   - **Styled**: Beatiful UI library, no need to design elements (but still customizable).
   - **Base**: Only skeleton of components. No style, no colors.
 - **Scalable**: All your components will use the same style based on a design system.
 - **Customizable**: Customize the style of elements with Tailwind utility classes.
-- **Themeable**: Add multiple themes or change colors with a CSS variable.
+- **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page.
 - **Semantic color names**: Use color names like `primary`, `secondary`, `accent`, ... just like your design system defines.  
 [ [read more][faq-url] ]
 
