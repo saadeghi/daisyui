@@ -1,0 +1,112 @@
+.radio{
+  @apply appearance-none opacity-0 w-0 h-0 absolute;
+  & ~ .radio-mark{
+    @apply w-6 h-6 rounded-full border border-content-300 shadow-inner;
+    &:before{
+      width: 7px;
+      height: 14px;
+      transform: rotate(45deg)translate(-1px, -1px)scale(.75);
+      border-bottom: 3px solid;
+      border-right: 3px solid;
+      @apply border-transparent;
+    }
+  }
+  &:hover {
+    & ~ .radio-mark{
+      @apply border-content-400;
+      &:before{
+        @apply border-content-100;
+      }
+    }
+  }
+  &:focus-visible {
+    & ~ .radio-mark{
+      @apply ring-2 ring-offset-2 ring-offset-default ring-content-200;
+    }
+  }
+  &:checked{
+    &,
+    &:hover{
+      & ~ .radio-mark{
+        @apply bg-content-600 border-content-600 text-default shadow-none;
+        &:before{
+          animation: checkmark .4s ease-in-out;
+          transform: rotate(45deg)translate(-1px, -1px)scale(1);
+          @apply border-default;
+        }
+      }
+    }
+    &:focus-visible {
+      & ~ .radio-mark{
+        @apply ring-content-600;
+      }
+    }
+  }
+  &-primary{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .radio-mark{
+          @apply bg-primary border-primary text-content-primary;
+          &:before{
+            @apply border-content-primary;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .radio-mark{
+          @apply ring-primary;
+        }
+      }
+    }
+  }
+  &-secondary{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .radio-mark{
+          @apply bg-secondary border-secondary text-content-secondary;
+          &:before{
+            @apply border-content-secondary;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .radio-mark{
+          @apply ring-secondary;
+        }
+      }
+    }
+  }
+  &-accent{
+    &:checked{
+      &,
+      &:hover{
+        & ~ .radio-mark{
+          @apply bg-accent border-accent text-content-accent;
+          &:before{
+            @apply border-content-accent;
+          }
+        }
+      }
+      &:focus-visible {
+        & ~ .radio-mark{
+          @apply ring-accent;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes checkmark {
+  30% {
+    transform: rotate(45deg)translate(-1px, -1px)scale(1.2);
+  }
+  50% {
+    transform: rotate(45deg)translate(-1px, -1px)scale(0.8);
+  }
+  100% {
+    transform: rotate(45deg)translate(-1px, -1px)scale(1);
+  }
+}

@@ -25,7 +25,7 @@
   - [x] Text input
   - [ ] Text area
   - [x] Checkbox
-  - [ ] Radio
+  - [x] Radio
   - [ ] Range slider
   - [x] Toggle
   - [ ] Upload
