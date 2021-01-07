@@ -13,6 +13,7 @@ DaisyUI is themeable, powered by CSS variables.
 - [How to customize themes](#how-to-customize-themes)
 - [Respecting OS color scheme](#respecting-os-color-scheme)
 - [How to enable/change themes theme?](#how-to-enablechange-themes)
+- [Force a specific theme for a section](#force-a-specific-theme-for-a-section)
 - [Fixing PurgeCSS issue](#fixing-purgecss-issue)
 
 [![](https://raw.githubusercontent.com/saadeghi/files/main/daisyui/colors.png)](#) 
@@ -235,6 +236,22 @@ If you want to show dark mode for people who are using a dark mode on their OS:
 ## How to enable/change themes?
 You just need to add `data-theme='dark'` to your `<body>`.
 Easiest way to handle it with JavaScript is to this tiny library: [↗︎ theme-change](https://github.com/saadeghi/theme-change)
+
+## Force a specific theme for a section
+You can force a section of your HTML to only use a specific theme.
+```html
+<html data-theme="dark">
+  
+  <div data-theme="light">
+    This div will always use light theme
+      <span data-theme="retro">
+        This span will always use retro theme!
+      </span>
+  </div>
+
+</html>
+```
+There is *no limit* on how deep you can go. Every HTML element can have its own theme!
 
 ## Fixing PurgeCSS issue
 If you're using [Purge CSS](https://purgecss.com/), you might need to [safe list](https://purgecss.com/safelisting.html#in-the-css-directly) your CSS using the comments below because your secondary themes will be purged.  
