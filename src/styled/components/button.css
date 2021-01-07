@@ -1,7 +1,9 @@
 .btn {
-  @apply font-normal border font-semibold uppercase;
+  @apply border font-semibold uppercase;
+  animation: button-pop 0.2s ease-out;
   &:active:hover{
-    @apply transform scale-95;
+    transform: scale(0.95);
+    animation: none;
   }
 
   /* default btn */
@@ -135,5 +137,17 @@
   }
   & > .btn:not(:last-child) {
     @apply rounded-r-none;
+  }
+}
+
+@keyframes button-pop {
+  0% {
+    transform: scale(0.95);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
   }
 }
