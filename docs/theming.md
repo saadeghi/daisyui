@@ -234,7 +234,7 @@ If you want to show dark mode for people who are using a dark mode on their OS:
 ```
 
 ## How to enable/change themes?
-You just need to add `data-theme='dark'` to your `<body>`.
+You just need to add `data-theme='dark'` to your `<html>`.
 Easiest way to handle it with JavaScript is to this tiny library: [↗︎ theme-change](https://github.com/saadeghi/theme-change)
 
 ## Force a specific theme for a section
