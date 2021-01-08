@@ -1,6 +1,6 @@
 .btn {
   @apply border font-semibold uppercase;
-  animation: button-pop 0.2s ease-out;
+  animation: button-pop 0.25s ease-out;
   &:active:hover{
     transform: scale(0.95);
     animation: none;
