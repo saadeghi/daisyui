@@ -82,6 +82,7 @@ You can see default themes at [daisyui.netlify.app](https://daisyui.netlify.app/
 - `black`
 - `cyberpunk`
 - `dracula`
+- `garden`
 - `valentine`
 - `retro`
 - `synthwave`
