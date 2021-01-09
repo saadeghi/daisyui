@@ -10,6 +10,8 @@ Themeable, Scalable and Designer-Friendly
 
 </div>
 
+[![][banner-url]][netlify-url]  
+
 # DaisyUI
 
 [![][build]][build-url] [![][install-size]][install-size-url] [![][base-css]][base-css-url] [![][styled-css]][styled-css-url]  
@@ -171,4 +173,5 @@ Please share
 [gh-pages-url]: https://saadeghi.github.io/daisyui-demo/
 [tailwind-url]: https://tailwindcss.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg
+[banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/presentation/dark-theme-wide.png
 
