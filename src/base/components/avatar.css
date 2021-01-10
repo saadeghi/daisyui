@@ -1,5 +1,5 @@
 .avatar{
-  @apply relative inline-block;
+  @apply relative inline-flex;
   &>div{
     @apply overflow-hidden block;
   }
