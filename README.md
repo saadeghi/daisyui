@@ -89,7 +89,7 @@ module.exports = {
 
 ---
 ## 🎉 Use  
-Use component classes like `.btn`, `.card`, etc... to build your UI.  
+Use component classes like `btn`, `card`, etc... to build your UI.  
 ```html
 <a class="btn">Hello!</a>
 ```
