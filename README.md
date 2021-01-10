@@ -31,7 +31,8 @@ Themeable, Scalable and Designer-Friendly
 ---
 
 ## 🌼 Features   
-- **CSS components**: Use classes like `btn`, `card`, ...
+- **Tailwind CSS plugin**: Simply add it to your Tailwind config.
+- **CSS components**: It adds component classes to Tailwind. Classes like `btn`, `card`, [...][netlify-url]
 - **Designer-friendly**: DaisyUI comes in 2 versions:
   - **Styled**: Beatiful UI library, no need to design elements (but still customizable).
   - **Base**: Only skeleton of components. No style, no colors.
