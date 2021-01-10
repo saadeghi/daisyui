@@ -12,16 +12,18 @@ Themeable, Scalable and Designer-Friendly
 
 [![][banner-url]][netlify-url]  
 
-# DaisyUI
-
+# DaisyUI  
 [![][build]][build-url] [![][install-size]][install-size-url] [![][base-css]][base-css-url] [![][styled-css]][styled-css-url]  
 [![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]
+
+>***It's like Tailwind CSS on steroids!***  
+>You have everything from [Tailwind CSS][tailwind-url], *but* you can also use component classes like `btn`, `card`, etc...
 
 ---
 
 ## 🔗 Links
 - 👉 Demo and samples [Netlify][netlify-url] / [Github][gh-pages-url]
-- ⛹️‍♀️ Try it online: [Tailwind Play][tw-play-url] / [Codepen][codepen-url]
+- 🎲 Try it online: [Tailwind Play][tw-play-url] / [Codepen][codepen-url]
 - 📘 [Theming guide][theming-url]
 - 📘 [List of components][components-url]
 - 📘 [FAQ][faq-url]
@@ -36,21 +38,21 @@ Themeable, Scalable and Designer-Friendly
 - **Designer-friendly**: DaisyUI comes in 2 versions:
   - **Styled**: Beatiful UI library, no need to design elements (but still customizable).
   - **Base**: Only skeleton of components. No style, no colors.
-- **Scalable**: All your components will use the same style based on a design system.
+- **Scalable**: All your components will use the same design system.
 - **Customizable**: Customize the style of elements with Tailwind utility classes.
-- **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page.
-- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`, ... just like your design system defines.  
+- **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page [ * ][theming-url].  
+- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`,... just like your design system defines.  
 [ [read more][faq-url] ]
 
 ---
 
-## 👩‍💻 Install   
+## 👩‍💻 Install now!  
 
 ```
 npm i daisyui
 ```
 
-Then add DaisyUI to `tailwind.config.js`
+Then add DaisyUI to your `tailwind.config.js`
 ```js
 module.exports = {
   
@@ -80,10 +82,27 @@ module.exports = {
 | **Base** <br/> [![][base-css]][base-css-url] | Unstyled UI components <br/><sup>(Basic layout, no color, no visual style)</sup> | `https://unpkg.com/daisyui@latest/dist/base.css` |
 | **Styled** <br/> [![][styled-css]][styled-css-url] | DaisyUI Styled UI components <br/><sup>(But you can't use DaisyUI colors on other elements)</sup> | `https://unpkg.com/daisyui@latest/dist/styled.css` |
 | **Full** <br/> [![][full-css]][full-css-url] | Tailwind default style + DaisyUI styled UI components <br/><sup>(But it's a large file for production)</sup> | `https://unpkg.com/daisyui@latest/dist/full.css` |
+| **Default themes** <br/> [![][theme-css]][theme-css-url] | Only CSS variables for default themes | `https://unpkg.com/daisyui@latest/dist/themes.css` |
 
 
 </details>
 
+---
+## 🎉 Use  
+Use component classes like `.btn`, `.card`, etc... to build your UI.  
+👉 [See all components][netlify-url]  
+🎲 [Try it online][tw-play-url]  
+```html
+<button class="btn">Hello!</button>
+```
+```html
+<div class="card shadow">
+  <div class="card-body">
+    <h2 class="card-title">Card Title</h2> 
+    <p>Card text</p>
+  </div>
+</div> 
+```
 ---
 
 ## 🎨 Customize theme and colors (optional)  
@@ -143,9 +162,10 @@ Please share
 
 
 [install-size]: https://badgen.net/bundlephobia/min/daisyui?&color=purple
-[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css%20size&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=styled.css%20size&color=purple
-[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css%20size&color=purple
+[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=styled.css&color=purple
+[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css&color=purple
+[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/themes.css?label=themes.css&color=pink
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
@@ -157,6 +177,7 @@ Please share
 [base-css-url]: https://unpkg.com/daisyui@latest/dist/base.css
 [styled-css-url]: https://unpkg.com/daisyui@latest/dist/styled.css
 [full-css-url]: https://unpkg.com/daisyui@latest/dist/full.css
+[theme-css-url]: https://unpkg.com/daisyui@latest/dist/themes.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
