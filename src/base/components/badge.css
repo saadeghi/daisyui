@@ -1,10 +1,10 @@
 .badge {
-  @apply inline-block transition duration-200 ease-in-out;
-  &-lg{
-    @apply text-base leading-6 px-3;
-  }
+  @apply inline-flex transition duration-200 ease-in-out;
   &{
     @apply text-sm leading-5 px-3;
+  }
+  &-lg{
+    @apply text-base leading-6 px-3;
   }
   &-sm{
     @apply text-xs leading-4 px-2;
