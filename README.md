@@ -90,19 +90,21 @@ module.exports = {
 ---
 ## 🎉 Use  
 Use component classes like `.btn`, `.card`, etc... to build your UI.  
-👉 [See all components][netlify-url]  
-🎲 [Try it online][tw-play-url]  
 ```html
-<button class="btn">Hello!</button>
+<a class="btn">Hello!</a>
 ```
 ```html
-<div class="card shadow">
+<div class="shadow card">
   <div class="card-body">
     <h2 class="card-title">Card Title</h2> 
     <p>Card text</p>
   </div>
 </div> 
 ```
+
+👉 [See all components][netlify-url]  
+🎲 [Try it online][tw-play-url]  
+
 ---
 
 ## 🎨 Customize theme and colors (optional)  
@@ -186,7 +188,7 @@ Please share
 [unpkg-url]: https://unpkg.com/browse/daisyui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
-[tweet-url]: https://twitter.com/intent/tweet?text=Checkout%20DaisyUI%20on%20github%20https://github.com/saadeghi/daisyui
+[tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 
 [theming-url]: https://github.com/saadeghi/daisyui/blob/master/docs/theming.md
 [faq-url]: https://github.com/saadeghi/daisyui/blob/master/docs/faq.md

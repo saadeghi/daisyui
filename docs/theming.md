@@ -79,15 +79,15 @@ DaisyUI gives you a few (optional) color themes.
 You can see default themes at [daisyui.netlify.app](https://daisyui.netlify.app/)  
 
 #### List of default themes
-- `dark`
-- `light`
-- `black`
-- `cyberpunk`
-- `dracula`
-- `garden`
-- `valentine`
-- `retro`
-- `synthwave`
+- [light][T1]
+- [dark][T2]
+- [valentine][T3]
+- [garden][T4]
+- [dracula][T5]
+- [retro][T6]
+- [synthwave][T7]
+- [cyberpunk][T8]
+- [black][T9]
 
 #### Using default themes from npm package
 On `tailwind.config.js` file, you need to safelist `/data-theme$/` for purge options *and* you need to add `require('daisyui/themes')` to tailwind plugins.  
