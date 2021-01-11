@@ -1,18 +1,12 @@
 .hero{
-  @apply flex relative w-full bg-cover bg-center justify-center items-center;
-  &.overlay{
-    &:before{
-      content: '';
-      @apply absolute inset-0;
-    }
+  @apply grid w-full bg-cover bg-center place-items-center;
+  & > *{
+    @apply row-start-1 col-start-1;
   }
-}
-.hero-content{
-  @apply items-center flex flex-col lg:flex-row-reverse z-0 space-y-4 lg:space-y-0;
-  .hero-text{
-    @apply flex flex-col items-start;
-    &.center{
-      @apply items-center;
-    }
+  &-overlay{
+    @apply row-start-1 col-start-1 w-full h-full;
+  }
+  &-content{
+    @apply items-center flex z-0 justify-center;
   }
 }
