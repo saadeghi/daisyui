@@ -1,7 +1,8 @@
 .btn {
   @apply border font-semibold uppercase;
   animation: button-pop 0.25s ease-out;
-  &:active:hover{
+  &:active:hover,
+  &:active:focus{
     transform: scale(0.95);
     animation: none;
   }
@@ -48,6 +49,50 @@
       @apply ring-accent;
     }
   }
+
+
+  /* btn with state colors */
+  &-info {
+    @apply bg-info border-info text-content-100;
+    &:hover,
+    &.btn-active {
+      @apply bg-info border-info;
+    }
+    &:focus-visible {
+      @apply ring-info;
+    }
+  }
+  &-success {
+    @apply bg-success border-success text-content-100;
+    &:hover,
+    &.btn-active {
+      @apply bg-success border-success;
+    }
+    &:focus-visible {
+      @apply ring-success;
+    }
+  }
+  &-warning {
+    @apply bg-warning border-warning text-content-100;
+    &:hover,
+    &.btn-active {
+      @apply bg-warning border-warning;
+    }
+    &:focus-visible {
+      @apply ring-warning;
+    }
+  }
+  &-error {
+    @apply bg-error border-error text-content-100;
+    &:hover,
+    &.btn-active {
+      @apply bg-error border-error;
+    }
+    &:focus-visible {
+      @apply ring-error;
+    }
+  }
+
   /* btn variants */
   &-ghost {
     @apply border-transparent border text-current text-opacity-60 bg-transparent;
