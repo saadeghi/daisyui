@@ -1,17 +1,14 @@
 .card {
   @apply flex flex-col relative overflow-hidden;
-  &.side {
-    @apply lg:flex-row;
+  &-side {
+    @apply items-stretch lg:flex-row;
   }
   &-body {
     @apply flex flex-col flex-auto;
   }
-  &:not(.side) > figure,
-  &:not(.side) > figure > * {
+  &:not(.card-side) > figure,
+  &:not(.card-side) > figure > * {
     @apply w-full;
-  }
-  &.side {
-    @apply items-stretch;
   }
   &-actions {
     @apply flex items-start;
@@ -30,7 +27,7 @@
       @apply object-cover h-full;
     }
   }
-  &.side.image-full > figure img {
+  &-side.image-full > figure img {
     @apply w-full;
   }
   &.image-full > &-body {
