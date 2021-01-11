@@ -1,9 +1,6 @@
 .alert {
   @apply flex flex-col justify-between items-center md:flex-row space-y-2 md:space-y-0;
-  &-grow{
-    @apply flex flex-1;
-  }
-  &-grow-0{
-    @apply flex flex-none;
+  & > *{
+    @apply flex;
   }
 }
