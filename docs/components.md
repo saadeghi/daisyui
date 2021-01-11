@@ -36,8 +36,6 @@
 - [ ] Modal
 - [x] Pagination
 - [x] Progress
-- [ ] Progress indicator
-- [ ] Skeleton placeholder
 - [ ] Statistic
 - [ ] Steps
 - [ ] Tag
