@@ -1,7 +1,7 @@
 # Theming guide
 DaisyUI is themeable and customizable, powered by CSS variables.
 
-[![N1][I1]][T1] [![N4][I4]][T4] [![N6][I6]][T6] [![N3][I3]][T3] [![N8][I8]][T8] [![N7][I7]][T7] [![N5][I5]][T5] [![N2][I2]][T2] [![N9][I9]][T9] 
+[![][I1]][T1] [![][I4]][T4] [![][I6]][T6] [![][I3]][T3] [![][I8]][T8] [![][I7]][T7] [![][I5]][T5] [![][I2]][T2] [![][I9]][T9] 
 
 ## Table of contents
 - [Why we're not using default colors?](#why-were-not-using-default-colors)
@@ -276,18 +276,6 @@ options: {
 ```
 
 ---
-
-
-
-[N1]: light\ theme
-[N2]: dark\ theme
-[N3]: valentine\ theme
-[N4]: garden\ theme
-[N5]: dracula\ theme
-[N6]: retro\ theme
-[N7]: synthwave\ theme
-[N8]: cyberpunk\ theme
-[N9]: black\ theme
 
 [I1]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/themes/light%400.1x.jpg
 [I2]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/themes/dark%400.1x.jpg
