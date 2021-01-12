@@ -32,6 +32,11 @@
 - [x] Hero
 - [ ] Loading
 - [x] Menu
+- [ ] Mockup
+  - [ ] Browser
+  - [x] Code
+  - [ ] Phone
+  - [ ] Window
 - [x] Navbar
 - [ ] Modal
 - [x] Pagination
