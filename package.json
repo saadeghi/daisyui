@@ -26,14 +26,12 @@
     "css",
     "ui"
   ],
-  "main": "base.js",
-  "typings": "base.js",
+  "main": "index.js",
+  "typings": "index.js",
   "files": [
     "dist",
-    "base.js",
-    "colors.js",
-    "styled.js",
-    "themes.js"
+    "index.js",
+    "colors.js"
   ],
   "publishConfig": {
     "access": "public",
@@ -69,14 +67,18 @@
     "postcss-import": "^13.0.0",
     "postcss-nested": "^5.0.1",
     "prejss-cli": "^0.3.3",
+    "rtlcss": "^3.0.0",
     "tailwindcss": "^2.0.1"
   },
   "peerDependencies": {
     "tailwindcss": "^2.0.0"
   },
   "scripts": {
-    "build": "postcss src/base/index.css -o dist/base.css && postcss src/styled/index.css -o dist/styled.css && postcss src/styled/full.css -o dist/full.css && postcss src/themes/index.css -o dist/themes.css",
-    "postbuild": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs && prejss-cli dist/themes.css --format commonjs",
+    "style": "postcss src/base/index.css -o dist/base.css && postcss src/styled/index.css -o dist/styled.css && postcss src/styled/full.css -o dist/full.css && postcss src/themes/index.css -o dist/themes.css",
+    "poststyle": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs && prejss-cli dist/themes.css --format commonjs",
+    "rtl": "rtlcss dist/base.css && rtlcss dist/styled.css",
+    "postrtl": "prejss-cli dist/base.rtl.css --format commonjs && prejss-cli dist/styled.rtl.css --format commonjs",
+    "build": "npm run style && npm run rtl",
     "add": "touch src/base/components/$npm_config_name.css && touch src/styled/components/$npm_config_name.css && echo '@import \"./components/'$npm_config_name'\";' >> src/base/index.css && echo '@import \"./components/'$npm_config_name'\";' >> src/styled/index.css && open src/base/components/$npm_config_name.css && open src/styled/components/$npm_config_name.css"
   }
 }
