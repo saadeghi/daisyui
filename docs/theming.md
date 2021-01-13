@@ -91,7 +91,7 @@ You can see default themes at [daisyui.netlify.app](https://daisyui.netlify.app/
 
 #### Using default themes from npm package
 On `tailwind.config.js` file, you need to safelist `/data-theme$/` for purge options *and* you need to add `require('daisyui/themes')` to tailwind plugins.  
-This adds [themes.css](https://unpkg.com/daisyui@latest/dist/themes.css) to your CSS file and also prevents purging inactive themes.  
+This adds [themes.css](https://unpkg.com/daisyui@0.7.x/dist/themes.css) to your CSS file and also prevents purging inactive themes.  
 ```js
 module.exports = {
   purge: {
@@ -122,7 +122,7 @@ I suggest using [them-change](https://github.com/saadeghi/theme-change) for this
 #### Using default themes from CDN
 Alternatively you can load default themes from cdn
 ```
-<link href="https://unpkg.com/daisyui@latest/dist/themes.css" rel="stylesheet" type="text/css" />
+<link href="https://unpkg.com/daisyui@0.7.x/dist/themes.css" rel="stylesheet" type="text/css" />
 ```
 
 ## How to customize themes

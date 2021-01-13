@@ -79,10 +79,10 @@ module.exports = {
 
 | Version | Description | URL |
 | - | - | - |
-| **Base** <br/> [![][base-css]][base-css-url] | Unstyled UI components <br/><sup>(Basic layout, no color, no visual style)</sup> | `https://unpkg.com/daisyui@latest/dist/base.css` |
-| **Styled** <br/> [![][styled-css]][styled-css-url] | DaisyUI Styled UI components <br/><sup>(But you can't use DaisyUI colors on other elements)</sup> | `https://unpkg.com/daisyui@latest/dist/styled.css` |
-| **Full** <br/> [![][full-css]][full-css-url] | Tailwind default style + DaisyUI styled UI components <br/><sup>(But it's a large file for production)</sup> | `https://unpkg.com/daisyui@latest/dist/full.css` |
-| **Default themes** <br/> [![][theme-css]][theme-css-url] | Only CSS variables for default themes | `https://unpkg.com/daisyui@latest/dist/themes.css` |
+| **Base** <br/> [![][base-css]][base-css-url] | Unstyled UI components <br/><sup>(Basic layout, no color, no visual style)</sup> | `https://unpkg.com/daisyui@0.7.x/dist/base.css` |
+| **Styled** <br/> [![][styled-css]][styled-css-url] | DaisyUI Styled UI components <br/><sup>(But you can't use DaisyUI colors on other elements)</sup> | `https://unpkg.com/daisyui@0.7.x/dist/styled.css` |
+| **Full** <br/> [![][full-css]][full-css-url] | Tailwind default style + DaisyUI styled UI components <br/><sup>(But it's a large file for production)</sup> | `https://unpkg.com/daisyui@0.7.x/dist/full.css` |
+| **Default themes** <br/> [![][theme-css]][theme-css-url] | Only CSS variables for default themes | `https://unpkg.com/daisyui@0.7.x/dist/themes.css` |
 
 
 </details>
@@ -164,10 +164,10 @@ Please share
 
 
 [install-size]: https://badgen.net/bundlephobia/min/daisyui?&color=purple
-[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=styled.css&color=purple
-[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css&color=purple
-[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/themes.css?label=themes.css&color=pink
+[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/base.css?label=base.css&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/styled.css?label=styled.css&color=purple
+[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/full.css?label=full.css&color=purple
+[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/themes.css?label=themes.css&color=pink
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
@@ -176,10 +176,10 @@ Please share
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
-[base-css-url]: https://unpkg.com/daisyui@latest/dist/base.css
-[styled-css-url]: https://unpkg.com/daisyui@latest/dist/styled.css
-[full-css-url]: https://unpkg.com/daisyui@latest/dist/full.css
-[theme-css-url]: https://unpkg.com/daisyui@latest/dist/themes.css
+[base-css-url]: https://unpkg.com/daisyui@0.7.x/dist/base.css
+[styled-css-url]: https://unpkg.com/daisyui@0.7.x/dist/styled.css
+[full-css-url]: https://unpkg.com/daisyui@0.7.x/dist/full.css
+[theme-css-url]: https://unpkg.com/daisyui@0.7.x/dist/themes.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
