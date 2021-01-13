@@ -90,7 +90,7 @@ You can see default themes at [daisyui.netlify.app](https://daisyui.netlify.app/
 - [black][T9]
 
 #### Using default themes from npm package
-On `tailwind.config.js` file, you need to safelist `/data-theme$/` for purge options *and* you need to add `require('daisyui/themes')` to tailwind plugins.  
+On `tailwind.config.js` file, you need to safelist `/data-theme$/` for purge options *and* you need to add `themes: true` config.  
 This adds [themes.css](https://unpkg.com/daisyui@0.7.x/dist/themes.css) to your CSS file and also prevents purging inactive themes.  
 ```js
 module.exports = {
@@ -103,9 +103,13 @@ module.exports = {
     },
   },
   plugins: [
-    require('daisyui/styled'),
-    require('daisyui/themes'), // 👈
+    require('daisyui'),
   ],
+  daisyui: {
+    styled: true,
+    themes: true, // 👈
+    rtl: false,
+  },
   theme: {
     extend: {
       colors: require('daisyui/colors'),

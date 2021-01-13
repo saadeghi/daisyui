@@ -70,11 +70,11 @@
 
  
 
-When you add `daisyui/styled` as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `.btn`, `.card`, `.alert`, etc...  
+When you include `daisyui` as a Tailwind CSS plugin, it gives you ready-to-use UI component classes to use. Like `.btn`, `.card`, `.alert`, etc...  
 
 If you use styled version, you get something pre-designed (like Bootstrap) but you can still customize it with Tailwind utility classes.  
 
-If you use the base (unstyled) version, it has no color or visual style so you can fully style the components with Tailwind utility classes or Tailwind's `@apply` directive. 
+If you use the disable `styled` config, all colors and visual style will be removed so you can fully style the components with Tailwind utility classes or Tailwind's `@apply` directive. 
   
 
   

@@ -13,7 +13,7 @@ Themeable, Scalable and Designer-Friendly
 [![][banner-url]][netlify-url]  
 
 # DaisyUI  
-[![][build]][build-url] [![][install-size]][install-size-url] [![][base-css]][base-css-url] [![][styled-css]][styled-css-url]  
+[![][build]][build-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url]  
 [![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]
 
 >***It's like Tailwind CSS on steroids!***  
@@ -34,15 +34,14 @@ Themeable, Scalable and Designer-Friendly
 
 ## 🌼 Features   
 - **Tailwind CSS plugin**: Simply add it to your Tailwind config.
-- **CSS components**: It adds component classes to Tailwind. Classes like `btn`, `card`, [...][netlify-url]
-- **Designer-friendly**: DaisyUI comes in 2 versions:
-  - **Styled**: Beatiful UI library, no need to design elements (but still customizable).
-  - **Base**: Only skeleton of components. No style, no colors.
-- **Scalable**: All your components will use the same design system.
+- **CSS components**: It adds component classes to Tailwind. Classes like `btn`, `card`,... No need to write hundreds of utility classes
+- **Designer-friendly**: You can disable `styled` config to remove colors and visual styling of components, so you can design your own style on a basic skeleton.
+- **Scalable**: All your components will use the same design system. No more classname madness when your app gets bigger.
 - **Customizable**: Customize the style of elements with Tailwind utility classes.
 - **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page [ * ][theming-url].  
 - **Semantic color names**: Use color names like `primary`, `secondary`, `accent`,... just like your design system defines.  
-[ [read more][faq-url] ]
+- **Default Themes (optional)**: DaisyUI has 9 default themes.  
+- **RTL supported**: Enable `rtl` config for right to left layouts   
 
 ---
 
@@ -57,7 +56,7 @@ Then add DaisyUI to your `tailwind.config.js`
 module.exports = {
   
   plugins: [
-    require('daisyui/styled'), // or require('daisyui') for unstyled UI
+    require('daisyui'),
   ],
 
   // OPTIONAL: if you want to use DaisyUI colors everywhere
@@ -75,14 +74,20 @@ module.exports = {
 <summary>
   Or use a CDN
 </summary>
-(Not recommended for production)  
 
-| Version | Description | URL |
-| - | - | - |
-| **Base** <br/> [![][base-css]][base-css-url] | Unstyled UI components <br/><sup>(Basic layout, no color, no visual style)</sup> | `https://unpkg.com/daisyui@0.7.x/dist/base.css` |
-| **Styled** <br/> [![][styled-css]][styled-css-url] | DaisyUI Styled UI components <br/><sup>(But you can't use DaisyUI colors on other elements)</sup> | `https://unpkg.com/daisyui@0.7.x/dist/styled.css` |
-| **Full** <br/> [![][full-css]][full-css-url] | Tailwind default style + DaisyUI styled UI components <br/><sup>(But it's a large file for production)</sup> | `https://unpkg.com/daisyui@0.7.x/dist/full.css` |
-| **Default themes** <br/> [![][theme-css]][theme-css-url] | Only CSS variables for default themes | `https://unpkg.com/daisyui@0.7.x/dist/themes.css` |
+
+>*Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and DaisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
+
+- **Full.css** (Tailwind's default style + DaisyUI components)  
+  [![][full-css]][full-css-url]  
+  ```
+  https://unpkg.com/daisyui@0.7.x/dist/full.css
+  ```
+- **Default themes** (optional)  
+  [![][theme-css]][theme-css-url]   
+  ```
+  https://unpkg.com/daisyui@0.7.x/dist/themes.css
+  ```
 
 
 </details>
@@ -163,9 +168,9 @@ Please share
 
 
 
-[install-size]: https://badgen.net/bundlephobia/min/daisyui?&color=purple
+[install-size]: https://badgen.net/bundlephobia/min/daisyui?label=Package%20size&color=purple
 [base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/base.css?label=base.css&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/styled.css?label=styled.css&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/styled.css?label=CSS%20size&color=purple
 [full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/full.css?label=full.css&color=purple
 [theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/themes.css?label=themes.css&color=pink
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
