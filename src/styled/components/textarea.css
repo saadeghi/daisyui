@@ -1,0 +1,15 @@
+.textarea {
+  @apply bg-default rounded-btn border border-opacity-0 border-content-300;
+  &-bordered {
+    @apply border-opacity-100;
+  }
+  &:focus {
+    @apply ring-2 ring-offset-2 ring-content-300 ring-offset-default;
+  }
+  &-ghost {
+    @apply bg-opacity-5;
+    &:focus {
+      @apply bg-opacity-100 shadow-none ring-0 ring-offset-0 text-content-900;
+    }
+  }
+}
