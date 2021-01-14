@@ -20,10 +20,9 @@
 - [ ] Empty placeholder
 - [ ] Footer
 - [ ] Form
-  - [ ] Dropdown
-  - [ ] Select
+  - [x] Select
   - [x] Text input
-  - [ ] Text area
+  - [x] Text area
   - [x] Checkbox
   - [x] Radio
   - [ ] Range slider
