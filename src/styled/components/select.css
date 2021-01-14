@@ -1,0 +1,24 @@
+.select {
+  @apply border font-semibold bg-content-100 border-content-100 text-content-800 pr-10;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1px + 50%),
+    calc(100% - 16px) calc(1px + 50%);
+  background-size:
+    4px 4px,
+    4px 4px;
+  background-repeat: no-repeat;
+  &:hover,
+  &-active {
+    @apply bg-content-200 border-content-200;
+  }
+  &:focus {
+    @apply ring-2 ring-offset-2 ring-content-300 ring-offset-default;
+  }
+  &-disabled,
+  &[disabled] {
+    @apply bg-content-100 border-content-100 text-content-300;
+  }
+}
