@@ -15,7 +15,7 @@
       @apply bg-content-200 border-content-200;
     }
     &:focus-visible {
-      @apply ring-2 ring-offset-2 ring-content-800 ring-offset-default;
+      @apply ring-2 ring-offset-2 ring-content-300 ring-offset-default;
     }
   }
   /* brand colors */

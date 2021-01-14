@@ -1,6 +1,6 @@
 
 .input{
-  @apply transition duration-200 ease-in-out w-full flex-shrink;
+  @apply transition duration-200 ease-in-out flex-shrink;
   &{
     @apply px-4 h-12 text-sm leading-loose;
   }
