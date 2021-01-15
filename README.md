@@ -22,26 +22,23 @@ Themeable, Scalable and Designer-Friendly
 ---
 
 ## 🔗 Links
-- 👉 Demo and samples [Netlify][netlify-url] / [Github][gh-pages-url]
-- 🎲 Try it online: [Tailwind Play][tw-play-url] / [Codepen][codepen-url]
-- 📘 [Theming guide][theming-url]
-- 📘 [List of components][components-url]
-- 📘 [FAQ][faq-url]
-- 📦 Source: [GitHub][gh-url] / [NPM][npm-url]
-- 📦 CDN: [Unpkg][unpkg-url] / [JSdeliver][jsdeliver-url]
+- 👉 [ [See all components][netlify-url] ]
+- 📘 Documents: [Netlify][netlify-url] | [Github][gh-pages-url]
+- 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
+- 📦 Source: [GitHub][gh-url] | [NPM][npm-url]
+- 📦 CDN: [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
 
 ---
 
 ## 🌼 Features   
-- **Tailwind CSS plugin**: Simply add it to your Tailwind config.
-- **CSS components**: It adds component classes to Tailwind. Classes like `btn`, `card`,... No need to write hundreds of utility classes
-- **Designer-friendly**: You can disable `styled` config to remove colors and visual styling of components, so you can design your own style on a basic skeleton.
-- **Scalable**: All your components will use the same design system. No more classname madness when your app gets bigger.
-- **Customizable**: Customize the style of elements with Tailwind utility classes.
-- **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page [ * ][theming-url].  
-- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`,... just like your design system defines.  
-- **Default Themes (optional)**: DaisyUI has 9 default themes.  
-- **RTL supported**: Enable `rtl` config for right to left layouts   
+- **CSS components**: It adds component classes to Tailwind. Classes like `btn`, `card`,... No need to deal with hundreds of utility classes.
+- **Tailwind CSS plugin**: DaisyUI is a Tailwind CSS plugin so you can simply add it to your `tailwind.config.js` file.
+- **Based on design system**: DaisyUI applies design system concepts to Tailwind CSS. All components on your page are committed to a single design system.
+- **Customizable**: You can customize the design of components with Tailwind utility classes and CSS variables.
+- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`,... just like your design system defines.
+- **RTL supported**: Enable `rtl` config for right to left layouts.
+- **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page.
+- **Designer-friendly**: You can disable `styled` config and only get the skeleton of components. No style, no colors. You can style everything using utility classes.
 
 ---
 
@@ -81,12 +78,12 @@ module.exports = {
 - **Full.css** (Tailwind's default style + DaisyUI components)  
   [![][full-css]][full-css-url]  
   ```
-  https://unpkg.com/daisyui@0.7.x/dist/full.css
+  https://unpkg.com/daisyui@0.8.x/dist/full.css
   ```
 - **Default themes** (optional)  
   [![][theme-css]][theme-css-url]   
   ```
-  https://unpkg.com/daisyui@0.7.x/dist/themes.css
+  https://unpkg.com/daisyui@0.8.x/dist/themes.css
   ```
 
 
@@ -112,48 +109,9 @@ Use component classes like `btn`, `card`, etc... to build your UI.
 
 ---
 
-## 🎨 Customize theme and colors (optional)  
-Add your custom colors in CSS file  
-[ [Theming guide and examples][theming-url] ↗︎ ]
-
-<details>
-<summary>
-  Quick example
-</summary>
-
-```css
-/* Values are HSL (hue, saturation, lightness) */
-:root {
-  --d: 0 0% 100%; /* default color */
-  --p1: 340 82% 62%; /* Primary color - light */
-  --p2: 340 82% 52%; /* Primary color - normal */
-  --p3: 340 82% 42%; /* Primary color - dark */
-  --s1: 262 52% 56%; /* Secondary color - light */
-  --s2: 262 52% 46%; /* Secondary color - normal */
-  --s3: 262 52% 36%; /* Secondary color - dark */
-  --a1: 199 98% 58%; /* Accent color - light */
-  --a2: 199 98% 48%; /* Accent color - normal */
-  --a3: 199 98% 38%; /* Accent color - dark */
-  --c1: 220 14% 96%; /* Content colors */
-  --c2: 228 14% 93%;
-  --c3: 220 15% 84%;
-  --c4: 218 14% 65%;
-  --c5: 220 14% 46%;
-  --c6: 220 14% 37%;
-  --c7: 219 14% 28%;
-  --c8: 222 13% 19%;
-  --c9: 223 14% 10%;
-  --cp: 0 0% 100%; /* Foreground content color to use on a primary color */
-  --cs: 0 0% 100%; /* Foreground content color to use on a secondary color */
-  --ca: 0 0% 100%; /* Foreground content color to use on a accent color */
-  --in: 207 90% 54%; /* Info */
-  --su: 174 100% 29%; /* Success */
-  --wa: 36 100% 50%; /* Warning */
-  --er: 14 100% 57%; /* Error */
-}
-```
-
-</details>
+## 📘 Documents + Examples  
+Read the documents for more info  
+[ [daisyui.netlify.app][netlify-url] ↗︎ ]
 
 ---
   
@@ -169,10 +127,10 @@ Please share
 
 
 [install-size]: https://badgen.net/bundlephobia/min/daisyui?label=Package%20size&color=purple
-[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/base.css?label=base.css&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/styled.css?label=CSS%20size&color=purple
-[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/full.css?label=full.css&color=purple
-[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.7.x/dist/themes.css?label=themes.css&color=pink
+[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/base.css?label=base.css&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/styled.css?label=CSS%20size&color=purple
+[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/full.css?label=full.css&color=purple
+[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/themes.css?label=themes.css&color=pink
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
@@ -181,10 +139,10 @@ Please share
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
-[base-css-url]: https://unpkg.com/daisyui@0.7.x/dist/base.css
-[styled-css-url]: https://unpkg.com/daisyui@0.7.x/dist/styled.css
-[full-css-url]: https://unpkg.com/daisyui@0.7.x/dist/full.css
-[theme-css-url]: https://unpkg.com/daisyui@0.7.x/dist/themes.css
+[base-css-url]: https://unpkg.com/daisyui@0.8.x/dist/base.css
+[styled-css-url]: https://unpkg.com/daisyui@0.8.x/dist/styled.css
+[full-css-url]: https://unpkg.com/daisyui@0.8.x/dist/full.css
+[theme-css-url]: https://unpkg.com/daisyui@0.8.x/dist/themes.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
