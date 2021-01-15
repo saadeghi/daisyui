@@ -74,7 +74,7 @@
     "tailwindcss": "^2.0.0"
   },
   "scripts": {
-    "style": "postcss src/base/index.css -o dist/base.css && postcss src/styled/index.css -o dist/styled.css && postcss src/styled/full.css -o dist/full.css && postcss src/themes/index.css -o dist/themes.css",
+    "style": "postcss src/base/index.css -o dist/base.css && postcss src/styled/index.css -o dist/styled.css && postcss src/full/index.css -o dist/full.css && postcss src/themes/index.css -o dist/themes.css",
     "poststyle": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs && prejss-cli dist/themes.css --format commonjs",
     "rtl": "rtlcss dist/base.css && rtlcss dist/styled.css",
     "postrtl": "prejss-cli dist/base.rtl.css --format commonjs && prejss-cli dist/styled.rtl.css --format commonjs",
