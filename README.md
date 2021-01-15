@@ -31,7 +31,7 @@ Themeable, Scalable and Designer-Friendly
 ---
 
 ## 🌼 Features   
-- **CSS components**: It adds component classes to Tailwind. Classes like `btn`, `card`,... No need to deal with hundreds of utility classes.
+- **Component classes**: It adds component classes to Tailwind. Classes like `btn`, `card`,... No need to deal with hundreds of utility classes.
 - **Tailwind CSS plugin**: DaisyUI is a Tailwind CSS plugin so you can simply add it to your `tailwind.config.js` file.
 - **Based on design system**: DaisyUI applies design system concepts to Tailwind CSS. All components on your page are committed to a single design system.
 - **Customizable**: You can customize the design of components with Tailwind utility classes and CSS variables.
@@ -114,6 +114,63 @@ Read the documents for more info
 [ [daisyui.netlify.app][netlify-url] ↗︎ ]
 
 ---
+
+<details>
+<summary>
+  List of components
+</summary>
+
+- [x] Accordion
+- [x] Alert
+- [x] Artboard
+- [ ] App bar
+- [x] Avatar
+- [ ] Avatar group
+- [x] Badge
+- [ ] Banner
+- [ ] Breadcrumb
+- [x] Button
+- [x] Button group
+- [ ] Calendar
+- [x] Card
+- [ ] Chat bubble
+- [ ] Comment
+- [ ] Countdown
+- [ ] Divider
+- [ ] Empty placeholder
+- [ ] Footer
+- [ ] Form
+  - [x] Select
+  - [x] Text input
+  - [x] Text area
+  - [x] Checkbox
+  - [x] Radio
+  - [ ] Range slider
+  - [x] Toggle
+  - [ ] Upload
+- [x] Hero
+- [ ] Loading
+- [x] Menu
+- [ ] Mockup
+  - [ ] Browser
+  - [x] Code
+  - [x] Phone
+  - [x] Window
+- [x] Navbar
+- [ ] Modal
+- [x] Pagination
+- [x] Progress
+- [ ] Statistic
+- [ ] Steps
+- [ ] Tag
+- [ ] Tabs
+- [ ] Timeline
+- [ ] Toast
+- [ ] Tooltip
+
+</details>
+
+---
   
 <div align="center">
   
@@ -154,8 +211,6 @@ Please share
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 
 [theming-url]: https://daisyui.netlify.app/docs/add-themes
-[faq-url]: https://github.com/saadeghi/daisyui/blob/master/docs/faq.md
-[components-url]: https://github.com/saadeghi/daisyui/blob/master/docs/components.md
 [netlify-url]: https://daisyui.netlify.app/
 [gh-pages-url]: https://saadeghi.github.io/daisyui-demo/
 [tailwind-url]: https://tailwindcss.com/
