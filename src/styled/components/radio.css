@@ -96,6 +96,24 @@
       }
     }
   }
+  &[disabled],
+  &[disabled]:hover
+  {
+    & ~ .radio-mark{
+      @apply bg-content-200 cursor-not-allowed border-transparent;
+      &:before{
+        @apply border-transparent;
+      }
+    }
+    &:checked{
+      & ~ .radio-mark{
+        @apply cursor-not-allowed;
+        &:before{
+          @apply border-default;
+        }
+      }
+    }
+  }
 }
 
 

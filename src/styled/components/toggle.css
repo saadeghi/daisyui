@@ -91,6 +91,23 @@
       }
     }
   }
+  &:disabled,
+  &:disabled:hover
+  {
+    & ~ .toggle-mark{
+      @apply bg-content-200 cursor-not-allowed border-transparent;
+      &:before{
+        @apply border-transparent;
+      }
+    }
+    &:checked{
+      & ~ .toggle-mark{
+        &:before{
+          @apply border-default bg-content-300;
+        }
+      }
+    }
+  }
 }
 
 @keyframes togglemark-off {

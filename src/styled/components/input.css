@@ -54,4 +54,8 @@
       @apply ring-accent;
     }
   }
+  &-disabled,
+  &[disabled]{
+    @apply cursor-not-allowed bg-content-100;
+  }
 }

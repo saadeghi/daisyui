@@ -1,5 +1,4 @@
 .radio{
-
   & ~ .radio-mark{
     @apply flex select-none cursor-pointer items-center justify-center transition duration-200 ease-in-out;
     &:before{

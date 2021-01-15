@@ -12,4 +12,8 @@
       @apply bg-opacity-100 shadow-none ring-0 ring-offset-0 text-content-900;
     }
   }
+  &-disabled,
+  &[disabled]{
+    @apply cursor-not-allowed bg-content-100;
+  }
 }
