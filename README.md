@@ -184,10 +184,10 @@ Please share
 
 
 [install-size]: https://badgen.net/bundlephobia/min/daisyui?label=Package%20size&color=purple
-[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/base.css?label=base.css&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/styled.css?label=CSS%20size&color=purple
-[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/full.css?label=full.css&color=purple
-[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui@0.8.x/dist/themes.css?label=themes.css&color=pink
+[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=CSS%20size&color=purple
+[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css&color=purple
+[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/themes.css?label=themes.css&color=pink
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
