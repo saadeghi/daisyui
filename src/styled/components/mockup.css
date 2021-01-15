@@ -27,4 +27,51 @@
       box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
     }
   }
+  &-phone{
+    display: inline-block;
+    border: 4px solid #444;
+    border-radius: 50px;
+    background-color: #000;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    .camera {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      background: #000;
+      height: 25px;
+      width: 150px;
+      margin: 0 auto;
+      border-bottom-left-radius: 17px;
+      border-bottom-right-radius: 17px;
+      z-index: 2;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        width: 50px;
+        height: 4px;
+        border-radius: 5px;
+        background-color: #0c0b0e;
+        transform: translate(-50%, -50%);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 70%;
+        width: 8px;
+        height: 8px;
+        border-radius: 5px;
+        background-color: #0f0b25;
+      }
+    }
+    .display {
+      overflow: hidden;
+      border-radius: 40px;
+      margin-top: -25px;
+    }
+  }
 }

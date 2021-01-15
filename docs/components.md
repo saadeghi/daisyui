@@ -34,7 +34,7 @@
 - [ ] Mockup
   - [ ] Browser
   - [x] Code
-  - [ ] Phone
+  - [x] Phone
   - [x] Window
 - [x] Navbar
 - [ ] Modal
