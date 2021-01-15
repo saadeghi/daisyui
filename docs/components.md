@@ -35,7 +35,7 @@
   - [ ] Browser
   - [x] Code
   - [ ] Phone
-  - [ ] Window
+  - [x] Window
 - [x] Navbar
 - [ ] Modal
 - [x] Pagination

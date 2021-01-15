@@ -19,4 +19,12 @@
       }
     }
   }
+  &-window{
+    @apply rounded-box pt-5;
+    &:before{
+      content: "";
+      @apply block w-3 h-3 rounded-full opacity-30 mb-4;
+      box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
+    }
+  }
 }
