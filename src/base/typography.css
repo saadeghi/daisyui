@@ -17,5 +17,17 @@
         color: inherit;
       }
     }
+    blockquote{
+      border-left-color: hsl(0deg 0% 40% / 40%);
+    }
+    ul > li::before{
+      background-color: hsl(0deg 0% 40% / 40%);
+    }
+    thead{
+      border-bottom-color: hsl(0deg 0% 40% / 40%);
+    }
+    tbody tr{
+      border-bottom-color: hsl(0deg 0% 40% / 40%);
+    }
   }
 }
