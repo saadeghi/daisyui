@@ -195,7 +195,7 @@ Please share
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 
-[theming-url]: https://github.com/saadeghi/daisyui/blob/master/docs/theming.md
+[theming-url]: https://daisyui.netlify.app/docs/add-themes
 [faq-url]: https://github.com/saadeghi/daisyui/blob/master/docs/faq.md
 [components-url]: https://github.com/saadeghi/daisyui/blob/master/docs/components.md
 [netlify-url]: https://daisyui.netlify.app/
