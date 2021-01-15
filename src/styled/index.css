@@ -1,5 +1,4 @@
 @import "../base";
-@import "../utility/glass";
 @import "../utility/typography";
 @import "./components/accordion";
 @import "./components/alert";
@@ -20,4 +19,5 @@
 @import "./components/mockup";
 @import "./components/select";
 @import "./components/textarea";
+@import "../utility/glass";
 
