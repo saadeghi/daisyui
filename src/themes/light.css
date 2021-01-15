@@ -30,4 +30,12 @@
   --rounded-btn: 0.5rem;
   --rounded-badge: 9999px;
 
+  --animation-btn: 0.25s;
+  --animation-input: .4s;
+  
+  --padding-card: 2rem;
+
+  --btn-text-case: uppercase;
+  --navbar-padding: .5rem;
+  --border-btn: 1px;
 }

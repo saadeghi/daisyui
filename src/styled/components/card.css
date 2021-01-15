@@ -12,7 +12,7 @@
     }
   }
   &-body {
-    @apply p-8;
+    padding: var(--padding-card, 2rem);
   }
   &-title {
     @apply mb-3 text-xl font-semibold;

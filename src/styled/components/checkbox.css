@@ -30,7 +30,7 @@
       & ~ .checkbox-mark{
         @apply bg-content-600 border-content-600 text-default shadow-none;
         &:before{
-          animation: checkmark .4s ease-in-out;
+          animation: checkmark var(--animation-input, .4s)  ease-in-out;
           transform: rotate(45deg)translate(-1px, -1px)scale(1);
           @apply border-default;
         }

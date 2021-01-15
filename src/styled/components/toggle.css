@@ -4,7 +4,7 @@
     @apply w-12 h-6 rounded-badge border border-content-300 shadow-inner;
     &:before{
       @apply w-5 h-5 m-px rounded-badge bg-content-300;
-      animation: togglemark-off .4s ease-in-out;
+      animation: togglemark-off var(--animation-input, .4s) ease-in-out;
     }
   }
   &:hover {
@@ -27,7 +27,7 @@
         @apply bg-default border-content-300 bg-opacity-20;
         &:before{
           @apply bg-content-500 transform translate-x-6	;
-          animation: togglemark-on .4s ease-in-out;
+          animation: togglemark-on var(--animation-input, .4s) ease-in-out;
         }
       }
     }
