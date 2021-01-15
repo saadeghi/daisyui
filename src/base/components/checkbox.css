@@ -8,8 +8,6 @@
       display: block;
     }
   }
-  &:checked{
-  }
   &:focus {
     @apply outline-none;
   }

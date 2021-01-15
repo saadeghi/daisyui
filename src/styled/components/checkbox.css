@@ -96,6 +96,23 @@
       }
     }
   }
+  &:disabled,
+  &:disabled:hover
+  {
+    & ~ .checkbox-mark{
+      @apply bg-content-200 cursor-not-allowed border-transparent;
+      &:before{
+        @apply border-transparent;
+      }
+    }
+    &:checked{
+      & ~ .checkbox-mark{
+        &:before{
+          @apply border-default;
+        }
+      }
+    }
+  }
 }
 
 
