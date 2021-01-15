@@ -38,4 +38,7 @@
   --btn-text-case: uppercase;
   --navbar-padding: .5rem;
   --border-btn: 1px;
+
+  --focus-ring: 2px;
+  --focus-ring-offset: 2px;
 }
