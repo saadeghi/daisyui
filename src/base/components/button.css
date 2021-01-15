@@ -70,13 +70,19 @@
       @apply pointer-events-none;
     }
     &:before {
-      @apply animate-spin h-4 w-4 rounded-full mr-2 border-2;
+      @apply h-4 w-4 rounded-full mr-2 border-2;
+      animation: spin 2s linear infinite;
       content: "";
       border-top-color: transparent;
       border-left-color: transparent;
       border-bottom-color: currentColor;
       border-right-color: currentColor;
     }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn.loading:before{
+    animation: spin 10s linear infinite;
   }
 }
 /* group */
