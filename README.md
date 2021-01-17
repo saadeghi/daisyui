@@ -203,7 +203,7 @@ Please share
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
-[tw-play-url]: https://play.tailwindcss.com/908kXKMIeO
+[tw-play-url]: https://play.tailwindcss.com/whCH0z6ZlQ
 [codepen-url]: https://codepen.io/saadeghi/pen/gOwWKvv
 [unpkg-url]: https://unpkg.com/browse/daisyui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
