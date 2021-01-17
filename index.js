@@ -1,14 +1,23 @@
+const themes = require("./dist/themes.js")
+const base = require("./dist/base.js")
+const baseRtl = require("./dist/base.rtl.js")
+const styled = require("./dist/styled.js")
+const styledRtl = require("./dist/styled.rtl.js")
+
 module.exports = ({ addComponents, config }) => {
-  let fileName = 'styled'
-  let postfix = ''
-  if (config('daisyui.styled') === false) {
-    fileName = 'base'
+  // because rollupjs doesn't supprt dynamic require
+  let file = ''
+  if (config('daisyui.styled') === false && config('daisyui.rtl') === false) {
+    file = base
+  }else if(config('daisyui.styled') === false && config('daisyui.rtl') === true) {
+    file = baseRtl
+  }else if(config('daisyui.styled') === true && config('daisyui.rtl') === false) {
+    file = styled
+  }else if(config('daisyui.styled') === true && config('daisyui.rtl') === true) {
+    file = styledRtl
   }
-  if (config('daisyui.rtl') === true) {
-    postfix = '.rtl'
-  }
-  addComponents(require("./dist/"+ fileName + postfix +".js"))
+  addComponents(file)
   if (config('daisyui.themes') === true) {
-    addComponents(require("./dist/themes.js"))
+    addComponents(themes)
   }
 }
