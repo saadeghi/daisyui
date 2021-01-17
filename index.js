@@ -6,7 +6,7 @@ const styledRtl = require("./dist/styled.rtl.js")
 
 module.exports = ({ addComponents, config }) => {
   // because rollupjs doesn't supprt dynamic require
-  let file = ''
+  let file = styled
   if (config('daisyui.styled') === false && config('daisyui.rtl') === false) {
     file = base
   }else if(config('daisyui.styled') === false && config('daisyui.rtl') === true) {
