@@ -17,6 +17,5 @@
       linear-gradient(var(--glass-reflex-degree), hsl(0deg 0% 100% / var(--glass-reflex-opacity)) var(--glass-reflex-size), transparent var(--glass-reflex-size));
     box-shadow: 0 0 0 1px hsl(0deg 0% 100% / var(--glass-border-opacity)) inset, 0 0 0 2px hsl(0deg 0% 0% / 5%);
     text-shadow: 0 1px hsl(0deg 0% 0% / var(--glass-text-shadow-opacity));
-    color: white;
   }
 }
