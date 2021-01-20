@@ -137,6 +137,7 @@ Read the documents for more info
 - [ ] Comment
 - [ ] Countdown
 - [ ] Divider
+- [x] Drawer
 - [ ] Empty placeholder
 - [ ] Footer
 - [ ] Form

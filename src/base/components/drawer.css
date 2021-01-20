@@ -1,0 +1,28 @@
+.drawer{
+  @apply grid;
+}
+.drawer-toggle{
+  @apply appearance-none opacity-0 w-0 h-0 absolute;
+  & ~ .drawer-content{
+    @apply row-start-1 col-start-1 transform;
+  }
+  & ~ .drawer-side{
+    @apply row-start-1 col-start-1 grid;
+    & .drawer-overlay{
+      @apply row-start-1 col-start-1 invisible opacity-0;
+    }
+    & .drawer-overlay + *{
+      @apply z-10 row-start-1 col-start-1 transform -translate-x-full;
+    }
+  }
+  &:checked{
+    & ~ .drawer-side{
+      & .drawer-overlay{
+        @apply visible;
+      }
+      & .drawer-overlay + *{
+        @apply translate-x-0;
+      }
+    }
+  }
+}

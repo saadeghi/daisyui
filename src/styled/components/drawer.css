@@ -1,0 +1,24 @@
+.drawer-toggle{
+  & ~ .drawer-content{
+    @apply transition-all ease-in-out duration-300;
+  }
+  & ~ .drawer-side{
+    & .drawer-overlay{
+      @apply cursor-pointer transition-all ease-in-out duration-300;
+      background-color: black;
+    }
+    & .drawer-overlay + *{
+      @apply transition-all ease-in-out duration-300;
+    }
+  }
+  &:checked{
+    & ~ .drawer-content{
+      @apply translate-x-2;
+    }
+    & ~ .drawer-side{
+      & .drawer-overlay{
+        @apply opacity-40;
+      }
+    }
+  }
+}
