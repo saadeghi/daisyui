@@ -61,6 +61,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
+    "copy-dir-cli": "0.0.3",
     "cssnano": "^4.1.10",
     "postcss": "^8.1.10",
     "postcss-cli": "^8.3.0",
@@ -78,7 +79,8 @@
     "poststyle": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs && prejss-cli dist/themes.css --format commonjs",
     "rtl": "rtlcss dist/base.css -s && rtlcss dist/styled.css -s",
     "postrtl": "prejss-cli dist/base.rtl.css --format commonjs && prejss-cli dist/styled.rtl.css --format commonjs",
-    "build": "npm run style && npm run rtl",
+    "movefiles": "copy src/tailwind/utilities dist/utilities",
+    "build": "npm run style && npm run rtl && npm run movefiles",
     "add": "touch src/base/components/$npm_config_name.css && touch src/styled/components/$npm_config_name.css && echo '@import \"./components/'$npm_config_name'\";' >> src/base/index.css && echo '@import \"./components/'$npm_config_name'\";' >> src/styled/index.css && open src/base/components/$npm_config_name.css && open src/styled/components/$npm_config_name.css"
   }
 }

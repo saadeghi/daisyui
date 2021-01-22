@@ -4,7 +4,7 @@ const baseRtl = require("./dist/base.rtl.js")
 const styled = require("./dist/styled.js")
 const styledRtl = require("./dist/styled.rtl.js")
 
-module.exports = ({ addComponents, config }) => {
+module.exports = ({ addComponents, addUtilities, config }) => {
   // because rollupjs doesn't supprt dynamic require
   let file = styled
   if (config('daisyui.styled') === false && config('daisyui.rtl') === false) {
@@ -19,5 +19,10 @@ module.exports = ({ addComponents, config }) => {
   addComponents(file)
   if (config('daisyui.themes') === true) {
     addComponents(themes)
+  }
+  if (config('daisyui.utils') !== false) {
+    addUtilities(require('./dist/utilities/minHeight'),{ variants: ['responsive'] })
+    addUtilities(require('./dist/utilities/fontSize'),{ variants: ['responsive'] })
+    addUtilities(require('./dist/utilities/borderRadius'),{ variants: ['responsive'] })
   }
 }
