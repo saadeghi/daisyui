@@ -26,3 +26,21 @@
     }
   }
 }
+@media (min-width: 1024px) {
+  .drawer-mobile{
+    grid-auto-columns: max-content auto;
+    .drawer-toggle{
+      & ~ .drawer-content{
+        @apply lg:col-start-2;
+      }
+      & ~ .drawer-side{
+        & .drawer-overlay{
+          @apply lg:visible;
+        }
+        & .drawer-overlay + *{
+          @apply lg:translate-x-0;
+        }
+      }
+    }
+  }
+}

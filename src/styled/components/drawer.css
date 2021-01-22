@@ -74,3 +74,14 @@
     }
   }
 }
+@media (min-width: 1024px) {
+  .drawer-mobile{
+    .drawer-toggle{
+      &:checked{
+        & ~ .drawer-content{
+          @apply translate-x-0;
+        }
+      }
+    }
+  }
+}
