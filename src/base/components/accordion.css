@@ -11,11 +11,12 @@
     }
     input {
       @apply appearance-none opacity-0 w-0 h-0 absolute;
-      &:checked, &:focus-visible {
-        & ~ .accordion-body {
-          @apply max-h-screen;
-        }
-      }
+    }
+    input:checked ~ .accordion-body {
+      @apply max-h-screen;
+    }
+    input:focus-visible ~ .accordion-body {
+      @apply max-h-screen;
     }
   }
   &-arrow{
