@@ -21,14 +21,11 @@
   }
   &-arrow{
     .accordion-item{
-      input {
-        &:checked, &:focus-visible {
-          & + .accordion-title {
-            &:after{
-              transform: rotate(225deg);
-            }
-          }
-        }
+      & input:checked + .accordion-title:after{
+        transform: rotate(225deg);
+      }
+      & input:focus-visible + .accordion-title:after{
+        transform: rotate(225deg);
       }
       .accordion-title{
         &:after{
@@ -45,14 +42,11 @@
   }
   &-plus{
     .accordion-item{
-      input {
-        &:checked, &:focus-visible {
-          & + .accordion-title {
-            &:after{
-              content: '−'
-            }
-          }
-        }
+      & input:checked + .accordion-title:after{
+        content: '−'
+      }
+      & input:focus-visible + .accordion-title:after{
+        content: '−'
       }
       .accordion-title{
         &:after{
