@@ -2,8 +2,9 @@
 
 [![][logo-url]](#)  
 
-**UI Components for Tailwind CSS**  
-Themeable, Scalable and Designer-Friendly  
+**Tailwind CSS Components**  
+Adds components like `btn`, `card` and more to Tailwind CSS
+
 [ [See all components][netlify-url] ]
   
 [![][tweet]][tweet-url]  
@@ -13,11 +14,8 @@ Themeable, Scalable and Designer-Friendly
 [![][banner-url]][netlify-url]  
 
 # DaisyUI  
-[![][build]][build-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url]  
-[![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]
-
->***It's like Tailwind CSS on steroids!***  
->You have everything from [Tailwind CSS][tailwind-url], *but* you can also use component classes like `btn`, `card`, etc...
+[![][build]][build-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url] [![][license]][license-url]  
+[![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] 
 
 ---
 
@@ -25,17 +23,16 @@ Themeable, Scalable and Designer-Friendly
 - 👉 [ [See all components][netlify-url] ]
 - 📘 Documents: [Netlify][netlify-url] | [Github][gh-pages-url]
 - 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
-- 📦 Source: [GitHub][gh-url] | [NPM][npm-url]
-- 📦 CDN: [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
+- 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
 
 ---
 
 ## 🌼 Features   
-- **Component classes**: It adds component classes to Tailwind. Classes like `btn`, `card`,... No need to deal with hundreds of utility classes.
+- **Component classes**: DaisyUI adds component classes to Tailwind. Classes like `btn`, `card`,… No need to deal with hundreds of utility classes.
 - **Tailwind CSS plugin**: DaisyUI is a Tailwind CSS plugin so you can simply add it to your `tailwind.config.js` file.
 - **Based on design system**: DaisyUI applies design system concepts to Tailwind CSS. All components on your page are committed to a single design system.
 - **Customizable**: You can customize the design of components with Tailwind utility classes and CSS variables.
-- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`,... just like your design system defines.
+- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`,… just like your design system defines.
 - **RTL supported**: Enable `rtl` config for right to left layouts.
 - **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page.
 - **Designer-friendly**: You can disable `styled` config and only get the skeleton of components. No style, no colors. You can style everything using utility classes.
@@ -44,25 +41,16 @@ Themeable, Scalable and Designer-Friendly
 
 ## 👩‍💻 Install now!  
 
-```
+```bash
 npm i daisyui --save
 ```
 
 Then add DaisyUI to your `tailwind.config.js`
 ```js
 module.exports = {
-  
   plugins: [
     require('daisyui'),
   ],
-
-  // OPTIONAL: if you want to use DaisyUI colors everywhere
-  theme: {
-    extend: {
-      colors: require('daisyui/colors'),
-    },
-  },
-
 }
 ```
 
@@ -75,12 +63,12 @@ module.exports = {
 
 >*Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and DaisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
 
-- **Full.css** (Tailwind's default style + DaisyUI components)  
+- **full.css** (Tailwind's default config + DaisyUI components)  
   [![][full-css]][full-css-url]  
   ```
   https://cdn.jsdelivr.net/npm/daisyui@0.9.x/dist/full.css
   ```
-- **Default themes** (optional)  
+- **Default themes** (adds default themes - optional)  
   [![][theme-css]][theme-css-url]   
   ```
   https://cdn.jsdelivr.net/npm/daisyui@0.9.x/dist/themes.css
@@ -91,7 +79,7 @@ module.exports = {
 
 ---
 ## 🎉 Use  
-Use component classes like `btn`, `card`, etc... to build your UI.  
+Use component classes like `btn`, `card`, etc… to build your UI.  
 ```html
 <a class="btn">Hello!</a>
 ```
@@ -112,8 +100,6 @@ Use component classes like `btn`, `card`, etc... to build your UI.
 ## 📘 Documents + Examples  
 Read the documents for more info  
 [ [daisyui.netlify.app][netlify-url] ↗︎ ]
-
----
 
 <details>
 <summary>
@@ -176,7 +162,7 @@ Read the documents for more info
 <div align="center">
   
   
-Please share  
+༼ つ ◕_◕ ༽つ  Please share  
   
 [![][tweet]][tweet-url]  
 
