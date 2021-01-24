@@ -45,7 +45,7 @@ Themeable, Scalable and Designer-Friendly
 ## 👩‍💻 Install now!  
 
 ```
-npm i daisyui
+npm i daisyui --save
 ```
 
 Then add DaisyUI to your `tailwind.config.js`
