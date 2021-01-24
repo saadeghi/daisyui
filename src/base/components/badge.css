@@ -1,5 +1,5 @@
 .badge {
-  @apply inline-flex transition duration-200 ease-in-out;
+  @apply inline-flex transition duration-200 ease-in-out justify-center items-center;
   &{
     @apply text-sm leading-5 px-3;
   }

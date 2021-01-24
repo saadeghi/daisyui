@@ -25,7 +25,7 @@
   }
   &.image-full {
     &:before {
-      @apply bg-content-900 z-10 opacity-75;
+      @apply bg-content-900 z-10 opacity-75 rounded-box;
     }
   }
   &.image-full > &-body {
