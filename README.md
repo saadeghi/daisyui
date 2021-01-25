@@ -5,13 +5,13 @@
 **Tailwind CSS Components**  
 Adds components like `btn`, `card` and more to Tailwind CSS
 
-[ [See all components][netlify-url] ]
+[ [See all components][gh-pages-url] ]
   
 [![][tweet]][tweet-url]  
 
 </div>
 
-[![][banner-url]][netlify-url]  
+[![][banner-url]][gh-pages-url]  
 
 # DaisyUI  
 [![][build]][build-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url] [![][license]][license-url]  
@@ -20,7 +20,7 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 ---
 
 ## 🔗 Links
-- 👉 [ [See all components][netlify-url] ]
+- 👉 [ [See all components][gh-pages-url] ]
 - 📘 Documents: [Netlify][netlify-url] | [Github][gh-pages-url]
 - 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
 - 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
@@ -45,7 +45,7 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 npm i daisyui --save
 ```
 
-Then add DaisyUI to your `tailwind.config.js`
+Then add DaisyUI to your `tailwind.config.js` [ [Read more][gh-pages-url] ]
 ```js
 module.exports = {
   plugins: [
@@ -92,14 +92,14 @@ Use component classes like `btn`, `card`, etc… to build your UI.
 </div> 
 ```
 
-👉 [See all components][netlify-url]  
+👉 [See all components][gh-pages-url]  
 🎲 [Try it online][tw-play-url]  
 
 ---
 
 ## 📘 Documents + Examples  
 Read the documents for more info  
-[ [daisyui.netlify.app][netlify-url] ↗︎ ]
+[ [daisy.js.org][gh-pages-url] ↗︎ ]
 
 <details>
 <summary>
