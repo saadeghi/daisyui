@@ -21,7 +21,7 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 
 ## 🔗 Links
 - 👉 [ [See all components][gh-pages-url] ]
-- 📘 Documents: [Netlify][netlify-url] | [Github][gh-pages-url]
+- 📘 Documents: [daisy.js.org][gh-pages-url]
 - 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
 - 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
 
