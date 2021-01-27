@@ -150,7 +150,7 @@ Read the documents for more info
 - [ ] Statistic
 - [ ] Steps
 - [ ] Tag
-- [ ] Tabs
+- [x] Tabs
 - [ ] Timeline
 - [ ] Toast
 - [ ] Tooltip

@@ -20,5 +20,6 @@
 @import "./components/select";
 @import "./components/textarea";
 @import "./components/drawer";
+@import "./components/tab";
 @import "../utility/glass";
 

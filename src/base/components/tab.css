@@ -1,0 +1,21 @@
+.tabs {
+  @apply flex flex-wrap;
+}
+.tab{
+  @apply inline-flex flex-wrap items-center justify-center text-center cursor-pointer relative;
+
+  /* sizes */
+  & {
+    @apply px-5 leading-loose h-8 text-sm;
+  }
+  &-lg {
+    @apply px-6 leading-loose h-12 text-lg;
+  }
+  &-sm {
+    @apply px-3 leading-3 h-6 text-sm;
+  }
+  &-xs {
+    @apply px-2 text-xs leading-3 h-4;
+  }
+
+}
