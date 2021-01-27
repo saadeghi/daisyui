@@ -17,6 +17,7 @@
   }
 }
 .tab-lifted{
+  @apply tab-rounded-lg;
   margin-top: var(--tab-spacer);
   padding-bottom: var(--tab-radius);
   &.tab-active{
@@ -61,9 +62,6 @@
       border-bottom-color: transparent;
       border-bottom-left-radius: 0;
     }
-  }
-  &.tab-rounded{
-    @apply tab-rounded-lg;
   }
 }
 .tabs-boxed{
