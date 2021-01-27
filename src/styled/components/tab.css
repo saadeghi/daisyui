@@ -17,9 +17,9 @@
   }
 }
 .tab-lifted{
-  @apply tab-rounded-lg;
+  --tab-radius: var(--rounded-btn, 0.5rem);
   margin-top: var(--tab-spacer);
-  padding-bottom: var(--tab-radius);
+  padding-bottom: var(--tab-spacer);
   &.tab-active{
     border-bottom-width: 0;
     border-left-width: var(--tab-border);
