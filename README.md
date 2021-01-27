@@ -66,12 +66,12 @@ module.exports = {
 - **full.css** (Tailwind's default config + DaisyUI components)  
   [![][full-css]][full-css-url]  
   ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.10.x/dist/full.css
+  https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/full.css
   ```
 - **Default themes** (adds default themes - optional)  
   [![][theme-css]][theme-css-url]   
   ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.10.x/dist/themes.css
+  https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/themes.css
   ```
 
 
@@ -183,9 +183,9 @@ Read the documents for more info
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
-[styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.10.x/dist/styled.css
-[full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.10.x/dist/full.css
-[theme-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.10.x/dist/themes.css
+[styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/styled.css
+[full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/full.css
+[theme-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/themes.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
