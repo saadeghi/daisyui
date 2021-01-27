@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     plugin(function({ addUtilities }) {
+      addUtilities(require('./utilities/variables'),{ variants: ['responsive'] })
       addUtilities(require('./utilities/minHeight'),{ variants: ['responsive'] })
       addUtilities(require('./utilities/fontSize'),{ variants: ['responsive'] })
       addUtilities(require('./utilities/borderRadius'),{ variants: ['responsive'] })

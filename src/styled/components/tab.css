@@ -1,7 +1,6 @@
 .tabs {
-  --tab-border: 1px;
-  --tab-radius: 0;
   --tab-spacer: .5rem;
+  @apply tab-border;
 }
 .tab{
   @apply text-content-500 hover:text-content-900;
@@ -64,7 +63,7 @@
     }
   }
   &.tab-rounded{
-    --tab-radius: .5rem;
+    @apply tab-rounded-lg;
   }
 }
 .tabs-boxed{
