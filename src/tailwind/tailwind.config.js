@@ -11,6 +11,7 @@ module.exports = {
       addUtilities(require('./utilities/minHeight'),{ variants: ['responsive'] })
       addUtilities(require('./utilities/fontSize'),{ variants: ['responsive'] })
       addUtilities(require('./utilities/borderRadius'),{ variants: ['responsive'] })
+      addUtilities(require('./utilities/responsiveComponentStyle'),{ variants: ['responsive'] })
     })
   ],
 }
