@@ -1,6 +1,6 @@
 <div align="center">
 
-[![][logo-url]](docs-url)  
+[![][logo-url]][docs-url]  
 
 **Tailwind CSS Components**  
 Adds components like `btn`, `card` and more to Tailwind CSS
