@@ -2,7 +2,7 @@
   @apply flex flex-wrap;
 }
 .tab{
-  @apply inline-flex flex-wrap items-center justify-center text-center cursor-pointer relative;
+  @apply inline-flex flex-wrap items-center justify-center text-center cursor-pointer relative select-none;
 
   /* sizes */
   & {
