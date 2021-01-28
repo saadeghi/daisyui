@@ -1,17 +1,17 @@
 <div align="center">
 
-[![][logo-url]](#)  
+[![][logo-url]](docs-url)  
 
 **Tailwind CSS Components**  
 Adds components like `btn`, `card` and more to Tailwind CSS
 
-[ [See all components][gh-pages-url] ]
+[ [See all components][docs-url] ]
   
 [![][tweet]][tweet-url]  
 
 </div>
 
-[![][banner-url]][gh-pages-url]  
+[![][banner-url]][docs-url]  
 
 # DaisyUI  
 [![][build]][build-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url] [![][license]][license-url]  
@@ -20,8 +20,8 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 ---
 
 ## 🔗 Links
-- 👉 [ [See all components][gh-pages-url] ]
-- 📘 Documents: [daisy.js.org][gh-pages-url]
+- 👉 [ [See all components][docs-url] ]
+- 📘 Documents: [daisy.js.org][docs-url]
 - 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
 - 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
 
@@ -45,12 +45,21 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 npm i daisyui --save
 ```
 
-Then add DaisyUI to your `tailwind.config.js` [ [Read more][gh-pages-url] ]
+Then add DaisyUI to your `tailwind.config.js`  
+[ [Read more][docs-url-install] ]
 ```js
 module.exports = {
+
   plugins: [
     require('daisyui'),
   ],
+  
+  theme: {
+    extend: {
+      colors: require('daisyui/colors'),
+    },
+  },
+
 }
 ```
 
@@ -63,17 +72,17 @@ module.exports = {
 
 >*Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and DaisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
 
-- **full.css** (Tailwind's default config + DaisyUI components)  
-  [![][full-css]][full-css-url]  
+- **full.css**
+[![][full-css]][full-css-url]  
+  Includes:
+  - Tailwind's default config  
+  - DaisyUI components  
+  - DaisyUI default themes  
+  
   ```
   https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/full.css
   ```
-- **Default themes** (adds default themes - optional)  
-  [![][theme-css]][theme-css-url]   
-  ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/themes.css
-  ```
-
+  [ [Browse other versions][docs-url-install] ]
 
 </details>
 
@@ -92,14 +101,14 @@ Use component classes like `btn`, `card`, etc… to build your UI.
 </div> 
 ```
 
-👉 [See all components][gh-pages-url]  
+👉 [See all components][docs-url]  
 🎲 [Try it online][tw-play-url]  
 
 ---
 
 ## 📘 Documents + Examples  
 Read the documents for more info  
-[ [daisy.js.org][gh-pages-url] ↗︎ ]
+[ [daisy.js.org][docs-url] ↗︎ ]
 
 <details>
 <summary>
@@ -174,7 +183,6 @@ Read the documents for more info
 [base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css&color=purple
 [styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=CSS%20size&color=purple
 [full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css&color=purple
-[theme-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/themes.css?label=themes.css&color=pink
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
@@ -185,7 +193,6 @@ Read the documents for more info
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
 [styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/styled.css
 [full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/full.css
-[theme-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/themes.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
@@ -196,10 +203,8 @@ Read the documents for more info
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 
-[theming-url]: https://daisyui.netlify.app/docs/add-themes
-[netlify-url]: https://daisyui.netlify.app/
-[gh-pages-url]: https://saadeghi.github.io/daisyui-demo/
-[tailwind-url]: https://tailwindcss.com/
+[docs-url-install]: https://daisy.js.org/docs/install
+[docs-url]: https://saadeghi.github.io/daisyui-demo/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/presentation/dark-theme-wide.png
 
