@@ -77,7 +77,6 @@ module.exports = {
   Includes:
   - Tailwind's default config  
   - DaisyUI components  
-  - DaisyUI default themes  
   
   ```
   https://cdn.jsdelivr.net/npm/daisyui@0.11.x/dist/full.css
