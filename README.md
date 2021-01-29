@@ -14,12 +14,10 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 [![][banner-url]][docs-url]  
 
 # DaisyUI  
-[![][build]][build-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url] [![][license]][license-url]  
-[![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] 
+[![][build]][build-url] [![][number-of-components]][gh-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url]  
+[![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]  
 
----
 
-## 🔗 Links
 - 👉 [ [See all components][docs-url] ]
 - 📘 Documents: [daisy.js.org][docs-url]
 - 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
@@ -178,12 +176,12 @@ Read the documents for more info
 
 
 
-[install-size]: https://badgen.net/bundlephobia/min/daisyui?label=Package%20size&color=purple
+[install-size]: https://badgen.net/bundlephobia/min/daisyui?label=install%20size&color=purple
 [base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=CSS%20size&color=purple
+[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=css%20size&color=purple
 [full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css&color=purple
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
-[npm]: https://badgen.net/npm/v/daisyui?label=version&icon=npm&color=purple
+[npm]: https://badgen.net/npm/v/daisyui?label=version&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
 [commit]: https://badgen.net/github/last-commit/saadeghi/daisyui?icon=github&color=purple
 [license]: https://badgen.net/github/license/saadeghi/daisyui?color=purple
@@ -201,6 +199,7 @@ Read the documents for more info
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
+[number-of-components]: https://badgen.net/badge/components%20added/24/purple
 
 [docs-url-install]: https://daisy.js.org/docs/install
 [docs-url]: https://saadeghi.github.io/daisyui-demo/
