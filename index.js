@@ -21,8 +21,10 @@ module.exports = ({ addComponents, addUtilities, config }) => {
     addComponents(themes)
   }
   if (config('daisyui.utils') !== false) {
+    addUtilities(require('./dist/utilities/variables'),{ variants: ['responsive'] })
     addUtilities(require('./dist/utilities/minHeight'),{ variants: ['responsive'] })
     addUtilities(require('./dist/utilities/fontSize'),{ variants: ['responsive'] })
     addUtilities(require('./dist/utilities/borderRadius'),{ variants: ['responsive'] })
+    addUtilities(require('./dist/utilities/responsiveComponentStyle'),{ variants: ['responsive'] })
   }
 }
