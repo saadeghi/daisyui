@@ -128,6 +128,7 @@ Read the documents for more info
 - [ ] Chat bubble
 - [ ] Comment
 - [ ] Countdown
+- [ ] Cover
 - [ ] Divider
 - [x] Drawer
 - [ ] Empty placeholder
