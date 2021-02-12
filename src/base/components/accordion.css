@@ -9,7 +9,7 @@
       max-height: 0px;
       @apply transition-all ease-in-out duration-300 pb-0 px-4;
     }
-    input {
+    input:first-child {
       @apply appearance-none opacity-0 w-0 h-0 absolute;
     }
     input:checked ~ .accordion-body {
