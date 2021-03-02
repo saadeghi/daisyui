@@ -4,8 +4,7 @@
   }
   & ~ .drawer-side{
     & .drawer-overlay{
-      @apply cursor-pointer transition-all ease-in-out duration-300;
-      background-color: black;
+      @apply cursor-pointer transition-all ease-in-out duration-300 bg-neutral-focus;
     }
     & .drawer-overlay + *{
       @apply transition-all ease-in-out duration-300;
@@ -29,7 +28,7 @@
       --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(var(--focus-ring, 2px) + var(--tw-ring-offset-width)) var(--tw-ring-color);
       box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 rgba(0,0,0,0);
       box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0,0,0,0));
-      @apply ring-content-300 ring-offset-default;
+      @apply ring-neutral-focus ring-offset-base-100;
       &.btn-primary{
         @apply ring-primary;
       }

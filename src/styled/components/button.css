@@ -11,10 +11,10 @@
 
   /* default btn */
   & {
-    @apply bg-content-100 border-content-100 text-content-800;
+    @apply bg-neutral border-neutral text-neutral-content;
     &:hover,
     &-active {
-      @apply bg-content-200 border-content-200;
+      @apply bg-neutral-focus border-neutral-focus;
     }
     &:focus-visible {
       --tw-ring-offset-width: var(--focus-ring-offset, 2px);
@@ -23,35 +23,35 @@
       --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(var(--focus-ring, 2px) + var(--tw-ring-offset-width)) var(--tw-ring-color);
       box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 rgba(0,0,0,0);
       box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0,0,0,0));
-      @apply ring-content-300 ring-offset-default;
+      @apply ring-neutral-focus ring-offset-base-100;
     }
   }
   /* brand colors */
   &-primary {
-    @apply bg-primary border-primary text-content-primary;
+    @apply bg-primary border-primary text-primary-content;
     &:hover,
     &.btn-active {
-      @apply bg-primary-darken border-primary-darken;
+      @apply bg-primary-focus border-primary-focus;
     }
     &:focus-visible {
       @apply ring-primary;
     }
   }
   &-secondary {
-    @apply bg-secondary border-secondary text-content-secondary;
+    @apply bg-secondary border-secondary text-secondary-content;
     &:hover,
     &.btn-active {
-      @apply bg-secondary-darken border-secondary-darken;
+      @apply bg-secondary-focus border-secondary-focus;
     }
     &:focus-visible {
       @apply ring-secondary;
     }
   }
   &-accent {
-    @apply bg-accent border-accent text-content-accent;
+    @apply bg-accent border-accent text-accent-content;
     &:hover,
     &.btn-active {
-      @apply bg-accent-darken border-accent-darken;
+      @apply bg-accent-focus border-accent-focus;
     }
     &:focus-visible {
       @apply ring-accent;
@@ -61,7 +61,7 @@
 
   /* btn with state colors */
   &-info {
-    @apply bg-info border-info text-content-100;
+    @apply bg-info border-info text-base-200;
     &:hover,
     &.btn-active {
       @apply bg-info border-info;
@@ -71,7 +71,7 @@
     }
   }
   &-success {
-    @apply bg-success border-success text-content-100;
+    @apply bg-success border-success text-base-200;
     &:hover,
     &.btn-active {
       @apply bg-success border-success;
@@ -81,7 +81,7 @@
     }
   }
   &-warning {
-    @apply bg-warning border-warning text-content-100;
+    @apply bg-warning border-warning text-base-200;
     &:hover,
     &.btn-active {
       @apply bg-warning border-warning;
@@ -91,7 +91,7 @@
     }
   }
   &-error {
-    @apply bg-error border-error text-content-100;
+    @apply bg-error border-error text-base-200;
     &:hover,
     &.btn-active {
       @apply bg-error border-error;
@@ -123,10 +123,10 @@
 
   /* btn variants */
   &-ghost {
-    @apply border-transparent border text-current text-opacity-60 bg-transparent;
+    @apply bg-transparent text-current border border-transparent;
     &:hover,
     &.btn-active {
-      @apply bg-default bg-opacity-5 border-opacity-0 text-opacity-80;
+      @apply bg-base-content bg-opacity-20 border-opacity-0;
     }
     &:focus-visible {
       @apply ring-current ring-offset-0;
@@ -145,9 +145,9 @@
 
   /* outline */
   &-outline {
-    @apply bg-transparent text-content-600 border-current;
+    @apply bg-transparent text-neutral border-current;
     &:hover {
-      @apply bg-content-200 border-content-600;
+      @apply bg-neutral-focus border-neutral-focus text-base-100;
     }
     &:focus-visible {
       @apply ring-current;
@@ -155,19 +155,19 @@
     &.btn-primary {
       @apply text-primary;
       &:hover {
-        @apply bg-primary-darken text-content-primary border-primary-darken;
+        @apply bg-primary-focus text-primary-content border-primary-focus;
       }
     }
     &.btn-secondary {
       @apply text-secondary;
       &:hover {
-        @apply bg-secondary-darken text-content-secondary border-secondary-darken;
+        @apply bg-secondary-focus text-secondary-content border-secondary-focus;
       }
     }
     &.btn-accent {
       @apply text-accent;
       &:hover {
-        @apply bg-accent-darken text-content-accent border-accent-darken;
+        @apply bg-accent-focus text-accent-content border-accent-focus;
       }
     }
   }
@@ -175,7 +175,7 @@
   /* disabled */
   &-disabled,
   &[disabled] {
-    @apply bg-content-100 border-content-100 text-content-300;
+    @apply bg-neutral border-opacity-0 bg-opacity-20 text-base-content text-opacity-20;
   }
 
 
@@ -200,7 +200,7 @@
 .btn-group {
   & > input[type="radio"]:checked.btn,
   & > .btn-active {
-    @apply bg-primary border-primary text-content-primary;
+    @apply bg-primary border-primary text-primary-content;
     &:focus-visible {
       @apply ring-primary;
     }

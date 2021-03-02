@@ -1,5 +1,8 @@
 .select {
-  @apply border font-semibold bg-content-100 border-content-100 text-content-800 pr-10;
+  @apply border font-semibold bg-base-100 border-base-content border-opacity-0 pr-10;
+  &-bordered {
+    @apply border-opacity-20;
+  }
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%);
@@ -10,10 +13,6 @@
     4px 4px,
     4px 4px;
   background-repeat: no-repeat;
-  &:hover,
-  &-active {
-    @apply bg-content-200 border-content-200;
-  }
   &:focus {
     --tw-ring-offset-width: var(--focus-ring-offset, 2px);
     
@@ -21,10 +20,58 @@
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(var(--focus-ring, 2px) + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 rgba(0,0,0,0);
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0,0,0,0));
-    @apply ring-content-300 ring-offset-default;
+    @apply ring-base-content ring-offset-base-100 ring-opacity-20;
+  }
+  &-ghost {
+    @apply bg-opacity-5;
+    &:focus {
+      @apply bg-opacity-100 shadow-none ring-0 ring-offset-0 text-base-content;
+    }
+  }
+  &-info {
+    @apply border-info;
+    &:focus {
+      @apply ring-info;
+    }
+  }
+  &-success {
+    @apply border-success;
+    &:focus {
+      @apply ring-success;
+    }
+  }
+  &-warning {
+    @apply border-warning;
+    &:focus {
+      @apply ring-warning;
+    }
+  }
+  &-error {
+    @apply border-error;
+    &:focus {
+      @apply ring-error;
+    }
+  }
+  &-primary {
+    @apply border-primary;
+    &:focus {
+      @apply ring-primary;
+    }
+  }
+  &-secondary {
+    @apply border-secondary;
+    &:focus {
+      @apply ring-secondary;
+    }
+  }
+  &-accent {
+    @apply border-accent;
+    &:focus {
+      @apply ring-accent;
+    }
   }
   &-disabled,
   &[disabled] {
-    @apply bg-content-100 border-content-100 text-content-300;
+    @apply cursor-not-allowed bg-base-200 border-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
   }
 }

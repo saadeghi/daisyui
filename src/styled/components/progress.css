@@ -1,7 +1,7 @@
 .progress{
   @apply rounded-box h-2;
   &::-moz-progress-bar{
-    @apply bg-content-600;
+    @apply bg-neutral;
   }
   &-primary::-moz-progress-bar{
     @apply bg-primary;
@@ -25,10 +25,10 @@
     @apply bg-error;
   }
   &::-webkit-progress-bar{
-    @apply bg-content-900 bg-opacity-10 rounded-box;
+    @apply bg-neutral bg-opacity-20 rounded-box;
   }
   &::-webkit-progress-value{
-    @apply rounded-box bg-content-600;
+    @apply rounded-box bg-neutral-focus;
   }
   &-primary::-webkit-progress-value{
     @apply bg-primary;

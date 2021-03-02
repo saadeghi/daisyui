@@ -1,9 +1,8 @@
 .modal{
-  @apply transition duration-200 ease-in-out;
-  background-color: hsl(0deg 0% 0% / 40%);
+  @apply transition duration-200 ease-in-out bg-neutral-focus bg-opacity-40;
 }
 .modal-box{
-  @apply transform translate-y-10 sm:translate-y-0 sm:scale-90 transition duration-200 ease-in-out rounded-t-box sm:rounded-b-box bg-default sm:max-w-lg p-6 shadow-2xl w-full;
+  @apply transform translate-y-10 sm:translate-y-0 sm:scale-90 transition duration-200 ease-in-out rounded-t-box sm:rounded-b-box bg-base-100 sm:max-w-lg p-6 shadow-2xl w-full;
 }
 .modal:target .modal-box{
   @apply translate-y-0 scale-100;

@@ -16,14 +16,15 @@
       @apply text-current px-5 py-3;
     }
     a{
-      @apply hover:bg-primary hover:bg-opacity-20 hover:text-primary;
-      &:focus {
-        @apply bg-primary bg-opacity-20 text-primary;
+      &:focus,
+      &:hover,
+      &.active {
+        @apply bg-primary text-primary-content;
       }
     }
     &.disabled{
       &>a, &>span{
-        @apply text-content-400 hover:bg-content-100;
+        @apply text-base-content text-opacity-20 hover:bg-transparent;
       }
     }
     &.bordered{
@@ -47,7 +48,7 @@
   }
   .menu-title{
     a, span{
-      @apply py-1 text-2xs text-content-400;
+      @apply py-1 text-2xs text-base-content text-opacity-30;
     }
   }
 }

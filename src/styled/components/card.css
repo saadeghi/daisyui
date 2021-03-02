@@ -1,7 +1,7 @@
 .card {
   @apply rounded-box;
   &.bordered{
-    @apply border border-content-200;
+    @apply border border-base-200;
   }
   &.compact{
     .card-body {
@@ -25,10 +25,10 @@
   }
   &.image-full {
     &:before {
-      @apply bg-content-900 z-10 opacity-75 rounded-box;
+      @apply bg-neutral z-10 opacity-75 rounded-box;
     }
   }
   &.image-full > &-body {
-    @apply text-content-100 z-20;
+    @apply text-neutral-content z-20;
   }
 }

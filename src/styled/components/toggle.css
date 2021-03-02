@@ -1,20 +1,13 @@
 .toggle{
   @apply appearance-none opacity-0 w-0 h-0 absolute;
   & ~ .toggle-mark{
-    @apply w-12 h-6 rounded-badge border border-content-300 shadow-inner;
+    @apply w-12 h-6 rounded-badge border border-base-content border-opacity-20 shadow-inner;
     &:before{
-      @apply w-5 h-5 m-px rounded-badge bg-content-300;
+      @apply w-5 h-5 m-px rounded-badge bg-base-content bg-opacity-20;
       animation: togglemark-off var(--animation-input, .4s) ease-in-out;
     }
   }
-  &:hover {
-    & ~ .toggle-mark{
-      @apply border-content-400;
-      &:before{
-        @apply border-content-100;
-      }
-    }
-  }
+
   &:focus-visible {
     & ~ .toggle-mark{
       --tw-ring-offset-width: var(--focus-ring-offset, 2px);
@@ -23,23 +16,23 @@
       --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(var(--focus-ring, 2px) + var(--tw-ring-offset-width)) var(--tw-ring-color);
       box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 rgba(0,0,0,0);
       box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0,0,0,0));
-      @apply ring-offset-default ring-content-200;
+      @apply ring-offset-base-100 ring-base-300;
     }
   }
   &:checked{
     &,
     &:hover{
       & ~ .toggle-mark{
-        @apply bg-default border-content-300 bg-opacity-20;
+        @apply bg-base-100 border-base-content bg-opacity-20;
         &:before{
-          @apply bg-content-500 transform translate-x-6	;
+          @apply bg-base-content transform translate-x-6	;
           animation: togglemark-on var(--animation-input, .4s) ease-in-out;
         }
       }
     }
     &:focus-visible {
       & ~ .toggle-mark{
-        @apply ring-content-600;
+        @apply ring-neutral-focus;
       }
     }
   }
@@ -101,7 +94,7 @@
   &:disabled:hover
   {
     & ~ .toggle-mark{
-      @apply bg-content-200 cursor-not-allowed border-transparent;
+      @apply bg-base-content bg-opacity-20 cursor-not-allowed border-transparent;
       &:before{
         @apply border-transparent;
       }
@@ -109,7 +102,7 @@
     &:checked{
       & ~ .toggle-mark{
         &:before{
-          @apply border-default bg-content-300;
+          @apply border-base-100 bg-base-content;
         }
       }
     }

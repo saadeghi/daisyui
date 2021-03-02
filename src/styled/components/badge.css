@@ -1,21 +1,21 @@
 .badge {
-  @apply bg-content-600 border border-content-600 text-content-100 rounded-badge;
+  @apply bg-neutral border border-neutral text-neutral-content rounded-badge;
   &-primary {
-    @apply bg-primary border-primary text-content-primary;
+    @apply bg-primary border-primary text-primary-content;
   }
   &-secondary {
-    @apply bg-secondary border-secondary text-content-secondary;
+    @apply bg-secondary border-secondary text-secondary-content;
   }
   &-accent {
-    @apply bg-accent border-accent text-content-accent;
+    @apply bg-accent border-accent text-accent-content;
   }
 
   &-ghost {
-    @apply bg-content-200 border-content-200 text-content-600;
+    @apply bg-base-200 border-base-200 text-base-content;
   }
 
   &-outline {
-    @apply bg-transparent text-content-600 border-content-600;
+    @apply bg-transparent text-neutral-focus border-neutral-focus;
   }
 
 
@@ -33,28 +33,28 @@
   }
 }
 .btn .badge {
-  @apply bg-default text-content-600 border-transparent;
+  @apply bg-base-100 text-base-content border-transparent;
   &-outline {
-    @apply bg-transparent text-content-100 border-content-100;
+    @apply bg-transparent text-base-200 border-base-200;
   }
 }
 
 .btn-outline {
   .badge {
-    @apply bg-content-600 text-content-100 border-content-600;
+    @apply text-neutral-content border-neutral-focus;
   }
   &.btn-primary .badge {
-    @apply bg-primary text-content-primary border-primary;
+    @apply bg-primary text-primary-content border-primary;
   }
   &.btn-secondary .badge {
-    @apply bg-secondary text-content-secondary border-secondary;
+    @apply bg-secondary text-secondary-content border-secondary;
   }
   &.btn-accent .badge {
-    @apply bg-accent text-content-accent border-accent;
+    @apply bg-accent text-accent-content border-accent;
   }
 
   .badge.outline {
-    @apply bg-transparent text-content-600 border-content-600;
+    @apply bg-transparent border-neutral-focus;
   }
   &.btn-primary .badge-outline {
     @apply bg-transparent text-primary border-primary;
@@ -67,27 +67,27 @@
   }
 
   &:hover .badge {
-    @apply bg-content-100 text-content-700 border-content-100;
+    @apply bg-base-200 text-base-content border-base-200;
     &.outline {
-      @apply bg-content-700 text-content-100 border-content-100;
+      @apply text-neutral-content border-base-200;
     }
   }
   &.btn-primary:hover .badge {
-    @apply bg-content-primary text-primary border-content-primary;
+    @apply bg-primary-content text-primary border-primary-content;
     &.outline {
-      @apply bg-primary-darken text-content-primary border-content-primary;
+      @apply bg-primary-focus text-primary-content border-primary-content;
     }
   }
   &.btn-secondary:hover .badge {
-    @apply bg-content-secondary text-secondary border-content-secondary;
+    @apply bg-secondary-content text-secondary border-secondary-content;
     &.outline {
-      @apply bg-secondary-darken text-content-secondary border-content-secondary;
+      @apply bg-secondary-focus text-secondary-content border-secondary-content;
     }
   }
   &.btn-accent:hover .badge {
-    @apply bg-content-accent text-accent border-content-accent;
+    @apply bg-accent-content text-accent border-accent-content;
     &.outline {
-      @apply bg-accent-darken text-content-accent border-content-accent;
+      @apply bg-accent-focus text-accent-content border-accent-content;
     }
   }
 }

@@ -4,7 +4,7 @@
       &:before{
         content: '';
         top: -1rem;
-        @apply block h-px bg-content-100 relative;
+        @apply block h-px bg-base-200 relative;
       }
     }
   }
@@ -13,7 +13,7 @@
     .accordion-title{
       @apply rounded-box;
       &:hover{
-        @apply bg-content-100;
+        @apply bg-base-200;
       }
     }
     .accordion-body {
@@ -22,14 +22,14 @@
     input {
       &:focus-visible{
         & + .accordion-title {
-          @apply bg-content-100;
+          @apply bg-base-200;
         }
       }
       &:checked + .accordion-title {
-        @apply rounded-b-none bg-content-100 mt-1;
+        @apply rounded-b-none bg-base-200 mt-1;
       }
       &:focus-visible + .accordion-title {
-        @apply rounded-b-none bg-content-100 mt-1;
+        @apply rounded-b-none bg-base-200 mt-1;
       }
       &:checked + .accordion-title:before{
         @apply bg-transparent;
@@ -38,10 +38,10 @@
         @apply bg-transparent;
       }
       &:checked ~ .accordion-body {
-        @apply bg-content-100 rounded-t-none pb-4 mb-1;
+        @apply bg-base-200 rounded-t-none pb-4 mb-1;
       }
       &:focus-visible ~ .accordion-body {
-        @apply bg-content-100 rounded-t-none pb-4 mb-1;
+        @apply bg-base-200 rounded-t-none pb-4 mb-1;
       }
     }
   }
@@ -60,7 +60,7 @@
       .accordion-body{
         @apply rounded-none;
       }
-      @apply border border-content-200 mb-2;
+      @apply border border-base-200 mb-2;
       & input:checked + .accordion-title {
         @apply mt-0;
       }

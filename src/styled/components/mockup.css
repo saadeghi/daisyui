@@ -1,6 +1,6 @@
 .mockup{
   &-code{
-    @apply rounded-box py-5;
+    @apply rounded-box py-5 bg-neutral text-neutral-content;
     &:before{
       content: "";
       @apply block w-3 h-3 rounded-full opacity-30 mb-4;
