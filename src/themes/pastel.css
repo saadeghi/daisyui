@@ -19,4 +19,8 @@
   --b2: 210 20% 98%;
   --b3: 216 12% 84%;
   --bc: 206 3% 55%;
+
+  --rounded-box: 1rem;
+  --rounded-btn: 9999px;
+  --rounded-badge: 9999px;
 }
