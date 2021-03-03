@@ -1,26 +1,26 @@
 .drawer{
-  @apply grid;
+  @apply grid overflow-hidden;
 }
 .drawer-toggle{
   @apply appearance-none opacity-0 w-0 h-0 absolute;
   & ~ .drawer-content{
-    @apply row-start-1 col-start-1 transform;
+    @apply row-start-1 col-start-1 transform overflow-y-auto;
   }
   & ~ .drawer-side{
     @apply row-start-1 col-start-1 grid;
-    & .drawer-overlay{
+    &>.drawer-overlay{
       @apply row-start-1 col-start-1 invisible opacity-0;
     }
-    & .drawer-overlay + *{
+    &>.drawer-overlay + *{
       @apply z-10 row-start-1 col-start-1 transform -translate-x-full;
     }
   }
   &:checked{
     & ~ .drawer-side{
-      & .drawer-overlay{
+      &>.drawer-overlay{
         @apply visible;
       }
-      & .drawer-overlay + *{
+      &>.drawer-overlay + *{
         @apply translate-x-0;
       }
     }
@@ -29,15 +29,15 @@
 @media (min-width: 1024px) {
   .drawer-mobile{
     grid-auto-columns: max-content auto;
-    .drawer-toggle{
+    &>.drawer-toggle{
       & ~ .drawer-content{
         @apply lg:col-start-2;
       }
       & ~ .drawer-side{
-        & .drawer-overlay{
+        &>.drawer-overlay{
           @apply lg:visible;
         }
-        & .drawer-overlay + *{
+        &>.drawer-overlay + *{
           @apply lg:translate-x-0;
         }
       }

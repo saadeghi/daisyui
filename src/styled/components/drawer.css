@@ -3,10 +3,10 @@
     @apply transition-all ease-in-out duration-300;
   }
   & ~ .drawer-side{
-    & .drawer-overlay{
+    &>.drawer-overlay{
       @apply cursor-pointer transition-all ease-in-out duration-300 bg-neutral-focus;
     }
-    & .drawer-overlay + *{
+    &>.drawer-overlay + *{
       @apply transition-all ease-in-out duration-300;
     }
   }
@@ -15,7 +15,7 @@
       @apply translate-x-2;
     }
     & ~ .drawer-side{
-      & .drawer-overlay{
+      &>.drawer-overlay{
         @apply opacity-40;
       }
     }
@@ -75,7 +75,7 @@
 }
 @media (min-width: 1024px) {
   .drawer-mobile{
-    .drawer-toggle{
+    &>.drawer-toggle{
       &:checked{
         & ~ .drawer-content{
           @apply translate-x-0;
