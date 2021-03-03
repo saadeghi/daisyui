@@ -4,7 +4,7 @@
 .drawer-toggle{
   @apply appearance-none opacity-0 w-0 h-0 absolute;
   & ~ .drawer-content{
-    @apply row-start-1 col-start-1 transform overflow-y-auto;
+    @apply row-start-1 col-start-1 transform overflow-y-auto max-h-screen;
   }
   & ~ .drawer-side{
     @apply row-start-1 col-start-1 grid;
