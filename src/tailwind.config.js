@@ -11,7 +11,7 @@ module.exports = {
       addUtilities(require('../dist/utilities/borderRadius'),{ variants: ['responsive'] })
       addUtilities(require('../dist/utilities/fontSize'),{ variants: ['responsive'] })
       addUtilities(require('../dist/utilities/glass'),{ variants: ['responsive'] })
-      addUtilities(require('../dist/utilities/minHeight'),{ variants: ['responsive'] })
+      addUtilities(require('../dist/utilities/sizing'),{ variants: ['responsive'] })
       addUtilities(require('../dist/utilities/responsiveComponent'),{ variants: ['responsive'] })
       addUtilities(require('../dist/utilities/typography'))
       addUtilities(require('../dist/utilities/variables'))
