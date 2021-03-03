@@ -1,5 +1,4 @@
 @import "../base";
-@import "../utility/typography";
 @import "./components/accordion";
 @import "./components/alert";
 @import "./components/avatar";
@@ -21,6 +20,4 @@
 @import "./components/textarea";
 @import "./components/drawer";
 @import "./components/tab";
-@import "../utility/glass";
-
 @import "./components/modal";

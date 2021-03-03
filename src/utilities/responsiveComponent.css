@@ -1,0 +1,13 @@
+.card-side {
+  align-items: stretch;
+  flexDirection: row;
+  & > figure {
+    height: 100%;
+    max-width: none;
+    width: auto;
+    > * {
+      width: auto;
+      max-width: none;
+    }
+  }
+}
