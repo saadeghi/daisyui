@@ -6,7 +6,10 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ addUtilities }) {
+    plugin(function({ addBase, addUtilities }) {
+      addBase({
+        'html': { '-WebkitTapHighlightColor': 'transparent' },
+      })
       addUtilities(require('./utilities/variables'),{ variants: ['responsive'] })
       addUtilities(require('./utilities/minHeight'),{ variants: ['responsive'] })
       addUtilities(require('./utilities/fontSize'),{ variants: ['responsive'] })
