@@ -77,7 +77,7 @@ module.exports = {
   - DaisyUI components  
   
   ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.12.x/dist/full.css
+  https://cdn.jsdelivr.net/npm/daisyui@0.13.1/dist/full.css
   ```
   [ [Browse other versions][docs-url-install] ]
 
@@ -189,8 +189,8 @@ Read the documents for more info
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
-[styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.12.x/dist/styled.css
-[full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.12.x/dist/full.css
+[styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.13.1/dist/styled.css
+[full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.13.1/dist/full.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
