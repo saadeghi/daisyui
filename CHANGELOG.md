@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.3](https://github.com/saadeghi/daisyui/compare/v0.13.2...v0.13.3) (2021-03-03)
+
+
+### Bug Fixes
+
+* drawer scroll bug ([d61c223](https://github.com/saadeghi/daisyui/commit/d61c223845aa37549aca965b39219284c71df110))
+
 ### [0.13.2](https://github.com/saadeghi/daisyui/compare/v0.13.1...v0.13.2) (2021-03-03)
 
 
