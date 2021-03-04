@@ -2,20 +2,13 @@
   &,
   &:hover,
   &.btn-active {
-    --glass-opacity: 30%;
-    --glass-border-opacity: 10%;
-    --glass-reflex-opacity: 10%;
-    --glass-reflex-size: 25%;
-    --glass-reflex-degree: 100deg;
-    --glass-blur: 40px;
-    --glass-text-shadow-opacity: 5%;
     border: none;
-    backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur, 40px));
     background-color: transparent;
     background-image: 
-      linear-gradient(135deg, hsl(0deg 0% 100% / var(--glass-opacity)) 0%, transparent 100%),
-      linear-gradient(var(--glass-reflex-degree), hsl(0deg 0% 100% / var(--glass-reflex-opacity)) var(--glass-reflex-size), transparent var(--glass-reflex-size));
-    box-shadow: 0 0 0 1px hsl(0deg 0% 100% / var(--glass-border-opacity)) inset, 0 0 0 2px hsl(0deg 0% 0% / 5%);
-    text-shadow: 0 1px hsl(0deg 0% 0% / var(--glass-text-shadow-opacity));
+      linear-gradient(135deg, hsl(0deg 0% 100% / var(--glass-opacity, 30%)) 0%, transparent 100%),
+      linear-gradient(var(--glass-reflex-degree, 100deg), hsl(0deg 0% 100% / var(--glass-reflex-opacity, 10%)) var(--glass-reflex-size, 25%), transparent var(--glass-reflex-size));
+    box-shadow: 0 0 0 1px hsl(0deg 0% 100% / var(--glass-border-opacity, 10%)) inset, 0 0 0 2px hsl(0deg 0% 0% / 5%);
+    text-shadow: 0 1px hsl(0deg 0% 0% / var(--glass-text-shadow-opacity, 5%));
   }
 }

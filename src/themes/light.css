@@ -44,4 +44,12 @@
 
   --focus-ring: 2px;
   --focus-ring-offset: 2px;
+
+  --glass-opacity: 30%;
+  --glass-border-opacity: 10%;
+  --glass-reflex-size: 25%;
+  --glass-reflex-degree: 100deg;
+  --glass-reflex-opacity: 10%;
+  --glass-blur: 4px;
+  --glass-text-shadow-opacity: 5%;
 }
