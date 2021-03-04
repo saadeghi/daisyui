@@ -37,7 +37,11 @@
   --btn-text-case: uppercase;
   --navbar-padding: .5rem;
   --border-btn: 1px;
-  
+
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --tab-spacer: 0.5rem;
+
   --focus-ring: 2px;
   --focus-ring-offset: 2px;
 }

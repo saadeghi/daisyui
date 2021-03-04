@@ -1,7 +1,3 @@
-.tabs {
-  --tab-spacer: .5rem;
-  @apply tab-border;
-}
 .tab{
   @apply text-base-content text-opacity-50 hover:text-opacity-100;
   &.tab-active{
@@ -11,43 +7,42 @@
 .tab-bordered, .tab-lifted{
   @apply border-base-content border-opacity-50;
   border-style: solid;
-  border-bottom-width: var(--tab-border);
+  border-bottom-width: var(--tab-border, 1px);
 }
 .tab-lifted{
-  --tab-radius: var(--rounded-btn, 0.5rem);
-  margin-top: var(--tab-spacer);
-  padding-bottom: var(--tab-spacer);
+  margin-top: var(--tab-spacer, .5rem);
+  padding-bottom: var(--tab-spacer, .5rem);
   &.tab-active{
     border-bottom-width: 0;
-    border-left-width: var(--tab-border);
-    border-right-width: var(--tab-border);
-    border-top-width: var(--tab-border);
+    border-left-width: var(--tab-border, 1px);
+    border-right-width: var(--tab-border, 1px);
+    border-top-width: var(--tab-border, 1px);
     
-    border-top-left-radius: var(--tab-radius);
-    border-top-right-radius: var(--tab-radius);
+    border-top-left-radius: var(--tab-radius, var(--rounded-btn, .5rem));
+    border-top-right-radius: var(--tab-radius, var(--rounded-btn, .5rem));
     margin-top: 0;
     padding-bottom: 0;
-    padding-top: calc( var(--tab-spacer) - var(--tab-border) );
-    margin-left: calc( var(--tab-spacer) - var(--tab-border) );
-    margin-right: calc( var(--tab-spacer) - var(--tab-border) );
+    padding-top: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
+    margin-left: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
+    margin-right: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
     @apply border-base-content border-opacity-50;
     &:before{
-      border-bottom-right-radius: var(--tab-radius);
-      border-right-width: var(--tab-border);
+      border-bottom-right-radius: var(--tab-radius, var(--rounded-btn, .5rem));
+      border-right-width: var(--tab-border, 1px);
       left: -.5rem;
     }
     &:after{
-      border-bottom-left-radius: var(--tab-radius);
-      border-left-width: var(--tab-border);
+      border-bottom-left-radius: var(--tab-radius, var(--rounded-btn, .5rem));
+      border-left-width: var(--tab-border, 1px);
       right: -.5rem;
     }
     &:before, &:after{
       content:'';
       display: block;
       position: absolute;
-      width: var(--tab-spacer);
-      height: var(--tab-spacer);
-      border-bottom-width: var(--tab-border);
+      width: var(--tab-spacer, .5rem);
+      height: var(--tab-spacer, .5rem);
+      border-bottom-width: var(--tab-border, 1px);
       bottom: -.5rem;
       @apply border-base-content border-opacity-50;
     }
