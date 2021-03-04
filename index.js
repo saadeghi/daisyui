@@ -20,7 +20,7 @@ module.exports = ({ addBase, addComponents, addUtilities, config }) => {
   addComponents(file)
 
   // inject @base style 
-  if (config('daisyui.base') !== false) {
+  if (config('daisyui.resets') !== false) {
     addBase(require('./dist/resets/general'))
   }
 
