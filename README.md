@@ -140,6 +140,7 @@ Read the documents for more info
   - [x] Checkbox
   - [x] Radio
   - [ ] Range slider
+  - [ ] Rating
   - [x] Toggle
   - [ ] Upload
 - [x] Hero
