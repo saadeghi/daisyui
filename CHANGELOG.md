@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.1](https://github.com/saadeghi/daisyui/compare/v0.14.0...v0.14.1) (2021-03-05)
+
+
+### Bug Fixes
+
+* glass theme variables ([47c5b0c](https://github.com/saadeghi/daisyui/commit/47c5b0c3f09e1e62720eb6218c6b12dc8422dff6))
+* light theme base colors ([cf9354b](https://github.com/saadeghi/daisyui/commit/cf9354b46b82d11609927589b55676e1ac16c671))
+
 ## [0.14.0](https://github.com/saadeghi/daisyui/compare/v0.13.3...v0.14.0) (2021-03-05)
 
 
