@@ -8,7 +8,7 @@
     @apply w-full;
   }
   &-actions {
-    @apply flex items-start;
+    @apply flex items-start flex-wrap;
   }
   &.image-full {
     @apply grid;
