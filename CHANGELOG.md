@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/saadeghi/daisyui/compare/v0.13.3...v0.14.0) (2021-03-05)
+
+
+### Features
+
+* add auto margin for card-actions items ([046c03e](https://github.com/saadeghi/daisyui/commit/046c03ed22815dfd7b6808fded7b27cd8233ef34))
+
+
+### Bug Fixes
+
+* [#10](https://github.com/saadeghi/daisyui/issues/10) ([38237e7](https://github.com/saadeghi/daisyui/commit/38237e7b74ec494512d99eb646805874105887c9))
+* change base config name to resets ([4e786fb](https://github.com/saadeghi/daisyui/commit/4e786fb6174584bda01b7065ff1299f026f26936))
+
 ### [0.13.3](https://github.com/saadeghi/daisyui/compare/v0.13.2...v0.13.3) (2021-03-03)
 
 
