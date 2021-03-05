@@ -8,7 +8,10 @@
     @apply w-full;
   }
   &-actions {
-    @apply flex items-start flex-wrap;
+    @apply flex items-start flex-wrap -mx-1;
+    &>*{
+      @apply m-1
+    }
   }
   &.image-full {
     @apply grid;
