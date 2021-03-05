@@ -47,9 +47,8 @@
 
   --glass-opacity: 30%;
   --glass-border-opacity: 10%;
-  --glass-reflex-size: 25%;
   --glass-reflex-degree: 100deg;
   --glass-reflex-opacity: 10%;
-  --glass-blur: 4px;
+  --glass-blur: 40px;
   --glass-text-shadow-opacity: 5%;
 }
