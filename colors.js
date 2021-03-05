@@ -12,13 +12,13 @@ let colorValues = {
   "accent-content"    : {name: "ac", value: "0 0% 100%"},
 
   "neutral"           : {name: "n", value: "219 14% 28%"},
-  "neutral-focus"     : {name: "nf", value: "221 39% 11%"},
+  "neutral-focus"     : {name: "nf", value: "222 13% 19%"},
   "neutral-content"   : {name: "nc", value: "0 0% 100%"},
 
   "base-100"          : {name: "b1", value: "0 0% 100%"},
-  "base-200"          : {name: "b2", value: "220 14% 96%"},
-  "base-300"          : {name: "b3", value: "228 14% 93%"},
-  "base-content"      : {name: "bc", value: "219 14% 28%"},
+  "base-200"          : {name: "b2", value: "220 20% 98%"},
+  "base-300"          : {name: "b3", value: "216 12% 84%"},
+  "base-content"      : {name: "bc", value: "215 28% 17%"},
 
   "info"              : {name: "in", value: "207 90% 54%"},
   "success"           : {name: "su", value: "174 100% 29%"},
