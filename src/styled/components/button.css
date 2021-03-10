@@ -5,8 +5,11 @@
   text-transform: var(--btn-text-case, uppercase);
   &:active:hover,
   &:active:focus{
-    transform: scale(0.95);
     animation: none;
+  }
+  &:active:hover:not(.no-animation),
+  &:active:focus:not(.no-animation){
+    transform: scale(0.95);
   }
 
   /* default btn */
