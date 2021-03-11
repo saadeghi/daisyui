@@ -1,4 +1,5 @@
 .no-animation {
+  --btn-focus-scale: 1;
   --animation-btn: 0;
   --animation-input: 0;
 }

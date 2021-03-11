@@ -31,6 +31,7 @@
 
   --animation-btn: 0;
   --animation-input: 0;
-
+  
+  --btn-focus-scale: 1;
   --btn-text-case: lowercase;
 }
