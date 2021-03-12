@@ -120,7 +120,7 @@ Read the documents for more info
 - [ ] Avatar group
 - [x] Badge
 - [ ] Banner
-- [ ] Breadcrumb
+- [x] Breadcrumb
 - [x] Button
 - [x] Button group
 - [ ] Calendar
