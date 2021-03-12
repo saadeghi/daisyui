@@ -1,0 +1,13 @@
+.breadcrumbs{
+  @apply py-2;
+  & > ul{
+    & > li{
+      & + *:before{
+        content: '';
+        @apply block w-1.5 h-1.5 transform rotate-45 ml-2 mr-3 opacity-40;
+        border-top: 1px solid;
+        border-right: 1px solid;
+      }
+    }
+  }
+}
