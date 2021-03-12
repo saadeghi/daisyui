@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.4](https://github.com/saadeghi/daisyui/compare/v0.14.3...v0.14.4) (2021-03-12)
+
+
+### Features
+
+* add breadcrumbs component ([501c6a0](https://github.com/saadeghi/daisyui/commit/501c6a0eff04b735e187c50ceef50d75e329922a))
+
 ### [0.14.3](https://github.com/saadeghi/daisyui/compare/v0.14.2...v0.14.3) (2021-03-11)
 
 
