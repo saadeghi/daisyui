@@ -1,4 +1,4 @@
-let colorValues = {
+module.exports = {
   "primary"           : {name: "p", value: "259 94% 51%"},
   "primary-focus"     : {name: "pf", value: "259 94% 41%"},
   "primary-content"   : {name: "pc", value: "0 0% 100%"},
@@ -25,21 +25,3 @@ let colorValues = {
   "warning"           : {name: "wa", value: "36 100% 50%"},
   "error"             : {name: "er", value: "14 100% 57%"},
 }
-
-let colorObject = {
-  "transparent": "transparent",
-}
-
-for (const [key, item] of Object.entries(colorValues)) {
-  colorObject[key] = ({ opacityVariable, opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `hsla(var(--`+ item['name'] +`, `+ item['value'] +`) / ${opacityValue})`
-    }
-    if (opacityVariable !== undefined) {
-      return `hsla(var(--`+ item['name'] +`, `+ item['value'] +`) / var(${opacityVariable}, 1))`
-    }
-    return `hsl(var(--`+ item['name'] +`, `+ item['value']+ `))`
-  }
-}
-
-module.exports = colorObject;
