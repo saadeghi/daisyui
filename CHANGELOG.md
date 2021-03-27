@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.15.1](https://github.com/saadeghi/daisyui/compare/v0.14.6...v0.15.1) (2021-03-27)
+
+
+### Features
+
+* Add support for WindiCSS ([4f0c5d5](https://github.com/saadeghi/daisyui/commit/4f0c5d59841b0461055b84db733114c19eb94ced))
+
+
+### Bug Fixes
+
+* include colors directory in package files ([71fe7cb](https://github.com/saadeghi/daisyui/commit/71fe7cb8dcedd16ac6379b4a68cb66a0a6e965d3))
+
 ### [0.14.6](https://github.com/saadeghi/daisyui/compare/v0.14.5...v0.14.6) (2021-03-17)
 
 
