@@ -31,7 +31,7 @@
   "files": [
     "dist",
     "index.js",
-    "colors.js"
+    "colors"
   ],
   "publishConfig": {
     "access": "public",
