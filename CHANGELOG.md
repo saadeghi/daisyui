@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.15.2](https://github.com/saadeghi/daisyui/compare/v0.15.1...v0.15.2) (2021-03-30)
+
+
+### Bug Fixes
+
+* [#15](https://github.com/saadeghi/daisyui/issues/15) (Show modal without URL hash) ([238be87](https://github.com/saadeghi/daisyui/commit/238be87dd71173607fe6c1b65c5c01f01581fd28))
+
 ### [0.15.1](https://github.com/saadeghi/daisyui/compare/v0.14.6...v0.15.1) (2021-03-27)
 
 
