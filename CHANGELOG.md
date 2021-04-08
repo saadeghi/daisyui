@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.15.3](https://github.com/saadeghi/daisyui/compare/v0.15.2...v0.15.3) (2021-04-08)
+
 ### [0.15.2](https://github.com/saadeghi/daisyui/compare/v0.15.1...v0.15.2) (2021-03-30)
 
 
