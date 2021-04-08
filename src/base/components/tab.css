@@ -6,16 +6,20 @@
 
   /* sizes */
   & {
-    @apply px-5 leading-loose h-8 text-sm;
+    @apply leading-loose h-8 text-sm;
+    --tab-padding: 1.5rem;
   }
   &-lg {
-    @apply px-6 leading-loose h-12 text-lg;
+    @apply leading-loose h-12 text-lg;
+    --tab-padding: 1.75rem;
   }
   &-sm {
-    @apply px-3 leading-3 h-6 text-sm;
+    @apply leading-3 h-6 text-sm;
+    --tab-padding: 1.25rem;
   }
   &-xs {
-    @apply px-2 text-xs leading-3 h-4;
+    @apply leading-3 h-5 text-xs;
+    --tab-padding: 1rem;
   }
 
 }

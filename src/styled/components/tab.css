@@ -1,18 +1,25 @@
 .tab{
   @apply text-base-content text-opacity-50 hover:text-opacity-100;
+  padding-left: var(--tab-padding, 1rem);
+  padding-right: var(--tab-padding, 1rem);
   &.tab-active{
     @apply text-base-content border-base-content border-opacity-100;
   }
 }
-.tab-bordered, .tab-lifted{
+.tab-bordered{
+  @apply border-base-content border-opacity-20;
+  border-style: solid;
+  border-bottom-width: var(--tab-border, 2px);
+}
+.tab-lifted{
   @apply border-base-content border-opacity-20;
   border-style: solid;
   border-bottom-width: var(--tab-border, 1px);
-}
-.tab-lifted{
   margin-top: var(--tab-spacer, .5rem);
   padding-bottom: var(--tab-spacer, .5rem);
   &.tab-active{
+    padding-left: calc( var(--tab-padding, 1rem) - var(--tab-spacer, .5rem) );
+    padding-right: calc( var(--tab-padding, 1rem) - var(--tab-spacer, .5rem) );
     border-bottom-width: 0;
     border-left-width: var(--tab-border, 1px);
     border-right-width: var(--tab-border, 1px);
@@ -21,6 +28,7 @@
     border-top-left-radius: var(--tab-radius, var(--rounded-btn, .5rem));
     border-top-right-radius: var(--tab-radius, var(--rounded-btn, .5rem));
     margin-top: 0;
+    margin-bottom: var(--tab-spacer, .5rem);
     padding-bottom: 0;
     padding-top: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
     margin-left: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
