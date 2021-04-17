@@ -9,59 +9,59 @@
 .tab-bordered{
   @apply border-base-content border-opacity-20;
   border-style: solid;
-  border-bottom-width: var(--tab-border, 2px);
+  border-bottom-width: calc( var(--tab-border, 1px) + 1px );
 }
 .tab-lifted{
-  @apply border-base-content border-opacity-20;
+  @apply border-base-content border-opacity-20 bg-base-100;
   border-style: solid;
   border-bottom-width: var(--tab-border, 1px);
-  margin-top: var(--tab-spacer, .5rem);
-  padding-bottom: var(--tab-spacer, .5rem);
   &.tab-active{
-    padding-left: calc( var(--tab-padding, 1rem) - var(--tab-spacer, .5rem) );
-    padding-right: calc( var(--tab-padding, 1rem) - var(--tab-spacer, .5rem) );
+    --tab-grad: calc( 68% - var(--tab-border, 1px) );
+    --tab-corner-bg: transparent var(--tab-grad),
+      hsla(var(--bc, 215 28% 17%) / .2) calc(var(--tab-grad) + .5px),
+      hsla(var(--bc, 215 28% 17%) / .2) calc(var(--tab-grad) + var(--tab-border, 1px)),
+      hsla(var(--b1, 0 0% 100%) / 1) calc(var(--tab-grad) + var(--tab-border, 1px) + .5px);
     border-bottom-width: 0;
     border-left-width: var(--tab-border, 1px);
     border-right-width: var(--tab-border, 1px);
     border-top-width: var(--tab-border, 1px);
-    
-    border-top-left-radius: var(--tab-radius, var(--rounded-btn, .5rem));
-    border-top-right-radius: var(--tab-radius, var(--rounded-btn, .5rem));
-    margin-top: 0;
-    margin-bottom: var(--tab-spacer, .5rem);
-    padding-bottom: 0;
-    padding-top: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
-    margin-left: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
-    margin-right: calc( var(--tab-spacer, .5rem) - var(--tab-border, 1px) );
+    border-top-left-radius: var(--tab-radius, .5rem);
+    border-top-right-radius: var(--tab-radius, .5rem);
     @apply border-base-content border-opacity-20;
     &:before{
-      border-bottom-right-radius: var(--tab-radius, var(--rounded-btn, .5rem));
-      border-right-width: var(--tab-border, 1px);
-      left: -.5rem;
+      left: calc( var(--tab-radius, .5rem) * -1 );
+      background: radial-gradient(
+        circle at top left,
+        var(--tab-corner-bg)
+      ),hsla(var(--b1, 0 0% 100%) / 1);
     }
     &:after{
-      border-bottom-left-radius: var(--tab-radius, var(--rounded-btn, .5rem));
-      border-left-width: var(--tab-border, 1px);
-      right: -.5rem;
+      right: calc( var(--tab-radius, .5rem) * -1 );
+      background: radial-gradient(
+        circle at top right,
+        var(--tab-corner-bg)
+      ),hsla(var(--b1, 0 0% 100%) / 1);
     }
     &:before, &:after{
+      z-index: 1;
       content:'';
       display: block;
       position: absolute;
-      width: var(--tab-spacer, .5rem);
-      height: var(--tab-spacer, .5rem);
-      border-bottom-width: var(--tab-border, 1px);
-      bottom: -.5rem;
-      @apply border-base-content border-opacity-20;
+      width: var(--tab-radius, .5rem);
+      height: var(--tab-radius, .5rem);
+      bottom: 0rem;
     }
     &:first-child:before{
-      border-bottom-color: transparent;
-      border-bottom-right-radius: 0;
+      background: none;
     }
     &:last-child:after{
-      border-bottom-color: transparent;
-      border-bottom-left-radius: 0;
+      background: none;
     }
+  }
+}
+.tab-lifted.tab-active + .tab-lifted.tab-active {
+  &:before{
+    background: none;
   }
 }
 .tabs-boxed{

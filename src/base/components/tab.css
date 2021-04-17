@@ -1,5 +1,5 @@
 .tabs {
-  @apply flex flex-wrap;
+  @apply flex flex-wrap items-end;
 }
 .tab{
   @apply inline-flex flex-wrap items-center justify-center text-center cursor-pointer relative select-none;
@@ -7,19 +7,19 @@
   /* sizes */
   & {
     @apply leading-loose h-8 text-sm;
-    --tab-padding: 1.5rem;
+    --tab-padding: 1rem;
   }
   &-lg {
     @apply leading-loose h-12 text-lg;
-    --tab-padding: 1.75rem;
+    --tab-padding: 1.25rem;
   }
   &-sm {
     @apply leading-3 h-6 text-sm;
-    --tab-padding: 1.25rem;
+    --tab-padding: .75rem;
   }
   &-xs {
     @apply leading-3 h-5 text-xs;
-    --tab-padding: 1rem;
+    --tab-padding: .5rem;
   }
 
 }

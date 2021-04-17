@@ -19,8 +19,10 @@
   --b2: 56 100% 43%;
   --b3: 56 100% 36%;
   --bc: 0 0% 0%;
-  
+
   --rounded-box: 0;
   --rounded-btn: 0;
   --rounded-badge: 0;
+
+  --tab-radius: 0;
 }

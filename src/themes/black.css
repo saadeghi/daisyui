@@ -1,16 +1,16 @@
-[data-theme='black'] {
+[data-theme="black"] {
   --p: 0 0% 100%;
   --pf: 0 0% 100%;
   --pc: 0 0% 0%;
-  
+
   --s: 0 0% 100%;
   --sf: 0 0% 100%;
   --sc: 0 0% 0%;
-  
+
   --a: 0 0% 100%;
   --af: 0 0% 100%;
   --ac: 0 0% 0%;
-  
+
   --b1: 0 0% 0%;
   --b2: 0 0% 20%;
   --b3: 0 0% 30%;
@@ -24,14 +24,16 @@
   --su: 120 100% 25%;
   --wa: 60 100% 50%;
   --er: 0 100% 50%;
-  
+
   --rounded-box: 0;
   --rounded-btn: 0;
   --rounded-badge: 0;
 
+  --tab-radius: 0;
+
   --animation-btn: 0;
   --animation-input: 0;
-  
+
   --btn-focus-scale: 1;
   --btn-text-case: lowercase;
 }
