@@ -126,7 +126,7 @@ Read the documents for more info
 - [x] Card
 - [ ] Chat bubble
 - [ ] Comment
-- [ ] Countdown
+- [x] Countdown
 - [ ] Cover
 - [ ] Divider
 - [x] Drawer
