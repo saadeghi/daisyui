@@ -16,6 +16,15 @@
 
   &-outline {
     @apply bg-transparent text-base-content border-current border-opacity-50;
+    &.badge-primary {
+      @apply text-primary;
+    }
+    &.badge-secondary {
+      @apply text-secondary;
+    }
+    &.badge-accent {
+      @apply text-accent;
+    }
   }
 
 
