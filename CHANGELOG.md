@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.0](https://github.com/saadeghi/daisyui/compare/v0.15.4...v0.16.0) (2021-04-18)
+
+
+### Bug Fixes
+
+* improve tabs component ([37cb14a](https://github.com/saadeghi/daisyui/commit/37cb14a0ac19a95e0c54ebb4672159fbbb0b3aee))
+
 ### [0.15.4](https://github.com/saadeghi/daisyui/compare/v0.15.3...v0.15.4) (2021-04-17)
 
 
