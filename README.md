@@ -14,8 +14,8 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 [![][banner-url]][docs-url]  
 
 # DaisyUI  
-[![][build]][build-url] [![][number-of-components]][gh-url] [![][install-size]][install-size-url] [![][styled-css]][styled-css-url]  
-[![][npm]][npm-url] [![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]  
+[![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][install-size]][install-size-url]  
+[![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]   
 
 
 - 👉 [ [See all components][docs-url] ]
@@ -71,7 +71,6 @@ module.exports = {
 >*Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and DaisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
 
 - **full.css**
-[![][full-css]][full-css-url]  
   Includes:
   - Tailwind's default config  
   - DaisyUI components  
@@ -179,10 +178,7 @@ Read the documents for more info
 
 
 
-[install-size]: https://badgen.net/bundlephobia/min/daisyui?label=install%20size&color=purple
-[base-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/base.css?label=base.css&color=purple
-[styled-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/styled.css?label=css%20size&color=purple
-[full-css]: https://badgen.net/badgesize/normal/https/unpkg.com/daisyui/dist/full.css?label=full.css&color=purple
+[install-size]: https://badgen.net/bundlephobia/minzip/daisyui?label=install%20size&color=purple
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
 [npm]: https://badgen.net/npm/v/daisyui?label=version&color=purple
 [dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
@@ -191,8 +187,6 @@ Read the documents for more info
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
-[styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.16.0/dist/styled.css
-[full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.16.0/dist/full.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
@@ -202,7 +196,7 @@ Read the documents for more info
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
-[number-of-components]: https://badgen.net/badge/components%20added/26/purple
+[number-of-components]: https://badgen.net/badge/components%20added/27/purple
 
 [docs-url-install]: https://daisy.js.org/docs/install
 [docs-url]: https://saadeghi.github.io/daisyui-demo/
