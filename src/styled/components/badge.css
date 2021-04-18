@@ -15,7 +15,7 @@
   }
 
   &-outline {
-    @apply bg-transparent text-neutral-focus border-neutral-focus;
+    @apply bg-transparent text-base-content border-current border-opacity-50;
   }
 
 
