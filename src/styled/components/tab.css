@@ -36,16 +36,9 @@
       radial-gradient(
         circle at var(--circle-pos),
         transparent var(--tab-grad),
-        hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + .5px),
-        hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px)),
-        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + .5px)
-      ), 
-      radial-gradient(
-        circle at var(--circle-pos),
-        transparent var(--tab-grad),
-        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + .5px),
-        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px)),
-        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + .5px)
+        hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + .3px),
+        hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) ),
+        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + .3px)
       );
     }
     &:before{
