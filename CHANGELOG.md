@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.17.0](https://github.com/saadeghi/daisyui/compare/v0.16.1...v0.17.0) (2021-04-18)
+
+
+### Features
+
+* countdown component ([d00e4fc](https://github.com/saadeghi/daisyui/commit/d00e4fcca6275afc4fc426114b714ffe278c776f))
+
+
+### Bug Fixes
+
+* badge brand colors ([2899fb2](https://github.com/saadeghi/daisyui/commit/2899fb2ac21c9aae010abe0caf6e6d4e5ab76017))
+* badge neutral colors ([a58a481](https://github.com/saadeghi/daisyui/commit/a58a48101a59518b067348cb9fa952a8ef584df2))
+* button neutral colors ([37c3e3a](https://github.com/saadeghi/daisyui/commit/37c3e3aa8cfef5963348a7f423be29db4e5f26c7))
+
 ### [0.16.1](https://github.com/saadeghi/daisyui/compare/v0.16.0...v0.16.1) (2021-04-18)
 
 ## [0.16.0](https://github.com/saadeghi/daisyui/compare/v0.15.4...v0.16.0) (2021-04-18)
