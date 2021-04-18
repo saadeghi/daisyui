@@ -77,7 +77,7 @@ module.exports = {
   - DaisyUI components  
   
   ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.14.4/dist/full.css
+  https://cdn.jsdelivr.net/npm/daisyui@0.16.0/dist/full.css
   ```
   [ [Browse other versions][docs-url-install] ]
 
@@ -144,6 +144,7 @@ Read the documents for more info
   - [x] Toggle
   - [ ] Upload
 - [x] Hero
+- [x] Link
 - [ ] Loading
 - [x] Menu
 - [ ] Mockup
@@ -190,8 +191,8 @@ Read the documents for more info
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
-[styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.14.4/dist/styled.css
-[full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.14.4/dist/full.css
+[styled-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.16.0/dist/styled.css
+[full-css-url]: https://cdn.jsdelivr.net/npm/daisyui@0.16.0/dist/full.css
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
