@@ -12,36 +12,17 @@
   border-bottom-width: calc( var(--tab-border, 1px) + 1px );
 }
 .tab-lifted{
-  @apply border-base-content border-opacity-20 bg-base-100;
-  border-style: solid;
-  border-bottom-width: var(--tab-border, 1px);
+  border: var(--tab-border, 1px) solid transparent;
+  border-width: var(--tab-border, 1px) 0;
+  border-top-left-radius: var(--tab-radius, .5rem);
+  border-top-right-radius: var(--tab-radius, .5rem);
+  border-bottom-color: hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1));
   &.tab-active{
-    --tab-grad: calc( 68% - var(--tab-border, 1px) );
-    --tab-corner-bg: transparent var(--tab-grad),
-      hsla(var(--bc, 215 28% 17%) / .2) calc(var(--tab-grad) + .5px),
-      hsla(var(--bc, 215 28% 17%) / .2) calc(var(--tab-grad) + var(--tab-border, 1px)),
-      hsla(var(--b1, 0 0% 100%) / 1) calc(var(--tab-grad) + var(--tab-border, 1px) + .5px);
-    border-bottom-width: 0;
-    border-left-width: var(--tab-border, 1px);
-    border-right-width: var(--tab-border, 1px);
-    border-top-width: var(--tab-border, 1px);
-    border-top-left-radius: var(--tab-radius, .5rem);
-    border-top-right-radius: var(--tab-radius, .5rem);
-    @apply border-base-content border-opacity-20;
-    &:before{
-      left: calc( var(--tab-radius, .5rem) * -1 );
-      background: radial-gradient(
-        circle at top left,
-        var(--tab-corner-bg)
-      ),hsla(var(--b1, 0 0% 100%) / 1);
-    }
-    &:after{
-      right: calc( var(--tab-radius, .5rem) * -1 );
-      background: radial-gradient(
-        circle at top right,
-        var(--tab-corner-bg)
-      ),hsla(var(--b1, 0 0% 100%) / 1);
-    }
+    @apply bg-base-100;
+    border-width: var(--tab-border, 1px);
+    border-color: hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) transparent;
+    padding-left: calc( var(--tab-padding, 1rem) - var(--tab-border, 1px) );
+    padding-right: calc( var(--tab-padding, 1rem) - var(--tab-border, 1px) );
     &:before, &:after{
       z-index: 1;
       content:'';
@@ -49,7 +30,33 @@
       position: absolute;
       width: var(--tab-radius, .5rem);
       height: var(--tab-radius, .5rem);
-      bottom: 0rem;
+      bottom: calc(0rem - var(--tab-border, 1px));
+      --tab-grad: calc( 68% - var(--tab-border, 1px) );
+      --tab-corner-bg: 
+      radial-gradient(
+        circle at var(--circle-pos),
+        transparent var(--tab-grad),
+        hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + .5px),
+        hsla(var(--b3, 216 12% 84%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px)),
+        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + .5px)
+      ), 
+      radial-gradient(
+        circle at var(--circle-pos),
+        transparent var(--tab-grad),
+        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + .5px),
+        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px)),
+        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + .5px)
+      );
+    }
+    &:before{
+      left: calc( var(--tab-radius, .5rem) * -1 );
+      --circle-pos: top left;
+      background-image: var(--tab-corner-bg);
+    }
+    &:after{
+      right: calc( var(--tab-radius, .5rem) * -1 );
+      --circle-pos: top right;
+      background-image: var(--tab-corner-bg);
     }
     &:first-child:before{
       background: none;
