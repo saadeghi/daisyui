@@ -1,0 +1,14 @@
+.link{
+  &-primary{
+    @apply text-primary hover:text-primary-focus;
+  }
+  &-secondary{
+    @apply text-secondary hover:text-secondary-focus;
+  }
+  &-accent{
+    @apply text-accent hover:text-accent-focus;
+  }
+  &-neutral{
+    @apply text-neutral hover:text-neutral-focus;
+  }
+}
