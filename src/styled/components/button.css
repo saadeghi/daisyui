@@ -148,9 +148,9 @@
 
   /* outline */
   &-outline {
-    @apply bg-transparent text-neutral border-current;
+    @apply bg-transparent text-base-content border-current;
     &:hover {
-      @apply bg-neutral-focus border-neutral-focus text-base-100;
+      @apply bg-base-content border-base-content text-base-100;
     }
     &:focus-visible {
       @apply ring-current;
