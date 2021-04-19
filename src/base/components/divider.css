@@ -1,0 +1,13 @@
+.divider{
+  @apply flex items-center;
+  &:before, &:after{
+    content: '';
+    @apply flex-grow;
+  }
+  &-vertical{
+    @apply flex-col self-stretch;
+    &:before, &:after{
+      @apply h-full;
+    }
+  }
+}
