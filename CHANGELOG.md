@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.1](https://github.com/saadeghi/daisyui/compare/v0.17.0...v0.17.1) (2021-04-19)
+
+
+### Features
+
+* divider component ([c88c4bf](https://github.com/saadeghi/daisyui/commit/c88c4bfaa78199be153ec9946e2a48b65f305efe))
+
 ## [0.17.0](https://github.com/saadeghi/daisyui/compare/v0.16.1...v0.17.0) (2021-04-18)
 
 
