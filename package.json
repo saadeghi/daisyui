@@ -70,9 +70,6 @@
     "rtlcss": "^3.0.0",
     "tailwindcss": "^2.0.1"
   },
-  "peerDependencies": {
-    "tailwindcss": "^2.0.0"
-  },
   "scripts": {
     "prestyle": "prejss-cli src/resets/*.css --out-dir dist/resets --format commonjs && prejss-cli src/utilities/*.css --out-dir dist/utilities --format commonjs",
     "style": "postcss src/base/index.css -o dist/base.css && postcss src/styled/index.css -o dist/styled.css && postcss src/full/index.css -o dist/full.css && postcss src/themes/index.css -o dist/themes.css",
