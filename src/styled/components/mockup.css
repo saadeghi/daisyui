@@ -45,7 +45,7 @@
       margin: 0 auto;
       border-bottom-left-radius: 17px;
       border-bottom-right-radius: 17px;
-      z-index: 2;
+      z-index: 11;
       &:before {
         content: "";
         position: absolute;
