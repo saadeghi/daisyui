@@ -152,12 +152,14 @@ Read the documents for more info
   - [x] Phone
   - [x] Window
 - [x] Navbar
+- [x] Mask
 - [x] Modal
 - [x] Pagination
 - [x] Progress
 - [ ] Statistic
 - [ ] Steps
 - [ ] Tag
+- [ ] Table
 - [x] Tabs
 - [ ] Timeline
 - [ ] Toast
