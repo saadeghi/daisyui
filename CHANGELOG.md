@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.2](https://github.com/saadeghi/daisyui/compare/v0.17.1...v0.17.2) (2021-04-20)
+
+
+### Features
+
+* add mask utility ([db608b7](https://github.com/saadeghi/daisyui/commit/db608b7ebd3ca12a1791a4371349b56364ff45a3))
+
+
+### Bug Fixes
+
+* phone mockup z-index ([75e68b2](https://github.com/saadeghi/daisyui/commit/75e68b2444e42cd099582ea355a074b4d47703c9))
+
 ### [0.17.1](https://github.com/saadeghi/daisyui/compare/v0.17.0...v0.17.1) (2021-04-19)
 
 
