@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.19.0](https://github.com/saadeghi/daisyui/compare/v0.18.0...v0.19.0) (2021-04-21)
+
+
+### Features
+
+* auto include DaisyUI colors ([389b6f9](https://github.com/saadeghi/daisyui/commit/389b6f935864aa366050bc2d0e61053e4b2cc035))
+
+
+### Bug Fixes
+
+* remove tailwindcss peer dependency ([0aff74b](https://github.com/saadeghi/daisyui/commit/0aff74b18fbe594ca69f45fb44d6f5ce359e5b14))
+
 ## [0.18.0](https://github.com/saadeghi/daisyui/compare/v0.17.2...v0.18.0) (2021-04-20)
 
 ### [0.17.2](https://github.com/saadeghi/daisyui/compare/v0.17.1...v0.17.2) (2021-04-20)
