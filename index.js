@@ -35,7 +35,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   }
 
   // inject themes
-  if (config('daisyui.themes') === true) {
+  if (config('daisyui.themes') !== false) {
     console.log('\x1b[36m%s\x1b[0m', '🌼 Adding themes')
     addComponents(require("./dist/themes.js"))
   }
