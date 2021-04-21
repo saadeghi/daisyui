@@ -3,6 +3,17 @@ const baseRtl = require("./dist/base.rtl.js")
 const styled = require("./dist/styled.js")
 const styledRtl = require("./dist/styled.rtl.js")
 const colors = require("./colors/index")
+const resets_general = require('./dist/resets/general')
+const themes = require("./dist/themes.js")
+
+const utilities_borderRadius = require('./dist/utilities/borderRadius')
+const utilities_fontSize = require('./dist/utilities/fontSize')
+const utilities_glass = require('./dist/utilities/glass')
+const utilities_sizing = require('./dist/utilities/sizing')
+const utilities_responsiveComponent = require('./dist/utilities/responsiveComponent')
+const utilities_typography = require('./dist/utilities/typography')
+const utilities_variables = require('./dist/utilities/variables')
+
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   console.group();
@@ -31,25 +42,25 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   // inject @base style 
   if (config('daisyui.resets') !== false) {
     console.log('\x1b[36m%s\x1b[0m', '🌼 Adding resets')
-    addBase(require('./dist/resets/general'))
+    addBase(resets_general)
   }
 
   // inject themes
   if (config('daisyui.themes') !== false) {
     console.log('\x1b[36m%s\x1b[0m', '🌼 Adding themes')
-    addComponents(require("./dist/themes.js"))
+    addComponents(themes)
   }
 
   // inject @utilities style needed by components
   if (config('daisyui.utils') !== false) {
     console.log('\x1b[36m%s\x1b[0m', '🌼 Adding utilities')
-    addUtilities(require('./dist/utilities/borderRadius'), { variants: ['responsive'] })
-    addUtilities(require('./dist/utilities/fontSize'), { variants: ['responsive'] })
-    addUtilities(require('./dist/utilities/glass'), { variants: ['responsive'] })
-    addUtilities(require('./dist/utilities/sizing'), { variants: ['responsive'] })
-    addUtilities(require('./dist/utilities/responsiveComponent'), { variants: ['responsive'] })
-    addUtilities(require('./dist/utilities/typography'), { variants: ['responsive'] })
-    addUtilities(require('./dist/utilities/variables'), { variants: ['responsive'] })
+    addUtilities(utilities_borderRadius, { variants: ['responsive'] })
+    addUtilities(utilities_fontSize, { variants: ['responsive'] })
+    addUtilities(utilities_glass, { variants: ['responsive'] })
+    addUtilities(utilities_sizing, { variants: ['responsive'] })
+    addUtilities(utilities_responsiveComponent, { variants: ['responsive'] })
+    addUtilities(utilities_typography, { variants: ['responsive'] })
+    addUtilities(utilities_variables, { variants: ['responsive'] })
   }
   console.groupEnd();
 }
