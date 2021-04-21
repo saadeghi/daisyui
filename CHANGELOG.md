@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.19.1](https://github.com/saadeghi/daisyui/compare/v0.19.0...v0.19.1) (2021-04-21)
+
+
+### Features
+
+* enable themes config by default ([abb0b9d](https://github.com/saadeghi/daisyui/commit/abb0b9d063b24ac7c37e34afd4a6f6d2805fc3de))
+
 ## [0.19.0](https://github.com/saadeghi/daisyui/compare/v0.18.0...v0.19.0) (2021-04-21)
 
 
