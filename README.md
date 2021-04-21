@@ -51,12 +51,6 @@ module.exports = {
   plugins: [
     require('daisyui'),
   ],
-  
-  theme: {
-    extend: {
-      colors: require('daisyui/colors'),
-    },
-  },
 
 }
 ```
