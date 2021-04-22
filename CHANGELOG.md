@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.20.1](https://github.com/saadeghi/daisyui/compare/v0.20.0...v0.20.1) (2021-04-22)
+
+
+### Bug Fixes
+
+* spin animation not incuded when using JIT ([7a10e5c](https://github.com/saadeghi/daisyui/commit/7a10e5ca3732ac3d2fbe7e1047849f0325ac5f9b))
+
 ## [0.20.0](https://github.com/saadeghi/daisyui/compare/v0.19.1...v0.20.0) (2021-04-22)
 
 
