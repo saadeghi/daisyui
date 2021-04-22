@@ -70,7 +70,7 @@ module.exports = {
   - DaisyUI components  
   
   ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.19.1/dist/full.css
+  https://cdn.jsdelivr.net/npm/daisyui@0.20.0/dist/full.css
   ```
   [ [Browse other versions][docs-url-install] ]
 
