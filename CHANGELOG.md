@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.20.0](https://github.com/saadeghi/daisyui/compare/v0.19.1...v0.20.0) (2021-04-22)
+
+
+### Features
+
+* improve logs ([a0d1d50](https://github.com/saadeghi/daisyui/commit/a0d1d50a7c7811614b1bdef852899e065777df4d))
+
+
+### Bug Fixes
+
+* select base style ([45aa02c](https://github.com/saadeghi/daisyui/commit/45aa02c4b22b01100d4037a2ed48c1ef873e8813))
+* select styled ([9e8fe79](https://github.com/saadeghi/daisyui/commit/9e8fe7900113368077f5c066f57a4362446b2d7f))
+
 ### [0.19.1](https://github.com/saadeghi/daisyui/compare/v0.19.0...v0.19.1) (2021-04-21)
 
 
