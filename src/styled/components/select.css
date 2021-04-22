@@ -1,5 +1,5 @@
 .select {
-  @apply border font-semibold bg-base-100 border-base-content border-opacity-0 pr-10;
+  @apply border transition duration-200 ease-in-out rounded-btn font-semibold bg-base-100 border-base-content border-opacity-0 pr-10;
   &-bordered {
     @apply border-opacity-20;
   }
