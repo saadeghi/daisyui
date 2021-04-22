@@ -1,5 +1,5 @@
 .select {
-  @apply inline-flex cursor-pointer transition duration-200 ease-in-out rounded-btn flex-shrink-0 appearance-none select-none;
+  @apply inline-flex cursor-pointer flex-shrink-0 appearance-none select-none;
   &:focus {
     @apply outline-none;
   }
