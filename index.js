@@ -1,9 +1,9 @@
 var daisyuiInfo = require('./package.json')
 
-const base = require("./dist/base.js")
-const baseRtl = require("./dist/base.rtl.js")
-const styled = require("./dist/styled.js")
-const styledRtl = require("./dist/styled.rtl.js")
+const base = require("./dist/base")
+const baseRtl = require("./dist/base.rtl")
+const styled = require("./dist/styled")
+const styledRtl = require("./dist/styled.rtl")
 const colors = require("./colors/index")
 const resets_general = require('./dist/resets/general')
 const themes = require("./dist/themes")
