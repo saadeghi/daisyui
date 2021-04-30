@@ -3,8 +3,8 @@
   --animation-btn: 0;
   --animation-input: 0;
 }
-.tab-border {
-  --tab-border: 0;
+.tab-border-none {
+  --tab-border: 0px;
 }
 .tab-border {
   --tab-border: 1px;
