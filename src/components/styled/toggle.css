@@ -25,8 +25,14 @@
       & ~ .toggle-mark{
         @apply bg-base-100 border-base-content bg-opacity-20;
         &:before{
-          @apply bg-base-content transform translate-x-6	;
+          @apply bg-base-content transform translate-x-6;
           animation: togglemark-on var(--animation-input, .4s) ease-in-out;
+
+          /* RTL quick fix */
+          [dir=rtl] &{
+            @apply -translate-x-6;
+          }
+
         }
       }
     }
