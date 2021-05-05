@@ -1,0 +1,30 @@
+.dropdown{
+  @apply relative inline-block;
+}
+.dropdown .dropdown-content{
+  @apply opacity-0 invisible absolute z-50;
+}
+.dropdown-end .dropdown-content{
+  @apply right-0;
+}
+.dropdown-left .dropdown-content{
+  @apply top-0 right-full bottom-auto;
+}
+.dropdown-right .dropdown-content{
+  @apply left-full top-0 bottom-auto;
+}
+.dropdown-top .dropdown-content{
+  @apply bottom-full top-auto;
+}
+.dropdown-end.dropdown-right .dropdown-content{
+  @apply bottom-0 top-auto;
+}
+.dropdown-end.dropdown-left .dropdown-content{
+  @apply bottom-0 top-auto;
+}
+.dropdown.dropdown-open .dropdown-content,
+.dropdown.dropdown-hover:hover .dropdown-content,
+.dropdown:focus .dropdown-content,
+.dropdown:focus-within .dropdown-content{
+  @apply visible opacity-100;
+}

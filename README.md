@@ -70,7 +70,7 @@ module.exports = {
   - DaisyUI components  
   
   ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.21.2/dist/full.css
+  https://cdn.jsdelivr.net/npm/daisyui@0.22.0/dist/full.css
   ```
   [ [Browse other versions][docs-url-install] ]
 
@@ -192,7 +192,7 @@ Read the documents for more info
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
-[number-of-components]: https://badgen.net/badge/components%20added/29/purple
+[number-of-components]: https://badgen.net/badge/components%20added/30/purple
 
 [docs-url-install]: https://daisy.js.org/docs/install
 [docs-url]: https://saadeghi.github.io/daisyui-demo/
