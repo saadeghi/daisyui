@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.22.1](https://github.com/saadeghi/daisyui/compare/v0.22.0...v0.22.1) (2021-05-06)
+
+
+### Bug Fixes
+
+* modal position big on safari ([933a9e6](https://github.com/saadeghi/daisyui/commit/933a9e63e4feae141ec9686a7a1b20d273c58c17))
+
 ## [0.22.0](https://github.com/saadeghi/daisyui/compare/v0.21.3...v0.22.0) (2021-05-05)
 
 
