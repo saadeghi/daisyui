@@ -1,5 +1,5 @@
 .modal{
-  @apply inset-0 invisible opacity-0 pointer-events-none fixed grid place-items-end sm:place-items-center;
+  @apply inset-0 invisible opacity-0 pointer-events-none fixed flex items-end justify-center sm:items-center;
   z-index: 999;
 }
 .modal:target,
