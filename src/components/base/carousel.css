@@ -1,0 +1,18 @@
+.carousel{
+  @apply flex overflow-x-scroll;
+	scroll-snap-type: x mandatory;
+  &-vertical{
+    @apply flex-col overflow-y-scroll;
+    scroll-snap-type: y mandatory;
+  }
+  &-item{
+    @apply flex flex-none box-content;
+    scroll-snap-align: start;
+  }
+  &-center .carousel-item{
+    scroll-snap-align: center;
+  }
+  &-end .carousel-item{
+    scroll-snap-align: end;
+  }
+}
