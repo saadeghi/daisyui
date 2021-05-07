@@ -1,0 +1,41 @@
+[data-theme="wireframe"] {
+  font-family: 'Chalkboard', 'comic sans ms', 'sans-serif';
+  --border-color: var(--bc);
+  --p: 0 0% 72%;
+  --pf: 0 0% 72%;
+  --pc: 0 0% 0%;
+
+  --s: 0 0% 72%;
+  --sf: 0 0% 72%;
+  --sc: 0 0% 0%;
+
+  --a: 0 0% 72%;
+  --af: 0 0% 72%;
+  --ac: 0 0% 0%;
+
+  --b1: 0 0% 100%;
+  --b2: 0 0% 100%;
+  --b3: 0 0% 100%;
+  --bc: 0 0% 0%;
+
+  --n: 0 0% 92%;
+  --nf: 0 0% 92%;
+  --nc: 0 0% 0%;
+
+  --in: 240 100% 50%;
+  --su: 120 100% 25%;
+  --wa: 60 30% 50%;
+  --er: 0 100% 50%;
+
+  --rounded-box: 0.2rem;
+  --rounded-btn: 0.2rem;
+  --rounded-badge: 0.2rem;
+  --tab-radius: 0.2rem;
+
+}
+[data-theme="wireframe"] *{
+  border-color: hsl(var(--border-color)) !important;
+  --tw-border-opacity: 1 !important;
+  --tw-text-opacity: 1 !important;
+  --tw-shadow: 0 0 0 1px hsl(var(--border-color)) !important;
+}
