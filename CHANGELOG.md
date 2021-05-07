@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.26.0](https://github.com/saadeghi/daisyui/compare/v0.25.0...v0.26.0) (2021-05-07)
+
+
+### Features
+
+* add carousel component ([64cc47b](https://github.com/saadeghi/daisyui/commit/64cc47b16a8c59f121ae5745d71d968585505f88))
+
 ## [0.25.0](https://github.com/saadeghi/daisyui/compare/v0.24.0...v0.25.0) (2021-05-07)
 
 
