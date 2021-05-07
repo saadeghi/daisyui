@@ -1,7 +1,8 @@
 .divider{
   @apply my-4 h-4;
   &:before, &:after{
-    @apply h-0.5 bg-base-content bg-opacity-10;
+    @apply h-0.5 bg-base-content;
+    --tw-bg-opacity: var(--tw-border-opacity, 0.1);
   }
   &:not(:empty){
     &:before{

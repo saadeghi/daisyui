@@ -1,0 +1,33 @@
+[data-theme="contrast"] {
+  --border-color: var(--bc);
+  --p: 0 0% 0%;
+  --pf: 0 0% 0%;
+  --pc: 0 0% 100%;
+
+  --s: 0 0% 0%;
+  --sf: 0 0% 0%;
+  --sc: 0 0% 100%;
+
+  --a: 0 0% 0%;
+  --af: 0 0% 0%;
+  --ac: 0 0% 100%;
+
+  --b1: 0 0% 100%;
+  --b2: 0 0% 100%;
+  --b3: 0 0% 100%;
+  --bc: 0 0% 0%;
+
+  --n: 0 0% 0%;
+  --nf: 0 0% 0%;
+  --nc: 0 0% 100%;
+
+  --in: 240 100% 50%;
+  --su: 120 100% 25%;
+  --wa: 60 30% 50%;
+  --er: 0 100% 50%;
+}
+[data-theme="contrast"] *{
+  border-color: hsl(var(--border-color)) !important;
+  --tw-border-opacity: 1;
+  --tw-shadow: 0 0 0 1px hsl(var(--border-color)) !important;
+}
