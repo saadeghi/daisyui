@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.25.0](https://github.com/saadeghi/daisyui/compare/v0.24.0...v0.25.0) (2021-05-07)
+
+
+### Features
+
+* add corporate theme ([cbe0e2f](https://github.com/saadeghi/daisyui/commit/cbe0e2fbd20a158f2451d948f351aee29966734c))
+* add emerald theme ([74776b9](https://github.com/saadeghi/daisyui/commit/74776b9dc657fb8d167352f712d1b16854ecd833))
+* add font family for retro, cyberpunk themes ([ed612ab](https://github.com/saadeghi/daisyui/commit/ed612abbbe170e24070ffe8d0908c7a0202f8653))
+* add lofi theme ([391bf10](https://github.com/saadeghi/daisyui/commit/391bf1093eedd0d0e9c6dc4a6dd01c4da6fb95a3))
+
+
+### Bug Fixes
+
+* rename contrast theme to wireframe ([331af66](https://github.com/saadeghi/daisyui/commit/331af66cdb2af7b7d6ae9b0d28ff5acefa6adca8))
+* tab margin ([283f0ec](https://github.com/saadeghi/daisyui/commit/283f0eca6302c6709adb122712513d9c89fde89d))
+* tab margin ([572468a](https://github.com/saadeghi/daisyui/commit/572468ad7adbc490e21d7749a2319aadf17fd3de))
+
 ## [0.24.0](https://github.com/saadeghi/daisyui/compare/v0.23.0...v0.24.0) (2021-05-07)
 
 ## [0.23.0](https://github.com/saadeghi/daisyui/compare/v0.22.1...v0.23.0) (2021-05-07)
