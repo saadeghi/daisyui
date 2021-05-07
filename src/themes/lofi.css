@@ -1,0 +1,39 @@
+[data-theme='lofi'] {
+  --border-color: 0 0% 90%;
+  --p: 0 0% 50%;
+  --pf: 0 0% 45%;
+  --pc: 240 4% 95%;
+  
+  --s: 0 0% 30%;
+  --sf: 0 0% 25%;
+  --sc: 240 4% 95%;
+  
+  --a: 0 0% 10%;
+  --af: 0 0% 5%;
+  --ac: 240 4% 95%;
+  
+  --n: 240 4% 95%;
+  --nf: 240 4% 90%;
+  --nc: 0 0% 30%;
+  
+  --b1: 0 0% 100%;
+  --b2: 0 0% 100%;
+  --b3: 0 0% 100%;
+  --bc: 0 0% 49%;
+
+  --animation-btn: 0;
+  --animation-input: 0;
+
+  --btn-focus-scale: 1;
+
+  --rounded-box: 0rem;
+  --rounded-btn: 0rem;
+  --rounded-badge: 0rem;
+  --tab-radius: 0rem;
+}
+[data-theme="lofi"] *{
+  border-color: hsl(var(--border-color)) !important;
+  --tw-border-opacity: 1 !important;
+  --tw-text-opacity: 1 !important;
+  --tw-shadow: 0 0 0 1px hsl(var(--border-color)) !important;
+}
