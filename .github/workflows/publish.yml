@@ -46,15 +46,12 @@ jobs:
 
       - name: Install dependencies
         run: cd src/docs && npm install
-        if: steps.check.outputs.changed == 'true'
 
       - name: Generate
         run: cd src/docs && npm run deploy
-        if: steps.check.outputs.changed == 'true'
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
-        if: steps.check.outputs.changed == 'true'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/dist
