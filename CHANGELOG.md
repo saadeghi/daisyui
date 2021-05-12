@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.26.2](https://github.com/saadeghi/daisyui/compare/v0.26.0...v0.26.2) (2021-05-12)
+
+
+### Features
+
+* add focus style for card ([cebcc26](https://github.com/saadeghi/daisyui/commit/cebcc26e1e65d0656cd4bcc668abd0f6a6b74ab8))
+
+
+### Bug Fixes
+
+* [#26](https://github.com/saadeghi/daisyui/issues/26) ([04c5932](https://github.com/saadeghi/daisyui/commit/04c5932aae23c3cd08fc248b6d4067e99790dfbc))
+
 ### [0.26.1](https://github.com/saadeghi/daisyui/compare/v0.26.0...v0.26.1) (2021-05-12)
 
 
