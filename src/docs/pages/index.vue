@@ -33,8 +33,8 @@
         <button class="btn btn-xs btn-square" style="background:hsl(183 47% 59%);border-color:hsl(183 47% 59%);" data-set-theme="cupcake" title="cupcake" data-act-class="ACTIVECLASS"></button>
       </div>
       -->
-          <h1 class="py-20 mb-5 text-3xl font-extrabold text-center md:text-5xl md:py-0 lg:text-left xl:text-6xl">
-            <div class="w-32 mb-2" v-html="svgLogoSolid"></div>
+          <h1 class="py-20 mb-5 text-3xl font-extrabold text-center md:text-5xl lg:py-0 lg:text-left xl:text-6xl">
+            <div class="w-32 mx-auto mb-2 lg:mx-0" v-html="svgLogoSolid"></div>
             Tailwind CSS <br/>Components
           </h1>
 
