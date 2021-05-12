@@ -16,20 +16,43 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-            node-version: 12
+            node-version: 14
             registry-url: https://registry.npmjs.org
       - id: check
         uses: EndBug/version-check@v1
         with:
             file-url: https://unpkg.com/daisyui@latest/package.json
             static-checking: localIsNew
-      - run: npm install
+
+      - name: Install dependencies
+        run: npm install
+
       - name: build
         run: npm run build
-      - name: publish
+
+      - name: Publish
         run: npm publish
         if: steps.check.outputs.changed == 'true'
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
+      - name: cd to docs
+        run: cd src/docs
 
+      # - name: Wait 2 minutes for npm publish
+      #   uses: jakejarvis/wait-action@master
+      #   with:
+      #     time: '2m'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate
+        run: npm run deploy
+
+      - name: Deploy docs to github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src/docs/dist
+          cname: daisyui.com

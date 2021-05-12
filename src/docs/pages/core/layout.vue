@@ -1,0 +1,32 @@
+<template>
+  <div>
+
+    <h2 class="my-6 text-5xl font-bold">
+      <span class="text-primary">Layout</span>
+    </h2>
+
+    <Wrapper nocode class="prose text-base-content">
+      <p>Layout, sizing, grids, spacing, etc... all will be handled by Tailwind CSS's utility classes</p>
+      <p>
+        Read more about:
+        <ul>
+          <li><a target="_blank" href="https://tailwindcss.com/docs/container">Layout</a></li>
+          <li><a target="_blank" href="https://tailwindcss.com/docs/width">Sizing</a></li>
+          <li><a target="_blank" href="https://tailwindcss.com/docs/flex">Flexbox</a></li>
+          <li><a target="_blank" href="https://tailwindcss.com/docs/grid-template-columns">Grid</a></li>
+          <li><a target="_blank" href="https://tailwindcss.com/docs/justify-content">Box alignment</a></li>
+          <li><a target="_blank" href="https://tailwindcss.com/docs/padding">Spacing</a></li>
+        </ul>
+      </p>
+    </Wrapper>
+
+
+    <div class="flex justify-end max-w-4xl pt-10 mt-20 border-t-2 border-base-200">
+      <NuxtLink to="/core/typography" class="text-xs btn-lg btn lg:text-lg">
+        Next: typography
+        <Icon glyph="arrow" class="inline-block w-6 h-6 ml-2 stroke-current" />
+      </NuxtLink>
+    </div>
+
+  </div>
+</template>
