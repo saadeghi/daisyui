@@ -1,6 +1,4 @@
 {
-  "name": "daisyui-demo",
-  "version": "1.2.0",
   "scripts": {
     "dev": "nuxt",
     "style": "npm i daisyui@latest && postcss node_modules/tailwindcss/tailwind.css -o assets/css/style.css",
