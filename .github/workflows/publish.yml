@@ -36,19 +36,16 @@ jobs:
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-      - name: cd to docs
-        run: cd src/docs
-
       # - name: Wait 2 minutes for npm publish
       #   uses: jakejarvis/wait-action@master
       #   with:
       #     time: '2m'
 
       - name: Install dependencies
-        run: npm install
+        run: cd src/docs && npm install
 
       - name: Generate
-        run: npm run deploy
+        run: cd src/docs && npm run deploy
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
