@@ -1,5 +1,5 @@
 
-name: "Publish to NPM"
+name: "Build, Publish, Deploy"
 
 on:
   push:
@@ -36,10 +36,11 @@ jobs:
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-      - name: Wait 60 seconds for npm publish
+      - name: Wait 30 seconds for npm publish
         uses: whatnick/wait-action@master
+        if: steps.check.outputs.changed == 'true'
         with:
-          time: '60s'
+          time: '30s'
 
       - name: Install dependencies
         run: cd src/docs && npm install
