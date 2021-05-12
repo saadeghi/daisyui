@@ -26,9 +26,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        if: steps.check.outputs.changed == 'true'
 
       - name: build
         run: npm run build
+        if: steps.check.outputs.changed == 'true'
 
       - name: Publish
         run: npm publish

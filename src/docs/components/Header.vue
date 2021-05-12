@@ -16,7 +16,7 @@
       </div>
       <div class="flex items-center flex-none">
         <NuxtLink to="/" class="px-2 flex-0 btn btn-ghost md:px-4" aria-label="Homepage">
-          <div class="inline-block w-20" v-html="isHomepage ? svgLogo : svgLogoNeutral"></div>
+          <div class="inline-block w-28" v-html="isHomepage ? svgLogo : svgLogoNeutral"></div>
         </NuxtLink>
       </div>
       <div class="font-mono text-xs opacity-50">

@@ -197,6 +197,6 @@ Read the documents for more info
 
 [docs-url-install]: https://daisy.js.org/docs/install
 [docs-url]: https://saadeghi.github.io/daisyui-demo/
-[logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo.svg
+[logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-new.svg
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/presentation/dark-theme-wide.png
 

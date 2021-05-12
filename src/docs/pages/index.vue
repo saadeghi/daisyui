@@ -4,7 +4,7 @@
       class="min-h-screen pt-16 overflow-hidden hero bg-gradient-to-br from-primary to-secondary text-primary-content"
     >
       <div
-        class="inline-block w-full transform scale-150 opacity-5 -rotate-12"
+        class="inline-block w-full transform scale-150 opacity-5 -rotate-12 text-base-content"
         v-html="svgLogoSolid"
       ></div>
       <div class="flex-col justify-between w-full max-w-6xl hero-content lg:flex-row">
@@ -34,7 +34,7 @@
       </div>
       -->
           <h1 class="py-20 mb-5 text-3xl font-extrabold text-center md:text-5xl md:py-0 lg:text-left xl:text-6xl">
-            <div class="text-4xl font-normal">DaisyUI</div>
+            <div class="w-32 mb-2" v-html="svgLogoSolid"></div>
             Tailwind CSS <br/>Components
           </h1>
 
