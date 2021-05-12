@@ -1,5 +1,8 @@
 .card {
   @apply flex flex-col relative overflow-hidden;
+  &:focus {
+    @apply outline-none;
+  }
   &-body {
     @apply flex flex-col flex-auto;
   }
