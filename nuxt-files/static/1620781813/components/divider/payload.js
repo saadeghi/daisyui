@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/divider", {data:[{}],fetch:{},mutations:void 0});

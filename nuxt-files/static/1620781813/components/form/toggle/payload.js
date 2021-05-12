@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/form/toggle", {data:[{}],fetch:{},mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/form/select", {data:[{}],fetch:{},mutations:void 0});
