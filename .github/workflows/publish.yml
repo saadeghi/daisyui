@@ -36,11 +36,10 @@ jobs:
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-      - name: Wait 2 minutes for npm publish
-        uses: jakejarvis/wait-action@master
-        if: steps.check.outputs.changed == 'true'
+      - name: Wait 60 seconds for npm publish
+        uses: whatnick/wait-action@master
         with:
-          time: '2m'
+          time: '60s'
 
       - name: Install dependencies
         run: cd src/docs && npm install
