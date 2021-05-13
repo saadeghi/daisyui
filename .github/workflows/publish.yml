@@ -8,16 +8,18 @@ on:
 
 jobs:
   release:
-    name: "Publish to NPM"
+    name: "Build"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
+        
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
         with:
             node-version: 14
             registry-url: https://registry.npmjs.org
+
       - id: check
         uses: EndBug/version-check@v1
         with:
@@ -38,30 +40,14 @@ jobs:
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-      - name: Wait 30 seconds for npm publish
+      - name: Wait 10 seconds for npm publish
         uses: whatnick/wait-action@master
         if: steps.check.outputs.changed == 'true'
         with:
-          time: '30s'
-
-      - name: Read package.json
-        uses: nyaa8/package-version@v1
-        with:
-          path: 'package.json'
-
-      - name: Show package version
-        run: echo "${{ env.PACKAGE_VERSION }}"
+          time: '10s'
 
       - name: Install dependencies
         run: cd src/docs && npm install
-
-      - name: Write version number        
-        uses: DamianReeves/write-file-action@v1.0
-        with:
-          path: src/docs/.env
-          contents: |
-            echo "DAISYUI_VERSION=${{ env.PACKAGE_VERSION }}"
-          write-mode: overwrite
 
       - name: Generate
         run: cd src/docs && npm run deploy
