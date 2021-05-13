@@ -64,15 +64,12 @@ module.exports = {
 
 >*Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and DaisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
 
-- **full.css**
-  Includes:
-  - Tailwind's default config  
-  - DaisyUI components  
   
-  ```
-  https://cdn.jsdelivr.net/npm/daisyui@0.26.0/dist/full.css
-  ```
-  [ [Browse other versions][docs-url-install] ]
+```html
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@0.27/dist/full.css" rel="stylesheet" type="text/css" />
+```
+[ [Browse other versions][docs-url-install] ]
 
 </details>
 
