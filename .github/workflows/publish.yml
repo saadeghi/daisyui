@@ -44,8 +44,24 @@ jobs:
         with:
           time: '30s'
 
+      - name: Read package.json
+        uses: nyaa8/package-version@v1
+        with:
+          path: 'package.json'
+
+      - name: Show package version
+        run: echo "${{ env.PACKAGE_VERSION }}"
+
       - name: Install dependencies
         run: cd src/docs && npm install
+
+      - name: Write version number        
+        uses: DamianReeves/write-file-action@v1.0
+        with:
+          path: src/docs/.env
+          contents: |
+            echo "DAISYUI_VERSION=${{ env.PACKAGE_VERSION }}"
+          write-mode: overwrite
 
       - name: Generate
         run: cd src/docs && npm run deploy
