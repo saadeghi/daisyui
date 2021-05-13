@@ -40,6 +40,16 @@
       <Button classes="btn-error">error</Button>
     </Wrapper>
 
+    <Wrapper classes="flex flex-wrap items-start space-x-2 flex-row" title="responsive buttons">
+      <Button classes="btn-xs md:btn-sm lg:btn-md xl:btn-lg">resize your browser</Button>
+      <Button classes="btn-square btn-xs md:btn-sm lg:btn-md xl:btn-lg">
+        <Icon glyph="close" class="inline-block w-4 h-4 stroke-current md:w-6 md:h-6" />
+      </Button>
+      <Button classes="btn-circle btn-xs md:btn-sm lg:btn-md xl:btn-lg">
+        <Icon glyph="close" class="inline-block w-4 h-4 stroke-current md:w-6 md:h-6" />
+      </Button>
+    </Wrapper>
+
     <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row" title="glass">
       <div class="p-20 bg-cover card bg-base-200" style="background-image: url(https://picsum.photos/id/314/400/300)">
         <Button classes="glass">Glass button</Button>

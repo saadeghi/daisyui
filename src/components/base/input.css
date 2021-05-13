@@ -1,18 +1,7 @@
 
 .input{
   @apply transition duration-200 ease-in-out flex-shrink;
-  &{
-    @apply px-4 h-12 text-sm leading-loose;
-  }
-  &-lg{
-    @apply px-6 h-16 text-lg leading-loose;
-  }
-  &-sm{
-    @apply px-3 h-8 text-sm leading-8;
-  }
-  &-xs{
-    @apply px-2 h-6 text-xs leading-relaxed;
-  }
+  @apply px-4 h-12 text-sm leading-loose;
   &:focus {
     @apply outline-none;
   }

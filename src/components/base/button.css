@@ -1,5 +1,6 @@
 .btn {
   @apply inline-flex flex-wrap items-center justify-center text-center cursor-pointer select-none transition duration-200 ease-in-out rounded-btn flex-shrink-0;
+  @apply px-4 leading-loose h-12 text-sm min-h-12;
   &:focus {
     @apply outline-none;
   }
@@ -10,57 +11,12 @@
     @apply pointer-events-none;
   }
 
-  /* sizes */
-  & {
-    @apply px-4 leading-loose h-12 text-sm min-h-12;
-  }
-  &-lg {
-    @apply px-6 leading-loose h-16 text-lg min-h-16;
-  }
-  &-sm {
-    @apply px-3 leading-8 h-8 text-sm min-h-8;
-  }
-  &-xs {
-    @apply px-2 text-xs leading-relaxed h-6 min-h-6;
-  }
-  &-wide {
-    @apply w-64;
-  }
-
-  /* block */
-  &-block {
-    @apply w-full;
-  }
-
-
   /* shapes */
   &-square {
-    &.btn-xs {
-      @apply h-6 w-6 p-0;
-    }
-    &.btn-sm {
-      @apply h-8 w-8 p-0;
-    }
-    & {
-      @apply h-12 w-12 p-0;
-    }
-    &.btn-lg {
-      @apply h-16 w-16 p-0;
-    }
+    @apply h-12 w-12 p-0;
   }
   &-circle {
-    &.btn-xs {
-      @apply rounded-full h-6 w-6 p-0;
-    }
-    &.btn-sm {
-      @apply rounded-full h-8 w-8 p-0;
-    }
-    & {
-      @apply rounded-full h-12 w-12 p-0;
-    }
-    &.btn-lg {
-      @apply rounded-full h-16 w-16 p-0;
-    }
+    @apply rounded-full h-12 w-12 p-0;
   }
 
   /* loading */
