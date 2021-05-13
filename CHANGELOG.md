@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.27.0](https://github.com/saadeghi/daisyui/compare/v0.26.2...v0.27.0) (2021-05-13)
+
+
+### Features
+
+* themes config can now be array ([bf33256](https://github.com/saadeghi/daisyui/commit/bf33256435876917134503149c6e370ebac32714))
+
+
+### Bug Fixes
+
+* [#27](https://github.com/saadeghi/daisyui/issues/27) ([71ac32e](https://github.com/saadeghi/daisyui/commit/71ac32e0c375479379bc5b02b877dc1febbe8bd9))
+* [#31](https://github.com/saadeghi/daisyui/issues/31), improve build scripts ([60c583b](https://github.com/saadeghi/daisyui/commit/60c583b3b3b53d061f6215da300fbe61db0c3b09))
+* prevent generating extra colors ([14c32c9](https://github.com/saadeghi/daisyui/commit/14c32c96fb9de314293ee69fadc7443a29da728c))
+
 ### [0.26.3](https://github.com/saadeghi/daisyui/compare/v0.26.2...v0.26.3) (2021-05-12)
 
 ### [0.26.2](https://github.com/saadeghi/daisyui/compare/v0.26.0...v0.26.2) (2021-05-12)
