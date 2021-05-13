@@ -40,26 +40,6 @@
       "master"
     ]
   },
-  "postcss": {
-    "plugins": {
-      "postcss-import": [],
-      "tailwindcss": "src/tailwind.config.js",
-      "postcss-nested": {
-        "bubble": [
-          "screen"
-        ]
-      },
-      "autoprefixer": [],
-      "cssnano": {
-        "preset": [
-          "default",
-          {
-            "mergeRules": false
-          }
-        ]
-      }
-    }
-  },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
     "cssnano": "^4.1.10",
@@ -72,17 +52,21 @@
     "tailwindcss": "^2.0.1"
   },
   "scripts": {
-    "utilities": "prejss-cli src/resets/*.css --out-dir dist/resets --format commonjs && prejss-cli src/utilities/*.css --out-dir dist/utilities --format commonjs",
-    "components": "postcss src/{components,themes}/**/*.css --base src --dir dist",
-    "base": "cat dist/components/base/*.css > dist/base.css",
-    "styled": "cat dist/components/base/*.css dist/components/styled/*.css > dist/styled.css",
-    "themes": "cat dist/themes/*.css > dist/themes.css",
+    "resets": "postcss --config src/utilities src/resets/*.css --base src --dir dist",
+    "postresets": "prejss-cli dist/resets/*.css --format commonjs",
+    "utilities": "postcss --config src/utilities src/utilities/*.css --base src --dir dist",
+    "postutilities": "prejss-cli dist/utilities/*.css --format commonjs",
+    "components": "postcss --config src src/{components,themes}/**/*.css --base src --dir dist",
+    "merge:base": "cat dist/components/base/*.css > dist/base.css",
+    "merge:styled": "cat dist/components/base/*.css dist/components/styled/*.css > dist/styled.css",
+    "merge:themes": "cat dist/themes/*.css > dist/themes.css",
     "rtl": "rtlcss dist/base.css -s && rtlcss dist/styled.css -s",
-    "prejss": "prejss-cli dist/{{base,styled}{,.rtl},themes}.css --format commonjs",
-    "full": "postcss src/full/index.css -o dist/full.css",
-    "build": "npm run utilities && npm run components && npm run base && npm run styled && npm run themes && npm run rtl && npm run prejss && npm run full",
-    "docs": "cd src/docs && npm install",
+    "prejss": "prejss-cli dist/{{base,styled}{,.rtl},themes,themes/*}.css --format commonjs",
+    "full": "postcss src/full/index.css -o dist/full.css --config src/full",
+    "build": "npm run resets && npm run utilities && npm run components && npm run merge:base && npm run merge:styled && npm run merge:themes && npm run rtl && npm run prejss && npm run full",
+    "install:docs": "cd src/docs && npm install",
     "dev": "cd src/docs && npm run dev",
-    "add": "touch src/components/base/$npm_config_name.css && touch src/components/styled/$npm_config_name.css && open src/components/base/$npm_config_name.css && open src/components/styled/$npm_config_name.css"
+    "add": "touch src/components/base/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
+    "postadd": "open src/components/base/$npm_config_name.css && open src/components/styled/$npm_config_name.css"
   }
 }
