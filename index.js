@@ -56,7 +56,15 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   }
 
   // inject themes
-  if (config('daisyui.themes') != false) {
+  if (Array.isArray( config('daisyui.themes') )) {
+    let diasyuiIncludedThemes = []
+    config('daisyui.themes').forEach(theme => {
+      addComponents(require("./dist/themes/"+theme))
+      diasyuiIncludedThemes.push(theme)
+    });
+    diasyuiIncludedItems.push('selected themes(' + diasyuiIncludedThemes.length + ')')
+  }
+  else if (config('daisyui.themes') != false) {
     addComponents(themes)
     diasyuiIncludedItems.push('themes')
   }
