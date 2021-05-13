@@ -19,7 +19,7 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 
 
 - 👉 [ [See all components][docs-url] ]
-- 📘 Documents: [daisy.js.org][docs-url]
+- 📘 Documents: [daisyui.com][docs-url]
 - 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
 - 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
 
@@ -98,7 +98,7 @@ Use component classes like `btn`, `card`, etc… to build your UI.
 
 ## 📘 Documents + Examples  
 Read the documents for more info  
-[ [daisy.js.org][docs-url] ↗︎ ]
+[ [daisyui.com][docs-url] ↗︎ ]
 
 <details>
 <summary>
@@ -195,7 +195,7 @@ Read the documents for more info
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 [number-of-components]: https://badgen.net/badge/components%20added/31/purple
 
-[docs-url-install]: https://daisy.js.org/docs/install
+[docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://saadeghi.github.io/daisyui-demo/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-new.svg
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/presentation/dark-theme-wide.png
