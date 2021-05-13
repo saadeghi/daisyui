@@ -59,9 +59,18 @@
       </p>
       <p class="my-4">
         If it's true, all themes will be included.
+        <br>If it's false, DaisyUI will use the <span class="badge badge-outline">light</span> theme.
+        <br>Can also be an array of theme names:
+
+      <div class="w-full max-w-4xl my-2">
+        <div class="shadow-lg mockup-code">
+        <pre><code>daisyui: {
+      themes: ['emerald','forest','synthwave'],
+    },</code></pre>
+        </div>
+      </div>
+
         <NuxtLink to="/docs/default-themes" class="link">read more about default themes</NuxtLink>
-        <br>
-        if it's false, DaisyUI will use the <span class="badge badge-outline">light</span> theme.
       </p>
 
       <h2 class="mt-6 text-2xl font-bold">
