@@ -12,9 +12,9 @@ const utilities_borderRadius = require('./dist/utilities/borderRadius')
 const utilities_fontSize = require('./dist/utilities/fontSize')
 const utilities_glass = require('./dist/utilities/glass')
 const utilities_sizing = require('./dist/utilities/sizing')
-const utilities_responsiveComponent = require('./dist/utilities/responsiveComponent')
 const utilities_typography = require('./dist/utilities/typography')
 const utilities_variables = require('./dist/utilities/variables')
+const utilities_responsiveComponent = require('./dist/responsive/responsiveComponent')
 
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
@@ -75,9 +75,9 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
     addUtilities(utilities_fontSize, { variants: ['responsive'] })
     addUtilities(utilities_glass, { variants: ['responsive'] })
     addUtilities(utilities_sizing, { variants: ['responsive'] })
-    addUtilities(utilities_responsiveComponent, { variants: ['responsive'] })
     addUtilities(utilities_typography, { variants: ['responsive'] })
     addUtilities(utilities_variables, { variants: ['responsive'] })
+    addUtilities(utilities_responsiveComponent, { variants: ['responsive'] })
     diasyuiIncludedItems.push('utilities')
   }
   if (logs) {
