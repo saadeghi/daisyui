@@ -25,7 +25,7 @@ export default {
       {
         hid: "twitter:url",
         name: "twitter:url",
-        content: "https://daisy.js.org/",
+        content: "https://daisyui.com/",
       },
       {
         hid: "twitter:title",
@@ -66,6 +66,7 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     ...(process.env.NODE_ENV === 'production' ? ['~/assets/css/style'] : []),
+    ...(process.env.NODE_ENV === 'production' ? [] : ['~/assets/css/fonts']),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/base']),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/components']),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../resets')]),

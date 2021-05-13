@@ -14,6 +14,13 @@ module.exports = {
       ],
     },
   },
+  theme: {
+    extend: {
+      fontFamily: {
+        'title': ['Peace Sans', 'sans-serif'],
+      }
+    }
+  },
   plugins: [
     require('@tailwindcss/typography'),
     process.env.NODE_ENV === 'production' ? require('daisyui') : [],

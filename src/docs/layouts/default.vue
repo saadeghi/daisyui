@@ -167,11 +167,6 @@ export default {
       }
     })
   },
-  computed: {
-    svgLogo() {
-      return require(`~/static/logo.svg?raw`)
-    }
-  },
   mounted(){
     themeChange(false)
   },

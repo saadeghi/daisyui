@@ -33,9 +33,12 @@
         <button class="btn btn-xs btn-square" style="background:hsl(183 47% 59%);border-color:hsl(183 47% 59%);" data-set-theme="cupcake" title="cupcake" data-act-class="ACTIVECLASS"></button>
       </div>
       -->
-          <h1 class="py-20 mb-5 text-3xl font-extrabold text-center md:text-5xl lg:py-0 lg:text-left xl:text-6xl">
-            <div class="w-32 mx-auto mb-2 lg:mx-0" v-html="svgLogoSolid"></div>
-            Tailwind CSS <br/>Components
+          <h1 class="py-20 mb-5 font-extrabold text-center lg:py-0 lg:text-left">
+            <span class="inline-block px-3 pt-px text-3xl border rounded-btn font-title border-primary-content">
+              DAISYUI
+            </span>
+            <br>
+            <div class="text-4xl md:text-5xl xl:text-6xl">Tailwind CSS <br/>Components</div>
           </h1>
 
           <div
@@ -605,6 +608,11 @@
     <div class="hero bg-neutral text-neutral-content">
       <div class="w-full max-w-6xl py-20 text-center hero-content">
         <div>
+
+          <div class="inline-block mb-10 text-3xl font-title text-neutral-content">
+            DAISYUI
+          </div>
+
           <div class="mb-10 text-center">
             <a class="my-1 btn btn-ghost btn-xs" target="_blank" rel="noopener" href="https://play.tailwindcss.com/RcIZd1Mwho">Tailwind Play</a>
             <a class="my-1 btn btn-ghost btn-xs" target="_blank" rel="noopener" href="https://codepen.io/saadeghi/pen/gOwWKvv">Codepen</a>
@@ -697,9 +705,6 @@ export default {
     };
   },
   computed: {
-    svgLogo() {
-      return require(`~/static/logo.svg?raw`);
-    },
     svgLogoSolid() {
       return require(`~/static/logo-solid.svg?raw`);
     }

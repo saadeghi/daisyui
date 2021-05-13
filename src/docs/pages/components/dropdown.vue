@@ -3,7 +3,7 @@
 
     <Wrapper title="dropdown" classes="flex justify-center bg-base-200 py-6 rounded-box">
       <div class="dropdown">
-        <div class="m-1 btn" tabindex="1">Dropdown</div>
+        <div class="m-1 btn" tabindex="0">Dropdown</div>
         <ul class="shadow menu dropdown-content bg-base-100 rounded-box w-52">
           <li><a>Item 1</a></li>
           <li><a>Item 2</a></li>

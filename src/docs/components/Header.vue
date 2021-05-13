@@ -16,7 +16,9 @@
       </div>
       <div class="flex items-center flex-none">
         <NuxtLink to="/" class="px-2 flex-0 btn btn-ghost md:px-4" aria-label="Homepage">
-          <div class="inline-block w-28" v-html="isHomepage ? svgLogo : svgLogoNeutral"></div>
+          <div class="inline-block text-3xl font-title text-primary">
+            DAISY<span v-bind:class="{ 'text-neutral': isHomepage, 'text-neutral-content': !isHomepage }">UI</span>
+          </div>
         </NuxtLink>
       </div>
       <div class="font-mono text-xs opacity-50">
@@ -136,12 +138,6 @@ export default {
     };
   },
   computed: {
-    svgLogo() {
-      return require(`~/static/logo.svg?raw`);
-    },
-    svgLogoNeutral() {
-      return require(`~/static/logo-neutral.svg?raw`);
-    },
     isHomepage() {
       return this.$route.path === '/'
     },

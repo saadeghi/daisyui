@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "nuxt",
-    "style": "npm i daisyui@latest && postcss node_modules/tailwindcss/tailwind.css -o assets/css/style.css",
+    "dev": "nuxt --port 3030",
+    "style": "npm i daisyui@latest && postcss assets/css/tailwind.css -o assets/css/style.css",
     "generate": "NODE_ENV=production TAILWIND_MODE=build npm run style && nuxt generate",
     "deploy": "NODE_ENV=production TAILWIND_MODE=build npm run style && ROUTER_BASE='/' nuxt generate"
   },
