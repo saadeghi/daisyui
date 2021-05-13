@@ -1,9 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 module.exports = {
   theme: {
-    extend: {
-      colors: require('../colors')
-    },
+    colors: require('../colors')
   },
   plugins: [
     plugin(function({ addBase, addUtilities }) {

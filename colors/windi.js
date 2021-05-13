@@ -2,6 +2,7 @@ const colorValues = require('./color-values')
 
 let colorObject = {
   "transparent": "transparent",
+  "current": "currentColor",
 }
 
 for (const [key, item] of Object.entries(colorValues)) {
