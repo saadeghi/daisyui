@@ -3,7 +3,7 @@
 [![][logo-url]][docs-url]  
 
 **Tailwind CSS Components**  
-Adds components like `btn`, `card` and more to Tailwind CSS
+Adds component classes like `btn`, `card` and more to Tailwind CSS
 
 [ [See all components][docs-url] ]
   
@@ -26,14 +26,20 @@ Adds components like `btn`, `card` and more to Tailwind CSS
 ---
 
 ## 🌼 Features   
-- **Component classes**: DaisyUI adds component classes to Tailwind. Classes like `btn`, `card`,… No need to deal with hundreds of utility classes.
-- **Tailwind CSS plugin**: DaisyUI is a Tailwind CSS plugin so you can simply add it to your `tailwind.config.js` file.
-- **Based on design system**: DaisyUI applies design system concepts to Tailwind CSS. All components on your page are committed to a single design system.
-- **Customizable**: You can customize the design of components with Tailwind utility classes and CSS variables.
-- **Semantic color names**: Use color names like `primary`, `secondary`, `accent`,… just like your design system defines.
-- **RTL supported**: Enable `rtl` config for right to left layouts.
-- **Themeable**: Add multiple themes or change colors with a CSS variable. You can even set a theme for a specific section of your page.
-- **Designer-friendly**: You can disable `styled` config and only get the skeleton of components. No style, no colors. You can style everything using utility classes.
+- **Tailwind CSS plugin**  
+  DaisyUI is a Tailwind CSS plugin. Install it, add it to your `tailwind.config.js` file.
+- **Component classes**  
+  Adds component classes to Tailwind. Classes like `btn`, `card`,… So you will end up with a cleaner HTML.
+- **Semantic color names**  
+  Adds color names like `primary`, `secondary`, `accent`,….
+- **Customizable**  
+  You can customize the design of components with Tailwind utility classes and CSS variables.
+- **Themeable**  
+  Add multiple themes and customize colors. You can even set a theme for a specific section of your page.
+- **RTL supported**  
+  Enable `rtl` config for right to left layouts.
+- **Pure CSS**  
+  No script file, no dependencies. 2KB gzip!
 
 ---
 
@@ -193,7 +199,7 @@ Read the documents for more info
 [number-of-components]: https://badgen.net/badge/components%20added/31/purple
 
 [docs-url-install]: https://daisyui.com/docs/install
-[docs-url]: https://saadeghi.github.io/daisyui-demo/
+[docs-url]: https://daisyui.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-3.svg
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png
 
