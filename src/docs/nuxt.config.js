@@ -55,7 +55,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://daisyui.com/banner.png",
+        content: "https://daisyui.com/card.png",
       },
       {
         property: "og:image:width",
@@ -92,7 +92,7 @@ export default {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: "https://daisyui.com/banner.png",
+        content: "https://daisyui.com/card.png",
       },
     ],
     link: [{
