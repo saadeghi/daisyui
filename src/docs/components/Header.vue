@@ -17,7 +17,7 @@
       <div class="flex items-center flex-none">
         <NuxtLink to="/" class="px-2 flex-0 btn btn-ghost md:px-4" aria-label="Homepage">
           <div class="inline-block text-3xl font-title text-primary">
-            DAISY<span v-bind:class="{ 'text-neutral': isHomepage, 'text-neutral-content': !isHomepage }">UI</span>
+            <span class="lowercase">daisy</span><span class="uppercase" v-bind:class="{ 'text-base-content': isHomepage, 'text-neutral-content': !isHomepage }">UI</span>
           </div>
         </NuxtLink>
       </div>

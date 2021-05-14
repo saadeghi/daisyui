@@ -92,6 +92,7 @@ export default {
     '~/components',
     '~/components/ui',
     '~/components/demo',
+    '~/components/landing',
   ],
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)

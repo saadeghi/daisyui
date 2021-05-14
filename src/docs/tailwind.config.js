@@ -17,7 +17,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'title': ['Peace Sans', 'sans-serif'],
+        'title': ['Montserrat Bold', 'sans-serif'],
       }
     }
   },
