@@ -2,7 +2,7 @@
   &.online{
     &:before{
       content: '';
-      @apply block w-2 h-2 bg-success rounded-full ring ring-base-100 ring-offset-base-100 absolute;
+      @apply block w-2 h-2 bg-success rounded-full ring ring-base-100 ring-offset-base-100 absolute z-10;
       top: 5%;
       right: 5%;
     }
@@ -10,7 +10,7 @@
   &.offline{
     &:before{
       content: '';
-      @apply block w-2 h-2 bg-base-300 rounded-full ring ring-base-100 ring-offset-base-100 absolute;
+      @apply block w-2 h-2 bg-base-300 rounded-full ring ring-base-100 ring-offset-base-100 absolute z-10;
       top: 5%;
       right: 5%;
     }
