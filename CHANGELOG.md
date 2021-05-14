@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.2](https://github.com/saadeghi/daisyui/compare/v0.27.1...v0.27.2) (2021-05-14)
+
+
+### Bug Fixes
+
+* avatar component online indicator z-index ([5d7efe4](https://github.com/saadeghi/daisyui/commit/5d7efe4e3fe88adb54691d7dd00826864e65faea))
+* dropdown focus style ([7b014ad](https://github.com/saadeghi/daisyui/commit/7b014ad605566fd4ea9ab00d6841d1edb8eb578d))
+
 ### [0.27.1](https://github.com/saadeghi/daisyui/compare/v0.26.2...v0.27.1) (2021-05-13)
 
 
