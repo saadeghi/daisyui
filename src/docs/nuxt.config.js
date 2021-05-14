@@ -20,28 +20,69 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Tailwind css components plugin - daisyui tailwind component library' },
-      { name: "twitter:site", content: "@bobross" },
-      { name: "twitter:card", content: "summary_large_image" },
       {
-        hid: "twitter:url",
-        name: "twitter:url",
-        content: "https://daisyui.com/",
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://daisyui.com'
       },
       {
-        hid: "twitter:title",
-        name: "twitter:title",
-        content: "DaisyUI - Tailwind CSS Components",
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'DaisyUI Tailwind CSS Components'
       },
       {
-        hid: "twitter:description",
-        name: "twitter:description",
-        content: "You have everything from Tailwind CSS, but you can also use component classes",
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'Tailwind CSS component plugin. Use component classes like btn, card and more to Tailwind CSS'
       },
       {
-        hid: "twitter:image",
-        name: "twitter:image",
-        content: "/banner.png",
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/banner.png'
       },
+
+      // Open Graph
+      // Test on: https://developers.facebook.com/tools/debug/
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://daisyui.com'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'DaisyUI Tailwind CSS Components'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Tailwind CSS component plugin. Use component classes like btn, card and more to Tailwind CSS'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/banner.png'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: '/banner.png'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'DaisyUI'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
