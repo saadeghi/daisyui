@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen hero bg-neutral text-neutral-content">
-    <div class="w-full text-center md:max-w-2xl hero-content">
+    <div class="w-full max-w-sm text-center md:max-w-2xl hero-content">
       <div class="w-full">
         <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">
           Highly customizable

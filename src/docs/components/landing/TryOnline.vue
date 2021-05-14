@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen hero bg-base-200 text-base-content">
-    <div class="w-full text-center lg:max-w-5xl hero-content">
+    <div class="w-full max-w-sm text-center lg:max-w-5xl hero-content">
       <div class="w-full">
         <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">
           Try it online
@@ -9,7 +9,7 @@
         <p class="w-full mx-auto mb-5 md:max-w-lg">
           Use DaisyUI file from CDN (Tailwind CSS default style included)
         </p>
-        <div class="w-full max-w-xs mx-auto my-2 md:max-w-md lg:max-w-2xl">
+        <div class="w-full max-w-sm mx-auto my-2 md:max-w-md lg:max-w-2xl">
           <div class="text-sm shadow-lg mockup-code bg-neutral-focus">
             <pre><code><span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
     <span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{{ DAISYUI_VERSION }}/dist/full.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span></code></pre>

@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen hero bg-base-100 text-base-content">
-    <div class="w-full max-w-xs text-center md:max-w-5xl hero-content">
+    <div class="w-full max-w-sm text-center md:max-w-5xl hero-content">
       <div class="w-full">
         <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">
           Clean HTML
