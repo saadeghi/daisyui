@@ -7,7 +7,7 @@
         </h2>
         <h3 class="mb-5 text-3xl font-bold"></h3>
         <p class="w-full mx-auto mb-5 md:max-w-lg">
-          Use DaisyUI file from CDN (Tailwind CSS default style included)
+          Use DaisyUI file from CDN
         </p>
         <div class="w-full max-w-sm mx-auto my-2 md:max-w-md lg:max-w-2xl">
           <div class="text-sm shadow-lg mockup-code bg-neutral-focus">

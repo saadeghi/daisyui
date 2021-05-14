@@ -2,9 +2,9 @@
   <div class="flex flex-col">
     <PromoDropdown title="tab" desc="beautiful tabs to sweitch between sections" classes="" link="components/tab">
       <div class="flex-grow-0 tabs">
-        <a class="flex-1 tab tab-lifted tab-lg tab-border-none tab-active">Stats</a>
-        <a class="flex-1 tab tab-lifted tab-lg tab-border-none">Info</a>
-        <a class="flex-1 tab tab-lifted tab-lg tab-border-none">Options</a>
+        <button class="flex-1 tab tab-lifted tab-lg tab-border-none tab-active">Stats</button>
+        <button class="flex-1 tab tab-lifted tab-lg tab-border-none">Info</button>
+        <button class="flex-1 tab tab-lifted tab-lg tab-border-none">Options</button>
       </div>
     </PromoDropdown>
     <div class="grid flex-grow gap-3 p-6 rounded-tl-none shadow-xl rounded-xl bg-base-100">
@@ -12,7 +12,7 @@
         <PromoDropdown title="avatar" desc="Use avatar component with any size" classes="" link="components/avatar">
           <div class="avatar online">
             <div class="w-16 h-16 p-px bg-opacity-10 mask mask-hexagon bg-base-content">
-              <img src="/profile-5@56w.png" class="mask mask-hexagon" alt="avatar component">
+              <img src="/profile-5@56w.png" class="mask mask-hexagon" alt="Avatar Tailwind CSS Component">
             </div>
           </div>
         </PromoDropdown>

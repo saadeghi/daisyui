@@ -21,9 +21,9 @@
     </PromoDropdown>
     <PromoDropdown title="tab" desc="Tab component with several sizes and styles" classes="dropdown-end dropdown-top" link="components/tab">
       <div class="items-center tabs tabs-boxed">
-        <a class="flex-1 tab">Tab 1</a>
-        <a class="flex-1 tab tab-active">Tab 2</a>
-        <a class="flex-1 tab">Tab 3</a>
+        <button class="flex-1 tab">Tab 1</button>
+        <button class="flex-1 tab tab-active">Tab 2</button>
+        <button class="flex-1 tab">Tab 3</button>
       </div>
     </PromoDropdown>
   </div>

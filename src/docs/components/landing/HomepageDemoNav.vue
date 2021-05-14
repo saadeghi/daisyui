@@ -46,7 +46,7 @@
       <button class="hidden md:flex border-none btn btn-square btn-ghost mask mask-squircle focus:bg-base-content focus:bg-opacity-50" aria-label="navbar component">
         <div class="avatar">
           <div class="w-10 h-10 mask mask-squircle">
-            <img src="/profile-1@40w.png" alt="avatar component">
+            <img src="/profile-1@40w.png" alt="Avatar Tailwind CSS Component">
           </div>
         </div>
       </button>

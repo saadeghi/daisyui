@@ -5,7 +5,7 @@
       <div class="text-xl font-extrabold">Superpower settings</div>
       <div class="my-4 text-xs text-base-content text-opacity-60">Enable your favorite superpowers. Terms and conditions apply</div>
 
-      <PromoDropdown title="toggle" desc="use toggle to swith between two states" classes="flex-1 w-full" link="components/form/toggle"><div class="form-control">
+      <PromoDropdown title="toggle" desc="use toggle to switch between two states" classes="flex-1 w-full" link="components/form/toggle"><div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable teleportation</span>
           <div>
@@ -16,7 +16,7 @@
         </label>
       </div>
       </PromoDropdown>
-      <PromoDropdown title="toggle" desc="use toggle to swith between two states" classes="flex-1 w-full" link="components/form/toggle">
+      <PromoDropdown title="toggle" desc="use toggle to switch between two states" classes="flex-1 w-full" link="components/form/toggle">
       <div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable time travel</span>
@@ -28,7 +28,7 @@
         </label>
       </div>
       </PromoDropdown>
-      <PromoDropdown title="toggle" desc="use toggle to swith between two states" classes="flex-1 w-full dropdown-top" link="components/form/toggle">
+      <PromoDropdown title="toggle" desc="use toggle to switch between two states" classes="flex-1 w-full dropdown-top" link="components/form/toggle">
       <div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable laser eyes</span>
@@ -40,7 +40,7 @@
         </label>
       </div>
       </PromoDropdown>
-      <PromoDropdown title="toggle" desc="use toggle to swith between two states" classes="flex-1 w-full dropdown-top" link="components/form/toggle">
+      <PromoDropdown title="toggle" desc="use toggle to switch between two states" classes="flex-1 w-full dropdown-top" link="components/form/toggle">
       <div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable immortality</span>
