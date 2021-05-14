@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col">
     <PromoDropdown title="tab" desc="beautiful tabs to sweitch between sections" classes="" link="components/tab">
-      <div class="flex-grow-0 tabs">
+      <div class="flex-grow-0 tabs w-full">
         <button class="flex-1 tab tab-lifted tab-lg tab-border-none tab-active">Stats</button>
         <button class="flex-1 tab tab-lifted tab-lg tab-border-none">Info</button>
         <button class="flex-1 tab tab-lifted tab-lg tab-border-none">Options</button>
       </div>
     </PromoDropdown>
-    <div class="grid flex-grow gap-3 p-6 rounded-tl-none shadow-xl rounded-xl bg-base-100">
+    <div class="grid flex-grow gap-3 p-6 rounded-tl-none shadow-xl rounded-xl bg-base-100 w-full">
       <div class="flex items-center space-x-2">
         <PromoDropdown title="avatar" desc="Use avatar component with any size" classes="" link="components/avatar">
           <div class="avatar online">
