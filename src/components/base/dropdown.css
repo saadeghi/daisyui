@@ -1,6 +1,9 @@
 .dropdown{
   @apply relative inline-block;
 }
+.dropdown>*:focus{
+  @apply outline-none;
+}
 .dropdown .dropdown-content{
   @apply opacity-0 invisible absolute z-50;
 }
