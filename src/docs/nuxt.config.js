@@ -1,8 +1,8 @@
-function getFiles(path, format= 'css') {
+function getFiles(path, format = 'css') {
   const fs = require('fs');
   let filesArray = [];
   fs.readdirSync(path).forEach(file => {
-    if(file.endsWith('.' + format) && !file.startsWith('index')){
+    if (file.endsWith('.' + format) && !file.startsWith('index')) {
       filesArray.push(path + '/' + file)
     }
   });
@@ -16,76 +16,90 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Tailwind css components plugin - daisyui tailwind component library' },
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
-      {
-        hid: 'twitter:url',
-        name: 'twitter:url',
-        content: 'https://daisyui.com'
+    meta: [{
+        charset: 'utf-8'
       },
       {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: 'DaisyUI Tailwind CSS Components'
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
       },
       {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content:
-          'Tailwind CSS component plugin. Use component classes like btn, card and more to Tailwind CSS'
+        hid: 'description',
+        name: 'description',
+        content: 'Tailwind css components plugin - daisyui tailwind component library'
       },
       {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: '/banner.png'
+        property: "og:site_name",
+        content: "Redfern Dev"
+      },
+      {
+        hid: "og:type",
+        property: "og:type",
+        content: "website"
+      },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://daisyui.com",
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Tailwind css components",
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "Tailwind css components plugin - daisyui tailwind component library",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/banner.png",
+      },
+      {
+        property: "og:image:width",
+        content: "740"
+      },
+      {
+        property: "og:image:height",
+        content: "300"
       },
 
-      // Open Graph
-      // Test on: https://developers.facebook.com/tools/debug/
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
       {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://daisyui.com'
+        name: "twitter:site",
+        content: "@bobross"
       },
       {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'DaisyUI Tailwind CSS Components'
+        name: "twitter:card",
+        content: "summary_large_image"
       },
       {
-        hid: 'og:description',
-        property: 'og:description',
-        content:
-          'Tailwind CSS component plugin. Use component classes like btn, card and more to Tailwind CSS'
+        hid: "twitter:url",
+        name: "twitter:url",
+        content: "https://daisyui.com",
       },
       {
-        hid: 'og:image',
-        property: 'og:image',
-        content: '/banner.png'
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Tailwind css components",
       },
       {
-        hid: 'og:image:secure_url',
-        property: 'og:image:secure_url',
-        content: '/banner.png'
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "Tailwind css components plugin - daisyui tailwind component library",
       },
       {
-        hid: 'og:image:alt',
-        property: 'og:image:alt',
-        content: 'DaisyUI'
-      }
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "/banner.png",
+      },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    link: [{
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
       // {
       //   rel: 'stylesheet',
       //   href: (process.env.NODE_ENV === 'production') ? 'https://cdn.jsdelivr.net/npm/daisyui@'+ process.env.DAISYUI_VERSION +'/dist/full.css' : ''
@@ -146,8 +160,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-  ],
+  modules: [],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
