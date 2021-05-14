@@ -26,7 +26,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Tailwind css components plugin - daisyui tailwind component library'
+        content: 'Tailwind CSS Components plugin - daisyui tailwind component library'
       },
       {
         property: "og:site_name",
@@ -45,17 +45,17 @@ export default {
       {
         hid: "og:title",
         property: "og:title",
-        content: "Tailwind css components",
+        content: "Tailwind CSS Components",
       },
       {
         hid: "og:description",
         property: "og:description",
-        content: "Tailwind css components plugin - daisyui tailwind component library",
+        content: "Tailwind CSS Components plugin - daisyui tailwind component library",
       },
       {
         hid: "og:image",
         property: "og:image",
-        content: "/banner.png",
+        content: "https://daisyui.com/banner.png",
       },
       {
         property: "og:image:width",
@@ -82,17 +82,17 @@ export default {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "Tailwind css components",
+        content: "Tailwind CSS Components",
       },
       {
         hid: "twitter:description",
         name: "twitter:description",
-        content: "Tailwind css components plugin - daisyui tailwind component library",
+        content: "Tailwind CSS Components plugin - daisyui tailwind component library",
       },
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: "/banner.png",
+        content: "https://daisyui.com/banner.png",
       },
     ],
     link: [{
