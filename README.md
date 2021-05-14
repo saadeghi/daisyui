@@ -195,5 +195,5 @@ Read the documents for more info
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://saadeghi.github.io/daisyui-demo/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-3.svg
-[banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/presentation/dark-theme-wide.png
+[banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png
 
