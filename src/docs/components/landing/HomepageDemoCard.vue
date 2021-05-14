@@ -8,7 +8,7 @@
       </div>
     </PromoDropdown>
     <div>
-      <PromoDropdown title="card" desc="Card component ise used to show products, features and more." classes="w-full" link="components/card">
+      <PromoDropdown title="card" desc="Card component is used to show products, features and more." classes="w-full" link="components/card">
         <div class="text-center">
           <div class="text-lg font-extrabold">Betsy Braddock</div>
           <div class="my-3 text-sm text-base-content text-opacity-60">

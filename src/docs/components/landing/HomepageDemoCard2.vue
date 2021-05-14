@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-visible shadow-xl card bg-base-100">
-    <PromoDropdown title="card" desc="Card component ise used to show products, features and more." classes="" link="components/card">
+    <PromoDropdown title="card" desc="Card component is used to show products, features and more." classes="" link="components/card">
       <figure>
         <img src="/card-1.png" width="300" height="187" class="rounded-t-box" alt="Card Tailwind CSS Component">
       </figure>
@@ -26,7 +26,7 @@
         Use card component to easily show blog posts, products, features, items and more.
       </p>
       <div class="justify-end card-actions">
-        <PromoDropdown title="button" desc="bottons come in various shapes, colors and sizes" classes="dropdown-top dropdown-end" link="components/button">
+        <PromoDropdown title="button" desc="Buttons come in various shapes, colors and sizes" classes="dropdown-top dropdown-end" link="components/button">
           <button class="btn btn-primary">Get Started</button>
         </PromoDropdown>
       </div>

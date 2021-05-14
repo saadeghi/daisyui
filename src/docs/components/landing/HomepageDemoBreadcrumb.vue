@@ -37,7 +37,7 @@
         <p class="text-sm text-opacity-80">Page views</p>
       </div>
       <div class="flex-0">
-        <PromoDropdown title="button" desc="bottons come in various shapes, colors and sizes" classes="dropdown-top dropdown-end" link="components/button">
+        <PromoDropdown title="button" desc="Buttons come in various shapes, colors and sizes" classes="dropdown-top dropdown-end" link="components/button">
           <div class="flex space-x-1">
             <Button classes="btn-ghost btn-square" aria-label="button component">
               <Icon glyph="eye" class="inline-block w-6 h-6 stroke-current" />

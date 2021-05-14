@@ -28,35 +28,35 @@
 
       <div class="grid gap-3">
 
-        <PromoDropdown title="progress" desc="Show pregressbar, loadings or simple bar charts using progress component" classes="" link="components/progress">
+        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="" link="components/progress">
           <div class="flex items-center">
             <span class="w-48 text-xs text-base-content text-opacity-60">Search Engines</span>
             <progress class="progress progress-success" value="50" max="100">
             </progress>
           </div>
         </PromoDropdown>
-        <PromoDropdown title="progress" desc="Show pregressbar, loadings or simple bar charts using progress component" classes="" link="components/progress">
+        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="" link="components/progress">
           <div class="flex items-center">
             <span class="w-48 text-xs text-base-content text-opacity-60">Direct</span>
             <progress class="progress progress-primary" value="30" max="100">
             </progress>
           </div>
         </PromoDropdown>
-        <PromoDropdown title="progress" desc="Show pregressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
+        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
           <div class="flex items-center">
             <span class="w-48 text-xs text-base-content text-opacity-60">Social Media</span>
             <progress class="progress progress-secondary" value="70" max="100">
             </progress>
           </div>
         </PromoDropdown>
-        <PromoDropdown title="progress" desc="Show pregressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
+        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
           <div class="flex items-center">
             <span class="w-48 text-xs text-base-content text-opacity-60">Emails</span>
             <progress class="progress progress-accent" value="90" max="100">
             </progress>
           </div>
         </PromoDropdown>
-        <PromoDropdown title="progress" desc="Show pregressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
+        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
           <div class="flex items-center">
             <span class="w-48 text-xs text-base-content text-opacity-60">Ad campaigns</span>
             <progress class="progress progress-warning" value="65" max="100">
