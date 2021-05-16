@@ -2,6 +2,14 @@
   @apply py-2;
   & > ul{
     & > li{
+      & > a{
+        &:focus {
+          @apply outline-none;
+        }
+        &:focus-visible {
+          @apply ring-2 ring-current ring-opacity-50 ring-inset;
+        }
+      }
       & + *:before{
         content: '';
         @apply block w-1.5 h-1.5 transform rotate-45 ml-2 mr-3 opacity-40;
