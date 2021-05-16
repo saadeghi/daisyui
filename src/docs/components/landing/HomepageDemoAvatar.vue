@@ -4,22 +4,22 @@
       <div class="flex items-center justify-between">
         <div class="avatar online">
           <div class="w-16 h-16 p-1 mask mask-squircle bg-base-100">
-            <img src="/profile-3@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
+            <img src="/tailwind-css-component-profile-3@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
           </div>
         </div>
         <div class="avatar online">
           <div class="w-16 h-16 p-1 mask mask-squircle bg-base-100">
-            <img src="/profile-2@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
+            <img src="/tailwind-css-component-profile-2@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
           </div>
         </div>
         <div class="avatar offline">
           <div class="w-16 h-16 p-1 mask mask-squircle bg-base-100">
-            <img src="/profile-4@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
+            <img src="/tailwind-css-component-profile-4@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
           </div>
         </div>
         <div class="avatar">
           <div class="w-16 h-16 p-1 mask mask-squircle bg-base-100">
-            <img src="/profile-5@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
+            <img src="/tailwind-css-component-profile-5@56w.png" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
     <PromoDropdown title="avatar" desc="Use avatar component with any size" classes="" link="components/avatar">
       <div class="avatar online">
         <div class="w-24 h-24 p-px mask mask-squircle bg-base-content bg-opacity-10">
-          <img src="/profile-1@94w.png" width="94" height="94" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
+          <img src="/tailwind-css-component-profile-1@94w.png" width="94" height="94" class="mask mask-squircle" alt="Avatar Tailwind CSS Component">
         </div>
       </div>
     </PromoDropdown>

@@ -2,7 +2,7 @@
   <div class="overflow-visible shadow-xl card bg-base-100">
     <PromoDropdown title="card" desc="Card component is used to show products, features and more." classes="" link="components/card">
       <figure>
-        <img src="/card-1.png" width="300" height="187" class="rounded-t-box" alt="Card Tailwind CSS Component">
+        <img src="/tailwind-css-component-card-1.png" width="300" height="187" class="rounded-t-box" alt="Card Tailwind CSS Component">
       </figure>
     </PromoDropdown>
     <div class="card-body">
