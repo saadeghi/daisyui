@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen pt-16 overflow-hidden hero bg-gradient-to-br from-primary to-secondary text-primary-content">
-    <div class="inline-block w-full transform scale-125 opacity-5 -rotate-12 text-base-content" v-html="svgLogoSolid"></div>
+    <div class="inline-block w-full transform scale-125 opacity-5 -rotate-12 text-neutral" v-html="svgLogoSolid"></div>
     <div class="flex-col justify-between w-full max-w-6xl mt-10 mb-48 hero-content">
       <h1 class="py-4 mb-2 font-extrabold text-center font-title lg:py-10 lg:py-0">
         <div class="mb-2 text-5xl lg:text-7xl">

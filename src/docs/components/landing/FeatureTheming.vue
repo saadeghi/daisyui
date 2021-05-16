@@ -1,14 +1,14 @@
 <template>
-  <div class="min-h-screen hero bg-gradient-to-br from-primary to-accent text-primary-content">
-    <div class="w-full text-center md:max-w-2xl hero-content">
-      <div class="w-full">
+  <div class="min-h-screen hero bg-gradient-to-br from-primary to-accent text-primary-content max-w-md md:max-w-full mx-auto">
+    <div class="text-center hero-content">
+      <div>
         <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">
           Powerful theming
         </h2>
         <h3 class="mb-5 text-3xl font-bold">
           Apply your own design decisions
         </h3>
-        <p class="w-full mx-auto mb-5 md:max-w-lg">
+        <p class="w-full mx-auto mb-5 max-w-lg">
           DaisyUI adds a set of semantic color names to Tailwind. So instead of
           using generic color names like
           <span class="badge badge-ghost">bg-blue-500</span>, we can use

@@ -1,10 +1,10 @@
 <template>
-  <div
+  <div id="nav"
     v-bind:class="{
-      'border-base-200 bg-base-100 text-base-content': isHomepage,
-      'border-neutral-focus border-opacity-30 bg-neutral text-neutral-content': !isHomepage
+      'border-transparent bg-transparent text-primary-content': isHomepage,
+      'border-base-200 bg-base-100 text-base-content': !isHomepage || toggleNavClass(),
     }"
-    class="fixed inset-x-0 top-0 z-50 w-full border-b"
+    class="fixed inset-x-0 top-0 z-50 w-full border-b transition duration-200 ease-in-out"
   >
     <div class="mx-auto space-x-1 navbar max-w-none">
       <div class="flex-none">
@@ -14,15 +14,21 @@
           </svg>
         </label>
       </div>
-      <div class="flex items-center flex-none">
+      <div class="flex items-center flex-none" v-if="!isHomepage || toggleNavClass()">
         <NuxtLink to="/" class="px-2 flex-0 btn btn-ghost md:px-4" aria-label="Homepage">
           <div class="inline-block text-3xl font-title text-primary">
-            <span class="lowercase">daisy</span><span class="uppercase" v-bind:class="{ 'text-base-content': isHomepage, 'text-neutral-content': !isHomepage }">UI</span>
+            <span class="lowercase">daisy</span><span class="uppercase text-base-content">UI</span>
           </div>
         </NuxtLink>
       </div>
-      <div class="font-mono text-xs opacity-50">
-        <span class="hidden lg:inline">version</span>&nbsp;{{ DAISYUI_VERSION }}
+      <div class="font-mono text-xs"
+          v-bind:class="{
+          'opacity-80 pl-2': isHomepage,
+          'hidden': toggleNavClass() && isHomepage,
+          'opacity-50': !isHomepage,
+        }"
+      >
+        <span class="hidden lg:inline xl:ml-2">version</span>&nbsp;{{ DAISYUI_VERSION }}
       </div>
       <div class="flex-1"></div>
       <div class="items-center flex-none hidden lg:block" v-if="isHomepage">
@@ -72,7 +78,11 @@
             />
           </svg>
         </div>
-        <div class="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content h-96 w-52 rounded-b-box bg-base-200 text-base-content">
+        <div class="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content h-96 w-52 rounded-b-box bg-base-200 text-base-content"
+          v-bind:class="{
+            'rounded-t-box': isHomepage && !toggleNavClass(),
+          }"
+        >
           <ul class="p-4 menu compact">
             <li v-for="(theme, index) in themes">
               <a tabindex="0" :data-set-theme="theme.id" data-act-class="active">{{ theme.name }}</a>
@@ -111,6 +121,7 @@ export default {
   data() {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
+      scrolled: false,
       themes: [
         { id: "", name: "🎨  Auto" },
         { id: "light", name: "🌝  light" },
@@ -134,8 +145,17 @@ export default {
         { id: "black", name: "🏴  black" },
         { id: "luxury", name: "💎  luxury" },
         { id: "dracula", name: "🧛‍♂️  dracula" },
-      ]
+      ],
     };
+  },
+  methods: {
+    toggleNavClass(){
+      if(this.scrolled == false){
+        return false
+      } else {
+        return true
+      }
+    }
   },
   computed: {
     isHomepage() {
@@ -144,6 +164,14 @@ export default {
   },
   mounted() {
     themeChange(false);
+    window.document.onscroll = () => {
+      let navBar = document.getElementById('nav');
+      if(window.scrollY > navBar.offsetTop){
+        this.scrolled = true;
+        } else {
+        this.scrolled = false;
+      }
+    }
   }
 };
 </script>

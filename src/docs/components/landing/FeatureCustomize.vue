@@ -1,14 +1,14 @@
 <template>
-  <div class="min-h-screen hero bg-neutral text-neutral-content">
-    <div class="w-full max-w-sm text-center md:max-w-2xl hero-content">
-      <div class="w-full">
+  <div class="min-h-screen hero bg-neutral text-neutral-content max-w-md md:max-w-full mx-auto">
+    <div class="text-center hero-content">
+      <div>
         <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">
           Highly customizable
         </h2>
         <h3 class="mb-5 text-3xl font-bold">
           using Tailwind's utility classes
         </h3>
-        <p class="w-full mx-auto mb-5 md:max-w-lg">
+        <p class="mx-auto mb-5 max-w-lg">
           DaisyUI is based on Tailwind's utility classes and all components have
           low specificity so you can customize everything using utility classes.
           <br />You can even
@@ -18,8 +18,8 @@
           using CSS variables.
         </p>
 
-        <div class="flex flex-col w-full max-w-xs mx-auto my-20 md:max-w-md lg:max-w-xl">
-          <div class="flex-1 w-full text-left shadow-lg mockup-code bg-neutral-focus">
+        <div class="flex flex-col my-20">
+          <div class="w-full text-left shadow-lg mx-auto mockup-code bg-neutral-focus max-w-xs sm:max-w-none">
             <pre><code>&#x3C;a class=&#x22;<span class="text-info">btn btn-primary</span>&#x22;&#x3E;Button&#x3C;/a&#x3E;</code></pre>
           </div>
 
@@ -27,7 +27,7 @@
             ↓
           </div>
 
-          <div class="flex-1 w-full text-left shadow-lg mockup-code bg-neutral-focus">
+          <div class="w-full text-left shadow-lg mx-auto mockup-code bg-neutral-focus max-w-xs sm:max-w-none">
             <pre><code>&#x3C;a class=&#x22;<span class="text-info">btn btn-primary</span> <span class="text-success">rounded-full</span>&#x22;&#x3E;Button&#x3C;/a&#x3E;</code></pre>
           </div>
         </div>
