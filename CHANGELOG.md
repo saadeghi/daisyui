@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.28.0](https://github.com/saadeghi/daisyui/compare/v0.27.2...v0.28.0) (2021-05-16)
+
+
+### Features
+
+* add focus style for breadcrumbs ([1ac20b5](https://github.com/saadeghi/daisyui/commit/1ac20b518be0c1e387b74c59ad28ae75bb24fe02))
+* add focus style for link ([475ba8b](https://github.com/saadeghi/daisyui/commit/475ba8b78b108b40aaf1b71c4273f97d618f89ae))
+* add focus style for menu item ([bc7f110](https://github.com/saadeghi/daisyui/commit/bc7f110e1d18158ae454e4585ff4621ad1649ef7))
+* add focus style for tab ([2ff73af](https://github.com/saadeghi/daisyui/commit/2ff73af15e2aceeb18a3869616b1b97410184d40))
+* better menu title color contrast ([6149345](https://github.com/saadeghi/daisyui/commit/61493454284638777ae45e277ec187d31ed30c69))
+
+
+### Bug Fixes
+
+* improve accordion border color ([7003a6d](https://github.com/saadeghi/daisyui/commit/7003a6db9c56ba2740dcaeea4052e75c7c91bf75))
+
 ### [0.27.2](https://github.com/saadeghi/daisyui/compare/v0.27.1...v0.27.2) (2021-05-14)
 
 
