@@ -11,4 +11,10 @@
   &-neutral{
     @apply text-neutral hover:text-neutral-focus;
   }
+  &:focus {
+    @apply outline-none;
+  }
+  &:focus-visible {
+    @apply ring-2 ring-current;
+  }
 }
