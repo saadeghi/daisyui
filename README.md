@@ -73,7 +73,7 @@ module.exports = {
   
 ```html
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/daisyui@0.27/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@0.28/dist/full.css" rel="stylesheet" type="text/css" />
 ```
 [ [Browse other versions][docs-url-install] ]
 
