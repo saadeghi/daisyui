@@ -60,7 +60,7 @@
       .accordion-body{
         @apply rounded-none;
       }
-      @apply border border-base-200 mb-2;
+      @apply border border-base-content border-opacity-20 mb-2;
       & input:checked + .accordion-title {
         @apply mt-0;
       }
