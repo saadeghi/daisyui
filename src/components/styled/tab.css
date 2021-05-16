@@ -5,6 +5,12 @@
   &.tab-active{
     @apply text-base-content border-base-content border-opacity-100;
   }
+  &:focus {
+    @apply outline-none;
+  }
+  &:focus-visible {
+    @apply ring-2 ring-current ring-inset;
+  }
 }
 .tab-bordered{
   @apply border-base-content border-opacity-20;
