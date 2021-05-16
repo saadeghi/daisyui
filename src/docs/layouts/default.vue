@@ -13,7 +13,7 @@
       <label for="main-menu" class="drawer-overlay"></label>
       <aside class="flex flex-col justify-between pt-16 border-r border-base-200 bg-base-100 text-base-content w-80">
         <div>
-          <Menu class="flex flex-col p-4 pb-10 compact">
+          <Menu class="flex flex-col p-4 pt-2 compact">
             <MenuItem class="mt-4 menu-title">
               <span>
                 Docs
@@ -32,12 +32,6 @@
               </NuxtLink>
             </MenuItem>
             <MenuItem>
-              <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/docs/config">
-                <Icon glyph="adjustments" class="inline-block w-6 h-6 mr-2 stroke-current" />
-                config
-              </NuxtLink>
-            </MenuItem>
-            <MenuItem>
               <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/docs/customize">
                 <Icon glyph="code" class="inline-block w-6 h-6 mr-2 stroke-current" />
                 customize components
@@ -46,16 +40,16 @@
             <MenuItem>
               <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/docs/default-themes">
                 <Icon glyph="color-swatch" class="inline-block w-6 h-6 mr-2 stroke-current" />
-                Default Themes
+                Themes
               </NuxtLink>
             </MenuItem>
             <MenuItem>
-              <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/docs/add-themes">
-                <Icon glyph="document-add" class="inline-block w-6 h-6 mr-2 stroke-current" />
-                Add Themes
+              <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/docs/config">
+                <Icon glyph="adjustments" class="inline-block w-6 h-6 mr-2 stroke-current" />
+                config
               </NuxtLink>
             </MenuItem>
-            <MenuItem>
+            <!--<MenuItem>
               <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/docs/features">
                 <Icon glyph="check" class="inline-block w-6 h-6 mr-2 stroke-current" />
                 Features
@@ -66,31 +60,29 @@
                 <Icon glyph="info" class="inline-block w-6 h-6 mr-2 stroke-current" />
                 What's included?
               </NuxtLink>
-            </MenuItem>
-            <MenuItem class="mt-4 menu-title">
+            </MenuItem>-->
+          <!--</Menu>
+          <Menu class="flex flex-col p-4 pt-0 compact">
+            <MenuItem class="menu-title">
               <span>
                 Core
               </span>
-            </MenuItem>
+            </MenuItem>-->
             <MenuItem>
               <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/core/colors">
-                <Icon glyph="color-swatch" class="inline-block w-6 h-6 mr-2 stroke-current" />
+                <Icon glyph="color" class="inline-block w-6 h-6 mr-2 fill-current" />
                 Colors
               </NuxtLink>
             </MenuItem>
             <MenuItem>
               <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/core/layout">
-                <Icon glyph="template" class="inline-block w-6 h-6 mr-2 stroke-current" />
-                Layout
-              </NuxtLink>
-            </MenuItem>
-            <MenuItem>
-              <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" to="/core/typography">
                 <Icon glyph="text" class="inline-block w-6 h-6 mr-2 fill-current" />
-                Typography
+                Layout & Typography
               </NuxtLink>
             </MenuItem>
-            <MenuItem class="mt-4 menu-title">
+          </Menu>
+          <Menu class="flex flex-col p-4 pt-0 compact">
+            <MenuItem class="menu-title">
               <span>
                 Components
               </span>
