@@ -16,10 +16,13 @@
       @apply text-current px-5 py-3;
     }
     a{
-      &:focus,
       &:hover,
-      &.active {
+      &:focus,
+      &.active{
         @apply bg-primary text-primary-content;
+      }
+      &:active{
+        @apply bg-primary-focus text-primary-content;
       }
     }
     &.disabled{
