@@ -24,7 +24,7 @@
       <p class="my-4">
         2. Then add DaisyUI to your <span class="badge badge-outline">tailwind.config.js</span>
       </p>
-      <div class="w-full max-w-4xl my-2">
+      <div class="w-full max-w-xl my-2">
         <div class="text-sm shadow-lg mockup-code">
         <pre><code>module.exports = {
 
@@ -36,10 +36,15 @@
         </div>
       </div>
 
-      <p class="my-4 mt-10">
-        If you are using <a target="_blank" class="link" href="https://windicss.org/">windicss</a>, make these changes to
-        <span class="badge badge-outline">tailwind.config.js</span>
-      </p>
+<ul class="accordion accordion-arrow accordion-bordered mt-10 max-w-xl">
+  <li class="accordion-item">
+    <input id="windi-guide" type="checkbox">
+    <label for="windi-guide" class="accordion-title">
+      <Icon glyph="info" class="inline-block w-5 h-5 mr-2 stroke-current" />
+      If you use WindiCSS, make these changes to
+      <span class="badge badge-outline">tailwind.config.js</span>
+  </label>
+    <div class="accordion-body">
       <div class="w-full max-w-4xl my-2">
         <div class="text-sm shadow-lg mockup-code">
         <pre><code><span class="badge badge-primary">const { transform } = require('windicss/helpers')</span>
@@ -50,7 +55,7 @@
         <span class="badge badge-primary">transform('daisyui'),</span>
       ],
 
-      <span class="text-neutral-content text-opacity-20">// OPTIONAL: if you want to use DaisyUI colors everywhere</span>
+      <span class="text-neutral-content text-opacity-40">// OPTIONAL: if you want to use DaisyUI colors everywhere</span>
       theme: {
         extend: {
           <span class="badge badge-primary">colors: require('daisyui/colors/windi'),</span>
@@ -60,73 +65,31 @@
     }</code></pre>
         </div>
       </div>
+    </div>
+  </li>
+</ul>
 
       <h2 class="mt-20 text-5xl font-bold">
         <span class="text-primary">Method 2: </span>
-        <span>Use a CDN</span>
+        <span>Use CDN file</span>
       </h2>
 
       <p class="mt-4 prose text-base-content">
-        You don't need to install anything. You can just add the CSS file. However, you can't customize anything and you can't purge unused styles.
-      </p>
-      <p class="mt-4 font-bold text-primary">
-        You have 3 options:
+        You don't need to install anything. Just add the CSS file to your &lt;head&gt; tag.
+        <br>However, these files are large for production and you can't purge unused styles.
       </p>
 
-      <div class="mt-10 text-base-content">
-        <h2 class="text-2xl font-bold">1. Base version</h2>
-        <p class="prose">
-          <ul>
-            <li>Unstyled UI components (skeleton only)</li>
-            <li>No color, no visual style</li>
-            <li>You need to style elements yourself</li>
-            <li>You need to add Tailwind CSS Separately</li>
-          </ul>
-        </p>
-      </div>
-
       <div class="w-full max-w-4xl my-2">
         <div class="text-sm shadow-lg mockup-code">
-          <pre><code><span class="text-neutral-content text-opacity-20">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{{ DAISYUI_VERSION }}/dist/base.css<span class="text-neutral-content text-opacity-20">" rel="stylesheet" type="text/css" /&gt;</span></code></pre>
+          <pre><code>
+  <span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
+  <span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{{ DAISYUI_VERSION }}/dist/full.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
+
+</code></pre>
         </div>
       </div>
 
 
-      <div class="mt-10 text-base-content">
-        <h2 class="text-2xl font-bold">2. Styled version</h2>
-        <p class="prose">
-          <ul>
-            <li>Ready-to-use styled UI components</li>
-            <li>You can't use DaisyUI colors (like primary, secondary, etc...) on other elements</li>
-            <li>You need to add Tailwind CSS Separately</li>
-          </ul>
-        </p>
-      </div>
-
-      <div class="w-full max-w-4xl my-2">
-        <div class="text-sm shadow-lg mockup-code">
-          <pre><code><span class="text-neutral-content text-opacity-20">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{{ DAISYUI_VERSION }}/dist/styled.css<span class="text-neutral-content text-opacity-20">" rel="stylesheet" type="text/css" /&gt;</span></code></pre>
-        </div>
-      </div>
-
-
-
-      <div class="mt-10 text-base-content">
-        <h2 class="text-2xl font-bold">3. Full version</h2>
-        <p class="prose">
-          <ul>
-            <li>Ready-to-use styled UI components</li>
-            <li>Tailwind's default style included</li>
-            <li>You can use DaisyUI colors on all elements</li>
-          </ul>
-        </p>
-      </div>
-
-      <div class="w-full max-w-4xl my-2">
-        <div class="text-sm shadow-lg mockup-code">
-          <pre><code><span class="text-neutral-content text-opacity-20">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{{ DAISYUI_VERSION }}/dist/full.css<span class="text-neutral-content text-opacity-20">" rel="stylesheet" type="text/css" /&gt;</span></code></pre>
-        </div>
-      </div>
 
 
     </Wrapper>

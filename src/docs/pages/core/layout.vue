@@ -5,6 +5,12 @@
       <span class="text-primary">Layout</span>
     </h2>
 
+    <div class="tabs mb-10">
+      <NuxtLink to="/core/layout" class="tab tab-lifted tab-active"><Icon glyph="template" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Layout</NuxtLink>
+      <NuxtLink to="/core/typography" class="tab tab-lifted"><Icon glyph="text" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 fill-current" />Typography</NuxtLink>
+      <span class="tab tab-lifted flex-grow cursor-default hidden sm:block"></span>
+    </div>
+
     <Wrapper nocode class="prose text-base-content">
       <p>Layout, sizing, grids, spacing, etc... all will be handled by Tailwind CSS's utility classes</p>
       <p>

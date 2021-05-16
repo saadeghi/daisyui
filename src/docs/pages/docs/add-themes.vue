@@ -1,20 +1,25 @@
 <template>
   <div>
     <h2 class="my-6 text-5xl font-bold">
-      <span class="text-primary">Add Themes</span>
+      <span class="text-primary">Add your own theme</span>
     </h2>
-    <Wrapper nocode>
 
-      <p class="mb-4 text-base-content text-opacity-60">
-        DaisyUI uses HSL color system for better theming.
-      </p>
-      <p class="mb-4 prose">
-        You can set up 3 values of H,S,L (hue, saturation, lightness) for each color in your CSS file. It can be your main Tailwind CSS file or a file you @import to your main CSS file.
-        <br>You can easily do this on <NuxtLink to="/core/colors">DaisyUI Color Generator</NuxtLink>
-      </p>
+    <div class="tabs mb-10">
+      <NuxtLink to="/docs/default-themes" class="tab tab-lifted"><Icon glyph="color-swatch" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Use themes</NuxtLink>
+      <NuxtLink to="/docs/add-themes" class="tab tab-lifted tab-active"><Icon glyph="document-add" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Add your own theme</NuxtLink>
+      <span class="tab tab-lifted flex-grow cursor-default hidden sm:block"></span>
+    </div>
 
-      <div class="w-full max-w-4xl my-2">
-        <div class="shadow-lg mockup-code">
+    <p class="mb-4 text-base-content text-opacity-60">
+      DaisyUI uses HSL color system for better theming.
+    </p>
+    <p class="mb-4 prose">
+      You can set up 3 values of H,S,L (hue, saturation, lightness) for each color in your CSS file. It can be your main Tailwind CSS file or a file you @import to your main CSS file.
+      <br>You can easily do this on <NuxtLink to="/core/colors">DaisyUI Color Generator</NuxtLink>
+    </p>
+
+    <div class="w-full max-w-4xl my-2">
+      <div class="shadow-lg mockup-code">
         <pre><code>:root {
 
       <img src="https://via.placeholder.com/15/793ef9/000000?text=+" class="inline-block rounded"> --p: 340 82% 62%; <span class="text-neutral-content text-opacity-20">/* Primary color */</span>
@@ -58,18 +63,18 @@
       <img src="https://via.placeholder.com/15/793ef9/000000?text=+" class="inline-block rounded"> --p: 259 94% 61%;
       <img src="https://via.placeholder.com/15/570df8/000000?text=+" class="inline-block rounded"> --pf: 259 94% 51%;
     }</code></pre>
-        </div>
       </div>
+    </div>
 
-      <p class="mb-4 prose">
-        As you can see, we are not overwriting all colors for dark theme we changed base colors to dark colors, then we made neutral colors darker and we made primary colors lighter so it fits on dark base color.
-      </p>
-      <p class="my-4 font-bold">
-        You can add more themes
-      </p>
+    <p class="mb-4 prose">
+      As you can see, we are not overwriting all colors for dark theme we changed base colors to dark colors, then we made neutral colors darker and we made primary colors lighter so it fits on dark base color.
+    </p>
+    <p class="my-4 font-bold">
+      You can add more themes
+    </p>
 
-      <div class="w-full max-w-4xl my-2">
-        <div class="shadow-lg mockup-code">
+    <div class="w-full max-w-4xl my-2">
+      <div class="shadow-lg mockup-code">
         <pre><code>[data-theme='retro'] {
       <img src="https://via.placeholder.com/15/ef9995/000000?text=+" class="inline-block rounded"> --p: 3 74% 76%;
       <img src="https://via.placeholder.com/15/e86f68/000000?text=+" class="inline-block rounded"> --pf: 3 74% 66%;
@@ -97,22 +102,22 @@
       <img src="https://via.placeholder.com/15/ff9900/000000?text=+" class="inline-block rounded"> --wa: 36 100% 50%;
       <img src="https://via.placeholder.com/15/ff5724/000000?text=+" class="inline-block rounded"> --er: 14 100% 57%;
     }</code></pre>
-        </div>
       </div>
+    </div>
 
 
 
 
-      <h2 class="my-6 text-3xl font-bold">
-        <span class="text-primary">Other variables</span>
-      </h2>
+    <h2 class="my-6 text-3xl font-bold">
+      <span class="text-primary">Other variables</span>
+    </h2>
 
-      <p class="my-4 text-lg">
-        You can also set more variables to customize your theme.
-      </p>
+    <p class="my-4 text-lg">
+      You can also set more variables to customize your theme.
+    </p>
 
-      <div class="w-full max-w-4xl my-2">
-        <div class="shadow-lg mockup-code">
+    <div class="w-full max-w-4xl my-2">
+      <div class="shadow-lg mockup-code">
         <pre><code>--rounded-box: 1rem; <span class="text-neutral-content text-opacity-20">/* border-radius for cards and other big elements */</span>
     --rounded-btn: 0.5rem; <span class="text-neutral-content text-opacity-20">/* border-radius for buttons and similar elements */</span>
     --rounded-badge: 9999px; <span class="text-neutral-content text-opacity-20">/* border-radius for badge and other small elements */</span>
@@ -127,45 +132,45 @@
     --border-btn: 1px; <span class="text-neutral-content text-opacity-20">/* default border size for button */</span>
     --focus-ring: 2px; <span class="text-neutral-content text-opacity-20">/* focus ring size for button and inputs */</span>
     --focus-ring-offset: 2px; <span class="text-neutral-content text-opacity-20">/* focus ring offset size for button and inputs */</span></code></pre>
-        </div>
       </div>
+    </div>
 
-      <h2 class="my-6 text-3xl font-bold">
-        <span class="text-primary">Respecting OS color scheme</span>
-      </h2>
+    <h2 class="my-6 text-3xl font-bold">
+      <span class="text-primary">Respecting OS color scheme</span>
+    </h2>
 
-      <p class="my-4 text-lg">
-        If you want to show dark mode for people who are using a dark mode on their OS:
-      </p>
+    <p class="my-4 text-lg">
+      If you want to show dark mode for people who are using a dark mode on their OS:
+    </p>
 
-      <div class="w-full max-w-4xl my-2">
-        <div class="shadow-lg mockup-code">
+    <div class="w-full max-w-4xl my-2">
+      <div class="shadow-lg mockup-code">
         <pre><code>@media (prefers-color-scheme: dark){
       :root{
         --d: 223 14% 10%;
         <span class="text-neutral-content text-opacity-20">/* ...rest of colors */</span>
       }
     }</code></pre>
-        </div>
       </div>
+    </div>
 
-      <h2 class="my-6 text-3xl font-bold">
-        <span class="text-primary">How to enable/change themes?</span>
-      </h2>
+    <h2 class="my-6 text-3xl font-bold">
+      <span class="text-primary">How to enable/change themes?</span>
+    </h2>
 
-      <p class="my-4 text-lg prose">
-        You just need to add <span class="badge badge-outline">data-theme="dark"</span> to your <span class="badge badge-outline">&lt;html&gt;</span> tag. Easiest way to handle it with JavaScript is to this tiny library: <a href="https://github.com/saadeghi/theme-change" target="_blank">them-change</a>
-      </p>
+    <p class="my-4 text-lg prose">
+      You just need to add <span class="badge badge-outline">data-theme="dark"</span> to your <span class="badge badge-outline">&lt;html&gt;</span> tag. Easiest way to handle it with JavaScript is to this tiny library: <a href="https://github.com/saadeghi/theme-change" target="_blank">them-change</a>
+    </p>
 
-      <h2 class="my-6 text-3xl font-bold">
-        <span class="text-primary">Force a specific theme for a section</span>
-      </h2>
-      <p class="my-4 text-lg prose">
-        You can force a section of your HTML to only use a specific theme.
-      </p>
+    <h2 class="my-6 text-3xl font-bold">
+      <span class="text-primary">Force a specific theme for a section</span>
+    </h2>
+    <p class="my-4 text-lg prose">
+      You can force a section of your HTML to only use a specific theme.
+    </p>
 
-      <div class="w-full max-w-4xl my-2">
-        <div class="shadow-lg mockup-code">
+    <div class="w-full max-w-4xl my-2">
+      <div class="shadow-lg mockup-code">
         <pre><code>&lt;html <span class="badge badge-primary">data-theme="dark"</span>&gt;
 
       &lt;div <span class="badge badge-primary">data-theme="light"</span>&gt;
@@ -176,45 +181,44 @@
       &lt;/div&gt;
 
     &lt;/html&gt;</code></pre>
-        </div>
       </div>
+    </div>
 
-      <h2 class="my-6 text-3xl font-bold">
-        <span class="text-primary">PurgeCSS Whitelist</span>
-      </h2>
-      <p class="my-4 text-lg prose">
-        If you're using Purge CSS, you might need to safe list your CSS using the comments below because your secondary themes will be purged.
-      </p>
-      <p class="my-4 text-lg font-bold">
-        Add this to your PurgeCSS config:
-      </p>
+    <h2 class="my-6 text-3xl font-bold">
+      <span class="text-primary">PurgeCSS Whitelist</span>
+    </h2>
+    <p class="my-4 text-lg prose">
+      If you're using Purge CSS, you might need to safe list your CSS using the comments below because your secondary themes will be purged.
+    </p>
+    <p class="my-4 text-lg font-bold">
+      Add this to your PurgeCSS config:
+    </p>
 
-      <div class="w-full max-w-4xl my-2">
-        <div class="shadow-lg mockup-code">
+    <div class="w-full max-w-4xl my-2">
+      <div class="shadow-lg mockup-code">
         <pre><code>options: {
       safelist: [
         <span class="badge badge-primary">/data-theme$/,</span>
       ],
     },</code></pre>
-        </div>
       </div>
+    </div>
 
-      <p class="my-4 text-lg font-bold">
-        Or use CSS comments:
-      </p>
+    <p class="my-4 text-lg font-bold">
+      Or use CSS comments:
+    </p>
 
-      <div class="w-full max-w-4xl my-2">
-        <div class="shadow-lg mockup-code">
+    <div class="w-full max-w-4xl my-2">
+      <div class="shadow-lg mockup-code">
         <pre><code><span class="badge badge-primary">/*! purgecss start ignore */</span>
     [data-theme='dark'] {
       <span class="text-neutral-content text-opacity-20">...</span>
     }
     <span class="badge badge-primary">/*! purgecss end ignore */</span></code></pre>
-        </div>
       </div>
+    </div>
 
 
-    </Wrapper>
 
 
 
@@ -222,8 +226,8 @@
 
 
     <div class="flex justify-end max-w-4xl pt-10 mt-20 border-t-2 border-base-200">
-      <NuxtLink to="/docs/features" class="text-xs btn-lg btn lg:text-lg">
-        Next: features
+      <NuxtLink to="/core/colors" class="text-xs btn-lg btn lg:text-lg">
+        Next: Colors
         <Icon glyph="arrow" class="inline-block w-6 h-6 ml-2 stroke-current" />
       </NuxtLink>
     </div>
@@ -232,11 +236,12 @@
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      DAISYUI_VERSION: process.env.DAISYUI_VERSION,
+  export default {
+    data() {
+      return {
+        DAISYUI_VERSION: process.env.DAISYUI_VERSION,
+      }
     }
   }
-}
+
 </script>
