@@ -190,7 +190,7 @@ Read the documents for more info
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
-[tw-play-url]: https://play.tailwindcss.com/RcIZd1Mwho
+[tw-play-url]: https://play.tailwindcss.com/5du2H2Kyvq
 [codepen-url]: https://codepen.io/saadeghi/pen/gOwWKvv
 [unpkg-url]: https://unpkg.com/browse/daisyui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
