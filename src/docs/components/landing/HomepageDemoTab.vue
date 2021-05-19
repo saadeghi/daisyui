@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <PromoDropdown title="tab" desc="beautiful tabs to sweitch between sections" classes="" link="components/tab">
+    <PromoDropdown title="tab" desc="Beautiful tabs to switch between sections" classes="" link="components/tab">
       <div class="flex-grow-0 tabs w-full">
         <button class="flex-1 tab tab-lifted tab-lg tab-border-none tab-active">Stats</button>
         <button class="flex-1 tab tab-lifted tab-lg tab-border-none">Info</button>
