@@ -1,0 +1,104 @@
+.tooltip{
+  @apply inline-block relative;
+  --tooltip-tail: 3px;
+  --tooltip-color: hsl(var(--n, 219 14% 28%));
+  --tooltip-text-color: hsl(var(--nc, 0 0% 100%));
+  --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
+}
+.tooltip:before,
+.tooltip:after{
+  @apply opacity-0 transition delay-100 duration-200 ease-in-out;
+}
+.tooltip:after{
+  @apply absolute;
+}
+.tooltip:before{
+  @apply rounded text-sm px-2;
+  background-color: var(--tooltip-color);
+  color: var(--tooltip-text-color);
+}
+.tooltip.tooltip-open:before,
+.tooltip.tooltip-open:after,
+.tooltip:hover:before,
+.tooltip:hover:after{
+  @apply opacity-100 delay-75;
+}
+.tooltip:after{
+  content: '';
+  border-style: solid;
+  border-width: var(--tooltip-tail, 0);
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+}
+.tooltip{
+  &:after{
+    transform: translateX(-50%);
+    border-color: var(--tooltip-color) transparent transparent transparent;
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: var(--tooltip-tail-offset);
+  }
+}
+.tooltip-bottom{
+  &:after{
+    transform: translateX(-50%);
+    border-color: transparent transparent var(--tooltip-color) transparent;
+    top: var(--tooltip-tail-offset);
+    left: 50%;
+    right: auto;
+    bottom: auto;
+  }
+}
+.tooltip-left{
+  &:after{
+    transform: translateY(-50%);
+    border-color: transparent transparent transparent var(--tooltip-color);
+    top: 50%;
+    left: auto;
+    right: calc(var(--tooltip-tail-offset) + 1px);
+    bottom: auto;
+  }
+}
+.tooltip-right{
+  &:after{
+    transform: translateY(-50%);
+    border-color: transparent var(--tooltip-color) transparent transparent;
+    top: 50%;
+    left: calc(var(--tooltip-tail-offset) + 1px);
+    right: auto;
+    bottom: auto;
+  }
+}
+.tooltip{
+  &-primary{
+    --tooltip-color: hsl(var(--p, 259 94% 51%));
+    --tooltip-text-color: hsl(var(--pc, 0 0% 100%));
+  }
+  &-secondary{
+    --tooltip-color: hsl(var(--s, 314 100% 47%));
+    --tooltip-text-color: hsl(var(--sc, 0 0% 100%));
+  }
+  &-accent{
+    --tooltip-color: hsl(var(--a, 174 60% 51%));
+    --tooltip-text-color: hsl(var(--ac, 0 0% 100%));
+  }
+  &-info{
+    --tooltip-color: hsla(var(--in, 207 90% 54%) / .1);
+    --tooltip-text-color: hsl(var(--in, 207 90% 54%));
+  }
+  &-success{
+    --tooltip-color: hsla(var(--su, 174 100% 29%) / .1);
+    --tooltip-text-color: hsl(var(--su, 174 100% 29%));
+  }
+  &-warning{
+    --tooltip-color: hsla(var(--wa, 36 100% 50%) / .1);
+    --tooltip-text-color: hsl(var(--wa, 36 100% 50%));
+  }
+  &-error{
+    --tooltip-color: hsla(var(--er, 14 100% 57%) / .1);
+    --tooltip-text-color: hsl(var(--er, 14 100% 57%));
+  }
+}

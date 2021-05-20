@@ -127,6 +127,7 @@ export default {
         'collapse',
         'carousel',
         'dropdown',
+        'tooltip',
       ],
     }
   },

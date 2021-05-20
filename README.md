@@ -161,7 +161,7 @@ Read the documents for more info
 - [x] Tabs
 - [ ] Timeline
 - [ ] Toast
-- [ ] Tooltip
+- [x] Tooltip
 - [ ] Treeview
 
 </details>

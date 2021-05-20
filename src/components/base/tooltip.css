@@ -1,0 +1,46 @@
+.tooltip{
+  @apply inline-block relative;
+  --tooltip-offset: calc(100% + 1px + var(--tooltip-tail, 0px));
+}
+.tooltip:before{
+  @apply absolute;
+}
+.tooltip:before{
+  content: attr(data-tip);
+}
+.tooltip{
+  &:before{
+    transform: translateX(-50%);
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: var(--tooltip-offset);
+  }
+}
+.tooltip-bottom{
+  &:before{
+    transform: translateX(-50%);
+    top: var(--tooltip-offset);
+    left: 50%;
+    right: auto;
+    bottom: auto;
+  }
+}
+.tooltip-left{
+  &:before{
+    transform: translateY(-50%);
+    top: 50%;
+    left: auto;
+    right: var(--tooltip-offset);
+    bottom: auto;
+  }
+}
+.tooltip-right{
+  &:before{
+    transform: translateY(-50%);
+    top: 50%;
+    left: var(--tooltip-offset);
+    right: auto;
+    bottom: auto;
+  }
+}
