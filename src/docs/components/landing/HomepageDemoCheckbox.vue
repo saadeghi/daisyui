@@ -26,7 +26,7 @@
           </label>
         </div>
       </PromoDropdown>
-      <PromoDropdown title="radio" desc="Colorful, animated and accessible" classes="dropdown-end w-full dropdown-top" link="components/form/radio">
+      <PromoDropdown title="radio" desc="Colorful, animated and accessible" classes="dropdown-end w-full" link="components/form/radio">
         <div class="flex justify-around p-4 space-x-4">
           <label aria-label="radio CSS component">
             <input type="radio" name="opt" class="radio">

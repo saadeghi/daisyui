@@ -88,8 +88,8 @@
               </span>
             </MenuItem>
             <MenuItem v-for="(item, itemindex) in componentPages" v-bind:key="item.itemindex" v-bind:class="{ 'disabled' : !item.path }">
-              <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize" v-if="item.path" :to="item.path">
-                {{ item.name }}
+              <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize justify-between" v-if="item.path" :to="item.path">
+                {{ item.name }} <span v-if="item.new" class="badge badge-sm">new</span>
               </NuxtLink>
             </MenuItem>
             <MenuItem class="mt-4 menu-title">
@@ -123,6 +123,11 @@ export default {
       componentPages: [],
       demoPages: [],
       showMainMenu: false,
+      newComponents: [
+        'collapse',
+        'carousel',
+        'dropdown',
+      ],
     }
   },
   created () {
@@ -147,6 +152,7 @@ export default {
         this.componentPages.push({
           name: routeOption.name.replace("components-", ""),
           path: routeOption.path,
+          new: this.newComponents.includes(routeOption.name.replace("components-", "")),
         })
       }
     })
