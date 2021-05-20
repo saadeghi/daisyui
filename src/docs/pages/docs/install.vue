@@ -36,15 +36,15 @@
         </div>
       </div>
 
-<ul class="accordion accordion-arrow accordion-bordered mt-10 max-w-xl">
-  <li class="accordion-item">
-    <input id="windi-guide" type="checkbox">
-    <label for="windi-guide" class="accordion-title">
+
+  <div class="collapse max-w-xl rounded-box border border-base-300 collapse-arrow">
+    <input type="checkbox">
+    <div class="collapse-title">
       <Icon glyph="info" class="inline-block w-5 h-5 mr-2 stroke-current" />
       If you use WindiCSS, make these changes to
       <span class="badge badge-outline">tailwind.config.js</span>
-  </label>
-    <div class="accordion-body">
+    </div>
+    <div class="collapse-content">
       <div class="w-full max-w-4xl my-2">
         <div class="text-sm shadow-lg mockup-code">
         <pre><code><span class="badge badge-primary">const { transform } = require('windicss/helpers')</span>
@@ -66,8 +66,8 @@
         </div>
       </div>
     </div>
-  </li>
-</ul>
+  </div>
+
 
       <h2 class="mt-20 text-5xl font-bold">
         <span class="text-primary">Method 2: </span>

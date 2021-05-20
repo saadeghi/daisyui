@@ -1,0 +1,69 @@
+.collapse{
+  @apply outline-none;
+}
+.collapse-title{
+  min-height: 3.75rem;
+}
+.collapse-arrow .collapse-title:after{
+  @apply transition-all ease-in-out duration-300 w-2 h-2 block absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  content: '';
+  transform-origin: 75% 75%;
+  transform: rotate(45deg);
+  box-shadow: 2px 2px;
+}
+.collapse-plus .collapse-title:after{
+  @apply transition-all ease-in-out duration-300 w-2 h-2 block absolute;
+  top: .9rem;
+  right: 1.4rem;
+  content: '+';
+}
+
+.collapse:not(.collapse-open):not(.collapse-close) input[type=checkbox],
+.collapse:not(.collapse-open):not(.collapse-close) .collapse-title{
+  @apply cursor-pointer;
+}
+.collapse:focus:not(.collapse-open):not(.collapse-close) .collapse-title{
+  cursor: unset;
+}
+.collapse-title,
+.collapse>input[type=checkbox]{
+  @apply p-4;
+  transition: background-color .2s ease-in-out;
+}
+
+.collapse:not(.collapse-close) input[type=checkbox]:focus ~ .collapse-title{
+  @apply bg-base-200;
+}
+
+.collapse-open .collapse-title,
+.collapse:focus:not(.collapse-close) .collapse-title,
+.collapse:not(.collapse-close) input[type=checkbox]:checked ~ .collapse-title{
+  @apply outline-none bg-base-200;
+}
+
+.collapse-content{
+  @apply px-4;
+  cursor: unset;
+  transition: padding .2s ease-in-out, background-color .2s ease-in-out;
+}
+.collapse-open .collapse-content,
+.collapse:focus:not(.collapse-close) .collapse-content,
+.collapse:not(.collapse-close) input[type=checkbox]:checked ~ .collapse-content{
+  @apply pb-4 opacity-100 bg-base-200;
+  transition: padding .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.collapse-open.collapse-arrow .collapse-title:after,
+.collapse-arrow:focus:not(.collapse-close) .collapse-title:after,
+.collapse-arrow:not(.collapse-close) input[type=checkbox]:checked ~ .collapse-title:after
+{
+  transform: rotate(225deg);
+}
+.collapse-open.collapse-plus .collapse-title:after,
+.collapse-plus:focus:not(.collapse-close) .collapse-title:after,
+.collapse-plus:not(.collapse-close) input[type=checkbox]:checked ~ .collapse-title:after
+{
+  content: '−';
+}

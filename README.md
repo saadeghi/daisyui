@@ -108,7 +108,6 @@ Read the documents for more info
   List of components
 </summary>
 
-- [x] Accordion
 - [x] Alert
 - [x] Artboard
 - [ ] App bar
@@ -123,6 +122,7 @@ Read the documents for more info
 - [x] Carousel
 - [x] Card
 - [ ] Chat bubble
+- [x] Collapse (Accordion)
 - [ ] Comment
 - [x] Countdown
 - [ ] Cover
