@@ -2,7 +2,7 @@
   &.horizontal{
     li{
       &.bordered{
-        a, span{
+        >a, >span{
           @apply border-l-0 border-b-4 border-primary;
         }
       }
@@ -12,10 +12,10 @@
     @apply rounded-btn;
   }
   li{
-    a, span{
+    >a, >span{
       @apply text-current px-5 py-3;
     }
-    a{
+    >a{
       &:hover,
       &:focus,
       &.active{
@@ -45,12 +45,14 @@
     @apply pl-6;
   }
   &.compact{
-    a, span{
-      @apply py-2 text-sm;
+    li{
+      >a, >span{
+        @apply py-2 text-sm;
+      }
     }
   }
   .menu-title{
-    a, span{
+    >a, >span{
       @apply py-1 text-xs text-base-content text-opacity-40;
     }
   }

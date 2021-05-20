@@ -8,10 +8,10 @@
   }
   li{
     @apply flex flex-col items-stretch;
-    a, span{
+    >a, >span{
       @apply flex items-center transition ease-in-out duration-200;
     }
-    a{
+    >a{
       @apply cursor-pointer;
       &:focus {
         @apply outline-none;
