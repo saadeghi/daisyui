@@ -17,10 +17,10 @@
   }
 }
 .stat+.stat{
-  @apply border-l border-base-300;
+  @apply border-l border-base-content border-opacity-10;
 }
 .stats.grid-flow-row{
   .stat+.stat{
-    @apply border-l-0 border-t border-base-content border-opacity-10;
+    @apply border-l-0 border-t;
   }
 }
