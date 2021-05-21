@@ -1,0 +1,63 @@
+.steps {
+  .step {
+    grid-template-rows: 40px 1fr;
+    min-width: 4rem;
+    &:before {
+      @apply bg-base-300 text-base-content h-2 w-full top-0 col-start-1 row-start-1;
+      content: '';
+      margin-left: -100%;
+    }
+    &:after {
+      content: counter(step);
+      counter-increment: step;
+      z-index: 1;
+      @apply relative rounded-full w-8 h-8 bg-base-300 text-base-content block col-start-1 row-start-1 place-self-center grid place-items-center;
+    }
+    &:first-child:before{
+      content: none;
+    }
+    &[data-content]:after{
+      content: attr(data-content);
+    }
+  }
+  .step-neutral + .step-neutral:before,
+  .step-neutral:after{
+    @apply bg-neutral text-neutral-content;
+  }
+  .step-primary + .step-primary:before,
+  .step-primary:after{
+    @apply bg-primary text-primary-content;
+  }
+  .step-secondary + .step-secondary:before,
+  .step-secondary:after{
+    @apply bg-secondary text-secondary-content;
+  }
+  .step-accent + .step-accent:before,
+  .step-accent:after{
+    @apply bg-accent text-accent-content;
+  }
+  .step-info + .step-info:before{
+    @apply bg-info;
+  }
+  .step-info:after{
+    @apply bg-info text-base-100;
+  }
+  .step-success + .step-success:before{
+    @apply bg-success;
+  }
+  .step-success:after{
+    @apply bg-success text-base-100;
+  }
+  .step-warning + .step-warning:before{
+    @apply bg-warning;
+  }
+  .step-warning:after{
+    @apply bg-warning text-base-100;
+  }
+  .step-error + .step-error:before{
+    @apply bg-error;
+  }
+  .step-error:after{
+    @apply bg-error text-base-100;
+  }
+}

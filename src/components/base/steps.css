@@ -1,0 +1,9 @@
+.steps {
+  counter-reset: step;
+  grid-auto-columns: 1fr;
+  @apply inline-grid grid-flow-col overflow-hidden overflow-x-auto;
+
+  .step {
+    @apply grid grid-cols-1 grid-rows-2 place-items-center text-center;
+  }
+}
