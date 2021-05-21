@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/saadeghi/daisyui/compare/v0.28.0...v1.0.0) (2021-05-21)
+
+
+### Features
+
+* add avatar-group component ([b5f37bc](https://github.com/saadeghi/daisyui/commit/b5f37bc10fa496ae7beeef8886c56327dc735c03))
+* add stat component ([ceba7d0](https://github.com/saadeghi/daisyui/commit/ceba7d0bc7abe5acfe9ee0a766fadec56f113346))
+* add steps component ([19b402d](https://github.com/saadeghi/daisyui/commit/19b402de95c34e28de3e07d9fd07a4e126f8e23c))
+* add table component ([7d4d246](https://github.com/saadeghi/daisyui/commit/7d4d246b5f5b076d9887c3a10bc2acf284c49c4c))
+* add tooltip component ([0e276d1](https://github.com/saadeghi/daisyui/commit/0e276d19e9801de5cf377ff9b974e74bd8a43f60))
+
+
+### Bug Fixes
+
+* more strict menu style ([494bc7a](https://github.com/saadeghi/daisyui/commit/494bc7ac1a5cbcf45b81945ba796fa09cb39690c))
+
 ## [0.28.0](https://github.com/saadeghi/daisyui/compare/v0.27.2...v0.28.0) (2021-05-16)
 
 
