@@ -89,7 +89,9 @@
             </MenuItem>
             <MenuItem v-for="(item, itemindex) in componentPages" v-bind:key="item.itemindex" v-bind:class="{ 'disabled' : !item.path }">
               <NuxtLink v-on:click.native="showMainMenu = false" class="capitalize justify-between" v-if="item.path" :to="item.path">
-                {{ item.name }} <span v-if="item.new" class="badge badge-sm">new</span>
+                {{ item.name }}
+                <span v-if="item.new" class="badge badge-sm">new</span>
+                <span v-if="item.updated" class="badge badge-sm badge-outline">updated</span>
               </NuxtLink>
             </MenuItem>
             <MenuItem class="mt-4 menu-title">
@@ -129,7 +131,11 @@ export default {
         'dropdown',
         'tooltip',
         'stat',
+        'steps',
         'table',
+      ],
+      updatedComponents: [
+        'avatar',
       ],
     }
   },
@@ -156,6 +162,7 @@ export default {
           name: routeOption.name.replace("components-", ""),
           path: routeOption.path,
           new: this.newComponents.includes(routeOption.name.replace("components-", "")),
+          updated: this.updatedComponents.includes(routeOption.name.replace("components-", "")),
         })
       }
     })
