@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file. See [standa
 ## [1.0.0](https://github.com/saadeghi/daisyui/compare/v0.28.0...v1.0.0) (2021-05-21)
 
 
+### ♻️ Breaking Changes
+
+* `accordion` component is now removed and insted, there's `collapse` with a different markup. [[see examples](https://daisyui.com/components/collapse)].  
+  HTML Changes:
+  - Old `accordion`:
+    ```html
+    <ul class="accordion">
+      <li class="accordion-item">
+        <input id="item-923499" type="checkbox"> 
+        <label for="item-923499" class="text-xl font-medium accordion-title">
+        Aperiam iure expedita non fugit?
+      </label> 
+        <div class="accordion-body">
+          <p>Aperiam iure expedita non fugit. Voluptatem est repellat a aut sit est nostrum maiores aut. Voluptas nisi totam eius architecto eius mollitia quos assumenda non. Iusto rerum doloribus. Architecto dolorum explicabo omnis quidem. Quibusdam ipsam beatae soluta et dolores iure ut debitis ad.</p>
+        </div>
+      </li>
+    </ul>
+    ```
+  - New `collapse`:
+    ```html
+    <div tabindex="0" class="collapse">
+      <div class="collapse-title text-xl font-medium">
+        I open with focus
+      </div> 
+      <div class="collapse-content"> 
+        <p>Collapse content reveals with focus. If you add a checkbox, you can control it using checkbox instead of focus. Or you can force-open/force-close using `collapse-open` and `collapse-close` classes.</p>
+      </div>
+    </div> 
+    ```
+
 ### Features
 
 * add avatar-group component ([b5f37bc](https://github.com/saadeghi/daisyui/commit/b5f37bc10fa496ae7beeef8886c56327dc735c03))
