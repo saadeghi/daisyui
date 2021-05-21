@@ -15,6 +15,46 @@
       </Avatar>
     </Wrapper>
 
+    <Wrapper title="avatar-group" classes="flex items-center space-x-8 flex-wrap">
+      <div class="avatar-group -space-x-6">
+        <Avatar classes="w-16 h-16">
+          <img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png">
+        </Avatar>
+        <Avatar classes="w-16 h-16">
+          <img src="http://daisyui.com/tailwind-css-component-profile-2@56w.png">
+        </Avatar>
+        <Avatar classes="w-16 h-16">
+          <img src="http://daisyui.com/tailwind-css-component-profile-3@56w.png">
+        </Avatar>
+        <Avatar classes="w-16 h-16">
+          <img src="http://daisyui.com/tailwind-css-component-profile-4@56w.png">
+        </Avatar>
+      </div>
+    </Wrapper>
+
+    <Wrapper title="avatar-group" classes="flex items-center space-x-8 flex-wrap">
+      <div class="avatar-group -space-x-5">
+        <Avatar classes="w-10 h-10">
+          <img src="http://daisyui.com/tailwind-css-component-profile-1@40w.png">
+        </Avatar>
+        <Avatar classes="w-10 h-10">
+          <img src="http://daisyui.com/tailwind-css-component-profile-2@40w.png">
+        </Avatar>
+        <Avatar classes="w-10 h-10">
+          <img src="http://daisyui.com/tailwind-css-component-profile-3@40w.png">
+        </Avatar>
+        <Avatar classes="w-10 h-10">
+          <img src="http://daisyui.com/tailwind-css-component-profile-4@40w.png">
+        </Avatar>
+        <div class="avatar placeholder">
+          <div class="bg-neutral-focus text-neutral-content rounded-full w-10 h-10">
+            <span>+99</span>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+
+
     <Wrapper title="avatar circle" classes="flex items-center space-x-8 flex-wrap">
       <Avatar classes="mb-8 rounded-full w-32 h-32">
         <img src="https://i.pravatar.cc/500?img=32" />
