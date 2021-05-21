@@ -228,7 +228,7 @@
             type="text"
             placeholder="Search"
           />
-          <button class="absolute right-0 rounded-l-none btn btn-primary">go</button>
+          <button class="absolute right-0 top-0 rounded-l-none btn btn-primary">go</button>
         </div>
       </FormControl>
       <FormControl>
