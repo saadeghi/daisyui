@@ -154,7 +154,7 @@ Read the documents for more info
 - [x] Modal
 - [x] Pagination
 - [x] Progress
-- [ ] Statistic
+- [x] Stat
 - [ ] Steps
 - [ ] Tag
 - [ ] Table

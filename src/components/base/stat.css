@@ -1,0 +1,25 @@
+.stats{
+  @apply inline-grid grid-flow-col overflow-hidden overflow-x-auto;
+}
+.stat{
+  @apply w-full inline-grid gap-x-6;
+  grid-template-columns: 1fr auto;
+  &-figure{
+    @apply col-start-2 row-start-1 row-span-3 place-self-center justify-self-end;
+  }
+  &-title{
+    @apply col-start-1 whitespace-nowrap;
+  }
+  &-value{
+    @apply col-start-1 whitespace-nowrap;
+  }
+  &-desc{
+    @apply col-start-1 whitespace-nowrap;
+  }
+  &-actions{
+    @apply col-start-1 whitespace-nowrap;
+  }
+}
+.stats.grid-flow-row{
+  @apply auto-rows-fr;
+}

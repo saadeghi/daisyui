@@ -128,6 +128,7 @@ export default {
         'carousel',
         'dropdown',
         'tooltip',
+        'stat',
       ],
     }
   },
