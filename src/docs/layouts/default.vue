@@ -129,6 +129,7 @@ export default {
         'dropdown',
         'tooltip',
         'stat',
+        'table',
       ],
     }
   },

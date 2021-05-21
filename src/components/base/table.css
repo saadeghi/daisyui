@@ -1,0 +1,6 @@
+.table{
+  @apply relative;
+  th:first-child{
+    @apply sticky left-0 z-10;
+  }
+}

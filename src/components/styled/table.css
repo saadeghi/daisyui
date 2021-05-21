@@ -1,0 +1,38 @@
+.table{
+  @apply text-left;
+  th,td{
+    @apply p-4 whitespace-nowrap;
+  }
+  &:not(.table-zebra) :is(thead,tbody,tfoot) tr:not(:last-child) :is(th,td){
+    @apply border-b border-base-200;
+  }
+  :is(thead,tfoot) :is(th,td){
+    @apply bg-base-200 text-xs uppercase font-bold;
+    &:first-child{
+      @apply rounded-l-lg;
+    }
+    &:last-child{
+      @apply rounded-r-lg;
+    }
+  }
+  /* th:first-child{
+    box-shadow: -1px 0 hsl(var(--b2, 210 20% 98%)) inset;
+  } */
+  tbody :is(th,td){
+    @apply bg-base-100;
+  }
+  &-zebra tbody tr:nth-child(even) :is(th,td){
+    @apply bg-base-200;
+    &:first-child{
+      @apply rounded-l-lg;
+    }
+    &:last-child{
+      @apply rounded-r-lg;
+    }
+  }
+  &-compact{
+    th,td{
+      @apply p-2 text-sm;
+    }
+  }
+}
