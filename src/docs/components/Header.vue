@@ -21,15 +21,17 @@
           </div>
         </NuxtLink>
       </div>
-      <div class="font-mono text-xs"
+      <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" class="font-mono text-xs" rel="nofollow"
           v-bind:class="{
           'opacity-80 pl-2': isHomepage,
           'hidden': toggleNavClass() && isHomepage,
           'opacity-50': !isHomepage,
         }"
       >
-        <span class="hidden lg:inline xl:ml-2">version</span>&nbsp;{{ DAISYUI_VERSION }}
-      </div>
+        <div data-tip="Changelog" class="tooltip tooltip-bottom">
+          <span class="hidden lg:inline xl:ml-2">version</span>&nbsp;{{ DAISYUI_VERSION }}
+        </div>
+      </a>
       <div class="flex-1"></div>
       <div class="items-center flex-none hidden lg:block" v-if="isHomepage">
         <NuxtLink
