@@ -1,5 +1,5 @@
 .tooltip{
-  @apply inline-block relative;
+  @apply inline-block relative whitespace-nowrap;
   --tooltip-tail: 3px;
   --tooltip-color: hsl(var(--n, 219 14% 28%));
   --tooltip-text-color: hsl(var(--nc, 0 0% 100%));
