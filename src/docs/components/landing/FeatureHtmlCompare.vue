@@ -70,9 +70,9 @@
       &lt;li&gt;
         &lt;span class=&quot;<span class="text-warning">block px-5 p-3 text-xs text-gray-400</span>&quot;&gt;Menu Title&lt;/span&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-indigo-500 focus:bg-indigo-500 hover:text-white focus:text-white outline-none cursor-pointer</span>&quot;&gt;First Menu Item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-indigo-500 focus:bg-indigo-500 hover:text-white focus:text-white outline-none cursor-pointer</span>&quot;&gt;Second Menu Item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-indigo-500 focus:bg-indigo-500 hover:text-white focus:text-white outline-none cursor-pointer</span>&quot;&gt;Third Menu Item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>&quot;&gt;First Menu Item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>&quot;&gt;Second Menu Item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>&quot;&gt;Third Menu Item&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;</code></pre>
             </div>
             <div class="flex justify-center items-start mt-4 overflow-hidden">
@@ -80,9 +80,9 @@
                 <li>
                   <span class="block px-5 py-1 text-xs text-gray-400">Menu Title</span>
                 </li>
-                <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-indigo-500 focus:bg-indigo-500 hover:text-white focus:text-white outline-none cursor-pointer">First Menu Item</a></li>
-                <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-indigo-500 focus:bg-indigo-500 hover:text-white focus:text-white outline-none cursor-pointer">Second Menu Item</a></li>
-                <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-indigo-500 focus:bg-indigo-500 hover:text-white focus:text-white outline-none cursor-pointer">Third Menu Item</a></li>
+                <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer">First Menu Item</a></li>
+                <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer">Second Menu Item</a></li>
+                <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer">Third Menu Item</a></li>
               </ul>
             </div>
           </div>
