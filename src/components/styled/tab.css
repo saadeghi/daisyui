@@ -56,11 +56,21 @@
       left: calc( var(--tab-radius, .5rem) * -1 );
       --circle-pos: top left;
       background-image: var(--tab-corner-bg);
+
+      /* RTL quick fix */
+      [dir=rtl] &{
+        --circle-pos: top right;
+      }
     }
     &:after{
       right: calc( var(--tab-radius, .5rem) * -1 );
       --circle-pos: top right;
       background-image: var(--tab-corner-bg);
+
+      /* RTL quick fix */
+      [dir=rtl] &{
+        --circle-pos: top left;
+      }
     }
     &:first-child:before{
       background: none;
