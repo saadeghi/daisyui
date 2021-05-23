@@ -9,7 +9,7 @@
     pre{
       &:before{
         content: '';
-        @apply mr-5;
+        margin-right: 2ch;
       }
     }
     pre[data-prefix]{
