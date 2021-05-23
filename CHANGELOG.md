@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/saadeghi/daisyui/compare/v1.0.1...v1.0.2) (2021-05-23)
+
+
+### Bug Fixes
+
+* [#29](https://github.com/saadeghi/daisyui/issues/29) ([f251dc1](https://github.com/saadeghi/daisyui/commit/f251dc1c5c49c05dde19b19234e3b71d7a25e9a5))
+* mask base style ([a8a7e10](https://github.com/saadeghi/daisyui/commit/a8a7e1036919795a7ca2247c95d93e45dcac8b1f))
+* menu focus color ([2d9cc31](https://github.com/saadeghi/daisyui/commit/2d9cc31f40e287d1d30f12016f333aa6c21d6a4a))
+
 ### [1.0.1](https://github.com/saadeghi/daisyui/compare/v1.0.0...v1.0.1) (2021-05-23)
 
 
