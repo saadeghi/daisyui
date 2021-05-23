@@ -201,6 +201,6 @@ Read the documents for more info
 
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
-[logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-3.svg
+[logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png
 
