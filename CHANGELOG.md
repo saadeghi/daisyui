@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/saadeghi/daisyui/compare/v1.0.0...v1.0.1) (2021-05-23)
+
+
+### Bug Fixes
+
+* [#53](https://github.com/saadeghi/daisyui/issues/53), [#55](https://github.com/saadeghi/daisyui/issues/55) ([3196165](https://github.com/saadeghi/daisyui/commit/31961650c518c466c407e7093d56e2ed1828a4fa))
+* code mockup indent margin ([d340440](https://github.com/saadeghi/daisyui/commit/d34044026460c4403757fa2bea71ad981ac58a13))
+
 ## [1.0.0](https://github.com/saadeghi/daisyui/compare/v0.28.0...v1.0.0) (2021-05-21)
 
 
