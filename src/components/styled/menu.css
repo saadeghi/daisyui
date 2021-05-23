@@ -16,10 +16,10 @@
       @apply text-current px-5 py-3;
     }
     >a{
+      &:focus,
       &:hover{
         @apply bg-base-content bg-opacity-10;
       }
-      &:focus,
       &.active{
         @apply bg-primary text-primary-content;
       }
