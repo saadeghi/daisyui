@@ -1,7 +1,7 @@
 .radio{
   @apply appearance-none opacity-0 w-0 h-0 absolute;
   & ~ .radio-mark{
-    @apply w-6 h-6 rounded-full border border-base-content border-opacity-20 shadow-inner;
+    @apply w-6 h-6 rounded-full border border-base-content border-opacity-20;
     &:before{
       width: 7px;
       height: 14px;
@@ -18,32 +18,21 @@
       }
     }
   }
-  &:focus-visible {
+  &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
     & ~ .radio-mark{
-      --tw-ring-offset-width: var(--focus-ring-offset, 2px);
-
-      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(var(--focus-ring, 2px) + var(--tw-ring-offset-width)) var(--tw-ring-color);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), 0 0 rgba(0,0,0,0);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 rgba(0,0,0,0));
-      @apply ring-offset-base-100 ring-base-content;
+      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--bc, 0 0% 100%));
     }
   }
   &:checked{
     &,
     &:hover{
       & ~ .radio-mark{
-        @apply bg-base-content border-base-content text-base-100 shadow-none;
+        @apply bg-base-content border-base-content text-base-100;
         &:before{
           animation: checkmark var(--animation-input, .4s) ease-in-out;
           transform: rotate(45deg)translate(-1px, -1px)scale(1);
           @apply border-base-100;
         }
-      }
-    }
-    &:focus-visible {
-      & ~ .radio-mark{
-        @apply ring-neutral-focus;
       }
     }
   }
@@ -53,6 +42,11 @@
     }
     &:hover ~ .radio-mark:before{
       @apply border-primary;
+    }
+    &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
+      & ~ .radio-mark{
+        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--p, 259 94% 51%));
+      }
     }
     &:checked{
       &,
@@ -64,11 +58,6 @@
           }
         }
       }
-      &:focus-visible {
-        & ~ .radio-mark{
-          @apply ring-primary;
-        }
-      }
     }
   }
   &-secondary{
@@ -77,6 +66,11 @@
     }
     &:hover ~ .radio-mark:before{
       @apply border-secondary;
+    }
+    &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
+      & ~ .radio-mark{
+        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--s, 314 100% 47%));
+      }
     }
     &:checked{
       &,
@@ -88,11 +82,6 @@
           }
         }
       }
-      &:focus-visible {
-        & ~ .radio-mark{
-          @apply ring-secondary;
-        }
-      }
     }
   }
   &-accent{
@@ -102,6 +91,11 @@
     &:hover ~ .radio-mark:before{
       @apply border-accent;
     }
+    &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
+      & ~ .radio-mark{
+        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--a, 174 60% 51%));
+      }
+    }
     &:checked{
       &,
       &:hover{
@@ -110,11 +104,6 @@
           &:before{
             @apply border-accent-content;
           }
-        }
-      }
-      &:focus-visible {
-        & ~ .radio-mark{
-          @apply ring-accent;
         }
       }
     }

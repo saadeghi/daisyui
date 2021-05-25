@@ -7,7 +7,8 @@
           @apply outline-none;
         }
         &:focus-visible {
-          @apply ring-2 ring-current ring-opacity-50 ring-inset;
+          @apply rounded-badge;
+          box-shadow: 0 0 0 2px currentColor;
         }
       }
       & + *:before{

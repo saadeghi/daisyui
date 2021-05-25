@@ -15,6 +15,6 @@
     @apply outline-none;
   }
   &:focus-visible {
-    @apply ring-2 ring-current;
+    box-shadow: 0 0 0 2px currentColor;
   }
 }

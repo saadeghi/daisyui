@@ -1,7 +1,7 @@
 .card {
   @apply rounded-box;
   &:focus-visible{
-    @apply ring ring-base-content ring-offset-base-100 ring-opacity-20;
+    box-shadow: 0 0 0 2px currentColor;
   }
   &.bordered{
     @apply border border-base-200;
