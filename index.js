@@ -15,6 +15,8 @@ const utilities_typography = require('./dist/utilities/typography')
 const utilities_variables = require('./dist/utilities/variables')
 const utilities_responsiveComponent = require('./dist/responsive/responsiveComponent')
 
+const themes = require('./dist/themes')
+
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = []
@@ -94,18 +96,18 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
     themesArray.forEach((theme, index) => {
       try {
         if (index === 0) { // first theme as default
-          includedThemesObj[':root'] = require("./dist/themes/"+theme)['[data-theme='+theme+']']
+          includedThemesObj[':root'] = themes['[data-theme='+theme+']']
         }else if (index === 1) {
           if (themesArray[0] !== 'dark') {
             // auto dark
-            includedThemesObj['@media (prefers-color-scheme: dark)'] = {':root': require("./dist/themes/dark")['[data-theme=dark]']}
+            includedThemesObj['@media (prefers-color-scheme: dark)'] = {':root': themes['[data-theme=dark]']}
           }
           // first theme with name
-          includedThemesObj['[data-theme='+themesArray[0]+']'] = require("./dist/themes/"+themesArray[0])['[data-theme='+themesArray[0]+']']
-          includedThemesObj['[data-theme='+theme+']'] = require("./dist/themes/"+theme)['[data-theme='+theme+']']
+          includedThemesObj['[data-theme='+themesArray[0]+']'] = themes['[data-theme='+themesArray[0]+']']
+          includedThemesObj['[data-theme='+theme+']'] = themes['[data-theme='+theme+']']
         }else{
           // the rest
-          includedThemesObj['[data-theme='+theme+']'] = require("./dist/themes/"+theme)['[data-theme='+theme+']']
+          includedThemesObj['[data-theme='+theme+']'] = themes['[data-theme='+theme+']']
         }
 
 
@@ -121,7 +123,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
     });
     diasyuiIncludedItems.push('themes[' + themesArray.length + ']')
   }else{
-    includedThemesObj[':root'] = require("./dist/themes/light")['[data-theme=light]']
+    includedThemesObj[':root'] = themes['[data-theme=light]']
     diasyuiIncludedItems.push('default theme')
   }
   addBase(includedThemesObj)

@@ -1,0 +1,63 @@
+:root {
+  --p: 259 94% 51%;
+  --pf: 259 94% 41%;
+  --pc: 0 0% 100%;
+  --s: 314 100% 47%;
+  --sf: 314 100% 37%;
+  --sc: 0 0% 100%;
+  --a: 174 60% 51%;
+  --af: 174 60% 41%;
+  --ac: 0 0% 100%;
+  --n: 219 14% 28%;
+  --nf: 222 13% 19%;
+  --nc: 0 0% 100%;
+  --b1: 0 0% 100%;
+  --b2: 210 20% 98%;
+  --b3: 216 12% 84%;
+  --bc: 215 28% 17%;
+  --in: 207 90% 54%;
+  --su: 174 100% 29%;
+  --wa: 36 100% 50%;
+  --er: 14 100% 57%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 9999px;
+  --animation-btn: 0.25s;
+  --animation-input: .4s;
+  --padding-card: 2rem;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --navbar-padding: .5rem;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --tab-spacer: 0.5rem;
+  --focus-ring: 2px;
+  --focus-ring-offset: 2px;
+  --glass-opacity: 30%;
+  --glass-border-opacity: 10%;
+  --glass-reflex-degree: 100deg;
+  --glass-reflex-opacity: 10%;
+  --glass-blur: 40px;
+  --glass-text-shadow-opacity: 5%
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--p: 259 94% 61%;
+		--pf: 259 94% 51%;
+		--pc: 0 0% 100%;
+		--s: 314 100% 47%;
+		--sf: 314 100% 37%;
+		--sc: 0 0% 100%;
+		--a: 174 60% 51%;
+		--af: 174 60% 41%;
+		--ac: 0 0% 100%;
+		--n: 222 13% 19%;
+		--nf: 223 14% 10%;
+		--nc: 0 0% 100%;
+		--b1: 219 14% 28%;
+		--b2: 222 13% 19%;
+		--b3: 223 14% 10%;
+		--bc: 228 14% 93%;
+	}
+}
