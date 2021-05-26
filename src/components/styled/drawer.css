@@ -22,27 +22,27 @@
   }
   &:focus-visible{
     & ~ .drawer-content .drawer-button{
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--nf, 222 13% 19%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--nf));
       &.btn-primary{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--p, 259 94% 51%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
       }
       &.btn-secondary{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--s, 314 100% 47%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
       }
       &.btn-accent{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--a, 174 60% 51%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
       }
       &.btn-info{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--in, 207 90% 54%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--in));
       }
       &.btn-success{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--su, 174 100% 29%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--su));
       }
       &.btn-warning{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--wa, 36 100% 50%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--wa));
       }
       &.btn-error{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--er, 14 100% 57%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--er));
       }
       &.glass{
         box-shadow: 0 0 0 2px currentColor;

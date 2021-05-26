@@ -1,8 +1,8 @@
 .tooltip{
   @apply inline-block relative whitespace-nowrap;
   --tooltip-tail: 3px;
-  --tooltip-color: hsl(var(--n, 219 14% 28%));
-  --tooltip-text-color: hsl(var(--nc, 0 0% 100%));
+  --tooltip-color: hsl(var(--n));
+  --tooltip-text-color: hsl(var(--nc));
   --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
 }
 .tooltip:before,
@@ -74,31 +74,31 @@
 }
 .tooltip{
   &-primary{
-    --tooltip-color: hsl(var(--p, 259 94% 51%));
-    --tooltip-text-color: hsl(var(--pc, 0 0% 100%));
+    --tooltip-color: hsl(var(--p));
+    --tooltip-text-color: hsl(var(--pc));
   }
   &-secondary{
-    --tooltip-color: hsl(var(--s, 314 100% 47%));
-    --tooltip-text-color: hsl(var(--sc, 0 0% 100%));
+    --tooltip-color: hsl(var(--s));
+    --tooltip-text-color: hsl(var(--sc));
   }
   &-accent{
-    --tooltip-color: hsl(var(--a, 174 60% 51%));
-    --tooltip-text-color: hsl(var(--ac, 0 0% 100%));
+    --tooltip-color: hsl(var(--a));
+    --tooltip-text-color: hsl(var(--ac));
   }
   &-info{
-    --tooltip-color: hsla(var(--in, 207 90% 54%) / .1);
-    --tooltip-text-color: hsl(var(--in, 207 90% 54%));
+    --tooltip-color: hsla(var(--in) / .1);
+    --tooltip-text-color: hsl(var(--in));
   }
   &-success{
-    --tooltip-color: hsla(var(--su, 174 100% 29%) / .1);
-    --tooltip-text-color: hsl(var(--su, 174 100% 29%));
+    --tooltip-color: hsla(var(--su) / .1);
+    --tooltip-text-color: hsl(var(--su));
   }
   &-warning{
-    --tooltip-color: hsla(var(--wa, 36 100% 50%) / .1);
-    --tooltip-text-color: hsl(var(--wa, 36 100% 50%));
+    --tooltip-color: hsla(var(--wa) / .1);
+    --tooltip-text-color: hsl(var(--wa));
   }
   &-error{
-    --tooltip-color: hsla(var(--er, 14 100% 57%) / .1);
-    --tooltip-text-color: hsl(var(--er, 14 100% 57%));
+    --tooltip-color: hsla(var(--er) / .1);
+    --tooltip-text-color: hsl(var(--er));
   }
 }

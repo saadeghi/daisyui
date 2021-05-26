@@ -9,7 +9,7 @@
   }
   &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
     & ~ .toggle-mark{
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--bc, 215 28% 17%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
     }
   }
   &:checked{
@@ -33,7 +33,7 @@
   &-primary{
     &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
       & ~ .toggle-mark{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--p, 259 94% 51%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
       }
     }
     &:checked{
@@ -51,7 +51,7 @@
   &-secondary{
     &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
       & ~ .toggle-mark{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--s, 314 100% 47%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
       }
     }
     &:checked{
@@ -69,7 +69,7 @@
   &-accent{
     &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
       & ~ .toggle-mark{
-        box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--a, 174 60% 51%));
+        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
       }
     }
     &:checked{

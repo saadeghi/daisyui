@@ -20,7 +20,7 @@
       @apply bg-neutral-focus border-neutral-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--nf, 222 13% 19%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--nf));
     }
   }
   /* brand colors */
@@ -31,7 +31,7 @@
       @apply bg-primary-focus border-primary-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--p, 259 94% 51%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
   }
   &-secondary {
@@ -41,7 +41,7 @@
       @apply bg-secondary-focus border-secondary-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--s, 314 100% 47%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
     }
   }
   &-accent {
@@ -51,7 +51,7 @@
       @apply bg-accent-focus border-accent-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--a, 174 60% 51%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
     }
   }
 
@@ -64,7 +64,7 @@
       @apply bg-info border-info;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--in, 207 90% 54%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--in));
     }
   }
   &-success {
@@ -74,7 +74,7 @@
       @apply bg-success border-success;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--su, 174 100% 29%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--su));
     }
   }
   &-warning {
@@ -84,7 +84,7 @@
       @apply bg-warning border-warning;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--wa, 36 100% 50%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--wa));
     }
   }
   &-error {
@@ -94,7 +94,7 @@
       @apply bg-error border-error;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--er, 14 100% 57%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--er));
     }
   }
 
@@ -188,7 +188,7 @@
   & > .btn-active {
     @apply bg-primary border-primary text-primary-content;
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsl(var(--p, 259 94% 51%));
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
   }
   & > .btn:not(:first-child) {

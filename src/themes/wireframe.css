@@ -33,9 +33,3 @@
   --tab-radius: 0.2rem;
 
 }
-[data-theme="wireframe"] *{
-  border-color: hsl(var(--border-color)) !important;
-  --tw-border-opacity: 1 !important;
-  --tw-text-opacity: 1 !important;
-  --tw-shadow: 0 0 0 1px hsl(var(--border-color)) !important;
-}

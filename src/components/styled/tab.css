@@ -22,15 +22,15 @@
   border-width: 0 0 var(--tab-border, 1px) 0;
   border-top-left-radius: var(--tab-radius, .5rem);
   border-top-right-radius: var(--tab-radius, .5rem);
-  border-bottom-color: hsla(var(--border-color, var(--b3, 216 12% 84%)) / var(--tw-border-opacity, 1));
+  border-bottom-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
   padding-left: var(--tab-padding, 1rem);
   padding-right: var(--tab-padding, 1rem);
   &.tab-active{
     @apply bg-base-100;
     border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
-    border-left-color: hsla(var(--border-color, var(--b3, 216 12% 84%)) / var(--tw-border-opacity, 1));
-    border-right-color: hsla(var(--border-color, var(--b3, 216 12% 84%)) / var(--tw-border-opacity, 1));
-    border-top-color: hsla(var(--border-color, var(--b3, 216 12% 84%)) / var(--tw-border-opacity, 1));
+    border-left-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
+    border-right-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
+    border-top-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
     padding-left: calc( var(--tab-padding, 1rem) - var(--tab-border, 1px) );
     padding-right: calc( var(--tab-padding, 1rem) - var(--tab-border, 1px) );
     padding-bottom: var(--tab-border, 1px);
@@ -47,9 +47,9 @@
       radial-gradient(
         circle at var(--circle-pos),
         transparent var(--tab-grad),
-        hsla(var(--border-color, var(--b3, 216 12% 84%)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + .3px),
-        hsla(var(--border-color, var(--b3, 216 12% 84%)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) ),
-        hsla(var(--b1, 0 0% 100%) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + .3px)
+        hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + .3px),
+        hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) ),
+        hsla(var(--b1) / var(--tw-border-opacity, 1)) calc(var(--tab-grad) + var(--tab-border, 1px) + .3px)
       );
     }
     &:before{

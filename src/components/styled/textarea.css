@@ -4,7 +4,7 @@
     @apply border-opacity-20;
   }
   &:focus {
-    box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%)), 0 0 0 4px hsla(var(--bc, 215 28% 17%)/.2);
+    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsla(var(--bc)/.2);
 
   }
   &-ghost {

@@ -5,7 +5,7 @@
       @apply block w-2 h-2 bg-success rounded-full absolute z-10;
       top: 5%;
       right: 5%;
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%));
+      box-shadow: 0 0 0 2px hsl(var(--b1));
     }
   }
   &.offline{
@@ -14,7 +14,7 @@
       @apply block w-2 h-2 bg-base-300 rounded-full absolute z-10;
       top: 5%;
       right: 5%;
-      box-shadow: 0 0 0 2px hsl(var(--b1, 0 0% 100%));
+      box-shadow: 0 0 0 2px hsl(var(--b1));
     }
   }
 }
