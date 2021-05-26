@@ -55,11 +55,11 @@
     </div>
 
     <p class="my-4 text-lg">
-      The default theme is <span class="badge badge-outline">light</span> theme and it's included in DaisyUI even if you disable the <span class="badge badge-outline">themes</span> config.
+      The default theme is <span class="badge badge-outline">light</span> but you can change it from <NuxtLink to="/docs/config" class="link">config</NuxtLink>.
     </p>
     <p class="my-4 text-lg">
       To make your own theme, please see
-      <NuxtLink to="/docs/add-themes" class="inline-block btn btn-sm">
+      <NuxtLink to="/docs/add-themes" class="link">
         add themes
       </NuxtLink>
       page

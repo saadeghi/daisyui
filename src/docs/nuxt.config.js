@@ -14,7 +14,8 @@ export default {
   head: {
     title: 'DaisyUI - Tailwind CSS Components',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
+      'data-theme': 'light'
     },
     meta: [{
         charset: 'utf-8'
@@ -124,11 +125,11 @@ export default {
     ...(process.env.NODE_ENV === 'production' ? [] : ['~/assets/css/fonts']),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/base']),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/components']),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../themes')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../resets')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/base')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/styled')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities')]),
-    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../themes')]),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/utilities']),
 
   ],

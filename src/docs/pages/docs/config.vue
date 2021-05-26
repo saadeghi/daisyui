@@ -59,17 +59,20 @@
       </p>
       <p class="my-4">
         If it's true, all themes will be included.
-        <br>If it's false, DaisyUI will use the <span class="badge badge-outline">light</span> theme.
+        <br>If it's false, only default (light) theme will be available.
         <br>Can also be an array of theme names:
 
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
-        <pre><code>daisyui: {
-      themes: ['emerald','forest','synthwave'],
+        <pre><code><span class="text-neutral-content text-opacity-20">// emerald will be the default theme</span>
+    daisyui: {
+      themes: ['emerald','dark','forest','synthwave'],
     },</code></pre>
         </div>
       </div>
-
+        <br>The first item of array will be the default theme.
+        <br>if no theme is chosen on <span class="badge badge-outline">&lt;html data-theme="THEME_NAME"&gt;</span> and <span class="badge badge-outline">dark</span> theme is in themes config, default theme and dark theme will be enabled based on operatig system prefrences.
+        <br>
         <NuxtLink to="/docs/default-themes" class="link">read more about default themes</NuxtLink>
       </p>
 
