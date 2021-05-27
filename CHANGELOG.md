@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/saadeghi/daisyui/compare/v1.1.2...v1.2.0) (2021-05-27)
+
+
+### Bug Fixes
+
+* .prose colors ([2fab3af](https://github.com/saadeghi/daisyui/commit/2fab3af57fd3d0431bfe793e9d03bb00b6d6d15a))
+
 ### [1.1.2](https://github.com/saadeghi/daisyui/compare/v1.1.1...v1.1.2) (2021-05-26)
 
 ### [1.1.1](https://github.com/saadeghi/daisyui/compare/v1.1.0...v1.1.1) (2021-05-26)
