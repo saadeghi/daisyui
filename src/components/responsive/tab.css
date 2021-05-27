@@ -1,0 +1,18 @@
+.tab{
+  &-md {
+    @apply leading-loose h-8 text-sm;
+    --tab-padding: 1rem;
+  }
+  &-lg {
+    @apply leading-loose h-12 text-lg;
+    --tab-padding: 1.25rem;
+  }
+  &-sm {
+    @apply leading-3 h-6 text-sm;
+    --tab-padding: .75rem;
+  }
+  &-xs {
+    @apply leading-3 h-5 text-xs;
+    --tab-padding: .5rem;
+  }
+}

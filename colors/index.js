@@ -8,12 +8,12 @@ let colorObject = {
 for (const [key, item] of Object.entries(colorValues)) {
   colorObject[key] = ({ opacityVariable, opacityValue }) => {
     if (opacityValue !== undefined) {
-      return `hsla(var(--`+ item['name'] +`) / ${opacityValue})`
+      return `hsla(var(--`+ item +`) / ${opacityValue})`
     }
     if (opacityVariable !== undefined) {
-      return `hsla(var(--`+ item['name'] +`) / var(${opacityVariable}, 1))`
+      return `hsla(var(--`+ item +`) / var(${opacityVariable}, 1))`
     }
-    return `hsl(var(--`+ item['name'] +`))`
+    return `hsl(var(--`+ item +`))`
   }
 }
 

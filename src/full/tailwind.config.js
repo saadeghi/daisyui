@@ -1,7 +1,8 @@
+const plugin = require('tailwindcss/plugin')
 module.exports = {
-  presets: [
-    require('../tailwind.config.js'),
-  ],
+  theme: {
+    colors: require('../../colors')
+  },
   corePlugins: [
     'animation',
     'backgroundColor',
@@ -18,5 +19,14 @@ module.exports = {
     'ringWidth',
     'textColor',
     'transitionProperty',
+  ],
+  plugins: [
+    plugin(function({ addBase, addUtilities, addComponents }) {
+      addBase(require('../../dist/themes'))
+      addBase(require('../../dist/base'))
+      addComponents(require('../../dist/styled'))
+      addUtilities(require('../../dist/utilities'),{ variants: ['responsive'] })
+      addUtilities(require('../../dist/responsive'),{ variants: ['responsive'] })
+    })
   ],
 }

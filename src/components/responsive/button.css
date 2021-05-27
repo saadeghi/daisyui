@@ -1,0 +1,48 @@
+.btn{
+  &-xs {
+    @apply px-2 text-xs leading-relaxed h-6 min-h-6;
+  }
+  &-sm {
+    @apply px-3 leading-8 h-8 text-sm min-h-8;
+  }
+  &-md {
+    @apply px-4 leading-loose h-12 text-sm min-h-12;
+  }
+  &-lg {
+    @apply px-6 leading-loose h-16 text-lg min-h-16;
+  }
+  &-wide {
+    @apply w-64;
+  }
+  &-block {
+    @apply w-full;
+  }
+  &-square{
+    &.btn-xs {
+      @apply h-6 w-6 p-0;
+    }
+    &.btn-sm {
+      @apply h-8 w-8 p-0;
+    }
+    &.btn-md {
+      @apply h-12 w-12 p-0;
+    }
+    &.btn-lg {
+      @apply h-16 w-16 p-0;
+    }
+  }
+  &-circle{
+    &.btn-xs {
+      @apply rounded-full h-6 w-6 p-0;
+    }
+    &.btn-sm {
+      @apply rounded-full h-8 w-8 p-0;
+    }
+    &.btn-md {
+      @apply rounded-full h-12 w-12 p-0;
+    }
+    &.btn-lg {
+      @apply rounded-full h-16 w-16 p-0;
+    }
+  }
+}

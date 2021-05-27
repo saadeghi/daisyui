@@ -1,0 +1,14 @@
+.select {
+  &-md {
+    @apply px-4 leading-loose h-12 text-sm min-h-12;
+  }
+  &-lg {
+    @apply px-6 leading-loose h-16 text-lg min-h-16;
+  }
+  &-sm {
+    @apply px-3 leading-8 h-8 text-sm min-h-8;
+  }
+  &-xs {
+    @apply px-2 text-xs leading-relaxed h-6 min-h-6;
+  }
+}

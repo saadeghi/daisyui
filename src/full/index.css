@@ -1,7 +1,5 @@
 @import "default-theme";
-@import "./../../dist/themes";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "./../../dist/styled";
 @import "tailwindcss/utilities";
 

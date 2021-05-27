@@ -1,11 +1,13 @@
 const plugin = require('tailwindcss/plugin')
 module.exports = {
-  presets: [
-    require('./responsive/tailwind.config.js'),
-  ],
+  theme: {
+    colors: require('../colors')
+  },
   plugins: [
-    plugin(function({ addUtilities }) {
-      addUtilities(require('../dist/responsive/responsiveComponent'),{ variants: ['responsive'] })
+    plugin(function({ addBase, addUtilities }) {
+      addUtilities(require('../dist/utilities'),{ variants: ['responsive'] })
+      addBase(require('../dist/base'))
+      addUtilities(require('../dist/responsive'),{ variants: ['responsive'] })
     })
   ],
 }
