@@ -10,6 +10,7 @@
     @apply bg-opacity-5;
     &:focus {
       @apply bg-opacity-100 text-base-content;
+      box-shadow: none;
     }
   }
   &-primary {
