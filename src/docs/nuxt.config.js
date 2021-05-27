@@ -124,13 +124,14 @@ export default {
     ...(process.env.NODE_ENV === 'production' ? ['~/assets/css/style'] : []),
     ...(process.env.NODE_ENV === 'production' ? [] : ['~/assets/css/fonts']),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/base']),
-    ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/components']),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../themes')]),
-    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../resets')]),
-    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/base')]),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../base')]),
+    ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/components']),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/unstyled')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/styled')]),
-    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities')]),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/responsive')]),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/utilities']),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities')]),
 
   ],
 
