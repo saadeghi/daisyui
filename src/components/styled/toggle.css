@@ -101,6 +101,9 @@
       }
     }
   }
+  &-wrapper {
+    @apply rounded-badge overflow-hidden;
+  }
 }
 
 @keyframes togglemark-off {

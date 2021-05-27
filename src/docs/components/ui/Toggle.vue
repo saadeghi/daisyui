@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="toggle-wrapper">
     <input type="checkbox" class="toggle" :class="classes" checked />
     <span class="toggle-mark"></span>
   </div>
