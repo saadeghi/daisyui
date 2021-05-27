@@ -1,5 +1,5 @@
 <template>
-  <div class="grid max-w-screen-sm max-w-screen-xl gap-4 mb-48 -mt-48 xl:pb-0 bg-opacity-60 bg-base-100 glass xl:rounded-box text-base-content">
+  <div class="grid max-w-screen-sm max-w-screen-xl gap-4 mb-48 -mt-48 xl:pb-0 bg-opacity-60 glass xl:rounded-box text-base-content">
     <div class="px-2 pt-2">
       <HomepageDemoNav/>
     </div>
