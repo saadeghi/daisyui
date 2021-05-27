@@ -22,7 +22,7 @@
       daisyui: {
         styled: true,
         themes: true,
-        resets: true,
+        base: true,
         utils: true,
         logs: true,
         rtl: false,
@@ -77,13 +77,13 @@
       </p>
 
       <h2 class="mt-6 text-2xl font-bold">
-        <span>resets</span>
+        <span>base</span>
       </h2>
       <p class="badge badge-outline">
         default: true
       </p>
       <p class="my-4">
-        If it's true, <a target="_blank" class="link" href="https://github.com/saadeghi/daisyui/blob/master/src/resets">a very small reset style</a> will be added
+        If it's true, <a target="_blank" class="link" href="https://github.com/saadeghi/daisyui/blob/master/src/base">a few base styles</a> will be added
       </p>
 
       <h2 class="mt-6 text-2xl font-bold">
