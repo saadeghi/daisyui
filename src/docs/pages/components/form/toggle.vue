@@ -45,7 +45,7 @@
         <FormControl>
           <label class="label">
             <span class="label-text">Unchecked + Disabled</span>
-            <div>
+            <div class="toggle-wrapper">
               <input type="checkbox" class="toggle" :class="classes" disabled="disabled" />
               <span class="toggle-mark"></span>
             </div>
@@ -54,7 +54,7 @@
         <FormControl>
           <label class="label">
             <span class="label-text">Checked + Disabled</span>
-            <div>
+            <div class="toggle-wrapper">
               <input type="checkbox" class="toggle" :class="classes" checked disabled="disabled" />
               <span class="toggle-mark"></span>
             </div>

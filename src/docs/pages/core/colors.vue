@@ -25,7 +25,7 @@
         <div class="form-control">
           <label class="cursor-pointer label">
             <span class="label-text">Show customized colors</span>
-            <div>
+            <div class="toggle-wrapper">
               <input type="checkbox" checked="checked" class="toggle toggle-primary" v-model="applyCustomThemeToSite">
               <span class="toggle-mark"></span>
             </div>

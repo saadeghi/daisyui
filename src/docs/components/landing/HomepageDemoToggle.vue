@@ -8,7 +8,7 @@
       <PromoDropdown title="toggle" desc="Use toggle to switch between two states" classes="flex-1 w-full" link="components/form/toggle"><div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable teleportation</span>
-          <div>
+          <div class="toggle-wrapper">
             <input type="checkbox" checked="checked" class="toggle toggle-primary">
             <span class="toggle-mark">
             </span>
@@ -20,7 +20,7 @@
       <div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable time travel</span>
-          <div>
+          <div class="toggle-wrapper">
             <input type="checkbox" checked="checked" class="toggle toggle-secondary">
             <span class="toggle-mark">
             </span>
@@ -32,7 +32,7 @@
       <div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable laser eyes</span>
-          <div>
+          <div class="toggle-wrapper">
             <input type="checkbox" checked="checked" class="toggle toggle-accent">
             <span class="toggle-mark">
             </span>
@@ -44,7 +44,7 @@
       <div class="form-control">
         <label class="cursor-pointer label">
           <span class="label-text">Enable immortality</span>
-          <div>
+          <div class="toggle-wrapper">
             <input type="checkbox" checked="checked" class="toggle">
             <span class="toggle-mark">
             </span>
