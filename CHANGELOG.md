@@ -429,3 +429,4 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * add webkit-tap-highlight-color basy style ([0eedac4](https://github.com/saadeghi/daisyui/commit/0eedac46820a37c032e5f08a9796e2504818dca8))
+ 
