@@ -164,4 +164,4 @@ if (isTailwindInstalled !== false) {
 } else {
   module.exports = mainFunction;
 }
-
+ 
