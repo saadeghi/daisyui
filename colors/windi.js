@@ -1,4 +1,4 @@
-const colorValues = require('./color-values')
+const colorValues = require('./colorNames')
 
 let colorObject = {
   "transparent": "transparent",
@@ -6,7 +6,7 @@ let colorObject = {
 }
 
 for (const [key, item] of Object.entries(colorValues)) {
-  colorObject[key] = `hsla(var(--${item}) / var(--tw-bg-opacity, 1))`
+  colorObject[key] = `hsla(var(${item}) / var(--tw-bg-opacity, 1))`
 }
 
 module.exports = colorObject

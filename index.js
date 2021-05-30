@@ -7,7 +7,9 @@ const unstyledRtl = require("./dist/unstyled.rtl")
 const styled = require("./dist/styled")
 const styledRtl = require("./dist/styled.rtl")
 const responsive = require('./dist/responsive')
-const themes = require('./dist/themes')
+const themes = require('./colors/themes')
+const colorNames = require('./colors/colorNames')
+const hex2hsl = require('./colors/hex2hsl')
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = []
@@ -27,7 +29,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
     diasyuiIncludedItems.push('base')
   }
 
-  // core
+  // inject components
   // because rollupjs doesn't supprt dynamic require
   let file = styled
   if (config('daisyui.styled') == false && config('daisyui.rtl') == false) {
@@ -47,78 +49,85 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   }
   addComponents(file)
 
-
-  // inject themes
   let includedThemesObj = new Object()
-  let themesArray = [
-    'light',
-    'dark',
-    'cupcake',
-    'bumblebee',
-    'emerald',
-    'corporate',
-    'synthwave',
-    'retro',
-    'cyberpunk',
-    'valentine',
-    'halloween',
-    'garden',
-    'forest',
-    'aqua',
-    'lofi',
-    'pastel',
-    'fantasy',
-    'wireframe',
-    'black',
-    'luxury',
-    'dracula',
-  ]
-  let ValidThemes = themesArray
 
-  if (config('daisyui.themes') != false) {
-    if (Array.isArray( config('daisyui.themes') )) {
-      themesArray = config('daisyui.themes')
-    }
-    // if (themesArray.includes("dark")) {
-    //   console.log(themesArray)
-    //   themesArray = ['dark', ...themesArray.filter(item => item !== 'dark')]
-    //   console.log(themesArray)
-    // }
-    
-    themesArray.forEach((theme, index) => {
-      try {
-        if (index === 0) { // first theme as default
-          includedThemesObj[':root'] = themes['[data-theme='+theme+']']
-        }else if (index === 1) {
-          if (themesArray[0] !== 'dark') {
-            // auto dark
-            includedThemesObj['@media (prefers-color-scheme: dark)'] = {':root': themes['[data-theme=dark]']}
-          }
-          // first theme with name
-          includedThemesObj['[data-theme='+themesArray[0]+']'] = themes['[data-theme='+themesArray[0]+']']
-          includedThemesObj['[data-theme='+theme+']'] = themes['[data-theme='+theme+']']
+  function convertThemeColorsToHsl(input) {
+    let resultObj = {}
+    if (typeof input === 'object' && input !== null) {
+      Object.entries(input).forEach(([rule, value]) => {
+        if(colorNames.hasOwnProperty(rule)){
+          resultObj[colorNames[rule]] = hex2hsl(value)
         }else{
-          // the rest
-          includedThemesObj['[data-theme='+theme+']'] = themes['[data-theme='+theme+']']
+          resultObj[rule] = value
+          // console.log(input)
         }
-
-
-
-      }
-      catch (e) {
-        console.log(`\n\n\x1b[33;1m! warning\x1b[0m - Invalid theme name in \x1b[34mtailwind.config.js\x1b[0m: \x1b[31m'${theme}'\x1b[0m`)
-        console.log(`Only these theme names are valid:`)
-        console.log(ValidThemes)
-        console.log(`\n\n`)
-      }
-
-    });
-    diasyuiIncludedItems.push('themes[' + themesArray.length + ']')
-  }else{
-    includedThemesObj[':root'] = themes['[data-theme=light]']
-    diasyuiIncludedItems.push('default theme')
+      })
+      return resultObj
+    }
+    return input
   }
-  addBase(includedThemesObj)
+
+  // add light themes
+  if (config('daisyui.themes') == false) {
+    Object.entries(themes).forEach(([theme, index]) => {
+      includedThemesObj[theme] = convertThemeColorsToHsl(themes[theme])
+    });
+  }
+
+  // add default themes
+  if (config('daisyui.themes') != false) {
+    Object.entries(themes).forEach(([theme, index]) => {
+      includedThemesObj[theme] = convertThemeColorsToHsl(themes[theme])
+    });
+  }
+
+  // add custom themes
+  if(Array.isArray(config('daisyui.themes'))){
+    config('daisyui.themes').forEach((item, index) => {
+      if(typeof item === 'object' && item !== null){
+        Object.entries(item).forEach(([customThemeName, customThemevalue]) => {
+          includedThemesObj['[data-theme='+customThemeName+']'] = convertThemeColorsToHsl(customThemevalue)
+        })
+      }
+    })
+  }
+
+  let themeOrder = []
+  if (Array.isArray( config('daisyui.themes') )) {
+    config('daisyui.themes').forEach((theme, index) => {
+      if (typeof theme === 'object' && theme !== null){
+        Object.entries(theme).forEach(([customThemeName, customThemevalue]) => {
+          themeOrder.push(customThemeName)
+        })
+      }else if(includedThemesObj.hasOwnProperty('[data-theme='+theme+']')){
+        themeOrder.push(theme)
+      }
+    })
+  }else if (config('daisyui.themes') != false) {
+    themeOrder= ['light','dark','cupcake','bumblebee','emerald','corporate','synthwave','retro','cyberpunk','valentine','halloween','garden','forest','aqua','lofi','pastel','fantasy','wireframe','black','luxury','dracula',]
+  }else if (config('daisyui.themes') == false) {
+    themeOrder.push('light')
+  }
+
+  // inject themes in order
+  themeOrder.forEach((themeName, index) => {
+    if (index === 0) { // first theme as root
+      addBase({[':root']: includedThemesObj['[data-theme='+themeName+']']})
+    }else if (index === 1) {
+      // auto dark
+      if (themeOrder[0] != 'dark' && themeOrder.includes('dark')){
+        addBase({['@media (prefers-color-scheme: dark)']: {[':root']: includedThemesObj['[data-theme=dark]']}})
+      }
+      // theme 0 with name
+      addBase({['[data-theme='+themeOrder[0]+']']: includedThemesObj['[data-theme='+themeOrder[0]+']']})
+      // theme 1 with name
+      addBase({['[data-theme='+themeOrder[1]+']']: includedThemesObj['[data-theme='+themeOrder[1]+']']})
+    }else{
+      addBase({['[data-theme='+themeName+']']: includedThemesObj['[data-theme='+themeName+']']})
+    }
+  })
+  diasyuiIncludedItems.push('themes[' + themeOrder.length + ']')
+
 
   // inject @utilities style needed by components
   if (config('daisyui.utils') != false) {

@@ -7,82 +7,84 @@
 
     <div class="text-base-content">
       <Wrapper nocode>
-        <div class="pt-4 text-xl font-bold text-base-content">Read the documents</div>
+        <div class="text-xl font-bold text-base-content">Read the documents</div>
         <p>Read everything about DaisyUI colors and theming:</p>
         <p class="mt-4">
-          <NuxtLink to="/docs/default-themes" class="inline-block btn btn-sm">Default themes</NuxtLink>
-          <NuxtLink to="/docs/add-themes" class="inline-block btn btn-sm">Add themes</NuxtLink>
+          <NuxtLink to="/docs/default-themes" class="link">How to use themes?</NuxtLink>
+          <br/>
+          <NuxtLink to="/docs/add-themes" class="link">How to add new theme?</NuxtLink>
         </p>
-        <div class="pt-10 text-xl font-bold text-base-content">Customize colors!</div>
-        <div>
-        Click each color to change it, then use the
-        <NuxtLink to="#output" class="inline-block btn btn-sm">generated theme ↓</NuxtLink>
-        on your site
-        </div>
       </Wrapper>
 
-      <div class="w-56 card" v-if="showCustomThemeTogglerSwitch">
-        <div class="form-control">
-          <label class="cursor-pointer label">
-            <span class="label-text">Show customized colors</span>
-            <div>
-              <input type="checkbox" checked="checked" class="toggle toggle-primary" v-model="applyCustomThemeToSite">
-              <span class="toggle-mark"></span>
-            </div>
-          </label>
-        </div>
-      </div>
-
-    </div>
-    <div id="color-panel">
-      <Wrapper title="Colors" classes="grid grid-cols-1 md:grid-cols-6 gap-6" nocode>
-
-        <div class="block mb-4" v-for="(colorGroup, index) in colors">
-          <div class="mb-4 text-xs uppercase opacity-50">{{ index }}</div>
-          <div class="grid rounded">
-            <div class="flex flex-col col-start-1 row-start-1">
-              <div v-for="(color, index) in colorGroup" class="relative col-start-1 row-start-1">
-                <label :class="'flex justify-start items-end w-full h-20 transform transition-all cursor-pointer shadow hover:shadow-lg hover:-translate-y-1 '+ color.class + ((index === 0) ? ' rounded-t ' : '') + ((index === colorGroup.length - 1) ? ' rounded-b ' : '')" :for="color.name">
-                  <div class="px-1 m-1 text-xs text-white bg-black rounded bg-opacity-20">
-                    .bg-{{ color.title }}
-                  </div>
-                </label>
-                <input
-                  type="color"
-                  :id="color.name"
-                  class="absolute top-0 invisible opacity-0"
-                  v-model="colorValues[color.name]['hex']"
-                  v-on:change="hexToHsl(color.name); applyCustomThemeToSite = true; showCustomThemeTogglerSwitch = true; "
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </Wrapper>
     </div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="text-xl font-bold text-base-content">Components preview</div>
-<div class="mb-10">
-See how components will look like using you color palette
+<div class="tabs mb-6 mt-10">
+  <button v-on:click="activeTab = 'colors'"  v-bind:class="{'tab-active': activeTab == 'colors'}" class="tab tab-lifted tab-lg">Customize</button>
+  <button v-on:click="activeTab = 'preview'"  v-bind:class="{'tab-active': activeTab == 'preview'}" class="tab tab-lifted tab-lg">Preview</button>
+  <button v-on:click="activeTab = 'output'"  v-bind:class="{'tab-active': activeTab == 'output'}" class="tab tab-lifted tab-lg">Result</button>
+  <span class="tab tab-lifted tab-lg flex-grow cursor-default hidden sm:block"></span>
 </div>
 
 
+
+
+<div id="colors" v-bind:class="{'hidden': activeTab != 'colors'}">
+
+  <div class="text-xl font-bold text-base-content">Edit colors</div>
+  <div class="mb-6">Choose your own colors</div>
+
+  <div class="w-56 card" v-if="showCustomThemeTogglerSwitch">
+    <div class="form-control">
+      <label class="cursor-pointer label">
+        <span class="label-text">Show customized colors</span>
+        <div>
+          <input type="checkbox" checked="checked" class="toggle toggle-primary" v-model="applyCustomThemeToSite">
+          <span class="toggle-mark"></span>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <Wrapper classes="grid grid-cols-1 md:grid-cols-6 gap-6" nocode>
+
+    <div class="block mb-4" v-for="(colorGroup, index) in colors">
+      <div class="mb-4 text-xs uppercase opacity-50">{{ index }}</div>
+      <div class="grid rounded">
+        <div class="flex flex-col col-start-1 row-start-1">
+          <div v-for="(color, index) in colorGroup" class="relative col-start-1 row-start-1">
+            <label :class="'flex justify-start items-end w-full h-20 transform transition-all cursor-pointer shadow hover:shadow-lg hover:-translate-y-1 '+ color.class + ((index === 0) ? ' rounded-t ' : '') + ((index === colorGroup.length - 1) ? ' rounded-b ' : '')" :for="color.name">
+              <div class="px-1 m-1 text-xs text-white bg-black rounded bg-opacity-20">
+                .bg-{{ color.title }}
+              </div>
+            </label>
+            <input
+              type="color"
+              :id="color.name"
+              class="absolute top-0 invisible opacity-0"
+              v-model="colorValues[color.name]['hex']"
+              v-on:change="hexToHsl(color.name); applyCustomThemeToSite = true; showCustomThemeTogglerSwitch = true; "
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </Wrapper>
+</div>
+
+
+
+
+
+
+
+
+<div id="preview" v-bind:class="{'hidden': activeTab != 'preview'}">
+<div class="text-xl font-bold text-base-content">Preview components</div>
+<div class="mb-6">See how components will look like using you color palette</div>
 <div>
   <div class="grid grid-cols-1 gap-6 lg:p-10 xl:grid-cols-3 lg:bg-base-200 rounded-box">
 
@@ -331,32 +333,23 @@ See how components will look like using you color palette
 
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="output" class="pt-10 text-xl font-bold text-base-content">CSS output</div>
-<div>
-This is your custom color theme. add it to your CSS file!
 </div>
+
+
+<div id="output" v-bind:class="{'hidden': activeTab != 'output'}">
+<div class="text-xl font-bold text-base-content">Theme config</div>
+<div class="mb-6">This is your custom color theme. Add it to dailwind.config.js</div>
 <div class="w-full max-w-2xl my-2">
-  <div class="shadow-lg mockup-code">
-  <pre><code>:root {
-  <template v-for="(color, index) in colorValues">  --{{ index }}: {{ color.hsl }};
-  </template>}</code></pre>
+  <div class="shadow-lg mockup-code text-sm">
+  <pre><code>daisyui: {
+    themes: [
+      {
+        'mytheme: {
+        <template v-for="(color, index) in colorValues">  '{{ color.name }}': '{{ color.hex }}',
+        </template>},
+      },
+    ],
+  },</code></pre>
   </div>
 </div>
 
@@ -365,7 +358,7 @@ This is your custom color theme. add it to your CSS file!
   --{{ index }}: {{ color.hsl }};
 }
 </component>
-
+</div>
 
 
 
@@ -386,34 +379,35 @@ This is your custom color theme. add it to your CSS file!
 export default {
   data() {
     return {
+      activeTab: 'colors',
       showCustomThemeTogglerSwitch: false,
       applyCustomThemeToSite: false,
       colorValues: {
-        "p" : { hsl: "259 94% 51%", hex: "#570df8" },
-        "pf" : { hsl: "259 94% 41%", hex: "#4506cb" },
-        "pc" : { hsl: "0 0% 100%", hex: "#ffffff" },
+        "p" : { hsl: "259 94% 51%", hex: "#570df8", name: "primary" },
+        "pf" : { hsl: "259 94% 41%", hex: "#4506cb", name: "primary-focus" },
+        "pc" : { hsl: "0 0% 100%", hex: "#ffffff", name: "primary-content" },
 
-        "s" : { hsl: "314 100% 47%", hex: "#f000b8" },
-        "sf" : { hsl: "314 100% 37%", hex: "#bd0091" },
-        "sc" : { hsl: "0 0% 100%", hex: "#ffffff" },
+        "s" : { hsl: "314 100% 47%", hex: "#f000b8", name: "secondary" },
+        "sf" : { hsl: "314 100% 37%", hex: "#bd0091", name: "secondary-focus" },
+        "sc" : { hsl: "0 0% 100%", hex: "#ffffff", name: "secondary-content" },
 
-        "a" : { hsl: "174 60% 51%", hex: "#37cdbe" },
-        "af" : { hsl: "174 60% 41%", hex: "#2aa79b" },
-        "ac" : { hsl: "0 0% 100%", hex: "#ffffff" },
+        "a" : { hsl: "174 60% 51%", hex: "#37cdbe", name: "accent" },
+        "af" : { hsl: "174 60% 41%", hex: "#2aa79b", name: "accent-focus" },
+        "ac" : { hsl: "0 0% 100%", hex: "#ffffff", name: "accent-content" },
 
-        "n" : { hsl: "215 28% 17%", hex: "#1f2937" },
-        "nf" : { hsl: "221 39% 11%", hex: "#111827" },
-        "nc" : { hsl: "0 0% 100%", hex: "#ffffff" },
+        "n" : { hsl: "219 14% 28%", hex: "#3d4451", name: "neutral" },
+        "nf" : { hsl: "222 13% 19%", hex: "#2a2e37", name: "neutral-focus" },
+        "nc" : { hsl: "0 0% 100%", hex: "#ffffff", name: "neutral-content" },
 
-        "b1" : { hsl: "0 0% 100%", hex: "#ffffff" },
-        "b2" : { hsl: "210 20% 98%", hex: "#f9fafb" },
-        "b3" : { hsl: "216 12% 84%", hex: "#d1d5db" },
-        "bc" : { hsl: "215 28% 17%", hex: "#1f2937" },
+        "b1" : { hsl: "0 0% 100%", hex: "#ffffff", name: "base-100" },
+        "b2" : { hsl: "210 20% 98%", hex: "#f9fafb", name: "base-200" },
+        "b3" : { hsl: "216 12% 84%", hex: "#d1d5db", name: "base-300" },
+        "bc" : { hsl: "215 28% 17%", hex: "#1f2937", name: "base-content" },
 
-        "in" : { hsl: "207 90% 54%", hex: "#2094f3" },
-        "su" : { hsl: "174 100% 29%", hex: "#009485" },
-        "wa" : { hsl: "36 100% 50%", hex: "#ff9900" },
-        "er" : { hsl: "14 100% 57%", hex: "#ff5724" },
+        "in" : { hsl: "207 90% 54%", hex: "#2094f3", name: "info" },
+        "su" : { hsl: "174 100% 29%", hex: "#009485", name: "success" },
+        "wa" : { hsl: "36 100% 50%", hex: "#ff9900", name: "warning" },
+        "er" : { hsl: "14 100% 57%", hex: "#ff5724", name: "error" },
       },
       colors: {
         'primary': [

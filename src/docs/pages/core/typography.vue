@@ -6,9 +6,9 @@
       </h2>
 
     <div class="tabs mb-10">
-      <NuxtLink to="/core/layout" class="tab tab-lifted"><Icon glyph="template" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Layout</NuxtLink>
-      <NuxtLink to="/core/typography" class="tab tab-lifted tab-active"><Icon glyph="text" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 fill-current" />Typography</NuxtLink>
-      <span class="tab tab-lifted flex-grow cursor-default hidden sm:block"></span>
+      <NuxtLink to="/core/layout" class="tab tab-lifted tab-lg"><Icon glyph="template" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Layout</NuxtLink>
+      <NuxtLink to="/core/typography" class="tab tab-lifted tab-lg tab-active"><Icon glyph="text" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 fill-current" />Typography</NuxtLink>
+      <span class="tab tab-lifted tab-lg flex-grow cursor-default hidden sm:block"></span>
     </div>
 
     </div>

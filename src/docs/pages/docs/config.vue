@@ -59,21 +59,53 @@
       </p>
       <p class="my-4">
         If it's true, all themes will be included.
-        <br>If it's false, only default (light) theme will be available.
-        <br>Can also be an array of theme names:
+        <br>If it's false, only light theme will be available.
+        <br>themes config can be an array of theme names:
 
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
-        <pre><code><span class="text-neutral-content text-opacity-20">// emerald will be the default theme</span>
+        <pre><code>
     daisyui: {
-      themes: ['emerald','dark','forest','synthwave'],
+      themes: [
+        'emerald', <span class="text-neutral-content text-opacity-20">// first one will be the default theme</span>
+        'dark',
+        'forest',
+        'synthwave'
+      ],
     },</code></pre>
         </div>
       </div>
         <br>The first item of array will be the default theme.
-        <br>if no theme is chosen on <span class="badge badge-outline">&lt;html data-theme="THEME_NAME"&gt;</span> and <span class="badge badge-outline">dark</span> theme is in themes config, default theme and dark theme will be enabled based on operatig system prefrences.
+        <br>if no theme is chosen on <span class="badge badge-outline">&lt;html data-theme="THEME_NAME"&gt;</span> and <span class="badge badge-outline">dark</span> theme is in themes config, default theme and dark theme will be actiavted based on operatig system prefrences.
         <br>
         <NuxtLink to="/docs/default-themes" class="link">read more about default themes</NuxtLink>
+      </p>
+      <br>You can add your custom themes in config:
+      <div class="w-full max-w-4xl my-2">
+        <div class="shadow-lg mockup-code">
+        <pre><code>
+    daisyui: {
+      themes: [<div class="bg-neutral-focus">      {
+          'mytheme: { <span class="text-neutral-content text-opacity-30">// custom theme</span>
+            'primary' : '#ea5234',
+            'primary-focus' : '#d43616',
+            'primary-content' : '#ffffff',
+            <span class="text-neutral-content text-opacity-30">// other colors</span>
+          },
+          'myothertheme: { <span class="text-neutral-content text-opacity-30">// custom theme</span>
+            'primary' : '#007ebd',
+            'primary-focus' : '#005c8a',
+            'primary-content' : '#ffffff',
+            <span class="text-neutral-content text-opacity-30">// other colors</span>
+          },
+        },</div>      'dark', <span class="text-neutral-content text-opacity-30">// and some pre-defined theme</span>
+        'forest',
+        'synthwave'
+      ],
+    },</code></pre>
+        </div>
+      </div>
+        <NuxtLink to="/docs/default-themes" class="link">read more about adding themes</NuxtLink>
       </p>
 
       <h2 class="mt-6 text-2xl font-bold">

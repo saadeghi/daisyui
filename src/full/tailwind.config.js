@@ -22,7 +22,6 @@ module.exports = {
   ],
   plugins: [
     plugin(function({ addBase, addUtilities, addComponents }) {
-      addBase(require('../../dist/themes'))
       addBase(require('../../dist/base'))
       addComponents(require('../../dist/styled'))
       addUtilities(require('../../dist/utilities'),{ variants: ['responsive'] })
