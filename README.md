@@ -15,7 +15,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 
 # DaisyUI  
 [![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][install-size]][install-size-url]  
-[![][dl]][npm-url] [![][commit]][gh-url] [![][license]][license-url]   
+[![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url] [![][license]][license-url]   
 
 
 - 👉 [ [See all components][docs-url] ]
@@ -43,7 +43,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 
 ---
 
-## 👩‍💻 Install now!  
+## 📀 Install now!  
 
 ```bash
 npm i daisyui --save
@@ -73,14 +73,14 @@ module.exports = {
   
 ```html
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/daisyui@1.2/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@1.3/dist/full.css" rel="stylesheet" type="text/css" />
 ```
 [ [Browse other versions][docs-url-install] ]
 
 </details>
 
 ---
-## 🎉 Use  
+## 🚀 Use  
 Use component classes like `btn`, `card`, etc… to build your UI.  
 ```html
 <a class="btn">Hello!</a>
@@ -179,12 +179,13 @@ Read the documents for more info
 
 
 
-[install-size]: https://badgen.net/bundlephobia/minzip/daisyui?label=install%20size&color=purple
+[install-size]: https://badgen.net/bundlephobia/minzip/daisyui?label=bundle%20size&color=green
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
-[npm]: https://badgen.net/npm/v/daisyui?label=version&color=purple
-[dl]: https://badgen.net/npm/dt/daisyui?icon=npm&color=purple
-[commit]: https://badgen.net/github/last-commit/saadeghi/daisyui?icon=github&color=purple
-[license]: https://badgen.net/github/license/saadeghi/daisyui?color=purple
+[npm]: https://badgen.net/github/tag/saadeghi/daisyui?label=version&color=green
+[dl]: https://badgen.net/npm/dt/daisyui?label=installs&icon=npm&color=green
+[commit]: https://badgen.net/github/last-commit/saadeghi/daisyui?icon=github&color=green
+[license]: https://badgen.net/github/license/saadeghi/daisyui?color=green
+[stars]: https://badgen.net/github/stars/saadeghi/daisyui?color=green
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
@@ -197,7 +198,7 @@ Read the documents for more info
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
-[number-of-components]: https://badgen.net/badge/components%20added/35/purple
+[number-of-components]: https://badgen.net/badge/components%20added/35/green
 
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
