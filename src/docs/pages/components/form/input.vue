@@ -82,7 +82,7 @@
       </FormControl>
     </Wrapper>
     <Wrapper
-      title="input brand colors"
+      title="input with brand colors"
       classes="flex flex-col space-y-2 max-w-xs"
     >
       <FormControl>
@@ -116,7 +116,7 @@
         />
       </FormControl>
     </Wrapper>
-    <Wrapper title="input states" classes="flex flex-col space-y-2 max-w-xs">
+    <Wrapper title="input with state colors" classes="flex flex-col space-y-2 max-w-xs">
       <FormControl>
         <label class="label">
           <span class="label-text">Username</span>
