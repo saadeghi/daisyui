@@ -338,7 +338,7 @@
 
 <div id="output" v-bind:class="{'hidden': activeTab != 'output'}">
 <div class="text-xl font-bold text-base-content">Theme config</div>
-<div class="mb-6">This is your custom color theme. Add it to dailwind.config.js</div>
+<div class="mb-6">This is your custom color theme. Add it to tailwind.config.js</div>
 <div class="w-full max-w-2xl my-2">
   <div class="shadow-lg mockup-code text-sm">
   <pre><code>daisyui: {
