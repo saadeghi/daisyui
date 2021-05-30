@@ -57,5 +57,85 @@
         </Textarea>
       </FormControl>
     </Wrapper>
+    <Wrapper
+      title="Textarea with brand colors"
+      classes="flex flex-col space-y-2 max-w-xs"
+    >
+      <FormControl>
+        <label class="label">
+          <span class="label-text">primary</span>
+        </label>
+        <Textarea
+          class="h-24 textarea textarea-bordered textarea-primary"
+          placeholder="Bio"
+        >
+        </Textarea>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">secondary</span>
+        </label>
+        <Textarea
+          class="h-24 textarea textarea-bordered textarea-secondary"
+          placeholder="Bio"
+        >
+        </Textarea>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">accent</span>
+        </label>
+        <Textarea
+          class="h-24 textarea textarea-bordered textarea-accent"
+          placeholder="Bio"
+        >
+        </Textarea>
+      </FormControl>
+    </Wrapper>
+    <Wrapper
+      title="Textarea with state colors"
+      classes="flex flex-col space-y-2 max-w-xs"
+    >
+      <FormControl>
+        <label class="label">
+          <span class="label-text">info</span>
+        </label>
+        <Textarea
+          class="h-24 textarea textarea-bordered textarea-info"
+          placeholder="Bio"
+        >
+        </Textarea>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">success</span>
+        </label>
+        <Textarea
+          class="h-24 textarea textarea-bordered textarea-success"
+          placeholder="Bio"
+        >
+        </Textarea>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">warning</span>
+        </label>
+        <Textarea
+          class="h-24 textarea textarea-bordered textarea-warning"
+          placeholder="Bio"
+        >
+        </Textarea>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">error</span>
+        </label>
+        <Textarea
+          class="h-24 textarea textarea-bordered textarea-error"
+          placeholder="Bio"
+        >
+        </Textarea>
+      </FormControl>
+    </Wrapper>
   </div>
 </template>
