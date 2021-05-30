@@ -16,7 +16,7 @@
         <pre><code>daisyui: {
       themes: [
         {
-          'mytheme: { <span class="text-neutral-content text-opacity-30">                         /* your theme name */</span>
+          'mytheme': { <span class="text-neutral-content text-opacity-30">                         /* your theme name */</span>
             <img src="https://via.placeholder.com/15/a991f7/000000?text=+" class="inline-block rounded"> 'primary' : '#a991f7',<span class="text-neutral-content text-opacity-30">           /* Primary color */</span>
             <img src="https://via.placeholder.com/15/8462f4/000000?text=+" class="inline-block rounded"> 'primary-focus' : '#8462f4',<span class="text-neutral-content text-opacity-30">     /* Primary color - focused */</span>
             <img src="https://via.placeholder.com/15/ffffff/000000?text=+" class="inline-block rounded"> 'primary-content' : '#ffffff',<span class="text-neutral-content text-opacity-30">   /* Foreground content color to use on primary color */</span>

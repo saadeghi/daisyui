@@ -86,13 +86,13 @@
         <pre><code>
     daisyui: {
       themes: [<div class="bg-neutral-focus">      {
-          'mytheme: { <span class="text-neutral-content text-opacity-30">// custom theme</span>
+          'mytheme': { <span class="text-neutral-content text-opacity-30">// custom theme</span>
             'primary' : '#ea5234',
             'primary-focus' : '#d43616',
             'primary-content' : '#ffffff',
             <span class="text-neutral-content text-opacity-30">// other colors</span>
           },
-          'myothertheme: { <span class="text-neutral-content text-opacity-30">// custom theme</span>
+          'myothertheme': { <span class="text-neutral-content text-opacity-30">// custom theme</span>
             'primary' : '#007ebd',
             'primary-focus' : '#005c8a',
             'primary-content' : '#ffffff',

@@ -344,7 +344,7 @@
   <pre><code>daisyui: {
     themes: [
       {
-        'mytheme: {
+        'mytheme': {
         <template v-for="(color, index) in colorValues">  '{{ color.name }}': '{{ color.hex }}',
         </template>},
       },
