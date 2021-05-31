@@ -20,29 +20,71 @@ jobs:
             node-version: 14
             registry-url: https://registry.npmjs.org
 
-      - id: check
+      - name: check latest released version
+        id: check
         uses: EndBug/version-check@v1
         with:
             file-url: https://unpkg.com/daisyui@latest/package.json
             static-checking: localIsNew
 
       - name: Install dependencies
-        run: npm install
         if: steps.check.outputs.changed == 'true'
+        run: npm install
 
       - name: build
-        run: npm run build
         if: steps.check.outputs.changed == 'true'
+        run: npm run build
 
       - name: Publish
-        run: npm publish
         if: steps.check.outputs.changed == 'true'
+        run: npm publish
         env:
             NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-      - name: Wait 10 seconds for npm publish
-        uses: whatnick/wait-action@master
+      - name: Read package version from package.json
         if: steps.check.outputs.changed == 'true'
+        uses: nyaa8/package-version@v1
+        with:
+          path: 'package.json'
+
+      - name: update package version in env
+        if: steps.check.outputs.changed == 'true'
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_DAISYUI_VERSION: ${{ env.PACKAGE_VERSION }}
+          file_name: src/docs/.env
+          
+      - name: update package version in readme
+        if: steps.check.outputs.changed == 'true'
+        uses: mingjun97/file-regex-replace@v1
+        with:
+          regex: 'cdn.jsdelivr.net\/npm\/daisyui@.*\/dist\/'
+          replacement: 'cdn.jsdelivr.net/npm/daisyui@${{ env.PACKAGE_VERSION }}/dist/'
+          include: 'README.md'
+
+      - name: Commit files
+        if: steps.check.outputs.changed == 'true'
+        id: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "github-actions"
+          git add --all
+          if [-z "$(git status --porcelain)"]; then
+            echo "::set-output name=push::false"
+          else
+            git commit -m "Update version" -a
+            echo "::set-output name=push::true"
+          fi
+        shell: bash
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Wait 10 seconds for npm publish
+        if: steps.check.outputs.changed == 'true'
+        uses: whatnick/wait-action@master
         with:
           time: '10s'
 
