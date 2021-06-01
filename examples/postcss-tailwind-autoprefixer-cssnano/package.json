@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "postcss node_modules/tailwindcss/tailwind.css -o output.css -w",
+    "prod": "NODE_ENV=production postcss node_modules/tailwindcss/tailwind.css -o output.css"
+  },
+  "dependencies": {
+    "autoprefixer": "latest",
+    "cssnano": "latest",
+    "daisyui": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest",
+    "tailwindcss": "latest"
+  }
+}
