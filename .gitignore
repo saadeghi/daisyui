@@ -1,5 +1,7 @@
 node_modules
-dist
 yarn.lock
 /package-lock.json
 .next
+/dist
+/colors
+/index.js
