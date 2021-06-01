@@ -40,7 +40,7 @@
       <Badge class="badge-accent badge-outline">accent</Badge>
     </Wrapper>
 
-    <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-x-0 space-y-2 md:space-y-0 flex-col md:flex-row" title="Badg in text">
+    <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-x-0 space-y-2 md:space-y-0 flex-col md:flex-row" title="Badge in text">
       <div>
         <div>
           <h2 class="mb-5 text-2xl">
