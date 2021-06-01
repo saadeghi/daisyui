@@ -111,12 +111,12 @@ Read the documents for more info
 - [x] Artboard
 - [ ] App bar
 - [x] Avatar
-- [ ] Avatar group
+  - [ ] Avatar group
 - [x] Badge
 - [ ] Banner
 - [x] Breadcrumb
 - [x] Button
-- [x] Button group
+  - [x] Button group
 - [ ] Calendar
 - [x] Carousel
 - [x] Card
