@@ -364,12 +364,134 @@
 
 
 
+
+
+    <div class="mt-20">
+      You can use color names in utility classes just like Tailwind's color names.border-opacity-20
+      <br/>
+      These are default utility classes that use color names:
+
+      <div class="shadow-lg mockup-code text-sm mt-6">
+        <pre>
+  <code>bg-<span class="text-info">{COLOR_NAME}</span></span>
+    text-<span class="text-info">{COLOR_NAME}</span>
+    border-<span class="text-info">{COLOR_NAME}</span>
+    from-<span class="text-info">{COLOR_NAME}</span>
+    via-<span class="text-info">{COLOR_NAME}</span>
+    to-<span class="text-info">{COLOR_NAME}</span>
+    placeholder-<span class="text-info">{COLOR_NAME}</span>
+    divide-<span class="text-info">{COLOR_NAME}</span>
+    ring-<span class="text-info">{COLOR_NAME}</span>
+    ring-offset-<span class="text-info">{COLOR_NAME}</span></code></pre>
+      </div>
+      <br/>
+      For example these are all the background colors:
+    </div>
+
+    <ClassTable v-bind:data="{
+      showTitle : false,
+      showType : false,
+      showColors : true,
+      utilities : [
+        { class: 'bg-primary',
+          color: 'bg-primary',
+          desc: 'Primary color'
+        },
+        { class: 'bg-primary-focus',
+          color: 'bg-primary-focus',
+          desc: 'Primary color - focused'
+        },
+        { class: 'bg-primary-content',
+          color: 'bg-primary-content',
+          desc: 'Foreground content color to use on primary color'
+        },
+        { class: 'bg-secondary',
+          color: 'bg-secondary',
+          desc: 'Secondary color'
+        },
+        { class: 'bg-secondary-focus',
+          color: 'bg-secondary-focus',
+          desc: 'Secondary color - focused'
+        },
+        { class: 'bg-secondary-content',
+          color: 'bg-secondary-content',
+          desc: 'Foreground content color to use on secondary color'
+        },
+        { class: 'bg-accent',
+          color: 'bg-accent',
+          desc: 'Accent color'
+        },
+        { class: 'bg-accent-focus',
+          color: 'bg-accent-focus',
+          desc: 'Accent color - focused'
+        },
+        { class: 'bg-accent-content',
+          color: 'bg-accent-content',
+          desc: 'Foreground content color to use on accent color'
+        },
+        { class: 'bg-neutral',
+          color: 'bg-neutral',
+          desc: 'Neutral color'
+        },
+        { class: 'bg-neutral-focus',
+          color: 'bg-neutral-focus',
+          desc: 'Neutral color - focused'
+        },
+        { class: 'bg-neutral-content',
+          color: 'bg-neutral-content',
+          desc: 'Foreground content color to use on neutral color'
+        },
+        { class: 'bg-base-100',
+          color: 'bg-base-100',
+          desc: 'Base color of page, used for blank backgrounds'
+        },
+        { class: 'bg-base-200',
+          color: 'bg-base-200',
+          desc: 'Base color, a little darker'
+        },
+        { class: 'bg-base-300',
+          color: 'bg-base-300',
+          desc: 'Base color, even more darker'
+        },
+        { class: 'bg-base-content',
+          color: 'bg-base-content',
+          desc: 'Foreground content color to use on base color'
+        },
+        { class: 'bg-info',
+          color: 'bg-info',
+          desc: 'Info color'
+        },
+        { class: 'bg-success',
+          color: 'bg-success',
+          desc: 'Success color'
+        },
+        { class: 'bg-warning',
+          color: 'bg-warning',
+          desc: 'Warning color'
+        },
+        { class: 'bg-error',
+          color: 'bg-error',
+          desc: 'Error color'
+        },
+      ]
+    }"/>
+
+
+
+
+
+
+
     <div class="flex justify-end max-w-4xl pt-10 mt-20 border-t-2 border-base-200">
       <NuxtLink to="/core/layout" class="text-xs btn-lg btn lg:text-lg">
         Next: layout
         <Icon glyph="arrow" class="inline-block w-6 h-6 ml-2 stroke-current" />
       </NuxtLink>
     </div>
+
+
+
+
 
 </div>
 </template>

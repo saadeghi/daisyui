@@ -1,5 +1,12 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'hero', desc: 'Container element' },
+        { class: 'hero-content', desc: 'Container for content' },
+        { class: 'hero-overlay', desc: 'Overlay the covers the background image' },
+      ]
+    }"/>
     <Wrapper title="hero">
       <Hero class="min-h-screen bg-base-200">
         <div class="text-center hero-content">

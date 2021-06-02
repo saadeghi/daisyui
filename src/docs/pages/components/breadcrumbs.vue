@@ -1,5 +1,10 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'breadcrumbs', desc: 'Container element' },
+      ]
+    }"/>
     <Wrapper classes="flex items-start flex-col space-y-2" title="breadcrumbs">
       <div class="text-sm breadcrumbs">
         <ul>

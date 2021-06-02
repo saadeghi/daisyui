@@ -1,5 +1,10 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'mockup-code', desc: 'Container element' },
+      ]
+    }"/>
     <Wrapper title="code mockup" classes="max-w-md">
       <div class="mockup-code">
         <pre data-prefix="$"><code>npm i daisyui</code></pre>

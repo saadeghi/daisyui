@@ -1,5 +1,17 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'modal', desc: 'Container element' },
+        { class: 'modal-box', desc: 'The content of modal' },
+        { class: 'modal-action', desc: 'Container for modal buttons' },
+        { class: 'modal-toggle', desc: 'For checkbox that controls modal' },
+        { class: 'modal-button', desc: 'For <label> that checks the checkbox to opens/closes modal' },
+      ],
+      utilities : [
+        { class: 'compact', desc: 'Makes menu more compact' },
+      ]
+    }"/>
 
     <Wrapper title="modal using URL hash">
       <a class="btn btn-primary" :href="`/components/modal#my-modal`" v-scroll-to="{el: '#my-modal'}">open modal</a>

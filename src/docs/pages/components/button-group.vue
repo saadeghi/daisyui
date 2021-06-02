@@ -1,6 +1,10 @@
 <template>
   <div>
-
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'btn-group', desc: 'Container for grouping multiple buttons' },
+      ]
+    }"/>
     <Wrapper classes="flex items-start flex-col space-y-2" title="button group">
       <div class="btn-group">
         <Button class="btn-lg btn-active">Large</Button>

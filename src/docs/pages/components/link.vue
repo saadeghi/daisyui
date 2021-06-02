@@ -1,5 +1,17 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'link', desc: 'Adds underline to a text' },
+      ],
+      utilities : [
+        { class: 'link-primary', desc: 'Link with `primary` color' },
+        { class: 'link-secondary', desc: 'Link with `secondary` color' },
+        { class: 'link-accent', desc: 'Link with `accent` color' },
+        { class: 'link-neutral', desc: 'Link with `neutral` color' },
+        { class: 'link-hover', desc: 'Only show underline on hover' },
+      ]
+    }"/>
     <Wrapper title="link">
       <a class="link">It's just a simple link</a>
     </Wrapper>

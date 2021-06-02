@@ -1,5 +1,16 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'avatar', desc: 'Container element' },
+        { class: 'avatar-group', desc: 'Container for grouping multiple avatars' },
+      ],
+      utilities : [
+        { class: 'online', desc: 'shows a green dot as online indicator' },
+        { class: 'offline', desc: 'shows a gray dot as online indicator' },
+        { class: 'placeholder', desc: 'to show some letters as avatar placeholder' },
+      ]
+    }"/>
     <Wrapper title="avatar" classes="flex items-center space-x-8 flex-wrap">
       <Avatar classes="mb-8 rounded-btn w-24 h-24">
         <img src="http://daisyui.com/tailwind-css-component-profile-1@94w.png">

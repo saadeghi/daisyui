@@ -1,5 +1,27 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'form-control', desc: 'Container element' },
+        { class: 'label', desc: 'For helper text' },
+        { class: 'select', desc: 'For <select> element' },
+      ],
+      utilities : [
+        { class: 'select-bordered', desc: 'Adds border to select' },
+        { class: 'select-ghost', desc: 'Adds ghost style to checkbox' },
+        { class: 'select-primary', desc: 'Adds `primary` color to select' },
+        { class: 'select-secondary', desc: 'Adds `secondary` color to select' },
+        { class: 'select-accent', desc: 'Adds `accent` color to select' },
+        { class: 'select-info', desc: 'Adds `info` color to select' },
+        { class: 'select-success', desc: 'Adds `success` color to select' },
+        { class: 'select-warning', desc: 'Adds `warning` color to select' },
+        { class: 'select-error', desc: 'Adds `error` color to select' },
+        { class: 'select-lg', desc: 'Large size for select' },
+        { class: 'select-md', desc: 'Medium (default) size for select' },
+        { class: 'select-sm', desc: 'Small size for select' },
+        { class: 'select-xs', desc: 'Extra small size for select' },
+      ]
+    }"/>
 
     <Wrapper classes="flex flex-col space-y-2" title="select">
       <Select classes="select-bordered w-full max-w-xs">

@@ -1,5 +1,16 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'alert', desc: 'Container element' },
+      ],
+      utilities : [
+        { class: 'alert-info', desc: 'Alert with `info` color' },
+        { class: 'alert-success', desc: 'Alert with `success` color' },
+        { class: 'alert-warning', desc: 'Alert with `warning` color' },
+        { class: 'alert-error', desc: 'Alert with `error` color' },
+      ]
+    }"/>
     <Wrapper title="alert" classes="flex flex-col space-y-2">
       <Alert>
         <div class="flex-1">

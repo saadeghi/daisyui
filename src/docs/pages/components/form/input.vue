@@ -1,5 +1,27 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'form-control', desc: 'Container element' },
+        { class: 'label', desc: 'For helper text' },
+        { class: 'input', desc: 'For <input> element' },
+      ],
+      utilities : [
+        { class: 'input-bordered', desc: 'Adds border to input' },
+        { class: 'input-ghost', desc: 'Adds ghost style to checkbox' },
+        { class: 'input-primary', desc: 'Adds `primary` color to input' },
+        { class: 'input-secondary', desc: 'Adds `secondary` color to input' },
+        { class: 'input-accent', desc: 'Adds `accent` color to input' },
+        { class: 'input-info', desc: 'Adds `info` color to input' },
+        { class: 'input-success', desc: 'Adds `success` color to input' },
+        { class: 'input-warning', desc: 'Adds `warning` color to input' },
+        { class: 'input-error', desc: 'Adds `error` color to input' },
+        { class: 'input-lg', desc: 'Large size for input' },
+        { class: 'input-md', desc: 'Medium (default) size for input' },
+        { class: 'input-sm', desc: 'Small size for input' },
+        { class: 'input-xs', desc: 'Extra small size for input' },
+      ]
+    }"/>
     <Wrapper
       title="input with border"
       classes="flex flex-col space-y-2 max-w-xs"

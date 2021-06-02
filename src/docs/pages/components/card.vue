@@ -1,5 +1,19 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'card', desc: 'Container element' },
+        { class: 'card-title', desc: 'Title of card' },
+        { class: 'card-body', desc: 'Container for content' },
+        { class: 'card-actions', desc: 'Container for buttons' },
+      ],
+      utilities : [
+        { class: 'bordered', desc: 'Adds border`' },
+        { class: 'compact', desc: 'Less padding' },
+        { class: 'card-side', desc: 'The image in <figure> will be on to the side' },
+        { class: 'image-full', desc: 'The image in <figure> element will be the background' },
+      ]
+    }"/>
     <Wrapper title="card" classes="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <Card class="bordered">

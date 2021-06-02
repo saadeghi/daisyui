@@ -1,5 +1,19 @@
 <template>
   <div class="mb-60">
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'dropdown', desc: 'Container element' },
+        { class: 'dropdown-content', desc: 'Container for content' },
+      ],
+      utilities : [
+        { class: 'dropdown-end', desc: 'Aligns to end' },
+        { class: 'dropdown-top', desc: 'Open from top' },
+        { class: 'dropdown-left', desc: 'Open from left' },
+        { class: 'dropdown-right', desc: 'Open from right' },
+        { class: 'dropdown-hover', desc: 'Opens on hover too' },
+        { class: 'dropdown-open', desc: 'Force open' },
+      ]
+    }"/>
 
     <Wrapper title="dropdown" classes="flex justify-center bg-base-200 py-6 rounded-box">
       <div class="dropdown">

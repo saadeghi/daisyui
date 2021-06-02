@@ -1,5 +1,31 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'mask', desc: 'Masks the content with shape' },
+      ],
+      utilities : [
+        { class: 'mask-squircle', desc: 'Applies `squircle` shape' },
+        { class: 'mask-heart', desc: 'Applies `heart` shape' },
+        { class: 'mask-hexagon', desc: 'Applies `hexagon` shape' },
+        { class: 'mask-hexagon-2', desc: 'Applies `hexagon` alternative shape' },
+        { class: 'mask-decagon', desc: 'Applies `decagon` shape' },
+        { class: 'mask-pentagon', desc: 'Applies `pentagon` shape' },
+        { class: 'mask-diamond', desc: 'Applies `diamond` shape' },
+        { class: 'mask-square', desc: 'Applies `square` shape' },
+        { class: 'mask-circle', desc: 'Applies `circle` shape' },
+        { class: 'mask-parallelogram', desc: 'Applies `parallelogram` shape' },
+        { class: 'mask-parallelogram-2', desc: 'Applies `parallelogram` alternative shape' },
+        { class: 'mask-parallelogram-3', desc: 'Applies `parallelogram` alternative shape' },
+        { class: 'mask-parallelogram-4', desc: 'Applies `parallelogram` alternative shape' },
+        { class: 'mask-star', desc: 'Applies `star` shape' },
+        { class: 'mask-star-2', desc: 'Applies `star` alternative shape' },
+        { class: 'mask-triangle', desc: 'Applies `triangle` shape' },
+        { class: 'mask-triangle-2', desc: 'Applies `triangle` alternative shape' },
+        { class: 'mask-triangle-3', desc: 'Applies `triangle` alternative shape' },
+        { class: 'mask-triangle-4', desc: 'Applies `triangle` alternative shape' },
+      ]
+    }"/>
     <Wrapper title="mask-squircle">
       <img class="mask mask-squircle" src="https://picsum.photos/id/1005/200/200" />
     </Wrapper>

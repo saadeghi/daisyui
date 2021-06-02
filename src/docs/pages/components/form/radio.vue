@@ -1,5 +1,17 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'form-control', desc: 'Container element' },
+        { class: 'radio', desc: 'For radio input' },
+        { class: 'radio-mark', desc: 'For span that coms after radio input' },
+      ],
+      utilities : [
+        { class: 'radio-primary', desc: 'Adds `primary` to radio' },
+        { class: 'radio-secondary', desc: 'Adds `secondary` to radio' },
+        { class: 'radio-accent', desc: 'Adds `accent` to radio' },
+      ]
+    }"/>
     <Wrapper title="input" classes="flex flex-col space-y-2 max-w-xs">
       <div class="p-6 card bordered">
         <FormControl>

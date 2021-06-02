@@ -1,5 +1,21 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'tabs', desc: 'Container of tab items' },
+        { class: 'tab', desc: 'A tab item' },
+      ],
+      utilities : [
+        { class: 'tab-active', desc: 'For the active tab' },
+        { class: 'tab-bordered', desc: 'Adds bottom border to tab item' },
+        { class: 'tab-lifted', desc: 'Adds lifted style to tab item' },
+        { class: 'tabs-boxed', desc: 'Adds a box style to tabs container' },
+        { class: 'tab-xs', desc: 'Shows tab in extra small size' },
+        { class: 'tab-sm', desc: 'Shows tab in small size' },
+        { class: 'tab-md', desc: 'Shows tab in medium (defaul) size' },
+        { class: 'tab-lg', desc: 'Shows tab in large size' },
+      ]
+    }"/>
 
     <Wrapper classes="flex items-start flex-col space-y-2" title="tabs">
       <div class="tabs">

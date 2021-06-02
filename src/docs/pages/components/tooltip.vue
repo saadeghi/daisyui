@@ -1,5 +1,23 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'tooltip', desc: 'Container element' },
+      ],
+      utilities : [
+        { class: 'tooltip-open', desc: 'Force open tooltip' },
+        { class: 'tooltip-bottom', desc: 'Put tooltip on bottom' },
+        { class: 'tooltip-left', desc: 'Put tooltip on left' },
+        { class: 'tooltip-right', desc: 'Put tooltip on right' },
+        { class: 'tooltip-primary', desc: 'Adds `primary` color to tooltip' },
+        { class: 'tooltip-secondary', desc: 'Adds `secondary` color to tooltip' },
+        { class: 'tooltip-accent', desc: 'Adds `accent` color to tooltip' },
+        { class: 'tooltip-info', desc: 'Adds `info` color to tooltip' },
+        { class: 'tooltip-success', desc: 'Adds `success` color to tooltip' },
+        { class: 'tooltip-warning', desc: 'Adds `warning` color to tooltip' },
+        { class: 'tooltip-error', desc: 'Adds `error` color to tooltip' },
+      ]
+    }"/>
 
     <Wrapper title="tooltip" classes="flex justify-center my-6">
       <div class="tooltip" data-tip="hello">

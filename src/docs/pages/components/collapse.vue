@@ -1,5 +1,18 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'collapse', desc: 'Container element' },
+        { class: 'collapse-title', desc: 'Title element' },
+        { class: 'collapse-content', desc: 'Cointainer for content' },
+      ],
+      utilities : [
+        { class: 'collapse-arrow', desc: 'Adds arrow icon' },
+        { class: 'collapse-plus', desc: 'Adds plus/minus icon' },
+        { class: 'collapse-open', desc: 'Force open' },
+        { class: 'collapse-close', desc: 'Force close' },
+      ]
+    }"/>
     <Wrapper title="collapse" classes="space-y-2">
       <Collapse title="I open with focus"/>
       <Collapse title="I open with focus"/>

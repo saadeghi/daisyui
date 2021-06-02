@@ -1,5 +1,10 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'navbar', desc: 'Container element' },
+      ]
+    }"/>
     <Wrapper title="navbar" classes="flex flex-col space-y-2">
 
         <Navbar class="mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">

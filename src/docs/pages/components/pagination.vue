@@ -1,5 +1,10 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'btn-group', desc: 'Groups buttons together' },
+      ]
+    }"/>
     <Wrapper classes="flex items-start flex-col space-y-2" title="pagination">
       <div class="btn-group">
         <Button class="">Previous</Button>

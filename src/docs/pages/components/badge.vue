@@ -1,5 +1,23 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'badge', desc: 'Container element' },
+      ],
+      utilities : [
+        { class: 'badge-outline', desc: 'transparent badge with [colorful] border' },
+        { class: 'badge-primary', desc: 'badge with `primary` color' },
+        { class: 'badge-secondary', desc: 'badge with `secondary` color' },
+        { class: 'badge-accent', desc: 'badge with `accent` color' },
+        { class: 'badge-ghost', desc: 'badge with `ghost` color' },
+        { class: 'badge-info', desc: 'badge with `info` color' },
+        { class: 'badge-success', desc: 'badge with `success` color' },
+        { class: 'badge-warning', desc: 'badge with `warning` color' },
+        { class: 'badge-error', desc: 'badge with `error` color' },
+        { class: 'badge-lg', desc: 'badge with large size' },
+        { class: 'badge-sm', desc: 'badge with small size' },
+      ]
+    }"/>
     <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-x-0 space-y-2 md:space-y-0 flex-col md:flex-row" title="badge">
       <Badge>neutral</Badge>
       <Badge class="badge-primary">primary</Badge>

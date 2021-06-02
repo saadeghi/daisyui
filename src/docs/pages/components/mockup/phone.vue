@@ -1,5 +1,10 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'mockup-phone', desc: 'Container element' },
+      ]
+    }"/>
     <Wrapper title="iPhone mockup" classes="max-w-md">
       <div class="mockup-phone">
         <div class="camera"></div>

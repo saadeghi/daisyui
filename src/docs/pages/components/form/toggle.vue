@@ -1,5 +1,17 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'form-control', desc: 'Container element' },
+        { class: 'toggle', desc: 'For checkbox' },
+        { class: 'toggle-mark', desc: 'For span that coms after checkbox' },
+      ],
+      utilities : [
+        { class: 'toggle-primary', desc: 'Adds `primary` to toggle' },
+        { class: 'toggle-secondary', desc: 'Adds `secondary` to toggle' },
+        { class: 'toggle-accent', desc: 'Adds `accent` to toggle' },
+      ]
+    }"/>
     <Wrapper title="toggle" classes="flex flex-col space-y-2 max-w-xs">
       <div class="p-6 card bordered">
         <FormControl>

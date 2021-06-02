@@ -1,7 +1,20 @@
 <template>
   <div>
-
-
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'steps', desc: 'Container of step items' },
+        { class: 'step', desc: 'A step item' },
+      ],
+      utilities : [
+        { class: 'step-primary', desc: 'Adds `primary` color to step' },
+        { class: 'step-secondary', desc: 'Adds `secondary` color to step' },
+        { class: 'step-accent', desc: 'Adds `accent` color to step' },
+        { class: 'step-info', desc: 'Adds `info` color to step' },
+        { class: 'step-success', desc: 'Adds `success` color to step' },
+        { class: 'step-warning', desc: 'Adds `warning` color to step' },
+        { class: 'step-error', desc: 'Adds `error` color to step' },
+      ]
+    }"/>
 
     <Wrapper title="steps">
         <ul class="steps w-full">

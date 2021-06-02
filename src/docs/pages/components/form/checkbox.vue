@@ -1,5 +1,17 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'form-control', desc: 'Container element' },
+        { class: 'checkbox', desc: 'For checkbox' },
+        { class: 'checkbox-mark', desc: 'For span that coms after checkbox' },
+      ],
+      utilities : [
+        { class: 'checkbox-primary', desc: 'Adds `primary` to checkbox' },
+        { class: 'checkbox-secondary', desc: 'Adds `secondary` to checkbox' },
+        { class: 'checkbox-accent', desc: 'Adds `accent` to checkbox' },
+      ]
+    }"/>
     <Wrapper title="checkbox" classes="flex flex-col space-y-2 max-w-xs">
       <div class="p-6 card bordered">
         <FormControl>

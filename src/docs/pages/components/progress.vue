@@ -1,5 +1,19 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'progress', desc: 'Progress element' },
+      ],
+      utilities : [
+        { class: 'progress-primary', desc: 'Adds `primary` color' },
+        { class: 'progress-secondary', desc: 'Adds `secondary` color' },
+        { class: 'progress-accent', desc: 'Adds `accent` color' },
+        { class: 'progress-info', desc: 'Adds `info` color' },
+        { class: 'progress-success', desc: 'Adds `success` color' },
+        { class: 'progress-warning', desc: 'Adds `warning` color' },
+        { class: 'progress-error', desc: 'Adds `error` color' },
+      ]
+    }"/>
     <Wrapper title="progress" classes="flex flex-col">
       <div class="p-6 space-y-2 artboard phone">
         <Progress value="0" max="100"></Progress>

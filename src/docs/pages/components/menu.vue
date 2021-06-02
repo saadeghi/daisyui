@@ -1,5 +1,14 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'menu', desc: 'Container <ul> element' },
+        { class: 'menu-title', desc: 'Identify <li> as the title of menu' },
+      ],
+      utilities : [
+        { class: 'compact', desc: 'Makes menu more compact' },
+      ]
+    }"/>
     <Wrapper title="veritcal with icons" classes="flex flex-col space-y-2">
       <div class="py-4 artboard artboard-demo bg-base-200">
         <Menu class="py-3 shadow-lg bg-base-100 rounded-box">

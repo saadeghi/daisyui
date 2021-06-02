@@ -1,6 +1,35 @@
 <template>
   <div>
-
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'btn', desc: 'Button' },
+      ],
+      utilities : [
+        { class: 'btn-lg', desc: 'Large button' },
+        { class: 'btn-md', desc: 'Medium button (default)' },
+        { class: 'btn-sm', desc: 'Small button' },
+        { class: 'btn-xs', desc: 'Extra small button' },
+        { class: 'btn-wide', desc: 'Wide button (more horizontal padding)' },
+        { class: 'btn-block', desc: 'Full width button' },
+        { class: 'btn-circle', desc: 'Circle button with a 1:1 ratio' },
+        { class: 'btn-square', desc: 'Square button with a 1:1 ratio' },
+        { class: 'btn-primary', desc: 'Button with `primary` color' },
+        { class: 'btn-secondary', desc: 'Button with `secondary` color' },
+        { class: 'btn-accent', desc: 'Button with `accent` color' },
+        { class: 'btn-info', desc: 'Button with `info` color' },
+        { class: 'btn-success', desc: 'Button with `success` color' },
+        { class: 'btn-warning', desc: 'Button with `warning` color' },
+        { class: 'btn-error', desc: 'Button with `error` color' },
+        { class: 'btn-ghost', desc: 'Button with ghost style' },
+        { class: 'btn-link', desc: 'Button styled as a link' },
+        { class: 'btn-outline', desc: 'Transparent Button with colored border' },
+        { class: 'btn-active', desc: 'Force button to show active state' },
+        { class: 'btn-disabled', desc: 'Force button to show disabled state' },
+        { class: 'glass', desc: 'Button with a glass effect' },
+        { class: 'loading', desc: 'Shows loading spinner' },
+        { class: 'no-animation', desc: 'Disables click animation' },
+      ]
+    }"/>
     <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row" title="button with brand colors">
       <Button classes="">neutral</Button>
       <Button classes="btn-primary">primary</Button>

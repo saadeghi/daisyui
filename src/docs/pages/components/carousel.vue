@@ -1,5 +1,16 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'carousel', desc: 'Container element' },
+        { class: 'carousel-item', desc: 'Carousel itme' },
+      ],
+      utilities : [
+        { class: 'carousel-center', desc: 'Snap elements to center' },
+        { class: 'carousel-end', desc: 'Snap elements to end' },
+        { class: 'carousel-vertical', desc: 'Vertical carousel' },
+      ]
+    }"/>
     <Wrapper title="carousel (snap to setart)">
       <div class="carousel rounded-box">
         <div class="carousel-item">

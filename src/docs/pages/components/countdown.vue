@@ -1,6 +1,11 @@
 <template>
   <div>
-    <p class="mb-4 text-base-content text-opacity-60">
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'countdown', desc: 'Container element' },
+      ],
+    }"/>
+    <p class="my-4 text-base-content text-opacity-60">
       This countdown component just gives you a transition effect of changing
       numbers.
       <br />You still need to handle the values using JavaScript.

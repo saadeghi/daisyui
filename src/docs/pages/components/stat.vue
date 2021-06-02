@@ -1,5 +1,15 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'stats', desc: 'Conainer ot multiple stat items' },
+        { class: 'stat', desc: 'One stat item' },
+        { class: 'stat-title', desc: 'Title text' },
+        { class: 'stat-value', desc: 'Value text' },
+        { class: 'stat-desc', desc: 'Description text' },
+        { class: 'stat-figure', desc: 'For icon, image, etc' },
+      ]
+    }"/>
 
     <Wrapper title="single stat">
       <div class="stats shadow">

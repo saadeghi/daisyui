@@ -1,5 +1,17 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'drawer', desc: 'Container element' },
+        { class: 'drawer-toggle', desc: 'For checkbox element that controls the drawer' },
+        { class: 'drawer-content', desc: 'The content container' },
+        { class: 'drawer-side', desc: 'The sidebar container' },
+        { class: 'drawer-overlay', desc: 'The label covers the content when drawer is open' },
+      ],
+      utilities : [
+        { class: 'drawer-mobile', desc: 'Makes drawer to open/close on mobile but will be always visible on desktop' },
+      ]
+    }"/>
 
     <Wrapper title="sliding drawer menu" classes="flex flex-col space-y-2">
       <div class="rounded-lg shadow bg-base-200 drawer h-52">

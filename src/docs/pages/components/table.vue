@@ -1,5 +1,15 @@
 <template>
   <div>
+    <ClassTable v-bind:data="{
+      components : [
+        { class: 'table', desc: 'For <table> element' },
+      ],
+      utilities : [
+        { class: 'table-zebra', desc: 'For the active tab' },
+        { class: 'table-compact', desc: 'Make table more compact' },
+      ]
+    }"/>
+
     <Wrapper title="table">
       <div class="overflow-x-auto">
         <table class="table w-full">
