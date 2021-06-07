@@ -111,7 +111,7 @@ Read the documents for more info
 - [x] Artboard
 - [ ] App bar
 - [x] Avatar
-  - [ ] Avatar group
+  - [x] Avatar group
 - [x] Badge
 - [ ] Banner
 - [x] Breadcrumb
