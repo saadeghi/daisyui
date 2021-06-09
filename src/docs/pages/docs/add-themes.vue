@@ -1,14 +1,15 @@
 <template>
   <div>
-    <h2 class="my-6 text-5xl font-bold">
-      <span class="text-primary">Add theme</span>
-    </h2>
 
     <div class="tabs mb-10">
       <NuxtLink to="/docs/default-themes" class="tab tab-lifted tab-lg"><Icon glyph="color-swatch" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Use themes</NuxtLink>
       <NuxtLink to="/docs/add-themes" class="tab tab-lifted tab-lg tab-active"><Icon glyph="document-add" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Add theme</NuxtLink>
       <span class="tab tab-lifted tab-lg flex-grow cursor-default hidden sm:block"></span>
     </div>
+
+    <h2 class="my-6 text-5xl font-bold">
+      <span class="text-primary">Add theme</span>
+    </h2>
 
       <br>Add your custom themes in tailwind.config.js:
       <div class="w-full max-w-4xl my-2">
