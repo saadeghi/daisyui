@@ -15,7 +15,11 @@ module.exports = {
     "base-100": "#0b25b7",
     "base-200": "#132795",
     "base-300": "#18277c",
-    "base-content": "#ffffff"
+    "base-content": "#ffffff",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=black]": {
     "primary": "#ffffff",
@@ -63,7 +67,11 @@ module.exports = {
     "base-100": "#ffffff",
     "base-200": "#f5f5f5",
     "base-300": "#e3e3e3",
-    "base-content": "#000000"
+    "base-content": "#000000",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=corporate]": {
     "primary": "#4b6bfb",
@@ -82,6 +90,10 @@ module.exports = {
     "base-200": "#f7fafd",
     "base-300": "#edf2f7",
     "base-content": "#181a2a",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--animation-btn": "0",
     "--animation-input": "0",
     "--btn-focus-scale": "1"
@@ -103,6 +115,10 @@ module.exports = {
     "base-200": "#efeae6",
     "base-300": "#e7e2df",
     "base-content": "#291334",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--rounded-box": "1rem",
     "--rounded-btn": "9999px",
     "--rounded-badge": "9999px",
@@ -126,6 +142,10 @@ module.exports = {
     "base-200": "#dbcd00",
     "base-300": "#b8ab00",
     "base-content": "#000000",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--rounded-box": "0",
     "--rounded-btn": "0",
     "--rounded-badge": "0",
@@ -147,7 +167,11 @@ module.exports = {
     "base-100": "#3d4451",
     "base-200": "#2a2e37",
     "base-300": "#16181d",
-    "base-content": "#ebecf0"
+    "base-content": "#ebecf0",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=dracula]": {
     "primary": "#ffb3d9",
@@ -165,7 +189,11 @@ module.exports = {
     "base-100": "#302f3d",
     "base-200": "#22212c",
     "base-300": "#1d1e25",
-    "base-content": "#d5ccff"
+    "base-content": "#d5ccff",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=emerald]": {
     "primary": "#66cc8a",
@@ -184,6 +212,10 @@ module.exports = {
     "base-200": "#f9fafb",
     "base-300": "#f2f2f2",
     "base-content": "#333c4d",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--animation-btn": "0",
     "--animation-input": "0",
     "--btn-focus-scale": "1"
@@ -204,7 +236,11 @@ module.exports = {
     "base-100": "#ffffff",
     "base-200": "#f9fafb",
     "base-300": "#d1d5db",
-    "base-content": "#1f2937"
+    "base-content": "#1f2937",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=forest]": {
     "primary": "#1eb854",
@@ -223,7 +259,11 @@ module.exports = {
     "base-200": "#110e0e",
     "base-300": "#060404",
     "base-content": "#ffffff",
-    "--rounded-btn": "9999px"
+    "--rounded-btn": "9999px",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=garden]": {
     "primary": "#5c7f67",
@@ -242,6 +282,10 @@ module.exports = {
     "base-200": "#d1cccc",
     "base-300": "#b9b1b1",
     "base-content": "#100f0f",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--rounded-box": "1rem",
     "--rounded-btn": "0.5rem",
     "--rounded-badge": "9999px"
@@ -262,7 +306,11 @@ module.exports = {
     "base-100": "#212121",
     "base-200": "#1b1d1d",
     "base-300": "#131616",
-    "base-content": "#ffffff"
+    "base-content": "#ffffff",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=light]": {
     "primary": "#570df8",
@@ -324,6 +372,10 @@ module.exports = {
     "base-200": "#ffffff",
     "base-300": "#ffffff",
     "base-content": "#7d7d7d",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--border-color": "#e6e6e6",
     "--animation-btn": "0",
     "--animation-input": "0",
@@ -349,7 +401,11 @@ module.exports = {
     "base-100": "#09090b",
     "base-200": "#171618",
     "base-300": "#2e2d2f",
-    "base-content": "#dca54c"
+    "base-content": "#dca54c",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724"
   },
   "[data-theme=pastel]": {
     "primary": "#d1c1d7",
@@ -368,6 +424,10 @@ module.exports = {
     "base-200": "#f9fafb",
     "base-300": "#d1d5db",
     "base-content": "#898d90",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--rounded-box": "1rem",
     "--rounded-btn": "9999px",
     "--rounded-badge": "9999px"
@@ -390,6 +450,10 @@ module.exports = {
     "base-200": "#d2c59d",
     "base-300": "#c6b386",
     "base-content": "#282425",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--rounded-box": "0.4rem",
     "--rounded-btn": "0.4rem",
     "--rounded-badge": "0.4rem"
@@ -433,6 +497,10 @@ module.exports = {
     "base-200": "#e9aad9",
     "base-300": "#e58fce",
     "base-content": "#632c3b",
+    "info": "#2094f3",
+    "success": "#009485",
+    "warning": "#ff9900",
+    "error": "#ff5724",
     "--rounded-box": "1rem",
     "--rounded-btn": "9999px",
     "--rounded-badge": "9999px"
