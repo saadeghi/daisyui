@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/docs/install/windicss", {data:[{}],fetch:{},mutations:void 0});

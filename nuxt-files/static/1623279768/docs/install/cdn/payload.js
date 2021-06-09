@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/docs/install/cdn", {data:[{}],fetch:{},mutations:void 0});
