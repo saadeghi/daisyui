@@ -3,7 +3,7 @@
     "dev": "postcss node_modules/tailwindcss/tailwind.css -o output.css -w",
     "prod": "NODE_ENV=production postcss node_modules/tailwindcss/tailwind.css -o output.css"
   },
-  "dependencies": {
+  "devDependencies": {
     "daisyui": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",

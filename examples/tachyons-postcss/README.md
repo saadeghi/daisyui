@@ -1,6 +1,6 @@
 - daisyui
-- svelte
-- rollup
+- purgecss
+- tachyons
 
 ---
 
@@ -11,5 +11,5 @@ npm install
 npm run dev
 ```
 ```
-npm run start
+npm run prod
 ```

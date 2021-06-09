@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "tailwindcss-cli build -o output.css"
   },
-  "dependencies": {
+  "devDependencies": {
     "daisyui": "latest",
     "tailwindcss-cli": "latest"
   }

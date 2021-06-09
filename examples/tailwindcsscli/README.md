@@ -1,5 +1,5 @@
-- tailwindcss-cli
 - daisyui
+- tailwindcss-cli
 
 ---
 

@@ -1,6 +1,7 @@
 - daisyui
-- svelte
-- rollup
+- vite
+- postcss
+- tailwindcss
 
 ---
 
@@ -11,5 +12,5 @@ npm install
 npm run dev
 ```
 ```
-npm run start
+npm run build
 ```

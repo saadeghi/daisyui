@@ -1,6 +1,6 @@
+- daisyui
 - autoprefixer
 - cssnano
-- daisyui
 - postcss
 - postcss-cli
 - tailwindcss

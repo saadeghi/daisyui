@@ -1,7 +1,7 @@
+- daisyui
 - next.js
 - headlessui
 - tailwindcss
-- daisyui
 
 ---
 

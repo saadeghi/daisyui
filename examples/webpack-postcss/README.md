@@ -1,6 +1,7 @@
 - daisyui
-- svelte
-- rollup
+- postcss
+- tailwindcss
+- webpack
 
 ---
 
@@ -11,5 +12,5 @@ npm install
 npm run dev
 ```
 ```
-npm run start
+npm run prod
 ```

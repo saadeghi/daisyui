@@ -4,12 +4,7 @@
     "build": "vite build",
     "serve": "vite preview"
   },
-  "dependencies": {
-    "vue": "latest"
-  },
   "devDependencies": {
-    "@vitejs/plugin-vue": "latest",
-    "@vue/compiler-sfc": "latest",
     "autoprefixer": "latest",
     "daisyui": "latest",
     "postcss": "latest",

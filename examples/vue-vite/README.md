@@ -1,5 +1,6 @@
-- vue
+- daisyui
 - vite
+- vue
 - tailwindcss
 
 ---

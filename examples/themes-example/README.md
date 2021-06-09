@@ -1,6 +1,6 @@
+- daisyui
 - postcss
 - tailwindcss
-- daisyui
 - theme-change
 
 ---

@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "cat node_modules/daisyui/dist/full.css node_modules/basscss/css/basscss.min.css | postcss > output.css",
+    "prod": "cat node_modules/daisyui/dist/full.css node_modules/basscss/css/basscss.min.css | NODE_ENV=production postcss > output.css"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "latest",
+    "basscss": "latest",
+    "daisyui": "latest",
+    "postcss-cli": "latest"
+  }
+}
