@@ -1,18 +1,3 @@
 .alert {
   @apply rounded-box bg-base-200 p-4;
-  &-sm{
-    @apply p-2;
-  }
-  &-info {
-    @apply bg-opacity-10 bg-info text-info;
-  }
-  &-success {
-    @apply bg-opacity-10 bg-success text-success;
-  }
-  &-warning {
-    @apply bg-opacity-10 bg-warning text-warning;
-  }
-  &-error {
-    @apply bg-opacity-10 bg-error text-error;
-  }
 }

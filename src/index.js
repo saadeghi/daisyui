@@ -1,15 +1,16 @@
-const daisyuiInfo = require('./package.json')
-const colors      = require('./colors/index')
-const utilities   = require('./dist/utilities')
-const base        = require('./dist/base')
-const unstyled    = require('./dist/unstyled')
-const unstyledRtl = require('./dist/unstyled.rtl')
-const styled      = require('./dist/styled')
-const styledRtl   = require('./dist/styled.rtl')
-const responsive  = require('./dist/responsive')
-const themes      = require('./colors/themes')
-const colorNames  = require('./colors/colorNames')
-const hex2hsl     = require('./colors/hex2hsl')
+const daisyuiInfo       = require('./package.json')
+const colors            = require('./colors/index')
+const utilities         = require('./dist/utilities')
+const base              = require('./dist/base')
+const unstyled          = require('./dist/unstyled')
+const unstyledRtl       = require('./dist/unstyled.rtl')
+const styled            = require('./dist/styled')
+const styledRtl         = require('./dist/styled.rtl')
+const utilitiesUnstyled = require('./dist/utilities-unstyled')
+const utilitiesStyled   = require('./dist/utilities-styled')
+const themes            = require('./colors/themes')
+const colorNames        = require('./colors/colorNames')
+const hex2hsl           = require('./colors/hex2hsl')
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = []
@@ -132,7 +133,8 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   // inject @utilities style needed by components
   if (config('daisyui.utils') != false) {
     addUtilities(utilities, { variants: ['responsive'] })
-    addUtilities(responsive, { variants: ['responsive'] })
+    addUtilities(utilitiesUnstyled, { variants: ['responsive'] })
+    addUtilities(utilitiesStyled, { variants: ['responsive'] })
     diasyuiIncludedItems.push('utilities')
   }
   if (logs) {

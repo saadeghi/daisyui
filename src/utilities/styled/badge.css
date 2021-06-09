@@ -1,0 +1,43 @@
+.badge {
+  &-primary {
+    @apply bg-primary border-primary text-primary-content;
+  }
+  &-secondary {
+    @apply bg-secondary border-secondary text-secondary-content;
+  }
+  &-accent {
+    @apply bg-accent border-accent text-accent-content;
+  }
+
+  &-ghost {
+    @apply bg-base-200 border-base-200 text-base-content;
+  }
+
+  &-outline {
+    @apply bg-transparent text-base-content border-current border-opacity-50;
+    &.badge-primary {
+      @apply text-primary;
+    }
+    &.badge-secondary {
+      @apply text-secondary;
+    }
+    &.badge-accent {
+      @apply text-accent;
+    }
+  }
+
+
+  &-info {
+    @apply bg-opacity-10 bg-info border-transparent text-info;
+  }
+  &-success {
+    @apply bg-opacity-10 bg-success border-transparent text-success;
+  }
+  &-warning {
+    @apply bg-opacity-10 bg-warning border-transparent text-warning;
+  }
+  &-error {
+    @apply bg-opacity-10 bg-error border-transparent text-error;
+  }
+}
+

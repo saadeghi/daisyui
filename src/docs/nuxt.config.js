@@ -129,9 +129,10 @@ export default {
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/components']),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/unstyled')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/styled')]),
-    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../components/responsive')]),
     ...(process.env.NODE_ENV === 'production' ? [] : ['node_modules/tailwindcss/utilities']),
-    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities')]),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities/global')]),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities/unstyled')]),
+    ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities/styled')]),
 
   ],
 

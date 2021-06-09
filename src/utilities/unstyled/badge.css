@@ -2,6 +2,9 @@
   &-sm{
     @apply text-xs leading-4 px-2;
   }
+  &-md{
+    @apply text-sm leading-5 px-3;
+  }
   &-lg{
     @apply text-base leading-6 px-3;
   }

@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('tailwindcss')('./src/components/responsive/tailwind.config.js'),
+    require('tailwindcss')('./src/utilities/styled/tailwind.config.js'),
     require('postcss-nested')({
       "bubble": [
         "screen"
