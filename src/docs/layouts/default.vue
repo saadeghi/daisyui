@@ -3,7 +3,7 @@
   <Header/>
   <div class="drawer drawer-mobile">
     <input id="main-menu" type="checkbox" class="drawer-toggle" v-model="showMainMenu" >
-    <main class="flex-grow block pt-16 overflow-x-hidden bg-base-100 text-base-content drawer-content">
+    <main class="flex-grow block pt-16 overflow-x-hidden bg-base-100 text-base-content drawer-content" ref="drawerContent">
       <div class="p-4 lg:p-10">
         <Nuxt />
       </div>
@@ -174,6 +174,11 @@ export default {
         })
       }
     })
+  },
+  watch: {
+    $route () {
+      this.$refs.drawerContent.scrollTop = 0;
+    }
   },
   mounted(){
     themeChange(false)
