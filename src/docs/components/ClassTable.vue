@@ -15,7 +15,7 @@
             <th class="font-normal">
               <span class="lowercase font-mono">{{ item.class }}</span>
             </th>
-            <td v-if="data.showType !== false"><span class="badge badge-sm badge-ghost w-20 text-success">Component</span></td>
+            <td v-if="data.showType !== false"><span class="badge badge-sm badge-success w-20">Component</span></td>
             <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border border-opacity-10 rounded" :class="item.color"></span></td>
             <td>{{ item.desc }}</td>
           </tr>
@@ -23,7 +23,7 @@
             <th class="font-normal">
               <span class="lowercase font-mono">{{ item.class }}</span>
             </th>
-            <td v-if="data.showType !== false"><span class="badge badge-sm badge-ghost w-20 text-info">Utility</span></td>
+            <td v-if="data.showType !== false"><span class="badge badge-sm badge-info w-20">Utility</span></td>
             <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border border-opacity-10 rounded" :class="item.color"></span></td>
             <td>{{ item.desc }}</td>
           </tr>
