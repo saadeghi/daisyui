@@ -92,7 +92,7 @@ jobs:
         run: cd src/docs && npm install
 
       - name: Generate
-        run: cd src/docs && npm run deploy && cp ../../dist/{styled,full}.css dist/
+        run: mkdir src/docs/dist && cp dist/{styled,full}.css src/docs/dist/ && cd src/docs && npm run deploy
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
