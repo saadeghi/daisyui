@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.4](https://github.com/saadeghi/daisyui/compare/v1.3.3...v1.3.4) (2021-06-10)
+
+
+### Features
+
+* improve some theme colors ([6b2ed03](https://github.com/saadeghi/daisyui/commit/6b2ed03b63262cb80da11b863af79163fcc80f0e))
+
 ### [1.3.3](https://github.com/saadeghi/daisyui/compare/v1.3.2...v1.3.3) (2021-06-09)
 
 ### [1.3.2](https://github.com/saadeghi/daisyui/compare/v1.2.0...v1.3.2) (2021-06-05)
