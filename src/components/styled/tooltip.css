@@ -1,5 +1,5 @@
 .tooltip{
-  @apply inline-block relative whitespace-nowrap;
+  @apply inline-block relative text-center;
   --tooltip-tail: 3px;
   --tooltip-color: hsl(var(--n));
   --tooltip-text-color: hsl(var(--nc));
@@ -13,9 +13,10 @@
   @apply absolute;
 }
 .tooltip:before{
-  @apply rounded text-sm px-2;
+  @apply rounded text-sm px-2 max-w-xs py-1;
   background-color: var(--tooltip-color);
   color: var(--tooltip-text-color);
+  width: max-content;
 }
 .tooltip.tooltip-open:before,
 .tooltip.tooltip-open:after,
