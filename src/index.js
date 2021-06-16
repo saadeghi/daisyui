@@ -33,7 +33,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   // inject components
   // because rollupjs doesn't supprt dynamic require
   let file = styled
-  if (config('daisyui.styled') == false && config('daisyui.rtl') == false) {
+  if (config('daisyui.styled') == false && config('daisyui.rtl') != true) {
     diasyuiIncludedItems.push('unstyled components')
     file = unstyled
   } else if (config('daisyui.styled') == false && config('daisyui.rtl') == true) {
