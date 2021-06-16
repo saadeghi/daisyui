@@ -105,11 +105,11 @@
 
 @keyframes togglemark-off {
   50% {
-    margin-left: -3px;
+    margin-left: 0;
   }
 }
 @keyframes togglemark-on {
   50% {
-    margin-left: 4px;
+    margin-left: 2px;
   }
 }
