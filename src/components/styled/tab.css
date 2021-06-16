@@ -25,6 +25,7 @@
   border-bottom-color: hsla(var(--border-color, var(--b3)) / var(--tw-border-opacity, 1));
   padding-left: var(--tab-padding, 1rem);
   padding-right: var(--tab-padding, 1rem);
+  padding-top: var(--tab-border, 1px);
   &.tab-active{
     @apply bg-base-100;
     border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
@@ -34,6 +35,7 @@
     padding-left: calc( var(--tab-padding, 1rem) - var(--tab-border, 1px) );
     padding-right: calc( var(--tab-padding, 1rem) - var(--tab-border, 1px) );
     padding-bottom: var(--tab-border, 1px);
+    padding-top: 0;
     &:before, &:after{
       z-index: 1;
       content:'';
