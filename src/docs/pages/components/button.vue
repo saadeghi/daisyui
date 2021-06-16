@@ -100,19 +100,10 @@
       <Button classes="btn-xs">Tiny</Button>
     </Wrapper>
 
-    <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row" title="button wide">
+    <Wrapper classes="flex flex-wrap items-start space-y-2 flex-col" title="button wide">
       <Button classes="btn-wide btn-lg">large</Button>
-    </Wrapper>
-
-    <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row" title="button wide">
       <Button classes="btn-wide">normal</Button>
-    </Wrapper>
-
-    <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row" title="button wide">
       <Button classes="btn-wide btn-sm">small</Button>
-    </Wrapper>
-
-    <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row" title="button wide">
       <Button classes="btn-wide btn-xs">tiny</Button>
     </Wrapper>
 
