@@ -120,8 +120,8 @@ module.exports = {
     "warning": "#ff9900",
     "error": "#ff5724",
     "--rounded-box": "1rem",
-    "--rounded-btn": "9999px",
-    "--rounded-badge": "9999px",
+    "--rounded-btn": "1.9rem",
+    "--rounded-badge": "1.9rem",
     "--tab-border": "2px"
   },
   "[data-theme=cyberpunk]": {
@@ -259,7 +259,7 @@ module.exports = {
     "base-200": "#110e0e",
     "base-300": "#060404",
     "base-content": "#ffffff",
-    "--rounded-btn": "9999px",
+    "--rounded-btn": "1.9rem",
     "info": "#66c6ff",
     "success": "#87d039",
     "warning": "#e2d562",
@@ -288,7 +288,7 @@ module.exports = {
     "error": "#ff5724",
     "--rounded-box": "1rem",
     "--rounded-btn": "0.5rem",
-    "--rounded-badge": "9999px"
+    "--rounded-badge": "1.9rem"
   },
   "[data-theme=halloween]": {
     "primary": "#f28c18",
@@ -335,7 +335,7 @@ module.exports = {
     "error": "#ff5724",
     "--rounded-box": "1rem",
     "--rounded-btn": "0.5rem",
-    "--rounded-badge": "9999px",
+    "--rounded-badge": "1.9rem",
     "--animation-btn": "0.25s",
     "--animation-input": ".4s",
     "--padding-card": "2rem",
@@ -435,8 +435,8 @@ module.exports = {
     "warning": "#ff9900",
     "error": "#ff5724",
     "--rounded-box": "1rem",
-    "--rounded-btn": "9999px",
-    "--rounded-badge": "9999px"
+    "--rounded-btn": "1.9rem",
+    "--rounded-badge": "1.9rem"
   },
   "[data-theme=retro]": {
     "fontFamily": "uisecondaryerif,Georgia,Cambria,Times New Roman,Times,serif",
@@ -508,8 +508,8 @@ module.exports = {
     "warning": "#ff9900",
     "error": "#ff5724",
     "--rounded-box": "1rem",
-    "--rounded-btn": "9999px",
-    "--rounded-badge": "9999px"
+    "--rounded-btn": "1.9rem",
+    "--rounded-badge": "1.9rem"
   },
   "[data-theme=wireframe]": {
     "fontFamily": "Chalkboard,comic sans ms,\"sanssecondaryerif\"",

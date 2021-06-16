@@ -62,7 +62,7 @@
       <div class="shadow-lg mockup-code">
         <pre><code>'--rounded-box': '1rem',        <span class="text-neutral-content text-opacity-20">/* border-radius for cards and other big elements */</span>
     '--rounded-btn': '0.5rem',      <span class="text-neutral-content text-opacity-20">/* border-radius for buttons and similar elements */</span>
-    '--rounded-badge': '9999px',    <span class="text-neutral-content text-opacity-20">/* border-radius for badge and other small elements */</span>
+    '--rounded-badge': '1.9rem',    <span class="text-neutral-content text-opacity-20">/* border-radius for badge and other small elements */</span>
 
     '--animation-btn': '0.25s',     <span class="text-neutral-content text-opacity-20">/* bounce animation time for button */</span>
     '--animation-input': '.4s',     <span class="text-neutral-content text-opacity-20">/* bounce animation time for checkbox, toggle, etc */</span>
