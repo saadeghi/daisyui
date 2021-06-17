@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.7](https://github.com/saadeghi/daisyui/compare/v1.3.6...v1.3.7) (2021-06-17)
+
+
+### Features
+
+* add fallback transparent color for unstyled components ([73f6532](https://github.com/saadeghi/daisyui/commit/73f6532cac9c44d981d2c1e385e0d3575b9188bc))
+
+
+### Bug Fixes
+
+* [#85](https://github.com/saadeghi/daisyui/issues/85) ([dfed3b4](https://github.com/saadeghi/daisyui/commit/dfed3b4cc72a70999ac5c632742055f55974ac5f))
+* `unstyled` config not working without `rtl` config ([82089df](https://github.com/saadeghi/daisyui/commit/82089df16c3cf2a8454f98d3901bacecfe615b62))
+
 ### [1.3.6](https://github.com/saadeghi/daisyui/compare/v1.3.5...v1.3.6) (2021-06-15)
 
 
