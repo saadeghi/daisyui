@@ -132,9 +132,9 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
 
   // inject @utilities style needed by components
   if (config('daisyui.utils') != false) {
-    addUtilities(utilities, { variants: ['responsive'] })
-    addUtilities(utilitiesUnstyled, { variants: ['responsive'] })
-    addUtilities(utilitiesStyled, { variants: ['responsive'] })
+    addComponents(utilities, { variants: ['responsive'] })
+    addComponents(utilitiesUnstyled, { variants: ['responsive'] })
+    addComponents(utilitiesStyled, { variants: ['responsive'] })
     diasyuiIncludedItems.push('utilities')
   }
   if (logs) {
