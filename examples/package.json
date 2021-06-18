@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test:1": "cd basscss-postcss && npm install --package-lock=false && npm run build",
+    "test:1": "cd basscss-purgecss && npm install --package-lock=false && npm run build",
     "test:2": "cd custom-themes && npm install --package-lock=false && npm run build",
     "test:3": "cd nextjs-daisyui-headlessui-master && npm install --package-lock=false && npm run build",
     "test:4": "cd postcss-tailwindcss && npm install --package-lock=false && npm run build",
