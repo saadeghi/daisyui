@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "postcss node_modules/tailwindcss/tailwind.css -o output.css -w",
-    "prod": "NODE_ENV=production postcss node_modules/tailwindcss/tailwind.css -o output.css"
+    "build": "NODE_ENV=production postcss node_modules/tailwindcss/tailwind.css -o output.css"
   },
   "devDependencies": {
     "autoprefixer": "latest",

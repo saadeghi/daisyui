@@ -1,12 +1,10 @@
 {
   "scripts": {
-    "dev": "postcss node_modules/tailwindcss/tailwind.css -o output.css -w",
-    "prod": "NODE_ENV=production postcss node_modules/tailwindcss/tailwind.css -o output.css"
+    "dev": "tailwindcss -o output.css --watch",
+    "build": "tailwindcss -o output.css --minify"
   },
   "devDependencies": {
     "daisyui": "latest",
-    "postcss": "latest",
-    "postcss-cli": "latest",
     "tailwindcss": "latest"
   }
 }

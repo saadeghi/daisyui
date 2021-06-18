@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "dev": "tailwindcss-cli build -o output.css"
+    "dev": "tailwindcss -o output.css --watch",
+    "build": "tailwindcss -o output.css --minify"
   },
   "devDependencies": {
     "daisyui": "latest",
-    "tailwindcss-cli": "latest"
+    "tailwindcss": "latest"
   }
 }

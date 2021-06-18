@@ -1,5 +1,4 @@
 - daisyui
-- postcss
 - tailwindcss
 - theme-change
 
