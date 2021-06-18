@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-            node-version: 14
+            node-version: 14.15.0
             registry-url: https://registry.npmjs.org
 
       - name: check latest released version
