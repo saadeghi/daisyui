@@ -4,13 +4,13 @@
     <TabHandler/>
 
     <h2 class="my-6 text-5xl font-bold">
-      <span class="text-primary">Use with Basscss</span>
+      <span class="text-primary">Use with BassCSS</span>
     </h2>
 
     <Wrapper nocode>
 
       <p class="prose text-base-content opacity-60">
-        DaisyUI works best with Tailwind CSS but you can use it as a component library with other utility-first libraries such as Basscss.
+        DaisyUI works best with Tailwind CSS but you can use it as a component library with other utility-first libraries such as BassCSS.
       </p>
       <p class="mt-4 prose text-base-content">
         Add the CSS file to your &lt;head&gt; tag.

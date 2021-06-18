@@ -30,7 +30,7 @@ export default {
         { title: "Use CDN", url: "/docs/install/cdn" },
         { title: "WindiCSS", url: "/docs/install/windicss" },
         { title: "Tachyons", url: "/docs/install/tachyons" },
-        { title: "Basscss", url: "/docs/install/basscss" },
+        { title: "BassCSS", url: "/docs/install/basscss" },
       ]
     };
   },

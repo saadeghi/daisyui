@@ -210,5 +210,10 @@ export default {
   mounted(){
     themeChange(false)
   },
+  computed: {
+    isHomepage() {
+      return this.$route.path === '/'
+    },
+  },
 }
 </script>

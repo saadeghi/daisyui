@@ -9,6 +9,20 @@
 
     <Wrapper nocode>
 
+      <div class="alert alert-warning mb-6">
+        <div class="flex-1 items-center">
+          <Icon glyph="warning" class="w-6 h-6 mx-2 stroke-current" />
+          <label>
+            <div class="font-bold">
+              Experimental
+            </div>
+            <div class="text-sm">
+              WindiCSS generates plugin styles differently. There might be some bugs.
+            </div>
+          </label>
+        </div>
+      </div>
+
       <p class="prose text-base-content">
         You need
         <a target="_blank" href="https://nodejs.org/en/download/">Node.js</a> and
@@ -25,7 +39,7 @@
       </div>
 
       <p class="my-4">
-        2. Then add DaisyUI to your <span class="badge badge-outline">tailwind.config.js</span>
+        2. Then add DaisyUI to your <span class="badge badge-outline">windi.config.js</span>
       </p>
       <div class="w-full max-w-xl my-2">
         <div class="text-sm shadow-lg mockup-code">
@@ -36,13 +50,6 @@
       plugins: [
         <span class="badge badge-primary">transform('daisyui'),</span>
       ],
-
-      <span class="text-neutral-content text-opacity-40">// OPTIONAL: if you want to use DaisyUI colors everywhere</span>
-      theme: {
-        extend: {
-          <span class="badge badge-primary">colors: require('daisyui/colors/windi'),</span>
-        },
-      },
 
     }</code></pre>
         </div>
