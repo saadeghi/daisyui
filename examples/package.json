@@ -12,7 +12,8 @@
     "test:10": "cd vite-daisyui-tailwind && npm install --package-lock=false && npm run build",
     "test:11": "cd vue-vite && npm install --package-lock=false && npm run build",
     "test:12": "cd webpack-postcss && npm install --package-lock=false && npm run build",
-    "test": "npm run test:1 && npm run test:2 && npm run test:3 && npm run test:4 && npm run test:5 && npm run test:6 && npm run test:7 && npm run test:8 && npm run test:9 && npm run test:10 && npm run test:11 && npm run test:12",
+    "test:13": "cd windi-cli && npm install --package-lock=false && npm run build",
+    "test": "npm run test:1 && npm run test:2 && npm run test:3 && npm run test:4 && npm run test:5 && npm run test:6 && npm run test:7 && npm run test:8 && npm run test:9 && npm run test:10 && npm run test:11 && npm run test:12 && npm run test:13",
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
   }
 }
