@@ -1,13 +1,6 @@
 module.exports = {
   mode: 'jit',
-  purge: {
-    content: ['./*.html'],
-    options: {
-      safelist: [
-        /data-theme$/,
-      ]
-    },
-  },
+  purge: ['./*.html'],
   plugins: [
     require('daisyui')
   ],
@@ -18,28 +11,28 @@ module.exports = {
       'garden',
       {
         mytheme:{ // custom theme
-          'neutral': '#f0f',
-          'neutral-focus': '#f0f',
-          'neutral-content': '#000',
-          'primary': '#ff0',
-          'primary-focus': '#ff0',
-          'primary-content': '#000',
-          'secondary': '#0ff',
-          'secondary-focus': '#0ff',
-          'secondary-content': '#000',
-          'accent': '#0f0',
-          'accent-focus': '#0f0',
+          'neutral': '#200f29',
+          'neutral-focus': '#200f29',
+          'neutral-content': '#fff',
+          'primary': '#2094f3',
+          'primary-focus': '#2094f3',
+          'primary-content': '#fff',
+          'secondary': '#ff5784',
+          'secondary-focus': '#ff5784',
+          'secondary-content': '#fff',
+          'accent': '#2aa79b',
+          'accent-focus': '#2aa79b',
           'accent-content': '#000',
           'base-100': '#ddd',
           'base-200': '#ccc',
           'base-300': '#bbb',
           'base-content': '#000',
-          '--rounded-btn': '.2rem',
-          '.btn': { //custom style for button
-            'border-top-left-radius': '3rem',
-            'border-bottom-right-radius': '3rem',
-            'box-shadow': '2px 3px',
-          }
+          '--rounded-btn': '1rem',
+          '.btn': {
+            //custom style
+            'boxShadow': '0 .4rem hsl(0 0% 100%/.5) inset',
+            'border-width': '2px'
+          },
         }
       }
     ]
