@@ -55,7 +55,7 @@
   }
   .menu-title{
     >a, >span{
-      @apply py-1 text-xs text-base-content text-opacity-40;
+      @apply py-1 text-xs text-base-content text-opacity-40 font-bold;
     }
   }
 }
