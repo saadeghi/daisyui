@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.11](https://github.com/saadeghi/daisyui/compare/v1.3.8...v1.3.11) (2021-06-18)
+
+
+### Bug Fixes
+
+* corrupted color variables ([4a9351e](https://github.com/saadeghi/daisyui/commit/4a9351ec026d0a93f727e38634b5ce958758ad16))
+
 ### [1.3.8](https://github.com/saadeghi/daisyui/compare/v1.3.7...v1.3.8) (2021-06-17)
 
 
