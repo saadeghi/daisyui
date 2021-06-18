@@ -42,15 +42,15 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.4",
-    "cssnano": "^4.1.10",
-    "postcss": "^8.1.10",
-    "postcss-cli": "^8.3.0",
-    "postcss-import": "^13.0.0",
-    "postcss-nested": "^5.0.1",
-    "prejss-cli": "^0.3.3",
-    "rtlcss": "^3.0.0",
-    "tailwindcss": "^2.0.1"
+    "autoprefixer": "10.0.4",
+    "cssnano": "4.1.10",
+    "postcss": "8.1.10",
+    "postcss-cli": "8.3.0",
+    "postcss-import": "13.0.0",
+    "postcss-nested": "5.0.1",
+    "prejss-cli": "0.3.3",
+    "rtlcss": "3.0.0",
+    "tailwindcss": "2.0.1"
   },
   "scripts": {
     "index": "cp -R ./src/index.js ./index.js",
