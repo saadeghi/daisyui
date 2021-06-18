@@ -2,12 +2,22 @@
   <div class="flex flex-col">
     <PromoDropdown title="tab" desc="Beautiful tabs to switch between sections" classes="" link="components/tab">
       <div class="flex-grow-0 tabs w-full">
-        <button class="flex-1 tab tab-lifted tab-lg tab-border-none tab-active">Stats</button>
-        <button class="flex-1 tab tab-lifted tab-lg tab-border-none">Info</button>
-        <button class="flex-1 tab tab-lifted tab-lg tab-border-none">Options</button>
+        <button
+          class="flex-1 tab tab-lifted tab-lg tab-border-none"
+          v-for='(tab,i) in tabs' :key='tab'
+          v-on:click='selectedIndex = i'
+          v-bind:class="{
+            'tab-active': selectedIndex == i,
+          }"
+        >{{ tab }}</button>
       </div>
     </PromoDropdown>
-    <div class="grid flex-grow gap-3 p-6 rounded-tl-none shadow-xl rounded-xl bg-base-100 w-full">
+    <div class="grid flex-grow gap-3 p-6 shadow-xl rounded-xl bg-base-100 w-full"
+      v-bind:class="{
+        'rounded-tl-none': selectedIndex == 0,
+        'rounded-tr-none': selectedIndex == 2,
+      }"
+    >
       <div class="flex items-center space-x-2">
         <PromoDropdown title="avatar" desc="Use avatar component with any size" classes="" link="components/avatar">
           <div class="avatar online">
@@ -28,42 +38,56 @@
 
       <div class="grid gap-3">
 
-        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="" link="components/progress">
-          <div class="flex items-center">
-            <span class="w-48 text-xs text-base-content text-opacity-60">Search Engines</span>
-            <progress class="progress progress-success" value="50" max="100">
-            </progress>
-          </div>
-        </PromoDropdown>
-        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="" link="components/progress">
-          <div class="flex items-center">
-            <span class="w-48 text-xs text-base-content text-opacity-60">Direct</span>
-            <progress class="progress progress-primary" value="30" max="100">
-            </progress>
-          </div>
-        </PromoDropdown>
         <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
-          <div class="flex items-center">
-            <span class="w-48 text-xs text-base-content text-opacity-60">Social Media</span>
-            <progress class="progress progress-secondary" value="70" max="100">
+          <div class="flex items-center p-1"
+          v-for='(progressItem,i) in progressData' :key='progressItem.name'>
+            <span class="w-48 text-xs text-base-content text-opacity-60">{{ progressItem.name }}</span>
+            <progress
+              class="progress"
+              v-bind:class="progressItem.class"
+              :value="progressItem.value"
+              v-on:hover="this.value = progressItem.newValue"
+              max="100"
+            >
             </progress>
           </div>
         </PromoDropdown>
-        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
-          <div class="flex items-center">
-            <span class="w-48 text-xs text-base-content text-opacity-60">Emails</span>
-            <progress class="progress progress-accent" value="90" max="100">
-            </progress>
-          </div>
-        </PromoDropdown>
-        <PromoDropdown title="progress" desc="Show progressbar, loadings or simple bar charts using progress component" classes="dropdown-top" link="components/progress">
-          <div class="flex items-center">
-            <span class="w-48 text-xs text-base-content text-opacity-60">Ad campaigns</span>
-            <progress class="progress progress-warning" value="65" max="100">
-            </progress>
-          </div>
-        </PromoDropdown>
+
       </div>
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  data () {
+    return {
+      selectedIndex: 0,
+      tabs: ['Stats','Info','Options'],
+      progressData: [
+        { name: 'Search Engines',
+          class: 'progress-success',
+          value:50,
+          newValue:70 },
+        { name: 'Direct',
+          class: 'progress-primary',
+          value:30,
+          newValue:50 },
+        { name: 'Social Media',
+          class: 'progress-secondary',
+          value:70,
+          newValue:80 },
+        { name: 'Emails',
+          class: 'progress-accent',
+          value:90,
+          newValue:80 },
+        { name: 'Ad campaigns',
+          class: 'progress-warning',
+          value:65,
+          newValue:85 },
+      ]
+    }
+  },
+}
+</script>

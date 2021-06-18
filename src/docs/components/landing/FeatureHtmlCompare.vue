@@ -68,7 +68,7 @@
             <div class="shadow-lg mockup-code flex-grow max-w-xs sm:max-w-md w-full mx-auto">
               <pre><code>&lt;ul class=&quot;py-3 bg-gray-100 rounded-xl&quot;&gt;
       &lt;li&gt;
-        &lt;span class=&quot;<span class="text-warning">block px-5 p-3 text-xs text-gray-400</span>&quot;&gt;Menu Title&lt;/span&gt;
+        &lt;span class=&quot;<span class="text-warning">block px-5 py-1 text-xs text-gray-400 font-bold</span>&quot;&gt;Menu Title&lt;/span&gt;
       &lt;/li&gt;
       &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>&quot;&gt;First Menu Item&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a class=&quot;<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>&quot;&gt;Second Menu Item&lt;/a&gt;&lt;/li&gt;
@@ -78,7 +78,7 @@
             <div class="flex justify-center items-start mt-4 overflow-hidden">
               <ul class="p-3 bg-gray-100 rounded-xl">
                 <li>
-                  <span class="block px-5 py-1 text-xs text-gray-400">Menu Title</span>
+                  <span class="block px-5 py-1 text-xs text-gray-400 font-bold">Menu Title</span>
                 </li>
                 <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer">First Menu Item</a></li>
                 <li><a href="#" v-on:click.stop.prevent class="block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer">Second Menu Item</a></li>
