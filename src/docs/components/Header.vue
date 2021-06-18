@@ -1,10 +1,11 @@
 <template>
   <div id="nav"
     v-bind:class="{
-      'border-transparent bg-transparent text-primary-content': isHomepage,
+      'border-transparent bg-transparent text-primary-content fixed': isHomepage,
       'border-base-200 bg-base-100 text-base-content': !isHomepage || toggleNavClass(),
+      'sticky': !isHomepage,
     }"
-    class="fixed inset-x-0 top-0 z-50 w-full border-b transition duration-200 ease-in-out"
+    class="inset-x-0 top-0 z-50 w-full border-b transition duration-200 ease-in-out"
   >
     <div class="mx-auto space-x-1 navbar max-w-none">
       <div class="flex-none">
@@ -14,24 +15,32 @@
           </svg>
         </label>
       </div>
-      <div class="flex items-center flex-none" v-if="!isHomepage || toggleNavClass()">
+
+      <div class="flex items-center flex-none"
+        v-bind:class="{
+          'hidden': !toggleNavClass() && isHomepage,
+          'lg:hidden': !isHomepage,
+        }"
+      >
         <NuxtLink to="/" class="px-2 flex-0 btn btn-ghost md:px-4" aria-label="Homepage">
           <div class="inline-block text-3xl font-title text-primary">
             <span class="lowercase">daisy</span><span class="uppercase text-base-content">UI</span>
           </div>
         </NuxtLink>
       </div>
+
       <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" class="font-mono text-xs" rel="nofollow"
           v-bind:class="{
           'opacity-80 pl-2': isHomepage,
           'hidden': toggleNavClass() && isHomepage,
-          'opacity-50': !isHomepage,
+          'opacity-50 lg:hidden': !isHomepage,
         }"
       >
         <div data-tip="Changelog" class="tooltip tooltip-bottom">
           <span class="hidden lg:inline xl:ml-2">version</span>&nbsp;{{ DAISYUI_VERSION }}
         </div>
       </a>
+
       <div class="flex-1"></div>
       <div class="items-center flex-none hidden lg:block" v-if="isHomepage">
         <NuxtLink
