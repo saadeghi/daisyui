@@ -50,13 +50,11 @@
     "postcss-nested": "^5.0.1",
     "prejss-cli": "^0.3.3",
     "rtlcss": "^3.0.0",
-    "tailwindcss": "^2.0.1",
-    "terser": "^4.8.0",
-    "uglifyjs-folder": "^2.0.0"
+    "tailwindcss": "^2.0.1"
   },
   "scripts": {
-    "index": "terser src/index.js -c -o index.js",
-    "colors": "uglifyjs-folder src/colors -eo colors --extension '.js'",
+    "index": "cp -R ./src/index.js ./index.js",
+    "colors": "cp -R ./src/colors ./colors",
     "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
     "base": "cat dist/base/*.css > dist/base.css",
     "postbase": "prejss-cli dist/base.css --format commonjs",
