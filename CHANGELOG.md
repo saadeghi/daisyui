@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/saadeghi/daisyui/compare/v1.3.11...v1.4.0) (2021-06-19)
+
+
+### Features
+
+* bolder font for menu-title ([0e786e7](https://github.com/saadeghi/daisyui/commit/0e786e78121a5c4877c89062b13233bb873d13de))
+* set default text-color/bg-color to :root element ([0b627c1](https://github.com/saadeghi/daisyui/commit/0b627c1fb69e0b4ceeb1107132a6f9d03370583c))
+
 ### [1.3.11](https://github.com/saadeghi/daisyui/compare/v1.3.8...v1.3.11) (2021-06-18)
 
 
