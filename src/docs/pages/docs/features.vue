@@ -105,7 +105,7 @@
         5. Semantic color names
       </p>
       <p class="mb-4 prose">
-      Tailwind CSS provides a wide range of colors and it won't limit your choice when you're styling your page. DaisyUI however, is focusing on design system concepts and if you're creating a design system, you need to define your brand colors and create your layout commited to that color palette.
+      Tailwind CSS provides a wide range of colors and it won't limit your choice when you're styling your page. DaisyUI however, is focusing on design system concepts and if you're creating a design system, you need to define your brand colors and create your layout committed to that color palette.
       <br>
         Instead of using general-purpose color names like <span class="badge badge-warning">blue-600</span> or <span class="badge badge-warning">gray-100</span> use semantic role names like <span class="badge badge-success">primary</span>, <span class="badge badge-success">neutral-300</span> or <span class="badge badge-success">info</span>. This way, you can change primary color of your whole project using a single CSS variable. No need to replace all color classes in all files. You can also define multiple themes (not just dark-mode) using CSS variables.
       </p>
