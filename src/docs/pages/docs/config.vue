@@ -6,7 +6,7 @@
     <Wrapper nocode>
 
       <p class="mb-4">
-        DaisyUI can be configed from your <span class="badge badge-outline">tailwind.config.js</span> file
+        DaisyUI can be configured from your <span class="badge badge-outline">tailwind.config.js</span> file
       </p>
 
       <div class="w-full max-w-4xl my-2">
@@ -76,7 +76,7 @@
         </div>
       </div>
         <br>The first item of array will be the default theme.
-        <br>if no theme is chosen on <span class="badge badge-outline">&lt;html data-theme="THEME_NAME"&gt;</span> and <span class="badge badge-outline">dark</span> theme is in themes config, default theme and dark theme will be actiavted based on operatig system prefrences.
+        <br>if no theme is chosen on <span class="badge badge-outline">&lt;html data-theme="THEME_NAME"&gt;</span> and <span class="badge badge-outline">dark</span> theme is in themes config, default theme and dark theme will be activated based on operating system preferences.
         <br>
         <NuxtLink to="/docs/default-themes" class="link">read more about default themes</NuxtLink>
       </p>
