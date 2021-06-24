@@ -21,7 +21,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 - 👉 [ [See all components][docs-url] ]
 - 📘 Documents: [daisyui.com][docs-url]
 - 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
-- 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url]
+- 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url] | [cdnjs][cdnjs-url]
 
 ---
 
@@ -190,6 +190,7 @@ Read the documents for more info
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
+[cdnjs-url]: https://cdnjs.com/libraries/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
 [tw-play-url]: https://play.tailwindcss.com/5du2H2Kyvq
 [codepen-url]: https://codepen.io/saadeghi/pen/gOwWKvv
