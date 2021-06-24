@@ -24,7 +24,7 @@
       Add <span class="badge badge-outline">data-theme="THEME_NAME"</span> to &lt;html&gt; tag.
     </p>
     <p class="my-4 text-lg prose">
-      I suggest using <a href="https://github.com/saadeghi/theme-change" target="_blank">them-change</a>, so you can switch themes and save selected theme in local storage.
+      I suggest using <a href="https://github.com/saadeghi/theme-change" target="_blank">theme-change</a>, so you can switch themes and save selected theme in local storage.
     </p>
 
     <div class="w-full max-w-4xl my-2">
