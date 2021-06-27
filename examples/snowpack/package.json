@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "dependencies": {
+    "@snowpack/plugin-run-script": "latest",
+    "daisyui": "latest",
+    "snowpack": "latest",
+    "tailwindcss": "latest"
+  }
+}
