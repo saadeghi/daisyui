@@ -1,6 +1,17 @@
 .navbar{
   @apply flex items-center;
   & > *{
-    @apply flex;
+    @apply flex items-center;
   }
+}
+.navbar-start{
+  width:50%;
+  justify-content: flex-start;
+}
+.navbar-center{
+  flex-shrink: 0;
+}
+.navbar-end{
+  width:50%;
+  justify-content: flex-end;
 }

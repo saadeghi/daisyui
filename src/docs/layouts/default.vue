@@ -163,6 +163,7 @@ export default {
       ],
       updatedComponents: [
         'avatar',
+        'navbar',
       ],
     }
   },

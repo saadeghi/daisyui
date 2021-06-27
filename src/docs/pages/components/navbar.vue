@@ -3,6 +3,9 @@
     <ClassTable v-bind:data="{
       components : [
         { class: 'navbar', desc: 'Container element' },
+        { class: 'navbar-start', desc: 'Child element, fills 50% of width to be on start' },
+        { class: 'navbar-center', desc: 'Child element, fills remaining space to be on center' },
+        { class: 'navbar-end', desc: 'Child element, fills 50% of width to be on en' },
       ]
     }"/>
     <Wrapper title="navbar" classes="flex flex-col space-y-2">
@@ -175,15 +178,15 @@
 
     </Wrapper>
 
-    <Wrapper title="navbar" classes="flex flex-col space-y-2">
+    <Wrapper title="start/center/end" classes="flex flex-col space-y-2">
 
         <Navbar class="mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
-          <div class="flex-1 px-2 mx-2 lg:flex-none">
+          <div class="px-2 mx-2 navbar-start">
             <span class="text-lg font-bold">
               DaisyUI
             </span>
           </div>
-          <div class="justify-center flex-1 hidden px-2 mx-2 lg:flex">
+          <div class="navbar-center hidden px-2 mx-2 lg:flex">
             <div class="flex items-stretch">
               <a class="btn btn-ghost btn-sm rounded-btn">
                 Home
@@ -200,15 +203,16 @@
             </div>
 
           </div>
-          <div class="flex-none">
+          <div class="navbar-end">
+
             <Button classes="btn-square btn-ghost">
               <Icon glyph="bell" class="inline-block w-6 h-6 stroke-current" />
             </Button>
-          </div>
-          <div class="flex-none">
+
             <Button classes="btn-square btn-ghost">
               <Icon glyph="search" class="inline-block w-6 h-6 stroke-current" />
             </Button>
+
           </div>
         </Navbar>
 
