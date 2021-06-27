@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/saadeghi/daisyui/compare/v1.4.0...v1.5.0) (2021-06-27)
+
+
+### Features
+
+* add `navbar-start`, `navbar-center`, `navbar-end` classes ([eb26833](https://github.com/saadeghi/daisyui/commit/eb268330921de1d1d664e099fbecc72f222543b2))
+
+
+### Bug Fixes
+
+* prevent dropdown to open on click when it should open with hover ([3ad0243](https://github.com/saadeghi/daisyui/commit/3ad0243db14f918e471b317685ca8590ed467bc4))
+* typo ([ea08977](https://github.com/saadeghi/daisyui/commit/ea08977cf9a087a660217cac20056fedf65b33e5))
+* typography style is now on `component` layer instead of `base` ([cdca955](https://github.com/saadeghi/daisyui/commit/cdca955399985b450fe797aa8ab70829e94cc60a))
+
 ## [1.4.0](https://github.com/saadeghi/daisyui/compare/v1.3.11...v1.4.0) (2021-06-19)
 
 
