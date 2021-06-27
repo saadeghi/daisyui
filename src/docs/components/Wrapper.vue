@@ -11,7 +11,7 @@
     <div>
       <collapse-transition>
       <div v-if="!nocode && showcode" class="pt-2">
-        <pre id="myInput" v-highlightjs="sourcecode"><code class="h-64 p-4 font-mono text-xs rounded-lg html"></code></pre>
+        <pre v-highlightjs="sourcecode"><code class="h-64 p-4 font-mono text-xs rounded-box html"></code></pre>
       </div>
       </collapse-transition>
       <collapse-transition>
