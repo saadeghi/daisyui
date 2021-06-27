@@ -1,0 +1,55 @@
+.prose{
+  color: inherit;
+  a,
+  blockquote,
+  figure figcaption,
+  a code,
+  thead,
+  strong,
+  .lead,
+  h1,
+  h2,
+  h3,
+  h4{
+    color: inherit;
+    &:hover{
+      color: inherit;
+    }
+  }
+  code{
+    background: hsla(var(--bc)/.2);
+    color: hsl(var(--bc));
+    padding: 2px 6px;
+    border-radius: var(--rounded-badge);
+  }
+  pre{
+    background: hsl(var(--n));
+    color: hsl(var(--nc));
+    border-radius: var(--rounded-box);
+    code{
+      border-radius: none;
+      background: inherit;
+      color: inherit;
+    }
+  }
+  & code:after, 
+  & code:before{
+    content: none;
+  }
+  ol > li:before,
+  ol > li:hover:before{
+    color: inherit;
+  }
+  blockquote{
+    border-left-color: hsl(var(--bc) / 40%);
+  }
+  ul > li:before{
+    background-color: hsl(var(--bc) / 40%);
+  }
+  thead{
+    border-bottom-color: hsl(var(--bc) / 40%);
+  }
+  tbody tr{
+    border-bottom-color: hsl(var(--bc) / 40%);
+  }
+}

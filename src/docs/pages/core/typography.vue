@@ -17,7 +17,25 @@
       <Wrapper nocode>
         <p>You should use official <a target="_blank" href="https://github.com/tailwindlabs/tailwindcss-typography">TailwindCSS Typography</a> plugin.
         It handles everything and it's fully customizable</p>
-        <p>You can see demo elements below:</p>
+        <p>
+          <span class="badge badge-ghost">daisyUI</span> adds some style to <span class="badge badge-ghost">@tailwindcss/typography</span> so it will use the same theme as other elements.
+          Just make sure on your tailwind.config.js, you have <span class="badge badge-ghost">daisyUI</span> after <span class="badge badge-ghost">@tailwindcss/typography</span>
+        </p>
+
+      <div class="w-full max-w-xl my-2">
+        <div class="shadow-lg mockup-code">
+        <pre><code>module.exports = {
+      <span class="text-neutral-content text-opacity-30">//...</span>
+      plugins: [
+        require('@tailwindcss/typography'),
+        require('daisyui'),
+      ],
+
+    }</code></pre>
+        </div>
+      </div>
+
+        <p>Here you can see how elements will look using <span class="badge badge-ghost">@tailwindcss/typography</span> :</p>
       </Wrapper>
       <Wrapper title="headings" nocode>
         <h1>Heading</h1>
