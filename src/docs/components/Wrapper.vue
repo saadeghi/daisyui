@@ -60,7 +60,9 @@ export default {
         }
         return node;
       }
-      this.sourcecode = process(this.$refs.component.innerHTML);
+      if(this.$refs.component !== undefined){
+        this.sourcecode = process(this.$refs.component.innerHTML)
+      }
     }
   },
   mounted:function(){
