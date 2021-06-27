@@ -42,7 +42,7 @@ export default {
     setSrc: function() {
       function process(str) {
         var div = document.createElement("div");
-        div.innerHTML = str.trim() + "\n";
+        div.innerHTML = str.trim().replaceAll("<!--", "").replaceAll("-->", "") + "\n";
         return format(div, 0).innerHTML;
       }
       function format(node, level) {
