@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/saadeghi/daisyui/compare/v1.5.0...v1.6.0) (2021-06-28)
+
+
+### Features
+
+* add `drawer-end` utility ([7a0e5b1](https://github.com/saadeghi/daisyui/commit/7a0e5b1ea9143782b90f2d0e96dd26e763b2af85))
+
 ## [1.5.0](https://github.com/saadeghi/daisyui/compare/v1.4.0...v1.5.0) (2021-06-27)
 
 
