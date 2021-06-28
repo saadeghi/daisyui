@@ -1,5 +1,13 @@
 .drawer{
   @apply grid overflow-hidden;
+  &.drawer-end .drawer-toggle{
+    & ~ .drawer-side>.drawer-overlay + *{
+      @apply translate-x-full justify-self-end;
+    }
+    &:checked ~ .drawer-side>.drawer-overlay + *{
+      @apply translate-x-0;
+    }
+  }
 }
 .drawer-toggle{
   @apply appearance-none opacity-0 w-0 h-0 absolute;

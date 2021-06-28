@@ -10,6 +10,7 @@
       ],
       utilities : [
         { class: 'drawer-mobile', desc: 'Makes drawer to open/close on mobile but will be always visible on desktop' },
+        { class: 'drawer-end', desc: 'puts drawer to the right' },
       ]
     }"/>
 
@@ -86,6 +87,27 @@
             <li><a>Item 1</a></li>
             <li><a>Item 2</a></li>
           </ul>
+        </div>
+      </div>
+    </Wrapper>
+
+
+    <Wrapper title="drawer-end" classes="flex flex-col space-y-2">
+      <div class="rounded-lg shadow bg-base-200 drawer drawer-end h-52">
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle"/>
+        <div class="flex flex-col items-center justify-center drawer-content">
+          <label class="btn btn-primary drawer-button" for="my-drawer-4">open menu</label>
+        </div>
+        <div class="drawer-side">
+          <label class="drawer-overlay" for="my-drawer-4"></label>
+          <Menu class="p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+            <MenuItem>
+              <a>Menu Item</a>
+            </MenuItem>
+            <MenuItem>
+              <a>Menu Item</a>
+            </MenuItem>
+          </Menu>
         </div>
       </div>
     </Wrapper>

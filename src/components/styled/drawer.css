@@ -1,3 +1,6 @@
+.drawer.drawer-end .drawer-toggle:checked ~ .drawer-content{
+  @apply -translate-x-2;
+}
 .drawer-toggle{
   & ~ .drawer-content{
     @apply transition-all ease-in-out duration-300;
