@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/saadeghi/daisyui/compare/v1.5.0...v1.6.1) (2021-07-01)
+
+
+### Features
+
+* add `drawer-end` utility ([d9f7558](https://github.com/saadeghi/daisyui/commit/d9f7558e2aad656e25ae8c67b1745485ab006d76))
+
+
+### Bug Fixes
+
+* [#98](https://github.com/saadeghi/daisyui/issues/98) - collapse background now adapts to parent elements ([31528ea](https://github.com/saadeghi/daisyui/commit/31528ea1a5bfbe5a645d81d8694c4e594ce03ad5))
+
 ## [1.6.0](https://github.com/saadeghi/daisyui/compare/v1.5.0...v1.6.0) (2021-06-28)
 
 
