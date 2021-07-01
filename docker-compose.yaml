@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: .
+    command: ["npm", "run", 'dev']
+    stdin_open: true
+    tty: true
+    environment:
+      NUXT_HOST: 0.0.0.0
+      NUXT_PORT: 3030
+    volumes:
+      - .:/app:delegated
+    working_dir: /app
+    ports:
+      - "3030:3030"
