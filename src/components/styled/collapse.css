@@ -34,13 +34,13 @@
 }
 
 .collapse:not(.collapse-close) input[type=checkbox]:focus ~ .collapse-title{
-  @apply bg-base-200;
+  @apply bg-base-content bg-opacity-10;
 }
 
 .collapse-open .collapse-title,
 .collapse:focus:not(.collapse-close) .collapse-title,
 .collapse:not(.collapse-close) input[type=checkbox]:checked ~ .collapse-title{
-  @apply outline-none bg-base-200;
+  @apply outline-none bg-base-content bg-opacity-10;
 }
 
 .collapse-content{
@@ -51,7 +51,7 @@
 .collapse-open .collapse-content,
 .collapse:focus:not(.collapse-close) .collapse-content,
 .collapse:not(.collapse-close) input[type=checkbox]:checked ~ .collapse-content{
-  @apply pb-4 opacity-100 bg-base-200;
+  @apply pb-4 opacity-100 bg-base-content bg-opacity-10;
   transition: padding .2s ease-in-out, background-color .2s ease-in-out;
 }
 
