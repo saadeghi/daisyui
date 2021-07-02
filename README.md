@@ -206,3 +206,19 @@ Read the documents for more info
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png
 
 
+### Developmet
+
+````bash
+# Install dependencies
+$ make setup
+
+# Spin up nuxtjs server
+$ make up
+
+
+# Change styles
+$ make sh
+$ npm run themes # run after every change of theme
+
+```
+

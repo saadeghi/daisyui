@@ -39,27 +39,7 @@
     </p>
     <div class="w-full max-w-lg my-2">
       <div class="text-sm shadow-lg mockup-code">
-        <pre><code>  light (default)</code>
-      <code>dark</code>
-      <code>cupcake</code>
-      <code>bumblebee</code>
-      <code>emerald</code>
-      <code>corporate</code>
-      <code>synthwave</code>
-      <code>retro</code>
-      <code>cyberpunk</code>
-      <code>valentine</code>
-      <code>halloween</code>
-      <code>garden</code>
-      <code>forest</code>
-      <code>aqua</code>
-      <code>lofi</code>
-      <code>pastel</code>
-      <code>fantasy</code>
-      <code>wireframe</code>
-      <code>black</code>
-      <code>luxury</code>
-      <code>dracula</code></pre>
+        <pre><code>  light (default)</code></pre>
       </div>
     </div>
 
