@@ -3,7 +3,7 @@
     "dev": "nuxt",
     "style": "npm i daisyui@latest && postcss assets/css/tailwind.css -o assets/css/style.css",
     "generate": "NODE_ENV=production TAILWIND_MODE=build npm run style && nuxt generate",
-    "deploy": "NODE_ENV=production TAILWIND_MODE=build npm run style && ROUTER_BASE='/' nuxt generate"
+    "deploy": "NODE_ENV=production TAILWIND_MODE=build npm run style && ROUTER_BASE='/daisyui' nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
