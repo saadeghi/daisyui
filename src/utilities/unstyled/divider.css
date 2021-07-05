@@ -1,0 +1,6 @@
+.divider-vertical{
+  @apply flex-col self-stretch;
+  &:before, &:after{
+    @apply h-full;
+  }
+}

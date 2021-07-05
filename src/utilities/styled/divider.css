@@ -1,0 +1,14 @@
+.divider-vertical{
+  @apply my-0 h-auto mx-4 w-4;
+  &:before, &:after{
+    @apply w-0.5;
+  }
+  &:not(:empty){
+    &:before{
+      @apply mr-0 mb-4;
+    }
+    &:after{
+      @apply ml-0 mt-4;
+    }
+  }
+}
