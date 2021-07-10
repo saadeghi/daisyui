@@ -1,9 +1,6 @@
 .collapse{
   @apply outline-none;
 }
-.collapse-title{
-  min-height: 3.75rem;
-}
 .collapse-arrow .collapse-title:after{
   @apply transition-all ease-in-out duration-300 w-2 h-2 block absolute;
   top: 1.4rem;
@@ -29,7 +26,8 @@
 }
 .collapse-title,
 .collapse>input[type=checkbox]{
-  @apply p-4;
+  @apply p-4 w-full;
+  min-height: 3.75rem;
   transition: background-color .2s ease-in-out;
 }
 
