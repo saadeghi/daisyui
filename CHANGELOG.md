@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/saadeghi/daisyui/compare/v1.6.1...v1.7.0) (2021-07-10)
+
+
+### Features
+
+* add smooth scroll for carousel ([52880e1](https://github.com/saadeghi/daisyui/commit/52880e1e324a6b558720795f39f72eb934f4299c))
+* divider-vertical is now a responsive utility ([d918772](https://github.com/saadeghi/daisyui/commit/d918772b2bb210efc104323574d8ff4a55b3446a))
+
+
+### Bug Fixes
+
+* [#106](https://github.com/saadeghi/daisyui/issues/106) ([2c6747f](https://github.com/saadeghi/daisyui/commit/2c6747f1250f3e8d9d7691dc97cd561d98d3dcbf))
+
 ### [1.6.1](https://github.com/saadeghi/daisyui/compare/v1.5.0...v1.6.1) (2021-07-01)
 
 
