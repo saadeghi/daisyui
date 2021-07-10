@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/saadeghi/daisyui/compare/v1.7.0...v1.8.0) (2021-07-10)
+
+
+### Features
+
+* add min-height for navbar ([391dd99](https://github.com/saadeghi/daisyui/commit/391dd99ab02f9c0c7ab7eda1628422490f7d15ce))
+
 ## [1.7.0](https://github.com/saadeghi/daisyui/compare/v1.6.1...v1.7.0) (2021-07-10)
 
 
