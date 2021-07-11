@@ -7,6 +7,7 @@
       utilities : [
         { class: 'table-zebra', desc: 'For the active tab' },
         { class: 'table-compact', desc: 'Make table more compact' },
+        { class: 'active', desc: 'For <tr> to highlight current row' },
       ]
     }"/>
 
@@ -22,7 +23,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(item, index) in tableData.slice(0, 5)" :key="`item-${index}`">
+            <tr v-for="(item, index) in tableData.slice(0, 4)" :key="`item-${index}`">
               <th>{{ item.id }}</th>
               <td>{{ item.name }}</td>
               <td>{{ item.job }}</td>
@@ -34,9 +35,9 @@
     </Wrapper>
 
 
-    <Wrapper title="table-zebra">
+    <Wrapper title="table with actvie row">
       <div class="overflow-x-auto">
-        <table class="table table-zebra w-full">
+        <table class="table w-full">
           <thead>
             <tr>
               <th></th>
@@ -46,7 +47,30 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(item, index) in tableData.slice(5, 10)" :key="`item-${index}`">
+            <tr v-for="(item, index) in tableData.slice(4, 8)" :key="`item-${index}`" v-bind:class="{'active': index == 2}">
+              <th>{{ item.id }}</th>
+              <td>{{ item.name }}</td>
+              <td>{{ item.job }}</td>
+              <td>{{ item.color }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Wrapper>
+
+    <Wrapper title="table-zebra">
+      <div class="overflow-x-auto">
+        <table class="table w-full table-zebra">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in tableData.slice(8, 12)" :key="`item-${index}`">
               <th>{{ item.id }}</th>
               <td>{{ item.name }}</td>
               <td>{{ item.job }}</td>
@@ -79,7 +103,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(item, index) in tableData.slice(1, 5)" :key="`item-${index}`">
+            <tr v-for="(item, index) in tableData.slice(12, 16)" :key="`item-${index}`">
               <th>
                 <label>
                   <input type="checkbox" class="checkbox">
@@ -131,7 +155,7 @@
 
     <Wrapper title="table-compact">
       <div class="overflow-x-auto">
-        <table class="table table-compact w-full">
+        <table class="table w-full table-compact">
           <thead>
             <tr>
               <th></th>

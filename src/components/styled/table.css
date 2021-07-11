@@ -3,6 +3,11 @@
   th,td{
     @apply p-4 whitespace-nowrap;
   }
+  tr.active{
+    th,td{
+      @apply bg-base-300;
+    }
+  }
   &:not(.table-zebra){
     thead,tbody,tfoot{
       tr:not(:last-child){
