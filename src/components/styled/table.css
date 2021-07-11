@@ -47,4 +47,9 @@
       @apply p-2 text-sm;
     }
   }
+  &-active{
+    td{
+      @apply bg-base-200;
+    }
+  }
 }
