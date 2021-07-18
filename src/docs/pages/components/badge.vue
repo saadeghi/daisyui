@@ -27,9 +27,9 @@
     </Wrapper>
 
     <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-x-0 space-y-2 md:space-y-0 flex-col md:flex-row" title="badge size">
-      <Badge class="badge-ghost badge-lg">987,654</Badge>
-      <Badge class="badge-ghost">987,654</Badge>
-      <Badge class="badge-ghost badge-sm">987,654</Badge>
+      <Badge class="badge-lg">987,654</Badge>
+      <Badge class="">987,654</Badge>
+      <Badge class="badge-sm">987,654</Badge>
     </Wrapper>
 
     <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-x-0 space-y-2 md:space-y-0 flex-col md:flex-row" title="badge variants">

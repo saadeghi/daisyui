@@ -156,8 +156,8 @@
 
 
     <div class="flex justify-end max-w-4xl pt-10 mt-20 border-t-2 border-base-200">
-      <NuxtLink to="/docs/customize" class="text-xs btn-lg btn lg:text-lg">
-        Next: Customize components
+      <NuxtLink to="/core/colors" class="text-xs btn-lg btn lg:text-lg">
+        Next: Colors
         <Icon glyph="arrow" class="inline-block w-6 h-6 ml-2 stroke-current" />
       </NuxtLink>
     </div>
