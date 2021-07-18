@@ -9,6 +9,10 @@
         { class: 'toggle-primary', desc: 'Adds `primary` to toggle' },
         { class: 'toggle-secondary', desc: 'Adds `secondary` to toggle' },
         { class: 'toggle-accent', desc: 'Adds `accent` to toggle' },
+        { class: 'toggle-lg', desc: 'Large toggle' },
+        { class: 'toggle-md', desc: 'Medium toggle (default)' },
+        { class: 'toggle-sm', desc: 'Small toggle' },
+        { class: 'toggle-xs', desc: 'Extra small toggle' },
       ]
     }"/>
     <Wrapper title="toggle" classes="flex flex-col space-y-2 max-w-xs">
@@ -53,6 +57,12 @@
           </label>
         </FormControl>
       </div>
+    </Wrapper>
+    <Wrapper title="toggle sizes" classes="flex flex-col space-y-2 max-w-xs">
+      <Toggle classes="toggle-xs" />
+      <Toggle classes="toggle-sm" />
+      <Toggle classes="toggle-md" />
+      <Toggle classes="toggle-lg" />
     </Wrapper>
     <Wrapper title="Disabled" classes="flex flex-col space-y-2 max-w-xs">
       <div class="p-6 card bordered">
