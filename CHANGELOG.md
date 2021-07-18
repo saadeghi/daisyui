@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/saadeghi/daisyui/compare/v1.9.0...v1.10.0) (2021-07-18)
+
+
+### Features
+
+* add checkbox sizes (xs, sm, md, lg) ([1502e46](https://github.com/saadeghi/daisyui/commit/1502e46a0be9bf4075da8d54a11e74c4634a8cec))
+* add extra-small badge size, adjust badge padding and height ([ac06320](https://github.com/saadeghi/daisyui/commit/ac0632016974bb3245d4339b16a9c2ed0691c811))
+* add indicator component. fix [#32](https://github.com/saadeghi/daisyui/issues/32) ([2920671](https://github.com/saadeghi/daisyui/commit/29206712c642322d0266c3dd7bb133a4b74ca332))
+* add radio sizes (xs, sm, md, lg) ([2e18025](https://github.com/saadeghi/daisyui/commit/2e18025efa1f435a2ffa64e060f44aa21cd4534e))
+* add toggle sizes (xs, sm, md, lg) ([95c1f8c](https://github.com/saadeghi/daisyui/commit/95c1f8cd14bb0f2f369d12994a19fc8a38e6968b))
+
+
+### Bug Fixes
+
+* [#92](https://github.com/saadeghi/daisyui/issues/92) ([ba8d38b](https://github.com/saadeghi/daisyui/commit/ba8d38b2fd2bcda2bcd7e070ec419c134e29c097))
+
 ## [1.9.0](https://github.com/saadeghi/daisyui/compare/v1.8.0...v1.9.0) (2021-07-11)
 
 
