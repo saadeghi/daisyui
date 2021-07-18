@@ -9,6 +9,10 @@
         { class: 'checkbox-primary', desc: 'Adds `primary` to checkbox' },
         { class: 'checkbox-secondary', desc: 'Adds `secondary` to checkbox' },
         { class: 'checkbox-accent', desc: 'Adds `accent` to checkbox' },
+        { class: 'checkbox-lg', desc: 'Large checkbox' },
+        { class: 'checkbox-md', desc: 'Medium checkbox (default)' },
+        { class: 'checkbox-sm', desc: 'Small checkbox' },
+        { class: 'checkbox-xs', desc: 'Extra small checkbox' },
       ]
     }"/>
     <Wrapper title="checkbox" classes="flex flex-col space-y-2 max-w-xs">
@@ -53,6 +57,12 @@
           </label>
         </FormControl>
       </div>
+    </Wrapper>
+    <Wrapper title="checkbox sizes" classes="flex flex-col space-y-2 max-w-xs">
+      <Checkbox classes="checkbox-xs" />
+      <Checkbox classes="checkbox-sm" />
+      <Checkbox classes="checkbox-md" />
+      <Checkbox classes="checkbox-lg" />
     </Wrapper>
     <Wrapper title="checkbox disabled" classes="flex flex-col space-y-2 max-w-xs">
       <div class="p-6 card bordered">
