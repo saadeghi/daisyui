@@ -1,12 +1,4 @@
 .toggle{
-
-  & ~ .toggle-mark{
-    @apply flex select-none cursor-pointer items-center justify-start transition duration-200 ease-in-out;
-    &:before{
-      @apply block transition duration-200 ease-in-out;
-      content: '';
-    }
-  }
   &:focus {
     @apply outline-none;
   }

@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <input type="radio" class="radio" :class="classes" :name="name" :value="value" checked />
-    <span class="radio-mark"></span>
-  </div>
+  <input type="radio" class="radio" :class="classes" :name="name" :value="value" checked />
 </template>
 
 <script>

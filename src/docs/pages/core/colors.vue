@@ -21,11 +21,11 @@
 
 
 
-<div class="tabs mb-6 mt-10">
+<div class="mt-10 mb-6 tabs">
   <button v-on:click="activeTab = 'colors'"  v-bind:class="{'tab-active': activeTab == 'colors'}" class="tab tab-lifted tab-lg">Customize</button>
   <button v-on:click="activeTab = 'preview'"  v-bind:class="{'tab-active': activeTab == 'preview'}" class="tab tab-lifted tab-lg">Preview</button>
   <button v-on:click="activeTab = 'output'"  v-bind:class="{'tab-active': activeTab == 'output'}" class="tab tab-lifted tab-lg">Result</button>
-  <span class="tab tab-lifted tab-lg flex-grow cursor-default hidden sm:block"></span>
+  <span class="flex-grow hidden cursor-default tab tab-lifted tab-lg sm:block"></span>
 </div>
 
 
@@ -40,10 +40,7 @@
     <div class="form-control">
       <label class="cursor-pointer label">
         <span class="label-text">Show customized colors</span>
-        <div>
-          <input type="checkbox" checked="checked" class="toggle toggle-primary" v-model="applyCustomThemeToSite">
-          <span class="toggle-mark"></span>
-        </div>
+        <input type="checkbox" checked="checked" class="toggle toggle-primary" v-model="applyCustomThemeToSite">
       </label>
     </div>
   </div>
@@ -340,7 +337,7 @@
 <div class="text-xl font-bold text-base-content">Theme config</div>
 <div class="mb-6">This is your custom color theme. Add it to tailwind.config.js</div>
 <div class="w-full max-w-2xl my-2">
-  <div class="shadow-lg mockup-code text-sm">
+  <div class="text-sm shadow-lg mockup-code">
   <pre><code>daisyui: {
     themes: [
       {
@@ -371,7 +368,7 @@
       <br/>
       These are default utility classes that use color names:
 
-      <div class="shadow-lg mockup-code text-sm mt-6">
+      <div class="mt-6 text-sm shadow-lg mockup-code">
         <pre>
   <code>bg-<span class="text-info">{COLOR_NAME}</span></span>
     text-<span class="text-info">{COLOR_NAME}</span>

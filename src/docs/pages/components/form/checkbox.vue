@@ -4,7 +4,6 @@
       components : [
         { class: 'form-control', desc: 'Container element' },
         { class: 'checkbox', desc: 'For checkbox' },
-        { class: 'checkbox-mark', desc: 'For span that coms after checkbox' },
       ],
       utilities : [
         { class: 'checkbox-primary', desc: 'Adds `primary` to checkbox' },
@@ -13,6 +12,9 @@
       ]
     }"/>
     <Wrapper title="checkbox" classes="flex flex-col space-y-2 max-w-xs">
+      <Checkbox/>
+    </Wrapper>
+    <Wrapper title="checkbox with label and container" classes="flex flex-col space-y-2 max-w-xs">
       <div class="p-6 card bordered">
         <FormControl>
           <label class="cursor-pointer label">
@@ -58,14 +60,12 @@
           <label class="label">
             <span class="label-text">Disabled + unchecked</span>
             <input type="checkbox" class="checkbox" disabled>
-            <span class="checkbox-mark"></span>
           </label>
         </FormControl>
         <FormControl>
           <label class="label">
             <span class="label-text">Disabled + checked</span>
             <input type="checkbox" checked="checked" class="checkbox" disabled>
-            <span class="checkbox-mark"></span>
           </label>
         </FormControl>
       </div>

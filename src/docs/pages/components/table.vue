@@ -93,7 +93,6 @@
               <th>
                 <label>
                   <input type="checkbox" class="checkbox">
-                  <span class="checkbox-mark"></span>
                 </label>
               </th>
               <th>Name</th>
@@ -107,7 +106,6 @@
               <th>
                 <label>
                   <input type="checkbox" class="checkbox">
-                  <span class="checkbox-mark"></span>
                 </label>
               </th>
               <td>

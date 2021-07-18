@@ -4,7 +4,6 @@
       components : [
         { class: 'form-control', desc: 'Container element' },
         { class: 'toggle', desc: 'For checkbox' },
-        { class: 'toggle-mark', desc: 'For span that coms after checkbox' },
       ],
       utilities : [
         { class: 'toggle-primary', desc: 'Adds `primary` to toggle' },
@@ -13,6 +12,9 @@
       ]
     }"/>
     <Wrapper title="toggle" classes="flex flex-col space-y-2 max-w-xs">
+      <Toggle/>
+    </Wrapper>
+    <Wrapper title="toggle with label and container" classes="flex flex-col space-y-2 max-w-xs">
       <div class="p-6 card bordered">
         <FormControl>
           <label class="cursor-pointer label">
@@ -57,19 +59,13 @@
         <FormControl>
           <label class="label">
             <span class="label-text">Unchecked + Disabled</span>
-            <div>
-              <input type="checkbox" class="toggle" :class="classes" disabled="disabled" />
-              <span class="toggle-mark"></span>
-            </div>
+            <input type="checkbox" class="toggle" :class="classes" disabled="disabled" />
           </label>
         </FormControl>
         <FormControl>
           <label class="label">
             <span class="label-text">Checked + Disabled</span>
-            <div>
-              <input type="checkbox" class="toggle" :class="classes" checked disabled="disabled" />
-              <span class="toggle-mark"></span>
-            </div>
+            <input type="checkbox" class="toggle" :class="classes" checked disabled="disabled" />
           </label>
         </FormControl>
       </div>

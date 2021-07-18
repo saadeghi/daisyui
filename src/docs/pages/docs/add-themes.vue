@@ -1,10 +1,10 @@
 <template>
   <div>
 
-    <div class="tabs mb-10">
-      <NuxtLink to="/docs/default-themes" class="tab tab-lifted tab-lg"><Icon glyph="color-swatch" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Use themes</NuxtLink>
-      <NuxtLink to="/docs/add-themes" class="tab tab-lifted tab-lg tab-active"><Icon glyph="document-add" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Add theme</NuxtLink>
-      <span class="tab tab-lifted tab-lg flex-grow cursor-default hidden sm:block"></span>
+    <div class="mb-10 tabs">
+      <NuxtLink to="/docs/default-themes" class="tab tab-lifted tab-lg"><Icon glyph="color-swatch" class="inline-block w-4 h-4 mr-2 stroke-current lg:w-6 lg:h-6" />Use themes</NuxtLink>
+      <NuxtLink to="/docs/add-themes" class="tab tab-lifted tab-lg tab-active"><Icon glyph="document-add" class="inline-block w-4 h-4 mr-2 stroke-current lg:w-6 lg:h-6" />Add theme</NuxtLink>
+      <span class="flex-grow hidden cursor-default tab tab-lifted tab-lg sm:block"></span>
     </div>
 
     <h2 class="my-6 text-5xl font-bold">
@@ -65,7 +65,7 @@
     '--rounded-badge': '1.9rem',    <span class="text-neutral-content text-opacity-20">/* border-radius for badge and other small elements */</span>
 
     '--animation-btn': '0.25s',     <span class="text-neutral-content text-opacity-20">/* bounce animation time for button */</span>
-    '--animation-input': '.4s',     <span class="text-neutral-content text-opacity-20">/* bounce animation time for checkbox, toggle, etc */</span>
+    '--animation-input': '.2s',     <span class="text-neutral-content text-opacity-20">/* bounce animation time for checkbox, toggle, etc */</span>
 
     '--padding-card': '2rem',       <span class="text-neutral-content text-opacity-20">/* default card-body padding */</span>
 

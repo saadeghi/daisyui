@@ -1,141 +1,72 @@
 .checkbox{
-  @apply appearance-none opacity-0 w-0 h-0 absolute;
-  & ~ .checkbox-mark{
-    @apply w-6 h-6 rounded-btn border border-base-content border-opacity-20;
-    &:before{
-      width: 7px;
-      height: 14px;
-      transform: rotate(45deg)translate(-1px, -1px)scale(.75);
-      border-bottom: 3px solid;
-      border-right: 3px solid;
-      @apply border-transparent;
-    }
-  }
-  &:hover {
-    & ~ .checkbox-mark{
-      &:before{
-        @apply border-base-content border-opacity-20;
-      }
-    }
-  }
-  &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
-    & ~ .checkbox-mark{
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
-    }
+  --chkbg: var(--bc);
+  --chkfg: var(--b1);
+  @apply appearance-none w-6 h-6 rounded-btn border border-base-content border-opacity-20 cursor-pointer;
+  &:focus-visible {
+    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
   }
   &:checked{
-    &,
-    &:hover{
-      & ~ .checkbox-mark{
-        @apply bg-base-content border-base-content text-base-100;
-        &:before{
-          animation: checkmark var(--animation-input, .4s)  ease-in-out;
-          transform: rotate(45deg)translate(-1px, -1px)scale(1);
-          @apply border-base-100;
-        }
-      }
-    }
+    @apply bg-base-content bg-no-repeat;
+    animation: checkmark var(--animation-input, .2s)  ease-in-out;
+    background-image:
+      linear-gradient(-45deg, transparent 65%, hsl(var(--chkbg)) 65%),
+      linear-gradient(45deg, transparent 75%, hsl(var(--chkbg)) 75%),
+      linear-gradient(-45deg, hsl(var(--chkbg)) 40%, transparent 40%),
+      linear-gradient(45deg, hsl(var(--chkbg)) 30%, hsl(var(--chkfg)) 30%, hsl(var(--chkfg)) 40%, transparent 40%),
+      linear-gradient(-45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50%)
+    ;
   }
   &-primary{
-    & ~ .checkbox-mark{
-      @apply border-primary hover:border-primary;
-    }
-    &:hover ~ .checkbox-mark:before{
-      @apply border-primary;
-    }
-    &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
-      & ~ .checkbox-mark{
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
-      }
+    --chkbg: var(--p);
+    --chkfg: var(--pc);
+    @apply border-primary hover:border-primary;
+    &:focus-visible {
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
     &:checked{
-      &,
-      &:hover{
-        & ~ .checkbox-mark{
-          @apply bg-primary border-primary text-primary-content;
-          &:before{
-            @apply border-primary-content;
-          }
-        }
-      }
+      @apply bg-primary border-primary text-primary-content;
     }
   }
   &-secondary{
-    & ~ .checkbox-mark{
-      @apply border-secondary hover:border-secondary;
-    }
-    &:hover ~ .checkbox-mark:before{
-      @apply border-secondary;
-    }
-    &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
-      & ~ .checkbox-mark{
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
-      }
+    --chkbg: var(--s);
+    --chkfg: var(--sc);
+    @apply border-secondary hover:border-secondary;
+    &:focus-visible {
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
     }
     &:checked{
-      &,
-      &:hover{
-        & ~ .checkbox-mark{
-          @apply bg-secondary border-secondary text-secondary-content;
-          &:before{
-            @apply border-secondary-content;
-          }
-        }
-      }
+      @apply bg-secondary border-secondary text-secondary-content;
     }
   }
   &-accent{
-    & ~ .checkbox-mark{
-      @apply border-accent hover:border-accent;
-    }
-    &:hover ~ .checkbox-mark:before{
-      @apply border-accent;
-    }
-    &:focus-visible,&:checked:focus-visible,&:checked:hover:focus-visible {
-      & ~ .checkbox-mark{
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
-      }
+    --chkbg: var(--a);
+    --chkfg: var(--ac);
+    @apply border-accent hover:border-accent;
+    &:focus-visible {
+      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
     }
     &:checked{
-      &,
-      &:hover{
-        & ~ .checkbox-mark{
-          @apply bg-accent border-accent text-accent-content;
-          &:before{
-            @apply border-accent-content;
-          }
-        }
-      }
+      @apply bg-accent border-accent text-accent-content;
     }
   }
-  &:disabled,
-  &:disabled:hover
-  {
-    & ~ .checkbox-mark{
-      @apply bg-base-content bg-opacity-20 cursor-not-allowed border-transparent;
-      &:before{
-        @apply border-transparent;
-      }
-    }
-    &:checked{
-      & ~ .checkbox-mark{
-        &:before{
-          @apply border-base-100;
-        }
-      }
-    }
+  &:disabled{
+    @apply bg-base-content opacity-20 cursor-not-allowed border-transparent;
   }
 }
 
-
 @keyframes checkmark {
-  30% {
-    transform: rotate(45deg)translate(-1px, -1px)scale(1.2);
+  0% {
+    background-position-y: 5px;
   }
   50% {
-    transform: rotate(45deg)translate(-1px, -1px)scale(0.8);
+    background-position-y: -2px;
   }
   100% {
-    transform: rotate(45deg)translate(-1px, -1px)scale(1);
+    background-position-y: 0;
   }
+}
+
+/* backward comptability */
+.checkbox-mark{
+  @apply hidden;
 }

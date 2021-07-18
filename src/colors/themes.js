@@ -337,7 +337,7 @@ module.exports = {
     "--rounded-btn": "0.5rem",
     "--rounded-badge": "1.9rem",
     "--animation-btn": "0.25s",
-    "--animation-input": ".4s",
+    "--animation-input": ".2s",
     "--padding-card": "2rem",
     "--btn-text-case": "uppercase",
     "--btn-focus-scale": "0.95",

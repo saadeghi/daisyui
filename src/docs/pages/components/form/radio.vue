@@ -4,7 +4,6 @@
       components : [
         { class: 'form-control', desc: 'Container element' },
         { class: 'radio', desc: 'For radio input' },
-        { class: 'radio-mark', desc: 'For span that coms after radio input' },
       ],
       utilities : [
         { class: 'radio-primary', desc: 'Adds `primary` to radio' },
@@ -45,8 +44,7 @@
         <FormControl>
           <label class="label">
             <span class="label-text">Disabled</span>
-            <input type="radio" name="opt" checked="checked" class="radio radio-accent" value="" disabled>
-            <span class="radio-mark"></span>
+            <input type="radio" name="opt" checked="checked" class="radio" value="" disabled>
           </label>
         </FormControl>
       </div>
