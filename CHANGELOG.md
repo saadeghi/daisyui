@@ -12,7 +12,43 @@ All notable changes to this project will be documented in this file. See [standa
 * add indicator component. fix [#32](https://github.com/saadeghi/daisyui/issues/32) ([2920671](https://github.com/saadeghi/daisyui/commit/29206712c642322d0266c3dd7bb133a4b74ca332))
 * add radio sizes (xs, sm, md, lg) ([2e18025](https://github.com/saadeghi/daisyui/commit/2e18025efa1f435a2ffa64e060f44aa21cd4534e))
 * add toggle sizes (xs, sm, md, lg) ([95c1f8c](https://github.com/saadeghi/daisyui/commit/95c1f8cd14bb0f2f369d12994a19fc8a38e6968b))
+* refactor `checkbox`, `toggle` and `radio` HTML
+(*this is not a breaking change but you can use the new, cleaner markup*)
+  **Toggle old markup:**
+  ```
+  <div>
+    <input type="checkbox" class="toggle"> 
+    <span class="toggle-mark"></span>
+  </div>
+  ```
+  **✅ new markup:**
+    ```
+    <input type="checkbox" class="toggle"> 
+    ```
 
+  **Checkbox old markup:**
+  ```
+  <div>
+    <input type="checkbox" class="checkbox"> 
+    <span class="checkbox-mark"></span>
+  </div>
+  ```
+  **✅ new markup:**
+    ```
+    <input type="checkbox" class="checkbox"> 
+    ```
+
+  **Radio old markup:**
+  ```
+  <div>
+    <input type="radio" class="radio"> 
+    <span class="radio-mark"></span>
+  </div>
+  ```
+  **✅ new markup:**
+    ```
+    <input type="radio" class="radio"> 
+    ```
 
 ### Bug Fixes
 
@@ -23,7 +59,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* add `active` utility class for <tr> ([4c5f0fe](https://github.com/saadeghi/daisyui/commit/4c5f0fee7c2aeffb4414f1eae2a6f84e9752a9bb))
+* add `active` utility class for `<tr>` ([4c5f0fe](https://github.com/saadeghi/daisyui/commit/4c5f0fee7c2aeffb4414f1eae2a6f84e9752a9bb))
 
 ## [1.8.0](https://github.com/saadeghi/daisyui/compare/v1.7.0...v1.8.0) (2021-07-10)
 
@@ -200,7 +236,7 @@ All notable changes to this project will be documented in this file. See [standa
   - New `collapse`:
     ```html
     <div tabindex="0" class="collapse">
-      <div class="collapse-title text-xl font-medium">
+      <div class="text-xl font-medium collapse-title">
         I open with focus
       </div> 
       <div class="collapse-content"> 
