@@ -1,11 +1,22 @@
 .badge{
+  &-xs{
+    @apply text-xs leading-3 h-3;
+    padding-left: 0.313rem;
+    padding-right: 0.313rem;
+  }
   &-sm{
-    @apply text-xs leading-4 px-2;
+    @apply text-xs leading-4 h-4;
+    padding-left: 0.438rem;
+    padding-right: 0.438rem;
   }
   &-md{
-    @apply text-sm leading-5 px-3;
+    @apply text-sm leading-5 h-5;
+    padding-left: 0.563rem;
+    padding-right: 0.563rem;
   }
   &-lg{
-    @apply text-base leading-6 px-3;
+    @apply text-base leading-6 h-6;
+    padding-left: 0.688rem;
+    padding-right: 0.688rem;
   }
 }
