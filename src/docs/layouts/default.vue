@@ -116,8 +116,8 @@
             <MenuItem v-for="(item, itemindex) in componentPages" v-bind:key="item.itemindex" v-bind:class="{ 'disabled' : !item.path }">
               <NuxtLink v-on:click.native="showMainMenu = false" class="justify-between capitalize" v-if="item.path" :to="item.path">
                 {{ item.name }}
-                <span v-if="item.new" class="badge badge-sm">new</span>
-                <span v-if="item.updated" class="badge badge-sm badge-outline">updated</span>
+                <span v-if="item.new" class="lowercase badge badge-sm">new</span>
+                <span v-if="item.updated" class="lowercase badge badge-sm">updated</span>
               </NuxtLink>
             </MenuItem>
             <MenuItem class="mt-4 menu-title">
@@ -153,16 +153,16 @@ export default {
       demoPages: [],
       showMainMenu: false,
       newComponents: [
-        'collapse',
-        'dropdown',
-        'tooltip',
-        'stat',
-        'steps',
         'table',
+        'indicator',
       ],
       updatedComponents: [
         'navbar',
         'divider',
+        'badge',
+        'form-checkbox',
+        'form-toggle',
+        'form-radio',
       ],
     }
   },

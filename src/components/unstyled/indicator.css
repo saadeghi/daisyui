@@ -1,0 +1,29 @@
+.indicator {
+  @apply relative inline-flex;
+  width: fit-content;
+  .indicator-item{
+    z-index: 1;
+    @apply absolute transform;
+    &{
+      @apply right-0 left-auto top-0 bottom-auto translate-x-1/2 -translate-y-1/2;
+    }
+    &.indicator-start{
+      @apply right-auto left-0 -translate-x-1/2;
+    }
+    &.indicator-center{
+      @apply right-1/2 left-1/2 -translate-x-1/2;
+    }
+    &.indicator-end{
+      @apply right-0 left-auto translate-x-1/2;
+    }
+    &.indicator-bottom{
+      @apply top-auto bottom-0 translate-y-1/2;
+    }
+    &.indicator-middle{
+      @apply top-1/2 bottom-1/2 -translate-y-1/2;
+    }
+    &.indicator-top{
+      @apply top-0 bottom-auto -translate-y-1/2;
+    }
+  }
+}
