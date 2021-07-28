@@ -12,6 +12,5 @@
     "svelte": "3.40.1",
     "svelte-preprocess": "latest",
     "tailwindcss": "latest"
-  },
-  "type": "module"
+  }
 }

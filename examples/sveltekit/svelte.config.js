@@ -1,6 +1,6 @@
-import preprocess from 'svelte-preprocess'
+let preprocess = require('svelte-preprocess')
 
-export default {
+module.exports = {
   preprocess: [
     preprocess({
       defaults: {
