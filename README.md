@@ -99,7 +99,7 @@ Use component classes like `btn`, `card`, etc… to build your UI.
 ---
 
 ## 📘 Documents + Examples  
-Read the documents for more info  
+Read the documents for more info:  
 [ [daisyui.com][docs-url] ↗︎ ]
 
 <details>
@@ -140,6 +140,7 @@ Read the documents for more info
   - [x] Toggle
   - [ ] Upload
 - [x] Hero
+- [x] Indicator
 - [x] Link
 - [ ] Loading
 - [x] Menu
@@ -198,7 +199,7 @@ Read the documents for more info
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
-[number-of-components]: https://badgen.net/badge/components%20added/35/green
+[number-of-components]: https://badgen.net/badge/total%20components/36/green
 
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
