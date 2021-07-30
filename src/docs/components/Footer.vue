@@ -7,7 +7,7 @@
         </div>
 
         <div class="mb-10 text-center">
-          <a class="my-1 btn btn-ghost btn-xs" target="_blank" rel="noopener" href="https://play.tailwindcss.com/5du2H2Kyvq">Tailwind Play</a>
+          <a class="my-1 btn btn-ghost btn-xs" target="_blank" rel="noopener" href="https://play.tailwindcss.com/R74XalS4na">Tailwind Play</a>
           <a class="my-1 btn btn-ghost btn-xs" target="_blank" rel="noopener" href="https://codepen.io/saadeghi/pen/gOwWKvv">Codepen</a>
           <a class="my-1 btn btn-ghost btn-xs" target="_blank" rel="noopener" href="https://github.com/saadeghi/daisyui">Github</a>
           <a class="my-1 btn btn-ghost btn-xs" target="_blank" rel="noopener" href="https://www.npmjs.com/package/daisyui">NPM</a>
