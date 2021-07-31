@@ -12,8 +12,8 @@
       </h1>
 
       <div class="flex flex-col items-center justify-center w-full space-y-10 lg:space-x-4 lg:space-y-0 lg:flex-row">
-        <div class="flex-1 w-full max-w-xs text-left bg-transparent text-primary-content border-2 border-opacity-40 border-primary-content mockup-code lg:mx-0">
-          <pre data-prefix="$"><code>npm i daisyui --save</code></pre>
+        <div class="flex-1 w-full max-w-xs text-left bg-transparent border-2 text-primary-content border-opacity-40 border-primary-content mockup-code lg:mx-0">
+          <pre data-prefix="$"><code>npm i daisyui</code></pre>
         </div>
         <div class="max-w-sm my-2 text-left">
           <div>

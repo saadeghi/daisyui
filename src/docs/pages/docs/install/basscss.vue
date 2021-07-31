@@ -51,7 +51,7 @@ export default {
   },
   head() {
     return {
-      title: "daisyUI — BassCSS components",
+      title: "daisyUI — Use with BassCSS",
       meta: [
         {
           hid: 'description',

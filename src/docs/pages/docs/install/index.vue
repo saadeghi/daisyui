@@ -20,7 +20,7 @@
       </p>
       <div class="w-full max-w-xl my-2">
         <div class="shadow-lg mockup-code">
-          <pre data-prefix="$"><code>npm i daisyui --save</code></pre>
+          <pre data-prefix="$"><code>npm i daisyui</code></pre>
         </div>
       </div>
 

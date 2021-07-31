@@ -185,3 +185,21 @@
   </div>
 </template>
 
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Features",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS plugin - daisyUI features'
+        }
+      ]
+    }
+  }
+}
+</script>
