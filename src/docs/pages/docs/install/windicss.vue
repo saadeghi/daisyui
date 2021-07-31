@@ -9,8 +9,8 @@
 
     <Wrapper nocode>
 
-      <div class="alert alert-warning mb-6">
-        <div class="flex-1 items-center">
+      <div class="mb-6 alert alert-warning">
+        <div class="items-center flex-1">
           <Icon glyph="warning" class="w-6 h-6 mx-2 stroke-current" />
           <label>
             <div class="font-bold">
@@ -77,6 +77,18 @@ export default {
   data() {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
+    }
+  },
+  head() {
+    return {
+      title: "daisyUI — Install Windi CSS plugin",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Install daisyUI as a plugin for Windi CSS'
+        }
+      ]
     }
   }
 }

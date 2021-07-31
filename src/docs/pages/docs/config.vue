@@ -170,6 +170,18 @@ export default {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — Config",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'daisyUI config guilde tailwind.config.js - change daisyUI config'
+        }
+      ]
+    }
   }
 }
 </script>

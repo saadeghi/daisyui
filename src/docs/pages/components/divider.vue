@@ -46,3 +46,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS divider component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS divider component - Tailwind CSS divider examples'
+        }
+      ]
+    }
+  }
+}
+</script>

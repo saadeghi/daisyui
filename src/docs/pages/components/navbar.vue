@@ -186,7 +186,7 @@
               DaisyUI
             </span>
           </div>
-          <div class="navbar-center hidden px-2 mx-2 lg:flex">
+          <div class="hidden px-2 mx-2 navbar-center lg:flex">
             <div class="flex items-stretch">
               <a class="btn btn-ghost btn-sm rounded-btn">
                 Home
@@ -223,3 +223,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS navbar component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS navbar component - Tailwind CSS navbar examples'
+        }
+      ]
+    }
+  }
+}
+</script>

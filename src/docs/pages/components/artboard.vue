@@ -61,3 +61,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+  export default {
+    head() {
+      return {
+        title: "daisyUI — Tailwind CSS artboard component",
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Tailwind CSS artboard component - Tailwind CSS artboard examples'
+          }
+        ]
+      }
+    }
+  }
+</script>

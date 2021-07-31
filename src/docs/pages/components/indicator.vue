@@ -163,3 +163,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS indicator component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS notification indicator component - Tailwind CSS notification indicator examples'
+        }
+      ]
+    }
+  }
+}
+</script>

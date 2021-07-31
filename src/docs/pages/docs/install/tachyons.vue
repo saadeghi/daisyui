@@ -48,6 +48,18 @@ export default {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — Use with Tachyons",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Use daisyUI components with Tachyons CSS'
+        }
+      ]
+    }
   }
 }
 </script>

@@ -616,6 +616,18 @@ export default {
         console.log('er')
       }
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — Colors",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'daisyUI color scheme generator. Tailwind CSS theme generator'
+        }
+      ]
+    }
   }
 }
 </script>

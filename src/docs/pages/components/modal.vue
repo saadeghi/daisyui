@@ -42,3 +42,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS modal component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS modal component - Tailwind CSS modal examples'
+        }
+      ]
+    }
+  }
+}
+</script>

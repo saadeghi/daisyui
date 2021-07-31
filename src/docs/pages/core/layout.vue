@@ -1,10 +1,10 @@
 <template>
   <div>
 
-    <div class="tabs mb-10">
-      <NuxtLink to="/core/layout" class="tab tab-lifted tab-lg tab-active"><Icon glyph="template" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Layout</NuxtLink>
-      <NuxtLink to="/core/typography" class="tab tab-lifted tab-lg"><Icon glyph="text" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 fill-current" />Typography</NuxtLink>
-      <span class="tab tab-lifted tab-lg flex-grow cursor-default hidden sm:block"></span>
+    <div class="mb-10 tabs">
+      <NuxtLink to="/core/layout" class="tab tab-lifted tab-lg tab-active"><Icon glyph="template" class="inline-block w-4 h-4 mr-2 stroke-current lg:w-6 lg:h-6" />Layout</NuxtLink>
+      <NuxtLink to="/core/typography" class="tab tab-lifted tab-lg"><Icon glyph="text" class="inline-block w-4 h-4 mr-2 fill-current lg:w-6 lg:h-6" />Typography</NuxtLink>
+      <span class="flex-grow hidden cursor-default tab tab-lifted tab-lg sm:block"></span>
     </div>
 
     <h2 class="my-6 text-5xl font-bold">
@@ -36,3 +36,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Layout",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'daisyUI CSS Layout - Tailwind CSS Layout'
+        }
+      ]
+    }
+  }
+}
+</script>

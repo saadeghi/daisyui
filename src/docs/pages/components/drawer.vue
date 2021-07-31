@@ -114,3 +114,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS drawer sidebar component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS drawer sidebar component - Tailwind CSS drawer sidebar examples'
+        }
+      ]
+    }
+  }
+}
+</script>

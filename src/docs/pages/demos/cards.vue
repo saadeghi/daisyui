@@ -246,3 +246,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Cards demo",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS template example - Tailwind CSS sample'
+        }
+      ]
+    }
+  }
+}
+</script>

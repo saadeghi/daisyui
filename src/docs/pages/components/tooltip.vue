@@ -78,3 +78,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS tooltip component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS tooltip component - Tailwind CSS tooltip examples'
+        }
+      ]
+    }
+  }
+}
+</script>

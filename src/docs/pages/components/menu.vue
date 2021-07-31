@@ -220,3 +220,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS menu component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS menu list component - Tailwind CSS menu list examples'
+        }
+      ]
+    }
+  }
+}
+</script>

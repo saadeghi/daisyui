@@ -64,3 +64,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS radio button component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS radio button component - Tailwind CSS radio button examples'
+        }
+      ]
+    }
+  }
+}
+</script>

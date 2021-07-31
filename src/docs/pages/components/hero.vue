@@ -92,3 +92,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS hero component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS hero component - Tailwind CSS hero examples'
+        }
+      ]
+    }
+  }
+}
+</script>

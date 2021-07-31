@@ -82,3 +82,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS checkbox component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS checkbox component - Tailwind CSS checkbox examples'
+        }
+      ]
+    }
+  }
+}
+</script>

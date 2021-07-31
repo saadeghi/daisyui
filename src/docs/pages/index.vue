@@ -21,11 +21,11 @@
             <div class="stat-desc">Themes</div>
           </NuxtLink>
           <a class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" href="https://github.com/saadeghi/daisyui" target="_blank" rel="noopener">
-            <div class="stat-value">2,500</div>
+            <div class="stat-value">3,000</div>
             <div class="stat-desc">Github Stars</div>
           </a>
           <a class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" href="https://www.npmjs.com/package/daisyui" target="_blank" rel="noopener">
-            <div class="stat-value">60,000</div>
+            <div class="stat-value">70,000</div>
             <div class="stat-desc">NPM Installs</div>
           </a>
         </div>

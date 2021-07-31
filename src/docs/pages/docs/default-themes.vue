@@ -1,10 +1,10 @@
 <template>
   <div>
 
-    <div class="tabs mb-10">
-      <NuxtLink to="/docs/default-themes" class="tab tab-lifted tab-lg tab-active"><Icon glyph="color-swatch" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Use themes</NuxtLink>
-      <NuxtLink to="/docs/add-themes" class="tab tab-lifted tab-lg"><Icon glyph="document-add" class="inline-block w-4 h-4 lg:w-6 w-4 h-4 lg:h-6 mr-2 stroke-current" />Add theme</NuxtLink>
-      <span class="tab tab-lifted tab-lg flex-grow cursor-default hidden md:block"></span>
+    <div class="mb-10 tabs">
+      <NuxtLink to="/docs/default-themes" class="tab tab-lifted tab-lg tab-active"><Icon glyph="color-swatch" class="inline-block w-4 h-4 mr-2 stroke-current lg:w-6 lg:h-6" />Use themes</NuxtLink>
+      <NuxtLink to="/docs/add-themes" class="tab tab-lifted tab-lg"><Icon glyph="document-add" class="inline-block w-4 h-4 mr-2 stroke-current lg:w-6 lg:h-6" />Add theme</NuxtLink>
+      <span class="flex-grow hidden cursor-default tab tab-lifted tab-lg md:block"></span>
     </div>
 
     <h2 class="my-6 text-5xl font-bold">
@@ -13,7 +13,7 @@
 
 
 
-    <h2 class="mb-6 mt-20 text-3xl font-bold">
+    <h2 class="mt-20 mb-6 text-3xl font-bold">
       <span>
         How to use a theme?
       </span>
@@ -29,7 +29,7 @@
 
     <div class="w-full max-w-4xl my-2">
       <div class="shadow-lg mockup-code">
-        <pre><code><span class="text-neutral-content text-opacity-50">&lt;html</span> data-theme="cupcake"<span class="text-neutral-content text-opacity-50">&gt;</span></code></pre>
+        <pre><code><span class="text-opacity-50 text-neutral-content">&lt;html</span> data-theme="cupcake"<span class="text-opacity-50 text-neutral-content">&gt;</span></code></pre>
       </div>
     </div>
 
@@ -75,7 +75,7 @@
     </p>
 
 
-    <h2 class="mb-6 mt-20 text-3xl font-bold">
+    <h2 class="mt-20 mb-6 text-3xl font-bold">
       <span>
         If you're not using Tailwind JIT
         <a target="_blank" class="text-info" href="https://tailwindcss.com/docs/just-in-time-mode">
@@ -105,7 +105,7 @@
     </div>
 
 
-    <h2 class="mb-6 mt-20 text-3xl font-bold">
+    <h2 class="mt-20 mb-6 text-3xl font-bold">
       <span>How to disable themes</span>
     </h2>
 
@@ -128,7 +128,7 @@
     </div>
 
 
-    <h2 class="mb-6 mt-20 text-3xl font-bold">
+    <h2 class="mt-20 mb-6 text-3xl font-bold">
       <span>How to use a theme only for a section of page?</span>
     </h2>
 
@@ -189,12 +189,23 @@
   </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        DAISYUI_VERSION: process.env.DAISYUI_VERSION,
-      }
+export default {
+  data() {
+    return {
+      DAISYUI_VERSION: process.env.DAISYUI_VERSION,
+    }
+  },
+  head() {
+    return {
+      title: "daisyUI — Use Themes",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS multiple themes - Tailwind CSS dark mode'
+        }
+      ]
     }
   }
-
+}
 </script>

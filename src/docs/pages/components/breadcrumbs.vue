@@ -49,3 +49,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS breadcrumbs component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS breadcrumbs component - Tailwind CSS breadcrumbs examples'
+        }
+      ]
+    }
+  }
+}
+</script>

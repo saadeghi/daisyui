@@ -17,7 +17,7 @@
     }"/>
 
     <Wrapper title="steps">
-        <ul class="steps w-full">
+        <ul class="w-full steps">
           <li class="step step-primary">Register</li>
           <li class="step step-primary">Choose plan</li>
           <li class="step">Purchase</li>
@@ -27,7 +27,7 @@
 
 
     <Wrapper title="steps">
-        <ul class="steps w-full">
+        <ul class="w-full steps">
           <li class="step step-info">Fly to moon</li>
           <li class="step step-info">Shrink the moon</li>
           <li class="step step-info">Grab the moon</li>
@@ -38,7 +38,7 @@
 
 
     <Wrapper title="with data-content">
-        <ul class="steps w-full">
+        <ul class="w-full steps">
           <li class="step step-neutral" data-content="?">Step 1</li>
           <li class="step step-neutral" data-content="!">Step 2</li>
           <li class="step step-neutral" data-content="✓">Step 3</li>
@@ -54,7 +54,7 @@
 
     <Wrapper title="steps with scrollable container">
       <div class="overflow-x-auto">
-        <ul class="steps w-full">
+        <ul class="w-full steps">
           <li class="step">start</li>
           <li class="step step-secondary">2</li>
           <li class="step step-secondary">3</li>
@@ -87,3 +87,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS steps component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS steps component - Tailwind CSS steps examples'
+        }
+      ]
+    }
+  }
+}
+</script>

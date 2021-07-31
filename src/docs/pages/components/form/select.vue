@@ -161,3 +161,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS select menu component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS select menu component - Tailwind CSS select option examples'
+        }
+      ]
+    }
+  }
+}
+</script>

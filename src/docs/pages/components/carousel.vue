@@ -243,3 +243,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS carousel component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS carousel component - Tailwind CSS carousel examples'
+        }
+      ]
+    }
+  }
+}
+</script>

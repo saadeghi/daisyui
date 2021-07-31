@@ -157,3 +157,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS textarea component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS textarea component - Tailwind CSS textarea examples'
+        }
+      ]
+    }
+  }
+}
+</script>

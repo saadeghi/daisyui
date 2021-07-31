@@ -12,7 +12,7 @@ function getFiles(path, format = 'css') {
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'DaisyUI - Tailwind CSS Components',
+    title: 'daisyUI — Tailwind CSS Components',
     htmlAttrs: {
       lang: 'en',
       'data-theme': 'light'
@@ -27,7 +27,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Tailwind CSS Components plugin - daisyui tailwind component library'
+        content: 'Tailwind CSS Components plugin — daisyUI tailwind component library'
       },
       {
         property: "og:site_name",
@@ -51,7 +51,7 @@ export default {
       {
         hid: "og:description",
         property: "og:description",
-        content: "Tailwind CSS Components plugin - daisyui tailwind component library",
+        content: "Tailwind CSS Components plugin — daisyUI tailwind component library",
       },
       {
         hid: "og:image",
@@ -88,7 +88,7 @@ export default {
       {
         hid: "twitter:description",
         name: "twitter:description",
-        content: "Tailwind CSS Components plugin - daisyui tailwind component library",
+        content: "Tailwind CSS Components plugin — daisyUI tailwind component library",
       },
       {
         hid: "twitter:image",

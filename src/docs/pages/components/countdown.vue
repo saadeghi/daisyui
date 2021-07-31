@@ -152,6 +152,18 @@ export default {
       },
       immediate: true // This ensures the watcher is triggered upon creation
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS countdown component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS countdown component - Tailwind CSS countdown examples'
+        }
+      ]
+    }
   }
-};
+}
 </script>

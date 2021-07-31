@@ -12,7 +12,7 @@
     }"/>
 
     <Wrapper title="single stat">
-      <div class="stats shadow">
+      <div class="shadow stats">
         <div class="stat">
           <div class="stat-title">Total Page Views</div>
           <div class="stat-value">89,400</div>
@@ -22,7 +22,7 @@
     </Wrapper>
 
     <Wrapper title="with figure">
-      <div class="stats shadow w-full">
+      <div class="w-full shadow stats">
         <div class="stat">
           <div class="stat-figure text-primary">
             <Icon glyph="heart" class="inline-block w-8 h-8 stroke-current" />
@@ -55,7 +55,7 @@
     </Wrapper>
 
     <Wrapper title="stats row">
-      <div class="stats shadow w-full">
+      <div class="w-full shadow stats">
         <div class="stat">
           <div class="stat-figure text-secondary">
             <Icon glyph="info" class="inline-block w-8 h-8 stroke-current" />
@@ -84,7 +84,7 @@
     </Wrapper>
 
     <Wrapper title="stats row items-center">
-      <div class="stats shadow w-full">
+      <div class="w-full shadow stats">
         <div class="stat place-items-center place-content-center">
           <div class="stat-title">Downloads</div>
           <div class="stat-value">310M</div>
@@ -104,7 +104,7 @@
     </Wrapper>
 
     <Wrapper title="stats grid-flow-row">
-      <div class="stats grid-flow-row shadow">
+      <div class="grid-flow-row shadow stats">
         <div class="stat">
           <div class="stat-title">Downloads</div>
           <div class="stat-value">310M</div>
@@ -124,7 +124,7 @@
     </Wrapper>
 
     <Wrapper title="with buttons, colors and more">
-      <div class="stats border border-base-300">
+      <div class="border stats border-base-300">
         <div class="stat">
           <div class="stat-title">Account balance</div>
           <div class="stat-value">$89,400</div>
@@ -141,7 +141,7 @@
           </div>
         </div>
       </div>
-      <div class="stats w-full border border-base-300 mt-2">
+      <div class="w-full mt-2 border stats border-base-300">
         <div class="stat">
           <div class="stat-figure text-primary">
             <button class="btn loading btn-circle btn-lg bg-base-200 btn-ghost"></button>
@@ -157,3 +157,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS stats component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS stats component - Tailwind CSS stats examples'
+        }
+      ]
+    }
+  }
+}
+</script>

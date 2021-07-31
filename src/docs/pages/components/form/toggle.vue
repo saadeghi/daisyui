@@ -82,3 +82,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS toggle component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS switch toggle component - Tailwind CSS switch toggle examples'
+        }
+      ]
+    }
+  }
+}
+</script>

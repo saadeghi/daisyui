@@ -48,6 +48,18 @@ export default {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — BassCSS components",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'BassCSS component - BassCSS components example'
+        }
+      ]
+    }
   }
 }
 </script>

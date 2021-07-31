@@ -123,3 +123,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS badge component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS badge component - Tailwind CSS badge examples'
+        }
+      ]
+    }
+  }
+}
+</script>

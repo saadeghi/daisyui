@@ -24,7 +24,7 @@
     </Wrapper>
 
     <Wrapper title="avatar-group" classes="flex items-center space-x-8 flex-wrap">
-      <div class="avatar-group -space-x-6">
+      <div class="-space-x-6 avatar-group">
         <Avatar classes="w-16 h-16">
           <img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png">
         </Avatar>
@@ -41,7 +41,7 @@
     </Wrapper>
 
     <Wrapper title="avatar-group" classes="flex items-center space-x-8 flex-wrap">
-      <div class="avatar-group -space-x-5">
+      <div class="-space-x-5 avatar-group">
         <Avatar classes="w-10 h-10">
           <img src="http://daisyui.com/tailwind-css-component-profile-1@40w.png">
         </Avatar>
@@ -55,7 +55,7 @@
           <img src="http://daisyui.com/tailwind-css-component-profile-5@40w.png">
         </Avatar>
         <div class="avatar placeholder">
-          <div class="bg-neutral-focus text-neutral-content rounded-full w-10 h-10">
+          <div class="w-10 h-10 rounded-full bg-neutral-focus text-neutral-content">
             <span>+99</span>
           </div>
         </div>
@@ -149,3 +149,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS avatar component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS avatar component - Tailwind CSS avatar examples'
+        }
+      ]
+    }
+  }
+}
+</script>

@@ -107,6 +107,18 @@ export default {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — Customize components",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'How to customize daisyUI Tailwind CSS components'
+        }
+      ]
+    }
   }
 }
 </script>

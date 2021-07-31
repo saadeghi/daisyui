@@ -53,3 +53,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — How to use",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'How to use daisyUI component classes in Tailwind CSS?'
+        }
+      ]
+    }
+  }
+}
+</script>

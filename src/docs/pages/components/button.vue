@@ -247,3 +247,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS button component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS button component - Tailwind CSS button examples'
+        }
+      ]
+    }
+  }
+}
+</script>

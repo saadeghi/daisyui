@@ -88,6 +88,18 @@ export default {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — What's included",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Tailwind CSS daisyUI plugin what's included"
+        }
+      ]
+    }
   }
 }
 </script>

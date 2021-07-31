@@ -35,3 +35,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS link component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS link component - Tailwind CSS link examples'
+        }
+      ]
+    }
+  }
+}
+</script>

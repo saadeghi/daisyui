@@ -58,6 +58,18 @@ export default {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — Install Tailwind CSS plugin",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS plugin for components - daisyUI'
+        }
+      ]
+    }
   }
 }
 </script>

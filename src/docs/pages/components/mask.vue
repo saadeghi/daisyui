@@ -85,3 +85,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS mask component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS image mask component - Tailwind CSS image mask examples'
+        }
+      ]
+    }
+  }
+}
+</script>

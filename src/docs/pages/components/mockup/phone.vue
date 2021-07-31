@@ -27,3 +27,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS iPhone mockup component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS iPhone mockup component - Tailwind CSS iPhone mockup examples'
+        }
+      ]
+    }
+  }
+}
+</script>

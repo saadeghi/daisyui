@@ -21,3 +21,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS window component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS window component - Tailwind CSS window examples'
+        }
+      ]
+    }
+  }
+}
+</script>

@@ -88,3 +88,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS progress bar component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS progress bar component - Tailwind CSS progress bar examples'
+        }
+      ]
+    }
+  }
+}
+</script>

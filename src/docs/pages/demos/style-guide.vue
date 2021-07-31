@@ -167,3 +167,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Style guide demo",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS fonts and colors sample'
+        }
+      ]
+    }
+  }
+}
+</script>

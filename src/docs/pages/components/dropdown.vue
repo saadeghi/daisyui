@@ -168,3 +168,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS dropdown component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS dropdown component - Tailwind CSS dropdown examples'
+        }
+      ]
+    }
+  }
+}
+</script>

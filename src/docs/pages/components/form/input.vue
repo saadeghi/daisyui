@@ -250,7 +250,7 @@
             type="text"
             placeholder="Search"
           />
-          <button class="absolute right-0 top-0 rounded-l-none btn btn-primary">go</button>
+          <button class="absolute top-0 right-0 rounded-l-none btn btn-primary">go</button>
         </div>
       </FormControl>
       <FormControl>
@@ -269,3 +269,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS text input field component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS text input field component - Tailwind CSS text input field examples'
+        }
+      ]
+    }
+  }
+}
+</script>

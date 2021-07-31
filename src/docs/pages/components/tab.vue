@@ -75,3 +75,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS tab component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS tab component - Tailwind CSS tab examples'
+        }
+      ]
+    }
+  }
+}
+</script>

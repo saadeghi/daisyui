@@ -90,3 +90,21 @@
 
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS button group component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS button group component - Tailwind CSS button group examples'
+        }
+      ]
+    }
+  }
+}
+</script>

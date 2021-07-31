@@ -91,12 +91,23 @@
   </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        DAISYUI_VERSION: process.env.DAISYUI_VERSION,
-      }
+export default {
+  data() {
+    return {
+      DAISYUI_VERSION: process.env.DAISYUI_VERSION,
+    }
+  },
+  head() {
+    return {
+      title: "daisyUI — Add Themes",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'How to create new daisyUI theme? How to add new custom theme to daisyUI'
+        }
+      ]
     }
   }
-
+}
 </script>

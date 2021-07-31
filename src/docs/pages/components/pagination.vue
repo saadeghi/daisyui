@@ -46,3 +46,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS pagination component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS pagination component - Tailwind CSS pagination examples'
+        }
+      ]
+    }
+  }
+}
+</script>

@@ -41,3 +41,21 @@
     </Wrapper>
   </div>
 </template>
+
+
+<script>
+export default {
+  head() {
+    return {
+      title: "daisyUI — Tailwind CSS code section component",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tailwind CSS code section component - Tailwind CSS code section examples'
+        }
+      ]
+    }
+  }
+}
+</script>

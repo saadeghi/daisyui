@@ -46,6 +46,18 @@ export default {
     return {
       DAISYUI_VERSION: process.env.DAISYUI_VERSION,
     }
+  },
+  head() {
+    return {
+      title: "daisyUI — Use CDN file",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Use Tailwind CSS and daisyUI from CDN'
+        }
+      ]
+    }
   }
 }
 </script>
