@@ -1,0 +1,6 @@
+.kbd{
+  @apply border border-neutral-focus px-2 rounded-btn border-opacity-20 bg-base-200;
+  border-bottom-width: 2px;
+  min-height: 2.2em;
+  min-width: 2.2em;
+}

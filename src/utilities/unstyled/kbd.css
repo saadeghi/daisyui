@@ -1,0 +1,22 @@
+.kbd{
+  &-xs {
+    @apply text-xs px-1;
+    min-height: 1.2em;
+    min-width: 1.2em;
+  }
+  &-sm {
+    @apply text-sm px-1;
+    min-height: 1.6em;
+    min-width: 1.6em;
+  }
+  &-md {
+    @apply text-base px-2;
+    min-height: 2.2em;
+    min-width: 2.2em;
+  }
+  &-lg {
+    @apply text-lg px-4;
+    min-height: 2.5em;
+    min-width: 2.5em;
+  }
+}
