@@ -20,7 +20,7 @@
       <kbd class="kbd kbd-sm">Shift</kbd>
       <kbd class="kbd kbd-xs">Shift</kbd>
     </Wrapper>
-    <Wrapper title="kbd">
+    <Wrapper title="key combination">
       <kbd class="kbd">ctrl</kbd>
       +
       <kbd class="kbd">shift</kbd>
