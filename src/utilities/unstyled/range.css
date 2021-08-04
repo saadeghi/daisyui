@@ -1,0 +1,62 @@
+.range{
+  &-xs {
+    @apply h-3;
+    &::-webkit-slider-runnable-track {
+      @apply h-1;
+    }
+    &::-moz-range-track {
+      @apply h-1;
+    }
+    &::-webkit-slider-thumb {
+      @apply w-3 h-3;
+    }
+    &::-moz-range-thumb {
+      @apply w-3 h-3;
+    }
+  }
+  &-sm {
+    @apply h-4;
+    &::-webkit-slider-runnable-track {
+      @apply h-1;
+    }
+    &::-moz-range-track {
+      @apply h-1;
+    }
+    &::-webkit-slider-thumb {
+      @apply w-4 h-4;
+    }
+    &::-moz-range-thumb {
+      @apply w-4 h-4;
+    }
+  }
+  &-md {
+    @apply h-5;
+    &::-webkit-slider-runnable-track {
+      @apply h-2;
+    }
+    &::-moz-range-track {
+      @apply h-2;
+    }
+    &::-webkit-slider-thumb {
+      @apply w-5 h-5;
+    }
+    &::-moz-range-thumb {
+      @apply w-5 h-5;
+    }
+  }
+  &-lg {
+    @apply h-8;
+    &::-webkit-slider-runnable-track {
+      @apply h-4;
+    }
+    &::-moz-range-track {
+      @apply h-4;
+    }
+    &::-webkit-slider-thumb {
+      @apply w-8 h-8;
+    }
+    &::-moz-range-thumb {
+      @apply w-8 h-8;
+    }
+  }
+}
