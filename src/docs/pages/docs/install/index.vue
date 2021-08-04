@@ -54,11 +54,6 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      DAISYUI_VERSION: process.env.DAISYUI_VERSION,
-    }
-  },
   head() {
     return {
       title: "daisyUI — Install Tailwind CSS plugin",

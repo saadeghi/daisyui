@@ -50,12 +50,8 @@
 </template>
 
 <script>
-import { themeChange } from "theme-change";
 
 export default {
   layout: "landing",
-  mounted() {
-    themeChange(false);
-  }
 };
 </script>

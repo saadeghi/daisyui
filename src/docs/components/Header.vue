@@ -5,7 +5,7 @@
       'border-base-200 bg-base-100 text-base-content': !isHomepage || toggleNavClass(),
       'sticky': !isHomepage,
     }"
-    class="inset-x-0 top-0 z-50 w-full border-b transition duration-200 ease-in-out"
+    class="inset-x-0 top-0 z-50 w-full transition duration-200 ease-in-out border-b"
   >
     <div class="mx-auto space-x-1 navbar max-w-none">
       <div class="flex-none">
@@ -182,6 +182,6 @@ export default {
         this.scrolled = false;
       }
     }
-  }
+  },
 };
 </script>

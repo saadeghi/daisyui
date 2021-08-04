@@ -14,8 +14,7 @@ export default {
   head: {
     title: 'daisyUI — Tailwind CSS Components',
     htmlAttrs: {
-      lang: 'en',
-      'data-theme': 'light'
+      lang: 'en'
     },
     meta: [{
         charset: 'utf-8'
