@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/saadeghi/daisyui/compare/v1.10.0...v1.11.0) (2021-08-04)
+
+
+### Features
+
+* add input `range` component ([2978956](https://github.com/saadeghi/daisyui/commit/297895648e6f4566e9ac3bf420c826eeead0355e))
+* add kbd component ([8265249](https://github.com/saadeghi/daisyui/commit/8265249127de86bc4d496d2def0990079952219d))
+
 ## [1.10.0](https://github.com/saadeghi/daisyui/compare/v1.9.0...v1.10.0) (2021-07-18)
 
 
