@@ -149,8 +149,9 @@ export default {
       demoPages: [],
       showMainMenu: false,
       newComponents: [
-        'table',
         'indicator',
+        'kbd',
+        'form-range',
       ],
       updatedComponents: [
         'navbar',
