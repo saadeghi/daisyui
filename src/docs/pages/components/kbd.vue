@@ -82,12 +82,12 @@
 export default {
   head() {
     return {
-      title: "daisyUI — Tailwind CSS link component",
+      title: "daisyUI — Tailwind CSS Kbd component",
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Tailwind CSS link component - Tailwind CSS link examples'
+          content: 'Tailwind CSS kbd component - Tailwind CSS kbd example'
         }
       ]
     }
