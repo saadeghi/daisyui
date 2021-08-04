@@ -1,6 +1,6 @@
 <template>
   <div class="py-2">
-    <div class="pt-4 text-xs capitalize opacity-60">
+    <div class="pt-4 text-xs opacity-60">
       {{ title }}
     </div>
     <div class="mt-2 text-xs tabs" v-if="!nocode">
