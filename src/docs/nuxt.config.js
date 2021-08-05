@@ -10,6 +10,12 @@ function getFiles(path, format = 'css') {
 }
 
 export default {
+  gtm: {
+    id: 'GTM-WJ8HL28',
+    enabled: process.env.NODE_ENV === 'production' ? true : false,
+    pageTracking: true,
+    scriptDefer: true,
+  },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'daisyUI — Tailwind CSS Components',
@@ -162,7 +168,9 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: [
+    '@nuxtjs/gtm',
+  ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
