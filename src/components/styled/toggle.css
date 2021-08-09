@@ -4,7 +4,7 @@
   --handleoffset: 1.5rem;
   @apply appearance-none w-12 h-6 rounded-badge border border-base-content border-opacity-20 cursor-pointer ease-in-out duration-300 bg-base-content bg-opacity-20;
   transition: background,box-shadow var(--animation-input, .2s) ease-in-out;
-  box-shadow: calc( -1 * var(--handleoffset) ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+  box-shadow: calc( var(--handleoffset) * -1 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
   &:focus-visible {
     --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
   }
@@ -12,6 +12,9 @@
     --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
     box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    [dir=rtl] &{
+      box-shadow: calc( var(--handleoffset) * 1 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    }
   }
   &-primary{
     &:focus-visible {
