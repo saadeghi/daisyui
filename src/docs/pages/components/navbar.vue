@@ -5,7 +5,7 @@
         { class: 'navbar', desc: 'Container element' },
         { class: 'navbar-start', desc: 'Child element, fills 50% of width to be on start' },
         { class: 'navbar-center', desc: 'Child element, fills remaining space to be on center' },
-        { class: 'navbar-end', desc: 'Child element, fills 50% of width to be on en' },
+        { class: 'navbar-end', desc: 'Child element, fills 50% of width to be on end' },
       ]
     }"/>
     <Wrapper title="navbar" classes="flex flex-col space-y-2">
