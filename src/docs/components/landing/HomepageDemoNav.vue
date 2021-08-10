@@ -19,7 +19,7 @@
     </div>
     <div class="flex-1 hidden md:flex md:flex-none">
       <div class="form-control">
-        <PromoDropdown title="text input" desc="Text input comes in varius sizes and styles" link="components/form/input">
+        <PromoDropdown title="text input" desc="Text input comes in various sizes and styles" link="components/form/input">
           <input type="text" placeholder="Text Input" class="rounded-full input input-ghost placeholder-primary-content text-primary-content focus:text-primary-content input-bordered focus:bg-transparent">
         </PromoDropdown>
       </div>
