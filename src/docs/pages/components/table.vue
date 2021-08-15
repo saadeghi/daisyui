@@ -8,6 +8,7 @@
         { class: 'table-zebra', desc: 'For the active tab' },
         { class: 'table-compact', desc: 'Make table more compact' },
         { class: 'active', desc: 'For <tr> to highlight current row' },
+        { class: 'hover', desc: 'For <tr> to highlight current row on hover' },
       ]
     }"/>
 
@@ -48,6 +49,29 @@
           </thead>
           <tbody>
             <tr v-for="(item, index) in tableData.slice(4, 8)" :key="`item-${index}`" v-bind:class="{'active': index == 2}">
+              <th>{{ item.id }}</th>
+              <td>{{ item.name }}</td>
+              <td>{{ item.job }}</td>
+              <td>{{ item.color }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Wrapper>
+
+    <Wrapper title="table with hover row">
+      <div class="overflow-x-auto">
+        <table class="table w-full">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in tableData.slice(4, 8)" :key="`item-${index}`" v-bind:class="{'hover': index == 2}">
               <th>{{ item.id }}</th>
               <td>{{ item.name }}</td>
               <td>{{ item.job }}</td>

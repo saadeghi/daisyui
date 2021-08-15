@@ -3,7 +3,14 @@
   th,td{
     @apply p-4 whitespace-nowrap;
   }
-  tr.active{
+  tr.active,
+  tr.active:nth-child(even){
+    th,td{
+      @apply bg-base-300;
+    }
+  }
+  tr.hover:hover,
+  tr.hover:nth-child(even):hover{
     th,td{
       @apply bg-base-300;
     }
@@ -36,14 +43,20 @@
       @apply bg-base-100;
     }
   }
-  &-zebra tbody tr:nth-child(even){
-    th,td{
-      @apply bg-base-200;
-      &:first-child{
-        @apply rounded-l-lg;
+  &-zebra tbody{
+    tr{
+      th,td{
+        &:first-child{
+          @apply rounded-l-lg;
+        }
+        &:last-child{
+          @apply rounded-r-lg;
+        }
       }
-      &:last-child{
-        @apply rounded-r-lg;
+    }
+    tr:nth-child(even){
+      th,td{
+        @apply bg-base-200;
       }
     }
   }
