@@ -102,7 +102,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(item, index) in tableData.slice(12, 16)" :key="`item-${index}`">
+            <tr v-for="(item, index) in tableData.slice(1, 5)" :key="`item-${index}`">
               <th>
                 <label>
                   <input type="checkbox" class="checkbox">
