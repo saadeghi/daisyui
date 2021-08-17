@@ -3,7 +3,7 @@
     <div class="w-full max-w-6xl py-20 text-center hero-content">
       <div>
         <div class="inline-block mb-10 text-3xl font-title text-neutral-content">
-          <span class="text-primary">daisy</span>UI
+          daisyUI
         </div>
 
         <div class="mb-10 text-center">
