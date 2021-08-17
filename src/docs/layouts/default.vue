@@ -152,14 +152,9 @@ export default {
         'indicator',
         'kbd',
         'form-range',
+        'stack',
       ],
       updatedComponents: [
-        'navbar',
-        'divider',
-        'badge',
-        'form-checkbox',
-        'form-toggle',
-        'form-radio',
       ],
     }
   },
