@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/saadeghi/daisyui/compare/v1.11.1...v1.12.0) (2021-08-17)
+
+
+### Features
+
+* add `stack` component ([de727ac](https://github.com/saadeghi/daisyui/commit/de727acdd4cba20c4886eee07eba863667f6c9c6))
+
+
+### Bug Fixes
+
+* [#132](https://github.com/saadeghi/daisyui/issues/132) ([f08879b](https://github.com/saadeghi/daisyui/commit/f08879b5171b1cd61af2cebed15a02f1b873482e))
+* [#134](https://github.com/saadeghi/daisyui/issues/134) ([ae4f2a1](https://github.com/saadeghi/daisyui/commit/ae4f2a1d9e2e957ff683feb49d7fe7f0cd0ed312))
+
 ### [1.11.1](https://github.com/saadeghi/daisyui/compare/v1.11.0...v1.11.1) (2021-08-09)
 
 
