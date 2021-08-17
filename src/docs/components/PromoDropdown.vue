@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown dropdown-hover" :class="classes">
+  <div class="dropdown" :class="classes">
     <div tabindex="0">
       <slot></slot>
     </div>
