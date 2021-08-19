@@ -26,6 +26,11 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 ---
 
 ## 🌼 Features   
+<details>
+<summary>
+  show / hide
+</summary>
+
 - **Tailwind CSS plugin**  
   DaisyUI is a Tailwind CSS plugin. Install it, add it to your `tailwind.config.js` file.
 - **Component classes**  
@@ -40,6 +45,8 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
   Enable `rtl` config for right to left layouts.
 - **Pure CSS**  
   No script file, no dependencies. 2KB gzip!
+
+</details>
 
 ---
 
@@ -80,17 +87,20 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 
 ---
 ## 🚀 Use  
-Use component classes like `btn`, `card`, etc… to build your UI.  
+Use component classes to build your UI.  
 ```html
 <a class="btn">Hello!</a>
 ```
 ```html
-<div class="shadow card">
-  <div class="card-body">
-    <h2 class="card-title">Card Title</h2> 
-    <p>Card text</p>
-  </div>
-</div> 
+<input type="checkbox" class="checkbox">
+```
+```html
+<input type="checkbox" class="toggle">
+```
+```html
+<div class="alert alert-success">
+  Message sent successfully 
+</div>
 ```
 
 👉 [See all components][docs-url]  
@@ -99,12 +109,20 @@ Use component classes like `btn`, `card`, etc… to build your UI.
 ---
 
 ## 📘 Documents + Examples  
-Read the documents for more info:  
+See the official site:  
 [ [daisyui.com][docs-url] ↗︎ ]
 
+---
+
+## 🤝 Contributing  
+Read the documents for more info:  
+[ [Read contribution guide](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md) ]
+
+---
+## List of Components
 <details>
 <summary>
-  List of components
+  show / hide
 </summary>
 
 - [x] Alert
