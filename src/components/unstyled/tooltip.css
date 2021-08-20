@@ -4,6 +4,7 @@
 }
 .tooltip:before{
   @apply absolute;
+  pointer-events: none;
 }
 .tooltip:before{
   content: attr(data-tip);
