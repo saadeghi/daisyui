@@ -53,4 +53,21 @@
       }
     }
   }
+  .drawer-mobile.drawer-end{
+    grid-auto-columns: auto max-content;
+    &>.drawer-toggle{
+      & ~ .drawer-content{
+        @apply lg:col-start-1 h-auto;
+      }
+      & ~ .drawer-side{
+        @apply lg:col-start-2 overflow-y-auto;
+        &>.drawer-overlay{
+          @apply lg:visible;
+        }
+        &>.drawer-overlay + *{
+          @apply lg:translate-x-0;
+        }
+      }
+    }
+  }
 }
