@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.1](https://github.com/saadeghi/daisyui/compare/v1.12.0...v1.12.1) (2021-08-20)
+
+
+### Bug Fixes
+
+* [#142](https://github.com/saadeghi/daisyui/issues/142) `.drawer-mobile` and `.drawer-end` compatibility ([7a4463b](https://github.com/saadeghi/daisyui/commit/7a4463b3fc43e59171f6710c52279caecd93923d))
+* [#143](https://github.com/saadeghi/daisyui/issues/143) Tooltip hover bug ([a9f730b](https://github.com/saadeghi/daisyui/commit/a9f730be710b191ad947769353949f74a839b272))
+
 ## [1.12.0](https://github.com/saadeghi/daisyui/compare/v1.11.1...v1.12.0) (2021-08-17)
 
 
