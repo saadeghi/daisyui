@@ -1,0 +1,12 @@
+.footer{
+  @apply grid grid-flow-row md:grid-flow-col place-items-start;
+  &>*{
+    @apply grid grid-flow-row place-items-start;
+  }
+  &-center{
+    @apply text-center place-items-center md:grid-flow-row-dense;
+    &>*{
+      @apply place-items-center;
+    }
+  }
+}
