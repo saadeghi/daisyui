@@ -77,7 +77,7 @@
         </tr>
         <tr>
           <th>Components</th>
-          <td class="text-success">39</td>
+          <td class="text-success">40</td>
           <td class="text-error">25</td>
         </tr>
       </tbody>

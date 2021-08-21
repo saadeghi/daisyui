@@ -153,6 +153,7 @@ export default {
         'kbd',
         'form-range',
         'stack',
+        'footer',
       ],
       updatedComponents: [
       ],

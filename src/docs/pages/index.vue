@@ -13,7 +13,7 @@
       <div class="flex justify-center w-full -mt-56">
         <div class="stats">
           <NuxtLink class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" to="/components/button">
-            <div class="stat-value">39</div>
+            <div class="stat-value">40</div>
             <div class="stat-desc">Components</div>
           </NuxtLink>
           <NuxtLink class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" to="/docs/default-themes">
