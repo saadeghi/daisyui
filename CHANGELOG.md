@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/saadeghi/daisyui/compare/v1.12.1...v1.13.0) (2021-08-21)
+
+
+### Features
+
+* add `footer` component ([8227925](https://github.com/saadeghi/daisyui/commit/8227925041a6a4ed434e48db0805c33443beba2c))
+* add `modal-open` utility class ([#124](https://github.com/saadeghi/daisyui/issues/124)) ([9ce82f3](https://github.com/saadeghi/daisyui/commit/9ce82f356494bd0988dfd9b769f24ad419ea1120))
+
 ### [1.12.1](https://github.com/saadeghi/daisyui/compare/v1.12.0...v1.12.1) (2021-08-20)
 
 
