@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/compare/Bootstrap-alternative", {data:[{}],fetch:{},mutations:void 0});
