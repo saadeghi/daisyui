@@ -9,11 +9,11 @@
         { class: 'modal-button', desc: 'For <label> that checks the checkbox to opens/closes modal' },
       ],
       utilities : [
-        { class: 'compact', desc: 'Makes menu more compact' },
+        { class: 'modal-open', desc: 'Add/remove this class to open/close the modal using JS' },
       ]
     }"/>
 
-    <Wrapper title="modal using URL hash">
+    <Wrapper title="modal using URL hash (anchor link)">
       <a class="btn btn-primary" :href="`/components/modal#my-modal`" v-scroll-to="{el: '#my-modal'}">open modal</a>
       <div class="modal" id="my-modal">
         <div class="modal-box">
@@ -26,7 +26,7 @@
       </div>
     </Wrapper>
 
-    <Wrapper title="modal without URL hash (using a hidden checkbox)">
+    <Wrapper title="modal using a hidden checkbox">
       <label class="btn btn-primary modal-button" for="my-modal-2">open modal</label>
       <input type="checkbox" id="my-modal-2" class="modal-toggle" />
       <div class="modal">
