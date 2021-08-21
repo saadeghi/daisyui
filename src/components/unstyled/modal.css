@@ -2,6 +2,7 @@
   @apply inset-0 invisible opacity-0 pointer-events-none fixed flex items-end justify-center sm:items-center;
   z-index: 999;
 }
+.modal-open,
 .modal:target,
 .modal-toggle:checked ~ .modal{
   @apply visible opacity-100 pointer-events-auto;

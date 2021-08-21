@@ -5,6 +5,7 @@
   @apply transform translate-y-10 sm:translate-y-0 sm:scale-90 transition duration-200 ease-in-out rounded-t-box sm:rounded-b-box bg-base-100 sm:max-w-lg p-6 w-full;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
 }
+.modal-open .modal-box,
 .modal-toggle:checked ~ .modal .modal-box,
 .modal:target .modal-box{
   @apply translate-y-0 scale-100;
