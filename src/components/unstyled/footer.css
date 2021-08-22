@@ -1,12 +1,20 @@
 .footer{
-  @apply grid grid-flow-row md:grid-flow-col place-items-start;
+  @apply grid grid-flow-row place-items-start;
   &>*{
     @apply grid grid-flow-row place-items-start;
   }
   &-center{
-    @apply text-center place-items-center md:grid-flow-row-dense;
+    @apply text-center place-items-center;
     &>*{
       @apply place-items-center;
     }
+  }
+}
+@media (min-width:768px) {
+  .footer {
+    grid-auto-flow:column;
+  }
+  .footer-center{
+    grid-auto-flow:row dense;
   }
 }
