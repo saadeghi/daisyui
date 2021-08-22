@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](https://github.com/saadeghi/daisyui/compare/v1.13.0...v1.13.1) (2021-08-22)
+
+
+### Bug Fixes
+
+* [#145](https://github.com/saadeghi/daisyui/issues/145) footer responsive bug ([8b4f1c0](https://github.com/saadeghi/daisyui/commit/8b4f1c00205867c9764916386f487fb5ae3c00a1))
+
 ## [1.13.0](https://github.com/saadeghi/daisyui/compare/v1.12.1...v1.13.0) (2021-08-21)
 
 
