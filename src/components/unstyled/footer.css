@@ -10,7 +10,7 @@
     }
   }
 }
-@media (min-width:768px) {
+@media (min-width:48rem) {
   .footer {
     grid-auto-flow:column;
   }
