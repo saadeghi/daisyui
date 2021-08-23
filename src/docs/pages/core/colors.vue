@@ -57,8 +57,8 @@
                 <input
                   type='text'
                   :class="'w-full rounded bg-opacity-20 ' + color.class + ' outline-none'"
-                  v-model="colorValues[color.name]['hex']"
-                  v-on:input="hexToHsl(color.name); applyCustomThemeToSite = true; showCustomThemeTogglerSwitch = true; "
+                  :value="colorValues[color.name]['hex']"
+                  v-on:input="e => onInputColorHexChange(color.name, e.target.value)"
                 >
               </div>
               <div class="px-1 m-1 text-xs text-white bg-black rounded bg-opacity-20">
@@ -70,7 +70,7 @@
               :id="color.name"
               class="absolute top-0 invisible opacity-0"
               v-model="colorValues[color.name]['hex']"
-              v-on:change="hexToHsl(color.name); applyCustomThemeToSite = true; showCustomThemeTogglerSwitch = true; "
+              v-on:change="onColorChange(color.name)"
             >
           </div>
         </div>
@@ -573,6 +573,17 @@ export default {
     }
   },
   methods: {
+    onInputColorHexChange(name, val) {
+      this.colorValues[name]['hex'] = val.startsWith('#')
+        ? val
+        : '#' + val
+      this.onColorChange(name)
+    },
+    onColorChange(name) {
+      this.hexToHsl(name);
+      this.applyCustomThemeToSite = true;
+      this.showCustomThemeTogglerSwitch = true;
+    },
     hexToHsl: function(name) {
       let H = this.colorValues[name]['hex'];
       let ex = /^#([\da-f]{3}){1,2}$/i;
