@@ -56,7 +56,7 @@
               <div class="w-full px-1 text-sm text-white bg-black rounded bg-opacity-20">
                 <input
                   type='text'
-                  :class="'rounded bg-opacity-20 ' + color.class + ' outline-none'"
+                  :class="'w-full rounded bg-opacity-20 ' + color.class + ' outline-none'"
                   v-model="colorValues[color.name]['hex']"
                   v-on:input="hexToHsl(color.name); applyCustomThemeToSite = true; showCustomThemeTogglerSwitch = true; "
                 >
