@@ -574,9 +574,7 @@ export default {
   },
   methods: {
     onInputColorHexChange(name, val) {
-      this.colorValues[name]['hex'] = val.startsWith('#')
-        ? val
-        : '#' + val
+      this.colorValues[name]['hex'] = val.replace(/^#*/, '#')
       this.onColorChange(name)
     },
     onColorChange(name) {
