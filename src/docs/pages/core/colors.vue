@@ -370,7 +370,7 @@
 
       <div class="mt-6 text-sm shadow-lg mockup-code">
         <pre>
-  <code>bg-<span class="text-info">{COLOR_NAME}</span></span>
+  <code>bg-<span class="text-info">{COLOR_NAME}</span>
     text-<span class="text-info">{COLOR_NAME}</span>
     border-<span class="text-info">{COLOR_NAME}</span>
     from-<span class="text-info">{COLOR_NAME}</span>
