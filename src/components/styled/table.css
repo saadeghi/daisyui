@@ -1,7 +1,7 @@
 .table{
   @apply text-left;
   th,td{
-    @apply p-4 whitespace-nowrap;
+    @apply p-4 whitespace-nowrap align-middle;
   }
   tr.active,
   tr.active:nth-child(even){
