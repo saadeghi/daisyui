@@ -52,7 +52,15 @@
       <div class="grid rounded">
         <div class="flex flex-col col-start-1 row-start-1">
           <div v-for="(color, index) in colorGroup" class="relative col-start-1 row-start-1">
-            <label :class="'flex justify-start items-end w-full h-20 transform transition-all cursor-pointer shadow hover:shadow-lg hover:-translate-y-1 '+ color.class + ((index === 0) ? ' rounded-t ' : '') + ((index === colorGroup.length - 1) ? ' rounded-b ' : '')" :for="color.name">
+            <label :class="'flex flex-col justify-between items-start w-full h-20 transform transition-all cursor-pointer shadow hover:shadow-lg hover:-translate-y-1 '+ color.class + ((index === 0) ? ' rounded-t ' : '') + ((index === colorGroup.length - 1) ? ' rounded-b ' : '')" :for="color.name">
+              <div class="w-full px-1 text-sm text-white bg-black rounded bg-opacity-20">
+                <input
+                  type='text'
+                  :class="'rounded bg-opacity-20 ' + color.class + ' outline-none'"
+                  v-model="colorValues[color.name]['hex']"
+                  v-on:input="hexToHsl(color.name); applyCustomThemeToSite = true; showCustomThemeTogglerSwitch = true; "
+                >
+              </div>
               <div class="px-1 m-1 text-xs text-white bg-black rounded bg-opacity-20">
                 .bg-{{ color.title }}
               </div>
