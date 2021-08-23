@@ -52,7 +52,15 @@
       <div class="grid rounded">
         <div class="flex flex-col col-start-1 row-start-1">
           <div v-for="(color, index) in colorGroup" class="relative col-start-1 row-start-1">
-            <label :class="'flex justify-start items-end w-full h-20 transform transition-all cursor-pointer shadow hover:shadow-lg hover:-translate-y-1 '+ color.class + ((index === 0) ? ' rounded-t ' : '') + ((index === colorGroup.length - 1) ? ' rounded-b ' : '')" :for="color.name">
+            <label :class="'flex flex-col justify-between items-start w-full h-20 transform transition-all cursor-pointer shadow hover:shadow-lg hover:-translate-y-1 '+ color.class + ((index === 0) ? ' rounded-t ' : '') + ((index === colorGroup.length - 1) ? ' rounded-b ' : '')" :for="color.name">
+              <div class="w-full px-1 text-sm text-white bg-black rounded bg-opacity-20">
+                <input
+                  type='text'
+                  :class="'w-full rounded bg-opacity-20 ' + color.class + ' outline-none'"
+                  :value="colorValues[color.name]['hex']"
+                  v-on:input="e => onInputColorHexChange(color.name, e.target.value)"
+                >
+              </div>
               <div class="px-1 m-1 text-xs text-white bg-black rounded bg-opacity-20">
                 .bg-{{ color.title }}
               </div>
@@ -62,7 +70,7 @@
               :id="color.name"
               class="absolute top-0 invisible opacity-0"
               v-model="colorValues[color.name]['hex']"
-              v-on:change="hexToHsl(color.name); applyCustomThemeToSite = true; showCustomThemeTogglerSwitch = true; "
+              v-on:change="onColorChange(color.name)"
             >
           </div>
         </div>
@@ -370,7 +378,7 @@
 
       <div class="mt-6 text-sm shadow-lg mockup-code">
         <pre>
-  <code>bg-<span class="text-info">{COLOR_NAME}</span></span>
+  <code>bg-<span class="text-info">{COLOR_NAME}</span>
     text-<span class="text-info">{COLOR_NAME}</span>
     border-<span class="text-info">{COLOR_NAME}</span>
     from-<span class="text-info">{COLOR_NAME}</span>
@@ -565,6 +573,15 @@ export default {
     }
   },
   methods: {
+    onInputColorHexChange(name, val) {
+      this.colorValues[name]['hex'] = val.replace(/^#*/, '#')
+      this.onColorChange(name)
+    },
+    onColorChange(name) {
+      this.hexToHsl(name);
+      this.applyCustomThemeToSite = true;
+      this.showCustomThemeTogglerSwitch = true;
+    },
     hexToHsl: function(name) {
       let H = this.colorValues[name]['hex'];
       let ex = /^#([\da-f]{3}){1,2}$/i;

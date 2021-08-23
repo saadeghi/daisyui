@@ -5,3 +5,4 @@ yarn.lock
 /dist
 /colors
 /index.js
+.idea
