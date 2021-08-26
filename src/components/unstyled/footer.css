@@ -1,5 +1,5 @@
 .footer{
-  @apply grid grid-flow-row place-items-start;
+  @apply grid grid-flow-row place-items-start w-full;
   &>*{
     @apply grid grid-flow-row place-items-start;
   }
