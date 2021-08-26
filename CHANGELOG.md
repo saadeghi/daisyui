@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/saadeghi/daisyui/compare/v1.13.1...v1.14.0) (2021-08-26)
+
+
+### Bug Fixes
+
+* [#145](https://github.com/saadeghi/daisyui/issues/145) footer responsive bug ([4925a0a](https://github.com/saadeghi/daisyui/commit/4925a0aa9c42f4cbaaba95537f156c89744f3603))
+* [#149](https://github.com/saadeghi/daisyui/issues/149) lock page scroll when modal is open ([431b1e8](https://github.com/saadeghi/daisyui/commit/431b1e8ad164da4f1fc84bc9957b759fc0c18a4d))
+* [#155](https://github.com/saadeghi/daisyui/issues/155) add `w-full` to `footer` component ([39c412a](https://github.com/saadeghi/daisyui/commit/39c412a058566e6cd95f9b2c22a197c690df1fae))
+
 ### [1.13.2](https://github.com/saadeghi/daisyui/compare/v1.13.1...v1.13.2) (2021-08-22)
 
 
