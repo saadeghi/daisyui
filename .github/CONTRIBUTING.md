@@ -22,13 +22,12 @@ daisyUI welcomes contributions from anyone 🤝
 
 ## Building on local
 ### To build the daisyUI node package on local:
-1. Fork this repo
-1. Clone the repo on local
-1. Install dependencies:  
+1. [Fork and] clone the repo on local
+1. Install package dependencies:  
     ```
     npm install
     ```
-1. Build the `/dist` files:  
+1. Build the package:  
     ```
     npm run build
     ```
@@ -43,13 +42,20 @@ daisyUI welcomes contributions from anyone 🤝
 
 ### To run the [documentation site](https://daisyui.com/) on local:
 
-1. Fork this repo
-1. Clone the repo on local
-1. Install dependencies:  
+1. [Fork and] clone the repo on local
+1. Install package dependencies:  
+    ```
+    npm install
+    ```
+1. Build the package:  
+    ```
+    npm run build
+    ```
+3. Install document site dependencies:  
     ```
     npm run install:docs
     ```
-1. Run the site:
+1. Run the document site:
     ```
     npm run dev
     ```
