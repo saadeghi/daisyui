@@ -36,7 +36,7 @@
     </Wrapper>
 
 
-    <Wrapper title="table with actvie row">
+    <Wrapper title="table with active row">
       <div class="overflow-x-auto">
         <table class="table w-full">
           <thead>
