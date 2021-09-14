@@ -92,10 +92,10 @@ Use component classes to build your UI.
 <a class="btn">Hello!</a>
 ```
 ```html
-<input type="checkbox" class="checkbox">
+<input type="checkbox" class="checkbox"/>
 ```
 ```html
-<input type="checkbox" class="toggle">
+<input type="checkbox" class="toggle"/>
 ```
 ```html
 <div class="alert alert-success">
