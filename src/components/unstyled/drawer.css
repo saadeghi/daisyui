@@ -35,6 +35,14 @@
     }
   }
 }
+
+[dir=rtl] .drawer-toggle~.drawer-side>.drawer-overlay+*{
+  @apply translate-x-full;
+}
+[dir=rtl] .drawer-toggle:checked~.drawer-side>.drawer-overlay+*{
+  @apply translate-x-0;
+}
+
 @media (min-width: 1024px) {
   .drawer-mobile{
     grid-auto-columns: max-content auto;
