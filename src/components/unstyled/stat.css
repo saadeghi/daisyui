@@ -2,7 +2,7 @@
   @apply inline-grid grid-flow-col overflow-hidden overflow-x-auto;
 }
 .stat{
-  @apply w-full inline-grid gap-x-6;
+  @apply w-full inline-grid;
   grid-template-columns: 1fr auto;
   &-figure{
     @apply col-start-2 row-start-1 row-span-3 place-self-center justify-self-end;
