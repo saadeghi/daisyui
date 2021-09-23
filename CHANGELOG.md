@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.14.1](https://github.com/saadeghi/daisyui/compare/v1.14.0...v1.14.1) (2021-09-23)
 
+### Bug Fixes
+
+* [#175](https://github.com/saadeghi/daisyui/issues/175) ([b961817](https://github.com/saadeghi/daisyui/commit/b96181750bb326af3330ce614b2b6843603f3a43))
+* [#196](https://github.com/saadeghi/daisyui/issues/196) ([23ada4e](https://github.com/saadeghi/daisyui/commit/23ada4ec2fb62f4e8d4243a629b09ca752083851))
+* [#185](https://github.com/saadeghi/daisyui/issues/185) ([1bb78e0](https://github.com/saadeghi/daisyui/commit/1bb78e0a553b7f7d4e1fc689ca63924d7be68700))
+* [#160](https://github.com/saadeghi/daisyui/issues/160) ([789f711](https://github.com/saadeghi/daisyui/commit/789f711e91aca64f4d54223b0afd038425f3bc09))
+
 ## [1.14.0](https://github.com/saadeghi/daisyui/compare/v1.13.1...v1.14.0) (2021-08-26)
 
 
