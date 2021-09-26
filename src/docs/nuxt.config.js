@@ -115,13 +115,18 @@ export default {
       //   href: (process.env.NODE_ENV === 'production') ? 'https://cdn.jsdelivr.net/npm/daisyui@'+ process.env.DAISYUI_VERSION +'/dist/themes.css' : ''
       // },
     ],
-    // script: [
+    script: [
+      {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        'data-ad-client': 'ca-pub-4812562253949561',
+        async: true
+      }
     //   {
     //     src: "https://cdn.jsdelivr.net/npm/theme-change@2.0.1/index.js",
     //     body: true,
     //     async: true, defer: true
     //   },
-    // ],
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
