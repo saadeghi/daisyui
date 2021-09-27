@@ -1,7 +1,31 @@
 <template>
   <div>
-    <div class="overflow-x-auto mt-6">
-      <table class="table table-compact w-full">
+
+    <div class="hidden mt-2 mb-10 text-center xl:block">
+      <!-- daisyui-728-90 -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:728px;height:90px"
+          data-ad-client="ca-pub-4812562253949561"
+          data-ad-slot="1141251424"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <div class="mt-2 mb-10 text-center xl:hidden">
+      <!-- daisyui-300-100 -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:300px;height:100px"
+          data-ad-client="ca-pub-4812562253949561"
+          data-ad-slot="6427020085"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+
+    <div class="mt-6 overflow-x-auto">
+      <table class="table w-full table-compact">
         <thead>
           <tr>
             <th>Class name</th>
@@ -13,25 +37,25 @@
         <tbody>
           <tr v-for="(item, index) in data.components">
             <th class="font-normal">
-              <span class="lowercase font-mono">{{ item.class }}</span>
+              <span class="font-mono lowercase">{{ item.class }}</span>
             </th>
-            <td v-if="data.showType !== false"><span class="badge badge-sm badge-success w-20">Component</span></td>
-            <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border border-opacity-10 rounded" :class="item.color"></span></td>
+            <td v-if="data.showType !== false"><span class="w-20 badge badge-sm badge-success">Component</span></td>
+            <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border rounded border-opacity-10" :class="item.color"></span></td>
             <td>{{ item.desc }}</td>
           </tr>
           <tr v-for="(item, index) in data.utilities">
             <th class="font-normal">
-              <span class="lowercase font-mono">{{ item.class }}</span>
+              <span class="font-mono lowercase">{{ item.class }}</span>
             </th>
-            <td v-if="data.showType !== false"><span class="badge badge-sm badge-info w-20">Utility</span></td>
-            <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border border-opacity-10 rounded" :class="item.color"></span></td>
+            <td v-if="data.showType !== false"><span class="w-20 badge badge-sm badge-info">Utility</span></td>
+            <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border rounded border-opacity-10" :class="item.color"></span></td>
             <td>{{ item.desc }}</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div v-if="data.showTitle !== false" class="divider"></div>
-    <div v-if="data.showTitle !== false" class="text-xl font-bold mt-6">Examples</div>
+    <div v-if="data.showTitle !== false" class="mt-6 text-xl font-bold">Examples</div>
   </div>
 </template>
 
