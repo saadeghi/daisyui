@@ -8,7 +8,7 @@
         { class: 'card-actions', desc: 'Container for buttons' },
       ],
       utilities : [
-        { class: 'bordered', desc: 'Adds border`' },
+        { class: 'bordered', desc: 'Adds border' },
         { class: 'compact', desc: 'Less padding' },
         { class: 'card-side', desc: 'The image in <figure> will be on to the side' },
         { class: 'image-full', desc: 'The image in <figure> element will be the background' },
