@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SvelteComponent from '../components/SvelteComponent.svelte'
+import ReactComponent from '../components/ReactComponent.jsx'
+import VueComponent from '../components/VueComponent.vue'
+---
+
+<BaseLayout title="Astro + daisyUI">
+
+  <SvelteComponent client:load/>
+  <ReactComponent client:load/>
+  <VueComponent client:load/>
+
+</BaseLayout>

@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "latest",
+    "tailwindcss": "latest",
+    "daisyui": "latest"
+  }
+}
