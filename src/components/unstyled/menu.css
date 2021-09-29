@@ -2,11 +2,11 @@
   @apply flex flex-col overflow-hidden;
   &.horizontal{
     @apply flex-row inline-flex;
-    li{
+    :where(li){
       @apply flex-row;
     }
   }
-  li{
+  :where(li){
     @apply flex flex-col items-stretch;
     >a, >span{
       @apply flex items-center transition ease-in-out duration-200;
