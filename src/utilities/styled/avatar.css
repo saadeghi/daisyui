@@ -2,18 +2,22 @@
   &.online{
     &:before{
       content: '';
-      @apply block w-2 h-2 bg-success rounded-full absolute z-10;
-      top: 5%;
-      right: 5%;
+      @apply block bg-success rounded-full absolute z-10;
+      width: 15%;
+      height: 15%;
+      top: 7%;
+      right: 7%;
       box-shadow: 0 0 0 2px hsl(var(--b1));
     }
   }
   &.offline{
     &:before{
       content: '';
-      @apply block w-2 h-2 bg-base-300 rounded-full absolute z-10;
-      top: 5%;
-      right: 5%;
+      @apply block bg-base-300 rounded-full absolute z-10;
+      width: 15%;
+      height: 15%;
+      top: 7%;
+      right: 7%;
       box-shadow: 0 0 0 2px hsl(var(--b1));
     }
   }
