@@ -1,0 +1,1 @@
+using twind from skypack and daisyui from cdn
