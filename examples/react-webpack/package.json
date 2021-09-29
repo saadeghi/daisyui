@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "dev": "webpack serve --mode=development --output-path ./ --port 3100",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "autoprefixer": "latest",
+    "babel-loader": "latest",
+    "css-loader": "latest",
+    "daisyui": "latest",
+    "html-webpack-plugin": "latest",
+    "postcss": "latest",
+    "postcss-loader": "latest",
+    "style-loader": "latest",
+    "tailwindcss": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
