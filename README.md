@@ -32,7 +32,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 </summary>
 
 - **Tailwind CSS plugin**  
-  daisyUI is a Tailwind CSS plugin. Install it, add it to your `tailwind.config.js` file.
+  daisyUI is a Tailwind CSS plugin. Install it and add it to your `tailwind.config.js` file.
 - **Component classes**  
   Adds component classes to Tailwind. Classes like `btn`, `card`,… So you will end up with a cleaner HTML.
 - **Semantic color names**  
@@ -44,7 +44,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 - **RTL supported**  
   Enable `rtl` config for right to left layouts.
 - **Pure CSS**  
-  No script file, no dependencies. 2KB gzip!
+  No script file, no dependencies. Works on all frameworks and environments!
 
 </details>
 
