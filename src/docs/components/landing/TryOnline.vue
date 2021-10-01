@@ -23,7 +23,7 @@
         </p>
         <div class="w-full max-w-xs mx-auto space-x-2 md:max-w-md">
           <a class="btn-outline btn-sm btn" target="_blank" rel="noopener" href="https://codepen.io/saadeghi/pen/gOwWKvv">Codepen</a>
-          <a class="btn-outline btn-sm btn" target="_blank" rel="noopener" href="https://play.tailwindcss.com/R74XalS4na">Tailwind Play</a>
+          <NuxtLink to="/tailwindplay" class="btn-outline btn-sm btn" target="_blank" rel="noopener">Tailwind Play</NuxtLink>
         </div>
       </div>
     </div>

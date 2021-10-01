@@ -213,7 +213,7 @@ Read the documents for more info:
 [npm-url]: https://www.npmjs.com/package/daisyui
 [cdnjs-url]: https://cdnjs.com/libraries/daisyui
 [gh-url]: https://github.com/saadeghi/daisyui
-[tw-play-url]: https://play.tailwindcss.com/R74XalS4na
+[tw-play-url]: https://daisyui.com/tailwindplay
 [codepen-url]: https://codepen.io/saadeghi/pen/gOwWKvv
 [unpkg-url]: https://unpkg.com/browse/daisyui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
