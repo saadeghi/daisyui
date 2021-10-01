@@ -9,7 +9,7 @@
           using Tailwind's utility classes
         </h3>
         <p class="max-w-lg mx-auto mb-5">
-          DaisyUI is based on Tailwind's utility classes and all components have
+          daisyUI is based on Tailwind's utility classes and all components have
           low specificity so you can customize everything using utility classes.
           <br />You can even
           <NuxtLink to="/docs/customize" class="link">use @apply</NuxtLink> to

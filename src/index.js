@@ -20,7 +20,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   }
   if (logs) {
     console.log()
-    console.log('\x1b[35m%s\x1b[0m', '🌼 DaisyUI components ' + daisyuiInfo.version, '\x1b[0m', daisyuiInfo.homepage)
+    console.log('\x1b[35m%s\x1b[0m', '🌼 daisyUI components ' + daisyuiInfo.version, '\x1b[0m', daisyuiInfo.homepage)
     console.group()
   }
 
@@ -141,8 +141,8 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
     console.log('\x1b[32m%s\x1b[0m', '✔︎ Including:', '\x1b[0m', '' + diasyuiIncludedItems.join(', '));
     if (isTailwindInstalled === false) {
       console.log(`\n\x1b[33;1m! warning\x1b[0m - unable to require \x1b[36mtailwindcss/plugin\x1b[0m
-DaisyUI color are now only available for DaisyUI components.
-If you want to use DaisyUI color as utility classes (like 'bg-primary')
+daisyUI color are now only available for daisyUI components.
+If you want to use daisyUI color as utility classes (like 'bg-primary')
 you need to add this to your \x1b[34mtailwind.config.js\x1b[0m file:
 ───────────────────────────────────────
 \x1b[34mmodule.exports = {

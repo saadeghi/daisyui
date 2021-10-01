@@ -10,7 +10,7 @@
     <Wrapper nocode>
 
       <p class="prose text-base-content opacity-60">
-        DaisyUI works best with Tailwind CSS but you can use it as a component library with other utility-first libraries such as Tachyons.
+        daisyUI works best with Tailwind CSS but you can use it as a component library with other utility-first libraries such as Tachyons.
       </p>
       <p class="mt-4 prose text-base-content">
         Add the CSS file to your &lt;head&gt; tag.

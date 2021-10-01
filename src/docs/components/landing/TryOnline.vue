@@ -7,7 +7,7 @@
         </h2>
         <h3 class="mb-5 text-3xl font-bold"></h3>
         <p class="w-full mx-auto mb-5 md:max-w-lg">
-          Use DaisyUI file from CDN
+          Use daisyUI file from CDN
         </p>
         <div class="w-full max-w-sm mx-auto my-2 md:max-w-md lg:max-w-2xl">
           <div class="w-full max-w-xs mx-auto text-sm text-left shadow-lg mockup-code bg-neutral-focus sm:max-w-none">

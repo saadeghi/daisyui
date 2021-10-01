@@ -7,7 +7,7 @@
 
     <Wrapper nocode>
       <p class="prose text-base-content">
-        Once you <NuxtLink to="/docs/install">installed</NuxtLink> DaisyUI, you can use component classes like <span class="badge badge-outline">btn</span>, <span class="badge badge-outline">card</span>, etc...
+        Once you <NuxtLink to="/docs/install">installed</NuxtLink> daisyUI, you can use component classes like <span class="badge badge-outline">btn</span>, <span class="badge badge-outline">card</span>, etc...
       </p>
 
       <p class="my-4">
@@ -28,12 +28,12 @@
       </p>
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
-          <pre><code>&#x3C;button class=&#x22;<span class="text-success">btn btn-primary</span>&#x22;&#x3E;DaisyUI Button&#x3C;/button&#x3E;</code></pre>
+          <pre><code>&#x3C;button class=&#x22;<span class="text-success">btn btn-primary</span>&#x22;&#x3E;daisyUI Button&#x3C;/button&#x3E;</code></pre>
         </div>
       </div>
 
       <div class="w-full my-2">
-        <button class="btn btn-primary">DaisyUI Button</button>
+        <button class="btn btn-primary">daisyUI Button</button>
       </div>
 
       <p class="max-w-4xl my-4">

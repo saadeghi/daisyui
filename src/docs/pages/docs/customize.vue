@@ -6,7 +6,7 @@
     </h2>
     <Wrapper nocode>
       <p class="max-w-4xl mb-4">
-        DaisyUI components comes with many variants necessary for design systems and you won't usually need to customize anything but you can still add Tailwind's utility classes to customize components.
+        daisyUI components comes with many variants necessary for design systems and you won't usually need to customize anything but you can still add Tailwind's utility classes to customize components.
       </p>
 
       <p class="my-4">
@@ -14,12 +14,12 @@
       </p>
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
-          <pre><code>&#x3C;button class=&#x22;<span class="text-info">btn btn-primary</span>&#x22;&#x3E;DaisyUI Button&#x3C;/button&#x3E;</code></pre>
+          <pre><code>&#x3C;button class=&#x22;<span class="text-info">btn btn-primary</span>&#x22;&#x3E;daisyUI Button&#x3C;/button&#x3E;</code></pre>
         </div>
       </div>
 
       <div class="w-full my-2">
-        <button class="btn btn-primary">DaisyUI Button</button>
+        <button class="btn btn-primary">daisyUI Button</button>
       </div>
 
       <p class="max-w-4xl my-4">
@@ -27,12 +27,12 @@
       </p>
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
-          <pre><code>&#x3C;button class=&#x22;<span class="text-info">btn btn-primary</span> <span class="text-success">rounded-full</span>&#x22;&#x3E;DaisyUI Button customized&#x3C;/button&#x3E;</code></pre>
+          <pre><code>&#x3C;button class=&#x22;<span class="text-info">btn btn-primary</span> <span class="text-success">rounded-full</span>&#x22;&#x3E;daisyUI Button customized&#x3C;/button&#x3E;</code></pre>
         </div>
       </div>
 
       <div class="w-full my-2">
-        <button class="rounded-full btn btn-primary">DaisyUI Button customized</button>
+        <button class="rounded-full btn btn-primary">daisyUI Button customized</button>
       </div>
 
       <p class="max-w-4xl my-4">
@@ -52,7 +52,7 @@
       </h2>
 
       <p class="max-w-4xl my-4">
-        If you want to design everything and apply your very own style, you can use DaisyUI <span class="badge badge-outline">base</span> (unstyled UI) version. It has no colors and no visual style but components will have a skeleton style which makes your job easier.
+        If you want to design everything and apply your very own style, you can use daisyUI <span class="badge badge-outline">base</span> (unstyled UI) version. It has no colors and no visual style but components will have a skeleton style which makes your job easier.
       </p>
 
       <p class="max-w-4xl my-4">

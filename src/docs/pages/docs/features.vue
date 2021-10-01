@@ -21,15 +21,15 @@
       </div>
 
       <p class="mb-4 prose">
-        With DaisyUI, you can use component classes:
+        With daisyUI, you can use component classes:
       </p>
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
-          <pre><code>&#x3C;button class=&#x22;<span class="text-success">btn btn-primary</span>&#x22;&#x3E;DaisyUI Button&#x3C;/button&#x3E;</code></pre>
+          <pre><code>&#x3C;button class=&#x22;<span class="text-success">btn btn-primary</span>&#x22;&#x3E;daisyUI Button&#x3C;/button&#x3E;</code></pre>
         </div>
       </div>
       <div class="w-full my-2">
-        <button class="btn btn-primary">DaisyUI Button</button>
+        <button class="btn btn-primary">daisyUI Button</button>
       </div>
 
       <p class="mb-4 prose">
@@ -37,11 +37,11 @@
       </p>
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
-          <pre><code>&#x3C;button class=&#x22;<span class="text-success">btn btn-primary</span> <span class="text-info">rounded-full</span>&#x22;&#x3E;DaisyUI Button&#x3C;/button&#x3E;</code></pre>
+          <pre><code>&#x3C;button class=&#x22;<span class="text-success">btn btn-primary</span> <span class="text-info">rounded-full</span>&#x22;&#x3E;daisyUI Button&#x3C;/button&#x3E;</code></pre>
         </div>
       </div>
       <div class="w-full my-2">
-        <button class="rounded-full btn btn-primary">DaisyUI Button</button>
+        <button class="rounded-full btn btn-primary">daisyUI Button</button>
       </div>
 
       <div class="py-6 mb-4 text-opacity-50 text-base-content">
@@ -50,7 +50,7 @@
           <br>
           If you decide to change the padding of every button on your project, you need to find all your buttons and edit the class names. You will never know if all your buttons are using the the exact same style because a class might have changed in a file and that button might not have hover style for instance.
           <br>
-          If you use DaisyUI, you will be focusing on your design system only, not tons of class names you need on every project.
+          If you use daisyUI, you will be focusing on your design system only, not tons of class names you need on every project.
           <br>
           Instead of using lots of utility classes for all elements, use component classes like <span class="badge badge-outline">btn</span>, <span class="badge badge-outline">card</span>, <span class="badge badge-outline">navbar</span>, etc... for your common elements to make sure all your elements use same style.
         </p>
@@ -74,7 +74,7 @@
         2. Tailwind CSS plugin
       </p>
       <p class="mb-4 prose">
-        DaisyUI is a Tailwind CSS plugin so you can simply add it to your <span class="badge badge-outline">tailwind.config.js</span> file.
+        daisyUI is a Tailwind CSS plugin so you can simply add it to your <span class="badge badge-outline">tailwind.config.js</span> file.
       </p>
 
 
@@ -83,7 +83,7 @@
         3. Based on design system
       </p>
       <p class="mb-4 prose">
-        DaisyUI applies design system concepts to Tailwind CSS. Every component on your page is committed to a single design system.
+        daisyUI applies design system concepts to Tailwind CSS. Every component on your page is committed to a single design system.
       </p>
 
 
@@ -105,7 +105,7 @@
         5. Semantic color names
       </p>
       <p class="mb-4 prose">
-      Tailwind CSS provides a wide range of colors and it won't limit your choice when you're styling your page. DaisyUI however, is focusing on design system concepts and if you're creating a design system, you need to define your brand colors and create your layout committed to that color palette.
+      Tailwind CSS provides a wide range of colors and it won't limit your choice when you're styling your page. daisyUI however, is focusing on design system concepts and if you're creating a design system, you need to define your brand colors and create your layout committed to that color palette.
       <br>
         Instead of using general-purpose color names like <span class="badge badge-warning">blue-600</span> or <span class="badge badge-warning">gray-100</span> use semantic role names like <span class="badge badge-success">primary</span>, <span class="badge badge-success">neutral-300</span> or <span class="badge badge-success">info</span>. This way, you can change primary color of your whole project using a single CSS variable. No need to replace all color classes in all files. You can also define multiple themes (not just dark-mode) using CSS variables.
       </p>
@@ -126,7 +126,7 @@
       <p class="mb-4 prose">
         Using semantic color names and CSS variables makes theming easy and fun. Every theme is just a set of CSS variables so you can add multiple themes (not just light/dark) and you can change the colors by changing a CSS variable.
         <br>
-        You can also use DaisyUI default themes if you enabe <span class="badge badge-outline">themes</span> config.
+        You can also use daisyUI default themes if you enabe <span class="badge badge-outline">themes</span> config.
       </p>
 
 
@@ -135,7 +135,7 @@
         8. Designer-friendly
       </p>
       <p class="mb-4 prose">
-        DaisyUI separated the skeleton style of every component from its visual style. You can disable <span class="badge badge-outline">styled</span> config and components won't have visual style. Now you can set colors or other visual styles based on a skeleton.
+        daisyUI separated the skeleton style of every component from its visual style. You can disable <span class="badge badge-outline">styled</span> config and components won't have visual style. Now you can set colors or other visual styles based on a skeleton.
       </p>
 
 

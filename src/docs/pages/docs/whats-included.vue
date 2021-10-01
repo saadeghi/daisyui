@@ -28,7 +28,7 @@
         2. Utility Classes
       </h3>
       <p class="mb-4 prose">
-        DaisyUI adds a few extra utility classes to Tailwind CSS. They are being used inside components.
+        daisyUI adds a few extra utility classes to Tailwind CSS. They are being used inside components.
         <br>
         You can see the available utilities on <a href="https://github.com/saadeghi/daisyui/tree/master/src/utilities" target="_blank">github</a>
       </p>
@@ -37,7 +37,7 @@
         3. Resets
       </h3>
       <p class="mb-4 prose">
-        DaisyUI adds a tiny style reset to Tailwind's @base reset style.
+        daisyUI adds a tiny style reset to Tailwind's @base reset style.
         <br>
         You can see it on <a href="https://github.com/saadeghi/daisyui/tree/master/src/resets" target="_blank">github</a>
       </p>
@@ -59,9 +59,9 @@
         5. full.css file <span class="mx-2 badge badge-outline badge-sm">available on CDN</span>
       </h3>
       <p class="mb-4 prose">
-        This file includes a generated CSS including Tailwind CSS and DaisyUI.
+        This file includes a generated CSS including Tailwind CSS and daisyUI.
         <ul>
-          <li>It's useful if you want to quickly use Tailwind CSS and DaisyUI without installing anything.</li>
+          <li>It's useful if you want to quickly use Tailwind CSS and daisyUI without installing anything.</li>
           <li>It's not recommended to use this file on production because it's a large CSS file and nothing is purged.</li>
           <li>full.css is available on <a :href="`https://cdn.jsdelivr.net/npm/daisyui@` + DAISYUI_VERSION + `/dist/full.css`" target="_blank">CDN</a></li>
         </ul>

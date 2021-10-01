@@ -14,7 +14,7 @@
       </div>
       <div class="flex-none px-2 mx-2">
         <span class="text-lg font-bold">
-          DaisyUI
+          daisyUI
         </span>
       </div>
       <div class="flex justify-center flex-1 px-2 mx-2">

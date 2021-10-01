@@ -32,7 +32,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 </summary>
 
 - **Tailwind CSS plugin**  
-  DaisyUI is a Tailwind CSS plugin. Install it, add it to your `tailwind.config.js` file.
+  daisyUI is a Tailwind CSS plugin. Install it, add it to your `tailwind.config.js` file.
 - **Component classes**  
   Adds component classes to Tailwind. Classes like `btn`, `card`,… So you will end up with a cleaner HTML.
 - **Semantic color names**  
@@ -56,7 +56,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 npm i daisyui
 ```
 
-Then add DaisyUI to your `tailwind.config.js`  
+Then add daisyUI to your `tailwind.config.js`  
 [ [Read more][docs-url-install] ]
 ```js
 module.exports = {
@@ -75,7 +75,7 @@ module.exports = {
 </summary>
 
 
-Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and DaisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
+Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
 
   
 ```html
@@ -218,7 +218,7 @@ Read the documents for more info:
 [unpkg-url]: https://unpkg.com/browse/daisyui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
-[tweet-url]: https://twitter.com/intent/tweet?text=DaisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
+[tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 [number-of-components]: https://badgen.net/badge/total%20components/40/green
 
 [docs-url-install]: https://daisyui.com/docs/install

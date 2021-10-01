@@ -3,14 +3,14 @@
     <div class="text-center hero-content">
       <div class="w-full max-w-md">
         <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">
-          Install DaisyUI
+          Install daisyUI
         </h2>
         <p class="w-full max-w-lg mx-auto mt-5">
           No dependencies, pure CSS. Can be used as a Tailwind CSS plugin or as
           an independent CSS library
         </p>
         <p class="w-full max-w-lg mx-auto mt-5 text-left">
-          1. Install DaisyUI as a Node package:
+          1. Install daisyUI as a Node package:
         </p>
 
         <div class="w-full max-w-md mx-auto my-2">
@@ -18,7 +18,7 @@
             <pre data-prefix="$"><code>npm i daisyui</code></pre>
           </div>
           <p class="w-full max-w-lg mx-auto mt-5 text-left">
-            2. Add DaisyUI to Tailwind CSS as a plugin
+            2. Add daisyUI to Tailwind CSS as a plugin
           </p>
 
           <div class="w-full max-w-4xl my-2">

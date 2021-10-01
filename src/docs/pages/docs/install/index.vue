@@ -16,7 +16,7 @@
       </p>
 
       <p class="my-4">
-        1. Install DaisyUI:
+        1. Install daisyUI:
       </p>
       <div class="w-full max-w-xl my-2">
         <div class="shadow-lg mockup-code">
@@ -25,7 +25,7 @@
       </div>
 
       <p class="my-4">
-        2. Then add DaisyUI to your <span class="badge badge-outline">tailwind.config.js</span>
+        2. Then add daisyUI to your <span class="badge badge-outline">tailwind.config.js</span>
       </p>
       <div class="w-full max-w-xl my-2">
         <div class="text-sm shadow-lg mockup-code">

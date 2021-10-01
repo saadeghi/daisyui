@@ -50,7 +50,7 @@
         <Navbar class="mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
           <div class="flex-1 px-2 mx-2">
             <span class="text-lg font-bold">
-              DaisyUI
+              daisyUI
             </span>
           </div>
           <div class="flex-none">
@@ -71,7 +71,7 @@
           </div>
           <div class="flex-1 hidden px-2 mx-2 lg:flex">
             <span class="text-lg font-bold">
-              DaisyUI
+              daisyUI
             </span>
           </div>
           <div class="flex-1 lg:flex-none">
@@ -104,7 +104,7 @@
         <Navbar class="mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
           <div class="flex-none px-2 mx-2">
             <span class="text-lg font-bold">
-              DaisyUI
+              daisyUI
             </span>
           </div>
           <div class="flex-1 px-2 mx-2">
@@ -145,7 +145,7 @@
         <Navbar class="mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
           <div class="flex-1 px-2 mx-2">
             <span class="text-lg font-bold">
-              DaisyUI
+              daisyUI
             </span>
           </div>
           <div class="flex-none hidden px-2 mx-2 lg:flex">
@@ -183,7 +183,7 @@
         <Navbar class="mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
           <div class="px-2 mx-2 navbar-start">
             <span class="text-lg font-bold">
-              DaisyUI
+              daisyUI
             </span>
           </div>
           <div class="hidden px-2 mx-2 navbar-center lg:flex">

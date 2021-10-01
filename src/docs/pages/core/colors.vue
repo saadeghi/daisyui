@@ -8,7 +8,7 @@
     <div class="text-base-content">
       <Wrapper nocode>
         <div class="text-xl font-bold text-base-content">Read the documents</div>
-        <p>Read everything about DaisyUI colors and theming:</p>
+        <p>Read everything about daisyUI colors and theming:</p>
         <p class="mt-4">
           <NuxtLink to="/docs/default-themes" class="link">How to use themes?</NuxtLink>
           <br/>
@@ -106,7 +106,7 @@
       </div>
       <div class="flex-none px-2 mx-2">
         <span class="text-lg font-bold">
-          DaisyUI
+          daisyUI
         </span>
       </div>
       <div class="flex justify-center flex-1 px-2 mx-2">

@@ -6,14 +6,14 @@
     <Wrapper nocode>
 
       <p class="mb-4">
-        DaisyUI can be configured from your <span class="badge badge-outline">tailwind.config.js</span> file
+        daisyUI can be configured from your <span class="badge badge-outline">tailwind.config.js</span> file
       </p>
 
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
         <pre><code>module.exports = {
 
-      <span class="text-neutral-content text-opacity-20">// add DaisyUI plugin</span>
+      <span class="text-neutral-content text-opacity-20">// add daisyUI plugin</span>
       plugins: [
         require('daisyui'),
       ],
@@ -135,7 +135,7 @@
         default: true
       </p>
       <p class="my-4">
-        If it's true, DaisyUI shows logs in terminal while CSS is building
+        If it's true, daisyUI shows logs in terminal while CSS is building
       </p>
 
       <h2 class="mt-6 text-2xl font-bold">
@@ -145,7 +145,7 @@
         default: false
       </p>
       <p class="my-4">
-        If it's true, your theme will be right-to-left. You need to add <span class="badge badge-outline">dir="rtl"</span> to your body tag. If you're using DaisyUI with RTL option, I also suggest using <a class="link" href="https://github.com/cvrajeesh/tailwindcss-flip" target="_blank">tailwindcss-flip</a> plugin. It flips all your tailwind utilities automatically.
+        If it's true, your theme will be right-to-left. You need to add <span class="badge badge-outline">dir="rtl"</span> to your body tag. If you're using daisyUI with RTL option, I also suggest using <a class="link" href="https://github.com/cvrajeesh/tailwindcss-flip" target="_blank">tailwindcss-flip</a> plugin. It flips all your tailwind utilities automatically.
       </p>
 
 

@@ -9,14 +9,14 @@
           Apply your own design decisions
         </h3>
         <p class="w-full max-w-lg mx-auto mb-5">
-          DaisyUI adds a set of semantic color names to Tailwind. So instead of
+          daisyUI adds a set of semantic color names to Tailwind. So instead of
           using generic color names like
           <span class="badge badge-ghost">bg-blue-500</span>, we can use
           semantic role names like
           <span class="badge badge-ghost">bg-primary</span> or
           <span class="badge badge-ghost">bg-success</span>. <br />All colors
           are CSS variables so you easily add dark mode by changing a few CSS
-          variables. Try DaisyUI
+          variables. Try daisyUI
           <NuxtLink to="/docs/default-themes" class="link">default themes</NuxtLink>
           or
           <NuxtLink to="/docs/add-themes" class="link">create your own theme</NuxtLink>
