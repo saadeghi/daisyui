@@ -194,20 +194,20 @@ Read the documents for more info:
   show / hide
 </summary>
   
-### Blogs
-- [Logrocket](https://blog.logrocket.com/daisyui-tailwind-components-react-apps/)
-- [wweb.dev](https://wweb.dev/weekly/85/)
-- [flaming.codes](https://flaming.codes/posts/boostrap-tailwind-alternative-with-daisy-ui)
-- [HackerNews](https://news.ycombinator.com/item?id=28004515)
-- [Product Hunt](https://www.producthunt.com/posts/daisyui)
-- [Siecle Digital](https://siecledigital.fr/2021/05/29/daisyui-plugin-gratuit-avec-composants-tailwind-css-a/)
-- [speckyboy](https://speckyboy.com/weekly-news-for-designers-594/)
-- [dailydev](https://app.daily.dev/posts/-4OPGw0te)
-### Youtube videos
-- [Setup the Best Frontend JavaScript Stack - Svelte, Vite, TailwindCSS and DaisyUI](https://www.youtube.com/watch?v=mEBPN_9jTAE)
-- [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
-- [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20) 
-- [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
+- Blogs
+  - [Logrocket](https://blog.logrocket.com/daisyui-tailwind-components-react-apps/)
+  - [wweb.dev](https://wweb.dev/weekly/85/)
+  - [flaming.codes](https://flaming.codes/posts/boostrap-tailwind-alternative-with-daisy-ui)
+  - [HackerNews](https://news.ycombinator.com/item?id=28004515)
+  - [Product Hunt](https://www.producthunt.com/posts/daisyui)
+  - [Siecle Digital](https://siecledigital.fr/2021/05/29/daisyui-plugin-gratuit-avec-composants-tailwind-css-a/)
+  - [speckyboy](https://speckyboy.com/weekly-news-for-designers-594/)
+  - [dailydev](https://app.daily.dev/posts/-4OPGw0te)
+- Youtube videos
+  - [Setup the Best Frontend JavaScript Stack - Svelte, Vite, TailwindCSS and DaisyUI](https://www.youtube.com/watch?v=mEBPN_9jTAE)
+  - [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
+  - [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20) 
+  - [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
 
 </details>
 
