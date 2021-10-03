@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "nuxt": "latest"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "@nuxtjs/tailwindcss": "latest",
+    "daisyui": "latest"
+  }
+}
