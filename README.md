@@ -198,6 +198,7 @@ Read the documents for more info:
   - [Logrocket](https://blog.logrocket.com/daisyui-tailwind-components-react-apps/)
   - [wweb.dev](https://wweb.dev/weekly/85/)
   - [flaming.codes](https://flaming.codes/posts/boostrap-tailwind-alternative-with-daisy-ui)
+  - [rockyourcode](https://www.rockyourcode.com/how-to-setup-react-typescript-with-snowpack-and-daisyui/)
   - [HackerNews](https://news.ycombinator.com/item?id=28004515)
   - [Product Hunt](https://www.producthunt.com/posts/daisyui)
   - [Siecle Digital](https://siecledigital.fr/2021/05/29/daisyui-plugin-gratuit-avec-composants-tailwind-css-a/)
