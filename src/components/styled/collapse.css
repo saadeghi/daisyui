@@ -9,12 +9,14 @@
   transform-origin: 75% 75%;
   transform: rotate(45deg);
   box-shadow: 2px 2px;
+  pointer-events: none;
 }
 .collapse-plus .collapse-title:after{
   @apply transition-all ease-in-out duration-300 w-2 h-2 block absolute;
   top: .9rem;
   right: 1.4rem;
   content: '+';
+  pointer-events: none;
 }
 
 .collapse:not(.collapse-open):not(.collapse-close) input[type=checkbox],
