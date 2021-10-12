@@ -71,9 +71,7 @@
 
     '--btn-text-case': 'uppercase', <span class="text-neutral-content text-opacity-20">/* default text case for buttons */</span>
     '--navbar-padding': '.5rem',    <span class="text-neutral-content text-opacity-20">/* default padding for navbar */</span>
-    '--border-btn': '1px',          <span class="text-neutral-content text-opacity-20">/* default border size for button */</span>
-    '--focus-ring': '2px',          <span class="text-neutral-content text-opacity-20">/* focus ring size for button and inputs */</span>
-    '--focus-ring-offset': '2px',   <span class="text-neutral-content text-opacity-20">/* focus ring offset size for button and inputs */</span></code></pre>
+    '--border-btn': '1px',          <span class="text-neutral-content text-opacity-20">/* default border size for button */</span></code></pre>
       </div>
     </div>
 
