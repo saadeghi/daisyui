@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.4](https://github.com/saadeghi/daisyui/compare/v1.14.3...v1.14.4) (2021-10-12)
+
+
+### Bug Fixes
+
+* [#236](https://github.com/saadeghi/daisyui/issues/236) (nested themes and missing css vars) ([f8f6bad](https://github.com/saadeghi/daisyui/commit/f8f6badc2d1315896fc91907f54102dd461087c9))
+* [#237](https://github.com/saadeghi/daisyui/issues/237) (fix CDN files order in docs) ([fa316bc](https://github.com/saadeghi/daisyui/commit/fa316bc79ede8b1b64efe1b53a83c98cd4e6dcd3))
+* [#239](https://github.com/saadeghi/daisyui/issues/239) (btn outline style for state colors) ([6796d84](https://github.com/saadeghi/daisyui/commit/6796d8420cbb0683e22666132524b2e49b016d81))
+
 ### [1.14.3](https://github.com/saadeghi/daisyui/compare/v1.14.2...v1.14.3) (2021-10-11)
 
 ### Bug Fixes
