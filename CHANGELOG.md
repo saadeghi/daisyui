@@ -15,7 +15,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* [#232](https://github.com/saadeghi/daisyui/issues/204) make collapse-arrow clickable
+* [#232](https://github.com/saadeghi/daisyui/issues/232) make collapse-arrow clickable
 
 ### [1.14.2](https://github.com/saadeghi/daisyui/compare/v1.14.1...v1.14.2) (2021-09-29)
 
