@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.14.3](https://github.com/saadeghi/daisyui/compare/v1.14.2...v1.14.3) (2021-10-11)
 
+### Bug Fixes
+
+* [#232](https://github.com/saadeghi/daisyui/issues/204) make collapse-arrow clickable
+
 ### [1.14.2](https://github.com/saadeghi/daisyui/compare/v1.14.1...v1.14.2) (2021-09-29)
 
 
