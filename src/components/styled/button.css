@@ -156,6 +156,30 @@
         @apply bg-accent-focus text-accent-content border-accent-focus;
       }
     }
+    &.btn-success {
+      @apply text-success;
+      &:hover {
+        @apply bg-success text-neutral-content border-success;
+      }
+    }
+    &.btn-info {
+      @apply text-info;
+      &:hover {
+        @apply bg-info text-neutral-content border-info;
+      }
+    }
+    &.btn-warning {
+      @apply text-warning;
+      &:hover {
+        @apply bg-warning text-neutral-content border-warning;
+      }
+    }
+    &.btn-error {
+      @apply text-error;
+      &:hover {
+        @apply bg-error text-neutral-content border-error;
+      }
+    }
   }
 
   /* disabled */
