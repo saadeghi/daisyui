@@ -1,0 +1,10 @@
+{
+  "scripts": {},
+  "dependencies": {
+    "autoprefixer": "^10.3.7",
+    "daisyui": "^1.14.4",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.16"
+  }
+}
