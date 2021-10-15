@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.5](https://github.com/saadeghi/daisyui/compare/v1.14.4...v1.14.5) (2021-10-15)
+
+
+### Bug Fixes
+
+* button scale for `corporate` theme ([dc6da4d](https://github.com/saadeghi/daisyui/commit/dc6da4d163a77430f9f57a4b90afc22c2ce326bd))
+
 ### [1.14.4](https://github.com/saadeghi/daisyui/compare/v1.14.3...v1.14.4) (2021-10-12)
 
 
