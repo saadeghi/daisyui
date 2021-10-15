@@ -129,7 +129,7 @@ module.exports = {
     "--animation-btn": "0",
     "--animation-input": "0",
     "--btn-text-case": "uppercase",
-    "--btn-focus-scale": "0",
+    "--btn-focus-scale": "1",
     "--navbar-padding": ".5rem",
     "--border-btn": "1px",
     "--tab-border": "1px",
