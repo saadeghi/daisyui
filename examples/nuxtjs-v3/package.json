@@ -10,8 +10,6 @@
     "daisyui": "^1.14.5",
     "nuxt3": "latest",
     "postcss": "^8.3.9",
-    "sass": "^1.43.2",
-    "sass-loader": "^12.2.0",
     "tailwindcss": "^2.2.17"
   }
 }

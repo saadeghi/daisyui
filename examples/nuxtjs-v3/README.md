@@ -1,8 +1,8 @@
+- nuxt3
 - daisyui
 - postcss
 - tailwindcss
 - autoprefixer
-- nuxt3 (also nuxt3 needs `sass` and `sass-loader` dependencies to work with `tailwindcss` 🤷‍♂️)
 
 ---
 
