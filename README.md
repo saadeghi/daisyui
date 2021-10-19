@@ -196,6 +196,7 @@ Read the documents for more info:
   
 - Blogs
   - [Logrocket](https://blog.logrocket.com/daisyui-tailwind-components-react-apps/)
+  - [GraphCMS](https://graphcms.com/blog/build-a-personal-timeline-with-graphcms-and-sveltekit)
   - [wweb.dev](https://wweb.dev/weekly/85/)
   - [flaming.codes](https://flaming.codes/posts/boostrap-tailwind-alternative-with-daisy-ui)
   - [rockyourcode](https://www.rockyourcode.com/how-to-setup-react-typescript-with-snowpack-and-daisyui/)
@@ -209,6 +210,8 @@ Read the documents for more info:
   - [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
   - [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20) 
   - [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
+- Courses
+  - [Svelte for Beginners by Mike Karan](https://www.udemy.com/course/svelte-for-beginners/)
 
 </details>
 
