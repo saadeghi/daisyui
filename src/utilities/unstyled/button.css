@@ -1,15 +1,23 @@
 .btn{
   &-xs {
-    @apply px-2 text-xs leading-relaxed h-6 min-h-6;
+    @apply px-2 h-6 min-h-6;
+    font-size: 0.75rem;
+    line-height: 1.625rem;
   }
   &-sm {
-    @apply px-3 leading-8 h-8 text-sm min-h-8;
+    @apply px-3 h-8 min-h-8;
+    font-size: 0.875rem;
+    line-height: 2rem;
   }
   &-md {
-    @apply px-4 leading-loose h-12 text-sm min-h-12;
+    @apply px-4 h-12 min-h-12;
+    font-size: 0.875rem;
+    line-height: 2rem;
   }
   &-lg {
-    @apply px-6 leading-loose h-16 text-lg min-h-16;
+    @apply px-6 h-16 min-h-16;
+    font-size: 1.125rem;
+    line-height: 2rem;
   }
   &-wide {
     @apply w-64;
