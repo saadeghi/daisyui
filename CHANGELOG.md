@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.6](https://github.com/saadeghi/daisyui/compare/v1.14.5...v1.14.6) (2021-10-19)
+
+
+### Bug Fixes
+
+* [#255](https://github.com/saadeghi/daisyui/issues/255) (button line height bug) ([6160fb9](https://github.com/saadeghi/daisyui/commit/6160fb9b94f1b0afae9fef8c191ae2f4c81d36aa))
+
 ### [1.14.5](https://github.com/saadeghi/daisyui/compare/v1.14.4...v1.14.5) (2021-10-15)
 
 
