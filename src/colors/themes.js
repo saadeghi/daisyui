@@ -510,7 +510,7 @@ module.exports = {
     "--border-btn": "1px",
     "--tab-border": "1px",
     "--tab-radius": "0",
-    ":where(.btn,.mockup-code,.mockup-window,.badge,.card)": {
+    "*:where(.btn,.mockup-code,.mockup-window,.badge,.card)": {
       "border-color": "var(--border-color) !important",
       "--tw-border-opacity": "1 !important",
       "--tw-text-opacity": "1 !important",
