@@ -17,7 +17,7 @@
             <div class="stat-desc">Components</div>
           </NuxtLink>
           <NuxtLink class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" to="/docs/default-themes">
-            <div class="stat-value">21</div>
+            <div class="stat-value">22</div>
             <div class="stat-desc">Themes</div>
           </NuxtLink>
           <a class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" href="https://github.com/saadeghi/daisyui" target="_blank" rel="noopener">
@@ -25,7 +25,7 @@
             <div class="stat-desc">Github Stars</div>
           </a>
           <a class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" href="https://www.npmjs.com/package/daisyui" target="_blank" rel="noopener">
-            <div class="stat-value">120,000</div>
+            <div class="stat-value">150,000</div>
             <div class="stat-desc">NPM Installs</div>
           </a>
         </div>
