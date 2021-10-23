@@ -155,6 +155,7 @@ export default {
         { id: "black", name: "🏴  black" },
         { id: "luxury", name: "💎  luxury" },
         { id: "dracula", name: "🧛‍♂️  dracula" },
+        { id: "cmyk", name: "🖨  CMYK" },
       ],
     };
   },
