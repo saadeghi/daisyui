@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/saadeghi/daisyui/compare/v1.15.0...v1.16.0) (2021-10-23)
+
+
+### Features
+
+* Add `cmyk` theme, fix: [#203](https://github.com/saadeghi/daisyui/issues/203) ([9a230b5](https://github.com/saadeghi/daisyui/commit/9a230b5541d43610f3b2dc87a8f1ab82b075c5c7))
+* Add `steps-vertical`, fix [#192](https://github.com/saadeghi/daisyui/issues/192) ([c851160](https://github.com/saadeghi/daisyui/commit/c8511600e14feeecf880def1e76cec82bfbcc8bb))
+
 ## [1.15.0](https://github.com/saadeghi/daisyui/compare/v1.14.7...v1.15.0) (2021-10-23)
 
 
