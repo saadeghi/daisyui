@@ -510,7 +510,31 @@ module.exports = {
     "--border-btn": "1px",
     "--tab-border": "1px",
     "--tab-radius": "0",
-    "*:where(.btn,.mockup-code,.mockup-window,.badge,.card)": {
+    "*:where(.btn)": {
+      "border-color": "var(--border-color) !important",
+      "--tw-border-opacity": "1 !important",
+      "--tw-text-opacity": "1 !important",
+      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
+    },
+    "*:where(.mockup-code)": {
+      "border-color": "var(--border-color) !important",
+      "--tw-border-opacity": "1 !important",
+      "--tw-text-opacity": "1 !important",
+      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
+    },
+    "*:where(.mockup-window)": {
+      "border-color": "var(--border-color) !important",
+      "--tw-border-opacity": "1 !important",
+      "--tw-text-opacity": "1 !important",
+      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
+    },
+    "*:where(.badge)": {
+      "border-color": "var(--border-color) !important",
+      "--tw-border-opacity": "1 !important",
+      "--tw-text-opacity": "1 !important",
+      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
+    },
+    "*:where(.card)": {
       "border-color": "var(--border-color) !important",
       "--tw-border-opacity": "1 !important",
       "--tw-text-opacity": "1 !important",
