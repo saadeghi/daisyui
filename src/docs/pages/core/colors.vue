@@ -372,7 +372,7 @@
 
 
     <div class="mt-20">
-      You can use color names in utility classes just like Tailwind's color names.border-opacity-20
+      You can use color names in utility classes just like Tailwind's color names.
       <br/>
       These are default utility classes that use color names:
 
