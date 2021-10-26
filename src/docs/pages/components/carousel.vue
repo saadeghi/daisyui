@@ -3,7 +3,7 @@
     <ClassTable v-bind:data="{
       components : [
         { class: 'carousel', desc: 'Container element' },
-        { class: 'carousel-item', desc: 'Carousel itme' },
+        { class: 'carousel-item', desc: 'Carousel item' },
       ],
       utilities : [
         { class: 'carousel-center', desc: 'Snap elements to center' },
