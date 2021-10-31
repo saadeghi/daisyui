@@ -59,7 +59,8 @@
       <code>wireframe</code>
       <code>black</code>
       <code>luxury</code>
-      <code>dracula</code></pre>
+      <code>dracula</code>
+      <code>cmyk</code></pre>
       </div>
     </div>
 

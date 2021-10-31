@@ -2,22 +2,18 @@
   &-xs {
     @apply px-2 h-6 min-h-6;
     font-size: 0.75rem;
-    line-height: 1.625rem;
   }
   &-sm {
     @apply px-3 h-8 min-h-8;
     font-size: 0.875rem;
-    line-height: 2rem;
   }
   &-md {
     @apply px-4 h-12 min-h-12;
     font-size: 0.875rem;
-    line-height: 2rem;
   }
   &-lg {
     @apply px-6 h-16 min-h-16;
     font-size: 1.125rem;
-    line-height: 2rem;
   }
   &-wide {
     @apply w-64;

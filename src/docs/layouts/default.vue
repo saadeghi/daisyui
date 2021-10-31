@@ -150,12 +150,11 @@ export default {
       showMainMenu: false,
       newComponents: [
         'indicator',
-        'kbd',
-        'form-range',
         'stack',
-        'footer',
       ],
       updatedComponents: [
+        'steps',
+        'form-input',
       ],
     }
   },

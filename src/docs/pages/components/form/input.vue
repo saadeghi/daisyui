@@ -5,6 +5,7 @@
         { class: 'form-control', desc: 'Container element' },
         { class: 'label', desc: 'For helper text' },
         { class: 'input', desc: 'For <input> element' },
+        { class: 'input-group', desc: 'Wrapper to groups input and span together' },
       ],
       utilities : [
         { class: 'input-bordered', desc: 'Adds border to input' },
@@ -20,6 +21,11 @@
         { class: 'input-md', desc: 'Medium (default) size for input' },
         { class: 'input-sm', desc: 'Small size for input' },
         { class: 'input-xs', desc: 'Extra small size for input' },
+        { class: 'input-group-lg', desc: 'Large size for input-group wrapper' },
+        { class: 'input-group-md', desc: 'Medium (default) size for input-group wrapper' },
+        { class: 'input-group-sm', desc: 'Small size for input-group wrapper' },
+        { class: 'input-group-xs', desc: 'Extra small size for input-group wrapper' },
+        { class: 'input-group-vertical', desc: 'Vertical dirction for input-group items' },
       ]
     }"/>
     <Wrapper
@@ -265,6 +271,83 @@
           />
           <button class="btn btn-primary">go</button>
         </div>
+      </FormControl>
+    </Wrapper>
+    <Wrapper
+      title="input-group"
+      classes="flex flex-col space-y-2 max-w-xs"
+    >
+      <FormControl>
+        <label class="label">
+          <span class="label-text">vertical</span>
+        </label>
+        <label class="input-group">
+          <span>Email</span>
+          <Input
+            class="input input-bordered"
+            type="text"
+            placeholder="info@site.com"
+          />
+        </label>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">medium</span>
+        </label>
+        <label class="input-group input-group-md">
+          <Input
+            class="input input-bordered input-md"
+            type="text"
+            value="0.099"
+          />
+          <span>BTC</span>
+        </label>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">small</span>
+        </label>
+        <label class="input-group input-group-sm">
+          <span>Price</span>
+          <Input
+            class="input input-bordered input-sm"
+            type="text"
+            value="20.99"
+          />
+          <span>USD</span>
+        </label>
+      </FormControl>
+      <FormControl>
+        <label class="label">
+          <span class="label-text">tiny</span>
+        </label>
+        <label class="input-group input-group-xs">
+          <span>@</span>
+          <Input
+            class="input input-bordered input-xs"
+            type="text"
+            placeholder="username"
+          />
+        </label>
+      </FormControl>
+    </Wrapper>
+    </Wrapper>
+        <Wrapper
+      title="input-group-vertical"
+      classes="flex flex-col space-y-2 max-w-xs"
+    >
+      <FormControl>
+        <label class="label">
+          <span class="label-text">large</span>
+        </label>
+        <label class="input-group input-group-vertical input-group-lg">
+          <span>Email</span>
+          <Input
+            class="input input-bordered input-lg"
+            type="text"
+            placeholder="info@site.com"
+          />
+        </label>
       </FormControl>
     </Wrapper>
   </div>

@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/saadeghi/daisyui/compare/v1.15.0...v1.16.0) (2021-10-23)
+
+
+### Features
+
+* Add `cmyk` theme, fix: [#203](https://github.com/saadeghi/daisyui/issues/203) ([9a230b5](https://github.com/saadeghi/daisyui/commit/9a230b5541d43610f3b2dc87a8f1ab82b075c5c7))
+* Add `steps-vertical`, fix [#192](https://github.com/saadeghi/daisyui/issues/192) ([c851160](https://github.com/saadeghi/daisyui/commit/c8511600e14feeecf880def1e76cec82bfbcc8bb))
+
+## [1.15.0](https://github.com/saadeghi/daisyui/compare/v1.14.7...v1.15.0) (2021-10-23)
+
+
+### Features
+
+* add `input-group` utilities, fix [#231](https://github.com/saadeghi/daisyui/issues/231) ([5ac87ce](https://github.com/saadeghi/daisyui/commit/5ac87ce6d9708f359c6da5b019ba10b76f6eb93b))
+
+
+### Bug Fixes
+
+* [#259](https://github.com/saadeghi/daisyui/issues/259) (Button text alignment issue) ([bff48cb](https://github.com/saadeghi/daisyui/commit/bff48cb728b3dfa5ebf14b07e164f965d7717a51))
+
+### [1.14.7](https://github.com/saadeghi/daisyui/compare/v1.14.6...v1.14.7) (2021-10-21)
+
 ### [1.14.6](https://github.com/saadeghi/daisyui/compare/v1.14.5...v1.14.6) (2021-10-19)
 
 

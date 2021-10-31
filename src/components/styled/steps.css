@@ -60,4 +60,19 @@
   .step-error:after{
     @apply bg-error text-base-100;
   }
+  &-vertical{
+    .step {
+      gap: .5rem;
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: auto;
+      min-height: 4rem;
+      justify-items: start;
+      &:before {
+        @apply w-2 h-full top-0;
+        margin-left: 50%;
+        margin-top: -100%;
+        transform: translateX(-50%);
+      }
+    }
+  }
 }

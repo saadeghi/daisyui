@@ -105,7 +105,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
       }
     })
   }else if (config('daisyui.themes') != false) {
-    themeOrder= ['light','dark','cupcake','bumblebee','emerald','corporate','synthwave','retro','cyberpunk','valentine','halloween','garden','forest','aqua','lofi','pastel','fantasy','wireframe','black','luxury','dracula',]
+    themeOrder= ['light','dark','cupcake','bumblebee','emerald','corporate','synthwave','retro','cyberpunk','valentine','halloween','garden','forest','aqua','lofi','pastel','fantasy','wireframe','black','luxury','dracula','cmyk',]
   }else if (config('daisyui.themes') == false) {
     themeOrder.push('light')
   }

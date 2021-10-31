@@ -79,7 +79,7 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 
   
 ```html
-<link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.6/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@1.16.0/dist/full.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
 ```
 
@@ -206,11 +206,13 @@ Read the documents for more info:
   - [speckyboy](https://speckyboy.com/weekly-news-for-designers-594/)
   - [dailydev](https://app.daily.dev/posts/-4OPGw0te)
 - Youtube videos
+  - [DaisyUI : Worth a try or skip on by?](https://www.youtube.com/watch?v=hM9fENyAquM)
   - [Setup the Best Frontend JavaScript Stack - Svelte, Vite, TailwindCSS and DaisyUI](https://www.youtube.com/watch?v=mEBPN_9jTAE)
   - [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
   - [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20) 
   - [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
 - Courses
+  - [Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)
   - [Svelte for Beginners by Mike Karan](https://www.udemy.com/course/svelte-for-beginners/)
 
 </details>
