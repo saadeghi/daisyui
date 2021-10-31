@@ -28,7 +28,7 @@
 }
 .collapse-title,
 .collapse>input[type=checkbox]{
-  @apply p-4 w-full;
+  @apply p-4 pr-12 w-full;
   min-height: 3.75rem;
   transition: background-color .2s ease-in-out;
 }
