@@ -68,10 +68,8 @@
       min-height: 4rem;
       justify-items: start;
       &:before {
-        @apply w-2 h-full top-0;
+        @apply w-2 h-full top-0 transform -translate-y-1/2 -translate-x-1/2;
         margin-left: 50%;
-        margin-top: -100%;
-        transform: translateX(-50%);
       }
     }
   }
