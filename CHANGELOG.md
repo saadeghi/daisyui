@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.1](https://github.com/saadeghi/daisyui/compare/v1.16.0...v1.16.1) (2021-11-01)
+
+
+### Bug Fixes
+
+* [#261](https://github.com/saadeghi/daisyui/issues/261) - Added Right Padding for Collapse Arrow ([28a34d4](https://github.com/saadeghi/daisyui/commit/28a34d42d480509a364ebf3cffd6541b2cb4162e))
+* [#279](https://github.com/saadeghi/daisyui/issues/279) - Vertical steps resize to content ([ed7fad6](https://github.com/saadeghi/daisyui/commit/ed7fad696f9bc1d1687c45da19972a8845f27e87))
+
 ## [1.16.0](https://github.com/saadeghi/daisyui/compare/v1.15.0...v1.16.0) (2021-10-23)
 
 
