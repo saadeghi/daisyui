@@ -11,7 +11,9 @@
       <span class="text-primary">Add theme</span>
     </h2>
 
-      <br>Add your custom themes in tailwind.config.js:
+      <p class="my-4 text-lg">
+        Add your custom themes in tailwind.config.js:
+      </p>
       <div class="w-full max-w-4xl my-2">
         <div class="shadow-lg mockup-code">
         <pre><code>daisyui: {
@@ -55,23 +57,25 @@
     </h2>
 
     <p class="my-4 text-lg">
-      You can also set more variables to customize your theme.
+      You can also set more variables to customize your theme. This can be done in tailwind.css file:
     </p>
 
     <div class="w-full max-w-4xl my-2">
       <div class="shadow-lg mockup-code">
-        <pre><code>'--rounded-box': '1rem',        <span class="text-neutral-content text-opacity-20">/* border-radius for cards and other big elements */</span>
-    '--rounded-btn': '0.5rem',      <span class="text-neutral-content text-opacity-20">/* border-radius for buttons and similar elements */</span>
-    '--rounded-badge': '1.9rem',    <span class="text-neutral-content text-opacity-20">/* border-radius for badge and other small elements */</span>
+        <pre><code>:root {
+    --rounded-box: 1rem;        <span class="text-neutral-content text-opacity-20">/* border-radius for cards and other big elements */</span>
+    --rounded-btn: 0.5rem;      <span class="text-neutral-content text-opacity-20">/* border-radius for buttons and similar elements */</span>
+    --rounded-badge: 1.9rem;    <span class="text-neutral-content text-opacity-20">/* border-radius for badge and other small elements */</span>
 
-    '--animation-btn': '0.25s',     <span class="text-neutral-content text-opacity-20">/* bounce animation time for button */</span>
-    '--animation-input': '.2s',     <span class="text-neutral-content text-opacity-20">/* bounce animation time for checkbox, toggle, etc */</span>
+    --animation-btn: 0.25s;     <span class="text-neutral-content text-opacity-20">/* bounce animation time for button */</span>
+    --animation-input: 0.2s;     <span class="text-neutral-content text-opacity-20">/* bounce animation time for checkbox, toggle, etc */</span>
 
-    '--padding-card': '2rem',       <span class="text-neutral-content text-opacity-20">/* default card-body padding */</span>
+    --padding-card: 2rem;       <span class="text-neutral-content text-opacity-20">/* default card-body padding */</span>
 
-    '--btn-text-case': 'uppercase', <span class="text-neutral-content text-opacity-20">/* default text case for buttons */</span>
-    '--navbar-padding': '.5rem',    <span class="text-neutral-content text-opacity-20">/* default padding for navbar */</span>
-    '--border-btn': '1px',          <span class="text-neutral-content text-opacity-20">/* default border size for button */</span></code></pre>
+    --btn-text-case: uppercase; <span class="text-neutral-content text-opacity-20">/* default text case for buttons */</span>
+    --navbar-padding: 0.5rem;    <span class="text-neutral-content text-opacity-20">/* default padding for navbar */</span>
+    --border-btn: 1px;          <span class="text-neutral-content text-opacity-20">/* default border size for button */</span>
+  }</code></pre>
       </div>
     </div>
 
