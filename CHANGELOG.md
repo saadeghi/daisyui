@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.2](https://github.com/saadeghi/daisyui/compare/v1.16.1...v1.16.2) (2021-11-07)
+
+
+### Bug Fixes
+
+* [#292](https://github.com/saadeghi/daisyui/issues/292) - `select` caret overlap ([4e5d5c1](https://github.com/saadeghi/daisyui/commit/4e5d5c1c417fba6be6ead7986d7168fc5e958e38))
+
 ### [1.16.1](https://github.com/saadeghi/daisyui/compare/v1.16.0...v1.16.1) (2021-11-01)
 
 
