@@ -68,7 +68,7 @@
     <footer class="px-4 py-10 border-t footer bg-base-200 border-base-300 text-base-content footer-center">
       <div class="flex flex-col items-center justify-between w-full max-w-6xl sm:flex-row">
 
-        <a href="https://twitter.com/Saadeghi" rel="noopener" target="_blank" class="inline-flex items-center justify-center hover:opacity-90">
+        <a href="https://github.com/saadeghi" rel="noopener" target="_blank" class="inline-flex items-center justify-center hover:opacity-90">
           <div class="mr-3 avatar">
             <div class="p-px w-14 h-14 mask mask-squircle bg-neutral">
               <img src="https://github.com/saadeghi.png" class="mask mask-squircle" alt="Pouya Saadeghi" />
@@ -76,7 +76,7 @@
           </div>
           <div class="text-left">
             <p class="text-xs text-opacity-50 text-base-content">
-              Designed and developed by
+              Created by
             </p>
             <h2 class="text-lg font-bold text-base-content">
               Pouya Saadeghi
