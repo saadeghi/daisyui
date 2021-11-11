@@ -75,13 +75,13 @@
       </div>
 
       <p class="max-w-4xl my-4">
-        Or use <span class="badge badge-outline">base.css</span> from CDN:
+        Or use <span class="badge badge-outline">unstyled.css</span> from CDN:
       </p>
 
 
       <div class="w-full max-w-4xl my-2">
         <div class="text-sm shadow-lg mockup-code">
-          <pre><code><span class="text-neutral-content text-opacity-20">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{{ DAISYUI_VERSION }}/dist/base.css<span class="text-neutral-content text-opacity-20">" rel="stylesheet" /&gt;</span></code></pre>
+          <pre><code><span class="text-neutral-content text-opacity-20">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{{ DAISYUI_VERSION }}/dist/unstyled.css<span class="text-neutral-content text-opacity-20">" rel="stylesheet" /&gt;</span></code></pre>
         </div>
       </div>
 
