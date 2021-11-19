@@ -211,6 +211,7 @@ Read the documents for more info:
   - [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
   - [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20) 
   - [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
+  - [Next.js - Tailwind - DeisyUI Setup](https://www.youtube.com/watch?v=uXQgJbUj3PQ)
 - Courses
   - [Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)
   - [Svelte for Beginners by Mike Karan](https://www.udemy.com/course/svelte-for-beginners/)
