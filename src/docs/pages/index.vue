@@ -25,7 +25,7 @@
             <div class="stat-desc">Github Stars</div>
           </a>
           <a class="gap-0 px-10 bg-transparent stat place-items-center hover:opacity-70" href="https://www.npmjs.com/package/daisyui" target="_blank" rel="noopener">
-            <div class="stat-value">190,000</div>
+            <div class="stat-value">200,000</div>
             <div class="stat-desc">NPM Installs</div>
           </a>
         </div>
