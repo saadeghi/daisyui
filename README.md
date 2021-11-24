@@ -205,6 +205,7 @@ Read the documents for more info:
   - [Siecle Digital](https://siecledigital.fr/2021/05/29/daisyui-plugin-gratuit-avec-composants-tailwind-css-a/)
   - [speckyboy](https://speckyboy.com/weekly-news-for-designers-594/)
   - [dailydev](https://app.daily.dev/posts/-4OPGw0te)
+  - [Future Tech Blog (Japanese)](https://future-architect.github.io/articles/20211124a/)
 - Youtube videos
   - [DaisyUI : Worth a try or skip on by?](https://www.youtube.com/watch?v=hM9fENyAquM)
   - [Setup the Best Frontend JavaScript Stack - Svelte, Vite, TailwindCSS and DaisyUI](https://www.youtube.com/watch?v=mEBPN_9jTAE)
