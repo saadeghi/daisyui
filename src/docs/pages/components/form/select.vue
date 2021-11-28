@@ -149,7 +149,7 @@
     </Wrapper>
 
 
-    <Wrapper classes="flex flex-col space-y-2" title="select diabled">
+    <Wrapper classes="flex flex-col space-y-2" title="select disabled">
       <Select classes="select-bordered w-full max-w-xs" disabled>
         <option disabled selected>Choose your superpower</option>
         <option>telekinesis</option>
