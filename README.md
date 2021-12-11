@@ -207,9 +207,10 @@ Read the documents for more info:
   - [dailydev](https://app.daily.dev/posts/-4OPGw0te)
   - [Future Tech Blog (Japanese)](https://future-architect.github.io/articles/20211124a/)
 - Youtube videos
-  - [DaisyUI : Worth a try or skip on by?](https://www.youtube.com/watch?v=hM9fENyAquM)
   - [Setup the Best Frontend JavaScript Stack - Svelte, Vite, TailwindCSS and DaisyUI](https://www.youtube.com/watch?v=mEBPN_9jTAE)
+  - [Jamstack powered Image gallery with Cloudinary, Tailwind and DaisyUI](https://www.youtube.com/watch?v=Hpjq0D1vcpM)
   - [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
+  - [DaisyUI : Worth a try or skip on by?](https://www.youtube.com/watch?v=hM9fENyAquM)
   - [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20) 
   - [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
   - [Next.js - Tailwind - DeisyUI Setup](https://www.youtube.com/watch?v=uXQgJbUj3PQ)
