@@ -17,7 +17,7 @@
     }
   }
   code{
-    background: hsla(var(--bc)/.2);
+    background: hsla(var(--bc) / .2);
     color: hsl(var(--bc));
     padding: 2px 6px;
     border-radius: var(--rounded-badge);

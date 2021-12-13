@@ -12,7 +12,8 @@ module.exports = {
       "preset": [
         "default",
         {
-          "mergeRules": false
+          "mergeRules": false,
+          "normalizeWhitespace": false,
         }
       ]
     }),
