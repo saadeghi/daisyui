@@ -11,5 +11,5 @@
   @apply flex;
 }
 .modal-toggle{
-  @apply appearance-none opacity-0 w-0 h-0 absolute;
+  @apply appearance-none opacity-0 w-0 h-0 fixed;
 }
