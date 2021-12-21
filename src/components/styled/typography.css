@@ -1,5 +1,5 @@
-.prose{
-  color: inherit;
+/* v0.4 backward compatibility */
+/* .prose{
   a,
   blockquote,
   figure figcaption,
@@ -12,14 +12,49 @@
   h3,
   h4{
     color: inherit;
-    &:hover{
-      color: inherit;
-    }
   }
-  code{
-    background: hsla(var(--bc) / .2);
+  tbody tr,
+  thead{
+    border-bottom-color: hsl(var(--bc) / 20%);
+  }
+  ul > li:before{
+    background-color: hsl(var(--bc) / 40%);
+  }
+  ol > li:before{
+    color: hsl(var(--bc) / 40%);
+  }
+} */
+
+
+
+
+/* main */
+.prose{
+  color: inherit;
+  & :where(
+    a,
+    blockquote,
+    figure figcaption,
+    a code,
+    thead,
+    strong,
+    .lead,
+    h1,
+    h2,
+    h3,
+    h4
+  ):not(:where([class~="not-prose"] *)){
+    color: inherit;
+  }
+  & :where(code):not(:where([class~="not-prose"] *)){
+    background: hsla(var(--bc) / .1);
     color: hsl(var(--bc));
+    padding: 2px 8px;
     border-radius: var(--rounded-badge);
+  }
+  & code:after, 
+  & code:before{
+    content: none;
   }
   pre{
     background: hsl(var(--n));
@@ -28,27 +63,20 @@
     code{
       border-radius: none;
       background: inherit;
+      padding: 0;
       color: inherit;
     }
-  }
-  & code:after, 
-  & code:before{
-    content: none;
-  }
-  ol > li:before,
-  ol > li:hover:before{
-    color: inherit;
   }
   blockquote{
     border-left-color: hsl(var(--bc) / 40%);
   }
-  ul > li:before{
-    background-color: hsl(var(--bc) / 40%);
+  & :where(ul > li, ol > li):not(:where([class~="not-prose"] *))::marker{
+    color: hsl(var(--bc) / 40%);
   }
-  thead{
-    border-bottom-color: hsl(var(--bc) / 40%);
+  & :where(thead th, tbody td):not(:where([class~="not-prose"] *)){
+    color: inherit;
   }
-  tbody tr{
-    border-bottom-color: hsl(var(--bc) / 40%);
+  & :where(tbody tr, thead):not(:where([class~="not-prose"] *)){
+    border-bottom-color: hsl(var(--bc) / 20%);
   }
 }
