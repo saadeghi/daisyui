@@ -22,7 +22,7 @@ jobs:
 
       - name: check latest released version
         id: check
-        uses: EndBug/version-check@v1
+        uses: EndBug/version-check@v2.1.0
         with:
             file-url: https://unpkg.com/daisyui@latest/package.json
             static-checking: localIsNew
