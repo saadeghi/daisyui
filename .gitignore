@@ -6,3 +6,4 @@ yarn.lock
 /colors
 /index.js
 .idea
+.DS_Store
