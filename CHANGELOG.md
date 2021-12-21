@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/saadeghi/daisyui/compare/v1.16.6...v1.17.0) (2021-12-21)
+
+
+### Bug Fixes
+
+* [#344](https://github.com/saadeghi/daisyui/issues/344) (typography plugin v0.5 compatibility) ([0969505](https://github.com/saadeghi/daisyui/commit/09695059b2ce1c960fb1dc24080bca41576e938e))
+
 ### [1.16.6](https://github.com/saadeghi/daisyui/compare/v1.16.5...v1.16.6) (2021-12-16)
 
 
