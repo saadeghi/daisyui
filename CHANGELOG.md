@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.1](https://github.com/saadeghi/daisyui/compare/v1.16.6...v1.17.1) (2021-12-21)
+
+
+### Features
+
+* **components:** steps-horizontal ([5577140](https://github.com/saadeghi/daisyui/commit/5577140e3e8fccd8ada90d27f57c8f9bb5bb6a44))
+* responsive `steps` ([7ba7d65](https://github.com/saadeghi/daisyui/commit/7ba7d6534b6a2abc6b6077faba4c2a5431307b42))
+
+
+### Bug Fixes
+
+* [#341](https://github.com/saadeghi/daisyui/issues/341) ([118ff41](https://github.com/saadeghi/daisyui/commit/118ff417df6d9a1c0170db651067bd524ecb93aa))
+* [#344](https://github.com/saadeghi/daisyui/issues/344) (typography plugin v0.5 compatibility) ([0969505](https://github.com/saadeghi/daisyui/commit/09695059b2ce1c960fb1dc24080bca41576e938e))
+
 ## [1.17.0](https://github.com/saadeghi/daisyui/compare/v1.16.6...v1.17.0) (2021-12-21)
 
 
