@@ -1,0 +1,25 @@
+.prose{
+  a,
+  blockquote,
+  figure figcaption,
+  a code,
+  thead,
+  strong,
+  .lead,
+  h1,
+  h2,
+  h3,
+  h4{
+    color: inherit;
+  }
+  tbody tr,
+  thead{
+    border-bottom-color: hsl(var(--bc) / 20%);
+  }
+  ul > li:before{
+    background-color: hsl(var(--bc) / 40%);
+  }
+  ol > li:before{
+    color: hsl(var(--bc) / 40%);
+  }
+}

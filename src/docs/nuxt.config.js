@@ -143,7 +143,7 @@ export default {
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities/global')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities/unstyled')]),
     ...(process.env.NODE_ENV === 'production' ? [] : [...getFiles('../utilities/styled')]),
-
+    '~/assets/css/typography',
   ],
 
 
