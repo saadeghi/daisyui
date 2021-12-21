@@ -45,6 +45,15 @@
         </ul>
     </Wrapper>
 
+    <Wrapper title="responsive (md:steps-horizontal)">
+        <ul class="steps steps-vertical md:steps-horizontal">
+          <li class="step step-primary">Register</li>
+          <li class="step step-primary">Choose plan</li>
+          <li class="step">Purchase</li>
+          <li class="step">Receive Product</li>
+        </ul>
+    </Wrapper>
+
 
     <Wrapper title="steps">
         <ul class="w-full steps">

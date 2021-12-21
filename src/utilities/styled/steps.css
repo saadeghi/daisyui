@@ -1,0 +1,27 @@
+.steps{
+  &-horizontal{
+    [class~="step"] {
+      grid-template-rows: 40px 1fr;
+      grid-template-columns: auto;
+      min-width: 4rem;
+      &:before {
+        @apply h-2 w-full translate-y-0 translate-x-0;
+        content: '';
+        margin-left: -100%;
+      }
+    }
+  }
+  &-vertical{
+    [class~="step"] {
+      gap: .5rem;
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: auto;
+      min-height: 4rem;
+      justify-items: start;
+      &:before {
+        @apply w-2 h-full -translate-y-1/2 -translate-x-1/2;
+        margin-left: 50%;
+      }
+    }
+  }
+}
