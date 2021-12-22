@@ -6,6 +6,9 @@
   &.bordered{
     @apply border border-base-200;
   }
+  &-bordered{
+    @apply border border-base-200;
+  }
   &.compact{
     .card-body {
       @apply p-4 text-sm;
