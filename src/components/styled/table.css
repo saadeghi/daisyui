@@ -1,6 +1,6 @@
 .table{
   @apply text-left;
-  th,td{
+  :where(th,td){
     @apply p-4 whitespace-nowrap align-middle;
   }
   tr.active,
@@ -15,17 +15,15 @@
       @apply bg-base-300;
     }
   }
-  &:not(.table-zebra){
-    thead,tbody,tfoot{
-      tr:not(:last-child){
-        th,td{
-          @apply border-b border-base-200;
-        }
+  &:where(:not(.table-zebra)){
+    :where(thead,tbody,tfoot){
+      :where(tr:not(:last-child) :where(th,td)){
+        @apply border-b border-base-200;
       }
     }
   }
-  thead,tfoot{
-    th,td{
+  :where(thead,tfoot){
+    :where(th,td){
       @apply bg-base-200 text-xs uppercase font-bold;
       &:first-child{
         @apply rounded-l-lg;
@@ -38,11 +36,11 @@
   /* th:first-child{
     box-shadow: -1px 0 hsl(var(--b2, 210 20% 98%)) inset;
   } */
-  tbody{
-    th,td{
-      @apply bg-base-100;
-    }
+
+  :where(tbody th,tbody td){
+    @apply bg-base-100;
   }
+
   &-zebra tbody{
     tr{
       th,td{
