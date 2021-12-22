@@ -5,14 +5,6 @@
         { class: 'btn', desc: 'Button' },
       ],
       utilities : [
-        { class: 'btn-lg', desc: 'Large button' },
-        { class: 'btn-md', desc: 'Medium button (default)' },
-        { class: 'btn-sm', desc: 'Small button' },
-        { class: 'btn-xs', desc: 'Extra small button' },
-        { class: 'btn-wide', desc: 'Wide button (more horizontal padding)' },
-        { class: 'btn-block', desc: 'Full width button' },
-        { class: 'btn-circle', desc: 'Circle button with a 1:1 ratio' },
-        { class: 'btn-square', desc: 'Square button with a 1:1 ratio' },
         { class: 'btn-primary', desc: 'Button with `primary` color' },
         { class: 'btn-secondary', desc: 'Button with `secondary` color' },
         { class: 'btn-accent', desc: 'Button with `accent` color' },
@@ -28,7 +20,16 @@
         { class: 'glass', desc: 'Button with a glass effect' },
         { class: 'loading', desc: 'Shows loading spinner' },
         { class: 'no-animation', desc: 'Disables click animation' },
-      ]
+      ],
+      responsive : [
+        { class: 'btn-lg', desc: 'Large button' },
+        { class: 'btn-md', desc: 'Medium button (default)' },
+        { class: 'btn-sm', desc: 'Small button' },
+        { class: 'btn-xs', desc: 'Extra small button' },
+        { class: 'btn-wide', desc: 'Wide button (more horizontal padding)' },
+        { class: 'btn-block', desc: 'Full width button' },
+        { class: 'btn-circle', desc: 'Circle button with a 1:1 ratio' },
+        { class: 'btn-square', desc: 'Square button with a 1:1 ratio' },      ]
     }"/>
     <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-y-2 md:space-y-0 flex-col md:flex-row" title="button with brand colors">
       <Button classes="">neutral</Button>

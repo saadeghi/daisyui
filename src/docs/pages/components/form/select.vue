@@ -16,6 +16,8 @@
         { class: 'select-success', desc: 'Adds `success` color to select' },
         { class: 'select-warning', desc: 'Adds `warning` color to select' },
         { class: 'select-error', desc: 'Adds `error` color to select' },
+      ],
+      responsive: [
         { class: 'select-lg', desc: 'Large size for select' },
         { class: 'select-md', desc: 'Medium (default) size for select' },
         { class: 'select-sm', desc: 'Small size for select' },

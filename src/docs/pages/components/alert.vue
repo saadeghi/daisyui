@@ -4,7 +4,7 @@
       components : [
         { class: 'alert', desc: 'Container element' },
       ],
-      utilities : [
+      responsive : [
         { class: 'alert-info', desc: 'Alert with `info` color' },
         { class: 'alert-success', desc: 'Alert with `success` color' },
         { class: 'alert-warning', desc: 'Alert with `warning` color' },

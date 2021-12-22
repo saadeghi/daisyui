@@ -9,6 +9,8 @@
         { class: 'toggle-primary', desc: 'Adds `primary` to toggle' },
         { class: 'toggle-secondary', desc: 'Adds `secondary` to toggle' },
         { class: 'toggle-accent', desc: 'Adds `accent` to toggle' },
+      ],
+      responsive: [
         { class: 'toggle-lg', desc: 'Large toggle' },
         { class: 'toggle-md', desc: 'Medium toggle (default)' },
         { class: 'toggle-sm', desc: 'Small toggle' },

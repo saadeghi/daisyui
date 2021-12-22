@@ -9,6 +9,8 @@
         { class: 'radio-primary', desc: 'Adds `primary` to radio' },
         { class: 'radio-secondary', desc: 'Adds `secondary` to radio' },
         { class: 'radio-accent', desc: 'Adds `accent` to radio' },
+      ],
+      responsive: [
         { class: 'radio-lg', desc: 'Large radio' },
         { class: 'radio-md', desc: 'Medium radio (default)' },
         { class: 'radio-sm', desc: 'Small radio' },

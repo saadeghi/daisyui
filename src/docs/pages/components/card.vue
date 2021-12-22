@@ -8,10 +8,13 @@
         { class: 'card-actions', desc: 'Container for buttons' },
       ],
       utilities : [
-        { class: 'bordered', desc: 'Adds border' },
-        { class: 'compact', desc: 'Less padding' },
-        { class: 'card-side', desc: 'The image in <figure> will be on to the side' },
+        { class: 'card-bordered', desc: 'Adds border to <card>' },
         { class: 'image-full', desc: 'The image in <figure> element will be the background' },
+      ],
+      responsive : [
+        { class: 'card-normal', desc: 'Applies default paddings' },
+        { class: 'card-compact', desc: 'Applies smaller padding' },
+        { class: 'card-side', desc: 'The image in <figure> will be on to the side' },
       ]
     }"/>
     <Wrapper title="card" classes="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -102,6 +105,17 @@
 
     </Wrapper>
 
+    <Wrapper title="responsive compact (card-compact lg:card-normal)">
+      <Card class="w-72 bordered card-compact lg:card-normal">
+        <figure>
+          <img src="https://picsum.photos/id/1005/400/250" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">This card is compact only on small screens</h2>
+          <p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p>
+        </div>
+      </Card>
+    </Wrapper>
     <Wrapper title="card with side image" classes="grid grid-cols-1 gap-6">
 
       <Card class="lg:card-side bordered">

@@ -8,6 +8,8 @@
         { class: 'range-primary', desc: 'primary color' },
         { class: 'range-secondary', desc: 'secondary color' },
         { class: 'range-accent', desc: 'accent color' },
+      ],
+      responsive: [
         { class: 'range-lg', desc: 'Large range' },
         { class: 'range-md', desc: 'Medium range (default)' },
         { class: 'range-sm', desc: 'Small range' },

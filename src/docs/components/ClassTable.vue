@@ -51,6 +51,14 @@
             <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border rounded border-opacity-10" :class="item.color"></span></td>
             <td>{{ item.desc }}</td>
           </tr>
+          <tr v-for="(item, index) in data.responsive">
+            <th class="font-normal">
+              <span class="font-mono lowercase">{{ item.class }}</span>
+            </th>
+            <td v-if="data.showType !== false"><span class="w-20 badge badge-sm badge-info">Responsive</span></td>
+            <td v-if="data.showColors === true"><span class="inline-block w-6 h-6 border rounded border-opacity-10" :class="item.color"></span></td>
+            <td>{{ item.desc }}</td>
+          </tr>
         </tbody>
       </table>
     </div>

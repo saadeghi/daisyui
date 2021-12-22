@@ -4,7 +4,7 @@
       components : [
         { class: 'divider', desc: 'Divide elements on top of each other' },
       ],
-      utilities : [
+      responsive : [
         { class: 'divider-vertical', desc: 'Divide elements next to each other' },
       ]
     }"/>

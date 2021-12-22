@@ -9,6 +9,8 @@
         { class: 'checkbox-primary', desc: 'Adds `primary` to checkbox' },
         { class: 'checkbox-secondary', desc: 'Adds `secondary` to checkbox' },
         { class: 'checkbox-accent', desc: 'Adds `accent` to checkbox' },
+      ],
+      responsive: [
         { class: 'checkbox-lg', desc: 'Large checkbox' },
         { class: 'checkbox-md', desc: 'Medium checkbox (default)' },
         { class: 'checkbox-sm', desc: 'Small checkbox' },

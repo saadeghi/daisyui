@@ -6,8 +6,6 @@
         { class: 'step', desc: 'A step item' },
       ],
       utilities : [
-        { class: 'steps-vertical', desc: 'makes `steps` vertical' },
-        { class: 'steps-horizontal', desc: 'makes `steps` horizontal' },
         { class: 'step-primary', desc: 'Adds `primary` color to step' },
         { class: 'step-secondary', desc: 'Adds `secondary` color to step' },
         { class: 'step-accent', desc: 'Adds `accent` color to step' },
@@ -15,6 +13,10 @@
         { class: 'step-success', desc: 'Adds `success` color to step' },
         { class: 'step-warning', desc: 'Adds `warning` color to step' },
         { class: 'step-error', desc: 'Adds `error` color to step' },
+      ],
+      utilities : [
+        { class: 'steps-vertical', desc: 'makes `steps` vertical' },
+        { class: 'steps-horizontal', desc: 'makes `steps` horizontal' },
       ]
     }"/>
 

@@ -6,7 +6,12 @@
       ],
       utilities : [
         { class: 'badge-outline', desc: 'transparent badge with [colorful] border' },
-        { class: 'badge-primary', desc: 'badge with `primary` color' },
+      ],
+      responsive: [
+        { class: 'badge-lg', desc: 'badge with large size' },
+        { class: 'badge-md', desc: 'badge with medium size (default)' },
+        { class: 'badge-sm', desc: 'badge with small size' },
+        { class: 'badge-xs', desc: 'badge with extra small size' },        { class: 'badge-primary', desc: 'badge with `primary` color' },
         { class: 'badge-secondary', desc: 'badge with `secondary` color' },
         { class: 'badge-accent', desc: 'badge with `accent` color' },
         { class: 'badge-ghost', desc: 'badge with `ghost` color' },
@@ -14,10 +19,6 @@
         { class: 'badge-success', desc: 'badge with `success` color' },
         { class: 'badge-warning', desc: 'badge with `warning` color' },
         { class: 'badge-error', desc: 'badge with `error` color' },
-        { class: 'badge-lg', desc: 'badge with large size' },
-        { class: 'badge-md', desc: 'badge with medium size (default)' },
-        { class: 'badge-sm', desc: 'badge with small size' },
-        { class: 'badge-xs', desc: 'badge with extra small size' },
       ]
     }"/>
     <Wrapper classes="flex flex-wrap items-start md:space-x-2 space-x-0 space-y-2 md:space-y-0 flex-col md:flex-row" title="badge">

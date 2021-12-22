@@ -10,6 +10,8 @@
         { class: 'tab-bordered', desc: 'Adds bottom border to tab item' },
         { class: 'tab-lifted', desc: 'Adds lifted style to tab item' },
         { class: 'tabs-boxed', desc: 'Adds a box style to tabs container' },
+      ],
+      responsive: [
         { class: 'tab-xs', desc: 'Shows tab in extra small size' },
         { class: 'tab-sm', desc: 'Shows tab in small size' },
         { class: 'tab-md', desc: 'Shows tab in medium (defaul) size' },

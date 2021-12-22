@@ -17,15 +17,17 @@
         { class: 'input-success', desc: 'Adds `success` color to input' },
         { class: 'input-warning', desc: 'Adds `warning` color to input' },
         { class: 'input-error', desc: 'Adds `error` color to input' },
-        { class: 'input-lg', desc: 'Large size for input' },
-        { class: 'input-md', desc: 'Medium (default) size for input' },
-        { class: 'input-sm', desc: 'Small size for input' },
-        { class: 'input-xs', desc: 'Extra small size for input' },
         { class: 'input-group-lg', desc: 'Large size for input-group wrapper' },
         { class: 'input-group-md', desc: 'Medium (default) size for input-group wrapper' },
         { class: 'input-group-sm', desc: 'Small size for input-group wrapper' },
         { class: 'input-group-xs', desc: 'Extra small size for input-group wrapper' },
         { class: 'input-group-vertical', desc: 'Vertical dirction for input-group items' },
+      ],
+      responsive: [
+        { class: 'input-lg', desc: 'Large size for input' },
+        { class: 'input-md', desc: 'Medium (default) size for input' },
+        { class: 'input-sm', desc: 'Small size for input' },
+        { class: 'input-xs', desc: 'Extra small size for input' },
       ]
     }"/>
     <Wrapper

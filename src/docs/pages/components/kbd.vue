@@ -4,7 +4,7 @@
       components : [
         { class: 'kbd', desc: 'Do show a keyboard key or a shortcut key' },
       ],
-      utilities : [
+      responsive : [
         { class: 'kbd-lg', desc: 'Large size' },
         { class: 'kbd-md', desc: 'Medium size (default)' },
         { class: 'kbd-sm', desc: 'Small size' },
