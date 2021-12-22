@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/saadeghi/daisyui/compare/v1.17.1...v1.18.0) (2021-12-22)
+
+
+### Features
+
+* add `card-bordered` class ([048c1c6](https://github.com/saadeghi/daisyui/commit/048c1c6a6005fd271d30ae8b1bb66273bd63f6da))
+* responsive compact card. fix [#324](https://github.com/saadeghi/daisyui/issues/324) ([b7d2185](https://github.com/saadeghi/daisyui/commit/b7d21851a19594fc20d767d9ee888e974ce201dc))
+
+
+### Bug Fixes
+
+* [#266](https://github.com/saadeghi/daisyui/issues/266) ([e21f169](https://github.com/saadeghi/daisyui/commit/e21f16946e88d687632924c73841d7dee8240cc5))
+* [#273](https://github.com/saadeghi/daisyui/issues/273) ([6b22d83](https://github.com/saadeghi/daisyui/commit/6b22d83974234a1f0b4d732dcb5cc410d9a67fb8))
+* [#299](https://github.com/saadeghi/daisyui/issues/299) ([e5831b9](https://github.com/saadeghi/daisyui/commit/e5831b91c9cb914ccce9a6baca334cbdd0d3b63f))
+* [#340](https://github.com/saadeghi/daisyui/issues/340) ([58bed26](https://github.com/saadeghi/daisyui/commit/58bed26e15f191eb4670b8a0fec43fec41d74fd3))
+
 ### [1.17.1](https://github.com/saadeghi/daisyui/compare/v1.16.6...v1.17.1) (2021-12-21)
 
 
