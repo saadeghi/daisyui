@@ -12,7 +12,8 @@
     @apply rounded-btn;
   }
   li{
-    >a, >span{
+    >:where(a),
+    >:where(span){
       @apply text-current px-5 py-3;
     }
 
