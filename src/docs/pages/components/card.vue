@@ -19,7 +19,7 @@
     }"/>
     <Wrapper title="card" classes="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <Card class="bordered">
+      <Card class="card-bordered">
         <figure>
           <img src="https://picsum.photos/id/1005/400/250" />
         </figure>
@@ -32,7 +32,7 @@
         </div>
       </Card>
 
-      <Card class="bordered">
+      <Card class="card-bordered">
         <div class="card-body">
           <h2 class="card-title">Image bottom</h2>
           <p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p>
@@ -46,7 +46,7 @@
         </figure>
       </Card>
 
-      <Card class="bordered">
+      <Card class="card-bordered">
         <figure>
           <img class="w-full" src="https://picsum.photos/id/1005/60/40" />
         </figure>
@@ -106,7 +106,7 @@
     </Wrapper>
 
     <Wrapper title="responsive compact (card-compact lg:card-normal)">
-      <Card class="w-72 bordered card-compact lg:card-normal">
+      <Card class="w-72 card-bordered card-compact lg:card-normal">
         <figure>
           <img src="https://picsum.photos/id/1005/400/250" />
         </figure>
@@ -118,7 +118,7 @@
     </Wrapper>
     <Wrapper title="card with side image" classes="grid grid-cols-1 gap-6">
 
-      <Card class="lg:card-side bordered">
+      <Card class="lg:card-side card-bordered">
         <figure>
           <img src="https://picsum.photos/id/1005/400/250" />
         </figure>
@@ -132,7 +132,7 @@
         </div>
       </Card>
 
-      <Card class="lg:card-side bordered">
+      <Card class="lg:card-side card-bordered">
         <figure>
           <img src="https://picsum.photos/id/1005/400/250" />
         </figure>
@@ -151,7 +151,7 @@
 
     <Wrapper title="card without image" classes="grid grid-cols-1 gap-6">
 
-      <Card class="lg:card-side bordered">
+      <Card class="lg:card-side card-bordered">
         <div class="card-body">
           <h2 class="card-title">No Images</h2>
           <p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p>
