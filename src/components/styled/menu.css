@@ -15,18 +15,18 @@
     >a, >span{
       @apply text-current px-5 py-3;
     }
-    >a{
-      &:focus,
-      &:hover{
-        @apply bg-base-content bg-opacity-10;
-      }
-      &.active{
-        @apply bg-primary text-primary-content;
-      }
-      &:active{
-        @apply bg-primary-focus text-primary-content;
-      }
+
+    >:where(a:focus),
+    >:where(a:hover){
+      @apply bg-base-content bg-opacity-10;
     }
+    >:where(a.active){
+      @apply bg-primary text-primary-content;
+    }
+    >:where(a:active){
+      @apply bg-primary-focus text-primary-content;
+    }
+
     &.disabled{
       &>a, &>span{
         @apply text-base-content text-opacity-20 hover:bg-transparent;
