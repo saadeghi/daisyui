@@ -207,6 +207,7 @@ Read the documents for more info:
   - [dailydev](https://app.daily.dev/posts/-4OPGw0te)
   - [Future Tech Blog (Japanese)](https://future-architect.github.io/articles/20211124a/)
 - Youtube videos
+  - [Supabase & Sveltekit - Build Twitter in 75 minutes](https://www.youtube.com/watch?v=mPQyckogDYc)
   - [Setup the Best Frontend JavaScript Stack - Svelte, Vite, TailwindCSS and DaisyUI](https://www.youtube.com/watch?v=mEBPN_9jTAE)
   - [Jamstack powered Image gallery with Cloudinary, Tailwind and DaisyUI](https://www.youtube.com/watch?v=Hpjq0D1vcpM)
   - [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
