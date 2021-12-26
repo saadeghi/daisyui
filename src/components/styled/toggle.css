@@ -8,7 +8,8 @@
   &:focus-visible {
     --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
   }
-  &:checked{
+  &:checked,
+  &[checked=true]{
     --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
     box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
@@ -20,7 +21,8 @@
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
-    &:checked{
+    &:checked,
+    &[checked=true]{
       --chkbg: hsl(var(--p));
       @apply border-primary;
       @apply bg-primary border-opacity-10 border-primary text-primary-content;
@@ -30,7 +32,8 @@
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
     }
-    &:checked{
+    &:checked,
+    &[checked=true]{
       --chkbg: hsl(var(--s));
       @apply border-secondary;
       @apply bg-secondary border-opacity-10 border-secondary text-secondary-content;
@@ -40,7 +43,8 @@
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
     }
-    &:checked{
+    &:checked,
+    &[checked=true]{
       --chkbg: hsl(var(--a));
       @apply border-accent;
       @apply bg-accent border-opacity-10 border-accent text-accent-content;

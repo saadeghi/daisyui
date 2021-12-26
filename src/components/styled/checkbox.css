@@ -5,7 +5,8 @@
   &:focus-visible {
     box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
   }
-  &:checked{
+  &:checked,
+  &[checked=true]{
     @apply bg-base-content bg-no-repeat;
     animation: checkmark var(--animation-input, .2s)  ease-in-out;
     background-image:
@@ -23,7 +24,8 @@
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
-    &:checked{
+    &:checked,
+  &[checked=true]{
       @apply bg-primary border-primary text-primary-content;
     }
   }
@@ -34,7 +36,8 @@
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
     }
-    &:checked{
+    &:checked,
+  &[checked=true]{
       @apply bg-secondary border-secondary text-secondary-content;
     }
   }
@@ -45,7 +48,8 @@
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
     }
-    &:checked{
+    &:checked,
+  &[checked=true]{
       @apply bg-accent border-accent text-accent-content;
     }
   }
