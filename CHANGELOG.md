@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/saadeghi/daisyui/compare/v1.19.0...v1.20.0) (2021-12-26)
+
+
+### Features
+
+* support [checked=true] style on checkbox and toggle ([8131232](https://github.com/saadeghi/daisyui/commit/8131232836c145c23ed40707f4272fb00c6a3f1b))
+
 ## [1.19.0](https://github.com/saadeghi/daisyui/compare/v1.17.1...v1.19.0) (2021-12-22)
 
 
