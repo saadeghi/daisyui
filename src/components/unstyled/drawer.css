@@ -1,5 +1,11 @@
 .drawer{
   @apply grid overflow-hidden;
+  &.drawer-end{
+    direction: rtl;
+  }
+  &.drawer-end > *{
+    direction: ltr;
+  }
   &.drawer-end .drawer-toggle{
     & ~ .drawer-side>.drawer-overlay + *{
       @apply translate-x-full justify-self-end;
@@ -63,6 +69,7 @@
   }
   .drawer-mobile.drawer-end{
     grid-auto-columns: auto max-content;
+    direction: ltr;
     &>.drawer-toggle{
       & ~ .drawer-content{
         @apply lg:col-start-1 h-auto;
