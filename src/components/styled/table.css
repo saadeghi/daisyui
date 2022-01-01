@@ -58,9 +58,4 @@
       }
     }
   }
-  &-compact{
-    th,td{
-      @apply p-2 text-sm;
-    }
-  }
 }

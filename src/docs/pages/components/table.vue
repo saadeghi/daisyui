@@ -6,10 +6,13 @@
       ],
       utilities : [
         { class: 'table-zebra', desc: 'For the active tab' },
-        { class: 'table-compact', desc: 'Make table more compact' },
         { class: 'active', desc: 'For <tr> to highlight current row' },
         { class: 'hover', desc: 'For <tr> to highlight current row on hover' },
-      ]
+      ],
+      responsive : [
+        { class: 'table-normal', desc: 'Normal paddings' },
+        { class: 'table-compact', desc: 'Compact paddings' },
+      ],
     }"/>
 
     <Wrapper title="table">
