@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.22.0](https://github.com/saadeghi/daisyui/compare/v1.20.1...v1.22.0) (2022-01-08)
+
+
+### Features
+
+* add rating component (fix [#374](https://github.com/saadeghi/daisyui/issues/374)) ([6285227](https://github.com/saadeghi/daisyui/commit/6285227ffbf9818b9bc2d8be1a4a5a610ad09954))
+* responsive table compact (fix [#364](https://github.com/saadeghi/daisyui/issues/364)) ([6e3d9b1](https://github.com/saadeghi/daisyui/commit/6e3d9b1074a3f1b02af27d102c3b13e30427f511))
+
 ## [1.21.0](https://github.com/saadeghi/daisyui/compare/v1.20.1...v1.21.0) (2022-01-01)
 
 
