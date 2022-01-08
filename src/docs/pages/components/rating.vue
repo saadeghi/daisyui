@@ -8,10 +8,10 @@
         { class: 'rating-hidden', desc: 'hides the input. Useful to clear the the rating' },
       ],
       responsive : [
-        { class: 'btn-lg', desc: 'Large rating' },
-        { class: 'btn-md', desc: 'Medium rating (default)' },
-        { class: 'btn-sm', desc: 'Small rating' },
-        { class: 'btn-xs', desc: 'Extra small rating' },
+        { class: 'rating-lg', desc: 'Large rating' },
+        { class: 'rating-md', desc: 'Medium rating (default)' },
+        { class: 'rating-sm', desc: 'Small rating' },
+        { class: 'rating-xs', desc: 'Extra small rating' },
       ],
     }"/>
     <Wrapper title="rating">
