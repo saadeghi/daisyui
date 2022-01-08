@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[109],{464:function(t,e,n){"use strict";n.r(e);var l={middleware:[function(t){(0,t.redirect)("https://play.tailwindcss.com/OIpl7qbi1P")}]},c=n(6),component=Object(c.a)(l,(function(){var t=this.$createElement;return(this._self._c||t)("div")}),[],!1,null,null,null);e.default=component.exports}}]);
