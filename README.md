@@ -154,7 +154,7 @@ Read the documents for more info:
   - [x] Checkbox
   - [x] Radio
   - [x] Range slider
-  - [ ] Rating
+  - [x] Rating
   - [x] Toggle
   - [ ] Upload
 - [x] Hero
@@ -218,6 +218,9 @@ Read the documents for more info:
 - Courses
   - [Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)
   - [Svelte for Beginners by Mike Karan](https://www.udemy.com/course/svelte-for-beginners/)
+  - [React Front To Back 2022 by Brad Traversy](https://www.udemy.com/course/react-front-to-back-2022/)
+  - [Build Instagram profile page UI clone w/Next.js TailwindCSS](https://www.udemy.com/course/build-instagram-profile-page-ui-clone-nextjs-tailwindcss/)
+  - [Instagram UI Clone Login Page w/ NextJS & TailwindCSS](https://www.udemy.com/course/instagram-ui-clone-login-page-w-nextjs-tailwindcss/)
 
 </details>
 
