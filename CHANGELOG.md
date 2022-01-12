@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.2](https://github.com/saadeghi/daisyui/compare/v1.22.1...v1.22.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* [#321](https://github.com/saadeghi/daisyui/issues/321) (modal overscroll-behavior) ([fc5000e](https://github.com/saadeghi/daisyui/commit/fc5000e8996f2a9d1a7a5971400f119494ebe1c7))
+
 ### [1.22.1](https://github.com/saadeghi/daisyui/compare/v1.22.0...v1.22.1) (2022-01-12)
 
 
