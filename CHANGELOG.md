@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.1](https://github.com/saadeghi/daisyui/compare/v1.22.0...v1.22.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* [#394](https://github.com/saadeghi/daisyui/issues/394) prevent toggle from shrinking by default ([2676cc8](https://github.com/saadeghi/daisyui/commit/2676cc8b5fff495129f466175ccf7f9087dafb59))
+* **breadcrumbs:** Remove the breadcrumb separator background color ([6ec8f5e](https://github.com/saadeghi/daisyui/commit/6ec8f5e92a8a113a4b0f398a6fc78eaf58f765f1))
+
 ## [1.22.0](https://github.com/saadeghi/daisyui/compare/v1.20.1...v1.22.0) (2022-01-08)
 
 
