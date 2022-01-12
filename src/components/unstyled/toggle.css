@@ -1,4 +1,5 @@
-.toggle{
+.toggle {
+  flex-shrink: 0;
   &:focus {
     @apply outline-none;
   }
