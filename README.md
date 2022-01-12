@@ -221,6 +221,7 @@ Read the documents for more info:
   - [React Front To Back 2022 by Brad Traversy](https://www.udemy.com/course/react-front-to-back-2022/)
   - [Build Instagram profile page UI clone w/Next.js TailwindCSS](https://www.udemy.com/course/build-instagram-profile-page-ui-clone-nextjs-tailwindcss/)
   - [Instagram UI Clone Login Page w/ NextJS & TailwindCSS](https://www.udemy.com/course/instagram-ui-clone-login-page-w-nextjs-tailwindcss/)
+  - [Build your Developer Portfolio and Blog from Scratch with Svelte and GraphCMS](https://www.freecodecamp.org/news/build-your-developer-portfolio-from-scratch-with-sveltekit-and-graphcms/)
 
 </details>
 
