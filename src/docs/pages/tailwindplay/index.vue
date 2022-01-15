@@ -4,7 +4,7 @@
 export default {
     middleware: [
         function({ redirect }) {
-            redirect('https://play.tailwindcss.com/OIpl7qbi1P');
+            redirect('https://play.tailwindcss.com/9SCIU18QTJ');
         },
     ],
 };
