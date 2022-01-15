@@ -79,7 +79,7 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 
   
 ```html
-<link href="https://cdn.jsdelivr.net/npm/daisyui@1.22.2/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@1.23.0/dist/full.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
 ```
 
