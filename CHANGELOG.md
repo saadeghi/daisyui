@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/saadeghi/daisyui/compare/v1.22.2...v1.23.0) (2022-01-15)
+
+
+### Features
+
+* add css variables to edit tab colors ([3598bd9](https://github.com/saadeghi/daisyui/commit/3598bd92282892b269a10bb89229420bc3565d80))
+
 ### [1.22.2](https://github.com/saadeghi/daisyui/compare/v1.22.1...v1.22.2) (2022-01-12)
 
 
