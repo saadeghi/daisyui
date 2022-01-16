@@ -1,6 +1,6 @@
 .card-side {
   align-items: stretch;
-  flexDirection: row;
+  flex-direction: row;
   & > figure {
     height: 100%;
     max-width: none;
