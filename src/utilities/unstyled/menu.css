@@ -1,0 +1,12 @@
+.menu-vertical{
+  @apply flex-col;
+  :where(li){
+    @apply flex-col;
+  }
+}
+.menu-horizontal{
+  @apply flex-row inline-flex;
+  :where(li){
+    @apply flex-row;
+  }
+}

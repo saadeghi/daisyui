@@ -13,6 +13,7 @@
     }
     >a{
       @apply cursor-pointer;
+      user-select: none;
       &:focus {
         @apply outline-none;
       }

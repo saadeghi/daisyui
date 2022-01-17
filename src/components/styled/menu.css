@@ -2,7 +2,8 @@
   &.horizontal{
     li{
       &.bordered{
-        >a, >span{
+        >a,
+        >span{
           @apply border-l-0 border-b-4 border-primary;
         }
       }
@@ -10,6 +11,10 @@
   }
   &[class*="p-"] li a{
     @apply rounded-btn;
+  }
+  :where(li.bordered>a),
+  :where(li.bordered>span){
+    @apply border-l-4 border-primary;
   }
   li{
     >:where(a),
@@ -31,11 +36,6 @@
     &.disabled{
       &>a, &>span{
         @apply text-base-content text-opacity-20 hover:bg-transparent;
-      }
-    }
-    &.bordered{
-      a, span{
-        @apply border-l-4 border-primary;
       }
     }
     &.hover-bordered{
