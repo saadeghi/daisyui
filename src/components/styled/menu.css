@@ -32,7 +32,8 @@
     {
       @apply bg-base-content bg-opacity-10;
     }
-    >:where(a.active){
+    >:where(a.active),
+    >:where(button.active){
       @apply bg-primary text-primary-content;
     }
     >:where(a:active),
