@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.24.2](https://github.com/saadeghi/daisyui/compare/v1.24.1...v1.24.2) (2022-01-17)
+
+
+### Bug Fixes
+
+* [#351](https://github.com/saadeghi/daisyui/issues/351) (apply menu item style to `button` like `a` and `span`) ([87f079f](https://github.com/saadeghi/daisyui/commit/87f079fc925092d39a177154b2d8d5529787b9dd))
+
 ### [1.24.1](https://github.com/saadeghi/daisyui/compare/v1.24.0...v1.24.1) (2022-01-17)
 
 ## [1.24.0](https://github.com/saadeghi/daisyui/compare/v1.23.1...v1.24.0) (2022-01-17)
