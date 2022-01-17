@@ -3,6 +3,7 @@
     li{
       &.bordered{
         >a,
+        >button,
         >span{
           @apply border-l-0 border-b-4 border-primary;
         }
@@ -13,28 +14,35 @@
     @apply rounded-btn;
   }
   :where(li.bordered>a),
+  :where(li.bordered>button),
   :where(li.bordered>span){
     @apply border-l-4 border-primary;
   }
   li{
     >:where(a),
+    >:where(button),
     >:where(span){
       @apply text-current px-5 py-3;
     }
 
     >:where(a:focus),
-    >:where(a:hover){
+    >:where(a:hover),
+    >:where(button:focus),
+    >:where(button:hover)
+    {
       @apply bg-base-content bg-opacity-10;
     }
     >:where(a.active){
       @apply bg-primary text-primary-content;
     }
-    >:where(a:active){
+    >:where(a:active),
+    >:where(button:active)
+    {
       @apply bg-primary-focus text-primary-content;
     }
 
     &.disabled{
-      &>a, &>span{
+      &>a, &>span, &>button{
         @apply text-base-content text-opacity-20 hover:bg-transparent;
       }
     }

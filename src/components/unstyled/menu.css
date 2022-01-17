@@ -8,8 +8,8 @@
   }
   :where(li){
     @apply flex flex-col items-stretch;
-    >a, >span{
-      @apply flex items-center transition ease-in-out duration-200;
+    >a, >span, >button{
+      @apply flex items-center transition ease-in-out duration-200 outline-none;
     }
     >a{
       @apply cursor-pointer;
@@ -19,7 +19,7 @@
       }
     }
     &.disabled{
-      &>a, &>span{
+      &>a, &>span, &>button{
         @apply cursor-auto;
       }
     }

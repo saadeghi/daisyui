@@ -18,7 +18,7 @@
       <Menu class="w-64 border bg-base-100 rounded-box">
         <MenuItem>
           <a>
-            Item without icon
+            Link
           </a>
         </MenuItem>
         <MenuItem>
@@ -27,7 +27,7 @@
               glyph="eye"
               class="inline-block w-5 h-5 mr-2 stroke-current"
             />
-            Item with icon
+            Link with icon
           </a>
         </MenuItem>
         <MenuItem>
@@ -36,7 +36,7 @@
               glyph="folder"
               class="inline-block w-5 h-5 mr-2 stroke-current"
             />
-            Item with icon
+            With badge
             <Badge class="ml-2 success">3</Badge>
           </a>
         </MenuItem>

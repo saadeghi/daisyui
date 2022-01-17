@@ -1,16 +1,20 @@
 .menu-vertical :where(li.bordered>a),
+.menu-vertical :where(li.bordered>button),
 .menu-vertical :where(li.bordered>span){
   @apply border-l-4 border-b-0;
 }
 .menu-horizontal :where(li.bordered>a),
+.menu-horizontal :where(li.bordered>button),
 .menu-horizontal :where(li.bordered>span){
   @apply border-l-0 border-b-4;
 }
 .menu-normal :where(li>a),
+.menu-normal :where(li>button),
 .menu-normal :where(li>span){
   @apply py-3 text-base;
 }
 .menu-compact :where(li>a),
+.menu-compact :where(li>button),
 .menu-compact :where(li>span){
   @apply py-2 text-sm;
 }
