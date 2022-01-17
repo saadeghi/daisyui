@@ -1,7 +1,11 @@
 .rating{
+  & input{
+    @apply appearance-none;
+    -webkit-appearance: none;
+  }
   :where(input){
     animation: rating-pop var(--animation-input, 0.25s) ease-out;
-    @apply appearance-none w-6 h-6 bg-base-content bg-opacity-100;
+    @apply w-6 h-6 bg-base-content bg-opacity-100;
   }
   & .rating-hidden{
     @apply w-2 bg-transparent;
