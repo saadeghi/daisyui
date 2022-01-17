@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.23.1](https://github.com/saadeghi/daisyui/compare/v1.23.0...v1.23.1) (2022-01-17)
+
+
+### Bug Fixes
+
+* card-side css property ([9908352](https://github.com/saadeghi/daisyui/commit/9908352d932fa458762c7b4815563e54583401d5))
+
 ## [1.23.0](https://github.com/saadeghi/daisyui/compare/v1.22.2...v1.23.0) (2022-01-15)
 
 
