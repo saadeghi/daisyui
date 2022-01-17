@@ -1,5 +1,6 @@
 .drawer{
   @apply grid overflow-hidden;
+  max-height: 100vh;
   &.drawer-end{
     direction: rtl;
   }
@@ -19,6 +20,7 @@
   @apply appearance-none opacity-0 w-0 h-0 absolute;
   & ~ .drawer-content{
     @apply row-start-1 col-start-1 overflow-y-auto max-h-screen z-0;
+    overscroll-behavior: contain;
   }
   & ~ .drawer-side{
     @apply row-start-1 col-start-1 grid max-h-screen;
@@ -84,5 +86,10 @@
         }
       }
     }
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .drawer {
+    max-height: -webkit-fill-available;
   }
 }
