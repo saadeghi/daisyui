@@ -1,6 +1,6 @@
 .drawer{
   @apply grid overflow-hidden;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   &.drawer-end{
     direction: rtl;
   }
@@ -88,8 +88,8 @@
     }
   }
 }
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) {
   .drawer {
     max-height: -webkit-fill-available;
   }
-}
+} */
