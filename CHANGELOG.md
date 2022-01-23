@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.25.0](https://github.com/saadeghi/daisyui/compare/v1.24.3...v1.25.0) (2022-01-23)
+
+
+### Features
+
+* add indeterminate style for checkbox and toggle, fix [#420](https://github.com/saadeghi/daisyui/issues/420) ([fd11e61](https://github.com/saadeghi/daisyui/commit/fd11e61fd7760a767260f77c62196460de08a534))
+
+
+### Bug Fixes
+
+* [#400](https://github.com/saadeghi/daisyui/issues/400) ([9df4224](https://github.com/saadeghi/daisyui/commit/9df4224a7989f21e9b5613bb4405849dfb9030aa))
+
 ### [1.24.3](https://github.com/saadeghi/daisyui/compare/v1.24.2...v1.24.3) (2022-01-17)
 
 
