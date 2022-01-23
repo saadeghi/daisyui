@@ -19,7 +19,8 @@
     }
     & ~ .drawer-side{
       &>.drawer-overlay{
-        @apply opacity-40;
+        opacity: 0.999999; /* 1 causes a bug on chrome 🤷‍♂️ */
+        @apply bg-opacity-40;
       }
     }
   }
