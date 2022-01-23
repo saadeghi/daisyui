@@ -17,6 +17,14 @@
       box-shadow: calc( var(--handleoffset) * 1 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
     }
   }
+  &:indeterminate{
+    --chkbg: hsl(var(--bc));
+    @apply border-opacity-100 bg-opacity-100;
+    box-shadow: calc( var(--handleoffset) / 2 ) 0 0 2px hsl(var(--b1)) inset, calc( var(--handleoffset) / -2 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    [dir=rtl] &{
+      box-shadow: calc( var(--handleoffset) / 2 ) 0 0 2px hsl(var(--b1)) inset, calc( var(--handleoffset) / -2 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    }
+  }
   &-primary{
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
