@@ -1,4 +1,5 @@
-.checkbox{
+.checkbox {
+  flex-shrink: 0;
   &:focus {
     @apply outline-none;
   }
