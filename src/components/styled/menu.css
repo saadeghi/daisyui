@@ -10,7 +10,8 @@
       }
     }
   }
-  &[class*="p-"] li a{
+  &[class*="p-"] li a,
+  &[class*="p-"] li button{
     @apply rounded-btn;
   }
   :where(li.bordered>a),
@@ -18,39 +19,37 @@
   :where(li.bordered>span){
     @apply border-l-4 border-primary;
   }
-  li{
-    >:where(a),
-    >:where(button),
-    >:where(span){
-      @apply text-current px-5 py-3;
-    }
+  :where(li>a),
+  :where(li>button),
+  :where(li>span){
+    @apply text-current px-5 py-3;
+  }
 
-    >:where(a:focus),
-    >:where(a:hover),
-    >:where(button:focus),
-    >:where(button:hover)
-    {
-      @apply bg-base-content bg-opacity-10;
-    }
-    >:where(a.active),
-    >:where(button.active){
-      @apply bg-primary text-primary-content;
-    }
-    >:where(a:active),
-    >:where(button:active)
-    {
-      @apply bg-primary-focus text-primary-content;
-    }
+  :where(li>a:focus),
+  :where(li>a:hover),
+  :where(li>button:focus),
+  :where(li>button:hover)
+  {
+    @apply bg-base-content bg-opacity-10;
+  }
+  :where(li>a.active),
+  :where(li>button.active){
+    @apply bg-primary text-primary-content;
+  }
+  :where(li>a:active),
+  :where(li>button:active)
+  {
+    @apply bg-primary-focus text-primary-content;
+  }
 
-    &.disabled{
-      &>a, &>span, &>button{
-        @apply text-base-content text-opacity-20 hover:bg-transparent;
-      }
+  li.disabled{
+    &>a, &>span, &>button{
+      @apply text-base-content text-opacity-20 hover:bg-transparent;
     }
-    &.hover-bordered{
-      a{
-        @apply border-l-4 border-transparent hover:border-primary;
-      }
+  }
+  li.hover-bordered{
+    a{
+      @apply border-l-4 border-transparent hover:border-primary;
     }
   }
   ul{
