@@ -1,5 +1,5 @@
 ---
-title: How to use daisyUI themes
+title: How to add daisyUI themes
 desc: 
 published: true
 ---
@@ -78,7 +78,8 @@ module.exports = {
 
 ## How to use a theme only for a section of page?
 
-Add `data-theme="THEME_NAME"` to any element and everything inside will have your theme. you can nest themes and there is no limit!
+Add `data-theme="THEME_NAME"` to any element and everything inside will have your theme.  
+You can nest themes and there is no limit!
 
 You can force a section of your HTML to only use a specific theme.
 
@@ -91,6 +92,6 @@ You can force a section of your HTML to only use a specific theme.
         This span will always use retro theme!
       </span>
   </div>
-  
+
 </html>
 ```
