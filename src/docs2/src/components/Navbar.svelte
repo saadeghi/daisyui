@@ -1,11 +1,17 @@
 <script>
   import ThemeChange from '@components/ThemeChange.svelte'
+  import { pkgVersion } from '$lib/util';
 </script>
 <div class="h-16">
   <div class="fixed z-30 flex justify-center w-full h-16 bg-base-100 bg-opacity-90 backdrop-blur">
     <nav class="w-full navbar">
-      <div class="flex flex-1 gap-2">
-        <a href="/" aria-current="page" aria-label="Homepage" class="px-2 flex-0 btn btn-ghost md:px-4 active nuxt-link-active">
+      <div class="flex flex-1 lg:gap-2">
+
+        <label for="drawer" class="btn btn-square btn-ghost drawer-button lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </label>
+
+        <a href="/" aria-current="page" aria-label="Homepage" class="px-2 flex-0 btn btn-ghost lg:px-4 active nuxt-link-active">
           <div class="inline-flex text-3xl font-title text-primary">
             <span class="lowercase">daisy</span>
             <span class="uppercase text-base-content">UI</span>
@@ -13,7 +19,7 @@
         </a>
         <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" rel="nofollow" class="font-mono text-xs text-opacity-50">
           <div data-tip="Changelog" class="tooltip tooltip-bottom">
-            1.25.3
+            {pkgVersion()}
           </div>
         </a>
       </div>

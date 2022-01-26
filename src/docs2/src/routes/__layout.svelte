@@ -24,6 +24,7 @@
 
 <style global>
   .prose pre[class*="language-"]{
+    max-width: 48rem;
     background-color: hsl(var(--n));
     color: hsl(var(--nc));
   }
