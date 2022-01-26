@@ -1,6 +1,6 @@
 export let siteData = {
-  title: 'Awesome Title',
-  desc: 'Awesome Description',
+  title: 'Tailwind CSS Components',
+  desc: 'Free Tailwind Components',
   card: '/card.jpg',
 }
 

@@ -35,7 +35,7 @@
     import('tailwindcss/utilities.css')
   }
   if (process.env.NODE_ENV === "production") {
-    // import('../tailwind.css')
+    // import 'tailwindcss/tailwind.css'
   }
   import "prism-themes/themes/prism-material-dark.css";
 

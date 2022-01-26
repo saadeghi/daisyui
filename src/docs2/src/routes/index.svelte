@@ -11,8 +11,8 @@
   import Footer from '@components/Footer.svelte'
 </script>
 <SEO
-  title="Title"
-  desc="Description"
+  title="daisyUI"
+  desc="Tailwind Components Library - Free components for Tailwind CSS"
 />
 <div class="flex flex-col items-center py-10 pb-48 text-primary-content bg-gradient-to-br from-primary to-secondary">
   <HomepageHero/>

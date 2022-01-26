@@ -5,7 +5,7 @@
 	export let desc = siteData.desc
 	export let img = siteData.card
 
-	const formattedTitle = title ? `${title} | ${siteData.title}` : siteData.title
+	const formattedTitle = title ? `${title} — ${siteData.title}` : siteData.title
 </script>
 <svelte:head>
 	<title>{formattedTitle}</title>
