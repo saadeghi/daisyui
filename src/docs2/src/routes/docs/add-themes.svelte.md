@@ -1,18 +1,19 @@
 ---
 title: How to add daisyUI themes
-desc: 
+desc:
 published: true
 ---
 
 daisyUI comes with a number of themes, which you can use with no extra effort.  
-Each theme defines a set of colors which will be used on all daisyUI elements.  
+Each theme defines a set of colors which will be used on all daisyUI elements.
 
 To use a theme, you need `data-theme` attribute to your `<html>` tag:
+
 ```html
-<html data-theme="cupcake">
+<html data-theme="cupcake"></html>
 ```
 
->I suggest using [`theme-change`](https://github.com/saadeghi/theme-change), so you can switch themes and save selected theme in local storage.
+> I suggest using [`theme-change`](https://github.com/saadeghi/theme-change), so you can switch themes and save selected theme in local storage.
 
 ## List of themes:
 
@@ -54,12 +55,7 @@ This will reduce the size of your CSS file.
 ```js
 module.exports = {
   daisyui: {
-    themes: [
-      'light',
-      'dark',
-      'cupcake',
-      'cmyk',
-    ],
+    themes: ["light", "dark", "cupcake", "cmyk"],
   },
 }
 ```
@@ -85,13 +81,9 @@ You can force a section of your HTML to only use a specific theme.
 
 ```html
 <html data-theme="dark">
-
   <div data-theme="light">
     This div will always use light theme
-      <span data-theme="retro">
-        This span will always use retro theme!
-      </span>
+    <span data-theme="retro">This span will always use retro theme!</span>
   </div>
-
 </html>
 ```

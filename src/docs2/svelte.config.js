@@ -1,11 +1,11 @@
-import { mdsvex } from "mdsvex";
+import { mdsvex } from "mdsvex"
 // import mdsvexConfig from "./mdsvex.config.js";
-import adapter from "@sveltejs/adapter-static";
-import preprocess from "svelte-preprocess";
-import path from "path";
+import adapter from "@sveltejs/adapter-static"
+import preprocess from "svelte-preprocess"
+import path from "path"
 
 export default {
-  extensions: [".svelte",".svelte.md", ".svx"],
+  extensions: [".svelte", ".svelte.md", ".svx"],
 
   preprocess: [
     mdsvex({
@@ -26,7 +26,7 @@ export default {
       server: {
         fs: {
           strict: false,
-        }
+        },
       },
       resolve: {
         alias: {
@@ -37,4 +37,4 @@ export default {
       },
     },
   },
-};
+}

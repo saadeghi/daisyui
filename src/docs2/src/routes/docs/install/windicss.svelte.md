@@ -1,6 +1,6 @@
 ---
 title: Install daisyUI as WindiCSS plugin
-desc: 
+desc:
 thumbnail: https://api.lorem.space/image/album?w=500&h=500&hash=500B67FB
 published: true
 ---
@@ -22,15 +22,16 @@ published: true
 You need [Node.js](https://nodejs.org/en/download/) and [WindiCSS](https://windicss.org/guide/installation.html) installed.
 
 1. Install daisyUI:
-  ```
-  npm i daisyui
-  ```
-1. Then add daisyUI to your `windi.config.js` files:
-  ```js
-  const { transform } = require('windicss/helpers')
-  module.exports = {
-    plugins: [
-      transform('daisyui'),
-    ],
-  }
-  ```
+
+```
+npm i daisyui
+```
+
+2. Then add daisyUI to your `windi.config.js` files:
+
+```js
+const { transform } = require("windicss/helpers")
+module.exports = {
+  plugins: [transform("daisyui")],
+}
+```

@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "NODE_ENV=production svelte-kit build",
-    "preview": "svelte-kit preview"
+    "preview": "svelte-kit preview",
+    "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}'"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.21",
@@ -13,6 +14,9 @@
     "daisyui": "^1.25.4",
     "mdsvex": "^0.9.8",
     "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.6.0",
+    "prettier-plugin-tailwindcss": "^0.1.4",
     "prism-themes": "^1.9.0",
     "svelte": "^3.44.3",
     "svelte-preprocess": "^4.10.0",
