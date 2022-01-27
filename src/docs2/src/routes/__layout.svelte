@@ -57,7 +57,7 @@
 
 <div class={`bg-base-100 drawer h-[calc(100vh-4rem)] ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" />
-  <div class={`border-t drawer-content border-base-content border-opacity-5 ${post ? "p-6 pb-16" : ""}`}>
+  <div class={`border-t drawer-content h-[calc(100vh-4rem)] border-base-content border-opacity-5 ${post ? "p-6 pb-16" : ""}`}>
     {#if post}
       <div class="prose max-w-full">
         <h1>{post.title ? post.title : ""}</h1>
@@ -70,9 +70,9 @@
       <slot />
     {/if}
   </div>
-  <div class="drawer-side border-t border-base-content border-opacity-5">
+  <div class="drawer-side border-base-content border-t border-opacity-5">
     <label for="drawer" class="drawer-overlay" />
-    <aside class="w-80 bg-base-200 pb-10">
+    <aside class="bg-base-200 w-80 pb-10">
       <Sidebar />
     </aside>
   </div>
