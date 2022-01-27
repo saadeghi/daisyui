@@ -6,7 +6,7 @@
 
 <div class="bg-base-100 flex h-16 w-full justify-center">
   <nav class="navbar w-full">
-    <div class="flex flex-1 lg:gap-2">
+    <div class="flex flex-1 gap-1 lg:gap-2">
       <label for="drawer" class={`btn btn-square btn-ghost drawer-button transition-all duration-200 ${$page.path != "/" ? "lg:invisible lg:w-0" : ""}`}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </label>
@@ -18,7 +18,7 @@
         </div>
       </a>
       <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" rel="nofollow" class="font-mono text-xs text-opacity-50">
-        <div data-tip="Changelog" class="tooltip tooltip-bottom">
+        <div data-tip="Changelog" class="tooltip tooltip-right">
           {pkgVersion()}
         </div>
       </a>

@@ -4,6 +4,9 @@
   onMount(() => {
     themeChange(false)
   })
+  export let dropdownClasses = ""
+  export let btnClasses = "btn-ghost"
+  export let contentClasses = "mt-16"
 </script>
 
 <!-- <div class="overflow-hidden btn btn-sm btn-circle btn-ghost" data-toggle-theme="dark" data-act-class="group">
@@ -11,13 +14,13 @@
   <svg class="m-[.5em] w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M152.62,126.77c0-33,4.85-66.35,17.23-94.77C87.54,67.83,32,151.89,32,247.38,32,375.85,136.15,480,264.62,480c95.49,0,179.55-55.54,215.38-137.85-28.42,12.38-61.8,17.23-94.77,17.23C256.76,359.38,152.62,255.24,152.62,126.77Z"/></svg>
 </div> -->
 
-<div title="Change Theme" class="dropdown dropdown-end">
-  <div tabindex="0" class="btn-ghost btn m-1 normal-case">
+<div title="Change Theme" class={`dropdown dropdown-end ${dropdownClasses}`}>
+  <div tabindex="0" class={`btn m-1 normal-case ${btnClasses}`}>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
     <span class="hidden md:inline">Change Theme</span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" class="ml-1 inline-block h-4 w-4 fill-current"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z" /></svg>
   </div>
-  <div class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px mt-16 h-96 w-52 overflow-y-auto shadow-2xl">
+  <div class={`dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-96 w-52 overflow-y-auto shadow-2xl ${contentClasses}`}>
     <ul class="menu menu-compact p-4">
       <li><button data-set-theme="light" data-act-class="active" class="active">🌝  light</button></li>
       <li><button data-set-theme="dark" data-act-class="active">🌚  dark</button></li>
