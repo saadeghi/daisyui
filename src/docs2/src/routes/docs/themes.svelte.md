@@ -25,6 +25,7 @@ Try them: <ThemeChange dropdownClasses="not-prose" btnClasses="btn-sm inline-fle
 
 ```js
 module.exports = {
+  //...
   daisyui: {
     themes: ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk"],
   },
@@ -60,6 +61,7 @@ If you don't want to include themes and you only want the default `light` theme,
 
 ```js
 module.exports = {
+  //...
   daisyui: {
     themes: false,
   },
@@ -90,6 +92,7 @@ The first theme (`mytheme`) will be the default theme
 
 ```json5
 module.exports = {
+  //...
   daisyui: {
     themes: [
       {
@@ -129,3 +132,27 @@ module.exports = {
 ```
 
 <div class="alert alert-info max-w-3xl">Currently only hex colors are supported.</div>
+
+## How to customize an existing theme?
+
+In your tailwind.config.js, you can require an existing daisyUI theme and override its colors.  
+In below example, I get `dark` theme and change its `primary` and `primary-focus` colors to red:
+
+```js
+const { "[data-theme=dark]": darkTheme } = require("daisyui/colors/themes")
+
+module.exports = {
+  //...
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          ...darkTheme,
+          primary: "#FF0000",
+          "primary-focus": "#D60000",
+        },
+      },
+    ],
+  },
+}
+```

@@ -9,10 +9,12 @@ Default config:
 
 ```js
 module.exports = {
+  //...
+
   // add daisyUI plugin
   plugins: [require("daisyui")],
 
-  // config (optional)
+  // daisyUI config (optional)
   daisyui: {
     styled: true,
     themes: true,

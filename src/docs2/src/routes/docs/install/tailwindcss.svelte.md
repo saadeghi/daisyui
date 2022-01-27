@@ -17,6 +17,7 @@ npm i daisyui
 
 ```js
 module.exports = {
+  //...
   plugins: [require("daisyui")],
 }
 ```

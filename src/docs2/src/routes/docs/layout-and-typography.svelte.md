@@ -30,6 +30,7 @@ Just make sure on your tailwind.config.js file, you require "daisyui" AFTER "@ta
 
 ```js
 module.exports = {
+  //...
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
 }
 ```
