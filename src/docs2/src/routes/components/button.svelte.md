@@ -4,9 +4,25 @@ desc: Button Description
 published: true
 ---
 
-Button!
-<button class="btn">button</button>
+<script>
+  import Component from "@components/Component.svelte"
+</script>
 
-```html
+<Component title="Button!">
+
+<button class="btn">button</button><button class="btn">button</button>
+
+<pre slot="html">{
+`<button class="btn">button</button>
+  <button class="btn">button</button>`
+}</pre>
+
+</Component>
+
+<Component title="Button!">
 <button class="btn">button</button>
-```
+</Component>
+
+<Component title="Button!">
+<button class="btn">button</button>
+</Component>
