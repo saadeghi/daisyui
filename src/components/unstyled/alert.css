@@ -1,6 +1,6 @@
 .alert {
-  @apply flex flex-col justify-between items-center md:flex-row space-y-2 md:space-y-0;
-  & > *{
-    @apply flex;
+  @apply flex flex-col justify-between items-center md:flex-row space-y-2 md:space-y-0 gap-4 w-full;
+  > :where(*) {
+    @apply flex gap-2 items-center;
   }
 }
