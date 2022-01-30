@@ -25,7 +25,7 @@ It handles everything and it's fully customizable
 daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.
 
 <div class="alert alert-info max-w-3xl">
-Just make sure on your tailwind.config.js file, you require "daisyui" AFTER "@tailwindcss/typography"
+Just make sure you require "daisyui" AFTER "@tailwindcss/typography" in tailwind.config.js
 </div>
 
 ```js
