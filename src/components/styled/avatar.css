@@ -1,6 +1,6 @@
-.avatar-group{
+.avatar-group {
   @apply flex overflow-hidden;
-  .avatar{
+  .avatar {
     @apply rounded-full border-4 border-base-100 overflow-hidden;
   }
 }
