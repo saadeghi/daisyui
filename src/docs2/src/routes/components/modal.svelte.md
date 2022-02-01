@@ -8,8 +8,9 @@ published: true
   import Component from "@components/Component.svelte"
 </script>
 
-<Component title="Modal using label + hidden checkbox">
+<Component title="Modal using label + hidden checkbox" desc='Make sure each modal you use, has a unique ID. In this example, ID is "my-modal".'>
 <label for="my-modal" class="btn modal-button">open modal</label>
+
 <pre slot="html">{
 `<!-- The button to open modal -->
 <label for="my-modal" class="btn modal-button">open modal</label>

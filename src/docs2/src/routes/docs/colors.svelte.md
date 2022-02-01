@@ -27,7 +27,7 @@ Each color name contains CSS variables and each daisyUI theme applies color valu
 
 ## Benefits
 
-Semantic color names make more sense because when we design interfaces, we don't just use any random color. We define a specific color palette with names like `primary`, `secondary`, etc... and we only use thoese specific colors in our interfaces.  
+Semantic color names make more sense because when we design interfaces, we don't just use any random color. We define a specific color palette with names like `primary`, `secondary`, etc... and we only use those specific colors in our interfaces.  
 Also, using semantic color names makes theming easier. You wouldn't have to define dark-mode colors for every single element and you wouldn't be limited to only ligh/dark themes. you can have multiple themes available and each theme is just a few lines of CSS variables.
 
 ## How to use
@@ -61,7 +61,7 @@ So you can use `bg-primary`, `border-secondary`, etc...
 <div class="overflow-x-auto">
 <div class="whitespace-nowrap">
 
-| color name                                                                  | Description                                        | Example class name     | Actual CSS value |
+| Color name                                                                  | Description                                        | Example class name     | Actual CSS value |
 | --------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------- | ---------------- |
 | <span class="badge badge-xs bg-primary"></span> primary                     | Primary color                                      | `bg-primary`           | `hsl(--p)`       |
 | <span class="badge badge-xs bg-primary-focus"></span> primary-focus         | Primary color - focused                            | `bg-primary-focus`     | `hsl(--pf)`      |

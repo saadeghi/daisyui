@@ -92,7 +92,7 @@ export let menu = [
         badge: "",
       },
       {
-        name: "Button-Group",
+        name: "Button group",
         href: "/components/button-group",
         icon: "",
         badge: "",
