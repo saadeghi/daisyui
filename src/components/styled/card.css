@@ -1,33 +1,25 @@
 .card {
   @apply rounded-box;
-  &:focus-visible{
+  &:focus-visible {
     box-shadow: 0 0 0 2px currentColor;
   }
-  &.bordered{
+  &.bordered {
     @apply border border-base-200;
   }
-  &-bordered{
+  &-bordered {
     @apply border border-base-200;
   }
-  &.compact{
+  &.compact {
     .card-body {
       @apply p-4 text-sm;
-    }
-    .card-title {
-      @apply mb-1;
     }
   }
   &-body {
     padding: var(--padding-card, 2rem);
+    @apply flex flex-col gap-2;
   }
   &-title {
-    @apply mb-3 text-xl font-semibold;
-  }
-  &-actions:first-child {
-    @apply mb-2;
-  }
-  &-actions:last-child {
-    @apply mt-6;
+    @apply text-xl font-semibold flex gap-2 items-center;
   }
   &.image-full {
     &:before {
