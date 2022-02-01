@@ -4,11 +4,17 @@
 </script>
 
 {#each menu as { name, items }}
-  <ul class="menu flex flex-col p-2 px-4 menu-compact">
+  <ul class="menu menu-compact flex flex-col p-2 px-4">
     <li class="menu-title"><span>{name}</span></li>
     {#each items as { name, href, icon, badge }}
       <li>
-        <a {href} class={`flex gap-4 ${$page.path.startsWith(href) ? "active" : ""}`}>
+        <a
+          {href}
+          class={`flex gap-4 
+          ${$page.path == href ? "active" : ""}
+          ${$page.path.startsWith(href + "/") ? "active" : ""}
+        `}
+        >
           {#if icon != ""}
             <span class="flex-none">
               {@html icon}
@@ -18,7 +24,7 @@
             {@html name}
           </span>
           {#if badge != ""}
-            <span class="badge flex-none lowercase badge-sm">{badge}</span>
+            <span class="badge badge-sm flex-none lowercase">{badge}</span>
           {/if}
         </a>
       </li>
