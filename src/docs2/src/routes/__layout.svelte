@@ -21,20 +21,11 @@
 </script>
 
 <script>
-  if (process.env.NODE_ENV === "development") {
-    import("../../../../dist/themes.css")
-    const base = import.meta.globEager("../../../base/*.css")
-    import("tailwindcss/base.css")
-    const unstyled = import.meta.globEager("../../../components/unstyled/*.css")
-    const styled = import.meta.globEager("../../../components/styled/*.css")
-    import("tailwindcss/components.css")
-    const utilitiesGlobal = import.meta.globEager("../../../utilities/global/*.css")
-    const utilitiesUnstyled = import.meta.globEager("../../../utilities/unstyled/*.css")
-    const utilitiesStyled = import.meta.globEager("../../../utilities/styled/*.css")
-    import("tailwindcss/utilities.css")
-  }
   if (process.env.NODE_ENV === "production") {
-    // import 'tailwindcss/tailwind.css'
+    import("@components/StyleProduction.svelte")
+  }
+  if (process.env.NODE_ENV === "development") {
+    import("@components/StyleDevelopment.svelte")
   }
   import "prism-themes/themes/prism-material-dark.css"
 
@@ -94,6 +85,7 @@
     <h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
     <div class="modal-action">
+      <!-- svelte-ignore a11y-invalid-attribute -->
       <a href="#" class="btn" rel="external">Yay!</a>
     </div>
   </div>
