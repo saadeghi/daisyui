@@ -50,7 +50,7 @@
     "postcss-nested": "5.0.1",
     "prejss-cli": "0.3.3",
     "rtlcss": "3.0.0",
-    "tailwindcss": "2.0.1"
+    "tailwindcss": "^3.0.18"
   },
   "scripts": {
     "index": "cp -R ./src/index.js ./index.js",
