@@ -33,6 +33,7 @@
 
   import Navbar from "@components/Navbar.svelte"
   import Scripts from "@components/Scripts.svelte"
+  import SEO from "@components/SEO.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
   import InstallTabs from "@components/InstallTabs.svelte"
@@ -58,6 +59,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </svelte:head>
 
+{#if post}
+  <SEO title={post.title ? post.title : ""} desc={post.desc ? post.desc : ""} />
+{/if}
 <div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div bind:this={drawercontent} on:scroll={parseScroll} class={`border-t drawer-content border-base-content border-opacity-5`}>
