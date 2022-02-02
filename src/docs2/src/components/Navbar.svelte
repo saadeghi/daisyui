@@ -14,13 +14,13 @@
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </label>
       <div class={`flex items-center gap-2 ${$page.path == "/" ? "" : "lg:hidden"}`}>
-        <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2">
+        <a href="/" aria-current="page" aria-label="Homepage" class={`flex-0 btn btn-ghost active nuxt-link-active px-2 ${switchDrawerStyle ? "" : "hidden"}`}>
           <div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
             <span class={`lowercase ${switchDrawerStyle ? "text-primary" : "text-primary-content"}`}>daisy</span>
             <span class={`uppercase ${switchDrawerStyle ? "text-base-content" : "text-primary-content"}`}>UI</span>
           </div>
         </a>
-        <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" rel="nofollow" class="link link-hover font-mono text-xs text-opacity-50">
+        <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" rel="nofollow" class={`link link-hover font-mono text-xs text-opacity-50 ${switchDrawerStyle ? "" : "hidden"}`}>
           <div data-tip="Changelog" class="tooltip tooltip-bottom">
             {pkgVersion()}
           </div>
