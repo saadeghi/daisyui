@@ -45,6 +45,11 @@
     drawerContentScrollY = drawercontent.scrollTop
   }
   onMount(() => parseScroll())
+
+  let checked = ""
+  function closeDrawer() {
+    checked = ""
+  }
 </script>
 
 <svelte:head>
@@ -54,7 +59,7 @@
 </svelte:head>
 
 <div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
-  <input id="drawer" type="checkbox" class="drawer-toggle" />
+  <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div bind:this={drawercontent} on:scroll={parseScroll} class={`border-t drawer-content border-base-content border-opacity-5`}>
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
@@ -74,7 +79,7 @@
   <div class="drawer-side border-base-content border-t border-opacity-5">
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80 pb-10">
-      <Sidebar />
+      <Sidebar {closeDrawer} />
     </aside>
   </div>
 </div>
