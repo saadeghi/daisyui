@@ -1,0 +1,69 @@
+---
+title: Divider
+desc: Divider Description
+published: true
+---
+
+<script>
+  import Component from "@components/Component.svelte"
+</script>
+
+<Component title="Divider">
+<div class="flex flex-col w-full">
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+  <div class="divider">OR</div>
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+</div>
+<pre slot="html">{
+`<div class="flex flex-col w-full border-opacity-50">
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+  <div class="divider">OR</div>
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Divider horizontal">
+<div class="flex w-full">
+  <div class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">content</div>
+  <div class="divider divider-horizontal">OR</div>
+  <div class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">content</div>
+</div>
+<pre slot="html">{
+`<div class="flex w-full">
+  <div class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">content</div>
+  <div class="divider divider-horizontal">OR</div>
+  <div class="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center">content</div>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Divider with no text">
+<div class="flex flex-col w-full">
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div> 
+  <div class="divider"></div> 
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+</div>
+<pre slot="html">{
+`<div class="flex flex-col w-full">
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div> 
+  <div class="divider"></div> 
+  <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+</div>`
+}</pre>
+</Component>
+
+<Component title="responsive (lg:divider-horizontal)">
+<div class="flex flex-col w-full lg:flex-row">
+  <div class="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div> 
+  <div class="divider lg:divider-horizontal">OR</div> 
+  <div class="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
+</div>
+<pre slot="html">{
+`<div class="flex flex-col w-full lg:flex-row">
+  <div class="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div> 
+  <div class="divider lg:divider-horizontal">OR</div> 
+  <div class="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
+</div>`
+}</pre>
+</Component>
