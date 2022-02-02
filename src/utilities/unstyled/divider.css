@@ -1,6 +1,18 @@
-.divider-vertical{
-  @apply flex-col self-stretch;
-  &:before, &:after{
-    @apply h-full;
+.divider-horizontal {
+  @apply flex-col;
+  &:before {
+    @apply w-0.5 h-full;
+  }
+  &:after {
+    @apply w-0.5 h-full;
+  }
+}
+.divider-vertical {
+  @apply flex-row;
+  &:before {
+    @apply h-0.5 w-full;
+  }
+  &:after {
+    @apply h-0.5 w-full;
   }
 }

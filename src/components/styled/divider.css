@@ -1,15 +1,14 @@
-.divider{
+.divider {
   @apply my-4 h-4;
-  &:before, &:after{
-    @apply h-0.5 bg-base-content;
+  &:before {
     --tw-bg-opacity: var(--tw-border-opacity, 0.1);
+    @apply bg-base-content;
   }
-  &:not(:empty){
-    &:before{
-      @apply mr-4;
-    }
-    &:after{
-      @apply ml-4;
-    }
+  &:after {
+    --tw-bg-opacity: var(--tw-border-opacity, 0.1);
+    @apply bg-base-content;
+  }
+  &:not(:empty) {
+    @apply gap-4;
   }
 }
