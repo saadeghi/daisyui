@@ -2,26 +2,30 @@
   import { page } from "$app/stores"
   import { pkgVersion } from "$lib/util"
   import ThemeChange from "@components/ThemeChange.svelte"
+
+  export let drawerContentScrollY
+  $: switchDrawerStyle = drawerContentScrollY > 50 || $page.path != "/" ? true : false
 </script>
 
-<div class="bg-base-100 flex h-16 w-full justify-center">
+<div class={`sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 ${switchDrawerStyle ? "shadow-sm bg-base-100 text-base-content" : "text-primary-content"}`}>
   <nav class="navbar w-full">
     <div class="flex flex-1 gap-1 lg:gap-2">
       <label for="drawer" class={`btn btn-square btn-ghost drawer-button transition-all duration-200 ${$page.path != "/" ? "lg:invisible lg:w-0" : ""}`}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </label>
-
-      <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2">
-        <div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
-          <span class="lowercase">daisy</span>
-          <span class="text-base-content uppercase">UI</span>
-        </div>
-      </a>
-      <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" rel="nofollow" class="font-mono text-xs text-opacity-50">
-        <div data-tip="Changelog" class="tooltip tooltip-right">
-          {pkgVersion()}
-        </div>
-      </a>
+      <div class={`flex items-center gap-2 ${$page.path == "/" ? "" : "lg:hidden"}`}>
+        <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2">
+          <div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
+            <span class={`lowercase ${switchDrawerStyle ? "text-primary" : "text-primary-content"}`}>daisy</span>
+            <span class={`uppercase ${switchDrawerStyle ? "text-base-content" : "text-primary-content"}`}>UI</span>
+          </div>
+        </a>
+        <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" rel="nofollow" class="link link-hover font-mono text-xs text-opacity-50">
+          <div data-tip="Changelog" class="tooltip tooltip-bottom">
+            {pkgVersion()}
+          </div>
+        </a>
+      </div>
     </div>
     <div class="flex-0">
       <div class={`items-center flex-none hidden ${$page.path == "/" ? "lg:block" : ""}`}>

@@ -21,6 +21,8 @@
 </script>
 
 <script>
+  import { onMount } from "svelte"
+
   if (process.env.NODE_ENV === "production") {
     import("@components/StyleProduction.svelte")
   }
@@ -36,6 +38,13 @@
   import InstallTabs from "@components/InstallTabs.svelte"
   export let post
   export let path
+
+  let drawercontent
+  let drawerContentScrollY = 0
+  function parseScroll() {
+    drawerContentScrollY = drawercontent.scrollTop
+  }
+  onMount(() => parseScroll())
 </script>
 
 <svelte:head>
@@ -44,22 +53,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </svelte:head>
 
-<Navbar />
-
-<div class={`bg-base-100 drawer h-[calc(100vh-4rem)] ${post ? "drawer-mobile" : ""}`}>
+<div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" />
-  <div class={`border-t drawer-content h-[calc(100vh-4rem)] border-base-content border-opacity-5 ${post ? "p-6 pb-16" : ""}`}>
-    {#if post}
-      <div class="prose max-w-full">
-        <h1>{post.title ? post.title : ""}</h1>
-        {#if path.startsWith("/docs/install")}
-          <InstallTabs />
-        {/if}
+  <div bind:this={drawercontent} on:scroll={parseScroll} class={`border-t drawer-content border-base-content border-opacity-5`}>
+    <Navbar {drawerContentScrollY} />
+    <div class={`${post ? "p-6 pb-16" : ""}`}>
+      {#if post}
+        <div class="prose max-w-full">
+          <h1>{post.title ? post.title : ""}</h1>
+          {#if path.startsWith("/docs/install")}
+            <InstallTabs />
+          {/if}
+          <slot />
+        </div>
+      {:else}
         <slot />
-      </div>
-    {:else}
-      <slot />
-    {/if}
+      {/if}
+    </div>
   </div>
   <div class="drawer-side border-base-content border-t border-opacity-5">
     <label for="drawer" class="drawer-overlay" />
