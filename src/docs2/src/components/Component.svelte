@@ -79,7 +79,7 @@
   </div>
 </div>
 
-<style global>
+<style global lang="postcss">
   .prose .code-wrapper {
     max-width: 100vw;
     overflow-x: auto;
@@ -96,6 +96,46 @@
     border-bottom-left-radius: 0.75rem;
     margin: 0;
     min-height: 6rem;
+  }
+  .prose .component-preview pre[class*="language-"] .token.comment {
+    color: hsla(var(--nc) / 0.4);
+  }
+  [data-theme="wireframe"],
+  [data-theme="lofi"] {
+    .prose .component-preview pre[class*="language-"] {
+      .token.attr-value {
+        color: #587e20;
+      }
+      .token.punctuation {
+        color: #00449b;
+      }
+      .token.attr-name {
+        color: #cd7302;
+      }
+    }
+  }
+  [data-theme="pastel"] {
+    .prose .component-preview pre[class*="language-"] {
+      .token.punctuation {
+        color: #2b477c;
+      }
+      .token.tag {
+        color: #810c47;
+      }
+      .token.attr-value {
+        color: #155211;
+      }
+      .token.attr-name {
+        color: #8d4e0b;
+      }
+    }
+  }
+  [data-theme="valentine"] {
+    .prose .component-preview pre[class*="language-"] {
+      .token.tag {
+        color: #ffa2a2;
+      }
+    }
   }
   .prose .component-preview .preview {
     background-image: radial-gradient(hsla(var(--bc) / 0.2) 0.5px, hsla(var(--b2) / 1) 0.5px);
