@@ -1,3 +1,10 @@
+export let siteStats = {
+  components: "41",
+  themes: "22",
+  githubStars: "7,000",
+  npmInstalls: "300,000",
+}
+
 export let siteData = {
   title: "Tailwind CSS Components",
   desc: "Free Tailwind Components",
