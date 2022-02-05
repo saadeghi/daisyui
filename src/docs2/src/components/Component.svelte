@@ -9,6 +9,7 @@
   export let desc
   export let bg
   export let classes
+  export let responsive = false
   let showContent = "preview"
   let htmlSlot
 
@@ -47,7 +48,7 @@
 
     {#if showContent == "preview"}
       <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl">
-        <div class="border-base-300 bg-base-200 preview flex min-h-[6rem] min-w-[24rem] max-w-4xl resize-x flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-center	p-4 {classes}" style={bg ? `background-image: url(${bg})` : `background-size: 5px 5px`}>
+        <div class="border-base-300 bg-base-200 preview flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-center	p-4 {classes}" style={bg ? `background-image: url(${bg})` : `background-size: 5px 5px`} class:resize-x={responsive}>
           <slot />
         </div>
       </div>
