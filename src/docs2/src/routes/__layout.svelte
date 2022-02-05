@@ -42,10 +42,19 @@
 
   let drawercontent
   let drawerContentScrollY = 0
-  function parseScroll() {
+  function parseContentScroll() {
     drawerContentScrollY = drawercontent.scrollTop
   }
-  onMount(() => parseScroll())
+
+  let drawersidebar
+  let drawerSidebarScrollY = 0
+  function parseSidebarScroll() {
+    drawerSidebarScrollY = drawersidebar.scrollTop
+  }
+  onMount(() => {
+    parseContentScroll()
+    parseSidebarScroll()
+  })
 
   let checked = ""
   function closeDrawer() {
@@ -64,7 +73,7 @@
 {/if}
 <div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div bind:this={drawercontent} on:scroll={parseScroll} class={`border-t drawer-content border-base-content border-opacity-5`}>
+  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`border-t drawer-content border-base-content border-opacity-5`}>
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
       {#if post}
@@ -80,10 +89,11 @@
       {/if}
     </div>
   </div>
-  <div class="drawer-side border-base-content border-t border-opacity-5">
+  <div class="drawer-side border-base-content border-t border-opacity-5" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
-    <aside class="bg-base-200 w-80 pb-10">
-      <Sidebar {closeDrawer} />
+    <aside class="bg-base-200 w-80">
+      <Sidebar {closeDrawer} {drawerSidebarScrollY} />
+      <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
     </aside>
   </div>
 </div>

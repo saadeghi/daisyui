@@ -3,9 +3,12 @@
   import { menu } from "@src/lib/data.js"
   import { pkgVersion } from "$lib/util"
   export let closeDrawer
+
+  export let drawerSidebarScrollY
+  $: switchNavbarStyle = drawerSidebarScrollY > 40 ? true : false
 </script>
 
-<div class={`bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 gap-4 items-center gap-2 px-4 py-2 hidden ${$page.path == "/" ? "" : "lg:flex"}`}>
+<div class={`bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 px-4 py-2 hidden ${$page.path == "/" ? "" : "lg:flex"} ${switchNavbarStyle ? "shadow-sm" : ""}`}>
   <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2">
     <div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
       <span class="lowercase">daisy</span>
