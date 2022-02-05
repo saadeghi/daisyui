@@ -1,19 +1,20 @@
-.modal{
-  @apply transition duration-200 ease-in-out bg-neutral-focus bg-opacity-40;
+.modal {
+  @apply duration-200 ease-in-out bg-neutral-focus bg-opacity-40;
+  transition-property: transform, opacity;
   overflow-y: hidden;
-	overscroll-behavior: contain;
+  overscroll-behavior: contain;
 }
-.modal-box{
+.modal-box {
   @apply transform translate-y-10 sm:translate-y-0 sm:scale-90 transition duration-200 ease-in-out rounded-t-box sm:rounded-b-box bg-base-100 sm:max-w-lg p-6 w-full;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
-	overflow-y: auto;
-	overscroll-behavior: contain;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .modal-open .modal-box,
 .modal-toggle:checked + .modal .modal-box,
-.modal:target .modal-box{
+.modal:target .modal-box {
   @apply translate-y-0 scale-100;
 }
-.modal-action{
+.modal-action {
   @apply mt-6 justify-end space-x-2;
 }

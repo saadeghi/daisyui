@@ -1,5 +1,5 @@
 .modal {
-  @apply inset-0 opacity-0 pointer-events-none fixed flex items-end justify-center sm:items-center;
+  @apply inset-0 opacity-0 pointer-events-none fixed flex items-end justify-center sm:items-center invisible;
   z-index: 999;
 }
 .modal-box {
