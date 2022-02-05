@@ -1,4 +1,4 @@
-<div class="hero min-h-screen bg-gradient-to-br from-primary to-accent text-primary-content">
+<div class="hero from-primary to-accent text-primary-content min-h-screen bg-gradient-to-br">
   <div class="hero-content mx-auto max-w-md text-center md:max-w-full">
     <div>
       <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">Powerful theming</h2>
@@ -19,12 +19,12 @@
         in less than a minute!
       </p>
       <div class="my-20 flex w-full flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-        <div data-theme="luxury" class="card mx-auto w-full max-w-xs flex-1 bg-base-100 p-8 text-base-content">
+        <div data-theme="luxury" class="card bg-base-100 text-base-content mx-auto w-full max-w-xs flex-1 p-8">
           <h3 class="text-sm font-bold">Luxury Theme</h3>
           <div class="mt-2 flex flex-col space-y-2">
             <progress value="40" max="100" class="progress" />
             <div class="flex items-center justify-center space-x-2">
-              <div class="btn btn-accent btn-square btn-sm"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></div>
+              <div class="btn btn-accent btn-square btn-sm"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></div>
               <label aria-label="toggle" class="label"><input type="checkbox" checked="checked" class="toggle" /></label>
               <label aria-label="Checkbox" class="label"><input type="checkbox" checked="checked" class="checkbox" /></label>
             </div>
@@ -33,12 +33,12 @@
             <button class="btn btn-outline btn-block btn-sm">Outline</button>
           </div>
         </div>
-        <div data-theme="cupcake" class="card mx-auto w-full max-w-xs flex-1 bg-base-100 p-8 text-base-content">
+        <div data-theme="cupcake" class="card bg-base-100 text-base-content mx-auto w-full max-w-xs flex-1 p-8">
           <h3 class="text-sm font-bold">Cupcake Theme</h3>
           <div class="mt-2 flex flex-col space-y-2">
             <progress value="40" max="100" class="progress" />
             <div class="flex items-center justify-center space-x-2">
-              <div class="btn btn-accent btn-square btn-sm"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></div>
+              <div class="btn btn-accent btn-square btn-sm"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></div>
               <label aria-label="toggle" class="label"><input type="checkbox" checked="checked" class="toggle" /></label>
               <label aria-label="Checkbox" class="label"><input type="checkbox" checked="checked" class="checkbox" /></label>
             </div>
@@ -47,12 +47,12 @@
             <button class="btn btn-outline btn-block btn-sm">Outline</button>
           </div>
         </div>
-        <div data-theme="cyberpunk" class="card mx-auto w-full max-w-xs flex-1 bg-base-100 p-8 text-base-content">
+        <div data-theme="cyberpunk" class="card bg-base-100 text-base-content mx-auto w-full max-w-xs flex-1 p-8">
           <h3 class="text-sm font-bold">Cyberpunk Theme</h3>
           <div class="mt-2 flex flex-col space-y-2">
             <progress value="40" max="100" class="progress" />
             <div class="flex items-center justify-center space-x-2">
-              <div class="btn btn-accent btn-square btn-sm"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></div>
+              <div class="btn btn-accent btn-square btn-sm"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></div>
               <label aria-label="toggle" class="label"><input type="checkbox" checked="checked" class="toggle" /></label>
               <label aria-label="Checkbox" class="label"><input type="checkbox" checked="checked" class="checkbox" /></label>
             </div>
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-      <a href="/docs/default-themes" class="btn btn-ghost mb-20 btn-sm">Read more about themes</a>
+      <a href="/docs/default-themes" class="btn btn-ghost btn-sm mb-20">Read more about themes</a>
       <div />
     </div>
   </div>
