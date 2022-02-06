@@ -34,6 +34,7 @@
   import Navbar from "@components/Navbar.svelte"
   import Scripts from "@components/Scripts.svelte"
   import SEO from "@components/SEO.svelte"
+  import Ads from "@components/Ads.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
   import InstallTabs from "@components/InstallTabs.svelte"
@@ -73,16 +74,31 @@
 {/if}
 <div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`border-t drawer-content border-base-content border-opacity-5`}>
+  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`border-t drawer-content border-base-content border-opacity-5`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
       {#if post}
-        <div class="prose max-w-full">
-          <h1>{post.title ? post.title : ""}</h1>
-          {#if path.startsWith("/docs/install")}
-            <InstallTabs />
+        <div class="flex justify-between gap-6">
+          <div class="prose max-w-4xl flex-grow">
+            {#if path.startsWith("/components")}
+              <Ads size={1} />
+              <Ads size={2} />
+              <Ads size={3} />
+            {/if}
+            <h1>{post.title ? post.title : ""}</h1>
+            {#if path.startsWith("/docs/install")}
+              <InstallTabs />
+            {/if}
+            <slot />
+          </div>
+          {#if path.startsWith("/components")}
+            <div>
+              <div class="sticky top-24 mt-32">
+                <Ads size={4} />
+                <Ads size={5} />
+              </div>
+            </div>
           {/if}
-          <slot />
         </div>
       {:else}
         <slot />
