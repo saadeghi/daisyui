@@ -10,6 +10,7 @@
   export let bg
   export let classes
   export let responsive = false
+  let wrapper
   let showContent = "preview"
   let htmlSlot
 
@@ -26,12 +27,20 @@
     txt.innerHTML = html
     return txt.value
   }
+  $: titleStr = title ? title.replace(/\s+/g, "-").toLowerCase() : ""
+
+  onMount(() => {
+    if (document.getElementById(location.hash.slice(1)) && location.hash.slice(1) == titleStr) {
+      document.getElementById(location.hash.slice(1)).click()
+    }
+  })
 </script>
 
-<div class="component-preview not-prose my-4 max-w-4xl">
+<div class="component-preview not-prose my-4 max-w-4xl" id={titleStr} bind:this={wrapper}>
   {#if title}
     <div class="pb-2 text-sm font-bold">
-      {title}
+      <a class="opacity-20 hover:opacity-60" href={`#${titleStr}`}>#</a>
+      <span class="component-preview-title">{title}</span>
     </div>
   {/if}
   {#if desc}
