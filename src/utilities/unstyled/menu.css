@@ -1,12 +1,23 @@
-.menu-vertical{
+.menu-vertical {
   @apply flex-col;
-  :where(li){
+  :where(li) {
     @apply flex-col;
   }
 }
-.menu-horizontal{
+
+.menu-vertical > :where(li) > :where(ul) {
+  top: initial;
+  left: 100%;
+}
+
+.menu-horizontal {
   @apply flex-row inline-flex;
-  :where(li){
+  :where(li) {
     @apply flex-row;
   }
+}
+
+.menu-horizontal > :where(li) > :where(ul) {
+  top: 100%;
+  left: initial;
 }

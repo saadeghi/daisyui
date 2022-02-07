@@ -1,20 +1,61 @@
-.menu-vertical :where(li.bordered>a),
-.menu-vertical :where(li.bordered>button),
-.menu-vertical :where(li.bordered>span){
+.menu-vertical :where(li.bordered > *) {
   @apply border-l-4 border-b-0;
 }
-.menu-horizontal :where(li.bordered>a),
-.menu-horizontal :where(li.bordered>button),
-.menu-horizontal :where(li.bordered>span){
+.menu-horizontal :where(li.bordered > *) {
   @apply border-l-0 border-b-4;
 }
-.menu-normal :where(li>a),
-.menu-normal :where(li>button),
-.menu-normal :where(li>span){
+.menu-normal :where(li > *) {
   @apply py-3 text-base;
 }
-.menu-compact :where(li>a),
-.menu-compact :where(li>button),
-.menu-compact :where(li>span){
+.menu-compact :where(li > *) {
   @apply py-2 text-sm;
+}
+.menu-vertical > :where(li:first-child) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.menu-vertical > :where(li:first-child) > :where(*:not(ul)) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.menu-vertical > :where(li:last-child) {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.menu-vertical > :where(li:last-child) > :where(*:not(ul)) {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.menu-horizontal > :where(li:first-child) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: inherit;
+}
+.menu-horizontal > :where(li:first-child) > :where(*:not(ul)) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: inherit;
+}
+.menu-horizontal > :where(li:last-child) {
+  border-top-left-radius: unset;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: unset;
+}
+.menu-horizontal > :where(li:last-child) > :where(*:not(ul)) {
+  border-top-left-radius: unset;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: unset;
 }
