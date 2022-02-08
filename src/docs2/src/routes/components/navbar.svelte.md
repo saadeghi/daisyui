@@ -423,3 +423,26 @@ published: true
 </div>`
 }</pre>
 </Component>
+
+<Component title="Navbar with colors">
+<div class="navbar bg-neutral text-neutral-content shadow-xl rounded-xl">
+  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+</div>
+<div class="navbar bg-base-300 shadow-xl rounded-xl">
+  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+</div>
+<div class="navbar bg-primary text-primary-content shadow-xl rounded-xl">
+  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+</div>
+<pre slot="html">{
+`<div class="navbar bg-neutral text-neutral-content">
+  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+</div>
+<div class="navbar bg-base-300">
+  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+</div>
+<div class="navbar bg-primary text-primary-content">
+  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+</div>`
+}</pre>
+</Component>
