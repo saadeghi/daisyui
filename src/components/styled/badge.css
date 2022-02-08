@@ -1,12 +1,6 @@
 .badge {
   @apply bg-neutral border border-neutral text-neutral-content rounded-badge;
 }
-.btn .badge {
-  @apply bg-base-100 text-base-content border-transparent;
-  &-outline {
-    @apply bg-transparent text-base-200 border-base-200;
-  }
-}
 
 .btn-outline {
   .badge {

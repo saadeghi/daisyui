@@ -152,7 +152,7 @@ published: true
 </button>
 <button class="btn gap-2">
   Inbox
-  <div class="badge badge-outline">+99</div>
+  <div class="badge badge-secondary">+99</div>
 </button>
 <pre slot="html">{
 `<button class="btn gap-2">
@@ -161,7 +161,7 @@ published: true
 </button>
 <button class="btn gap-2">
   Inbox
-  <div class="badge badge-outline">+99</div>
+  <div class="badge badge-secondary">+99</div>
 </button>`
 }</pre>
 </Component>
