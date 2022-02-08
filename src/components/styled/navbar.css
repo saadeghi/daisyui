@@ -1,4 +1,5 @@
-.navbar{
-  padding: var(--navbar-padding, .5rem);
+.navbar {
+  padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
+  @apply w-full;
 }
