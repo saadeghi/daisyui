@@ -1,26 +1,26 @@
-.stats{
-  @apply rounded-box;
+.stats {
+  @apply rounded-box bg-base-100 text-base-content;
 }
-.stat{
-  @apply px-6 py-4 bg-base-100 text-base-content;
-  &-title{
+.stat {
+  @apply px-6 py-4 gap-x-4;
+  &-title {
     @apply opacity-50;
   }
-  &-value{
+  &-value {
     @apply text-4xl font-extrabold;
   }
-  &-desc{
+  &-desc {
     @apply opacity-50 text-sm;
   }
-  &-actions{
+  &-actions {
     @apply mt-4;
   }
 }
-.stat+.stat{
+.stat + .stat {
   @apply border-l border-base-content border-opacity-10;
 }
-.stats.grid-flow-row{
-  .stat+.stat{
+.stats.grid-flow-row {
+  .stat + .stat {
     @apply border-l-0 border-t;
   }
 }
