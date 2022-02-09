@@ -27,7 +27,7 @@
   }
 }
 .rating-half {
-  :where(input) {
+  :where(input:not(.rating-hidden)) {
     @apply w-3;
   }
 }

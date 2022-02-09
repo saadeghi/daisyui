@@ -151,7 +151,7 @@ published: true
 }</pre>
 </Component>
 
-<Component title="with `rating-hidden` (to clear the rating)">
+<Component title="with `rating-hidden`" desc="`rating-hidden` is a hidden radio at the start to allow uses remove their rating.">
 <div class="rating rating-lg">
   <input type="radio" name="rating-9" class="rating-hidden">
   <input type="radio" name="rating-9" class="mask mask-star-2">

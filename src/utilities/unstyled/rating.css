@@ -12,16 +12,16 @@
 }
 
 .rating-half {
-  &.rating-xs input {
+  &.rating-xs input:not(.rating-hidden) {
     @apply w-1.5;
   }
-  &.rating-sm input {
+  &.rating-sm input:not(.rating-hidden) {
     @apply w-2;
   }
-  &.rating-md input {
+  &.rating-md input:not(.rating-hidden) {
     @apply w-3;
   }
-  &.rating-lg input {
+  &.rating-lg input:not(.rating-hidden) {
     @apply w-5;
   }
 }
