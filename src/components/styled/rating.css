@@ -1,38 +1,43 @@
-.rating{
-  & input{
+.rating {
+  & input {
     @apply appearance-none;
     -webkit-appearance: none;
   }
-  :where(input){
+  :where(input) {
     animation: rating-pop var(--animation-input, 0.25s) ease-out;
     @apply w-6 h-6 bg-base-content bg-opacity-100;
   }
-  & .rating-hidden{
+  & .rating-hidden {
     @apply w-2 bg-transparent;
   }
-  input:checked ~ input{
+  input:checked ~ input {
     @apply bg-opacity-20;
   }
-  input:focus-visible{
+  input:focus-visible {
     @apply transition-transform ease-in-out duration-300;
-    transform: translateY(-.125em);
+    transform: translateY(-0.125em);
   }
-  
-  & input:active:focus{
+
+  & input:active:focus {
     animation: none;
   }
-  
-  & input:active:focus{
-    transform: translateY(-.125em);
+
+  & input:active:focus {
+    transform: translateY(-0.125em);
+  }
+}
+.rating-half {
+  :where(input) {
+    @apply w-3;
   }
 }
 
 @keyframes rating-pop {
   0% {
-    transform: translateY(-.125em);
+    transform: translateY(-0.125em);
   }
   40% {
-    transform: translateY(-.125em);
+    transform: translateY(-0.125em);
   }
   100% {
     transform: translateY(0);
