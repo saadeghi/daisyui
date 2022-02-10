@@ -29,7 +29,7 @@ published: true
 }</pre>
 </Component>
 
-<Component title="Stat">
+<Component title="Stat with icons or image">
 <div class="shadow stats">
   <div class="stat">
     <div class="stat-figure text-primary">
@@ -93,7 +93,7 @@ published: true
     <div class="stat-title">Tasks done</div>
     <div class="stat-desc text-info">31 tasks remaining</div>
   </div>
-
+  
 </div>`
 }</pre>
 </Component>
@@ -105,7 +105,7 @@ published: true
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     </div>
     <div class="stat-title">Downloads</div>
-    <div class="stat-value">310M</div>
+    <div class="stat-value">31K</div>
     <div class="stat-desc">Jan 1st - Feb 1st</div>
   </div>
   <div class="stat">
@@ -133,7 +133,7 @@ published: true
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     </div>
     <div class="stat-title">Downloads</div>
-    <div class="stat-value">310M</div>
+    <div class="stat-value">31K</div>
     <div class="stat-desc">Jan 1st - Feb 1st</div>
   </div>
   
@@ -159,12 +159,12 @@ published: true
 }</pre>
 </Component>
 
-<Component title="Stat">
+<Component title="Centered items">
 <div class="shadow stats">
   <div class="stat place-items-center">
     <div class="stat-title">Downloads</div>
-    <div class="stat-value">310M</div>
-    <div class="stat-desc">January 1st - February 1st</div>
+    <div class="stat-value">31K</div>
+    <div class="stat-desc">From January 1st to February 1st</div>
   </div>
   <div class="stat place-items-center">
     <div class="stat-title">Users</div>
@@ -182,8 +182,8 @@ published: true
   
   <div class="stat place-items-center">
     <div class="stat-title">Downloads</div>
-    <div class="stat-value">310M</div>
-    <div class="stat-desc">January 1st - February 1st</div>
+    <div class="stat-value">31K</div>
+    <div class="stat-desc">From January 1st to February 1st</div>
   </div>
   
   <div class="stat place-items-center">
@@ -202,11 +202,11 @@ published: true
 }</pre>
 </Component>
 
-<Component title="Stat">
-<div class="grid-flow-row shadow stats">
+<Component title="Vertical">
+<div class="shadow stats stats-vertical">
   <div class="stat">
     <div class="stat-title">Downloads</div>
-    <div class="stat-value">310M</div>
+    <div class="stat-value">31K</div>
     <div class="stat-desc">Jan 1st - Feb 1st</div>
   </div>
   <div class="stat">
@@ -221,26 +221,111 @@ published: true
   </div>
 </div>
 <pre slot="html">{
-`<div class="grid-flow-row shadow stats">
-
+`<div class="shadow stats stats-vertical">
+  
   <div class="stat">
     <div class="stat-title">Downloads</div>
-    <div class="stat-value">310M</div>
+    <div class="stat-value">31K</div>
     <div class="stat-desc">Jan 1st - Feb 1st</div>
   </div>
-
+  
   <div class="stat">
     <div class="stat-title">New Users</div>
     <div class="stat-value">4,200</div>
     <div class="stat-desc text-success">↗︎ 400 (22%)</div>
   </div>
-
+  
   <div class="stat">
     <div class="stat-title">New Registers</div>
     <div class="stat-value">1,200</div>
     <div class="stat-desc text-error">↘︎ 90 (14%)</div>
   </div>
+  
+</div>`
+}</pre>
+</Component>
 
+<Component title="Responsive (vertical on small screen, horizontal on large screen)">
+<div class="shadow stats stats-vertical lg:stats-horizontal">
+  <div class="stat">
+    <div class="stat-title">Downloads</div>
+    <div class="stat-value">31K</div>
+    <div class="stat-desc">Jan 1st - Feb 1st</div>
+  </div>
+  <div class="stat">
+    <div class="stat-title">New Users</div>
+    <div class="stat-value">4,200</div>
+    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+  </div>
+  <div class="stat">
+    <div class="stat-title">New Registers</div>
+    <div class="stat-value">1,200</div>
+    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+  </div>
+</div>
+<pre slot="html">{
+`<div class="shadow stats stats-vertical lg:stats-horizontal">
+  
+  <div class="stat">
+    <div class="stat-title">Downloads</div>
+    <div class="stat-value">31K</div>
+    <div class="stat-desc">Jan 1st - Feb 1st</div>
+  </div>
+  
+  <div class="stat">
+    <div class="stat-title">New Users</div>
+    <div class="stat-value">4,200</div>
+    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+  </div>
+  
+  <div class="stat">
+    <div class="stat-title">New Registers</div>
+    <div class="stat-value">1,200</div>
+    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+  </div>
+  
+</div>`
+}</pre>
+</Component>
+
+<Component title="With custom colors and button">
+<div class="stats bg-primary text-primary-content">
+  <div class="stat">
+    <div class="stat-title">Account balance</div>
+    <div class="stat-value">$89,400</div>
+    <div class="stat-actions">
+      <button class="btn btn-sm btn-success">Add funds</button>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="stat-title">Current balance</div>
+    <div class="stat-value">$89,400</div>
+    <div class="stat-actions">
+      <button class="btn btn-sm">Withdrawal</button> 
+      <button class="btn btn-sm">deposit</button>
+    </div>
+  </div>
+</div>
+<pre slot="html">{
+`<div class="stats bg-primary text-primary-content">
+  
+  <div class="stat">
+    <div class="stat-title">Account balance</div>
+    <div class="stat-value">$89,400</div>
+    <div class="stat-actions">
+      <button class="btn btn-sm btn-success">Add funds</button>
+    </div>
+  </div>
+  
+  <div class="stat">
+    <div class="stat-title">Current balance</div>
+    <div class="stat-value">$89,400</div>
+    <div class="stat-actions">
+      <button class="btn btn-sm">Withdrawal</button> 
+      <button class="btn btn-sm">deposit</button>
+    </div>
+  </div>
+  
 </div>`
 }</pre>
 </Component>
