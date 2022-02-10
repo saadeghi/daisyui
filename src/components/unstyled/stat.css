@@ -1,5 +1,8 @@
 .stats {
-  @apply inline-grid grid-flow-col;
+  @apply inline-grid;
+}
+:where(.stats) {
+  @apply grid-flow-col;
 }
 .stat {
   @apply w-full inline-grid;
@@ -20,6 +23,6 @@
     @apply col-start-1 whitespace-nowrap;
   }
 }
-.stats.grid-flow-row {
+/* .stats.grid-flow-row {
   @apply auto-rows-fr;
-}
+} */

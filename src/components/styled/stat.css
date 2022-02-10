@@ -1,26 +1,29 @@
 .stats {
   @apply rounded-box bg-base-100 text-base-content;
 }
+:where(.stats) {
+  @apply overflow-x-auto divide-x divide-y-0;
+}
 .stat {
-  @apply px-6 py-4 gap-x-4;
+  @apply px-6 py-4 gap-x-4 border-base-content border-opacity-10;
   &-title {
-    @apply opacity-50;
+    @apply opacity-60;
   }
   &-value {
     @apply text-4xl font-extrabold;
   }
   &-desc {
-    @apply opacity-50 text-sm;
+    @apply opacity-60 text-xs;
   }
   &-actions {
     @apply mt-4;
   }
 }
-.stat + .stat {
+/* .stat + .stat {
   @apply border-l border-base-content border-opacity-10;
 }
 .stats.grid-flow-row {
   .stat + .stat {
     @apply border-l-0 border-t;
   }
-}
+} */
