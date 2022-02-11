@@ -10,7 +10,7 @@
 .menu :where(li) {
   @apply flex flex-col items-stretch relative flex-wrap;
 }
-.menu :where(li:not(.disabled)) > :where(*:not(ul)) {
+.menu :where(li:not(.disabled):not(.menu-title)) > :where(*:not(ul)) {
   @apply flex items-center outline-none cursor-pointer select-none;
 }
 .menu > :where(li > *:not(ul):focus) {

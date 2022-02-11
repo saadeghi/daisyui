@@ -21,13 +21,16 @@
     @apply text-current px-4 py-3 gap-3;
   }
 
-  :where(li) > :where(*:not(ul):focus),
-  :where(li) > :where(*:not(ul):hover) {
+  :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):focus),
+  :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):hover) {
     @apply bg-base-content bg-opacity-10;
   }
-  :where(li) > :where(:not(ul).active),
-  :where(li) > :where(*:not(ul):active) {
+  :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active),
+  :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
     @apply bg-primary text-primary-content;
+  }
+  :where(li:empty) {
+    @apply bg-base-content bg-opacity-10 h-px mx-4 my-2;
   }
 
   li.disabled {
