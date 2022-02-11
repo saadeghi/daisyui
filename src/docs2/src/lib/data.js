@@ -13,7 +13,6 @@ export let siteData = {
 
 export let menu = [
   {
-    name: "Docs",
     items: [
       {
         name: "Install",
@@ -60,17 +59,81 @@ export let menu = [
     ],
   },
   {
-    name: "Components",
+    name: "Actions",
     items: [
       {
-        name: "Alert",
-        href: "/components/alert",
+        name: "Button",
+        href: "/components/button",
         icon: "",
         badge: "",
       },
       {
-        name: "Artboard",
-        href: "/components/artboard",
+        name: "Dropdown",
+        href: "/components/dropdown",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Modal",
+        href: "/components/modal",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Navigation",
+    items: [
+      {
+        name: "Breadcrumbs",
+        href: "/components/breadcrumbs",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Link",
+        href: "/components/link",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Menu",
+        href: "/components/menu",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Navbar",
+        href: "/components/navbar",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Pagination",
+        href: "/components/pagination",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Steps",
+        href: "/components/steps",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Tab",
+        href: "/components/tab",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Data display",
+    items: [
+      {
+        name: "Alert",
+        href: "/components/alert",
         icon: "",
         badge: "",
       },
@@ -83,24 +146,6 @@ export let menu = [
       {
         name: "Badge",
         href: "/components/badge",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Breadcrumbs",
-        href: "/components/breadcrumbs",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Button",
-        href: "/components/button",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Button group",
-        href: "/components/button-group",
         icon: "",
         badge: "",
       },
@@ -129,6 +174,106 @@ export let menu = [
         badge: "",
       },
       {
+        name: "Kbd",
+        href: "/components/kbd",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Progress",
+        href: "/components/progress",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Stat",
+        href: "/components/stat",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Table",
+        href: "/components/table",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Tooltip",
+        href: "/components/tooltip",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Data input",
+    items: [
+      {
+        name: "Checkbox",
+        href: "/components/form/checkbox",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Text input",
+        href: "/components/form/input",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Radio",
+        href: "/components/form/radio",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Range",
+        href: "/components/form/range",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Rating",
+        href: "/components/rating",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Select",
+        href: "/components/form/select",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Textarea",
+        href: "/components/form/textarea",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Toggle",
+        href: "/components/form/toggle",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Layout",
+    items: [
+      {
+        name: "Artboard",
+        href: "/components/artboard",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Button group",
+        href: "/components/button-group",
+        icon: "",
+        badge: "",
+      },
+      {
         name: "Divider",
         href: "/components/divider",
         icon: "",
@@ -139,54 +284,6 @@ export let menu = [
         href: "/components/drawer",
         icon: "",
         badge: "",
-      },
-      {
-        name: "Dropdown",
-        href: "/components/dropdown",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Form: Checkbox",
-        href: "/components/form/checkbox",
-        icon: "",
-        badge: "updated",
-      },
-      {
-        name: "Form: Input",
-        href: "/components/form/input",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Form: Radio",
-        href: "/components/form/radio",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Form: Range",
-        href: "/components/form/range",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Form: Select",
-        href: "/components/form/select",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Form: Textarea",
-        href: "/components/form/textarea",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Form: Toggle",
-        href: "/components/form/toggle",
-        icon: "",
-        badge: "updated",
       },
       {
         name: "Footer",
@@ -207,14 +304,8 @@ export let menu = [
         badge: "",
       },
       {
-        name: "Kbd",
-        href: "/components/kbd",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Link",
-        href: "/components/link",
+        name: "Input group",
+        href: "/components/form/input-group",
         icon: "",
         badge: "",
       },
@@ -225,77 +316,16 @@ export let menu = [
         badge: "",
       },
       {
-        name: "Menu",
-        href: "/components/menu",
-        icon: "",
-        badge: "updated",
-      },
-      {
-        name: "Modal",
-        href: "/components/modal",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Navbar",
-        href: "/components/navbar",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Pagination",
-        href: "/components/pagination",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Progress",
-        href: "/components/progress",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Rating",
-        href: "/components/rating",
-        icon: "",
-        badge: "new",
-      },
-      {
         name: "Stack",
         href: "/components/stack",
         icon: "",
         badge: "",
       },
-      {
-        name: "Stat",
-        href: "/components/stat",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Steps",
-        href: "/components/steps",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Tab",
-        href: "/components/tab",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Table",
-        href: "/components/table",
-        icon: "",
-        badge: "updated",
-      },
-      {
-        name: "Tooltip",
-        href: "/components/tooltip",
-        icon: "",
-        badge: "",
-      },
+    ],
+  },
+  {
+    name: "Mockup",
+    items: [
       {
         name: "Mockup: Code",
         href: "/components/mockup/code",
@@ -311,29 +341,6 @@ export let menu = [
       {
         name: "Mockup: Window",
         href: "/components/mockup/window",
-        icon: "",
-        badge: "",
-      },
-    ],
-  },
-  {
-    name: "Demos",
-    items: [
-      {
-        name: "Cards",
-        href: "/demos/cards",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Mobile screen",
-        href: "/demos/mobile-screen",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Style guide",
-        href: "/demos/style-guide",
         icon: "",
         badge: "",
       },

@@ -1,6 +1,6 @@
 ---
-title: Checkbox
-desc: Checkbox Description
+title: Toggle
+desc: Toggle Description
 published: true
 ---
 
@@ -8,10 +8,10 @@ published: true
   import Component from "@components/Component.svelte"
 </script>
 
-<Component title="Checkbox">
-<input type="checkbox" checked="checked" class="checkbox">
+<Component title="Toggle">
+<input type="checkbox" class="toggle" checked>
 <pre slot="html">{
-`<input type="checkbox" checked="checked" class="checkbox">`
+`<input type="checkbox" class="toggle"> checked`
 }</pre>
 </Component>
 
@@ -19,14 +19,14 @@ published: true
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox">
+    <input type="checkbox" class="toggle" checked>
   </label>
 </div>
 <pre slot="html">{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox">
+    <input type="checkbox" class="toggle" checked>
   </label>
 </div>`
 }</pre>
@@ -36,14 +36,14 @@ published: true
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox checkbox-primary">
+    <input type="checkbox" class="toggle toggle-primary" checked>
   </label>
 </div>
 <pre slot="html">{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-primary">
+    <input type="checkbox" class="toggle toggle-primary" checked>
   </label>
 </div>`
 }</pre>
@@ -53,14 +53,14 @@ published: true
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox checkbox-secondary">
+    <input type="checkbox" class="toggle toggle-secondary" checked>
   </label>
 </div>
 <pre slot="html">{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-secondary">
+    <input type="checkbox" class="toggle toggle-secondary" checked>
   </label>
 </div>`
 }</pre>
@@ -70,14 +70,14 @@ published: true
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox checkbox-accent">
+    <input type="checkbox" class="toggle toggle-accent" checked>
   </label>
 </div>
 <pre slot="html">{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-accent">
+    <input type="checkbox" class="toggle toggle-accent" checked>
   </label>
 </div>`
 }</pre>
@@ -85,29 +85,29 @@ published: true
 
 <Component title="Sizes">
 <div class="flex flex-col items-center gap-2">
-  <input type="checkbox" checked="checked" class="checkbox checkbox-xs"> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-sm"> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-md"> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-lg">
+  <input type="checkbox" class="toggle toggle-xs">  
+  <input type="checkbox" class="toggle toggle-sm">  
+  <input type="checkbox" class="toggle toggle-md">  
+  <input type="checkbox" class="toggle toggle-lg" checked>
 </div>
 <pre slot="html">{
-`<input type="checkbox" checked="checked" class="checkbox checkbox-xs"> 
-<input type="checkbox" checked="checked" class="checkbox checkbox-sm"> 
-<input type="checkbox" checked="checked" class="checkbox checkbox-md"> 
-<input type="checkbox" checked="checked" class="checkbox checkbox-lg">`
+`<input type="checkbox" class="toggle toggle-xs">  
+<input type="checkbox" class="toggle toggle-sm">  
+<input type="checkbox" class="toggle toggle-md">  
+<input type="checkbox" class="toggle toggle-lg"> checked`
 }</pre>
 </Component>
 
 <Component title="Disabled">
-<input type="checkbox" disabled="disabled" class="checkbox">
+<input type="checkbox" disabled="disabled" class="toggle">
 <pre slot="html">{
-`<input type="checkbox" disabled="disabled" class="checkbox">`
+`<input type="checkbox" disabled="disabled" class="toggle">`
 }</pre>
 </Component>
 
 <Component title="Disabled and checked">
-<input type="checkbox" disabled="disabled" class="checkbox" checked="checked">
+<input type="checkbox" disabled="disabled" class="toggle" checked>
 <pre slot="html">{
-`<input type="checkbox" disabled="disabled" class="checkbox" checked="checked">`
+`<input type="checkbox" disabled="disabled" class="toggle"> checked`
 }</pre>
 </Component>
