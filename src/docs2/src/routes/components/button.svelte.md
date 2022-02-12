@@ -1,6 +1,6 @@
 ---
 title: Button
-desc: Button Description
+desc: Buttons allows user to take actions or make choices.
 published: true
 ---
 

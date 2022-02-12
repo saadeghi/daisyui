@@ -1,6 +1,6 @@
 ---
 title: Pagination
-desc: Pagination Description
+desc: Pagination is a group of buttons that allow the user to navigate between a set of related content.
 published: true
 ---
 

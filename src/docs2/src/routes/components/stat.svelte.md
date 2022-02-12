@@ -1,6 +1,6 @@
 ---
 title: Stat
-desc: Stat Description
+desc: Stat is used to show numbers and data in a box.
 published: true
 ---
 

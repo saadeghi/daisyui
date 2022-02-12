@@ -28,11 +28,11 @@
     {#each posts as { slug, title, desc, thumbnail }}
       <a class="card card-compact hover:bg-base-200 transition-all duration-200 hover:-translate-y-1" href={`${$page.path}/${slug}`}>
         <figure class="px-4 pt-4">
-          <img src={thumbnail || `/component-images/${slug}.jpg`} class="bg-base-300 border-base-content rounded-lg border border-opacity-5" alt={title} />
+          <img src={thumbnail || `/images/components/${slug}.jpg`} class="bg-base-300 border-base-content rounded-lg border border-opacity-5" alt={title} />
         </figure>
         <div class="card-body">
           <h2 class="card-title">{title}</h2>
-          <p>{desc || ""}</p>
+          <p class="text-xs opacity-60">{desc || ""}</p>
         </div>
       </a>
     {/each}

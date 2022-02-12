@@ -1,6 +1,6 @@
 ---
 title: Select
-desc: Select Description
+desc: Select is used to pick a value from a list of options.
 published: true
 ---
 

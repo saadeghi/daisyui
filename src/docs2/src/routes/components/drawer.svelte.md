@@ -1,6 +1,6 @@
 ---
 title: Drawer
-desc: Drawer Description
+desc: Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page.
 published: true
 ---
 
@@ -8,7 +8,20 @@ published: true
   import Component from "@components/Component.svelte"
 </script>
 
+Sidebar can be visible by default on large screens or it can be toggleable on both large and small screens.
+
+Drawer contains:
+
+- `drawer-toggle`: A hidden checkbox to toggle the visibility of the sidebar
+- `drawer-content`: Container for the content of the page
+  - Your content goes here (including navbar, page content, footer, etc.)
+- `drawer-side`: Container for the sidebar
+  - `drawer-overlay` a dark overlay that covers the whole page when the drawer is open
+  - Your Sidebar content (A menu or anything)
+
+You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
 <Component title="Drawer">
+
 <div class="drawer w-full rounded">
   <input id="my-drawer" type="checkbox" class="drawer-toggle">
   <div class="flex flex-col items-center justify-center drawer-content">

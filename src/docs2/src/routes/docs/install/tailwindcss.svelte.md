@@ -1,7 +1,6 @@
 ---
 title: Install daisyUI as Tailwind CSS plugin
-desc:
-thumbnail: https://api.lorem.space/image/album?w=500&h=500&hash=500B67FB
+desc: How to install daisyUI as a Tailwind CSS plugin?
 published: true
 ---
 

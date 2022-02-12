@@ -1,6 +1,6 @@
 ---
 title: Code mockup
-desc: Code mockup Description
+desc: Code mockup is used to show a block of code in a box that looks like a code editor.
 published: true
 ---
 

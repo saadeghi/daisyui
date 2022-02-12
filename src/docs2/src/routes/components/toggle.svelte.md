@@ -1,6 +1,6 @@
 ---
 title: Toggle
-desc: Toggle Description
+desc: Toggle is a checkbox that is styled to look like a switch button.
 published: true
 ---
 

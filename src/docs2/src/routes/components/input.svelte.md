@@ -1,6 +1,6 @@
 ---
 title: Text Input
-desc: Text Input Description
+desc: Text Input is a simple input field.
 published: true
 ---
 

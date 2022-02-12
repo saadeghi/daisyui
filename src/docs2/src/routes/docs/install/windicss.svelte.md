@@ -1,7 +1,6 @@
 ---
 title: Install daisyUI as WindiCSS plugin
-desc:
-thumbnail: https://api.lorem.space/image/album?w=500&h=500&hash=500B67FB
+desc: How to install daisyUI as a WindiCSS plugin?
 published: true
 ---
 

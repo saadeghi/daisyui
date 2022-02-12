@@ -1,6 +1,6 @@
 ---
 title: Mask
-desc: Mask Description
+desc: Mask crops the content of the element to common shapes.
 published: true
 ---
 

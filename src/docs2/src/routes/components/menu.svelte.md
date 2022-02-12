@@ -1,6 +1,6 @@
 ---
 title: Menu
-desc: Menu Description
+desc: Menu is used to display a list of links vertically or horizontally.
 published: true
 ---
 

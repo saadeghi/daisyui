@@ -1,6 +1,6 @@
 ---
 title: How to use daisyUI themes
-desc:
+desc: How to use daisyUI themes?
 published: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Link
-desc: Link Description
+desc: Link adds the missing underline style to links.
 published: true
 ---
 

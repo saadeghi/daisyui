@@ -1,6 +1,6 @@
 ---
 title: Stack
-desc: Stack Description
+desc: Stack visually puts elements on top of each other.
 published: true
 ---
 

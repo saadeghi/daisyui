@@ -1,6 +1,6 @@
 ---
 title: Layout and Typography
-desc:
+desc: How to use layouts and typography in daisyUI
 published: true
 ---
 

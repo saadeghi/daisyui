@@ -1,6 +1,6 @@
 ---
 title: Phone mockup
-desc: Phone mockup Description
+desc: Phone mockup shows a mockup of an iPhone.
 published: true
 ---
 

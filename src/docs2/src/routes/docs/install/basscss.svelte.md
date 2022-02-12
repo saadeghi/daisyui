@@ -1,7 +1,6 @@
 ---
 title: Use daisyUI with BassCSS
-desc:
-thumbnail: https://api.lorem.space/image/album?w=500&h=500&hash=500B67FB
+desc: How to use daisyUI with BassCSS
 published: true
 ---
 

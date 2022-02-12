@@ -1,6 +1,6 @@
 ---
 title: Indicator
-desc: Indicator Description
+desc: Indicators are used to place an element on the corner of another element.
 published: true
 ---
 

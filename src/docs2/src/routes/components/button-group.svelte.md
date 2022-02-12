@@ -1,6 +1,6 @@
 ---
 title: Button group
-desc: Button group Description
+desc: Button group shows buttons next to each other.
 published: true
 ---
 

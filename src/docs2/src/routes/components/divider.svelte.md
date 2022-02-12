@@ -1,6 +1,6 @@
 ---
 title: Divider
-desc: Divider Description
+desc: Divider will be used to separate content vertically or horizontally.
 published: true
 ---
 

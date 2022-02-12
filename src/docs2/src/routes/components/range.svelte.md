@@ -1,6 +1,6 @@
 ---
 title: Range slider
-desc: Range slider Description
+desc: Range slider is used to select a value by sliding a handle.
 published: true
 ---
 

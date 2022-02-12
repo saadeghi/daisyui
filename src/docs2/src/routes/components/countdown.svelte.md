@@ -1,6 +1,6 @@
 ---
 title: Countdown
-desc: Countdown Description
+desc: Countdown gives you a transition effect of changing numbers
 published: true
 ---
 
@@ -22,6 +22,8 @@ published: true
     count()
   })
 </script>
+
+You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99
 
 <Component title="Countdown">
 <span class="countdown">

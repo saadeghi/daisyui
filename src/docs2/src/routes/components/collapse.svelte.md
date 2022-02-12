@@ -1,6 +1,6 @@
 ---
 title: Collapse
-desc: Collapse Description
+desc: Collapse is used for showing and hiding content.
 published: true
 ---
 

@@ -8,7 +8,7 @@ export let siteStats = {
 export let siteData = {
   title: "Tailwind CSS Components",
   desc: "Free Tailwind Components",
-  card: "/card.jpg",
+  card: "/images/default.jpg",
 }
 
 export let menu = [

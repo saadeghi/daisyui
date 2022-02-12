@@ -1,6 +1,6 @@
 ---
 title: Kbd
-desc: Kbd Description
+desc: Kbd is used to display keyboard shortcuts.
 published: true
 ---
 

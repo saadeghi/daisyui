@@ -1,6 +1,6 @@
 ---
 title: Colors
-desc:
+desc: How to use daisyUI colors?
 published: true
 ---
 

@@ -23,6 +23,8 @@
 <script>
   import { onMount } from "svelte"
 
+  import { page } from "$app/stores"
+
   if (process.env.NODE_ENV === "production") {
     import("@components/StyleProduction.svelte")
   }
@@ -71,7 +73,7 @@
 </svelte:head>
 
 {#if post}
-  <SEO title={post.title ? post.title : ""} desc={post.desc ? post.desc : ""} />
+  <SEO title={post.title ? post.title : ""} desc={post.desc ? post.desc : ""} img={`/images${$page.path}.jpg`} />
 {/if}
 <div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
@@ -87,6 +89,9 @@
               <Ads size={3} />
             {/if}
             <h1>{post.title ? post.title : ""}</h1>
+            {#if post.desc}
+              <p>{post.desc}</p>
+            {/if}
             {#if path.startsWith("/docs/install")}
               <InstallTabs />
             {/if}

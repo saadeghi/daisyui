@@ -1,6 +1,6 @@
 ---
 title: Customize daisyUI components
-desc:
+desc: How to customize daisyUI
 published: true
 ---
 

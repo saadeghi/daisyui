@@ -1,6 +1,6 @@
 ---
 title: Radio
-desc: Radio Description
+desc: Radio buttons allow the user to select one option from a set.
 published: true
 ---
 

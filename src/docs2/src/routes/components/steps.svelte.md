@@ -1,6 +1,6 @@
 ---
 title: Steps
-desc: Steps Description
+desc: Steps can be used to show a list of steps in a process.
 published: true
 ---
 

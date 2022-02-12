@@ -1,6 +1,6 @@
 ---
 title: Table
-desc: Table Description
+desc: Table can be used to show a list of data in a table format.
 published: true
 ---
 

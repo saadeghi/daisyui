@@ -6,3 +6,9 @@ export const pkgVersion = () => {
   }
   return "latest"
 }
+export const rootUrl = () => {
+  if (import.meta.env.VITE_ROOT !== undefined) {
+    return import.meta.env.VITE_ROOT
+  }
+  return ""
+}

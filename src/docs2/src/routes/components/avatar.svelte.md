@@ -1,6 +1,6 @@
 ---
 title: Avatar
-desc: Avatar Description
+desc: Avatars are used to show a thumbnail representation of an individual or business in the interface.
 published: true
 ---
 

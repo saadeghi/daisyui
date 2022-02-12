@@ -1,6 +1,6 @@
 ---
 title: Tabs
-desc: Tabs Description
+desc: Tabs can be used to show a list of links in a tabbed format.
 published: true
 ---
 

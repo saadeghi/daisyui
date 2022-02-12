@@ -1,6 +1,6 @@
 ---
 title: Config
-desc:
+desc: How to change the default configuration of daisyUI?
 published: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Tooltip
-desc: Tooltip Description
+desc: Tooltip can be used to show a message when hovering over an element.
 published: true
 ---
 

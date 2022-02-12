@@ -1,6 +1,6 @@
 ---
 title: Rating
-desc: Rating Description
+desc: Rating is a set of radio buttons that allow the user to rate something.
 published: true
 ---
 

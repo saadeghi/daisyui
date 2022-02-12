@@ -1,6 +1,6 @@
 ---
 title: Artboard
-desc: Artboard Description
+desc: Artboard provides fixed size container to display a demo content on mobile size.
 published: true
 ---
 

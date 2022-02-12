@@ -1,6 +1,6 @@
 ---
 title: Card
-desc: Card Description
+desc: Cards are used to group and display content in a way that is easily readable.
 published: true
 ---
 

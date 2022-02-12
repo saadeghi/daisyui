@@ -1,6 +1,6 @@
 ---
 title: Alert
-desc: Alert Description
+desc: Alert informs users about important events.
 published: true
 ---
 

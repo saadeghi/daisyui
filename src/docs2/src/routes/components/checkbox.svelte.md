@@ -1,6 +1,6 @@
 ---
 title: Checkbox
-desc: Checkbox Description
+desc: Checkboxs are used to select or deselect a value.
 published: true
 ---
 
