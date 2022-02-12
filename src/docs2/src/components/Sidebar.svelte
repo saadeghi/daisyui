@@ -8,14 +8,14 @@
   $: switchNavbarStyle = drawerSidebarScrollY > 40 ? true : false
 </script>
 
-<div class={`z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 px-4 py-2 hidden ${$page.path == "/" ? "" : "lg:flex"} ${switchNavbarStyle ? "shadow-sm" : ""}`}>
+<div class={`z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 px-4 py-2 hidden ${$page.url.pathname == "/" ? "" : "lg:flex"} ${switchNavbarStyle ? "shadow-sm" : ""}`}>
   <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2">
     <div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
       <span class="lowercase">daisy</span>
       <span class="text-base-content uppercase">UI</span>
     </div>
   </a>
-  <a href="https://github.com/saadeghi/daisyui/blob/master/CHANGELOG.md" target="_blank" rel="nofollow" class="link link-hover font-mono text-xs text-opacity-50">
+  <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50">
     <div data-tip="Changelog" class="tooltip tooltip-bottom">
       {pkgVersion()}
     </div>
@@ -34,8 +34,8 @@
           {href}
           on:click={closeDrawer}
           class={`flex gap-4 
-          ${$page.path == href ? "active" : ""}
-          ${$page.path.startsWith(href + "/") ? "active" : ""}
+          ${$page.url.pathname == href ? "active" : ""}
+          ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}
           sveltekit:prefetch
         `}
         >

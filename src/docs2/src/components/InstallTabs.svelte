@@ -27,7 +27,7 @@
 <div class="not-prose mb-10 overflow-x-auto">
   <div class="tabs flex-nowrap whitespace-nowrap">
     {#each tabs as { name, href }}
-      <a {href} class={`tab tab-lifted xl:tab-lg ${$page.path == href ? "tab-active" : ""}`}>
+      <a {href} class={`tab tab-lifted xl:tab-lg ${$page.url.pathname == href ? "tab-active" : ""}`}>
         {name}
       </a>
     {/each}

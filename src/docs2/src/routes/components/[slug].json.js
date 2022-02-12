@@ -1,6 +1,6 @@
 import { slugFromPath } from "$lib/util"
 export async function get({ params }) {
-  const modules = import.meta.glob(`./*.{md,svx,svelte.md}`)
+  const modules = import.meta.glob(`./*.{md,svelte.md}`)
 
   let match
   for (const [path, resolver] of Object.entries(modules)) {

@@ -1,11 +1,11 @@
 <script context="module">
-  export async function load({ page, fetch }) {
-    if (page.path != "/") {
-      const post = await fetch(`${page.path}.json`).then((res) => res.json())
-      if (page.path != "/index") {
+  export async function load({ url, fetch }) {
+    if (url.pathname != "/") {
+      const post = await fetch(`${url.pathname}.json`).then((res) => res.json())
+      if (url.pathname != "/index") {
         return {
           props: {
-            path: page.path,
+            path: url.pathname,
             post,
           },
         }
@@ -13,7 +13,7 @@
     } else {
       return {
         props: {
-          path: page.path,
+          path: url.pathname,
         },
       }
     }
@@ -42,7 +42,6 @@
   import Sidebar from "@components/Sidebar.svelte"
   import InstallTabs from "@components/InstallTabs.svelte"
   export let post
-  export let path
 
   let drawercontent
   let drawerContentScrollY = 0
@@ -73,31 +72,33 @@
 </svelte:head>
 
 {#if post}
-  <SEO title={post.title ? post.title : ""} desc={post.desc ? post.desc : ""} img={`/images${$page.path}.jpg`} />
+  <SEO title={post.title ? post.title : ""} desc={post.desc ? post.desc : ""} img={`/images${$page.url.pathname}.jpg`} />
 {/if}
 <div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`border-t drawer-content border-base-content border-opacity-5`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
-      {#if post && path != "/components"}
+      {#if post && $page.url.pathname != "/components"}
         <div class="flex justify-between gap-6">
           <div class="prose max-w-4xl flex-grow">
-            {#if path.startsWith("/components")}
+            {#if $page.url.pathname.startsWith("/components")}
               <Ads size={1} />
               <Ads size={2} />
               <Ads size={3} />
             {/if}
-            <h1>{post.title ? post.title : ""}</h1>
+            {#if post.title}
+              <h1>{post.title}</h1>
+            {/if}
             {#if post.desc}
               <p>{post.desc}</p>
             {/if}
-            {#if path.startsWith("/docs/install")}
+            {#if $page.url.pathname.startsWith("/docs/install")}
               <InstallTabs />
             {/if}
             <slot />
           </div>
-          {#if path.startsWith("/components/")}
+          {#if $page.url.pathname.startsWith("/components/")}
             <div>
               <div class="sticky top-24 mt-32">
                 <Ads size={4} />

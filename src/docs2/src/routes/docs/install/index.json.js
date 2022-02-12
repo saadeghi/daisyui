@@ -1,10 +1,10 @@
 import { slugFromPath } from "$lib/util"
 
-export async function get({ query }) {
-  const modules = import.meta.glob("./*.{md,svx,svelte.md}")
+export async function get({ url }) {
+  const modules = import.meta.glob("./*.{md,svelte.md}")
 
   const postPromises = []
-  const limit = Number(query.get("limit") ?? Infinity)
+  const limit = Number(url.searchParams.get("limit") ?? Infinity)
 
   if (Number.isNaN(limit)) {
     return {

@@ -5,11 +5,11 @@ import preprocess from "svelte-preprocess"
 import path from "path"
 
 export default {
-  extensions: [".svelte", ".svelte.md", ".svx"],
+  extensions: [".svelte", ".svelte.md", ".md"],
 
   preprocess: [
     mdsvex({
-      extensions: [".svelte.md", ".svx"],
+      extensions: [".svelte.md", ".md"],
     }),
     preprocess({
       postcss: true,
