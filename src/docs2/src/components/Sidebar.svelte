@@ -23,7 +23,7 @@
 </div>
 
 {#each menu as { name, items }}
-  <ul class="menu menu-compact bg-base-200 flex flex-col p-0 px-4">
+  <ul class="menu menu-compact flex flex-col p-0 px-4">
     {#if name}
       <li />
       <li class="menu-title"><span>{name}</span></li>

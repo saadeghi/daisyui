@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex w-full justify-center">
-  <div class="stats">
+  <div class="stats bg-base-200">
     <a href="/components/button" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value">{siteStats.components}</div>
       <div class="stat-desc">Components</div>

@@ -1,4 +1,4 @@
-<div class="hero mx-auto min-h-screen max-w-md bg-base-100 text-base-content md:max-w-full">
+<div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
   <div class="hero-content px-4 text-center md:px-0">
     <div>
       <h2 class="mt-32 mb-2 text-4xl font-extrabold md:text-6xl">Clean HTML</h2>
@@ -27,7 +27,7 @@
           </div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="inline-block cursor-pointer rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-indigo-700">Button</button></div>
         </div>
-        <div class="divider hidden text-base-content text-opacity-30 divider-vertical lg:flex">VS</div>
+        <div class="divider text-base-content divider-vertical hidden text-opacity-30 lg:flex">VS</div>
         <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;a class="<span class="text-info">btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre></div>
@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="divider hidden text-base-content text-opacity-30 divider-vertical lg:flex">VS</div>
+        <div class="divider text-base-content divider-vertical hidden text-opacity-30 lg:flex">VS</div>
         <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;input type="checkbox" class="<span class="text-info">toggle</span>"/&gt;</code></pre></div>
@@ -79,21 +79,21 @@
     &lt;li&gt;
       &lt;span class="<span class="text-warning">block px-5 py-1 text-xs text-gray-400 font-bold</span>"&gt;Menu Title&lt;/span&gt;
     &lt;/li&gt;
-    &lt;li&gt;&lt;a class="<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>"&gt;First Menu Item&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a class="<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>"&gt;Second Menu Item&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a class="<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 focus:bg-indigo-500 focus:text-white outline-none cursor-pointer</span>"&gt;Third Menu Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 active:bg-indigo-600 active:text-white outline-none cursor-pointer</span>"&gt;First Menu Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 active:bg-indigo-600 active:text-white outline-none cursor-pointer</span>"&gt;Second Menu Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="<span class="text-warning">block px-5 py-3 rounded-lg text-gray-900 hover:bg-gray-200 active:bg-indigo-600 active:text-white outline-none cursor-pointer</span>"&gt;Third Menu Item&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;</code></pre>
           </div>
           <div class="mt-4 flex items-start justify-center overflow-hidden">
             <ul class="rounded-xl bg-gray-100 p-3">
               <li><span class="block px-5 py-1 text-xs font-bold text-gray-400">Menu Title</span></li>
-              <li><a href="/" class="block cursor-pointer rounded-lg px-5 py-3 text-gray-900 outline-none hover:bg-gray-200 focus:bg-indigo-500 focus:text-white">First Menu Item</a></li>
-              <li><a href="/" class="block cursor-pointer rounded-lg px-5 py-3 text-gray-900 outline-none hover:bg-gray-200 focus:bg-indigo-500 focus:text-white">Second Menu Item</a></li>
-              <li><a href="/" class="block cursor-pointer rounded-lg px-5 py-3 text-gray-900 outline-none hover:bg-gray-200 focus:bg-indigo-500 focus:text-white">Third Menu Item</a></li>
+              <li><a href="/" class="block cursor-pointer rounded-lg px-5 py-3 text-gray-900 outline-none hover:bg-gray-200 active:bg-indigo-600 active:text-white">First Menu Item</a></li>
+              <li><a href="/" class="block cursor-pointer rounded-lg px-5 py-3 text-gray-900 outline-none hover:bg-gray-200 active:bg-indigo-600 active:text-white">Second Menu Item</a></li>
+              <li><a href="/" class="block cursor-pointer rounded-lg px-5 py-3 text-gray-900 outline-none hover:bg-gray-200 active:bg-indigo-600 active:text-white">Third Menu Item</a></li>
             </ul>
           </div>
         </div>
-        <div class="divider hidden text-base-content text-opacity-30 divider-vertical lg:flex">VS</div>
+        <div class="divider text-base-content divider-vertical hidden text-opacity-30 lg:flex">VS</div>
         <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md">
@@ -107,7 +107,7 @@
   &lt;/ul&gt;</code></pre>
           </div>
           <div class="mt-4 flex items-start justify-center">
-            <ul class="menu rounded-xl bg-base-200 p-3">
+            <ul class="menu bg-base-200 rounded-xl p-3">
               <li class="menu-title"><span>Menu Title</span></li>
               <li><a href="/">First Menu Item</a></li>
               <li><a href="/">Second Menu Item</a></li>
@@ -116,7 +116,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-6 mb-10 flex w-full justify-center"><a href="/components/button" class="btn btn-primary btn-wide">See All Components</a></div>
+      <div class="mt-6 mb-10 flex w-full justify-center"><a href="/components" class="btn btn-primary btn-wide">See All Components</a></div>
     </div>
   </div>
 </div>

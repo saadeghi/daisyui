@@ -19,7 +19,7 @@
   <HomepagePreview />
   <HomepageStats />
   <div class="flex w-full justify-center">
-    <a href="/components/button" class="btn btn-primary btn-wide">See All Components</a>
+    <a href="/components" class="btn btn-primary btn-wide">See All Components</a>
   </div>
 </div>
 <HomepageCleanHtml />

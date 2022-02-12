@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="mt-4 flex flex-1 justify-center space-x-2 lg:mt-12 lg:justify-start">
-    <a href="/components/button" class="btn btn-ghost lg:btn-lg">
+    <a href="/components" class="btn btn-ghost lg:btn-lg">
       <span class="hidden md:inline">See</span>
       &nbsp; components
     </a>

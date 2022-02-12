@@ -78,7 +78,7 @@
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`border-t drawer-content border-base-content border-opacity-5`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
-      {#if post}
+      {#if post && path != "/components"}
         <div class="flex justify-between gap-6">
           <div class="prose max-w-4xl flex-grow">
             {#if path.startsWith("/components")}
@@ -92,7 +92,7 @@
             {/if}
             <slot />
           </div>
-          {#if path.startsWith("/components")}
+          {#if path.startsWith("/components/")}
             <div>
               <div class="sticky top-24 mt-32">
                 <Ads size={4} />

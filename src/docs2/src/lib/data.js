@@ -1,5 +1,5 @@
 export let siteStats = {
-  components: "41",
+  components: "43",
   themes: "22",
   githubStars: "7,000",
   npmInstalls: "300,000",
@@ -76,53 +76,6 @@ export let menu = [
       {
         name: "Modal",
         href: "/components/modal",
-        icon: "",
-        badge: "",
-      },
-    ],
-  },
-  {
-    name: "Navigation",
-    items: [
-      {
-        name: "Breadcrumbs",
-        href: "/components/breadcrumbs",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Link",
-        href: "/components/link",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Menu",
-        href: "/components/menu",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Navbar",
-        href: "/components/navbar",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Pagination",
-        href: "/components/pagination",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Steps",
-        href: "/components/steps",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Tab",
-        href: "/components/tab",
         icon: "",
         badge: "",
       },
@@ -210,25 +163,25 @@ export let menu = [
     items: [
       {
         name: "Checkbox",
-        href: "/components/form/checkbox",
+        href: "/components/checkbox",
         icon: "",
         badge: "",
       },
       {
         name: "Text input",
-        href: "/components/form/input",
+        href: "/components/input",
         icon: "",
         badge: "",
       },
       {
         name: "Radio",
-        href: "/components/form/radio",
+        href: "/components/radio",
         icon: "",
         badge: "",
       },
       {
         name: "Range",
-        href: "/components/form/range",
+        href: "/components/range",
         icon: "",
         badge: "",
       },
@@ -240,19 +193,19 @@ export let menu = [
       },
       {
         name: "Select",
-        href: "/components/form/select",
+        href: "/components/select",
         icon: "",
         badge: "",
       },
       {
         name: "Textarea",
-        href: "/components/form/textarea",
+        href: "/components/textarea",
         icon: "",
         badge: "",
       },
       {
         name: "Toggle",
-        href: "/components/form/toggle",
+        href: "/components/toggle",
         icon: "",
         badge: "",
       },
@@ -305,7 +258,7 @@ export let menu = [
       },
       {
         name: "Input group",
-        href: "/components/form/input-group",
+        href: "/components/input-group",
         icon: "",
         badge: "",
       },
@@ -324,23 +277,70 @@ export let menu = [
     ],
   },
   {
+    name: "Navigation",
+    items: [
+      {
+        name: "Breadcrumbs",
+        href: "/components/breadcrumbs",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Link",
+        href: "/components/link",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Menu",
+        href: "/components/menu",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Navbar",
+        href: "/components/navbar",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Pagination",
+        href: "/components/pagination",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Steps",
+        href: "/components/steps",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Tab",
+        href: "/components/tab",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
     name: "Mockup",
     items: [
       {
-        name: "Mockup: Code",
-        href: "/components/mockup/code",
+        name: "Code",
+        href: "/components/mockup-code",
         icon: "",
         badge: "",
       },
       {
-        name: "Mockup: Phone",
-        href: "/components/mockup/phone",
+        name: "Phone",
+        href: "/components/mockup-phone",
         icon: "",
         badge: "",
       },
       {
-        name: "Mockup: Window",
-        href: "/components/mockup/window",
+        name: "Window",
+        href: "/components/mockup-window",
         icon: "",
         badge: "",
       },
