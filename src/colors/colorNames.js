@@ -21,7 +21,15 @@ module.exports = {
   "base-content"      : "--bc",
 
   "info"              : "--in",
+  "info-content"      : "--inc",
+
   "success"           : "--su",
+  "success-content"   : "--suc",
+
   "warning"           : "--wa",
+  "warning-content"   : "--wac",
+
   "error"             : "--er",
+  "error-content"     : "--erc",
+
 }
