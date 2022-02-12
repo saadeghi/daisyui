@@ -1,5 +1,4 @@
 import { mdsvex } from "mdsvex"
-// import mdsvexConfig from "./mdsvex.config.js";
 import adapter from "@sveltejs/adapter-static"
 import preprocess from "svelte-preprocess"
 import path from "path"
@@ -17,10 +16,12 @@ export default {
   ],
 
   kit: {
+    // trailingSlash: 'always',
     adapter: adapter({
-      pages: "dist",
-      assets: "dist",
+      pages: "build",
+      assets: "build",
       fallback: null,
+      precompress: true,
     }),
     vite: {
       server: {
