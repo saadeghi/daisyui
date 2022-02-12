@@ -1,5 +1,5 @@
 .menu {
-  @apply flex flex-col bg-base-100;
+  @apply flex flex-col;
   &.horizontal {
     @apply flex-row inline-flex;
     :where(li) {
@@ -24,7 +24,7 @@
   @apply flex flex-col items-stretch;
 }
 .menu > :where(li) > :where(ul) {
-  @apply absolute bg-base-100 hidden;
+  @apply absolute hidden;
   top: initial;
   left: 100%;
 }
