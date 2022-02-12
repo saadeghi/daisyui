@@ -27,7 +27,7 @@
           </div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="inline-block cursor-pointer rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-indigo-700">Button</button></div>
         </div>
-        <div class="divider text-base-content divider-vertical hidden text-opacity-30 lg:flex">VS</div>
+        <div class="divider text-base-content divider-horizontal hidden text-opacity-30 lg:flex">VS</div>
         <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;a class="<span class="text-info">btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre></div>
@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="divider text-base-content divider-vertical hidden text-opacity-30 lg:flex">VS</div>
+        <div class="divider text-base-content divider-horizontal hidden text-opacity-30 lg:flex">VS</div>
         <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;input type="checkbox" class="<span class="text-info">toggle</span>"/&gt;</code></pre></div>
@@ -93,7 +93,7 @@
             </ul>
           </div>
         </div>
-        <div class="divider text-base-content divider-vertical hidden text-opacity-30 lg:flex">VS</div>
+        <div class="divider text-base-content divider-horizontal hidden text-opacity-30 lg:flex">VS</div>
         <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md">
