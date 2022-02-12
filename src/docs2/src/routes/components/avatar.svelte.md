@@ -11,7 +11,7 @@ published: true
 <Component title="Avatar">
 <div class="avatar">
   <div class="w-24 rounded">
-    <img src="https://api.lorem.space/image/face?hash=75101">
+    <img src="https://api.lorem.space/image/face?hash=75101" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <pre slot="html">{
@@ -26,22 +26,22 @@ published: true
 <Component title="Avatar in custom sizes">
 <div class="avatar">
   <div class="w-24 rounded">
-    <img src="https://api.lorem.space/image/face?hash=71470">
+    <img src="https://api.lorem.space/image/face?hash=71470" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-16 rounded">
-    <img src="https://api.lorem.space/image/face?hash=88712">
+    <img src="https://api.lorem.space/image/face?hash=88712" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-12 rounded">
-    <img src="https://api.lorem.space/image/face?hash=15164">
+    <img src="https://api.lorem.space/image/face?hash=15164" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-8 rounded">
-    <img src="https://api.lorem.space/image/face?hash=79498">
+    <img src="https://api.lorem.space/image/face?hash=79498" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <pre slot="html">{
@@ -52,17 +52,17 @@ published: true
 </div>
 <div class="avatar">
   <div class="w-20 rounded">
-    <img src="https://api.lorem.space/image/face?hash=80245">
+    <img src="https://api.lorem.space/image/face?hash=80245" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-16 rounded">
-    <img src="https://api.lorem.space/image/face?hash=77703">
+    <img src="https://api.lorem.space/image/face?hash=77703" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-8 rounded">
-    <img src="https://api.lorem.space/image/face?hash=33791">
+    <img src="https://api.lorem.space/image/face?hash=33791" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>`
 }</pre>
@@ -71,12 +71,12 @@ published: true
 <Component title="Avatar rounded">
 <div class="avatar">
   <div class="w-24 rounded-xl">
-    <img src="https://api.lorem.space/image/face?hash=71060">
+    <img src="https://api.lorem.space/image/face?hash=71060" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 rounded-full">
-    <img src="https://api.lorem.space/image/face?hash=70084">
+    <img src="https://api.lorem.space/image/face?hash=70084" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <pre slot="html">{
@@ -96,17 +96,17 @@ published: true
 <Component title="Avatar with mask">
 <div class="avatar">
   <div class="w-24 mask mask-squircle">
-    <img src="https://api.lorem.space/image/face?hash=8877">
+    <img src="https://api.lorem.space/image/face?hash=8877" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 mask mask-hexagon">
-    <img src="https://api.lorem.space/image/face?hash=79960">
+    <img src="https://api.lorem.space/image/face?hash=79960" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 mask mask-triangle">
-    <img src="https://api.lorem.space/image/face?hash=70860">
+    <img src="https://api.lorem.space/image/face?hash=70860" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <pre slot="html">{
@@ -132,22 +132,22 @@ published: true
 <div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12">
-      <img src="https://api.lorem.space/image/face?hash=11722">
+      <img src="https://api.lorem.space/image/face?hash=11722" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
     <div class="w-12">
-      <img src="https://api.lorem.space/image/face?hash=75704">
+      <img src="https://api.lorem.space/image/face?hash=75704" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
     <div class="w-12">
-      <img src="https://api.lorem.space/image/face?hash=86780">
+      <img src="https://api.lorem.space/image/face?hash=86780" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
     <div class="w-12">
-      <img src="https://api.lorem.space/image/face?hash=92365">
+      <img src="https://api.lorem.space/image/face?hash=92365" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
 </div>
@@ -181,17 +181,17 @@ published: true
 <div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12">
-      <img src="https://api.lorem.space/image/face?hash=71251">
+      <img src="https://api.lorem.space/image/face?hash=71251" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
     <div class="w-12">
-      <img src="https://api.lorem.space/image/face?hash=58372">
+      <img src="https://api.lorem.space/image/face?hash=58372" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
     <div class="w-12">
-      <img src="https://api.lorem.space/image/face?hash=26576">
+      <img src="https://api.lorem.space/image/face?hash=26576" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar placeholder">
@@ -229,7 +229,7 @@ published: true
 <Component title="Avatar with ring">
 <div class="avatar">
   <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="https://api.lorem.space/image/face?hash=558">
+    <img src="https://api.lorem.space/image/face?hash=558" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <pre slot="html">{
@@ -244,12 +244,12 @@ published: true
 <Component title="Avatar with presense indicator">
 <div class="avatar online">
   <div class="w-24 rounded-full">
-    <img src="https://api.lorem.space/image/face?hash=67053">
+    <img src="https://api.lorem.space/image/face?hash=67053" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar offline">
   <div class="w-24 rounded-full">
-    <img src="https://api.lorem.space/image/face?hash=92699">
+    <img src="https://api.lorem.space/image/face?hash=92699" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <pre slot="html">{

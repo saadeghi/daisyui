@@ -119,12 +119,12 @@ published: true
 </Component>
 
 <Component title="Buttons with different HTML tags" desc="You can use `btn` class on <button>, <input>, <a>, etc...">
-<a href="#" role="button" class="btn">Link</a> 
+<a role="button" class="btn">Link</a> 
 <button type="submit" class="btn">Button</button> 
 <input type="button" value="Input" class="btn"> 
 <input type="submit" value="Submit" class="btn"> 
 <input type="reset" value="Reset" class="btn"><pre slot="html">{
-`<a href="#" role="button" class="btn">Link</a> 
+`<a role="button" class="btn">Link</a> 
 <button type="submit" class="btn">Button</button> 
 <input type="button" value="Input" class="btn"> 
 <input type="submit" value="Submit" class="btn"> 
