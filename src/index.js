@@ -10,7 +10,7 @@ const utilitiesUnstyled = require('./dist/utilities-unstyled')
 const utilitiesStyled   = require('./dist/utilities-styled')
 const themes            = require('./colors/themes')
 const colorNames        = require('./colors/colorNames')
-const hex2hsl           = require('./colors/hex2hsl')
+const Color             = require('color');
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = []
@@ -57,7 +57,8 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
     if (typeof input === 'object' && input !== null) {
       Object.entries(input).forEach(([rule, value]) => {
         if(colorNames.hasOwnProperty(rule)){
-          resultObj[colorNames[rule]] = hex2hsl(value)
+          const hslArray = Color(value).hsl().round().array()
+          resultObj[colorNames[rule]] = hslArray[0] + " " + hslArray[1] + "%" + " " + hslArray[2] + "%"
         }else{
           resultObj[rule] = value
           // console.log(input)
