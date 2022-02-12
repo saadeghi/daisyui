@@ -116,8 +116,14 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
       addBase({[':root']: includedThemesObj['[data-theme='+themeName+']']})
     }else if (index === 1) {
       // auto dark
-      if (themeOrder[0] != 'dark' && themeOrder.includes('dark')){
-        addBase({['@media (prefers-color-scheme: dark)']: {[':root']: includedThemesObj['[data-theme=dark]']}})
+      if(config('daisyui.darkTheme')){
+        if (themeOrder[0] != config('daisyui.darkTheme') && themeOrder.includes(config('daisyui.darkTheme'))){
+          addBase({['@media (prefers-color-scheme: dark)']: {[':root']: includedThemesObj[`[data-theme=${config('daisyui.darkTheme')}]`]}})
+        }
+      }else{
+        if (themeOrder[0] != 'dark' && themeOrder.includes('dark')){
+          addBase({['@media (prefers-color-scheme: dark)']: {[':root']: includedThemesObj['[data-theme=dark]']}})
+        }
       }
       // theme 0 with name
       addBase({['[data-theme='+themeOrder[0]+']']: includedThemesObj['[data-theme='+themeOrder[0]+']']})
