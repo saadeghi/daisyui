@@ -27,7 +27,12 @@
     txt.innerHTML = html
     return txt.value
   }
-  $: titleStr = title ? title.replace(/\s+/g, "-").toLowerCase() : ""
+  $: titleStr = title
+    ? title
+        .replace(/[ ]/g, "-") // replace spaces with -
+        .replace(/[^A-Za-z0-9-]/g, "") // replace all non-alphanumeric chars
+        .toLowerCase()
+    : ""
 
   onMount(() => {
     if (document.getElementById(location.hash.slice(1)) && location.hash.slice(1) == titleStr) {
