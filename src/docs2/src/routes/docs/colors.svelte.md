@@ -43,6 +43,7 @@ These are default utility classes that use color names:
 bg-{COLOR_NAME}
 text-{COLOR_NAME}
 border-{COLOR_NAME}
+caret-{COLOR_NAME}
 from-{COLOR_NAME}
 via-{COLOR_NAME}
 to-{COLOR_NAME}
@@ -85,9 +86,16 @@ So you can use `bg-primary`, `border-secondary`, etc...
 | <span class="badge badge-xs bg-base-content"></span> base-content           | Foreground content color to use on base color      | `bg-base-content`      | `hsl(--bc)`      |
 |                                                                             |                                                    |                        |
 | <span class="badge badge-xs bg-info"></span> info                           | Info color                                         | `bg-info`              | `hsl(--in)`      |
+| <span class="badge badge-xs bg-info-content"></span> info-content           | Foreground content color to use on info color      | `bg-info-content`      | `hsl(--inc)`     |
+|                                                                             |                                                    |                        |
 | <span class="badge badge-xs bg-success"></span> success                     | Success color                                      | `bg-success`           | `hsl(--su)`      |
+| <span class="badge badge-xs bg-success-content"></span> success-content     | Foreground content color to use on success color   | `bg-success-content`   | `hsl(--suc)`     |
+|                                                                             |                                                    |                        |
 | <span class="badge badge-xs bg-warning"></span> warning                     | Warning color                                      | `bg-warning`           | `hsl(--wa)`      |
+| <span class="badge badge-xs bg-warning-content"></span> warning-content     | Foreground content color to use on warning color   | `bg-warning-content`   | `hsl(--wac)`     |
+|                                                                             |                                                    |                        |
 | <span class="badge badge-xs bg-error"></span> error                         | Error color                                        | `bg-error`             | `hsl(--er)`      |
+| <span class="badge badge-xs bg-error-content"></span> error-content         | Foreground content color to use on error color     | `bg-error-content`     | `hsl(--erc)`     |
 
 </div>
 </div>
