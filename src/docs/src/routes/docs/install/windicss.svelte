@@ -2,7 +2,7 @@
   export async function load() {
     return {
       status: 302,
-      redirect: "/docs/install/tailwindcss",
+      redirect: "/docs/windicss",
     }
   }
 </script>
@@ -10,6 +10,6 @@
 <script>
   import { onMount } from "svelte"
   onMount(() => {
-    window.location.href = "/docs/install/tailwindcss"
+    window.location.href = "/docs/windicss"
   })
 </script>
