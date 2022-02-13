@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-            node-version: 14.15.0
+            node-version: 16.8.0
             registry-url: https://registry.npmjs.org
 
       - name: check latest released version
@@ -88,10 +88,10 @@ jobs:
         with:
           time: '10s'
 
-      - name: Install dependencies
+      - name: Install document website dependencies
         run: cd src/docs && npm install
 
-      - name: Generate
+      - name: Build document website
         run: cd src/docs && npm run build
 
       - name: Deploy docs to github pages
