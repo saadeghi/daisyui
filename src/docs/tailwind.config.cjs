@@ -15,8 +15,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    // process.env.NODE_ENV === 'production' ? require('daisyui') : [],
-    process.env.NODE_ENV === 'production' ? require('../../index') : [],
+    process.env.NODE_ENV === 'production' ? require('daisyui') : [],
   ],
   presets: [
     process.env.NODE_ENV === 'production' ? [] : require('../components/tailwind.config.js'),
