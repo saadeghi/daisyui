@@ -28,9 +28,12 @@
   if (process.env.NODE_ENV === "production") {
     import("@components/StyleProduction.svelte")
   }
-  let StyleDevelopment
-  if (process.env.NODE_ENV === "development") {
-    StyleDevelopment = import("@components/StyleDevelopment.svelte")
+  
+  try {
+    if (process.env.NODE_ENV === "development") {
+      StyleDevelopment = import("@components/StyleDevelopment.svelte")
+    }
+  } catch (e) {
   }
   
   import "prism-themes/themes/prism-material-dark.css"
