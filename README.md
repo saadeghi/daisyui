@@ -142,7 +142,6 @@ Read the documents for more info:
 - [x] Collapse (Accordion)
 - [ ] Comment
 - [x] Countdown
-- [ ] Cover
 - [x] Divider
 - [x] Drawer
 - [ ] Empty placeholder
@@ -150,6 +149,7 @@ Read the documents for more info:
 - [ ] Form
   - [x] Select
   - [x] Text input
+    - [x] Input group
   - [x] Text area
   - [x] Checkbox
   - [x] Radio
@@ -176,6 +176,7 @@ Read the documents for more info:
 - [x] Stack
 - [x] Stat
 - [x] Steps
+- [x] Swap
 - [ ] Tag
 - [x] Table
 - [x] Tabs

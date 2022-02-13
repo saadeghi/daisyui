@@ -198,6 +198,12 @@ export let menu = [
         badge: "",
       },
       {
+        name: "Swap",
+        href: "/components/swap",
+        icon: "",
+        badge: "",
+      },
+      {
         name: "Textarea",
         href: "/components/textarea",
         icon: "",
