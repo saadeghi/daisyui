@@ -51,7 +51,7 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         uses: SpicyPizza/create-envfile@v1
         with:
-          envkey_DAISYUI_VERSION: ${{ env.PACKAGE_VERSION }}
+          envkey_VITE_DAISYUI_VERSION: ${{ env.PACKAGE_VERSION }}
           file_name: src/docs/.env
           
       - name: update package version in readme
@@ -92,11 +92,11 @@ jobs:
         run: cd src/docs && npm install
 
       - name: Generate
-        run: cd src/docs && npm run deploy
+        run: cd src/docs && npm run build
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src/docs/dist
-          cname: daisyui.com
+          publish_dir: ./src/docs/build
+          cname: daisyui.github.io
