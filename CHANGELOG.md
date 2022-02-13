@@ -346,41 +346,44 @@ All notable changes to this project will be documented in this file. See [standa
 * add toggle sizes (xs, sm, md, lg) ([95c1f8c](https://github.com/saadeghi/daisyui/commit/95c1f8cd14bb0f2f369d12994a19fc8a38e6968b))
 * refactor `checkbox`, `toggle` and `radio` HTML
 (*this is not a breaking change but you can use the new, cleaner markup*)
-  **Toggle old markup:**
-  ```
-  <div>
-    <input type="checkbox" class="toggle"> 
-    <span class="toggle-mark"></span>
-  </div>
-  ```
-  **✅ new markup:**
-    ```
-    <input type="checkbox" class="toggle"> 
-    ```
 
-  **Checkbox old markup:**
-  ```
-  <div>
-    <input type="checkbox" class="checkbox"> 
-    <span class="checkbox-mark"></span>
-  </div>
-  ```
-  **✅ new markup:**
-    ```
-    <input type="checkbox" class="checkbox"> 
-    ```
+#### Toggle
 
-  **Radio old markup:**
-  ```
-  <div>
-    <input type="radio" class="radio"> 
-    <span class="radio-mark"></span>
-  </div>
-  ```
-  **✅ new markup:**
-    ```
-    <input type="radio" class="radio"> 
-    ```
+```html
+<!-- 😒 Old markup -->
+<div>
+  <input type="checkbox" class="toggle"> 
+  <span class="toggle-mark"></span>
+</div>
+
+<!-- 😍 New markup -->
+<input type="checkbox" class="toggle"> 
+```
+#### Checkbox
+
+```html
+<!-- 😒 Old markup -->
+<div>
+  <input type="checkbox" class="checkbox"> 
+  <span class="checkbox-mark"></span>
+</div>
+
+<!-- 😍 new markup -->
+<input type="checkbox" class="checkbox"> 
+```
+
+#### Radio
+
+```html
+<!-- 😒 Old markup -->
+<div>
+  <input type="radio" class="radio"> 
+  <span class="radio-mark"></span>
+</div>
+
+<!-- 😍 New markup -->
+<input type="radio" class="radio"> 
+```
 
 ### Bug Fixes
 

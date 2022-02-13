@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "1.25.4",
+  "version": "2.0.0-next.0",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -49,8 +49,7 @@
     "postcss-import": "13.0.0",
     "postcss-nested": "5.0.1",
     "prejss-cli": "0.3.3",
-    "rtlcss": "3.0.0",
-    "tailwindcss": "2.0.1"
+    "rtlcss": "3.0.0"
   },
   "scripts": {
     "index": "cp -R ./src/index.js ./index.js",
@@ -80,5 +79,9 @@
     "dev": "cd src/docs && npm run dev",
     "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
     "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css"
+  },
+  "dependencies": {
+    "color": "^4.2",
+    "tailwindcss": "^3.0"
   }
 }

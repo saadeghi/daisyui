@@ -4,12 +4,12 @@
   animation: button-pop var(--animation-btn, 0.25s) ease-out;
   text-transform: var(--btn-text-case, uppercase);
   &:active:hover,
-  &:active:focus{
+  &:active:focus {
     animation: none;
   }
   &:active:hover,
-  &:active:focus{
-    transform: scale( var(--btn-focus-scale, 0.95) );
+  &:active:focus {
+    transform: scale(var(--btn-focus-scale, 0.95));
   }
 
   /* default btn */
@@ -55,10 +55,9 @@
     }
   }
 
-
   /* btn with state colors */
   &-info {
-    @apply bg-info border-info text-base-200;
+    @apply bg-info border-info text-info-content;
     &:hover,
     &.btn-active {
       @apply bg-info border-info;
@@ -68,7 +67,7 @@
     }
   }
   &-success {
-    @apply bg-success border-success text-base-200;
+    @apply bg-success border-success text-success-content;
     &:hover,
     &.btn-active {
       @apply bg-success border-success;
@@ -78,7 +77,7 @@
     }
   }
   &-warning {
-    @apply bg-warning border-warning text-base-200;
+    @apply bg-warning border-warning text-warning-content;
     &:hover,
     &.btn-active {
       @apply bg-warning border-warning;
@@ -88,7 +87,7 @@
     }
   }
   &-error {
-    @apply bg-error border-error text-base-200;
+    @apply bg-error border-error text-error-content;
     &:hover,
     &.btn-active {
       @apply bg-error border-error;
@@ -99,7 +98,7 @@
   }
 
   /* glass */
-  &.glass{
+  &.glass {
     &:hover,
     &.btn-active {
       --glass-opacity: 25%;
@@ -159,25 +158,25 @@
     &.btn-success {
       @apply text-success;
       &:hover {
-        @apply bg-success text-neutral-content border-success;
+        @apply bg-success text-success-content border-success;
       }
     }
     &.btn-info {
       @apply text-info;
       &:hover {
-        @apply bg-info text-neutral-content border-info;
+        @apply bg-info text-info-content border-info;
       }
     }
     &.btn-warning {
       @apply text-warning;
       &:hover {
-        @apply bg-warning text-neutral-content border-warning;
+        @apply bg-warning text-warning-content border-warning;
       }
     }
     &.btn-error {
       @apply text-error;
       &:hover {
-        @apply bg-error text-neutral-content border-error;
+        @apply bg-error text-error-content border-error;
       }
     }
   }
@@ -187,8 +186,6 @@
   &[disabled] {
     @apply bg-neutral border-opacity-0 bg-opacity-20 text-base-content text-opacity-20;
   }
-
-
 
   /* loading */
   &.loading {
@@ -225,7 +222,7 @@
 
 @keyframes button-pop {
   0% {
-    transform: scale( var(--btn-focus-scale, 0.95) );
+    transform: scale(var(--btn-focus-scale, 0.95));
   }
   40% {
     transform: scale(1.02);

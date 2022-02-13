@@ -1,14 +1,27 @@
-.rating{
-  &-xs input {
-    @apply w-3 h-3;
+.rating-xs input {
+  @apply w-3 h-3;
+}
+.rating-sm input {
+  @apply w-4 h-4;
+}
+.rating-md input {
+  @apply w-6 h-6;
+}
+.rating-lg input {
+  @apply w-10 h-10;
+}
+
+.rating-half {
+  &.rating-xs input:not(.rating-hidden) {
+    @apply w-1.5;
   }
-  &-sm input {
-    @apply w-4 h-4;
+  &.rating-sm input:not(.rating-hidden) {
+    @apply w-2;
   }
-  &-md input {
-    @apply w-6 h-6;
+  &.rating-md input:not(.rating-hidden) {
+    @apply w-3;
   }
-  &-lg input {
-    @apply w-10 h-10;
+  &.rating-lg input:not(.rating-hidden) {
+    @apply w-5;
   }
 }

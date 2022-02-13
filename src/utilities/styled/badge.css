@@ -26,18 +26,16 @@
     }
   }
 
-
   &-info {
-    @apply bg-opacity-10 bg-info border-transparent text-info;
+    @apply bg-info border-transparent text-info-content;
   }
   &-success {
-    @apply bg-opacity-10 bg-success border-transparent text-success;
+    @apply bg-success border-transparent text-success-content;
   }
   &-warning {
-    @apply bg-opacity-10 bg-warning border-transparent text-warning;
+    @apply bg-warning border-transparent text-warning-content;
   }
   &-error {
-    @apply bg-opacity-10 bg-error border-transparent text-error;
+    @apply bg-error border-transparent text-error-content;
   }
 }
-

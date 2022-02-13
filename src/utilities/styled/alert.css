@@ -1,17 +1,17 @@
 .alert {
-  &-sm{
+  &-sm {
     @apply p-2;
   }
   &-info {
-    @apply bg-opacity-10 bg-info text-info;
+    @apply bg-info text-info-content;
   }
   &-success {
-    @apply bg-opacity-10 bg-success text-success;
+    @apply bg-success text-success-content;
   }
   &-warning {
-    @apply bg-opacity-10 bg-warning text-warning;
+    @apply bg-warning text-warning-content;
   }
   &-error {
-    @apply bg-opacity-10 bg-error text-error;
+    @apply bg-error text-error-content;
   }
 }

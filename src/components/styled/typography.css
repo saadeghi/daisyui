@@ -29,26 +29,44 @@
 
 
 /* main */
+
+:root .prose{
+  --tw-prose-body: hsl(var(--bc));
+  --tw-prose-headings: hsl(var(--b));
+  --tw-prose-lead: #4b5563;
+  --tw-prose-links: hsl(var(--b));
+  --tw-prose-bold: hsl(var(--b));
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: hsla(var(--bc)/.5);
+  --tw-prose-hr: hsla(var(--bc)/.2);
+  --tw-prose-quotes: hsl(var(--b));
+  --tw-prose-quote-borders: hsla(var(--bc)/.2);
+  --tw-prose-captions: #6b7280;
+  --tw-prose-code: hsl(var(--b));
+  --tw-prose-pre-code: hsla(var(--bc)/.2);
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: hsla(var(--bc)/.5);
+  --tw-prose-td-borders: hsla(var(--bc)/.2);
+  --tw-prose-invert-body: hsla(var(--bc)/.5);
+  --tw-prose-invert-headings: #fff;
+  --tw-prose-invert-lead: #9ca3af;
+  --tw-prose-invert-links: #fff;
+  --tw-prose-invert-bold: #fff;
+  --tw-prose-invert-counters: #9ca3af;
+  --tw-prose-invert-bullets: #4b5563;
+  --tw-prose-invert-hr: hsl(var(--bc));
+  --tw-prose-invert-quotes: #f3f4f6;
+  --tw-prose-invert-quote-borders: hsl(var(--bc));
+  --tw-prose-invert-captions: #9ca3af;
+  --tw-prose-invert-code: #fff;
+  --tw-prose-invert-pre-code: hsla(var(--bc)/.5);
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%));
+  --tw-prose-invert-th-borders: #4b5563;
+  --tw-prose-invert-td-borders: hsl(var(--bc));
+}
 .prose{
   color: inherit;
-  & :where(
-    a,
-    blockquote,
-    figure figcaption,
-    a code,
-    thead,
-    strong,
-    .lead,
-    h1,
-    h2,
-    h3,
-    h4
-  ):not(:where([class~="not-prose"] *)){
-    color: inherit;
-  }
   & :where(code):not(:where([class~="not-prose"] *)){
-    background: hsla(var(--bc) / .1);
-    color: hsl(var(--bc));
     padding: 2px 8px;
     border-radius: var(--rounded-badge);
   }
@@ -57,9 +75,6 @@
     content: none;
   }
   pre{
-    background: hsl(var(--n));
-    color: hsl(var(--nc));
-    border-radius: var(--rounded-box);
     code{
       border-radius: none;
       background: inherit;

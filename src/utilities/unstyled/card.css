@@ -1,13 +1,12 @@
 .card-side {
   align-items: stretch;
   flex-direction: row;
-  & > figure {
-    height: 100%;
-    max-width: none;
-    width: auto;
-    > * {
-      width: auto;
-      max-width: none;
-    }
+  & figure > * {
+    max-width: unset;
   }
+}
+:where(.card-side figure > *) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

@@ -1,16 +1,16 @@
 .steps {
   /* &,
   &-horizontal{ */
-    [class~="step"] {
-      grid-template-rows: 40px 1fr;
-      grid-template-columns: auto;
-      min-width: 4rem;
-      &:before {
-        @apply bg-base-300 transform top-0 text-base-content h-2 w-full col-start-1 row-start-1;
-        content: '';
-        margin-left: -100%;
-      }
+  [class~="step"] {
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: auto;
+    min-width: 4rem;
+    &:before {
+      @apply bg-base-300 transform top-0 text-base-content h-2 w-full col-start-1 row-start-1;
+      content: "";
+      margin-left: -100%;
     }
+  }
   /* } */
   [class~="step"] {
     &:after {
@@ -19,52 +19,52 @@
       z-index: 1;
       @apply relative rounded-full w-8 h-8 bg-base-300 text-base-content col-start-1 row-start-1 place-self-center grid place-items-center;
     }
-    &:first-child:before{
+    &:first-child:before {
       content: none;
     }
-    &[data-content]:after{
+    &[data-content]:after {
       content: attr(data-content);
     }
   }
   .step-neutral + .step-neutral:before,
-  .step-neutral:after{
+  .step-neutral:after {
     @apply bg-neutral text-neutral-content;
   }
   .step-primary + .step-primary:before,
-  .step-primary:after{
+  .step-primary:after {
     @apply bg-primary text-primary-content;
   }
   .step-secondary + .step-secondary:before,
-  .step-secondary:after{
+  .step-secondary:after {
     @apply bg-secondary text-secondary-content;
   }
   .step-accent + .step-accent:before,
-  .step-accent:after{
+  .step-accent:after {
     @apply bg-accent text-accent-content;
   }
-  .step-info + .step-info:before{
+  .step-info + .step-info:before {
     @apply bg-info;
   }
-  .step-info:after{
-    @apply bg-info text-base-100;
+  .step-info:after {
+    @apply bg-info text-info-content;
   }
-  .step-success + .step-success:before{
+  .step-success + .step-success:before {
     @apply bg-success;
   }
-  .step-success:after{
-    @apply bg-success text-base-100;
+  .step-success:after {
+    @apply bg-success text-success-content;
   }
-  .step-warning + .step-warning:before{
+  .step-warning + .step-warning:before {
     @apply bg-warning;
   }
-  .step-warning:after{
-    @apply bg-warning text-base-100;
+  .step-warning:after {
+    @apply bg-warning text-warning-content;
   }
-  .step-error + .step-error:before{
+  .step-error + .step-error:before {
     @apply bg-error;
   }
-  .step-error:after{
-    @apply bg-error text-base-100;
+  .step-error:after {
+    @apply bg-error text-error-content;
   }
   /* &-vertical{
     .step {

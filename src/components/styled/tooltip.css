@@ -1,4 +1,4 @@
-.tooltip{
+.tooltip {
   @apply inline-block relative text-center;
   --tooltip-tail: 3px;
   --tooltip-color: hsl(var(--n));
@@ -6,13 +6,13 @@
   --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
 }
 .tooltip:before,
-.tooltip:after{
+.tooltip:after {
   @apply opacity-0 transition delay-100 duration-200 ease-in-out;
 }
-.tooltip:after{
+.tooltip:after {
   @apply absolute;
 }
-.tooltip:before{
+.tooltip:before {
   @apply rounded text-sm px-2 max-w-xs py-1;
   background-color: var(--tooltip-color);
   color: var(--tooltip-text-color);
@@ -21,11 +21,11 @@
 .tooltip.tooltip-open:before,
 .tooltip.tooltip-open:after,
 .tooltip:hover:before,
-.tooltip:hover:after{
+.tooltip:hover:after {
   @apply opacity-100 delay-75;
 }
-.tooltip:after{
-  content: '';
+.tooltip:after {
+  content: "";
   border-style: solid;
   border-width: var(--tooltip-tail, 0);
   width: 0;
@@ -33,8 +33,8 @@
   display: block;
   position: absolute;
 }
-.tooltip{
-  &:after{
+.tooltip {
+  &:after {
     transform: translateX(-50%);
     border-color: var(--tooltip-color) transparent transparent transparent;
     top: auto;
@@ -43,8 +43,8 @@
     bottom: var(--tooltip-tail-offset);
   }
 }
-.tooltip-bottom{
-  &:after{
+.tooltip-bottom {
+  &:after {
     transform: translateX(-50%);
     border-color: transparent transparent var(--tooltip-color) transparent;
     top: var(--tooltip-tail-offset);
@@ -53,8 +53,8 @@
     bottom: auto;
   }
 }
-.tooltip-left{
-  &:after{
+.tooltip-left {
+  &:after {
     transform: translateY(-50%);
     border-color: transparent transparent transparent var(--tooltip-color);
     top: 50%;
@@ -63,8 +63,8 @@
     bottom: auto;
   }
 }
-.tooltip-right{
-  &:after{
+.tooltip-right {
+  &:after {
     transform: translateY(-50%);
     border-color: transparent var(--tooltip-color) transparent transparent;
     top: 50%;
@@ -73,33 +73,33 @@
     bottom: auto;
   }
 }
-.tooltip{
-  &-primary{
+.tooltip {
+  &-primary {
     --tooltip-color: hsl(var(--p));
     --tooltip-text-color: hsl(var(--pc));
   }
-  &-secondary{
+  &-secondary {
     --tooltip-color: hsl(var(--s));
     --tooltip-text-color: hsl(var(--sc));
   }
-  &-accent{
+  &-accent {
     --tooltip-color: hsl(var(--a));
     --tooltip-text-color: hsl(var(--ac));
   }
-  &-info{
-    --tooltip-color: hsla(var(--in) / .1);
-    --tooltip-text-color: hsl(var(--in));
+  &-info {
+    --tooltip-color: hsla(var(--in));
+    --tooltip-text-color: hsl(var(--inc));
   }
-  &-success{
-    --tooltip-color: hsla(var(--su) / .1);
-    --tooltip-text-color: hsl(var(--su));
+  &-success {
+    --tooltip-color: hsla(var(--su));
+    --tooltip-text-color: hsl(var(--suc));
   }
-  &-warning{
-    --tooltip-color: hsla(var(--wa) / .1);
-    --tooltip-text-color: hsl(var(--wa));
+  &-warning {
+    --tooltip-color: hsla(var(--wa));
+    --tooltip-text-color: hsl(var(--wac));
   }
-  &-error{
-    --tooltip-color: hsla(var(--er) / .1);
-    --tooltip-text-color: hsl(var(--er));
+  &-error {
+    --tooltip-color: hsla(var(--er));
+    --tooltip-text-color: hsl(var(--erc));
   }
 }

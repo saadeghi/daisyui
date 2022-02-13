@@ -5,16 +5,15 @@
   }
   &-body {
     @apply flex flex-col flex-auto;
-  }
-  & figure,
-  & figure > * {
-    @apply w-full;
+    :where(p) {
+      @apply flex-grow;
+    }
   }
   &-actions {
-    @apply flex items-start flex-wrap -mx-1;
-    &>*{
-      @apply m-1
-    }
+    @apply flex items-start flex-wrap gap-2;
+  }
+  & figure {
+    @apply flex justify-center items-center;
   }
   &.image-full {
     @apply grid;
