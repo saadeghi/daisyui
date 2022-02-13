@@ -6,7 +6,18 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+  { type:'component', class: 'avatar', desc: 'Container element' },
+  { type:'component', class: 'avatar-group', desc: 'Container for grouping multiple avatars' },
+  { type:'utility', class: 'online', desc: 'shows a green dot as online indicator' },
+  { type:'utility', class: 'offline', desc: 'shows a gray dot as online indicator' },
+  { type:'utility', class: 'placeholder', desc: 'to show some letters as avatar placeholder' },
+]}"
+/>
 
 <Component title="Avatar">
 <div class="avatar">

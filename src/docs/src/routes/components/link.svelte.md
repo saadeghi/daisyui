@@ -6,7 +6,14 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+
+]}"
+/>
 
 <Component title="Link">
 <a class="link">I'm a simple link</a>

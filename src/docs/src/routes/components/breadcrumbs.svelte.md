@@ -6,7 +6,14 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+    { type:'component', class: 'breadcrumbs', desc: 'Container element' },
+]}"
+/>
 
 <Component title="Breadcrumbs">
 <div class="text-sm breadcrumbs">

@@ -6,7 +6,14 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+
+]}"
+/>
 
 <Component title="Text input">
 <input type="text" placeholder="Type here" class="input w-full max-w-xs">

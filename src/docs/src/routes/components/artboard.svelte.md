@@ -6,7 +6,22 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+  { type: 'component', class: 'artboard', desc: 'Container element' },
+  { type: 'utility', class: 'artboard-demo', desc: 'Adds shadow and radius. Puts items in center' },
+  { type: 'utility', class: 'phone-1', desc: 'Size 1' },
+  { type: 'utility', class: 'phone-2', desc: 'Size 2' },
+  { type: 'utility', class: 'phone-3', desc: 'Size 3' },
+  { type: 'utility', class: 'phone-4', desc: 'Size 4' },
+  { type: 'utility', class: 'phone-5', desc: 'Size 5' },
+  { type: 'utility', class: 'phone-6', desc: 'Size 6' },
+  { type: 'utility', class: 'horizontal', desc: 'shows horizontal view' },
+]}"
+/>
 
 <Component title="Artboard">
 <div class="artboard phone-1 artboard-demo">320&times;568</div>

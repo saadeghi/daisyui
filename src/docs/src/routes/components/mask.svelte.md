@@ -6,7 +6,14 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+
+]}"
+/>
 
 <Component title="Squircle">
 <img alt="Squircle CSS mask" class="mask mask-squircle w-40 h-40" src="https://api.lorem.space/image/shoes?w=320&h=320" />

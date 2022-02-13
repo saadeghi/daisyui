@@ -6,7 +6,14 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+
+]}"
+/>
 
 <Component title="Footer">
 <footer class="p-10 footer bg-neutral text-neutral-content rounded">

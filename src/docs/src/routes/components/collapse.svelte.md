@@ -6,7 +6,14 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+
+]}"
+/>
 
 <Component title="Collapse with focus" desc="This collapse works with focus. When div loses focus, it gets closed">
 <div tabindex="0" class="collapse"> 

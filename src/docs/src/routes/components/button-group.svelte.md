@@ -6,7 +6,14 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 </script>
+
+<ClassTable
+data="{[
+  { type:'component', class: 'btn-group', desc: 'Container for grouping multiple buttons' },
+]}"
+/>
 
 <Component title="Button group">
 <div class="btn-group">
