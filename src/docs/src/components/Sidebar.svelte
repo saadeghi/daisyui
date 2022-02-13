@@ -22,6 +22,9 @@
   </a>
 </div>
 
+
+<div class="h-4"></div>
+
 {#each menu as { name, items }}
   <ul class="menu menu-compact flex flex-col p-0 px-4">
     {#if name}

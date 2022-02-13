@@ -3,11 +3,11 @@
   const tabs = [
     {
       name: "Tailwind Plugin",
-      href: "/docs/install/tailwindcss",
+      href: "/docs/install",
     },
     {
       name: "Use CDN",
-      href: "/docs/install/cdn",
+      href: "/docs/cdn",
     },
     // {
     //   name: "WindiCSS",

@@ -5,8 +5,11 @@ published: true
 ---
 
 <script>
-import { pkgVersion } from '$lib/util';
+  import { pkgVersion } from '$lib/util';
+  import InstallTabs from "@components/InstallTabs.svelte"
 </script>
+
+<InstallTabs />
 
 <div class="max-w-3xl alert alert-warning">
   <div class="items-center flex-1 gap-4">

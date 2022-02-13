@@ -28,9 +28,9 @@
   if (process.env.NODE_ENV === "production") {
     import("@components/StyleProduction.svelte")
   }
-  // if (process.env.NODE_ENV === "development") {
-  //   import("@components/StyleDevelopment.svelte")
-  // }
+  if (process.env.NODE_ENV === "development") {
+    import("@components/StyleDevelopment.svelte")
+  }
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
 
@@ -40,7 +40,6 @@
   import Ads from "@components/Ads.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
-  import InstallTabs from "@components/InstallTabs.svelte"
   export let post
 
   let drawercontent
@@ -92,9 +91,6 @@
             {/if}
             {#if post.desc}
               <p>{post.desc}</p>
-            {/if}
-            {#if $page.url.pathname.startsWith("/docs/install")}
-              <InstallTabs />
             {/if}
             <slot />
           </div>

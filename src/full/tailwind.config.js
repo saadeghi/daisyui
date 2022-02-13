@@ -1,5 +1,10 @@
 const plugin = require('tailwindcss/plugin')
 module.exports = {
+  safelist: [
+    {
+      pattern: /.*/,
+    },
+  ],
   theme: {
     colors: require('../../colors')
   },

@@ -14,7 +14,7 @@
       </div>
       <p class="mx-auto mt-10 mb-5 max-w-lg">Or try it online:</p>
       <div class="mx-auto w-full max-w-xs space-x-2 md:max-w-md">
-        <a target="_blank" rel="noopener" href="https://codepen.io/saadeghi/pen/gOwWKvv" class="btn-outline btn btn-sm">Codepen</a>
+        <a target="_blank" rel="noopener" href="/codepen" class="btn-outline btn btn-sm">Codepen</a>
         <a href="/tailwindplay" class="btn-outline btn btn-sm" target="_blank" rel="noopener">Tailwind Play</a>
       </div>
     </div>
