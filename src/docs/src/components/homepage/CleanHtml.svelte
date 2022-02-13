@@ -27,8 +27,7 @@
           </div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="inline-block cursor-pointer rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-indigo-700">Button</button></div>
         </div>
-        <div class="divider text-base-content divider-horizontal hidden text-opacity-30 lg:flex">VS</div>
-        <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
+        <div class="divider text-base-content text-opacity-30 lg:divider-horizontal">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;a class="<span class="text-info">btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre></div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="btn btn-primary">Button</button></div>
@@ -56,16 +55,21 @@
           </div>
           <div class="mt-4 flex h-16 items-start justify-center">
             <div class="relative">
-              <input type="checkbox" checked="checked" class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 checked:border-gray-900" />
+              <label>
+                <input type="checkbox" checked="checked" class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 checked:border-gray-900" />
+              </label>
               <span class="pointer-events-none absolute top-1 left-1 block h-4 w-4 rounded-full bg-gray-300 transition-all duration-200 peer-checked:left-7 peer-checked:bg-gray-900" />
             </div>
           </div>
         </div>
-        <div class="divider text-base-content divider-horizontal hidden text-opacity-30 lg:flex">VS</div>
-        <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
+        <div class="divider text-base-content text-opacity-30 lg:divider-horizontal">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;input type="checkbox" class="<span class="text-info">toggle</span>"/&gt;</code></pre></div>
-          <div class="mt-4 flex h-16 items-start justify-center"><input type="checkbox" checked="checked" class="toggle" /></div>
+          <div class="mt-4 flex h-16 items-start justify-center">
+            <label>
+              <input type="checkbox" checked="checked" class="toggle" />
+            </label>
+          </div>
         </div>
       </div>
       <p class="mx-auto w-full max-w-lg" />
@@ -93,8 +97,7 @@
             </ul>
           </div>
         </div>
-        <div class="divider text-base-content divider-horizontal hidden text-opacity-30 lg:flex">VS</div>
-        <div class="divider text-base-content text-opacity-30 lg:hidden">VS</div>
+        <div class="divider text-base-content text-opacity-30 lg:divider-horizontal">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md">
             <pre class="pr-4"><code>&lt;ul class="<span class="text-info">menu</span> p-3 bg-base-200 rounded-xl"&gt;
