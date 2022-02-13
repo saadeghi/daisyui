@@ -11,7 +11,14 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'progress', desc: 'Progress element' },
+  { type:'component', class: 'progress-primary', desc: 'Adds `primary` color' },
+  { type:'component', class: 'progress-secondary', desc: 'Adds `secondary` color' },
+  { type:'component', class: 'progress-accent', desc: 'Adds `accent` color' },
+  { type:'component', class: 'progress-info', desc: 'Adds `info` color' },
+  { type:'component', class: 'progress-success', desc: 'Adds `success` color' },
+  { type:'component', class: 'progress-warning', desc: 'Adds `warning` color' },
+  { type:'component', class: 'progress-error', desc: 'Adds `error` color' },
 ]}"
 />
 

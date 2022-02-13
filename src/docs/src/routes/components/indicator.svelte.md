@@ -11,7 +11,14 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'indicator', desc: 'Container element' },
+  { type:'component', class: 'indicator-item', desc: 'will be placed on the corner of sibiling' },
+  { type:'modifier', class: 'indicator-start', desc: 'align horizontally to the left' },
+  { type:'modifier', class: 'indicator-center', desc: 'align horizontally to the center' },
+  { type:'modifier', class: 'indicator-end', desc: 'align horizontally to the right (default)' },
+  { type:'modifier', class: 'indicator-top', desc: 'align vertically to top (default)' },
+  { type:'modifier', class: 'indicator-middle', desc: 'align vertically to middle' },
+  { type:'modifier', class: 'indicator-bottom', desc: 'align vertically to bottom' },
 ]}"
 />
 

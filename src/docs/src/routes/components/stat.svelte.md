@@ -11,7 +11,12 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'stats', desc: 'Conainer ot multiple stat items' },
+  { type:'component', class: 'stat', desc: 'One stat item' },
+  { type:'component', class: 'stat-title', desc: 'Title text' },
+  { type:'component', class: 'stat-value', desc: 'Value text' },
+  { type:'component', class: 'stat-desc', desc: 'Description text' },
+  { type:'component', class: 'stat-figure', desc: 'For icon, image, etc' },
 ]}"
 />
 

@@ -11,7 +11,15 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'form-control', desc: 'Container element' },
+  { type:'component', class: 'checkbox', desc: 'For checkbox' },
+  { type:'modifier', class: 'checkbox-primary', desc: 'Adds `primary` to checkbox' },
+  { type:'modifier', class: 'checkbox-secondary', desc: 'Adds `secondary` to checkbox' },
+  { type:'modifier', class: 'checkbox-accent', desc: 'Adds `accent` to checkbox' },
+  { type:'responsive', class: 'checkbox-lg', desc: 'Large checkbox' },
+  { type:'responsive', class: 'checkbox-md', desc: 'Medium checkbox (default)' },
+  { type:'responsive', class: 'checkbox-sm', desc: 'Small checkbox' },
+  { type:'responsive', class: 'checkbox-xs', desc: 'Extra small checkbox' },
 ]}"
 />
 

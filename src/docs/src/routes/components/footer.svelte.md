@@ -11,7 +11,9 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'footer', desc: 'Footer component' },
+  { type:'component', class: 'footer-title', desc: 'Title of a footer column' },
+  { type:'modifier', class: 'footer-center', desc: 'Aligns footer content to center' },
 ]}"
 />
 

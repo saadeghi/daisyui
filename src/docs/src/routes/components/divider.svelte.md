@@ -11,7 +11,9 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'divider', desc: 'Put a divider line between two elements' },
+  { type:'responsive', class: 'divider-vertical', desc: 'Divide elements on top of each other (default)' },
+  { type:'responsive', class: 'divider-horizontal', desc: 'Divide elements next to each other' },
 ]}"
 />
 

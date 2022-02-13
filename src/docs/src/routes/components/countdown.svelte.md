@@ -6,6 +6,7 @@ published: true
 
 <script>
   import Component from "@components/Component.svelte"
+  import ClassTable from "@components/ClassTable.svelte"
 
   import { onMount } from "svelte"
   let counter = 59
@@ -24,6 +25,12 @@ published: true
 </script>
 
 You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99
+
+<ClassTable
+data="{[
+  { type:'component', class: 'countdown', desc: 'Container element' },
+]}"
+/>
 
 <Component title="Countdown">
 <span class="countdown">

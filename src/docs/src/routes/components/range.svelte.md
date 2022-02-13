@@ -11,7 +11,14 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'range', desc: 'Range input' },
+  { type:'modifier', class: 'range-primary', desc: 'primary color' },
+  { type:'modifier', class: 'range-secondary', desc: 'secondary color' },
+  { type:'modifier', class: 'range-accent', desc: 'accent color' },
+  { type:'responsive', class: 'range-lg', desc: 'Large range' },
+  { type:'responsive', class: 'range-md', desc: 'Medium range (default)' },
+  { type:'responsive', class: 'range-sm', desc: 'Small range' },
+  { type:'responsive', class: 'range-xs', desc: 'Extra small range' },
 ]}"
 />
 

@@ -11,7 +11,12 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'menu', desc: 'Container <ul> element' },
+  { type:'component', class: 'menu-title', desc: 'Identify <li> as the title of menu' },
+  { type:'responsive', class: 'menu-normal', desc: 'Normal text size and normal spacing (default)' },
+  { type:'responsive', class: 'menu-compact', desc: 'Smaller text size and compact spacing' },
+  { type:'responsive', class: 'menu-vertical', desc: 'Vertical menu (default)' },
+  { type:'responsive', class: 'menu-horizontal', desc: 'Horisontal menu' }
 ]}"
 />
 

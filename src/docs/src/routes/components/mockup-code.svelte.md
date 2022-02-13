@@ -11,7 +11,7 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'mockup-code', desc: 'Container element' },
 ]}"
 />
 

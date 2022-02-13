@@ -12,7 +12,7 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'badge', desc: 'Container element' },
-  { type:'utility', class: 'badge-outline', desc: 'transparent badge with [colorful] border' },
+  { type:'modifier', class: 'badge-outline', desc: 'transparent badge with [colorful] border' },
   { type:'responsive', class: 'badge-lg', desc: 'badge with large size' },
   { type:'responsive', class: 'badge-md', desc: 'badge with medium size (default)' },
   { type:'responsive', class: 'badge-sm', desc: 'badge with small size' },

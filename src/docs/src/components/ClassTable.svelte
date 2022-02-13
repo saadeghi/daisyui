@@ -21,8 +21,8 @@
             {#if item.type == 'component'}
               <span class="w-20 badge badge-sm badge-ghost">Component</span>
             {/if}
-            {#if item.type == 'utility'}
-              <span class="w-20 badge badge-sm badge-info">Utility</span>
+            {#if item.type == 'modifier'}
+              <span class="w-20 badge badge-sm badge-info">Modifier</span>
             {/if}
             {#if item.type == 'responsive'}
               <div class="tooltip relative z-10" data-tip="Supports responsive prefixes (sm:, lg:, …)">

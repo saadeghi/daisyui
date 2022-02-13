@@ -11,7 +11,7 @@ published: true
 
 <ClassTable
 data="{[
-
+  { type:'component', class: 'btn-group', desc: 'Groups buttons together' },
 ]}"
 />
 
