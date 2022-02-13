@@ -25,16 +25,13 @@
 
   import { page } from "$app/stores"
 
-  if (process.env.NODE_ENV === "production") {
-    import("@components/StyleProduction.svelte")
+  let styleComponent = 'StyleProduction'
+
+  if (process.env.NODE_ENV === "development") {
+    styleComponent = 'StyleDevelopment'
   }
-  
-  try {
-    if (process.env.NODE_ENV === "development") {
-      StyleDevelopment = import("@components/StyleDevelopment.svelte")
-    }
-  } catch (e) {
-  }
+
+  import(`../components/${styleComponent}.svelte`)
   
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
