@@ -62,7 +62,7 @@
 
     {#if showContent == "preview"}
       <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl">
-        <div class="border-base-300 bg-base-200 preview flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top bg-center	p-4 {classes}" style={bg ? `background-image: url(${bg})` : `background-size: 5px 5px`} class:resize-x={responsive}>
+        <div class="border-base-300 bg-base-200 preview flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top	p-4 {classes}" style={bg ? `background-image: url(${bg})` : `background-size: 5px 5px`} class:resize-x={responsive}>
           <slot />
         </div>
       </div>

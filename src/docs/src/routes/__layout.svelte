@@ -32,10 +32,10 @@
   import { page } from "$app/stores"
 
   if (process.env.NODE_ENV === "production") {
-    const styleComponent = import("../components/StyleProduction.svelte")
+    import("../components/StyleProduction.svelte")
   }
   if (process.env.NODE_ENV === "development") {
-    const styleComponent = import("../components/StyleDevelopment.svelte")
+    import("../components/StyleDevelopment.svelte")
   }
   
   import "prism-themes/themes/prism-material-dark.css"
