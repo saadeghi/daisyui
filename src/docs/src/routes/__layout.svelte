@@ -28,9 +28,14 @@
   if (process.env.NODE_ENV === "production") {
     import("@components/StyleProduction.svelte")
   }
-  if (process.env.NODE_ENV === "development") {
-    import("@components/StyleDevelopment.svelte")
+  let StyleDevelopment
+  async function importStyle() {
+    if (process.env.NODE_ENV === "development") {
+      StyleDevelopment = await import("@components/StyleDevelopment.svelte")
+    }
   }
+  importStyle()
+  
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
 

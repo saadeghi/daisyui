@@ -100,16 +100,16 @@ data="{[
 
 <Component title="Sizes">
 <div class="flex flex-col items-center gap-2">
-  <input type="checkbox" class="toggle toggle-xs">  
-  <input type="checkbox" class="toggle toggle-sm">  
-  <input type="checkbox" class="toggle toggle-md">  
+  <input type="checkbox" class="toggle toggle-xs" checked>
+  <input type="checkbox" class="toggle toggle-sm" checked>
+  <input type="checkbox" class="toggle toggle-md" checked>
   <input type="checkbox" class="toggle toggle-lg" checked>
 </div>
 <pre slot="html">{
-`<input type="checkbox" class="toggle toggle-xs">  
-<input type="checkbox" class="toggle toggle-sm">  
-<input type="checkbox" class="toggle toggle-md">  
-<input type="checkbox" class="toggle toggle-lg"> checked`
+`<input type="checkbox" class="toggle toggle-xs" checked>
+<input type="checkbox" class="toggle toggle-sm" checked>
+<input type="checkbox" class="toggle toggle-md" checked>
+<input type="checkbox" class="toggle toggle-lg" checked>`
 }</pre>
 </Component>
 
