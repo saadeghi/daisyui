@@ -31,6 +31,8 @@ data="{[
   { type:'modifier', class: 'mask-triangle-2', desc: 'Applies `triangle` alternative shape' },
   { type:'modifier', class: 'mask-triangle-3', desc: 'Applies `triangle` alternative shape' },
   { type:'modifier', class: 'mask-triangle-4', desc: 'Applies `triangle` alternative shape' },
+  { type:'modifier', class: 'mask-half-1', desc: 'Crops only the first half of mask' },
+  { type:'modifier', class: 'mask-half-2', desc: 'Crops only the second half of mask' },
 ]}"
 />
 

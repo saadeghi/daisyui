@@ -12,6 +12,7 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'rating', desc: 'Wrapper component for radio buttons' },
+  { type:'modifier', class: 'rating-half', desc: 'To shows half of the shape' },
   { type:'responsive', class: 'rating-hidden', desc: 'hides the input. Useful to clear the the rating' },
   { type:'responsive', class: 'rating-lg', desc: 'Large rating' },
   { type:'responsive', class: 'rating-md', desc: 'Medium rating (default)' },

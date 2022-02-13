@@ -22,6 +22,7 @@ module.exports = {
     utils: true,
     logs: true,
     rtl: false,
+    darkTheme: "dark",
   },
 }
 ```
@@ -55,3 +56,7 @@ module.exports = {
 
   If it's true, your theme will be right-to-left. You need to add `dir="rtl"` to your body tag.  
   If you're using daisyUI with RTL option, I suggest using [tailwindcss-flip](https://github.com/cvrajeesh/tailwindcss-flip) plugin because to flip all your Tailwind utilities automatically.
+
+- ### darkTheme `default: "dark"`
+
+  Allows us to pick another theme for system's auto dark mode. By default, `dark` theme (or a custom theme named `dark`) will be the default theme if no theme is specified and the user is using dark mode on their system. With this config, you can set another theme to be the default dark mode theme.

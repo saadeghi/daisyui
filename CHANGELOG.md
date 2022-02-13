@@ -4,6 +4,101 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.0.0](https://github.com/saadeghi/daisyui/compare/v2.0.0-next.0...v2.0.0) (2022-02-13)
 
+### Features
+
+* Updated Tailwind CSS dev dependency to v3.0
+* Moved document website from Nuxt to SvelteKit
+* Add new `swap` component
+* `menu` component now supports submenus both vertically and horizontally
+
+* Add new responsive modifiers for `divider` component:
+  - divider-vertical
+  - divider-horizontal
+
+* Add new responsive modifiers for `stats` component:
+  - stats-vertical
+  - stats-horizontal
+
+* Now every item inside `.menu li` will be styled as menu item (not only `a`, `span`, `button`)
+
+* Add copy to clipboard functionality for document website (fixes #293)
+
+* Add new modifiers for `mask` component. This classes are used to show first half or second half of a mask"
+  - mask-half-1
+  - mask-half-2
+
+* Empty `<li>` in a `menu` now shows a separator line.
+
+* Add new `input-group` component
+* Add new `rating-half` modifier `rating` component (to show half stars)
+* `avatar` image now has `1:1` aspect ratio
+
+* Add support for `RGB`, `HSL`,etc. color formats for daisyUI themes in `tailiwnd.config.js`:
+```javascript
+module.exports = {
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          // until now, only hex format was supported:
+          "primary": "#a991f7",
+          "primary-focus": "#8462f4",
+          "primary-content": "#ffffff",
+          
+          // now it can be anything:
+          "secondary": "red",
+          "secondary-focus": "rgb(243,204,48)",
+          "secondary-content": "hsl(0, 0%, 100%)",
+
+          //...
+        },
+      }
+    ]
+  }
+}
+```
+* Now system dark mode theme doesn't need to be named `dark` anymore only.  
+  It can be any theme and it can be specified in `tailwind.config.js` using new `darkTheme` config:
+```javascript
+module.exports = {
+  daisyui: {
+    darkTheme: "synthwave"",
+  },
+}
+```
+* Add new foreground colors (fixes #187)
+  - `info-content`
+  - `success-content`
+  - `warning-content`
+  - `error-content`
+
+* The following colors now are optional on themes and if they're not specified, they will show the fallback colors:
+
+```js
+"primary-focus"    // fallback : "primary"
+"secondary-focus"  // fallback : "secondary"
+"accent-focus"     // fallback : "accent"
+"neutral-focus"    // fallback : "neutral"
+"base-200"         // fallback : "base-100"
+"base-300"         // fallback : "base-300"
+"info-content"     // fallback : "neutral-content"
+"success-content"  // fallback : "neutral-content"
+"warning-content"  // fallback : "neutral-content"
+"error-content"    // fallback : "neutral-content"
+```
+
+### Bug Fixes
+
+* Fix overflow-hidden issue on `menu` component
+* Fix pixelated checkbox bug in Firefox (fixes #427)
+* Fix responsive child classes to be able to get prefixes (fixes #449, #371, #346)
+* Fix card responsive image size calculation (fixes #181, #30)
+* Fix code indentation in document website (fixes #450)
+* Fix responsive button demo on document website (fixes #376)
+* Fix right padding on `select` component
+* Improve some colors on themes
+
+
 ### [1.25.4](https://github.com/saadeghi/daisyui/compare/v1.25.3...v1.25.4) (2022-01-25)
 
 ### [1.25.3](https://github.com/saadeghi/daisyui/compare/v1.25.2...v1.25.3) (2022-01-23)
