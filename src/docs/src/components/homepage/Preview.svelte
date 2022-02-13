@@ -94,7 +94,7 @@
   <div id="component-demo" class="flex w-full grid-flow-row grid-cols-12 items-center gap-4 overflow-y-hidden overflow-x-scroll px-10 pt-1 pb-10 xl:grid xl:overflow-x-auto xl:px-4">
     <div class="bg-base-100 rounded-box col-span-3 row-span-3 mx-2 grid w-72 flex-shrink-0 place-items-center items-center gap-4 place-self-start p-4 py-8 shadow-xl xl:mx-0 xl:w-full">
       <div class="dropdown">
-        <div tabindex="0"><div class="online avatar"><div class="mask mask-squircle bg-base-content h-24 w-24 bg-opacity-10 p-px"><img src="/tailwind-css-component-profile-1@94w.png" width="94" height="94" alt="Avatar Tailwind CSS Component" class="mask mask-squircle" /></div></div></div>
+        <div tabindex="0"><div class="online avatar"><div class="mask mask-squircle bg-base-content h-24 w-24 bg-opacity-10 p-px"><img src="/tailwind-css-component-profile-1@94w.jpg" width="94" height="94" alt="Avatar Tailwind CSS Component" class="mask mask-squircle" /></div></div></div>
         <div tabindex="0" class="dropdown-content py-2">
           <div class="card compact bg-neutral-focus text-neutral-content rounded-box w-72 shadow-xl">
             <div class="card-body">
@@ -236,7 +236,7 @@
     </div>
     <div class="card bg-base-100 col-span-3 row-span-4 mx-2 w-72 flex-shrink-0 overflow-visible shadow-xl xl:mx-0 xl:w-auto">
       <div class="dropdown">
-        <div tabindex="0"><figure><img src="/tailwind-css-component-card-1.png" width="300" height="187" alt="Card Tailwind CSS Component" class="rounded-t-box" /></figure></div>
+        <div tabindex="0"><figure><img src="/tailwind-css-component-card-1.jpg" width="300" height="187" alt="Card Tailwind CSS Component" class="rounded-t-box" /></figure></div>
         <div tabindex="0" class="dropdown-content py-2">
           <div class="card compact bg-neutral-focus text-neutral-content rounded-box w-72 shadow-xl">
             <div class="card-body">

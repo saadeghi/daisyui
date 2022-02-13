@@ -7,7 +7,8 @@
           <span class="text-base-content uppercase">UI</span>
         </div>
         <p class="opacity-50">
-          Free Components library <br />
+          Free Components library
+          <br />
           for utility first CSS frameworks
         </p>
       </div>
@@ -71,7 +72,7 @@
   <footer class="footer footer-center border-base-300 bg-base-200 text-base-content border-t px-4 py-10">
     <div class="flex w-full max-w-6xl flex-col items-center justify-between sm:flex-row">
       <a href="https://github.com/saadeghi" rel="noopener" target="_blank" class="inline-flex items-center justify-center hover:opacity-90">
-        <div class="avatar mr-3"><div class="mask mask-squircle bg-neutral h-14 w-14 p-px"><img src="https://github.com/saadeghi.png" alt="Pouya Saadeghi" class="mask mask-squircle" /></div></div>
+        <div class="avatar mr-3"><div class="mask mask-squircle bg-neutral h-14 w-14 p-px"><img src="/pouya-saadeghi.jpg" alt="Pouya Saadeghi" class="mask mask-squircle" /></div></div>
         <div class="text-left">
           <p class="text-base-content text-xs text-opacity-50">Created by</p>
           <h2 class="text-base-content text-lg font-bold">Pouya Saadeghi</h2>
