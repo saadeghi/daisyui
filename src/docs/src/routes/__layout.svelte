@@ -27,7 +27,7 @@
 
   let styleComponent = 'StyleProduction'
 
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV !== "production") {
     styleComponent = 'StyleDevelopment'
   }
 
