@@ -3,7 +3,7 @@
 
   let Prism
   onMount(async () => {
-    Prism = (await import("svelte-prism")).default
+    Prism = (await import("./Prism.svelte")).default
   })
   export let title
   export let desc
