@@ -1,8 +1,14 @@
 <script context="module">
+  const excludedRoutes = [
+    "/index",
+    "/",
+    "/tailwindplay",
+    "/codepen"
+  ]
   export async function load({ url, fetch }) {
-    if (url.pathname != "/") {
+    if (!excludedRoutes.includes(url.pathname)) {
       const post = await fetch(`${url.pathname}.json`).then((res) => res.json())
-      if (url.pathname != "/index") {
+      if (!excludedRoutes.includes(url.pathname)) {
         return {
           props: {
             path: url.pathname,
@@ -25,13 +31,12 @@
 
   import { page } from "$app/stores"
 
-  let styleComponent = 'StyleProduction'
-
-  if (process.env.NODE_ENV !== "production") {
-    styleComponent = 'StyleDevelopment'
+  if (process.env.NODE_ENV === "production") {
+    let styleComponent = async () => await import("../components/StyleProduction.svelte")
   }
-
-  import(`../components/${styleComponent}.svelte`)
+  if (process.env.NODE_ENV === "development") {
+    let styleComponent = async () => await import("../components/StyleDevelopment.svelte")
+  }
   
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
