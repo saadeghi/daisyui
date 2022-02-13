@@ -1,17 +1,17 @@
 .card-compact{
-  [class~="card-body"] {
+  .card-body {
     @apply p-4 text-sm;
   }
-  [class~="card-title"] {
+  .card-title {
     @apply mb-1;
   }
 }
 .card-normal{
-  [class~="card-body"] {
+  .card-body {
     padding: var(--padding-card, 2rem);
     @apply text-base;
   }
-  [class~="card-title"] {
+  .card-title {
     @apply mb-3;
   }
 }

@@ -1,7 +1,7 @@
 .steps {
   /* &,
   &-horizontal{ */
-  [class~="step"] {
+  .step {
     grid-template-rows: 40px 1fr;
     grid-template-columns: auto;
     min-width: 4rem;
@@ -12,7 +12,7 @@
     }
   }
   /* } */
-  [class~="step"] {
+  .step {
     &:after {
       content: counter(step);
       counter-increment: step;
