@@ -1,8 +1,8 @@
 export let siteStats = {
-  components: "43",
+  components: "44",
   themes: "22",
   githubStars: "7,000",
-  npmInstalls: "300,000",
+  npmInstalls: "400,000",
 }
 
 export let siteData = {

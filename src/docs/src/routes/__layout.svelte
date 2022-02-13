@@ -115,7 +115,7 @@
       {/if}
     </div>
   </div>
-  <div class="drawer-side border-base-content border-t border-opacity-5" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
+  <div class="drawer-side" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
       <Sidebar {closeDrawer} {drawerSidebarScrollY} />
