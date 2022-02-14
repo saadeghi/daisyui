@@ -4,7 +4,8 @@
     @apply border-opacity-20;
   }
   &:focus {
-    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsla(var(--bc) / 0.2);
+    outline: 2px solid hsla(var(--bc) / 0.2);
+    outline-offset: 2px;
   }
   &-ghost {
     @apply bg-opacity-5;
@@ -16,43 +17,43 @@
   &-primary {
     @apply border-primary;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
+      outline: 2px solid hsl(var(--p));
     }
   }
   &-secondary {
     @apply border-secondary;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
+      outline: 2px solid hsl(var(--s));
     }
   }
   &-accent {
     @apply border-accent;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
+      outline: 2px solid hsl(var(--a));
     }
   }
   &-info {
     @apply border-info;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--in));
+      outline: 2px solid hsl(var(--in));
     }
   }
   &-success {
     @apply border-success;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--su));
+      outline: 2px solid hsl(var(--su));
     }
   }
   &-warning {
     @apply border-warning;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--wa));
+      outline: 2px solid hsl(var(--wa));
     }
   }
   &-error {
     @apply border-error;
     &:focus {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--er));
+      outline: 2px solid hsl(var(--er));
     }
   }
   &-disabled,

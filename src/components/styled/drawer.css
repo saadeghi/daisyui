@@ -26,36 +26,37 @@
   }
   &:focus-visible {
     & ~ .drawer-content .drawer-button {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--nf));
+      outline: 2px solid hsl(var(--nf));
+      outline-offset: 2px;
       &.btn-primary {
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
+        outline: 2px solid hsl(var(--p));
       }
       &.btn-secondary {
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
+        outline: 2px solid hsl(var(--s));
       }
       &.btn-accent {
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
+        outline: 2px solid hsl(var(--a));
       }
       &.btn-info {
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--in));
+        outline: 2px solid hsl(var(--in));
       }
       &.btn-success {
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--su));
+        outline: 2px solid hsl(var(--su));
       }
       &.btn-warning {
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--wa));
+        outline: 2px solid hsl(var(--wa));
       }
       &.btn-error {
-        box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--er));
+        outline: 2px solid hsl(var(--er));
       }
       &.glass {
-        box-shadow: 0 0 0 2px currentColor;
+        outline: 2px solid currentColor;
       }
       &.btn-ghost {
-        box-shadow: 0 0 0 2px currentColor;
+        outline: 2px solid currentColor;
       }
       &.btn-link {
-        box-shadow: 0 0 0 2px currentColor;
+        outline: 2px solid currentColor;
       }
     }
   }

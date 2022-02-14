@@ -20,7 +20,8 @@
       @apply border-neutral-focus bg-neutral-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--nf));
+      outline: 2px solid hsl(var(--nf));
+      outline-offset: 2px;
     }
   }
   /* brand colors */
@@ -31,7 +32,7 @@
       @apply border-primary-focus bg-primary-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
+      outline: 2px solid hsl(var(--p));
     }
   }
   &-secondary {
@@ -41,7 +42,7 @@
       @apply border-secondary-focus bg-secondary-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
+      outline: 2px solid hsl(var(--s));
     }
   }
   &-accent {
@@ -51,7 +52,7 @@
       @apply border-accent-focus bg-accent-focus;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
+      outline: 2px solid hsl(var(--a));
     }
   }
 
@@ -63,7 +64,7 @@
       @apply border-info bg-info;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--in));
+      outline: 2px solid hsl(var(--in));
     }
   }
   &-success {
@@ -73,7 +74,7 @@
       @apply border-success bg-success;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--su));
+      outline: 2px solid hsl(var(--su));
     }
   }
   &-warning {
@@ -83,7 +84,7 @@
       @apply border-warning bg-warning;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--wa));
+      outline: 2px solid hsl(var(--wa));
     }
   }
   &-error {
@@ -93,7 +94,7 @@
       @apply border-error bg-error;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--er));
+      outline: 2px solid hsl(var(--er));
     }
   }
 
@@ -105,7 +106,7 @@
       --glass-border-opacity: 15%;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px currentColor;
+      outline: 2px solid 0 0 2px currentColor;
     }
   }
 
@@ -117,7 +118,7 @@
       @apply border-opacity-0 bg-base-content bg-opacity-20;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px currentColor;
+      outline: 2px solid 0 0 2px currentColor;
     }
   }
   &-link {
@@ -127,7 +128,7 @@
       @apply border-transparent bg-transparent underline;
     }
     &:focus-visible {
-      box-shadow: 0 0 0 2px currentColor;
+      outline: 2px solid 0 0 2px currentColor;
     }
   }
 
@@ -209,7 +210,7 @@
   & > .btn-active {
     @apply border-primary bg-primary text-primary-content;
     &:focus-visible {
-      box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
+      outline: 2px solid hsl(var(--p));
     }
   }
   & > .btn:not(:first-child) {

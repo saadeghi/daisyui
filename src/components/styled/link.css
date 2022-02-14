@@ -15,6 +15,7 @@
     @apply outline-none;
   }
   &:focus-visible {
-    box-shadow: 0 0 0 2px currentColor;
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
   }
 }

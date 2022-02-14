@@ -1,40 +1,33 @@
 .toggle {
   --chkbg: hsla(var(--bc) / 0.2);
-  --focus-shadow: 0 0 0;
   --handleoffset: 1.5rem;
   @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-20 duration-300 ease-in-out rounded-badge;
   transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
-  box-shadow: calc(var(--handleoffset) * -1) 0 0 2px hsl(var(--b1)) inset,
-    0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+  box-shadow: calc(var(--handleoffset) * -1) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
   &:focus-visible {
-    --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
+    outline: 2px solid hsl(var(--bc));
+    outline-offset: 2px;
   }
   &:checked,
   &[checked="true"] {
     --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
-    box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset,
-      0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
     [dir="rtl"] & {
-      box-shadow: calc(var(--handleoffset) * 1) 0 0 2px hsl(var(--b1)) inset,
-        0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+      box-shadow: calc(var(--handleoffset) * 1) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
     }
   }
   &:indeterminate {
     --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
-    box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset,
-      calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset,
-      0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset, calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
     [dir="rtl"] & {
-      box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset,
-        calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset,
-        0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+      box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset, calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
     }
   }
   &-primary {
     &:focus-visible {
-      --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
+      outline: 2px solid hsl(var(--p));
     }
     &:checked,
     &[checked="true"] {
@@ -45,7 +38,7 @@
   }
   &-secondary {
     &:focus-visible {
-      --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
+      outline: 2px solid hsl(var(--s));
     }
     &:checked,
     &[checked="true"] {
@@ -56,7 +49,7 @@
   }
   &-accent {
     &:focus-visible {
-      --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
+      outline: 2px solid hsl(var(--a));
     }
     &:checked,
     &[checked="true"] {

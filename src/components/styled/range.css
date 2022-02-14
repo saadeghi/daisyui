@@ -3,10 +3,12 @@
   --range-shdw: var(--bc);
   @apply bg-transparent;
   &:focus-visible::-webkit-slider-thumb {
-    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--range-shdw));
+    outline: 2px solid hsl(var(--range-shdw));
+    outline-offset: 2px;
   }
   &:focus-visible::-moz-range-thumb {
-    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--range-shdw));
+    outline: 2px solid hsl(var(--range-shdw)));
+    outline-offset: 2px;
   }
   &::-webkit-slider-runnable-track {
     @apply h-2 w-full rounded-box;

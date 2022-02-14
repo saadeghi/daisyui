@@ -13,7 +13,10 @@
     @apply outline-none;
   }
   &:focus-visible {
-    box-shadow: 0 0 0 2px currentColor inset;
+    outline: 2px solid currentColor;
+    outline-offset: -3px;
+    border-bottom-right-radius: var(--tab-radius, 0.5rem);
+    border-bottom-left-radius: var(--tab-radius, 0.5rem);
   }
 }
 .tab-bordered {
@@ -32,8 +35,7 @@
   padding-top: var(--tab-border, 1px);
   &.tab-active {
     background-color: var(--tab-bg);
-    border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0
-      var(--tab-border, 1px);
+    border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
     border-left-color: var(--tab-border-color);
     border-right-color: var(--tab-border-color);
     border-top-color: var(--tab-border-color);
@@ -51,13 +53,7 @@
       height: var(--tab-radius, 0.5rem);
       bottom: 0;
       --tab-grad: calc(68% - var(--tab-border, 1px));
-      --tab-corner-bg: radial-gradient(
-        circle at var(--circle-pos),
-        transparent var(--tab-grad),
-        var(--tab-border-color) calc(var(--tab-grad) + 0.3px),
-        var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
-      );
+      --tab-corner-bg: radial-gradient(circle at var(--circle-pos), transparent var(--tab-grad), var(--tab-border-color) calc(var(--tab-grad) + 0.3px), var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)), var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px));
     }
     &:before {
       left: calc(var(--tab-radius, 0.5rem) * -1);
