@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "NODE_ENV=production svelte-kit build",
+    "build": "npm i daisyui@latest && NODE_ENV=production svelte-kit build",
     "preview": "svelte-kit preview",
     "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}'"
   },
