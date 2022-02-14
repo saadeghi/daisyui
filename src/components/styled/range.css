@@ -1,34 +1,46 @@
 .range {
   -webkit-appearance: none;
   --range-shdw: var(--bc);
-  @apply bg-transparent;
+  @apply bg-transparent rounded-box overflow-hidden;
   &:focus-visible::-webkit-slider-thumb {
-    outline: 2px solid hsl(var(--range-shdw));
-    outline-offset: 2px;
+    /* outline: 2px solid hsl(var(--range-shdw));
+    outline-offset: 2px; */
+    --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
   }
   &:focus-visible::-moz-range-thumb {
-    outline: 2px solid hsl(var(--range-shdw)));
-    outline-offset: 2px;
+    /* outline: 2px solid hsl(var(--range-shdw)));
+    outline-offset: 2px; */
+    --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
   }
   &::-webkit-slider-runnable-track {
     @apply h-2 w-full rounded-box;
     background-color: hsla(var(--bc) / 0.1);
+    /* background: linear-gradient(180deg, transparent 30%, hsla(var(--bc) / 0.1) 30%, hsla(var(--bc) / 0.1) 70%, transparent 70%); */
   }
   &::-moz-range-track {
     @apply h-2 w-full rounded-box;
     background-color: hsla(var(--bc) / 0.1);
+/* fix */
   }
   &::-webkit-slider-thumb {
-    background-color: hsl(var(--range-shdw));
+    background-color: hsl(var(--b1));
     @apply relative h-5 w-5 border-none transition-all duration-300 ease-in-out rounded-box;
     -webkit-appearance: none;
     top: 50%;
+    color: hsl(var(--range-shdw));
     transform: translateY(-50%);
+    --filler-size: 100rem;
+    --filler-offset: .6rem;
+    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow,0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &::-moz-range-thumb {
-    background-color: hsl(var(--range-shdw));
+    background-color: hsl(var(--b1));
     @apply relative h-5 w-5 border-none transition-all duration-300 ease-in-out rounded-box;
     top: 50%;
+    color: hsl(var(--range-shdw));
+    --filler-size: 100rem;
+    --filler-offset: .5rem;
+    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow,0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &-primary {
     --range-shdw: var(--p);
