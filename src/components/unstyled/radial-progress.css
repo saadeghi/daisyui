@@ -1,0 +1,29 @@
+.radial-progress {
+  @apply w-[var(--size)] bg-transparent rounded-full place-content-center inline-grid relative aspect-square h-auto;
+  vertical-align: middle;
+  box-sizing: content-box;
+}
+.radial-progress::-moz-progress-bar {
+  @apply bg-transparent appearance-none;
+}
+.radial-progress::-webkit-progress-value {
+  @apply bg-transparent appearance-none;
+}
+.radial-progress::-webkit-progress-bar {
+  @apply bg-transparent appearance-none;
+}
+.radial-progress:before,
+.radial-progress:after {
+  @apply absolute rounded-full;
+  content: "";
+}
+.radial-progress:before {
+  @apply inset-0;
+  background: radial-gradient(farthest-side, currentColor 98%, #0000) top/var(--thickness) var(--thickness) no-repeat, conic-gradient(currentColor calc(var(--value) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--thickness)), #000 calc(100% - var(--thickness)));
+  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--thickness)), #000 calc(100% - var(--thickness)));
+}
+.radial-progress:after {
+  inset: calc(50% - var(--thickness) / 2);
+  transform: rotate(calc(var(--value) * 3.6deg - 90deg)) translate(calc(var(--size) / 2 - 50%));
+}
