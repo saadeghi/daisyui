@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.0.0](https://github.com/saadeghi/daisyui/compare/v2.0.0-next.0...v2.0.0) (2022-02-13)
 
+### Breaking Changes
+
+* Improvements applied to the value of following colors on daisyUI default themes. Below colors got lighter on light themes and they got darker on dark themes (due to adding new `*-content` color names)
+  - `info`
+  - `success`
+  - `warning`
+  - `error`
+
+  If you used those color names inside your pages (like `bg-info`, `text-error`, etc.) Make sure your colors look good on both light and dark themes.  
+  There are new content colors are added so for example, if `text-info` contrast doesn't look good, use the new `text-info-content` color instead.
+
+
 ### Features
 
 * Updated Tailwind CSS dev dependency to v3.0
@@ -11,6 +23,12 @@ All notable changes to this project will be documented in this file. See [standa
 * Add new `swap` component
 * Add new `radial-progress` component
 * `menu` component now supports submenus both vertically and horizontally
+
+* Add new foreground colors (fixes #187)
+  - `info-content`
+  - `success-content`
+  - `warning-content`
+  - `error-content`
 
 * Add new responsive modifiers for `divider` component:
   - divider-vertical
@@ -67,12 +85,6 @@ module.exports = {
   },
 }
 ```
-* Add new foreground colors (fixes #187)
-  - `info-content`
-  - `success-content`
-  - `warning-content`
-  - `error-content`
-
 * The following colors now are optional on themes and if they're not specified, they will show the fallback colors:
 
 ```js
