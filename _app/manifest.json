@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-0ed8ba6a.js",
+    "file": "start-51210d56.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -106,19 +106,19 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-32581f7b.js",
+    "file": "pages/__layout.svelte-306712ef.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6c3f1da5.js",
       "_stores-df438b5c.js",
-      "_util-96802f81.js",
+      "_util-c86ef256.js",
       "_ThemeChange-e3134e3c.js",
-      "_SEO-864644e0.js"
+      "_SEO-d53f9263.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-e114dfba.css"
+      "assets/pages/__layout.svelte-90d80853.css"
     ]
   },
   "src/routes/__error.svelte": {
@@ -131,14 +131,14 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-d14a4e29.js",
+    "file": "pages/index.svelte-8fb02133.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6c3f1da5.js",
-      "_SEO-864644e0.js",
-      "_util-96802f81.js"
+      "_SEO-d53f9263.js",
+      "_util-c86ef256.js"
     ]
   },
   "src/routes/tailwindplay.svelte": {
@@ -151,15 +151,15 @@
     ]
   },
   "src/routes/components/index.svelte": {
-    "file": "pages/components/index.svelte-bd711542.js",
+    "file": "pages/components/index.svelte-e387a0f4.js",
     "src": "src/routes/components/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6c3f1da5.js",
       "_stores-df438b5c.js",
-      "_SEO-864644e0.js",
-      "_util-96802f81.js"
+      "_SEO-d53f9263.js",
+      "_util-c86ef256.js"
     ]
   },
   "src/routes/components/radial-progress.svelte.md": {
@@ -867,15 +867,15 @@
     ]
   },
   "src/routes/docs/index.svelte": {
-    "file": "pages/docs/index.svelte-831e3ae3.js",
+    "file": "pages/docs/index.svelte-52880932.js",
     "src": "src/routes/docs/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6c3f1da5.js",
       "_stores-df438b5c.js",
-      "_SEO-864644e0.js",
-      "_util-96802f81.js"
+      "_SEO-d53f9263.js",
+      "_util-c86ef256.js"
     ]
   },
   "src/routes/docs/layout-and-typography.svelte.md": {
@@ -927,13 +927,13 @@
     ]
   },
   "src/routes/docs/tachyons.svelte.md": {
-    "file": "pages/docs/tachyons.svelte.md-a58f9674.js",
+    "file": "pages/docs/tachyons.svelte.md-82056ec0.js",
     "src": "src/routes/docs/tachyons.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6c3f1da5.js",
-      "_util-96802f81.js"
+      "_util-c86ef256.js"
     ]
   },
   "src/routes/docs/windicss.svelte.md": {
@@ -946,13 +946,13 @@
     ]
   },
   "src/routes/docs/basscss.svelte.md": {
-    "file": "pages/docs/basscss.svelte.md-455d7e90.js",
+    "file": "pages/docs/basscss.svelte.md-239f6b49.js",
     "src": "src/routes/docs/basscss.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6c3f1da5.js",
-      "_util-96802f81.js"
+      "_util-c86ef256.js"
     ]
   },
   "src/routes/docs/install/__layout.reset.svelte": {
@@ -1059,13 +1059,13 @@
     ]
   },
   "src/routes/docs/cdn.svelte.md": {
-    "file": "pages/docs/cdn.svelte.md-928444c8.js",
+    "file": "pages/docs/cdn.svelte.md-369ef216.js",
     "src": "src/routes/docs/cdn.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-6c3f1da5.js",
-      "_util-96802f81.js",
+      "_util-c86ef256.js",
       "_InstallTabs-17ae7d9c.js",
       "_stores-df438b5c.js"
     ]
@@ -1091,15 +1091,15 @@
       "_vendor-6c3f1da5.js"
     ]
   },
-  "_SEO-864644e0.js": {
-    "file": "chunks/SEO-864644e0.js",
+  "_SEO-d53f9263.js": {
+    "file": "chunks/SEO-d53f9263.js",
     "imports": [
       "_vendor-6c3f1da5.js",
-      "_util-96802f81.js"
+      "_util-c86ef256.js"
     ]
   },
-  "_util-96802f81.js": {
-    "file": "chunks/util-96802f81.js"
+  "_util-c86ef256.js": {
+    "file": "chunks/util-c86ef256.js"
   },
   "_ThemeChange-e3134e3c.js": {
     "file": "chunks/ThemeChange-e3134e3c.js",
