@@ -7,9 +7,3 @@ export const readEnv = (id, defaultValue = "") => {
   return defaultValue
 }
 
-export const daisyuiStyleComponentName = () => {
-  if (import.meta.env.VITE_DAISYUI_SOURCE == "package") {
-    return "StyleProduction"
-  }
-  return "StyleDevelopment"
-}

@@ -23,11 +23,11 @@
 
 <script>
   import { onMount } from "svelte"
-  import { daisyuiStyleComponentName } from "$lib/util"
 
   import { page } from "$app/stores"
 
-  import(`../components/${daisyuiStyleComponentName()}.svelte`)
+  // import "@components/StyleProduction.svelte"
+  import "@components/StyleDevelopment.svelte"
 
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
@@ -84,7 +84,6 @@
               <Ads size={2} />
               <Ads size={3} />
             {/if}
-            {daisyuiStyleComponentName()}
             {#if post.title}
               <h1>{post.title}</h1>
             {/if}
