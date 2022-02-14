@@ -35,8 +35,6 @@ module.exports = {
 The default theme is `light` (or `dark` for dark mode)  
 but you can [change the default theme from tailwind.config.js](https://daisyui.com/docs/config)
 
-To make your own theme, see [add themes](https://daisyui.com/docs/add-themes) page
-
 ## How to remove unused themes?
 
 You can only include the themes you want in your project.  

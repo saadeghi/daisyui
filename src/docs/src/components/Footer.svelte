@@ -2,9 +2,9 @@
   <div class="bg-base-200 text-base-content">
     <footer class="footer mx-auto max-w-6xl px-4 py-20">
       <div>
-        <div class="inline-block font-title text-3xl">
-          <span class="lowercase text-primary">daisy</span>
-          <span class="uppercase text-base-content">UI</span>
+        <div class="font-title inline-block text-3xl">
+          <span class="text-primary lowercase">daisy</span>
+          <span class="text-base-content uppercase">UI</span>
         </div>
         <p class="opacity-50">
           Free Components library
@@ -17,8 +17,8 @@
         <a href="/docs/install" class="link link-hover">How to install</a>
         <a href="/docs/use" class="link link-hover">How to use components</a>
         <a href="/docs/customize" class="link link-hover">How to customize</a>
-        <a href="/docs/default-themes" class="link link-hover">How to use themes</a>
-        <a href="/core/colors" class="link link-hover">Color system</a>
+        <a href="/docs/themes" class="link link-hover">How to use themes</a>
+        <a href="/docs/colors" class="link link-hover">Color system</a>
         <a href="/docs/config" class="link link-hover">Config</a>
       </div>
       <div>
@@ -69,13 +69,13 @@
       </div>
     </footer>
   </div>
-  <footer class="footer footer-center border-t border-base-300 bg-base-200 px-4 py-10 text-base-content">
+  <footer class="footer footer-center border-base-300 bg-base-200 text-base-content border-t px-4 py-10">
     <div class="flex w-full max-w-6xl flex-col items-center justify-between sm:flex-row">
       <a href="https://github.com/saadeghi" rel="noopener" target="_blank" class="inline-flex items-center justify-center hover:opacity-90">
-        <div class="mr-3 avatar"><div class="mask mask-squircle h-14 w-14 bg-neutral p-px"><img src="/pouya-saadeghi.jpg" alt="Pouya Saadeghi" class="mask mask-squircle" /></div></div>
+        <div class="avatar mr-3"><div class="mask mask-squircle bg-neutral h-14 w-14 p-px"><img src="/pouya-saadeghi.jpg" alt="Pouya Saadeghi" class="mask mask-squircle" /></div></div>
         <div class="text-left">
-          <p class="text-xs text-base-content text-opacity-50">Created by</p>
-          <h2 class="text-lg font-bold text-base-content">Pouya Saadeghi</h2>
+          <p class="text-base-content text-xs text-opacity-50">Created by</p>
+          <h2 class="text-base-content text-lg font-bold">Pouya Saadeghi</h2>
         </div>
       </a>
       <a href="https://manasky.com" rel="nofollow" target="_blank" class="link mb-4 inline-block opacity-50 hover:opacity-80">

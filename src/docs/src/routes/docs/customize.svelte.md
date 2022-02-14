@@ -47,5 +47,5 @@ But you can still customize components in many ways.
 
 4. You can also:
 
-- [add your own theme](/docs/add-themes)
+- [add your own theme](/docs/themes)
 - opt-out of daisyUI's design decisions [only use a unstyled (skeleton) version of daisyUI](/docs/config).

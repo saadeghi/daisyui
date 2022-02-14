@@ -126,7 +126,7 @@ data="{[
     </div>
     <div class="stat-title">New Users</div>
     <div class="stat-value">4,200</div>
-    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+    <div class="stat-desc">↗︎ 400 (22%)</div>
   </div>
   <div class="stat">
     <div class="stat-figure text-secondary">
@@ -134,7 +134,7 @@ data="{[
     </div>
     <div class="stat-title">New Registers</div>
     <div class="stat-value">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
 <pre slot="html">{
@@ -155,7 +155,7 @@ data="{[
     </div>
     <div class="stat-title">New Users</div>
     <div class="stat-value">4,200</div>
-    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+    <div class="stat-desc">↗︎ 400 (22%)</div>
   </div>
   
   <div class="stat">
@@ -164,7 +164,7 @@ data="{[
     </div>
     <div class="stat-title">New Registers</div>
     <div class="stat-value">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
   
 </div>`
@@ -185,8 +185,8 @@ data="{[
   </div>
   <div class="stat place-items-center">
     <div class="stat-title">New Registers</div>
-    <div class="stat-value text-error">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-value">1,200</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
 <pre slot="html">{
@@ -206,8 +206,8 @@ data="{[
   
   <div class="stat place-items-center">
     <div class="stat-title">New Registers</div>
-    <div class="stat-value text-error">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-value">1,200</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
   
 </div>`
@@ -224,12 +224,12 @@ data="{[
   <div class="stat">
     <div class="stat-title">New Users</div>
     <div class="stat-value">4,200</div>
-    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+    <div class="stat-desc">↗︎ 400 (22%)</div>
   </div>
   <div class="stat">
     <div class="stat-title">New Registers</div>
     <div class="stat-value">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
 <pre slot="html">{
@@ -244,13 +244,13 @@ data="{[
   <div class="stat">
     <div class="stat-title">New Users</div>
     <div class="stat-value">4,200</div>
-    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+    <div class="stat-desc">↗︎ 400 (22%)</div>
   </div>
   
   <div class="stat">
     <div class="stat-title">New Registers</div>
     <div class="stat-value">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
   
 </div>`
@@ -267,12 +267,12 @@ data="{[
   <div class="stat">
     <div class="stat-title">New Users</div>
     <div class="stat-value">4,200</div>
-    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+    <div class="stat-desc">↗︎ 400 (22%)</div>
   </div>
   <div class="stat">
     <div class="stat-title">New Registers</div>
     <div class="stat-value">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
 <pre slot="html">{
@@ -287,13 +287,13 @@ data="{[
   <div class="stat">
     <div class="stat-title">New Users</div>
     <div class="stat-value">4,200</div>
-    <div class="stat-desc text-success">↗︎ 400 (22%)</div>
+    <div class="stat-desc">↗︎ 400 (22%)</div>
   </div>
   
   <div class="stat">
     <div class="stat-title">New Registers</div>
     <div class="stat-value">1,200</div>
-    <div class="stat-desc text-error">↘︎ 90 (14%)</div>
+    <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
   
 </div>`

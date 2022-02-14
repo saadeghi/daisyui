@@ -8,7 +8,7 @@
       <div class="stat-value">{siteStats.components}</div>
       <div class="stat-desc">Components</div>
     </a>
-    <a href="/docs/default-themes" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
+    <a href="/docs/themes" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value">{siteStats.themes}</div>
       <div class="stat-desc">Themes</div>
     </a>
