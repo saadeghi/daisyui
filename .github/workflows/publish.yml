@@ -91,7 +91,7 @@ jobs:
         run: cd src/docs && npm install
 
       - name: Build document website
-        run: cd src/docs && npm run build
+        run: cd src/docs && npm i daisyui@latest && npm run build
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
