@@ -36,7 +36,7 @@ export let menu = [
         name: "Config",
         href: "/docs/config",
         icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>',
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Themes",
@@ -48,7 +48,7 @@ export let menu = [
         name: "Colors",
         href: "/docs/colors",
         icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19,11.5C19,11.5 17,13.67 17,15C17,16.1 17.9,17 19,17C20.1,17 21,16.1 21,15C21,13.67 19,11.5 19,11.5M5.21,10L10,5.21L14.79,10M16.56,8.94L7.62,0L6.21,1.41L8.59,3.79L3.44,8.94C2.85,9.5 2.85,10.47 3.44,11.06L8.94,16.56C9.23,16.85 9.62,17 10,17C10.38,17 10.77,16.85 11.06,16.56L16.56,11.06C17.15,10.47 17.15,9.5 16.56,8.94Z"/></svg>',
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Layout & Typography",
@@ -83,7 +83,7 @@ export let menu = [
         name: "Swap",
         href: "/components/swap",
         icon: "",
-        badge: "",
+        badge: "new",
       },
     ],
   },
@@ -100,7 +100,7 @@ export let menu = [
         name: "Avatar",
         href: "/components/avatar",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Badge",
@@ -148,13 +148,13 @@ export let menu = [
         name: "Radial progress",
         href: "/components/radial-progress",
         icon: "",
-        badge: "",
+        badge: "new",
       },
       {
         name: "Stat",
         href: "/components/stat",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Table",
@@ -195,13 +195,13 @@ export let menu = [
         name: "Range",
         href: "/components/range",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Rating",
         href: "/components/rating",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Select",
@@ -242,7 +242,7 @@ export let menu = [
         name: "Divider",
         href: "/components/divider",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Drawer",
@@ -272,13 +272,13 @@ export let menu = [
         name: "Input group",
         href: "/components/input-group",
         icon: "",
-        badge: "",
+        badge: "new",
       },
       {
         name: "Mask",
         href: "/components/mask",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Stack",
@@ -307,7 +307,7 @@ export let menu = [
         name: "Menu",
         href: "/components/menu",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Navbar",

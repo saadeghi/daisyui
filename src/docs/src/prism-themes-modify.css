@@ -39,5 +39,15 @@
     .token.tag {
       color: #ffa2a2;
     }
+    .token.comment {
+      color: hsla(var(--nc) / 0.3);
+    }
+  }
+}
+[data-theme="garden"] {
+  .prose pre[class*="language-"] {
+    .token.comment {
+      color: hsla(var(--nc) / 0.3);
+    }
   }
 }

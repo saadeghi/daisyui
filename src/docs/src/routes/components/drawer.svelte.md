@@ -21,16 +21,21 @@ data="{[
 ]}"
 />
 
-Sidebar can be visible by default on large screens or it can be toggleable on both large and small screens.
+Drawer sidebar can be visible by default on large screens or it can be toggleable on both large and small screens.
 
-Drawer contains:
+Drawer tags structure:
 
-- `drawer-toggle`: A hidden checkbox to toggle the visibility of the sidebar
-- `drawer-content`: Container for the content of the page
-  - Your content goes here (including navbar, page content, footer, etc.)
-- `drawer-side`: Container for the sidebar
-  - `drawer-overlay` a dark overlay that covers the whole page when the drawer is open
-  - Your Sidebar content (A menu or anything)
+```js
+.drawer // The root container
+  ├── .drawer-toggle // A hidden checkbox to toggle the visibility of the sidebar
+  ├── .drawer-content // All your page content goes here
+  │    ├── // navbar
+  │    ├── // content
+  │    └── // footer
+  └── .drawer-side // Sidebar wrapper
+       ├── .drawer-overlay // A dark overlay that covers the whole page when the drawer is open
+       └── // Sidebar content (menu or anything)
+```
 
 You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
 <Component title="Drawer">

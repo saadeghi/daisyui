@@ -13,7 +13,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 
 [![][banner-url]][docs-url]
 
-# daisyUI
+# daisyUI 2.0
 
 [![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url]  
 [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
@@ -136,65 +136,76 @@ Read the documents for more info:
   show / hide
 </summary>
 
-- [x] Alert
-- [x] Artboard
-- [ ] App bar
-- [x] Avatar
-  - [x] Avatar group
-- [x] Badge
-- [ ] Banner
-- [x] Breadcrumb
-- [x] Button
-  - [x] Button group
-- [ ] Calendar
-- [x] Carousel
-- [x] Card
-- [ ] Chat bubble
-- [x] Collapse (Accordion)
-- [ ] Comment
-- [x] Countdown
-- [x] Divider
-- [x] Drawer
-- [ ] Empty placeholder
-- [x] Footer
-- [ ] Form
-  - [x] Select
-  - [x] Text input
-    - [x] Input group
-  - [x] Text area
+- Actions
+  - [x] Button
+  - [x] Dropdown
+  - [x] Modal
+  - [x] Swap
+
+- Data display
+  - [x] Alert
+  - [x] Avatar
+  - [x] Badge
+  - [ ] Banner
+  - [ ] Calendar
+  - [x] Card
+  - [x] Carousel
+  - [ ] Chat bubble
+  - [x] Collapse
+  - [ ] Comment
+  - [x] Countdown
+  - [ ] Empty placeholder
+  - [x] Kbd
+  - [ ] Loading
+  - [x] Progress
+  - [x] Radial progress
+  - [x] Stat
+  - [x] Table
+  - [ ] Tag
+  - [ ] Timeline
+  - [ ] Toast
+  - [x] Tooltip
+  - [ ] Treeview
+
+- Data input
   - [x] Checkbox
+  - [x] Text input
   - [x] Radio
-  - [x] Range slider
+  - [x] Range
   - [x] Rating
+  - [x] Select
+  - [x] Textarea
   - [x] Toggle
   - [ ] Upload
-- [x] Hero
-- [x] Indicator
-- [x] Kbd
-- [x] Link
-- [ ] Loading
-- [x] Menu
-- [ ] Mockup
+  
+- Layout
+  - [x] Artboard
+  - [x] Button group
+  - [x] Divider
+  - [x] Drawer
+  - [x] Footer
+  - [x] Hero
+  - [x] Indicator
+  - [x] Input group
+  - [x] Mask
+  - [x] Stack
+
+- Navigation
+  - [ ] App bar
+  - [x] Breadcrumbs
+  - [x] Link
+  - [x] Menu
+  - [x] Navbar
+  - [x] Pagination
+  - [x] Steps
+  - [x] Tab
+
+- Mockup
   - [ ] Browser
   - [x] Code
   - [x] Phone
   - [x] Window
-- [x] Navbar
-- [x] Mask
-- [x] Modal
-- [x] Pagination
-- [x] Progress
-- [x] Stack
-- [x] Stat
-- [x] Steps
-- [x] Swap
-- [ ] Tag
-- [x] Table
-- [x] Tabs
-- [ ] Timeline
-- [ ] Toast
-- [x] Tooltip
-- [ ] Treeview
+
 
 </details>
 
@@ -269,7 +280,7 @@ Read the documents for more info:
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
-[number-of-components]: https://badgen.net/badge/total%20components/44/green
+[number-of-components]: https://badgen.net/badge/total%20components/45/green
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg
