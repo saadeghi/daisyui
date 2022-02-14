@@ -75,7 +75,7 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/daisyui@2.0.1/dist/full.css"
+  href="https://cdn.jsdelivr.net/npm/daisyui@2.0.2/dist/full.css"
   rel="stylesheet"
   type="text/css"
 />
