@@ -1,14 +1,15 @@
 export const slugFromPath = (path) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null
 
-export const pkgVersion = () => {
-  if (import.meta.env.VITE_DAISYUI_VERSION !== undefined) {
-    return import.meta.env.VITE_DAISYUI_VERSION
+export const readEnv = (id, defaultValue = "") => {
+  if (import.meta.env[id] !== undefined) {
+    return import.meta.env[id]
   }
-  return "latest"
+  return defaultValue
 }
-export const rootUrl = () => {
-  if (import.meta.env.VITE_ROOT !== undefined) {
-    return import.meta.env.VITE_ROOT
+
+export const daisyuiStyleComponentName = () => {
+  if (import.meta.env.VITE_DAISYUI_SOURCE == "package") {
+    return "StyleProduction"
   }
-  return ""
+  return "StyleDevelopment"
 }

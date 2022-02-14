@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  import { pkgVersion } from "$lib/util"
+  import { readEnv } from "$lib/util"
   import ThemeChange from "@components/ThemeChange.svelte"
 
   export let drawerContentScrollY
@@ -27,7 +27,7 @@
         </a>
         <a href="/docs/changelog" class={`link link-hover font-mono text-xs text-opacity-50 ${switchNavbarStyle || $page.url.pathname != "/" ? "" : "hidden"}`}>
           <div data-tip="Changelog" class="tooltip tooltip-bottom">
-            {pkgVersion()}
+            {readEnv("VITE_DAISYUI_VERSION", "latest")}
           </div>
         </a>
       </div>

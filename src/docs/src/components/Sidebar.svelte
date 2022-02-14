@@ -1,7 +1,7 @@
 <script>
   import { page } from "$app/stores"
   import { menu } from "@src/lib/data.js"
-  import { pkgVersion } from "$lib/util"
+  import { readEnv } from "$lib/util"
   export let closeDrawer
 
   export let drawerSidebarScrollY
@@ -17,7 +17,7 @@
   </a>
   <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50">
     <div data-tip="Changelog" class="tooltip tooltip-bottom">
-      {pkgVersion()}
+      {readEnv("VITE_DAISYUI_VERSION", "latest")}
     </div>
   </a>
 </div>
