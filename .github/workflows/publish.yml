@@ -1,9 +1,8 @@
-
 name: "Build, Publish, Deploy"
 
 on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
@@ -13,19 +12,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
-        
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-            node-version: 16.8.0
-            registry-url: https://registry.npmjs.org
+          node-version: 16.8.0
+          registry-url: https://registry.npmjs.org
 
       - name: check latest released version
         id: check
         uses: EndBug/version-check@v2.1.0
         with:
-            file-url: https://unpkg.com/daisyui@latest/package.json
-            static-checking: localIsNew
+          file-url: https://unpkg.com/daisyui@latest/package.json
+          static-checking: localIsNew
 
       - name: Install dependencies
         if: steps.check.outputs.changed == 'true'
@@ -39,13 +38,13 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: npm publish
         env:
-            NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: Read package version from package.json
         if: steps.check.outputs.changed == 'true'
         uses: nyaa8/package-version@v1
         with:
-          path: 'package.json'
+          path: "package.json"
 
       - name: update package version in env
         if: steps.check.outputs.changed == 'true'
@@ -53,14 +52,14 @@ jobs:
         with:
           envkey_VITE_DAISYUI_VERSION: ${{ env.PACKAGE_VERSION }}
           file_name: src/docs/.env
-          
+
       - name: update package version in readme
         if: steps.check.outputs.changed == 'true'
         uses: mingjun97/file-regex-replace@v1
         with:
           regex: 'cdn.jsdelivr.net\/npm\/daisyui@.*\/dist\/'
-          replacement: 'cdn.jsdelivr.net/npm/daisyui@${{ env.PACKAGE_VERSION }}/dist/'
-          include: 'README.md'
+          replacement: "cdn.jsdelivr.net/npm/daisyui@${{ env.PACKAGE_VERSION }}/dist/"
+          include: "README.md"
 
       - name: Commit files
         if: steps.check.outputs.changed == 'true'
@@ -86,7 +85,7 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         uses: whatnick/wait-action@master
         with:
-          time: '10s'
+          time: "10s"
 
       - name: Install document website dependencies
         run: cd src/docs && npm install
@@ -99,4 +98,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./src/docs/build
-          cname: daisyui.github.io
+          cname: daisyui.com
