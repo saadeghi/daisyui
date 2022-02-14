@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/badge", {data:[{}],fetch:{},mutations:void 0});

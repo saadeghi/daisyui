@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/stack", {data:[{}],fetch:{},mutations:void 0});

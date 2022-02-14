@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/docs/customize", {data:[{}],fetch:{},mutations:void 0});

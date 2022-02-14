@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/compare/Bulma-alternative", {data:[{}],fetch:{},mutations:void 0});

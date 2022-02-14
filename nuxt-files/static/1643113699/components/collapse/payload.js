@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/collapse", {data:[{}],fetch:{},mutations:void 0});

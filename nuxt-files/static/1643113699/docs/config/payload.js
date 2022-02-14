@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/docs/config", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/compare/Tailwind-UI-alternative", {data:[{}],fetch:{},mutations:void 0});

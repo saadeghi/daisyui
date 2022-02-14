@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/core/colors", {data:[{}],fetch:{},mutations:void 0});

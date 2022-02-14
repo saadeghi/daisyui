@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/docs/default-themes", {data:[{}],fetch:{},mutations:void 0});

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/menu", {data:[{}],fetch:{},mutations:void 0});

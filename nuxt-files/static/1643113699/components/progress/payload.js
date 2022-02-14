@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/progress", {data:[{}],fetch:{},mutations:void 0});

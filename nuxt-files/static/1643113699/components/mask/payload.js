@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/mask", {data:[{}],fetch:{},mutations:void 0});

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content=""><title>Tailwind CSS Components</title><link rel="preconnect" href="https://fonts.googleapis.com" data-svelte="svelte-2361n0"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-svelte="svelte-2361n0"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" data-svelte="svelte-2361n0"><meta name="description" content="" data-svelte="svelte-1y551y3"><meta name="twitter:card" content="summary" data-svelte="svelte-1y551y3"><meta name="twitter:title" content="Tailwind CSS Components" data-svelte="svelte-1y551y3"><meta name="twitter:description" content="" data-svelte="svelte-1y551y3"><meta name="twitter:image" content="/images/docs/changelog.jpg" data-svelte="svelte-1y551y3"><meta name="twitter:image:alt" content="Tailwind CSS Components" data-svelte="svelte-1y551y3"><meta property="og:title" content="Tailwind CSS Components" data-svelte="svelte-1y551y3"><meta property="og:description" content="" data-svelte="svelte-1y551y3"><meta property="og:image" content="/images/docs/changelog.jpg" data-svelte="svelte-1y551y3">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e114dfba.css">
+	<link rel="stylesheet" href="/_app/assets/pages/docs/changelog.svelte.md-22d5031e.css">
+	<link rel="modulepreload" href="/_app/start-c4b8a678.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-6c3f1da5.js">
+	<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-12466570.js">
+	<link rel="modulepreload" href="/_app/chunks/stores-df438b5c.js">
+	<link rel="modulepreload" href="/_app/chunks/util-a6c85fc4.js">
+	<link rel="modulepreload" href="/_app/chunks/ThemeChange-e3134e3c.js">
+	<link rel="modulepreload" href="/_app/chunks/SEO-7945e6b5.js">
+	<link rel="modulepreload" href="/_app/pages/docs/changelog.svelte.md-d8d2ae11.js">
+  </head>
+  <body>
+    
+
+
+
+
+
+<div class="bg-base-100 drawer h-screen drawer-mobile"><input id="drawer" type="checkbox" class="drawer-toggle">
+  <div class="border-t drawer-content border-base-content border-opacity-5" style="scroll-behavior: smooth; scroll-padding-top: 5rem;"><div class="\n  sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 \n  bg-base-100 text-base-content\n  "><nav class="navbar w-full"><div class="flex flex-1 gap-1 lg:gap-2"><label for="drawer" class="btn btn-square btn-ghost drawer-button lg:hidden"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></label>
+      <div class="flex items-center gap-2 lg:hidden"><a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2 "><div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl"><span class="lowercase text-primary">daisy</span>
+            <span class="uppercase text-base-content">UI</span></div></a>
+        <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50 "><div data-tip="Changelog" class="tooltip tooltip-bottom">2.0.0</div></a></div></div>
+    <div class="flex-0"><div class="items-center flex-none hidden "><a href="/components" class="btn btn-ghost drawer-button normal-case"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inline-block h-6 w-6 fill-current md:mr-2"><path d="M6.5,22 C4.01471863,22 2,19.9852814 2,17.5 C2,15.0147186 4.01471863,13 6.5,13 C8.98528137,13 11,15.0147186 11,17.5 C11,19.9852814 8.98528137,22 6.5,22 Z M17.5,22 C15.0147186,22 13,19.9852814 13,17.5 C13,15.0147186 15.0147186,13 17.5,13 C19.9852814,13 22,15.0147186 22,17.5 C22,19.9852814 19.9852814,22 17.5,22 Z M6.5,11 C4.01471863,11 2,8.98528137 2,6.5 C2,4.01471863 4.01471863,2 6.5,2 C8.98528137,2 11,4.01471863 11,6.5 C11,8.98528137 8.98528137,11 6.5,11 Z M17.5,11 C15.0147186,11 13,8.98528137 13,6.5 C13,4.01471863 15.0147186,2 17.5,2 C19.9852814,2 22,4.01471863 22,6.5 C22,8.98528137 19.9852814,11 17.5,11 Z M17.5,9 C18.8807119,9 20,7.88071187 20,6.5 C20,5.11928813 18.8807119,4 17.5,4 C16.1192881,4 15,5.11928813 15,6.5 C15,7.88071187 16.1192881,9 17.5,9 Z M6.5,9 C7.88071187,9 9,7.88071187 9,6.5 C9,5.11928813 7.88071187,4 6.5,4 C5.11928813,4 4,5.11928813 4,6.5 C4,7.88071187 5.11928813,9 6.5,9 Z M17.5,20 C18.8807119,20 20,18.8807119 20,17.5 C20,16.1192881 18.8807119,15 17.5,15 C16.1192881,15 15,16.1192881 15,17.5 C15,18.8807119 16.1192881,20 17.5,20 Z M6.5,20 C7.88071187,20 9,18.8807119 9,17.5 C9,16.1192881 7.88071187,15 6.5,15 C5.11928813,15 4,16.1192881 4,17.5 C4,18.8807119 5.11928813,20 6.5,20 Z"></path></svg>
+          Components
+        </a></div>
+      
+
+<div title="Change Theme" class="dropdown dropdown-end "><div tabindex="0" class="btn gap-2 normal-case btn-ghost"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+    <span class="hidden md:inline">Change Theme</span>
+    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" class="ml-1 inline-block h-4 w-4 fill-current"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path></svg></div>
+  <div class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-96 w-52 overflow-y-auto shadow-2xl mt-16"><ul class="menu menu-compact p-4" tabindex="0"><li><button data-set-theme="light" data-act-class="active" class="active">🌝  light</button></li>
+      <li><button data-set-theme="dark" data-act-class="active">🌚  dark</button></li>
+      <li><button data-set-theme="cupcake" data-act-class="active">🧁  cupcake</button></li>
+      <li><button data-set-theme="bumblebee" data-act-class="active">🐝  bumblebee</button></li>
+      <li><button data-set-theme="emerald" data-act-class="active">✳️  Emerald</button></li>
+      <li><button data-set-theme="corporate" data-act-class="active">🏢  Corporate</button></li>
+      <li><button data-set-theme="synthwave" data-act-class="active">🌃  synthwave</button></li>
+      <li><button data-set-theme="retro" data-act-class="active">👴  retro</button></li>
+      <li><button data-set-theme="cyberpunk" data-act-class="active">🤖  cyberpunk</button></li>
+      <li><button data-set-theme="valentine" data-act-class="active">🌸  valentine</button></li>
+      <li><button data-set-theme="halloween" data-act-class="active">🎃  halloween</button></li>
+      <li><button data-set-theme="garden" data-act-class="active">🌷  garden</button></li>
+      <li><button data-set-theme="forest" data-act-class="active">🌲  forest</button></li>
+      <li><button data-set-theme="aqua" data-act-class="active">🐟  aqua</button></li>
+      <li><button data-set-theme="lofi" data-act-class="active">👓  lofi</button></li>
+      <li><button data-set-theme="pastel" data-act-class="active">🖍  pastel</button></li>
+      <li><button data-set-theme="fantasy" data-act-class="active">🧚‍♀️  fantasy</button></li>
+      <li><button data-set-theme="wireframe" data-act-class="active">📝  Wireframe</button></li>
+      <li><button data-set-theme="black" data-act-class="active">🏴  black</button></li>
+      <li><button data-set-theme="luxury" data-act-class="active">💎  luxury</button></li>
+      <li><button data-set-theme="dracula" data-act-class="active">🧛‍♂️  dracula</button></li>
+      <li><button data-set-theme="cmyk" data-act-class="active">🖨  CMYK</button></li></ul></div></div>
+      <div title="Github ↗︎" class="flex-none items-center"><a aria-label="Github" target="_blank" href="https://github.com/saadeghi/daisyui" rel="noopener" class="btn btn-ghost drawer-button btn-square normal-case"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="inline-block h-5 w-5 fill-current md:h-6 md:w-6"><path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z"></path></svg></a></div></div></nav></div>
+    <div class="p-6 pb-16"><div class="flex justify-between gap-6"><div class="prose max-w-4xl flex-grow">
+            
+            
+            <div class="changelog-body"><h1>Changelog</h1>
+<p>All notable changes to this project will be documented in this file. See <a href="https://github.com/conventional-changelog/standard-version" rel="nofollow">standard-version</a> for commit guidelines.</p>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v2.0.0-next.0...v2.0.0" rel="nofollow">2.0.0</a> (2022-02-13)</h2>
+<h3>Breaking Changes</h3>
+<ul><li><p>🎨 Improvements applied to the value of following colors on daisyUI default themes. Below colors got lighter on light themes and they got darker on dark themes (due to adding new <code>*-content</code> color names)</p>
+<ul><li><code>info</code></li>
+<li><code>success</code></li>
+<li><code>warning</code></li>
+<li><code>error</code></li></ul>
+<p>If you used those color names inside your pages (like <code>bg-info</code>, <code>text-error</code>, etc.) Make sure your colors look good on both light and dark themes.<br>
+There are new content colors are added so for example, if <code>text-info</code> contrast doesn’t look good, use the new <code>text-info-content</code> color instead.</p></li></ul>
+<h3>Features</h3>
+<ul><li><p>🔥 Updated Tailwind CSS dev dependency to v3.0</p></li>
+<li><p>🚀 Moved document website from Nuxt to SvelteKit</p></li>
+<li><p>🆕 Add new <code>swap</code> component</p></li>
+<li><p>🆕 Add new <code>radial-progress</code> component</p></li>
+<li><p>👏 Improve <code>range</code> component to show the filled value with colors</p></li>
+<li><p>👏 <code>menu</code> component now supports submenus both vertically and horizontally</p></li>
+<li><p>🆕 Add new foreground colors (fixes #187)</p>
+<ul><li><code>info-content</code></li>
+<li><code>success-content</code></li>
+<li><code>warning-content</code></li>
+<li><code>error-content</code></li></ul></li>
+<li><p>🆕 Add new responsive modifiers for <code>divider</code> component:</p>
+<ul><li>divider-vertical</li>
+<li>divider-horizontal</li></ul></li>
+<li><p>🆕 Add new responsive modifiers for <code>stats</code> component (fixes #440):</p>
+<ul><li>stats-vertical</li>
+<li>stats-horizontal</li></ul></li>
+<li><p>🤩 All focus styles that were using box shadows are now using outline instead</p></li>
+<li><p>🤩 Now every item inside <code>.menu li</code> will be styled as menu item (not only <code>a</code>, <code>span</code>, <code>button</code>)</p></li>
+<li><p>😍 Add copy to clipboard functionality for document website (fixes #293)</p></li>
+<li><p>🆕 Add new modifiers for <code>mask</code> component. This classes are used to show first half or second half of a mask”</p>
+<ul><li>mask-half-1</li>
+<li>mask-half-2</li></ul></li>
+<li><p>🤩 Empty <code>&lt;li&gt;</code> in a <code>menu</code> now shows a separator line.</p></li>
+<li><p>🆕 Add new <code>input-group</code> component</p></li>
+<li><p>🆕 Add new <code>rating-half</code> modifier <code>rating</code> component (to show half stars)</p></li>
+<li><p>📐 <code>avatar</code> image now has <code>1:1</code> aspect ratio</p></li>
+<li><p>😍 Add support for <code>RGB</code>, <code>HSL</code>,etc. color formats for daisyUI themes in <code>tailiwnd.config.js</code>:</p></li></ul>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">daisyui</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">themes</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">mytheme</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          <span class="token comment">// until now, only hex format was supported:</span>
+          <span class="token string-property property">"primary"</span><span class="token operator">:</span> <span class="token string">"#a991f7"</span><span class="token punctuation">,</span>
+          <span class="token string-property property">"primary-focus"</span><span class="token operator">:</span> <span class="token string">"#8462f4"</span><span class="token punctuation">,</span>
+          <span class="token string-property property">"primary-content"</span><span class="token operator">:</span> <span class="token string">"#ffffff"</span><span class="token punctuation">,</span>
+          
+          <span class="token comment">// now it can be anything:</span>
+          <span class="token string-property property">"secondary"</span><span class="token operator">:</span> <span class="token string">"red"</span><span class="token punctuation">,</span>
+          <span class="token string-property property">"secondary-focus"</span><span class="token operator">:</span> <span class="token string">"rgb(243,204,48)"</span><span class="token punctuation">,</span>
+          <span class="token string-property property">"secondary-content"</span><span class="token operator">:</span> <span class="token string">"hsl(0, 0%, 100%)"</span><span class="token punctuation">,</span>
+
+          <span class="token comment">//...</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<ul><li>🌗 Now system dark mode theme doesn’t need to be named <code>dark</code> anymore only.<br>
+It can be any theme and it can be specified in <code>tailwind.config.js</code> using new <code>darkTheme</code> config:</li></ul>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">daisyui</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">darkTheme</span><span class="token operator">:</span> <span class="token string">"synthwave"</span>"<span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<ul><li>👏 The following colors now are optional on themes and if they’re not specified, their fallback colors will be used:</li></ul>
+<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token string">"primary-focus"</span>    <span class="token comment">// fallback : "primary"</span>
+<span class="token string">"secondary-focus"</span>  <span class="token comment">// fallback : "secondary"</span>
+<span class="token string">"accent-focus"</span>     <span class="token comment">// fallback : "accent"</span>
+<span class="token string">"neutral-focus"</span>    <span class="token comment">// fallback : "neutral"</span>
+<span class="token string">"base-200"</span>         <span class="token comment">// fallback : "base-100"</span>
+<span class="token string">"base-300"</span>         <span class="token comment">// fallback : "base-300"</span>
+<span class="token string">"info-content"</span>     <span class="token comment">// fallback : "neutral-content"</span>
+<span class="token string">"success-content"</span>  <span class="token comment">// fallback : "neutral-content"</span>
+<span class="token string">"warning-content"</span>  <span class="token comment">// fallback : "neutral-content"</span>
+<span class="token string">"error-content"</span>    <span class="token comment">// fallback : "neutral-content"</span></code><!-- HTML_TAG_END --></pre>
+<h3>Bug Fixes</h3>
+<ul><li>Fix overflow-hidden issue on <code>menu</code> component</li>
+<li>Fix pixelated checkbox bug in Firefox (fixes #427)</li>
+<li>Fix responsive child classes to be able to get prefixes (fixes #449, #371, #346)</li>
+<li>Fix card responsive image size calculation (fixes #181, #30)</li>
+<li>Fix code indentation in document website (fixes #450)</li>
+<li>Fix responsive button demo on document website (fixes #376)</li>
+<li>Fix right padding on <code>select</code> component</li>
+<li>Improve some colors on themes</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.3...v1.25.4" rel="nofollow">1.25.4</a> (2022-01-25)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.2...v1.25.3" rel="nofollow">1.25.3</a> (2022-01-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/423" rel="nofollow">#423</a> (<a href="https://github.com/saadeghi/daisyui/commit/8613f7972a8eb5517ad33a4069d2ee5e8cccdf0e" rel="nofollow">8613f79</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.1...v1.25.2" rel="nofollow">1.25.2</a> (2022-01-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/422" rel="nofollow">#422</a> (<a href="https://github.com/saadeghi/daisyui/commit/afd8dd66df93ffe7560b5133f89bb0082ffd969e" rel="nofollow">afd8dd6</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.0...v1.25.1" rel="nofollow">1.25.1</a> (2022-01-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/422" rel="nofollow">#422</a> (<a href="https://github.com/saadeghi/daisyui/commit/5c6577db662e5991a39c8a8f9d7c52aee8b31980" rel="nofollow">5c6577d</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.3...v1.25.4" rel="nofollow">1.25.4</a> (2022-01-25)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.2...v1.25.3" rel="nofollow">1.25.3</a> (2022-01-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/423" rel="nofollow">#423</a> (<a href="https://github.com/saadeghi/daisyui/commit/8613f7972a8eb5517ad33a4069d2ee5e8cccdf0e" rel="nofollow">8613f79</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.1...v1.25.2" rel="nofollow">1.25.2</a> (2022-01-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/422" rel="nofollow">#422</a> (<a href="https://github.com/saadeghi/daisyui/commit/afd8dd66df93ffe7560b5133f89bb0082ffd969e" rel="nofollow">afd8dd6</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.25.0...v1.25.1" rel="nofollow">1.25.1</a> (2022-01-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/422" rel="nofollow">#422</a> (<a href="https://github.com/saadeghi/daisyui/commit/5c6577db662e5991a39c8a8f9d7c52aee8b31980" rel="nofollow">5c6577d</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.24.3...v1.25.0" rel="nofollow">1.25.0</a> (2022-01-23)</h2>
+<h3>Features</h3>
+<ul><li>add indeterminate style for checkbox and toggle, fix <a href="https://github.com/saadeghi/daisyui/issues/420" rel="nofollow">#420</a> (<a href="https://github.com/saadeghi/daisyui/commit/fd11e61fd7760a767260f77c62196460de08a534" rel="nofollow">fd11e61</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/400" rel="nofollow">#400</a> (<a href="https://github.com/saadeghi/daisyui/commit/9df4224a7989f21e9b5613bb4405849dfb9030aa" rel="nofollow">9df4224</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.24.2...v1.24.3" rel="nofollow">1.24.3</a> (2022-01-17)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>rating iOS backward compatibility (<a href="https://github.com/saadeghi/daisyui/commit/e183b4f6d69e85432194c842b8c45ae3313ab3ff" rel="nofollow">e183b4f</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.24.1...v1.24.2" rel="nofollow">1.24.2</a> (2022-01-17)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/351" rel="nofollow">#351</a> (apply menu item style to <code>button</code> like <code>a</code> and <code>span</code>) (<a href="https://github.com/saadeghi/daisyui/commit/87f079fc925092d39a177154b2d8d5529787b9dd" rel="nofollow">87f079f</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.24.0...v1.24.1" rel="nofollow">1.24.1</a> (2022-01-17)</h3>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.23.1...v1.24.0" rel="nofollow">1.24.0</a> (2022-01-17)</h2>
+<h3>Features</h3>
+<ul><li>add responsive classes for <code>menu</code> ,fix: <a href="https://github.com/saadeghi/daisyui/issues/392" rel="nofollow">#392</a> (<a href="https://github.com/saadeghi/daisyui/commit/f825aeab7fed82130e639e713d3de5707233ac02" rel="nofollow">f825aea</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.23.0...v1.23.1" rel="nofollow">1.23.1</a> (2022-01-17)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>card-side css property (<a href="https://github.com/saadeghi/daisyui/commit/9908352d932fa458762c7b4815563e54583401d5" rel="nofollow">9908352</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.22.2...v1.23.0" rel="nofollow">1.23.0</a> (2022-01-15)</h2>
+<h3>Features</h3>
+<ul><li>add css variables to edit tab colors (<a href="https://github.com/saadeghi/daisyui/commit/3598bd92282892b269a10bb89229420bc3565d80" rel="nofollow">3598bd9</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.22.1...v1.22.2" rel="nofollow">1.22.2</a> (2022-01-12)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/321" rel="nofollow">#321</a> (modal overscroll-behavior) (<a href="https://github.com/saadeghi/daisyui/commit/fc5000e8996f2a9d1a7a5971400f119494ebe1c7" rel="nofollow">fc5000e</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.22.0...v1.22.1" rel="nofollow">1.22.1</a> (2022-01-12)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/394" rel="nofollow">#394</a> prevent toggle from shrinking by default (<a href="https://github.com/saadeghi/daisyui/commit/2676cc8b5fff495129f466175ccf7f9087dafb59" rel="nofollow">2676cc8</a>)</li>
+<li><strong>breadcrumbs:</strong> Remove the breadcrumb separator background color (<a href="https://github.com/saadeghi/daisyui/commit/6ec8f5e92a8a113a4b0f398a6fc78eaf58f765f1" rel="nofollow">6ec8f5e</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.20.1...v1.22.0" rel="nofollow">1.22.0</a> (2022-01-08)</h2>
+<h3>Features</h3>
+<ul><li>add rating component (fix <a href="https://github.com/saadeghi/daisyui/issues/374" rel="nofollow">#374</a>) (<a href="https://github.com/saadeghi/daisyui/commit/6285227ffbf9818b9bc2d8be1a4a5a610ad09954" rel="nofollow">6285227</a>)</li>
+<li>responsive table compact (fix <a href="https://github.com/saadeghi/daisyui/issues/364" rel="nofollow">#364</a>) (<a href="https://github.com/saadeghi/daisyui/commit/6e3d9b1074a3f1b02af27d102c3b13e30427f511" rel="nofollow">6e3d9b1</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.20.1...v1.21.0" rel="nofollow">1.21.0</a> (2022-01-01)</h2>
+<h3>Features</h3>
+<ul><li>responsive table compact (fix <a href="https://github.com/saadeghi/daisyui/issues/364" rel="nofollow">#364</a>) (<a href="https://github.com/saadeghi/daisyui/commit/6e3d9b1074a3f1b02af27d102c3b13e30427f511" rel="nofollow">6e3d9b1</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.20.0...v1.20.1" rel="nofollow">1.20.1</a> (2021-12-30)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/369" rel="nofollow">#369</a> (<a href="https://github.com/saadeghi/daisyui/commit/7b1b52b71561e86dedf3e69f98e08143ed6a762a" rel="nofollow">7b1b52b</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.19.0...v1.20.0" rel="nofollow">1.20.0</a> (2021-12-26)</h2>
+<h3>Features</h3>
+<ul><li>support [checked=true] style on checkbox and toggle (<a href="https://github.com/saadeghi/daisyui/commit/8131232836c145c23ed40707f4272fb00c6a3f1b" rel="nofollow">8131232</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.17.1...v1.19.0" rel="nofollow">1.19.0</a> (2021-12-22)</h2>
+<h3>Bug Fixes</h3>
+<ul><li>menu text color (<a href="https://github.com/saadeghi/daisyui/commit/30c79ac51ba7b1dd642ad8d8871e131da875887f" rel="nofollow">30c79ac</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.17.1...v1.18.0" rel="nofollow">1.18.0</a> (2021-12-22)</h2>
+<h3>Features</h3>
+<ul><li>add <code>card-bordered</code> class (<a href="https://github.com/saadeghi/daisyui/commit/048c1c6a6005fd271d30ae8b1bb66273bd63f6da" rel="nofollow">048c1c6</a>)</li>
+<li>responsive compact card. fix <a href="https://github.com/saadeghi/daisyui/issues/324" rel="nofollow">#324</a> (<a href="https://github.com/saadeghi/daisyui/commit/b7d21851a19594fc20d767d9ee888e974ce201dc" rel="nofollow">b7d2185</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/266" rel="nofollow">#266</a> (<a href="https://github.com/saadeghi/daisyui/commit/e21f16946e88d687632924c73841d7dee8240cc5" rel="nofollow">e21f169</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/273" rel="nofollow">#273</a> (<a href="https://github.com/saadeghi/daisyui/commit/6b22d83974234a1f0b4d732dcb5cc410d9a67fb8" rel="nofollow">6b22d83</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/299" rel="nofollow">#299</a> (<a href="https://github.com/saadeghi/daisyui/commit/e5831b91c9cb914ccce9a6baca334cbdd0d3b63f" rel="nofollow">e5831b9</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/340" rel="nofollow">#340</a> (<a href="https://github.com/saadeghi/daisyui/commit/58bed26e15f191eb4670b8a0fec43fec41d74fd3" rel="nofollow">58bed26</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.16.6...v1.17.1" rel="nofollow">1.17.1</a> (2021-12-21)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/341" rel="nofollow">#341</a> (<a href="https://github.com/saadeghi/daisyui/commit/118ff417df6d9a1c0170db651067bd524ecb93aa" rel="nofollow">118ff41</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.16.6...v1.17.0" rel="nofollow">1.17.0</a> (2021-12-21)</h2>
+<h3>Features</h3>
+<ul><li><strong>components:</strong> steps-horizontal (<a href="https://github.com/saadeghi/daisyui/commit/5577140e3e8fccd8ada90d27f57c8f9bb5bb6a44" rel="nofollow">5577140</a>)</li>
+<li>responsive <code>steps</code> (<a href="https://github.com/saadeghi/daisyui/commit/7ba7d6534b6a2abc6b6077faba4c2a5431307b42" rel="nofollow">7ba7d65</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/344" rel="nofollow">#344</a> (typography plugin v0.5 compatibility) (<a href="https://github.com/saadeghi/daisyui/commit/09695059b2ce1c960fb1dc24080bca41576e938e" rel="nofollow">0969505</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.16.5...v1.16.6" rel="nofollow">1.16.6</a> (2021-12-16)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/337" rel="nofollow">#337</a> (<a href="https://github.com/saadeghi/daisyui/commit/c71800f5226c6fc71673faf2b26c94578921975e" rel="nofollow">c71800f</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.16.4...v1.16.5" rel="nofollow">1.16.5</a> (2021-12-13)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/329" rel="nofollow">#329</a> (<a href="https://github.com/saadeghi/daisyui/commit/56abd3c09a1838b8c78a10fc16fee9f2fd83cd7b" rel="nofollow">56abd3c</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.16.2...v1.16.4" rel="nofollow">1.16.4</a> (2021-12-11)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/329" rel="nofollow">#329</a> (<a href="https://github.com/saadeghi/daisyui/commit/11cd125a491f2927b89dd9197d6a09cd9d9709b2" rel="nofollow">11cd125</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.16.2...v1.16.3" rel="nofollow">1.16.3</a> (2021-12-11)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/329" rel="nofollow">#329</a> (<a href="https://github.com/saadeghi/daisyui/commit/11cd125a491f2927b89dd9197d6a09cd9d9709b2" rel="nofollow">11cd125</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.16.1...v1.16.2" rel="nofollow">1.16.2</a> (2021-11-07)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/292" rel="nofollow">#292</a> - <code>select</code> caret overlap (<a href="https://github.com/saadeghi/daisyui/commit/4e5d5c1c417fba6be6ead7986d7168fc5e958e38" rel="nofollow">4e5d5c1</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.16.0...v1.16.1" rel="nofollow">1.16.1</a> (2021-11-01)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/261" rel="nofollow">#261</a> - Added Right Padding for Collapse Arrow (<a href="https://github.com/saadeghi/daisyui/commit/28a34d42d480509a364ebf3cffd6541b2cb4162e" rel="nofollow">28a34d4</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/279" rel="nofollow">#279</a> - Vertical steps resize to content (<a href="https://github.com/saadeghi/daisyui/commit/ed7fad696f9bc1d1687c45da19972a8845f27e87" rel="nofollow">ed7fad6</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.15.0...v1.16.0" rel="nofollow">1.16.0</a> (2021-10-23)</h2>
+<h3>Features</h3>
+<ul><li>Add <code>cmyk</code> theme, fix: <a href="https://github.com/saadeghi/daisyui/issues/203" rel="nofollow">#203</a> (<a href="https://github.com/saadeghi/daisyui/commit/9a230b5541d43610f3b2dc87a8f1ab82b075c5c7" rel="nofollow">9a230b5</a>)</li>
+<li>Add <code>steps-vertical</code>, fix <a href="https://github.com/saadeghi/daisyui/issues/192" rel="nofollow">#192</a> (<a href="https://github.com/saadeghi/daisyui/commit/c8511600e14feeecf880def1e76cec82bfbcc8bb" rel="nofollow">c851160</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.14.7...v1.15.0" rel="nofollow">1.15.0</a> (2021-10-23)</h2>
+<h3>Features</h3>
+<ul><li>add <code>input-group</code> utilities, fix <a href="https://github.com/saadeghi/daisyui/issues/231" rel="nofollow">#231</a> (<a href="https://github.com/saadeghi/daisyui/commit/5ac87ce6d9708f359c6da5b019ba10b76f6eb93b" rel="nofollow">5ac87ce</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/259" rel="nofollow">#259</a> (Button text alignment issue) (<a href="https://github.com/saadeghi/daisyui/commit/bff48cb728b3dfa5ebf14b07e164f965d7717a51" rel="nofollow">bff48cb</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.14.6...v1.14.7" rel="nofollow">1.14.7</a> (2021-10-21)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.14.5...v1.14.6" rel="nofollow">1.14.6</a> (2021-10-19)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/255" rel="nofollow">#255</a> (button line height bug) (<a href="https://github.com/saadeghi/daisyui/commit/6160fb9b94f1b0afae9fef8c191ae2f4c81d36aa" rel="nofollow">6160fb9</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.14.4...v1.14.5" rel="nofollow">1.14.5</a> (2021-10-15)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>button scale for <code>corporate</code> theme (<a href="https://github.com/saadeghi/daisyui/commit/dc6da4d163a77430f9f57a4b90afc22c2ce326bd" rel="nofollow">dc6da4d</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.14.3...v1.14.4" rel="nofollow">1.14.4</a> (2021-10-12)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/236" rel="nofollow">#236</a> (nested themes and missing css vars) (<a href="https://github.com/saadeghi/daisyui/commit/f8f6badc2d1315896fc91907f54102dd461087c9" rel="nofollow">f8f6bad</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/237" rel="nofollow">#237</a> (fix CDN files order in docs) (<a href="https://github.com/saadeghi/daisyui/commit/fa316bc79ede8b1b64efe1b53a83c98cd4e6dcd3" rel="nofollow">fa316bc</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/239" rel="nofollow">#239</a> (btn outline style for state colors) (<a href="https://github.com/saadeghi/daisyui/commit/6796d8420cbb0683e22666132524b2e49b016d81" rel="nofollow">6796d84</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.14.2...v1.14.3" rel="nofollow">1.14.3</a> (2021-10-11)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/232" rel="nofollow">#232</a> make collapse-arrow clickable</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.14.1...v1.14.2" rel="nofollow">1.14.2</a> (2021-09-29)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/204" rel="nofollow">#204</a> (<a href="https://github.com/saadeghi/daisyui/commit/1646b3421a71f75aa88e7b6e80ce608f6b7a912e" rel="nofollow">1646b34</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/216" rel="nofollow">#216</a> (<a href="https://github.com/saadeghi/daisyui/commit/f56831ba9fb0c44d778a4b05f6bea1cd2d20ea60" rel="nofollow">f56831b</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.14.0...v1.14.1" rel="nofollow">1.14.1</a> (2021-09-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/175" rel="nofollow">#175</a> (<a href="https://github.com/saadeghi/daisyui/commit/b96181750bb326af3330ce614b2b6843603f3a43" rel="nofollow">b961817</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/196" rel="nofollow">#196</a> (<a href="https://github.com/saadeghi/daisyui/commit/23ada4ec2fb62f4e8d4243a629b09ca752083851" rel="nofollow">23ada4e</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/185" rel="nofollow">#185</a> (<a href="https://github.com/saadeghi/daisyui/commit/1bb78e0a553b7f7d4e1fc689ca63924d7be68700" rel="nofollow">1bb78e0</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/160" rel="nofollow">#160</a> (<a href="https://github.com/saadeghi/daisyui/commit/789f711e91aca64f4d54223b0afd038425f3bc09" rel="nofollow">789f711</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.13.1...v1.14.0" rel="nofollow">1.14.0</a> (2021-08-26)</h2>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/145" rel="nofollow">#145</a> footer responsive bug (<a href="https://github.com/saadeghi/daisyui/commit/4925a0aa9c42f4cbaaba95537f156c89744f3603" rel="nofollow">4925a0a</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/149" rel="nofollow">#149</a> lock page scroll when modal is open (<a href="https://github.com/saadeghi/daisyui/commit/431b1e8ad164da4f1fc84bc9957b759fc0c18a4d" rel="nofollow">431b1e8</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/155" rel="nofollow">#155</a> add <code>w-full</code> to <code>footer</code> component (<a href="https://github.com/saadeghi/daisyui/commit/39c412a058566e6cd95f9b2c22a197c690df1fae" rel="nofollow">39c412a</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.13.1...v1.13.2" rel="nofollow">1.13.2</a> (2021-08-22)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/145" rel="nofollow">#145</a> footer responsive bug (<a href="https://github.com/saadeghi/daisyui/commit/7fad5c3ddc5444c15a61963d49e90f5fd5f21b39" rel="nofollow">7fad5c3</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.13.0...v1.13.1" rel="nofollow">1.13.1</a> (2021-08-22)</h3>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.12.1...v1.13.0" rel="nofollow">1.13.0</a> (2021-08-21)</h2>
+<h3>Features</h3>
+<ul><li>add <code>footer</code> component (<a href="https://github.com/saadeghi/daisyui/commit/8227925041a6a4ed434e48db0805c33443beba2c" rel="nofollow">8227925</a>)</li>
+<li>add <code>modal-open</code> utility class (<a href="https://github.com/saadeghi/daisyui/issues/124" rel="nofollow">#124</a>) (<a href="https://github.com/saadeghi/daisyui/commit/9ce82f356494bd0988dfd9b769f24ad419ea1120" rel="nofollow">9ce82f3</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.12.0...v1.12.1" rel="nofollow">1.12.1</a> (2021-08-20)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/142" rel="nofollow">#142</a> <code>.drawer-mobile</code> and <code>.drawer-end</code> compatibility (<a href="https://github.com/saadeghi/daisyui/commit/7a4463b3fc43e59171f6710c52279caecd93923d" rel="nofollow">7a4463b</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/143" rel="nofollow">#143</a> Tooltip hover bug (<a href="https://github.com/saadeghi/daisyui/commit/a9f730be710b191ad947769353949f74a839b272" rel="nofollow">a9f730b</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.11.1...v1.12.0" rel="nofollow">1.12.0</a> (2021-08-17)</h2>
+<h3>Features</h3>
+<ul><li>add <code>stack</code> component (<a href="https://github.com/saadeghi/daisyui/commit/de727acdd4cba20c4886eee07eba863667f6c9c6" rel="nofollow">de727ac</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/132" rel="nofollow">#132</a> (<a href="https://github.com/saadeghi/daisyui/commit/f08879b5171b1cd61af2cebed15a02f1b873482e" rel="nofollow">f08879b</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/134" rel="nofollow">#134</a> (<a href="https://github.com/saadeghi/daisyui/commit/ae4f2a1d9e2e957ff683feb49d7fe7f0cd0ed312" rel="nofollow">ae4f2a1</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.11.0...v1.11.1" rel="nofollow">1.11.1</a> (2021-08-09)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/122" rel="nofollow">#122</a> (<a href="https://github.com/saadeghi/daisyui/commit/c684f839961d53673a8b211bc6f9fb5ca6bba309" rel="nofollow">c684f83</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.10.0...v1.11.0" rel="nofollow">1.11.0</a> (2021-08-04)</h2>
+<h3>Features</h3>
+<ul><li>add input <code>range</code> component (<a href="https://github.com/saadeghi/daisyui/commit/297895648e6f4566e9ac3bf420c826eeead0355e" rel="nofollow">2978956</a>)</li>
+<li>add kbd component (<a href="https://github.com/saadeghi/daisyui/commit/8265249127de86bc4d496d2def0990079952219d" rel="nofollow">8265249</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.9.0...v1.10.0" rel="nofollow">1.10.0</a> (2021-07-18)</h2>
+<h3>Features</h3>
+<ul><li>add checkbox sizes (xs, sm, md, lg) (<a href="https://github.com/saadeghi/daisyui/commit/1502e46a0be9bf4075da8d54a11e74c4634a8cec" rel="nofollow">1502e46</a>)</li>
+<li>add extra-small badge size, adjust badge padding and height (<a href="https://github.com/saadeghi/daisyui/commit/ac0632016974bb3245d4339b16a9c2ed0691c811" rel="nofollow">ac06320</a>)</li>
+<li>add indicator component. fix <a href="https://github.com/saadeghi/daisyui/issues/32" rel="nofollow">#32</a> (<a href="https://github.com/saadeghi/daisyui/commit/29206712c642322d0266c3dd7bb133a4b74ca332" rel="nofollow">2920671</a>)</li>
+<li>add radio sizes (xs, sm, md, lg) (<a href="https://github.com/saadeghi/daisyui/commit/2e18025efa1f435a2ffa64e060f44aa21cd4534e" rel="nofollow">2e18025</a>)</li>
+<li>add toggle sizes (xs, sm, md, lg) (<a href="https://github.com/saadeghi/daisyui/commit/95c1f8cd14bb0f2f369d12994a19fc8a38e6968b" rel="nofollow">95c1f8c</a>)</li>
+<li>refactor <code>checkbox</code>, <code>toggle</code> and <code>radio</code> HTML
+(<em>this is not a breaking change but you can use the new, cleaner markup</em>)</li></ul>
+<h4>Toggle</h4>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token comment">&lt;!-- 😒 Old markup --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle-mark<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- 😍 New markup --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> </code><!-- HTML_TAG_END --></pre>
+<h4>Checkbox</h4>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token comment">&lt;!-- 😒 Old markup --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox-mark<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- 😍 new markup --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> </code><!-- HTML_TAG_END --></pre>
+<h4>Radio</h4>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token comment">&lt;!-- 😒 Old markup --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio-mark<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- 😍 New markup --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> </code><!-- HTML_TAG_END --></pre>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/92" rel="nofollow">#92</a> (<a href="https://github.com/saadeghi/daisyui/commit/ba8d38b2fd2bcda2bcd7e070ec419c134e29c097" rel="nofollow">ba8d38b</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.8.0...v1.9.0" rel="nofollow">1.9.0</a> (2021-07-11)</h2>
+<h3>Features</h3>
+<ul><li>add <code>active</code> utility class for <code>&lt;tr&gt;</code> (<a href="https://github.com/saadeghi/daisyui/commit/4c5f0fee7c2aeffb4414f1eae2a6f84e9752a9bb" rel="nofollow">4c5f0fe</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.7.0...v1.8.0" rel="nofollow">1.8.0</a> (2021-07-10)</h2>
+<h3>Features</h3>
+<ul><li>add min-height for navbar (<a href="https://github.com/saadeghi/daisyui/commit/391dd99ab02f9c0c7ab7eda1628422490f7d15ce" rel="nofollow">391dd99</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.6.1...v1.7.0" rel="nofollow">1.7.0</a> (2021-07-10)</h2>
+<h3>Features</h3>
+<ul><li>add smooth scroll for carousel (<a href="https://github.com/saadeghi/daisyui/commit/52880e1e324a6b558720795f39f72eb934f4299c" rel="nofollow">52880e1</a>)</li>
+<li>divider-vertical is now a responsive utility (<a href="https://github.com/saadeghi/daisyui/commit/d918772b2bb210efc104323574d8ff4a55b3446a" rel="nofollow">d918772</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/106" rel="nofollow">#106</a> (<a href="https://github.com/saadeghi/daisyui/commit/2c6747f1250f3e8d9d7691dc97cd561d98d3dcbf" rel="nofollow">2c6747f</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.5.0...v1.6.1" rel="nofollow">1.6.1</a> (2021-07-01)</h3>
+<h3>Features</h3>
+<ul><li>add <code>drawer-end</code> utility (<a href="https://github.com/saadeghi/daisyui/commit/d9f7558e2aad656e25ae8c67b1745485ab006d76" rel="nofollow">d9f7558</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/98" rel="nofollow">#98</a> - collapse background now adapts to parent elements (<a href="https://github.com/saadeghi/daisyui/commit/31528ea1a5bfbe5a645d81d8694c4e594ce03ad5" rel="nofollow">31528ea</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.5.0...v1.6.0" rel="nofollow">1.6.0</a> (2021-06-28)</h2>
+<h3>Features</h3>
+<ul><li>add <code>drawer-end</code> utility (<a href="https://github.com/saadeghi/daisyui/commit/7a0e5b1ea9143782b90f2d0e96dd26e763b2af85" rel="nofollow">7a0e5b1</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.4.0...v1.5.0" rel="nofollow">1.5.0</a> (2021-06-27)</h2>
+<h3>Features</h3>
+<ul><li>add <code>navbar-start</code>, <code>navbar-center</code>, <code>navbar-end</code> classes (<a href="https://github.com/saadeghi/daisyui/commit/eb268330921de1d1d664e099fbecc72f222543b2" rel="nofollow">eb26833</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>prevent dropdown to open on click when it should open with hover (<a href="https://github.com/saadeghi/daisyui/commit/3ad0243db14f918e471b317685ca8590ed467bc4" rel="nofollow">3ad0243</a>)</li>
+<li>typo (<a href="https://github.com/saadeghi/daisyui/commit/ea08977cf9a087a660217cac20056fedf65b33e5" rel="nofollow">ea08977</a>)</li>
+<li>typography style is now on <code>component</code> layer instead of <code>base</code> (<a href="https://github.com/saadeghi/daisyui/commit/cdca955399985b450fe797aa8ab70829e94cc60a" rel="nofollow">cdca955</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.3.11...v1.4.0" rel="nofollow">1.4.0</a> (2021-06-19)</h2>
+<h3>Features</h3>
+<ul><li>bolder font for menu-title (<a href="https://github.com/saadeghi/daisyui/commit/0e786e78121a5c4877c89062b13233bb873d13de" rel="nofollow">0e786e7</a>)</li>
+<li>set default text-color/bg-color to :root element (<a href="https://github.com/saadeghi/daisyui/commit/0b627c1fb69e0b4ceeb1107132a6f9d03370583c" rel="nofollow">0b627c1</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.3.8...v1.3.11" rel="nofollow">1.3.11</a> (2021-06-18)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>corrupted color variables (<a href="https://github.com/saadeghi/daisyui/commit/4a9351ec026d0a93f727e38634b5ce958758ad16" rel="nofollow">4a9351e</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.3.7...v1.3.8" rel="nofollow">1.3.8</a> (2021-06-17)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/87" rel="nofollow">#87</a> (<a href="https://github.com/saadeghi/daisyui/commit/c481b412e53b4f496edb5d5ebf230a49d5d48ecb" rel="nofollow">c481b41</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.3.6...v1.3.7" rel="nofollow">1.3.7</a> (2021-06-17)</h3>
+<h3>Features</h3>
+<ul><li>add fallback transparent color for unstyled components (<a href="https://github.com/saadeghi/daisyui/commit/73f6532cac9c44d981d2c1e385e0d3575b9188bc" rel="nofollow">73f6532</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/85" rel="nofollow">#85</a> (<a href="https://github.com/saadeghi/daisyui/commit/dfed3b4cc72a70999ac5c632742055f55974ac5f" rel="nofollow">dfed3b4</a>)</li>
+<li><code>unstyled</code> config not working without <code>rtl</code> config (<a href="https://github.com/saadeghi/daisyui/commit/82089df16c3cf2a8454f98d3901bacecfe615b62" rel="nofollow">82089df</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.3.5...v1.3.6" rel="nofollow">1.3.6</a> (2021-06-15)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/84" rel="nofollow">#84</a> (<a href="https://github.com/saadeghi/daisyui/commit/a35f7d259e82cf37870f9c29038968dde0505375" rel="nofollow">a35f7d2</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.3.4...v1.3.5" rel="nofollow">1.3.5</a> (2021-06-14)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.3.3...v1.3.4" rel="nofollow">1.3.4</a> (2021-06-10)</h3>
+<h3>Features</h3>
+<ul><li>improve some theme colors (<a href="https://github.com/saadeghi/daisyui/commit/6b2ed03b63262cb80da11b863af79163fcc80f0e" rel="nofollow">6b2ed03</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.3.2...v1.3.3" rel="nofollow">1.3.3</a> (2021-06-09)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.2.0...v1.3.2" rel="nofollow">1.3.2</a> (2021-06-05)</h3>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.2.0...v1.3.0" rel="nofollow">1.3.0</a> (2021-05-30)</h2>
+<h3>Features</h3>
+<ul><li>add color classes for textarea (<a href="https://github.com/saadeghi/daisyui/commit/84925d01d71d4a26ac0f1623a66518459c4f9ae5" rel="nofollow">84925d0</a>)</li>
+<li>define new themes from tailwind.config.js (<a href="https://github.com/saadeghi/daisyui/commit/3b3eac78c6f3442c5636a52793e3edc3958e56c1" rel="nofollow">3b3eac7</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.1.2...v1.2.0" rel="nofollow">1.2.0</a> (2021-05-27)</h2>
+<h3>Bug Fixes</h3>
+<ul><li>.prose colors (<a href="https://github.com/saadeghi/daisyui/commit/2fab3af57fd3d0431bfe793e9d03bb00b6d6d15a" rel="nofollow">2fab3af</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.1.1...v1.1.2" rel="nofollow">1.1.2</a> (2021-05-26)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.1.0...v1.1.1" rel="nofollow">1.1.1</a> (2021-05-26)</h3>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v1.0.2...v1.1.0" rel="nofollow">1.1.0</a> (2021-05-26)</h2>
+<h3>Features</h3>
+<ul><li>change default theme from config (<a href="https://github.com/saadeghi/daisyui/commit/545fe70126e85b2740421a46156ebcf29ad81040" rel="nofollow">545fe70</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.0.1...v1.0.2" rel="nofollow">1.0.2</a> (2021-05-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/29" rel="nofollow">#29</a> (<a href="https://github.com/saadeghi/daisyui/commit/f251dc1c5c49c05dde19b19234e3b71d7a25e9a5" rel="nofollow">f251dc1</a>)</li>
+<li>mask base style (<a href="https://github.com/saadeghi/daisyui/commit/a8a7e1036919795a7ca2247c95d93e45dcac8b1f" rel="nofollow">a8a7e10</a>)</li>
+<li>menu focus color (<a href="https://github.com/saadeghi/daisyui/commit/2d9cc31f40e287d1d30f12016f333aa6c21d6a4a" rel="nofollow">2d9cc31</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v1.0.0...v1.0.1" rel="nofollow">1.0.1</a> (2021-05-23)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/53" rel="nofollow">#53</a>, <a href="https://github.com/saadeghi/daisyui/issues/55" rel="nofollow">#55</a> (<a href="https://github.com/saadeghi/daisyui/commit/31961650c518c466c407e7093d56e2ed1828a4fa" rel="nofollow">3196165</a>)</li>
+<li>code mockup indent margin (<a href="https://github.com/saadeghi/daisyui/commit/d34044026460c4403757fa2bea71ad981ac58a13" rel="nofollow">d340440</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.28.0...v1.0.0" rel="nofollow">1.0.0</a> (2021-05-21)</h2>
+<h3>♻️ Breaking Changes</h3>
+<ul><li><code>accordion</code> component is now removed and insted, there’s <code>collapse</code> with a different markup. [<a href="https://daisyui.com/components/collapse" rel="nofollow">see examples</a>].<br>
+HTML Changes:<ul><li>Old <code>accordion</code>:<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-923499<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item-923499<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-xl font-medium accordion-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    Aperiam iure expedita non fugit?
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-body<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Aperiam iure expedita non fugit. Voluptatem est repellat a aut sit est nostrum maiores aut. Voluptas nisi totam eius architecto eius mollitia quos assumenda non. Iusto rerum doloribus. Architecto dolorum explicabo omnis quidem. Quibusdam ipsam beatae soluta et dolores iure ut debitis ad.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre></li>
+<li>New <code>collapse</code>:<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">tabindex</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-xl font-medium collapse-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    I open with focus
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Collapse content reveals with focus. If you add a checkbox, you can control it using checkbox instead of focus. Or you can force-open/force-close using &#96;collapse-open&#96; and &#96;collapse-close&#96; classes.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> </code><!-- HTML_TAG_END --></pre></li></ul></li></ul>
+<h3>Features</h3>
+<ul><li>add avatar-group component (<a href="https://github.com/saadeghi/daisyui/commit/b5f37bc10fa496ae7beeef8886c56327dc735c03" rel="nofollow">b5f37bc</a>)</li>
+<li>add stat component (<a href="https://github.com/saadeghi/daisyui/commit/ceba7d0bc7abe5acfe9ee0a766fadec56f113346" rel="nofollow">ceba7d0</a>)</li>
+<li>add steps component (<a href="https://github.com/saadeghi/daisyui/commit/19b402de95c34e28de3e07d9fd07a4e126f8e23c" rel="nofollow">19b402d</a>)</li>
+<li>add table component (<a href="https://github.com/saadeghi/daisyui/commit/7d4d246b5f5b076d9887c3a10bc2acf284c49c4c" rel="nofollow">7d4d246</a>)</li>
+<li>add tooltip component (<a href="https://github.com/saadeghi/daisyui/commit/0e276d19e9801de5cf377ff9b974e74bd8a43f60" rel="nofollow">0e276d1</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>more strict menu style (<a href="https://github.com/saadeghi/daisyui/commit/494bc7ac1a5cbcf45b81945ba796fa09cb39690c" rel="nofollow">494bc7a</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.27.2...v0.28.0" rel="nofollow">0.28.0</a> (2021-05-16)</h2>
+<h3>Features</h3>
+<ul><li>add focus style for breadcrumbs (<a href="https://github.com/saadeghi/daisyui/commit/1ac20b518be0c1e387b74c59ad28ae75bb24fe02" rel="nofollow">1ac20b5</a>)</li>
+<li>add focus style for link (<a href="https://github.com/saadeghi/daisyui/commit/475ba8b78b108b40aaf1b71c4273f97d618f89ae" rel="nofollow">475ba8b</a>)</li>
+<li>add focus style for menu item (<a href="https://github.com/saadeghi/daisyui/commit/bc7f110e1d18158ae454e4585ff4621ad1649ef7" rel="nofollow">bc7f110</a>)</li>
+<li>add focus style for tab (<a href="https://github.com/saadeghi/daisyui/commit/2ff73af15e2aceeb18a3869616b1b97410184d40" rel="nofollow">2ff73af</a>)</li>
+<li>better menu title color contrast (<a href="https://github.com/saadeghi/daisyui/commit/61493454284638777ae45e277ec187d31ed30c69" rel="nofollow">6149345</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>improve accordion border color (<a href="https://github.com/saadeghi/daisyui/commit/7003a6db9c56ba2740dcaeea4052e75c7c91bf75" rel="nofollow">7003a6d</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.27.1...v0.27.2" rel="nofollow">0.27.2</a> (2021-05-14)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>avatar component online indicator z-index (<a href="https://github.com/saadeghi/daisyui/commit/5d7efe4e3fe88adb54691d7dd00826864e65faea" rel="nofollow">5d7efe4</a>)</li>
+<li>dropdown focus style (<a href="https://github.com/saadeghi/daisyui/commit/7b014ad605566fd4ea9ab00d6841d1edb8eb578d" rel="nofollow">7b014ad</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.26.2...v0.27.1" rel="nofollow">0.27.1</a> (2021-05-13)</h3>
+<h3>Features</h3>
+<ul><li>themes config can now be array (<a href="https://github.com/saadeghi/daisyui/commit/bf33256435876917134503149c6e370ebac32714" rel="nofollow">bf33256</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/27" rel="nofollow">#27</a> (<a href="https://github.com/saadeghi/daisyui/commit/71ac32e0c375479379bc5b02b877dc1febbe8bd9" rel="nofollow">71ac32e</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/31" rel="nofollow">#31</a>, improve build scripts (<a href="https://github.com/saadeghi/daisyui/commit/60c583b3b3b53d061f6215da300fbe61db0c3b09" rel="nofollow">60c583b</a>)</li>
+<li>prevent generating extra colors (<a href="https://github.com/saadeghi/daisyui/commit/14c32c96fb9de314293ee69fadc7443a29da728c" rel="nofollow">14c32c9</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.26.2...v0.27.0" rel="nofollow">0.27.0</a> (2021-05-13)</h2>
+<h3>Features</h3>
+<ul><li>themes config can now be array (<a href="https://github.com/saadeghi/daisyui/commit/bf33256435876917134503149c6e370ebac32714" rel="nofollow">bf33256</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/27" rel="nofollow">#27</a> (<a href="https://github.com/saadeghi/daisyui/commit/71ac32e0c375479379bc5b02b877dc1febbe8bd9" rel="nofollow">71ac32e</a>)</li>
+<li><a href="https://github.com/saadeghi/daisyui/issues/31" rel="nofollow">#31</a>, improve build scripts (<a href="https://github.com/saadeghi/daisyui/commit/60c583b3b3b53d061f6215da300fbe61db0c3b09" rel="nofollow">60c583b</a>)</li>
+<li>prevent generating extra colors (<a href="https://github.com/saadeghi/daisyui/commit/14c32c96fb9de314293ee69fadc7443a29da728c" rel="nofollow">14c32c9</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.26.2...v0.26.3" rel="nofollow">0.26.3</a> (2021-05-12)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.26.0...v0.26.2" rel="nofollow">0.26.2</a> (2021-05-12)</h3>
+<h3>Features</h3>
+<ul><li>add focus style for card (<a href="https://github.com/saadeghi/daisyui/commit/cebcc26e1e65d0656cd4bcc668abd0f6a6b74ab8" rel="nofollow">cebcc26</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/26" rel="nofollow">#26</a> (<a href="https://github.com/saadeghi/daisyui/commit/04c5932aae23c3cd08fc248b6d4067e99790dfbc" rel="nofollow">04c5932</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.26.0...v0.26.2" rel="nofollow">0.26.2</a> (2021-05-12)</h3>
+<h3>Features</h3>
+<ul><li>add focus style for card (<a href="https://github.com/saadeghi/daisyui/commit/cebcc26e1e65d0656cd4bcc668abd0f6a6b74ab8" rel="nofollow">cebcc26</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/26" rel="nofollow">#26</a> (<a href="https://github.com/saadeghi/daisyui/commit/04c5932aae23c3cd08fc248b6d4067e99790dfbc" rel="nofollow">04c5932</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.26.0...v0.26.1" rel="nofollow">0.26.1</a> (2021-05-12)</h3>
+<h3>Features</h3>
+<ul><li>add focus style for card (<a href="https://github.com/saadeghi/daisyui/commit/cebcc26e1e65d0656cd4bcc668abd0f6a6b74ab8" rel="nofollow">cebcc26</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/26" rel="nofollow">#26</a> (<a href="https://github.com/saadeghi/daisyui/commit/04c5932aae23c3cd08fc248b6d4067e99790dfbc" rel="nofollow">04c5932</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.25.0...v0.26.0" rel="nofollow">0.26.0</a> (2021-05-07)</h2>
+<h3>Features</h3>
+<ul><li>add carousel component (<a href="https://github.com/saadeghi/daisyui/commit/64cc47b16a8c59f121ae5745d71d968585505f88" rel="nofollow">64cc47b</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.24.0...v0.25.0" rel="nofollow">0.25.0</a> (2021-05-07)</h2>
+<h3>Features</h3>
+<ul><li>add corporate theme (<a href="https://github.com/saadeghi/daisyui/commit/cbe0e2fbd20a158f2451d948f351aee29966734c" rel="nofollow">cbe0e2f</a>)</li>
+<li>add emerald theme (<a href="https://github.com/saadeghi/daisyui/commit/74776b9dc657fb8d167352f712d1b16854ecd833" rel="nofollow">74776b9</a>)</li>
+<li>add font family for retro, cyberpunk themes (<a href="https://github.com/saadeghi/daisyui/commit/ed612abbbe170e24070ffe8d0908c7a0202f8653" rel="nofollow">ed612ab</a>)</li>
+<li>add lofi theme (<a href="https://github.com/saadeghi/daisyui/commit/391bf1093eedd0d0e9c6dc4a6dd01c4da6fb95a3" rel="nofollow">391bf10</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>rename contrast theme to wireframe (<a href="https://github.com/saadeghi/daisyui/commit/331af66cdb2af7b7d6ae9b0d28ff5acefa6adca8" rel="nofollow">331af66</a>)</li>
+<li>tab margin (<a href="https://github.com/saadeghi/daisyui/commit/283f0eca6302c6709adb122712513d9c89fde89d" rel="nofollow">283f0ec</a>)</li>
+<li>tab margin (<a href="https://github.com/saadeghi/daisyui/commit/572468ad7adbc490e21d7749a2319aadf17fd3de" rel="nofollow">572468a</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.23.0...v0.24.0" rel="nofollow">0.24.0</a> (2021-05-07)</h2>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.22.1...v0.23.0" rel="nofollow">0.23.0</a> (2021-05-07)</h2>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/36" rel="nofollow">#36</a> (<a href="https://github.com/saadeghi/daisyui/commit/fe451f3c27074a906b2fa61f218c5c807170034a" rel="nofollow">fe451f3</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.22.0...v0.22.1" rel="nofollow">0.22.1</a> (2021-05-06)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>modal position big on safari (<a href="https://github.com/saadeghi/daisyui/commit/933a9e63e4feae141ec9686a7a1b20d273c58c17" rel="nofollow">933a9e6</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.21.3...v0.22.0" rel="nofollow">0.22.0</a> (2021-05-05)</h2>
+<h3>Features</h3>
+<ul><li>Add dropdown component (<a href="https://github.com/saadeghi/daisyui/commit/1f5a50a31be9919441cac2dcdd491a05c06de312" rel="nofollow">1f5a50a</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/33" rel="nofollow">#33</a> (<a href="https://github.com/saadeghi/daisyui/commit/cd340f30ad356606dc866582760675beebcb66dc" rel="nofollow">cd340f3</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.21.2...v0.21.3" rel="nofollow">0.21.3</a> (2021-04-30)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.21.1...v0.21.2" rel="nofollow">0.21.2</a> (2021-04-30)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.21.0...v0.21.1" rel="nofollow">0.21.1</a> (2021-04-29)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>modal size (<a href="https://github.com/saadeghi/daisyui/commit/82d8280c54745a5292294a104680eacb508db2a2" rel="nofollow">82d8280</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.20.1...v0.21.0" rel="nofollow">0.21.0</a> (2021-04-29)</h2>
+<h3>Bug Fixes</h3>
+<ul><li>cleanup /src file structure and npm scripts (<a href="https://github.com/saadeghi/daisyui/commit/6a4c2dd1bc18008d048363b82466bed205d721ba" rel="nofollow">6a4c2dd</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.20.0...v0.20.1" rel="nofollow">0.20.1</a> (2021-04-22)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>spin animation not included when using JIT (<a href="https://github.com/saadeghi/daisyui/commit/7a10e5ca3732ac3d2fbe7e1047849f0325ac5f9b" rel="nofollow">7a10e5c</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.19.1...v0.20.0" rel="nofollow">0.20.0</a> (2021-04-22)</h2>
+<h3>Features</h3>
+<ul><li>improve logs (<a href="https://github.com/saadeghi/daisyui/commit/a0d1d50a7c7811614b1bdef852899e065777df4d" rel="nofollow">a0d1d50</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>select base style (<a href="https://github.com/saadeghi/daisyui/commit/45aa02c4b22b01100d4037a2ed48c1ef873e8813" rel="nofollow">45aa02c</a>)</li>
+<li>select styled (<a href="https://github.com/saadeghi/daisyui/commit/9e8fe7900113368077f5c066f57a4362446b2d7f" rel="nofollow">9e8fe79</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.19.0...v0.19.1" rel="nofollow">0.19.1</a> (2021-04-21)</h3>
+<h3>Features</h3>
+<ul><li>enable themes config by default (<a href="https://github.com/saadeghi/daisyui/commit/abb0b9d063b24ac7c37e34afd4a6f6d2805fc3de" rel="nofollow">abb0b9d</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.18.0...v0.19.0" rel="nofollow">0.19.0</a> (2021-04-21)</h2>
+<h3>Features</h3>
+<ul><li>auto include DaisyUI colors (<a href="https://github.com/saadeghi/daisyui/commit/389b6f935864aa366050bc2d0e61053e4b2cc035" rel="nofollow">389b6f9</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>remove tailwindcss peer dependency (<a href="https://github.com/saadeghi/daisyui/commit/0aff74b18fbe594ca69f45fb44d6f5ce359e5b14" rel="nofollow">0aff74b</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.17.2...v0.18.0" rel="nofollow">0.18.0</a> (2021-04-20)</h2>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.17.1...v0.17.2" rel="nofollow">0.17.2</a> (2021-04-20)</h3>
+<h3>Features</h3>
+<ul><li>add mask utility (<a href="https://github.com/saadeghi/daisyui/commit/db608b7ebd3ca12a1791a4371349b56364ff45a3" rel="nofollow">db608b7</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>phone mockup z-index (<a href="https://github.com/saadeghi/daisyui/commit/75e68b2444e42cd099582ea355a074b4d47703c9" rel="nofollow">75e68b2</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.17.0...v0.17.1" rel="nofollow">0.17.1</a> (2021-04-19)</h3>
+<h3>Features</h3>
+<ul><li>divider component (<a href="https://github.com/saadeghi/daisyui/commit/c88c4bfaa78199be153ec9946e2a48b65f305efe" rel="nofollow">c88c4bf</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.16.1...v0.17.0" rel="nofollow">0.17.0</a> (2021-04-18)</h2>
+<h3>Features</h3>
+<ul><li>countdown component (<a href="https://github.com/saadeghi/daisyui/commit/d00e4fcca6275afc4fc426114b714ffe278c776f" rel="nofollow">d00e4fc</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>badge brand colors (<a href="https://github.com/saadeghi/daisyui/commit/2899fb2ac21c9aae010abe0caf6e6d4e5ab76017" rel="nofollow">2899fb2</a>)</li>
+<li>badge neutral colors (<a href="https://github.com/saadeghi/daisyui/commit/a58a48101a59518b067348cb9fa952a8ef584df2" rel="nofollow">a58a481</a>)</li>
+<li>button neutral colors (<a href="https://github.com/saadeghi/daisyui/commit/37c3e3aa8cfef5963348a7f423be29db4e5f26c7" rel="nofollow">37c3e3a</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.16.0...v0.16.1" rel="nofollow">0.16.1</a> (2021-04-18)</h3>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.15.4...v0.16.0" rel="nofollow">0.16.0</a> (2021-04-18)</h2>
+<h3>Bug Fixes</h3>
+<ul><li>improve tabs component (<a href="https://github.com/saadeghi/daisyui/commit/37cb14a0ac19a95e0c54ebb4672159fbbb0b3aee" rel="nofollow">37cb14a</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.15.3...v0.15.4" rel="nofollow">0.15.4</a> (2021-04-17)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>improve tab borders using gradients (<a href="https://github.com/saadeghi/daisyui/commit/cca6520fcade7e7687789e82ebb9d33ac41ae3e7" rel="nofollow">cca6520</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.15.2...v0.15.3" rel="nofollow">0.15.3</a> (2021-04-08)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.15.1...v0.15.2" rel="nofollow">0.15.2</a> (2021-03-30)</h3>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/15" rel="nofollow">#15</a> (Show modal without URL hash) (<a href="https://github.com/saadeghi/daisyui/commit/238be87dd71173607fe6c1b65c5c01f01581fd28" rel="nofollow">238be87</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.14.6...v0.15.1" rel="nofollow">0.15.1</a> (2021-03-27)</h3>
+<h3>Features</h3>
+<ul><li>Add support for WindiCSS (<a href="https://github.com/saadeghi/daisyui/commit/4f0c5d59841b0461055b84db733114c19eb94ced" rel="nofollow">4f0c5d5</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li>include colors directory in package files (<a href="https://github.com/saadeghi/daisyui/commit/71fe7cb8dcedd16ac6379b4a68cb66a0a6e965d3" rel="nofollow">71fe7cb</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.14.5...v0.14.6" rel="nofollow">0.14.6</a> (2021-03-17)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>change tab border opacity (<a href="https://github.com/saadeghi/daisyui/commit/b45ee7dd79a89f2fd023f77554fe181ff10d95da" rel="nofollow">b45ee7d</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.14.4...v0.14.5" rel="nofollow">0.14.5</a> (2021-03-12)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.14.3...v0.14.4" rel="nofollow">0.14.4</a> (2021-03-12)</h3>
+<h3>Features</h3>
+<ul><li>add breadcrumbs component (<a href="https://github.com/saadeghi/daisyui/commit/501c6a0eff04b735e187c50ceef50d75e329922a" rel="nofollow">501c6a0</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.14.2...v0.14.3" rel="nofollow">0.14.3</a> (2021-03-11)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>button animation (<a href="https://github.com/saadeghi/daisyui/commit/5134b75a0c6e0964980b8cb0a9f9c728a845e761" rel="nofollow">5134b75</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.14.1...v0.14.2" rel="nofollow">0.14.2</a> (2021-03-10)</h3>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.14.0...v0.14.1" rel="nofollow">0.14.1</a> (2021-03-05)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>glass theme variables (<a href="https://github.com/saadeghi/daisyui/commit/47c5b0c3f09e1e62720eb6218c6b12dc8422dff6" rel="nofollow">47c5b0c</a>)</li>
+<li>light theme base colors (<a href="https://github.com/saadeghi/daisyui/commit/cf9354b46b82d11609927589b55676e1ac16c671" rel="nofollow">cf9354b</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.13.3...v0.14.0" rel="nofollow">0.14.0</a> (2021-03-05)</h2>
+<h3>Features</h3>
+<ul><li>add auto margin for card-actions items (<a href="https://github.com/saadeghi/daisyui/commit/046c03ed22815dfd7b6808fded7b27cd8233ef34" rel="nofollow">046c03e</a>)</li></ul>
+<h3>Bug Fixes</h3>
+<ul><li><a href="https://github.com/saadeghi/daisyui/issues/10" rel="nofollow">#10</a> (<a href="https://github.com/saadeghi/daisyui/commit/38237e7b74ec494512d99eb646805874105887c9" rel="nofollow">38237e7</a>)</li>
+<li>change base config name to resets (<a href="https://github.com/saadeghi/daisyui/commit/4e786fb6174584bda01b7065ff1299f026f26936" rel="nofollow">4e786fb</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.13.2...v0.13.3" rel="nofollow">0.13.3</a> (2021-03-03)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>drawer scroll bug (<a href="https://github.com/saadeghi/daisyui/commit/d61c223845aa37549aca965b39219284c71df110" rel="nofollow">d61c223</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.13.1...v0.13.2" rel="nofollow">0.13.2</a> (2021-03-03)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>drawer height bug (<a href="https://github.com/saadeghi/daisyui/commit/eee83dedd1f902fc71e8527570994554e7aafc52" rel="nofollow">eee83de</a>)</li></ul>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.13.0...v0.13.1" rel="nofollow">0.13.1</a> (2021-03-03)</h3>
+<h3>Bug Fixes</h3>
+<ul><li>nested drawer components bug (<a href="https://github.com/saadeghi/daisyui/commit/7cc844393699e70780ce8df101d797c007d56c6e" rel="nofollow">7cc8443</a>)</li></ul>
+<h2><a href="https://github.com/saadeghi/daisyui/compare/v0.12.2...v0.13.0" rel="nofollow">0.13.0</a> (2021-03-03)</h2>
+<h3><a href="https://github.com/saadeghi/daisyui/compare/v0.12.1...v0.12.2" rel="nofollow">0.12.2</a> (2021-03-03)</h3>
+<h3>Features</h3>
+<ul><li>add webkit-tap-highlight-color basy style (<a href="https://github.com/saadeghi/daisyui/commit/0eedac46820a37c032e5f08a9796e2504818dca8" rel="nofollow">0eedac4</a>)</li></ul></div></div>
+          </div></div></div>
+  <div class="drawer-side"><label for="drawer" class="drawer-overlay"></label>
+    <aside class="bg-base-200 w-80"><div class="z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 px-4 py-2 hidden lg:flex "><a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2"><div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl"><span class="lowercase">daisy</span>
+      <span class="text-base-content uppercase">UI</span></div></a>
+  <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50"><div data-tip="Changelog" class="tooltip tooltip-bottom">2.0.0</div></a></div>
+
+<div class="h-4"></div>
+
+<ul class="menu menu-compact flex flex-col p-0 px-4">
+    <li><a href="/docs/install" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Install<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/use" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Use<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/customize" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Customize components<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/config" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Config<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/docs/themes" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Themes<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/colors" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19,11.5C19,11.5 17,13.67 17,15C17,16.1 17.9,17 19,17C20.1,17 21,16.1 21,15C21,13.67 19,11.5 19,11.5M5.21,10L10,5.21L14.79,10M16.56,8.94L7.62,0L6.21,1.41L8.59,3.79L3.44,8.94C2.85,9.5 2.85,10.47 3.44,11.06L8.94,16.56C9.23,16.85 9.62,17 10,17C10.38,17 10.77,16.85 11.06,16.56L16.56,11.06C17.15,10.47 17.15,9.5 16.56,8.94Z"/></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Colors<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/docs/layout-and-typography" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M4,2 L20,2 C21.1045695,2 22,2.8954305 22,4 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 Z M4,4 L4,20 L20,20 L20,4 L4,4 Z M14.7999209,15 L9.19992091,15 L8,18 L6,18 L11,6 L13,6 L18,18 L16,18 L14.7999209,15 Z M13.9998682,13 L11.9997364,8 L9.99986818,13 L13.9998682,13 Z"/></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Layout & Typography<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Actions</span></li>
+    <li><a href="/components/button" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Button<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/dropdown" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Dropdown<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/modal" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Modal<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/swap" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Swap<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">new</span></a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Data display</span></li>
+    <li><a href="/components/alert" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Alert<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/avatar" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Avatar<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/badge" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Badge<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/card" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Card<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/carousel" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Carousel<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/collapse" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Collapse<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/countdown" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Countdown<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/kbd" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Kbd<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/progress" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Progress<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/radial-progress" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Radial progress<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">new</span></a>
+      </li><li><a href="/components/stat" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Stat<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/table" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Table<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/tooltip" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Tooltip<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Data input</span></li>
+    <li><a href="/components/checkbox" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Checkbox<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/input" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Text input<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/radio" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Radio<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/range" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Range<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/rating" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Rating<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/select" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Select<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/textarea" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Textarea<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/toggle" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Toggle<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Layout</span></li>
+    <li><a href="/components/artboard" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Artboard<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/button-group" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Button group<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/divider" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Divider<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/drawer" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Drawer<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/footer" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Footer<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/hero" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Hero<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/indicator" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Indicator<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/input-group" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Input group<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">new</span></a>
+      </li><li><a href="/components/mask" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Mask<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/stack" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Stack<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Navigation</span></li>
+    <li><a href="/components/breadcrumbs" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Breadcrumbs<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/link" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Link<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/menu" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Menu<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/navbar" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Navbar<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/pagination" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Pagination<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/steps" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Steps<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/tab" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Tab<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Mockup</span></li>
+    <li><a href="/components/mockup-code" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Code<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/mockup-phone" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Phone<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/mockup-window" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Window<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul>
+      <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent"></div></aside></div></div>
+
+<input type="checkbox" id="my-modal" class="modal-toggle">
+<div class="modal"><div class="modal-box"><h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
+    <p class="py-4">You&#39;ve been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action"><label for="my-modal" class="btn">Yay!</label></div></div></div>
+
+<div class="modal" id="my-modal-2"><div class="modal-box"><h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
+    <p class="py-4">You&#39;ve been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action">
+      <a href="#" class="btn" rel="external">Yay!</a></div></div></div>
+
+
+
+
+
+
+		<script type="module" data-hydrate="7i4fr4">
+		import { start } from "/_app/start-c4b8a678.js";
+		start({
+			target: document.querySelector('[data-hydrate="7i4fr4"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-12466570.js"),
+						import("/_app/pages/docs/changelog.svelte.md-d8d2ae11.js")
+				],
+				url: new URL("http://sveltekit-prerender/docs/changelog"),
+				params: {}
+			}
+		});
+	</script><script type="application/json" data-type="svelte-data" data-url="/docs/changelog.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{}"}</script>
+  </body>
+</html>

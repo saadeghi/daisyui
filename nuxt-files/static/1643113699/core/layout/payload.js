@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/core/layout", {data:[{}],fetch:{},mutations:void 0});
