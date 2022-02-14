@@ -11,7 +11,7 @@
       <div class="mx-auto my-2 w-full max-w-sm md:max-w-md lg:max-w-2xl">
         <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left text-sm shadow-lg sm:max-w-none">
           <pre><code>
-<span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{version}/dist/full.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
+  <span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{version}/dist/full.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
   <span class="text-neutral-content text-opacity-40">&lt;script src="</span>https://cdn.tailwindcss.com<span class="text-neutral-content text-opacity-40">"&gt;&lt;/script&gt;</span>
 
 </code></pre>
