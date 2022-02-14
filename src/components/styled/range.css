@@ -3,24 +3,18 @@
   --range-shdw: var(--bc);
   @apply bg-transparent rounded-box overflow-hidden;
   &:focus-visible::-webkit-slider-thumb {
-    /* outline: 2px solid hsl(var(--range-shdw));
-    outline-offset: 2px; */
     --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
   }
   &:focus-visible::-moz-range-thumb {
-    /* outline: 2px solid hsl(var(--range-shdw)));
-    outline-offset: 2px; */
     --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
   }
   &::-webkit-slider-runnable-track {
     @apply h-2 w-full rounded-box;
     background-color: hsla(var(--bc) / 0.1);
-    /* background: linear-gradient(180deg, transparent 30%, hsla(var(--bc) / 0.1) 30%, hsla(var(--bc) / 0.1) 70%, transparent 70%); */
   }
   &::-moz-range-track {
     @apply h-2 w-full rounded-box;
     background-color: hsla(var(--bc) / 0.1);
-/* fix */
   }
   &::-webkit-slider-thumb {
     background-color: hsl(var(--b1));
