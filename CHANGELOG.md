@@ -9,13 +9,14 @@ All notable changes to this project will be documented in this file. See [standa
 * Updated Tailwind CSS dev dependency to v3.0
 * Moved document website from Nuxt to SvelteKit
 * Add new `swap` component
+* Add new `radial-progress` component
 * `menu` component now supports submenus both vertically and horizontally
 
 * Add new responsive modifiers for `divider` component:
   - divider-vertical
   - divider-horizontal
 
-* Add new responsive modifiers for `stats` component:
+* Add new responsive modifiers for `stats` component (fixes #440):
   - stats-vertical
   - stats-horizontal
 
