@@ -73,7 +73,7 @@
 {/if}
 <div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`border-t drawer-content border-base-content border-opacity-5`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
+  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
       {#if post && $page.url.pathname != "/components"}
