@@ -23,15 +23,11 @@
 
 <script>
   import { onMount } from "svelte"
+  import { daisyuiStyleComponentName } from "$lib/util"
 
   import { page } from "$app/stores"
 
-  if (process.env.NODE_ENV === "production") {
-    import("../components/StyleProduction.svelte")
-  }
-  // if (process.env.NODE_ENV === "development") {
-  //   import("../components/StyleDevelopment.svelte")
-  // }
+  import(`../components/${daisyuiStyleComponentName()}.svelte`)
 
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
@@ -88,6 +84,7 @@
               <Ads size={2} />
               <Ads size={3} />
             {/if}
+            {daisyuiStyleComponentName()}
             {#if post.title}
               <h1>{post.title}</h1>
             {/if}
@@ -112,9 +109,9 @@
   </div>
   <div class="drawer-side" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
-    <aside class="w-80 bg-base-200">
+    <aside class="bg-base-200 w-80">
       <Sidebar {closeDrawer} {drawerSidebarScrollY} />
-      <div class="pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t from-base-200 to-transparent" />
+      <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
     </aside>
   </div>
 </div>
