@@ -1,13 +1,18 @@
-<div class="hero min-h-screen bg-base-200 py-10 text-base-content">
+<script>
+  import { readEnv } from "$lib/util"
+  let version = readEnv("VITE_DAISYUI_VERSION", "latest")
+</script>
+
+<div class="hero bg-base-200 text-base-content min-h-screen py-10">
   <div class="hero-content mx-auto w-full max-w-md text-center md:max-w-full">
     <div class="w-full">
       <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">Try it online</h2>
       <p class="mx-auto mb-5 w-full md:max-w-lg">Use daisyUI file from CDN</p>
       <div class="mx-auto my-2 w-full max-w-sm md:max-w-md lg:max-w-2xl">
-        <div class="mockup-code mx-auto w-full max-w-xs bg-neutral-focus text-left text-sm shadow-lg sm:max-w-none">
+        <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left text-sm shadow-lg sm:max-w-none">
           <pre><code>
-<span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@1.25.3/dist/full.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
-  <span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
+<span class="text-neutral-content text-opacity-40">&lt;link href="</span>https://cdn.jsdelivr.net/npm/daisyui@{version}/dist/full.css<span class="text-neutral-content text-opacity-40">" rel="stylesheet" type="text/css" /&gt;</span>
+  <span class="text-neutral-content text-opacity-40">&lt;script src="</span>https://cdn.tailwindcss.com<span class="text-neutral-content text-opacity-40">"&gt;&lt;/script&gt;</span>
 
 </code></pre>
         </div>
