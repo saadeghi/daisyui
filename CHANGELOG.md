@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Breaking Changes
 
-* Improvements applied to the value of following colors on daisyUI default themes. Below colors got lighter on light themes and they got darker on dark themes (due to adding new `*-content` color names)
+* 🎨 Improvements applied to the value of following colors on daisyUI default themes. Below colors got lighter on light themes and they got darker on dark themes (due to adding new `*-content` color names)
   - `info`
   - `success`
   - `warning`
@@ -18,41 +18,44 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* Updated Tailwind CSS dev dependency to v3.0
-* Moved document website from Nuxt to SvelteKit
-* Add new `swap` component
-* Add new `radial-progress` component
-* `menu` component now supports submenus both vertically and horizontally
+* 🔥 Updated Tailwind CSS dev dependency to v3.0
+* 🚀 Moved document website from Nuxt to SvelteKit
+* 🆕 Add new `swap` component
+* 🆕 Add new `radial-progress` component
+* 👏 Improve `range` component to show the filled value with colors
+* 👏 `menu` component now supports submenus both vertically and horizontally
 
-* Add new foreground colors (fixes #187)
+* 🆕 Add new foreground colors (fixes #187)
   - `info-content`
   - `success-content`
   - `warning-content`
   - `error-content`
 
-* Add new responsive modifiers for `divider` component:
+* 🆕 Add new responsive modifiers for `divider` component:
   - divider-vertical
   - divider-horizontal
 
-* Add new responsive modifiers for `stats` component (fixes #440):
+* 🆕 Add new responsive modifiers for `stats` component (fixes #440):
   - stats-vertical
   - stats-horizontal
 
-* Now every item inside `.menu li` will be styled as menu item (not only `a`, `span`, `button`)
+* 🤩 All focus styles that were using box shadows are now using outline instead
 
-* Add copy to clipboard functionality for document website (fixes #293)
+* 🤩 Now every item inside `.menu li` will be styled as menu item (not only `a`, `span`, `button`)
 
-* Add new modifiers for `mask` component. This classes are used to show first half or second half of a mask"
+* 😍 Add copy to clipboard functionality for document website (fixes #293)
+
+* 🆕 Add new modifiers for `mask` component. This classes are used to show first half or second half of a mask"
   - mask-half-1
   - mask-half-2
 
-* Empty `<li>` in a `menu` now shows a separator line.
+* 🤩 Empty `<li>` in a `menu` now shows a separator line.
 
-* Add new `input-group` component
-* Add new `rating-half` modifier `rating` component (to show half stars)
-* `avatar` image now has `1:1` aspect ratio
+* 🆕 Add new `input-group` component
+* 🆕 Add new `rating-half` modifier `rating` component (to show half stars)
+* 📐 `avatar` image now has `1:1` aspect ratio
 
-* Add support for `RGB`, `HSL`,etc. color formats for daisyUI themes in `tailiwnd.config.js`:
+* 😍 Add support for `RGB`, `HSL`,etc. color formats for daisyUI themes in `tailiwnd.config.js`:
 ```javascript
 module.exports = {
   daisyui: {
@@ -76,7 +79,7 @@ module.exports = {
   }
 }
 ```
-* Now system dark mode theme doesn't need to be named `dark` anymore only.  
+* 🌗 Now system dark mode theme doesn't need to be named `dark` anymore only.  
   It can be any theme and it can be specified in `tailwind.config.js` using new `darkTheme` config:
 ```javascript
 module.exports = {
@@ -85,7 +88,7 @@ module.exports = {
   },
 }
 ```
-* The following colors now are optional on themes and if they're not specified, they will show the fallback colors:
+* 👏 The following colors now are optional on themes and if they're not specified, their fallback colors will be used:
 
 ```js
 "primary-focus"    // fallback : "primary"
