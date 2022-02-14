@@ -10,9 +10,9 @@
 
 <div class={`z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 px-4 py-2 hidden ${$page.url.pathname == "/" ? "" : "lg:flex"} ${switchNavbarStyle ? "shadow-sm" : ""}`}>
   <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost active nuxt-link-active px-2">
-    <div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
+    <div class="inline-flex font-title text-lg text-primary transition-all duration-200 md:text-3xl">
       <span class="lowercase">daisy</span>
-      <span class="text-base-content uppercase">UI</span>
+      <span class="uppercase text-base-content">UI</span>
     </div>
   </a>
   <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50">
@@ -22,11 +22,10 @@
   </a>
 </div>
 
-
-<div class="h-4"></div>
+<div class="h-4" />
 
 {#each menu as { name, items }}
-  <ul class="menu menu-compact flex flex-col p-0 px-4">
+  <ul class="menu flex flex-col p-0 px-4 menu-compact">
     {#if name}
       <li />
       <li class="menu-title"><span>{name}</span></li>
@@ -51,7 +50,7 @@
             {@html name}
           </span>
           {#if badge != ""}
-            <span class="badge badge-sm flex-none lowercase">{badge}</span>
+            <span class="badge flex-none lowercase badge-sm">{badge}</span>
           {/if}
         </a>
       </li>

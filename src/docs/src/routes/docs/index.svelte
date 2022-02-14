@@ -21,9 +21,9 @@
 <a class="btn" href="/">home</a>
 <div class="mx-auto flex w-full max-w-7xl gap-4 px-4">
   {#each posts as { slug, title, desc, thumbnail }}
-    <a class="card bg-base-200 w-full shadow md:w-1/3 lg:w-1/4" href={`${$page.url.pathname}/${slug}`}>
+    <a class="card w-full bg-base-200 shadow md:w-1/3 lg:w-1/4" href={`${$page.url.pathname}/${slug}`}>
       <figure>
-        <img src={thumbnail || "/default.svg"} class="bg-base-300 aspect-square" alt={title} />
+        <img src={thumbnail || "/default.svg"} class="aspect-square bg-base-300" alt={title} />
       </figure>
       <div class="card-body">
         <h2 class="card-title">{title}</h2>

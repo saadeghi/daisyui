@@ -21,7 +21,7 @@
     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" class="ml-1 inline-block h-4 w-4 fill-current"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z" /></svg>
   </div>
   <div class={`dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-96 w-52 overflow-y-auto shadow-2xl ${contentClasses}`}>
-    <ul class="menu menu-compact p-4">
+    <ul class="menu p-4 menu-compact">
       <li><button data-set-theme="light" data-act-class="active" class="active">🌝  light</button></li>
       <li><button data-set-theme="dark" data-act-class="active">🌚  dark</button></li>
       <li><button data-set-theme="cupcake" data-act-class="active">🧁  cupcake</button></li>

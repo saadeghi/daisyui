@@ -1,4 +1,4 @@
-<div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
+<div class="hero mx-auto min-h-screen max-w-md bg-base-100 text-base-content md:max-w-full">
   <div class="hero-content px-4 text-center md:px-0">
     <div>
       <h2 class="mt-32 mb-2 text-4xl font-extrabold md:text-6xl">Clean HTML</h2>
@@ -110,7 +110,7 @@
   &lt;/ul&gt;</code></pre>
           </div>
           <div class="mt-4 flex items-start justify-center">
-            <ul class="menu bg-base-200 rounded-xl p-3">
+            <ul class="menu rounded-xl bg-base-200 p-3">
               <li class="menu-title"><span>Menu Title</span></li>
               <li><a href="/">First Menu Item</a></li>
               <li><a href="/">Second Menu Item</a></li>

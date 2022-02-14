@@ -1,10 +1,5 @@
 <script context="module">
-  const excludedRoutes = [
-    "/index",
-    "/",
-    "/tailwindplay",
-    "/codepen"
-  ]
+  const excludedRoutes = ["/index", "/", "/tailwindplay", "/codepen"]
   export async function load({ url, fetch }) {
     if (!excludedRoutes.includes(url.pathname)) {
       const post = await fetch(`${url.pathname}.json`).then((res) => res.json())
@@ -37,7 +32,7 @@
   // if (process.env.NODE_ENV === "development") {
   //   import("../components/StyleDevelopment.svelte")
   // }
-  
+
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
 
@@ -117,9 +112,9 @@
   </div>
   <div class="drawer-side" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
-    <aside class="bg-base-200 w-80">
+    <aside class="w-80 bg-base-200">
       <Sidebar {closeDrawer} {drawerSidebarScrollY} />
-      <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
+      <div class="pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t from-base-200 to-transparent" />
     </aside>
   </div>
 </div>
