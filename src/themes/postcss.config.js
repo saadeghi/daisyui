@@ -1,20 +1,18 @@
 module.exports = {
   plugins: [
-    require('postcss-import'),
-    require('tailwindcss')('./src/themes/tailwind.config.js'),
-    require('postcss-nested')({
-      "bubble": [
-        "screen"
-      ]
+    require("postcss-import"),
+    require("tailwindcss")("./src/themes/tailwind.config.js"),
+    require("postcss-nested")({
+      bubble: ["screen"],
     }),
-    require('cssnano')({
-      "preset": [
+    require("cssnano")({
+      preset: [
         "default",
         {
-          "mergeRules": false,
-          "normalizeWhitespace": false,
-        }
-      ]
+          mergeRules: false,
+          normalizeWhitespace: false,
+        },
+      ],
     }),
-  ]
-}
+  ],
+};

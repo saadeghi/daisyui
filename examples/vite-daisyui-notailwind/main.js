@@ -1,6 +1,6 @@
-import 'daisyui/dist/full.css'
+import "daisyui/dist/full.css";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
 
 <!-- default theme (dark) -->
 <div>
@@ -26,4 +26,4 @@ document.querySelector('#app').innerHTML = `
   <button class="btn btn-accent">button</button>
 </div>
 
-`
+`;

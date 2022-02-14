@@ -1,6 +1,6 @@
 .stats-horizontal {
-  @apply overflow-x-auto divide-x divide-y-0;
+  @apply divide-x divide-y-0 overflow-x-auto;
 }
 .stats-vertical {
-  @apply overflow-y-auto divide-y divide-x-0;
+  @apply divide-y divide-x-0 overflow-y-auto;
 }

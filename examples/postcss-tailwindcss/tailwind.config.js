@@ -1,14 +1,10 @@
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   purge: {
-    content: ['./*.html'],
+    content: ["./*.html"],
     options: {
-      safelist: [
-        /data-theme$/,
-      ]
+      safelist: [/data-theme$/],
     },
   },
-  plugins: [
-    require('daisyui')
-  ],
-}
+  plugins: [require("daisyui")],
+};

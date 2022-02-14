@@ -1,69 +1,76 @@
-.toggle{
-  --chkbg: hsla(var(--bc) / .2);
+.toggle {
+  --chkbg: hsla(var(--bc) / 0.2);
   --focus-shadow: 0 0 0;
   --handleoffset: 1.5rem;
-  @apply appearance-none w-12 h-6 rounded-badge border border-base-content border-opacity-20 cursor-pointer ease-in-out duration-300 bg-base-content bg-opacity-20;
-  transition: background,box-shadow var(--animation-input, .2s) ease-in-out;
-  box-shadow: calc( var(--handleoffset) * -1 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+  @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-20 duration-300 ease-in-out rounded-badge;
+  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
+  box-shadow: calc(var(--handleoffset) * -1) 0 0 2px hsl(var(--b1)) inset,
+    0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
   &:focus-visible {
     --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
   }
   &:checked,
-  &[checked=true]{
+  &[checked="true"] {
     --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
-    box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
-    [dir=rtl] &{
-      box-shadow: calc( var(--handleoffset) * 1 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset,
+      0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    [dir="rtl"] & {
+      box-shadow: calc(var(--handleoffset) * 1) 0 0 2px hsl(var(--b1)) inset,
+        0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
     }
   }
-  &:indeterminate{
+  &:indeterminate {
     --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
-    box-shadow: calc( var(--handleoffset) / 2 ) 0 0 2px hsl(var(--b1)) inset, calc( var(--handleoffset) / -2 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
-    [dir=rtl] &{
-      box-shadow: calc( var(--handleoffset) / 2 ) 0 0 2px hsl(var(--b1)) inset, calc( var(--handleoffset) / -2 ) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset,
+      calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset,
+      0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
+    [dir="rtl"] & {
+      box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset,
+        calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset,
+        0 0 0 2px hsl(var(--b1)) inset, var(--focus-shadow);
     }
   }
-  &-primary{
+  &-primary {
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
     &:checked,
-    &[checked=true]{
+    &[checked="true"] {
       --chkbg: hsl(var(--p));
       @apply border-primary;
-      @apply bg-primary border-opacity-10 border-primary text-primary-content;
+      @apply border-primary border-opacity-10 bg-primary text-primary-content;
     }
   }
-  &-secondary{
+  &-secondary {
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
     }
     &:checked,
-    &[checked=true]{
+    &[checked="true"] {
       --chkbg: hsl(var(--s));
       @apply border-secondary;
-      @apply bg-secondary border-opacity-10 border-secondary text-secondary-content;
+      @apply border-secondary border-opacity-10 bg-secondary text-secondary-content;
     }
   }
-  &-accent{
+  &-accent {
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
     }
     &:checked,
-    &[checked=true]{
+    &[checked="true"] {
       --chkbg: hsl(var(--a));
       @apply border-accent;
-      @apply bg-accent border-opacity-10 border-accent text-accent-content;
+      @apply border-accent border-opacity-10 bg-accent text-accent-content;
     }
   }
-  &:disabled{
-    @apply bg-base-content bg-opacity-20 cursor-not-allowed border-transparent;
+  &:disabled {
+    @apply cursor-not-allowed border-transparent bg-base-content bg-opacity-20;
   }
 }
 
 /* backward comptability */
-.toggle-mark{
+.toggle-mark {
   @apply hidden;
 }

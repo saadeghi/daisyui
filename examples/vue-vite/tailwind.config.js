@@ -1,14 +1,10 @@
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   purge: {
-    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
     options: {
-      safelist: [
-        /data-theme$/,
-      ]
+      safelist: [/data-theme$/],
     },
   },
-  plugins: [
-    require('daisyui')
-  ],
-}
+  plugins: [require("daisyui")],
+};

@@ -1,3 +1,3 @@
-.progress{
-  @apply appearance-none relative overflow-hidden w-full;
+.progress {
+  @apply relative w-full appearance-none overflow-hidden;
 }

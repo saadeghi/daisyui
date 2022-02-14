@@ -1,70 +1,70 @@
-.drawer.drawer-end .drawer-toggle:checked ~ .drawer-content{
+.drawer.drawer-end .drawer-toggle:checked ~ .drawer-content {
   @apply -translate-x-2;
 }
-.drawer-toggle{
-  & ~ .drawer-content{
-    @apply transition-all ease-in-out duration-300;
+.drawer-toggle {
+  & ~ .drawer-content {
+    @apply transition-all duration-300 ease-in-out;
   }
-  & ~ .drawer-side{
-    &>.drawer-overlay{
-      @apply cursor-pointer transition-all ease-in-out duration-300 bg-neutral-focus;
+  & ~ .drawer-side {
+    & > .drawer-overlay {
+      @apply cursor-pointer bg-neutral-focus transition-all duration-300 ease-in-out;
     }
-    &>.drawer-overlay + *{
-      @apply transition-all ease-in-out duration-300;
+    & > .drawer-overlay + * {
+      @apply transition-all duration-300 ease-in-out;
     }
   }
-  &:checked{
-    & ~ .drawer-content{
+  &:checked {
+    & ~ .drawer-content {
       @apply translate-x-2;
     }
-    & ~ .drawer-side{
-      &>.drawer-overlay{
+    & ~ .drawer-side {
+      & > .drawer-overlay {
         opacity: 0.999999; /* 1 causes a bug on chrome 🤷‍♂️ */
         @apply bg-opacity-40;
       }
     }
   }
-  &:focus-visible{
-    & ~ .drawer-content .drawer-button{
+  &:focus-visible {
+    & ~ .drawer-content .drawer-button {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--nf));
-      &.btn-primary{
+      &.btn-primary {
         box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
       }
-      &.btn-secondary{
+      &.btn-secondary {
         box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
       }
-      &.btn-accent{
+      &.btn-accent {
         box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
       }
-      &.btn-info{
+      &.btn-info {
         box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--in));
       }
-      &.btn-success{
+      &.btn-success {
         box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--su));
       }
-      &.btn-warning{
+      &.btn-warning {
         box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--wa));
       }
-      &.btn-error{
+      &.btn-error {
         box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--er));
       }
-      &.glass{
+      &.glass {
         box-shadow: 0 0 0 2px currentColor;
       }
-      &.btn-ghost{
+      &.btn-ghost {
         box-shadow: 0 0 0 2px currentColor;
       }
-      &.btn-link{
+      &.btn-link {
         box-shadow: 0 0 0 2px currentColor;
       }
     }
   }
 }
 @media (min-width: 1024px) {
-  .drawer-mobile{
-    &>.drawer-toggle{
-      &:checked{
-        & ~ .drawer-content{
+  .drawer-mobile {
+    & > .drawer-toggle {
+      &:checked {
+        & ~ .drawer-content {
           @apply translate-x-0;
         }
       }

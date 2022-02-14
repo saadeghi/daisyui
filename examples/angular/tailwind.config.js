@@ -1,10 +1,6 @@
 module.exports = {
   purge: {
-    content: [
-      './src/**/*.{html,ts}',
-    ]
+    content: ["./src/**/*.{html,ts}"],
   },
-  plugins: [
-    require('daisyui')
-  ],
+  plugins: [require("daisyui")],
 };

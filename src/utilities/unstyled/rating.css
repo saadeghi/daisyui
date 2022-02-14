@@ -1,14 +1,14 @@
 .rating-xs input {
-  @apply w-3 h-3;
+  @apply h-3 w-3;
 }
 .rating-sm input {
-  @apply w-4 h-4;
+  @apply h-4 w-4;
 }
 .rating-md input {
-  @apply w-6 h-6;
+  @apply h-6 w-6;
 }
 .rating-lg input {
-  @apply w-10 h-10;
+  @apply h-10 w-10;
 }
 
 .rating-half {

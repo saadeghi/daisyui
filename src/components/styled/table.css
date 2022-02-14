@@ -1,34 +1,36 @@
-.table{
+.table {
   @apply text-left;
-  :where(th,td){
-    @apply p-4 whitespace-nowrap align-middle;
+  :where(th, td) {
+    @apply whitespace-nowrap p-4 align-middle;
   }
   tr.active,
-  tr.active:nth-child(even){
-    th,td{
+  tr.active:nth-child(even) {
+    th,
+    td {
       @apply bg-base-300;
     }
   }
   tr.hover:hover,
-  tr.hover:nth-child(even):hover{
-    th,td{
+  tr.hover:nth-child(even):hover {
+    th,
+    td {
       @apply bg-base-300;
     }
   }
-  &:where(:not(.table-zebra)){
-    :where(thead,tbody,tfoot){
-      :where(tr:not(:last-child) :where(th,td)){
+  &:where(:not(.table-zebra)) {
+    :where(thead, tbody, tfoot) {
+      :where(tr:not(:last-child) :where(th, td)) {
         @apply border-b border-base-200;
       }
     }
   }
-  :where(thead,tfoot){
-    :where(th,td){
-      @apply bg-base-200 text-xs uppercase font-bold;
-      &:first-child{
+  :where(thead, tfoot) {
+    :where(th, td) {
+      @apply bg-base-200 text-xs font-bold uppercase;
+      &:first-child {
         @apply rounded-l-lg;
       }
-      &:last-child{
+      &:last-child {
         @apply rounded-r-lg;
       }
     }
@@ -37,23 +39,25 @@
     box-shadow: -1px 0 hsl(var(--b2, 210 20% 98%)) inset;
   } */
 
-  :where(tbody th,tbody td){
+  :where(tbody th, tbody td) {
     @apply bg-base-100;
   }
 
-  &-zebra tbody{
-    tr{
-      th,td{
-        &:first-child{
+  &-zebra tbody {
+    tr {
+      th,
+      td {
+        &:first-child {
           @apply rounded-l-lg;
         }
-        &:last-child{
+        &:last-child {
           @apply rounded-r-lg;
         }
       }
     }
-    tr:nth-child(even){
-      th,td{
+    tr:nth-child(even) {
+      th,
+      td {
         @apply bg-base-200;
       }
     }

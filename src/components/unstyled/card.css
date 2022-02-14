@@ -1,19 +1,19 @@
 .card {
-  @apply flex flex-col relative overflow-hidden;
+  @apply relative flex flex-col overflow-hidden;
   &:focus {
     @apply outline-none;
   }
   &-body {
-    @apply flex flex-col flex-auto;
+    @apply flex flex-auto flex-col;
     :where(p) {
       @apply flex-grow;
     }
   }
   &-actions {
-    @apply flex items-start flex-wrap gap-2;
+    @apply flex flex-wrap items-start gap-2;
   }
   & figure {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
   &.image-full {
     @apply grid;
@@ -23,10 +23,10 @@
     }
     &:before,
     & > * {
-      @apply row-start-1 col-start-1;
+      @apply col-start-1 row-start-1;
     }
     & > figure img {
-      @apply object-cover h-full;
+      @apply h-full object-cover;
     }
   }
   &.image-full > &-body {

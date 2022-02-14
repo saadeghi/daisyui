@@ -11,7 +11,7 @@
 }
 
 .menu-horizontal {
-  @apply flex-row inline-flex;
+  @apply inline-flex flex-row;
   :where(li) {
     @apply flex-row;
   }

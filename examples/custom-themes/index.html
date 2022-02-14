@@ -1,41 +1,45 @@
 <html>
-<link rel="stylesheet" type="text/css" href="output.css" />
+  <link rel="stylesheet" type="text/css" href="output.css" />
 
-<body>
+  <body>
+    <!-- default theme (dark, defined in tailwind.config.js) -->
+    <div class="bg-base-100 p-10 text-base-content">
+      <button class="btn">button</button>
+      <button class="btn btn-primary">button</button>
+      <button class="btn btn-secondary">button</button>
+      <button class="btn btn-accent">button</button>
+    </div>
 
-  <!-- default theme (dark, defined in tailwind.config.js) -->
-  <div class="p-10 bg-base-100 text-base-content">
-    <button class="btn">button</button>
-    <button class="btn btn-primary">button</button>
-    <button class="btn btn-secondary">button</button>
-    <button class="btn btn-accent">button</button>
-  </div>
+    <!-- forest theme -->
+    <div class="bg-base-100 p-10 text-base-content" data-theme="forest">
+      <button class="btn">button</button>
+      <button class="btn btn-primary">button</button>
+      <button class="btn btn-secondary">button</button>
+      <button class="btn btn-accent">button</button>
+    </div>
 
-  <!-- forest theme -->
-  <div class="p-10 bg-base-100 text-base-content" data-theme=forest>
-    <button class="btn">button</button>
-    <button class="btn btn-primary">button</button>
-    <button class="btn btn-secondary">button</button>
-    <button class="btn btn-accent">button</button>
-  </div>
+    <!-- customizing using utility classes -->
+    <div class="bg-base-100 p-10 text-base-content">
+      <button
+        class="btn border-red-300 bg-red-300 text-black hover:border-red-400 hover:bg-red-400"
+      >
+        button
+      </button>
+      <button class="btn btn-primary rounded-none">button</button>
+      <button
+        class="btn btn-secondary h-16 px-10 lowercase shadow-2xl hover:opacity-70"
+      >
+        button
+      </button>
+      <button class="btn btn-accent w-32 rounded-t-full">button</button>
+    </div>
 
-  <!-- customizing using utility classes -->
-  <div class="p-10 bg-base-100 text-base-content">
-    <button class="btn bg-red-300 border-red-300 text-black hover:bg-red-400 hover:border-red-400">button</button>
-    <button class="btn btn-primary rounded-none">button</button>
-    <button class="btn btn-secondary h-16 px-10 lowercase hover:opacity-70 shadow-2xl">button</button>
-    <button class="btn btn-accent w-32 rounded-t-full">button</button>
-  </div>
-
-  <!-- custom theme defined in tailwind.config.js -->
-  <div class="bg-base-100 text-base-content p-10" data-theme=mytheme>
-    <button class="btn">button</button>
-    <button class="btn btn-primary">button</button>
-    <button class="btn btn-secondary">button</button>
-    <button class="btn btn-accent">button</button>
-  </div>
-
-
-</body>
-
+    <!-- custom theme defined in tailwind.config.js -->
+    <div class="bg-base-100 p-10 text-base-content" data-theme="mytheme">
+      <button class="btn">button</button>
+      <button class="btn btn-primary">button</button>
+      <button class="btn btn-secondary">button</button>
+      <button class="btn btn-accent">button</button>
+    </div>
+  </body>
 </html>

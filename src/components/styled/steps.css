@@ -6,7 +6,7 @@
     grid-template-columns: auto;
     min-width: 4rem;
     &:before {
-      @apply bg-base-300 transform top-0 text-base-content h-2 w-full col-start-1 row-start-1;
+      @apply top-0 col-start-1 row-start-1 h-2 w-full transform bg-base-300 text-base-content;
       content: "";
       margin-left: -100%;
     }
@@ -17,7 +17,7 @@
       content: counter(step);
       counter-increment: step;
       z-index: 1;
-      @apply relative rounded-full w-8 h-8 bg-base-300 text-base-content col-start-1 row-start-1 place-self-center grid place-items-center;
+      @apply relative col-start-1 row-start-1 grid h-8 w-8 place-items-center place-self-center rounded-full bg-base-300 text-base-content;
     }
     &:first-child:before {
       content: none;

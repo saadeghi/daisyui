@@ -1,54 +1,54 @@
-.progress{
-  @apply rounded-box h-2;
-  &::-moz-progress-bar{
+.progress {
+  @apply h-2 rounded-box;
+  &::-moz-progress-bar {
     @apply bg-neutral;
   }
-  &-primary::-moz-progress-bar{
+  &-primary::-moz-progress-bar {
     @apply bg-primary;
   }
-  &-secondary::-moz-progress-bar{
+  &-secondary::-moz-progress-bar {
     @apply bg-secondary;
   }
-  &-accent::-moz-progress-bar{
+  &-accent::-moz-progress-bar {
     @apply bg-accent;
   }
-  &-info::-moz-progress-bar{
+  &-info::-moz-progress-bar {
     @apply bg-info;
   }
-  &-success::-moz-progress-bar{
+  &-success::-moz-progress-bar {
     @apply bg-success;
   }
-  &-warning::-moz-progress-bar{
+  &-warning::-moz-progress-bar {
     @apply bg-warning;
   }
-  &-error::-moz-progress-bar{
+  &-error::-moz-progress-bar {
     @apply bg-error;
   }
-  &::-webkit-progress-bar{
+  &::-webkit-progress-bar {
     @apply bg-neutral bg-opacity-20 rounded-box;
   }
-  &::-webkit-progress-value{
-    @apply rounded-box bg-neutral-focus;
+  &::-webkit-progress-value {
+    @apply bg-neutral-focus rounded-box;
   }
-  &-primary::-webkit-progress-value{
+  &-primary::-webkit-progress-value {
     @apply bg-primary;
   }
-  &-secondary::-webkit-progress-value{
+  &-secondary::-webkit-progress-value {
     @apply bg-secondary;
   }
-  &-accent::-webkit-progress-value{
+  &-accent::-webkit-progress-value {
     @apply bg-accent;
   }
-  &-info::-webkit-progress-value{
+  &-info::-webkit-progress-value {
     @apply bg-info;
   }
-  &-success::-webkit-progress-value{
+  &-success::-webkit-progress-value {
     @apply bg-success;
   }
-  &-warning::-webkit-progress-value{
+  &-warning::-webkit-progress-value {
     @apply bg-warning;
   }
-  &-error::-webkit-progress-value{
+  &-error::-webkit-progress-value {
     @apply bg-error;
   }
 }

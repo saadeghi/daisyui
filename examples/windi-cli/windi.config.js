@@ -1,8 +1,8 @@
-const { transform } = require('windicss/helpers')
+const { transform } = require("windicss/helpers");
 
 module.exports = {
   extract: {
-    include: ['./*.html'],
+    include: ["./*.html"],
   },
-  plugins: [transform('daisyui')],
-}
+  plugins: [transform("daisyui")],
+};

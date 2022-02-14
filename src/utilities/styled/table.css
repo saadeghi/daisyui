@@ -1,10 +1,10 @@
-.table-normal{
-  :where(th,td){
+.table-normal {
+  :where(th, td) {
     @apply p-4 text-base;
   }
 }
-.table-compact{
-  :where(th,td){
+.table-compact {
+  :where(th, td) {
     @apply p-2 text-sm;
   }
 }

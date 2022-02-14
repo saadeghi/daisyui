@@ -1,6 +1,6 @@
-import './style.css'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
 
 <!-- default theme (dark) -->
 <div class="p-10 bg-base-100 text-base-content">
@@ -26,4 +26,4 @@ document.querySelector('#app').innerHTML = `
   <button class="btn btn-accent">button</button>
 </div>
 
-`
+`;

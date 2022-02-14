@@ -1,17 +1,17 @@
 .menu {
   @apply flex flex-col;
   &.horizontal {
-    @apply flex-row inline-flex;
+    @apply inline-flex flex-row;
     :where(li) {
       @apply flex-row;
     }
   }
 }
 .menu :where(li) {
-  @apply flex flex-col items-stretch relative flex-wrap;
+  @apply relative flex flex-col flex-wrap items-stretch;
 }
 .menu :where(li:not(.disabled):not(.menu-title)) > :where(*:not(ul)) {
-  @apply flex items-center outline-none cursor-pointer select-none;
+  @apply flex cursor-pointer select-none items-center outline-none;
 }
 .menu > :where(li > *:not(ul):focus) {
   @apply outline-none;

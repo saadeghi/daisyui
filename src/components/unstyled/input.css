@@ -1,53 +1,52 @@
-
-.input{
-  @apply transition duration-200 ease-in-out flex-shrink;
-  @apply px-4 h-12 text-sm leading-loose;
+.input {
+  @apply flex-shrink transition duration-200 ease-in-out;
+  @apply h-12 px-4 text-sm leading-loose;
   &:focus {
     @apply outline-none;
   }
 }
-.input-group{
-  @apply flex items-stretch w-full;
-  >*,
-  >.input{
+.input-group {
+  @apply flex w-full items-stretch;
+  > *,
+  > .input {
     @apply rounded-none;
   }
-  &-md{
+  &-md {
     @apply text-sm leading-loose;
   }
-  &-lg{
+  &-lg {
     @apply text-lg leading-loose;
   }
-  &-sm{
+  &-sm {
     @apply text-sm leading-8;
   }
-  &-xs{
+  &-xs {
     @apply text-xs leading-relaxed;
   }
-  :where(span){
-    @apply bg-base-300 flex items-center px-4;
+  :where(span) {
+    @apply flex items-center bg-base-300 px-4;
   }
-  :first-child{
+  :first-child {
     border-top-left-radius: var(--rounded-btn, 0.5rem);
     border-top-right-radius: 0;
     border-bottom-left-radius: var(--rounded-btn, 0.5rem);
     border-bottom-right-radius: 0;
   }
-  :last-child{
+  :last-child {
     border-top-left-radius: 0;
     border-top-right-radius: var(--rounded-btn, 0.5rem);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: var(--rounded-btn, 0.5rem);
   }
-  &-vertical{
+  &-vertical {
     @apply flex-col;
-    :first-child{
+    :first-child {
       border-top-left-radius: var(--rounded-btn, 0.5rem);
       border-top-right-radius: var(--rounded-btn, 0.5rem);
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
-    :last-child{
+    :last-child {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: var(--rounded-btn, 0.5rem);

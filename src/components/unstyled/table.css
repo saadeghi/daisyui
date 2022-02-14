@@ -1,6 +1,6 @@
-.table{
+.table {
   @apply relative;
-  th:first-child{
+  th:first-child {
     @apply sticky left-0 z-10;
     /* because safari */
     position: -webkit-sticky;

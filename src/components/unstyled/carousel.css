@@ -1,19 +1,19 @@
-.carousel{
+.carousel {
   @apply flex overflow-x-scroll;
-	scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  &-vertical{
+  &-vertical {
     @apply flex-col overflow-y-scroll;
     scroll-snap-type: y mandatory;
   }
-  &-item{
-    @apply flex flex-none box-content;
+  &-item {
+    @apply box-content flex flex-none;
     scroll-snap-align: start;
   }
-  &-center .carousel-item{
+  &-center .carousel-item {
     scroll-snap-align: center;
   }
-  &-end .carousel-item{
+  &-end .carousel-item {
     scroll-snap-align: end;
   }
 }

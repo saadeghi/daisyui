@@ -1,6 +1,6 @@
 .artboard {
   &-demo {
-    @apply flex flex-col items-center justify-center flex-none;
+    @apply flex flex-none flex-col items-center justify-center;
   }
   &.phone {
     width: 320px;

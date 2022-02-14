@@ -1,10 +1,10 @@
 .avatar {
   @apply relative inline-flex;
   & > div {
-    @apply overflow-hidden block aspect-square;
+    @apply block aspect-square overflow-hidden;
   }
   img {
-    @apply object-cover w-full h-full;
+    @apply h-full w-full object-cover;
   }
   &.placeholder {
     & > div {

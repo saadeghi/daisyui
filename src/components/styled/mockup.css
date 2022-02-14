@@ -1,9 +1,9 @@
 .mockup {
   &-code {
-    @apply rounded-box py-5 bg-neutral text-neutral-content min-w-[20rem];
+    @apply min-w-[20rem] bg-neutral py-5 text-neutral-content rounded-box;
     &:before {
       content: "";
-      @apply block w-3 h-3 rounded-full opacity-30 mb-4;
+      @apply mb-4 block h-3 w-3 rounded-full opacity-30;
       box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
     }
     pre {
@@ -16,15 +16,15 @@
     pre[data-prefix] {
       &:before {
         content: attr(data-prefix);
-        @apply opacity-50 w-8;
+        @apply w-8 opacity-50;
       }
     }
   }
   &-window {
-    @apply rounded-box pt-5;
+    @apply pt-5 rounded-box;
     &:before {
       content: "";
-      @apply block w-3 h-3 rounded-full opacity-30 mb-4;
+      @apply mb-4 block h-3 w-3 rounded-full opacity-30;
       box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
     }
   }

@@ -1,12 +1,10 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
+const purgecss = require("@fullhuman/postcss-purgecss")({
   content: [
-    '*.html',
+    "*.html",
     // etc.
   ],
-  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-})
+  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+});
 module.exports = {
-  plugins: [
-    process.env.NODE_ENV === 'production' && purgecss,
-  ],
-}
+  plugins: [process.env.NODE_ENV === "production" && purgecss],
+};

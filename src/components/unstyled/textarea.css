@@ -1,7 +1,6 @@
-
-.textarea{
-  @apply transition duration-200 ease-in-out flex-shrink;
-  &{
+.textarea {
+  @apply flex-shrink transition duration-200 ease-in-out;
+  & {
     @apply px-4 py-2  text-sm leading-loose min-h-12;
   }
   &:focus {

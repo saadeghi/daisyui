@@ -1,20 +1,20 @@
 .badge {
   &-primary {
-    @apply bg-primary border-primary text-primary-content;
+    @apply border-primary bg-primary text-primary-content;
   }
   &-secondary {
-    @apply bg-secondary border-secondary text-secondary-content;
+    @apply border-secondary bg-secondary text-secondary-content;
   }
   &-accent {
-    @apply bg-accent border-accent text-accent-content;
+    @apply border-accent bg-accent text-accent-content;
   }
 
   &-ghost {
-    @apply bg-base-200 border-base-200 text-base-content;
+    @apply border-base-200 bg-base-200 text-base-content;
   }
 
   &-outline {
-    @apply bg-transparent text-base-content border-current border-opacity-50;
+    @apply border-current border-opacity-50 bg-transparent text-base-content;
     &.badge-primary {
       @apply text-primary;
     }
@@ -27,15 +27,15 @@
   }
 
   &-info {
-    @apply bg-info border-transparent text-info-content;
+    @apply border-transparent bg-info text-info-content;
   }
   &-success {
-    @apply bg-success border-transparent text-success-content;
+    @apply border-transparent bg-success text-success-content;
   }
   &-warning {
-    @apply bg-warning border-transparent text-warning-content;
+    @apply border-transparent bg-warning text-warning-content;
   }
   &-error {
-    @apply bg-error border-transparent text-error-content;
+    @apply border-transparent bg-error text-error-content;
   }
 }

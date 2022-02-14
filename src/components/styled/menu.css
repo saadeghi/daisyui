@@ -18,7 +18,7 @@
     @apply border-l-4 border-primary;
   }
   :where(li) > :where(*:not(ul)) {
-    @apply text-current px-4 py-3 gap-3;
+    @apply gap-3 px-4 py-3 text-current;
   }
 
   :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):focus),
@@ -30,12 +30,12 @@
     @apply bg-primary text-primary-content;
   }
   :where(li:empty) {
-    @apply bg-base-content bg-opacity-10 h-px mx-4 my-2;
+    @apply mx-4 my-2 h-px bg-base-content bg-opacity-10;
   }
 
   li.disabled {
     & > * {
-      @apply text-base-content text-opacity-20 hover:bg-transparent select-none;
+      @apply select-none text-base-content text-opacity-20 hover:bg-transparent;
     }
   }
   li.hover-bordered {
@@ -53,13 +53,13 @@
   }
   .menu-title {
     > * {
-      @apply py-1 text-xs text-base-content text-opacity-40 font-bold;
+      @apply py-1 text-xs font-bold text-base-content text-opacity-40;
     }
   }
 }
 
 .menu :where(li:not(.disabled)) > :where(*:not(ul)) {
-  @apply transition ease-in-out duration-200 outline-none;
+  @apply outline-none transition duration-200 ease-in-out;
 }
 
 .menu > :where(li:first-child) {
@@ -95,13 +95,13 @@
 }
 
 .menu > :where(li) > :where(ul) :where(li) {
-  @apply whitespace-nowrap w-full;
+  @apply w-full whitespace-nowrap;
 }
 .menu > :where(li) > :where(ul) :where(li) :where(ul) {
   @apply pl-4;
 }
 .menu > :where(li) > :where(ul) :where(li) :where(:not(ul)) {
-  @apply whitespace-nowrap w-full;
+  @apply w-full whitespace-nowrap;
 }
 
 .menu > :where(li) > :where(ul) > :where(li:first-child) {

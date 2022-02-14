@@ -1,8 +1,8 @@
-.breadcrumbs{
+.breadcrumbs {
   @apply py-2;
-  & > ul{
-    & > li{
-      & > a{
+  & > ul {
+    & > li {
+      & > a {
         &:focus {
           @apply outline-none;
         }
@@ -11,9 +11,9 @@
           box-shadow: 0 0 0 2px currentColor;
         }
       }
-      & + *:before{
-        content: '';
-        @apply block w-1.5 h-1.5 transform rotate-45 ml-2 mr-3 opacity-40;
+      & + *:before {
+        content: "";
+        @apply ml-2 mr-3 block h-1.5 w-1.5 rotate-45 transform opacity-40;
         border-top: 1px solid;
         border-right: 1px solid;
         background-color: transparent;

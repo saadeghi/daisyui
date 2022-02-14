@@ -32,7 +32,8 @@
   padding-top: var(--tab-border, 1px);
   &.tab-active {
     background-color: var(--tab-bg);
-    border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
+    border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0
+      var(--tab-border, 1px);
     border-left-color: var(--tab-border-color);
     border-right-color: var(--tab-border-color);
     border-top-color: var(--tab-border-color);
@@ -50,7 +51,13 @@
       height: var(--tab-radius, 0.5rem);
       bottom: 0;
       --tab-grad: calc(68% - var(--tab-border, 1px));
-      --tab-corner-bg: radial-gradient(circle at var(--circle-pos), transparent var(--tab-grad), var(--tab-border-color) calc(var(--tab-grad) + 0.3px), var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)), var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px));
+      --tab-corner-bg: radial-gradient(
+        circle at var(--circle-pos),
+        transparent var(--tab-grad),
+        var(--tab-border-color) calc(var(--tab-grad) + 0.3px),
+        var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)),
+        var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
+      );
     }
     &:before {
       left: calc(var(--tab-radius, 0.5rem) * -1);
@@ -86,8 +93,8 @@
   }
 }
 .tabs-boxed {
-  @apply bg-base-200 rounded-btn p-1;
+  @apply bg-base-200 p-1 rounded-btn;
   .tab-active {
-    @apply rounded-btn bg-primary text-primary-content hover:text-primary-content;
+    @apply bg-primary text-primary-content rounded-btn hover:text-primary-content;
   }
 }

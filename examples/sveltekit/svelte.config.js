@@ -1,16 +1,16 @@
-let preprocess = require('svelte-preprocess')
+let preprocess = require("svelte-preprocess");
 
 module.exports = {
   preprocess: [
     preprocess({
       defaults: {
-        style: 'postcss'
+        style: "postcss",
       },
-      postcss: true
-    })
+      postcss: true,
+    }),
   ],
 
   kit: {
-    target: '#svelte'
-  }
-}
+    target: "#svelte",
+  },
+};

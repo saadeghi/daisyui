@@ -5,7 +5,5 @@ module.exports = {
   daisyui: {
     base: false,
   },
-  plugins: [
-    require('../../index'),
-  ],
-}
+  plugins: [require("../../index")],
+};

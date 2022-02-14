@@ -2,20 +2,21 @@
   @apply relative grid overflow-hidden;
 }
 .collapse-title,
-.collapse>input[type=checkbox],
-.collapse-content{
-  @apply row-start-1 col-start-1;
+.collapse > input[type="checkbox"],
+.collapse-content {
+  @apply col-start-1 row-start-1;
 }
-.collapse>input[type=checkbox]{
+.collapse > input[type="checkbox"] {
   @apply appearance-none opacity-0;
 }
-.collapse-content{
+.collapse-content {
   @apply row-start-2 overflow-hidden;
   max-height: 0px;
 }
 .collapse-open .collapse-content,
 .collapse:focus:not(.collapse-close) .collapse-content,
-.collapse:not(.collapse-close) input[type=checkbox]:checked ~ .collapse-content
-{
+.collapse:not(.collapse-close)
+  input[type="checkbox"]:checked
+  ~ .collapse-content {
   max-height: 9000px;
 }

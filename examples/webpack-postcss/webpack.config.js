@@ -1,5 +1,5 @@
 // webpack.config.js
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   entry: "./index.js",
@@ -25,4 +25,4 @@ module.exports = {
     contentBase: path.resolve(__dirname, "./"),
     open: true,
   },
-}
+};

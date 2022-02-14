@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from "nuxt3";
 
 export default defineNuxtConfig({
   build: {
@@ -7,8 +7,8 @@ export default defineNuxtConfig({
         plugins: {
           tailwindcss: {},
           autoprefixer: {},
-        }
-      }
+        },
+      },
     },
-  }
-})
+  },
+});

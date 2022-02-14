@@ -1,5 +1,5 @@
 .modal {
-  @apply inset-0 opacity-0 pointer-events-none fixed flex items-end justify-center sm:items-center invisible;
+  @apply pointer-events-none invisible fixed inset-0 flex items-end justify-center opacity-0 sm:items-center;
   z-index: 999;
 }
 .modal-box {
@@ -8,11 +8,11 @@
 .modal-open,
 .modal:target,
 .modal-toggle:checked + .modal {
-  @apply visible opacity-100 pointer-events-auto;
+  @apply pointer-events-auto visible opacity-100;
 }
 .modal-action {
   @apply flex;
 }
 .modal-toggle {
-  @apply appearance-none opacity-0 w-0 h-0 fixed;
+  @apply fixed h-0 w-0 appearance-none opacity-0;
 }

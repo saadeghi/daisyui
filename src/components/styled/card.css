@@ -19,14 +19,14 @@
     @apply flex flex-col gap-2;
   }
   &-title {
-    @apply text-xl font-semibold flex gap-2 items-center;
+    @apply flex items-center gap-2 text-xl font-semibold;
   }
   &.image-full {
     &:before {
-      @apply bg-neutral z-10 opacity-75 rounded-box;
+      @apply z-10 bg-neutral opacity-75 rounded-box;
     }
   }
   &.image-full > &-body {
-    @apply text-neutral-content z-20;
+    @apply z-20 text-neutral-content;
   }
 }

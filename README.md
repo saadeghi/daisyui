@@ -1,22 +1,22 @@
 <div align="center">
 
-[![][logo-url]][docs-url]  
+[![][logo-url]][docs-url]
 
 **Tailwind CSS Components**  
 Adds component classes like `btn`, `card` and more to Tailwind CSS
 
 [ [See all components][docs-url] ]
-  
-[![][tweet]][tweet-url]  
+
+[![][tweet]][tweet-url]
 
 </div>
 
-[![][banner-url]][docs-url]  
+[![][banner-url]][docs-url]
 
-# daisyUI  
+# daisyUI
+
 [![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url]  
-[![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]   
-
+[![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
 
 - 👉 [ [See all components][docs-url] ]
 - 📘 Documents: [daisyui.com][docs-url]
@@ -25,7 +25,8 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 
 ---
 
-## 🌼 Features   
+## 🌼 Features
+
 <details>
 <summary>
   show / hide
@@ -50,7 +51,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 
 ---
 
-## 📀 Install now!  
+## 📀 Install now!
 
 ```bash
 npm i daisyui
@@ -58,68 +59,78 @@ npm i daisyui
 
 Then add daisyUI to your `tailwind.config.js`  
 [ [Read more][docs-url-install] ]
+
 ```js
 module.exports = {
-
-  plugins: [
-    require('daisyui'),
-  ],
-
-}
+  plugins: [require("daisyui")],
+};
 ```
-
 
 <details>
 <summary>
   Or use a CDN
 </summary>
 
+Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.\*
 
-Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.*  
-
-  
 ```html
-<link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+<link
+  href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
 ```
 
 </details>
 
 ---
-## 🚀 Use  
-Use component classes to build your UI.  
+
+## 🚀 Use
+
+Use component classes to build your UI.
+
 ```html
 <a class="btn">Hello!</a>
 ```
+
 ```html
-<input type="checkbox" class="checkbox"/>
+<input type="checkbox" class="checkbox" />
 ```
+
 ```html
-<input type="checkbox" class="toggle"/>
+<input type="checkbox" class="toggle" />
 ```
+
 ```html
-<div class="alert alert-success">
-  Message sent successfully 
-</div>
+<div class="alert alert-success">Message sent successfully</div>
 ```
 
 👉 [See all components][docs-url]  
-🎲 [Try it online][tw-play-url]  
+🎲 [Try it online][tw-play-url]
 
 ---
 
-## 📘 Documents + Examples  
+## 📘 Documents + Examples
+
 See the official site:  
 [ [daisyui.com][docs-url] ↗︎ ]
 
 ---
 
-## 🤝 Contributing  
+## 🤝 Contributing
+
 Read the documents for more info:  
 [ [Read contribution guide](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md) ]
 
 ---
+
 ## List of Components
+
 <details>
 <summary>
   show / hide
@@ -188,6 +199,7 @@ Read the documents for more info:
 </details>
 
 ---
+
 ## Featured on:
 
 <details>
@@ -228,17 +240,15 @@ Read the documents for more info:
 </details>
 
 ---
-  
+
 <div align="center">
   
   
 ༼ つ ◕_◕ ༽つ  Please share  
   
-[![][tweet]][tweet-url]  
+[![][tweet]][tweet-url]
 
 </div>
-
-
 
 [install-size]: https://badgen.net/bundlephobia/minzip/daisyui?label=bundle%20size&color=green
 [build]: https://badgen.net/github/checks/saadeghi/daisyui?label=build
@@ -248,7 +258,6 @@ Read the documents for more info:
 [license]: https://badgen.net/github/license/saadeghi/daisyui?color=green
 [stars]: https://badgen.net/github/stars/saadeghi/daisyui?color=green
 [tweet]: https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
-
 [install-size-url]: https://bundlephobia.com/result?p=daisyui
 [license-url]: https://github.com/saadeghi/daisyui/blob/master/LICENSE
 [npm-url]: https://www.npmjs.com/package/daisyui
@@ -261,10 +270,7 @@ Read the documents for more info:
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 [number-of-components]: https://badgen.net/badge/total%20components/44/green
-
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png
-
-

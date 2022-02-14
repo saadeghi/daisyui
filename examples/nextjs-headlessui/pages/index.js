@@ -1,18 +1,19 @@
-import 'tailwindcss/tailwind.css'
+import "tailwindcss/tailwind.css";
 
 import { Transition, Menu } from "@headlessui/react";
 
 export default function HomePage() {
   return (
     <>
-      <div className="flex w-full min-h-screen items-center justify-center bg-base-300 text-base-content" data-theme="dark">
+      <div
+        className="flex min-h-screen w-full items-center justify-center bg-base-300 text-base-content"
+        data-theme="dark"
+      >
         <Menu as="div" className="relative inline-block">
           {({ open }) => (
             <>
               <div>
-                <Menu.Button className="btn btn-primary">
-                  Menu
-                </Menu.Button>
+                <Menu.Button className="btn btn-primary">Menu</Menu.Button>
               </div>
               <Transition
                 show={open}
@@ -25,16 +26,22 @@ export default function HomePage() {
               >
                 <Menu.Items
                   static
-                  className="focus:outline-none menu p-3 shadow-lg bg-base-100 rounded-box rounded-box absolute w-56 mt-2"
+                  className="menu absolute mt-2 w-56 bg-base-100 p-3 shadow-lg rounded-box rounded-box focus:outline-none"
                 >
                   <Menu.Item>
-                    <li><a>Item 1</a></li>
+                    <li>
+                      <a>Item 1</a>
+                    </li>
                   </Menu.Item>
                   <Menu.Item>
-                    <li><a>Item 2</a></li>
+                    <li>
+                      <a>Item 2</a>
+                    </li>
                   </Menu.Item>
                   <Menu.Item>
-                    <li><a>Item 3</a></li>
+                    <li>
+                      <a>Item 3</a>
+                    </li>
                   </Menu.Item>
                 </Menu.Items>
               </Transition>

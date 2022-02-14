@@ -1,11 +1,11 @@
 .modal {
-  @apply duration-200 ease-in-out bg-neutral-focus bg-opacity-40;
+  @apply bg-neutral-focus bg-opacity-40 duration-200 ease-in-out;
   transition-property: transform, opacity;
   overflow-y: hidden;
   overscroll-behavior: contain;
 }
 .modal-box {
-  @apply transform translate-y-10 sm:translate-y-0 sm:scale-90 transition duration-200 ease-in-out rounded-t-box sm:rounded-b-box bg-base-100 sm:max-w-lg p-6 w-full;
+  @apply w-full translate-y-10 transform bg-base-100 p-6 transition duration-200 ease-in-out rounded-t-box sm:max-w-lg sm:translate-y-0 sm:scale-90 sm:rounded-b-box;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
   overscroll-behavior: contain;

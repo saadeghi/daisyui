@@ -1,12 +1,12 @@
-.hero{
-  @apply grid w-full bg-cover bg-center place-items-center;
-  & > *{
-    @apply row-start-1 col-start-1;
+.hero {
+  @apply grid w-full place-items-center bg-cover bg-center;
+  & > * {
+    @apply col-start-1 row-start-1;
   }
-  &-overlay{
-    @apply row-start-1 col-start-1 w-full h-full;
+  &-overlay {
+    @apply col-start-1 row-start-1 h-full w-full;
   }
-  &-content{
-    @apply items-center flex z-0 justify-center;
+  &-content {
+    @apply z-0 flex items-center justify-center;
   }
 }

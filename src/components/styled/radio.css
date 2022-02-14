@@ -1,64 +1,68 @@
-.radio{
+.radio {
   --chkbg: var(--bc);
   --focus-shadow: 0 0 0;
-  @apply appearance-none w-6 h-6 rounded-full border border-base-content border-opacity-20 cursor-pointer;
-  transition: background,box-shadow var(--animation-input, .2s) ease-in-out;
+  @apply h-6 w-6 cursor-pointer appearance-none rounded-full border border-base-content border-opacity-20;
+  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
   &:focus-visible {
     --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--bc));
   }
-  &:checked{
+  &:checked {
     @apply bg-base-content;
-    animation: radiomark var(--animation-input, .2s)  ease-in-out;
-    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset, var(--focus-shadow);
+    animation: radiomark var(--animation-input, 0.2s) ease-in-out;
+    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset,
+      var(--focus-shadow);
   }
-  &-primary{
+  &-primary {
     --chkbg: var(--p);
     @apply border-primary hover:border-primary;
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
-    &:checked{
-      @apply bg-primary border-primary text-primary-content;
+    &:checked {
+      @apply border-primary bg-primary text-primary-content;
     }
   }
-  &-secondary{
+  &-secondary {
     --chkbg: var(--s);
     @apply border-secondary hover:border-secondary;
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
     }
-    &:checked{
-      @apply bg-secondary border-secondary text-secondary-content;
+    &:checked {
+      @apply border-secondary bg-secondary text-secondary-content;
     }
   }
-  &-accent{
+  &-accent {
     --chkbg: var(--a);
     @apply border-accent hover:border-accent;
     &:focus-visible {
       --focus-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
     }
-    &:checked{
-      @apply bg-accent border-accent text-accent-content;
+    &:checked {
+      @apply border-accent bg-accent text-accent-content;
     }
   }
-  &:disabled{
-    @apply opacity-20 cursor-not-allowed;
+  &:disabled {
+    @apply cursor-not-allowed opacity-20;
   }
 }
 
 @keyframes radiomark {
   0% {
-    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset, var(--focus-shadow);
+    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset,
+      var(--focus-shadow);
   }
   50% {
-    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset, var(--focus-shadow);
+    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset,
+      var(--focus-shadow);
   }
   100% {
-    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset, var(--focus-shadow);
+    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset,
+      var(--focus-shadow);
   }
 }
 
 /* backward comptability */
-.radio-mark{
+.radio-mark {
   @apply hidden;
 }

@@ -1,5 +1,5 @@
 .range {
-  @apply w-full h-5 cursor-pointer;
+  @apply h-5 w-full cursor-pointer;
   &:focus {
     outline: none;
   }

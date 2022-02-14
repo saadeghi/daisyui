@@ -1,6 +1,6 @@
-.rating{
+.rating {
   @apply relative inline-flex;
-  :where(input){
+  :where(input) {
     @apply cursor-pointer;
   }
 }

@@ -1,14 +1,14 @@
-.radio{
+.radio {
   &-xs {
-    @apply w-4 h-4;
+    @apply h-4 w-4;
   }
   &-sm {
-    @apply w-5 h-5;
+    @apply h-5 w-5;
   }
   &-md {
-    @apply w-6 h-6;
+    @apply h-6 w-6;
   }
   &-lg {
-    @apply w-8 h-8;
+    @apply h-8 w-8;
   }
 }

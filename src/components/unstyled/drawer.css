@@ -1,87 +1,87 @@
-.drawer{
+.drawer {
   @apply grid overflow-hidden;
   /* max-height: 100vh; */
-  &.drawer-end{
+  &.drawer-end {
     direction: rtl;
   }
-  &.drawer-end > *{
+  &.drawer-end > * {
     direction: ltr;
   }
-  &.drawer-end .drawer-toggle{
-    & ~ .drawer-side>.drawer-overlay + *{
+  &.drawer-end .drawer-toggle {
+    & ~ .drawer-side > .drawer-overlay + * {
       @apply translate-x-full justify-self-end;
     }
-    &:checked ~ .drawer-side>.drawer-overlay + *{
+    &:checked ~ .drawer-side > .drawer-overlay + * {
       @apply translate-x-0;
     }
   }
 }
-.drawer-toggle{
-  @apply appearance-none opacity-0 w-0 h-0 absolute;
-  & ~ .drawer-content{
-    @apply row-start-1 col-start-1 overflow-y-auto max-h-screen z-0;
+.drawer-toggle {
+  @apply absolute h-0 w-0 appearance-none opacity-0;
+  & ~ .drawer-content {
+    @apply z-0 col-start-1 row-start-1 max-h-screen overflow-y-auto;
     overscroll-behavior: contain;
   }
-  & ~ .drawer-side{
-    @apply row-start-1 col-start-1 grid max-h-screen;
-    &>.drawer-overlay{
-      @apply row-start-1 col-start-1 invisible opacity-0;
+  & ~ .drawer-side {
+    @apply col-start-1 row-start-1 grid max-h-screen;
+    & > .drawer-overlay {
+      @apply invisible col-start-1 row-start-1 opacity-0;
     }
-    &>.drawer-overlay + *{
-      @apply z-10 row-start-1 col-start-1 transform -translate-x-full;
+    & > .drawer-overlay + * {
+      @apply z-10 col-start-1 row-start-1 -translate-x-full transform;
     }
   }
-  &:checked{
-    & ~ .drawer-side{
+  &:checked {
+    & ~ .drawer-side {
       @apply overflow-y-auto;
-      &>.drawer-overlay{
+      & > .drawer-overlay {
         @apply visible;
       }
-      &>.drawer-overlay + *{
+      & > .drawer-overlay + * {
         @apply translate-x-0;
       }
     }
   }
 }
 
-[dir=rtl] .drawer-toggle~.drawer-side>.drawer-overlay+*{
+[dir="rtl"] .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
   @apply translate-x-full;
 }
-[dir=rtl] .drawer-toggle:checked~.drawer-side>.drawer-overlay+*{
+[dir="rtl"] .drawer-toggle:checked ~ .drawer-side > .drawer-overlay + * {
   @apply translate-x-0;
 }
 
 @media (min-width: 1024px) {
-  .drawer-mobile{
+  .drawer-mobile {
     grid-auto-columns: max-content auto;
-    &>.drawer-toggle{
-      & ~ .drawer-content{
-        @apply lg:col-start-2 h-auto;
+    & > .drawer-toggle {
+      & ~ .drawer-content {
+        @apply h-auto lg:col-start-2;
       }
-      & ~ .drawer-side{
+      & ~ .drawer-side {
         @apply overflow-y-auto;
-        &>.drawer-overlay{
+        & > .drawer-overlay {
           @apply lg:visible;
         }
-        &>.drawer-overlay + *{
+        & > .drawer-overlay + * {
           @apply lg:translate-x-0;
         }
       }
     }
   }
-  .drawer-mobile.drawer-end{
+  .drawer-mobile.drawer-end {
     grid-auto-columns: auto max-content;
     direction: ltr;
-    &>.drawer-toggle{
-      & ~ .drawer-content{
-        @apply lg:col-start-1 h-auto;
+    & > .drawer-toggle {
+      & ~ .drawer-content {
+        @apply h-auto lg:col-start-1;
       }
-      & ~ .drawer-side{
-        @apply lg:col-start-2 overflow-y-auto;
-        &>.drawer-overlay{
+      & ~ .drawer-side {
+        @apply overflow-y-auto lg:col-start-2;
+        & > .drawer-overlay {
           @apply lg:visible;
         }
-        &>.drawer-overlay + *{
+        & > .drawer-overlay + * {
           @apply lg:translate-x-0;
         }
       }

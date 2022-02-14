@@ -14,10 +14,10 @@
 
   /* default btn */
   & {
-    @apply bg-neutral border-neutral text-neutral-content;
+    @apply border-neutral bg-neutral text-neutral-content;
     &:hover,
     &-active {
-      @apply bg-neutral-focus border-neutral-focus;
+      @apply border-neutral-focus bg-neutral-focus;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--nf));
@@ -25,30 +25,30 @@
   }
   /* brand colors */
   &-primary {
-    @apply bg-primary border-primary text-primary-content;
+    @apply border-primary bg-primary text-primary-content;
     &:hover,
     &.btn-active {
-      @apply bg-primary-focus border-primary-focus;
+      @apply border-primary-focus bg-primary-focus;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
   }
   &-secondary {
-    @apply bg-secondary border-secondary text-secondary-content;
+    @apply border-secondary bg-secondary text-secondary-content;
     &:hover,
     &.btn-active {
-      @apply bg-secondary-focus border-secondary-focus;
+      @apply border-secondary-focus bg-secondary-focus;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--s));
     }
   }
   &-accent {
-    @apply bg-accent border-accent text-accent-content;
+    @apply border-accent bg-accent text-accent-content;
     &:hover,
     &.btn-active {
-      @apply bg-accent-focus border-accent-focus;
+      @apply border-accent-focus bg-accent-focus;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--a));
@@ -57,40 +57,40 @@
 
   /* btn with state colors */
   &-info {
-    @apply bg-info border-info text-info-content;
+    @apply border-info bg-info text-info-content;
     &:hover,
     &.btn-active {
-      @apply bg-info border-info;
+      @apply border-info bg-info;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--in));
     }
   }
   &-success {
-    @apply bg-success border-success text-success-content;
+    @apply border-success bg-success text-success-content;
     &:hover,
     &.btn-active {
-      @apply bg-success border-success;
+      @apply border-success bg-success;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--su));
     }
   }
   &-warning {
-    @apply bg-warning border-warning text-warning-content;
+    @apply border-warning bg-warning text-warning-content;
     &:hover,
     &.btn-active {
-      @apply bg-warning border-warning;
+      @apply border-warning bg-warning;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--wa));
     }
   }
   &-error {
-    @apply bg-error border-error text-error-content;
+    @apply border-error bg-error text-error-content;
     &:hover,
     &.btn-active {
-      @apply bg-error border-error;
+      @apply border-error bg-error;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--er));
@@ -111,20 +111,20 @@
 
   /* btn variants */
   &-ghost {
-    @apply bg-transparent text-current border border-transparent;
+    @apply border border-transparent bg-transparent text-current;
     &:hover,
     &.btn-active {
-      @apply bg-base-content bg-opacity-20 border-opacity-0;
+      @apply border-opacity-0 bg-base-content bg-opacity-20;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px currentColor;
     }
   }
   &-link {
-    @apply bg-transparent border-transparent text-primary;
+    @apply border-transparent bg-transparent text-primary;
     &:hover,
     &.btn-active {
-      @apply underline bg-transparent border-transparent;
+      @apply border-transparent bg-transparent underline;
     }
     &:focus-visible {
       box-shadow: 0 0 0 2px currentColor;
@@ -133,50 +133,50 @@
 
   /* outline */
   &-outline {
-    @apply bg-transparent text-base-content border-current;
+    @apply border-current bg-transparent text-base-content;
     &:hover {
-      @apply bg-base-content border-base-content text-base-100;
+      @apply border-base-content bg-base-content text-base-100;
     }
     &.btn-primary {
       @apply text-primary;
       &:hover {
-        @apply bg-primary-focus text-primary-content border-primary-focus;
+        @apply border-primary-focus bg-primary-focus text-primary-content;
       }
     }
     &.btn-secondary {
       @apply text-secondary;
       &:hover {
-        @apply bg-secondary-focus text-secondary-content border-secondary-focus;
+        @apply border-secondary-focus bg-secondary-focus text-secondary-content;
       }
     }
     &.btn-accent {
       @apply text-accent;
       &:hover {
-        @apply bg-accent-focus text-accent-content border-accent-focus;
+        @apply border-accent-focus bg-accent-focus text-accent-content;
       }
     }
     &.btn-success {
       @apply text-success;
       &:hover {
-        @apply bg-success text-success-content border-success;
+        @apply border-success bg-success text-success-content;
       }
     }
     &.btn-info {
       @apply text-info;
       &:hover {
-        @apply bg-info text-info-content border-info;
+        @apply border-info bg-info text-info-content;
       }
     }
     &.btn-warning {
       @apply text-warning;
       &:hover {
-        @apply bg-warning text-warning-content border-warning;
+        @apply border-warning bg-warning text-warning-content;
       }
     }
     &.btn-error {
       @apply text-error;
       &:hover {
-        @apply bg-error text-error-content border-error;
+        @apply border-error bg-error text-error-content;
       }
     }
   }
@@ -184,7 +184,7 @@
   /* disabled */
   &-disabled,
   &[disabled] {
-    @apply bg-neutral border-opacity-0 bg-opacity-20 text-base-content text-opacity-20;
+    @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
   }
 
   /* loading */
@@ -207,13 +207,13 @@
 .btn-group {
   & > input[type="radio"]:checked.btn,
   & > .btn-active {
-    @apply bg-primary border-primary text-primary-content;
+    @apply border-primary bg-primary text-primary-content;
     &:focus-visible {
       box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsl(var(--p));
     }
   }
   & > .btn:not(:first-child) {
-    @apply rounded-l-none -ml-px;
+    @apply -ml-px rounded-l-none;
   }
   & > .btn:not(:last-child) {
     @apply rounded-r-none;

@@ -1,4 +1,4 @@
-.radio{
+.radio {
   &:focus {
     @apply outline-none;
   }

@@ -1,20 +1,16 @@
 .select {
-  @apply border transition duration-200 ease-in-out rounded-btn font-semibold bg-base-100 border-base-content border-opacity-0 pr-10;
+  @apply border border-base-content border-opacity-0 bg-base-100 pr-10 font-semibold transition duration-200 ease-in-out rounded-btn;
   &-bordered {
     @apply border-opacity-20;
   }
-  background-image:
-    linear-gradient(45deg, transparent 50%, currentColor 50%),
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%);
-  background-position:
-    calc(100% - 20px) calc(1px + 50%),
+  background-position: calc(100% - 20px) calc(1px + 50%),
     calc(100% - 16px) calc(1px + 50%);
-  background-size:
-    4px 4px,
-    4px 4px;
+  background-size: 4px 4px, 4px 4px;
   background-repeat: no-repeat;
   &:focus {
-    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsla(var(--bc) / .2);
+    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsla(var(--bc) / 0.2);
   }
   &-ghost {
     @apply bg-opacity-5;
@@ -66,7 +62,7 @@
   }
   &-disabled,
   &[disabled] {
-    @apply cursor-not-allowed bg-base-200 border-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
+    @apply cursor-not-allowed border-base-200 bg-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
   }
   &-multiple,
   &[multiple],

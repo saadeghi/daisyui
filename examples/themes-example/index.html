@@ -1,30 +1,33 @@
 <!-- default theme 👇 -->
 <html data-theme="light">
-<!-- try other themes 👇 -->
-<!-- [dark, light, black, cyberpunk, dracula, valentine, retro, synthwave, garden, halloween, aqua, cupcake, bumblebee, pastel, forest, fantasy, luxury] -->
-<!-- more info: https://daisy.js.org/docs/default-themes -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+  <!-- try other themes 👇 -->
+  <!-- [dark, light, black, cyberpunk, dracula, valentine, retro, synthwave, garden, halloween, aqua, cupcake, bumblebee, pastel, forest, fantasy, luxury] -->
+  <!-- more info: https://daisy.js.org/docs/default-themes -->
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes"
+  />
   <title>Tailwind + daisyUI</title>
   <link rel="stylesheet" type="text/css" href="output.css" />
   <!-- this script is for changing and saving theme -->
   <script src="https://cdn.jsdelivr.net/npm/theme-change@1.2.0/dist/select.js"></script>
   <body>
     <!-- put everything in a off-canvas drawer -->
-    <div class="h-screen bg-base-200 drawer text-base-content">
+    <div class="drawer h-screen bg-base-200 text-base-content">
       <!-- this checkbox controls if drawer is open -->
       <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="flex flex-col drawer-content">
+      <div class="drawer-content flex flex-col">
         <!-- drawer content -->
-        <div class="w-full navbar bg-base-300">
+        <div class="navbar w-full bg-base-300">
           <!-- hamburger menu is only visible on mobile -->
           <div class="flex-none lg:hidden">
-            <label for="menu-drawer" class="btn btn-square btn-ghost">
+            <label for="menu-drawer" class="btn btn-ghost btn-square">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="inline-block w-6 h-6 stroke-current"
+                class="inline-block h-6 w-6 stroke-current"
               >
                 <path
                   stroke-linecap="round"
@@ -35,19 +38,29 @@
               </svg>
             </label>
           </div>
-          <div class="flex-1 px-2 mx-2 font-bold">
+          <div class="mx-2 flex-1 px-2 font-bold">
             <!-- navbar title -->
             <span>Change screen size</span>
           </div>
           <div class="flex-none">
             <!-- navbar is only visible for desktop -->
             <div class="hidden lg:inline-block">
-              <ul class="mr-2 space-x-2 menu horizontal">
+              <ul class="menu mr-2 space-x-2 horizontal">
                 <li>
-                  <a target="_blank" href="https://tailwindcss.com/" class="rounded-btn">TailwindCSS</a>
+                  <a
+                    target="_blank"
+                    href="https://tailwindcss.com/"
+                    class="rounded-btn"
+                    >TailwindCSS</a
+                  >
                 </li>
                 <li>
-                  <a target="_blank" href="https://daisy.js.org/" class="rounded-btn">daisyUI</a>
+                  <a
+                    target="_blank"
+                    href="https://daisy.js.org/"
+                    class="rounded-btn"
+                    >daisyUI</a
+                  >
                 </li>
               </ul>
             </div>
@@ -78,25 +91,34 @@
           <div class="w-full max-w-md p-4 text-center">
             <!-- avatar -->
             <div class="mx-auto avatar">
-              <div class="w-32 h-32 p-1 mb-8 mask mask-squircle bg-secondary">
-                <img src="https://i.pravatar.cc/128?img=54" class="mask mask-squircle" />
+              <div class="mask mask-squircle mb-8 h-32 w-32 bg-secondary p-1">
+                <img
+                  src="https://i.pravatar.cc/128?img=54"
+                  class="mask mask-squircle"
+                />
               </div>
             </div>
             <!-- text -->
             <div class="pb-3">
               <h1 class="py-2 text-2xl font-bold">TailwindCSS + daisyUI</h1>
-              <p class="text-sm text-opacity-70 text-base-content">
-                Generates CSS using using TailwindCSS JIT and makes it production-ready using autoprefixer and cssnano.
+              <p class="text-sm text-base-content text-opacity-70">
+                Generates CSS using using TailwindCSS JIT and makes it
+                production-ready using autoprefixer and cssnano.
               </p>
             </div>
-            <a target="_blank" class="btn btn-primary" href="https://daisy.js.org/">See all components</a>
+            <a
+              target="_blank"
+              class="btn btn-primary"
+              href="https://daisy.js.org/"
+              >See all components</a
+            >
           </div>
         </div>
       </div>
       <!-- drawer sidebar for mobile -->
       <div class="drawer-side">
         <label for="menu-drawer" class="drawer-overlay"></label>
-        <ul class="p-4 overflow-y-auto menu w-80 bg-base-100">
+        <ul class="menu w-80 overflow-y-auto bg-base-100 p-4">
           <li>
             <a target="_blank" href="https://tailwindcss.com/">TailwindCSS</a>
           </li>

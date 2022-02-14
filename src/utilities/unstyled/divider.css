@@ -1,10 +1,10 @@
 .divider-horizontal {
   @apply flex-col;
   &:before {
-    @apply w-0.5 h-full;
+    @apply h-full w-0.5;
   }
   &:after {
-    @apply w-0.5 h-full;
+    @apply h-full w-0.5;
   }
 }
 .divider-vertical {

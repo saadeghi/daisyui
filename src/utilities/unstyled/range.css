@@ -1,4 +1,4 @@
-.range{
+.range {
   &-xs {
     @apply h-3;
     &::-webkit-slider-runnable-track {
@@ -8,10 +8,10 @@
       @apply h-1;
     }
     &::-webkit-slider-thumb {
-      @apply w-3 h-3;
+      @apply h-3 w-3;
     }
     &::-moz-range-thumb {
-      @apply w-3 h-3;
+      @apply h-3 w-3;
     }
   }
   &-sm {
@@ -23,10 +23,10 @@
       @apply h-1;
     }
     &::-webkit-slider-thumb {
-      @apply w-4 h-4;
+      @apply h-4 w-4;
     }
     &::-moz-range-thumb {
-      @apply w-4 h-4;
+      @apply h-4 w-4;
     }
   }
   &-md {
@@ -38,10 +38,10 @@
       @apply h-2;
     }
     &::-webkit-slider-thumb {
-      @apply w-5 h-5;
+      @apply h-5 w-5;
     }
     &::-moz-range-thumb {
-      @apply w-5 h-5;
+      @apply h-5 w-5;
     }
   }
   &-lg {
@@ -53,10 +53,10 @@
       @apply h-4;
     }
     &::-webkit-slider-thumb {
-      @apply w-8 h-8;
+      @apply h-8 w-8;
     }
     &::-moz-range-thumb {
-      @apply w-8 h-8;
+      @apply h-8 w-8;
     }
   }
 }

@@ -1,6 +1,6 @@
 .divider-horizontal {
-  @apply my-0 h-auto mx-4 w-4;
+  @apply my-0 mx-4 h-auto w-4;
 }
 .divider-vertical {
-  @apply mx-0 w-auto my-4 h-4;
+  @apply mx-0 my-4 h-4 w-auto;
 }

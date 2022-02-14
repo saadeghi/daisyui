@@ -1,6 +1,6 @@
 .btn {
-  @apply inline-flex border-transparent flex-wrap items-center justify-center text-center cursor-pointer select-none transition duration-200 ease-in-out rounded-btn flex-shrink-0;
-  @apply px-4 h-12 text-sm min-h-12;
+  @apply inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent text-center transition duration-200 ease-in-out rounded-btn;
+  @apply h-12 px-4 text-sm min-h-12;
   line-height: 1em;
   &:focus {
     @apply outline-none;
@@ -17,7 +17,7 @@
     @apply h-12 w-12 p-0;
   }
   &-circle {
-    @apply rounded-full h-12 w-12 p-0;
+    @apply h-12 w-12 rounded-full p-0;
   }
 
   /* loading */
@@ -27,7 +27,7 @@
       @apply pointer-events-none;
     }
     &:before {
-      @apply h-4 w-4 rounded-full mr-2 border-2;
+      @apply mr-2 h-4 w-4 rounded-full border-2;
       animation: spin 2s linear infinite;
       content: "";
       border-top-color: transparent;
@@ -38,7 +38,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn.loading:before{
+  .btn.loading:before {
     animation: spin 10s linear infinite;
   }
 }

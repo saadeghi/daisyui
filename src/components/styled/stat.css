@@ -1,11 +1,11 @@
 .stats {
-  @apply rounded-box bg-base-100 text-base-content;
+  @apply bg-base-100 text-base-content rounded-box;
 }
 :where(.stats) {
-  @apply overflow-x-auto divide-x divide-y-0;
+  @apply divide-x divide-y-0 overflow-x-auto;
 }
 .stat {
-  @apply px-6 py-4 gap-x-4 border-base-content border-opacity-10;
+  @apply gap-x-4 border-base-content border-opacity-10 px-6 py-4;
   &-title {
     @apply opacity-60;
   }
@@ -13,7 +13,7 @@
     @apply text-4xl font-extrabold;
   }
   &-desc {
-    @apply opacity-60 text-xs;
+    @apply text-xs opacity-60;
   }
   &-actions {
     @apply mt-4;

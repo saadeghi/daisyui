@@ -1,10 +1,10 @@
 .input {
-  @apply bg-base-100 rounded-btn border border-opacity-0 border-base-content;
+  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn;
   &-bordered {
     @apply border-opacity-20;
   }
   &:focus {
-    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsla(var(--bc) / .2);
+    box-shadow: 0 0 0 2px hsl(var(--b1)), 0 0 0 4px hsla(var(--bc) / 0.2);
   }
   &-ghost {
     @apply bg-opacity-5;
@@ -56,7 +56,7 @@
     }
   }
   &-disabled,
-  &[disabled]{
-    @apply cursor-not-allowed bg-base-200 border-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
+  &[disabled] {
+    @apply cursor-not-allowed border-base-200 bg-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
   }
 }

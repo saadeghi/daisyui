@@ -1,14 +1,14 @@
 .select {
   &-md {
-    @apply pl-4 pr-10 leading-loose h-12 text-sm min-h-12;
+    @apply h-12 pl-4 pr-10 text-sm leading-loose min-h-12;
   }
   &-lg {
-    @apply pl-6 pr-8 leading-loose h-16 text-lg min-h-16;
+    @apply h-16 pl-6 pr-8 text-lg leading-loose min-h-16;
   }
   &-sm {
-    @apply pl-3 pr-8 leading-8 h-8 text-sm min-h-8;
+    @apply h-8 pl-3 pr-8 text-sm leading-8 min-h-8;
   }
   &-xs {
-    @apply pl-2 pr-8 text-xs leading-relaxed h-6 min-h-6;
+    @apply h-6 pl-2 pr-8 text-xs leading-relaxed min-h-6;
   }
 }

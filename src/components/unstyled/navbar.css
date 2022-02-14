@@ -1,17 +1,17 @@
-.navbar{
+.navbar {
   @apply flex items-center;
-  & > *{
+  & > * {
     @apply flex items-center;
   }
 }
-.navbar-start{
-  width:50%;
+.navbar-start {
+  width: 50%;
   justify-content: flex-start;
 }
-.navbar-center{
+.navbar-center {
   flex-shrink: 0;
 }
-.navbar-end{
-  width:50%;
+.navbar-end {
+  width: 50%;
   justify-content: flex-end;
 }

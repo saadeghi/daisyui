@@ -1,6 +1,6 @@
 .select {
-  @apply inline-flex cursor-pointer flex-shrink-0 appearance-none select-none;
-  @apply pl-4 pr-10 leading-loose h-12 text-sm min-h-12;
+  @apply inline-flex flex-shrink-0 cursor-pointer select-none appearance-none;
+  @apply h-12 pl-4 pr-10 text-sm leading-loose min-h-12;
   &:focus {
     @apply outline-none;
   }

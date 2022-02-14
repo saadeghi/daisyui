@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['layouts/**/*.html'],
+  purge: ["layouts/**/*.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -7,10 +7,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [require("daisyui")],
   daisyui: {
     logs: false,
-  }
-}
+  },
+};

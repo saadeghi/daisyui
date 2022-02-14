@@ -1,12 +1,12 @@
 .swap {
-  @apply inline-grid place-content-center select-none relative;
+  @apply relative inline-grid select-none place-content-center;
 }
 
 .swap > * {
-  @apply row-start-1 col-start-1;
+  @apply col-start-1 row-start-1;
 }
 
-.swap input{
+.swap input {
   @apply appearance-none;
 }
 
@@ -24,6 +24,6 @@
 
 .swap input:checked ~ .swap-on,
 .swap-active .swap-on,
-.swap input:indeterminate ~ .swap-indeterminate{
+.swap input:indeterminate ~ .swap-indeterminate {
   @apply opacity-100;
 }
