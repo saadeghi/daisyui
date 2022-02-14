@@ -1,4 +1,5 @@
 node_modules
 .svelte-kit
+.env.local
 /dist
 /build
