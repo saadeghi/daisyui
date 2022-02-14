@@ -79,6 +79,12 @@ export let menu = [
         icon: "",
         badge: "",
       },
+      {
+        name: "Swap",
+        href: "/components/swap",
+        icon: "",
+        badge: "",
+      },
     ],
   },
   {
@@ -139,6 +145,12 @@ export let menu = [
         badge: "",
       },
       {
+        name: "Radial progress",
+        href: "/components/radial-progress",
+        icon: "",
+        badge: "",
+      },
+      {
         name: "Stat",
         href: "/components/stat",
         icon: "",
@@ -194,12 +206,6 @@ export let menu = [
       {
         name: "Select",
         href: "/components/select",
-        icon: "",
-        badge: "",
-      },
-      {
-        name: "Swap",
-        href: "/components/swap",
         icon: "",
         badge: "",
       },
