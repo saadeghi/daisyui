@@ -30,13 +30,15 @@ data="{[
 </Component>
 
 <Component title="With steps and measure">
-<input type="range" min="0" max="100" value="25" class="range max-w-xs" step="25">
-<div class="w-full flex justify-between text-xs px-2 max-w-xs">
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
+<div class="w-full max-w-xs">
+  <input type="range" min="0" max="100" value="25" class="range max-w-xs" step="25">
+  <div class="w-full flex justify-between text-xs px-2 max-w-xs">
+    <span>|</span>
+    <span>|</span>
+    <span>|</span>
+    <span>|</span>
+    <span>|</span>
+  </div>
 </div>
 <pre slot="html">{
 `<input type="range" min="0" max="100" value="25" class="range" step="25">

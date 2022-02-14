@@ -21,7 +21,7 @@ data="{[
 
 <Component title="Avatar">
 <div class="avatar">
-  <div class="w-24 rounded">
+  <div class="w-24 rounded bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=75101" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
@@ -36,22 +36,22 @@ data="{[
 
 <Component title="Avatar in custom sizes">
 <div class="avatar">
-  <div class="w-24 rounded">
+  <div class="w-24 rounded bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=71470" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
-  <div class="w-16 rounded">
+  <div class="w-16 rounded bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=88712" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
-  <div class="w-12 rounded">
+  <div class="w-12 rounded bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=15164" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
-  <div class="w-8 rounded">
+  <div class="w-8 rounded bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=79498" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
@@ -81,12 +81,12 @@ data="{[
 
 <Component title="Avatar rounded">
 <div class="avatar">
-  <div class="w-24 rounded-xl">
+  <div class="w-24 rounded-xl bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=71060" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
-  <div class="w-24 rounded-full">
+  <div class="w-24 rounded-full bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=70084" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
@@ -106,17 +106,17 @@ data="{[
 
 <Component title="Avatar with mask">
 <div class="avatar">
-  <div class="w-24 mask mask-squircle">
+  <div class="w-24 mask mask-squircle bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=8877" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
-  <div class="w-24 mask mask-hexagon">
+  <div class="w-24 mask mask-hexagon bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=79960" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar">
-  <div class="w-24 mask mask-triangle">
+  <div class="w-24 mask mask-triangle bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=70860" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
@@ -142,22 +142,22 @@ data="{[
 <Component title="Avatar group">
 <div class="avatar-group -space-x-6">
   <div class="avatar">
-    <div class="w-12">
+    <div class="w-12 bg-base-300">
       <img src="https://api.lorem.space/image/face?hash=11722" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
-    <div class="w-12">
+    <div class="w-12 bg-base-300">
       <img src="https://api.lorem.space/image/face?hash=75704" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
-    <div class="w-12">
+    <div class="w-12 bg-base-300">
       <img src="https://api.lorem.space/image/face?hash=86780" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
-    <div class="w-12">
+    <div class="w-12 bg-base-300">
       <img src="https://api.lorem.space/image/face?hash=92365" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
@@ -191,17 +191,17 @@ data="{[
 <Component title="Avatar group with counter">
 <div class="avatar-group -space-x-6">
   <div class="avatar">
-    <div class="w-12">
+    <div class="w-12  bg-base-300">
       <img src="https://api.lorem.space/image/face?hash=71251" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
-    <div class="w-12">
+    <div class="w-12  bg-base-300">
       <img src="https://api.lorem.space/image/face?hash=58372" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
   <div class="avatar">
-    <div class="w-12">
+    <div class="w-12  bg-base-300">
       <img src="https://api.lorem.space/image/face?hash=26576" alt="Tailwind-CSS-Avatar-component">
     </div>
   </div>
@@ -254,12 +254,12 @@ data="{[
 
 <Component title="Avatar with presense indicator">
 <div class="avatar online">
-  <div class="w-24 rounded-full">
+  <div class="w-24 rounded-full bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=67053" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
 <div class="avatar offline">
-  <div class="w-24 rounded-full">
+  <div class="w-24 rounded-full bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=92699" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
