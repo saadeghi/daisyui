@@ -27,6 +27,6 @@
     "theme-change": "2.0.2"
   },
   "dependencies": {
-    "daisyui": "^2.0.2"
+    "daisyui": "^2.0.6"
   }
 }
