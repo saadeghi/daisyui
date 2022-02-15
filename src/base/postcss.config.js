@@ -5,14 +5,6 @@ module.exports = {
       bubble: ["screen"],
     }),
     require("autoprefixer"),
-    require("cssnano")({
-      preset: [
-        "default",
-        {
-          mergeRules: false,
-          normalizeWhitespace: false,
-        },
-      ],
-    }),
+    require("postcss-clean"),
   ],
 };
