@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run createStyleHandlerComponent:dev && svelte-kit dev",
-    "build": "npm run createStyleHandlerComponent:prod && NODE_ENV=production svelte-kit build",
+    "build": "npm i daisyui@latest && npm run createStyleHandlerComponent:prod && NODE_ENV=production svelte-kit build",
     "preview": "svelte-kit preview",
     "createStyleHandlerComponent:dev": "echo '<script>\n  import \"@components/StyleDevelopment.svelte\"\n</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>\n  import \"@components/StyleProduction.svelte\"\n</script>' > src/components/StyleHandler.svelte",
