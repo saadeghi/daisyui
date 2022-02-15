@@ -62,7 +62,7 @@
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap&text=daisyUITailwindCSSComponents" rel="stylesheet" />
 </svelte:head>
 
 {#if post}
@@ -73,10 +73,10 @@
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
-      {#if post && $page.url.pathname != "/components"}
+      {#if post && $page.url.pathname != "/components/"}
         <div class="flex justify-between gap-6">
           <div class="prose max-w-4xl flex-grow">
-            {#if $page.url.pathname.startsWith("/components")}
+            {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
               <Ads size={1} />
               <Ads size={2} />
               <Ads size={3} />
@@ -89,7 +89,7 @@
             {/if}
             <slot />
           </div>
-          {#if $page.url.pathname.startsWith("/components/")}
+          {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
             <div>
               <div class="sticky top-24 mt-32">
                 <Ads size={4} />
@@ -112,7 +112,7 @@
   </div>
 </div>
 
-<input type="checkbox" id="my-modal" class="modal-toggle" />
+<input type="checkbox" id="my-modal" class="modal-toggle" aria-label="Open or close modal" />
 <div class="modal">
   <div class="modal-box">
     <h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
