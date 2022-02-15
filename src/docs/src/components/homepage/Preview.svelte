@@ -40,7 +40,7 @@
                 <div class="card-body">
                   <h2 class="card-title font-extrabold capitalize">text input component</h2>
                   <p class="text-neutral-content text-sm text-opacity-80">Text input comes in various sizes and styles</p>
-                  <div class="mt-4 flex justify-end"><a href="/components/form/input" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
+                  <div class="mt-4 flex justify-end"><a href="/components/input" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@
               <div class="card-body">
                 <h2 class="card-title font-extrabold capitalize">toggle component</h2>
                 <p class="text-neutral-content text-sm text-opacity-80">Use toggle to switch between two states</p>
-                <div class="mt-4 flex justify-end"><a href="/components/form/toggle" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
+                <div class="mt-4 flex justify-end"><a href="/components/toggle" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
               </div>
             </div>
           </div>
@@ -570,7 +570,7 @@
       <div class="bg-base-100 text-base-content rounded-box shadow-xl">
         <div class="dropdown dropdown-end w-full">
           <div tabindex="0">
-            <ul class="menu overflow-visible py-3">
+            <ul class="menu overflow-visible p-3">
               <li class="menu-title"><span>Menu Title</span></li>
               <li>
                 <button>
@@ -594,7 +594,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                   </svg>
                   Menu Item 3
-                  <div class="badge success ml-2">new</div>
+                  <div class="badge badge-success">new</div>
                 </button>
               </li>
             </ul>
@@ -615,7 +615,7 @@
       <div class="bg-base-100 text-base-content rounded-box shadow-xl">
         <div class="dropdown dropdown-end dropdown-top w-full">
           <div tabindex="0">
-            <div class="flex justify-around space-x-4 p-4">
+            <div class="flex justify-center gap-8 p-4">
               <label aria-label="checkbox CSS component"><input type="checkbox" checked class="checkbox" /></label>
               <label aria-label="checkbox CSS component"><input type="checkbox" checked class="checkbox checkbox-primary" /></label>
               <label aria-label="checkbox CSS component"><input type="checkbox" checked class="checkbox checkbox-secondary" /></label>
@@ -627,26 +627,33 @@
               <div class="card-body">
                 <h2 class="card-title font-extrabold capitalize">checkbox component</h2>
                 <p class="text-neutral-content text-sm text-opacity-80">Colorful, animated and accessible</p>
-                <div class="mt-4 flex justify-end"><a href="/components/form/checkbox" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
+                <div class="mt-4 flex justify-end"><a href="/components/checkbox" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
               </div>
             </div>
           </div>
         </div>
         <div class="dropdown dropdown-end w-full">
           <div tabindex="0">
-            <div class="flex justify-around space-x-4 p-4">
-              <label aria-label="radio CSS component"><input type="radio" name="opt" class="radio" /></label>
-              <label aria-label="radio CSS component"><input type="radio" name="opt" class="radio radio-primary" /></label>
-              <label aria-label="radio CSS component"><input type="radio" name="opt" class="radio radio-secondary" /></label>
-              <label aria-label="radio CSS component"><input type="radio" name="opt" class="radio radio-accent" /></label>
+            <div class="rating rating-lg rating-half w-full justify-center px-4 pb-4">
+              <input type="radio" name="rating-10" class="rating-hidden" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" checked />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
             </div>
           </div>
           <div tabindex="0" class="dropdown-content py-2">
             <div class="card compact bg-neutral-focus text-neutral-content rounded-box w-72 shadow-xl">
               <div class="card-body">
-                <h2 class="card-title font-extrabold capitalize">radio component</h2>
-                <p class="text-neutral-content text-sm text-opacity-80">Colorful, animated and accessible</p>
-                <div class="mt-4 flex justify-end"><a href="/components/form/radio" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
+                <h2 class="card-title font-extrabold capitalize">Rating component</h2>
+                <p class="text-neutral-content text-sm text-opacity-80">Styled radio buttons</p>
+                <div class="mt-4 flex justify-end"><a href="/components/rating" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
               </div>
             </div>
           </div>
