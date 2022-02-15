@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/saadeghi/daisyui/compare/v2.0.2...v2.0.3) (2022-02-15)
+
+
+### Bug Fixes
+
+* dropdown not working ([3f2559e](https://github.com/saadeghi/daisyui/commit/3f2559ec59ea3d1ce1d66006713ca070be551255))
+
 ### [2.0.2](https://github.com/saadeghi/daisyui/compare/v2.0.0...v2.0.2) (2022-02-14)
 
 ## [2.0.0](https://github.com/saadeghi/daisyui/compare/v2.0.0-next.0...v2.0.0) (2022-02-13)
