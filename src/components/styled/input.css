@@ -60,4 +60,7 @@
   &[disabled] {
     @apply cursor-not-allowed border-base-200 bg-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
   }
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 }
