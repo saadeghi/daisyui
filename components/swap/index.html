@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content=""><title>Swap — Tailwind CSS Components</title><link rel="preconnect" href="https://fonts.googleapis.com" data-svelte="svelte-2361n0"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-svelte="svelte-2361n0"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" data-svelte="svelte-2361n0"><meta name="description" content="Swap allows you to toggle the visibility of two elements using a checkbox or a class name." data-svelte="svelte-1y551y3"><meta name="twitter:card" content="summary" data-svelte="svelte-1y551y3"><meta name="twitter:title" content="Swap — Tailwind CSS Components" data-svelte="svelte-1y551y3"><meta name="twitter:description" content="Swap allows you to toggle the visibility of two elements using a checkbox or a class name." data-svelte="svelte-1y551y3"><meta name="twitter:image" content="https://daisyui.com/images/components/swap/.jpg" data-svelte="svelte-1y551y3"><meta name="twitter:image:alt" content="Swap — Tailwind CSS Components" data-svelte="svelte-1y551y3"><meta property="og:title" content="Swap — Tailwind CSS Components" data-svelte="svelte-1y551y3"><meta property="og:description" content="Swap allows you to toggle the visibility of two elements using a checkbox or a class name." data-svelte="svelte-1y551y3"><meta property="og:image" content="https://daisyui.com/images/components/swap/.jpg" data-svelte="svelte-1y551y3"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4812562253949561" crossorigin="anonymous" data-svelte="svelte-aoc0d1"></script>
+    <script data-svelte="svelte-aoc0d1">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WJ8HL28');</script>
+    
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-ddbbbf0e.css">
+	<link rel="stylesheet" href="/_app/assets/ClassTable-f8b6d0aa.css">
+	<link rel="modulepreload" href="/_app/start-6e120569.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-6c3f1da5.js">
+	<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-620ac85d.js">
+	<link rel="modulepreload" href="/_app/chunks/stores-df438b5c.js">
+	<link rel="modulepreload" href="/_app/chunks/util-e53b55be.js">
+	<link rel="modulepreload" href="/_app/chunks/ThemeChange-e3134e3c.js">
+	<link rel="modulepreload" href="/_app/chunks/SEO-8fd7ae90.js">
+	<link rel="modulepreload" href="/_app/pages/components/swap.svelte.md-3e2ad68e.js">
+	<link rel="modulepreload" href="/_app/chunks/ClassTable-04fdfe88.js">
+  </head>
+  <body>
+    
+
+
+
+
+
+<div class="bg-base-100 drawer h-screen drawer-mobile"><input id="drawer" type="checkbox" class="drawer-toggle">
+  <div class="drawer-content" style="scroll-behavior: smooth; scroll-padding-top: 5rem;"><div class="\n  sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 \n  bg-base-100 text-base-content\n  "><nav class="navbar w-full"><div class="flex flex-1 gap-1 lg:gap-2"><label for="drawer" class="btn btn-square btn-ghost drawer-button lg:hidden"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></label>
+      <div class="flex items-center gap-2 lg:hidden"><a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost px-2 "><div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl"><span class="lowercase text-primary">daisy</span>
+            <span class="uppercase text-base-content">UI</span></div></a>
+        <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50 "><div data-tip="Changelog" class="tooltip tooltip-bottom">2.0.3</div></a></div></div>
+    <div class="flex-0"><div class="items-center flex-none hidden "><a href="/components" class="btn btn-ghost drawer-button normal-case"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="inline-block h-6 w-6 fill-current md:mr-2"><path d="M6.5,22 C4.01471863,22 2,19.9852814 2,17.5 C2,15.0147186 4.01471863,13 6.5,13 C8.98528137,13 11,15.0147186 11,17.5 C11,19.9852814 8.98528137,22 6.5,22 Z M17.5,22 C15.0147186,22 13,19.9852814 13,17.5 C13,15.0147186 15.0147186,13 17.5,13 C19.9852814,13 22,15.0147186 22,17.5 C22,19.9852814 19.9852814,22 17.5,22 Z M6.5,11 C4.01471863,11 2,8.98528137 2,6.5 C2,4.01471863 4.01471863,2 6.5,2 C8.98528137,2 11,4.01471863 11,6.5 C11,8.98528137 8.98528137,11 6.5,11 Z M17.5,11 C15.0147186,11 13,8.98528137 13,6.5 C13,4.01471863 15.0147186,2 17.5,2 C19.9852814,2 22,4.01471863 22,6.5 C22,8.98528137 19.9852814,11 17.5,11 Z M17.5,9 C18.8807119,9 20,7.88071187 20,6.5 C20,5.11928813 18.8807119,4 17.5,4 C16.1192881,4 15,5.11928813 15,6.5 C15,7.88071187 16.1192881,9 17.5,9 Z M6.5,9 C7.88071187,9 9,7.88071187 9,6.5 C9,5.11928813 7.88071187,4 6.5,4 C5.11928813,4 4,5.11928813 4,6.5 C4,7.88071187 5.11928813,9 6.5,9 Z M17.5,20 C18.8807119,20 20,18.8807119 20,17.5 C20,16.1192881 18.8807119,15 17.5,15 C16.1192881,15 15,16.1192881 15,17.5 C15,18.8807119 16.1192881,20 17.5,20 Z M6.5,20 C7.88071187,20 9,18.8807119 9,17.5 C9,16.1192881 7.88071187,15 6.5,15 C5.11928813,15 4,16.1192881 4,17.5 C4,18.8807119 5.11928813,20 6.5,20 Z"></path></svg>
+          Components
+        </a></div>
+      
+
+<div title="Change Theme" class="dropdown dropdown-end "><div tabindex="0" class="btn gap-2 normal-case btn-ghost"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+    <span class="hidden md:inline">Change Theme</span>
+    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" class="ml-1 inline-block h-4 w-4 fill-current"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path></svg></div>
+  <div class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-96 w-52 overflow-y-auto shadow-2xl mt-16"><ul class="menu menu-compact p-4" tabindex="0"><li><button data-set-theme="light" data-act-class="active" class="active">🌝  light</button></li>
+      <li><button data-set-theme="dark" data-act-class="active">🌚  dark</button></li>
+      <li><button data-set-theme="cupcake" data-act-class="active">🧁  cupcake</button></li>
+      <li><button data-set-theme="bumblebee" data-act-class="active">🐝  bumblebee</button></li>
+      <li><button data-set-theme="emerald" data-act-class="active">✳️  Emerald</button></li>
+      <li><button data-set-theme="corporate" data-act-class="active">🏢  Corporate</button></li>
+      <li><button data-set-theme="synthwave" data-act-class="active">🌃  synthwave</button></li>
+      <li><button data-set-theme="retro" data-act-class="active">👴  retro</button></li>
+      <li><button data-set-theme="cyberpunk" data-act-class="active">🤖  cyberpunk</button></li>
+      <li><button data-set-theme="valentine" data-act-class="active">🌸  valentine</button></li>
+      <li><button data-set-theme="halloween" data-act-class="active">🎃  halloween</button></li>
+      <li><button data-set-theme="garden" data-act-class="active">🌷  garden</button></li>
+      <li><button data-set-theme="forest" data-act-class="active">🌲  forest</button></li>
+      <li><button data-set-theme="aqua" data-act-class="active">🐟  aqua</button></li>
+      <li><button data-set-theme="lofi" data-act-class="active">👓  lofi</button></li>
+      <li><button data-set-theme="pastel" data-act-class="active">🖍  pastel</button></li>
+      <li><button data-set-theme="fantasy" data-act-class="active">🧚‍♀️  fantasy</button></li>
+      <li><button data-set-theme="wireframe" data-act-class="active">📝  Wireframe</button></li>
+      <li><button data-set-theme="black" data-act-class="active">🏴  black</button></li>
+      <li><button data-set-theme="luxury" data-act-class="active">💎  luxury</button></li>
+      <li><button data-set-theme="dracula" data-act-class="active">🧛‍♂️  dracula</button></li>
+      <li><button data-set-theme="cmyk" data-act-class="active">🖨  CMYK</button></li></ul></div></div>
+      <div title="Github ↗︎" class="flex-none items-center"><a aria-label="Github" target="_blank" href="https://github.com/saadeghi/daisyui" rel="noopener" class="btn btn-ghost drawer-button btn-square normal-case"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="inline-block h-5 w-5 fill-current md:h-6 md:w-6"><path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z"></path></svg></a></div></div></nav></div>
+    <div class="p-6 pb-16"><div class="flex justify-between gap-6"><div class="prose max-w-4xl flex-grow"><div class="mx-auto mb-6 flex h-[100px] w-[300px] items-center justify-center md:hidden">
+      <ins class="adsbygoogle" style="display:inline-block;width:300px;height:100px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="6427020085"></ins>
+      <script>;(adsbygoogle = window.adsbygoogle || []).push({})
+      </script></div>
+              <div class="md:flex mb-6 lg:hidden hidden justify-center h-[90px] w-[728px] items-center mx-auto">
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="1141251424"></ins>
+      <script>;(adsbygoogle = window.adsbygoogle || []).push({})
+      </script></div>
+              <div class="lg:flex mb-6 xl:hidden hidden justify-center h-[90px] w-[468px] items-center mx-auto">
+      <ins class="adsbygoogle" style="display:inline-block;width:468px;height:90px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="9789998609"></ins>
+      <script>;(adsbygoogle = window.adsbygoogle || []).push({})
+      </script></div>
+            <h1>Swap</h1>
+            <p>Swap allows you to toggle the visibility of two elements using a checkbox or a class name.</p>
+            <div class="not-prose mt-6 mb-10 overflow-x-auto"><table class="table w-full table-compact"><thead><tr><th class="normal-case">Class name</th>
+        <th class="normal-case">Type</th>
+        <th></th></tr></thead>
+    <tbody><tr><th class="font-normal"><span class="font-mono lowercase">swap</span></th>
+          <td><span class="badge w-20 badge-sm badge-ghost">Component</span>
+            
+            </td>
+          <td>Container element</td>
+        </tr><tr><th class="font-normal"><span class="font-mono lowercase">swap-on</span></th>
+          <td><span class="badge w-20 badge-sm badge-ghost">Component</span>
+            
+            </td>
+          <td>The child element that should be visible when checkbox is checked or when swap is active</td>
+        </tr><tr><th class="font-normal"><span class="font-mono lowercase">swap-off</span></th>
+          <td><span class="badge w-20 badge-sm badge-ghost">Component</span>
+            
+            </td>
+          <td>The child element that should be visible when checkbox is not checked or when swap is not active</td>
+        </tr><tr><th class="font-normal"><span class="font-mono lowercase">swap-indeterminate</span></th>
+          <td><span class="badge w-20 badge-sm badge-ghost">Component</span>
+            
+            </td>
+          <td>The child element that should be visible when checkbox is indeterminate</td>
+        </tr><tr><th class="font-normal"><span class="font-mono lowercase">swap-active</span></th>
+          <td>
+            <span class="badge w-20 badge-sm badge-info">Modifier</span>
+            </td>
+          <td>Activates the swap (no need for checkbox)</td>
+        </tr><tr><th class="font-normal"><span class="font-mono lowercase">swap-rotate</span></th>
+          <td>
+            <span class="badge w-20 badge-sm badge-info">Modifier</span>
+            </td>
+          <td>Adds rotate effect to swap</td>
+        </tr><tr><th class="font-normal"><span class="font-mono lowercase">swap-flip</span></th>
+          <td>
+            <span class="badge w-20 badge-sm badge-info">Modifier</span>
+            </td>
+          <td>Adds flip effect to swap</td>
+        </tr></tbody></table></div>
+<div class="component-preview not-prose my-4 max-w-4xl" id="swap-text"><div class="pb-2 text-sm font-bold"><a class="opacity-20 hover:opacity-60" href="#swap-text">#</a>
+      <span class="component-preview-title">Swap text</span></div>
+  
+  <div class="grid"><div class="tabs z-10 -mb-px"><button class="tab tab-lifted tab-active [--tab-bg:hsl(var(--b2))]">Preview</button>
+      <button class="tab tab-lifted ">HTML</button>
+      <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]"></div></div>
+
+    <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl"><div class="preview border-base-300 bg-base-200 flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top p-4 undefined" style="background-size: 5px 5px"><label class="swap"><input type="checkbox">
+  <div class="swap-on">ON</div>
+  <div class="swap-off">OFF</div></label></div></div>
+
+    </div>
+</div>
+<div class="component-preview not-prose my-4 max-w-4xl" id="swap-volume-icons"><div class="pb-2 text-sm font-bold"><a class="opacity-20 hover:opacity-60" href="#swap-volume-icons">#</a>
+      <span class="component-preview-title">Swap volume icons</span></div>
+  
+  <div class="grid"><div class="tabs z-10 -mb-px"><button class="tab tab-lifted tab-active [--tab-bg:hsl(var(--b2))]">Preview</button>
+      <button class="tab tab-lifted ">HTML</button>
+      <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]"></div></div>
+
+    <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl"><div class="preview border-base-300 bg-base-200 flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top p-4 undefined" style="background-size: 5px 5px"><label class="swap"><input type="checkbox">
+  <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"></path></svg>
+  <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z"></path></svg></label></div></div>
+
+    </div>
+</div>
+<div class="component-preview not-prose my-4 max-w-4xl" id="swap-icons-with-rotate-effect"><div class="pb-2 text-sm font-bold"><a class="opacity-20 hover:opacity-60" href="#swap-icons-with-rotate-effect">#</a>
+      <span class="component-preview-title">Swap icons with rotate effect</span></div>
+  
+  <div class="grid"><div class="tabs z-10 -mb-px"><button class="tab tab-lifted tab-active [--tab-bg:hsl(var(--b2))]">Preview</button>
+      <button class="tab tab-lifted ">HTML</button>
+      <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]"></div></div>
+
+    <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl"><div class="preview border-base-300 bg-base-200 flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top p-4 undefined" style="background-size: 5px 5px"><label class="swap swap-rotate"><input type="checkbox">
+  <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"></path></svg>
+  <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"></path></svg></label></div></div>
+
+    </div>
+</div>
+<div class="component-preview not-prose my-4 max-w-4xl" id="hamburger-button"><div class="pb-2 text-sm font-bold"><a class="opacity-20 hover:opacity-60" href="#hamburger-button">#</a>
+      <span class="component-preview-title">Hamburger button</span></div>
+  
+  <div class="grid"><div class="tabs z-10 -mb-px"><button class="tab tab-lifted tab-active [--tab-bg:hsl(var(--b2))]">Preview</button>
+      <button class="tab tab-lifted ">HTML</button>
+      <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]"></div></div>
+
+    <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl"><div class="preview border-base-300 bg-base-200 flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top p-4 undefined" style="background-size: 5px 5px"><label class="btn btn-circle swap swap-rotate"><input type="checkbox">
+  <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"></path></svg>
+  <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"></polygon></svg></label></div></div>
+
+    </div>
+</div>
+<div class="component-preview not-prose my-4 max-w-4xl" id="swap-icons-with-flip-effect"><div class="pb-2 text-sm font-bold"><a class="opacity-20 hover:opacity-60" href="#swap-icons-with-flip-effect">#</a>
+      <span class="component-preview-title">Swap icons with flip effect</span></div>
+  
+  <div class="grid"><div class="tabs z-10 -mb-px"><button class="tab tab-lifted tab-active [--tab-bg:hsl(var(--b2))]">Preview</button>
+      <button class="tab tab-lifted ">HTML</button>
+      <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]"></div></div>
+
+    <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl"><div class="preview border-base-300 bg-base-200 flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top p-4 undefined" style="background-size: 5px 5px"><label class="swap swap-flip text-9xl"><input type="checkbox">
+  <div class="swap-on">😈</div>
+  <div class="swap-off">😇</div></label></div></div>
+
+    </div>
+</div>
+<div class="component-preview not-prose my-4 max-w-4xl" id="activate-using-class-name-instead-of-checkbox"><div class="pb-2 text-sm font-bold"><a class="opacity-20 hover:opacity-60" href="#activate-using-class-name-instead-of-checkbox">#</a>
+      <span class="component-preview-title">Activate using class name instead of checkbox</span></div>
+  
+  <div class="grid"><div class="tabs z-10 -mb-px"><button class="tab tab-lifted tab-active [--tab-bg:hsl(var(--b2))]">Preview</button>
+      <button class="tab tab-lifted ">HTML</button>
+      <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]"></div></div>
+
+    <div class="bg-base-300 relative overflow-x-auto rounded-b-xl rounded-tr-xl"><div class="preview border-base-300 bg-base-200 flex min-h-[6rem] min-w-[24rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden rounded-b-xl rounded-tr-xl border bg-cover bg-top p-4 undefined" style="background-size: 5px 5px"><label class="swap text-6xl"><div class="swap-on">🥵</div>
+  <div class="swap-off">🥶</div></label>
+<label class="swap swap-active text-6xl"><div class="swap-on">🥳</div>
+  <div class="swap-off">😭</div></label></div></div>
+
+    </div>
+</div></div>
+          <div><div class="sticky top-24 mt-32"><div class="hidden h-[600px] w-[160px] items-center justify-center xl:flex 2xl:hidden mx-auto">
+      <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="8476916933"></ins>
+      <script>;(adsbygoogle = window.adsbygoogle || []).push({})
+      </script></div>
+                <div class="hidden h-[600px] w-[300px] items-center justify-center 2xl:flex mx-auto">
+      <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="7163835260"></ins>
+      <script>;(adsbygoogle = window.adsbygoogle || []).push({})
+      </script></div></div></div></div></div></div>
+  <div class="drawer-side"><label for="drawer" class="drawer-overlay"></label>
+    <aside class="bg-base-200 w-80"><div class="z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 px-4 py-2 hidden lg:flex "><a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost px-2"><div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl"><span class="lowercase">daisy</span>
+      <span class="text-base-content uppercase">UI</span></div></a>
+  <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50"><div data-tip="Changelog" class="tooltip tooltip-bottom">2.0.3</div></a></div>
+
+<div class="h-4"></div>
+
+<ul class="menu menu-compact flex flex-col p-0 px-4">
+    <li><a href="/docs/install" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Install<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/use" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Use<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/customize" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Customize components<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/config" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Config<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/docs/themes" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Themes<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/docs/colors" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19,11.5C19,11.5 17,13.67 17,15C17,16.1 17.9,17 19,17C20.1,17 21,16.1 21,15C21,13.67 19,11.5 19,11.5M5.21,10L10,5.21L14.79,10M16.56,8.94L7.62,0L6.21,1.41L8.59,3.79L3.44,8.94C2.85,9.5 2.85,10.47 3.44,11.06L8.94,16.56C9.23,16.85 9.62,17 10,17C10.38,17 10.77,16.85 11.06,16.56L16.56,11.06C17.15,10.47 17.15,9.5 16.56,8.94Z"/></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Colors<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/docs/layout-and-typography" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        "><span class="flex-none"><!-- HTML_TAG_START --><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M4,2 L20,2 C21.1045695,2 22,2.8954305 22,4 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 Z M4,4 L4,20 L20,20 L20,4 L4,4 Z M14.7999209,15 L9.19992091,15 L8,18 L6,18 L11,6 L13,6 L18,18 L16,18 L14.7999209,15 Z M13.9998682,13 L11.9997364,8 L9.99986818,13 L13.9998682,13 Z"/></svg><!-- HTML_TAG_END -->
+            </span>
+          <span class="flex-1"><!-- HTML_TAG_START -->Layout & Typography<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Actions</span></li>
+    <li><a href="/components/button" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Button<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/dropdown" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Dropdown<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/modal" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Modal<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/swap" class="flex gap-4 \n          \n          active\n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Swap<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">new</span></a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Data display</span></li>
+    <li><a href="/components/alert" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Alert<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/avatar" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Avatar<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/badge" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Badge<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/card" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Card<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/carousel" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Carousel<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/collapse" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Collapse<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/countdown" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Countdown<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/kbd" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Kbd<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/progress" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Progress<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/radial-progress" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Radial progress<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">new</span></a>
+      </li><li><a href="/components/stat" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Stat<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/table" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Table<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/tooltip" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Tooltip<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Data input</span></li>
+    <li><a href="/components/checkbox" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Checkbox<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/input" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Text input<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/radio" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Radio<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/range" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Range<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/rating" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Rating<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/select" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Select<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/textarea" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Textarea<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/toggle" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Toggle<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Layout</span></li>
+    <li><a href="/components/artboard" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Artboard<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/button-group" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Button group<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/divider" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Divider<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/drawer" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Drawer<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/footer" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Footer<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/hero" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Hero<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/indicator" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Indicator<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/input-group" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Input group<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">new</span></a>
+      </li><li><a href="/components/mask" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Mask<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/stack" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Stack<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Navigation</span></li>
+    <li><a href="/components/breadcrumbs" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Breadcrumbs<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/link" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Link<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/menu" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Menu<!-- HTML_TAG_END --></span>
+          <span class="badge badge-sm flex-none lowercase">updated</span></a>
+      </li><li><a href="/components/navbar" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Navbar<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/pagination" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Pagination<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/steps" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Steps<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/tab" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Tab<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul><ul class="menu menu-compact flex flex-col p-0 px-4"><li></li>
+      <li class="menu-title"><span>Mockup</span></li>
+    <li><a href="/components/mockup-code" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Code<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/mockup-phone" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Phone<!-- HTML_TAG_END --></span>
+          </a>
+      </li><li><a href="/components/mockup-window" class="flex gap-4 \n          \n          \n          sveltekit:prefetch\n        ">
+          <span class="flex-1"><!-- HTML_TAG_START -->Window<!-- HTML_TAG_END --></span>
+          </a>
+      </li>
+  </ul>
+      <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent"></div></aside></div></div>
+
+<input type="checkbox" id="my-modal" class="modal-toggle">
+<div class="modal"><div class="modal-box"><h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
+    <p class="py-4">You&#39;ve been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action"><label for="my-modal" class="btn">Yay!</label></div></div></div>
+
+<div class="modal" id="my-modal-2"><div class="modal-box"><h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
+    <p class="py-4">You&#39;ve been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action">
+      <a href="#" class="btn" rel="external">Yay!</a></div></div></div>
+
+
+
+
+  <noscript><iframe title="GTM" src="https://www.googletagmanager.com/ns.html?id=GTM-WJ8HL28" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+
+		<script type="module" data-hydrate="txik8n">
+		import { start } from "/_app/start-6e120569.js";
+		start({
+			target: document.querySelector('[data-hydrate="txik8n"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "always",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-620ac85d.js"),
+						import("/_app/pages/components/swap.svelte.md-3e2ad68e.js")
+				],
+				url: new URL("http://sveltekit-prerender/components/swap/"),
+				params: {}
+			}
+		});
+	</script><script type="application/json" data-type="svelte-data" data-url="/components/swap.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"title\":\"Swap\",\"desc\":\"Swap allows you to toggle the visibility of two elements using a checkbox or a class name.\",\"published\":true}"}</script>
+  </body>
+</html>
