@@ -13,16 +13,16 @@
     @apply bg-accent;
   }
   &-info::-moz-progress-bar {
-    @apply bg-info;
+    @apply bg-info-content;
   }
   &-success::-moz-progress-bar {
-    @apply bg-success;
+    @apply bg-success-content;
   }
   &-warning::-moz-progress-bar {
-    @apply bg-warning;
+    @apply bg-warning-content;
   }
   &-error::-moz-progress-bar {
-    @apply bg-error;
+    @apply bg-error-content;
   }
   &::-webkit-progress-bar {
     @apply bg-neutral bg-opacity-20 rounded-box;
@@ -40,15 +40,15 @@
     @apply bg-accent;
   }
   &-info::-webkit-progress-value {
-    @apply bg-info;
+    @apply bg-info-content;
   }
   &-success::-webkit-progress-value {
-    @apply bg-success;
+    @apply bg-success-content;
   }
   &-warning::-webkit-progress-value {
-    @apply bg-warning;
+    @apply bg-warning-content;
   }
   &-error::-webkit-progress-value {
-    @apply bg-error;
+    @apply bg-error-content;
   }
 }
