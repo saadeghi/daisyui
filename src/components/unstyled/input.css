@@ -1,9 +1,6 @@
 .input {
   @apply flex-shrink transition duration-200 ease-in-out;
   @apply h-12 px-4 text-sm leading-loose;
-  &:focus {
-    @apply outline-none;
-  }
 }
 .input-group {
   @apply flex w-full items-stretch;

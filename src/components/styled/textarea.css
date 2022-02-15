@@ -33,27 +33,27 @@
     }
   }
   &-info {
-    @apply border-info;
+    @apply border-info-content;
     &:focus {
-      outline: 2px solid hsl(var(--in));
+      outline: 2px solid hsl(var(--inc));
     }
   }
   &-success {
-    @apply border-success;
+    @apply border-success-content;
     &:focus {
-      outline: 2px solid hsl(var(--su));
+      outline: 2px solid hsl(var(--suc));
     }
   }
   &-warning {
-    @apply border-warning;
+    @apply border-warning-content;
     &:focus {
-      outline: 2px solid hsl(var(--wa));
+      outline: 2px solid hsl(var(--wac));
     }
   }
   &-error {
-    @apply border-error;
+    @apply border-error-content;
     &:focus {
-      outline: 2px solid hsl(var(--er));
+      outline: 2px solid hsl(var(--erc));
     }
   }
   &-disabled,
