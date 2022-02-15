@@ -12,10 +12,10 @@
 </script>
 
 <SEO title="daisyUI" desc="Tailwind Components Library - Free components for Tailwind CSS" />
-<div class="-mt-[4rem] flex flex-col items-center bg-gradient-to-br from-primary to-secondary pt-32 pb-48 text-primary-content">
+<div class="from-primary to-secondary text-primary-content -mt-[4rem] flex flex-col items-center bg-gradient-to-br pt-32 pb-48">
   <HomepageHero />
 </div>
-<div class="flex flex-col items-center gap-20 bg-base-200 py-20">
+<div class="bg-base-200 flex flex-col items-center gap-20 py-20">
   <HomepagePreview />
   <HomepageStats />
   <div class="flex w-full justify-center">

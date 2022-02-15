@@ -6,7 +6,7 @@
     "preview": "svelte-kit preview",
     "createStyleHandlerComponent:dev": "echo '<script>\n  import \"@components/StyleDevelopment.svelte\"\n</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>\n  import \"@components/StyleProduction.svelte\"\n</script>' > src/components/StyleHandler.svelte",
-    "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config ../.prettierrc --ignore-path ../.prettierignore",
+    "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config ../.prettierrc --ignore-path ../.prettierignore"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.28",

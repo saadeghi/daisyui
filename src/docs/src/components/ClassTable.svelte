@@ -3,7 +3,7 @@
 </script>
 
 <div class="not-prose mt-6 mb-10 overflow-x-auto">
-  <table class="table w-full table-compact">
+  <table class="table-compact table w-full">
     <thead>
       <tr>
         <th class="normal-case">Class name</th>
@@ -19,14 +19,14 @@
           </th>
           <td>
             {#if item.type == "component"}
-              <span class="badge w-20 badge-sm badge-ghost">Component</span>
+              <span class="badge badge-sm badge-ghost w-20">Component</span>
             {/if}
             {#if item.type == "modifier"}
-              <span class="badge w-20 badge-sm badge-info">Modifier</span>
+              <span class="badge badge-sm badge-info w-20">Modifier</span>
             {/if}
             {#if item.type == "responsive"}
               <div class="tooltip relative z-10" data-tip="Supports responsive prefixes (sm:, lg:, …)">
-                <span class="badge w-20 badge-sm badge-success">Responsive</span>
+                <span class="badge badge-sm badge-success w-20">Responsive</span>
               </div>
             {/if}
           </td>

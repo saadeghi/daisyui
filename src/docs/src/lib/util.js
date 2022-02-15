@@ -6,4 +6,3 @@ export const readEnv = (id, defaultValue = "") => {
   }
   return defaultValue
 }
-

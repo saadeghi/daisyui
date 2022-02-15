@@ -1,3 +1,3 @@
-/.svelte-kit
-/build
-/node_modules
+/docs/.svelte-kit
+/docs/build
+/docs/node_modules
