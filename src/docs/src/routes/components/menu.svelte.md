@@ -526,7 +526,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="With cusom color">
+<Component title="With custom color">
 <ul class="menu bg-base-100 w-56 bg-secondary text-secondary-content p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
