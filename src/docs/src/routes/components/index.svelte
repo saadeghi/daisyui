@@ -26,9 +26,9 @@
   </div>
   <div class="not-prose grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
     {#each posts as { slug, title, desc, thumbnail }}
-      <a class="card transition-all duration-200 card-compact hover:-translate-y-1 hover:bg-base-200" href={`${$page.url.pathname}/${slug}`}>
+      <a class="card card-compact hover:bg-base-200 transition-all duration-200 hover:-translate-y-1" href={`${$page.url.pathname.replace(/\/$/, "")}/${slug}`}>
         <figure class="px-4 pt-4">
-          <img src={thumbnail || `/images/components/${slug}.jpg`} class="rounded-lg border border-base-content border-opacity-5 bg-base-300" alt={title} />
+          <img src={thumbnail || `/images/components/${slug}.jpg`} class="border-base-content bg-base-300 rounded-lg border border-opacity-5" alt={title} />
         </figure>
         <div class="card-body">
           <h2 class="card-title">{title}</h2>

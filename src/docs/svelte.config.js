@@ -16,7 +16,7 @@ export default {
   ],
 
   kit: {
-    // trailingSlash: 'always',
+    trailingSlash: 'always',
     adapter: adapter({
       pages: "build",
       assets: "build",
