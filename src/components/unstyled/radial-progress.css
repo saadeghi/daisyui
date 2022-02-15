@@ -1,5 +1,5 @@
 .radial-progress {
-  @apply w-[var(--size)] bg-transparent rounded-full place-content-center inline-grid relative aspect-square h-auto;
+  @apply w-[var(--size)] h-[var(--size)] bg-transparent rounded-full place-content-center inline-grid relative h-auto;
   vertical-align: middle;
   box-sizing: content-box;
 }
