@@ -527,13 +527,13 @@ data="{[
 </Component>
 
 <Component title="With custom color">
-<ul class="menu bg-base-100 w-56 bg-secondary text-secondary-content p-2 rounded-box">
+<ul class="menu w-56 bg-secondary text-secondary-content p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
 <pre slot="html">{
-`<ul class="menu bg-base-100 w-56 bg-secondary text-secondary-content p-2 rounded-box">
+`<ul class="menu w-56 bg-secondary text-secondary-content p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
