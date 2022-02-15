@@ -21,7 +21,7 @@
         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </label>
       <div class={`flex items-center gap-2 ${$page.url.pathname == "/" ? "" : "lg:hidden"}`}>
-        <a href="/" aria-current="page" aria-label="Homepage" class={`flex-0 btn btn-ghost active nuxt-link-active px-2 ${switchNavbarStyle || $page.url.pathname != "/" ? "" : "hidden"}`}>
+        <a href="/" aria-current="page" aria-label="Homepage" class={`flex-0 btn btn-ghost px-2 ${switchNavbarStyle || $page.url.pathname != "/" ? "" : "hidden"}`}>
           <div class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
             <span class={`lowercase ${switchNavbarStyle || $page.url.pathname != "/" ? "text-primary" : "text-primary-content"}`}>daisy</span>
             <span class={`uppercase ${switchNavbarStyle || $page.url.pathname != "/" ? "text-base-content" : "text-primary-content"}`}>UI</span>
