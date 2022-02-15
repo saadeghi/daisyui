@@ -47,7 +47,7 @@
   "devDependencies": {
     "autoprefixer": "10.0.4",
     "postcss": "8.1.10",
-    "postcss-clean": "^1.2.2",
+    "postcss-clean": "1.2.2",
     "postcss-cli": "8.3.0",
     "postcss-import": "13.0.0",
     "postcss-nested": "5.0.1",
