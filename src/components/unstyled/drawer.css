@@ -20,7 +20,6 @@
   @apply absolute h-0 w-0 appearance-none opacity-0;
   & ~ .drawer-content {
     @apply z-0 col-start-1 row-start-1 max-h-screen overflow-y-auto;
-    overscroll-behavior: contain;
   }
   & ~ .drawer-side {
     @apply col-start-1 row-start-1 grid max-h-screen;
