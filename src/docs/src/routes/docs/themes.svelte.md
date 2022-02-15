@@ -128,8 +128,6 @@ module.exports = {
 }
 ```
 
-<div class="alert alert-info max-w-3xl">Currently only hex colors are supported.</div>
-
 ## How to customize an existing theme?
 
 In your tailwind.config.js, you can require an existing daisyUI theme and override its colors.  
