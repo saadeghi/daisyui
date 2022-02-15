@@ -26,8 +26,7 @@
 
   import { page } from "$app/stores"
 
-  import "@components/StyleProduction.svelte"
-  // import "@components/StyleDevelopment.svelte"
+  import "@components/StyleHandler.svelte"
 
   import "prism-themes/themes/prism-material-dark.css"
   import "@src/prism-themes-modify.css"
