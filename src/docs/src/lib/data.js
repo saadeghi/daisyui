@@ -51,7 +51,7 @@ export let menu = [
       },
       {
         name: "Colors",
-        tags: "colors",
+        tags: "colors 🎨",
         href: "/docs/colors",
         icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19,11.5C19,11.5 17,13.67 17,15C17,16.1 17.9,17 19,17C20.1,17 21,16.1 21,15C21,13.67 19,11.5 19,11.5M5.21,10L10,5.21L14.79,10M16.56,8.94L7.62,0L6.21,1.41L8.59,3.79L3.44,8.94C2.85,9.5 2.85,10.47 3.44,11.06L8.94,16.56C9.23,16.85 9.62,17 10,17C10.38,17 10.77,16.85 11.06,16.56L16.56,11.06C17.15,10.47 17.15,9.5 16.56,8.94Z"/></svg>',
         badge: "updated",
@@ -70,7 +70,7 @@ export let menu = [
     items: [
       {
         name: "Button",
-        tags: "button btn",
+        tags: "button btn 🍑",
         href: "/components/button",
         icon: "",
         badge: "",
@@ -152,7 +152,7 @@ export let menu = [
       },
       {
         name: "Kbd",
-        tags: "kbd keyboard",
+        tags: "kbd keyboard ⌨️",
         href: "/components/kbd",
         icon: "",
         badge: "",
@@ -199,7 +199,7 @@ export let menu = [
     items: [
       {
         name: "Checkbox",
-        tags: "checkbox",
+        tags: "checkbox ✅",
         href: "/components/checkbox",
         icon: "",
         badge: "",
@@ -288,7 +288,7 @@ export let menu = [
       },
       {
         name: "Footer",
-        tags: "footer",
+        tags: "footer 🦶",
         href: "/components/footer",
         icon: "",
         badge: "",
@@ -316,7 +316,7 @@ export let menu = [
       },
       {
         name: "Mask",
-        tags: "mask crop",
+        tags: "mask crop 😷",
         href: "/components/mask",
         icon: "",
         badge: "updated",
@@ -342,7 +342,7 @@ export let menu = [
       },
       {
         name: "Link",
-        tags: "link href anchor",
+        tags: "link href anchor 🔗",
         href: "/components/link",
         icon: "",
         badge: "",
@@ -396,14 +396,14 @@ export let menu = [
       },
       {
         name: "Phone",
-        tags: "mockup iphone",
+        tags: "mockup iphone 📱",
         href: "/components/mockup-phone",
         icon: "",
         badge: "",
       },
       {
         name: "Window",
-        tags: "mockup window",
+        tags: "mockup window 🪟",
         href: "/components/mockup-window",
         icon: "",
         badge: "",
