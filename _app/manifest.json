@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-8bb11c0c.js",
+    "file": "start-d3084bcc.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -107,17 +107,17 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-6adc7c04.js",
+    "file": "pages/__layout.svelte-c3316dd7.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-0fe584ed.js",
       "_stores-0e553b2c.js",
-      "_util-45cc3a5d.js",
+      "_util-ea289d02.js",
       "_ThemeChange-c8af5030.js",
       "_singletons-a6a7384f.js",
-      "_SEO-320e3ae3.js"
+      "_SEO-f686b481.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-2f5ef829.css"
@@ -133,14 +133,14 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-99b2c6fc.js",
+    "file": "pages/index.svelte-22b52fdf.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-0fe584ed.js",
-      "_SEO-320e3ae3.js",
-      "_util-45cc3a5d.js"
+      "_SEO-f686b481.js",
+      "_util-ea289d02.js"
     ]
   },
   "src/routes/tailwindplay.svelte": {
@@ -153,15 +153,15 @@
     ]
   },
   "src/routes/components/index.svelte": {
-    "file": "pages/components/index.svelte-ec0b7de5.js",
+    "file": "pages/components/index.svelte-2d13a195.js",
     "src": "src/routes/components/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-0fe584ed.js",
       "_stores-0e553b2c.js",
-      "_SEO-320e3ae3.js",
-      "_util-45cc3a5d.js"
+      "_SEO-f686b481.js",
+      "_util-ea289d02.js"
     ]
   },
   "src/routes/components/radial-progress.svelte.md": {
@@ -869,15 +869,15 @@
     ]
   },
   "src/routes/docs/index.svelte": {
-    "file": "pages/docs/index.svelte-429c88b9.js",
+    "file": "pages/docs/index.svelte-7b082759.js",
     "src": "src/routes/docs/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-0fe584ed.js",
       "_stores-0e553b2c.js",
-      "_SEO-320e3ae3.js",
-      "_util-45cc3a5d.js"
+      "_SEO-f686b481.js",
+      "_util-ea289d02.js"
     ]
   },
   "src/routes/docs/layout-and-typography.svelte.md": {
@@ -929,13 +929,13 @@
     ]
   },
   "src/routes/docs/tachyons.svelte.md": {
-    "file": "pages/docs/tachyons.svelte.md-45f3f9ae.js",
+    "file": "pages/docs/tachyons.svelte.md-5c8e9142.js",
     "src": "src/routes/docs/tachyons.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-0fe584ed.js",
-      "_util-45cc3a5d.js"
+      "_util-ea289d02.js"
     ]
   },
   "src/routes/docs/windicss.svelte.md": {
@@ -948,13 +948,13 @@
     ]
   },
   "src/routes/docs/basscss.svelte.md": {
-    "file": "pages/docs/basscss.svelte.md-dd6b9db5.js",
+    "file": "pages/docs/basscss.svelte.md-c9166431.js",
     "src": "src/routes/docs/basscss.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-0fe584ed.js",
-      "_util-45cc3a5d.js"
+      "_util-ea289d02.js"
     ]
   },
   "src/routes/docs/install/__layout.reset.svelte": {
@@ -1061,13 +1061,13 @@
     ]
   },
   "src/routes/docs/cdn.svelte.md": {
-    "file": "pages/docs/cdn.svelte.md-569665c2.js",
+    "file": "pages/docs/cdn.svelte.md-197bf10c.js",
     "src": "src/routes/docs/cdn.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-0fe584ed.js",
-      "_util-45cc3a5d.js",
+      "_util-ea289d02.js",
       "_InstallTabs-6b1775dc.js",
       "_stores-0e553b2c.js"
     ]
@@ -1099,15 +1099,15 @@
       "_vendor-0fe584ed.js"
     ]
   },
-  "_SEO-320e3ae3.js": {
-    "file": "chunks/SEO-320e3ae3.js",
+  "_SEO-f686b481.js": {
+    "file": "chunks/SEO-f686b481.js",
     "imports": [
       "_vendor-0fe584ed.js",
-      "_util-45cc3a5d.js"
+      "_util-ea289d02.js"
     ]
   },
-  "_util-45cc3a5d.js": {
-    "file": "chunks/util-45cc3a5d.js"
+  "_util-ea289d02.js": {
+    "file": "chunks/util-ea289d02.js"
   },
   "_ThemeChange-c8af5030.js": {
     "file": "chunks/ThemeChange-c8af5030.js",
