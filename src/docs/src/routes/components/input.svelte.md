@@ -14,7 +14,6 @@ data="{[
   { type:'component', class: 'form-control', desc: 'Container element' },
   { type:'component', class: 'label', desc: 'For helper text' },
   { type:'component', class: 'input', desc: 'For <input> element' },
-  { type:'component', class: 'input-group', desc: 'Wrapper to groups input and span together' },
   { type:'modifier', class: 'input-bordered', desc: 'Adds border to input' },
   { type:'modifier', class: 'input-ghost', desc: 'Adds ghost style to checkbox' },
   { type:'modifier', class: 'input-primary', desc: 'Adds `primary` color to input' },
