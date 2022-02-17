@@ -1,0 +1,1 @@
+import{S as s,i as n,s as o,v as a}from"../../chunks/vendor-0fe584ed.js";async function c(){return{status:302,redirect:"/docs/themes"}}function r(e){return a(()=>{window.location.href="/docs/themes"}),[]}class i extends s{constructor(t){super();n(this,t,r,null,o,{})}}export{i as default,c as load};

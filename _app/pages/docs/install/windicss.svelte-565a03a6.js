@@ -1,1 +1,0 @@
-import{S as t,i as o,s as e,v as i}from"../../../chunks/vendor-6c3f1da5.js";async function r(){return{status:302,redirect:"/docs/windicss"}}function a(s){return i(()=>{window.location.href="/docs/windicss"}),[]}class u extends t{constructor(n){super();o(this,n,a,null,e,{})}}export{u as default,r as load};
