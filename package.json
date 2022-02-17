@@ -44,16 +44,6 @@
       "master"
     ]
   },
-  "devDependencies": {
-    "autoprefixer": "10.0.4",
-    "postcss": "8.1.10",
-    "postcss-clean": "1.2.2",
-    "postcss-cli": "8.3.0",
-    "postcss-import": "13.0.0",
-    "postcss-nested": "5.0.1",
-    "prejss-cli": "0.3.3",
-    "rtlcss": "3.0.0"
-  },
   "scripts": {
     "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
     "base": "cat dist/base/*.css > dist/base.css",
@@ -81,8 +71,22 @@
     "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
     "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css"
   },
+  "devDependencies": {
+    "autoprefixer": "10.0.4",
+    "postcss": "8.1.10",
+    "postcss-clean": "1.2.2",
+    "postcss-cli": "8.3.0",
+    "postcss-import": "13.0.0",
+    "postcss-nested": "5.0.1",
+    "prejss-cli": "0.3.3",
+    "rtlcss": "3.0.0"
+  },
   "dependencies": {
     "color": "^4.2",
     "tailwindcss": "^3.0"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.0.9"
   }
 }
