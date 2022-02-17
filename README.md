@@ -45,7 +45,7 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 - **RTL supported**  
   Enable `rtl` config for right to left layouts.
 - **Pure CSS**  
-  No script file, no dependencies. Works on all frameworks and environments!
+  No script file. Pure CSS. Works on all frameworks!
 
 </details>
 
@@ -71,19 +71,11 @@ module.exports = {
   Or use a CDN
 </summary>
 
-Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.\*
+Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.
 
 ```html
-<link
-  href="https://cdn.jsdelivr.net/npm/daisyui@2.0.9/dist/full.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-<link
-  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
-  rel="stylesheet"
-  type="text/css"
-/>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.0.9/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 ```
 
 </details>
