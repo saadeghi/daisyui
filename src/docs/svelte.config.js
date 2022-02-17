@@ -36,6 +36,9 @@ export default {
           "@components": path.resolve("./src/components"),
         },
       },
+      optimizeDeps: {
+        include: ["fuzzy"],
+      },
     },
   },
 }

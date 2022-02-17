@@ -85,7 +85,7 @@ data="{[
 </Component>
 
 <Component title="Large text with labels">
-<div class="grid grid-flow-col gap-5 place-items-end auto-cols-max">
+<div class="flex gap-5">
   <div>
     <span class="font-mono text-4xl countdown">
       <span style="--value:15;"></span>
@@ -112,7 +112,7 @@ data="{[
   </div>
 </div>
 <pre slot="html">{
-`<div class="grid grid-flow-col gap-5 place-items-end auto-cols-max">
+`<div class="flex gap-5">
   <div>
     <span class="font-mono text-4xl countdown">
       <span style="--value:15;"></span>

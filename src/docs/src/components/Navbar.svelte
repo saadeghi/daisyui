@@ -2,6 +2,7 @@
   import { page } from "$app/stores"
   import { readEnv } from "$lib/util"
   import ThemeChange from "@components/ThemeChange.svelte"
+  import Search from "@components/Search.svelte"
 
   let version = readEnv("VITE_DAISYUI_VERSION", "latest")
 
@@ -32,6 +33,9 @@
             {version}
           </div>
         </a>
+      </div>
+      <div class="hidden w-full max-w-sm lg:flex">
+        <Search />
       </div>
     </div>
     <div class="flex-0">

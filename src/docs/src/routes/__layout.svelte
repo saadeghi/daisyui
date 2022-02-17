@@ -75,7 +75,7 @@
     <div class={`${post ? "p-6 pb-16" : ""}`}>
       {#if post && $page.url.pathname != "/components/"}
         <div class="flex justify-between gap-6">
-          <div class="prose max-w-4xl flex-grow">
+          <div class="prose w-full max-w-4xl flex-grow">
             {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
               <Ads size={1} />
               <Ads size={2} />

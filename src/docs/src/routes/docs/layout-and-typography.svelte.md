@@ -27,7 +27,7 @@ daisyUI adds some style to @tailwindcss/typography so it will use the same theme
 <div class="alert alert-info max-w-3xl text-sm">
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-    Make sure you require <span class="badge badge-outline">daisyui</span> AFTER <span class="badge badge-outline">@tailwindcss/typography</span> in tailwind.config.js
+    <p>Make sure you require <span class="badge badge-outline">daisyui</span> AFTER <span class="badge badge-outline">@tailwindcss/typography</span> in tailwind.config.js</p>
   </div>
 </div>
 

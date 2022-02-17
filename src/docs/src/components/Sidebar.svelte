@@ -2,6 +2,8 @@
   import { page } from "$app/stores"
   import { menu } from "@src/lib/data.js"
   import { readEnv } from "$lib/util"
+  import Search from "@components/Search.svelte"
+
   export let closeDrawer
 
   let version = readEnv("VITE_DAISYUI_VERSION", "latest")
@@ -22,6 +24,12 @@
       {version}
     </div>
   </a>
+</div>
+
+<div class={`bg-base-200 sticky top-0 z-10 flex w-full bg-opacity-90 py-3 px-2 backdrop-blur lg:hidden ${switchNavbarStyle ? "shadow-sm" : ""}`}>
+  <div class="flex w-full lg:hidden">
+    <Search />
+  </div>
 </div>
 
 <div class="h-4" />
