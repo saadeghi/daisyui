@@ -27,6 +27,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Breaking Changes
 
+* 🆕 Tailwind CSS 3.0 is now a dependency
 * 🎨 Improvements applied to the value of following colors on daisyUI default themes. Below colors got lighter on light themes and they got darker on dark themes (due to adding new `*-content` color names)
   - `info`
   - `success`
