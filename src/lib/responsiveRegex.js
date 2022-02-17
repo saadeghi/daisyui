@@ -1,0 +1,1 @@
+module.exports = { pattern: /.(sm|md|lg|xl)/, variants: ["sm", "md", "lg", "xl"] };

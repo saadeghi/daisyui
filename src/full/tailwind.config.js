@@ -1,14 +1,12 @@
 const plugin = require("tailwindcss/plugin");
+const responsiveRegex = require("../lib/responsiveRegex");
 module.exports = {
   content: [
     { raw: '' },
   ],
   safelist: [
     { pattern: /.*/ },
-    { pattern: /.sm/, variants: ["sm"] },
-    { pattern: /.md/, variants: ["md"] },
-    { pattern: /.lg/, variants: ["lg"] },
-    { pattern: /.xl/, variants: ["xl"] },
+    responsiveRegex,
   ],
   theme: {
     colors: require("../colors"),
