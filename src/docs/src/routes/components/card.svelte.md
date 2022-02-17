@@ -60,7 +60,7 @@ data="{[
   </div>
 </div>
 <pre slot="html">{
-`<div class="card w-96 bg-base-100 shadow-xl">
+`<div class="card w-96 bg-base-100 card-compact shadow-xl">
   <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
