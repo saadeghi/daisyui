@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  import { menu } from "@src/lib/data.js"
+  import { pages } from "@src/lib/data.js"
   import { readEnv } from "$lib/util"
   import Search from "@components/Search.svelte"
 
@@ -34,36 +34,38 @@
 
 <div class="h-4" />
 
-{#each menu as { name, items }}
+{#each pages as { name, items }}
   <ul class="menu menu-compact flex flex-col p-0 px-4">
     {#if name}
       <li />
       <li class="menu-title"><span>{name}</span></li>
     {/if}
-    {#each items as { name, href, icon, badge }}
-      <li>
-        <a
-          {href}
-          on:click={closeDrawer}
-          class={`flex gap-4 
-          ${$page.url.pathname == href ? "active" : ""}
-          ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}
-          sveltekit:prefetch
-        `}
-        >
-          {#if icon != ""}
-            <span class="flex-none">
-              {@html icon}
+    {#if name != "excluded"}
+      {#each items as { name, href, icon, badge }}
+        <li>
+          <a
+            {href}
+            on:click={closeDrawer}
+            class={`flex gap-4 
+            ${$page.url.pathname == href ? "active" : ""}
+            ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}
+            sveltekit:prefetch
+          `}
+          >
+            {#if icon != ""}
+              <span class="flex-none">
+                {@html icon}
+              </span>
+            {/if}
+            <span class="flex-1">
+              {@html name}
             </span>
-          {/if}
-          <span class="flex-1">
-            {@html name}
-          </span>
-          {#if badge != ""}
-            <span class="badge badge-sm flex-none lowercase">{badge}</span>
-          {/if}
-        </a>
-      </li>
-    {/each}
+            {#if badge != ""}
+              <span class="badge badge-sm flex-none lowercase">{badge}</span>
+            {/if}
+          </a>
+        </li>
+      {/each}
+    {/if}
   </ul>
 {/each}

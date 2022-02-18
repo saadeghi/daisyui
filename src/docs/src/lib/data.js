@@ -11,7 +11,7 @@ export let siteData = {
   card: "/images/default.jpg",
 }
 
-export let menu = [
+export let pages = [
   {
     items: [
       {
@@ -410,4 +410,23 @@ export let menu = [
       },
     ],
   },
+  {
+    name: "excluded",
+    items: [
+      {
+        name: "Codepen example page",
+        tags: "codepen",
+        href: "/codepen",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Tailwind Play example page",
+        tags: "tailwind play",
+        href: "/tailwindplay",
+        icon: "",
+        badge: "",
+      },
+    ]
+  }
 ]

@@ -3,10 +3,10 @@
   import { goto } from "$app/navigation"
   import Typeahead from "svelte-typeahead"
 
-  import { menu } from "@src/lib/data.js"
+  import { pages } from "@src/lib/data.js"
 
   let searchIndex = []
-  menu.forEach((group) => {
+  pages.forEach((group) => {
     group.items.forEach((item) => {
       searchIndex.push(item)
     })
