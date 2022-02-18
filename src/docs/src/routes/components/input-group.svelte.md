@@ -16,7 +16,7 @@ data="{[
   { type:'modifier', class: 'input-group-md', desc: 'Medium (default) size for input-group wrapper' },
   { type:'modifier', class: 'input-group-sm', desc: 'Small size for input-group wrapper' },
   { type:'modifier', class: 'input-group-xs', desc: 'Extra small size for input-group wrapper' },
-  { type:'modifier', class: 'input-group-vertical', desc: 'Vertical dirction for input-group items' },
+  { type:'modifier', class: 'input-group-vertical', desc: 'Vertical direction for input-group items' },
 ]}"
 />
 

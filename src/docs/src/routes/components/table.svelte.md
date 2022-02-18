@@ -801,7 +801,7 @@ data="{[
       <tr>
         <th>20</th> 
         <td>Lorelei Blackstone</td> 
-        <td>Data Coordiator</td> 
+        <td>Data Coordinator</td> 
         <td>Witting, Kutch and Greenfelder</td> 
         <td>Kazakhstan</td> 
         <td>6/3/2020</td> 

@@ -19,7 +19,7 @@ data="{[
 />
 
 <Component title="Navbar with title only">
-<div class="navbar bg-base-100 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 shadow-xl rounded-box">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>
 <pre slot="html">{
@@ -30,7 +30,7 @@ data="{[
 </Component>
 
 <Component title="Navbar with title and icon">
-<div class="navbar bg-base-100 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 shadow-xl rounded-box">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
   </div>
@@ -55,7 +55,7 @@ data="{[
 </Component>
 
 <Component title="Navbar with icon at start and end">
-<div class="navbar bg-base-100 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 shadow-xl rounded-box">
   <div class="flex-none">
     <button class="btn btn-square btn-ghost">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -90,7 +90,7 @@ data="{[
 </Component>
 
 <Component title="Navbar with menu and submenu">
-<div class="navbar bg-base-100 mb-32 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 mb-32 shadow-xl rounded-box">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
   </div>
@@ -102,7 +102,7 @@ data="{[
           Parent
           <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul class="p-2">
+        <ul class="p-2 bg-base-100">
           <li><a>Submenu 1</a></li>
           <li><a>Submenu 2</a></li>
         </ul>
@@ -124,7 +124,7 @@ data="{[
           Parent
           <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul class="p-2">
+        <ul class="p-2 bg-base-100">
           <li><a>Submenu 1</a></li>
           <li><a>Submenu 2</a></li>
         </ul>
@@ -137,7 +137,7 @@ data="{[
 </Component>
 
 <Component title="Navbar with search input and dropdown">
-<div class="navbar bg-base-100 mb-32 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 mb-32 shadow-xl rounded-box">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
   </div>
@@ -196,7 +196,7 @@ data="{[
 </Component>
 
 <Component title="Navbar with icon, indicator and dropdown">
-<div class="navbar bg-base-100 mb-40 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
   </div>
@@ -238,7 +238,7 @@ data="{[
   </div>
 </div>
 <pre slot="html">{
-`<div class="navbar bg-base-100 mb-40 shadow-xl rounded-xl">
+`<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
   </div>
@@ -283,7 +283,7 @@ data="{[
 </Component>
 
 <Component title="Navbar with dropdown, center logo and icon">
-<div class="navbar bg-base-100 mb-40 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -312,7 +312,7 @@ data="{[
   </div>
 </div>
 <pre slot="html">{
-`<div class="navbar bg-base-100 mb-40 shadow-xl rounded-xl">
+`<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
   <div class="navbar-start">
     <div class="dropdown">
       <label class="btn btn-ghost btn-circle">
@@ -344,7 +344,7 @@ data="{[
 </Component>
 
 <Component title="responsive (dropdown menu on small screen, center menu on large screen)" desc="Resize screen to see changes">
-<div class="navbar bg-base-100 mb-32 shadow-xl rounded-xl">
+<div class="navbar bg-base-100 mb-32 shadow-xl rounded-box">
   <div class="navbar-start">
     <div class="dropdown">
       <label class="btn btn-ghost lg:hidden">
@@ -357,7 +357,7 @@ data="{[
             Parent
             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
           </a>
-          <ul class="p-2">
+          <ul class="p-2 bg-base-100">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
@@ -375,7 +375,7 @@ data="{[
           Parent
           <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul class="p-2">
+        <ul class="p-2 bg-base-100">
           <li><a>Submenu 1</a></li>
           <li><a>Submenu 2</a></li>
         </ul>
@@ -435,13 +435,13 @@ data="{[
 </Component>
 
 <Component title="Navbar with colors">
-<div class="navbar bg-neutral text-neutral-content shadow-xl rounded-xl">
+<div class="navbar bg-neutral text-neutral-content shadow-xl rounded-box">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>
-<div class="navbar bg-base-300 shadow-xl rounded-xl">
+<div class="navbar bg-base-300 shadow-xl rounded-box">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>
-<div class="navbar bg-primary text-primary-content shadow-xl rounded-xl">
+<div class="navbar bg-primary text-primary-content shadow-xl rounded-box">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>
 <pre slot="html">{

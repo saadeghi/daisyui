@@ -20,7 +20,7 @@ published: true
         Warning
       </div>
       <div class="text-sm">
-        CDN files are not reecommended for production <br/>because you can't purge unused styles and file size will be large.
+        CDN files are not recommended for production <br/>because you can't purge unused styles and file size will be large.
       </div>
     </div>
   </div>

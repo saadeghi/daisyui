@@ -68,7 +68,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="With lable and form-control and custom colors!">
+<Component title="With label and form-control and custom colors!">
 <div class="flex flex-col">
   <div class="form-control w-52">
     <label class="cursor-pointer label">

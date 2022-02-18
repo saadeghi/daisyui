@@ -252,7 +252,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Avatar with presense indicator">
+<Component title="Avatar with presence indicator">
 <div class="avatar online">
   <div class="w-24 rounded-full bg-base-300">
     <img src="https://api.lorem.space/image/face?hash=67053" alt="Tailwind-CSS-Avatar-component">

@@ -19,7 +19,7 @@ data="{[
   { type:'modifier', class: 'tabs-boxed', desc: 'Adds a box style to tabs container' },
   { type:'responsive', class: 'tab-xs', desc: 'Shows tab in extra small size' },
   { type:'responsive', class: 'tab-sm', desc: 'Shows tab in small size' },
-  { type:'responsive', class: 'tab-md', desc: 'Shows tab in medium (defaul) size' },
+  { type:'responsive', class: 'tab-md', desc: 'Shows tab in medium (default) size' },
   { type:'responsive', class: 'tab-lg', desc: 'Shows tab in large size' },
 ]}"
 />

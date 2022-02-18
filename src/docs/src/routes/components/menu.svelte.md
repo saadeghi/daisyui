@@ -16,7 +16,7 @@ data="{[
   { type:'responsive', class: 'menu-normal', desc: 'Normal text size and normal spacing (default)' },
   { type:'responsive', class: 'menu-compact', desc: 'Smaller text size and compact spacing' },
   { type:'responsive', class: 'menu-vertical', desc: 'Vertical menu (default)' },
-  { type:'responsive', class: 'menu-horizontal', desc: 'Horisontal menu' }
+  { type:'responsive', class: 'menu-horizontal', desc: 'Horizontal menu' }
 ]}"
 />
 

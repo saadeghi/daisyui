@@ -16,7 +16,7 @@ To change the thickness, use `--thickness` CSS variable which is 10% of the size
 <div class="alert alert-info text-sm">
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-    For radial progress we use &lt;div&gt; instead of &lt;progress&gt; tag because Browsers are unable to show the text inside &lt;progress&gt; tag and Firefox doesn't show the pesudo elements inside &lt;progress&gt; bar at all.
+    For radial progress we use &lt;div&gt; instead of &lt;progress&gt; tag because Browsers are unable to show the text inside &lt;progress&gt; tag and Firefox doesn't show the pseudo elements inside &lt;progress&gt; bar at all.
   </div>
 </div>
 

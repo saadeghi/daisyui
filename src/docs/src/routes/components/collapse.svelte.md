@@ -13,7 +13,7 @@ published: true
 data="{[
   { type:'component', class: 'collapse', desc: 'Container element' },
   { type:'component', class: 'collapse-title', desc: 'Title element' },
-  { type:'component', class: 'collapse-content', desc: 'Cointainer for content' },
+  { type:'component', class: 'collapse-content', desc: 'Container for content' },
   { type:'modifier', class: 'collapse-arrow', desc: 'Adds arrow icon' },
   { type:'modifier', class: 'collapse-plus', desc: 'Adds plus/minus icon' },
   { type:'modifier', class: 'collapse-open', desc: 'Force open' },

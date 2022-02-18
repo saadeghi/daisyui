@@ -1,6 +1,6 @@
 ---
 title: Checkbox
-desc: Checkboxs are used to select or deselect a value.
+desc: Checkboxes are used to select or deselect a value.
 published: true
 ---
 
@@ -30,7 +30,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="With lable and form-control">
+<Component title="With label and form-control">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 

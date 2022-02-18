@@ -12,7 +12,7 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'indicator', desc: 'Container element' },
-  { type:'component', class: 'indicator-item', desc: 'will be placed on the corner of sibiling' },
+  { type:'component', class: 'indicator-item', desc: 'will be placed on the corner of sibling' },
   { type:'modifier', class: 'indicator-start', desc: 'align horizontally to the left' },
   { type:'modifier', class: 'indicator-center', desc: 'align horizontally to the center' },
   { type:'modifier', class: 'indicator-end', desc: 'align horizontally to the right (default)' },
@@ -277,7 +277,7 @@ data="{[
   <span class="indicator-item indicator-middle indicator-start badge badge-secondary">middle+start</span>
   <span class="indicator-item indicator-middle indicator-center badge badge-secondary">middle+center</span>
   <span class="indicator-item indicator-middle indicator-end badge badge-secondary">middle+end</span>
-  <span class="indicator-item indicator-bottom indicator-start badge badge-secondary">bott0m+strt</span>
+  <span class="indicator-item indicator-bottom indicator-start badge badge-secondary">bottom+start</span>
   <span class="indicator-item indicator-bottom indicator-center badge badge-secondary">bottom+center</span>
   <span class="indicator-item indicator-bottom indicator-end badge badge-secondary">bottom+end</span>
   <div class="grid w-60 h-32 bg-base-300 place-items-center">content</div>

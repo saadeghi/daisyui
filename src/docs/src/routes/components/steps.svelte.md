@@ -116,7 +116,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Wtih scrollable wrapper">
+<Component title="With scrollable wrapper">
 <div class="overflow-x-auto">
   <ul class="steps">
     <li class="step">start</li>
