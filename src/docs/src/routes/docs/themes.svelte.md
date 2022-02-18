@@ -134,7 +134,7 @@ In your tailwind.config.js, you can require an existing daisyUI theme and overri
 In below example, I get `dark` theme and change its `primary` and `primary-focus` colors to red:
 
 ```js
-const { "[data-theme=dark]": darkTheme } = require("daisyui/colors/themes")
+const { "[data-theme=dark]": darkTheme } = require("daisyui/src/colors/themes")
 
 module.exports = {
   //...
