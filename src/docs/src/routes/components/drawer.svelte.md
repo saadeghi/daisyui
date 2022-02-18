@@ -121,7 +121,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
       </div> 
       <div class="flex-1 px-2 mx-2">Navbar Title</div>
       <div class="flex-none hidden lg:block">
-        <ul class="menu horizontal">
+        <ul class="menu menu-horizontal">
           <li><a>Navbar Item 1</a></li>
           <li><a>Navbar Item 2</a></li>
         </ul>
@@ -150,7 +150,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
       </div> 
       <div class="flex-1 px-2 mx-2">Navbar Title</div>
       <div class="flex-none hidden lg:block">
-        <ul class="menu horizontal">
+        <ul class="menu menu-horizontal">
           <!-- Navbar menu content here -->
           <li><a>Navbar Item 1</a></li>
           <li><a>Navbar Item 2</a></li>
