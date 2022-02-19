@@ -167,51 +167,32 @@ module.exports = {
 }
 ```
 
-## Custom CSS in daisyUI themes
+## Custom CSS for a daisyUI theme
 
-You can use any custom CSS in daisyUI themes. It just needs to be in a JSON object.
+You can apply custom style to a daisyUI themes using CSS:
 
-```js
-module.exports = {
-  //...
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          primary: "#a991f7",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
-          neutral: "#3d4451",
-          "base-100": "#ffffff",
-
-          ".btn": {
-            "border-width": "2px",
-            "border-color": "black",
-          },
-        },
-      },
-    ],
-  },
+```css
+[data-theme="mytheme"] .btn {
+  border-width: 2px;
+  border-color: black;
 }
 ```
 
 ## How to customize an existing theme?
 
-In your tailwind.config.js, you can require an existing daisyUI theme and override its colors.  
-In below example, I get `dark` theme and change its `primary` and `primary-focus` colors to red:
+In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.  
+In below example, I require and spread `light` theme and change its `primary` and `primary-focus` colors:
 
 ```js
-const { "[data-theme=dark]": darkTheme } = require("daisyui/src/colors/themes")
-
 module.exports = {
   //...
   daisyui: {
     themes: [
       {
         dark: {
-          ...darkTheme,
-          primary: "#FF0000",
-          "primary-focus": "#D60000",
+          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+          primary: "blue",
+          "primary-focus": "mediumblue",
         },
       },
     ],
