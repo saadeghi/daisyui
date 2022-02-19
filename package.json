@@ -65,7 +65,6 @@
     "themes": "postcss src/themes/index.css -o dist/themes.css --config src/themes",
     "full": "postcss src/full/index.css -o dist/full.css --config src/full",
     "build": "npm run base && npm run utilities:global && npm run utilities:unstyled && npm run utilities:styled && npm run components && npm run merge:unstyled && npm run merge:styled && npm run rtl && npm run prejss && npm run themes && npm run full",
-    "clean": "rm -R colors && rm -R dist && rm index.js",
     "install:docs": "cd src/docs && npm install",
     "dev": "cd src/docs && npm run dev",
     "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
