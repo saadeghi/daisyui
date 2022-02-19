@@ -17,7 +17,7 @@ acid
 lemonade
 ```
 
-- Now only the following color names are required for daisyUI themes. All [other colors](http://daisyui/docs/colors) are optional and they will be generated magically ✨ (unless they're specified in the theme). [[Read more](http://daisyui/docs/themes)]
+- Now only the following color names are required for daisyUI themes. All [other colors](http://daisyui/docs/colors) are optional and they will be generated magically ✨ (unless they're specified in the theme). [[Read more](http://daisyui.com/docs/themes)]
 
 ```
 primary
