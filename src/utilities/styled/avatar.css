@@ -2,7 +2,7 @@
   &.online {
     &:before {
       content: "";
-      @apply absolute z-10 block rounded-full bg-success;
+      @apply absolute z-10 block rounded-full bg-success-content;
       width: 15%;
       height: 15%;
       top: 7%;
