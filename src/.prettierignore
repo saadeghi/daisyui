@@ -1,3 +1,5 @@
 /docs/.svelte-kit
 /docs/build
 /docs/node_modules
+/CHANGELOG.md
+/dist
