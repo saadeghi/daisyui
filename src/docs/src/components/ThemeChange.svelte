@@ -44,6 +44,10 @@
       <li><button data-set-theme="luxury" data-act-class="active">💎  luxury</button></li>
       <li><button data-set-theme="dracula" data-act-class="active">🧛‍♂️  dracula</button></li>
       <li><button data-set-theme="cmyk" data-act-class="active">🖨  CMYK</button></li>
+      <li><button data-set-theme="autumn" data-act-class="active">🍁  Autumn</button></li>
+      <li><button data-set-theme="business" data-act-class="active">💼  Business</button></li>
+      <li><button data-set-theme="acid" data-act-class="active">💊  Acid</button></li>
+      <li><button data-set-theme="lemonade" data-act-class="active">🍋  Lemonade</button></li>
     </ul>
   </div>
 </div>
