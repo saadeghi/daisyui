@@ -106,8 +106,7 @@ module.exports = {
     "--tab-radius": ".5rem",
   },
   "[data-theme=cyberpunk]": {
-    fontFamily:
-      "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace",
+    fontFamily: "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace",
     primary: "#ff7598",
     secondary: "#75d1f0",
     accent: "#c07eec",
@@ -288,7 +287,6 @@ module.exports = {
     "warning-content": "#d97706",
     error: "#fee2e2",
     "error-content": "#dc2626",
-    "--border-color": "#e6e6e6",
     "--rounded-box": "0",
     "--rounded-btn": "0",
     "--rounded-badge": "0",
@@ -296,36 +294,6 @@ module.exports = {
     "--animation-input": "0",
     "--btn-focus-scale": "1",
     "--tab-radius": "0",
-    "*:where(.btn)": {
-      "border-color": "var(--border-color) !important",
-      "--tw-border-opacity": "1 !important",
-      "--tw-text-opacity": "1 !important",
-      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
-    },
-    "*:where(.mockup-code)": {
-      "border-color": "var(--border-color) !important",
-      "--tw-border-opacity": "1 !important",
-      "--tw-text-opacity": "1 !important",
-      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
-    },
-    "*:where(.mockup-window)": {
-      "border-color": "var(--border-color) !important",
-      "--tw-border-opacity": "1 !important",
-      "--tw-text-opacity": "1 !important",
-      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
-    },
-    "*:where(.badge)": {
-      "border-color": "var(--border-color) !important",
-      "--tw-border-opacity": "1 !important",
-      "--tw-text-opacity": "1 !important",
-      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
-    },
-    "*:where(.card)": {
-      "border-color": "var(--border-color) !important",
-      "--tw-border-opacity": "1 !important",
-      "--tw-text-opacity": "1 !important",
-      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
-    },
   },
   "[data-theme=luxury]": {
     primary: "#ffffff",
@@ -438,17 +406,10 @@ module.exports = {
     success: "#008000",
     warning: "#a6a659",
     error: "#ff0000",
-    "--border-color": "#000000",
     "--rounded-box": "0.2rem",
     "--rounded-btn": "0.2rem",
     "--rounded-badge": "0.2rem",
     "--tab-radius": "0.2rem",
-    "*": {
-      "border-color": "var(--border-color) !important",
-      "--tw-border-opacity": "1 !important",
-      "--tw-text-opacity": "1 !important",
-      "--tw-shadow": "0 0 0 1px var(--border-color) !important",
-    },
   },
   "[data-theme=autumn]": {
     primary: "#8C0327",
