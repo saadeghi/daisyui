@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-8e5ae003.js",
+    "file": "start-2e3808aa.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -107,17 +107,17 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-05bd4731.js",
+    "file": "pages/__layout.svelte-c08f8e9c.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1f04da3c.js",
       "_stores-38c4c0e1.js",
-      "_util-a1b56ac7.js",
+      "_util-792f5542.js",
       "_ThemeChange-e7fd7158.js",
       "_singletons-a6a7384f.js",
-      "_SEO-0177744a.js"
+      "_SEO-83f66c41.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-a3bde7cd.css"
@@ -133,14 +133,14 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-e06289fa.js",
+    "file": "pages/index.svelte-65d02d7d.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1f04da3c.js",
-      "_SEO-0177744a.js",
-      "_util-a1b56ac7.js"
+      "_SEO-83f66c41.js",
+      "_util-792f5542.js"
     ]
   },
   "src/routes/tailwindplay.svelte": {
@@ -153,15 +153,15 @@
     ]
   },
   "src/routes/components/index.svelte": {
-    "file": "pages/components/index.svelte-928a6d7a.js",
+    "file": "pages/components/index.svelte-8f27888d.js",
     "src": "src/routes/components/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1f04da3c.js",
       "_stores-38c4c0e1.js",
-      "_SEO-0177744a.js",
-      "_util-a1b56ac7.js"
+      "_SEO-83f66c41.js",
+      "_util-792f5542.js"
     ]
   },
   "src/routes/components/radial-progress.svelte.md": {
@@ -869,15 +869,15 @@
     ]
   },
   "src/routes/docs/index.svelte": {
-    "file": "pages/docs/index.svelte-decdf175.js",
+    "file": "pages/docs/index.svelte-e8c2124d.js",
     "src": "src/routes/docs/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1f04da3c.js",
       "_stores-38c4c0e1.js",
-      "_SEO-0177744a.js",
-      "_util-a1b56ac7.js"
+      "_SEO-83f66c41.js",
+      "_util-792f5542.js"
     ]
   },
   "src/routes/docs/layout-and-typography.svelte.md": {
@@ -929,13 +929,13 @@
     ]
   },
   "src/routes/docs/tachyons.svelte.md": {
-    "file": "pages/docs/tachyons.svelte.md-a1af866e.js",
+    "file": "pages/docs/tachyons.svelte.md-462510cb.js",
     "src": "src/routes/docs/tachyons.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1f04da3c.js",
-      "_util-a1b56ac7.js"
+      "_util-792f5542.js"
     ]
   },
   "src/routes/docs/windicss.svelte.md": {
@@ -948,13 +948,13 @@
     ]
   },
   "src/routes/docs/basscss.svelte.md": {
-    "file": "pages/docs/basscss.svelte.md-58ad643e.js",
+    "file": "pages/docs/basscss.svelte.md-825f4cf9.js",
     "src": "src/routes/docs/basscss.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1f04da3c.js",
-      "_util-a1b56ac7.js"
+      "_util-792f5542.js"
     ]
   },
   "src/routes/docs/install/__layout.reset.svelte": {
@@ -1061,13 +1061,13 @@
     ]
   },
   "src/routes/docs/cdn.svelte.md": {
-    "file": "pages/docs/cdn.svelte.md-6914ec0a.js",
+    "file": "pages/docs/cdn.svelte.md-db647b98.js",
     "src": "src/routes/docs/cdn.svelte.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1f04da3c.js",
-      "_util-a1b56ac7.js",
+      "_util-792f5542.js",
       "_InstallTabs-e2a932f9.js",
       "_stores-38c4c0e1.js"
     ]
@@ -1099,15 +1099,15 @@
       "_vendor-1f04da3c.js"
     ]
   },
-  "_SEO-0177744a.js": {
-    "file": "chunks/SEO-0177744a.js",
+  "_SEO-83f66c41.js": {
+    "file": "chunks/SEO-83f66c41.js",
     "imports": [
       "_vendor-1f04da3c.js",
-      "_util-a1b56ac7.js"
+      "_util-792f5542.js"
     ]
   },
-  "_util-a1b56ac7.js": {
-    "file": "chunks/util-a1b56ac7.js"
+  "_util-792f5542.js": {
+    "file": "chunks/util-792f5542.js"
   },
   "_ThemeChange-e7fd7158.js": {
     "file": "chunks/ThemeChange-e7fd7158.js",
