@@ -18,23 +18,23 @@
   }
   &::-webkit-slider-thumb {
     background-color: hsl(var(--b1));
-    @apply relative h-5 w-5 border-none transition-all duration-300 ease-in-out rounded-box;
+    @apply relative h-6 w-6 border-none transition-all duration-300 ease-in-out rounded-box;
     -webkit-appearance: none;
     top: 50%;
     color: hsl(var(--range-shdw));
     transform: translateY(-50%);
     --filler-size: 100rem;
-    --filler-offset: .6rem;
-    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow,0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+    --filler-offset: 0.6rem;
+    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &::-moz-range-thumb {
     background-color: hsl(var(--b1));
-    @apply relative h-5 w-5 border-none transition-all duration-300 ease-in-out rounded-box;
+    @apply relative h-6 w-6 border-none transition-all duration-300 ease-in-out rounded-box;
     top: 50%;
     color: hsl(var(--range-shdw));
     --filler-size: 100rem;
-    --filler-offset: .5rem;
-    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow,0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+    --filler-offset: 0.5rem;
+    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &-primary {
     --range-shdw: var(--p);
