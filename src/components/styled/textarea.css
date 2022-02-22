@@ -35,25 +35,25 @@
   &-info {
     @apply border-info-content;
     &:focus {
-      outline: 2px solid hsl(var(--inc));
+      outline: 2px solid hsl(var(--in));
     }
   }
   &-success {
     @apply border-success-content;
     &:focus {
-      outline: 2px solid hsl(var(--suc));
+      outline: 2px solid hsl(var(--su));
     }
   }
   &-warning {
     @apply border-warning-content;
     &:focus {
-      outline: 2px solid hsl(var(--wac));
+      outline: 2px solid hsl(var(--wa));
     }
   }
   &-error {
     @apply border-error-content;
     &:focus {
-      outline: 2px solid hsl(var(--erc));
+      outline: 2px solid hsl(var(--er));
     }
   }
   &-disabled,

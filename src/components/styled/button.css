@@ -157,25 +157,25 @@
       }
     }
     &.btn-success {
-      @apply text-success-content;
+      @apply text-success;
       &:hover {
         @apply border-success bg-success text-success-content;
       }
     }
     &.btn-info {
-      @apply text-info-content;
+      @apply text-info;
       &:hover {
         @apply border-info bg-info text-info-content;
       }
     }
     &.btn-warning {
-      @apply text-warning-content;
+      @apply text-warning;
       &:hover {
         @apply border-warning bg-warning text-warning-content;
       }
     }
     &.btn-error {
-      @apply text-error-content;
+      @apply text-error;
       &:hover {
         @apply border-error bg-error text-error-content;
       }

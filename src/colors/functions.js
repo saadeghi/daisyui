@@ -65,16 +65,16 @@ const convertToHsl = function (input) {
 
       // auto generate state colors
       if (!input.hasOwnProperty("info")) {
-        resultObj["--in"] = 204 + " " + 94 + "%" + " " + 94 + "%";
+        resultObj["--in"] = 198 + " " + 93 + "%" + " " + 60 + "%";
       }
       if (!input.hasOwnProperty("success")) {
-        resultObj["--su"] = 141 + " " + 84 + "%" + " " + 93 + "%";
+        resultObj["--su"] = 158 + " " + 64 + "%" + " " + 52 + "%";
       }
       if (!input.hasOwnProperty("warning")) {
-        resultObj["--wa"] = 48 + " " + 96 + "%" + " " + 89 + "%";
+        resultObj["--wa"] = 43 + " " + 96 + "%" + " " + 56 + "%";
       }
       if (!input.hasOwnProperty("error")) {
-        resultObj["--er"] = 0 + " " + 93 + "%" + " " + 94 + "%";
+        resultObj["--er"] = 0 + " " + 91 + "%" + " " + 71 + "%";
       }
 
       // auto generate content colors
@@ -101,7 +101,7 @@ const convertToHsl = function (input) {
         if (input.hasOwnProperty("info")) {
           resultObj["--inc"] = generateForegorundColorFrom(input["info"])
         } else {
-          resultObj["--inc"] = 221 + " " + 83 + "%" + " " + 53 + "%";
+          resultObj["--inc"] = 198 + " " + 100 + "%" + " " + 12 + "%";
         }
       }
 
@@ -109,7 +109,7 @@ const convertToHsl = function (input) {
         if (input.hasOwnProperty("success")) {
           resultObj["--suc"] = generateForegorundColorFrom(input["success"])
         } else {
-          resultObj["--suc"] = 142 + " " + 76 + "%" + " " + 36 + "%";
+          resultObj["--suc"] = 158 + " " + 100 + "%" + " " + 10 + "%";
         }
       }
 
@@ -117,7 +117,7 @@ const convertToHsl = function (input) {
         if (input.hasOwnProperty("warning")) {
           resultObj["--wac"] = generateForegorundColorFrom(input["warning"])
         } else {
-          resultObj["--wac"] = 32 + " " + 95 + "%" + " " + 44 + "%";
+          resultObj["--wac"] = 43 + " " + 100 + "%" + " " + 11 + "%";
         }
       }
 
@@ -125,7 +125,7 @@ const convertToHsl = function (input) {
         if (input.hasOwnProperty("error")) {
           resultObj["--erc"] = generateForegorundColorFrom(input["error"])
         } else {
-          resultObj["--erc"] = 0 + " " + 72 + "%" + " " + 51 + "%";
+          resultObj["--erc"] = 0 + " " + 100 + "%" + " " + 14 + "%";
         }
       }
 

@@ -252,7 +252,7 @@
           Card Component
           <div class="dropdown dropdown-top dropdown-end">
             <div tabindex="0">
-              <div tabindex="0" class="btn btn-ghost text-info-content btn-xs btn-circle mx-1 inline-block">
+              <div tabindex="0" class="btn btn-ghost text-info btn-xs btn-circle mx-1 inline-block">
                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline h-5 w-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
             </div>

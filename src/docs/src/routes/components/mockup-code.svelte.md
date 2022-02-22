@@ -29,14 +29,14 @@ data="{[
 <Component title="Multi line">
 <div class="mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre>
-  <pre data-prefix=">" class="text-warning-content"><code>installing...</code></pre>
-  <pre data-prefix=">" class="text-success-content"><code>Done!</code></pre>
+  <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+  <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
 </div>
 <pre slot="html">{
 `<div class="mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre> 
-  <pre data-prefix=">" class="text-warning-content"><code>installing...</code></pre> 
-  <pre data-prefix=">" class="text-success-content"><code>Done!</code></pre>
+  <pre data-prefix=">" class="text-warning"><code>installing...</code></pre> 
+  <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
 </div>`
 }</pre>
 </Component>
@@ -45,13 +45,13 @@ data="{[
 <div class="mockup-code">
   <pre data-prefix="1"><code>npm i daisyui</code></pre> 
   <pre data-prefix="2"><code>installing...</code></pre> 
-  <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
+  <pre data-prefix="3" class="bg-warning text-warning"><code>Error!</code></pre>
 </div>
 <pre slot="html">{
 `<div class="mockup-code">
   <pre data-prefix="1"><code>npm i daisyui</code></pre> 
   <pre data-prefix="2"><code>installing...</code></pre> 
-  <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
+  <pre data-prefix="3" class="bg-warning text-warning"><code>Error!</code></pre>
 </div>`
 }</pre>
 </Component>
@@ -79,11 +79,11 @@ data="{[
 </Component>
 
 <Component title="With color">
-<div class="mockup-code bg-primary text-primary-content">
+<div class="mockup-code bg-primary text-primary">
   <pre><code>can be any color!</code></pre>
 </div>
 <pre slot="html">{
-`<div class="mockup-code bg-primary text-primary-content">
+`<div class="mockup-code bg-primary text-primary">
   <pre><code>can be any color!</code></pre>
 </div>`
 }</pre>
