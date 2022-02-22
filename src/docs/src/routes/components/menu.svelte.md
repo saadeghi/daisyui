@@ -13,6 +13,7 @@ published: true
 data="{[
   { type:'component', class: 'menu', desc: 'Container <ul> element' },
   { type:'component', class: 'menu-title', desc: 'Identify <li> as the title of menu' },
+  { type:'modifier', class: 'active', desc: 'highlights the element inside <li> as active' },
   { type:'responsive', class: 'menu-normal', desc: 'Normal text size and normal spacing (default)' },
   { type:'responsive', class: 'menu-compact', desc: 'Smaller text size and compact spacing' },
   { type:'responsive', class: 'menu-vertical', desc: 'Vertical menu (default)' },
@@ -30,6 +31,21 @@ data="{[
 `<ul class="menu bg-base-100 w-56">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
+  <li><a>Item 3</a></li>
+</ul>`
+}</pre>
+</Component>
+
+<Component title="Menu with active item">
+<ul class="menu bg-base-100 w-56 shadow-xl">
+  <li><a>Item 1</a></li>
+  <li><a class="active">Item 2</a></li>
+  <li><a>Item 3</a></li>
+</ul>
+<pre slot="html">{
+`<ul class="menu bg-base-100 w-56">
+  <li><a>Item 1</a></li>
+  <li><a class="active">Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>`
 }</pre>
