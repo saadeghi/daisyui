@@ -28,6 +28,8 @@
     "theme-change": "2.0.2"
   },
   "dependencies": {
-    "daisyui": "^2.0.6"
+    "color": "^4.2.1",
+    "daisyui": "^2.0.6",
+    "nanoid": "^3.3.1"
   }
 }

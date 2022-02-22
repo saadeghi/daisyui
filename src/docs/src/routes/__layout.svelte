@@ -73,7 +73,7 @@
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
     <div class={`${post ? "p-6 pb-16" : ""}`}>
-      {#if post && $page.url.pathname != "/components/"}
+      {#if post && !["/components/", "/docs/theme-generator/"].includes($page.url.pathname)}
         <div class="flex justify-between gap-6">
           <div class="prose w-full max-w-4xl flex-grow">
             {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
