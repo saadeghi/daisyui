@@ -1,5 +1,5 @@
 <script context="module">
-  const excludedRoutes = ["/index", "/", "/tailwindplay", "/tailwindplay/", "/codepen", "/codepen/"]
+  const excludedRoutes = ["/index", "/", "/tailwindplay", "/tailwindplay/", "/codepen", "/codepen/", "/theme-generator", "/theme-generator/"]
   export async function load({ url, fetch }) {
     if (!excludedRoutes.includes(url.pathname)) {
       const post = await fetch(`${url.pathname.replace(/\/$/, "")}.json`).then((res) => res.json())
