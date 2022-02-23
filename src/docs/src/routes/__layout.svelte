@@ -1,5 +1,5 @@
 <script context="module">
-  const excludedRoutes = ["/index", "/", "/tailwindplay", "/tailwindplay/", "/codepen", "/codepen/", "/theme-generator", "/theme-generator/"]
+  const excludedRoutes = ["/", "/tailwindplay/", "/codepen/", "/theme-generator/"]
   export async function load({ url, fetch }) {
     if (!excludedRoutes.includes(url.pathname)) {
       const post = await fetch(`${url.pathname.replace(/\/$/, "")}.json`).then((res) => res.json())
@@ -66,14 +66,14 @@
 </svelte:head>
 
 {#if post}
-  <SEO title={post.title ? post.title : ""} desc={post.desc ? post.desc : ""} img={`/images${$page.url.pathname}.jpg`} />
+  <SEO title={post.title} desc={post.desc} img={`/images${$page.url.pathname}.jpg`} />
 {/if}
-<div class={`bg-base-100 drawer h-screen ${post ? "drawer-mobile" : ""}`}>
+<div class={`bg-base-100 drawer h-screen ${post || ["/theme-generator/"].includes($page.url.pathname) ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
-    <div class={`${post ? "p-6 pb-16" : ""}`}>
-      {#if post && !["/components/", "/docs/theme-generator/"].includes($page.url.pathname)}
+    <div class={`${post || ["/theme-generator/"].includes($page.url.pathname) ? "p-6 pb-16" : ""}`}>
+      {#if post && !["/docs/"].includes($page.url.pathname) && !["/components/"].includes($page.url.pathname) }
         <div class="flex justify-between gap-6">
           <div class="prose w-full max-w-4xl flex-grow">
             {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
@@ -81,10 +81,10 @@
               <Ads size={2} />
               <Ads size={3} />
             {/if}
-            {#if post.title}
+            {#if post && post.title}
               <h1>{post.title}</h1>
             {/if}
-            {#if post.desc}
+            {#if post && post.desc}
               <p>{post.desc}</p>
             {/if}
             <slot />

@@ -294,7 +294,7 @@
   <h2 class="font-bold text-xl px-2 pb-4">Preview</h2>
   <div class="rounded-box bg-base-100 border-base-content/5 text-base-content not-prose grid gap-3 border p-6" data-theme="mytheme" bind:this={wrapper}>
     <!-- button -->
-    <div class="grid grid-cols-4 gap-2">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
       <button class="btn">Default</button>
       <button class="btn btn-primary">Primary</button>
       <button class="btn btn-secondary">Secondary</button>
@@ -305,7 +305,7 @@
       <button class="btn btn-error">Error</button>
     </div>
     <!-- badge -->
-    <div class="grid grid-cols-4 gap-2 place-items-center">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 place-items-center">
       <span class="badge">Default</span>
       <span class="badge badge-primary">Primary</span>
       <span class="badge badge-secondary">Secondary</span>
@@ -316,8 +316,8 @@
       <span class="badge badge-error">Error</span>
     </div>
     <div class="flex flex-col gap-3">
-      <div class="flex gap-3">
-        <div class="w-1/2">
+      <div class="flex flex-col md:flex-row gap-3">
+        <div class="md:w-1/2">
           <!-- tabs -->
           <div class="tabs">
             <button class="tab tab-lifted">Tab</button>
@@ -332,7 +332,7 @@
             <span class="link link-accent">I'm a simple link</span>
           </div>
         </div>
-        <div class="flex w-1/2 flex-col gap-3">
+        <div class="flex md:w-1/2 flex-col gap-3">
           <progress value="20" max="100" class="progress">Default</progress>
           <progress value="25" max="100" class="progress progress-primary">Primary</progress>
           <progress value="30" max="100" class="progress progress-secondary">Secondary</progress>
@@ -344,9 +344,9 @@
         </div>
       </div>
 
-      <div class="flex gap-3">
+      <div class="flex gap-3 flex-col md:flex-row">
         <!-- stat -->
-        <div class="stats bg-base-300 border-base-300 w-1/2 border">
+        <div class="stats bg-base-300 border-base-300 md:w-1/2 border">
           <div class="stat">
             <div class="stat-title">Total Page Views</div>
             <div class="stat-value">89,400</div>
@@ -355,7 +355,7 @@
         </div>
 
         <!-- radial progress -->
-        <div class="flex w-1/2 flex-wrap items-center justify-center gap-3">
+        <div class="flex md:w-1/2 flex-wrap items-center justify-center gap-3">
           <div class="radial-progress" style="--value:60;--size:3.5rem">60%</div>
           <div class="radial-progress" style="--value:75;--size:3.5rem">75%</div>
           <div class="radial-progress" style="--value:90;--size:3.5rem">90%</div>
@@ -364,8 +364,8 @@
     </div>
 
     <div class="flex flex-col gap-3">
-      <div class="flex gap-3">
-        <div class="w-1/2">
+      <div class="flex flex-col md:flex-row gap-3">
+        <div class="md:w-1/2">
           <!-- toggle -->
           <div>
             <input type="checkbox" class="toggle" checked />
@@ -389,7 +389,7 @@
           </div>
         </div>
         <!-- range -->
-        <div class="w-1/2">
+        <div class="md:w-1/2">
           <input type="range" min="0" max="100" value="90" class="range range-xs" />
           <input type="range" min="0" max="100" value="70" class="range range-xs range-primary" />
           <input type="range" min="0" max="100" value="50" class="range range-xs range-secondary" />
@@ -397,14 +397,14 @@
         </div>
       </div>
       <!-- input -->
-      <div class="flex gap-3">
-        <div class="flex w-1/2 flex-col gap-3">
+      <div class="flex gap-3 flex-col md:flex-row">
+        <div class="flex md:w-1/2 flex-col gap-3">
           <input type="text" placeholder="Default" class="input input-bordered w-full" />
           <input type="text" placeholder="Primary" class="input input-primary input-bordered w-full" />
           <input type="text" placeholder="Secondary" class="input input-secondary input-bordered w-full" />
           <input type="text" placeholder="Accent" class="input input-accent input-bordered w-full" />
         </div>
-        <div class="flex w-1/2 flex-col gap-3">
+        <div class="flex md:w-1/2 flex-col gap-3">
           <input type="text" placeholder="Info" class="input input-info input-bordered w-full" />
           <input type="text" placeholder="Success" class="input input-success input-bordered w-full" />
           <input type="text" placeholder="Warning" class="input input-warning input-bordered w-full" />
