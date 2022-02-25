@@ -46,6 +46,7 @@
           <a
             {href}
             on:click={closeDrawer}
+            id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""}
             class={`flex gap-4 
             ${$page.url.pathname == href ? "active" : ""}
             ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}
