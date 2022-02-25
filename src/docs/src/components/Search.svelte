@@ -15,6 +15,7 @@
   let seachboxEl
   function handleKeydown(e) {
     if ((e.keyCode === 75 && e.metaKey) || (e.keyCode === 75 && e.ctrlKey)) {
+      e.preventDefault()
       seachboxEl.querySelector("input[type=search]").focus()
     }
   }
