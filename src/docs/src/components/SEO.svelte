@@ -13,7 +13,7 @@
 <svelte:head>
   <title>{formattedTitle}</title>
   <meta name="description" content={desc} />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={formattedTitle} />
   <meta name="twitter:description" content={desc} />
   <meta name="twitter:image" content={readEnv("VITE_ROOT") + img} />
