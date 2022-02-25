@@ -21,6 +21,7 @@
 
 <script>
   import { onMount } from "svelte"
+  import { afterNavigate } from '$app/navigation';
 
   import { page } from "$app/stores"
 
@@ -52,6 +53,10 @@
     parseContentScroll()
     parseSidebarScroll()
   })
+  
+  afterNavigate(() => {
+    drawercontent.scrollTop = 0
+	});
 
   let checked = ""
   function closeDrawer() {
@@ -103,7 +108,7 @@
       {/if}
     </div>
   </div>
-  <div class="drawer-side" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
+  <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: 5rem;" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
       <Sidebar {closeDrawer} {drawerSidebarScrollY} />
