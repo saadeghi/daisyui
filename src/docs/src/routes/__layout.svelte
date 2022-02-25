@@ -137,6 +137,9 @@
 <Scripts />
 
 <style global>
+  code[class*="language-"], pre[class*="language-"]{
+    background: unset;
+  }
   .prose pre[class*="language-"] {
     max-width: 48rem;
     background-color: hsl(var(--n));
