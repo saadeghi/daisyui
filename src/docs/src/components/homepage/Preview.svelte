@@ -635,17 +635,17 @@
         <div class="dropdown dropdown-end w-full">
           <div tabindex="0">
             <div class="rating rating-lg rating-half w-full justify-center px-4 pb-4">
-              <input type="radio" name="rating-10" class="rating-hidden" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" checked />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
-              <input type="radio" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" aria-label="Rating reset" name="rating-10" class="rating-hidden" />
+              <input type="radio" aria-label="Rating half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" aria-label="Rating 1 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" aria-label="Rating 1 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" checked />
+              <input type="radio" aria-label="Rating 2 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" aria-label="Rating 2 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" aria-label="Rating 3 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" aria-label="Rating 3 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" aria-label="Rating 4 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <input type="radio" aria-label="Rating 4 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
+              <input type="radio" aria-label="Rating 5 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
             </div>
           </div>
           <div tabindex="0" class="dropdown-content py-2">
