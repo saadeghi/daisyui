@@ -295,7 +295,7 @@
             <button class="btn btn-xs normal-case" on:click={() => randomize()}>Randomize</button>
             <button class="btn btn-xs normal-case" on:click={() => resetColors()}>Reset</button>
           </div>
-          <pre><code class="text-neutral-content/40">{`module.exports = {`}</code>
+          <pre><code class="text-neutral-content/30">{`module.exports = {`}</code>
 <code>{`    daisyui: {
       themes: [
         {
@@ -306,7 +306,7 @@
         },
       ],
     },`}</code>
-<code class="text-neutral-content/40">{`    plugins: [
+<code class="text-neutral-content/30">{`    plugins: [
       require('daisyui'),
     ],
     //...

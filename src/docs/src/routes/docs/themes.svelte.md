@@ -199,7 +199,3 @@ module.exports = {
   },
 }
 ```
-
-## Theme generator
-
-You can use [this theme generator](https://themes.ionevolve.com/) to generate your own themes.

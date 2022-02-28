@@ -21,7 +21,8 @@
 
 <script>
   import { onMount } from "svelte"
-  import { afterNavigate } from '$app/navigation';
+  import { afterNavigate } from "$app/navigation"
+  import { listOfStaticPagesThatNeedSidebar, listOfStaticPagesThatDontNeedSideAds } from "@src/lib/data.js"
 
   import { page } from "$app/stores"
 
@@ -53,10 +54,10 @@
     parseContentScroll()
     parseSidebarScroll()
   })
-  
+
   afterNavigate(() => {
     drawercontent.scrollTop = 0
-	});
+  })
 
   let checked = ""
   function closeDrawer() {
@@ -73,12 +74,12 @@
 {#if post}
   <SEO title={post.title} desc={post.desc} img={`/images${$page.url.pathname}.jpg`} />
 {/if}
-<div class={`bg-base-100 drawer h-screen ${post || ["/theme-generator/"].includes($page.url.pathname) ? "drawer-mobile" : ""}`}>
+<div class={`bg-base-100 drawer h-screen ${post || listOfStaticPagesThatNeedSidebar.includes($page.url.pathname) ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
-    <div class={`${post || ["/theme-generator/"].includes($page.url.pathname) ? "p-6 pb-16" : ""}`}>
-      {#if post && !["/docs/"].includes($page.url.pathname) && !["/components/"].includes($page.url.pathname) }
+    <div class={`${post || listOfStaticPagesThatNeedSidebar.includes($page.url.pathname) ? "p-6 pb-16" : ""}`}>
+      {#if post && !listOfStaticPagesThatDontNeedSideAds.includes($page.url.pathname)}
         <div class="flex justify-between gap-6">
           <div class="prose w-full max-w-4xl flex-grow">
             {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
@@ -142,7 +143,8 @@
 <Scripts />
 
 <style global>
-  code[class*="language-"], pre[class*="language-"]{
+  code[class*="language-"],
+  pre[class*="language-"] {
     background: unset;
   }
   .prose pre[class*="language-"] {
