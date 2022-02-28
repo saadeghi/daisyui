@@ -1,0 +1,1 @@
+import{S as t,i as s,s as o,v as a}from"../chunks/vendor-4fa774c5.js";async function c(){return{status:302,redirect:"https://codepen.io/saadeghi/pen/gOwWKvv"}}function i(e){return a(()=>{window.location.href="https://codepen.io/saadeghi/pen/gOwWKvv"}),[]}class p extends t{constructor(n){super();s(this,n,i,null,o,{})}}export{p as default,c as load};
