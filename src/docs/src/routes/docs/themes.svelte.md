@@ -11,7 +11,7 @@ published: true
 daisyUI comes with a number of themes, which you can use with no extra effort.  
 Each theme defines a set of colors which will be used on all daisyUI elements.
 
-To use a theme, you need `data-theme` attribute to your `<html>` tag:
+To use a theme, add `data-theme` attribute to your `<html>` tag:
 
 ```html
 <html data-theme="cupcake"></html>
