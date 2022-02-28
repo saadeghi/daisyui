@@ -189,7 +189,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div>
 </div>
 <pre slot="html">{
-`<div class="h-screen drawer w-full rounded">
+`<div class="h-screen drawer drawer-end w-full">
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle">
   <div class="drawer-content">
     <!-- Page content here -->
