@@ -232,6 +232,11 @@ Read the documents for more info:
   - [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
   - [Next.js - Tailwind - DeisyUI Setup](https://www.youtube.com/watch?v=uXQgJbUj3PQ)
   - [Svelte Setup with Vite, Tailwind, DaisyUI. Custom Themes!](https://www.youtube.com/watch?v=5lF5PxBJoso)
+  - [Build a blog with Svelte](https://www.youtube.com/watch?v=u9jtHBE6NL8)
+  - [Building a product in less than 10 minutes: Laravel, InertiaJS, VueJS, TailwindCSS, DaisyUI](https://www.youtube.com/watch?v=XR1rS-CCfx0)
+  - [Infinite scrolling with MERN | ReactJS, TailwindCSS v3, DaisyUI | NodeJs, Express, MongoDB](https://www.youtube.com/watch?v=y7LYoRGRqRI)
+  - [How to install TailwindCSS v3 and DaisyUI to your React app](https://www.youtube.com/watch?v=XBYvzPe7skc)
+  - [Laravel: DaisyUI Agiliza Tus Desarrollos Con TailwindCSS + Select2 Tailwind Style (Spanish)](https://www.youtube.com/watch?v=28db3jojTgo)
 - Courses
   - [Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)
   - [Svelte for Beginners by Mike Karan](https://www.udemy.com/course/svelte-for-beginners/)
