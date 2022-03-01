@@ -1,32 +1,30 @@
 <script>
   import { siteStats } from "@src/lib/data.js"
-  import Countup from "@components/Countup.svelte"
+  import Countup from "svelte-countup"
 
   async function getGithubStars() {
-		const res = await fetch("https://api.github.com/repos/saadeghi/daisyui")
+    const res = await fetch("https://api.github.com/repos/saadeghi/daisyui")
     const json = await res.json()
-		if (res.ok) {
-			// return (Math.round(json.stargazers_count)).toLocaleString()
-			return json.stargazers_count
-		} else {
-			return siteStats.githubStars
-		}
-	}
+    if (res.ok) {
+      // return (Math.round(json.stargazers_count)).toLocaleString()
+      return json.stargazers_count
+    } else {
+      return siteStats.githubStars
+    }
+  }
   const githubStars = getGithubStars()
 
-
   async function getNpmInstalls() {
-		const res = await fetch(`https://api.npmjs.org/downloads/point/1970:${new Date().getFullYear()+1}/daisyui`)
+    const res = await fetch(`https://api.npmjs.org/downloads/point/1970:${new Date().getFullYear() + 1}/daisyui`)
     const json = await res.json()
-		if (res.ok) {
-			// return (Math.round(json.downloads)).toLocaleString()
-			return json.downloads
-		} else {
-			return siteStats.npmInstalls
-		}
-	}
+    if (res.ok) {
+      // return (Math.round(json.downloads)).toLocaleString()
+      return json.downloads
+    } else {
+      return siteStats.npmInstalls
+    }
+  }
   const npmInstalls = getNpmInstalls()
-
 </script>
 
 <div class="flex w-full justify-center">
@@ -44,7 +42,7 @@
         {#await githubStars}
           {siteStats.githubStars}
         {:then value}
-          <Countup initial={value*0.9} value={value} duration=1000 roundto=500 />
+          <Countup initial={value * 0.9} {value} duration={1000} roundto={500} />
         {/await}
       </div>
       <div class="stat-desc">Github Stars</div>
@@ -54,7 +52,7 @@
         {#await npmInstalls}
           {siteStats.npmInstalls}
         {:then value}
-          <Countup initial={value*0.9} value={value} duration=1000 roundto=1000 />
+          <Countup initial={value * 0.9} {value} duration={1000} roundto={1000} />
         {/await}
       </div>
       <div class="stat-desc">NPM Installs</div>
