@@ -10,5 +10,5 @@
 </script>
 
 <div class="tooltip tooltip-right font-normal" data-tip="Add custom prefix">
-  <input class="input input-bordered input-xs w-min max-w-[4rem]" type="text" placeholder="Prefix–" on:input={onPrefixInput} value={$prefix} />
+  <input class="input input-bordered input-xs w-min max-w-[3.8rem]" type="text" placeholder="Prefix–" on:input={onPrefixInput} value={$prefix} />
 </div>
