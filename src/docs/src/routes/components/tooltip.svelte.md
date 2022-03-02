@@ -35,8 +35,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="tooltip" data-tip="hello">
-  <button class="btn">Hover me</button>
+`<div class="$$tooltip" data-tip="hello">
+  <button class="$$btn">Hover me</button>
 </div>`
 }</pre>
 </Component>
@@ -48,8 +48,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="tooltip tooltip-open" data-tip="hello">
-  <button class="btn">Force open</button>
+`<div class="$$tooltip $$tooltip-open" data-tip="hello">
+  <button class="$$btn">Force open</button>
 </div>`
 }</pre>
 </Component>
@@ -61,8 +61,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="tooltip tooltip-open tooltip-bottom" data-tip="hello">
-  <button class="btn">Bottom</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-bottom" data-tip="hello">
+  <button class="$$btn">Bottom</button>
 </div>`
 }</pre>
 </Component>
@@ -74,8 +74,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="tooltip tooltip-open tooltip-left" data-tip="hello">
-  <button class="btn">Left</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-left" data-tip="hello">
+  <button class="$$btn">Left</button>
 </div>`
 }</pre>
 </Component>
@@ -87,8 +87,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="tooltip tooltip-open tooltip-right" data-tip="hello">
-  <button class="btn">Right</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-right" data-tip="hello">
+  <button class="$$btn">Right</button>
 </div>`
 }</pre>
 </Component>
@@ -100,8 +100,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div data-tip="primary" class="tooltip tooltip-open tooltip-primary">
-  <button class="btn btn-primary">primary</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-primary" data-tip="primary">
+  <button class="$$btn $$btn-primary">primary</button>
 </div>`
 }</pre>
 </Component>
@@ -113,8 +113,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div data-tip="secondary" class="tooltip tooltip-open tooltip-secondary">
-  <button class="btn btn-secondary">secondary</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-secondary" data-tip="secondary">
+  <button class="$$btn $$btn-secondary">secondary</button>
 </div>`
 }</pre>
 </Component>
@@ -126,8 +126,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div data-tip="accent" class="tooltip tooltip-open tooltip-accent">
-  <button class="btn btn-accent">accent</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-accent" data-tip="accent">
+  <button class="$$btn $$btn-accent">accent</button>
 </div>`
 }</pre>
 </Component>
@@ -139,8 +139,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div data-tip="info" class="tooltip tooltip-open tooltip-info">
-  <button class="btn btn-info">info</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-info" data-tip="info">
+  <button class="$$btn $$btn-info">info</button>
 </div>`
 }</pre>
 </Component>
@@ -152,8 +152,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div data-tip="success" class="tooltip tooltip-open tooltip-success">
-  <button class="btn btn-success">success</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-success" data-tip="success">
+  <button class="$$btn $$btn-success">success</button>
 </div>`
 }</pre>
 </Component>
@@ -165,8 +165,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div data-tip="warning" class="tooltip tooltip-open tooltip-warning">
-  <button class="btn btn-warning">warning</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-warning" data-tip="warning">
+  <button class="$$btn $$btn-warning">warning</button>
 </div>`
 }</pre>
 </Component>
@@ -178,8 +178,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div data-tip="error" class="tooltip tooltip-open tooltip-error">
-  <button class="btn btn-error">error</button>
+`<div class="$$tooltip $$tooltip-open $$tooltip-error" data-tip="error">
+  <button class="$$btn $$btn-error">error</button>
 </div>`
 }</pre>
 </Component>

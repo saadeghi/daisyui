@@ -57,7 +57,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="table w-full">
+  <table class="$$table w-full">
     <!-- head -->
     <thead>
       <tr>
@@ -130,7 +130,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="table w-full">
+  <table class="$$table w-full">
     <!-- head -->
     <thead>
       <tr>
@@ -149,7 +149,7 @@ data="{[
         <td>Blue</td>
       </tr>
       <!-- row 2 -->
-      <tr class="active">
+      <tr class="$$active">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
@@ -170,7 +170,7 @@ data="{[
 
 <Component title="Table with a row that highlights on hover">
 <div class="overflow-x-auto w-full">
-  <table class="table w-full">
+  <table class="$$table w-full">
     <thead>
       <tr>
         <th></th>
@@ -186,7 +186,7 @@ data="{[
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <tr class="hover">
+      <tr class="$$hover">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
@@ -203,7 +203,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="table w-full">
+  <table class="$$table w-full">
     <!-- head -->
     <thead>
       <tr>
@@ -222,7 +222,7 @@ data="{[
         <td>Blue</td>
       </tr>
       <!-- row 2 -->
-      <tr class="hover">
+      <tr class="$$hover">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
@@ -243,7 +243,7 @@ data="{[
 
 <Component title="Zebra">
 <div class="overflow-x-auto w-full">
-  <table class="table table-zebra w-full">
+  <table class="$$table $$table-zebra w-full">
     <thead>
       <tr>
         <th></th>
@@ -276,7 +276,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="table table-zebra w-full">
+  <table class="$$table $$table-zebra w-full">
     <!-- head -->
     <thead>
       <tr>
@@ -461,13 +461,13 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto w-full">
-  <table class="table w-full">
+  <table class="$$table w-full">
     <!-- head -->
     <thead>
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="$$checkbox">
           </label>
         </th>
         <th>Name</th>
@@ -481,13 +481,13 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="$$checkbox">
           </label>
         </th>
         <td>
           <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="w-12 h-12 mask mask-squircle">
+            <div class="$$avatar">
+              <div class="$$mask $$mask-squircle w-12 h-12">
                 <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component">
               </div>
             </div>
@@ -500,24 +500,24 @@ data="{[
         <td>
           Zemlak, Daniel and Leannon
           <br>
-          <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          <span class="$$badge $$badge-ghost $$badge-sm">Desktop Support Technician</span>
         </td>
         <td>Purple</td>
         <th>
-          <button class="btn btn-ghost btn-xs">details</button>
+          <button class="$$btn $$btn-ghost $$btn-xs">details</button>
         </th>
       </tr>
       <!-- row 2 -->
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="$$checkbox">
           </label>
         </th>
         <td>
           <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="w-12 h-12 mask mask-squircle">
+            <div class="$$avatar">
+              <div class="$$mask $$mask-squircle w-12 h-12">
                 <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component">
               </div>
             </div>
@@ -530,24 +530,24 @@ data="{[
         <td>
           Carroll Group
           <br>
-          <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+          <span class="$$badge $$badge-ghost $$badge-sm">Tax Accountant</span>
         </td>
         <td>Red</td>
         <th>
-          <button class="btn btn-ghost btn-xs">details</button>
+          <button class="$$btn $$btn-ghost $$btn-xs">details</button>
         </th>
       </tr>
       <!-- row 3 -->
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="$$checkbox">
           </label>
         </th>
         <td>
           <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="w-12 h-12 mask mask-squircle">
+            <div class="$$avatar">
+              <div class="$$mask $$mask-squircle w-12 h-12">
                 <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component">
               </div>
             </div>
@@ -560,24 +560,24 @@ data="{[
         <td>
           Rowe-Schoen
           <br>
-          <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+          <span class="$$badge $$badge-ghost $$badge-sm">Office Assistant I</span>
         </td>
         <td>Crimson</td>
         <th>
-          <button class="btn btn-ghost btn-xs">details</button>
+          <button class="$$btn $$btn-ghost $$btn-xs">details</button>
         </th>
       </tr>
       <!-- row 4 -->
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="$$checkbox">
           </label>
         </th>
         <td>
           <div class="flex items-center space-x-3">
-            <div class="avatar">
-              <div class="w-12 h-12 mask mask-squircle">
+            <div class="$$avatar">
+              <div class="$$mask $$mask-squircle w-12 h-12">
                 <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component">
               </div>
             </div>
@@ -590,11 +590,11 @@ data="{[
         <td>
           Wyman-Ledner
           <br>
-          <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+          <span class="$$badge $$badge-ghost $$badge-sm">Community Outreach Specialist</span>
         </td>
         <td>Indigo</td>
         <th>
-          <button class="btn btn-ghost btn-xs">details</button>
+          <button class="$$btn $$btn-ghost $$btn-xs">details</button>
         </th>
       </tr>
     </tbody>
@@ -825,7 +825,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="table table-compact w-full">
+  <table class="$$table $$table-compact w-full">
     <thead>
       <tr>
         <th></th> 

@@ -30,8 +30,8 @@ data="{[
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item badge badge-secondary"></span> 
+`<div class="$$indicator">
+  <span class="$$indicator-item $$badge $$badge-secondary"></span> 
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -43,8 +43,8 @@ data="{[
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item badge badge-primary">new</span> 
+`<div class="$$indicator">
+  <span class="$$indicator-item $$badge $$badge-primary">new</span> 
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -56,9 +56,9 @@ data="{[
   <button class="btn">inbox</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item badge badge-secondary">99+</span> 
-  <button class="btn">inbox</button>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$badge $$badge-secondary">99+</span> 
+  <button class="$$btn">inbox</button>
 </div>`
 }</pre>
 </Component>
@@ -73,13 +73,13 @@ data="{[
   <a class="tab tab-lifted">Requests</a>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="tabs">
-  <a class="tab tab-lifted">Messages</a> 
-  <a class="indicator tab tab-lifted tab-active">
+`<div class="$$tabs">
+  <a class="$$tab $$tab-lifted">Messages</a> 
+  <a class="$$indicator $$tab $$tab-lifted $$tab-active">
     Notifications 
-    <span class="indicator-item badge">8</span>
+    <span class="$$indicator-item $$badge">8</span>
   </a> 
-  <a class="tab tab-lifted">Requests</a>
+  <a class="$$tab $$tab-lifted">Requests</a>
 </div>`
 }</pre>
 </Component>
@@ -92,8 +92,8 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="avatar indicator">
-  <span class="indicator-item badge badge-secondary">typing…</span> 
+`<div class="$$avatar $$indicator">
+  <span class="$$indicator-item $$badge $$badge-secondary">typing…</span> 
   <div class="w-20 h-20 rounded-lg">
     <img src="https://api.lorem.space/image/face?w=160&h=160">
   </div>
@@ -107,9 +107,9 @@ data="{[
   <input type="text" placeholder="Your email address" class="input input-bordered">
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item badge">Required</span>
-  <input type="text" placeholder="Your email address" class="input input-bordered">
+`<div class="$$indicator">
+  <span class="$$indicator-item $$badge">Required</span>
+  <input type="text" placeholder="Your email address" class="$$input $$input-bordered">
 </div>`
 }</pre>
 </Component>
@@ -127,13 +127,13 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <div class="indicator-item indicator-bottom">
-    <button class="btn btn-primary">Apply</button>
+`<div class="$$indicator">
+  <div class="$$indicator-item $$indicator-bottom">
+    <button class="$$btn $$btn-primary">Apply</button>
   </div> 
-  <div class="border card">
-    <div class="card-body">
-      <h2 class="card-title">Job Title</h2> 
+  <div class="$$card border">
+    <div class="$$card-body">
+      <h2 class="$$card-title">Job Title</h2> 
       <p>Rerum reiciendis beatae tenetur excepturi</p>
     </div>
   </div>
@@ -147,8 +147,8 @@ data="{[
   <img class="rounded" src="https://api.lorem.space/image/house?w=300&h=150">
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span> 
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-center $$indicator-middle $$badge $$badge-secondary">Uploading Image...</span> 
   <img src="https://api.lorem.space/image/house?w=300&h=150">
 </div>`
 }</pre>
@@ -160,8 +160,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-start badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-start $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -173,8 +173,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-center badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-center $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -186,8 +186,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -199,8 +199,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-middle indicator-start badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-middle $$indicator-start $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -212,8 +212,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-middle indicator-center badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-middle $$indicator-center $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -225,8 +225,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-middle badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-middle $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -238,8 +238,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-bottom indicator-start badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-bottom $$indicator-start $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -251,8 +251,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-bottom indicator-center badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-bottom $$indicator-center $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -264,8 +264,8 @@ data="{[
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-bottom badge badge-secondary"></span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-bottom $$badge $$badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
@@ -285,16 +285,16 @@ data="{[
   <div class="grid w-60 h-32 bg-base-300 place-items-center">content</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="indicator">
-  <span class="indicator-item indicator-top indicator-start badge badge-secondary">top+start</span>
-  <span class="indicator-item indicator-top indicator-center badge badge-secondary">top+center</span>
-  <span class="indicator-item indicator-top indicator-end badge badge-secondary">top+end</span>
-  <span class="indicator-item indicator-middle indicator-start badge badge-secondary">middle+start</span>
-  <span class="indicator-item indicator-middle indicator-center badge badge-secondary">middle+center</span>
-  <span class="indicator-item indicator-middle indicator-end badge badge-secondary">middle+end</span>
-  <span class="indicator-item indicator-bottom indicator-start badge badge-secondary">bott0m+strt</span>
-  <span class="indicator-item indicator-bottom indicator-center badge badge-secondary">bottom+center</span>
-  <span class="indicator-item indicator-bottom indicator-end badge badge-secondary">bottom+end</span>
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-top $$indicator-start $$badge $$badge-secondary">top+start</span>
+  <span class="$$indicator-item $$indicator-top $$indicator-center $$badge $$badge-secondary">top+center</span>
+  <span class="$$indicator-item $$indicator-top $$indicator-end $$badge $$badge-secondary">top+end</span>
+  <span class="$$indicator-item $$indicator-middle $$indicator-start $$badge $$badge-secondary">middle+start</span>
+  <span class="$$indicator-item $$indicator-middle $$indicator-center $$badge $$badge-secondary">middle+center</span>
+  <span class="$$indicator-item $$indicator-middle $$indicator-end $$badge $$badge-secondary">middle+end</span>
+  <span class="$$indicator-item $$indicator-bottom $$indicator-start $$badge $$badge-secondary">bott0m+strt</span>
+  <span class="$$indicator-item $$indicator-bottom $$indicator-center $$badge $$badge-secondary">bottom+center</span>
+  <span class="$$indicator-item $$indicator-bottom $$indicator-end $$badge $$badge-secondary">bottom+end</span>
   <div class="grid w-60 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>

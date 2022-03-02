@@ -27,7 +27,7 @@ data="{[
 <Component title="Range">
 <input type="range" min="0" max="100" value="40" class="range max-w-xs">
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" class="range">`
+`<input type="range" min="0" max="100" value="40" class="$$range">`
 }</pre>
 </Component>
 
@@ -43,7 +43,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="25" class="range" step="25">
+`<input type="range" min="0" max="100" value="25" class="$$range" step="25">
 <div class="w-full flex justify-between text-xs px-2">
   <span>|</span>
   <span>|</span>
@@ -57,21 +57,21 @@ data="{[
 <Component title="Primary color">
 <input type="range" min="0" max="100" value="40" class="range range-primary max-w-xs">
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" class="range range-primary">`
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-primary">`
 }</pre>
 </Component>
 
 <Component title="Secondary color">
 <input type="range" min="0" max="100" value="40" class="range range-secondary max-w-xs">
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" class="range range-secondary">`
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-secondary">`
 }</pre>
 </Component>
 
 <Component title="Accent color">
 <input type="range" min="0" max="100" value="40" class="range range-accent max-w-xs">
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" class="range range-accent">`
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-accent">`
 }</pre>
 </Component>
 
@@ -83,9 +83,9 @@ data="{[
   <input type="range" min="0" max="100" value="70" class="range range-lg max-w-xs">
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" class="range range-xs"> 
-<input type="range" min="0" max="100" value="50" class="range range-sm"> 
-<input type="range" min="0" max="100" value="60" class="range range-md"> 
-<input type="range" min="0" max="100" value="70" class="range range-lg">`
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-xs"> 
+<input type="range" min="0" max="100" value="50" class="$$range $$range-sm"> 
+<input type="range" min="0" max="100" value="60" class="$$range $$range-md"> 
+<input type="range" min="0" max="100" value="70" class="$$range $$range-lg">`
 }</pre>
 </Component>

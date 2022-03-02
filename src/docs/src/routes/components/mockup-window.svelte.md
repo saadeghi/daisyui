@@ -22,7 +22,7 @@ data="{[
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="border mockup-window border-base-300">
+`<div class="$$mockup-window border border-base-300">
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>`
 }</pre>
@@ -33,7 +33,7 @@ data="{[
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="border mockup-window bg-base-300">
+`<div class="$$mockup-window border bg-base-300">
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>`
 }</pre>

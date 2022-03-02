@@ -28,7 +28,7 @@ data="{[
 <Component title="Toggle">
 <input type="checkbox" class="toggle" checked>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="toggle"> checked`
+`<input type="checkbox" class="$$toggle"> checked`
 }</pre>
 </Component>
 
@@ -40,10 +40,10 @@ data="{[
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="form-control">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle" checked>
+`<div class="$$form-control">
+  <label class="$$label cursor-pointer">
+    <span class="$$label-text">Remember me</span> 
+    <input type="checkbox" class="$$toggle" checked>
   </label>
 </div>`
 }</pre>
@@ -57,10 +57,10 @@ data="{[
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="form-control">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" class="toggle toggle-primary" checked>
+`<div class="$$form-control">
+  <label class="$$label cursor-pointer">
+    <span class="$$label-text">Remember me</span>
+    <input type="checkbox" class="$$toggle $$toggle-primary" checked>
   </label>
 </div>`
 }</pre>
@@ -74,10 +74,10 @@ data="{[
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="form-control">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" class="toggle toggle-secondary" checked>
+`<div class="$$form-control">
+  <label class="$$label cursor-pointer">
+    <span class="$$label-text">Remember me</span>
+    <input type="checkbox" class="$$toggle $$toggle-secondary" checked>
   </label>
 </div>`
 }</pre>
@@ -91,10 +91,10 @@ data="{[
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="form-control">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" class="toggle toggle-accent" checked>
+`<div class="$$form-control">
+  <label class="$$label cursor-pointer">
+    <span class="$$label-text">Remember me</span>
+    <input type="checkbox" class="$$toggle $$toggle-accent" checked>
   </label>
 </div>`
 }</pre>
@@ -108,23 +108,23 @@ data="{[
   <input type="checkbox" class="toggle toggle-lg" checked>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="toggle toggle-xs" checked>
-<input type="checkbox" class="toggle toggle-sm" checked>
-<input type="checkbox" class="toggle toggle-md" checked>
-<input type="checkbox" class="toggle toggle-lg" checked>`
+`<input type="checkbox" class="$$toggle $$toggle-xs" checked>
+<input type="checkbox" class="$$toggle $$toggle-sm" checked>
+<input type="checkbox" class="$$toggle $$toggle-md" checked>
+<input type="checkbox" class="$$toggle $$toggle-lg" checked>`
 }</pre>
 </Component>
 
 <Component title="Disabled">
-<input type="checkbox" disabled="disabled" class="toggle">
+<input type="checkbox" class="toggle" disabled>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" disabled="disabled" class="toggle">`
+`<input type="checkbox" class="$$toggle" disabled>`
 }</pre>
 </Component>
 
 <Component title="Disabled and checked">
-<input type="checkbox" disabled="disabled" class="toggle" checked>
+<input type="checkbox" class="toggle" disabled checked>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" disabled="disabled" class="toggle"> checked`
+`<input type="checkbox" class="$$toggle" disabled checked>`
 }</pre>
 </Component>
