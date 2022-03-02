@@ -14,97 +14,97 @@ published: true
 <ClassTable
 data="{[
   { type: 'component', class: 'artboard', desc: 'Container element' },
-  { type: 'utility', class: 'artboard-demo', desc: 'Adds shadow and radius. Puts items in center' },
-  { type: 'utility', class: 'phone-1', desc: 'Size 1' },
-  { type: 'utility', class: 'phone-2', desc: 'Size 2' },
-  { type: 'utility', class: 'phone-3', desc: 'Size 3' },
-  { type: 'utility', class: 'phone-4', desc: 'Size 4' },
-  { type: 'utility', class: 'phone-5', desc: 'Size 5' },
-  { type: 'utility', class: 'phone-6', desc: 'Size 6' },
-  { type: 'utility', class: 'horizontal', desc: 'shows horizontal view' },
+  { type: 'modifier', class: 'artboard-demo', desc: 'Adds shadow and radius. Puts items in center' },
+  { type: 'modifier', class: 'phone-1', desc: 'Size 1 (320×568)' },
+  { type: 'modifier', class: 'phone-2', desc: 'Size 2 (375×667)' },
+  { type: 'modifier', class: 'phone-3', desc: 'Size 3 (414×736)' },
+  { type: 'modifier', class: 'phone-4', desc: 'Size 4 (375×812)' },
+  { type: 'modifier', class: 'phone-5', desc: 'Size 5 (414×896)' },
+  { type: 'modifier', class: 'phone-6', desc: 'Size 6 (320×1024)' },
+  { type: 'modifier', class: 'horizontal', desc: 'shows horizontal view' },
 ]}"
 />
 
-<Component title="Artboard">
-<div class="artboard phone-1 artboard-demo">320&times;568</div>
+<Component title="Artboard size 6">
+<div class="artboard phone-1 artboard-demo">320×568</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-1 $$artboard-demo">320&times;568</div>`
+`<div class="$$artboard $$phone-1">320×568</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard">
-<div class="artboard phone-2 artboard-demo">375&times;667</div>
+<Component title="Artboard size 6">
+<div class="artboard phone-2 artboard-demo">375×667</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-2 $$artboard-demo">375&times;667</div>`
+`<div class="$$artboard $$phone-2">375×667</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard">
-<div class="artboard phone-3 artboard-demo">414&times;736</div>
+<Component title="Artboard size 6">
+<div class="artboard phone-3 artboard-demo">414×736</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-3 $$artboard-demo">414&times;736</div>`
+`<div class="$$artboard $$phone-3">414×736</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard">
-<div class="artboard phone-4 artboard-demo">375&times;812</div>
+<Component title="Artboard size 6">
+<div class="artboard phone-4 artboard-demo">375×812</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-4 $$artboard-demo">375&times;812</div>`
+`<div class="$$artboard $$phone-4">375×812</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard">
-<div class="artboard phone-5 artboard-demo">414&times;896</div>
+<Component title="Artboard size 6">
+<div class="artboard phone-5 artboard-demo">414×896</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-5 $$artboard-demo">414&times;896</div>`
+`<div class="$$artboard $$phone-5">414×896</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard">
-<div class="artboard phone-6 artboard-demo">320&times;1024</div>
+<Component title="Artboard size 6">
+<div class="artboard phone-6 artboard-demo">320×1024</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-6 $$artboard-demo">320&times;1024</div>`
+`<div class="$$artboard $$phone-6">320×1024</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard horizontal">
-<div class="artboard artboard-horizontal phone-1 artboard-demo">568&times;320</div>
+<Component title="Artboard horizontal size 1 (568×320)">
+<div class="artboard artboard-horizontal phone-1 artboard-demo">568×320</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-1 $$artboard-demo">568&times;320</div>`
+`<div class="$$artboard $$artboard-horizontal $$phone-1">568×320</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard horizontal">
-<div class="artboard artboard-horizontal phone-2 artboard-demo">667&times;375</div>
+<Component title="Artboard horizontal size 2 (667×375)">
+<div class="artboard artboard-horizontal phone-2 artboard-demo">667×375</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-2 $$artboard-demo">667&times;375</div>`
+`<div class="$$artboard $$artboard-horizontal $$phone-2">667×375</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard horizontal">
-<div class="artboard artboard-horizontal phone-3 artboard-demo">736&times;414</div>
+<Component title="Artboard horizontal size 3 (736×414)">
+<div class="artboard artboard-horizontal phone-3 artboard-demo">736×414</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-3 $$artboard-demo">736&times;414</div>`
+`<div class="$$artboard $$artboard-horizontal $$phone-3">736×414</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard horizontal">
-<div class="artboard artboard-horizontal phone-4 artboard-demo">812&times;375</div>
+<Component title="Artboard horizontal size 4 (812×375)">
+<div class="artboard artboard-horizontal phone-4 artboard-demo">812×375</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-4 $$artboard-demo">812&times;375</div>`
+`<div class="$$artboard $$artboard-horizontal $$phone-4">812×375</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard horizontal">
-<div class="artboard artboard-horizontal phone-5 artboard-demo">896&times;414</div>
+<Component title="Artboard horizontal size 5 (896×414)">
+<div class="artboard artboard-horizontal phone-5 artboard-demo">896×414</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-5 $$artboard-demo">896&times;414</div>`
+`<div class="$$artboard $$artboard-horizontal $$phone-5">896×414</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard horizontal">
-<div class="artboard artboard-horizontal phone-6 artboard-demo">1024&times;320</div>
+<Component title="Artboard horizontal size 6 (1024×320)">
+<div class="artboard artboard-horizontal phone-6 artboard-demo">1024×320</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$artboard $$phone-6 $$artboard-demo">1024&times;320</div>`
+`<div class="$$artboard $$artboard-horizontal $$phone-6">1024×320</div>`
 }</pre>
 </Component>

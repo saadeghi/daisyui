@@ -113,7 +113,7 @@ data="{[
 <button class="btn btn-outline btn-warning">Warning</button>
 <button class="btn btn-outline btn-error">Error</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn btn-outline btn-info">Info</button>
+`<button class="$$btn $$btn-outline $$btn-info">Info</button>
 <button class="$$btn $$btn-outline $$btn-success">Success</button>
 <button class="$$btn $$btn-outline $$btn-warning">Warning</button>
 <button class="$$btn $$btn-outline $$btn-error">Error</button>`

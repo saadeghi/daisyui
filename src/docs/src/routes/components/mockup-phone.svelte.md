@@ -26,9 +26,9 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-phone">
-  <div class="camera"></div> 
-  <div class="display">
-    <div class="artboard artboard-demo phone-1">Hi.</div>
+  <div class="$$camera"></div> 
+  <div class="$$display">
+    <div class="$$artboard $$artboard-demo $$phone-1">Hi.</div>
   </div>
 </div>`
 }</pre>
@@ -43,9 +43,9 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-phone border-primary">
-  <div class="camera"></div> 
-  <div class="display">
-    <div class="artboard artboard-demo phone-1">Hi.</div>
+  <div class="$$camera"></div> 
+  <div class="$$display">
+    <div class="$$artboard $$artboard-demo $$phone-1">Hi.</div>
   </div>
 </div>`
 }</pre>
