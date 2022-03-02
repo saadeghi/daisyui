@@ -9,7 +9,6 @@
   }, 500)
 </script>
 
-<label for="config-prefix" class="relative w-full tooltip tooltip-bottom" data-tip="Custom prefix">
-  <svg class="stroke-current fill-current h-3 absolute left-2 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M318.4 16l-161 480h77.5l25.4-81.4h119.5L405 496h77.5L318.4 16zm-40.3 341.9l41.2-130.4h1.5l40.9 130.4h-83.6zM640 405l-10-31.4L462.1 358l19.4 56.5L640 405zm-462.1-47L10 373.7 0 405l158.5 9.4 19.4-56.4z"/></svg>
-  <input class="input input-ghost pl-8 h-10 w-full" type="text" placeholder="Custom Prefix" id="config-prefix" on:input={onPrefixInput} value={$prefix}/>
-</label>
+<div class="tooltip tooltip-right font-normal" data-tip="Add custom prefix">
+  <input class="input input-bordered input-xs w-min max-w-[4rem]" type="text" placeholder="Prefix–" on:input={onPrefixInput} value={$prefix} />
+</div>

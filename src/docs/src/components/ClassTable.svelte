@@ -1,5 +1,6 @@
 <script>
-  import { prefix } from '$lib/stores';
+  import { prefix } from "$lib/stores"
+  import PrefixEdit from "@components/PrefixEdit.svelte"
   export let data
 </script>
 
@@ -7,12 +8,28 @@
   <table class="table-compact table w-full">
     <thead>
       <tr>
-        <th class="normal-case">Class name</th>
+        <th class="flex items-center gap-2 normal-case">
+          <PrefixEdit />
+          <span>Class name</span>
+        </th>
         <th class="normal-case">Type</th>
         <th />
       </tr>
     </thead>
     <tbody>
+      {#if $prefix}
+        <tr>
+          <td colspan="3" class="!px-0">
+            <div class="text-info-content bg-info relative inline-flex items-center gap-2 rounded-lg p-2 px-3">
+              <svg class="fill-info absolute -top-1.5 left-8 scale-x-150" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 512 512"><polygon points="256 32 20 464 492 464 256 32" /></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content h-4 w-4 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <div class="text-xs">
+                To use a custom prefix, <a class="link" href="/docs/config/">add your prefix string to config</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      {/if}
       {#each data as item, index}
         <tr>
           <th class="font-normal">
@@ -23,10 +40,12 @@
               <span class="badge badge-sm badge-ghost w-20">Component</span>
             {/if}
             {#if item.type == "modifier"}
-              <span class="badge badge-sm badge-info w-20">Modifier</span>
+              <div class="tooltip tooltip-right cursor-help" data-tip="Changes the style of a component">
+                <span class="badge badge-sm badge-outline w-20">Modifier</span>
+              </div>
             {/if}
             {#if item.type == "responsive"}
-              <div class="tooltip relative z-10" data-tip="Supports responsive prefixes (sm:, lg:, …)">
+              <div class="tooltip tooltip-right cursor-help" data-tip="Supports responsive prefixes (sm:, lg:, …)">
                 <span class="badge badge-sm badge-success w-20">Responsive</span>
               </div>
             {/if}
