@@ -6,10 +6,12 @@ const unstyled = require("../dist/unstyled");
 const unstyledRtl = require("../dist/unstyled.rtl");
 const styled = require("../dist/styled");
 const styledRtl = require("../dist/styled.rtl");
-const utilitiesUnstyled = require("../dist/utilities-unstyled");
-const utilitiesStyled = require("../dist/utilities-styled");
+let utilitiesUnstyled = require("../dist/utilities-unstyled");
+let utilitiesStyled = require("../dist/utilities-styled");
 const themes = require("./colors/themes");
 const colorFunctions = require("./colors/functions");
+const postcssJs = require('postcss-js');
+const postcssPrefix = require('postcss-class-prefix');
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = [];
@@ -61,6 +63,13 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
     console.log("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL");
     file = styledRtl;
   }
+  
+  // add prefix to class names if specified
+  const prefix = config('daisyui.prefix');
+  if (prefix) {
+    file = postcssJs.sync(postcssPrefix(prefix))(file);
+  }
+
   addComponents(file);
 
   const themeInjector = colorFunctions.injectThemes(addBase, config, themes)
@@ -71,7 +80,13 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
     addComponents(utilities, { variants: ["responsive"] });
+    if (prefix) {
+      utilitiesUnstyled = postcssJs.sync(postcssPrefix(prefix))(utilitiesUnstyled);
+    }
     addComponents(utilitiesUnstyled, { variants: ["responsive"] });
+    if (prefix) {
+      utilitiesStyled = postcssJs.sync(postcssPrefix(prefix))(utilitiesStyled);
+    }
     addComponents(utilitiesStyled, { variants: ["responsive"] });
     diasyuiIncludedItems.push("utilities");
   }

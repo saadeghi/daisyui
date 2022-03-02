@@ -23,6 +23,7 @@ module.exports = {
     logs: true,
     rtl: false,
     darkTheme: "dark",
+    prefix: "",
   },
 }
 ```
@@ -75,3 +76,12 @@ module.exports = {
   `String (default: "dark")`
 
   Allows us to pick another theme for system's auto dark mode. By default, `dark` theme (or a custom theme named `dark`) will be the default theme if no theme is specified and the user is using dark mode on their system. With this config, you can set another theme to be the default dark mode theme.
+
+- ### prefix
+
+  `String (default: "")`
+
+  Adds a prefix to class name for all components and their associated utilities. For example: `btn` will become `prefix-btn`.
+
+  Common words used for components such as `modal` or `btn` might create conflict with other styling systems (for example: bootstrap), or be picked up unintentionally by Tailwind extractor (thus creating unused css). This config will help in those cases.
+  

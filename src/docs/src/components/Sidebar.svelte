@@ -3,6 +3,7 @@
   import { pages } from "@src/lib/data.js"
   import { readEnv } from "$lib/util"
   import Search from "@components/Search.svelte"
+  import PrefixEdit from "@components/PrefixEdit.svelte";
 
   export let closeDrawer
 
@@ -26,9 +27,12 @@
   </a>
 </div>
 
-<div class={`bg-base-200 sticky top-0 z-10 flex w-full bg-opacity-90 py-3 px-2 backdrop-blur lg:hidden ${switchNavbarStyle ? "shadow-sm" : ""}`}>
-  <div class="flex w-full lg:hidden">
+<div class={`bg-base-200 sticky top-0 z-10 grid grid-row-2 gap-y-2 w-full bg-opacity-90 py-3 px-2 backdrop-blur lg:hidden ${switchNavbarStyle ? "shadow-sm" : ""}`}>
+  <div class="flex w-full">
     <Search />
+  </div>
+  <div class="px-3">
+    <PrefixEdit />
   </div>
 </div>
 
