@@ -81,7 +81,6 @@ module.exports = {
 
   `String (default: "")`
 
-  Adds a prefix to class name for all components and their associated utilities. For example: `btn` will become `prefix-btn`.
-
-  Common words used for components such as `modal` or `btn` might create conflict with other styling systems (for example: bootstrap), or be picked up unintentionally by Tailwind extractor (thus creating unused css). This config will help in those cases.
-  
+  Adds a prefix to class name for all daisyUI components and their associated utilities.  
+  For example: `btn` will become `prefix-btn`.  
+  If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts.
