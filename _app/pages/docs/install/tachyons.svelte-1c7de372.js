@@ -1,0 +1,1 @@
+import{S as t,i as o,s as a,v as e}from"../../../chunks/vendor-bfed1aed.js";async function i(){return{status:302,redirect:"/docs/tachyons"}}function c(n){return e(()=>{window.location.href="/docs/tachyons"}),[]}class u extends t{constructor(s){super();o(this,s,c,null,a,{})}}export{u as default,i as load};

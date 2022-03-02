@@ -1,1 +1,0 @@
-import{S as a,i as r,s as p,J as u,v as i}from"../../../chunks/vendor-4fa774c5.js";import{p as l}from"../../../chunks/stores-1ba45e5c.js";function c(s,o,t){let n;return u(s,l,e=>t(0,n=e)),i(()=>{window.location.href=`/components/${n.params.slug}`}),[]}class g extends a{constructor(o){super();r(this,o,c,null,p,{})}}export{g as default};
