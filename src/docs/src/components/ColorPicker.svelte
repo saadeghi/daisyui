@@ -1,5 +1,5 @@
 <script>
-  import { nanoid } from "nanoid"
+  import { nanoid } from "nanoid/nanoid.js"
   import { createEventDispatcher } from "svelte"
 
   const dispatch = createEventDispatcher()
