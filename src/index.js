@@ -65,7 +65,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   }
   
   // add prefix to class names if specified
-  const prefix = "dy-"
+  const prefix = config('daisyui.prefix');
   if (prefix) {
     file = postcssJs.sync(postcssPrefix(prefix))(file);
   }
