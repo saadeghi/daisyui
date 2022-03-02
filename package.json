@@ -82,6 +82,8 @@
   },
   "dependencies": {
     "color": "^4.2",
+    "postcss-class-prefix": "0.3.0",
+    "postcss-js": "3.0.3",
     "tailwindcss": "^3.0"
   },
   "peerDependencies": {
