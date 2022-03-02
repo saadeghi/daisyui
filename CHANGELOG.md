@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/saadeghi/daisyui/compare/v2.2.2...v2.3.0) (2022-03-02)
+
+
+### Features
+
+* **config:** allow adding prefix to class names ([#537](https://github.com/saadeghi/daisyui/issues/537)) ([49e05fa](https://github.com/saadeghi/daisyui/commit/49e05faeb189917d7d4628b3d3201ba6fdfea258))
+
+
+### Bug Fixes
+
+* [#514](https://github.com/saadeghi/daisyui/issues/514) ([6957b63](https://github.com/saadeghi/daisyui/commit/6957b637ae14db9ff942a4ea94e4b62214ebf887))
+* [#523](https://github.com/saadeghi/daisyui/issues/523) ([7d4ceb6](https://github.com/saadeghi/daisyui/commit/7d4ceb63238b62d4e5098d2bf2d285b9d3ab76aa))
+
 ### [2.2.2](https://github.com/saadeghi/daisyui/compare/v2.2.1...v2.2.2) (2022-02-25)
 
 ### [2.2.1](https://github.com/saadeghi/daisyui/compare/v2.2.0...v2.2.1) (2022-02-24)
