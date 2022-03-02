@@ -7,7 +7,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **config:** allow adding prefix to class names ([#537](https://github.com/saadeghi/daisyui/issues/537)) ([49e05fa](https://github.com/saadeghi/daisyui/commit/49e05faeb189917d7d4628b3d3201ba6fdfea258))
+* Add new `prefix` config ([#537](https://github.com/saadeghi/daisyui/issues/537)) ([49e05fa](https://github.com/saadeghi/daisyui/commit/49e05faeb189917d7d4628b3d3201ba6fdfea258))
+* Add new dependencies:
+  - `postcss-class-prefix`
+  - `postcss-js`
 
 
 ### Bug Fixes
