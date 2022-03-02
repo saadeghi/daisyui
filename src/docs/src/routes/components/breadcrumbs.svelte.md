@@ -30,7 +30,7 @@ data="{[
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="text-sm breadcrumbs">
+`<div class="text-sm $$breadcrumbs">
   <ul>
     <li><a>Home</a></li> 
     <li><a>Documents</a></li> 
@@ -62,7 +62,7 @@ data="{[
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="text-sm breadcrumbs">
+`<div class="text-sm $$breadcrumbs">
   <ul>
     <li>
       <a>
@@ -96,7 +96,7 @@ data="{[
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="max-w-xs text-sm breadcrumbs">
+`<div class="max-w-xs text-sm $$breadcrumbs">
   <ul>
     <li>Long text 1</li>
     <li>Long text 2</li>

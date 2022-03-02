@@ -24,10 +24,10 @@ data="{[
   <button class="btn">Button</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="btn-group">
-  <button class="btn btn-active">Button</button>
-  <button class="btn">Button</button>
-  <button class="btn">Button</button>
+`<div class="$$btn-group">
+  <button class="$$btn $$btn-active">Button</button>
+  <button class="$$btn">Button</button>
+  <button class="$$btn">Button</button>
 </div>`
 }</pre>
 </Component>
@@ -40,11 +40,11 @@ data="{[
   <input type="radio" name="options" data-title="4" class="btn">
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="btn-group">
-  <input type="radio" name="options" data-title="1" class="btn">
-  <input type="radio" name="options" data-title="2" checked="checked" class="btn">
-  <input type="radio" name="options" data-title="3" class="btn">
-  <input type="radio" name="options" data-title="4" class="btn">
+`<div class="$$btn-group">
+  <input type="radio" name="options" data-title="1" class="$$btn">
+  <input type="radio" name="options" data-title="2" checked="checked" class="$$btn">
+  <input type="radio" name="options" data-title="3" class="$$btn">
+  <input type="radio" name="options" data-title="4" class="$$btn">
 </div>`
 }</pre>
 </Component>

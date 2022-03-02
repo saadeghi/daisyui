@@ -39,7 +39,7 @@ data="{[
   <span style="--value:{counter};"></span>
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<span class="countdown">
+`<span class="$$countdown">
   <span style="--value:${counter};"></span>
 </span>`
 }</pre>
@@ -50,7 +50,7 @@ data="{[
   <span style="--value:{counter};"></span>
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<span class="countdown font-mono text-6xl">
+`<span class="$$countdown font-mono text-6xl">
   <span style="--value:${counter};"></span>
 </span>`
 }</pre>
@@ -63,7 +63,7 @@ data="{[
   <span style="--value:{counter};"></span>s
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<span class="font-mono text-2xl countdown">
+`<span class="$$countdown font-mono text-2xl">
   <span style="--value:10;"></span>h
   <span style="--value:24;"></span>m
   <span style="--value:${counter};"></span>s
@@ -78,7 +78,7 @@ data="{[
   <span style="--value:{counter};"></span>
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<span class="font-mono text-2xl countdown">
+`<span class="$$countdown font-mono text-2xl">
   <span style="--value:10;"></span>:
   <span style="--value:24;"></span>:
   <span style="--value:${counter};"></span>
@@ -116,25 +116,25 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="flex gap-5">
   <div>
-    <span class="font-mono text-4xl countdown">
+    <span class="$$countdown font-mono text-4xl">
       <span style="--value:15;"></span>
     </span>
     days
   </div> 
   <div>
-    <span class="font-mono text-4xl countdown">
+    <span class="$$countdown font-mono text-4xl">
       <span style="--value:10;"></span>
     </span>
     hours
   </div> 
   <div>
-    <span class="font-mono text-4xl countdown">
+    <span class="$$countdown font-mono text-4xl">
       <span style="--value:24;"></span>
     </span>
     min
   </div> 
   <div>
-    <span class="font-mono text-4xl countdown">
+    <span class="$$countdown font-mono text-4xl">
       <span style="--value:${counter};"></span>
     </span>
     sec
@@ -173,25 +173,25 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:15;"></span>
     </span>
     days
   </div> 
   <div class="flex flex-col">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:10;"></span>
     </span>
     hours
   </div> 
   <div class="flex flex-col">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:24;"></span>
     </span>
     min
   </div> 
   <div class="flex flex-col">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:${counter};"></span>
     </span>
     sec
@@ -230,25 +230,25 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:15;"></span>
     </span>
     days
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:10;"></span>
     </span>
     hours
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:24;"></span>
     </span>
     min
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span class="font-mono text-5xl countdown">
+    <span class="$$countdown font-mono text-5xl">
       <span style="--value:${counter};"></span>
     </span>
     sec
