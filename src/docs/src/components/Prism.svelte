@@ -7,14 +7,12 @@
 
 <script>
   import "prism-svelte"
-  import { tick } from "svelte"
+  import { afterUpdate } from "svelte"
 
   export let language = "javascript"
   export let source = ""
   export let transform = (x) => x
   let element, formattedCode
-
-  $: $$props && (source || element) && highlightCode()
 
   function highlightCode() {
     const grammar = prism.languages[language]
@@ -23,6 +21,10 @@
     body = transform(body)
     formattedCode = language === "none" ? body : prism.highlight(body, grammar, language)
   }
+
+  afterUpdate(() => {
+    highlightCode();
+	});
 </script>
 
 <code bind:this={element} style="display:none">
