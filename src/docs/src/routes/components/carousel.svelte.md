@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -43,7 +45,7 @@ data="{[
     <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=7F5AE56A" alt="Burger">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="carousel rounded-box">
   <div class="carousel-item">
     <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=8B7BCDC2" alt="Burger">
@@ -94,7 +96,7 @@ data="{[
     <img src="https://api.lorem.space/image/pizza?w=400&h=300&hash=7F5AE56A" alt="Pizza">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="carousel carousel-center rounded-box">
   <div class="carousel-item">
     <img src="https://api.lorem.space/image/pizza?w=400&h=300&hash=8B7BCDC2" alt="Pizza">
@@ -145,7 +147,7 @@ data="{[
     <img src="https://api.lorem.space/image/drink?w=400&h=300&hash=7F5AE56A" alt="Drink">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="carousel carousel-end rounded-box">
   <div class="carousel-item">
     <img src="https://api.lorem.space/image/drink?w=400&h=300&hash=8B7BCDC2" alt="Drink">
@@ -196,7 +198,7 @@ data="{[
     <img src="https://api.lorem.space/image/game?w=256&h=400&hash=7F5AE56A" class="w-full" alt="Tailwind CSS carousel component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="w-64 carousel rounded-box">
   <div class="w-full carousel-item">
     <img src="https://api.lorem.space/image/game?w=256&h=400&hash=8B7BCDC2" class="w-full" alt="Tailwind CSS Carousel component">
@@ -247,7 +249,7 @@ data="{[
     <img src="https://api.lorem.space/image/game?w=256&h=400&hash=7F5AE56A" alt="Tailwind Image slider">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="h-96 carousel carousel-vertical rounded-box">
   <div class="carousel-item h-full">
     <img src="https://api.lorem.space/image/game?w=256&h=400&hash=8B7BCDC2">
@@ -298,7 +300,7 @@ data="{[
     <img src="https://api.lorem.space/image/game?w=256&h=400&hash=7F5AE56A" class="w-full" alt="Tailwind CSS Image slider">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="w-96 carousel rounded-box">
   <div class="w-1/2 carousel-item">
     <img src="https://api.lorem.space/image/game?w=256&h=400&hash=8B7BCDC2" class="w-full">
@@ -349,7 +351,7 @@ data="{[
     <img src="https://api.lorem.space/image/furniture?w=250&h=180&hash=7F5AE56A" class="rounded-box" alt="Tailwind CSS component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="max-w-md p-4 space-x-4 carousel carousel-center bg-neutral rounded-box">
   <div class="carousel-item">
     <img src="https://api.lorem.space/image/furniture?w=250&h=180&hash=8B7BCDC2" class="rounded-box">
@@ -397,7 +399,7 @@ data="{[
   <a href="#item3" class="btn btn-xs">3</a> 
   <a href="#item4" class="btn btn-xs">4</a>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="w-full carousel">
   <div id="item1" class="w-full carousel-item">
     <img src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2" class="w-full">
@@ -452,7 +454,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="w-full carousel">
   <div id="slide1" class="relative w-full carousel-item">
     <img src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2" class="w-full"> 

@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -22,7 +24,7 @@ data="{[
   <button class="btn">3</button>
   <button class="btn">4</button>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="btn-group">
   <button class="btn">1</button>
   <button class="btn btn-active">2</button>
@@ -59,7 +61,7 @@ data="{[
     <button class="btn btn-lg">4</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="btn-group">
   <button class="btn btn-xs">1</button>
   <button class="btn btn-xs btn-active">2</button>
@@ -95,7 +97,7 @@ data="{[
   <button class="btn">99</button>
   <button class="btn">100</button>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="btn-group">
   <button class="btn">1</button>
   <button class="btn">2</button>
@@ -112,7 +114,7 @@ data="{[
   <button class="btn">Page 22</button>
   <button class="btn">»</button>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="btn-group">
   <button class="btn">«</button>
   <button class="btn">Page 22</button>
@@ -126,7 +128,7 @@ data="{[
   <button class="btn btn-outline">Previous page</button>
   <button class="btn btn-outline">Next</button>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="btn-group grid grid-cols-2">
   <button class="btn btn-outline">Previous page</button>
   <button class="btn btn-outline">Next</button>

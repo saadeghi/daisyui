@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -44,7 +46,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -63,7 +65,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-end">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -82,7 +84,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-top">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -101,7 +103,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-top dropdown-end">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -120,7 +122,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-left">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -139,7 +141,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-left dropdown-end">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -158,7 +160,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-right">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -177,7 +179,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-right dropdown-end">
   <label tabindex="0" class="m-1 btn">Click</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -196,7 +198,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-hover">
   <label tabindex="0" class="m-1 btn">Hover</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -215,7 +217,7 @@ data="{[
     <li><a>Item 2</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown dropdown-open">
   <label tabindex="0" class="m-1 btn">Button</label>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
@@ -236,7 +238,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="dropdown">
   <label tabindex="0" class="m-1 btn">Click</label>
   <div tabindex="0" class="w-64 p-2 shadow card card-compact dropdown-content bg-primary text-primary-content">
@@ -267,7 +269,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-300 rounded-box">
   <div class="flex-1 px-2 lg:flex-none">
     <a class="text-lg font-bold">daisyUI</a>
@@ -303,7 +305,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `A normal text and a helper dropdown
 <div class="dropdown dropdown-end">
   <label tabindex="0" class="btn btn-circle btn-ghost btn-xs text-info">

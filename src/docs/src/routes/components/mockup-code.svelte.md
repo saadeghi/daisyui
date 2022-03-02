@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -19,7 +21,7 @@ data="{[
 <div class="mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre>
 </div>`
@@ -32,7 +34,7 @@ data="{[
   <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
   <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre> 
   <pre data-prefix=">" class="text-warning"><code>installing...</code></pre> 
@@ -47,7 +49,7 @@ data="{[
   <pre data-prefix="2"><code>installing...</code></pre> 
   <pre data-prefix="3" class="bg-warning text-warning"><code>Error!</code></pre>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-code">
   <pre data-prefix="1"><code>npm i daisyui</code></pre> 
   <pre data-prefix="2"><code>installing...</code></pre> 
@@ -60,7 +62,7 @@ data="{[
 <div class="mockup-code">
   <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-code">
   <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
 </div>`
@@ -71,7 +73,7 @@ data="{[
 <div class="mockup-code">
   <pre><code>without prefix</code></pre>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-code">
   <pre><code>without prefix</code></pre>
 </div>`
@@ -82,7 +84,7 @@ data="{[
 <div class="mockup-code bg-primary text-primary">
   <pre><code>can be any color!</code></pre>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-code bg-primary text-primary">
   <pre><code>can be any color!</code></pre>
 </div>`

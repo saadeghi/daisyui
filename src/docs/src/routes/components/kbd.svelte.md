@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -21,7 +23,7 @@ data="{[
 
 <Component title="Kbd">
 <kbd class="kbd">A</kbd>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<kbd class="kbd">A</kbd>`
 }</pre>
 </Component>
@@ -31,7 +33,7 @@ data="{[
 <kbd class="kbd kbd-md">Shift</kbd>
 <kbd class="kbd kbd-sm">Shift</kbd>
 <kbd class="kbd kbd-xs">Shift</kbd>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<kbd class="kbd kbd-lg">Shift</kbd>
 <kbd class="kbd kbd-md">Shift</kbd>
 <kbd class="kbd kbd-sm">Shift</kbd>
@@ -41,7 +43,7 @@ data="{[
 
 <Component title="In text">
 Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.`
 }</pre>
 </Component>
@@ -52,7 +54,7 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
 <kbd class="kbd">shift</kbd>
 +
 <kbd class="kbd">del</kbd>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<kbd class="kbd">ctrl</kbd>
 +
 <kbd class="kbd">shift</kbd>
@@ -66,7 +68,7 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
 <kbd class="kbd">⌥</kbd>
 <kbd class="kbd">⇧</kbd>
 <kbd class="kbd">⌃</kbd>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<kbd class="kbd">⌘</kbd>
 <kbd class="kbd">⌥</kbd>
 <kbd class="kbd">⇧</kbd>
@@ -110,7 +112,7 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
     <kbd class="kbd">/</kbd>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="flex justify-center gap-1 my-1 w-full">
   <kbd class="kbd">q</kbd>
   <kbd class="kbd">w</kbd>
@@ -158,7 +160,7 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
 <div class="flex justify-center w-full">
   <kbd class="kbd">▼</kbd>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="flex justify-center w-full">
   <kbd class="kbd">▲</kbd>
 </div>

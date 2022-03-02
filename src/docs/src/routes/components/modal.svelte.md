@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -23,7 +25,7 @@ data="{[
 <Component title="Modal using label + hidden checkbox" desc='Make sure each modal you use, has a unique ID. In this example, ID is "my-modal".'>
 <label for="my-modal" class="btn modal-button">open modal</label>
 
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- The button to open modal -->
 <label for="my-modal" class="btn modal-button">open modal</label>
 
@@ -43,7 +45,7 @@ data="{[
 
 <Component title="Modal using anchor link" desc="Anchor links might not work well on some SPA frameworks so if there are problems, use the first example">
 <a href="#my-modal-2" class="btn" rel="external">open modal</a>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- The button to open modal -->
 <a href="#my-modal-2" class="btn">open modal</a>
 

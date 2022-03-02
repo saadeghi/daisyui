@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -27,7 +29,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="hero min-h-screen bg-base-200">
   <div class="text-center hero-content">
     <div class="max-w-md">
@@ -51,7 +53,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="hero min-h-screen bg-base-200">
   <div class="flex-col hero-content lg:flex-row">
     <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl">
@@ -76,7 +78,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="hero min-h-screen bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
     <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl">
@@ -121,7 +123,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="hero min-h-screen bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
     <div class="text-center lg:text-left">
@@ -166,7 +168,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="hero min-h-screen" style="background-image: url(https://api.lorem.space/image/fashion?w=1000&h=800);">
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="text-center hero-content text-neutral-content">

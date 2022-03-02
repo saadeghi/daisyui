@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -30,7 +32,7 @@ data="{[
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div tabindex="0" class="collapse"> 
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
@@ -52,7 +54,7 @@ data="{[
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div tabindex="0" class="collapse">
   <input type="checkbox"> 
   <div class="collapse-title text-xl font-medium">
@@ -74,7 +76,7 @@ data="{[
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box"> 
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
@@ -95,7 +97,7 @@ data="{[
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box collapse-arrow">
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
@@ -116,7 +118,7 @@ data="{[
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box collapse-plus">
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
@@ -137,7 +139,7 @@ data="{[
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-100 rounded-box"> 
   <div class="collapse-title text-xl font-medium">
     I have collapse-open class
@@ -158,7 +160,7 @@ data="{[
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div tabindex="0" class="collapse collapse-close border border-base-300 bg-base-100 rounded-box"> 
   <div class="collapse-title text-xl font-medium">
     I have collapse-close class

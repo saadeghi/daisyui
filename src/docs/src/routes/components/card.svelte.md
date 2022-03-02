@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -34,7 +36,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 shadow-xl">
   <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
   <div class="card-body">
@@ -59,7 +61,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 card-compact shadow-xl">
   <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
   <div class="card-body">
@@ -88,7 +90,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 shadow-xl">
   <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
   <div class="card-body">
@@ -114,7 +116,7 @@ data="{[
   </div>
   <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 shadow-xl">
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
@@ -138,7 +140,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
     <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl">
@@ -165,7 +167,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 shadow-xl image-full">
   <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
   <div class="card-body">
@@ -189,7 +191,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 shadow-xl">
   <div class="card-body">
     <h2 class="card-title">Card title!</h2>
@@ -212,7 +214,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-primary text-primary-content">
   <div class="card-body">
     <h2 class="card-title">Card title!</h2>
@@ -236,7 +238,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-neutral text-neutral-content">
   <div class="card-body items-center text-center">
     <h2 class="card-title">Cookies!</h2>
@@ -261,7 +263,7 @@ data="{[
     <p>We are using cookies for no reason.</p>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 bg-base-100 shadow-xl">
   <div class="card-body">
     <div class="justify-end card-actions">
@@ -286,7 +288,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card w-96 glass">
   <figure><img src="https://api.lorem.space/image/car?w=400&h=225" alt="car!"></figure>
   <div class="card-body">
@@ -311,7 +313,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card card-side bg-base-100 shadow-xl">
   <figure><img src="https://api.lorem.space/image/movie?w=200&h=280" alt="Movie"></figure>
   <div class="card-body">
@@ -336,7 +338,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="card lg:card-side bg-base-100 shadow-xl">
   <figure><img src="https://api.lorem.space/image/album?w=400&h=400" alt="Album"></figure>
   <div class="card-body">

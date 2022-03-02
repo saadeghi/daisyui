@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -21,7 +23,7 @@ data="{[
   <div class="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div> 
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div>
   <div class="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div> 
   <div class="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div> 
@@ -36,7 +38,7 @@ data="{[
   <div class="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div> 
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="stack">
   <div class="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div> 
   <div class="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div> 
@@ -51,7 +53,7 @@ data="{[
   <img src="https://api.lorem.space/image/face?w=100&h=100&hash=500B67FB" alt="Image 2" class="rounded"> 
   <img src="https://api.lorem.space/image/face?w=100&h=100&hash=A89D0DE6" alt="Image 3" class="rounded">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="stack">
   <img src="https://api.lorem.space/image/face?w=100&h=100&hash=8B7BCDC2" alt="Image 1" class="rounded"> 
   <img src="https://api.lorem.space/image/face?w=100&h=100&hash=500B67FB" alt="Image 2" class="rounded"> 
@@ -72,7 +74,7 @@ data="{[
     <div class="card-body">C</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="stack">
   <div class="text-center border border-base-content card w-36 bg-base-100">
     <div class="card-body">A</div>
@@ -99,7 +101,7 @@ data="{[
     <div class="card-body">C</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="stack">
   <div class="text-center shadow-md w-36 card bg-base-200">
     <div class="card-body">A</div>
@@ -135,7 +137,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="stack">
   <div class="shadow-md card bg-primary text-primary-content">
     <div class="card-body">

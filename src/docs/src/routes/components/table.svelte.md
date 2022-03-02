@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -53,7 +55,7 @@ data="{[
     </tbody>
   </table>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
   <table class="table w-full">
     <!-- head -->
@@ -126,7 +128,7 @@ data="{[
     </tbody>
   </table>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
   <table class="table w-full">
     <!-- head -->
@@ -199,7 +201,7 @@ data="{[
     </tbody>
   </table>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
   <table class="table w-full">
     <!-- head -->
@@ -272,7 +274,7 @@ data="{[
     </tbody>
   </table>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
   <table class="table table-zebra w-full">
     <!-- head -->
@@ -457,7 +459,7 @@ data="{[
     </tfoot>
   </table>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto w-full">
   <table class="table w-full">
     <!-- head -->
@@ -821,7 +823,7 @@ data="{[
     </tfoot>
   </table>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
   <table class="table table-compact w-full">
     <thead>

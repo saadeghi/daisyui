@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -22,7 +24,7 @@ data="{[
     <div class="artboard artboard-demo phone-1">Hi.</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-phone">
   <div class="camera"></div> 
   <div class="display">
@@ -39,7 +41,7 @@ data="{[
     <div class="artboard artboard-demo phone-1">Hi.</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="mockup-phone border-primary">
   <div class="camera"></div> 
   <div class="display">

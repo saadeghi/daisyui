@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -32,7 +34,7 @@ data="{[
   <li class="step">Purchase</li>
   <li class="step">Receive Product</li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="steps">
   <li class="step step-primary">Register</li>
   <li class="step step-primary">Choose plan</li>
@@ -49,7 +51,7 @@ data="{[
   <li class="step">Purchase</li>
   <li class="step">Receive Product</li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="steps steps-vertical">
   <li class="step step-primary">Register</li>
   <li class="step step-primary">Choose plan</li>
@@ -66,7 +68,7 @@ data="{[
   <li class="step">Purchase</li>
   <li class="step">Receive Product</li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="steps steps-vertical lg:steps-horizontal">
   <li class="step step-primary">Register</li>
   <li class="step step-primary">Choose plan</li>
@@ -86,7 +88,7 @@ data="{[
   <li data-content="" class="step step-neutral">Step 6</li>
   <li data-content="●" class="step step-neutral">Step 7</li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="steps">
   <li data-content="?" class="step step-neutral">Step 1</li>
   <li data-content="!" class="step step-neutral">Step 2</li>
@@ -106,7 +108,7 @@ data="{[
   <li class="step step-info">Grab the moon</li>
   <li data-content="?" class="step step-error">Sit on toilet</li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="steps">
   <li class="step step-info">Fly to moon</li>
   <li class="step step-info">Shrink the moon</li>
@@ -145,7 +147,7 @@ data="{[
     <li class="step step-neutral">end</li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
   <ul class="steps">
     <li class="step">start</li>

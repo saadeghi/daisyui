@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -25,7 +27,7 @@ data="{[
 
 <Component title="Toggle">
 <input type="checkbox" class="toggle" checked>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" class="toggle"> checked`
 }</pre>
 </Component>
@@ -37,7 +39,7 @@ data="{[
     <input type="checkbox" class="toggle" checked>
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
@@ -54,7 +56,7 @@ data="{[
     <input type="checkbox" class="toggle toggle-primary" checked>
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
@@ -71,7 +73,7 @@ data="{[
     <input type="checkbox" class="toggle toggle-secondary" checked>
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
@@ -88,7 +90,7 @@ data="{[
     <input type="checkbox" class="toggle toggle-accent" checked>
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
@@ -105,7 +107,7 @@ data="{[
   <input type="checkbox" class="toggle toggle-md" checked>
   <input type="checkbox" class="toggle toggle-lg" checked>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" class="toggle toggle-xs" checked>
 <input type="checkbox" class="toggle toggle-sm" checked>
 <input type="checkbox" class="toggle toggle-md" checked>
@@ -115,14 +117,14 @@ data="{[
 
 <Component title="Disabled">
 <input type="checkbox" disabled="disabled" class="toggle">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" disabled="disabled" class="toggle">`
 }</pre>
 </Component>
 
 <Component title="Disabled and checked">
 <input type="checkbox" disabled="disabled" class="toggle" checked>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" disabled="disabled" class="toggle"> checked`
 }</pre>
 </Component>

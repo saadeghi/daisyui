@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -28,7 +30,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -43,7 +45,7 @@ data="{[
   <li><a class="active">Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56">
   <li><a>Item 1</a></li>
   <li><a class="active">Item 2</a></li>
@@ -58,7 +60,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -73,7 +75,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56 p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -88,7 +90,7 @@ data="{[
   <li class="bordered"><a>I have border</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li class="bordered"><a>I have border</a></li>
@@ -103,7 +105,7 @@ data="{[
   <li class="hover-bordered"><a>Hover me</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li class="hover-bordered"><a>Hover me</a></li>
@@ -118,7 +120,7 @@ data="{[
   <li class="disabled"><a>Item 2</a></li>
   <li class="disabled"><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56 rounded-box">
   <li class="disabled"><a>Item 1</a></li>
   <li class="disabled"><a>Item 2</a></li>
@@ -133,7 +135,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-compact w-56 p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -148,7 +150,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-compact lg:menu-normal w-56 p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -163,7 +165,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-horizontal rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -178,7 +180,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-vertical lg:menu-horizontal rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -208,7 +210,7 @@ data="{[
     </a>
   </li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 w-56 p-2 rounded-box">
   <li>
     <a>
@@ -250,7 +252,7 @@ data="{[
     </a>
   </li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 rounded-box">
   <li>
     <a>
@@ -289,7 +291,7 @@ data="{[
     </a>
   </li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-horizontal rounded-box">
   <li>
     <a>
@@ -328,7 +330,7 @@ data="{[
     </a>
   </li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 p-2 rounded-box">
   <li>
     <a>
@@ -364,7 +366,7 @@ data="{[
     <li><a>Item 3</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-horizontal">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
@@ -396,7 +398,7 @@ data="{[
     <li><a>Item 3</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-horizontal rounded-box p-2">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
@@ -428,7 +430,7 @@ data="{[
     <li><a>Item 3</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
@@ -460,7 +462,7 @@ data="{[
     <li><a>Item 3</a></li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 rounded-box p-2">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
@@ -509,7 +511,7 @@ data="{[
     </li>
   </ul>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu bg-base-100 menu-horizontal rounded-box p-2">
   <li><a>Item</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
@@ -549,7 +551,7 @@ data="{[
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="menu w-56 bg-secondary text-secondary-content p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>

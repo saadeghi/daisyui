@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -30,7 +32,7 @@ data="{[
     <div class="stat-desc">21% more than last month</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="shadow stats">
   
   <div class="stat">
@@ -74,7 +76,7 @@ data="{[
     <div class="stat-desc text-secondary">31 tasks remaining</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="shadow stats">
   
   <div class="stat">
@@ -139,7 +141,7 @@ data="{[
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="shadow stats">
   
   <div class="stat">
@@ -191,7 +193,7 @@ data="{[
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="shadow stats">
   
   <div class="stat place-items-center">
@@ -234,7 +236,7 @@ data="{[
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="shadow stats stats-vertical">
   
   <div class="stat">
@@ -277,7 +279,7 @@ data="{[
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="shadow stats stats-vertical lg:stats-horizontal">
   
   <div class="stat">
@@ -320,7 +322,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="stats bg-primary text-primary-content">
   
   <div class="stat">

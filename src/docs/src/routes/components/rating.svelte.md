@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -29,7 +31,7 @@ data="{[
   <input type="radio" name="rating-1" class="mask mask-star">
   <input type="radio" name="rating-1" class="mask mask-star">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="rating">
   <input type="radio" name="rating-1" class="mask mask-star">
   <input type="radio" name="rating-1" class="mask mask-star" checked>
@@ -48,7 +50,7 @@ data="{[
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400">
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="rating">
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400">
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked>
@@ -67,7 +69,7 @@ data="{[
   <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400">
   <input type="radio" name="rating-3" class="mask mask-heart bg-green-400">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="gap-1 rating">
   <input type="radio" name="rating-3" class="mask mask-heart bg-red-400">
   <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" checked>
@@ -86,7 +88,7 @@ data="{[
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2">
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="rating">
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2">
   <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" checked>
@@ -128,7 +130,7 @@ data="{[
     <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- xs -->
 <div class="rating rating-xs">
   <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400">
@@ -173,7 +175,7 @@ data="{[
   <input type="radio" name="rating-9" class="mask mask-star-2">
   <input type="radio" name="rating-9" class="mask mask-star-2">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="rating rating-lg">
   <input type="radio" name="rating-9" class="rating-hidden">
   <input type="radio" name="rating-9" class="mask mask-star-2">
@@ -199,7 +201,7 @@ data="{[
   <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1">
   <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="rating rating-lg rating-half">
   <input type="radio" name="rating-10" class="rating-hidden">
   <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1">

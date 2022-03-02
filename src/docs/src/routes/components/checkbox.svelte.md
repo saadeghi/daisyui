@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -25,7 +27,7 @@ data="{[
 
 <Component title="Checkbox">
 <input type="checkbox" checked="checked" class="checkbox">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" checked="checked" class="checkbox">`
 }</pre>
 </Component>
@@ -37,7 +39,7 @@ data="{[
     <input type="checkbox" checked="checked" class="checkbox">
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
@@ -54,7 +56,7 @@ data="{[
     <input type="checkbox" checked="checked" class="checkbox checkbox-primary">
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
@@ -71,7 +73,7 @@ data="{[
     <input type="checkbox" checked="checked" class="checkbox checkbox-secondary">
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
@@ -88,7 +90,7 @@ data="{[
     <input type="checkbox" checked="checked" class="checkbox checkbox-accent">
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
@@ -105,7 +107,7 @@ data="{[
   <input type="checkbox" checked="checked" class="checkbox checkbox-md"> 
   <input type="checkbox" checked="checked" class="checkbox checkbox-lg">
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" checked="checked" class="checkbox checkbox-xs"> 
 <input type="checkbox" checked="checked" class="checkbox checkbox-sm"> 
 <input type="checkbox" checked="checked" class="checkbox checkbox-md"> 
@@ -115,14 +117,14 @@ data="{[
 
 <Component title="Disabled">
 <input type="checkbox" disabled="disabled" class="checkbox">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" disabled="disabled" class="checkbox">`
 }</pre>
 </Component>
 
 <Component title="Disabled and checked">
 <input type="checkbox" disabled="disabled" class="checkbox" checked="checked">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" disabled="disabled" class="checkbox" checked="checked">`
 }</pre>
 </Component>

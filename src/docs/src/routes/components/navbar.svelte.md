@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -22,7 +24,7 @@ data="{[
 <div class="navbar bg-base-100 shadow-xl rounded-box">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>`
@@ -40,7 +42,7 @@ data="{[
     </button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -70,7 +72,7 @@ data="{[
     </button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100">
   <div class="flex-none">
     <button class="btn btn-square btn-ghost">
@@ -111,7 +113,7 @@ data="{[
     </ul>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -164,7 +166,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -237,7 +239,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -311,7 +313,7 @@ data="{[
     </button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
   <div class="navbar-start">
     <div class="dropdown">
@@ -387,7 +389,7 @@ data="{[
     <a class="btn">Get started</a>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-base-100">
   <div class="navbar-start">
     <div class="dropdown">
@@ -444,7 +446,7 @@ data="{[
 <div class="navbar bg-primary text-primary-content shadow-xl rounded-box">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="navbar bg-neutral text-neutral-content">
   <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 </div>

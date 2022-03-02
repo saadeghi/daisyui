@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -39,7 +41,7 @@ data="{[
   <option>Lisa</option>
   <option>Maggie</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs">
   <option disabled selected>Pick your favorite Simpson</option>
   <option>Homer</option>
@@ -57,7 +59,7 @@ data="{[
   <option>Han Solo</option>
   <option>Greedo</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-bordered">
   <option disabled selected>Who shot first?</option>
   <option>Han Solo</option>
@@ -73,7 +75,7 @@ data="{[
   <option>Vue</option>
   <option>React</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-ghost">
   <option disabled selected>Pick the best JS framework</option>
   <option>Svelte</option>
@@ -102,7 +104,7 @@ data="{[
     <span class="label-text-alt">Alt label</span>
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control w-full max-w-xs">
   <label class="label">
     <span class="label-text">Pick the best fantasy franchise</span>
@@ -132,7 +134,7 @@ data="{[
   <option>Breaking Bad</option>
   <option>Walking Dead</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-primary">
   <option disabled selected>What is the best TV show?</option>
   <option>Game of Thrones</option>
@@ -155,7 +157,7 @@ data="{[
   <option>JavaScript</option>
   <option>Python</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-secondary">
   <option disabled selected>Pick your favorite language</option>
   <option>Java</option>
@@ -177,7 +179,7 @@ data="{[
   <option>Dark mode</option>
   <option>Light mode</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-accent">
   <option disabled selected>Dark mode or light mode?</option>
   <option>Auto</option>
@@ -194,7 +196,7 @@ data="{[
   <option>Japanese</option>
   <option>Italian</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-info">
   <option disabled selected>Select language</option>
   <option>English</option>
@@ -215,7 +217,7 @@ data="{[
   <option>Fullmetal Alchemist</option>
   <option>Jojo's Bizarre Adventure</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-success">
   <option disabled selected>Pick your favorite anime</option>
   <option>One Piece</option>
@@ -238,7 +240,7 @@ data="{[
   <option>Margherita</option>
   <option>Hawaiian</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-warning">
   <option disabled selected>Pick a pizza</option>
   <option>Cheese</option>
@@ -258,7 +260,7 @@ data="{[
   <option>Netlify CMS</option>
   <option>Sanity</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs select-error">
   <option disabled selected>What is the best headless CMS</option>
   <option>Strapi</option>
@@ -296,7 +298,7 @@ data="{[
     <option>Tiny Tomato</option>
   </select>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- lg -->
 <select class="select select-bordered select-lg w-full max-w-xs">
   <option disabled selected>Large</option>
@@ -332,7 +334,7 @@ data="{[
 <select class="select w-full max-w-xs" disabled>
   <option>You can't touch this</option>
 </select>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="select w-full max-w-xs" disabled>
   <option>You can't touch this</option>
 </select>`

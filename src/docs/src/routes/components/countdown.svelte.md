@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 
   import { onMount } from "svelte"
   let counter = 59
@@ -36,7 +38,7 @@ data="{[
 <span class="countdown">
   <span style="--value:{counter};"></span>
 </span>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="countdown">
   <span style="--value:${counter};"></span>
 </span>`
@@ -47,7 +49,7 @@ data="{[
 <span class="countdown font-mono text-6xl">
   <span style="--value:{counter};"></span>
 </span>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="countdown font-mono text-6xl">
   <span style="--value:${counter};"></span>
 </span>`
@@ -60,7 +62,7 @@ data="{[
   <span style="--value:24;"></span>m
   <span style="--value:{counter};"></span>s
 </span>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="font-mono text-2xl countdown">
   <span style="--value:10;"></span>h
   <span style="--value:24;"></span>m
@@ -75,7 +77,7 @@ data="{[
   <span style="--value:24;"></span>:
   <span style="--value:{counter};"></span>
 </span>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="font-mono text-2xl countdown">
   <span style="--value:10;"></span>:
   <span style="--value:24;"></span>:
@@ -111,7 +113,7 @@ data="{[
     sec
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="flex gap-5">
   <div>
     <span class="font-mono text-4xl countdown">
@@ -168,7 +170,7 @@ data="{[
     sec
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
@@ -225,7 +227,7 @@ data="{[
     sec
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">

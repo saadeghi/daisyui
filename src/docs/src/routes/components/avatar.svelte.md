@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -25,7 +27,7 @@ data="{[
     <img src="https://api.lorem.space/image/face?hash=75101" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar">
   <div class="w-24 rounded">
     <img src="https://api.lorem.space/image/face?hash=92048">
@@ -55,7 +57,7 @@ data="{[
     <img src="https://api.lorem.space/image/face?hash=79498" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar">
   <div class="w-32 rounded">
     <img src="https://api.lorem.space/image/face?hash=88560">
@@ -90,7 +92,7 @@ data="{[
     <img src="https://api.lorem.space/image/face?hash=70084" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar">
   <div class="w-24 rounded-xl">
     <img src="https://api.lorem.space/image/face?hash=64318">
@@ -120,7 +122,7 @@ data="{[
     <img src="https://api.lorem.space/image/face?hash=70860" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar">
   <div class="w-24 mask mask-squircle">
     <img src="https://api.lorem.space/image/face?hash=47449">
@@ -162,7 +164,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12">
@@ -211,7 +213,7 @@ data="{[
     </div>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12">
@@ -243,7 +245,7 @@ data="{[
     <img src="https://api.lorem.space/image/face?hash=558" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar">
   <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
     <img src="https://api.lorem.space/image/face?hash=3174">
@@ -263,7 +265,7 @@ data="{[
     <img src="https://api.lorem.space/image/face?hash=92699" alt="Tailwind-CSS-Avatar-component">
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar online">
   <div class="w-24 rounded-full">
     <img src="https://api.lorem.space/image/face?hash=28212">
@@ -298,7 +300,7 @@ data="{[
     <span class="text-xs">AA</span>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="avatar placeholder">
   <div class="bg-neutral-focus text-neutral-content rounded-full w-24">
     <span class="text-3xl">K</span>

@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -32,7 +34,7 @@ data="{[
     <button class="btn">Hover me</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tooltip" data-tip="hello">
   <button class="btn">Hover me</button>
 </div>`
@@ -45,7 +47,7 @@ data="{[
     <button class="btn">Force open</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tooltip tooltip-open" data-tip="hello">
   <button class="btn">Force open</button>
 </div>`
@@ -58,7 +60,7 @@ data="{[
     <button class="btn">Bottom</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tooltip tooltip-open tooltip-bottom" data-tip="hello">
   <button class="btn">Bottom</button>
 </div>`
@@ -71,7 +73,7 @@ data="{[
     <button class="btn">Left</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tooltip tooltip-open tooltip-left" data-tip="hello">
   <button class="btn">Left</button>
 </div>`
@@ -84,7 +86,7 @@ data="{[
     <button class="btn">Right</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tooltip tooltip-open tooltip-right" data-tip="hello">
   <button class="btn">Right</button>
 </div>`
@@ -97,7 +99,7 @@ data="{[
     <button class="btn btn-primary">primary</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div data-tip="primary" class="tooltip tooltip-open tooltip-primary">
   <button class="btn btn-primary">primary</button>
 </div>`
@@ -110,7 +112,7 @@ data="{[
     <button class="btn btn-secondary">secondary</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div data-tip="secondary" class="tooltip tooltip-open tooltip-secondary">
   <button class="btn btn-secondary">secondary</button>
 </div>`
@@ -123,7 +125,7 @@ data="{[
     <button class="btn btn-accent">accent</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div data-tip="accent" class="tooltip tooltip-open tooltip-accent">
   <button class="btn btn-accent">accent</button>
 </div>`
@@ -136,7 +138,7 @@ data="{[
     <button class="btn btn-info">info</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div data-tip="info" class="tooltip tooltip-open tooltip-info">
   <button class="btn btn-info">info</button>
 </div>`
@@ -149,7 +151,7 @@ data="{[
     <button class="btn btn-success">success</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div data-tip="success" class="tooltip tooltip-open tooltip-success">
   <button class="btn btn-success">success</button>
 </div>`
@@ -162,7 +164,7 @@ data="{[
     <button class="btn btn-warning">warning</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div data-tip="warning" class="tooltip tooltip-open tooltip-warning">
   <button class="btn btn-warning">warning</button>
 </div>`
@@ -175,7 +177,7 @@ data="{[
     <button class="btn btn-error">error</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div data-tip="error" class="tooltip tooltip-open tooltip-error">
   <button class="btn btn-error">error</button>
 </div>`

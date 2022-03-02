@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -53,7 +55,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
     </ul>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="h-screen drawer w-full rounded">
   <input id="my-drawer" type="checkbox" class="drawer-toggle">
   <div class="drawer-content">
@@ -88,7 +90,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
     </ul>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="h-screen drawer drawer-mobile w-full">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle">
   <div class="flex flex-col items-center justify-center drawer-content">
@@ -137,7 +139,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
     </ul>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="h-screen drawer w-full">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle"> 
   <div class="flex flex-col drawer-content">
@@ -188,7 +190,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
     </ul>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="h-screen drawer drawer-end w-full">
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle">
   <div class="drawer-content">

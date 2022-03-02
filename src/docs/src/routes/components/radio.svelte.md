@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -26,7 +28,7 @@ data="{[
 <Component title="Checkbox">
 <input type="radio" name="radio-1" class="radio" checked>
 <input type="radio" name="radio-1" class="radio">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="radio" name="radio-1" class="radio" checked>
 <input type="radio" name="radio-1" class="radio">`
 }</pre>
@@ -35,7 +37,7 @@ data="{[
 <Component title="Primary color">
 <input type="radio" name="radio-2" class="radio radio-primary" checked>
 <input type="radio" name="radio-2" class="radio radio-primary">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="radio" name="radio-2" class="radio radio-primary" checked>
 <input type="radio" name="radio-2" class="radio radio-primary">`
 }</pre>
@@ -44,7 +46,7 @@ data="{[
 <Component title="Secondary color">
 <input type="radio" name="radio-3" class="radio radio-secondary" checked>
 <input type="radio" name="radio-3" class="radio radio-secondary">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="radio" name="radio-3" class="radio radio-secondary" checked>
 <input type="radio" name="radio-3" class="radio radio-secondary">`
 }</pre>
@@ -53,7 +55,7 @@ data="{[
 <Component title="Accent color">
 <input type="radio" name="radio-4" class="radio radio-accent" checked>
 <input type="radio" name="radio-4" class="radio radio-accent">
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="radio" name="radio-4" class="radio radio-accent" checked>
 <input type="radio" name="radio-4" class="radio radio-accent">`
 }</pre>
@@ -62,7 +64,7 @@ data="{[
 <Component title="Disabled">
 <input type="radio" name="radio-5" class="radio" disabled checked>
 <input type="radio" name="radio-5" class="radio" disabled>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="radio" name="radio-5" class="radio" disabled checked>
 <input type="radio" name="radio-5" class="radio" disabled>`
 }</pre>
@@ -83,7 +85,7 @@ data="{[
     </label>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="cursor-pointer label">
     <span class="label-text">Red pill</span> 

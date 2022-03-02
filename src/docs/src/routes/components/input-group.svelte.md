@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -30,7 +32,7 @@ data="{[
     <input type="text" placeholder="info@site.com" class="input input-bordered">
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="label">
     <span class="label-text">Your Email</span>
@@ -53,7 +55,7 @@ data="{[
     <span>BTC</span>
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="label">
     <span class="label-text">Enter amount</span>
@@ -77,7 +79,7 @@ data="{[
     <span>USD</span>
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="label">
     <span class="label-text">Enter amount</span>
@@ -101,7 +103,7 @@ data="{[
     <input type="text" placeholder="info@site.com" class="input input-bordered">
   </label>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="label">
     <span class="label-text">Your Email</span>
@@ -141,7 +143,7 @@ data="{[
     </label>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <label class="input-group input-group-lg">
     <span>LG</span>
@@ -178,7 +180,7 @@ data="{[
     </button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <div class="input-group">
     <input type="text" placeholder="Search…" class="input input-bordered">
@@ -201,7 +203,7 @@ data="{[
     <button class="btn">Go</button>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="form-control">
   <div class="input-group">
     <select class="select select-bordered">

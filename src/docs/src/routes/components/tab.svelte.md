@@ -7,6 +7,8 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import { prefix } from '$lib/stores';
+  import { replace } from '$lib/actions';
 </script>
 
 <ClassTable
@@ -30,7 +32,7 @@ data="{[
   <a class="tab tab-active">Tab 2</a> 
   <a class="tab">Tab 3</a>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tabs">
   <a class="tab">Tab 1</a> 
   <a class="tab tab-active">Tab 2</a> 
@@ -45,7 +47,7 @@ data="{[
   <a class="tab tab-bordered tab-active">Tab 2</a> 
   <a class="tab tab-bordered">Tab 3</a>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tabs">
   <a class="tab tab-bordered">Tab 1</a> 
   <a class="tab tab-bordered tab-active">Tab 2</a> 
@@ -60,7 +62,7 @@ data="{[
   <a class="tab tab-lifted tab-active">Tab 2</a> 
   <a class="tab tab-lifted">Tab 3</a>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tabs">
   <a class="tab tab-lifted">Tab 1</a> 
   <a class="tab tab-lifted tab-active">Tab 2</a> 
@@ -75,7 +77,7 @@ data="{[
   <a class="tab tab-active">Tab 2</a> 
   <a class="tab">Tab 3</a>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="tabs tabs-boxed">
   <a class="tab">Tab 1</a> 
   <a class="tab tab-active">Tab 2</a> 
@@ -107,7 +109,7 @@ data="{[
     <a class="tab tab-lg tab-lifted">Large</a>
   </div>
 </div>
-<pre slot="html">{
+<pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- xs -->
 <div class="tabs">
   <a class="tab tab-xs tab-lifted">Tiny</a> 
