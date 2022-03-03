@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/saadeghi/daisyui/compare/v2.3.7-alpha.5...v2.4.0) (2022-03-03)
+
+
+### Features
+
+* Add new prefix config ([e87db57](https://github.com/saadeghi/daisyui/commit/e87db57398e63ff7680850a1f3f3af172983ebe8))
+
 ### [2.3.6](https://github.com/saadeghi/daisyui/compare/v2.3.5...v2.3.6) (2022-03-03)
 
 ### [2.3.5](https://github.com/saadeghi/daisyui/compare/v2.3.4...v2.3.5) (2022-03-03)
