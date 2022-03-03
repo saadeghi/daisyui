@@ -36,7 +36,7 @@
 
 {#each pages as { name, items }}
   <ul class="menu menu-compact flex flex-col p-0 px-4">
-    {#if name}
+    {#if name && name != "excluded"}
       <li />
       <li class="menu-title"><span>{name}</span></li>
     {/if}
