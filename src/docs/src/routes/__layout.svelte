@@ -72,7 +72,7 @@
 </svelte:head>
 
 {#if post}
-  <SEO title={post.title} desc={post.desc} img={`/images${$page.url.pathname}.jpg`} />
+  <SEO title={post.title} desc={post.desc} img={`/images${$page.url.pathname.replace(/\/$/, "")}.jpg`} />
 {/if}
 <div class={`bg-base-100 drawer h-screen ${post || listOfStaticPagesThatNeedSidebar.includes($page.url.pathname) ? "drawer-mobile" : ""}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
