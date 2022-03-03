@@ -12,9 +12,8 @@
 </script>
 
 <SEO title="daisyUI" desc="Tailwind Components Library - Free components for Tailwind CSS" />
-<div class="from-primary to-secondary text-primary-content -mt-[4rem] flex flex-col items-center bg-gradient-to-br pt-32 pb-48">
-  <HomepageHero />
-</div>
+<HomepageHero />
+
 <div class="bg-base-200 flex flex-col items-center gap-20 py-20">
   <HomepagePreview />
   <HomepageStats />

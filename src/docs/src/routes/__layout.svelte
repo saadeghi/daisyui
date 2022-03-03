@@ -80,12 +80,12 @@
     <Navbar {drawerContentScrollY} />
     <div class={`${post || listOfStaticPagesThatNeedSidebar.includes($page.url.pathname) ? "p-6 pb-16" : ""}`}>
       {#if post && !listOfStaticPagesThatDontNeedSideAds.includes($page.url.pathname)}
-        <div class="flex justify-between gap-6">
+        <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
           <div class="prose w-full max-w-4xl flex-grow">
             {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
-              <Ads size={1} />
-              <Ads size={2} />
-              <Ads size={3} />
+              <!-- <Ads slot="adsense-1" /> -->
+              <!-- <Ads slot="adsense-2" /> -->
+              <!-- <Ads slot="adsense-3" /> -->
             {/if}
             {#if post && post.title}
               <h1>{post.title}</h1>
@@ -96,12 +96,9 @@
             <slot />
           </div>
           {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
-            <div>
-              <div class="sticky top-24 mt-32">
-                <Ads size={4} />
-                <Ads size={5} />
-              </div>
-            </div>
+            <!-- <Ads slot="adsense-4" /> -->
+            <!-- <Ads slot="adsense-5" /> -->
+            <Ads slot="carbon2" />
           {/if}
         </div>
       {:else}
