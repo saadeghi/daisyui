@@ -68,14 +68,12 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   if (prefix) {
     try {
       postcssJs = require("postcss-js")
-      postcssPrefix = require("postcss-prefixer")
+      postcssPrefix = require('./lib/postcss-prefixer')
     } catch (error) {
-      if (logs) {
-        console.error(`Error occurred and prevent applying the "prefix" option:`, error)
-      }
+      logs && console.error(`Error occurred and prevent applying the "prefix" option:`, error)
     }
   }
-  const shouldApplyPrefix = prefix && postcssPrefix && postcssJs;
+  const shouldApplyPrefix = prefix && postcssPrefix && postcssJs
   if (shouldApplyPrefix) {
     file = postcssJs.sync(postcssPrefix({
       prefix: prefix,
