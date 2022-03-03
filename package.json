@@ -29,6 +29,7 @@
   "main": "src/index.js",
   "typings": "src/index.js",
   "files": [
+    "lib/**/*.js",
     "dist/*.js",
     "dist/{themes,styled,unstyled,full}.css",
     "!dist/*.rtl.css",
