@@ -1,0 +1,1 @@
+import{S as n,i as o,s as a,v as e}from"../../../chunks/vendor-38dc972c.js";async function i(){return{status:302,redirect:"/docs/basscss"}}function c(s){return e(()=>{window.location.href="/docs/basscss"}),[]}class u extends n{constructor(t){super();o(this,t,c,null,a,{})}}export{u as default,i as load};
