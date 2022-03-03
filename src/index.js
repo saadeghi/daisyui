@@ -10,8 +10,8 @@ let utilitiesUnstyled = require("../dist/utilities-unstyled");
 let utilitiesStyled = require("../dist/utilities-styled");
 const themes = require("./colors/themes");
 const colorFunctions = require("./colors/functions");
-// const postcssJs = require('postcss-js');
-// const postcssPrefix = require('postcss-class-prefix');
+const postcssJs = require('postcss-js');
+const postcssPrefix = require('postcss-class-prefix');
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = [];
