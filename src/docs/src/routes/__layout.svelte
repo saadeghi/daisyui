@@ -35,6 +35,7 @@
   import Scripts from "@components/Scripts.svelte"
   import SEO from "@components/SEO.svelte"
   import Ads from "@components/Ads.svelte"
+  import ComponentFooter from "@components/ComponentFooter.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
   export let post
@@ -94,6 +95,9 @@
               <p>{post.desc}</p>
             {/if}
             <slot />
+            {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/") || $page.url.pathname.replace(/\/$/, "").startsWith("/docs/")}
+              <ComponentFooter />
+            {/if}
           </div>
           {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
             <!-- <Ads slot="adsense-4" /> -->
