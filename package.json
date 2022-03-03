@@ -83,8 +83,8 @@
   "dependencies": {
     "color": "^4.2",
     "postcss": "^8.1.6",
-    "postcss-class-prefix": "^0.3.0",
     "postcss-js": "^4.0.0",
+    "postcss-prefixer": "^2.1.3",
     "tailwindcss": "^3.0"
   },
   "peerDependencies": {

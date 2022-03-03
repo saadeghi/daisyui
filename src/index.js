@@ -11,7 +11,7 @@ let utilitiesStyled = require("../dist/utilities-styled");
 const themes = require("./colors/themes");
 const colorFunctions = require("./colors/functions");
 const postcssJs = require('postcss-js');
-// const postcssPrefix = require('postcss-class-prefix');
+const postcssPrefix = require('postcss-prefixer');
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = [];
@@ -65,10 +65,13 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   }
 
   // add prefix to class names if specified
-  // const prefix = config('daisyui.prefix');
-  // if (prefix) {
-  //   file = postcssJs.sync(postcssPrefix(prefix))(file);
-  // }
+  const prefix = config('daisyui.prefix');
+  if (prefix) {
+    file = postcssJs.sync(postcssPrefix({
+      prefix: prefix,
+      ignore: []
+    }))(file)
+  }
 
   addComponents(file);
 
@@ -80,13 +83,19 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
     addComponents(utilities, { variants: ["responsive"] });
-    // if (prefix) {
-    //   utilitiesUnstyled = postcssJs.sync(postcssPrefix(prefix))(utilitiesUnstyled);
-    // }
+    if (prefix) {
+      utilitiesUnstyled = postcssJs.sync(postcssPrefix({
+        prefix: prefix,
+        ignore: []
+      }))(utilitiesUnstyled)
+    }
     addComponents(utilitiesUnstyled, { variants: ["responsive"] });
-    // if (prefix) {
-    //   utilitiesStyled = postcssJs.sync(postcssPrefix(prefix))(utilitiesStyled);
-    // }
+    if (prefix) {
+      utilitiesStyled = postcssJs.sync(postcssPrefix({
+        prefix: prefix,
+        ignore: []
+      }))(utilitiesStyled)
+    }
     addComponents(utilitiesStyled, { variants: ["responsive"] });
     diasyuiIncludedItems.push("utilities");
   }
