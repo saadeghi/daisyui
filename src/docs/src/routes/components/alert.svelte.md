@@ -125,8 +125,8 @@ data="{[
     <span>we use cookies for no reason.</span>
   </div>
   <div class="flex-none">
-    <button class="btn btn-sm btn-ghost">Deny</button>
-    <button class="btn btn-sm btn-primary">Accept</button>
+    <button class="$$btn $$btn-sm $$btn-ghost">Deny</button>
+    <button class="$$btn $$btn-sm $$btn-primary">Accept</button>
   </div>
 </div>`
 }</pre>
@@ -155,7 +155,7 @@ data="{[
     </div>
   </div>
   <div class="flex-none">
-    <button class="btn btn-sm">See</button>
+    <button class="$$btn $$btn-sm">See</button>
   </div>
 </div>`
 }</pre>

@@ -9,7 +9,7 @@
     <thead>
       <tr>
         <th class="flex items-center gap-2 normal-case">
-          <!-- <PrefixEdit /> -->
+          <PrefixEdit />
           <span>Class name</span>
         </th>
         <th class="normal-case">Type</th>
