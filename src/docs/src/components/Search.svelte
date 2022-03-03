@@ -1,15 +1,22 @@
 <script>
+  import { onMount } from "svelte"
   import { page } from "$app/stores"
   import { goto } from "$app/navigation"
   import Typeahead from "svelte-typeahead"
 
   import { pages } from "@src/lib/data.js"
+  import { getOS } from "$lib/util"
 
   let searchIndex = []
   pages.forEach((group) => {
     group.items.forEach((item) => {
       searchIndex.push(item)
     })
+  })
+
+  let os
+  onMount(() => {
+    os = getOS()
   })
 
   let seachboxEl
@@ -32,9 +39,13 @@
     </div>
   </Typeahead>
   <div class={`pointer-events-none absolute right-8 top-2 gap-1 opacity-50 ${$page.url.pathname == "/" ? "hidden" : "hidden lg:flex"}`}>
-    <kbd class="kbd kbd-sm">⌘</kbd>
-    <span>+</span>
-    <kbd class="kbd kbd-sm">K</kbd>
+    {#if ["macos"].includes(os)}
+      <kbd class="kbd kbd-sm">⌘</kbd>
+      <kbd class="kbd kbd-sm">K</kbd>
+    {:else if ["windows", "linux"].includes(os)}
+      <kbd class="kbd kbd-sm">ctrl</kbd>
+      <kbd class="kbd kbd-sm">K</kbd>
+    {/if}
   </div>
 </label>
 
