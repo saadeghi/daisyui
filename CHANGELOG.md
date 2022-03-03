@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* Add new prefix config ([e87db57](https://github.com/saadeghi/daisyui/commit/e87db57398e63ff7680850a1f3f3af172983ebe8))
+* Add new `prefix` config ([e87db57](https://github.com/saadeghi/daisyui/commit/e87db57398e63ff7680850a1f3f3af172983ebe8))
 
 ### [2.3.6](https://github.com/saadeghi/daisyui/compare/v2.3.5...v2.3.6) (2022-03-03)
 
