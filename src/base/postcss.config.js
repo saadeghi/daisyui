@@ -5,6 +5,5 @@ module.exports = {
       bubble: ["screen"],
     }),
     require("autoprefixer"),
-    require("postcss-clean"),
   ],
 };

@@ -5,7 +5,6 @@ module.exports = {
       bubble: ["screen"],
     }),
     require("tailwindcss")("./src/full/tailwind.config.js"),
-    require("autoprefixer"),
-    require("postcss-clean"),
+    // require("autoprefixer"),
   ],
 };

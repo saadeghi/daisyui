@@ -64,6 +64,7 @@
     "prejss": "prejss-cli dist/{unstyled,styled}{,.rtl}.css --format commonjs",
     "themes": "postcss src/themes/index.css -o dist/themes.css --config src/themes",
     "full": "postcss src/full/index.css -o dist/full.css --config src/full",
+    "postfull": "parcel-css --minify --targets '> 7%' dist/full.css -o dist/full.css",
     "build": "npm run base && npm run utilities:global && npm run utilities:unstyled && npm run utilities:styled && npm run components && npm run merge:unstyled && npm run merge:styled && npm run rtl && npm run prejss && npm run themes && npm run full",
     "install:docs": "cd src/docs && npm install",
     "dev": "cd src/docs && npm run dev",
@@ -71,9 +72,8 @@
     "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css"
   },
   "devDependencies": {
+    "@parcel/css-cli": "^1.5.0",
     "autoprefixer": "10.0.4",
-    "postcss": "8.1.10",
-    "postcss-clean": "1.2.2",
     "postcss-cli": "8.3.0",
     "postcss-import": "13.0.0",
     "postcss-nested": "5.0.1",
@@ -82,12 +82,12 @@
   },
   "dependencies": {
     "color": "^4.2",
-    "postcss-class-prefix": "0.3.0",
-    "postcss-js": "3.0.3",
+    "postcss": "^8.1.6",
+    "postcss-class-prefix": "^0.3.0",
+    "postcss-js": "^4.0.0",
     "tailwindcss": "^3.0"
   },
   "peerDependencies": {
-    "autoprefixer": "^10.0.2",
-    "postcss": "^8.0.9"
+    "autoprefixer": "^10.0.2"
   }
 }

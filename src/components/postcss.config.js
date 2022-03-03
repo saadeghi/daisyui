@@ -6,6 +6,5 @@ module.exports = {
     }),
     require("tailwindcss")("./src/components/tailwind.config.js"),
     require("autoprefixer"),
-    require("postcss-clean"),
   ],
 };

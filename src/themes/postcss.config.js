@@ -5,6 +5,5 @@ module.exports = {
       bubble: ["screen"],
     }),
     require("tailwindcss")("./src/themes/tailwind.config.js"),
-    require("postcss-clean"),
   ],
 };
