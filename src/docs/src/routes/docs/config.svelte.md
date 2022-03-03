@@ -23,7 +23,6 @@ module.exports = {
     logs: true,
     rtl: false,
     darkTheme: "dark",
-    prefix: "",
   },
 }
 ```
@@ -77,12 +76,12 @@ module.exports = {
 
   Allows us to pick another theme for system's auto dark mode. By default, `dark` theme (or a custom theme named `dark`) will be the default theme if no theme is specified and the user is using dark mode on their system. With this config, you can set another theme to be the default dark mode theme.
 
-- ### prefix
+<!-- - ### prefix
 
   `String (default: "")`
 
-  Adds a prefix to class name for all daisyUI components and their associated utilities.  
-  For example: `btn` will become `prefix-btn`.  
-  If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts.  
-  Utility classes like color names (e.g. `bg-primary`) or border-radius (e.g. `rounded-box`) will not be affected by this config because they're being added as extensions to Tailwind CSS classes.  
-  If you use daisyUI `prefix` option (like `daisy-`) and Tailwind CSS `prefix` option (like `tw-`) together, classnames will be prefixed like this: `tw-daisy-btn`.
+  Adds a prefix to class name for all daisyUI components and their associated utilities.
+  For example: `btn` will become `prefix-btn`.
+  If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts.
+  Utility classes like color names (e.g. `bg-primary`) or border-radius (e.g. `rounded-box`) will not be affected by this config because they're being added as extensions to Tailwind CSS classes.
+  If you use daisyUI `prefix` option (like `daisy-`) and Tailwind CSS `prefix` option (like `tw-`) together, classnames will be prefixed like this: `tw-daisy-btn`. -->
