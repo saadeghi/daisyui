@@ -73,12 +73,12 @@
   },
   "devDependencies": {
     "@parcel/css-cli": "^1.5.0",
-    "autoprefixer": "10.0.4",
-    "postcss-cli": "8.3.0",
-    "postcss-import": "13.0.0",
-    "postcss-nested": "5.0.1",
+    "autoprefixer": "10.4.2",
+    "postcss-cli": "9.1.0",
+    "postcss-import": "14.0.2",
+    "postcss-nested": "5.0.6",
     "prejss-cli": "0.3.3",
-    "rtlcss": "3.0.0"
+    "rtlcss": "3.5.0"
   },
   "dependencies": {
     "color": "^4.2",

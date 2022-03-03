@@ -10,8 +10,6 @@ let utilitiesUnstyled = require("../dist/utilities-unstyled");
 let utilitiesStyled = require("../dist/utilities-styled");
 const themes = require("./colors/themes");
 const colorFunctions = require("./colors/functions");
-const postcssJs = require('postcss-js');
-// const postcssPrefix = require('postcss-prefixer');
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   let diasyuiIncludedItems = [];
@@ -65,12 +63,24 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   }
 
   // add prefix to class names if specified
-  const prefix = config('daisyui.prefix');
+  const prefix = config("daisyui.prefix")
+  let postcssJs, postcssPrefix
   if (prefix) {
-    // file = postcssJs.sync(postcssPrefix({
-    //   prefix: prefix,
-    //   ignore: []
-    // }))(file)
+    try {
+      postcssJs = require("postcss-js")
+      postcssPrefix = require("postcss-prefixer")
+    } catch (error) {
+      if (logs) {
+        console.error(`Error occurred and prevent applying the "prefix" option:`, error)
+      }
+    }
+  }
+  const shouldApplyPrefix = prefix && postcssPrefix && postcssJs;
+  if (shouldApplyPrefix) {
+    file = postcssJs.sync(postcssPrefix({
+      prefix: prefix,
+      ignore: []
+    }))(file)
   }
 
   addComponents(file);
@@ -83,18 +93,18 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
     addComponents(utilities, { variants: ["responsive"] });
-    if (prefix) {
-      // utilitiesUnstyled = postcssJs.sync(postcssPrefix({
-      //   prefix: prefix,
-      //   ignore: []
-      // }))(utilitiesUnstyled)
+    if (shouldApplyPrefix) {
+      utilitiesUnstyled = postcssJs.sync(postcssPrefix({
+        prefix: prefix,
+        ignore: []
+      }))(utilitiesUnstyled)
     }
     addComponents(utilitiesUnstyled, { variants: ["responsive"] });
-    if (prefix) {
-      // utilitiesStyled = postcssJs.sync(postcssPrefix({
-      //   prefix: prefix,
-      //   ignore: []
-      // }))(utilitiesStyled)
+    if (shouldApplyPrefix) {
+      utilitiesStyled = postcssJs.sync(postcssPrefix({
+        prefix: prefix,
+        ignore: []
+      }))(utilitiesStyled)
     }
     addComponents(utilitiesStyled, { variants: ["responsive"] });
     diasyuiIncludedItems.push("utilities");
