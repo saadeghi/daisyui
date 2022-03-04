@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/saadeghi/daisyui/compare/v2.4.0...v2.5.0) (2022-03-04)
+
+
+### Bug Fixes
+
+* [#546](https://github.com/saadeghi/daisyui/issues/546) (docs) ([d5bd0f1](https://github.com/saadeghi/daisyui/commit/d5bd0f1709b67700930b262c4706147fa2b79208))
+* textarea state colors ([c1bf0d8](https://github.com/saadeghi/daisyui/commit/c1bf0d8fe5d1fa0b08bd9d7fa3c7bd95c6800ef2))
+
 ## [2.4.0](https://github.com/saadeghi/daisyui/compare/v2.3.7-alpha.5...v2.4.0) (2022-03-03)
 
 
