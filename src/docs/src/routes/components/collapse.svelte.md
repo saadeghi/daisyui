@@ -24,7 +24,7 @@ data="{[
 />
 
 <Component title="Collapse with focus" desc="This collapse works with focus. When div loses focus, it gets closed">
-<div tabindex="0" class="collapse"> 
+<div tabindex="0" class="collapse">
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
   </div>
@@ -46,11 +46,11 @@ data="{[
 
 <Component title="Collapse with checkbox" desc="This collapse works with checkbox instead of focus. It needs to get clicked again to get closed.">
 <div tabindex="0" class="collapse">
-  <input type="checkbox"> 
+  <input type="checkbox">
   <div class="collapse-title text-xl font-medium">
     Click me to show/hide content
   </div>
-  <div class="collapse-content"> 
+  <div class="collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
@@ -166,6 +166,50 @@ data="{[
     I have collapse-close class
   </div>
   <div class="$$collapse-content"> 
+    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+  </div>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Custom colors for collapse that works with focus" desc="Use Tailwind CSS `group` and `group-focus` utilities to apply style when parent div is focused">
+<div tabindex="0" class="collapse group">
+  <div class="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+    Focus me to see content
+  </div>
+  <div class="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content"> 
+    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+  </div>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div tabindex="0" class="collapse group">
+  <div class="$$collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+    Focus me to see content
+  </div>
+  <div class="$$collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content"> 
+    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+  </div>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Custom colors for collapse that works with checkbox" desc="Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked">
+<div tabindex="0" class="collapse">
+  <input type="checkbox" class="peer"> 
+  <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+    Click me to show/hide content
+  </div>
+  <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
+    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+  </div>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div tabindex="0" class="collapse">
+  <input type="checkbox" class="peer"> 
+  <div class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+    Click me to show/hide content
+  </div>
+  <div class="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
