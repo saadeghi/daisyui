@@ -1,5 +1,4 @@
-[data-theme="wireframe"],
-[data-theme="lofi"] {
+[data-theme="wireframe"] {
   .prose pre[class*="language-"] {
     .token.string {
       color: #587e20;
@@ -43,6 +42,6 @@
 }
 .prose pre[class*="language-"] {
   .token.comment {
-    color: hsla(var(--nc)/.5);
+    color: hsla(var(--nc) / 0.5);
   }
 }
