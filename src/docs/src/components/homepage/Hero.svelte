@@ -7,7 +7,10 @@
     <div class="lg:px-10 lg:pb-32">
       <h1 class="font-title mb-2 py-4 font-extrabold lg:py-10">
         <div class="mb-2 text-5xl lg:text-7xl">daisyUI</div>
-        <div class="text-2xl lg:text-3xl">Tailwind CSS Components</div>
+        <div class="text-2xl lg:text-3xl">
+          The most popular, free and open-source <br />
+          Tailwind CSS component library
+        </div>
       </h1>
       <div class="flex w-full flex-col items-start space-y-10 lg:flex-row lg:space-x-4 lg:space-y-0">
         <div class="my-2 flex max-w-sm flex-col gap-2 text-left">
@@ -34,12 +37,12 @@
         </div>
         <div class="mockup-code border-base-content w-full max-w-xs flex-1 border-2 border-opacity-20 bg-transparent pb-6 text-left text-current lg:mx-0"><pre data-prefix="$"><code>npm i daisyui</code></pre></div>
       </div>
-      <div class="mt-4 flex flex-1 justify-center space-x-2 lg:mt-6 lg:justify-start">
-        <a href="/components" class="btn btn-ghost btn-active lg:btn-lg">
+      <div class="mt-4 flex flex-1 justify-center space-x-2 sm:justify-start lg:mt-6 lg:justify-start">
+        <a href="/components" class="btn btn-ghost btn-active lg:btn-lg normal-case">
           <span class="hidden sm:inline">See</span>
           &nbsp; components
         </a>
-        <a href="/docs/install" class="btn lg:btn-lg">How to use?</a>
+        <a href="/docs/install" class="btn lg:btn-lg normal-case">How to use?</a>
       </div>
     </div>
     <div>
