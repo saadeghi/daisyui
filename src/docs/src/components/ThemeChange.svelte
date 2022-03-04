@@ -48,6 +48,9 @@
       <li><button data-set-theme="business" data-act-class="active">💼  Business</button></li>
       <li><button data-set-theme="acid" data-act-class="active">💊  Acid</button></li>
       <li><button data-set-theme="lemonade" data-act-class="active">🍋  Lemonade</button></li>
+      <li><button data-set-theme="night" data-act-class="active">🌙  Night</button></li>
+      <li><button data-set-theme="coffee" data-act-class="active">☕️  Coffee</button></li>
+      <li><button data-set-theme="winter" data-act-class="active">❄️  Winter</button></li>
     </ul>
   </div>
 </div>

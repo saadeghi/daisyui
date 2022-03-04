@@ -241,6 +241,9 @@ module.exports = {
         "business",
         "acid",
         "lemonade",
+        "night",
+        "coffee",
+        "winter",
       ];
     } else if (config("daisyui.themes") == false) {
       themeOrder.push("light");
