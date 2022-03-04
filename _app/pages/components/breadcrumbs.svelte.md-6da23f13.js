@@ -1,0 +1,40 @@
+import{S as Z,i as tt,s as et,w as U,k as I,x as q,m as H,y,g as j,q as S,o as F,B as G,d as n,J as lt,e as f,t as L,c as p,a as h,h as b,b as m,H as a,a1 as N,P as O,F as M,G as C}from"../../chunks/vendor-1fc5b034.js";import{C as st,a as K,r as Q,p as at}from"../../chunks/actions-a46bfef7.js";import"../../chunks/preload-helper-ec9aa979.js";function rt(E){let t,l,r,i,c,u,s,o,e,d,v,_;return{c(){t=f("div"),l=f("ul"),r=f("li"),i=f("a"),c=L("Home"),u=I(),s=f("li"),o=f("a"),e=L("Documents"),d=I(),v=f("li"),_=L("Add Document"),this.h()},l(x){t=p(x,"DIV",{class:!0});var B=h(t);l=p(B,"UL",{});var $=h(l);r=p($,"LI",{});var k=h(r);i=p(k,"A",{});var g=h(i);c=b(g,"Home"),g.forEach(n),k.forEach(n),u=H($),s=p($,"LI",{});var D=h(s);o=p(D,"A",{});var w=h(o);e=b(w,"Documents"),w.forEach(n),D.forEach(n),d=H($),v=p($,"LI",{});var V=h(v);_=b(V,"Add Document"),V.forEach(n),$.forEach(n),B.forEach(n),this.h()},h(){m(t,"class","text-sm breadcrumbs")},m(x,B){j(x,t,B),a(t,l),a(l,r),a(r,i),a(i,c),a(l,u),a(l,s),a(s,o),a(o,e),a(l,d),a(l,v),a(v,_)},d(x){x&&n(t)}}}function ot(E){let t,l=`<div class="text-sm $$breadcrumbs">
+  <ul>
+    <li><a>Home</a></li> 
+    <li><a>Documents</a></li> 
+    <li>Add Document</li>
+  </ul>
+</div>`,r,i,c,u;return{c(){t=f("pre"),r=L(l),this.h()},l(s){t=p(s,"PRE",{slot:!0});var o=h(t);r=b(o,l),o.forEach(n),this.h()},h(){m(t,"slot","html")},m(s,o){j(s,t,o),a(t,r),c||(u=N(i=Q.call(null,t,{to:E[0]})),c=!0)},p(s,o){i&&O(i.update)&&o&1&&i.update.call(null,{to:s[0]})},d(s){s&&n(t),c=!1,u()}}}function nt(E){let t,l,r,i,c,u,s,o,e,d,v,_,x,B,$,k,g,D;return{c(){t=f("div"),l=f("ul"),r=f("li"),i=f("a"),c=M("svg"),u=M("path"),s=L(`
+        Home`),o=I(),e=f("li"),d=f("a"),v=M("svg"),_=M("path"),x=L(`
+        Documents`),B=I(),$=f("li"),k=M("svg"),g=M("path"),D=L(`
+      Add Document`),this.h()},l(w){t=p(w,"DIV",{class:!0});var V=h(t);l=p(V,"UL",{});var A=h(l);r=p(A,"LI",{});var P=h(r);i=p(P,"A",{});var z=h(i);c=C(z,"svg",{xmlns:!0,fill:!0,viewBox:!0,class:!0});var R=h(c);u=C(R,"path",{"stroke-linecap":!0,"stroke-linejoin":!0,"stroke-width":!0,d:!0}),h(u).forEach(n),R.forEach(n),s=b(z,`
+        Home`),z.forEach(n),P.forEach(n),o=H(A),e=p(A,"LI",{});var W=h(e);d=p(W,"A",{});var J=h(d);v=C(J,"svg",{xmlns:!0,fill:!0,viewBox:!0,class:!0});var X=h(v);_=C(X,"path",{"stroke-linecap":!0,"stroke-linejoin":!0,"stroke-width":!0,d:!0}),h(_).forEach(n),X.forEach(n),x=b(J,`
+        Documents`),J.forEach(n),W.forEach(n),B=H(A),$=p(A,"LI",{});var T=h($);k=C(T,"svg",{xmlns:!0,fill:!0,viewBox:!0,class:!0});var Y=h(k);g=C(Y,"path",{"stroke-linecap":!0,"stroke-linejoin":!0,"stroke-width":!0,d:!0}),h(g).forEach(n),Y.forEach(n),D=b(T,`
+      Add Document`),T.forEach(n),A.forEach(n),V.forEach(n),this.h()},h(){m(u,"stroke-linecap","round"),m(u,"stroke-linejoin","round"),m(u,"stroke-width","2"),m(u,"d","M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"),m(c,"xmlns","http://www.w3.org/2000/svg"),m(c,"fill","none"),m(c,"viewBox","0 0 24 24"),m(c,"class","w-4 h-4 mr-2 stroke-current"),m(_,"stroke-linecap","round"),m(_,"stroke-linejoin","round"),m(_,"stroke-width","2"),m(_,"d","M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"),m(v,"xmlns","http://www.w3.org/2000/svg"),m(v,"fill","none"),m(v,"viewBox","0 0 24 24"),m(v,"class","w-4 h-4 mr-2 stroke-current"),m(g,"stroke-linecap","round"),m(g,"stroke-linejoin","round"),m(g,"stroke-width","2"),m(g,"d","M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"),m(k,"xmlns","http://www.w3.org/2000/svg"),m(k,"fill","none"),m(k,"viewBox","0 0 24 24"),m(k,"class","w-4 h-4 mr-2 stroke-current"),m(t,"class","text-sm breadcrumbs")},m(w,V){j(w,t,V),a(t,l),a(l,r),a(r,i),a(i,c),a(c,u),a(i,s),a(l,o),a(l,e),a(e,d),a(d,v),a(v,_),a(d,x),a(l,B),a(l,$),a($,k),a(k,g),a($,D)},d(w){w&&n(t)}}}function it(E){let t,l=`<div class="text-sm $$breadcrumbs">
+  <ul>
+    <li>
+      <a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+        Home
+      </a>
+    </li> 
+    <li>
+      <a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+        Documents
+      </a>
+    </li> 
+    <li>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+      Add Document
+    </li>
+  </ul>
+</div>`,r,i,c,u;return{c(){t=f("pre"),r=L(l),this.h()},l(s){t=p(s,"PRE",{slot:!0});var o=h(t);r=b(o,l),o.forEach(n),this.h()},h(){m(t,"slot","html")},m(s,o){j(s,t,o),a(t,r),c||(u=N(i=Q.call(null,t,{to:E[0]})),c=!0)},p(s,o){i&&O(i.update)&&o&1&&i.update.call(null,{to:s[0]})},d(s){s&&n(t),c=!1,u()}}}function ct(E){let t,l,r,i,c,u,s,o,e,d,v,_,x,B,$,k;return{c(){t=f("div"),l=f("ul"),r=f("li"),i=L("Long text 1"),c=I(),u=f("li"),s=L("Long text 2"),o=I(),e=f("li"),d=L("Long text 3"),v=I(),_=f("li"),x=L("Long text 4"),B=I(),$=f("li"),k=L("Long text 5"),this.h()},l(g){t=p(g,"DIV",{class:!0});var D=h(t);l=p(D,"UL",{});var w=h(l);r=p(w,"LI",{});var V=h(r);i=b(V,"Long text 1"),V.forEach(n),c=H(w),u=p(w,"LI",{});var A=h(u);s=b(A,"Long text 2"),A.forEach(n),o=H(w),e=p(w,"LI",{});var P=h(e);d=b(P,"Long text 3"),P.forEach(n),v=H(w),_=p(w,"LI",{});var z=h(_);x=b(z,"Long text 4"),z.forEach(n),B=H(w),$=p(w,"LI",{});var R=h($);k=b(R,"Long text 5"),R.forEach(n),w.forEach(n),D.forEach(n),this.h()},h(){m(t,"class","max-w-xs text-sm breadcrumbs")},m(g,D){j(g,t,D),a(t,l),a(l,r),a(r,i),a(l,c),a(l,u),a(u,s),a(l,o),a(l,e),a(e,d),a(l,v),a(l,_),a(_,x),a(l,B),a(l,$),a($,k)},d(g){g&&n(t)}}}function ut(E){let t,l=`<div class="max-w-xs text-sm $$breadcrumbs">
+  <ul>
+    <li>Long text 1</li>
+    <li>Long text 2</li>
+    <li>Long text 3</li>
+    <li>Long text 4</li>
+    <li>Long text 5</li>
+  </ul>
+</div>`,r,i,c,u;return{c(){t=f("pre"),r=L(l),this.h()},l(s){t=p(s,"PRE",{slot:!0});var o=h(t);r=b(o,l),o.forEach(n),this.h()},h(){m(t,"slot","html")},m(s,o){j(s,t,o),a(t,r),c||(u=N(i=Q.call(null,t,{to:E[0]})),c=!0)},p(s,o){i&&O(i.update)&&o&1&&i.update.call(null,{to:s[0]})},d(s){s&&n(t),c=!1,u()}}}function mt(E){let t,l,r,i,c,u,s,o;return t=new st({props:{data:[{type:"component",class:"breadcrumbs",desc:"Container element"}]}}),r=new K({props:{title:"Breadcrumbs",$$slots:{html:[ot],default:[rt]},$$scope:{ctx:E}}}),c=new K({props:{title:"Breadcrumbs with icons",$$slots:{html:[it],default:[nt]},$$scope:{ctx:E}}}),s=new K({props:{title:"Breadcrumbs with max-width",desc:"If you set max-width or the list gets larger than the container it will scroll",$$slots:{html:[ut],default:[ct]},$$scope:{ctx:E}}}),{c(){U(t.$$.fragment),l=I(),U(r.$$.fragment),i=I(),U(c.$$.fragment),u=I(),U(s.$$.fragment)},l(e){q(t.$$.fragment,e),l=H(e),q(r.$$.fragment,e),i=H(e),q(c.$$.fragment,e),u=H(e),q(s.$$.fragment,e)},m(e,d){y(t,e,d),j(e,l,d),y(r,e,d),j(e,i,d),y(c,e,d),j(e,u,d),y(s,e,d),o=!0},p(e,[d]){const v={};d&3&&(v.$$scope={dirty:d,ctx:e}),r.$set(v);const _={};d&3&&(_.$$scope={dirty:d,ctx:e}),c.$set(_);const x={};d&3&&(x.$$scope={dirty:d,ctx:e}),s.$set(x)},i(e){o||(S(t.$$.fragment,e),S(r.$$.fragment,e),S(c.$$.fragment,e),S(s.$$.fragment,e),o=!0)},o(e){F(t.$$.fragment,e),F(r.$$.fragment,e),F(c.$$.fragment,e),F(s.$$.fragment,e),o=!1},d(e){G(t,e),e&&n(l),G(r,e),e&&n(i),G(c,e),e&&n(u),G(s,e)}}}const vt={title:"Breadcrumbs",desc:"Breadcrumbs helps users to navigate through the website.",published:!0};function ht(E,t,l){let r;return lt(E,at,i=>l(0,r=i)),[r]}class _t extends Z{constructor(t){super();tt(this,t,ht,mt,et,{})}}export{_t as default,vt as metadata};
