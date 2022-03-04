@@ -74,9 +74,13 @@
     color: hsla(var(--bc));
   }
   [data-svelte-typeahead] .svelte-typeahead-list {
+    transform: translateY(0.5em);
     background: hsl(var(--b1));
+    border-radius: var(--rounded-btn);
+    overflow: hidden;
   }
-  [data-svelte-typeahead] .svelte-typeahead-list .selected {
+  [data-svelte-typeahead] .svelte-typeahead-list .selected,
+  [data-svelte-typeahead] .svelte-typeahead-list .selected:hover {
     background: hsl(var(--n));
     color: hsl(var(--nc));
   }
@@ -84,10 +88,10 @@
     color: hsl(var(--bc));
   }
   [data-svelte-typeahead] .svelte-typeahead-list li:hover {
-    background: hsl(var(--n));
-    color: hsl(var(--nc));
+    background: hsl(var(--b2));
+    color: hsl(var(--bc));
   }
   [data-svelte-typeahead] .svelte-typeahead-list li:not(:last-of-type) {
-    border-bottom-color: hsla(var(--bc) / 0.2);
+    border-bottom-color: hsla(var(--bc) / 0.1);
   }
 </style>
