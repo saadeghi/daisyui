@@ -92,7 +92,7 @@
     </div>
   </div>
   <div id="component-demo" class="flex w-full grid-flow-row grid-cols-12 items-center gap-4 overflow-y-hidden overflow-x-scroll px-10 pt-1 pb-10 xl:grid xl:overflow-x-auto xl:px-4">
-    <div class="bg-base-100 rounded-box col-span-3 row-span-3 mx-2 grid w-72 flex-shrink-0 place-items-center items-center gap-4 place-self-start p-4 py-8 shadow-xl xl:mx-0 xl:w-full">
+    <div class="bg-base-100 rounded-box col-span-3 row-span-3 mx-2 grid w-72 flex-shrink-0 place-items-center items-center gap-4 p-4 py-8 shadow-xl xl:mx-0 xl:w-full">
       <div class="dropdown">
         <div tabindex="0"><div class="online avatar"><div class="mask mask-squircle bg-base-content h-24 w-24 bg-opacity-10 p-px"><img src="/tailwind-css-component-profile-1@94w.jpg" width="94" height="94" alt="Avatar Tailwind CSS Component" class="mask mask-squircle" /></div></div></div>
         <div tabindex="0" class="dropdown-content py-2">
@@ -170,7 +170,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-base-100 rounded-box col-span-3 row-span-3 mx-2 flex w-72 flex-shrink-0 flex-col justify-center gap-4 place-self-start p-4 shadow-xl xl:mx-0 xl:w-full">
+    <div class="bg-base-100 rounded-box col-span-3 row-span-3 mx-2 flex w-72 flex-shrink-0 flex-col justify-center gap-4 p-4 shadow-xl xl:mx-0 xl:w-full">
       <div class="px-6 pt-6">
         <div class="text-xl font-extrabold">Superpower settings</div>
         <div class="text-base-content my-4 text-xs text-opacity-60">Enable your favorite superpowers. Terms and conditions apply</div>
@@ -234,7 +234,7 @@
         </div>
       </div>
     </div>
-    <div class="card bg-base-100 col-span-3 row-span-4 mx-2 w-72 flex-shrink-0 overflow-visible shadow-xl xl:mx-0 xl:w-auto">
+    <div class="card card-compact xl:card-normal bg-base-100 col-span-3 row-span-4 mx-2 w-72 flex-shrink-0 overflow-visible shadow-xl xl:mx-0 xl:w-auto">
       <div class="dropdown">
         <div tabindex="0"><figure><img src="/tailwind-css-component-card-1.jpg" width="300" height="187" alt="Card Tailwind CSS Component" class="rounded-t-box" /></figure></div>
         <div tabindex="0" class="dropdown-content py-2">
@@ -296,7 +296,7 @@
         </div>
       </div>
     </div>
-    <div class="col-span-3 row-span-3 mx-2 flex w-72 flex-shrink-0 flex-col place-self-start xl:mx-0 xl:w-full">
+    <div class="col-span-3 row-span-3 mx-2 flex w-72 flex-shrink-0 flex-col xl:mx-0 xl:w-full">
       <div class="dropdown">
         <div tabindex="0" class="bg-opacity-100">
           <div class="tabs w-full flex-grow-0">
@@ -638,12 +638,16 @@
               <input type="radio" aria-label="Rating reset" name="rating-10" class="rating-hidden" />
               <input type="radio" aria-label="Rating half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
               <input type="radio" aria-label="Rating 1 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <div class="w-1" />
               <input type="radio" aria-label="Rating 1 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" checked />
               <input type="radio" aria-label="Rating 2 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <div class="w-1" />
               <input type="radio" aria-label="Rating 2 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
               <input type="radio" aria-label="Rating 3 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <div class="w-1" />
               <input type="radio" aria-label="Rating 3 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
               <input type="radio" aria-label="Rating 4 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
+              <div class="w-1" />
               <input type="radio" aria-label="Rating 4 and half star" name="rating-10" class="mask mask-star-2 mask-half-1 bg-green-500" />
               <input type="radio" aria-label="Rating 5 star" name="rating-10" class="mask mask-star-2 mask-half-2 bg-green-500" />
             </div>
@@ -778,3 +782,16 @@
     </div>
   </div>
 </div>
+
+<style>
+  #component-demo {
+    max-width: 100vw;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #component-demo > * {
+    scroll-snap-align: center;
+  }
+</style>

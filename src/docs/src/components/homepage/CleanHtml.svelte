@@ -1,3 +1,7 @@
+<script>
+  let cleanHtmlMeme = false
+</script>
+
 <div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
   <div class="hero-content px-4 text-center md:px-0">
     <div>
@@ -20,9 +24,8 @@
             <pre><code>&lt;a class="<span class="text-amber-400">inline-block px-4 py-3
     text-sm font-semibold text-center
     text-white uppercase transition
-    duration-200 ease-in-out
-    bg-indigo-600 rounded-md
-    cursor-pointer
+    duration-200 ease-in-out bg-indigo-600 
+    rounded-md cursor-pointer
     hover:bg-indigo-700</span>"&gt;Button&lt;/a&gt;</code></pre>
           </div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="inline-block cursor-pointer rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-indigo-700">Button</button></div>
@@ -62,10 +65,13 @@
         </div>
         <div class="divider text-base-content lg:divider-horizontal text-opacity-30">VS</div>
         <div class="flex w-full flex-col text-left">
-          <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;input type="checkbox" class="<span class="text-teal-500">toggle</span>"/&gt;</code></pre></div>
+          <div class="mockup-code relative mx-auto w-full max-w-xs flex-grow overflow-hidden shadow-lg sm:max-w-md">
+            <pre><code>&lt;input type="checkbox" class="<span class="text-teal-500">toggle</span>"/&gt;</code></pre>
+            <img loading="lazy" width="666" height="375" class="pointer-events-none absolute bottom-0 right-[-6.1em] hidden -rotate-90 transition duration-1000 lg:block" class:translate-x-60={!cleanHtmlMeme} class:translate-x-0={cleanHtmlMeme} src="/thats-quiet-big.png" alt="That's quiet big" />
+          </div>
           <div class="mt-4 flex h-16 items-start justify-center">
             <div>
-              <input aria-label="Toggle" type="checkbox" checked="checked" class="toggle" />
+              <input aria-label="Toggle" type="checkbox" checked="checked" class="toggle" on:click={() => (cleanHtmlMeme = true)} />
             </div>
           </div>
         </div>
