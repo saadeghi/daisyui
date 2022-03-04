@@ -170,7 +170,7 @@ data="{[
 
 <Component title="Table with a row that highlights on hover">
 <div class="overflow-x-auto w-full">
-  <table class="$$table w-full">
+  <table class="table w-full">
     <thead>
       <tr>
         <th></th>
@@ -186,7 +186,7 @@ data="{[
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <tr class="$$hover">
+      <tr class="hover">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
@@ -243,7 +243,7 @@ data="{[
 
 <Component title="Zebra">
 <div class="overflow-x-auto w-full">
-  <table class="$$table $$table-zebra w-full">
+  <table class="table table-zebra w-full">
     <thead>
       <tr>
         <th></th>
