@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/saadeghi/daisyui/compare/v2.5.0...v2.6.0) (2022-03-04)
+
+
+### Features
+
+* add 3 new themes: `night` `cafe` `winter` ([2ad9cba](https://github.com/saadeghi/daisyui/commit/2ad9cbac958c6dce181da91f7b19b0b7ddeb91ba))
+* update `lofi` theme ([fd3bd4e](https://github.com/saadeghi/daisyui/commit/fd3bd4e696e81740a30c726e72e33cb547bac5e0))
+
+
+### Bug Fixes
+
+* [#425](https://github.com/saadeghi/daisyui/issues/425) ([6a81aa0](https://github.com/saadeghi/daisyui/commit/6a81aa0725303530adb1926e2acb33b182eb8670))
+
 ## [2.5.0](https://github.com/saadeghi/daisyui/compare/v2.4.0...v2.5.0) (2022-03-04)
 
 
