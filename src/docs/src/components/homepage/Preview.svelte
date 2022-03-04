@@ -110,7 +110,7 @@
           <div tabindex="0">
             <div class="text-center">
               <div class="text-lg font-extrabold">Betsy Braddock</div>
-              <div class="text-base-content my-3 text-sm text-opacity-60">
+              <div class="text-base-content/70 my-3 text-sm">
                 Strategic Art Manager
                 <br />
                 Global Illustration Observer
@@ -173,7 +173,7 @@
     <div class="bg-base-100 rounded-box col-span-3 row-span-3 mx-2 flex w-72 flex-shrink-0 flex-col justify-center gap-4 p-4 shadow-xl xl:mx-0 xl:w-full">
       <div class="px-6 pt-6">
         <div class="text-xl font-extrabold">Superpower settings</div>
-        <div class="text-base-content my-4 text-xs text-opacity-60">Enable your favorite superpowers. Terms and conditions apply</div>
+        <div class="text-base-content/70 my-4 text-xs">Enable your favorite superpowers. Terms and conditions apply</div>
         <div class="dropdown w-full flex-1">
           <div tabindex="0">
             <div class="form-control">
@@ -331,11 +331,11 @@
           </div>
           <div>
             <div class="text-lg font-extrabold">Beatrice Thurman</div>
-            <div class="text-base-content text-sm text-opacity-60">220 Followers</div>
+            <div class="text-base-content/70 text-sm">220 Followers</div>
           </div>
         </div>
         <div class="dropdown">
-          <div tabindex="0"><div class="divider text-base-content m-0 text-opacity-40">Reports</div></div>
+          <div tabindex="0"><div class="divider text-base-content/60 m-0">Reports</div></div>
           <div tabindex="0" class="dropdown-content py-2">
             <div class="card compact bg-neutral-focus text-neutral-content rounded-box w-72 shadow-xl">
               <div class="card-body">
@@ -351,23 +351,23 @@
           <div class="dropdown dropdown-top">
             <div tabindex="0">
               <div class="flex items-center p-1">
-                <span class="text-base-content w-48 text-xs text-opacity-60">Search Engines</span>
+                <span class="text-base-content/70 w-48 text-xs">Search Engines</span>
                 <progress max="100" value="50" class="progress progress-success" />
               </div>
               <div class="flex items-center p-1">
-                <span class="text-base-content w-48 text-xs text-opacity-60">Direct</span>
+                <span class="text-base-content/70 w-48 text-xs">Direct</span>
                 <progress max="100" value="30" class="progress progress-primary" />
               </div>
               <div class="flex items-center p-1">
-                <span class="text-base-content w-48 text-xs text-opacity-60">Social Media</span>
+                <span class="text-base-content/70 w-48 text-xs">Social Media</span>
                 <progress max="100" value="70" class="progress progress-secondary" />
               </div>
               <div class="flex items-center p-1">
-                <span class="text-base-content w-48 text-xs text-opacity-60">Emails</span>
+                <span class="text-base-content/70 w-48 text-xs">Emails</span>
                 <progress max="100" value="90" class="progress progress-accent" />
               </div>
               <div class="flex items-center p-1">
-                <span class="text-base-content w-48 text-xs text-opacity-60">Ad campaigns</span>
+                <span class="text-base-content/70 w-48 text-xs">Ad campaigns</span>
                 <progress max="100" value="65" class="progress progress-warning" />
               </div>
             </div>

@@ -30,7 +30,7 @@
           </div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="inline-block cursor-pointer rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-indigo-700">Button</button></div>
         </div>
-        <div class="divider text-base-content lg:divider-horizontal text-opacity-30">VS</div>
+        <div class="divider text-base-content/50 lg:divider-horizontal">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;a class="<span class="text-teal-500">btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre></div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="btn btn-primary">Button</button></div>
@@ -63,7 +63,7 @@
             </div>
           </div>
         </div>
-        <div class="divider text-base-content lg:divider-horizontal text-opacity-30">VS</div>
+        <div class="divider text-base-content/50 lg:divider-horizontal">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code relative mx-auto w-full max-w-xs flex-grow overflow-hidden shadow-lg sm:max-w-md">
             <pre><code>&lt;input type="checkbox" class="<span class="text-teal-500">toggle</span>"/&gt;</code></pre>
@@ -101,7 +101,7 @@
             </ul>
           </div>
         </div>
-        <div class="divider text-base-content lg:divider-horizontal text-opacity-30">VS</div>
+        <div class="divider text-base-content/50 lg:divider-horizontal">VS</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md">
             <pre class="pr-4"><code>&lt;ul class="<span class="text-teal-500">menu</span> p-3 bg-base-200 rounded-xl"&gt;
