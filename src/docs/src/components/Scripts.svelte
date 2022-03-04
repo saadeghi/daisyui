@@ -4,7 +4,7 @@
 
 <svelte:head>
   {#if readEnv("VITE_ADS") == "true"}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4812562253949561" crossorigin="anonymous"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4812562253949561" crossorigin="anonymous"></script> -->
   {/if}
 
   {#if readEnv("VITE_GTM") == "true"}
