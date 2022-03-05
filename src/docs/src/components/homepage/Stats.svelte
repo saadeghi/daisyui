@@ -42,7 +42,9 @@
         {#await githubStars}
           {siteStats.githubStars}
         {:then value}
-          <Countup initial={value * 0.9} {value} duration={1000} roundto={500} />
+          <Countup initial={value * 0.9} {value} duration={1000} roundto={100} />
+        {:catch error}
+          {siteStats.githubStars}
         {/await}
       </div>
       <div class="stat-desc">Github Stars</div>
@@ -52,7 +54,9 @@
         {#await npmInstalls}
           {siteStats.npmInstalls}
         {:then value}
-          <Countup initial={value * 0.9} {value} duration={1000} roundto={1000} />
+          <Countup initial={value * 0.9} {value} duration={1000} roundto={100} />
+        {:catch error}
+          {siteStats.npmInstalls}
         {/await}
       </div>
       <div class="stat-desc">NPM Installs</div>

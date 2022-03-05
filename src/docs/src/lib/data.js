@@ -1,6 +1,6 @@
 export let siteStats = {
   components: "45",
-  themes: "26",
+  themes: "29",
   githubStars: "+9,000",
   npmInstalls: "+400,000",
 }

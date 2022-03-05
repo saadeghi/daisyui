@@ -129,57 +129,39 @@ data="{[
 </Component>
 
 <Component title="Badge in a text" classes="flex-col">
-
-<div>
-  <h2 class="text-xl">
-    Heading
-    <div class="badge badge-lg">NEW</div>
-  </h2>
-</div>
-<div>
-  <h2 class="text-lg">
-    Heading
-    <div class="badge badge-md">NEW</div>
-  </h2>
-</div>
-<div>
-  <h2 class="text-base">
-    Heading
-    <div class="badge badge-sm">NEW</div>
-  </h2>
-</div>
-<div>
-  <h2 class="text-sm">
-    Heading
-    <div class="badge badge-xs">NEW</div>
-  </h2>
-</div>
-
+<h2 class="text-xl">
+  Heading
+  <span class="badge badge-lg">NEW</span>
+</h2>
+<h3 class="text-lg">
+  Heading
+  <span class="badge badge-md">NEW</span>
+</h3>
+<h4 class="text-base">
+  Heading
+  <span class="badge badge-sm">NEW</span>
+</h4>
+<h5 class="text-sm">
+  Heading
+  <span class="badge badge-xs">NEW</span>
+</h5>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div>
-  <h2 class="text-xl">
-    Heading
-    <div class="badge badge-lg">NEW</div>
-  </h2>
-</div>
-<div>
-  <h2 class="text-lg">
-    Heading
-    <div class="badge badge-md">NEW</div>
-  </h2>
-</div>
-<div>
-  <h2 class="text-base">
-    Heading
-    <div class="badge badge-sm">NEW</div>
-  </h2>
-</div>
-<div>
-  <h2 class="text-sm">
-    Heading
-    <div class="badge badge-xs">NEW</div>
-  </h2>
-</div>`
+`<h2 class="text-xl">
+  Heading
+  <span class="badge badge-lg">NEW</span>
+</h2>
+<h3 class="text-lg">
+  Heading
+  <span class="badge badge-md">NEW</span>
+</h3>
+<h4 class="text-base">
+  Heading
+  <span class="badge badge-sm">NEW</span>
+</h4>
+<h5 class="text-sm">
+  Heading
+  <span class="badge badge-xs">NEW</span>
+</h5>`
 }</pre>
 </Component>
 
