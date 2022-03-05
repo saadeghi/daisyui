@@ -25,35 +25,35 @@ data="{[
 ]}"
 />
 
-<Component title="Artboard size 6">
+<Component title="Artboard size 1">
 <div class="artboard phone-1 artboard-demo">320×568</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$artboard $$phone-1">320×568</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard size 6">
+<Component title="Artboard size 2">
 <div class="artboard phone-2 artboard-demo">375×667</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$artboard $$phone-2">375×667</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard size 6">
+<Component title="Artboard size 3">
 <div class="artboard phone-3 artboard-demo">414×736</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$artboard $$phone-3">414×736</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard size 6">
+<Component title="Artboard size 4">
 <div class="artboard phone-4 artboard-demo">375×812</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$artboard $$phone-4">375×812</div>`
 }</pre>
 </Component>
 
-<Component title="Artboard size 6">
+<Component title="Artboard size 5">
 <div class="artboard phone-5 artboard-demo">414×896</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$artboard $$phone-5">414×896</div>`
