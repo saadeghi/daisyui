@@ -156,14 +156,30 @@ data="{[
 </div>
 
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn gap-2">
-  Inbox
-  <div class="$$badge">+99</div>
-</button>
-<button class="$$btn gap-2">
-  Inbox
-  <div class="$$badge $$badge-outline">+99</div>
-</button>`
+`<div>
+  <h2 class="text-xl">
+    Heading
+    <div class="badge badge-lg">NEW</div>
+  </h2>
+</div>
+<div>
+  <h2 class="text-lg">
+    Heading
+    <div class="badge badge-md">NEW</div>
+  </h2>
+</div>
+<div>
+  <h2 class="text-base">
+    Heading
+    <div class="badge badge-sm">NEW</div>
+  </h2>
+</div>
+<div>
+  <h2 class="text-sm">
+    Heading
+    <div class="badge badge-xs">NEW</div>
+  </h2>
+</div>`
 }</pre>
 </Component>
 
