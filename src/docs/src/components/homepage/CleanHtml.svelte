@@ -65,7 +65,7 @@
         </div>
         <div class="divider text-base-content/50 lg:divider-horizontal">VS</div>
         <div class="flex w-full flex-col text-left">
-          <div class="mockup-code relative mx-auto w-full max-w-xs flex-grow overflow-hidden shadow-lg sm:max-w-md">
+          <div class="mockup-code relative mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md lg:overflow-hidden">
             <pre><code>&lt;input type="checkbox" class="<span class="text-teal-500">toggle</span>"/&gt;</code></pre>
             <img loading="lazy" width="666" height="375" class="pointer-events-none absolute bottom-0 right-[-6.1em] hidden -rotate-90 transition duration-1000 lg:block" class:translate-x-60={!cleanHtmlMeme} class:translate-x-0={cleanHtmlMeme} src="/thats-quiet-big.png" alt="That's quiet big" />
           </div>
