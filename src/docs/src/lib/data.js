@@ -18,6 +18,141 @@ export let listOfStaticPagesThatDontNeedSideAds = [
   "/components/"
 ]
 
+export let exampleRepos = [
+  {
+    name: "React (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-react-vite",
+    logos: [
+      "/logos/react.svg",
+      "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "React (Webpack)",
+    href: "https://stackblitz.com/edit/daisyui-react-webpack",
+    logos: [
+      "/logos/react.svg",
+      "/logos/webpack.svg",
+    ]
+  },
+  {
+    name: "Svelte",
+    href: "https://stackblitz.com/edit/daisyui-svelte-vite",
+    logos: [
+      "/logos/svelte.svg",
+      "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "Vue.js 3",
+    href: "https://stackblitz.com/edit/daisyui-vue-vite",
+    logos: [
+      "/logos/vue.svg",
+    ]
+  },
+  {
+    name: "Angular",
+    href: "https://stackblitz.com/edit/daisyui-angular",
+    logos: [
+      "/logos/angular.svg",
+    ]
+  },
+  {
+    name: "Nextjs",
+    href: "https://stackblitz.com/edit/daisyui-nextjs",
+    logos: [
+      "/logos/nextjs.svg",
+    ]
+  },
+  {
+    name: "Remix",
+    href: "https://stackblitz.com/edit/daisyui-remix",
+    logos: [
+      "/logos/remix.svg",
+    ]
+  },
+  {
+    name: "SvelteKit",
+    href: "https://stackblitz.com/edit/daisyui-sveltekit",
+    logos: [
+      "/logos/svelte.svg",
+    ]
+  },
+  {
+    name: "Nuxtjs 3",
+    href: "https://stackblitz.com/edit/daisyui-nuxtjs",
+    logos: [
+      "/logos/nuxtjs.svg",
+    ]
+  },
+  {
+    name: "Solid.js",
+    href: "https://stackblitz.com/edit/daisyui-solidjs",
+    logos: [
+      "/logos/solidjs.svg",
+      "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "Preact (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-preact-vite",
+    logos: [
+      "/logos/preact.svg",
+      "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "Astro",
+    href: "https://stackblitz.com/edit/daisyui-astro",
+    logos: [
+      "/logos/astro.svg",
+    ]
+  },
+  {
+    name: "Vite",
+    href: "https://stackblitz.com/edit/daisyui-vite",
+    logos: [
+      "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "Snowpack",
+    href: "https://stackblitz.com/edit/daisyui-snowpack",
+    logos: [
+      "/logos/snowpack.svg",
+    ]
+  },
+  {
+    name: "Lit (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-lit-vite",
+    logos: [
+      "/logos/lit.svg",
+      "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "CDN (Tailwind)",
+    href: "https://stackblitz.com/edit/daisyui-cdn",
+    logos: [
+      "/logos/jsdelivr.svg",
+    ]
+  },
+  {
+    name: "CDN (BassCSS)",
+    href: "https://stackblitz.com/edit/daisyui-basscss",
+    logos: [
+      "/logos/jsdelivr.svg",
+    ]
+  },
+  {
+    name: "CDN (Tachyons)",
+    href: "https://stackblitz.com/edit/daisyui-tachyons",
+    logos: [
+      "/logos/jsdelivr.svg",
+    ]
+  },
+]
+
 export let pages = [
   {
     items: [
