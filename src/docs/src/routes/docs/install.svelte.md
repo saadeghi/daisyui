@@ -32,7 +32,7 @@ module.exports = {
 
 See example setup of daisyUI and Tailwind CSS on different frameworks and build tools.
 
-<div class="not-prose grid grid-cols-5 my-10 gap-6">
+<div class="not-prose grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 my-10 gap-6">
 
 {#each exampleRepos as { name, href, logos }}
 <a class="card border-2 border-base-200 card-compact bg-white/5 hover:bg-gray-300/10 transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener">
