@@ -1,8 +1,8 @@
 .navbar {
   @apply flex items-center;
-  & > * {
-    @apply inline-flex items-center;
-  }
+}
+:where(.navbar > *) {
+  @apply inline-flex items-center;
 }
 .navbar-start {
   width: 50%;
