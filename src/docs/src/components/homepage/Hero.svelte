@@ -38,11 +38,11 @@
         <div class="mockup-code border-base-content w-full max-w-xs flex-1 border-2 border-opacity-20 bg-transparent pb-6 text-left text-current lg:mx-0"><pre data-prefix="$"><code>npm i daisyui</code></pre></div>
       </div>
       <div class="mt-4 flex flex-1 justify-center space-x-2 sm:justify-start lg:mt-6 lg:justify-start">
-        <a sveltekit:prefetch href="/components" class="btn btn-ghost btn-active lg:btn-lg normal-case">
+        <a href="/components" class="btn btn-ghost btn-active lg:btn-lg normal-case">
           <span class="hidden sm:inline">See</span>
           &nbsp; components
         </a>
-        <a sveltekit:prefetch href="/docs/install" class="btn lg:btn-lg normal-case">How to use?</a>
+        <a href="/docs/install" class="btn lg:btn-lg normal-case">How to use?</a>
       </div>
     </div>
     <div>
