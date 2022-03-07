@@ -20,19 +20,10 @@ export let listOfStaticPagesThatDontNeedSideAds = [
 
 export let exampleRepos = [
   {
-    name: "React (Vite)",
-    href: "https://stackblitz.com/edit/daisyui-react-vite",
+    name: "Vite",
+    href: "https://stackblitz.com/edit/daisyui-vite",
     logos: [
-      "/logos/react.svg",
       "/logos/vite.svg",
-    ]
-  },
-  {
-    name: "React (Webpack)",
-    href: "https://stackblitz.com/edit/daisyui-react-webpack",
-    logos: [
-      "/logos/react.svg",
-      "/logos/webpack.svg",
     ]
   },
   {
@@ -51,10 +42,11 @@ export let exampleRepos = [
     ]
   },
   {
-    name: "Angular",
-    href: "https://stackblitz.com/edit/daisyui-angular",
+    name: "React (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-react-vite",
     logos: [
-      "/logos/angular.svg",
+      "/logos/react.svg",
+      "/logos/vite.svg",
     ]
   },
   {
@@ -65,17 +57,17 @@ export let exampleRepos = [
     ]
   },
   {
-    name: "Remix",
-    href: "https://stackblitz.com/edit/daisyui-remix",
-    logos: [
-      "/logos/remix.svg",
-    ]
-  },
-  {
     name: "SvelteKit",
     href: "https://stackblitz.com/edit/daisyui-sveltekit",
     logos: [
       "/logos/svelte.svg",
+    ]
+  },
+  {
+    name: "Remix",
+    href: "https://stackblitz.com/edit/daisyui-remix",
+    logos: [
+      "/logos/remix.svg",
     ]
   },
   {
@@ -94,10 +86,40 @@ export let exampleRepos = [
     ]
   },
   {
+    name: "PostCSS",
+    href: "https://stackblitz.com/edit/daisyui-postcss",
+    logos: [
+      "/logos/postcss.svg",
+    ]
+  },
+  {
+    name: "React (Webpack)",
+    href: "https://stackblitz.com/edit/daisyui-react-webpack",
+    logos: [
+      "/logos/react.svg",
+      "/logos/webpack.svg",
+    ]
+  },
+  {
     name: "Preact (Vite)",
     href: "https://stackblitz.com/edit/daisyui-preact-vite",
     logos: [
       "/logos/preact.svg",
+      "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "Angular",
+    href: "https://stackblitz.com/edit/daisyui-angular",
+    logos: [
+      "/logos/angular.svg",
+    ]
+  },
+  {
+    name: "Lit (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-lit-vite",
+    logos: [
+      "/logos/lit.svg",
       "/logos/vite.svg",
     ]
   },
@@ -109,10 +131,10 @@ export let exampleRepos = [
     ]
   },
   {
-    name: "Vite",
-    href: "https://stackblitz.com/edit/daisyui-vite",
+    name: "11ty",
+    href: "https://stackblitz.com/edit/daisyui-11ty",
     logos: [
-      "/logos/vite.svg",
+      "/logos/11ty.svg",
     ]
   },
   {
@@ -123,11 +145,11 @@ export let exampleRepos = [
     ]
   },
   {
-    name: "Lit (Vite)",
-    href: "https://stackblitz.com/edit/daisyui-lit-vite",
+    name: "React (CRA)",
+    href: "https://stackblitz.com/edit/daisyui-react-cra",
     logos: [
-      "/logos/lit.svg",
-      "/logos/vite.svg",
+      "/logos/react.svg",
+      "/logos/cra.svg",
     ]
   },
   {
