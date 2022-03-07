@@ -28,7 +28,7 @@ data="{[
 <Component title="Toggle">
 <input type="checkbox" class="toggle" checked>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="$$toggle"> checked`
+`<input type="checkbox" class="$$toggle" checked>`
 }</pre>
 </Component>
 
