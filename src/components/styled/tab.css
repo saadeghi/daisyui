@@ -15,8 +15,10 @@
   &:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: -3px;
-    border-bottom-right-radius: var(--tab-radius, 0.5rem);
-    border-bottom-left-radius: var(--tab-radius, 0.5rem);
+    &.tab-lifted {
+      border-bottom-right-radius: var(--tab-radius, 0.5rem);
+      border-bottom-left-radius: var(--tab-radius, 0.5rem);
+    }
   }
 }
 .tab-bordered {
