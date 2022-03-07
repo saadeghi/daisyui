@@ -43,16 +43,7 @@
     {#if name != "excluded"}
       {#each items as { name, href, icon, badge }}
         <li>
-          <a
-            {href}
-            on:click={closeDrawer}
-            id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""}
-            class={`flex gap-4 
-            ${$page.url.pathname == href ? "active" : ""}
-            ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}
-            sveltekit:prefetch
-          `}
-          >
+          <a {href} sveltekit:prefetch on:click={closeDrawer} id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""} class={`flex gap-4 ${$page.url.pathname == href ? "active" : ""} ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
             {#if icon != ""}
               <span class="flex-none">
                 {@html icon}
