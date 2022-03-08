@@ -21,7 +21,7 @@ data="{[
   { type: 'modifier', class: 'phone-4', desc: 'Size 4 (375×812)' },
   { type: 'modifier', class: 'phone-5', desc: 'Size 5 (414×896)' },
   { type: 'modifier', class: 'phone-6', desc: 'Size 6 (320×1024)' },
-  { type: 'modifier', class: 'horizontal', desc: 'shows horizontal view' },
+  { type: 'modifier', class: 'artboard-horizontal', desc: 'shows horizontal view' },
 ]}"
 />
 
