@@ -2,7 +2,7 @@
   export async function load() {
     return {
       status: 302,
-      redirect: "/components/checkbox",
+      redirect: "/components/range",
     }
   }
 </script>
@@ -10,6 +10,6 @@
 <script>
   import { onMount } from "svelte"
   onMount(() => {
-    window.location.href = "/components/checkbox"
+    window.location.href = "/components/range"
   })
 </script>

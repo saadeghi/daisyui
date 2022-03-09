@@ -1,34 +1,15 @@
 <script context="module">
-  export async function load({ fetch }) {
-    // Use a `limit` querystring parameter to fetch a limited number of posts
-    // e.g. fetch('posts.json?limit=5') for 5 most recent posts
-    const posts = await fetch("/docs.json").then((res) => res.json())
+  export async function load() {
     return {
-      props: {
-        posts,
-      },
+      status: 302,
+      redirect: "/docs/install",
     }
   }
 </script>
 
 <script>
-  import { page } from "$app/stores"
-  export let posts
-  import SEO from "@components/SEO.svelte"
+  import { onMount } from "svelte"
+  onMount(() => {
+    window.location.href = "/docs/install"
+  })
 </script>
-
-<SEO title="Docs" desc="Docs" />
-<a class="btn" href="/">home</a>
-<div class="mx-auto flex w-full max-w-7xl gap-4 px-4">
-  {#each posts as { slug, title, desc, thumbnail }}
-    <a class="card bg-base-200 w-full shadow md:w-1/3 lg:w-1/4" href={`${$page.url.pathname}/${slug}`}>
-      <figure>
-        <img src={thumbnail || "/default.svg"} class="bg-base-300 aspect-square" alt={title} />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">{title}</h2>
-        <p>{desc || ""}</p>
-      </div>
-    </a>
-  {/each}
-</div>

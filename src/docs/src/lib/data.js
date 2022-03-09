@@ -11,11 +11,8 @@ export let siteData = {
   card: "/images/default.jpg",
 }
 
-export let listOfStaticPagesThatNeedSidebar = [
-  "/theme-generator/"
-]
-export let listOfStaticPagesThatDontNeedSideAds = [
-  "/components/"
+export let pagesThatDontNeedSidebar = [
+  "/"
 ]
 
 export let exampleRepos = [

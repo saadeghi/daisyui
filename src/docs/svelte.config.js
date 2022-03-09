@@ -9,6 +9,9 @@ export default {
   preprocess: [
     mdsvex({
       extensions: [".svelte.md", ".md"],
+      layout: {
+        _: 'src/routes/_markdown.svelte'
+      }
     }),
     preprocess({
       postcss: true,

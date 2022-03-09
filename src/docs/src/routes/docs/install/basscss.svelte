@@ -2,7 +2,7 @@
   export async function load() {
     return {
       status: 302,
-      redirect: "/docs/basscss",
+      redirect: "/docs/install",
     }
   }
 </script>
@@ -10,6 +10,6 @@
 <script>
   import { onMount } from "svelte"
   onMount(() => {
-    window.location.href = "/docs/basscss"
+    window.location.href = "/docs/install"
   })
 </script>

@@ -1,28 +1,7 @@
-<script context="module">
-  const excludedRoutes = ["/", "/tailwindplay/", "/codepen/", "/theme-generator/"]
-  export async function load({ url, fetch }) {
-    if (!excludedRoutes.includes(url.pathname)) {
-      const post = await fetch(`${url.pathname.replace(/\/$/, "")}.json`).then((res) => res.json())
-      return {
-        props: {
-          path: url.pathname,
-          post,
-        },
-      }
-    } else {
-      return {
-        props: {
-          path: url.pathname,
-        },
-      }
-    }
-  }
-</script>
-
 <script>
   import { onMount } from "svelte"
   import { afterNavigate } from "$app/navigation"
-  import { listOfStaticPagesThatNeedSidebar, listOfStaticPagesThatDontNeedSideAds } from "@src/lib/data.js"
+  import { pagesThatDontNeedSidebar } from "@src/lib/data.js"
 
   import { page } from "$app/stores"
 
@@ -33,9 +12,6 @@
 
   import Navbar from "@components/Navbar.svelte"
   import Scripts from "@components/Scripts.svelte"
-  import SEO from "@components/SEO.svelte"
-  import Ads from "@components/Ads.svelte"
-  import ComponentFooter from "@components/ComponentFooter.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
   export let post
@@ -72,42 +48,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap&text=daisyUIThemostpopular,freeandopen-sourceTailwindCSScomponentlibrary" rel="stylesheet" />
 </svelte:head>
 
-{#if post}
-  <SEO title={post.title} desc={post.desc} img={`/images${$page.url.pathname.replace(/\/$/, "")}.jpg`} />
-{/if}
-<div class={`bg-base-100 drawer h-screen ${post || listOfStaticPagesThatNeedSidebar.includes($page.url.pathname) ? "drawer-mobile" : ""}`}>
+<div class={`bg-base-100 drawer h-screen ${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "drawer-mobile"}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
     <Navbar {drawerContentScrollY} />
-    <div class={`${post || listOfStaticPagesThatNeedSidebar.includes($page.url.pathname) ? "p-6 pb-16" : ""}`}>
-      {#if post && !listOfStaticPagesThatDontNeedSideAds.includes($page.url.pathname)}
-        <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
-          <div class="prose w-full max-w-4xl flex-grow">
-            {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
-              <!-- <Ads slot="adsense-1" /> -->
-              <!-- <Ads slot="adsense-2" /> -->
-              <!-- <Ads slot="adsense-3" /> -->
-            {/if}
-            {#if post && post.title}
-              <h1>{post.title}</h1>
-            {/if}
-            {#if post && post.desc}
-              <p>{post.desc}</p>
-            {/if}
-            <slot />
-            {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/") || $page.url.pathname.replace(/\/$/, "").startsWith("/docs/")}
-              <ComponentFooter />
-            {/if}
-          </div>
-          {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
-            <!-- <Ads slot="adsense-4" /> -->
-            <!-- <Ads slot="adsense-5" /> -->
-            <Ads slot="carbon2" />
-          {/if}
-        </div>
-      {:else}
-        <slot />
-      {/if}
+    <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "p-6 pb-16"}`}>
+      <slot />
     </div>
   </div>
   <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: 5rem;" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
