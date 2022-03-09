@@ -14,7 +14,6 @@
   import Scripts from "@components/Scripts.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
-  export let post
 
   let drawercontent
   let drawerContentScrollY = 0
