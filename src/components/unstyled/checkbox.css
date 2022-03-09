@@ -1,2 +1,3 @@
 .checkbox {
+  @apply shrink-0;
 }
