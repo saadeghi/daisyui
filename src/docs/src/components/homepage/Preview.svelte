@@ -1,3 +1,7 @@
+<script>
+  import { t } from "@src/lib/i18n"
+</script>
+
 <div class="text-base-content glass xl:rounded-box -mt-48 grid max-w-screen-xl gap-4 bg-opacity-60 xl:pb-0">
   <div class="px-2 pt-2">
     <div class="navbar text-primary-content rounded-box space-x-1">
@@ -19,7 +23,7 @@
       </div>
       <div class="mx-2 flex-1 justify-center px-2 md:flex md:justify-start">
         <div class="dropdown">
-          <div tabindex="0"><span class="text-2xl font-bold">Components Preview</span></div>
+          <div tabindex="0"><span class="text-2xl font-bold">{$t("components-preview-title")}</span></div>
           <div tabindex="0" class="dropdown-content py-2">
             <div class="card compact bg-neutral-focus text-neutral-content rounded-box w-72 shadow-xl">
               <div class="card-body">

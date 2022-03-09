@@ -3,6 +3,16 @@
   import { afterNavigate } from "$app/navigation"
   import { pagesThatDontNeedSidebar } from "@src/lib/data.js"
 
+  import { currentLang, langs } from "@src/lib/i18n"
+
+  onMount(() => {
+    if (langs.includes($page.url.searchParams.get("lang"))) {
+      $currentLang = $page.url.searchParams.get("lang")
+      localStorage.setItem("lang", $currentLang)
+    }
+    localStorage.getItem("lang") && ($currentLang = localStorage.getItem("lang"))
+  })
+
   import { page } from "$app/stores"
 
   import "@components/StyleHandler.svelte"

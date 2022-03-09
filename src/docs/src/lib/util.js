@@ -28,3 +28,10 @@ export const getOS = () => {
 
   return os
 }
+
+export const subString = (input, from, to) => {
+  return input.slice(
+    input.indexOf(from) + from.length,
+    input.lastIndexOf(to),
+  )
+}

@@ -9,6 +9,7 @@
   import HomepageTry from "@components/homepage/Try.svelte"
   import HomepageInstall from "@components/homepage/Install.svelte"
   import Footer from "@components/Footer.svelte"
+  import { t } from "@src/lib/i18n"
 </script>
 
 <SEO title="daisyUI" desc="Tailwind Components Library - Free components for Tailwind CSS" />
@@ -18,7 +19,7 @@
   <HomepagePreview />
   <HomepageStats />
   <div class="flex w-full justify-center">
-    <a href="/components" class="btn btn-primary btn-wide">See All Components</a>
+    <a href="/components" class="btn btn-primary btn-wide">{$t("all-components-btn")}</a>
   </div>
 </div>
 <HomepageCleanHtml />

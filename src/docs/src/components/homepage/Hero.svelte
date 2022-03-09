@@ -1,5 +1,6 @@
 <script>
   import Ads from "@components/Ads.svelte"
+  import { t } from "@src/lib/i18n"
 </script>
 
 <div class="from-primary to-secondary text-primary-content -mt-[4rem] grid place-items-center items-end bg-gradient-to-br pt-20">
@@ -8,41 +9,40 @@
       <h1 class="font-title mb-2 py-4 font-extrabold lg:py-10">
         <div class="mb-2 text-5xl lg:text-7xl">daisyUI</div>
         <div class="text-2xl lg:text-3xl">
-          The most popular, free and open-source <br />
-          Tailwind CSS component library
+          {@html $t("daisyui-tagline")}
         </div>
       </h1>
       <div class="flex w-full flex-col items-start space-y-10 lg:flex-row lg:space-x-4 lg:space-y-0">
         <div class="my-2 flex max-w-sm flex-col gap-2 text-left">
           <div class="flex gap-2">
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            A plugin for Tailwind CSS
+            {$t("feat-1")}
           </div>
           <div class="flex gap-2">
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            Faster development
+            {$t("feat-2")}
           </div>
           <div class="flex gap-2">
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            Cleaner HTML
+            {$t("feat-3")}
           </div>
           <div class="flex gap-2">
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            Customizable and themeable
+            {$t("feat-4")}
           </div>
           <div class="flex gap-2">
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            Pure CSS. Works on all frameworks
+            {$t("feat-5")}
           </div>
         </div>
         <div class="mockup-code border-base-content w-full max-w-xs flex-1 border-2 border-opacity-20 bg-transparent pb-6 text-left text-current lg:mx-0"><pre data-prefix="$"><code>npm i daisyui</code></pre></div>
       </div>
       <div class="mt-4 flex flex-1 justify-center space-x-2 sm:justify-start lg:mt-6 lg:justify-start">
         <a href="/components" class="btn btn-ghost btn-active lg:btn-lg normal-case">
-          <span class="hidden sm:inline">See</span>
-          &nbsp; components
+          <span class="hidden sm:inline">{$t("cta-1")}</span>
+          <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
         </a>
-        <a href="/docs/install" class="btn lg:btn-lg normal-case">How to use?</a>
+        <a href="/docs/install" class="btn lg:btn-lg normal-case">{$t("cta-2")}</a>
       </div>
     </div>
     <div>

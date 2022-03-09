@@ -1,6 +1,7 @@
 <script>
   import { siteStats } from "@src/lib/data.js"
   import Countup from "svelte-countup"
+  import { t } from "@src/lib/i18n"
 
   async function getGithubStars() {
     const res = await fetch("https://api.github.com/repos/saadeghi/daisyui")
@@ -31,11 +32,11 @@
   <div class="stats bg-base-200">
     <a href="/components" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value tabular-nums">{siteStats.components}</div>
-      <div class="stat-desc">Components</div>
+      <div class="stat-desc">{$t("components")}</div>
     </a>
     <a href="/docs/themes" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value tabular-nums">{siteStats.themes}</div>
-      <div class="stat-desc">Themes</div>
+      <div class="stat-desc">{$t("themes")}</div>
     </a>
     <a href="https://github.com/saadeghi/daisyui" target="_blank" rel="noopener" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value tabular-nums">
@@ -47,7 +48,7 @@
           {siteStats.githubStars}
         {/await}
       </div>
-      <div class="stat-desc">Github Stars</div>
+      <div class="stat-desc">{$t("github-stars")}</div>
     </a>
     <a href="https://www.npmjs.com/package/daisyui" target="_blank" rel="noopener" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value tabular-nums">
@@ -59,7 +60,7 @@
           {siteStats.npmInstalls}
         {/await}
       </div>
-      <div class="stat-desc">NPM Installs</div>
+      <div class="stat-desc">{$t("npm-installs")}</div>
     </a>
   </div>
 </div>
