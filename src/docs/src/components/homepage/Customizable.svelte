@@ -8,7 +8,7 @@
       <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">{$t("customizable-title")}</h2>
       <h3 class="mb-5 text-3xl font-bold">{$t("customizable-desc")}</h3>
       <p class="mx-auto mb-5 max-w-lg">
-        {$t("customizable-content")}
+        {@html $t("customizable-content")}
       </p>
       <div class="my-20 flex flex-col">
         <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left shadow-lg sm:max-w-none"><pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre></div>

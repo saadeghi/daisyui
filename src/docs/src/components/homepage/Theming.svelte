@@ -8,7 +8,7 @@
       <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">{$t("theming-title")}</h2>
       <h3 class="mb-5 text-3xl font-bold">{$t("theming-desc")}</h3>
       <p class="mx-auto mb-5 w-full max-w-lg">
-        {$t("theming-content")}
+        {@html $t("theming-content")}
         <a href="/docs/themes" class="link">{$t("theming-btn")}</a>
       </p>
       <div class="my-20 flex w-full flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
