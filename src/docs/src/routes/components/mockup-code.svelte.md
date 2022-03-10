@@ -47,13 +47,13 @@ data="{[
 <div class="mockup-code">
   <pre data-prefix="1"><code>npm i daisyui</code></pre> 
   <pre data-prefix="2"><code>installing...</code></pre> 
-  <pre data-prefix="3" class="bg-warning text-warning"><code>Error!</code></pre>
+  <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-code">
   <pre data-prefix="1"><code>npm i daisyui</code></pre> 
   <pre data-prefix="2"><code>installing...</code></pre> 
-  <pre data-prefix="3" class="bg-warning text-warning"><code>Error!</code></pre>
+  <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
 </div>`
 }</pre>
 </Component>
@@ -81,11 +81,11 @@ data="{[
 </Component>
 
 <Component title="With color">
-<div class="mockup-code bg-primary text-primary">
+<div class="mockup-code bg-primary text-primary-content">
   <pre><code>can be any color!</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$mockup-code bg-primary text-primary">
+`<div class="$$mockup-code bg-primary text-primary-content">
   <pre><code>can be any color!</code></pre>
 </div>`
 }</pre>

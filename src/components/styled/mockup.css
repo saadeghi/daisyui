@@ -1,6 +1,6 @@
 .mockup {
   &-code {
-    @apply min-w-[20rem] bg-neutral py-5 text-neutral-content rounded-box;
+    @apply min-w-[18rem] bg-neutral py-5 text-neutral-content rounded-box;
     &:before {
       content: "";
       @apply mb-4 block h-3 w-3 rounded-full opacity-30;
