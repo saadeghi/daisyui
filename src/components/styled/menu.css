@@ -10,8 +10,7 @@
       }
     }
   }
-  &[class*="p-"] li *,
-  &[class*="p-"] li button {
+  &[class*="p-"] li > * {
     @apply rounded-btn;
   }
   :where(li.bordered > *) {
