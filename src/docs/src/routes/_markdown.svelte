@@ -3,6 +3,7 @@
   import Ads from "@components/Ads.svelte"
   import ComponentFooter from "@components/ComponentFooter.svelte"
   import SEO from "@components/SEO.svelte"
+  import { t } from "@src/lib/i18n"
 
   export let title
   export let desc
@@ -18,10 +19,10 @@
       <!-- <Ads slot="adsense-3" /> -->
     {/if}
     {#if title}
-      <h1>{title}</h1>
+      <h1>{@html $t(title)}</h1>
     {/if}
     {#if desc}
-      <p>{desc}</p>
+      <p>{@html $t(desc)}</p>
     {/if}
     <slot />
     {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/") || $page.url.pathname.replace(/\/$/, "").startsWith("/docs/")}

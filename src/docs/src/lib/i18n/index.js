@@ -22,7 +22,7 @@ function translate(currentLang, key, vars) {
   if (!text) {
     if (translations[`${path}/${currentLang}.json`].default[key] == undefined) {
       if (translations[`${path}/${defaultLang}.json`].default[key] == undefined) {
-        console.error(`"${defaultLang}.${key}" translation not found. Showing the string as is.`)
+        // console.error(`"${defaultLang}.${key}" translation not found. Showing the string as is.`)
         return key
       } else {
         console.warn(`"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`)

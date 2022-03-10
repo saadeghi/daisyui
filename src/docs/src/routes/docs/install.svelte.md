@@ -1,26 +1,26 @@
 ---
-title: Install daisyUI as Tailwind CSS plugin
+title: Install daisyUI as a Tailwind CSS plugin
 desc: How to install daisyUI as a Tailwind CSS plugin?
 published: true
 ---
 
 <script>
   import InstallTabs from "@components/InstallTabs.svelte"
+  import Translate from "@components/Translate.svelte"
   import { exampleRepos } from "@src/lib/data.js"
-  import { t } from "@src/lib/i18n"
 </script>
 
 <InstallTabs />
 
-You need [Node.js](https://nodejs.org/en/download/) and [Tailwind CSS](https://tailwindcss.com/docs/installation) installed.
+<Translate text="You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation'>Tailwind CSS</a> installed." />
 
-1. Install daisyUI:
+1. <Translate text="Install daisyUI" />:
 
 ```
 npm i daisyui
 ```
 
-2. Then add daisyUI to your `tailwind.config.js` files:
+2. <Translate text="Then add daisyUI to your <code>tailwind.config.js</code> files" />:
 
 ```js
 module.exports = {
@@ -29,9 +29,9 @@ module.exports = {
 }
 ```
 
-## daisyUI example repositories
+## <Translate text="daisyUI example repositories"/>
 
-See example setup of daisyUI and Tailwind CSS on different frameworks and build tools.
+<Translate text="See example setup of daisyUI and Tailwind CSS on different frameworks and build tools."/>
 
 <div class="not-prose grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 my-10 gap-6">
 

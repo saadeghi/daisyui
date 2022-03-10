@@ -1,5 +1,6 @@
 <script>
   import { page } from "$app/stores"
+  import { t } from "@src/lib/i18n"
   const tabs = [
     {
       name: "Tailwind Plugin",
@@ -28,7 +29,7 @@
   <div class="tabs flex-nowrap whitespace-nowrap">
     {#each tabs as { name, href }}
       <a {href} class={`tab tab-lifted xl:tab-lg ${$page.url.pathname.replace(/\/$/, "") == href ? "tab-active" : ""}`}>
-        {name}
+        {@html $t(name)}
       </a>
     {/each}
 
