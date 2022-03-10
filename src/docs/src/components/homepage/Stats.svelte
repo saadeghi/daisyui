@@ -43,7 +43,11 @@
         {#await githubStars}
           {siteStats.githubStars}
         {:then value}
-          <Countup initial={value * 0.9} {value} duration={1000} roundto={100} />
+          {#if value > 0}
+            <Countup initial={value * 0.9} {value} duration={1000} roundto={100} />
+          {:else}
+            {siteStats.githubStars}
+          {/if}
         {:catch error}
           {siteStats.githubStars}
         {/await}
@@ -55,7 +59,11 @@
         {#await npmInstalls}
           {siteStats.npmInstalls}
         {:then value}
-          <Countup initial={value * 0.9} {value} duration={1000} roundto={100} />
+          {#if value > 0}
+            <Countup initial={value * 0.9} {value} duration={1000} roundto={100} />
+          {:else}
+            {siteStats.npmInstalls}
+          {/if}
         {:catch error}
           {siteStats.npmInstalls}
         {/await}
