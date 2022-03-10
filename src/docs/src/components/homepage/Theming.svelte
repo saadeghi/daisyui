@@ -1,19 +1,15 @@
+<script>
+  import { t } from "@src/lib/i18n"
+</script>
+
 <div class="hero from-primary to-accent text-primary-content min-h-screen bg-gradient-to-br">
   <div class="hero-content mx-auto max-w-md text-center md:max-w-full">
     <div>
-      <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">Powerful theming</h2>
-      <h3 class="mb-5 text-3xl font-bold">Apply your own design decisions</h3>
+      <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">{$t("theming-title")}</h2>
+      <h3 class="mb-5 text-3xl font-bold">{$t("theming-desc")}</h3>
       <p class="mx-auto mb-5 w-full max-w-lg">
-        daisyUI adds a set of semantic color names to Tailwind. So instead of using generic color names like
-        <span class="badge badge-ghost">bg-blue-500</span>
-        , we can use semantic role names like
-        <span class="badge badge-ghost">bg-primary</span>
-        or
-        <span class="badge badge-ghost">bg-success</span>
-        .
-        <br />
-        All colors are CSS variables so you easily add dark mode by changing a few CSS variables.
-        <a href="/docs/themes" class="link">Read more about themes</a>
+        {$t("theming-content")}
+        <a href="/docs/themes" class="link">{$t("theming-btn")}</a>
       </p>
       <div class="my-20 flex w-full flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
         <div data-theme="luxury" class="card bg-base-100 text-base-content mx-auto w-full max-w-xs flex-1 p-8">
@@ -59,7 +55,7 @@
           </div>
         </div>
       </div>
-      <a href="/docs/themes" class="btn btn-ghost btn-sm mb-20">Read more about themes</a>
+      <a href="/docs/themes" class="btn btn-ghost btn-sm mb-20">{$t("theming-btn")}</a>
       <div />
     </div>
   </div>

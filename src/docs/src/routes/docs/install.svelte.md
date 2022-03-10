@@ -7,6 +7,7 @@ published: true
 <script>
   import InstallTabs from "@components/InstallTabs.svelte"
   import { exampleRepos } from "@src/lib/data.js"
+  import { t } from "@src/lib/i18n"
 </script>
 
 <InstallTabs />

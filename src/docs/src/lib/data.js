@@ -582,7 +582,7 @@ export let pages = [
     name: "excluded",
     items: [
       {
-        name: "Codepen example page",
+        name: "CodePen example page",
         tags: "codepen",
         href: "/codepen",
         icon: "",

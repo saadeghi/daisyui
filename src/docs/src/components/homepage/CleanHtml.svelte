@@ -1,22 +1,19 @@
 <script>
   let cleanHtmlMeme = false
+  import { t } from "@src/lib/i18n"
 </script>
 
 <div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
   <div class="hero-content px-4 text-center md:px-0">
     <div>
-      <h2 class="mt-32 mb-2 text-4xl font-extrabold md:text-6xl">Clean HTML</h2>
-      <h3 class="mb-5 text-3xl font-bold">with component classes</h3>
+      <h2 class="mt-32 mb-2 text-4xl font-extrabold md:text-6xl">{$t("clean-html-title")}</h2>
+      <h3 class="mb-5 text-3xl font-bold">{$t("clean-html-desc")}</h3>
       <p class="mx-auto mb-5 w-full max-w-lg">
-        Your HTML doesn't need to be messy. daisyUI adds component classes to Tailwind CSS. Classes like
-        <span class="badge badge-outline">btn</span>
-        ,
-        <span class="badge badge-outline">card</span>
-        , etc... No need to deal with hundreds of utility classes.
+        {@html $t("clean-html-content")}
       </p>
       <p class="mx-auto mt-20 w-full max-w-lg" />
-      <div class="font-bold">Creating a button</div>
-      using only utility classes vs using daisyUI component classes
+      <div class="font-bold">{$t("clean-html-example-1-title")}</div>
+      {$t("clean-html-example-1-desc")}
       <p />
       <div class="mt-10 mb-20 flex flex-col lg:flex-row">
         <div class="flex w-full flex-col text-left">
@@ -30,15 +27,15 @@
           </div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="inline-block cursor-pointer rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-indigo-700">Button</button></div>
         </div>
-        <div class="divider text-base-content/50 lg:divider-horizontal">VS</div>
+        <div class="divider text-base-content/50 lg:divider-horizontal uppercase">{$t("vs")}</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md"><pre><code>&lt;a class="<span class="text-teal-500">btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre></div>
           <div class="mt-4 flex h-16 items-start justify-center"><button class="btn btn-primary">Button</button></div>
         </div>
       </div>
       <p class="mx-auto mt-20 w-full max-w-lg" />
-      <div class="font-bold">Creating a toggle</div>
-      using only utility classes vs using daisyUI component classes
+      <div class="font-bold">{$t("clean-html-example-2-title")}</div>
+      {$t("clean-html-example-2-desc")}
       <p />
       <div class="mt-10 mb-20 flex flex-col lg:flex-row">
         <div class="flex w-full flex-col text-left">
@@ -63,7 +60,7 @@
             </div>
           </div>
         </div>
-        <div class="divider text-base-content/50 lg:divider-horizontal">VS</div>
+        <div class="divider text-base-content/50 lg:divider-horizontal uppercase">{$t("vs")}</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code relative mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md lg:overflow-hidden">
             <pre><code>&lt;input type="checkbox" class="<span class="text-teal-500">toggle</span>"/&gt;</code></pre>
@@ -77,8 +74,8 @@
         </div>
       </div>
       <p class="mx-auto w-full max-w-lg" />
-      <div class="font-bold">Creating a menu component</div>
-      using only utility classes vs using daisyUI component classes
+      <div class="font-bold">{$t("clean-html-example-3-title")}</div>
+      {$t("clean-html-example-3-desc")}
       <p />
       <div class="mt-10 mb-20 flex flex-col lg:flex-row">
         <div class="flex w-full flex-col text-left">
@@ -101,7 +98,7 @@
             </ul>
           </div>
         </div>
-        <div class="divider text-base-content/50 lg:divider-horizontal">VS</div>
+        <div class="divider text-base-content/50 lg:divider-horizontal uppercase">{$t("vs")}</div>
         <div class="flex w-full flex-col text-left">
           <div class="mockup-code mx-auto w-full max-w-xs flex-grow shadow-lg sm:max-w-md">
             <pre class="pr-4"><code>&lt;ul class="<span class="text-teal-500">menu</span> p-3 bg-base-200 rounded-xl"&gt;
@@ -123,7 +120,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-6 mb-10 flex w-full justify-center"><a href="/components" class="btn btn-primary btn-wide">See All Components</a></div>
+      <div class="mt-6 mb-10 flex w-full justify-center"><a href="/components" class="btn btn-primary btn-wide">{$t("all-components-btn")}</a></div>
     </div>
   </div>
 </div>
