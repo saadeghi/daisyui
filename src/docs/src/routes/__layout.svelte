@@ -10,7 +10,9 @@
       $currentLang = $page.url.searchParams.get("lang")
       localStorage.setItem("lang", $currentLang)
     }
-    localStorage.getItem("lang") && ($currentLang = localStorage.getItem("lang"))
+    if (localStorage.getItem("lang")) {
+      $currentLang = localStorage.getItem("lang")
+    }
   })
 
   import { page } from "$app/stores"
