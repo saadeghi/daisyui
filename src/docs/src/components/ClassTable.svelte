@@ -1,6 +1,7 @@
 <script>
   import { prefix } from "$lib/stores"
   import PrefixEdit from "@components/PrefixEdit.svelte"
+  import Translate from "@components/Translate.svelte"
   export let data
 </script>
 
@@ -10,9 +11,9 @@
       <tr>
         <th class="flex items-center gap-2 normal-case">
           <PrefixEdit />
-          <span>Class name</span>
+          <span><Translate text="Class name" /></span>
         </th>
-        <th class="normal-case">Type</th>
+        <th class="normal-case"><Translate text="Type" /></th>
         <th />
       </tr>
     </thead>

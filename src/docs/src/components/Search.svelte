@@ -6,6 +6,7 @@
 
   import { pages } from "@src/lib/data.js"
   import { getOS } from "$lib/util"
+  import { t } from "@src/lib/i18n"
 
   let searchIndex = []
   pages.forEach((group) => {
@@ -33,7 +34,7 @@
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <label class={`searchbox relative mx-3 w-full`} bind:this={seachboxEl}>
   <svg class={`text-base-content pointer-events-none absolute z-10 my-3 ml-2 stroke-current opacity-60 ${$page.url.pathname == "/" ? "hidden" : ""}`} width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-  <Typeahead limit={8} label="Search" data={searchIndex} extract={(item) => item.tags} inputAfterSelect="clear" on:select={({ detail }) => goto(searchIndex[detail.originalIndex].href)} let:result>
+  <Typeahead placeholder={$t("Search") + "…"} limit={8} label="Search" data={searchIndex} extract={(item) => item.tags} inputAfterSelect="clear" on:select={({ detail }) => goto(searchIndex[detail.originalIndex].href)} let:result>
     <div class="py-1 text-sm">
       {searchIndex[result.index].name}
     </div>
