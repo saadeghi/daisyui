@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/saadeghi/daisyui/compare/v2.6.4...v2.7.0) (2022-03-13)
+
+
+### Features
+
+* divider text now has nowrap ([f41fb50](https://github.com/saadeghi/daisyui/commit/f41fb506995eb7bf71ee7cee96ac0ac0f36eee6a))
+
+
+### Bug Fixes
+
+* menu item children border radius ([015e762](https://github.com/saadeghi/daisyui/commit/015e762a45d6548c3c31dbeee86af87789ca63a8))
+* mockup min width size ([cdb653e](https://github.com/saadeghi/daisyui/commit/cdb653e6281f273ada293dc2cceab22622a09e8e))
+* typo ([#582](https://github.com/saadeghi/daisyui/issues/582)) ([26d5116](https://github.com/saadeghi/daisyui/commit/26d5116d54ffcd5ede002306587308e23e8efa27))
+
 ### [2.6.4](https://github.com/saadeghi/daisyui/compare/v2.6.3...v2.6.4) (2022-03-09)
 
 
