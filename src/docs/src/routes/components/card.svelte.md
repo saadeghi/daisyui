@@ -27,7 +27,7 @@ data="{[
 
 <Component title="Card">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -38,7 +38,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -52,7 +52,7 @@ data="{[
 
 <Component title="Compact card (less padding for `card-body`)">
 <div class="card w-96 bg-base-100 card-compact shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -63,7 +63,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card $$card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -77,7 +77,7 @@ data="{[
 
 <Component title="Card with badge">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">
       Shoes!
@@ -92,7 +92,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">
       Shoes!
@@ -114,7 +114,7 @@ data="{[
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
   </div>
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
@@ -122,7 +122,7 @@ data="{[
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
   </div>
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
 </div>`
 }</pre>
 </Component>
@@ -130,7 +130,7 @@ data="{[
 <Component title="Card with centered content and paddings">
 <div class="card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl">
+    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">Shoes!</h2>
@@ -143,7 +143,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl">
+    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="$$card-body items-center text-center">
     <h2 class="$$card-title">Shoes!</h2>
@@ -158,7 +158,7 @@ data="{[
 
 <Component title="Card with image overlay">
 <div class="card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -169,7 +169,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes"></figure>
+  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>

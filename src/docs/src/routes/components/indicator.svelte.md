@@ -88,14 +88,14 @@ data="{[
 <div class="avatar indicator">
   <span class="indicator-item badge badge-secondary">typing…</span> 
   <div class="w-20 h-20 rounded-lg">
-    <img src="https://api.lorem.space/image/face?w=160&h=160">
+    <img src="https://api.lorem.space/image/face?w=160&h=160" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar $$indicator">
   <span class="$$indicator-item $$badge $$badge-secondary">typing…</span> 
   <div class="w-20 h-20 rounded-lg">
-    <img src="https://api.lorem.space/image/face?w=160&h=160">
+    <img src="https://api.lorem.space/image/face?w=160&h=160" />
   </div>
 </div>`
 }</pre>
@@ -144,12 +144,12 @@ data="{[
 <Component title="in center of an image">
 <div class="indicator">
   <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span> 
-  <img class="rounded" src="https://api.lorem.space/image/house?w=300&h=150">
+  <img class="rounded" src="https://api.lorem.space/image/house?w=300&h=150" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$indicator">
   <span class="$$indicator-item $$indicator-center $$indicator-middle $$badge $$badge-secondary">Uploading Image...</span> 
-  <img src="https://api.lorem.space/image/house?w=300&h=150">
+  <img src="https://api.lorem.space/image/house?w=300&h=150" />
 </div>`
 }</pre>
 </Component>

@@ -341,7 +341,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -370,7 +370,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -399,7 +399,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -428,7 +428,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -488,7 +488,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -518,7 +518,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -548,7 +548,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -578,7 +578,7 @@ data="{[
           <div class="flex items-center space-x-3">
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component">
+                <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>

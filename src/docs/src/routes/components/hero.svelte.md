@@ -45,7 +45,7 @@ data="{[
 <Component title="Hero with figure">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row">
-    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component">
+    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
     <div>
       <h3 class="text-5xl font-bold">Box Office News!</h3>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -56,7 +56,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$hero min-h-screen bg-base-200">
   <div class="$$hero-content flex-col lg:flex-row">
-    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl">
+    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Box Office News!</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -70,7 +70,7 @@ data="{[
 <Component title="Hero with figure but reverse order">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
-    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component">
+    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
     <div>
       <h3 class="text-5xl font-bold">Box Office News!</h3>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -81,7 +81,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$hero min-h-screen bg-base-200">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
-    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl">
+    <img src="https://api.lorem.space/image/movie?w=260&h=400" class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Box Office News!</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>

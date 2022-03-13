@@ -49,15 +49,15 @@ data="{[
 
 <Component title="stacked images">
 <div class="stack mb-4">
-  <img src="https://api.lorem.space/image/face?w=100&h=100&hash=8B7BCDC2" alt="Image 1" class="rounded"> 
-  <img src="https://api.lorem.space/image/face?w=100&h=100&hash=500B67FB" alt="Image 2" class="rounded"> 
-  <img src="https://api.lorem.space/image/face?w=100&h=100&hash=A89D0DE6" alt="Image 3" class="rounded">
+  <img src="https://api.lorem.space/image/face?w=224&h=224&hash=8B7BCDC2" alt="Image 1" class="rounded w-28" />
+  <img src="https://api.lorem.space/image/face?w=224&h=224&hash=500B67FB" alt="Image 2" class="rounded w-28" />
+  <img src="https://api.lorem.space/image/face?w=224&h=224&hash=A89D0DE6" alt="Image 3" class="rounded w-28" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$stack">
-  <img src="https://api.lorem.space/image/face?w=100&h=100&hash=8B7BCDC2" alt="Image 1" class="rounded"> 
-  <img src="https://api.lorem.space/image/face?w=100&h=100&hash=500B67FB" alt="Image 2" class="rounded"> 
-  <img src="https://api.lorem.space/image/face?w=100&h=100&hash=A89D0DE6" alt="Image 3" class="rounded">
+  <img src="https://api.lorem.space/image/face?w=112&h=112&hash=8B7BCDC2" alt="Image 1" class="rounded" />
+  <img src="https://api.lorem.space/image/face?w=112&h=112&hash=500B67FB" alt="Image 2" class="rounded" />
+  <img src="https://api.lorem.space/image/face?w=112&h=112&hash=A89D0DE6" alt="Image 3" class="rounded" />
 </div>`
 }</pre>
 </Component>
