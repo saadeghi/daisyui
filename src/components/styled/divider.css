@@ -1,5 +1,5 @@
 .divider {
-  @apply my-4 h-4;
+  @apply my-4 h-4 whitespace-nowrap;
   &:before {
     @apply bg-base-content bg-opacity-10;
   }
