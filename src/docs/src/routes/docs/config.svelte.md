@@ -4,8 +4,12 @@ desc: How to change the default configuration of daisyUI?
 published: true
 ---
 
-daisyUI can be configured from your `tailwind.config.js` file.  
-Default config:
+<script>
+  import Translate from "@components/Translate.svelte"
+</script>
+
+<Translate text="daisyUI can be configured from your <code>tailwind.config.js</code> file." />  
+<Translate text="Default config" />:
 
 ```js
 module.exports = {
@@ -28,61 +32,61 @@ module.exports = {
 }
 ```
 
-## Config values explained:
+## <Translate text="Config values explained" />:
 
 - ### styled
 
   `Boolean (default: true)`
 
-  If it's true, components will have colors and style so you won't need to design anything.  
-  If it's false, components will have no color and no visual style so you can design your own style on a basic skeleton.
+  <Translate text="If it's true, components will have colors and style so you won't need to design anything." />  
+  <Translate text="If it's false, components will have no color and no visual style so you can design your own style on a basic skeleton." />
 
 - ### themes
 
   `Boolean or array (default: true)`
 
-  If it's true, all themes will be included.
-  If it's false, only light (default) theme will be available.  
-  If it's an array, only themes in the array will be included and the first theme will be the default theme.
-  Read more about [themes](/docs/themes)
+  <Translate text="If it's true, all themes will be included." />
+  <Translate text="If it's false, only light (default) theme will be available." />  
+  <Translate text="If it's an array, only themes in the array will be included and the first theme will be the default theme." />
+  <Translate text="Read more about <a href='/docs/themes'>themes</a>" />
 
 - ### base
 
   `Boolean (default: true)`
 
-  If it's true, [a few base styles](https://github.com/saadeghi/daisyui/blob/master/src/base) will be added
+  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/blob/master/src/base'>a few base styles</a> will be added" />
 
 - ### utils
 
   `Boolean (default: true)`
 
-  If it's true, [responsive and utility classes](https://github.com/saadeghi/daisyui/tree/master/src/utilities) will be added
+  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/tree/master/src/utilities'>responsive and utility classes</a> will be added" />
 
 - ### logs
 
   `Boolean (default: true)`
 
-  If it's true, daisyUI shows logs in terminal while CSS is building
+  <Translate text="If it's true, daisyUI shows logs in terminal while CSS is building" />
 
 - ### rtl
 
   `Boolean (default: false)`
 
-  If it's true, your theme will be right-to-left. You need to add `dir="rtl"` to your body tag.  
-  If you're using daisyUI with RTL option, I suggest using [tailwindcss-flip](https://github.com/cvrajeesh/tailwindcss-flip) plugin because to flip all your Tailwind utilities automatically.
+  <Translate text="If it's true, your theme will be right-to-left. You need to add <code>dir='rtl'</code> to your body tag." />
+  <Translate text="If you're using daisyUI with RTL option, I suggest using <a href='https://github.com/cvrajeesh/tailwindcss-flip'>tailwindcss-flip</a> plugin because to flip all your Tailwind utilities automatically." />
 
 - ### darkTheme
 
   `String (default: "dark")`
 
-  Allows us to pick another theme for system's auto dark mode. By default, `dark` theme (or a custom theme named `dark`) will be the default theme if no theme is specified and the user is using dark mode on their system. With this config, you can set another theme to be the default dark mode theme.
+  <Translate text="Allows us to pick another theme for system's auto dark mode. By default, <code>dark</code> theme (or a custom theme named <code>dark</code>) will be the default theme if no theme is specified and the user is using dark mode on their system. With this config, you can set another theme to be the default dark mode theme." />
 
 - ### prefix
 
   `String (default: "")`
 
-  Adds a prefix to class name for all daisyUI classes (including component classes, modifier classes and responsive classes).
-  For example: `btn` will become `prefix-btn`.  
-  If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts.
-  Utility classes like color names (e.g. `bg-primary`) or border-radius (e.g. `rounded-box`) will not be affected by this config because they're being added as extensions to Tailwind CSS classes.  
-  If you use daisyUI `prefix` option (like `daisy-`) and Tailwind CSS `prefix` option (like `tw-`) together, classnames will be prefixed like this: `tw-daisy-btn`.
+  <Translate text="Adds a prefix to class name for all daisyUI classes (including component classes, modifier classes and responsive classes)." />
+  <Translate text="For example: <code>btn</code> will become <code>prefix-btn</code>." />  
+  <Translate text="If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts." />
+  <Translate text="Utility classes like color names (e.g. <code>bg-primary</code>) or border-radius (e.g. <code>rounded-box</code>) will not be affected by this config because they're being added as extensions to Tailwind CSS classes." />  
+  <Translate text="If you use daisyUI `prefix` option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>." />

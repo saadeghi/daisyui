@@ -1,7 +1,12 @@
 <script>
+  import { onMount } from "svelte"
   import { page } from "$app/stores"
-  import { pages } from "@src/lib/data.js"
+  import { pages, langInfo } from "@src/lib/data.js"
+
+  import { currentLang, langs, setLang } from "@src/lib/i18n"
+
   import { t } from "@src/lib/i18n"
+
   let arrayOfPagesInOrder = []
   pages.map((items) => {
     if (items.name != "excluded") {
@@ -68,13 +73,21 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
           <svg class="inline-block h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
           <div>
             <a target="_blank" rel="noopener" class="link" href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes${$page.url.pathname.replace(/\/$/, "")}.svelte.md?plain=1`}>{$t("Edit this page on GitHub")}</a>
           </div>
         </div>
+        {#if $currentLang != "en"}
+          <div class="flex items-center gap-2">
+            {@html langInfo[$currentLang].flag}
+            <div>
+              <a target="_blank" rel="noopener" class="link" href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/translation/${$currentLang}.json`}>{$t("Contribute to translation")}</a>
+            </div>
+          </div>
+        {/if}
       </div>
     </div>
   </div>

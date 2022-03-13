@@ -6,8 +6,9 @@
   import { currentLang, langs } from "@src/lib/i18n"
 
   onMount(() => {
-    if (langs.includes($page.url.searchParams.get("lang"))) {
-      $currentLang = $page.url.searchParams.get("lang")
+    let lang = new URL(document.location).searchParams.get("lang")
+    if (langs.includes(lang)) {
+      $currentLang = lang
       localStorage.setItem("lang", $currentLang)
     }
     if (localStorage.getItem("lang")) {
