@@ -28,7 +28,7 @@
   "clean-html-example-3-desc": "ユーティリティクラスのみを使用した場合とDaisyUIコンポーネントクラスを使用した場合の比較",
   "customizable-title": "高いカスタマイズ性",
   "customizable-desc": "Tailwind CSS ユーティリティクラスの活用",
-  "customizable-content": "daisyUI はTailwindのユーティリティクラスに基づいており、すべてのコンポーネントの詳細度(specificity)引く設定されているため、ユーティリティクラスを使用してすべてをカスタマイズできます。<br/> <a href='/docs/customize' class='link'>@apply</a> を使用して、カスタムスタイルをコンポーネントに追加することもできます または、CSS変数を使用して <a href='/docs/themes' class='link'>色やその他のデザインの決定を変更</a> できます。",
+  "customizable-content": "daisyUI はTailwindのユーティリティクラスに基づいており、すべてのコンポーネントの詳細度(specificity)は低く設定されているため、ユーティリティクラスを使用してすべてをカスタマイズできます。<br/> <a href='/docs/customize' class='link'>@apply</a> を使用して、カスタムスタイルをコンポーネントに追加することもできます または、CSS変数を使用して <a href='/docs/themes' class='link'>色やその他のデザインの決定を変更</a> できます。",
   "theming-title": "パワフルなテーマ設定",
   "theming-desc": "あなたの思うがままのデザインに",
   "theming-content": "daisyUI は、セマンティックカラーのセットを Tailwind CSS に追加します。 したがって、<span class='badge badge-ghost'>bg-blue-500</span> のような一般的な色の名前を使用する代わりに、<span class='badge badge-ghost'>bg-primary</span> や <span class='badge badge-ghost'>bg-success</span> のようなセマンティックロール名を使用できます。<br /> すべての色はCSS変数として定義されるため、いくつかのCSS変数を変更することでダークモードを簡単に追加できます。",
