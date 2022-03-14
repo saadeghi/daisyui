@@ -9,11 +9,9 @@
 
   let arrayOfPagesInOrder = []
   pages.map((items) => {
-    if (items.name != "excluded") {
-      items.items.forEach((item) => {
-        arrayOfPagesInOrder.push(item)
-      })
-    }
+    items.items.forEach((item) => {
+      arrayOfPagesInOrder.push(item)
+    })
   })
   $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href == $page.url.pathname.replace(/\/$/, ""))
 </script>

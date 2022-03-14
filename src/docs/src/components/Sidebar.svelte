@@ -43,22 +43,24 @@
       <li class="menu-title"><span>{$t(name)}</span></li>
     {/if}
     {#if name != "excluded"}
-      {#each items as { name, href, icon, badge }}
-        <li>
-          <a {href} on:click={closeDrawer} id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""} class={`flex gap-4 ${$page.url.pathname == href ? "active" : ""} ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
-            {#if icon != ""}
-              <span class="flex-none">
-                {@html icon}
+      {#each items as { name, href, icon, badge, hidden, highlightAnotherItem }}
+        {#if !hidden}
+          <li>
+            <a {href} on:click={closeDrawer} id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""} class={`flex gap-4 ${$page.url.pathname == href ? "active" : ""} ${$page.url.pathname == highlightAnotherItem + "/" ? "active" : ""} ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
+              {#if icon != ""}
+                <span class="flex-none">
+                  {@html icon}
+                </span>
+              {/if}
+              <span class="flex-1">
+                {@html $t(name)}
               </span>
-            {/if}
-            <span class="flex-1">
-              {@html $t(name)}
-            </span>
-            {#if badge != ""}
-              <span class="badge badge-sm flex-none lowercase">{$t(badge)}</span>
-            {/if}
-          </a>
-        </li>
+              {#if badge != ""}
+                <span class="badge badge-sm flex-none lowercase">{$t(badge)}</span>
+              {/if}
+            </a>
+          </li>
+        {/if}
       {/each}
     {/if}
   </ul>
