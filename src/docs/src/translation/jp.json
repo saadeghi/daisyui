@@ -37,7 +37,7 @@
   "try-online-desc": "CDNでdaisyUI ファイルを使用する",
   "try-online-playground-links-title": "またはオンラインで試す",
   "install-title": "daisyUIのインストール",
-  "install-desc": "TailwindCSSのプラグインとして、または独立したCSSライブラリとして使用できます<br /> 依存するライブラリはありません",
+  "install-desc": "TailwindCSSのプラグインとして、または独立したCSSライブラリとして使用できます <br /> 依存するライブラリはありません",
   "install-step-1": "daisyUI をNode Packageとしてインストールする",
   "install-step-2": "プラグインとしてDisalyUIをTailwindCSSに追加する",
   "install-btn": "インストールガイド",
