@@ -34,7 +34,7 @@ module.exports = {
 ```
 
 <Translate text="The default theme is <code>light</code> (or <code>dark</code> for dark mode)" /> 
-<Translate text="but you can [change the default theme from tailwind.config.js](https://daisyui.com/docs/config)" />
+<Translate text="but you can <a href='https://daisyui.com/docs/config'>change the default theme from tailwind.config.js</a>" />
 
 ## <Translate text="How to remove unused themes?" />
 
