@@ -18,7 +18,7 @@ published: true
 <html data-theme="cupcake"></html>
 ```
 
-> <Translate text=" I suggest using <a href="https://github.com/saadeghi/theme-change"><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
+> <Translate text="I suggest using <a href="https://github.com/saadeghi/theme-change"><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
 
 ## <Translate text="List of themes" />
 
