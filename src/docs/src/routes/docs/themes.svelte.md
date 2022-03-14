@@ -44,7 +44,7 @@ module.exports = {
 
 - <Translate text="<code>cupcake</code> will be the default theme for light mode" />
 - <Translate text="<code>dark</code> will be the default theme for dark mode" />
-- <Translate text="<code>cmyk</code> can be applied on any HTML tag with <code>data-theme="cupcake"</code>" />
+- <Translate text="<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>" />
 
 ```js
 module.exports = {
@@ -80,7 +80,7 @@ module.exports = {
 
 ## <Translate text="How to use a theme only for a section of page?" />
 
-<Translate text="Add <code>data-theme="THEME_NAME"</code> to any element and everything inside will have your theme." />
+<Translate text="Add <code>data-theme='THEME_NAME'</code> to any element and everything inside will have your theme." />
 <Translate text="You can nest themes and there is no limit!" />
 
 <Translate text="You can force a section of your HTML to only use a specific theme." />
@@ -99,8 +99,8 @@ module.exports = {
 <Translate text="You can add a new theme from <code>tailwind.config.js</code> file." />
 <Translate text="In below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes." />
 
-- <Translate text="The first theme (<code>mytheme</code>) will be the default theme.
-- <Translate text="<code>dark</code> theme will be the default theme for dark mode.
+- <Translate text="The first theme (<code>mytheme</code>) will be the default theme." />
+- <Translate text="<code>dark</code> theme will be the default theme for dark mode." />
 
 <Translate text="In below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
 
