@@ -18,7 +18,7 @@ published: true
 <html data-theme="cupcake"></html>
 ```
 
-<Translate text="> I suggest using <a href="https://github.com/saadeghi/theme-change"><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
+> <Translate text=" I suggest using <a href="https://github.com/saadeghi/theme-change"><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
 
 ## <Translate text="List of themes" />
 
@@ -42,9 +42,9 @@ module.exports = {
 <Translate text="This will reduce the size of your CSS file." />
 <Translate text="In below example" />
 
-- `cupcake` will be the default theme for light mode
-- `dark` will be the default theme for dark mode
-- `cmyk` can be applied on any HTML tag with `data-theme="cupcake"`
+- <Translate text="<code>cupcake</code> will be the default theme for light mode" />
+- <Translate text="<code>dark</code> will be the default theme for dark mode" />
+- <Translate text="<code>cmyk</code> can be applied on any HTML tag with <code>data-theme="cupcake"</code>" />
 
 ```js
 module.exports = {
@@ -97,10 +97,10 @@ module.exports = {
 ## <Translate text="How to add a new custom theme?" />
 
 <Translate text="You can add a new theme from <code>tailwind.config.js</code> file." />
-<Translate text="In below example, I added a new theme called `mytheme` and I'm also including <code>dark</code> and <code>cupcake</code> themes." />
+<Translate text="In below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes." />
 
-- The first theme (`mytheme`) will be the default theme.
-- `dark` theme will be the default theme for dark mode.
+- <Translate text="The first theme (<code>mytheme</code>) will be the default theme.
+- <Translate text="<code>dark</code> theme will be the default theme for dark mode.
 
 <Translate text="In below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
 
