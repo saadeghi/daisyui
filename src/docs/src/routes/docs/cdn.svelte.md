@@ -28,7 +28,7 @@ published: true
 </div>
 
 <Translate text="You don't need to install anything." />  
-<Translate text="Just add one of these to the `head` tag of your HTML" />:
+<Translate text="Just add one of these to the <code>head</code> tag of your HTML" />:
 
 - daisyUI <code>{version}</code> CSS file + Tailwind CSS <code>3.0</code> JS:
 
