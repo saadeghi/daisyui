@@ -181,7 +181,7 @@
   "For example: <code>btn</code> will become <code>prefix-btn</code>.": "例：<code>btn</code> は <code>prefix-btn</code> になります。",
   "If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts.": "同様のクラス名を持つ2番目のCSSライブラリを使用している場合は、この設定を使用して競合を回避できます。",
   "Utility classes like color names (e.g. <code>bg-primary</code>) or border-radius (e.g. <code>rounded-box</code>) will not be affected by this config because they're being added as extensions to Tailwind CSS classes.": "色名（例： <code>bg-primary</code>）やborder-radius（例：<code>rounded-box</code>）などのユーティリティクラスは、Tailwind CSSクラスの拡張機能として追加されるため、この構成の影響を受けません。",
-  "If you use daisyUI <code>prefix</code> option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>.": "daisyUI の<code>prefix</code>オプション（<code>dreams-</code>など）とTailwindCSSの<code>prefix</code>オプション（<code>tw-</code>など）を一緒に使用すると、クラス名には次のようにプレフィックスが付けられます：<code>tw-dreams-btn</code>。",
+  "If you use daisyUI <code>prefix</code> option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>.": "daisyUI の<code>prefix</code>オプション（<code>daisy-</code>など）とTailwindCSSの<code>prefix</code>オプション（<code>tw-</code>など）を一緒に使用すると、クラス名には次のようにプレフィックスが付けられます：<code>tw-daisy-btn</code>。",
   "How to use daisyUI colors?": "daisyUI カラーの使い方は？",
   "Introduction": "序章",
   "daisyUI is fully themeable and colorable,": "daisyUI は完全にテーマ化可能で、色付け可能です。",
