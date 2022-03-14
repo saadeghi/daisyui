@@ -18,7 +18,7 @@ published: true
 <html data-theme="cupcake"></html>
 ```
 
-> <Translate text="I suggest using <a href="https://github.com/saadeghi/theme-change"><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
+> <Translate text="I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
 
 ## <Translate text="List of themes" />
 
@@ -108,7 +108,7 @@ module.exports = {
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     <p>
-      You can also add <a href="/docs/colors" class="link">optional color names</a> to have full control over all colors.
+      You can also add <a href='/docs/colors' class="link">optional color names</a> to have full control over all colors.
     </p>
   </div>
 </div>
