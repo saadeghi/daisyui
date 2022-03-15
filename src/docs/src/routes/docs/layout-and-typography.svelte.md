@@ -4,11 +4,17 @@ desc: How to use layouts and typography in daisyUI
 published: true
 ---
 
-## Layout
+<script>
+  import Translate from "@components/Translate.svelte"
+</script>
 
-Layout, sizing, grids, spacing, etc... all will be handled by Tailwind CSS's utility classes
+## <Translate text="Layout" />
 
-Read more about:
+<Translate text="Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes" />
+
+<br/>
+
+<Translate text="Read more" />
 
 - [Layout](https://tailwindcss.com/docs/container)
 - [Sizing](https://tailwindcss.com/docs/width)
@@ -17,17 +23,17 @@ Read more about:
 - [Box alignment](https://tailwindcss.com/docs/justify-content)
 - [Spacing](https://tailwindcss.com/docs/padding)
 
-## Typography
+## <Translate text="Typography" />
 
-You should use official [TailwindCSS Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography).  
-It handles everything and it's fully customizable
+<Translate text="You should use official <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>." />  
+<Translate text="It handles everything and it's fully customizable" />
 
-daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.
+<Translate text="daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements." />
 
 <div class="alert alert-info max-w-3xl text-sm not-prose">
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-    <p>Make sure you require <span class="badge badge-outline">daisyui</span> AFTER <span class="badge badge-outline">@tailwindcss/typography</span> in tailwind.config.js</p>
+    <p><Translate text="Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js" /></p>
   </div>
 </div>
 
@@ -40,7 +46,7 @@ module.exports = {
 
 ---
 
-### Here you can see how elements will look using `@tailwindcss/typography`:
+### <Translate text="Here you can see how elements will look using <code>@tailwindcss/typography</code>." />:
 
 <div class="max-w-3xl my-20">
 

@@ -1,5 +1,5 @@
 ---
-title: How to use daisyUI themes
+title: daisyUI themes
 desc: How to use daisyUI themes?
 published: true
 ---
@@ -10,7 +10,7 @@ published: true
 </script>
 
 <Translate text="daisyUI comes with a number of themes, which you can use with no extra effort." />  
-<Translate text="Each theme defines a set of colors which will be used on all daisyUI elements." />  
+<Translate text="Each theme defines a set of colors which will be used on all daisyUI elements." />
 
 <Translate text="To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:" />
 

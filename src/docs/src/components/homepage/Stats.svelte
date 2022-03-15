@@ -29,7 +29,7 @@
 </script>
 
 <div class="flex w-full justify-center">
-  <div class="stats bg-base-200">
+  <div class="stats stats-vertical md:stats-horizontal bg-base-200">
     <a href="/components" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value tabular-nums">{siteStats.components}</div>
       <div class="stat-desc">{$t("components")}</div>

@@ -3,6 +3,7 @@
   import { browser } from "$app/env"
   import SEO from "@components/SEO.svelte"
   import ColorPicker from "@components/ColorPicker.svelte"
+  import Translate from "@components/Translate.svelte"
 
   import { default as Color } from "color"
   import { default as randomColor } from "randomcolor"
@@ -254,21 +255,17 @@
 <SEO title="daisyUI Theme Generator" desc="Tailwind CSS Theme Generator - Tailwind CSS daisyUI custom theme and custom colors" img={`/images/theme-generator.jpg`} />
 
 <div class="prose mb-10">
-  <h1>daisyUI Theme Generator</h1>
+  <h1><Translate text="daisyUI Theme Generator" /></h1>
   <p>
-    You can add your custom themes to <span class="badge badge-outline">tailwind.config.js</span>
-    file in
-    <span class="badge badge-outline">daisyui > themes</span>
-    array. In this page, you can pick required color values and see how the components will look like with them.
+    <Translate text="You can add your custom themes to <span class='badge badge-outline'>tailwind.config.js</span> file in <span class='badge badge-outline'>daisyui > themes</span> array. In this page, you can pick required color values and see how the components will look like with them." />
   </p>
   <div class="alert alert-info not-prose mb-2 text-sm">
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content h-6 w-6 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       <div>
-        <p>You can also define optional colors to have more control on the color values (for example: the color of button when it's focused of the color of the text on a button)</p>
+        <p><Translate text="You can also define optional colors to have more control on the color values (for example: the color of button when it's focused of the color of the text on a button)" /></p>
         <p>
-          Check out <a class="link font-bold" href="/docs/colors/">colors page</a>
-          to see all the color names you can use.
+          <Translate text="Check out <a class='link font-bold' href='/docs/colors/'>colors page</a> to see all the color names you can use." />
         </p>
       </div>
     </div>
@@ -278,8 +275,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content h-6 w-6 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       <div>
         <p>
-          check out <a class="link font-bold" href="/docs/themes/">themes page</a>
-          to see all the CSS variables you can use to customize the design desicion (example: border-radius, animations, etc.)
+          <Translate text="Check out <a class='link font-bold' href='/docs/themes/'>themes page</a> to see all the CSS variables you can use to customize the design desicion (example: border-radius, animations, etc.)" />
         </p>
       </div>
     </div>
@@ -292,8 +288,8 @@
       {#if browser}
         <div class="mockup-code not-prose relative">
           <div class="absolute top-2 right-2">
-            <button class="btn btn-xs normal-case" on:click={() => randomize()}>Randomize</button>
-            <button class="btn btn-xs normal-case" on:click={() => resetColors()}>Reset</button>
+            <button class="btn btn-xs normal-case" on:click={() => randomize()}><Translate text="Randomize" /></button>
+            <button class="btn btn-xs normal-case" on:click={() => resetColors()}><Translate text="Reset" /></button>
           </div>
           <pre><code class="text-neutral-content/30">{`module.exports = {`}</code>
 <code>{`    daisyui: {
@@ -317,7 +313,7 @@
     </div>
   </div>
   <div data-theme="light">
-    <h2 class="px-2 pb-4 text-xl font-bold">Preview</h2>
+    <h2 class="px-2 pb-4 text-xl font-bold"><Translate text="Preview" /></h2>
     <div class="rounded-box bg-base-100 border-base-content/5 text-base-content not-prose grid gap-3 border p-6" data-theme="mytheme" bind:this={wrapper}>
       <!-- button -->
       <div class="grid grid-cols-2 gap-2 md:grid-cols-4">

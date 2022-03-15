@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="mx-2 flex-1 justify-center px-2 md:flex md:justify-start">
+      <div class="mx-2 flex-1 justify-center overflow-x-hidden px-2 md:flex md:justify-start">
         <div class="dropdown">
           <div tabindex="0"><span class="text-2xl font-bold">{$t("components-preview-title")}</span></div>
           <div tabindex="0" class="dropdown-content py-2">
