@@ -1,5 +1,6 @@
 <script>
   import { siteData } from "@src/lib/data.js"
+  import { t } from "@src/lib/i18n"
 
   import { readEnv } from "$lib/util"
 
@@ -7,7 +8,7 @@
   export let desc = siteData.desc
   export let img = siteData.card
 
-  $: formattedTitle = title ? `${title} — ${siteData.title}` : siteData.title
+  $: formattedTitle = title ? `${$t(title)} — ${$t(siteData.title)}` : `${$t(siteData.title)}`
 </script>
 
 <svelte:head>
