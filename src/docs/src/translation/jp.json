@@ -225,7 +225,7 @@
   "You can nest themes and there is no limit!": "テーマは無限に入れ子にすることができます!",
   "You can force a section of your HTML to only use a specific theme.": "",
   "How to add a new custom theme?": "新しくカスタマイズされたテーマを追加する方法",
-  "You can add a new theme from <code>tailwind.config.js</code> file.": "<code>tailwind.config.js</code>ファイルにから新しいテーマを追加することができます。,
+  "You can add a new theme from <code>tailwind.config.js</code> file.": "<code>tailwind.config.js</code>ファイルにから新しいテーマを追加することができます。",
   "In below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes.": "下の例では、<code>mytheme</code>という新しいテーマと<code>dark</code>テーマ、<code>cupcake</code>テーマを追加しています。",
   "The first theme (<code>mytheme</code>) will be the default theme.": "最初のテーマ(<code>mytheme</code>)がデフォルトテーマになります。",
   "<code>dark</code> theme will be the default theme for dark mode.": "<code>dark</code>テーマは、ダークモードのデフォルトテーマになります。",
