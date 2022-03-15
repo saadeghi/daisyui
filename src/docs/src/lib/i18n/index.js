@@ -4,15 +4,16 @@ import { subString } from "$lib/util"
 const translations = import.meta.globEager(`../../translation/*.json`)
 let localesArray = []
 Object.entries(translations).map(([path]) => {
-  localesArray.push(subString(path, "/translation/", ".json"))
+  let localeFileName = subString(path, "/translation/", ".json")
+  localesArray.push(localeFileName)
 })
 
-const defaultLang = "en"
 const path = "../../translation"
+export const defaultLang = "en"
 export const currentLang = writable(defaultLang)
 export const langs = localesArray
 
-function translate(currentLang, key, vars) {
+function translate(currentLang, key, vars, returnFallback) {
   if (!key) throw new Error("no key provided to $t()")
 
   let text = translations[`${path}/${currentLang}.json`].default[key]
@@ -23,6 +24,8 @@ function translate(currentLang, key, vars) {
     if (translations[`${path}/${currentLang}.json`].default[key] == undefined) {
       if (translations[`${path}/${defaultLang}.json`].default[key] == undefined) {
         // console.error(`"${defaultLang}.${key}" translation not found. Showing the string as is.`)
+        return key
+      } else if (returnFallback === false) {
         return key
       } else {
         console.warn(`"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`)
@@ -42,8 +45,8 @@ function translate(currentLang, key, vars) {
 export const t = derived(
   currentLang,
   ($currentLang) =>
-    (key, vars = {}) =>
-      translate($currentLang, key, vars)
+    (key, vars = {}, lang = $currentLang, returnFallback = true) =>
+      translate(lang, key, vars, returnFallback)
 )
 
 const replaceStateWithQuery = (values) => {

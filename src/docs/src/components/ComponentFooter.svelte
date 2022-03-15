@@ -1,11 +1,9 @@
 <script>
-  import { onMount } from "svelte"
   import { page } from "$app/stores"
-  import { pages, langInfo } from "@src/lib/data.js"
+  import { default as emojiUnicode } from "emoji-unicode"
+  import { pages } from "@src/lib/data.js"
 
-  import { currentLang, langs, setLang } from "@src/lib/i18n"
-
-  import { t } from "@src/lib/i18n"
+  import { currentLang, defaultLang, t } from "@src/lib/i18n"
 
   let arrayOfPagesInOrder = []
   pages.map((items) => {
@@ -78,9 +76,9 @@
             <a target="_blank" rel="noopener" class="link" href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes${$page.url.pathname.replace(/\/$/, "")}.svelte.md?plain=1`}>{$t("Edit this page on GitHub")}</a>
           </div>
         </div>
-        {#if $currentLang != "en"}
+        {#if $currentLang != defaultLang}
           <div class="flex items-center gap-2">
-            {@html langInfo[$currentLang].flag}
+            <img loading="lazy" width="20" height="20" alt={$t("__name", {}, $currentLang)} src={`https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/${emojiUnicode($t("__flag", {}, $currentLang)).replace(/\s/g, "-")}.svg`} />
             <div>
               <a target="_blank" rel="noopener" class="link" href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/translation/${$currentLang}.json`}>{$t("Contribute to translation")}</a>
             </div>

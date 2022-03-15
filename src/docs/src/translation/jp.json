@@ -1,4 +1,7 @@
 {
+  "__name": "日本語",
+  "__flag": "🇯🇵",
+  "__status": "ベータ",
   "daisyui-tagline": "最も人気のある無料のオープンソース<br/> Tailwind CSS コンポーネントライブラリ",
   "cta-1": "コンポーネントを見る",
   "cta-1-mobile": "コンポーネント",

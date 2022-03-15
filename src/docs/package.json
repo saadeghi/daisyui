@@ -6,13 +6,15 @@
     "preview": "svelte-kit preview",
     "createStyleHandlerComponent:dev": "echo '<script>\n  import \"@components/StyleDevelopment.svelte\"\n</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>\n  import \"@components/StyleProduction.svelte\"\n</script>' > src/components/StyleHandler.svelte",
-    "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config ../.prettierrc --ignore-path ../.prettierignore"
+    "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config ../.prettierrc --ignore-path ../.prettierignore",
+    "langdiff": "json-diff --keys-only --raw-json ./src/translation/en.json ./src/translation/jp.json"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.28",
     "@sveltejs/kit": "^1.0.0-next.267",
     "@tailwindcss/typography": "0.5.0",
     "autoprefixer": "10.4.2",
+    "json-diff": "^0.7.3",
     "mdsvex": "^0.10.5",
     "postcss": "8.4.5",
     "postcss-nesting": "10.1.2",
@@ -30,9 +32,11 @@
   "dependencies": {
     "color": "^4.2.1",
     "daisyui": "^2.6.4",
+    "emoji-unicode": "^2.0.1",
     "lodash.debounce": "^4.0.8",
     "nanoid": "^3.3.1",
     "randomcolor": "^0.6.2",
-    "svelte-countup": "^0.2.6"
+    "svelte-countup": "^0.2.6",
+    "svg-emojis": "^0.0.8"
   }
 }
