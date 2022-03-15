@@ -137,7 +137,7 @@
   "Edit this page on GitHub": "GitHub でこのページを編集する",
   "ask the community": "コミュニティに聞く",
   "open an issue on GitHub": "GitHubでissueを開く",
-  "tweet about it!": "それについてツイートしてください！",
+  "tweet about it!": "是非これについてツイートしてください！",
   "Warning": "警告",
   "CDN files are not recommended for production <br/>because you can't purge unused styles and file size will be large.": "CDNファイルは、未使用のスタイルを削除できず、ファイルサイズが大きくなるため、<br/>本番環境にはお勧めしません。",
   "You don't need to install anything.": "何もインストールする必要はありません。",
