@@ -6,22 +6,23 @@ published: true
 
 <script>
   import ThemeChange from "@components/ThemeChange.svelte"
+  import Translate from "@components/Translate.svelte"
 </script>
 
-daisyUI comes with a number of themes, which you can use with no extra effort.  
-Each theme defines a set of colors which will be used on all daisyUI elements.
+<Translate text="daisyUI comes with a number of themes, which you can use with no extra effort." />  
+<Translate text="Each theme defines a set of colors which will be used on all daisyUI elements." />  
 
-To use a theme, add `data-theme` attribute to your `<html>` tag:
+<Translate text="To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:" />
 
 ```html
 <html data-theme="cupcake"></html>
 ```
 
-> I suggest using [`theme-change`](https://github.com/saadeghi/theme-change), so you can switch themes and save selected theme in local storage.
+> <Translate text="I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
 
-## List of themes
+## <Translate text="List of themes" />
 
-Try them: <ThemeChange dropdownClasses="not-prose" btnClasses="btn-sm inline-flex gap-2" contentClasses="mt-10 border border-base-content border-opacity-5" />
+<Translate text="Try them:" /> <ThemeChange dropdownClasses="not-prose" btnClasses="btn-sm inline-flex gap-2" contentClasses="mt-10 border border-base-content border-opacity-5" />
 
 ```js
 module.exports = {
@@ -32,18 +33,18 @@ module.exports = {
 }
 ```
 
-The default theme is `light` (or `dark` for dark mode)  
-but you can [change the default theme from tailwind.config.js](https://daisyui.com/docs/config)
+<Translate text="The default theme is <code>light</code> (or <code>dark</code> for dark mode)" />  
+<Translate text="but you can <a href='https://daisyui.com/docs/config'>change the default theme from tailwind.config.js</a>" />
 
-## How to remove unused themes?
+## <Translate text="How to remove unused themes?" />
 
-You can only include the themes you want in your project.  
-This will reduce the size of your CSS file.  
-In below example
+<Translate text="You can only include the themes you want in your project." />  
+<Translate text="This will reduce the size of your CSS file." />  
+<Translate text="In below example" />
 
-- `cupcake` will be the default theme for light mode
-- `dark` will be the default theme for dark mode
-- `cmyk` can be applied on any HTML tag with `data-theme="cupcake"`
+- <Translate text="<code>cupcake</code> will be the default theme for light mode" />
+- <Translate text="<code>dark</code> will be the default theme for dark mode" />
+- <Translate text="<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>" />
 
 ```js
 module.exports = {
@@ -53,9 +54,9 @@ module.exports = {
 }
 ```
 
-## How to disable all themes?
+## <Translate text="How to disable all themes?" />
 
-If you only want the default `light` theme, set `themes` config to false.
+<Translate text="If you only want the default <code>light</code> theme, set <code>themes</code> config to false." />
 
 ```js
 module.exports = {
@@ -66,7 +67,7 @@ module.exports = {
 }
 ```
 
-If you don't want to include any themes and disable all colors, set `themes` config to an empty array.
+<Translate text="If you don't want to include any themes and disable all colors, set <code>themes</code> config to an empty array." />
 
 ```js
 module.exports = {
@@ -77,12 +78,12 @@ module.exports = {
 }
 ```
 
-## How to use a theme only for a section of page?
+## <Translate text="How to use a theme only for a section of page?" />
 
-Add `data-theme="THEME_NAME"` to any element and everything inside will have your theme.  
-You can nest themes and there is no limit!
+<Translate text="Add <code>data-theme='THEME_NAME'</code> to any element and everything inside will have your theme." />  
+<Translate text="You can nest themes and there is no limit!" />
 
-You can force a section of your HTML to only use a specific theme.
+<Translate text="You can force a section of your HTML to only use a specific theme." />
 
 ```html
 <html data-theme="dark">
@@ -93,21 +94,21 @@ You can force a section of your HTML to only use a specific theme.
 </html>
 ```
 
-## How to add a new custom theme?
+## <Translate text="How to add a new custom theme?" />
 
-You can add a new theme from `tailwind.config.js` file.  
-In below example, I added a new theme called `mytheme` and I'm also including `dark` and `cupcake` themes.
+<Translate text="You can add a new theme from <code>tailwind.config.js</code> file." />  
+<Translate text="In below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes." />
 
-- The first theme (`mytheme`) will be the default theme.
-- `dark` theme will be the default theme for dark mode.
+- <Translate text="The first theme (<code>mytheme</code>) will be the default theme." />
+- <Translate text="<code>dark</code> theme will be the default theme for dark mode." />
 
-In below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a `primary` button).
+<Translate text="In below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
 
 <div class="alert alert-info text-sm mb-2 max-w-3xl not-prose">
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     <p>
-      You can also add <a href="/docs/colors" class="link">optional color names</a> to have full control over all colors.
+      You can also add <a href='/docs/colors' class="link">optional color names</a> to have full control over all colors.
     </p>
   </div>
 </div>
@@ -133,9 +134,9 @@ module.exports = {
 }
 ```
 
-## CSS variables in daisyUI themes
+## <Translate text="CSS variables in daisyUI themes" />
 
-There are a few optional CSS variables that you can use in daisyUI themes to customize design decisions for each theme:
+<Translate text="There are a few optional CSS variables that you can use in daisyUI themes to customize design decisions for each theme:" />
 
 ```js
 module.exports = {
@@ -167,9 +168,9 @@ module.exports = {
 }
 ```
 
-## Custom CSS for a daisyUI theme
+## <Translate text="Custom CSS for a daisyUI theme" />
 
-You can apply custom style to a daisyUI themes using CSS:
+<Translate text="You can apply custom style to a daisyUI themes using CSS:" />
 
 ```css
 [data-theme="mytheme"] .btn {
@@ -178,10 +179,10 @@ You can apply custom style to a daisyUI themes using CSS:
 }
 ```
 
-## How to customize an existing theme?
+## <Translate text="How to customize an existing theme?" />
 
-In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.  
-In below example, I require and spread `light` theme and change its `primary` and `primary-focus` colors:
+<Translate text="In your tailwind.config.js, you can require an existing daisyUI theme and override some colors." />  
+<Translate text="In below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:" />
 
 ```js
 module.exports = {
