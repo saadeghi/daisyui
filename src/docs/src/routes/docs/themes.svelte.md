@@ -9,8 +9,8 @@ published: true
   import Translate from "@components/Translate.svelte"
 </script>
 
-<Translate text="daisyUI comes with a number of themes, which you can use with no extra effort." />
-<Translate text="Each theme defines a set of colors which will be used on all daisyUI elements." />
+<Translate text="daisyUI comes with a number of themes, which you can use with no extra effort." />  
+<Translate text="Each theme defines a set of colors which will be used on all daisyUI elements." />  
 
 <Translate text="To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:" />
 
@@ -33,13 +33,13 @@ module.exports = {
 }
 ```
 
-<Translate text="The default theme is <code>light</code> (or <code>dark</code> for dark mode)" /> 
+<Translate text="The default theme is <code>light</code> (or <code>dark</code> for dark mode)" />  
 <Translate text="but you can <a href='https://daisyui.com/docs/config'>change the default theme from tailwind.config.js</a>" />
 
 ## <Translate text="How to remove unused themes?" />
 
-<Translate text="You can only include the themes you want in your project." />
-<Translate text="This will reduce the size of your CSS file." />
+<Translate text="You can only include the themes you want in your project." />  
+<Translate text="This will reduce the size of your CSS file." />  
 <Translate text="In below example" />
 
 - <Translate text="<code>cupcake</code> will be the default theme for light mode" />
@@ -80,7 +80,7 @@ module.exports = {
 
 ## <Translate text="How to use a theme only for a section of page?" />
 
-<Translate text="Add <code>data-theme='THEME_NAME'</code> to any element and everything inside will have your theme." />
+<Translate text="Add <code>data-theme='THEME_NAME'</code> to any element and everything inside will have your theme." />  
 <Translate text="You can nest themes and there is no limit!" />
 
 <Translate text="You can force a section of your HTML to only use a specific theme." />
@@ -96,7 +96,7 @@ module.exports = {
 
 ## <Translate text="How to add a new custom theme?" />
 
-<Translate text="You can add a new theme from <code>tailwind.config.js</code> file." />
+<Translate text="You can add a new theme from <code>tailwind.config.js</code> file." />  
 <Translate text="In below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes." />
 
 - <Translate text="The first theme (<code>mytheme</code>) will be the default theme." />
@@ -181,7 +181,7 @@ module.exports = {
 
 ## <Translate text="How to customize an existing theme?" />
 
-<Translate text="In your tailwind.config.js, you can require an existing daisyUI theme and override some colors." />
+<Translate text="In your tailwind.config.js, you can require an existing daisyUI theme and override some colors." />  
 <Translate text="In below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:" />
 
 ```js
