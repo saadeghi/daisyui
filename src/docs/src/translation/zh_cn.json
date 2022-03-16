@@ -323,5 +323,6 @@
   "Responsive": "响应类",
   "Changes the style of a component": "改变一个组件的样式",
   "Supports responsive prefixes (sm:, lg:, …)": "支持响应式前缀 (sm:, lg:, …)",
+  "Make your theme": "做一个主题",
   "": ""
 }
