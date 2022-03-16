@@ -318,9 +318,9 @@
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "确保你在  tailwind.config.js 引用 <span class='badge badge-outline'>daisyui</span> 在<span class='badge badge-outline'>@tailwindcss/typography</span> 的后面",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "这里你可以看到使用 <code>@tailwindcss/typography</code> 如何影响你的元素：",
   "To use a custom prefix, <a class='link' href='/docs/config/'>add your prefix string to config</a>": "为了使用一个自定义前缀， <a class='link' href='/docs/config/'>在配置文件中增加前缀设置</a>",
-  "Component": "Component 组件类",
-  "Modifier": "Modifier 装饰类",
-  "Responsive": "Responsive 响应类",
+  "Component": "组件类",
+  "Modifier": "装饰类",
+  "Responsive": "响应类",
   "Changes the style of a component": "改变一个组件的样式",
   "Supports responsive prefixes (sm:, lg:, …)": "支持响应式前缀 (sm:, lg:, …)",
   "": ""
