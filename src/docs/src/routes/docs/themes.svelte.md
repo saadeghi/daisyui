@@ -5,7 +5,7 @@ published: true
 ---
 
 <script>
-  import ThemeChange from "@components/ThemeChange.svelte"
+  import ThemePreviews from "@components/ThemePreviews.svelte"
   import Translate from "@components/Translate.svelte"
 </script>
 
@@ -22,7 +22,9 @@ published: true
 
 ## <Translate text="List of themes" />
 
-<Translate text="Try them:" /> <ThemeChange dropdownClasses="not-prose" btnClasses="btn-sm inline-flex gap-2" contentClasses="mt-10 border border-base-content border-opacity-5" />
+<Translate text="Try them:" />
+
+<ThemePreviews/>
 
 ```js
 module.exports = {
