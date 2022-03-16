@@ -1,3 +1,6 @@
+const postcssJs = require("postcss-js")
+const postcssPrefix = require('./lib/postcss-prefixer')
+
 const daisyuiInfo = require("../package.json");
 const colors = require("./colors/index");
 const utilities = require("../dist/utilities");
@@ -6,12 +9,12 @@ const unstyled = require("../dist/unstyled");
 const unstyledRtl = require("../dist/unstyled.rtl");
 const styled = require("../dist/styled");
 const styledRtl = require("../dist/styled.rtl");
-let utilitiesUnstyled = require("../dist/utilities-unstyled");
-let utilitiesStyled = require("../dist/utilities-styled");
+const utilitiesUnstyled = require("../dist/utilities-unstyled");
+const utilitiesStyled = require("../dist/utilities-styled");
 const themes = require("./colors/themes");
 const colorFunctions = require("./colors/functions");
 
-const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
+const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss }) => {
   let diasyuiIncludedItems = [];
   let logs = false;
   if (config("daisyui.logs") != false) {
@@ -64,21 +67,17 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
 
   // add prefix to class names if specified
   const prefix = config("daisyui.prefix")
-  let postcssJs, postcssPrefix
+  let postcssJsProcess
   if (prefix) {
     try {
-      postcssJs = require("postcss-js")
-      postcssPrefix = require('./lib/postcss-prefixer')
+      postcssJsProcess = postcssJs.sync(postcssPrefix({ prefix, ignore: [] }))
     } catch (error) {
       logs && console.error(`Error occurred and prevent applying the "prefix" option:`, error)
     }
   }
-  const shouldApplyPrefix = prefix && postcssPrefix && postcssJs
+  const shouldApplyPrefix = prefix && postcssJsProcess;
   if (shouldApplyPrefix) {
-    file = postcssJs.sync(postcssPrefix({
-      prefix: prefix,
-      ignore: []
-    }))(file)
+    file = postcssJsProcess(file)
   }
 
   addComponents(file);
@@ -91,20 +90,18 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config }) => {
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
     addComponents(utilities, { variants: ["responsive"] });
+
+    let toAdd = utilitiesUnstyled // shadow clone here to avoid mutate the original
     if (shouldApplyPrefix) {
-      utilitiesUnstyled = postcssJs.sync(postcssPrefix({
-        prefix: prefix,
-        ignore: []
-      }))(utilitiesUnstyled)
+      toAdd = postcssJsProcess(toAdd);
     }
-    addComponents(utilitiesUnstyled, { variants: ["responsive"] });
+    addComponents(toAdd, { variants: ["responsive"] });
+
+    toAdd = utilitiesStyled
     if (shouldApplyPrefix) {
-      utilitiesStyled = postcssJs.sync(postcssPrefix({
-        prefix: prefix,
-        ignore: []
-      }))(utilitiesStyled)
+      toAdd = postcssJsProcess(toAdd);
     }
-    addComponents(utilitiesStyled, { variants: ["responsive"] });
+    addComponents(toAdd, { variants: ["responsive"] });
     diasyuiIncludedItems.push("utilities");
   }
   if (logs) {

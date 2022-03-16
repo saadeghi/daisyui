@@ -87,6 +87,32 @@ All component styles are in [`/src`](https://github.com/saadeghi/daisyui/tree/ma
 
 > Separating styles to these 4 files, allows us to use daisyUI components with/without _design decision_ styles ([See `styled` config](styled)) and allows us to define some styles as responsive utilities (to work with `lg:`, `md:`, `sm:`, etc... prefixes)
 
+### Code samples with dynamic prefix
+
+If your component documentation page contains `pre` blocks for code samples, be sure to follow the example below so that the code will be displayed with the correct prefix dynamically set by user:
+
+```svelte
+<Component title="Buttons with brand colors">
+<button class="btn">Button</button>
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-secondary">Secondary</button>
+<button class="btn btn-accent">Accent</button>
+<button class="btn btn-ghost">Ghost</button>
+<button class="btn btn-link">Link</button>
+
+<!-- add $$ to each class name in pre block-->
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<button class="$$btn">Button</button>
+<button class="$$btn $$btn-primary">Button</button>
+<button class="$$btn $$btn-secondary">Button</button>
+<button class="$$btn $$btn-accent">Button</button>
+<button class="$$btn $$btn-ghost">Button</button>
+<button class="$$btn $$btn-link">Button</button>`
+}</pre>
+</Component>
+
+```
+
 ### An example
 
 Let's say we want to add a new component named `.coolbutton` (don't add that actually 😅 )
