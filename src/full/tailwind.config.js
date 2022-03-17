@@ -4,10 +4,7 @@ module.exports = {
   content: [
     { raw: '' },
   ],
-  safelist: [
-    { pattern: /.*/ },
-    responsiveRegex,
-  ],
+  safelist: responsiveRegex,
   theme: {
     colors: require("../colors"),
   },
