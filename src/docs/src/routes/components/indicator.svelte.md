@@ -15,12 +15,12 @@ published: true
 data="{[
   { type:'component', class: 'indicator', desc: 'Container element' },
   { type:'component', class: 'indicator-item', desc: 'will be placed on the corner of sibling' },
-  { type:'modifier', class: 'indicator-start', desc: 'align horizontally to the left' },
-  { type:'modifier', class: 'indicator-center', desc: 'align horizontally to the center' },
-  { type:'modifier', class: 'indicator-end', desc: 'align horizontally to the right (default)' },
-  { type:'modifier', class: 'indicator-top', desc: 'align vertically to top (default)' },
-  { type:'modifier', class: 'indicator-middle', desc: 'align vertically to middle' },
-  { type:'modifier', class: 'indicator-bottom', desc: 'align vertically to bottom' },
+  { type:'responsive', class: 'indicator-start', desc: 'align horizontally to the left' },
+  { type:'responsive', class: 'indicator-center', desc: 'align horizontally to the center' },
+  { type:'responsive', class: 'indicator-end', desc: 'align horizontally to the right (default)' },
+  { type:'responsive', class: 'indicator-top', desc: 'align vertically to top (default)' },
+  { type:'responsive', class: 'indicator-middle', desc: 'align vertically to middle' },
+  { type:'responsive', class: 'indicator-bottom', desc: 'align vertically to bottom' },
 ]}"
 />
 
@@ -296,6 +296,19 @@ data="{[
   <span class="$$indicator-item $$indicator-bottom $$indicator-center $$badge $$badge-secondary">bottom+center</span>
   <span class="$$indicator-item $$indicator-bottom $$indicator-end $$badge $$badge-secondary">bottom+end</span>
   <div class="grid w-60 h-32 bg-base-300 place-items-center">content</div>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Responsive" desc="changes position based on resolution">
+<div class="indicator">
+  <span class="indicator-item indicator-start sm:indicator-middle md:indicator-bottom lg:indicator-center xl:indicator-end badge badge-secondary"></span> 
+  <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$indicator">
+  <span class="$$indicator-item $$indicator-start sm:$$indicator-middle md:$$indicator-bottom lg:$$indicator-center xl:$$indicator-end badge badge-secondary"></span> 
+  <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>`
 }</pre>
 </Component>
