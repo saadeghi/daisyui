@@ -1,6 +1,9 @@
 .modal {
-  @apply pointer-events-none invisible fixed inset-0 flex items-end justify-center opacity-0 sm:items-center;
+  @apply pointer-events-none invisible fixed inset-0 flex justify-center opacity-0;
   z-index: 999;
+}
+:where(.modal){
+  @apply items-center;
 }
 .modal-box {
   max-height: calc(100vh - 5em);

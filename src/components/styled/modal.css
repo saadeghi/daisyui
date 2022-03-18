@@ -5,7 +5,8 @@
   overscroll-behavior: contain;
 }
 .modal-box {
-  @apply w-full translate-y-10 transform bg-base-100 p-6 transition duration-200 ease-in-out rounded-t-box sm:max-w-lg sm:translate-y-0 sm:scale-90 sm:rounded-b-box;
+  @apply transform bg-base-100 p-6 transition duration-200 ease-in-out rounded-t-box;
+  @apply w-11/12 max-w-lg scale-90 rounded-b-box rounded-t-box;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
   overscroll-behavior: contain;
