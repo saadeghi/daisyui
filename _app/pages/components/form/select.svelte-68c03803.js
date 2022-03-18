@@ -1,1 +1,0 @@
-import{S as n,i as s,s as o,v as a}from"../../../chunks/vendor-06da85d3.js";async function l(){return{status:302,redirect:"/components/select"}}function c(t){return a(()=>{window.location.href="/components/select"}),[]}class i extends n{constructor(e){super();s(this,e,c,null,o,{})}}export{i as default,l as load};
