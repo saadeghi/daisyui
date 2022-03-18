@@ -9,6 +9,7 @@ published: true
   import ClassTable from "@components/ClassTable.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
+  let indeterminate = true;
 </script>
 
 <ClassTable
@@ -126,5 +127,16 @@ data="{[
 <input type="checkbox" class="toggle" disabled checked>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="checkbox" class="$$toggle" disabled checked>`
+}</pre>
+</Component>
+
+<Component title="Indeterminate">
+<input type="checkbox" class="toggle" bind:indeterminate on:click|preventDefault={()=>{}}>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<!-- You can make a toggle indeterminate using JS -->
+<script>
+  document.getElementById("my-toggle").indeterminate = true
+</script>
+<input type="checkbox" class="$$toggle" id="my-toggle">`
 }</pre>
 </Component>
