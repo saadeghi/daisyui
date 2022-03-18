@@ -159,3 +159,10 @@ data="{[
 <progress class="$$progress $$progress-error w-56" value="100" max="100"></progress>`
 }</pre>
 </Component>
+
+<Component title="Indeterminate (without value)">
+<progress class="progress w-56"></progress>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<progress class="progress w-56"></progress>`
+}</pre>
+</Component>
