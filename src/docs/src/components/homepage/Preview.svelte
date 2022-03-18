@@ -21,19 +21,8 @@
           </div>
         </div>
       </div>
-      <div class="mx-2 flex-1 justify-center overflow-x-hidden px-2 md:flex md:justify-start">
-        <div class="dropdown">
-          <div tabindex="0"><span class="text-2xl font-bold">{$t("components-preview-title")}</span></div>
-          <div tabindex="0" class="dropdown-content py-2">
-            <div class="card compact bg-neutral-focus text-neutral-content rounded-box w-72 shadow-xl">
-              <div class="card-body">
-                <h2 class="card-title font-extrabold capitalize">navbar component</h2>
-                <p class="text-neutral-content text-sm text-opacity-80">You'll need a navbar on top of your page</p>
-                <div class="mt-4 flex justify-end"><a href="/components/navbar" class="btn btn-primary btn-sm xl:btn-md">See component</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="mx-2 flex-1 justify-center px-2 md:flex md:justify-start">
+        <span class="text-2xl font-bold">{$t("components-preview-title")}</span>
       </div>
       <div class="hidden flex-1 md:flex md:flex-none">
         <div class="form-control">
