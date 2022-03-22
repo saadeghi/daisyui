@@ -213,10 +213,10 @@
       outline: 2px solid hsl(var(--p));
     }
   }
-  & > .btn:not(:first-child) {
+  & > .btn:not(:first-of-type) {
     @apply -ml-px rounded-l-none;
   }
-  & > .btn:not(:last-child) {
+  & > .btn:not(:last-of-type) {
     @apply rounded-r-none;
   }
 }
