@@ -240,7 +240,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$navbar bg-base-100 mb-40 shadow-xl rounded-box">
+`<div class="$$navbar bg-base-100">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost normal-case text-xl">daisyUI</a>
   </div>
@@ -314,7 +314,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$navbar bg-base-100 mb-40 shadow-xl rounded-box">
+`<div class="$$navbar bg-base-100">
   <div class="$$navbar-start">
     <div class="$$dropdown">
       <label tabindex="0" class="$$btn $$btn-ghost $$btn-circle">
