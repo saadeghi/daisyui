@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.12.0](https://github.com/saadeghi/daisyui/compare/v2.11.1...v2.12.0) (2022-03-24)
+
+
+### Features
+
+* drawer now has `width:100%` and `height:100svh` and  by default (if supported). fixes: [#313](https://github.com/saadeghi/daisyui/issues/313) on iOS 15.4+ ([c8b104a](https://github.com/saadeghi/daisyui/commit/c8b104af724761093612878ba283aa5f16756f0c))
+* now every element with `data-theme` will have `base-100` color for background and `base-content` color for text by default. ([216d115](https://github.com/saadeghi/daisyui/commit/216d115acf6c30711418445764b9c4a9628e3462))
+
+
+### Bug Fixes
+
+* [#610](https://github.com/saadeghi/daisyui/issues/610) ([359556c](https://github.com/saadeghi/daisyui/commit/359556c3adf7e306896bad1f17f7cf9724b3fc68))
+* [#643](https://github.com/saadeghi/daisyui/issues/643) ([7d3aaf3](https://github.com/saadeghi/daisyui/commit/7d3aaf3f2383a81d67221e407acf515334a35574))
+* [#644](https://github.com/saadeghi/daisyui/issues/644) ([ee05252](https://github.com/saadeghi/daisyui/commit/ee05252867e9afdc237c8219a64cda44a5e9803a))
+* [#645](https://github.com/saadeghi/daisyui/issues/645) ([fffb937](https://github.com/saadeghi/daisyui/commit/fffb937b1bece917543ca1d72c12adb65ba4104e))
+
 ### [2.11.1](https://github.com/saadeghi/daisyui/compare/v2.11.0...v2.11.1) (2022-03-22)
 
 
