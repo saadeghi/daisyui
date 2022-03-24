@@ -24,6 +24,18 @@
     &.badge-accent {
       @apply text-accent;
     }
+    &.badge-info {
+      @apply text-info;
+    }
+    &.badge-success {
+      @apply text-success;
+    }
+    &.badge-warning {
+      @apply text-warning;
+    }
+    &.badge-error {
+      @apply text-error;
+    }
   }
 
   &-info {

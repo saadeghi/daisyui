@@ -28,6 +28,18 @@
   &.btn-accent .badge-outline {
     @apply border-accent bg-transparent text-accent;
   }
+  &.btn-info .badge-outline {
+    @apply border-info bg-transparent text-info;
+  }
+  &.btn-success .badge-outline {
+    @apply border-success bg-transparent text-success;
+  }
+  &.btn-warning .badge-outline {
+    @apply border-warning bg-transparent text-warning;
+  }
+  &.btn-error .badge-outline {
+    @apply border-error bg-transparent text-error;
+  }
 
   &:hover .badge {
     @apply border-base-200 bg-base-200 text-base-content;
