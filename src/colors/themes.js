@@ -184,8 +184,8 @@ module.exports = {
     neutral: "#3d4451",
     "neutral-content": "#ffffff",
     "base-100": "#ffffff",
-    "base-200": "#f9fafb",
-    "base-300": "#d1d5db",
+    "base-200": "#F2F2F2",
+    "base-300": "#E5E6E6",
     "base-content": "#1f2937",
   },
   "[data-theme=lofi]": {
