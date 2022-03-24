@@ -1,1 +1,0 @@
-import{S as n,i as a,s as o,v as e}from"../chunks/vendor-858a832d.js";async function c(){return{status:302,redirect:"https://play.tailwindcss.com/G6pFZss5N0"}}function i(s){return e(()=>{window.location.href="https://play.tailwindcss.com/G6pFZss5N0"}),[]}class r extends n{constructor(t){super();a(this,t,i,null,o,{})}}export{r as default,c as load};
