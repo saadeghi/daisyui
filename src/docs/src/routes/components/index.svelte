@@ -14,9 +14,6 @@
   import Translate from "@components/Translate.svelte"
   export let posts
   import SEO from "@components/SEO.svelte"
-  posts.forEach((element) => {
-    console.log(element.meta.desc)
-  })
 </script>
 
 <SEO title="Components" desc="Components" />
