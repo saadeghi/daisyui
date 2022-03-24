@@ -22,6 +22,8 @@
     "prettier-plugin-svelte": "2.6.0",
     "prettier-plugin-tailwindcss": "0.1.4",
     "prism-themes": "1.9.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.0.1",
     "svelte": "3.46.4",
     "svelte-preprocess": "4.10.3",
     "svelte-prism": "1.1.3",

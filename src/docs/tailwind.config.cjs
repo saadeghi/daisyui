@@ -2,6 +2,17 @@ module.exports = {
   content: [
     './src/**/*.{html,js,svelte,ts,svx,md,json}',
   ],
+  safelist: [
+    'mr-1',
+    'opacity-20',
+    'hover:opacity-60',
+    'text-base',
+    'font-bold',
+    'inline-block',
+    'align-middle',
+    'relative',
+    '-mt-1',
+  ],
   theme: {
     extend: {
       colors: require('../colors'),

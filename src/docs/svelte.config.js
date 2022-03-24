@@ -2,6 +2,31 @@ import { mdsvex } from "mdsvex"
 import adapter from "@sveltejs/adapter-static"
 import preprocess from "svelte-preprocess"
 import path from "path"
+import headingSlugs from 'rehype-slug'
+import linkHeadings from 'rehype-autolink-headings'
+
+const rehypePlugins = [
+  headingSlugs,
+  [
+    linkHeadings,
+    {
+      behavior: 'prepend',
+      content: {
+        type: 'element',
+        tagName: 'span',
+        properties: {
+          className: ['mr-1 opacity-20 hover:opacity-60 text-base font-bold inline-block align-middle relative -mt-1']
+        },
+        children: [
+          {
+            type: 'text',
+            value: '#'
+          }
+        ]
+      }
+    }
+  ]
+]
 
 export default {
   extensions: [".svelte", ".svelte.md", ".md"],
@@ -9,6 +34,7 @@ export default {
   preprocess: [
     mdsvex({
       extensions: [".svelte.md", ".md"],
+      rehypePlugins: rehypePlugins,
       layout: {
         _: 'src/routes/_markdown.svelte'
       }
