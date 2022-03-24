@@ -1,6 +1,7 @@
 module.exports = {
   "[data-theme=aqua]": {
     primary: "#09ecf3",
+    "primary-content": "#005355",
     secondary: "#966fb3",
     accent: "#ffe999",
     neutral: "#3b8ac4",
@@ -122,7 +123,7 @@ module.exports = {
   },
   "[data-theme=emerald]": {
     primary: "#66cc8a",
-    "primary-content": "#f9fafb",
+    "primary-content": "#223D30",
     secondary: "#377cfb",
     "secondary-content": "#f9fafb",
     accent: "#ea5234",
@@ -180,7 +181,7 @@ module.exports = {
     secondary: "#f000b8",
     "secondary-content": "#ffffff",
     accent: "#37cdbe",
-    "accent-content": "#ffffff",
+    "accent-content": "#163835",
     neutral: "#3d4451",
     "neutral-content": "#ffffff",
     "base-100": "#ffffff",

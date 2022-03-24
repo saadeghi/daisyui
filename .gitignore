@@ -8,3 +8,4 @@ yarn.lock
 .idea
 .DS_Store
 *.tgz
+/coverage

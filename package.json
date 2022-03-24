@@ -70,17 +70,25 @@
     "install:docs": "cd src/docs && npm install",
     "dev": "cd src/docs && npm run dev",
     "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
-    "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css"
+    "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "devDependencies": {
     "@parcel/css-cli": "^1.5.0",
     "@types/css-selector-tokenizer": "^0.7.1",
+    "@vitest/ui": "^0.7.10",
     "autoprefixer": "10.0.4",
+    "c8": "^7.11.0",
+    "color-contrast-checker": "^2.1.0",
     "postcss-cli": "8.3.0",
     "postcss-import": "13.0.0",
     "postcss-nested": "5.0.1",
     "prejss-cli": "0.3.3",
-    "rtlcss": "3.0.0"
+    "rtlcss": "3.0.0",
+    "vitest": "^0.7.10"
   },
   "dependencies": {
     "color": "^4.2",
