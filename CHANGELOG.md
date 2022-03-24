@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.13.0](https://github.com/saadeghi/daisyui/compare/v2.12.0...v2.13.0) (2022-03-24)
+
+
+### Features
+
+* Improve color contrast on `aqua` ,`emerald` ,`light` themes
+
 ## [2.12.0](https://github.com/saadeghi/daisyui/compare/v2.11.1...v2.12.0) (2022-03-24)
 
 
