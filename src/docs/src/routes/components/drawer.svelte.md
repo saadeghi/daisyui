@@ -42,21 +42,21 @@ Drawer tags structure:
 You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
 <Component title="Drawer">
 
-<div class="drawer w-full rounded">
+<div class="drawer h-56 rounded">
   <input id="my-drawer" type="checkbox" class="drawer-toggle">
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
   </div> 
   <div class="drawer-side">
     <label for="my-drawer" class="drawer-overlay"></label>
-    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+    <ul class="menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$drawer h-screen w-full rounded">
+`<div class="$$drawer">
   <input id="my-drawer" type="checkbox" class="$$drawer-toggle">
   <div class="$$drawer-content">
     <!-- Page content here -->
@@ -65,7 +65,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer" class="$$drawer-overlay"></label>
-    <ul class="$$menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+    <ul class="$$menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -77,7 +77,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
 </Component>
 
 <Component title="Drawer for mobile + fixed sidebar for desktop" desc="Drawer is always open on desktop size. Drawer can be toggled on mobile size. Resize the browser to see toggle button on mobile size">
-<div class="drawer drawer-mobile w-full">
+<div class="drawer drawer-mobile h-56 rounded">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle">
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
@@ -91,7 +91,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="h-screen $$drawer $$drawer-mobile w-full">
+`<div class="$$drawer $$drawer-mobile">
   <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle">
   <div class="$$drawer-content flex flex-col items-center justify-center">
     <!-- Page content here -->
@@ -100,7 +100,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer-2" class="$$drawer-overlay"></label> 
-    <ul class="$$menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+    <ul class="$$menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -112,7 +112,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
 </Component>
 
 <Component title="Navbar menu for desktop + sidebar drawer for mobile" desc="Change screen size to show/hide menu">
-<div class="drawer w-full rounded">
+<div class="drawer h-56 rounded">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle"> 
   <div class="flex flex-col drawer-content">
     <div class="w-full navbar bg-base-300">
@@ -140,7 +140,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$drawer h-screen w-full">
+`<div class="$$drawer">
   <input id="my-drawer-3" type="checkbox" class="$$drawer-toggle"> 
   <div class="$$drawer-content flex flex-col">
     <!-- Navbar -->
@@ -164,20 +164,20 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer-3" class="$$drawer-overlay"></label> 
-    <ul class="$$menu p-4 overflow-y-auto w-80 bg-base-100">
+    <ul class="$$menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
-
+      
     </ul>
-
+    
   </div>
 </div>`
 }</pre>
 </Component>
 
 <Component title="Drawer that opens from right side of page">
-<div class="drawer drawer-end w-full rounded">
+<div class="drawer drawer-end h-56 rounded">
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle">
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
@@ -191,7 +191,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$drawer $$drawer-end h-screen w-full">
+`<div class="$$drawer $$drawer-end">
   <input id="my-drawer-4" type="checkbox" class="$$drawer-toggle">
   <div class="$$drawer-content">
     <!-- Page content here -->
@@ -204,8 +204,9 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
-      
+
     </ul>
+
   </div>
 </div>`
 }</pre>

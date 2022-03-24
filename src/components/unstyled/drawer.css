@@ -1,6 +1,9 @@
 .drawer {
-  @apply grid overflow-hidden;
-  /* max-height: 100vh; */
+  @apply grid overflow-hidden w-full;
+
+  height: 100vh;
+  height: 100svh;
+
   &.drawer-end {
     direction: rtl;
   }
@@ -16,10 +19,13 @@
     }
   }
 }
+:where(.drawer-toggle ~ .drawer-content) {
+  height: inherit;
+}
 .drawer-toggle {
   @apply absolute h-0 w-0 appearance-none opacity-0;
   & ~ .drawer-content {
-    @apply z-0 col-start-1 row-start-1 max-h-screen overflow-y-auto;
+    @apply z-0 col-start-1 row-start-1 overflow-y-auto;
   }
   & ~ .drawer-side {
     @apply col-start-1 row-start-1 grid max-h-screen;
@@ -87,8 +93,3 @@
     }
   }
 }
-/* @supports (-webkit-touch-callout: none) {
-  .drawer {
-    max-height: -webkit-fill-available;
-  }
-} */
