@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * drawer now has `width:100%` and `height:100svh` and  by default (if supported). fixes: [#313](https://github.com/saadeghi/daisyui/issues/313) on iOS 15.4+ ([c8b104a](https://github.com/saadeghi/daisyui/commit/c8b104af724761093612878ba283aa5f16756f0c))
 * now every element with `data-theme` will have `base-100` color for background and `base-content` color for text by default. ([216d115](https://github.com/saadeghi/daisyui/commit/216d115acf6c30711418445764b9c4a9628e3462))
-
+* Improve `base-200` and `base-300` colors on `light` theme
 
 ### Bug Fixes
 
