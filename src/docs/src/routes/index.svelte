@@ -19,7 +19,7 @@
   <HomepagePreview />
   <HomepageStats />
   <div class="flex w-full justify-center">
-    <a href="/components" class="btn btn-primary btn-wide">{$t("all-components-btn")}</a>
+    <a sveltekit:prefetch href="/components" class="btn btn-primary btn-wide">{$t("all-components-btn")}</a>
   </div>
 </div>
 <HomepageCleanHtml />

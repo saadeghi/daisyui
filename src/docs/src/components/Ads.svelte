@@ -137,6 +137,10 @@
     right: 0;
   }
   @media only screen and (min-width: 1280px) {
+    .carbon-text {
+      font-size: 12px;
+      padding: 8px 10px 4px 10px;
+    }
     .carbonads-responsive #carbonads {
       max-width: 130px;
     }

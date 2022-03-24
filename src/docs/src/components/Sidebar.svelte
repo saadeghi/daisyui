@@ -46,7 +46,7 @@
       {#each items as { name, href, icon, badge, hidden, highlightAnotherItem }}
         {#if !hidden}
           <li>
-            <a {href} on:click={closeDrawer} id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""} class={`flex gap-4 ${$page.url.pathname == href ? "active" : ""} ${$page.url.pathname == highlightAnotherItem + "/" ? "active" : ""} ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
+            <a sveltekit:prefetch {href} on:click={closeDrawer} id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""} class={`flex gap-4 ${$page.url.pathname == href ? "active" : ""} ${$page.url.pathname == highlightAnotherItem + "/" ? "active" : ""} ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
               {#if icon != ""}
                 <span class="flex-none">
                   {@html icon}
