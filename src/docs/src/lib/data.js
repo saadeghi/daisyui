@@ -143,7 +143,7 @@ export let exampleRepos = [
     ]
   },
   {
-    name: "Svelte",
+    name: "Svelte (Vite)",
     href: "https://stackblitz.com/edit/daisyui-svelte-vite",
     logos: [
       "/logos/svelte.svg",
@@ -237,6 +237,14 @@ export let exampleRepos = [
     logos: [
       "/logos/lit.svg",
       "/logos/vite.svg",
+    ]
+  },
+  {
+    name: "Svelte (rollup.js)",
+    href: "https://stackblitz.com/edit/daisyui-svelte-rollup",
+    logos: [
+      "/logos/svelte.svg",
+      "/logos/rollup.svg",
     ]
   },
   {
