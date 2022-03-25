@@ -3,7 +3,8 @@
 }
 
 .swap > * {
-  @apply transition-all duration-300 ease-in-out;
+  @apply duration-300 ease-in-out;
+  transition-property: transform, opacity;
 }
 
 .swap-rotate .swap-on,
