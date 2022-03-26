@@ -8,7 +8,18 @@
   &-accent {
     @apply border-accent bg-accent text-accent-content;
   }
-
+  &-info {
+    @apply border-transparent bg-info text-info-content;
+  }
+  &-success {
+    @apply border-transparent bg-success text-success-content;
+  }
+  &-warning {
+    @apply border-transparent bg-warning text-warning-content;
+  }
+  &-error {
+    @apply border-transparent bg-error text-error-content;
+  }
   &-ghost {
     @apply border-base-200 bg-base-200 text-base-content;
   }
@@ -36,18 +47,5 @@
     &.badge-error {
       @apply text-error;
     }
-  }
-
-  &-info {
-    @apply border-transparent bg-info text-info-content;
-  }
-  &-success {
-    @apply border-transparent bg-success text-success-content;
-  }
-  &-warning {
-    @apply border-transparent bg-warning text-warning-content;
-  }
-  &-error {
-    @apply border-transparent bg-error text-error-content;
   }
 }
