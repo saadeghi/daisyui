@@ -38,7 +38,7 @@
   "theming-content": "daisyUI agrega un conjunto de nombres de colores semánticos a Tailwind. Entonces, en lugar de usar nombres de colores constantes como <span class='badge badge-ghost'>bg-blue-500</span>, podemos usar nombres semánticos como <span class='badge badge-ghost'>bg-primary</span> o <span class='badge badge-ghost'>bg-success</span>. <br /> Todos los colores son variables CSS, por lo que puede cambiar fácilmente el tema de toda su aplicación sin tener que editar su HTML.",
   "theming-btn": "Leer más sobre temas",
   "try-online-title": "Pruébelo en línea",
-  "try-online-desc": "Use el archivo daisyUI de CDN",suario. Clases como <span class='badge badge-outline'>btn</span>, <span class='badge badge-ou
+  "try-online-desc": "Use el archivo daisyUI de CDN",
   "try-online-playground-links-title": "O pruébalo en línea",
   "install-title": "Instalar daisyUI",
   "install-desc": "CSS puro. Funciona en todos los marcos de trabajo. daisyUI se puede usar como un complemento CSS de Tailwind o como una biblioteca CSS independiente",
