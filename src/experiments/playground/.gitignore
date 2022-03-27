@@ -1,0 +1,5 @@
+/node_modules
+/output.css
+/*.html
+/dist
+/src/pages/index.astro

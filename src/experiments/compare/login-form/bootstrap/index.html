@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="custom.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <button class="btn theme-switch" data-toggle-theme="dark" data-act-class="ACTIVECLASS">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12,18V6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" /></svg>
+      </button>
+
+      <form class="form-signin">
+        <img class="mb-4 logo" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" />
+        <h1 class="h3 mb-3 text-center">Please sign in</h1>
+        <div class="form-group mb-3">
+          <label class="mb-1" for="email-input">Email</label>
+          <input type="email-input" class="form-control form-control-lg fs-6" id="email" placeholder="email" />
+        </div>
+        <div class="form-group mb-3">
+          <label class="mb-1" for="password-input">Password</label>
+          <input type="password-input" class="form-control form-control-lg fs-6" id="password" placeholder="password" />
+        </div>
+        <div class="checkbox mt-4 mb-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="rememberme" />
+            <label class="form-check-label" for="rememberme">Remember me</label>
+          </div>
+        </div>
+        <button class="w-100 mb-3 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mb-3 text-muted text-center">&copy; 2017–2021</p>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in</title>
+    <link href="output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+  </head>
+
+  <body class="grid place-content-center min-h-screen">
+    <button class="btn btn-square btn-ghost top-2 right-2 absolute" data-toggle-theme="dark" data-act-class="ACTIVECLASS">
+      <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12,18V6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" /></svg>
+    </button>
+
+    <main class="w-72 text-center">
+      <img src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg" alt="" width="120" height="57" class="mx-auto mb-4" />
+      <div class="mb-3 text-2xl font-semibold">Please sign in</div>
+      <div class="form-control mb-2">
+        <label class="label" for="email-input">
+          <span class="label-text">Email</span>
+        </label>
+        <input id="email-input" type="text" placeholder="email" class="input input-bordered" />
+      </div>
+      <div class="form-control mb-2">
+        <label class="label" for="password-input">
+          <span class="label-text">Password</span>
+        </label>
+        <input id="password-input" type="text" placeholder="password" class="input input-bordered" />
+      </div>
+      <div class="form-control mb-2">
+        <div class="label justify-start gap-3">
+          <input type="checkbox" class="toggle toggle-sm" id="rememberme" />
+          <label for="rememberme" class="label-text">Remember me</label>
+        </div>
+      </div>
+      <div class="form-control">
+        <input type="button" value="Sign in" class="btn btn-primary" />
+      </div>
+      <p class="mt-5 text-base-content text-opacity-50">&copy; 2017–2021</p>
+    </main>
+  </body>
+</html>
