@@ -184,7 +184,9 @@
 
   /* disabled */
   &-disabled,
-  &[disabled] {
+  &-disabled:hover,
+  &[disabled],
+  &[disabled]:hover {
     @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
   }
 
