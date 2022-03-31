@@ -65,7 +65,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer" class="$$drawer-overlay"></label>
-    <ul class="$$menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100 text-base-content">
+    <ul class="$$menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -84,7 +84,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="drawer-side">
     <label for="my-drawer-2" class="drawer-overlay"></label>
-    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+    <ul class="menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
@@ -100,7 +100,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer-2" class="$$drawer-overlay"></label> 
-    <ul class="$$menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100 text-base-content">
+    <ul class="$$menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -133,7 +133,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="drawer-side">
     <label for="my-drawer-3" class="drawer-overlay"></label> 
-    <ul class="p-4 overflow-y-auto menu w-80 bg-base-100">
+    <ul class="p-4 overflow-y-auto menu w-60 md:w-80 bg-base-100">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
@@ -164,7 +164,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer-3" class="$$drawer-overlay"></label> 
-    <ul class="$$menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100">
+    <ul class="$$menu p-4 overflow-y-auto w-80 bg-base-100">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -184,7 +184,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   </div> 
   <div class="drawer-side">
     <label for="my-drawer-4" class="drawer-overlay"></label>
-    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+    <ul class="menu p-4 overflow-y-auto w-60 md:w-80 bg-base-100 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
