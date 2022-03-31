@@ -5,6 +5,7 @@ module.exports = {
       'light',
       'dark',
     ],
+    prefix: 'd-',
   },
   plugins: [
     require('daisyui'),
