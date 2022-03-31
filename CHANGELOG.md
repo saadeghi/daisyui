@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.13.5](https://github.com/saadeghi/daisyui/compare/v2.13.4...v2.13.5) (2022-03-31)
+
+
+### Bug Fixes
+
+* `drawer-end` issue when there's another drawer inside it ([d6e8b9c](https://github.com/saadeghi/daisyui/commit/d6e8b9c5ed9c129ca0a75d2e592d9637132af300))
+
 ### [2.13.4](https://github.com/saadeghi/daisyui/compare/v2.13.3...v2.13.4) (2022-03-28)
 
 
