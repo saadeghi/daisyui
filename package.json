@@ -74,7 +74,8 @@
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "test:ui": "vitest --ui",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "playground": "cd src/experiments/playground && npm run dev"
   },
   "devDependencies": {
     "@parcel/css-cli": "^1.5.0",
