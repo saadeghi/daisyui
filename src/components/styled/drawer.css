@@ -1,4 +1,4 @@
-.drawer.drawer-end .drawer-toggle:checked ~ .drawer-content {
+.drawer.drawer-end > .drawer-toggle:checked ~ .drawer-content {
   @apply -translate-x-2;
 }
 .drawer-toggle {

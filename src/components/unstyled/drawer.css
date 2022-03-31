@@ -10,7 +10,7 @@
   &.drawer-end > * {
     direction: ltr;
   }
-  &.drawer-end .drawer-toggle {
+  &.drawer-end > .drawer-toggle {
     & ~ .drawer-side > .drawer-overlay + * {
       @apply translate-x-full justify-self-end;
     }
