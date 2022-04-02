@@ -19,6 +19,16 @@ module.exports = [
     ]
   },
   {
+    // responsive utilites for daisyUI components
+    pattern: /(modal-middle)/,
+    variants: [
+      "sm",
+      "md",
+      "lg",
+      "xl",
+    ]
+  },
+  {
     // color utilities for daisyUI colors
     pattern: /(bg|to|via|from|text|fill|stroke|border|outline)-((primary|secondary|accent|neutral)(-focus|-content|))|((info|success|warning|error)(-content|))|(base)(-100|-200|-300|-content)/,
     variants: [
