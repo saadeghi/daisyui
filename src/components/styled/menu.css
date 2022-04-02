@@ -100,7 +100,7 @@
 .menu > :where(li) > :where(ul) :where(li) :where(ul) {
   @apply pl-4;
 }
-.menu > :where(li) > :where(ul) :where(li) :where(:not(ul)) {
+.menu > :where(li) > :where(ul) :where(li) > :where(:not(ul)) {
   @apply w-full whitespace-nowrap;
 }
 
