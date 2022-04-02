@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.13.6](https://github.com/saadeghi/daisyui/compare/v2.13.5...v2.13.6) (2022-04-02)
+
+
+### Bug Fixes
+
+* [#666](https://github.com/saadeghi/daisyui/issues/666) 🔥😈🔥 ([fb69933](https://github.com/saadeghi/daisyui/commit/fb69933b023208c62f6e9b03de386b194790aba2))
+* [#667](https://github.com/saadeghi/daisyui/issues/667) ([5d66013](https://github.com/saadeghi/daisyui/commit/5d66013814864a7db43d0c9f1f0385cd636b61c3))
+* [#675](https://github.com/saadeghi/daisyui/issues/675) ([8e7887b](https://github.com/saadeghi/daisyui/commit/8e7887b90a695b236077cd61e4a3e31513a9e954))
+
 ### [2.13.5](https://github.com/saadeghi/daisyui/compare/v2.13.4...v2.13.5) (2022-03-31)
 
 
