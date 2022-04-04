@@ -23,8 +23,8 @@
   }
 
   afterUpdate(() => {
-    highlightCode();
-	});
+    highlightCode()
+  })
 </script>
 
 <code bind:this={element} style="display:none">
