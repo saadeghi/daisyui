@@ -107,6 +107,7 @@
     width: 100%;
     max-width: 100%;
     font-size: 14px;
+    padding-right: 2.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-top-right-radius: 0.75rem;
