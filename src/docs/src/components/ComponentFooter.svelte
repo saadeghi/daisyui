@@ -15,7 +15,7 @@
 </script>
 
 {#if arrayOfPagesInOrder[currentPageIndex]}
-  <div class="not-prose pb-32">
+  <div class="not-prose pb-10">
     <div class="bg-base-content/10 my-10 mx-1 h-px" />
 
     <div class="flex justify-between">

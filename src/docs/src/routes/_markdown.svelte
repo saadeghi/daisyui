@@ -3,6 +3,7 @@
   import Ads from "@components/Ads.svelte"
   import ComponentFooter from "@components/ComponentFooter.svelte"
   import SEO from "@components/SEO.svelte"
+  import Sponsors from "@components/Sponsors.svelte"
   import { t } from "@src/lib/i18n"
 
   export let title
@@ -28,6 +29,9 @@
     {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/") || $page.url.pathname.replace(/\/$/, "").startsWith("/docs/")}
       <ComponentFooter />
     {/if}
+    <div class="not-prose flex justify-center xl:hidden">
+      <Sponsors />
+    </div>
   </div>
   {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}
     <!-- <Ads slot="adsense-4" /> -->

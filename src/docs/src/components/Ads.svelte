@@ -1,6 +1,7 @@
 <script>
   import { readEnv } from "$lib/util"
   export let slot
+  import Sponsors from "@components/Sponsors.svelte"
 </script>
 
 {#if slot === "adesense-1"}
@@ -68,6 +69,10 @@
     <div class="sticky top-24 xl:mt-32 my-6 xl:my-0">
       <div class="mx-auto items-center carbonads-responsive flex justify-center">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
+      </div>
+
+      <div class="hidden xl:block ">
+        <Sponsors />
       </div>
     </div>
   </div>
