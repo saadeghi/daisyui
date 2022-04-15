@@ -63,10 +63,12 @@
     </div>
   </div>
 {:else if slot === "carbon1"}
-  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
+  <div class="w-[330px] h-[100px]">
+    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
+  </div>
 {:else if slot === "carbon2"}
   <div>
-    <div class="sticky top-24 xl:mt-32 my-6 xl:my-0">
+    <div class="sticky top-24 xl:mt-32 my-6 xl:my-0 w-[130px]">
       <div class="mx-auto items-center carbonads-responsive flex justify-center">
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
       </div>
@@ -120,10 +122,10 @@
     display: block;
   }
   #carbonads .carbon-text {
-    font-size: 13px;
+    font-size: 12px;
     padding: 10px;
     margin-bottom: 16px;
-    line-height: 1.5;
+    line-height: 1.3;
     text-align: left;
   }
   #carbonads .carbon-poweredby {
