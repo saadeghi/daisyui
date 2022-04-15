@@ -128,6 +128,6 @@ data="{[
 <Component title="Disabled">
 <textarea class="textarea" placeholder="Bio" disabled></textarea>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<textarea class="$$textarea" placeholder="Bio"></textarea>`
+`<textarea class="$$textarea" placeholder="Bio" disabled></textarea>`
 }</pre>
 </Component>
