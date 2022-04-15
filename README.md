@@ -82,7 +82,7 @@ Become an sponsor: [ [Open Collective →](https://opencollective.com/daisyui) ]
 
 Tweet about it: [![][tweet]][tweet-url]
 
-## 📁 Roadmap
+## 📁 List of components
 
 <details>
 <summary>
