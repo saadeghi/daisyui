@@ -25,7 +25,7 @@
   }
 
   &-outline {
-    @apply border-current border-opacity-50 bg-transparent text-base-content;
+    @apply border-current border-opacity-50 bg-transparent text-current;
     &.badge-primary {
       @apply text-primary;
     }
