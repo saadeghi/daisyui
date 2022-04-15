@@ -2,10 +2,9 @@
 
 [![][logo-url]][docs-url]
 
-**Tailwind CSS Components**  
-Adds component classes like `btn`, `card` and more to Tailwind CSS
+**The most popular, free and open-source Tailwind CSS component library**  
 
-[ [See all components][docs-url] ]
+[ [See all components](https://daisyui.com/components/) ]
 
 [![][tweet]][tweet-url]
 
@@ -18,38 +17,19 @@ Adds component classes like `btn`, `card` and more to Tailwind CSS
 [![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url]  
 [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
 
-- 👉 [ [See all components][docs-url] ]
-- 📘 Documents: [daisyui.com][docs-url]
-- 🎲 Try it online: [Tailwind Play][tw-play-url] | [Codepen][codepen-url]
-- 📦 Source: [GitHub][gh-url] | [NPM][npm-url] | [Unpkg][unpkg-url] | [JSdeliver][jsdeliver-url] | [cdnjs][cdnjs-url]
+- [Official website →](https://daisyui.com/)
+- [See all components →](https://daisyui.com/components/)
+- [How to use →](https://daisyui.com/docs/install/)
 
----
 
 ## 🌼 Features
 
-<details>
-<summary>
-  show / hide
-</summary>
+- A plugin for Tailwind CSS
+- Faster development
+- Cleaner HTML
+- Customizable and themeable
+- Pure CSS. Works on all frameworks
 
-- **Tailwind CSS plugin**  
-  daisyUI is a Tailwind CSS plugin. Install it and add it to your `tailwind.config.js` file.
-- **Component classes**  
-  Adds component classes to Tailwind. Classes like `btn`, `card`,… So you will end up with a cleaner HTML.
-- **Semantic color names**  
-  Adds color names like `primary`, `secondary`, `accent`,….
-- **Customizable**  
-  You can customize the design of components with Tailwind utility classes and CSS variables.
-- **Themeable**  
-  Add multiple themes and customize colors. You can even set a theme for a specific section of your page.
-- **RTL supported**  
-  Enable `rtl` config for right to left layouts.
-- **Pure CSS**  
-  No script file. Pure CSS. Works on all frameworks!
-
-</details>
-
----
 
 ## 📀 Install now!
 
@@ -58,7 +38,7 @@ npm i daisyui
 ```
 
 Then add daisyUI to your `tailwind.config.js`  
-[ [Read more][docs-url-install] ]
+[ [Read more →][docs-url-install] ]
 
 ```js
 module.exports = {
@@ -80,48 +60,29 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 
 </details>
 
----
 
 ## 🚀 Use
 
-Use component classes to build your UI.
+All you need is to use class names. [[See all components →](https://daisyui.com/components/)]
 
-```html
-<a class="btn">Hello!</a>
-```
-
-```html
-<input type="checkbox" class="checkbox" />
-```
-
-```html
-<input type="checkbox" class="toggle" />
-```
-
-```html
-<div class="alert alert-success">Message sent successfully</div>
-```
-
-👉 [See all components][docs-url]  
-🎲 [Try it online][tw-play-url]
-
----
 
 ## 📘 Documents + Examples
 
-See the official site:  
-[ [daisyui.com][docs-url] ↗︎ ]
+See the official site: [ [daisyui.com →](https://daisyui.com/)]
 
----
 
 ## 🤝 Contributing
 
-Read the documents for more info:  
-[ [Read contribution guide](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md) ]
+Read: [ [Read contribution guide](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md) ]
 
----
 
-## List of Components
+## 🤝 Supporting daisyUI
+
+Become an sponsor: [ [Open Collective →](https://opencollective.com/daisyui) ]  
+
+Tweet about it: [![][tweet]][tweet-url]
+
+## 📁 Roadmap
 
 <details>
 <summary>
@@ -201,9 +162,8 @@ Read the documents for more info:
 
 </details>
 
----
 
-## Featured on:
+## 📰 Featured on:
 
 <details>
 <summary>
