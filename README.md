@@ -37,14 +37,16 @@
 npm i daisyui
 ```
 
-Then add daisyUI to your `tailwind.config.js`  
-[ [Read more →][docs-url-install] ]
+Then add daisyUI to your `tailwind.config.js`:  
+
 
 ```js
 module.exports = {
   plugins: [require("daisyui")],
 };
 ```
+
+[ [Read more →][docs-url-install] ]
 
 <details>
 <summary>
@@ -63,7 +65,7 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 
 ## 🚀 Use
 
-All you need is to use class names. [[See all components →](https://daisyui.com/components/)]
+[[See all components →](https://daisyui.com/components/)]
 
 
 ## 📘 Documents + Examples
@@ -73,7 +75,7 @@ See the official site: [ [daisyui.com →](https://daisyui.com/)]
 
 ## 🤝 Contributing
 
-Read: [ [Read contribution guide](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md) ]
+[ [Read contribution guide →](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md) ]
 
 
 ## 🤝 Supporting daisyUI
