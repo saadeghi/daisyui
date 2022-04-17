@@ -46,7 +46,7 @@ module.exports = {
 
 - <Translate text="<code>cupcake</code> will be the default theme for light mode" />
 - <Translate text="<code>dark</code> will be the default theme for dark mode" />
-- <Translate text="<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>" />
+- <Translate text="<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cmyk'</code>" />
 
 ```js
 module.exports = {
