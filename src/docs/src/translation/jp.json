@@ -220,7 +220,7 @@
   "In below example": "以下の例では:",
   "<code>cupcake</code> will be the default theme for light mode": "<code>cupcake</code>がライトモードのデフォルトテーマになります:",
   "<code>dark</code> will be the default theme for dark mode": "<code>dark</code>がダークモードのデフォルトテーマになります:",
-  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>": "<code>data-theme='cupcake'</code>を使用して、任意のHTMLタグに<code>cmyk</code>を適用できます:",
+  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cmyk'</code>": "<code>data-theme='cmyk'</code>を使用して、任意のHTMLタグに<code>cmyk</code>を適用できます:",
   "How to disable all themes?": "すべてのテーマを無効化する方法",
   "If you only want the default <code>light</code> theme, set <code>themes</code> config to false.": "もしデフォルトの<code>light</code>テーマを使用したいなら、<code>themes</code>をfalseに設定してください。",
   "If you don't want to include any themes and disable all colors, set <code>themes</code> config to an empty array.": "もしすべてのテーマと色を無効化したい場合、<code>themes</code>に空の配列を渡してください。",

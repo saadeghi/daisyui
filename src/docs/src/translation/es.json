@@ -220,7 +220,7 @@
   "In below example": "En el siguiente ejemplo",
   "<code>cupcake</code> will be the default theme for light mode": "<code>cupcake</code> será el tema predeterminado para el modo claro",
   "<code>dark</code> will be the default theme for dark mode": "<code>dark</code> será el tema predeterminado para el modo oscuro",
-  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>": "<code>cmyk</code> se puede aplicar en cualquier etiqueta HTML con <code>data-theme='cupcake'</code>",
+  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cmyk'</code>": "<code>cmyk</code> se puede aplicar en cualquier etiqueta HTML con <code>data-theme='cmyk'</code>",
   "How to disable all themes?": "¿Cómo deshabilitar todos los temas?",
   "If you only want the default <code>light</code> theme, set <code>themes</code> config to false.": "Si solo desea el tema <code>light</code> predeterminado, establezca la configuración de <code>themes</code> en falso.",
   "If you don't want to include any themes and disable all colors, set <code>themes</code> config to an empty array.": "Si no desea incluir ningún tema y deshabilitar todos los colores, establezca la configuración de <code>themes</code> en una matriz vacía.",

@@ -220,7 +220,7 @@
   "In below example": "In below example",
   "<code>cupcake</code> will be the default theme for light mode": "<code>cupcake</code> will be the default theme for light mode",
   "<code>dark</code> will be the default theme for dark mode": "<code>dark</code> will be the default theme for dark mode",
-  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>": "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>",
+  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cmyk'</code>": "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cmyk'</code>",
   "How to disable all themes?": "How to disable all themes?",
   "If you only want the default <code>light</code> theme, set <code>themes</code> config to false.": "If you only want the default <code>light</code> theme, set <code>themes</code> config to false.",
   "If you don't want to include any themes and disable all colors, set <code>themes</code> config to an empty array.": "If you don't want to include any themes and disable all colors, set <code>themes</code> config to an empty array.",

@@ -220,7 +220,7 @@
   "In below example": "Berikut ini adalah contoh",
   "<code>cupcake</code> will be the default theme for light mode": "<code>cupcake</code> akan menjadi tema utama",
   "<code>dark</code> will be the default theme for dark mode": "<code>dark</code> akan menjadi tema utama untuk mode gelap",
-  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cupcake'</code>": "<code>cmyk</code> bisa diaplikasikan ke tag HTML apapun menggunakan <code>data-theme='cupcake'</code>",
+  "<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cmyk'</code>": "<code>cmyk</code> bisa diaplikasikan ke tag HTML apapun menggunakan <code>data-theme='cmyk'</code>",
   "How to disable all themes?": "Bagaimana cara menonaktifkan semua tema?",
   "If you only want the default <code>light</code> theme, set <code>themes</code> config to false.": "Jika Anda hanya ingin tema utama <code>light</code>, atur konfigurasi <code>themes</code> ke false.",
   "If you don't want to include any themes and disable all colors, set <code>themes</code> config to an empty array.": "Jika Anda tidak ingin menambahkan tema apapun dan menonaktifkan semua warna, atur konfigurasi <code>themes</code> menjadi array kosong.",
