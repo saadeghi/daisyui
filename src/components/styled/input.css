@@ -1,5 +1,8 @@
 .input {
   @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn;
+  &[list]::-webkit-calendar-picker-indicator {
+    line-height: 1em;
+  }
   &-bordered {
     @apply border-opacity-20;
   }
