@@ -17,7 +17,7 @@ data="{[
   { type:'modifier', class: 'label', desc: 'For helper text' },
   { type:'modifier', class: 'textarea', desc: 'For <textarea> element' },
   { type:'modifier', class: 'textarea-bordered', desc: 'Adds border to textarea' },
-  { type:'modifier', class: 'textarea-ghost', desc: 'Adds ghost style to checkbox' },
+  { type:'modifier', class: 'textarea-ghost', desc: 'Adds ghost style to textarea' },
   { type:'modifier', class: 'textarea-primary', desc: 'Adds `primary` color to textarea' },
   { type:'modifier', class: 'textarea-secondary', desc: 'Adds `secondary` color to textarea' },
   { type:'modifier', class: 'textarea-accent', desc: 'Adds `accent` color to textarea' },
