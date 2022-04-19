@@ -17,7 +17,7 @@ data="{[
   { type:'component', class: 'label', desc: 'For helper text' },
   { type:'component', class: 'select', desc: 'For <select> element' },
   { type:'modifier', class: 'select-bordered', desc: 'Adds border to select' },
-  { type:'modifier', class: 'select-ghost', desc: 'Adds ghost style to checkbox' },
+  { type:'modifier', class: 'select-ghost', desc: 'Adds ghost style to select' },
   { type:'modifier', class: 'select-primary', desc: 'Adds `primary` color to select' },
   { type:'modifier', class: 'select-secondary', desc: 'Adds `secondary` color to select' },
   { type:'modifier', class: 'select-accent', desc: 'Adds `accent` color to select' },
