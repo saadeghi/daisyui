@@ -17,7 +17,7 @@ data="{[
   { type:'component', class: 'label', desc: 'For helper text' },
   { type:'component', class: 'input', desc: 'For <input> element' },
   { type:'modifier', class: 'input-bordered', desc: 'Adds border to input' },
-  { type:'modifier', class: 'input-ghost', desc: 'Adds ghost style to checkbox' },
+  { type:'modifier', class: 'input-ghost', desc: 'Adds ghost style to input' },
   { type:'modifier', class: 'input-primary', desc: 'Adds `primary` color to input' },
   { type:'modifier', class: 'input-secondary', desc: 'Adds `secondary` color to input' },
   { type:'modifier', class: 'input-accent', desc: 'Adds `accent` color to input' },
