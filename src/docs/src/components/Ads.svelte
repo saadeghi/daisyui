@@ -63,18 +63,17 @@
     </div>
   </div>
 {:else if slot === "carbon1"}
-  <div class="w-[330px] h-[100px]">
+  <div class="w-full min-w-[330px] max-w-[350px] h-[100px]">
     <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
   </div>
 {:else if slot === "carbon2"}
   <div>
-    <div class="sticky top-24 xl:mt-32 my-6 xl:my-0 w-[130px]">
-      <div class="mx-auto items-center carbonads-responsive flex justify-center">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
-      </div>
-
+    <div class="sticky top-20 xl:mt-32 my-6 xl:my-0 w-[130px]">
       <div class="hidden xl:block ">
         <Sponsors />
+      </div>
+      <div class="mx-auto items-center carbonads-responsive flex justify-center">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
       </div>
     </div>
   </div>
@@ -90,7 +89,7 @@
   }
   #carbonads {
     display: flex;
-    max-width: 330px;
+    max-width: 350px;
     color: hsla(var(--bc));
     background-color: hsla(var(--b2));
     box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);

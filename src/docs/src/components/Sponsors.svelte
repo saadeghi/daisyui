@@ -1,12 +1,12 @@
 <script>
-  export let classes = "bg-base-200 border-base-200 hover:border-base-content/10 border shadow"
+  export let classes = "bg-base-100 border-base-100 border-base-content/10 hover:border-base-content/20 border"
 </script>
 
-<div class="flex flex-col gap-3 py-10">
-  <h3 class="text-base-content/50 text-sm font-bold">Sponsors</h3>
+<div class="flex flex-col gap-2 pb-6">
+  <h3 class="text-base-content/50 text-xs font-bold">Sponsors</h3>
 
-  <a href="https://www.stackbit.com/?utm_source=daisyui" target="_blank" rel="nofollow" class={`flex w-[130px] flex-col items-center py-1 rounded ${classes}`}>
-    <svg class="fill-base-content my-3" width="110" height="20" viewBox="0 0 128 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <a href="https://www.stackbit.com/?utm_source=daisyui" target="_blank" rel="nofollow" class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
+    <svg class="fill-base-content mt-2 mb-1" width="110" height="20" viewBox="0 0 128 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M41.5717 8.50469C41.5717 6.29343 39.955 4.72344 37.3469 4.72344C35.234 4.72344 33.7217 5.68779 33.7217 7.27867C33.7217 11.6864 44.9893 8.11404 44.9893 15.8854C44.9893 19.615 41.7289 21.728 37.5558 21.728C34.0583 21.728 31.1468 20.1863 30.0535 17.3387L33.0178 14.3731C33.0178 17.007 34.7377 18.6728 37.5558 18.6728C39.767 18.6728 41.4157 17.6556 41.4157 16.0131C41.4157 11.5525 30.1481 15.1262 30.1481 7.50962C30.1481 3.9888 33.3826 1.66821 37.3469 1.66821C40.9095 1.66821 43.3935 3.37334 44.364 5.70744L41.5717 8.50469Z" />
       <path d="M50.2694 2.6106V7.7702H54.0777V10.6461H50.2694V16.6975C50.2694 18.2356 50.8173 18.6275 52.122 18.6275C52.7266 18.608 53.3286 18.5381 53.9217 18.4186V21.367C53.4524 21.5488 52.0962 21.6803 51.6527 21.6803C48.5483 21.6803 46.8788 20.3756 46.8788 17.1681V10.6461H44.4219V7.77512H46.8788V6.00365L50.2694 2.6106Z" />
       <path d="M124.192 2.6106V7.7702H128V10.6461H124.192V16.6975C124.192 18.2356 124.74 18.6275 126.044 18.6275C126.649 18.608 127.251 18.5381 127.844 18.4186V21.367C127.375 21.5488 126.018 21.6803 125.575 21.6803C122.471 21.6803 120.801 20.3756 120.801 17.1681V10.6461H118.344V7.77512H120.801V6.00365L124.192 2.6106Z" />
