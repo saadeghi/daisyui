@@ -1,9 +1,8 @@
 .indicator {
   @apply relative inline-flex;
-  width: fit-content;
+  width: max-content;
   & :where(.indicator-item) {
     z-index: 1;
     @apply absolute transform;
   }
 }
-
