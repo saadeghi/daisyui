@@ -5,14 +5,14 @@
 
 <div class="from-primary to-secondary text-primary-content -mt-[4rem] grid place-items-center items-end bg-gradient-to-br pt-20">
   <div class="hero-content col-start-1 row-start-1 w-full max-w-7xl flex-col justify-between gap-10 pb-40 lg:flex-row lg:items-end lg:gap-0 xl:gap-20">
-    <div class="lg:px-10 lg:pb-32">
-      <h1 class="font-title mb-2 py-4 font-extrabold lg:py-10">
-        <div class="mb-2 text-5xl lg:text-7xl">daisyUI</div>
-        <div class="text-2xl lg:text-3xl">
+    <div class="lg:pl-10 lg:pb-32">
+      <div class="mb-2 py-4 text-center lg:py-10 lg:text-left">
+        <h1 class="font-title mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl">daisyUI</h1>
+        <h2 class="font-title text-lg font-extrabold sm:text-2xl lg:text-3xl">
           {@html $t("daisyui-tagline")}
-        </div>
-      </h1>
-      <div class="flex w-full flex-col items-start space-y-10 lg:flex-row lg:space-x-4 lg:space-y-0">
+        </h2>
+      </div>
+      <div class="flex w-full flex-col items-center space-y-10 lg:flex-row lg:items-start lg:space-x-4 lg:space-y-0">
         <div class="my-2 flex max-w-sm flex-col gap-2 text-left">
           <div class="flex gap-2">
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -37,7 +37,7 @@
         </div>
         <div class="mockup-code border-base-content w-full max-w-xs flex-1 border-2 border-opacity-20 bg-transparent pb-6 text-left text-current lg:mx-0"><pre data-prefix="$"><code>npm i daisyui</code></pre></div>
       </div>
-      <div class="mt-4 flex flex-1 justify-center space-x-2 sm:justify-start lg:mt-6 lg:justify-start">
+      <div class="mt-4 flex flex-1 justify-center space-x-2 lg:mt-6 lg:justify-start">
         <a sveltekit:prefetch href="/components" class="btn btn-ghost btn-active lg:btn-lg normal-case">
           <span class="hidden sm:inline">{$t("cta-1")}</span>
           <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
