@@ -69,7 +69,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="With padding">
+<Component title="Menu with padding">
 <ul class="menu bg-base-100 w-56 shadow-xl p-2 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -80,6 +80,35 @@ data="{[
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
+</ul>`
+}</pre>
+</Component>
+
+<Component title="Menu with title">
+<ul class="menu bg-base-100 w-56 shadow-xl p-2 rounded-box">
+  <li class="menu-title">
+    <span>Category</span>
+  </li>
+  <li><a>Item 1</a></li>
+  <li><a>Item 2</a></li>
+  <li class="menu-title">
+    <span>Category</span>
+  </li>
+  <li><a>Item 1</a></li>
+  <li><a>Item 2</a></li>
+</ul>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<ul class="$$menu bg-base-100 w-56 p-2 rounded-box">
+  <li class="$$menu-title">
+    <span>Category</span>
+  </li>
+  <li><a>Item 1</a></li>
+  <li><a>Item 2</a></li>
+  <li class="$$menu-title">
+    <span>Category</span>
+  </li>
+  <li><a>Item 1</a></li>
+  <li><a>Item 2</a></li>
 </ul>`
 }</pre>
 </Component>
