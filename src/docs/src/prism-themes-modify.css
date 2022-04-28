@@ -1,5 +1,8 @@
 [data-theme="wireframe"] {
   .prose pre[class*="language-"] {
+    code {
+      color: #2e2e2e;
+    }
     .token.string {
       color: #587e20;
     }
