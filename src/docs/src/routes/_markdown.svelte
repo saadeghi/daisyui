@@ -30,7 +30,7 @@
       <ComponentFooter />
     {/if}
     <div class="not-prose flex justify-center xl:hidden">
-      <Sponsors />
+      <Sponsors <Sponsors wrapperClasses="flex-col sm:flex-row" />
     </div>
   </div>
   {#if $page.url.pathname.replace(/\/$/, "").startsWith("/components/")}

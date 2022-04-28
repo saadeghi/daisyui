@@ -70,8 +70,8 @@
       </div>
     </footer>
   </div>
-  <footer class="footer footer-center border-base-300 bg-base-200 text-base-content border-t px-4">
-    <div class="flex w-full max-w-6xl flex-col items-center justify-between sm:flex-row">
+  <footer class="footer footer-center border-base-300 bg-base-200 text-base-content border-t px-4 pt-4">
+    <div class="flex w-full max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
       <a href="https://github.com/saadeghi" rel="noopener" target="_blank" class="inline-flex items-center justify-center hover:opacity-90">
         <div class="avatar mr-3"><div class="mask mask-squircle bg-neutral h-14 w-14 p-px"><img loading="lazy" width="54" height="54" src="/pouya-saadeghi.jpg" alt="Pouya Saadeghi" class="mask mask-squircle" /></div></div>
         <div class="text-left">
@@ -80,7 +80,7 @@
         </div>
       </a>
       <div class="flex flex-col items-center gap-4 text-left sm:flex-row">
-        <Sponsors classes="bg-base-100" />
+        <Sponsors wrapperClasses="flex-col sm:flex-row" classes="bg-base-100" />
 
         <!-- <a href="https://manasky.com" rel="nofollow" target="_blank" class="link mb-4 inline-block opacity-50 hover:opacity-80">
           <svg width="80" viewBox="0 0 324 162" xmlns="http://www.w3.org/2000/svg" class="mt-2 w-20 fill-current">
