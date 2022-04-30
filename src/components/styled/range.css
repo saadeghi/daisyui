@@ -18,7 +18,7 @@
   }
   &::-webkit-slider-thumb {
     background-color: hsl(var(--b1));
-    @apply relative h-6 w-6 border-none transition-all duration-300 ease-in-out rounded-box;
+    @apply relative h-6 w-6 border-none rounded-box;
     -webkit-appearance: none;
     top: 50%;
     color: hsl(var(--range-shdw));
@@ -29,7 +29,7 @@
   }
   &::-moz-range-thumb {
     background-color: hsl(var(--b1));
-    @apply relative h-6 w-6 border-none transition-all duration-300 ease-in-out rounded-box;
+    @apply relative h-6 w-6 border-none rounded-box;
     top: 50%;
     color: hsl(var(--range-shdw));
     --filler-size: 100rem;
