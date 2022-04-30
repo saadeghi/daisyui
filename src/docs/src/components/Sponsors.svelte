@@ -23,7 +23,7 @@
       <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">Make your React site visually editable</p>
     </a>
 
-    <!-- <a href="https://cruip.com/?ref=daisyui" target="_blank" rel="nofollow" class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
+    <a href="https://cruip.com/?ref=daisyui" target="_blank" rel="nofollow" class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
       <svg class="mt-2 mb-1" width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Logo" transform="translate(-1.000000, -1.000000)">
@@ -35,7 +35,7 @@
         </g>
       </svg>
       <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">Beautiful Tailwind CSS templates</p>
-    </a> -->
+    </a>
   </div>
   <a href="https://opencollective.com/daisyui" target="_blank" rel="nofollow" class="group link link-hover text-xs opacity-80">
     Become a sponsor
