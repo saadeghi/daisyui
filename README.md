@@ -73,16 +73,16 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 See the official site: [ [daisyui.com →](https://daisyui.com/)]
 
 
-## 🤝 Contributing
+## 🤝 Support daisyUI
 
-[ [Read contribution guide →](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md) ]
+|   |   |
+|---|---|
+| **Premium Sponsors** <br /> Support this project by becoming a premium sponsor. <br /> [[Become a sponsor](https://opencollective.com/inferno#sponsor)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&width=500&avatarHeight=92"></a> |
+| **Backers** <br /> Thank you to all our backers! <br /> [[Become a backer](https://opencollective.com/daisyui)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/backers.svg?button=false&width=500&avatarHeight=46"></a> |
+| **Contributors** <br /> This project exists thanks to all the people who contribute. <br /> [[Contribute](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md)] | <a href="https://opencollective.com/daisyui"><img src="https://opencollective.com/daisyui/contributors.svg?button=false&width=500&avatarHeight=24" /></a> |
 
+Tweet about daisyUI: [![][tweet]][tweet-url]
 
-## 🤝 Supporting daisyUI
-
-Become an sponsor: [ [Open Collective →](https://opencollective.com/daisyui) ]  
-
-Tweet about it: [![][tweet]][tweet-url]
 
 ## 📁 List of components
 
@@ -239,7 +239,7 @@ Tweet about it: [![][tweet]][tweet-url]
 [unpkg-url]: https://unpkg.com/browse/daisyui/
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
-[tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AUI%20Components%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
+[tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
 [number-of-components]: https://badgen.net/badge/total%20components/45/green
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
