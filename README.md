@@ -77,7 +77,7 @@ See the official site: [ [daisyui.com →](https://daisyui.com/)]
 
 |   |   |
 |---|---|
-| **Premium Sponsors** <br /> Support this project by becoming a premium sponsor. <br /> [[Become a sponsor](https://opencollective.com/inferno#sponsor)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&width=500&avatarHeight=92"></a> |
+| **Premium Sponsors** <br /> Support this project by becoming a premium sponsor. <br /> [[Become a sponsor](https://opencollective.com/daisyui)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&width=500&avatarHeight=92"></a> |
 | **Backers** <br /> Thank you to all our backers! <br /> [[Become a backer](https://opencollective.com/daisyui)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/backers.svg?button=false&width=500&avatarHeight=46"></a> |
 | **Contributors** <br /> This project exists thanks to all the people who contribute. <br /> [[Contribute](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md)] | <a href="https://github.com/saadeghi/daisyui/graphs/contributors"><img src="https://opencollective.com/daisyui/contributors.svg?button=false&width=500&avatarHeight=24" /></a> |
 
