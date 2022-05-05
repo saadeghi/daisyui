@@ -27,9 +27,9 @@ data="{[
 />
 
 <Component title="Toggle">
-<input type="checkbox" class="toggle" checked>
+<input type="checkbox" class="toggle" checked />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="$$toggle" checked>`
+`<input type="checkbox" class="$$toggle" checked />`
 }</pre>
 </Component>
 
@@ -37,14 +37,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle" checked>
+    <input type="checkbox" class="toggle" checked />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span> 
-    <input type="checkbox" class="$$toggle" checked>
+    <input type="checkbox" class="$$toggle" checked />
   </label>
 </div>`
 }</pre>
@@ -54,14 +54,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle toggle-primary" checked>
+    <input type="checkbox" class="toggle toggle-primary" checked />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
-    <input type="checkbox" class="$$toggle $$toggle-primary" checked>
+    <input type="checkbox" class="$$toggle $$toggle-primary" checked />
   </label>
 </div>`
 }</pre>
@@ -71,14 +71,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle toggle-secondary" checked>
+    <input type="checkbox" class="toggle toggle-secondary" checked />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
-    <input type="checkbox" class="$$toggle $$toggle-secondary" checked>
+    <input type="checkbox" class="$$toggle $$toggle-secondary" checked />
   </label>
 </div>`
 }</pre>
@@ -88,14 +88,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle toggle-accent" checked>
+    <input type="checkbox" class="toggle toggle-accent" checked />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
-    <input type="checkbox" class="$$toggle $$toggle-accent" checked>
+    <input type="checkbox" class="$$toggle $$toggle-accent" checked />
   </label>
 </div>`
 }</pre>
@@ -103,40 +103,40 @@ data="{[
 
 <Component title="Sizes">
 <div class="flex flex-col items-center gap-2">
-  <input type="checkbox" class="toggle toggle-xs" checked>
-  <input type="checkbox" class="toggle toggle-sm" checked>
-  <input type="checkbox" class="toggle toggle-md" checked>
-  <input type="checkbox" class="toggle toggle-lg" checked>
+  <input type="checkbox" class="toggle toggle-xs" checked />
+  <input type="checkbox" class="toggle toggle-sm" checked />
+  <input type="checkbox" class="toggle toggle-md" checked />
+  <input type="checkbox" class="toggle toggle-lg" checked />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="$$toggle $$toggle-xs" checked>
-<input type="checkbox" class="$$toggle $$toggle-sm" checked>
-<input type="checkbox" class="$$toggle $$toggle-md" checked>
-<input type="checkbox" class="$$toggle $$toggle-lg" checked>`
+`<input type="checkbox" class="$$toggle $$toggle-xs" checked />
+<input type="checkbox" class="$$toggle $$toggle-sm" checked />
+<input type="checkbox" class="$$toggle $$toggle-md" checked />
+<input type="checkbox" class="$$toggle $$toggle-lg" checked />`
 }</pre>
 </Component>
 
 <Component title="Disabled">
-<input type="checkbox" class="toggle" disabled>
+<input type="checkbox" class="toggle" disabled />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="$$toggle" disabled>`
+`<input type="checkbox" class="$$toggle" disabled />`
 }</pre>
 </Component>
 
 <Component title="Disabled and checked">
-<input type="checkbox" class="toggle" disabled checked>
+<input type="checkbox" class="toggle" disabled checked />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="$$toggle" disabled checked>`
+`<input type="checkbox" class="$$toggle" disabled checked />`
 }</pre>
 </Component>
 
 <Component title="Indeterminate">
-<input type="checkbox" class="toggle" bind:indeterminate on:click|preventDefault={()=>{}}>
+<input type="checkbox" class="toggle" bind:indeterminate on:click|preventDefault={()=>{}} />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- You can make a toggle indeterminate using JS -->
 <script>
   document.getElementById("my-toggle").indeterminate = true
 </script>
-<input type="checkbox" class="$$toggle" id="my-toggle">`
+<input type="checkbox" class="$$toggle" id="my-toggle" />`
 }</pre>
 </Component>

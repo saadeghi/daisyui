@@ -27,9 +27,9 @@ data="{[
 />
 
 <Component title="Checkbox">
-<input type="checkbox" checked="checked" class="checkbox">
+<input type="checkbox" checked="checked" class="checkbox" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" checked="checked" class="$$checkbox">`
+`<input type="checkbox" checked="checked" class="$$checkbox" />`
 }</pre>
 </Component>
 
@@ -37,14 +37,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox">
+    <input type="checkbox" checked="checked" class="checkbox" />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="$$checkbox">
+    <input type="checkbox" checked="checked" class="$$checkbox" />
   </label>
 </div>`
 }</pre>
@@ -54,14 +54,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox checkbox-primary">
+    <input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="$$checkbox checkbox-primary">
+    <input type="checkbox" checked="checked" class="$$checkbox checkbox-primary" />
   </label>
 </div>`
 }</pre>
@@ -71,14 +71,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox checkbox-secondary">
+    <input type="checkbox" checked="checked" class="checkbox checkbox-secondary" />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-secondary">
+    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-secondary" />
   </label>
 </div>`
 }</pre>
@@ -88,14 +88,14 @@ data="{[
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" class="checkbox checkbox-accent">
+    <input type="checkbox" checked="checked" class="checkbox checkbox-accent" />
   </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-accent">
+    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-accent" />
   </label>
 </div>`
 }</pre>
@@ -103,40 +103,40 @@ data="{[
 
 <Component title="Sizes">
 <div class="flex flex-col items-center gap-2">
-  <input type="checkbox" checked="checked" class="checkbox checkbox-xs"> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-sm"> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-md"> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-lg">
+  <input type="checkbox" checked="checked" class="checkbox checkbox-xs" /> 
+  <input type="checkbox" checked="checked" class="checkbox checkbox-sm" /> 
+  <input type="checkbox" checked="checked" class="checkbox checkbox-md" /> 
+  <input type="checkbox" checked="checked" class="checkbox checkbox-lg" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-xs"> 
-<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-sm"> 
-<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-md"> 
-<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-lg">`
+`<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-xs" /> 
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-sm" /> 
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-md" /> 
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-lg" />`
 }</pre>
 </Component>
 
 <Component title="Disabled">
-<input type="checkbox" disabled="disabled" class="checkbox">
+<input type="checkbox" disabled="disabled" class="checkbox" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="$$checkbox" disabled>`
+`<input type="checkbox" class="$$checkbox" disabled />`
 }</pre>
 </Component>
 
 <Component title="Disabled and checked">
-<input type="checkbox" disabled="disabled" class="checkbox" checked="checked">
+<input type="checkbox" disabled="disabled" class="checkbox" checked="checked" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" class="$$checkbox" disabled checked>`
+`<input type="checkbox" class="$$checkbox" disabled checked />`
 }</pre>
 </Component>
 
 <Component title="Indeterminate">
-<input type="checkbox" class="checkbox" bind:indeterminate on:click|preventDefault={()=>{}}>
+<input type="checkbox" class="checkbox" bind:indeterminate on:click|preventDefault={()=>{}} />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- You can make a checkbox indeterminate using JS -->
 <script>
   document.getElementById("my-checkbox").indeterminate = true
 </script>
-<input type="checkbox" class="$$checkbox" id="my-checkbox">`
+<input type="checkbox" class="$$checkbox" id="my-checkbox" />`
 }</pre>
 </Component>

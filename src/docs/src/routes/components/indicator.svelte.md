@@ -104,12 +104,12 @@ data="{[
 <Component title="for an input">
 <div class="indicator">
   <span class="indicator-item badge">Required</span>
-  <input type="text" placeholder="Your email address" class="input input-bordered">
+  <input type="text" placeholder="Your email address" class="input input-bordered" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$indicator">
   <span class="$$indicator-item $$badge">Required</span>
-  <input type="text" placeholder="Your email address" class="$$input $$input-bordered">
+  <input type="text" placeholder="Your email address" class="$$input $$input-bordered" />
 </div>`
 }</pre>
 </Component>

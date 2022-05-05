@@ -321,7 +321,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="checkbox" />
           </label>
         </th>
         <th>Name</th>
@@ -334,7 +334,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="checkbox" />
           </label>
         </th>
         <td>
@@ -363,7 +363,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="checkbox" />
           </label>
         </th>
         <td>
@@ -392,7 +392,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="checkbox" />
           </label>
         </th>
         <td>
@@ -421,7 +421,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" class="checkbox" />
           </label>
         </th>
         <td>
@@ -467,7 +467,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="$$checkbox">
+            <input type="checkbox" class="$$checkbox" />
           </label>
         </th>
         <th>Name</th>
@@ -481,7 +481,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="$$checkbox">
+            <input type="checkbox" class="$$checkbox" />
           </label>
         </th>
         <td>
@@ -511,7 +511,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="$$checkbox">
+            <input type="checkbox" class="$$checkbox" />
           </label>
         </th>
         <td>
@@ -541,7 +541,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="$$checkbox">
+            <input type="checkbox" class="$$checkbox" />
           </label>
         </th>
         <td>
@@ -571,7 +571,7 @@ data="{[
       <tr>
         <th>
           <label>
-            <input type="checkbox" class="$$checkbox">
+            <input type="checkbox" class="$$checkbox" />
           </label>
         </th>
         <td>

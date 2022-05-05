@@ -26,47 +26,47 @@ data="{[
 />
 
 <Component title="Checkbox">
-<input type="radio" name="radio-1" class="radio" checked>
-<input type="radio" name="radio-1" class="radio">
+<input type="radio" name="radio-1" class="radio" checked />
+<input type="radio" name="radio-1" class="radio" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-1" class="radio" checked>
-<input type="$$radio" name="radio-1" class="radio">`
+`<input type="$$radio" name="radio-1" class="radio" checked />
+<input type="$$radio" name="radio-1" class="radio" />`
 }</pre>
 </Component>
 
 <Component title="Primary color">
-<input type="radio" name="radio-2" class="radio radio-primary" checked>
-<input type="radio" name="radio-2" class="radio radio-primary">
+<input type="radio" name="radio-2" class="radio radio-primary" checked />
+<input type="radio" name="radio-2" class="radio radio-primary" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-2" class="radio radio-primary" checked>
-<input type="$$radio" name="radio-2" class="radio radio-primary">`
+`<input type="$$radio" name="radio-2" class="radio radio-primary" checked />
+<input type="$$radio" name="radio-2" class="radio radio-primary" />`
 }</pre>
 </Component>
 
 <Component title="Secondary color">
-<input type="radio" name="radio-3" class="radio radio-secondary" checked>
-<input type="radio" name="radio-3" class="radio radio-secondary">
+<input type="radio" name="radio-3" class="radio radio-secondary" checked />
+<input type="radio" name="radio-3" class="radio radio-secondary" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-3" class="radio radio-secondary" checked>
-<input type="$$radio" name="radio-3" class="radio radio-secondary">`
+`<input type="$$radio" name="radio-3" class="radio radio-secondary" checked />
+<input type="$$radio" name="radio-3" class="radio radio-secondary" />`
 }</pre>
 </Component>
 
 <Component title="Accent color">
-<input type="radio" name="radio-4" class="radio radio-accent" checked>
-<input type="radio" name="radio-4" class="radio radio-accent">
+<input type="radio" name="radio-4" class="radio radio-accent" checked />
+<input type="radio" name="radio-4" class="radio radio-accent" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-4" class="radio radio-accent" checked>
-<input type="$$radio" name="radio-4" class="radio radio-accent">`
+`<input type="$$radio" name="radio-4" class="radio radio-accent" checked />
+<input type="$$radio" name="radio-4" class="radio radio-accent" />`
 }</pre>
 </Component>
 
 <Component title="Disabled">
-<input type="radio" name="radio-5" class="radio" disabled checked>
-<input type="radio" name="radio-5" class="radio" disabled>
+<input type="radio" name="radio-5" class="radio" disabled checked />
+<input type="radio" name="radio-5" class="radio" disabled />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-5" class="radio" disabled checked>
-<input type="$$radio" name="radio-5" class="radio" disabled>`
+`<input type="$$radio" name="radio-5" class="radio" disabled checked />
+<input type="$$radio" name="radio-5" class="radio" disabled />`
 }</pre>
 </Component>
 
@@ -75,13 +75,13 @@ data="{[
   <div class="form-control w-52">
     <label class="cursor-pointer label">
       <span class="label-text">Red pill</span> 
-      <input type="radio" name="radio-6" class="radio checked:bg-red-500" checked>
+      <input type="radio" name="radio-6" class="radio checked:bg-red-500" checked />
     </label>
   </div>
   <div class="form-control w-52">
     <label class="cursor-pointer label">
       <span class="label-text">blue pill</span> 
-      <input type="radio" name="radio-6" class="radio checked:bg-blue-500" checked>
+      <input type="radio" name="radio-6" class="radio checked:bg-blue-500" checked />
     </label>
   </div>
 </div>
@@ -89,13 +89,13 @@ data="{[
 `<div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Red pill</span> 
-    <input type="radio" name="radio-6" class="$$radio checked:bg-red-500" checked>
+    <input type="radio" name="radio-6" class="$$radio checked:bg-red-500" checked />
   </label>
 </div>
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">blue pill</span> 
-    <input type="radio" name="radio-6" class="$$radio checked:bg-blue-500" checked>
+    <input type="radio" name="radio-6" class="$$radio checked:bg-blue-500" checked />
   </label>
 </div>`
 }</pre>

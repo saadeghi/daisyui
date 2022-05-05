@@ -34,17 +34,17 @@ data="{[
 
 <Component title="Button group with radio buttons">
 <div class="btn-group">
-  <input type="radio" name="options" data-title="1" class="btn">
-  <input type="radio" name="options" data-title="2" checked="checked" class="btn">
-  <input type="radio" name="options" data-title="3" class="btn">
-  <input type="radio" name="options" data-title="4" class="btn">
+  <input type="radio" name="options" data-title="1" class="btn" />
+  <input type="radio" name="options" data-title="2" checked="checked" class="btn" />
+  <input type="radio" name="options" data-title="3" class="btn" />
+  <input type="radio" name="options" data-title="4" class="btn" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$btn-group">
-  <input type="radio" name="options" data-title="1" class="$$btn">
-  <input type="radio" name="options" data-title="2" class="$$btn" checked>
-  <input type="radio" name="options" data-title="3" class="$$btn">
-  <input type="radio" name="options" data-title="4" class="$$btn">
+  <input type="radio" name="options" data-title="1" class="$$btn" />
+  <input type="radio" name="options" data-title="2" class="$$btn" checked />
+  <input type="radio" name="options" data-title="3" class="$$btn" />
+  <input type="radio" name="options" data-title="4" class="$$btn" />
 </div>`
 }</pre>
 </Component>

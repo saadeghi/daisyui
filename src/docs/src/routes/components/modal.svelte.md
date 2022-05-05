@@ -32,7 +32,7 @@ data="{[
 <label for="my-modal" class="$$btn $$modal-button">open modal</label>
 
 <!-- Put this part before </body> tag -->
-<input type="checkbox" id="my-modal" class="$$modal-toggle">
+<input type="checkbox" id="my-modal" class="$$modal-toggle" />
 <div class="$$modal">
   <div class="$$modal-box">
     <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
@@ -72,7 +72,7 @@ data="{[
 <label for="my-modal-3" class="$$btn $$modal-button">open modal</label>
 
 <!-- Put this part before </body> tag -->
-<input type="checkbox" id="my-modal-3" class="$$modal-toggle">
+<input type="checkbox" id="my-modal-3" class="$$modal-toggle" />
 <div class="$$modal">
   <div class="$$modal-box relative">
     <label for="my-modal-3" class="$$btn $$btn-sm $$btn-circle absolute right-2 top-2">✕</label>
@@ -91,7 +91,7 @@ data="{[
 <label for="my-modal-4" class="$$btn $$modal-button">open modal</label>
 
 <!-- Put this part before </body> tag -->
-<input type="checkbox" id="my-modal-4" class="$$modal-toggle">
+<input type="checkbox" id="my-modal-4" class="$$modal-toggle" />
 <label for="my-modal-4" class="$$modal cursor-pointer">
   <label class="$$modal-box relative" for="">
     <h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
@@ -109,7 +109,7 @@ data="{[
 <label for="my-modal-5" class="$$btn $$modal-button">open modal</label>
 
 <!-- Put this part before </body> tag -->
-<input type="checkbox" id="my-modal-5" class="$$modal-toggle">
+<input type="checkbox" id="my-modal-5" class="$$modal-toggle" />
 <div class="$$modal">
   <div class="$$modal-box w-11/12 max-w-5xl">
     <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
@@ -130,7 +130,7 @@ data="{[
 <label for="my-modal-6" class="$$btn $$modal-button">open modal</label>
 
 <!-- Put this part before </body> tag -->
-<input type="checkbox" id="my-modal-6" class="$$modal-toggle">
+<input type="checkbox" id="my-modal-6" class="$$modal-toggle" />
 <div class="$$modal $$modal-bottom sm:$$modal-middle">
   <div class="$$modal-box">
     <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
