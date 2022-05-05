@@ -1,8 +1,8 @@
 export function replace(node, parameters = {}) {
-  const originalContent = node.textContent ?? ''
+  const originalContent = node.textContent ?? ""
   const defaultParameters = {
-    search: '$$',
-    to: '',
+    search: "$$",
+    to: "",
   }
 
   function update(p) {

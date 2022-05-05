@@ -1,14 +1,11 @@
 export async function get() {
-  const allPostFiles = import.meta.glob('../components/*.svelte.md')
+  const allPostFiles = import.meta.glob("../components/*.svelte.md")
   const iterablePostFiles = Object.entries(allPostFiles)
 
   const allPosts = await Promise.all(
     iterablePostFiles.map(async ([path, resolver]) => {
       const { metadata } = await resolver()
-      const postSlug = path.slice(
-        path.indexOf('/components/') + 12,
-        path.lastIndexOf('.svelte'),
-      )
+      const postSlug = path.slice(path.indexOf("/components/") + 12, path.lastIndexOf(".svelte"))
 
       return {
         meta: metadata,
@@ -22,6 +19,6 @@ export async function get() {
   })
 
   return {
-    body: sortedPosts
+    body: sortedPosts,
   }
 }

@@ -130,7 +130,6 @@ data="{[
 }</pre>
 </Component>
 
-
 <Component title="Indeterminate">
 <input type="checkbox" class="checkbox" bind:indeterminate on:click|preventDefault={()=>{}}>
 <pre slot="html" use:replace={{ to: $prefix }}>{
