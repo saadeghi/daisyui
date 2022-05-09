@@ -4,7 +4,7 @@
   import { default as emojiUnicode } from "emoji-unicode"
 </script>
 
-<div title="Change Theme" class="dropdown dropdown-end">
+<div title="Change Language" class="dropdown dropdown-end">
   <div tabindex="0" class="btn btn-ghost gap-1 normal-case">
     <svg class="inline-block h-4 w-4 fill-current md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
       <path d="M363,176,246,464h47.24l24.49-58h90.54l24.49,58H480ZM336.31,362,363,279.85,389.69,362Z" />
