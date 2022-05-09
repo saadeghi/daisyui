@@ -22,20 +22,6 @@
       </svg>
       <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">Make your React site visually editable</p>
     </a>
-
-    <a href="https://cruip.com/?ref=daisyui" target="_blank" rel="nofollow" class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
-      <svg class="mt-2 mb-1" width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Logo" transform="translate(-1.000000, -1.000000)">
-            <g id="Mark" transform="translate(1.792404, 1.750017)">
-              <path d="M24.4575955,12.249983 C24.4575955,10.5586323 23.0864462,9.18748299 21.3950955,9.18748299 C19.7037448,9.18748299 18.3325955,10.5586323 18.3325955,12.249983 C18.3325955,13.9413337 19.7037448,15.312483 21.3950955,15.312483 C23.0864462,15.312483 24.4575955,13.9413337 24.4575955,12.249983" id="Fill-11" fill="#34D399" />
-              <path d="M20.8394118,20.9117708 C19.32109,22.4353646 17.4043253,23.5599826 15.2595156,24.1146354 C14.2837543,24.3655903 13.2613668,24.5 12.2076125,24.5 C8.53769896,24.5 5.24664533,22.8751736 3.00951557,20.3026736 C1.13505363,18.149566 0,15.3329167 0,12.25 C0,9.16708333 1.13505363,6.35043403 3.00951557,4.19732639 C5.24664533,1.62482639 8.53769896,0 12.2076125,0 C13.2613668,0 14.2837543,0.134409722 15.2595156,0.385364583 C17.4043253,0.940017361 19.32109,2.06463542 20.8394118,3.58822917 L16.5235121,7.91911458 C15.4188927,6.81065972 13.8929412,6.125 12.2076125,6.125 C8.83695502,6.125 6.10380623,8.86763889 6.10380623,12.25 C6.10380623,12.3027431 6.10465398,12.3554861 6.10541696,12.4082292 C6.18942907,15.7174306 8.88951557,18.375 12.2076125,18.375 C13.8929412,18.375 15.4188927,17.6893403 16.5235121,16.5808854 L20.8394118,20.9117708 Z" id="Fill-13" fill="#6366F1" fill-rule="nonzero" />
-            </g>
-          </g>
-        </g>
-      </svg>
-      <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">Beautiful Tailwind CSS templates</p>
-    </a>
   </div>
   <a href="https://opencollective.com/daisyui" target="_blank" rel="nofollow" class="group link link-hover text-xs opacity-80">
     Become a sponsor
