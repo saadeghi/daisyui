@@ -45,17 +45,17 @@ data="{[
 </Component>
 
 <Component title="Collapse with checkbox" desc="This collapse works with checkbox instead of focus. It needs to get clicked again to get closed.">
-<div tabindex="0" class="collapse">
+<div class="collapse">
   <input type="checkbox" />
   <div class="collapse-title text-xl font-medium">
     Click me to show/hide content
   </div>
   <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+    <p>hello</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div tabindex="0" class="$$collapse">
+`<div class="$$collapse">
   <input type="checkbox" /> 
   <div class="$$collapse-title text-xl font-medium">
     Click me to show/hide content
@@ -194,17 +194,17 @@ data="{[
 </Component>
 
 <Component title="Custom colors for collapse that works with checkbox" desc="Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked">
-<div tabindex="0" class="collapse">
+<div class="collapse">
   <input type="checkbox" class="peer" /> 
   <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
   </div>
   <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+    <p>hello</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div tabindex="0" class="collapse">
+`<div class="collapse">
   <input type="checkbox" class="peer" /> 
   <div class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
