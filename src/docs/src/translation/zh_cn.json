@@ -264,7 +264,7 @@
   "Search": "搜索",
   "daisyUI comes with a number of themes, which you can use with no extra effort.": "daisyUI 原生已经有很多精美制作的主题，你可以直接获取它们。",
   "Each theme defines a set of colors which will be used on all daisyUI elements.": "每一个主题都定义了一些全局的变量，这些变量会影响所有的 daisyUI 组件。",
-  "To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:": "你可以通过在你的 <code><html></code> 标签上添加 <code>data-theme</code> 来使用主题：",
+  "To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:": "你可以通过在你的 <code>html</code> 标签上添加 <code>data-theme</code> 来使用主题：",
   "I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage.": "我推荐使用 <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>，这样你可以方便的切换主题，并且主题的选择会存储在本地存储里。",
   "List of themes": "主题列表",
   "Try them:": "尝试它们:",

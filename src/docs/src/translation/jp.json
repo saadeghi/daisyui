@@ -208,7 +208,7 @@
   "So you can use <code>bg-primary</code>, <code>border-secondary</code>, etc.": "したがって、<code>bg-primary</code>、<code>border-secondary</code>などを使用できます。",
   "daisyUI comes with a number of themes, which you can use with no extra effort.": "daisyUIでは無駄な労力を費やさずに、多くのテーマを使用することができます。",
   "Each theme defines a set of colors which will be used on all daisyUI elements.": "各テーマは、すべてのdaisyUIの要素で使用される色を定義します。",
-  "To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:": "テーマを使うには、<code>html</code>タグに<data-theme</code>属性を追加してください。",
+  "To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:": "テーマを使うには、<code>html</code>タグに<code>data-theme</code>属性を追加してください。",
   "I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage.": "私はテーマをローカルストレージに保存し使用できるように、<a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>を使用することをお勧めします。",
   "List of themes": "テーマのリスト",
   "Try them:": "こちらを試してみてください",
