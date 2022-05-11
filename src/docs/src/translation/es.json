@@ -208,7 +208,7 @@
   "So you can use <code>bg-primary</code>, <code>border-secondary</code>, etc.": "Entonces puede usar <code>bg-primary</code>, <code>border-secundary</code>, etc.",
   "daisyUI comes with a number of themes, which you can use with no extra effort.": "daisyUI viene con una serie de temas, que puede usar sin esfuerzo adicional.",
   "Each theme defines a set of colors which will be used on all daisyUI elements.": "Cada tema define un conjunto de colores que se usarán en todos los elementos daisyUI.",
-  "To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:": "Para usar un tema, agregue el atributo <code>data-theme</code> a su etiqueta <code><html></code>:",
+  "To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:": "Para usar un tema, agregue el atributo <code>data-theme</code> a su etiqueta <code>html</code>:",
   "I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage.": "Sugiero usar <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, para que pueda cambiar de tema y guardar el tema seleccionado en el almacenamiento local .",
   "List of themes": "Lista de temas",
   "Try them:": "Pruébalos:",
