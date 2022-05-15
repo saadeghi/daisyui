@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.14.4](https://github.com/saadeghi/daisyui/compare/v2.14.3...v2.14.4) (2022-05-15)
+
+
+### Bug Fixes
+
+* [#739](https://github.com/saadeghi/daisyui/issues/739) ([2bb7e57](https://github.com/saadeghi/daisyui/commit/2bb7e57864e086313d6ed04769785d3b8db2dc64))
+* tabindex=0 breaks collapse with checkbox on safari ([#784](https://github.com/saadeghi/daisyui/issues/784)) ([f60c010](https://github.com/saadeghi/daisyui/commit/f60c0100d03ebce37ef936bc3666bdebedf42633))
+
 ### [2.14.3](https://github.com/saadeghi/daisyui/compare/v2.14.2...v2.14.3) (2022-04-30)
 
 
