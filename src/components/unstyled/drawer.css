@@ -2,7 +2,7 @@
   @apply grid overflow-hidden w-full;
 
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
 
   &.drawer-end {
     direction: rtl;
