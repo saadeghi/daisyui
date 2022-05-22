@@ -125,19 +125,29 @@ data="{[
 
 <Component title="Activate using class name instead of checkbox">
 <label class="swap text-6xl">
+  <input type="checkbox" />
   <div class="swap-on">🥵</div>
   <div class="swap-off">🥶</div>
 </label>
 <label class="swap swap-active text-6xl">
+  <input type="checkbox" />
   <div class="swap-on">🥳</div>
   <div class="swap-off">😭</div>
 </label>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<label class="$$swap text-6xl">
+  
+  <!-- this hidden checkbox controls the state -->
+  <input type="checkbox" />
+  
   <div class="$$swap-on">🥵</div>
   <div class="$$swap-off">🥶</div>
 </label>
 <label class="$$swap $$swap-active text-6xl">
+  
+  <!-- this hidden checkbox controls the state -->
+  <input type="checkbox" />
+  
   <div class="$$swap-on">🥳</div>
   <div class="$$swap-off">😭</div>
 </label>`
