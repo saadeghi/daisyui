@@ -20,7 +20,7 @@ module.exports = [
   },
   {
     // responsive utilites for daisyUI components
-    pattern: /(modal-middle)/,
+    pattern: /(modal-middle|card-side)/,
     variants: [
       "sm",
       "md",
