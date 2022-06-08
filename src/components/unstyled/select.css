@@ -7,9 +7,4 @@
   &[disabled] {
     @apply pointer-events-none;
   }
-  /* multiple */
-  &-multiple,
-  &[multiple] {
-    @apply h-auto;
-  }
 }
