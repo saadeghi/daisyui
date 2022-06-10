@@ -75,7 +75,11 @@
     "test:coverage": "vitest --coverage",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "playground": "cd src/experiments/playground && npm run dev"
+    "playground": "cd src/experiments/playground && npm run dev",
+    "release": "standard-version",
+    "release:patch": "standard-version --release-as patch",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "devDependencies": {
     "@parcel/css-cli": "^1.5.0",
@@ -89,6 +93,7 @@
     "postcss-nested": "5.0.1",
     "prejss-cli": "0.3.3",
     "rtlcss": "3.0.0",
+    "standard-version": "^9.5.0",
     "vitest": "^0.7.10"
   },
   "dependencies": {
