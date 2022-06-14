@@ -27,12 +27,13 @@
     if ((e.keyCode === 75 && e.metaKey) || (e.keyCode === 75 && e.ctrlKey)) {
       e.preventDefault()
       seachboxEl.querySelector("input[type=search]").focus()
+      dispatch("focus")
     }
   }
 
   function onSelect({ detail }) {
     goto(searchIndex[detail.originalIndex].href)
-    dispatch('search', detail)
+    dispatch("search", detail)
   }
 </script>
 

@@ -53,15 +53,10 @@
     checked = ""
   }
 
-  function handleKeydown(e) {
-    if ((e.keyCode === 75 && e.metaKey) || (e.keyCode === 75 && e.ctrlKey)) {
-      e.preventDefault()
-      checked = true
-    }
+  function openDrawer() {
+    checked = true
   }
 </script>
-
-<svelte:window on:keydown={handleKeydown} />
 
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,7 +75,7 @@
   <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: 5rem;" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
-      <Sidebar {closeDrawer} {drawerSidebarScrollY} />
+      <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
       <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
     </aside>
   </div>
