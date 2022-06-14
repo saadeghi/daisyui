@@ -221,6 +221,15 @@
   & > .btn:not(:last-of-type) {
     @apply rounded-r-none;
   }
+  &-vertical
+  {
+    .btn:not(:first-of-type) {
+      @apply -mt-px rounded-t-none;
+    }
+    .btn:not(:last-of-type) {
+      @apply rounded-b-none;
+    }
+}
 }
 
 @keyframes button-pop {
