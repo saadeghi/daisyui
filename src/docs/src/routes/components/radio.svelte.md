@@ -25,7 +25,7 @@ data="{[
 ]}"
 />
 
-<Component title="Checkbox">
+<Component title="Radio">
 <input type="radio" name="radio-1" class="radio" checked />
 <input type="radio" name="radio-1" class="radio" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
