@@ -52,7 +52,16 @@
   function closeDrawer() {
     checked = ""
   }
+
+  function handleKeydown(e) {
+    if ((e.keyCode === 75 && e.metaKey) || (e.keyCode === 75 && e.ctrlKey)) {
+      e.preventDefault()
+      checked = true
+    }
+  }
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
