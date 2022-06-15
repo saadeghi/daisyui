@@ -2,14 +2,19 @@
   import { page } from "$app/stores"
   import { pages } from "@src/lib/data.js"
   import { readEnv } from "$lib/util"
+  import { useBreakpoints } from "$lib/breakpoints"
   import Search from "@components/Search.svelte"
 
   export let closeDrawer
+  export let openDrawer
 
   let version = readEnv("VITE_DAISYUI_VERSION", "latest")
 
   export let drawerSidebarScrollY
   $: switchNavbarStyle = drawerSidebarScrollY > 40 ? true : false
+
+  const breakpoints = useBreakpoints()
+  const showSearch = breakpoints.smaller("lg")
 
   import { t } from "@src/lib/i18n"
 </script>
@@ -28,11 +33,13 @@
   </a>
 </div>
 
-<div class={`bg-base-200 sticky top-0 z-10 grid grid-row-2 gap-y-2 w-full bg-opacity-90 py-3 px-2 backdrop-blur lg:hidden ${switchNavbarStyle ? "shadow-sm" : ""}`}>
-  <div class="flex w-full">
-    <Search />
+{#if $showSearch}
+  <div class={`bg-base-200 sticky top-0 z-10 grid grid-row-2 gap-y-2 w-full bg-opacity-90 py-3 px-2 backdrop-blur ${switchNavbarStyle ? "shadow-sm" : ""}`}>
+    <div class="flex w-full">
+      <Search on:search={closeDrawer} on:focus={openDrawer} />
+    </div>
   </div>
-</div>
+{/if}
 
 <div class="h-4" />
 

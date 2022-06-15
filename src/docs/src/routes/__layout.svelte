@@ -52,6 +52,10 @@
   function closeDrawer() {
     checked = ""
   }
+
+  function openDrawer() {
+    checked = true
+  }
 </script>
 
 <svelte:head>
@@ -71,7 +75,7 @@
   <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: 5rem;" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
-      <Sidebar {closeDrawer} {drawerSidebarScrollY} />
+      <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
       <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
     </aside>
   </div>
