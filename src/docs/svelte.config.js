@@ -68,6 +68,9 @@ export default {
       optimizeDeps: {
         include: ["fuzzy"],
       },
+      define: {
+        "process.env": {},
+      },
     },
   },
 }
