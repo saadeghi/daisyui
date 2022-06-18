@@ -1,5 +1,5 @@
 import { useMediaQuery } from "$lib/mediaQuery"
-import resolveConfig from "tailwindcss/resolveConfig"
+import resolveConfig from "tailwindcss/resolveConfig.js"
 import tailwindConfig from "../../tailwind.config.cjs?url"
 
 export function increaseWithUnit(target, delta) {
