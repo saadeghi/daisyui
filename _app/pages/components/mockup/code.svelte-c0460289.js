@@ -1,0 +1,1 @@
+import{S as t,i as e,s,v as c}from"../../../chunks/vendor-c5cb7521.js";async function u(){return{status:302,redirect:"/components/mockup-code"}}function a(o){return c(()=>{window.location.href="/components/mockup-code"}),[]}class i extends t{constructor(n){super();e(this,n,a,null,s,{})}}export{i as default,u as load};

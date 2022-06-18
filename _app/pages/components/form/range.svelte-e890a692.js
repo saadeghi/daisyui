@@ -1,0 +1,1 @@
+import{S as e,i as o,s,v as a}from"../../../chunks/vendor-c5cb7521.js";async function i(){return{status:302,redirect:"/components/range"}}function r(n){return a(()=>{window.location.href="/components/range"}),[]}class u extends e{constructor(t){super();o(this,t,r,null,s,{})}}export{u as default,i as load};

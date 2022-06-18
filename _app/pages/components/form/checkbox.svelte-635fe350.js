@@ -1,1 +1,0 @@
-import{S as t,i as e,s,v as c}from"../../../chunks/vendor-858a832d.js";async function i(){return{status:302,redirect:"/components/checkbox"}}function a(n){return c(()=>{window.location.href="/components/checkbox"}),[]}class u extends t{constructor(o){super();e(this,o,a,null,s,{})}}export{u as default,i as load};

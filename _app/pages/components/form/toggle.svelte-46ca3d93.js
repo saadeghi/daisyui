@@ -1,1 +1,0 @@
-import{S as o,i as e,s,v as a}from"../../../chunks/vendor-858a832d.js";async function c(){return{status:302,redirect:"/components/toggle"}}function r(t){return a(()=>{window.location.href="/components/toggle"}),[]}class i extends o{constructor(n){super();e(this,n,r,null,s,{})}}export{i as default,c as load};
