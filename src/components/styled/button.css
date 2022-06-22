@@ -215,18 +215,17 @@
       outline: 2px solid hsl(var(--p));
     }
   }
-  & > .btn:not(:first-of-type) {
+  &:not(.btn-group-vertical) > .btn:not(:first-of-type) {
     @apply -ml-px rounded-l-none;
   }
-  & > .btn:not(:last-of-type) {
+  &:not(.btn-group-vertical) > .btn:not(:last-of-type) {
     @apply rounded-r-none;
   }
-  &-vertical
-  {
-    .btn:not(:first-of-type) {
+  &-vertical {
+    & > .btn:not(:first-of-type) {
       @apply -mt-px rounded-t-none;
     }
-    .btn:not(:last-of-type) {
+    & > .btn:not(:last-of-type) {
       @apply rounded-b-none;
     }
 }
