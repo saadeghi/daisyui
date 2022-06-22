@@ -57,4 +57,7 @@
   & > input[type="radio"].btn:before {
     content: attr(data-title);
   }
+  &-vertical {
+    @apply flex-col flex-nowrap;
+  }
 }
