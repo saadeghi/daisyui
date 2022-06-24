@@ -1,0 +1,116 @@
+.btm-nav,
+.btm-nav-sm,
+.btm-nav-md,
+.btm-nav-lg {
+  @apply flex flex-row items-center justify-around;
+  @apply fixed bottom-0 left-0 right-0;
+  @apply h-16 w-full;
+  @apply bg-base-100;
+
+  &.demo {
+    @apply relative;
+  }
+
+  &-lg {
+    @apply h-20;
+    @apply text-lg;
+    .btn-nav-title {
+      @apply text-sm;
+      @apply mt-2;
+    }
+  }
+  &-sm {
+    @apply h-12;
+    @apply text-sm;
+    .btn-nav-title {
+      @apply text-xs;
+    }
+  }
+
+  .btn-nav,
+  .btn-nav-boxed {
+    @apply flex items-center justify-center flex-col basis-full;
+    @apply h-full;
+    @apply cursor-pointer;
+    @apply border-solid;
+    @apply text-base;
+    @apply relative;
+    border-bottom-color: transparent !important;
+
+    &-title {
+      @apply text-xs;
+      @apply mt-1;
+    }
+
+    &:hover:not(.btn-nav-active) {
+      @apply bg-base-200;
+    }
+
+    /* default */
+    & {
+      @apply text-neutral;
+      @apply border-neutral;
+    }
+
+    /* brand colors */
+    &-primary {
+      @apply border-primary;
+      &:hover,
+      &.btn-nav-active {
+        @apply text-primary;
+      }
+    }
+    &-secondary {
+      @apply border-secondary;
+      &:hover,
+      &.btn-nav-active {
+        @apply text-secondary;
+      }
+    }
+    &-accent {
+      @apply border-accent;
+      &:hover,
+      &.btn-nav-active {
+        @apply text-accent;
+      }
+    }
+
+    /* state colors */
+    &-info {
+      @apply border-info;
+      &:hover,
+      &.btn-nav-active {
+        @apply text-info;
+      }
+    }
+    &-success {
+      @apply border-success;
+      &:hover,
+      &.btn-nav-active {
+        @apply text-success;
+      }
+    }
+    &-warning {
+      @apply border-warning;
+      &:hover,
+      &.btn-nav-active {
+        @apply text-warning;
+      }
+    }
+    &-error {
+      @apply border-error;
+      &:hover,
+      &.btn-nav-active {
+        @apply text-error;
+      }
+    }
+
+    /* disabled */
+    &-disabled,
+    &-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+    }
+  }
+}
