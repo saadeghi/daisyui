@@ -1,0 +1,23 @@
+.btm-nav {
+  &-sm {
+    @apply h-12 text-sm;
+    --btn-border-width: 0.1875rem;
+    .btn-nav-title {
+      @apply text-xs mt-0.5;
+    }
+  }
+  &-md {
+    @apply h-16 text-base;
+    --btn-border-width: 0.25rem;
+    .btn-nav-title {
+      @apply text-sm mt-1;
+    }
+  }
+  &-lg {
+    @apply h-20 text-lg;
+    --btn-border-width: 0.3125rem;
+    .btn-nav-title {
+      @apply text-base mt-1;
+    }
+  }
+}
