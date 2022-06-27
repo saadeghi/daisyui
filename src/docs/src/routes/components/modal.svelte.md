@@ -35,7 +35,7 @@ data="{[
 <input type="checkbox" id="my-modal" class="$$modal-toggle" />
 <div class="$$modal">
   <div class="$$modal-box">
-    <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
     <div class="$$modal-action">
       <label for="my-modal" class="$$btn">Yay!</label>
@@ -54,7 +54,7 @@ data="{[
 <!-- Put this part before </body> tag -->
 <div class="$$modal" id="my-modal-2">
   <div class="$$modal-box">
-    <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
     <div class="$$modal-action">
      <a href="#" class="$$btn">Yay!</a>
@@ -76,7 +76,7 @@ data="{[
 <div class="$$modal">
   <div class="$$modal-box relative">
     <label for="my-modal-3" class="$$btn $$btn-sm $$btn-circle absolute right-2 top-2">✕</label>
-    <h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
+    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
   </div>
 </div>`
@@ -94,7 +94,7 @@ data="{[
 <input type="checkbox" id="my-modal-4" class="$$modal-toggle" />
 <label for="my-modal-4" class="$$modal cursor-pointer">
   <label class="$$modal-box relative" for="">
-    <h3 class="text-lg font-bold">Congratulations random Interner user!</h3>
+    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
   </label>
 </label>`
@@ -112,7 +112,7 @@ data="{[
 <input type="checkbox" id="my-modal-5" class="$$modal-toggle" />
 <div class="$$modal">
   <div class="$$modal-box w-11/12 max-w-5xl">
-    <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
     <div class="$$modal-action">
       <label for="my-modal-5" class="$$btn">Yay!</label>
@@ -133,7 +133,7 @@ data="{[
 <input type="checkbox" id="my-modal-6" class="$$modal-toggle" />
 <div class="$$modal $$modal-bottom sm:$$modal-middle">
   <div class="$$modal-box">
-    <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
     <div class="$$modal-action">
       <label for="my-modal-6" class="$$btn">Yay!</label>
