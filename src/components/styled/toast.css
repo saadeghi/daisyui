@@ -1,0 +1,4 @@
+.toast {
+  @apply bg-base-200 p-4 rounded-box;
+  transition-property: transform, opacity;
+}
