@@ -27,7 +27,7 @@ data="{[
 
 <Component title="Card">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -38,7 +38,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -52,7 +52,7 @@ data="{[
 
 <Component title="Compact card (less padding for `card-body`)">
 <div class="card w-96 bg-base-100 card-compact shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -63,7 +63,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card $$card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -77,7 +77,7 @@ data="{[
 
 <Component title="Card with badge">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">
       Shoes!
@@ -92,7 +92,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">
       Shoes!
@@ -114,7 +114,7 @@ data="{[
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
   </div>
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
@@ -122,7 +122,7 @@ data="{[
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
   </div>
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
 </div>`
 }</pre>
 </Component>
@@ -130,7 +130,7 @@ data="{[
 <Component title="Card with centered content and paddings">
 <div class="card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
+    <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">Shoes!</h2>
@@ -143,7 +143,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" class="rounded-xl" />
+    <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="$$card-body items-center text-center">
     <h2 class="$$card-title">Shoes!</h2>
@@ -158,7 +158,7 @@ data="{[
 
 <Component title="Card with image overlay">
 <div class="card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -169,7 +169,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -277,9 +277,9 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Card glass" bg="https://api.lorem.space/image/house?w=1000&h=500">
+<Component title="Card glass" bg="https://placeimg.com/1000/500/arch">
 <div class="card w-96 glass">
-  <figure><img src="https://api.lorem.space/image/car?w=400&h=225" alt="car!"></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"></figure>
   <div class="card-body">
     <h2 class="card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -290,7 +290,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 glass">
-  <figure><img src="https://api.lorem.space/image/car?w=400&h=225" alt="car!"></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -304,7 +304,7 @@ data="{[
 
 <Component title="Card with image on side">
 <div class="card card-side bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/movie?w=200&h=280" alt="Movie"></figure>
+  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
   <div class="card-body">
     <h2 class="card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -315,7 +315,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card $$card-side bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/movie?w=200&h=280" alt="Movie"></figure>
+  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -329,7 +329,7 @@ data="{[
 
 <Component title="Responsive card (vertical on small screen, horizontal on large screen)">
 <div class="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/album?w=400&h=400" alt="Album"></figure>
+  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"></figure>
   <div class="card-body">
     <h2 class="card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
@@ -340,7 +340,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card lg:$$card-side bg-base-100 shadow-xl">
-  <figure><img src="https://api.lorem.space/image/album?w=400&h=400" alt="Album"></figure>
+  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>

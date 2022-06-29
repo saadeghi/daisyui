@@ -105,7 +105,7 @@ Something a wise person once told me about typography is:
 
 It's probably important that images look okay here by default as well:
 
-![Sample Image](https://api.lorem.space/image/house?w=800&h=500)
+![Sample Image](https://placeimg.com/800/500/arch)
 
 Now I'm going to show you an example of an unordered list to make sure that looks good, too:
 
