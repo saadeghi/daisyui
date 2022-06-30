@@ -56,7 +56,7 @@
   @apply translate-x-0;
 }
 
-@media (min-width: 1024px) {
+@media screen(lg) {
   .drawer-mobile {
     grid-auto-columns: max-content auto;
     & > .drawer-toggle {
