@@ -61,7 +61,7 @@
     }
   }
 }
-@media (min-width: 1024px) {
+@media screen(lg) {
   .drawer-mobile {
     & > .drawer-toggle {
       &:checked {
