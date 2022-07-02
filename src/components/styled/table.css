@@ -17,6 +17,28 @@
       @apply bg-base-300;
     }
   }
+  &:where(.pinned-row) {
+    @apply relative;
+    :where(thead) {
+      @apply sticky top-0;
+    }
+  }
+  &:where(.pinned-col) {
+    @apply relative;
+    :where(thead) {
+      @apply z-[2];
+      :where(th:first-of-type) {
+        @apply sticky top-0 left-0;
+      }
+    }
+    :where(tbody) {
+      :where(tr) {
+        :where(th:first-of-type) {
+          @apply sticky left-0;
+        }
+      }
+    }
+  }
   &:where(:not(.table-zebra)) {
     :where(thead, tbody, tfoot) {
       :where(tr:not(:last-child) :where(th, td)) {
