@@ -27,7 +27,6 @@
   import Scripts from "@components/Scripts.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
-  import Toast from "@components/Toast.svelte";
 
   let drawercontent
   let drawerContentScrollY = 0
@@ -81,8 +80,6 @@
     </aside>
   </div>
 </div>
-<Toast />
-
 
 <input type="checkbox" id="my-modal" class="modal-toggle" aria-label="Open or close modal" />
 <div class="modal">

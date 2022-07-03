@@ -5,7 +5,6 @@ published: false
 ---
 
 <script>
-  import { notifications } from '$lib/stores';
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
   import { prefix } from '$lib/stores';
@@ -163,30 +162,6 @@ data="{[
   </div>
   <div class="flex-none">
     <button class="$$btn $$btn-sm">See</button>
-  </div>
-</div>`
-}</pre>
-</Component>
-
-
-<Component title="Toast group">
-<button class="btn" on:click={addTestNotification}>
-Add Toast with `success` color
-</button>
-
-<pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$toast-control $$toast-top $$toast-right">
-  <div class="$$toast shadow-lg">
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-      <div>
-        <h3 class="font-bold">New message!</h3>
-        <div class="text-xs">You have 1 unread message</div>
-      </div>
-    </div>
-    <div class="flex-none">
-      <button class="$$btn $$btn-sm">See</button>
-    </div>
   </div>
 </div>`
 }</pre>
