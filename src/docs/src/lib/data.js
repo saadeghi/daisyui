@@ -591,6 +591,13 @@ export let pages = [
         badge: "",
       },
       {
+        name: "Bottom navigation",
+        tags: "bottom navigation app bar",
+        href: "/components/bottom-navigation",
+        icon: "",
+        badge: "",
+      },
+      {
         name: "Link",
         tags: "link href anchor 🔗",
         href: "/components/link",

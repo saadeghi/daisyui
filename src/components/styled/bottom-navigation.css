@@ -1,144 +1,25 @@
 .btm-nav {
-  &.demo {
-    @apply relative;
-  }
+  @apply h-16 bg-base-100 text-current;
+  &>* {
+    @apply border-current;
 
-  .btn-nav {
-    /* default */
-    & {
-      @apply text-neutral;
-      @apply border-neutral;
-    }
-
-    /* brand colors */
-    &-primary {
-      @apply border-primary;
-      &:hover,
-      &.btn-nav-active {
-        @apply text-primary;
-      }
-    }
-    &-secondary {
-      @apply border-secondary;
-      &:hover,
-      &.btn-nav-active {
-        @apply text-secondary;
-      }
-    }
-    &-accent {
-      @apply border-accent;
-      &:hover,
-      &.btn-nav-active {
-        @apply text-accent;
-      }
-    }
-
-    /* state colors */
-    &-info {
-      @apply border-info;
-      &:hover,
-      &.btn-nav-active {
-        @apply text-info;
-      }
-    }
-    &-success {
-      @apply border-success;
-      &:hover,
-      &.btn-nav-active {
-        @apply text-success;
-      }
-    }
-    &-warning {
-      @apply border-warning;
-      &:hover,
-      &.btn-nav-active {
-        @apply text-warning;
-      }
-    }
-    &-error {
-      @apply border-error;
-      &:hover,
-      &.btn-nav-active {
-        @apply text-error;
-      }
-    }
-  }
-
-  .btn-nav-boxed {
-    &.btn-nav-active {
-      & {
-        @apply bg-neutral text-neutral-content;
-      }
-      &.btn-nav-primary {
-        @apply bg-primary text-primary-content;
-      }
-      &.btn-nav-secondary {
-        @apply bg-secondary text-secondary-content;
-      }
-      &.btn-nav-accent {
-        @apply bg-accent text-accent-content;
-      }
-      &.btn-nav-info {
-        @apply bg-info text-info-content;
-      }
-      &.btn-nav-success {
-        @apply bg-success text-success-content;
-      }
-      &.btn-nav-warning {
-        @apply bg-warning text-warning-content;
-      }
-      &.btn-nav-error {
-        @apply bg-error text-error-content;
-      }
-    }
-  }
-
-  .btn-nav,
-  .btn-nav-boxed {
-    &:hover:not(.btn-nav-active.btn-nav-boxed) {
-      @apply bg-base-200;
+    /* active */
+    &:where(.active) {
+      @apply bg-base-100 border-t-2;
     }
 
     /* disabled */
-    &-disabled,
-    &-disabled:hover,
+    &.disabled,
+    &.disabled:hover,
     &[disabled],
     &[disabled]:hover {
-      @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20 pointer-events-none;
+      @apply border-opacity-0 bg-neutral bg-opacity-10 text-base-content text-opacity-20 pointer-events-none;
+    }
+    .label {
+      @apply text-base;
     }
   }
 
-  &-sm {
-    .btn-nav {
-      &-active:not(.btn-nav-boxed) {
-        animation: btm-nav 0.1s ease-in-out forwards;
-      }
-    }
-  }
-  &,
-  &-md {
-    .btn-nav {
-      &-active:not(.btn-nav-boxed) {
-        animation: btm-nav 0.1s ease-in-out forwards;
-      }
-    }
-  }
-  &-lg {
-    .btn-nav {
-      &-active:not(.btn-nav-boxed) {
-        animation: btm-nav 0.1s ease-in-out forwards;
-      }
-    }
-  }
 }
 
-@keyframes btm-nav {
-  0% {
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-  }
-  100% {
-    border-top-width: var(--btn-border-width, 0.25rem);
-    border-bottom-width: var(--btn-border-width, 0.25rem);
-  }
-}
+

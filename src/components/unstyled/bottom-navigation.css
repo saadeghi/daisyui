@@ -1,18 +1,6 @@
 .btm-nav {
-  box-shadow: 0 2px 4px -1px #00000033, 0 4px 5px 0 #00000024, 0 1px 10px 0 #0000001f;
-  @apply flex flex-row items-center justify-around;
-  @apply fixed bottom-0 left-0 right-0;
-  @apply h-16 w-full bg-base-100 text-sm;
-
-  .btn-nav {
-    @apply flex items-center justify-center flex-col basis-full;
-    @apply h-full cursor-pointer relative;
-    border-bottom-color: transparent !important;
-
-    &-boxed {
-      @apply flex items-center justify-center flex-col basis-full;
-      @apply h-full cursor-pointer relative;
-      border-bottom-color: transparent !important;
-    }
+  @apply flex flex-row items-center justify-around fixed bottom-0 left-0 right-0 w-full;
+  &>* {
+    @apply flex items-center justify-center flex-col basis-full h-full cursor-pointer relative gap-1;
   }
 }
