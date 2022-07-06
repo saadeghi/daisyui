@@ -27,7 +27,7 @@
   }
   pre{
     code{
-      border-radius: none;
+      border-radius: 0;
       padding: 0;
     }
   }
