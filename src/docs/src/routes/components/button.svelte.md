@@ -147,7 +147,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Glass button" bg="https://api.lorem.space/image/house?w=1000&h=300">
+<Component title="Glass button" bg="https://placeimg.com/1000/300/arch">
 <button class="btn glass">Glass button</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<button class="$$btn $$glass">Glass button</button>`

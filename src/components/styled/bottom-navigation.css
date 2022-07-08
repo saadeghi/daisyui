@@ -1,0 +1,25 @@
+.btm-nav {
+  @apply h-16 bg-base-100 text-current;
+  &>* {
+    @apply border-current;
+
+    /* active */
+    &:where(.active) {
+      @apply bg-base-100 border-t-2;
+    }
+
+    /* disabled */
+    &.disabled,
+    &.disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+      @apply border-opacity-0 bg-neutral bg-opacity-10 text-base-content text-opacity-20 pointer-events-none;
+    }
+    .label {
+      @apply text-base;
+    }
+  }
+
+}
+
+

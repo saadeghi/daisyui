@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.18.0](https://github.com/saadeghi/daisyui/compare/v2.17.0...v2.18.0) (2022-07-03)
+
+### Features
+* add new `bottom-navigation` component
+
+### Bug Fixes
+
+* spelling correction ([#905](https://github.com/saadeghi/daisyui/issues/905)) ([d6a9546](https://github.com/saadeghi/daisyui/commit/d6a9546ef29e83908b4c5597c81afd722632f5c8))
+
+## [2.17.0](https://github.com/saadeghi/daisyui/compare/v2.16.0...v2.17.0) (2022-06-22)
+
+
+### Features
+
+* add `btn-group-vertical` ([41ce08c](https://github.com/saadeghi/daisyui/commit/41ce08c18dede1524627c2395ec5f611711d4907))
+
+## [2.16.0](https://github.com/saadeghi/daisyui/compare/v2.15.4...v2.16.0) (2022-06-22)
+
 ### [2.15.4](https://github.com/saadeghi/daisyui/compare/v2.15.3...v2.15.4) (2022-06-15)
 
 ### [2.15.3](https://github.com/saadeghi/daisyui/compare/v2.15.2...v2.15.3) (2022-06-10)

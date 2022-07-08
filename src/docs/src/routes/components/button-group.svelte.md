@@ -14,6 +14,7 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'btn-group', desc: 'Container for grouping multiple buttons' },
+  { type:'component', class: 'btn-group-vertical', desc: 'Container for grouping multiple buttons (vertical)' },
 ]}"
 />
 
@@ -25,6 +26,21 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$btn-group">
+  <button class="$$btn $$btn-active">Button</button>
+  <button class="$$btn">Button</button>
+  <button class="$$btn">Button</button>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Button group vertical">
+<div class="btn-group btn-group-vertical">
+  <button class="btn btn-active">Button</button>
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$btn-group btn-group-vertical">
   <button class="$$btn $$btn-active">Button</button>
   <button class="$$btn">Button</button>
   <button class="$$btn">Button</button>
