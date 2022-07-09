@@ -1,0 +1,41 @@
+.toast {
+  @apply relative flex w-auto flex-row items-center mb-2 md:mb-4 justify-between gap-2 space-y-2 md:flex-row md:space-y-0;
+  > :where(*) {
+    @apply flex items-center gap-2;
+  }
+  font-size: 0.875rem;
+}
+
+.toast-control {
+  @apply fixed flex flex-col space-y-2 md:space-y-4 max-w-[400px];
+  &-top-left {
+    @apply top-0 left-0;
+  }
+  &-top-center {
+    @apply top-0 left-[50%] translate-x-[-50%];
+  }
+  &-top-right {
+    @apply top-0 right-0;
+  }
+  &-bottom-left {
+    @apply bottom-0 left-0;
+  }
+  &-bottom-center {
+    @apply bottom-0 left-[50%] -translate-x-[50%];
+  }
+  &-bottom-right {
+    @apply bottom-0 right-0;
+  }
+  &-md {
+    @apply text-sm leading-loose;
+  }
+  &-lg {
+    @apply text-lg leading-loose;
+  }
+  &-sm {
+    @apply text-sm leading-8;
+  }
+  &-xs {
+    @apply text-xs leading-relaxed;
+  }
+}
