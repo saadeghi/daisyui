@@ -1,5 +1,5 @@
 export let siteStats = {
-  components: "46",
+  components: "47",
   themes: "29",
   githubStars: "+12,000",
   npmInstalls: "+1,000,000",
@@ -575,6 +575,13 @@ export let pages = [
         name: "Stack",
         tags: "stack",
         href: "/components/stack",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Toast",
+        tags: "toast notification snackbar",
+        href: "/components/toast",
         icon: "",
         badge: "",
       },
