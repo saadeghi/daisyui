@@ -56,7 +56,7 @@ module.exports = {
 Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.18.2/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 ```
 
@@ -240,7 +240,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
 [jsdeliver-url]: https://www.jsdelivr.com/package/npm/daisyui
 [build-url]: https://github.com/saadeghi/daisyui/actions
 [tweet-url]: https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui
-[number-of-components]: https://badgen.net/badge/total%20components/45/green
+[number-of-components]: https://badgen.net/badge/total%20components/47/green
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.19.0](https://github.com/saadeghi/daisyui/compare/v2.18.2...v2.19.0) (2022-07-09)
+
+
+### Features
+
+* add new `toast` component ([b57457f](https://github.com/saadeghi/daisyui/commit/b57457f3c3039ad9fabcf551e4f50ca19c754674))
+
 ### [2.18.2](https://github.com/saadeghi/daisyui/compare/v2.18.0...v2.18.2) (2022-07-09)
 
 ## [2.18.0](https://github.com/saadeghi/daisyui/compare/v2.17.0...v2.18.0) (2022-07-03)
