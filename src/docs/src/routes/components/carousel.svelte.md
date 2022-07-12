@@ -378,7 +378,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Carousel with indicator buttons" desc="This slider works with anchor links so the browser will vertically to the image when you click buttons.">
+<Component title="Carousel with indicator buttons" desc="This slider works with anchor links so the browser will snap vertically to the image when you click buttons.">
 <div class="w-full carousel">
   <div id="item1" class="w-full carousel-item">
     <img src="https://placeimg.com/800/200/arch" class="w-full" alt="Tailwind CSS image gallery" />
@@ -423,7 +423,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Carousel with next/prev buttons" desc="This slider works with anchor links so the browser will vertically to the image when you click buttons.">
+<Component title="Carousel with next/prev buttons" desc="This slider works with anchor links so the browser will snap vertically to the image when you click buttons.">
 <div class="w-full carousel">
   <div id="slide1" class="relative w-full carousel-item">
     <img src="https://placeimg.com/800/200/arch" class="w-full" alt="Tailwind CSS image slide" />
