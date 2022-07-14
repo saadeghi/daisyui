@@ -2,7 +2,7 @@
 
 [![][logo-url]][docs-url]
 
-**The most popular, free and open-source Tailwind CSS component library**  
+**The most popular, free and open-source Tailwind CSS component library**
 
 [ [See all components](https://daisyui.com/components/) ]
 
@@ -14,7 +14,7 @@
 
 # daisyUI 2.0
 
-[![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url]  
+[![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url]
 [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
 
 - [Official website →](https://daisyui.com/)
@@ -37,7 +37,7 @@
 npm i daisyui
 ```
 
-Then add daisyUI to your `tailwind.config.js`:  
+Then add daisyUI to your `tailwind.config.js`:
 
 
 ```js
@@ -118,7 +118,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Table
   - [ ] Tag
   - [ ] Timeline
-  - [ ] Toast
+  - [x] Toast
   - [x] Tooltip
   - [ ] Treeview
 
@@ -132,7 +132,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Textarea
   - [x] Toggle
   - [ ] Upload
-  
+
 - Layout
   - [x] Artboard
   - [x] Button group
@@ -171,7 +171,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
 <summary>
   show / hide
 </summary>
-  
+
 - Blogs
   - [Logrocket](https://blog.logrocket.com/daisyui-tailwind-components-react-apps/)
   - [GraphCMS](https://graphcms.com/blog/build-a-personal-timeline-with-graphcms-and-sveltekit)
@@ -191,7 +191,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [Jamstack powered Image gallery with Cloudinary, Tailwind and DaisyUI](https://www.youtube.com/watch?v=Hpjq0D1vcpM)
   - [SvelteKit Crash Course w/ Tailwind CSS and DaisyUI, GraphQL and dynamic routes](https://www.youtube.com/watch?v=zH2qG9YwN3s)
   - [DaisyUI : Worth a try or skip on by?](https://www.youtube.com/watch?v=hM9fENyAquM)
-  - [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20) 
+  - [How to use daisyUI in SvelteKit?](https://www.youtube.com/watch?v=haKnkk6ds20)
   - [DaisyUI Untuk Yang Mau Pindah ke TailwindCSS dari Bootstrap (Indonesian)](https://www.youtube.com/watch?v=Wm2g6FWec34)
   - [Next.js - Tailwind - DeisyUI Setup](https://www.youtube.com/watch?v=uXQgJbUj3PQ)
   - [Svelte Setup with Vite, Tailwind, DaisyUI. Custom Themes!](https://www.youtube.com/watch?v=5lF5PxBJoso)
@@ -213,10 +213,10 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
 ---
 
 <div align="center">
-  
-  
-༼ つ ◕_◕ ༽つ  Please share  
-  
+
+
+༼ つ ◕_◕ ༽つ  Please share
+
 [![][tweet]][tweet-url]
 
 </div>
