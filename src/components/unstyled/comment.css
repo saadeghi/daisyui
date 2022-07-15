@@ -1,0 +1,15 @@
+.comment {
+  @apply flex items-center py-2 px-4 font-light;
+
+  &-message {
+    @apply flex flex-col pl-2;
+  }
+
+  &-info {
+    @apply flex gap-2;
+  }
+
+  &-actions {
+    @apply flex items-baseline gap-2;
+  }
+}
