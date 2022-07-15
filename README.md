@@ -118,7 +118,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Table
   - [ ] Tag
   - [ ] Timeline
-  - [ ] Toast
+  - [x] Toast
   - [x] Tooltip
   - [ ] Treeview
 
