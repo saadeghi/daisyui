@@ -4,6 +4,9 @@
 }
 .input-group {
   @apply flex w-full items-stretch;
+  > .input {
+    @apply isolate;
+  }
   > *,
   > .input {
     @apply rounded-none;
