@@ -61,7 +61,7 @@ data="{[
     Click me to show/hide content
   </div>
   <div class="$$collapse-content"> 
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+    <p>hello</p>
   </div>
 </div>`
 }</pre>
@@ -210,7 +210,7 @@ data="{[
     Click me to show/hide content
   </div>
   <div class="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+    <p>hello</p>
   </div>
 </div>`
 }</pre>

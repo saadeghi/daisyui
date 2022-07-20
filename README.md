@@ -56,7 +56,7 @@ module.exports = {
 Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.18.2/dist/full.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 ```
 
@@ -79,7 +79,7 @@ See the official site: [ [daisyui.com →](https://daisyui.com/)]
 |---|---|
 | **Premium Sponsors** <br /> Support this project by becoming a premium sponsor. <br /> [[Become a sponsor](https://opencollective.com/daisyui)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&width=500&avatarHeight=92"></a> |
 | **Backers** <br /> Thank you to all our backers! <br /> [[Become a backer](https://opencollective.com/daisyui)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/backers.svg?button=false&width=500&avatarHeight=46"></a> |
-| **Contributors** <br /> This project exists thanks to all the people who contribute. <br /> [[Contribute](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md)] | <a href="https://github.com/saadeghi/daisyui/graphs/contributors"><img src="https://opencollective.com/daisyui/contributors.svg?button=false&width=500&avatarHeight=24" /></a> |
+| **Contributors** <br /> This project exists thanks to all the people who contribute. <br /> [[Contribute](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md)] | |
 
 Tweet about daisyUI: [![][tweet]][tweet-url]
 
@@ -118,7 +118,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Table
   - [ ] Tag
   - [ ] Timeline
-  - [ ] Toast
+  - [x] Toast
   - [x] Tooltip
   - [ ] Treeview
 
