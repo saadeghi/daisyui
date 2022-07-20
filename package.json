@@ -82,7 +82,7 @@
     "release:major": "standard-version --release-as major"
   },
   "devDependencies": {
-    "@parcel/css-cli": "^1.5.0",
+    "@parcel/css-cli": "1.5.0",
     "@types/css-selector-tokenizer": "^0.7.1",
     "@vitest/ui": "^0.7.10",
     "autoprefixer": "10.0.4",
