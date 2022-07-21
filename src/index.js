@@ -1,5 +1,6 @@
 const postcssJs = require("postcss-js")
 const postcssPrefix = require('./lib/postcss-prefixer')
+const postcssCustomState = require('./lib/postcss-custom-state')
 
 const daisyuiInfo = require("../package.json");
 const colors = require("./colors/index");
@@ -77,6 +78,21 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
   }
   const shouldApplyPrefix = prefix && postcssJsProcess;
   if (shouldApplyPrefix) {
+    file = postcssJsProcess(file)
+  }
+
+  // Add custom states to selectors if specified
+  const state = config("daisyui.state")
+  postcssJsProcess = null;
+  if (state) {
+    try {
+      postcssJsProcess = postcssJs.sync(postcssCustomState({ state }))
+    } catch (error) {
+      logs && console.error(`Error occurred and prevent applying the "state" option:`, error)
+    }
+  }
+  const shouldApplyCustomState = state && postcssJsProcess;
+  if (shouldApplyCustomState) {
     file = postcssJsProcess(file)
   }
 
