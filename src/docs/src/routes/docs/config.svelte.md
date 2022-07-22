@@ -28,6 +28,7 @@ module.exports = {
     rtl: false,
     prefix: "",
     darkTheme: "dark",
+    state: {}
   },
 }
 ```
@@ -90,3 +91,33 @@ module.exports = {
   <Translate text="If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts." />
   <Translate text="Utility classes like color names (e.g. <code>bg-primary</code>) or border-radius (e.g. <code>rounded-box</code>) will not be affected by this config because they're being added as extensions to Tailwind CSS classes." />  
   <Translate text="If you use daisyUI `prefix` option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>." />
+
+- ### state
+
+  `Obeject (default: {})`
+  <Translate text="Allows us to compliment the pseudo-classes that control the state (e.g. <code>:checked</code>) of a component. We do that by mapping our state selector of choice." />
+  <Translate text="For example: if the <code>.toggle</code> component class is used on an element that doesn't support the pseudo-state <code>:checked</code>. We can take control over it by adding our class <code>.state-checked</code> that we toggle off and on with javascript." />
+
+  ```js
+  {
+    daisyui: {
+      // ...
+      state: {
+        checked: ".state-checked"
+        // Examples of data attribute used as selector
+        disabled: '[data-state="disabled"]'
+        indeterminate: '[data-state="indeterminate"]'
+      }
+    }
+  }
+  ```
+
+  <Translate text="the original selector is not touched but complimented with the new state selector." />
+
+  ```css
+  .toggle:checked { /* ... */ }
+  /* will become */
+  .toggle:checked, .toggle.state-checked { /* ... */ }
+  ```
+
+  <Translate text="This is especially useful when you don't have full control over your HTML and state. For example, if you are using a third-party library such as <a href='https://www.radix-ui.com/'>radix</a> that handles the state through data attributes." />

@@ -81,7 +81,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     file = postcssJsProcess(file)
   }
 
-  // Add custom states to selectors if specified
+  // Add states to selectors if specified
   const state = config("daisyui.state")
   postcssJsProcess = null;
   if (state) {
