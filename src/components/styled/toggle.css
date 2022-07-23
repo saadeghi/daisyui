@@ -9,7 +9,8 @@
     outline-offset: 2px;
   }
   &:checked,
-  &[checked="true"] {
+  &[checked="true"],
+  &[aria-checked=true] {
     --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
     box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
@@ -30,7 +31,8 @@
       outline: 2px solid hsl(var(--p));
     }
     &:checked,
-    &[checked="true"] {
+    &[checked="true"],
+    &[aria-checked=true] {
       --chkbg: hsl(var(--p));
       @apply border-primary;
       @apply border-primary border-opacity-10 bg-primary text-primary-content;
@@ -41,7 +43,8 @@
       outline: 2px solid hsl(var(--s));
     }
     &:checked,
-    &[checked="true"] {
+    &[checked="true"],
+    &[aria-checked=true] {
       --chkbg: hsl(var(--s));
       @apply border-secondary;
       @apply border-secondary border-opacity-10 bg-secondary text-secondary-content;
@@ -52,7 +55,8 @@
       outline: 2px solid hsl(var(--a));
     }
     &:checked,
-    &[checked="true"] {
+    &[checked="true"],
+    &[aria-checked=true] {
       --chkbg: hsl(var(--a));
       @apply border-accent;
       @apply border-accent border-opacity-10 bg-accent text-accent-content;

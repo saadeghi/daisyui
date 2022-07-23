@@ -10,7 +10,8 @@
   & .rating-hidden {
     @apply w-2 bg-transparent;
   }
-  input:checked ~ input {
+  input:checked ~ input,
+  input[aria-checked=true] ~ input {
     @apply bg-opacity-20;
   }
   input:focus-visible {

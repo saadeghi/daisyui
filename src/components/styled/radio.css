@@ -6,7 +6,8 @@
     outline: 2px solid hsl(var(--bc));
     outline-offset: 2px;
   }
-  &:checked {
+  &:checked,
+  &[aria-checked=true] {
     @apply bg-base-content;
     animation: radiomark var(--animation-input, 0.2s) ease-in-out;
     box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
@@ -17,7 +18,8 @@
     &:focus-visible {
       outline: 2px solid hsl(var(--p));
     }
-    &:checked {
+    &:checked,
+    &[aria-checked=true] {
       @apply border-primary bg-primary text-primary-content;
     }
   }
@@ -27,7 +29,8 @@
     &:focus-visible {
       outline: 2px solid hsl(var(--s));
     }
-    &:checked {
+    &:checked,
+    &[aria-checked=true] {
       @apply border-secondary bg-secondary text-secondary-content;
     }
   }
@@ -37,7 +40,8 @@
     &:focus-visible {
       outline: 2px solid hsl(var(--a));
     }
-    &:checked {
+    &:checked,
+    &[aria-checked=true] {
       @apply border-accent bg-accent text-accent-content;
     }
   }
