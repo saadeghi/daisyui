@@ -232,7 +232,7 @@
   "You can add a new theme from <code>tailwind.config.js</code> file.": "새 테마는 <code>tailwind.config.js</code> 파일을 통해 추가할 수 있습니다.",
   "In below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes.": "아래 예시에서, <code>mytheme</code>라고 하는 새로운 테마를 추가하였고, <code>dark</code> 와 <code>cupcake</code> 테마도 포함하였습니다.",
   "The first theme (<code>mytheme</code>) will be the default theme.": "첫번째 테마(<code>mytheme</code>)가 기본 테마가 될 것입니다.",
-  "<code>dark</code> theme will be the default theme for dark mode.": "다크 모드의 기본 테마는 <code>dark</code> 테마가 됩니다.",
+  "<code>dark</code> theme will be the default theme for dark mode.": "다크 모드의 기본 테마는 <code>dark</code> 테마가 될 것입니다.",
   "In below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button).": "아래 예시를 보시면, 필수 색상들을 정의해 놓았습니다. 다른 색상들은 자동으로 생성될 것 입니다. (포커싱된 버튼의 색상이나 <code>primary</code> 버튼 위에 있는 텍스트 색상 등과 같은 다른 색상들이요).",
   "CSS variables in daisyUI themes": "데이지UI 테마의 CSS 변수들",
   "There are a few optional CSS variables that you can use in daisyUI themes to customize design decisions for each theme:": "데이지UI 테마에서 매 디자인 결정들을 커스텀할 수 있는 몇몇 선택적인 CSS 변수들이 있습니다.",
