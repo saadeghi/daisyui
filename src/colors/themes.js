@@ -146,6 +146,7 @@ module.exports = {
   },
   "[data-theme=forest]": {
     primary: "#1eb854",
+    "primary-content": "#c2ffd7",
     secondary: "#1fd65f",
     accent: "#d99330",
     neutral: "#110e0e",
