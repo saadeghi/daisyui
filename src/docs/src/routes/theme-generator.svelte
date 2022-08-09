@@ -257,13 +257,13 @@
 <div class="prose mb-10">
   <h1><Translate text="daisyUI Theme Generator" /></h1>
   <p>
-    <Translate text="You can add your custom themes to <span class='badge badge-outline'>tailwind.config.js</span> file in <span class='badge badge-outline'>daisyui > themes</span> array. In this page, you can pick required color values and see how the components will look like with them." />
+    <Translate text="You can add your custom themes to <span class='badge badge-outline'>tailwind.config.js</span> file in <span class='badge badge-outline'>daisyui > themes</span> array. On this page, you can pick required color values and see how the components will look like with them." />
   </p>
   <div class="alert alert-info not-prose mb-2 text-sm">
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content h-6 w-6 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       <div>
-        <p><Translate text="You can also define optional colors to have more control on the color values (for example: the color of button when it's focused of the color of the text on a button)" /></p>
+        <p><Translate text="You can also define optional colors to have more control on the color values (for example: the color of button when it's focused the color of the text on a button)" /></p>
         <p>
           <Translate text="Check out <a class='link font-bold' href='/docs/colors/'>colors page</a> to see all the color names you can use." />
         </p>
