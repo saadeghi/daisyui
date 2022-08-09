@@ -42,6 +42,10 @@
   onMount(() => {
     parseContentScroll()
     parseSidebarScroll()
+
+    // fix for https://github.com/sveltejs/kit/issues/3501
+    // todo: upgrade to latest svelte-kit version instead
+    document.body.removeAttribute("tabindex")
   })
 
   afterNavigate(() => {
@@ -66,13 +70,13 @@
 
 <div class={`bg-base-100 drawer ${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "drawer-mobile"}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
+  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth;">
     <Navbar {drawerContentScrollY} />
     <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "p-6 pb-16"}`}>
       <slot />
     </div>
   </div>
-  <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: 5rem;" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
+  <div class="drawer-side" style="scroll-behavior: smooth;" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
       <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
