@@ -66,7 +66,7 @@ module.exports = {
 
   `Boolean (default: true)`
 
-  <Translate text="If it's true, daisyUI shows logs in terminal while CSS is building" />
+  <Translate text="If it's true, daisyUI shows logs in the terminal while CSS is building" />
 
 - ### rtl
 

@@ -42,7 +42,7 @@ module.exports = {
 
 <Translate text="You can only include the themes you want in your project." />  
 <Translate text="This will reduce the size of your CSS file." />  
-<Translate text="In below example" />
+<Translate text="In the below example" />
 
 - <Translate text="<code>cupcake</code> will be the default theme for light mode" />
 - <Translate text="<code>dark</code> will be the default theme for dark mode" />
@@ -80,7 +80,7 @@ module.exports = {
 }
 ```
 
-## <Translate text="How to use a theme only for a section of page?" />
+## <Translate text="How to use a theme only for a section of a page?" />
 
 <Translate text="Add <code>data-theme='THEME_NAME'</code> to any element and everything inside will have your theme." />  
 <Translate text="You can nest themes and there is no limit!" />
@@ -99,12 +99,12 @@ module.exports = {
 ## <Translate text="How to add a new custom theme?" />
 
 <Translate text="You can add a new theme from <code>tailwind.config.js</code> file." />  
-<Translate text="In below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes." />
+<Translate text="In the below example, I added a new theme called <code>mytheme</code> and I'm also including <code>dark</code> and <code>cupcake</code> themes." />
 
 - <Translate text="The first theme (<code>mytheme</code>) will be the default theme." />
 - <Translate text="<code>dark</code> theme will be the default theme for dark mode." />
 
-<Translate text="In below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
+<Translate text="In the below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
 
 <div class="alert alert-info text-sm mb-2 max-w-3xl not-prose">
   <div>
@@ -184,7 +184,7 @@ module.exports = {
 ## <Translate text="How to customize an existing theme?" />
 
 <Translate text="In your tailwind.config.js, you can require an existing daisyUI theme and override some colors." />  
-<Translate text="In below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:" />
+<Translate text="In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:" />
 
 ```js
 module.exports = {

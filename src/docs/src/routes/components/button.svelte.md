@@ -1,6 +1,6 @@
 ---
 title: Button
-desc: Buttons allows user to take actions or make choices.
+desc: Buttons allow the user to take actions or make choices.
 published: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Badge
-desc: Badges are used to inform user of the status of specific data.
+desc: Badges are used to inform the user of the status of specific data.
 published: true
 ---
 
