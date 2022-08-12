@@ -21,3 +21,7 @@
     }
   }
 }
+
+[dir="rtl"] .breadcrumbs>ul>li+*:before {
+  --tw-rotate: -45deg;
+}
