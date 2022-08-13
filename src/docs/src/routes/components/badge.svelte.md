@@ -15,18 +15,18 @@ published: true
 data="{[
   { type:'component', class: 'badge', desc: 'Container element' },
   { type:'modifier', class: 'badge-outline', desc: 'transparent badge with [colorful] border' },
+  { type:'modifier', class: 'badge-primary', desc: 'badge with `primary` color' },
+  { type:'modifier', class: 'badge-secondary', desc: 'badge with `secondary` color' },
+  { type:'modifier', class: 'badge-accent', desc: 'badge with `accent` color' },
+  { type:'modifier', class: 'badge-ghost', desc: 'badge with `ghost` color' },
+  { type:'modifier', class: 'badge-info', desc: 'badge with `info` color' },
+  { type:'modifier', class: 'badge-success', desc: 'badge with `success` color' },
+  { type:'modifier', class: 'badge-warning', desc: 'badge with `warning` color' },
+  { type:'modifier', class: 'badge-error', desc: 'badge with `error` color' },
   { type:'responsive', class: 'badge-lg', desc: 'badge with large size' },
   { type:'responsive', class: 'badge-md', desc: 'badge with medium size (default)' },
   { type:'responsive', class: 'badge-sm', desc: 'badge with small size' },
   { type:'responsive', class: 'badge-xs', desc: 'badge with extra small size' },
-  { type:'responsive', class: 'badge-primary', desc: 'badge with `primary` color' },
-  { type:'responsive', class: 'badge-secondary', desc: 'badge with `secondary` color' },
-  { type:'responsive', class: 'badge-accent', desc: 'badge with `accent` color' },
-  { type:'responsive', class: 'badge-ghost', desc: 'badge with `ghost` color' },
-  { type:'responsive', class: 'badge-info', desc: 'badge with `info` color' },
-  { type:'responsive', class: 'badge-success', desc: 'badge with `success` color' },
-  { type:'responsive', class: 'badge-warning', desc: 'badge with `warning` color' },
-  { type:'responsive', class: 'badge-error', desc: 'badge with `error` color' },
 ]}"
 />
 
