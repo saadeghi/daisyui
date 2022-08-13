@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.24.0](https://github.com/saadeghi/daisyui/compare/v2.23.0...v2.24.0) (2022-08-13)
+
+
+### Features
+
+* refactor `badge` modifier/responsive class name categorization ([3a3e055](https://github.com/saadeghi/daisyui/commit/3a3e05525f458b8e8dea911388364618a9ab1eda))
+
 ## [2.23.0](https://github.com/saadeghi/daisyui/compare/v2.22.1...v2.23.0) (2022-08-13)
 
 
