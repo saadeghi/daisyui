@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.23.0](https://github.com/saadeghi/daisyui/compare/v2.22.1...v2.23.0) (2022-08-13)
+
+
+### Features
+
+* refactor `alert` and `radio` modifier/responsive class name categorization ([b58ecea](https://github.com/saadeghi/daisyui/commit/b58eceaaed3e20287d0ce7e9e5d51e9f854ab84a))
+
+
+### Bug Fixes
+
+* [#952](https://github.com/saadeghi/daisyui/issues/952) ([6ef8ad3](https://github.com/saadeghi/daisyui/commit/6ef8ad3fc39a77c16f03391590248dcdfcda6c4f))
+
 ### [2.22.1](https://github.com/saadeghi/daisyui/compare/v2.22.0...v2.22.1) (2022-08-12)
 
 
