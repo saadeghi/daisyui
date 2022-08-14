@@ -89,4 +89,4 @@ module.exports = {
   <Translate text="For example: <code>btn</code> will become <code>prefix-btn</code>." />  
   <Translate text="If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts." />
   <Translate text="Utility classes like color names (e.g. <code>bg-primary</code>) or border-radius (e.g. <code>rounded-box</code>) will not be affected by this config because they're being added as extensions to Tailwind CSS classes." />  
-  <Translate text="If you use daisyUI `prefix` option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>." />
+  <Translate text="If you use daisyUI <code>prefix</code> option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>." />
