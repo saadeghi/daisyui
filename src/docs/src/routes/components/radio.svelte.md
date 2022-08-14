@@ -14,14 +14,14 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'form-control', desc: 'Container element' },
-  { type:'modifier', class: 'radio', desc: 'For radio input' },
+  { type:'component', class: 'radio', desc: 'For radio input' },
   { type:'modifier', class: 'radio-primary', desc: 'Adds `primary` to radio' },
   { type:'modifier', class: 'radio-secondary', desc: 'Adds `secondary` to radio' },
   { type:'modifier', class: 'radio-accent', desc: 'Adds `accent` to radio' },
-  { type:'modifier', class: 'radio-lg', desc: 'Large radio' },
-  { type:'modifier', class: 'radio-md', desc: 'Medium radio (default)' },
-  { type:'modifier', class: 'radio-sm', desc: 'Small radio' },
-  { type:'modifier', class: 'radio-xs', desc: 'Extra small radio' },
+  { type:'responsive', class: 'radio-lg', desc: 'Large radio' },
+  { type:'responsive', class: 'radio-md', desc: 'Medium radio (default)' },
+  { type:'responsive', class: 'radio-sm', desc: 'Small radio' },
+  { type:'responsive', class: 'radio-xs', desc: 'Extra small radio' },
 ]}"
 />
 

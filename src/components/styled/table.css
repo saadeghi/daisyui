@@ -30,32 +30,6 @@
     }
   }
 
-  :where(:first-child) {
-    :where(:first-child) {
-      :where(th, td) {
-        &:first-child {
-          @apply rounded-tl-lg;
-        }
-        &:last-child {
-          @apply rounded-tr-lg;
-        }
-      }
-    }
-  }
-
-  :where(:last-child) {
-    :where(:last-child) {
-      :where(th, td) {
-        &:first-child {
-          @apply rounded-bl-lg;
-        }
-        &:last-child {
-          @apply rounded-br-lg;
-        }
-      }
-    }
-  }
-
   :where(tbody th, tbody td) {
     @apply bg-base-100;
   }
@@ -65,6 +39,34 @@
       th,
       td {
         @apply bg-base-200;
+      }
+    }
+  }
+}
+
+:where(.table *:first-child) {
+  :where(*:first-child) {
+    :where(th, td) {
+      &:first-child {
+        @apply rounded-tl-lg;
+      }
+
+      &:last-child {
+        @apply rounded-tr-lg;
+      }
+    }
+  }
+}
+
+:where(.table *:last-child) {
+  :where(*:last-child) {
+    :where(th, td) {
+      &:first-child {
+        @apply rounded-bl-lg;
+      }
+
+      &:last-child {
+        @apply rounded-br-lg;
       }
     }
   }
