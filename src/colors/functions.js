@@ -3,7 +3,7 @@ const colorNames = require("./colorNames");
 
 module.exports = {
 
-  generateForegorundColorFrom: function (input, percentage = 0.8) {
+  generateForegroundColorFrom: function (input, percentage = 0.8) {
     if (Color(input).isDark()) {
       let arr = Color(input).mix(Color("white"), percentage).saturate(10).hsl().round().array()
       return arr[0] + " " + arr[1] + "%" + " " + arr[2] + "%";
@@ -81,27 +81,27 @@ module.exports = {
 
         // auto generate content colors
         if (!input.hasOwnProperty("base-content")) {
-          resultObj["--bc"] = this.generateForegorundColorFrom(input["base-100"])
+          resultObj["--bc"] = this.generateForegroundColorFrom(input["base-100"])
         }
         if (!input.hasOwnProperty("primary-content")) {
-          resultObj["--pc"] = this.generateForegorundColorFrom(input["primary"])
+          resultObj["--pc"] = this.generateForegroundColorFrom(input["primary"])
         }
 
         if (!input.hasOwnProperty("secondary-content")) {
-          resultObj["--sc"] = this.generateForegorundColorFrom(input["secondary"])
+          resultObj["--sc"] = this.generateForegroundColorFrom(input["secondary"])
         }
 
         if (!input.hasOwnProperty("accent-content")) {
-          resultObj["--ac"] = this.generateForegorundColorFrom(input["accent"])
+          resultObj["--ac"] = this.generateForegroundColorFrom(input["accent"])
         }
 
         if (!input.hasOwnProperty("neutral-content")) {
-          resultObj["--nc"] = this.generateForegorundColorFrom(input["neutral"])
+          resultObj["--nc"] = this.generateForegroundColorFrom(input["neutral"])
         }
 
         if (!input.hasOwnProperty("info-content")) {
           if (input.hasOwnProperty("info")) {
-            resultObj["--inc"] = this.generateForegorundColorFrom(input["info"])
+            resultObj["--inc"] = this.generateForegroundColorFrom(input["info"])
           } else {
             resultObj["--inc"] = 198 + " " + 100 + "%" + " " + 12 + "%";
           }
@@ -109,7 +109,7 @@ module.exports = {
 
         if (!input.hasOwnProperty("success-content")) {
           if (input.hasOwnProperty("success")) {
-            resultObj["--suc"] = this.generateForegorundColorFrom(input["success"])
+            resultObj["--suc"] = this.generateForegroundColorFrom(input["success"])
           } else {
             resultObj["--suc"] = 158 + " " + 100 + "%" + " " + 10 + "%";
           }
@@ -117,7 +117,7 @@ module.exports = {
 
         if (!input.hasOwnProperty("warning-content")) {
           if (input.hasOwnProperty("warning")) {
-            resultObj["--wac"] = this.generateForegorundColorFrom(input["warning"])
+            resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"])
           } else {
             resultObj["--wac"] = 43 + " " + 100 + "%" + " " + 11 + "%";
           }
@@ -125,7 +125,7 @@ module.exports = {
 
         if (!input.hasOwnProperty("error-content")) {
           if (input.hasOwnProperty("error")) {
-            resultObj["--erc"] = this.generateForegorundColorFrom(input["error"])
+            resultObj["--erc"] = this.generateForegroundColorFrom(input["error"])
           } else {
             resultObj["--erc"] = 0 + " " + 100 + "%" + " " + 14 + "%";
           }
