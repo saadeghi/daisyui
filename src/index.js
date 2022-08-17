@@ -15,7 +15,7 @@ const themes = require("./colors/themes");
 const colorFunctions = require("./colors/functions");
 
 const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss }) => {
-  let diasyuiIncludedItems = [];
+  let daisyuiIncludedItems = [];
   let logs = false;
   if (config("daisyui.logs") != false) {
     logs = true;
@@ -34,33 +34,33 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
   // inject @base style
   if (config("daisyui.base") != false) {
     addBase(base);
-    diasyuiIncludedItems.push("base");
+    daisyuiIncludedItems.push("base");
   }
 
   // inject components
   // because rollupjs doesn't supprt dynamic require
   let file = styled;
   if (config("daisyui.styled") == false && config("daisyui.rtl") != true) {
-    diasyuiIncludedItems.push("unstyled components");
+    daisyuiIncludedItems.push("unstyled components");
     file = unstyled;
   } else if (
     config("daisyui.styled") == false &&
     config("daisyui.rtl") == true
   ) {
-    diasyuiIncludedItems.push("unstyled components");
+    daisyuiIncludedItems.push("unstyled components");
     console.log("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL");
     file = unstyledRtl;
   } else if (
     config("daisyui.styled") != false &&
     config("daisyui.rtl") != true
   ) {
-    diasyuiIncludedItems.push("components");
+    daisyuiIncludedItems.push("components");
     file = styled;
   } else if (
     config("daisyui.styled") !== false &&
     config("daisyui.rtl") == true
   ) {
-    diasyuiIncludedItems.push("components");
+    daisyuiIncludedItems.push("components");
     console.log("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL");
     file = styledRtl;
   }
@@ -85,7 +85,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
   const themeInjector = colorFunctions.injectThemes(addBase, config, themes)
   themeInjector;
 
-  diasyuiIncludedItems.push("themes[" + themeInjector.themeOrder.length + "]");
+  daisyuiIncludedItems.push("themes[" + themeInjector.themeOrder.length + "]");
 
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
@@ -102,14 +102,14 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
       toAdd = postcssJsProcess(toAdd);
     }
     addComponents(toAdd, { variants: ["responsive"] });
-    diasyuiIncludedItems.push("utilities");
+    daisyuiIncludedItems.push("utilities");
   }
   if (logs) {
     console.log(
       "\x1b[32m%s\x1b[0m",
       "✔︎ Including:",
       "\x1b[0m",
-      "" + diasyuiIncludedItems.join(", ")
+      "" + daisyuiIncludedItems.join(", ")
     );
     console.log();
     console.groupEnd();
