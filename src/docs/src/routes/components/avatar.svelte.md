@@ -34,6 +34,13 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar">
+  <div className="w-24 rounded">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Avatar in custom sizes">
@@ -79,6 +86,28 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar">
+  <div className="w-32 rounded">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>
+<div className="$$avatar">
+  <div className="w-20 rounded">
+    <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+  </div>
+</div>
+<div className="$$avatar">
+  <div className="w-16 rounded">
+    <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+  </div>
+</div>
+<div className="$$avatar">
+  <div className="w-8 rounded">
+    <img src="https://placeimg.com/192/192/people" alt="Tailwind-CSS-Avatar-component" />
+  </div>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Avatar rounded">
@@ -100,6 +129,18 @@ data="{[
 </div>
 <div class="$$avatar">
   <div class="w-24 rounded-full">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar">
+  <div className="w-24 rounded-xl">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>
+<div className="$$avatar">
+  <div className="w-24 rounded-full">
     <img src="https://placeimg.com/192/192/people" />
   </div>
 </div>`
@@ -135,6 +176,23 @@ data="{[
 </div>
 <div class="$$avatar">
   <div class="w-24 $$mask $$mask-triangle">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar">
+  <div className="w-24 $$mask $$mask-squircle">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>
+<div className="$$avatar">
+  <div className="w-24 $$mask $$mask-hexagon">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>
+<div className="$$avatar">
+  <div className="w-24 $$mask $$mask-triangle">
     <img src="https://placeimg.com/192/192/people" />
   </div>
 </div>`
@@ -183,6 +241,30 @@ data="{[
   </div>
   <div class="$$avatar">
     <div class="w-12">
+      <img src="https://placeimg.com/192/192/people" />
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar-group -space-x-6">
+  <div className="$$avatar">
+    <div className="w-12">
+      <img src="https://placeimg.com/192/192/people" />
+    </div>
+  </div>
+  <div className="$$avatar">
+    <div className="w-12">
+      <img src="https://placeimg.com/192/192/people" />
+    </div>
+  </div>
+  <div className="$$avatar">
+    <div className="w-12">
+      <img src="https://placeimg.com/192/192/people" />
+    </div>
+  </div>
+  <div className="$$avatar">
+    <div className="w-12">
       <img src="https://placeimg.com/192/192/people" />
     </div>
   </div>
@@ -237,6 +319,30 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar-group -space-x-6">
+  <div className="$$avatar">
+    <div className="w-12">
+      <img src="https://placeimg.com/192/192/people" />
+    </div>
+  </div>
+  <div className="$$avatar">
+    <div className="w-12">
+      <img src="https://placeimg.com/192/192/people" />
+    </div>
+  </div>
+  <div className="$$avatar">
+    <div className="w-12">
+      <img src="https://placeimg.com/192/192/people" />
+    </div>
+  </div>
+  <div className="$$avatar $$placeholder">
+    <div className="w-12 bg-neutral-focus text-neutral-content">
+      <span>+99</span>
+    </div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Avatar with ring">
@@ -248,6 +354,13 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar">
   <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar">
+  <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
     <img src="https://placeimg.com/192/192/people" />
   </div>
 </div>`
@@ -273,6 +386,18 @@ data="{[
 </div>
 <div class="$$avatar $$offline">
   <div class="w-24 rounded-full">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar $$online">
+  <div className="w-24 rounded-full">
+    <img src="https://placeimg.com/192/192/people" />
+  </div>
+</div>
+<div className="$$avatar $$offline">
+  <div className="w-24 rounded-full">
     <img src="https://placeimg.com/192/192/people" />
   </div>
 </div>`
@@ -319,6 +444,28 @@ data="{[
 <div class="$$avatar $$placeholder">
   <div class="bg-neutral-focus text-neutral-content rounded-full w-8">
     <span class="text-xs">AA</span>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$avatar $$placeholder">
+  <div className="bg-neutral-focus text-neutral-content rounded-full w-24">
+    <span className="text-3xl">K</span>
+  </div>
+</div> 
+<div className="$$avatar $$online $$placeholder">
+  <div className="bg-neutral-focus text-neutral-content rounded-full w-16">
+    <span className="text-xl">JO</span>
+  </div>
+</div> 
+<div className="$$avatar $$placeholder">
+  <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+    <span>MX</span>
+  </div>
+</div> 
+<div className="$$avatar $$placeholder">
+  <div className="bg-neutral-focus text-neutral-content rounded-full w-8">
+    <span className="text-xs">AA</span>
   </div>
 </div>`
 }</pre>

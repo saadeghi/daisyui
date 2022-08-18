@@ -43,6 +43,11 @@ data="{[
   <span style="--value:${counter};"></span>
 </span>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<span className="$$countdown">
+  <span style={{"--value":${counter}}}></span>
+</span>`
+}</pre>
 </Component>
 
 <Component title="Large text">
@@ -52,6 +57,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown font-mono text-6xl">
   <span style="--value:${counter};"></span>
+</span>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<span className="$$countdown font-mono text-6xl">
+  <span style={{"--value":${counter}}}></span>
 </span>`
 }</pre>
 </Component>
@@ -69,6 +79,13 @@ data="{[
   <span style="--value:${counter};"></span>s
 </span>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<span className="$$countdown font-mono text-2xl">
+  <span style={{"--value":10}}></span>h
+  <span style={{"--value":24}}></span>m
+  <span style={{"--value":${counter}}}></span>s
+</span>`
+}</pre>
 </Component>
 
 <Component title="Clock countdown with colons">
@@ -82,6 +99,13 @@ data="{[
   <span style="--value:10;"></span>:
   <span style="--value:24;"></span>:
   <span style="--value:${counter};"></span>
+</span>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<span className="$$countdown font-mono text-2xl">
+  <span style={{"--value":10}}></span>:
+  <span style={{"--value":24}}></span>:
+  <span style={{"--value":${counter}}}></span>
 </span>`
 }</pre>
 </Component>
@@ -136,6 +160,34 @@ data="{[
   <div>
     <span class="$$countdown font-mono text-4xl">
       <span style="--value:${counter};"></span>
+    </span>
+    sec
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="flex gap-5">
+  <div>
+    <span className="$$countdown font-mono text-4xl">
+        <span style={{"--value":15}}></span>
+    </span>
+    days
+  </div> 
+  <div>
+    <span className="$$countdown font-mono text-4xl">
+        <span style={{"--value":10}}></span>
+    </span>
+    hours
+  </div> 
+  <div>
+    <span className="$$countdown font-mono text-4xl">
+      <span style={{"--value":24}}></span>
+    </span>
+    min
+  </div> 
+  <div>
+    <span className="$$countdown font-mono text-4xl">
+      <span style={{"--value":${counter}}}></span>
     </span>
     sec
   </div>
@@ -198,6 +250,34 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+  <div className="flex flex-col">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":15}}></span>
+    </span>
+    days
+  </div> 
+  <div className="flex flex-col">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":10}}></span>
+    </span>
+    hours
+  </div> 
+  <div className="flex flex-col">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":24}}></span>
+    </span>
+    min
+  </div> 
+  <div className="flex flex-col">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":${counter}}}></span>
+    </span>
+    sec
+  </div>
+</div>`
+}</pre>
 </Component>
 
 <Component title="In boxes">
@@ -250,6 +330,34 @@ data="{[
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
       <span style="--value:${counter};"></span>
+    </span>
+    sec
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":15}}></span>
+    </span>
+    days
+  </div> 
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":10}}></span>
+    </span>
+    hours
+  </div> 
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":24}}></span>
+    </span>
+    min
+  </div> 
+  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span className="$$countdown font-mono text-5xl">
+      <span style={{"--value":${counter}}}></span>
     </span>
     sec
   </div>

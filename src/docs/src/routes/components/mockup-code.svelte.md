@@ -20,9 +20,16 @@ data="{[
 <Component title="mockup code with line prefix">
 <div class="mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  <pre data-prefix="$"><code>npm i daisyui</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-code">
+  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-code">
+  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+</div>`
+}</pre>
   <pre data-prefix="$"><code>npm i daisyui</code></pre>
 </div>`
 }</pre>
@@ -31,14 +38,27 @@ data="{[
 <Component title="Multi line">
 <div class="mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  <pre data-prefix="$"><code>npm i daisyui</code></pre>
   <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+  <pre data-prefix=">" className="text-warning"><code>installing...</code></pre>
   <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+  <pre data-prefix=">" className="text-success"><code>Done!</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-code">
   <pre data-prefix="$"><code>npm i daisyui</code></pre> 
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-code">
+  <pre data-prefix="$"><code>npm i daisyui</code></pre> 
   <pre data-prefix=">" class="text-warning"><code>installing...</code></pre> 
+  <pre data-prefix="$"><code>npm i daisyui</code></pre> 
+  <pre data-prefix=">" className="text-warning"><code>installing...</code></pre> 
   <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+  <pre data-prefix=">" className="text-warning"><code>installing...</code></pre> 
+  <pre data-prefix=">" className="text-success"><code>Done!</code></pre>
+</div>`
+}</pre>
+  <pre data-prefix=">" className="text-success"><code>Done!</code></pre>
 </div>`
 }</pre>
 </Component>
@@ -46,14 +66,27 @@ data="{[
 <Component title="Highlighted line">
 <div class="mockup-code">
   <pre data-prefix="1"><code>npm i daisyui</code></pre> 
+  <pre data-prefix="1"><code>npm i daisyui</code></pre> 
+  <pre data-prefix="2"><code>installing...</code></pre> 
   <pre data-prefix="2"><code>installing...</code></pre> 
   <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
+  <pre data-prefix="3" className="bg-warning text-warning-content"><code>Error!</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-code">
   <pre data-prefix="1"><code>npm i daisyui</code></pre> 
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-code">
+  <pre data-prefix="1"><code>npm i daisyui</code></pre> 
+  <pre data-prefix="2"><code>installing...</code></pre> 
+  <pre data-prefix="1"><code>npm i daisyui</code></pre> 
   <pre data-prefix="2"><code>installing...</code></pre> 
   <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
+  <pre data-prefix="2"><code>installing...</code></pre> 
+  <pre data-prefix="3" className="bg-warning text-warning-content"><code>Error!</code></pre>
+</div>`
+}</pre>
+  <pre data-prefix="3" className="bg-warning text-warning-content"><code>Error!</code></pre>
 </div>`
 }</pre>
 </Component>
@@ -61,9 +94,16 @@ data="{[
 <Component title="Long line will scroll">
 <div class="mockup-code">
   <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
+  <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-code">
+  <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-code">
+  <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
+</div>`
+}</pre>
   <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
 </div>`
 }</pre>
@@ -72,9 +112,16 @@ data="{[
 <Component title="Without prefix">
 <div class="mockup-code">
   <pre><code>without prefix</code></pre>
+  <pre><code>without prefix</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-code">
+  <pre><code>without prefix</code></pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-code">
+  <pre><code>without prefix</code></pre>
+</div>`
+}</pre>
   <pre><code>without prefix</code></pre>
 </div>`
 }</pre>
@@ -83,9 +130,16 @@ data="{[
 <Component title="With color">
 <div class="mockup-code bg-primary text-primary-content">
   <pre><code>can be any color!</code></pre>
+  <pre><code>can be any color!</code></pre>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-code bg-primary text-primary-content">
+  <pre><code>can be any color!</code></pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-code bg-primary text-primary-content">
+  <pre><code>can be any color!</code></pre>
+</div>`
+}</pre>
   <pre><code>can be any color!</code></pre>
 </div>`
 }</pre>

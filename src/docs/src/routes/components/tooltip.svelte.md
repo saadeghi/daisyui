@@ -39,6 +39,11 @@ data="{[
   <button class="$$btn">Hover me</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip" data-tip="hello">
+  <button className="$$btn">Hover me</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Force open">
@@ -50,6 +55,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$tooltip $$tooltip-open" data-tip="hello">
   <button class="$$btn">Force open</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open" data-tip="hello">
+  <button className="$$btn">Force open</button>
 </div>`
 }</pre>
 </Component>
@@ -65,6 +75,11 @@ data="{[
   <button class="$$btn">Bottom</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-bottom" data-tip="hello">
+  <button className="$$btn">Bottom</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Left">
@@ -76,6 +91,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$tooltip $$tooltip-open $$tooltip-left" data-tip="hello">
   <button class="$$btn">Left</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-left" data-tip="hello">
+  <button className="$$btn">Left</button>
 </div>`
 }</pre>
 </Component>
@@ -91,6 +111,11 @@ data="{[
   <button class="$$btn">Right</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-right" data-tip="hello">
+  <button className="$$btn">Right</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Primary color">
@@ -102,6 +127,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$tooltip $$tooltip-open $$tooltip-primary" data-tip="primary">
   <button class="$$btn $$btn-primary">primary</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-primary" data-tip="primary">
+  <button className="$$btn $$btn-primary">primary</button>
 </div>`
 }</pre>
 </Component>
@@ -117,6 +147,11 @@ data="{[
   <button class="$$btn $$btn-secondary">secondary</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-secondary" data-tip="secondary">
+  <button className="$$btn $$btn-secondary">secondary</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Accent color">
@@ -128,6 +163,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$tooltip $$tooltip-open $$tooltip-accent" data-tip="accent">
   <button class="$$btn $$btn-accent">accent</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-accent" data-tip="accent">
+  <button className="$$btn $$btn-accent">accent</button>
 </div>`
 }</pre>
 </Component>
@@ -143,6 +183,11 @@ data="{[
   <button class="$$btn $$btn-info">info</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-info" data-tip="info">
+  <button className="$$btn $$btn-info">info</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Success color">
@@ -154,6 +199,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$tooltip $$tooltip-open $$tooltip-success" data-tip="success">
   <button class="$$btn $$btn-success">success</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-success" data-tip="success">
+  <button className="$$btn $$btn-success">success</button>
 </div>`
 }</pre>
 </Component>
@@ -169,6 +219,11 @@ data="{[
   <button class="$$btn $$btn-warning">warning</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-warning" data-tip="warning">
+  <button className="$$btn $$btn-warning">warning</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Error color">
@@ -180,6 +235,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$tooltip $$tooltip-open $$tooltip-error" data-tip="error">
   <button class="$$btn $$btn-error">error</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-error" data-tip="error">
+  <button className="$$btn $$btn-error">error</button>
 </div>`
 }</pre>
 </Component>

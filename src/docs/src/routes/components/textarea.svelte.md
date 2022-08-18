@@ -33,6 +33,9 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea" placeholder="Bio"></textarea>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea" placeholder="Bio"></textarea>`
+}</pre>
 </Component>
 
 <Component title="Textarea with border">
@@ -40,12 +43,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-bordered" placeholder="Bio"></textarea>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-bordered" placeholder="Bio"></textarea>`
+}</pre>
 </Component>
 
 <Component title="Ghost (no background)">
 <textarea class="textarea textarea-ghost" placeholder="Bio"></textarea>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-ghost" placeholder="Bio"></textarea>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-ghost" placeholder="Bio"></textarea>`
 }</pre>
 </Component>
 
@@ -74,12 +83,28 @@ data="{[
   </label> 
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$form-control">
+  <label className="$$label">
+    <span className="$$label-text">Your bio</span>
+    <span className="$$label-text-alt">Alt label</span>
+  </label> 
+  <textarea className="$$textarea $$textarea-bordered h-24" placeholder="Bio"></textarea>
+  <label className="$$label">
+    <span className="$$label-text-alt">Your bio</span>
+    <span className="$$label-text-alt">Alt label</span>
+  </label> 
+</div>`
+}</pre>
 </Component>
 
 <Component title="Primary color">
 <textarea class="textarea textarea-primary" placeholder="Bio"></textarea>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-primary" placeholder="Bio"></textarea>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-primary" placeholder="Bio"></textarea>`
 }</pre>
 </Component>
 
@@ -88,12 +113,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-secondary" placeholder="Bio"></textarea>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-secondary" placeholder="Bio"></textarea>`
+}</pre>
 </Component>
 
 <Component title="Accent color">
 <textarea class="textarea textarea-accent" placeholder="Bio"></textarea>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-accent" placeholder="Bio"></textarea>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-accent" placeholder="Bio"></textarea>`
 }</pre>
 </Component>
 
@@ -102,12 +133,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-info" placeholder="Bio"></textarea>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-info" placeholder="Bio"></textarea>`
+}</pre>
 </Component>
 
 <Component title="Success color">
 <textarea class="textarea textarea-success" placeholder="Bio"></textarea>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-success" placeholder="Bio"></textarea>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-success" placeholder="Bio"></textarea>`
 }</pre>
 </Component>
 
@@ -116,6 +153,9 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-warning" placeholder="Bio"></textarea>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-warning" placeholder="Bio"></textarea>`
+}</pre>
 </Component>
 
 <Component title="Error color">
@@ -123,11 +163,17 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea $$textarea-error" placeholder="Bio"></textarea>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea $$textarea-error" placeholder="Bio"></textarea>`
+}</pre>
 </Component>
 
 <Component title="Disabled">
 <textarea class="textarea" placeholder="Bio" disabled></textarea>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<textarea class="$$textarea" placeholder="Bio" disabled></textarea>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<textarea className="$$textarea" placeholder="Bio" disabled></textarea>`
 }</pre>
 </Component>

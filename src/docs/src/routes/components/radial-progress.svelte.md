@@ -33,6 +33,9 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$radial-progress" style="--value:70;">70%</div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$radial-progress" style={{"--value":70}}>70%</div>`
+}</pre>
 </Component>
 
 <Component title="Different values">
@@ -48,12 +51,22 @@ data="{[
 <div class="$$radial-progress" style="--value:80;">80%</div>
 <div class="$$radial-progress" style="--value:100;">100%</div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$radial-progress" style={{"--value":0}}>0%</div>
+<div className="$$radial-progress" style={{"--value":20}}>20%</div>
+<div className="$$radial-progress" style={{"--value":60}}>60%</div>
+<div className="$$radial-progress" style={{"--value":80}}>80%</div>
+<div className="$$radial-progress" style={{"--value":100}}>100%</div>`
+}</pre>
 </Component>
 
 <Component title="Custom color">
 <div class="radial-progress text-primary" style="--value:70;">70%</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$radial-progress text-primary" style="--value:70;">70%</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$radial-progress text-primary" style={{"--value":70}}>70%</div>`
 }</pre>
 </Component>
 
@@ -62,13 +75,20 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;">70%</div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$radial-progress bg-primary text-primary-content border-4 border-primary" stylstyle={{"--value":70}}>70%</div>`
+}</pre>
 </Component>
 
 <Component title="Custom size and custom thickness">
 <div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2px;">70%</div>
-<div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;">80%</div>
+<div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;">70%</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2px;">70%</div>
-<div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;">80%</div>`
+<div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;">70%</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }}>70%</div>
+<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2rem" }}>70%</div>`
 }</pre>
 </Component>

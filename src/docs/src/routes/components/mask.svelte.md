@@ -43,12 +43,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-squircle" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-squircle" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Heart">
 <img alt="Heart CSS mask" class="mask mask-heart w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-heart" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-heart" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -57,12 +63,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-hexagon" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-hexagon" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Hexagon-2">
 <img alt="Hexagon-2 CSS mask" class="mask mask-hexagon-2 w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-hexagon-2" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-hexagon-2" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -71,12 +83,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-decagon" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-decagon" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Pentagon">
 <img alt="Pentagon CSS mask" class="mask mask-pentagon w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-pentagon" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-pentagon" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -85,12 +103,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-diamond" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-diamond" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Square">
 <img alt="Square CSS mask" class="mask mask-square w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-square" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-square" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -99,12 +123,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-circle" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-circle" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Parallelogram">
 <img alt="Parallelogram CSS mask" class="mask mask-parallelogram w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-parallelogram" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-parallelogram" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -113,12 +143,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-parallelogram-2" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-parallelogram-2" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Parallelogram-3">
 <img alt="Parallelogram-3 CSS mask" class="mask mask-parallelogram-3 w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-parallelogram-3" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-parallelogram-3" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -127,12 +163,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-parallelogram-4" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-parallelogram-4" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Star">
 <img alt="Star CSS mask" class="mask mask-star w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-star" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-star" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -141,12 +183,18 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-star-2" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-star-2" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Triangle">
 <img alt="Triangle CSS mask" class="mask mask-triangle w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-triangle" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-triangle" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
 
@@ -155,6 +203,9 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-triangle-2" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-triangle-2" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Triangle-3">
@@ -162,11 +213,17 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-triangle-3" src="https://placeimg.com/160/160/arch" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-triangle-3" src="https://placeimg.com/160/160/arch" />`
+}</pre>
 </Component>
 
 <Component title="Triangle-4">
 <img alt="Triangle-4 CSS mask" class="mask mask-triangle-4 w-40 h-40" src="https://placeimg.com/320/320/arch" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<img class="$$mask $$mask-triangle-4" src="https://placeimg.com/160/160/arch" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<img className="$$mask $$mask-triangle-4" src="https://placeimg.com/160/160/arch" />`
 }</pre>
 </Component>
