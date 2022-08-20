@@ -1,5 +1,5 @@
-import { writable } from "svelte/store"
+import { writable } from "svelte-local-storage-store"
 
 // export let store = writable();
 
-export const prefix = writable("");
+export const prefix = writable("daisyui-prefix", "")
