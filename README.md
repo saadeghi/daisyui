@@ -146,7 +146,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Stack
 
 - Navigation
-  - [ ] App bar
+  - [x] Bottom Navigation
   - [x] Breadcrumbs
   - [x] Link
   - [x] Menu
