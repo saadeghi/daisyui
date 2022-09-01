@@ -243,7 +243,6 @@ module.exports = {
     "base-200": "#f9fafb",
     "base-300": "#d1d5db",
     "--rounded-btn": "1.9rem",
-    "--rounded-btn": "1.9rem",
   },
   "[data-theme=retro]": {
     primary: "#ef9995",
