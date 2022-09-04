@@ -61,6 +61,9 @@
 [dir="rtl"] .drawer.drawer-end > .drawer-toggle:checked ~ .drawer-side > .drawer-overlay + * {
   --tw-translate-x: 0px;
 }
+[dir="rtl"] .drawer.drawer-end > .drawer-toggle:checked ~ .drawer-content {
+  --tw-translate-x: 0.5rem;
+}
 
 @media (min-width: 1024px) {
   .drawer-mobile {
