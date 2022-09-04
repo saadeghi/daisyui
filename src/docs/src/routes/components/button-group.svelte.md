@@ -31,6 +31,13 @@ data="{[
   <button class="$$btn">Button</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group">
+  <button className="$$btn $$btn-active">Button</button>
+  <button className="$$btn">Button</button>
+  <button className="$$btn">Button</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Button group vertical">
@@ -44,6 +51,13 @@ data="{[
   <button class="$$btn $$btn-active">Button</button>
   <button class="$$btn">Button</button>
   <button class="$$btn">Button</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group btn-group-vertical">
+  <button className="$$btn $$btn-active">Button</button>
+  <button className="$$btn">Button</button>
+  <button className="$$btn">Button</button>
 </div>`
 }</pre>
 </Component>
@@ -61,6 +75,14 @@ data="{[
   <input type="radio" name="options" data-title="2" class="$$btn" checked />
   <input type="radio" name="options" data-title="3" class="$$btn" />
   <input type="radio" name="options" data-title="4" class="$$btn" />
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group">
+  <input type="radio" name="options" data-title="1" className="$$btn" />
+  <input type="radio" name="options" data-title="2" className="$$btn" checked />
+  <input type="radio" name="options" data-title="3" className="$$btn" />
+  <input type="radio" name="options" data-title="4" className="$$btn" />
 </div>`
 }</pre>
 </Component>

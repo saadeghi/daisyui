@@ -39,6 +39,13 @@ data="{[
 <progress class="$$progress w-56" value="70" max="100"></progress>
 <progress class="$$progress w-56" value="100" max="100"></progress>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress w-56" value="0" max="100"></progress>
+<progress className="$$progress w-56" value="10" max="100"></progress>
+<progress className="$$progress w-56" value="40" max="100"></progress>
+<progress className="$$progress w-56" value="70" max="100"></progress>
+<progress className="$$progress w-56" value="100" max="100"></progress>`
+}</pre>
 </Component>
 
 <Component title="Primary color">
@@ -55,6 +62,13 @@ data="{[
 <progress class="$$progress $$progress-primary w-56" value="40" max="100"></progress>
 <progress class="$$progress $$progress-primary w-56" value="70" max="100"></progress>
 <progress class="$$progress $$progress-primary w-56" value="100" max="100"></progress>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress $$progress-primary w-56" value="0" max="100"></progress>
+<progress className="$$progress $$progress-primary w-56" value="10" max="100"></progress>
+<progress className="$$progress $$progress-primary w-56" value="40" max="100"></progress>
+<progress className="$$progress $$progress-primary w-56" value="70" max="100"></progress>
+<progress className="$$progress $$progress-primary w-56" value="100" max="100"></progress>`
 }</pre>
 </Component>
 
@@ -73,6 +87,13 @@ data="{[
 <progress class="$$progress $$progress-secondary w-56" value="70" max="100"></progress>
 <progress class="$$progress $$progress-secondary w-56" value="100" max="100"></progress>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress $$progress-secondary w-56" value="0" max="100"></progress>
+<progress className="$$progress $$progress-secondary w-56" value="10" max="100"></progress>
+<progress className="$$progress $$progress-secondary w-56" value="40" max="100"></progress>
+<progress className="$$progress $$progress-secondary w-56" value="70" max="100"></progress>
+<progress className="$$progress $$progress-secondary w-56" value="100" max="100"></progress>`
+}</pre>
 </Component>
 
 <Component title="Accent color">
@@ -89,6 +110,13 @@ data="{[
 <progress class="$$progress $$progress-accent w-56" value="40" max="100"></progress>
 <progress class="$$progress $$progress-accent w-56" value="70" max="100"></progress>
 <progress class="$$progress $$progress-accent w-56" value="100" max="100"></progress>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress $$progress-accent w-56" value="0" max="100"></progress>
+<progress className="$$progress $$progress-accent w-56" value="10" max="100"></progress>
+<progress className="$$progress $$progress-accent w-56" value="40" max="100"></progress>
+<progress className="$$progress $$progress-accent w-56" value="70" max="100"></progress>
+<progress className="$$progress $$progress-accent w-56" value="100" max="100"></progress>`
 }</pre>
 </Component>
 
@@ -107,6 +135,13 @@ data="{[
 <progress class="$$progress $$progress-success w-56" value="70" max="100"></progress>
 <progress class="$$progress $$progress-success w-56" value="100" max="100"></progress>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress $$progress-success w-56" value="0" max="100"></progress>
+<progress className="$$progress $$progress-success w-56" value="10" max="100"></progress>
+<progress className="$$progress $$progress-success w-56" value="40" max="100"></progress>
+<progress className="$$progress $$progress-success w-56" value="70" max="100"></progress>
+<progress className="$$progress $$progress-success w-56" value="100" max="100"></progress>`
+}</pre>
 </Component>
 
 <Component title="Info color">
@@ -123,6 +158,13 @@ data="{[
 <progress class="$$progress $$progress-info w-56" value="40" max="100"></progress>
 <progress class="$$progress $$progress-info w-56" value="70" max="100"></progress>
 <progress class="$$progress $$progress-info w-56" value="100" max="100"></progress>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress $$progress-info w-56" value="0" max="100"></progress>
+<progress className="$$progress $$progress-info w-56" value="10" max="100"></progress>
+<progress className="$$progress $$progress-info w-56" value="40" max="100"></progress>
+<progress className="$$progress $$progress-info w-56" value="70" max="100"></progress>
+<progress className="$$progress $$progress-info w-56" value="100" max="100"></progress>`
 }</pre>
 </Component>
 
@@ -141,6 +183,13 @@ data="{[
 <progress class="$$progress $$progress-warning w-56" value="70" max="100"></progress>
 <progress class="$$progress $$progress-warning w-56" value="100" max="100"></progress>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress $$progress-warning w-56" value="0" max="100"></progress>
+<progress className="$$progress $$progress-warning w-56" value="10" max="100"></progress>
+<progress className="$$progress $$progress-warning w-56" value="40" max="100"></progress>
+<progress className="$$progress $$progress-warning w-56" value="70" max="100"></progress>
+<progress className="$$progress $$progress-warning w-56" value="100" max="100"></progress>`
+}</pre>
 </Component>
 
 <Component title="Error color">
@@ -158,11 +207,21 @@ data="{[
 <progress class="$$progress $$progress-error w-56" value="70" max="100"></progress>
 <progress class="$$progress $$progress-error w-56" value="100" max="100"></progress>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="$$progress $$progress-error w-56" value="0" max="100"></progress>
+<progress className="$$progress $$progress-error w-56" value="10" max="100"></progress>
+<progress className="$$progress $$progress-error w-56" value="40" max="100"></progress>
+<progress className="$$progress $$progress-error w-56" value="70" max="100"></progress>
+<progress className="$$progress $$progress-error w-56" value="100" max="100"></progress>`
+}</pre>
 </Component>
 
 <Component title="Indeterminate (without value)">
 <progress class="progress w-56"></progress>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<progress class="progress w-56"></progress>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<progress className="progress w-56"></progress>`
 }</pre>
 </Component>

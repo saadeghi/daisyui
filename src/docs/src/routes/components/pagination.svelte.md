@@ -32,6 +32,14 @@ data="{[
   <button class="$$btn">4</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group">
+  <button className="$$btn">1</button>
+  <button className="$$btn $$btn-active">2</button>
+  <button className="$$btn">3</button>
+  <button className="$$btn">4</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Sizes">
@@ -87,6 +95,32 @@ data="{[
   <button class="$$btn $$btn-lg">4</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group">
+  <button className="$$btn $$btn-xs">1</button>
+  <button className="$$btn $$btn-xs $$btn-active">2</button>
+  <button className="$$btn $$btn-xs">3</button>
+  <button className="$$btn $$btn-xs">4</button>
+</div>
+<div className="$$btn-group">
+  <button className="$$btn $$btn-sm">1</button>
+  <button className="$$btn $$btn-sm $$btn-active">2</button>
+  <button className="$$btn $$btn-sm">3</button>
+  <button className="$$btn $$btn-sm">4</button>
+</div>
+<div className="$$btn-group">
+  <button className="$$btn $$btn-md">1</button>
+  <button className="$$btn $$btn-md $$btn-active">2</button>
+  <button className="$$btn $$btn-md">3</button>
+  <button className="$$btn $$btn-md">4</button>
+</div>
+<div className="$$btn-group">
+  <button className="$$btn $$btn-lg">1</button>
+  <button className="$$btn $$btn-lg $$btn-active">2</button>
+  <button className="$$btn $$btn-lg">3</button>
+  <button className="$$btn $$btn-lg">4</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="With a disabled button">
@@ -106,6 +140,15 @@ data="{[
   <button class="$$btn">100</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group">
+  <button className="$$btn">1</button>
+  <button className="$$btn">2</button>
+  <button className="$$btn $$btn-disabled">...</button>
+  <button className="$$btn">99</button>
+  <button className="$$btn">100</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Extra small buttons">
@@ -121,6 +164,13 @@ data="{[
   <button class="$$btn">»</button>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group">
+  <button className="$$btn">«</button>
+  <button className="$$btn">Page 22</button>
+  <button className="$$btn">»</button>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Nex/Prev outline buttons with equal width">
@@ -132,6 +182,12 @@ data="{[
 `<div class="$$btn-group grid grid-cols-2">
   <button class="$$btn $$btn-outline">Previous page</button>
   <button class="$$btn $$btn-outline">Next</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group grid grid-cols-2">
+  <button className="$$btn $$btn-outline">Previous page</button>
+  <button className="$$btn $$btn-outline">Next</button>
 </div>`
 }</pre>
 </Component>

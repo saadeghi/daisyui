@@ -39,6 +39,13 @@ data="{[
   <a class="$$tab">Tab 3</a>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tabs">
+  <a className="$$tab">Tab 1</a> 
+  <a className="$$tab $$tab-active">Tab 2</a> 
+  <a className="$$tab">Tab 3</a>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Bordered">
@@ -52,6 +59,13 @@ data="{[
   <a class="$$tab $$tab-bordered">Tab 1</a> 
   <a class="$$tab $$tab-bordered $$tab-active">Tab 2</a> 
   <a class="$$tab $$tab-bordered">Tab 3</a>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tabs">
+  <a className="$$tab $$tab-bordered">Tab 1</a> 
+  <a className="$$tab $$tab-bordered $$tab-active">Tab 2</a> 
+  <a className="$$tab $$tab-bordered">Tab 3</a>
 </div>`
 }</pre>
 </Component>
@@ -69,6 +83,13 @@ data="{[
   <a class="$$tab $$tab-lifted">Tab 3</a>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tabs">
+  <a className="$$tab $$tab-lifted">Tab 1</a> 
+  <a className="$$tab $$tab-lifted $$tab-active">Tab 2</a> 
+  <a className="$$tab $$tab-lifted">Tab 3</a>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Boxed">
@@ -82,6 +103,13 @@ data="{[
   <a class="$$tab">Tab 1</a> 
   <a class="$$tab $$tab-active">Tab 2</a> 
   <a class="$$tab">Tab 3</a>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tabs tabs-boxed">
+  <a className="$$tab">Tab 1</a> 
+  <a className="$$tab $$tab-active">Tab 2</a> 
+  <a className="$$tab">Tab 3</a>
 </div>`
 }</pre>
 </Component>
@@ -133,6 +161,32 @@ data="{[
   <a class="$$tab $$tab-lg $$tab-lifted">Large</a> 
   <a class="$$tab $$tab-lg $$tab-lifted $$tab-active">Large</a> 
   <a class="$$tab $$tab-lg $$tab-lifted">Large</a>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<!-- xs -->
+<div className="$$tabs">
+  <a className="$$tab $$tab-xs $$tab-lifted">Tiny</a> 
+  <a className="$$tab $$tab-xs $$tab-lifted $$tab-active">Tiny</a> 
+  <a className="$$tab $$tab-xs $$tab-lifted">Tiny</a>
+</div>
+<!-- sm -->
+<div className="$$tabs">
+  <a className="$$tab $$tab-sm $$tab-lifted">Small</a> 
+  <a className="$$tab $$tab-sm $$tab-lifted $$tab-active">Small</a> 
+  <a className="$$tab $$tab-sm $$tab-lifted">Small</a>
+</div>
+<!-- md -->
+<div className="$$tabs">
+  <a className="$$tab $$tab-lifted">Normal</a> 
+  <a className="$$tab $$tab-lifted $$tab-active">Normal</a> 
+  <a className="$$tab $$tab-lifted">Normal</a>
+</div>
+<!-- lg -->
+<div className="$$tabs">
+  <a className="$$tab $$tab-lg $$tab-lifted">Large</a> 
+  <a className="$$tab $$tab-lg $$tab-lifted $$tab-active">Large</a> 
+  <a className="$$tab $$tab-lg $$tab-lifted">Large</a>
 </div>`
 }</pre>
 </Component>

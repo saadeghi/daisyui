@@ -32,6 +32,14 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-phone">
+  <div className="$$camera"></div> 
+  <div className="$$display">
+    <div className="$$artboard $$artboard-demo $$phone-1">Hi.</div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 <Component title="With color">
@@ -46,6 +54,14 @@ data="{[
   <div class="$$camera"></div> 
   <div class="$$display">
     <div class="$$artboard $$artboard-demo $$phone-1">Hi.</div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$mockup-phone border-primary">
+  <div className="$$camera"></div> 
+  <div className="$$display">
+    <div className="$$artboard $$artboard-demo $$phone-1">Hi.</div>
   </div>
 </div>`
 }</pre>

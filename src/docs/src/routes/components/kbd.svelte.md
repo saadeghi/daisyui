@@ -26,6 +26,9 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<kbd class="$$kbd">A</kbd>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<kbd className="$$kbd">A</kbd>`
+}</pre>
 </Component>
 
 <Component title="Kbd sizes">
@@ -39,12 +42,21 @@ data="{[
 <kbd class="$$kbd $$kbd-sm">Shift</kbd>
 <kbd class="$$kbd $$kbd-xs">Shift</kbd>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<kbd className="$$kbd $$kbd-lg">Shift</kbd>
+<kbd className="$$kbd $$kbd-md">Shift</kbd>
+<kbd className="$$kbd $$kbd-sm">Shift</kbd>
+<kbd className="$$kbd $$kbd-xs">Shift</kbd>`
+}</pre>
 </Component>
 
 <Component title="In text">
 Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `Press <kbd class="$$kbd $$kbd-sm">F</kbd> to pay respects.`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`Press <kbd className="$$kbd $$kbd-sm">F</kbd> to pay respects.`
 }</pre>
 </Component>
 
@@ -61,6 +73,13 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
 +
 <kbd class="$$kbd">del</kbd>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<kbd className="$$kbd">ctrl</kbd>
++
+<kbd className="$$kbd">shift</kbd>
++
+<kbd className="$$kbd">del</kbd>`
+}</pre>
 </Component>
 
 <Component title="Function Keys">
@@ -73,6 +92,12 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
 <kbd class="$$kbd">⌥</kbd>
 <kbd class="$$kbd">⇧</kbd>
 <kbd class="$$kbd">⌃</kbd>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<kbd className="$$kbd">⌘</kbd>
+<kbd className="$$kbd">⌥</kbd>
+<kbd className="$$kbd">⇧</kbd>
+<kbd className="$$kbd">⌃</kbd>`
 }</pre>
 </Component>
 
@@ -147,6 +172,41 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
   <kbd class="$$kbd">/</kbd>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="flex justify-center gap-1 my-1 w-full">
+  <kbd className="$$kbd">q</kbd>
+  <kbd className="$$kbd">w</kbd>
+  <kbd className="$$kbd">e</kbd>
+  <kbd className="$$kbd">r</kbd>
+  <kbd className="$$kbd">t</kbd>
+  <kbd className="$$kbd">y</kbd>
+  <kbd className="$$kbd">u</kbd>
+  <kbd className="$$kbd">i</kbd>
+  <kbd className="$$kbd">o</kbd>
+  <kbd className="$$kbd">p</kbd>
+</div> 
+<div className="flex justify-center gap-1 my-1 w-full">
+  <kbd className="$$kbd">a</kbd>
+  <kbd className="$$kbd">s</kbd>
+  <kbd className="$$kbd">d</kbd>
+  <kbd className="$$kbd">f</kbd>
+  <kbd className="$$kbd">g</kbd>
+  <kbd className="$$kbd">h</kbd>
+  <kbd className="$$kbd">j</kbd>
+  <kbd className="$$kbd">k</kbd>
+  <kbd className="$$kbd">l</kbd>
+</div> 
+<div className="flex justify-center gap-1 my-1 w-full">
+  <kbd className="$$kbd">z</kbd>
+  <kbd className="$$kbd">x</kbd>
+  <kbd className="$$kbd">c</kbd>
+  <kbd className="$$kbd">v</kbd>
+  <kbd className="$$kbd">b</kbd>
+  <kbd className="$$kbd">n</kbd>
+  <kbd className="$$kbd">m</kbd>
+  <kbd className="$$kbd">/</kbd>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Arrow Keys">
@@ -170,6 +230,18 @@ Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
 </div>
 <div class="flex justify-center w-full">
   <kbd class="$$kbd">▼</kbd>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="flex justify-center w-full">
+  <kbd className="$$kbd">▲</kbd>
+</div>
+<div className="flex justify-center gap-12 w-full">
+  <kbd className="$$kbd">◀︎</kbd>
+  <kbd className="$$kbd">▶︎</kbd>
+</div>
+<div className="flex justify-center w-full">
+  <kbd className="$$kbd">▼</kbd>
 </div>`
 }</pre>
 </Component>

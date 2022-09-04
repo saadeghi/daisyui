@@ -42,6 +42,15 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New message arrived.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 
@@ -68,6 +77,20 @@ data="{[
     </div>
   </div>
   <div class="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-top $$toast-start">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
     <div>
       <span>Message sent successfully.</span>
     </div>
@@ -106,6 +129,20 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-top $$toast-center">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 
@@ -132,6 +169,20 @@ data="{[
     </div>
   </div>
   <div class="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-top $$toast-end">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
     <div>
       <span>Message sent successfully.</span>
     </div>
@@ -170,6 +221,20 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-start $$toast-middle">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 
@@ -196,6 +261,20 @@ data="{[
     </div>
   </div>
   <div class="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-center $$toast-middle">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
     <div>
       <span>Message sent successfully.</span>
     </div>
@@ -234,6 +313,20 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-end $$toast-middle">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 
@@ -260,6 +353,20 @@ data="{[
     </div>
   </div>
   <div class="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-start">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
     <div>
       <span>Message sent successfully.</span>
     </div>
@@ -298,6 +405,20 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-center">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 
@@ -324,6 +445,20 @@ data="{[
     </div>
   </div>
   <div class="$$alert $$alert-success">
+    <div>
+      <span>Message sent successfully.</span>
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$toast $$toast-end">
+  <div className="$$alert $$alert-info">
+    <div>
+      <span>New mail arrived.</span>
+    </div>
+  </div>
+  <div className="$$alert $$alert-success">
     <div>
       <span>Message sent successfully.</span>
     </div>

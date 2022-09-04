@@ -32,6 +32,10 @@ data="{[
 `<input type="$$radio" name="radio-1" class="radio" checked />
 <input type="$$radio" name="radio-1" class="radio" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="$$radio" name="radio-1" className="radio" checked />
+<input type="$$radio" name="radio-1" className="radio" />`
+}</pre>
 </Component>
 
 <Component title="Primary color">
@@ -40,6 +44,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="$$radio" name="radio-2" class="radio radio-primary" checked />
 <input type="$$radio" name="radio-2" class="radio radio-primary" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="$$radio" name="radio-2" className="radio radio-primary" checked />
+<input type="$$radio" name="radio-2" className="radio radio-primary" />`
 }</pre>
 </Component>
 
@@ -50,6 +58,10 @@ data="{[
 `<input type="$$radio" name="radio-3" class="radio radio-secondary" checked />
 <input type="$$radio" name="radio-3" class="radio radio-secondary" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="$$radio" name="radio-3" className="radio radio-secondary" checked />
+<input type="$$radio" name="radio-3" className="radio radio-secondary" />`
+}</pre>
 </Component>
 
 <Component title="Accent color">
@@ -59,6 +71,10 @@ data="{[
 `<input type="$$radio" name="radio-4" class="radio radio-accent" checked />
 <input type="$$radio" name="radio-4" class="radio radio-accent" />`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="$$radio" name="radio-4" className="radio radio-accent" checked />
+<input type="$$radio" name="radio-4" className="radio radio-accent" />`
+}</pre>
 </Component>
 
 <Component title="Disabled">
@@ -67,6 +83,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="$$radio" name="radio-5" class="radio" disabled checked />
 <input type="$$radio" name="radio-5" class="radio" disabled />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="$$radio" name="radio-5" className="radio" disabled checked />
+<input type="$$radio" name="radio-5" className="radio" disabled />`
 }</pre>
 </Component>
 
@@ -96,6 +116,20 @@ data="{[
   <label class="$$label cursor-pointer">
     <span class="$$label-text">blue pill</span> 
     <input type="radio" name="radio-6" class="$$radio checked:bg-blue-500" checked />
+  </label>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$form-control">
+  <label className="$$label cursor-pointer">
+    <span className="$$label-text">Red pill</span> 
+    <input type="radio" name="radio-6" className="$$radio checked:bg-red-500" checked />
+  </label>
+</div>
+<div className="$$form-control">
+  <label className="$$label cursor-pointer">
+    <span className="$$label-text">blue pill</span> 
+    <input type="radio" name="radio-6" className="$$radio checked:bg-blue-500" checked />
   </label>
 </div>`
 }</pre>

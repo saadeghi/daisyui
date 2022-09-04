@@ -55,6 +55,15 @@ data="{[
   </ul>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Dropdown / aligns to end">
@@ -69,6 +78,15 @@ data="{[
 `<div class="$$dropdown $$dropdown-end">
   <label tabindex="0" class="$$btn m-1">Click</label>
   <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-end">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -93,6 +111,15 @@ data="{[
   </ul>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-top">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Dropdown top / aligns to end">
@@ -107,6 +134,15 @@ data="{[
 `<div class="$$dropdown $$dropdown-top $$dropdown-end">
   <label tabindex="0" class="$$btn m-1">Click</label>
   <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-top $$dropdown-end">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -131,6 +167,15 @@ data="{[
   </ul>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-left">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Dropdown left / aligns to end">
@@ -145,6 +190,15 @@ data="{[
 `<div class="$$dropdown $$dropdown-left $$dropdown-end">
   <label tabindex="0" class="$$btn m-1">Click</label>
   <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-left $$dropdown-end">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -169,6 +223,15 @@ data="{[
   </ul>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-right">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Dropdown right / aligns to end">
@@ -183,6 +246,15 @@ data="{[
 `<div class="$$dropdown $$dropdown-right $$dropdown-end">
   <label tabindex="0" class="$$btn m-1">Click</label>
   <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-right $$dropdown-end">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -207,6 +279,15 @@ data="{[
   </ul>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-hover">
+  <label tabindex={0} className="$$btn m-1">Hover</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Force open">
@@ -221,6 +302,15 @@ data="{[
 `<div class="$$dropdown $$dropdown-open">
   <label tabindex="0" class="$$btn m-1">Button</label>
   <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-open">
+  <label tabindex={0} className="$$btn m-1">Button</label>
+  <ul tabindex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -244,6 +334,17 @@ data="{[
   <div tabindex="0" class="$$dropdown-content $$card $$card-compact w-64 p-2 shadow bg-primary text-primary-content">
     <div class="$$card-body">
       <h3 class="$$card-title">Card title!</h3>
+      <p>you can use any element as a dropdown.</p>
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown">
+  <label tabindex={0} className="$$btn m-1">Click</label>
+  <div tabindex={0} className="$$dropdown-content $$card $$card-compact w-64 p-2 shadow bg-primary text-primary-content">
+    <div className="$$card-body">
+      <h3 className="$$card-title">Card title!</h3>
       <p>you can use any element as a dropdown.</p>
     </div>
   </div>
@@ -288,6 +389,25 @@ data="{[
   </div>
 </div>`
 }</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$navbar bg-base-300 rounded-box">
+  <div className="flex-1 px-2 lg:flex-none">
+    <a className="text-lg font-bold">daisyUI</a>
+  </div> 
+  <div className="flex justify-end flex-1 px-2">
+    <div className="flex items-stretch">
+      <a className="$$btn $$btn-ghost rounded-btn">Button</a>
+      <div className="$$dropdown $$dropdown-end">
+        <label tabindex={0} className="$$btn $$btn-ghost rounded-btn">Dropdown</label>
+        <ul tabindex={0} className="$$menu $$dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><a>Item 1</a></li> 
+          <li><a>Item 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>`
+}</pre>
 </Component>
 
 <Component title="Helper dropdown">
@@ -314,6 +434,20 @@ data="{[
   <div tabindex="0" class="$$card $$compact $$dropdown-content shadow bg-base-100 rounded-box w-64">
     <div class="$$card-body">
       <h2 class="$$card-title">You needed more info?</h2> 
+      <p>Here is a description!</p>
+    </div>
+  </div>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`A normal text and a helper dropdown
+<div className="$$dropdown $$dropdown-end">
+  <label tabindex={0} className="$$btn $$btn-circle $$btn-ghost $$btn-xs text-info">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+  </label>
+  <div tabindex={0} className="$$card $$compact $$dropdown-content shadow bg-base-100 rounded-box w-64">
+    <div className="$$card-body">
+      <h2 className="$$card-title">You needed more info?</h2> 
       <p>Here is a description!</p>
     </div>
   </div>
