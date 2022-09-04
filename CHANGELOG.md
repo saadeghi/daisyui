@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.24.1](https://github.com/saadeghi/daisyui/compare/v2.24.0...v2.24.1) (2022-09-04)
+
+
+### Bug Fixes
+
+* [#1094](https://github.com/saadeghi/daisyui/issues/1094) ([ded7fab](https://github.com/saadeghi/daisyui/commit/ded7fab188634a835660851dc6b1f34bcf6c8682))
+* duplicate theme color ([#1059](https://github.com/saadeghi/daisyui/issues/1059)) ([bb7e3f5](https://github.com/saadeghi/daisyui/commit/bb7e3f523b3be1fc73373b0f0ce6577f5eebd8b5))
+
 ## [2.24.0](https://github.com/saadeghi/daisyui/compare/v2.23.0...v2.24.0) (2022-08-13)
 
 
