@@ -584,7 +584,7 @@ data="{[
 `<ul className="$$menu $$menu-horizontal bg-base-100">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
-  <li tabindex={0}>
+  <li tabIndex={0}>
     <span>Parent</span>
     <ul className="bg-base-100">
       <li><a>Submenu 1</a></li>
@@ -631,7 +631,7 @@ data="{[
 `<ul className="$$menu $$menu-horizontal bg-base-100 rounded-box p-2">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
-  <li tabindex={0}>
+  <li tabIndex={0}>
     <span>Parent</span>
     <ul className="rounded-box bg-base-100 p-2">
       <li><a>Submenu 1</a></li>
@@ -678,7 +678,7 @@ data="{[
 `<ul className="$$menu bg-base-100">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
-  <li tabindex={0}>
+  <li tabIndex={0}>
     <span>Parent</span>
     <ul className="bg-base-100">
       <li><a>Submenu 1</a></li>
@@ -725,7 +725,7 @@ data="{[
 `<ul className="$$menu bg-base-100 rounded-box p-2">
   <li><a>Item 1</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
-  <li tabindex={0}>
+  <li tabIndex={0}>
     <span>Parent</span>
     <ul className="rounded-box p-2 bg-base-100">
       <li><a>Submenu 1</a></li>
@@ -806,7 +806,7 @@ data="{[
 `<ul className="$$menu $$menu-horizontal bg-base-100 rounded-box p-2">
   <li><a>Item</a></li>
   <!-- tabindex will make the parent menu focusable to keep the submenu open if it's focused -->
-  <li tabindex={0}>
+  <li tabIndex={0}>
     <span>Level 1</span>
     <ul className="rounded-box bg-base-100 p-2">
       <li>
