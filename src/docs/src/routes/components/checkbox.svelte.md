@@ -55,7 +55,7 @@ data="{[
 `<div className="$$form-control">
   <label className="$$label cursor-pointer">
     <span className="$$label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" className="$$checkbox" />
+    <input type="checkbox" checked className="$$checkbox" />
   </label>
 </div>`
 }</pre>
@@ -80,7 +80,7 @@ data="{[
 `<div className="$$form-control">
   <label className="$$label cursor-pointer">
     <span className="$$label-text">Remember me</span> 
-    <input type="checkbox" checked="checked" className="$$checkbox checkbox-primary" />
+    <input type="checkbox" checked className="$$checkbox checkbox-primary" />
   </label>
 </div>`
 }</pre>
@@ -105,7 +105,7 @@ data="{[
 `<div className="$$form-control">
   <label className="$$cursor-pointer $$label">
     <span className="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" className="$$checkbox $$checkbox-secondary" />
+    <input type="checkbox" checked className="$$checkbox $$checkbox-secondary" />
   </label>
 </div>`
 }</pre>
@@ -130,7 +130,7 @@ data="{[
 `<div className="$$form-control">
   <label className="$$cursor-pointer $$label">
     <span className="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" className="$$checkbox $$checkbox-accent" />
+    <input type="checkbox" checked className="$$checkbox $$checkbox-accent" />
   </label>
 </div>`
 }</pre>
@@ -150,10 +150,10 @@ data="{[
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-lg" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="checkbox" checked="checked" className="$$checkbox $$checkbox-xs" /> 
-<input type="checkbox" checked="checked" className="$$checkbox $$checkbox-sm" /> 
-<input type="checkbox" checked="checked" className="$$checkbox $$checkbox-md" /> 
-<input type="checkbox" checked="checked" className="$$checkbox $$checkbox-lg" />`
+`<input type="checkbox" checked className="$$checkbox $$checkbox-xs" /> 
+<input type="checkbox" checked className="$$checkbox $$checkbox-sm" /> 
+<input type="checkbox" checked className="$$checkbox $$checkbox-md" /> 
+<input type="checkbox" checked className="$$checkbox $$checkbox-lg" />`
 }</pre>
 </Component>
 
