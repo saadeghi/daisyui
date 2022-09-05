@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.25.0](https://github.com/saadeghi/daisyui/compare/v2.24.2...v2.25.0) (2022-09-05)
+
+
+### Bug Fixes
+
+* corrected incorrect jsx attribute on drawer and modal components ([#1095](https://github.com/saadeghi/daisyui/issues/1095)) ([77506ca](https://github.com/saadeghi/daisyui/commit/77506ca8e188a76aa318c2371e91ee1f7c18dacb))
+
 ### [2.24.2](https://github.com/saadeghi/daisyui/compare/v2.24.1...v2.24.2) (2022-09-04)
 
 ### [2.24.1](https://github.com/saadeghi/daisyui/compare/v2.24.0...v2.24.1) (2022-09-04)
