@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.25.0](https://github.com/saadeghi/daisyui/compare/v2.24.2...v2.25.0) (2022-09-05)
 
+### Features
+
+* 70% smaller size for `mask` styles
 
 ### Bug Fixes
 
