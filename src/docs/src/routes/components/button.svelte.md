@@ -236,7 +236,7 @@ data="{[
 <button class="$$btn $$btn-disabled" tabindex="-1" role="button" aria-disabled="true">Disabled using class name</button>`
 }</pre>
 <pre slot="react" use:replace={{to: $prefix }}>{
-`<button className="$$btn" disabled="disabled">Disabled using attribute</button>
+`<button className="$$btn" disabled>Disabled using attribute</button>
 <button className="$$btn $$btn-disabled" tabindex="-1" role="button" aria-disabled="true">Disabled using className name</button>`
 }</pre>
 </Component>
