@@ -50,3 +50,11 @@
     }
   }
 }
+
+/* group */
+.btn-group-horizontal {
+  @apply flex-row flex-wrap;
+}
+.btn-group-vertical {
+  @apply flex-col flex-nowrap;
+}

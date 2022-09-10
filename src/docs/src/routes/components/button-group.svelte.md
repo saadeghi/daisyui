@@ -14,7 +14,8 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'btn-group', desc: 'Container for grouping multiple buttons' },
-  { type:'component', class: 'btn-group-vertical', desc: 'Container for grouping multiple buttons (vertical)' },
+  { type:'responsive', class: 'btn-group-horizontal', desc: 'Show buttons horizontally (default)' },
+  { type:'responsive', class: 'btn-group-vertical', desc: 'Show buttons vertically' },
 ]}"
 />
 
@@ -55,6 +56,28 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$btn-group btn-group-vertical">
+  <button className="$$btn $$btn-active">Button</button>
+  <button className="$$btn">Button</button>
+  <button className="$$btn">Button</button>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Responsive - Vertical for small screen, Horizontal on large screen">
+<div class="btn-group btn-group-vertical lg:btn-group-horizontal">
+  <button class="btn btn-active">Button</button>
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$btn-group btn-group-vertical lg:btn-group-horizontal">
+  <button class="$$btn $$btn-active">Button</button>
+  <button class="$$btn">Button</button>
+  <button class="$$btn">Button</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$btn-group $$btn-group-vertical lg:$$btn-group-horizontal">
   <button className="$$btn $$btn-active">Button</button>
   <button className="$$btn">Button</button>
   <button className="$$btn">Button</button>
