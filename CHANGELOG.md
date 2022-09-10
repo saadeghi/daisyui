@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.26.0](https://github.com/saadeghi/daisyui/compare/v2.25.0...v2.26.0) (2022-09-10)
+
+
+### Features
+
+* allow utility classes to change padding and min-height for `collapse` ([e0fa734](https://github.com/saadeghi/daisyui/commit/e0fa734e957a9f6fa5202a3c35504315c50020fb))
+
+
+### Bug Fixes
+
+* disabled jsx attribute in button example ([#1103](https://github.com/saadeghi/daisyui/issues/1103)) ([6f92423](https://github.com/saadeghi/daisyui/commit/6f92423737eb229da8d3e599619e1e18a39d053c))
+
 ## [2.25.0](https://github.com/saadeghi/daisyui/compare/v2.24.2...v2.25.0) (2022-09-05)
 
 ### Features
