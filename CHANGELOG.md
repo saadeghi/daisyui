@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.27.0](https://github.com/saadeghi/daisyui/compare/v2.26.0...v2.27.0) (2022-09-10)
+
+
+### Features
+
+* `btn-group-horizontal` and `btn-group-vertical` classes are now responsive ([f27340b](https://github.com/saadeghi/daisyui/commit/f27340b23c6f1b63a416540318ce49929bcc89ad))
+
 ## [2.26.0](https://github.com/saadeghi/daisyui/compare/v2.25.0...v2.26.0) (2022-09-10)
 
 
