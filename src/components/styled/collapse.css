@@ -3,13 +3,12 @@
   outline-offset: 2px;
 }
 .collapse-arrow .collapse-title:after {
-  @apply absolute block h-2 w-2 transition-all ease-in-out;
+  @apply absolute block h-2 w-2 transition-all ease-in-out rotate-[45deg] translate-y-[-100%];
   transition-duration: 0.2s;
-  top: 1.4rem;
+  top: 50%;
   right: 1.4rem;
   content: "";
   transform-origin: 75% 75%;
-  transform: rotate(45deg);
   box-shadow: 2px 2px;
   pointer-events: none;
 }
@@ -28,8 +27,14 @@
 .collapse:focus:not(.collapse-open):not(.collapse-close) .collapse-title {
   cursor: unset;
 }
+.collapse-title {
+  @apply relative;
+}
+:where(.collapse > input[type="checkbox"]) {
+  z-index: 1;
+}
 .collapse-title,
-.collapse > input[type="checkbox"] {
+:where(.collapse > input[type="checkbox"]) {
   @apply w-full p-4 pr-12;
   min-height: 3.75rem;
   transition: background-color 0.2s ease-in-out;
@@ -56,7 +61,7 @@
 .collapse-open.collapse-arrow .collapse-title:after,
 .collapse-arrow:focus:not(.collapse-close) .collapse-title:after,
 .collapse-arrow:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-title:after {
-  transform: rotate(225deg);
+  @apply rotate-[225deg] translate-y-[-50%];
 }
 .collapse-open.collapse-plus .collapse-title:after,
 .collapse-plus:focus:not(.collapse-close) .collapse-title:after,
