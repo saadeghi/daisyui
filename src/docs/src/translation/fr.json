@@ -317,7 +317,7 @@
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "daisyUI ajoute du style à @tailwindcss/typography afin qu'il utilise le même thème que les autres éléments.",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "Assurez-vous de require <span class='badge badge-outline'>daisyui</span> APRÈS <span class='badge badge-outline'>@tailwindcss/typography</span> dans tailwind.config.js",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "Ici, vous pouvez voir à quoi ressembleront les éléments en utilisant <code>@tailwindcss/typography</code>.",
-  "To use a custom prefix, <a class='link' href='/docs/config/'>add your prefix string to config</a>": "Pour utiliser un préfixe personnalisé, <a class='link' href='/docs/config/'>ajoutez votre chaîne de préfixe à config</a>",
+  "To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>": "Pour utiliser un préfixe personnalisé, <a class='link' href='/docs/config/#prefix'>ajoutez votre chaîne de préfixe à config</a>",
   "Component": "Composant",
   "Modifier": "Modifier",
   "Responsive": "Responsive",

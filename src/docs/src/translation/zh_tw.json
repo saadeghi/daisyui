@@ -317,7 +317,7 @@
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "daisyUI 為 @tailwindcss/typography 新增了一些樣式，好讓它的主題與其他元素相同。",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "在 tailwind.config.js 中，請先引入 <span class='badge badge-outline'>@tailwindcss/typography</span> 再引入 <span class='badge badge-outline'>daisyui</span>。",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "您可以在此預覽使用 <code>@tailwindcss/typography</code> 後的元件外觀。",
-  "To use a custom prefix, <a class='link' href='/docs/config/'>add your prefix string to config</a>": "若要使用自訂前綴，<a class='link' href='/docs/config/'>請至設定檔中加入前綴字串</a>",
+  "To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>": "若要使用自訂前綴，<a class='link' href='/docs/config/#prefix'>請至設定檔中加入前綴字串</a>",
   "Component": "元件",
   "Modifier": "修改器",
   "Responsive": "響應式",

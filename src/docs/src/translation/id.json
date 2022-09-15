@@ -318,7 +318,7 @@
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "daisyUI menambahkan beberapa style ke @tailwindcss/typography sehingga seluruh tema akan menerapkan style yang sama.",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "Pastikan Anda menambahkan <span class='badge badge-outline'>daisyui</span> SETELAH <span class='badge badge-outline'>@tailwindcss/typography</span> di dalam tailwind.config.js",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "Disini Anda dapat melihat bagaimana elemen akan terlihat menggunakan <code>@tailwindcss/typography</code>.",
-  "To use a custom prefix, <a class='link' href='/docs/config/'>add your prefix string to config</a>": "To use a custom prefix, <a class='link' href='/docs/config/'>add your prefix string to config</a>",
+  "To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>": "To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>",
   "Component": "Komponen",
   "Modifier": "Modifier",
   "Responsive": "Responsif",
