@@ -317,7 +317,7 @@
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "데이지UI는 @tailwindcss/typography에 몇몇 스타일을 추가해 서로 다른 요소들이 같은 테마를 사용할 수 있게 합니다.",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "tailwind.config.js에서 꼭 <span class='badge badge-outline'>@tailwindcss/typography</span> 다음에 <span class='badge badge-outline'>daisyui</span>를 require 하세요.",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "<code>@tailwindcss/typography</code>를 사용해 요소들이 어떻게 보일지 확인할 수 있습니다.",
-  "To use a custom prefix, <a class='link' href='/docs/config/'>add your prefix string to config</a>": "커스텀한 접두어를 사용하기 위해, <a class='link' href='/docs/config/'>설정에 접두어 문자열을 추가하세요.</a>",
+  "To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>": "커스텀한 접두어를 사용하기 위해, <a class='link' href='/docs/config/#prefix'>설정에 접두어 문자열을 추가하세요.</a>",
   "Component": "컴포넌트",
   "Modifier": "수식자",
   "Responsive": "반응형",
