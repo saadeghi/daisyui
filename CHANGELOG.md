@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.28.0](https://github.com/saadeghi/daisyui/compare/v2.27.0...v2.28.0) (2022-09-16)
+
+
+### Bug Fixes
+
+* [#1142](https://github.com/saadeghi/daisyui/issues/1142) ([3f53ef7](https://github.com/saadeghi/daisyui/commit/3f53ef790be2d38dad64202ef478c31dce77f35e))
+* strokeLineCap in navbar example ([#1125](https://github.com/saadeghi/daisyui/issues/1125)) ([f61a510](https://github.com/saadeghi/daisyui/commit/f61a5107a5b437290aabc56324af766cc17f4b7f))
+
 ## [2.27.0](https://github.com/saadeghi/daisyui/compare/v2.26.0...v2.27.0) (2022-09-10)
 
 
