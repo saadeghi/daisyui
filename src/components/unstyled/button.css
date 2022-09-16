@@ -50,7 +50,7 @@
 
 /* group */
 .btn-group {
-  @apply flex flex-wrap;
+  @apply inline-flex;
   & > input[type="radio"].btn {
     @apply appearance-none;
   }

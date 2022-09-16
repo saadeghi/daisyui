@@ -53,8 +53,8 @@
 
 /* group */
 .btn-group-horizontal {
-  @apply flex-row flex-wrap;
+  @apply flex-row;
 }
 .btn-group-vertical {
-  @apply flex-col flex-nowrap;
+  @apply flex-col;
 }
