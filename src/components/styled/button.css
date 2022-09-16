@@ -208,6 +208,8 @@
 }
 /* group */
 .btn-group {
+  @apply flex-nowrap;
+  
   & > input[type="radio"]:checked.btn,
   & > .btn-active {
     @apply border-primary bg-primary text-primary-content;

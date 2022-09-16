@@ -400,7 +400,7 @@ data="{[
 
 <Component title="Card glass" bg="https://placeimg.com/1000/500/arch">
 <div class="card w-96 glass">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"/></figure>
   <div class="card-body">
     <h2 class="card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -411,7 +411,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 glass">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"/></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -423,7 +423,7 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$card w-96 glass">
-  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"></figure>
+  <figure><img src="https://placeimg.com/400/225/arch" alt="car!"/></figure>
   <div className="$$card-body">
     <h2 className="$$card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -437,7 +437,7 @@ data="{[
 
 <Component title="Card with image on side">
 <div class="card card-side bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"/></figure>
   <div class="card-body">
     <h2 class="card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -448,7 +448,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card $$card-side bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"/></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -460,7 +460,7 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$card $$card-side bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+  <figure><img src="https://placeimg.com/200/280/arch" alt="Movie"/></figure>
   <div className="$$card-body">
     <h2 className="$$card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -474,7 +474,7 @@ data="{[
 
 <Component title="Responsive card (vertical on small screen, horizontal on large screen)">
 <div class="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"></figure>
+  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"/></figure>
   <div class="card-body">
     <h2 class="card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
@@ -485,7 +485,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card lg:$$card-side bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"></figure>
+  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"/></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
@@ -497,7 +497,7 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$card lg:$$card-side bg-base-100 shadow-xl">
-  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"></figure>
+  <figure><img src="https://placeimg.com/400/400/arch" alt="Album"/></figure>
   <div className="$$card-body">
     <h2 className="$$card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
