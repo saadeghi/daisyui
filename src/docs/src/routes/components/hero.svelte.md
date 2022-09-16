@@ -15,7 +15,7 @@ published: true
 data="{[
   { type:'component', class: 'hero', desc: 'Container element' },
   { type:'component', class: 'hero-content', desc: 'Container for content' },
-  { type:'component', class: 'hero-overlay', desc: 'Overlay the covers the background image' },
+  { type:'component', class: 'hero-overlay', desc: 'Overlay that covers the background image' },
 ]}"
 />
 
