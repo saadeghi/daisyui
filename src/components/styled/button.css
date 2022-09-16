@@ -14,7 +14,7 @@
 
   /* default btn */
   & {
-    @apply border-neutral bg-neutral text-neutral-content;
+    @apply border-neutral bg-neutral text-neutral-content no-underline;
     &:hover,
     &-active {
       @apply border-neutral-focus bg-neutral-focus;
@@ -122,7 +122,7 @@
     }
   }
   &-link {
-    @apply border-transparent bg-transparent text-primary;
+    @apply border-transparent bg-transparent text-primary underline;
     &:hover,
     &.btn-active {
       @apply border-transparent bg-transparent underline;
