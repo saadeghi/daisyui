@@ -22,7 +22,7 @@
   "npm-installs": "NPM 安装",
   "clean-html-title": "干净的 HTML",
   "clean-html-desc": "充分利用组件类",
-  "clean-html-content": "你的 HTML 可以更干净。 daisyUI 给 Tailwind CSS 增加了工具类。 例如 <span class='badge badge-outline'>btn</span>， <span class='badge badge-outline'>card</span>等等... 不需要在处理成百上千的工具类",
+  "clean-html-content": "你的 HTML 可以更干净。 daisyUI 给 Tailwind CSS 增加了组件类。 例如 <span class='badge badge-outline'>btn</span>， <span class='badge badge-outline'>card</span>等等... 不需要再处理成百上千的原子类",
   "clean-html-example-1-title": "增加一个按钮",
   "clean-html-example-1-desc": "使用原生工具类 vs 使用 daisyUI 组件类",
   "vs": "vs",
