@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.29.0](https://github.com/saadeghi/daisyui/compare/v2.28.0...v2.29.0) (2022-09-20)
+
+
+### Bug Fixes
+
+* menu width and menu item shrink issue ([f57942e](https://github.com/saadeghi/daisyui/commit/f57942eb395e6b74e8837fb594b6128ffa6afaf0))
+
 ## [2.28.0](https://github.com/saadeghi/daisyui/compare/v2.27.0...v2.28.0) (2022-09-16)
 
 
