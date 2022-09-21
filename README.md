@@ -200,6 +200,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [Infinite scrolling with MERN | ReactJS, TailwindCSS v3, DaisyUI | NodeJs, Express, MongoDB](https://www.youtube.com/watch?v=y7LYoRGRqRI)
   - [How to install TailwindCSS v3 and DaisyUI to your React app](https://www.youtube.com/watch?v=XBYvzPe7skc)
   - [Laravel: DaisyUI Agiliza Tus Desarrollos Con TailwindCSS + Select2 Tailwind Style (Spanish)](https://www.youtube.com/watch?v=28db3jojTgo)
+  - [Build a Responsive Landing Page using DaisyUI, ReactJS and Tailwind CSS](https://www.youtube.com/watch?v=37gtpvy-k9U)
 - Courses
   - [Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)
   - [Svelte for Beginners by Mike Karan](https://www.udemy.com/course/svelte-for-beginners/)
