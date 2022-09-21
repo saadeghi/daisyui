@@ -1,5 +1,5 @@
 .menu {
-  @apply flex flex-col flex-wrap w-max;
+  @apply flex flex-col flex-wrap;
   &.horizontal {
     @apply inline-flex flex-row;
     :where(li) {
