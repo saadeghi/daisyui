@@ -208,7 +208,9 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [Build Instagram profile page UI clone w/Next.js TailwindCSS](https://www.udemy.com/course/build-instagram-profile-page-ui-clone-nextjs-tailwindcss/)
   - [Instagram UI Clone Login Page w/ NextJS & TailwindCSS](https://www.udemy.com/course/instagram-ui-clone-login-page-w-nextjs-tailwindcss/)
   - [Build your Developer Portfolio and Blog from Scratch with Svelte and GraphCMS](https://www.freecodecamp.org/news/build-your-developer-portfolio-from-scratch-with-sveltekit-and-graphcms/)
-
+- Starters
+  - [Vite-Boot](https://github.com/kirklin/vite-boot) Vite + Vue3 + TypeScript + Vue-Router4 + Pinia + Tailwind CSS + daisyUI Template.
+  
 </details>
 
 ---
