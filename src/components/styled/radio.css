@@ -45,6 +45,50 @@
       @apply border-accent bg-accent text-accent-content;
     }
   }
+  &-success {
+    --chkbg: var(--su);
+    @apply border-success hover:border-success;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--su));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-success bg-success text-success-content;
+    }
+  }
+  &-warning {
+    --chkbg: var(--wa);
+    @apply border-warning hover:border-warning;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--wa));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-warning bg-warning text-warning-content;
+    }
+  }
+  &-info {
+    --chkbg: var(--in);
+    @apply border-info hover:border-info;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--in));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-info bg-info text-info-content;
+    }
+  }
+  &-error {
+    --chkbg: var(--er);
+    @apply border-error hover:border-error;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--er));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-error bg-error text-error-content;
+    }
+  }
   &:disabled {
     @apply cursor-not-allowed opacity-20;
   }
