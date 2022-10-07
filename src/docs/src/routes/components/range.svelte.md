@@ -17,6 +17,10 @@ data="{[
   { type:'modifier', class: 'range-primary', desc: 'primary color' },
   { type:'modifier', class: 'range-secondary', desc: 'secondary color' },
   { type:'modifier', class: 'range-accent', desc: 'accent color' },
+  { type:'modifier', class: 'range-success', desc: 'success color' },
+  { type:'modifier', class: 'range-warning', desc: 'warning color' },
+  { type:'modifier', class: 'range-info', desc: 'info color' },
+  { type:'modifier', class: 'range-error', desc: 'error color' },
   { type:'responsive', class: 'range-lg', desc: 'Large range' },
   { type:'responsive', class: 'range-md', desc: 'Medium range (default)' },
   { type:'responsive', class: 'range-sm', desc: 'Small range' },
@@ -94,6 +98,46 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" className="$$range $$range-accent" />`
+}</pre>
+</Component>
+
+<Component title="Success color">
+<input type="range" min="0" max="100" value="40" class="range range-success max-w-xs" />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-success" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" className="$$range $$range-success" />`
+}</pre>
+</Component>
+
+<Component title="Warning color">
+<input type="range" min="0" max="100" value="40" class="range range-warning max-w-xs" />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-warning" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" className="$$range $$range-warning" />`
+}</pre>
+</Component>
+
+<Component title="Info color">
+<input type="range" min="0" max="100" value="40" class="range range-info max-w-xs" />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-info" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" className="$$range $$range-info" />`
+}</pre>
+</Component>
+
+<Component title="Error color">
+<input type="range" min="0" max="100" value="40" class="range range-error max-w-xs" />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" class="$$range $$range-error" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" className="$$range $$range-error" />`
 }</pre>
 </Component>
 

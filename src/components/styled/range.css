@@ -45,4 +45,16 @@
   &-accent {
     --range-shdw: var(--a);
   }
+  &-success {
+    --range-shdw: var(--su);
+  }
+  &-warning {
+    --range-shdw: var(--wa);
+  }
+  &-info {
+    --range-shdw: var(--in);
+  }
+  &-error {
+    --range-shdw: var(--er);
+  }
 }
