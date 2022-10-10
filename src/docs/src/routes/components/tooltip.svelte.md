@@ -15,6 +15,7 @@ published: true
 data="{[
   { type:'component', class: 'tooltip', desc: 'Container element' },
   { type:'component', class: 'tooltip-open', desc: 'Force open tooltip' },
+  { type:'modifier', class: 'tooltip-top', desc: 'Put tooltip on top' },
   { type:'modifier', class: 'tooltip-bottom', desc: 'Put tooltip on bottom' },
   { type:'modifier', class: 'tooltip-left', desc: 'Put tooltip on left' },
   { type:'modifier', class: 'tooltip-right', desc: 'Put tooltip on right' },
@@ -60,6 +61,24 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$tooltip $$tooltip-open" data-tip="hello">
   <button className="$$btn">Force open</button>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Top">
+<div class="my-6">
+  <div class="tooltip tooltip-open tooltip-top" data-tip="hello">
+    <button class="btn">Top</button>
+  </div>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$tooltip $$tooltip-open $$tooltip-top" data-tip="hello">
+  <button class="$$btn">Top</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$tooltip $$tooltip-open $$tooltip-top" data-tip="hello">
+  <button className="$$btn">Top</button>
 </div>`
 }</pre>
 </Component>

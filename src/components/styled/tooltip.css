@@ -33,7 +33,7 @@
   display: block;
   position: absolute;
 }
-.tooltip {
+.tooltip, .tooltip-top {
   &:after {
     transform: translateX(-50%);
     border-color: var(--tooltip-color) transparent transparent transparent;
