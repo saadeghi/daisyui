@@ -17,6 +17,7 @@ data="{[
   { type:'component', class: 'dropdown-content', desc: 'Container for content' },
   { type:'modifier', class: 'dropdown-end', desc: 'Aligns to end' },
   { type:'modifier', class: 'dropdown-top', desc: 'Open from top' },
+  { type:'modifier', class: 'dropdown-bottom', desc: 'Open from bottom' },
   { type:'modifier', class: 'dropdown-left', desc: 'Open from left' },
   { type:'modifier', class: 'dropdown-right', desc: 'Open from right' },
   { type:'modifier', class: 'dropdown-hover', desc: 'Opens on hover too' },
@@ -141,6 +142,62 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$dropdown $$dropdown-top $$dropdown-end">
+  <label tabIndex={0} className="$$btn m-1">Click</label>
+  <ul tabIndex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Dropdown bottom">
+<div class="dropdown dropdown-bottom mb-32">
+  <label tabindex="0" class="m-1 btn">Click</label>
+  <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$dropdown $$dropdown-bottom">
+  <label tabindex="0" class="$$btn m-1">Click</label>
+  <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-bottom">
+  <label tabIndex={0} className="$$btn m-1">Click</label>
+  <ul tabIndex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Dropdown bottom / aligns to end">
+<div class="dropdown dropdown-bottom dropdown-end mb-32">
+  <label tabindex="0" class="m-1 btn">Click</label>
+  <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$dropdown $$dropdown-bottom $$dropdown-end">
+  <label tabindex="0" class="$$btn m-1">Click</label>
+  <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$dropdown $$dropdown-bottom $$dropdown-end">
   <label tabIndex={0} className="$$btn m-1">Click</label>
   <ul tabIndex={0} className="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
