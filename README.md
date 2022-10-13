@@ -83,7 +83,6 @@ See the official site: [ [daisyui.com →](https://daisyui.com/)]
 
 Tweet about daisyUI: [![][tweet]][tweet-url]
 
-
 ## 📁 List of components
 
 <details>
