@@ -19,6 +19,7 @@ data="{[
   { type:'component', class: 'stat-value', desc: 'Value text' },
   { type:'component', class: 'stat-desc', desc: 'Description text' },
   { type:'component', class: 'stat-figure', desc: 'For icon, image, etc' },
+  { type:'component', class: 'stat-actions', desc: 'For buttons, input, etc' },
   { type:'responsive', class: 'stats-horizontal', desc: 'Shows items horizontally (default)' },
   { type:'responsive', class: 'stats-vertical', desc: 'Shows items vertically' },
 ]}"
