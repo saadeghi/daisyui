@@ -1,5 +1,8 @@
+.collapse.collapse {
+  @apply visible;
+}
 .collapse {
-  @apply relative grid overflow-hidden visible;
+  @apply relative grid overflow-hidden;
 }
 .collapse-title,
 .collapse > input[type="checkbox"],
