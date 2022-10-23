@@ -1,14 +1,14 @@
 function withOpacityValue(variable, fallbackColor) {
   return ({ opacityValue }) => {
-    let fallbackColorValue = "";
+    let fallbackColorValue = ""
     if (fallbackColor) {
-      fallbackColorValue = `, var(${fallbackColor})`;
+      fallbackColorValue = `, var(${fallbackColor})`
     }
     if (opacityValue === undefined) {
-      return `hsl(var(${variable}${fallbackColorValue}))`;
+      return `hsl(var(${variable}${fallbackColorValue}))`
     }
-    return `hsl(var(${variable}${fallbackColorValue}) / ${opacityValue})`;
-  };
+    return `hsl(var(${variable}${fallbackColorValue}) / ${opacityValue})`
+  }
 }
 
 let colorObject = {
@@ -28,6 +28,8 @@ let colorObject = {
   "accent-content": withOpacityValue("--ac"),
 
   neutral: withOpacityValue("--n"),
+  "neutral-200": withOpacityValue("--n2", "--n1"),
+  "neutral-300": withOpacityValue("--n3", "--n2"),
   "neutral-focus": withOpacityValue("--nf", "--n"),
   "neutral-content": withOpacityValue("--nc"),
 
@@ -47,6 +49,6 @@ let colorObject = {
 
   error: withOpacityValue("--er"),
   "error-content": withOpacityValue("--erc", "--nc"),
-};
+}
 
-module.exports = colorObject;
+module.exports = colorObject
