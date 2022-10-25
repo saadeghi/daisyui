@@ -44,10 +44,10 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- The button to open modal -->
+`{/* The button to open modal */}
 <label htmlFor="my-modal" className="$$btn $$modal-button">open modal</label>
 
-<!-- Put this part before </body> tag -->
+{/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal" className="$$modal-toggle" />
 <div className="$$modal">
   <div className="$$modal-box">
@@ -79,10 +79,10 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- The button to open modal -->
+`{/* The button to open modal */}
 <a href="#my-modal-2" className="$$btn">open modal</a>
 
-<!-- Put this part before </body> tag -->
+{/* Put this part before </body> tag */}
 <div className="$$modal" id="my-modal-2">
   <div className="$$modal-box">
     <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
@@ -113,10 +113,10 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- The button to open modal -->
+`{/* The button to open modal */}
 <label htmlFor="my-modal-3" className="$$btn $$modal-button">open modal</label>
 
-<!-- Put this part before </body> tag -->
+{/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal-3" className="$$modal-toggle" />
 <div className="$$modal">
   <div className="$$modal-box relative">
@@ -145,10 +145,10 @@ data="{[
 </label>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- The button to open modal -->
+`{/* The button to open modal */}
 <label htmlFor="my-modal-4" className="$$btn $$modal-button">open modal</label>
 
-<!-- Put this part before </body> tag -->
+{/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal-4" className="$$modal-toggle" />
 <label htmlFor="my-modal-4" className="$$modal cursor-pointer">
   <label className="$$modal-box relative" for="">
@@ -179,10 +179,10 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- The button to open modal -->
+`{/* The button to open modal */}
 <label htmlFor="my-modal-5" className="$$btn $$modal-button">open modal</label>
 
-<!-- Put this part before </body> tag -->
+{/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal-5" className="$$modal-toggle" />
 <div className="$$modal">
   <div className="$$modal-box w-11/12 max-w-5xl">
@@ -216,10 +216,10 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- The button to open modal -->
+`{/* The button to open modal */}
 <label htmlFor="my-modal-6" className="$$btn $$modal-button">open modal</label>
 
-<!-- Put this part before </body> tag -->
+{/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal-6" className="$$modal-toggle" />
 <div className="$$modal $$modal-bottom sm:$$modal-middle">
   <div className="$$modal-box">
