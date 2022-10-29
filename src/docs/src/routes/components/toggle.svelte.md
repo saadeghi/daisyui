@@ -19,6 +19,10 @@ data="{[
   { type:'modifier', class: 'toggle-primary', desc: 'Adds `primary` to toggle' },
   { type:'modifier', class: 'toggle-secondary', desc: 'Adds `secondary` to toggle' },
   { type:'modifier', class: 'toggle-accent', desc: 'Adds `accent` to toggle' },
+  { type:'modifier', class: 'toggle-success', desc: 'Adds `success` to toggle' },
+  { type:'modifier', class: 'toggle-warning', desc: 'Adds `warning` to toggle' },
+  { type:'modifier', class: 'toggle-info', desc: 'Adds `info` to toggle' },
+  { type:'modifier', class: 'toggle-error', desc: 'Adds `error` to toggle' },
   { type:'responsive', class: 'toggle-lg', desc: 'Large toggle' },
   { type:'responsive', class: 'toggle-md', desc: 'Medium toggle (default)' },
   { type:'responsive', class: 'toggle-sm', desc: 'Small toggle' },
@@ -61,78 +65,91 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Primary color">
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle toggle-primary" checked />
-  </label>
+<Component title="Checkboxes with brand colors">
+<div class="flex flex-col">
+  <div class="form-control w-52">
+    <label class="cursor-pointer label">
+      <span class="label-text">Remember me</span> 
+      <input type="checkbox" class="toggle toggle-primary" checked />
+    </label>
+  </div>
+  <div class="form-control w-52">
+    <label class="cursor-pointer label">
+      <span class="label-text">Remember me</span> 
+      <input type="checkbox" class="toggle toggle-secondary" checked />
+    </label>
+  </div>
+  <div class="form-control w-52">
+    <label class="cursor-pointer label">
+      <span class="label-text">Remember me</span> 
+      <input type="checkbox" class="toggle toggle-accent" checked />
+    </label>
+  </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" class="$$toggle $$toggle-primary" checked />
-  </label>
+`<div class="flex flex-col">
+  <div class="form-control w-52">
+    <label class="cursor-pointer label">
+      <span class="label-text">Remember me</span> 
+      <input type="checkbox" class="$$toggle $$toggle-primary" checked />
+    </label>
+  </div>
+  <div class="form-control w-52">
+    <label class="cursor-pointer label">
+      <span class="label-text">Remember me</span> 
+      <input type="checkbox" class="$$toggle $$toggle-secondary" checked />
+    </label>
+  </div>
+  <div class="form-control w-52">
+    <label class="cursor-pointer label">
+      <span class="label-text">Remember me</span> 
+      <input type="checkbox" class="$$toggle $$toggle-accent" checked />
+    </label>
+  </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$form-control">
-  <label className="$$label cursor-pointer">
-    <span className="$$label-text">Remember me</span>
-    <input type="checkbox" className="$$toggle $$toggle-primary" checked />
-  </label>
+`<div className="flex flex-col">
+  <div className="form-control w-52">
+    <label className="cursor-pointer label">
+      <span className="label-text">Remember me</span> 
+      <input type="checkbox" className="$$toggle $$toggle-primary" checked />
+    </label>
+  </div>
+  <div className="form-control w-52">
+    <label className="cursor-pointer label">
+      <span className="label-text">Remember me</span> 
+      <input type="checkbox" className="$$toggle $$toggle-secondary" checked />
+    </label>
+  </div>
+  <div className="form-control w-52">
+    <label className="cursor-pointer label">
+      <span className="label-text">Remember me</span> 
+      <input type="checkbox" className="$$toggle $$toggle-accent" checked />
+    </label>
+  </div>
 </div>`
 }</pre>
 </Component>
 
-<Component title="Secondary color">
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle toggle-secondary" checked />
-  </label>
+<Component title="Checkboxes with state colors">
+<div class="flex flex-col items-center gap-2">
+  <input type="checkbox" class="toggle toggle-success" checked />
+  <input type="checkbox" class="toggle toggle-warning" checked />
+  <input type="checkbox" class="toggle toggle-info" checked />
+  <input type="checkbox" class="toggle toggle-error" checked />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" class="$$toggle $$toggle-secondary" checked />
-  </label>
-</div>`
+`<input type="checkbox" class="$$toggle $$toggle-success" checked />
+<input type="checkbox" class="$$toggle $$toggle-warning" checked />
+<input type="checkbox" class="$$toggle $$toggle-info" checked />
+<input type="checkbox" class="$$toggle $$toggle-error" checked />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$form-control">
-  <label className="$$label cursor-pointer">
-    <span className="$$label-text">Remember me</span>
-    <input type="checkbox" className="$$toggle $$toggle-secondary" checked />
-  </label>
-</div>`
-}</pre>
-</Component>
-
-<Component title="Accent color">
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
-    <input type="checkbox" class="toggle toggle-accent" checked />
-  </label>
-</div>
-<pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" class="$$toggle $$toggle-accent" checked />
-  </label>
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$form-control">
-  <label className="$$label cursor-pointer">
-    <span className="$$label-text">Remember me</span>
-    <input type="checkbox" className="$$toggle $$toggle-accent" checked />
-  </label>
-</div>`
+`<input type="checkbox" className="$$toggle $$toggle-success" checked />
+<input type="checkbox" className="$$toggle $$toggle-warning" checked />
+<input type="checkbox" className="$$toggle $$toggle-info" checked />
+<input type="checkbox" className="$$toggle $$toggle-error" checked />`
 }</pre>
 </Component>
 
