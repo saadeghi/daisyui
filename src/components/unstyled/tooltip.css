@@ -9,7 +9,7 @@
 .tooltip:before {
   content: attr(data-tip);
 }
-.tooltip {
+.tooltip, .tooltip-top {
   &:before {
     transform: translateX(-50%);
     top: auto;

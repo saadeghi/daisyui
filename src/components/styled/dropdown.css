@@ -1,6 +1,9 @@
 .dropdown .dropdown-content {
   @apply origin-top scale-95 transform transition duration-200 ease-in-out;
 }
+.dropdown-bottom .dropdown-content {
+  @apply origin-top;
+}
 .dropdown-top .dropdown-content {
   @apply origin-bottom;
 }

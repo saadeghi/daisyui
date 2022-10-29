@@ -16,6 +16,9 @@
 .dropdown-right .dropdown-content {
   @apply left-full top-0 bottom-auto;
 }
+.dropdown-bottom .dropdown-content {
+  @apply bottom-auto top-full;
+}
 .dropdown-top .dropdown-content {
   @apply bottom-full top-auto;
 }
