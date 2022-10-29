@@ -229,6 +229,11 @@ export let exampleRepos = [
     logos: ["/logos/react.svg", "/logos/cra.svg"],
   },
   {
+    name: "Elm (Vite)",
+    href: "https://stackblitz.com/edit/elm-daisyui",
+    logos: ["/logos/elm.svg", "/logos/vite.svg"],
+  },
+  {
     name: "CDN (Tailwind)",
     href: "https://stackblitz.com/edit/daisyui-cdn",
     logos: ["/logos/jsdelivr.svg"],
