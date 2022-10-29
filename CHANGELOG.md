@@ -5,13 +5,15 @@ All notable changes to this project will be documented in this file. See [standa
 ## [2.36.0](https://github.com/saadeghi/daisyui/compare/v2.35.0...v2.36.0) (2022-10-29)
 
 
-### Bug Fixes
+### Features
 
 * [#1218](https://github.com/saadeghi/daisyui/issues/1218) - Add missing modifiers on dropdown and tooltip ([#1232](https://github.com/saadeghi/daisyui/issues/1232)) ([1728632](https://github.com/saadeghi/daisyui/commit/1728632c3f402a827a3d3ffc8aa3f7806a04ccd6))
 
 ## [2.35.0](https://github.com/saadeghi/daisyui/compare/v2.34.1...v2.35.0) (2022-10-29)
 
-Feat: Add the following color variants 
+### Features
+
+Add the following color variants 
   - success
   - warning
   - info
