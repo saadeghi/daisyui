@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "2.33.0",
+  "version": "2.34.0",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -76,10 +76,10 @@
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
     "playground": "cd src/experiments/playground && npm run dev",
-    "release": "standard-version",
-    "release:patch": "standard-version --release-as patch",
-    "release:minor": "standard-version --release-as minor",
-    "release:major": "standard-version --release-as major"
+    "release": "rm package-lock.json && standard-version",
+    "release:patch": "rm package-lock.json && standard-version --release-as patch",
+    "release:minor": "rm package-lock.json && standard-version --release-as minor",
+    "release:major": "rm package-lock.json && standard-version --release-as major"
   },
   "devDependencies": {
     "@parcel/css-cli": "1.5.0",

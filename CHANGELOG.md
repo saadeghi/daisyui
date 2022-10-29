@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.34.0](https://github.com/saadeghi/daisyui/compare/v2.33.0...v2.34.0) (2022-10-29)
+
+
+### Bug Fixes
+
+* [#1186](https://github.com/saadeghi/daisyui/issues/1186) ([938d047](https://github.com/saadeghi/daisyui/commit/938d047c7059a825e7cfd743b1e0f4ffefda8095))
+* [#1265](https://github.com/saadeghi/daisyui/issues/1265) ([f25bf92](https://github.com/saadeghi/daisyui/commit/f25bf92643551893847936e6bca4d1a654dba15c))
+* [#1275](https://github.com/saadeghi/daisyui/issues/1275) ([6bba2de](https://github.com/saadeghi/daisyui/commit/6bba2de162bd6c25490cf278667c9d3e637ec3c9))
+* [#834](https://github.com/saadeghi/daisyui/issues/834) ([aa6e812](https://github.com/saadeghi/daisyui/commit/aa6e812e1af4c3f900b7d1efbe6e7c0019ad8693))
+* Error from comments in modal react examples ([#1278](https://github.com/saadeghi/daisyui/issues/1278)) ([b96415b](https://github.com/saadeghi/daisyui/commit/b96415b7a63f9decc006041e317bc34213826b14))
+
 ## [2.33.0](https://github.com/saadeghi/daisyui/compare/v2.32.0...v2.33.0) (2022-10-20)
 
 
