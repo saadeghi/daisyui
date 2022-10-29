@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.36.1](https://github.com/saadeghi/daisyui/compare/v2.36.0...v2.36.1) (2022-10-29)
 
+### Bug Fixes
+* [1205](https://github.com/saadeghi/daisyui/issues/1205)
+
 ## [2.36.0](https://github.com/saadeghi/daisyui/compare/v2.35.0...v2.36.0) (2022-10-29)
 
 
