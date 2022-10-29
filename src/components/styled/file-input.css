@@ -1,0 +1,96 @@
+.file-input {
+  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn text-base;
+  &::file-selector-button {
+    @apply font-semibold uppercase no-underline border-neutral bg-neutral text-neutral-content;
+    border-width: var(--border-btn, 1px);
+    animation: button-pop var(--animation-btn, 0.25s) ease-out;
+    text-transform: var(--btn-text-case, uppercase);
+  }
+  &-bordered {
+    @apply border-opacity-20;
+  }
+  &:focus {
+    outline: 2px solid hsla(var(--bc) / 0.2);
+    outline-offset: 2px;
+  }
+  &-ghost {
+    @apply bg-opacity-5;
+    &:focus {
+      @apply bg-opacity-100 text-base-content;
+      box-shadow: none;
+    }
+    &::file-selector-button {
+      @apply border border-transparent bg-transparent text-current;
+    }
+  }
+  &-primary {
+    @apply border-primary;
+    &:focus {
+      outline: 2px solid hsl(var(--p));
+    }
+    &::file-selector-button {
+      @apply border-primary bg-primary text-primary-content;
+    }
+  }
+  &-secondary {
+    @apply border-secondary;
+    &:focus {
+      outline: 2px solid hsl(var(--s));
+    }
+    &::file-selector-button {
+      @apply border-secondary bg-secondary text-secondary-content;
+    }
+  }
+  &-accent {
+    @apply border-accent;
+    &:focus {
+      outline: 2px solid hsl(var(--a));
+    }
+    &::file-selector-button {
+      @apply border-accent bg-accent text-accent-content;
+    }
+  }
+  &-info {
+    @apply border-info;
+    &:focus {
+      outline: 2px solid hsl(var(--in));
+    }
+    &::file-selector-button {
+      @apply border-info bg-info text-info-content;
+    }
+  }
+  &-success {
+    @apply border-success;
+    &:focus {
+      outline: 2px solid hsl(var(--su));
+    }
+    &::file-selector-button {
+      @apply border-success bg-success text-success-content;
+    }
+  }
+  &-warning {
+    @apply border-warning;
+    &:focus {
+      outline: 2px solid hsl(var(--wa));
+    }
+    &::file-selector-button {
+      @apply border-warning bg-warning text-warning-content;
+    }
+  }
+  &-error {
+    @apply border-error;
+    &:focus {
+      outline: 2px solid hsl(var(--er));
+    }
+    &::file-selector-button {
+      @apply border-error bg-error text-error-content;
+    }
+  }
+  &-disabled,
+  &[disabled] {
+    @apply cursor-not-allowed border-base-200 bg-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
+    &::file-selector-button {
+      @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+    }
+  }
+}
