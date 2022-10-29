@@ -11,6 +11,18 @@
   &-neutral {
     @apply text-neutral hover:text-neutral-focus;
   }
+  &-success {
+    @apply text-success hover:text-success;
+  }
+  &-info {
+    @apply text-info hover:text-info;
+  }
+  &-warning {
+    @apply text-warning hover:text-warning;
+  }
+  &-error {
+    @apply text-error hover:text-error;
+  }
   &:focus {
     @apply outline-none;
   }

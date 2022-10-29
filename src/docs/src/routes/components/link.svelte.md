@@ -14,10 +14,14 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'link', desc: 'Adds underline to a text' },
+  { type:'modifier', class: 'link-neutral', desc: 'Link with `neutral` color' },
   { type:'modifier', class: 'link-primary', desc: 'Link with `primary` color' },
   { type:'modifier', class: 'link-secondary', desc: 'Link with `secondary` color' },
   { type:'modifier', class: 'link-accent', desc: 'Link with `accent` color' },
-  { type:'modifier', class: 'link-neutral', desc: 'Link with `neutral` color' },
+  { type:'modifier', class: 'link-success', desc: 'Link with `success` color' },
+  { type:'modifier', class: 'link-info', desc: 'Link with `info` color' },
+  { type:'modifier', class: 'link-warning', desc: 'Link with `warning` color' },
+  { type:'modifier', class: 'link-error', desc: 'Link with `error` color' },
   { type:'modifier', class: 'link-hover', desc: 'Only show underline on hover' },
 ]}"
 />
@@ -91,6 +95,46 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<a className="$$link $$link-neutral">I'm a simple link</a>`
+}</pre>
+</Component>
+
+<Component title="Success color">
+<a class="link link-success">I'm a simple link</a>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<a class="$$link $$link-success">I'm a simple link</a>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<a className="$$link $$link-success">I'm a simple link</a>`
+}</pre>
+</Component>
+
+<Component title="Info color">
+<a class="link link-info">I'm a simple link</a>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<a class="$$link $$link-info">I'm a simple link</a>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<a className="$$link $$link-info">I'm a simple link</a>`
+}</pre>
+</Component>
+
+<Component title="Warning color">
+<a class="link link-warning">I'm a simple link</a>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<a class="$$link $$link-warning">I'm a simple link</a>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<a className="$$link $$link-warning">I'm a simple link</a>`
+}</pre>
+</Component>
+
+<Component title="Error color">
+<a class="link link-error">I'm a simple link</a>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<a class="$$link $$link-error">I'm a simple link</a>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<a className="$$link $$link-error">I'm a simple link</a>`
 }</pre>
 </Component>
 
