@@ -56,6 +56,15 @@
   function openDrawer() {
     checked = true
   }
+
+  let navbarScrollPadding = "5rem"
+  function addScrollPaddingToNavbar(action) {
+    navbarScrollPadding = "5rem"
+  }
+
+  function removeScrollPaddingFromNavbar(action) {
+    navbarScrollPadding = "0rem"
+  }
 </script>
 
 <svelte:head>
@@ -66,13 +75,13 @@
 
 <div class={`bg-base-100 drawer ${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "drawer-mobile"}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
-    <Navbar {drawerContentScrollY} />
+  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};">
+    <Navbar {drawerContentScrollY} {addScrollPaddingToNavbar} {removeScrollPaddingFromNavbar} />
     <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "p-6 pb-16"}`}>
       <slot />
     </div>
   </div>
-  <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: 5rem;" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
+  <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
       <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />

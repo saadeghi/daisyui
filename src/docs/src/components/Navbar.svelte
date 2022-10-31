@@ -11,6 +11,9 @@
 
   export let drawerContentScrollY
   $: switchNavbarStyle = drawerContentScrollY > 40 ? true : false
+
+  export let addScrollPaddingToNavbar
+  export let removeScrollPaddingFromNavbar
 </script>
 
 <div
@@ -40,7 +43,7 @@
         </a>
       </div>
       <div class="hidden w-full max-w-sm lg:flex">
-        <Search />
+        <Search {removeScrollPaddingFromNavbar} {addScrollPaddingToNavbar} />
       </div>
     </div>
     <div class="flex-0">
