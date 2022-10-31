@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.37.0](https://github.com/saadeghi/daisyui/compare/v2.36.1...v2.37.0) (2022-10-31)
+
+
+### Bug Fixes
+
+* [#1069](https://github.com/saadeghi/daisyui/issues/1069) ([781a805](https://github.com/saadeghi/daisyui/commit/781a80552cbcacf72ff85ca3ddf3d5446192a7b5))
+* [#1148](https://github.com/saadeghi/daisyui/issues/1148) ([be35220](https://github.com/saadeghi/daisyui/commit/be35220973fd75f93e57327ae160e4c468ce1634))
+* [#1230](https://github.com/saadeghi/daisyui/issues/1230) ([f8a5df4](https://github.com/saadeghi/daisyui/commit/f8a5df446036164368ea982eb33416c12ee7fc5f))
+* [#1266](https://github.com/saadeghi/daisyui/issues/1266) ([fe0d201](https://github.com/saadeghi/daisyui/commit/fe0d2018033e4b41db301273eccf7fa06371b666))
+* [#762](https://github.com/saadeghi/daisyui/issues/762), feat: `darkTheme` config now can be `false` to disable `prefers-color-scheme: dark` ([d7688cc](https://github.com/saadeghi/daisyui/commit/d7688ccaa914aa9a559ab9fba6def246ee34d8c6))
+* [#875](https://github.com/saadeghi/daisyui/issues/875) ([ae61625](https://github.com/saadeghi/daisyui/commit/ae6162560593836cb8454c7757a12ac50e75adf1))
+
 ### [2.36.1](https://github.com/saadeghi/daisyui/compare/v2.36.0...v2.36.1) (2022-10-29)
 
 ### Bug Fixes
