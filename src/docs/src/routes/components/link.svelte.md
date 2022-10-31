@@ -38,20 +38,20 @@ data="{[
 
 <Component title="Link">
 <p>Tailwind CSS resets the style of links by default.
-  <br>
+  <br/>
   Add "link" class to make it look like a 
   <a class="link">normal link</a> again.
 </p>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<p>Tailwind CSS resets the style of links by default.
-  <br>
+  <br/>
   Add "link" class to make it look like a 
   <a class="$$link">normal link</a> again.
 </p>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<p>Tailwind CSS resets the style of links by default.
-  <br>
+  <br/>
   Add "link" className to make it look like a 
   <a className="$$link">normal link</a> again.
 </p>`

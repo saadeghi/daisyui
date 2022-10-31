@@ -504,7 +504,7 @@ data="{[
         </td>
         <td>
           Zemlak, Daniel and Leannon
-          <br>
+          <br/>
           <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
         </td>
         <td>Purple</td>
@@ -533,7 +533,7 @@ data="{[
         </td>
         <td>
           Carroll Group
-          <br>
+          <br/>
           <span class="badge badge-ghost badge-sm">Tax Accountant</span>
         </td>
         <td>Red</td>
@@ -562,7 +562,7 @@ data="{[
         </td>
         <td>
           Rowe-Schoen
-          <br>
+          <br/>
           <span class="badge badge-ghost badge-sm">Office Assistant I</span>
         </td>
         <td>Crimson</td>
@@ -591,7 +591,7 @@ data="{[
         </td>
         <td>
           Wyman-Ledner
-          <br>
+          <br/>
           <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
         </td>
         <td>Indigo</td>
@@ -651,7 +651,7 @@ data="{[
         </td>
         <td>
           Zemlak, Daniel and Leannon
-          <br>
+          <br/>
           <span class="$$badge $$badge-ghost $$badge-sm">Desktop Support Technician</span>
         </td>
         <td>Purple</td>
@@ -681,7 +681,7 @@ data="{[
         </td>
         <td>
           Carroll Group
-          <br>
+          <br/>
           <span class="$$badge $$badge-ghost $$badge-sm">Tax Accountant</span>
         </td>
         <td>Red</td>
@@ -711,7 +711,7 @@ data="{[
         </td>
         <td>
           Rowe-Schoen
-          <br>
+          <br/>
           <span class="$$badge $$badge-ghost $$badge-sm">Office Assistant I</span>
         </td>
         <td>Crimson</td>
@@ -741,7 +741,7 @@ data="{[
         </td>
         <td>
           Wyman-Ledner
-          <br>
+          <br/>
           <span class="$$badge $$badge-ghost $$badge-sm">Community Outreach Specialist</span>
         </td>
         <td>Indigo</td>
@@ -804,7 +804,7 @@ data="{[
         </td>
         <td>
           Zemlak, Daniel and Leannon
-          <br>
+          <br/>
           <span className="$$badge $$badge-ghost $$badge-sm">Desktop Support Technician</span>
         </td>
         <td>Purple</td>
@@ -834,7 +834,7 @@ data="{[
         </td>
         <td>
           Carroll Group
-          <br>
+          <br/>
           <span className="$$badge $$badge-ghost $$badge-sm">Tax Accountant</span>
         </td>
         <td>Red</td>
@@ -864,7 +864,7 @@ data="{[
         </td>
         <td>
           Rowe-Schoen
-          <br>
+          <br/>
           <span className="$$badge $$badge-ghost $$badge-sm">Office Assistant I</span>
         </td>
         <td>Crimson</td>
@@ -894,7 +894,7 @@ data="{[
         </td>
         <td>
           Wyman-Ledner
-          <br>
+          <br/>
           <span className="$$badge $$badge-ghost $$badge-sm">Community Outreach Specialist</span>
         </td>
         <td>Indigo</td>
