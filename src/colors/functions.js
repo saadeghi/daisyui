@@ -272,6 +272,9 @@ module.exports = {
               },
             });
           }
+        }
+        else if (config("daisyui.darkTheme") === false ) {
+          // disables prefers-color-scheme: dark
         } else {
           if (themeOrder[0] != "dark" && themeOrder.includes("dark")) {
             addBase({
