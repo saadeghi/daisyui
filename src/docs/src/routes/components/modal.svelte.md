@@ -95,7 +95,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Modal using with a close button at corner">
+<Component title="Modal using label + hidden checkbox with a close button at corner">
 <label for="my-modal-3" class="btn">open modal</label>
 
 <pre slot="html" use:replace={{ to: $prefix }}>{
