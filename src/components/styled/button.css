@@ -135,48 +135,56 @@
   /* outline */
   &-outline {
     @apply border-current bg-transparent text-base-content;
-    &:hover {
+    &:hover,
+    &.btn-active {
       @apply border-base-content bg-base-content text-base-100;
     }
     &.btn-primary {
       @apply text-primary;
-      &:hover {
+      &:hover,
+      &.btn-active {
         @apply border-primary-focus bg-primary-focus text-primary-content;
       }
     }
     &.btn-secondary {
       @apply text-secondary;
-      &:hover {
+      &:hover,
+      &.btn-active {
         @apply border-secondary-focus bg-secondary-focus text-secondary-content;
       }
     }
     &.btn-accent {
       @apply text-accent;
-      &:hover {
+      &:hover,
+      &.btn-active {
         @apply border-accent-focus bg-accent-focus text-accent-content;
       }
     }
     &.btn-success {
       @apply text-success;
-      &:hover {
+      &:hover,
+      &.btn-active {
         @apply border-success bg-success text-success-content;
       }
     }
     &.btn-info {
       @apply text-info;
-      &:hover {
+      &:hover,
+      &.btn-active {
         @apply border-info bg-info text-info-content;
       }
     }
     &.btn-warning {
       @apply text-warning;
-      &:hover {
+      &:hover,
+      &.btn-active {
         @apply border-warning bg-warning text-warning-content;
       }
     }
     &.btn-error {
       @apply text-error;
-      &:hover {
+      &:hover,
+      &.btn-active {
         @apply border-error bg-error text-error-content;
       }
     }
@@ -207,7 +215,7 @@
   }
 }
 /* group */
-.btn-group {  
+.btn-group {
   & > input[type="radio"]:checked.btn,
   & > .btn-active {
     @apply border-primary bg-primary text-primary-content;
