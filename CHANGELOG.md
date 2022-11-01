@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.38.0](https://github.com/saadeghi/daisyui/compare/v2.37.0...v2.38.0) (2022-11-01)
+
+
+### Features
+
+* Card no longer has `overflow: hidden`. Instead, the figure will adapt the card border radius, fix: [#1175](https://github.com/saadeghi/daisyui/issues/1175) ([10786e6](https://github.com/saadeghi/daisyui/commit/10786e66d176a897261cfa9b0984e04569ce2140))
+
+
+### Bug Fixes
+
+* [#1050](https://github.com/saadeghi/daisyui/issues/1050) ([0626701](https://github.com/saadeghi/daisyui/commit/0626701a0fccf4fa31462d513c7e5cee3a0e3905))
+* [#1245](https://github.com/saadeghi/daisyui/issues/1245) ([34782ce](https://github.com/saadeghi/daisyui/commit/34782ce2725a476008872d59c2c22918f39a22a8))
+* [#1267](https://github.com/saadeghi/daisyui/issues/1267) ([89434c2](https://github.com/saadeghi/daisyui/commit/89434c2c8cda6fb66c69446c555de21e6c3d74dd))
+* [#1302](https://github.com/saadeghi/daisyui/issues/1302) ([f343ed4](https://github.com/saadeghi/daisyui/commit/f343ed4fd5b0f3a677f7ae138e4fd006110631a1))
+* [#698](https://github.com/saadeghi/daisyui/issues/698), feat: Now dark themes have `color-scheme` for scrollbars etc. ([40bab42](https://github.com/saadeghi/daisyui/commit/40bab427ea49247ba621d8d7ca256c161689977e))
+
 ## [2.37.0](https://github.com/saadeghi/daisyui/compare/v2.36.1...v2.37.0) (2022-10-31)
 
 
