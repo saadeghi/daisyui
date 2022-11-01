@@ -1,5 +1,6 @@
 module.exports = {
   "[data-theme=aqua]": {
+    "color-scheme": "dark",
     primary: "#09ecf3",
     "primary-content": "#005355",
     secondary: "#966fb3",
@@ -12,6 +13,7 @@ module.exports = {
     "error": "#dc2626",
   },
   "[data-theme=black]": {
+    "color-scheme": "dark",
     primary: "#343232",
     secondary: "#343232",
     accent: "#343232",
@@ -34,6 +36,7 @@ module.exports = {
     "--tab-radius": "0",
   },
   "[data-theme=bumblebee]": {
+    "color-scheme": "light",
     primary: "#e0a82e",
     "primary-content": "#181830",
     secondary: "#f9d72f",
@@ -43,6 +46,7 @@ module.exports = {
     "base-100": "#ffffff",
   },
   "[data-theme=cmyk]": {
+    "color-scheme": "light",
     primary: "#45AEEE",
     secondary: "#E8488A",
     accent: "#FFF232",
@@ -54,6 +58,7 @@ module.exports = {
     error: "#E93F33",
   },
   "[data-theme=corporate]": {
+    "color-scheme": "light",
     primary: "#4b6bfb",
     secondary: "#7b92b2",
     accent: "#67cba0",
@@ -69,6 +74,7 @@ module.exports = {
     "--btn-focus-scale": "1",
   },
   "[data-theme=cupcake]": {
+    "color-scheme": "light",
     primary: "#65c3c8",
     secondary: "#ef9fbc",
     accent: "#eeaf3a",
@@ -82,6 +88,7 @@ module.exports = {
     "--tab-radius": ".5rem",
   },
   "[data-theme=cyberpunk]": {
+    "color-scheme": "light",
     fontFamily: "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace",
     primary: "#ff7598",
     secondary: "#75d1f0",
@@ -95,6 +102,7 @@ module.exports = {
     "--tab-radius": "0",
   },
   "[data-theme=dark]": {
+    "color-scheme": "dark",
     primary: "#661AE6",
     "primary-content": "#ffffff",
     secondary: "#D926AA",
@@ -110,6 +118,7 @@ module.exports = {
     "base-content": "#A6ADBB",
   },
   "[data-theme=dracula]": {
+    "color-scheme": "dark",
     primary: "#ff79c6",
     secondary: "#bd93f9",
     accent: "#ffb86c",
@@ -122,6 +131,7 @@ module.exports = {
     error: "#ff5555",
   },
   "[data-theme=emerald]": {
+    "color-scheme": "light",
     primary: "#66cc8a",
     "primary-content": "#223D30",
     secondary: "#377cfb",
@@ -137,6 +147,7 @@ module.exports = {
     "--btn-focus-scale": "1",
   },
   "[data-theme=fantasy]": {
+    "color-scheme": "light",
     primary: "#6e0b75",
     secondary: "#007ebd",
     accent: "#f8860d",
@@ -145,6 +156,7 @@ module.exports = {
     "base-content": "#1f2937",
   },
   "[data-theme=forest]": {
+    "color-scheme": "dark",
     primary: "#1eb854",
     "primary-content": "#c2ffd7",
     secondary: "#1fd65f",
@@ -154,6 +166,7 @@ module.exports = {
     "--rounded-btn": "1.9rem",
   },
   "[data-theme=garden]": {
+    "color-scheme": "light",
     primary: "#5c7f67",
     secondary: "#ecf4e7",
     "secondary-content": "#24331a",
@@ -165,6 +178,7 @@ module.exports = {
     "base-content": "#100f0f",
   },
   "[data-theme=halloween]": {
+    "color-scheme": "dark",
     primary: "#f28c18",
     "primary-content": "#131616",
     secondary: "#6d3a9c",
@@ -177,6 +191,7 @@ module.exports = {
     error: "#dc2626",
   },
   "[data-theme=light]": {
+    "color-scheme": "light",
     primary: "#570df8",
     "primary-content": "#ffffff",
     secondary: "#f000b8",
@@ -191,6 +206,7 @@ module.exports = {
     "base-content": "#1f2937",
   },
   "[data-theme=lofi]": {
+    "color-scheme": "light",
     "primary": "#0D0D0D",
     "primary-content": "#ffffff",
     "secondary": "#1A1919",
@@ -220,6 +236,7 @@ module.exports = {
     "--tab-radius": "0",
   },
   "[data-theme=luxury]": {
+    "color-scheme": "dark",
     primary: "#ffffff",
     secondary: "#152747",
     accent: "#513448",
@@ -235,6 +252,7 @@ module.exports = {
     error: "#ff6f6f",
   },
   "[data-theme=pastel]": {
+    "color-scheme": "light",
     primary: "#d1c1d7",
     secondary: "#f6cbd1",
     accent: "#b4e9d6",
@@ -245,6 +263,7 @@ module.exports = {
     "--rounded-btn": "1.9rem",
   },
   "[data-theme=retro]": {
+    "color-scheme": "light",
     primary: "#ef9995",
     "primary-content": "#282425",
     secondary: "#a4cbb4",
@@ -266,6 +285,7 @@ module.exports = {
     "--rounded-badge": "0.4rem",
   },
   "[data-theme=synthwave]": {
+    "color-scheme": "dark",
     primary: "#e779c1",
     secondary: "#58c7f3",
     accent: "#f3cc30",
@@ -283,6 +303,7 @@ module.exports = {
     "error-content": "#f9f7fd",
   },
   "[data-theme=valentine]": {
+    "color-scheme": "light",
     primary: "#e96d7b",
     secondary: "#a991f7",
     accent: "#88dbdd",
@@ -297,6 +318,7 @@ module.exports = {
     "--rounded-btn": "1.9rem",
   },
   "[data-theme=wireframe]": {
+    "color-scheme": "light",
     fontFamily: 'Chalkboard,comic sans ms,"sanssecondaryerif"',
     primary: "#b8b8b8",
     secondary: "#b8b8b8",
@@ -315,6 +337,7 @@ module.exports = {
     "--tab-radius": "0.2rem",
   },
   "[data-theme=autumn]": {
+    "color-scheme": "light",
     primary: "#8C0327",
     secondary: "#D85251",
     accent: "#D59B6A",
@@ -326,6 +349,7 @@ module.exports = {
     error: "#DF1A2F",
   },
   "[data-theme=business]": {
+    "color-scheme": "dark",
     primary: "#1C4E80",
     secondary: "#7C909A",
     accent: "#EA6947",
@@ -340,6 +364,7 @@ module.exports = {
     "--rounded-badge": ".125rem",
   },
   "[data-theme=acid]": {
+    "color-scheme": "light",
     primary: "#FF00F4",
     secondary: "#FF7400",
     accent: "#CBFD03",
@@ -354,6 +379,7 @@ module.exports = {
     "--rounded-badge": "1rem",
   },
   "[data-theme=lemonade]": {
+    "color-scheme": "light",
     primary: "#519903",
     secondary: "#E9E92E",
     accent: "#F7F9CA",
@@ -365,6 +391,7 @@ module.exports = {
     error: "#F2B6B5",
   },
   "[data-theme=night]": {
+    "color-scheme": "dark",
     "primary": "#38bdf8",
     "secondary": "#818CF8",
     "accent": "#F471B5",
@@ -377,6 +404,7 @@ module.exports = {
     "error": "#FB7085",
   },
   "[data-theme=coffee]": {
+    "color-scheme": "dark",
     "primary": "#DB924B",
     "secondary": "#263E3F",
     "accent": "#10576D",
@@ -389,6 +417,7 @@ module.exports = {
     "error": "#FC9581",
   },
   "[data-theme=winter]": {
+    "color-scheme": "light",
     "primary": "#047AFF",
     "secondary": "#463AA2",
     "accent": "#C148AC",
