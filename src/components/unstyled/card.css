@@ -1,5 +1,5 @@
 .card {
-  @apply relative flex flex-col overflow-hidden;
+  @apply relative flex flex-col;
   &:focus {
     @apply outline-none;
   }
