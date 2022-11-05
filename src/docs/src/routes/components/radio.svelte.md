@@ -33,12 +33,12 @@ data="{[
 <input type="radio" name="radio-1" class="radio" checked />
 <input type="radio" name="radio-1" class="radio" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-1" class="radio" checked />
-<input type="$$radio" name="radio-1" class="radio" />`
+`<input type="radio" name="radio-1" class="$$radio" checked />
+<input type="radio" name="radio-1" class="$$radio" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-1" className="radio" checked />
-<input type="$$radio" name="radio-1" className="radio" />`
+`<input type="radio" name="radio-1" className="$$radio" checked />
+<input type="radio" name="radio-1" className="$$radio" />`
 }</pre>
 </Component>
 
@@ -46,12 +46,12 @@ data="{[
 <input type="radio" name="radio-2" class="radio radio-primary" checked />
 <input type="radio" name="radio-2" class="radio radio-primary" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-2" class="radio radio-primary" checked />
-<input type="$$radio" name="radio-2" class="radio radio-primary" />`
+`<input type="radio" name="radio-2" class="$$radio $$radio-primary" checked />
+<input type="radio" name="radio-2" class="$$radio $$radio-primary" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-2" className="radio radio-primary" checked />
-<input type="$$radio" name="radio-2" className="radio radio-primary" />`
+`<input type="radio" name="radio-2" className="$$radio $$radio-primary" checked />
+<input type="radio" name="radio-2" className="$$radio $$radio-primary" />`
 }</pre>
 </Component>
 
@@ -59,12 +59,12 @@ data="{[
 <input type="radio" name="radio-3" class="radio radio-secondary" checked />
 <input type="radio" name="radio-3" class="radio radio-secondary" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-3" class="radio radio-secondary" checked />
-<input type="$$radio" name="radio-3" class="radio radio-secondary" />`
+`<input type="radio" name="radio-3" class="$$radio $$radio-secondary" checked />
+<input type="radio" name="radio-3" class="$$radio $$radio-secondary" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-3" className="radio radio-secondary" checked />
-<input type="$$radio" name="radio-3" className="radio radio-secondary" />`
+`<input type="radio" name="radio-3" className="$$radio $$radio-secondary" checked />
+<input type="radio" name="radio-3" className="$$radio $$radio-secondary" />`
 }</pre>
 </Component>
 
@@ -72,12 +72,12 @@ data="{[
 <input type="radio" name="radio-4" class="radio radio-accent" checked />
 <input type="radio" name="radio-4" class="radio radio-accent" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-4" class="radio radio-accent" checked />
-<input type="$$radio" name="radio-4" class="radio radio-accent" />`
+`<input type="radio" name="radio-4" class="$$radio $$radio-accent" checked />
+<input type="radio" name="radio-4" class="$$radio $$radio-accent" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-4" className="radio radio-accent" checked />
-<input type="$$radio" name="radio-4" className="radio radio-accent" />`
+`<input type="radio" name="radio-4" className="$$radio $$radio-accent" checked />
+<input type="radio" name="radio-4" className="$$radio $$radio-accent" />`
 }</pre>
 </Component>
 
@@ -85,12 +85,12 @@ data="{[
 <input type="radio" name="radio-5" class="radio radio-success" checked />
 <input type="radio" name="radio-5" class="radio radio-success" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-5" class="radio radio-success" checked />
-<input type="$$radio" name="radio-5" class="radio radio-success" />`
+`<input type="radio" name="radio-5" class="$$radio $$radio-success" checked />
+<input type="radio" name="radio-5" class="$$radio $$radio-success" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-5" className="radio radio-success" checked />
-<input type="$$radio" name="radio-5" className="radio radio-success" />`
+`<input type="radio" name="radio-5" className="$$radio $$radio-success" checked />
+<input type="radio" name="radio-5" className="$$radio $$radio-success" />`
 }</pre>
 </Component>
 
@@ -98,12 +98,12 @@ data="{[
 <input type="radio" name="radio-6" class="radio radio-warning" checked />
 <input type="radio" name="radio-6" class="radio radio-warning" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-6" class="radio radio-warning" checked />
-<input type="$$radio" name="radio-6" class="radio radio-warning" />`
+`<input type="radio" name="radio-6" class="$$radio $$radio-warning" checked />
+<input type="radio" name="radio-6" class="$$radio $$radio-warning" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-6" className="radio radio-warning" checked />
-<input type="$$radio" name="radio-6" className="radio radio-warning" />`
+`<input type="radio" name="radio-6" className="$$radio $$radio-warning" checked />
+<input type="radio" name="radio-6" className="$$radio $$radio-warning" />`
 }</pre>
 </Component>
 
@@ -111,12 +111,12 @@ data="{[
 <input type="radio" name="radio-7" class="radio radio-info" checked />
 <input type="radio" name="radio-7" class="radio radio-info" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-7" class="radio radio-info" checked />
-<input type="$$radio" name="radio-7" class="radio radio-info" />`
+`<input type="radio" name="radio-7" class="$$radio $$radio-info" checked />
+<input type="radio" name="radio-7" class="$$radio $$radio-info" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-7" className="radio radio-info" checked />
-<input type="$$radio" name="radio-7" className="radio radio-info" />`
+`<input type="radio" name="radio-7" className="$$radio $$radio-info" checked />
+<input type="radio" name="radio-7" className="$$radio $$radio-info" />`
 }</pre>
 </Component>
 
@@ -124,12 +124,12 @@ data="{[
 <input type="radio" name="radio-8" class="radio radio-error" checked />
 <input type="radio" name="radio-8" class="radio radio-error" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-8" class="radio radio-error" checked />
-<input type="$$radio" name="radio-8" class="radio radio-error" />`
+`<input type="radio" name="radio-8" class="$$radio $$radio-error" checked />
+<input type="radio" name="radio-8" class="$$radio $$radio-error" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-8" className="radio radio-error" checked />
-<input type="$$radio" name="radio-8" className="radio radio-error" />`
+`<input type="radio" name="radio-8" className="$$radio $$radio-error" checked />
+<input type="radio" name="radio-8" className="$$radio $$radio-error" />`
 }</pre>
 </Component>
 
@@ -137,12 +137,12 @@ data="{[
 <input type="radio" name="radio-9" class="radio" disabled checked />
 <input type="radio" name="radio-9" class="radio" disabled />
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-9" class="radio" disabled checked />
-<input type="$$radio" name="radio-9" class="radio" disabled />`
+`<input type="radio" name="radio-9" class="$$radio" disabled checked />
+<input type="radio" name="radio-9" class="$$radio" disabled />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="$$radio" name="radio-9" className="radio" disabled checked />
-<input type="$$radio" name="radio-9" className="radio" disabled />`
+`<input type="radio" name="radio-9" className="$$radio" disabled checked />
+<input type="radio" name="radio-9" className="$$radio" disabled />`
 }</pre>
 </Component>
 
