@@ -15,6 +15,8 @@ Radial progress needs `--value` CSS variable to work.
 To change the size, use `--size` CSS variable which has a default value of `4rem`.  
 To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.
 
+Note: Use `CSSProperties` as type for `--value`, `--size`, and `--thickness` if you are working with TS.
+
 <div class="alert alert-info text-sm">
   <div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
