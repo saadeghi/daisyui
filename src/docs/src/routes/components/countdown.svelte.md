@@ -26,7 +26,9 @@ published: true
   })
 </script>
 
-You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99
+You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99 
+
+Note: Use `CSSProperties` as type for `--value` if you are working with TS
 
 <ClassTable
 data="{[
