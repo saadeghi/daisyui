@@ -1,6 +1,6 @@
 ---
 title: Countdown
-desc: Countdown gives you a transition effect of changing numbers
+desc: Countdown gives you a transition effect of changing numbers.
 published: true
 ---
 
