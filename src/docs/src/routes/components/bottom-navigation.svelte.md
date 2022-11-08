@@ -1,6 +1,6 @@
 ---
 title: Bottom navigation
-desc: Bottom navigation bar allows navigation between primary screens
+desc: Bottom navigation bar allows navigation between primary screens.
 published: true
 ---
 
