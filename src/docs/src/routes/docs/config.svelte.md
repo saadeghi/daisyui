@@ -48,25 +48,25 @@ module.exports = {
   <Translate text="If it's true, all themes will be included." />
   <Translate text="If it's false, only light (default) theme will be available." />  
   <Translate text="If it's an array, only themes in the array will be included and the first theme will be the default theme." />
-  <Translate text="Read more about <a href='/docs/themes'>themes</a>" />
+  <Translate text="Read more about <a href='/docs/themes'>themes</a>." />
 
 - ### base
 
   `Boolean (default: true)`
 
-  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/blob/master/src/base'>a few base styles</a> will be added" />
+  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/blob/master/src/base'>a few base styles</a> will be added." />
 
 - ### utils
 
   `Boolean (default: true)`
 
-  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/tree/master/src/utilities'>responsive and utility classes</a> will be added" />
+  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/tree/master/src/utilities'>responsive and utility classes</a> will be added." />
 
 - ### logs
 
   `Boolean (default: true)`
 
-  <Translate text="If it's true, daisyUI shows logs in the terminal while CSS is building" />
+  <Translate text="If it's true, daisyUI shows logs in the terminal while CSS is building." />
 
 - ### rtl
 

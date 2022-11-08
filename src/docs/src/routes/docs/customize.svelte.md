@@ -1,6 +1,6 @@
 ---
 title: Customize daisyUI components
-desc: How to customize daisyUI
+desc: How to customize daisyUI?
 published: true
 ---
 
@@ -41,7 +41,7 @@ published: true
 <button class="rounded-full btn">One</button>
 <button class="px-16 rounded-none btn">Two</button>
 
-3. <Translate text="You can customize components on your CSS file, using Tailwind's @apply directive." />
+3. <Translate text="You can customize components on your CSS file, using Tailwind's @apply directive:" />
 
 ```css
 .btn {
@@ -51,5 +51,5 @@ published: true
 
 4. <Translate text="You can also:" />
 
-- [<Translate text="add your own theme" />](/theme-generator)
-- <Translate text="opt-out of daisyUI's design decisions <a href='/docs/config'>only use a unstyled (skeleton) version of daisyUI</a>." />
+- [<Translate text="Add your own theme." />](/theme-generator)
+- <Translate text="Opt out of daisyUI's design decisions, and <a href='/docs/config'>only use an unstyled (skeleton) version of daisyUI</a>." />
