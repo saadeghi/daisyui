@@ -10,7 +10,7 @@ published: true
 
 ## <Translate text="Layout" />
 
-<Translate text="Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes" />
+<Translate text="Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes." />
 
 <br/>
 
