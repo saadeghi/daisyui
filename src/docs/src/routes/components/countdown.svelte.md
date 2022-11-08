@@ -1,6 +1,6 @@
 ---
 title: Countdown
-desc: Countdown gives you a transition effect of changing numbers
+desc: Countdown gives you a transition effect of changing numbers.
 published: true
 ---
 
@@ -26,7 +26,7 @@ published: true
   })
 </script>
 
-You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99
+You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.
 
 <ClassTable
 data="{[
