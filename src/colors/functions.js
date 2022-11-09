@@ -249,7 +249,23 @@ module.exports = {
       themeOrder.push("light");
     }
 
-    // inject themes in order
+    function addTheme(themeName) {
+      if (themeName.startsWith("dark:")) {
+        addBase({
+          ["@media (prefers-color-scheme: dark)"]: {
+            ["[data-theme=" + themeName.substring(5, themeName.length) + "]"]:
+              includedThemesObj["[data-theme=" + themeName + "]"],
+          }
+        });
+      } else {
+        addBase({
+          ["[data-theme=" + themeName + "]"]:
+            includedThemesObj["[data-theme=" + themeName + "]"],
+        });
+      }
+    }
+
+// inject themes in order
     themeOrder.forEach((themeName, index) => {
       if (index === 0) {
         // first theme as root
@@ -285,20 +301,11 @@ module.exports = {
           }
         }
         // theme 0 with name
-        addBase({
-          ["[data-theme=" + themeOrder[0] + "]"]:
-            includedThemesObj["[data-theme=" + themeOrder[0] + "]"],
-        });
+        addTheme(themeOrder[0]);
         // theme 1 with name
-        addBase({
-          ["[data-theme=" + themeOrder[1] + "]"]:
-            includedThemesObj["[data-theme=" + themeOrder[1] + "]"],
-        });
+        addTheme(themeOrder[1]);
       } else {
-        addBase({
-          ["[data-theme=" + themeName + "]"]:
-            includedThemesObj["[data-theme=" + themeName + "]"],
-        });
+        addTheme(themeName);
       }
     });
 
