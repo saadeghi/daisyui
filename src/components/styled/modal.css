@@ -1,6 +1,6 @@
 .modal {
   @apply bg-neutral-focus bg-opacity-40 duration-200 ease-in-out;
-  transition-property: transform, opacity;
+  transition-property: transform, opacity, visibility;
   overflow-y: hidden;
   overscroll-behavior: contain;
 }
