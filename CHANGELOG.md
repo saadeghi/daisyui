@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.39.0](https://github.com/saadeghi/daisyui/compare/v2.38.1...v2.39.0) (2022-11-09)
+
+
+### Bug Fixes
+
+* [#1308](https://github.com/saadeghi/daisyui/issues/1308) ([af8e43c](https://github.com/saadeghi/daisyui/commit/af8e43c2792129f190aafca0d55922e61ebf9d5c))
+* [#436](https://github.com/saadeghi/daisyui/issues/436), add smooth closing animation ([d5a795a](https://github.com/saadeghi/daisyui/commit/d5a795a68e727628d97279bbaa4a18bc6ab65bff))
+* **docs:** missing periods + minor changes ([#1328](https://github.com/saadeghi/daisyui/issues/1328)) ([ab1ec52](https://github.com/saadeghi/daisyui/commit/ab1ec5287f59b505dc0706c88e58c3cd1782d0b6))
+
 ### [2.38.1](https://github.com/saadeghi/daisyui/compare/v2.38.0...v2.38.1) (2022-11-05)
 
 
