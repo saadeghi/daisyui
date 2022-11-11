@@ -133,8 +133,6 @@
 
 [dir="rtl"] {
   .checkbox {
-    --chkbg: var(--bc);
-    --chkfg: var(--b1);
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
