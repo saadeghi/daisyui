@@ -2,17 +2,17 @@
   @apply rounded-box;
   :where(figure:first-child) {
     @apply overflow-hidden;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: unset;
-    border-bottom-right-radius: unset;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+    border-end-start-radius: unset;
+    border-end-end-radius: unset;
   }
   :where(figure:last-child) {
     @apply overflow-hidden;
-    border-top-left-radius: unset;
-    border-top-right-radius: unset;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
+    border-start-start-radius: unset;
+    border-start-end-radius: unset;
+    border-end-start-radius: inherit;
+    border-end-end-radius: inherit;
   }
   &:focus-visible {
     outline: 2px solid currentColor;
