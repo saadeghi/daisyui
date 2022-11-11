@@ -10,8 +10,8 @@
       }
     }
   }
-  &[class*=" p-"] li > *,
-  &[class^="p-"] li > * {
+  &[class*=" p-"]:not(&[class*=" p-0"]) li > *,
+  &[class^="p-"]:not(&[class^="p-0"]) li > * {
     @apply rounded-btn;
   }
   :where(li.bordered > *) {
