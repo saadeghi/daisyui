@@ -65,8 +65,8 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         id: commit
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "github-actions"
+          git config --local user.email "pouya.saadeghi@gmail.com"
+          git config --local user.name "Pouya Saadeghi"
           git add --all
           if [-z "$(git status --porcelain)"]; then
             echo "::set-output name=push::false"

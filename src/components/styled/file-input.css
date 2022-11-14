@@ -1,5 +1,5 @@
 .file-input {
-  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn text-base;
+  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn text-base overflow-hidden;
   &::file-selector-button {
     @apply font-semibold uppercase no-underline border-neutral bg-neutral text-neutral-content;
     border-width: var(--border-btn, 1px);
