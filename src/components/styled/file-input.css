@@ -1,7 +1,7 @@
 .file-input {
-  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn text-base;
+  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn text-base overflow-hidden;
   &::file-selector-button {
-    @apply font-semibold uppercase no-underline border-neutral bg-neutral text-neutral-content rounded-btn;
+    @apply font-semibold uppercase no-underline border-neutral bg-neutral text-neutral-content;
     border-width: var(--border-btn, 1px);
     animation: button-pop var(--animation-btn, 0.25s) ease-out;
     text-transform: var(--btn-text-case, uppercase);
