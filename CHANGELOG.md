@@ -10,6 +10,9 @@ All notable changes to this project will be documented in this file. See [standa
 * [#1350](https://github.com/saadeghi/daisyui/issues/1350) File Input Button for Safari ([#1351](https://github.com/saadeghi/daisyui/issues/1351)) ([c623168](https://github.com/saadeghi/daisyui/commit/c6231687d43688bf9ff630d46f4faed53febad1e))
 * remove collapse-content cutoff ([#1352](https://github.com/saadeghi/daisyui/issues/1352)) ([cbeaa60](https://github.com/saadeghi/daisyui/commit/cbeaa60242e67ce72db4bc28d69f6b7ab5dec4e2))
 
+### Features
+* Bottom navigation now respects the iOS safe-area
+
 ### [2.39.1](https://github.com/saadeghi/daisyui/compare/v2.39.0...v2.39.1) (2022-11-11)
 
 
