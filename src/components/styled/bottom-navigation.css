@@ -1,11 +1,13 @@
 .btm-nav {
   @apply h-16 bg-base-100 text-current;
   &>* {
-    @apply border-current;
+    &:not(.active) {
+      @apply pt-0.5;
+    }
 
     /* active */
     &:where(.active) {
-      @apply bg-base-100 border-t-2;
+      @apply bg-base-100 border-current border-t-2;
     }
 
     /* disabled */
