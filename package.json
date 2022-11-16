@@ -45,6 +45,7 @@
       "master"
     ]
   },
+  "prettier": "./src/prettier.config.js",
   "scripts": {
     "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
     "base": "cat dist/base/*.css > dist/base.css",
