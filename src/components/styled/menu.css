@@ -10,6 +10,8 @@
       }
     }
   }
+  &[class*=" px-"]:not(&[class*=" px-0"]) li > *,
+  &[class^="px-"]:not(&[class^="px-0"]) li > *,
   &[class*=" p-"]:not(&[class*=" p-0"]) li > *,
   &[class^="p-"]:not(&[class^="p-0"]) li > * {
     @apply rounded-btn;
