@@ -47,6 +47,7 @@
   },
   "prettier": "./src/prettier.config.js",
   "scripts": {
+    "prettier": "prettier --write . --ignore-path ./src/.prettierignore",
     "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
     "base": "cat dist/base/*.css > dist/base.css",
     "postbase": "prejss-cli dist/base.css --format commonjs",
@@ -93,6 +94,7 @@
     "postcss-import": "13.0.0",
     "postcss-nested": "5.0.1",
     "prejss-cli": "0.3.3",
+    "prettier": "^2.7.1",
     "rtlcss": "3.0.0",
     "standard-version": "^9.5.0",
     "vitest": "^0.7.10"
