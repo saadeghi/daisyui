@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.41.0](https://github.com/saadeghi/daisyui/compare/v2.40.1...v2.41.0) (2022-11-16)
 
+### Features
+
+* Disabled `toggle` now looks different from unchecked toggle
 
 ### Bug Fixes
 
