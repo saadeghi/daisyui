@@ -1,9 +1,14 @@
 .toggle {
-  --chkbg: hsla(var(--bc) / 0.2);
+  --tglbg: hsl(var(--b1));
   --handleoffset: 1.5rem;
-  @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-20 duration-300 ease-in-out rounded-badge;
+  --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+  --togglehandleborder: 0 0;
+  @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-50 duration-300 ease-in-out rounded-badge;
   transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
-  box-shadow: calc(var(--handleoffset) * -1) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
+  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);
+  [dir="rtl"] & {
+    --handleoffsetcalculator: calc(var(--handleoffset) * 1);
+  }
   &:focus-visible {
     outline: 2px solid hsl(var(--bc));
     outline-offset: 2px;
@@ -11,19 +16,17 @@
   &:checked,
   &[checked="true"],
   &[aria-checked=true] {
-    --chkbg: hsl(var(--bc));
+    --handleoffsetcalculator: var(--handleoffset);
     @apply border-opacity-100 bg-opacity-100;
-    box-shadow: var(--handleoffset) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
     [dir="rtl"] & {
-      box-shadow: calc(var(--handleoffset) * 1) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
+      --handleoffsetcalculator: calc(var(--handleoffset) * -1);
     }
   }
   &:indeterminate {
-    --chkbg: hsl(var(--bc));
     @apply border-opacity-100 bg-opacity-100;
-    box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset, calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
+    box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;
     [dir="rtl"] & {
-      box-shadow: calc(var(--handleoffset) / 2) 0 0 2px hsl(var(--b1)) inset, calc(var(--handleoffset) / -2) 0 0 2px hsl(var(--b1)) inset, 0 0 0 2px hsl(var(--b1)) inset;
+      box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;
     }
   }
   &-primary {
@@ -33,7 +36,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked=true] {
-      --chkbg: hsl(var(--p));
       @apply border-primary;
       @apply border-primary border-opacity-10 bg-primary text-primary-content;
     }
@@ -45,7 +47,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked=true] {
-      --chkbg: hsl(var(--s));
       @apply border-secondary;
       @apply border-secondary border-opacity-10 bg-secondary text-secondary-content;
     }
@@ -57,7 +58,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked=true] {
-      --chkbg: hsl(var(--a));
       @apply border-accent;
       @apply border-accent border-opacity-10 bg-accent text-accent-content;
     }
@@ -69,7 +69,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked=true] {
-      --chkbg: hsl(var(--su));
       @apply border-success;
       @apply border-success border-opacity-10 bg-success text-success-content;
     }
@@ -81,7 +80,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked=true] {
-      --chkbg: hsl(var(--wa));
       @apply border-warning;
       @apply border-warning border-opacity-10 bg-warning text-warning-content;
     }
@@ -93,7 +91,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked=true] {
-      --chkbg: hsl(var(--in));
       @apply border-info;
       @apply border-info border-opacity-10 bg-info text-info-content;
     }
@@ -105,13 +102,13 @@
     &:checked,
     &[checked="true"],
     &[aria-checked=true] {
-      --chkbg: hsl(var(--er));
       @apply border-error;
       @apply border-error border-opacity-10 bg-error text-error-content;
     }
   }
   &:disabled {
-    @apply cursor-not-allowed border-transparent bg-base-content bg-opacity-20;
+    @apply cursor-not-allowed bg-transparent border-base-content opacity-30;
+    --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
   }
 }
 
