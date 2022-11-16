@@ -3,6 +3,10 @@
   &>* {
     @apply border-current;
 
+    &:not(.active) {
+      @apply pt-0.5;
+    }
+
     /* active */
     &:where(.active) {
       @apply bg-base-100 border-t-2;
