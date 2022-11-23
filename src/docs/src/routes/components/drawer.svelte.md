@@ -255,7 +255,7 @@ You can check/uncheck the checkbox using JavaScript or using `<label>` tag.
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
   </div> 
-  <div class="drawer-side">
+  <div class="drawer-side overflow-hidden">
     <label for="my-drawer-4" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 bg-base-100 text-base-content">
       <li><a>Sidebar Item 1</a></li>
