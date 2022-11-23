@@ -1,8 +1,8 @@
 export let siteStats = {
-  components: "48",
+  components: "49",
   themes: "29",
-  githubStars: "+12,000",
-  npmInstalls: "+1,000,000",
+  githubStars: "+15,000",
+  npmInstalls: "+2,000,000",
 }
 
 export let siteData = {
@@ -390,6 +390,13 @@ export let pages = [
         href: "/components/carousel",
         icon: "",
         badge: "",
+      },
+      {
+        name: "Chat bubble",
+        tags: "chat bubble dialog message messenger",
+        href: "/components/chat",
+        icon: "",
+        badge: "New",
       },
       {
         name: "Collapse",
