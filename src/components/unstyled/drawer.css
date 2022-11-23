@@ -38,7 +38,7 @@
   }
   &:checked {
     & ~ .drawer-side {
-      @apply overflow-y-auto;
+      @apply overflow-y-auto overflow-x-hidden isolate;
       & > .drawer-overlay {
         @apply visible;
       }
