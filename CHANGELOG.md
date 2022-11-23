@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.42.0](https://github.com/saadeghi/daisyui/compare/v2.41.0...v2.42.0) (2022-11-23)
+
+
+### Features
+
+* Add new component `chat` ([522bc5e](https://github.com/saadeghi/daisyui/commit/522bc5ebf4fe6d4ec4e9ac8236c63fe10e250d8f))
+
+
+### Bug Fixes
+
+* [#1384](https://github.com/saadeghi/daisyui/issues/1384) (visible scrollbar in drawer-end animation) ([ced3ae9](https://github.com/saadeghi/daisyui/commit/ced3ae9b3eb392c07952152c0106a6f2347d79eb))
+
 ## [2.41.0](https://github.com/saadeghi/daisyui/compare/v2.40.1...v2.41.0) (2022-11-16)
 
 ### Features
