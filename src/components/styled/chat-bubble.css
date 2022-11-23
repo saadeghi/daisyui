@@ -1,0 +1,115 @@
+.bubble {
+  /* default */
+  & {
+    --bubble-bg: hsl(var(--n));
+    @apply text-neutral-content;
+  }
+
+  /* brand colors */
+  &-primary {
+    --bubble-bg: hsl(var(--p));
+    @apply text-primary-content;
+  }
+  &-secondary {
+    --bubble-bg: hsl(var(--s));
+    @apply text-secondary-content;
+  }
+  &-accent {
+    --bubble-bg: hsl(var(--a));
+    @apply text-accent-content;
+  }
+
+  /* state colors */
+  &-info {
+    --bubble-bg: hsl(var(--in));
+    @apply text-info-content;
+  }
+  &-success {
+    --bubble-bg: hsl(var(--su));
+    @apply text-success-content;
+  }
+  &-warning {
+    --bubble-bg: hsl(var(--wa));
+    @apply text-warning-content;
+  }
+  &-error {
+    --bubble-bg: hsl(var(--er));
+    @apply text-error-content;
+  }
+
+  &-left {
+    [dir="ltr"] & {
+      @apply mr-auto rounded-r-xl;
+      margin-left: var(--bubble-radius, 0.75rem);
+
+      &:before {
+        --circle-pos: top left;
+        left: calc(var(--bubble-radius, 0.75rem) * -1);
+        background-image: var(--tab-corner-bg);
+      }
+    }
+    [dir="rtl"] & {
+      @apply ml-auto rounded-l-xl;
+      margin-right: var(--bubble-radius, 0.75rem);
+
+      &:after {
+        --circle-pos: top right;
+        right: calc(var(--bubble-radius, 0.75rem) * -1);
+        background-image: var(--tab-corner-bg);
+      }
+    }
+  }
+
+  &-right {
+    [dir="ltr"] & {
+      @apply ml-auto rounded-l-xl;
+      margin-right: var(--bubble-radius, 0.75rem);
+
+      &:after {
+        right: calc(var(--bubble-radius, 0.75rem) * -1);
+        --circle-pos: top right;
+        background-image: var(--tab-corner-bg);
+      }
+    }
+    [dir="rtl"] & {
+      @apply mr-auto rounded-r-xl;
+      margin-left: var(--bubble-radius, 0.75rem);
+
+      &:before {
+        left: calc(var(--bubble-radius, 0.75rem) * -1);
+        --circle-pos: top left;
+        background-image: var(--tab-corner-bg);
+      }
+    }
+  }
+
+  &-topbar {
+    @apply flex items-center;
+    @apply mb-1;
+
+    &-author {
+      @apply font-medium;
+    }
+    &-time {
+      @apply text-xs italic;
+      @apply mx-2;
+    }
+    &-action {
+      [dir="ltr"] & {
+        @apply ml-auto;
+      }
+      [dir="rtl"] & {
+        @apply mr-auto;
+      }
+    }
+  }
+
+  &-action {
+    [dir="ltr"] & {
+      @apply ml-auto;
+    }
+    [dir="rtl"] & {
+      @apply mr-auto;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.bubble {
+  --bubble-radius: 0.75rem;
+
+  @apply inline-block;
+  @apply px-4 py-2 my-2 rounded-t-xl relative;
+  @apply font-light;
+  background-color: var(--bubble-bg);
+  max-width: 60%;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: var(--bubble-radius, 0.75rem);
+    height: var(--bubble-radius, 0.75rem);
+    bottom: 0;
+    --tab-corner-bg: radial-gradient(circle at var(--circle-pos), transparent 68%, transparent 68%, transparent calc(68% + 1px), var(--bubble-bg) 68%);
+  }
+}
