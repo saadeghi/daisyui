@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.42.1](https://github.com/saadeghi/daisyui/compare/v2.42.0...v2.42.1) (2022-11-24)
+
+
+### Bug Fixes
+
+* RTL style for `chat` ([3887c6e](https://github.com/saadeghi/daisyui/commit/3887c6e7f1e71362c1d49649597bfa7ee985fd7e))
+
 ## [2.42.0](https://github.com/saadeghi/daisyui/compare/v2.41.0...v2.42.0) (2022-11-23)
 
 
