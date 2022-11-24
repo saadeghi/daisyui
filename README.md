@@ -104,7 +104,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [ ] Calendar
   - [x] Card
   - [x] Carousel
-  - [ ] Chat bubble
+  - [x] Chat bubble
   - [x] Collapse
   - [ ] Comment
   - [x] Countdown
