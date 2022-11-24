@@ -77,7 +77,7 @@
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};">
     <Navbar {drawerContentScrollY} {addScrollPaddingToNavbar} {removeScrollPaddingFromNavbar} />
-    <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "pl-6 pr-2 pb-16"}`}>
+    <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "px-6 xl:pr-2 pb-16"}`}>
       <slot />
     </div>
   </div>
