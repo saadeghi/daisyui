@@ -324,5 +324,6 @@
   "Changes the style of a component": "Modifie le style d'un composant",
   "Supports responsive prefixes (sm:, lg:, …)": "Prend en charge les préfixes réactifs (sm:, lg:, …)",
   "Make your theme": "Créer votre thème",
+  "Support daisyUI's development": "Soutenir le développement de daisyUI",
   "": ""
 }

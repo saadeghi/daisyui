@@ -324,5 +324,6 @@
   "Changes the style of a component": "컴포넌트의 스타일 변경하기",
   "Supports responsive prefixes (sm:, lg:, …)": "반응형 접두어 지원 (sm:, lg:, …)",
   "Make your theme": "나만의 테마 만들기",
+  "Support daisyUI's development": "daisyUI 개발 지원",
   "": ""
 }

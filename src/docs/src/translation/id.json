@@ -325,5 +325,6 @@
   "Changes the style of a component": "Mengubah style dari sebuah komponen",
   "Supports responsive prefixes (sm:, lg:, …)": "Mendukung prefix responsif (sm:, lg:, dll)",
   "Make your theme": "Buat tema Anda",
+  "Support daisyUI's development": "Mendukung pengembangan daisyUI",
   "": ""
 }

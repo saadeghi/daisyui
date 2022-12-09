@@ -324,5 +324,6 @@
   "Changes the style of a component": "更改元件樣式",
   "Supports responsive prefixes (sm:, lg:, …)": "支援動態前綴 (sm:、lg:、…)",
   "Make your theme": "建立您的主題",
+  "Support daisyUI's development": "支持daisyUI的開發",
   "": ""
 }

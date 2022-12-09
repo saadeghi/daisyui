@@ -324,5 +324,6 @@
   "Changes the style of a component": "Changes the style of a component",
   "Supports responsive prefixes (sm:, lg:, …)": "Supports responsive prefixes (sm:, lg:, …)",
   "Make your theme": "Make your theme",
+  "Support daisyUI's development": "Support daisyUI's development",
   "": ""
 }
