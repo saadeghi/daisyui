@@ -202,3 +202,31 @@ module.exports = {
   },
 }
 ```
+
+## <Translate text="How to add custom styles for a specific theme?" />
+
+<Translate text="You can write custom style for your elements only for a specific theme." />  
+<Translate text="In this example, .btn-twitter class only will have this style on light theme." />  
+
+```js
+module.exports = {
+  //...
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require('daisyui/src/colors/themes')['[data-theme=light]'],
+          '.btn-twitter': {
+            'background-color': '#1EA1F1',
+            'border-color': '#1EA1F1',
+          },
+          '.btn-twitter:hover': {
+            'background-color': '#1C96E1',
+            'border-color': '#1C96E1',
+          },
+        },
+      },
+    ],
+  },
+}
+```
