@@ -4,10 +4,14 @@
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
-  "homepage": "https://github.com/saadeghi/daisyui",
+  "homepage": "https://daisyui.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saadeghi/daisyui.git"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/daisyui"
   },
   "bugs": {
     "url": "https://github.com/saadeghi/daisyui/issues"

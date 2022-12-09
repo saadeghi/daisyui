@@ -85,7 +85,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
   const themeInjector = colorFunctions.injectThemes(addBase, config, themes)
   themeInjector;
 
-  daisyuiIncludedItems.push("themes[" + themeInjector.themeOrder.length + "]");
+  daisyuiIncludedItems.push(themeInjector.themeOrder.length + " themes");
 
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
@@ -110,6 +110,11 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
       "✔︎ Including:",
       "\x1b[0m",
       "" + daisyuiIncludedItems.join(", ")
+    );
+    console.log(
+      "\x1b[32m%s\x1b[0m",
+      "❤︎ Support daisyUI: ", daisyuiInfo.funding.url,
+      "\x1b[0m",
     );
     console.log();
     console.groupEnd();
