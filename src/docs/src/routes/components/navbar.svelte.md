@@ -131,7 +131,7 @@ data="{[
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
   </div>
   <div class="flex-none">
-    <ul class="menu menu-horizontal p-0 bg-base-100">
+    <ul class="menu menu-horizontal px-1 bg-base-100">
       <li><a>Item 1</a></li>
       <li tabindex="0">
         <a>
@@ -153,7 +153,7 @@ data="{[
     <a class="$$btn $$btn-ghost normal-case text-xl">daisyUI</a>
   </div>
   <div class="flex-none">
-    <ul class="$$menu $$menu-horizontal p-0">
+    <ul class="$$menu $$menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li tabindex="0">
         <a>
@@ -176,7 +176,7 @@ data="{[
     <a className="$$btn $$btn-ghost normal-case text-xl">daisyUI</a>
   </div>
   <div className="flex-none">
-    <ul className="$$menu $$menu-horizontal p-0">
+    <ul className="$$menu $$menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li tabIndex={0}>
         <a>
@@ -529,7 +529,7 @@ data="{[
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal p-0">
+    <ul class="menu menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li tabindex="0">
         <a>
@@ -573,7 +573,7 @@ data="{[
     <a class="$$btn $$btn-ghost normal-case text-xl">daisyUI</a>
   </div>
   <div class="$$navbar-center hidden lg:flex">
-    <ul class="$$menu $$menu-horizontal p-0">
+    <ul class="$$menu $$menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li tabindex="0">
         <a>
@@ -618,7 +618,7 @@ data="{[
     <a className="$$btn $$btn-ghost normal-case text-xl">daisyUI</a>
   </div>
   <div className="$$navbar-center hidden lg:flex">
-    <ul className="$$menu $$menu-horizontal p-0">
+    <ul className="$$menu $$menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li tabIndex={0}>
         <a>
