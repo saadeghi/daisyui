@@ -24,7 +24,7 @@
 .collapse:not(.collapse-open):not(.collapse-close) .collapse-title {
   @apply cursor-pointer;
 }
-.collapse:focus:not(.collapse-open):not(.collapse-close) .collapse-title {
+.collapse:focus-within:not(.collapse-open):not(.collapse-close) .collapse-title {
   cursor: unset;
 }
 .collapse-title {
@@ -39,9 +39,9 @@
   min-height: 3.75rem;
   transition: background-color 0.2s ease-in-out;
 }
-/* 
+/*
 .collapse-open :where(.collapse-title),
-.collapse:focus:not(.collapse-close) :where(.collapse-title),
+.collapse:focus-within:not(.collapse-close) :where(.collapse-title),
 .collapse:not(.collapse-close) :where(input[type="checkbox"]:checked ~ .collapse-title) {
   @apply bg-base-content bg-opacity-10;
 } */
@@ -52,19 +52,19 @@
   transition: padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .collapse-open :where(.collapse-content),
-.collapse:focus:not(.collapse-close) :where(.collapse-content),
+.collapse:focus-within:not(.collapse-close) :where(.collapse-content),
 .collapse:not(.collapse-close) :where(input[type="checkbox"]:checked ~ .collapse-content) {
   @apply pb-4;
   transition: padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .collapse-open.collapse-arrow .collapse-title:after,
-.collapse-arrow:focus:not(.collapse-close) .collapse-title:after,
+.collapse-arrow:focus-within:not(.collapse-close) .collapse-title:after,
 .collapse-arrow:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-title:after {
   @apply rotate-[225deg] translate-y-[-50%];
 }
 .collapse-open.collapse-plus .collapse-title:after,
-.collapse-plus:focus:not(.collapse-close) .collapse-title:after,
+.collapse-plus:focus-within:not(.collapse-close) .collapse-title:after,
 .collapse-plus:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-title:after {
   content: "−";
 }
