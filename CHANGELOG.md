@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.43.1](https://github.com/saadeghi/daisyui/compare/v2.43.0...v2.43.1) (2022-12-12)
+
+
+### Bug Fixes
+
+* [#1426](https://github.com/saadeghi/daisyui/issues/1426) collapse uses focus-within instead of focus ([#1428](https://github.com/saadeghi/daisyui/issues/1428)) ([20c9c30](https://github.com/saadeghi/daisyui/commit/20c9c3077df20354dc391bcf630af7cb1e3e169a))
+
 ## [2.43.0](https://github.com/saadeghi/daisyui/compare/v2.42.1...v2.43.0) (2022-12-09)
 
 
