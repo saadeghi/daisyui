@@ -28,7 +28,7 @@
     @apply z-0 col-start-1 row-start-1 overflow-y-auto;
   }
   & ~ .drawer-side {
-    @apply col-start-1 row-start-1 grid max-h-screen;
+    @apply col-start-1 row-start-1 grid max-h-screen overflow-x-hidden;
     & > .drawer-overlay {
       @apply invisible col-start-1 row-start-1 opacity-0;
     }
