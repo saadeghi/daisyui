@@ -7,7 +7,7 @@
     }
   }
 }
-.menu :where(li) {
+:where(.menu li) {
   @apply relative flex flex-col flex-wrap items-stretch shrink-0;
 }
 .menu :where(li:not(.menu-title)) > :where(*:not(ul)) {
