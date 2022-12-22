@@ -170,7 +170,7 @@ export let exampleRepos = [
   },
   {
     name: "Nuxtjs 3",
-    href: "https://stackblitz.com/edit/daisyui-nuxtjs-svr578",
+    href: "https://stackblitz.com/edit/daisyui-nuxt3",
     logos: ["/logos/nuxtjs.svg"],
   },
   {
