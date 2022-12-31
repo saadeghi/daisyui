@@ -31,14 +31,16 @@
     "ui"
   ],
   "main": "src/index.js",
-  "typings": "src/index.js",
+  "typings": "src/index.d.ts",
+  "types": "src/index.d.ts",
   "files": [
     "src/lib/**/*.js",
     "dist/*.js",
     "dist/{themes,styled,unstyled,full}.css",
     "!dist/*.rtl.css",
     "src/index.js",
-    "src/colors/*.js"
+    "src/colors/*.js",
+    "src/index.d.ts"
   ],
   "browserslist": [
     "> 7%"
