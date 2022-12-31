@@ -1,4 +1,3 @@
-/// <reference types="./tailwind-config" />
 import type plugin from "tailwindcss/plugin"
 
 // Export types
