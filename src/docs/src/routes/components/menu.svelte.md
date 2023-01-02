@@ -17,6 +17,8 @@ data="{[
   { type:'component', class: 'menu-title', desc: 'Identify <li> as the title of menu' },
   { type:'modifier', class: 'disabled', desc: 'Sets <li> as disabled' },
   { type:'modifier', class: 'active', desc: 'highlights the element inside <li> as active' },
+  { type:'modifier', class: 'bordered', desc: 'adds a border to the <li>' },
+  { type:'modifier', class: 'hover-bordered', desc: 'adds a border to the <li> when hovered' },
   { type:'responsive', class: 'menu-normal', desc: 'Normal text size and normal spacing (default)' },
   { type:'responsive', class: 'menu-compact', desc: 'Smaller text size and compact spacing' },
   { type:'responsive', class: 'menu-vertical', desc: 'Vertical menu (default)' },
@@ -158,7 +160,7 @@ data="{[
 <Component title="Item with border">
 <ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
   <li><a>Item 1</a></li>
-  <li class="bordered"><a>I have border</a></li>
+  <li class="borderedbordered"><a>I have border</a></li>
   <li><a>Item 3</a></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
