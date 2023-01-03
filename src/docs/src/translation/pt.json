@@ -131,7 +131,7 @@
   "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation'>Tailwind CSS</a> installed.": "Precisas de <a href='https://nodejs.org/en/download/'>Node.js</a> e de <a href='https://tailwindcss.com/docs/installation'>Tailwind CSS</a> instalados.",
   "How to install daisyUI as a Tailwind CSS plugin?": "Como instalar daisyUI como um plugin Tailwind CSS?",
   "Install daisyUI": "Instala o daisyUI",
-  "Then add daisyUI to your <code>tailwind.config.js</code> files": "Depois adiciona o daisyUI ao teu <code>tailwind.config.js</code> ficheiro",
+  "Then add daisyUI to your <code>tailwind.config.js</code> files": "Depois adiciona o daisyUI ao teu ficheiro <code>tailwind.config.js</code>",
   "daisyUI example repositories": "Repositórios de examplo daisyUI",
   "See example setup of daisyUI and Tailwind CSS on different frameworks and build tools.": "Vê exemplos de configuração do daisyUI e do Tailwind CSS em diferentes frameworks e ferramentas.",
   "Prev": "Anterior",
