@@ -27,6 +27,11 @@
 .collapse:focus:not(.collapse-open):not(.collapse-close) .collapse-title {
   cursor: unset;
 }
+
+.collapse:focus {
+    @apply pointer-events-none;
+}
+
 .collapse-title {
   @apply relative;
 }
