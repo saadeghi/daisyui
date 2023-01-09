@@ -32,6 +32,10 @@
     @apply pointer-events-none;
 }
 
+.collapse:focus a {
+    @apply pointer-events-auto;
+}
+
 .collapse-title {
   @apply relative;
 }
