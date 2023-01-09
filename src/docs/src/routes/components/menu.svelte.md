@@ -160,7 +160,7 @@ data="{[
 <Component title="Item with border">
 <ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
   <li><a>Item 1</a></li>
-  <li class="borderedbordered"><a>I have border</a></li>
+  <li class="bordered"><a>I have border</a></li>
   <li><a>Item 3</a></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
