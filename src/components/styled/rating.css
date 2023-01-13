@@ -3,17 +3,21 @@
     @apply appearance-none;
     -webkit-appearance: none;
   }
+  
   :where(input) {
     animation: rating-pop var(--animation-input, 0.25s) ease-out;
     @apply h-6 w-6 bg-base-content bg-opacity-100;
   }
+  
   & .rating-hidden {
     @apply w-2 bg-transparent;
   }
+  
   input:checked ~ input,
   input[aria-checked=true] ~ input {
     @apply bg-opacity-20;
   }
+  
   input:focus-visible {
     @apply transition-transform duration-300 ease-in-out;
     transform: translateY(-0.125em);
@@ -26,9 +30,21 @@
   & input:active:focus {
     transform: translateY(-0.125em);
   }
+
+  :where(span) {
+    @apply h-6 w-6 bg-base-content bg-opacity-100;
+  }
+
+  :where(span:not(.checked)) {
+    @apply bg-opacity-20 !important;
+  }
 }
 .rating-half {
   :where(input:not(.rating-hidden)) {
+    @apply w-3;
+  }
+
+  :where(span:not(.rating-hidden)) {
     @apply w-3;
   }
 }
