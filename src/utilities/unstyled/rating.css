@@ -1,12 +1,15 @@
 .rating-xs input {
   @apply h-3 w-3;
 }
+
 .rating-sm input {
   @apply h-4 w-4;
 }
+
 .rating-md input {
   @apply h-6 w-6;
 }
+
 .rating-lg input {
   @apply h-10 w-10;
 }
@@ -14,12 +17,15 @@
 .rating-xs span {
   @apply h-3 w-3;
 }
+
 .rating-sm span {
   @apply h-4 w-4;
 }
+
 .rating-md span {
   @apply h-6 w-6;
 }
+
 .rating-lg span {
   @apply h-10 w-10;
 }
@@ -28,12 +34,15 @@
   &.rating-xs input:not(.rating-hidden) {
     @apply w-1.5;
   }
+
   &.rating-sm input:not(.rating-hidden) {
     @apply w-2;
   }
+
   &.rating-md input:not(.rating-hidden) {
     @apply w-3;
   }
+
   &.rating-lg input:not(.rating-hidden) {
     @apply w-5;
   }
@@ -41,12 +50,15 @@
   &.rating-xs span:not(.rating-hidden) {
     @apply w-1.5;
   }
+
   &.rating-sm span:not(.rating-hidden) {
     @apply w-2;
   }
+
   &.rating-md span:not(.rating-hidden) {
     @apply w-3;
   }
+
   &.rating-lg span:not(.rating-hidden) {
     @apply w-5;
   }
