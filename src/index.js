@@ -21,7 +21,6 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     logs = true;
   }
   if (logs) {
-    console.log();
     console.log(
       "\x1b[35m%s\x1b[0m",
       "🌼 daisyUI components " + daisyuiInfo.version,
@@ -116,7 +115,6 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
       "❤︎ Support daisyUI: ", daisyuiInfo.funding.url,
       "\x1b[0m",
     );
-    console.log();
     console.groupEnd();
   }
 };
