@@ -14,10 +14,16 @@ published: true
 
 <Translate text="You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation'>Tailwind CSS</a> installed." />
 
-1. <Translate text="Install daisyUI" />:
+1. <Translate text="Install daisyUI" /> (NPM):
 
 ```
 npm i daisyui
+```
+
+ <Translate text="Install daisyUI" /> (Yarn):
+
+```
+yarn add daisyui
 ```
 
 2. <Translate text="Then add daisyUI to your <code>tailwind.config.js</code> files" />:
