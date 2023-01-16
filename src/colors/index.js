@@ -37,15 +37,19 @@ let colorObject = {
   "base-content": withOpacityValue("--bc"),
 
   info: withOpacityValue("--in"),
+  "info-focus": withOpacityValue("--inf", "--in"),
   "info-content": withOpacityValue("--inc", "--nc"),
 
   success: withOpacityValue("--su"),
+  "success-focus": withOpacityValue("--suf", "--su"),
   "success-content": withOpacityValue("--suc", "--nc"),
 
   warning: withOpacityValue("--wa"),
+  "warning-focus": withOpacityValue("--waf", "--wa"),
   "warning-content": withOpacityValue("--wac", "--nc"),
 
   error: withOpacityValue("--er"),
+  "error-focus": withOpacityValue("--erf", "--er"),
   "error-content": withOpacityValue("--erc", "--nc"),
 };
 
