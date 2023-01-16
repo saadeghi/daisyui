@@ -45,6 +45,26 @@ module.exports = {
           resultObj["--nf"] = darkerHslArray[0] + " " + darkerHslArray[1] + "%" + " " + darkerHslArray[2] + "%";
         }
 
+        if (!input.hasOwnProperty("info-focus")) {
+          const darkerHslArray = Color(input["info"]).darken(0.2).hsl().round().array()
+          resultObj["--inf"] = darkerHslArray[0] + " " + darkerHslArray[1] + "%" + " " + darkerHslArray[2] + "%"
+        }
+
+        if (!input.hasOwnProperty("success-focus")) {
+          const darkerHslArray = Color(input["success"]).darken(0.2).hsl().round().array()
+          resultObj["--suf"] = darkerHslArray[0] + " " + darkerHslArray[1] + "%" + " " + darkerHslArray[2] + "%"
+        }
+
+        if (!input.hasOwnProperty("warning-focus")) {
+          const darkerHslArray = Color(input["warning"]).darken(0.2).hsl().round().array()
+          resultObj["--waf"] = darkerHslArray[0] + " " + darkerHslArray[1] + "%" + " " + darkerHslArray[2] + "%"
+        }
+
+        if (!input.hasOwnProperty("error-focus")) {
+          const darkerHslArray = Color(input["error"]).darken(0.2).hsl().round().array()
+          resultObj["--erf"] = darkerHslArray[0] + " " + darkerHslArray[1] + "%" + " " + darkerHslArray[2] + "%"
+        }
+
         // auto generate base colors
         if (!input.hasOwnProperty("base-100")) {
           resultObj["--b1"] = 0 + " " + 0 + "%" + " " + 100 + "%";
