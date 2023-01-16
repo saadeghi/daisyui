@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.47.0](https://github.com/saadeghi/daisyui/compare/v2.46.1...v2.47.0) (2023-01-16)
+
+
+### Features
+
+* More precise Hex to HSL conversion .Now HSL values round to 5 decimal places instead of 0 ([36d27f0](https://github.com/saadeghi/daisyui/commit/36d27f096f41ce43733002f4e617be7ecb1883ca))
+
+
+### Bug Fixes
+
+* **docs:** Bordered menu item preview has incorrect class ([#1505](https://github.com/saadeghi/daisyui/issues/1505)) ([e2857f7](https://github.com/saadeghi/daisyui/commit/e2857f74a1f3f5f8d7bb8130aa429ce15297895c))
+* **docs:** typos in the Portuguese translation ([#1482](https://github.com/saadeghi/daisyui/issues/1482)) ([763726c](https://github.com/saadeghi/daisyui/commit/763726cb6c3eabed70eef2a3af6202328fb51ebc))
+* **docs:** update and improve japanese translation ([#1510](https://github.com/saadeghi/daisyui/issues/1510)) ([4fbba93](https://github.com/saadeghi/daisyui/commit/4fbba93808f7a2a36c09f3057e2c2bd1552a8b3d))
+
 ### [2.46.1](https://github.com/saadeghi/daisyui/compare/v2.46.0...v2.46.1) (2023-01-02)
 
 ## [2.46.0](https://github.com/saadeghi/daisyui/compare/v2.45.0...v2.46.0) (2022-12-20)
