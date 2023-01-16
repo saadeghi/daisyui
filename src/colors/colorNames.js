@@ -21,14 +21,18 @@ module.exports = {
   "base-content": "--bc",
 
   info: "--in",
+  "info-focus": "--inf",
   "info-content": "--inc",
 
   success: "--su",
+  "success-focus": "--suf",
   "success-content": "--suc",
 
   warning: "--wa",
+  "warning-focus": "--waf",
   "warning-content": "--wac",
 
   error: "--er",
+  "error-focus": "--erf",
   "error-content": "--erc",
-};
+}
