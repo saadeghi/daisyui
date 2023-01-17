@@ -25,6 +25,7 @@ data="{[
   { type:'modifier', class: 'input-success', desc: 'Adds `success` color to input' },
   { type:'modifier', class: 'input-warning', desc: 'Adds `warning` color to input' },
   { type:'modifier', class: 'input-error', desc: 'Adds `error` color to input' },
+  { type:'modifier', class: 'input-default', desc: 'Returns input to default color' },
   { type:'responsive', class: 'input-lg', desc: 'Large size for input' },
   { type:'responsive', class: 'input-md', desc: 'Medium (default) size for input' },
   { type:'responsive', class: 'input-sm', desc: 'Small size for input' },
@@ -169,6 +170,16 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<input type="text" placeholder="Type here" className="$$input $$input-bordered $$input-error w-full max-w-xs" />`
+}</pre>
+</Component>
+
+<Component title="Error color, returning to default on focus">
+<input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs focus:input-default" />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="text" placeholder="Type here" class="$$input $$input-bordered $$input-error w-full max-w-xs $$focus:input-default" />`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<input type="text" placeholder="Type here" className="$$input $$input-bordered $$input-error w-full max-w-xs $$focus:input-default" />`
 }</pre>
 </Component>
 
