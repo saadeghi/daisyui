@@ -25,6 +25,10 @@ data="{[
   { type:'modifier', class: 'textarea-success', desc: 'Adds `success` color to textarea' },
   { type:'modifier', class: 'textarea-warning', desc: 'Adds `warning` color to textarea' },
   { type:'modifier', class: 'textarea-error', desc: 'Adds `error` color to textarea' },
+  { type:'responsive', class: 'textarea-lg', desc: 'Large size for textarea' },
+  { type:'responsive', class: 'textarea-md', desc: 'Medium (default) size for textarea' },
+  { type:'responsive', class: 'textarea-sm', desc: 'Small size for textarea' },
+  { type:'responsive', class: 'textarea-xs', desc: 'Extra small size for textarea' },
 ]}"
 />
 
