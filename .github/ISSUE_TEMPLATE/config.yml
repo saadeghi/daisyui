@@ -3,7 +3,7 @@ contact_links:
   - name: 🔎 Search in Discussions
     url: https://github.com/saadeghi/daisyui/discussions
     about: First see if there's an existing topic in Discussions.
-  - name: ❓ Ask a new quesiont in Discussions
+  - name: ❓ Ask a new question in Discussions
     url: https://github.com/saadeghi/daisyui/discussions/new?category=q-a
     about: If you have a new question and you couldn't find answers.
   - name: 🔎 Search in Issues
