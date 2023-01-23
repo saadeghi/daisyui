@@ -7,12 +7,12 @@ contact_links:
     url: https://github.com/saadeghi/daisyui/discussions/new?category=q-a
     about: If you have a new question and you couldn't find answers.
   - name: 🔎 Search in Issues
-    url: https://github.com/saadeghi/daisyui/discussions
+    url: https://github.com/saadeghi/daisyui/issues?q=is%3Aissue
     about: If you found a bug, first see if there's an existing issue about it.
-  - name: 🐞 Report a new Bug
+  - name: 🐞 Report a new Bug in daisyUI
     url: https://github.com/saadeghi/daisyui/issues/new?body=%2A%2AWhat%20version%20of%20daisyUI%20are%20you%20using%3F%2A%2A%0A%3C%21--%20For%20example%3A%20v2.47.0%20--%3E%0A%0A%0A%2A%2ADescribe%20your%20issue%3A%2A%2A%0A%3C%21--%20Describe%20the%20problem%20and%20say%20how%20and%20when%20it%20happens%20--%3E%0A%0A%0A%2A%2AReproduction%20URL%3A%2A%2A%0A%3C%21--%20Provide%20a%20Tailwind%20Play%20link%20or%20public%20GitHub%20repo%20so%20we%20can%20reproduce%20the%20issue%20--%3E%0A%0A
     about: If you found a new bug on daisyUI, you can report it here.
-  - name: 📕 Documentation Issue
+  - name: 📕 Report an issue on documentation website
     url: https://github.com/saadeghi/daisyui/issues/new?title=docs%3A
     about: If you found an issue on daisyui.com website
   - name: ✨ Ideas / Feature request
