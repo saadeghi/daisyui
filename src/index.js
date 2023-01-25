@@ -1,3 +1,5 @@
+const tailwindColors = require('tailwindcss/colors')
+
 const postcssJs = require("postcss-js")
 const postcssPrefix = require('./lib/postcss-prefixer')
 
@@ -122,5 +124,22 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
 };
 
 module.exports = require("tailwindcss/plugin")(mainFunction, {
-  theme: { extend: { colors } },
+  theme: { 
+    extend: {
+      colors: {
+        ...colors,
+        // adding all Tailwind `neutral` shades here so they don't get overridden by daisyUI `neutral` color
+        "neutral-50": tailwindColors.neutral[50],
+        "neutral-100": tailwindColors.neutral[100],
+        "neutral-200": tailwindColors.neutral[200],
+        "neutral-300": tailwindColors.neutral[300],
+        "neutral-400": tailwindColors.neutral[400],
+        "neutral-500": tailwindColors.neutral[500],
+        "neutral-600": tailwindColors.neutral[600],
+        "neutral-700": tailwindColors.neutral[700],
+        "neutral-800": tailwindColors.neutral[800],
+        "neutral-900": tailwindColors.neutral[900],
+      }
+    }
+  },
 });
