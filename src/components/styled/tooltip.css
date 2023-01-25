@@ -24,6 +24,11 @@
 .tooltip:hover:after {
   @apply opacity-100 delay-75;
 }
+.tooltip:not([data-tip]):hover:before,
+.tooltip:not([data-tip]):hover:after {
+  visibility: hidden;
+  opacity: 0;
+}
 .tooltip:after {
   content: "";
   border-style: solid;
