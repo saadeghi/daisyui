@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔎 Search in Discussions
+    url: https://github.com/saadeghi/daisyui/discussions
+    about: First see if there's an existing topic in Discussions.
+  - name: 🔎 Search in Issues
+    url: https://github.com/saadeghi/daisyui/issues?q=is%3Aissue
+    about: If you found a bug, first see if there's an existing issue about it.
+  - name: ❓ Ask a new question in Discussions
+    url: https://github.com/saadeghi/daisyui/discussions/new?category=q-a
+    about: If you have a new question and you couldn't find answers.
+  - name: 💡 Ideas / Feature request
+    url: https://github.com/saadeghi/daisyui/discussions/new?category=ideas-feature-requests
+    about: If you want to suggest a new idea or if you want a new feature to be added to daisyUI, let's talk about it in Discussions forum
