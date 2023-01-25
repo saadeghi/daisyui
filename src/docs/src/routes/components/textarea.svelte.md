@@ -25,6 +25,10 @@ data="{[
   { type:'modifier', class: 'textarea-success', desc: 'Adds `success` color to textarea' },
   { type:'modifier', class: 'textarea-warning', desc: 'Adds `warning` color to textarea' },
   { type:'modifier', class: 'textarea-error', desc: 'Adds `error` color to textarea' },
+  { type:'responsive', class: 'textarea-lg', desc: 'Large size for textarea' },
+  { type:'responsive', class: 'textarea-md', desc: 'Medium (default) size for textarea' },
+  { type:'responsive', class: 'textarea-sm', desc: 'Small size for textarea' },
+  { type:'responsive', class: 'textarea-xs', desc: 'Extra small size for textarea' },
 ]}"
 />
 
@@ -63,24 +67,24 @@ data="{[
   <label class="label">
     <span class="label-text">Your bio</span>
     <span class="label-text-alt">Alt label</span>
-  </label> 
+  </label>
   <textarea class="textarea h-24 textarea-bordered" placeholder="Bio"></textarea>
   <label class="label">
     <span class="label-text-alt">Your bio</span>
     <span class="label-text-alt">Alt label</span>
-  </label> 
+  </label>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$form-control">
   <label class="$$label">
     <span class="$$label-text">Your bio</span>
     <span class="$$label-text-alt">Alt label</span>
-  </label> 
+  </label>
   <textarea class="$$textarea $$textarea-bordered h-24" placeholder="Bio"></textarea>
   <label class="$$label">
     <span class="$$label-text-alt">Your bio</span>
     <span class="$$label-text-alt">Alt label</span>
-  </label> 
+  </label>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
@@ -88,12 +92,12 @@ data="{[
   <label className="$$label">
     <span className="$$label-text">Your bio</span>
     <span className="$$label-text-alt">Alt label</span>
-  </label> 
+  </label>
   <textarea className="$$textarea $$textarea-bordered h-24" placeholder="Bio"></textarea>
   <label className="$$label">
     <span className="$$label-text-alt">Your bio</span>
     <span className="$$label-text-alt">Alt label</span>
-  </label> 
+  </label>
 </div>`
 }</pre>
 </Component>
@@ -165,6 +169,38 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<textarea className="$$textarea $$textarea-error" placeholder="Bio"></textarea>`
+}</pre>
+</Component>
+
+<Component title="Sizes">
+<div class="flex flex-col gap-4 w-full items-center">
+  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-xs w-full max-w-xs" ></textarea>
+  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-sm w-full max-w-xs" ></textarea>
+  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-md w-full max-w-xs" ></textarea>
+  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
+</div>
+
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`
+<!-- xs -->
+<textarea placeholder="Bio" class="$$textarea $$textarea-bordered $$textarea-xs w-full max-w-xs" ></textarea>
+<!-- sm -->
+<textarea placeholder="Bio" class="$$textarea $$textarea-bordered $$textarea-sm w-full max-w-xs" ></textarea>
+<!-- md -->
+<textarea placeholder="Bio" class="$$textarea $$textarea-bordered $$textarea-md w-full max-w-xs" ></textarea>
+<!-- lg -->
+<textarea placeholder="Bio" class="$$textarea $$textarea-bordered $$textarea-lg w-full max-w-xs" ></textarea>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`
+<!-- xs -->
+<textarea placeholder="Bio" className="$$textarea $$textarea-bordered $$textarea-xs w-full max-w-xs" ></textarea>
+<!-- sm -->
+<textarea placeholder="Bio" className="$$textarea $$textarea-bordered $$textarea-sm w-full max-w-xs" ></textarea>
+<!-- md -->
+<textarea placeholder="Bio" className="$$textarea $$textarea-bordered $$textarea-md w-full max-w-xs" ></textarea>
+<!-- lg -->
+<textarea placeholder="Bio" className="$$textarea $$textarea-bordered $$textarea-lg w-full max-w-xs" ></textarea>`
 }</pre>
 </Component>
 
