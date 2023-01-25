@@ -312,7 +312,7 @@
       {/if}
     </div>
   </div>
-  <div data-theme="light">
+  <div data-theme="light" class="bg-transparent">
     <h2 class="px-2 pb-4 text-xl font-bold"><Translate text="Preview" /></h2>
     <div class="rounded-box bg-base-100 border-base-content/5 text-base-content not-prose grid gap-3 border p-6" data-theme="mytheme" bind:this={wrapper}>
       <!-- button -->
