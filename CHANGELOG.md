@@ -6,9 +6,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-`textarea` now has `xs`, `sm`, `md` and `lg` sizes: [#1462](https://github.com/saadeghi/daisyui/pull/1542)
+* `textarea` now has `xs`, `sm`, `md` and `lg` sizes: [#1462](https://github.com/saadeghi/daisyui/pull/1542)
 
 ### Bug Fixes
+
+*  A `tooltip` without a `data-tip` attribute will not show an empty tooltip anymore [#1501](https://github.com/saadeghi/daisyui/pull/1501)
+
+* Fix bordered menu entry on sub menus [#1536](https://github.com/saadeghi/daisyui/pull/1536)
+
 
 * [#1551](https://github.com/saadeghi/daisyui/issues/1551) ([8fce093](https://github.com/saadeghi/daisyui/commit/8fce093bc11eb7814bc7bdfc0b9dcc61f65db417))
 
