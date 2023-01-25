@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.48.0](https://github.com/saadeghi/daisyui/compare/v2.47.1...v2.48.0) (2023-01-25)
 
+### Features
+
+`textarea` now has `xs`, `sm`, `md` and `lg` sizes: [#1462](https://github.com/saadeghi/daisyui/pull/1542)
 
 ### Bug Fixes
 
