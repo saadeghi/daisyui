@@ -9,6 +9,7 @@
   }
   > *,
   > .input,
+  > .textarea,
   > .select {
     @apply rounded-none;
   }
