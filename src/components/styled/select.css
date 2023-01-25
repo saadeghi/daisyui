@@ -69,3 +69,7 @@
     @apply bg-none pr-4;
   }
 }
+
+[dir="rtl"] .select {
+  background-position: calc(0% + 12px) calc(1px + 50%), calc(0% + 16px) calc(1px + 50%);
+}
