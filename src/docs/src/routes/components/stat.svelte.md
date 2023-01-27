@@ -79,7 +79,7 @@ data="{[
     <div class="stat-figure text-secondary">
       <div class="avatar online">
         <div class="w-16 rounded-full">
-          <img src="https://placeimg.com/128/128/people" />
+          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@ data="{[
     <div class="$$stat-figure text-secondary">
       <div class="$$avatar $$online">
         <div class="w-16 rounded-full">
-          <img src="https://placeimg.com/128/128/people" />
+          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </div>
     </div>
@@ -149,7 +149,7 @@ data="{[
     <div className="$$stat-figure text-secondary">
       <div className="$$avatar $$online">
         <div className="w-16 rounded-full">
-          <img src="https://placeimg.com/128/128/people" />
+          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </div>
     </div>

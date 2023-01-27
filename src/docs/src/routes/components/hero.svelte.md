@@ -56,7 +56,7 @@ data="{[
 <Component title="Hero with figure">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row">
-    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
+    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
     <div>
       <h3 class="text-5xl font-bold">Box Office News!</h3>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -67,7 +67,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$hero min-h-screen bg-base-200">
   <div class="$$hero-content flex-col lg:flex-row">
-    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" />
+    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Box Office News!</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -79,7 +79,7 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$hero min-h-screen bg-base-200">
   <div className="$$hero-content flex-col lg:flex-row">
-    <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 className="text-5xl font-bold">Box Office News!</h1>
       <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -93,7 +93,7 @@ data="{[
 <Component title="Hero with figure but reverse order">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
-    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
+    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
     <div>
       <h3 class="text-5xl font-bold">Box Office News!</h3>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -104,7 +104,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$hero min-h-screen bg-base-200">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
-    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" />
+    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Box Office News!</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -116,7 +116,7 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$hero min-h-screen bg-base-200">
   <div className="$$hero-content flex-col lg:flex-row-reverse">
-    <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+    <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 className="text-5xl font-bold">Box Office News!</h1>
       <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -225,7 +225,7 @@ data="{[
 </Component>
 
 <Component title="Hero with overlay image">
-<div class="hero min-h-[30rem] rounded" style="background-image: url(https://placeimg.com/1000/800/arch);">
+<div class="hero min-h-[30rem] rounded" style="background-image: url(/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
   <div class="hero-overlay rounded bg-opacity-60"></div>
   <div class="text-center hero-content text-neutral-content">
     <div class="max-w-md">
@@ -236,7 +236,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$hero min-h-screen" style="background-image: url(https://placeimg.com/1000/800/arch);">
+`<div class="$$hero min-h-screen" style="background-image: url(/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
   <div class="$$hero-overlay bg-opacity-60"></div>
   <div class="$$hero-content text-center text-neutral-content">
     <div class="max-w-md">
@@ -248,7 +248,7 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$hero min-h-screen" style={{ backgroundImage: \`url("https://placeimg.com/1000/800/arch")\` }}>
+`<div className="$$hero min-h-screen" style={{ backgroundImage: \`url("/images/stock/photo-1507358522600-9f71e620c44e.jpg")\` }}>
   <div className="$$hero-overlay bg-opacity-60"></div>
   <div className="$$hero-content text-center text-neutral-content">
     <div className="max-w-md">

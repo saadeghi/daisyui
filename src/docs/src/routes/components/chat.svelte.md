@@ -62,7 +62,7 @@ data="{[
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img src="https://placeimg.com/192/192/people" />
+        <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
       </div>
     </div>
     <div class="chat-bubble">It was said that you would, destroy the Sith, not join them.</div>
@@ -70,7 +70,7 @@ data="{[
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img src="https://placeimg.com/192/192/people" />
+        <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
       </div>
     </div>
     <div class="chat-bubble">It was you who would bring balance to the Force</div>
@@ -78,7 +78,7 @@ data="{[
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img src="https://placeimg.com/192/192/people" />
+        <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
       </div>
     </div>
     <div class="chat-bubble">Not leave it in Darkness</div>
@@ -88,7 +88,7 @@ data="{[
 `<div class="$$chat $$chat-start">
   <div class="$$chat-image $$avatar">
     <div class="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$chat-bubble">It was said that you would, destroy the Sith, not join them.</div>
@@ -96,7 +96,7 @@ data="{[
 <div class="$$chat $$chat-start">
   <div class="$$chat-image $$avatar">
     <div class="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$chat-bubble">It was you who would bring balance to the Force</div>
@@ -104,7 +104,7 @@ data="{[
 <div class="$$chat $$chat-start">
   <div class="$$chat-image $$avatar">
     <div class="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$chat-bubble">Not leave it in Darkness</div>
@@ -114,7 +114,7 @@ data="{[
 `<div className="$$chat $$chat-start">
   <div className="$$chat-image $$avatar">
     <div className="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="$$chat-bubble">It was said that you would, destroy the Sith, not join them.</div>
@@ -122,7 +122,7 @@ data="{[
 <div className="$$chat $$chat-start">
   <div className="$$chat-image $$avatar">
     <div className="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="$$chat-bubble">It was you who would bring balance to the Force</div>
@@ -130,7 +130,7 @@ data="{[
 <div className="$$chat $$chat-start">
   <div className="$$chat-image $$avatar">
     <div className="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="$$chat-bubble">Not leave it in Darkness</div>
@@ -143,7 +143,7 @@ data="{[
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img src="https://placeimg.com/192/192/people" />
+        <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
       </div>
     </div>
     <div class="chat-header">
@@ -158,7 +158,7 @@ data="{[
   <div class="chat chat-end">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img src="https://placeimg.com/192/192/people" />
+        <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
       </div>
     </div>
     <div class="chat-header">
@@ -175,7 +175,7 @@ data="{[
 `<div class="$$chat $$chat-start">
   <div class="$$chat-image avatar">
     <div class="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$chat-header">
@@ -190,7 +190,7 @@ data="{[
 <div class="$$chat $$chat-end">
   <div class="$$chat-image avatar">
     <div class="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$chat-header">
@@ -207,7 +207,7 @@ data="{[
 `<div className="$$chat $$chat-start">
   <div className="$$chat-image avatar">
     <div className="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="$$chat-header">
@@ -222,7 +222,7 @@ data="{[
 <div className="$$chat $$chat-end">
   <div className="$$chat-image avatar">
     <div className="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="$$chat-header">
@@ -286,7 +286,7 @@ data="{[
 `<div className="$$chat $$chat-start">
   <div className="$$chat-image avatar">
     <div className="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="$$chat-header">
@@ -301,7 +301,7 @@ data="{[
 <div className="$$chat $$chat-start">
   <div className="$$chat-image avatar">
     <div className="w-10 rounded-full">
-      <img src="https://placeimg.com/192/192/people" />
+      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div className="$$chat-header">

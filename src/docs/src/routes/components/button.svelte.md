@@ -196,7 +196,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Glass button" bg="https://placeimg.com/1000/300/arch">
+<Component title="Glass button" bg="/images/stock/photo-1507358522600-9f71e620c44e.jpg">
 <button class="btn glass">Glass button</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<button class="$$btn $$glass">Glass button</button>`

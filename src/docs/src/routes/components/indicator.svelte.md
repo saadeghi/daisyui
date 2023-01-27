@@ -116,14 +116,14 @@ data="{[
 <div class="avatar indicator">
   <span class="indicator-item badge badge-secondary">typing…</span> 
   <div class="w-20 h-20 rounded-lg">
-    <img src="https://placeimg.com/160/160/people" />
+    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar $$indicator">
   <span class="$$indicator-item $$badge $$badge-secondary">typing…</span> 
   <div class="w-20 h-20 rounded-lg">
-    <img src="https://placeimg.com/160/160/people" />
+    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>
@@ -131,7 +131,7 @@ data="{[
 `<div className="$$avatar $$indicator">
   <span className="$$indicator-item $$badge $$badge-secondary">typing…</span> 
   <div className="w-20 h-20 rounded-lg">
-    <img src="https://placeimg.com/160/160/people" />
+    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>
@@ -199,18 +199,18 @@ data="{[
 <Component title="in center of an image">
 <div class="indicator">
   <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span> 
-  <img class="rounded" src="https://placeimg.com/300/150/arch" />
+  <img class="rounded" src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$indicator">
   <span class="$$indicator-item $$indicator-center $$indicator-middle $$badge $$badge-secondary">Uploading Image...</span> 
-  <img src="https://placeimg.com/300/150/arch" />
+  <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$indicator">
   <span className="$$indicator-item $$indicator-center $$indicator-middle $$badge $$badge-secondary">Uploading Image...</span> 
-  <img src="https://placeimg.com/300/150/arch" />
+  <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
 </div>`
 }</pre>
 </Component>

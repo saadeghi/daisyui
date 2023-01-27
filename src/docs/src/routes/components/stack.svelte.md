@@ -63,22 +63,22 @@ data="{[
 
 <Component title="stacked images">
 <div class="stack mb-4">
-  <img src="https://placeimg.com/224/224/arch" alt="Image 1" class="rounded w-28" />
-  <img src="https://placeimg.com/224/224/arch" alt="Image 2" class="rounded w-28" />
-  <img src="https://placeimg.com/224/224/arch" alt="Image 3" class="rounded w-28" />
+  <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Image 1" class="rounded w-28" />
+  <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Image 2" class="rounded w-28" />
+  <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Image 3" class="rounded w-28" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$stack">
-  <img src="https://placeimg.com/112/112/arch" alt="Image 1" class="rounded" />
-  <img src="https://placeimg.com/112/112/arch" alt="Image 2" class="rounded" />
-  <img src="https://placeimg.com/112/112/arch" alt="Image 3" class="rounded" />
+  <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Image 1" class="rounded" />
+  <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Image 2" class="rounded" />
+  <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Image 3" class="rounded" />
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$stack">
-  <img src="https://placeimg.com/112/112/arch" alt="Image 1" className="rounded" />
-  <img src="https://placeimg.com/112/112/arch" alt="Image 2" className="rounded" />
-  <img src="https://placeimg.com/112/112/arch" alt="Image 3" className="rounded" />
+  <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Image 1" className="rounded" />
+  <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Image 2" className="rounded" />
+  <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Image 3" className="rounded" />
 </div>`
 }</pre>
 </Component>
