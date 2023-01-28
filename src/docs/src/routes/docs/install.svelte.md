@@ -38,7 +38,7 @@ module.exports = {
 {#each exampleRepos as { name, href, logos }}
 <a class="card border-2 border-base-200 card-compact bg-white/5 hover:bg-gray-300/10 transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener">
 
-<figure class="px-12 pt-6 pb-2 w-full aspect-[2/1] items-end">
+<figure class="px-12 pt-6 pb-2 w-full aspect-[2/1] items-end overflow-visible">
 {#if logos.length === 1}
 <img class="w-full h-auto" src={logos[0]} alt={name}>
 {:else}

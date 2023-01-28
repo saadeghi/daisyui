@@ -134,27 +134,7 @@ export let themes = [
 
 export let exampleRepos = [
   {
-    name: "Vite",
-    href: "https://stackblitz.com/edit/daisyui-vite",
-    logos: ["/logos/vite.svg"],
-  },
-  {
-    name: "Svelte (Vite)",
-    href: "https://stackblitz.com/edit/daisyui-svelte-vite",
-    logos: ["/logos/svelte.svg", "/logos/vite.svg"],
-  },
-  {
-    name: "Vue.js 3",
-    href: "https://stackblitz.com/edit/daisyui-vue-vite",
-    logos: ["/logos/vue.svg"],
-  },
-  {
-    name: "React (Vite)",
-    href: "https://stackblitz.com/edit/daisyui-react-vite",
-    logos: ["/logos/react.svg", "/logos/vite.svg"],
-  },
-  {
-    name: "Nextjs",
+    name: "Next.js",
     href: "https://stackblitz.com/edit/daisyui-nextjs",
     logos: ["/logos/nextjs.svg"],
   },
@@ -164,19 +144,44 @@ export let exampleRepos = [
     logos: ["/logos/svelte.svg"],
   },
   {
-    name: "Remix",
-    href: "https://stackblitz.com/edit/daisyui-remix",
-    logos: ["/logos/remix.svg"],
-  },
-  {
-    name: "Nuxtjs 3",
+    name: "Nuxt 3",
     href: "https://stackblitz.com/edit/daisyui-nuxt3",
     logos: ["/logos/nuxtjs.svg"],
+  },
+  {
+    name: "Astro",
+    href: "https://stackblitz.com/edit/daisyui-astro",
+    logos: ["/logos/astro.svg"],
+  },
+  {
+    name: "Vue.js 3",
+    href: "https://stackblitz.com/edit/daisyui-vue-vite",
+    logos: ["/logos/vue.svg"],
   },
   {
     name: "Solid.js",
     href: "https://stackblitz.com/edit/daisyui-solidjs",
     logos: ["/logos/solidjs.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Vite",
+    href: "https://stackblitz.com/edit/daisyui-vite",
+    logos: ["/logos/vite.svg"],
+  },
+  {
+    name: "React (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-react-vite",
+    logos: ["/logos/react.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Svelte (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-svelte-vite",
+    logos: ["/logos/svelte.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Remix",
+    href: "https://stackblitz.com/edit/daisyui-remix",
+    logos: ["/logos/remix.svg"],
   },
   {
     name: "PostCSS",
@@ -189,17 +194,17 @@ export let exampleRepos = [
     logos: ["/logos/react.svg", "/logos/webpack.svg"],
   },
   {
-    name: "Preact (Vite)",
+    name: "Qwik",
+    href: "https://stackblitz.com/edit/daisyui-qwik",
+    logos: ["/logos/qwik.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Preact",
     href: "https://stackblitz.com/edit/daisyui-preact-vite",
     logos: ["/logos/preact.svg", "/logos/vite.svg"],
   },
   {
-    name: "Angular",
-    href: "https://stackblitz.com/edit/daisyui-angular",
-    logos: ["/logos/angular.svg"],
-  },
-  {
-    name: "Lit (Vite)",
+    name: "Lit",
     href: "https://stackblitz.com/edit/daisyui-lit-vite",
     logos: ["/logos/lit.svg", "/logos/vite.svg"],
   },
@@ -209,9 +214,9 @@ export let exampleRepos = [
     logos: ["/logos/svelte.svg", "/logos/rollup.svg"],
   },
   {
-    name: "Astro",
-    href: "https://stackblitz.com/edit/daisyui-astro",
-    logos: ["/logos/astro.svg"],
+    name: "Angular",
+    href: "https://stackblitz.com/edit/daisyui-angular",
+    logos: ["/logos/angular.svg"],
   },
   {
     name: "11ty",
@@ -229,7 +234,7 @@ export let exampleRepos = [
     logos: ["/logos/react.svg", "/logos/cra.svg"],
   },
   {
-    name: "Elm (Vite)",
+    name: "Elm",
     href: "https://stackblitz.com/edit/elm-daisyui",
     logos: ["/logos/elm.svg", "/logos/vite.svg"],
   },
