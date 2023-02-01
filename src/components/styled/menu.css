@@ -54,8 +54,9 @@
     }
   }
   .menu-title {
+    @apply text-xs font-bold opacity-40;
     > * {
-      @apply py-1 text-xs font-bold text-base-content text-opacity-40;
+      @apply py-1;
     }
   }
 }
