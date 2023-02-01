@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.50.0](https://github.com/saadeghi/daisyui/compare/v2.49.0...v2.50.0) (2023-02-01)
+
+
+### Bug Fixes
+
+* [#1560](https://github.com/saadeghi/daisyui/issues/1560) `menu-title` opacity and color inheritance ([bec2094](https://github.com/saadeghi/daisyui/commit/bec2094a63c17fe7d2ad72967e30706f0035894a))
+* [#1562](https://github.com/saadeghi/daisyui/issues/1562) ([469cb2c](https://github.com/saadeghi/daisyui/commit/469cb2c9d409b70f8fb0174c19563617ed8ec00d))
+* [#1564](https://github.com/saadeghi/daisyui/issues/1564) collapse arrow in RTL mode ([c8c7353](https://github.com/saadeghi/daisyui/commit/c8c7353da8306846742ec99bd5f2842d580f84f3))
+* [#1567](https://github.com/saadeghi/daisyui/issues/1567) remove `rating` border radius on mobile ([df41fbc](https://github.com/saadeghi/daisyui/commit/df41fbc24c518df0a0b0b18c9493e8b805f96306))
+* indicator white space ([7df6173](https://github.com/saadeghi/daisyui/commit/7df61735f7c517b2ffd3131a1d5dfe06b6319eb8))
+
 ## [2.49.0](https://github.com/saadeghi/daisyui/compare/v2.48.0...v2.49.0) (2023-01-25)
 
 
