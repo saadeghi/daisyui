@@ -81,7 +81,7 @@ data="{[
 `{/* The button to open modal */}
 <a href="#my-modal-2" className="$$btn">open modal</a>
 
-{/_ Put this part before </body> tag _/}
+{/* Put this part before </body> tag */}
 
 <div className="$$modal" id="my-modal-2">
   <div className="$$modal-box">
