@@ -20,7 +20,7 @@ data="{[
   { type:'component', class: 'chat-header', desc: 'For the line above the chat bubble' },
   { type:'component', class: 'chat-footer', desc: 'For the line below the chat bubble' },
   { type:'component', class: 'chat-bubble', desc: 'For the content of chat' },
-  { type:'modifier', class: 'chat-bubble-primary', desc: 'sets `secondary` color for the `chat-bubble`' },
+  { type:'modifier', class: 'chat-bubble-primary', desc: 'sets `primary` color for the `chat-bubble`' },
   { type:'modifier', class: 'chat-bubble-secondary', desc: 'sets `secondary` color for the `chat-bubble`' },
   { type:'modifier', class: 'chat-bubble-accent', desc: 'sets `accent` color for the `chat-bubble`' },
   { type:'modifier', class: 'chat-bubble-info', desc: 'sets `info` color for the `chat-bubble`' },
