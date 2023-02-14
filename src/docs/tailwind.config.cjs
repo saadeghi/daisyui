@@ -12,6 +12,7 @@ module.exports = {
     'align-middle',
     'relative',
     '-mt-1',
+    '[&_svg]:visible',
   ],
   theme: {
     extend: {
