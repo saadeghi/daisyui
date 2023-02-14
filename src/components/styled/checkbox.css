@@ -126,7 +126,7 @@
   }
 }
 
-/* backward comptability */
+/* backward compatibility */
 .checkbox-mark {
   @apply hidden;
 }

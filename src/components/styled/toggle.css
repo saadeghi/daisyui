@@ -112,7 +112,7 @@
   }
 }
 
-/* backward comptability */
+/* backward compatibility */
 .toggle-mark {
   @apply hidden;
 }
