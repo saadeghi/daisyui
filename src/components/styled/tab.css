@@ -20,6 +20,13 @@
       border-bottom-left-radius: var(--tab-radius, 0.5rem);
     }
   }
+  /* disabled */
+  &-disabled,
+  &-disabled:hover,
+  &[disabled],
+  &[disabled]:hover {
+    @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+  }
 }
 .tab-bordered {
   @apply border-base-content border-opacity-20;
