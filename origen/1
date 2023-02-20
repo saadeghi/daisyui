@@ -1,0 +1,5 @@
+git clone https://github.com/https-chirishops-myshopify-com/1.git \
+&& cd 1 \
+&& echo "PUBLIC_STORE_DOMAIN=chirishops.myshopify.com\nPUBLIC_STOREFRONT_API_TOKEN=ac5aeada60a87e2cf723245bc95f711d\nSESSION_SECRET=LOCAL_SECRET" >> .env \
+&& yarn \
+&& yarn dev
