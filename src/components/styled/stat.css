@@ -7,13 +7,13 @@
 .stat {
   @apply gap-x-4 border-base-content border-opacity-10 px-6 py-4;
   &-title {
-    @apply opacity-60;
+    @apply text-base-content/60;
   }
   &-value {
     @apply text-4xl font-extrabold;
   }
   &-desc {
-    @apply text-xs opacity-60;
+    @apply text-xs text-base-content/60;
   }
   &-actions {
     @apply mt-4;
