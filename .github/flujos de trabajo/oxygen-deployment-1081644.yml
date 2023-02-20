@@ -44,9 +44,8 @@ jobs:
           oxygen_deployment_token: ${{ secrets.OXYGEN_DEPLOYMENT_TOKEN_1081644 }}
           build_command: "HYDROGEN_ASSET_BASE_URL=$OXYGEN_ASSET_BASE_URL yarn build"
 
-      # Create GitHub Deployment
-      - name: Create GitHub Deployment
-        uses: shopify/github-deployment-action@v1
+      
+        uses:shopify-add-oxygen-workflow-w5zy
         if: always()
         with:
           token: ${{ github.token }}
