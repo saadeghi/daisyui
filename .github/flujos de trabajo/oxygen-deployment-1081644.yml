@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy to Oxygen
+    name: https://github.com/https-chirishops-myshopify-com/daisyui/tree/shopify-add-oxygen-workflow-5d83
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
