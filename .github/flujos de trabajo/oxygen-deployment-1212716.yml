@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy to Oxygen
+    name: Shopify-añadir-oxígeno-flujo de trabajo-2xs6
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
