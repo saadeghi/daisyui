@@ -96,7 +96,7 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="overflow-x-auto">
   <table className="$$table w-full">
-    <!-- head -->
+    {/* head */}
     <thead>
       <tr>
         <th></th>
@@ -106,21 +106,21 @@ data="{[
       </tr>
     </thead>
     <tbody>
-      <!-- row 1 -->
+      {/* row 1 */}
       <tr>
         <th>1</th>
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <!-- row 2 -->
+      {/* row 2 */}
       <tr>
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
         <td>Purple</td>
       </tr>
-      <!-- row 3 -->
+      {/* row 3 */}
       <tr>
         <th>3</th>
         <td>Brice Swyre</td>
@@ -207,7 +207,7 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="overflow-x-auto">
   <table className="$$table w-full">
-    <!-- head -->
+    {/* head*/}
     <thead>
       <tr>
         <th></th>
@@ -217,21 +217,21 @@ data="{[
       </tr>
     </thead>
     <tbody>
-      <!-- row 1 -->
+      {/* row 1 */}
       <tr>
         <th>1</th>
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <!-- row 2 -->
+      {/* row 2 */}
       <tr className="$$active">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
         <td>Purple</td>
       </tr>
-      <!-- row 3 -->
+      {/* row 3 */}
       <tr>
         <th>3</th>
         <td>Brice Swyre</td>
@@ -318,7 +318,7 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="overflow-x-auto">
   <table className="$$table w-full">
-    <!-- head -->
+    {/* head */}
     <thead>
       <tr>
         <th></th>
@@ -328,21 +328,21 @@ data="{[
       </tr>
     </thead>
     <tbody>
-      <!-- row 1 -->
+      {/* row 1 */}
       <tr>
         <th>1</th>
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <!-- row 2 -->
+      {/* row 2 */}
       <tr className="$$hover">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
         <td>Purple</td>
       </tr>
-      <!-- row 3 -->
+      {/* row 3 */}
       <tr>
         <th>3</th>
         <td>Brice Swyre</td>
@@ -429,7 +429,7 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="overflow-x-auto">
   <table className="$$table $$table-zebra w-full">
-    <!-- head -->
+    {/* head */}
     <thead>
       <tr>
         <th></th>
@@ -439,21 +439,21 @@ data="{[
       </tr>
     </thead>
     <tbody>
-      <!-- row 1 -->
+      {/* row 1 */}
       <tr>
         <th>1</th>
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <!-- row 2 -->
+      {/* row 2 */}
       <tr>
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
         <td>Purple</td>
       </tr>
-      <!-- row 3 -->
+      {/* row 3 */}
       <tr>
         <th>3</th>
         <td>Brice Swyre</td>
@@ -767,7 +767,7 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="overflow-x-auto w-full">
   <table className="$$table w-full">
-    <!-- head -->
+    {/* head */}
     <thead>
       <tr>
         <th>
@@ -782,7 +782,7 @@ data="{[
       </tr>
     </thead>
     <tbody>
-      <!-- row 1 -->
+      {/* row 1 */}
       <tr>
         <th>
           <label>
@@ -812,7 +812,7 @@ data="{[
           <button className="$$btn $$btn-ghost $$btn-xs">details</button>
         </th>
       </tr>
-      <!-- row 2 -->
+      {/* row 2 */}
       <tr>
         <th>
           <label>
@@ -842,7 +842,7 @@ data="{[
           <button className="$$btn $$btn-ghost $$btn-xs">details</button>
         </th>
       </tr>
-      <!-- row 3 -->
+      {/* row 3 */}
       <tr>
         <th>
           <label>
@@ -872,7 +872,7 @@ data="{[
           <button className="$$btn $$btn-ghost $$btn-xs">details</button>
         </th>
       </tr>
-      <!-- row 4 -->
+      {/* row 4 */}
       <tr>
         <th>
           <label>
@@ -903,7 +903,7 @@ data="{[
         </th>
       </tr>
     </tbody>
-    <!-- foot -->
+    {/* foot */}
     <tfoot>
       <tr>
         <th></th>
