@@ -92,7 +92,10 @@
 }
 .tabs-boxed {
   @apply bg-base-200 p-1 rounded-btn;
+  .tab {
+    @apply rounded-btn;
+  }
   .tab-active {
-    @apply bg-primary text-primary-content rounded-btn hover:text-primary-content;
+    @apply bg-primary text-primary-content hover:text-primary-content;
   }
 }
