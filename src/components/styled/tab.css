@@ -6,7 +6,7 @@
   color: var(--tab-color);
   padding-left: var(--tab-padding, 1rem);
   padding-right: var(--tab-padding, 1rem);
-  &.tab-active {
+  &.tab-active:not(.tab-disabled):not([disabled]) {
     @apply border-base-content border-opacity-100 text-opacity-100;
   }
   &:focus {
@@ -25,7 +25,7 @@
   &-disabled:hover,
   &[disabled],
   &[disabled]:hover {
-    @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+    @apply text-base-content text-opacity-20 cursor-not-allowed;
   }
 }
 .tab-bordered {
@@ -42,7 +42,7 @@
   padding-left: var(--tab-padding, 1rem);
   padding-right: var(--tab-padding, 1rem);
   padding-top: var(--tab-border, 1px);
-  &.tab-active {
+  &.tab-active:not(.tab-disabled):not([disabled]) {
     background-color: var(--tab-bg);
     border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
     border-left-color: var(--tab-border-color);
@@ -92,7 +92,7 @@
     }
   }
 }
-.tab-lifted.tab-active + .tab-lifted.tab-active {
+.tab-lifted.tab-active:not(.tab-disabled):not([disabled]) + .tab-lifted.tab-active:not(.tab-disabled):not([disabled]) {
   &:before {
     background: none;
   }
@@ -102,7 +102,7 @@
   .tab {
     @apply rounded-btn;
   }
-  .tab-active {
+  .tab-active:not(.tab-disabled):not([disabled]) {
     @apply bg-primary text-primary-content hover:text-primary-content;
   }
 }
