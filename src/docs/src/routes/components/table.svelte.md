@@ -58,7 +58,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
   <table class="$$table w-full">
-    {/* head */}
+    <!-- head -->
     <thead>
       <tr>
         <th></th>
