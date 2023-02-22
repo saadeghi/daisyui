@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.51.0](https://github.com/saadeghi/daisyui/compare/v2.50.2...v2.51.0) (2023-02-22)
 
+### Features
+
+* Add type definitions for the package
+* Add new `tab-disabled` class name for visually disabling a tab item
+* Add border radius to all tabs in `tabs-boxed` (not just the active tab)
 
 ### Bug Fixes
 
