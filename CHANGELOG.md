@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.51.0](https://github.com/saadeghi/daisyui/compare/v2.50.2...v2.51.0) (2023-02-22)
+
+
+### Bug Fixes
+
+* [#1366](https://github.com/saadeghi/daisyui/issues/1366) add type for daisyui plugin ([#1469](https://github.com/saadeghi/daisyui/issues/1469)) ([1b39afb](https://github.com/saadeghi/daisyui/commit/1b39afbbb61b1ba37f5291dbbffc5a3578a0a110))
+* [#1613](https://github.com/saadeghi/daisyui/issues/1613) ([24393be](https://github.com/saadeghi/daisyui/commit/24393bea633e42dbccd111cac4d3b12e67f5c6c8))
+* border-radius in now applied to all tabs (tabs-boxed) ([#1626](https://github.com/saadeghi/daisyui/issues/1626)) ([0c648f2](https://github.com/saadeghi/daisyui/commit/0c648f2d45bcd00021c11a1eb44b636a46d79e5c))
+
 ### [2.50.2](https://github.com/saadeghi/daisyui/compare/v2.50.1...v2.50.2) (2023-02-20)
 
 
