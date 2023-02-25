@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.51.1](https://github.com/saadeghi/daisyui/compare/v2.51.0...v2.51.1) (2023-02-25)
+
+
+### Bug Fixes
+
+* transition delay of the background colors on input, select and textarea ([#1606](https://github.com/saadeghi/daisyui/issues/1606)) ([cc16946](https://github.com/saadeghi/daisyui/commit/cc16946039c5786552b71e8dd437d9b976a5d88a))
+
 ## [2.51.0](https://github.com/saadeghi/daisyui/compare/v2.50.2...v2.51.0) (2023-02-22)
 
 ### Features
