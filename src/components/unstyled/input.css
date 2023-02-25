@@ -1,5 +1,5 @@
 .input {
-  @apply flex-shrink transition duration-200 ease-in-out;
+  @apply flex-shrink;
   @apply h-12 px-4 text-sm leading-loose;
 }
 .input-group {
