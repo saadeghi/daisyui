@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "browserslist": [
+    "> 7%"
+  ],
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "astro": "^0.25.2",
+    "daisyui": "^2.13.3",
+    "tailwindcss": "^3.0.23",
+    "tailwindcss-flip": "^1.0.0"
+  }
+}

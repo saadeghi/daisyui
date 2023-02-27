@@ -1,0 +1,6 @@
+node_modules
+.svelte-kit
+.env.local
+/dist
+/build
+/src/components/StyleHandler.svelte

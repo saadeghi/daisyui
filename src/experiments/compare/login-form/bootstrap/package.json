@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "purgecss -c purgecss.config.js",
+    "prod": "purgecss -c purgecss.config.js"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "purgecss": "^4.1.3"
+  }
+}

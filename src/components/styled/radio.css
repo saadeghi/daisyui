@@ -1,0 +1,112 @@
+.radio {
+  --chkbg: var(--bc);
+  @apply h-6 w-6 cursor-pointer appearance-none rounded-full border border-base-content border-opacity-20;
+  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
+  &:focus-visible {
+    outline: 2px solid hsl(var(--bc));
+    outline-offset: 2px;
+  }
+  &:checked,
+  &[aria-checked=true] {
+    @apply bg-base-content;
+    animation: radiomark var(--animation-input, 0.2s) ease-in-out;
+    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
+  }
+  &-primary {
+    --chkbg: var(--p);
+    @apply border-primary hover:border-primary;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--p));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-primary bg-primary text-primary-content;
+    }
+  }
+  &-secondary {
+    --chkbg: var(--s);
+    @apply border-secondary hover:border-secondary;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--s));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-secondary bg-secondary text-secondary-content;
+    }
+  }
+  &-accent {
+    --chkbg: var(--a);
+    @apply border-accent hover:border-accent;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--a));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-accent bg-accent text-accent-content;
+    }
+  }
+  &-success {
+    --chkbg: var(--su);
+    @apply border-success hover:border-success;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--su));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-success bg-success text-success-content;
+    }
+  }
+  &-warning {
+    --chkbg: var(--wa);
+    @apply border-warning hover:border-warning;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--wa));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-warning bg-warning text-warning-content;
+    }
+  }
+  &-info {
+    --chkbg: var(--in);
+    @apply border-info hover:border-info;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--in));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-info bg-info text-info-content;
+    }
+  }
+  &-error {
+    --chkbg: var(--er);
+    @apply border-error hover:border-error;
+    &:focus-visible {
+      outline: 2px solid hsl(var(--er));
+    }
+    &:checked,
+    &[aria-checked=true] {
+      @apply border-error bg-error text-error-content;
+    }
+  }
+  &:disabled {
+    @apply cursor-not-allowed opacity-20;
+  }
+}
+
+@keyframes radiomark {
+  0% {
+    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;
+  }
+  50% {
+    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;
+  }
+  100% {
+    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
+  }
+}
+
+/* backward compatibility */
+.radio-mark {
+  @apply hidden;
+}

@@ -1,0 +1,12 @@
+.divider {
+  @apply my-4 h-4 whitespace-nowrap;
+  &:before {
+    @apply bg-base-content bg-opacity-10;
+  }
+  &:after {
+    @apply bg-base-content bg-opacity-10;
+  }
+  &:not(:empty) {
+    @apply gap-4;
+  }
+}

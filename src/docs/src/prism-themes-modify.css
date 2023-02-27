@@ -1,0 +1,50 @@
+[data-theme="wireframe"] {
+  .prose pre[class*="language-"] {
+    code {
+      color: #2e2e2e;
+    }
+    .token.string {
+      color: #587e20;
+    }
+    .token.attr-value {
+      color: #587e20;
+    }
+    .token.operator {
+      color: #00449b;
+    }
+    .token.punctuation {
+      color: #00449b;
+    }
+    .token.attr-name {
+      color: #cd7302;
+    }
+  }
+}
+[data-theme="pastel"] {
+  .prose pre[class*="language-"] {
+    .token.punctuation {
+      color: #2b477c;
+    }
+    .token.tag {
+      color: #810c47;
+    }
+    .token.attr-value {
+      color: #155211;
+    }
+    .token.attr-name {
+      color: #8d4e0b;
+    }
+  }
+}
+[data-theme="valentine"] {
+  .prose pre[class*="language-"] {
+    .token.tag {
+      color: #ffa2a2;
+    }
+  }
+}
+.prose pre[class*="language-"] {
+  .token.comment {
+    color: hsla(var(--nc) / 0.5);
+  }
+}

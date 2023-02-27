@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "tailwindcss -o output.css --watch",
+    "prod": "tailwindcss -o output.css --minify"
+  },
+  "dependencies": {
+    "daisyui": "^2.13.3",
+    "tailwindcss": "^3.0.23"
+  }
+}

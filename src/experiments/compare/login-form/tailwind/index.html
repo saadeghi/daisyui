@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in</title>
+    <link href="output.css" rel="stylesheet" />
+    <script src="theme-change.js"></script>
+  </head>
+
+  <body class="dark:bg-gray-800 dark:text-gray-300 grid place-content-center min-h-screen">
+    <button class="w-12 h-12 px-4 py-3 uppercase transition duration-200 ease-in-out rounded-md cursor-pointer hover:bg-black/5 top-2 right-2 absolute" onclick="toggleDarkmode()">
+      <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12,18V6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" /></svg>
+    </button>
+
+    <main class="w-72 text-center">
+      <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg" alt="" width="260" class="mx-auto mb-4" />
+      <div class="mb-4 text-2xl font-semibold">Please sign in</div>
+      <div class="mb-4">
+        <label class="label" for="email-input">
+          <span class="text-sm block text-left mb-2 px-1">Email</span>
+        </label>
+        <input id="email-input" type="text" placeholder="email" class="w-full text-sm h-12 p-4 rounded-lg border dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-gray-300 focus:outline focus:outline-offset-2 dark:focus:outline-gray-700 outline-2" />
+      </div>
+      <div class="mb-4">
+        <label class="label" for="password-input">
+          <span class="text-sm block text-left mb-2 px-1">Password</span>
+        </label>
+        <input id="password-input" type="text" placeholder="password" class="w-full text-sm h-12 p-4 rounded-lg border dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-gray-300 focus:outline focus:outline-offset-2 dark:focus:outline-gray-700 outline-2" />
+      </div>
+
+      <div class="flex gap-3 mb-3">
+        <div class="relative">
+          <input id="rememberme" type="checkbox" class="peer appearance-none cursor-pointer border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-full checked:border-gray-900 dark:checked:border-gray-400 w-8 h-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gray-900 dark:focus-visible:outline-gray-400 focus-visible:outline-offset-2" />
+          <span class="peer-checked:left-4 peer-checked:bg-gray-900 dark:peer-checked:bg-gray-400 transition-all duration-200 pointer-events-none w-3 h-3 block absolute top-1 left-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
+        </div>
+        <label for="rememberme" class="text-sm">Remember me</label>
+      </div>
+
+      <div class="mb-2">
+        <input type="button" value="Sign in" class="w-full h-12 px-4 py-3 text-sm font-semibold text-center text-white uppercase transition duration-200 ease-in-out bg-indigo-600 rounded-md cursor-pointer hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-offset-2" />
+      </div>
+      <p class="mt-5 text-gray-400">&copy; 2017–2021</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+.hero {
+  &-overlay {
+    @apply bg-neutral bg-opacity-50;
+  }
+  &-content {
+    @apply max-w-7xl gap-4 p-4;
+  }
+}

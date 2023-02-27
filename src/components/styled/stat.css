@@ -1,0 +1,29 @@
+.stats {
+  @apply bg-base-100 text-base-content rounded-box;
+}
+:where(.stats) {
+  @apply divide-x divide-y-0 overflow-x-auto;
+}
+.stat {
+  @apply gap-x-4 border-base-content border-opacity-10 px-6 py-4;
+  &-title {
+    @apply text-base-content/60;
+  }
+  &-value {
+    @apply text-4xl font-extrabold;
+  }
+  &-desc {
+    @apply text-xs text-base-content/60;
+  }
+  &-actions {
+    @apply mt-4;
+  }
+}
+/* .stat + .stat {
+  @apply border-l border-base-content border-opacity-10;
+}
+.stats.grid-flow-row {
+  .stat + .stat {
+    @apply border-l-0 border-t;
+  }
+} */

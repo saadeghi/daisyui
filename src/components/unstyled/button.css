@@ -1,0 +1,60 @@
+.btn {
+  @apply inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent text-center transition duration-200 ease-in-out rounded-btn;
+  @apply h-12 px-4 text-sm min-h-12;
+  line-height: 1em;
+
+  /* disabled */
+  &-disabled,
+  &[disabled] {
+    @apply pointer-events-none;
+  }
+
+  /* shapes */
+  &-square {
+    @apply h-12 w-12 p-0;
+  }
+  &-circle {
+    @apply h-12 w-12 rounded-full p-0;
+  }
+
+  /* loading */
+  &.loading {
+    &,
+    &:hover {
+      @apply pointer-events-none;
+    }
+    &:before {
+      @apply mr-2 h-4 w-4 rounded-full border-2;
+      animation: spin 2s linear infinite;
+      content: "";
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: currentColor;
+      border-right-color: currentColor;
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn.loading:before {
+    animation: spin 10s linear infinite;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* group */
+.btn-group {
+  @apply inline-flex;
+  & > input[type="radio"].btn {
+    @apply appearance-none;
+  }
+  & > input[type="radio"].btn:before {
+    content: attr(data-title);
+  }
+}

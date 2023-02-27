@@ -1,0 +1,6 @@
+.kbd {
+  @apply border border-base-content border-opacity-20 bg-base-200 px-2 rounded-btn;
+  border-bottom-width: 2px;
+  min-height: 2.2em;
+  min-width: 2.2em;
+}

@@ -1,0 +1,118 @@
+{
+  "name": "daisyui",
+  "version": "2.51.2",
+  "description": "daisyUI - Tailwind CSS Components",
+  "author": "Pouya Saadeghi",
+  "license": "MIT",
+  "homepage": "https://daisyui.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saadeghi/daisyui.git"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/daisyui"
+  },
+  "bugs": {
+    "url": "https://github.com/saadeghi/daisyui/issues"
+  },
+  "keywords": [
+    "design-system",
+    "tailwindcss",
+    "components",
+    "ui-library",
+    "component",
+    "framework",
+    "tailwind",
+    "theming",
+    "postcss",
+    "design",
+    "css",
+    "ui"
+  ],
+  "main": "src/index.js",
+  "typings": "src/index.d.ts",
+  "types": "src/index.d.ts",
+  "files": [
+    "src/lib/**/*.js",
+    "dist/*.js",
+    "dist/{themes,styled,unstyled,full}.css",
+    "!dist/*.rtl.css",
+    "src/index.js",
+    "src/colors/*.js",
+    "src/index.d.ts"
+  ],
+  "browserslist": [
+    "> 7%"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
+  "prettier": "./src/prettier.config.js",
+  "scripts": {
+    "prettier": "prettier --write . --ignore-path ./src/.prettierignore",
+    "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
+    "base": "cat dist/base/*.css > dist/base.css",
+    "postbase": "prejss-cli dist/base.css --format commonjs",
+    "preutilities:global": "postcss --config src/utilities/global src/utilities/global/*.css --base src --dir dist",
+    "utilities:global": "cat dist/utilities/global/*.css > dist/utilities.css",
+    "postutilities:global": "prejss-cli dist/utilities.css --format commonjs",
+    "preutilities:unstyled": "postcss --config src/utilities/unstyled src/utilities/unstyled/*.css --base src --dir dist",
+    "utilities:unstyled": "cat dist/utilities/unstyled/*.css > dist/utilities-unstyled.css",
+    "postutilities:unstyled": "prejss-cli dist/utilities-unstyled.css --format commonjs",
+    "preutilities:styled": "postcss --config src/utilities/styled src/utilities/styled/*.css --base src --dir dist",
+    "utilities:styled": "cat dist/utilities/styled/*.css > dist/utilities-styled.css",
+    "postutilities:styled": "prejss-cli dist/utilities-styled.css --format commonjs",
+    "components": "postcss --config src/components src/components/**/*.css --base src --dir dist",
+    "merge:unstyled": "cat dist/components/unstyled/*.css > dist/unstyled.css",
+    "merge:styled": "cat dist/components/unstyled/*.css dist/components/styled/*.css > dist/styled.css",
+    "rtl": "rtlcss dist/unstyled.css -s && rtlcss dist/styled.css -s",
+    "prejss": "prejss-cli dist/{unstyled,styled}{,.rtl}.css --format commonjs",
+    "themes": "postcss src/themes/index.css -o dist/themes.css --config src/themes",
+    "full": "postcss src/full/index.css -o dist/full.css --config src/full",
+    "postfull": "parcel-css --minify --targets '> 7%' dist/full.css -o dist/full.css",
+    "build": "npm run base && npm run utilities:global && npm run utilities:unstyled && npm run utilities:styled && npm run components && npm run merge:unstyled && npm run merge:styled && npm run rtl && npm run prejss && npm run themes && npm run full",
+    "install:docs": "cd src/docs && npm install",
+    "dev": "cd src/docs && npm run dev",
+    "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
+    "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "playground": "cd src/experiments/playground && npm run dev",
+    "release": "rm -f package-lock.json && standard-version",
+    "release:patch": "rm -f package-lock.json && standard-version --release-as patch",
+    "release:minor": "rm -f package-lock.json && standard-version --release-as minor",
+    "release:major": "rm -f package-lock.json && standard-version --release-as major"
+  },
+  "devDependencies": {
+    "@parcel/css-cli": "1.5.0",
+    "@types/css-selector-tokenizer": "^0.7.1",
+    "@vitest/ui": "^0.7.10",
+    "autoprefixer": "10.0.4",
+    "c8": "^7.11.0",
+    "color-contrast-checker": "^2.1.0",
+    "postcss-cli": "8.3.0",
+    "postcss-import": "13.0.0",
+    "postcss-nested": "5.0.1",
+    "prejss-cli": "0.3.3",
+    "prettier": "^2.7.1",
+    "rtlcss": "3.0.0",
+    "standard-version": "^9.5.0",
+    "vitest": "^0.7.10"
+  },
+  "dependencies": {
+    "color": "^4.2",
+    "css-selector-tokenizer": "^0.8.0",
+    "postcss-js": "^4.0.0",
+    "tailwindcss": "^3"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.6"
+  }
+}

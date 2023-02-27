@@ -1,0 +1,33 @@
+.link {
+  &-primary {
+    @apply text-primary hover:text-primary-focus;
+  }
+  &-secondary {
+    @apply text-secondary hover:text-secondary-focus;
+  }
+  &-accent {
+    @apply text-accent hover:text-accent-focus;
+  }
+  &-neutral {
+    @apply text-neutral hover:text-neutral-focus;
+  }
+  &-success {
+    @apply text-success hover:text-success;
+  }
+  &-info {
+    @apply text-info hover:text-info;
+  }
+  &-warning {
+    @apply text-warning hover:text-warning;
+  }
+  &-error {
+    @apply text-error hover:text-error;
+  }
+  &:focus {
+    @apply outline-none;
+  }
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}

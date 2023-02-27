@@ -1,0 +1,42 @@
+name: 🐞 Report a new Bug
+description: If you found a new bug on daisyUI, report it here.
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please first search in [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions) and make sure this bug is not addressed before.
+  - type: input
+    id: version
+    attributes:
+      label: What version of daisyUI are you using?
+      description: You can see the daisyUI version number on your `package.json` file.
+      placeholder: 'example: v2.47.0'
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe your issue
+      description: Describe the problem and say how and when it happens
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Edge
+        - Other
+  - type: input
+    id: reproduction
+    attributes:
+      label: Reproduction URL (optional)
+      description: Provide a link to a [Tailwind Play](https://daisyui.com/tailwindplay/) page or a public GitHub repo so we can reproduce the issue.
+      placeholder: 'https://'
+    validations:
+      required: false

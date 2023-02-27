@@ -1,0 +1,104 @@
+.drawer {
+  @apply grid overflow-hidden w-full;
+
+  height: 100vh;
+  height: 100dvh;
+
+  &.drawer-end {
+    direction: rtl;
+  }
+  &.drawer-end > * {
+    direction: ltr;
+  }
+  &.drawer-end > .drawer-toggle {
+    & ~ .drawer-side > .drawer-overlay + * {
+      @apply translate-x-full justify-self-end;
+    }
+    &:checked ~ .drawer-side > .drawer-overlay + * {
+      @apply translate-x-0;
+    }
+  }
+}
+:where(.drawer-toggle ~ .drawer-content) {
+  height: inherit;
+}
+.drawer-toggle {
+  @apply absolute h-0 w-0 appearance-none opacity-0;
+  & ~ .drawer-content {
+    @apply z-0 col-start-1 row-start-1 overflow-y-auto;
+  }
+  & ~ .drawer-side {
+    @apply col-start-1 row-start-1 grid max-h-screen overflow-x-hidden;
+    & > .drawer-overlay {
+      @apply invisible col-start-1 row-start-1 opacity-0;
+    }
+    & > .drawer-overlay + * {
+      @apply z-10 col-start-1 row-start-1 -translate-x-full transform;
+    }
+  }
+  &:checked {
+    & ~ .drawer-side {
+      @apply overflow-y-auto overflow-x-hidden isolate;
+      & > .drawer-overlay {
+        @apply visible;
+      }
+      & > .drawer-overlay + * {
+        @apply translate-x-0;
+      }
+    }
+  }
+}
+
+[dir="rtl"] .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+  @apply translate-x-full;
+}
+[dir="rtl"] .drawer-toggle:checked ~ .drawer-side > .drawer-overlay + * {
+  @apply translate-x-0;
+}
+[dir="rtl"] .drawer.drawer-end > .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+  --tw-translate-x: -100%;
+}
+[dir="rtl"] .drawer.drawer-end > .drawer-toggle:checked ~ .drawer-side > .drawer-overlay + * {
+  --tw-translate-x: 0px;
+}
+[dir="rtl"] .drawer.drawer-end > .drawer-toggle:checked ~ .drawer-content {
+  --tw-translate-x: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .drawer-mobile {
+    grid-auto-columns: max-content auto;
+    & > .drawer-toggle {
+      & ~ .drawer-content {
+        @apply h-auto lg:col-start-2;
+      }
+      & ~ .drawer-side {
+        @apply overflow-y-auto;
+        & > .drawer-overlay {
+          @apply lg:visible;
+        }
+        & > .drawer-overlay + * {
+          @apply lg:translate-x-0;
+        }
+      }
+    }
+  }
+  .drawer-mobile.drawer-end {
+    grid-auto-columns: auto max-content;
+    direction: ltr;
+    & > .drawer-toggle {
+      & ~ .drawer-content {
+        @apply h-auto lg:col-start-1;
+      }
+      & ~ .drawer-side {
+        @apply overflow-y-auto lg:col-start-2;
+        & > .drawer-overlay {
+          @apply lg:visible;
+        }
+        & > .drawer-overlay + * {
+          @apply lg:translate-x-0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.btn {
+  &-xs {
+    @apply h-6 px-2 min-h-6;
+    font-size: 0.75rem;
+  }
+  &-sm {
+    @apply h-8 px-3 min-h-8;
+    font-size: 0.875rem;
+  }
+  &-md {
+    @apply h-12 px-4 min-h-12;
+    font-size: 0.875rem;
+  }
+  &-lg {
+    @apply h-16 px-6 min-h-16;
+    font-size: 1.125rem;
+  }
+  &-wide {
+    @apply w-64;
+  }
+  &-block {
+    @apply w-full;
+  }
+  &-square {
+    &:where(.btn-xs) {
+      @apply h-6 w-6 p-0;
+    }
+    &:where(.btn-sm) {
+      @apply h-8 w-8 p-0;
+    }
+    &:where(.btn-md) {
+      @apply h-12 w-12 p-0;
+    }
+    &:where(.btn-lg) {
+      @apply h-16 w-16 p-0;
+    }
+  }
+  &-circle {
+    &:where(.btn-xs) {
+      @apply h-6 w-6 rounded-full p-0;
+    }
+    &:where(.btn-sm) {
+      @apply h-8 w-8 rounded-full p-0;
+    }
+    &:where(.btn-md) {
+      @apply h-12 w-12 rounded-full p-0;
+    }
+    &:where(.btn-lg) {
+      @apply h-16 w-16 rounded-full p-0;
+    }
+  }
+}
+
+/* group */
+.btn-group-horizontal {
+  @apply flex-row;
+}
+.btn-group-vertical {
+  @apply flex-col;
+}

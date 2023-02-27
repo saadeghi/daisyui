@@ -1,0 +1,12 @@
+.label {
+  @apply px-1 py-2;
+  &-text {
+    @apply text-sm text-base-content;
+  }
+  &-text-alt {
+    @apply text-xs text-base-content;
+  }
+  a {
+    @apply hover:text-base-content;
+  }
+}

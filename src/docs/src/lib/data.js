@@ -1,0 +1,720 @@
+export let siteStats = {
+  components: "49",
+  themes: "29",
+  githubStars: "+15,000",
+  npmInstalls: "+2,000,000",
+}
+
+export let siteData = {
+  title: "Tailwind CSS Components",
+  desc: "Free Tailwind Components",
+  card: "/images/default.jpg",
+}
+
+export let pagesThatDontNeedSidebar = ["/"]
+
+export let themes = [
+  {
+    name: "🌝  light",
+    id: "light",
+  },
+  {
+    name: "🌚  dark",
+    id: "dark",
+  },
+  {
+    name: "🧁  cupcake",
+    id: "cupcake",
+  },
+  {
+    name: "🐝  bumblebee",
+    id: "bumblebee",
+  },
+  {
+    name: "✳️  Emerald",
+    id: "emerald",
+  },
+  {
+    name: "🏢  Corporate",
+    id: "corporate",
+  },
+  {
+    name: "🌃  synthwave",
+    id: "synthwave",
+  },
+  {
+    name: "👴  retro",
+    id: "retro",
+  },
+  {
+    name: "🤖  cyberpunk",
+    id: "cyberpunk",
+  },
+  {
+    name: "🌸  valentine",
+    id: "valentine",
+  },
+  {
+    name: "🎃  halloween",
+    id: "halloween",
+  },
+  {
+    name: "🌷  garden",
+    id: "garden",
+  },
+  {
+    name: "🌲  forest",
+    id: "forest",
+  },
+  {
+    name: "🐟  aqua",
+    id: "aqua",
+  },
+  {
+    name: "👓  lofi",
+    id: "lofi",
+  },
+  {
+    name: "🖍  pastel",
+    id: "pastel",
+  },
+  {
+    name: "🧚‍♀️  fantasy",
+    id: "fantasy",
+  },
+  {
+    name: "📝  Wireframe",
+    id: "wireframe",
+  },
+  {
+    name: "🏴  black",
+    id: "black",
+  },
+  {
+    name: "💎  luxury",
+    id: "luxury",
+  },
+  {
+    name: "🧛‍♂️  dracula",
+    id: "dracula",
+  },
+  {
+    name: "🖨  CMYK",
+    id: "cmyk",
+  },
+  {
+    name: "🍁  Autumn",
+    id: "autumn",
+  },
+  {
+    name: "💼  Business",
+    id: "business",
+  },
+  {
+    name: "💊  Acid",
+    id: "acid",
+  },
+  {
+    name: "🍋  Lemonade",
+    id: "lemonade",
+  },
+  {
+    name: "🌙  Night",
+    id: "night",
+  },
+  {
+    name: "☕️  Coffee",
+    id: "coffee",
+  },
+  {
+    name: "❄️  Winter",
+    id: "winter",
+  },
+]
+
+export let exampleRepos = [
+  {
+    name: "Next.js",
+    href: "https://stackblitz.com/edit/daisyui-nextjs",
+    logos: ["/logos/nextjs.svg"],
+  },
+  {
+    name: "SvelteKit",
+    href: "https://stackblitz.com/edit/daisyui-sveltekit",
+    logos: ["/logos/svelte.svg"],
+  },
+  {
+    name: "Nuxt 3",
+    href: "https://stackblitz.com/edit/daisyui-nuxt3",
+    logos: ["/logos/nuxtjs.svg"],
+  },
+  {
+    name: "Astro",
+    href: "https://stackblitz.com/edit/daisyui-astro",
+    logos: ["/logos/astro.svg"],
+  },
+  {
+    name: "Vue.js 3",
+    href: "https://stackblitz.com/edit/daisyui-vue-vite",
+    logos: ["/logos/vue.svg"],
+  },
+  {
+    name: "Solid.js",
+    href: "https://stackblitz.com/edit/daisyui-solidjs",
+    logos: ["/logos/solidjs.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Vite",
+    href: "https://stackblitz.com/edit/daisyui-vite",
+    logos: ["/logos/vite.svg"],
+  },
+  {
+    name: "React (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-react-vite",
+    logos: ["/logos/react.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Svelte (Vite)",
+    href: "https://stackblitz.com/edit/daisyui-svelte-vite",
+    logos: ["/logos/svelte.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Remix",
+    href: "https://stackblitz.com/edit/daisyui-remix",
+    logos: ["/logos/remix.svg"],
+  },
+  {
+    name: "PostCSS",
+    href: "https://stackblitz.com/edit/daisyui-postcss",
+    logos: ["/logos/postcss.svg"],
+  },
+  {
+    name: "React (Webpack)",
+    href: "https://stackblitz.com/edit/daisyui-react-webpack",
+    logos: ["/logos/react.svg", "/logos/webpack.svg"],
+  },
+  {
+    name: "Qwik",
+    href: "https://stackblitz.com/edit/daisyui-qwik",
+    logos: ["/logos/qwik.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Preact",
+    href: "https://stackblitz.com/edit/daisyui-preact-vite",
+    logos: ["/logos/preact.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Lit",
+    href: "https://stackblitz.com/edit/daisyui-lit-vite",
+    logos: ["/logos/lit.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "Svelte (rollup.js)",
+    href: "https://stackblitz.com/edit/daisyui-svelte-rollup",
+    logos: ["/logos/svelte.svg", "/logos/rollup.svg"],
+  },
+  {
+    name: "Angular",
+    href: "https://stackblitz.com/edit/daisyui-angular",
+    logos: ["/logos/angular.svg"],
+  },
+  {
+    name: "11ty",
+    href: "https://stackblitz.com/edit/daisyui-11ty",
+    logos: ["/logos/11ty.svg"],
+  },
+  {
+    name: "Snowpack",
+    href: "https://stackblitz.com/edit/daisyui-snowpack",
+    logos: ["/logos/snowpack.svg"],
+  },
+  {
+    name: "React (CRA)",
+    href: "https://stackblitz.com/edit/daisyui-react-cra",
+    logos: ["/logos/react.svg", "/logos/cra.svg"],
+  },
+  {
+    name: "Elm",
+    href: "https://stackblitz.com/edit/elm-daisyui",
+    logos: ["/logos/elm.svg", "/logos/vite.svg"],
+  },
+  {
+    name: "CDN (Tailwind)",
+    href: "https://stackblitz.com/edit/daisyui-cdn",
+    logos: ["/logos/jsdelivr.svg"],
+  },
+  {
+    name: "CDN (BassCSS)",
+    href: "https://stackblitz.com/edit/daisyui-basscss",
+    logos: ["/logos/jsdelivr.svg"],
+  },
+  {
+    name: "CDN (Tachyons)",
+    href: "https://stackblitz.com/edit/daisyui-tachyons",
+    logos: ["/logos/jsdelivr.svg"],
+  },
+]
+
+export let pages = [
+  {
+    items: [
+      {
+        name: "Install",
+        tags: "how setup install npm",
+        href: "/docs/install",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20" /></svg>',
+        badge: "",
+        highlightAnotherItem: "/docs/cdn",
+      },
+      {
+        name: "CDN",
+        tags: "how cdn",
+        href: "/docs/cdn",
+        icon: "",
+        badge: "",
+        hidden: true,
+      },
+      {
+        name: "Use",
+        tags: "how use",
+        href: "/docs/use",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>',
+        badge: "",
+      },
+      {
+        name: "Customize components",
+        tags: "customize components",
+        href: "/docs/customize",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>',
+        badge: "",
+      },
+      {
+        name: "Config",
+        tags: "setup config styled themes base logs utils rtl",
+        href: "/docs/config",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>',
+        badge: "",
+      },
+      {
+        name: "Colors",
+        tags: "colors 🎨",
+        href: "/docs/colors",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M19,11.5C19,11.5 17,13.67 17,15C17,16.1 17.9,17 19,17C20.1,17 21,16.1 21,15C21,13.67 19,11.5 19,11.5M5.21,10L10,5.21L14.79,10M16.56,8.94L7.62,0L6.21,1.41L8.59,3.79L3.44,8.94C2.85,9.5 2.85,10.47 3.44,11.06L8.94,16.56C9.23,16.85 9.62,17 10,17C10.38,17 10.77,16.85 11.06,16.56L16.56,11.06C17.15,10.47 17.15,9.5 16.56,8.94Z"/></svg>',
+        badge: "",
+      },
+      {
+        name: "Themes",
+        tags: "themes disable custom color generator",
+        href: "/docs/themes",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>',
+        badge: "",
+      },
+      {
+        name: "Theme Generator",
+        tags: "theme generator custom color generator",
+        href: "/theme-generator",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 512 512"><title>ionicons-v5-m</title><path d="M96,208H48a16,16,0,0,1,0-32H96a16,16,0,0,1,0,32Z"/><line x1="90.25" y1="90.25" x2="124.19" y2="124.19"/><path d="M124.19,140.19a15.91,15.91,0,0,1-11.31-4.69L78.93,101.56a16,16,0,0,1,22.63-22.63l33.94,33.95a16,16,0,0,1-11.31,27.31Z"/><path d="M192,112a16,16,0,0,1-16-16V48a16,16,0,0,1,32,0V96A16,16,0,0,1,192,112Z"/><line x1="293.89" y1="90.25" x2="259.95" y2="124.19"/><path d="M260,140.19a16,16,0,0,1-11.31-27.31l33.94-33.95a16,16,0,0,1,22.63,22.63L271.27,135.5A15.94,15.94,0,0,1,260,140.19Z"/><line x1="124.19" y1="259.95" x2="90.25" y2="293.89"/><path d="M90.25,309.89a16,16,0,0,1-11.32-27.31l33.95-33.94a16,16,0,0,1,22.62,22.63l-33.94,33.94A16,16,0,0,1,90.25,309.89Z"/><path d="M219,151.83a26,26,0,0,0-36.77,0l-30.43,30.43a26,26,0,0,0,0,36.77L208.76,276a4,4,0,0,0,5.66,0L276,214.42a4,4,0,0,0,0-5.66Z"/><path d="M472.31,405.11,304.24,237a4,4,0,0,0-5.66,0L237,298.58a4,4,0,0,0,0,5.66L405.12,472.31a26,26,0,0,0,36.76,0l30.43-30.43h0A26,26,0,0,0,472.31,405.11Z"/></svg>',
+        badge: "",
+      },
+      {
+        name: "Layout & Typography",
+        tags: "layout typography padding margin grid flex spacing font",
+        href: "/docs/layout-and-typography",
+        icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M4,2 L20,2 C21.1045695,2 22,2.8954305 22,4 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 Z M4,4 L4,20 L20,20 L20,4 L4,4 Z M14.7999209,15 L9.19992091,15 L8,18 L6,18 L11,6 L13,6 L18,18 L16,18 L14.7999209,15 Z M13.9998682,13 L11.9997364,8 L9.99986818,13 L13.9998682,13 Z"/></svg>',
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Actions",
+    items: [
+      {
+        name: "Button",
+        tags: "button btn 🍑",
+        href: "/components/button",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Dropdown",
+        tags: "dropdown popover menu listbox",
+        href: "/components/dropdown",
+        icon: "",
+        badge: "updated",
+      },
+      {
+        name: "Modal",
+        tags: "dialog modal window popup",
+        href: "/components/modal",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Swap",
+        tags: "swap transition toggle icon",
+        href: "/components/swap",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Data display",
+    items: [
+      {
+        name: "Alert",
+        tags: "alert warning error message",
+        href: "/components/alert",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Avatar",
+        tags: "avatar image profile picture",
+        href: "/components/avatar",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Badge",
+        tags: "badge tag label",
+        href: "/components/badge",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Card",
+        tags: "card",
+        href: "/components/card",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Carousel",
+        tags: "carousel slider image",
+        href: "/components/carousel",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Chat bubble",
+        tags: "chat bubble dialog message messenger",
+        href: "/components/chat",
+        icon: "",
+        badge: "New",
+      },
+      {
+        name: "Collapse",
+        tags: "collapse accordion",
+        href: "/components/collapse",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Countdown",
+        tags: "countdown counter timer",
+        href: "/components/countdown",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Kbd",
+        tags: "kbd keyboard ⌨️",
+        href: "/components/kbd",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Progress",
+        tags: "progressbar progress loading percentage",
+        href: "/components/progress",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Radial progress",
+        tags: "progressbar progress loading percentage",
+        href: "/components/radial-progress",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Stat",
+        tags: "stats data",
+        href: "/components/stat",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Table",
+        tags: "table",
+        href: "/components/table",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Tooltip",
+        tags: "tooltip",
+        href: "/components/tooltip",
+        icon: "",
+        badge: "updated",
+      },
+    ],
+  },
+  {
+    name: "Data input",
+    items: [
+      {
+        name: "Checkbox",
+        tags: "checkbox ✅",
+        href: "/components/checkbox",
+        icon: "",
+        badge: "updated",
+      },
+      {
+        name: "File input",
+        tags: "file upload",
+        href: "/components/file-input",
+        icon: "",
+        badge: "New",
+      },
+      {
+        name: "Radio",
+        tags: "radio",
+        href: "/components/radio",
+        icon: "",
+        badge: "updated",
+      },
+      {
+        name: "Range",
+        tags: "range slider",
+        href: "/components/range",
+        icon: "",
+        badge: "updated",
+      },
+      {
+        name: "Rating",
+        tags: "star rating radio",
+        href: "/components/rating",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Select",
+        tags: "select option menu",
+        href: "/components/select",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Text input",
+        tags: "text input",
+        href: "/components/input",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Textarea",
+        tags: "textarea",
+        href: "/components/textarea",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Toggle",
+        tags: "toggle switch checkbox",
+        href: "/components/toggle",
+        icon: "",
+        badge: "updated",
+      },
+    ],
+  },
+  {
+    name: "Layout",
+    items: [
+      {
+        name: "Artboard",
+        tags: "artboard mobile",
+        href: "/components/artboard",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Button group",
+        tags: "button group",
+        href: "/components/button-group",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Divider",
+        tags: "divider",
+        href: "/components/divider",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Drawer",
+        tags: "drawer sidebar menu",
+        href: "/components/drawer",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Footer",
+        tags: "footer 🦶",
+        href: "/components/footer",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Hero",
+        tags: "hero title",
+        href: "/components/hero",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Indicator",
+        tags: "indicator badge corner",
+        href: "/components/indicator",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Input group",
+        tags: "input group label",
+        href: "/components/input-group",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Mask",
+        tags: "mask crop 😷",
+        href: "/components/mask",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Stack",
+        tags: "stack",
+        href: "/components/stack",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Toast",
+        tags: "toast notification snackbar",
+        href: "/components/toast",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Navigation",
+    items: [
+      {
+        name: "Breadcrumbs",
+        tags: "breadcrumbs links",
+        href: "/components/breadcrumbs",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Bottom navigation",
+        tags: "bottom navigation app bar",
+        href: "/components/bottom-navigation",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Link",
+        tags: "link href anchor 🔗",
+        href: "/components/link",
+        icon: "",
+        badge: "updated",
+      },
+      {
+        name: "Menu",
+        tags: "menu list",
+        href: "/components/menu",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Navbar",
+        tags: "navbar navigation menu",
+        href: "/components/navbar",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Pagination",
+        tags: "pagination links next previous",
+        href: "/components/pagination",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Steps",
+        tags: "steps progress",
+        href: "/components/steps",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Tab",
+        tags: "tabs",
+        href: "/components/tab",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "Mockup",
+    items: [
+      {
+        name: "Code",
+        tags: "mockup code",
+        href: "/components/mockup-code",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Phone",
+        tags: "mockup iphone 📱",
+        href: "/components/mockup-phone",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Window",
+        tags: "mockup window 🪟",
+        href: "/components/mockup-window",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+  {
+    name: "excluded",
+    items: [
+      {
+        name: "CodePen example page",
+        tags: "codepen",
+        href: "/codepen",
+        icon: "",
+        badge: "",
+      },
+      {
+        name: "Tailwind Play example page",
+        tags: "tailwind play",
+        href: "/tailwindplay",
+        icon: "",
+        badge: "",
+      },
+    ],
+  },
+]

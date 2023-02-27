@@ -1,0 +1,6 @@
+.modal-bottom :where(.modal-box){
+  @apply w-full max-w-none translate-y-10 scale-100 rounded-b-none;
+}
+.modal-middle :where(.modal-box){
+  @apply w-11/12 max-w-lg translate-y-0 scale-90 rounded-b-box;
+}

@@ -1,0 +1,29 @@
+.swap {
+  @apply relative inline-grid select-none place-content-center;
+}
+
+.swap > * {
+  @apply col-start-1 row-start-1;
+}
+
+.swap input {
+  @apply appearance-none;
+}
+
+.swap .swap-on,
+.swap .swap-indeterminate,
+.swap input:indeterminate ~ .swap-on {
+  @apply opacity-0;
+}
+
+.swap input:checked ~ .swap-off,
+.swap.swap-active .swap-off,
+.swap input:indeterminate ~ .swap-off {
+  @apply opacity-0;
+}
+
+.swap input:checked ~ .swap-on,
+.swap-active .swap-on,
+.swap input:indeterminate ~ .swap-indeterminate {
+  @apply opacity-100;
+}

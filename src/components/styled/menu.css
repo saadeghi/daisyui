@@ -1,0 +1,133 @@
+.menu {
+  &.horizontal {
+    > li {
+      &.bordered {
+        > a,
+        > button,
+        > span {
+          @apply border-l-0 border-b-4 border-primary;
+        }
+      }
+    }
+  }
+  &[class*=" px-"]:not(&[class*=" px-0"]) li > *,
+  &[class^="px-"]:not(&[class^="px-0"]) li > *,
+  &[class*=" p-"]:not(&[class*=" p-0"]) li > *,
+  &[class^="p-"]:not(&[class^="p-0"]) li > * {
+    @apply rounded-btn;
+  }
+  :where(li.bordered > *) {
+    @apply border-l-4 border-primary;
+  }
+  :where(li) > :where(*:not(ul)) {
+    @apply gap-3 px-4 py-3 text-current;
+  }
+
+  :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):focus),
+  :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):hover) {
+    @apply bg-base-content bg-opacity-10;
+  }
+  :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active),
+  :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
+    @apply bg-primary text-primary-content;
+  }
+  :where(li:empty) {
+    @apply mx-4 my-2 h-px bg-base-content bg-opacity-10;
+  }
+
+  li.disabled {
+    & > * {
+      @apply select-none text-base-content text-opacity-20 hover:bg-transparent;
+    }
+  }
+  li.hover-bordered {
+    a {
+      @apply border-l-4 border-transparent hover:border-primary;
+    }
+  }
+  &.compact {
+    li {
+      > a,
+      > span {
+        @apply py-2 text-sm;
+      }
+    }
+  }
+  .menu-title {
+    @apply text-xs font-bold opacity-40;
+    > * {
+      @apply py-1;
+    }
+  }
+}
+
+.menu :where(li:not(.disabled)) > :where(*:not(ul)) {
+  @apply outline-none transition duration-200 ease-in-out;
+}
+
+.menu > :where(li:first-child) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.menu > :where(li:first-child) > :where(:not(ul)) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.menu > :where(li:last-child) {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.menu > :where(li:last-child) > :where(:not(ul)) {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.menu > :where(li) > :where(ul) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.menu > :where(li) > :where(ul) :where(li) {
+  @apply w-full whitespace-nowrap;
+}
+.menu > :where(li) > :where(ul) :where(li) :where(ul) {
+  @apply pl-4;
+}
+.menu > :where(li) > :where(ul) :where(li) > :where(:not(ul)) {
+  @apply w-full whitespace-nowrap;
+}
+
+.menu > :where(li) > :where(ul) > :where(li:first-child) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.menu > :where(li) > :where(ul) > :where(li:first-child) > :where(:not(ul)) {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+}
+.menu > :where(li) > :where(ul) > :where(li:last-child) {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.menu > :where(li) > :where(ul) > :where(li:last-child) > :where(:not(ul)) {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}

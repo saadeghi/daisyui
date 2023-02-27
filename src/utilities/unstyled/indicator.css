@@ -1,0 +1,24 @@
+.indicator {
+  & :where(.indicator-item) {
+    @apply right-0 left-auto top-0 bottom-auto translate-x-1/2 -translate-y-1/2;
+  }
+  & :where(.indicator-item.indicator-start) {
+    @apply right-auto left-0 -translate-x-1/2;
+  }
+  & :where(.indicator-item.indicator-center) {
+    @apply right-1/2 left-1/2 -translate-x-1/2;
+  }
+  & :where(.indicator-item.indicator-end) {
+    @apply right-0 left-auto translate-x-1/2;
+  }
+  & :where(.indicator-item.indicator-bottom) {
+    @apply top-auto bottom-0 translate-y-1/2;
+  }
+  & :where(.indicator-item.indicator-middle) {
+    @apply top-1/2 bottom-1/2 -translate-y-1/2;
+  }
+  & :where(.indicator-item.indicator-top) {
+    @apply top-0 bottom-auto -translate-y-1/2;
+  }
+}
+
