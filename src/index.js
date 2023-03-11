@@ -23,8 +23,8 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     logs = true;
   }
   if (logs) {
-    console.log();
-    console.log(
+    console.warn();
+    console.warn(
       "\x1b[35m%s\x1b[0m",
       "🌼 daisyUI components " + daisyuiInfo.version,
       "\x1b[0m",
@@ -50,7 +50,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     config("daisyui.rtl") == true
   ) {
     daisyuiIncludedItems.push("unstyled components");
-    console.log("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL");
+    console.warn("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL");
     file = unstyledRtl;
   } else if (
     config("daisyui.styled") != false &&
@@ -63,7 +63,7 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     config("daisyui.rtl") == true
   ) {
     daisyuiIncludedItems.push("components");
-    console.log("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL");
+    console.warn("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL");
     file = styledRtl;
   }
 
@@ -107,24 +107,24 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     daisyuiIncludedItems.push("utilities");
   }
   if (logs) {
-    console.log(
+    console.warn(
       "\x1b[32m%s\x1b[0m",
       "✔︎ Including:",
       "\x1b[0m",
       "" + daisyuiIncludedItems.join(", ")
     );
-    console.log(
+    console.warn(
       "\x1b[32m%s\x1b[0m",
       "❤︎ Support daisyUI: ", daisyuiInfo.funding.url,
       "\x1b[0m",
     );
-    console.log();
+    console.warn();
     console.groupEnd();
   }
 };
 
 module.exports = require("tailwindcss/plugin")(mainFunction, {
-  theme: { 
+  theme: {
     extend: {
       colors: {
         ...colors,
