@@ -321,7 +321,7 @@
   "To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>": "Чтобы использовать пользовательский префикс, <a class='link' href='/docs/config/#prefix'>добавьте вашу префиксную строку в конфигурацию</a>",
   "Component": "Компонента",
   "Modifier": "Модификатор",
-  "Responsive": "Респонсивный",
+  "Responsive": "Отзывчивый",
   "Changes the style of a component": "Изменяет стиль компонента",
   "Supports responsive prefixes (sm:, lg:, …)": "Поддерживает префиксы (sm:, lg:, ...)",
   "Make your theme": "Создайте свою тему",
