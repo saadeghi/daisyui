@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.51.4](https://github.com/saadeghi/daisyui/compare/v2.51.3...v2.51.4) (2023-03-15)
+
+
+### Bug Fixes
+
+* [#1666](https://github.com/saadeghi/daisyui/issues/1666), fix: [#1691](https://github.com/saadeghi/daisyui/issues/1691) - Button group responsive classes not working properly. ([#1676](https://github.com/saadeghi/daisyui/issues/1676)) ([60893db](https://github.com/saadeghi/daisyui/commit/60893db4ba13d50812ee287da158a0f45cc69a50))
+
 ### [2.51.3](https://github.com/saadeghi/daisyui/compare/v2.51.2...v2.51.3) (2023-03-01)
 
 
