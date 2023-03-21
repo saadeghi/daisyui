@@ -7,7 +7,7 @@
     }
   }
   &-sm {
-    @apply pr-3 text-sm leading-8 h-8;
+    @apply pr-3 text-sm leading-loose h-8;
     &::file-selector-button {
       @apply mr-3 h-[1.875rem] min-h-[1.875rem];
       font-size: 0.875rem;
