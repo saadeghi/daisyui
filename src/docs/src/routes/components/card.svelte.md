@@ -109,7 +109,7 @@ data="{[
     </h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="justify-end card-actions">
-      <div class="badge badge-outline">Fashion</div> 
+      <div class="badge badge-outline">Fashion</div>
       <div class="badge badge-outline">Products</div>
     </div>
   </div>
@@ -124,7 +124,7 @@ data="{[
     </h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="$$card-actions justify-end">
-      <div class="$$badge $$badge-outline">Fashion</div> 
+      <div class="$$badge $$badge-outline">Fashion</div>
       <div class="$$badge $$badge-outline">Products</div>
     </div>
   </div>
@@ -140,7 +140,7 @@ data="{[
     </h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div className="$$card-actions justify-end">
-      <div className="$$badge $$badge-outline">Fashion</div> 
+      <div className="$$badge $$badge-outline">Fashion</div>
       <div className="$$badge $$badge-outline">Products</div>
     </div>
   </div>
@@ -231,7 +231,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$card w-96 bg-base-100 shadow-xl image-full">
+`<div class="$$card w-96 bg-base-100 shadow-xl $$image-full">
   <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
@@ -243,7 +243,7 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$card w-96 bg-base-100 shadow-xl image-full">
+`<div className="$$card w-96 bg-base-100 shadow-xl $$image-full">
   <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div className="$$card-body">
     <h2 className="$$card-title">Shoes!</h2>
