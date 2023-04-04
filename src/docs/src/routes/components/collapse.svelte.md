@@ -28,26 +28,26 @@ data="{[
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="collapse-content"> 
+  <div class="collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div tabindex="0" class="$$collapse"> 
+`<div tabindex="0" class="$$collapse">
   <div class="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="$$collapse-content"> 
+  <div class="$$collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div tabIndex={0} className="$$collapse"> 
+`<div tabIndex={0} className="$$collapse">
   <div className="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div className="$$collapse-content"> 
+  <div className="$$collapse-content">
     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -66,22 +66,22 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$collapse">
-  <input type="checkbox" /> 
+  <input type="checkbox" />
   <div class="$$collapse-title text-xl font-medium">
     Click me to show/hide content
   </div>
-  <div class="$$collapse-content"> 
+  <div class="$$collapse-content">
     <p>hello</p>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$collapse">
-  <input type="checkbox" /> 
+  <input type="checkbox" />
   <div className="$$collapse-title text-xl font-medium">
     Click me to show/hide content
   </div>
-  <div className="$$collapse-content"> 
+  <div className="$$collapse-content">
     <p>hello</p>
   </div>
 </div>`
@@ -89,30 +89,30 @@ data="{[
 </Component>
 
 <Component title="With border and background color">
-<div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box"> 
+<div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box">
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="collapse-content"> 
+  <div class="collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div tabindex="0" class="$$collapse border border-base-300 bg-base-100 rounded-box"> 
+`<div tabindex="0" class="$$collapse border border-base-300 bg-base-100 rounded-box">
   <div class="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="$$collapse-content"> 
+  <div class="$$collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div tabIndex={0} className="$$collapse border border-base-300 bg-base-100 rounded-box"> 
+`<div tabIndex={0} className="$$collapse border border-base-300 bg-base-100 rounded-box">
   <div className="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div className="$$collapse-content"> 
+  <div className="$$collapse-content">
     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -124,7 +124,7 @@ data="{[
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="collapse-content"> 
+  <div class="collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
@@ -133,7 +133,7 @@ data="{[
   <div class="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="$$collapse-content"> 
+  <div class="$$collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -143,7 +143,7 @@ data="{[
   <div className="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div className="$$collapse-content"> 
+  <div className="$$collapse-content">
     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -155,7 +155,7 @@ data="{[
   <div class="collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="collapse-content"> 
+  <div class="collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
@@ -164,7 +164,7 @@ data="{[
   <div class="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div class="$$collapse-content"> 
+  <div class="$$collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -174,7 +174,7 @@ data="{[
   <div className="$$collapse-title text-xl font-medium">
     Focus me to see content
   </div>
-  <div className="$$collapse-content"> 
+  <div className="$$collapse-content">
     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -182,30 +182,30 @@ data="{[
 </Component>
 
 <Component title="Force open">
-<div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-100 rounded-box"> 
+<div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-100 rounded-box">
   <div class="collapse-title text-xl font-medium">
     I have collapse-open class
   </div>
-  <div class="collapse-content"> 
+  <div class="collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div tabindex="0" class="$$collapse $$collapse-open border border-base-300 bg-base-100 rounded-box"> 
+`<div tabindex="0" class="$$collapse $$collapse-open border border-base-300 bg-base-100 rounded-box">
   <div class="$$collapse-title text-xl font-medium">
     I have collapse-open class
   </div>
-  <div class="$$collapse-content"> 
+  <div class="$$collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div tabIndex={0} className="$$collapse $$collapse-open border border-base-300 bg-base-100 rounded-box"> 
+`<div tabIndex={0} className="$$collapse $$collapse-open border border-base-300 bg-base-100 rounded-box">
   <div className="$$collapse-title text-xl font-medium">
     I have collapse-open className
   </div>
-  <div className="$$collapse-content"> 
+  <div className="$$collapse-content">
     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -213,30 +213,30 @@ data="{[
 </Component>
 
 <Component title="Force close">
-<div tabindex="0" class="collapse collapse-close border border-base-300 bg-base-100 rounded-box"> 
+<div tabindex="0" class="collapse collapse-close border border-base-300 bg-base-100 rounded-box">
   <div class="collapse-title text-xl font-medium">
     I have collapse-close class
   </div>
-  <div class="collapse-content"> 
+  <div class="collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div tabindex="0" class="$$collapse $$collapse-close border border-base-300 bg-base-100 rounded-box"> 
+`<div tabindex="0" class="$$collapse $$collapse-close border border-base-300 bg-base-100 rounded-box">
   <div class="$$collapse-title text-xl font-medium">
     I have collapse-close class
   </div>
-  <div class="$$collapse-content"> 
+  <div class="$$collapse-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div tabIndex={0} className="$$collapse $$collapse-close border border-base-300 bg-base-100 rounded-box"> 
+`<div tabIndex={0} className="$$collapse $$collapse-close border border-base-300 bg-base-100 rounded-box">
   <div className="$$collapse-title text-xl font-medium">
     I have collapse-close className
   </div>
-  <div className="$$collapse-content"> 
+  <div className="$$collapse-content">
     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -248,7 +248,7 @@ data="{[
   <div class="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     Focus me to see content
   </div>
-  <div class="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content"> 
+  <div class="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>
@@ -257,7 +257,7 @@ data="{[
   <div class="$$collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     Focus me to see content
   </div>
-  <div class="$$collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content"> 
+  <div class="$$collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     <p>tabindex="0" attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -267,7 +267,7 @@ data="{[
   <div className="$$collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     Focus me to see content
   </div>
-  <div className="$$collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content"> 
+  <div className="$$collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
   </div>
 </div>`
@@ -276,32 +276,32 @@ data="{[
 
 <Component title="Custom colors for collapse that works with checkbox" desc="Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked">
 <div class="collapse">
-  <input type="checkbox" class="peer" /> 
+  <input type="checkbox" class="peer" />
   <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
   </div>
-  <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
+  <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     <p>hello</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="collapse">
-  <input type="checkbox" class="peer" /> 
+`<div class="$$collapse">
+  <input type="checkbox" class="peer" />
   <div class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
   </div>
-  <div class="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
+  <div class="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     <p>hello</p>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="collapse">
-  <input type="checkbox" className="peer" /> 
+  <input type="checkbox" className="peer" />
   <div className="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
   </div>
-  <div className="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
+  <div className="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     <p>hello</p>
   </div>
 </div>`
