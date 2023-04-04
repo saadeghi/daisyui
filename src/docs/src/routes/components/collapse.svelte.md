@@ -253,7 +253,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div tabindex="0" class="collapse group">
+`<div tabindex="0" class="$$collapse group">
   <div class="$$collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     Focus me to see content
   </div>
@@ -263,7 +263,7 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div tabIndex={0} className="collapse group">
+`<div tabIndex={0} className="$$collapse group">
   <div className="$$collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
     Focus me to see content
   </div>
@@ -296,7 +296,7 @@ data="{[
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="collapse">
+`<div className="$$collapse">
   <input type="checkbox" className="peer" />
   <div className="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
