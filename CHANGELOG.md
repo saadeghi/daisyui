@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.51.5](https://github.com/saadeghi/daisyui/compare/v2.51.4...v2.51.5) (2023-03-21)
+
+
+### Bug Fixes
+
+* [#1700](https://github.com/saadeghi/daisyui/issues/1700) ([ef1941e](https://github.com/saadeghi/daisyui/commit/ef1941ea1dee945ad3ebb672bd5dcf38388efa8b))
+
+### [2.51.4](https://github.com/saadeghi/daisyui/compare/v2.51.3...v2.51.4) (2023-03-15)
+
+
+### Bug Fixes
+
+* [#1666](https://github.com/saadeghi/daisyui/issues/1666), fix: [#1691](https://github.com/saadeghi/daisyui/issues/1691) - Button group responsive classes not working properly. ([#1676](https://github.com/saadeghi/daisyui/issues/1676)) ([60893db](https://github.com/saadeghi/daisyui/commit/60893db4ba13d50812ee287da158a0f45cc69a50))
+
+### [2.51.3](https://github.com/saadeghi/daisyui/compare/v2.51.2...v2.51.3) (2023-03-01)
+
+
+### Bug Fixes
+
+* [#1569](https://github.com/saadeghi/daisyui/issues/1569) extend breadcrumb support for an ordered list ([#1648](https://github.com/saadeghi/daisyui/issues/1648)) ([ca82b9b](https://github.com/saadeghi/daisyui/commit/ca82b9bafe4e8f11ebdc70bc7cb0c2b82caf222e))
+
 ### [2.51.2](https://github.com/saadeghi/daisyui/compare/v2.51.1...v2.51.2) (2023-02-27)
 
 
