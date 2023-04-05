@@ -7,7 +7,7 @@
   <h3 class="text-base-content/50 text-xs font-bold">Sponsors</h3>
 
   <div class={`flex gap-2 ${wrapperClasses}`}>
-    <a href="https://www.stackbit.com/?utm_source=daisyui" target="_blank" rel="nofollow" class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
+    <a href="https://www.stackbit.com/?utm_source=daisyui" target="_blank" rel="nofollow, noreferrer" class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
       <svg class="fill-base-content mt-2 mb-1" width="110" height="20" viewBox="0 0 128 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M41.5717 8.50469C41.5717 6.29343 39.955 4.72344 37.3469 4.72344C35.234 4.72344 33.7217 5.68779 33.7217 7.27867C33.7217 11.6864 44.9893 8.11404 44.9893 15.8854C44.9893 19.615 41.7289 21.728 37.5558 21.728C34.0583 21.728 31.1468 20.1863 30.0535 17.3387L33.0178 14.3731C33.0178 17.007 34.7377 18.6728 37.5558 18.6728C39.767 18.6728 41.4157 17.6556 41.4157 16.0131C41.4157 11.5525 30.1481 15.1262 30.1481 7.50962C30.1481 3.9888 33.3826 1.66821 37.3469 1.66821C40.9095 1.66821 43.3935 3.37334 44.364 5.70744L41.5717 8.50469Z" />
         <path d="M50.2694 2.6106V7.7702H54.0777V10.6461H50.2694V16.6975C50.2694 18.2356 50.8173 18.6275 52.122 18.6275C52.7266 18.608 53.3286 18.5381 53.9217 18.4186V21.367C53.4524 21.5488 52.0962 21.6803 51.6527 21.6803C48.5483 21.6803 46.8788 20.3756 46.8788 17.1681V10.6461H44.4219V7.77512H46.8788V6.00365L50.2694 2.6106Z" />
@@ -23,7 +23,7 @@
       <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">Make your React site visually editable</p>
     </a>
   </div>
-  <a href="https://opencollective.com/daisyui" target="_blank" rel="nofollow" class="group link link-hover text-xs opacity-80">
+  <a href="https://opencollective.com/daisyui" target="_blank" rel="nofollow, noreferrer" class="link link-hover group text-xs opacity-80">
     Become a sponsor
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50"><path fill-rule="evenodd" d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z" /></svg>
   </a>

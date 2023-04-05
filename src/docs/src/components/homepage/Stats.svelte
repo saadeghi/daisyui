@@ -38,7 +38,7 @@
       <div class="stat-value tabular-nums">{siteStats.themes}</div>
       <div class="stat-desc">{$t("themes")}</div>
     </a>
-    <a href="https://github.com/saadeghi/daisyui" target="_blank" rel="noopener" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
+    <a href="https://github.com/saadeghi/daisyui" target="_blank" rel="noopener, noreferrer" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value tabular-nums">
         {#await githubStars}
           {siteStats.githubStars}
@@ -54,7 +54,7 @@
       </div>
       <div class="stat-desc">{$t("github-stars")}</div>
     </a>
-    <a href="https://www.npmjs.com/package/daisyui" target="_blank" rel="noopener" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
+    <a href="https://www.npmjs.com/package/daisyui" target="_blank" rel="noopener, noreferrer" class="stat place-items-center gap-0 bg-transparent px-10 hover:opacity-70">
       <div class="stat-value tabular-nums">
         {#await npmInstalls}
           {siteStats.npmInstalls}

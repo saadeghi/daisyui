@@ -4,9 +4,9 @@
   import { goto } from "$app/navigation"
   import Typeahead from "svelte-typeahead"
 
-  import { pages } from "@src/lib/data.js"
+  import { pages } from "$lib/data.js"
   import { getOS } from "$lib/util"
-  import { t } from "@src/lib/i18n"
+  import { t } from "$lib/i18n"
 
   const dispatch = createEventDispatcher()
 
@@ -62,48 +62,48 @@
 </label>
 
 <style global>
-  .searchbox [data-svelte-typeahead] {
-    background: none;
+  .searchbox.searchbox [data-svelte-typeahead][data-svelte-typeahead] {
+    background-color: transparent;
     width: 100%;
     max-width: 100%;
   }
-  [data-svelte-search] label {
+  [data-svelte-search][data-svelte-search] label {
     display: none;
   }
-  [data-svelte-search] input {
+  [data-svelte-search][data-svelte-search] input {
     background-color: transparent;
     color: inherit;
     border-radius: 0.5em;
     border: none;
     padding-left: 2em;
   }
-  [data-svelte-search] input::placeholder {
+  [data-svelte-search][data-svelte-search] input::placeholder {
     color: inherit;
   }
-  [data-svelte-search] input:focus {
+  [data-svelte-search][data-svelte-search] input:focus {
     outline-color: hsla(var(--bc) / 0.2);
     background-color: hsl(var(--b1));
     color: hsla(var(--bc));
   }
-  [data-svelte-typeahead] .svelte-typeahead-list {
+  [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list {
     transform: translateY(0.5em);
     background: hsl(var(--b1));
     border-radius: var(--rounded-btn);
     overflow: hidden;
   }
-  [data-svelte-typeahead] .svelte-typeahead-list .selected,
-  [data-svelte-typeahead] .svelte-typeahead-list .selected:hover {
+  [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected,
+  [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected:hover {
     background: hsl(var(--n));
     color: hsl(var(--nc));
   }
-  [data-svelte-typeahead] .svelte-typeahead-list li {
+  [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li {
     color: hsl(var(--bc));
   }
-  [data-svelte-typeahead] .svelte-typeahead-list li:hover {
+  [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:hover {
     background: hsl(var(--b2));
     color: hsl(var(--bc));
   }
-  [data-svelte-typeahead] .svelte-typeahead-list li:not(:last-of-type) {
+  [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:not(:last-of-type) {
     border-bottom-color: hsla(var(--bc) / 0.1);
   }
 </style>

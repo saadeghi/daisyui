@@ -120,7 +120,7 @@
           </div>
         </div>
       </div>
-      <div sveltekit:prefetch class="mt-6 mb-10 flex w-full justify-center"><a href="/components" class="btn btn-primary btn-wide">{$t("all-components-btn")}</a></div>
+      <div data-sveltekit-preload-data="hover" class="mt-6 mb-10 flex w-full justify-center"><a href="/components" class="btn btn-primary btn-wide">{$t("all-components-btn")}</a></div>
     </div>
   </div>
 </div>

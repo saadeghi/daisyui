@@ -21,18 +21,18 @@
       </div>
       <p class="mx-auto mt-10 mb-5 max-w-lg">{$t("try-online-playground-links-title")}:</p>
       <div class="flex flex-wrap justify-center gap-2">
-        <a target="_blank" rel="noopener" href="/codepen" class="btn-outline btn gap-3 normal-case">
+        <a target="_blank" rel="noopener, noreferrer" href="/codepen" class="btn-outline btn gap-3 normal-case">
           <svg class="h-4 w-4 stroke-current" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3.06 41.732L32 60.932l28.94-19.2V22.268L32 3.068l-28.94 19.2zm57.878 0L32 22.268 3.06 41.732m0-19.463L32 41.47l28.94-19.2M32 3.068v19.2m0 19.463v19.2" stroke-width="6.05" /></svg>
           CodePen
         </a>
-        <a href="/tailwindplay" class="btn-outline btn gap-3 normal-case" target="_blank" rel="noopener">
+        <a href="/tailwindplay" class="btn-outline btn gap-3 normal-case" target="_blank" rel="noopener, noreferrer">
           <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
             <g clip-path="url(#prefix__clip0)"><path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd" /></g>
             <defs><clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z" /></clipPath></defs>
           </svg>
           Tailwind Play
         </a>
-        <a sveltekit:prefetch href="/docs/install/" class="btn-outline btn gap-3 normal-case">
+        <a data-sveltekit-preload-data="hover" href="/docs/install/" class="btn-outline btn gap-3 normal-case">
           <div class="flex">
             <img class="w-5" src="/logos/react.svg" alt="React" loading="lazy" />
             <img class="w-5" src="/logos/vue.svg" alt="Vue" loading="lazy" />
