@@ -1,9 +1,9 @@
 <script>
   import { page } from "$app/stores"
+  import SEO from "@components/SEO.svelte"
   import Translate from "@components/Translate.svelte"
   export let data
   let { components } = data
-  import SEO from "@components/SEO.svelte"
 </script>
 
 <SEO title="Components" desc="Components" />

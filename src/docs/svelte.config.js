@@ -34,9 +34,9 @@ export default {
     mdsvex({
       extensions: [".svelte.md", ".md"],
       rehypePlugins: rehypePlugins,
-      // layout: {
-      //   _: "src/routes/markdown.svelte",
-      // },
+      layout: {
+        _: "src/lib/mdsvex.svelte",
+      },
     }),
     preprocess({
       postcss: true,
