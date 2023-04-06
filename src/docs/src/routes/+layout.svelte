@@ -90,63 +90,33 @@
   </div>
 </div>
 
-<input type="checkbox" id="my-modal" class="modal-toggle" aria-label="Open or close modal" />
+<input type="checkbox" id="my_modal_6" class="modal-toggle" aria-label="Open or close modal" />
 <div class="modal">
   <div class="modal-box">
-    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
     <div class="modal-action">
-      <label for="my-modal" class="btn">Yay!</label>
+      <label for="my_modal_6" class="btn">Close</label>
     </div>
   </div>
 </div>
 
-<div class="modal" id="my-modal-2">
+<input type="checkbox" id="my_modal_7" class="modal-toggle" aria-label="Open or close modal" />
+<div class="modal">
   <div class="modal-box">
     <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+  </div>
+  <label class="modal-backdrop" for="my_modal_7">Close</label>
+</div>
+
+<div class="modal" id="my_modal_8">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with anchor links</p>
     <div class="modal-action">
       <!-- svelte-ignore a11y-invalid-attribute -->
-      <a href="#" class="btn" rel="external">Yay!</a>
-    </div>
-  </div>
-</div>
-
-<input type="checkbox" id="my-modal-3" class="modal-toggle" aria-label="Open or close modal" />
-<div class="modal">
-  <div class="modal-box relative">
-    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-  </div>
-</div>
-
-<input type="checkbox" id="my-modal-4" class="modal-toggle" aria-label="Open or close modal" />
-<label for="my-modal-4" class="modal cursor-pointer">
-  <label class="modal-box relative" for="">
-    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-  </label>
-</label>
-
-<input type="checkbox" id="my-modal-5" class="modal-toggle" aria-label="Open or close modal" />
-<div class="modal">
-  <div class="modal-box w-11/12 max-w-5xl">
-    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-    <div class="modal-action">
-      <label for="my-modal-5" class="btn">Yay!</label>
-    </div>
-  </div>
-</div>
-
-<input type="checkbox" id="my-modal-6" class="modal-toggle" aria-label="Open or close modal" />
-<div class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
-    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-    <div class="modal-action">
-      <label for="my-modal-6" class="btn">Yay!</label>
+      <a href="#" class="btn" rel="external">Close</a>
     </div>
   </div>
 </div>

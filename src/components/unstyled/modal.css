@@ -1,8 +1,13 @@
 .modal {
-  @apply pointer-events-none invisible fixed inset-0 flex justify-center opacity-0;
+  /* @apply pointer-events-none invisible fixed inset-0 flex justify-center opacity-0; */
+  @apply pointer-events-none fixed max-w-none max-h-none w-full h-full inset-0 opacity-0 m-0 p-0 grid justify-items-center;
+  overscroll-behavior: contain;
   z-index: 999;
 }
-:where(.modal){
+.modal-scroll {
+  overscroll-behavior: auto;
+}
+:where(.modal) {
   @apply items-center;
 }
 .modal-box {
@@ -10,7 +15,8 @@
 }
 .modal-open,
 .modal:target,
-.modal-toggle:checked + .modal {
+.modal-toggle:checked + .modal,
+.modal[open] {
   @apply pointer-events-auto visible opacity-100;
 }
 .modal-action {
