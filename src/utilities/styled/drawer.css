@@ -1,0 +1,7 @@
+.drawer-open > .drawer-toggle {
+  & ~ .drawer-side {
+    & > .drawer-overlay {
+      @apply cursor-default bg-transparent;
+    }
+  }
+}

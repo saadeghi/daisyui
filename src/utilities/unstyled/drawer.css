@@ -1,0 +1,14 @@
+.drawer-open > .drawer-toggle {
+  & ~ .drawer-side {
+    @apply sticky visible w-auto pointer-events-auto block overscroll-auto;
+    & > *:not(.drawer-overlay) {
+      transform: translateX(0%);
+      [dir="rtl"] & {
+        transform: translateX(0%);
+      }
+    }
+  }
+  &:checked ~ .drawer-side {
+    @apply visible pointer-events-auto;
+  }
+}
