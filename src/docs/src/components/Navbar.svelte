@@ -9,12 +9,14 @@
 
   let version = readEnv("VITE_DAISYUI_VERSION", "latest")
 
-  export let drawerContentScrollY
-  $: switchNavbarStyle = drawerContentScrollY > 40 ? true : false
+  export let scrollY
+  $: switchNavbarStyle = scrollY > 40 ? true : false
 
   export let addScrollPaddingToNavbar
   export let removeScrollPaddingFromNavbar
 </script>
+
+<svelte:window bind:scrollY />
 
 <div
   class={`

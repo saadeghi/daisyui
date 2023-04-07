@@ -28,24 +28,15 @@
 
   import Sidebar from "@components/Sidebar.svelte"
 
-  let drawercontent
-  let drawerContentScrollY = 0
-  function parseContentScroll() {
-    drawerContentScrollY = drawercontent.scrollTop
-  }
-
   let drawersidebar
   let drawerSidebarScrollY = 0
   function parseSidebarScroll() {
     drawerSidebarScrollY = drawersidebar.scrollTop
   }
   onMount(() => {
-    parseContentScroll()
     parseSidebarScroll()
-  })
-
-  afterNavigate(() => {
-    drawercontent.scrollTop = 0
+    document.documentElement.style.scrollPaddingTop = "5rem"
+    document.documentElement.style.scrollBehavior = "smooth"
   })
 
   let checked = ""
@@ -60,10 +51,12 @@
   let navbarScrollPadding = "5rem"
   function addScrollPaddingToNavbar(action) {
     navbarScrollPadding = "5rem"
+    document.documentElement.style.scrollPaddingTop = "5rem"
   }
 
   function removeScrollPaddingFromNavbar(action) {
     navbarScrollPadding = "0rem"
+    document.documentElement.style.scrollPaddingTop = "0rem"
   }
 </script>
 
@@ -73,15 +66,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap&text=daisyUIThemostpopular,freeandopen-sourceTailwindCSScomponentlibrary" rel="stylesheet" />
 </svelte:head>
 
-<div class={`bg-base-100 drawer ${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "drawer-mobile"}`}>
+<div class={`bg-base-100 drawer ${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "lg:drawer-open"}`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div bind:this={drawercontent} on:scroll={parseContentScroll} class={`drawer-content`} style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};">
-    <Navbar {drawerContentScrollY} {addScrollPaddingToNavbar} {removeScrollPaddingFromNavbar} />
-    <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "px-6 pb-16 xl:pr-2"}`}>
+  <div class={`drawer-content`}>
+    <Navbar {addScrollPaddingToNavbar} {removeScrollPaddingFromNavbar} />
+    <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "max-w-[100vw] px-6 pb-16 xl:pr-2"}`}>
       <slot />
     </div>
   </div>
-  <div class="drawer-side" style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
+  <div class="drawer-side z-40" style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
       <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
@@ -129,7 +122,7 @@
     background: unset;
   }
   .prose pre[class*="language-"] {
-    max-width: 48rem;
+    max-width: 100%;
     background-color: hsl(var(--n));
     color: hsl(var(--nc));
   }

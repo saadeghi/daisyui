@@ -8,8 +8,9 @@ published: true
   import Translate from "@components/Translate.svelte"
 </script>
 
-<Translate text="daisyUI components come with many variants necessary for design systems and you won't usually need to customize anything." />  
-<Translate text="But you can still customize components in many ways." />
+<p><Translate text="daisyUI components come with many variants necessary for design systems and you won't usually need to customize anything." /></p>
+
+<p><Translate text="But you can still customize components in many ways." /></p>
 
 - <Translate text="Let's say, you want to customize this button:" />
 

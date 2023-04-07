@@ -11,7 +11,7 @@
       arrayOfPagesInOrder.push(item)
     })
   })
-  $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href == $page.url.pathname.replace(/\/$/, ""))
+  $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href == $page.url.pathname)
 </script>
 
 {#if arrayOfPagesInOrder[currentPageIndex]}
