@@ -9,7 +9,7 @@
 
 <div class=" rounded-box grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
   {#each themes as theme}
-    <div class="border-base-content/20 hover:border-base-content/40 outline-base-content overflow-hidden rounded-lg border outline outline-2 outline-offset-2" data-set-theme={theme.id} data-act-class="outline">
+    <div class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent" data-set-theme={theme.id} data-act-class="!outline-base-content">
       <div data-theme={theme.id} class="bg-base-100 text-base-content w-full cursor-pointer font-sans">
         <div class="grid grid-cols-5 grid-rows-3">
           <div class="bg-base-200 col-start-1 row-span-2 row-start-1" />
