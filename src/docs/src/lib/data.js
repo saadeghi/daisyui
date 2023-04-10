@@ -589,6 +589,13 @@ export let pages = [
         badge: "",
       },
       {
+        name: "Join (group items)",
+        tags: "join group button group input group form group",
+        href: "/components/join/",
+        icon: "",
+        badge: "new",
+      },
+      {
         name: "Mask",
         tags: "mask crop 😷",
         href: "/components/mask/",
