@@ -20,7 +20,7 @@
       @apply border-neutral-focus bg-neutral-focus;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--nf));
+      outline: 2px solid hsl(var(--n));
       outline-offset: 2px;
     }
   }
