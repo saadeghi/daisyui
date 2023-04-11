@@ -58,6 +58,6 @@
     margin-top: 0;
   }
   .menu-title {
-    @apply text-xs font-bold text-base-content/40 px-4 py-2;
+    @apply text-sm font-bold text-base-content/40 px-4 py-2;
   }
 }
