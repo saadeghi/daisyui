@@ -1,61 +1,47 @@
-.menu-vertical :where(li.bordered > *) {
-  @apply border-l-4 border-b-0;
+.menu-horizontal {
+  & > li:not(.menu-title) > details > ul {
+    @apply mt-4 ml-0 pr-2 py-2;
+  }
 }
-.menu-horizontal :where(li.bordered > *) {
-  @apply border-l-0 border-b-4;
-}
-.menu-normal :where(li > *) {
-  @apply py-3 text-base;
-}
-.menu-compact :where(li > *) {
-  @apply py-2 text-sm;
-}
-.menu-vertical > :where(li:first-child) {
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: unset;
-  border-bottom-left-radius: unset;
-}
-.menu-vertical > :where(li:first-child) > :where(*:not(ul)) {
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: unset;
-  border-bottom-left-radius: unset;
-}
-.menu-vertical > :where(li:last-child) {
-  border-top-left-radius: unset;
-  border-top-right-radius: unset;
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-.menu-vertical > :where(li:last-child) > :where(*:not(ul)) {
-  border-top-left-radius: unset;
-  border-top-right-radius: unset;
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: inherit;
+.menu-vertical {
+  & > li:not(.menu-title) > details > ul {
+    @apply mt-0 ml-4 pr-0 py-0;
+  }
 }
 
-.menu-horizontal > :where(li:first-child) {
-  border-top-left-radius: inherit;
-  border-top-right-radius: unset;
-  border-bottom-right-radius: unset;
-  border-bottom-left-radius: inherit;
+.menu-xs {
+  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply px-2 py-1 text-xs rounded;
+  }
+  .menu-title {
+    @apply px-2 py-1;
+  }
 }
-.menu-horizontal > :where(li:first-child) > :where(*:not(ul)) {
-  border-top-left-radius: inherit;
-  border-top-right-radius: unset;
-  border-bottom-right-radius: unset;
-  border-bottom-left-radius: inherit;
+.menu-sm {
+  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply px-2 py-2 text-sm rounded-btn;
+  }
+  .menu-title {
+    @apply px-2 py-2;
+  }
 }
-.menu-horizontal > :where(li:last-child) {
-  border-top-left-radius: unset;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: unset;
+.menu-md {
+  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply px-4 py-2 text-base rounded-btn;
+  }
+  .menu-title {
+    @apply px-4 py-2;
+  }
 }
-.menu-horizontal > :where(li:last-child) > :where(*:not(ul)) {
-  border-top-left-radius: unset;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: unset;
+.menu-lg {
+  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply px-6 py-3 text-lg rounded-btn;
+  }
+  .menu-title {
+    @apply px-6 py-3;
+  }
 }

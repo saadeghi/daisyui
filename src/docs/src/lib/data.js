@@ -647,7 +647,7 @@ export let pages = [
         tags: "menu list",
         href: "/components/menu/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Navbar",
