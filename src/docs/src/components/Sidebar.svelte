@@ -43,11 +43,18 @@
 
 <div class="h-4" />
 
-{#each pages as { name, items }}
+{#each pages as { name, icon, items }}
   <ul class="menu flex flex-col p-0 px-4">
     {#if name && name != "excluded"}
       <li />
-      <li class="menu-title"><span>{$t(name)}</span></li>
+      <li>
+        <div class="menu-title flex gap-4">
+          {#if icon}
+            <span class="text-base-content">{@html icon}</span>
+          {/if}
+          <span>{$t(name)}</span>
+        </div>
+      </li>
     {/if}
     {#if name != "excluded"}
       {#each items as { name, href, icon, badge, hidden, highlightAnotherItem }}
