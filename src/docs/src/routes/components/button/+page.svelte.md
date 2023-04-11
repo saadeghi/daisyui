@@ -27,7 +27,6 @@ data="{[
   { type:'modifier', class: 'btn-active', desc: 'Force button to show active state' },
   { type:'modifier', class: 'btn-disabled', desc: 'Force button to show disabled state' },
   { type:'modifier', class: 'glass', desc: 'Button with a glass effect' },
-  { type:'modifier', class: 'loading', desc: 'Shows loading spinner' },
   { type:'modifier', class: 'no-animation', desc: 'Disables click animation' },
   { type:'responsive', class: 'btn-lg', desc: 'Large button' },
   { type:'responsive', class: 'btn-md', desc: 'Medium button (default)' },
@@ -340,22 +339,37 @@ data="{[
 </Component>
 
 <Component title="Button with loading spinner">
-<button class="btn btn-square loading"></button>
+<button class="btn btn-square">
+  <span class="loading loading-spinner"></span>
+</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn $$btn-square $$loading"></button>`
+`<button class="$$btn $$btn-square">
+  <span class="$$loading $$loading-spinner"></span>
+</button>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<button className="$$btn $$btn-square $$loading"></button>`
+`<button className="$$btn $$btn-square">
+  <span className="$$loading $$loading-spinner"></span>
+</button>`
 }</pre>
 </Component>
 
 <Component title="Button with loading spinner and text">
-<button class="btn loading">loading</button>
+<button class="btn">
+  <span class="loading loading-spinner"></span>
+  loading
+</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn $$loading">loading</button>`
+`<button class="$$btn">
+  <span class="$$loading $$loading-spinner"></span>
+  loading
+</button>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<button className="$$btn $$loading">loading</button>`
+`<button className="$$btn">
+  <span className="$$loading $$loading-spinner"></span>
+  loading
+</button>`
 }</pre>
 </Component>
 
