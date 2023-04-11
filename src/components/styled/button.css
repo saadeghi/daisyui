@@ -1,5 +1,5 @@
 .btn {
-  @apply font-semibold uppercase no-underline;
+  @apply font-semibold uppercase no-underline gap-2;
   border-width: var(--border-btn, 1px);
   animation: button-pop var(--animation-btn, 0.25s) ease-out;
   text-transform: var(--btn-text-case, uppercase);
@@ -196,22 +196,6 @@
   &[disabled],
   &[disabled]:hover {
     @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
-  }
-
-  /* loading */
-  &.loading {
-    &.btn-square:before,
-    &.btn-circle:before {
-      @apply mr-0;
-    }
-    &.btn-xl:before,
-    &.btn-lg:before {
-      @apply h-5 w-5;
-    }
-    &.btn-sm:before,
-    &.btn-xs:before {
-      @apply h-3 w-3;
-    }
   }
 }
 /* group */
