@@ -1,5 +1,5 @@
 .menu {
-  @apply flex flex-col flex-wrap;
+  @apply flex flex-col flex-wrap text-sm;
   :where(li ul) {
     @apply relative whitespace-nowrap;
   }
