@@ -14,13 +14,13 @@
     <svg width="12px" height="12px" class="ml-1 hidden h-3 w-3 fill-current opacity-60 sm:inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z" /></svg>
   </div>
   <div class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px mt-16 w-56 overflow-y-auto shadow-2xl">
-    <ul class="menu menu-compact gap-1 p-3" tabindex="0">
+    <ul class="menu menu-sm gap-1 p-3" tabindex="0">
       {#each langs as langItem}
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
             <button class="flex" class:active={$currentLang == langItem} on:click={() => setLang(langItem)}>
               {#if $t("__flag", {}, langItem, false) !== "__flag"}
-                <img loading="lazy" width="20" height="20" alt={$t("__name", {}, langItem)} src={`https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/${emojiUnicode($t("__flag", {}, langItem)).replace(/\s/g, "-")}.svg`} />
+                <img class="drop-shadow" loading="lazy" width="20" height="20" alt={$t("__name", {}, langItem)} src={`https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/${emojiUnicode($t("__flag", {}, langItem)).replace(/\s/g, "-")}.svg`} />
               {/if}
               <span class="flex flex-1 justify-between">
                 {$t("__name", {}, langItem)}
