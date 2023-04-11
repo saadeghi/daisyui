@@ -13,181 +13,181 @@ published: true
 
 <ClassTable
 data="{[
-  { type:'component', class: 'btn-group', desc: 'Groups buttons together' },
+  { type:'component', class: 'join', desc: 'Groups buttons together' },
 ]}"
 />
 
 <Component title="Pagination with an active button">
-<div class="btn-group">
-  <button class="btn">1</button>
-  <button class="btn btn-active">2</button>
-  <button class="btn">3</button>
-  <button class="btn">4</button>
+<div class="join">
+  <button class="join-item btn">1</button>
+  <button class="join-item btn btn-active">2</button>
+  <button class="join-item btn">3</button>
+  <button class="join-item btn">4</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$btn-group">
-  <button class="$$btn">1</button>
-  <button class="$$btn $$btn-active">2</button>
-  <button class="$$btn">3</button>
-  <button class="$$btn">4</button>
+`<div class="$$join">
+  <button class="$$join-item $$btn">1</button>
+  <button class="$$join-item $$btn $$btn-active">2</button>
+  <button class="$$join-item $$btn">3</button>
+  <button class="$$join-item $$btn">4</button>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$btn-group">
-  <button className="$$btn">1</button>
-  <button className="$$btn $$btn-active">2</button>
-  <button className="$$btn">3</button>
-  <button className="$$btn">4</button>
+`<div className="$$join">
+  <button className="$$join-item $$btn">1</button>
+  <button className="$$join-item $$btn $$btn-active">2</button>
+  <button className="$$join-item $$btn">3</button>
+  <button className="$$join-item $$btn">4</button>
 </div>`
 }</pre>
 </Component>
 
 <Component title="Sizes">
 <div class="flex flex-col gap-2 items-center">
-  <div class="btn-group">
-    <button class="btn btn-xs">1</button>
-    <button class="btn btn-xs btn-active">2</button>
-    <button class="btn btn-xs">3</button>
-    <button class="btn btn-xs">4</button>
+  <div class="join">
+    <button class="join-item btn btn-xs">1</button>
+    <button class="join-item btn btn-xs btn-active">2</button>
+    <button class="join-item btn btn-xs">3</button>
+    <button class="join-item btn btn-xs">4</button>
   </div>
-  <div class="btn-group">
-    <button class="btn btn-sm">1</button>
-    <button class="btn btn-sm btn-active">2</button>
-    <button class="btn btn-sm">3</button>
-    <button class="btn btn-sm">4</button>
+  <div class="join">
+    <button class="join-item btn btn-sm">1</button>
+    <button class="join-item btn btn-sm btn-active">2</button>
+    <button class="join-item btn btn-sm">3</button>
+    <button class="join-item btn btn-sm">4</button>
   </div>
-  <div class="btn-group">
-    <button class="btn btn-md">1</button>
-    <button class="btn btn-md btn-active">2</button>
-    <button class="btn btn-md">3</button>
-    <button class="btn btn-md">4</button>
+  <div class="join">
+    <button class="join-item btn btn-md">1</button>
+    <button class="join-item btn btn-md btn-active">2</button>
+    <button class="join-item btn btn-md">3</button>
+    <button class="join-item btn btn-md">4</button>
   </div>
-  <div class="btn-group">
-    <button class="btn btn-lg">1</button>
-    <button class="btn btn-lg btn-active">2</button>
-    <button class="btn btn-lg">3</button>
-    <button class="btn btn-lg">4</button>
+  <div class="join">
+    <button class="join-item btn btn-lg">1</button>
+    <button class="join-item btn btn-lg btn-active">2</button>
+    <button class="join-item btn btn-lg">3</button>
+    <button class="join-item btn btn-lg">4</button>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$btn-group">
-  <button class="$$btn $$btn-xs">1</button>
-  <button class="$$btn $$btn-xs $$btn-active">2</button>
-  <button class="$$btn $$btn-xs">3</button>
-  <button class="$$btn $$btn-xs">4</button>
+`<div class="$$join">
+  <button class="$$join-item $$btn $$btn-xs">1</button>
+  <button class="$$join-item $$btn $$btn-xs $$btn-active">2</button>
+  <button class="$$join-item $$btn $$btn-xs">3</button>
+  <button class="$$join-item $$btn $$btn-xs">4</button>
 </div>
-<div class="$$btn-group">
-  <button class="$$btn $$btn-sm">1</button>
-  <button class="$$btn $$btn-sm $$btn-active">2</button>
-  <button class="$$btn $$btn-sm">3</button>
-  <button class="$$btn $$btn-sm">4</button>
+<div class="$$join">
+  <button class="$$join-item $$btn $$btn-sm">1</button>
+  <button class="$$join-item $$btn $$btn-sm $$btn-active">2</button>
+  <button class="$$join-item $$btn $$btn-sm">3</button>
+  <button class="$$join-item $$btn $$btn-sm">4</button>
 </div>
-<div class="$$btn-group">
-  <button class="$$btn $$btn-md">1</button>
-  <button class="$$btn $$btn-md $$btn-active">2</button>
-  <button class="$$btn $$btn-md">3</button>
-  <button class="$$btn $$btn-md">4</button>
+<div class="$$join">
+  <button class="$$join-item $$btn $$btn-md">1</button>
+  <button class="$$join-item $$btn $$btn-md $$btn-active">2</button>
+  <button class="$$join-item $$btn $$btn-md">3</button>
+  <button class="$$join-item $$btn $$btn-md">4</button>
 </div>
-<div class="$$btn-group">
-  <button class="$$btn $$btn-lg">1</button>
-  <button class="$$btn $$btn-lg $$btn-active">2</button>
-  <button class="$$btn $$btn-lg">3</button>
-  <button class="$$btn $$btn-lg">4</button>
+<div class="$$join">
+  <button class="$$join-item $$btn $$btn-lg">1</button>
+  <button class="$$join-item $$btn $$btn-lg $$btn-active">2</button>
+  <button class="$$join-item $$btn $$btn-lg">3</button>
+  <button class="$$join-item $$btn $$btn-lg">4</button>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$btn-group">
-  <button className="$$btn $$btn-xs">1</button>
-  <button className="$$btn $$btn-xs $$btn-active">2</button>
-  <button className="$$btn $$btn-xs">3</button>
-  <button className="$$btn $$btn-xs">4</button>
+`<div className="$$join">
+  <button className="$$join-item $$btn $$btn-xs">1</button>
+  <button className="$$join-item $$btn $$btn-xs $$btn-active">2</button>
+  <button className="$$join-item $$btn $$btn-xs">3</button>
+  <button className="$$join-item $$btn $$btn-xs">4</button>
 </div>
-<div className="$$btn-group">
-  <button className="$$btn $$btn-sm">1</button>
-  <button className="$$btn $$btn-sm $$btn-active">2</button>
-  <button className="$$btn $$btn-sm">3</button>
-  <button className="$$btn $$btn-sm">4</button>
+<div className="$$join">
+  <button className="$$join-item $$btn $$btn-sm">1</button>
+  <button className="$$join-item $$btn $$btn-sm $$btn-active">2</button>
+  <button className="$$join-item $$btn $$btn-sm">3</button>
+  <button className="$$join-item $$btn $$btn-sm">4</button>
 </div>
-<div className="$$btn-group">
-  <button className="$$btn $$btn-md">1</button>
-  <button className="$$btn $$btn-md $$btn-active">2</button>
-  <button className="$$btn $$btn-md">3</button>
-  <button className="$$btn $$btn-md">4</button>
+<div className="$$join">
+  <button className="$$join-item $$btn $$btn-md">1</button>
+  <button className="$$join-item $$btn $$btn-md $$btn-active">2</button>
+  <button className="$$join-item $$btn $$btn-md">3</button>
+  <button className="$$join-item $$btn $$btn-md">4</button>
 </div>
-<div className="$$btn-group">
-  <button className="$$btn $$btn-lg">1</button>
-  <button className="$$btn $$btn-lg $$btn-active">2</button>
-  <button className="$$btn $$btn-lg">3</button>
-  <button className="$$btn $$btn-lg">4</button>
+<div className="$$join">
+  <button className="$$join-item $$btn $$btn-lg">1</button>
+  <button className="$$join-item $$btn $$btn-lg $$btn-active">2</button>
+  <button className="$$join-item $$btn $$btn-lg">3</button>
+  <button className="$$join-item $$btn $$btn-lg">4</button>
 </div>`
 }</pre>
 </Component>
 
 <Component title="With a disabled button">
-<div class="btn-group">
-  <button class="btn">1</button>
-  <button class="btn">2</button>
-  <button class="btn btn-disabled">...</button>
-  <button class="btn">99</button>
-  <button class="btn">100</button>
+<div class="join">
+  <button class="join-item btn">1</button>
+  <button class="join-item btn">2</button>
+  <button class="join-item btn btn-disabled">...</button>
+  <button class="join-item btn">99</button>
+  <button class="join-item btn">100</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$btn-group">
-  <button class="$$btn">1</button>
-  <button class="$$btn">2</button>
-  <button class="$$btn $$btn-disabled">...</button>
-  <button class="$$btn">99</button>
-  <button class="$$btn">100</button>
+`<div class="$$join">
+  <button class="$$join-item $$btn">1</button>
+  <button class="$$join-item $$btn">2</button>
+  <button class="$$join-item $$btn $$btn-disabled">...</button>
+  <button class="$$join-item $$btn">99</button>
+  <button class="$$join-item $$btn">100</button>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$btn-group">
-  <button className="$$btn">1</button>
-  <button className="$$btn">2</button>
-  <button className="$$btn $$btn-disabled">...</button>
-  <button className="$$btn">99</button>
-  <button className="$$btn">100</button>
+`<div className="$$join">
+  <button className="$$join-item $$btn">1</button>
+  <button className="$$join-item $$btn">2</button>
+  <button className="$$join-item $$btn $$btn-disabled">...</button>
+  <button className="$$join-item $$btn">99</button>
+  <button className="$$join-item $$btn">100</button>
 </div>`
 }</pre>
 </Component>
 
 <Component title="Extra small buttons">
-<div class="btn-group">
-  <button class="btn">«</button>
-  <button class="btn">Page 22</button>
-  <button class="btn">»</button>
+<div class="join">
+  <button class="join-item btn">«</button>
+  <button class="join-item btn">Page 22</button>
+  <button class="join-item btn">»</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$btn-group">
-  <button class="$$btn">«</button>
-  <button class="$$btn">Page 22</button>
-  <button class="$$btn">»</button>
+`<div class="$$join">
+  <button class="$$join-item $$btn">«</button>
+  <button class="$$join-item $$btn">Page 22</button>
+  <button class="$$join-item $$btn">»</button>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$btn-group">
-  <button className="$$btn">«</button>
-  <button className="$$btn">Page 22</button>
-  <button className="$$btn">»</button>
+`<div className="$$join">
+  <button className="$$join-item $$btn">«</button>
+  <button className="$$join-item $$btn">Page 22</button>
+  <button className="$$join-item $$btn">»</button>
 </div>`
 }</pre>
 </Component>
 
 <Component title="Nex/Prev outline buttons with equal width">
-<div class="btn-group grid grid-cols-2">
-  <button class="btn btn-outline">Previous page</button>
-  <button class="btn btn-outline">Next</button>
+<div class="join grid grid-cols-2">
+  <button class="join-item btn btn-outline">Previous page</button>
+  <button class="join-item btn btn-outline">Next</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$btn-group grid grid-cols-2">
-  <button class="$$btn $$btn-outline">Previous page</button>
-  <button class="$$btn $$btn-outline">Next</button>
+`<div class="$$join grid grid-cols-2">
+  <button class="$$join-item $$btn $$btn-outline">Previous page</button>
+  <button class="$$join-item $$btn $$btn-outline">Next</button>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$btn-group grid grid-cols-2">
-  <button className="$$btn $$btn-outline">Previous page</button>
-  <button className="$$btn $$btn-outline">Next</button>
+`<div className="$$join grid grid-cols-2">
+  <button className="$$join-item $$btn $$btn-outline">Previous page</button>
+  <button className="$$join-item $$btn $$btn-outline">Next</button>
 </div>`
 }</pre>
 </Component>
