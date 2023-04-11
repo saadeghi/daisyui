@@ -13,12 +13,12 @@ published: true
 
 <ClassTable
 data="{[
-  { type:'component', class: 'tooltip', desc: 'Container element' },
+  { type:'responsive', class: 'tooltip', desc: 'Container element' },
   { type:'component', class: 'tooltip-open', desc: 'Force open tooltip' },
-  { type:'modifier', class: 'tooltip-top', desc: 'Put tooltip on top' },
-  { type:'modifier', class: 'tooltip-bottom', desc: 'Put tooltip on bottom' },
-  { type:'modifier', class: 'tooltip-left', desc: 'Put tooltip on left' },
-  { type:'modifier', class: 'tooltip-right', desc: 'Put tooltip on right' },
+  { type:'responsive', class: 'tooltip-top', desc: 'Put tooltip on top' },
+  { type:'responsive', class: 'tooltip-bottom', desc: 'Put tooltip on bottom' },
+  { type:'responsive', class: 'tooltip-left', desc: 'Put tooltip on left' },
+  { type:'responsive', class: 'tooltip-right', desc: 'Put tooltip on right' },
   { type:'modifier', class: 'tooltip-primary', desc: 'Adds `primary` color to tooltip' },
   { type:'modifier', class: 'tooltip-secondary', desc: 'Adds `secondary` color to tooltip' },
   { type:'modifier', class: 'tooltip-accent', desc: 'Adds `accent` color to tooltip' },
@@ -259,6 +259,24 @@ data="{[
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$tooltip $$tooltip-open $$tooltip-error" data-tip="error">
   <button className="$$btn $$btn-error">error</button>
+</div>`
+}</pre>
+</Component>
+
+<Component title="Responsive tooltip. only show for large screen">
+<div class="my-6">
+  <div class="lg:tooltip" data-tip="hello">
+    <button class="btn">Hover me</button>
+  </div>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$lg:tooltip" data-tip="hello">
+  <button class="$$btn">Hover me</button>
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$lg:tooltip" data-tip="hello">
+  <button className="$$btn">Hover me</button>
 </div>`
 }</pre>
 </Component>
