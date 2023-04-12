@@ -25,3 +25,6 @@
 .modal-toggle {
   @apply fixed h-0 w-0 appearance-none opacity-0;
 }
+:root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+  @apply overflow-hidden;
+}
