@@ -427,6 +427,13 @@ export let pages = [
         badge: "",
       },
       {
+        name: "Loading",
+        tags: "loading loader spinner progress",
+        href: "/components/loading/",
+        icon: "",
+        badge: "new",
+      },
+      {
         name: "Progress",
         tags: "progressbar progress loading percentage",
         href: "/components/progress/",
