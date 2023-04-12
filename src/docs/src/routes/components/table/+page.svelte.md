@@ -14,11 +14,13 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'table', desc: 'For <table> element' },
-  { type:'modifier', class: 'table-zebra', desc: 'For <table> to zebra stripe rows' },
+  { type:'modifier', class: 'table-zebra', desc: 'For <table> to show zebra stripe rows' },
   { type:'modifier', class: 'active', desc: 'For <tr> to highlight current row' },
   { type:'modifier', class: 'hover', desc: 'For <tr> to highlight current row on hover' },
-  { type:'responsive', class: 'table-normal', desc: 'Normal paddings' },
-  { type:'responsive', class: 'table-compact', desc: 'Compact paddings' },
+  { type:'responsive', class: 'table-xs', desc: 'Extra small size' },
+  { type:'responsive', class: 'table-sm', desc: 'Small size' },
+  { type:'responsive', class: 'table-md', desc: 'Normal size' },
+  { type:'responsive', class: 'table-lg', desc: 'Large size' },
 ]}"
 />
 
@@ -919,9 +921,9 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Compact table">
+<Component title="Table xs">
 <div class="overflow-x-auto">
-  <table class="table table-compact w-full">
+  <table class="table table-xs w-full">
     <thead>
       <tr>
         <th></th> 
@@ -1130,7 +1132,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="$$table $$table-compact w-full">
+  <table class="$$table $$table-xs w-full">
     <thead>
       <tr>
         <th></th> 
@@ -1340,7 +1342,7 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="overflow-x-auto">
-  <table className="$$table $$table-compact w-full">
+  <table className="$$table $$table-xs w-full">
     <thead>
       <tr>
         <th></th> 

@@ -1,73 +1,49 @@
 .table {
-  @apply text-left;
+  @apply text-left bg-base-100 rounded-box text-sm;
   :where(th, td) {
-    @apply whitespace-nowrap p-4 align-middle;
+    @apply px-4 py-3 align-middle;
   }
   tr.active,
-  tr.active:nth-child(even) {
-    th,
-    td {
-      @apply bg-base-300;
-    }
-  }
+  tr.active:nth-child(even),
   tr.hover:hover,
-  tr.hover:nth-child(even):hover {
-    th,
-    td {
+  tr.hover:nth-child(even):hover,
+  &-zebra tbody tr:nth-child(even) {
+    @apply bg-base-200 relative;
+    clip-path: inset(0% 0.5% 0% 0.5% round var(--rounded-btn));
+  }
+
+  &-zebra {
+    tr.active,
+    tr.active:nth-child(even),
+    tr.hover:hover,
+    tr.hover:nth-child(even):hover,
+    &-zebra tbody tr:nth-child(even) {
       @apply bg-base-300;
     }
   }
-  &:where(:not(.table-zebra)) {
-    :where(thead, tbody, tfoot) {
-      :where(tr:not(:last-child) :where(th, td)) {
-        @apply border-b border-base-200;
+
+  :where(thead, tbody) {
+    :where(tr:not(:last-child)),
+    :where(tr:first-child:last-child) {
+      @apply relative;
+      &:after {
+        @apply h-px absolute block left-4 -bottom-px right-4 bg-base-200;
+        content: "";
       }
     }
   }
+  /* &-zebra {
+    :where(thead, tbody) {
+      :where(tr:not(:last-child)),
+      :where(tr:first-child:last-child) {
+        &:after {
+          @apply bg-base-300;
+        }
+      }
+    }
+  } */
+
   :where(thead, tfoot) {
-    :where(th, td) {
-      @apply bg-base-200 text-xs font-bold uppercase;
-    }
-  }
-
-  :where(tbody th, tbody td) {
-    @apply bg-base-100;
-  }
-
-  &-zebra tbody {
-    tr:nth-child(even) {
-      th,
-      td {
-        @apply bg-base-200;
-      }
-    }
-  }
-}
-
-:where(.table *:first-child) {
-  :where(*:first-child) {
-    :where(th, td) {
-      &:first-child {
-        @apply rounded-tl-lg;
-      }
-
-      &:last-child {
-        @apply rounded-tr-lg;
-      }
-    }
-  }
-}
-
-:where(.table *:last-child) {
-  :where(*:last-child) {
-    :where(th, td) {
-      &:first-child {
-        @apply rounded-bl-lg;
-      }
-
-      &:last-child {
-        @apply rounded-br-lg;
-      }
-    }
+    @apply text-xs font-bold text-base-content/60 whitespace-nowrap;
   }
 }
