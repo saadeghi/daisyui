@@ -4,13 +4,19 @@ const colorNames = require("./colorNames");
 module.exports = {
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
-    if (Color(input).isDark()) {
-      let arr = Color(input).mix(Color("white"), percentage).saturate(10).hsl().array()
-      return arr[0].toPrecision(5).replace(/\.?0+$/,"") + " " + arr[1].toPrecision(5).replace(/\.?0+$/,"") + "%" + " " + arr[2].toPrecision(5).replace(/\.?0+$/,"") + "%";
-    } else {
-      let arr = Color(input).mix(Color("black"), percentage).saturate(10).hsl().array()
-      return arr[0].toPrecision(5).replace(/\.?0+$/,"") + " " + arr[1].toPrecision(5).replace(/\.?0+$/,"") + "%" + " " + arr[2].toPrecision(5).replace(/\.?0+$/,"") + "%";
-    }
+    const arr = Color(input).isDark()
+      ? Color(input).mix(Color("white"), percentage).saturate(10).hsl().array()
+      : Color(input).mix(Color("black"), percentage).saturate(10).hsl().array();
+
+    return (
+      arr[0].toPrecision(5).replace(/\.?0+$/, "") +
+      " " +
+      arr[1].toPrecision(5).replace(/\.?0+$/, "") +
+      "%" +
+      " " +
+      arr[2].toPrecision(5).replace(/\.?0+$/, "") +
+      "%"
+    );
   },
 
   convertToHsl: function (input) {
