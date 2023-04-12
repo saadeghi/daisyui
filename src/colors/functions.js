@@ -256,52 +256,48 @@ module.exports = {
   },
 
   injectThemes: function (addBase, config, themes) {
-    let includedThemesObj = new Object();
+    const includedThemesObj = new Object();
 
     // add light themes
-    if (config("daisyui.themes") == false) {
-      Object.entries(themes).forEach(([theme, index]) => {
+    if (config("daisyui.themes") === false) {
+      for (const theme in themes) {
         includedThemesObj[theme] = this.convertToHsl(themes[theme]);
-      });
+      }
     }
 
     // add default themes
-    if (config("daisyui.themes") != false) {
-      Object.entries(themes).forEach(([theme, index]) => {
+    if (config("daisyui.themes") !== false) {
+      for (const theme in themes) {
         includedThemesObj[theme] = this.convertToHsl(themes[theme]);
-      });
+      }
     }
 
     // add custom themes
     if (Array.isArray(config("daisyui.themes"))) {
-      config("daisyui.themes").forEach((item, index) => {
+      config("daisyui.themes").forEach((item) => {
         if (typeof item === "object" && item !== null) {
-          Object.entries(item).forEach(
-            ([customThemeName, customThemevalue]) => {
-              includedThemesObj["[data-theme=" + customThemeName + "]"] =
-                this.convertToHsl(customThemevalue);
-            }
-          );
+          for (const customThemeName in item) {
+            includedThemesObj["[data-theme=" + customThemeName + "]"] =
+              this.convertToHsl(item[customThemeName]);
+          }
         }
       });
     }
 
     let themeOrder = [];
     if (Array.isArray(config("daisyui.themes"))) {
-      config("daisyui.themes").forEach((theme, index) => {
+      config("daisyui.themes").forEach((theme) => {
         if (typeof theme === "object" && theme !== null) {
-          Object.entries(theme).forEach(
-            ([customThemeName, customThemevalue]) => {
-              themeOrder.push(customThemeName);
-            }
-          );
+          for (const customThemeName in theme) {
+            themeOrder.push(customThemeName);
+          }
         } else if (
-          includedThemesObj.hasOwnProperty("[data-theme=" + theme + "]")
+          Object.hasOwn(includedThemesObj, "[data-theme=" + theme + "]")
         ) {
           themeOrder.push(theme);
         }
       });
-    } else if (config("daisyui.themes") != false) {
+    } else if (config("daisyui.themes") !== false) {
       themeOrder = [
         "light",
         "dark",
@@ -333,7 +329,7 @@ module.exports = {
         "coffee",
         "winter",
       ];
-    } else if (config("daisyui.themes") == false) {
+    } else if (config("daisyui.themes") === false) {
       themeOrder.push("light");
     }
 
@@ -348,7 +344,7 @@ module.exports = {
         // auto dark
         if (config("daisyui.darkTheme")) {
           if (
-            themeOrder[0] != config("daisyui.darkTheme") &&
+            themeOrder[0] !== config("daisyui.darkTheme") &&
             themeOrder.includes(config("daisyui.darkTheme"))
           ) {
             addBase({
