@@ -7,9 +7,9 @@
 </script>
 
 <div class="not-prose mt-6 mb-10 overflow-x-auto">
-  <table class="table-compact table w-full">
+  <table class="table-xs md:table-sm table w-full">
     <thead>
-      <tr>
+      <tr class="active">
         <th class="flex items-center gap-2 normal-case">
           <PrefixEdit />
           <span><Translate text="Class name" /></span>

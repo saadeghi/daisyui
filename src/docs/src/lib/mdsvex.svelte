@@ -14,7 +14,7 @@
 <SEO {title} {desc} img={`/images${$page.url.pathname.replace(/\/$/, "")}.jpg`} />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
-  <div class="prose prose-sm md:prose-base w-full max-w-4xl flex-grow">
+  <div class="prose prose-sm md:prose-base w-full max-w-4xl flex-grow pt-10">
     <!-- <Ads slot="adsense-1" /> -->
     <!-- <Ads slot="adsense-2" /> -->
     <!-- <Ads slot="adsense-3" /> -->
