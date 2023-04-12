@@ -36,6 +36,9 @@
   & li.disabled {
     @apply text-base-content/30;
   }
+  :where(li > details > summary)::-webkit-details-marker {
+    @apply hidden;
+  }
   :where(li > details > summary):after,
   :where(li > .menu-dropdown-toggle):after {
     @apply justify-self-end;
