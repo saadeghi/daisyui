@@ -1,8 +1,9 @@
 .btn {
-  @apply font-semibold uppercase no-underline gap-2;
+  @apply font-semibold no-underline gap-2;
   border-width: var(--border-btn, 1px);
   animation: button-pop var(--animation-btn, 0.25s) ease-out;
   text-transform: var(--btn-text-case, uppercase);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 0.05);
   &:active:hover,
   &:active:focus {
     animation: none;
@@ -14,13 +15,13 @@
 
   /* default btn */
   & {
-    @apply border-neutral bg-neutral text-neutral-content no-underline;
+    @apply border-base-200 bg-base-100 text-base-content no-underline;
     &:hover,
     &-active {
-      @apply border-neutral-focus bg-neutral-focus;
+      @apply border-base-300 bg-base-200;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--n));
+      outline: 2px solid hsl(var(--b3));
       outline-offset: 2px;
     }
   }
@@ -53,6 +54,16 @@
     }
     &:focus-visible {
       outline: 2px solid hsl(var(--a));
+    }
+  }
+  &-neutral {
+    @apply border-neutral bg-neutral text-neutral-content;
+    &:hover,
+    &.btn-active {
+      @apply border-neutral-focus bg-neutral-focus;
+    }
+    &:focus-visible {
+      outline: 2px solid hsl(var(--n));
     }
   }
 
@@ -100,6 +111,7 @@
 
   /* glass */
   &.glass {
+    @apply shadow-none;
     &:hover,
     &.btn-active {
       --glass-opacity: 25%;
@@ -112,7 +124,7 @@
 
   /* btn variants */
   &-ghost {
-    @apply border border-transparent bg-transparent text-current;
+    @apply border border-transparent bg-transparent text-current shadow-none;
     &:hover,
     &.btn-active {
       @apply border-opacity-0 bg-base-content bg-opacity-20;
@@ -122,7 +134,7 @@
     }
   }
   &-link {
-    @apply border-transparent bg-transparent text-primary underline;
+    @apply border-transparent bg-transparent text-primary underline shadow-none;
     &:hover,
     &.btn-active {
       @apply border-transparent bg-transparent underline;
@@ -134,7 +146,7 @@
 
   /* outline */
   &-outline {
-    @apply border-current bg-transparent text-base-content;
+    @apply border-current bg-transparent text-base-content shadow-none;
     &:hover,
     &.btn-active {
       @apply border-base-content bg-base-content text-base-100;
