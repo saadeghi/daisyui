@@ -234,30 +234,30 @@ data="{[
 </Component>
 
 <Component title="Badge in a button">
-<button class="btn gap-2">
+<button class="btn">
   Inbox
   <div class="badge">+99</div>
 </button>
-<button class="btn gap-2">
+<button class="btn">
   Inbox
   <div class="badge badge-secondary">+99</div>
 </button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn gap-2">
+`<button class="$$btn">
   Inbox
   <div class="$$badge">+99</div>
 </button>
-<button class="$$btn gap-2">
+<button class="$$btn">
   Inbox
   <div class="$$badge $$badge-secondary">+99</div>
 </button>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<button className="$$btn gap-2">
+`<button className="$$btn">
   Inbox
   <div className="$$badge">+99</div>
 </button>
-<button className="$$btn gap-2">
+<button className="$$btn">
   Inbox
   <div className="$$badge $$badge-secondary">+99</div>
 </button>`
