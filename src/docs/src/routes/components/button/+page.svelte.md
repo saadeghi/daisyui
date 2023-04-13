@@ -14,6 +14,7 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'btn', desc: 'Button' },
+  { type:'modifier', class: 'btn-neutral', desc: 'Button with `neutral` color' },
   { type:'modifier', class: 'btn-primary', desc: 'Button with `primary` color' },
   { type:'modifier', class: 'btn-secondary', desc: 'Button with `secondary` color' },
   { type:'modifier', class: 'btn-accent', desc: 'Button with `accent` color' },
@@ -51,6 +52,7 @@ data="{[
 
 <Component title="Buttons with brand colors">
 <button class="btn">Button</button>
+<button class="btn btn-neutral">Neutral</button>
 <button class="btn btn-primary">Primary</button>
 <button class="btn btn-secondary">Secondary</button>
 <button class="btn btn-accent">Accent</button>
@@ -58,6 +60,7 @@ data="{[
 <button class="btn btn-link">Link</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<button class="$$btn">Button</button>
+<button class="$$btn $$btn-neutral">Neutral</button>
 <button class="$$btn $$btn-primary">Button</button>
 <button class="$$btn $$btn-secondary">Button</button>
 <button class="$$btn $$btn-accent">Button</button>
@@ -66,6 +69,7 @@ data="{[
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<button className="$$btn">Button</button>
+<button className="$$btn $$btn-neutral">Neutral</button>
 <button className="$$btn $$btn-primary">Button</button>
 <button className="$$btn $$btn-secondary">Button</button>
 <button className="$$btn $$btn-accent">Button</button>
@@ -75,27 +79,30 @@ data="{[
 </Component>
 
 <Component title="Active buttons">
-<button class="btn btn-active">Button</button>
+<button class="btn btn-active">Default</button>
+<button class="btn btn-active btn-neutral">Neutral</button>
 <button class="btn btn-active btn-primary">Primary</button>
 <button class="btn btn-active btn-secondary">Secondary</button>
 <button class="btn btn-active btn-accent">Accent</button>
 <button class="btn btn-active btn-ghost">Ghost</button>
 <button class="btn btn-active btn-link">Link</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn $$btn-active">Button</button>
-<button class="$$btn $$btn-active $$btn-primary">Button</button>
-<button class="$$btn $$btn-active $$btn-secondary">Button</button>
-<button class="$$btn $$btn-active $$btn-accent">Button</button>
-<button class="$$btn $$btn-active $$btn-ghost">Button</button>
-<button class="$$btn $$btn-active $$btn-link">Button</button>`
+`<button class="$$btn $$btn-active">Default</button>
+<button class="$$btn $$btn-active $$btn-neutral">Neutral</button>
+<button class="$$btn $$btn-active $$btn-primary">Primary</button>
+<button class="$$btn $$btn-active $$btn-secondary">Secondary</button>
+<button class="$$btn $$btn-active $$btn-accent">Accent</button>
+<button class="$$btn $$btn-active $$btn-ghost">Ghost</button>
+<button class="$$btn $$btn-active $$btn-link">Link</button>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<button className="$$btn $$btn-active">Button</button>
-<button className="$$btn $$btn-active $$btn-primary">Button</button>
-<button className="$$btn $$btn-active $$btn-secondary">Button</button>
-<button className="$$btn $$btn-active $$btn-accent">Button</button>
-<button className="$$btn $$btn-active $$btn-ghost">Button</button>
-<button className="$$btn $$btn-active $$btn-link">Button</button>`
+`<button className="$$btn $$btn-active">Default</button>
+<button className="$$btn $$btn-active $$btn-neutral">Neutral</button>
+<button className="$$btn $$btn-active $$btn-primary">Primary</button>
+<button className="$$btn $$btn-active $$btn-secondary">Secondary</button>
+<button className="$$btn $$btn-active $$btn-accent">Accent</button>
+<button className="$$btn $$btn-active $$btn-ghost">Ghost</button>
+<button className="$$btn $$btn-active $$btn-link">Link</button>`
 }</pre>
 </Component>
 
@@ -119,21 +126,21 @@ data="{[
 </Component>
 
 <Component title="Outline buttons">
-<button class="btn btn-outline">Button</button>
+<button class="btn btn-outline">Default</button>
 <button class="btn btn-outline btn-primary">Primary</button>
 <button class="btn btn-outline btn-secondary">Secondary</button>
 <button class="btn btn-outline btn-accent">Accent</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn $$btn-outline">Button</button>
-<button class="$$btn $$btn-outline $$btn-primary">Button</button>
-<button class="$$btn $$btn-outline $$btn-secondary">Button</button>
-<button class="$$btn $$btn-outline $$btn-accent">Button</button>`
+`<button class="$$btn $$btn-outline">Default</button>
+<button class="$$btn $$btn-outline $$btn-primary">Primary</button>
+<button class="$$btn $$btn-outline $$btn-secondary">Secondary</button>
+<button class="$$btn $$btn-outline $$btn-accent">Accent</button>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<button className="$$btn $$btn-outline">Button</button>
-<button className="$$btn $$btn-outline $$btn-primary">Button</button>
-<button className="$$btn $$btn-outline $$btn-secondary">Button</button>
-<button className="$$btn $$btn-outline $$btn-accent">Button</button>`
+`<button className="$$btn $$btn-outline">Default</button>
+<button className="$$btn $$btn-outline $$btn-primary">Primary</button>
+<button className="$$btn $$btn-outline $$btn-secondary">Secondary</button>
+<button className="$$btn $$btn-outline $$btn-accent">Accent</button>`
 }</pre>
 </Component>
 

@@ -151,7 +151,7 @@ module.exports = {
           resultObj["--btn-text-case"] = "uppercase";
         }
         if (!input.hasOwnProperty("--btn-focus-scale")) {
-          resultObj["--btn-focus-scale"] = "0.95";
+          resultObj["--btn-focus-scale"] = "0.97";
         }
         if (!input.hasOwnProperty("--border-btn")) {
           resultObj["--border-btn"] = "1px";
