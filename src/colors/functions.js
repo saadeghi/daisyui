@@ -259,14 +259,14 @@ module.exports = {
     const includedThemesObj = new Object();
 
     // add light themes
-    if (config("daisyui.themes") === false) {
+    if (!config("daisyui.themes")) {
       for (const theme in themes) {
         includedThemesObj[theme] = this.convertToHsl(themes[theme]);
       }
     }
 
     // add default themes
-    if (config("daisyui.themes") !== false) {
+    if (config("daisyui.themes")) {
       for (const theme in themes) {
         includedThemesObj[theme] = this.convertToHsl(themes[theme]);
       }
@@ -297,7 +297,7 @@ module.exports = {
           themeOrder.push(theme);
         }
       });
-    } else if (config("daisyui.themes") !== false) {
+    } else if (config("daisyui.themes")) {
       themeOrder = [
         "light",
         "dark",
@@ -329,7 +329,7 @@ module.exports = {
         "coffee",
         "winter",
       ];
-    } else if (config("daisyui.themes") === false) {
+    } else {
       themeOrder.push("light");
     }
 
@@ -359,7 +359,7 @@ module.exports = {
         } else if (config("daisyui.darkTheme") === false) {
           // disables prefers-color-scheme: dark
         } else {
-          if (themeOrder[0] != "dark" && themeOrder.includes("dark")) {
+          if (themeOrder[0] !== "dark" && themeOrder.includes("dark")) {
             addBase({
               ["@media (prefers-color-scheme: dark)"]: {
                 [":root"]: includedThemesObj["[data-theme=dark]"],
