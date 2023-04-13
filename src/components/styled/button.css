@@ -10,7 +10,7 @@
   }
   &:active:hover,
   &:active:focus {
-    transform: scale(var(--btn-focus-scale, 0.95));
+    transform: scale(var(--btn-focus-scale, 0.97));
   }
 
   /* default btn */
@@ -223,7 +223,7 @@
 
 @keyframes button-pop {
   0% {
-    transform: scale(var(--btn-focus-scale, 0.95));
+    transform: scale(var(--btn-focus-scale, 0.98));
   }
   40% {
     transform: scale(1.02);
