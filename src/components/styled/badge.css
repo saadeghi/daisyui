@@ -1,5 +1,8 @@
 .badge {
-  @apply border border-neutral bg-neutral text-neutral-content rounded-badge;
+  @apply border border-base-200 bg-base-100 text-base-content rounded-badge;
+  &-neutral {
+    @apply border-neutral bg-neutral text-neutral-content;
+  }
   &-primary {
     @apply border-primary bg-primary text-primary-content;
   }
@@ -27,6 +30,9 @@
 
   &-outline {
     @apply border-current border-opacity-50 bg-transparent text-current;
+    &.badge-neutral {
+      @apply text-neutral;
+    }
     &.badge-primary {
       @apply text-primary;
     }

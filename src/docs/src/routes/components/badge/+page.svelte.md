@@ -14,7 +14,7 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'badge', desc: 'Container element' },
-  { type:'modifier', class: 'badge-outline', desc: 'transparent badge with [colorful] border' },
+  { type:'modifier', class: 'badge-neutral', desc: 'badge with `neutral` color' },
   { type:'modifier', class: 'badge-primary', desc: 'badge with `primary` color' },
   { type:'modifier', class: 'badge-secondary', desc: 'badge with `secondary` color' },
   { type:'modifier', class: 'badge-accent', desc: 'badge with `accent` color' },
@@ -23,6 +23,7 @@ data="{[
   { type:'modifier', class: 'badge-success', desc: 'badge with `success` color' },
   { type:'modifier', class: 'badge-warning', desc: 'badge with `warning` color' },
   { type:'modifier', class: 'badge-error', desc: 'badge with `error` color' },
+  { type:'modifier', class: 'badge-outline', desc: 'transparent badge with [colorful] border' },
   { type:'responsive', class: 'badge-lg', desc: 'badge with large size' },
   { type:'responsive', class: 'badge-md', desc: 'badge with medium size (default)' },
   { type:'responsive', class: 'badge-sm', desc: 'badge with small size' },
@@ -41,20 +42,23 @@ data="{[
 </Component>
 
 <Component title="Badge with brand colors">
-<div class="badge">neutral</div>
+<div class="badge">default</div>
+<div class="badge badge-neutral">neutral</div>
 <div class="badge badge-primary">primary</div>
 <div class="badge badge-secondary">secondary</div>
 <div class="badge badge-accent">accent</div>
 <div class="badge badge-ghost">ghost</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$badge">neutral</div>
+`<div class="$$badge">default</div>
+<div class="$$badge $$badge-neutral">neutral</div>
 <div class="$$badge $$badge-primary">primary</div>
 <div class="$$badge $$badge-secondary">secondary</div>
 <div class="$$badge $$badge-accent">accent</div>
 <div class="$$badge $$badge-ghost">ghost</div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge">neutral</div>
+`<div className="$$badge">default</div>
+<div className="$$badge $$badge-neutral">neutral</div>
 <div className="$$badge $$badge-primary">primary</div>
 <div className="$$badge $$badge-secondary">secondary</div>
 <div className="$$badge $$badge-accent">accent</div>
@@ -63,18 +67,18 @@ data="{[
 </Component>
 
 <Component title="Outline badge">
-<div class="badge badge-outline">neutral</div>
+<div class="badge badge-outline">default</div>
 <div class="badge badge-primary badge-outline">primary</div>
 <div class="badge badge-secondary badge-outline">secondary</div>
 <div class="badge badge-accent badge-outline">accent</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$badge $$badge-outline">neutral</div>
+`<div class="$$badge $$badge-outline">default</div>
 <div class="$$badge $$badge-primary $$badge-outline">primary</div>
 <div class="$$badge $$badge-secondary $$badge-outline">secondary</div>
 <div class="$$badge $$badge-accent $$badge-outline">accent</div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge $$badge-outline">neutral</div>
+`<div className="$$badge $$badge-outline">default</div>
 <div className="$$badge $$badge-primary $$badge-outline">primary</div>
 <div className="$$badge $$badge-secondary $$badge-outline">secondary</div>
 <div className="$$badge $$badge-accent $$badge-outline">accent</div>`
@@ -101,21 +105,21 @@ data="{[
 </Component>
 
 <Component title="Empty badge">
-<div class="badge badge-lg"></div>
-<div class="badge badge-md"></div>
-<div class="badge badge-sm"></div>
-<div class="badge badge-xs"></div>
+<div class="badge badge-primary badge-lg"></div>
+<div class="badge badge-primary badge-md"></div>
+<div class="badge badge-primary badge-sm"></div>
+<div class="badge badge-primary badge-xs"></div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$badge $$badge-lg"></div>
-<div class="$$badge $$badge-md"></div>
-<div class="$$badge $$badge-sm"></div>
-<div class="$$badge $$badge-xs"></div>`
+`<div class="$$badge $$badge-primary $$badge-lg"></div>
+<div class="$$badge $$badge-primary $$badge-md"></div>
+<div class="$$badge $$badge-primary $$badge-sm"></div>
+<div class="$$badge $$badge-primary $$badge-xs"></div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge $$badge-lg"></div>
-<div className="$$badge $$badge-md"></div>
-<div className="$$badge $$badge-sm"></div>
-<div className="$$badge $$badge-xs"></div>`
+`<div className="$$badge $$badge-primary $$badge-lg"></div>
+<div className="$$badge $$badge-primary $$badge-md"></div>
+<div className="$$badge $$badge-primary $$badge-sm"></div>
+<div className="$$badge $$badge-primary $$badge-xs"></div>`
 }</pre>
 </Component>
 
