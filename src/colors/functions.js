@@ -190,8 +190,10 @@ module.exports = {
       })
     }
 
-    let themeOrder = []
-    if (Array.isArray(config("daisyui.themes"))) {
+    const themeOrder = []
+    if (!config("daisyui.themes") && config("daisyui.themes") !== undefined) {
+      themeOrder.push("light")
+    } else if (Array.isArray(config("daisyui.themes"))) {
       config("daisyui.themes").forEach((theme) => {
         if (typeof theme === "object" && theme !== null) {
           Object.keys(theme).forEach((customThemeName) => {
@@ -201,10 +203,8 @@ module.exports = {
           themeOrder.push(theme)
         }
       })
-    } else if (config("daisyui.themes")) {
-      themeOrder = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
     } else {
-      themeOrder.push("light")
+      themeOrder = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
     }
 
     // inject themes in order
