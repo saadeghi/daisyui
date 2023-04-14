@@ -165,19 +165,10 @@ module.exports = {
   injectThemes: function (addBase, config, themes) {
     const includedThemesObj = {}
 
-    // add light themes
-    if (config("daisyui.themes") === false) {
-      Object.entries(themes).forEach(([theme, value]) => {
-        includedThemesObj[theme] = this.convertToHsl(value)
-      })
-    }
-
     // add default themes
-    if (config("daisyui.themes") !== false) {
-      Object.entries(themes).forEach(([theme, value]) => {
-        includedThemesObj[theme] = this.convertToHsl(value)
-      })
-    }
+    Object.entries(themes).forEach(([theme, value]) => {
+      includedThemesObj[theme] = this.convertToHsl(value)
+    })
 
     // add custom themes
     if (Array.isArray(config("daisyui.themes"))) {
