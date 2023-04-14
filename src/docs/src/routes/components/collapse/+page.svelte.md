@@ -23,6 +23,31 @@ data="{[
 ]}"
 />
 
+<Component title="Collapse using <details> and <summary> tag" desc="`collapse-open` and `collapse-close` doesn't work with this method. You can add/remove `open` attribute to the <details> instead">
+<details class="collapse">
+  <summary class="collapse-title text-xl font-medium">Title</summary>
+  <div class="collapse-content"> 
+    <p>content</p>
+  </div>
+</details>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<details class="$$collapse">
+  <summary class="$$collapse-title text-xl font-medium">Title</summary>
+  <div class="$$collapse-content"> 
+    <p>content</p>
+  </div>
+</details>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<details className="$$collapse">
+  <summary className="$$collapse-title text-xl font-medium">Title</summary>
+  <div className="$$collapse-content"> 
+    <p>content</p>
+  </div>
+</details>`
+}</pre>
+</Component>
+
 <Component title="Collapse with focus" desc="This collapse works with focus. When div loses focus, it gets closed">
 <div tabindex="0" class="collapse">
   <div class="collapse-title text-xl font-medium">

@@ -8,7 +8,7 @@
 .collapse-title,
 .collapse > input[type="checkbox"],
 .collapse-content {
-  @apply col-start-1 row-start-1;
+  @apply col-start-1 row-start-1 select-none;
 }
 .collapse > input[type="checkbox"] {
   @apply appearance-none opacity-0;
@@ -17,10 +17,9 @@
   @apply row-start-2 overflow-hidden;
   max-height: 0px;
 }
+.collapse[open] .collapse-content,
 .collapse-open .collapse-content,
 .collapse:focus:not(.collapse-close) .collapse-content,
-.collapse:not(.collapse-close)
-  input[type="checkbox"]:checked
-  ~ .collapse-content {
+.collapse:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-content {
   max-height: none;
 }
