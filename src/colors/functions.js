@@ -166,14 +166,14 @@ module.exports = {
     const includedThemesObj = {}
 
     // add light themes
-    if (!config("daisyui.themes")) {
+    if (config("daisyui.themes") === false) {
       Object.entries(themes).forEach(([theme, value]) => {
         includedThemesObj[theme] = this.convertToHsl(value)
       })
     }
 
     // add default themes
-    if (config("daisyui.themes")) {
+    if (config("daisyui.themes") !== false) {
       Object.entries(themes).forEach(([theme, value]) => {
         includedThemesObj[theme] = this.convertToHsl(value)
       })
