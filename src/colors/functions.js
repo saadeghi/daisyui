@@ -190,7 +190,7 @@ module.exports = {
       })
     }
 
-    const themeOrder = []
+    let themeOrder = []
     if (!config("daisyui.themes") && config("daisyui.themes") !== undefined) {
       themeOrder.push("light")
     } else if (Array.isArray(config("daisyui.themes"))) {
