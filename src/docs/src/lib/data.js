@@ -209,11 +209,6 @@ export let exampleRepos = [
     logos: ["/logos/lit.svg", "/logos/vite.svg"],
   },
   {
-    name: "Svelte (rollup.js)",
-    href: "https://stackblitz.com/edit/daisyui-svelte-rollup/",
-    logos: ["/logos/svelte.svg", "/logos/rollup.svg"],
-  },
-  {
     name: "Angular",
     href: "https://stackblitz.com/edit/daisyui-angular/",
     logos: ["/logos/angular.svg"],
@@ -410,7 +405,7 @@ export let pages = [
         tags: "collapse accordion",
         href: "/components/collapse/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Countdown",
@@ -459,7 +454,7 @@ export let pages = [
         tags: "table",
         href: "/components/table/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Tooltip",
