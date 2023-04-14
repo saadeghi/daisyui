@@ -163,7 +163,7 @@ module.exports = {
   },
 
   injectThemes: function (addBase, config, themes) {
-    const includedThemesObj = new Object()
+    const includedThemesObj = {}
 
     // add light themes
     if (!config("daisyui.themes")) {
@@ -251,8 +251,8 @@ module.exports = {
     })
 
     return {
-      includedThemesObj: includedThemesObj,
-      themeOrder: themeOrder,
+      includedThemesObj,
+      themeOrder,
     }
   },
 }
