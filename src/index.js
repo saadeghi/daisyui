@@ -1,7 +1,7 @@
 const tailwindColors = require('tailwindcss/colors')
 
 const postcssJs = require("postcss-js")
-const postcssPrefix = require('./lib/postcss-prefixer')
+const postcssPrefix = require('./lib/addPrefix')
 
 const daisyuiInfo = require("../package.json");
 const colors = require("./colors/index");
