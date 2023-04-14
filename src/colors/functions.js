@@ -15,9 +15,7 @@ module.exports = {
 
     const resultObj = {}
 
-    for (const rule in input) {
-      const value = input[rule]
-
+    Object.entries(input).forEach(([rule, value]) => {
       if (!Object.hasOwn(colorNames, rule)) {
         resultObj[rule] = value
       } else {
@@ -159,7 +157,7 @@ module.exports = {
       if (!Object.hasOwn(input, "--tab-radius")) {
         resultObj["--tab-radius"] = "0.5rem"
       }
-    }
+    })
 
     return resultObj
   },
@@ -169,25 +167,25 @@ module.exports = {
 
     // add light themes
     if (!config("daisyui.themes")) {
-      for (const theme in themes) {
-        includedThemesObj[theme] = this.convertToHsl(themes[theme])
-      }
+      Object.entries(themes).forEach(([theme, value]) => {
+        includedThemesObj[theme] = this.convertToHsl(value)
+      })
     }
 
     // add default themes
     if (config("daisyui.themes")) {
-      for (const theme in themes) {
-        includedThemesObj[theme] = this.convertToHsl(themes[theme])
-      }
+      Object.entries(themes).forEach(([theme, value]) => {
+        includedThemesObj[theme] = this.convertToHsl(value)
+      })
     }
 
     // add custom themes
     if (Array.isArray(config("daisyui.themes"))) {
       config("daisyui.themes").forEach((item) => {
         if (typeof item === "object" && item !== null) {
-          for (const customThemeName in item) {
-            includedThemesObj["[data-theme=" + customThemeName + "]"] = this.convertToHsl(item[customThemeName])
-          }
+          Object.entries(item).forEach(([customThemeName, customThemevalue]) => {
+            includedThemesObj["[data-theme=" + customThemeName + "]"] = this.convertToHsl(customThemevalue)
+          })
         }
       })
     }
@@ -196,9 +194,9 @@ module.exports = {
     if (Array.isArray(config("daisyui.themes"))) {
       config("daisyui.themes").forEach((theme) => {
         if (typeof theme === "object" && theme !== null) {
-          for (const customThemeName in theme) {
+          Object.keys(theme).forEach((customThemeName) => {
             themeOrder.push(customThemeName)
-          }
+          })
         } else if (Object.hasOwn(includedThemesObj, "[data-theme=" + theme + "]")) {
           themeOrder.push(theme)
         }
