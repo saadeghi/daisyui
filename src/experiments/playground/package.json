@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "astro dev",
+    "predev": "npm install && echo '<button class=\"btn\">Hello</button>' > src/components/Component.astro && code src/components/Component.astro",
+    "dev": "astro dev --port 4000 --open",
     "build": "astro build",
     "preview": "astro preview"
   },
@@ -8,10 +9,10 @@
     "> 7%"
   ],
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.2",
-    "astro": "^0.25.2",
-    "daisyui": "^2.13.3",
-    "tailwindcss": "^3.0.23",
-    "tailwindcss-flip": "^1.0.0"
+    "@tailwindcss/typography": "0.5.9",
+    "astro": "2.3.0",
+    "daisyui": "2.51.5",
+    "tailwindcss": "3.3.1",
+    "tailwindcss-flip": "1.0.0"
   }
 }
