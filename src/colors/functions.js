@@ -182,9 +182,7 @@ module.exports = {
     }
 
     let themeOrder = []
-    if (config("daisyui.themes") === false) {
-      themeOrder.push("light")
-    } else if (Array.isArray(config("daisyui.themes"))) {
+    if (Array.isArray(config("daisyui.themes"))) {
       config("daisyui.themes").forEach((theme) => {
         if (typeof theme === "object" && theme !== null) {
           Object.keys(theme).forEach((customThemeName) => {
@@ -194,6 +192,8 @@ module.exports = {
           themeOrder.push(theme)
         }
       })
+    } else if (config("daisyui.themes") === false) {
+      themeOrder.push("light")
     } else {
       themeOrder = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
     }
