@@ -5,10 +5,10 @@ import { colorToHslValue } from "./utils"
 
 
 test('Foreground color generator function', () => {
-  expect(colorFunctions.generateForegroundColorFrom("#fff")).toBe(colorToHslValue("#333"))
-  expect(colorFunctions.generateForegroundColorFrom("#000")).toBe(colorToHslValue("#ccc"))
-  expect(colorFunctions.generateForegroundColorFrom("#fff", 1)).toBe(colorToHslValue("#000"))
-  expect(colorFunctions.generateForegroundColorFrom("#000", 1)).toBe(colorToHslValue("#fff"))
-  expect(colorFunctions.generateForegroundColorFrom("#1D9BF0")).toBe(colorToHslValue("#d2edff"))
-  expect(colorFunctions.generateForegroundColorFrom("#CF212E")).toBe(colorToHslValue("#ffc7cb"))
+  expect(colorFunctions.generateForegroundColorFrom("#fff")).toBe("0 0% 20%")
+  expect(colorFunctions.generateForegroundColorFrom("#000")).toBe("0 0% 80%")
+  expect(colorFunctions.generateForegroundColorFrom("#fff", 1)).toBe("0 0% 0%")
+  expect(colorFunctions.generateForegroundColorFrom("#000", 1)).toBe("0 0% 100%")
+  expect(colorFunctions.generateForegroundColorFrom("#1D9BF0")).toBe("204.17 100% 10.549%")
+  expect(colorFunctions.generateForegroundColorFrom("#CF212E")).toBe("355.52 100% 89.412%")
 })
