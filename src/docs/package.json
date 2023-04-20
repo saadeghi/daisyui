@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "colord": "^2.9.3",
-    "daisyui": "^2.51.5",
+    "daisyui": "^0.0.0-insiders.3.6",
     "emoji-unicode": "^2.0.1",
     "lodash.debounce": "^4.0.8",
     "nanoid": "^4.0.2",
