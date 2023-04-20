@@ -44,33 +44,31 @@
 <div class="h-4" />
 
 {#each pages as { name, icon, items }}
-  <ul class="menu flex flex-col p-0 px-4">
+  <ul class="menu p-0 px-4">
     {#if name && name != "excluded"}
       <li />
-      <li>
-        <div class="menu-title flex gap-4">
-          {#if icon}
-            <span class="text-base-content">{@html icon}</span>
-          {/if}
-          <span>{$t(name)}</span>
-        </div>
+      <li class="menu-title flex flex-row gap-4">
+        {#if icon}
+          <span class="text-base-content">{@html icon}</span>
+        {/if}
+        <span>{$t(name)}</span>
       </li>
     {/if}
     {#if name != "excluded"}
       {#each items as { name, href, icon, badge, hidden, highlightAnotherItem }}
         {#if !hidden}
           <li>
-            <a {href} data-sveltekit-preload-data="hover" on:click={closeDrawer} id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""} class={`flex gap-4 ${$page.url.pathname == href ? "active" : ""} ${$page.url.pathname == highlightAnotherItem + "/" ? "active" : ""} ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
+            <a {href} data-sveltekit-preload-data="hover" on:click={closeDrawer} id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""} class={`${$page.url.pathname == href ? "active" : ""} ${$page.url.pathname == highlightAnotherItem + "/" ? "active" : ""} ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
               {#if icon != ""}
-                <span class="flex-none">
+                <span>
                   {@html icon}
                 </span>
               {/if}
-              <span class="flex-1">
+              <span>
                 {@html $t(name)}
               </span>
               {#if badge != ""}
-                <span class="badge badge-sm flex-none lowercase">{$t(badge)}</span>
+                <span class="badge badge-sm lowercase">{$t(badge)}</span>
               {/if}
             </a>
           </li>
