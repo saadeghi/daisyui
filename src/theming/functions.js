@@ -1,14 +1,41 @@
-const Color = require("color")
 const colorNames = require("./colorNames")
+const themeDefaults = require("./themeDefaults")
+
+const { colord, getFormat, extend } = require("colord")
+const mixPlugin = require("colord/plugins/mix")
+const namesPlugin = require("colord/plugins/names")
+const lchPlugin = require("colord/plugins/lch")
+const hwbPlugin = require("colord/plugins/hwb")
+const labPlugin = require("colord/plugins/lab")
+const xyzPlugin = require("colord/plugins/xyz")
+
+extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
 
 module.exports = {
-  generateForegroundColorFrom: function (input, percentage = 0.8) {
-    const arr = Color(input).isDark() ? Color(input).mix(Color("white"), percentage).saturate(10).hsl().array() : Color(input).mix(Color("black"), percentage).saturate(10).hsl().array()
 
-    return arr[0].toPrecision(5).replace(/\.?0+$/, "") + " " + arr[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + arr[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+  changeLchValuesToObject: function (input) {
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
+    return { l, c, h, a:1 };
   },
 
-  convertToHsl: function (input) {
+  turnLchValuesToString: function (input) {
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
+    return `${l} ${c} ${h}`;
+  },
+
+  generateForegroundColorFrom: function (input, percentage = 0.8) {
+    const str = colord(input).mix( colord(input).isDark() ? "white" : "black" , percentage).toLchString()
+    return this.turnLchValuesToString(str)
+  },
+
+  generateDarkenColorFrom: function (input, percentage =  0.07) {
+    const str = colord(input).darken(percentage).toLchString()
+    return this.turnLchValuesToString(str)
+  },
+
+
+  convertToLch: function (input) {
+
     if (typeof input !== "object" || input === null) {
       return input
     }
@@ -19,66 +46,57 @@ module.exports = {
       if (!Object.hasOwn(colorNames, rule)) {
         resultObj[rule] = value
       } else {
-        const hslArray = Color(value).hsl().array()
-
-        resultObj[colorNames[rule]] = hslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + hslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + hslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+        let arr
+        if(getFormat(value) === 'lch') {
+          arr = this.changeLchValuesToObject(value)
+        }else{
+          arr = colord(value).toLch()
+        }
+        resultObj[colorNames[rule]] = arr.l + " " + arr.c + " " + arr.h
       }
 
       // auto generate focus colors
       if (!Object.hasOwn(input, "primary-focus")) {
-        const darkerHslArray = Color(input["primary"]).darken(0.2).hsl().array()
-
-        resultObj["--pf"] = darkerHslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + darkerHslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + darkerHslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+        resultObj["--pf"] = this.generateDarkenColorFrom(input["primary"])
       }
       if (!Object.hasOwn(input, "secondary-focus")) {
-        const darkerHslArray = Color(input["secondary"]).darken(0.2).hsl().array()
-
-        resultObj["--sf"] = darkerHslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + darkerHslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + darkerHslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+        resultObj["--sf"] = this.generateDarkenColorFrom(input["secondary"])
       }
       if (!Object.hasOwn(input, "accent-focus")) {
-        const darkerHslArray = Color(input["accent"]).darken(0.2).hsl().array()
-
-        resultObj["--af"] = darkerHslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + darkerHslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + darkerHslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+        resultObj["--af"] = this.generateDarkenColorFrom(input["accent"])
       }
       if (!Object.hasOwn(input, "neutral-focus")) {
-        const darkerHslArray = Color(input["neutral"]).darken(0.2).hsl().array()
-
-        resultObj["--nf"] = darkerHslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + darkerHslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + darkerHslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+        resultObj["--nf"] = this.generateDarkenColorFrom(input["neutral"])
       }
 
       // auto generate base colors
       if (!Object.hasOwn(input, "base-100")) {
-        resultObj["--b1"] = 0 + " " + 0 + "%" + " " + 100 + "%"
+        resultObj["--b1"] = "100 0 0"
       }
       if (!Object.hasOwn(input, "base-200")) {
-        const darkerHslArray = Color(input["base-100"]).darken(0.1).hsl().array()
-
-        resultObj["--b2"] = darkerHslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + darkerHslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + darkerHslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+        resultObj["--b2"] = this.generateDarkenColorFrom(input["base-100"])
       }
       if (!Object.hasOwn(input, "base-300")) {
         if (Object.hasOwn(input, "base-200")) {
-          const darkerHslArray = Color(input["base-200"]).darken(0.1).hsl().array()
-
-          resultObj["--b3"] = darkerHslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + darkerHslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + darkerHslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-200"])
         } else {
-          const darkerHslArray = Color(input["base-100"]).darken(0.1).darken(0.1).hsl().array()
-
-          resultObj["--b3"] = darkerHslArray[0].toPrecision(5).replace(/\.?0+$/, "") + " " + darkerHslArray[1].toPrecision(5).replace(/\.?0+$/, "") + "%" + " " + darkerHslArray[2].toPrecision(5).replace(/\.?0+$/, "") + "%"
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-100"], 0.14)
         }
       }
 
       // auto generate state colors
+      
       if (!Object.hasOwn(input, "info")) {
-        resultObj["--in"] = 198 + " " + 93 + "%" + " " + 60 + "%"
+        resultObj["--in"] = "72.22% 45.12 240.2"
       }
       if (!Object.hasOwn(input, "success")) {
-        resultObj["--su"] = 158 + " " + 64 + "%" + " " + 52 + "%"
+        resultObj["--su"] = "75.73% 54.59 162.06"
       }
       if (!Object.hasOwn(input, "warning")) {
-        resultObj["--wa"] = 43 + " " + 96 + "%" + " " + 56 + "%"
+        resultObj["--wa"] = "80.76% 78.28 79.52"
       }
       if (!Object.hasOwn(input, "error")) {
-        resultObj["--er"] = 0 + " " + 91 + "%" + " " + 71 + "%"
+        resultObj["--er"] = "64.94% 58.6 26.73"
       }
 
       // auto generate content colors
@@ -101,62 +119,39 @@ module.exports = {
         if (Object.hasOwn(input, "info")) {
           resultObj["--inc"] = this.generateForegroundColorFrom(input["info"])
         } else {
-          resultObj["--inc"] = 198 + " " + 100 + "%" + " " + 12 + "%"
+          resultObj["--inc"] = "15.56% 17.95 241.47"
         }
       }
       if (!Object.hasOwn(input, "success-content")) {
         if (Object.hasOwn(input, "success")) {
           resultObj["--suc"] = this.generateForegroundColorFrom(input["success"])
         } else {
-          resultObj["--suc"] = 158 + " " + 100 + "%" + " " + 10 + "%"
+          resultObj["--suc"] = "17.74% 22.37 160.78"
         }
       }
       if (!Object.hasOwn(input, "warning-content")) {
         if (Object.hasOwn(input, "warning")) {
           resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"])
         } else {
-          resultObj["--wac"] = 43 + " " + 100 + "%" + " " + 11 + "%"
+          resultObj["--wac"] = "17.47% 25.59 79.74"
         }
       }
       if (!Object.hasOwn(input, "error-content")) {
         if (Object.hasOwn(input, "error")) {
           resultObj["--erc"] = this.generateForegroundColorFrom(input["error"])
         } else {
-          resultObj["--erc"] = 0 + " " + 100 + "%" + " " + 14 + "%"
+          resultObj["--erc"] = "11.97% 37.34 30.56"
         }
       }
 
-      // auto generate css variables
-      if (!Object.hasOwn(input, "--rounded-box")) {
-        resultObj["--rounded-box"] = "1rem"
-      }
-      if (!Object.hasOwn(input, "--rounded-btn")) {
-        resultObj["--rounded-btn"] = "0.5rem"
-      }
-      if (!Object.hasOwn(input, "--rounded-badge")) {
-        resultObj["--rounded-badge"] = "1.9rem"
-      }
-      if (!Object.hasOwn(input, "--animation-btn")) {
-        resultObj["--animation-btn"] = "0.25s"
-      }
-      if (!Object.hasOwn(input, "--animation-input")) {
-        resultObj["--animation-input"] = ".2s"
-      }
-      if (!Object.hasOwn(input, "--btn-text-case")) {
-        resultObj["--btn-text-case"] = "uppercase"
-      }
-      if (!Object.hasOwn(input, "--btn-focus-scale")) {
-        resultObj["--btn-focus-scale"] = "0.95"
-      }
-      if (!Object.hasOwn(input, "--border-btn")) {
-        resultObj["--border-btn"] = "1px"
-      }
-      if (!Object.hasOwn(input, "--tab-border")) {
-        resultObj["--tab-border"] = "1px"
-      }
-      if (!Object.hasOwn(input, "--tab-radius")) {
-        resultObj["--tab-radius"] = "0.5rem"
-      }
+      // add css variables if not exist
+      Object.entries(themeDefaults.variables).forEach(item => {
+        const [variable, value] = item;
+        if (!Object.hasOwn(input, variable)) {
+          resultObj[variable] = value
+        }
+      });
+
     })
 
     return resultObj
@@ -167,7 +162,7 @@ module.exports = {
 
     // add default themes
     Object.entries(themes).forEach(([theme, value]) => {
-      includedThemesObj[theme] = this.convertToHsl(value)
+      includedThemesObj[theme] = this.convertToLch(value)
     })
 
     // add custom themes
@@ -175,7 +170,7 @@ module.exports = {
       config("daisyui.themes").forEach((item) => {
         if (typeof item === "object" && item !== null) {
           Object.entries(item).forEach(([customThemeName, customThemevalue]) => {
-            includedThemesObj["[data-theme=" + customThemeName + "]"] = this.convertToHsl(customThemevalue)
+            includedThemesObj["[data-theme=" + customThemeName + "]"] = this.convertToLch(customThemevalue)
           })
         }
       })
@@ -195,7 +190,7 @@ module.exports = {
     } else if (config("daisyui.themes") === false) {
       themeOrder.push("light")
     } else {
-      themeOrder = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
+      themeOrder = themeDefaults.themeOrder
     }
 
     // inject themes in order

@@ -123,7 +123,7 @@
   }
   .prose pre[class*="language-"] {
     max-width: 100%;
-    background-color: hsl(var(--n));
-    color: hsl(var(--nc));
+    background-color: lch(var(--n));
+    color: lch(var(--nc));
   }
 </style>

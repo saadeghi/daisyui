@@ -10,17 +10,17 @@
     "langdiff": "json-diff --keys-only --raw-json ./src/translation/en.json ./src/translation/jp.json"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^2.0.1",
-    "@sveltejs/kit": "^1.15.1",
+    "@sveltejs/adapter-static": "^2.0.2",
+    "@sveltejs/kit": "^1.15.7",
     "@tailwindcss/typography": "0.5.9",
     "autoprefixer": "10.4.14",
     "json-diff": "^1.0.3",
     "mdsvex": "^0.10.6",
-    "postcss": "8.4.21",
+    "postcss": "8.4.23",
     "postcss-nesting": "11.2.2",
     "prettier": "2.8.7",
     "prettier-plugin-svelte": "2.10.0",
-    "prettier-plugin-tailwindcss": "0.2.6",
+    "prettier-plugin-tailwindcss": "0.2.7",
     "prism-themes": "1.9.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.1.0",
@@ -32,7 +32,7 @@
     "theme-change": "2.5.0"
   },
   "dependencies": {
-    "color": "^4.2.3",
+    "colord": "^2.9.3",
     "daisyui": "^2.51.5",
     "emoji-unicode": "^2.0.1",
     "lodash.debounce": "^4.0.8",

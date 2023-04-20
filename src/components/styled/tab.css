@@ -1,8 +1,8 @@
 .tab {
   @apply text-opacity-50 hover:text-opacity-100;
-  --tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));
-  --tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));
-  --tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));
+  --tab-color: lch(var(--bc) / var(--tw-text-opacity, 1));
+  --tab-bg: lch(var(--b1) / var(--tw-bg-opacity, 1));
+  --tab-border-color: lch(var(--b3) / var(--tw-bg-opacity, 1));
   color: var(--tab-color);
   padding-left: var(--tab-padding, 1rem);
   padding-right: var(--tab-padding, 1rem);

@@ -1,10 +1,10 @@
 import { describe, expect, test } from 'vitest'
-import * as colorFunctions from '../colors/functions'
-import * as themes from "../colors/themes"
+import * as colorFunctions from '../theming/functions'
+import * as themes from "../theming/themes"
 import {
   trimThemeName,
   trimCssVariable,
-  hslValuesToHex,
+  lchValuesToHex,
   ContrastRatioWarningThreshold,
   ContrastRatioErrorThreshold,
   isColorContrastOkay,
@@ -40,14 +40,14 @@ describe.each(
 
     if (
       isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair2]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
         ContrastRatioWarningThreshold
       ) === false
       &&
       isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair2]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
         ContrastRatioErrorThreshold
       ) === true
     ) {
@@ -56,8 +56,8 @@ describe.each(
 
     if (
       isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair2]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
         ContrastRatioErrorThreshold
       ) === false
     ) {
@@ -67,8 +67,8 @@ describe.each(
 
     expect(
       isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertToHsl(themes[themeKey])[pair2]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
+        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
         ContrastRatioErrorThreshold
       )
     ).toBe(true)

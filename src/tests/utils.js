@@ -1,4 +1,12 @@
-import Color from 'color'
+import { colord, extend } from "colord";
+import mixPlugin from "colord/plugins/mix";
+import namesPlugin from "colord/plugins/names";
+import lchPlugin from "colord/plugins/lch";
+import hwbPlugin from "colord/plugins/hwb";
+import labPlugin from "colord/plugins/lab";
+import xyzPlugin from "colord/plugins/xyz";
+extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
+
 import ColorContrastChecker from 'color-contrast-checker'
 
 // WCAG 2.0 level AA requires a contrast ratio of at least 4.5:1 
@@ -18,13 +26,14 @@ export const isColorContrastOkay = (input1, input2, ratio) => {
   return false
 }
 
-export const colorToHslValue = (input) => {
-  const arr = Color(input).hsl().round().array()
-  return arr[0] + " " + arr[1] + "%" + " " + arr[2] + "%";
+function changeLchValuesToObject(input) {
+  const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
+  return { l, c, h, a:1 };
 }
 
-export const hslValuesToHex = (input) => {
-  return Color(`hsl(${input})`).hex()
+export const lchValuesToHex = (input) => {
+  console.log(input)
+  return colord(`lch(${changeLchValuesToObject(input).l}% ${changeLchValuesToObject(input).c} ${changeLchValuesToObject(input).h})`).toHex()
 }
 
 export const trimCssVariable = (input) => {

@@ -57,9 +57,9 @@
   {/if}
   <div class="grid">
     <div class="tabs z-10 -mb-px">
-      <button on:click={() => (showContent = "preview")} class={`tab tab-lifted ${showContent == "preview" ? "tab-active [--tab-bg:hsl(var(--b2))]" : "[--tab-border-color:transparent]"}`}><Translate text="Preview" /></button>
-      <button on:click={() => (showContent = "html")} class={`tab tab-lifted ${showContent == "html" ? "tab-active [--tab-bg:hsl(var(--n))] [--tab-color:hsl(var(--nc))] [--tab-border-color:hsl(var(--n))]" : "[--tab-border-color:transparent]"}`}>HTML</button>
-      <button on:click={() => (showContent = "react")} class={`tab tab-lifted ${showContent == "react" ? "tab-active [--tab-bg:hsl(var(--n))] [--tab-color:hsl(var(--nc))] [--tab-border-color:hsl(var(--n))]" : "[--tab-border-color:transparent]"}`}>JSX</button>
+      <button on:click={() => (showContent = "preview")} class={`tab tab-lifted ${showContent == "preview" ? "tab-active [--tab-bg:lch(var(--b2))]" : "[--tab-border-color:transparent]"}`}><Translate text="Preview" /></button>
+      <button on:click={() => (showContent = "html")} class={`tab tab-lifted ${showContent == "html" ? "tab-active [--tab-bg:lch(var(--n))] [--tab-color:lch(var(--nc))] [--tab-border-color:lch(var(--n))]" : "[--tab-border-color:transparent]"}`}>HTML</button>
+      <button on:click={() => (showContent = "react")} class={`tab tab-lifted ${showContent == "react" ? "tab-active [--tab-bg:lch(var(--n))] [--tab-color:lch(var(--nc))] [--tab-border-color:lch(var(--n))]" : "[--tab-border-color:transparent]"}`}>JSX</button>
       <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]" />
     </div>
 
@@ -143,9 +143,9 @@
     min-height: 6rem;
   }
   .prose .component-preview pre[class*="language-"] .token.comment {
-    color: hsla(var(--nc) / 0.4);
+    color: lch(var(--nc) / 0.4);
   }
   .prose .component-preview .preview {
-    background-image: radial-gradient(hsla(var(--bc) / 0.2) 0.5px, hsla(var(--b2) / 1) 0.5px);
+    background-image: radial-gradient(lch(var(--bc) / 0.2) 0.5px, lch(var(--b2) / 1) 0.5px);
   }
 </style>

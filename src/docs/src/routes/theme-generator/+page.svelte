@@ -5,12 +5,32 @@
   import ColorPicker from "@components/ColorPicker.svelte"
   import Translate from "@components/Translate.svelte"
 
-  import { default as Color } from "color"
+  import { colord, extend } from "colord";
+  import mixPlugin from "colord/plugins/mix";
+  import namesPlugin from "colord/plugins/names";
+  import lchPlugin from "colord/plugins/lch";
+  import hwbPlugin from "colord/plugins/hwb";
+  import labPlugin from "colord/plugins/lab";
+  import xyzPlugin from "colord/plugins/xyz";
+
+  extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
+
   import { default as randomColor } from "randomcolor"
 
+  function changeLchValuesToObject(input) {
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
+    return { l, c, h, a:1 };
+  }
+
+  function turnLchValuesToString(input) {
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
+    return `${l} ${c} ${h}`;
+  }
+  
   function getColorValueFromTheme(variable) {
     if (browser) {
-      return Color(`hsl(${getComputedStyle(document.documentElement).getPropertyValue(variable)})`).hex()
+      let colorValues = getComputedStyle(document.documentElement).getPropertyValue(variable)
+      return colord(`lch(${changeLchValuesToObject(colorValues).l}% ${changeLchValuesToObject(colorValues).c} ${changeLchValuesToObject(colorValues).h})`).toHex()
     }
     return null
   }
@@ -144,27 +164,25 @@
     return {
       name: name,
       variable: variable,
-      value: Color(colors.find((item) => item.name === source).value)
+      value: colord(colors.find((item) => item.name === source).value)
         .darken(percentage)
-        .hex(),
+        .toHex(),
     }
   }
   function contrastMaker(name, variable, source, percentage = 0.8) {
-    if (Color(colors.find((item) => item.name === source).value).isDark()) {
+    if (colord(colors.find((item) => item.name === source).value).isDark()) {
       return {
         name: name,
         variable: variable,
-        value: Color(colors.find((item) => item.name === source).value)
-          .mix(Color("white"), percentage)
-          .saturate(10),
+        value: colord(colors.find((item) => item.name === source).value)
+          .mix("white", percentage),
       }
     } else {
       return {
         name: name,
         variable: variable,
-        value: Color(colors.find((item) => item.name === source).value)
-          .mix(Color("black"), percentage)
-          .saturate(10),
+        value: colord(colors.find((item) => item.name === source).value)
+          .mix("black", percentage),
       }
     }
   }
@@ -197,12 +215,10 @@
       colors
         .filter((item) => requiredColorNames.includes(item.name))
         .forEach((color) => {
-          let hslValue = Color(color.value).hsl().round().array()
-          wrapper.style.setProperty(color.variable, hslValue[0] + " " + hslValue[1] + "% " + hslValue[2] + "%")
+          wrapper.style.setProperty(color.variable, turnLchValuesToString(colord(color.value).toLchString()))
         })
       generateOptionalColors(colors).forEach((color) => {
-        let hslValue = Color(color.value).hsl().round().array()
-        wrapper.style.setProperty(color.variable, hslValue[0] + " " + hslValue[1] + "% " + hslValue[2] + "%")
+        wrapper.style.setProperty(color.variable, turnLchValuesToString(colord(color.value).toLchString()))
       })
       if (browser) {
         localStorage.setItem("daisyui-theme-generator-colors", JSON.stringify(colors))
@@ -230,12 +246,12 @@
       colors[0].value = randomColor() //primary
       colors[3].value = randomColor() //secondary
       colors[6].value = randomColor() //accent
-      colors[9].value = Color(`hsl(${randomBetween(200, 300)} ${randomBetween(10, 30)}% ${randomBetween(10, 20)}%)`).hex() //neutral
-      colors[12].value = Color(`hsl(${randomBetween(200, 300)} ${randomBetween(0, 40)}% ${[randomBetween(20, 30), randomBetween(90, 100)][Math.round(Math.random())]}%)`).hex() //base-100
-      colors[16].value = Color(`hsl(${randomBetween(190, 230)} ${randomBetween(50, 90)}% ${randomBetween(50, 80)}%)`).hex() //info
-      colors[18].value = Color(`hsl(${randomBetween(142, 175)} ${randomBetween(60, 80)}% ${randomBetween(20, 70)}%)`).hex() //success
-      colors[20].value = Color(`hsl(${randomBetween(30, 50)} ${randomBetween(80, 97)}% ${randomBetween(30, 70)}%)`).hex() //warning
-      colors[22].value = Color(`hsl(${randomBetween(340, 370)} ${randomBetween(70, 97)}% ${randomBetween(50, 70)}%)`).hex() //error
+      colors[9].value = colord(`hsl(${randomBetween(200, 300)} ${randomBetween(10, 30)}% ${randomBetween(10, 20)}%)`).toHex() //neutral
+      colors[12].value = colord(`hsl(${randomBetween(200, 300)} ${randomBetween(0, 40)}% ${[randomBetween(20, 30), randomBetween(90, 100)][Math.round(Math.random())]}%)`).toHex() //base-100
+      colors[16].value = colord(`hsl(${randomBetween(190, 230)} ${randomBetween(50, 90)}% ${randomBetween(50, 80)}%)`).toHex() //info
+      colors[18].value = colord(`hsl(${randomBetween(142, 175)} ${randomBetween(60, 80)}% ${randomBetween(20, 70)}%)`).toHex() //success
+      colors[20].value = colord(`hsl(${randomBetween(30, 50)} ${randomBetween(80, 97)}% ${randomBetween(30, 70)}%)`).toHex() //warning
+      colors[22].value = colord(`hsl(${randomBetween(340, 370)} ${randomBetween(70, 97)}% ${randomBetween(50, 70)}%)`).toHex() //error
     })
     generateColors()
   }

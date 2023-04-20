@@ -5,9 +5,9 @@ function withOpacityValue(variable, fallbackColor) {
       fallbackColorValue = `, var(${fallbackColor})`;
     }
     if (opacityValue === undefined) {
-      return `hsl(var(${variable}${fallbackColorValue}))`;
+      return `lch(var(${variable}${fallbackColorValue}))`;
     }
-    return `hsl(var(${variable}${fallbackColorValue}) / ${opacityValue})`;
+    return `lch(var(${variable}${fallbackColorValue}) / ${opacityValue})`;
   };
 }
 

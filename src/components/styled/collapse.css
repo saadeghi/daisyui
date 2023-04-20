@@ -12,7 +12,7 @@ details.collapse {
 }
 
 .collapse:focus-visible {
-  outline: 2px solid hsl(var(--bc));
+  outline: 2px solid lch(var(--bc));
   outline-offset: 2px;
 }
 details.collapse summary {
@@ -20,7 +20,7 @@ details.collapse summary {
 }
 .collapse:has(.collapse-title:focus-visible),
 .collapse:has(input[type="checkbox"]:focus-visible) {
-  outline: 2px solid hsl(var(--bc));
+  outline: 2px solid lch(var(--bc));
   outline-offset: 2px;
 }
 .collapse-arrow .collapse-title:after {

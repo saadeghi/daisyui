@@ -7,7 +7,7 @@
       height: 15%;
       top: 7%;
       right: 7%;
-      box-shadow: 0 0 0 2px hsl(var(--b1));
+      box-shadow: 0 0 0 2px lch(var(--b1));
     }
   }
   &.offline {
@@ -18,7 +18,7 @@
       height: 15%;
       top: 7%;
       right: 7%;
-      box-shadow: 0 0 0 2px hsl(var(--b1));
+      box-shadow: 0 0 0 2px lch(var(--b1));
     }
   }
 }

@@ -90,8 +90,8 @@
   #carbonads {
     display: flex;
     max-width: 350px;
-    color: hsla(var(--bc));
-    background-color: hsla(var(--b2));
+    color: lch(var(--bc));
+    background-color: lch(var(--b2));
     box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
     z-index: 100;
     border-radius: 4px;
@@ -130,7 +130,7 @@
   #carbonads .carbon-poweredby {
     display: block;
     padding: 6px 8px;
-    background: hsla(var(--b3));
+    background: lch(var(--b3));
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;

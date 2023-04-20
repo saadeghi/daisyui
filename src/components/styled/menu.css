@@ -3,7 +3,7 @@
   :where(li:empty) {
     margin: 0.5rem 1rem;
     height: 1px;
-    background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+    background-color: lch(var(--bc) / var(--tw-bg-opacity));
     --tw-bg-opacity: 0.1;
   }
   :where(li ul) {

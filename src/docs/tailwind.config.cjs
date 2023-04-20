@@ -16,7 +16,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: require('../colors'),
+      colors: require('../theming'),
       fontFamily: {
         'title': ['Montserrat', 'sans-serif'],
       }

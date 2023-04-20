@@ -6,7 +6,7 @@ module.exports = {
   ],
   safelist: responsiveRegex,
   theme: {
-    colors: require("../colors"),
+    colors: require("../theming"),
   },
   corePlugins: [
     "animation",

@@ -1,8 +1,8 @@
 .tooltip {
   @apply relative inline-block text-center;
   --tooltip-tail: 3px;
-  --tooltip-color: hsl(var(--n));
-  --tooltip-text-color: hsl(var(--nc));
+  --tooltip-color: lch(var(--n));
+  --tooltip-text-color: lch(var(--nc));
   --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
 }
 .tooltip:before,

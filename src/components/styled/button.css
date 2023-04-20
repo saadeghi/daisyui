@@ -21,7 +21,7 @@
       @apply border-base-300 bg-base-200;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--b3));
+      outline: 2px solid lch(var(--b3));
       outline-offset: 2px;
     }
   }
@@ -33,7 +33,7 @@
       @apply border-primary-focus bg-primary-focus;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--p));
+      outline: 2px solid lch(var(--p));
     }
   }
   &-secondary {
@@ -43,7 +43,7 @@
       @apply border-secondary-focus bg-secondary-focus;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--s));
+      outline: 2px solid lch(var(--s));
     }
   }
   &-accent {
@@ -53,7 +53,7 @@
       @apply border-accent-focus bg-accent-focus;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--a));
+      outline: 2px solid lch(var(--a));
     }
   }
   &-neutral {
@@ -63,7 +63,7 @@
       @apply border-neutral-focus bg-neutral-focus;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--n));
+      outline: 2px solid lch(var(--n));
     }
   }
 
@@ -75,7 +75,7 @@
       @apply border-info bg-info;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--in));
+      outline: 2px solid lch(var(--in));
     }
   }
   &-success {
@@ -85,7 +85,7 @@
       @apply border-success bg-success;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--su));
+      outline: 2px solid lch(var(--su));
     }
   }
   &-warning {
@@ -95,7 +95,7 @@
       @apply border-warning bg-warning;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--wa));
+      outline: 2px solid lch(var(--wa));
     }
   }
   &-error {
@@ -105,7 +105,7 @@
       @apply border-error bg-error;
     }
     &:focus-visible {
-      outline: 2px solid hsl(var(--er));
+      outline: 2px solid lch(var(--er));
     }
   }
 
@@ -216,7 +216,7 @@
   & > .btn-active {
     @apply border-primary bg-primary text-primary-content;
     &:focus-visible {
-      outline: 2px solid hsl(var(--p));
+      outline: 2px solid lch(var(--p));
     }
   }
 }

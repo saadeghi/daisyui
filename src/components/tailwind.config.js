@@ -6,7 +6,7 @@ module.exports = {
   ],
   safelist: responsiveRegex,
   theme: {
-    colors: require("../colors"),
+    colors: require("../theming"),
   },
   plugins: [
     plugin(function ({ addBase, addUtilities }) {

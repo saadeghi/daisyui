@@ -3,20 +3,20 @@
   @apply h-6 w-6 cursor-pointer appearance-none rounded-full border border-base-content border-opacity-20;
   transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
   &:focus-visible {
-    outline: 2px solid hsl(var(--bc));
+    outline: 2px solid lch(var(--bc));
     outline-offset: 2px;
   }
   &:checked,
   &[aria-checked=true] {
     @apply bg-base-content;
     animation: radiomark var(--animation-input, 0.2s) ease-in-out;
-    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
+    box-shadow: 0 0 0 4px lch(var(--b1)) inset, 0 0 0 4px lch(var(--b1)) inset;
   }
   &-primary {
     --chkbg: var(--p);
     @apply border-primary hover:border-primary;
     &:focus-visible {
-      outline: 2px solid hsl(var(--p));
+      outline: 2px solid lch(var(--p));
     }
     &:checked,
     &[aria-checked=true] {
@@ -27,7 +27,7 @@
     --chkbg: var(--s);
     @apply border-secondary hover:border-secondary;
     &:focus-visible {
-      outline: 2px solid hsl(var(--s));
+      outline: 2px solid lch(var(--s));
     }
     &:checked,
     &[aria-checked=true] {
@@ -38,7 +38,7 @@
     --chkbg: var(--a);
     @apply border-accent hover:border-accent;
     &:focus-visible {
-      outline: 2px solid hsl(var(--a));
+      outline: 2px solid lch(var(--a));
     }
     &:checked,
     &[aria-checked=true] {
@@ -49,7 +49,7 @@
     --chkbg: var(--su);
     @apply border-success hover:border-success;
     &:focus-visible {
-      outline: 2px solid hsl(var(--su));
+      outline: 2px solid lch(var(--su));
     }
     &:checked,
     &[aria-checked=true] {
@@ -60,7 +60,7 @@
     --chkbg: var(--wa);
     @apply border-warning hover:border-warning;
     &:focus-visible {
-      outline: 2px solid hsl(var(--wa));
+      outline: 2px solid lch(var(--wa));
     }
     &:checked,
     &[aria-checked=true] {
@@ -71,7 +71,7 @@
     --chkbg: var(--in);
     @apply border-info hover:border-info;
     &:focus-visible {
-      outline: 2px solid hsl(var(--in));
+      outline: 2px solid lch(var(--in));
     }
     &:checked,
     &[aria-checked=true] {
@@ -82,7 +82,7 @@
     --chkbg: var(--er);
     @apply border-error hover:border-error;
     &:focus-visible {
-      outline: 2px solid hsl(var(--er));
+      outline: 2px solid lch(var(--er));
     }
     &:checked,
     &[aria-checked=true] {
@@ -96,13 +96,13 @@
 
 @keyframes radiomark {
   0% {
-    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;
+    box-shadow: 0 0 0 12px lch(var(--b1)) inset, 0 0 0 12px lch(var(--b1)) inset;
   }
   50% {
-    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;
+    box-shadow: 0 0 0 3px lch(var(--b1)) inset, 0 0 0 3px lch(var(--b1)) inset;
   }
   100% {
-    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
+    box-shadow: 0 0 0 4px lch(var(--b1)) inset, 0 0 0 4px lch(var(--b1)) inset;
   }
 }
 

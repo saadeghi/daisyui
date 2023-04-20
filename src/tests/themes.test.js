@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
-import * as colorFunctions from '../colors/functions'
-import * as themes from "../colors/themes"
-import * as colorNames from "../colors/colorNames"
+import * as colorFunctions from '../theming/functions'
+import * as themes from "../theming/themes"
+import * as colorNames from "../theming/colorNames"
 import { trimThemeName } from "./utils"
 
 describe.each(
@@ -17,7 +17,7 @@ describe.each(
       return colorName !== "default";
     })
   )(`${trimThemeName(themeKey)} has colors`, (colorName) => {
-    expect(colorFunctions.convertToHsl(themes[themeKey])).toHaveProperty(colorNames[colorName])
+    expect(colorFunctions.convertToLch(themes[themeKey])).toHaveProperty(colorNames[colorName])
   })
 
 })
@@ -44,7 +44,7 @@ describe.each(
       "--tab-radius",
     ]
   )(`${trimThemeName(themeKey)} has CSS variables`, (variableName) => {
-    expect(colorFunctions.convertToHsl(themes[themeKey])).toHaveProperty(variableName)
+    expect(colorFunctions.convertToLch(themes[themeKey])).toHaveProperty(variableName)
   })
 
 })
