@@ -30,7 +30,7 @@
     &:active,
     &:where(.active),
     &:where(.active):hover {
-      @apply bg-primary text-primary-content;
+      @apply bg-neutral text-neutral-content;
     }
   }
   & li.disabled {
