@@ -18,4 +18,7 @@
 }
 :where(.menu li) {
   @apply relative flex flex-col flex-wrap items-stretch shrink-0;
+  .badge {
+    @apply justify-self-end;
+  }
 }
