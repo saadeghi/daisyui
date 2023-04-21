@@ -35,7 +35,7 @@
       {#each data as item, index}
         <tr>
           <th class="font-normal">
-            <span class="font-mono lowercase">{`${$prefix}${item.class}`}</span>
+            <span class="font-mono lowercase whitespace-nowrap">{`${$prefix}${item.class}`}</span>
           </th>
           <td>
             {#if item.type == "component"}
