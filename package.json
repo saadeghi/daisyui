@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "0.0.0-insiders.3.6",
+  "version": "0.0.0-insiders.3.7",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "dist/{themes,styled,unstyled,full}.css",
     "!dist/*.rtl.css",
     "src/index.js",
-    "src/colors/*.js",
+    "src/theming/*.js",
     "src/index.d.ts"
   ],
   "browserslist": [
