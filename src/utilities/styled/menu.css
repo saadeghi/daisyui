@@ -21,10 +21,10 @@
 .menu-sm {
   :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply px-2 py-1 text-sm rounded-btn;
+    @apply px-3 py-1 text-sm rounded-btn;
   }
   .menu-title {
-    @apply px-2 py-2;
+    @apply px-3 py-2;
   }
 }
 .menu-md {
