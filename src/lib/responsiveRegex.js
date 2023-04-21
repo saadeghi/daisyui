@@ -11,22 +11,12 @@ module.exports = [
   {
     // responsive utilites for daisyUI responsive modifiers
     pattern: /.(sm|md|lg|xl)/,
-    variants: [
-      "sm",
-      "md",
-      "lg",
-      "xl",
-    ]
+    variants: ["sm", "md", "lg", "xl"],
   },
   {
     // responsive utilites for daisyUI components
     pattern: /(modal-middle|card-side|stats)/,
-    variants: [
-      "sm",
-      "md",
-      "lg",
-      "xl",
-    ]
+    variants: ["sm", "md", "lg", "xl"],
   },
   {
     // color utilities for daisyUI colors
@@ -50,4 +40,4 @@ module.exports = [
       // "disabled",
     ],
   },
-];
+]

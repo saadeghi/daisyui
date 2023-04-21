@@ -10,7 +10,7 @@ body:
     id: page
     attributes:
       label: On which page do you see this issue?
-      placeholder: 'example: https://daisyui.com/'
+      placeholder: "example: https://daisyui.com/"
     validations:
       required: false
   - type: textarea

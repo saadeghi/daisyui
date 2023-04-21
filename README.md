@@ -2,7 +2,7 @@
 
 [![][logo-url]][docs-url]
 
-**The most popular, free and open-source Tailwind CSS component library**  
+**The most popular, free and open-source Tailwind CSS component library**
 
 [ [See all components](https://daisyui.com/components/) ]
 
@@ -21,7 +21,6 @@
 - [See all components →](https://daisyui.com/components/)
 - [How to use →](https://daisyui.com/docs/install/)
 
-
 ## 🌼 Features
 
 - A plugin for Tailwind CSS
@@ -30,20 +29,18 @@
 - Customizable and themeable
 - Pure CSS. Works on all frameworks
 
-
 ## 📀 Install now!
 
 ```bash
 npm i daisyui
 ```
 
-Then add daisyUI to your `tailwind.config.js`:  
-
+Then add daisyUI to your `tailwind.config.js`:
 
 ```js
 module.exports = {
   plugins: [require("daisyui")],
-};
+}
 ```
 
 [ [Read more →][docs-url-install] ]
@@ -62,24 +59,21 @@ Loading CSS files from CDN is not recommended for production. It's better to ins
 
 </details>
 
-
 ## 🚀 Use
 
 [[See all components →](https://daisyui.com/components/)]
-
 
 ## 📘 Documents + Examples
 
 See the official site: [ [daisyui.com →](https://daisyui.com/)]
 
-
 ## 🤝 Support daisyUI
 
-|   |   |
-|---|---|
-| **Premium Sponsors** <br /> Support this project by becoming a premium sponsor. <br /> [[Become a sponsor](https://opencollective.com/daisyui)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&width=500&avatarHeight=120"></a> |
-| **Backers** <br /> Thank you to all our backers! <br /> [[Become a backer](https://opencollective.com/daisyui)] | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/backers.svg?button=false&width=500&avatarHeight=46"><img src="https://opencollective.com/daisyui/organizations.svg?button=false&width=500&avatarHeight=46"></a> |
-| **Contributors** <br /> This project exists thanks to all the people who contribute. <br /> [[Contribute](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md)] | <a href="https://github.com/saadeghi/daisyui/graphs/contributors" target="_blank"><img src="https://contrib.rocks/image?repo=saadeghi/daisyui&columns=13" width="500"></a> |
+|                                                                                                                                                                                     |                                                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Premium Sponsors** <br /> Support this project by becoming a premium sponsor. <br /> [[Become a sponsor](https://opencollective.com/daisyui)]                                     | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&width=500&avatarHeight=120"></a>                                                                                         |
+| **Backers** <br /> Thank you to all our backers! <br /> [[Become a backer](https://opencollective.com/daisyui)]                                                                     | <a href="https://opencollective.com/daisyui" target="_blank"><img src="https://opencollective.com/daisyui/backers.svg?button=false&width=500&avatarHeight=46"><img src="https://opencollective.com/daisyui/organizations.svg?button=false&width=500&avatarHeight=46"></a> |
+| **Contributors** <br /> This project exists thanks to all the people who contribute. <br /> [[Contribute](https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md)] | <a href="https://github.com/saadeghi/daisyui/graphs/contributors" target="_blank"><img src="https://contrib.rocks/image?repo=saadeghi/daisyui&columns=13" width="500"></a>                                                                                                |
 
 Tweet about daisyUI: [![][tweet]][tweet-url]
 
@@ -91,12 +85,14 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
 </summary>
 
 - Actions
+
   - [x] Button
   - [x] Dropdown
   - [x] Modal
   - [x] Swap
 
 - Data display
+
   - [x] Alert
   - [x] Avatar
   - [x] Badge
@@ -131,8 +127,8 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Textarea
   - [x] Toggle
   - [ ] Upload
-  
 - Layout
+
   - [x] Artboard
   - [x] Button group
   - [x] Divider
@@ -145,6 +141,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Stack
 
 - Navigation
+
   - [x] Bottom Navigation
   - [x] Breadcrumbs
   - [x] Link
@@ -160,9 +157,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Phone
   - [x] Window
 
-
 </details>
-
 
 ## 📰 Featured on:
 

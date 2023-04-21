@@ -1,6 +1,7 @@
 .breadcrumbs {
   @apply py-2;
-  & > ul,& > ol {
+  & > ul,
+  & > ol {
     & > li {
       & > a {
         &:focus {

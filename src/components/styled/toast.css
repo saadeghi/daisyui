@@ -1,6 +1,6 @@
 .toast {
   @apply gap-2 p-4;
-  &>*{
+  & > * {
     animation: toast-pop 0.25s ease-out;
   }
 }

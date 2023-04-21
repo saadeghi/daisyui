@@ -7,7 +7,7 @@
     outline-offset: 2px;
   }
   &:checked,
-  &[aria-checked=true] {
+  &[aria-checked="true"] {
     @apply bg-base-content;
     animation: radiomark var(--animation-input, 0.2s) ease-in-out;
     box-shadow: 0 0 0 4px lch(var(--b1)) inset, 0 0 0 4px lch(var(--b1)) inset;
@@ -19,7 +19,7 @@
       outline: 2px solid lch(var(--p));
     }
     &:checked,
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-primary bg-primary text-primary-content;
     }
   }
@@ -30,7 +30,7 @@
       outline: 2px solid lch(var(--s));
     }
     &:checked,
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-secondary bg-secondary text-secondary-content;
     }
   }
@@ -41,7 +41,7 @@
       outline: 2px solid lch(var(--a));
     }
     &:checked,
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-accent bg-accent text-accent-content;
     }
   }
@@ -52,7 +52,7 @@
       outline: 2px solid lch(var(--su));
     }
     &:checked,
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-success bg-success text-success-content;
     }
   }
@@ -63,7 +63,7 @@
       outline: 2px solid lch(var(--wa));
     }
     &:checked,
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-warning bg-warning text-warning-content;
     }
   }
@@ -74,7 +74,7 @@
       outline: 2px solid lch(var(--in));
     }
     &:checked,
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-info bg-info text-info-content;
     }
   }
@@ -85,7 +85,7 @@
       outline: 2px solid lch(var(--er));
     }
     &:checked,
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-error bg-error text-error-content;
     }
   }

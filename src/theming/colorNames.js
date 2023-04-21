@@ -31,4 +31,4 @@ module.exports = {
 
   error: "--er",
   "error-content": "--erc",
-};
+}

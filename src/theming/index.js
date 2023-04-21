@@ -1,14 +1,14 @@
 function withOpacityValue(variable, fallbackColor) {
   return ({ opacityValue }) => {
-    let fallbackColorValue = "";
+    let fallbackColorValue = ""
     if (fallbackColor) {
-      fallbackColorValue = `, var(${fallbackColor})`;
+      fallbackColorValue = `, var(${fallbackColor})`
     }
     if (opacityValue === undefined) {
-      return `lch(var(${variable}${fallbackColorValue}))`;
+      return `lch(var(${variable}${fallbackColorValue}))`
     }
-    return `lch(var(${variable}${fallbackColorValue}) / ${opacityValue})`;
-  };
+    return `lch(var(${variable}${fallbackColorValue}) / ${opacityValue})`
+  }
 }
 
 let colorObject = {
@@ -47,6 +47,6 @@ let colorObject = {
 
   error: withOpacityValue("--er"),
   "error-content": withOpacityValue("--erc", "--nc"),
-};
+}
 
-module.exports = colorObject;
+module.exports = colorObject

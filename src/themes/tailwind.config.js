@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    { raw: '' },
-  ],
+  content: [{ raw: "" }],
   corePlugins: {
     preflight: false,
   },
@@ -9,4 +7,4 @@ module.exports = {
     base: false,
   },
   plugins: [require("../index")],
-};
+}

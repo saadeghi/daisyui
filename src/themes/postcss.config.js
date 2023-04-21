@@ -6,4 +6,4 @@ module.exports = {
     }),
     require("tailwindcss")("./src/themes/tailwind.config.js"),
   ],
-};
+}

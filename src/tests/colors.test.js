@@ -1,7 +1,7 @@
-import { expect, test } from 'vitest'
-import * as colorFunctions from '../theming/functions'
+import { expect, test } from "vitest"
+import * as colorFunctions from "../theming/functions"
 
-test('Foreground color generator function', () => {
+test("Foreground color generator function", () => {
   expect(colorFunctions.generateForegroundColorFrom("lch(100% 0 0)")).toBe("20 0 0")
   expect(colorFunctions.generateForegroundColorFrom("lch(0% 0 0)")).toBe("80 0 0")
   expect(colorFunctions.generateForegroundColorFrom("lch(100% 0 0)", 1)).toBe("0 0 0")

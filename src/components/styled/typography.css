@@ -1,37 +1,37 @@
-:root .prose{
-  --tw-prose-body: lch(var(--bc)/.8);
+:root .prose {
+  --tw-prose-body: lch(var(--bc) / 0.8);
   --tw-prose-headings: lch(var(--bc));
   --tw-prose-lead: lch(var(--bc));
   --tw-prose-links: lch(var(--bc));
   --tw-prose-bold: lch(var(--bc));
   --tw-prose-counters: lch(var(--bc));
-  --tw-prose-bullets: lch(var(--bc)/.5);
-  --tw-prose-hr: lch(var(--bc)/.2);
+  --tw-prose-bullets: lch(var(--bc) / 0.5);
+  --tw-prose-hr: lch(var(--bc) / 0.2);
   --tw-prose-quotes: lch(var(--bc));
-  --tw-prose-quote-borders: lch(var(--bc)/.2);
-  --tw-prose-captions: lch(var(--bc)/.5);
+  --tw-prose-quote-borders: lch(var(--bc) / 0.2);
+  --tw-prose-captions: lch(var(--bc) / 0.5);
   --tw-prose-code: lch(var(--bc));
   --tw-prose-pre-code: lch(var(--nc));
   --tw-prose-pre-bg: lch(var(--n));
-  --tw-prose-th-borders: lch(var(--bc)/.5);
-  --tw-prose-td-borders: lch(var(--bc)/.2);
+  --tw-prose-th-borders: lch(var(--bc) / 0.5);
+  --tw-prose-td-borders: lch(var(--bc) / 0.2);
 }
-.prose{
-  & :where(code):not(:where([class~="not-prose"] *)){
+.prose {
+  & :where(code):not(:where([class~="not-prose"] *)) {
     padding: 2px 8px;
     border-radius: var(--rounded-badge);
   }
-  & code:after, 
-  & code:before{
+  & code:after,
+  & code:before {
     content: none;
   }
-  pre{
-    code{
+  pre {
+    code {
       border-radius: 0;
       padding: 0;
     }
   }
-  & :where(tbody tr, thead):not(:where([class~="not-prose"] *)){
+  & :where(tbody tr, thead):not(:where([class~="not-prose"] *)) {
     border-bottom-color: lch(var(--bc) / 20%);
   }
 }

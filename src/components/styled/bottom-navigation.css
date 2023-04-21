@@ -1,6 +1,6 @@
 .btm-nav {
   @apply h-16 bg-base-100 text-current;
-  &>* {
+  & > * {
     @apply border-current;
 
     &:not(.active) {
@@ -23,7 +23,4 @@
       @apply text-base;
     }
   }
-
 }
-
-

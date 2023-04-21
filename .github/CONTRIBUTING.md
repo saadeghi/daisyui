@@ -44,7 +44,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
    ```js
    module.exports = {
      plugins: [require("/path/to/dist/directory")],
-   };
+   }
    ```
 
 ### To run the [documentation site](https://daisyui.com/) on local:

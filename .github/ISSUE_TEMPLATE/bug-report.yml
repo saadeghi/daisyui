@@ -11,7 +11,7 @@ body:
     attributes:
       label: What version of daisyUI are you using?
       description: You can see the daisyUI version number on your `package.json` file.
-      placeholder: 'example: v2.47.0'
+      placeholder: "example: v2.47.0"
     validations:
       required: false
   - type: textarea
@@ -37,6 +37,6 @@ body:
     attributes:
       label: Reproduction URL (optional)
       description: Provide a link to a [Tailwind Play](https://daisyui.com/tailwindplay/) page or a public GitHub repo so we can reproduce the issue.
-      placeholder: 'https://'
+      placeholder: "https://"
     validations:
       required: false

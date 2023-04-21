@@ -66,7 +66,7 @@
     }
     &:checked,
     &[checked="true"],
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-success bg-success text-success-content;
     }
   }
@@ -79,7 +79,7 @@
     }
     &:checked,
     &[checked="true"],
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-warning bg-warning text-warning-content;
     }
   }
@@ -92,7 +92,7 @@
     }
     &:checked,
     &[checked="true"],
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-info bg-info text-info-content;
     }
   }
@@ -105,7 +105,7 @@
     }
     &:checked,
     &[checked="true"],
-    &[aria-checked=true] {
+    &[aria-checked="true"] {
       @apply border-error bg-error text-error-content;
     }
   }

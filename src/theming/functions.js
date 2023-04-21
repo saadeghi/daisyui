@@ -12,30 +12,29 @@ const xyzPlugin = require("colord/plugins/xyz")
 extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
 
 module.exports = {
-
   changeLchValuesToObject: function (input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
-    return { l, c, h, a:1 };
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return { l, c, h, a: 1 }
   },
 
   turnLchValuesToString: function (input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
-    return `${l} ${c} ${h}`;
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return `${l} ${c} ${h}`
   },
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
-    const str = colord(input).mix( colord(input).isDark() ? "white" : "black" , percentage).toLchString()
+    const str = colord(input)
+      .mix(colord(input).isDark() ? "white" : "black", percentage)
+      .toLchString()
     return this.turnLchValuesToString(str)
   },
 
-  generateDarkenColorFrom: function (input, percentage =  0.07) {
+  generateDarkenColorFrom: function (input, percentage = 0.07) {
     const str = colord(input).darken(percentage).toLchString()
     return this.turnLchValuesToString(str)
   },
 
-
   convertToLch: function (input) {
-
     if (typeof input !== "object" || input === null) {
       return input
     }
@@ -47,9 +46,9 @@ module.exports = {
         resultObj[rule] = value
       } else {
         let arr
-        if(getFormat(value) === 'lch') {
+        if (getFormat(value) === "lch") {
           arr = this.changeLchValuesToObject(value)
-        }else{
+        } else {
           arr = colord(value).toLch()
         }
         resultObj[colorNames[rule]] = arr.l + " " + arr.c + " " + arr.h
@@ -85,7 +84,7 @@ module.exports = {
       }
 
       // auto generate state colors
-      
+
       if (!Object.hasOwn(input, "info")) {
         resultObj["--in"] = "72.22% 45.12 240.2"
       }
@@ -145,13 +144,12 @@ module.exports = {
       }
 
       // add css variables if not exist
-      Object.entries(themeDefaults.variables).forEach(item => {
-        const [variable, value] = item;
+      Object.entries(themeDefaults.variables).forEach((item) => {
+        const [variable, value] = item
         if (!Object.hasOwn(input, variable)) {
           resultObj[variable] = value
         }
-      });
-
+      })
     })
 
     return resultObj

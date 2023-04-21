@@ -1,4 +1,4 @@
 module.exports = {
-  content: ['./*.html'],
-  darkMode: 'class',
+  content: ["./*.html"],
+  darkMode: "class",
 }
