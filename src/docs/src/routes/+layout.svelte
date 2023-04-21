@@ -63,22 +63,37 @@
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap&text=daisyUIThemostpopular,freeandopen-sourceTailwindCSScomponentlibrary" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap&text=daisyUIThemostpopular,freeandopen-sourceTailwindCSScomponentlibrary"
+    rel="stylesheet" />
 </svelte:head>
 
-<div class={`bg-base-100 drawer ${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "lg:drawer-open"}`}>
+<div
+  class={`bg-base-100 drawer ${
+    pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "lg:drawer-open"
+  }`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div class={`drawer-content`}>
     <Navbar {addScrollPaddingToNavbar} {removeScrollPaddingFromNavbar} />
-    <div class={`${pagesThatDontNeedSidebar.includes($page.url.pathname) ? "" : "max-w-[100vw] px-6 pb-16 xl:pr-2"}`}>
+    <div
+      class={`${
+        pagesThatDontNeedSidebar.includes($page.url.pathname)
+          ? ""
+          : "max-w-[100vw] px-6 pb-16 xl:pr-2"
+      }`}>
       <slot />
     </div>
   </div>
-  <div class="drawer-side z-40" style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};" bind:this={drawersidebar} on:scroll={parseSidebarScroll}>
+  <div
+    class="drawer-side z-40"
+    style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};"
+    bind:this={drawersidebar}
+    on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
     <aside class="bg-base-200 w-80">
       <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
-      <div class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
+      <div
+        class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
     </aside>
   </div>
 </div>
@@ -98,7 +113,9 @@
 <div class="modal">
   <div class="modal-box">
     <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <p class="py-4">
+      You've been selected for a chance to get one year of subscription to use Wikipedia for free!
+    </p>
   </div>
   <label class="modal-backdrop" for="my_modal_7">Close</label>
 </div>

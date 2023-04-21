@@ -19,7 +19,9 @@
   <HomepagePreview />
   <HomepageStats />
   <div class="flex w-full justify-center">
-    <a data-sveltekit-preload-data="hover" href="/components" class="btn btn-primary btn-wide">{$t("all-components-btn")}</a>
+    <a data-sveltekit-preload-data="hover" href="/components" class="btn btn-primary btn-wide">
+      {$t("all-components-btn")}
+    </a>
   </div>
 </div>
 <HomepageCleanHtml />

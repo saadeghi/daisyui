@@ -96,6 +96,7 @@
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",
     "prettier": "^2.8.7",
+    "prettier-plugin-svelte": "^2.10.0",
     "rtlcss": "4.1.0",
     "standard-version": "^9.5.0",
     "vitest": "^0.30.1"

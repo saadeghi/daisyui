@@ -44,13 +44,40 @@
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <label class={`searchbox relative mx-3 w-full`} bind:this={seachboxEl}>
-  <svg class={`pointer-events-none absolute z-10 my-3.5 ml-4 stroke-current opacity-60 ${$page.url.pathname == "/" ? "text-current" : "text-base-content"}`} width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-  <Typeahead placeholder={$t("Search") + "…"} limit={8} label="Search" data={searchIndex} extract={(item) => item.tags} inputAfterSelect="clear" on:select={onSelect} on:focus={removeScrollPaddingFromNavbar} on:blur={addScrollPaddingToNavbar} let:result>
+  <svg
+    class={`pointer-events-none absolute z-10 my-3.5 ml-4 stroke-current opacity-60 ${
+      $page.url.pathname == "/" ? "text-current" : "text-base-content"
+    }`}
+    width="16"
+    height="16"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+  </svg>
+  <Typeahead
+    placeholder={$t("Search") + "…"}
+    limit={8}
+    label="Search"
+    data={searchIndex}
+    extract={(item) => item.tags}
+    inputAfterSelect="clear"
+    on:select={onSelect}
+    on:focus={removeScrollPaddingFromNavbar}
+    on:blur={addScrollPaddingToNavbar}
+    let:result>
     <div class="py-1 text-sm">
       {searchIndex[result.index].name}
     </div>
   </Typeahead>
-  <div class={`pointer-events-none absolute right-10 top-2.5 gap-1 opacity-50 ${$page.url.pathname == "/" ? "hidden" : "hidden lg:flex"}`}>
+  <div
+    class={`pointer-events-none absolute right-10 top-2.5 gap-1 opacity-50 ${
+      $page.url.pathname == "/" ? "hidden" : "hidden lg:flex"
+    }`}>
     {#if ["macos"].includes(os)}
       <kbd class="kbd kbd-sm">⌘</kbd>
       <kbd class="kbd kbd-sm">K</kbd>
@@ -87,7 +114,8 @@
     background-color: lch(var(--b1));
     color: lch(var(--bc));
   }
-  [data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"] .svelte-typeahead-list {
+  [data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"]
+    .svelte-typeahead-list {
     transform: translateY(0.5em);
     background: lch(var(--b1) / 0.99);
     border: 2px solid lch(var(--bc) / 0.2);

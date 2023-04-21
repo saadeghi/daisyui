@@ -8,7 +8,11 @@
   <div class="mx-auto mb-6 flex h-[100px] w-[300px] items-center justify-center md:hidden">
     {#if readEnv("VITE_ADS") == "true"}
       <!-- daisyui-300-100 -->
-      <ins class="adsbygoogle" style="display:inline-block;width:300px;height:100px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="6427020085" />
+      <ins
+        class="adsbygoogle"
+        style="display:inline-block;width:300px;height:100px"
+        data-ad-client="ca-pub-4812562253949561"
+        data-ad-slot="6427020085" />
       <script>
         ;(adsbygoogle = window.adsbygoogle || []).push({})
       </script>
@@ -18,7 +22,11 @@
   <div class="mx-auto mb-6 hidden h-[90px] w-[728px] items-center justify-center md:flex lg:hidden">
     {#if readEnv("VITE_ADS") == "true"}
       <!-- daisyui-728-90 -->
-      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="1141251424" />
+      <ins
+        class="adsbygoogle"
+        style="display:inline-block;width:728px;height:90px"
+        data-ad-client="ca-pub-4812562253949561"
+        data-ad-slot="1141251424" />
       <script>
         ;(adsbygoogle = window.adsbygoogle || []).push({})
       </script>
@@ -28,7 +36,11 @@
   <div class="mx-auto mb-6 hidden h-[90px] w-[468px] items-center justify-center lg:flex xl:hidden">
     {#if readEnv("VITE_ADS") == "true"}
       <!-- daisyui-468-90 -->
-      <ins class="adsbygoogle" style="display:inline-block;width:468px;height:90px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="9789998609" />
+      <ins
+        class="adsbygoogle"
+        style="display:inline-block;width:468px;height:90px"
+        data-ad-client="ca-pub-4812562253949561"
+        data-ad-slot="9789998609" />
       <script>
         ;(adsbygoogle = window.adsbygoogle || []).push({})
       </script>
@@ -37,10 +49,15 @@
 {:else if slot === "adesense-4"}
   <div>
     <div class="sticky top-24 mt-32">
-      <div class="mx-auto hidden h-[600px] w-[160px] items-center justify-center xl:flex 2xl:hidden">
+      <div
+        class="mx-auto hidden h-[600px] w-[160px] items-center justify-center xl:flex 2xl:hidden">
         {#if readEnv("VITE_ADS") == "true"}
           <!-- daisyui-160-600 -->
-          <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="8476916933" />
+          <ins
+            class="adsbygoogle"
+            style="display:inline-block;width:160px;height:600px"
+            data-ad-client="ca-pub-4812562253949561"
+            data-ad-slot="8476916933" />
           <script>
             ;(adsbygoogle = window.adsbygoogle || []).push({})
           </script>
@@ -54,7 +71,11 @@
       <div class="mx-auto hidden h-[600px] w-[300px] items-center justify-center 2xl:flex">
         {#if readEnv("VITE_ADS") == "true"}
           <!-- daisyui-300-600 -->
-          <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-4812562253949561" data-ad-slot="7163835260" />
+          <ins
+            class="adsbygoogle"
+            style="display:inline-block;width:300px;height:600px"
+            data-ad-client="ca-pub-4812562253949561"
+            data-ad-slot="7163835260" />
           <script>
             ;(adsbygoogle = window.adsbygoogle || []).push({})
           </script>
@@ -64,7 +85,11 @@
   </div>
 {:else if slot === "carbon1"}
   <div class="h-[100px] w-full min-w-[330px] max-w-[350px]">
-    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom"
+      id="_carbonads_js"></script>
   </div>
 {:else if slot === "carbon2"}
   <div>
@@ -73,7 +98,11 @@
         <Sponsors />
       </div>
       <div class="carbonads-responsive mx-auto flex items-center justify-center">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom" id="_carbonads_js"></script>
+        <script
+          async
+          type="text/javascript"
+          src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom"
+          id="_carbonads_js"></script>
       </div>
     </div>
   </div>
@@ -85,7 +114,8 @@
     padding: initial;
   }
   #carbonads {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+      Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   #carbonads {
     display: flex;

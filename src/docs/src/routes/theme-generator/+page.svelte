@@ -5,37 +5,51 @@
   import ColorPicker from "@components/ColorPicker.svelte"
   import Translate from "@components/Translate.svelte"
 
-  import { colord, extend } from "colord";
-  import mixPlugin from "colord/plugins/mix";
-  import namesPlugin from "colord/plugins/names";
-  import lchPlugin from "colord/plugins/lch";
-  import hwbPlugin from "colord/plugins/hwb";
-  import labPlugin from "colord/plugins/lab";
-  import xyzPlugin from "colord/plugins/xyz";
+  import { colord, extend } from "colord"
+  import mixPlugin from "colord/plugins/mix"
+  import namesPlugin from "colord/plugins/names"
+  import lchPlugin from "colord/plugins/lch"
+  import hwbPlugin from "colord/plugins/hwb"
+  import labPlugin from "colord/plugins/lab"
+  import xyzPlugin from "colord/plugins/xyz"
 
   extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
 
   import { default as randomColor } from "randomcolor"
 
   function changeLchValuesToObject(input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
-    return { l, c, h, a:1 };
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return { l, c, h, a: 1 }
   }
 
   function turnLchValuesToString(input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat);
-    return `${l} ${c} ${h}`;
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return `${l} ${c} ${h}`
   }
-  
+
   function getColorValueFromTheme(variable) {
     if (browser) {
       let colorValues = getComputedStyle(document.documentElement).getPropertyValue(variable)
-      return colord(`lch(${changeLchValuesToObject(colorValues).l}% ${changeLchValuesToObject(colorValues).c} ${changeLchValuesToObject(colorValues).h})`).toHex()
+      return colord(
+        `lch(${changeLchValuesToObject(colorValues).l}% ${changeLchValuesToObject(colorValues).c} ${
+          changeLchValuesToObject(colorValues).h
+        })`
+      ).toHex()
     }
     return null
   }
 
-  const requiredColorNames = ["primary", "secondary", "accent", "neutral", "base-100", "info", "success", "warning", "error"]
+  const requiredColorNames = [
+    "primary",
+    "secondary",
+    "accent",
+    "neutral",
+    "base-100",
+    "info",
+    "success",
+    "warning",
+    "error",
+  ]
 
   $: colors = [
     {
@@ -174,15 +188,13 @@
       return {
         name: name,
         variable: variable,
-        value: colord(colors.find((item) => item.name === source).value)
-          .mix("white", percentage),
+        value: colord(colors.find((item) => item.name === source).value).mix("white", percentage),
       }
     } else {
       return {
         name: name,
         variable: variable,
-        value: colord(colors.find((item) => item.name === source).value)
-          .mix("black", percentage),
+        value: colord(colors.find((item) => item.name === source).value).mix("black", percentage),
       }
     }
   }
@@ -215,10 +227,16 @@
       colors
         .filter((item) => requiredColorNames.includes(item.name))
         .forEach((color) => {
-          wrapper.style.setProperty(color.variable, turnLchValuesToString(colord(color.value).toLchString()))
+          wrapper.style.setProperty(
+            color.variable,
+            turnLchValuesToString(colord(color.value).toLchString())
+          )
         })
       generateOptionalColors(colors).forEach((color) => {
-        wrapper.style.setProperty(color.variable, turnLchValuesToString(colord(color.value).toLchString()))
+        wrapper.style.setProperty(
+          color.variable,
+          turnLchValuesToString(colord(color.value).toLchString())
+        )
       })
       if (browser) {
         localStorage.setItem("daisyui-theme-generator-colors", JSON.stringify(colors))
@@ -246,12 +264,26 @@
       colors[0].value = randomColor() //primary
       colors[3].value = randomColor() //secondary
       colors[6].value = randomColor() //accent
-      colors[9].value = colord(`hsl(${randomBetween(200, 300)} ${randomBetween(10, 30)}% ${randomBetween(10, 20)}%)`).toHex() //neutral
-      colors[12].value = colord(`hsl(${randomBetween(200, 300)} ${randomBetween(0, 40)}% ${[randomBetween(20, 30), randomBetween(90, 100)][Math.round(Math.random())]}%)`).toHex() //base-100
-      colors[16].value = colord(`hsl(${randomBetween(190, 230)} ${randomBetween(50, 90)}% ${randomBetween(50, 80)}%)`).toHex() //info
-      colors[18].value = colord(`hsl(${randomBetween(142, 175)} ${randomBetween(60, 80)}% ${randomBetween(20, 70)}%)`).toHex() //success
-      colors[20].value = colord(`hsl(${randomBetween(30, 50)} ${randomBetween(80, 97)}% ${randomBetween(30, 70)}%)`).toHex() //warning
-      colors[22].value = colord(`hsl(${randomBetween(340, 370)} ${randomBetween(70, 97)}% ${randomBetween(50, 70)}%)`).toHex() //error
+      colors[9].value = colord(
+        `hsl(${randomBetween(200, 300)} ${randomBetween(10, 30)}% ${randomBetween(10, 20)}%)`
+      ).toHex() //neutral
+      colors[12].value = colord(
+        `hsl(${randomBetween(200, 300)} ${randomBetween(0, 40)}% ${
+          [randomBetween(20, 30), randomBetween(90, 100)][Math.round(Math.random())]
+        }%)`
+      ).toHex() //base-100
+      colors[16].value = colord(
+        `hsl(${randomBetween(190, 230)} ${randomBetween(50, 90)}% ${randomBetween(50, 80)}%)`
+      ).toHex() //info
+      colors[18].value = colord(
+        `hsl(${randomBetween(142, 175)} ${randomBetween(60, 80)}% ${randomBetween(20, 70)}%)`
+      ).toHex() //success
+      colors[20].value = colord(
+        `hsl(${randomBetween(30, 50)} ${randomBetween(80, 97)}% ${randomBetween(30, 70)}%)`
+      ).toHex() //warning
+      colors[22].value = colord(
+        `hsl(${randomBetween(340, 370)} ${randomBetween(70, 97)}% ${randomBetween(50, 70)}%)`
+      ).toHex() //error
     })
     generateColors()
   }
@@ -268,27 +300,56 @@
   })
 </script>
 
-<SEO title="daisyUI Theme Generator" desc="Tailwind CSS Theme Generator - Tailwind CSS daisyUI custom theme and custom colors" img={`/images/theme-generator.jpg`} />
+<SEO
+  title="daisyUI Theme Generator"
+  desc="Tailwind CSS Theme Generator - Tailwind CSS daisyUI custom theme and custom colors"
+  img={`/images/theme-generator.jpg`} />
 
 <div class="prose mb-10">
   <h1><Translate text="daisyUI Theme Generator" /></h1>
   <p>
-    <Translate text="You can add your custom themes to <span class='badge badge-outline'>tailwind.config.js</span> file in <span class='badge badge-outline'>daisyui > themes</span> array. On this page, you can pick required color values and see how the components will look like with them." />
+    <Translate
+      text="You can add your custom themes to <span class='badge badge-outline'>tailwind.config.js</span> file in <span class='badge badge-outline'>daisyui > themes</span> array. On this page, you can pick required color values and see how the components will look like with them." />
   </p>
   <div class="alert alert-info not-prose mb-2 text-sm">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content h-6 w-6 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      class="stroke-info-content h-6 w-6 flex-shrink-0">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
     <div>
-      <p><Translate text="You can also define optional colors to have more control on the color values (for example: the color of a button when it's focused on the color of the text on a button)" /></p>
       <p>
-        <Translate text="Check out <a class='link font-bold' href='/docs/colors/'>colors page</a> to see all the color names you can use." />
+        <Translate
+          text="You can also define optional colors to have more control on the color values (for example: the color of a button when it's focused on the color of the text on a button)" />
+      </p>
+      <p>
+        <Translate
+          text="Check out <a class='link font-bold' href='/docs/colors/'>colors page</a> to see all the color names you can use." />
       </p>
     </div>
   </div>
   <div class="alert alert-info not-prose text-sm">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content h-6 w-6 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      class="stroke-info-content h-6 w-6 flex-shrink-0">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
     <div>
       <p>
-        <Translate text="Check out <a class='link font-bold' href='/docs/themes/'>themes page</a> to see all the CSS variables you can use to customize the design decision (example: border-radius, animations, etc.)" />
+        <Translate
+          text="Check out <a class='link font-bold' href='/docs/themes/'>themes page</a> to see all the CSS variables you can use to customize the design decision (example: border-radius, animations, etc.)" />
       </p>
     </div>
   </div>
@@ -300,8 +361,12 @@
       {#if browser}
         <div class="mockup-code not-prose relative">
           <div class="absolute top-2 right-2">
-            <button class="btn btn-xs normal-case" on:click={() => randomize()}><Translate text="Randomize" /></button>
-            <button class="btn btn-xs normal-case" on:click={() => resetColors()}><Translate text="Reset" /></button>
+            <button class="btn btn-xs normal-case" on:click={() => randomize()}>
+              <Translate text="Randomize" />
+            </button>
+            <button class="btn btn-xs normal-case" on:click={() => resetColors()}>
+              <Translate text="Reset" />
+            </button>
           </div>
           <pre><code class="text-neutral-content/30">{`module.exports = {`}</code>
 <code>{`    daisyui: {
@@ -309,7 +374,20 @@
         {
           mytheme: {`}</code>
 {#each colors.filter((item) => requiredColorNames.includes(item.name)) as color}
-              <code>          <span data-tip="Pick →" class:tooltip={colors.filter((item) => requiredColorNames.includes(item.name))[0] == color} class="tooltip-open tooltip-accent tooltip-left align-middle"><span class="inline-block w-1" /><ColorPicker bind:value={color.value} on:set={() => generateColors(color.value)} /></span>"{color.name}": "<span class="bg-neutral-focus hover:outline-neutral-content/20 focus:outline-neutral-content rounded-sm px-1 hover:outline focus:outline" contenteditable="true" bind:innerHTML={color.value} on:input={() => generateColors(color.value)} on:keyup={() => generateColors(color.value)}>{color.value}</span>",
+              <code>          <span
+                  data-tip="Pick →"
+                  class:tooltip={colors.filter((item) =>
+                    requiredColorNames.includes(item.name)
+                  )[0] == color}
+                  class="tooltip-open tooltip-accent tooltip-left align-middle"><span
+                    class="inline-block w-1" /><ColorPicker
+                    bind:value={color.value}
+                    on:set={() => generateColors(color.value)} /></span>"{color.name}": "<span
+                  class="bg-neutral-focus hover:outline-neutral-content/20 focus:outline-neutral-content rounded-sm px-1 hover:outline focus:outline"
+                  contenteditable="true"
+                  bind:innerHTML={color.value}
+                  on:input={() => generateColors(color.value)}
+                  on:keyup={() => generateColors(color.value)}>{color.value}</span>",
 </code>{/each}<code>{`          },
         },
       ],
@@ -327,7 +405,10 @@
   <div>
     <h2 class="px-2 pb-4 text-xl font-bold"><Translate text="Preview" /></h2>
     <div data-theme="light" class="bg-transparent">
-      <div class="rounded-box bg-base-100 border-base-content/5 text-base-content not-prose grid gap-3 border p-6" data-theme="mytheme" bind:this={wrapper}>
+      <div
+        class="rounded-box bg-base-100 border-base-content/5 text-base-content not-prose grid gap-3 border p-6"
+        data-theme="mytheme"
+        bind:this={wrapper}>
         <!-- button -->
         <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
           <button class="btn">Default</button>
@@ -370,7 +451,9 @@
             <div class="flex flex-col gap-3 md:w-1/2">
               <progress value="20" max="100" class="progress">Default</progress>
               <progress value="25" max="100" class="progress progress-primary">Primary</progress>
-              <progress value="30" max="100" class="progress progress-secondary">Secondary</progress>
+              <progress value="30" max="100" class="progress progress-secondary">
+                Secondary
+              </progress>
               <progress value="40" max="100" class="progress progress-accent">Accent</progress>
               <progress value="45" max="100" class="progress progress-info">Info</progress>
               <progress value="55" max="100" class="progress progress-success">Success</progress>
@@ -426,31 +509,77 @@
             <!-- range -->
             <div class="md:w-1/2">
               <input type="range" min="0" max="100" value="90" class="range range-xs" />
-              <input type="range" min="0" max="100" value="70" class="range range-xs range-primary" />
-              <input type="range" min="0" max="100" value="50" class="range range-xs range-secondary" />
-              <input type="range" min="0" max="100" value="40" class="range range-xs range-accent" />
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="70"
+                class="range range-xs range-primary" />
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                class="range range-xs range-secondary" />
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="40"
+                class="range range-xs range-accent" />
             </div>
           </div>
           <!-- input -->
           <div class="flex flex-col gap-3 md:flex-row">
             <div class="flex flex-col gap-3 md:w-1/2">
               <input type="text" placeholder="Default" class="input input-bordered w-full" />
-              <input type="text" placeholder="Primary" class="input input-primary input-bordered w-full" />
-              <input type="text" placeholder="Secondary" class="input input-secondary input-bordered w-full" />
-              <input type="text" placeholder="Accent" class="input input-accent input-bordered w-full" />
+              <input
+                type="text"
+                placeholder="Primary"
+                class="input input-primary input-bordered w-full" />
+              <input
+                type="text"
+                placeholder="Secondary"
+                class="input input-secondary input-bordered w-full" />
+              <input
+                type="text"
+                placeholder="Accent"
+                class="input input-accent input-bordered w-full" />
             </div>
             <div class="flex flex-col gap-3 md:w-1/2">
-              <input type="text" placeholder="Info" class="input input-info input-bordered w-full" />
-              <input type="text" placeholder="Success" class="input input-success input-bordered w-full" />
-              <input type="text" placeholder="Warning" class="input input-warning input-bordered w-full" />
-              <input type="text" placeholder="Error" class="input input-error input-bordered w-full" />
+              <input
+                type="text"
+                placeholder="Info"
+                class="input input-info input-bordered w-full" />
+              <input
+                type="text"
+                placeholder="Success"
+                class="input input-success input-bordered w-full" />
+              <input
+                type="text"
+                placeholder="Warning"
+                class="input input-warning input-bordered w-full" />
+              <input
+                type="text"
+                placeholder="Error"
+                class="input input-error input-bordered w-full" />
             </div>
           </div>
           <!-- navbar -->
           <div class="navbar bg-neutral text-neutral-content rounded-box">
             <div class="flex-none">
               <button class="btn btn-square btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-5 w-5 stroke-current">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
               </button>
             </div>
             <div class="flex-1">
@@ -482,31 +611,81 @@
         <div class="flex flex-col gap-3">
           <div class="alert">
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info h-6 w-6 flex-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="stroke-info h-6 w-6 flex-shrink-0">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               <span>12 unread messages. Tap to see.</span>
             </div>
           </div>
           <div class="alert alert-info">
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="h-6 w-6 flex-shrink-0 stroke-current">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               <span>New software update available.</span>
             </div>
           </div>
           <div class="alert alert-success">
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 flex-shrink-0 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               <span>Your purchase has been confirmed!</span>
             </div>
           </div>
           <div class="alert alert-warning">
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 flex-shrink-0 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
               <span>Warning: Invalid email address!</span>
             </div>
           </div>
           <div class="alert alert-error">
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 flex-shrink-0 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               <span>Error! Task failed successfully.</span>
             </div>
           </div>

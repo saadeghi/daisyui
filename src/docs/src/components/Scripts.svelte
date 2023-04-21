@@ -9,10 +9,11 @@
 
   {#if readEnv("VITE_GTM") == "true"}
     <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
     <script>
       ;(function (w, d, s, l, i) {
         w[l] = w[l] || []
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
+        w[l].push({ "gtm.start": new Date().getTime(), "event": "gtm.js" })
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : ""
@@ -27,6 +28,13 @@
 
 {#if readEnv("VITE_GTM") == "true"}
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe title="GTM" src="https://www.googletagmanager.com/ns.html?id=GTM-WJ8HL28" height="0" width="0" style="display:none;visibility:hidden" /></noscript>
+  <noscript>
+    <iframe
+      title="GTM"
+      src="https://www.googletagmanager.com/ns.html?id=GTM-WJ8HL28"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden" />
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
 {/if}

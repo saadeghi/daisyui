@@ -93,24 +93,21 @@ If your component documentation page contains `pre` blocks for code samples, be 
 
 ```svelte
 <Component title="Buttons with brand colors">
-<button class="btn">Button</button>
-<button class="btn btn-primary">Primary</button>
-<button class="btn btn-secondary">Secondary</button>
-<button class="btn btn-accent">Accent</button>
-<button class="btn btn-ghost">Ghost</button>
-<button class="btn btn-link">Link</button>
+  <button class="btn">Button</button>
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-secondary">Secondary</button>
+  <button class="btn btn-accent">Accent</button>
+  <button class="btn btn-ghost">Ghost</button>
+  <button class="btn btn-link">Link</button>
 
-<!-- add $$ to each class name in pre block-->
-<pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn">Button</button>
+  <!-- add $$ to each class name in pre block-->
+  <pre slot="html" use:replace={{ to: $prefix }}>{`<button class="$$btn">Button</button>
 <button class="$$btn $$btn-primary">Button</button>
 <button class="$$btn $$btn-secondary">Button</button>
 <button class="$$btn $$btn-accent">Button</button>
 <button class="$$btn $$btn-ghost">Button</button>
-<button class="$$btn $$btn-link">Button</button>`
-}</pre>
+<button class="$$btn $$btn-link">Button</button>`}</pre>
 </Component>
-
 ```
 
 ### An example
