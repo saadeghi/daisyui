@@ -93,7 +93,7 @@
   </div>
 {:else if slot === "carbon2"}
   <div>
-    <div class="sticky top-20 my-6 xl:my-0 xl:mt-32 xl:w-[130px]">
+    <div class="sticky top-20 my-6 xl:my-0 xl:mx-2 xl:mt-32 xl:w-[130px]">
       <div class="hidden xl:block">
         <Sponsors />
       </div>

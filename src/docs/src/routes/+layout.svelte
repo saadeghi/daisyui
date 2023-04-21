@@ -139,8 +139,18 @@
     background: unset;
   }
   .prose pre[class*="language-"] {
-    max-width: 100%;
+    max-width: clamp(20rem, calc(100vw - 4rem), 80ch);
     background-color: lch(var(--n));
     color: lch(var(--nc));
+  }
+  @media (min-width: 1024px) {
+    .prose pre[class*="language-"] {
+      max-width: clamp(20rem, calc(100vw - 20rem - 4rem), 80ch);
+    }
+  }
+  @media (min-width: 1280px) {
+    .prose pre[class*="language-"] {
+      max-width: clamp(20rem, calc(100vw - 20rem - 4rem - 8rem), 80ch);
+    }
   }
 </style>
