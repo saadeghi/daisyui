@@ -80,7 +80,6 @@
     "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
     "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css",
     "test": "vitest",
-    "test:coverage": "vitest --coverage",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
     "playground": "cd src/experiments/playground && npm run dev",
@@ -91,10 +90,8 @@
   },
   "devDependencies": {
     "@parcel/css-cli": "^1.13.1",
-    "@types/css-selector-tokenizer": "^0.7.1",
     "@vitest/ui": "^0.30.1",
     "c8": "^7.13.0",
-    "color-contrast-checker": "^2.1.0",
     "postcss-cli": "10.1.0",
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",

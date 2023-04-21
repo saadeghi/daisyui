@@ -5,9 +5,8 @@ import lchPlugin from "colord/plugins/lch"
 import hwbPlugin from "colord/plugins/hwb"
 import labPlugin from "colord/plugins/lab"
 import xyzPlugin from "colord/plugins/xyz"
-extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
-
-import ColorContrastChecker from "color-contrast-checker"
+import a11yPlugin from "colord/plugins/a11y"
+extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin, a11yPlugin])
 
 // WCAG 2.0 level AA requires a contrast ratio of at least 4.5:1
 // for normal text and 3:1 for large text. WCAG 2.1 requires a
@@ -17,10 +16,10 @@ import ColorContrastChecker from "color-contrast-checker"
 // large text.
 
 export const ContrastRatioWarningThreshold = 3
-export const ContrastRatioErrorThreshold = 2
+export const ContrastRatioErrorThreshold = 2.1
 
 export const isColorContrastOkay = (input1, input2, ratio) => {
-  if (new ColorContrastChecker().isLevelCustom(input1, input2, ratio)) {
+  if (colord(input1).contrast(input2) > ratio) {
     return true
   }
   return false
@@ -32,7 +31,6 @@ function changeLchValuesToObject(input) {
 }
 
 export const lchValuesToHex = (input) => {
-  console.log(input)
   return colord(`lch(${changeLchValuesToObject(input).l}% ${changeLchValuesToObject(input).c} ${changeLchValuesToObject(input).h})`).toHex()
 }
 
