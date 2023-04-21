@@ -27,27 +27,21 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New message arrived.</span>
-      </div>
+      <span>New message arrived.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New message arrived.</span>
-    </div>
+    <span>New message arrived.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New message arrived.</span>
-    </div>
+    <span>New message arrived.</span>
   </div>
 </div>`
 }</pre>
@@ -57,42 +51,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-top toast-start absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-top $$toast-start">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-top $$toast-start">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -102,42 +84,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-top toast-center absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-top $$toast-center">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-top $$toast-center">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -147,42 +117,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-top toast-end absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-top $$toast-end">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-top $$toast-end">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -192,42 +150,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-start toast-middle absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-start $$toast-middle">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-start $$toast-middle">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -237,42 +183,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-center toast-middle absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-center $$toast-middle">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-center $$toast-middle">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -282,42 +216,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-end toast-middle absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-end $$toast-middle">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-end $$toast-middle">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -327,42 +249,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-start absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-start">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-start">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -372,42 +282,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-center absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-center">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-center">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
@@ -417,42 +315,30 @@ data="{[
 <div class="w-full h-64 relative">
   <div class="toast toast-end absolute">
     <div class="alert alert-info">
-      <div>
-        <span>New mail arrived.</span>
-      </div>
+      <span>New mail arrived.</span>
     </div>
     <div class="alert alert-success">
-      <div>
-        <span>Message sent successfully.</span>
-      </div>
+      <span>Message sent successfully.</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$toast $$toast-end">
   <div class="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div class="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
 `<div className="$$toast $$toast-end">
   <div className="$$alert $$alert-info">
-    <div>
-      <span>New mail arrived.</span>
-    </div>
+    <span>New mail arrived.</span>
   </div>
   <div className="$$alert $$alert-success">
-    <div>
-      <span>Message sent successfully.</span>
-    </div>
+    <span>Message sent successfully.</span>
   </div>
 </div>`
 }</pre>

@@ -1,15 +1,29 @@
 .alert {
-  @apply bg-base-200 p-4 rounded-box;
+  @apply p-4 rounded-box text-base-content border border-base-200;
+  --alert-bg: lch(var(--b2));
+  --alert-bg-mix: lch(var(--b1));
+  background-color: var(--alert-bg);
+  @supports (background-color: color-mix(in srgb, var(--alert-bg) 50%, var(--alert-bg-mix))) {
+    background-color: color-mix(in srgb, var(--alert-bg) 50%, var(--alert-bg-mix));
+  }
   &-info {
-    @apply bg-info text-info-content;
+    @apply text-info-content border-info/20;
+    --alert-bg: lch(var(--in));
+    --alert-bg-mix: lch(var(--b1));
   }
   &-success {
-    @apply bg-success text-success-content;
+    @apply text-success-content border-success/20;
+    --alert-bg: lch(var(--su));
+    --alert-bg-mix: lch(var(--b1));
   }
   &-warning {
-    @apply bg-warning text-warning-content;
+    @apply text-warning-content border-warning/20;
+    --alert-bg: lch(var(--wa));
+    --alert-bg-mix: lch(var(--b1));
   }
   &-error {
-    @apply bg-error text-error-content;
+    @apply text-error-content border-error/20;
+    --alert-bg: lch(var(--er));
+    --alert-bg-mix: lch(var(--b1));
   }
 }

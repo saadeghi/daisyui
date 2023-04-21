@@ -499,10 +499,10 @@
       <div class="grid place-content-center gap-4 p-4">
         <div class="dropdown dropdown-end">
           <div tabindex="0">
-            <div class="alert flex-col space-y-2">
-              <div class="flex-1"><span class="mx-3 text-sm">Lorem ipsum dolor sit amet, consectetur adip!</span></div>
-              <div class="flex-none">
-                <button class="btn btn-primary btn-outline btn-sm mr-2">Cancel</button>
+            <div class="alert">
+              <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adip!</span>
+              <div>
+                <button class="btn btn-primary btn-outline btn-sm">Cancel</button>
                 <button class="btn btn-primary btn-sm">Apply</button>
               </div>
             </div>
@@ -520,10 +520,8 @@
         <div class="dropdown dropdown-end dropdown-top">
           <div tabindex="0">
             <div class="alert alert-info">
-              <div class="flex-1">
-                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="mx-2 h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adip!</span>
-              </div>
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="mx-2 h-6 w-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adip!</span>
             </div>
           </div>
           <div tabindex="0" class="dropdown-content py-2">
@@ -539,12 +537,10 @@
         <div class="dropdown dropdown-end dropdown-top">
           <div tabindex="0">
             <div class="alert alert-success">
-              <div class="flex-1">
-                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="mx-2 h-6 w-6 stroke-current">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                </svg>
-                <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adip!</span>
-              </div>
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="mx-2 h-6 w-6 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+              </svg>
+              <span class="text-sm">Lorem ipsum dolor sit amet, consectetur adip!</span>
             </div>
           </div>
           <div tabindex="0" class="dropdown-content py-2">
