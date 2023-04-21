@@ -90,10 +90,10 @@
     bind:this={drawersidebar}
     on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" />
-    <aside class="bg-base-200 w-80">
+    <aside class="bg-base-100 w-80">
       <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
       <div
-        class="from-base-200 pointer-events-none sticky bottom-0 flex h-20 bg-gradient-to-t to-transparent" />
+        class="bg-base-100 pointer-events-none sticky bottom-0 flex h-40 [mask-image:linear-gradient(transparent,#000000)]" />
     </aside>
   </div>
 </div>

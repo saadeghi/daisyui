@@ -118,7 +118,7 @@
     .svelte-typeahead-list {
     transform: translateY(0.5em);
     background: lch(var(--b1) / 0.99);
-    border: 2px solid lch(var(--bc) / 0.2);
+    border: 0 solid lch(var(--bc) / 0.2);
     border-radius: var(--rounded-box);
     overflow: hidden;
     padding: 0.5rem;

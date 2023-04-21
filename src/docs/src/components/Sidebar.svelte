@@ -20,7 +20,7 @@
 </script>
 
 <div
-  class={`bg-base-200 sticky top-0 z-20 hidden items-center gap-2 bg-opacity-90 px-4 py-2 backdrop-blur ${
+  class={`bg-base-100 sticky top-0 z-20 hidden items-center gap-2 bg-opacity-90 px-4 py-2 backdrop-blur ${
     $page.url.pathname == "/" ? "" : "lg:flex"
   } ${switchNavbarStyle ? "shadow-sm" : ""}`}>
   <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost px-2">
@@ -39,7 +39,7 @@
 
 {#if $showSearch}
   <div
-    class={`bg-base-200 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 bg-opacity-90 py-3 px-2 backdrop-blur ${
+    class={`bg-base-100 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 bg-opacity-90 py-3 px-2 backdrop-blur ${
       switchNavbarStyle ? "shadow-sm" : ""
     }`}>
     <div class="flex w-full">
@@ -51,7 +51,7 @@
 <div class="h-4" />
 
 {#each pages as { name, icon, items }}
-  <ul class="menu p-0 px-4">
+  <ul class="menu menu-sm lg:menu-md px-4 py-0">
     {#if name && name != "excluded"}
       <li />
       <li class="menu-title flex flex-row gap-4">
@@ -82,7 +82,9 @@
                 {@html $t(name)}
               </span>
               {#if badge != ""}
-                <span class="badge badge-sm lowercase">{$t(badge)}</span>
+                <span class="badge badge-sm font-mono lowercase">
+                  {$t(badge)}
+                </span>
               {/if}
             </a>
           </li>
