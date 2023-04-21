@@ -12,22 +12,22 @@ function withOpacityValue(variable, fallbackColor) {
 }
 
 let colorObject = {
-  transparent: "transparent",
-  current: "currentColor",
+  "transparent": "transparent",
+  "current": "currentColor",
 
-  primary: withOpacityValue("--p"),
+  "primary": withOpacityValue("--p"),
   "primary-focus": withOpacityValue("--pf", "--p"),
   "primary-content": withOpacityValue("--pc"),
 
-  secondary: withOpacityValue("--s"),
+  "secondary": withOpacityValue("--s"),
   "secondary-focus": withOpacityValue("--sf", "--s"),
   "secondary-content": withOpacityValue("--sc"),
 
-  accent: withOpacityValue("--a"),
+  "accent": withOpacityValue("--a"),
   "accent-focus": withOpacityValue("--af", "--a"),
   "accent-content": withOpacityValue("--ac"),
 
-  neutral: withOpacityValue("--n"),
+  "neutral": withOpacityValue("--n"),
   "neutral-focus": withOpacityValue("--nf", "--n"),
   "neutral-content": withOpacityValue("--nc"),
 
@@ -36,16 +36,16 @@ let colorObject = {
   "base-300": withOpacityValue("--b3", "--b2"),
   "base-content": withOpacityValue("--bc"),
 
-  info: withOpacityValue("--in"),
+  "info": withOpacityValue("--in"),
   "info-content": withOpacityValue("--inc", "--nc"),
 
-  success: withOpacityValue("--su"),
+  "success": withOpacityValue("--su"),
   "success-content": withOpacityValue("--suc", "--nc"),
 
-  warning: withOpacityValue("--wa"),
+  "warning": withOpacityValue("--wa"),
   "warning-content": withOpacityValue("--wac", "--nc"),
 
-  error: withOpacityValue("--er"),
+  "error": withOpacityValue("--er"),
   "error-content": withOpacityValue("--erc", "--nc"),
 }
 

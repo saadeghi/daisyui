@@ -11,12 +11,30 @@
   &[aria-checked="true"] {
     @apply bg-base-content bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-in-out;
-    background-image: linear-gradient(-45deg, transparent 65%, lch(var(--chkbg)) 65.99%), linear-gradient(45deg, transparent 75%, lch(var(--chkbg)) 75.99%), linear-gradient(-45deg, lch(var(--chkbg)) 40%, transparent 40.99%), linear-gradient(45deg, lch(var(--chkbg)) 30%, lch(var(--chkfg)) 30.99%, lch(var(--chkfg)) 40%, transparent 40.99%), linear-gradient(-45deg, lch(var(--chkfg)) 50%, lch(var(--chkbg)) 50.99%);
+    background-image: linear-gradient(-45deg, transparent 65%, lch(var(--chkbg)) 65.99%),
+      linear-gradient(45deg, transparent 75%, lch(var(--chkbg)) 75.99%),
+      linear-gradient(-45deg, lch(var(--chkbg)) 40%, transparent 40.99%),
+      linear-gradient(
+        45deg,
+        lch(var(--chkbg)) 30%,
+        lch(var(--chkfg)) 30.99%,
+        lch(var(--chkfg)) 40%,
+        transparent 40.99%
+      ),
+      linear-gradient(-45deg, lch(var(--chkfg)) 50%, lch(var(--chkbg)) 50.99%);
   }
   &:indeterminate {
     @apply bg-base-content bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-in-out;
-    background-image: linear-gradient(90deg, transparent 80%, lch(var(--chkbg)) 80%), linear-gradient(-90deg, transparent 80%, lch(var(--chkbg)) 80%), linear-gradient(0deg, lch(var(--chkbg)) 43%, lch(var(--chkfg)) 43%, lch(var(--chkfg)) 57%, lch(var(--chkbg)) 57%);
+    background-image: linear-gradient(90deg, transparent 80%, lch(var(--chkbg)) 80%),
+      linear-gradient(-90deg, transparent 80%, lch(var(--chkbg)) 80%),
+      linear-gradient(
+        0deg,
+        lch(var(--chkbg)) 43%,
+        lch(var(--chkfg)) 43%,
+        lch(var(--chkfg)) 57%,
+        lch(var(--chkbg)) 57%
+      );
   }
   &-primary {
     --chkbg: var(--p);
@@ -136,7 +154,17 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      background-image: linear-gradient(45deg, transparent 65%, lch(var(--chkbg)) 65.99%), linear-gradient(-45deg, transparent 75%, lch(var(--chkbg)) 75.99%), linear-gradient(45deg, lch(var(--chkbg)) 40%, transparent 40.99%), linear-gradient(-45deg, lch(var(--chkbg)) 30%, lch(var(--chkfg)) 30.99%, lch(var(--chkfg)) 40%, transparent 40.99%), linear-gradient(45deg, lch(var(--chkfg)) 50%, lch(var(--chkbg)) 50.99%);
+      background-image: linear-gradient(45deg, transparent 65%, lch(var(--chkbg)) 65.99%),
+        linear-gradient(-45deg, transparent 75%, lch(var(--chkbg)) 75.99%),
+        linear-gradient(45deg, lch(var(--chkbg)) 40%, transparent 40.99%),
+        linear-gradient(
+          -45deg,
+          lch(var(--chkbg)) 30%,
+          lch(var(--chkfg)) 30.99%,
+          lch(var(--chkfg)) 40%,
+          transparent 40.99%
+        ),
+        linear-gradient(45deg, lch(var(--chkfg)) 50%, lch(var(--chkbg)) 50.99%);
     }
   }
 }

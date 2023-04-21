@@ -62,7 +62,13 @@
       height: var(--tab-radius, 0.5rem);
       bottom: 0;
       --tab-grad: calc(68% - var(--tab-border, 1px));
-      --tab-corner-bg: radial-gradient(circle at var(--circle-pos), transparent var(--tab-grad), var(--tab-border-color) calc(var(--tab-grad) + 0.3px), var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)), var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px));
+      --tab-corner-bg: radial-gradient(
+        circle at var(--circle-pos),
+        transparent var(--tab-grad),
+        var(--tab-border-color) calc(var(--tab-grad) + 0.3px),
+        var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)),
+        var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
+      );
     }
     &:before {
       left: calc(var(--tab-radius, 0.5rem) * -1);
@@ -92,7 +98,8 @@
     }
   }
 }
-.tab-lifted.tab-active:not(.tab-disabled):not([disabled]) + .tab-lifted.tab-active:not(.tab-disabled):not([disabled]) {
+.tab-lifted.tab-active:not(.tab-disabled):not([disabled])
+  + .tab-lifted.tab-active:not(.tab-disabled):not([disabled]) {
   &:before {
     background: none;
   }

@@ -31,7 +31,11 @@ function changeLchValuesToObject(input) {
 }
 
 export const lchValuesToHex = (input) => {
-  return colord(`lch(${changeLchValuesToObject(input).l}% ${changeLchValuesToObject(input).c} ${changeLchValuesToObject(input).h})`).toHex()
+  return colord(
+    `lch(${changeLchValuesToObject(input).l}% ${changeLchValuesToObject(input).c} ${
+      changeLchValuesToObject(input).h
+    })`
+  ).toHex()
 }
 
 export const trimCssVariable = (input) => {

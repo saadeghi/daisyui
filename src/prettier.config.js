@@ -3,7 +3,11 @@ module.exports = {
   useTabs: false,
   tabWidth: 2,
   singleQuote: false,
-  printWidth: 99999,
+  printWidth: 100,
   htmlWhitespaceSensitivity: "ignore",
   trailingComma: "es5",
+  bracketSameLine: true,
+  quoteProps: "consistent",
+  bracketSpacing: true,
+  endOfLine: "lf",
 }

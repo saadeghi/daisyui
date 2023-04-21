@@ -27,7 +27,8 @@
     transform: translateY(-50%);
     --filler-size: 100rem;
     --filler-offset: 0.6rem;
-    box-shadow: 0 0 0 3px lch(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+    box-shadow: 0 0 0 3px lch(var(--range-shdw)) inset, var(--focus-shadow, 0 0),
+      calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &::-moz-range-thumb {
     background-color: lch(var(--b1));
@@ -36,7 +37,8 @@
     color: lch(var(--range-shdw));
     --filler-size: 100rem;
     --filler-offset: 0.5rem;
-    box-shadow: 0 0 0 3px lch(var(--range-shdw)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+    box-shadow: 0 0 0 3px lch(var(--range-shdw)) inset, var(--focus-shadow, 0 0),
+      calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &-primary {
     --range-shdw: var(--p);

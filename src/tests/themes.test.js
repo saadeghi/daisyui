@@ -28,7 +28,18 @@ describe.each(
 )("All themes have all required CSS variables", (themeKey) => {
   test.each(
     // each variable
-    ["--rounded-box", "--rounded-btn", "--rounded-badge", "--animation-btn", "--animation-input", "--btn-text-case", "--btn-focus-scale", "--border-btn", "--tab-border", "--tab-radius"]
+    [
+      "--rounded-box",
+      "--rounded-btn",
+      "--rounded-badge",
+      "--animation-btn",
+      "--animation-input",
+      "--btn-text-case",
+      "--btn-focus-scale",
+      "--border-btn",
+      "--tab-border",
+      "--tab-radius",
+    ]
   )(`${trimThemeName(themeKey)} has CSS variables`, (variableName) => {
     expect(colorFunctions.convertToLch(themes[themeKey])).toHaveProperty(variableName)
   })

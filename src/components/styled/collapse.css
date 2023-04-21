@@ -86,7 +86,10 @@ details.collapse summary {
 [dir="rtl"] .collapse[open].collapse-arrow .collapse-title:after,
 [dir="rtl"] .collapse-open.collapse-arrow .collapse-title:after,
 [dir="rtl"] .collapse-arrow:focus:not(.collapse-close) .collapse-title:after,
-[dir="rtl"] .collapse-arrow:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-title:after {
+[dir="rtl"]
+  .collapse-arrow:not(.collapse-close)
+  input[type="checkbox"]:checked
+  ~ .collapse-title:after {
   --tw-rotate: 135deg;
 }
 .collapse[open].collapse-plus .collapse-title:after,

@@ -3,7 +3,8 @@
   &-bordered {
     @apply border-opacity-20;
   }
-  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1px + 50%), calc(100% - 16px) calc(1px + 50%);
   background-size: 4px 4px, 4px 4px;
   background-repeat: no-repeat;

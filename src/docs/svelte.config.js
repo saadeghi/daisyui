@@ -14,7 +14,9 @@ const rehypePlugins = [
         type: "element",
         tagName: "span",
         properties: {
-          className: ["mr-1 opacity-20 hover:opacity-60 text-base font-bold inline-block align-middle relative -mt-1"],
+          className: [
+            "mr-1 opacity-20 hover:opacity-60 text-base font-bold inline-block align-middle relative -mt-1",
+          ],
         },
         children: [
           {

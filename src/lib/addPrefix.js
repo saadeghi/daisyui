@@ -6,7 +6,8 @@ function itMatchesOne(arr, term) {
 
 function parseAttrSelector(node) {
   const { content } = node
-  const regex = /(^class|^id)([*^?~|$=]*)+(?:("\s*)([^"\\]*?(?:\\.[^"\\]*)*?)(\s*")|('\s*)([^'\\]*?(?:\\.[^'\\]*)*?)(\s*'))/i
+  const regex =
+    /(^class|^id)([*^?~|$=]*)+(?:("\s*)([^"\\]*?(?:\\.[^"\\]*)*?)(\s*")|('\s*)([^'\\]*?(?:\\.[^'\\]*)*?)(\s*'))/i
 
   const [type, operator, head, classes, foot] = content.split(regex).filter((part) => part)
 

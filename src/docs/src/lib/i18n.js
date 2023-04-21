@@ -28,7 +28,9 @@ function translate(currentLang, key, vars, returnFallback) {
       } else if (returnFallback === false) {
         return key
       } else {
-        console.warn(`"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`)
+        console.warn(
+          `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`
+        )
         return translations[`${path}/${defaultLang}.json`].default[key]
       }
     }

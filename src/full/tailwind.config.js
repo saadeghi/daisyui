@@ -6,7 +6,22 @@ module.exports = {
   theme: {
     colors: require("../theming"),
   },
-  corePlugins: ["animation", "backgroundColor", "backgroundImage", "borderColor", "divideColor", "gradientColorStops", "placeholderColor", "preflight", "ringColor", "ringOffsetColor", "ringOffsetWidth", "ringWidth", "textColor", "transitionProperty"],
+  corePlugins: [
+    "animation",
+    "backgroundColor",
+    "backgroundImage",
+    "borderColor",
+    "divideColor",
+    "gradientColorStops",
+    "placeholderColor",
+    "preflight",
+    "ringColor",
+    "ringOffsetColor",
+    "ringOffsetWidth",
+    "ringWidth",
+    "textColor",
+    "transitionProperty",
+  ],
   plugins: [
     plugin(function ({ addBase, addUtilities, addComponents }) {
       addBase(require("../../dist/base"))

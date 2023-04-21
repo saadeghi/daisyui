@@ -1,17 +1,17 @@
 module.exports = {
-  primary: "--p",
+  "primary": "--p",
   "primary-focus": "--pf",
   "primary-content": "--pc",
 
-  secondary: "--s",
+  "secondary": "--s",
   "secondary-focus": "--sf",
   "secondary-content": "--sc",
 
-  accent: "--a",
+  "accent": "--a",
   "accent-focus": "--af",
   "accent-content": "--ac",
 
-  neutral: "--n",
+  "neutral": "--n",
   "neutral-focus": "--nf",
   "neutral-content": "--nc",
 
@@ -20,15 +20,15 @@ module.exports = {
   "base-300": "--b3",
   "base-content": "--bc",
 
-  info: "--in",
+  "info": "--in",
   "info-content": "--inc",
 
-  success: "--su",
+  "success": "--su",
   "success-content": "--suc",
 
-  warning: "--wa",
+  "warning": "--wa",
   "warning-content": "--wac",
 
-  error: "--er",
+  "error": "--er",
   "error-content": "--erc",
 }

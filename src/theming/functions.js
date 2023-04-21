@@ -168,7 +168,8 @@ module.exports = {
       config("daisyui.themes").forEach((item) => {
         if (typeof item === "object" && item !== null) {
           Object.entries(item).forEach(([customThemeName, customThemevalue]) => {
-            includedThemesObj["[data-theme=" + customThemeName + "]"] = this.convertToLch(customThemevalue)
+            includedThemesObj["[data-theme=" + customThemeName + "]"] =
+              this.convertToLch(customThemevalue)
           })
         }
       })
@@ -201,7 +202,10 @@ module.exports = {
       } else if (index === 1) {
         // auto dark
         if (config("daisyui.darkTheme")) {
-          if (themeOrder[0] !== config("daisyui.darkTheme") && themeOrder.includes(config("daisyui.darkTheme"))) {
+          if (
+            themeOrder[0] !== config("daisyui.darkTheme") &&
+            themeOrder.includes(config("daisyui.darkTheme"))
+          ) {
             addBase({
               ["@media (prefers-color-scheme: dark)"]: {
                 [":root"]: includedThemesObj[`[data-theme=${config("daisyui.darkTheme")}]`],
@@ -221,11 +225,13 @@ module.exports = {
         }
         // theme 0 with name
         addBase({
-          ["[data-theme=" + themeOrder[0] + "]"]: includedThemesObj["[data-theme=" + themeOrder[0] + "]"],
+          ["[data-theme=" + themeOrder[0] + "]"]:
+            includedThemesObj["[data-theme=" + themeOrder[0] + "]"],
         })
         // theme 1 with name
         addBase({
-          ["[data-theme=" + themeOrder[1] + "]"]: includedThemesObj["[data-theme=" + themeOrder[1] + "]"],
+          ["[data-theme=" + themeOrder[1] + "]"]:
+            includedThemesObj["[data-theme=" + themeOrder[1] + "]"],
         })
       } else {
         addBase({

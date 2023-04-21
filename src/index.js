@@ -24,7 +24,12 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
   }
   if (logs) {
     console.log()
-    console.log("\x1b[35m%s\x1b[0m", "🌼 daisyUI components " + daisyuiInfo.version, "\x1b[0m", daisyuiInfo.homepage)
+    console.log(
+      "\x1b[35m%s\x1b[0m",
+      "🌼 daisyUI components " + daisyuiInfo.version,
+      "\x1b[0m",
+      daisyuiInfo.homepage
+    )
     console.group()
   }
 
@@ -93,7 +98,12 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     daisyuiIncludedItems.push("utilities")
   }
   if (logs) {
-    console.log("\x1b[32m%s\x1b[0m", "✔︎ Including:", "\x1b[0m", "" + daisyuiIncludedItems.join(", "))
+    console.log(
+      "\x1b[32m%s\x1b[0m",
+      "✔︎ Including:",
+      "\x1b[0m",
+      "" + daisyuiIncludedItems.join(", ")
+    )
     console.log("\x1b[32m%s\x1b[0m", "❤︎ Support daisyUI: ", daisyuiInfo.funding.url, "\x1b[0m")
     console.log()
     console.groupEnd()
