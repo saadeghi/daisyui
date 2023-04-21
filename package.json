@@ -93,12 +93,10 @@
     "@parcel/css-cli": "^1.13.1",
     "@types/css-selector-tokenizer": "^0.7.1",
     "@vitest/ui": "^0.30.1",
-    "autoprefixer": "10.4.14",
     "c8": "^7.13.0",
     "color-contrast-checker": "^2.1.0",
     "postcss-cli": "10.1.0",
     "postcss-import": "15.1.0",
-    "postcss-nested": "6.0.1",
     "prejss-cli": "0.3.3",
     "prettier": "^2.8.7",
     "rtlcss": "4.1.0",
@@ -112,7 +110,6 @@
     "tailwindcss": "^3"
   },
   "peerDependencies": {
-    "autoprefixer": "^10",
     "postcss": "^8"
   }
 }
