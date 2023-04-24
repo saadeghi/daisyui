@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.51.6](https://github.com/saadeghi/daisyui/compare/v2.51.5...v2.51.6) (2023-04-24)
+
+
+### Bug Fixes
+
+* [#778](https://github.com/saadeghi/daisyui/issues/778) fixed border radius of menu and submenu with only child ([#1713](https://github.com/saadeghi/daisyui/issues/1713)) ([d00c765](https://github.com/saadeghi/daisyui/commit/d00c7658802a3c97b24c6ad2ce952572390b3af4))
+* `image-full` modifier uses the correct prefix ([#1718](https://github.com/saadeghi/daisyui/issues/1718)) ([51d669d](https://github.com/saadeghi/daisyui/commit/51d669d285ef78b95408156a36b4c70195bb4cb2))
+* collapse class to uses the correct prefix ([#1733](https://github.com/saadeghi/daisyui/issues/1733)) ([d3844ee](https://github.com/saadeghi/daisyui/commit/d3844eecc2677243706e65417de1ab4231b38eb1))
+
 ### [2.51.5](https://github.com/saadeghi/daisyui/compare/v2.51.4...v2.51.5) (2023-03-21)
 
 
