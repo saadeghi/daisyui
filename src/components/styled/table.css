@@ -48,11 +48,11 @@
   :where(*:first-child) {
     :where(th, td) {
       &:first-child {
-        @apply rounded-tl-lg;
+        @apply rounded-tl-box;
       }
 
       &:last-child {
-        @apply rounded-tr-lg;
+        @apply rounded-tr-box;
       }
     }
   }
@@ -62,11 +62,11 @@
   :where(*:last-child) {
     :where(th, td) {
       &:first-child {
-        @apply rounded-bl-lg;
+        @apply rounded-bl-box;
       }
 
       &:last-child {
-        @apply rounded-br-lg;
+        @apply rounded-br-box;
       }
     }
   }
