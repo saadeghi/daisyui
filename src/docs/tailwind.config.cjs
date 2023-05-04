@@ -16,7 +16,7 @@ module.exports = {
     extend: {
       colors: require("../theming"),
       fontFamily: {
-        title: ["Montserrat", "sans-serif"],
+        title: ["Figtree", "sans-serif"],
       },
     },
   },

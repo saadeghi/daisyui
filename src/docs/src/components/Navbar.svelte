@@ -25,7 +25,7 @@
     $page.url.pathname == "/"
       ? switchNavbarStyle
         ? "bg-base-100 text-base-content shadow-sm"
-        : "text-primary-content"
+        : "text-base-content"
       : switchNavbarStyle
       ? "bg-base-100 text-base-content shadow-sm"
       : "bg-base-100 text-base-content"
@@ -62,15 +62,13 @@
           aria-current="page"
           aria-label="Homepage"
           class={`flex-0 btn btn-ghost px-2 ${
-            switchNavbarStyle || $page.url.pathname != "/" ? "" : "hidden"
+            switchNavbarStyle || $page.url.pathname != "/" ? "" : ""
           }`}>
           <div
             class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
             <span
               class={`lowercase ${
-                switchNavbarStyle || $page.url.pathname != "/"
-                  ? "text-primary"
-                  : "text-primary-content"
+                switchNavbarStyle || $page.url.pathname != "/" ? "text-primary" : "text-primary"
               }`}>
               daisy
             </span>
@@ -78,7 +76,7 @@
               class={`uppercase ${
                 switchNavbarStyle || $page.url.pathname != "/"
                   ? "text-base-content"
-                  : "text-primary-content"
+                  : "text-base-content"
               }`}>
               UI
             </span>
@@ -87,7 +85,7 @@
         <a
           href="/docs/changelog"
           class={`link link-hover font-mono text-xs text-opacity-50 ${
-            switchNavbarStyle || $page.url.pathname != "/" ? "" : "hidden"
+            switchNavbarStyle || $page.url.pathname != "/" ? "" : ""
           }`}>
           <div data-tip="Changelog" class="tooltip tooltip-bottom">
             {version}
