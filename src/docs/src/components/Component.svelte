@@ -61,7 +61,7 @@
         on:click={() => (showContent = "preview")}
         class={`tab tab-lifted ${
           showContent == "preview"
-            ? "tab-active [--tab-bg:lch(var(--b2))]"
+            ? "tab-active [--tab-bg:hsl(var(--b2))]"
             : "[--tab-border-color:transparent]"
         }`}>
         <Translate text="Preview" />
@@ -70,7 +70,7 @@
         on:click={() => (showContent = "html")}
         class={`tab tab-lifted ${
           showContent == "html"
-            ? "tab-active [--tab-bg:lch(var(--n))] [--tab-color:lch(var(--nc))] [--tab-border-color:lch(var(--n))]"
+            ? "tab-active [--tab-bg:hsl(var(--n))] [--tab-border-color:hsl(var(--n))] [--tab-color:hsl(var(--nc))]"
             : "[--tab-border-color:transparent]"
         }`}>
         HTML
@@ -79,7 +79,7 @@
         on:click={() => (showContent = "react")}
         class={`tab tab-lifted ${
           showContent == "react"
-            ? "tab-active [--tab-bg:lch(var(--n))] [--tab-color:lch(var(--nc))] [--tab-border-color:lch(var(--n))]"
+            ? "tab-active [--tab-bg:hsl(var(--n))] [--tab-border-color:hsl(var(--n))] [--tab-color:hsl(var(--nc))]"
             : "[--tab-border-color:transparent]"
         }`}>
         JSX
@@ -202,9 +202,9 @@
     min-height: 6rem;
   }
   .prose .component-preview pre[class*="language-"] .token.comment {
-    color: lch(var(--nc) / 0.4);
+    color: hsl(var(--nc) / 0.4);
   }
   .prose .component-preview .preview {
-    background-image: radial-gradient(lch(var(--bc) / 0.2) 0.5px, lch(var(--b2) / 1) 0.5px);
+    background-image: radial-gradient(hsl(var(--bc) / 0.2) 0.5px, hsl(var(--b2) / 1) 0.5px);
   }
 </style>

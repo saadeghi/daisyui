@@ -73,7 +73,7 @@
     "prejss": "prejss-cli dist/{unstyled,styled}{,.rtl}.css --format commonjs",
     "themes": "postcss src/themes/index.css -o dist/themes.css --config src/themes",
     "full": "postcss src/full/index.css -o dist/full.css --config src/full",
-    "postfull": "parcel-css --minify --targets '> 7%' dist/full.css -o dist/full.css",
+    "disabledpostfull": "lightningcss --minify --targets '> 7%' dist/full.css -o dist/full.css",
     "build": "npm run base && npm run utilities:global && npm run utilities:unstyled && npm run utilities:styled && npm run components && npm run merge:unstyled && npm run merge:styled && npm run rtl && npm run prejss && npm run themes && npm run full",
     "install:docs": "cd src/docs && npm install",
     "dev": "cd src/docs && npm run dev",
@@ -89,9 +89,9 @@
     "release:major": "rm -f package-lock.json && standard-version --release-as major"
   },
   "devDependencies": {
-    "@parcel/css-cli": "^1.13.1",
     "@vitest/ui": "^0.30.1",
     "c8": "^7.13.0",
+    "lightningcss-cli": "^1.20.0",
     "postcss-cli": "10.1.0",
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",
@@ -105,7 +105,7 @@
     "colord": "^2.9.3",
     "css-selector-tokenizer": "^0.8.0",
     "postcss-js": "^4",
-    "tailwindcss": "^3"
+    "tailwindcss": "^3.3.2"
   },
   "peerDependencies": {
     "postcss": "^8"

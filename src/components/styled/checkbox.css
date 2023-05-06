@@ -3,37 +3,36 @@
   --chkfg: var(--b1);
   @apply h-6 w-6 cursor-pointer appearance-none border border-base-content border-opacity-20 rounded-btn;
   &:focus-visible {
-    outline: 2px solid lch(var(--bc));
-    outline-offset: 2px;
+    @apply outline outline-2 outline-offset-2 outline-base-content;
   }
   &:checked,
   &[checked="true"],
   &[aria-checked="true"] {
     @apply bg-base-content bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-in-out;
-    background-image: linear-gradient(-45deg, transparent 65%, lch(var(--chkbg)) 65.99%),
-      linear-gradient(45deg, transparent 75%, lch(var(--chkbg)) 75.99%),
-      linear-gradient(-45deg, lch(var(--chkbg)) 40%, transparent 40.99%),
+    background-image: linear-gradient(-45deg, transparent 65%, hsl(var(--chkbg)) 65.99%),
+      linear-gradient(45deg, transparent 75%, hsl(var(--chkbg)) 75.99%),
+      linear-gradient(-45deg, hsl(var(--chkbg)) 40%, transparent 40.99%),
       linear-gradient(
         45deg,
-        lch(var(--chkbg)) 30%,
-        lch(var(--chkfg)) 30.99%,
-        lch(var(--chkfg)) 40%,
+        hsl(var(--chkbg)) 30%,
+        hsl(var(--chkfg)) 30.99%,
+        hsl(var(--chkfg)) 40%,
         transparent 40.99%
       ),
-      linear-gradient(-45deg, lch(var(--chkfg)) 50%, lch(var(--chkbg)) 50.99%);
+      linear-gradient(-45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
   }
   &:indeterminate {
     @apply bg-base-content bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-in-out;
-    background-image: linear-gradient(90deg, transparent 80%, lch(var(--chkbg)) 80%),
-      linear-gradient(-90deg, transparent 80%, lch(var(--chkbg)) 80%),
+    background-image: linear-gradient(90deg, transparent 80%, hsl(var(--chkbg)) 80%),
+      linear-gradient(-90deg, transparent 80%, hsl(var(--chkbg)) 80%),
       linear-gradient(
         0deg,
-        lch(var(--chkbg)) 43%,
-        lch(var(--chkfg)) 43%,
-        lch(var(--chkfg)) 57%,
-        lch(var(--chkbg)) 57%
+        hsl(var(--chkbg)) 43%,
+        hsl(var(--chkfg)) 43%,
+        hsl(var(--chkfg)) 57%,
+        hsl(var(--chkbg)) 57%
       );
   }
   &-primary {
@@ -41,7 +40,7 @@
     --chkfg: var(--pc);
     @apply border-primary hover:border-primary;
     &:focus-visible {
-      outline: 2px solid lch(var(--p));
+      @apply outline-primary;
     }
     &:checked,
     &[checked="true"],
@@ -54,7 +53,7 @@
     --chkfg: var(--sc);
     @apply border-secondary hover:border-secondary;
     &:focus-visible {
-      outline: 2px solid lch(var(--s));
+      @apply outline-secondary;
     }
     &:checked,
     &[checked="true"],
@@ -67,7 +66,7 @@
     --chkfg: var(--ac);
     @apply border-accent hover:border-accent;
     &:focus-visible {
-      outline: 2px solid lch(var(--a));
+      @apply outline-accent;
     }
     &:checked,
     &[checked="true"],
@@ -80,7 +79,7 @@
     --chkfg: var(--suc);
     @apply border-success hover:border-success;
     &:focus-visible {
-      outline: 2px solid lch(var(--su));
+      @apply outline-success;
     }
     &:checked,
     &[checked="true"],
@@ -93,7 +92,7 @@
     --chkfg: var(--wac);
     @apply border-warning hover:border-warning;
     &:focus-visible {
-      outline: 2px solid lch(var(--wa));
+      @apply outline-warning;
     }
     &:checked,
     &[checked="true"],
@@ -106,7 +105,7 @@
     --chkfg: var(--inc);
     @apply border-info hover:border-info;
     &:focus-visible {
-      outline: 2px solid lch(var(--in));
+      @apply outline-info;
     }
     &:checked,
     &[checked="true"],
@@ -119,7 +118,7 @@
     --chkfg: var(--erc);
     @apply border-error hover:border-error;
     &:focus-visible {
-      outline: 2px solid lch(var(--er));
+      @apply outline-error;
     }
     &:checked,
     &[checked="true"],
@@ -154,17 +153,17 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      background-image: linear-gradient(45deg, transparent 65%, lch(var(--chkbg)) 65.99%),
-        linear-gradient(-45deg, transparent 75%, lch(var(--chkbg)) 75.99%),
-        linear-gradient(45deg, lch(var(--chkbg)) 40%, transparent 40.99%),
+      background-image: linear-gradient(45deg, transparent 65%, hsl(var(--chkbg)) 65.99%),
+        linear-gradient(-45deg, transparent 75%, hsl(var(--chkbg)) 75.99%),
+        linear-gradient(45deg, hsl(var(--chkbg)) 40%, transparent 40.99%),
         linear-gradient(
           -45deg,
-          lch(var(--chkbg)) 30%,
-          lch(var(--chkfg)) 30.99%,
-          lch(var(--chkfg)) 40%,
+          hsl(var(--chkbg)) 30%,
+          hsl(var(--chkfg)) 30.99%,
+          hsl(var(--chkfg)) 40%,
           transparent 40.99%
         ),
-        linear-gradient(45deg, lch(var(--chkfg)) 50%, lch(var(--chkbg)) 50.99%);
+        linear-gradient(45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
     }
   }
 }

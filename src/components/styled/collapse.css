@@ -12,16 +12,14 @@ details.collapse {
 }
 
 .collapse:focus-visible {
-  outline: 2px solid lch(var(--bc));
-  outline-offset: 2px;
+  @apply outline outline-2 outline-offset-2 outline-base-content;
 }
 details.collapse summary {
   @apply outline-none;
 }
 .collapse:has(.collapse-title:focus-visible),
 .collapse:has(input[type="checkbox"]:focus-visible) {
-  outline: 2px solid lch(var(--bc));
-  outline-offset: 2px;
+  @apply outline outline-2 outline-offset-2 outline-base-content;
 }
 .collapse-arrow .collapse-title:after {
   @apply absolute block h-2 w-2 transition-all ease-in-out rotate-[45deg] translate-y-[-100%];

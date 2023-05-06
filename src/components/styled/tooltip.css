@@ -1,30 +1,30 @@
 .tooltip.tooltip {
   &-primary {
-    --tooltip-color: lch(var(--p));
-    --tooltip-text-color: lch(var(--pc));
+    --tooltip-color: hsl(var(--p));
+    --tooltip-text-color: hsl(var(--pc));
   }
   &-secondary {
-    --tooltip-color: lch(var(--s));
-    --tooltip-text-color: lch(var(--sc));
+    --tooltip-color: hsl(var(--s));
+    --tooltip-text-color: hsl(var(--sc));
   }
   &-accent {
-    --tooltip-color: lch(var(--a));
-    --tooltip-text-color: lch(var(--ac));
+    --tooltip-color: hsl(var(--a));
+    --tooltip-text-color: hsl(var(--ac));
   }
   &-info {
-    --tooltip-color: lch(var(--in));
-    --tooltip-text-color: lch(var(--inc));
+    --tooltip-color: hsl(var(--in));
+    --tooltip-text-color: hsl(var(--inc));
   }
   &-success {
-    --tooltip-color: lch(var(--su));
-    --tooltip-text-color: lch(var(--suc));
+    --tooltip-color: hsl(var(--su));
+    --tooltip-text-color: hsl(var(--suc));
   }
   &-warning {
-    --tooltip-color: lch(var(--wa));
-    --tooltip-text-color: lch(var(--wac));
+    --tooltip-color: hsl(var(--wa));
+    --tooltip-text-color: hsl(var(--wac));
   }
   &-error {
-    --tooltip-color: lch(var(--er));
-    --tooltip-text-color: lch(var(--erc));
+    --tooltip-color: hsl(var(--er));
+    --tooltip-text-color: hsl(var(--erc));
   }
 }

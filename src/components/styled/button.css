@@ -21,8 +21,7 @@
       @apply border-base-300 bg-base-200;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--b3));
-      outline-offset: 2px;
+      @apply outline outline-2 outline-offset-2 outline-base-300;
     }
   }
   /* brand colors */
@@ -33,7 +32,7 @@
       @apply border-primary-focus bg-primary-focus;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--p));
+      @apply outline-primary;
     }
   }
   &-secondary {
@@ -43,7 +42,7 @@
       @apply border-secondary-focus bg-secondary-focus;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--s));
+      @apply outline-secondary;
     }
   }
   &-accent {
@@ -53,7 +52,7 @@
       @apply border-accent-focus bg-accent-focus;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--a));
+      @apply outline-accent;
     }
   }
   &-neutral {
@@ -63,7 +62,7 @@
       @apply border-neutral-focus bg-neutral-focus;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--n));
+      @apply outline-neutral;
     }
   }
 
@@ -75,7 +74,7 @@
       @apply border-info bg-info;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--in));
+      @apply outline-info;
     }
   }
   &-success {
@@ -85,7 +84,7 @@
       @apply border-success bg-success;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--su));
+      @apply outline-success;
     }
   }
   &-warning {
@@ -95,7 +94,7 @@
       @apply border-warning bg-warning;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--wa));
+      @apply outline-warning;
     }
   }
   &-error {
@@ -105,7 +104,7 @@
       @apply border-error bg-error;
     }
     &:focus-visible {
-      outline: 2px solid lch(var(--er));
+      @apply outline-error;
     }
   }
 
@@ -118,7 +117,7 @@
       --glass-border-opacity: 15%;
     }
     &:focus-visible {
-      outline: 2px solid currentColor;
+      @apply outline-current;
     }
   }
 
@@ -130,7 +129,7 @@
       @apply border-opacity-0 bg-base-content bg-opacity-20;
     }
     &:focus-visible {
-      outline: 2px solid currentColor;
+      @apply outline-current;
     }
   }
   &-link {
@@ -140,7 +139,7 @@
       @apply border-transparent bg-transparent underline;
     }
     &:focus-visible {
-      outline: 2px solid currentColor;
+      @apply outline-current;
     }
   }
 
@@ -216,7 +215,7 @@
   & > .btn-active {
     @apply border-primary bg-primary text-primary-content;
     &:focus-visible {
-      outline: 2px solid lch(var(--p));
+      @apply outline outline-2 outline-primary;
     }
   }
 }

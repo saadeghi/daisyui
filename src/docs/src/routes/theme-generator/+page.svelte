@@ -17,23 +17,23 @@
 
   import { default as randomColor } from "randomcolor"
 
-  function changeLchValuesToObject(input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return { l, c, h, a: 1 }
+  function changeColorValuesToObject(input) {
+    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return { h, s, l, a: 1 }
   }
 
-  function turnLchValuesToString(input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return `${l} ${c} ${h}`
+  function turnColorValuesToString(input) {
+    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return `${h} ${s}% ${l}%`
   }
 
   function getColorValueFromTheme(variable) {
     if (browser) {
       let colorValues = getComputedStyle(document.documentElement).getPropertyValue(variable)
       return colord(
-        `lch(${changeLchValuesToObject(colorValues).l}% ${changeLchValuesToObject(colorValues).c} ${
-          changeLchValuesToObject(colorValues).h
-        })`
+        `hsl(${changeColorValuesToObject(colorValues).h} ${
+          changeColorValuesToObject(colorValues).s
+        }% ${changeColorValuesToObject(colorValues).l}%)`
       ).toHex()
     }
     return null
@@ -229,13 +229,13 @@
         .forEach((color) => {
           wrapper.style.setProperty(
             color.variable,
-            turnLchValuesToString(colord(color.value).toLchString())
+            turnColorValuesToString(colord(color.value).toHslString())
           )
         })
       generateOptionalColors(colors).forEach((color) => {
         wrapper.style.setProperty(
           color.variable,
-          turnLchValuesToString(colord(color.value).toLchString())
+          turnColorValuesToString(colord(color.value).toHslString())
         )
       })
       if (browser) {
@@ -360,7 +360,7 @@
       <h2 class="px-2 pb-4 text-xl font-bold">tailwind.config.js</h2>
       {#if browser}
         <div class="mockup-code not-prose relative">
-          <div class="absolute top-2 right-2">
+          <div class="absolute right-2 top-2">
             <button class="btn btn-xs normal-case" on:click={() => randomize()}>
               <Translate text="Randomize" />
             </button>

@@ -93,7 +93,7 @@
   </div>
 {:else if slot === "carbon2"}
   <div>
-    <div class="sticky top-20 my-6 xl:my-0 xl:mx-2 xl:mt-32 xl:w-[130px]">
+    <div class="sticky top-20 my-6 xl:mx-2 xl:my-0 xl:mt-32 xl:w-[130px]">
       <div class="hidden xl:block">
         <Sponsors />
       </div>
@@ -120,8 +120,8 @@
   #carbonads {
     display: flex;
     max-width: 350px;
-    color: lch(var(--bc));
-    background-color: lch(var(--b2));
+    color: hsl(var(--bc));
+    background-color: hsl(var(--b2));
     box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
     z-index: 100;
     border-radius: 4px;
@@ -160,7 +160,7 @@
   #carbonads .carbon-poweredby {
     display: block;
     padding: 6px 8px;
-    background: lch(var(--b3));
+    background: hsl(var(--b3));
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;

@@ -63,12 +63,12 @@
         <br />
         <span class="inline-grid">
           <span
-            class="pointer-events-none col-start-1 row-start-1 bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,lch(var(--s))_4%,color-mix(in_lch,lch(var(--sf)),lch(var(--pf)))_22%,lch(var(--p))_45%,color-mix(in_lch,lch(var(--p)),lch(var(--a)))_67%,lch(var(--a))_100.2%)]"
+            class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
             aria-hidden="true">
             component library
           </span>
           <span
-            class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-clip-text leading-tight [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,lch(var(--s))_4%,color-mix(in_lch,lch(var(--sf)),lch(var(--pf)))_22%,lch(var(--p))_45%,color-mix(in_lch,lch(var(--p)),lch(var(--a)))_67%,lch(var(--a))_100.2%)] [&::selection]:bg-blue-700/20">
+            class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text leading-tight [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
             component library
           </span>
         </span>
@@ -122,10 +122,10 @@
 <!-- hero figure -->
 
 <div
-  class="fixed top-12 -right-32 flex h-full overflow-x-hidden overflow-y-clip pl-10 pt-16 opacity-0 transition-opacity duration-700"
+  class="fixed -right-32 top-12 flex h-full overflow-x-hidden overflow-y-clip pl-10 pt-16 opacity-0 transition-opacity duration-700"
   style:opacity={scrollY >= 0 ? 1 : 0}>
   <div
-    class="mockup mockup-window bg-base-200 -right-20 h-[32rem] w-[50rem] origin-right overflow-visible rounded-r-none pr-4 pb-4 shadow-[-0.05rem_0.1rem_0rem_#00000014] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)]"
+    class="mockup mockup-window bg-base-200 -right-20 h-[32rem] w-[50rem] origin-right overflow-visible rounded-r-none pb-4 pr-4 shadow-[-0.05rem_0.1rem_0rem_#00000014] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)]"
     style={`transform: rotateX(${animateValue(hero1, [60, 100], [20, 0])}deg)rotateZ(${animateValue(
       hero1,
       [50, 100],
@@ -174,7 +174,7 @@
               class:rounded-tr-box={activeMenuItemOnHeroMockup !== 3}
               class:rounded-tl-box={activeMenuItemOnHeroMockup !== 1}>
               {#if activeMenuItemOnHeroMockup === 1}
-                <div class="flex flex-col items-stretch py-8 px-6">
+                <div class="flex flex-col items-stretch px-6 py-8">
                   <div class="form-control">
                     <label class="label cursor-pointer">
                       <span class="label-text text-xs">Faster development</span>
@@ -638,7 +638,7 @@
   </div>
   <div class="h-[calc(50vh)]" />
   <div class="relative">
-    <div class="w-full py-40 px-2 lg:px-10">
+    <div class="w-full px-2 py-40 lg:px-10">
       <div class="text-center">
         <h2 class="font-title relative z-[2] mx-auto text-7xl font-black leading-none">
           No more ugly HTML!
@@ -661,12 +661,12 @@
               stroke="currentColor" />
           </svg>
         </div>
-        <div class="flex justify-center pt-4 pb-10">
+        <div class="flex justify-center pb-10 pt-4">
           <label class="flex cursor-pointer items-center gap-3">
             Tailwind only
             <div class="relative">
               <div
-                class="pointer-events-none absolute top-1/2 left-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2">
+                class="pointer-events-none absolute left-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2">
                 <div
                   class="bg-primary/30 col-start-1 row-start-1 scale-[2] rounded-full blur-[5rem]" />
               </div>

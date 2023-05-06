@@ -4,8 +4,7 @@
     @apply border-opacity-20;
   }
   &:focus {
-    outline: 2px solid lch(var(--bc) / 0.2);
-    outline-offset: 2px;
+    @apply outline outline-2 outline-offset-2 outline-base-content/20;
   }
   &-ghost {
     @apply bg-opacity-5;
@@ -17,43 +16,43 @@
   &-primary {
     @apply border-primary;
     &:focus {
-      outline: 2px solid lch(var(--p));
+      @apply outline-primary;
     }
   }
   &-secondary {
     @apply border-secondary;
     &:focus {
-      outline: 2px solid lch(var(--s));
+      @apply outline-secondary;
     }
   }
   &-accent {
     @apply border-accent;
     &:focus {
-      outline: 2px solid lch(var(--a));
+      @apply outline-accent;
     }
   }
   &-info {
     @apply border-info;
     &:focus {
-      outline: 2px solid lch(var(--in));
+      @apply outline-info;
     }
   }
   &-success {
     @apply border-success;
     &:focus {
-      outline: 2px solid lch(var(--su));
+      @apply outline-success;
     }
   }
   &-warning {
     @apply border-warning;
     &:focus {
-      outline: 2px solid lch(var(--wa));
+      @apply outline-warning;
     }
   }
   &-error {
     @apply border-error;
     &:focus {
-      outline: 2px solid lch(var(--er));
+      @apply outline-error;
     }
   }
   &-disabled,

@@ -1,5 +1,5 @@
 .toggle {
-  --tglbg: lch(var(--b1));
+  --tglbg: hsl(var(--b1));
   --handleoffset: 1.5rem;
   --handleoffsetcalculator: calc(var(--handleoffset) * -1);
   --togglehandleborder: 0 0;
@@ -11,8 +11,7 @@
     --handleoffsetcalculator: calc(var(--handleoffset) * 1);
   }
   &:focus-visible {
-    outline: 2px solid lch(var(--bc));
-    outline-offset: 2px;
+    @apply outline outline-2 outline-offset-2 outline-base-content/20;
   }
   &:checked,
   &[checked="true"],
@@ -34,7 +33,7 @@
   }
   &-primary {
     &:focus-visible {
-      outline: 2px solid lch(var(--p));
+      @apply outline-primary;
     }
     &:checked,
     &[checked="true"],
@@ -45,7 +44,7 @@
   }
   &-secondary {
     &:focus-visible {
-      outline: 2px solid lch(var(--s));
+      @apply outline-secondary;
     }
     &:checked,
     &[checked="true"],
@@ -56,7 +55,7 @@
   }
   &-accent {
     &:focus-visible {
-      outline: 2px solid lch(var(--a));
+      @apply outline-accent;
     }
     &:checked,
     &[checked="true"],
@@ -67,7 +66,7 @@
   }
   &-success {
     &:focus-visible {
-      outline: 2px solid lch(var(--su));
+      @apply outline-info;
     }
     &:checked,
     &[checked="true"],
@@ -78,7 +77,7 @@
   }
   &-warning {
     &:focus-visible {
-      outline: 2px solid lch(var(--wa));
+      @apply outline-success;
     }
     &:checked,
     &[checked="true"],
@@ -89,7 +88,7 @@
   }
   &-info {
     &:focus-visible {
-      outline: 2px solid lch(var(--in));
+      @apply outline-warning;
     }
     &:checked,
     &[checked="true"],
@@ -100,19 +99,18 @@
   }
   &-error {
     &:focus-visible {
-      outline: 2px solid lch(var(--er));
+      @apply outline-error;
     }
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      @apply border-error;
       @apply border-error border-opacity-10 bg-error text-error-content;
     }
   }
   &:disabled {
     @apply cursor-not-allowed bg-transparent border-base-content opacity-30;
-    --togglehandleborder: 0 0 0 3px lch(var(--bc)) inset,
-      var(--handleoffsetcalculator) 0 0 3px lch(var(--bc)) inset;
+    --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset,
+      var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
   }
 }
 

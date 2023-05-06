@@ -16,7 +16,15 @@ const utilitiesStyled = require("../dist/utilities-styled")
 const themes = require("./theming/themes")
 const colorFunctions = require("./theming/functions")
 
-const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss }) => {
+const mainFunction = ({
+  addBase,
+  addComponents,
+  addUtilities,
+  matchUtilities,
+  theme,
+  config,
+  postcss,
+}) => {
   let daisyuiIncludedItems = []
   let logs = false
   if (config("daisyui.logs") != false) {
@@ -75,10 +83,12 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
 
   addComponents(file)
 
-  const themeInjector = colorFunctions.injectThemes(addBase, config, themes)
-  themeInjector
+  const themeInjectorHsl = colorFunctions.injectThemes(addBase, config, themes, "hsl")
+  themeInjectorHsl
+  // const themeInjectorLch = colorFunctions.injectThemes(addBase, config, themes, "lch")
+  // themeInjectorLch
 
-  daisyuiIncludedItems.push(themeInjector.themeOrder.length + " themes")
+  // daisyuiIncludedItems.push(themeInjectorLch.themeOrder.length + " themes")
 
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
@@ -97,6 +107,30 @@ const mainFunction = ({ addBase, addComponents, addUtilities, config, postcss })
     addComponents(toAdd, { variants: ["responsive"] })
     daisyuiIncludedItems.push("utilities")
   }
+  // matchUtilities(
+  //   {
+  //     text: (value) => ({
+  //       "@supports (color: lch(0 0 0))": {
+  //         color: value.replace("hsl", "lch").replace("<alpha-value>", "var(--tw-text-opacity)"),
+  //       },
+  //     }),
+  //     bg: (value) => ({
+  //       "@supports (color: lch(0 0 0))": {
+  //         backgroundColor: value
+  //           .replace("hsl", "lch")
+  //           .replace("<alpha-value>", "var(--tw-bg-opacity)"),
+  //       },
+  //     }),
+  //     border: (value) => ({
+  //       "@supports (color: lch(0 0 0))": {
+  //         borderColor: value
+  //           .replace("hsl", "lch")
+  //           .replace("<alpha-value>", "var(--tw-border-opacity)"),
+  //       },
+  //     }),
+  //   },
+  //   { values: theme("colors") }
+  // )
   if (logs) {
     console.log(
       "\x1b[32m%s\x1b[0m",

@@ -1,10 +1,9 @@
 .menu {
   @apply p-2;
   :where(li:empty) {
+    @apply bg-base-content/10;
     margin: 0.5rem 1rem;
     height: 1px;
-    background-color: lch(var(--bc) / var(--tw-bg-opacity));
-    --tw-bg-opacity: 0.1;
   }
   :where(li ul) {
     @apply pl-2 ml-4;

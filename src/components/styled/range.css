@@ -4,40 +4,36 @@
   --range-shdw: var(--bc);
   @apply bg-transparent rounded-box overflow-hidden;
   &:focus-visible::-webkit-slider-thumb {
-    --focus-shadow: 0 0 0 6px lch(var(--b1)) inset, 0 0 0 2rem lch(var(--range-shdw)) inset;
+    --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
   }
   &:focus-visible::-moz-range-thumb {
-    --focus-shadow: 0 0 0 6px lch(var(--b1)) inset, 0 0 0 2rem lch(var(--range-shdw)) inset;
+    --focus-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 2rem hsl(var(--range-shdw)) inset;
   }
   &::-webkit-slider-runnable-track {
-    @apply h-2 w-full rounded-box;
-    background-color: lch(var(--bc) / 0.1);
+    @apply h-2 w-full rounded-box bg-base-content/10;
   }
   &::-moz-range-track {
-    @apply h-2 w-full rounded-box;
-    background-color: lch(var(--bc) / 0.1);
+    @apply h-2 w-full rounded-box bg-base-content/10;
   }
   &::-webkit-slider-thumb {
-    background-color: lch(var(--b1));
-    @apply relative h-6 w-6 border-none rounded-box;
+    @apply relative h-6 w-6 border-none rounded-box bg-base-100;
     appearance: none;
     -webkit-appearance: none;
     top: 50%;
-    color: lch(var(--range-shdw));
+    color: hsl(var(--range-shdw));
     transform: translateY(-50%);
     --filler-size: 100rem;
     --filler-offset: 0.6rem;
-    box-shadow: 0 0 0 3px lch(var(--range-shdw)) inset, var(--focus-shadow, 0 0),
+    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0),
       calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &::-moz-range-thumb {
-    background-color: lch(var(--b1));
-    @apply relative h-6 w-6 border-none rounded-box;
+    @apply relative h-6 w-6 border-none rounded-box bg-base-100;
     top: 50%;
-    color: lch(var(--range-shdw));
+    color: hsl(var(--range-shdw));
     --filler-size: 100rem;
     --filler-offset: 0.5rem;
-    box-shadow: 0 0 0 3px lch(var(--range-shdw)) inset, var(--focus-shadow, 0 0),
+    box-shadow: 0 0 0 3px hsl(var(--range-shdw)) inset, var(--focus-shadow, 0 0),
       calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
   &-primary {

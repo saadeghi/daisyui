@@ -2,23 +2,21 @@
   &.online {
     &:before {
       content: "";
-      @apply absolute z-10 block rounded-full bg-success;
+      @apply absolute z-10 block rounded-full bg-success outline outline-2 outline-base-100;
       width: 15%;
       height: 15%;
       top: 7%;
       right: 7%;
-      box-shadow: 0 0 0 2px lch(var(--b1));
     }
   }
   &.offline {
     &:before {
       content: "";
-      @apply absolute z-10 block rounded-full bg-base-300;
+      @apply absolute z-10 block rounded-full bg-base-300 outline outline-2 outline-base-100;
       width: 15%;
       height: 15%;
       top: 7%;
       right: 7%;
-      box-shadow: 0 0 0 2px lch(var(--b1));
     }
   }
 }

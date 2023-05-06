@@ -1,5 +1,12 @@
 :root,
 [data-theme] {
-  background-color: lch(var(--b1) / var(--tw-bg-opacity, 1));
-  color: lch(var(--bc) / var(--tw-text-opacity, 1));
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity, 1));
+  color: hsl(var(--bc) / var(--tw-text-opacity, 1));
 }
+/* @supports (color: lch(0 0 0)) {
+  :root,
+  [data-theme] {
+    background-color: lch(var(--b1) / var(--tw-bg-opacity, 1));
+    color: lch(var(--bc) / var(--tw-text-opacity, 1));
+  }
+} */

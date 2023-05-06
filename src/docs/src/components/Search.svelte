@@ -110,15 +110,15 @@
   [data-svelte-search][data-svelte-search] input:focus {
     outline: none;
     outline-offset: 0;
-    border: 2px solid lch(var(--bc) / 0.2);
-    background-color: lch(var(--b1));
-    color: lch(var(--bc));
+    border: 2px solid hsl(var(--bc) / 0.2);
+    background-color: hsl(var(--b1));
+    color: hsl(var(--bc));
   }
   [data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"]
     .svelte-typeahead-list {
     transform: translateY(0.5em);
-    background: lch(var(--b1) / 0.99);
-    border: 0 solid lch(var(--bc) / 0.2);
+    background: hsl(var(--b1) / 0.99);
+    border: 0 solid hsl(var(--bc) / 0.2);
     border-radius: var(--rounded-box);
     overflow: hidden;
     padding: 0.5rem;
@@ -128,16 +128,16 @@
   }
   [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected,
   [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected:hover {
-    background: lch(var(--n));
-    color: lch(var(--nc));
+    background: hsl(var(--n));
+    color: hsl(var(--nc));
   }
   [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li {
-    color: lch(var(--bc));
+    color: hsl(var(--bc));
     border-radius: var(--rounded-btn);
   }
   [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:hover {
-    background: lch(var(--b2));
-    color: lch(var(--bc));
+    background: hsl(var(--b2));
+    color: hsl(var(--bc));
   }
   [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:not(:last-of-type) {
     border-bottom: none;
