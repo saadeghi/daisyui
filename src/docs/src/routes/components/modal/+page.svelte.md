@@ -41,7 +41,7 @@ data="{[
   <div>Make sure you're using unique IDs for each modal</div>
 </div>
 
-### Method 1: using dialog element
+### Method 1: using dialog element <span class="badge badge-success">recommended</span>
 
 <Component title="Dialog modal" desc="opens on click using ID.showModal() method. can be closed using ID.close() method">
 <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
@@ -241,7 +241,7 @@ data="{[
 }</pre>
 </Component>
 
-### Method 2: using a hidden checkbox
+### Method 2: using a hidden checkbox <span class="badge badge-warning">legacy</span>
 
 <Component title="Modal using label + hidden checkbox">
 <label for="my_modal_6" class="btn">open modal</label>
@@ -313,7 +313,7 @@ data="{[
 }</pre>
 </Component>
 
-### Method 3: using anchor links
+### Method 3: using anchor links <span class="badge badge-warning">legacy</span>
 
 <Component title="Modal using anchor link" desc="Anchor links might not work well on some SPA frameworks so if there are problems, use the first example">
 <a href="#my_modal_8" class="btn" rel="external">open modal</a>
