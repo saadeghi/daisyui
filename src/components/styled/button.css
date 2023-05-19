@@ -3,7 +3,6 @@
   border-width: var(--border-btn, 1px);
   animation: button-pop var(--animation-btn, 0.25s) ease-out;
   text-transform: var(--btn-text-case, uppercase);
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 0.05);
   &:active:hover,
   &:active:focus {
     animation: none;
@@ -15,13 +14,13 @@
 
   /* default btn */
   & {
-    @apply border-base-200 bg-base-100 text-base-content no-underline;
+    @apply border-base-200 bg-base-200 text-base-content no-underline;
     &:hover,
     &-active {
-      @apply border-base-300 bg-base-200;
+      @apply border-base-300 bg-base-300;
     }
     &:focus-visible {
-      @apply outline outline-2 outline-offset-2 outline-base-300;
+      @apply outline outline-2 outline-offset-2 outline-base-content;
     }
   }
   /* brand colors */
