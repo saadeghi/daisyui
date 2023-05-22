@@ -122,7 +122,6 @@
     max-width: 350px;
     color: hsl(var(--bc));
     background-color: hsl(var(--b2));
-    box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
     z-index: 100;
     border-radius: 4px;
     overflow: hidden;
