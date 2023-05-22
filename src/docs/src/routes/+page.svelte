@@ -35,7 +35,6 @@
   }
 
   let hero1
-  let hero2
 
   $: scrollY = scrollY
 
@@ -90,16 +89,19 @@
 
 <!-- hero content -->
 <div>
-  <div class="items-top flex min-h-[600vh] items-start justify-between" bind:this={hero1}>
+  <div
+    class="flex min-h-[600vh] flex-col-reverse items-center justify-between xl:flex-row xl:items-start"
+    bind:this={hero1}>
     <div class="shrink-0">
       <div
-        class="px-2 py-32 lg:pl-10 lg:pr-0"
+        class="px-2 py-32 text-center lg:pl-10 lg:pr-0 xl:text-left"
         class:invisible={hero1 && scrollY > hero1.clientHeight}>
         <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
           <pre><code>npm i -D daisyui</code></pre>
         </div>
         <div class="h-4" />
-        <h1 class="font-title text-[clamp(2.5rem,8vw,5rem)] font-black leading-none">
+        <h1
+          class="font-title text-center text-[clamp(2.5rem,8vw,5rem)] font-black leading-none xl:text-left">
           <span
             class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
             The most popular
@@ -123,7 +125,7 @@
           </span>
         </h1>
         <div class="h-4" />
-        <p class="text-base-content/60 font-title py-4 text-2xl font-light">
+        <p class="text-base-content/60 font-title py-4 text-lg font-light xl:text-2xl">
           This plugin adds component class names to Tailwind CSS
           <br />
           so you can make beautiful websites
@@ -162,9 +164,9 @@
       </div>
       <div class="h-[calc(30vh)]" />
       <div>
-        <div class="max-w-[50vw] px-2 py-10 lg:px-10">
+        <div class="max-w-[100vw] px-2 py-10 lg:px-10 xl:max-w-[50vw]">
           <div class="font-title">
-            <h2 class="text-7xl font-bold leading-none">
+            <h2 class="text-[clamp(2.5rem,8vw,4.5rem)] font-bold leading-none">
               Don't re-invent
               <br />
               the wheel
@@ -178,9 +180,10 @@
             </p>
             <div class="h-32" />
             <div class="relative h-[300vh]">
-              <div class="sticky top-[30vh]">
-                <h2 class="text-7xl font-light leading-none">
+              <div class="sticky top-[calc(100vh-20rem)] xl:top-[30vh]">
+                <h2 class="text-[clamp(2.5rem,8vw,4.5rem)] font-light leading-none">
                   Instead of writing
+                  <br />
                   <span class="text-error">
                     <span class="font-black">100</span>
                     class names
@@ -196,8 +199,8 @@
               </div>
             </div>
             <div class="relative h-screen">
-              <div class="sticky top-[30vh]">
-                <h2 class="text-7xl font-light leading-none">
+              <div class="sticky top-[calc(100vh-20rem)] xl:top-[30vh]">
+                <h2 class="text-[clamp(2.5rem,8vw,4.5rem)] font-light leading-none">
                   use
                   <span class="text-success">
                     <span class="font-black">semantic</span>
@@ -220,9 +223,9 @@
     <!-- hero figure -->
 
     <div
-      class="sticky -right-32 top-16 flex shrink overflow-x-hidden overflow-y-clip pb-16 pt-16 duration-700">
+      class="sticky top-16 flex shrink pb-16 pt-16 duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:-right-32 xl:overflow-x-hidden xl:overflow-y-clip xl:[zoom:100%]">
       <div
-        class="mockup mockup-window bg-base-200 -right-20 h-[32rem] w-[50rem] origin-top overflow-visible rounded-r-none pb-4 pr-4 shadow-[-0.05rem_0.1rem_0rem_#00000014] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)]"
+        class="mockup mockup-window bg-base-200 h-[32rem] origin-top overflow-visible pb-4 pr-4 shadow-[-0.05rem_0.1rem_0rem_#00000014] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:w-[50rem] xl:rounded-r-none"
         style={`transform: rotateX(${animateValue(
           hero1,
           [10, 20],
@@ -232,16 +235,16 @@
           [10, 20],
           [8, 0]
         )}deg)`}
-        class:invisible={hero1 && hero2 && scrollY > hero1.clientHeight + hero2.clientHeight}>
+        class:invisible={hero1 && scrollY > hero1.clientHeight}>
         <div class="grid">
-          <div class="col-start-1 row-start-1 grid">
+          <div class="z-[1] col-start-1 row-start-1 grid">
             <!-- flying components -->
             <div
               class="col-start-1 row-start-1 flex items-start"
-              class:invisible={hero1 && scrollY > hero1.clientHeight}>
+              class:invisible={hero1 && scrollY > hero1.clientHeight * 0.2}>
               <div class="w-60">
                 <div
-                  class="relative -left-6 [filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
+                  class="relative -left-6 [filter:drop-shadow(-1rem_3rem_1rem_#00000012)] max-[1280px]:!transform-none"
                   style={`transform:translate(${animateValue(
                     hero1,
                     [3, 23],
@@ -424,7 +427,7 @@
 
                 <div class="flex flex-col gap-4 p-6">
                   <div
-                    class="alert"
+                    class="alert max-[1280px]:!transform-none"
                     style={`transform:translate(${animateValue(
                       hero1,
                       [8, 28],
@@ -446,7 +449,7 @@
                     </span>
                   </div>
                   <div
-                    class="alert"
+                    class="alert max-[1280px]:!transform-none"
                     style={`transform:translate(${animateValue(
                       hero1,
                       [10, 30],
@@ -468,7 +471,7 @@
 
               <div class="flex shrink-0 flex-col gap-6">
                 <div
-                  class="card bg-base-100 shadow-sm"
+                  class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
                   style={`transform:translate(${animateValue(
                     hero1,
                     [0, 20],
@@ -515,7 +518,7 @@
                   </div>
                 </div>
                 <div
-                  class="card bg-base-100 shadow-sm"
+                  class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
                   style={`transform:translate(${animateValue(
                     hero1,
                     [5, 25],
@@ -564,7 +567,11 @@
           </div>
           <div
             class="col-start-1 row-start-1 w-11/12 p-10 opacity-0"
-            style={`opacity:${animateValue(hero1, [20, 22], [0, 1])}`}>
+            style={`opacity:${animateValue(hero1, [20, 22], [0, 1])};z-index:${animateValue(
+              hero1,
+              [20, 22],
+              [0, 1]
+            )}`}>
             <pre class="max-w-lg"><code class="whitespace-pre-wrap">
 <span class="text-base-content/40 italic">// Styling a simple button</span>
 
@@ -589,7 +596,8 @@
 
 <div class="w-full px-2 py-40 lg:px-10">
   <div class="text-center">
-    <h2 class="font-title relative z-[2] mx-auto text-7xl font-black leading-none">
+    <h2
+      class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,8vw,4.5rem)] font-black leading-none">
       Take Tailwind CSS <br />
       to the
       <span
@@ -630,7 +638,8 @@
     <div class="relative">
       <div class="w-full px-2 py-40 lg:px-10">
         <div class="text-center">
-          <h2 class="font-title relative z-[2] mx-auto text-7xl font-black leading-none">
+          <h2
+            class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,8vw,4.5rem)] font-black leading-none">
             No more ugly HTML!
           </h2>
           <p class="text-base-content/60 font-title relative z-[2] py-4 text-3xl font-light">
@@ -669,7 +678,7 @@
             </label>
           </div>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex flex-col items-center gap-6 xl:flex-row">
           {#if toggleValueForCodeCompare}
             <div
               class="mockup-code border-base-content/10 text-base-content relative h-[550px] max-w-[calc(70vw-5rem)] grow border bg-transparent text-xs">
@@ -785,9 +794,9 @@
     </div>
   </div>
 </div>
-<div class="h-[100vh]" bind:this={hero2}>
+<div class="h-[100vh]">
   <div class="relative">
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col items-center justify-between xl:flex-row">
       <div class="shrink-0 px-2 py-10 lg:pl-10 lg:pr-0">
         <h2 class="font-title text-[clamp(2.5rem,8vw,5rem)] font-black leading-none">
           <span>Fewer class names</span>
@@ -803,7 +812,7 @@
           And your HTML size will be about 50% smaller.
         </p>
       </div>
-      <div class="grid grow-0 grid-cols-5 gap-6 p-10">
+      <div class="grid grow-0 gap-6 p-10 xl:grid-cols-5">
         <div
           class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed">
           <div class="card-body">
@@ -840,7 +849,7 @@
           </div>
         </div>
         <div
-          class="card border-base-content/10 col-span-3 col-start-3 row-start-2 flex flex-col border border-dashed">
+          class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed xl:col-start-3">
           <div class="card-body">
             <h3>
               <span class="font-bold">HTML size</span>
