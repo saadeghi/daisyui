@@ -17,24 +17,30 @@
   let activeMenuItemOnCodeExample = 1
   let toggleValueForCodeCompare = false
 
+  export let data
+
   let scrollY
+  let innerHeight
   function scaleValue(value, from, to) {
-    var scale = (to[1] - to[0]) / (from[1] - from[0])
-    var capped = Math.min(from[1], Math.max(from[0], value)) - from[0]
+    let scale = (to[1] - to[0]) / (from[1] - from[0])
+    let capped = Math.min(from[1], Math.max(from[0], value)) - from[0]
     return capped * scale + to[0]
   }
   $: animateValue = function (targetElement, scrollPercentage, animateRange) {
-    return (
-      targetElement &&
-      scaleValue(
-        (scrollY / (targetElement.offsetTop + targetElement.clientHeight)) * 100,
+    if (targetElement) {
+      return scaleValue(
+        ((scrollY - targetElement.offsetTop) / targetElement.clientHeight) * 100,
         scrollPercentage,
         animateRange
       )
-    )
+    }
+    return 0
   }
 
   let hero1
+  let hero2
+  let hero3
+  let hero4
 
   $: scrollY = scrollY
 
@@ -83,25 +89,25 @@
   }
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY bind:innerHeight />
 
 <SEO title="daisyUI" desc="Tailwind Components Library - Free components for Tailwind CSS" />
 
 <!-- hero content -->
 <div>
   <div
-    class="flex min-h-[600vh] flex-col-reverse items-center justify-between xl:flex-row xl:items-start"
+    class="flex min-h-[550vh] flex-col items-center justify-start xl:flex-row xl:items-start xl:justify-between"
     bind:this={hero1}>
     <div class="shrink-0">
       <div
-        class="px-2 py-32 text-center lg:pl-10 lg:pr-0 xl:text-left"
+        class="px-2 py-12 text-center lg:pl-10 lg:pr-0 xl:py-32 xl:text-left"
         class:invisible={hero1 && scrollY > hero1.clientHeight}>
         <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
           <pre><code>npm i -D daisyui</code></pre>
         </div>
         <div class="h-4" />
         <h1
-          class="font-title text-center text-[clamp(2.5rem,8vw,5rem)] font-black leading-none xl:text-left">
+          class="font-title text-center text-[clamp(2rem,8vw,5rem)] font-black leading-none xl:text-left">
           <span
             class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
             The most popular
@@ -125,7 +131,7 @@
           </span>
         </h1>
         <div class="h-4" />
-        <p class="text-base-content/60 font-title py-4 text-lg font-light xl:text-2xl">
+        <p class="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
           This plugin adds component class names to Tailwind CSS
           <br />
           so you can make beautiful websites
@@ -133,7 +139,7 @@
         </p>
         <div class="h-10" />
         <div>
-          <div>
+          <div class="inline-flex flex-col gap-2 md:flex-row">
             <a
               data-sveltekit-preload-data="hover"
               href="/components"
@@ -152,7 +158,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="h-6 w-6 transition-transform duration-300 group-hover:translate-x-1">
+                class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -162,27 +168,27 @@
           </div>
         </div>
       </div>
-      <div class="h-[calc(30vh)]" />
+      <div class="xl:h-[calc(20vh)]" />
       <div>
         <div class="max-w-[100vw] px-2 py-10 lg:px-10 xl:max-w-[50vw]">
-          <div class="font-title">
-            <h2 class="text-[clamp(2.5rem,8vw,4.5rem)] font-bold leading-none">
-              Don't re-invent
+          <div class="font-title text-center xl:text-left">
+            <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none">
+              don't re-invent
               <br />
               the wheel
               <br />
               every time 🥱
             </h2>
 
-            <p class="text-base-content/60 font-title py-4 text-2xl font-light">
+            <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
               In a Tailwind CSS project, you need to write utiltiy class names for every element.
               Thousands of class names just to style the most basic elements.
             </p>
-            <div class="h-32" />
+            <div class="h-40" />
             <div class="relative h-[300vh]">
-              <div class="sticky top-[calc(100vh-20rem)] xl:top-[30vh]">
-                <h2 class="text-[clamp(2.5rem,8vw,4.5rem)] font-light leading-none">
-                  Instead of writing
+              <div class="sticky top-[18vh] xl:top-[30vh]">
+                <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
+                  instead of writing
                   <br />
                   <span class="text-error">
                     <span class="font-black">100</span>
@@ -190,7 +196,7 @@
                   </span>
                 </h2>
                 <div class="h-6" />
-                <p class="text-base-content/60 font-title py-4 text-2xl font-light">
+                <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
                   For every element, every page, every project,
                   <br />
                   again and again...
@@ -199,8 +205,8 @@
               </div>
             </div>
             <div class="relative h-screen">
-              <div class="sticky top-[calc(100vh-20rem)] xl:top-[30vh]">
-                <h2 class="text-[clamp(2.5rem,8vw,4.5rem)] font-light leading-none">
+              <div class="sticky top-[18vh] xl:top-[30vh]">
+                <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
                   use
                   <span class="text-success">
                     <span class="font-black">semantic</span>
@@ -209,8 +215,8 @@
                   </span>
                 </h2>
                 <div class="h-6" />
-                <p class="text-base-content/60 font-title py-4 text-2xl font-light">
-                  It's faster, cleaner and easier to maintain.
+                <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
+                  It's descriptive, faster, cleaner and easier to maintain.
                 </p>
                 <div class="h-20" />
               </div>
@@ -223,33 +229,34 @@
     <!-- hero figure -->
 
     <div
-      class="sticky top-16 flex shrink pb-16 pt-16 duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:-right-32 xl:overflow-x-hidden xl:overflow-y-clip xl:[zoom:100%]">
+      class="bg-base-200 sticky bottom-0 flex w-full shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:-right-32 xl:bottom-auto xl:top-10 xl:w-auto xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]">
       <div
-        class="mockup mockup-window bg-base-200 h-[32rem] origin-top overflow-visible pb-4 pr-4 shadow-[-0.05rem_0.1rem_0rem_#00000014] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:w-[50rem] xl:rounded-r-none"
+        class="mockup mockup-window bg-base-200 mx-auto origin-top overflow-visible pb-4 [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014]"
         style={`transform: rotateX(${animateValue(
           hero1,
-          [10, 20],
+          [7, 17],
           [20, 0]
-        )}deg)rotateZ(${animateValue(hero1, [7, 22], [-20, 0])}deg)skewY(${animateValue(
+        )}deg)rotateZ(${animateValue(hero1, [7, 17], [-20, 0])}deg)skewY(${animateValue(
           hero1,
-          [10, 20],
+          [7, 17],
           [8, 0]
         )}deg)`}
         class:invisible={hero1 && scrollY > hero1.clientHeight}>
         <div class="grid">
-          <div class="z-[1] col-start-1 row-start-1 grid">
+          <div
+            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden">
             <!-- flying components -->
             <div
-              class="col-start-1 row-start-1 flex items-start"
-              class:invisible={hero1 && scrollY > hero1.clientHeight * 0.2}>
-              <div class="w-60">
+              class="col-start-1 row-start-1 mx-6 flex items-start items-end gap-6 xl:mx-0 xl:gap-0"
+              style={`opacity:${animateValue(hero1, [15, 16], [1, 0])}`}>
+              <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
-                  class="relative -left-6 [filter:drop-shadow(-1rem_3rem_1rem_#00000012)] max-[1280px]:!transform-none"
+                  class="relative w-80 max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style={`transform:translate(${animateValue(
                     hero1,
-                    [3, 23],
+                    [2, 13],
                     [0, 250]
-                  )}px,${animateValue(hero1, [3, 23], [0, -800])}px)`}>
+                  )}px,${animateValue(hero1, [2, 13], [0, -800])}px)`}>
                   <div class="tabs">
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 1)}
@@ -425,14 +432,15 @@
                   </div>
                 </div>
 
-                <div class="flex flex-col gap-4 p-6">
+                <div
+                  class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
                     class="alert max-[1280px]:!transform-none"
                     style={`transform:translate(${animateValue(
                       hero1,
-                      [8, 28],
+                      [5, 15],
                       [0, 250]
-                    )}px,${animateValue(hero1, [8, 28], [0, -800])}px)`}>
+                    )}px,${animateValue(hero1, [5, 15], [0, -800])}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -452,9 +460,9 @@
                     class="alert max-[1280px]:!transform-none"
                     style={`transform:translate(${animateValue(
                       hero1,
-                      [10, 30],
+                      [6, 16],
                       [0, 250]
-                    )}px,${animateValue(hero1, [10, 30], [0, -800])}px)`}>
+                    )}px,${animateValue(hero1, [6, 16], [0, -800])}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -469,14 +477,14 @@
                 </div>
               </div>
 
-              <div class="flex shrink-0 flex-col gap-6">
+              <div class="flex shrink-0 gap-6 pr-4 xl:flex-col xl:pr-0">
                 <div
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
                   style={`transform:translate(${animateValue(
                     hero1,
-                    [0, 20],
+                    [0, 10],
                     [0, 250]
-                  )}px,${animateValue(hero1, [0, 20], [0, -800])}px)`}>
+                  )}px,${animateValue(hero1, [0, 10], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Design system</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
@@ -521,9 +529,9 @@
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
                   style={`transform:translate(${animateValue(
                     hero1,
-                    [5, 25],
+                    [4, 14],
                     [0, 250]
-                  )}px,${animateValue(hero1, [5, 25], [0, -800])}px)`}>
+                  )}px,${animateValue(hero1, [4, 14], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Semantic colors</h2>
                     <div class="grid grid-cols-4 gap-4">
@@ -567,7 +575,7 @@
           </div>
           <div
             class="col-start-1 row-start-1 w-11/12 p-10 opacity-0"
-            style={`opacity:${animateValue(hero1, [20, 22], [0, 1])};z-index:${animateValue(
+            style={`opacity:${animateValue(hero1, [15, 17], [0, 1])};z-index:${animateValue(
               hero1,
               [20, 22],
               [0, 1]
@@ -589,23 +597,24 @@
     </div>
   </div>
 
-  <div class="sticky bottom-0 flex justify-end p-4">
+  <div class="bottom-0 flex justify-center p-4 xl:sticky xl:justify-end">
     <Ads slot="carbon1" />
   </div>
 </div>
 
-<div class="w-full px-2 py-40 lg:px-10">
+<div class="w-full px-2 py-40 lg:px-10" bind:this={hero2}>
   <div class="text-center">
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,8vw,4.5rem)] font-black leading-none">
-      Take Tailwind CSS <br />
-      to the
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
+      Take Tailwind CSS
+      <br />
       <span
-        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
-        next level
+        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+        style={`letter-spacing:${animateValue(hero2, [-100, 20], [0, 1])}rem`}>
+        to the next level
       </span>
     </h2>
-    <p class="text-base-content/60 font-title py-4 text-2xl font-light">
+    <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
       daisyUI adds class names to Tailwind CSS
       <br />
       for all common UI components.
@@ -619,7 +628,7 @@
       and many more.
     </p>
     <div class="h-6" />
-    <p class="text-success font-title text-2xl font-light">
+    <p class="text-success font-title font-light md:text-2xl">
       This allows us to focus on important things
       <br />
       instead of styling basic elements for every project.
@@ -633,19 +642,22 @@
   </div>
 </div>
 
-<div>
+<div bind:this={hero3}>
   <div>
-    <div class="relative">
+    <div class="relative overflow-hidden">
       <div class="w-full px-2 py-40 lg:px-10">
         <div class="text-center">
           <h2
-            class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,8vw,4.5rem)] font-black leading-none">
+            class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none"
+            style={`letter-spacing:${animateValue(hero3, [-100, 20], [1, 0])}rem`}>
             No more ugly HTML!
           </h2>
-          <p class="text-base-content/60 font-title relative z-[2] py-4 text-3xl font-light">
+          <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
             Write fewer class names
             <br />
-            Use component class names, modify them using Tailwind CSS utilities.
+            Use component class names
+            <br />
+            modify them using Tailwind CSS utilities.
           </p>
           <div class="h-4" />
           <div class="text-base-content/40 mx-auto w-72 text-left">
@@ -681,7 +693,7 @@
         <div class="flex flex-col items-center gap-6 xl:flex-row">
           {#if toggleValueForCodeCompare}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative h-[550px] max-w-[calc(70vw-5rem)] grow border bg-transparent text-xs">
+              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(70vw-5rem)] grow border bg-transparent text-xs xl:h-[550px]">
               <pre
                 class="w-full whitespace-pre-wrap px-6 before:hidden"><code />&lt;div class=&quot;<span
                   class="text-teal-600">card bg-base-200 w-80</span>&quot;&gt;
@@ -703,7 +715,10 @@
   &lt;/div&gt;
 &lt;/div&gt;</pre>
             </div>
-            <div class="divider divider-horizontal">→</div>
+            <div class="divider xl:divider-horizontal">
+              <span class="hidden xl:inline">→</span>
+              <span class="xl:hidden">↓</span>
+            </div>
             <div>
               <div class="card bg-base-200 w-80">
                 <div class="card-body">
@@ -722,7 +737,7 @@
             </div>
           {:else}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative h-[550px] max-w-[calc(70vw-5rem)] grow border bg-transparent text-xs">
+              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(70vw-5rem)] grow border bg-transparent text-xs xl:h-[550px]">
               <pre
                 class="w-full whitespace-pre-wrap px-6 before:hidden"><code />&lt;div class=&quot;<span
                   class="text-amber-600">w-80 rounded-2xl bg-gray-100</span>&quot;&gt;
@@ -754,9 +769,12 @@
   &lt;/div&gt;
 &lt;/div&gt;</pre>
             </div>
-            <div class="divider divider-horizontal">→</div>
+            <div class="divider xl:divider-horizontal">
+              <span class="hidden xl:inline">→</span>
+              <span class="xl:hidden">↓</span>
+            </div>
             <div>
-              <div class="w-80 rounded-2xl bg-gray-100">
+              <div class="w-80 rounded-2xl bg-gray-100 text-black">
                 <div class="flex flex-col gap-2 p-8">
                   <input
                     placeholder="Email"
@@ -794,27 +812,54 @@
     </div>
   </div>
 </div>
-<div class="h-[100vh]">
+<div class="min-h-[100vh] overflow-hidden pt-20" bind:this={hero4}>
   <div class="relative">
-    <div class="flex flex-col items-center justify-between xl:flex-row">
-      <div class="shrink-0 px-2 py-10 lg:pl-10 lg:pr-0">
-        <h2 class="font-title text-[clamp(2.5rem,8vw,5rem)] font-black leading-none">
-          <span>Fewer class names</span>
+    <div class="relative flex flex-col items-center justify-between xl:flex-row-reverse">
+      <div class="shrink-0 px-10 py-10">
+        <div
+          class="bg-primary pointer-events-none absolute left-20 aspect-square w-96 rounded-full opacity-20 blur-3xl" />
+        <div
+          class="bg-success pointer-events-none absolute aspect-square w-full rounded-full opacity-10 blur-3xl" />
+        <h2
+          class="font-title text-center text-[clamp(2rem,8vw,5rem)] font-black leading-none xl:text-left">
+          <span
+            style={`opacity:${
+              Math.trunc(animateValue(hero4, [-100, -50], [0, 1])) === 0
+                ? 0.1
+                : Math.trunc(animateValue(hero4, [-100, -50], [0, 1]))
+            }`}>
+            Fewer class names
+          </span>
           <br />
-          <span>Faster development</span>
+          <span
+            style={`opacity:${
+              Math.trunc(animateValue(hero4, [-100, -30], [0, 1])) === 0
+                ? 0.1
+                : Math.trunc(animateValue(hero4, [-100, -30], [0, 1]))
+            }`}>
+            Faster development
+          </span>
           <br />
-          <span>Smaller file size</span>
+          <span
+            style={`opacity:${
+              Math.trunc(animateValue(hero4, [-100, -10], [0, 1])) === 0
+                ? 0.1
+                : Math.trunc(animateValue(hero4, [-100, -10], [0, 1]))
+            }`}>
+            Smaller file size
+          </span>
         </h2>
         <div class="h-10" />
-        <p class="text-base-content/60 font-title text-3xl font-light">
+        <p class="text-base-content/60 font-title text-center font-light md:text-3xl xl:text-left">
           With daisyUI, you write 80% fewer class names
           <br />
-          And your HTML size will be about 50% smaller.
+          And your HTML size will be about 70% smaller.
         </p>
       </div>
-      <div class="grid grow-0 gap-6 p-10 xl:grid-cols-5">
+      <div class="grid grow-0 gap-6 pb-10 md:p-10 xl:grid-cols-5">
         <div
-          class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed">
+          class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed"
+          style={`transform:translateX(${animateValue(hero4, [-100, -10], [20, 0])}%)`}>
           <div class="card-body">
             <h3>
               <span class="font-bold">CSS Class names</span>
@@ -824,14 +869,20 @@
                 <span>Tailwind only</span>
                 <span class="font-mono text-xs">107</span>
               </div>
-              <progress class="progress progress-warning w-56" value="93" max="100" />
+              <progress
+                class="progress progress-warning w-56"
+                value={animateValue(hero4, [-100, -10], [0, 93])}
+                max="100" />
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
                 <span>Tailwind + daisyUI</span>
                 <span class="font-mono text-xs">14</span>
               </div>
-              <progress class="progress progress-success w-56" value="46" max="100" />
+              <progress
+                class="progress progress-success w-56"
+                value={animateValue(hero4, [-100, -10], [0, 46])}
+                max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
               <svg
@@ -849,7 +900,8 @@
           </div>
         </div>
         <div
-          class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed xl:col-start-3">
+          class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed xl:col-start-3"
+          style={`transform:translateX(${animateValue(hero4, [-100, -10], [-20, 0])}%)`}>
           <div class="card-body">
             <h3>
               <span class="font-bold">HTML size</span>
@@ -859,14 +911,20 @@
                 <span>Tailwind only</span>
                 <span class="font-mono text-xs">1884 byte</span>
               </div>
-              <progress class="progress progress-warning w-56" value="84" max="100" />
+              <progress
+                class="progress progress-warning w-56"
+                value={animateValue(hero4, [-100, -10], [0, 84])}
+                max="100" />
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
                 <span>Tailwind + daisyUI</span>
                 <span class="font-mono text-xs">471 byte</span>
               </div>
-              <progress class="progress progress-success w-56" value="37" max="100" />
+              <progress
+                class="progress progress-success w-56"
+                value={animateValue(hero4, [-100, -10], [0, 37])}
+                max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
               <svg
@@ -883,6 +941,101 @@
             </span>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center bg-gradient-to-br">
+  <div class="flex flex-col items-center justify-between xl:flex-row">
+    <div class="px-10 py-10">
+      <h2 class="font-title text-center font-black leading-none xl:text-left">
+        <span class="text-[clamp(2rem,8vw,5rem)] font-black">Highly customizable</span>
+        <br />
+        <span class="text-neutral-content/20 text-[clamp(2rem,8vw,5rem)] font-black">
+          Powered by Tailwind CSS utility classes
+        </span>
+      </h2>
+      <div class="h-10" />
+      <p class="text-neutral-content/60 font-title text-center font-light md:text-3xl xl:text-left">
+        daisyUI is built on top of Tailwind CSS
+        <br />
+        so you can customize everything
+        <br />
+        using utility classes.
+      </p>
+    </div>
+    <div class="pb-10 md:p-10">
+      <div class="my-20 flex flex-col">
+        <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
+          <pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre>
+        </div>
+        <div class="divider text-neutral-content text-opacity-30">↓</div>
+        <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
+          <pre><code>&lt;a class="<span>btn btn-primary</span> <span
+                class="text-teal-500">rounded-full</span>"&gt;Button&lt;/a&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="w-full px-2 py-40 lg:px-10" bind:this={hero2}>
+  <div class="text-center">
+    <h2
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
+      Highly customizable
+      <br />
+      <span
+        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+        style={`letter-spacing:${animateValue(hero2, [-100, 20], [0, 1])}rem`}>
+        Powered by Tailwind CSS utility classes
+      </span>
+    </h2>
+    <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
+      daisyUI components have low CSS specificity.
+      <br />
+      You can customize everything using Tailwind CSS utility classes.
+    </p>
+    <div class="h-12" />
+    <div class="flex w-full justify-center">
+      <a data-sveltekit-preload-data="hover" href="/components/" class="btn btn-primary btn-wide">
+        {$t("all-components-btn")}
+      </a>
+    </div>
+  </div>
+</div> -->
+
+<div class="w-full px-2 py-40 lg:px-10">
+  <div class="text-center">
+    <h2
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
+      Free and open-source
+      <br />
+      <span class="font-light">Built by the community</span>
+    </h2>
+    <div class="h-6" />
+    <p class="text-success font-title font-light md:text-2xl">
+      instead of styling basic elements for every project.
+    </p>
+    <div class="h-12" />
+    <div class="flex w-full justify-center">
+      <div class="flex max-w-3xl flex-wrap justify-center gap-2 p-10">
+        {#each data.gh_contributors as contributor}
+          <div class="tooltip" data-tip={contributor.login}>
+            <div class="avatar w-8">
+              <div class="mask mask-squircle">
+                <img
+                  src={contributor.avatar_url}
+                  alt={contributor.login}
+                  width="32"
+                  height="32"
+                  class="transition-all duration-500 ease-in-out hover:brightness-125" />
+              </div>
+            </div>
+          </div>
+        {/each}
       </div>
     </div>
   </div>
