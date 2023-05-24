@@ -195,7 +195,7 @@
       </ul>
     </div>
     <div
-      class="rounded-box bg-base-200 h-full w-64 shrink-0"
+      class="rounded-box bg-base-200 h-full w-60 shrink-0"
       style={`opacity:${animateValue(section, [14, 19], [0, 1])}`}>
       <ul class="menu">
         <li class="menu-title">Admin panel</li>
@@ -435,10 +435,10 @@
     </h2>
     <p class="font-title font-light md:text-3xl lg:text-5xl">with zero effort</p>
     <div class="h-6" />
-    <p class="font-title max-w-lg font-light">
-      daisyUI adds a set of semantic color names to Tailwind CSS and these new colors use CSS
-      variables for the values. Using daisyUI color names, you can have Dark Mode or even more
-      themes without adding a new class name.
+    <p class="font-title mx-auto max-w-lg font-light">
+      daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS
+      variables for the values. Using daisyUI color names, you get Dark Mode and even more themes
+      without adding a new class name.
     </p>
     <div class="h-6" />
     <div>
@@ -446,7 +446,7 @@
         class="btn btn-wide btn-primary rounded-full"
         data-sveltekit-preload-data="hover"
         href="/docs/themes/">
-        Learn more about themes
+        See all themes
       </a>
     </div>
   </div>

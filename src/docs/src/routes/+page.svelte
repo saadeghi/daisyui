@@ -2,13 +2,7 @@
   import Countup from "svelte-countup"
   import SEO from "@components/SEO.svelte"
   import Ads from "@components/Ads.svelte"
-  import HomepageHero from "@components/homepage/Hero.svelte"
-  import HomepagePreview from "@components/homepage/Preview.svelte"
-  import HomepageStats from "@components/homepage/Stats.svelte"
-  import HomepageCleanHtml from "@components/homepage/CleanHtml.svelte"
-  import HomepageCustomizable from "@components/homepage/Customizable.svelte"
   import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
-  import HomepageTheming from "@components/homepage/Theming.svelte"
   import HomepageTry from "@components/homepage/Try.svelte"
   import HomepageInstall from "@components/homepage/Install.svelte"
   import Footer from "@components/Footer.svelte"
@@ -19,7 +13,6 @@
   import { downloads } from "$lib/json/npm-downloads.json"
   import contributors from "$lib/json/github-contributors.json"
 
-  let activeTestimonialTweet = 0
   let activeMenuItemOnHeroMockup = 1
   let toggleValueForCodeCompare = false
 
@@ -879,16 +872,18 @@
     </div>
   </div>
 </div>
-<div class="min-h-[100vh] overflow-hidden pt-20" bind:this={hero4}>
+
+<div class="min-h-[100vh] overflow-hidden pb-40 pt-32" bind:this={hero4}>
   <div class="relative">
-    <div class="relative flex flex-col items-center justify-between xl:flex-row-reverse">
-      <div class="shrink-0 px-10 py-10">
+    <div
+      class="relative flex flex-col items-center justify-between gap-10 px-10 xl:flex-row-reverse">
+      <div class="grow">
         <div
           class="bg-primary pointer-events-none absolute left-20 aspect-square w-96 rounded-full opacity-20 blur-3xl" />
         <div
           class="bg-success pointer-events-none absolute aspect-square w-full rounded-full opacity-10 blur-3xl" />
         <h2
-          class="font-title text-center text-[clamp(2rem,8vw,5rem)] font-black leading-none xl:text-left">
+          class="font-title text-center text-[clamp(2rem,8vw,4.5rem)] font-black leading-none xl:text-left">
           <span
             style={`opacity:${
               Math.trunc(animateValue(hero4, [-100, -50], [0, 1])) === 0
@@ -923,7 +918,7 @@
           And your HTML size will be about 70% smaller.
         </p>
       </div>
-      <div class="grid grow-0 gap-6 pb-10 md:p-10 xl:grid-cols-5">
+      <div class="grid shrink-0 gap-6 xl:grid-cols-5">
         <div
           class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed"
           style={`transform:translateX(${animateValue(hero4, [-100, -10], [20, 0])}%)`}>
@@ -1049,8 +1044,8 @@
 </div>
 
 <div
-  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center bg-gradient-to-br">
-  <div class="flex flex-col items-center justify-between xl:flex-row-reverse">
+  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center bg-gradient-to-br py-16">
+  <div class="flex flex-col-reverse items-center justify-between xl:flex-row-reverse">
     <div class="px-10 py-10">
       <h2 class="font-title text-center leading-none xl:text-left">
         <span class="text-[clamp(2rem,8vw,5rem)] font-black">Pure CSS.</span>
@@ -1062,8 +1057,8 @@
       <div class="h-10" />
       <p
         class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
-        daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and here's no need for a
-        framework specific JS bundle file.
+        daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS
+        bundle file.
       </p>
       <p
         class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
@@ -1093,7 +1088,7 @@
       </div>
     </div>
     <div class="pointer-events-none shrink-0 pb-10 md:p-10 xl:w-1/3">
-      <div class="grid grid-cols-4 gap-10">
+      <div class="grid grid-cols-4 gap-10 px-6">
         <img
           loading="lazy"
           width="96"
@@ -1215,19 +1210,19 @@
       </p>
     </div>
   </div> -->
-  <div class="rounded-box sticky top-20 mx-2 grid overflow-hidden lg:mx-10">
-    {#each ["light", "valentine", "cupcake", "cyberpunk", "synthwave", "dark", "luxury", "night"] as currentTheme, index}
+  <div class="rounded-box sticky top-20 grid max-w-[85rem] overflow-hidden xl:mx-auto">
+    {#each ["light", "valentine", "cupcake", "cyberpunk", "synthwave", "dark", "dracula", "luxury", "night"] as currentTheme, index}
       <div
         class="col-start-1 row-start-1 flex items-start"
         data-theme={currentTheme}
         style={index > 0 &&
           `clip-path: polygon(${animateValue(
             hero5,
-            [0 + index * 9, 20 + index * 9],
+            [0 + index * 8, 20 + index * 8],
             [-180, 100]
           )}% 0%, 0% 0%, 0% 100%, ${animateValue(
             hero5,
-            [0 + index * 9, 20 + index * 9],
+            [0 + index * 8, 20 + index * 8],
             [0, 100]
           )}% 100%)`}>
         <div
