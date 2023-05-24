@@ -12,26 +12,26 @@ const xyzPlugin = require("colord/plugins/xyz")
 extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
 
 module.exports = {
-  changeLchValuesToObject: function (input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return { l, c, h, a: 1 }
+  changeColorValuesToObject: function (input) {
+    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return { h, s, l, a: 1 }
   },
 
-  turnLchValuesToString: function (input) {
-    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return `${l} ${c} ${h}`
+  turnColorValuesToString: function (input) {
+    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return `${h}% ${s} ${l}`
   },
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
     const str = colord(input)
       .mix(colord(input).isDark() ? "white" : "black", percentage)
-      .toLchString()
-    return this.turnLchValuesToString(str)
+      .toHslString()
+    return this.turnColorValuesToString(str)
   },
 
   generateDarkenColorFrom: function (input, percentage = 0.07) {
-    const str = colord(input).darken(percentage).toLchString()
-    return this.turnLchValuesToString(str)
+    const str = colord(input).darken(percentage).toHslString()
+    return this.turnColorValuesToString(str)
   },
 
   convertColorFormat: function (input, colorFunction = "hsl") {
@@ -47,7 +47,7 @@ module.exports = {
       // } else {
       //   let arr
       //   if (getFormat(value) === "lch") {
-      //     arr = this.changeLchValuesToObject(value)
+      //     arr = this.changeColorValuesToObject(value)
       //   } else {
       //     arr = colord(value).toLch()
       //   }
@@ -61,102 +61,102 @@ module.exports = {
         }
       }
 
-      // // auto generate focus colors
-      // if (!Object.hasOwn(input, "primary-focus")) {
-      //   resultObj["--pf"] = this.generateDarkenColorFrom(input["primary"])
-      // }
-      // if (!Object.hasOwn(input, "secondary-focus")) {
-      //   resultObj["--sf"] = this.generateDarkenColorFrom(input["secondary"])
-      // }
-      // if (!Object.hasOwn(input, "accent-focus")) {
-      //   resultObj["--af"] = this.generateDarkenColorFrom(input["accent"])
-      // }
-      // if (!Object.hasOwn(input, "neutral-focus")) {
-      //   resultObj["--nf"] = this.generateDarkenColorFrom(input["neutral"])
-      // }
+      // auto generate focus colors
+      if (!Object.hasOwn(input, "--pf")) {
+        resultObj["--pf"] = this.generateDarkenColorFrom(input["--p"])
+      }
+      if (!Object.hasOwn(input, "--sf")) {
+        resultObj["--sf"] = this.generateDarkenColorFrom(input["--s"])
+      }
+      if (!Object.hasOwn(input, "--af")) {
+        resultObj["--af"] = this.generateDarkenColorFrom(input["--a"])
+      }
+      if (!Object.hasOwn(input, "--nf")) {
+        resultObj["--nf"] = this.generateDarkenColorFrom(input["--n"])
+      }
 
-      // // auto generate base colors
-      // if (!Object.hasOwn(input, "base-100")) {
-      //   resultObj["--b1"] = "100 0 0"
-      // }
-      // if (!Object.hasOwn(input, "base-200")) {
-      //   resultObj["--b2"] = this.generateDarkenColorFrom(input["base-100"])
-      // }
-      // if (!Object.hasOwn(input, "base-300")) {
-      //   if (Object.hasOwn(input, "base-200")) {
-      //     resultObj["--b3"] = this.generateDarkenColorFrom(input["base-200"])
-      //   } else {
-      //     resultObj["--b3"] = this.generateDarkenColorFrom(input["base-100"], 0.14)
-      //   }
-      // }
+      // auto generate base colors
+      if (!Object.hasOwn(input, "--b1")) {
+        resultObj["--b1"] = "100 0 0"
+      }
+      if (!Object.hasOwn(input, "--b2")) {
+        resultObj["--b2"] = this.generateDarkenColorFrom(input["--b1"])
+      }
+      if (!Object.hasOwn(input, "--b3")) {
+        if (Object.hasOwn(input, "--b2")) {
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["--b2"])
+        } else {
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["--b1"], 0.14)
+        }
+      }
 
-      // // auto generate state colors
+      // auto generate state colors
 
-      // if (!Object.hasOwn(input, "info")) {
-      //   resultObj["--in"] = "72.22% 45.12 240.2"
-      // }
-      // if (!Object.hasOwn(input, "success")) {
-      //   resultObj["--su"] = "75.73% 54.59 162.06"
-      // }
-      // if (!Object.hasOwn(input, "warning")) {
-      //   resultObj["--wa"] = "80.76% 78.28 79.52"
-      // }
-      // if (!Object.hasOwn(input, "error")) {
-      //   resultObj["--er"] = "64.94% 58.6 26.73"
-      // }
+      if (!Object.hasOwn(input, "--in")) {
+        resultObj["--in"] = "72.22% 45.12 240.2"
+      }
+      if (!Object.hasOwn(input, "--su")) {
+        resultObj["--su"] = "75.73% 54.59 162.06"
+      }
+      if (!Object.hasOwn(input, "--wa")) {
+        resultObj["--wa"] = "80.76% 78.28 79.52"
+      }
+      if (!Object.hasOwn(input, "--er")) {
+        resultObj["--er"] = "64.94% 58.6 26.73"
+      }
 
-      // // auto generate content colors
-      // if (!Object.hasOwn(input, "base-content")) {
-      //   resultObj["--bc"] = this.generateForegroundColorFrom(input["base-100"])
-      // }
-      // if (!Object.hasOwn(input, "primary-content")) {
-      //   resultObj["--pc"] = this.generateForegroundColorFrom(input["primary"])
-      // }
-      // if (!Object.hasOwn(input, "secondary-content")) {
-      //   resultObj["--sc"] = this.generateForegroundColorFrom(input["secondary"])
-      // }
-      // if (!Object.hasOwn(input, "accent-content")) {
-      //   resultObj["--ac"] = this.generateForegroundColorFrom(input["accent"])
-      // }
-      // if (!Object.hasOwn(input, "neutral-content")) {
-      //   resultObj["--nc"] = this.generateForegroundColorFrom(input["neutral"])
-      // }
-      // if (!Object.hasOwn(input, "info-content")) {
-      //   if (Object.hasOwn(input, "info")) {
-      //     resultObj["--inc"] = this.generateForegroundColorFrom(input["info"])
-      //   } else {
-      //     resultObj["--inc"] = "15.56% 17.95 241.47"
-      //   }
-      // }
-      // if (!Object.hasOwn(input, "success-content")) {
-      //   if (Object.hasOwn(input, "success")) {
-      //     resultObj["--suc"] = this.generateForegroundColorFrom(input["success"])
-      //   } else {
-      //     resultObj["--suc"] = "17.74% 22.37 160.78"
-      //   }
-      // }
-      // if (!Object.hasOwn(input, "warning-content")) {
-      //   if (Object.hasOwn(input, "warning")) {
-      //     resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"])
-      //   } else {
-      //     resultObj["--wac"] = "17.47% 25.59 79.74"
-      //   }
-      // }
-      // if (!Object.hasOwn(input, "error-content")) {
-      //   if (Object.hasOwn(input, "error")) {
-      //     resultObj["--erc"] = this.generateForegroundColorFrom(input["error"])
-      //   } else {
-      //     resultObj["--erc"] = "11.97% 37.34 30.56"
-      //   }
-      // }
+      // auto generate content colors
+      if (!Object.hasOwn(input, "--bc")) {
+        resultObj["--bc"] = this.generateForegroundColorFrom(input["--b1"])
+      }
+      if (!Object.hasOwn(input, "--pc")) {
+        resultObj["--pc"] = this.generateForegroundColorFrom(input["--p"])
+      }
+      if (!Object.hasOwn(input, "--sc")) {
+        resultObj["--sc"] = this.generateForegroundColorFrom(input["--s"])
+      }
+      if (!Object.hasOwn(input, "--ac")) {
+        resultObj["--ac"] = this.generateForegroundColorFrom(input["--a"])
+      }
+      if (!Object.hasOwn(input, "--nc")) {
+        resultObj["--nc"] = this.generateForegroundColorFrom(input["--n"])
+      }
+      if (!Object.hasOwn(input, "--inc")) {
+        if (Object.hasOwn(input, "--in")) {
+          resultObj["--inc"] = this.generateForegroundColorFrom(input["--in"])
+        } else {
+          resultObj["--inc"] = "15.56% 17.95 241.47"
+        }
+      }
+      if (!Object.hasOwn(input, "--suc")) {
+        if (Object.hasOwn(input, "--su")) {
+          resultObj["--suc"] = this.generateForegroundColorFrom(input["--su"])
+        } else {
+          resultObj["--suc"] = "17.74% 22.37 160.78"
+        }
+      }
+      if (!Object.hasOwn(input, "--wac")) {
+        if (Object.hasOwn(input, "--wa")) {
+          resultObj["--wac"] = this.generateForegroundColorFrom(input["--wa"])
+        } else {
+          resultObj["--wac"] = "17.47% 25.59 79.74"
+        }
+      }
+      if (!Object.hasOwn(input, "--erc")) {
+        if (Object.hasOwn(input, "--er")) {
+          resultObj["--erc"] = this.generateForegroundColorFrom(input["--er"])
+        } else {
+          resultObj["--erc"] = "11.97% 37.34 30.56"
+        }
+      }
 
-      // // add css variables if not exist
-      // Object.entries(themeDefaults.variables).forEach((item) => {
-      //   const [variable, value] = item
-      //   if (!Object.hasOwn(input, variable)) {
-      //     resultObj[variable] = value
-      //   }
-      // })
+      // add css variables if not exist
+      Object.entries(themeDefaults.variables).forEach((item) => {
+        const [variable, value] = item
+        if (!Object.hasOwn(input, variable)) {
+          resultObj[variable] = value
+        }
+      })
     })
 
     return resultObj
