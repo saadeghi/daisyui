@@ -7,6 +7,7 @@
     "createStyleHandlerComponent:dev": "echo '<script>import \"@components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>import \"@components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",
     "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config ../.prettierrc --ignore-path ../.prettierignore",
+    "get-files": "node src/lib/scripts/get-files",
     "langdiff": "json-diff --keys-only --raw-json ./src/translation/en.json ./src/translation/jp.json"
   },
   "devDependencies": {
@@ -34,6 +35,7 @@
   "dependencies": {
     "colord": "^2.9.3",
     "daisyui": "^0.0.0-insiders.3.6",
+    "dep-graph-count": "^1.0.0",
     "emoji-unicode": "^2.0.1",
     "lodash.debounce": "^4.0.8",
     "nanoid": "^4.0.2",

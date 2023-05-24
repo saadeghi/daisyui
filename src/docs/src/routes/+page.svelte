@@ -1,4 +1,5 @@
 <script>
+  import Countup from "svelte-countup"
   import SEO from "@components/SEO.svelte"
   import Ads from "@components/Ads.svelte"
   import HomepageHero from "@components/homepage/Hero.svelte"
@@ -6,15 +7,20 @@
   import HomepageStats from "@components/homepage/Stats.svelte"
   import HomepageCleanHtml from "@components/homepage/CleanHtml.svelte"
   import HomepageCustomizable from "@components/homepage/Customizable.svelte"
+  import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
   import HomepageTheming from "@components/homepage/Theming.svelte"
   import HomepageTry from "@components/homepage/Try.svelte"
   import HomepageInstall from "@components/homepage/Install.svelte"
   import Footer from "@components/Footer.svelte"
   import { siteStats } from "@src/lib/data.js"
+  import { tweets } from "@src/lib/testimonials.js"
   import { t } from "@src/lib/i18n"
+  import { stargazers_count } from "$lib/json/github-repo.json"
+  import { downloads } from "$lib/json/npm-downloads.json"
+  import contributors from "$lib/json/github-contributors.json"
 
+  let activeTestimonialTweet = 0
   let activeMenuItemOnHeroMockup = 1
-  let activeMenuItemOnCodeExample = 1
   let toggleValueForCodeCompare = false
 
   export let data
@@ -41,6 +47,8 @@
   let hero2
   let hero3
   let hero4
+  let hero5
+  let hero6
 
   $: scrollY = scrollY
 
@@ -132,7 +140,7 @@
         </h1>
         <div class="h-4" />
         <p class="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
-          This plugin adds component class names to Tailwind CSS
+          daisyUI adds component class names to Tailwind CSS
           <br />
           so you can make beautiful websites
           <span class="border-base-content/20 border-b-2">faster than ever.</span>
@@ -142,7 +150,7 @@
           <div class="inline-flex flex-col gap-2 md:flex-row">
             <a
               data-sveltekit-preload-data="hover"
-              href="/components"
+              href="/components/"
               class="btn group px-12 normal-case">
               <span class="hidden sm:inline">{$t("cta-1")}</span>
               <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
@@ -229,34 +237,31 @@
     <!-- hero figure -->
 
     <div
-      class="bg-base-200 sticky bottom-0 flex w-full shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:-right-32 xl:bottom-auto xl:top-10 xl:w-auto xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]">
+      class="bg-base-200 sticky bottom-0 flex w-full shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]">
       <div
         class="mockup mockup-window bg-base-200 mx-auto origin-top overflow-visible pb-4 [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014]"
-        style={`transform: rotateX(${animateValue(
-          hero1,
-          [7, 17],
-          [20, 0]
-        )}deg)rotateZ(${animateValue(hero1, [7, 17], [-20, 0])}deg)skewY(${animateValue(
-          hero1,
-          [7, 17],
-          [8, 0]
-        )}deg)`}
+        style={hero1 &&
+          `transform: rotateX(${animateValue(hero1, [7, 17], [20, 0])}deg)rotateZ(${animateValue(
+            hero1,
+            [7, 17],
+            [-20, 0]
+          )}deg)skewY(${animateValue(hero1, [7, 17], [8, 0])}deg)`}
         class:invisible={hero1 && scrollY > hero1.clientHeight}>
         <div class="grid">
           <div
             class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden">
             <!-- flying components -->
             <div
-              class="col-start-1 row-start-1 mx-6 flex items-start items-end gap-6 xl:mx-0 xl:gap-0"
+              class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0"
               style={`opacity:${animateValue(hero1, [15, 16], [1, 0])}`}>
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
                   class="relative w-80 max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style={`transform:translate(${animateValue(
                     hero1,
-                    [2, 13],
+                    [2, 9],
                     [0, 250]
-                  )}px,${animateValue(hero1, [2, 13], [0, -800])}px)`}>
+                  )}px,${animateValue(hero1, [2, 9], [0, -800])}px)`}>
                   <div class="tabs">
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 1)}
@@ -282,7 +287,7 @@
                     class:rounded-tr-box={activeMenuItemOnHeroMockup !== 3}
                     class:rounded-tl-box={activeMenuItemOnHeroMockup !== 1}>
                     {#if activeMenuItemOnHeroMockup === 1}
-                      <div class="flex flex-col items-stretch px-6 py-8">
+                      <div class="flex flex-col items-stretch p-6">
                         <div class="form-control">
                           <label class="label cursor-pointer">
                             <span class="label-text text-xs">Faster development</span>
@@ -436,7 +441,15 @@
                   class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
                     class="alert max-[1280px]:!transform-none"
-                    style={`transform:translate(${animateValue(
+                    style={`filter:drop-shadow(${animateValue(
+                      hero1,
+                      [5, 5.5],
+                      [0, -1]
+                    )}rem ${animateValue(hero1, [5, 5.5], [0, 3])}rem ${animateValue(
+                      hero1,
+                      [5, 5.5],
+                      [0, 1]
+                    )}rem #00000012);transform:translate(${animateValue(
                       hero1,
                       [5, 15],
                       [0, 250]
@@ -458,7 +471,15 @@
                   </div>
                   <div
                     class="alert max-[1280px]:!transform-none"
-                    style={`transform:translate(${animateValue(
+                    style={`filter:drop-shadow(${animateValue(
+                      hero1,
+                      [6, 6.5],
+                      [0, -1]
+                    )}rem ${animateValue(hero1, [6, 6.5], [0, 3])}rem ${animateValue(
+                      hero1,
+                      [6, 6.5],
+                      [0, 1]
+                    )}rem #00000012);transform:translate(${animateValue(
                       hero1,
                       [6, 16],
                       [0, 250]
@@ -471,7 +492,6 @@
                       <path
                         d="M15.98 1.804a1 1 0 00-1.96 0l-.24 1.192a1 1 0 01-.784.785l-1.192.238a1 1 0 000 1.962l1.192.238a1 1 0 01.785.785l.238 1.192a1 1 0 001.962 0l.238-1.192a1 1 0 01.785-.785l1.192-.238a1 1 0 000-1.962l-1.192-.238a1 1 0 01-.785-.785l-.238-1.192zM6.949 5.684a1 1 0 00-1.898 0l-.683 2.051a1 1 0 01-.633.633l-2.051.683a1 1 0 000 1.898l2.051.684a1 1 0 01.633.632l.683 2.051a1 1 0 001.898 0l.683-2.051a1 1 0 01.633-.633l2.051-.683a1 1 0 000-1.898l-2.051-.683a1 1 0 01-.633-.633L6.95 5.684zM13.949 13.684a1 1 0 00-1.898 0l-.184.551a1 1 0 01-.632.633l-.551.183a1 1 0 000 1.898l.551.183a1 1 0 01.633.633l.183.551a1 1 0 001.898 0l.184-.551a1 1 0 01.632-.633l.551-.183a1 1 0 000-1.898l-.551-.184a1 1 0 01-.633-.632l-.183-.551z" />
                     </svg>
-
                     <span class="text-xs">Works on all frameworks</span>
                   </div>
                 </div>
@@ -480,11 +500,19 @@
               <div class="flex shrink-0 gap-6 pr-4 xl:flex-col xl:pr-0">
                 <div
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
-                  style={`transform:translate(${animateValue(
+                  style={`filter:drop-shadow(${animateValue(
                     hero1,
-                    [0, 10],
+                    [0, 0.5],
+                    [0, -1]
+                  )}rem ${animateValue(hero1, [0, 0.5], [0, 3])}rem ${animateValue(
+                    hero1,
+                    [0, 0.5],
+                    [0, 1]
+                  )}rem #00000012);transform:translate(${animateValue(
+                    hero1,
+                    [0, 8],
                     [0, 250]
-                  )}px,${animateValue(hero1, [0, 10], [0, -800])}px)`}>
+                  )}px,${animateValue(hero1, [0, 8], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Design system</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
@@ -527,11 +555,19 @@
                 </div>
                 <div
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
-                  style={`transform:translate(${animateValue(
+                  style={`filter:drop-shadow(${animateValue(
                     hero1,
-                    [4, 14],
+                    [4, 4.5],
+                    [0, -1]
+                  )}rem ${animateValue(hero1, [4, 4.5], [0, 3])}rem ${animateValue(
+                    hero1,
+                    [4, 4.5],
+                    [0, 1]
+                  )}rem #00000012);transform:translate(${animateValue(
+                    hero1,
+                    [4, 10],
                     [0, 250]
-                  )}px,${animateValue(hero1, [4, 14], [0, -800])}px)`}>
+                  )}px,${animateValue(hero1, [4, 10], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Semantic colors</h2>
                     <div class="grid grid-cols-4 gap-4">
@@ -597,7 +633,7 @@
     </div>
   </div>
 
-  <div class="bottom-0 flex justify-center p-4 xl:sticky xl:justify-end">
+  <div class="pointer-events-none bottom-0 flex justify-center p-4 xl:sticky xl:justify-end">
     <Ads slot="carbon1" />
   </div>
 </div>
@@ -605,7 +641,8 @@
 <div class="w-full px-2 py-40 lg:px-10" bind:this={hero2}>
   <div class="text-center">
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none max-[1280px]:!tracking-normal"
+      style={`letter-spacing:${animateValue(hero2, [-100, 20], [1, 0])}rem`}>
       Take Tailwind CSS
       <br />
       <span
@@ -648,9 +685,39 @@
       <div class="w-full px-2 py-40 lg:px-10">
         <div class="text-center">
           <h2
-            class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none"
-            style={`letter-spacing:${animateValue(hero3, [-100, 20], [1, 0])}rem`}>
-            No more ugly HTML!
+            class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+            <span
+              style={`opacity:${
+                Math.trunc(animateValue(hero3, [-100, -40], [0, 1])) === 0
+                  ? 0.1
+                  : Math.trunc(animateValue(hero3, [-100, -40], [0, 1]))
+              }`}>
+              No
+            </span>
+            <span
+              style={`opacity:${
+                Math.trunc(animateValue(hero3, [-100, -30], [0, 1])) === 0
+                  ? 0.1
+                  : Math.trunc(animateValue(hero3, [-100, -30], [0, 1]))
+              }`}>
+              more
+            </span>
+            <span
+              style={`opacity:${
+                Math.trunc(animateValue(hero3, [-100, -20], [0, 1])) === 0
+                  ? 0.1
+                  : Math.trunc(animateValue(hero3, [-100, -20], [0, 1]))
+              }`}>
+              ugly
+            </span>
+            <span
+              style={`opacity:${
+                Math.trunc(animateValue(hero3, [-100, -10], [0, 1])) === 0
+                  ? 0.1
+                  : Math.trunc(animateValue(hero3, [-100, -10], [0, 1]))
+              }`}>
+              HTML
+            </span>
           </h2>
           <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
             Write fewer class names
@@ -953,13 +1020,13 @@
       <h2 class="font-title text-center font-black leading-none xl:text-left">
         <span class="text-[clamp(2rem,8vw,5rem)] font-black">Highly customizable</span>
         <br />
-        <span class="text-neutral-content/20 text-[clamp(2rem,8vw,5rem)] font-black">
-          Powered by Tailwind CSS utility classes
+        <span class="text-neutral-content/20 text-[clamp(2rem,8vw,4rem)] font-black">
+          Powered by Tailwind&nbsp;CSS utility&nbsp;classes
         </span>
       </h2>
       <div class="h-10" />
       <p class="text-neutral-content/60 font-title text-center font-light md:text-3xl xl:text-left">
-        daisyUI is built on top of Tailwind CSS
+        daisyUI is built on top of Tailwind&nbsp;CSS
         <br />
         so you can customize everything
         <br />
@@ -981,31 +1048,314 @@
   </div>
 </div>
 
-<!-- <div class="w-full px-2 py-40 lg:px-10" bind:this={hero2}>
-  <div class="text-center">
-    <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
-      Highly customizable
-      <br />
-      <span
-        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
-        style={`letter-spacing:${animateValue(hero2, [-100, 20], [0, 1])}rem`}>
-        Powered by Tailwind CSS utility classes
-      </span>
-    </h2>
-    <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-      daisyUI components have low CSS specificity.
-      <br />
-      You can customize everything using Tailwind CSS utility classes.
-    </p>
-    <div class="h-12" />
-    <div class="flex w-full justify-center">
-      <a data-sveltekit-preload-data="hover" href="/components/" class="btn btn-primary btn-wide">
-        {$t("all-components-btn")}
-      </a>
+<div
+  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center bg-gradient-to-br">
+  <div class="flex flex-col items-center justify-between xl:flex-row-reverse">
+    <div class="px-10 py-10">
+      <h2 class="font-title text-center leading-none xl:text-left">
+        <span class="text-[clamp(2rem,8vw,5rem)] font-black">Pure CSS.</span>
+        <br />
+        <span class="text-[clamp(2rem,8vw,5rem)] font-black">Framework agnostic.</span>
+        <br />
+        <span class="text-[clamp(2rem,8vw,5rem)] font-light">Works everywhere.</span>
+      </h2>
+      <div class="h-10" />
+      <p
+        class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
+        daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and here's no need for a
+        framework specific JS bundle file.
+      </p>
+      <p
+        class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
+        Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS
+        class name.
+      </p>
+      <div class="h-10" />
+      <div class="flex w-full justify-center xl:justify-start">
+        <a
+          data-sveltekit-preload-data="hover"
+          href="/docs/install"
+          class="btn btn-lg btn-wide px-32 normal-case">
+          {$t("cta-2")}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="pointer-events-none shrink-0 pb-10 md:p-10 xl:w-1/3">
+      <div class="grid grid-cols-4 gap-10">
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24"
+          src="/logos/vue.svg"
+          alt="Vue.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24 -translate-y-10"
+          src="/logos/react.svg"
+          alt="React" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24"
+          src="/logos/svelte.svg"
+          alt="Svelte.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24 -translate-y-10"
+          src="/logos/qwik.svg"
+          alt="Qwik" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24"
+          src="/logos/solidjs.svg"
+          alt="Solid.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24 -translate-y-10"
+          src="/logos/astro.svg"
+          alt="Astro" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24"
+          src="/logos/nextjs.svg"
+          alt="Next.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24 -translate-y-10"
+          src="/logos/preact.svg"
+          alt="Preact" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24"
+          src="/logos/remix.svg"
+          alt="Remix" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24 -translate-y-10"
+          src="/logos/angular.svg"
+          alt="Angular" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24"
+          src="/logos/nuxtjs.svg"
+          alt="Nuxt" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-24 -translate-y-10"
+          src="/logos/11ty.svg"
+          alt="Eleventy" />
+      </div>
     </div>
   </div>
-</div> -->
+</div>
+
+<div class="min-h-[900vh] py-20" bind:this={hero5}>
+  <!-- <div class="w-full px-2 pt-40 lg:px-10">
+    <div class="text-center">
+      <h2
+        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(hero5, [-100, -40], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(hero5, [-100, -40], [0, 1]))
+          }`}>
+          Unlimited themes
+        </span>
+        <br />
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(hero5, [-100, -30], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(hero5, [-100, -30], [0, 1]))
+          }`}>
+          with zero effort
+        </span>
+      </h2>
+      <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
+        Write fewer class names
+        <br />
+        Use component class names
+        <br />
+        modify them using Tailwind CSS utilities.
+      </p>
+    </div>
+  </div> -->
+  <div class="rounded-box sticky top-20 mx-2 grid overflow-hidden lg:mx-10">
+    {#each ["light", "valentine", "cupcake", "cyberpunk", "synthwave", "dark", "luxury", "night"] as currentTheme, index}
+      <div
+        class="col-start-1 row-start-1 flex items-start"
+        data-theme={currentTheme}
+        style={index > 0 &&
+          `clip-path: polygon(${animateValue(
+            hero5,
+            [0 + index * 9, 20 + index * 9],
+            [-180, 100]
+          )}% 0%, 0% 0%, 0% 100%, ${animateValue(
+            hero5,
+            [0 + index * 9, 20 + index * 9],
+            [0, 100]
+          )}% 100%)`}>
+        <div
+          class="border-base-200 rounded-box flex w-full items-stretch justify-center gap-6 border p-6 xl:h-[40rem] xl:justify-normal"
+          style={`--tw-border-opacity:${animateValue(hero5, [10, 15], [0, 1])}`}>
+          <ComponentsPreview {currentTheme} {animateValue} section={hero5} />
+        </div>
+      </div>
+    {/each}
+  </div>
+</div>
+
+<div class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={hero6}>
+  <div class="sticky top-0 pt-40 text-center">
+    <div
+      class="bg-primary pointer-events-none absolute bottom-0 left-1/2 aspect-square w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-3xl" />
+    <h2
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none"
+      style={`transform:scale(${animateValue(hero6, [0, 20], [0.7, 1])});opacity:${animateValue(
+        hero6,
+        [0, 20],
+        [0, 1]
+      )}`}>
+      daisyUI is the most popular
+      <br />
+      component library for Tailwind&nbsp;CSS
+    </h2>
+    <div class="h-32" />
+    <div class="grid gap-10 p-6 xl:grid-cols-3">
+      <div
+        class="flex flex-col items-center gap-4"
+        style={`transform:translateY(${animateValue(
+          hero6,
+          [20, 30],
+          [2, 0]
+        )}rem);opacity:${animateValue(hero6, [20, 30], [0, 1])}`}>
+        <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+          <Countup
+            initial={stargazers_count * 0.9}
+            value={stargazers_count}
+            duration={1000}
+            roundto={100} />
+        </h3>
+        <a
+          href="https://github.com/saadeghi/daisyui"
+          target="_blank"
+          rel="noopener, noreferrer"
+          class="text-base-content/60 hover:text-base-content hover:underline">
+          GitHub Stars
+        </a>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4"
+        style={`transform:translateY(${animateValue(
+          hero6,
+          [30, 40],
+          [2, 0]
+        )}rem);opacity:${animateValue(hero6, [30, 40], [0, 1])}`}>
+        <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+          <Countup
+            initial={data.gh_dependents.repositories * 0.9}
+            value={data.gh_dependents.repositories}
+            duration={2000}
+            roundto={100} />
+        </h3>
+        <a
+          href="https://github.com/saadeghi/daisyui/network/dependents"
+          target="_blank"
+          rel="noopener, noreferrer"
+          class="text-base-content/60 hover:text-base-content hover:underline">
+          open-source projects using daisyUI
+        </a>
+      </div>
+      <div
+        class="flex flex-col items-center gap-4"
+        style={`transform:translateY(${animateValue(
+          hero6,
+          [40, 50],
+          [2, 0]
+        )}rem);opacity:${animateValue(hero6, [40, 50], [0, 1])}`}>
+        <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+          <Countup initial={downloads * 0.9} value={downloads} duration={3000} roundto={100} />
+        </h3>
+        <a
+          href="https://www.npmjs.com/package/daisyui"
+          target="_blank"
+          rel="noopener, noreferrer"
+          class="text-base-content/60 hover:text-base-content hover:underline">
+          NPM downloads
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div>
+    <div class="h-32" />
+    <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3">
+      {#each tweets as tweet, index}
+        <div class="card border-base-content/5 card-compact border text-left">
+          <div class="card-body">
+            <div class="flex items-center gap-2">
+              <div class="avatar w-12">
+                <a
+                  href={`https://twitter.com/${tweet.username}/status/${tweet.id}`}
+                  target="_blank"
+                  rel="noopener, noreferrer">
+                  <img
+                    loading="lazy"
+                    src={`/twitter-profile-pics/${tweet.username}.jpg`}
+                    alt={tweet.name}
+                    width="48"
+                    height="48"
+                    class="pointer-events-none rounded-full" />
+                </a>
+              </div>
+              <div class="flex flex-col items-start text-xs">
+                <div class="text-base-content font-bold">{tweet.name}</div>
+                <div class="text-base-content/60">{tweet.bio}</div>
+              </div>
+            </div>
+            <p class="text-base-content">{tweet.content}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </div>
+</div>
 
 <div class="w-full px-2 py-40 lg:px-10">
   <div class="text-center">
@@ -1016,13 +1366,19 @@
       <span class="font-light">Built by the community</span>
     </h2>
     <div class="h-6" />
-    <p class="text-success font-title font-light md:text-2xl">
-      instead of styling basic elements for every project.
+    <p class="font-title font-light md:text-2xl">
+      <a
+        href="https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md"
+        rel="noopener, noreferrer"
+        target="_blank"
+        class="link link-hover text-base-content/60">
+        daisyUI welcomes contributions from developers around the world
+      </a>
     </p>
     <div class="h-12" />
     <div class="flex w-full justify-center">
-      <div class="flex max-w-3xl flex-wrap justify-center gap-2 p-10">
-        {#each data.gh_contributors as contributor}
+      <div class="flex max-w-3xl flex-wrap justify-center gap-3 p-10">
+        {#each contributors as contributor}
           <div class="tooltip" data-tip={contributor.login}>
             <div class="avatar w-8">
               <div class="mask mask-squircle">
@@ -1031,7 +1387,7 @@
                   alt={contributor.login}
                   width="32"
                   height="32"
-                  class="transition-all duration-500 ease-in-out hover:brightness-125" />
+                  class="pointer-events-none transition-all duration-500 ease-in-out" />
               </div>
             </div>
           </div>
@@ -1043,18 +1399,18 @@
 
 <!-- <HomepageHero /> -->
 
-<div class="bg-base-200 flex flex-col items-center gap-20 py-20">
-  <!-- <HomepagePreview /> -->
+<!-- <div class="bg-base-200 flex flex-col items-center gap-20 py-20">
+  <HomepagePreview />
   <HomepageStats />
   <div class="flex w-full justify-center">
-    <a data-sveltekit-preload-data="hover" href="/components" class="btn btn-primary btn-wide">
+    <a data-sveltekit-preload-data="hover" href="/components/" class="btn btn-primary btn-wide">
       {$t("all-components-btn")}
     </a>
   </div>
-</div>
+</div> -->
 <!-- <HomepageCleanHtml /> -->
 <!-- <HomepageCustomizable /> -->
-<HomepageTheming />
+<!-- <HomepageTheming /> -->
 <HomepageTry />
 <HomepageInstall />
 <Footer />

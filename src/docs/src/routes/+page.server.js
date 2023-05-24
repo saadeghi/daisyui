@@ -1,6 +1,11 @@
-// get the list of github contributors
+import depGraphCount from "dep-graph-count"
+
 export async function load() {
-  const res = await fetch(`https://api.github.com/repos/saadeghi/daisyui/contributors?per_page=100`)
-  const json = await res.json()
-  return { gh_contributors: json }
+  let res = await depGraphCount("saadeghi", "daisyui")
+  return {
+    gh_dependents: {
+      repositories: parseInt(res.repositories.replace(/\,/g, "")),
+      packages: parseInt(res.packages.replace(/\,/g, "")),
+    },
+  }
 }

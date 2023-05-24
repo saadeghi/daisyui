@@ -84,7 +84,7 @@
     </div>
   </div>
 {:else if slot === "carbon1"}
-  <div class="h-[100px] w-full min-w-[330px] max-w-[350px]">
+  <div class="pointer-events-auto h-[100px] w-full min-w-[330px] max-w-[350px]">
     <script
       async
       type="text/javascript"
