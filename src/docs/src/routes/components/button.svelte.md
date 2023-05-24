@@ -158,19 +158,22 @@ data="{[
 </Component>
 
 <Component title="Button sizes">
-<button class="btn btn-lg">Large</button>
 <button class="btn">Normal</button>
+<button class="btn btn-lg">Large</button>
+<button class="btn btn-md">Medium (Same size as normal)</button>
 <button class="btn btn-sm">Small</button>
 <button class="btn btn-xs">Tiny</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="$$btn $$btn-lg">Large</button>
-<button class="$$btn">Normal</button>
+`<button class="$$btn">Normal</button>
+<button class="$$btn $$btn-lg">Large</button>
+<button class="$$btn $$btn-md">Medium (Same size as normal)</button>
 <button class="$$btn $$btn-sm">Small</button>
 <button class="$$btn $$btn-xs">Tiny</button>`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
-`<button className="$$btn $$btn-lg">Large</button>
-<button className="$$btn">Normal</button>
+`<button className="$$btn">Normal</button>
+<button className="$$btn $$btn-lg">Large</button>
+<button className="$$btn $$btn-lg">Medium (Same size as normal)</button>
 <button className="$$btn $$btn-sm">Small</button>
 <button className="$$btn $$btn-xs">Tiny</button>`
 }</pre>
