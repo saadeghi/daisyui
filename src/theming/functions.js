@@ -19,7 +19,7 @@ module.exports = {
 
   turnColorValuesToString: function (input) {
     const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return `${h}% ${s} ${l}`
+    return `${h} ${s}% ${l}%`
   },
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
