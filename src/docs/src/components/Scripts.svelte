@@ -8,9 +8,6 @@
   {/if}
 
   {#if readEnv("VITE_GTM") == "true"}
-    <!-- Google Tag Manager -->
-    <!-- Google Tag Manager -->
-    <!-- Google Tag Manager -->
     <script>
       ;(function (w, d, s, l, i) {
         w[l] = w[l] || []
@@ -23,7 +20,6 @@
         f.parentNode.insertBefore(j, f)
       })(window, document, "script", "dataLayer", "GTM-WJ8HL28")
     </script>
-    <!-- End Google Tag Manager -->
   {/if}
 </svelte:head>
 

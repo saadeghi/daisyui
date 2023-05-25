@@ -102,7 +102,7 @@
     bind:this={section[1]}>
     <div class="shrink xl:w-1/2">
       <div
-        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:pl-10 xl:pr-0 xl:text-left"
+        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:pl-10 xl:pr-0 xl:text-left"
         class:invisible={section[1] && scrollY > section[1].clientHeight}>
         <div>
           <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
