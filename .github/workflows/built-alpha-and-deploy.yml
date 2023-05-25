@@ -1,11 +1,15 @@
-name: "Build from alpha version and deploy docs"
+name: "Build from alpha version and deploy docs to staging"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   release:
     name: "Build"
+    if: github.repository == 'daisyui/daisyui.github.io'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,8 +18,8 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: 19
-          registry-url: https://registry.npmjs.org
+          node-version: "latest"
+          # registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
         run: npm install
