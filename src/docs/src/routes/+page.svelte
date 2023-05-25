@@ -408,7 +408,12 @@
                           <div class="chat chat-start">
                             <div class="chat-image avatar">
                               <div class="w-10 rounded-full">
-                                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <img
+                                  width="40"
+                                  height="40"
+                                  loading="lazy"
+                                  src="/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                                  alt="tailwind css avatar component" />
                               </div>
                             </div>
                             <div class="chat-bubble text-xs [.chat_&]:before:[left:-0.73rem]">
@@ -1478,7 +1483,9 @@
             <div class="avatar">
               <div class="mask mask-squircle w-8">
                 <img
-                  src={contributor.avatar_url}
+                  loading="lazy"
+                  src={`${contributor.avatar_url}&s=32`}
+                  srcset={`${contributor.avatar_url}&s=64 2x, ${contributor.avatar_url}&s=96 3x`}
                   alt={contributor.login}
                   width="32"
                   height="32"
@@ -1508,6 +1515,7 @@
               <div class="avatar">
                 <div class="mask mask-squircle w-8">
                   <img
+                    loading="lazy"
                     src={backer.image.replace("?default=404", "?default=identicon")}
                     alt={backer.name}
                     width="32"
@@ -1557,7 +1565,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[9], [-100, -30], [0, 1]))
           }`}>
-          with your favorite framework
+          on your favorite framework
         </span>
       </h2>
       <div class="h-16" />

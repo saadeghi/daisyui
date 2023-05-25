@@ -43,7 +43,7 @@
           </svg>
         </li>
         <li>
-          <button class="active">
+          <button class="active" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -66,7 +66,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -84,7 +84,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -117,7 +117,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -143,7 +143,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -224,7 +224,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -243,7 +243,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -277,7 +277,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -304,7 +304,7 @@
           </button>
         </li>
         <li>
-          <button>
+          <button aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -361,14 +361,14 @@
   <div
     class="rounded-box bg-base-200 grid grow grid-cols-2 gap-4 p-6"
     style={`opacity:${animateValue(section, [15, 20], [0, 1])}`}>
-    <button class="btn btn-neutral">Neutral</button>
-    <button class="btn btn-primary">Primary</button>
-    <button class="btn btn-secondary">Secondary</button>
-    <button class="btn btn-accent">Accent</button>
-    <button class="btn btn-info">Info</button>
-    <button class="btn btn-success">Success</button>
-    <button class="btn btn-warning">Warning</button>
-    <button class="btn btn-error">Error</button>
+    <button aria-label="tailwindcss button" class="btn btn-neutral">Neutral</button>
+    <button aria-label="tailwindcss button" class="btn btn-primary">Primary</button>
+    <button aria-label="tailwindcss button" class="btn btn-secondary">Secondary</button>
+    <button aria-label="tailwindcss button" class="btn btn-accent">Accent</button>
+    <button aria-label="tailwindcss button" class="btn btn-info">Info</button>
+    <button aria-label="tailwindcss button" class="btn btn-success">Success</button>
+    <button aria-label="tailwindcss button" class="btn btn-warning">Warning</button>
+    <button aria-label="tailwindcss button" class="btn btn-error">Error</button>
   </div>
 </div>
 <div class="flex grow flex-col gap-6">
@@ -376,15 +376,22 @@
     class="navbar bg-base-200 rounded-box hidden xl:flex"
     style={`opacity:${animateValue(section, [13, 18], [0, 1])}`}>
     <div class="grow">
-      <button class="btn btn-ghost btn-circle avatar">
+      <button
+        class="btn btn-ghost btn-circle avatar"
+        aria-label="tailwindcss avatar"
+        alt="tailwindcss avatar">
         <div class="w-10 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img
+            width="40"
+            height="40"
+            src="/images/stock/photo-1534528741775-53994a69daeb.jpg"
+            aria-label="tailwindcss button" />
         </div>
       </button>
     </div>
     <ul class="menu menu-horizontal rounded-box">
       <li>
-        <a>
+        <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -399,10 +406,10 @@
           </svg>
           Inbox
           <span class="badge badge-sm">99+</span>
-        </a>
+        </button>
       </li>
       <li>
-        <a>
+        <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -417,13 +424,13 @@
           </svg>
           Updates
           <span class="badge badge-sm badge-warning">NEW</span>
-        </a>
+        </button>
       </li>
       <li>
-        <a>
+        <button>
           Stats
           <span class="badge badge-xs badge-info" />
-        </a>
+        </button>
       </li>
     </ul>
   </div>
@@ -452,14 +459,46 @@
     style={`opacity:${animateValue(section, [11, 16], [0, 1])}`}>
     <div class="card-body">
       <div class="flex h-full items-center justify-between gap-6">
-        <input checked type="checkbox" class="toggle pointer-events-none" />
-        <input checked type="checkbox" class="toggle toggle-primary pointer-events-none" />
-        <input checked type="checkbox" class="toggle toggle-secondary pointer-events-none" />
-        <input checked type="checkbox" class="toggle toggle-accent pointer-events-none" />
-        <input checked type="checkbox" class="checkbox pointer-events-none" />
-        <input checked type="checkbox" class="checkbox checkbox-primary pointer-events-none" />
-        <input checked type="checkbox" class="checkbox checkbox-secondary pointer-events-none" />
-        <input checked type="checkbox" class="checkbox checkbox-accent pointer-events-none" />
+        <input
+          aria-label="tailwindcss toggle"
+          checked
+          type="checkbox"
+          class="toggle pointer-events-none" />
+        <input
+          aria-label="tailwindcss toggle"
+          checked
+          type="checkbox"
+          class="toggle toggle-primary pointer-events-none" />
+        <input
+          aria-label="tailwindcss toggle"
+          checked
+          type="checkbox"
+          class="toggle toggle-secondary pointer-events-none" />
+        <input
+          aria-label="tailwindcss toggle"
+          checked
+          type="checkbox"
+          class="toggle toggle-accent pointer-events-none" />
+        <input
+          aria-label="tailwindcss checkbox"
+          checked
+          type="checkbox"
+          class="checkbox pointer-events-none" />
+        <input
+          aria-label="tailwindcss checkbox"
+          checked
+          type="checkbox"
+          class="checkbox checkbox-primary pointer-events-none" />
+        <input
+          aria-label="tailwindcss checkbox"
+          checked
+          type="checkbox"
+          class="checkbox checkbox-secondary pointer-events-none" />
+        <input
+          aria-label="tailwindcss checkbox"
+          checked
+          type="checkbox"
+          class="checkbox checkbox-accent pointer-events-none" />
       </div>
     </div>
   </div>
