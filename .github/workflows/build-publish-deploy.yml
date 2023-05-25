@@ -1,6 +1,7 @@
-name: "Build, Publish, Deploy"
+name: "Build from latest version, publish package and deploy docs"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -11,17 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v3
         with:
-          node-version: 19.0.0
+          node-version: 19
           registry-url: https://registry.npmjs.org
 
       - name: check latest released version
         id: check
-        uses: EndBug/version-check@v2.1.0
+        uses: EndBug/version-check@v2
         with:
           file-url: https://unpkg.com/daisyui@latest/package.json
           static-checking: localIsNew
