@@ -8,7 +8,6 @@
   import { siteStats } from "@src/lib/data.js"
   import { tweets } from "@src/lib/testimonials.js"
   import { t } from "@src/lib/i18n"
-  import Translate from "@components/Translate.svelte"
   import { stargazers_count } from "$lib/json/github-repo.json"
   import { downloads } from "$lib/json/npm-downloads.json"
   import contributors from "$lib/json/github-contributors.json"
@@ -101,7 +100,7 @@
   <div
     class="flex min-h-[550vh] flex-col items-center justify-start xl:flex-row xl:items-start xl:justify-between"
     bind:this={section[1]}>
-    <div class="shrink-0">
+    <div class="w-1/2 shrink">
       <div
         class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 text-center xl:pl-10 xl:pr-0 xl:text-left"
         class:invisible={section[1] && scrollY > section[1].clientHeight}>
@@ -111,7 +110,7 @@
           </div>
           <div class="h-4" />
           <h1
-            class="font-title text-center text-[clamp(2rem,10vw,5rem)] font-black leading-none xl:text-left">
+            class="font-title text-center text-[clamp(2rem,6vw,4.5rem)] font-black leading-none xl:text-left">
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
               {$t("The most popular")}
@@ -136,8 +135,9 @@
           </h1>
           <div class="h-4" />
           <p class="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
-            <Translate
-              text="daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>" />
+            {@html $t(
+              "daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>"
+            )}
           </p>
           <div class="h-10" />
           <div>
@@ -177,24 +177,25 @@
         <div class="max-w-[100vw] px-2 py-10 lg:px-10 xl:max-w-[50vw]">
           <div class="font-title text-center xl:text-left">
             <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none">
-              <Translate text="don't re-invent<br/>the wheel<br/>every time" /> 🥱
+              {@html $t("don't re-invent<br/>the wheel<br/>every time")} 🥱
             </h2>
 
             <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-              In a Tailwind CSS project, you need to write utiltiy class names for every element.
-              Thousands of class names just to style the most basic elements.
+              {@html $t(
+                "In a Tailwind CSS project, you need to write utiltiy class names for every element. Thousands of class names just to style the most basic elements."
+              )}
             </p>
             <div class="h-40" />
             <div class="relative h-[300vh]">
               <div class="sticky top-[18vh] xl:top-[30vh]">
                 <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
-                  <Translate
-                    text="instead of writing<br /><span class='text-error'><span class='font-black'>100</span>class names</span>" />
+                  {@html $t(
+                    "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>"
+                  )}
                 </h2>
                 <div class="h-6" />
                 <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-                  <Translate
-                    text="For every element, every page, every project,<br/>again and again" />…
+                  {@html $t("For every element, every page, every project,<br/>again and again")}…
                 </p>
                 <div class="h-24" />
               </div>
@@ -202,12 +203,13 @@
             <div class="relative h-screen">
               <div class="sticky top-[18vh] xl:top-[30vh]">
                 <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
-                  <Translate
-                    text="use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>" />
+                  {@html $t(
+                    "use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>"
+                  )}
                 </h2>
                 <div class="h-6" />
                 <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-                  <Translate text="It's descriptive, faster, cleaner and easier to maintain." />
+                  {@html $t("It's descriptive, faster, cleaner and easier to maintain.")}
                 </p>
                 <div class="h-20" />
               </div>
@@ -463,7 +465,7 @@
                         clip-rule="evenodd" />
                     </svg>
                     <span class="text-xs">
-                      <Translate text="Pure CSS. <br />No JS dependency" />
+                      {@html $t("Pure CSS. <br />No JS dependency")}
                     </span>
                   </div>
                   <div
@@ -490,7 +492,7 @@
                         d="M15.98 1.804a1 1 0 00-1.96 0l-.24 1.192a1 1 0 01-.784.785l-1.192.238a1 1 0 000 1.962l1.192.238a1 1 0 01.785.785l.238 1.192a1 1 0 001.962 0l.238-1.192a1 1 0 01.785-.785l1.192-.238a1 1 0 000-1.962l-1.192-.238a1 1 0 01-.785-.785l-.238-1.192zM6.949 5.684a1 1 0 00-1.898 0l-.683 2.051a1 1 0 01-.633.633l-2.051.683a1 1 0 000 1.898l2.051.684a1 1 0 01.633.632l.683 2.051a1 1 0 001.898 0l.683-2.051a1 1 0 01.633-.633l2.051-.683a1 1 0 000-1.898l-2.051-.683a1 1 0 01-.633-.633L6.95 5.684zM13.949 13.684a1 1 0 00-1.898 0l-.184.551a1 1 0 01-.632.633l-.551.183a1 1 0 000 1.898l.551.183a1 1 0 01.633.633l.183.551a1 1 0 001.898 0l.184-.551a1 1 0 01.632-.633l.551-.183a1 1 0 000-1.898l-.551-.184a1 1 0 01-.633-.632l-.183-.551z" />
                     </svg>
                     <span class="text-xs">
-                      <Translate text="Works on all frameworks" />
+                      {@html $t("Works on all frameworks")}
                     </span>
                   </div>
                 </div>
@@ -651,19 +653,21 @@
       </span>
     </h2>
     <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-      <Translate
-        text="daisyUI adds class names to Tailwind CSS<br />for all common UI components.<br />Class names like" />
+      {@html $t(
+        "daisyUI adds class names to Tailwind CSS<br />for all common UI components.<br />Class names like"
+      )}
       <a href="/components/button/" class="link">btn</a>
       ,
       <a href="/components/card/" class="link">card</a>
       ,
       <a href="/components/toggle/" class="link">toggle</a>
-      <Translate text="and many more." />
+      {@html $t("and many more.")}
     </p>
     <div class="h-6" />
     <p class="text-success font-title font-light md:text-2xl">
-      <Translate
-        text="This allows us to focus on important things<br />instead of styling basic elements for every project." />
+      {@html $t(
+        "This allows us to focus on important things<br />instead of styling basic elements for every project."
+      )}
     </p>
     <div class="h-12" />
     <div class="flex w-full justify-center">
@@ -715,8 +719,9 @@
             </span>
           </h2>
           <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
-            <Translate
-              text="Write fewer class names<br />Use component class names<br />modify them using Tailwind CSS utilities." />
+            {@html $t(
+              "Write fewer class names<br />Use component class names<br />modify them using Tailwind CSS utilities."
+            )}
           </p>
           <div class="h-4" />
           <div class="text-base-content/40 mx-auto w-72 text-left">
@@ -915,8 +920,9 @@
         </h2>
         <div class="h-10" />
         <p class="text-base-content/60 font-title text-center font-light md:text-3xl xl:text-left">
-          <Translate
-            text="With daisyUI, you write 80% fewer class names<br />And your HTML size will be about 70% smaller." />
+          {@html $t(
+            "With daisyUI, you write 80% fewer class names<br />And your HTML size will be about 70% smaller."
+          )}
         </p>
       </div>
       <div class="grid shrink-0 gap-6 xl:grid-cols-5">
@@ -1015,17 +1021,18 @@
     <div class="px-4 py-10 md:px-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
         <span class="text-[clamp(2rem,8vw,5rem)] font-black">
-          <Translate text="Highly customizable" />
+          {@html $t("Highly customizable")}
         </span>
         <br />
         <span class="text-neutral-content/20 text-[clamp(2rem,8vw,4rem)] font-black">
-          <Translate text="Powered by Tailwind&nbsp;CSS utility&nbsp;classes" />
+          {@html $t("Powered by Tailwind&nbsp;CSS utility&nbsp;classes")}
         </span>
       </h2>
       <div class="h-10" />
       <p class="text-neutral-content/60 font-title text-center font-light md:text-3xl xl:text-left">
-        <Translate
-          text="daisyUI is built on top of Tailwind&nbsp;CSS<br />so you can customize everything<br />using utility classes." />
+        {@html $t(
+          "daisyUI is built on top of Tailwind&nbsp;CSS<br />so you can customize everything<br />using utility classes."
+        )}
       </p>
     </div>
     <div class="pb-10 md:p-10">
@@ -1057,13 +1064,15 @@
       <div class="h-10" />
       <p
         class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
-        <Translate
-          text="daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file." />
+        {@html $t(
+          "daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file."
+        )}
       </p>
       <p
         class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
-        <Translate
-          text="Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name." />
+        {@html $t(
+          "Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name."
+        )}
       </p>
       <div class="h-10" />
       <div class="flex w-full justify-center xl:justify-start">
@@ -1254,8 +1263,9 @@
       </h2>
       <p
         class="text-base-content/60 font-title relative z-[2] mx-auto max-w-3xl py-4 font-light md:text-3xl">
-        <Translate
-          text="Your website should be unique. Create a custom theme for yourself using daisyUI theme generator. The colors you pick will be applied to all daisyUI components." />
+        {@html $t(
+          "Your website should be unique. Create a custom theme for yourself using daisyUI theme generator. The colors you pick will be applied to all daisyUI components."
+        )}
       </p>
       <div class="h-10" />
       <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
@@ -1344,7 +1354,7 @@
         [0, 20],
         [0.7, 1]
       )});opacity:${animateValue(section[8], [0, 20], [0, 1])}`}>
-      <Translate text="daisyUI is the most popular<br />component library for Tailwind&nbsp;CSS" />
+      {@html $t("daisyUI is the most popular<br />component library for Tailwind&nbsp;CSS")}
     </h2>
     <div class="h-32" />
     <div class="grid gap-10 p-6 xl:grid-cols-3">
