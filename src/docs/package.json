@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run createStyleHandlerComponent:dev && vite dev --port 3000 --open",
-    "build": "npm i daisyui@latest && npm run createStyleHandlerComponent:prod && NODE_ENV=production vite build",
+    "build": "npm i daisyui@alpha && npm run createStyleHandlerComponent:prod && NODE_ENV=production vite build",
     "preview": "vite preview",
     "createStyleHandlerComponent:dev": "echo '<script>import \"@components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>import \"@components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "colord": "^2.9.3",
-    "daisyui": "^0.0.0-insiders.3.6",
+    "daisyui": "^0.0.0-insiders.3.8",
     "dep-graph-count": "^1.0.0",
     "emoji-unicode": "^2.0.1",
     "lodash.debounce": "^4.0.8",
