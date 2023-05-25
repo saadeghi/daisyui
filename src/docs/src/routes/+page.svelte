@@ -103,71 +103,74 @@
     bind:this={section[1]}>
     <div class="shrink-0">
       <div
-        class="px-2 py-12 text-center lg:pl-10 lg:pr-0 xl:py-32 xl:text-left"
+        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 text-center xl:pl-10 xl:pr-0 xl:text-left"
         class:invisible={section[1] && scrollY > section[1].clientHeight}>
-        <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
-          <pre><code>npm i -D daisyui</code></pre>
-        </div>
-        <div class="h-4" />
-        <h1
-          class="font-title text-center text-[clamp(2rem,8vw,5rem)] font-black leading-none xl:text-left">
-          <span
-            class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
-            The most popular
-          </span>
-          <br />
-          <span class="inline-grid">
-            <span
-              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
-              aria-hidden="true">
-              component library
-            </span>
-            <span
-              class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text leading-tight [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
-              component library
-            </span>
-          </span>
-          <br />
-          <span
-            class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
-            for Tailwind CSS
-          </span>
-        </h1>
-        <div class="h-4" />
-        <p class="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
-          daisyUI adds component class names to Tailwind CSS
-          <br />
-          so you can make beautiful websites
-          <span class="border-base-content/20 border-b-2">faster than ever.</span>
-        </p>
-        <div class="h-10" />
         <div>
-          <div class="inline-flex flex-col gap-2 md:flex-row">
-            <a
-              data-sveltekit-preload-data="hover"
-              href="/components/"
-              class="btn group px-12 normal-case">
-              <span class="hidden sm:inline">{$t("cta-1")}</span>
-              <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
-            </a>
-            <a
-              data-sveltekit-preload-data="hover"
-              href="/docs/install"
-              class="btn btn-neutral group px-12 normal-case">
-              {$t("cta-2")}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-              </svg>
-            </a>
+          <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
+            <pre><code>npm i -D daisyui</code></pre>
+          </div>
+          <div class="h-4" />
+          <h1
+            class="font-title text-center text-[clamp(2rem,10vw,5rem)] font-black leading-none xl:text-left">
+            <span
+              class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
+              The most popular
+            </span>
+            <br />
+            <span class="inline-grid">
+              <span
+                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+                aria-hidden="true">
+                component library
+              </span>
+              <span
+                class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text leading-tight [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
+                component library
+              </span>
+            </span>
+            <br />
+            <span
+              class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
+              for Tailwind CSS
+            </span>
+          </h1>
+          <div class="h-4" />
+          <p class="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
+            daisyUI adds component class names to Tailwind&nbsp;CSS
+            <br />
+            so you can make beautiful websites
+            <span class="border-base-content/20 border-b-2">faster than ever.</span>
+          </p>
+          <div class="h-10" />
+          <div>
+            <div
+              class="inline-flex w-full flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0">
+              <a
+                data-sveltekit-preload-data="hover"
+                href="/components/"
+                class="btn md:btn-lg md:btn-wide group px-12 normal-case">
+                <span class="hidden sm:inline">{$t("cta-1")}</span>
+                <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
+              </a>
+              <a
+                data-sveltekit-preload-data="hover"
+                href="/docs/install"
+                class="btn btn-neutral md:btn-lg md:btn-wide group px-12 normal-case">
+                {$t("cta-2")}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -232,9 +235,14 @@
     <!-- hero figure -->
 
     <div
-      class="bg-base-200 sticky bottom-0 flex w-full shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]">
+      class={`invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:visible xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]
+      ${section[1] && scrollY < 100 ? "" : ""}
+      `}
+      style={`${
+        section[1] && scrollY > section[1].clientHeight * 0.2 ? "visibility: visible;" : ""
+      }transform:translateY(${animateValue(section[1], [20, 21], [120, 0])}%)`}>
       <div
-        class="mockup mockup-window bg-base-200 mx-auto origin-top overflow-visible pb-4 [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014]"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
         style={section[1] &&
           `transform: rotateX(${animateValue(
             section[1],
@@ -248,7 +256,8 @@
         class:invisible={section[1] && scrollY > section[1].clientHeight}>
         <div class="grid">
           <div
-            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden">
+            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
+            class:invisible={section[1] && scrollY < section[1].clientHeight}>
             <!-- flying components -->
             <div
               class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0"
@@ -614,8 +623,8 @@
             </div>
           </div>
           <div
-            class="col-start-1 row-start-1 w-11/12 p-10 opacity-0"
-            style={`opacity:${animateValue(section[1], [15, 17], [0, 1])};z-index:${animateValue(
+            class="col-start-1 row-start-1 w-11/12 px-10 pb-10 opacity-0 xl:pt-10"
+            style={`opacity:${animateValue(section[1], [16, 17], [0, 1])};z-index:${animateValue(
               section[1],
               [20, 22],
               [0, 1]
@@ -764,7 +773,7 @@
         <div class="flex flex-col items-center gap-6 xl:flex-row">
           {#if toggleValueForCodeCompare}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(70vw-5rem)] grow border bg-transparent text-xs xl:h-[550px]">
+              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-2rem)] grow border bg-transparent text-xs xl:h-[550px]">
               <pre
                 class="w-full whitespace-pre-wrap px-6 before:hidden"><code />&lt;div class=&quot;<span
                   class="text-teal-600">card bg-base-200 w-80</span>&quot;&gt;
@@ -808,7 +817,7 @@
             </div>
           {:else}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(70vw-5rem)] grow border bg-transparent text-xs xl:h-[550px]">
+              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-2rem)] grow border bg-transparent text-xs xl:h-[550px]">
               <pre
                 class="w-full whitespace-pre-wrap px-6 before:hidden"><code />&lt;div class=&quot;<span
                   class="text-amber-600">w-80 rounded-2xl bg-gray-100</span>&quot;&gt;
@@ -887,7 +896,7 @@
 <div class="min-h-[100vh] overflow-hidden pb-40 pt-32" bind:this={section[4]}>
   <div class="relative">
     <div
-      class="relative flex flex-col items-center justify-center gap-10 px-10 xl:flex-row-reverse xl:gap-20">
+      class="relative flex flex-col items-center justify-center gap-10 px-4 md:px-10 xl:flex-row-reverse xl:gap-20">
       <div>
         <div
           class="bg-primary pointer-events-none absolute left-20 aspect-square w-96 rounded-full opacity-20 blur-3xl" />
@@ -1022,7 +1031,7 @@
 <div
   class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center justify-center bg-gradient-to-br">
   <div class="flex max-w-[100rem] flex-col items-center justify-center xl:flex-row">
-    <div class="px-10 py-10">
+    <div class="px-4 py-10 md:px-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
         <span class="text-[clamp(2rem,8vw,5rem)] font-black">Highly customizable</span>
         <br />
@@ -1099,7 +1108,7 @@
       </div>
     </div>
     <div class="pointer-events-none shrink-0 pb-10 md:p-10 xl:w-1/3">
-      <div class="grid grid-cols-4 gap-10 px-6">
+      <div class="grid grid-cols-4 gap-10 px-10 pt-10 xl:px-6 xl:pt-0">
         <img
           loading="lazy"
           width="96"
@@ -1190,7 +1199,8 @@
 </div>
 
 <div class="min-h-[900vh] py-20" bind:this={section[5]}>
-  <div class="sticky top-20 grid max-w-[85rem] overflow-hidden rounded-2xl xl:mx-auto">
+  <div
+    class="sticky top-20 mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl">
     {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
       <div
         class="col-start-1 row-start-1 flex items-start"
@@ -1268,7 +1278,7 @@
         generator. The colors you pick will be applied to all daisyUI components.
       </p>
       <div class="h-10" />
-      <div class="flex w-full justify-center gap-4">
+      <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
         <a data-sveltekit-preload-data="hover" href="/theme-generator/" class="btn normal-case">
           Theme Generator
         </a>
@@ -1284,7 +1294,7 @@
   <div class="w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
-        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+        class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
             Math.trunc(animateValue(section[7], [-100, -40], [0, 1])) === 0
@@ -1331,7 +1341,10 @@
       </p>
       <div class="h-10" />
       <div class="flex w-full justify-center">
-        <a data-sveltekit-preload-data="hover" href="/components/" class="btn btn-primary btn-wide">
+        <a
+          data-sveltekit-preload-data="hover"
+          href="/components/"
+          class="btn btn-primary md:btn-wide w-full">
           {$t("all-components-btn")}
         </a>
       </div>
@@ -1457,7 +1470,7 @@
   </div>
 </div>
 
-<div class="w-full px-2 py-40 lg:px-10">
+<div class="w-[calc(100%-1rem)] px-2 py-40 lg:px-10">
   <div class="text-center">
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
@@ -1665,7 +1678,7 @@
         </a>
       </div>
       <div class="h-10" />
-      <div class="flex w-full items-center justify-center gap-2">
+      <div class="flex w-full flex-col items-center justify-center gap-2 md:flex-row">
         <span class="text-base-content/60">Or play with daisyUI on:</span>
         <a
           target="_blank"
