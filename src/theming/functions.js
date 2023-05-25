@@ -53,13 +53,21 @@ module.exports = {
       //   }
       //   resultObj[colorNames[rule]] = arr.l + " " + arr.c + " " + arr.h
       // }
-      if (getFormat("lch(" + value + ")") === "lch") {
+
+      if (colorNames.hasOwnProperty(rule)) {
+        const hslArray = colord(value).toHsl()
+        resultObj[colorNames[rule]] = `${hslArray.h} ${hslArray.s}% ${hslArray.l}%`
+      } else {
         resultObj[rule] = value
-        if (colorFunction === "hsl") {
-          let arr = colord("lch(" + value + ")").toHsl()
-          resultObj[rule] = arr.h + " " + arr.s + "% " + arr.l + "%"
-        }
       }
+
+      // if (getFormat("lch(" + value + ")") === "lch") {
+      //   resultObj[rule] = value
+      //   if (colorFunction === "hsl") {
+      //     let arr = colord("lch(" + value + ")").toHsl()
+      //     resultObj[rule] = arr.h + " " + arr.s + "% " + arr.l + "%"
+      //   }
+      // }
 
       // auto generate focus colors
       if (!Object.hasOwn(input, "primary-focus")) {
