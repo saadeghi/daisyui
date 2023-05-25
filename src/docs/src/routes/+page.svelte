@@ -3,12 +3,12 @@
   import SEO from "@components/SEO.svelte"
   import Ads from "@components/Ads.svelte"
   import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
-  import HomepageTry from "@components/homepage/Try.svelte"
   import HomepageInstall from "@components/homepage/Install.svelte"
   import Footer from "@components/Footer.svelte"
   import { siteStats } from "@src/lib/data.js"
   import { tweets } from "@src/lib/testimonials.js"
   import { t } from "@src/lib/i18n"
+  import Translate from "@components/Translate.svelte"
   import { stargazers_count } from "$lib/json/github-repo.json"
   import { downloads } from "$lib/json/npm-downloads.json"
   import contributors from "$lib/json/github-contributors.json"
@@ -114,32 +114,30 @@
             class="font-title text-center text-[clamp(2rem,10vw,5rem)] font-black leading-none xl:text-left">
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
-              The most popular
+              {$t("The most popular")}
             </span>
             <br />
             <span class="inline-grid">
               <span
                 class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
                 aria-hidden="true">
-                component library
+                {$t("component library")}
               </span>
               <span
                 class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text leading-tight [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
-                component library
+                {$t("component library")}
               </span>
             </span>
             <br />
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
-              for Tailwind CSS
+              {$t("for Tailwind CSS")}
             </span>
           </h1>
           <div class="h-4" />
           <p class="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
-            daisyUI adds component class names to Tailwind&nbsp;CSS
-            <br />
-            so you can make beautiful websites
-            <span class="border-base-content/20 border-b-2">faster than ever.</span>
+            <Translate
+              text="daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>" />
           </p>
           <div class="h-10" />
           <div>
@@ -179,11 +177,7 @@
         <div class="max-w-[100vw] px-2 py-10 lg:px-10 xl:max-w-[50vw]">
           <div class="font-title text-center xl:text-left">
             <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none">
-              don't re-invent
-              <br />
-              the wheel
-              <br />
-              every time 🥱
+              <Translate text="don't re-invent<br/>the wheel<br/>every time" /> 🥱
             </h2>
 
             <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
@@ -194,18 +188,13 @@
             <div class="relative h-[300vh]">
               <div class="sticky top-[18vh] xl:top-[30vh]">
                 <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
-                  instead of writing
-                  <br />
-                  <span class="text-error">
-                    <span class="font-black">100</span>
-                    class names
-                  </span>
+                  <Translate
+                    text="instead of writing<br /><span class='text-error'><span class='font-black'>100</span>class names</span>" />
                 </h2>
                 <div class="h-6" />
                 <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-                  For every element, every page, every project,
-                  <br />
-                  again and again...
+                  <Translate
+                    text="For every element, every page, every project,<br/>again and again" />…
                 </p>
                 <div class="h-24" />
               </div>
@@ -213,16 +202,12 @@
             <div class="relative h-screen">
               <div class="sticky top-[18vh] xl:top-[30vh]">
                 <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
-                  use
-                  <span class="text-success">
-                    <span class="font-black">semantic</span>
-                    <br />
-                    class names
-                  </span>
+                  <Translate
+                    text="use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>" />
                 </h2>
                 <div class="h-6" />
                 <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-                  It's descriptive, faster, cleaner and easier to maintain.
+                  <Translate text="It's descriptive, faster, cleaner and easier to maintain." />
                 </p>
                 <div class="h-20" />
               </div>
@@ -264,7 +249,7 @@
               style={`opacity:${animateValue(section[1], [15, 16], [1, 0])}`}>
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
-                  class="relative w-80 max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
+                  class="relative z-[1] w-80 max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style={`transform:translate(${animateValue(
                     section[1],
                     [2, 9],
@@ -275,19 +260,19 @@
                       on:click={() => (activeMenuItemOnHeroMockup = 1)}
                       class:tab-active={activeMenuItemOnHeroMockup === 1}
                       class="tab tab-lifted tab-border-none w-1/3 grow text-xs">
-                      Features
+                      {$t("Features")}
                     </button>
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 2)}
                       class:tab-active={activeMenuItemOnHeroMockup === 2}
                       class="tab tab-lifted tab-border-none w-1/3 grow text-xs">
-                      Links
+                      {$t("Links")}
                     </button>
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 3)}
                       class:tab-active={activeMenuItemOnHeroMockup === 3}
                       class="tab tab-lifted tab-border-none w-1/3 grow text-xs">
-                      Message
+                      {$t("Message")}
                     </button>
                   </div>
                   <div
@@ -298,7 +283,7 @@
                       <div class="flex flex-col items-stretch p-6">
                         <div class="form-control">
                           <label class="label cursor-pointer">
-                            <span class="label-text text-xs">Faster development</span>
+                            <span class="label-text text-xs">{$t("Faster development")}</span>
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-primary"
@@ -307,7 +292,7 @@
                         </div>
                         <div class="form-control">
                           <label class="label cursor-pointer">
-                            <span class="label-text text-xs">Cleaner HTML</span>
+                            <span class="label-text text-xs">{$t("Cleaner HTML")}</span>
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-secondary"
@@ -316,13 +301,13 @@
                         </div>
                         <div class="form-control">
                           <label class="label cursor-pointer">
-                            <span class="label-text text-xs">Customizable</span>
+                            <span class="label-text text-xs">{$t("Customizable")}</span>
                             <input type="checkbox" class="toggle toggle-sm toggle-accent" checked />
                           </label>
                         </div>
                         <div class="form-control">
                           <label class="label cursor-pointer">
-                            <span class="label-text text-xs">Themeable</span>
+                            <span class="label-text text-xs">{$t("Themeable")}</span>
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-success"
@@ -331,7 +316,7 @@
                         </div>
                         <div class="form-control">
                           <label class="label cursor-pointer">
-                            <span class="label-text text-xs">Pure CSS</span>
+                            <span class="label-text text-xs">{$t("Pure CSS")}</span>
                             <input type="checkbox" class="toggle toggle-sm" checked />
                           </label>
                         </div>
@@ -339,7 +324,7 @@
                     {/if}
                     {#if activeMenuItemOnHeroMockup === 2}
                       <ul class="menu">
-                        <li class="menu-title">Dashboard</li>
+                        <li class="menu-title">{$t("Dashboard")}</li>
                         <li>
                           <button>
                             <svg
@@ -350,7 +335,7 @@
                               <path
                                 d="M15.5 2A1.5 1.5 0 0014 3.5v13a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2h-1zM9.5 6A1.5 1.5 0 008 7.5v9A1.5 1.5 0 009.5 18h1a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 6h-1zM3.5 10A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h1A1.5 1.5 0 006 16.5v-5A1.5 1.5 0 004.5 10h-1z" />
                             </svg>
-                            Dashboard
+                            {$t("Dashboard")}
                           </button>
                         </li>
                         <li>
@@ -363,7 +348,7 @@
                               <path
                                 d="M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 018-2.828A4.5 4.5 0 0118 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 01-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 01-.69.001l-.002-.001z" />
                             </svg>
-                            Notifications
+                            {$t("Notifications")}
                           </button>
                         </li>
                         <li>
@@ -378,7 +363,7 @@
                                 d="M2 10c0-3.967 3.69-7 8-7 4.31 0 8 3.033 8 7s-3.69 7-8 7a9.165 9.165 0 01-1.504-.123 5.976 5.976 0 01-3.935 1.107.75.75 0 01-.584-1.143 3.478 3.478 0 00.522-1.756C2.979 13.825 2 12.025 2 10z"
                                 clip-rule="evenodd" />
                             </svg>
-                            Messages
+                            {$t("Messages")}
                           </button>
                         </li>
                         <li>
@@ -391,7 +376,7 @@
                               <path
                                 d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
                             </svg>
-                            People
+                            {$t("People")}
                           </button>
                         </li>
                         <li>
@@ -406,7 +391,7 @@
                                 d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
                                 clip-rule="evenodd" />
                             </svg>
-                            Products
+                            {$t("Products")}
                           </button>
                         </li>
                       </ul>
@@ -426,7 +411,7 @@
                               </div>
                             </div>
                             <div class="chat-bubble text-xs [.chat_&]:before:[left:-0.73rem]">
-                              Use Tailwind CSS but write fewer class names.
+                              {$t("Use Tailwind CSS but write fewer class names.")}
                             </div>
                           </div>
                         </div>
@@ -453,7 +438,7 @@
                 <div
                   class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
-                    class="alert max-[1280px]:!transform-none"
+                    class="alert border-base-300 border max-[1280px]:!transform-none"
                     style={`box-shadow:${animateValue(
                       section[1],
                       [5, 5.5],
@@ -478,12 +463,11 @@
                         clip-rule="evenodd" />
                     </svg>
                     <span class="text-xs">
-                      Pure CSS. <br />
-                      No JS dependency
+                      <Translate text="Pure CSS. <br />No JS dependency" />
                     </span>
                   </div>
                   <div
-                    class="alert max-[1280px]:!transform-none"
+                    class="alert border-base-300 border max-[1280px]:!transform-none"
                     style={`box-shadow:${animateValue(
                       section[1],
                       [6, 6.5],
@@ -505,7 +489,9 @@
                       <path
                         d="M15.98 1.804a1 1 0 00-1.96 0l-.24 1.192a1 1 0 01-.784.785l-1.192.238a1 1 0 000 1.962l1.192.238a1 1 0 01.785.785l.238 1.192a1 1 0 001.962 0l.238-1.192a1 1 0 01.785-.785l1.192-.238a1 1 0 000-1.962l-1.192-.238a1 1 0 01-.785-.785l-.238-1.192zM6.949 5.684a1 1 0 00-1.898 0l-.683 2.051a1 1 0 01-.633.633l-2.051.683a1 1 0 000 1.898l2.051.684a1 1 0 01.633.632l.683 2.051a1 1 0 001.898 0l.683-2.051a1 1 0 01.633-.633l2.051-.683a1 1 0 000-1.898l-2.051-.683a1 1 0 01-.633-.633L6.95 5.684zM13.949 13.684a1 1 0 00-1.898 0l-.184.551a1 1 0 01-.632.633l-.551.183a1 1 0 000 1.898l.551.183a1 1 0 01.633.633l.183.551a1 1 0 001.898 0l.184-.551a1 1 0 01.632-.633l.551-.183a1 1 0 000-1.898l-.551-.184a1 1 0 01-.633-.632l-.183-.551z" />
                     </svg>
-                    <span class="text-xs">Works on all frameworks</span>
+                    <span class="text-xs">
+                      <Translate text="Works on all frameworks" />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -527,7 +513,7 @@
                     [0, 250]
                   )}px,${animateValue(section[1], [0, 8], [0, -800])}px)`}>
                   <div class="card-body">
-                    <h2 class="card-title mb-4 text-sm">Design system</h2>
+                    <h2 class="card-title mb-4 text-sm">{$t("Design system")}</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input type="checkbox" class="checkbox checkbox-xs" />
@@ -630,14 +616,14 @@
               [0, 1]
             )}`}>
             <pre class="max-w-lg"><code class="whitespace-pre-wrap">
-<span class="text-base-content/40 italic">// Styling a simple button</span>
+<span class="text-base-content/40 italic">// {$t("Styling a simple button")}</span>
 
 &lt;button class=&quot;<span
                   class={`${demo_1_StyleHandler()}`}>{demo_1_ClassNameHandler()}</span>&quot;&gt;
   {demo_1_ElementTextHandler()}
 &lt;/button&gt;</code></pre>
             <div>
-              <div class="text-base-content/40 py-6 font-mono italic">// Result:</div>
+              <div class="text-base-content/40 py-6 font-mono italic">// {$t("Result")}:</div>
               <button class={`${demo_1_ClassNameHandler()}`}>{demo_1_ElementTextHandler()}</button>
             </div>
           </div>
@@ -656,32 +642,28 @@
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none max-[1280px]:!tracking-normal"
       style={`letter-spacing:${animateValue(section[2], [-100, 20], [1, 0])}rem`}>
-      Take Tailwind CSS
+      {$t("Take Tailwind CSS")}
       <br />
       <span
         class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
         style={`letter-spacing:${animateValue(section[2], [-100, 20], [0, 1])}rem`}>
-        to the next level
+        {$t("to the next level")}
       </span>
     </h2>
     <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
-      daisyUI adds class names to Tailwind CSS
-      <br />
-      for all common UI components.
-      <br />
-      Class names like
+      <Translate
+        text="daisyUI adds class names to Tailwind CSS<br />for all common UI components.<br />Class names like" />
       <a href="/components/button/" class="link">btn</a>
       ,
       <a href="/components/card/" class="link">card</a>
       ,
       <a href="/components/toggle/" class="link">toggle</a>
-      and many more.
+      <Translate text="and many more." />
     </p>
     <div class="h-6" />
     <p class="text-success font-title font-light md:text-2xl">
-      This allows us to focus on important things
-      <br />
-      instead of styling basic elements for every project.
+      <Translate
+        text="This allows us to focus on important things<br />instead of styling basic elements for every project." />
     </p>
     <div class="h-12" />
     <div class="flex w-full justify-center">
@@ -705,7 +687,7 @@
                   ? 0.1
                   : Math.trunc(animateValue(section[3], [-100, -40], [0, 1]))
               }`}>
-              No
+              {$t("No_more_ugly_HTML_part_1")}
             </span>
             <span
               style={`opacity:${
@@ -713,7 +695,7 @@
                   ? 0.1
                   : Math.trunc(animateValue(section[3], [-100, -30], [0, 1]))
               }`}>
-              more
+              {$t("No_more_ugly_HTML_part_2")}
             </span>
             <span
               style={`opacity:${
@@ -721,7 +703,7 @@
                   ? 0.1
                   : Math.trunc(animateValue(section[3], [-100, -20], [0, 1]))
               }`}>
-              ugly
+              {$t("No_more_ugly_HTML_part_3")}
             </span>
             <span
               style={`opacity:${
@@ -729,19 +711,16 @@
                   ? 0.1
                   : Math.trunc(animateValue(section[3], [-100, -10], [0, 1]))
               }`}>
-              HTML
+              {$t("No_more_ugly_HTML_part_4")}
             </span>
           </h2>
           <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
-            Write fewer class names
-            <br />
-            Use component class names
-            <br />
-            modify them using Tailwind CSS utilities.
+            <Translate
+              text="Write fewer class names<br />Use component class names<br />modify them using Tailwind CSS utilities." />
           </p>
           <div class="h-4" />
           <div class="text-base-content/40 mx-auto w-72 text-left">
-            <span class="inline-block -translate-y-2 -rotate-12">Click</span>
+            <span class="inline-block -translate-y-2 -rotate-12">{$t("Click")}</span>
             <svg
               class="inline-block h-8 w-20"
               viewBox="0 0 45 20"
@@ -754,7 +733,7 @@
           </div>
           <div class="flex justify-center pb-10 pt-4">
             <label class="flex cursor-pointer items-center gap-3">
-              Tailwind only
+              {$t("Tailwind only")}
               <div class="relative">
                 <div
                   class="pointer-events-none absolute left-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2">
@@ -766,7 +745,7 @@
                   class="toggle toggle-lg toggle-primary relative z-[2]"
                   bind:checked={toggleValueForCodeCompare} />
               </div>
-              Tailwind + daisyUI
+              {$t("Tailwind + daisyUI")}
             </label>
           </div>
         </div>
@@ -781,17 +760,18 @@
     &lt;input placeholder=&quot;Email&quot; class=&quot;<span
                   class="text-teal-600">input input-bordered</span>&quot; /&gt;
     &lt;label class=&quot;<span class="text-teal-600">label cursor-pointer</span>&quot;&gt;
-      Accept terms of use
+      {$t("Accept terms of use")}
       &lt;input type=&quot;checkbox&quot; class=&quot;<span
                   class="text-teal-600">toggle</span>&quot; /&gt;
     &lt;/label&gt;
     &lt;label class=&quot;<span class="text-teal-600">label cursor-pointer</span>&quot;&gt;
-      Submit to newsletter
+      {$t("Submit to newsletter")}
       &lt;input type=&quot;checkbox&quot; class=&quot;<span
                   class="text-teal-600">toggle</span>&quot; /&gt;
     &lt;/label&gt;
-    &lt;button class=&quot;<span
-                  class="text-teal-600">btn btn-neutral</span>&quot;&gt;Save&lt;/button&gt;
+    &lt;button class=&quot;<span class="text-teal-600">btn btn-neutral</span>&quot;&gt;{$t(
+                  "Save"
+                )}&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
             </div>
@@ -804,14 +784,14 @@
                 <div class="card-body">
                   <input placeholder="Email" class="input input-bordered" />
                   <label class="label cursor-pointer">
-                    Accept terms of use
+                    {$t("Accept terms of use")}
                     <input type="checkbox" class="toggle" />
                   </label>
                   <label class="label cursor-pointer">
-                    Submit to newsletter
+                    {$t("Submit to newsletter")}
                     <input type="checkbox" class="toggle" />
                   </label>
-                  <button class="btn btn-neutral">Save</button>
+                  <button class="btn btn-neutral">{$t("Save")}</button>
                 </div>
               </div>
             </div>
@@ -826,7 +806,7 @@
                   class="text-amber-600">w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-100</span>&quot; /&gt;
     &lt;label class=&quot;<span
                   class="text-amber-600">flex cursor-pointer items-center justify-between p-1</span>&quot;&gt;
-      Accept terms of use
+      {$t("Accept terms of use")}
       &lt;div class=&quot;<span class="text-amber-600">relative inline-block</span>&quot;&gt;
         &lt;input type=&quot;checkbox&quot; class=&quot;<span
                   class="text-amber-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
@@ -836,7 +816,7 @@
     &lt;/label&gt;
     &lt;label class=&quot;<span
                   class="text-amber-600">flex cursor-pointer items-center justify-between p-1</span>&quot;&gt;
-      Submit to newsletter
+      {$t("Submit to newsletter")}
       &lt;div class=&quot;<span class="text-amber-600">relative inline-block</span>&quot;&gt;
         &lt;input type=&quot;checkbox&quot; class=&quot;<span
                   class="text-amber-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
@@ -845,7 +825,9 @@
       &lt;/div&gt;
     &lt;/label&gt;
     &lt;button class=&quot;<span
-                  class="text-amber-600">inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95</span>&quot;&gt;Save&lt;/button&gt;
+                  class="text-amber-600">inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95</span>&quot;&gt;{$t(
+                  "Save"
+                )}&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
             </div>
@@ -860,7 +842,7 @@
                     placeholder="Email"
                     class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-100" />
                   <label class="flex cursor-pointer items-center justify-between p-1">
-                    Accept terms of use
+                    {$t("Accept terms of use")}
                     <div class="relative inline-block">
                       <input
                         type="checkbox"
@@ -870,7 +852,7 @@
                     </div>
                   </label>
                   <label class="flex cursor-pointer items-center justify-between p-1">
-                    Submit to newsletter
+                    {$t("Submit to newsletter")}
                     <div class="relative inline-block">
                       <input
                         type="checkbox"
@@ -881,7 +863,7 @@
                   </label>
                   <button
                     class="inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95">
-                    Save
+                    {$t("Save")}
                   </button>
                 </div>
               </div>
@@ -910,7 +892,7 @@
                 ? 0.1
                 : Math.trunc(animateValue(section[4], [-100, -50], [0, 1]))
             }`}>
-            Fewer class names
+            {$t("Fewer class names")}
           </span>
           <br />
           <span
@@ -919,7 +901,7 @@
                 ? 0.1
                 : Math.trunc(animateValue(section[4], [-100, -30], [0, 1]))
             }`}>
-            Faster development
+            {$t("Faster development")}
           </span>
           <br />
           <span
@@ -928,14 +910,13 @@
                 ? 0.1
                 : Math.trunc(animateValue(section[4], [-100, -10], [0, 1]))
             }`}>
-            Smaller file size
+            {$t("Smaller file size")}
           </span>
         </h2>
         <div class="h-10" />
         <p class="text-base-content/60 font-title text-center font-light md:text-3xl xl:text-left">
-          With daisyUI, you write 80% fewer class names
-          <br />
-          And your HTML size will be about 70% smaller.
+          <Translate
+            text="With daisyUI, you write 80% fewer class names<br />And your HTML size will be about 70% smaller." />
         </p>
       </div>
       <div class="grid shrink-0 gap-6 xl:grid-cols-5">
@@ -944,11 +925,11 @@
           style={`transform:translateX(${animateValue(section[4], [-100, -10], [20, 0])}%)`}>
           <div class="card-body">
             <h3>
-              <span class="font-bold">CSS Class names</span>
+              <span class="font-bold">{$t("CSS Class names")}</span>
             </h3>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
-                <span>Tailwind only</span>
+                <span>{$t("Tailwind only")}</span>
                 <span class="font-mono text-xs">107</span>
               </div>
               <progress
@@ -958,7 +939,7 @@
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
-                <span>Tailwind + daisyUI</span>
+                <span>{$t("Tailwind + daisyUI")}</span>
                 <span class="font-mono text-xs">14</span>
               </div>
               <progress
@@ -977,7 +958,7 @@
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
               </svg>
-              86% fewer class names
+              86% {$t("fewer class names")}
             </span>
           </div>
         </div>
@@ -986,11 +967,11 @@
           style={`transform:translateX(${animateValue(section[4], [-100, -10], [-20, 0])}%)`}>
           <div class="card-body">
             <h3>
-              <span class="font-bold">HTML size</span>
+              <span class="font-bold">{$t("HTML size")}</span>
             </h3>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
-                <span>Tailwind only</span>
+                <span>{$t("Tailwind only")}</span>
                 <span class="font-mono text-xs">1884 byte</span>
               </div>
               <progress
@@ -1000,7 +981,7 @@
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
-                <span>Tailwind + daisyUI</span>
+                <span>{$t("Tailwind + daisyUI")}</span>
                 <span class="font-mono text-xs">471 byte</span>
               </div>
               <progress
@@ -1019,7 +1000,7 @@
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
               </svg>
-              74% smaller DOM size
+              74% {$t("smaller DOM size")}
             </span>
           </div>
         </div>
@@ -1033,19 +1014,18 @@
   <div class="flex max-w-[100rem] flex-col items-center justify-center xl:flex-row">
     <div class="px-4 py-10 md:px-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
-        <span class="text-[clamp(2rem,8vw,5rem)] font-black">Highly customizable</span>
+        <span class="text-[clamp(2rem,8vw,5rem)] font-black">
+          <Translate text="Highly customizable" />
+        </span>
         <br />
         <span class="text-neutral-content/20 text-[clamp(2rem,8vw,4rem)] font-black">
-          Powered by Tailwind&nbsp;CSS utility&nbsp;classes
+          <Translate text="Powered by Tailwind&nbsp;CSS utility&nbsp;classes" />
         </span>
       </h2>
       <div class="h-10" />
       <p class="text-neutral-content/60 font-title text-center font-light md:text-3xl xl:text-left">
-        daisyUI is built on top of Tailwind&nbsp;CSS
-        <br />
-        so you can customize everything
-        <br />
-        using utility classes.
+        <Translate
+          text="daisyUI is built on top of Tailwind&nbsp;CSS<br />so you can customize everything<br />using utility classes." />
       </p>
     </div>
     <div class="pb-10 md:p-10">
@@ -1068,22 +1048,22 @@
   <div class="flex max-w-[100rem] flex-col-reverse items-center justify-center xl:flex-row-reverse">
     <div class="px-10 py-10">
       <h2 class="font-title text-center leading-none xl:text-left">
-        <span class="text-[clamp(2rem,8vw,5rem)] font-black">Pure CSS.</span>
+        <span class="text-[clamp(2rem,8vw,5rem)] font-black">{$t("Pure CSS.")}</span>
         <br />
-        <span class="text-[clamp(2rem,8vw,5rem)] font-black">Framework agnostic.</span>
+        <span class="text-[clamp(2rem,8vw,5rem)] font-black">{$t("Framework agnostic.")}</span>
         <br />
-        <span class="text-[clamp(2rem,8vw,5rem)] font-light">Works everywhere.</span>
+        <span class="text-[clamp(2rem,8vw,5rem)] font-light">{$t("Works everywhere.")}</span>
       </h2>
       <div class="h-10" />
       <p
         class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
-        daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS
-        bundle file.
+        <Translate
+          text="daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file." />
       </p>
       <p
         class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
-        Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS
-        class name.
+        <Translate
+          text="Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name." />
       </p>
       <div class="h-10" />
       <div class="flex w-full justify-center xl:justify-start">
@@ -1237,7 +1217,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[6], [-100, -40], [0, 1]))
           }`}>
-          Apply
+          {$t("Apply_your_own_design_decisions_part_1")}
         </span>
         <span
           style={`opacity:${
@@ -1245,7 +1225,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[6], [-100, -35], [0, 1]))
           }`}>
-          your
+          {$t("Apply_your_own_design_decisions_part_2")}
         </span>
         <span
           style={`opacity:${
@@ -1253,7 +1233,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[6], [-100, -30], [0, 1]))
           }`}>
-          own
+          {$t("Apply_your_own_design_decisions_part_3")}
         </span>
         <span
           style={`opacity:${
@@ -1261,7 +1241,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[6], [-100, -25], [0, 1]))
           }`}>
-          design
+          {$t("Apply_your_own_design_decisions_part_4")}
         </span>
         <span
           style={`opacity:${
@@ -1269,21 +1249,21 @@
               ? 0.1
               : Math.trunc(animateValue(section[6], [-100, -20], [0, 1]))
           }`}>
-          decisions
+          {$t("Apply_your_own_design_decisions_part_5")}
         </span>
       </h2>
       <p
         class="text-base-content/60 font-title relative z-[2] mx-auto max-w-3xl py-4 font-light md:text-3xl">
-        Your website should be unique. Create a custom theme for yourself using daisyUI theme
-        generator. The colors you pick will be applied to all daisyUI components.
+        <Translate
+          text="Your website should be unique. Create a custom theme for yourself using daisyUI theme generator. The colors you pick will be applied to all daisyUI components." />
       </p>
       <div class="h-10" />
       <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
         <a data-sveltekit-preload-data="hover" href="/theme-generator/" class="btn normal-case">
-          Theme Generator
+          {$t("Theme Generator")}
         </a>
         <a data-sveltekit-preload-data="hover" href="/docs/themes/#-4" class="btn normal-case">
-          Learn more about themes
+          {$t("Learn more about themes")}
         </a>
       </div>
     </div>
@@ -1301,7 +1281,8 @@
               ? 0.1
               : Math.trunc(animateValue(section[7], [-100, -40], [0, 1]))
           }`}>
-          {siteStats.components} components
+          {siteStats.components}
+          {$t("components")}
         </span>
         <br />
         <span
@@ -1310,7 +1291,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[7], [-100, -30], [0, 1]))
           }`}>
-          500+ utility classes
+          500+ {$t("utility classes")}
         </span>
         <br />
         <span class="inline-grid">
@@ -1318,7 +1299,7 @@
             <span
               class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
               aria-hidden="true">
-              endless possibilities
+              {$t("endless possibilities")}
             </span>
           {/if}
           <span
@@ -1332,12 +1313,12 @@
                 ? "bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
                 : ""
             }`}>
-            endless possibilities
+            {$t("endless possibilities")}
           </span>
         </span>
       </h2>
       <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
-        Mix and match daisyUI class names to create unique web pages.
+        {$t("Mix and match daisyUI class names to create unique web pages.")}
       </p>
       <div class="h-10" />
       <div class="flex w-full justify-center">
@@ -1363,9 +1344,7 @@
         [0, 20],
         [0.7, 1]
       )});opacity:${animateValue(section[8], [0, 20], [0, 1])}`}>
-      daisyUI is the most popular
-      <br />
-      component library for Tailwind&nbsp;CSS
+      <Translate text="daisyUI is the most popular<br />component library for Tailwind&nbsp;CSS" />
     </h2>
     <div class="h-32" />
     <div class="grid gap-10 p-6 xl:grid-cols-3">
@@ -1410,7 +1389,7 @@
           target="_blank"
           rel="noopener, noreferrer"
           class="text-base-content/60 hover:text-base-content hover:underline">
-          open-source projects using daisyUI
+          {$t("open-source projects using daisyUI")}
         </a>
       </div>
       <div
@@ -1428,7 +1407,7 @@
           target="_blank"
           rel="noopener, noreferrer"
           class="text-base-content/60 hover:text-base-content hover:underline">
-          NPM downloads
+          {$t("npm-installs")}
         </a>
       </div>
     </div>
@@ -1474,9 +1453,9 @@
   <div class="text-center">
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
-      Free and open-source
+      {$t("Free and open-source")}
       <br />
-      <span class="font-light">Built by the community</span>
+      <span class="font-light">{$t("Built by the community")}</span>
     </h2>
     <div class="h-6" />
     <p class="font-title font-light md:text-2xl">
@@ -1485,7 +1464,7 @@
         rel="noopener, noreferrer"
         target="_blank"
         class="link link-hover text-base-content/60">
-        daisyUI welcomes contributions from developers around the world
+        {$t("daisyUI welcomes contributions from developers around the world")}
       </a>
     </p>
     <div class="h-12" />
@@ -1517,7 +1496,7 @@
         rel="noopener, noreferrer"
         target="_blank"
         class="link link-hover text-base-content/60">
-        Sponsors and backers
+        {$t("Sponsors and backers")}
       </a>
     </p>
     <div class="flex w-full justify-center">
@@ -1568,7 +1547,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[9], [-100, -40], [0, 1]))
           }`}>
-          Try daisyUI
+          {$t("Try daisyUI")}
         </span>
         <br />
         <span
@@ -1578,7 +1557,7 @@
               ? 0.1
               : Math.trunc(animateValue(section[9], [-100, -30], [0, 1]))
           }`}>
-          on your favorite framework
+          {$t("on your favorite framework")}
         </span>
       </h2>
       <div class="h-16" />
@@ -1674,12 +1653,12 @@
           data-sveltekit-preload-data="hover"
           href="/docs/install/"
           class="btn btn-primary btn-wide">
-          See all examples
+          {$t("See all examples")}
         </a>
       </div>
       <div class="h-10" />
       <div class="flex w-full flex-col items-center justify-center gap-2 md:flex-row">
-        <span class="text-base-content/60">Or play with daisyUI on:</span>
+        <span class="text-base-content/60">{$t("Or play with daisyUI on")}:</span>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -1723,20 +1702,5 @@
   </div>
 </div>
 
-<!-- <HomepageHero /> -->
-
-<!-- <div class="bg-base-200 flex flex-col items-center gap-20 py-20">
-  <HomepagePreview />
-  <HomepageStats />
-  <div class="flex w-full justify-center">
-    <a data-sveltekit-preload-data="hover" href="/components/" class="btn btn-primary btn-wide">
-      {$t("all-components-btn")}
-    </a>
-  </div>
-</div> -->
-<!-- <HomepageCleanHtml /> -->
-<!-- <HomepageCustomizable /> -->
-<!-- <HomepageTheming /> -->
-<!-- <HomepageTry /> -->
 <HomepageInstall />
 <Footer />

@@ -9,7 +9,7 @@
     "createStyleHandlerComponent:dev": "echo '<script>import \"@components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>import \"@components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",
     "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config ../.prettierrc --ignore-path ../.prettierignore",
-    "langdiff": "json-diff --keys-only --raw-json ./src/translation/en.json ./src/translation/jp.json"
+    "langdiff": "node src/lib/scripts/compare-translate-files"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^2.0.2",
