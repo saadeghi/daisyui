@@ -21,7 +21,6 @@ jobs:
         run: npm install
 
       - name: build
-        if: steps.check.outputs.changed == 'true'
         run: npm run build
 
       - name: Install document website dependencies
