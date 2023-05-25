@@ -442,10 +442,7 @@
     </p>
     <div class="h-6" />
     <div>
-      <a
-        class="btn btn-wide btn-primary rounded-full"
-        data-sveltekit-preload-data="hover"
-        href="/docs/themes/">
+      <a class="btn btn-wide btn-primary" data-sveltekit-preload-data="hover" href="/docs/themes/">
         See all themes
       </a>
     </div>

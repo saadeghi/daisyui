@@ -5,12 +5,14 @@
 <div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
   <div class="hero-content text-center">
     <div class="w-full max-w-md">
-      <h2 class="mt-20 mb-2 text-4xl font-extrabold md:text-6xl">{$t("install-title")}</h2>
-      <p class="mx-auto mt-5 w-full max-w-lg">{@html $t("install-desc")}</p>
+      <h2 class="mb-2 mt-20 text-[clamp(2rem,8vw,5rem)] font-black md:text-6xl">
+        {$t("install-title")}
+      </h2>
+      <!-- <p class="mx-auto mt-5 w-full max-w-lg">{@html $t("install-desc")}</p> -->
       <p class="mx-auto mt-5 w-full max-w-lg text-left">1. {$t("install-step-1")}:</p>
       <div class="mx-auto my-2 w-full max-w-md">
         <div class="mockup-code mx-auto w-full max-w-xs text-left shadow-lg sm:max-w-none">
-          <pre data-prefix="$"><code>npm i daisyui</code></pre>
+          <pre data-prefix="$"><code>npm i -D daisyui</code></pre>
         </div>
         <p class="mx-auto mt-5 w-full max-w-lg text-left">2. {$t("install-step-2")}:</p>
         <div class="my-2 w-full max-w-4xl">
@@ -25,7 +27,7 @@
   {`}`}</code></pre>
           </div>
         </div>
-        <a href="/docs/install" class="btn-primary btn btn-wide mt-4 mb-20 shadow-lg">
+        <a href="/docs/install" class="btn-primary btn btn-wide mb-20 mt-4 shadow-lg">
           {$t("install-btn")}
         </a>
       </div>

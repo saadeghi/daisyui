@@ -157,6 +157,11 @@ module.exports = {
           resultObj[variable] = value
         }
       })
+
+      // add other custom styles
+      if (!colorNames.hasOwnProperty(rule)) {
+        resultObj[rule] = value
+      }
     })
 
     return resultObj

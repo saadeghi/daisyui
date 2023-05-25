@@ -12,6 +12,10 @@
   import { stargazers_count } from "$lib/json/github-repo.json"
   import { downloads } from "$lib/json/npm-downloads.json"
   import contributors from "$lib/json/github-contributors.json"
+  import backers from "$lib/json/opencollective-members.json"
+  const backersUnique = backers.filter(
+    (obj, index) => backers.findIndex((item) => item.name === obj.name) === index
+  )
 
   let activeMenuItemOnHeroMockup = 1
   let toggleValueForCodeCompare = false
@@ -36,12 +40,7 @@
     return 0
   }
 
-  let hero1
-  let hero2
-  let hero3
-  let hero4
-  let hero5
-  let hero6
+  let section = []
 
   $: scrollY = scrollY
 
@@ -51,39 +50,42 @@
   ]
   $: demo_1_ClassNameHandler = () => {
     if (
-      hero1 &&
-      (scrollY / (hero1.offsetTop + hero1.clientHeight)) * 100 > 25 &&
-      (scrollY / (hero1.offsetTop + hero1.clientHeight)) * 100 < 65
+      section[1] &&
+      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 25 &&
+      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 < 65
     ) {
       return demo_1_ClassNames[0].slice(
         0,
-        Math.trunc(animateValue(hero1, [25, 65], [0, demo_1_ClassNames[0].length]))
+        Math.trunc(animateValue(section[1], [25, 65], [0, demo_1_ClassNames[0].length]))
       )
     } else if (
-      hero1 &&
-      (scrollY / (hero1.offsetTop + hero1.clientHeight)) * 100 > 65 &&
-      (scrollY / (hero1.offsetTop + hero1.clientHeight)) * 100 < 80
+      section[1] &&
+      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 65 &&
+      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 < 80
     ) {
       return demo_1_ClassNames[0].slice(
         0,
-        Math.trunc(animateValue(hero1, [75, 80], [demo_1_ClassNames[0].length, 0]))
+        Math.trunc(animateValue(section[1], [75, 80], [demo_1_ClassNames[0].length, 0]))
       )
-    } else if (hero1 && (scrollY / (hero1.offsetTop + hero1.clientHeight)) * 100 > 80) {
+    } else if (
+      section[1] &&
+      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 80
+    ) {
       return demo_1_ClassNames[1].slice(
         0,
-        Math.trunc(animateValue(hero1, [80, 82], [0, demo_1_ClassNames[1].length]))
+        Math.trunc(animateValue(section[1], [80, 82], [0, demo_1_ClassNames[1].length]))
       )
     }
     return ""
   }
   $: demo_1_StyleHandler = () => {
-    if (hero1 && (scrollY / (hero1.offsetTop + hero1.clientHeight)) * 100 > 80) {
+    if (section[1] && (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 80) {
       return "text-teal-600"
     }
     return "text-amber-600"
   }
   $: demo_1_ElementTextHandler = () => {
-    if (hero1 && (scrollY / (hero1.offsetTop + hero1.clientHeight)) * 100 > 80) {
+    if (section[1] && (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 80) {
       return "daisyUI Button"
     }
     return "Tailwind Button"
@@ -98,11 +100,11 @@
 <div>
   <div
     class="flex min-h-[550vh] flex-col items-center justify-start xl:flex-row xl:items-start xl:justify-between"
-    bind:this={hero1}>
+    bind:this={section[1]}>
     <div class="shrink-0">
       <div
         class="px-2 py-12 text-center lg:pl-10 lg:pr-0 xl:py-32 xl:text-left"
-        class:invisible={hero1 && scrollY > hero1.clientHeight}>
+        class:invisible={section[1] && scrollY > section[1].clientHeight}>
         <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
           <pre><code>npm i -D daisyui</code></pre>
         </div>
@@ -233,28 +235,32 @@
       class="bg-base-200 sticky bottom-0 flex w-full shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]">
       <div
         class="mockup mockup-window bg-base-200 mx-auto origin-top overflow-visible pb-4 [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014]"
-        style={hero1 &&
-          `transform: rotateX(${animateValue(hero1, [7, 17], [20, 0])}deg)rotateZ(${animateValue(
-            hero1,
+        style={section[1] &&
+          `transform: rotateX(${animateValue(
+            section[1],
             [7, 17],
-            [-20, 0]
-          )}deg)skewY(${animateValue(hero1, [7, 17], [8, 0])}deg)`}
-        class:invisible={hero1 && scrollY > hero1.clientHeight}>
+            [20, 0]
+          )}deg)rotateZ(${animateValue(section[1], [7, 17], [-20, 0])}deg)skewY(${animateValue(
+            section[1],
+            [7, 17],
+            [8, 0]
+          )}deg)`}
+        class:invisible={section[1] && scrollY > section[1].clientHeight}>
         <div class="grid">
           <div
             class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden">
             <!-- flying components -->
             <div
               class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0"
-              style={`opacity:${animateValue(hero1, [15, 16], [1, 0])}`}>
+              style={`opacity:${animateValue(section[1], [15, 16], [1, 0])}`}>
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
                   class="relative w-80 max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style={`transform:translate(${animateValue(
-                    hero1,
+                    section[1],
                     [2, 9],
                     [0, 250]
-                  )}px,${animateValue(hero1, [2, 9], [0, -800])}px)`}>
+                  )}px,${animateValue(section[1], [2, 9], [0, -800])}px)`}>
                   <div class="tabs">
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 1)}
@@ -434,19 +440,19 @@
                   class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
                     class="alert max-[1280px]:!transform-none"
-                    style={`filter:drop-shadow(${animateValue(
-                      hero1,
+                    style={`box-shadow:${animateValue(
+                      section[1],
                       [5, 5.5],
                       [0, -1]
-                    )}rem ${animateValue(hero1, [5, 5.5], [0, 3])}rem ${animateValue(
-                      hero1,
+                    )}rem ${animateValue(section[1], [5, 5.5], [0, 3])}rem ${animateValue(
+                      section[1],
                       [5, 5.5],
                       [0, 1]
-                    )}rem #00000012);transform:translate(${animateValue(
-                      hero1,
+                    )}rem #00000012;transform:translate(${animateValue(
+                      section[1],
                       [5, 15],
                       [0, 250]
-                    )}px,${animateValue(hero1, [5, 15], [0, -800])}px)`}>
+                    )}px,${animateValue(section[1], [5, 15], [0, -800])}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -464,19 +470,19 @@
                   </div>
                   <div
                     class="alert max-[1280px]:!transform-none"
-                    style={`filter:drop-shadow(${animateValue(
-                      hero1,
+                    style={`box-shadow:${animateValue(
+                      section[1],
                       [6, 6.5],
                       [0, -1]
-                    )}rem ${animateValue(hero1, [6, 6.5], [0, 3])}rem ${animateValue(
-                      hero1,
+                    )}rem ${animateValue(section[1], [6, 6.5], [0, 3])}rem ${animateValue(
+                      section[1],
                       [6, 6.5],
                       [0, 1]
-                    )}rem #00000012);transform:translate(${animateValue(
-                      hero1,
+                    )}rem #00000012;transform:translate(${animateValue(
+                      section[1],
                       [6, 16],
                       [0, 250]
-                    )}px,${animateValue(hero1, [6, 16], [0, -800])}px)`}>
+                    )}px,${animateValue(section[1], [6, 16], [0, -800])}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -493,19 +499,19 @@
               <div class="flex shrink-0 gap-6 pr-4 xl:flex-col xl:pr-0">
                 <div
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
-                  style={`filter:drop-shadow(${animateValue(
-                    hero1,
+                  style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
+                    section[1],
                     [0, 0.5],
                     [0, -1]
-                  )}rem ${animateValue(hero1, [0, 0.5], [0, 3])}rem ${animateValue(
-                    hero1,
+                  )}rem ${animateValue(section[1], [0, 0.5], [0, 3])}rem ${animateValue(
+                    section[1],
                     [0, 0.5],
                     [0, 1]
-                  )}rem #00000012);transform:translate(${animateValue(
-                    hero1,
+                  )}rem #00000012;transform:translate(${animateValue(
+                    section[1],
                     [0, 8],
                     [0, 250]
-                  )}px,${animateValue(hero1, [0, 8], [0, -800])}px)`}>
+                  )}px,${animateValue(section[1], [0, 8], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Design system</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
@@ -548,19 +554,19 @@
                 </div>
                 <div
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
-                  style={`filter:drop-shadow(${animateValue(
-                    hero1,
+                  style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
+                    section[1],
                     [4, 4.5],
                     [0, -1]
-                  )}rem ${animateValue(hero1, [4, 4.5], [0, 3])}rem ${animateValue(
-                    hero1,
+                  )}rem ${animateValue(section[1], [4, 4.5], [0, 3])}rem ${animateValue(
+                    section[1],
                     [4, 4.5],
                     [0, 1]
-                  )}rem #00000012);transform:translate(${animateValue(
-                    hero1,
+                  )}rem #00000012;transform:translate(${animateValue(
+                    section[1],
                     [4, 10],
                     [0, 250]
-                  )}px,${animateValue(hero1, [4, 10], [0, -800])}px)`}>
+                  )}px,${animateValue(section[1], [4, 10], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Semantic colors</h2>
                     <div class="grid grid-cols-4 gap-4">
@@ -604,8 +610,8 @@
           </div>
           <div
             class="col-start-1 row-start-1 w-11/12 p-10 opacity-0"
-            style={`opacity:${animateValue(hero1, [15, 17], [0, 1])};z-index:${animateValue(
-              hero1,
+            style={`opacity:${animateValue(section[1], [15, 17], [0, 1])};z-index:${animateValue(
+              section[1],
               [20, 22],
               [0, 1]
             )}`}>
@@ -631,16 +637,16 @@
   </div>
 </div>
 
-<div class="w-full px-2 py-40 lg:px-10" bind:this={hero2}>
+<div class="w-full px-2 py-40 lg:px-10" bind:this={section[2]}>
   <div class="text-center">
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none max-[1280px]:!tracking-normal"
-      style={`letter-spacing:${animateValue(hero2, [-100, 20], [1, 0])}rem`}>
+      style={`letter-spacing:${animateValue(section[2], [-100, 20], [1, 0])}rem`}>
       Take Tailwind CSS
       <br />
       <span
         class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
-        style={`letter-spacing:${animateValue(hero2, [-100, 20], [0, 1])}rem`}>
+        style={`letter-spacing:${animateValue(section[2], [-100, 20], [0, 1])}rem`}>
         to the next level
       </span>
     </h2>
@@ -672,7 +678,7 @@
   </div>
 </div>
 
-<div bind:this={hero3}>
+<div bind:this={section[3]}>
   <div>
     <div class="relative overflow-hidden">
       <div class="w-full px-2 py-40 lg:px-10">
@@ -681,33 +687,33 @@
             class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
             <span
               style={`opacity:${
-                Math.trunc(animateValue(hero3, [-100, -40], [0, 1])) === 0
+                Math.trunc(animateValue(section[3], [-100, -40], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(hero3, [-100, -40], [0, 1]))
+                  : Math.trunc(animateValue(section[3], [-100, -40], [0, 1]))
               }`}>
               No
             </span>
             <span
               style={`opacity:${
-                Math.trunc(animateValue(hero3, [-100, -30], [0, 1])) === 0
+                Math.trunc(animateValue(section[3], [-100, -30], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(hero3, [-100, -30], [0, 1]))
+                  : Math.trunc(animateValue(section[3], [-100, -30], [0, 1]))
               }`}>
               more
             </span>
             <span
               style={`opacity:${
-                Math.trunc(animateValue(hero3, [-100, -20], [0, 1])) === 0
+                Math.trunc(animateValue(section[3], [-100, -20], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(hero3, [-100, -20], [0, 1]))
+                  : Math.trunc(animateValue(section[3], [-100, -20], [0, 1]))
               }`}>
               ugly
             </span>
             <span
               style={`opacity:${
-                Math.trunc(animateValue(hero3, [-100, -10], [0, 1])) === 0
+                Math.trunc(animateValue(section[3], [-100, -10], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(hero3, [-100, -10], [0, 1]))
+                  : Math.trunc(animateValue(section[3], [-100, -10], [0, 1]))
               }`}>
               HTML
             </span>
@@ -873,11 +879,11 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] overflow-hidden pb-40 pt-32" bind:this={hero4}>
+<div class="min-h-[100vh] overflow-hidden pb-40 pt-32" bind:this={section[4]}>
   <div class="relative">
     <div
-      class="relative flex flex-col items-center justify-between gap-10 px-10 xl:flex-row-reverse">
-      <div class="grow">
+      class="relative flex flex-col items-center justify-center gap-10 px-10 xl:flex-row-reverse xl:gap-20">
+      <div>
         <div
           class="bg-primary pointer-events-none absolute left-20 aspect-square w-96 rounded-full opacity-20 blur-3xl" />
         <div
@@ -886,27 +892,27 @@
           class="font-title text-center text-[clamp(2rem,8vw,4.5rem)] font-black leading-none xl:text-left">
           <span
             style={`opacity:${
-              Math.trunc(animateValue(hero4, [-100, -50], [0, 1])) === 0
+              Math.trunc(animateValue(section[4], [-100, -50], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(hero4, [-100, -50], [0, 1]))
+                : Math.trunc(animateValue(section[4], [-100, -50], [0, 1]))
             }`}>
             Fewer class names
           </span>
           <br />
           <span
             style={`opacity:${
-              Math.trunc(animateValue(hero4, [-100, -30], [0, 1])) === 0
+              Math.trunc(animateValue(section[4], [-100, -30], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(hero4, [-100, -30], [0, 1]))
+                : Math.trunc(animateValue(section[4], [-100, -30], [0, 1]))
             }`}>
             Faster development
           </span>
           <br />
           <span
             style={`opacity:${
-              Math.trunc(animateValue(hero4, [-100, -10], [0, 1])) === 0
+              Math.trunc(animateValue(section[4], [-100, -10], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(hero4, [-100, -10], [0, 1]))
+                : Math.trunc(animateValue(section[4], [-100, -10], [0, 1]))
             }`}>
             Smaller file size
           </span>
@@ -921,7 +927,7 @@
       <div class="grid shrink-0 gap-6 xl:grid-cols-5">
         <div
           class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed"
-          style={`transform:translateX(${animateValue(hero4, [-100, -10], [20, 0])}%)`}>
+          style={`transform:translateX(${animateValue(section[4], [-100, -10], [20, 0])}%)`}>
           <div class="card-body">
             <h3>
               <span class="font-bold">CSS Class names</span>
@@ -933,7 +939,7 @@
               </div>
               <progress
                 class="progress progress-warning w-56"
-                value={animateValue(hero4, [-100, -10], [0, 93])}
+                value={animateValue(section[4], [-100, -10], [0, 93])}
                 max="100" />
             </div>
             <div class="flex flex-col gap-2">
@@ -943,7 +949,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(hero4, [-100, -10], [0, 46])}
+                value={animateValue(section[4], [-100, -10], [0, 46])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -963,7 +969,7 @@
         </div>
         <div
           class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed xl:col-start-3"
-          style={`transform:translateX(${animateValue(hero4, [-100, -10], [-20, 0])}%)`}>
+          style={`transform:translateX(${animateValue(section[4], [-100, -10], [-20, 0])}%)`}>
           <div class="card-body">
             <h3>
               <span class="font-bold">HTML size</span>
@@ -975,7 +981,7 @@
               </div>
               <progress
                 class="progress progress-warning w-56"
-                value={animateValue(hero4, [-100, -10], [0, 84])}
+                value={animateValue(section[4], [-100, -10], [0, 84])}
                 max="100" />
             </div>
             <div class="flex flex-col gap-2">
@@ -985,7 +991,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(hero4, [-100, -10], [0, 37])}
+                value={animateValue(section[4], [-100, -10], [0, 37])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -1009,8 +1015,8 @@
 </div>
 
 <div
-  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center bg-gradient-to-br">
-  <div class="flex flex-col items-center justify-between xl:flex-row">
+  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center justify-center bg-gradient-to-br">
+  <div class="flex max-w-[100rem] flex-col items-center justify-center xl:flex-row">
     <div class="px-10 py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
         <span class="text-[clamp(2rem,8vw,5rem)] font-black">Highly customizable</span>
@@ -1044,8 +1050,8 @@
 </div>
 
 <div
-  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center bg-gradient-to-br py-16">
-  <div class="flex flex-col-reverse items-center justify-between xl:flex-row-reverse">
+  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center justify-center bg-gradient-to-br py-16">
+  <div class="flex max-w-[100rem] flex-col-reverse items-center justify-center xl:flex-row-reverse">
     <div class="px-10 py-10">
       <h2 class="font-title text-center leading-none xl:text-left">
         <span class="text-[clamp(2rem,8vw,5rem)] font-black">Pure CSS.</span>
@@ -1178,74 +1184,167 @@
   </div>
 </div>
 
-<div class="min-h-[900vh] py-20" bind:this={hero5}>
-  <!-- <div class="w-full px-2 pt-40 lg:px-10">
-    <div class="text-center">
-      <h2
-        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
-        <span
-          style={`opacity:${
-            Math.trunc(animateValue(hero5, [-100, -40], [0, 1])) === 0
-              ? 0.1
-              : Math.trunc(animateValue(hero5, [-100, -40], [0, 1]))
-          }`}>
-          Unlimited themes
-        </span>
-        <br />
-        <span
-          style={`opacity:${
-            Math.trunc(animateValue(hero5, [-100, -30], [0, 1])) === 0
-              ? 0.1
-              : Math.trunc(animateValue(hero5, [-100, -30], [0, 1]))
-          }`}>
-          with zero effort
-        </span>
-      </h2>
-      <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
-        Write fewer class names
-        <br />
-        Use component class names
-        <br />
-        modify them using Tailwind CSS utilities.
-      </p>
-    </div>
-  </div> -->
-  <div class="rounded-box sticky top-20 grid max-w-[85rem] overflow-hidden xl:mx-auto">
-    {#each ["light", "valentine", "cupcake", "cyberpunk", "synthwave", "dark", "dracula", "luxury", "night"] as currentTheme, index}
+<div class="min-h-[900vh] py-20" bind:this={section[5]}>
+  <div class="sticky top-20 grid max-w-[85rem] overflow-hidden rounded-2xl xl:mx-auto">
+    {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
       <div
         class="col-start-1 row-start-1 flex items-start"
         data-theme={currentTheme}
-        style={index > 0 &&
-          `clip-path: polygon(${animateValue(
-            hero5,
-            [0 + index * 8, 20 + index * 8],
-            [-180, 100]
-          )}% 0%, 0% 0%, 0% 100%, ${animateValue(
-            hero5,
-            [0 + index * 8, 20 + index * 8],
-            [0, 100]
-          )}% 100%)`}>
+        style={index > 0
+          ? `clip-path: polygon(${animateValue(
+              section[5],
+              [0 + index * 7, 20 + index * 7],
+              [-180, 100]
+            )}% 0%, 0% 0%, 0% 100%, ${animateValue(
+              section[5],
+              [0 + index * 7, 20 + index * 7],
+              [0, 100]
+            )}% 100%)`
+          : ""}>
         <div
-          class="border-base-200 rounded-box flex w-full items-stretch justify-center gap-6 border p-6 xl:h-[40rem] xl:justify-normal"
-          style={`--tw-border-opacity:${animateValue(hero5, [10, 15], [0, 1])}`}>
-          <ComponentsPreview {currentTheme} {animateValue} section={hero5} />
+          class="border-base-200 flex w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
+          style={`--tw-border-opacity:${animateValue(section[5], [10, 15], [0, 1])}`}>
+          <ComponentsPreview {animateValue} section={section[5]} />
         </div>
       </div>
     {/each}
   </div>
 </div>
 
-<div class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={hero6}>
+<div class="bg-base-100 min-h-[100vh] py-20" bind:this={section[6]}>
+  <div class="w-full px-2 pt-40 lg:px-10">
+    <div class="text-center">
+      <h2
+        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[6], [-100, -40], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[6], [-100, -40], [0, 1]))
+          }`}>
+          Apply
+        </span>
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[6], [-100, -35], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[6], [-100, -35], [0, 1]))
+          }`}>
+          your
+        </span>
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[6], [-100, -30], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[6], [-100, -30], [0, 1]))
+          }`}>
+          own
+        </span>
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[6], [-100, -25], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[6], [-100, -25], [0, 1]))
+          }`}>
+          design
+        </span>
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[6], [-100, -20], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[6], [-100, -20], [0, 1]))
+          }`}>
+          decisions
+        </span>
+      </h2>
+      <p
+        class="text-base-content/60 font-title relative z-[2] mx-auto max-w-3xl py-4 font-light md:text-3xl">
+        Your website should be unique. Create a custom theme for yourself using daisyUI theme
+        generator. The colors you pick will be applied to all daisyUI components.
+      </p>
+      <div class="h-10" />
+      <div class="flex w-full justify-center gap-4">
+        <a data-sveltekit-preload-data="hover" href="/theme-generator/" class="btn normal-case">
+          Theme Generator
+        </a>
+        <a data-sveltekit-preload-data="hover" href="/docs/themes/#-4" class="btn normal-case">
+          Learn more about themes
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="min-h-[100vh] py-20" bind:this={section[7]}>
+  <div class="w-full px-2 pt-40 lg:px-10">
+    <div class="text-center">
+      <h2
+        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[7], [-100, -40], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[7], [-100, -40], [0, 1]))
+          }`}>
+          {siteStats.components} components
+        </span>
+        <br />
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[7], [-100, -30], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[7], [-100, -30], [0, 1]))
+          }`}>
+          500+ utility classes
+        </span>
+        <br />
+        <span class="inline-grid">
+          {#if Math.trunc(animateValue(section[7], [-100, -20], [0, 1])) !== 0}
+            <span
+              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+              aria-hidden="true">
+              endless possibilities
+            </span>
+          {/if}
+          <span
+            style={`opacity:${
+              Math.trunc(animateValue(section[7], [-100, -20], [0, 1])) === 0
+                ? 0.1
+                : Math.trunc(animateValue(section[7], [-100, -20], [0, 1]))
+            }`}
+            class={`[&::selection]:text-base-content relative col-start-1 row-start-1 leading-tight [&::selection]:bg-blue-700/20${
+              Math.trunc(animateValue(section[7], [-100, -20], [0, 1])) !== 0
+                ? "bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+                : ""
+            }`}>
+            endless possibilities
+          </span>
+        </span>
+      </h2>
+      <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
+        Mix and match daisyUI class names to create unique web pages.
+      </p>
+      <div class="h-10" />
+      <div class="flex w-full justify-center">
+        <a data-sveltekit-preload-data="hover" href="/components/" class="btn btn-primary btn-wide">
+          {$t("all-components-btn")}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={section[8]}>
   <div class="sticky top-0 pt-40 text-center">
     <div
       class="bg-primary pointer-events-none absolute bottom-0 left-1/2 aspect-square w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-3xl" />
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none"
-      style={`transform:scale(${animateValue(hero6, [0, 20], [0.7, 1])});opacity:${animateValue(
-        hero6,
+      style={`transform:scale(${animateValue(
+        section[8],
         [0, 20],
-        [0, 1]
-      )}`}>
+        [0.7, 1]
+      )});opacity:${animateValue(section[8], [0, 20], [0, 1])}`}>
       daisyUI is the most popular
       <br />
       component library for Tailwind&nbsp;CSS
@@ -1255,10 +1354,10 @@
       <div
         class="flex flex-col items-center gap-4"
         style={`transform:translateY(${animateValue(
-          hero6,
+          section[8],
           [20, 30],
           [2, 0]
-        )}rem);opacity:${animateValue(hero6, [20, 30], [0, 1])}`}>
+        )}rem);opacity:${animateValue(section[8], [20, 30], [0, 1])}`}>
         <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup
             initial={stargazers_count * 0.9}
@@ -1277,10 +1376,10 @@
       <div
         class="flex flex-col items-center gap-4"
         style={`transform:translateY(${animateValue(
-          hero6,
+          section[8],
           [30, 40],
           [2, 0]
-        )}rem);opacity:${animateValue(hero6, [30, 40], [0, 1])}`}>
+        )}rem);opacity:${animateValue(section[8], [30, 40], [0, 1])}`}>
         <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup
             initial={data.gh_dependents.repositories * 0.9}
@@ -1299,10 +1398,10 @@
       <div
         class="flex flex-col items-center gap-4"
         style={`transform:translateY(${animateValue(
-          hero6,
+          section[8],
           [40, 50],
           [2, 0]
-        )}rem);opacity:${animateValue(hero6, [40, 50], [0, 1])}`}>
+        )}rem);opacity:${animateValue(section[8], [40, 50], [0, 1])}`}>
         <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup initial={downloads * 0.9} value={downloads} duration={3000} roundto={100} />
         </h3>
@@ -1317,38 +1416,39 @@
     </div>
   </div>
 </div>
+
 <div>
-  <div>
-    <div class="h-32" />
-    <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3">
-      {#each tweets as tweet, index}
-        <div class="card border-base-content/5 card-compact border text-left">
-          <div class="card-body">
-            <div class="flex items-center gap-2">
-              <div class="avatar w-12">
-                <a
-                  href={`https://twitter.com/${tweet.username}/status/${tweet.id}`}
-                  target="_blank"
-                  rel="noopener, noreferrer">
-                  <img
-                    loading="lazy"
-                    src={`/twitter-profile-pics/${tweet.username}.jpg`}
-                    alt={tweet.name}
-                    width="48"
-                    height="48"
-                    class="pointer-events-none rounded-full" />
-                </a>
-              </div>
-              <div class="flex flex-col items-start text-xs">
-                <div class="text-base-content font-bold">{tweet.name}</div>
-                <div class="text-base-content/60">{tweet.bio}</div>
-              </div>
+  <div class="h-32" />
+  <div
+    class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16">
+    {#each tweets as tweet, index}
+      <div class="card border-base-content/5 card-compact border text-left">
+        <div class="card-body">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <a
+                href={`https://twitter.com/${tweet.username}/status/${tweet.id}`}
+                target="_blank"
+                rel="noopener, noreferrer"
+                class="w-12">
+                <img
+                  loading="lazy"
+                  src={`/twitter-profile-pics/${tweet.username}.jpg`}
+                  alt={tweet.name}
+                  width="48"
+                  height="48"
+                  class="pointer-events-none rounded-full" />
+              </a>
             </div>
-            <p class="text-base-content">{tweet.content}</p>
+            <div class="flex flex-col items-start text-xs">
+              <div class="text-base-content font-bold">{tweet.name}</div>
+              <div class="text-base-content/60">{tweet.bio}</div>
+            </div>
           </div>
+          <p class="text-base-content">{tweet.content}</p>
         </div>
-      {/each}
-    </div>
+      </div>
+    {/each}
   </div>
 </div>
 
@@ -1375,8 +1475,8 @@
       <div class="flex max-w-3xl flex-wrap justify-center gap-3 p-10">
         {#each contributors as contributor}
           <div class="tooltip" data-tip={contributor.login}>
-            <div class="avatar w-8">
-              <div class="mask mask-squircle">
+            <div class="avatar">
+              <div class="mask mask-squircle w-8">
                 <img
                   src={contributor.avatar_url}
                   alt={contributor.login}
@@ -1387,6 +1487,216 @@
             </div>
           </div>
         {/each}
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <p class="font-title font-light md:text-2xl">
+      <a
+        href="https://opencollective.com/daisyui"
+        rel="noopener, noreferrer"
+        target="_blank"
+        class="link link-hover text-base-content/60">
+        Sponsors and backers
+      </a>
+    </p>
+    <div class="flex w-full justify-center">
+      <div class="flex max-w-3xl flex-wrap justify-center gap-3 p-10">
+        {#each backersUnique as backer}
+          <div class="tooltip" data-tip={backer.name}>
+            {#if backer.image}
+              <div class="avatar">
+                <div class="mask mask-squircle w-8">
+                  <img
+                    src={backer.image.replace("?default=404", "?default=identicon")}
+                    alt={backer.name}
+                    width="32"
+                    height="32"
+                    class="pointer-events-none transition-all duration-500 ease-in-out" />
+                </div>
+              </div>
+            {:else}
+              <div class="avatar placeholder">
+                <div
+                  class="mask mask-squircle w-8 text-black"
+                  style={`background-color:hsl(${Math.floor(Math.random() * 360)}, 15%, 80%)`}>
+                  <span class="font-mono text-xs uppercase">
+                    {backer.name
+                      .split(" ")
+                      .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))
+                      .join("")}
+                  </span>
+                </div>
+              </div>
+            {/if}
+          </div>
+        {/each}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="min-h-[100vh] py-20" bind:this={section[9]}>
+  <div class="w-full px-2 pt-40 lg:px-10">
+    <div class="text-center">
+      <h2
+        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+        <span
+          style={`opacity:${
+            Math.trunc(animateValue(section[9], [-100, -40], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[9], [-100, -40], [0, 1]))
+          }`}>
+          Try daisyUI
+        </span>
+        <br />
+        <span
+          class="font-light"
+          style={`opacity:${
+            Math.trunc(animateValue(section[9], [-100, -30], [0, 1])) === 0
+              ? 0.1
+              : Math.trunc(animateValue(section[9], [-100, -30], [0, 1]))
+          }`}>
+          with your favorite framework
+        </span>
+      </h2>
+      <div class="h-16" />
+      <div class="pointer-events-none flex flex-wrap justify-center gap-10 px-6">
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/vue.svg"
+          alt="Vue.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/react.svg"
+          alt="React" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/svelte.svg"
+          alt="Svelte.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/qwik.svg"
+          alt="Qwik" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/solidjs.svg"
+          alt="Solid.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/astro.svg"
+          alt="Astro" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/nextjs.svg"
+          alt="Next.js" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/preact.svg"
+          alt="Preact" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/remix.svg"
+          alt="Remix" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/angular.svg"
+          alt="Angular" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/nuxtjs.svg"
+          alt="Nuxt" />
+        <img
+          loading="lazy"
+          width="96"
+          height="96"
+          class="aspect-square w-10"
+          src="/logos/11ty.svg"
+          alt="Eleventy" />
+      </div>
+      <div class="h-16" />
+      <div class="flex w-full justify-center">
+        <a
+          data-sveltekit-preload-data="hover"
+          href="/docs/install/"
+          class="btn btn-primary btn-wide">
+          See all examples
+        </a>
+      </div>
+      <div class="h-10" />
+      <div class="flex w-full items-center justify-center gap-2">
+        <span class="text-base-content/60">Or play with daisyUI on:</span>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="/codepen"
+          class="btn-ghost btn-sm btn normal-case">
+          <svg
+            class="h-4 w-4 stroke-current"
+            viewBox="0 0 64 64"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke-width="2.3"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M3.06 41.732L32 60.932l28.94-19.2V22.268L32 3.068l-28.94 19.2zm57.878 0L32 22.268 3.06 41.732m0-19.463L32 41.47l28.94-19.2M32 3.068v19.2m0 19.463v19.2"
+              stroke-width="6.05" />
+          </svg>
+          CodePen
+        </a>
+        <a
+          href="/tailwindplay"
+          class="btn-ghost btn-sm btn normal-case"
+          target="_blank"
+          rel="noopener, noreferrer">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
+            <g clip-path="url(#prefix__clip0)">
+              <path
+                fill="#38bdf8"
+                fill-rule="evenodd"
+                d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+                clip-rule="evenodd" />
+            </g>
+            <defs>
+              <clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z" /></clipPath>
+            </defs>
+          </svg>
+          Tailwind Play
+        </a>
       </div>
     </div>
   </div>
@@ -1406,6 +1716,6 @@
 <!-- <HomepageCleanHtml /> -->
 <!-- <HomepageCustomizable /> -->
 <!-- <HomepageTheming /> -->
-<HomepageTry />
+<!-- <HomepageTry /> -->
 <HomepageInstall />
 <Footer />

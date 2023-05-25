@@ -7,7 +7,7 @@
   <div class="bg-base-200 text-base-content">
     <footer class="footer mx-auto max-w-6xl px-4 py-20">
       <div>
-        <div class="font-title inline-flex text-3xl">
+        <div class="font-title inline-flex text-3xl font-black">
           <span class="text-primary lowercase">daisy</span>
           <span class="text-base-content uppercase">UI</span>
         </div>
@@ -171,7 +171,7 @@
     </footer>
   </div>
   <footer
-    class="footer footer-center border-base-300 bg-base-200 text-base-content border-t px-4 pt-4">
+    class="footer footer-center border-base-300 bg-base-200 text-base-content border-t px-4 py-4">
     <div class="flex w-full max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
       <a
         href="https://github.com/saadeghi"
@@ -195,7 +195,7 @@
         </div>
       </a>
       <div class="flex flex-col items-center gap-4 text-left sm:flex-row">
-        <Sponsors wrapperClasses="flex-col sm:flex-row" classes="bg-base-100" />
+        <!-- <Sponsors wrapperClasses="flex-col sm:flex-row" classes="bg-base-100" /> -->
 
         <!-- <a href="https://manasky.com" rel="nofollow" target="_blank" class="link mb-4 inline-block opacity-50 hover:opacity-80">
           <svg width="80" viewBox="0 0 324 162" xmlns="http://www.w3.org/2000/svg" class="mt-2 w-20 fill-current">
