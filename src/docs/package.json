@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "colord": "^2.9.3",
-    "daisyui": "^0.0.0-insiders.3.9",
+    "daisyui": "^0.0.0-insiders.3.10",
     "dep-graph-count": "^1.0.0",
     "emoji-unicode": "^2.0.1",
     "lodash.debounce": "^4.0.8",

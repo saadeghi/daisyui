@@ -4,3 +4,4 @@ node_modules
 /dist
 /build
 /src/components/StyleHandler.svelte
+/src/lib/json/*.json
