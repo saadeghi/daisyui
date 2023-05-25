@@ -100,9 +100,9 @@
   <div
     class="flex min-h-[550vh] flex-col items-center justify-start xl:flex-row xl:items-start xl:justify-between"
     bind:this={section[1]}>
-    <div class="w-1/2 shrink">
+    <div class="shrink xl:w-1/2">
       <div
-        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 text-center xl:pl-10 xl:pr-0 xl:text-left"
+        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:pl-10 xl:pr-0 xl:text-left"
         class:invisible={section[1] && scrollY > section[1].clientHeight}>
         <div>
           <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
@@ -113,24 +113,24 @@
             class="font-title text-center text-[clamp(2rem,6vw,4.5rem)] font-black leading-none xl:text-left">
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
-              {$t("The most popular")}
+              {@html $t("The most popular")}
             </span>
             <br />
             <span class="inline-grid">
               <span
                 class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
                 aria-hidden="true">
-                {$t("component library")}
+                {@html $t("component library")}
               </span>
               <span
-                class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text leading-tight [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
-                {$t("component library")}
+                class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
+                {@html $t("component library")}
               </span>
             </span>
             <br />
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
-              {$t("for Tailwind CSS")}
+              {@html $t("for Tailwind CSS")}
             </span>
           </h1>
           <div class="h-4" />

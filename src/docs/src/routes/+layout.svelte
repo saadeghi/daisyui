@@ -67,7 +67,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap&text=daisyUIThemostpopular,freeandopen-sourceTailwindCSScomponentlibrary"
     rel="stylesheet" /> -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&family=Hanken+Grotesk:wght@900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&family=Noto+Sans+JP:wght@300;900&display=swap"
     rel="stylesheet" />
 </svelte:head>
 

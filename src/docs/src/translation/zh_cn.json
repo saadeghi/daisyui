@@ -416,5 +416,14 @@
   "Chat bubbles are used to show one line of conversation and all its data, including the author image, author name, time, etc.": "聊天气泡用于显示一行对话及其所有数据，包括作者图像、作者名称、时间等。",
   "File Input is a an input field for uploading files.": "文件输入框是一个用于上传文件的输入框。",
   "Toast is a wrapper to stack elements, positioned on the corner of page.": "Toast 是一个用于堆叠元素的包装器，位于页面的角落。",
+  "Admin panel": "Admin panel",
+  "Updates": "Updates",
+  "Stats": "Stats",
+  "Unlimited themes": "Unlimited themes",
+  "with zero effort": "with zero effort",
+  "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name.": "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name.",
+  "See all themes": "See all themes",
+  "Semantic colors": "Semantic colors",
+  "Learn more about colors": "Learn more about colors",
   "": ""
 }

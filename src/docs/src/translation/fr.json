@@ -416,5 +416,14 @@
   "Chat bubbles are used to show one line of conversation and all its data, including the author image, author name, time, etc.": "Chat bubbles are used to show one line of conversation and all its data, including the author image, author name, time, etc.",
   "File Input is a an input field for uploading files.": "File Input is a an input field for uploading files.",
   "Toast is a wrapper to stack elements, positioned on the corner of page.": "Toast is a wrapper to stack elements, positioned on the corner of page.",
+  "Admin panel": "Admin panel",
+  "Updates": "Updates",
+  "Stats": "Stats",
+  "Unlimited themes": "Unlimited themes",
+  "with zero effort": "with zero effort",
+  "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name.": "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name.",
+  "See all themes": "See all themes",
+  "Semantic colors": "Semantic colors",
+  "Learn more about colors": "Learn more about colors",
   "": ""
 }

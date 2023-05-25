@@ -1,4 +1,5 @@
 <script>
+  import { t } from "@src/lib/i18n"
   export let animateValue
   export let section
 </script>
@@ -198,7 +199,7 @@
       class="rounded-box bg-base-200 h-full w-60 shrink-0"
       style={`opacity:${animateValue(section, [14, 19], [0, 1])}`}>
       <ul class="menu">
-        <li class="menu-title">Admin panel</li>
+        <li class="menu-title">{$t("Admin panel")}</li>
         <li>
           <button class="active">
             <svg
@@ -220,7 +221,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
-            Dashboard
+            {$t("Dashboard")}
           </button>
         </li>
         <li>
@@ -239,7 +240,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
-            Notifications
+            {$t("Notifications")}
           </button>
         </li>
         <li>
@@ -273,7 +274,7 @@
                 stroke-width="3"
                 stroke-linecap="round" />
             </svg>
-            Messages
+            {$t("Messages")}
           </button>
         </li>
         <li>
@@ -300,7 +301,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
-            People
+            {$t("People")}
           </button>
         </li>
         <li>
@@ -351,7 +352,7 @@
                 </clipPath>
               </defs>
             </svg>
-            Products
+            {$t("Products")}
             <span class="badge badge-info">50</span>
           </button>
         </li>
@@ -422,13 +423,13 @@
               stroke-width="2"
               d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          Updates
+          {$t("Updates")}
           <span class="badge badge-sm badge-warning">NEW</span>
         </button>
       </li>
       <li>
         <button>
-          Stats
+          {$t("Stats")}
           <span class="badge badge-xs badge-info" />
         </button>
       </li>
@@ -438,19 +439,19 @@
     class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center max-[1280px]:!transform-none"
     style={`transform:scale(${animateValue(section, [0, 10], [2, 1])})`}>
     <h2 class="font-title text-[clamp(2.5rem,6vw,4rem)] font-black leading-none">
-      Unlimited themes
+      {$t("Unlimited themes")}
     </h2>
-    <p class="font-title font-light md:text-3xl lg:text-5xl">with zero effort</p>
+    <p class="font-title font-light md:text-3xl lg:text-5xl">{$t("with zero effort")}</p>
     <div class="h-6" />
     <p class="font-title mx-auto max-w-lg font-light">
-      daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS
-      variables for the values. Using daisyUI color names, you get Dark Mode and even more themes
-      without adding a new class name.
+      {$t(
+        "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name."
+      )}
     </p>
     <div class="h-6" />
     <div>
       <a class="btn btn-wide btn-primary" data-sveltekit-preload-data="hover" href="/docs/themes/">
-        See all themes
+        {$t("See all themes")}
       </a>
     </div>
   </div>
@@ -507,7 +508,7 @@
   class="rounded-box bg-base-200 card hidden h-full w-80 shrink-0 xl:flex"
   style={`opacity:${animateValue(section, [12, 17], [0, 1])}`}>
   <div class="card-body">
-    <h2 class="card-title mb-4 text-sm">Semantic colors</h2>
+    <h2 class="card-title mb-4 text-sm">{$t("Semantic colors")}</h2>
     <div class="grid grid-cols-4 gap-4">
       <div class="flex flex-col items-center gap-1">
         <div class="bg-primary rounded-btn aspect-square w-10" />
@@ -592,7 +593,7 @@
     </div>
     <div class="mt-6">
       <a class="btn btn-block" data-sveltekit-preload-data="hover" href="/docs/colors/">
-        Learn more about colors
+        {$t("Learn more about colors")}
       </a>
     </div>
   </div>
