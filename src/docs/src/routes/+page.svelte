@@ -1087,7 +1087,7 @@
         <a
           data-sveltekit-preload-data="hover"
           href="/docs/install"
-          class="btn btn-lg btn-wide px-32 normal-case">
+          class="btn btn-lg btn-wide normal-case">
           {$t("cta-2")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
