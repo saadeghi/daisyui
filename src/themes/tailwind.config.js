@@ -1,5 +1,8 @@
 module.exports = {
   content: [{ raw: "" }],
+  experimental: {
+    optimizeUniversalDefaults: true,
+  },
   corePlugins: {
     preflight: false,
   },
