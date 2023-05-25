@@ -98,7 +98,7 @@
 <!-- hero content -->
 <div>
   <div
-    class="flex min-h-[550vh] flex-col items-center justify-start xl:flex-row xl:items-start xl:justify-between"
+    class="flex min-h-[550vh] max-w-[100vw] flex-col items-center justify-start xl:flex-row xl:items-start xl:justify-between"
     bind:this={section[1]}>
     <div class="shrink xl:w-1/2">
       <div
@@ -110,7 +110,7 @@
           </div>
           <div class="h-4" />
           <h1
-            class="font-title text-center text-[clamp(2rem,6vw,4.5rem)] font-black leading-none xl:text-left">
+            class="font-title text-center text-[clamp(2rem,6vw,4.5rem)] font-black leading-[1.1] xl:text-left">
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
               {@html $t("The most popular")}
@@ -177,7 +177,11 @@
         <div class="max-w-[100vw] px-2 py-10 lg:px-10 xl:max-w-[50vw]">
           <div class="font-title text-center xl:text-left">
             <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none">
-              {@html $t("don't re-invent<br/>the wheel<br/>every time")} 🥱
+              {@html $t("don't re-invent<br/>the wheel<br/>every time")}
+              <img
+                alt="yawing face"
+                src="/images/emoji/yawning-face.png"
+                class="pointer-events-none inline-block aspect-square h-[1em] align-bottom" />
             </h2>
 
             <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
@@ -206,6 +210,10 @@
                   {@html $t(
                     "use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>"
                   )}
+                  <img
+                    alt="yawing face"
+                    src="/images/emoji/smiling-face-with-sunglasses.png"
+                    class="pointer-events-none inline-block aspect-square h-[1em] align-bottom" />
                 </h2>
                 <div class="h-6" />
                 <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
@@ -229,7 +237,7 @@
         section[1] && scrollY > section[1].clientHeight * 0.2 ? "visibility: visible;" : ""
       }transform:translateY(${animateValue(section[1], [20, 21], [120, 0])}%)`}>
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
         style={section[1] &&
           `transform: rotateX(${animateValue(
             section[1],
@@ -1461,6 +1469,14 @@
 
 <div class="w-[calc(100%-1rem)] px-2 py-40 lg:px-10">
   <div class="text-center">
+    <div class="h-6" />
+    <div>
+      <img
+        alt="yawing face"
+        src="/images/emoji/heart-on-fire.png"
+        class="pointer-events-none inline-block aspect-square h-20 align-bottom" />
+    </div>
+    <div class="h-20" />
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
       {$t("Free and open-source")}

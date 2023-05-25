@@ -335,7 +335,7 @@
   "Support daisyUI's development": "支持daisyUI的開發",
   "The most popular": "最受歡迎",
   "component library": "組件庫",
-  "for Tailwind CSS": "專為 Tailwind CSS 打造",
+  "for Tailwind CSS": "專為 Tailwind CSS",
   "daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>": "daisyUI 將元件類別名稱添加到 Tailwind&nbsp;CSS 中<br /> 讓您可以比以往更快速地建立漂亮的網站 <span class='border-base-content/20 border-b-2'>faster than ever.</span>",
   "don't re-invent<br/>the wheel<br/>every time": "不要每次都重新發明輪子",
   "In a Tailwind CSS project, you need to write utiltiy class names for every element. Thousands of class names just to style the most basic elements.": "在 Tailwind CSS 項目中，您需要為每個元素編寫 utiltiy 類名。數千個類名只是為了樣式化最基本的元素。",
