@@ -3,9 +3,9 @@
   --alert-bg: hsl(var(--b2));
   --alert-bg-mix: hsl(var(--b1));
   background-color: var(--alert-bg);
-  @supports (background-color: color-mix(in srgb, var(--alert-bg) 50%, var(--alert-bg-mix))) {
+  /* @supports (background-color: color-mix(in srgb, var(--alert-bg) 50%, var(--alert-bg-mix))) {
     background-color: color-mix(in srgb, var(--alert-bg) 50%, var(--alert-bg-mix));
-  }
+  } */
   &-info {
     @apply text-info-content border-info/20;
     --alert-bg: hsl(var(--in));
