@@ -430,12 +430,12 @@
       [0, 10],
       [10, 0]
     )}%)`}>
-    <h2 class="font-title text-[clamp(2.5rem,6vw,3rem)] font-black leading-none">
+    <h2 class="font-title text-[clamp(1.5rem,6vw,3rem)] font-black leading-none">
       {$t("Unlimited themes")}
     </h2>
     <p class="font-title font-light md:text-3xl lg:text-4xl">{$t("with zero effort")}</p>
     <div class="h-4" />
-    <p class="text-base-content/60 mx-auto max-w-lg text-sm font-light">
+    <p class="text-base-content/60 mx-auto max-w-lg font-sans text-sm font-light">
       {$t(
         "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name."
       )}

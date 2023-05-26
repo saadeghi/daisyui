@@ -191,7 +191,7 @@
                 alt="yawing face"
                 src="/images/emoji/yawning-face@80.webp"
                 srcset={`/images/emoji/yawning-face.webp 2x`}
-                class="pointer-events-none inline-block aspect-square h-[1em] align-bottom" />
+                class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
             </h2>
 
             <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
@@ -201,7 +201,7 @@
             </p>
             <div class="h-40" />
             <div class="relative h-[300vh]">
-              <div class="sticky top-[18vh] xl:top-[30vh]">
+              <div class="sticky top-[16vh] xl:top-[30vh]">
                 <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
                   {@html $t(
                     "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>"
@@ -215,7 +215,7 @@
               </div>
             </div>
             <div class="relative h-screen">
-              <div class="sticky top-[18vh] xl:top-[30vh]">
+              <div class="sticky top-[16vh] xl:top-[30vh]">
                 <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
                   {@html $t(
                     "use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>"
@@ -227,7 +227,7 @@
                     alt="yawing face"
                     src="/images/emoji/smiling-face-with-sunglasses@80.webp"
                     srcset={`/images/emoji/smiling-face-with-sunglasses.webp 2x`}
-                    class="pointer-events-none inline-block aspect-square h-[1em] align-bottom" />
+                    class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
                 </h2>
                 <div class="h-6" />
                 <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
@@ -917,27 +917,27 @@
           class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-left">
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section["performance"], [-100, -50], [0, 1])) === 0
+              Math.trunc(animateValue(section["performance"], [-40, -30], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section["performance"], [-100, -50], [0, 1]))
+                : Math.trunc(animateValue(section["performance"], [-40, -30], [0, 1]))
             }`}>
             {$t("Fewer class names")}
           </span>
           <br />
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section["performance"], [-100, -30], [0, 1])) === 0
+              Math.trunc(animateValue(section["performance"], [-30, -20], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section["performance"], [-100, -30], [0, 1]))
+                : Math.trunc(animateValue(section["performance"], [-30, -20], [0, 1]))
             }`}>
             {$t("Faster development")}
           </span>
           <br />
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section["performance"], [-100, -10], [0, 1])) === 0
+              Math.trunc(animateValue(section["performance"], [-20, -10], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section["performance"], [-100, -10], [0, 1]))
+                : Math.trunc(animateValue(section["performance"], [-20, -10], [0, 1]))
             }`}>
             {$t("Smaller file size")}
           </span>
@@ -1278,41 +1278,41 @@
         class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-100, -40], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-50, -45], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-100, -40], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-50, -45], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_1")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-100, -35], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-45, -40], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-100, -35], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-45, -40], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_2")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-100, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-40, -35], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-100, -30], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-40, -35], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_3")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-100, -25], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-35, -30], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-100, -25], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-35, -30], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_4")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-100, -20], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-30, -25], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-100, -20], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-30, -25], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_5")}
         </span>
@@ -1346,9 +1346,9 @@
         class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["possibilities"], [-100, -40], [0, 1])) === 0
+            Math.trunc(animateValue(section["possibilities"], [-30, -20], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["possibilities"], [-100, -40], [0, 1]))
+              : Math.trunc(animateValue(section["possibilities"], [-30, -20], [0, 1]))
           }`}>
           {siteStats.components}
           {$t("components")}
@@ -1356,15 +1356,15 @@
         <br />
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["possibilities"], [-100, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["possibilities"], [-20, -10], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["possibilities"], [-100, -30], [0, 1]))
+              : Math.trunc(animateValue(section["possibilities"], [-20, -10], [0, 1]))
           }`}>
           500+ {$t("utility classes")}
         </span>
         <br />
         <span class="inline-grid">
-          {#if Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1])) !== 0}
+          {#if Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0}
             <span
               class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
               aria-hidden="true">
@@ -1373,12 +1373,12 @@
           {/if}
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1])) === 0
+              Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1]))
+                : Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1]))
             }`}
             class={`[&::selection]:text-base-content relative col-start-1 row-start-1 leading-tight [&::selection]:bg-blue-700/20 ${
-              Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1])) !== 0
+              Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0
                 ? "bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
                 : ""
             }`}>
@@ -1529,7 +1529,7 @@
         alt="yawing face"
         src="/images/emoji/heart-on-fire@80.webp"
         srcset={`/images/emoji/heart-on-fire.webp 2x`}
-        class="pointer-events-none inline-block aspect-square h-20 align-bottom" />
+        class="pointer-events-none inline-block h-20 w-20 align-bottom" />
     </div>
     <div class="h-20" />
     <h2
@@ -1624,9 +1624,9 @@
         class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["try"], [-100, -40], [0, 1])) === 0
+            Math.trunc(animateValue(section["try"], [-40, -30], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["try"], [-100, -40], [0, 1]))
+              : Math.trunc(animateValue(section["try"], [-40, -30], [0, 1]))
           }`}>
           {$t("Try daisyUI")}
         </span>
@@ -1634,9 +1634,9 @@
         <span
           class="font-light"
           style={`opacity:${
-            Math.trunc(animateValue(section["try"], [-100, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["try"], [-20, -10], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["try"], [-100, -30], [0, 1]))
+              : Math.trunc(animateValue(section["try"], [-20, -10], [0, 1]))
           }`}>
           {$t("on your favorite framework")}
         </span>
