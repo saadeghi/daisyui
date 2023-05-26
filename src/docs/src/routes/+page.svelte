@@ -49,42 +49,48 @@
   ]
   $: demo_1_ClassNameHandler = () => {
     if (
-      section[1] &&
-      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 25 &&
-      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 < 65
+      section["hero"] &&
+      (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 > 25 &&
+      (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 < 65
     ) {
       return demo_1_ClassNames[0].slice(
         0,
-        Math.trunc(animateValue(section[1], [25, 65], [0, demo_1_ClassNames[0].length]))
+        Math.trunc(animateValue(section["hero"], [25, 65], [0, demo_1_ClassNames[0].length]))
       )
     } else if (
-      section[1] &&
-      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 65 &&
-      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 < 80
+      section["hero"] &&
+      (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 > 65 &&
+      (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 < 80
     ) {
       return demo_1_ClassNames[0].slice(
         0,
-        Math.trunc(animateValue(section[1], [75, 80], [demo_1_ClassNames[0].length, 0]))
+        Math.trunc(animateValue(section["hero"], [75, 80], [demo_1_ClassNames[0].length, 0]))
       )
     } else if (
-      section[1] &&
-      (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 80
+      section["hero"] &&
+      (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 > 80
     ) {
       return demo_1_ClassNames[1].slice(
         0,
-        Math.trunc(animateValue(section[1], [80, 82], [0, demo_1_ClassNames[1].length]))
+        Math.trunc(animateValue(section["hero"], [80, 82], [0, demo_1_ClassNames[1].length]))
       )
     }
     return ""
   }
   $: demo_1_StyleHandler = () => {
-    if (section[1] && (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 80) {
+    if (
+      section["hero"] &&
+      (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 > 80
+    ) {
       return "text-teal-600"
     }
     return "text-amber-600"
   }
   $: demo_1_ElementTextHandler = () => {
-    if (section[1] && (scrollY / (section[1].offsetTop + section[1].clientHeight)) * 100 > 80) {
+    if (
+      section["hero"] &&
+      (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 > 80
+    ) {
       return "daisyUI Button"
     }
     return "Tailwind Button"
@@ -99,11 +105,11 @@
 <div>
   <div
     class="flex min-h-[550vh] max-w-[100vw] flex-col items-center justify-start xl:flex-row xl:items-start xl:justify-between"
-    bind:this={section[1]}>
+    bind:this={section["hero"]}>
     <div class="shrink xl:w-1/2">
       <div
         class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:pl-10 xl:pr-0 xl:text-left"
-        class:invisible={section[1] && scrollY > section[1].clientHeight}>
+        class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div>
           <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
             <pre><code>npm i -D daisyui</code></pre>
@@ -179,8 +185,12 @@
             <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none">
               {@html $t("don't re-invent<br/>the wheel<br/>every time")}
               <img
+                loading="lazy"
+                width="72"
+                height="72"
                 alt="yawing face"
-                src="/images/emoji/yawning-face.png"
+                src="/images/emoji/yawning-face@80.webp"
+                srcset={`/images/emoji/yawning-face.webp 2x`}
                 class="pointer-events-none inline-block aspect-square h-[1em] align-bottom" />
             </h2>
 
@@ -211,8 +221,12 @@
                     "use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>"
                   )}
                   <img
+                    loading="lazy"
+                    width="72"
+                    height="72"
                     alt="yawing face"
-                    src="/images/emoji/smiling-face-with-sunglasses.png"
+                    src="/images/emoji/smiling-face-with-sunglasses@80.webp"
+                    srcset={`/images/emoji/smiling-face-with-sunglasses.webp 2x`}
                     class="pointer-events-none inline-block aspect-square h-[1em] align-bottom" />
                 </h2>
                 <div class="h-6" />
@@ -231,40 +245,42 @@
 
     <div
       class={`invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:visible xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]
-      ${section[1] && scrollY < 100 ? "" : ""}
+      ${section["hero"] && scrollY < 100 ? "" : ""}
       `}
       style={`${
-        section[1] && scrollY > section[1].clientHeight * 0.2 ? "visibility: visible;" : ""
-      }transform:translateY(${animateValue(section[1], [20, 21], [120, 0])}%)`}>
+        section["hero"] && scrollY > section["hero"].clientHeight * 0.2
+          ? "visibility: visible;"
+          : ""
+      }transform:translateY(${animateValue(section["hero"], [20, 21], [120, 0])}%)`}>
       <div
         class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
-        style={section[1] &&
+        style={section["hero"] &&
           `transform: rotateX(${animateValue(
-            section[1],
+            section["hero"],
             [7, 17],
             [20, 0]
-          )}deg)rotateZ(${animateValue(section[1], [7, 17], [-20, 0])}deg)skewY(${animateValue(
-            section[1],
+          )}deg)rotateZ(${animateValue(section["hero"], [7, 17], [-20, 0])}deg)skewY(${animateValue(
+            section["hero"],
             [7, 17],
             [8, 0]
           )}deg)`}
-        class:invisible={section[1] && scrollY > section[1].clientHeight}>
+        class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div class="grid">
           <div
             class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
-            class:invisible={section[1] && scrollY < section[1].clientHeight}>
+            class:invisible={section["hero"] && scrollY < section["hero"].clientHeight}>
             <!-- flying components -->
             <div
               class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0"
-              style={`opacity:${animateValue(section[1], [15, 16], [1, 0])}`}>
+              style={`opacity:${animateValue(section["hero"], [15, 16], [1, 0])}`}>
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
                   class="relative z-[1] w-80 max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style={`transform:translate(${animateValue(
-                    section[1],
+                    section["hero"],
                     [2, 9],
                     [0, 250]
-                  )}px,${animateValue(section[1], [2, 9], [0, -800])}px)`}>
+                  )}px,${animateValue(section["hero"], [2, 9], [0, -800])}px)`}>
                   <div class="tabs">
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 1)}
@@ -413,10 +429,10 @@
                             <div class="chat-image avatar">
                               <div class="w-10 rounded-full">
                                 <img
+                                  loading="lazy"
                                   width="40"
                                   height="40"
-                                  loading="lazy"
-                                  src="/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                                  src="/tailwind-css-component-profile-1@94w.jpg"
                                   alt="tailwind css avatar component" />
                               </div>
                             </div>
@@ -450,18 +466,18 @@
                   <div
                     class="alert border-base-300 border max-[1280px]:!transform-none"
                     style={`box-shadow:${animateValue(
-                      section[1],
+                      section["hero"],
                       [5, 5.5],
                       [0, -1]
-                    )}rem ${animateValue(section[1], [5, 5.5], [0, 3])}rem ${animateValue(
-                      section[1],
+                    )}rem ${animateValue(section["hero"], [5, 5.5], [0, 3])}rem ${animateValue(
+                      section["hero"],
                       [5, 5.5],
                       [0, 1]
                     )}rem #00000012;transform:translate(${animateValue(
-                      section[1],
+                      section["hero"],
                       [5, 15],
                       [0, 250]
-                    )}px,${animateValue(section[1], [5, 15], [0, -800])}px)`}>
+                    )}px,${animateValue(section["hero"], [5, 15], [0, -800])}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -479,18 +495,18 @@
                   <div
                     class="alert border-base-300 border max-[1280px]:!transform-none"
                     style={`box-shadow:${animateValue(
-                      section[1],
+                      section["hero"],
                       [6, 6.5],
                       [0, -1]
-                    )}rem ${animateValue(section[1], [6, 6.5], [0, 3])}rem ${animateValue(
-                      section[1],
+                    )}rem ${animateValue(section["hero"], [6, 6.5], [0, 3])}rem ${animateValue(
+                      section["hero"],
                       [6, 6.5],
                       [0, 1]
                     )}rem #00000012;transform:translate(${animateValue(
-                      section[1],
+                      section["hero"],
                       [6, 16],
                       [0, 250]
-                    )}px,${animateValue(section[1], [6, 16], [0, -800])}px)`}>
+                    )}px,${animateValue(section["hero"], [6, 16], [0, -800])}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -510,18 +526,18 @@
                 <div
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
                   style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
-                    section[1],
+                    section["hero"],
                     [0, 0.5],
                     [0, -1]
-                  )}rem ${animateValue(section[1], [0, 0.5], [0, 3])}rem ${animateValue(
-                    section[1],
+                  )}rem ${animateValue(section["hero"], [0, 0.5], [0, 3])}rem ${animateValue(
+                    section["hero"],
                     [0, 0.5],
                     [0, 1]
                   )}rem #00000012;transform:translate(${animateValue(
-                    section[1],
+                    section["hero"],
                     [0, 8],
                     [0, 250]
-                  )}px,${animateValue(section[1], [0, 8], [0, -800])}px)`}>
+                  )}px,${animateValue(section["hero"], [0, 8], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">{$t("Design system")}</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
@@ -565,18 +581,18 @@
                 <div
                   class="card bg-base-100 shadow-sm max-[1280px]:!transform-none"
                   style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
-                    section[1],
+                    section["hero"],
                     [4, 4.5],
                     [0, -1]
-                  )}rem ${animateValue(section[1], [4, 4.5], [0, 3])}rem ${animateValue(
-                    section[1],
+                  )}rem ${animateValue(section["hero"], [4, 4.5], [0, 3])}rem ${animateValue(
+                    section["hero"],
                     [4, 4.5],
                     [0, 1]
                   )}rem #00000012;transform:translate(${animateValue(
-                    section[1],
+                    section["hero"],
                     [4, 10],
                     [0, 250]
-                  )}px,${animateValue(section[1], [4, 10], [0, -800])}px)`}>
+                  )}px,${animateValue(section["hero"], [4, 10], [0, -800])}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Semantic colors</h2>
                     <div class="grid grid-cols-4 gap-4">
@@ -620,11 +636,11 @@
           </div>
           <div
             class="col-start-1 row-start-1 w-11/12 px-10 pb-10 opacity-0 xl:pt-10"
-            style={`opacity:${animateValue(section[1], [16, 17], [0, 1])};z-index:${animateValue(
-              section[1],
-              [20, 22],
+            style={`opacity:${animateValue(
+              section["hero"],
+              [16, 17],
               [0, 1]
-            )}`}>
+            )};z-index:${animateValue(section["hero"], [20, 22], [0, 1])}`}>
             <pre class="max-w-lg"><code class="whitespace-pre-wrap">
 <span class="text-base-content/40 italic">// {$t("Styling a simple button")}</span>
 
@@ -647,16 +663,16 @@
   </div>
 </div>
 
-<div class="w-full px-2 py-40 lg:px-10" bind:this={section[2]}>
+<div class="w-full px-2 py-40 lg:px-10" bind:this={section["nextlevel"]}>
   <div class="text-center">
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none max-[1280px]:!tracking-normal"
-      style={`letter-spacing:${animateValue(section[2], [-100, 20], [1, 0])}rem`}>
+      style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [1, 0])}rem`}>
       {$t("Take Tailwind CSS")}
       <br />
       <span
         class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
-        style={`letter-spacing:${animateValue(section[2], [-100, 20], [0, 1])}rem`}>
+        style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}>
         {$t("to the next level")}
       </span>
     </h2>
@@ -686,7 +702,7 @@
   </div>
 </div>
 
-<div bind:this={section[3]}>
+<div bind:this={section["uglyhtml"]}>
   <div>
     <div class="relative overflow-hidden">
       <div class="w-full px-2 py-40 lg:px-10">
@@ -695,33 +711,33 @@
             class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
             <span
               style={`opacity:${
-                Math.trunc(animateValue(section[3], [-100, -40], [0, 1])) === 0
+                Math.trunc(animateValue(section["uglyhtml"], [-100, -40], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(section[3], [-100, -40], [0, 1]))
+                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -40], [0, 1]))
               }`}>
               {$t("No_more_ugly_HTML_part_1")}
             </span>
             <span
               style={`opacity:${
-                Math.trunc(animateValue(section[3], [-100, -30], [0, 1])) === 0
+                Math.trunc(animateValue(section["uglyhtml"], [-100, -30], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(section[3], [-100, -30], [0, 1]))
+                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -30], [0, 1]))
               }`}>
               {$t("No_more_ugly_HTML_part_2")}
             </span>
             <span
               style={`opacity:${
-                Math.trunc(animateValue(section[3], [-100, -20], [0, 1])) === 0
+                Math.trunc(animateValue(section["uglyhtml"], [-100, -20], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(section[3], [-100, -20], [0, 1]))
+                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -20], [0, 1]))
               }`}>
               {$t("No_more_ugly_HTML_part_3")}
             </span>
             <span
               style={`opacity:${
-                Math.trunc(animateValue(section[3], [-100, -10], [0, 1])) === 0
+                Math.trunc(animateValue(section["uglyhtml"], [-100, -10], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(section[3], [-100, -10], [0, 1]))
+                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -10], [0, 1]))
               }`}>
               {$t("No_more_ugly_HTML_part_4")}
             </span>
@@ -888,7 +904,7 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] overflow-hidden pb-40 pt-32" bind:this={section[4]}>
+<div class="min-h-[100vh] overflow-hidden pb-40 pt-32" bind:this={section["performance"]}>
   <div class="relative">
     <div
       class="relative flex flex-col items-center justify-center gap-10 px-4 md:px-10 xl:flex-row-reverse xl:gap-20">
@@ -901,27 +917,27 @@
           class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-left">
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section[4], [-100, -50], [0, 1])) === 0
+              Math.trunc(animateValue(section["performance"], [-100, -50], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section[4], [-100, -50], [0, 1]))
+                : Math.trunc(animateValue(section["performance"], [-100, -50], [0, 1]))
             }`}>
             {$t("Fewer class names")}
           </span>
           <br />
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section[4], [-100, -30], [0, 1])) === 0
+              Math.trunc(animateValue(section["performance"], [-100, -30], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section[4], [-100, -30], [0, 1]))
+                : Math.trunc(animateValue(section["performance"], [-100, -30], [0, 1]))
             }`}>
             {$t("Faster development")}
           </span>
           <br />
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section[4], [-100, -10], [0, 1])) === 0
+              Math.trunc(animateValue(section["performance"], [-100, -10], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section[4], [-100, -10], [0, 1]))
+                : Math.trunc(animateValue(section["performance"], [-100, -10], [0, 1]))
             }`}>
             {$t("Smaller file size")}
           </span>
@@ -936,7 +952,11 @@
       <div class="grid shrink-0 gap-6 xl:grid-cols-5">
         <div
           class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed"
-          style={`transform:translateX(${animateValue(section[4], [-100, -10], [20, 0])}%)`}>
+          style={`transform:translateX(${animateValue(
+            section["performance"],
+            [-100, -10],
+            [20, 0]
+          )}%)`}>
           <div class="card-body">
             <h3>
               <span class="font-bold">{$t("CSS Class names")}</span>
@@ -948,7 +968,7 @@
               </div>
               <progress
                 class="progress progress-warning w-56"
-                value={animateValue(section[4], [-100, -10], [0, 93])}
+                value={animateValue(section["performance"], [-100, -10], [0, 93])}
                 max="100" />
             </div>
             <div class="flex flex-col gap-2">
@@ -958,7 +978,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section[4], [-100, -10], [0, 46])}
+                value={animateValue(section["performance"], [-100, -10], [0, 46])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -978,7 +998,11 @@
         </div>
         <div
           class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed xl:col-start-3"
-          style={`transform:translateX(${animateValue(section[4], [-100, -10], [-20, 0])}%)`}>
+          style={`transform:translateX(${animateValue(
+            section["performance"],
+            [-100, -10],
+            [-20, 0]
+          )}%)`}>
           <div class="card-body">
             <h3>
               <span class="font-bold">{$t("HTML size")}</span>
@@ -990,7 +1014,7 @@
               </div>
               <progress
                 class="progress progress-warning w-56"
-                value={animateValue(section[4], [-100, -10], [0, 84])}
+                value={animateValue(section["performance"], [-100, -10], [0, 84])}
                 max="100" />
             </div>
             <div class="flex flex-col gap-2">
@@ -1000,7 +1024,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section[4], [-100, -10], [0, 37])}
+                value={animateValue(section["performance"], [-100, -10], [0, 37])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -1024,42 +1048,66 @@
 </div>
 
 <div
-  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center justify-center bg-gradient-to-br">
-  <div class="flex max-w-[100rem] flex-col items-center justify-center px-10 xl:flex-row">
-    <div class="py-10">
+  class="bg-neutral from-neutral to-neutral-focus text-neutral-content relative flex min-h-[100vh] max-w-[100vw] items-center justify-center overflow-hidden bg-gradient-to-br py-20"
+  bind:this={section["customizable"]}>
+  <div
+    class="relative flex max-w-[100rem] flex-col items-center justify-center px-10 xl:flex-row xl:gap-20">
+    <div class="relative z-[1] w-full py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
-        <span class="text-[clamp(2rem,8vw,3.5rem)] font-black">
+        <span
+          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black max-[1280px]:!transform-none"
+          style={`transform:translateX(${animateValue(
+            section["customizable"],
+            [-100, 100],
+            [10, 0]
+          )}rem)`}>
           {@html $t("Highly customizable")}
         </span>
         <br />
-        <span class="text-neutral-content/20 text-[clamp(2rem,8vw,3.5rem)] font-black">
+        <span
+          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light max-[1280px]:!transform-none"
+          style={`transform:translateX(${animateValue(
+            section["customizable"],
+            [-100, 100],
+            [0, 8]
+          )}rem)`}>
           {@html $t("Powered by Tailwind&nbsp;CSS utility&nbsp;classes")}
         </span>
       </h2>
       <div class="h-10" />
-      <p class="text-neutral-content/60 font-title text-center font-light md:text-3xl xl:text-left">
+      <p
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light max-[1280px]:!transform-none md:text-3xl xl:text-left"
+        style={`transform:translateX(${animateValue(
+          section["customizable"],
+          [-100, 100],
+          [10, 2]
+        )}rem)`}>
         {@html $t(
           "daisyUI is built on top of Tailwind&nbsp;CSS<br />so you can customize everything<br />using utility classes."
         )}
       </p>
     </div>
-    <div class="py-10">
-      <div class="my-20 flex flex-col">
-        <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
-          <pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre>
-        </div>
-        <div class="divider text-neutral-content text-opacity-30">↓</div>
-        <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
-          <pre><code>&lt;a class="<span>btn btn-primary</span> <span
-                class="text-teal-500">rounded-full</span>"&gt;Button&lt;/a&gt;</code></pre>
-        </div>
+    <div class="flex flex-col">
+      <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
+        <pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre>
+      </div>
+      <div class="divider text-neutral-content text-opacity-30">↓</div>
+      <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
+        <pre><code>&lt;a class="<span>btn btn-primary</span> <span
+              class="text-teal-500">rounded-full</span>"&gt;Button&lt;/a&gt;</code></pre>
       </div>
     </div>
   </div>
 </div>
 
 <div
-  class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center justify-center bg-gradient-to-br py-16">
+  class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-gradient-to-t py-16">
+  <div
+    class="bg-warning right-1/5 pointer-events-none absolute -top-full aspect-square w-full -translate-x-1/2 rounded-full opacity-5 blur-3xl" />
+  <div
+    class="bg-base-content top-1/5 pointer-events-none absolute -left-40 aspect-square w-2/3 rounded-full border-2 opacity-5 blur-3xl" />
+  <div
+    class="bg-info pointer-events-none absolute left-0 top-1/2 aspect-square w-1/2 -translate-y-1/2 rounded-full opacity-5 blur-3xl" />
   <div class="flex max-w-[100rem] flex-col-reverse items-center justify-center xl:flex-row-reverse">
     <div class="px-10 py-10">
       <h2 class="font-title text-center leading-none xl:text-left">
@@ -1071,13 +1119,13 @@
       </h2>
       <div class="h-10" />
       <p
-        class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
+        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
         {@html $t(
           "daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file."
         )}
       </p>
       <p
-        class="text-neutral-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
+        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
         {@html $t(
           "Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name."
         )}
@@ -1104,7 +1152,7 @@
         </a>
       </div>
     </div>
-    <div class="pointer-events-none shrink-0 pb-10 md:p-10 xl:w-1/3">
+    <div class="pointer-events-none relative z-[1] shrink-0 pb-10 md:p-10 xl:w-1/3">
       <div class="grid grid-cols-4 gap-10 px-10 pt-10 xl:px-6 xl:pt-0">
         <img
           loading="lazy"
@@ -1195,7 +1243,7 @@
   </div>
 </div>
 
-<div class="min-h-[900vh] py-20" bind:this={section[5]}>
+<div class="min-h-[900vh] py-20" bind:this={section["themes"]}>
   <div
     class="sticky top-20 mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl">
     {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
@@ -1204,67 +1252,67 @@
         data-theme={currentTheme}
         style={index > 0
           ? `clip-path: polygon(${animateValue(
-              section[5],
+              section["themes"],
               [0 + index * 7, 20 + index * 7],
               [-180, 100]
             )}% 0%, 0% 0%, 0% 100%, ${animateValue(
-              section[5],
+              section["themes"],
               [0 + index * 7, 20 + index * 7],
               [0, 100]
             )}% 100%)`
           : ""}>
         <div
           class="border-base-200 flex w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
-          style={`--tw-border-opacity:${animateValue(section[5], [10, 15], [0, 1])}`}>
-          <ComponentsPreview {animateValue} section={section[5]} />
+          style={`--tw-border-opacity:${animateValue(section["themes"], [10, 15], [0, 1])}`}>
+          <ComponentsPreview {animateValue} section={section["themes"]} />
         </div>
       </div>
     {/each}
   </div>
 </div>
 
-<div class="bg-base-100 min-h-[100vh] py-20" bind:this={section[6]}>
+<div class="bg-base-100 min-h-[100vh] py-20" bind:this={section["designdecision"]}>
   <div class="w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
         class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[6], [-100, -40], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-100, -40], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[6], [-100, -40], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-100, -40], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_1")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[6], [-100, -35], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-100, -35], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[6], [-100, -35], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-100, -35], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_2")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[6], [-100, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-100, -30], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[6], [-100, -30], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-100, -30], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_3")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[6], [-100, -25], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-100, -25], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[6], [-100, -25], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-100, -25], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_4")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[6], [-100, -20], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [-100, -20], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[6], [-100, -20], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [-100, -20], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_5")}
         </span>
@@ -1291,16 +1339,16 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] py-20" bind:this={section[7]}>
+<div class="min-h-[100vh] py-20" bind:this={section["possibilities"]}>
   <div class="w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
         class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[7], [-100, -40], [0, 1])) === 0
+            Math.trunc(animateValue(section["possibilities"], [-100, -40], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[7], [-100, -40], [0, 1]))
+              : Math.trunc(animateValue(section["possibilities"], [-100, -40], [0, 1]))
           }`}>
           {siteStats.components}
           {$t("components")}
@@ -1308,15 +1356,15 @@
         <br />
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[7], [-100, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["possibilities"], [-100, -30], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[7], [-100, -30], [0, 1]))
+              : Math.trunc(animateValue(section["possibilities"], [-100, -30], [0, 1]))
           }`}>
           500+ {$t("utility classes")}
         </span>
         <br />
         <span class="inline-grid">
-          {#if Math.trunc(animateValue(section[7], [-100, -20], [0, 1])) !== 0}
+          {#if Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1])) !== 0}
             <span
               class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
               aria-hidden="true">
@@ -1325,12 +1373,12 @@
           {/if}
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section[7], [-100, -20], [0, 1])) === 0
+              Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1])) === 0
                 ? 0.1
-                : Math.trunc(animateValue(section[7], [-100, -20], [0, 1]))
+                : Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1]))
             }`}
             class={`[&::selection]:text-base-content relative col-start-1 row-start-1 leading-tight [&::selection]:bg-blue-700/20 ${
-              Math.trunc(animateValue(section[7], [-100, -20], [0, 1])) !== 0
+              Math.trunc(animateValue(section["possibilities"], [-100, -20], [0, 1])) !== 0
                 ? "bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
                 : ""
             }`}>
@@ -1354,17 +1402,17 @@
   </div>
 </div>
 
-<div class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={section[8]}>
+<div class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={section["numbers"]}>
   <div class="sticky top-0 pt-40 text-center">
     <div
       class="bg-primary pointer-events-none absolute bottom-0 left-1/2 aspect-square w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-3xl" />
     <h2
       class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none"
       style={`transform:scale(${animateValue(
-        section[8],
+        section["numbers"],
         [0, 20],
         [0.7, 1]
-      )});opacity:${animateValue(section[8], [0, 20], [0, 1])}`}>
+      )});opacity:${animateValue(section["numbers"], [0, 20], [0, 1])}`}>
       {@html $t("daisyUI is the most popular<br />component library for Tailwind&nbsp;CSS")}
     </h2>
     <div class="h-32" />
@@ -1372,10 +1420,10 @@
       <div
         class="flex flex-col items-center gap-4"
         style={`transform:translateY(${animateValue(
-          section[8],
+          section["numbers"],
           [20, 30],
           [2, 0]
-        )}rem);opacity:${animateValue(section[8], [20, 30], [0, 1])}`}>
+        )}rem);opacity:${animateValue(section["numbers"], [20, 30], [0, 1])}`}>
         <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup
             initial={stargazers_count * 0.9}
@@ -1394,10 +1442,10 @@
       <div
         class="flex flex-col items-center gap-4"
         style={`transform:translateY(${animateValue(
-          section[8],
+          section["numbers"],
           [30, 40],
           [2, 0]
-        )}rem);opacity:${animateValue(section[8], [30, 40], [0, 1])}`}>
+        )}rem);opacity:${animateValue(section["numbers"], [30, 40], [0, 1])}`}>
         <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup
             initial={data.gh_dependents.repositories * 0.9}
@@ -1416,10 +1464,10 @@
       <div
         class="flex flex-col items-center gap-4"
         style={`transform:translateY(${animateValue(
-          section[8],
+          section["numbers"],
           [40, 50],
           [2, 0]
-        )}rem);opacity:${animateValue(section[8], [40, 50], [0, 1])}`}>
+        )}rem);opacity:${animateValue(section["numbers"], [40, 50], [0, 1])}`}>
         <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup initial={downloads * 0.9} value={downloads} duration={3000} roundto={100} />
         </h3>
@@ -1475,8 +1523,12 @@
     <div class="h-6" />
     <div>
       <img
+        loading="lazy"
+        width="80"
+        height="80"
         alt="yawing face"
-        src="/images/emoji/heart-on-fire.png"
+        src="/images/emoji/heart-on-fire@80.webp"
+        srcset={`/images/emoji/heart-on-fire.webp 2x`}
         class="pointer-events-none inline-block aspect-square h-20 align-bottom" />
     </div>
     <div class="h-20" />
@@ -1565,16 +1617,16 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] py-20" bind:this={section[9]}>
+<div class="min-h-[100vh] py-20" bind:this={section["try"]}>
   <div class="w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
         class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section[9], [-100, -40], [0, 1])) === 0
+            Math.trunc(animateValue(section["try"], [-100, -40], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[9], [-100, -40], [0, 1]))
+              : Math.trunc(animateValue(section["try"], [-100, -40], [0, 1]))
           }`}>
           {$t("Try daisyUI")}
         </span>
@@ -1582,9 +1634,9 @@
         <span
           class="font-light"
           style={`opacity:${
-            Math.trunc(animateValue(section[9], [-100, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["try"], [-100, -30], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section[9], [-100, -30], [0, 1]))
+              : Math.trunc(animateValue(section["try"], [-100, -30], [0, 1]))
           }`}>
           {$t("on your favorite framework")}
         </span>

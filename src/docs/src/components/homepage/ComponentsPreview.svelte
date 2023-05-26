@@ -385,7 +385,7 @@
           <img
             width="40"
             height="40"
-            src="/images/stock/photo-1534528741775-53994a69daeb.jpg"
+            src="/tailwind-css-component-profile-1@94w.jpg"
             aria-label="tailwindcss button" />
         </div>
       </button>
@@ -425,7 +425,11 @@
   </div>
   <div
     class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center max-[1280px]:!transform-none"
-    style={`transform:scale(${animateValue(section, [0, 10], [2, 1])})`}>
+    style={`transform:scale(${animateValue(section, [0, 10], [2, 1])})translateY(${animateValue(
+      section,
+      [0, 10],
+      [10, 0]
+    )}%)`}>
     <h2 class="font-title text-[clamp(2.5rem,6vw,3rem)] font-black leading-none">
       {$t("Unlimited themes")}
     </h2>
