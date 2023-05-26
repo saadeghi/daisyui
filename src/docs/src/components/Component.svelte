@@ -43,7 +43,10 @@
   })
 </script>
 
-<div class="component-preview not-prose text-base-content my-4" id={titleStr} bind:this={wrapper}>
+<div
+  class="component-preview not-prose text-base-content my-6 lg:my-12"
+  id={titleStr}
+  bind:this={wrapper}>
   {#if title}
     <div class="pb-2 text-sm font-bold">
       <a class="opacity-20 hover:opacity-60" href={`#${titleStr}`}>#</a>
