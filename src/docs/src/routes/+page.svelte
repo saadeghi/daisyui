@@ -110,7 +110,7 @@
           </div>
           <div class="h-4" />
           <h1
-            class="font-title text-center text-[clamp(2rem,6vw,4.5rem)] font-black leading-[1.1] xl:text-left">
+            class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] xl:text-left">
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
               {@html $t("The most popular")}
@@ -898,7 +898,7 @@
         <div
           class="bg-success pointer-events-none absolute aspect-square w-full rounded-full opacity-10 blur-3xl" />
         <h2
-          class="font-title text-center text-[clamp(2rem,8vw,4.5rem)] font-black leading-none xl:text-left">
+          class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-left">
           <span
             style={`opacity:${
               Math.trunc(animateValue(section[4], [-100, -50], [0, 1])) === 0
@@ -1025,14 +1025,14 @@
 
 <div
   class="bg-neutral from-neutral to-neutral-focus text-neutral-content flex min-h-[100vh] items-center justify-center bg-gradient-to-br">
-  <div class="flex max-w-[100rem] flex-col items-center justify-center xl:flex-row">
-    <div class="px-4 py-10 md:px-10">
+  <div class="flex max-w-[100rem] flex-col items-center justify-center px-10 xl:flex-row">
+    <div class="py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
-        <span class="text-[clamp(2rem,8vw,5rem)] font-black">
+        <span class="text-[clamp(2rem,8vw,3.5rem)] font-black">
           {@html $t("Highly customizable")}
         </span>
         <br />
-        <span class="text-neutral-content/20 text-[clamp(2rem,8vw,4rem)] font-black">
+        <span class="text-neutral-content/20 text-[clamp(2rem,8vw,3.5rem)] font-black">
           {@html $t("Powered by Tailwind&nbsp;CSS utility&nbsp;classes")}
         </span>
       </h2>
@@ -1043,7 +1043,7 @@
         )}
       </p>
     </div>
-    <div class="pb-10 md:p-10">
+    <div class="py-10">
       <div class="my-20 flex flex-col">
         <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
           <pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre>
@@ -1063,11 +1063,11 @@
   <div class="flex max-w-[100rem] flex-col-reverse items-center justify-center xl:flex-row-reverse">
     <div class="px-10 py-10">
       <h2 class="font-title text-center leading-none xl:text-left">
-        <span class="text-[clamp(2rem,8vw,5rem)] font-black">{$t("Pure CSS.")}</span>
+        <span class="text-[clamp(2rem,8vw,4rem)] font-black">{$t("Pure CSS.")}</span>
         <br />
-        <span class="text-[clamp(2rem,8vw,5rem)] font-black">{$t("Framework agnostic.")}</span>
+        <span class="text-[clamp(2rem,8vw,4rem)] font-black">{$t("Framework agnostic.")}</span>
         <br />
-        <span class="text-[clamp(2rem,8vw,5rem)] font-light">{$t("Works everywhere.")}</span>
+        <span class="text-[clamp(2rem,8vw,4rem)] font-light">{$t("Works everywhere.")}</span>
       </h2>
       <div class="h-10" />
       <p
@@ -1280,7 +1280,10 @@
         <a data-sveltekit-preload-data="hover" href="/theme-generator/" class="btn normal-case">
           {$t("Theme Generator")}
         </a>
-        <a data-sveltekit-preload-data="hover" href="/docs/themes/#-4" class="btn normal-case">
+        <a
+          data-sveltekit-preload-data="hover"
+          href="/docs/themes/#-4"
+          class="btn btn-neutral normal-case">
           {$t("Learn more about themes")}
         </a>
       </div>

@@ -390,7 +390,7 @@
         </div>
       </button>
     </div>
-    <ul class="menu menu-horizontal rounded-box">
+    <ul class="menu menu-sm menu-horizontal rounded-box">
       <li>
         <button>
           <svg
@@ -411,18 +411,6 @@
       </li>
       <li>
         <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
           {$t("Updates")}
           <span class="badge badge-sm badge-warning">NEW</span>
         </button>
@@ -438,17 +426,17 @@
   <div
     class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center max-[1280px]:!transform-none"
     style={`transform:scale(${animateValue(section, [0, 10], [2, 1])})`}>
-    <h2 class="font-title text-[clamp(2.5rem,6vw,4rem)] font-black leading-none">
+    <h2 class="font-title text-[clamp(2.5rem,6vw,3rem)] font-black leading-none">
       {$t("Unlimited themes")}
     </h2>
-    <p class="font-title font-light md:text-3xl lg:text-5xl">{$t("with zero effort")}</p>
-    <div class="h-6" />
-    <p class="font-title mx-auto max-w-lg font-light">
+    <p class="font-title font-light md:text-3xl lg:text-4xl">{$t("with zero effort")}</p>
+    <div class="h-4" />
+    <p class="text-base-content/60 mx-auto max-w-lg text-sm font-light">
       {$t(
         "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name."
       )}
     </p>
-    <div class="h-6" />
+    <div class="h-4" />
     <div>
       <a class="btn btn-wide btn-primary" data-sveltekit-preload-data="hover" href="/docs/themes/">
         {$t("See all themes")}
