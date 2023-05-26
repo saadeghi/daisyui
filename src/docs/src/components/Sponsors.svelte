@@ -4,11 +4,21 @@
     "bg-base-100 border-base-100 border-base-content/10 hover:border-base-content/20 border"
 </script>
 
-<div class="flex flex-col gap-2 pb-6">
+<div class="flex flex-col gap-2">
   <h3 class="text-base-content/50 text-xs font-bold">Sponsors</h3>
 
   <div class={`flex gap-2 ${wrapperClasses}`}>
     <a
+      href="https://opencollective.com/daisyui"
+      target="_blank"
+      rel="nofollow, noreferrer"
+      class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
+      <span class="text-base-content/50 pt-4 font-bold">Your logo here</span>
+      <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">
+        Support daisyUI by becoming a sponsor
+      </p>
+    </a>
+    <!-- <a
       href="https://www.stackbit.com/?utm_source=daisyui"
       target="_blank"
       rel="nofollow, noreferrer"
@@ -46,9 +56,9 @@
       <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">
         Make your React site visually editable
       </p>
-    </a>
+    </a> -->
   </div>
-  <a
+  <!-- <a
     href="https://opencollective.com/daisyui"
     target="_blank"
     rel="nofollow, noreferrer"
@@ -64,5 +74,12 @@
         fill-rule="evenodd"
         d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z" />
     </svg>
-  </a>
+  </a> -->
+  <span
+    href="https://opencollective.com/daisyui"
+    target="_blank"
+    rel="nofollow, noreferrer"
+    class="text-base-content/50 text-xs">
+    3 slots available
+  </span>
 </div>

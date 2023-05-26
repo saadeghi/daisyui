@@ -97,6 +97,7 @@
       <div class="hidden xl:block">
         <Sponsors />
       </div>
+      <div class="h-6" />
       <div class="carbonads-responsive mx-auto flex items-center justify-center">
         <script
           async
