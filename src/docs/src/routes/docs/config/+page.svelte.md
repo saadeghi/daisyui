@@ -18,17 +18,19 @@ module.exports = {
   // add daisyUI plugin
   plugins: [require("daisyui")],
 
-  // daisyUI config (optional)
+  // daisyUI config (optional - here are the default values)
   daisyui: {
-    styled: true,
-    themes: true,
-    base: true,
-    utils: true,
-    logs: true,
-    rtl: false,
-    prefix: "",
-    darkTheme: "dark",
+    themes: false, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
+    darkTheme: "dark", // name of one of the included themes for dark mode
+    base: true, // applies background color and foreground color for root element by default
+    styled: true, // include daisyUI colors and design decisions for all components
+    utils: true, // adds responsive and modifier utility classes
+    rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
+    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
   },
+
+  //...
 }
 ```
 
@@ -46,7 +48,7 @@ module.exports = {
   `Boolean or array (default: true)`
 
   <Translate text="If it's true, all themes will be included." />
-  <Translate text="If it's false, only light (default) theme will be available." />  
+  <Translate text="If it's false, only light and dark themes will be available." />  
   <Translate text="If it's an array, only themes in the array will be included and the first theme will be the default theme." />
   <Translate text="Read more about <a href='/docs/themes'>themes</a>." />
 

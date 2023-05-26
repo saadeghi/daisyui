@@ -211,10 +211,10 @@ module.exports = {
           themeOrder.push(theme)
         }
       })
-    } else if (config("daisyui.themes") === false) {
-      themeOrder.push("light")
-    } else {
+    } else if (config("daisyui.themes") === true) {
       themeOrder = themeDefaults.themeOrder
+    } else {
+      themeOrder = ["light", "dark"]
     }
 
     // inject themes in order

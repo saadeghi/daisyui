@@ -8,6 +8,7 @@ module.exports = {
   },
   daisyui: {
     base: false,
+    themes: true,
   },
   plugins: [require("../index")],
 }

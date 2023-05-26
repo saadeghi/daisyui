@@ -12,7 +12,16 @@ published: true
 <Translate text="daisyUI comes with a number of themes, which you can use with no extra effort." />  
 <Translate text="Each theme defines a set of colors which will be used on all daisyUI elements." />
 
-<Translate text="To use a theme, add <code>data-theme</code> attribute to your <code><html></code> tag:" />
+<Translate text="To use a theme, add its name in <span class=badge>tailwind.config.js</span> and activate it by adding <span class=badge>data-theme</span> attribute to <span class=badge>HTML</span> tag:" />
+
+```js
+module.exports = {
+  //...
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
+}
+```
 
 ```html
 <html data-theme="cupcake"></html>
@@ -88,7 +97,7 @@ module.exports = {
 
 ## <Translate text="How to disable all themes?" />
 
-<Translate text="If you only want the default <code>light</code> theme, set <code>themes</code> config to false." />
+<Translate text="If you only want the default light and dark themes, set <code>themes</code> config to false." />
 
 ```js
 module.exports = {
