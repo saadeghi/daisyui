@@ -16,16 +16,7 @@ const utilitiesStyled = require("../dist/utilities-styled")
 const themes = require("./theming/themes")
 const colorFunctions = require("./theming/functions")
 
-const mainFunction = ({
-  addBase,
-  addComponents,
-  addUtilities,
-  matchUtilities,
-  theme,
-  config,
-  postcss,
-}) => {
-  let daisyuiIncludedItems = []
+const mainFunction = ({ addBase, addComponents, config }) => {
   let logs = false
   if (config("daisyui.logs") != false) {
     logs = true
@@ -33,36 +24,27 @@ const mainFunction = ({
   if (logs) {
     console.log()
     console.log(
-      "\x1b[35m%s\x1b[0m",
-      "🌼 daisyUI components " + daisyuiInfo.version,
-      "\x1b[0m",
-      daisyuiInfo.homepage
+      "\033[35m%s\033[0m",
+      "🌼 daisyUI " + daisyuiInfo.version,
+      "\033[0m" + daisyuiInfo.homepage
     )
-    console.group()
   }
 
   // inject @base style
   if (config("daisyui.base") != false) {
     addBase(base)
-    daisyuiIncludedItems.push("base")
   }
 
   // inject components
   // because rollupjs doesn't supprt dynamic require
   let file = styled
   if (config("daisyui.styled") == false && config("daisyui.rtl") != true) {
-    daisyuiIncludedItems.push("unstyled components")
     file = unstyled
   } else if (config("daisyui.styled") == false && config("daisyui.rtl") == true) {
-    daisyuiIncludedItems.push("unstyled components")
-    console.log("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL")
     file = unstyledRtl
   } else if (config("daisyui.styled") != false && config("daisyui.rtl") != true) {
-    daisyuiIncludedItems.push("components")
     file = styled
   } else if (config("daisyui.styled") !== false && config("daisyui.rtl") == true) {
-    daisyuiIncludedItems.push("components")
-    console.log("\x1b[36m%s\x1b[0m", " Direction:", "\x1b[0m", "RTL")
     file = styledRtl
   }
 
@@ -85,10 +67,6 @@ const mainFunction = ({
 
   const themeInjectorHsl = colorFunctions.injectThemes(addBase, config, themes, "hsl")
   themeInjectorHsl
-  // const themeInjectorLch = colorFunctions.injectThemes(addBase, config, themes, "lch")
-  // themeInjectorLch
-
-  // daisyuiIncludedItems.push(themeInjectorLch.themeOrder.length + " themes")
 
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
@@ -105,42 +83,84 @@ const mainFunction = ({
       toAdd = postcssJsProcess(toAdd)
     }
     addComponents(toAdd, { variants: ["responsive"] })
-    daisyuiIncludedItems.push("utilities")
   }
-  // matchUtilities(
-  //   {
-  //     text: (value) => ({
-  //       "@supports (color: lch(0 0 0))": {
-  //         color: value.replace("hsl", "lch").replace("<alpha-value>", "var(--tw-text-opacity)"),
-  //       },
-  //     }),
-  //     bg: (value) => ({
-  //       "@supports (color: lch(0 0 0))": {
-  //         backgroundColor: value
-  //           .replace("hsl", "lch")
-  //           .replace("<alpha-value>", "var(--tw-bg-opacity)"),
-  //       },
-  //     }),
-  //     border: (value) => ({
-  //       "@supports (color: lch(0 0 0))": {
-  //         borderColor: value
-  //           .replace("hsl", "lch")
-  //           .replace("<alpha-value>", "var(--tw-border-opacity)"),
-  //       },
-  //     }),
-  //   },
-  //   { values: theme("colors") }
-  // )
+
   if (logs) {
+    console.log("╰╮")
+    if (config("daisyui.styled") == false) {
+      console.log(
+        " ├─",
+        "\033[33m" + "◆" + "\033[0m" + "\033[2m",
+        "daisyui.styled",
+        "\033[0m" + "config is",
+        "\033[2m" + "false" + "\033[0m",
+        "– your components will have no design decisions" + "\n │"
+      )
+    }
+    if (config("daisyui.utils") == false) {
+      console.log(
+        " ├─",
+        "\033[33m" + "◆" + "\033[0m" + "\033[2m",
+        "daisyui.utils",
+        "\033[0m" + "config is",
+        "\033[2m" + "false" + "\033[0m",
+        "– daisyUI modifier utility classes are disabled" + "\n │"
+      )
+    }
+    if (config("daisyui.prefix") && config("daisyui.prefix") !== "") {
+      console.log(
+        " ├─",
+        "\033[32m" + "✔︎" + "\033[0m",
+        "Prefix is enabled, daisyUI classnames must use",
+        "\033[2m" + `${config("daisyui.prefix")}`,
+        "\033[0m" + "prefix. like:",
+        "\033[2m" + `${config("daisyui.prefix")}btn`,
+        "\033[0m" + "\n │    https://daisyui.com/docs/config" + "\n │"
+      )
+    }
+    if (config("daisyui.rtl") == true) {
+      console.log(
+        " ├─",
+        "\033[32m" + "✔︎" + "\033[0m",
+        "Using RTL, make sure you're using",
+        "\033[2m" + "<html dir=rtl>" + "\033[0m",
+        "and you have",
+        "\033[2m",
+        "tailwindcss-flip",
+        "\033[0m",
+        "plugin",
+        "\n │  https://daisyui.com/docs/config" + "\n │"
+      )
+    }
+    if (themeInjectorHsl.themeOrder.length > 0) {
+      console.log(
+        " ╰─",
+        "\033[32m" + "✔︎" + "\033[0m",
+        "\033[2m" +
+          "[ " +
+          "\033[0m" +
+          `${themeInjectorHsl.themeOrder.length}` +
+          "\033[2m" +
+          " ]" +
+          "\033[0m" +
+          ` ${themeInjectorHsl.themeOrder.length > 1 ? "themes are" : "theme is"}` +
+          ` enabled. You can add more themes or make your own theme:` +
+          "\n      https://daisyui.com/docs/themes"
+      )
+    }
+    if (themeInjectorHsl.themeOrder.length === 0) {
+      console.log(
+        " ╰─",
+        "\033[33m" + "◆" + "\033[0m",
+        `All themes are disabled in the config. You can add themes or make your own theme:` +
+          "\n      https://daisyui.com/docs/themes"
+      )
+    }
     console.log(
-      "\x1b[32m%s\x1b[0m",
-      "✔︎ Including:",
-      "\x1b[0m",
-      "" + daisyuiIncludedItems.join(", ")
+      "\n\033[32m%s\033[0m",
+      "    ❤︎ Support daisyUI" + "\033[0m" + `: ${daisyuiInfo.funding.url}`
     )
-    console.log("\x1b[32m%s\x1b[0m", "❤︎ Support daisyUI: ", daisyuiInfo.funding.url, "\x1b[0m")
     console.log()
-    console.groupEnd()
   }
 }
 
