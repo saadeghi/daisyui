@@ -13,7 +13,7 @@
       @apply hidden;
     }
     & > *:not(.drawer-overlay) {
-      transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+      transition: transform 0.4s cubic-bezier(0, 0, 0.58, 1);
       transform: translateX(-100%);
       [dir="rtl"] & {
         transform: translateX(100%);

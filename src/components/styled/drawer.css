@@ -3,7 +3,7 @@
   &-side {
     & > .drawer-overlay {
       @apply cursor-pointer bg-transparent;
-      transition: background-color 1s cubic-bezier(0.8, 0, 0.2, 1);
+      transition: background-color 0.2s cubic-bezier(0, 0, 0.58, 1);
     }
   }
   &-toggle {
