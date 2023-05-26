@@ -1,9 +1,9 @@
 .tooltip {
   @apply relative inline-block text-center;
-  --tooltip-tail: 3px;
+  --tooltip-tail: 0.1875rem;
   --tooltip-color: hsl(var(--n));
   --tooltip-text-color: hsl(var(--nc));
-  --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
+  --tooltip-tail-offset: calc(100% + 0.0625rem - var(--tooltip-tail));
 }
 .tooltip:before,
 .tooltip:after {
@@ -65,7 +65,7 @@
     border-color: transparent transparent transparent var(--tooltip-color);
     top: 50%;
     left: auto;
-    right: calc(var(--tooltip-tail-offset) + 1px);
+    right: calc(var(--tooltip-tail-offset) + 0.0625rem);
     bottom: auto;
   }
 }
@@ -74,7 +74,7 @@
     transform: translateY(-50%);
     border-color: transparent var(--tooltip-color) transparent transparent;
     top: 50%;
-    left: calc(var(--tooltip-tail-offset) + 1px);
+    left: calc(var(--tooltip-tail-offset) + 0.0625rem);
     right: auto;
     bottom: auto;
   }
