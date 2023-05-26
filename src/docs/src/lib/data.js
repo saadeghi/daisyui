@@ -370,7 +370,7 @@ export let pages = [
         tags: "alert warning error message",
         href: "/components/alert/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Avatar",
@@ -384,7 +384,7 @@ export let pages = [
         tags: "badge tag label",
         href: "/components/badge/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Card",
@@ -668,7 +668,7 @@ export let pages = [
         tags: "navbar navigation menu",
         href: "/components/navbar/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Pagination",
