@@ -2,10 +2,9 @@
   "type": "module",
   "scripts": {
     "get-files": "node src/lib/scripts/get-files",
-    "dev": "npm run get-files && npm run createStyleHandlerComponent:dev && vite dev --port 3000 --open",
-    "build": "npm run get-files && npm i daisyui@latest && npm run createStyleHandlerComponent:prod && NODE_ENV=production vite build",
-    "build:alpha": "npm run get-files && npm i daisyui@alpha && npm run createStyleHandlerComponent:prod && NODE_ENV=production vite build",
-    "preview": "vite preview",
+    "dev": "npm run createStyleHandlerComponent:dev && vite dev --port 3000 --open",
+    "build": "npm run createStyleHandlerComponent:prod && NODE_ENV=production vite build",
+    "preview": "npm run build && vite preview --port 3000 --open",
     "createStyleHandlerComponent:dev": "echo '<script>import \"@components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>import \"@components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",
     "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config ../.prettierrc --ignore-path ../.prettierignore",
