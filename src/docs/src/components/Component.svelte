@@ -208,13 +208,15 @@
     color: hsl(var(--nc) / 0.4);
   }
   .prose .component-preview .preview {
-    /* background-image: radial-gradient(hsl(var(--bc) / 0.3) 0.5px, hsl(var(--b3) / 1) 0.5px); */
-    /* background-image: repeating-linear-gradient(
+    background-image: repeating-linear-gradient(
       45deg,
       hsl(var(--b1)),
-      hsl(var(--b1)) 8px,
-      hsl(var(--b2)) 8px,
-      hsl(var(--b2)) 16px
-    ); */
+      hsl(var(--b1)) 13px,
+      hsl(var(--b2)) 13px,
+      hsl(var(--b2)) 14px
+    );
+    /* background-size: 40px 40px;
+    background-image: linear-gradient(to right, hsl(var(--bc) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--bc) / 0.04) 1px, transparent 1px); */
   }
 </style>
