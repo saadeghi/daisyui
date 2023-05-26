@@ -22,6 +22,7 @@ module.exports = {
   },
   daisyui: {
     logs: false,
+    themes: true,
   },
   plugins: [
     require("@tailwindcss/typography"),
