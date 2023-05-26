@@ -5,6 +5,7 @@ published: true
 ---
 
 <script>
+  import { inlineSvg } from "@svelte-put/inline-svg"
   import InstallTabs from "@components/InstallTabs.svelte"
   import Translate from "@components/Translate.svelte"
   import { exampleRepos } from "@src/lib/data.js"
@@ -36,15 +37,15 @@ module.exports = {
 <div class="not-prose grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 my-10 gap-6">
 
 {#each exampleRepos as { name, href, logos }}
-<a class="card border-2 border-base-200 card-compact bg-white/5 hover:bg-gray-300/10 transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener, noreferrer">
+<a class="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener, noreferrer">
 
 <figure class="px-12 pt-6 pb-2 w-full aspect-[2/1] items-end overflow-visible">
 {#if logos.length === 1}
-<img class="w-full h-auto" src={logos[0]} alt={name}>
+<svg use:inlineSvg={logos[0]} width="96" height="96" class="aspect-square w-full h-auto" />
 {:else}
 <div class="grid w-full">
-<img class="col-start-1 row-start-1 w-full h-auto" src={logos[0]} alt={name}>
-<img class="col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto" src={logos[1]} alt={name}>
+<svg use:inlineSvg={logos[0]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-full h-auto" />
+<svg use:inlineSvg={logos[1]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto" />
 </div>
 {/if}
 </figure>

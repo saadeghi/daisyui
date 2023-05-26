@@ -1,5 +1,6 @@
 <script>
   import Countup from "svelte-countup"
+  import { inlineSvg } from "@svelte-put/inline-svg"
   import SEO from "@components/SEO.svelte"
   import Ads from "@components/Ads.svelte"
   import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
@@ -948,6 +949,27 @@
             "With daisyUI, you write 80% fewer class names<br />And your HTML size will be about 70% smaller."
           )}
         </p>
+        <div class="h-10" />
+        <div class="flex w-full justify-center md:justify-start">
+          <a
+            data-sveltekit-preload-data="hover"
+            href="/docs/install"
+            class="btn btn-lg btn-wide group">
+            {$t("Get started")}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+          </a>
+        </div>
       </div>
       <div class="grid shrink-0 gap-6 xl:grid-cols-5">
         <div
@@ -1048,10 +1070,10 @@
 </div>
 
 <div
-  class="bg-neutral from-neutral to-neutral-focus text-neutral-content relative flex min-h-[100vh] max-w-[100vw] items-center justify-center overflow-hidden bg-gradient-to-br py-20"
+  class="bg-neutral from-neutral to-neutral-focus text-neutral-content relative flex min-h-[100vh] max-w-[100vw] items-center justify-center overflow-hidden bg-gradient-to-br p-10 md:p-20"
   bind:this={section["customizable"]}>
   <div
-    class="relative flex max-w-[100rem] flex-col items-center justify-center px-10 xl:flex-row xl:gap-20">
+    class="relative flex max-w-[100rem] flex-col items-center justify-center xl:flex-row xl:gap-20">
     <div class="relative z-[1] w-full py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
         <span
@@ -1076,16 +1098,37 @@
       </h2>
       <div class="h-10" />
       <p
-        class="text-neutral-content/60 font-title inline-block w-full text-center font-light max-[1280px]:!transform-none md:text-3xl xl:text-left"
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light max-[1280px]:!transform-none md:text-2xl xl:text-left"
         style={`transform:translateX(${animateValue(
           section["customizable"],
           [-100, 100],
           [10, 2]
         )}rem)`}>
         {@html $t(
-          "daisyUI is built on top of Tailwind&nbsp;CSS<br />so you can customize everything<br />using utility classes."
+          "daisyUI is built on top of Tailwind&nbsp;CSS so you can customize everything using utility classes."
         )}
       </p>
+      <div class="h-10" />
+      <div class="flex w-full justify-center">
+        <a
+          data-sveltekit-preload-data="hover"
+          href="/docs/customize"
+          class="btn btn-lg btn-wide group normal-case">
+          {$t("how-to-customize")}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
+        </a>
+      </div>
     </div>
     <div class="flex flex-col">
       <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
@@ -1101,15 +1144,17 @@
 </div>
 
 <div
-  class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-gradient-to-t py-16">
+  class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-gradient-to-t py-16"
+  bind:this={section["agnostic"]}>
   <div
     class="bg-warning right-1/5 pointer-events-none absolute -top-full aspect-square w-full -translate-x-1/2 rounded-full opacity-5 blur-3xl" />
   <div
     class="bg-base-content top-1/5 pointer-events-none absolute -left-40 aspect-square w-2/3 rounded-full border-2 opacity-5 blur-3xl" />
   <div
     class="bg-info pointer-events-none absolute left-0 top-1/2 aspect-square w-1/2 -translate-y-1/2 rounded-full opacity-5 blur-3xl" />
-  <div class="flex max-w-[100rem] flex-col-reverse items-center justify-center xl:flex-row-reverse">
-    <div class="px-10 py-10">
+  <div
+    class="flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse">
+    <div>
       <h2 class="font-title text-center leading-none xl:text-left">
         <span class="text-[clamp(2rem,8vw,4rem)] font-black">{$t("Pure CSS.")}</span>
         <br />
@@ -1135,7 +1180,7 @@
         <a
           data-sveltekit-preload-data="hover"
           href="/docs/install"
-          class="btn btn-lg btn-wide normal-case">
+          class="btn btn-lg btn-wide group normal-case">
           {$t("cta-2")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1152,92 +1197,35 @@
         </a>
       </div>
     </div>
-    <div class="pointer-events-none relative z-[1] shrink-0 pb-10 md:p-10 xl:w-1/3">
-      <div class="grid grid-cols-4 gap-10 px-10 pt-10 xl:px-6 xl:pt-0">
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24"
-          src="/logos/vue.svg"
-          alt="Vue.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24 -translate-y-10"
-          src="/logos/react.svg"
-          alt="React" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24"
-          src="/logos/svelte.svg"
-          alt="Svelte.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24 -translate-y-10"
-          src="/logos/qwik.svg"
-          alt="Qwik" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24"
-          src="/logos/solidjs.svg"
-          alt="Solid.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24 -translate-y-10"
-          src="/logos/astro.svg"
-          alt="Astro" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24"
-          src="/logos/nextjs.svg"
-          alt="Next.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24 -translate-y-10"
-          src="/logos/preact.svg"
-          alt="Preact" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24"
-          src="/logos/remix.svg"
-          alt="Remix" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24 -translate-y-10"
-          src="/logos/angular.svg"
-          alt="Angular" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24"
-          src="/logos/nuxtjs.svg"
-          alt="Nuxt" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-24 -translate-y-10"
-          src="/logos/11ty.svg"
-          alt="Eleventy" />
+    <div class="pointer-events-none relative z-[1] shrink-0 xl:w-1/3">
+      <div
+        class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-none md:gap-6 xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]">
+        <div />
+
+        {#each ["vue", "react", "svelte", "postcss", "remix", "nextjs", "solidjs", "preact", "11ty", "nuxtjs", "astro", "angular", "vite", "qwik"] as logo, index}
+          <svg
+            width="96"
+            height="96"
+            class="aspect-square w-full"
+            style={`opacity:${animateValue(
+              section["agnostic"],
+              [-70 + index * 5, -60 + index * 5],
+              [0, 1]
+            )};filter: brightness(${animateValue(
+              section["agnostic"],
+              [-70 + index * 5, -60 + index * 5],
+              [2, 1]
+            )})blur(${animateValue(
+              section["agnostic"],
+              [-70 + index * 5, -60 + index * 5],
+              [2, 0]
+            )}px);scale:${animateValue(
+              section["agnostic"],
+              [-70 + index * 5, -60 + index * 5],
+              [1.05, 1]
+            )}`}
+            use:inlineSvg={`/logos/${logo}.svg`} />
+        {/each}
       </div>
     </div>
   </div>
@@ -1271,48 +1259,48 @@
   </div>
 </div>
 
-<div class="bg-base-100 min-h-[100vh] py-20" bind:this={section["designdecision"]}>
-  <div class="w-full px-2 pt-40 lg:px-10">
+<div class="bg-base-100 min-h-[120vh] py-20" bind:this={section["designdecision"]}>
+  <div class="sticky top-20 w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
         class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-50, -45], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [0, 5], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-50, -45], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [0, 5], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_1")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-45, -40], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [5, 10], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-45, -40], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [5, 10], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_2")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-40, -35], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [10, 15], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-40, -35], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [10, 15], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_3")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-35, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [15, 20], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-35, -30], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [15, 20], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_4")}
         </span>
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [-30, -25], [0, 1])) === 0
+            Math.trunc(animateValue(section["designdecision"], [20, 25], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [-30, -25], [0, 1]))
+              : Math.trunc(animateValue(section["designdecision"], [20, 25], [0, 1]))
           }`}>
           {$t("Apply_your_own_design_decisions_part_5")}
         </span>
@@ -1617,16 +1605,16 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] py-20" bind:this={section["try"]}>
-  <div class="w-full px-2 pt-40 lg:px-10">
+<div class="min-h-[150vh] py-20" bind:this={section["try"]}>
+  <div class="sticky top-0 w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
         class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
           style={`opacity:${
-            Math.trunc(animateValue(section["try"], [-40, -30], [0, 1])) === 0
+            Math.trunc(animateValue(section["try"], [5, 10], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["try"], [-40, -30], [0, 1]))
+              : Math.trunc(animateValue(section["try"], [5, 10], [0, 1]))
           }`}>
           {$t("Try daisyUI")}
         </span>
@@ -1634,99 +1622,22 @@
         <span
           class="font-light"
           style={`opacity:${
-            Math.trunc(animateValue(section["try"], [-20, -10], [0, 1])) === 0
+            Math.trunc(animateValue(section["try"], [10, 15], [0, 1])) === 0
               ? 0.1
-              : Math.trunc(animateValue(section["try"], [-20, -10], [0, 1]))
+              : Math.trunc(animateValue(section["try"], [10, 15], [0, 1]))
           }`}>
           {$t("on your favorite framework")}
         </span>
       </h2>
       <div class="h-16" />
-      <div class="pointer-events-none flex flex-wrap justify-center gap-10 px-6">
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/vue.svg"
-          alt="Vue.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/react.svg"
-          alt="React" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/svelte.svg"
-          alt="Svelte.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/qwik.svg"
-          alt="Qwik" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/solidjs.svg"
-          alt="Solid.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/astro.svg"
-          alt="Astro" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/nextjs.svg"
-          alt="Next.js" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/preact.svg"
-          alt="Preact" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/remix.svg"
-          alt="Remix" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/angular.svg"
-          alt="Angular" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/nuxtjs.svg"
-          alt="Nuxt" />
-        <img
-          loading="lazy"
-          width="96"
-          height="96"
-          class="aspect-square w-10"
-          src="/logos/11ty.svg"
-          alt="Eleventy" />
+      <div class="pointer-events-none mx-auto flex max-w-xl flex-wrap justify-center gap-10 px-6">
+        {#each ["svelte", "vue", "react", "solidjs", "preact", "angular", "qwik", "nextjs", "nuxtjs", "remix", "11ty", "vite", "astro"] as logo, index}
+          <svg
+            width="96"
+            height="96"
+            class="aspect-square h-10 w-10"
+            use:inlineSvg={`/logos/${logo}.svg`} />
+        {/each}
       </div>
       <div class="h-16" />
       <div class="flex w-full justify-center">

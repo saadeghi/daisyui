@@ -34,6 +34,8 @@
     "theme-change": "2.5.0"
   },
   "dependencies": {
+    "@svelte-put/inline-svg": "^2.0.0",
+    "@svelte-put/preprocess-inline-svg": "^2.1.1",
     "colord": "^2.9.3",
     "daisyui": "^0.0.0-insiders.3.11",
     "dep-graph-count": "^1.0.0",

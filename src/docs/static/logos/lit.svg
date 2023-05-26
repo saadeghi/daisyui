@@ -1,27 +1,2 @@
-<svg width="453.09800000000007" height="453.09800000000007" xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve">
- <g>
-  <title>Layer 1</title>
-  <g id="svg_3"/>
-  <g id="svg_4"/>
-  <g id="svg_5"/>
-  <g id="svg_6"/>
-  <g id="svg_7"/>
-  <g id="svg_8"/>
-  <g id="svg_9"/>
-  <g id="svg_10"/>
-  <g id="svg_11"/>
-  <g id="svg_12"/>
-  <g id="svg_13"/>
-  <g id="svg_14"/>
-  <g id="svg_15"/>
-  <g id="svg_16"/>
-  <g id="svg_17"/>
-  <g stroke="null">
-   <path stroke="null" d="m156.299,258.01887l37.125,-111.375l167.0625,167.0625l-55.6875,92.8125l-74.25,-74.25l-37.125,0" fill="#00e8ff"/>
-   <path stroke="null" d="m230.549,332.26887l0,-148.5l74.25,-74.25l0,148.5m-222.75,74.25l74.25,74.25l37.125,-74.25l-37.125,-74.25l-37.125,0" fill="#283198"/>
-   <path stroke="null" d="m156.299,258.01887l0,-148.5l74.25,-74.25l0,148.5m74.25,222.75l0,-148.5l74.25,-74.25l0,148.5m-297,0l0,-148.5l74.25,74.25" fill="#324fff"/>
-   <path stroke="null" d="m156.299,406.51887l0,-148.5l74.25,74.25" fill="#0ff"/>
-  </g>
- </g>
 
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="25.6" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 320"><path fill="#00E8FF" d="m64 192l25.926-44.727l38.233-19.114l63.974 63.974l10.833 61.754L192 320l-64-64l-38.074-25.615z"></path><path fill="#283198" d="M128 256V128l64-64v128l-64 64ZM0 256l64 64l9.202-60.602L64 192l-37.542 23.71L0 256Z"></path><path fill="#324FFF" d="M64 192V64l64-64v128l-64 64Zm128 128V192l64-64v128l-64 64ZM0 256V128l64 64l-64 64Z"></path><path fill="#0FF" d="M64 320V192l64 64z"></path></svg>
