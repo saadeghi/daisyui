@@ -1,12 +1,12 @@
 <script>
   import "../../../../dist/themes.css"
-  const base = import.meta.globEager("../../../base/*.css")
+  const base = import.meta.glob("../../../base/*.css", { eager: true })
   import "tailwindcss/base.css"
-  const unstyled = import.meta.globEager("../../../components/unstyled/*.css")
-  const styled = import.meta.globEager("../../../components/styled/*.css")
+  const unstyled = import.meta.glob("../../../components/unstyled/*.css", { eager: true })
+  const styled = import.meta.glob("../../../components/styled/*.css", { eager: true })
   import "tailwindcss/components.css"
-  const utilitiesGlobal = import.meta.globEager("../../../utilities/global/*.css")
-  const utilitiesUnstyled = import.meta.globEager("../../../utilities/unstyled/*.css")
-  const utilitiesStyled = import.meta.globEager("../../../utilities/styled/*.css")
+  const utilitiesGlobal = import.meta.glob("../../../utilities/global/*.css", { eager: true })
+  const utilitiesUnstyled = import.meta.glob("../../../utilities/unstyled/*.css", { eager: true })
+  const utilitiesStyled = import.meta.glob("../../../utilities/styled/*.css", { eager: true })
   import "tailwindcss/utilities.css"
 </script>

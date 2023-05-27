@@ -1,7 +1,7 @@
 import { derived, writable } from "svelte/store"
 import { subString } from "$lib/util"
 
-const translations = import.meta.globEager(`../translation/*.json`)
+const translations = import.meta.glob(`../translation/*.json`, { eager: true })
 let localesArray = []
 Object.entries(translations).map(([path]) => {
   let localeFileName = subString(path, "/translation/", ".json")
