@@ -21,6 +21,9 @@
       &:before {
         @apply h-full w-2 -translate-y-1/2 -translate-x-1/2;
         margin-left: 50%;
+        [dir="rtl"] & {
+          margin-right: auto;
+        }
       }
     }
   }
