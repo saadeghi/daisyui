@@ -3,3 +3,5 @@
 /*.html
 /dist
 /src/pages/index.astro
+/src/layouts/Main.astro
+/src/components/Component.astro
