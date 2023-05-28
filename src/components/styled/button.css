@@ -7,8 +7,8 @@
   &:active:focus {
     animation: none;
   }
-  &:active:hover,
-  &:active:focus {
+  &:not(.no-animation):active:hover,
+  &:not(.no-animation):active:focus {
     transform: scale(var(--btn-focus-scale, 0.95));
   }
 
