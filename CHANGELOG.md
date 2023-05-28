@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.52.0](https://github.com/saadeghi/daisyui/compare/v2.51.6...v2.52.0) (2023-05-28)
+
+
+### Features
+
+* use for border radius -box instead of -xl so they can match mit theme configuration ([#1779](https://github.com/saadeghi/daisyui/issues/1779)) ([0bf3f4e](https://github.com/saadeghi/daisyui/commit/0bf3f4ead3a560e595be37f1ec9ad6767a55544a))
+
+
+### Bug Fixes
+
+* btn no-animation size change on click ([#1809](https://github.com/saadeghi/daisyui/issues/1809)) ([bfdf1c2](https://github.com/saadeghi/daisyui/commit/bfdf1c2ad75df17157cd05bb8026fdf91896243e))
+* btn-group right-to-left direction border radius ([#1804](https://github.com/saadeghi/daisyui/issues/1804)) ([9c2bca2](https://github.com/saadeghi/daisyui/commit/9c2bca25c0203adee35c3f2aa71ce6709764cf09))
+* safari radio transition ([#1776](https://github.com/saadeghi/daisyui/issues/1776)) ([a2925a2](https://github.com/saadeghi/daisyui/commit/a2925a282b30fd11a3a86a934847a0973bf64e6b))
+* tooltip z-index ([#1810](https://github.com/saadeghi/daisyui/issues/1810)) ([721ea6c](https://github.com/saadeghi/daisyui/commit/721ea6c4d3eef06d969ae47a018ca4327163b038)), closes [#1798](https://github.com/saadeghi/daisyui/issues/1798)
+
 ### [2.51.6](https://github.com/saadeghi/daisyui/compare/v2.51.5...v2.51.6) (2023-04-24)
 
 
