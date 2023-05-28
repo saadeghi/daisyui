@@ -5,7 +5,7 @@
   @apply outline-none;
 }
 .dropdown .dropdown-content {
-  @apply invisible absolute z-50 opacity-0;
+  @apply invisible absolute opacity-0;
 }
 .dropdown-end .dropdown-content {
   @apply right-0;
