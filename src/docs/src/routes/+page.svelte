@@ -1202,7 +1202,7 @@
         class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-none md:gap-6 xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]">
         <div />
 
-        {#each ["vue", "react", "svelte", "postcss", "remix", "nextjs", "solidjs", "preact", "11ty", "nuxtjs", "astro", "angular", "vite", "qwik"] as logo, index}
+        {#each ["vue", "react", "svelte", "qwik", "remix", "nextjs", "solidjs", "preact", "phoenix", "nuxtjs", "astro", "angular", "vite", "laravel"] as logo, index}
           <svg
             width="96"
             height="96"
