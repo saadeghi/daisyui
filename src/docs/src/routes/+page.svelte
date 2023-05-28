@@ -17,6 +17,15 @@
     (obj, index) => backers.findIndex((item) => item.name === obj.name) === index
   )
 
+  let isClipboardButtonPressed = false
+  const copyText = (text) => {
+    navigator.clipboard.writeText(text)
+    isClipboardButtonPressed = true
+    setTimeout(() => {
+      isClipboardButtonPressed = false
+    }, 2000)
+  }
+
   let activeMenuItemOnHeroMockup = 1
   let toggleValueForCodeCompare = false
 
@@ -112,8 +121,14 @@
         class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:pl-10 xl:pr-0 xl:text-left"
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div>
-          <div class="badge badge-lg border-success/20 bg-success/5 w-full max-w-[13rem] font-mono">
-            <pre><code>npm i -D daisyui</code></pre>
+          <div
+            data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+            class="tooltip tooltip-accent">
+            <div
+              class="btn btn-sm cursor-copy rounded-full font-mono font-light normal-case"
+              on:click={() => copyText("npm i -D daisyui")}>
+              <pre><code>npm i -D daisyui</code></pre>
+            </div>
           </div>
           <div class="h-4" />
           <h1
