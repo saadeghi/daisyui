@@ -22,6 +22,7 @@
 
   :where(li:not(.menu-title):not(.disabled) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title):not(.disabled) > details > summary:not(.menu-title)) {
+    &.focus,
     &:focus,
     &:hover {
       @apply outline-none bg-base-content/10 cursor-pointer;
