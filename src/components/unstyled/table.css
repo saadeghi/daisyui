@@ -1,3 +1,12 @@
 .table {
   @apply relative;
+  :where(.table-pin-rows thead tr) {
+    @apply sticky top-0 bg-base-100 z-[1];
+  }
+  :where(.table-pin-rows tfoot tr) {
+    @apply sticky bottom-0 bg-base-100 z-[1];
+  }
+  :where(.table-pin-cols tr th) {
+    @apply sticky left-0 right-0 bg-base-100;
+  }
 }
