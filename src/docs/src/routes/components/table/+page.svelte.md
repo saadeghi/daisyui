@@ -15,8 +15,6 @@ published: true
 data="{[
   { type:'component', class: 'table', desc: 'For <table> element' },
   { type:'modifier', class: 'table-zebra', desc: 'For <table> to show zebra stripe rows' },
-  { type:'modifier', class: 'active', desc: 'For <tr> to highlight current row' },
-  { type:'modifier', class: 'hover', desc: 'For <tr> to highlight current row on hover' },
   { type:'responsive', class: 'table-xs', desc: 'Extra small size' },
   { type:'responsive', class: 'table-sm', desc: 'Small size' },
   { type:'responsive', class: 'table-md', desc: 'Normal size' },
@@ -147,13 +145,13 @@ data="{[
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr class="bg-base-200">
         <th>1</th>
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <tr class="active">
+      <tr>
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
@@ -182,14 +180,14 @@ data="{[
     </thead>
     <tbody>
       <!-- row 1 -->
-      <tr>
+      <tr class="bg-base-200">
         <th>1</th>
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
       <!-- row 2 -->
-      <tr class="$$active">
+      <tr>
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
@@ -220,14 +218,14 @@ data="{[
     </thead>
     <tbody>
       {/* row 1 */}
-      <tr>
+      <tr className="bg-base-200">
         <th>1</th>
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
       {/* row 2 */}
-      <tr className="$$active">
+      <tr>
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
@@ -264,7 +262,7 @@ data="{[
         <td>Quality Control Specialist</td>
         <td>Blue</td>
       </tr>
-      <tr class="hover">
+      <tr class="hover:bg-base-300">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
