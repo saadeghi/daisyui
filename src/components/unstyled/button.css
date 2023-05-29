@@ -5,7 +5,8 @@
 
   /* disabled */
   &-disabled,
-  &[disabled] {
+  &[disabled],
+  &:disabled {
     @apply pointer-events-none;
   }
 
