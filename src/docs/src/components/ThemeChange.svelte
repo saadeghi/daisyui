@@ -38,7 +38,7 @@
     </svg>
   </div>
   <div
-    class={`dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px max-h-96 h-[70vh] w-52 overflow-y-auto shadow-2xl ${contentClasses}`}>
+    class={`dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-[70vh] max-h-96 w-52 overflow-y-auto shadow-2xl ${contentClasses}`}>
     <div class="grid grid-cols-1 gap-3 p-3" tabindex="0">
       {#each themes as theme}
         <button
@@ -49,20 +49,20 @@
             data-theme={theme.id}
             class="bg-base-100 text-base-content w-full cursor-pointer font-sans">
             <div class="grid grid-cols-5 grid-rows-3">
-              <div class="col-span-5 row-span-3 row-start-1 flex gap-2 py-3 px-4 items-center">
+              <div class="col-span-5 row-span-3 row-start-1 flex items-center gap-2 px-4 py-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="w-3 h-3 invisible">
+                  class="invisible h-3 w-3 shrink-0">
                   <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
                 </svg>
-                <div class="flex-grow text-sm font-bold">
+                <div class="flex-grow text-sm">
                   {theme.id}
                 </div>
-                <div class="flex flex-shrink-0 flex-wrap gap-1 h-full">
+                <div class="flex h-full flex-shrink-0 flex-wrap gap-1">
                   <div class="bg-primary w-2 rounded" />
                   <div class="bg-secondary w-2 rounded" />
                   <div class="bg-accent w-2 rounded" />

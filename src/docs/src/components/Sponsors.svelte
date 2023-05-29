@@ -13,8 +13,8 @@
       target="_blank"
       rel="nofollow, noreferrer"
       class={`flex w-[130px] flex-col items-center rounded ${classes}`}>
-      <span class="text-base-content/50 pt-4 font-bold">Your logo here</span>
-      <p class="text-base-content/50 px-1.5 py-2 text-xs tracking-tighter">
+      <span class="text-base-content/50 font-title pt-4 text-sm font-bold">Your logo here</span>
+      <p class="text-base-content/50 px-1.5 py-2 text-center text-xs tracking-tighter">
         Support daisyUI by becoming a sponsor
       </p>
     </a>
