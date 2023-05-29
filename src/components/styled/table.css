@@ -8,7 +8,7 @@
   tr.hover:hover,
   tr.hover:nth-child(even):hover,
   &-zebra tbody tr:nth-child(even) {
-    @apply bg-base-200 border-b-transparent;
+    @apply bg-base-200;
   }
 
   &-zebra {
@@ -27,16 +27,6 @@
       @apply border-b border-b-base-200;
     }
   }
-  /* &-zebra {
-    :where(thead, tbody) {
-      :where(tr:not(:last-child)),
-      :where(tr:first-child:last-child) {
-        &:after {
-          @apply bg-base-300;
-        }
-      }
-    }
-  } */
 
   :where(thead, tfoot) {
     @apply text-xs font-bold text-base-content/60 whitespace-nowrap;

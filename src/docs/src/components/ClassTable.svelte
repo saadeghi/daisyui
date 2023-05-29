@@ -6,16 +6,16 @@
   export let data
 </script>
 
-<div class="not-prose mt-6 mb-10 overflow-x-auto">
+<div class="not-prose mb-10 mt-6 overflow-x-auto">
   <table class="table-xs md:table-sm table w-full">
     <thead>
-      <tr class="active">
-        <th class="flex items-center gap-2 normal-case">
+      <tr class="border-b-0">
+        <th class="bg-base-200 rounded-l-box flex items-center gap-2 normal-case lg:py-3">
           <PrefixEdit />
           <span><Translate text="Class name" /></span>
         </th>
-        <th class="normal-case"><Translate text="Type" /></th>
-        <th />
+        <th class="bg-base-200 normal-case lg:py-3"><Translate text="Type" /></th>
+        <th class="bg-base-200 rounded-r-box lg:py-3" />
       </tr>
     </thead>
     <tbody>
@@ -54,7 +54,7 @@
       {#each data as item, index}
         <tr>
           <th class="font-normal">
-            <span class="font-mono lowercase whitespace-nowrap">{`${$prefix}${item.class}`}</span>
+            <span class="whitespace-nowrap font-mono lowercase">{`${$prefix}${item.class}`}</span>
           </th>
           <td>
             {#if item.type == "component"}
