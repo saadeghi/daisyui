@@ -221,6 +221,18 @@
   }
 }
 
+/* radio input and checkbox as button */
+input[type="checkbox"].btn:checked,
+input[type="radio"].btn:checked {
+  @apply border-primary bg-primary text-primary-content;
+  &:hover {
+    @apply border-primary-focus bg-primary-focus;
+  }
+  &:focus-visible {
+    @apply outline-primary;
+  }
+}
+
 @keyframes button-pop {
   0% {
     transform: scale(var(--btn-focus-scale, 0.98));

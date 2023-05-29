@@ -29,3 +29,13 @@
     content: attr(data-title);
   }
 }
+
+/* radio input and checkbox as button */
+input[type="checkbox"].btn,
+input[type="radio"].btn {
+  @apply appearance-none;
+}
+input[type="checkbox"].btn:after,
+input[type="radio"].btn:after {
+  @apply content-[attr(aria-label)];
+}

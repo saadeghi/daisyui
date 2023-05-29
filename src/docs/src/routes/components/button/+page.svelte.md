@@ -217,12 +217,16 @@ data="{[
 <button type="submit" class="btn">Button</button>
 <input type="button" value="Input" class="btn" />
 <input type="submit" value="Submit" class="btn" />
+<input type="radio" aria-label="Radio" class="btn" />
+<input type="checkbox" aria-label="Checkbox" class="btn" />
 <input type="reset" value="Reset" class="btn">
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a role="button" class="$$btn">Link</a>
 <button type="submit" class="$$btn">Button</button>
 <input type="button" value="Input" class="$$btn" />
 <input type="submit" value="Submit" class="$$btn" />
+<input type="radio" aria-label="Radio" class="$$btn" />
+<input type="checkbox" aria-label="Checkbox" class="$$btn" />
 <input type="reset" value="Reset" class="$$btn" />`
 }</pre>
 <pre slot="react" use:replace={{ to: $prefix }}>{
@@ -230,6 +234,8 @@ data="{[
 <button type="submit" className="$$btn">Button</button>
 <input type="button" value="Input" className="$$btn" />
 <input type="submit" value="Submit" className="$$btn" />
+<input type="radio" aria-label="Radio" className="$$btn" />
+<input type="checkbox" aria-label="Checkbox" className="$$btn" />
 <input type="reset" value="Reset" className="$$btn" />`
 }</pre>
 </Component>

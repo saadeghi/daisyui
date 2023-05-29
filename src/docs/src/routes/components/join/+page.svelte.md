@@ -100,3 +100,17 @@ data="{[
 ``
 }</pre>
 </Component>
+
+<Component title="Join radio inputs with btn style">
+<div class="join">
+  <input class="join-item btn" type="radio" name="options" aria-label="Radio 1" />
+  <input class="join-item btn" type="radio" name="options" aria-label="Radio 2" />
+  <input class="join-item btn" type="radio" name="options" aria-label="Radio 3" />
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+``
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+``
+}</pre>
+</Component>

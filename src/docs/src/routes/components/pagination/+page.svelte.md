@@ -191,3 +191,28 @@ data="{[
 </div>`
 }</pre>
 </Component>
+
+<Component title="Using radio inputs">
+<div class="join">
+  <input class="join-item btn btn-square" type="radio" name="options" aria-label="1" checked />
+  <input class="join-item btn btn-square" type="radio" name="options" aria-label="2" />
+  <input class="join-item btn btn-square" type="radio" name="options" aria-label="3" />
+  <input class="join-item btn btn-square" type="radio" name="options" aria-label="4" />
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$join">
+  <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="1" checked />
+  <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="2" />
+  <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="3" />
+  <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="4" />
+</div>`
+}</pre>
+<pre slot="react" use:replace={{ to: $prefix }}>{
+`<div className="$$join">
+  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="1" checked />
+  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="2" />
+  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="3" />
+  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="4" />
+</div>`
+}</pre>
+</Component>
