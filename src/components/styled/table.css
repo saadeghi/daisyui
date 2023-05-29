@@ -1,5 +1,5 @@
 .table {
-  @apply text-left bg-base-100 rounded-box text-sm;
+  @apply text-left rounded-box text-sm;
   :where(th, td) {
     @apply px-4 py-3 align-middle;
   }
@@ -8,8 +8,7 @@
   tr.hover:hover,
   tr.hover:nth-child(even):hover,
   &-zebra tbody tr:nth-child(even) {
-    @apply bg-base-200 relative;
-    clip-path: inset(0% 0.5% 0% 0.5% round var(--rounded-btn));
+    @apply bg-base-200 border-b-transparent;
   }
 
   &-zebra {
@@ -25,11 +24,7 @@
   :where(thead, tbody) {
     :where(tr:not(:last-child)),
     :where(tr:first-child:last-child) {
-      @apply relative;
-      &:after {
-        @apply h-px absolute block left-4 -bottom-px right-4 bg-base-200;
-        content: "";
-      }
+      @apply border-b border-b-base-200;
     }
   }
   /* &-zebra {
