@@ -6,8 +6,8 @@
   export let data
 </script>
 
-<div class="not-prose mb-10 mt-6 overflow-x-auto">
-  <table class="table-xs md:table-sm table w-full">
+<div class="not-prose relative mb-10 mt-6 max-h-[25rem] overflow-x-auto">
+  <table class="table-xs md:table-sm table-pin-rows table w-full">
     <thead>
       <tr class="border-b-0">
         <th class="bg-base-200 rounded-l-box flex items-center gap-2 normal-case lg:py-3">
@@ -53,33 +53,37 @@
       {/if}
       {#each data as item, index}
         <tr>
-          <th class="font-normal">
+          <th class="w-3/12 font-normal">
             <span class="whitespace-nowrap font-mono lowercase">{`${$prefix}${item.class}`}</span>
           </th>
-          <td>
+          <td class="w-1/12">
             {#if item.type == "component"}
-              <span class="badge badge-sm badge-ghost w-20"><Translate text="Component" /></span>
+              <span class="badge badge-sm badge-ghost w-24 whitespace-nowrap">
+                <Translate text="Component" />
+              </span>
             {/if}
             {#if item.type == "modifier"}
-              <div
-                class="tooltip tooltip-right cursor-help"
-                data-tip={$t("Changes the style of a component")}>
-                <span class="badge badge-sm badge-outline w-20"><Translate text="Modifier" /></span>
+              <div class="tooltip cursor-help" data-tip={$t("Changes the style of a component")}>
+                <span class="badge badge-sm badge-outline w-24 whitespace-nowrap">
+                  <Translate text="Modifier" />
+                </span>
               </div>
             {/if}
             {#if item.type == "responsive"}
               <div
-                class="tooltip tooltip-right cursor-help"
+                class="tooltip cursor-help"
                 data-tip={$t("Supports responsive prefixes (sm:, lg:, …)")}>
-                <span class="badge badge-sm badge-success w-20">
+                <span class="badge badge-sm badge-success w-24 whitespace-nowrap">
                   <Translate text="Responsive" />
                 </span>
               </div>
             {/if}
           </td>
-          <td>{item.desc}</td>
+          <td class="w-8/12">{item.desc}</td>
         </tr>
       {/each}
     </tbody>
   </table>
+  <div
+    class="bg-base-100 pointer-events-none sticky bottom-0 -mt-6 flex h-16 [mask-image:linear-gradient(transparent,#000000)]" />
 </div>

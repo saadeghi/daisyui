@@ -576,7 +576,7 @@ data="{[
 </Component>
 
 <Component title="Collapsible with submenu (responsive)">
-<ul class="menu lg:menu-horizontal bg-base-100 shadow-xl rounded-box lg:mb-64 max-w-xs w-full">
+<ul class="menu lg:menu-horizontal bg-base-100 shadow-xl rounded-box lg:mb-64">
   <li><a>Item 1</a></li>
   <li>
     <details open>

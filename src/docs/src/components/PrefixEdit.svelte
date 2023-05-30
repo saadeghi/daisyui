@@ -13,7 +13,7 @@
   <input
     class="input input-bordered input-xs w-min max-w-[3.8rem]"
     type="text"
-    placeholder="Prefix–"
+    placeholder="prefix–"
     on:input={onPrefixInput}
     value={$prefix} />
 </div>
