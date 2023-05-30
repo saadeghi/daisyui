@@ -12,9 +12,9 @@
       content: "";
     }
   }
-  :where(& > li:not(.menu-title) > details > ul) {
+  /* :where(& > li:not(.menu-title) > details > ul) {
     @apply bg-base-100 shadow-xl rounded-box;
-  }
+  } */
   :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply px-4 py-2 rounded-btn transition duration-200 ease-in-out text-left;

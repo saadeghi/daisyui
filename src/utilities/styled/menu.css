@@ -1,6 +1,6 @@
 .menu-horizontal {
   & > li:not(.menu-title) > details > ul {
-    @apply mt-4 ml-0 pr-2 py-2;
+    @apply mt-4 ml-0 pr-2 py-2 bg-base-100 shadow-xl rounded-box;
   }
   & > li > details > ul {
     &:before {
