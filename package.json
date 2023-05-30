@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "0.0.0-insiders.3.14",
+  "version": "0.0.0-insiders.3.16",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -93,6 +93,7 @@
     "c8": "^7.14.0",
     "lightningcss-cli": "^1.20.0",
     "postcss-cli": "10.1.0",
+    "postcss-hover-media-feature": "^1.0.2",
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",
     "prettier": "^2.8.8",
@@ -104,7 +105,6 @@
   "dependencies": {
     "colord": "^2.9",
     "css-selector-tokenizer": "^0.8",
-    "postcss-hover-media-feature": "^1",
     "postcss-js": "^4",
     "tailwindcss": "^3"
   },

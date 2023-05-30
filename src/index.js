@@ -24,9 +24,9 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   if (logs) {
     console.log()
     console.log(
-      "\033[35m%s\033[0m",
+      "\x1b[35m%s\x1b[0m",
       "🌼 daisyUI " + daisyuiInfo.version,
-      "\033[0m" + daisyuiInfo.homepage
+      "\x1b[0m" + daisyuiInfo.homepage
     )
   }
 
@@ -90,44 +90,44 @@ const mainFunction = ({ addBase, addComponents, config }) => {
     if (config("daisyui.styled") == false) {
       console.log(
         " ├─",
-        "\033[33m" + "◆" + "\033[0m" + "\033[2m",
+        "\x1b[33m" + "◆" + "\x1b[0m" + "\x1b[2m",
         "daisyui.styled",
-        "\033[0m" + "config is",
-        "\033[2m" + "false" + "\033[0m",
+        "\x1b[0m" + "config is",
+        "\x1b[2m" + "false" + "\x1b[0m",
         "– your components will have no design decisions" + "\n │"
       )
     }
     if (config("daisyui.utils") == false) {
       console.log(
         " ├─",
-        "\033[33m" + "◆" + "\033[0m" + "\033[2m",
+        "\x1b[33m" + "◆" + "\x1b[0m" + "\x1b[2m",
         "daisyui.utils",
-        "\033[0m" + "config is",
-        "\033[2m" + "false" + "\033[0m",
+        "\x1b[0m" + "config is",
+        "\x1b[2m" + "false" + "\x1b[0m",
         "– daisyUI modifier utility classes are disabled" + "\n │"
       )
     }
     if (config("daisyui.prefix") && config("daisyui.prefix") !== "") {
       console.log(
         " ├─",
-        "\033[32m" + "✔︎" + "\033[0m",
+        "\x1b[32m" + "✔︎" + "\x1b[0m",
         "Prefix is enabled, daisyUI classnames must use",
-        "\033[2m" + `${config("daisyui.prefix")}`,
-        "\033[0m" + "prefix. like:",
-        "\033[2m" + `${config("daisyui.prefix")}btn`,
-        "\033[0m" + "\n │    https://daisyui.com/docs/config" + "\n │"
+        "\x1b[2m" + `${config("daisyui.prefix")}`,
+        "\x1b[0m" + "prefix. like:",
+        "\x1b[2m" + `${config("daisyui.prefix")}btn`,
+        "\x1b[0m" + "\n │    https://daisyui.com/docs/config" + "\n │"
       )
     }
     if (config("daisyui.rtl") == true) {
       console.log(
         " ├─",
-        "\033[32m" + "✔︎" + "\033[0m",
+        "\x1b[32m" + "✔︎" + "\x1b[0m",
         "Using RTL, make sure you're using",
-        "\033[2m" + "<html dir=rtl>" + "\033[0m",
+        "\x1b[2m" + "<html dir=rtl>" + "\x1b[0m",
         "and you have",
-        "\033[2m",
+        "\x1b[2m",
         "tailwindcss-flip",
-        "\033[0m",
+        "\x1b[0m",
         "plugin",
         "\n │  https://daisyui.com/docs/config" + "\n │"
       )
@@ -135,14 +135,14 @@ const mainFunction = ({ addBase, addComponents, config }) => {
     if (themeInjectorHsl.themeOrder.length > 0) {
       console.log(
         " ╰─",
-        "\033[32m" + "✔︎" + "\033[0m",
-        "\033[2m" +
+        "\x1b[32m" + "✔︎" + "\x1b[0m",
+        "\x1b[2m" +
           "[ " +
-          "\033[0m" +
+          "\x1b[0m" +
           `${themeInjectorHsl.themeOrder.length}` +
-          "\033[2m" +
+          "\x1b[2m" +
           " ]" +
-          "\033[0m" +
+          "\x1b[0m" +
           ` ${themeInjectorHsl.themeOrder.length > 1 ? "themes are" : "theme is"}` +
           ` enabled. You can add more themes or make your own theme:` +
           "\n      https://daisyui.com/docs/themes"
@@ -151,14 +151,14 @@ const mainFunction = ({ addBase, addComponents, config }) => {
     if (themeInjectorHsl.themeOrder.length === 0) {
       console.log(
         " ╰─",
-        "\033[33m" + "◆" + "\033[0m",
+        "\x1b[33m" + "◆" + "\x1b[0m",
         `All themes are disabled in the config. You can add themes or make your own theme:` +
           "\n      https://daisyui.com/docs/themes"
       )
     }
     console.log(
-      "\n\033[32m%s\033[0m",
-      "    ❤︎ Support daisyUI" + "\033[0m" + `: ${daisyuiInfo.funding.url}`
+      "\n\x1b[32m%s\x1b[0m",
+      "    ❤︎ Support daisyUI" + "\x1b[0m" + `: ${daisyuiInfo.funding.url}`
     )
     console.log()
   }
