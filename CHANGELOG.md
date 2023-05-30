@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.0.0 (2023-05-30)
+
+
+### Features
+
+* `collapse` now supports `<details>` tag, improve focus style ([7d18914](https://github.com/saadeghi/daisyui/commit/7d189148930e86b549d27731be3642ff83f14896))
+* `tooltip` is now responsive ([c0ccb8f](https://github.com/saadeghi/daisyui/commit/c0ccb8f2dcb2cf98250011c1aa9a36a76846cf24))
+* add new `join` component ([e2ac98b](https://github.com/saadeghi/daisyui/commit/e2ac98b1c8e953670dd03cde6a0607964d835263))
+* add new `loading` component ([b11fb1a](https://github.com/saadeghi/daisyui/commit/b11fb1a3219c2b0b36c82e4c8ba0c44ecc364af9))
+* add new class names `table-pin-rows`, `table-pin-cols` ([bace100](https://github.com/saadeghi/daisyui/commit/bace100b1189a9dde294bcb2e7ca62075b054923))
+* colors variables are now LCH (no HSL anymore), add support for P3 colors ([01a6e7c](https://github.com/saadeghi/daisyui/commit/01a6e7c1906fa26e76ef6c39109a30279d868ffa))
+* lock modal backdrop scroll ([4ba3d4c](https://github.com/saadeghi/daisyui/commit/4ba3d4cd2da679a4a24348c4d76afa480b181122))
+* modal using HTML `dialog` element ([5e6f6ca](https://github.com/saadeghi/daisyui/commit/5e6f6caf7f2578a3e4c6dba21090e96475db2fd8))
+* new `menu` styles ([b19293f](https://github.com/saadeghi/daisyui/commit/b19293fc75cf14bb25f477a7c413572bdeff2bd1))
+* new style for drawer ([74a6527](https://github.com/saadeghi/daisyui/commit/74a652728bdb536adf1f4b316b4483f30e3216d4))
+* new style for table ([4f0c0cf](https://github.com/saadeghi/daisyui/commit/4f0c0cf1db80d52a3178d3f2bfaccab50bfd5758))
+* now checkbox and radio can use .btn class (using aria-label as the text) ([98bd0d5](https://github.com/saadeghi/daisyui/commit/98bd0d50bfbbabdf837807370761c8a6ae216b5a))
+* only light and dark are enabled by default ([8a3741e](https://github.com/saadeghi/daisyui/commit/8a3741e96a7422af9ce7fd5ca834f360f5fefdb1))
+
+
+### Bug Fixes
+
+* `toast` whitespace ([e22cd66](https://github.com/saadeghi/daisyui/commit/e22cd66628ba24c73b006b39f69ac5bdb9e0be65))
+* menu bug on Safari ([e873693](https://github.com/saadeghi/daisyui/commit/e8736939d859d374b324b4b4023873d5bd53a0ac))
+
 ### [2.51.5](https://github.com/saadeghi/daisyui/compare/v2.51.4...v2.51.5) (2023-03-21)
 
 
@@ -924,4 +949,3 @@ module.exports = {
 - Fix responsive button demo on document website (fixes #376)
 - Fix right padding on `select` component
 - Improve some colors on themes
-
