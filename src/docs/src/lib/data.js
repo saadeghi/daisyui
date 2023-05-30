@@ -329,14 +329,14 @@ export let pages = [
         tags: "button btn 🍑",
         href: "/components/button/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Dropdown",
         tags: "dropdown popover menu listbox",
         href: "/components/dropdown/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Modal",
@@ -558,6 +558,7 @@ export let pages = [
         href: "/components/button-group/",
         icon: "",
         badge: "",
+        deprecated: true,
       },
       {
         name: "Divider",
@@ -600,6 +601,7 @@ export let pages = [
         href: "/components/input-group/",
         icon: "",
         badge: "",
+        deprecated: true,
       },
       {
         name: "Join (group items)",
@@ -675,7 +677,7 @@ export let pages = [
         tags: "pagination links next previous",
         href: "/components/pagination/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Steps",

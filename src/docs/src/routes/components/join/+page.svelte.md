@@ -27,10 +27,11 @@ data="{[
   <button class="btn join-item">Button</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<div class="$$join">
+  <button class="$$btn $$join-item">Button</button>
+  <button class="$$btn $$join-item">Button</button>
+  <button class="$$btn $$join-item">Button</button>
+</div>`
 }</pre>
 </Component>
 
@@ -41,10 +42,11 @@ data="{[
   <button class="btn join-item">Button</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<div class="$$join $$join-vertical">
+  <button class="$btn $$join-item">Button</button>
+  <button class="$btn $$join-item">Button</button>
+  <button class="$btn $$join-item">Button</button>
+</div>`
 }</pre>
 </Component>
 
@@ -55,10 +57,11 @@ data="{[
   <button class="btn join-item">Button</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<div class="$$join $$join-vertical lg:$$join-horizontal">
+  <button class="$$btn $$join-item">Button</button>
+  <button class="$$btn $$join-item">Button</button>
+  <button class="$$btn $$join-item">Button</button>
+</div>`
 }</pre>
 </Component>
 
@@ -81,10 +84,23 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<div class="$$join">
+  <div>
+    <div>
+      <input class="$$input $$join-item" placeholder="Search..."/>
+    </div>
+  </div>
+  <select class="$$select $$join-item">
+    <option disabled selected>Category</option>
+    <option>Sci-fi</option>
+    <option>Drama</option>
+    <option>Action</option>
+  </select>
+  <div class="$$indicator">
+    <span class="$$indicator-item $$badge $$badge-secondary">new</span> 
+    <button class="$$btn $$join-item">Search</button>
+  </div>
+</div>`
 }</pre>
 </Component>
 
@@ -94,10 +110,10 @@ data="{[
   <button class="btn join-item rounded-r-full">Subscribe</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<div class="$$join">
+  <input class="$$input $$join-item" placeholder="Email"/>
+  <button class="$$btn $$join-item rounded-r-full">Subscribe</button>
+</div>`
 }</pre>
 </Component>
 
@@ -108,9 +124,10 @@ data="{[
   <input class="join-item btn" type="radio" name="options" aria-label="Radio 3" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<div class="$$join">
+  <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 1" />
+  <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 2" />
+  <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 3" />
+</div>`
 }</pre>
 </Component>

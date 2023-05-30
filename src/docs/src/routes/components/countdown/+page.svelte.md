@@ -43,8 +43,8 @@ data="{[
   <span style="--value:${counter};"></span>
 </span>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<span className="$$countdown">
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
+`<span class="$$countdown">
   <span style={{"--value":${counter}}}></span>
 </span>`
 }</pre>
@@ -59,8 +59,8 @@ data="{[
   <span style="--value:${counter};"></span>
 </span>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<span className="$$countdown font-mono text-6xl">
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
+`<span class="$$countdown font-mono text-6xl">
   <span style={{"--value":${counter}}}></span>
 </span>`
 }</pre>
@@ -79,8 +79,8 @@ data="{[
   <span style="--value:${counter};"></span>s
 </span>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<span className="$$countdown font-mono text-2xl">
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
+`<span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>h
   <span style={{"--value":24}}></span>m
   <span style={{"--value":${counter}}}></span>s
@@ -101,8 +101,8 @@ data="{[
   <span style="--value:${counter};"></span>
 </span>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<span className="$$countdown font-mono text-2xl">
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
+`<span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>:
   <span style={{"--value":24}}></span>:
   <span style={{"--value":${counter}}}></span>
@@ -165,28 +165,28 @@ data="{[
   </div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="flex gap-5">
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
+`<div class="flex gap-5">
   <div>
-    <span className="$$countdown font-mono text-4xl">
+    <span class="$$countdown font-mono text-4xl">
         <span style={{"--value":15}}></span>
     </span>
     days
   </div> 
   <div>
-    <span className="$$countdown font-mono text-4xl">
+    <span class="$$countdown font-mono text-4xl">
         <span style={{"--value":10}}></span>
     </span>
     hours
   </div> 
   <div>
-    <span className="$$countdown font-mono text-4xl">
+    <span class="$$countdown font-mono text-4xl">
       <span style={{"--value":24}}></span>
     </span>
     min
   </div> 
   <div>
-    <span className="$$countdown font-mono text-4xl">
+    <span class="$$countdown font-mono text-4xl">
       <span style={{"--value":${counter}}}></span>
     </span>
     sec
@@ -250,28 +250,28 @@ data="{[
   </div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-  <div className="flex flex-col">
-    <span className="$$countdown font-mono text-5xl">
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
+`<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+  <div class="flex flex-col">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":15}}></span>
     </span>
     days
   </div> 
-  <div className="flex flex-col">
-    <span className="$$countdown font-mono text-5xl">
+  <div class="flex flex-col">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":10}}></span>
     </span>
     hours
   </div> 
-  <div className="flex flex-col">
-    <span className="$$countdown font-mono text-5xl">
+  <div class="flex flex-col">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":24}}></span>
     </span>
     min
   </div> 
-  <div className="flex flex-col">
-    <span className="$$countdown font-mono text-5xl">
+  <div class="flex flex-col">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":${counter}}}></span>
     </span>
     sec
@@ -335,28 +335,28 @@ data="{[
   </div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span className="$$countdown font-mono text-5xl">
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
+`<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":15}}></span>
     </span>
     days
   </div> 
-  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span className="$$countdown font-mono text-5xl">
+  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":10}}></span>
     </span>
     hours
   </div> 
-  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span className="$$countdown font-mono text-5xl">
+  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":24}}></span>
     </span>
     min
   </div> 
-  <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-    <span className="$$countdown font-mono text-5xl">
+  <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+    <span class="$$countdown font-mono text-5xl">
       <span style={{"--value":${counter}}}></span>
     </span>
     sec

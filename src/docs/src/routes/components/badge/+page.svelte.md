@@ -36,9 +36,6 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="$$badge">Badge</span>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<span className="$$badge">Badge</span>`
-}</pre>
 </Component>
 
 <Component title="Badge with brand colors">
@@ -56,14 +53,6 @@ data="{[
 <div class="$$badge $$badge-accent">accent</div>
 <div class="$$badge $$badge-ghost">ghost</div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge">default</div>
-<div className="$$badge $$badge-neutral">neutral</div>
-<div className="$$badge $$badge-primary">primary</div>
-<div className="$$badge $$badge-secondary">secondary</div>
-<div className="$$badge $$badge-accent">accent</div>
-<div className="$$badge $$badge-ghost">ghost</div>`
-}</pre>
 </Component>
 
 <Component title="Outline badge">
@@ -76,12 +65,6 @@ data="{[
 <div class="$$badge $$badge-primary $$badge-outline">primary</div>
 <div class="$$badge $$badge-secondary $$badge-outline">secondary</div>
 <div class="$$badge $$badge-accent $$badge-outline">accent</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge $$badge-outline">default</div>
-<div className="$$badge $$badge-primary $$badge-outline">primary</div>
-<div className="$$badge $$badge-secondary $$badge-outline">secondary</div>
-<div className="$$badge $$badge-accent $$badge-outline">accent</div>`
 }</pre>
 </Component>
 
@@ -96,12 +79,6 @@ data="{[
 <div class="$$badge $$badge-sm">987,654</div>
 <div class="$$badge $$badge-xs">987,654</div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge $$badge-lg">987,654</div>
-<div className="$$badge $$badge-md">987,654</div>
-<div className="$$badge $$badge-sm">987,654</div>
-<div className="$$badge $$badge-xs">987,654</div>`
-}</pre>
 </Component>
 
 <Component title="Empty badge">
@@ -114,12 +91,6 @@ data="{[
 <div class="$$badge $$badge-primary $$badge-md"></div>
 <div class="$$badge $$badge-primary $$badge-sm"></div>
 <div class="$$badge $$badge-primary $$badge-xs"></div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge $$badge-primary $$badge-lg"></div>
-<div className="$$badge $$badge-primary $$badge-md"></div>
-<div className="$$badge $$badge-primary $$badge-sm"></div>
-<div className="$$badge $$badge-primary $$badge-xs"></div>`
 }</pre>
 </Component>
 
@@ -155,24 +126,6 @@ data="{[
 </div>
 <div class="$$badge $$badge-error gap-2">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-  error
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$badge $$badge-info gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-  info
-</div>
-<div className="$$badge $$badge-success gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-  success
-</div>
-<div className="$$badge $$badge-warning gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-  warning
-</div>
-<div className="$$badge $$badge-error gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
   error
 </div>`
 }</pre>
@@ -213,24 +166,6 @@ data="{[
   <span class="badge badge-xs">NEW</span>
 </h5>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<h2 className="text-xl">
-  Heading
-  <span className="badge badge-lg">NEW</span>
-</h2>
-<h3 className="text-lg">
-  Heading
-  <span className="badge badge-md">NEW</span>
-</h3>
-<h4 className="text-base">
-  Heading
-  <span className="badge badge-sm">NEW</span>
-</h4>
-<h5 className="text-sm">
-  Heading
-  <span className="badge badge-xs">NEW</span>
-</h5>`
-}</pre>
 </Component>
 
 <Component title="Badge in a button">
@@ -250,16 +185,6 @@ data="{[
 <button class="$$btn">
   Inbox
   <div class="$$badge $$badge-secondary">+99</div>
-</button>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<button className="$$btn">
-  Inbox
-  <div className="$$badge">+99</div>
-</button>
-<button className="$$btn">
-  Inbox
-  <div className="$$badge $$badge-secondary">+99</div>
 </button>`
 }</pre>
 </Component>

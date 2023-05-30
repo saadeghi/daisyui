@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import Translate from "@components/Translate.svelte"
-
+  import { htmlToJsx } from "$lib/actions"
   let Prism
   onMount(async () => {
     Prism = (await import("./Prism.svelte")).default
@@ -14,7 +14,7 @@
   let wrapper
   let showContent = "preview"
   let htmlSlot
-  let reactSlot
+  let jsxSlot
 
   let isClipboardButtonPressed = false
   const copyText = (text) => {
@@ -79,9 +79,9 @@
         HTML
       </button>
       <button
-        on:click={() => (showContent = "react")}
+        on:click={() => (showContent = "jsx")}
         class={`tab tab-lifted ${
-          showContent == "react"
+          showContent == "jsx"
             ? "tab-active [--tab-bg:hsl(var(--n))] [--tab-border-color:hsl(var(--n))] [--tab-color:hsl(var(--nc))]"
             : "[--tab-border-color:transparent]"
         }`}>
@@ -140,14 +140,24 @@
         </div>
       </div>
     {/if}
-    {#if onMount && showContent == "react"}
+    {#if onMount && showContent == "jsx"}
       <div class="grid">
-        <div class="hidden" bind:this={reactSlot}>
-          <slot name="react" />
+        <div class="hidden" bind:this={jsxSlot}>
+          {#if $$slots.jsx}
+            <slot name="jsx" />
+          {:else}
+            <slot name="html" />
+          {/if}
         </div>
         <div class="code-wrapper col-start-1 row-start-1">
           <svelte:component this={Prism} language="svelte">
-            <slot name="react" />
+            <div use:htmlToJsx>
+              {#if $$slots.jsx}
+                <slot name="jsx" />
+              {:else}
+                <slot name="html" />
+              {/if}
+            </div>
           </svelte:component>
         </div>
         <div class="col-start-1 row-start-1 flex items-start justify-end p-2">
@@ -156,7 +166,7 @@
             class="tooltip tooltip-left tooltip-accent">
             <button
               class="btn btn-square btn-sm btn-neutral"
-              on:click={() => copyText(decodeHtml(reactSlot.firstChild.innerHTML))}>
+              on:click={() => copyText(decodeHtml(jsxSlot.firstChild.innerHTML))}>
               {#if isClipboardButtonPressed}
                 <svg
                   class="h-5 w-5 fill-current"

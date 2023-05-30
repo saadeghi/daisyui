@@ -40,15 +40,6 @@ data="{[
   <input type="radio" name="rating-1" class="$$mask $$mask-star" />
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$rating">
-  <input type="radio" name="rating-1" className="$$mask $$mask-star" />
-  <input type="radio" name="rating-1" className="$$mask $$mask-star" checked />
-  <input type="radio" name="rating-1" className="$$mask $$mask-star" />
-  <input type="radio" name="rating-1" className="$$mask $$mask-star" />
-  <input type="radio" name="rating-1" className="$$mask $$mask-star" />
-</div>`
-}</pre>
 </Component>
 
 <Component title="mask-star-2 with warning color">
@@ -66,15 +57,6 @@ data="{[
   <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$rating">
-  <input type="radio" name="rating-2" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" className="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-2" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" className="$$mask $$mask-star-2 bg-orange-400" />
 </div>`
 }</pre>
 </Component>
@@ -96,15 +78,6 @@ data="{[
   <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-green-400" />
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$rating gap-1">
-  <input type="radio" name="rating-3" className="$$mask $$mask-heart bg-red-400" />
-  <input type="radio" name="rating-3" className="$$mask $$mask-heart bg-orange-400" checked />
-  <input type="radio" name="rating-3" className="$$mask $$mask-heart bg-yellow-400" />
-  <input type="radio" name="rating-3" className="$$mask $$mask-heart bg-lime-400" />
-  <input type="radio" name="rating-3" className="$$mask $$mask-heart bg-green-400" />
-</div>`
-}</pre>
 </Component>
 
 <Component title="mask-star-2 with green-500 color">
@@ -122,15 +95,6 @@ data="{[
   <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" />
   <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" />
   <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" />
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$rating">
-  <input type="radio" name="rating-4" className="$$mask $$mask-star-2 bg-green-500" />
-  <input type="radio" name="rating-4" className="$$mask $$mask-star-2 bg-green-500" checked />
-  <input type="radio" name="rating-4" className="$$mask $$mask-star-2 bg-green-500" />
-  <input type="radio" name="rating-4" className="$$mask $$mask-star-2 bg-green-500" />
-  <input type="radio" name="rating-4" className="$$mask $$mask-star-2 bg-green-500" />
 </div>`
 }</pre>
 </Component>
@@ -200,40 +164,6 @@ data="{[
   <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- xs -->
-<div className="$$rating $$rating-xs">
-  <input type="radio" name="rating-5" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-5" className="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-5" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-5" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-5" className="$$mask $$mask-star-2 bg-orange-400" />
-</div>
-<!-- sm -->
-<div className="$$rating $$rating-sm">
-  <input type="radio" name="rating-6" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" className="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-6" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" className="$$mask $$mask-star-2 bg-orange-400" />
-</div>
-<!-- md -->
-<div className="$$rating $$rating-md">
-  <input type="radio" name="rating-7" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-7" className="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-7" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-7" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-7" className="$$mask $$mask-star-2 bg-orange-400" />
-</div>
-<!-- lg -->
-<div className="$$rating $$rating-lg">
-  <input type="radio" name="rating-8" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-8" className="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-8" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-8" className="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-8" className="$$mask $$mask-star-2 bg-orange-400" />
-</div>`
-}</pre>
 </Component>
 
 <Component title="with `rating-hidden`" desc="`rating-hidden` is a hidden radio at the start to allow uses remove their rating.">
@@ -253,16 +183,6 @@ data="{[
   <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
   <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
   <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$rating $$rating-lg">
-  <input type="radio" name="rating-9" className="$$rating-hidden" />
-  <input type="radio" name="rating-9" className="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" className="$$mask $$mask-star-2" checked />
-  <input type="radio" name="rating-9" className="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" className="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" className="$$mask $$mask-star-2" />
 </div>`
 }</pre>
 </Component>
@@ -294,21 +214,6 @@ data="{[
   <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
   <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
   <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$rating $$rating-lg $$rating-half">
-  <input type="radio" name="rating-10" className="rating-hidden" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" checked />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" className="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
 </div>`
 }</pre>
 </Component>

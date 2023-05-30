@@ -32,14 +32,6 @@ data="{[
   <button class="$$join-item $$btn">4</button>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$join">
-  <button className="$$join-item $$btn">1</button>
-  <button className="$$join-item $$btn $$btn-active">2</button>
-  <button className="$$join-item $$btn">3</button>
-  <button className="$$join-item $$btn">4</button>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Sizes">
@@ -95,32 +87,6 @@ data="{[
   <button class="$$join-item $$btn $$btn-lg">4</button>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$join">
-  <button className="$$join-item $$btn $$btn-xs">1</button>
-  <button className="$$join-item $$btn $$btn-xs $$btn-active">2</button>
-  <button className="$$join-item $$btn $$btn-xs">3</button>
-  <button className="$$join-item $$btn $$btn-xs">4</button>
-</div>
-<div className="$$join">
-  <button className="$$join-item $$btn $$btn-sm">1</button>
-  <button className="$$join-item $$btn $$btn-sm $$btn-active">2</button>
-  <button className="$$join-item $$btn $$btn-sm">3</button>
-  <button className="$$join-item $$btn $$btn-sm">4</button>
-</div>
-<div className="$$join">
-  <button className="$$join-item $$btn $$btn-md">1</button>
-  <button className="$$join-item $$btn $$btn-md $$btn-active">2</button>
-  <button className="$$join-item $$btn $$btn-md">3</button>
-  <button className="$$join-item $$btn $$btn-md">4</button>
-</div>
-<div className="$$join">
-  <button className="$$join-item $$btn $$btn-lg">1</button>
-  <button className="$$join-item $$btn $$btn-lg $$btn-active">2</button>
-  <button className="$$join-item $$btn $$btn-lg">3</button>
-  <button className="$$join-item $$btn $$btn-lg">4</button>
-</div>`
-}</pre>
 </Component>
 
 <Component title="With a disabled button">
@@ -140,15 +106,6 @@ data="{[
   <button class="$$join-item $$btn">100</button>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$join">
-  <button className="$$join-item $$btn">1</button>
-  <button className="$$join-item $$btn">2</button>
-  <button className="$$join-item $$btn $$btn-disabled">...</button>
-  <button className="$$join-item $$btn">99</button>
-  <button className="$$join-item $$btn">100</button>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Extra small buttons">
@@ -164,13 +121,6 @@ data="{[
   <button class="$$join-item $$btn">»</button>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$join">
-  <button className="$$join-item $$btn">«</button>
-  <button className="$$join-item $$btn">Page 22</button>
-  <button className="$$join-item $$btn">»</button>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Nex/Prev outline buttons with equal width">
@@ -182,12 +132,6 @@ data="{[
 `<div class="$$join grid grid-cols-2">
   <button class="$$join-item $$btn $$btn-outline">Previous page</button>
   <button class="$$join-item $$btn $$btn-outline">Next</button>
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$join grid grid-cols-2">
-  <button className="$$join-item $$btn $$btn-outline">Previous page</button>
-  <button className="$$join-item $$btn $$btn-outline">Next</button>
 </div>`
 }</pre>
 </Component>
@@ -205,14 +149,6 @@ data="{[
   <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="2" />
   <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="3" />
   <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="4" />
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$join">
-  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="1" checked />
-  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="2" />
-  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="3" />
-  <input className="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="4" />
 </div>`
 }</pre>
 </Component>

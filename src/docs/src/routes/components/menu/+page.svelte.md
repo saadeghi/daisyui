@@ -31,35 +31,37 @@ data="{[
 />
 
 <Component title="Menu">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<ul class="$$menu bg-base-200 w-56 $$rounded-box">
+  <li><a>Item 1</a></li>
+  <li><a>Item 2</a></li>
+  <li><a>Item 3</a></li>
+</ul>`
 }</pre>
 </Component>
 
 <Component title="Responsive: vertical on small screen, horizontal on large screen">
-<ul class="menu menu-vertical lg:menu-horizontal bg-base-100 shadow-xl rounded-box">
+<ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<ul class="$$menu $$menu-vertical lg:$$menu-horizontal bg-base-200 $$rounded-box">
+  <li><a>Item 1</a></li>
+  <li><a>Item 2</a></li>
+  <li><a>Item 3</a></li>
+</ul>`
 }</pre>
 </Component>
 
 <Component title="Menu with icon only">
-<ul class="menu bg-base-100 rounded-box">
+<ul class="menu bg-base-200 rounded-box">
   <li>
     <a>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -77,15 +79,28 @@ data="{[
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<ul class="$$menu bg-base-200 $$rounded-box">
+  <li>
+    <a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+    </a>
+  </li>
+  <li>
+    <a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    </a>
+  </li>
+  <li>
+    <a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+    </a>
+  </li>
+</ul>`
 }</pre>
 </Component>
 
 <Component title="Menu with icon only (horizontal)">
-<ul class="menu menu-horizontal bg-base-100 rounded-box">
+<ul class="menu menu-horizontal bg-base-200 rounded-box">
   <li>
     <a>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -103,15 +118,28 @@ data="{[
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box">
+  <li>
+    <a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+    </a>
+  </li>
+  <li>
+    <a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    </a>
+  </li>
+  <li>
+    <a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+    </a>
+  </li>
+</ul>`
 }</pre>
 </Component>
 
 <Component title="Menu with icon only with tooltip">
-<ul class="menu bg-base-100 rounded-box">
+<ul class="menu bg-base-200 rounded-box">
   <li>
     <a class="tooltip tooltip-right" data-tip="Home">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -129,15 +157,28 @@ data="{[
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
+`<ul class="$$menu bg-base-200 $$rounded-box">
+  <li>
+    <a class="tooltip tooltip-right" data-tip="Home">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+    </a>
+  </li>
+  <li>
+    <a class="tooltip tooltip-right" data-tip="Details">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    </a>
+  </li>
+  <li>
+    <a class="tooltip tooltip-right" data-tip="Stats">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+    </a>
+  </li>
+</ul>`
 }</pre>
 </Component>
 
 <Component title="Menu with icon only (horizontal) with tooltip">
-<ul class="menu menu-horizontal bg-base-100 rounded-box mt-6">
+<ul class="menu menu-horizontal bg-base-200 rounded-box mt-6">
   <li>
     <a class="tooltip" data-tip="Home">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -157,38 +198,32 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu sizes" classes="flex flex-col gap-4">
-<ul class="menu menu-xs bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu menu-xs bg-base-200 w-56 rounded-box">
   <li><a>xs item 1</a></li>
   <li><a>xs item 2</a></li>
 </ul>
-<ul class="menu menu-sm bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu menu-sm bg-base-200 w-56 rounded-box">
   <li><a>sm item 1</a></li>
   <li><a>sm item 2</a></li>
 </ul>
-<ul class="menu menu-md bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu menu-md bg-base-200 w-56 rounded-box">
   <li><a>md item 1</a></li>
   <li><a>md item 2</a></li>
 </ul>
-<ul class="menu menu-lg bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu menu-lg bg-base-200 w-56 rounded-box">
   <li><a>lg item 1</a></li>
   <li><a>lg item 2</a></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu with disabled items">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li><a>Enabled item</a></li>
   <li class="disabled"><a>disabled item</a></li>
   <li class="disabled"><a>disabled item</a></li>
@@ -196,13 +231,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu with icons">
-<ul class="menu bg-base-100 w-56 rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li>
     <a>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -225,13 +257,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu with icons and badge (responsive)">
-<ul class="menu bg-base-100 lg:menu-horizontal rounded-box">
+<ul class="menu bg-base-200 lg:menu-horizontal rounded-box">
   <li>
     <a>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -256,13 +285,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu without padding and border radius">
-<ul class="menu bg-base-100 w-56 shadow-xl p-0 [&_li>*]:rounded-none">
+<ul class="menu bg-base-200 w-56 p-0 [&_li>*]:rounded-none">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
@@ -270,13 +296,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu with title">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li class="menu-title">Title</li>
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -285,13 +308,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu with title as a parent">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li>
     <h2 class="menu-title">Title</h2>
     <ul>
@@ -304,13 +324,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Submenu">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li>
     <a>Parent</a>
@@ -331,13 +348,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Collapsible submenu">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li>
     <details open>
@@ -362,13 +376,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Collapsible submenu that works with class names" desc="you can open/close the submenu by adding/removing `menu-dropdown-show` class using JS">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li>
     <span class="menu-dropdown-toggle">Parent</span>
@@ -378,7 +389,7 @@ data="{[
     </ul>
   </li>
 </ul>
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li>
     <span class="menu-dropdown-toggle menu-dropdown-show">Parent</span>
@@ -391,13 +402,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="File tree">
-<ul class="menu menu-xs bg-base-100 shadow-xl rounded-lg max-w-xs w-full">
+<ul class="menu menu-xs bg-base-200 rounded-lg max-w-xs w-full">
   <li><a>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
     resume.pdf
@@ -460,35 +468,25 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Menu with active item">
-<ul class="menu bg-base-100 w-56 shadow-xl rounded-box">
+<ul class="menu bg-base-200 w-56 rounded-box">
   <li><a>Item 1</a></li>
   <li><a class="active">Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<ul class="$$menu bg-base-100 w-56">
+`<ul class="$$menu bg-base-200 w-56">
   <li><a>Item 1</a></li>
   <li><a class="$$active">Item 2</a></li>
-  <li><a>Item 3</a></li>
-</ul>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<ul className="$$menu bg-base-100 w-56">
-  <li><a>Item 1</a></li>
-  <li><a className="$$active">Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>`
 }</pre>
 </Component>
 
 <Component title="Horizontal menu">
-<ul class="menu menu-horizontal bg-base-100 shadow-xl rounded-box">
+<ul class="menu menu-horizontal bg-base-200 rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
@@ -496,13 +494,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Horizontal submenu">
-<ul class="menu menu-horizontal bg-base-100 shadow-xl rounded-box">
+<ul class="menu menu-horizontal bg-base-200 rounded-box">
   <li><a>Item 1</a></li>
   <li>
     <a>Parent</a>
@@ -516,13 +511,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Mega menu with submenu (responsive)">
-<ul class="menu xl:menu-horizontal lg:min-w-max bg-base-100 shadow-xl rounded-box">
+<ul class="menu xl:menu-horizontal lg:min-w-max bg-base-200 rounded-box">
   <li>
     <a>Solutions</a>
     <ul>
@@ -570,13 +562,10 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-``
-}</pre>
 </Component>
 
 <Component title="Collapsible with submenu (responsive)">
-<ul class="menu lg:menu-horizontal bg-base-100 shadow-xl rounded-box lg:mb-64">
+<ul class="menu lg:menu-horizontal bg-base-200 rounded-box lg:mb-64">
   <li><a>Item 1</a></li>
   <li>
     <details open>
@@ -599,9 +588,6 @@ data="{[
   <li><a>Item 3</a></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
 ``
 }</pre>
 </Component>

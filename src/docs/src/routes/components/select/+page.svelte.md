@@ -51,16 +51,6 @@ data="{[
   <option>Maggie</option>
 </select>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select w-full max-w-xs">
-  <option disabled selected>Pick your favorite Simpson</option>
-  <option>Homer</option>
-  <option>Marge</option>
-  <option>Bart</option>
-  <option>Lisa</option>
-  <option>Maggie</option>
-</select>`
-}</pre>
 </Component>
 
 <Component title="Select with border">
@@ -71,13 +61,6 @@ data="{[
 </select>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="$$select $$select-bordered w-full max-w-xs">
-  <option disabled selected>Who shot first?</option>
-  <option>Han Solo</option>
-  <option>Greedo</option>
-</select>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-bordered w-full max-w-xs">
   <option disabled selected>Who shot first?</option>
   <option>Han Solo</option>
   <option>Greedo</option>
@@ -94,14 +77,6 @@ data="{[
 </select>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="$$select $$select-ghost w-full max-w-xs">
-  <option disabled selected>Pick the best JS framework</option>
-  <option>Svelte</option>
-  <option>Vue</option>
-  <option>React</option>
-</select>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-ghost w-full max-w-xs">
   <option disabled selected>Pick the best JS framework</option>
   <option>Svelte</option>
   <option>Vue</option>
@@ -149,26 +124,6 @@ data="{[
   </label>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$form-control w-full max-w-xs">
-  <label className="$$label">
-    <span className="$$label-text">Pick the best fantasy franchise</span>
-    <span className="$$label-text-alt">Alt label</span>
-  </label>
-  <select className="$$select $$select-bordered">
-    <option disabled selected>Pick one</option>
-    <option>Star Wars</option>
-    <option>Harry Potter</option>
-    <option>Lord of the Rings</option>
-    <option>Planet of the Apes</option>
-    <option>Star Trek</option>
-  </select>
-  <label className="$$label">
-    <span className="$$label-text-alt">Alt label</span>
-    <span className="$$label-text-alt">Alt label</span>
-  </label>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Primary color">
@@ -181,15 +136,6 @@ data="{[
 </select>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="$$select $$select-primary w-full max-w-xs">
-  <option disabled selected>What is the best TV show?</option>
-  <option>Game of Thrones</option>
-  <option>Lost</option>
-  <option>Breaking Bad</option>
-  <option>Walking Dead</option>
-</select>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-primary w-full max-w-xs">
   <option disabled selected>What is the best TV show?</option>
   <option>Game of Thrones</option>
   <option>Lost</option>
@@ -224,19 +170,6 @@ data="{[
   <option>Python</option>
 </select>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-secondary w-full max-w-xs">
-  <option disabled selected>Pick your favorite language</option>
-  <option>Java</option>
-  <option>Go</option>
-  <option>C</option>
-  <option>C#</option>
-  <option>C++</option>
-  <option>Rust</option>
-  <option>JavaScript</option>
-  <option>Python</option>
-</select>`
-}</pre>
 </Component>
 
 <Component title="Accent color">
@@ -254,14 +187,6 @@ data="{[
   <option>Light mode</option>
 </select>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-accent w-full max-w-xs">
-  <option disabled selected>Dark mode or light mode?</option>
-  <option>Auto</option>
-  <option>Dark mode</option>
-  <option>Light mode</option>
-</select>`
-}</pre>
 </Component>
 
 <Component title="Info color">
@@ -273,14 +198,6 @@ data="{[
 </select>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="$$select $$select-info w-full max-w-xs">
-  <option disabled selected>Select language</option>
-  <option>English</option>
-  <option>Japanese</option>
-  <option>Italian</option>
-</select>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-info w-full max-w-xs">
   <option disabled selected>Select language</option>
   <option>English</option>
   <option>Japanese</option>
@@ -312,18 +229,6 @@ data="{[
   <option>Jojo's Bizarre Adventure</option>
 </select>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-success w-full max-w-xs">
-  <option disabled selected>Pick your favorite anime</option>
-  <option>One Piece</option>
-  <option>Naruto</option>
-  <option>Death Note</option>
-  <option>Attack on Titan</option>
-  <option>Bleach</option>
-  <option>Fullmetal Alchemist</option>
-  <option>Jojo's Bizarre Adventure</option>
-</select>`
-}</pre>
 </Component>
 
 <Component title="Warning color">
@@ -345,16 +250,6 @@ data="{[
   <option>Hawaiian</option>
 </select>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-warning w-full max-w-xs">
-  <option disabled selected>Pick a pizza</option>
-  <option>Cheese</option>
-  <option>Veggie</option>
-  <option>Pepperoni</option>
-  <option>Margherita</option>
-  <option>Hawaiian</option>
-</select>`
-}</pre>
 </Component>
 
 <Component title="Error color">
@@ -367,15 +262,6 @@ data="{[
 </select>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="$$select $$select-error w-full max-w-xs">
-  <option disabled selected>What is the best headless CMS</option>
-  <option>Strapi</option>
-  <option>Ghost</option>
-  <option>Netlify CMS</option>
-  <option>Sanity</option>
-</select>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select $$select-error w-full max-w-xs">
   <option disabled selected>What is the best headless CMS</option>
   <option>Strapi</option>
   <option>Ghost</option>
@@ -442,36 +328,6 @@ data="{[
   <option>Tiny Tomato</option>
 </select>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<!-- lg -->
-<select className="$$select $$select-bordered $$select-lg w-full max-w-xs">
-  <option disabled selected>Large</option>
-  <option>Large Apple</option>
-  <option>Large Orange</option>
-  <option>Large Tomato</option>
-</select>
-<!-- md -->
-<select className="$$select $$select-bordered w-full max-w-xs">
-  <option disabled selected>Normal</option>
-  <option>Normal Apple</option>
-  <option>Normal Orange</option>
-  <option>Normal Tomato</option>
-</select>
-<!-- sm -->
-<select className="$$select $$select-bordered $$select-sm w-full max-w-xs">
-  <option disabled selected>Small</option>
-  <option>Small Apple</option>
-  <option>Small Orange</option>
-  <option>Small Tomato</option>
-</select>
-<!-- xs -->
-<select className="$$select $$select-bordered $$select-xs w-full max-w-xs">
-  <option disabled selected>Tiny</option>
-  <option>Tiny Apple</option>
-  <option>Tiny Orange</option>
-  <option>Tiny Tomato</option>
-</select>`
-}</pre>
 </Component>
 
 <Component title="Disabled">
@@ -480,11 +336,6 @@ data="{[
 </select>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<select class="$$select w-full max-w-xs" disabled>
-  <option>You can't touch this</option>
-</select>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<select className="$$select w-full max-w-xs" disabled>
   <option>You can't touch this</option>
 </select>`
 }</pre>

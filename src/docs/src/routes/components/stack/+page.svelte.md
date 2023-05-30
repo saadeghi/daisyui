@@ -30,13 +30,6 @@ data="{[
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div>
-  <div className="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div> 
-  <div className="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div> 
-  <div className="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
-</div>`
-}</pre>
 </Component>
 
 <Component title="3 divs with stack">
@@ -52,13 +45,6 @@ data="{[
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$stack">
-  <div className="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div> 
-  <div className="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div> 
-  <div className="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
-</div>`
-}</pre>
 </Component>
 
 <Component title="stacked images">
@@ -72,13 +58,6 @@ data="{[
   <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Image 1" class="rounded" />
   <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Image 2" class="rounded" />
   <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Image 3" class="rounded" />
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$stack">
-  <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Image 1" className="rounded" />
-  <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Image 2" className="rounded" />
-  <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Image 3" className="rounded" />
 </div>`
 }</pre>
 </Component>
@@ -108,19 +87,6 @@ data="{[
   </div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$stack">
-  <div className="text-center border border-base-content $$card w-36 bg-base-100">
-    <div className="$$card-body">A</div>
-  </div> 
-  <div className="text-center border border-base-content $$card w-36 bg-base-100">
-    <div className="$$card-body">B</div>
-  </div> 
-  <div className="text-center border border-base-content $$card w-36 bg-base-100">
-    <div className="$$card-body">C</div>
-  </div>
-</div>`
-}</pre>
 </Component>
 
 <Component title="stacked cards with shadow">
@@ -145,19 +111,6 @@ data="{[
   </div> 
   <div class="text-center shadow-sm w-36 $$card bg-base-200">
     <div class="$$card-body">C</div>
-  </div>
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$stack">
-  <div className="text-center shadow-md w-36 $$card bg-base-200">
-    <div className="$$card-body">A</div>
-  </div> 
-  <div className="text-center shadow w-36 $$card bg-base-200">
-    <div className="$$card-body">B</div>
-  </div> 
-  <div className="text-center shadow-sm w-36 $$card bg-base-200">
-    <div className="$$card-body">C</div>
   </div>
 </div>`
 }</pre>
@@ -201,28 +154,6 @@ data="{[
   <div class="$$card shadow-sm bg-primary text-primary-content">
     <div class="$$card-body">
       <h2 class="$$card-title">Notification 3</h2> 
-      <p>You have 3 unread messages. Tap here to see.</p>
-    </div>
-  </div>
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$stack">
-  <div className="$$card shadow-md bg-primary text-primary-content">
-    <div className="$$card-body">
-      <h2 className="$$card-title">Notification 1</h2> 
-      <p>You have 3 unread messages. Tap here to see.</p>
-    </div>
-  </div> 
-  <div className="$$card shadow bg-primary text-primary-content">
-    <div className="$$card-body">
-      <h2 className="$$card-title">Notification 2</h2> 
-      <p>You have 3 unread messages. Tap here to see.</p>
-    </div>
-  </div> 
-  <div className="$$card shadow-sm bg-primary text-primary-content">
-    <div className="$$card-body">
-      <h2 className="$$card-title">Notification 3</h2> 
       <p>You have 3 unread messages. Tap here to see.</p>
     </div>
   </div>

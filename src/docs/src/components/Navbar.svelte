@@ -82,15 +82,27 @@
             </span>
           </div>
         </a>
-        <a
-          href="/docs/changelog"
-          class={`link link-hover font-mono text-xs text-opacity-50 ${
-            switchNavbarStyle || $page.url.pathname != "/" ? "" : ""
-          }`}>
-          <div data-tip="Changelog" class="tooltip tooltip-bottom">
+        <div class="dropdown">
+          <label tabindex="0" class="link link-hover my-8 inline-block font-mono text-xs">
             {version}
-          </div>
-        </a>
+          </label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu menu-sm bg-base-100 rounded-box w-40 p-2 shadow-2xl">
+            <li><a href="/docs/changelog">Changelog</a></li>
+            <li />
+            <li>
+              <a target="_blank" rel="noopener, noreferrer" href="https://v2.daisyui.com/">
+                Version 2.x
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener, noreferrer" href="https://v1.daisyui.com/">
+                Version 1.x
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="hidden w-full max-w-sm lg:flex">
         <Search {removeScrollPaddingFromNavbar} {addScrollPaddingToNavbar} />

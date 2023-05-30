@@ -30,16 +30,28 @@
       <span class="text-base-content uppercase">UI</span>
     </div>
   </a>
-  <a href="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50">
-    <div data-tip="Changelog" class="tooltip tooltip-bottom">
+  <div class="dropdown">
+    <label tabindex="0" class="link link-hover font-mono text-xs">
       {version}
-    </div>
-  </a>
+    </label>
+    <ul
+      tabindex="0"
+      class="dropdown-content menu menu-sm bg-base-100 rounded-box w-40 p-2 shadow-2xl">
+      <li><a href="/docs/changelog">Changelog</a></li>
+      <li />
+      <li>
+        <a target="_blank" rel="noopener, noreferrer" href="https://v2.daisyui.com/">Version 2.x</a>
+      </li>
+      <li>
+        <a target="_blank" rel="noopener, noreferrer" href="https://v1.daisyui.com/">Version 1.x</a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 {#if $showSearch}
   <div
-    class={`bg-base-100 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 bg-opacity-90 py-3 px-2 backdrop-blur ${
+    class={`bg-base-100 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 bg-opacity-90 px-2 py-3 backdrop-blur ${
       switchNavbarStyle ? "shadow-sm" : ""
     }`}>
     <div class="flex w-full">
@@ -62,7 +74,7 @@
       </li>
     {/if}
     {#if name != "excluded"}
-      {#each items as { name, href, icon, badge, hidden, highlightAnotherItem }}
+      {#each items as { name, href, icon, badge, hidden, highlightAnotherItem, deprecated }}
         {#if !hidden}
           <li>
             <a
@@ -78,7 +90,7 @@
                   {@html icon}
                 </span>
               {/if}
-              <span>
+              <span class={`${deprecated && "line-through"}`}>
                 {@html $t(name)}
               </span>
               {#if badge != ""}

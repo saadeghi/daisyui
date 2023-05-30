@@ -69,7 +69,7 @@ data="{[
   </form>
 </dialog>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* Open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button>
 <dialog id="my_modal_1" className="$$modal">
@@ -109,7 +109,7 @@ data="{[
   </form>
 </dialog>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* Open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_2.showModal()}>open modal</button>
 <dialog id="my_modal_2" className="$$modal">
@@ -144,7 +144,7 @@ data="{[
   </form>
 </dialog>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* You can open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_3.showModal()}>open modal</button>
 <dialog id="my_modal_3" className="$$modal">
@@ -183,7 +183,7 @@ data="{[
   </form>
 </dialog>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* You can open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_4.showModal()}>open modal</button>
 <dialog id="my_modal_4" className="$$modal">
@@ -225,7 +225,7 @@ data="{[
   </form>
 </dialog>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
+<pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* Open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_5.showModal()}>open modal</button>
 <dialog id="my_modal_5" className="$$modal modal-bottom sm:$$modal-middle">
@@ -262,22 +262,6 @@ data="{[
   </div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`{/* The button to open modal */}
-<label htmlFor="my_modal_6" className="$$btn">open modal</label>
-
-{/* Put this part before </body> tag */}
-<input type="checkbox" id="my_modal_6" className="$$modal-toggle" />
-<div className="$$modal">
-  <div className="$$modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">This modal works with a hidden checkbox!</p>
-    <div className="$$modal-action">
-      <label htmlFor="my_modal_6" className="$$btn">Close!</label>
-    </div>
-  </div>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Modal that closes when clicked outside" desc="Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside">
@@ -297,20 +281,6 @@ data="{[
   <label class="$$modal-backdrop" for="my_modal_7">Close</label>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`{/* The button to open modal */}
-<label htmlFor="my_modal_7" className="$$btn">open modal</label>
-
-{/* Put this part before </body> tag */}
-<input type="checkbox" id="my_modal_7" className="$$modal-toggle" />
-<div className="$$modal">
-  <div className="$$modal-box">
-    <h3 className="text-lg font-bold">Hello!</h3>
-    <p className="py-4">This modal works with a hidden checkbox!</p>
-  </div>
-  <label class="$$modal-backdrop" htmlFor="my_modal_7">Close</label>
-</div>`
-}</pre>
 </Component>
 
 ### Method 3: using anchor links <span class="badge badge-warning">legacy</span>
@@ -328,20 +298,6 @@ data="{[
     <p class="py-4">This modal works with anchor links</p>
     <div class="$$modal-action">
      <a href="#" class="$$btn">Yay!</a>
-    </div>
-  </div>
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`{/* The button to open modal */}
-<a href="#my_modal_8" className="$$btn">open modal</a>
-{/* Put this part before </body> tag */}
-<div className="$$modal" id="my_modal_8">
-  <div className="$$modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">This modal works with anchor links</p>
-    <div className="$$modal-action">
-     <a href="#" className="$$btn">Yay!</a>
     </div>
   </div>
 </div>`

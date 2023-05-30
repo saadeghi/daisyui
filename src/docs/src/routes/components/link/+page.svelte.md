@@ -31,9 +31,6 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link">I'm a simple link</a>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link">I'm a simple link</a>`
-}</pre>
 </Component>
 
 <Component title="Link">
@@ -49,22 +46,12 @@ data="{[
   <a class="$$link">normal link</a> again.
 </p>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<p>Tailwind CSS resets the style of links by default.
-  <br/>
-  Add "link" className to make it look like a 
-  <a className="$$link">normal link</a> again.
-</p>`
-}</pre>
 </Component>
 
 <Component title="Primary color">
 <a class="link link-primary">I'm a simple link</a>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-primary">I'm a simple link</a>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-primary">I'm a simple link</a>`
 }</pre>
 </Component>
 
@@ -73,18 +60,12 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-secondary">I'm a simple link</a>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-secondary">I'm a simple link</a>`
-}</pre>
 </Component>
 
 <Component title="Accent color">
 <a class="link link-accent">I'm a simple link</a>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-accent">I'm a simple link</a>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-accent">I'm a simple link</a>`
 }</pre>
 </Component>
 
@@ -93,18 +74,12 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-neutral">I'm a simple link</a>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-neutral">I'm a simple link</a>`
-}</pre>
 </Component>
 
 <Component title="Success color">
 <a class="link link-success">I'm a simple link</a>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-success">I'm a simple link</a>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-success">I'm a simple link</a>`
 }</pre>
 </Component>
 
@@ -113,18 +88,12 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-info">I'm a simple link</a>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-info">I'm a simple link</a>`
-}</pre>
 </Component>
 
 <Component title="Warning color">
 <a class="link link-warning">I'm a simple link</a>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-warning">I'm a simple link</a>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-warning">I'm a simple link</a>`
 }</pre>
 </Component>
 
@@ -133,17 +102,11 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-error">I'm a simple link</a>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-error">I'm a simple link</a>`
-}</pre>
 </Component>
 
 <Component title="Show underline only on hover">
 <a class="link link-hover">I'm a simple link</a>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<a class="$$link $$link-hover">I'm a simple link</a>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<a className="$$link $$link-hover">I'm a simple link</a>`
 }</pre>
 </Component>

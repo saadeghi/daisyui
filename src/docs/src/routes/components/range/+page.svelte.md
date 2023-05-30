@@ -33,9 +33,6 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range" />`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range" />`
-}</pre>
 </Component>
 
 <Component title="With steps and measure">
@@ -59,25 +56,12 @@ data="{[
   <span>|</span>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="25" className="$$range" step="25" />
-<div className="w-full flex justify-between text-xs px-2">
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Primary color">
 <input type="range" min="0" max="100" value="40" class="range range-primary max-w-xs" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range $$range-primary" />`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-primary" />`
 }</pre>
 </Component>
 
@@ -86,18 +70,12 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range $$range-secondary" />`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-secondary" />`
-}</pre>
 </Component>
 
 <Component title="Accent color">
 <input type="range" min="0" max="100" value="40" class="range range-accent max-w-xs" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range $$range-accent" />`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-accent" />`
 }</pre>
 </Component>
 
@@ -106,18 +84,12 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range $$range-success" />`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-success" />`
-}</pre>
 </Component>
 
 <Component title="Warning color">
 <input type="range" min="0" max="100" value="40" class="range range-warning max-w-xs" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range $$range-warning" />`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-warning" />`
 }</pre>
 </Component>
 
@@ -126,18 +98,12 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range $$range-info" />`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-info" />`
-}</pre>
 </Component>
 
 <Component title="Error color">
 <input type="range" min="0" max="100" value="40" class="range range-error max-w-xs" />
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<input type="range" min="0" max="100" value="40" class="$$range $$range-error" />`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-error" />`
 }</pre>
 </Component>
 
@@ -153,11 +119,5 @@ data="{[
 <input type="range" min="0" max="100" value="50" class="$$range $$range-sm" /> 
 <input type="range" min="0" max="100" value="60" class="$$range $$range-md" /> 
 <input type="range" min="0" max="100" value="70" class="$$range $$range-lg" />`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<input type="range" min="0" max="100" value="40" className="$$range $$range-xs" /> 
-<input type="range" min="0" max="100" value="50" className="$$range $$range-sm" /> 
-<input type="range" min="0" max="100" value="60" className="$$range $$range-md" /> 
-<input type="range" min="0" max="100" value="70" className="$$range $$range-lg" />`
 }</pre>
 </Component>

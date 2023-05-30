@@ -80,25 +80,6 @@ data="{[
   </div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$drawer">
-  <input id="my-drawer" type="checkbox" className="$$drawer-toggle" />
-  <div className="$$drawer-content">
-    <!-- Page content here -->
-    <label htmlFor="my-drawer" className="$$btn $$btn-primary $$drawer-button">Open drawer</label>
-
-  </div> 
-  <div className="$$drawer-side">
-    <label htmlFor="my-drawer" className="$$drawer-overlay"></label>
-    <ul className="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-      
-    </ul>
-  </div>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Responsive" desc="Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class">
@@ -126,25 +107,6 @@ data="{[
   <div class="$$drawer-side">
     <label for="my-drawer-2" class="$$drawer-overlay"></label> 
     <ul class="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
-  
-  </div>
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$drawer lg:$$drawer-open">
-  <input id="my-drawer-2" type="checkbox" className="$$drawer-toggle" />
-  <div className="$$drawer-content flex flex-col items-center justify-center">
-    <!-- Page content here -->
-    <label htmlFor="my-drawer-2" className="$$btn $$btn-primary $$drawer-button lg:hidden">Open drawer</label>
-  
-  </div> 
-  <div className="$$drawer-side">
-    <label htmlFor="my-drawer-2" className="$$drawer-overlay"></label> 
-    <ul className="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -218,41 +180,6 @@ data="{[
   </div>
 </div>`
 }</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$drawer">
-  <input id="my-drawer-3" type="checkbox" className="$$drawer-toggle" /> 
-  <div className="$$drawer-content flex flex-col">
-    <!-- Navbar -->
-    <div className="w-full $$navbar bg-base-300">
-      <div className="flex-none lg:hidden">
-        <label htmlFor="my-drawer-3" className="$$btn $$btn-square $$btn-ghost">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </label>
-      </div> 
-      <div className="flex-1 px-2 mx-2">Navbar Title</div>
-      <div className="flex-none hidden lg:block">
-        <ul className="$$menu $$menu-horizontal">
-          <!-- Navbar menu content here -->
-          <li><a>Navbar Item 1</a></li>
-          <li><a>Navbar Item 2</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- Page content here -->
-    Content
-  </div> 
-  <div className="$$drawer-side">
-    <label htmlFor="my-drawer-3" className="$$drawer-overlay"></label> 
-    <ul className="$$menu p-4 w-80 h-full bg-base-200">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-      
-    </ul>
-    
-  </div>
-</div>`
-}</pre>
 </Component>
 
 <Component title="Drawer that opens from right side of page">
@@ -280,26 +207,6 @@ data="{[
   <div class="$$drawer-side">
     <label for="my-drawer-4" class="$$drawer-overlay"></label>
     <ul class="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-
-    </ul>
-
-  </div>
-</div>`
-}</pre>
-<pre slot="react" use:replace={{ to: $prefix }}>{
-`<div className="$$drawer $$drawer-end">
-  <input id="my-drawer-4" type="checkbox" className="$$drawer-toggle" />
-  <div className="$$drawer-content">
-    <!-- Page content here -->
-    <label htmlFor="my-drawer-4" className="$$drawer-button $$btn $$btn-primary">Open drawer</label>
-
-  </div> 
-  <div className="$$drawer-side">
-    <label htmlFor="my-drawer-4" className="$$drawer-overlay"></label>
-    <ul className="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>

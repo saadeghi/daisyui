@@ -123,7 +123,7 @@
     overflow: hidden;
     padding: 0.5rem;
     backdrop-filter: blur(1rem);
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected,
