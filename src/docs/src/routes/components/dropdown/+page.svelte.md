@@ -25,25 +25,51 @@ data="{[
 ]}"
 />
 
-<div class="alert alert-info text-sm mb-2">
+### Method 1: using details and summary tags
+
+<Component title="Dropdown menu using <details> tag" desc="Stays open until gets clicked again. Or you can close it using JS by removing the `open` attribute">
+<details class="dropdown mb-32">
+  <summary class="m-1 btn">open or close</summary>
+  <ul class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</details>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div class="$$dropdown">
+  <label tabindex="0" class="$$btn m-1">open or close</label>
+  <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div>`
+}</pre>
+</Component>
+
+### Method 2: using label and CSS focus
+
+<div class="alert text-sm mb-2">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     <div>
       We use a &lt;label tabindex="0"&gt; instead of a &lt;button&gt; because Safari has <a rel="noopener noreferrer" target="_blank" href="https://bugs.webkit.org/show_bug.cgi?id=22261">a bug</a> that prevents the button from being focused.
     </div>
 </div>
 
-<div class="alert alert-info text-sm">
+<div class="alert text-sm">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
   Using tabindex="0" is required so the dropdown can be focused.
 </div>
 
 <Component title="Dropdown menu">
-<div class="dropdown mb-32">
-  <label tabindex="0" class="m-1 btn">Click</label>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
-    <li><a>Item 1</a></li>
-    <li><a>Item 2</a></li>
-  </ul>
+<div>
+  <div class="text-sm mb-4 text-center">Click outside to close</div>
+  <div class="dropdown mb-32">
+    <label tabindex="0" class="m-1 btn">Click to open</label>
+    <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
+      <li><a>Item 1</a></li>
+      <li><a>Item 2</a></li>
+    </ul>
+  </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown">
@@ -55,6 +81,8 @@ data="{[
 </div>`
 }</pre>
 </Component>
+
+### Positions
 
 <Component title="Dropdown / aligns to end">
 <div class="dropdown dropdown-end mb-32">
@@ -227,6 +255,8 @@ data="{[
 }</pre>
 </Component>
 
+### Open on hover
+
 <Component title="Dropdown on hover">
 <div class="dropdown dropdown-hover mb-32">
   <label tabindex="0" class="m-1 btn">Hover</label>
@@ -246,6 +276,8 @@ data="{[
 }</pre>
 </Component>
 
+### Force open
+
 <Component title="Force open">
 <div class="dropdown dropdown-open mb-32">
   <label tabindex="0" class="m-1 btn">Button</label>
@@ -264,6 +296,8 @@ data="{[
 </div>`
 }</pre>
 </Component>
+
+### More examples
 
 <Component title="Card as dropdown">
 <div class="dropdown mb-32">

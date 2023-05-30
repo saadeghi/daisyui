@@ -5,7 +5,10 @@
   @apply outline-none;
 }
 .dropdown .dropdown-content {
-  @apply invisible absolute opacity-0;
+  @apply absolute;
+}
+.dropdown:is(:not(details)) .dropdown-content {
+  @apply invisible opacity-0;
 }
 .dropdown-end .dropdown-content {
   @apply right-0;

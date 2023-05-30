@@ -1,4 +1,4 @@
-.dropdown .dropdown-content {
+.dropdown:is(:not(details)) .dropdown-content {
   @apply origin-top scale-95 transform transition duration-200 ease-in-out;
 }
 .dropdown-bottom .dropdown-content {
