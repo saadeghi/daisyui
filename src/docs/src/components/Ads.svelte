@@ -98,7 +98,7 @@
         <Sponsors />
       </div>
       <div class="h-6" />
-      <div class="carbonads-responsive mx-auto flex items-center justify-center">
+      <div class="carbonads-responsive mx-auto flex min-h-[100px] items-center justify-center">
         <script
           async
           type="text/javascript"

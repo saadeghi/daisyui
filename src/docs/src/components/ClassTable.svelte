@@ -79,7 +79,7 @@
               </div>
             {/if}
           </td>
-          <td class="w-8/12">{item.desc}</td>
+          <td class="w-8/12 min-w-[20rem]">{item.desc}</td>
         </tr>
       {/each}
     </tbody>
