@@ -53,6 +53,7 @@
   },
   "prettier": "./src/prettier.config.js",
   "scripts": {
+    "init": "npm install && npm run build && npm run get-files && cd src/docs && npm install && cd src/experiments/playground && npm install",
     "prettier": "prettier --write . --ignore-path ./src/.prettierignore",
     "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
     "base": "cat dist/base/*.css > dist/base.css",
@@ -75,7 +76,6 @@
     "full": "postcss src/full/index.css -o dist/full.css --config src/full",
     "disabledpostfull": "lightningcss --minify --targets '> 7%' dist/full.css -o dist/full.css",
     "build": "npm run base && npm run utilities:global && npm run utilities:unstyled && npm run utilities:styled && npm run components && npm run merge:unstyled && npm run merge:styled && npm run rtl && npm run prejss && npm run themes && npm run full",
-    "install:docs": "cd src/docs && npm install",
     "dev": "cd src/docs && npm run dev",
     "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
     "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css",
