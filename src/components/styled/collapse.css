@@ -44,7 +44,7 @@ details.collapse summary {
 }
 
 .collapse:not(.collapse-open):not(.collapse-close) input[type="checkbox"],
-.collapse:not(.collapse-open):not(.collapse-close) input[type="radio"],
+.collapse:not(.collapse-open):not(.collapse-close) input[type="radio"]:not(:checked),
 .collapse:not(.collapse-open):not(.collapse-close) .collapse-title {
   @apply cursor-pointer;
 }

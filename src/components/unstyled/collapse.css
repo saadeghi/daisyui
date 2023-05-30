@@ -10,7 +10,7 @@
 .collapse > input[type="checkbox"],
 .collapse > input[type="radio"],
 .collapse-content {
-  @apply col-start-1 row-start-1 select-none;
+  @apply col-start-1 row-start-1;
 }
 .collapse > input[type="checkbox"],
 .collapse > input[type="radio"] {
