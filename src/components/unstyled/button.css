@@ -31,11 +31,11 @@
 }
 
 /* radio input and checkbox as button */
-input[type="checkbox"].btn,
-input[type="radio"].btn {
+.btn:is(input[type="checkbox"]),
+.btn:is(input[type="radio"]) {
   @apply appearance-none;
 }
-input[type="checkbox"].btn:after,
-input[type="radio"].btn:after {
+.btn:is(input[type="checkbox"]):after,
+.btn:is(input[type="radio"]):after {
   @apply content-[attr(aria-label)];
 }

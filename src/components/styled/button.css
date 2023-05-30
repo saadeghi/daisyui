@@ -222,8 +222,8 @@
 }
 
 /* radio input and checkbox as button */
-input[type="checkbox"].btn:checked,
-input[type="radio"].btn:checked {
+.btn:is(input[type="checkbox"]:checked),
+.btn:is(input[type="radio"]:checked) {
   @apply border-primary bg-primary text-primary-content;
   &:hover {
     @apply border-primary-focus bg-primary-focus;
