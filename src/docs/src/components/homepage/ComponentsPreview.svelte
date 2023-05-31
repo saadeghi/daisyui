@@ -2,6 +2,7 @@
   import { t } from "@src/lib/i18n"
   export let animateValue
   export let section
+  export let index
 </script>
 
 <div class="hidden flex-col gap-6 xl:flex">
@@ -44,7 +45,7 @@
           </svg>
         </li>
         <li>
-          <button class="active" aria-label="tailwindcss button">
+          <button tabindex="-1" class="active" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -67,7 +68,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -85,7 +86,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -118,7 +119,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -144,7 +145,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -201,7 +202,7 @@
       <ul class="menu">
         <li class="menu-title">{$t("Admin panel")}</li>
         <li>
-          <button class="active">
+          <button tabindex="-1" class="active">
             <svg
               width="20"
               height="20"
@@ -225,7 +226,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -244,7 +245,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -278,7 +279,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -305,7 +306,7 @@
           </button>
         </li>
         <li>
-          <button aria-label="tailwindcss button">
+          <button tabindex="-1" aria-label="tailwindcss button">
             <svg
               width="20"
               height="20"
@@ -360,16 +361,19 @@
     </div>
   </div>
   <div
+    aria-hidden="true"
     class="rounded-box bg-base-200 grid grow grid-cols-2 gap-4 p-6"
     style={`opacity:${animateValue(section, [15, 20], [0, 1])}`}>
-    <button aria-label="tailwindcss button" class="btn btn-neutral">Neutral</button>
-    <button aria-label="tailwindcss button" class="btn btn-primary">Primary</button>
-    <button aria-label="tailwindcss button" class="btn btn-secondary">Secondary</button>
-    <button aria-label="tailwindcss button" class="btn btn-accent">Accent</button>
-    <button aria-label="tailwindcss button" class="btn btn-info">Info</button>
-    <button aria-label="tailwindcss button" class="btn btn-success">Success</button>
-    <button aria-label="tailwindcss button" class="btn btn-warning">Warning</button>
-    <button aria-label="tailwindcss button" class="btn btn-error">Error</button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-neutral">Neutral</button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-primary">Primary</button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-secondary">
+      Secondary
+    </button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-accent">Accent</button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-info">Info</button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-success">Success</button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-warning">Warning</button>
+    <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-error">Error</button>
   </div>
 </div>
 <div class="flex grow flex-col gap-6">
@@ -378,6 +382,7 @@
     style={`opacity:${animateValue(section, [13, 18], [0, 1])}`}>
     <div class="grow">
       <button
+        tabindex="-1"
         class="btn btn-ghost btn-circle avatar"
         aria-label="tailwindcss avatar"
         alt="tailwindcss avatar">
@@ -392,7 +397,7 @@
     </div>
     <ul class="menu menu-sm menu-horizontal rounded-box">
       <li>
-        <button>
+        <button tabindex="-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -410,13 +415,13 @@
         </button>
       </li>
       <li>
-        <button>
+        <button tabindex="-1">
           {$t("Updates")}
           <span class="badge badge-sm badge-warning">NEW</span>
         </button>
       </li>
       <li>
-        <button>
+        <button tabindex="-1">
           {$t("Stats")}
           <span class="badge badge-xs badge-info" />
         </button>
@@ -442,7 +447,11 @@
     </p>
     <div class="h-4" />
     <div>
-      <a class="btn btn-wide btn-primary" data-sveltekit-preload-data="hover" href="/docs/themes/">
+      <a
+        class="btn btn-wide btn-primary"
+        data-sveltekit-preload-data="hover"
+        href="/docs/themes/"
+        tabindex={index == 0 ? 0 : -1}>
         {$t("See all themes")}
       </a>
     </div>
@@ -453,41 +462,49 @@
     <div class="card-body">
       <div class="flex h-full items-center justify-between gap-6">
         <input
+          tabindex="-1"
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
           class="toggle pointer-events-none" />
         <input
+          tabindex="-1"
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
           class="toggle toggle-primary pointer-events-none" />
         <input
+          tabindex="-1"
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
           class="toggle toggle-secondary pointer-events-none" />
         <input
+          tabindex="-1"
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
           class="toggle toggle-accent pointer-events-none" />
         <input
+          tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
           class="checkbox pointer-events-none" />
         <input
+          tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
           class="checkbox checkbox-primary pointer-events-none" />
         <input
+          tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
           class="checkbox checkbox-secondary pointer-events-none" />
         <input
+          tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
@@ -584,7 +601,11 @@
       </div>
     </div>
     <div class="mt-6">
-      <a class="btn btn-block" data-sveltekit-preload-data="hover" href="/docs/colors/">
+      <a
+        class="btn btn-block"
+        data-sveltekit-preload-data="hover"
+        href="/docs/colors/"
+        tabindex={index == 0 ? 0 : -1}>
         {$t("Learn more about colors")}
       </a>
     </div>

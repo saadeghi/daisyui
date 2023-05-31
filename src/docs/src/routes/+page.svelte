@@ -1267,7 +1267,7 @@
         <div
           class="border-base-200 flex w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
           style={`--tw-border-opacity:${animateValue(section["themes"], [10, 15], [0, 1])}`}>
-          <ComponentsPreview {animateValue} section={section["themes"]} />
+          <ComponentsPreview {animateValue} section={section["themes"]} {index} />
         </div>
       </div>
     {/each}
