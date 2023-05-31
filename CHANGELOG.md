@@ -109,6 +109,8 @@ All notable changes to this project will be documented in this file. See [standa
 
   https://daisyui.com/components/modal/
 
+* `tooltip` now gets visible with keyboard navigation as well.
+
 * `tooltip` class is now responsive. 
   
   You can use responsive prefixes like `sm:`, `md:` etc to show `tooltip` only on specific screen sizes.
