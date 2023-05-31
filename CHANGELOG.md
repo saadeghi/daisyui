@@ -2,30 +2,422 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## 3.0.0 (2023-05-30)
+## 3.0.0 (2023-06-01)
+
+![daisyui3](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/daisyui3.png)
+
+### New components
+* New `loading` component. 
+  ![loading](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/loading.png)
+  Shows a loading spinner and can be used inside any element.  
+
+  You can choose different spinners: `loading-spinner`, `loading-dots`, `loading-ring`, `loading-ball`, `loading-bars`, `loading-infinity`
+
+  You can change the color using `text-*` utility class.
+
+  https://daisyui.com/components/loading/
+
+* New accordion.
+
+  ![accordion](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/accordion.png)
+
+  It's `collapse` but now we can use it with radio buttons which allows us to make a JS-free and accessible accordion.
+
+  https://daisyui.com/components/accordion/
+
+* New `join` class
+
+  ![join](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/join.png)
+
+  It's a replacement for `button-group` and `input-group` (with a more generic name) and it groups items together vertically or horizontally. It also gives border radius to the first and last item (based on responsive direction) and also if your item have a border, it overlaps the border between items so it looks good automatically.
+
+  `join` also can apply style to the indirect children. It's useful when you want ot have a wrapper around your button (for `dropdown`, `tooltip`, etc.) and you just want to apply style to the actual button, not the wrapper.
+
+  https://daisyui.com/components/join/
+
+### Themes improvements
+
+  ![colors](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/colors.png)
+
+* Now only `light` and `dark` themes are active by default. 
+
+  You can enable all themes by adding `themes: true` to daisyUI config or you can list the names of the themes you want.
+
+  https://daisyui.com/docs/config/
+
+  This is a decent improvement for CSS size on majority of websites because most developers use only 2 or 3 themes but all themes being active by default, was increasing the CSS size unncecessarily.
+
+* The default `dark` theme is now darker and it looks more comfortable when using a website at night.
+* Following themese had improvements in colors and are now more accessible when combining different elemnts together:
+
+  `light`, `dark`, `bumblebee`, `forest`, `garden`, `halloween`, `luxury`, `retro`, `synthwave`
+
+  Of course you can still customize the colors as you wish or even add your own themes.
+
+### New features on components
+
+* `drawer` no longer disables the root element scroll. Now it naturally let's the root element scroll.
+
+  Even with providing a responsive and collapsible sidebar, it no longer has daisyUI 2.x limitations like losing the scroll position when the page is changes or disabling the scroll on the root element.
+
+* Now `drawer` is now hidden by default.
+
+  Instead of using uncustomizable `drawer-mobile`, we can use a responsive class like `lg:drawer-open` to show drawer on specific screen sizes.
+
+  Previously it wasn't customizable and `drawer-mobile` was only showing the drawer on `lg:` screen size.
+
+  Update your drawer class:
+  ```diff
+  - <div class="drawer drawer-mobile">
+  + <div class="drawer lg:drawer-open">
+  ```
+  https://daisyui.com/components/drawer/
+
+* `modal` now supports the new native HTML element `<dialog>` as well.
+  
+  `<dialog>` provides accessibility features without needing JS:
+    - Locks the focus inside the modal
+    - Closes the modal when you press the escape key
+    - Can be closed when you click outside the modal
+    - Prevents z-index issues
+    - Accessible for screen readers
+
+* Add new `modal-backdrop` class. The backdrop that covers the back of modal so we can close the modal by clicking outside.
+
+* Add new `modal-top` modifier if you want to align the `modal` to the top of the screen (`modal-middle` and `modal-bottom` are also available)
+
+  ```html
+  <button class="btn" onclick="my_modal.showModal()">
+    open modal
+  </button>
+
+  <dialog id="my_modal" class="modal">
+    <form method="dialog" class="modal-box">
+      <p>Content</p>
+      <button class="btn">Close</button>
+    </form>
+  </dialog>
+  ```
+
+  https://daisyui.com/components/modal/
+
+* `tooltip` class is now responsive. 
+  
+  You can use responsive prefixes like `sm:`, `md:` etc to show `tooltip` only on specific screen sizes.
+
+* All `tooltip` position modifiers (`tooltip-top`, `tooltip-bottom`, `tooltip-left`, `tooltip-right`) are now responsive as well. So you can move the tooltip to different directions using responsive prefixes. This is useful when your tooltip is on the edge of screen on some screen sizes.
+
+  ![tooltip](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/tooltip.png)
+
+  https://daisyui.com/components/tooltip/
+
+* New `btn-neutral` modifier class for button.
+
+  ![button](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/button.png)
+
+* The default `btn` is now using `bg-base-200` background color instead of `neutral` (a high contrast dark color) color.
+
+  Previously the default button was using a high contrast color and we didn't have any options to make a subtle button to look as consistent as other solid colors (`primary`, `secondary`, etc.)
+  With this color as a default, we can have consistent set of solid buttons without relying on variants like `btn-ghost` or `btn-outline` which are not always the best option.  
+
+  Now when we need a dark button we can use `btn-neutral` modifier class.
+
+* `btn` click animation now has slightly less bounce effect.
+
+* The default `btn` focus ring color is now `neutral` instead of `neutral-focus`
+
+* `btn` now has a `gap-2` by default. Useful for having text and icons inside a button, next to each other.
+
+  https://daisyui.com/components/button/
+
+* New `badge-neutral` modifier class for badge.
+
+  ![badge](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/badge.png)
+
+* The default `badge` is now using `bg-base-200` background color instead of `neutral` (same as the default button)
+
+* badge inside the menu now justifies to the end by default. 
+
+  This is useful when you use a badge inside a menu item because it aligns to the end of the menu item autormatically.
+
+  You can use `justify-self-*` to override this behavior.
+
+  https://daisyui.com/components/badge/
+
+* All new style for `menu`
+
+  ![menu](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/menu.png)
+
+  - All menu levels (`ul > li > ul > ...`) now have a consistent style. Showing a visually recognizable heirarchy (instead of openning a floating menu for the 2nd level by default and putting the rest of the levels inside the menu).
+    
+    This is good news for people who need multiple levels of submenu (either vertical or horizontal)
+
+    ```html
+    <ul class="menu">
+      <li><a>Item 1</a></li>
+      <li>
+        <a>Parent</a>
+        <ul>
+          <li><a>Submenu 1</a></li>
+          <li><a>Submenu 2</a></li>
+        <li>
+        <a>Item 3</a>
+      </li>
+    </ul>
+    ```
+    https://daisyui.com/components/menu/#submenu
+
+  - Using the standard `<details>` element now you can have collapsible submenu without any extra class name or `tabindex`, without relying on `dropdown`.
+    
+    ```html
+    <!-- Easy collapsible submenu -->
+    <ul class="menu">
+      <li><a>Item 1</a></li>
+      <li>
+        <details>
+          <summary>Parent</summary>
+          <ul>
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          <li>
+        </details>
+        <a>Item 3</a>
+      </li>
+    </ul>
+    ```
+    This allows us to easily create a multi-level 👏 collapsible 👏 accessible 👏 JS-free 👏 responsive 👏  and still customizable 👏 menu just by using a class name
+
+    https://daisyui.com/components/menu/#collapsible-submenu
+
+    Also, you can now create responsive "mega menus" using daisyUI.  
+
+    See all examples: https://daisyui.com/components/menu/
+
+  - Menu items are slightly smaller now. This makes more consistency with other components.
+  - Now menu has padding by default. No need for `p-*` class
+  - Menu items have border radius by default (you can change it using `rounded-*` utility classes)
+
+    ![menu-2](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/menu-2.png)
+
+  - instead of `menu-compact` class now we have the standrad sizing utlities like other elements:
+    - `menu-xs`
+    - `menu-sm`
+    - `menu-md`
+    - `menu-lg`
+
+    https://daisyui.com/components/menu/#menu-sizes
+
+  - `<li>` with `active` class now has a `neutral` background color instead of `primary`. This creates a better design hierarchy and moves the focus to the more important elements like "call to action" buttons.
+
+  - new class name `menu-dropdown-toggle` for the parent item if you want to control it using JS
+  - new class name `menu-dropdown` for the collapsed submenu if you want to control it using JS
+  - new modifier class name `menu-dropdown-show` for to reveal the collapsed submenu if you want to control it using JS
+
+    https://daisyui.com/components/menu/#collapsible-submenu-that-works-with-class-names
+
+  - `badge` inside the menu item now justifies to the end by default.
+
+  * New `.focus` class for manu items applies the same style when you focus the menu item using a mouse. This class name is usefull if you want to apply styles for keyboard navigation as well.
+  
+* `dropdown` now supports `<details>` tag as well. 
+
+  ![dropdown](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/dropdown.png)
+  
+  This allows us to close the dropdown on second click or control the dropdown using JavaScript.
+
+  Class names are the same as before, but the HTML structure is simpler.
+
+  ```html
+  <details class="dropdown">
+    <summary class="btn">open or close</summary>
+    <div class="dropdown-content">Content</div>
+  </details>
+  ```
+  The former HTML structure of `dropdown` (using CSS focus) is still supported and you can use whichever you prefer.
+
+  https://daisyui.com/components/dropdown/
+
+* `carousel` is now `inline-flex` by default (instead of `flex`)
+
+  This makes it easier to use carousel aside other elements.
+
+* `btn` class can now be used on `<input type=radio>` and `<input type=checkbox>` as well.
+
+  This is really usefull when you want to make a group of buttons visually those buttons are just changing a value. It's also better for accessibility because it's a native HTML element, it supports keyboard navigations and you won't need to deal with JavaScript or hidden inputs and labels.
+
+  ```html
+  <input type="radio" aria-label="Option 1" class="btn" />
+  <input type="radio" aria-label="Option 2" class="btn" />
+  ```
+  The `aria-label` value will be shown inside the button by default and it's also accessible for screen readers.
+  When radio input is checked, it gets the primary color (but you can customize it of course)
+
+  Same thing for checkbox:
+  ```html
+  <input type="checkbox" aria-label="Check me!" class="btn" />
+  ```
+  https://daisyui.com/components/button/#buttons-with-different-html-tags
+
+* New style for `.table`
+
+  ![table](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/table.png)
 
 
-### Features
+  Starting with daisyUI 3.0, `.table` has a less opinionated style. It allows us to use tables on every surface colors and apply our own background color if neede.
 
-* `collapse` now supports `<details>` tag, improve focus style ([7d18914](https://github.com/saadeghi/daisyui/commit/7d189148930e86b549d27731be3642ff83f14896))
-* `tooltip` is now responsive ([c0ccb8f](https://github.com/saadeghi/daisyui/commit/c0ccb8f2dcb2cf98250011c1aa9a36a76846cf24))
-* add new `join` component ([e2ac98b](https://github.com/saadeghi/daisyui/commit/e2ac98b1c8e953670dd03cde6a0607964d835263))
-* add new `loading` component ([b11fb1a](https://github.com/saadeghi/daisyui/commit/b11fb1a3219c2b0b36c82e4c8ba0c44ecc364af9))
-* add new class names `table-pin-rows`, `table-pin-cols` ([bace100](https://github.com/saadeghi/daisyui/commit/bace100b1189a9dde294bcb2e7ca62075b054923))
-* colors variables are now LCH (no HSL anymore), add support for P3 colors ([01a6e7c](https://github.com/saadeghi/daisyui/commit/01a6e7c1906fa26e76ef6c39109a30279d868ffa))
-* lock modal backdrop scroll ([4ba3d4c](https://github.com/saadeghi/daisyui/commit/4ba3d4cd2da679a4a24348c4d76afa480b181122))
-* modal using HTML `dialog` element ([5e6f6ca](https://github.com/saadeghi/daisyui/commit/5e6f6caf7f2578a3e4c6dba21090e96475db2fd8))
-* new `menu` styles ([b19293f](https://github.com/saadeghi/daisyui/commit/b19293fc75cf14bb25f477a7c413572bdeff2bd1))
-* new style for drawer ([74a6527](https://github.com/saadeghi/daisyui/commit/74a652728bdb536adf1f4b316b4483f30e3216d4))
-* new style for table ([4f0c0cf](https://github.com/saadeghi/daisyui/commit/4f0c0cf1db80d52a3178d3f2bfaccab50bfd5758))
-* now checkbox and radio can use .btn class (using aria-label as the text) ([98bd0d5](https://github.com/saadeghi/daisyui/commit/98bd0d50bfbbabdf837807370761c8a6ae216b5a))
-* only light and dark are enabled by default ([8a3741e](https://github.com/saadeghi/daisyui/commit/8a3741e96a7422af9ce7fd5ca834f360f5fefdb1))
+  Previously every table cell had background color and the whole table had a very opinionated border radius, header color, etc. This was not very flexible and it was hard to customize. But now you can use utility classes to customize the table as you wish.
+
+* `table` now has 4 sizes: `table-xs`, `table-sm`, `table-md`, `table-lg` which provides different font sizes and paddings to fit well on different screen sizes.
+
+* New modifier class names `table-pin-rows` and `table-pin-cols` for `table`
+
+  These classes are useful when you want to pin the heading row or heading column of a table. It's useful for tables with a lot of columns or rows.
+
+  Previously table's first header was pinned by default and this was limiting the use cases. Now you can use these classes only if you want the header to be pinned.
+
+  `table-pin-rows` makes the row inside `<thead>` sticky to top and the row inside `<tfoot>` sticky to bottom.
+  `table-pin-cols` makes the `<th>` columns stciky to left and right automatically.
+
+  https://daisyui.com/components/table/
+
+* Improve `collapse` transition. No more jumps.
+
+* `collapse` now works with `<details>` tag as well. 
+
+  This allows us to create a collapsible content without any extra class name or `tabindex`, without relying on CSS `:focus`.
+
+  ```html
+  <details class="collapse">
+    <summary class="collapse-title">Click to open/close</summary>
+    <div class="collapse-content">content</div>
+  </details>
+  ```
+
+  This is useful when you want to create a collapsible content that is accessible and works without JavaScript.
+
+* `collapse` now works with radio inputs as well. 
+  This allows you to create an accordion JS-free where opening 1 item closes the other items.
+  ```html
+  <div class="collapse">
+    <input type="radio" name="my-accordion-1" checked="checked" /> 
+    <div class="collapse-title">Click to open this and close others</div>
+    <div class="collapse-content">Content</div>
+  </div>
+
+  <div class="collapse">
+    <input type="radio" name="my-accordion-1" /> 
+    <div class="collapse-title">Click to open this and close others</div>
+    <div class="collapse-content">Content</div>
+  </div>
+
+  <div class="collapse">
+    <input type="radio" name="my-accordion-1" /> 
+    <div class="collapse-title">Click to open this and close others</div>
+    <div class="collapse-content">Content</div>
+  </div>
+  ```
+
+  https://daisyui.com/components/collapse/
 
 
-### Bug Fixes
+### General improvements
 
-* `toast` whitespace ([e22cd66](https://github.com/saadeghi/daisyui/commit/e22cd66628ba24c73b006b39f69ac5bdb9e0be65))
-* menu bug on Safari ([e873693](https://github.com/saadeghi/daisyui/commit/e8736939d859d374b324b4b4023873d5bd53a0ac))
+* `:hover` styles are now only available on devices that actually support hover.
+
+  On devices without hover, It's always annoying to work with elements that have hover styles because with the first tap, the hover style is applied and it won't go away until you tap somewhere else. This is confusing and annoying for a lot of people and it's not a good user experience. 
+  
+  Starting with daisyUI 3.0, hover styles are disabled on devices that don't support hover.
+
+* Now `:disabled` buttons and form elements have a disabled style as well. Previously the style was only applied to the elemnets with `disabled` attribute or `*-disabled` class name.
+
+  This is useful when you want to disable the whole form using a fieldset.
+
+### Breaking changes
+
+* Removed `drawer-mobile` class. If you want to have a fixed drawer on desktop but you want to hide it on mobile use `lg:drawer-open` instead (or any other responsive prefix)
+
+  Update your HTML:
+  ```diff
+  - <div class="drawer drawer-mobile">
+  + <div class="drawer lg:drawer-open">
+  ```
+
+* Removed extra wrapper `<div>` from `alert`.  
+  The previous HTML structure was not very efficient and it was causing many confusions because that extra div was necessary for the style to work properly.
+
+  Upate your `alert` structure and remove that extra div inside `<div class="alert">`:
+  ```diff
+    <div class="alert">
+  -   <div>
+        <span>12 unread messages. Tap to see.</span>
+  -   </div>
+    </div>
+
+* `table` now has a `width: 100%` by default.
+
+  This may not be a breaking change for most people. Most developers already want the table to fill the width and they use it with `w-full` class or the data itself is long enough to cover the width. But if you have a small table, placed next to other elements, you should now add `w-auto` or another width class to the table to make it smaller.
+
+* `table` doesn't have a `active` modifier class anymore  
+
+  With the new style you can use utiltiy classes to apply background color for a row. Previuosly it wasn't possible because each cell had a background color and we had to rely on a new modifier class like `active`. Now you can use `bg-base-200` or any other color.
+
+  ```diff
+  - <tr class="active">
+  + <tr class="bg-base-200">
+  ```
+
+* `table` doesn't have a `hover` modifier class anymore  
+
+  Now you can use `hover:bg-base-200` or any other color instead. It's more flexible and you don't have to style each table cell separately.
+
+  ```diff
+  - <tr class="hover">
+  + <tr class="hover:bg-base-200">
+  ```
+
+* `table` doesn't have a `table-compact` modifier class anymore.
+
+  Use one of these new size modifiers instead:
+
+  `table-xs`, `table-sm`, `table-md`, `table-lg`
+
+  ```diff
+  - <table class="table table-compact">
+  + <table class="table table-sm">
+  ```
+  
+* `btn` default color is `base-200` now.  
+
+  This creates consistency for all our solid button variants while providing access to the whole color palette.
+  
+  You can use the new modifier `btn-neutral` if you prefer to keep the former color (`neutral`) for your button:
+  
+  ```diff
+  - <button class="btn">Button</button>
+  + <button class="btn btn-neutral">Button</button>
+  ```
+
+* `dropdown` doesn't have a `z-index` by default now.
+
+  Using z-index for `dropdown` as a defualt style was a mistake becuase sometimes we need elements on top of th dropdown and sometimes we want the dropdown to be on top of other elements. Now you can use `z-[1]` or any other z-index class to control it as you want.
+
+* `badge` inside `btn` now doesn't inherit the `btn` color automatically anymore. This was a bad design decision and it was limiting us to customize `badge` colors when it's inside a `btn`
+
+
+### Bug fixes:
+
+* Fix `step` connectors not being visible on RTL mode.
+* Fix `radio` animation on Safari.
+* Fix `dropdown-hover` not working when focused using keyboard.
+* Fix `tooltip` arrow using pixel formats and causing inaccurate positioning with different browser zoom levels.
+* Fix `toast` whitespace issue
+
+### Developer experience improvements
+* Remove extra dev dependencies.
+* Console log is now more informative. It warns you about possible config issues and how to fix them.
+* daisyUI repo itself is now smaller in size and it takes less disk space. Also the new docuement website is running on the latest version of SveteKit and Vite.
+
+---
 
 ### [2.51.5](https://github.com/saadeghi/daisyui/compare/v2.51.4...v2.51.5) (2023-03-21)
 
@@ -394,558 +786,3 @@ for the following components:
 
 * corrected incorrect jsx attribute on drawer and modal components ([#1095](https://github.com/saadeghi/daisyui/issues/1095)) ([77506ca](https://github.com/saadeghi/daisyui/commit/77506ca8e188a76aa318c2371e91ee1f7c18dacb))
 
-### [2.24.2](https://github.com/saadeghi/daisyui/compare/v2.24.1...v2.24.2) (2022-09-04)
-
-### [2.24.1](https://github.com/saadeghi/daisyui/compare/v2.24.0...v2.24.1) (2022-09-04)
-
-
-### Bug Fixes
-
-* [#1094](https://github.com/saadeghi/daisyui/issues/1094) ([ded7fab](https://github.com/saadeghi/daisyui/commit/ded7fab188634a835660851dc6b1f34bcf6c8682))
-* duplicate theme color ([#1059](https://github.com/saadeghi/daisyui/issues/1059)) ([bb7e3f5](https://github.com/saadeghi/daisyui/commit/bb7e3f523b3be1fc73373b0f0ce6577f5eebd8b5))
-
-## [2.24.0](https://github.com/saadeghi/daisyui/compare/v2.23.0...v2.24.0) (2022-08-13)
-
-
-### Features
-
-* refactor `badge` modifier/responsive class name categorization ([3a3e055](https://github.com/saadeghi/daisyui/commit/3a3e05525f458b8e8dea911388364618a9ab1eda))
-
-## [2.23.0](https://github.com/saadeghi/daisyui/compare/v2.22.1...v2.23.0) (2022-08-13)
-
-
-### Features
-
-* refactor `alert` and `radio` modifier/responsive class name categorization ([b58ecea](https://github.com/saadeghi/daisyui/commit/b58eceaaed3e20287d0ce7e9e5d51e9f854ab84a))
-
-
-### Bug Fixes
-
-* [#952](https://github.com/saadeghi/daisyui/issues/952) ([6ef8ad3](https://github.com/saadeghi/daisyui/commit/6ef8ad3fc39a77c16f03391590248dcdfcda6c4f))
-
-### [2.22.1](https://github.com/saadeghi/daisyui/compare/v2.22.0...v2.22.1) (2022-08-12)
-
-
-### Bug Fixes
-
-* [#1001](https://github.com/saadeghi/daisyui/issues/1001) ([4cedd56](https://github.com/saadeghi/daisyui/commit/4cedd563268847f01dfa8114ce0b1133e3b1e4b3))
-* [#960](https://github.com/saadeghi/daisyui/issues/960) ([6b2a1c0](https://github.com/saadeghi/daisyui/commit/6b2a1c0d6cfc4e1f5cab24e47d3de4d2a24bfcb6))
-* grammatical errors and updated keys to match ([#1005](https://github.com/saadeghi/daisyui/issues/1005)) ([bf2365d](https://github.com/saadeghi/daisyui/commit/bf2365d416e02bee61fd85f0d4d68bca97009d07))
-
-## [2.22.0](https://github.com/saadeghi/daisyui/compare/v2.21.0...v2.22.0) (2022-08-04)
-
-
-### Bug Fixes
-
-* [#995](https://github.com/saadeghi/daisyui/issues/995) ([47fbdd8](https://github.com/saadeghi/daisyui/commit/47fbdd8b43c7793a58fe466e8405bbee889cf10b))
-
-## [2.21.0](https://github.com/saadeghi/daisyui/compare/v2.20.0...v2.21.0) (2022-08-04)
-
-## [2.20.0](https://github.com/saadeghi/daisyui/compare/v2.19.1...v2.20.0) (2022-07-23)
-
-
-### Bug Fixes
-
-* [#970](https://github.com/saadeghi/daisyui/issues/970) ([4af523d](https://github.com/saadeghi/daisyui/commit/4af523dd6228722ab7aa73445caa25cb9af31894))
-
-### [2.19.1](https://github.com/saadeghi/daisyui/compare/v2.19.0...v2.19.1) (2022-07-20)
-
-
-### Bug Fixes
-
-* [#957](https://github.com/saadeghi/daisyui/issues/957) ([8f8d7fb](https://github.com/saadeghi/daisyui/commit/8f8d7fbe21d420976a759fff82e1df1e7c3b9317))
-
-## [2.19.0](https://github.com/saadeghi/daisyui/compare/v2.18.2...v2.19.0) (2022-07-09)
-
-
-### Features
-
-* add new `toast` component ([b57457f](https://github.com/saadeghi/daisyui/commit/b57457f3c3039ad9fabcf551e4f50ca19c754674))
-
-### [2.18.2](https://github.com/saadeghi/daisyui/compare/v2.18.0...v2.18.2) (2022-07-09)
-
-## [2.18.0](https://github.com/saadeghi/daisyui/compare/v2.17.0...v2.18.0) (2022-07-03)
-
-### Features
-* add new `bottom-navigation` component
-
-### Bug Fixes
-
-* spelling correction ([#905](https://github.com/saadeghi/daisyui/issues/905)) ([d6a9546](https://github.com/saadeghi/daisyui/commit/d6a9546ef29e83908b4c5597c81afd722632f5c8))
-
-## [2.17.0](https://github.com/saadeghi/daisyui/compare/v2.16.0...v2.17.0) (2022-06-22)
-
-
-### Features
-
-* add `btn-group-vertical` ([41ce08c](https://github.com/saadeghi/daisyui/commit/41ce08c18dede1524627c2395ec5f611711d4907))
-
-## [2.16.0](https://github.com/saadeghi/daisyui/compare/v2.15.4...v2.16.0) (2022-06-22)
-
-### [2.15.4](https://github.com/saadeghi/daisyui/compare/v2.15.3...v2.15.4) (2022-06-15)
-
-### [2.15.3](https://github.com/saadeghi/daisyui/compare/v2.15.2...v2.15.3) (2022-06-10)
-
-### [2.15.2](https://github.com/saadeghi/daisyui/compare/v2.15.1...v2.15.2) (2022-05-30)
-
-
-### Bug Fixes
-
-* [#816](https://github.com/saadeghi/daisyui/issues/816) ([b16ec4f](https://github.com/saadeghi/daisyui/commit/b16ec4f25d3dd73bb848c2cee23147ad05f0d22d))
-* [#823](https://github.com/saadeghi/daisyui/issues/823) ([7db4885](https://github.com/saadeghi/daisyui/commit/7db48850a0e47fc83e9b28c3f4f6aa2d15a11872))
-
-### [2.15.1](https://github.com/saadeghi/daisyui/compare/v2.15.0...v2.15.1) (2022-05-24)
-
-
-### Bug Fixes
-
-* [#807](https://github.com/saadeghi/daisyui/issues/807) ([e81fda2](https://github.com/saadeghi/daisyui/commit/e81fda2db63ffc758597e16f08a0280b9f4d60e3))
-
-## [2.15.0](https://github.com/saadeghi/daisyui/compare/v2.14.4...v2.15.0) (2022-05-15)
-
-### [2.14.4](https://github.com/saadeghi/daisyui/compare/v2.14.3...v2.14.4) (2022-05-15)
-
-
-### Bug Fixes
-
-* [#739](https://github.com/saadeghi/daisyui/issues/739) ([2bb7e57](https://github.com/saadeghi/daisyui/commit/2bb7e57864e086313d6ed04769785d3b8db2dc64))
-* tabindex=0 breaks collapse with checkbox on safari ([#784](https://github.com/saadeghi/daisyui/issues/784)) ([f60c010](https://github.com/saadeghi/daisyui/commit/f60c0100d03ebce37ef936bc3666bdebedf42633))
-
-### [2.14.3](https://github.com/saadeghi/daisyui/compare/v2.14.2...v2.14.3) (2022-04-30)
-
-
-### Bug Fixes
-
-* [#721](https://github.com/saadeghi/daisyui/issues/721) ([3259d00](https://github.com/saadeghi/daisyui/commit/3259d00c1b8eb112f2a611dca7d246a08698815d))
-* [#753](https://github.com/saadeghi/daisyui/issues/753) ([2fb28c4](https://github.com/saadeghi/daisyui/commit/2fb28c474859acbea19461fd9ba8090d4f9e567c))
-* [#766](https://github.com/saadeghi/daisyui/issues/766) ([ac58329](https://github.com/saadeghi/daisyui/commit/ac58329143d87d9f6f3f5cc590b1deda15663a84))
-
-### [2.14.2](https://github.com/saadeghi/daisyui/compare/v2.14.1...v2.14.2) (2022-04-23)
-
-
-### Bug Fixes
-
-* [#736](https://github.com/saadeghi/daisyui/issues/736) ([3946525](https://github.com/saadeghi/daisyui/commit/394652539ccaeb8b368bd0a7010ba495cbc105d2))
-* [#740](https://github.com/saadeghi/daisyui/issues/740) ([d133cfd](https://github.com/saadeghi/daisyui/commit/d133cfd3c0ed6513bf318b75d3b540c12aa5e65b))
-
-### [2.14.1](https://github.com/saadeghi/daisyui/compare/v2.14.0...v2.14.1) (2022-04-18)
-
-
-### Bug Fixes
-
-* [#726](https://github.com/saadeghi/daisyui/issues/726) ([#728](https://github.com/saadeghi/daisyui/issues/728)) ([5f765f1](https://github.com/saadeghi/daisyui/commit/5f765f11ab0c40597fa9ca28199159f042581dd4))
-* Change `cupcake` for `cmyk` ([#724](https://github.com/saadeghi/daisyui/issues/724)) ([0546093](https://github.com/saadeghi/daisyui/commit/054609306728e79394fa891b0aa2e69b14e403e1))
-
-## [2.14.0](https://github.com/saadeghi/daisyui/compare/v2.13.6...v2.14.0) (2022-04-15)
-
-
-### Bug Fixes
-
-* [#684](https://github.com/saadeghi/daisyui/issues/684) ([d8533f5](https://github.com/saadeghi/daisyui/commit/d8533f51f57cc12304530f923afe145397061b17))
-* [#693](https://github.com/saadeghi/daisyui/issues/693) ([10a34c7](https://github.com/saadeghi/daisyui/commit/10a34c79dbc5f6969a04802b26de17a16b3a3ea2))
-* [#704](https://github.com/saadeghi/daisyui/issues/704) ([b604e46](https://github.com/saadeghi/daisyui/commit/b604e467a1bdc054b9e4e2e7d0576b68e5df781b))
-* [#713](https://github.com/saadeghi/daisyui/issues/713) ([0db6d9f](https://github.com/saadeghi/daisyui/commit/0db6d9f6b96faf1e64da3089b5a9b6f2a0294552))
-
-### [2.13.6](https://github.com/saadeghi/daisyui/compare/v2.13.5...v2.13.6) (2022-04-02)
-
-
-### Bug Fixes
-
-* [#666](https://github.com/saadeghi/daisyui/issues/666) 🔥😈🔥 ([fb69933](https://github.com/saadeghi/daisyui/commit/fb69933b023208c62f6e9b03de386b194790aba2))
-* [#667](https://github.com/saadeghi/daisyui/issues/667) ([5d66013](https://github.com/saadeghi/daisyui/commit/5d66013814864a7db43d0c9f1f0385cd636b61c3))
-* [#675](https://github.com/saadeghi/daisyui/issues/675) ([8e7887b](https://github.com/saadeghi/daisyui/commit/8e7887b90a695b236077cd61e4a3e31513a9e954))
-
-### [2.13.5](https://github.com/saadeghi/daisyui/compare/v2.13.4...v2.13.5) (2022-03-31)
-
-
-### Bug Fixes
-
-* `drawer-end` issue when there's another drawer inside it ([d6e8b9c](https://github.com/saadeghi/daisyui/commit/d6e8b9c5ed9c129ca0a75d2e592d9637132af300))
-
-### [2.13.4](https://github.com/saadeghi/daisyui/compare/v2.13.3...v2.13.4) (2022-03-28)
-
-
-### Bug Fixes
-
-* [#655](https://github.com/saadeghi/daisyui/issues/655) ([9b8f5ae](https://github.com/saadeghi/daisyui/commit/9b8f5ae639e75be8d3b93c1dffed76fa5288ae92))
-
-### [2.13.3](https://github.com/saadeghi/daisyui/compare/v2.13.2...v2.13.3) (2022-03-26)
-
-### [2.13.2](https://github.com/saadeghi/daisyui/compare/v2.13.1...v2.13.2) (2022-03-25)
-
-
-### Bug Fixes
-
-* [#648](https://github.com/saadeghi/daisyui/issues/648) ([12c063a](https://github.com/saadeghi/daisyui/commit/12c063a02b41cae37bd520cc18c11fed006643d7))
-
-### [2.13.1](https://github.com/saadeghi/daisyui/compare/v2.12.0...v2.13.1) (2022-03-25)
-
-
-### Bug Fixes
-
-* [#651](https://github.com/saadeghi/daisyui/issues/651) ([52baf6b](https://github.com/saadeghi/daisyui/commit/52baf6b3f83faf2e33034eeef8c3e98a020753b6))
-
-## [2.13.0](https://github.com/saadeghi/daisyui/compare/v2.12.0...v2.13.0) (2022-03-24)
-
-
-### Features
-
-* Improve color contrast on `aqua` ,`emerald` ,`light` themes
-
-## [2.12.0](https://github.com/saadeghi/daisyui/compare/v2.11.1...v2.12.0) (2022-03-24)
-
-
-### Features
-
-* drawer now has `width:100%` and `height:100svh` and  by default (if supported). fixes: [#313](https://github.com/saadeghi/daisyui/issues/313) on iOS 15.4+ ([c8b104a](https://github.com/saadeghi/daisyui/commit/c8b104af724761093612878ba283aa5f16756f0c))
-* now every element with `data-theme` will have `base-100` color for background and `base-content` color for text by default. ([216d115](https://github.com/saadeghi/daisyui/commit/216d115acf6c30711418445764b9c4a9628e3462))
-* Improve `base-200` and `base-300` colors on `light` theme
-
-### Bug Fixes
-
-* [#610](https://github.com/saadeghi/daisyui/issues/610) ([359556c](https://github.com/saadeghi/daisyui/commit/359556c3adf7e306896bad1f17f7cf9724b3fc68))
-* [#643](https://github.com/saadeghi/daisyui/issues/643) ([7d3aaf3](https://github.com/saadeghi/daisyui/commit/7d3aaf3f2383a81d67221e407acf515334a35574))
-* [#644](https://github.com/saadeghi/daisyui/issues/644) ([ee05252](https://github.com/saadeghi/daisyui/commit/ee05252867e9afdc237c8219a64cda44a5e9803a))
-* [#645](https://github.com/saadeghi/daisyui/issues/645) ([fffb937](https://github.com/saadeghi/daisyui/commit/fffb937b1bece917543ca1d72c12adb65ba4104e))
-
-### [2.11.1](https://github.com/saadeghi/daisyui/compare/v2.11.0...v2.11.1) (2022-03-22)
-
-
-### Bug Fixes
-
-* [#636](https://github.com/saadeghi/daisyui/issues/636) ([38b743b](https://github.com/saadeghi/daisyui/commit/38b743b433922a3fd78f6001599214671722d11e))
-
-## [2.11.0](https://github.com/saadeghi/daisyui/compare/v2.10.0...v2.11.0) (2022-03-18)
-
-
-### Features
-
-* add new responsive modifier classes for `modal`: `modal-bottom` and `modal-middle` (fixes [#616](https://github.com/saadeghi/daisyui/issues/616)) ([9e5313f](https://github.com/saadeghi/daisyui/commit/9e5313f0fe2b3bc8a3f4bb27c76ddf93fed2637b))
-* indicator positions are now responsive and accept sm:, md:, etc. prefixes ([5e7ac34](https://github.com/saadeghi/daisyui/commit/5e7ac344afce6b06318473fb029fcd598819a8d9))
-
-
-### Bug Fixes
-
-* [#605](https://github.com/saadeghi/daisyui/issues/605) ([f68fc08](https://github.com/saadeghi/daisyui/commit/f68fc085360cdaf592f417f3e39eec488df60385))
-
-## [2.10.0](https://github.com/saadeghi/daisyui/compare/v2.8.0...v2.10.0) (2022-03-17)
-
-
-### Bug Fixes
-
-* [#601](https://github.com/saadeghi/daisyui/issues/601) ([462920f](https://github.com/saadeghi/daisyui/commit/462920f3344b7df03ce5394e0f21d8f930dfc32f))
-* [#615](https://github.com/saadeghi/daisyui/issues/615) ([e8f6b1b](https://github.com/saadeghi/daisyui/commit/e8f6b1b2b295df161a8643c04f53363c26842bdd))
-* [#626](https://github.com/saadeghi/daisyui/issues/626) ([b7da2b6](https://github.com/saadeghi/daisyui/commit/b7da2b617db6a57a632c7e90bb41bd4bf2a6f1c5))
-
-## [2.9.0](https://github.com/saadeghi/daisyui/compare/v2.8.0...v2.9.0) (2022-03-16)
-
-
-### Bug Fixes
-
-* [#578](https://github.com/saadeghi/daisyui/issues/578) ([11a5781](https://github.com/saadeghi/daisyui/commit/11a5781864fd39ee3d8111bc845f8cd3c9123eab))
-* [#601](https://github.com/saadeghi/daisyui/issues/601) ([462920f](https://github.com/saadeghi/daisyui/commit/462920f3344b7df03ce5394e0f21d8f930dfc32f))
-* [#615](https://github.com/saadeghi/daisyui/issues/615) ([e8f6b1b](https://github.com/saadeghi/daisyui/commit/e8f6b1b2b295df161a8643c04f53363c26842bdd))
-
-## [2.8.0](https://github.com/saadeghi/daisyui/compare/v2.7.0...v2.8.0) (2022-03-13)
-
-
-### Bug Fixes
-
-* [#574](https://github.com/saadeghi/daisyui/issues/574) ([21f1de3](https://github.com/saadeghi/daisyui/commit/21f1de3db75fc7a164e9059b6d0c994bf6a58153))
-* [#586](https://github.com/saadeghi/daisyui/issues/586) ([e88e5e3](https://github.com/saadeghi/daisyui/commit/e88e5e3b21b802713f74b58eae720a0f06cc7c29))
-
-## [2.7.0](https://github.com/saadeghi/daisyui/compare/v2.6.4...v2.7.0) (2022-03-13)
-
-
-### Features
-
-* divider text now has nowrap ([f41fb50](https://github.com/saadeghi/daisyui/commit/f41fb506995eb7bf71ee7cee96ac0ac0f36eee6a))
-
-
-### Bug Fixes
-
-* menu item children border radius ([015e762](https://github.com/saadeghi/daisyui/commit/015e762a45d6548c3c31dbeee86af87789ca63a8))
-* mockup min width size ([cdb653e](https://github.com/saadeghi/daisyui/commit/cdb653e6281f273ada293dc2cceab22622a09e8e))
-* typo ([#582](https://github.com/saadeghi/daisyui/issues/582)) ([26d5116](https://github.com/saadeghi/daisyui/commit/26d5116d54ffcd5ede002306587308e23e8efa27))
-
-### [2.6.4](https://github.com/saadeghi/daisyui/compare/v2.6.3...v2.6.4) (2022-03-09)
-
-
-### Bug Fixes
-
-* [#566](https://github.com/saadeghi/daisyui/issues/566) ([51519f3](https://github.com/saadeghi/daisyui/commit/51519f3257c921ab0cb2f7cb8ed0dde4f9bdba34))
-* [#569](https://github.com/saadeghi/daisyui/issues/569) ([b700b2c](https://github.com/saadeghi/daisyui/commit/b700b2c9d011bc13ef365ecdb7b4c4d80c89afe8))
-
-### [2.6.3](https://github.com/saadeghi/daisyui/compare/v2.6.2...v2.6.3) (2022-03-07)
-
-
-### Bug Fixes
-
-* [#559](https://github.com/saadeghi/daisyui/issues/559) ([442c2e1](https://github.com/saadeghi/daisyui/commit/442c2e15efff3899e53766593a3e6f7d90cdc850))
-
-### [2.6.2](https://github.com/saadeghi/daisyui/compare/v2.6.1...v2.6.2) (2022-03-07)
-
-
-### Bug Fixes
-
-* [#558](https://github.com/saadeghi/daisyui/issues/558) ([b4a70b7](https://github.com/saadeghi/daisyui/commit/b4a70b7f0b07aead23889f07fbd07b94ef767dc6))
-
-### [2.6.1](https://github.com/saadeghi/daisyui/compare/v2.6.0...v2.6.1) (2022-03-07)
-
-
-### Bug Fixes
-
-* [#558](https://github.com/saadeghi/daisyui/issues/558) ([8997f60](https://github.com/saadeghi/daisyui/commit/8997f601b4c3706f8c3f8e5d1873f8c659f7ea40))
-
-## [2.6.0](https://github.com/saadeghi/daisyui/compare/v2.5.0...v2.6.0) (2022-03-04)
-
-
-### Features
-
-* add 3 new themes: `night` `cafe` `winter` ([2ad9cba](https://github.com/saadeghi/daisyui/commit/2ad9cbac958c6dce181da91f7b19b0b7ddeb91ba))
-* update `lofi` theme ([fd3bd4e](https://github.com/saadeghi/daisyui/commit/fd3bd4e696e81740a30c726e72e33cb547bac5e0))
-
-
-### Bug Fixes
-
-* [#425](https://github.com/saadeghi/daisyui/issues/425) ([6a81aa0](https://github.com/saadeghi/daisyui/commit/6a81aa0725303530adb1926e2acb33b182eb8670))
-
-## [2.5.0](https://github.com/saadeghi/daisyui/compare/v2.4.0...v2.5.0) (2022-03-04)
-
-
-### Bug Fixes
-
-* [#546](https://github.com/saadeghi/daisyui/issues/546) (docs) ([d5bd0f1](https://github.com/saadeghi/daisyui/commit/d5bd0f1709b67700930b262c4706147fa2b79208))
-* textarea state colors ([c1bf0d8](https://github.com/saadeghi/daisyui/commit/c1bf0d8fe5d1fa0b08bd9d7fa3c7bd95c6800ef2))
-
-## [2.4.0](https://github.com/saadeghi/daisyui/compare/v2.3.7-alpha.5...v2.4.0) (2022-03-03)
-
-
-### Features
-
-* Add new `prefix` config ([e87db57](https://github.com/saadeghi/daisyui/commit/e87db57398e63ff7680850a1f3f3af172983ebe8))
-
-### [2.3.6](https://github.com/saadeghi/daisyui/compare/v2.3.5...v2.3.6) (2022-03-03)
-
-### [2.3.5](https://github.com/saadeghi/daisyui/compare/v2.3.4...v2.3.5) (2022-03-03)
-
-### [2.3.4](https://github.com/saadeghi/daisyui/compare/v2.3.1...v2.3.4) (2022-03-03)
-
-### [2.3.3](https://github.com/saadeghi/daisyui/compare/v2.3.1...v2.3.3) (2022-03-03)
-
-### [2.3.2](https://github.com/saadeghi/daisyui/compare/v2.3.1...v2.3.2) (2022-03-03)
-
-### [2.3.1](https://github.com/saadeghi/daisyui/compare/v2.3.0...v2.3.1) (2022-03-03)
-
-## [2.3.0](https://github.com/saadeghi/daisyui/compare/v2.2.2...v2.3.0) (2022-03-02)
-
-
-### Features
-
-* Add new `prefix` config ([#537](https://github.com/saadeghi/daisyui/issues/537)) ([49e05fa](https://github.com/saadeghi/daisyui/commit/49e05faeb189917d7d4628b3d3201ba6fdfea258))
-* Add new dependencies:
-  - `postcss-class-prefix`
-  - `postcss-js`
-
-
-### Bug Fixes
-
-* [#514](https://github.com/saadeghi/daisyui/issues/514) ([6957b63](https://github.com/saadeghi/daisyui/commit/6957b637ae14db9ff942a4ea94e4b62214ebf887))
-* [#523](https://github.com/saadeghi/daisyui/issues/523) ([7d4ceb6](https://github.com/saadeghi/daisyui/commit/7d4ceb63238b62d4e5098d2bf2d285b9d3ab76aa))
-
-### [2.2.2](https://github.com/saadeghi/daisyui/compare/v2.2.1...v2.2.2) (2022-02-25)
-
-### [2.2.1](https://github.com/saadeghi/daisyui/compare/v2.2.0...v2.2.1) (2022-02-24)
-
-
-### Bug Fixes
-
-* [#511](https://github.com/saadeghi/daisyui/issues/511) ([38cb841](https://github.com/saadeghi/daisyui/commit/38cb841fa859efc1f30ce7d7ece0fe8717d3d812))
-
-## [2.2.0](https://github.com/saadeghi/daisyui/compare/v2.1.0...v2.2.0) (2022-02-22)
-
-
-### Bug Fixes
-
-* [#500](https://github.com/saadeghi/daisyui/issues/500), [#492](https://github.com/saadeghi/daisyui/issues/492) (fix wrong colors for info, success, warning, error) ([7373ec2](https://github.com/saadeghi/daisyui/commit/7373ec2d5de571bff6e24bcaf3bed25574997720))
-* [#502](https://github.com/saadeghi/daisyui/issues/502) ([4ca3c4b](https://github.com/saadeghi/daisyui/commit/4ca3c4b2064da9593f1711e57ffc9444c16b9745))
-
-## [2.1.0](https://github.com/saadeghi/daisyui/compare/v2.0.9...v2.1.0) (2022-02-19)
-
-### Features
-
-- Improved all existing theme colors
-
-- Added 4 new themes:
-
-```
-autumn
-business
-acid
-lemonade
-```
-
-- Now only the following color names are required for daisyUI themes. All [other colors](https://daisyui.com/docs/colors) are optional and they will be generated magically ✨ (unless they're specified in the theme). [[Read more](https://daisyui.com/docs/themes)]
-
-```
-primary
-secondary
-accent
-neutral
-base-100
-```
-
-- remove unused `windi.js` file
-
-### Bug Fixes
-
-- Add missing `rounded-box` utility classes
-- Fix avatar inidcator color
-- [#477](https://github.com/saadeghi/daisyui/issues/477) ([d6fee67](https://github.com/saadeghi/daisyui/commit/d6fee67230ca44701ba7c488eb41f71db950ed6f))
-- typo in docs ([1851cab](https://github.com/saadeghi/daisyui/commit/1851cabee4f99c790831734cdfb3ca8ebc23bfe7))
-
-### [2.0.9](https://github.com/saadeghi/daisyui/compare/v2.0.8...v2.0.9) (2022-02-17)
-
-### [2.0.8](https://github.com/saadeghi/daisyui/compare/v2.0.7...v2.0.8) (2022-02-17)
-
-### [2.0.7](https://github.com/saadeghi/daisyui/compare/v2.0.5...v2.0.7) (2022-02-17)
-
-### [2.0.6](https://github.com/saadeghi/daisyui/compare/v2.0.5...v2.0.6) (2022-02-15)
-
-### [2.0.5](https://github.com/saadeghi/daisyui/compare/v2.0.4...v2.0.5) (2022-02-15)
-
-### [2.0.4](https://github.com/saadeghi/daisyui/compare/v2.0.3...v2.0.4) (2022-02-15)
-
-### [2.0.3](https://github.com/saadeghi/daisyui/compare/v2.0.2...v2.0.3) (2022-02-15)
-
-### Features
-
-- Move index.js and /colors to /src/index.js and /src/colors
-  If you're importing themes from `daisyui/colors/themes`, you should import them from `daisyui/src/colors/themes` instead.
-
-### Bug Fixes
-
-- dropdown not working ([3f2559e](https://github.com/saadeghi/daisyui/commit/3f2559ec59ea3d1ce1d66006713ca070be551255))
-
-### [2.0.2](https://github.com/saadeghi/daisyui/compare/v2.0.0...v2.0.2) (2022-02-14)
-
-## [2.0.0](https://github.com/saadeghi/daisyui/compare/v2.0.0-next.0...v2.0.0) (2022-02-13)
-
-### Breaking Changes
-
-- 🆕 Tailwind CSS 3.0 is now a dependency
-- 🎨 Improvements applied to the value of following colors on daisyUI default themes. Below colors got lighter on light themes and they got darker on dark themes (due to adding new `*-content` color names)
-
-  - `info`
-  - `success`
-  - `warning`
-  - `error`
-
-  If you used those color names inside your pages (like `bg-info`, `text-error`, etc.) Make sure your colors look good on both light and dark themes.  
-  There are new content colors are added so for example, if `text-info` contrast doesn't look good, use the new `text-info-content` color instead.
-
-### Features
-
-- 🔥 Updated Tailwind CSS dev dependency to v3.0
-- 🚀 Moved document website from Nuxt to SvelteKit
-- 🆕 Add new `swap` component
-- 🆕 Add new `radial-progress` component
-- 👏 Improve `range` component to show the filled value with colors
-- 👏 `menu` component now supports submenus both vertically and horizontally
-
-- 🆕 Add new foreground colors (fixes #187)
-
-  - `info-content`
-  - `success-content`
-  - `warning-content`
-  - `error-content`
-
-- 🆕 Add new responsive modifiers for `divider` component:
-
-  - divider-vertical
-  - divider-horizontal
-
-- 🆕 Add new responsive modifiers for `stats` component (fixes #440):
-
-  - stats-vertical
-  - stats-horizontal
-
-- 🤩 All focus styles that were using box shadows are now using outline instead
-
-- 🤩 Now every item inside `.menu li` will be styled as menu item (not only `a`, `span`, `button`)
-
-- 😍 Add copy to clipboard functionality for document website (fixes #293)
-
-- 🆕 Add new modifiers for `mask` component. This classes are used to show first half or second half of a mask"
-
-  - mask-half-1
-  - mask-half-2
-
-- 🤩 Empty `<li>` in a `menu` now shows a separator line.
-
-- 🆕 Add new `input-group` component
-- 🆕 Add new `rating-half` modifier `rating` component (to show half stars)
-- 📐 `avatar` image now has `1:1` aspect ratio
-
-- 😍 Add support for `RGB`, `HSL`,etc. color formats for daisyUI themes in `tailiwnd.config.js`:
-
-```javascript
-module.exports = {
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          // until now, only hex format was supported:
-          primary: "#a991f7",
-          "primary-focus": "#8462f4",
-          "primary-content": "#ffffff",
-
-          // now it can be anything:
-          secondary: "red",
-          "secondary-focus": "rgb(243,204,48)",
-          "secondary-content": "hsl(0, 0%, 100%)",
-
-          //...
-        },
-      },
-    ],
-  },
-};
-```
-
-- 🌗 Now system dark mode theme doesn't need to be named `dark` anymore only.  
-  It can be any theme and it can be specified in `tailwind.config.js` using new `darkTheme` config:
-
-```javascript
-module.exports = {
-  daisyui: {
-    darkTheme: "synthwave"",
-  },
-}
-```
-
-- 👏 The following colors now are optional on themes and if they're not specified, their fallback colors will be used:
-
-```js
-"primary-focus"; // fallback : "primary"
-"secondary-focus"; // fallback : "secondary"
-"accent-focus"; // fallback : "accent"
-"neutral-focus"; // fallback : "neutral"
-"base-200"; // fallback : "base-100"
-"base-300"; // fallback : "base-300"
-"info-content"; // fallback : "neutral-content"
-"success-content"; // fallback : "neutral-content"
-"warning-content"; // fallback : "neutral-content"
-"error-content"; // fallback : "neutral-content"
-```
-
-### Bug Fixes
-
-- Fix overflow-hidden issue on `menu` component
-- Fix pixelated checkbox bug in Firefox (fixes #427)
-- Fix responsive child classes to be able to get prefixes (fixes #449, #371, #346)
-- Fix card responsive image size calculation (fixes #181, #30)
-- Fix code indentation in document website (fixes #450)
-- Fix responsive button demo on document website (fixes #376)
-- Fix right padding on `select` component
-- Improve some colors on themes
