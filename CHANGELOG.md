@@ -68,7 +68,7 @@ All notable changes to this project will be documented in this file. See [standa
 
   Even with providing a responsive and collapsible sidebar, it no longer has daisyUI 2.x limitations like losing the scroll position when the page is changes or disabling the scroll on the root element.
 
-* Now `drawer` is now hidden by default.
+* Now `drawer` is hidden by default.
 
   Instead of using uncustomizable `drawer-mobile`, we can use a responsive class like `lg:drawer-open` to show drawer on specific screen sizes.
 
@@ -233,9 +233,9 @@ All notable changes to this project will be documented in this file. See [standa
 
     https://daisyui.com/components/menu/#collapsible-submenu-that-works-with-class-names
 
-  - `badge` inside the menu item now justifies to the end by default.
+  * `badge` inside the menu item now justifies to the end by default.
 
-  * New `.focus` class for menu items applies the same style when you focus the menu item using a mouse. This class name is usefull if you want to apply styles for keyboard navigation as well.
+  * New `.focus` class for menu items applies the same style when you focus the menu item using a mouse. This class name is useful if you want to apply styles for keyboard navigation as well.
   
 * `dropdown` now supports `<details>` tag as well. 
 
