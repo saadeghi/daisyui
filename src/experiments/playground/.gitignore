@@ -15,4 +15,4 @@
 !/src/pages/RTL.astro
 
 /src/layouts/*
-!/src/pages/Main.astro
+!/src/layouts/Main.astro
