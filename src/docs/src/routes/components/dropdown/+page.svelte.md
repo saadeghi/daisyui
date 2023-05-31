@@ -36,13 +36,13 @@ data="{[
   </ul>
 </details>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$dropdown">
-  <label tabindex="0" class="$$btn m-1">open or close</label>
-  <ul tabindex="0" class="$$dropdown-content $$menu p-2 shadow bg-base-100 rounded-box w-52">
+`<details class="$$dropdown mb-32">
+  <summary class="m-1 btn">open or close</summary>
+  <ul class="p-2 shadow $$menu $$dropdown-content bg-base-100 $$rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
-</div>`
+</details>`
 }</pre>
 </Component>
 
