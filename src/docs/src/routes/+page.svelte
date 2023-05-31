@@ -122,12 +122,21 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div>
           <div
-            data-tip={isClipboardButtonPressed ? "copied" : "copy"}
-            class="tooltip tooltip-accent">
+            class="flex flex-col items-center gap-6 [text-shadow:hsl(var(--p)/.5)_0_0_2rem;] xl:flex-row">
             <div
-              class="btn btn-sm cursor-copy rounded-full font-mono font-light normal-case"
-              on:click={() => copyText("npm i -D daisyui")}>
-              <pre><code>npm i -D daisyui</code></pre>
+              data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+              class="tooltip tooltip-accent">
+              <button
+                class="btn btn-sm cursor-copy rounded-full font-mono font-light normal-case"
+                on:click={() => copyText("npm i -D daisyui")}>
+                <pre><code>npm i -D daisyui</code></pre>
+              </button>
+            </div>
+            <div class="flex gap-2">
+              <a class="link link-hover link-primary" href="/docs/changelog/">
+                {@html $t("daisyUI 3.0 is available now!")}
+              </a>
+              🎉
             </div>
           </div>
           <div class="h-4" />
