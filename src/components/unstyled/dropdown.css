@@ -37,3 +37,6 @@
 .dropdown:focus-within .dropdown-content {
   @apply visible opacity-100;
 }
+.dropdown:is(details) summary::-webkit-details-marker {
+  @apply hidden;
+}
