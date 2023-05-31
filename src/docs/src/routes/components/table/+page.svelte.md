@@ -25,8 +25,8 @@ data="{[
 />
 
 <Component title="Table">
-<div class="overflow-x-auto w-full">
-  <table class="table w-full">
+<div class="overflow-x-auto">
+  <table class="table">
     <thead>
       <tr>
         <th></th>
@@ -59,7 +59,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="$$table w-full">
+  <table class="$$table">
     <!-- head -->
     <thead>
       <tr>
@@ -98,8 +98,8 @@ data="{[
 </Component>
 
 <Component title="Table with an active row">
-<div class="overflow-x-auto w-full">
-  <table class="table w-full">
+<div class="overflow-x-auto">
+  <table class="table">
     <thead>
       <tr>
         <th></th>
@@ -132,7 +132,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="$$table w-full">
+  <table class="$$table">
     <!-- head -->
     <thead>
       <tr>
@@ -171,8 +171,8 @@ data="{[
 </Component>
 
 <Component title="Table with a row that highlights on hover">
-<div class="overflow-x-auto w-full">
-  <table class="table w-full">
+<div class="overflow-x-auto">
+  <table class="table">
     <thead>
       <tr>
         <th></th>
@@ -205,7 +205,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="$$table w-full">
+  <table class="$$table">
     <!-- head -->
     <thead>
       <tr>
@@ -244,8 +244,8 @@ data="{[
 </Component>
 
 <Component title="Zebra">
-<div class="overflow-x-auto w-full">
-  <table class="table table-zebra w-full">
+<div class="overflow-x-auto">
+  <table class="table table-zebra">
     <thead>
       <tr>
         <th></th>
@@ -278,7 +278,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="$$table $$table-zebra w-full">
+  <table class="$$table $$table-zebra">
     <!-- head -->
     <thead>
       <tr>
@@ -317,8 +317,8 @@ data="{[
 </Component>
 
 <Component title="Table with visual elements">
-<div class="overflow-x-auto w-full">
-  <table class="table w-full">
+<div class="overflow-x-auto">
+  <table class="table">
     <thead>
       <tr>
         <th>
@@ -462,8 +462,8 @@ data="{[
   </table>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="overflow-x-auto w-full">
-  <table class="$$table w-full">
+`<div class="overflow-x-auto">
+  <table class="$$table">
     <!-- head -->
     <thead>
       <tr>
@@ -618,7 +618,7 @@ data="{[
 
 <Component title="Table xs">
 <div class="overflow-x-auto">
-  <table class="table table-xs w-full">
+  <table class="table table-xs">
     <thead>
       <tr>
         <th></th> 
@@ -827,7 +827,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="$$table $$table-xs w-full">
+  <table class="$$table $$table-xs">
     <thead>
       <tr>
         <th></th> 
@@ -1039,7 +1039,7 @@ data="{[
 
 <Component title="Table with pinned-rows">
 <div class="overflow-x-auto h-96">
-  <table class="table w-full table-pin-rows">
+  <table class="table table-pin-rows">
   <thead>
     <tr>
       <th>A</th>
@@ -1202,7 +1202,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto h-96">
-  <table class="$$table w-full $$table-pin-rows">
+  <table class="$$table $$table-pin-rows">
   <thead>
     <tr>
       <th>A</th>
@@ -1368,7 +1368,7 @@ data="{[
 
 <Component title="Table with pinned-rows and pinned-cols">
 <div class="overflow-x-auto h-96 w-96">
-  <table class="table table-xs w-full table-pin-rows table-pin-cols">
+  <table class="table table-xs table-pin-rows table-pin-cols">
     <thead>
       <tr>
         <th></th> 
@@ -1599,7 +1599,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="overflow-x-auto">
-  <table class="$$table $$table-xs w-full">
+  <table class="$$table $$table-xs $$table-pin-rows $$table-pin-cols">
     <thead>
       <tr>
         <th></th> 
@@ -1806,7 +1806,7 @@ data="{[
       <tr>
         <th>20</th> 
         <td>Lorelei Blackstone</td> 
-        <td>Data Coordiator</td> 
+        <td>Data Coordinator</td> 
         <td>Witting, Kutch and Greenfelder</td> 
         <td>Kazakhstan</td> 
         <td>6/3/2020</td> 

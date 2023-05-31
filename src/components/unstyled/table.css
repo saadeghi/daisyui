@@ -1,5 +1,5 @@
 .table {
-  @apply relative;
+  @apply relative w-full;
   :where(.table-pin-rows thead tr) {
     @apply sticky top-0 bg-base-100 z-[1];
   }
