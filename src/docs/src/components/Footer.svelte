@@ -62,7 +62,7 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="opencollective"
+          href="https://opencollective.com/daisyui"
           class="link link-hover group">
           OpenCollective
           {@html newtabicon}
