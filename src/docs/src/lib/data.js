@@ -572,7 +572,7 @@ export let pages = [
         tags: "drawer sidebar menu",
         href: "/components/drawer/",
         icon: "",
-        badge: "",
+        badge: "updated",
       },
       {
         name: "Footer",
