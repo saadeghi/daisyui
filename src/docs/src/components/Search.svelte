@@ -70,7 +70,7 @@
     on:focus={removeScrollPaddingFromNavbar}
     on:blur={addScrollPaddingToNavbar}
     let:result>
-    <div class="py-1 text-sm">
+    <div class="py-1 text-sm font-normal">
       {searchIndex[result.index].name}
     </div>
   </Typeahead>

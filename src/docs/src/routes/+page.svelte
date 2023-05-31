@@ -133,7 +133,7 @@
               </button>
             </div>
             <div class="flex gap-2">
-              <a class="link link-hover link-primary" href="/docs/changelog/">
+              <a class="link link-hover link-primary rounded-full" href="/docs/changelog/">
                 {@html $t("daisyUI 3.0 is available now!")}
               </a>
               🎉
@@ -310,19 +310,19 @@
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 1)}
                       class:tab-active={activeMenuItemOnHeroMockup === 1}
-                      class="tab tab-lifted tab-border-none w-1/3 grow text-xs">
+                      class="tab tab-lifted tab-border-none w-1/3 grow whitespace-nowrap text-xs">
                       {$t("Features")}
                     </button>
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 2)}
                       class:tab-active={activeMenuItemOnHeroMockup === 2}
-                      class="tab tab-lifted tab-border-none w-1/3 grow text-xs">
+                      class="tab tab-lifted tab-border-none w-1/3 grow whitespace-nowrap text-xs">
                       {$t("Links")}
                     </button>
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 3)}
                       class:tab-active={activeMenuItemOnHeroMockup === 3}
-                      class="tab tab-lifted tab-border-none w-1/3 grow text-xs">
+                      class="tab tab-lifted tab-border-none w-1/3 grow whitespace-nowrap text-xs">
                       {$t("Message")}
                     </button>
                   </div>

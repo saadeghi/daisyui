@@ -5,9 +5,9 @@
 </script>
 
 <div title="Change Language" class="dropdown dropdown-end">
-  <div tabindex="0" class="btn btn-ghost gap-1 normal-case">
+  <div tabindex="0" class="btn btn-ghost normal-case">
     <svg
-      class="inline-block h-4 w-4 fill-current md:h-5 md:w-5"
+      class="h-5 w-5 fill-current"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
@@ -21,22 +21,19 @@
     <svg
       width="12px"
       height="12px"
-      class="ml-1 hidden h-3 w-3 fill-current opacity-60 sm:inline-block"
+      class="hidden h-2 w-2 fill-current opacity-60 sm:inline-block"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2048 2048">
       <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z" />
     </svg>
   </div>
   <div
-    class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px mt-16 w-56 overflow-y-auto shadow-2xl">
-    <ul class="menu menu-sm gap-1 p-3" tabindex="0">
+    class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 w-56 overflow-y-auto shadow">
+    <ul class="menu menu-sm gap-1" tabindex="0">
       {#each langs as langItem}
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
-            <button
-              class="flex"
-              class:active={$currentLang == langItem}
-              on:click={() => setLang(langItem)}>
+            <button class:active={$currentLang == langItem} on:click={() => setLang(langItem)}>
               {#if $t("__flag", {}, langItem, false) !== "__flag"}
                 <img
                   class="drop-shadow"
@@ -48,14 +45,12 @@
                     $t("__flag", {}, langItem)
                   ).replace(/\s/g, "-")}.svg`} />
               {/if}
-              <span class="flex flex-1 justify-between">
-                {$t("__name", {}, langItem)}
-                {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
-                  <span class="badge badge-sm badge-ghost">
-                    {$t("__status", {}, langItem)}
-                  </span>
-                {/if}
-              </span>
+              {$t("__name", {}, langItem)}
+              {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
+                <span class="badge badge-sm badge-ghost">
+                  {$t("__status", {}, langItem)}
+                </span>
+              {/if}
             </button>
           </li>
         {/if}
