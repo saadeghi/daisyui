@@ -327,5 +327,9 @@
   "Make your theme": "做一个主题",
   "More examples": "更多示例",
   "Support daisyUI's development": "支持daisyUI的开发",
+  "How to add custom styles for a specific theme?": "如何为一个指定的主题添加自定义样式？",
+  "You can write custom style for your elements only for a specific theme.": "你只能给一个指定的主题的元素写自定义样式。",
+  "In this example, .btn-twitter class only will have this style on light theme.": "在这个例子里，<code>.btn-twitter</code> 类只会在 <code>light</code> 主题中才会有这些样式",
+  "You can also add <a href='/docs/colors' class='link'>optional color names</a> to have full control over all colors.": "你还可以添加 <a href='/docs/colors' class='link'>可选颜色名称</a>，以完全控制所有颜色。",
   "": ""
 }
