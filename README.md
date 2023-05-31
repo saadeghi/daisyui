@@ -12,7 +12,7 @@
 
 [![][banner-url]][docs-url]
 
-# daisyUI 2.0
+# daisyUI 3.0
 
 [![][build]][build-url] [![][npm]][npm-url] [![][number-of-components]][docs-url] [![][license]][license-url]  
 [![][dl]][npm-url] [![][stars]][gh-url] [![][commit]][gh-url]
@@ -244,4 +244,4 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg
-[banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/card-3.png
+[banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/banner.png
