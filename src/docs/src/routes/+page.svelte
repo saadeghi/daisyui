@@ -696,11 +696,11 @@
       {@html $t(
         "daisyUI adds class names to Tailwind CSS<br />for all common UI components.<br />Class names like"
       )}
-      <a href="/components/button/" class="link">btn</a>
+      <a target="_blank" href="/components/button/" class="link">btn</a>
       ,
-      <a href="/components/card/" class="link">card</a>
+      <a target="_blank" href="/components/card/" class="link">card</a>
       ,
-      <a href="/components/toggle/" class="link">toggle</a>
+      <a target="_blank" href="/components/toggle/" class="link">toggle</a>
       {@html $t("and many more.")}
     </p>
     <div class="h-6" />

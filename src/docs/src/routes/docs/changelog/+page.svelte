@@ -10,4 +10,7 @@
   .prose .changelog-body h1 + p {
     display: none;
   }
+  .changelog-body img {
+    @apply rounded-box border border-base-content/10;
+  }
 </style>
