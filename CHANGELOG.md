@@ -4,11 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## 3.0.0 (2023-06-01)
 
-![daisyui3](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/daisyui3.png)
+
+<img alt="daisyui3" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/daisyui3.png"/>
+
 
 ### New components
 * New `loading` component. 
-  ![loading](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/loading.png)
+  
+  <img alt="loading" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/loading.png" width="500"/>
+
   Shows a loading spinner and can be used inside any element.  
 
   You can choose different spinners: `loading-spinner`, `loading-dots`, `loading-ring`, `loading-ball`, `loading-bars`, `loading-infinity`
@@ -19,7 +23,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 * New accordion.
 
-  ![accordion](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/accordion.png)
+  
+  <img alt="accordion" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/accordion.png" width="500"/>
+
 
   It's `collapse` but now we can use it with radio buttons which allows us to make a JS-free and accessible accordion.
 
@@ -27,7 +33,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 * New `join` class
 
-  ![join](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/join.png)
+  
+  <img alt="join" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/join.png" width="500"/>
+
 
   It's a replacement for `button-group` and `input-group` (with a more generic name) and it groups items together vertically or horizontally. It also gives border radius to the first and last item (based on responsive direction) and also if your item have a border, it overlaps the border between items so it looks good automatically.
 
@@ -35,9 +43,7 @@ All notable changes to this project will be documented in this file. See [standa
 
   https://daisyui.com/components/join/
 
-### Themes improvements
-
-  ![colors](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/colors.png)
+### Theme improvements
 
 * Now only `light` and `dark` themes are active by default. 
 
@@ -45,10 +51,12 @@ All notable changes to this project will be documented in this file. See [standa
 
   https://daisyui.com/docs/config/
 
-  This is a decent improvement for CSS size on majority of websites because most developers use only 2 or 3 themes but all themes being active by default, was increasing the CSS size unncecessarily.
+  This is a decent improvement for CSS size on majority of websites because most developers use only 2 or 3 themes but all themes being active by default, was increasing the CSS size unnecessarily.
+
+  <img alt="colors" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/colors.png" width="500"/>
 
 * The default `dark` theme is now darker and it looks more comfortable when using a website at night.
-* Following themese had improvements in colors and are now more accessible when combining different elemnts together:
+* Following themes had improvements in colors and are now more accessible when combining different elements together:
 
   `light`, `dark`, `bumblebee`, `forest`, `garden`, `halloween`, `luxury`, `retro`, `synthwave`
 
@@ -107,13 +115,17 @@ All notable changes to this project will be documented in this file. See [standa
 
 * All `tooltip` position modifiers (`tooltip-top`, `tooltip-bottom`, `tooltip-left`, `tooltip-right`) are now responsive as well. So you can move the tooltip to different directions using responsive prefixes. This is useful when your tooltip is on the edge of screen on some screen sizes.
 
-  ![tooltip](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/tooltip.png)
+  
+  <img alt="tooltip" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/tooltip.png" width="500"/>
+
 
   https://daisyui.com/components/tooltip/
 
 * New `btn-neutral` modifier class for button.
 
-  ![button](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/button.png)
+  
+  <img alt="button" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/button.png" width="500"/>
+
 
 * The default `btn` is now using `bg-base-200` background color instead of `neutral` (a high contrast dark color) color.
 
@@ -132,13 +144,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 * New `badge-neutral` modifier class for badge.
 
-  ![badge](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/badge.png)
+  
+  <img alt="badge" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/badge.png" width="500"/>
+
 
 * The default `badge` is now using `bg-base-200` background color instead of `neutral` (same as the default button)
 
 * badge inside the menu now justifies to the end by default. 
 
-  This is useful when you use a badge inside a menu item because it aligns to the end of the menu item autormatically.
+  This is useful when you use a badge inside a menu item because it aligns to the end of the menu item automatically.
 
   You can use `justify-self-*` to override this behavior.
 
@@ -146,9 +160,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 * All new style for `menu`
 
-  ![menu](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/menu.png)
+  
+  <img alt="menu" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/menu.png" width="500"/>
 
-  - All menu levels (`ul > li > ul > ...`) now have a consistent style. Showing a visually recognizable heirarchy (instead of openning a floating menu for the 2nd level by default and putting the rest of the levels inside the menu).
+
+  - All menu levels (`ul > li > ul > ...`) now have a consistent style. Showing a visually recognizable hierarchy (instead of opening a floating menu for the 2nd level by default and putting the rest of the levels inside the menu).
     
     This is good news for people who need multiple levels of submenu (either vertical or horizontal)
 
@@ -197,9 +213,11 @@ All notable changes to this project will be documented in this file. See [standa
   - Now menu has padding by default. No need for `p-*` class
   - Menu items have border radius by default (you can change it using `rounded-*` utility classes)
 
-    ![menu-2](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/menu-2.png)
+    
+    <img alt="menu-2" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/menu-2.png" width="500"/>
 
-  - instead of `menu-compact` class now we have the standrad sizing utlities like other elements:
+
+  - instead of `menu-compact` class now we have the standard sizing utilities like other elements:
     - `menu-xs`
     - `menu-sm`
     - `menu-md`
@@ -217,11 +235,13 @@ All notable changes to this project will be documented in this file. See [standa
 
   - `badge` inside the menu item now justifies to the end by default.
 
-  * New `.focus` class for manu items applies the same style when you focus the menu item using a mouse. This class name is usefull if you want to apply styles for keyboard navigation as well.
+  * New `.focus` class for menu items applies the same style when you focus the menu item using a mouse. This class name is usefull if you want to apply styles for keyboard navigation as well.
   
 * `dropdown` now supports `<details>` tag as well. 
 
-  ![dropdown](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/dropdown.png)
+  
+  <img alt="dropdown" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/dropdown.png" width="500"/>
+
   
   This allows us to close the dropdown on second click or control the dropdown using JavaScript.
 
@@ -243,7 +263,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * `btn` class can now be used on `<input type=radio>` and `<input type=checkbox>` as well.
 
-  This is really usefull when you want to make a group of buttons visually those buttons are just changing a value. It's also better for accessibility because it's a native HTML element, it supports keyboard navigations and you won't need to deal with JavaScript or hidden inputs and labels.
+  This is really usefull when you want to make a group of buttons visually those buttons are just changing a value. It's also better for accessibility because it's a native HTML element, it supports keyboard navigation and you won't need to deal with JavaScript or hidden inputs and labels.
 
   ```html
   <input type="radio" aria-label="Option 1" class="btn" />
@@ -260,10 +280,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 * New style for `.table`
 
-  ![table](https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/table.png)
+  
+  <img alt="table" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/table.png" width="500"/>
 
 
-  Starting with daisyUI 3.0, `.table` has a less opinionated style. It allows us to use tables on every surface colors and apply our own background color if neede.
+
+  Starting with daisyUI 3.0, `.table` has a less opinionated style. It allows us to use tables on every surface colors and apply our own background color if needed.
 
   Previously every table cell had background color and the whole table had a very opinionated border radius, header color, etc. This was not very flexible and it was hard to customize. But now you can use utility classes to customize the table as you wish.
 
@@ -276,7 +298,7 @@ All notable changes to this project will be documented in this file. See [standa
   Previously table's first header was pinned by default and this was limiting the use cases. Now you can use these classes only if you want the header to be pinned.
 
   `table-pin-rows` makes the row inside `<thead>` sticky to top and the row inside `<tfoot>` sticky to bottom.
-  `table-pin-cols` makes the `<th>` columns stciky to left and right automatically.
+  `table-pin-cols` makes the `<th>` columns sticky to left and right automatically.
 
   https://daisyui.com/components/table/
 
@@ -328,7 +350,7 @@ All notable changes to this project will be documented in this file. See [standa
   
   Starting with daisyUI 3.0, hover styles are disabled on devices that don't support hover.
 
-* Now `:disabled` buttons and form elements have a disabled style as well. Previously the style was only applied to the elemnets with `disabled` attribute or `*-disabled` class name.
+* Now `:disabled` buttons and form elements have a disabled style as well. Previously the style was only applied to the elements with `disabled` attribute or `*-disabled` class name.
 
   This is useful when you want to disable the whole form using a fieldset.
 
@@ -345,7 +367,7 @@ All notable changes to this project will be documented in this file. See [standa
 * Removed extra wrapper `<div>` from `alert`.  
   The previous HTML structure was not very efficient and it was causing many confusions because that extra div was necessary for the style to work properly.
 
-  Upate your `alert` structure and remove that extra div inside `<div class="alert">`:
+  Update your `alert` structure and remove that extra div inside `<div class="alert">`:
   ```diff
     <div class="alert">
   -   <div>
@@ -359,7 +381,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * `table` doesn't have a `active` modifier class anymore  
 
-  With the new style you can use utiltiy classes to apply background color for a row. Previuosly it wasn't possible because each cell had a background color and we had to rely on a new modifier class like `active`. Now you can use `bg-base-200` or any other color.
+  With the new style you can use utility classes to apply background color for a row. Previously it wasn't possible because each cell had a background color and we had to rely on a new modifier class like `active`. Now you can use `bg-base-200` or any other color.
 
   ```diff
   - <tr class="active">
@@ -399,7 +421,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * `dropdown` doesn't have a `z-index` by default now.
 
-  Using z-index for `dropdown` as a defualt style was a mistake becuase sometimes we need elements on top of th dropdown and sometimes we want the dropdown to be on top of other elements. Now you can use `z-[1]` or any other z-index class to control it as you want.
+  Using z-index for `dropdown` as a default style was a mistake because sometimes we need elements on top of th dropdown and sometimes we want the dropdown to be on top of other elements. Now you can use `z-[1]` or any other z-index class to control it as you want.
 
 * `badge` inside `btn` now doesn't inherit the `btn` color automatically anymore. This was a bad design decision and it was limiting us to customize `badge` colors when it's inside a `btn`
 
@@ -415,7 +437,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Developer experience improvements
 * Remove extra dev dependencies.
 * Console log is now more informative. It warns you about possible config issues and how to fix them.
-* daisyUI repo itself is now smaller in size and it takes less disk space. Also the new docuement website is running on the latest version of SveteKit and Vite.
+* daisyUI repo itself is now smaller in size and it takes less disk space. Also the new document website is running on the latest version of SvelteKit and Vite.
 
 ---
 
@@ -659,7 +681,7 @@ All notable changes to this project will be documented in this file. See [standa
 * [#1245](https://github.com/saadeghi/daisyui/issues/1245) ([34782ce](https://github.com/saadeghi/daisyui/commit/34782ce2725a476008872d59c2c22918f39a22a8))
 * [#1267](https://github.com/saadeghi/daisyui/issues/1267) ([89434c2](https://github.com/saadeghi/daisyui/commit/89434c2c8cda6fb66c69446c555de21e6c3d74dd))
 * [#1302](https://github.com/saadeghi/daisyui/issues/1302) ([f343ed4](https://github.com/saadeghi/daisyui/commit/f343ed4fd5b0f3a677f7ae138e4fd006110631a1))
-* [#698](https://github.com/saadeghi/daisyui/issues/698), feat: Now dark themes have `color-scheme` for scrollbars etc. ([40bab42](https://github.com/saadeghi/daisyui/commit/40bab427ea49247ba621d8d7ca256c161689977e))
+* [#698](https://github.com/saadeghi/daisyui/issues/698), feat: Now dark themes have `color-scheme` for scrollbar etc. ([40bab42](https://github.com/saadeghi/daisyui/commit/40bab427ea49247ba621d8d7ca256c161689977e))
 
 ## [2.37.0](https://github.com/saadeghi/daisyui/compare/v2.36.1...v2.37.0) (2022-10-31)
 
