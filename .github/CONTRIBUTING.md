@@ -50,17 +50,9 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 ### To run the [documentation site](https://daisyui.com/) on local:
 
 1. [Fork and] clone the repo on local
-1. Install package dependencies:
+1. Install all dependencies and build the package and documentation site using this command:
    ```
-   npm install
-   ```
-1. Build the package:
-   ```
-   npm run build
-   ```
-1. Install document site dependencies:
-   ```
-   npm run install:docs
+   npm run init
    ```
 1. Run the document site:
    ```
