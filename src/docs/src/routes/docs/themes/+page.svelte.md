@@ -230,7 +230,7 @@ module.exports = {
     themes: [
       {
         light: {
-          ...require("daisyui/src/themeing/themes")["[data-theme=light]"],
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
           "primary": "blue",
           "primary-focus": "mediumblue",
         },
