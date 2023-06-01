@@ -14,7 +14,7 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'join', desc: 'Container for grouping multiple items' },
-  { type:'component', class: 'join-item', desc: 'item inside join. Can be a button, input, etc.' },
+  { type:'component', class: 'join-item', desc: 'Item inside join. Can be a button, input, etc.' },
   { type:'responsive', class: 'join-vertical', desc: 'Show items vertically' },
   { type:'responsive', class: 'join-horizontal', desc: 'Show items horizontally' },
 ]}"
@@ -35,7 +35,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="group items vertically">
+<Component title="Group items vertically">
 <div class="join join-vertical">
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
@@ -104,7 +104,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Custom broder radius">
+<Component title="Custom border radius">
 <div class="join">
   <input class="input join-item" placeholder="Email"/>
   <button class="btn join-item rounded-r-full">Subscribe</button>
