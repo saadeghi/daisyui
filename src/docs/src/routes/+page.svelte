@@ -224,7 +224,7 @@
 
             <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
               {@html $t(
-                "In a Tailwind CSS project, you need to write utiltiy class names for every element. Thousands of class names just to style the most basic elements."
+                "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements."
               )}
             </p>
             <div class="h-40" />

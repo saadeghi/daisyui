@@ -310,7 +310,7 @@
   "for Tailwind CSS": "для Tailwind CSS",
   "daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>": "daisyUI добавляет имена классов компонентов в Tailwind&nbsp;CSS<br /> чтобы вы могли создавать красивые веб-сайты <span class='border-base-content/20 border-b-2'>быстрее, чем когда-либо.</span>",
   "don't re-invent<br/>the wheel<br/>every time": "не изобретайте<br/>колесо<br/>каждый раз",
-  "In a Tailwind CSS project, you need to write utiltiy class names for every element. Thousands of class names just to style the most basic elements.": "В проекте Tailwind CSS вам нужно писать имена классов для каждого элемента. Тысячи имен классов только для стилизации самых базовых элементов.",
+  "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "В проекте Tailwind CSS вам нужно писать имена классов для каждого элемента. Тысячи имен классов только для стилизации самых базовых элементов.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "вместо того, чтобы писать<br /> <span class='text-error'><span class='font-black'>100</span> имен классов</span>",
   "For every element, every page, every project,<br/>again and again": "Для каждого элемента, каждой страницы, каждого проекта,<br/>снова и снова",
   "use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>": "используйте <span class='text-success'><span class='font-black'>семантические</span><br />имена классов</span>",

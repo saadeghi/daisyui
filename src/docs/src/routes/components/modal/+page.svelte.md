@@ -157,7 +157,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Dialog modal with custom width" desc="You can use any w-* and max-w-* utiltiy class to customize the width">
+<Component title="Dialog modal with custom width" desc="You can use any w-* and max-w-* utility class to customize the width">
 <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
 <dialog id="my_modal_4" class="modal">
   <form method="dialog" class="modal-box w-11/12 max-w-5xl">

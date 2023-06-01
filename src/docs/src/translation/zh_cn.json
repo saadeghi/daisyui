@@ -310,7 +310,7 @@
   "for Tailwind CSS": "为Tailwind CSS",
   "daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>": "daisyUI 将组件类名添加到 Tailwind&nbsp;CSS 中，<br />因此您可以制作美丽的网站 <span class='border-base-content/20 border-b-2'>比以往更快。</span>",
   "don't re-invent<br/>the wheel<br/>every time": "不要每次都重复造轮子",
-  "In a Tailwind CSS project, you need to write utiltiy class names for every element. Thousands of class names just to style the most basic elements.": "在Tailwind CSS项目中，您需要为每个元素编写实用程序类名。数千个类名仅用于为最基本的元素定义样式。",
+  "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "在Tailwind CSS项目中，您需要为每个元素编写实用程序类名。数千个类名仅用于为最基本的元素定义样式。",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "不用再写<br /> <span class='text-error'><span class='font-black'>100</span> 个类名</span>",
   "For every element, every page, every project,<br/>again and again": "对每个元素，每个页面，每个项目，<br/>一遍又一遍",
   "use <span class='text-success'><span class='font-black'>semantic</span><br />class names</span>": "使用 <span class='text-success'><span class='font-black'>语义化</span><br />的类名</span>",
