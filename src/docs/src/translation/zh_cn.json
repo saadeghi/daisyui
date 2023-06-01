@@ -399,5 +399,8 @@
   "Learn more about colors": "了解更多关于颜色的知识",
   "Get started": "现在开始",
   "daisyUI 3.0 is available now!": "daisyUI 3.0 现在可用！",
+  "How to add custom styles for a specific theme?": "如何为一个指定的主题添加自定义样式？",
+  "You can write custom style for your elements only for a specific theme.": "你只能给一个指定的主题的元素写自定义样式。",
+  "In this example, .btn-twitter class only will have this style on light theme.": "在这个例子里，<code>.btn-twitter</code> 类只会在 <code>light</code> 主题中才会有这些样式",
   "": ""
 }
