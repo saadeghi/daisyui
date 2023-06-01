@@ -977,7 +977,7 @@
           )}
         </p>
         <div class="h-10" />
-        <div class="flex w-full justify-center md:justify-start">
+        <div class="flex w-full justify-center xl:justify-start">
           <a
             data-sveltekit-preload-data="hover"
             href="/docs/install"
