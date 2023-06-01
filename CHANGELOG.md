@@ -437,6 +437,7 @@ All notable changes to this project will be documented in this file. See [standa
 * Fix `toast` whitespace issue
 
 ### Developer experience improvements
+* In the package, directory `/src/colors` is renamed to `/src/theming` because it's doing more than colors and the previous name was confusing.
 * Remove extra dev dependencies.
 * Console log is now more informative. It warns you about possible config issues and how to fix them.
 * daisyUI repo itself is now smaller in size and it takes less disk space. Also the new document website is running on the latest version of SvelteKit and Vite.
