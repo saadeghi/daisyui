@@ -53,7 +53,7 @@
   },
   "prettier": "./src/prettier.config.js",
   "scripts": {
-    "init": "npm install && npm run build && npm run get-files && cd src/docs && npm install && cd src/experiments/playground && npm install",
+    "init": "npm install && npm run build && cd src/docs && npm run get-files && npm install && cd src/experiments/playground && npm install",
     "prettier": "prettier --write . --ignore-path ./src/.prettierignore",
     "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
     "base": "cat dist/base/*.css > dist/base.css",
