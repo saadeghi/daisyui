@@ -144,9 +144,9 @@
       <div class="grid">
         <div class="hidden" bind:this={jsxSlot}>
           {#if $$slots.jsx}
-            <slot name="jsx" />
+            <pre use:htmlToJsx><slot name="jsx" /></pre>
           {:else}
-            <slot name="html" />
+            <pre use:htmlToJsx><slot name="html" /></pre>
           {/if}
         </div>
         <div class="code-wrapper col-start-1 row-start-1">
