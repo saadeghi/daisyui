@@ -343,7 +343,7 @@ export let pages = [
         tags: "dialog modal window popup",
         href: "/components/modal/",
         icon: "",
-        badge: "Updated",
+        badge: "updated",
       },
       {
         name: "Swap",
