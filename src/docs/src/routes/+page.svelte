@@ -114,6 +114,11 @@
 
 <SEO title="daisyUI" desc="Tailwind Components Library - Free components for Tailwind CSS" />
 
+<div class="flex justify-center p-4">
+  <a href="https://www.producthunt.com/posts/daisyui-3-0?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-daisyui&#0045;3&#0045;0" target="_blank"
+  rel="noopener, noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=397204&theme=light" alt="daisyUI&#0032;3&#0046;0 - The&#0032;most&#0032;popular&#0032;component&#0032;library&#0032;for&#0032;Tailwind&#0032;CSS | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</div>
+
 <!-- hero content -->
 <div>
   <div
