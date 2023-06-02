@@ -207,6 +207,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [Build your Developer Portfolio and Blog from Scratch with Svelte and GraphCMS](https://www.freecodecamp.org/news/build-your-developer-portfolio-from-scratch-with-sveltekit-and-graphcms/)
 - Starters
   - [Vite-Boot](https://github.com/kirklin/vite-boot) Vite + Vue3 + TypeScript + Vue-Router4 + Pinia + Tailwind CSS + daisyUI Template.
+  - [Nuxtwind Daisy](https://nuxtwind-daisy.ossph.org) Nuxt 3 + Tailwind CSS + daisyUI Template and more pre-installed configurations like fonts, icons, animations, etc.
   
 </details>
 
