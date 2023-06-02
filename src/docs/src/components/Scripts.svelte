@@ -18,7 +18,7 @@
         j.async = true
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
         f.parentNode.insertBefore(j, f)
-      })(window, document, "script", "dataLayer", "GTM-WJ8HL28")
+      })(window, document, "script", "dataLayer", "G-5N0NM9KW6D")
     </script>
   {/if}
 </svelte:head>
@@ -28,7 +28,7 @@
   <noscript>
     <iframe
       title="GTM"
-      src="https://www.googletagmanager.com/ns.html?id=GTM-WJ8HL28"
+      src="https://www.googletagmanager.com/ns.html?id=G-5N0NM9KW6D"
       height="0"
       width="0"
       style="display:none;visibility:hidden" />
