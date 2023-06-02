@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/saadeghi/daisyui/compare/v3.0.0...v3.0.1) (2023-06-02)
+
+
+### Bug Fixes
+
+* [#1860](https://github.com/saadeghi/daisyui/issues/1860) add missing menu examples to docs ([f83df9e](https://github.com/saadeghi/daisyui/commit/f83df9e70f46ab37c7307f8dfaf2e1fcc7cf9348))
+* [#1883](https://github.com/saadeghi/daisyui/issues/1883) ([de3a17b](https://github.com/saadeghi/daisyui/commit/de3a17b6fb9fd1b0288da48453d6bd30407f2ea0))
+* [#1885](https://github.com/saadeghi/daisyui/issues/1885) ([cf83e51](https://github.com/saadeghi/daisyui/commit/cf83e51919102033f349f61234b3a3b50ad7a423))
+* **homepage:** center get started button on md and lg ([#1874](https://github.com/saadeghi/daisyui/issues/1874)) ([771aa63](https://github.com/saadeghi/daisyui/commit/771aa6366c922142f3d159d02a1724d1e8fa7fc0))
+
 ## 3.0.0 (2023-06-01)
 
 
@@ -810,4 +820,3 @@ for the following components:
 ### Bug Fixes
 
 * corrected incorrect jsx attribute on drawer and modal components ([#1095](https://github.com/saadeghi/daisyui/issues/1095)) ([77506ca](https://github.com/saadeghi/daisyui/commit/77506ca8e188a76aa318c2371e91ee1f7c18dacb))
-
