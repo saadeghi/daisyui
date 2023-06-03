@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: "latest"
           registry-url: https://registry.npmjs.org
+          cache: 'npm'
 
       - name: check latest released version
         id: check
