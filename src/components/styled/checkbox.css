@@ -38,7 +38,7 @@
   &-primary {
     --chkbg: var(--p);
     --chkfg: var(--pc);
-    @apply border-primary hover:border-primary;
+    @apply border-primary [@media(hover:hover)]:hover:border-primary;
     &:focus-visible {
       @apply outline-primary;
     }
@@ -51,7 +51,7 @@
   &-secondary {
     --chkbg: var(--s);
     --chkfg: var(--sc);
-    @apply border-secondary hover:border-secondary;
+    @apply border-secondary [@media(hover:hover)]:hover:border-secondary;
     &:focus-visible {
       @apply outline-secondary;
     }
@@ -64,7 +64,7 @@
   &-accent {
     --chkbg: var(--a);
     --chkfg: var(--ac);
-    @apply border-accent hover:border-accent;
+    @apply border-accent [@media(hover:hover)]:hover:border-accent;
     &:focus-visible {
       @apply outline-accent;
     }
@@ -77,7 +77,7 @@
   &-success {
     --chkbg: var(--su);
     --chkfg: var(--suc);
-    @apply border-success hover:border-success;
+    @apply border-success [@media(hover:hover)]:hover:border-success;
     &:focus-visible {
       @apply outline-success;
     }
@@ -90,7 +90,7 @@
   &-warning {
     --chkbg: var(--wa);
     --chkfg: var(--wac);
-    @apply border-warning hover:border-warning;
+    @apply border-warning [@media(hover:hover)]:hover:border-warning;
     &:focus-visible {
       @apply outline-warning;
     }
@@ -103,7 +103,7 @@
   &-info {
     --chkbg: var(--in);
     --chkfg: var(--inc);
-    @apply border-info hover:border-info;
+    @apply border-info [@media(hover:hover)]:hover:border-info;
     &:focus-visible {
       @apply outline-info;
     }
@@ -116,7 +116,7 @@
   &-error {
     --chkbg: var(--er);
     --chkfg: var(--erc);
-    @apply border-error hover:border-error;
+    @apply border-error [@media(hover:hover)]:hover:border-error;
     &:focus-visible {
       @apply outline-error;
     }

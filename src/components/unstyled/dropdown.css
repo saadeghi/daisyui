@@ -32,10 +32,14 @@
   @apply bottom-0 top-auto;
 }
 .dropdown.dropdown-open .dropdown-content,
-.dropdown.dropdown-hover:hover .dropdown-content,
 .dropdown:not(.dropdown-hover):focus .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   @apply visible opacity-100;
+}
+@media (hover: hover) {
+  .dropdown.dropdown-hover:hover .dropdown-content {
+    @apply visible opacity-100;
+  }
 }
 .dropdown:is(details) summary::-webkit-details-marker {
   @apply hidden;

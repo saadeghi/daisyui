@@ -93,7 +93,6 @@
     "c8": "^7.14.0",
     "lightningcss-cli": "^1.20.0",
     "postcss-cli": "10.1.0",
-    "postcss-hover-media-feature": "^1.0.2",
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",
     "prettier": "^2.8.8",

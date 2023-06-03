@@ -1,6 +1,6 @@
 .link {
   @apply cursor-pointer underline;
   &-hover {
-    @apply no-underline hover:underline;
+    @apply no-underline [@media(hover:hover)]:hover:underline;
   }
 }

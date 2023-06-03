@@ -7,6 +7,6 @@
     @apply text-xs text-base-content;
   }
   a {
-    @apply hover:text-base-content;
+    @apply [@media(hover:hover)]:hover:text-base-content;
   }
 }

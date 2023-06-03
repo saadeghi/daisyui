@@ -1,27 +1,27 @@
 .link {
   &-primary {
-    @apply text-primary hover:text-primary-focus;
+    @apply text-primary [@media(hover:hover)]:hover:text-primary-focus;
   }
   &-secondary {
-    @apply text-secondary hover:text-secondary-focus;
+    @apply text-secondary [@media(hover:hover)]:hover:text-secondary-focus;
   }
   &-accent {
-    @apply text-accent hover:text-accent-focus;
+    @apply text-accent [@media(hover:hover)]:hover:text-accent-focus;
   }
   &-neutral {
-    @apply text-neutral hover:text-neutral-focus;
+    @apply text-neutral [@media(hover:hover)]:hover:text-neutral-focus;
   }
   &-success {
-    @apply text-success hover:text-success;
+    @apply text-success [@media(hover:hover)]:hover:text-success;
   }
   &-info {
-    @apply text-info hover:text-info;
+    @apply text-info [@media(hover:hover)]:hover:text-info;
   }
   &-warning {
-    @apply text-warning hover:text-warning;
+    @apply text-warning [@media(hover:hover)]:hover:text-warning;
   }
   &-error {
-    @apply text-error hover:text-error;
+    @apply text-error [@media(hover:hover)]:hover:text-error;
   }
   &:focus {
     @apply outline-none;

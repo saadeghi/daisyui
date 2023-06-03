@@ -18,7 +18,6 @@
     "json-diff": "^1.0.6",
     "mdsvex": "^0.10.6",
     "postcss": "8.4.23",
-    "postcss-hover-media-feature": "^1.0.2",
     "postcss-nesting": "11.2.2",
     "prettier": "2.8.8",
     "prettier-plugin-svelte": "2.10.0",

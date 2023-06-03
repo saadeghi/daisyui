@@ -14,10 +14,14 @@
 
     /* disabled */
     &.disabled,
-    &.disabled:hover,
-    &[disabled],
-    &[disabled]:hover {
+    &[disabled] {
       @apply border-opacity-0 bg-neutral bg-opacity-10 text-base-content text-opacity-20 pointer-events-none;
+    }
+    @media (hover: hover) {
+      &.disabled:hover,
+      &[disabled]:hover {
+        @apply border-opacity-0 bg-neutral bg-opacity-10 text-base-content text-opacity-20 pointer-events-none;
+      }
     }
     .label {
       @apply text-base;

@@ -5,20 +5,24 @@
   }
   tr.active,
   tr.active:nth-child(even),
-  tr.hover:hover,
-  tr.hover:nth-child(even):hover,
   &-zebra tbody tr:nth-child(even) {
     @apply bg-base-200;
+  }
+  tr.hover,
+  tr.hover:nth-child(even){
+    @apply [@media(hover:hover)]:hover:bg-base-200
   }
 
   &-zebra {
     tr.active,
     tr.active:nth-child(even),
-    tr.hover:hover,
-    tr.hover:nth-child(even):hover,
     &-zebra tbody tr:nth-child(even) {
       @apply bg-base-300;
     }
+  }
+  &-zebra tr.hover,
+  &-zebra tr.hover:nth-child(even){
+    @apply [@media(hover:hover)]:hover:bg-base-300
   }
 
   :where(thead, tbody) {

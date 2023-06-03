@@ -1,5 +1,5 @@
 .tab {
-  @apply text-opacity-50 hover:text-opacity-100;
+  @apply text-opacity-50 [@media(hover:hover)]:hover:text-opacity-100;
   --tab-color: hsl(var(--bc) / var(--tw-text-opacity, 1));
   --tab-bg: hsl(var(--b1) / var(--tw-bg-opacity, 1));
   --tab-border-color: hsl(var(--b3) / var(--tw-bg-opacity, 1));
@@ -22,10 +22,14 @@
   }
   /* disabled */
   &-disabled,
-  &-disabled:hover,
-  &[disabled],
-  &[disabled]:hover {
+  &[disabled] {
     @apply text-base-content text-opacity-20 cursor-not-allowed;
+  }
+  @media (hover: hover) {
+    &[disabled],
+    &[disabled]:hover {
+      @apply text-base-content text-opacity-20 cursor-not-allowed;
+    }
   }
 }
 .tab-bordered {
@@ -110,6 +114,6 @@
     @apply rounded-btn;
   }
   .tab-active:not(.tab-disabled):not([disabled]) {
-    @apply bg-primary text-primary-content hover:text-primary-content;
+    @apply bg-primary text-primary-content [@media(hover:hover)]:hover:text-primary-content;
   }
 }

@@ -3,6 +3,5 @@ module.exports = {
     require("postcss-import"),
     require("tailwindcss/nesting"),
     require("tailwindcss")("./src/full/tailwind.config.js"),
-    require("postcss-hover-media-feature"),
   ],
 }

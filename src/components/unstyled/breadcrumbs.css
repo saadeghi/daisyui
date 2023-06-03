@@ -7,7 +7,7 @@
     & > li {
       @apply flex items-center;
       & > a {
-        @apply flex cursor-pointer items-center hover:underline;
+        @apply flex cursor-pointer items-center [@media(hover:hover)]:hover:underline;
       }
     }
   }
