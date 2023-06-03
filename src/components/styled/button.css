@@ -5,10 +5,10 @@
   text-transform: var(--btn-text-case, uppercase);
   &:active:hover,
   &:active:focus {
-    animation: none;
   }
   &:active:hover,
   &:active:focus {
+    animation: button-pop 0s ease-out;
     transform: scale(var(--btn-focus-scale, 0.97));
   }
 
