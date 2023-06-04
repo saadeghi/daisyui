@@ -444,6 +444,16 @@ All notable changes to this project will be documented in this file. See [standa
 
 * `badge` inside `btn` now doesn't inherit the `btn` color automatically anymore. This was a bad design decision and it was limiting us to customize `badge` colors when it's inside a `btn`
 
+* `loading` is no longer a modifier class for `btn`. Instead you can use the new `loading` component class inside the button. This allows us to put the loading whereever we need it.
+  ```diff
+  - <button class="btn loading">
+  -   loading
+  - </button>
+  + <button class="btn">
+  +   <span class="loading"></span>
+  +   loading
+  + </button>
+  ```
 
 ### Bug fixes:
 
