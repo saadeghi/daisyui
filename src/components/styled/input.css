@@ -7,7 +7,7 @@
     @apply border-opacity-20;
   }
   &:focus {
-    @apply outline outline-2 outline-offset-2 outline-base-content;
+    @apply outline outline-2 outline-offset-2 outline-base-content/20;
   }
   &-ghost {
     @apply bg-opacity-5;
