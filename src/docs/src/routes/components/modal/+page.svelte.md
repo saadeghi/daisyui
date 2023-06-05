@@ -128,7 +128,7 @@ data="{[
 <button class="btn" onclick="my_modal_3.showModal()">open modal</button>
 <dialog id="my_modal_3" class="modal">
   <form method="dialog" class="modal-box">
-    <button for="my-modal-3" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click on ✕ button to close</p>
   </form>
