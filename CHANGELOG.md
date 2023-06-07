@@ -4,10 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [3.0.18](https://github.com/saadeghi/daisyui/compare/v3.0.15...v3.0.18) (2023-06-07)
 
-### [3.0.17](https://github.com/saadeghi/daisyui/compare/v3.0.15...v3.0.17) (2023-06-07)
-
-### [3.0.16](https://github.com/saadeghi/daisyui/compare/v3.0.15...v3.0.16) (2023-06-07)
-
 
 ### Bug Fixes
 
