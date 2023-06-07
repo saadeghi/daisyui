@@ -25,33 +25,33 @@
     @apply bg-error;
   }
 
-  &:indeterminate::after {
-    @apply bg-neutral;
+  &:indeterminate {
+    --progress-color: hsl(var(--n));
   }
-  &-primary:indeterminate::after {
-    @apply bg-primary;
+  &-primary:indeterminate {
+    --progress-color: hsl(var(--p));
   }
-  &-secondary:indeterminate::after {
-    @apply bg-secondary;
+  &-secondary:indeterminate {
+    --progress-color: hsl(var(--s));
   }
-  &-accent:indeterminate::after {
-    @apply bg-accent;
+  &-accent:indeterminate {
+    --progress-color: hsl(var(--a));
   }
-  &-info:indeterminate::after {
-    @apply bg-info;
+  &-info:indeterminate {
+    --progress-color: hsl(var(--in));
   }
-  &-success:indeterminate::after {
-    @apply bg-success;
+  &-success:indeterminate {
+    --progress-color: hsl(var(--su));
   }
-  &-warning:indeterminate::after {
-    @apply bg-warning;
+  &-warning:indeterminate {
+    --progress-color: hsl(var(--wa));
   }
-  &-error:indeterminate::after {
-    @apply bg-error;
+  &-error:indeterminate {
+    --progress-color: hsl(var(--er));
   }
 
   &::-webkit-progress-bar {
-    @apply bg-neutral bg-opacity-20 rounded-box;
+    @apply bg-neutral/20 rounded-box;
   }
   &::-webkit-progress-value {
     @apply bg-neutral-focus rounded-box;
@@ -79,14 +79,34 @@
   }
 }
 
-.progress:indeterminate::after {
-  content: "";
-  @apply inset-y-0 -left-[40%] w-1/3 absolute rounded-box;
-  animation: progress-loading 5s infinite ease-in-out;
+.progress:indeterminate {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--progress-color) -1%,
+    var(--progress-color) 10%,
+    transparent 10%,
+    transparent 90%
+  );
+  background-size: 200%;
+  background-position-x: 15%;
+  animation: progress-loading 5s ease-in-out infinite;
+}
+.progress:indeterminate::-moz-progress-bar {
+  @apply bg-neutral/20;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--progress-color) -1%,
+    var(--progress-color) 10%,
+    transparent 10%,
+    transparent 90%
+  );
+  background-size: 200%;
+  background-position-x: 15%;
+  animation: progress-loading 5s ease-in-out infinite;
 }
 
 @keyframes progress-loading {
   50% {
-    left: 107%;
+    background-position-x: -115%;
   }
 }
