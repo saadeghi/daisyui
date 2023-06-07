@@ -16,7 +16,7 @@ extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin, a11y
 // large text.
 
 export const ContrastRatioWarningThreshold = 3
-export const ContrastRatioErrorThreshold = 2.1
+export const ContrastRatioErrorThreshold = 2.5
 
 export const isColorContrastOkay = (input1, input2, ratio) => {
   if (colord(input1).contrast(input2) > ratio) {
