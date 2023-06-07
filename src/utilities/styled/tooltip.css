@@ -20,10 +20,12 @@
 }
 .tooltip.tooltip-open:before,
 .tooltip.tooltip-open:after,
-.tooltip:has(:focus-visible):after,
-.tooltip:has(:focus-visible):before,
 .tooltip:hover:before,
 .tooltip:hover:after {
+  @apply opacity-100 delay-75;
+}
+.tooltip:has(:focus-visible):after,
+.tooltip:has(:focus-visible):before {
   @apply opacity-100 delay-75;
 }
 .tooltip:not([data-tip]):hover:before,

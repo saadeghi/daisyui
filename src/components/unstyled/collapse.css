@@ -22,7 +22,9 @@
 }
 .collapse[open],
 .collapse-open,
-.collapse:focus:not(.collapse-close),
+.collapse:focus:not(.collapse-close) {
+  grid-template-rows: auto 1fr;
+}
 .collapse:not(.collapse-close):has(input[type="checkbox"]:checked),
 .collapse:not(.collapse-close):has(input[type="radio"]:checked) {
   grid-template-rows: auto 1fr;
