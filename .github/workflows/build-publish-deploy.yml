@@ -35,9 +35,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: Install package dependencies
+        if: steps.versionInfo.outputs.changed == 'true'
         run: npm install
 
       - name: build package
+        if: steps.versionInfo.outputs.changed == 'true'
         run: npm run build
 
       # - name: Read package version from package.json
