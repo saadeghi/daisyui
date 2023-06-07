@@ -25,16 +25,16 @@ export const isColorContrastOkay = (input1, input2, ratio) => {
   return false
 }
 
-function changeLchValuesToObject(input) {
-  const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-  return { l, c, h, a: 1 }
+function changeHslValuesToObject(input) {
+  const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+  return { h, s, l, a: 1 }
 }
 
-export const lchValuesToHex = (input) => {
+export const hslValuesToHex = (input) => {
   return colord(
-    `lch(${changeLchValuesToObject(input).l}% ${changeLchValuesToObject(input).c} ${
-      changeLchValuesToObject(input).h
-    })`
+    `hsl(${changeHslValuesToObject(input).h} ${changeHslValuesToObject(input).s}% ${
+      changeHslValuesToObject(input).l
+    }%)`
   ).toHex()
 }
 

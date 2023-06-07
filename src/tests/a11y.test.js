@@ -4,7 +4,7 @@ import * as themes from "../theming/themes"
 import {
   trimThemeName,
   trimCssVariable,
-  lchValuesToHex,
+  hslValuesToHex,
   ContrastRatioWarningThreshold,
   ContrastRatioErrorThreshold,
   isColorContrastOkay,
@@ -35,13 +35,13 @@ describe.each(
   ])(`${trimThemeName(themeKey)} color pairs`, (pair1, pair2) => {
     if (
       isColorContrastOkay(
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
         ContrastRatioWarningThreshold
       ) === false &&
       isColorContrastOkay(
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
         ContrastRatioErrorThreshold
       ) === true
     ) {
@@ -54,8 +54,8 @@ describe.each(
 
     if (
       isColorContrastOkay(
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
         ContrastRatioErrorThreshold
       ) === false
     ) {
@@ -68,8 +68,8 @@ describe.each(
 
     expect(
       isColorContrastOkay(
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair1]),
-        lchValuesToHex(colorFunctions.convertToLch(themes[themeKey])[pair2]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
+        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
         ContrastRatioErrorThreshold
       )
     ).toBe(true)

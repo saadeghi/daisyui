@@ -16,7 +16,9 @@ describe.each(
       return colorName !== "default"
     })
   )(`${trimThemeName(themeKey)} has colors`, (colorName) => {
-    expect(colorFunctions.convertToLch(themes[themeKey])).toHaveProperty(colorNames[colorName])
+    expect(colorFunctions.convertColorFormat(themes[themeKey])).toHaveProperty(
+      colorNames[colorName]
+    )
   })
 })
 
@@ -41,6 +43,6 @@ describe.each(
       "--tab-radius",
     ]
   )(`${trimThemeName(themeKey)} has CSS variables`, (variableName) => {
-    expect(colorFunctions.convertToLch(themes[themeKey])).toHaveProperty(variableName)
+    expect(colorFunctions.convertColorFormat(themes[themeKey])).toHaveProperty(variableName)
   })
 })
