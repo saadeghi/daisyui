@@ -14,13 +14,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "latest"
           registry-url: https://registry.npmjs.org
 
-      - name: check latest released version
+      - name: Check latest released version
         if: github.repository == 'saadeghi/daisyui'
         id: versionInfo
         uses: EndBug/version-check@v2
@@ -28,17 +28,16 @@ jobs:
           file-url: https://unpkg.com/daisyui@latest/package.json
           static-checking: localIsNew
 
-      - name: Publish
+      - name: Publish package
         if: steps.versionInfo.outputs.changed == 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-      - name: Install dependencies
+      - name: Install package dependencies
         run: npm install
 
-      - name: build
-        if: steps.versionInfo.outputs.changed == 'true'
+      - name: build package
         run: npm run build
 
       # - name: Read package version from package.json
@@ -82,7 +81,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install document website dependencies
+      - name: Install docs dependencies
         run: cd src/docs && npm install
 
       - name: Install alpha daisyUI if staging
@@ -96,7 +95,7 @@ jobs:
       - name: get new data from API
         run: cd src/docs && npm run get-files
 
-      - name: Build document website
+      - name: Build docs
         run: cd src/docs && npm run build
 
       - name: Deploy docs to github pages
