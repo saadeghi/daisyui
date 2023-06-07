@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * [#1925](https://github.com/saadeghi/daisyui/issues/1925) ([d6d577d](https://github.com/saadeghi/daisyui/commit/d6d577ddc1e00cb4e3a7a29102a0bd22a16a634f))
+* [#1330](https://github.com/saadeghi/daisyui/issues/1330) ([e0ff8df](https://github.com/saadeghi/daisyui/commit/e0ff8df204db26b4d193133c02de5e5e4dc3bd15))
+* [#1931](https://github.com/saadeghi/daisyui/issues/1931) ([e0ff8df](https://github.com/saadeghi/daisyui/commit/e0ff8df204db26b4d193133c02de5e5e4dc3bd15))
 
 ### [3.0.5](https://github.com/saadeghi/daisyui/compare/v3.0.4...v3.0.5) (2023-06-07)
 
