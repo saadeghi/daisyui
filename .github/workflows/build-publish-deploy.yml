@@ -22,49 +22,48 @@ jobs:
 
       - name: check latest released version
         if: github.repository == 'saadeghi/daisyui'
-        id: isNewVersion
+        id: versionInfo
         uses: EndBug/version-check@v2
         with:
           file-url: https://unpkg.com/daisyui@latest/package.json
           static-checking: localIsNew
 
       - name: Publish
-        if: steps.isNewVersion.outputs.changed == 'true'
+        if: steps.versionInfo.outputs.changed == 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: Install dependencies
-        if: steps.isNewVersion.outputs.changed == 'true'
         run: npm install
 
       - name: build
-        if: steps.isNewVersion.outputs.changed == 'true'
+        if: steps.versionInfo.outputs.changed == 'true'
         run: npm run build
 
-      - name: Read package version from package.json
-        if: steps.isNewVersion.outputs.changed == 'true'
-        uses: nyaa8/package-version@v1
-        with:
-          path: "package.json"
+      # - name: Read package version from package.json
+      #   if: steps.versionInfo.outputs.changed == 'true'
+      #   uses: nyaa8/package-version@v1
+      #   with:
+      #     path: "package.json"
 
       - name: update package version in env
-        if: steps.isNewVersion.outputs.changed == 'true'
+        if: steps.versionInfo.outputs.changed == 'true'
         uses: SpicyPizza/create-envfile@v1
         with:
-          envkey_VITE_DAISYUI_VERSION: ${{ env.PACKAGE_VERSION }}
+          envkey_VITE_DAISYUI_VERSION: ${{ steps.versionInfo.outputs.version }}
           file_name: src/docs/.env
 
       - name: update package version in readme
-        if: steps.isNewVersion.outputs.changed == 'true'
+        if: steps.versionInfo.outputs.changed == 'true'
         uses: mingjun97/file-regex-replace@v1
         with:
           regex: 'cdn.jsdelivr.net\/npm\/daisyui@.*\/dist\/'
-          replacement: "cdn.jsdelivr.net/npm/daisyui@${{ env.PACKAGE_VERSION }}/dist/"
+          replacement: "cdn.jsdelivr.net/npm/daisyui@${{ steps.versionInfo.outputs.version }}/dist/"
           include: "README.md"
 
       - name: Commit files
-        if: steps.isNewVersion.outputs.changed == 'true'
+        if: steps.versionInfo.outputs.changed == 'true'
         id: commit
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
@@ -86,13 +85,13 @@ jobs:
       - name: Install document website dependencies
         run: cd src/docs && npm install
 
-      - name: Install latest daisyUI version
-        if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && npm i daisyui@latest
-
-      - name: Install latest daisyUI version
+      - name: Install alpha daisyUI if staging
         if: github.repository == 'daisyui/daisyui.github.io'
         run: cd src/docs && npm i daisyui@alpha
+
+      - name: Install latest daisyUI if production
+        if: github.repository == 'saadeghi/daisyui'
+        run: cd src/docs && npm i daisyui@latest
 
       - name: get new data from API
         run: cd src/docs && npm run get-files
