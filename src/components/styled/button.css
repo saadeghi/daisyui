@@ -11,9 +11,9 @@
 
   /* default btn */
   & {
-    @apply border-base-200 bg-base-200 text-base-content no-underline;
+    @apply border-base-200 bg-base-200 text-base-content no-underline outline-base-content;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-base-300 bg-base-300;
       }
     }
@@ -21,130 +21,106 @@
       @apply border-base-300 bg-base-300;
     }
     &:focus-visible {
-      @apply outline outline-2 outline-offset-2 outline-base-content;
+      @apply outline outline-2 outline-offset-2;
     }
   }
   /* brand colors */
   &-primary {
-    @apply border-primary bg-primary text-primary-content;
+    @apply border-primary bg-primary text-primary-content outline-primary;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-primary-focus bg-primary-focus;
       }
     }
     &.btn-active {
       @apply border-primary-focus bg-primary-focus;
     }
-    &:focus-visible {
-      @apply outline-primary;
-    }
   }
   &-secondary {
-    @apply border-secondary bg-secondary text-secondary-content;
+    @apply border-secondary bg-secondary text-secondary-content outline-secondary;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-secondary-focus bg-secondary-focus;
       }
     }
     &.btn-active {
       @apply border-secondary-focus bg-secondary-focus;
     }
-    &:focus-visible {
-      @apply outline-secondary;
-    }
   }
   &-accent {
-    @apply border-accent bg-accent text-accent-content;
+    @apply border-accent bg-accent text-accent-content outline-accent;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-accent-focus bg-accent-focus;
       }
     }
     &.btn-active {
       @apply border-accent-focus bg-accent-focus;
     }
-    &:focus-visible {
-      @apply outline-accent;
-    }
   }
   &-neutral {
-    @apply border-neutral bg-neutral text-neutral-content;
+    @apply border-neutral bg-neutral text-neutral-content outline-neutral;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-neutral-focus bg-neutral-focus;
       }
     }
     &.btn-active {
       @apply border-neutral-focus bg-neutral-focus;
     }
-    &:focus-visible {
-      @apply outline-neutral;
-    }
   }
 
   /* btn with state colors */
   &-info {
-    @apply border-info bg-info text-info-content;
+    @apply border-info bg-info text-info-content outline-info;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-info bg-info;
       }
     }
     &.btn-active {
       @apply border-info bg-info;
     }
-    &:focus-visible {
-      @apply outline-info;
-    }
   }
   &-success {
-    @apply border-success bg-success text-success-content;
+    @apply border-success bg-success text-success-content outline-success;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-success bg-success;
       }
     }
     &.btn-active {
       @apply border-success bg-success;
     }
-    &:focus-visible {
-      @apply outline-success;
-    }
   }
   &-warning {
-    @apply border-warning bg-warning text-warning-content;
+    @apply border-warning bg-warning text-warning-content outline-warning;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-warning bg-warning;
       }
     }
     &.btn-active {
       @apply border-warning bg-warning;
     }
-    &:focus-visible {
-      @apply outline-warning;
-    }
   }
   &-error {
-    @apply border-error bg-error text-error-content;
+    @apply border-error bg-error text-error-content outline-error;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-error bg-error;
       }
     }
     &.btn-active {
       @apply border-error bg-error;
     }
-    &:focus-visible {
-      @apply outline-error;
-    }
   }
 
   /* glass */
   &.glass {
-    @apply shadow-none;
+    @apply shadow-none outline-current;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         --glass-opacity: 25%;
         --glass-border-opacity: 15%;
       }
@@ -153,38 +129,29 @@
       --glass-opacity: 25%;
       --glass-border-opacity: 15%;
     }
-    &:focus-visible {
-      @apply outline-current;
-    }
   }
 
   /* btn variants */
   &-ghost {
-    @apply border border-transparent bg-transparent text-current shadow-none;
+    @apply border border-transparent bg-transparent text-current shadow-none outline-current;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-opacity-0 bg-base-content bg-opacity-20;
       }
     }
     &.btn-active {
       @apply border-opacity-0 bg-base-content bg-opacity-20;
     }
-    &:focus-visible {
-      @apply outline-current;
-    }
   }
   &-link {
-    @apply border-transparent bg-transparent text-primary underline shadow-none;
+    @apply border-transparent bg-transparent text-primary underline shadow-none outline-current;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-transparent bg-transparent underline;
       }
     }
     &.btn-active {
       @apply border-transparent bg-transparent underline;
-    }
-    &:focus-visible {
-      @apply outline-current;
     }
   }
 
@@ -192,7 +159,7 @@
   &-outline {
     @apply border-current bg-transparent text-base-content shadow-none;
     @media (hover: hover) {
-      &:hover{
+      &:hover {
         @apply border-base-content bg-base-content text-base-100;
       }
     }
@@ -202,7 +169,7 @@
     &.btn-primary {
       @apply text-primary;
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           @apply border-primary-focus bg-primary-focus text-primary-content;
         }
       }
@@ -213,7 +180,7 @@
     &.btn-secondary {
       @apply text-secondary;
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           @apply border-secondary-focus bg-secondary-focus text-secondary-content;
         }
       }
@@ -224,7 +191,7 @@
     &.btn-accent {
       @apply text-accent;
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           @apply border-accent-focus bg-accent-focus text-accent-content;
         }
       }
@@ -235,7 +202,7 @@
     &.btn-success {
       @apply text-success;
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           @apply border-success bg-success text-success-content;
         }
       }
@@ -246,7 +213,7 @@
     &.btn-info {
       @apply text-info;
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           @apply border-info bg-info text-info-content;
         }
       }
@@ -257,7 +224,7 @@
     &.btn-warning {
       @apply text-warning;
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           @apply border-warning bg-warning text-warning-content;
         }
       }
@@ -268,7 +235,7 @@
     &.btn-error {
       @apply text-error;
       @media (hover: hover) {
-        &:hover{
+        &:hover {
           @apply border-error bg-error text-error-content;
         }
       }
@@ -281,7 +248,7 @@
   /* disabled */
   &-disabled,
   &[disabled],
-  &:disabled{
+  &:disabled {
     @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
   }
   @media (hover: hover) {

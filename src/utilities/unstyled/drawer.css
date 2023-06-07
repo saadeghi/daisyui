@@ -1,4 +1,5 @@
 .drawer-open > .drawer-toggle {
+  @apply hidden;
   & ~ .drawer-side {
     @apply sticky visible w-auto pointer-events-auto block overscroll-auto;
     & > *:not(.drawer-overlay) {
