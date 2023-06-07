@@ -3,10 +3,11 @@
   transition-property: transform, opacity, visibility;
   overflow-y: hidden;
   overscroll-behavior: contain;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.modal::backdrop {
-  background: transparent;
+  &:not(dialog),
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: modal-pop 0.2s ease-out;
+  }
 }
 .modal-backdrop {
   @apply grid col-start-1 row-start-1 justify-self-stretch self-stretch -z-[1] text-transparent;
@@ -25,4 +26,9 @@
 }
 .modal-action {
   @apply mt-6 justify-end space-x-2;
+}
+@keyframes modal-pop {
+  0% {
+    opacity: 0;
+  }
 }
