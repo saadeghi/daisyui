@@ -9,7 +9,6 @@ on:
 jobs:
   release:
     name: "Build"
-    if: github.repository == 'saadeghi/daisyui'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,6 +21,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: check latest released version
+        if: github.repository == 'saadeghi/daisyui'
         id: check
         uses: EndBug/version-check@v2
         with:
@@ -94,6 +94,10 @@ jobs:
 
       - name: Install latest daisyUI version
         run: cd src/docs && npm i daisyui@latest
+
+      - name: Install latest daisyUI version
+        if: github.repository == 'daisyui/daisyui.github.io'
+        run: cd src/docs && npm i daisyui@alpha
 
       - name: get new data from API
         run: cd src/docs && npm run get-files

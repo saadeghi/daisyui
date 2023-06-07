@@ -9,8 +9,8 @@
     @apply bg-base-200;
   }
   tr.hover,
-  tr.hover:nth-child(even){
-    @apply [@media(hover:hover)]:hover:bg-base-200
+  tr.hover:nth-child(even) {
+    @apply [@media(hover:hover)]:hover:bg-base-200;
   }
 
   &-zebra {
@@ -21,8 +21,8 @@
     }
   }
   &-zebra tr.hover,
-  &-zebra tr.hover:nth-child(even){
-    @apply [@media(hover:hover)]:hover:bg-base-300
+  &-zebra tr.hover:nth-child(even) {
+    @apply [@media(hover:hover)]:hover:bg-base-300;
   }
 
   :where(thead, tbody) {

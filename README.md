@@ -246,4 +246,3 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
 [docs-url]: https://daisyui.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/banner.png
-

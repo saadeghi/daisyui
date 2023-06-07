@@ -13,7 +13,7 @@
   import { downloads } from "$lib/json/npm-downloads.json"
   import contributors1 from "$lib/json/github-contributors-1.json"
   import contributors2 from "$lib/json/github-contributors-2.json"
-  const contributors = contributors1.concat(contributors2);
+  const contributors = contributors1.concat(contributors2)
 
   import backers from "$lib/json/opencollective-members.json"
   const backersUnique = backers.filter(
