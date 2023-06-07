@@ -66,7 +66,7 @@
   }
   &-success {
     &:focus-visible {
-      @apply outline-info;
+      @apply outline-success;
     }
     &:checked,
     &[checked="true"],
@@ -77,7 +77,7 @@
   }
   &-warning {
     &:focus-visible {
-      @apply outline-success;
+      @apply outline-warning;
     }
     &:checked,
     &[checked="true"],
@@ -88,7 +88,7 @@
   }
   &-info {
     &:focus-visible {
-      @apply outline-warning;
+      @apply outline-info;
     }
     &:checked,
     &[checked="true"],
