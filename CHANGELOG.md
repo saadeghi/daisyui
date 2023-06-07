@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.4](https://github.com/saadeghi/daisyui/compare/v3.0.2...v3.0.4) (2023-06-07)
+
+
+### Bug Fixes
+
+* [#1910](https://github.com/saadeghi/daisyui/issues/1910) ([3d76bfd](https://github.com/saadeghi/daisyui/commit/3d76bfd2b345bfcf34d1e23e5101c7689cafbfc0))
+* [#1916](https://github.com/saadeghi/daisyui/issues/1916) ([0bf1663](https://github.com/saadeghi/daisyui/commit/0bf1663393d3cff58089ffe9f2c1255e0378d891))
+* focus outline proper opacity ([#1913](https://github.com/saadeghi/daisyui/issues/1913)) ([a851341](https://github.com/saadeghi/daisyui/commit/a8513419440de73f24eec1a31d7b643118fca733))
+* remove the invalid "for" property from the close button ([#1923](https://github.com/saadeghi/daisyui/issues/1923)) ([ed513bd](https://github.com/saadeghi/daisyui/commit/ed513bd3f540e025777fc3803415a0c9be313f0c))
+
 ### [3.0.2](https://github.com/saadeghi/daisyui/compare/v3.0.1...v3.0.2) (2023-06-03)
 
 
