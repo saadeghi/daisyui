@@ -1,4 +1,4 @@
-name: "Build from latest version, publish package and deploy docs to production"
+name: "Build, publish, deploy docs"
 
 on:
   workflow_dispatch:
@@ -22,41 +22,41 @@ jobs:
 
       - name: check latest released version
         if: github.repository == 'saadeghi/daisyui'
-        id: check
+        id: isNewVersion
         uses: EndBug/version-check@v2
         with:
           file-url: https://unpkg.com/daisyui@latest/package.json
           static-checking: localIsNew
 
-      - name: Install dependencies
-        if: steps.check.outputs.changed == 'true'
-        run: npm install
-
-      - name: build
-        if: steps.check.outputs.changed == 'true'
-        run: npm run build
-
       - name: Publish
-        if: steps.check.outputs.changed == 'true'
+        if: steps.isNewVersion.outputs.changed == 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
+      - name: Install dependencies
+        if: steps.isNewVersion.outputs.changed == 'true'
+        run: npm install
+
+      - name: build
+        if: steps.isNewVersion.outputs.changed == 'true'
+        run: npm run build
+
       - name: Read package version from package.json
-        if: steps.check.outputs.changed == 'true'
+        if: steps.isNewVersion.outputs.changed == 'true'
         uses: nyaa8/package-version@v1
         with:
           path: "package.json"
 
       - name: update package version in env
-        if: steps.check.outputs.changed == 'true'
+        if: steps.isNewVersion.outputs.changed == 'true'
         uses: SpicyPizza/create-envfile@v1
         with:
           envkey_VITE_DAISYUI_VERSION: ${{ env.PACKAGE_VERSION }}
           file_name: src/docs/.env
 
       - name: update package version in readme
-        if: steps.check.outputs.changed == 'true'
+        if: steps.isNewVersion.outputs.changed == 'true'
         uses: mingjun97/file-regex-replace@v1
         with:
           regex: 'cdn.jsdelivr.net\/npm\/daisyui@.*\/dist\/'
@@ -64,7 +64,7 @@ jobs:
           include: "README.md"
 
       - name: Commit files
-        if: steps.check.outputs.changed == 'true'
+        if: steps.isNewVersion.outputs.changed == 'true'
         id: commit
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
@@ -83,16 +83,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Wait 10 seconds for npm publish
-        if: steps.check.outputs.changed == 'true'
-        uses: whatnick/wait-action@master
-        with:
-          time: "10s"
-
       - name: Install document website dependencies
         run: cd src/docs && npm install
 
       - name: Install latest daisyUI version
+        if: github.repository == 'saadeghi/daisyui'
         run: cd src/docs && npm i daisyui@latest
 
       - name: Install latest daisyUI version
