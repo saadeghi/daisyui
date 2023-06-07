@@ -43,10 +43,6 @@ jobs:
       - name: update package version in env
         if: steps.versionInfo.outputs.changed == 'true'
         run: echo "VITE_DAISYUI_VERSION=${{ steps.versionInfo.outputs.version }}" > src/docs/.env
-        # uses: SpicyPizza/create-envfile@v1
-        # with:
-        #   envkey_VITE_DAISYUI_VERSION: ${{ steps.versionInfo.outputs.version }}
-        #   file_name: src/docs/.env
 
       - name: Commit files
         if: steps.versionInfo.outputs.changed == 'true'
