@@ -42,9 +42,6 @@
     "src/theming/*.js",
     "src/index.d.ts"
   ],
-  "engines": {
-    "node": ">=16.9.0"
-  },
   "browserslist": [
     "> 7%"
   ],
