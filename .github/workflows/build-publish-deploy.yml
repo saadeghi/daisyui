@@ -54,13 +54,13 @@ jobs:
           envkey_VITE_DAISYUI_VERSION: ${{ steps.versionInfo.outputs.version }}
           file_name: src/docs/.env
 
-      - name: update package version in readme
-        if: steps.versionInfo.outputs.changed == 'true'
-        uses: mingjun97/file-regex-replace@v1
-        with:
-          regex: 'cdn.jsdelivr.net\/npm\/daisyui@.*\/dist\/'
-          replacement: "cdn.jsdelivr.net/npm/daisyui@${{ steps.versionInfo.outputs.version }}/dist/"
-          include: "README.md"
+      # - name: update package version in readme
+      #   if: steps.versionInfo.outputs.changed == 'true'
+      #   uses: mingjun97/file-regex-replace@v1
+      #   with:
+      #     regex: 'cdn.jsdelivr.net\/npm\/daisyui@.*\/dist\/'
+      #     replacement: "cdn.jsdelivr.net/npm/daisyui@${{ steps.versionInfo.outputs.version }}/dist/"
+      #     include: "README.md"
 
       - name: Commit files
         if: steps.versionInfo.outputs.changed == 'true'
