@@ -474,7 +474,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * `dropdown` doesn't have a `z-index` by default now.
 
-  Using z-index for `dropdown` as a default style was a mistake because sometimes we need elements on top of th dropdown and sometimes we want the dropdown to be on top of other elements. Now you can use `z-[1]` or any other z-index class to control it as you want.
+  Using z-index for `dropdown` as a default style was a mistake because sometimes we need elements on top of the dropdown and sometimes we want the dropdown to be on top of other elements. Now you can use `z-[1]` or any other z-index class to control it as you want.
 
 * `badge` inside `btn` now doesn't inherit the `btn` color automatically anymore. This was a bad design decision and it was limiting us to customize `badge` colors when it's inside a `btn`
 
