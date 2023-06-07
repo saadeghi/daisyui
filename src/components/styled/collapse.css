@@ -18,8 +18,8 @@ details.collapse summary {
   @apply outline-none;
 }
 .collapse:has(.collapse-title:focus-visible),
-.collapse:has(input[type="checkbox"]:focus-visible),
-.collapse:has(input[type="radio"]:focus-visible) {
+.collapse:has(> input[type="checkbox"]:focus-visible),
+.collapse:has(> input[type="radio"]:focus-visible) {
   @apply outline outline-2 outline-offset-2 outline-base-content;
 }
 .collapse-arrow .collapse-title:after {
