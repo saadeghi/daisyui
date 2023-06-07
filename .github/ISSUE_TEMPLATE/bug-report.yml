@@ -21,7 +21,7 @@ body:
       label: Describe your issue
       description: |
         Describe the problem and say how and when it happens.
-        To wirte a code block, use ``` before and after your code.
+        To write a code block, use ``` before and after your code.
     validations:
       required: true
   - type: dropdown
