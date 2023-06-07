@@ -90,6 +90,7 @@
   },
   "devDependencies": {
     "@vitest/ui": "^0.31.1",
+    "autoprefixer": "^10",
     "c8": "^7.14.0",
     "lightningcss-cli": "^1.20.0",
     "postcss-cli": "10.1.0",
