@@ -65,13 +65,11 @@ jobs:
         if: steps.versionInfo.outputs.changed == 'true'
         id: commit
         run: |
-          git config --local user.email "pouya.saadeghi@gmail.com"
-          git config --local user.name "Pouya Saadeghi"
           git add --all
           if [-z "$(git status --porcelain)"]; then
             echo "push=false" >> $GITHUB_OUTPUT
           else
-            git commit -m "Update version" -a
+            git commit -m "Update version: ${{ steps.versionInfo.outputs.version }}" -a --author="Pouya Saadeghi <pouya.saadeghi@gmail.com>"
             echo "push=true" >> $GITHUB_OUTPUT
           fi
         shell: bash
