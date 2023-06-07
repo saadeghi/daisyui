@@ -29,11 +29,9 @@ jobs:
           static-checking: localIsNew
 
       - name: Install package dependencies
-        if: steps.versionInfo.outputs.changed == 'true'
         run: npm install
 
       - name: build package
-        if: steps.versionInfo.outputs.changed == 'true'
         run: npm run build
 
       - name: Publish package
@@ -44,10 +42,11 @@ jobs:
 
       - name: update package version in env
         if: steps.versionInfo.outputs.changed == 'true'
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          envkey_VITE_DAISYUI_VERSION: ${{ steps.versionInfo.outputs.version }}
-          file_name: src/docs/.env
+        run: echo "VITE_DAISYUI_VERSION=${{ steps.versionInfo.outputs.version }}" > src/docs/.env
+        # uses: SpicyPizza/create-envfile@v1
+        # with:
+        #   envkey_VITE_DAISYUI_VERSION: ${{ steps.versionInfo.outputs.version }}
+        #   file_name: src/docs/.env
 
       - name: Commit files
         if: steps.versionInfo.outputs.changed == 'true'
@@ -71,9 +70,8 @@ jobs:
 
       - name: Wait 8 seconds for npm publish
         if: steps.versionInfo.outputs.changed == 'true'
-        uses: whatnick/wait-action@master
-        with:
-          time: "8s"
+        run: sleep 8s
+        shell: bash
 
       - name: Install docs dependencies
         run: cd src/docs && npm install
