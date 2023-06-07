@@ -40,12 +40,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-      # - name: Read package version from package.json
-      #   if: steps.versionInfo.outputs.changed == 'true'
-      #   uses: nyaa8/package-version@v1
-      #   with:
-      #     path: "package.json"
-
       - name: update package version in env
         if: steps.versionInfo.outputs.changed == 'true'
         uses: SpicyPizza/create-envfile@v1
@@ -53,23 +47,17 @@ jobs:
           envkey_VITE_DAISYUI_VERSION: ${{ steps.versionInfo.outputs.version }}
           file_name: src/docs/.env
 
-      # - name: update package version in readme
-      #   if: steps.versionInfo.outputs.changed == 'true'
-      #   uses: mingjun97/file-regex-replace@v1
-      #   with:
-      #     regex: 'cdn.jsdelivr.net\/npm\/daisyui@.*\/dist\/'
-      #     replacement: "cdn.jsdelivr.net/npm/daisyui@${{ steps.versionInfo.outputs.version }}/dist/"
-      #     include: "README.md"
-
       - name: Commit files
         if: steps.versionInfo.outputs.changed == 'true'
         id: commit
         run: |
+          git config --local user.email "pouya.saadeghi@gmail.com"
+          git config --local user.name "Pouya Saadeghi"
           git add --all
           if [-z "$(git status --porcelain)"]; then
             echo "push=false" >> $GITHUB_OUTPUT
           else
-            git commit -m "Update version: ${{ steps.versionInfo.outputs.version }}" -a --author="Pouya Saadeghi <pouya.saadeghi@gmail.com>"
+            git commit -m "Update version: ${{ steps.versionInfo.outputs.version }}" -a
             echo "push=true" >> $GITHUB_OUTPUT
           fi
         shell: bash
@@ -78,6 +66,12 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Wait 8 seconds for npm publish
+        if: steps.check.outputs.changed == 'true'
+        uses: whatnick/wait-action@master
+        with:
+          time: "8s"
 
       - name: Install docs dependencies
         run: cd src/docs && npm install
