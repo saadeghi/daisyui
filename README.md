@@ -45,23 +45,6 @@ module.exports = {
 
 [ [Read more →][docs-url-install] ]
 
-<details>
-<summary>
-  Or use a CDN
-</summary>
-
-Loading CSS files from CDN is not recommended for production. It's better to install Tailwind and daisyUI as Nodejs dependencies so you can config/customize everything, and purge unused styles.
-
-```html
-<link
-  href="https://cdn.jsdelivr.net/npm/daisyui@3.0.7/dist/full.css"
-  rel="stylesheet"
-  type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-```
-
-</details>
-
 ## 🚀 Use
 
 [[See all components →](https://daisyui.com/components/)]
@@ -105,11 +88,10 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Carousel
   - [x] Chat bubble
   - [x] Collapse
-  - [ ] Comment
   - [x] Countdown
   - [ ] Empty placeholder
   - [x] Kbd
-  - [ ] Loading
+  - [x] Loading
   - [x] Progress
   - [x] Radial progress
   - [x] Stat
@@ -118,10 +100,11 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [ ] Timeline
   - [x] Toast
   - [x] Tooltip
-  - [ ] Treeview
+  - [x] Treeview
 
 - Data input
   - [x] Checkbox
+  - [x] File input
   - [x] Text input
   - [x] Radio
   - [x] Range
@@ -129,7 +112,6 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Select
   - [x] Textarea
   - [x] Toggle
-  - [ ] Upload
 - Layout
 
   - [x] Artboard
@@ -137,6 +119,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Divider
   - [x] Drawer
   - [x] Footer
+  - [x] Join
   - [x] Hero
   - [x] Indicator
   - [x] Input group
