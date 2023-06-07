@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.5](https://github.com/saadeghi/daisyui/compare/v3.0.4...v3.0.5) (2023-06-07)
+
+
+### Bug Fixes
+
+* [#1868](https://github.com/saadeghi/daisyui/issues/1868) ([85c7309](https://github.com/saadeghi/daisyui/commit/85c730923b6ad4d844e59d13355224c38c66e4fd))
+* [#1899](https://github.com/saadeghi/daisyui/issues/1899), separate has() selectors to fix Firefox issue ignoring them all ([c265191](https://github.com/saadeghi/daisyui/commit/c26519192267a20e4052373fa779c662c306b9d3))
+* [#1908](https://github.com/saadeghi/daisyui/issues/1908) ([4372484](https://github.com/saadeghi/daisyui/commit/4372484e73cf8d4bcbf749f6a451a460859083c8))
+* [#1935](https://github.com/saadeghi/daisyui/issues/1935) ([708e249](https://github.com/saadeghi/daisyui/commit/708e24996e61945842ecaf87468167c47f921379))
+* [#1939](https://github.com/saadeghi/daisyui/issues/1939) ([e36a17d](https://github.com/saadeghi/daisyui/commit/e36a17d22aad948e46b48fb7b7d4ce5a596518d6))
+
 ### [3.0.4](https://github.com/saadeghi/daisyui/compare/v3.0.2...v3.0.4) (2023-06-07)
 
 
