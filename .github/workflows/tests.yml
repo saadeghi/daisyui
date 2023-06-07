@@ -1,0 +1,27 @@
+name: "Run tests"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: "Build"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+          registry-url: https://registry.npmjs.org
+
+      - name: Install package dependencies
+        run: npm install
+
+      - name: build package
+        run: npm run build
+
+      - name: Run tests
+        run: npm run test:run
