@@ -28,17 +28,17 @@ jobs:
           file-url: https://unpkg.com/daisyui@latest/package.json
           static-checking: localIsNew
 
-      - name: Publish package
-        if: steps.versionInfo.outputs.changed == 'true'
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
       - name: Install package dependencies
         run: npm install
 
       - name: build package
         run: npm run build
+
+      - name: Publish package
+        if: steps.versionInfo.outputs.changed == 'true'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       # - name: Read package version from package.json
       #   if: steps.versionInfo.outputs.changed == 'true'
