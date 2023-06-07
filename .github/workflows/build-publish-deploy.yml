@@ -29,9 +29,11 @@ jobs:
           static-checking: localIsNew
 
       - name: Install package dependencies
+        if: steps.versionInfo.outputs.changed == 'true'
         run: npm install
 
       - name: build package
+        if: steps.versionInfo.outputs.changed == 'true'
         run: npm run build
 
       - name: Publish package
@@ -68,7 +70,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Wait 8 seconds for npm publish
-        if: steps.check.outputs.changed == 'true'
+        if: steps.versionInfo.outputs.changed == 'true'
         uses: whatnick/wait-action@master
         with:
           time: "8s"
