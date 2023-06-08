@@ -292,7 +292,7 @@
   "Read more": "Lire la suite",
   "Typography": "Typographie",
   "You should use official <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>.": "Vous devez utiliser le <a href='https://github.com/tailwindlabs/tailwindcss-typography'>plugin TailwindCSS Typography officiel</a>.",
-  "It handles everything and it's fully customizable": "Il gère tout et il est entièrement personnalisable,",
+  "It handles everything and it's fully customizable.": "Il gère tout et il est entièrement personnalisable.",
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "daisyUI ajoute du style à @tailwindcss/typography afin qu'il utilise le même thème que les autres éléments.",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "Assurez-vous de require <span class='badge badge-outline'>daisyui</span> APRÈS <span class='badge badge-outline'>@tailwindcss/typography</span> dans tailwind.config.js",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "Ici, vous pouvez voir à quoi ressembleront les éléments en utilisant <code>@tailwindcss/typography</code>.",

@@ -292,7 +292,7 @@
   "Read more": "Подробнее",
   "Typography": "Типография",
   "You should use official <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>.": "Вам следует использовать официальный <a href='https://github.com/tailwindlabs/tailwindcss-typography'>плагин для типографии Tailwind CSS</a>.",
-  "It handles everything and it's fully customizable": "Он обрабатывает все и полностью настраивается.",
+  "It handles everything and it's fully customizable.": "Он обрабатывает все и полностью настраивается.",
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "daisyUI добавляет некоторый стиль к @tailwindcss/typography, чтобы он использовал ту же тему, что и другие элементы.",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "Убедитесь, что <span class='badge badge-outline'>daisyui</span> ПОСЛЕ <span class='badge badge-outline'>@tailwindcss/typography</span> в tailwind.config.js",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "Здесь вы можете увидеть, как будут выглядеть элементы с использованием <code>@tailwindcss/typography</code>.",
