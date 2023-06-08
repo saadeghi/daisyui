@@ -292,7 +292,7 @@
   "Read more": "阅读更多",
   "Typography": "排版",
   "You should use official <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>.": "你应该使用官方的 <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>.",
-  "It handles everything and it's fully customizable": "这个插件可以操作所有的情况，而且本身就可以调整",
+  "It handles everything and it's fully customizable.": "这个插件可以操作所有的情况，而且本身就可以调整。",
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "daisyUI 增加一些样式给  @tailwindcss/typography 所以这些组件可以和其他元素一样获取同样的主题",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "确保你在  tailwind.config.js 引用 <span class='badge badge-outline'>daisyui</span> 在<span class='badge badge-outline'>@tailwindcss/typography</span> 的后面",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "这里你可以看到使用 <code>@tailwindcss/typography</code> 如何影响你的元素：",
