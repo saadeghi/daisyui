@@ -292,7 +292,7 @@
   "Read more": "더 알아보기",
   "Typography": "타이포그래피",
   "You should use official <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>.": "공식 <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS 타이포그래피 플러그인</a>을 사용하세요.",
-  "It handles everything and it's fully customizable": "모든 것을 처리할 수 있으며 커스터마이징이 가능합니다.",
+  "It handles everything and it's fully customizable.": "모든 것을 처리할 수 있으며 커스터마이징이 가능합니다.",
   "daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements.": "데이지UI는 @tailwindcss/typography에 몇몇 스타일을 추가해 서로 다른 요소들이 같은 테마를 사용할 수 있게 합니다.",
   "Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js": "tailwind.config.js에서 꼭 <span class='badge badge-outline'>@tailwindcss/typography</span> 다음에 <span class='badge badge-outline'>daisyui</span>를 require 하세요.",
   "Here you can see how elements will look using <code>@tailwindcss/typography</code>.": "<code>@tailwindcss/typography</code>를 사용해 요소들이 어떻게 보일지 확인할 수 있습니다.",
