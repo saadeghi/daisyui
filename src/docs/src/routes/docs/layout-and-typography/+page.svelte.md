@@ -26,7 +26,7 @@ published: true
 ## <Translate text="Typography" />
 
 <Translate text="You should use official <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>." />  
-<Translate text="It handles everything and it's fully customizable" />
+<Translate text="It handles everything and it's fully customizable." />
 
 <Translate text="daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements." />
 
