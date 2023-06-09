@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.21](https://github.com/saadeghi/daisyui/compare/v3.0.20...v3.0.21) (2023-06-09)
+
+
+### Bug Fixes
+
+* [#1962](https://github.com/saadeghi/daisyui/issues/1962) ([c898d0d](https://github.com/saadeghi/daisyui/commit/c898d0d39a0746c0a2c881df77df2b8114c47907))
+* **layout_typography:** Grammatical Error, missing period ([#1952](https://github.com/saadeghi/daisyui/issues/1952)) ([38c1a10](https://github.com/saadeghi/daisyui/commit/38c1a1042c75c39ab6861220689a85650542378f))
+
 ### [3.0.20](https://github.com/saadeghi/daisyui/compare/v3.0.19...v3.0.20) (2023-06-07)
 
 ### [3.0.19](https://github.com/saadeghi/daisyui/compare/v3.0.15...v3.0.19) (2023-06-07)
