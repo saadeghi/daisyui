@@ -1,4 +1,4 @@
-name: "Release"
+name: "🆕 Bump version, publish to NPM"
 
 on:
   workflow_dispatch:
@@ -30,3 +30,42 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: build package
+        run: npm run build
+
+      - name: Publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - name: update package version in env
+        run: echo "VITE_DAISYUI_VERSION=${{ steps.package-version.current-version }}" > src/docs/.env
+
+      - name: Commit files
+        id: commit
+        run: |
+          git config --local user.email "pouya.saadeghi@gmail.com"
+          git config --local user.name "Pouya Saadeghi"
+          git add --all
+          if [-z "$(git status --porcelain)"]; then
+            echo "push=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Update version: ${{ steps.package-version.current-version }}" -a
+            echo "push=true" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    name: "Deploy"
+    uses: saadeghi/daisyui/.github/workflows/deploy-docs.yml@master

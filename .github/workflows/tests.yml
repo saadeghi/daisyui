@@ -1,4 +1,4 @@
-name: "Run tests"
+name: "🧪 Tests"
 
 on:
   workflow_dispatch:
