@@ -17,5 +17,8 @@ jobs:
           node-version: "latest"
           registry-url: https://registry.npmjs.org
 
+      - name: Install package dependencies
+        run: npm install
+
       - name: Release
         run: npm run release
