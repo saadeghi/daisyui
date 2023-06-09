@@ -3,7 +3,7 @@
   transition-property: transform, opacity, visibility;
   overflow-y: hidden;
   overscroll-behavior: contain;
-  &:not(dialog),
+  &:not(dialog:not(.modal-open)),
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.3);
     animation: modal-pop 0.2s ease-out;
