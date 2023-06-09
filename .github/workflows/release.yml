@@ -1,0 +1,21 @@
+name: "Release"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: "Release"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+          registry-url: https://registry.npmjs.org
+
+      - name: Release
+        run: npm run release
