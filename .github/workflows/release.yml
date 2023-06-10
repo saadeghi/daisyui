@@ -40,6 +40,9 @@ jobs:
           git config --local user.name "Pouya Saadeghi"
           npm run release:${{ github.event.inputs.release-type }}
 
+      - name: Pull changes
+        run: git pull
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
