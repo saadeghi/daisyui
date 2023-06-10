@@ -40,8 +40,8 @@ jobs:
           git config --local user.name "Pouya Saadeghi"
           npm run release:${{ github.event.inputs.release-type }}
 
-
-
+      - name: Checkout
+        uses: actions/checkout@v3
 
 
 
