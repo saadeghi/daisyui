@@ -3,12 +3,12 @@ name: "🆕 Bump version, publish to NPM"
 on:
   workflow_dispatch:
     inputs:
-    release-type:
-      type: choice
-      description: Who to greet
-      options:
-        - patch
-        - minor
+      release-type:
+        type: choice
+        description: Who to greet
+        options:
+          - patch
+          - minor
   push:
     branches:
       - master
@@ -80,6 +80,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-  deploy:
-    name: "Deploy"
-    uses: saadeghi/daisyui/.github/workflows/deploy-docs.yml@master
+      - uses: saadeghi/daisyui/.github/workflows/deploy-docs.yml@master
