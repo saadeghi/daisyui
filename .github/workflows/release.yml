@@ -2,6 +2,13 @@ name: "🆕 Bump version, publish to NPM"
 
 on:
   workflow_dispatch:
+    inputs:
+    release-type:
+      type: choice
+      description: Who to greet
+      options:
+        - patch
+        - minor
   push:
     branches:
       - master
@@ -31,7 +38,7 @@ jobs:
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          npm run release
+          npm run release:${{ github.event.inputs.release-type }}
 
       - name: Push changes
         uses: ad-m/github-push-action@master
