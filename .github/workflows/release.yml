@@ -7,10 +7,9 @@ on:
       - master
     paths:
       - "src/**"
-    paths-ignore:
-      - "src/docs/**"
-      - "src/tests/**"
-      - "src/experiments/**"
+      - "!src/docs/**"
+      - "!src/tests/**"
+      - "!src/experiments/**"
 jobs:
   release:
     name: "Release"
