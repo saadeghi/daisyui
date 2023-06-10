@@ -1,11 +1,11 @@
-name: "🆕 Bump version, publish to NPM"
+name: "🆕 Release new version"
 
 on:
   workflow_dispatch:
     inputs:
       release-type:
         type: choice
-        description: Who to greet
+        description: Release type
         options:
           - patch
           - minor
@@ -79,5 +79,3 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: ./.github/workflows/deploy-docs.yml@master
