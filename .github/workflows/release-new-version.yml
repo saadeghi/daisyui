@@ -77,4 +77,4 @@ jobs:
 
   deploy:
     needs: release
-    uses: ./.github/workflows/deploy-docs.yml@master
+    uses: ./.github/workflows/deploy-docs.yml
