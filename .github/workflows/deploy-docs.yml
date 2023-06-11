@@ -10,56 +10,26 @@ on:
       - "src/docs/**"
 
 jobs:
-  setup:
-    name: "Setup"
+  deploy-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "latest"
           registry-url: https://registry.npmjs.org
 
-  install-package-dependencies:
-    name: "Install package dependencies"
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
       - name: Install package dependencies
         run: npm install
-
-  install-docs-dependencies:
-    name: "Install docs dependencies"
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install docs dependencies
-        run: cd src/docs && npm install
-
-  build-package:
-    name: "Build package"
-    runs-on: ubuntu-latest
-    needs: [setup, install-package-dependencies]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
 
       - name: build package
         run: npm run build
 
-  build-and-deploy-docs:
-    name: "Build and deploy docs"
-    runs-on: ubuntu-latest
-    needs: [build-package, install-docs-dependencies]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Install docs dependencies
+        run: cd src/docs && npm install
 
       - name: Install alpha daisyUI if staging
         if: github.repository == 'daisyui/daisyui.github.io'
