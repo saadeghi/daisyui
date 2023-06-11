@@ -74,6 +74,7 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
   deploy:
     needs: release
     uses: ./.github/workflows/deploy-docs.yml@master
