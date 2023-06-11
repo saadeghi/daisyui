@@ -1,4 +1,4 @@
-name: "🎉 Deploy docs"
+name: "📘 Deploy docs"
 
 on:
   workflow_dispatch:

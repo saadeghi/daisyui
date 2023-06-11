@@ -48,7 +48,7 @@ jobs:
         uses: martinbeentjes/npm-get-version-action@v1.3.1
 
       - name: update package version in env
-        run: echo "VITE_DAISYUI_VERSION=${{ steps.package-version.current-version }}" > src/docs/.env
+        run: echo "VITE_DAISYUI_VERSION=${{ steps.package-version.outputs.current-version }}" > src/docs/.env
 
       - name: Commit files
         id: commit
@@ -59,7 +59,7 @@ jobs:
           if [-z "$(git status --porcelain)"]; then
             echo "push=false" >> $GITHUB_OUTPUT
           else
-            git commit -m "Update version: ${{ steps.package-version.current-version }}" -a
+            git commit -m "Update version: ${{ steps.package-version.outputs.current-version }}" -a
             echo "push=true" >> $GITHUB_OUTPUT
           fi
         shell: bash
@@ -74,3 +74,6 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  deploy:
+    needs: release
+    uses: ./.github/workflows/deploy-docs.yml@master
