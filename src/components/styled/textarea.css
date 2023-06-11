@@ -1,7 +1,7 @@
 .textarea {
   @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn;
   &-bordered {
-    @apply border-opacity-20;
+    @apply border-base-200;
   }
   &:focus {
     @apply outline outline-2 outline-offset-2 outline-base-content/20;

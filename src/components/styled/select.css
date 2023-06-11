@@ -1,7 +1,7 @@
 .select {
   @apply border border-base-content border-opacity-0 bg-base-100 pr-10 font-semibold rounded-btn;
   &-bordered {
-    @apply border-opacity-20;
+    @apply border-base-200;
   }
   background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%);
