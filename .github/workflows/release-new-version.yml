@@ -76,5 +76,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   deploy:
+    name: "Deploy docs"
     needs: release
     uses: ./.github/workflows/deploy-docs.yml
