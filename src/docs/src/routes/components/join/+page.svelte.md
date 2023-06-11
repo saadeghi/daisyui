@@ -69,10 +69,10 @@ data="{[
 <div class="join">
   <div>
     <div>
-      <input class="input join-item" placeholder="Search..."/>
+      <input class="input input-bordered join-item" placeholder="Search..."/>
     </div>
   </div>
-  <select class="select join-item">
+  <select class="select select-bordered join-item">
     <option disabled selected>Category</option>
     <option>Sci-fi</option>
     <option>Drama</option>
@@ -87,10 +87,10 @@ data="{[
 `<div class="$$join">
   <div>
     <div>
-      <input class="$$input $$join-item" placeholder="Search..."/>
+      <input class="$$input $$input-bordered $$join-item" placeholder="Search..."/>
     </div>
   </div>
-  <select class="$$select $$join-item">
+  <select class="$$select $$select-bordered $$join-item">
     <option disabled selected>Category</option>
     <option>Sci-fi</option>
     <option>Drama</option>
@@ -106,12 +106,12 @@ data="{[
 
 <Component title="Custom border radius">
 <div class="join">
-  <input class="input join-item" placeholder="Email"/>
+  <input class="input input-bordered join-item" placeholder="Email"/>
   <button class="btn join-item rounded-r-full">Subscribe</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$join">
-  <input class="$$input $$join-item" placeholder="Email"/>
+  <input class="$$input $$input-bordered $$join-item" placeholder="Email"/>
   <button class="$$btn $$join-item rounded-r-full">Subscribe</button>
 </div>`
 }</pre>
