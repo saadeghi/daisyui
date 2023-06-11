@@ -1,8 +1,5 @@
 .join {
   @apply inline-flex items-stretch;
-  & * {
-    @apply rounded-[inherit];
-  }
   & :where(.join-item) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -40,4 +37,7 @@
     border-top-right-radius: inherit;
     border-bottom-right-radius: inherit;
   }
+}
+:where(.join *) {
+  @apply rounded-[inherit];
 }
