@@ -7,8 +7,8 @@ on:
         type: choice
         description: Release type
         options:
-          - patch
-          - minor
+          - ":patch"
+          - ":minor"
   push:
     branches:
       - master
@@ -39,7 +39,7 @@ jobs:
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          npm run release${{ github.event.inputs.release-type ? ":" + github.event.inputs.release-type : "" }}
+          npm run release${{ github.event.inputs.release-type }}
 
       - name: build package
         run: npm run build
