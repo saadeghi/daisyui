@@ -38,13 +38,12 @@ jobs:
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          npm run release:${{ github.event.inputs.release-type }}
+          ./node_modules/.bin/standard-version --release-as ${{ github.event.inputs.release-type }}
 
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install package dependencies 
-        run: npm install
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: build package
         run: npm run build
