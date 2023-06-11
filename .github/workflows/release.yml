@@ -38,20 +38,10 @@ jobs:
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          ./node_modules/.bin/standard-version --release-as ${{ github.event.inputs.release-type }}
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          npm run release:${{ github.event.inputs.release-type }}
 
       - name: build package
         run: npm run build
-
-      - name: Publish package
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: get-npm-version
         id: package-version
@@ -79,3 +69,8 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
