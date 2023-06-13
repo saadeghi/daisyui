@@ -2,7 +2,7 @@
   @apply grid relative;
   grid-auto-columns: max-content auto;
   &-content {
-    @apply row-start-1 col-start-2 translate-x-0 transition-all;
+    @apply row-start-1 col-start-2;
   }
   &-side {
     @apply w-full pointer-events-none grid grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain row-start-1 col-start-1 fixed top-0 left-0 overflow-y-auto;
@@ -27,11 +27,8 @@
     }
   }
   &-toggle {
-    @apply fixed h-0 w-0 appearance-none opacity-0; 
+    @apply fixed h-0 w-0 appearance-none opacity-0;
     &:checked {
-      & ~ .drawer-content {
-        @apply translate-x-2;
-      }
       & ~ .drawer-side {
         @apply visible pointer-events-auto;
         & > *:not(.drawer-overlay) {
