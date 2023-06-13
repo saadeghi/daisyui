@@ -37,7 +37,7 @@
 .collapse:focus:not(.collapse-close) .collapse-content,
 .collapse:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-content,
 .collapse:not(.collapse-close) input[type="radio"]:checked ~ .collapse-content {
-  @apply visible min-h-fit h-auto translate-y-0;
+  @apply visible min-h-fit translate-y-0;
   & > * {
     @apply translate-y-0;
     transition: transform 0s ease-in-out;
