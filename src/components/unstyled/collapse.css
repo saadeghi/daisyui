@@ -17,8 +17,11 @@
   @apply appearance-none opacity-0;
 }
 .collapse-content {
-  @apply col-start-1 row-start-2 invisible min-h-0;
-  transition: visibility 0.2s;
+  @apply col-start-1 row-start-2 min-h-0;
+  & > * {
+    @apply translate-y-4;
+    transition: transform 0.2s ease-in-out;
+  }
 }
 .collapse[open],
 .collapse-open,
@@ -34,5 +37,9 @@
 .collapse:focus:not(.collapse-close) .collapse-content,
 .collapse:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-content,
 .collapse:not(.collapse-close) input[type="radio"]:checked ~ .collapse-content {
-  @apply visible min-h-fit;
+  @apply visible min-h-fit h-auto translate-y-0;
+  & > * {
+    @apply translate-y-0;
+    transition: transform 0s ease-in-out;
+  }
 }
