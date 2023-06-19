@@ -43,9 +43,9 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$join $$join-vertical">
-  <button class="$btn $$join-item">Button</button>
-  <button class="$btn $$join-item">Button</button>
-  <button class="$btn $$join-item">Button</button>
+  <button class="$$btn $$join-item">Button</button>
+  <button class="$$btn $$join-item">Button</button>
+  <button class="$$btn $$join-item">Button</button>
 </div>`
 }</pre>
 </Component>
