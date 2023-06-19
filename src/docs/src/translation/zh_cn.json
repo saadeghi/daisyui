@@ -116,7 +116,7 @@
   "Do you like daisyUI?": "你喜欢 daisyUI？",
   "Edit this page on GitHub": "在 GitHub 上编辑本页",
   "ask the community": "向社区提问题",
-  "open an issue on GitHub": "在 GitHub 提 issueく",
+  "open an issue on GitHub": "在 GitHub 提 issue",
   "tweet about it!": "在 twitter、知乎、微博宣传 daisyui 吧！",
   "Warning": "警告",
   "CDN files are not recommended for production <br/>because you can't purge unused styles and file size will be large.": "不建议在生产上使用 CDN 的版本<br/>因为你不能对未使用的样式进行裁剪，最终的打包大小会很大。",
