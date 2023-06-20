@@ -9,4 +9,7 @@
   :where(.table-pin-cols tr th) {
     @apply sticky left-0 right-0 bg-base-100;
   }
+  &-zebra tbody tr:nth-child(even) :where(.table-pin-cols tr th) {
+    @apply bg-base-200;
+  }
 }
