@@ -153,7 +153,7 @@ data="{[
           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </label>
-      <ul tabindex="0" class="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li>
           <a class="justify-between">
             Profile
@@ -181,7 +181,7 @@ data="{[
           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </label>
-      <ul tabindex="0" class="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li>
           <a class="justify-between">
             Profile
@@ -210,7 +210,7 @@ data="{[
           <span class="badge badge-sm indicator-item">8</span>
         </div>
       </label>
-      <div tabindex="0" class="mt-3 card card-compact w-52 dropdown-content bg-base-100 shadow">
+      <div tabindex="0" class="mt-3 z-[1] card card-compact w-52 dropdown-content bg-base-100 shadow">
         <div class="card-body">
           <span class="font-bold text-lg">8 Items</span>
           <span class="text-info">Subtotal: $999</span>
@@ -226,7 +226,7 @@ data="{[
           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </label>
-      <ul tabindex="0" class="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li>
           <a class="justify-between">
             Profile
@@ -252,7 +252,7 @@ data="{[
           <span class="$$badge $$badge-sm $$indicator-item">8</span>
         </div>
       </label>
-      <div tabindex="0" class="mt-3 $$card $$card-compact $$dropdown-content w-52 bg-base-100 shadow">
+      <div tabindex="0" class="mt-3 z-[1] $$card $$card-compact $$dropdown-content w-52 bg-base-100 shadow">
         <div class="$$card-body">
           <span class="font-bold text-lg">8 Items</span>
           <span class="text-info">Subtotal: $999</span>
@@ -268,7 +268,7 @@ data="{[
           <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </label>
-      <ul tabindex="0" class="$$menu $$menu-sm $$dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="$$menu $$menu-sm $$dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li>
           <a class="justify-between">
             Profile
@@ -291,7 +291,7 @@ data="{[
       <label tabindex="0" class="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
-      <ul tabindex="0" class="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li><a>Homepage</a></li>
         <li><a>Portfolio</a></li>
         <li><a>About</a></li>
@@ -320,7 +320,7 @@ data="{[
       <label tabindex="0" class="$$btn $$btn-ghost $$btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
-      <ul tabindex="0" class="$$menu $$menu-sm $$dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="$$menu $$menu-sm $$dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Homepage</a></li>
         <li><a>Portfolio</a></li>
         <li><a>About</a></li>
@@ -352,7 +352,7 @@ data="{[
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabindex="0" class="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li><a>Item 1</a></li>
         <li>
           <a>Parent</a>
@@ -392,7 +392,7 @@ data="{[
       <label tabindex="0" class="$$btn $$btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabindex="0" class="$$menu $$menu-sm $$dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabindex="0" class="$$menu $$menu-sm $$dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Item 1</a></li>
         <li>
           <a>Parent</a>
