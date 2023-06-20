@@ -246,7 +246,7 @@
   }
 
   /* disabled */
-  &-disabled,
+  &.btn-disabled,
   &[disabled],
   &:disabled {
     @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
