@@ -4,12 +4,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 3.1.2 (2023-06-20)
 
+### Bug fixes
+
+* fix: #2031, #2027, #2024, #2021, #2008, #1907
+
 ### 3.1.1 (2023-06-16)
 
 
 ### Bug Fixes
 
 * [#1980](https://github.com/saadeghi/daisyui/issues/1980) ([a2434d4](https://github.com/saadeghi/daisyui/commit/a2434d4f915729409f952590d17fa958829f0096))
+* #1985
+* #2001
+* #1995
 
 ## 3.1.0 (2023-06-11)
 
