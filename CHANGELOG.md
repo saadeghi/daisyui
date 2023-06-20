@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.5 (2023-06-20)
+
+
+### Bug Fixes
+
+* [#1888](https://github.com/saadeghi/daisyui/issues/1888) drawer now animates out ([#1988](https://github.com/saadeghi/daisyui/issues/1988)) ([b5b55c5](https://github.com/saadeghi/daisyui/commit/b5b55c5ff2970fcc1500173d0570bcee861a4e13))
+
 ### 3.1.4 (2023-06-20)
 
 ### 3.1.3 (2023-06-20)
