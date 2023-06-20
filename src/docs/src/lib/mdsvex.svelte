@@ -3,6 +3,9 @@
 
   export let title
   export let desc
+  export let data
+  export let form
+  export let published
 
   import Ads from "@components/Ads.svelte"
   import ComponentFooter from "@components/ComponentFooter.svelte"

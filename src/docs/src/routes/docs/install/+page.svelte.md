@@ -18,7 +18,7 @@ published: true
 1. <Translate text="Install daisyUI" />:
 
 ```
-npm i -D daisyui
+npm i -D daisyui@latest
 ```
 
 2. <Translate text="Then add daisyUI to your <code>tailwind.config.js</code> files" />:
