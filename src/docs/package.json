@@ -36,7 +36,7 @@
     "@svelte-put/inline-svg": "^2.0.0",
     "@svelte-put/preprocess-inline-svg": "^2.1.1",
     "colord": "^2.9.3",
-    "daisyui": "^3.0.10",
+    "daisyui": "^3.1.1",
     "dep-graph-count": "^1.0.0",
     "emoji-unicode": "^2.0.1",
     "lodash.debounce": "^4.0.8",
