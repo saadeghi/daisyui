@@ -5,12 +5,18 @@
     @apply row-start-1 col-start-2;
   }
   &-side {
-    @apply invisible w-full pointer-events-none grid grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain row-start-1 col-start-1 fixed top-0 left-0 overflow-y-auto;
+    @apply w-full pointer-events-none grid grid-cols-1 grid-rows-1 items-start justify-items-start overscroll-contain row-start-1 col-start-1 fixed top-0 left-0 overflow-y-auto;
     height: 100vh;
     height: 100dvh;
     scrollbar-width: none;
     &::-webkit-scrollbar {
       @apply hidden;
+    }
+    & > .drawer-overlay {
+      @apply place-self-stretch sticky top-0;
+    }
+    & > * {
+      @apply col-start-1 row-start-1;
     }
     & > *:not(.drawer-overlay) {
       transition: transform 0.4s cubic-bezier(0, 0, 0.58, 1);
@@ -22,16 +28,12 @@
   }
   &-toggle {
     @apply fixed h-0 w-0 appearance-none opacity-0;
-    &:checked ~ .drawer-side {
-      @apply visible pointer-events-auto;
-      & > * {
-        @apply col-start-1 row-start-1;
-        &:not(.drawer-overlay) {
+    &:checked {
+      & ~ .drawer-side {
+        @apply visible pointer-events-auto;
+        & > *:not(.drawer-overlay) {
           transform: translateX(0%);
         }
-      }
-      & > .drawer-overlay {
-        @apply place-self-stretch sticky top-0;
       }
     }
   }
