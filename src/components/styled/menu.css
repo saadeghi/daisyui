@@ -6,7 +6,7 @@
   margin: 0.5rem 1rem;
   height: 1px;
 }
-:where(.menu li ul) {
+.menu :where(li ul) {
   @apply pl-2 ml-4;
   &:before {
     @apply absolute left-0 w-px top-3 bottom-3 bg-base-content/10;
@@ -29,22 +29,21 @@
       @apply outline-none bg-base-content/10 text-base-content cursor-pointer;
     }
   }
-  &:active,
-  &:where(.active) {
-    @apply bg-neutral text-neutral-content;
-  }
-  &:where(.active) {
-    @apply [@media(hover:hover)]:bg-neutral [@media(hover:hover)]:text-neutral-content;
-  }
 }
-:where(.menu li.disabled) {
+
+.menu li > *:active,
+.menu li > *.active {
+  @apply bg-neutral text-neutral-content [@media(hover:hover)]:bg-neutral [@media(hover:hover)]:text-neutral-content;
+}
+
+.menu li.disabled {
   @apply text-base-content/30;
 }
-:where(.menu li > details > summary)::-webkit-details-marker {
+.menu :where(li > details > summary)::-webkit-details-marker {
   @apply hidden;
 }
-:where(.menu li > details > summary):after,
-:where(.menu li > .menu-dropdown-toggle):after {
+.menu :where(li > details > summary):after,
+.menu :where(li > .menu-dropdown-toggle):after {
   @apply justify-self-end;
   display: block;
   margin-top: -0.5rem;
@@ -59,8 +58,8 @@
   box-shadow: 2px 2px;
   pointer-events: none;
 }
-:where(.menu li > details[open] > summary):after,
-:where(.menu li > .menu-dropdown-toggle.menu-dropdown-show):after {
+.menu :where(li > details[open] > summary):after,
+.menu :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
   transform: rotate(225deg);
   margin-top: 0;
 }
