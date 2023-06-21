@@ -89,7 +89,7 @@
     style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};"
     bind:this={drawersidebar}
     on:scroll={parseSidebarScroll}>
-    <label for="drawer" class="drawer-overlay" />
+    <label for="drawer" class="drawer-overlay" aria-label="Close menu" />
     <aside class="bg-base-100 w-80">
       <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
       <div
