@@ -227,5 +227,5 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
 [number-of-components]: https://badgen.net/badge/total%20components/52/green
 [docs-url-install]: https://daisyui.com/docs/install
 [docs-url]: https://daisyui.com/
-[logo-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg
+[logo-url]: https://raw.githubusercontent.com/saadeghi/daisyui/master/src/docs/static/images/daisyui-logo/favicon-192.png
 [banner-url]: https://raw.githubusercontent.com/saadeghi/files/main/daisyui3/banner.png

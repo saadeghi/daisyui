@@ -5,6 +5,9 @@
   import { useBreakpoints } from "$lib/breakpoints"
   import Search from "@components/Search.svelte"
 
+  import LogoContextMenu from "@components/LogoContextMenu.svelte"
+  let contextMenuEl
+
   export let closeDrawer
   export let openDrawer
 
@@ -23,13 +26,25 @@
   class={`bg-base-100 sticky top-0 z-20 hidden items-center gap-2 bg-opacity-90 px-4 py-2 backdrop-blur ${
     $page.url.pathname == "/" ? "" : "lg:flex"
   } ${switchNavbarStyle ? "shadow-sm" : ""}`}>
-  <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost px-2">
-    <div
-      class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
+  <a
+    href="/"
+    aria-current="page"
+    aria-label="Homepage"
+    class="flex-0 btn btn-ghost px-2"
+    on:contextmenu|preventDefault={(e) => contextMenuEl.openContextMenu(e)}>
+    <svg width="32" height="32" viewBox="0 0 415 415" xmlns="http://www.w3.org/2000/svg">
+      <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5" />
+      <circle cx="207.5" cy="135" r="130" fill="black" fill-opacity=".3" />
+      <circle cx="207.5" cy="135" r="125" fill="white" />
+      <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
+    </svg>
+
+    <div class="font-title inline-flex text-lg md:text-2xl">
       <span class="lowercase">daisy</span>
-      <span class="text-base-content uppercase">UI</span>
+      <span class="uppercase text-[#1AD1A5]">UI</span>
     </div>
   </a>
+  <LogoContextMenu bind:this={contextMenuEl} />
   <div class="dropdown">
     <label tabindex="0" class="link link-hover font-mono text-xs">
       {version}

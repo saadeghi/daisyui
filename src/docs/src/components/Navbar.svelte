@@ -4,6 +4,9 @@
   import ThemeChange from "@components/ThemeChange.svelte"
   import LangChange from "@components/LangChange.svelte"
   import Search from "@components/Search.svelte"
+  import LogoContextMenu from "@components/LogoContextMenu.svelte"
+
+  let contextMenuEl
 
   import { t } from "@src/lib/i18n"
 
@@ -62,27 +65,26 @@
           href="/"
           aria-current="page"
           aria-label="Homepage"
-          class={`flex-0 btn btn-ghost px-2 ${
-            switchNavbarStyle || $page.url.pathname != "/" ? "" : ""
-          }`}>
-          <div
-            class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
-            <span
-              class={`lowercase ${
-                switchNavbarStyle || $page.url.pathname != "/" ? "text-primary" : "text-primary"
-              }`}>
-              daisy
-            </span>
-            <span
-              class={`uppercase ${
-                switchNavbarStyle || $page.url.pathname != "/"
-                  ? "text-base-content"
-                  : "text-base-content"
-              }`}>
-              UI
-            </span>
+          class="flex-0 btn btn-ghost gap-1 px-2 md:gap-2"
+          on:contextmenu|preventDefault={(e) => contextMenuEl.openContextMenu(e)}>
+          <svg
+            class="h-6 w-6 md:h-8 md:w-8"
+            width="32"
+            height="32"
+            viewBox="0 0 415 415"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5" />
+            <circle cx="207.5" cy="135" r="130" fill="black" fill-opacity=".3" />
+            <circle cx="207.5" cy="135" r="125" fill="white" />
+            <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
+          </svg>
+
+          <div class="font-title inline-flex text-lg md:text-2xl">
+            <span class="lowercase">daisy</span>
+            <span class="uppercase text-[#1AD1A5]">UI</span>
           </div>
         </a>
+        <LogoContextMenu bind:this={contextMenuEl} />
         <div class="dropdown">
           <label tabindex="0" class="link link-hover my-8 inline-block font-mono text-xs">
             {version}
