@@ -174,7 +174,7 @@
               href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes${$page.url.pathname.replace(
                 /\/$/,
                 ""
-              )}.svelte.md?plain=1`}>
+              )}/+page.svelte.md?plain=1`}>
               {$t("Edit this page on GitHub")}
             </a>
           </div>
