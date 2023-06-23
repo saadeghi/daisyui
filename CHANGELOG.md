@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.6 (2023-06-23)
+
+
+### Bug Fixes
+
+* [#2043](https://github.com/saadeghi/daisyui/issues/2043) ([b6081c3](https://github.com/saadeghi/daisyui/commit/b6081c3198c5603840dce95ee3025e70035bfed9))
+
 ### 3.1.5 (2023-06-20)
 
 
