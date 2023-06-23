@@ -20,8 +20,9 @@
 
 :where(.menu li:not(.menu-title):not(.disabled) > *:not(ul):not(details):not(.menu-title)),
 :where(.menu li:not(.menu-title):not(.disabled) > details > summary:not(.menu-title)) {
-  &:not(.active).focus,
-  &:not(.active):focus {
+  &:not(summary):not(.active).focus,
+  &:not(summary):not(.active):focus,
+  &:is(summary):not(.active):focus-visible {
     @apply outline-none bg-base-content/10 text-base-content cursor-pointer;
   }
   @media (hover: hover) {
@@ -31,8 +32,9 @@
   }
 }
 
-.menu li > *:active,
-.menu li > *.active {
+.menu li > *:not(ul):not(details):active,
+.menu li > *:not(ul):not(details).active,
+.menu li > details > summary:active {
   @apply bg-neutral text-neutral-content [@media(hover:hover)]:bg-neutral [@media(hover:hover)]:text-neutral-content;
 }
 
