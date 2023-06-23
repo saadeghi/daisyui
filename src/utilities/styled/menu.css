@@ -1,12 +1,15 @@
 .menu-horizontal {
   & > li:not(.menu-title) > details > ul {
-    @apply mt-4 ml-0 pr-2 py-2 bg-base-100 shadow-xl rounded-box;
+    @apply mt-4 ml-0 pr-2 py-2;
   }
   & > li > details > ul {
     &:before {
       content: none;
     }
   }
+}
+:where(.menu-horizontal > li:not(.menu-title) > details > ul) {
+  @apply bg-base-100 shadow-xl rounded-box;
 }
 .menu-vertical {
   & > li:not(.menu-title) > details > ul {
