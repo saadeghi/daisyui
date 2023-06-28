@@ -223,20 +223,20 @@ data="{[
 <Component title="Custom colors for collapse that works with checkbox" desc="Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked">
 <div class="collapse bg-base-200">
   <input type="checkbox" class="peer" /> 
-  <div class="collapse-title bg-primary text-primary-content [input:checked~&]:bg-secondary [input:checked~&]:text-secondary-content">
+  <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
   </div>
-  <div class="collapse-content bg-primary text-primary-content [input:checked~&]:bg-secondary [input:checked~&]:text-secondary-content"> 
+  <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
     <p>hello</p>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="collapse bg-base-200">
   <input type="checkbox" class="peer" /> 
-  <div class="$$collapse-title bg-primary text-primary-content [input:checked~&]:bg-secondary [input:checked~&]:text-secondary-content">
+  <div class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click me to show/hide content
   </div>
-  <div class="$$collapse-content bg-primary text-primary-content [input:checked~&]:bg-secondary [input:checked~&]:text-secondary-content"> 
+  <div class="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
     <p>hello</p>
   </div>
 </div>`
