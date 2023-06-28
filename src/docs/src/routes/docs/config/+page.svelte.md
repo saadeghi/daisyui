@@ -45,7 +45,7 @@ module.exports = {
 
 - ### themes
 
-  `Boolean or array (default: true)`
+  `Boolean or array (default: false)`
 
   <Translate text="If it's true, all themes will be included." />
   <Translate text="If it's false, only light and dark themes will be available." />  
