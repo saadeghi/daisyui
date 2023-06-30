@@ -9,9 +9,17 @@
   <div class="bg-base-100 text-base-content">
     <footer class="footer mx-auto max-w-6xl px-4 py-20">
       <div>
-        <div class="font-title inline-flex text-3xl font-black">
-          <span class="text-primary lowercase">daisy</span>
-          <span class="text-base-content uppercase">UI</span>
+        <div class="flex items-center gap-2">
+          <svg width="32" height="32" viewBox="0 0 415 415" xmlns="http://www.w3.org/2000/svg">
+            <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5" />
+            <circle cx="207.5" cy="135" r="130" fill="black" fill-opacity=".3" />
+            <circle cx="207.5" cy="135" r="125" fill="white" />
+            <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
+          </svg>
+          <div class="font-title inline-flex text-3xl font-black">
+            <span class="lowercase">daisy</span>
+            <span class="uppercase text-[#1AD1A5]">UI</span>
+          </div>
         </div>
         <p class="opacity-50">
           {@html $t("footer-tagline")}

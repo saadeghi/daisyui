@@ -1439,12 +1439,8 @@
           [20, 30],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [20, 30], [0, 1])}`}>
-        <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup
-            initial={stargazers_count * 0.9}
-            value={stargazers_count}
-            duration={1000}
-            roundto={100} />
+        <h3 class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+          <Countup initial={stargazers_count * 0.8} value={stargazers_count} duration={2000} />
         </h3>
         <a
           href="https://github.com/saadeghi/daisyui"
@@ -1461,12 +1457,11 @@
           [30, 40],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [30, 40], [0, 1])}`}>
-        <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+        <h3 class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup
-            initial={data.gh_dependents.repositories * 0.9}
+            initial={data.gh_dependents.repositories * 0.8}
             value={data.gh_dependents.repositories}
-            duration={2000}
-            roundto={100} />
+            duration={2200} />
         </h3>
         <a
           href="https://github.com/saadeghi/daisyui/network/dependents"
@@ -1483,8 +1478,8 @@
           [40, 50],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [40, 50], [0, 1])}`}>
-        <h3 class="text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup initial={downloads * 0.9} value={downloads} duration={3000} roundto={100} />
+        <h3 class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+          <Countup initial={downloads * 0.8} value={downloads} duration={2400} />
         </h3>
         <a
           href="https://www.npmjs.com/package/daisyui"
