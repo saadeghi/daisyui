@@ -33,11 +33,11 @@ jobs:
 
       - name: Install alpha daisyUI if staging
         if: github.repository == 'daisyui/daisyui.github.io'
-        run: cd src/docs && npm i daisyui@alpha
+        run: cd src/docs && npm i daisyui@alpha --legacy-peer-deps
 
       - name: Install latest daisyUI if production
         if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && npm i daisyui@latest
+        run: cd src/docs && npm i daisyui@latest --legacy-peer-deps
 
       - name: get new data from API
         run: cd src/docs && npm run get-files
