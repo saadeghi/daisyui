@@ -55,6 +55,14 @@
           {$t("contributing")}
           {@html newtabicon}
         </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://github.com/saadeghi/daisyui/discussions/1949"
+          class="link link-hover group">
+          FAQ
+          {@html newtabicon}
+        </a>
       </div>
       <div>
         <span class="footer-title">{$t("available-on")}</span>
