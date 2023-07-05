@@ -25,5 +25,5 @@
 
 [dir="rtl"] .breadcrumbs > ul > li + *:before,
 [dir="rtl"] .breadcrumbs > ol > li + *:before {
-  --tw-rotate: -135deg;
+  --tw-rotate: -45deg;
 }
