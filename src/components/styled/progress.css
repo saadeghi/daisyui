@@ -1,7 +1,7 @@
 .progress {
-  @apply h-2 rounded-box;
+  @apply h-2 rounded-box bg-base-content/20;
   &::-moz-progress-bar {
-    @apply bg-neutral;
+    @apply bg-base-content;
   }
   &-primary::-moz-progress-bar {
     @apply bg-primary;
@@ -26,7 +26,7 @@
   }
 
   &:indeterminate {
-    --progress-color: hsl(var(--n));
+    --progress-color: hsl(var(--bc));
   }
   &-primary:indeterminate {
     --progress-color: hsl(var(--p));
@@ -51,10 +51,10 @@
   }
 
   &::-webkit-progress-bar {
-    @apply bg-neutral/20 rounded-box;
+    @apply bg-transparent rounded-box;
   }
   &::-webkit-progress-value {
-    @apply bg-neutral-focus rounded-box;
+    @apply bg-base-content rounded-box;
   }
   &-primary::-webkit-progress-value {
     @apply bg-primary;
@@ -92,7 +92,7 @@
   animation: progress-loading 5s ease-in-out infinite;
 }
 .progress:indeterminate::-moz-progress-bar {
-  @apply bg-neutral/20;
+  @apply bg-transparent;
   background-image: repeating-linear-gradient(
     90deg,
     var(--progress-color) -1%,
