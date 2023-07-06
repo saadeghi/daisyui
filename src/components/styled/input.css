@@ -4,7 +4,7 @@
     line-height: 1em;
   }
   &-bordered {
-    @apply border-base-200;
+    @apply border-opacity-20;
   }
   &:focus {
     @apply outline outline-2 outline-offset-2 outline-base-content/20;
