@@ -554,6 +554,8 @@ All notable changes to this project will be documented in this file. See [standa
   + </button>
   ```
 
+* `bordered` and `hover-bordered` modifier class names for `menu` items are removed. Starting with version 3 there is no need for them because you can use Tailwind CSS border utility classes whereever you need.
+
 ### Bug fixes:
 
 * Fix `step` connectors not being visible on RTL mode.
