@@ -1,5 +1,5 @@
 .modal {
-  @apply duration-200 ease-in-out bg-transparent;
+  @apply duration-200 ease-in-out bg-transparent text-[inherit];
   transition-property: transform, opacity, visibility;
   overflow-y: hidden;
   overscroll-behavior: contain;
