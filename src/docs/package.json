@@ -16,9 +16,13 @@
     "@tailwindcss/typography": "0.5.9",
     "autoprefixer": "10.4.14",
     "dep-graph-count": "^1.0.0",
+    "json-diff": "^1.0.6",
     "mdsvex": "^0.11.0",
     "postcss": "8.4.25",
     "postcss-nesting": "12.0.0",
+    "prettier": "2.8.8",
+    "prettier-plugin-svelte": "2.10.1",
+    "prettier-plugin-tailwindcss": "0.3.0",
     "prism-themes": "1.9.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.1.0",
@@ -39,11 +43,5 @@
     "nanoid": "^4.0.2",
     "randomcolor": "^0.6.2",
     "svelte-countup": "^0.2.6"
-  },
-  "optionalDependencies": {
-    "json-diff": "^1.0.6",
-    "prettier": "2.8.8",
-    "prettier-plugin-svelte": "2.10.1",
-    "prettier-plugin-tailwindcss": "0.3.0"
   }
 }

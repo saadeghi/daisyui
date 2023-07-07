@@ -23,13 +23,13 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install package dependencies
-        run: npm install --omit=optional
+        run: npm install
 
       - name: build package
         run: npm run build
 
       - name: Install docs dependencies
-        run: cd src/docs && npm install --omit=optional
+        run: cd src/docs && npm install
 
       - name: Install alpha daisyUI if staging
         if: github.repository == 'daisyui/daisyui.github.io'
