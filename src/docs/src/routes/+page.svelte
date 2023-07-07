@@ -1022,10 +1022,7 @@
                 <span>{$t("Tailwind only")}</span>
                 <span class="font-mono text-xs">107</span>
               </div>
-              <progress
-                class="progress progress-warning w-56"
-                value={animateValue(section["performance"], [-100, -10], [0, 93])}
-                max="100" />
+              <progress class="progress progress-warning w-56" value={93} max="100" />
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
@@ -1034,7 +1031,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section["performance"], [-100, -10], [0, 46])}
+                value={animateValue(section["performance"], [-100, -10], [100, 12])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -1068,10 +1065,7 @@
                 <span>{$t("Tailwind only")}</span>
                 <span class="font-mono text-xs">1884 byte</span>
               </div>
-              <progress
-                class="progress progress-warning w-56"
-                value={animateValue(section["performance"], [-100, -10], [0, 84])}
-                max="100" />
+              <progress class="progress progress-warning w-56" value={93} max="100" />
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
@@ -1080,7 +1074,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section["performance"], [-100, -10], [0, 37])}
+                value={animateValue(section["performance"], [-100, -10], [100, 20])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -1265,7 +1259,7 @@
   </div>
 </div>
 
-<div class="min-h-[900vh] py-20" bind:this={section["themes"]}>
+<div class="min-h-[600vh] py-20" bind:this={section["themes"]}>
   <div
     class="sticky top-20 mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl">
     {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
