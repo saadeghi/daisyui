@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.2.0 (2023-07-07)
+
+
+### Features
+
+* less node dependencies ([f5859f7](https://github.com/saadeghi/daisyui/commit/f5859f7beecd01002a4585cdab1f057be01ba9d2))
+
 ### 3.1.11 (2023-07-07)
 
 
