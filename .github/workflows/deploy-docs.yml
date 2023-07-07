@@ -29,15 +29,15 @@ jobs:
         run: npm run build
 
       - name: Install docs dependencies
-        run: cd src/docs && npm install --legacy-peer-deps
+        run: cd src/docs && npm install
 
       - name: Install alpha daisyUI if staging
         if: github.repository == 'daisyui/daisyui.github.io'
-        run: cd src/docs && npm i daisyui@alpha --legacy-peer-deps
+        run: cd src/docs && npm i daisyui@alpha
 
       - name: Install latest daisyUI if production
         if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && npm i daisyui@latest --legacy-peer-deps
+        run: cd src/docs && npm i daisyui@latest
 
       - name: get new data from API
         run: cd src/docs && npm run get-files
