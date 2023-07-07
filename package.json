@@ -91,25 +91,23 @@
     "release:major": "rm -f package-lock.json && standard-version --release-as major"
   },
   "devDependencies": {
-    "@vitest/ui": "^0.31.1",
     "autoprefixer": "^10",
-    "c8": "^7.14.0",
     "postcss-cli": "10.1.0",
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",
-    "prettier": "^2.8.8",
-    "prettier-plugin-svelte": "^2.10.1",
-    "rtlcss": "4.1.0",
-    "standard-version": "^9.5.0",
-    "vitest": "^0.31.1"
+    "rtlcss": "4.1.0"
   },
   "dependencies": {
     "colord": "^2.9",
     "css-selector-tokenizer": "^0.8",
+    "postcss": "^8",
     "postcss-js": "^4",
     "tailwindcss": "^3"
   },
-  "peerDependencies": {
-    "postcss": "^8"
+  "optionalDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.1",
+    "standard-version": "^9.5.0",
+    "vitest": "^0.31.1"
   }
 }
