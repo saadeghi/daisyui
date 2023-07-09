@@ -82,8 +82,12 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: "@geordiep"
 
+      - name: Add npm registry info for @geordiep scope
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}\n@geordiep:registry=https://npm.pkg.github.com" >> .npmrc
+
       - name: Publish package
-        run: npm publish
+        run: npm publish --dry-run
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
