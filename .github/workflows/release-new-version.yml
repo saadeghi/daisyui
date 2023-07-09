@@ -80,6 +80,6 @@ jobs:
           echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}\n@geordiep:registry=https://npm.pkg.github.com" >> .npmrc
 
       - name: Publish package
-        run: npm publish --dry-run
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
