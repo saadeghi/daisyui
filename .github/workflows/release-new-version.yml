@@ -75,13 +75,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "latest"
-          registry-url: https://npm.pkg.github.com
-          scope: "@geordiep"
-
       - name: Add npm registry info for @geordiep scope
         run: |
           echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}\n@geordiep:registry=https://npm.pkg.github.com" >> .npmrc
@@ -90,8 +83,3 @@ jobs:
         run: npm publish --dry-run
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-  # deploy:
-  #   name: "Deploy docs"
-  #   needs: release
-  #   uses: ./.github/workflows/deploy-docs.yml
