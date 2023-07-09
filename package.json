@@ -1,20 +1,20 @@
 {
-  "name": "daisyui",
+  "name": "@geordieP/daisyui",
   "version": "3.2.1",
-  "description": "daisyUI - Tailwind CSS Components",
-  "author": "Pouya Saadeghi",
+  "description": "GP custom daisyUI - Tailwind CSS Components",
+  "author": "Pouya Saadeghi, Geordie Powers",
   "license": "MIT",
   "homepage": "https://daisyui.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saadeghi/daisyui.git"
+    "url": "https://github.com/geordiep/daisyui.git"
   },
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/daisyui"
   },
   "bugs": {
-    "url": "https://github.com/saadeghi/daisyui/issues"
+    "url": "https://github.com/geordiep/daisyui/issues"
   },
   "keywords": [
     "design-system",

@@ -20,9 +20,12 @@ on:
 
 jobs:
   release:
-    if: github.repository == 'saadeghi/daisyui'
+    if: github.repository == 'geordiep/daisyui'
     name: "Release"
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -38,8 +41,8 @@ jobs:
 
       - name: Release
         run: |
-          git config --local user.email "pouya.saadeghi@gmail.com"
-          git config --local user.name "Pouya Saadeghi"
+          git config --local user.email "gp@gpow.ca"
+          git config --local user.name "Geordie Powers"
           npm run release${{ github.event.inputs.release-type }}
 
       - name: build package
@@ -55,8 +58,8 @@ jobs:
       - name: Commit files
         id: commit
         run: |
-          git config --local user.email "pouya.saadeghi@gmail.com"
-          git config --local user.name "Pouya Saadeghi"
+          git config --local user.email "gp@gpow.ca"
+          git config --local user.name "Geordie Powers"
           git add --all
           if [-z "$(git status --porcelain)"]; then
             echo "push=false" >> $GITHUB_OUTPUT
@@ -72,10 +75,17 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+          registry-url: https://npm.pkg.github.com
+          scope: "@geordiep"
+
       - name: Publish package
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   # deploy:
   #   name: "Deploy docs"
