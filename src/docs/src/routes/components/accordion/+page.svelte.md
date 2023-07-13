@@ -7,6 +7,7 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import Translate from "@components/Translate.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -25,12 +26,12 @@ data="{[
 
 <div class="alert text-sm mt-4">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <div>Accordion uses the same style as the <a href="/components/collapse/" class="link">collapse component</a> but it works with radio inputs. You can control which item to be open by checking/unchecking the hidden radio input.</div>
+  <div><Translate text="Accordion uses the same style as the <a href='/components/collapse/' class='link'>collapse component</a> but it works with radio inputs. You can control which item to be open by checking/unchecking the hidden radio input." /></div>
 </div>
 
 <div class="alert text-sm mt-4">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <div>All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set.</div>
+  <div><Translate text="All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set." /></div>
 </div>
 
 <Component title="Accordion using radio inputs">
