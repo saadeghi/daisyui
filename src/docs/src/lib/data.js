@@ -484,7 +484,7 @@ export let pages = [
         badge: "",
       },
       {
-        name: "File input",
+        name: "File Input",
         tags: "file upload",
         href: "/components/file-input/",
         icon: "",

@@ -7,6 +7,7 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import Translate from "@components/Translate.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 
@@ -26,7 +27,7 @@ published: true
   })
 </script>
 
-You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.
+<Translate text="You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99." />
 
 <ClassTable
 data="{[

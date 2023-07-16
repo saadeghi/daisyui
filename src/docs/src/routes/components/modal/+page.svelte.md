@@ -7,6 +7,7 @@ published: true
 <script>
   import Component from "@components/Component.svelte"
   import ClassTable from "@components/ClassTable.svelte"
+  import Translate from "@components/Translate.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -27,7 +28,7 @@ data="{[
 
 <div class="alert text-sm">
   <div>
-    <span class="font-bold">There are 3 ways to use a modal:</span>
+    <span class="font-bold"><Translate text="There are 3 ways to use a modal:" /></span>
     <ol>
       <li>Using <code>&lt;dialog&gt;</code> element: It needs JS to open but it has better accessibility and we can close it using <span class="kbd kbd-xs">Esc</span> key</li>
       <li>Using a hidden <code>&lt;input type="checkbox"&gt;</code> and <code>&lt;label&gt;</code> to check/uncheck the checkbox and open/close the modal</li>
@@ -38,7 +39,7 @@ data="{[
 
 <div class="alert text-sm mt-4">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <div>Make sure you're using unique IDs for each modal</div>
+  <div><Translate text="Make sure you're using unique IDs for each modal" /></div>
 </div>
 
 ### Method 1: using dialog element <span class="badge badge-success">recommended</span>
