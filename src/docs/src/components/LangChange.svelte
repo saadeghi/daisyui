@@ -34,7 +34,7 @@
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
             <button class:active={$currentLang == langItem} on:click={() => setLang(langItem)}>
-              {#if $t("__flag", {}, langItem, false) !== "__flag"}
+              {#if $t("__flag", {}, langItem, false) !== "__flag" && $t("__name_en", {}, langItem, false) !== "taiwan"}
                 <img
                   class="drop-shadow"
                   loading="lazy"
