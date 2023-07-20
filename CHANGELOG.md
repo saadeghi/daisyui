@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.3.0 (2023-07-20)
+
+
+### Features
+
+* add the browser mockup component from README.md list ([#2147](https://github.com/saadeghi/daisyui/issues/2147)) ([b58282e](https://github.com/saadeghi/daisyui/commit/b58282ee5fb6ba3ffd147c509544b214fd72d05a))
+
 ### 3.2.2 (2023-07-20)
 
 
