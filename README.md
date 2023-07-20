@@ -138,7 +138,7 @@ Tweet about daisyUI: [![][tweet]][tweet-url]
   - [x] Tab
 
 - Mockup
-  - [ ] Browser
+  - [x] Browser
   - [x] Code
   - [x] Phone
   - [x] Window
