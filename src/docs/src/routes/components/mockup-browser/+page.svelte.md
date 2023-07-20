@@ -20,9 +20,7 @@ data="{[
 <Component title="browser mockup with border">
 <div class="border mockup-browser border-base-300 w-full">
   <div class="toolbar">
-    <div class="input border border-base-300" style="opacity: 0.5;">
-      <a href="https://daisyui.com" class="link">https://daisyui.com</a>
-    </div>
+    <div class="input border border-base-300">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>
@@ -39,9 +37,7 @@ data="{[
 <Component title="browser mockup with background color">
 <div class="border mockup-browser bg-base-300 w-full">
   <div class="toolbar">
-    <div class="input">
-      <a href="https://daisyui.com" class="link">https://daisyui.com</a>
-    </div>
+    <div class="input">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>
