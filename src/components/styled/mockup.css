@@ -77,7 +77,7 @@
   }
   &-browser {
     @apply rounded-box;
-    .toolbar {
+    .mockup-browser-toolbar {
       @apply my-3 inline-flex w-full items-center pr-[1.4em];
       &:before {
         content: "";

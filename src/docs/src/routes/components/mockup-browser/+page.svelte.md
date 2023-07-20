@@ -14,20 +14,21 @@ published: true
 <ClassTable
 data="{[
   { type:'component', class: 'mockup-browser', desc: 'Container element' },
+  { type:'component', class: 'mockup-browser-toolbar', desc: 'The toolbar that can include addressbar or other things' },
 ]}"
 />
 
 <Component title="browser mockup with border">
 <div class="border mockup-browser border-base-300 w-full">
-  <div class="toolbar">
+  <div class="mockup-browser-toolbar">
     <div class="input border border-base-300">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-browser border border-base-300">
-  <div class="toolbar">
-    <div class="input border border-base-300">https://daisyui.com</div>
+  <div class="$$mockup-browser-toolbar">
+    <div class="$$input border border-base-300">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>`
@@ -36,15 +37,15 @@ data="{[
 
 <Component title="browser mockup with background color">
 <div class="border mockup-browser bg-base-300 w-full">
-  <div class="toolbar">
+  <div class="mockup-browser-toolbar">
     <div class="input">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$mockup-browser border bg-base-300">
-  <div class="toolbar">
-    <div class="input">https://daisyui.com</div>
+  <div class="$$mockup-browser-toolbar">
+    <div class="$$input">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>`
