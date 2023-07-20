@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.3.1 (2023-07-20)
+
+
+### Bug Fixes
+
+* rename `toolbar` class of browser mockup to `mockup-browser-toolbar` to avoid future conflicts ([23f9e17](https://github.com/saadeghi/daisyui/commit/23f9e17c3d56858c2b8d5fa930657bb17ff5ceb8))
+
 ## 3.3.0 (2023-07-20)
 
 
