@@ -69,11 +69,11 @@ data="{[
 <div class="join">
   <div>
     <div>
-      <input class="input input-bordered join-item" placeholder="Search..."/>
+      <input class="input input-bordered join-item w-[5.3rem] md:w-52" placeholder="Search"/>
     </div>
   </div>
-  <select class="select select-bordered join-item">
-    <option disabled selected>Category</option>
+  <select class="select select-bordered join-item w-[5.8rem] md:w-auto">
+    <option disabled selected>Filter</option>
     <option>Sci-fi</option>
     <option>Drama</option>
     <option>Action</option>
@@ -87,11 +87,11 @@ data="{[
 `<div class="$$join">
   <div>
     <div>
-      <input class="$$input $$input-bordered $$join-item" placeholder="Search..."/>
+      <input class="$$input $$input-bordered $$join-item" placeholder="Search"/>
     </div>
   </div>
   <select class="$$select $$select-bordered $$join-item">
-    <option disabled selected>Category</option>
+    <option disabled selected>Filter</option>
     <option>Sci-fi</option>
     <option>Drama</option>
     <option>Action</option>
@@ -106,7 +106,7 @@ data="{[
 
 <Component title="Custom border radius">
 <div class="join">
-  <input class="input input-bordered join-item" placeholder="Email"/>
+  <input class="input input-bordered join-item w-36 lg:w-52" placeholder="Email"/>
   <button class="btn join-item rounded-r-full">Subscribe</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
