@@ -78,19 +78,14 @@
   &-browser {
     @apply rounded-box;
     .toolbar {
-      @apply my-3 inline-flex w-full items-center justify-between;
+      @apply my-3 inline-flex w-full items-center pr-[1.4em];
       &:before {
         content: "";
-        @apply mr-[4.5rem] inline-block h-3 aspect-square rounded-full opacity-30;
+        @apply mr-[4.8rem] inline-block h-3 aspect-square rounded-full opacity-30;
         box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
       }
-      &:after {
-        content: "";
-        @apply ml-8 inline-block h-1 aspect-square rounded-full opacity-30;
-        box-shadow: -1.4em -0.4rem, -1.4em 0, -1.4em 0.4rem;
-      }
       .input {
-        @apply pl-8 relative block w-96 h-7 rounded-full bg-base-200 text-ellipsis whitespace-nowrap overflow-hidden;
+        @apply pl-8 relative block w-96 h-7 mx-auto bg-base-200 text-ellipsis whitespace-nowrap overflow-hidden;
         &:before {
           content: "";
           @apply absolute top-1/2 left-2 -translate-y-1/2 h-3 aspect-square rounded-full border-2 border-current opacity-60;
