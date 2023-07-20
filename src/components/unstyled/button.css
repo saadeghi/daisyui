@@ -33,7 +33,7 @@
 /* radio input and checkbox as button */
 .btn:is(input[type="checkbox"]),
 .btn:is(input[type="radio"]) {
-  @apply appearance-none;
+  @apply appearance-none w-auto;
 }
 .btn:is(input[type="checkbox"]):after,
 .btn:is(input[type="radio"]):after {
