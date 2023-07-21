@@ -2,6 +2,7 @@
 title: Select
 desc: Select is used to pick a value from a list of options.
 published: true
+layout: components
 ---
 
 <script>

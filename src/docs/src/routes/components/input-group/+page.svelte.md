@@ -2,6 +2,7 @@
 title: Input group
 desc: Input group puts an input next to a text or a button.
 published: true
+layout: components
 ---
 
 <script>

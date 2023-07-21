@@ -2,6 +2,7 @@
 title: Divider
 desc: Divider will be used to separate content vertically or horizontally.
 published: true
+layout: components
 ---
 
 <script>

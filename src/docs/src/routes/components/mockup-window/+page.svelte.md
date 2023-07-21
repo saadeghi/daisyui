@@ -2,6 +2,7 @@
 title: Window mockup
 desc: Window mockup shows a box that looks like an operating system window.
 published: true
+layout: components
 ---
 
 <script>

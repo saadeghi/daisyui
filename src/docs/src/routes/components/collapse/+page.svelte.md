@@ -2,6 +2,7 @@
 title: Collapse
 desc: Collapse is used for showing and hiding content.
 published: true
+layout: components
 ---
 
 <script>

@@ -2,6 +2,7 @@
 title: Radial progress
 desc: Radial progress can be used to show the progress of a task or to show the passing of time.
 published: true
+layout: components
 ---
 
 <script>

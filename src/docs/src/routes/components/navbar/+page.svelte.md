@@ -2,6 +2,7 @@
 title: Navbar
 desc: Navbar is used to show a navigation bar on the top of the page.
 published: true
+layout: components
 ---
 
 <script>

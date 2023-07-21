@@ -2,6 +2,7 @@
 title: Drawer
 desc: Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page.
 published: true
+layout: components
 ---
 
 <script>

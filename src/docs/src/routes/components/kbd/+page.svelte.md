@@ -2,6 +2,7 @@
 title: Kbd
 desc: Kbd is used to display keyboard shortcuts.
 published: true
+layout: components
 ---
 
 <script>

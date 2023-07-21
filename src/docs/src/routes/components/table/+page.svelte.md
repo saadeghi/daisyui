@@ -2,6 +2,7 @@
 title: Table
 desc: Table can be used to show a list of data in a table format.
 published: true
+layout: components
 ---
 
 <script>

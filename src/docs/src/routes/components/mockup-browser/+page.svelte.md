@@ -2,6 +2,7 @@
 title: Browser mockup
 desc: Browser mockup shows a box that looks like a browser window.
 published: true
+layout: components
 ---
 
 <script>

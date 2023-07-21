@@ -2,6 +2,7 @@
 title: Breadcrumbs
 desc: Breadcrumbs helps users to navigate through the website.
 published: true
+layout: components
 ---
 
 <script>

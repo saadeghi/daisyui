@@ -4,11 +4,16 @@
 
   import { readEnv } from "$lib/util"
 
+  export let formatTitle = true
   export let title = ""
   export let desc = siteData.desc
   export let img = siteData.card
 
-  $: formattedTitle = title ? `${$t(title)} — ${$t(siteData.title)}` : `${$t(siteData.title)}`
+  $: formattedTitle = formatTitle
+    ? title
+      ? `${$t(title)} — ${$t(siteData.title)}`
+      : `${$t(siteData.title)}`
+    : title
 </script>
 
 <svelte:head>

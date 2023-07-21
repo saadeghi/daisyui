@@ -2,6 +2,7 @@
 title: Card
 desc: Cards are used to group and display content in a way that is easily readable.
 published: true
+layout: components
 ---
 
 <script>

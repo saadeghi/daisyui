@@ -2,6 +2,7 @@
 title: Carousel
 desc: Carousel show images or content in a scrollable area.
 published: true
+layout: components
 ---
 
 <script>

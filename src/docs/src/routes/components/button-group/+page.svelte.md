@@ -2,6 +2,7 @@
 title: Button group
 desc: Button group shows buttons next to each other.
 published: true
+layout: components
 ---
 
 <script>

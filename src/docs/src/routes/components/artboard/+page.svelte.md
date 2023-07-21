@@ -2,6 +2,7 @@
 title: Artboard
 desc: Artboard provides fixed size container to display a demo content on mobile size.
 published: true
+layout: components
 ---
 
 <script>

@@ -2,6 +2,7 @@
 title: Alert
 desc: Alert informs users about important events.
 published: true
+layout: components
 ---
 
 <script>

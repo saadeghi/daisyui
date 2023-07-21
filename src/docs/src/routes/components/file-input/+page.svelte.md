@@ -2,6 +2,7 @@
 title: File Input
 desc: File Input is a an input field for uploading files.
 published: true
+layout: components
 ---
 
 <script>

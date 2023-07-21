@@ -2,6 +2,7 @@
 title: Countdown
 desc: Countdown gives you a transition effect of changing numbers.
 published: true
+layout: components
 ---
 
 <script>

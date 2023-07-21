@@ -2,6 +2,7 @@
 title: Link
 desc: Link adds the missing underline style to links.
 published: true
+layout: components
 ---
 
 <script>

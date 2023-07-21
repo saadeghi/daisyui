@@ -38,6 +38,7 @@ export default {
       extensions: [".svelte.md", ".md"],
       rehypePlugins: rehypePlugins,
       layout: {
+        components: "src/lib/mdsvex-components.svelte",
         _: "src/lib/mdsvex.svelte",
       },
     }),

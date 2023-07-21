@@ -2,6 +2,7 @@
 title: Hero
 desc: Hero is a component for displaying a large box or image with a title and description.
 published: true
+layout: components
 ---
 
 <script>

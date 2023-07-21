@@ -1,7 +1,8 @@
 ---
 title: Toast
 desc: Toast is a wrapper to stack elements, positioned on the corner of page.
-published: false
+published: true
+layout: components
 ---
 
 <script>

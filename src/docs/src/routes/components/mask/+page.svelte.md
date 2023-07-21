@@ -2,6 +2,7 @@
 title: Mask
 desc: Mask crops the content of the element to common shapes.
 published: true
+layout: components
 ---
 
 <script>

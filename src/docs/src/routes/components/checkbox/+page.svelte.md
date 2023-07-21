@@ -2,6 +2,7 @@
 title: Checkbox
 desc: Checkboxes are used to select or deselect a value.
 published: true
+layout: components
 ---
 
 <script>

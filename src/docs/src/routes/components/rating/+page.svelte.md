@@ -2,6 +2,7 @@
 title: Rating
 desc: Rating is a set of radio buttons that allow the user to rate something.
 published: true
+layout: components
 ---
 
 <script>

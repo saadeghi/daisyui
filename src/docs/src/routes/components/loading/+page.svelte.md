@@ -2,6 +2,7 @@
 title: Loading
 desc: Loading shows an animation to indicate that something is loading.
 published: true
+layout: components
 ---
 
 <script>

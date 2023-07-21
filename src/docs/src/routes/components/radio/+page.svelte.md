@@ -2,6 +2,7 @@
 title: Radio
 desc: Radio buttons allow the user to select one option from a set.
 published: true
+layout: components
 ---
 
 <script>

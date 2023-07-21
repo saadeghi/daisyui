@@ -2,6 +2,7 @@
 title: Tabs
 desc: Tabs can be used to show a list of links in a tabbed format.
 published: true
+layout: components
 ---
 
 <script>

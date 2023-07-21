@@ -2,6 +2,7 @@
 title: Menu
 desc: Menu is used to display a list of links vertically or horizontally.
 published: true
+layout: components
 ---
 
 <script>

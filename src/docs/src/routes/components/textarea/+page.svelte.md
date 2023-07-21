@@ -2,6 +2,7 @@
 title: Textarea
 desc: Textarea allows users to enter text in multiple lines.
 published: true
+layout: components
 ---
 
 <script>

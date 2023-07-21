@@ -2,6 +2,7 @@
 title: Badge
 desc: Badges are used to inform the user of the status of specific data.
 published: true
+layout: components
 ---
 
 <script>

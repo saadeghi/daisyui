@@ -2,6 +2,7 @@
 title: Text Input
 desc: Text Input is a simple input field.
 published: true
+layout: components
 ---
 
 <script>

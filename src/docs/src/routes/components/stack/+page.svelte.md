@@ -2,6 +2,7 @@
 title: Stack
 desc: Stack visually puts elements on top of each other.
 published: true
+layout: components
 ---
 
 <script>

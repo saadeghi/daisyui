@@ -2,6 +2,7 @@
 title: Footer
 desc: Footer can contain logo, copyright notice, and links to other pages.
 published: true
+layout: components
 ---
 
 <script>

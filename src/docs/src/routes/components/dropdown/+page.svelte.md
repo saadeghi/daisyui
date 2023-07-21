@@ -2,6 +2,7 @@
 title: Dropdown
 desc: Dropdown can open a menu or any other element when the button is clicked.
 published: true
+layout: components
 ---
 
 <script>

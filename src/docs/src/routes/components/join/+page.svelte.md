@@ -2,6 +2,7 @@
 title: Join
 desc: Join is a container for grouping multiple items, it can be used to group buttons, inputs, or any other element. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items.
 published: true
+layout: components
 ---
 
 <script>
