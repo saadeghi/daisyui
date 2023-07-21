@@ -91,7 +91,7 @@
           </label>
           <ul
             tabindex="0"
-            class="dropdown-content menu menu-sm bg-base-200 rounded-box w-40 p-2 shadow">
+            class="dropdown-content menu menu-sm bg-base-200 rounded-box w-36 p-2 shadow">
             <li><a href="/docs/changelog/">Changelog</a></li>
             <li />
             <li>
