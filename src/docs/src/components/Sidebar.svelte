@@ -52,7 +52,7 @@
     <ul
       tabindex="0"
       class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-8 w-40 p-2 shadow">
-      <li><a href="/docs/changelog">Changelog</a></li>
+      <li><a href="/docs/changelog/">Changelog</a></li>
       <li />
       <li>
         <a target="_blank" rel="noopener, noreferrer" href="https://v2.daisyui.com/">Version 2.x</a>

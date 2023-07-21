@@ -50,7 +50,7 @@ module.exports = {
   <Translate text="If it's true, all themes will be included." />
   <Translate text="If it's false, only light and dark themes will be available." />  
   <Translate text="If it's an array, only themes in the array will be included and the first theme will be the default theme." />
-  <Translate text="Read more about <a href='/docs/themes'>themes</a>." />
+  <Translate text="Read more about <a href='/docs/themes/'>themes</a>." />
 
 - ### base
 

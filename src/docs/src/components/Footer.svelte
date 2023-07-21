@@ -41,12 +41,12 @@
       </div>
       <div>
         <span class="footer-title">{$t("pages")}</span>
-        <a href="/docs/install" class="link link-hover">{$t("how-to-install")}</a>
-        <a href="/docs/use" class="link link-hover">{$t("how-to-use-components")}</a>
-        <a href="/docs/customize" class="link link-hover">{$t("how-to-customize")}</a>
-        <a href="/docs/themes" class="link link-hover">{$t("how-to-use-themes")}</a>
-        <a href="/docs/colors" class="link link-hover">{$t("color-system")}</a>
-        <a href="/docs/config" class="link link-hover">{$t("config")}</a>
+        <a href="/docs/install/" class="link link-hover">{$t("how-to-install")}</a>
+        <a href="/docs/use/" class="link link-hover">{$t("how-to-use-components")}</a>
+        <a href="/docs/customize/" class="link link-hover">{$t("how-to-customize")}</a>
+        <a href="/docs/themes/" class="link link-hover">{$t("how-to-use-themes")}</a>
+        <a href="/docs/colors/" class="link link-hover">{$t("color-system")}</a>
+        <a href="/docs/config/" class="link link-hover">{$t("config")}</a>
         <a
           target="_blank"
           rel="noopener, noreferrer"

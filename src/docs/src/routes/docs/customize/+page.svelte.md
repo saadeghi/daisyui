@@ -53,4 +53,4 @@ published: true
 4. <Translate text="You can also:" />
 
 - [<Translate text="Add your own theme." />](/theme-generator)
-- <Translate text="Opt out of daisyUI's design decisions, and <a href='/docs/config'>only use an unstyled (skeleton) version of daisyUI</a>." />
+- <Translate text="Opt out of daisyUI's design decisions, and <a href='/docs/config/'>only use an unstyled (skeleton) version of daisyUI</a>." />

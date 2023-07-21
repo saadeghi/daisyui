@@ -75,7 +75,7 @@ module.exports = {
 ```
 
 <Translate text="The default theme is <code>light</code> (or <code>dark</code> for dark mode)" />  
-<Translate text="but you can <a href='https://daisyui.com/docs/config'>change the default theme from tailwind.config.js</a>" />
+<Translate text="but you can <a href='https://daisyui.com/docs/config/'>change the default theme from tailwind.config.js</a>" />
 
 ## <Translate text="How to remove unused themes?" />
 
@@ -148,7 +148,7 @@ module.exports = {
 <div class="alert alert-info text-sm mb-2 max-w-3xl not-prose">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
   <p>
-    <Translate text="You can also add <a href='/docs/colors' class='link'>optional color names</a> to have full control over all colors." />
+    <Translate text="You can also add <a href='/docs/colors/' class='link'>optional color names</a> to have full control over all colors." />
   </p>
 </div>
 

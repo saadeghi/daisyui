@@ -20,6 +20,7 @@
         href={`${$page.url.pathname.replace(/\/$/, "")}/${slug}`}>
         <figure class="px-4 pt-4">
           <img
+            loading="lazy"
             src={`/images/components/${slug}.jpg`}
             class="border-base-content bg-base-300 rounded-lg border border-opacity-5"
             alt={title} />

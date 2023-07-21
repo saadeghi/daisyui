@@ -27,7 +27,7 @@
   {`}`}</code></pre>
           </div>
         </div>
-        <a href="/docs/install" class="btn-primary btn btn-wide mb-20 mt-4 shadow-lg">
+        <a href="/docs/install/" class="btn-primary btn btn-wide mb-20 mt-4 shadow-lg">
           {$t("install-btn")}
         </a>
       </div>

@@ -186,7 +186,7 @@
               </a>
               <a
                 data-sveltekit-preload-data="hover"
-                href="/docs/install"
+                href="/docs/install/"
                 class="btn btn-neutral md:btn-lg md:btn-wide group px-12 normal-case">
                 {$t("cta-2")}
                 <svg
@@ -987,7 +987,7 @@
         <div class="flex w-full justify-center xl:justify-start">
           <a
             data-sveltekit-preload-data="hover"
-            href="/docs/install"
+            href="/docs/install/"
             class="btn btn-lg btn-wide group">
             {$t("Get started")}
             <svg
@@ -1207,7 +1207,7 @@
       <div class="flex w-full justify-center xl:justify-start">
         <a
           data-sveltekit-preload-data="hover"
-          href="/docs/install"
+          href="/docs/install/"
           class="btn btn-lg btn-wide group normal-case">
           {$t("cta-2")}
           <svg
