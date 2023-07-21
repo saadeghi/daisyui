@@ -42,7 +42,7 @@ export function htmlToJsx(node) {
     // "cap-height=": "capHeight=",
     // "clip-path=": "clipPath=",
     // "clip-path-units=": "clipPathUnits=",
-    // "clip-rule=": "clipRule=",
+    "clip-rule=": "clipRule=",
     // "color-interpolation=": "colorInterpolation=",
     // "color-interpolation-filters=": "colorInterpolationFilters=",
     // "color-profile=": "colorProfile=",
