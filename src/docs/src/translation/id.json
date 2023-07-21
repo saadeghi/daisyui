@@ -399,5 +399,12 @@
   "Learn more about colors": "Pelajari lebih lanjut tentang warna",
   "Get started": "mulai sekarang",
   "daisyUI 3.0 is available now!": "daisyUI 3.0 sudah tersedia!",
+  "Accordion is used for showing and hiding content but only one item can stay open at a time.": "Accordion digunakan untuk menampilkan dan menyembunyikan konten tetapi hanya satu item yang bisa terbuka dalam satu waktu.",
+  "Accordion uses the same style as the <a href='/components/collapse/' class='link'>collapse component</a> but it works with radio inputs. You can control which item to be open by checking/unchecking the hidden radio input.": "Accordion menggunakan style yang sama seperti <a href='/components/collapse/' class='link'>komponen collapse</a> tetapi ini bekerja dengan radio input. Anda dapat mengontrol item mana yang dibuka dengan cara centang/hapus centang radio input yang tersembunyi.",
+  "Click to open this one and close others": "Klik untuk membuka bagian ini dan menutup yang lainnya",
+  "Using Accordion and Join together": "Menggunakan Accordion dan Join bersamaan",
+  "All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set.": "Semua radio input dengan nama yang sama berfungsi bersama dan hanya ada satu yang bisa dibuka dalam satu waktu. Apabila Anda memiliki lebih dari satu set accordion item pada satu halaman, gunakan nama yang berbeda untuk radio input pada setiap set.",
+  "Browser mockup shows a box that looks like a browser window.": "Browser mockup menampilkan sebuah kotak yang terlihat seperti jendela browser.",
+  "Join is a container for grouping multiple items, it can be used to group buttons, inputs, or any other element. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items.": "Join merupakan kontainer untuk menyatukan banyak item dalam satu grup, bisa digunakan untuk grup button, input, atau elemen lainnya. Join menerapkan border radius pada item pertama dan terakhir. Join dapat digunakan untuk membuat daftar item horizontal dan vertikal.",
   "": ""
 }
