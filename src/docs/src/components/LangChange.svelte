@@ -34,17 +34,6 @@
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
             <button class:active={$currentLang == langItem} on:click={() => setLang(langItem)}>
-              {#if $t("__flag", {}, langItem, false) !== "__flag"}
-                <img
-                  class="drop-shadow"
-                  loading="lazy"
-                  width="20"
-                  height="20"
-                  alt={$t("__name", {}, langItem)}
-                  src={`https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/${emojiUnicode(
-                    $t("__flag", {}, langItem)
-                  ).replace(/\s/g, "-")}.svg`} />
-              {/if}
               {$t("__name", {}, langItem)}
               {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
                 <span class="badge badge-sm badge-ghost">

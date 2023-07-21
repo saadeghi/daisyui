@@ -181,14 +181,6 @@
         </div>
         {#if $currentLang != defaultLang}
           <div class="flex items-center gap-2">
-            <img
-              loading="lazy"
-              width="20"
-              height="20"
-              alt={$t("__name", {}, $currentLang)}
-              src={`https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/${emojiUnicode(
-                $t("__flag", {}, $currentLang)
-              ).replace(/\s/g, "-")}.svg`} />
             <div>
               <a
                 target="_blank"
