@@ -32,8 +32,8 @@
   }
 }
 
-.menu li > *:not(ul):not(details):active,
-.menu li > *:not(ul):not(details).active,
+.menu li > *:not(ul):not(.menu-title):not(details):active,
+.menu li > *:not(ul):not(.menu-title):not(details).active,
 .menu li > details > summary:active {
   @apply bg-neutral text-neutral-content [@media(hover:hover)]:bg-neutral [@media(hover:hover)]:text-neutral-content;
 }
