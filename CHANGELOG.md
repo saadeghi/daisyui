@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.4.0 (2023-07-24)
+
+
+### Features
+
+* menu item text now breaks by default if the text is long. fix [#2148](https://github.com/saadeghi/daisyui/issues/2148), [#1924](https://github.com/saadeghi/daisyui/issues/1924) ([8c53efe](https://github.com/saadeghi/daisyui/commit/8c53efe65e9ba7e523612a8b981bbf2144bb4dcf))
+
 ### 3.3.2 (2023-07-24)
 
 
