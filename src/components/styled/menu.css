@@ -16,6 +16,7 @@
 .menu :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
 .menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
   @apply px-4 py-2 rounded-btn transition duration-200 ease-in-out text-left;
+  text-wrap: balance;
 }
 
 :where(.menu li:not(.menu-title):not(.disabled) > *:not(ul):not(details):not(.menu-title)),
