@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte"
   import { readEnv } from "$lib/util"
   export let slot
   import Sponsors from "@components/Sponsors.svelte"
@@ -99,11 +100,13 @@
       </div>
       <div class="h-6" />
       <div class="carbonads-responsive mx-auto flex min-h-[100px] items-center justify-center">
-        <script
-          async
-          type="text/javascript"
-          src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom"
-          id="_carbonads_js"></script>
+        {#if onMount}
+          <script
+            async
+            type="text/javascript"
+            src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom"
+            id="_carbonads_js"></script>
+        {/if}
       </div>
     </div>
   </div>
