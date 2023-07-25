@@ -15,7 +15,7 @@
     @apply bg-opacity-20;
   }
   input:focus-visible {
-    @apply transition-transform duration-300 ease-in-out;
+    @apply transition-transform duration-300 ease-out;
     transform: translateY(-0.125em);
   }
 

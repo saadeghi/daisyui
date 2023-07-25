@@ -2,8 +2,7 @@
   width: 100%;
   &-side {
     & > .drawer-overlay {
-      @apply cursor-pointer bg-transparent;
-      transition: background-color 0.2s cubic-bezier(0, 0, 0.58, 1);
+      @apply cursor-pointer bg-transparent duration-200 ease-out transition-colors;
     }
   }
   &-toggle {

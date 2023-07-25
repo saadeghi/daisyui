@@ -3,8 +3,8 @@
   --handleoffset: 1.5rem;
   --handleoffsetcalculator: calc(var(--handleoffset) * -1);
   --togglehandleborder: 0 0;
-  @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-50 duration-300 ease-in-out rounded-badge;
-  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
+  @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-50 rounded-badge;
+  transition: background, box-shadow var(--animation-input, 0.2s) ease-out;
   box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset,
     var(--togglehandleborder);
   [dir="rtl"] & {

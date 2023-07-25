@@ -23,7 +23,7 @@ details.collapse summary {
   @apply outline outline-2 outline-offset-2 outline-base-content;
 }
 .collapse-arrow .collapse-title:after {
-  @apply absolute block h-2 w-2 transition-all ease-in-out rotate-[45deg] translate-y-[-100%];
+  @apply absolute block h-2 w-2 transition-all ease-out rotate-[45deg] translate-y-[-100%];
   transition-duration: 0.2s;
   top: 50%;
   right: 1.4rem;
@@ -36,7 +36,7 @@ details.collapse summary {
   --tw-rotate: -45deg;
 }
 .collapse-plus .collapse-title:after {
-  @apply absolute block h-2 w-2 transition-all duration-300 ease-in-out;
+  @apply absolute block h-2 w-2 transition-all duration-300 ease-out;
   top: 0.9rem;
   right: 1.4rem;
   content: "+";
@@ -63,13 +63,13 @@ details.collapse summary {
 :where(.collapse > input[type="radio"]) {
   @apply w-full p-4 pr-12;
   min-height: 3.75rem;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-out;
 }
 
 .collapse-content {
   @apply px-4;
   cursor: unset;
-  transition: padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: padding 0.2s ease-out, background-color 0.2s ease-out;
 }
 .collapse[open] :where(.collapse-content),
 .collapse-open :where(.collapse-content),
@@ -77,7 +77,7 @@ details.collapse summary {
 .collapse:not(.collapse-close) :where(input[type="checkbox"]:checked ~ .collapse-content),
 .collapse:not(.collapse-close) :where(input[type="radio"]:checked ~ .collapse-content) {
   @apply pb-4;
-  transition: padding 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: padding 0.2s ease-out, background-color 0.2s ease-out;
 }
 
 .collapse[open].collapse-arrow .collapse-title:after,

@@ -3,7 +3,7 @@
 }
 
 .swap > * {
-  @apply duration-300 ease-in-out;
+  @apply duration-300 ease-out;
   transition-property: transform, opacity;
 }
 

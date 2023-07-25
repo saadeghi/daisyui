@@ -19,7 +19,7 @@
       @apply col-start-1 row-start-1;
     }
     & > *:not(.drawer-overlay) {
-      transition: transform 0.4s cubic-bezier(0, 0, 0.58, 1);
+      @apply duration-300 ease-out transition;
       transform: translateX(-100%);
       [dir="rtl"] & {
         transform: translateX(100%);

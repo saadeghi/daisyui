@@ -9,7 +9,7 @@
   &[checked="true"],
   &[aria-checked="true"] {
     @apply bg-base-content bg-no-repeat;
-    animation: checkmark var(--animation-input, 0.2s) ease-in-out;
+    animation: checkmark var(--animation-input, 0.2s) ease-out;
     background-image: linear-gradient(-45deg, transparent 65%, hsl(var(--chkbg)) 65.99%),
       linear-gradient(45deg, transparent 75%, hsl(var(--chkbg)) 75.99%),
       linear-gradient(-45deg, hsl(var(--chkbg)) 40%, transparent 40.99%),
@@ -24,7 +24,7 @@
   }
   &:indeterminate {
     @apply bg-base-content bg-no-repeat;
-    animation: checkmark var(--animation-input, 0.2s) ease-in-out;
+    animation: checkmark var(--animation-input, 0.2s) ease-out;
     background-image: linear-gradient(90deg, transparent 80%, hsl(var(--chkbg)) 80%),
       linear-gradient(-90deg, transparent 80%, hsl(var(--chkbg)) 80%),
       linear-gradient(

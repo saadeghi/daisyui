@@ -15,7 +15,7 @@
 }
 .menu :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
 .menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-  @apply px-4 py-2 rounded-btn transition duration-200 ease-in-out text-left;
+  @apply px-4 py-2 rounded-btn transition duration-200 ease-out text-left;
   text-wrap: balance;
 }
 
