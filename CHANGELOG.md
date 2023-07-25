@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.5.0 (2023-07-25)
+
+
+### Features
+
+* improve animation and transition speed for checkbox, collapse, drawer, dropdown, loading, menu, modal, radio, rating, swap, toggle, badge, file-input ([561e4e6](https://github.com/saadeghi/daisyui/commit/561e4e669b157958053e512837f2a3d16760c73d))
+
 ## 3.4.0 (2023-07-24)
 
 
