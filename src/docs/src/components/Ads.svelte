@@ -86,11 +86,13 @@
   </div>
 {:else if slot === "carbon1"}
   <div class="pointer-events-auto h-[100px] w-full min-w-[330px] max-w-[350px]">
-    <script
-      async
-      type="text/javascript"
-      src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom"
-      id="_carbonads_js"></script>
+    {#if onMount}
+      <script
+        async
+        type="text/javascript"
+        src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=daisyuicom"
+        id="_carbonads_js"></script>
+    {/if}
   </div>
 {:else if slot === "carbon2"}
   <div>
