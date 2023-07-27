@@ -1,7 +1,7 @@
 .toast {
   @apply gap-2 p-4;
   & > * {
-    animation: toast-pop 0.25s ease-out;
+    animation: toast-pop 0.25s ease-out, toast-fade 0.25s 2.80s ease-out;
   }
 }
 
@@ -14,4 +14,15 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+@keyframes toast-fade {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.75);
+      opacity: 0;
+    }
 }
