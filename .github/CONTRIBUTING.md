@@ -31,7 +31,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 ### To build the daisyUI node package on local:
 
-1. [Fork and] clone the repo on local
+1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local
 1. Install package dependencies:
    ```
    npm install
@@ -49,7 +49,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 ### To run the [documentation site](https://daisyui.com/) on local:
 
-1. [Fork and] clone the repo on local
+1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local
 1. Install all dependencies and build the package and documentation site using this command:
    ```
    npm run init
@@ -62,7 +62,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 ## Adding a new component
 
 Before adding a new component, please make sure it's [start a discussion about it on Github](https://github.com/saadeghi/daisyui/discussions) so we can talk about how the structure and style should be.  
-There is a `List of components` at the end of [/README.md](https://github.com/saadeghi/daisyui/blob/master/README.md) that I think would be a good addition to daisyUI.
+There is a `List of components` at the end of [/README.md](https://github.com/saadeghi/daisyui/blob/master/README.md) that I think would be a good to complete.
 
 ### File structure
 
@@ -92,7 +92,7 @@ If your component documentation page contains `pre` blocks for code samples, be 
   <button class="btn btn-ghost">Ghost</button>
   <button class="btn btn-link">Link</button>
 
-  <!-- add $$ to each class name in pre block-->
+  <!-- add $$ to each daisyUI class name in pre block-->
   <pre slot="html" use:replace={{ to: $prefix }}>{`<button class="$$btn">Button</button>
 <button class="$$btn $$btn-primary">Button</button>
 <button class="$$btn $$btn-secondary">Button</button>
@@ -116,7 +116,7 @@ Let's say we want to add a new component named `.coolbutton` (don't add that act
    - `/styled/coolbutton.css` is for the visual appearance of the component with colors, spacing, etc.
 1. Add a page to documentation site:
    ```
-   /src/docs/src/routes/components/coolbutton.svelte.md
+   /src/docs/src/routes/components/coolbutton/+page.svelte.md
    ```
 1. Add page info and some HTML to your [Svelte](https://svelte.dev/) markdown ([mdsvex](https://mdsvex.pngwn.io/)) file that uses your class name
 
@@ -125,6 +125,7 @@ Let's say we want to add a new component named `.coolbutton` (don't add that act
    title: Coolbutton
    desc: It's a button but it's cool!
    published: true
+   layout: components
    ---
 
    <button class="coolbutton">Cool!</button>
