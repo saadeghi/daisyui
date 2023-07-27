@@ -3,7 +3,7 @@
   :where(li ul) {
     @apply relative whitespace-nowrap;
   }
-  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title):not(style):not(script):not(astro-island)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply grid grid-flow-col items-center gap-2 content-start;
     grid-auto-columns: minmax(auto, max-content) auto max-content;
