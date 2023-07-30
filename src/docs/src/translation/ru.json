@@ -287,7 +287,7 @@
   "Reset": "Сбросить",
   "Preview": "Предпросмотр",
   "Layout and Typography": "Разметка и Типография",
-  "How to use layouts and typography in daisyUI": "Как использовать макеты и типография в daisyUI",
+  "How to use layouts and typography in daisyUI": "Как использовать макеты и типографию в daisyUI",
   "Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes.": "Макет, размер, сетки, интервалы и т.д. - все это будет обработано с помощью классов Tailwind CSS.",
   "Read more": "Подробнее",
   "Typography": "Типография",
