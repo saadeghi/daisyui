@@ -398,7 +398,7 @@
   "Semantic colors": "Warna semantik",
   "Learn more about colors": "Pelajari lebih lanjut tentang warna",
   "Get started": "mulai sekarang",
-  "daisyUI 3.0 is available now!": "daisyUI 3.0 sudah tersedia!",
+  "daisyUI 3 is available now!": "daisyUI 3 sudah tersedia!",
   "Accordion is used for showing and hiding content but only one item can stay open at a time.": "Accordion digunakan untuk menampilkan dan menyembunyikan konten tetapi hanya satu item yang bisa terbuka dalam satu waktu.",
   "Accordion uses the same style as the <a href='/components/collapse/' class='link'>collapse component</a> but it works with radio inputs. You can control which item to be open by checking/unchecking the hidden radio input.": "Accordion menggunakan style yang sama seperti <a href='/components/collapse/' class='link'>komponen collapse</a> tetapi ini bekerja dengan radio input. Anda dapat mengontrol item mana yang dibuka dengan cara centang/hapus centang radio input yang tersembunyi.",
   "Click to open this one and close others": "Klik untuk membuka bagian ini dan menutup yang lainnya",

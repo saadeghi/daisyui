@@ -137,7 +137,7 @@
             </div>
             <div class="flex gap-2">
               <a class="link link-hover link-primary rounded-full" href="/docs/changelog/">
-                {@html $t("daisyUI 3.0 is available now!")}
+                {@html $t("daisyUI 3 is available now!")}
               </a>
               🎉
             </div>
