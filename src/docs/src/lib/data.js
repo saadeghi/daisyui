@@ -288,7 +288,7 @@ export let pages = [
         tags: "setup config styled themes base logs utils rtl",
         href: "/docs/config/",
         icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>',
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Colors",
@@ -302,7 +302,7 @@ export let pages = [
         tags: "themes disable custom color generator",
         href: "/docs/themes/",
         icon: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>',
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Theme Generator",
@@ -329,21 +329,21 @@ export let pages = [
         tags: "button btn 🍑",
         href: "/components/button/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Dropdown",
         tags: "dropdown popover menu listbox",
         href: "/components/dropdown/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Modal",
         tags: "dialog modal window popup",
         href: "/components/modal/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Swap",
@@ -363,14 +363,14 @@ export let pages = [
         tags: "accordion disclosure",
         href: "/components/accordion/",
         icon: "",
-        badge: "new",
+        badge: "",
       },
       {
         name: "Alert",
         tags: "alert warning error message",
         href: "/components/alert/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Avatar",
@@ -384,7 +384,7 @@ export let pages = [
         tags: "badge tag label",
         href: "/components/badge/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Card",
@@ -412,7 +412,7 @@ export let pages = [
         tags: "collapse disclosure show hide",
         href: "/components/collapse/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Countdown",
@@ -433,7 +433,7 @@ export let pages = [
         tags: "loading loader spinner progress",
         href: "/components/loading/",
         icon: "",
-        badge: "new",
+        badge: "",
       },
       {
         name: "Progress",
@@ -461,7 +461,7 @@ export let pages = [
         tags: "table",
         href: "/components/table/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Tooltip",
@@ -572,7 +572,7 @@ export let pages = [
         tags: "drawer sidebar menu",
         href: "/components/drawer/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Footer",
@@ -608,7 +608,7 @@ export let pages = [
         tags: "join group button group input group form group",
         href: "/components/join/",
         icon: "",
-        badge: "new",
+        badge: "",
       },
       {
         name: "Mask",
@@ -663,21 +663,21 @@ export let pages = [
         tags: "menu list",
         href: "/components/menu/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Navbar",
         tags: "navbar navigation menu",
         href: "/components/navbar/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Pagination",
         tags: "pagination links next previous",
         href: "/components/pagination/",
         icon: "",
-        badge: "updated",
+        badge: "",
       },
       {
         name: "Steps",
