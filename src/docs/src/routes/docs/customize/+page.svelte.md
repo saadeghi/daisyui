@@ -1,5 +1,5 @@
 ---
-title: Customize daisyUI components
+title: Customize daisyUI component styles
 desc: How to customize daisyUI?
 published: true
 ---
@@ -8,9 +8,9 @@ published: true
   import Translate from "@components/Translate.svelte"
 </script>
 
-<p><Translate text="daisyUI components come with many variants necessary for design systems and you won't usually need to customize anything." /></p>
+<p><Translate text="daisyUI component style classes come with many variants necessary for design systems and you won't usually need to customize anything." /></p>
 
-<p><Translate text="But you can still customize components in many ways." /></p>
+<p><Translate text="But you can still customize the component styles in many ways." /></p>
 
 - <Translate text="Let's say, you want to customize this button:" />
 
@@ -32,7 +32,7 @@ published: true
 <button class="btn btn-secondary">Two</button>
 <button class="btn btn-accent btn-outline">Three</button>
 
-2. <Translate text="You can use Tailwind's utility classes:" />
+2. <Translate text="You can apply Tailwind's utility classes directly on the JSX:" />
 
 ```html
 <button class="btn rounded-full">One</button>
@@ -42,7 +42,7 @@ published: true
 <button class="rounded-full btn">One</button>
 <button class="px-16 rounded-none btn">Two</button>
 
-3. <Translate text="You can customize components on your CSS file, using Tailwind's @apply directive:" />
+3. <Translate text="You can customize the component's class on your CSS file, using Tailwind's @apply directive:" />
 
 ```css
 .btn {
