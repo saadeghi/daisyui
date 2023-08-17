@@ -421,5 +421,6 @@
   "This component is deprecated and will be removed in the next major version. Use <a class='link' href='/components/join/'>Join</a> instead.": "此元件已被淘汰，並將在下個主要版本中移除。請改用<a class='link' href='/components/join/'>聯結</a>。",
   "Loading shows an animation to indicate that something is loading.": "載入指示將顯示動畫，指示某事物正在載入。",
   "Drawer sidebar is hidden by default. You can make it visible on larger screens using <code>lg:drawer-open</code> class (or using other responsive prefixes: <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>)": "側邊欄預設為隱藏。您可以使用 <code>lg:drawer-open</code> 類別 (或其他響應式前綴：<code>sm</code>、<code>md</code>、<code>lg</code>、<code>xl</code>) 使其在較大螢幕上可見。",
+  "Become a sponsor": "成為贊助商",
   "": ""
 }
