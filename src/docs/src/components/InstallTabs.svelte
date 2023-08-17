@@ -30,9 +30,7 @@
     {#each tabs as { name, href }}
       <a
         {href}
-        class={`tab tab-lifted xl:tab-lg ${
-          $page.url.pathname.replace(/\/$/, "") == href ? "tab-active" : ""
-        }`}>
+        class={`tab tab-lifted xl:tab-lg ${$page.url.pathname == href ? "tab-active" : ""}`}>
         {@html $t(name)}
       </a>
     {/each}
