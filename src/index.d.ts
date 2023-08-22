@@ -106,4 +106,4 @@ interface DaisyUIConfig {
     logs?: boolean
 }
 
-export type { DaisyUIConfig as Config, Theme }
+export type { DaisyUIConfig as Config, Theme, CustomTheme }
