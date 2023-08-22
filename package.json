@@ -40,6 +40,7 @@
     "!dist/*.rtl.css",
     "src/index.js",
     "src/theming/*.js",
+    "src/theming/*.d.ts",
     "src/index.d.ts"
   ],
   "engines": {
