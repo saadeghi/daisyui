@@ -4,6 +4,7 @@ declare const daisyui: ReturnType<typeof plugin>
 
 export default daisyui
 
+// todo - the keys of a theme could be typed here? see: https://daisyui.com/docs/themes/#-5
 /**
  * @link https://daisyui.com/docs/themes/#-4
  */
@@ -106,4 +107,4 @@ interface DaisyUIConfig {
     logs?: boolean
 }
 
-export type { DaisyUIConfig as Config, Theme }
+export type { DaisyUIConfig as Config, Theme, CustomTheme }
