@@ -144,6 +144,14 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
+          href="https://github.com/robsontenorio/mary"
+          class="link link-hover group">
+          Mary - Laravel components
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
           href="https://github.com/kidonng/unocss-preset-daisy"
           class="link link-hover group">
           daisyUI UnoCSS preset
