@@ -1,6 +1,7 @@
 .btn {
   @apply inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent text-center transition duration-200 ease-out rounded-btn;
-  @apply h-12 px-4 text-sm min-h-12;
+  @apply h-12 px-4 min-h-12;
+  font-size: 0.875rem;
   line-height: 1em;
 
   /* disabled */
