@@ -57,7 +57,7 @@ data="{[
   </div> 
   <div class="drawer-side h-full absolute">
     <label for="my-drawer" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-60 md:w-80 h-full bg-base-200 text-base-content">
+    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
@@ -73,7 +73,7 @@ data="{[
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer" class="$$drawer-overlay"></label>
-    <ul class="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
+    <ul class="$$menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -92,7 +92,7 @@ data="{[
   </div> 
   <div class="drawer-side h-full absolute">
     <label for="my-drawer-2" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-60 md:w-80 h-full bg-base-200 text-base-content">
+    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
@@ -108,7 +108,7 @@ data="{[
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer-2" class="$$drawer-overlay"></label> 
-    <ul class="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
+    <ul class="$$menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -141,7 +141,7 @@ data="{[
   </div> 
   <div class="drawer-side h-full absolute">
     <label for="my-drawer-3" class="drawer-overlay"></label> 
-    <ul class="p-4 menu w-60 md:w-80 h-full bg-base-200">
+    <ul class="p-4 menu w-60 md:w-80 min-h-full bg-base-200">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
@@ -172,7 +172,7 @@ data="{[
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer-3" class="$$drawer-overlay"></label> 
-    <ul class="$$menu p-4 w-80 h-full bg-base-200">
+    <ul class="$$menu p-4 w-80 min-h-full bg-base-200">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -192,7 +192,7 @@ data="{[
   </div> 
   <div class="drawer-side h-full absolute">
     <label for="my-drawer-4" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-60 md:w-80 h-full bg-base-200 text-base-content">
+    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
     </ul>
@@ -208,7 +208,7 @@ data="{[
   </div> 
   <div class="$$drawer-side">
     <label for="my-drawer-4" class="$$drawer-overlay"></label>
-    <ul class="$$menu p-4 w-80 h-full bg-base-200 text-base-content">
+    <ul class="$$menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
