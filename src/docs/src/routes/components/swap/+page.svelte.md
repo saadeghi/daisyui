@@ -125,7 +125,7 @@ data="{[
 
 </Component>
 
-<Component title="Activate using class name instead of checkbox">
+<Component title="Activate using class name instead of checkbox" desc="Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS">
 <label class="swap text-6xl">
   <div class="swap-on">🥵</div>
   <div class="swap-off">🥶</div>
