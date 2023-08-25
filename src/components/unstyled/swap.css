@@ -17,7 +17,7 @@
 }
 
 .swap input:checked ~ .swap-off,
-.swap.swap-active .swap-off,
+.swap-active .swap-off,
 .swap input:indeterminate ~ .swap-off {
   @apply opacity-0;
 }

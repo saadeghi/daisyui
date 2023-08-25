@@ -14,13 +14,13 @@
 }
 
 .swap-rotate input:checked ~ .swap-off,
-.swap-rotate.swap-active .swap-off,
+.swap-active:where(.swap-rotate) .swap-off,
 .swap-rotate input:indeterminate ~ .swap-off {
   @apply -rotate-45;
 }
 
 .swap-rotate input:checked ~ .swap-on,
-.swap-rotate.swap-active .swap-on,
+.swap-active:where(.swap-rotate) .swap-on,
 .swap-rotate input:indeterminate ~ .swap-indeterminate {
   @apply rotate-0;
 }
@@ -38,7 +38,7 @@
 }
 
 .swap-flip input:checked ~ .swap-off,
-.swap-flip.swap-active .swap-off,
+.swap-active:where(.swap-flip) .swap-off,
 .swap-flip input:indeterminate ~ .swap-off {
   transform: rotateY(-180deg);
   backface-visibility: hidden;
@@ -46,7 +46,7 @@
 }
 
 .swap-flip input:checked ~ .swap-on,
-.swap-flip.swap-active .swap-on,
+.swap-active:where(.swap-flip) .swap-on,
 .swap-flip input:indeterminate ~ .swap-indeterminate {
   transform: rotateY(0deg);
 }
