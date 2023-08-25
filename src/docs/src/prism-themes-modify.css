@@ -43,6 +43,22 @@
     }
   }
 }
+[data-theme="pastel"] {
+  .prose pre[class*="language-"] {
+    .token.property {
+      color: #00ffe7;
+    }
+    .token.operator {
+      color: #ffffff;
+    }
+    .token.boolean {
+      color: #9a00ff;
+    }
+    .token.function {
+      color: #9a00ff;
+    }
+  }
+}
 .prose pre[class*="language-"] {
   .token.comment {
     color: hsl(var(--nc) / 0.5);

@@ -142,6 +142,10 @@
     max-width: clamp(20rem, calc(100vw - 4rem), 80ch);
     background-color: hsl(var(--n));
     color: hsl(var(--nc));
+    ::selection {
+      background-color: hsl(var(--nc));
+      color: hsl(var(--n));
+    }
   }
   @media (min-width: 1024px) {
     .prose pre[class*="language-"] {
