@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "3.6.3",
+  "version": "3.6.4",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -96,11 +96,11 @@
     "postcss-cli": "10.1.0",
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",
-    "prettier": "^2.8.8",
-    "prettier-plugin-svelte": "^2.10.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-svelte": "^3.0.3",
     "rtlcss": "4.1.0",
     "standard-version": "^9.5.0",
-    "vitest": "^0.31.1"
+    "vitest": "^0.34.3"
   },
   "dependencies": {
     "colord": "^2.9",

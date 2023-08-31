@@ -21,6 +21,7 @@ module.exports = {
     "ringWidth",
     "textColor",
     "transitionProperty",
+    "stroke",
   ],
   plugins: [
     plugin(function ({ addBase, addUtilities, addComponents, matchUtilities, theme }) {
