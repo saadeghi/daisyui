@@ -566,7 +566,7 @@
                     [0, 8],
                     [0, 250]
                   )}px,${animateValue(section["hero"], [0, 8], [0, -800])}px)`}>
-                  <div class="card-body">
+                  <div class="card-body" inert>
                     <h2 class="card-title mb-4 text-sm">{$t("Design system")}</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
