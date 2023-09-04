@@ -48,41 +48,47 @@ data="{[
 <Component title="Dialog modal" desc="opens on click using ID.showModal() method. can be closed using ID.close() method">
 <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
 <dialog id="my_modal_1" class="modal">
-  <form method="dialog" class="modal-box">
+  <div class="modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click the button below to close</p>
     <div class="modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button class="btn">Close</button>
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_1.showModal()">open modal</button>
 <dialog id="my_modal_1" class="$$modal">
-  <form method="dialog" class="$$modal-box">
+  <div class="$$modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click the button below to close</p>
     <div class="$$modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button class="$$btn">Close</button>
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="$$btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* Open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button>
 <dialog id="my_modal_1" className="$$modal">
-  <form method="dialog" className="$$modal-box">
+  <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click the button below to close</p>
     <div className="$$modal-action">
-      {/* if there is a button in form, it will close the modal */}
-      <button className="$$btn">Close</button>
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="$$btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 </Component>
@@ -90,10 +96,10 @@ data="{[
 <Component title="Dialog modal, closes when clicked outside" desc="there a second form with 'modal-backdrop' class and it covers the screen so we can close the modal when clicked outside">
 <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
 <dialog id="my_modal_2" class="modal">
-  <form method="dialog" class="modal-box">
+  <div class="modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click outside to close</p>
-  </form>
+  </div>
   <form method="dialog" class="modal-backdrop">
     <button>close</button>
   </form>
@@ -102,10 +108,10 @@ data="{[
 `<!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_2.showModal()">open modal</button>
 <dialog id="my_modal_2" class="$$modal">
-  <form method="dialog" class="$$modal-box">
+  <div class="$$modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click outside to close</p>
-  </form>
+  </div>
   <form method="dialog" class="$$modal-backdrop">
     <button>close</button>
   </form>
@@ -115,10 +121,10 @@ data="{[
 `{/* Open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_2.showModal()}>open modal</button>
 <dialog id="my_modal_2" className="$$modal">
-  <form method="dialog" className="$$modal-box">
+  <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click outside to close</p>
-  </form>
+  </div>
   <form method="dialog" className="$$modal-backdrop">
     <button>close</button>
   </form>
@@ -129,32 +135,40 @@ data="{[
 <Component title="Dialog modal with a close button at corner">
 <button class="btn" onclick="my_modal_3.showModal()">open modal</button>
 <dialog id="my_modal_3" class="modal">
-  <form method="dialog" class="modal-box">
-    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+  <div class="modal-box">
+    <form method="dialog">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click on ✕ button to close</p>
-  </form>
+  </div>
 </dialog>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- You can open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_3.showModal()">open modal</button>
 <dialog id="my_modal_3" class="$$modal">
-  <form method="dialog" class="$$modal-box">
-    <button class="$$btn $$btn-sm $$btn-circle $$btn-ghost absolute right-2 top-2">✕</button>
+  <div class="$$modal-box">
+    <form method="dialog">
+      <button class="$$btn $$btn-sm $$btn-circle $$btn-ghost absolute right-2 top-2">✕</button>
+    </form>
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click on ✕ button to close</p>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* You can open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_3.showModal()}>open modal</button>
 <dialog id="my_modal_3" className="$$modal">
-  <form method="dialog" className="$$modal-box">
-    <button className="$$btn $$btn-sm $$btn-circle $$btn-ghost absolute right-2 top-2">✕</button>
+  <div className="$$modal-box">
+    <form method="dialog">
+      {/* if there is a button in form, it will close the modal */}
+      <button className="$$btn $$btn-sm $$btn-circle $$btn-ghost absolute right-2 top-2">✕</button>
+    </form>
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click on ✕ button to close</p>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 </Component>
@@ -162,41 +176,47 @@ data="{[
 <Component title="Dialog modal with custom width" desc="You can use any w-* and max-w-* utility class to customize the width">
 <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
 <dialog id="my_modal_4" class="modal">
-  <form method="dialog" class="modal-box w-11/12 max-w-5xl">
+  <div class="modal-box w-11/12 max-w-5xl">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Click the button below to close</p>
     <div class="modal-action">
-      <!-- if there is a button, it will close the modal -->
-      <button class="btn">Close</button>
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- You can open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_4.showModal()">open modal</button>
 <dialog id="my_modal_4" class="$$modal">
-  <form method="dialog" class="$$modal-box w-11/12 max-w-5xl">
+  <div class="$$modal-box w-11/12 max-w-5xl">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Click the button below to close</p>
     <div class="$$modal-action">
-      <!-- if there is a button, it will close the modal -->
-      <button class="$$btn">Close</button>
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="$$btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* You can open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_4.showModal()}>open modal</button>
 <dialog id="my_modal_4" className="$$modal">
-  <form method="dialog" className="$$modal-box w-11/12 max-w-5xl">
+  <div className="$$modal-box w-11/12 max-w-5xl">
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Click the button below to close</p>
     <div className="$$modal-action">
-      {/* if there is a button, it will close the modal */}
-      <button className="$$btn">Close</button>
+      <form method="dialog">
+        {/* if there is a button, it will close the modal */}
+        <button className="$$btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 </Component>
@@ -204,41 +224,47 @@ data="{[
 <Component title="Responsive" desc="Modal goes bottom on mobile screen and goes middle on desktop">
 <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-  <form method="dialog" class="modal-box">
+  <div class="modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click the button below to close</p>
     <div class="modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button class="btn">Close</button>
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_5.showModal()">open modal</button>
 <dialog id="my_modal_5" class="$$modal $$modal-bottom sm:$$modal-middle">
-  <form method="dialog" class="$$modal-box">
+  <div class="$$modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">Press ESC key or click the button below to close</p>
     <div class="$$modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button class="$$btn">Close</button>
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="$$btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `{/* Open the modal using ID.showModal() method */}
 <button className="$$btn" onClick={()=>window.my_modal_5.showModal()}>open modal</button>
 <dialog id="my_modal_5" className="$$modal modal-bottom sm:$$modal-middle">
-  <form method="dialog" className="$$modal-box">
+  <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click the button below to close</p>
     <div className="$$modal-action">
-      {/* if there is a button in form, it will close the modal */}
-      <button className="$$btn">Close</button>
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="$$btn">Close</button>
+      </form>
     </div>
-  </form>
+  </div>
 </dialog>`
 }</pre>
 </Component>
