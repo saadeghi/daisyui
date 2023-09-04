@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.6.5 (2023-09-04)
+
+
+### Bug Fixes
+
+* [#2311](https://github.com/saadeghi/daisyui/issues/2311) `<select>` font weight is not semibold anymore because it causes a bug in Safari ([c773cdf](https://github.com/saadeghi/daisyui/commit/c773cdf6240781f64e3832314a095b03e82ea8cb))
+
 ### 3.6.4 (2023-08-30)
 
 
