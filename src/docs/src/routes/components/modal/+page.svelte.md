@@ -76,8 +76,8 @@ data="{[
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`{/* Open the modal using ID.showModal() method */}
-<button className="$$btn" onClick={()=>window.my_modal_1.showModal()}>open modal</button>
+`{/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="$$btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>open modal</button>
 <dialog id="my_modal_1" className="$$modal">
   <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
@@ -118,8 +118,8 @@ data="{[
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`{/* Open the modal using ID.showModal() method */}
-<button className="$$btn" onClick={()=>window.my_modal_2.showModal()}>open modal</button>
+`{/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="$$btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>open modal</button>
 <dialog id="my_modal_2" className="$$modal">
   <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
@@ -158,8 +158,8 @@ data="{[
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`{/* You can open the modal using ID.showModal() method */}
-<button className="$$btn" onClick={()=>window.my_modal_3.showModal()}>open modal</button>
+`{/* You can open the modal using document.getElementById('ID').showModal() method */}
+<button className="$$btn" onClick={()=>document.getElementById('my_modal_3').showModal()}>open modal</button>
 <dialog id="my_modal_3" className="$$modal">
   <div className="$$modal-box">
     <form method="dialog">
@@ -204,8 +204,8 @@ data="{[
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`{/* You can open the modal using ID.showModal() method */}
-<button className="$$btn" onClick={()=>window.my_modal_4.showModal()}>open modal</button>
+`{/* You can open the modal using document.getElementById('ID').showModal() method */}
+<button className="$$btn" onClick={()=>document.getElementById('my_modal_4').showModal()}>open modal</button>
 <dialog id="my_modal_4" className="$$modal">
   <div className="$$modal-box w-11/12 max-w-5xl">
     <h3 className="font-bold text-lg">Hello!</h3>
@@ -252,8 +252,8 @@ data="{[
 </dialog>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`{/* Open the modal using ID.showModal() method */}
-<button className="$$btn" onClick={()=>window.my_modal_5.showModal()}>open modal</button>
+`{/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="$$btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
 <dialog id="my_modal_5" className="$$modal modal-bottom sm:$$modal-middle">
   <div className="$$modal-box">
     <h3 className="font-bold text-lg">Hello!</h3>
