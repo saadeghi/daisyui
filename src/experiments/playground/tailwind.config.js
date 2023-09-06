@@ -17,6 +17,6 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("../../"),
     // require('daisyui'),
-    // require('tailwindcss-flip'),
+    // require("tailwindcss-flip"),
   ],
 }

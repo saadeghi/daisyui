@@ -22,7 +22,7 @@
       @apply duration-300 ease-out transition;
       transform: translateX(-100%);
       [dir="rtl"] & {
-        transform: translateX(100%);
+        transform: translateX(-100%);
       }
     }
   }
@@ -44,13 +44,10 @@
         @apply col-start-1;
       }
       & ~ .drawer-side {
-        @apply justify-items-end;
-        & > *:not(.drawer-overlay) {
-          transform: translateX(100%);
-          [dir="rtl"] & {
-            transform: translateX(-100%);
-          }
-        }
+        @apply justify-items-end col-start-2;
+      }
+      & ~ .drawer-side > *:not(.drawer-overlay) {
+        transform: translateX(100%);
       }
       &:checked ~ .drawer-side > *:not(.drawer-overlay) {
         transform: translateX(0%);
