@@ -8,6 +8,7 @@ on:
       - master
     paths:
       - "src/docs/**"
+      - "CHANGELOG.md"
 
 jobs:
   deploy-docs:
