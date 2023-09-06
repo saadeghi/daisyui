@@ -20,6 +20,12 @@
     border-bottom-right-radius: 0;
   }
 
+  & .dropdown .join-item:first-child:not(:last-child),
+  & *:first-child:not(:last-child) .dropdown .join-item {
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
   & :where(.join-item:first-child:not(:last-child)),
   & :where(*:first-child:not(:last-child) .join-item) {
     border-bottom-left-radius: inherit;
