@@ -8,7 +8,11 @@ on:
       - master
     paths:
       - "src/docs/**"
-      - "CHANGELOG.md"
+  workflow_run:
+    workflows:
+      - "🎉 Release new version"
+    types:
+      - completed
 
 jobs:
   deploy-docs:
