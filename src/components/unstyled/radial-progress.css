@@ -19,8 +19,9 @@
 }
 .radial-progress:before {
   @apply inset-0;
-  background: radial-gradient(farthest-side, currentColor 98%, #0000) top/var(--thickness)
-      var(--thickness) no-repeat,
+  background:
+    radial-gradient(farthest-side, currentColor 98%, #0000) top/var(--thickness) var(--thickness)
+      no-repeat,
     conic-gradient(currentColor calc(var(--value) * 1%), #0000 0);
   -webkit-mask: radial-gradient(
     farthest-side,

@@ -4,7 +4,10 @@
     &:before {
       content: "";
       @apply mb-4 block h-3 w-3 rounded-full opacity-30;
-      box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
+      box-shadow:
+        1.4em 0,
+        2.8em 0,
+        4.2em 0;
     }
     pre {
       @apply pr-5;
@@ -25,7 +28,10 @@
     &:before {
       content: "";
       @apply mb-4 block h-3 aspect-square rounded-full opacity-30;
-      box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
+      box-shadow:
+        1.4em 0,
+        2.8em 0,
+        4.2em 0;
     }
   }
   &-phone {
@@ -82,7 +88,10 @@
       &:before {
         content: "";
         @apply mr-[4.8rem] inline-block h-3 aspect-square rounded-full opacity-30;
-        box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
+        box-shadow:
+          1.4em 0,
+          2.8em 0,
+          4.2em 0;
       }
       .input {
         @apply pl-8 relative block w-96 h-7 mx-auto bg-base-200 text-ellipsis whitespace-nowrap overflow-hidden;

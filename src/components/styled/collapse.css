@@ -69,7 +69,9 @@ details.collapse summary {
 .collapse-content {
   @apply px-4;
   cursor: unset;
-  transition: padding 0.2s ease-out, background-color 0.2s ease-out;
+  transition:
+    padding 0.2s ease-out,
+    background-color 0.2s ease-out;
 }
 .collapse[open] :where(.collapse-content),
 .collapse-open :where(.collapse-content),
@@ -77,7 +79,9 @@ details.collapse summary {
 .collapse:not(.collapse-close) :where(input[type="checkbox"]:checked ~ .collapse-content),
 .collapse:not(.collapse-close) :where(input[type="radio"]:checked ~ .collapse-content) {
   @apply pb-4;
-  transition: padding 0.2s ease-out, background-color 0.2s ease-out;
+  transition:
+    padding 0.2s ease-out,
+    background-color 0.2s ease-out;
 }
 
 .collapse[open].collapse-arrow .collapse-title:after,
