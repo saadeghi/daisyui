@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.7.3 (2023-09-06)
+
+
+### Bug Fixes
+
+* chat bubble arrow gap in iOS ([dbe5f83](https://github.com/saadeghi/daisyui/commit/dbe5f83c5f02f350cacec09e8d7f9fb1216a81a2)), closes [#2199](https://github.com/saadeghi/daisyui/issues/2199)
+
 ### 3.7.2 (2023-09-06)
 
 
