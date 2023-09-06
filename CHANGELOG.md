@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.7.2 (2023-09-06)
+
+
+### Bug Fixes
+
+* dropdown button border radius inside join ([7e36bb0](https://github.com/saadeghi/daisyui/commit/7e36bb039485e3bbc82419085f732fa35e569a29)), closes [#2115](https://github.com/saadeghi/daisyui/issues/2115)
+
 ### 3.7.1 (2023-09-06)
 
 ## 3.7.0 (2023-09-06)
