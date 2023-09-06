@@ -38,14 +38,14 @@
   &-start .chat-bubble {
     @apply rounded-bl-none;
     &:before {
-      left: -0.75rem;
+      left: -0.749rem;
     }
   }
 
   &-end .chat-bubble {
     @apply rounded-br-none;
     &:before {
-      left: 100%;
+      left: 99.9%;
     }
   }
 }
