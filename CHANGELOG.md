@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.7.0 (2023-09-06)
+
+
+### Features
+
+* drawer-open now works in RTL mode. ([5162ff3](https://github.com/saadeghi/daisyui/commit/5162ff3baa1e64bfe896a7464be49e1c8a33b819)), closes [#1951](https://github.com/saadeghi/daisyui/issues/1951) [#1974](https://github.com/saadeghi/daisyui/issues/1974) [#2034](https://github.com/saadeghi/daisyui/issues/2034) [#2060](https://github.com/saadeghi/daisyui/issues/2060) [#2094](https://github.com/saadeghi/daisyui/issues/2094) [#2229](https://github.com/saadeghi/daisyui/issues/2229)
+
 ### 3.6.6 (2023-09-06)
 
 ### 3.6.5 (2023-09-04)
