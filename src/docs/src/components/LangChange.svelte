@@ -1,7 +1,6 @@
 <script>
   import { currentLang, langs, setLang } from "@src/lib/i18n"
   import { t } from "@src/lib/i18n"
-  import { default as emojiUnicode } from "emoji-unicode"
 </script>
 
 <div title="Change Language" class="dropdown dropdown-end">
@@ -34,16 +33,11 @@
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
             <button class:active={$currentLang == langItem} on:click={() => setLang(langItem)}>
-              {#if $t("__flag", {}, langItem, false) !== "__flag"}
-                <img
-                  class="drop-shadow"
-                  loading="lazy"
-                  width="20"
-                  height="20"
-                  alt={$t("__name", {}, langItem)}
-                  src={`https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/${emojiUnicode(
-                    $t("__flag", {}, langItem)
-                  ).replace(/\s/g, "-")}.svg`} />
+              {#if $t("__code", {}, langItem, false) !== "__code"}
+                <span
+                  class="badge badge-sm badge-outline font-mono !text-[.6rem] pt-px opacity-50 font-bold tracking-widest !pr-1 !pl-1.5">
+                  {$t("__code", {}, langItem)}
+                </span>
               {/if}
               {$t("__name", {}, langItem)}
               {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
