@@ -29,10 +29,10 @@
 .collapse:not(.collapse-close):has(> input[type="radio"]:checked) {
   grid-template-rows: auto 1fr;
 }
-.collapse[open] .collapse-content,
-.collapse-open .collapse-content,
-.collapse:focus:not(.collapse-close) .collapse-content,
-.collapse:not(.collapse-close) input[type="checkbox"]:checked ~ .collapse-content,
-.collapse:not(.collapse-close) input[type="radio"]:checked ~ .collapse-content {
+.collapse[open] > .collapse-content,
+.collapse-open > .collapse-content,
+.collapse:focus:not(.collapse-close) > .collapse-content,
+.collapse:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-content,
+.collapse:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-content {
   @apply visible min-h-fit;
 }
