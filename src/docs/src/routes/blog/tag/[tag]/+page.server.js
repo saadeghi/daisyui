@@ -7,6 +7,9 @@ export async function load({ params }) {
       async ([path, resolver]) => {
         const { metadata } = await resolver()
         const slug = dirname(path).split("/").pop()
+        if (!metadata.published) {
+          return {}
+        }
         return {
           slug,
           ...metadata,
@@ -22,6 +25,10 @@ export async function load({ params }) {
     })
     return normalizedTags.includes(params.tag)
   })
+
+  // filter out empty objects
+  posts = posts.filter((obj) => Object.keys(obj).length !== 0)
+
   // sort by date
   posts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
 

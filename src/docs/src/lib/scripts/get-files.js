@@ -19,6 +19,6 @@ commands.forEach((command) => {
       console.error("Error executing command:", stderr)
       return
     }
-    console.log("Success:", stdout)
+    process.stdout.write("Success:" + stdout)
   })
 })

@@ -2,6 +2,9 @@ export async function load({ params }) {
   let allTags = await Promise.all(
     Object.entries(import.meta.glob("./[(]posts[)]/*/+page.md")).map(async ([path, resolver]) => {
       const { metadata } = await resolver()
+      if (!metadata.published) {
+        return {}
+      }
       return {
         ...metadata.tags,
       }
