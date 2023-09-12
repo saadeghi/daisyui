@@ -86,3 +86,5 @@ module.exports = {
   plugins: [require("daisyui")],
 }
 ```
+
+Read more about [how to install daisyUI](https://daisyui.com/docs/install/) and [how to use daisyUI](https://daisyui.com/docs/use/).
