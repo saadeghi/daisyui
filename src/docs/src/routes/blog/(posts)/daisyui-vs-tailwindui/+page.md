@@ -7,7 +7,6 @@ author: Pouya Saadeghi
 thumbnail: /images/blog/daisyui-vs-tailwindui.jpg
 tags:
   - Tailwind CSS
-  - Tailwind UI
 ---
 
 ## Comparing daisyUI and Tailwind UI

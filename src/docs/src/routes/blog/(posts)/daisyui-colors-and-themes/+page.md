@@ -1,5 +1,5 @@
 ---
-title: Why is daisyUI using different color system?
+title: All about daisyUI color system and comparing it to Tailwind CSS color names
 desc: Why use semantic color names instead of Tailwind CSS color shades? Accessing to all color shades or using a color system... Which one is better?
 published: true
 date: 2023-9-11
@@ -13,7 +13,7 @@ Tailwind CSS as a general purpose utility-first CSS framework, provides all the 
 
 A good design practice is to have a color system with semantic color names.  
 A standard approach is to have brand color names like `primary`, `secondary`, `accent`, and state colors like `success`, `warning`, `error`, `info`. In addition to some neutral color shades for the background, text, and border colors.
-
+![Semantic colors](/images/blog/daisyui-semantic-colors.jpg)
 daisyUI offers a limited set of semantic color names where can have any value (thanks to CSS variables).
 
 Using this color system your website can have a different look and feel by simply changing the color values once. You don't need to change the color of each element individually.
