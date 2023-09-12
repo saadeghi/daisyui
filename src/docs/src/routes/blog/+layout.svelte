@@ -51,9 +51,9 @@
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div class="max-w-none w-full flex-grow pt-10">
-    <div class="flex flex-col lg:flex-row justify-center w-full p-6 gap-6">
-      <div>
-        <div class="sticky top-32 mx-auto max-w-sm sm:max-w-none">
+    <div class="flex flex-col lg:flex-row justify-center w-full p-4 gap-6">
+      <div class="max-w-2xl max-lg:w-full max-lg:mx-auto">
+        <div class="sticky top-32 mx-auto sm:max-w-none">
           <div class="px-6 mb-8">
             <a href="/blog" class="hover:opacity-80 inline-block">
               <h1 class="font-title text-xl font-extrabold text-base-content">daisyUI blog</h1>
@@ -78,7 +78,7 @@
           {/if}
         </div>
       </div>
-      <div class="w-full max-w-2xl">
+      <div class="w-full max-w-2xl mx-auto">
         <slot />
       </div>
     </div>
