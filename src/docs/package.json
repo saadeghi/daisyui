@@ -3,7 +3,7 @@
   "scripts": {
     "get-files": "node src/lib/scripts/get-files",
     "dev": "npm run get-files && npm run createStyleHandlerComponent:dev && vite dev --port 3000 --open",
-    "build": "npm run createStyleHandlerComponent:prod && NODE_ENV=production vite build",
+    "build": "npm run createStyleHandlerComponent:prod && NODE_ENV=production vite build --logLevel error",
     "preview": "npm run build && vite preview --port 3000 --open",
     "createStyleHandlerComponent:dev": "echo '<script>import \"@components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo '<script>import \"@components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",

@@ -2,7 +2,7 @@
   import { page } from "$app/stores"
   import SEO from "@components/SEO.svelte"
   import { timeago, formattedDate } from "$lib/util"
-  export let title, desc, date, author, tags, thumbnail
+  export let title, desc, date, author, tags, thumbnail, published
   const slug = $page.url.pathname.split("/").at(-2)
 </script>
 
@@ -22,7 +22,7 @@
   <div style={`view-transition-name: ${slug.replaceAll("%20", "-")}-text`}>
     <div class="mb-2 text-xs text-base-content/60">
       <span title={formattedDate(date)} class="italic">
-        Publised {timeago(date)}
+        Published {timeago(date)}
       </span>
       {#if author}
         by
@@ -39,7 +39,7 @@
     {/if}
     <slot />
   </div>
-  {#if tags}
+  {#if published && tags}
     <div class="mb-2 text-xs opacity-60 flex flex-wrap gap-2">
       <span>Tags:</span>
       {#each tags as tag}
