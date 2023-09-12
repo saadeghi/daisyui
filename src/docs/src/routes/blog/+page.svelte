@@ -11,14 +11,14 @@
     <h1 class="text-base-content/30">Coming soon</h1>
   </div>
 {/if}
-<div class="grid gap-6 justify-center">
+<div class="grid gap-6 justify-items-stretch">
   {#each posts as post}
     {#if post.published === true}
       <a
         class="card sm:card-side max-w-sm sm:max-w-none hover:bg-base-200 transition-colors"
         href={`/blog/${post.slug}`}>
         {#if post.thumbnail}
-          <figure class="w-96 object-cover mx-auto sm:pr-0 p-6 max-sm:pb-0">
+          <figure class="max-w-[12rem] w-full object-cover mx-auto sm:pr-0 p-6 max-sm:pb-0">
             <img
               loading="lazy"
               src={post.thumbnail}
