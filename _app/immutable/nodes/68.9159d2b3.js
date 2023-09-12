@@ -1,1 +1,0 @@
-import{s as n,o as s}from"../chunks/scheduler.294365bc.js";import{S as e,i as a}from"../chunks/index.e073d16c.js";function i(o){return s(()=>{window.location.href="https://play.tailwindcss.com/eUmbFJcv1M"}),[]}class l extends e{constructor(t){super(),a(this,t,i,null,n,{})}}export{l as component};
