@@ -6,7 +6,7 @@
   const slug = $page.url.pathname.split("/").at(-2)
 </script>
 
-<SEO {title} {desc} img={`/images${$page.url.pathname.replace(/\/$/, "")}.jpg`} />
+<SEO {title} {desc} img={thumbnail} />
 
 <div class="prose prose-sm md:prose-base">
   {#if thumbnail}
