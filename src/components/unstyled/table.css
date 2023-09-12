@@ -12,4 +12,7 @@
   &-zebra tbody tr:nth-child(even) :where(.table-pin-cols tr th) {
     @apply bg-base-200;
   }
+  &-zebra-alt tbody tr:nth-child(odd) :where(.table-pin-cols tr th) {
+    @apply bg-base-200;
+  }
 }

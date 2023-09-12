@@ -15,7 +15,8 @@ layout: components
 <ClassTable
 data="{[
   { type:'component', class: 'table', desc: 'For <table> element' },
-  { type:'modifier', class: 'table-zebra', desc: 'For <table> to show zebra stripe rows' },
+  { type:'modifier', class: 'table-zebra', desc: 'For <table> to show zebra stripe on even rows' },
+  { type:'modifier', class: 'table-zebra-alt', desc: 'For <table> to show zebra stripe on odd rows' },
   { type:'modifier', class: 'table-pin-rows', desc: 'For <table> to make all the rows inside <thead> and <tfoot> sticky' },
   { type:'modifier', class: 'table-pin-cols', desc: 'For <table> to make all the <th> columns sticky' },
   { type:'responsive', class: 'table-xs', desc: 'Extra small size' },
