@@ -39,6 +39,7 @@ export default {
       rehypePlugins: rehypePlugins,
       layout: {
         components: "src/lib/mdsvex-components.svelte",
+        blog: "src/lib/mdsvex-blog.svelte",
         _: "src/lib/mdsvex.svelte",
       },
     }),

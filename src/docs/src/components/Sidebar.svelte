@@ -75,6 +75,20 @@
   </div>
 {/if}
 
+<ul class="menu bg-base-200 py-2 px-4 justify-between menu-horizontal w-full lg:hidden">
+  <li>
+    <a href="/components/">{$t("components-btn")}</a>
+  </li>
+  <li>
+    <a href="/blog/">{$t("Blog")}</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://github.com/saadeghi/daisyui" rel="noopener, noreferrer">
+      {$t("GitHub")}
+    </a>
+  </li>
+</ul>
+
 <div class="h-4" />
 
 {#each pages as { name, icon, items }}

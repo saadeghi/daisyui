@@ -24,35 +24,24 @@
         <p class="opacity-50">
           {@html $t("footer-tagline")}
         </p>
-        <p>
-          <a href="/docs/changelog" class="link link-hover">
-            {$t("changelog")}
-          </a>
-          –
-          <a
-            target="_blank"
-            rel="noopener, noreferrer"
-            href="https://github.com/saadeghi/daisyui/blob/master/LICENSE"
-            class="link link-hover group">
-            {$t("license")}
-            {@html newtabicon}
-          </a>
-        </p>
-      </div>
-      <div>
-        <span class="footer-title">{$t("pages")}</span>
-        <a href="/docs/install/" class="link link-hover">{$t("how-to-install")}</a>
-        <a href="/docs/use/" class="link link-hover">{$t("how-to-use-components")}</a>
-        <a href="/docs/customize/" class="link link-hover">{$t("how-to-customize")}</a>
-        <a href="/docs/themes/" class="link link-hover">{$t("how-to-use-themes")}</a>
-        <a href="/docs/colors/" class="link link-hover">{$t("color-system")}</a>
-        <a href="/docs/config/" class="link link-hover">{$t("config")}</a>
+
         <a
           target="_blank"
           rel="noopener, noreferrer"
           href="https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md"
           class="link link-hover group">
           {$t("contributing")}
+          {@html newtabicon}
+        </a>
+        <a href="/docs/changelog" class="link link-hover">
+          {$t("changelog")}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://github.com/saadeghi/daisyui/blob/master/LICENSE"
+          class="link link-hover group">
+          {$t("license")}
           {@html newtabicon}
         </a>
         <a
@@ -63,6 +52,16 @@
           FAQ
           {@html newtabicon}
         </a>
+      </div>
+      <div>
+        <span class="footer-title">{$t("pages")}</span>
+        <a href="/docs/install/" class="link link-hover">{$t("how-to-install")}</a>
+        <a href="/docs/use/" class="link link-hover">{$t("how-to-use-components")}</a>
+        <a href="/docs/customize/" class="link link-hover">{$t("how-to-customize")}</a>
+        <a href="/docs/themes/" class="link link-hover">{$t("how-to-use-themes")}</a>
+        <a href="/docs/colors/" class="link link-hover">{$t("color-system")}</a>
+        <a href="/docs/config/" class="link link-hover">{$t("config")}</a>
+        <a href="/blog/" class="link link-hover">{$t("Blog")}</a>
       </div>
       <div>
         <span class="footer-title">{$t("available-on")}</span>

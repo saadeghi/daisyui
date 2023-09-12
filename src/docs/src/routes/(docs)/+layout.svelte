@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte"
-  import { afterNavigate } from "$app/navigation"
   import { pagesThatDontNeedSidebar } from "@src/lib/data.js"
 
   import { currentLang, langs } from "@src/lib/i18n"
@@ -74,7 +73,16 @@
   }`}>
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div class={`drawer-content`}>
-    <Navbar {addScrollPaddingToNavbar} {removeScrollPaddingFromNavbar} />
+    <Navbar
+      {addScrollPaddingToNavbar}
+      {removeScrollPaddingFromNavbar}
+      showBlogBtn="true"
+      showComponentsBtn="true"
+      hideLogoOnLargeScreen={$page.url.pathname == "/" ? false : true}
+      hideSidebarButtonOnLargeScreen={$page.url.pathname == "/" ? false : true}
+      showSearch="true"
+      showVersion="true"
+      showLanguage="true" />
     <div
       class={`${
         pagesThatDontNeedSidebar.includes($page.url.pathname)
