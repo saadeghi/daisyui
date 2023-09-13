@@ -142,6 +142,7 @@
 <Scripts />
 
 <style global>
+  .prose code[class*="language-"],
   .code-wrapper code[class*="language-"],
   code[class*="language-"],
   pre[class*="language-"] {
