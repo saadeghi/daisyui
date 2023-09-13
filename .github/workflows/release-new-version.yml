@@ -53,7 +53,9 @@ jobs:
 
       - name: get-npm-version
         id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
+        # uses: martinbeentjes/npm-get-version-action@v1
+        run: |
+          echo current-version=$(grep -o '"version": *"[^"]*"' package.json | cut -d'"' -f4) >> $GITHUB_OUTPUT
 
       - name: update package version in env
         run: echo "VITE_DAISYUI_VERSION=${{ steps.package-version.outputs.current-version }}" > src/docs/.env

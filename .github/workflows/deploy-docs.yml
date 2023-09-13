@@ -17,6 +17,7 @@ on:
 jobs:
   deploy-docs:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -33,7 +34,7 @@ jobs:
       - name: Install package dependencies
         run: bun install
 
-      - name: build package (skip cdn files)
+      - name: Build package (skip cdn files)
         run: bun run build:skipcdnfiles
 
       - name: Install docs dependencies
