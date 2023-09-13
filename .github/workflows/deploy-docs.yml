@@ -34,7 +34,7 @@ jobs:
       - name: Install package dependencies
         run: bun install
 
-      - name: Build package (skip cdn files)
+      - name: Build package (skip cdn file)
         run: bun run build:skipcdnfiles
 
       - name: Install docs dependencies
@@ -48,7 +48,7 @@ jobs:
         if: github.repository == 'saadeghi/daisyui'
         run: cd src/docs && bun i daisyui@latest
 
-      - name: get new data from API
+      - name: Get new data from API
         run: cd src/docs && bun run get-files
 
       - name: Build docs

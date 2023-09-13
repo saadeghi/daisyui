@@ -9,9 +9,6 @@ on:
         options:
           - ":patch"
           - ":minor"
-      skip-publish:
-        type: boolean
-        description: Skip publishing to npm
   push:
     branches:
       - master
@@ -81,7 +78,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish package
-        if: github.event.inputs.skip-publish != 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
