@@ -50,7 +50,6 @@ jobs:
 
       - name: get-npm-version
         id: package-version
-        # uses: martinbeentjes/npm-get-version-action@v1
         run: |
           echo current-version=$(grep -o '"version": *"[^"]*"' package.json | cut -d'"' -f4) >> $GITHUB_OUTPUT
 
