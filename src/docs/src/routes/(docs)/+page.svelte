@@ -9,16 +9,33 @@
   import { siteStats } from "@src/lib/data.js"
   import { tweets } from "@src/lib/testimonials.js"
   import { t } from "@src/lib/i18n"
-  import { stargazers_count } from "$lib/json/github-repo.json"
-  import { downloads } from "$lib/json/npm-downloads.json"
+  import githubRepoInfo from "$lib/json/github-repo.json"
+  import npmDownloadsInfo from "$lib/json/npm-downloads.json"
   import contributors1 from "$lib/json/github-contributors-1.json"
   import contributors2 from "$lib/json/github-contributors-2.json"
-  const contributors = contributors1.concat(contributors2)
+  import openCollectiveBackers from "$lib/json/opencollective-members.json"
 
-  import backers from "$lib/json/opencollective-members.json"
-  const backersUnique = backers.filter(
-    (obj, index) => backers.findIndex((item) => item.name === obj.name) === index
-  )
+  let stargazers_count = 25000
+  if (githubRepoInfo && githubRepoInfo.stargazers_count) {
+    stargazers_count = githubRepoInfo.stargazers_count
+  }
+
+  let npmInstalls = 7000000
+  if (npmDownloadsInfo && npmDownloadsInfo.downloads) {
+    npmInstalls = npmDownloadsInfo.downloads
+  }
+
+  let contributors = []
+  if (Array.isArray(contributors1) && Array.isArray(contributors2)) {
+    contributors = contributors1.concat(contributors2)
+  }
+
+  let backers = []
+  if (Array.isArray(openCollectiveBackers)) {
+    backers = openCollectiveBackers.filter(
+      (obj, index) => openCollectiveBackers.findIndex((item) => item.name === obj.name) === index
+    )
+  }
 
   let isClipboardButtonPressed = false
   const copyText = (text) => {
@@ -1487,7 +1504,7 @@
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [40, 50], [0, 1])}`}>
         <h3 class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup initial={downloads * 0.8} value={downloads} duration={2400} />
+          <Countup initial={npmInstalls * 0.8} value={npmInstalls} duration={2400} />
         </h3>
         <a
           href="https://www.npmjs.com/package/daisyui"
@@ -1600,7 +1617,7 @@
     </p>
     <div class="flex w-full justify-center">
       <div class="flex max-w-5xl flex-wrap justify-center gap-3 p-10">
-        {#each backersUnique as backer}
+        {#each backers as backer}
           <div class="tooltip" data-tip={backer.name}>
             {#if backer.image}
               <div class="avatar">
