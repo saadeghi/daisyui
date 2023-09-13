@@ -27,7 +27,7 @@ jobs:
       #     node-version: "latest"
       #     registry-url: https://registry.npmjs.org
 
-      - name: setup bun
+      - name: Setup bun
         uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
