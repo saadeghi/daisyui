@@ -34,7 +34,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install package dependencies
-        run: npm install
+        run: npm install --production
 
       - name: Release
         run: |

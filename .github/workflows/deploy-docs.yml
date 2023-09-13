@@ -31,13 +31,13 @@ jobs:
         uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
-        run: bun install
+        run: bun install --production
 
       - name: build package
         run: bun run build
 
       - name: Install docs dependencies
-        run: cd src/docs && bun install
+        run: cd src/docs && bun install --production
 
       - name: Install alpha daisyUI if staging
         if: github.repository == 'daisyui/daisyui.github.io'
