@@ -1,7 +1,7 @@
 ---
 title: "Mary UI: Laravel blade components made with daisyUI"
 desc: Mary UI is a collection of Laravel blade components made for Livewire 3 and styled around daisyUI and Tailwind CSS
-# published: true
+published: true
 date: 2023-9-13
 author: Pouya Saadeghi
 thumbnail: /images/blog/mary-ui.jpg
@@ -41,7 +41,7 @@ All you need would be these few lines:
 </x-form>
 ```
 
-## How to install Mary UI?
+## How to install Mary UI on a new Laravel project?
 
 You can install Mary UI using composer:
 
@@ -61,7 +61,17 @@ And start the dev server
 yarn dev
 ```
 
-Or if it's an existing Laravel project, Install daisyUI and Tailwind CSS and initialize Tailwind CSS config file:
+Read more about [Mary UI installation](https://mary-ui.com/docs/installation).
+
+## How to install Mary UI on existing Laravel project?
+
+Install Mary UI using composer:
+
+```bash
+composer require robsontenorio/mary
+```
+
+If it's an existing Laravel project, Install daisyUI and Tailwind CSS and initialize Tailwind CSS config file:
 
 ```bash
 yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
@@ -120,3 +130,7 @@ Finally, start dev server.
 ```bash
 yarn dev
 ```
+
+That's it! You can now use Mary UI components in your blade files.
+
+Read more about [Mary UI](https://mary-ui.com).
