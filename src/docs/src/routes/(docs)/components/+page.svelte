@@ -9,7 +9,7 @@
 
 <SEO title="Components" desc="Components" />
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-6 pt-10">
     <div class="prose max-w-4xl flex-grow">
       <h1><Translate text="All daisyUI components" /></h1>
       <p>{Object.keys(components).length} <Translate text="components" /></p>
