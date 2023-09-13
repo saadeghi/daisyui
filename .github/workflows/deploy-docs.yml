@@ -33,8 +33,8 @@ jobs:
       - name: Install package dependencies
         run: bun install
 
-      - name: build package
-        run: bun run build
+      - name: build package (skip cdn files)
+        run: bun run build:skipcdnfiles
 
       - name: Install docs dependencies
         run: cd src/docs && bun install
