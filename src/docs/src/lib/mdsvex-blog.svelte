@@ -8,7 +8,7 @@
 
 <SEO {title} {desc} img={thumbnail} />
 
-<div class="prose prose-sm md:prose-base">
+<div class="prose prose-sm md:prose-base mx-auto">
   {#if thumbnail}
     <figure class="w-full">
       <img

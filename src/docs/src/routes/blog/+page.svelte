@@ -17,7 +17,7 @@
       class="card sm:card-side sm:max-w-none hover:bg-base-200 transition-colors"
       href={`/blog/${post.slug}`}>
       {#if post.thumbnail}
-        <figure class="max-w-[12rem] w-full object-cover mx-auto sm:pr-0 p-6 max-sm:pb-0">
+        <figure class="sm:max-w-[12rem] w-full object-cover mx-auto sm:pr-0 p-6 max-sm:pb-0">
           <img
             loading="lazy"
             src={post.thumbnail}
