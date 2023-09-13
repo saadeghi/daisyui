@@ -21,34 +21,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "latest"
-          registry-url: https://registry.npmjs.org
+      # - name: Setup Node
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: "latest"
+      #     registry-url: https://registry.npmjs.org
+
+      - name: setup bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
-        run: npm install
+        run: bun install
 
       - name: build package
-        run: npm run build
+        run: bun run build
 
       - name: Install docs dependencies
-        run: cd src/docs && npm install
+        run: cd src/docs && bun install
 
       - name: Install alpha daisyUI if staging
         if: github.repository == 'daisyui/daisyui.github.io'
-        run: cd src/docs && npm i daisyui@alpha
+        run: cd src/docs && bun i daisyui@alpha
 
       - name: Install latest daisyUI if production
         if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && npm i daisyui@latest
+        run: cd src/docs && bun i daisyui@latest
 
       - name: get new data from API
-        run: cd src/docs && npm run get-files
+        run: cd src/docs && bun run get-files
 
       - name: Build docs
-        run: cd src/docs && npm run build
+        run: cd src/docs && bun run build
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
