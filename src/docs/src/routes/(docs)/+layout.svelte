@@ -142,6 +142,7 @@
 <Scripts />
 
 <style global>
+  .code-wrapper code[class*="language-"],
   code[class*="language-"],
   pre[class*="language-"] {
     background: unset;
