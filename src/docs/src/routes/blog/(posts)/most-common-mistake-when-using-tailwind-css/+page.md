@@ -1,7 +1,7 @@
 ---
 title: The most common mistake when using Tailwind CSS (and how to fix it)
 desc: While working on daisyUI, I see a lot of people making this mistake when using Tailwind CSS.
-# published: true
+published: true
 date: 2023-9-14
 author: Pouya Saadeghi
 thumbnail: /images/blog/tailwind-mistake.jpg
