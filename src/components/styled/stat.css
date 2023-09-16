@@ -4,6 +4,12 @@
 :where(.stats) {
   @apply divide-x divide-y-0 overflow-x-auto;
 }
+.stats-sm {
+  @apply bg-base-100 text-base-content rounded-box flex;
+}
+:where(.stats-sm) {
+  @apply divide-x divide-y-0 overflow-x-auto;
+}
 .stat {
   @apply gap-x-4 border-base-content border-opacity-10 px-6 py-4;
   &-title {
@@ -17,6 +23,21 @@
   }
   &-actions {
     @apply mt-4;
+  }
+}
+.stat-sm {
+  @apply gap-x-2 border-base-content border-opacity-10 px-4 py-2;
+  &-title {
+    @apply text-base-content/60;
+  }
+  &-value {
+    @apply text-2xl font-bold;
+  }
+  &-desc {
+    @apply text-xs text-base-content/60;
+  }
+  &-actions {
+    @apply mt-2;
   }
 }
 /* .stat + .stat {
