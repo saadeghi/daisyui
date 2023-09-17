@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest"
+import { expect, test } from "bun:test"
 import * as colorFunctions from "../theming/functions"
 import * as themes from "../theming/themes"
 import {
@@ -10,13 +10,10 @@ import {
   isColorContrastOkay,
 } from "./utils"
 
-describe.each(
-  // each theme
-  Object.keys(themes).filter((themeKey) => {
-    return themeKey !== "default"
-  })
-)("Check contrast of color pairs on all themes", (themeKey) => {
-  test.each([
+for (let themeKey in themes) {
+  if (themeKey === "default") continue
+  // for each variable name
+  for (let variableName of [
     ["--pc", "--p"],
     ["--pc", "--pf"],
     ["--sc", "--s"],
@@ -32,46 +29,17 @@ describe.each(
     ["--suc", "--su"],
     ["--wac", "--wa"],
     ["--erc", "--er"],
-  ])(`${trimThemeName(themeKey)} color pairs`, (pair1, pair2) => {
-    if (
-      isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
-        ContrastRatioWarningThreshold
-      ) === false &&
-      isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
-        ContrastRatioErrorThreshold
-      ) === true
-    ) {
-      console.log(
-        `🟡 ${trimCssVariable(pair1)} + ${trimCssVariable(pair2)} contrast ratio on ${trimThemeName(
-          themeKey
-        )} theme is less than ${ContrastRatioWarningThreshold}:1`
-      )
-    }
-
-    if (
-      isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
-        ContrastRatioErrorThreshold
-      ) === false
-    ) {
-      console.log(
-        `🔴 ${trimCssVariable(pair1)} + ${trimCssVariable(pair2)} contrast ratio on ${trimThemeName(
-          themeKey
-        )} theme is less than ${ContrastRatioErrorThreshold}:1`
-      )
-    }
-
-    expect(
-      isColorContrastOkay(
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair1]),
-        hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[pair2]),
-        ContrastRatioErrorThreshold
-      )
-    ).toBe(true)
-  })
-})
+  ]) {
+    test(`Color contrast: ${trimThemeName(themeKey)}: ${variableName[0].substring(
+      2
+    )}/${variableName[1].substring(2)} ⇒ ${ContrastRatioErrorThreshold}:1`, () => {
+      expect(
+        isColorContrastOkay(
+          hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[variableName[0]]),
+          hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[variableName[1]]),
+          ContrastRatioErrorThreshold
+        )
+      ).toBe(true)
+    })
+  }
+}

@@ -83,9 +83,6 @@
     "dev": "cd src/docs && npm run dev",
     "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
     "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:run": "vitest run",
     "playground": "cd src/experiments/playground && npm run dev",
     "release": "rm -f package-lock.json && standard-version",
     "release:patch": "rm -f package-lock.json && standard-version --release-as patch",
@@ -100,8 +97,7 @@
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
     "rtlcss": "4.1.0",
-    "standard-version": "^9.5.0",
-    "vitest": "^0.34.3"
+    "standard-version": "^9.5.0"
   },
   "dependencies": {
     "colord": "^2.9",

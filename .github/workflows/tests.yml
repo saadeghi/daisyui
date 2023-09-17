@@ -11,17 +11,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "latest"
-          registry-url: https://registry.npmjs.org
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: "latest"
+      #     registry-url: https://registry.npmjs.org
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
-        run: npm install
+        run: bun install
 
       - name: build package
-        run: npm run build
+        run: bun run build
 
       - name: Run tests
-        run: npm run test:run
+        run: bun test

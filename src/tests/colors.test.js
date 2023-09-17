@@ -1,4 +1,4 @@
-import { expect, test } from "vitest"
+import { expect, test } from "bun:test"
 import * as colorFunctions from "../theming/functions"
 
 test("Foreground color generator function", () => {
