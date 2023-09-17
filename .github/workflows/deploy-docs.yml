@@ -32,6 +32,8 @@ on:
 jobs:
   deploy-docs:
     runs-on: ubuntu-latest
+    env:
+      runtime: ${{ !github.event.inputs.runtime && 'bun'}}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||
@@ -42,33 +44,33 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node
-        if: github.event.inputs.runtime == 'npm'
+        if: env.runtime == 'npm'
         uses: actions/setup-node@v3
         with:
           node-version: "latest"
           registry-url: https://registry.npmjs.org
 
       - name: Setup bun
-        if: github.event.inputs.runtime == 'bun'
+        if: env.runtime == 'bun'
         uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
-        run: ${{ github.event.inputs.runtime }} install
+        run: ${{ env.runtime }} install
 
       - name: Build package (skip cdn file)
-        run: ${{ github.event.inputs.runtime }} run build:skipcdnfiles
+        run: ${{ env.runtime }} run build:skipcdnfiles
 
       - name: Install docs dependencies
-        run: cd src/docs && ${{ github.event.inputs.runtime }} install
+        run: cd src/docs && ${{ env.runtime }} install
 
       - name: Install daisyUI
-        run: cd src/docs && ${{ github.event.inputs.runtime }} i daisyui@${{ github.event.inputs.npm-tag }}
+        run: cd src/docs && ${{ env.runtime }} i daisyui@${{ github.event.inputs.npm-tag }}
 
       - name: Get new data from API
-        run: cd src/docs && ${{ github.event.inputs.runtime }} run get-files
+        run: cd src/docs && ${{ env.runtime }} run get-files
 
       - name: Build docs
-        run: cd src/docs && ${{ github.event.inputs.runtime }} run build
+        run: cd src/docs && ${{ env.runtime }} run build
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
