@@ -33,20 +33,20 @@ jobs:
           node-version: "latest"
           registry-url: https://registry.npmjs.org
 
-      # - name: Setup bun
-      #   uses: oven-sh/setup-bun@v1
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
-        run: npm install
+        run: bun install
 
       - name: Release
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          npm run release${{ github.event.inputs.release-type }}
+          bun run release${{ github.event.inputs.release-type }}
 
       - name: build package
-        run: npm run build
+        run: bun run build
 
       - name: get-npm-version
         id: package-version
