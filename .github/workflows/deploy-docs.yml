@@ -2,6 +2,14 @@ name: "📘 Deploy docs"
 
 on:
   workflow_dispatch:
+    inputs:
+      npm-tag:
+        type: choice
+        description: Version of daisyUI to install
+        default: "latest"
+        options:
+          - "latest"
+          - "alpha"
   workflow_call:
   push:
     branches:
@@ -44,13 +52,8 @@ jobs:
       - name: Install docs dependencies
         run: cd src/docs && bun install
 
-      - name: Install alpha daisyUI if staging
-        if: github.repository == 'daisyui/daisyui.github.io'
-        run: cd src/docs && bun i daisyui@alpha
-
-      - name: Install latest daisyUI if production
-        if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && bun i daisyui@latest
+      - name: Install daisyUI
+        run: cd src/docs && bun i daisyui@${{ github.event.inputs.npm-tag }}
 
       - name: Get new data from API
         run: cd src/docs && bun run get-files
