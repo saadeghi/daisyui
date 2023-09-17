@@ -42,14 +42,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node
-        if: github.event.inputs.runtime != 'npm'
+        if: github.event.inputs.runtime == 'npm'
         uses: actions/setup-node@v3
         with:
           node-version: "latest"
           registry-url: https://registry.npmjs.org
 
       - name: Setup bun
-        if: github.event.inputs.runtime != 'bun'
+        if: github.event.inputs.runtime == 'bun'
         uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
