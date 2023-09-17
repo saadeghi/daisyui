@@ -30,9 +30,9 @@ for (let themeKey in themes) {
     ["--wac", "--wa"],
     ["--erc", "--er"],
   ]) {
-    test(`Color contrast: ${trimThemeName(themeKey)}: ${variableName[0].substring(
+    test(`${trimThemeName(themeKey)}: ${variableName[0].substring(2)}/${variableName[1].substring(
       2
-    )}/${variableName[1].substring(2)} ⇒ ${ContrastRatioErrorThreshold}:1`, () => {
+    )} contrast is more than ${ContrastRatioErrorThreshold}:1`, () => {
       expect(
         isColorContrastOkay(
           hslValuesToHex(colorFunctions.convertColorFormat(themes[themeKey])[variableName[0]]),

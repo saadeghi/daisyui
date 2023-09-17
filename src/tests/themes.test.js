@@ -4,77 +4,30 @@ import * as themes from "../theming/themes"
 import * as colorNames from "../theming/colorNames"
 import { trimThemeName } from "./utils"
 
-// describe.each(
-//   // each theme
-//   Object.keys(themes).filter((themeKey) => {
-//     return themeKey !== "default"
-//   })
-// )("All themes have all colors", (themeKey) => {
-//   test.each(
-//     // each color
-//     Object.keys(colorNames).filter((colorName) => {
-//       return colorName !== "default"
-//     })
-//   )(`${trimThemeName(themeKey)} has colors`, (colorName) => {
-//     expect(colorFunctions.convertColorFormat(themes[themeKey])).toHaveProperty(
-//       colorNames[colorName]
-//     )
-//   })
-// })
-
 for (let themeKey in themes) {
   if (themeKey === "default") continue
-  for (let colorName in colorNames) {
-    if (colorName === "default") continue
-    test(`${trimThemeName(themeKey)} has ${colorName}`, () => {
+  test(`${trimThemeName(themeKey)} has all color names`, () => {
+    for (let colorName in colorNames) {
+      if (colorName === "default") continue
       expect(colorFunctions.convertColorFormat(themes[themeKey])).toHaveProperty(
         colorNames[colorName]
       )
-    })
-  }
-}
-
-// describe.each(
-//   // each theme
-//   Object.keys(themes).filter((themeKey) => {
-//     return themeKey !== "default"
-//   })
-// )("All themes have all required CSS variables", (themeKey) => {
-//   test.each(
-//     // each variable
-//     [
-//       "--rounded-box",
-//       "--rounded-btn",
-//       "--rounded-badge",
-//       "--animation-btn",
-//       "--animation-input",
-//       "--btn-text-case",
-//       "--btn-focus-scale",
-//       "--border-btn",
-//       "--tab-border",
-//       "--tab-radius",
-//     ]
-//   )(`${trimThemeName(themeKey)} has CSS variables`, (variableName) => {
-//     expect(colorFunctions.convertColorFormat(themes[themeKey])).toHaveProperty(variableName)
-//   })
-// })
-
-for (let themeKey in themes) {
-  if (themeKey === "default") continue
-  for (let variableName of [
-    "--rounded-box",
-    "--rounded-btn",
-    "--rounded-badge",
-    "--animation-btn",
-    "--animation-input",
-    "--btn-text-case",
-    "--btn-focus-scale",
-    "--border-btn",
-    "--tab-border",
-    "--tab-radius",
-  ]) {
-    test(`${trimThemeName(themeKey)} has ${variableName}`, () => {
+    }
+  })
+  test(`${trimThemeName(themeKey)} has all variables`, () => {
+    for (let variableName of [
+      "--rounded-box",
+      "--rounded-btn",
+      "--rounded-badge",
+      "--animation-btn",
+      "--animation-input",
+      "--btn-text-case",
+      "--btn-focus-scale",
+      "--border-btn",
+      "--tab-border",
+      "--tab-radius",
+    ]) {
       expect(colorFunctions.convertColorFormat(themes[themeKey])).toHaveProperty(variableName)
-    })
-  }
+    }
+  })
 }
