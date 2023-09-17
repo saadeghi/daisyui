@@ -3,6 +3,13 @@ name: "🎉 Release new version"
 on:
   workflow_dispatch:
     inputs:
+      runtime:
+        type: choice
+        description: JS runtime
+        default: "bun"
+        options:
+          - "bun"
+          - "npm"
       release-type:
         type: choice
         description: Release type
@@ -22,24 +29,34 @@ jobs:
   release:
     if: github.repository == 'saadeghi/daisyui'
     runs-on: ubuntu-latest
+    env:
+      runtime: ${{ !github.event.inputs.runtime && 'bun'}}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Node
+        if: env.runtime == 'npm'
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+          registry-url: https://registry.npmjs.org
+
       - name: Setup bun
+        if: env.runtime == 'bun'
         uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
-        run: bun install
+        run: ${{ env.runtime }} install
 
       - name: build package
-        run: bun run build
+        run: ${{ env.runtime }} run build
 
       - name: Release
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          bun run release${{ github.event.inputs.release-type }}
+          ${{ env.runtime }} run release${{ github.event.inputs.release-type }}
 
       - name: get-npm-version
         id: package-version
@@ -70,6 +87,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
+        if: env.runtime != 'npm'
         uses: actions/setup-node@v3
         with:
           node-version: "latest"
