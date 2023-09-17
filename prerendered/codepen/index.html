@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      try {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
+      } catch (e) {}
+    </script>
+    
+		<link rel="modulepreload" href="../_app/immutable/entry/start.32af7ff2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.cc1ce551.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.98825737.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.3e418aa1.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.2c210120.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.ffedd617.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.eb3dac0d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/71.22ee48de.js">
+  </head>
+  <body>
+    <div>   
+			
+			<script>
+				{
+					__sveltekit_1imbuok = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.32af7ff2.js"),
+						import("../_app/immutable/entry/app.2c210120.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 71],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
