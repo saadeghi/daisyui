@@ -21,17 +21,10 @@ on:
 jobs:
   release:
     if: github.repository == 'saadeghi/daisyui'
-    name: "Release"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "latest"
-          registry-url: https://registry.npmjs.org
 
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
@@ -75,6 +68,12 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
+          registry-url: https://registry.npmjs.org
 
       - name: Publish package
         run: npm publish
