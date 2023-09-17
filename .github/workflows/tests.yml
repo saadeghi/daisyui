@@ -2,7 +2,11 @@ name: "🧪 Tests"
 
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+      - master
+    paths:
+      - "src/theming/**"
 jobs:
   release:
     name: "Build"
@@ -10,12 +14,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: "latest"
-      #     registry-url: https://registry.npmjs.org
 
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
