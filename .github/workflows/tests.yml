@@ -24,7 +24,7 @@ jobs:
         run: bun install
 
       - name: build package
-        run: bun run build
+        run: bun run build:skipcdnfiles
 
       - name: Run tests
         run: bun test
