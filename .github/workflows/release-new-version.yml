@@ -39,14 +39,14 @@ jobs:
       - name: Install package dependencies
         run: bun install
 
+      - name: build package
+        run: bun run build
+
       - name: Release
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
           bun run release${{ github.event.inputs.release-type }}
-
-      - name: build package
-        run: bun run build
 
       - name: get-npm-version
         id: package-version
