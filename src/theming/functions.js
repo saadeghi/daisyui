@@ -176,6 +176,7 @@ module.exports = {
   },
 
   injectThemes: function (addBase, config, themes, colorFunction) {
+    const themeSelector = config("daisyui.themeSelector") ?? ":root";
     const includedThemesObj = {}
     // includedThemesObj["@supports (not(color: lch(0 0 0)))"] = {}
     // add default themes
@@ -222,7 +223,7 @@ module.exports = {
     themeOrder.forEach((themeName, index) => {
       if (index === 0) {
         // first theme as root
-        themesToInject[":root"] = includedThemesObj["[data-theme=" + themeName + "]"]
+        themesToInject[themeSelector] = includedThemesObj["[data-theme=" + themeName + "]"]
       } else if (index === 1) {
         // auto dark
         if (config("daisyui.darkTheme")) {
@@ -231,7 +232,7 @@ module.exports = {
             themeOrder.includes(config("daisyui.darkTheme"))
           ) {
             themesToInject["@media (prefers-color-scheme: dark)"] = {
-              [":root"]: includedThemesObj[`[data-theme=${config("daisyui.darkTheme")}]`],
+              [themeSelector]: includedThemesObj[`[data-theme=${config("daisyui.darkTheme")}]`],
             }
           }
         } else if (config("daisyui.darkTheme") === false) {
@@ -239,7 +240,7 @@ module.exports = {
         } else {
           if (themeOrder[0] !== "dark" && themeOrder.includes("dark")) {
             themesToInject["@media (prefers-color-scheme: dark)"] = {
-              [":root"]: includedThemesObj["[data-theme=dark]"],
+              [themeSelector]: includedThemesObj["[data-theme=dark]"],
             }
           }
         }

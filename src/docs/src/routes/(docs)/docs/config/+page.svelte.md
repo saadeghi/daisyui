@@ -28,6 +28,7 @@ module.exports = {
     rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
     prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+    themeSelector: ":root", // Which element to attach the theming variables to.
   },
 
   //...
@@ -92,3 +93,10 @@ module.exports = {
   <Translate text="If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts." />
   <Translate text="Utility classes like color names (e.g. <code>bg-primary</code>) or border-radius (e.g. <code>rounded-box</code>) will not be affected by this config because they're being added as extensions to Tailwind CSS classes." />  
   <Translate text="If you use daisyUI <code>prefix</code> option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>." />
+
+- ### themeSelector
+
+  `String (default: ":root")`
+
+  <Translate text="Which element to attach the theming variables to." />
+  <Translate text="In certain situations (such as when embedding daisyUI in a shadow root) it may be useful to set this to e.g. <code>*</code>, so all components have access to the CSS variables required." />
