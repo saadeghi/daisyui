@@ -1,0 +1,81 @@
+<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+  <channel>
+    <title>
+      <![CDATA[ daisyUI Blog ]]>
+    </title>
+    <description>
+      <![CDATA[ Updates, ideas and resources ]]>
+    </description>
+    <link>https://daisyui.com/blog/</link>
+    <lastBuildDate>Mon Sep 18 2023 02:16:29 GMT+0000 (Coordinated Universal Time)</lastBuildDate>
+    <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    
+        <item>
+          <title>
+            <![CDATA[ How to add a new color to daisyUI themes ]]>
+          </title>
+          <description>
+            <![CDATA[ Do you want to add new color names to daisyUI color palette? Here is how you can do it. ]]>
+          </description>
+          <link>https://daisyui.com/blog/how-to-add-new-colors-to-daisyui/</link>
+          <guid isPermaLink="false">https://daisyui.com/blog/how-to-add-new-colors-to-daisyui/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ The most common mistake when using Tailwind CSS (and how to fix it) ]]>
+          </title>
+          <description>
+            <![CDATA[ While working on daisyUI, I see a lot of people making this mistake when using Tailwind CSS. ]]>
+          </description>
+          <link>https://daisyui.com/blog/most-common-mistake-when-using-tailwind-css/</link>
+          <guid isPermaLink="false">https://daisyui.com/blog/most-common-mistake-when-using-tailwind-css/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ Mary UI: Laravel blade components made with daisyUI ]]>
+          </title>
+          <description>
+            <![CDATA[ Mary UI is a collection of Laravel blade components made for Livewire 3 and styled around daisyUI and Tailwind CSS ]]>
+          </description>
+          <link>https://daisyui.com/blog/mary-ui/</link>
+          <guid isPermaLink="false">https://daisyui.com/blog/mary-ui/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ All about daisyUI color system and comparing it to Tailwind CSS color names ]]>
+          </title>
+          <description>
+            <![CDATA[ Why use semantic color names instead of Tailwind CSS color shades? Accessing to all color shades or using a color system... Which one is better? ]]>
+          </description>
+          <link>https://daisyui.com/blog/daisyui-colors-and-themes/</link>
+          <guid isPermaLink="false">https://daisyui.com/blog/daisyui-colors-and-themes/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ daisyUI vs. Tailwind UI ]]>
+          </title>
+          <description>
+            <![CDATA[ Which one is better? Which one should I use? Comparing Tailwind CSS component libraries daisyUI and Tailwind UI. ]]>
+          </description>
+          <link>https://daisyui.com/blog/daisyui-vs-tailwindui/</link>
+          <guid isPermaLink="false">https://daisyui.com/blog/daisyui-vs-tailwindui/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ What is daisyUI? (and other questions I get asked a lot) ]]>
+          </title>
+          <description>
+            <![CDATA[ Is daisyUI against the Tailwind CSS philosophy? Are we going full circle? Why not just use Bootstrap? Here I answer some of the most common questions I get asked about daisyUI. ]]>
+          </description>
+          <link>https://daisyui.com/blog/what-is-daisyui/</link>
+          <guid isPermaLink="false">https://daisyui.com/blog/what-is-daisyui/</guid>
+        </item>
+      
+  </channel>
+</rss>
