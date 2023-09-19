@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.7.6 (2023-09-19)
+
+
+### Bug Fixes
+
+* [#2333](https://github.com/saadeghi/daisyui/issues/2333) multidirection support for `join` ([#2334](https://github.com/saadeghi/daisyui/issues/2334)) ([e8b3589](https://github.com/saadeghi/daisyui/commit/e8b3589a476bcca37d116780b599b5509d25d720))
+
 ### 3.7.5 (2023-09-17)
 
 ### 3.7.4 (2023-09-13)
