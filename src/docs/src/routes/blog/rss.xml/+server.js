@@ -28,7 +28,6 @@ const get_posts = async () => {
   // sort by date
   posts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
 
-  console.log(posts)
   return {
     posts,
   }
