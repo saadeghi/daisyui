@@ -75,7 +75,7 @@
   </div>
 {/if}
 
-<ul class="menu bg-base-200 py-2 px-4 justify-between menu-horizontal w-full lg:hidden">
+<ul class="menu bg-base-200 menu-horizontal w-full justify-between px-4 py-2 lg:hidden">
   <li>
     <a href="/components/">{$t("components-btn")}</a>
   </li>

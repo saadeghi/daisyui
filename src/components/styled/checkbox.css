@@ -1,9 +1,9 @@
 .checkbox {
   --chkbg: var(--bc);
   --chkfg: var(--b1);
-  @apply h-6 w-6 cursor-pointer appearance-none border border-base-content border-opacity-20 rounded-btn;
+  @apply border-base-content rounded-btn h-6 w-6 cursor-pointer appearance-none border border-opacity-20;
   &:focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-base-content;
+    @apply outline-base-content outline outline-2 outline-offset-2;
   }
   &:checked,
   &[checked="true"],
@@ -127,7 +127,7 @@
     }
   }
   &:disabled {
-    @apply cursor-not-allowed border-transparent bg-base-content opacity-20;
+    @apply bg-base-content cursor-not-allowed border-transparent opacity-20;
   }
 }
 

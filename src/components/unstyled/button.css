@@ -1,6 +1,6 @@
 .btn {
-  @apply inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent text-center transition duration-200 ease-out rounded-btn;
-  @apply h-12 px-4 min-h-12;
+  @apply rounded-btn inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent text-center transition duration-200 ease-out;
+  @apply min-h-12 h-12 px-4;
   font-size: 0.875rem;
   line-height: 1em;
 
@@ -34,7 +34,7 @@
 /* radio input and checkbox as button */
 .btn:is(input[type="checkbox"]),
 .btn:is(input[type="radio"]) {
-  @apply appearance-none w-auto;
+  @apply w-auto appearance-none;
 }
 .btn:is(input[type="checkbox"]):after,
 .btn:is(input[type="radio"]):after {

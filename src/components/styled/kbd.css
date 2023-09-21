@@ -1,5 +1,5 @@
 .kbd {
-  @apply border border-base-content border-opacity-20 bg-base-200 px-2 rounded-btn;
+  @apply border-base-content bg-base-200 rounded-btn border border-opacity-20 px-2;
   border-bottom-width: 2px;
   min-height: 2.2em;
   min-width: 2.2em;

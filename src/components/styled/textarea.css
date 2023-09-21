@@ -1,15 +1,15 @@
 .textarea {
-  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn;
+  @apply border-base-content bg-base-100 rounded-btn border border-opacity-0;
   &-bordered {
     @apply border-opacity-20;
   }
   &:focus {
-    @apply outline outline-2 outline-offset-2 outline-base-content/20;
+    @apply outline-base-content/20 outline outline-2 outline-offset-2;
   }
   &-ghost {
     @apply bg-opacity-5;
     &:focus {
-      @apply bg-opacity-100 text-base-content;
+      @apply text-base-content bg-opacity-100;
       box-shadow: none;
     }
   }
@@ -58,6 +58,6 @@
   &-disabled,
   &:disabled,
   &[disabled] {
-    @apply cursor-not-allowed border-base-200 bg-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
+    @apply border-base-200 bg-base-200 placeholder-base-content cursor-not-allowed text-opacity-20 placeholder-opacity-20;
   }
 }

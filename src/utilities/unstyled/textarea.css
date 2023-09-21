@@ -1,14 +1,14 @@
 .textarea {
   &-xs {
-    @apply py-1 px-2 text-xs leading-relaxed;
+    @apply px-2 py-1 text-xs leading-relaxed;
   }
   &-sm {
-    @apply py-1 px-3 text-sm leading-8;
+    @apply px-3 py-1 text-sm leading-8;
   }
   &-md {
-    @apply py-3 px-4 text-sm leading-loose;
+    @apply px-4 py-3 text-sm leading-loose;
   }
   &-lg {
-    @apply py-4 px-6 text-lg leading-loose;
+    @apply px-6 py-4 text-lg leading-loose;
   }
 }

@@ -1,7 +1,7 @@
 .btm-nav {
-  @apply flex flex-row items-center justify-around fixed bottom-0 left-0 right-0 w-full;
+  @apply fixed bottom-0 left-0 right-0 flex w-full flex-row items-center justify-around;
   padding-bottom: env(safe-area-inset-bottom);
   & > * {
-    @apply flex items-center justify-center flex-col basis-full h-full cursor-pointer relative gap-1;
+    @apply relative flex h-full basis-full cursor-pointer flex-col items-center justify-center gap-1;
   }
 }

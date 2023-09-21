@@ -5,7 +5,7 @@
   }
   :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply grid grid-flow-col items-center gap-2 content-start;
+    @apply grid grid-flow-col content-start items-center gap-2;
     grid-auto-columns: minmax(auto, max-content) auto max-content;
     user-select: none;
   }
@@ -17,7 +17,7 @@
   }
 }
 :where(.menu li) {
-  @apply relative flex flex-col flex-wrap items-stretch shrink-0;
+  @apply relative flex shrink-0 flex-col flex-wrap items-stretch;
   .badge {
     @apply justify-self-end;
   }

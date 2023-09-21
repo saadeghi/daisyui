@@ -1,5 +1,5 @@
 .table {
-  @apply text-left rounded-box text-sm;
+  @apply rounded-box text-left text-sm;
   :where(th, td) {
     @apply px-4 py-3 align-middle;
   }
@@ -28,11 +28,11 @@
   :where(thead, tbody) {
     :where(tr:not(:last-child)),
     :where(tr:first-child:last-child) {
-      @apply border-b border-b-base-200;
+      @apply border-b-base-200 border-b;
     }
   }
 
   :where(thead, tfoot) {
-    @apply text-xs font-bold text-base-content/60 whitespace-nowrap;
+    @apply text-base-content/60 whitespace-nowrap text-xs font-bold;
   }
 }

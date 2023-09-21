@@ -1,18 +1,18 @@
 .btn {
   &-xs {
-    @apply h-6 px-2 min-h-6;
+    @apply min-h-6 h-6 px-2;
     font-size: 0.75rem;
   }
   &-sm {
-    @apply h-8 px-3 min-h-8;
+    @apply min-h-8 h-8 px-3;
     font-size: 0.875rem;
   }
   &-md {
-    @apply h-12 px-4 min-h-12;
+    @apply min-h-12 h-12 px-4;
     font-size: 0.875rem;
   }
   &-lg {
-    @apply h-16 px-6 min-h-16;
+    @apply min-h-16 h-16 px-6;
     font-size: 1.125rem;
   }
   &-wide {

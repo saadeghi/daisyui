@@ -55,14 +55,14 @@
 <Navbar hideSidebarButton="true" />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
-  <div class="max-w-none w-full flex-grow pt-10">
-    <div class="flex flex-col lg:flex-row justify-center w-full p-4 gap-6 min-h-[50vh]">
-      <div class="max-w-2xl max-lg:w-full max-lg:mx-auto">
+  <div class="w-full max-w-none flex-grow pt-10">
+    <div class="flex min-h-[50vh] w-full flex-col justify-center gap-6 p-4 lg:flex-row">
+      <div class="max-w-2xl max-lg:mx-auto max-lg:w-full">
         <div class="sticky top-32 mx-auto sm:max-w-none">
-          <div class="px-6 mb-8">
-            <div class="flex gap-3 items-center">
-              <a href="/blog" class="hover:opacity-80 inline-block">
-                <h1 class="font-title text-xl font-extrabold text-base-content">daisyUI blog</h1>
+          <div class="mb-8 px-6">
+            <div class="flex items-center gap-3">
+              <a href="/blog" class="inline-block hover:opacity-80">
+                <h1 class="font-title text-base-content text-xl font-extrabold">daisyUI blog</h1>
               </a>
               <div class="tooltip tooltip-right" data-tip="RSS">
                 <a
@@ -73,7 +73,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    class="w-5 h-5">
+                    class="h-5 w-5">
                     <path
                       d="M3.75 3a.75.75 0 00-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V16C17 8.82 11.18 3 4 3h-.25z" />
                     <path
@@ -82,10 +82,10 @@
                 </a>
               </div>
             </div>
-            <p class="text-xs italic text-base-content/60">Updates, ideas and resources</p>
+            <p class="text-base-content/60 text-xs italic">Updates, ideas and resources</p>
           </div>
           {#if tags.length > 0}
-            <ul class="menu menu-horizontal lg:w-56 lg:menu-vertical">
+            <ul class="menu menu-horizontal lg:menu-vertical lg:w-56">
               <li class="menu-title">Tags</li>
               {#each tags as tag}
                 <li>
@@ -102,10 +102,10 @@
           {/if}
         </div>
       </div>
-      <div class="w-full max-w-2xl mx-auto">
+      <div class="mx-auto w-full max-w-2xl">
         <slot />
 
-        <div id="mc_embed_shell" class="mt-10 card bg-base-200">
+        <div id="mc_embed_shell" class="card bg-base-200 mt-10">
           <div class="card-body flex flex-col gap-4">
             <h2 class="text-4xl font-black">Don't miss new posts!</h2>
             <div>

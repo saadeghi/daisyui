@@ -1,6 +1,6 @@
 .menu-horizontal {
   & > li:not(.menu-title) > details > ul {
-    @apply mt-4 ml-0 pr-2 py-2;
+    @apply ml-0 mt-4 py-2 pr-2;
   }
   & > li > details > ul {
     &:before {
@@ -9,18 +9,18 @@
   }
 }
 :where(.menu-horizontal > li:not(.menu-title) > details > ul) {
-  @apply bg-base-100 shadow-xl rounded-box;
+  @apply bg-base-100 rounded-box shadow-xl;
 }
 .menu-vertical {
   & > li:not(.menu-title) > details > ul {
-    @apply mt-0 ml-4 pr-0 py-0;
+    @apply ml-4 mt-0 py-0 pr-0;
   }
 }
 
 .menu-xs {
   :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply px-2 py-1 text-xs rounded;
+    @apply rounded px-2 py-1 text-xs;
   }
   .menu-title {
     @apply px-2 py-1;
@@ -29,7 +29,7 @@
 .menu-sm {
   :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply px-3 py-1 text-sm rounded-btn;
+    @apply rounded-btn px-3 py-1 text-sm;
   }
   .menu-title {
     @apply px-3 py-2;
@@ -38,7 +38,7 @@
 .menu-md {
   :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply px-4 py-2 text-sm rounded-btn;
+    @apply rounded-btn px-4 py-2 text-sm;
   }
   .menu-title {
     @apply px-4 py-2;
@@ -47,7 +47,7 @@
 .menu-lg {
   :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply px-6 py-3 text-lg rounded-btn;
+    @apply rounded-btn px-6 py-3 text-lg;
   }
   .menu-title {
     @apply px-6 py-3;

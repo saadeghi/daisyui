@@ -8,9 +8,9 @@
     <script src="theme-change.js"></script>
   </head>
 
-  <body class="dark:bg-gray-800 dark:text-gray-300 grid place-content-center min-h-screen">
+  <body class="grid min-h-screen place-content-center dark:bg-gray-800 dark:text-gray-300">
     <button
-      class="w-12 h-12 px-4 py-3 uppercase transition duration-200 ease-in-out rounded-md cursor-pointer hover:bg-black/5 top-2 right-2 absolute"
+      class="absolute right-2 top-2 h-12 w-12 cursor-pointer rounded-md px-4 py-3 uppercase transition duration-200 ease-in-out hover:bg-black/5"
       onclick="toggleDarkmode()">
       <svg
         class="fill-current"
@@ -32,33 +32,33 @@
       <div class="mb-4 text-2xl font-semibold">Please sign in</div>
       <div class="mb-4">
         <label class="label" for="email-input">
-          <span class="text-sm block text-left mb-2 px-1">Email</span>
+          <span class="mb-2 block px-1 text-left text-sm">Email</span>
         </label>
         <input
           id="email-input"
           type="text"
           placeholder="email"
-          class="w-full text-sm h-12 p-4 rounded-lg border dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-gray-300 focus:outline focus:outline-offset-2 dark:focus:outline-gray-700 outline-2" />
+          class="h-12 w-full rounded-lg border border-gray-300 p-4 text-sm outline-2 focus:outline focus:outline-offset-2 focus:outline-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:focus:outline-gray-700" />
       </div>
       <div class="mb-4">
         <label class="label" for="password-input">
-          <span class="text-sm block text-left mb-2 px-1">Password</span>
+          <span class="mb-2 block px-1 text-left text-sm">Password</span>
         </label>
         <input
           id="password-input"
           type="text"
           placeholder="password"
-          class="w-full text-sm h-12 p-4 rounded-lg border dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-gray-300 focus:outline focus:outline-offset-2 dark:focus:outline-gray-700 outline-2" />
+          class="h-12 w-full rounded-lg border border-gray-300 p-4 text-sm outline-2 focus:outline focus:outline-offset-2 focus:outline-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:focus:outline-gray-700" />
       </div>
 
-      <div class="flex gap-3 mb-3">
+      <div class="mb-3 flex gap-3">
         <div class="relative">
           <input
             id="rememberme"
             type="checkbox"
-            class="peer appearance-none cursor-pointer border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-full checked:border-gray-900 dark:checked:border-gray-400 w-8 h-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gray-900 dark:focus-visible:outline-gray-400 focus-visible:outline-offset-2" />
+            class="peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:checked:border-gray-400 dark:focus-visible:outline-gray-400" />
           <span
-            class="peer-checked:left-4 peer-checked:bg-gray-900 dark:peer-checked:bg-gray-400 transition-all duration-200 pointer-events-none w-3 h-3 block absolute top-1 left-1 rounded-full bg-gray-300 dark:bg-gray-700"></span>
+            class="pointer-events-none absolute left-1 top-1 block h-3 w-3 rounded-full bg-gray-300 transition-all duration-200 peer-checked:left-4 peer-checked:bg-gray-900 dark:bg-gray-700 dark:peer-checked:bg-gray-400"></span>
         </div>
         <label for="rememberme" class="text-sm">Remember me</label>
       </div>
@@ -67,7 +67,7 @@
         <input
           type="button"
           value="Sign in"
-          class="w-full h-12 px-4 py-3 text-sm font-semibold text-center text-white uppercase transition duration-200 ease-in-out bg-indigo-600 rounded-md cursor-pointer hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-offset-2" />
+          class="h-12 w-full cursor-pointer rounded-md bg-indigo-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" />
       </div>
       <p class="mt-5 text-gray-400">&copy; 2017–2021</p>
     </main>

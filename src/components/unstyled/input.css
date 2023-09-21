@@ -26,7 +26,7 @@
     @apply text-xs leading-relaxed;
   }
   :where(span) {
-    @apply flex items-center bg-base-300 px-4;
+    @apply bg-base-300 flex items-center px-4;
   }
   > :first-child {
     border-top-left-radius: var(--rounded-btn, 0.5rem);

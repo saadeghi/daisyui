@@ -1,16 +1,16 @@
 .radial-progress {
-  @apply w-[var(--size)] h-[var(--size)] bg-transparent rounded-full place-content-center inline-grid relative;
+  @apply relative inline-grid h-[var(--size)] w-[var(--size)] place-content-center rounded-full bg-transparent;
   vertical-align: middle;
   box-sizing: content-box;
 }
 .radial-progress::-moz-progress-bar {
-  @apply bg-transparent appearance-none;
+  @apply appearance-none bg-transparent;
 }
 .radial-progress::-webkit-progress-value {
-  @apply bg-transparent appearance-none;
+  @apply appearance-none bg-transparent;
 }
 .radial-progress::-webkit-progress-bar {
-  @apply bg-transparent appearance-none;
+  @apply appearance-none bg-transparent;
 }
 .radial-progress:before,
 .radial-progress:after {

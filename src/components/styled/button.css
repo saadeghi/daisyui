@@ -1,5 +1,5 @@
 .btn {
-  @apply font-semibold no-underline gap-2;
+  @apply gap-2 font-semibold no-underline;
   border-width: var(--border-btn, 1px);
   animation: button-pop var(--animation-btn, 0.25s) ease-out;
   text-transform: var(--btn-text-case, uppercase);
@@ -11,7 +11,7 @@
 
   /* default btn */
   & {
-    @apply border-base-200 bg-base-200 text-base-content no-underline outline-base-content;
+    @apply border-base-200 bg-base-200 text-base-content outline-base-content no-underline;
     @media (hover: hover) {
       &:hover {
         @apply border-base-300 bg-base-300;
@@ -136,15 +136,15 @@
     @apply border border-transparent bg-transparent text-current shadow-none outline-current;
     @media (hover: hover) {
       &:hover {
-        @apply border-opacity-0 bg-base-content bg-opacity-20;
+        @apply bg-base-content border-opacity-0 bg-opacity-20;
       }
     }
     &.btn-active {
-      @apply border-opacity-0 bg-base-content bg-opacity-20;
+      @apply bg-base-content border-opacity-0 bg-opacity-20;
     }
   }
   &-link {
-    @apply border-transparent bg-transparent text-primary underline shadow-none outline-current;
+    @apply text-primary border-transparent bg-transparent underline shadow-none outline-current;
     @media (hover: hover) {
       &:hover {
         @apply border-transparent bg-transparent underline;
@@ -157,7 +157,7 @@
 
   /* outline */
   &-outline {
-    @apply border-current bg-transparent text-base-content shadow-none;
+    @apply text-base-content border-current bg-transparent shadow-none;
     @media (hover: hover) {
       &:hover {
         @apply border-base-content bg-base-content text-base-100;
@@ -249,13 +249,13 @@
   &.btn-disabled,
   &[disabled],
   &:disabled {
-    @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+    @apply bg-neutral text-base-content border-opacity-0 bg-opacity-20 text-opacity-20;
   }
   @media (hover: hover) {
     &-disabled:hover,
     &[disabled]:hover,
     &:disabled:hover {
-      @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+      @apply bg-neutral text-base-content border-opacity-0 bg-opacity-20 text-opacity-20;
     }
   }
 }
@@ -265,7 +265,7 @@
   & > .btn-active {
     @apply border-primary bg-primary text-primary-content;
     &:focus-visible {
-      @apply outline outline-2 outline-primary;
+      @apply outline-primary outline outline-2;
     }
   }
 }

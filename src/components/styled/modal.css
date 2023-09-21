@@ -1,5 +1,5 @@
 .modal {
-  @apply duration-200 ease-out bg-transparent text-[inherit];
+  @apply bg-transparent text-[inherit] duration-200 ease-out;
   transition-property: transform, opacity, visibility;
   overflow-y: hidden;
   overscroll-behavior: contain;
@@ -10,10 +10,10 @@
   }
 }
 .modal-backdrop {
-  @apply grid col-start-1 row-start-1 justify-self-stretch self-stretch -z-[1] text-transparent;
+  @apply -z-[1] col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
 }
 .modal-box {
-  @apply transform bg-base-100 p-6 transition duration-200 ease-out col-start-1 row-start-1 w-11/12 max-w-lg scale-90 rounded-b-box rounded-t-box;
+  @apply bg-base-100 rounded-b-box rounded-t-box col-start-1 row-start-1 w-11/12 max-w-lg scale-90 transform p-6 transition duration-200 ease-out;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   overflow-y: auto;
   overscroll-behavior: contain;

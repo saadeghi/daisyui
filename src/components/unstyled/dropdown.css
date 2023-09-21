@@ -14,10 +14,10 @@
   @apply right-0;
 }
 .dropdown-left .dropdown-content {
-  @apply top-0 right-full bottom-auto;
+  @apply bottom-auto right-full top-0;
 }
 .dropdown-right .dropdown-content {
-  @apply left-full top-0 bottom-auto;
+  @apply bottom-auto left-full top-0;
 }
 .dropdown-bottom .dropdown-content {
   @apply bottom-auto top-full;

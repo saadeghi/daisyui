@@ -15,7 +15,7 @@
 
 {#if arrayOfPagesInOrder[currentPageIndex]}
   <div class="not-prose pb-10">
-    <div class="bg-base-content/10 my-10 mx-1 h-px" />
+    <div class="bg-base-content/10 mx-1 my-10 h-px" />
 
     <div class="flex justify-between">
       <div>
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="bg-base-content/10 my-10 mx-1 h-px" />
+    <div class="bg-base-content/10 mx-1 my-10 h-px" />
 
     <div class="flex flex-col justify-between gap-2 px-4 text-xs md:flex-row">
       <div class="flex flex-col gap-2">

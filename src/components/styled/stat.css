@@ -5,7 +5,7 @@
   @apply divide-x divide-y-0 overflow-x-auto;
 }
 .stat {
-  @apply gap-x-4 border-base-content border-opacity-10 px-6 py-4;
+  @apply border-base-content gap-x-4 border-opacity-10 px-6 py-4;
   &-title {
     @apply text-base-content/60;
   }
@@ -13,7 +13,7 @@
     @apply text-4xl font-extrabold;
   }
   &-desc {
-    @apply text-xs text-base-content/60;
+    @apply text-base-content/60 text-xs;
   }
   &-actions {
     @apply mt-4;

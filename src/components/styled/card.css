@@ -19,10 +19,10 @@
     outline-offset: 2px;
   }
   &.bordered {
-    @apply border border-base-200;
+    @apply border-base-200 border;
   }
   &-bordered {
-    @apply border border-base-200;
+    @apply border-base-200 border;
   }
   &.compact {
     .card-body {
@@ -38,11 +38,11 @@
   }
   &.image-full {
     &:before {
-      @apply z-10 bg-neutral opacity-75 rounded-box;
+      @apply bg-neutral rounded-box z-10 opacity-75;
     }
   }
   &.image-full > &-body {
-    @apply z-20 text-neutral-content;
+    @apply text-neutral-content z-20;
   }
   &.image-full {
     :where(figure) {

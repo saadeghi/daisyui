@@ -1,6 +1,6 @@
 .modal {
   /* @apply pointer-events-none invisible fixed inset-0 flex justify-center opacity-0; */
-  @apply pointer-events-none fixed max-w-none max-h-none w-full h-full inset-0 opacity-0 m-0 p-0 grid justify-items-center;
+  @apply pointer-events-none fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none justify-items-center p-0 opacity-0;
   overscroll-behavior: contain;
   z-index: 999;
 }

@@ -17,7 +17,7 @@
   @apply appearance-none opacity-0;
 }
 .collapse-content {
-  @apply col-start-1 row-start-2 invisible min-h-0;
+  @apply invisible col-start-1 row-start-2 min-h-0;
   transition: visibility 0.2s;
 }
 .collapse[open],

@@ -1,5 +1,5 @@
 .loading {
-  @apply pointer-events-none w-6 aspect-square inline-block;
+  @apply pointer-events-none inline-block aspect-square w-6;
   background-color: currentColor;
   mask-size: 100%;
   mask-repeat: no-repeat;

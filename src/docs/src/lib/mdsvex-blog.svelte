@@ -20,7 +20,7 @@
     </figure>
   {/if}
   <div style={`view-transition-name: ${slug.replaceAll("%20", "-")}-text`}>
-    <div class="mb-2 text-xs text-base-content/60">
+    <div class="text-base-content/60 mb-2 text-xs">
       <span title={formattedDate(date)} class="italic">
         Published {timeago(date)}
       </span>
@@ -40,7 +40,7 @@
     <slot />
   </div>
   {#if published && tags}
-    <div class="mb-2 text-xs opacity-60 flex flex-wrap gap-2">
+    <div class="mb-2 flex flex-wrap gap-2 text-xs opacity-60">
       <span>Tags:</span>
       {#each tags as tag}
         <a class="link" href={`/blog/tag/${tag.replace(/ /g, "-").toLowerCase()}`}>

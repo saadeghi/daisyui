@@ -5,7 +5,7 @@
   }
   :where(input) {
     animation: rating-pop var(--animation-input, 0.25s) ease-out;
-    @apply h-6 w-6 bg-base-content bg-opacity-100;
+    @apply bg-base-content h-6 w-6 bg-opacity-100;
   }
   & .rating-hidden {
     @apply w-2 bg-transparent;

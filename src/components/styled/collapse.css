@@ -1,10 +1,10 @@
 .collapse {
-  @apply w-full rounded-box;
+  @apply rounded-box w-full;
 }
 details.collapse {
   @apply w-full;
   & summary {
-    @apply block relative;
+    @apply relative block;
     &::-webkit-details-marker {
       @apply hidden;
     }
@@ -12,7 +12,7 @@ details.collapse {
 }
 
 .collapse:focus-visible {
-  @apply outline outline-2 outline-offset-2 outline-base-content;
+  @apply outline-base-content outline outline-2 outline-offset-2;
 }
 details.collapse summary {
   @apply outline-none;
@@ -20,10 +20,10 @@ details.collapse summary {
 .collapse:has(.collapse-title:focus-visible),
 .collapse:has(> input[type="checkbox"]:focus-visible),
 .collapse:has(> input[type="radio"]:focus-visible) {
-  @apply outline outline-2 outline-offset-2 outline-base-content;
+  @apply outline-base-content outline outline-2 outline-offset-2;
 }
 .collapse-arrow > .collapse-title:after {
-  @apply absolute block h-2 w-2 transition-all ease-out rotate-[45deg] translate-y-[-100%];
+  @apply absolute block h-2 w-2 translate-y-[-100%] rotate-[45deg] transition-all ease-out;
   transition-duration: 0.2s;
   top: 50%;
   right: 1.4rem;
@@ -89,7 +89,7 @@ details.collapse summary {
 .collapse-arrow:focus:not(.collapse-close) > .collapse-title:after,
 .collapse-arrow:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after,
 .collapse-arrow:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
-  @apply rotate-[225deg] translate-y-[-50%];
+  @apply translate-y-[-50%] rotate-[225deg];
 }
 [dir="rtl"] .collapse[open].collapse-arrow > .collapse-title:after,
 [dir="rtl"] .collapse-open.collapse-arrow > .collapse-title:after,

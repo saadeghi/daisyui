@@ -6,13 +6,13 @@
 
 <SEO title="title" desc="desc" />
 
-<div class="grid gap-6 justify-items-stretch">
+<div class="grid justify-items-stretch gap-6">
   {#each posts as post}
     <a
-      class="card sm:card-side max-w-sm sm:max-w-none hover:bg-base-200 transition-colors"
+      class="card sm:card-side hover:bg-base-200 max-w-sm transition-colors sm:max-w-none"
       href={`/blog/${post.slug}`}>
       {#if post.thumbnail}
-        <figure class="sm:max-w-[12rem] w-full object-cover mx-auto sm:pr-0 p-6 max-sm:pb-0">
+        <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pr-0">
           <img
             loading="lazy"
             src={post.thumbnail}

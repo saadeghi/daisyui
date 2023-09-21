@@ -11,6 +11,6 @@
     display: none;
   }
   .changelog-body img {
-    @apply rounded-box border border-base-content/10;
+    @apply rounded-box border-base-content/10 border;
   }
 </style>

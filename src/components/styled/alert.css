@@ -1,5 +1,5 @@
 .alert {
-  @apply p-4 rounded-box text-base-content border border-base-200;
+  @apply rounded-box text-base-content border-base-200 border p-4;
   --alert-bg: hsl(var(--b2));
   --alert-bg-mix: hsl(var(--b1));
   background-color: var(--alert-bg);

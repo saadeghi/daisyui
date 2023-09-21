@@ -7,17 +7,17 @@
 <SEO title="daisyUI Blog" desc="Updates, ideas and resources" />
 {#if posts.length === 0}
   <div
-    class="flex flex-col items-center justify-center h-96 border-base-content/10 border rounded-box grow w-full">
+    class="border-base-content/10 rounded-box flex h-96 w-full grow flex-col items-center justify-center border">
     <h1 class="text-base-content/30">Coming soon</h1>
   </div>
 {/if}
-<div class="grid gap-6 justify-items-stretch">
+<div class="grid justify-items-stretch gap-6">
   {#each posts as post}
     <a
-      class="card sm:card-side sm:max-w-none hover:bg-base-200 transition-colors"
+      class="card sm:card-side hover:bg-base-200 transition-colors sm:max-w-none"
       href={`/blog/${post.slug}`}>
       {#if post.thumbnail}
-        <figure class="sm:max-w-[12rem] w-full object-cover mx-auto sm:pr-0 p-6 max-sm:pb-0">
+        <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pr-0">
           <img
             loading="lazy"
             src={post.thumbnail}

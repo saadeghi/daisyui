@@ -1,5 +1,5 @@
 .progress {
-  @apply h-2 rounded-box bg-base-content/20;
+  @apply rounded-box bg-base-content/20 h-2;
   &::-moz-progress-bar {
     @apply bg-base-content;
   }
@@ -51,7 +51,7 @@
   }
 
   &::-webkit-progress-bar {
-    @apply bg-transparent rounded-box;
+    @apply rounded-box bg-transparent;
   }
   &::-webkit-progress-value {
     @apply bg-base-content rounded-box;

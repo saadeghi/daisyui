@@ -35,7 +35,7 @@
             <button class:active={$currentLang == langItem} on:click={() => setLang(langItem)}>
               {#if $t("__code", {}, langItem, false) !== "__code"}
                 <span
-                  class="badge badge-sm badge-outline font-mono !text-[.6rem] pt-px opacity-50 font-bold tracking-widest !pr-1 !pl-1.5">
+                  class="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-50">
                   {$t("__code", {}, langItem)}
                 </span>
               {/if}

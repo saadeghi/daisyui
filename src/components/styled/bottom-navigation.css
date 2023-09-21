@@ -1,5 +1,5 @@
 .btm-nav {
-  @apply h-16 bg-base-100 text-current;
+  @apply bg-base-100 h-16 text-current;
   & > * {
     @apply border-current;
 
@@ -15,12 +15,12 @@
     /* disabled */
     &.disabled,
     &[disabled] {
-      @apply border-opacity-0 bg-neutral bg-opacity-10 text-base-content text-opacity-20 pointer-events-none;
+      @apply bg-neutral text-base-content pointer-events-none border-opacity-0 bg-opacity-10 text-opacity-20;
     }
     @media (hover: hover) {
       &.disabled:hover,
       &[disabled]:hover {
-        @apply border-opacity-0 bg-neutral bg-opacity-10 text-base-content text-opacity-20 pointer-events-none;
+        @apply bg-neutral text-base-content pointer-events-none border-opacity-0 bg-opacity-10 text-opacity-20;
       }
     }
     .label {

@@ -1,5 +1,5 @@
 .badge {
-  @apply border border-base-200 bg-base-100 text-base-content rounded-badge;
+  @apply border-base-200 bg-base-100 text-base-content rounded-badge border;
   &-neutral {
     @apply border-neutral bg-neutral text-neutral-content;
   }
@@ -13,16 +13,16 @@
     @apply border-accent bg-accent text-accent-content;
   }
   &-info {
-    @apply border-transparent bg-info text-info-content;
+    @apply bg-info text-info-content border-transparent;
   }
   &-success {
-    @apply border-transparent bg-success text-success-content;
+    @apply bg-success text-success-content border-transparent;
   }
   &-warning {
-    @apply border-transparent bg-warning text-warning-content;
+    @apply bg-warning text-warning-content border-transparent;
   }
   &-error {
-    @apply border-transparent bg-error text-error-content;
+    @apply bg-error text-error-content border-transparent;
   }
   &-ghost {
     @apply border-base-200 bg-base-200 text-base-content;

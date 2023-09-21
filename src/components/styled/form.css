@@ -1,10 +1,10 @@
 .label {
   @apply px-1 py-2;
   &-text {
-    @apply text-sm text-base-content;
+    @apply text-base-content text-sm;
   }
   &-text-alt {
-    @apply text-xs text-base-content;
+    @apply text-base-content text-xs;
   }
   a {
     @apply [@media(hover:hover)]:hover:text-base-content;
