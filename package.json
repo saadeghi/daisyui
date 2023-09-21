@@ -55,10 +55,9 @@
       "master"
     ]
   },
-  "prettier": "./src/prettier.config.js",
   "scripts": {
     "init": "npm install && npm run build && cd src/docs && npm run get-files && npm install && cd src/experiments/playground && npm install",
-    "prettier": "prettier --write . --ignore-path ./src/.prettierignore",
+    "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config src/.prettierrc.yaml --ignore-path src/.prettierignore",
     "prebase": "postcss --config src/base src/base/*.css --base src --dir dist",
     "base": "cat dist/base/*.css > dist/base.css",
     "postbase": "prejss-cli dist/base.css --format commonjs",
@@ -96,6 +95,7 @@
     "prejss-cli": "0.3.3",
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
     "rtlcss": "4.1.0",
     "standard-version": "^9.5.0"
   },
