@@ -170,7 +170,7 @@
               target="_blank"
               rel="noopener, noreferrer"
               class="link"
-              href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes${$page.url.pathname.replace(
+              href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes/(docs)${$page.url.pathname.replace(
                 /\/$/,
                 ""
               )}/+page.svelte.md?plain=1`}>
