@@ -6,7 +6,8 @@
   &-bordered {
     @apply border-opacity-20;
   }
-  &:focus {
+  &:focus,
+  &:focus-within {
     @apply outline-base-content/20 outline outline-2 outline-offset-2;
   }
   &-ghost {
