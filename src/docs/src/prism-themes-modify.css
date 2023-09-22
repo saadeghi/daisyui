@@ -59,8 +59,14 @@
     }
   }
 }
+
 .prose pre[class*="language-"] {
   .token.comment {
     color: hsl(var(--nc) / 0.5);
   }
+}
+
+.prose pre .token.prefix.deleted,
+.prose pre .token.prefix.inserted {
+  user-select: none;
 }
