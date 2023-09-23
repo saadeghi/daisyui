@@ -2,7 +2,7 @@ import https from "https"
 import fs from "fs"
 
 const url = process.argv[2]
-const filename = process.argv[3] + ".json"
+const filename = process.argv[3]
 
 const options = {
   headers: {
