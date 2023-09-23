@@ -67,7 +67,7 @@ jobs:
         run: cd src/docs && ${{ env.runtime }} i daisyui@${{ github.event.inputs.npm-tag }}
 
       - name: Get new data from API
-        run: cd src/docs && ${{ env.runtime }} run get-files
+        run: cd src/docs && ${{ env.runtime }} run get-json
 
       - name: Build docs
         run: cd src/docs && ${{ env.runtime }} run build
