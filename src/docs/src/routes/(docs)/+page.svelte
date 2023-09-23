@@ -1534,7 +1534,7 @@
                 class="w-12">
                 <img
                   loading="lazy"
-                  src={`/twitter-profile-pics/${tweet.username}.jpg`}
+                  src={`/twitter-profile-pics/${tweet.username}-72.webp`}
                   alt={tweet.name}
                   width="48"
                   height="48"
