@@ -43,9 +43,12 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 1. Now you can import daisyUI to your `tailwind.config.js`:
    ```js
    module.exports = {
-     plugins: [require("/path/to/dist/directory")],
-   }
+     plugins: [require("/path/to/src/directory")],
+   };
    ```
+
+> [!NOTE]
+> If you are on Windows, you have to use a Unix shell like [Git Bash](https://gitforwindows.org/). Unfortunately, the Windows command prompt and PowerShell do not support the `cat` command, which is used in the build script.
 
 ### To run the [documentation site](https://daisyui.com/) on local:
 
