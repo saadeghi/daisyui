@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 3.8.0 (2023-09-26)
+
+
+### Features
+
+* `tooltip` color variants now can be extended using apply ([11fb1b1](https://github.com/saadeghi/daisyui/commit/11fb1b18ce572ea3cdadd5cf081447b4a66660a3)), closes [#2371](https://github.com/saadeghi/daisyui/issues/2371)
+
 ### 3.7.7 (2023-09-21)
 
 ### 3.7.6 (2023-09-19)
