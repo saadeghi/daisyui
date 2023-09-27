@@ -2,28 +2,28 @@
   &-xs {
     @apply h-6 pr-2 text-xs leading-relaxed;
     &::file-selector-button {
-      @apply mr-2 h-[1.375rem] min-h-[1.375rem];
+      @apply mr-2;
       font-size: 0.75rem;
     }
   }
   &-sm {
     @apply h-8 pr-3 text-sm leading-loose;
     &::file-selector-button {
-      @apply mr-3 h-[1.875rem] min-h-[1.875rem];
+      @apply mr-3;
       font-size: 0.875rem;
     }
   }
   &-md {
     @apply h-12 pr-4 text-sm leading-loose;
     &::file-selector-button {
-      @apply mr-4 h-[2.875rem] min-h-[2.875rem];
+      @apply mr-4;
       font-size: 0.875rem;
     }
   }
   &-lg {
     @apply h-16 pr-6 text-lg leading-loose;
     &::file-selector-button {
-      @apply mr-6 h-[3.875rem] min-h-[3.875rem];
+      @apply mr-6;
       font-size: 1.125rem;
     }
   }
