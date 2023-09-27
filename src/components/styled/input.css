@@ -6,55 +6,64 @@
   &-bordered {
     @apply border-opacity-20;
   }
-  &:focus {
+  &:focus,
+  &:focus-within {
     @apply outline-base-content/20 outline outline-2 outline-offset-2;
   }
   &-ghost {
     @apply bg-opacity-5;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply text-base-content bg-opacity-100;
       box-shadow: none;
     }
   }
   &-primary {
     @apply border-primary;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-primary;
     }
   }
   &-secondary {
     @apply border-secondary;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-secondary;
     }
   }
   &-accent {
     @apply border-accent;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-accent;
     }
   }
   &-info {
     @apply border-info;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-info;
     }
   }
   &-success {
     @apply border-success;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-success;
     }
   }
   &-warning {
     @apply border-warning;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-warning;
     }
   }
   &-error {
     @apply border-error;
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-error;
     }
   }
