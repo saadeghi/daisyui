@@ -583,41 +583,41 @@
                     [0, 8],
                     [0, 250]
                   )}px,${animateValue(section["hero"], [0, 8], [0, -800])}px)`}>
-                  <div class="card-body" inert>
+                  <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">{$t("Design system")}</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-xs" />
+                        <input type="checkbox" class="checkbox checkbox-xs" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">checkbox-xs</div>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-sm" />
+                        <input type="checkbox" class="checkbox checkbox-sm" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">checkbox-sm</div>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-md" />
+                        <input type="checkbox" class="checkbox checkbox-md" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">checkbox-md</div>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-lg" />
+                        <input type="checkbox" class="checkbox checkbox-lg" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">checkbox-lg</div>
                       </label>
                     </div>
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input name="radio" type="radio" class="radio radio-xs" />
+                        <input name="radio" type="radio" class="radio radio-xs" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">radio-xs</div>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input name="radio" type="radio" class="radio radio-sm" />
+                        <input name="radio" type="radio" class="radio radio-sm" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">radio-sm</div>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input name="radio" type="radio" class="radio radio-md" />
+                        <input name="radio" type="radio" class="radio radio-md" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">radio-md</div>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input name="radio" type="radio" class="radio radio-lg" />
+                        <input name="radio" type="radio" class="radio radio-lg" tabindex="-1" />
                         <div class="text-base-content/60 text-[.6rem]">radio-lg</div>
                       </label>
                     </div>
