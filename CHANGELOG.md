@@ -7,6 +7,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
+* disable input outline when there's an `<input>` tag inside a `.input` wrapper
+
+* add `:focus-within` style to `.input` (#2363)
+
 * [#2360](https://github.com/saadeghi/daisyui/issues/2360) ([20a8f62](https://github.com/saadeghi/daisyui/commit/20a8f62c8b303a04dc4b07c8e2e6848d52d62799))
 
 ## 3.8.0 (2023-09-26)
