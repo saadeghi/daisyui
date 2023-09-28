@@ -15,7 +15,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Thu, 28 Sep 2023 15:19:51 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 Sep 2023 17:52:44 GMT</lastBuildDate>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
         <item>
@@ -34,7 +34,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ How to install daisyUI and Tailwind CSS in Next.js ]]>
           </title>
           <description>
-            <![CDATA[ Next.js is currently one of the popular JavaScript meta frameworks for building web applications. Since we can use daisyUI in any JavaScript framework, we can also use it in Next.js. In this article, we will learn how to use daisyUI component library in Next.js. ]]>
+            <![CDATA[ In this article, we will learn how to use daisyUI component library in Next.js. ]]>
           </description>
           <link>https://daisyui.com/blog/install-daisyui-and-tailwindcss-in-nextjs/</link>
           <guid isPermaLink="false">https://daisyui.com/blog/install-daisyui-and-tailwindcss-in-nextjs/</guid>
