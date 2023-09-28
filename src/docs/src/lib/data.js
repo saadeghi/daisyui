@@ -184,6 +184,11 @@ export let exampleRepos = [
     logos: ["/logos/remix.svg"],
   },
   {
+    name: "Refine",
+    href: "https://stackblitz.com/edit/daisyui-refine/",
+    logos: ["/logos/refine.svg", "/logos/vite.svg"],
+  },
+  {
     name: "PostCSS",
     href: "https://stackblitz.com/edit/daisyui-postcss/",
     logos: ["/logos/postcss.svg"],
