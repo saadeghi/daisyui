@@ -9,3 +9,4 @@ yarn.lock
 .DS_Store
 *.tgz
 /coverage
+.unlighthouse

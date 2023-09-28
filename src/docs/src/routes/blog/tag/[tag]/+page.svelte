@@ -1,11 +1,12 @@
 <script>
   import SEO from "@components/SEO.svelte"
   export let data
-  let { posts } = data
+  let { params, posts } = data
 </script>
 
-<SEO title="title" desc="desc" />
-
+<SEO
+  title={params.tag.replace(/-/g, " ")}
+  desc={`daisyUI blog posts with '${params.tag.replace(/-/g, " ")}' tag`} />
 <div class="grid justify-items-stretch gap-6">
   {#each posts as post}
     <a

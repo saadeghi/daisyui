@@ -36,6 +36,7 @@ export async function load({ params }) {
     throw error(404, "Not found")
   }
   return {
+    params,
     posts,
   }
 }
