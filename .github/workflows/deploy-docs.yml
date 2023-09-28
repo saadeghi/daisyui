@@ -70,7 +70,7 @@ jobs:
         run: cd src/docs && ${{ env.runtime }} run get-json
 
       - name: Add robots.txt if staging repo
-        if: github.repository == 'daisyui/daisyui.github.io'
+        if: github.repository != 'saadeghi/daisyui'
         run: |
           echo 'User-agent: *
           Disallow: /' > src/docs/static/robots.txt
