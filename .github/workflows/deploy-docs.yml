@@ -72,7 +72,8 @@ jobs:
       - name: Add robots.txt if staging repo
         if: github.repository == 'daisyui/daisyui.github.io'
         run: |
-          echo 'User-agent: *\nDisallow: /' > src/docs/static/robots.txt
+          echo 'User-agent: *
+          Disallow: /' > src/docs/static/robots.txt
 
       - name: Build docs
         run: cd src/docs && ${{ env.runtime }} run build
