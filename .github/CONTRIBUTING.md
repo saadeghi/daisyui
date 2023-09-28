@@ -44,7 +44,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
    ```js
    module.exports = {
      plugins: [require("/path/to/src/directory")],
-   };
+   }
    ```
 
 > [!NOTE]
