@@ -1,5 +1,4 @@
 <rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
-[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
   <channel>
     <title>
       <![CDATA[ daisyUI Blog ]]>
@@ -8,7 +7,7 @@
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Thu Sep 28 2023 14:34:31 GMT+0000 (Coordinated Universal Time)</lastBuildDate>
+    <lastBuildDate>Thu Sep 28 2023 15:05:58 GMT+0000 (Coordinated Universal Time)</lastBuildDate>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
         <item>
