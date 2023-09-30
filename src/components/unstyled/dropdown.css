@@ -1,7 +1,7 @@
 .dropdown {
   @apply relative inline-block;
 }
-.dropdown > *:focus {
+.dropdown > *:not(summary):focus {
   @apply outline-none;
 }
 .dropdown .dropdown-content {
