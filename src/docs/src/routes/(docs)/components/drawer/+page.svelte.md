@@ -33,10 +33,10 @@ data="{[
   ├── .drawer-content // All your page content goes here
   │    ├── // navbar
   │    ├── // content
-  │    └── // footer
-  └── .drawer-side // Sidebar wrapper
+  │    ╰── // footer
+  ╰── .drawer-side // Sidebar wrapper
        ├── .drawer-overlay // A dark overlay that covers the whole page when the drawer is open
-       └── // Sidebar content (menu or anything)
+       ╰── // Sidebar content (menu or anything)
 ```
 
 <div class="alert text-sm mt-4">
@@ -56,7 +56,7 @@ data="{[
     <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
   </div> 
   <div class="drawer-side h-full absolute">
-    <label for="my-drawer" class="drawer-overlay"></label>
+    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -72,7 +72,7 @@ data="{[
 
   </div> 
   <div class="$$drawer-side">
-    <label for="my-drawer" class="$$drawer-overlay"></label>
+    <label for="my-drawer" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
@@ -91,7 +91,7 @@ data="{[
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   </div> 
   <div class="drawer-side h-full absolute">
-    <label for="my-drawer-2" class="drawer-overlay"></label>
+    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -107,7 +107,7 @@ data="{[
   
   </div> 
   <div class="$$drawer-side">
-    <label for="my-drawer-2" class="$$drawer-overlay"></label> 
+    <label for="my-drawer-2" aria-label="close sidebar" class="$$drawer-overlay"></label> 
     <ul class="$$menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
@@ -125,7 +125,7 @@ data="{[
   <div class="flex flex-col drawer-content">
     <div class="w-full navbar bg-base-300">
       <div class="flex-none lg:hidden">
-        <label for="my-drawer-3" class="btn btn-square btn-ghost">
+        <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
       </div> 
@@ -140,7 +140,7 @@ data="{[
     <div class="flex justify-center items-center flex-grow">Content</div>
   </div> 
   <div class="drawer-side h-full absolute">
-    <label for="my-drawer-3" class="drawer-overlay"></label> 
+    <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
     <ul class="p-4 menu w-60 md:w-80 min-h-full bg-base-200">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -154,7 +154,7 @@ data="{[
     <!-- Navbar -->
     <div class="w-full $$navbar bg-base-300">
       <div class="flex-none lg:hidden">
-        <label for="my-drawer-3" class="$$btn $$btn-square $$btn-ghost">
+        <label for="my-drawer-3" aria-label="open sidebar" class="$$btn $$btn-square $$btn-ghost">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
       </div> 
@@ -171,14 +171,12 @@ data="{[
     Content
   </div> 
   <div class="$$drawer-side">
-    <label for="my-drawer-3" class="$$drawer-overlay"></label> 
+    <label for="my-drawer-3" aria-label="close sidebar" class="$$drawer-overlay"></label> 
     <ul class="$$menu p-4 w-80 min-h-full bg-base-200">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
-      
     </ul>
-    
   </div>
 </div>`
 }</pre>
@@ -191,7 +189,7 @@ data="{[
     <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
   </div> 
   <div class="drawer-side h-full absolute">
-    <label for="my-drawer-4" class="drawer-overlay"></label>
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -207,7 +205,7 @@ data="{[
 
   </div> 
   <div class="$$drawer-side">
-    <label for="my-drawer-4" class="$$drawer-overlay"></label>
+    <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu p-4 w-80 min-h-full bg-base-200 text-base-content">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
