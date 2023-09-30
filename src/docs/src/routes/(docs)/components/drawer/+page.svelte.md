@@ -188,7 +188,7 @@ data="{[
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
   </div> 
-  <div class="drawer-side h-full absolute">
+  <div class="drawer-side h-full absolute ml-[-54rem] w-[stretch]">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><a>Sidebar Item 1</a></li>
