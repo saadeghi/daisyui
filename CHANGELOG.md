@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.8.3 (2023-10-02)
+
+
+### Bug Fixes
+
+* [#2116](https://github.com/saadeghi/daisyui/issues/2116) progess bar firefox bug ([#2376](https://github.com/saadeghi/daisyui/issues/2376)) ([53889de](https://github.com/saadeghi/daisyui/commit/53889de67cb61ff223acb037f4aa7736e4fbf430))
+
 ### 3.8.2 (2023-09-30)
 
 ### 3.8.1 (2023-09-27)
