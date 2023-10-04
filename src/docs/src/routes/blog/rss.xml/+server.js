@@ -4,7 +4,8 @@ import { dirname } from "path"
 
 const siteTitle = "daisyUI Blog"
 const siteDesc = "Updates, ideas and resources"
-const siteUrl = "https://daisyui.com/blog"
+const siteUrl = "https://daisyui.com"
+const blogUrl = "https://daisyui.com/blog"
 
 const get_posts = async () => {
   let posts = await Promise.all(
@@ -61,12 +62,14 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
     <description>
       <![CDATA[ ${siteDesc} ]]>
     </description>
-    <link>${siteUrl}/</link>
+    <link>${blogUrl}/</link>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-    <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>${new Date().toUTCString()}</pubDate>
+    <language>en-us</language>
+    <atom:link href="${blogUrl}/rss.xml" rel="self" type="application/rss+xml"/>
     ${postsInfo
       .map(
-        ({ title, desc, slug, date }) =>
+        ({ title, desc, slug, date, thumbnail }) =>
           `
         <item>
           <title>
@@ -75,8 +78,10 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <description>
             <![CDATA[ ${desc} ]]>
           </description>
-          <link>${siteUrl}/${slug}/</link>
-          <guid isPermaLink="false">${siteUrl}/${slug}/</guid>
+          <link>${blogUrl}/${slug}/</link>
+          <pubDate>${new Date(date).toUTCString()}</pubDate>
+          <image>${siteUrl}${thumbnail}</image>
+          <guid isPermaLink="false">${blogUrl}/${slug}/</guid>
         </item>
       `
       )
