@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "predev": "npm install && echo '<button class=\"btn\">Hello</button>' > src/components/Component.astro && code src/components/Component.astro",
+    "predev": "npm install && if ! [ -f src/components/Component.astro ]; then echo '<button class=\"btn\">Hello</button>' > src/components/Component.astro; fi && code src/components/Component.astro",
     "dev": "astro dev --port 4000 --open",
     "build": "astro build",
     "preview": "astro preview"
