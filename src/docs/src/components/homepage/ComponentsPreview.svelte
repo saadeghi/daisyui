@@ -429,7 +429,7 @@
     </ul>
   </div>
   <div
-    class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center motion-reduce:!transform-none max-[1280px]:!transform-none"
+    class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none"
     style={`transform:scale(${animateValue(section, [0, 10], [2, 1])})translateY(${animateValue(
       section,
       [0, 10],

@@ -298,7 +298,7 @@
           : ""
       }transform:translateY(${animateValue(section["hero"], [20, 21], [120, 0])}%)`}>
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur will-change-auto [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
         style={section["hero"] &&
           `transform: rotateX(${animateValue(
             section["hero"],
@@ -320,7 +320,7 @@
               style={`opacity:${animateValue(section["hero"], [15, 16], [1, 0])}`}>
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
-                  class="relative z-[1] w-80 motion-reduce:!transform-none max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
+                  class="relative z-[1] w-80 will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style={`transform:translate(${animateValue(
                     section["hero"],
                     [2, 9],
@@ -509,7 +509,7 @@
                 <div
                   class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
-                    class="alert border-base-300 border motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:!transform-none"
+                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:!transform-none"
                     style={`box-shadow:${animateValue(
                       section["hero"],
                       [5, 5.5],
@@ -538,7 +538,7 @@
                     </span>
                   </div>
                   <div
-                    class="alert border-base-300 border motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:!transform-none"
+                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:!transform-none"
                     style={`box-shadow:${animateValue(
                       section["hero"],
                       [6, 6.5],
@@ -569,7 +569,7 @@
 
               <div class="flex shrink-0 gap-6 pr-4 xl:flex-col xl:pr-0">
                 <div
-                  class="card bg-base-100 shadow-sm motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:!transform-none"
+                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:!transform-none"
                   style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
                     section["hero"],
                     [0, 0.5],
@@ -624,7 +624,7 @@
                   </div>
                 </div>
                 <div
-                  class="card bg-base-100 shadow-sm motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:!transform-none"
+                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:!transform-none"
                   style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
                     section["hero"],
                     [4, 4.5],
@@ -711,12 +711,12 @@
 <div class="w-full px-2 py-40 lg:px-10" bind:this={section["nextlevel"]}>
   <div class="text-center">
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none motion-reduce:!tracking-normal max-[1280px]:!tracking-normal"
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto motion-reduce:!tracking-normal max-[1280px]:!tracking-normal"
       style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [1, 0])}rem`}>
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
         style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}>
         {$t("to the next level")}
       </span>
@@ -1024,7 +1024,7 @@
       </div>
       <div class="grid shrink-0 gap-6 xl:grid-cols-5">
         <div
-          class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed motion-reduce:!transform-none"
+          class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed will-change-auto motion-reduce:!transform-none"
           style={`transform:translateX(${animateValue(
             section["performance"],
             [-100, -10],
@@ -1067,7 +1067,7 @@
           </div>
         </div>
         <div
-          class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed motion-reduce:!transform-none xl:col-start-3"
+          class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed will-change-auto motion-reduce:!transform-none xl:col-start-3"
           style={`transform:translateX(${animateValue(
             section["performance"],
             [-100, -10],
@@ -1122,7 +1122,7 @@
     <div class="relative z-[1] w-full py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
         <span
-          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black motion-reduce:!transform-none max-[1280px]:!transform-none"
+          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none"
           style={`transform:translateX(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1132,7 +1132,7 @@
         </span>
         <br />
         <span
-          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light motion-reduce:!transform-none max-[1280px]:!transform-none"
+          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none"
           style={`transform:translateX(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1143,7 +1143,7 @@
       </h2>
       <div class="h-10" />
       <p
-        class="text-neutral-content/60 font-title inline-block w-full text-center font-light motion-reduce:!transform-none max-[1280px]:!transform-none md:text-2xl xl:text-left"
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none md:text-2xl xl:text-left"
         style={`transform:translateX(${animateValue(
           section["customizable"],
           [-100, 100],
@@ -1251,7 +1251,7 @@
           <svg
             width="96"
             height="96"
-            class="aspect-square w-full motion-reduce:!opacity-100 motion-reduce:!filter-none motion-reduce:![scale:1]"
+            class="aspect-square w-full will-change-auto motion-reduce:!opacity-100 motion-reduce:!filter-none motion-reduce:![scale:1]"
             style={`opacity:${animateValue(
               section["agnostic"],
               [-70 + index * 5, -60 + index * 5],
@@ -1447,7 +1447,7 @@
     <div
       class="bg-primary pointer-events-none absolute bottom-0 left-1/2 aspect-square w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-3xl" />
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none motion-reduce:!transform-none"
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto motion-reduce:!transform-none"
       style={`transform:scale(${animateValue(
         section["numbers"],
         [0, 20],
@@ -1458,7 +1458,7 @@
     <div class="h-32" />
     <div class="grid gap-10 p-6 xl:grid-cols-3">
       <div
-        class="flex flex-col items-center gap-4 motion-reduce:!transform-none"
+        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:!transform-none"
         style={`transform:translateY(${animateValue(
           section["numbers"],
           [20, 30],
@@ -1476,7 +1476,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col items-center gap-4 motion-reduce:!transform-none"
+        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:!transform-none"
         style={`transform:translateY(${animateValue(
           section["numbers"],
           [30, 40],
@@ -1497,7 +1497,7 @@
         </a>
       </div>
       <div
-        class="flex flex-col items-center gap-4 motion-reduce:!transform-none"
+        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:!transform-none"
         style={`transform:translateY(${animateValue(
           section["numbers"],
           [40, 50],
