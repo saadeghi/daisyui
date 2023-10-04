@@ -15,9 +15,20 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Mon, 02 Oct 2023 18:03:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Oct 2023 02:29:45 GMT</lastBuildDate>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ My Journey to build daisyUI: Why Tailwind CSS was not enough? ]]>
+          </title>
+          <description>
+            <![CDATA[ In search of the most efficient way to style a website there's a lot to explore. In this post I'll share my journey to build daisyUI, a component library on top of Tailwind CSS. ]]>
+          </description>
+          <link>https://daisyui.com/blog/my-journey-to-build-daisyui/</link>
+          <guid isPermaLink="false">https://daisyui.com/blog/my-journey-to-build-daisyui/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ How to use Headless UI and daisyUI together? ]]>
