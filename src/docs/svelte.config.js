@@ -3,6 +3,7 @@ import adapter from "@sveltejs/adapter-static"
 import preprocess from "svelte-preprocess"
 import headingSlugs from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
+import rehypeExternalLinks from "rehype-external-links"
 
 const rehypePlugins = [
   headingSlugs,
@@ -27,6 +28,7 @@ const rehypePlugins = [
       },
     },
   ],
+  [rehypeExternalLinks, { rel: ["nofollow"], target: ["_blank"] }],
 ]
 
 export default {
