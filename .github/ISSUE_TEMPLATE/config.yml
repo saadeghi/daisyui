@@ -4,7 +4,7 @@ contact_links:
     url: https://github.com/saadeghi/daisyui/discussions/1949
     about: Read about common problems and how to fix
   - name: 🔎 Search in Discussions
-    url: https://github.com/saadeghi/daisyui/discussions
+    url: https://github.com/saadeghi/daisyui/discussions?discussions_q=
     about: First see if there's an existing topic in Discussions.
   - name: 🔎 Search in Issues
     url: https://github.com/saadeghi/daisyui/issues?q=is%3Aissue

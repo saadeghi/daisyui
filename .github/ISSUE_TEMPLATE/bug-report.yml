@@ -5,30 +5,34 @@ body:
   - type: markdown
     attributes:
       value: |
-        ℹ️ Please first search in [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions) and make sure this bug is not addressed before.
-        ℹ️ Also see [FAQ / Common problems and how to fix](https://github.com/saadeghi/daisyui/discussions/1949). You may find your answer there.
+        🙏 Thank you for submitting a bug report.
+        ℹ️ Make sure you are using the latest version of daisyUI (run `npm i -D daisyui@latest`). The bug you are experiencing may already have been fixed.
+        ℹ️ Please first search in [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions?discussions_q=) and make sure this bug is not addressed before.
+        ℹ️ Also see [FAQ](https://github.com/saadeghi/daisyui/discussions/1949). You may find your answer there.
+        ℹ️ If the issue happens only on a specific framework, we can't help about it. Please report it on the framework's repo.
+        ℹ️ If you need help about your project and it's not a daisyUI bug, please [ask your question in discussion forum](https://github.com/saadeghi/daisyui/discussions/new?category=q-a)
   - type: input
     id: version
     attributes:
-      label: What version of daisyUI are you using?
+      label: 1. What version of daisyUI are you using?
       description: You can see the daisyUI version number on your `package.json` file.
-      placeholder: "example: v3.0.1"
+      placeholder: "example: v3.9.1"
     validations:
       required: false
   - type: textarea
     id: description
     attributes:
-      label: Describe your issue
+      label: 2. Describe your issue
       description: |
         ℹ️ Describe the problem and say how and when it happens.
         ℹ️ To write a code block, use ``` before and after your code.
-        ⚠️ Please don't use JSX or Vue or any other framework specific code. Use plain HTML and CSS.
+        ⚠️ Please don't use JSX or any other framework specific code. Use plain HTML and CSS.
     validations:
       required: true
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: 3. What browsers are you seeing the problem on?
       multiple: true
       options:
         - All browsers
@@ -42,9 +46,11 @@ body:
   - type: input
     id: reproduction
     attributes:
-      label: Reproduction URL
+      label: 4. Reproduction URL
       description: |
-        ℹ️ If you provide a link to a minimal [Tailwind Play](https://daisyui.com/tailwindplay/) page or a Stackblitz project or a public GitHub repo so we can reproduce the issue, we can help with this issue faster. Otherwise it can be hard to guess what is the cause of the problem and it will take more time to fix.
+        ℹ️ Please provide a link to a small, minimal example source code where issue can be reproduced.
+        Otherwise it will be hard to guess what is the cause of the problem and it will take more time to fix.
+        You can use a [Tailwind Play](https://daisyui.com/tailwindplay/) page or a [Stackblitz page](https://stackblitz.com/@saadeghi/collections/daisyui) or a public GitHub repo.
       placeholder: "https://"
     validations:
-      required: false
+      required: true
