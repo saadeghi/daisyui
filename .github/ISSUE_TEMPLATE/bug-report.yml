@@ -1,12 +1,12 @@
 name: 🐞 Report a new Bug
-description: If you found a new bug on daisyUI, report it here.
+description: If you found a new bug on daisyUI package, report it here.
 title: "bug: "
 body:
   - type: markdown
     attributes:
       value: |
-        Please first search in [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions) and make sure this bug is not addressed before.
-        Also see [FAQ / Common problems and how to fix](https://github.com/saadeghi/daisyui/discussions/1949). You may find your answer there.
+        ℹ️ Please first search in [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions) and make sure this bug is not addressed before.
+        ℹ️ Also see [FAQ / Common problems and how to fix](https://github.com/saadeghi/daisyui/discussions/1949). You may find your answer there.
   - type: input
     id: version
     attributes:
@@ -20,8 +20,13 @@ body:
     attributes:
       label: Describe your issue
       description: |
-        Describe the problem and say how and when it happens.
-        To write a code block, use ``` before and after your code.
+        ℹ️ Describe the problem and say how and when it happens.
+        ℹ️ To write a code block, use ``` before and after your code. Like this:
+        ```
+        code here
+        ```
+        ⚠️ Please don't use screenshots for code. Use code blocks instead.
+        ⚠️ Please don't use JSX or Vue or any other framework specific code. Use plain HTML and CSS.
     validations:
       required: true
   - type: dropdown
@@ -42,7 +47,8 @@ body:
     id: reproduction
     attributes:
       label: Reproduction URL
-      description: If you provide a link to a minimal [Tailwind Play](https://daisyui.com/tailwindplay/) page or a Stackblitz project or a public GitHub repo so we can reproduce the issue, we can help with this issue faster. Otherwise it can be hard to guess what is the cause of the problem and it will take more time to fix.
+      description: |
+        ℹ️ If you provide a link to a minimal [Tailwind Play](https://daisyui.com/tailwindplay/) page or a Stackblitz project or a public GitHub repo so we can reproduce the issue, we can help with this issue faster. Otherwise it can be hard to guess what is the cause of the problem and it will take more time to fix.
       placeholder: "https://"
     validations:
       required: false
