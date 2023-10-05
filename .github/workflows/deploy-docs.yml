@@ -33,7 +33,7 @@ jobs:
   deploy-docs:
     runs-on: ubuntu-latest
     env:
-      runtime: ${{ github.event.inputs.runtime || !github.event.inputs.runtime && 'bun'}}
+      runtime: ${{ github.event.inputs.runtime || 'bun'}}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||
