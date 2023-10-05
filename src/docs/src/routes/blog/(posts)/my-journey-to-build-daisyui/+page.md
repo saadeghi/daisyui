@@ -26,7 +26,7 @@ As CSS evolved and people started to use it more and more, they realized that th
 Early CSS libraries started to show up.
 Blueprint, 960.gs, YUI, Bootstrap, Foundation, etc.
 
-- Libraries like [Blueprint](http://www.blueprintcss.org/blueprint-css) were providing default styles for HTML tags and also a few class names to set colors or positions for the elements. Nowadays we call them utility classes.
+- Libraries like [Blueprint](http://www.blueprintcss.org/) were providing default styles for HTML tags and also a few class names to set colors or positions for the elements. Nowadays we call them utility classes.
 - Libraries like [960.gs](https://960.gs/) were only providing a grid system to make it easier to create layouts.
 - Libraries like [Bootstrap](https://getbootstrap.com/) or [YUI](https://yuilibrary.com/) were providing a set of components like buttons, tabs, etc.
 
