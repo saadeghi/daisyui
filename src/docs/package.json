@@ -32,8 +32,6 @@
     "vite": "^4.4.10"
   },
   "dependencies": {
-    "@svelte-put/inline-svg": "^3.0.0",
-    "@svelte-put/preprocess-inline-svg": "^2.1.3",
     "colord": "^2.9.3",
     "daisyui": "^3.9.1",
     "lodash.debounce": "^4.0.8",

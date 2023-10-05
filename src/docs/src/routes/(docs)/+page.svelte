@@ -1,7 +1,5 @@
 <script>
   import { onMount } from "svelte"
-  import { inlineSvg } from "@svelte-put/inline-svg"
-
   import Countup from "svelte-countup"
   import SEO from "@components/SEO.svelte"
   import Ads from "@components/Ads.svelte"
@@ -1250,7 +1248,8 @@
         <div />
 
         {#each ["vue", "react", "svelte", "qwik", "remix", "nextjs", "solidjs", "preact", "phoenix", "nuxtjs", "astro", "angular", "vite", "laravel"] as logo, index}
-          <svg
+          <img
+            loading="lazy"
             width="96"
             height="96"
             class="aspect-square w-full will-change-auto motion-reduce:!opacity-100 motion-reduce:!filter-none motion-reduce:![scale:1]"
@@ -1271,7 +1270,8 @@
               [-70 + index * 5, -60 + index * 5],
               [1.05, 1]
             )}`}
-            use:inlineSvg={`/logos/${logo}.svg`} />
+            alt={`daisyUI ${logo}`}
+            src={`/logos/${logo}.svg`} />
         {/each}
       </div>
     </div>
@@ -1703,11 +1703,13 @@
       <div class="h-16" />
       <div class="pointer-events-none mx-auto flex max-w-xl flex-wrap justify-center gap-10 px-6">
         {#each ["svelte", "vue", "react", "solidjs", "preact", "angular", "qwik", "nextjs", "nuxtjs", "remix", "11ty", "vite", "astro"] as logo, index}
-          <svg
+          <img
+            loading="lazy"
             width="96"
             height="96"
             class="aspect-square h-10 w-10"
-            use:inlineSvg={`/logos/${logo}.svg`} />
+            src={`/logos/${logo}.svg`}
+            alt={`daisyUI ${logo}`} />
         {/each}
       </div>
       <div class="h-16" />

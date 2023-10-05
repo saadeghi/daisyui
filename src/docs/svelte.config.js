@@ -3,7 +3,6 @@ import adapter from "@sveltejs/adapter-static"
 import preprocess from "svelte-preprocess"
 import headingSlugs from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
-import { inlineSvg } from "@svelte-put/preprocess-inline-svg"
 
 const rehypePlugins = [
   headingSlugs,
@@ -43,7 +42,6 @@ export default {
         _: "src/lib/mdsvex.svelte",
       },
     }),
-    inlineSvg(),
     preprocess({
       postcss: true,
     }),

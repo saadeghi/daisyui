@@ -5,7 +5,6 @@ published: true
 ---
 
 <script>
-  import { inlineSvg } from "@svelte-put/inline-svg"
   import InstallTabs from "@components/InstallTabs.svelte"
   import Translate from "@components/Translate.svelte"
   import { exampleRepos } from "@src/lib/data.js"
@@ -41,11 +40,11 @@ module.exports = {
 
 <figure class="px-12 pt-6 pb-2 w-full aspect-[2/1] items-end overflow-visible">
 {#if logos.length === 1}
-<svg use:inlineSvg={logos[0]} width="96" height="96" class="aspect-square w-full h-auto" />
+<img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square w-full h-auto" />
 {:else}
 <div class="grid w-full">
-<svg use:inlineSvg={logos[0]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-full h-auto" />
-<svg use:inlineSvg={logos[1]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto" />
+<img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-full h-auto" />
+<img loading="lazy" alt={logos[1]} src={logos[1]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto" />
 </div>
 {/if}
 </figure>
