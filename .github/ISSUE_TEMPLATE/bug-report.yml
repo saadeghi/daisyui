@@ -21,11 +21,7 @@ body:
       label: Describe your issue
       description: |
         ℹ️ Describe the problem and say how and when it happens.
-        ℹ️ To write a code block, use ``` before and after your code. Like this:
-        ```
-        code here
-        ```
-        ⚠️ Please don't use screenshots for code. Use code blocks instead.
+        ℹ️ To write a code block, use ``` before and after your code.
         ⚠️ Please don't use JSX or Vue or any other framework specific code. Use plain HTML and CSS.
     validations:
       required: true
