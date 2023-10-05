@@ -147,7 +147,7 @@ const mainFunction = ({ addBase, addComponents, config }) => {
       `\x1b[32m💚 Support daisyUI project\x1b[0m: ${daisyuiInfo.funding.url}`,
       `\x1b[32m⭐️ Star daisyUI project on GitHub\x1b[0m: https://github.com/saadeghi/daisyui`,
     ]
-    console.log("╰── " + messages[Math.floor(Math.random() * arr.length)])
+    console.log("╰── " + messages[Math.floor(Math.random() * messages.length)])
     console.log()
   }
 }
