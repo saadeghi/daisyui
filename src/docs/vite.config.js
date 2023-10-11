@@ -1,9 +1,9 @@
 import path from "path"
-import { defineConfig } from "vite"
+import { defineConfig, splitVendorChunkPlugin } from "vite"
 import { sveltekit } from "@sveltejs/kit/vite"
 
 export default defineConfig({
-  plugins: [sveltekit()],
+  plugins: [splitVendorChunkPlugin(), sveltekit()],
   resolve: {
     alias: {
       "@src": path.resolve("/src"),
