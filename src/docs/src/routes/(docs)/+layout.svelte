@@ -60,9 +60,17 @@
 </script>
 
 <svelte:head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
+    media="screen and (min-width: 520px)"
+    rel="preconnect"
+    href="https://fonts.googleapis.com" />
+  <link
+    media="screen and (min-width: 520px)"
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin />
+  <link
+    media="screen and (min-width: 520px)"
     href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&family=Noto+Sans+JP:wght@300;900&family=Noto+Sans:wght@300;900&display=swap"
     rel="stylesheet" />
 </svelte:head>
@@ -142,31 +150,3 @@
 {/if}
 
 <Scripts />
-
-<style global>
-  .prose code[class*="language-"],
-  .code-wrapper code[class*="language-"],
-  code[class*="language-"],
-  pre[class*="language-"] {
-    background: unset;
-  }
-  .prose pre[class*="language-"] {
-    max-width: clamp(20rem, calc(100vw - 4rem), 80ch);
-    background-color: hsl(var(--n));
-    color: hsl(var(--nc));
-    ::selection {
-      background-color: hsl(var(--nc));
-      color: hsl(var(--n));
-    }
-  }
-  @media (min-width: 1024px) {
-    .prose pre[class*="language-"] {
-      max-width: clamp(20rem, calc(100vw - 20rem - 4rem), 80ch);
-    }
-  }
-  @media (min-width: 1280px) {
-    .prose pre[class*="language-"] {
-      max-width: clamp(20rem, calc(100vw - 20rem - 4rem - 8rem), 80ch);
-    }
-  }
-</style>

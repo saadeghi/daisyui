@@ -3,7 +3,7 @@ import { defineConfig, splitVendorChunkPlugin } from "vite"
 import { sveltekit } from "@sveltejs/kit/vite"
 
 export default defineConfig({
-  plugins: [splitVendorChunkPlugin(), sveltekit()],
+  plugins: [sveltekit(), splitVendorChunkPlugin()],
   resolve: {
     alias: {
       "@src": path.resolve("/src"),

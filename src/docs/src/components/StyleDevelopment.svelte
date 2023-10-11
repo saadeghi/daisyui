@@ -9,4 +9,5 @@
   const utilitiesUnstyled = import.meta.glob("../../../utilities/unstyled/*.css", { eager: true })
   const utilitiesStyled = import.meta.glob("../../../utilities/styled/*.css", { eager: true })
   import "tailwindcss/utilities.css"
+  import "../global.css"
 </script>

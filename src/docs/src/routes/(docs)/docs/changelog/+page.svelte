@@ -5,12 +5,3 @@
 <div class="changelog-body">
   <Changelog />
 </div>
-
-<style global>
-  .prose .changelog-body h1 + p {
-    display: none;
-  }
-  .changelog-body img {
-    @apply rounded-box border-base-content/10 border;
-  }
-</style>

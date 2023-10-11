@@ -45,9 +45,17 @@
     type="application/rss+xml"
     title="daisyUI Blog"
     href="https://daisyui.com/blog/rss.xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
+    media="screen and (min-width: 520px)"
+    rel="preconnect"
+    href="https://fonts.googleapis.com" />
+  <link
+    media="screen and (min-width: 520px)"
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin />
+  <link
+    media="screen and (min-width: 520px)"
     href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&family=Noto+Sans+JP:wght@300;900&family=Noto+Sans:wght@300;900&display=swap"
     rel="stylesheet" />
 </svelte:head>
