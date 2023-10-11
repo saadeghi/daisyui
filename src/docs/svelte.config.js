@@ -58,7 +58,7 @@ export default {
     }),
   },
   onwarn: (warning, handler) => {
-    if (warning.code.startsWith("a11y-")) {
+    if (warning.code.startsWith("a11y-no-noninteractive-tabindex")) {
       return
     }
     handler(warning)

@@ -49,9 +49,9 @@
   </a>
   <LogoContextMenu bind:this={contextMenuEl} />
   <div class="dropdown">
-    <label tabindex="0" class="link link-hover font-mono text-xs">
+    <div tabindex="0" class="link link-hover font-mono text-xs">
       {version}
-    </label>
+    </div>
     <ul
       tabindex="0"
       class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-8 w-36 p-2 shadow">

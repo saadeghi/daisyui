@@ -334,6 +334,7 @@
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-primary"
+                              name="toggle"
                               checked />
                           </label>
                         </div>
@@ -343,13 +344,18 @@
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-secondary"
+                              name="toggle"
                               checked />
                           </label>
                         </div>
                         <div class="form-control">
                           <label class="label cursor-pointer">
                             <span class="label-text text-xs">{$t("Customizable")}</span>
-                            <input type="checkbox" class="toggle toggle-sm toggle-accent" checked />
+                            <input
+                              type="checkbox"
+                              class="toggle toggle-sm toggle-accent"
+                              name="toggle"
+                              checked />
                           </label>
                         </div>
                         <div class="form-control">
@@ -358,13 +364,14 @@
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-success"
+                              name="toggle"
                               checked />
                           </label>
                         </div>
                         <div class="form-control">
                           <label class="label cursor-pointer">
                             <span class="label-text text-xs">{$t("Pure CSS")}</span>
-                            <input type="checkbox" class="toggle toggle-sm" checked />
+                            <input type="checkbox" class="toggle toggle-sm" name="toggle" checked />
                           </label>
                         </div>
                       </div>
@@ -563,19 +570,35 @@
                     <h2 class="card-title mb-4 text-sm">{$t("Design system")}</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-xs" tabindex="-1" />
+                        <input
+                          name="checkbox"
+                          type="checkbox"
+                          class="checkbox checkbox-xs"
+                          tabindex="-1" />
                         <span class="text-base-content/60 text-[.6rem]">checkbox-xs</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-sm" tabindex="-1" />
+                        <input
+                          name="checkbox"
+                          type="checkbox"
+                          class="checkbox checkbox-sm"
+                          tabindex="-1" />
                         <span class="text-base-content/60 text-[.6rem]">checkbox-sm</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-md" tabindex="-1" />
+                        <input
+                          name="checkbox"
+                          type="checkbox"
+                          class="checkbox checkbox-md"
+                          tabindex="-1" />
                         <span class="text-base-content/60 text-[.6rem]">checkbox-md</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
-                        <input type="checkbox" class="checkbox checkbox-lg" tabindex="-1" />
+                        <input
+                          name="checkbox"
+                          type="checkbox"
+                          class="checkbox checkbox-lg"
+                          tabindex="-1" />
                         <span class="text-base-content/60 text-[.6rem]">checkbox-lg</span>
                       </label>
                     </div>
@@ -795,6 +818,7 @@
                     class="bg-primary/30 col-start-1 row-start-1 scale-[2] rounded-full blur-[5rem] [transform:translate3d(0,0,0)]" />
                 </div>
                 <input
+                  name="tailwind-va-daisyui"
                   type="checkbox"
                   class="toggle toggle-lg toggle-primary relative z-[2]"
                   bind:checked={toggleValueForCodeCompare} />
@@ -836,14 +860,17 @@
             <div>
               <div class="card bg-base-200 w-80">
                 <div class="card-body">
-                  <input placeholder="Email" class="input input-bordered" />
+                  <input
+                    placeholder="Email"
+                    class="input input-bordered"
+                    name="sample-input-field" />
                   <label class="label cursor-pointer">
                     {$t("Accept terms of use")}
-                    <input type="checkbox" class="toggle" />
+                    <input name="sample-checkbox" type="checkbox" class="toggle" />
                   </label>
                   <label class="label cursor-pointer">
                     {$t("Submit to newsletter")}
-                    <input type="checkbox" class="toggle" />
+                    <input name="sample-checkbox" type="checkbox" class="toggle" />
                   </label>
                   <button class="btn btn-neutral">{$t("Save")}</button>
                 </div>
@@ -893,12 +920,14 @@
               <div class="w-80 rounded-2xl bg-gray-100 text-black">
                 <div class="flex flex-col gap-2 p-8">
                   <input
+                    name="sample-email"
                     placeholder="Email"
                     class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-100" />
                   <label class="flex cursor-pointer items-center justify-between p-1">
                     {$t("Accept terms of use")}
                     <div class="relative inline-block">
                       <input
+                        name="sample-checkbox"
                         type="checkbox"
                         class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2" />
                       <span
@@ -910,6 +939,7 @@
                     <span class="relative inline-block">
                       <input
                         type="checkbox"
+                        name="sample-checkbox"
                         class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2" />
                       <span
                         class="pointer-events-none absolute left-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:left-7 peer-checked:bg-gray-900" />

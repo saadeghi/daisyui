@@ -463,48 +463,56 @@
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="toggle pointer-events-none" />
         <input
           tabindex="-1"
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="toggle toggle-primary pointer-events-none" />
         <input
           tabindex="-1"
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="toggle toggle-secondary pointer-events-none" />
         <input
           tabindex="-1"
           aria-label="tailwindcss toggle"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="toggle toggle-accent pointer-events-none" />
         <input
           tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="checkbox pointer-events-none" />
         <input
           tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="checkbox checkbox-primary pointer-events-none" />
         <input
           tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="checkbox checkbox-secondary pointer-events-none" />
         <input
           tabindex="-1"
           aria-label="tailwindcss checkbox"
           checked
           type="checkbox"
+          name="sample-checkbox"
           class="checkbox checkbox-accent pointer-events-none" />
       </div>
     </div>
