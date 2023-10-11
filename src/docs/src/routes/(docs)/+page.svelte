@@ -587,37 +587,37 @@
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input type="checkbox" class="checkbox checkbox-xs" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">checkbox-xs</div>
+                        <span class="text-base-content/60 text-[.6rem]">checkbox-xs</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input type="checkbox" class="checkbox checkbox-sm" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">checkbox-sm</div>
+                        <span class="text-base-content/60 text-[.6rem]">checkbox-sm</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input type="checkbox" class="checkbox checkbox-md" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">checkbox-md</div>
+                        <span class="text-base-content/60 text-[.6rem]">checkbox-md</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input type="checkbox" class="checkbox checkbox-lg" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">checkbox-lg</div>
+                        <span class="text-base-content/60 text-[.6rem]">checkbox-lg</span>
                       </label>
                     </div>
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-xs" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">radio-xs</div>
+                        <span class="text-base-content/60 text-[.6rem]">radio-xs</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-sm" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">radio-sm</div>
+                        <span class="text-base-content/60 text-[.6rem]">radio-sm</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-md" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">radio-md</div>
+                        <span class="text-base-content/60 text-[.6rem]">radio-md</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-lg" tabindex="-1" />
-                        <div class="text-base-content/60 text-[.6rem]">radio-lg</div>
+                        <span class="text-base-content/60 text-[.6rem]">radio-lg</span>
                       </label>
                     </div>
                   </div>
@@ -756,20 +756,11 @@
             <span
               class="motion-reduce:!opacity-100"
               style={`opacity:${
-                Math.trunc(animateValue(section["uglyhtml"], [-100, -40], [0, 1])) === 0
+                Math.trunc(animateValue(section["uglyhtml"], [-100, -25], [0, 1])) === 0
                   ? 0.1
-                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -40], [0, 1]))
+                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -25], [0, 1]))
               }`}>
               {$t("No_more_ugly_HTML_part_1")}
-            </span>
-            <span
-              class="motion-reduce:!opacity-100"
-              style={`opacity:${
-                Math.trunc(animateValue(section["uglyhtml"], [-100, -30], [0, 1])) === 0
-                  ? 0.1
-                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -30], [0, 1]))
-              }`}>
-              {$t("No_more_ugly_HTML_part_2")}
             </span>
             <span
               class="motion-reduce:!opacity-100"
@@ -777,6 +768,15 @@
                 Math.trunc(animateValue(section["uglyhtml"], [-100, -20], [0, 1])) === 0
                   ? 0.1
                   : Math.trunc(animateValue(section["uglyhtml"], [-100, -20], [0, 1]))
+              }`}>
+              {$t("No_more_ugly_HTML_part_2")}
+            </span>
+            <span
+              class="motion-reduce:!opacity-100"
+              style={`opacity:${
+                Math.trunc(animateValue(section["uglyhtml"], [-100, -15], [0, 1])) === 0
+                  ? 0.1
+                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -15], [0, 1]))
               }`}>
               {$t("No_more_ugly_HTML_part_3")}
             </span>
@@ -930,13 +930,13 @@
                   </label>
                   <label class="flex cursor-pointer items-center justify-between p-1">
                     {$t("Submit to newsletter")}
-                    <div class="relative inline-block">
+                    <span class="relative inline-block">
                       <input
                         type="checkbox"
                         class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2" />
                       <span
                         class="pointer-events-none absolute left-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:left-7 peer-checked:bg-gray-900" />
-                    </div>
+                    </span>
                   </label>
                   <button
                     class="inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95">

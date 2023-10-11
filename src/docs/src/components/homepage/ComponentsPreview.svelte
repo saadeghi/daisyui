@@ -152,7 +152,7 @@
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#icon-716256078df3014)">
+              <g clip-path="url(#icon-71)">
                 <path
                   d="M24 10L12 18L24 26L36 18L24 10Z"
                   fill="none"
@@ -187,7 +187,7 @@
                   stroke-linejoin="round" />
               </g>
               <defs>
-                <clipPath id="icon-716256078df3014">
+                <clipPath id="icon-71">
                   <rect width="48" height="48" fill="currentColor" />
                 </clipPath>
               </defs>
@@ -313,7 +313,7 @@
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#icon-716256078df3014)">
+              <g clip-path="url(#icon-72)">
                 <path
                   d="M24 10L12 18L24 26L36 18L24 10Z"
                   fill="none"
@@ -348,7 +348,7 @@
                   stroke-linejoin="round" />
               </g>
               <defs>
-                <clipPath id="icon-716256078df3014">
+                <clipPath id="icon-72">
                   <rect width="48" height="48" fill="currentColor" />
                 </clipPath>
               </defs>
@@ -381,11 +381,7 @@
     class="navbar bg-base-200 rounded-box hidden motion-reduce:!opacity-100 xl:flex"
     style={`opacity:${animateValue(section, [13, 18], [0, 1])}`}>
     <div class="grow">
-      <button
-        tabindex="-1"
-        class="btn btn-ghost btn-circle avatar"
-        aria-label="tailwindcss avatar"
-        alt="tailwindcss avatar">
+      <button tabindex="-1" class="btn btn-ghost btn-circle avatar" aria-label="tailwindcss avatar">
         <div class="w-10 rounded-full">
           <img
             width="40"
@@ -435,9 +431,9 @@
       [0, 10],
       [10, 0]
     )}%)`}>
-    <h2 class="font-title text-[clamp(1.5rem,6vw,3rem)] font-black leading-none">
+    <div class="font-title text-[clamp(1.5rem,6vw,3rem)] font-black leading-none">
       {$t("Unlimited themes")}
-    </h2>
+    </div>
     <p class="font-title font-light md:text-3xl lg:text-4xl">{$t("with zero effort")}</p>
     <div class="h-4" />
     <p class="text-base-content/60 mx-auto max-w-lg font-sans text-sm font-light">
@@ -517,7 +513,7 @@
   class="rounded-box bg-base-200 card hidden h-full w-80 shrink-0 motion-reduce:!opacity-100 xl:flex"
   style={`opacity:${animateValue(section, [12, 17], [0, 1])}`}>
   <div class="card-body">
-    <h2 class="card-title mb-4 text-sm">{$t("Semantic colors")}</h2>
+    <div class="card-title mb-4 text-sm">{$t("Semantic colors")}</div>
     <div class="grid grid-cols-4 gap-4">
       <div class="flex flex-col items-center gap-1">
         <div class="bg-primary rounded-btn aspect-square w-10" />

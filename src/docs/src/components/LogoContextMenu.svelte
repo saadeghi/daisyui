@@ -17,7 +17,7 @@
 {#if showMenu}
   <ul
     style="top:{pos.y}px; left:{pos.x}px"
-    class="menu menu-sm bg-base-100 border-base-300 rounded-box absolute z-[99] border p-2 shadow">
+    class="menu menu-sm bg-base-200 rounded-box absolute z-[99] p-2 shadow">
     <li class="menu-title">Download daisyUI Logo</li>
     <li>
       <a
