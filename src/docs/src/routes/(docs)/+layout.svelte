@@ -19,13 +19,20 @@
 
   import "@components/StyleHandler.svelte"
 
-  import "prism-themes/themes/prism-material-dark.css"
+  import "prism-themes/themes/prism-material-dark.min.css"
   import "@src/prism-themes-modify.css"
 
   import Navbar from "@components/Navbar.svelte"
   import Scripts from "@components/Scripts.svelte"
 
   import Sidebar from "@components/Sidebar.svelte"
+
+  // let Sidebar
+  // const sleep = (ms) => new Promise((f) => setTimeout(f, ms))
+  // onMount(async () => {
+  //   await sleep(1000)
+  //   Sidebar = (await import("../../components/Sidebar.svelte")).default
+  // })
 
   let drawersidebar
   let drawerSidebarScrollY = 0
@@ -107,7 +114,7 @@
     on:scroll={parseSidebarScroll}>
     <label for="drawer" class="drawer-overlay" aria-label="Close menu" />
     <aside class="bg-base-100 w-80">
-      <Sidebar {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
+      <svelte:component this={Sidebar} {closeDrawer} {openDrawer} {drawerSidebarScrollY} />
       <div
         class="bg-base-100 pointer-events-none sticky bottom-0 flex h-40 [mask-image:linear-gradient(transparent,#000000)]" />
     </aside>

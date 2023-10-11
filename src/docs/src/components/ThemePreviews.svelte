@@ -11,18 +11,16 @@
   {#each themes as theme}
     <div
       class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent"
-      data-set-theme={theme.id}
+      data-set-theme={theme}
       data-act-class="!outline-base-content">
-      <div
-        data-theme={theme.id}
-        class="bg-base-100 text-base-content w-full cursor-pointer font-sans">
+      <div data-theme={theme} class="bg-base-100 text-base-content w-full cursor-pointer font-sans">
         <div class="grid grid-cols-5 grid-rows-3">
           <div class="bg-base-200 col-start-1 row-span-2 row-start-1" />
           <div class="bg-base-300 col-start-1 row-start-3" />
           <div
             class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2">
             <div class="font-bold">
-              {theme.id}
+              {theme}
             </div>
             <div class="flex flex-wrap gap-1">
               <div

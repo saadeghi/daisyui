@@ -43,10 +43,10 @@
       {#each themes as theme}
         <button
           class="outline-base-content overflow-hidden rounded-lg text-left"
-          data-set-theme={theme.id}
+          data-set-theme={theme}
           data-act-class="[&_svg]:visible">
           <span
-            data-theme={theme.id}
+            data-theme={theme}
             class="bg-base-100 text-base-content block w-full cursor-pointer font-sans">
             <span class="grid grid-cols-5 grid-rows-3">
               <span class="col-span-5 row-span-3 row-start-1 flex items-center gap-2 px-4 py-3">
@@ -60,7 +60,7 @@
                   <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
                 </svg>
                 <span class="flex-grow text-sm">
-                  {theme.id}
+                  {theme}
                 </span>
                 <span class="flex h-full flex-shrink-0 flex-wrap gap-1">
                   <span class="bg-primary w-2 rounded" />

@@ -2,7 +2,7 @@
   import { page } from "$app/stores"
   import { pages } from "@src/lib/data.js"
   import { readEnv } from "$lib/util"
-  import { useBreakpoints } from "$lib/breakpoints"
+  // import { useBreakpoints } from "$lib/breakpoints"
   import Search from "@components/Search.svelte"
 
   import LogoContextMenu from "@components/LogoContextMenu.svelte"
@@ -16,11 +16,14 @@
   export let drawerSidebarScrollY
   $: switchNavbarStyle = drawerSidebarScrollY > 40 ? true : false
 
-  const breakpoints = useBreakpoints()
-  const showSearch = breakpoints.smaller("lg")
+  // const breakpoints = useBreakpoints()
+  // const showSearch = breakpoints.smaller("lg")
 
   import { t } from "@src/lib/i18n"
+  $: innerWidth = 0
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div
   class={`bg-base-100 sticky top-0 z-20 hidden items-center gap-2 bg-opacity-90 px-4 py-2 backdrop-blur ${
@@ -64,7 +67,7 @@
   </div>
 </div>
 
-{#if $showSearch}
+{#if innerWidth < 1024}
   <div
     class={`bg-base-100 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 bg-opacity-90 px-2 py-3 backdrop-blur ${
       switchNavbarStyle ? "shadow-sm" : ""
@@ -114,15 +117,15 @@
               class={`${$page.url.pathname == href ? "active" : ""} ${
                 $page.url.pathname == highlightAnotherItem + "/" ? "active" : ""
               } ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
-              {#if icon != ""}
+              {#if icon}
                 <span>
                   {@html icon}
                 </span>
               {/if}
-              <span class={`${deprecated && "line-through"}`}>
+              <span class={deprecated ? "line-through" : undefined}>
                 {@html $t(name)}
               </span>
-              {#if badge != ""}
+              {#if badge}
                 <span class="badge badge-sm font-mono lowercase">
                   {$t(badge)}
                 </span>

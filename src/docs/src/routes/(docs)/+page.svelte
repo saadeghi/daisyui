@@ -3,10 +3,17 @@
   import Countup from "svelte-countup"
   import SEO from "@components/SEO.svelte"
   import Ads from "@components/Ads.svelte"
-  import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
   import HomepageInstall from "@components/homepage/Install.svelte"
   import Footer from "@components/Footer.svelte"
   import { t } from "@src/lib/i18n"
+
+  // import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
+  let ComponentsPreview
+  // const sleep = (ms) => new Promise((f) => setTimeout(f, ms))
+  onMount(async () => {
+    // await sleep(1000)
+    ComponentsPreview = (await import("../../components/homepage/ComponentsPreview.svelte")).default
+  })
 
   export let data
 
@@ -1250,35 +1257,37 @@
   </div>
 </div>
 
-{#if onMount}
-  <div class="min-h-[600vh] py-20" bind:this={section["themes"]}>
-    <div
-      class="sticky top-20 mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl">
-      {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
+<div class="min-h-[600vh] py-20" bind:this={section["themes"]}>
+  <div
+    class="sticky top-[calc(50vh-10rem)] mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl sm:top-20">
+    {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
+      <div
+        class="col-start-1 row-start-1 flex items-start [transform:translate3d(0,0,0)]"
+        data-theme={currentTheme}
+        style={index > 0
+          ? `clip-path: polygon(${animateValue(
+              section["themes"],
+              [0 + index * 7, 20 + index * 7],
+              [-180, 100]
+            )}% 0%, 0% 0%, 0% 100%, ${animateValue(
+              section["themes"],
+              [0 + index * 7, 20 + index * 7],
+              [0, 100]
+            )}% 100%)`
+          : ""}>
         <div
-          class="col-start-1 row-start-1 flex items-start [transform:translate3d(0,0,0)] max-xl:h-[calc(100vh-6.2rem)]"
-          data-theme={currentTheme}
-          style={index > 0
-            ? `clip-path: polygon(${animateValue(
-                section["themes"],
-                [0 + index * 7, 20 + index * 7],
-                [-180, 100]
-              )}% 0%, 0% 0%, 0% 100%, ${animateValue(
-                section["themes"],
-                [0 + index * 7, 20 + index * 7],
-                [0, 100]
-              )}% 100%)`
-            : ""}>
-          <div
-            class="border-base-200 flex h-full w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
-            style={`--tw-border-opacity:${animateValue(section["themes"], [10, 15], [0, 1])}`}>
-            <ComponentsPreview {animateValue} section={section["themes"]} {index} />
-          </div>
+          class="border-base-200 flex w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
+          style={`--tw-border-opacity:${animateValue(section["themes"], [10, 15], [0, 1])}`}>
+          <svelte:component
+            this={ComponentsPreview}
+            {animateValue}
+            section={section["themes"]}
+            {index} />
         </div>
-      {/each}
-    </div>
+      </div>
+    {/each}
   </div>
-{/if}
+</div>
 
 <div class="bg-base-100 min-h-[120vh] py-20" bind:this={section["designdecision"]}>
   <div class="sticky top-20 w-full px-2 pt-40 lg:px-10">
@@ -1497,158 +1506,154 @@
   </div>
 </div>
 
-{#if onMount}
-  <div>
-    <div class="h-32" />
-    <div
-      class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16">
-      {#each data.tweets as tweet, index}
-        <div class="card border-base-content/5 card-compact border text-left">
-          <div class="card-body">
-            <div class="flex items-center gap-2">
-              <div class="avatar">
-                <a
-                  href={`https://twitter.com/${tweet.username}/status/${tweet.id}`}
-                  target="_blank"
-                  rel="noopener, noreferrer"
-                  class="w-12">
-                  <img
-                    loading="lazy"
-                    src={`/twitter-profile-pics/${tweet.username}-72.webp`}
-                    alt={tweet.name}
-                    width="48"
-                    height="48"
-                    class="pointer-events-none rounded-full" />
-                </a>
-              </div>
-              <div class="flex flex-col items-start text-xs">
-                <div class="text-base-content font-bold">{tweet.name}</div>
-                <div class="text-base-content/60">{tweet.bio}</div>
+<div>
+  <div class="h-32" />
+  <div
+    class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16">
+    {#each data.tweets as tweet, index}
+      <div class="card border-base-content/5 card-compact border text-left">
+        <div class="card-body">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <a
+                href={`https://twitter.com/${tweet.username}/status/${tweet.id}`}
+                target="_blank"
+                rel="noopener, noreferrer"
+                class="w-12">
+                <img
+                  loading="lazy"
+                  src={`/twitter-profile-pics/${tweet.username}-72.webp`}
+                  alt={tweet.name}
+                  width="48"
+                  height="48"
+                  class="pointer-events-none rounded-full" />
+              </a>
+            </div>
+            <div class="flex flex-col items-start text-xs">
+              <div class="text-base-content font-bold">{tweet.name}</div>
+              <div class="text-base-content/60">{tweet.bio}</div>
+            </div>
+          </div>
+          <p class="text-base-content">{tweet.content}</p>
+        </div>
+      </div>
+    {/each}
+  </div>
+</div>
+
+<div class="px-2 py-40 lg:px-10">
+  <div class="text-center">
+    <div class="h-6" />
+    <div>
+      <img
+        loading="lazy"
+        width="80"
+        height="80"
+        alt="yawing face"
+        src="/images/emoji/heart-on-fire@80.webp"
+        srcset={`/images/emoji/heart-on-fire.webp 2x`}
+        class="pointer-events-none inline-block h-20 w-20 align-bottom" />
+    </div>
+    <div class="h-20" />
+    <h2
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
+      {$t("Free and open-source")}
+      <br />
+      <span class="font-light">{$t("Built by the community")}</span>
+    </h2>
+    <div class="h-12" />
+    <p class="font-title font-light md:text-2xl">
+      <a
+        href="https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md"
+        rel="noopener, noreferrer"
+        target="_blank"
+        class="link link-hover text-base-content/60">
+        {$t("daisyUI welcomes contributions from developers around the world")}
+      </a>
+    </p>
+    <div class="flex w-full justify-center">
+      <div class="flex w-full max-w-5xl flex-wrap justify-center gap-3 p-10">
+        {#each data.contributors as contributor}
+          <div class="tooltip" data-tip={contributor.login}>
+            <div class="avatar">
+              <div class="mask mask-squircle w-8">
+                <img
+                  loading="lazy"
+                  src={`${contributor.avatar_url}&s=32`}
+                  srcset={`${contributor.avatar_url}&s=64 2x, ${contributor.avatar_url}&s=96 3x`}
+                  alt={contributor.login}
+                  width="32"
+                  height="32"
+                  class="pointer-events-none transition-all duration-500 ease-in-out" />
               </div>
             </div>
-            <p class="text-base-content">{tweet.content}</p>
           </div>
-        </div>
-      {/each}
+        {/each}
+      </div>
     </div>
   </div>
-{/if}
-
-{#if onMount}
-  <div class="w-[calc(100%-1rem)] px-2 py-40 lg:px-10">
-    <div class="text-center">
-      <div class="h-6" />
-      <div>
-        <img
-          loading="lazy"
-          width="80"
-          height="80"
-          alt="yawing face"
-          src="/images/emoji/heart-on-fire@80.webp"
-          srcset={`/images/emoji/heart-on-fire.webp 2x`}
-          class="pointer-events-none inline-block h-20 w-20 align-bottom" />
-      </div>
-      <div class="h-20" />
-      <h2
-        class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
-        {$t("Free and open-source")}
-        <br />
-        <span class="font-light">{$t("Built by the community")}</span>
-      </h2>
-      <div class="h-12" />
-      <p class="font-title font-light md:text-2xl">
-        <a
-          href="https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md"
-          rel="noopener, noreferrer"
-          target="_blank"
-          class="link link-hover text-base-content/60">
-          {$t("daisyUI welcomes contributions from developers around the world")}
-        </a>
-      </p>
-      <div class="flex w-full justify-center">
-        <div class="flex max-w-5xl flex-wrap justify-center gap-3 p-10">
-          {#each data.contributors as contributor}
-            <div class="tooltip" data-tip={contributor.login}>
+  <div class="h-6" />
+  <div class="text-center">
+    <p class="font-title font-light md:text-2xl">
+      <a
+        href="https://opencollective.com/daisyui"
+        rel="noopener, noreferrer"
+        target="_blank"
+        class="link link-hover text-base-content/60">
+        {$t("Sponsors and backers")}
+      </a>
+    </p>
+    <div class="flex w-full justify-center">
+      <div class="flex w-full max-w-5xl flex-wrap justify-center gap-3 p-10">
+        {#each data.backers as backer}
+          <div class="tooltip" data-tip={backer.name}>
+            {#if backer.image}
               <div class="avatar">
                 <div class="mask mask-squircle w-8">
                   <img
                     loading="lazy"
-                    src={`${contributor.avatar_url}&s=32`}
-                    srcset={`${contributor.avatar_url}&s=64 2x, ${contributor.avatar_url}&s=96 3x`}
-                    alt={contributor.login}
+                    src={backer.image.replace("?default=404", "?default=identicon")}
+                    alt={backer.name}
                     width="32"
                     height="32"
                     class="pointer-events-none transition-all duration-500 ease-in-out" />
                 </div>
               </div>
-            </div>
-          {/each}
-        </div>
+            {:else}
+              <div class="avatar placeholder">
+                <div
+                  class="mask mask-squircle w-8 text-black"
+                  style={`background-color:hsl(${Math.floor(Math.random() * 360)}, 15%, 80%)`}>
+                  <span class="font-mono text-xs uppercase">
+                    {backer.name
+                      .split(" ")
+                      .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))
+                      .join("")}
+                  </span>
+                </div>
+              </div>
+            {/if}
+          </div>
+        {/each}
       </div>
     </div>
-    <div class="h-6" />
-    <div class="text-center">
-      <p class="font-title font-light md:text-2xl">
-        <a
-          href="https://opencollective.com/daisyui"
-          rel="noopener, noreferrer"
-          target="_blank"
-          class="link link-hover text-base-content/60">
-          {$t("Sponsors and backers")}
-        </a>
-      </p>
-      <div class="flex w-full justify-center">
-        <div class="flex max-w-5xl flex-wrap justify-center gap-3 p-10">
-          {#each data.backers as backer}
-            <div class="tooltip" data-tip={backer.name}>
-              {#if backer.image}
-                <div class="avatar">
-                  <div class="mask mask-squircle w-8">
-                    <img
-                      loading="lazy"
-                      src={backer.image.replace("?default=404", "?default=identicon")}
-                      alt={backer.name}
-                      width="32"
-                      height="32"
-                      class="pointer-events-none transition-all duration-500 ease-in-out" />
-                  </div>
-                </div>
-              {:else}
-                <div class="avatar placeholder">
-                  <div
-                    class="mask mask-squircle w-8 text-black"
-                    style={`background-color:hsl(${Math.floor(Math.random() * 360)}, 15%, 80%)`}>
-                    <span class="font-mono text-xs uppercase">
-                      {backer.name
-                        .split(" ")
-                        .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))
-                        .join("")}
-                    </span>
-                  </div>
-                </div>
-              {/if}
-            </div>
-          {/each}
-        </div>
-      </div>
-      <a
-        href="https://opencollective.com/daisyui"
-        rel="noopener, noreferrer"
-        target="_blank"
-        class="btn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="h-4 w-4 text-teal-600">
-          <path
-            d="M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 018-2.828A4.5 4.5 0 0118 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 01-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 01-.69.001l-.002-.001z" />
-        </svg>
-        {$t("Become a sponsor")}
-      </a>
-    </div>
+    <a
+      href="https://opencollective.com/daisyui"
+      rel="noopener, noreferrer"
+      target="_blank"
+      class="btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="h-4 w-4 text-teal-600">
+        <path
+          d="M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 018-2.828A4.5 4.5 0 0118 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 01-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 01-.69.001l-.002-.001z" />
+      </svg>
+      {$t("Become a sponsor")}
+    </a>
   </div>
-{/if}
+</div>
 
 <div class="min-h-[150vh] py-20" bind:this={section["try"]}>
   <div class="sticky top-0 w-full px-2 pt-40 lg:px-10">
