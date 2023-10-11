@@ -141,8 +141,7 @@
         class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:pl-10 xl:pr-0 xl:text-left"
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div>
-          <div
-            class="flex flex-col items-center gap-6 [text-shadow:hsl(var(--p)/.5)_0_0_2rem;] xl:flex-row">
+          <div class="flex flex-col items-center gap-6 xl:flex-row">
             <div
               data-tip={isClipboardButtonPressed ? "copied" : "copy"}
               class="tooltip tooltip-accent">
@@ -169,7 +168,7 @@
             <br />
             <span class="inline-grid">
               <span
-                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
                 aria-hidden="true">
                 {@html $t("component library")}
               </span>
@@ -298,7 +297,7 @@
           : ""
       }transform:translateY(${animateValue(section["hero"], [20, 21], [120, 0])}%)`}>
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur will-change-auto [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:!transform-none xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur will-change-auto [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:![transform:translate3d(0,0,0)] xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
         style={section["hero"] &&
           `transform: rotateX(${animateValue(
             section["hero"],
@@ -320,7 +319,7 @@
               style={`opacity:${animateValue(section["hero"], [15, 16], [1, 0])}`}>
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
-                  class="relative z-[1] w-80 will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
+                  class="relative z-[1] w-80 will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)] xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style={`transform:translate(${animateValue(
                     section["hero"],
                     [2, 9],
@@ -509,7 +508,7 @@
                 <div
                   class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
-                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:!transform-none"
+                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:![transform:translate3d(0,0,0)]"
                     style={`box-shadow:${animateValue(
                       section["hero"],
                       [5, 5.5],
@@ -538,7 +537,7 @@
                     </span>
                   </div>
                   <div
-                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:!transform-none"
+                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:![transform:translate3d(0,0,0)]"
                     style={`box-shadow:${animateValue(
                       section["hero"],
                       [6, 6.5],
@@ -569,7 +568,7 @@
 
               <div class="flex shrink-0 gap-6 pr-4 xl:flex-col xl:pr-0">
                 <div
-                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:!transform-none"
+                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:![transform:translate3d(0,0,0)]"
                   style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
                     section["hero"],
                     [0, 0.5],
@@ -624,7 +623,7 @@
                   </div>
                 </div>
                 <div
-                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:!transform-none"
+                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:![transform:translate3d(0,0,0)]"
                   style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
                     section["hero"],
                     [4, 4.5],
@@ -711,12 +710,12 @@
 <div class="w-full px-2 py-40 lg:px-10" bind:this={section["nextlevel"]}>
   <div class="text-center">
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto motion-reduce:!tracking-normal max-[1280px]:!tracking-normal"
+      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal"
       style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [1, 0])}rem`}>
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
         style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}>
         {$t("to the next level")}
       </span>
@@ -816,7 +815,7 @@
                 <div
                   class="pointer-events-none absolute left-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2">
                   <div
-                    class="bg-primary/30 col-start-1 row-start-1 scale-[2] rounded-full blur-[5rem]" />
+                    class="bg-primary/30 col-start-1 row-start-1 scale-[2] rounded-full blur-[5rem] [transform:translate3d(0,0,0)]" />
                 </div>
                 <input
                   type="checkbox"
@@ -959,9 +958,9 @@
       class="relative flex flex-col items-center justify-center gap-10 px-4 md:px-10 xl:flex-row-reverse xl:gap-20">
       <div>
         <div
-          class="bg-primary pointer-events-none absolute left-20 aspect-square w-96 rounded-full opacity-20 blur-3xl" />
+          class="bg-primary pointer-events-none absolute left-20 aspect-square w-96 rounded-full opacity-20 blur-3xl [transform:translate3d(0,0,0)]" />
         <div
-          class="bg-success pointer-events-none absolute aspect-square w-full rounded-full opacity-10 blur-3xl" />
+          class="bg-success pointer-events-none absolute aspect-square w-full rounded-full opacity-10 blur-3xl [transform:translate3d(0,0,0)]" />
         <h2
           class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-left">
           <span
@@ -1122,7 +1121,7 @@
     <div class="relative z-[1] w-full py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-left">
         <span
-          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none"
+          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)]"
           style={`transform:translateX(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1132,7 +1131,7 @@
         </span>
         <br />
         <span
-          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none"
+          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)]"
           style={`transform:translateX(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1143,7 +1142,7 @@
       </h2>
       <div class="h-10" />
       <p
-        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none md:text-2xl xl:text-left"
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)] md:text-2xl xl:text-left"
         style={`transform:translateX(${animateValue(
           section["customizable"],
           [-100, 100],
@@ -1192,11 +1191,11 @@
   class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-gradient-to-t py-16"
   bind:this={section["agnostic"]}>
   <div
-    class="bg-warning right-1/5 pointer-events-none absolute -top-full aspect-square w-full -translate-x-1/2 rounded-full opacity-5 blur-3xl" />
+    class="bg-warning right-1/5 pointer-events-none absolute -top-full aspect-square w-full -translate-x-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
   <div
-    class="bg-base-content top-1/5 pointer-events-none absolute -left-40 aspect-square w-2/3 rounded-full border-2 opacity-5 blur-3xl" />
+    class="bg-base-content top-1/5 pointer-events-none absolute -left-40 aspect-square w-2/3 rounded-full border-2 opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
   <div
-    class="bg-info pointer-events-none absolute left-0 top-1/2 aspect-square w-1/2 -translate-y-1/2 rounded-full opacity-5 blur-3xl" />
+    class="bg-info pointer-events-none absolute left-0 top-1/2 aspect-square w-1/2 -translate-y-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
   <div
     class="flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse">
     <div>
@@ -1284,7 +1283,7 @@
       class="sticky top-20 mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl">
       {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
         <div
-          class="col-start-1 row-start-1 flex items-start"
+          class="col-start-1 row-start-1 flex items-start [transform:translate3d(0,0,0)]"
           data-theme={currentTheme}
           style={index > 0
             ? `clip-path: polygon(${animateValue(
@@ -1410,7 +1409,7 @@
         <span class="inline-grid">
           {#if Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0}
             <span
-              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
               aria-hidden="true">
               {$t("endless possibilities")}
             </span>
