@@ -269,7 +269,6 @@
 
     <div
       class={`invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:visible xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]
-      ${section["hero"] && scrollY < 100 ? "" : ""}
       `}
       style={`${
         section["hero"] && scrollY > section["hero"].clientHeight * 0.2
@@ -291,12 +290,10 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div class="grid">
           <div
-            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
-            class:invisible={section["hero"] && scrollY < section["hero"].clientHeight}>
+            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden">
             <!-- flying components -->
             <div
-              class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0"
-              style={`opacity:${animateValue(section["hero"], [15, 16], [1, 0])}`}>
+              class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0">
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
                   class="relative z-[1] w-80 will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)] xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
