@@ -1,1 +1,0 @@
-import{S as s,i as t,s as e,F as a}from"../chunks/vendor.0c0f6e56.js";function i(n){return a(()=>{window.location.href="/docs/install/"}),[]}class r extends s{constructor(o){super(),t(this,o,i,null,e,{})}}export{r as component};
