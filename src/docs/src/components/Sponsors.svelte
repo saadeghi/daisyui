@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex flex-col gap-2">
-  <h3 class="text-base-content/50 text-xs font-bold">Sponsors</h3>
+  <div class="text-base-content/50 text-xs font-bold">Sponsors</div>
 
   <div class={`flex gap-2 ${wrapperClasses}`}>
     <!-- <a

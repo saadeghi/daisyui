@@ -188,7 +188,7 @@
         </div>
         <div class="text-left">
           <p class="text-base-content text-xs text-opacity-50">{$t("created-by")}</p>
-          <h2 class="text-base-content text-lg font-bold">Pouya Saadeghi</h2>
+          <p class="text-base-content text-lg font-bold">Pouya Saadeghi</p>
         </div>
       </a>
       <div class="flex flex-col items-center gap-4 text-left sm:flex-row">

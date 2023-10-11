@@ -129,7 +129,9 @@
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<SEO title="daisyUI" desc="Tailwind Components Library - Free components for Tailwind CSS" />
+<SEO
+  title="daisyUI"
+  desc="Best Tailwind Components Library - Free UI components for Tailwind CSS" />
 
 <!-- hero content -->
 <div>
@@ -1283,7 +1285,7 @@
       class="sticky top-20 mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl">
       {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
         <div
-          class="col-start-1 row-start-1 flex items-start [transform:translate3d(0,0,0)]"
+          class="col-start-1 row-start-1 flex items-start [transform:translate3d(0,0,0)] max-xl:h-[calc(100vh-6.2rem)]"
           data-theme={currentTheme}
           style={index > 0
             ? `clip-path: polygon(${animateValue(
@@ -1297,7 +1299,7 @@
               )}% 100%)`
             : ""}>
           <div
-            class="border-base-200 flex w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
+            class="border-base-200 flex h-full w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
             style={`--tw-border-opacity:${animateValue(section["themes"], [10, 15], [0, 1])}`}>
             <ComponentsPreview {animateValue} section={section["themes"]} {index} />
           </div>
@@ -1467,9 +1469,9 @@
           [20, 30],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [20, 30], [0, 1])}`}>
-        <h3 class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+        <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup initial={stargazers_count * 0.8} value={stargazers_count} duration={2000} />
-        </h3>
+        </div>
         <a
           href="https://github.com/saadeghi/daisyui"
           target="_blank"
@@ -1485,12 +1487,12 @@
           [30, 40],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [30, 40], [0, 1])}`}>
-        <h3 class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+        <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup
             initial={data.gh_dependents.repositories * 0.8}
             value={data.gh_dependents.repositories}
             duration={2200} />
-        </h3>
+        </div>
         <a
           href="https://github.com/saadeghi/daisyui/network/dependents"
           target="_blank"
@@ -1506,9 +1508,9 @@
           [40, 50],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [40, 50], [0, 1])}`}>
-        <h3 class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+        <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
           <Countup initial={npmInstalls * 0.8} value={npmInstalls} duration={2400} />
-        </h3>
+        </div>
         <a
           href="https://www.npmjs.com/package/daisyui"
           target="_blank"
