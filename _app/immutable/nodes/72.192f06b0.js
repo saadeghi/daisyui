@@ -1,1 +1,0 @@
-import{S as s,i as o,s as e,F as a}from"../chunks/vendor.140da208.js";function i(n){return a(()=>{window.location.href="https://play.tailwindcss.com/eUmbFJcv1M"}),[]}class l extends s{constructor(t){super(),o(this,t,i,null,e,{})}}export{l as component};

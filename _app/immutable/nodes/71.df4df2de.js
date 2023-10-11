@@ -1,0 +1,1 @@
+import{S as t,i as o,s,F as a}from"../chunks/vendor.0c0f6e56.js";function i(e){return a(()=>{window.location.href="https://codepen.io/pen?template=BaqgrNP"}),[]}class p extends t{constructor(n){super(),o(this,n,i,null,s,{})}}export{p as component};

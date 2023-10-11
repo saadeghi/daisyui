@@ -1,0 +1,73 @@
+import{S as ft,i as mt,s as ht,Q as nt,r as w,v as E,w as T,R as vt,T as pt,A as y,B as C,C as M,o as _t,U as it,e as d,V as ut,a as k,c as f,b as v,W as ct,f as i,g as L,j as $,k as m,l as h,h as P,n as q,t as U,d as Y,X as N,Y as X,a3 as st}from"../chunks/vendor.0c0f6e56.js";import{M as bt,p as gt,C as xt,a as O,r as A}from"../chunks/ClassTable.87fd302c.js";import{T as $t}from"../chunks/Translate.b111dc3b.js";function wt(c){let t,a='<label class="label"><span class="label-text">Your Email</span></label> <label class="input-group"><span>Email</span> <input type="text" placeholder="info@site.com" class="input input-bordered"/></label>';return{c(){t=d("div"),t.innerHTML=a,this.h()},l(e){t=f(e,"DIV",{class:!0,"data-svelte-h":!0}),P(t)!=="svelte-9voxl5"&&(t.innerHTML=a),this.h()},h(){$(t,"class","form-control")},m(e,s){m(e,t,s)},p:q,d(e){e&&i(t)}}}function Et(c){let t,a=`<div class="$$form-control">
+  <label class="$$label">
+    <span class="$$label-text">Your Email</span>
+  </label>
+  <label class="$$input-group">
+    <span>Email</span>
+    <input type="text" placeholder="info@site.com" class="$$input $$input-bordered" />
+  </label>
+</div>`,e,s,r,p;return{c(){t=d("pre"),e=U(a),this.h()},l(n){t=f(n,"PRE",{slot:!0});var o=v(t);e=Y(o,a),o.forEach(i),this.h()},h(){$(t,"slot","html")},m(n,o){m(n,t,o),h(t,e),r||(p=N(s=A.call(null,t,{to:c[0]})),r=!0)},p(n,o){s&&X(s.update)&&o&1&&s.update.call(null,{to:n[0]})},d(n){n&&i(t),r=!1,p()}}}function Tt(c){let t,a='<label class="label"><span class="label-text">Enter amount</span></label> <label class="input-group"><input type="text" placeholder="0.01" class="input input-bordered"/> <span>BTC</span></label>';return{c(){t=d("div"),t.innerHTML=a,this.h()},l(e){t=f(e,"DIV",{class:!0,"data-svelte-h":!0}),P(t)!=="svelte-1qq5eg0"&&(t.innerHTML=a),this.h()},h(){$(t,"class","form-control")},m(e,s){m(e,t,s)},p:q,d(e){e&&i(t)}}}function yt(c){let t,a=`<div class="$$form-control">
+  <label class="$$label">
+    <span class="$$label-text">Enter amount</span>
+  </label>
+  <label class="$$input-group">
+    <input type="text" placeholder="0.01" class="$$input $$input-bordered" />
+    <span>BTC</span>
+  </label>
+</div>`,e,s,r,p;return{c(){t=d("pre"),e=U(a),this.h()},l(n){t=f(n,"PRE",{slot:!0});var o=v(t);e=Y(o,a),o.forEach(i),this.h()},h(){$(t,"slot","html")},m(n,o){m(n,t,o),h(t,e),r||(p=N(s=A.call(null,t,{to:c[0]})),r=!0)},p(n,o){s&&X(s.update)&&o&1&&s.update.call(null,{to:n[0]})},d(n){n&&i(t),r=!1,p()}}}function Ct(c){let t,a='<label class="label"><span class="label-text">Enter amount</span></label> <label class="input-group"><span>Price</span> <input type="text" placeholder="10" class="input input-bordered"/> <span>USD</span></label>';return{c(){t=d("div"),t.innerHTML=a,this.h()},l(e){t=f(e,"DIV",{class:!0,"data-svelte-h":!0}),P(t)!=="svelte-1l327fh"&&(t.innerHTML=a),this.h()},h(){$(t,"class","form-control")},m(e,s){m(e,t,s)},p:q,d(e){e&&i(t)}}}function Mt(c){let t,a=`<div class="$$form-control">
+  <label class="$$label">
+    <span class="$$label-text">Enter amount</span>
+  </label>
+  <label class="$$input-group">
+    <span>Price</span>
+    <input type="text" placeholder="10" class="$$input $$input-bordered" />
+    <span>USD</span>
+  </label>
+</div>`,e,s,r,p;return{c(){t=d("pre"),e=U(a),this.h()},l(n){t=f(n,"PRE",{slot:!0});var o=v(t);e=Y(o,a),o.forEach(i),this.h()},h(){$(t,"slot","html")},m(n,o){m(n,t,o),h(t,e),r||(p=N(s=A.call(null,t,{to:c[0]})),r=!0)},p(n,o){s&&X(s.update)&&o&1&&s.update.call(null,{to:n[0]})},d(n){n&&i(t),r=!1,p()}}}function kt(c){let t,a='<label class="label"><span class="label-text">Your Email</span></label> <label class="input-group input-group-vertical"><span>Email</span> <input type="text" placeholder="info@site.com" class="input input-bordered"/></label>';return{c(){t=d("div"),t.innerHTML=a,this.h()},l(e){t=f(e,"DIV",{class:!0,"data-svelte-h":!0}),P(t)!=="svelte-impxiu"&&(t.innerHTML=a),this.h()},h(){$(t,"class","form-control")},m(e,s){m(e,t,s)},p:q,d(e){e&&i(t)}}}function Lt(c){let t,a=`<div class="$$form-control">
+  <label class="$$label">
+    <span class="$$label-text">Your Email</span>
+  </label>
+  <label class="$$input-group $$input-group-vertical">
+    <span>Email</span>
+    <input type="text" placeholder="info@site.com" class="$$input $$input-bordered" />
+  </label>
+</div>`,e,s,r,p;return{c(){t=d("pre"),e=U(a),this.h()},l(n){t=f(n,"PRE",{slot:!0});var o=v(t);e=Y(o,a),o.forEach(i),this.h()},h(){$(t,"slot","html")},m(n,o){m(n,t,o),h(t,e),r||(p=N(s=A.call(null,t,{to:c[0]})),r=!0)},p(n,o){s&&X(s.update)&&o&1&&s.update.call(null,{to:n[0]})},d(n){n&&i(t),r=!1,p()}}}function Dt(c){let t,a='<div class="form-control"><label class="input-group input-group-lg"><span>LG</span> <input type="text" placeholder="Type here" class="input input-bordered input-lg"/></label></div> <div class="form-control"><label class="input-group input-group-md"><span>MD</span> <input type="text" placeholder="Type here" class="input input-bordered input-md"/></label></div> <div class="form-control"><label class="input-group input-group-sm"><span>SM</span> <input type="text" placeholder="Type here" class="input input-bordered input-sm"/></label></div> <div class="form-control"><label class="input-group input-group-xs"><span>XS</span> <input type="text" placeholder="Type here" class="input input-bordered input-xs"/></label></div>';return{c(){t=d("div"),t.innerHTML=a,this.h()},l(e){t=f(e,"DIV",{class:!0,"data-svelte-h":!0}),P(t)!=="svelte-ycxjp6"&&(t.innerHTML=a),this.h()},h(){$(t,"class","flex flex-col gap-4 items-center")},m(e,s){m(e,t,s)},p:q,d(e){e&&i(t)}}}function It(c){let t,a=`<div class="$$form-control">
+  <label class="$$input-group $$input-group-lg">
+    <span>LG</span>
+    <input type="text" placeholder="Type here" class="$$input $$input-bordered $$input-lg" />
+  </label>
+</div>
+<div class="$$form-control">
+  <label class="$$input-group $$input-group-md">
+    <span>MD</span>
+    <input type="text" placeholder="Type here" class="$$input $$input-bordered $$input-md" />
+  </label>
+</div>
+<div class="$$form-control">
+  <label class="$$input-group $$input-group-sm">
+    <span>SM</span>
+    <input type="text" placeholder="Type here" class="$$input $$input-bordered $$input-sm" />
+  </label>
+</div>
+<div class="$$form-control">
+  <label class="$$input-group $$input-group-xs">
+    <span>XS</span>
+    <input type="text" placeholder="Type here" class="$$input $$input-bordered $$input-xs" />
+  </label>
+</div>`,e,s,r,p;return{c(){t=d("pre"),e=U(a),this.h()},l(n){t=f(n,"PRE",{slot:!0});var o=v(t);e=Y(o,a),o.forEach(i),this.h()},h(){$(t,"slot","html")},m(n,o){m(n,t,o),h(t,e),r||(p=N(s=A.call(null,t,{to:c[0]})),r=!0)},p(n,o){s&&X(s.update)&&o&1&&s.update.call(null,{to:n[0]})},d(n){n&&i(t),r=!1,p()}}}function Pt(c){let t,a='<div class="input-group"><input type="text" placeholder="Search…" class="input input-bordered"/> <button class="btn btn-square"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button></div>';return{c(){t=d("div"),t.innerHTML=a,this.h()},l(e){t=f(e,"DIV",{class:!0,"data-svelte-h":!0}),P(t)!=="svelte-1caev5e"&&(t.innerHTML=a),this.h()},h(){$(t,"class","form-control")},m(e,s){m(e,t,s)},p:q,d(e){e&&i(t)}}}function Vt(c){let t,a=`<div class="$$form-control">
+  <div class="$$input-group">
+    <input type="text" placeholder="Search…" class="$$input $$input-bordered" />
+    <button class="$$btn $$btn-square">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+    </button>
+  </div>
+</div>`,e,s,r,p;return{c(){t=d("pre"),e=U(a),this.h()},l(n){t=f(n,"PRE",{slot:!0});var o=v(t);e=Y(o,a),o.forEach(i),this.h()},h(){$(t,"slot","html")},m(n,o){m(n,t,o),h(t,e),r||(p=N(s=A.call(null,t,{to:c[0]})),r=!0)},p(n,o){s&&X(s.update)&&o&1&&s.update.call(null,{to:n[0]})},d(n){n&&i(t),r=!1,p()}}}function St(c){let t,a,e,s,r="Pick category",p,n="T-shirts",o,S="Mugs",x,g,D="Go";return{c(){t=d("div"),a=d("div"),e=d("select"),s=d("option"),s.textContent=r,p=d("option"),p.textContent=n,o=d("option"),o.textContent=S,x=k(),g=d("button"),g.textContent=D,this.h()},l(I){t=f(I,"DIV",{class:!0});var _=v(t);a=f(_,"DIV",{class:!0});var V=v(a);e=f(V,"SELECT",{class:!0});var b=v(e);s=f(b,"OPTION",{"data-svelte-h":!0}),P(s)!=="svelte-1nzoa7o"&&(s.textContent=r),p=f(b,"OPTION",{"data-svelte-h":!0}),P(p)!=="svelte-12hv6fq"&&(p.textContent=n),o=f(b,"OPTION",{"data-svelte-h":!0}),P(o)!=="svelte-1fki2vk"&&(o.textContent=S),b.forEach(i),x=L(V),g=f(V,"BUTTON",{class:!0,"data-svelte-h":!0}),P(g)!=="svelte-157zp5v"&&(g.textContent=D),V.forEach(i),_.forEach(i),this.h()},h(){s.disabled=!0,s.selected=!0,s.__value="Pick category",st(s,s.__value),p.__value="T-shirts",st(p,p.__value),o.__value="Mugs",st(o,o.__value),$(e,"class","select select-bordered"),$(g,"class","btn"),$(a,"class","input-group"),$(t,"class","form-control")},m(I,_){m(I,t,_),h(t,a),h(a,e),h(e,s),h(e,p),h(e,o),h(a,x),h(a,g)},p:q,d(I){I&&i(t)}}}function zt(c){let t,a=`<div class="$$form-control">
+  <div class="$$input-group">
+    <select class="$$select $$select-bordered">
+      <option disabled selected>Pick category</option>
+      <option>T-shirts</option>
+      <option>Mugs</option>
+    </select>
+    <button class="$$btn">Go</button>
+  </div>
+</div>`,e,s,r,p;return{c(){t=d("pre"),e=U(a),this.h()},l(n){t=f(n,"PRE",{slot:!0});var o=v(t);e=Y(o,a),o.forEach(i),this.h()},h(){$(t,"slot","html")},m(n,o){m(n,t,o),h(t,e),r||(p=N(s=A.call(null,t,{to:c[0]})),r=!0)},p(n,o){s&&X(s.update)&&o&1&&s.update.call(null,{to:n[0]})},d(n){n&&i(t),r=!1,p()}}}function Ht(c){let t,a,e,s,r,p,n,o,S,x,g,D,I,_,V,b,F,z,K,H,Z,j,tt,G,et,B,lt;return n=new $t({props:{text:"Deprecated"}}),x=new $t({props:{text:"This component is deprecated and will be removed in the next major version. Use <a class='link' href='/components/join'>Join</a> instead."}}),D=new xt({props:{data:[{type:"component",class:"input-group",desc:"Container for grouping elements"},{type:"modifier",class:"input-group-lg",desc:"Large size for input-group wrapper"},{type:"modifier",class:"input-group-md",desc:"Medium (default) size for input-group wrapper"},{type:"modifier",class:"input-group-sm",desc:"Small size for input-group wrapper"},{type:"modifier",class:"input-group-xs",desc:"Extra small size for input-group wrapper"},{type:"modifier",class:"input-group-vertical",desc:"Vertical direction for input-group items"}]}}),_=new O({props:{title:"Group label and text input horizontally",$$slots:{html:[Et],default:[wt]},$$scope:{ctx:c}}}),b=new O({props:{title:"Group text input and label horizontally",$$slots:{html:[yt],default:[Tt]},$$scope:{ctx:c}}}),z=new O({props:{title:"label on both sides",$$slots:{html:[Mt],default:[Ct]},$$scope:{ctx:c}}}),H=new O({props:{title:"Group label and text input vertically",$$slots:{html:[Lt],default:[kt]},$$scope:{ctx:c}}}),j=new O({props:{title:"Sizes",$$slots:{html:[It],default:[Dt]},$$scope:{ctx:c}}}),G=new O({props:{title:"Group text input and button",$$slots:{html:[Vt],default:[Pt]},$$scope:{ctx:c}}}),B=new O({props:{title:"Group select and button",$$slots:{html:[zt],default:[St]},$$scope:{ctx:c}}}),{c(){t=d("div"),a=ut("svg"),e=ut("path"),s=k(),r=d("div"),p=d("div"),w(n.$$.fragment),o=k(),S=d("div"),w(x.$$.fragment),g=k(),w(D.$$.fragment),I=k(),w(_.$$.fragment),V=k(),w(b.$$.fragment),F=k(),w(z.$$.fragment),K=k(),w(H.$$.fragment),Z=k(),w(j.$$.fragment),tt=k(),w(G.$$.fragment),et=k(),w(B.$$.fragment),this.h()},l(l){t=f(l,"DIV",{class:!0});var u=v(t);a=ct(u,"svg",{xmlns:!0,class:!0,fill:!0,viewBox:!0});var J=v(a);e=ct(J,"path",{"stroke-linecap":!0,"stroke-linejoin":!0,"stroke-width":!0,d:!0}),v(e).forEach(i),J.forEach(i),s=L(u),r=f(u,"DIV",{});var R=v(r);p=f(R,"DIV",{class:!0});var Q=v(p);E(n.$$.fragment,Q),Q.forEach(i),o=L(R),S=f(R,"DIV",{});var W=v(S);E(x.$$.fragment,W),W.forEach(i),R.forEach(i),u.forEach(i),g=L(l),E(D.$$.fragment,l),I=L(l),E(_.$$.fragment,l),V=L(l),E(b.$$.fragment,l),F=L(l),E(z.$$.fragment,l),K=L(l),E(H.$$.fragment,l),Z=L(l),E(j.$$.fragment,l),tt=L(l),E(G.$$.fragment,l),et=L(l),E(B.$$.fragment,l),this.h()},h(){$(e,"stroke-linecap","round"),$(e,"stroke-linejoin","round"),$(e,"stroke-width","2"),$(e,"d","M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"),$(a,"xmlns","http://www.w3.org/2000/svg"),$(a,"class","stroke-current shrink-0 h-6 w-6"),$(a,"fill","none"),$(a,"viewBox","0 0 24 24"),$(p,"class","font-bold"),$(t,"class","alert alert-warning")},m(l,u){m(l,t,u),h(t,a),h(a,e),h(t,s),h(t,r),h(r,p),T(n,p,null),h(r,o),h(r,S),T(x,S,null),m(l,g,u),T(D,l,u),m(l,I,u),T(_,l,u),m(l,V,u),T(b,l,u),m(l,F,u),T(z,l,u),m(l,K,u),T(H,l,u),m(l,Z,u),T(j,l,u),m(l,tt,u),T(G,l,u),m(l,et,u),T(B,l,u),lt=!0},p(l,u){const J={};u&5&&(J.$$scope={dirty:u,ctx:l}),_.$set(J);const R={};u&5&&(R.$$scope={dirty:u,ctx:l}),b.$set(R);const Q={};u&5&&(Q.$$scope={dirty:u,ctx:l}),z.$set(Q);const W={};u&5&&(W.$$scope={dirty:u,ctx:l}),H.$set(W);const at={};u&5&&(at.$$scope={dirty:u,ctx:l}),j.$set(at);const ot={};u&5&&(ot.$$scope={dirty:u,ctx:l}),G.$set(ot);const rt={};u&5&&(rt.$$scope={dirty:u,ctx:l}),B.$set(rt)},i(l){lt||(y(n.$$.fragment,l),y(x.$$.fragment,l),y(D.$$.fragment,l),y(_.$$.fragment,l),y(b.$$.fragment,l),y(z.$$.fragment,l),y(H.$$.fragment,l),y(j.$$.fragment,l),y(G.$$.fragment,l),y(B.$$.fragment,l),lt=!0)},o(l){C(n.$$.fragment,l),C(x.$$.fragment,l),C(D.$$.fragment,l),C(_.$$.fragment,l),C(b.$$.fragment,l),C(z.$$.fragment,l),C(H.$$.fragment,l),C(j.$$.fragment,l),C(G.$$.fragment,l),C(B.$$.fragment,l),lt=!1},d(l){l&&(i(t),i(g),i(I),i(V),i(F),i(K),i(Z),i(tt),i(et)),M(n),M(x),M(D,l),M(_,l),M(b,l),M(z,l),M(H,l),M(j,l),M(G,l),M(B,l)}}}function jt(c){let t,a;const e=[c[1],dt];let s={$$slots:{default:[Ht]},$$scope:{ctx:c}};for(let r=0;r<e.length;r+=1)s=nt(s,e[r]);return t=new bt({props:s}),{c(){w(t.$$.fragment)},l(r){E(t.$$.fragment,r)},m(r,p){T(t,r,p),a=!0},p(r,[p]){const n=p&2?vt(e,[p&2&&pt(r[1]),p&0&&pt(dt)]):{};p&5&&(n.$$scope={dirty:p,ctx:r}),t.$set(n)},i(r){a||(y(t.$$.fragment,r),a=!0)},o(r){C(t.$$.fragment,r),a=!1},d(r){M(t,r)}}}const dt={title:"Input group",desc:"Input group puts an input next to a text or a button.",published:!0,layout:"components"};function Gt(c,t,a){let e;return _t(c,gt,s=>a(0,e=s)),c.$$set=s=>{a(1,t=nt(nt({},t),it(s)))},t=it(t),[e,t]}class qt extends ft{constructor(t){super(),mt(this,t,Gt,jt,ht,{})}}export{qt as component};
