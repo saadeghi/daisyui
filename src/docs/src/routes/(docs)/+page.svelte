@@ -6,36 +6,9 @@
   import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
   import HomepageInstall from "@components/homepage/Install.svelte"
   import Footer from "@components/Footer.svelte"
-  import { siteStats } from "@src/lib/data.js"
-  import { tweets } from "@src/lib/testimonials.js"
   import { t } from "@src/lib/i18n"
-  import githubRepoInfo from "$lib/json/github-repo.json"
-  import npmDownloadsInfo from "$lib/json/npm-downloads.json"
-  import contributors1 from "$lib/json/github-contributors-1.json"
-  import contributors2 from "$lib/json/github-contributors-2.json"
-  import openCollectiveBackers from "$lib/json/opencollective-members.json"
 
-  let stargazers_count = 25000
-  if (githubRepoInfo && githubRepoInfo.stargazers_count) {
-    stargazers_count = githubRepoInfo.stargazers_count
-  }
-
-  let npmInstalls = 7000000
-  if (npmDownloadsInfo && npmDownloadsInfo.downloads) {
-    npmInstalls = npmDownloadsInfo.downloads
-  }
-
-  let contributors = []
-  if (Array.isArray(contributors1) && Array.isArray(contributors2)) {
-    contributors = contributors1.concat(contributors2)
-  }
-
-  let backers = []
-  if (Array.isArray(openCollectiveBackers)) {
-    backers = openCollectiveBackers.filter(
-      (obj, index) => openCollectiveBackers.findIndex((item) => item.name === obj.name) === index
-    )
-  }
+  export let data
 
   let isClipboardButtonPressed = false
   const copyText = (text) => {
@@ -48,8 +21,6 @@
 
   let activeMenuItemOnHeroMockup = 1
   let toggleValueForCodeCompare = false
-
-  export let data
 
   let scrollY
   let innerHeight
@@ -1394,7 +1365,7 @@
               ? 0.1
               : Math.trunc(animateValue(section["possibilities"], [-30, -20], [0, 1]))
           }`}>
-          {siteStats.components}
+          {data.siteStats.components}
           {$t("components")}
         </span>
         <br />
@@ -1470,7 +1441,10 @@
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [20, 30], [0, 1])}`}>
         <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup initial={stargazers_count * 0.8} value={stargazers_count} duration={2000} />
+          <Countup
+            initial={data.stargazers_count * 0.8}
+            value={data.stargazers_count}
+            duration={2000} />
         </div>
         <a
           href="https://github.com/saadeghi/daisyui"
@@ -1509,7 +1483,7 @@
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [40, 50], [0, 1])}`}>
         <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup initial={npmInstalls * 0.8} value={npmInstalls} duration={2400} />
+          <Countup initial={data.npmInstalls * 0.8} value={data.npmInstalls} duration={2400} />
         </div>
         <a
           href="https://www.npmjs.com/package/daisyui"
@@ -1528,7 +1502,7 @@
     <div class="h-32" />
     <div
       class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16">
-      {#each tweets as tweet, index}
+      {#each data.tweets as tweet, index}
         <div class="card border-base-content/5 card-compact border text-left">
           <div class="card-body">
             <div class="flex items-center gap-2">
@@ -1593,7 +1567,7 @@
       </p>
       <div class="flex w-full justify-center">
         <div class="flex max-w-5xl flex-wrap justify-center gap-3 p-10">
-          {#each contributors as contributor}
+          {#each data.contributors as contributor}
             <div class="tooltip" data-tip={contributor.login}>
               <div class="avatar">
                 <div class="mask mask-squircle w-8">
@@ -1625,7 +1599,7 @@
       </p>
       <div class="flex w-full justify-center">
         <div class="flex max-w-5xl flex-wrap justify-center gap-3 p-10">
-          {#each backers as backer}
+          {#each data.backers as backer}
             <div class="tooltip" data-tip={backer.name}>
               {#if backer.image}
                 <div class="avatar">
