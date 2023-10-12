@@ -15,11 +15,24 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Thu, 12 Oct 2023 12:17:44 GMT</lastBuildDate>
-    <pubDate>Thu, 12 Oct 2023 12:17:44 GMT</pubDate>
+    <lastBuildDate>Thu, 12 Oct 2023 18:45:05 GMT</lastBuildDate>
+    <pubDate>Thu, 12 Oct 2023 18:45:05 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ 9 essential Tailwind CSS plugins for developers ]]>
+          </title>
+          <description>
+            <![CDATA[ In this post we will take a look at the list of best Tailwind CSS plugins to use in your next project ]]>
+          </description>
+          <link>https://daisyui.com/blog/9-best-tailwind-css-plugins-for-developers/</link>
+          <pubDate>Thu, 12 Oct 2023 00:00:00 GMT</pubDate>
+          <image>https://daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.jpg</image>
+          <guid isPermaLink="false">https://daisyui.com/blog/9-best-tailwind-css-plugins-for-developers/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Install Tailwind CSS and PostCSS and daisyUI with one command ]]>
