@@ -77,8 +77,8 @@
     "prejss-cli": "0.3.3",
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.4",
-    "rtlcss": "4.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.5",
+    "rtlcss": "4.1.1",
     "standard-version": "^9.5.0"
   },
   "dependencies": {

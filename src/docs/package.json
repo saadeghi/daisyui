@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^2.0.3",
-    "@sveltejs/kit": "^1.25.1",
+    "@sveltejs/kit": "^1.25.2",
     "@tailwindcss/typography": "0.5.10",
     "autoprefixer": "10.4.16",
     "dep-graph-count": "^1.0.0",
