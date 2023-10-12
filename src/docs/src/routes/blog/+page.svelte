@@ -26,12 +26,12 @@
             src={post.thumbnail}
             class="border-base-content bg-base-300 rounded-btn border border-opacity-5"
             alt={post.title}
-            style={`view-transition-name: ${encodeURI(post.slug).replaceAll("%20", "-")}-img`} />
+            style={`view-transition-name: ${encodeURI(post.slug).replace(/[^a-zA-Z]/g, "")}-img`} />
         </figure>
       {/if}
       <div
         class="card-body"
-        style={`view-transition-name: ${encodeURI(post.slug).replaceAll("%20", "-")}-text`}>
+        style={`view-transition-name: ${encodeURI(post.slug).replace(/[^a-zA-Z]/g, "")}-text`}>
         <h2 class="card-title">
           {post.title}
         </h2>

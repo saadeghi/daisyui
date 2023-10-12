@@ -16,10 +16,10 @@
         src={thumbnail}
         class="border-base-content bg-base-300 rounded-box border border-opacity-5"
         alt={title}
-        style={`view-transition-name: ${slug.replaceAll("%20", "-")}-img`} />
+        style={`view-transition-name: ${slug.replace(/[^a-zA-Z]/g, "")}-img`} />
     </figure>
   {/if}
-  <div style={`view-transition-name: ${slug.replaceAll("%20", "-")}-text`}>
+  <div style={`view-transition-name: ${slug.replace(/[^a-zA-Z]/g, "")}-text`}>
     <div class="text-base-content/60 mb-2 text-xs">
       <span title={formattedDate(date)} class="italic">
         Published {timeago(date)}
