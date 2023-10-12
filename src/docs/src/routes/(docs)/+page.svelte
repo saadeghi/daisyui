@@ -290,7 +290,8 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div class="grid">
           <div
-            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden">
+            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
+            class:invisible={section["hero"] && scrollY < section["hero"].clientHeight}>
             <!-- flying components -->
             <div
               class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0">
