@@ -11,4 +11,11 @@ export default defineConfig({
       "@components": path.resolve("/src/components"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
