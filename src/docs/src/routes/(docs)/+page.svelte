@@ -268,15 +268,14 @@
     <!-- hero figure -->
 
     <div
-      class={`invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 [zoom:60%] sm:[zoom:70%] md:[zoom:80%] xl:visible xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16 xl:[zoom:100%]
-      `}
+      class="invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 xl:visible xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16"
       style={`${
         section["hero"] && scrollY > section["hero"].clientHeight * 0.2
           ? "visibility: visible;"
           : ""
-      }transform:translateY(${animateValue(section["hero"], [20, 21], [120, 0])}%)`}>
+      }transform:translateY(${animateValue(section["hero"], [17, 25], [120, 0])}%)`}>
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto h-[30.5rem] origin-top overflow-visible pb-4 backdrop-blur will-change-auto [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:![transform:translate3d(0,0,0)] xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:![transform:translate3d(0,0,0)] xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
         style={section["hero"] &&
           `transform: rotateX(${animateValue(
             section["hero"],
@@ -680,13 +679,13 @@
             </div>
           </div>
           <div
-            class="col-start-1 row-start-1 w-11/12 px-10 pb-10 opacity-0 xl:pt-10"
+            class="col-start-1 row-start-1 w-11/12 px-6 pb-3 opacity-0 sm:px-10 sm:pb-10 xl:pt-10"
             style={`opacity:${animateValue(
               section["hero"],
               [16, 17],
               [0, 1]
             )};z-index:${animateValue(section["hero"], [20, 22], [0, 1])}`}>
-            <pre class="max-w-lg"><code class="whitespace-pre-wrap">
+            <pre class="max-w-lg text-xs sm:text-base"><code class="whitespace-pre-wrap">
 <span class="text-base-content/40 italic">// {$t("Styling a simple button")}</span>
 
 &lt;button class=&quot;<span
@@ -694,7 +693,9 @@
   {demo_1_ElementTextHandler()}
 &lt;/button&gt;</code></pre>
             <div>
-              <div class="text-base-content/40 py-6 font-mono italic">// {$t("Result")}:</div>
+              <div class="text-base-content/40 py-6 font-mono text-xs italic sm:text-base">
+                // {$t("Result")}:
+              </div>
               <button class={`${demo_1_ClassNameHandler()}`}>{demo_1_ElementTextHandler()}</button>
             </div>
           </div>
