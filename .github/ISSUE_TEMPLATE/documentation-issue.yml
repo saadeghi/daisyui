@@ -26,9 +26,11 @@ body:
       label: What browsers are you seeing the problem on?
       multiple: true
       options:
+        - All browsers
         - Chrome
+        - Chrome Android
         - Safari
+        - Safari iOS
         - Firefox
         - Edge
-        - All browsers
         - Other
