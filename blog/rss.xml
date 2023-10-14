@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Sat, 14 Oct 2023 03:48:58 GMT</lastBuildDate>
-    <pubDate>Sat, 14 Oct 2023 03:48:58 GMT</pubDate>
+    <lastBuildDate>Sat, 14 Oct 2023 03:54:49 GMT</lastBuildDate>
+    <pubDate>Sat, 14 Oct 2023 03:54:49 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
@@ -31,7 +31,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Thu, 12 Oct 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.jpg</image>
           <image>https://daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/9-best-tailwind-css-plugins-for-developers/</guid>
         </item>
       
@@ -46,7 +46,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/npm-init-daisyui.jpg</image>
           <image>https://daisyui.com/images/blog/npm-init-daisyui.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/npm-init-daisyui.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/npm-init-daisyui.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/npm-init-daisyui/</guid>
         </item>
       
@@ -61,7 +61,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Wed, 04 Oct 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/my-journey-to-build-daisyui.jpg</image>
           <image>https://daisyui.com/images/blog/my-journey-to-build-daisyui.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/my-journey-to-build-daisyui.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/my-journey-to-build-daisyui.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/my-journey-to-build-daisyui/</guid>
         </item>
       
@@ -76,7 +76,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Thu, 28 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/headless-ui.jpg</image>
           <image>https://daisyui.com/images/blog/headless-ui.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/headless-ui.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/headless-ui.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/how-to-use-headless-ui-and-daisyui/</guid>
         </item>
       
@@ -91,7 +91,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/daisyui-nextjs-component-library.jpg</image>
           <image>https://daisyui.com/images/blog/daisyui-nextjs-component-library.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/daisyui-nextjs-component-library.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/daisyui-nextjs-component-library.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/install-daisyui-and-tailwindcss-in-nextjs/</guid>
         </item>
       
@@ -106,7 +106,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Mon, 18 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.jpg</image>
           <image>https://daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/how-to-add-new-colors-to-daisyui/</guid>
         </item>
       
@@ -121,7 +121,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Thu, 14 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/tailwind-mistake.jpg</image>
           <image>https://daisyui.com/images/blog/tailwind-mistake.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/tailwind-mistake.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/tailwind-mistake.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/most-common-mistake-when-using-tailwind-css/</guid>
         </item>
       
@@ -136,7 +136,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Wed, 13 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/mary-ui.jpg</image>
           <image>https://daisyui.com/images/blog/mary-ui.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/mary-ui.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/mary-ui.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/mary-ui/</guid>
         </item>
       
@@ -151,7 +151,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/semantic-colors.jpg</image>
           <image>https://daisyui.com/images/blog/semantic-colors.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/semantic-colors.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/semantic-colors.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/daisyui-colors-and-themes/</guid>
         </item>
       
@@ -166,7 +166,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/daisyui-vs-tailwindui.jpg</image>
           <image>https://daisyui.com/images/blog/daisyui-vs-tailwindui.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/daisyui-vs-tailwindui.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/daisyui-vs-tailwindui.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/daisyui-vs-tailwindui/</guid>
         </item>
       
@@ -181,7 +181,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
           <image>https://daisyui.com/images/blog/daisyui-stars.jpg</image>
           <image>https://daisyui.com/images/blog/daisyui-stars.jpg</image>
-          <media:content url="https://daisyui.com/images/blog/daisyui-stars.jpg" medium="image" type="image/jpg">
+          <media:content url="https://daisyui.com/images/blog/daisyui-stars.jpg" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">https://daisyui.com/blog/what-is-daisyui/</guid>
         </item>
       
