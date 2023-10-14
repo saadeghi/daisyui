@@ -82,7 +82,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>${new Date(date).toUTCString()}</pubDate>
           <image>${siteUrl}${thumbnail}</image>
           <image>${siteUrl}${thumbnail}</image>
-          <media:content url="${siteUrl}${thumbnail}" medium="image" type="image/jpg">
+          <media:content url="${siteUrl}${thumbnail}" medium="image" type="image/jpg"></media:content>
           <guid isPermaLink="false">${blogUrl}/${slug}/</guid>
         </item>
       `
