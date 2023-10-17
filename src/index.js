@@ -168,6 +168,7 @@ module.exports = require("tailwindcss/plugin")(mainFunction, {
         "neutral-700": tailwindColors.neutral[700],
         "neutral-800": tailwindColors.neutral[800],
         "neutral-900": tailwindColors.neutral[900],
+        "neutral-950": tailwindColors.neutral[950],
       },
     },
   },
