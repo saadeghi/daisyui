@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.9.3 (2023-10-17)
+
+
+### Bug Fixes
+
+* missing `neutral-950` color ([59eb57b](https://github.com/saadeghi/daisyui/commit/59eb57b6ad2cdb6f704700913b5bea8f25d245c5))
+
 ### 3.9.2 (2023-10-05)
 
 ### 3.9.1 (2023-10-05)
