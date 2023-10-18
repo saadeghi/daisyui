@@ -6,26 +6,21 @@ body:
     attributes:
       value: |
 
-        Thank you for submitting a bug report.  
+        Thank you for submitting a bug report 💚  
         If you need help about your project and it's **NOT** a daisyUI bug, please [ask your question in discussion forum](https://github.com/saadeghi/daisyui/discussions/new?category=q-a).
 
-  - type: checkboxes
-    attributes:
-      label: 1. Checklist
-      options:
-        - label: "I updated daisyUI (`npm i -D daisyui@latest`) but I still have this issue"
-          required: true
-        - label: "I looked up into [FAQ](https://github.com/saadeghi/daisyui/discussions/1949) but I couldn't find a solution"
-          required: true
-        - label: "I searched in [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions?discussions_q=) but this bug has not addressed before"
-          required: true
-        - label: This bug is dasiyUI issue and it's **NOT** specific to a JS framework or a build tool."
-          required: true
+        👉 Before you submit a new bug, please do the following steps:
+
+        1. Update your diasyUI (and other dependencies) to the latest version (`npm i -D daisyui@latest`)  
+        2. Read [FAQ](https://github.com/saadeghi/daisyui/discussions/1949). You may find a solution there  
+        3. Search [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions?discussions_q=). You may find a solution there  
+        4. Make sure this bug is **NOT** specific to a JS framework or a build tool. If the issue doesn't happen on [Tailwind Play](https://daisyui.com/tailwindplay/) it means it's not an issue from daisyUI.  
+        It can be a config problem in your project ([ask here](https://github.com/saadeghi/daisyui/discussions?discussions_q=)) or it can be an issue from your framework or CSS build tools.
 
   - type: input
     id: version
     attributes:
-      label: 2. What version of daisyUI are you using?
+      label: What version of daisyUI are you using?
       description: You can see the daisyUI version number on your `package.json` file.
       placeholder: "example: v3.9.1"
     validations:
@@ -34,7 +29,7 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: 3. Which browsers are you seeing the problem on?
+      label: Which browsers are you seeing the problem on?
       multiple: true
       options:
         - All browsers
@@ -49,15 +44,12 @@ body:
   - type: input
     id: reproduction
     attributes:
-      label: 4. Reproduction URL
+      label: Reproduction URL
       description: |
 
         ℹ️ Please provide a link to a small, minimal example source code where issue can be reproduced. Without a link it will be hard to guess what is the cause of the problem and it will take more time to fix.
 
         ℹ️ You can use a [Tailwind Play](https://daisyui.com/tailwindplay/) page or a [Stackblitz page](https://stackblitz.com/@saadeghi/collections/daisyui) or a public GitHub repo.
-
-        ℹ️ If the issue doesn't happen on [Tailwind Play](https://daisyui.com/tailwindplay/) it means it's not an issue from daisyUI.  
-        It can be a config problem in your project ([ask here](https://github.com/saadeghi/daisyui/discussions?discussions_q=)) or it can be an issue from your framework or CSS build tools.
 
       placeholder: "https://"
     validations:
@@ -66,14 +58,14 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: 5. Describe your issue
+      label: Describe your issue
       description: |
 
         ℹ️ Describe the problem and say how and when it happens.
 
         ℹ️ To write a code block, use ``` before and after your code.
 
-        ⚠️ Please don't use JSX or other framework specific code. Use plain HTML and CSS.
+        ℹ️ Please don't use JSX or other framework specific code. Use plain HTML and CSS.
 
     validations:
       required: true
