@@ -64,8 +64,13 @@ jobs:
       - name: Install docs dependencies
         run: cd src/docs && ${{ env.runtime }} install
 
-      - name: Install daisyUI
+      - name: Install daisyUI fixed tag if production
+        if: github.repository == 'saadeghi/daisyui'
         run: cd src/docs && ${{ env.runtime }} i daisyui@${{ env.npm-tag }}
+
+      - name: Install daisyUI newest version if staging
+        if: github.repository == 'daisyui/daisyui.github.io'
+        run: cd src/docs && ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "latest" || echo "alpha")
 
       - name: Add robots.txt if staging repo
         if: github.repository != 'saadeghi/daisyui'
