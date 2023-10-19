@@ -35,6 +35,7 @@ jobs:
     env:
       runtime: ${{ github.event.inputs.runtime || 'bun'}}
       npm-tag: ${{ github.event.inputs.npm-tag || 'latest'}}
+      LEMONSQUEEZY_API_KEY: ${{ secrets.LEMONSQUEEZY_API_KEY }}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||
