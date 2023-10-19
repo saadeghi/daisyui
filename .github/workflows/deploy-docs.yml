@@ -34,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       runtime: ${{ github.event.inputs.runtime || 'bun'}}
+      npm-tag: ${{ github.event.inputs.npm-tag || 'latest'}}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||
@@ -47,7 +48,7 @@ jobs:
         if: env.runtime == 'npm'
         uses: actions/setup-node@v3
         with:
-          node-version: "latest"
+          node-version: "lts/*"
           registry-url: https://registry.npmjs.org
 
       - name: Setup bun
@@ -64,7 +65,7 @@ jobs:
         run: cd src/docs && ${{ env.runtime }} install
 
       - name: Install daisyUI
-        run: cd src/docs && ${{ env.runtime }} i daisyui@${{ github.event.inputs.npm-tag }}
+        run: cd src/docs && ${{ env.runtime }} i daisyui@${{ env.npm-tag }}
 
       - name: Add robots.txt if staging repo
         if: github.repository != 'saadeghi/daisyui'
