@@ -23,7 +23,7 @@ npm i -D daisyui@latest
 2. <Translate text="Then add daisyUI to your <code>tailwind.config.js</code> files" />:
 
 ```js
-module.exports = {
+export default {
   //...
   plugins: [require("daisyui")],
 }
