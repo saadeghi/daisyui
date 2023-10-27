@@ -44,6 +44,15 @@
     border-end-end-radius: inherit;
   }
 }
-:where(.join *) {
-  @apply rounded-[inherit];
+
+@supports not selector(:has(*)) {
+  :where(.join *) {
+    @apply rounded-[inherit];
+  }
+}
+
+@supports selector(:has(*)) {
+  :where(.join *:has(.join-item)) {
+    @apply rounded-[inherit];
+  }
 }
