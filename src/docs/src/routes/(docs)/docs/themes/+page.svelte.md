@@ -27,7 +27,7 @@ module.exports = {
 <html data-theme="cupcake"></html>
 ```
 
-> <Translate text="I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
+> <Translate text="I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save your theme selection in local storage." />
 
 ## <Translate text="List of themes" />
 
@@ -143,7 +143,7 @@ module.exports = {
 - <Translate text="The first theme (<code>mytheme</code>) will be the default theme." />
 - <Translate text="<code>dark</code> theme will be the default theme for dark mode." />
 
-<Translate text="In the below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
+<Translate text="In the below example, I have the required default colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
 
 <div class="alert alert-info text-sm mb-2 max-w-3xl not-prose">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -209,7 +209,7 @@ module.exports = {
 
 ## <Translate text="Custom CSS for a daisyUI theme" />
 
-<Translate text="You can apply custom style to a daisyUI themes using CSS:" />
+<Translate text="You can apply custom styles to a daisyUI theme using CSS:" />
 
 ```css
 [data-theme="mytheme"] .btn {
@@ -242,8 +242,8 @@ module.exports = {
 
 ## <Translate text="How to add custom styles for a specific theme?" />
 
-<Translate text="You can write custom style for your elements only for a specific theme." />  
-<Translate text="In this example, .btn-twitter class only will have this style on light theme." />
+<Translate text="You can write custom styles for your elements only for a specific theme." />  
+<Translate text="In this example, the .btn-twitter class will have styles only when the light theme is used." />
 
 ```js
 module.exports = {
