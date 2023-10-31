@@ -265,6 +265,7 @@
   "Textarea allows users to enter text in multiple lines.": "讓使用者可以輸入多行文字。",
   "Toggle is a checkbox that is styled to look like a switch button.": "看似開關的核取方塊。",
   "Tooltip can be used to show a message when hovering over an element.": "游標在元素上懸停時顯示訊息。",
+  "Browser mockup": "瀏覽器範例",
   "Code mockup": "程式碼範例",
   "Phone mockup": "手機範例",
   "Window mockup": "視窗範例",
@@ -422,5 +423,6 @@
   "Loading shows an animation to indicate that something is loading.": "載入指示將顯示動畫，指示某事物正在載入。",
   "Drawer sidebar is hidden by default. You can make it visible on larger screens using <code>lg:drawer-open</code> class (or using other responsive prefixes: <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>)": "側邊欄預設為隱藏。您可以使用 <code>lg:drawer-open</code> 類別 (或其他響應式前綴：<code>sm</code>、<code>md</code>、<code>lg</code>、<code>xl</code>) 使其在較大螢幕上可見。",
   "Become a sponsor": "成為贊助商",
+  "Browser mockup shows a box that looks like a browser window.": "顯示形似瀏覽器視窗的外框。",
   "": ""
 }
