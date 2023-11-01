@@ -166,6 +166,11 @@ export let exampleRepos = [
     href: "https://stackblitz.com/edit/daisyui-tachyons/",
     logos: ["/logos/jsdelivr.svg"],
   },
+  {
+    name: "WordPress (Gust)",
+    href: "https://wordpress.org/plugins/gust-daisy-ui",
+    logos: ["/logos/wordpress.svg", "/logos/gust.svg"],
+  },
 ]
 
 export let pages = [
