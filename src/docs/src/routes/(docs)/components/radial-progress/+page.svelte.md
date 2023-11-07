@@ -89,6 +89,6 @@ data="{[
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }} role="progressbar">70%</div>
-<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2rem" }}role="progressbar">70%</div>`
+<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2rem" }} role="progressbar">70%</div>`
 }</pre>
 </Component>
