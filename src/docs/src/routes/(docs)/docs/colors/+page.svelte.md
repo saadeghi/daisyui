@@ -18,14 +18,14 @@ published: true
 - <span class="badge badge-xs bg-green-500"></span> bg-green-500
 - <span class="badge badge-xs bg-orange-600"></span> bg-orange-600
 - <span class="badge badge-xs bg-blue-700"></span> bg-blue-700
-- etc.
+- <Translate text="etc." />
 
 <Translate text="It's suggested to use semantic color utility classes like:" />
 
 - <span class="badge badge-xs bg-primary"></span> bg-primary
 - <span class="badge badge-xs bg-secondary"></span> bg-secondary
 - <span class="badge badge-xs bg-accent"></span> bg-accent
-- etc.
+- <Translate text="etc." />
 
 <Translate text="Each color name contains CSS variables and each daisyUI theme applies color values to the utility classes when it is applied." />
 
