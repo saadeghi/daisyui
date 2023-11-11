@@ -4,18 +4,31 @@
   import { goto } from "$app/navigation"
   import Typeahead from "svelte-typeahead"
 
-  import { pages } from "$lib/data.js"
   import { getOS } from "$lib/util"
   import { t } from "$lib/i18n"
 
+  export let pages = []
+
   const dispatch = createEventDispatcher()
 
-  let searchIndex = []
-  pages.forEach((group) => {
-    group.items.forEach((item) => {
-      searchIndex.push(item)
+  function extractPages(obj) {
+    const items = []
+    function recursiveExtract(obj) {
+      if (obj.href) {
+        items.push(obj)
+      }
+      if (obj.items) {
+        obj.items.forEach((item) => {
+          recursiveExtract(item)
+        })
+      }
+    }
+    obj.forEach((item) => {
+      recursiveExtract(item)
     })
-  })
+    return items
+  }
+  let searchIndex = extractPages(pages)
 
   let os
   onMount(() => {
@@ -36,8 +49,8 @@
     dispatch("search", detail)
   }
 
-  export let addScrollPaddingToNavbar
-  export let removeScrollPaddingFromNavbar
+  export let addScrollPaddingToNavbar = undefined
+  export let removeScrollPaddingFromNavbar = undefined
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -45,7 +58,7 @@
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <label class={`searchbox relative mx-3 w-full`} bind:this={seachboxEl}>
   <svg
-    class={`pointer-events-none absolute z-10 my-3.5 ml-4 stroke-current opacity-60 ${
+    class={`pointer-events-none absolute z-10 my-3.5 ms-4 stroke-current opacity-60 ${
       $page.url.pathname == "/" ? "text-current" : "text-base-content"
     }`}
     width="16"
@@ -64,7 +77,7 @@
     limit={8}
     label="Search"
     data={searchIndex}
-    extract={(item) => item.tags}
+    extract={(item) => (item.tags ? item.tags : item.name)}
     inputAfterSelect="clear"
     on:select={onSelect}
     on:focus={removeScrollPaddingFromNavbar}
@@ -75,7 +88,7 @@
     </div>
   </Typeahead>
   <div
-    class={`pointer-events-none absolute right-10 top-2.5 gap-1 opacity-50 ${
+    class={`pointer-events-none absolute end-10 top-2.5 gap-1 opacity-50 rtl:flex-row-reverse ${
       $page.url.pathname == "/" ? "hidden" : "hidden lg:flex"
     }`}>
     {#if ["macos"].includes(os)}

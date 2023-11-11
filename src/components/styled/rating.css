@@ -10,6 +10,9 @@
   & .rating-hidden {
     @apply w-2 bg-transparent;
   }
+  input[type="radio"]:checked {
+    background-image: none;
+  }
   input:checked ~ input,
   input[aria-checked="true"] ~ input {
     @apply bg-opacity-20;

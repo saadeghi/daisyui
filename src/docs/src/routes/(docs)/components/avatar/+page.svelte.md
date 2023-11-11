@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -143,7 +144,7 @@ data="{[
 </Component>
 
 <Component title="Avatar group">
-<div class="avatar-group -space-x-6">
+<div class="avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="avatar">
     <div class="w-12 bg-base-300">
       <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
@@ -166,7 +167,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$avatar-group -space-x-6">
+`<div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
       <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -192,7 +193,7 @@ data="{[
 </Component>
 
 <Component title="Avatar group with counter">
-<div class="avatar-group -space-x-6">
+<div class="avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="avatar">
     <div class="w-12  bg-base-300">
       <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
@@ -209,13 +210,13 @@ data="{[
     </div>
   </div>
   <div class="avatar placeholder">
-    <div class="w-12 bg-neutral-focus text-neutral-content">
+    <div class="w-12 bg-neutral text-neutral-content">
       <span>+99</span>
     </div>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$avatar-group -space-x-6">
+`<div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
       <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -232,7 +233,7 @@ data="{[
     </div>
   </div>
   <div class="$$avatar $$placeholder">
-    <div class="w-12 bg-neutral-focus text-neutral-content">
+    <div class="w-12 bg-neutral text-neutral-content">
       <span>+99</span>
     </div>
   </div>
@@ -282,43 +283,43 @@ data="{[
 
 <Component title="Avatar placeholder">
 <div class="avatar placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-24">
+  <div class="bg-neutral text-neutral-content rounded-full w-24">
     <span class="text-3xl">K</span>
   </div>
 </div> 
 <div class="avatar online placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
+  <div class="bg-neutral text-neutral-content rounded-full w-16">
     <span class="text-xl">JO</span>
   </div>
 </div> 
 <div class="avatar placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-12">
+  <div class="bg-neutral text-neutral-content rounded-full w-12">
     <span>MX</span>
   </div>
 </div> 
 <div class="avatar placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-8">
+  <div class="bg-neutral text-neutral-content rounded-full w-8">
     <span class="text-xs">AA</span>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar $$placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-24">
+  <div class="bg-neutral text-neutral-content rounded-full w-24">
     <span class="text-3xl">K</span>
   </div>
 </div> 
 <div class="$$avatar $$online $$placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
+  <div class="bg-neutral text-neutral-content rounded-full w-16">
     <span class="text-xl">JO</span>
   </div>
 </div> 
 <div class="$$avatar $$placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-12">
+  <div class="bg-neutral text-neutral-content rounded-full w-12">
     <span>MX</span>
   </div>
 </div> 
 <div class="$$avatar $$placeholder">
-  <div class="bg-neutral-focus text-neutral-content rounded-full w-8">
+  <div class="bg-neutral text-neutral-content rounded-full w-8">
     <span class="text-xs">AA</span>
   </div>
 </div>`

@@ -1,40 +1,47 @@
 const colorNames = require("./colorNames")
 const themeDefaults = require("./themeDefaults")
 
-const { colord, getFormat, extend } = require("colord")
-const mixPlugin = require("colord/plugins/mix")
-const namesPlugin = require("colord/plugins/names")
-const lchPlugin = require("colord/plugins/lch")
-const hwbPlugin = require("colord/plugins/hwb")
-const labPlugin = require("colord/plugins/lab")
-const xyzPlugin = require("colord/plugins/xyz")
-
-extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
+const { toGamut, interpolate, wcagContrast } = require("culori")
 
 module.exports = {
-  changeColorValuesToObject: function (input) {
-    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return { h, s, l, a: 1 }
+  isDark: (color) => {
+    if (wcagContrast(color, "black") < wcagContrast(color, "white")) {
+      return true
+    }
+    return false
   },
 
-  turnColorValuesToString: function (input) {
-    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return `${h} ${s}% ${l}%`
+  colorObjToString: function (input, colorSpace) {
+    const cut = (number) => {
+      if (!number) {
+        return 0
+      }
+      return +number.toFixed(6)
+    }
+    if (colorSpace === "oklch") {
+      const { l, c, h } = input
+      return `${cut(l)} ${cut(c)} ${cut(h)}`
+    }
+    if (colorSpace === "hsl") {
+      const { h, s, l } = input
+      return `${cut(h)} ${cut(s)}% ${cut(l)}%`
+    }
   },
 
-  generateForegroundColorFrom: function (input, percentage = 0.8) {
-    const str = colord(input)
-      .mix(colord(input).isDark() ? "white" : "black", percentage)
-      .toHslString()
-    return this.turnColorValuesToString(str)
+  generateForegroundColorFrom: function (input, percentage = 0.8, colorSpace) {
+    const result = interpolate(
+      [input, this.isDark(input) ? "white" : "black"],
+      colorSpace
+    )(percentage)
+    return this.colorObjToString(result, colorSpace)
   },
 
-  generateDarkenColorFrom: function (input, percentage = 0.07) {
-    const str = colord(input).darken(percentage).toHslString()
-    return this.turnColorValuesToString(str)
+  generateDarkenColorFrom: function (input, percentage = 0.07, colorSpace) {
+    const result = interpolate([input, "black"], colorSpace)(percentage)
+    return this.colorObjToString(result, colorSpace)
   },
 
-  convertColorFormat: function (input, colorFunction = "hsl") {
+  convertColorFormat: function (input, colorSpace) {
     if (typeof input !== "object" || input === null) {
       return input
     }
@@ -42,45 +49,11 @@ module.exports = {
     const resultObj = {}
 
     Object.entries(input).forEach(([rule, value]) => {
-      // if (!Object.hasOwn(colorNames, rule)) {
-      // resultObj[rule] = value
-      // } else {
-      //   let arr
-      //   if (getFormat(value) === "lch") {
-      //     arr = this.changeColorValuesToObject(value)
-      //   } else {
-      //     arr = colord(value).toLch()
-      //   }
-      //   resultObj[colorNames[rule]] = arr.l + " " + arr.c + " " + arr.h
-      // }
-
       if (colorNames.hasOwnProperty(rule)) {
-        const hslArray = colord(value).toHsl()
-        resultObj[colorNames[rule]] = `${hslArray.h} ${hslArray.s}% ${hslArray.l}%`
+        const colorObj = toGamut(colorSpace)(value)
+        resultObj[colorNames[rule]] = this.colorObjToString(colorObj, colorSpace)
       } else {
         resultObj[rule] = value
-      }
-
-      // if (getFormat("lch(" + value + ")") === "lch") {
-      //   resultObj[rule] = value
-      //   if (colorFunction === "hsl") {
-      //     let arr = colord("lch(" + value + ")").toHsl()
-      //     resultObj[rule] = arr.h + " " + arr.s + "% " + arr.l + "%"
-      //   }
-      // }
-
-      // auto generate focus colors
-      if (!Object.hasOwn(input, "primary-focus")) {
-        resultObj["--pf"] = this.generateDarkenColorFrom(input["primary"])
-      }
-      if (!Object.hasOwn(input, "secondary-focus")) {
-        resultObj["--sf"] = this.generateDarkenColorFrom(input["secondary"])
-      }
-      if (!Object.hasOwn(input, "accent-focus")) {
-        resultObj["--af"] = this.generateDarkenColorFrom(input["accent"])
-      }
-      if (!Object.hasOwn(input, "neutral-focus")) {
-        resultObj["--nf"] = this.generateDarkenColorFrom(input["neutral"])
       }
 
       // auto generate base colors
@@ -88,73 +61,73 @@ module.exports = {
         resultObj["--b1"] = "100 0 0"
       }
       if (!Object.hasOwn(input, "base-200")) {
-        resultObj["--b2"] = this.generateDarkenColorFrom(input["base-100"])
+        resultObj["--b2"] = this.generateDarkenColorFrom(input["base-100"], 0.07, colorSpace)
       }
       if (!Object.hasOwn(input, "base-300")) {
         if (Object.hasOwn(input, "base-200")) {
-          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-200"])
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-200"], 0.07, colorSpace)
         } else {
-          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-100"], 0.14)
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-100"], 0.14, colorSpace)
         }
       }
 
       // auto generate state colors
 
       if (!Object.hasOwn(input, "info")) {
-        resultObj["--in"] = 198 + " " + 93 + "%" + " " + 60 + "%"
+        resultObj["--in"] = "0.7206 0.191 231.6"
       }
       if (!Object.hasOwn(input, "success")) {
-        resultObj["--su"] = 158 + " " + 64 + "%" + " " + 52 + "%"
+        resultObj["--su"] = "0.7441 0.213 164.75"
       }
       if (!Object.hasOwn(input, "warning")) {
-        resultObj["--wa"] = 43 + " " + 96 + "%" + " " + 56 + "%"
+        resultObj["--wa"] = "0.8471 0.199 83.87"
       }
       if (!Object.hasOwn(input, "error")) {
-        resultObj["--er"] = 0 + " " + 91 + "%" + " " + 71 + "%"
+        resultObj["--er"] = "0.7176 0.221 22.18"
       }
 
       // auto generate content colors
       if (!Object.hasOwn(input, "base-content")) {
-        resultObj["--bc"] = this.generateForegroundColorFrom(input["base-100"])
+        resultObj["--bc"] = this.generateForegroundColorFrom(input["base-100"], 0.8, colorSpace)
       }
       if (!Object.hasOwn(input, "primary-content")) {
-        resultObj["--pc"] = this.generateForegroundColorFrom(input["primary"])
+        resultObj["--pc"] = this.generateForegroundColorFrom(input["primary"], 0.8, colorSpace)
       }
       if (!Object.hasOwn(input, "secondary-content")) {
-        resultObj["--sc"] = this.generateForegroundColorFrom(input["secondary"])
+        resultObj["--sc"] = this.generateForegroundColorFrom(input["secondary"], 0.8, colorSpace)
       }
       if (!Object.hasOwn(input, "accent-content")) {
-        resultObj["--ac"] = this.generateForegroundColorFrom(input["accent"])
+        resultObj["--ac"] = this.generateForegroundColorFrom(input["accent"], 0.8, colorSpace)
       }
       if (!Object.hasOwn(input, "neutral-content")) {
-        resultObj["--nc"] = this.generateForegroundColorFrom(input["neutral"])
+        resultObj["--nc"] = this.generateForegroundColorFrom(input["neutral"], 0.8, colorSpace)
       }
       if (!Object.hasOwn(input, "info-content")) {
         if (Object.hasOwn(input, "info")) {
-          resultObj["--inc"] = this.generateForegroundColorFrom(input["info"])
+          resultObj["--inc"] = this.generateForegroundColorFrom(input["info"], 0.8, colorSpace)
         } else {
-          resultObj["--inc"] = 198 + " " + 100 + "%" + " " + 12 + "%"
+          resultObj["--inc"] = "0 0 0"
         }
       }
       if (!Object.hasOwn(input, "success-content")) {
         if (Object.hasOwn(input, "success")) {
-          resultObj["--suc"] = this.generateForegroundColorFrom(input["success"])
+          resultObj["--suc"] = this.generateForegroundColorFrom(input["success"], 0.8, colorSpace)
         } else {
-          resultObj["--suc"] = 158 + " " + 100 + "%" + " " + 10 + "%"
+          resultObj["--suc"] = "0 0 0"
         }
       }
       if (!Object.hasOwn(input, "warning-content")) {
         if (Object.hasOwn(input, "warning")) {
-          resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"])
+          resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"], 0.8, colorSpace)
         } else {
-          resultObj["--wac"] = 43 + " " + 100 + "%" + " " + 11 + "%"
+          resultObj["--wac"] = "0 0 0"
         }
       }
       if (!Object.hasOwn(input, "error-content")) {
         if (Object.hasOwn(input, "error")) {
-          resultObj["--erc"] = this.generateForegroundColorFrom(input["error"])
+          resultObj["--erc"] = this.generateForegroundColorFrom(input["error"], 0.8, colorSpace)
         } else {
-          resultObj["--erc"] = 0 + " " + 100 + "%" + " " + 14 + "%"
+          resultObj["--erc"] = "0 0 0"
         }
       }
 
@@ -175,18 +148,16 @@ module.exports = {
     return resultObj
   },
 
-  injectThemes: function (addBase, config, themes, colorFunction) {
-    const themeSelector = config("daisyui.themeSelector") ?? ":root";
+  injectThemes: function (addBase, config, themes) {
+    let colorSpace = "oklch"
+    // if (["oklch", "hsl"].includes(config("daisyui.colorSpace"))) {
+    //   colorSpace = config("daisyui.colorSpace")
+    // }
+    const themeRoot = config("daisyui.themeRoot") ?? ":root"
     const includedThemesObj = {}
-    // includedThemesObj["@supports (not(color: lch(0 0 0)))"] = {}
     // add default themes
     Object.entries(themes).forEach(([theme, value]) => {
-      if (colorFunction === "lch") {
-        includedThemesObj[theme] = this.convertColorFormat(value)
-      }
-      if (colorFunction === "hsl") {
-        includedThemesObj[theme] = this.convertColorFormat(value, "hsl")
-      }
+      includedThemesObj[theme] = this.convertColorFormat(value, colorSpace)
     })
 
     // add custom themes
@@ -194,8 +165,10 @@ module.exports = {
       config("daisyui.themes").forEach((item) => {
         if (typeof item === "object" && item !== null) {
           Object.entries(item).forEach(([customThemeName, customThemevalue]) => {
-            includedThemesObj["[data-theme=" + customThemeName + "]"] =
-              this.convertColorFormat(customThemevalue)
+            includedThemesObj[customThemeName] = this.convertColorFormat(
+              customThemevalue,
+              colorSpace
+            )
           })
         }
       })
@@ -208,7 +181,7 @@ module.exports = {
           Object.keys(theme).forEach((customThemeName) => {
             themeOrder.push(customThemeName)
           })
-        } else if (Object.hasOwn(includedThemesObj, "[data-theme=" + theme + "]")) {
+        } else if (Object.hasOwn(includedThemesObj, theme)) {
           themeOrder.push(theme)
         }
       })
@@ -223,7 +196,7 @@ module.exports = {
     themeOrder.forEach((themeName, index) => {
       if (index === 0) {
         // first theme as root
-        themesToInject[themeSelector] = includedThemesObj["[data-theme=" + themeName + "]"]
+        themesToInject[themeRoot] = includedThemesObj[themeName]
       } else if (index === 1) {
         // auto dark
         if (config("daisyui.darkTheme")) {
@@ -232,7 +205,7 @@ module.exports = {
             themeOrder.includes(config("daisyui.darkTheme"))
           ) {
             themesToInject["@media (prefers-color-scheme: dark)"] = {
-              [themeSelector]: includedThemesObj[`[data-theme=${config("daisyui.darkTheme")}]`],
+              [themeRoot]: includedThemesObj[`${config("daisyui.darkTheme")}`],
             }
           }
         } else if (config("daisyui.darkTheme") === false) {
@@ -240,27 +213,44 @@ module.exports = {
         } else {
           if (themeOrder[0] !== "dark" && themeOrder.includes("dark")) {
             themesToInject["@media (prefers-color-scheme: dark)"] = {
-              [themeSelector]: includedThemesObj["[data-theme=dark]"],
+              [themeRoot]: includedThemesObj["dark"],
             }
           }
         }
         // theme 0 with name
-        themesToInject["[data-theme=" + themeOrder[0] + "]"] =
-          includedThemesObj["[data-theme=" + themeOrder[0] + "]"]
+        themesToInject[
+          "[data-theme=" +
+            themeOrder[0] +
+            "], " +
+            themeRoot +
+            ":has(input.theme-controller[value=" +
+            themeOrder[0] +
+            "]:checked)"
+        ] = includedThemesObj[themeOrder[0]]
         // theme 1 with name
-        themesToInject["[data-theme=" + themeOrder[1] + "]"] =
-          includedThemesObj["[data-theme=" + themeOrder[1] + "]"]
+        themesToInject[
+          "[data-theme=" +
+            themeOrder[1] +
+            "], " +
+            themeRoot +
+            ":has(input.theme-controller[value=" +
+            themeOrder[1] +
+            "]:checked)"
+        ] = includedThemesObj[themeOrder[1]]
       } else {
-        themesToInject["[data-theme=" + themeName + "]"] =
-          includedThemesObj["[data-theme=" + themeName + "]"]
+        themesToInject[
+          "[data-theme=" +
+            themeName +
+            "], " +
+            themeRoot +
+            ":has(input.theme-controller[value=" +
+            themeName +
+            "]:checked)"
+        ] = includedThemesObj[themeName]
       }
     })
-    if (colorFunction === "lch") {
-      addBase({ "@supports (color: lch(0 0 0))": themesToInject })
-    }
-    if (colorFunction === "hsl") {
-      addBase(themesToInject)
-    }
+
+    addBase(themesToInject)
 
     return {
       includedThemesObj,

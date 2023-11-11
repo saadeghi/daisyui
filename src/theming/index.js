@@ -1,39 +1,37 @@
-let colorObject = {
+const colorNames = require("./colorNames")
+
+const colorObject = {
   "transparent": "transparent",
   "current": "currentColor",
 
-  "primary": "hsl(var(--p) / <alpha-value>)",
-  "primary-focus": "hsl(var(--pf) / <alpha-value>)",
-  "primary-content": "hsl(var(--pc) / <alpha-value>)",
+  "primary": "var(--fallback-p,oklch(var(--p)/<alpha-value>))",
+  "primary-content": "var(--fallback-pc,oklch(var(--pc)/<alpha-value>))",
 
-  "secondary": "hsl(var(--s) / <alpha-value>)",
-  "secondary-focus": "hsl(var(--sf) / <alpha-value>)",
-  "secondary-content": "hsl(var(--sc) / <alpha-value>)",
+  "secondary": "var(--fallback-s,oklch(var(--s)/<alpha-value>))",
+  "secondary-content": "var(--fallback-sc,oklch(var(--sc)/<alpha-value>))",
 
-  "accent": "hsl(var(--a) / <alpha-value>)",
-  "accent-focus": "hsl(var(--af) / <alpha-value>)",
-  "accent-content": "hsl(var(--ac) / <alpha-value>)",
+  "accent": "var(--fallback-a,oklch(var(--a)/<alpha-value>))",
+  "accent-content": "var(--fallback-ac,oklch(var(--ac)/<alpha-value>))",
 
-  "neutral": "hsl(var(--n) / <alpha-value>)",
-  "neutral-focus": "hsl(var(--nf) / <alpha-value>)",
-  "neutral-content": "hsl(var(--nc) / <alpha-value>)",
+  "neutral": "var(--fallback-n,oklch(var(--n)/<alpha-value>))",
+  "neutral-content": "var(--fallback-nc,oklch(var(--nc)/<alpha-value>))",
 
-  "base-100": "hsl(var(--b1) / <alpha-value>)",
-  "base-200": "hsl(var(--b2) / <alpha-value>)",
-  "base-300": "hsl(var(--b3) / <alpha-value>)",
-  "base-content": "hsl(var(--bc) / <alpha-value>)",
+  "base-100": "var(--fallback-b1,oklch(var(--b1)/<alpha-value>))",
+  "base-200": "var(--fallback-b2,oklch(var(--b2)/<alpha-value>))",
+  "base-300": "var(--fallback-b3,oklch(var(--b3)/<alpha-value>))",
+  "base-content": "var(--fallback-bc,oklch(var(--bc)/<alpha-value>))",
 
-  "info": "hsl(var(--in) / <alpha-value>)",
-  "info-content": "hsl(var(--inc) / <alpha-value>)",
+  "info": "var(--fallback-in,oklch(var(--in)/<alpha-value>))",
+  "info-content": "var(--fallback-inc,oklch(var(--inc)/<alpha-value>))",
 
-  "success": "hsl(var(--su) / <alpha-value>)",
-  "success-content": "hsl(var(--suc) / <alpha-value>)",
+  "success": "var(--fallback-su,oklch(var(--su)/<alpha-value>))",
+  "success-content": "var(--fallback-suc,oklch(var(--suc)/<alpha-value>))",
 
-  "warning": "hsl(var(--wa) / <alpha-value>)",
-  "warning-content": "hsl(var(--wac) / <alpha-value>)",
+  "warning": "var(--fallback-wa,oklch(var(--wa)/<alpha-value>))",
+  "warning-content": "var(--fallback-wac,oklch(var(--wac)/<alpha-value>))",
 
-  "error": "hsl(var(--er) / <alpha-value>)",
-  "error-content": "hsl(var(--erc) / <alpha-value>)",
+  "error": "var(--fallback-er,oklch(var(--er)/<alpha-value>))",
+  "error-content": "var(--fallback-erc,oklch(var(--erc)/<alpha-value>))",
 }
 
 module.exports = colorObject

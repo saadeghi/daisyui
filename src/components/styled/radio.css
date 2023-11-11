@@ -1,16 +1,20 @@
-.radio {
+[type="radio"].radio {
   --chkbg: var(--bc);
   @apply border-base-content h-6 w-6 cursor-pointer appearance-none rounded-full border border-opacity-20;
+  &:focus {
+    box-shadow: none;
+  }
   &:focus-visible {
     @apply outline-base-content outline outline-2 outline-offset-2;
   }
   &:checked,
   &[aria-checked="true"] {
     @apply bg-base-content;
+    background-image: none;
     animation: radiomark var(--animation-input, 0.2s) ease-out;
     box-shadow:
-      0 0 0 4px hsl(var(--b1)) inset,
-      0 0 0 4px hsl(var(--b1)) inset;
+      0 0 0 4px theme(colors.base-100) inset,
+      0 0 0 4px theme(colors.base-100) inset;
   }
   &-primary {
     --chkbg: var(--p);
@@ -97,18 +101,18 @@
 @keyframes radiomark {
   0% {
     box-shadow:
-      0 0 0 12px hsl(var(--b1)) inset,
-      0 0 0 12px hsl(var(--b1)) inset;
+      0 0 0 12px theme(colors.base-100) inset,
+      0 0 0 12px theme(colors.base-100) inset;
   }
   50% {
     box-shadow:
-      0 0 0 3px hsl(var(--b1)) inset,
-      0 0 0 3px hsl(var(--b1)) inset;
+      0 0 0 3px theme(colors.base-100) inset,
+      0 0 0 3px theme(colors.base-100) inset;
   }
   100% {
     box-shadow:
-      0 0 0 4px hsl(var(--b1)) inset,
-      0 0 0 4px hsl(var(--b1)) inset;
+      0 0 0 4px theme(colors.base-100) inset,
+      0 0 0 4px theme(colors.base-100) inset;
   }
 }
 

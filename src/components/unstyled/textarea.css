@@ -1,4 +1,4 @@
 .textarea {
-  @apply min-h-12 flex-shrink;
+  @apply min-h-[3rem] flex-shrink;
   @apply px-4 py-2 text-sm leading-loose;
 }

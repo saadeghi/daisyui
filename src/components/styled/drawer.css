@@ -8,7 +8,7 @@
   &-toggle {
     &:checked ~ .drawer-side {
       & > .drawer-overlay {
-        background-color: hsl(0 0% 0%/0.4);
+        background-color: #00000066;
       }
     }
     &:focus-visible ~ .drawer-content label.drawer-button {

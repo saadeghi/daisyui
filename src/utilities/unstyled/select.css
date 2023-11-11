@@ -1,24 +1,24 @@
 .select {
   &-md {
-    @apply min-h-12 h-12 pl-4 pr-10 text-sm leading-loose;
+    @apply h-12 min-h-[3rem] pl-4 pr-10 text-sm leading-loose;
     [dir="rtl"] & {
       @apply pl-10 pr-4;
     }
   }
   &-lg {
-    @apply min-h-16 h-16 pl-6 pr-8 text-lg leading-loose;
+    @apply h-16 min-h-[4rem] pl-6 pr-8 text-lg leading-loose;
     [dir="rtl"] & {
       @apply pl-8 pr-6;
     }
   }
   &-sm {
-    @apply min-h-8 h-8 pl-3 pr-8 text-sm leading-8;
+    @apply h-8 min-h-[2rem] pl-3 pr-8 text-sm leading-8;
     [dir="rtl"] & {
       @apply pl-8 pr-3;
     }
   }
   &-xs {
-    @apply min-h-6 h-6 pl-2 pr-8 text-xs leading-relaxed;
+    @apply h-6 min-h-[1.5rem] pl-2 pr-8 text-xs leading-relaxed;
     [dir="rtl"] & {
       @apply pl-8 pr-2;
     }

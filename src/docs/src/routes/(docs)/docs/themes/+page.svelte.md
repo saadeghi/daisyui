@@ -5,8 +5,9 @@ published: true
 ---
 
 <script>
-  import ThemePreviews from "@components/ThemePreviews.svelte"
-  import Translate from "@components/Translate.svelte"
+  import ThemePreviews from "$components/ThemePreviews.svelte"
+  import Translate from "$components/Translate.svelte"
+  export let data
 </script>
 
 <Translate text="daisyUI comes with a number of themes, which you can use with no extra effort." />  
@@ -33,7 +34,7 @@ module.exports = {
 
 <Translate text="Try them:" />
 
-<ThemePreviews/>
+<ThemePreviews themes={data.themes}/>
 
 ```js
 module.exports = {
@@ -69,6 +70,9 @@ module.exports = {
       "night",
       "coffee",
       "winter",
+      "dim",
+      "nord",
+      "sunset",
     ],
   },
 }
@@ -195,7 +199,6 @@ module.exports = {
           "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
           "--animation-btn": "0.25s", // duration of animation when you click on button
           "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc
-          "--btn-text-case": "uppercase", // set default text transform for buttons
           "--btn-focus-scale": "0.95", // scale transform of button when you focus on it
           "--border-btn": "1px", // border width of buttons
           "--tab-border": "1px", // border width of tabs
@@ -231,8 +234,8 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["[data-theme=light]"],
-          "primary": "blue",
-          "primary-focus": "mediumblue",
+          primary: "blue",
+          secondary: "teal",
         },
       },
     ],

@@ -68,3 +68,15 @@ export const timeago = (timestamp, locale = "en") => {
 export const formattedDate = (date) => {
   return new Date(date).toLocaleDateString("en-UK", { dateStyle: "medium" })
 }
+
+export const slugify = (str) => {
+  return String(str)
+    .normalize("NFKD") // split accented characters into their base characters and diacritical marks
+    .replace(/[\u0300-\u036f]/g, "") // remove all the accents, which happen to be all in the \u03xx UNICODE block.
+    .trim() // trim leading or trailing whitespace
+    .toLowerCase() // convert to lowercase
+    .replace(/[^a-z0-9 -]/g, "") // remove non-alphanumeric characters
+    .replace(/\s+/g, "-") // replace spaces with hyphens
+    .replace(/-+/g, "-") // remove consecutive hyphens
+    .replace(/^-+|-+$/g, "") // remove leading and trailing hyphens
+}

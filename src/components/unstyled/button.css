@@ -1,9 +1,7 @@
 .btn {
-  @apply rounded-btn inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent text-center transition duration-200 ease-out;
-  @apply min-h-12 h-12 px-4;
+  @apply rounded-btn inline-flex h-12 min-h-[3rem] flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent px-4 text-center;
   font-size: 0.875rem;
   line-height: 1em;
-
   /* disabled */
   &-disabled,
   &[disabled],
@@ -20,20 +18,9 @@
   }
 }
 
-/* group */
-.btn-group {
-  @apply inline-flex;
-  & > input[type="radio"].btn {
-    @apply appearance-none;
-  }
-  & > input[type="radio"].btn:before {
-    content: attr(data-title);
-  }
-}
-
 /* radio input and checkbox as button */
-.btn:is(input[type="checkbox"]),
-.btn:is(input[type="radio"]) {
+:where(.btn:is(input[type="checkbox"])),
+:where(.btn:is(input[type="radio"])) {
   @apply w-auto appearance-none;
 }
 .btn:is(input[type="checkbox"]):after,

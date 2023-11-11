@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -126,14 +127,14 @@ data="{[
 </Component>
 
 <Component title="Activate using class name instead of checkbox" desc="Instead of working with click, it shows swap-on item if you add swap-active class name. You can add or remove swap-active class using JS">
-<label class="swap text-6xl">
+<div class="swap text-6xl">
   <div class="swap-on">🥵</div>
   <div class="swap-off">🥶</div>
-</label>
-<label class="swap swap-active text-6xl">
+</div>
+<div class="swap swap-active text-6xl">
   <div class="swap-on">🥳</div>
   <div class="swap-off">😭</div>
-</label>
+</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<label class="$$swap text-6xl">
   <div class="$$swap-on">🥵</div>

@@ -9,8 +9,10 @@
     "> 7%"
   ],
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/typography": "0.5.10",
     "astro": "3.2.2",
+    "autoprefixer": "^10.4.16",
     "daisyui": "3.8.3",
     "tailwindcss": "3.3.3",
     "tailwindcss-flip": "1.0.0"

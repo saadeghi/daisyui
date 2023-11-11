@@ -1,10 +1,11 @@
 .textarea {
-  @apply border-base-content bg-base-100 rounded-btn border border-opacity-0;
+  @apply bg-base-100 rounded-btn border border-transparent;
   &-bordered {
-    @apply border-opacity-20;
+    @apply border-base-content/20;
   }
   &:focus {
-    @apply outline-base-content/20 outline outline-2 outline-offset-2;
+    box-shadow: none;
+    @apply border-base-content/20 outline-base-content/20 outline outline-2 outline-offset-2;
   }
   &-ghost {
     @apply bg-opacity-5;
@@ -16,43 +17,43 @@
   &-primary {
     @apply border-primary;
     &:focus {
-      @apply outline-primary;
+      @apply outline-primary border-primary;
     }
   }
   &-secondary {
     @apply border-secondary;
     &:focus {
-      @apply outline-secondary;
+      @apply outline-secondary border-secondary;
     }
   }
   &-accent {
     @apply border-accent;
     &:focus {
-      @apply outline-accent;
+      @apply outline-accent border-accent;
     }
   }
   &-info {
     @apply border-info;
     &:focus {
-      @apply outline-info;
+      @apply outline-info border-info;
     }
   }
   &-success {
     @apply border-success;
     &:focus {
-      @apply outline-success;
+      @apply outline-success border-success;
     }
   }
   &-warning {
     @apply border-warning;
     &:focus {
-      @apply outline-warning;
+      @apply outline-warning border-warning;
     }
   }
   &-error {
     @apply border-error;
     &:focus {
-      @apply outline-error;
+      @apply outline-error border-error;
     }
   }
   &-disabled,

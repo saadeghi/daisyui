@@ -1,9 +1,9 @@
-.toggle {
-  --tglbg: hsl(var(--b1));
+[type="checkbox"].toggle {
+  --tglbg: theme(colors.base-100);
   --handleoffset: 1.5rem;
   --handleoffsetcalculator: calc(var(--handleoffset) * -1);
   --togglehandleborder: 0 0;
-  @apply border-base-content bg-base-content rounded-badge h-6 w-12 cursor-pointer appearance-none border border-opacity-20 bg-opacity-50;
+  @apply text-base-content/50 rounded-badge h-6 w-12 cursor-pointer appearance-none border border-current bg-current;
   transition:
     background,
     box-shadow var(--animation-input, 0.2s) ease-out;
@@ -17,17 +17,21 @@
   &:focus-visible {
     @apply outline-base-content/20 outline outline-2 outline-offset-2;
   }
+  &:hover {
+    @apply bg-current;
+  }
   &:checked,
   &[checked="true"],
   &[aria-checked="true"] {
+    background-image: none;
     --handleoffsetcalculator: var(--handleoffset);
-    @apply border-opacity-100 bg-opacity-100;
+    @apply text-base-content;
     [dir="rtl"] & {
       --handleoffsetcalculator: calc(var(--handleoffset) * -1);
     }
   }
   &:indeterminate {
-    @apply border-opacity-100 bg-opacity-100;
+    @apply text-base-content;
     box-shadow:
       calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset,
       calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset,
@@ -46,7 +50,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      @apply border-primary;
       @apply border-primary bg-primary text-primary-content border-opacity-10;
     }
   }
@@ -57,7 +60,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      @apply border-secondary;
       @apply border-secondary bg-secondary text-secondary-content border-opacity-10;
     }
   }
@@ -68,7 +70,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      @apply border-accent;
       @apply border-accent bg-accent text-accent-content border-opacity-10;
     }
   }
@@ -79,7 +80,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      @apply border-success;
       @apply border-success bg-success text-success-content border-opacity-10;
     }
   }
@@ -90,7 +90,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      @apply border-warning;
       @apply border-warning bg-warning text-warning-content border-opacity-10;
     }
   }
@@ -101,7 +100,6 @@
     &:checked,
     &[checked="true"],
     &[aria-checked="true"] {
-      @apply border-info;
       @apply border-info bg-info text-info-content border-opacity-10;
     }
   }
@@ -117,8 +115,8 @@
   }
   &:disabled {
     @apply border-base-content cursor-not-allowed bg-transparent opacity-30;
-    --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset,
-      var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
+    --togglehandleborder: 0 0 0 3px theme(colors.base-content) inset,
+      var(--handleoffsetcalculator) 0 0 3px theme(colors.base-content) inset;
   }
 }
 

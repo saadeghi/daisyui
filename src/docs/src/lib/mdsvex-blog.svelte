@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  import SEO from "@components/SEO.svelte"
+  import SEO from "$components/SEO.svelte"
   import { timeago, formattedDate } from "$lib/util"
   export let title, desc, date, author, tags, thumbnail, published
   const slug = $page.url.pathname.split("/").at(-2)

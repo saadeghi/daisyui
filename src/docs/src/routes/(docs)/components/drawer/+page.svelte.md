@@ -6,9 +6,10 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
-  import Translate from "@components/Translate.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
+  import Translate from "$components/Translate.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -58,8 +59,8 @@ data="{[
   <div class="drawer-side h-full absolute">
     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+      <li><button>Sidebar Item 1</button></li>
+      <li><button>Sidebar Item 2</button></li>
     </ul>
   </div>
 </div>
@@ -93,8 +94,8 @@ data="{[
   <div class="drawer-side h-full absolute">
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+      <li><button>Sidebar Item 1</button></li>
+      <li><button>Sidebar Item 2</button></li>
     </ul>
   </div>
 </div>
@@ -132,8 +133,8 @@ data="{[
       <div class="flex-1 px-2 mx-2">Navbar Title</div>
       <div class="flex-none hidden lg:block">
         <ul class="menu menu-horizontal">
-          <li><a>Navbar Item 1</a></li>
-          <li><a>Navbar Item 2</a></li>
+          <li><button>Navbar Item 1</button></li>
+          <li><button>Navbar Item 2</button></li>
         </ul>
       </div>
     </div>
@@ -142,8 +143,8 @@ data="{[
   <div class="drawer-side h-full absolute">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
     <ul class="p-4 menu w-60 md:w-80 min-h-full bg-base-200">
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+      <li><button>Sidebar Item 1</button></li>
+      <li><button>Sidebar Item 2</button></li>
     </ul>
   </div>
 </div>
@@ -188,11 +189,11 @@ data="{[
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
   </div> 
-  <div class="drawer-side h-full absolute ml-[-54rem] w-[stretch]">
+  <div class="drawer-side h-full absolute ms-[-54rem] w-[stretch]">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+      <li><button>Sidebar Item 1</button></li>
+      <li><button>Sidebar Item 2</button></li>
     </ul>
   </div>
 </div>

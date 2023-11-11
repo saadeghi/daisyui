@@ -1,5 +1,5 @@
 .table {
-  @apply rounded-box text-left text-sm;
+  @apply rounded-box text-left text-sm rtl:text-right;
   :where(th, td) {
     @apply px-4 py-3 align-middle;
   }

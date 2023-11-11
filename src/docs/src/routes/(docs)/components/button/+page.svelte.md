@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -29,7 +30,7 @@ data="{[
   { type:'modifier', class: 'btn-active', desc: 'Force button to show active state' },
   { type:'modifier', class: 'btn-disabled', desc: 'Force button to show disabled state' },
   { type:'modifier', class: 'glass', desc: 'Button with a glass effect' },
-  { type:'modifier', class: 'no-animation', desc: 'Disables click animation' },
+  { type:'modifier', class: 'no-animation', desc: 'Disables click animation', prefix: false },
   { type:'responsive', class: 'btn-lg', desc: 'Large button' },
   { type:'responsive', class: 'btn-md', desc: 'Medium button (default)' },
   { type:'responsive', class: 'btn-sm', desc: 'Small button' },
@@ -160,7 +161,7 @@ data="{[
 </Component>
 
 <Component title="Buttons with different HTML tags" desc="You can use `btn` class on <button>, <input>, <a>, etc...">
-<a role="button" class="btn">Link</a>
+<a href="/components/button/#buttons-with-different-html-tags" role="button" class="btn">Link</a>
 <button type="submit" class="btn">Button</button>
 <input type="button" value="Input" class="btn" />
 <input type="submit" value="Submit" class="btn" />
@@ -180,7 +181,7 @@ data="{[
 
 <Component title="Disabled buttons">
 <button class="btn" disabled="disabled">Disabled using attribute</button>
-<button class="btn btn-disabled" tabindex="-1" role="button" aria-disabled="true">Disabled using class name</button>
+<button class="btn btn-disabled" tabindex="-1" aria-disabled="true">Disabled using class name</button>
 <pre slot="html" use:replace={{to: $prefix }}>{
 `<button class="$$btn" disabled="disabled">Disabled using attribute</button>
 <button class="$$btn $$btn-disabled" tabindex="-1" role="button" aria-disabled="true">Disabled using class name</button>`

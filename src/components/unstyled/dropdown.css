@@ -11,13 +11,13 @@
   @apply invisible opacity-0;
 }
 .dropdown-end .dropdown-content {
-  @apply right-0;
+  @apply end-0;
 }
 .dropdown-left .dropdown-content {
-  @apply bottom-auto right-full top-0;
+  @apply bottom-auto end-full top-0;
 }
 .dropdown-right .dropdown-content {
-  @apply bottom-auto left-full top-0;
+  @apply bottom-auto start-full top-0;
 }
 .dropdown-bottom .dropdown-content {
   @apply bottom-auto top-full;

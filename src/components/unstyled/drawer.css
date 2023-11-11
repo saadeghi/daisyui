@@ -5,7 +5,7 @@
     @apply col-start-2 row-start-1;
   }
   &-side {
-    @apply pointer-events-none fixed left-0 top-0 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overflow-y-auto overscroll-contain;
+    @apply pointer-events-none fixed start-0 top-0 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overflow-y-auto overscroll-contain;
     height: 100vh;
     height: 100dvh;
     scrollbar-width: none;
@@ -19,10 +19,10 @@
       @apply col-start-1 row-start-1;
     }
     & > *:not(.drawer-overlay) {
-      @apply transition duration-300 ease-out;
+      @apply transition-transform duration-300 ease-out will-change-transform;
       transform: translateX(-100%);
       [dir="rtl"] & {
-        transform: translateX(-100%);
+        transform: translateX(100%);
       }
     }
   }
@@ -48,6 +48,9 @@
       }
       & ~ .drawer-side > *:not(.drawer-overlay) {
         transform: translateX(100%);
+        [dir="rtl"] & {
+          transform: translateX(-100%);
+        }
       }
       &:checked ~ .drawer-side > *:not(.drawer-overlay) {
         transform: translateX(0%);

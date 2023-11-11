@@ -1,68 +1,15 @@
 <script>
   import { page } from "$app/stores"
-
-  import { onNavigate } from "$app/navigation"
-  import { onMount } from "svelte"
-  import { currentLang, langs } from "@src/lib/i18n"
-  import Footer from "@components/Footer.svelte"
-  import Ads from "@components/Ads.svelte"
-  import Sponsors from "@components/Sponsors.svelte"
-  import "@components/StyleHandler.svelte"
-
+  import Footer from "$components/Footer.svelte"
+  import Ads from "$components/Ads.svelte"
+  import Sponsors from "$components/Sponsors.svelte"
   import "prism-themes/themes/prism-material-dark.css"
-  import "@src/prism-themes-modify.css"
-
-  import Navbar from "@components/Navbar.svelte"
-  import Scripts from "@components/Scripts.svelte"
-  onNavigate((navigation) => {
-    if (!document.startViewTransition) return
-
-    return new Promise((resolve) => {
-      document.startViewTransition(async () => {
-        resolve()
-        await navigation.complete
-      })
-    })
-  })
-
-  onMount(() => {
-    let lang = new URL(document.location).searchParams.get("lang")
-    if (langs.includes(lang)) {
-      $currentLang = lang
-      localStorage.setItem("lang", $currentLang)
-    }
-    if (localStorage.getItem("lang")) {
-      $currentLang = localStorage.getItem("lang")
-    }
-  })
+  import "$lib/style/prism-themes-modify.css"
   export let data
   let { tags } = data
 </script>
 
-<svelte:head>
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="daisyUI Blog"
-    href="https://daisyui.com/blog/rss.xml" />
-  <link
-    media="screen and (min-width: 520px)"
-    rel="preconnect"
-    href="https://fonts.googleapis.com" />
-  <link
-    media="screen and (min-width: 520px)"
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin />
-  <link
-    media="screen and (min-width: 520px)"
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&family=Noto+Sans+JP:wght@300;900&family=Noto+Sans:wght@300;900&display=swap"
-    rel="stylesheet" />
-</svelte:head>
-
-<Navbar hideSidebarButton="true" />
-
-<div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
+<div class="flex flex-col-reverse justify-between gap-6 xl:flex-row" dir="ltr">
   <div class="w-full max-w-none flex-grow pt-10">
     <div class="flex min-h-[50vh] w-full flex-col justify-center gap-6 p-4 lg:flex-row">
       <div class="max-w-2xl max-lg:mx-auto max-lg:w-full">
@@ -164,9 +111,4 @@
   </div>
   <Ads slot="carbon2" />
 </div>
-
-<div class="h-20" />
-
 <Footer />
-
-<Scripts />

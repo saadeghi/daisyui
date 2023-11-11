@@ -26,19 +26,16 @@ details.collapse summary {
   @apply absolute block h-2 w-2 translate-y-[-100%] rotate-[45deg] transition-all ease-out;
   transition-duration: 0.2s;
   top: 50%;
-  right: 1.4rem;
+  inset-inline-end: 1.4rem;
   content: "";
   transform-origin: 75% 75%;
   box-shadow: 2px 2px;
   pointer-events: none;
 }
-[dir="rtl"] .collapse-arrow > .collapse-title:after {
-  --tw-rotate: -45deg;
-}
 .collapse-plus > .collapse-title:after {
   @apply absolute block h-2 w-2 transition-all duration-300 ease-out;
   top: 0.9rem;
-  right: 1.4rem;
+  inset-inline-end: 1.4rem;
   content: "+";
   pointer-events: none;
 }
@@ -61,7 +58,7 @@ details.collapse summary {
 .collapse-title,
 :where(.collapse > input[type="checkbox"]),
 :where(.collapse > input[type="radio"]) {
-  @apply w-full p-4 pr-12;
+  @apply w-full p-4 pe-12;
   min-height: 3.75rem;
   transition: background-color 0.2s ease-out;
 }
@@ -90,15 +87,6 @@ details.collapse summary {
 .collapse-arrow:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after,
 .collapse-arrow:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
   @apply translate-y-[-50%] rotate-[225deg];
-}
-[dir="rtl"] .collapse[open].collapse-arrow > .collapse-title:after,
-[dir="rtl"] .collapse-open.collapse-arrow > .collapse-title:after,
-[dir="rtl"] .collapse-arrow:focus:not(.collapse-close) .collapse-title:after,
-[dir="rtl"]
-  .collapse-arrow:not(.collapse-close)
-  input[type="checkbox"]:checked
-  ~ .collapse-title:after {
-  --tw-rotate: 135deg;
 }
 .collapse[open].collapse-plus > .collapse-title:after,
 .collapse-open.collapse-plus > .collapse-title:after,

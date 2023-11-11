@@ -5,7 +5,7 @@ published: true
 ---
 
 <script>
-  import Translate from "@components/Translate.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 
 <Translate text="daisyUI can be configured from your <code>tailwind.config.js</code> file." />  
@@ -20,15 +20,14 @@ module.exports = {
 
   // daisyUI config (optional - here are the default values)
   daisyui: {
-    themes: false, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
+    themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "dark", // name of one of the included themes for dark mode
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components
     utils: true, // adds responsive and modifier utility classes
-    rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
     prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-    themeSelector: ":root", // Which element to attach the theming variables to.
+    themeRoot: ":root", // The element that receives theme color CSS variables
   },
 
   //...
@@ -71,13 +70,6 @@ module.exports = {
 
   <Translate text="If it's true, daisyUI shows logs in the terminal while CSS is building." />
 
-- ### rtl
-
-  `Boolean (default: false)`
-
-  <Translate text="If it's true, your theme will be right-to-left. You need to add <code>dir='rtl'</code> to your body tag." />
-  <Translate text="If you're using daisyUI with RTL option, I suggest using <a href='https://github.com/cvrajeesh/tailwindcss-flip'>tailwindcss-flip</a> plugin because to flip all your Tailwind utilities automatically." />
-
 - ### darkTheme
 
   `String (default: "dark")`
@@ -94,9 +86,9 @@ module.exports = {
   <Translate text="Utility classes like color names (e.g. <code>bg-primary</code>) or border-radius (e.g. <code>rounded-box</code>) will not be affected by this config because they're being added as extensions to Tailwind CSS classes." />  
   <Translate text="If you use daisyUI <code>prefix</code> option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>." />
 
-- ### themeSelector
+- ### themeRoot
 
   `String (default: ":root")`
 
-  <Translate text="Which element to attach the theming variables to." />
-  <Translate text="In certain situations (such as when embedding daisyUI in a shadow root) it may be useful to set this to e.g. <code>*</code>, so all components have access to the CSS variables required." />
+  <Translate text="Which element to attach the theme CSS variables to." />
+  <Translate text="In certain situations (such as embedding daisyUI in a shadow root) it may be useful to set this to e.g. <code>*</code>, so all components will have access to the required CSS variables." />

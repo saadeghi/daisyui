@@ -1,8 +1,33 @@
 .tabs {
-  @apply flex flex-wrap items-end;
+  @apply grid items-end;
+}
+.tabs-lifted {
+  &:has(.tab-content[class^="rounded-"]) :first-child:not(.tab-active),
+  &:has(.tab-content[class*=" rounded-"]) :first-child:not(.tab-active) {
+    @apply border-b-transparent;
+  }
 }
 .tab {
-  @apply relative inline-flex cursor-pointer select-none flex-wrap items-center justify-center text-center;
-  @apply h-8 text-sm leading-loose;
+  @apply relative row-start-1 inline-flex h-8 cursor-pointer select-none appearance-none flex-wrap items-center justify-center text-center text-sm leading-loose;
   --tab-padding: 1rem;
+  &:is(input[type="radio"]):after {
+    --tw-content: attr(aria-label);
+    content: var(--tw-content);
+  }
+  &:not(input):empty {
+    @apply cursor-default;
+    grid-column-start: span 9999;
+  }
+}
+.tab-content {
+  @apply col-span-full col-end-[span_9999] row-start-2 -mt-[--tab-border] hidden border-transparent;
+  border-width: var(--tab-border, 0);
+  :checked + &:nth-child(2),
+  .tab-active + &:nth-child(2) {
+    @apply rounded-ss-none;
+  }
+}
+input.tab:checked + .tab-content,
+.tab-active + .tab-content {
+  @apply block;
 }

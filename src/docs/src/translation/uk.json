@@ -1,6 +1,7 @@
 {
   "__name": "Українська",
   "__code": "UK",
+  "__direction": "ltr",
   "__status": "",
   "Tailwind CSS Components": "Tailwind CSS Компоненти",
   "cta-1": "Компоненти",
@@ -217,7 +218,7 @@
   "You can apply custom style to a daisyUI themes using CSS:": "You can apply custom style to a daisyUI themes using CSS:",
   "How to customize an existing theme?": "How to customize an existing theme?",
   "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.": "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.",
-  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:": "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:",
+  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:": "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:",
   "Contribute to translation": "Contribute to translation",
   "Alert informs users about important events.": "Alert informs users about important events.",
   "Artboard provides fixed size container to display a demo content on mobile size.": "Artboard provides fixed size container to display a demo content on mobile size.",

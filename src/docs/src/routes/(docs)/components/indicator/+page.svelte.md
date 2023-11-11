@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -65,22 +66,22 @@ data="{[
 </Component>
 
 <Component title="for tab">
-<div class="tabs">
-  <a class="tab tab-lifted">Messages</a> 
-  <a class="indicator tab tab-lifted tab-active">
+<div class="tabs tabs-lifted">
+  <button class="tab">Messages</button>
+  <button class="indicator tab tab-active">
     Notifications 
     <span class="indicator-item badge">8</span>
-  </a> 
-  <a class="tab tab-lifted">Requests</a>
+  </button>
+  <button class="tab">Requests</button>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$tabs">
-  <a class="$$tab $$tab-lifted">Messages</a> 
-  <a class="$$indicator $$tab $$tab-lifted $$tab-active">
+`<div class="$$tabs $$tabs-lifted">
+  <a class="$$tab">Messages</a> 
+  <a class="$$indicator $$tab $$tab-active">
     Notifications 
     <span class="$$indicator-item $$badge">8</span>
   </a> 
-  <a class="$$tab $$tab-lifted">Requests</a>
+  <a class="$$tab">Requests</a>
 </div>`
 }</pre>
 </Component>
@@ -89,14 +90,14 @@ data="{[
 <div class="avatar indicator">
   <span class="indicator-item badge badge-secondary">typing…</span> 
   <div class="w-20 h-20 rounded-lg">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img alt="Tailwind CSS examples" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar $$indicator">
   <span class="$$indicator-item $$badge $$badge-secondary">typing…</span> 
   <div class="w-20 h-20 rounded-lg">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img alt="Tailwind CSS examples" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>
@@ -145,12 +146,12 @@ data="{[
 <Component title="in center of an image">
 <div class="indicator">
   <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span> 
-  <img class="rounded" src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
+  <img alt="Tailwind CSS examples" class="rounded" src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$indicator">
   <span class="$$indicator-item $$indicator-center $$indicator-middle $$badge $$badge-secondary">Uploading Image...</span> 
-  <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
+  <img alt="Tailwind CSS examples" src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" />
 </div>`
 }</pre>
 </Component>

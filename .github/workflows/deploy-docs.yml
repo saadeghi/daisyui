@@ -6,17 +6,10 @@ on:
       runtime:
         type: choice
         description: JS runtime
-        default: "bun"
+        default: "npm"
         options:
           - "bun"
           - "npm"
-      npm-tag:
-        type: choice
-        description: Version of daisyUI to install
-        default: "latest"
-        options:
-          - "latest"
-          - "alpha"
   workflow_call:
   push:
     branches:
@@ -31,11 +24,12 @@ on:
 
 jobs:
   deploy-docs:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     env:
-      runtime: ${{ github.event.inputs.runtime || 'bun'}}
-      npm-tag: ${{ github.event.inputs.npm-tag || 'latest'}}
+      runtime: ${{ github.event.inputs.runtime || 'npm'}}
       LEMONSQUEEZY_API_KEY: ${{ secrets.LEMONSQUEEZY_API_KEY }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||
@@ -65,15 +59,20 @@ jobs:
       - name: Install docs dependencies
         run: cd src/docs && ${{ env.runtime }} install
 
-      - name: Install daisyUI fixed tag if production
+      - name: Install daisyUI latest version if production
         if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && ${{ env.runtime }} i daisyui@${{ env.npm-tag }}
+        run: cd src/docs && ${{ env.runtime }} i daisyui@latest
 
-      - name: Install daisyUI newest version if staging
+      - name: Install daisyUI newest tag if staging
         if: github.repository == 'daisyui/daisyui.github.io'
         run: cd src/docs && ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "latest" || echo "alpha")
 
-      - name: Add robots.txt if staging repo
+      - name: Set daisyUI version in env file if staging
+        if: github.repository == 'daisyui/daisyui.github.io'
+        run: |
+          echo 'VITE_DAISYUI_VERSION=ALPHA' > src/docs/.env
+
+      - name: Add robots.txt if not main repo
         if: github.repository != 'saadeghi/daisyui'
         run: |
           echo 'User-agent: *

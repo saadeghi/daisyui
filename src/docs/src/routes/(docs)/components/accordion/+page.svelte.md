@@ -6,9 +6,10 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
-  import Translate from "@components/Translate.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
+  import Translate from "$components/Translate.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>

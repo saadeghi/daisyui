@@ -1,5 +1,5 @@
 <script>
-  import { t } from "@src/lib/i18n"
+  import { t } from "$lib/i18n"
   export let animateValue
   export let section
   export let index

@@ -1,6 +1,7 @@
 {
   "__name": "中文",
   "__code": "ZH",
+  "__direction": "ltr",
   "__status": "",
   "Tailwind CSS Components": "Tailwind CSS组件",
   "cta-1": "浏览组件",
@@ -284,7 +285,7 @@
   "You can apply custom style to a daisyUI themes using CSS:": "你可以通过 CSS 给 daisyUI 主题增加样式：",
   "How to customize an existing theme?": "如何对已有主题进行自定义设置？",
   "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.": "在你的 tailwind.config.js，你可以获取一个特定的主题，并且覆盖这个主题的颜色变量。",
-  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:": "在下面这个例子，我调整了 <code>light</code> 主题，并且改变了这个主题的 <code>primary</code> 和 <code>primary-focus</code> 的颜色：",
+  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:": "在下面这个例子，我调整了 <code>light</code> 主题，并且改变了这个主题的 <code>primary</code> 和 <code>secondary</code> 的颜色：",
   "daisyUI themes": "daisyUI 主题",
   "How to use daisyUI themes?": "如何使用 daisyUI 的主题？",
   "daisyUI Theme Generator": "daisyUI 主题生成器",

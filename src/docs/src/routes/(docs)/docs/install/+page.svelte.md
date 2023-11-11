@@ -5,9 +5,9 @@ published: true
 ---
 
 <script>
-  import InstallTabs from "@components/InstallTabs.svelte"
-  import Translate from "@components/Translate.svelte"
-  import { exampleRepos } from "@src/lib/data.js"
+  import InstallTabs from "$components/InstallTabs.svelte"
+  import Translate from "$components/Translate.svelte"
+  export let data
 </script>
 
 <InstallTabs />
@@ -35,7 +35,7 @@ module.exports = {
 
 <div class="not-prose grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 my-10 gap-6">
 
-{#each exampleRepos as { name, href, logos }}
+{#each data.exampleRepos as { name, href, logos }}
 <a class="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener, noreferrer">
 
 <figure class="px-12 pt-6 pb-2 w-full aspect-[2/1] items-end overflow-visible">

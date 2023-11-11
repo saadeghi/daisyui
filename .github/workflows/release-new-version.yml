@@ -27,6 +27,7 @@ on:
 
 jobs:
   release:
+    timeout-minutes: 10
     if: github.repository == 'saadeghi/daisyui'
     runs-on: ubuntu-latest
     env:

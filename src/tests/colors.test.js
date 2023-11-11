@@ -2,10 +2,14 @@ import { expect, test } from "bun:test"
 import * as colorFunctions from "../theming/functions"
 
 test("Foreground color generator function", () => {
-  expect(colorFunctions.generateForegroundColorFrom("#fff")).toBe("146 0% 19%")
-  expect(colorFunctions.generateForegroundColorFrom("#000")).toBe("145 0% 78%")
-  expect(colorFunctions.generateForegroundColorFrom("#fff", 1)).toBe("0 0% 0%")
-  expect(colorFunctions.generateForegroundColorFrom("#000", 1)).toBe("161 100% 100%")
-  expect(colorFunctions.generateForegroundColorFrom("#1D9BF0")).toBe("215 87% 93%")
-  expect(colorFunctions.generateForegroundColorFrom("#CF212E")).toBe("8 93% 91%")
+  expect(colorFunctions.generateForegroundColorFrom("#fff", 0.8, "oklch")).toBe("0.2 0 0")
+  expect(colorFunctions.generateForegroundColorFrom("#000", 0.8, "oklch")).toBe("0.8 0 0")
+  expect(colorFunctions.generateForegroundColorFrom("#fff", 1, "oklch")).toBe("0 0 0")
+  expect(colorFunctions.generateForegroundColorFrom("#000", 1, "oklch")).toBe("1 0 0")
+  expect(colorFunctions.generateForegroundColorFrom("#1D9BF0", 0.8, "oklch")).toBe(
+    "0.133411 0.032291 245.539977"
+  )
+  expect(colorFunctions.generateForegroundColorFrom("#CF212E", 0.8, "oklch")).toBe(
+    "0.910234 0.041137 24.396801"
+  )
 })

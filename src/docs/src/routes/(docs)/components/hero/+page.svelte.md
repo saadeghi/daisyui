@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -103,18 +104,18 @@ data="{[
     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <div class="card-body">
         <div class="form-control">
-          <label class="label">
+          <label class="label" for="input1">
             <span class="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" class="input input-bordered" required />
+          <input type="email" placeholder="email" class="input input-bordered" required id="input1" />
         </div>
         <div class="form-control">
-          <label class="label">
+          <label class="label" for="input2">
             <span class="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" class="input input-bordered" required />
+          <input type="password" placeholder="password" class="input input-bordered" required for="input2" />
           <label class="label">
-            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+            <button class="label-text-alt link link-hover">Forgot password?</button>
           </label>
         </div>
         <div class="form-control mt-6">

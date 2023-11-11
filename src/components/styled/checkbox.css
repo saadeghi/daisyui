@@ -1,7 +1,10 @@
-.checkbox {
-  --chkbg: var(--bc);
-  --chkfg: var(--b1);
+[type="checkbox"].checkbox {
+  --chkbg: theme(colors.base-content);
+  --chkfg: theme(colors.base-100);
   @apply border-base-content rounded-btn h-6 w-6 cursor-pointer appearance-none border border-opacity-20;
+  &:focus {
+    box-shadow: none;
+  }
   &:focus-visible {
     @apply outline-base-content outline outline-2 outline-offset-2;
   }
@@ -10,34 +13,28 @@
   &[aria-checked="true"] {
     @apply bg-base-content bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-out;
-    background-image: linear-gradient(-45deg, transparent 65%, hsl(var(--chkbg)) 65.99%),
-      linear-gradient(45deg, transparent 75%, hsl(var(--chkbg)) 75.99%),
-      linear-gradient(-45deg, hsl(var(--chkbg)) 40%, transparent 40.99%),
+    background-image: linear-gradient(-45deg, transparent 65%, var(--chkbg) 65.99%),
+      linear-gradient(45deg, transparent 75%, var(--chkbg) 75.99%),
+      linear-gradient(-45deg, var(--chkbg) 40%, transparent 40.99%),
       linear-gradient(
         45deg,
-        hsl(var(--chkbg)) 30%,
-        hsl(var(--chkfg)) 30.99%,
-        hsl(var(--chkfg)) 40%,
+        var(--chkbg) 30%,
+        var(--chkfg) 30.99%,
+        var(--chkfg) 40%,
         transparent 40.99%
       ),
-      linear-gradient(-45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
+      linear-gradient(-45deg, var(--chkfg) 50%, var(--chkbg) 50.99%);
   }
   &:indeterminate {
     @apply bg-base-content bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-out;
-    background-image: linear-gradient(90deg, transparent 80%, hsl(var(--chkbg)) 80%),
-      linear-gradient(-90deg, transparent 80%, hsl(var(--chkbg)) 80%),
-      linear-gradient(
-        0deg,
-        hsl(var(--chkbg)) 43%,
-        hsl(var(--chkfg)) 43%,
-        hsl(var(--chkfg)) 57%,
-        hsl(var(--chkbg)) 57%
-      );
+    background-image: linear-gradient(90deg, transparent 80%, var(--chkbg) 80%),
+      linear-gradient(-90deg, transparent 80%, var(--chkbg) 80%),
+      linear-gradient(0deg, var(--chkbg) 43%, var(--chkfg) 43%, var(--chkfg) 57%, var(--chkbg) 57%);
   }
   &-primary {
-    --chkbg: var(--p);
-    --chkfg: var(--pc);
+    --chkbg: theme(colors.primary);
+    --chkfg: theme(colors.primary-content);
     @apply border-primary [@media(hover:hover)]:hover:border-primary;
     &:focus-visible {
       @apply outline-primary;
@@ -49,8 +46,8 @@
     }
   }
   &-secondary {
-    --chkbg: var(--s);
-    --chkfg: var(--sc);
+    --chkbg: theme(colors.secondary);
+    --chkfg: theme(colors.secondary-content);
     @apply border-secondary [@media(hover:hover)]:hover:border-secondary;
     &:focus-visible {
       @apply outline-secondary;
@@ -62,8 +59,8 @@
     }
   }
   &-accent {
-    --chkbg: var(--a);
-    --chkfg: var(--ac);
+    --chkbg: theme(colors.accent);
+    --chkfg: theme(colors.accent-content);
     @apply border-accent [@media(hover:hover)]:hover:border-accent;
     &:focus-visible {
       @apply outline-accent;
@@ -75,8 +72,8 @@
     }
   }
   &-success {
-    --chkbg: var(--su);
-    --chkfg: var(--suc);
+    --chkbg: theme(colors.success);
+    --chkfg: theme(colors.success-content);
     @apply border-success [@media(hover:hover)]:hover:border-success;
     &:focus-visible {
       @apply outline-success;
@@ -88,8 +85,8 @@
     }
   }
   &-warning {
-    --chkbg: var(--wa);
-    --chkfg: var(--wac);
+    --chkbg: theme(colors.warning);
+    --chkfg: theme(colors.warning-content);
     @apply border-warning [@media(hover:hover)]:hover:border-warning;
     &:focus-visible {
       @apply outline-warning;
@@ -101,8 +98,8 @@
     }
   }
   &-info {
-    --chkbg: var(--in);
-    --chkfg: var(--inc);
+    --chkbg: theme(colors.info);
+    --chkfg: theme(colors.info-content);
     @apply border-info [@media(hover:hover)]:hover:border-info;
     &:focus-visible {
       @apply outline-info;
@@ -114,8 +111,8 @@
     }
   }
   &-error {
-    --chkbg: var(--er);
-    --chkfg: var(--erc);
+    --chkbg: theme(colors.error);
+    --chkfg: theme(colors.error-content);
     @apply border-error [@media(hover:hover)]:hover:border-error;
     &:focus-visible {
       @apply outline-error;
@@ -146,24 +143,4 @@
 /* backward compatibility */
 .checkbox-mark {
   @apply hidden;
-}
-
-[dir="rtl"] {
-  .checkbox {
-    &:checked,
-    &[checked="true"],
-    &[aria-checked="true"] {
-      background-image: linear-gradient(45deg, transparent 65%, hsl(var(--chkbg)) 65.99%),
-        linear-gradient(-45deg, transparent 75%, hsl(var(--chkbg)) 75.99%),
-        linear-gradient(45deg, hsl(var(--chkbg)) 40%, transparent 40.99%),
-        linear-gradient(
-          -45deg,
-          hsl(var(--chkbg)) 30%,
-          hsl(var(--chkfg)) 30.99%,
-          hsl(var(--chkfg)) 40%,
-          transparent 40.99%
-        ),
-        linear-gradient(45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
-    }
-  }
 }

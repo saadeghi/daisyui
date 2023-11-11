@@ -1,4 +1,4 @@
-.toggle {
+[type="checkbox"].toggle {
   &-xs {
     --handleoffset: 0.5rem;
     @apply h-4 w-6;

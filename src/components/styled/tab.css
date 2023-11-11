@@ -1,12 +1,17 @@
+.tabs-lifted .tab:focus-visible {
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+}
 .tab {
   @apply text-opacity-50 [@media(hover:hover)]:hover:text-opacity-100;
-  --tab-color: hsl(var(--bc) / var(--tw-text-opacity, 1));
-  --tab-bg: hsl(var(--b1) / var(--tw-bg-opacity, 1));
-  --tab-border-color: hsl(var(--b3) / var(--tw-bg-opacity, 1));
+  --tab-color: theme(colors.base-content);
+  --tab-bg: theme(colors.base-100);
+  --tab-border-color: theme(colors.base-300);
   color: var(--tab-color);
-  padding-left: var(--tab-padding, 1rem);
-  padding-right: var(--tab-padding, 1rem);
-  &.tab-active:not(.tab-disabled):not([disabled]) {
+  padding-inline-start: var(--tab-padding, 1rem);
+  padding-inline-end: var(--tab-padding, 1rem);
+  &.tab-active:not(.tab-disabled):not([disabled]),
+  &:is(input:checked) {
     @apply border-base-content border-opacity-100 text-opacity-100;
   }
   &:focus {
@@ -14,11 +19,7 @@
   }
   &:focus-visible {
     outline: 2px solid currentColor;
-    outline-offset: -3px;
-    &.tab-lifted {
-      border-bottom-right-radius: var(--tab-radius, 0.5rem);
-      border-bottom-left-radius: var(--tab-radius, 0.5rem);
-    }
+    outline-offset: -5px;
   }
   /* disabled */
   &-disabled,
@@ -32,80 +33,88 @@
     }
   }
 }
-.tab-bordered {
+.tabs-bordered .tab {
   @apply border-base-content border-opacity-20;
   border-style: solid;
   border-bottom-width: calc(var(--tab-border, 1px) + 1px);
 }
-.tab-lifted {
+.tabs-lifted .tab {
   border: var(--tab-border, 1px) solid transparent;
   border-width: 0 0 var(--tab-border, 1px) 0;
-  border-top-left-radius: var(--tab-radius, 0.5rem);
-  border-top-right-radius: var(--tab-radius, 0.5rem);
+  border-start-start-radius: var(--tab-radius, 0.5rem);
+  border-start-end-radius: var(--tab-radius, 0.5rem);
   border-bottom-color: var(--tab-border-color);
-  padding-left: var(--tab-padding, 1rem);
-  padding-right: var(--tab-padding, 1rem);
+  padding-inline-start: var(--tab-padding, 1rem);
+  padding-inline-end: var(--tab-padding, 1rem);
   padding-top: var(--tab-border, 1px);
-  &.tab-active:not(.tab-disabled):not([disabled]) {
+  &.tab-active:not(.tab-disabled):not([disabled]),
+  &:is(input:checked) {
     background-color: var(--tab-bg);
     border-width: var(--tab-border, 1px) var(--tab-border, 1px) 0 var(--tab-border, 1px);
-    border-left-color: var(--tab-border-color);
-    border-right-color: var(--tab-border-color);
+    border-inline-start-color: var(--tab-border-color);
+    border-inline-end-color: var(--tab-border-color);
     border-top-color: var(--tab-border-color);
-    padding-left: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
-    padding-right: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
+    padding-inline-start: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
+    padding-inline-end: calc(var(--tab-padding, 1rem) - var(--tab-border, 1px));
     padding-bottom: var(--tab-border, 1px);
     padding-top: 0;
-    &:before,
-    &:after {
+    &:before {
       z-index: 1;
       content: "";
       display: block;
       position: absolute;
-      width: var(--tab-radius, 0.5rem);
+      width: calc(100% + var(--tab-radius, 0.5rem) * 2);
       height: var(--tab-radius, 0.5rem);
       bottom: 0;
-      --tab-grad: calc(68% - var(--tab-border, 1px));
-      --tab-corner-bg: radial-gradient(
-        circle at var(--circle-pos),
+      background-size: var(--tab-radius, 0.5rem);
+      background-position:
+        top left,
+        top right;
+      background-repeat: no-repeat;
+      --tab-grad: calc(69% - var(--tab-border, 1px));
+      --radius-start: radial-gradient(
+        circle at top left,
         transparent var(--tab-grad),
-        var(--tab-border-color) calc(var(--tab-grad) + 0.3px),
+        var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
         var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.3px)
+        var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.25px)
       );
+      --radius-end: radial-gradient(
+        circle at top right,
+        transparent var(--tab-grad),
+        var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+        var(--tab-border-color) calc(var(--tab-grad) + var(--tab-border, 1px)),
+        var(--tab-bg) calc(var(--tab-grad) + var(--tab-border, 1px) + 0.25px)
+      );
+      background-image: var(--radius-start), var(--radius-end);
     }
-    &:before {
-      left: calc(var(--tab-radius, 0.5rem) * -1);
-      --circle-pos: top left;
-      background-image: var(--tab-corner-bg);
 
-      /* RTL quick fix */
-      [dir="rtl"] & {
-        --circle-pos: top right;
-      }
-    }
-    &:after {
-      right: calc(var(--tab-radius, 0.5rem) * -1);
-      --circle-pos: top right;
-      background-image: var(--tab-corner-bg);
-
-      /* RTL quick fix */
-      [dir="rtl"] & {
-        --circle-pos: top left;
-      }
-    }
     &:first-child:before {
-      background: none;
+      background-image: var(--radius-end);
+      background-position: top right;
+      [dir="rtl"] & {
+        background-image: var(--radius-start);
+        background-position: top left;
+      }
     }
-    &:last-child:after {
-      background: none;
+    &:last-child:before {
+      background-image: var(--radius-start);
+      background-position: top left;
+      [dir="rtl"] & {
+        background-image: var(--radius-end);
+        background-position: top right;
+      }
     }
   }
 }
-.tab-lifted.tab-active:not(.tab-disabled):not([disabled])
-  + .tab-lifted.tab-active:not(.tab-disabled):not([disabled]) {
+.tabs-lifted
+  .tab-active:not(.tab-disabled):not([disabled])
+  + .tabs-lifted
+  .tab-active:not(.tab-disabled):not([disabled]),
+.tabs-lifted .tab:is(input:checked) + .tabs-lifted .tab:is(input:checked) {
   &:before {
-    background: none;
+    background-image: var(--radius-end);
+    background-position: top right;
   }
 }
 .tabs-boxed {
@@ -113,7 +122,8 @@
   .tab {
     @apply rounded-btn;
   }
-  .tab-active:not(.tab-disabled):not([disabled]) {
+  .tab-active:not(.tab-disabled):not([disabled]),
+  :is(input:checked) {
     @apply bg-primary text-primary-content [@media(hover:hover)]:hover:text-primary-content;
   }
 }

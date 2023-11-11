@@ -43,6 +43,9 @@ type Theme =
   | "night"
   | "coffee"
   | "winter"
+  | "dim"
+  | "nord"
+  | "sunset"
 
 interface DaisyUIConfig {
   /**

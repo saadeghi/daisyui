@@ -10,8 +10,8 @@
 #carbonads {
   display: flex;
   max-width: 350px;
-  color: hsl(var(--bc));
-  background-color: hsl(var(--b2));
+  color: var(--fallback-bc, oklch(var(--bc)));
+  background-color: var(--fallback-b2, oklch(var(--b2)));
   z-index: 100;
   border-radius: 4px;
   overflow: hidden;
@@ -49,7 +49,7 @@
 #carbonads .carbon-poweredby {
   display: block;
   padding: 6px 8px;
-  background: hsl(var(--b3));
+  background: var(--fallback-b3, oklch(var(--b3)));
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -96,7 +96,7 @@
   color: inherit;
   border: 2px solid transparent;
   border-radius: var(--rounded-btn);
-  padding-left: 2.5em;
+  padding-inline-start: 2.5em;
 }
 [data-svelte-search][data-svelte-search] input::placeholder {
   color: inherit;
@@ -104,15 +104,15 @@
 [data-svelte-search][data-svelte-search] input:focus {
   outline: none;
   outline-offset: 0;
-  border: 2px solid hsl(var(--bc) / 0.2);
-  background-color: hsl(var(--b1));
-  color: hsl(var(--bc));
+  border: 2px solid var(--fallback-bc, oklch(var(--bc) / 0.2));
+  background-color: var(--fallback-b1, oklch(var(--b1)));
+  color: var(--fallback-bc, oklch(var(--bc)));
 }
 [data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"]
   .svelte-typeahead-list {
   transform: translateY(0.5em);
-  background: hsl(var(--b1) / 0.99);
-  border: 0 solid hsl(var(--bc) / 0.2);
+  background: var(--fallback-b1, oklch(var(--b1) / 0.99));
+  border: 0 solid var(--fallback-bc, oklch(var(--bc) / 0.2));
   border-radius: var(--rounded-box);
   overflow: hidden;
   padding: 0.5rem;
@@ -124,16 +124,16 @@
 }
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected,
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected:hover {
-  background: hsl(var(--n));
-  color: hsl(var(--nc));
+  background: var(--fallback-n, oklch(var(--n)));
+  color: var(--fallback-nc, oklch(var(--nc)));
 }
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li {
-  color: hsl(var(--bc));
+  color: var(--fallback-bc, oklch(var(--bc)));
   border-radius: var(--rounded-btn);
 }
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:hover {
-  background: hsl(var(--b2));
-  color: hsl(var(--bc));
+  background: var(--fallback-b2, oklch(var(--b2)));
+  color: var(--fallback-bc, oklch(var(--bc)));
 }
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:not(:last-of-type) {
   border-bottom: none;
@@ -145,14 +145,16 @@
 code[class*="language-"],
 pre[class*="language-"] {
   background: unset;
+  direction: ltr;
 }
 .prose pre[class*="language-"] {
   max-width: clamp(20rem, calc(100vw - 4rem), 80ch);
-  background-color: hsl(var(--n));
-  color: hsl(var(--nc));
+  background-color: var(--fallback-n, oklch(var(--n)));
+  color: var(--fallback-nc, oklch(var(--nc)));
+  border-radius: var(--rounded-box);
   ::selection {
-    background-color: hsl(var(--nc));
-    color: hsl(var(--n));
+    background-color: var(--fallback-nc, oklch(var(--nc)));
+    color: var(--fallback-n, oklch(var(--n)));
   }
 }
 @media (min-width: 1024px) {

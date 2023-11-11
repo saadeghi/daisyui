@@ -1,6 +1,7 @@
 {
   "__name": "繁體中文",
   "__code": "ZH",
+  "__direction": "ltr",
   "__status": "",
   "Tailwind CSS Components": "Tailwind CSS 元件",
   "cta-1": "瀏覽元件",
@@ -217,7 +218,7 @@
   "You can apply custom style to a daisyUI themes using CSS:": "您可以使用 CSS 將自訂樣式套用到 daisyUI 主題中：",
   "How to customize an existing theme?": "如何自訂現有主題？",
   "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.": "在 tailwind.config.js 檔案中，您可以引入現有的 daisyUI 主題並覆寫某些顏色。",
-  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:": "在下方的範例中，我引入並套用了<code>light</code>主題，並更改它的<code>primary</code>和<code>primary-focus</code>顏色：",
+  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:": "在下方的範例中，我引入並套用了<code>light</code>主題，並更改它的<code>primary</code>和<code>secondary</code>顏色：",
   "Contribute to translation": "協助翻譯",
   "Alert informs users about important events.": "在重要事件發生時提醒使用者。",
   "Artboard provides fixed size container to display a demo content on mobile size.": "提供固定大小的容器來展示行動裝置大小的內容。",

@@ -1,4 +1,4 @@
-.radio {
+[type="radio"].radio {
   &-xs {
     @apply h-4 w-4;
   }

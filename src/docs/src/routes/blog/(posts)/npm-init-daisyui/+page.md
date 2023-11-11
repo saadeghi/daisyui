@@ -23,7 +23,7 @@ Setting up Tailwind CSS and PostCSS and then adding daisyUI is not that hard at 
 
 ## An easier way ✨
 
-<style>.embed-container { position: relative; padding-bottom: 68%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container rounded-box'><iframe src='https://www.youtube.com/embed/2b0KzuRZEX8' frameborder='0' allowfullscreen></iframe></div>
+<style>.embed-container { position: relative; padding-bottom: 68%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container rounded-box'><iframe title="npm init daisyui" src='https://www.youtube.com/embed/2b0KzuRZEX8' frameborder='0' allowfullscreen></iframe></div>
 
 Now, you can do all of these with a single command:
 
@@ -65,7 +65,7 @@ If it's a new project of if you didn't have Tailwind CSS installed, you can choo
 
    - Installs Tailwind CSS
    - Creates tailwind.config.js file (`npx tailwindcss init`) with default config
-   - Creates postcss.config.js file with `@tailwind` directives in it
+   - Creates tailwind.css file with `@tailwind` directives in it
    - Installs daisyUI
    - Adds daiysUI to your tailwind.config.js file.
 
@@ -74,7 +74,7 @@ If it's a new project of if you didn't have Tailwind CSS installed, you can choo
    - Creates tailwind.config.js file (`npx tailwindcss init`) with default config
    - Installs PostCSS and Autoprefixer
    - Creates postcss.config.js file
-   - Adds Tailwind CSS to postcss.config.js
+   - Adds Tailwind CSS and Autoprefixer to postcss.config.js
    - Installs daisyUI
    - Adds daiysUI to your tailwind.config.js file.
 
@@ -118,7 +118,7 @@ npm create daisyui
    <link href="/output.css" rel="stylesheet" />
    ```
 
-3. It doesn't add any scripts to build your CSS file.  
+3. It doesn't add any scripts in `package.json` file to build your CSS file.  
    If you're using a bundler, it will be handled automatically. Otherwise you may need to add a script to `package.json` file to build your CSS file.
    Like this:
 

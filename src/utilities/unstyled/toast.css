@@ -1,14 +1,14 @@
 :where(.toast) {
-  @apply bottom-0 left-auto right-0 top-auto translate-x-0 translate-y-0;
+  @apply bottom-0 end-0 start-auto top-auto translate-x-0 translate-y-0;
 }
 .toast:where(.toast-start) {
-  @apply left-0 right-auto translate-x-0;
+  @apply end-auto start-0 translate-x-0;
 }
 .toast:where(.toast-center) {
-  @apply left-1/2 right-1/2 -translate-x-1/2;
+  @apply end-1/2 start-1/2 -translate-x-1/2 rtl:translate-x-1/2;
 }
 .toast:where(.toast-end) {
-  @apply left-auto right-0 translate-x-0;
+  @apply end-0 start-auto translate-x-0;
 }
 .toast:where(.toast-bottom) {
   @apply bottom-0 top-auto translate-y-0;

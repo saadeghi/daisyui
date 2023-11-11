@@ -26,28 +26,28 @@
   }
 
   &:indeterminate {
-    --progress-color: hsl(var(--bc));
+    --progress-color: theme(colors.base-content);
   }
   &-primary:indeterminate {
-    --progress-color: hsl(var(--p));
+    --progress-color: theme(colors.primary);
   }
   &-secondary:indeterminate {
-    --progress-color: hsl(var(--s));
+    --progress-color: theme(colors.secondary);
   }
   &-accent:indeterminate {
-    --progress-color: hsl(var(--a));
+    --progress-color: theme(colors.accent);
   }
   &-info:indeterminate {
-    --progress-color: hsl(var(--in));
+    --progress-color: theme(colors.info);
   }
   &-success:indeterminate {
-    --progress-color: hsl(var(--su));
+    --progress-color: theme(colors.success);
   }
   &-warning:indeterminate {
-    --progress-color: hsl(var(--wa));
+    --progress-color: theme(colors.warning);
   }
   &-error:indeterminate {
-    --progress-color: hsl(var(--er));
+    --progress-color: theme(colors.error);
   }
 
   &::-webkit-progress-bar {

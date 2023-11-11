@@ -9,6 +9,7 @@ on:
       - "src/theming/**"
 jobs:
   release:
+    timeout-minutes: 10
     name: "Build"
     runs-on: ubuntu-latest
     steps:

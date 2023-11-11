@@ -1,6 +1,6 @@
 .select {
   @apply inline-flex cursor-pointer select-none appearance-none;
-  @apply min-h-12 h-12 pl-4 pr-10 text-sm leading-loose;
+  @apply h-12 min-h-[3rem] pl-4 pr-10 text-sm leading-loose;
 
   /* disabled */
   /* &-disabled,

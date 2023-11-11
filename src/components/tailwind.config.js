@@ -5,6 +5,7 @@ module.exports = {
   safelist: responsiveRegex,
   theme: {
     colors: require("../theming"),
+    extend: require("../lib/utility-classes"),
   },
   plugins: [
     plugin(function ({ addBase, addUtilities, matchUtilities, matchComponents, theme }) {

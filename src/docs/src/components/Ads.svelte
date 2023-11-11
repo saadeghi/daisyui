@@ -2,7 +2,7 @@
   import { onMount } from "svelte"
   import { readEnv } from "$lib/util"
   export let slot
-  import Sponsors from "@components/Sponsors.svelte"
+  import Sponsors from "$components/Sponsors.svelte"
 </script>
 
 {#if slot === "adesense-1"}

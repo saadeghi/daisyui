@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -33,9 +34,9 @@ data="{[
 
 <Component title="Menu">
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><a>Item 1</a></li>
-  <li><a>Item 2</a></li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 1</button></li>
+  <li><button>Item 2</button></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu bg-base-200 w-56 $$rounded-box">
@@ -48,9 +49,9 @@ data="{[
 
 <Component title="Responsive: vertical on small screen, horizontal on large screen">
 <ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
-  <li><a>Item 1</a></li>
-  <li><a>Item 2</a></li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 1</button></li>
+  <li><button>Item 2</button></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu $$menu-vertical lg:$$menu-horizontal bg-base-200 $$rounded-box">
@@ -64,19 +65,19 @@ data="{[
 <Component title="Menu with icon only">
 <ul class="menu bg-base-200 rounded-box">
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-    </a>
+    </button>
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
@@ -103,19 +104,19 @@ data="{[
 <Component title="Menu with icon only (horizontal)">
 <ul class="menu menu-horizontal bg-base-200 rounded-box">
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-    </a>
+    </button>
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
@@ -142,19 +143,19 @@ data="{[
 <Component title="Menu with icon only with tooltip">
 <ul class="menu bg-base-200 rounded-box">
   <li>
-    <a class="tooltip tooltip-right" data-tip="Home">
+    <button class="tooltip tooltip-right" data-tip="Home">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a class="tooltip tooltip-right" data-tip="Details">
+    <button class="tooltip tooltip-right" data-tip="Details">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a class="tooltip tooltip-right" data-tip="Stats">
+    <button class="tooltip tooltip-right" data-tip="Stats">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-    </a>
+    </button>
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
@@ -181,19 +182,19 @@ data="{[
 <Component title="Menu with icon only (horizontal) with tooltip">
 <ul class="menu menu-horizontal bg-base-200 rounded-box mt-6">
   <li>
-    <a class="tooltip" data-tip="Home">
+    <button class="tooltip" data-tip="Home">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a class="tooltip" data-tip="Details">
+    <button class="tooltip" data-tip="Details">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    </a>
+    </button>
   </li>
   <li>
-    <a class="tooltip" data-tip="Stats">
+    <button class="tooltip" data-tip="Stats">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-    </a>
+    </button>
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
@@ -219,20 +220,20 @@ data="{[
 
 <Component title="Menu sizes" classes="flex flex-col gap-4">
 <ul class="menu menu-xs bg-base-200 w-56 rounded-box">
-  <li><a>xs item 1</a></li>
-  <li><a>xs item 2</a></li>
+  <li><button>xs item 1</button></li>
+  <li><button>xs item 2</button></li>
 </ul>
 <ul class="menu menu-sm bg-base-200 w-56 rounded-box">
-  <li><a>sm item 1</a></li>
-  <li><a>sm item 2</a></li>
+  <li><button>sm item 1</button></li>
+  <li><button>sm item 2</button></li>
 </ul>
 <ul class="menu menu-md bg-base-200 w-56 rounded-box">
-  <li><a>md item 1</a></li>
-  <li><a>md item 2</a></li>
+  <li><button>md item 1</button></li>
+  <li><button>md item 2</button></li>
 </ul>
 <ul class="menu menu-lg bg-base-200 w-56 rounded-box">
-  <li><a>lg item 1</a></li>
-  <li><a>lg item 2</a></li>
+  <li><button>lg item 1</button></li>
+  <li><button>lg item 2</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu $$menu-xs bg-base-200 w-56 $$rounded-box">
@@ -256,9 +257,9 @@ data="{[
 
 <Component title="Menu with disabled items">
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><a>Enabled item</a></li>
-  <li class="disabled"><a>disabled item</a></li>
-  <li class="disabled"><a>disabled item</a></li>
+  <li><button>Enabled item</button></li>
+  <li class="disabled"><button>disabled item</button></li>
+  <li class="disabled"><button>disabled item</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu bg-base-200 w-56 $$rounded-box">
@@ -272,22 +273,22 @@ data="{[
 <Component title="Menu with icons">
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
     Item 2
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       Item 1
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
       Item 3
-    </a>
+    </button>
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
@@ -317,24 +318,24 @@ data="{[
 <Component title="Menu with icons and badge (responsive)">
 <ul class="menu bg-base-200 lg:menu-horizontal rounded-box">
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
       Inbox
       <span class="badge badge-sm">99+</span>
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       Updates
       <span class="badge badge-sm badge-warning">NEW</span>
-    </a>
+    </button>
   </li>
   <li>
-    <a>
+    <button>
       Stats
       <span class="badge badge-xs badge-info"></span>
-    </a>
+    </button>
   </li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
@@ -365,9 +366,9 @@ data="{[
 
 <Component title="Menu without padding and border radius">
 <ul class="menu bg-base-200 w-56 p-0 [&_li>*]:rounded-none">
-  <li><a>Item 1</a></li>
-  <li><a>Item 2</a></li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 1</button></li>
+  <li><button>Item 2</button></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu bg-base-200 w-56 p-0 [&_li>*]:rounded-none">
@@ -381,9 +382,9 @@ data="{[
 <Component title="Menu with title">
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li class="menu-title">Title</li>
-  <li><a>Item 1</a></li>
-  <li><a>Item 2</a></li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 1</button></li>
+  <li><button>Item 2</button></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu bg-base-200 w-56 $$rounded-box">
@@ -400,9 +401,9 @@ data="{[
   <li>
     <h2 class="menu-title">Title</h2>
     <ul>
-      <li><a>Item 1</a></li>
-      <li><a>Item 2</a></li>
-      <li><a>Item 3</a></li>
+      <li><button>Item 1</button></li>
+      <li><button>Item 2</button></li>
+      <li><button>Item 3</button></li>
     </ul>
   </li>
 </ul>
@@ -422,22 +423,22 @@ data="{[
 
 <Component title="Submenu">
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><a>Item 1</a></li>
+  <li><button>Item 1</button></li>
   <li>
-    <a>Parent</a>
+    <button>Parent</button>
     <ul>
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><button>Submenu 1</button></li>
+      <li><button>Submenu 2</button></li>
       <li>
-        <a>Parent</a>
+        <button>Parent</button>
         <ul>
-          <li><a>level 3 item 1</a></li>
-          <li><a>level 3 item 2</a></li>
+          <li><button>Submenu 1</button></li>
+          <li><button>Submenu 2</button></li>
         </ul>
       </li>
     </ul>
   </li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu bg-base-200 w-56 $$rounded-box">
@@ -445,13 +446,13 @@ data="{[
   <li>
     <a>Parent</a>
     <ul>
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><a>Submenu 1</a></li>
+      <li><a>Submenu 2</a></li>
       <li>
         <a>Parent</a>
         <ul>
-          <li><a>level 3 item 1</a></li>
-          <li><a>level 3 item 2</a></li>
+          <li><a>Submenu 1</a></li>
+          <li><a>Submenu 2</a></li>
         </ul>
       </li>
     </ul>
@@ -463,26 +464,26 @@ data="{[
 
 <Component title="Collapsible submenu">
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><a>Item 1</a></li>
+  <li><button>Item 1</button></li>
   <li>
     <details open>
       <summary>Parent</summary>
       <ul>
-        <li><a>level 2 item 1</a></li>
-        <li><a>level 2 item 2</a></li>
+        <li><button>Submenu 1</button></li>
+        <li><button>Submenu 2</button></li>
         <li>
           <details open>
             <summary>Parent</summary>
             <ul>
-              <li><a>level 3 item 1</a></li>
-              <li><a>level 3 item 2</a></li>
+              <li><button>Submenu 1</button></li>
+              <li><button>Submenu 2</button></li>
             </ul>
           </details>
         </li>
       </ul>
     </details>
   </li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu bg-base-200 w-56 $$rounded-box">
@@ -491,14 +492,14 @@ data="{[
     <details open>
       <summary>Parent</summary>
       <ul>
-        <li><a>level 2 item 1</a></li>
-        <li><a>level 2 item 2</a></li>
+        <li><a>Submenu 1</a></li>
+        <li><a>Submenu 2</a></li>
         <li>
           <details open>
             <summary>Parent</summary>
             <ul>
-              <li><a>level 3 item 1</a></li>
-              <li><a>level 3 item 2</a></li>
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
             </ul>
           </details>
         </li>
@@ -512,22 +513,22 @@ data="{[
 
 <Component title="Collapsible submenu that works with class names" desc="you can open/close the submenu by adding/removing `menu-dropdown-show` class using JS">
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><a>Item 1</a></li>
+  <li><button>Item 1</button></li>
   <li>
     <span class="menu-dropdown-toggle">Parent</span>
     <ul class="menu-dropdown">
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><button>Submenu 1</button></li>
+      <li><button>Submenu 2</button></li>
     </ul>
   </li>
 </ul>
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><a>Item 1</a></li>
+  <li><button>Item 1</button></li>
   <li>
     <span class="menu-dropdown-toggle menu-dropdown-show">Parent</span>
     <ul class="menu-dropdown menu-dropdown-show">
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><button>Submenu 1</button></li>
+      <li><button>Submenu 2</button></li>
     </ul>
   </li>
 </ul>
@@ -537,8 +538,8 @@ data="{[
   <li>
     <span class="$$menu-dropdown-toggle">Parent</span>
     <ul class="$$menu-dropdown">
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><a>Submenu 1</a></li>
+      <li><a>Submenu 2</a></li>
     </ul>
   </li>
 </ul>
@@ -547,8 +548,8 @@ data="{[
   <li>
     <span class="$$menu-dropdown-toggle $$menu-dropdown-show">Parent</span>
     <ul class="$$menu-dropdown $$menu-dropdown-show">
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><a>Submenu 1</a></li>
+      <li><a>Submenu 2</a></li>
     </ul>
   </li>
 </ul>`
@@ -557,10 +558,10 @@ data="{[
 
 <Component title="File tree">
 <ul class="menu menu-xs bg-base-200 rounded-lg max-w-xs w-full">
-  <li><a>
+  <li><button>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
     resume.pdf
-  </a></li>
+  </button></li>
   <li>
     <details open>
       <summary>
@@ -568,14 +569,14 @@ data="{[
         My Files
       </summary>
       <ul>
-        <li><a>
+        <li><button>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
           Project-final.psd
-        </a></li>
-        <li><a>
+        </button></li>
+        <li><button>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
           Project-final-2.psd
-        </a></li>
+        </button></li>
         <li>
           <details open>
             <summary>
@@ -583,14 +584,14 @@ data="{[
               Images
             </summary>
             <ul>
-              <li><a>
+              <li><button>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
                 Screenshot1.png
-              </a></li>
-              <li><a>
+              </button></li>
+              <li><button>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
                 Screenshot2.png
-              </a></li>
+              </button></li>
               <li>
                 <details open>
                   <summary>
@@ -598,10 +599,10 @@ data="{[
                     Others
                   </summary>
                   <ul>
-                    <li><a>
+                    <li><button>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
                       Screenshot3.png
-                    </a></li>
+                    </button></li>
                   </ul>
                 </details>
               </li>
@@ -611,10 +612,10 @@ data="{[
       </ul>
     </details>
   </li>
-  <li><a>
+  <li><button>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
     reports-final-2.pdf
-  </a></li>
+  </button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu $$menu-xs bg-base-200 $$rounded-lg max-w-xs w-full">
@@ -682,9 +683,9 @@ data="{[
 
 <Component title="Menu with active item">
 <ul class="menu bg-base-200 w-56 rounded-box">
-  <li><a>Item 1</a></li>
-  <li><a class="active">Item 2</a></li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 1</button></li>
+  <li><button class="active">Item 2</button></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu bg-base-200 w-56">
@@ -697,9 +698,9 @@ data="{[
 
 <Component title="Horizontal menu">
 <ul class="menu menu-horizontal bg-base-200 rounded-box">
-  <li><a>Item 1</a></li>
-  <li><a>Item 2</a></li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 1</button></li>
+  <li><button>Item 2</button></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu $$menu-horizontal bg-base-200">
@@ -712,15 +713,15 @@ data="{[
 
 <Component title="Horizontal submenu">
 <ul class="menu menu-horizontal bg-base-200 rounded-box">
-  <li><a>Item 1</a></li>
+  <li><button>Item 1</button></li>
   <li>
-    <a>Parent</a>
+    <button>Parent</button>
     <ul>
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><button>Submenu 1</button></li>
+      <li><button>Submenu 2</button></li>
     </ul>
   </li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box">
@@ -728,8 +729,8 @@ data="{[
   <li>
     <a>Parent</a>
     <ul>
-      <li><a>level 2 item 1</a></li>
-      <li><a>level 2 item 2</a></li>
+      <li><a>Submenu 1</a></li>
+      <li><a>Submenu 2</a></li>
     </ul>
   </li>
   <li><a>Item 3</a></li>
@@ -740,46 +741,46 @@ data="{[
 <Component title="Mega menu with submenu (responsive)">
 <ul class="menu xl:menu-horizontal lg:min-w-max bg-base-200 rounded-box">
   <li>
-    <a>Solutions</a>
+    <button>Solutions</button>
     <ul>
-      <li><a>Design</a></li>
-      <li><a>Development</a></li>
-      <li><a>Hosting</a></li>
-      <li><a>Domain register</a></li>
+      <li><button>Design</button></li>
+      <li><button>Development</button></li>
+      <li><button>Hosting</button></li>
+      <li><button>Domain register</button></li>
     </ul>
   </li>
   <li>
-    <a>Enterprise</a>
+    <button>Enterprise</button>
     <ul>
-      <li><a>CRM software</a></li>
-      <li><a>Marketing management</a></li>
-      <li><a>Security</a></li>
-      <li><a>Consulting</a></li>
+      <li><button>CRM software</button></li>
+      <li><button>Marketing management</button></li>
+      <li><button>Security</button></li>
+      <li><button>Consulting</button></li>
     </ul>
   </li>
   <li>
-    <a>Products</a>
+    <button>Products</button>
     <ul>
-      <li><a>UI Kit</a></li>
-      <li><a>Wordpress themes</a></li>
-      <li><a>Wordpress plugins</a></li>
+      <li><button>UI Kit</button></li>
+      <li><button>Wordpress themes</button></li>
+      <li><button>Wordpress plugins</button></li>
       <li>
-        <a>Open source</a>
+        <button>Open source</button>
         <ul>
-          <li><a>Auth management system</a></li>
-          <li><a>VScode theme</a></li>
-          <li><a>Color picker app</a></li>
+          <li><button>Auth management system</button></li>
+          <li><button>VScode theme</button></li>
+          <li><button>Color picker app</button></li>
         </ul>
       </li>
     </ul>
   </li>
   <li>
-    <a>Company</a>
+    <button>Company</button>
     <ul>
-      <li><a>About us</a></li>
-      <li><a>Contact us</a></li>
-      <li><a>Privacy policy</a></li>
-      <li><a>Press kit</a></li>
+      <li><button>About us</button></li>
+      <li><button>Contact us</button></li>
+      <li><button>Privacy policy</button></li>
+      <li><button>Press kit</button></li>
     </ul>
   </li>
 </ul>
@@ -834,26 +835,26 @@ data="{[
 
 <Component title="Collapsible with submenu (responsive)">
 <ul class="menu lg:menu-horizontal bg-base-200 rounded-box lg:mb-64">
-  <li><a>Item 1</a></li>
+  <li><button>Item 1</button></li>
   <li>
     <details open>
       <summary>Parent item</summary>
       <ul>
-        <li><a>level 2 item 1</a></li>
-        <li><a>level 2 item 2</a></li>
+        <li><button>Submenu 1</button></li>
+        <li><button>Submenu 2</button></li>
         <li>
           <details open>
             <summary>Parent</summary>
             <ul>
-              <li><a>item 1</a></li>
-              <li><a>item 2</a></li>
+              <li><button>item 1</button></li>
+              <li><button>item 2</button></li>
             </ul>
           </details>
         </li>
       </ul>
     </details>
   </li>
-  <li><a>Item 3</a></li>
+  <li><button>Item 3</button></li>
 </ul>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<ul class="$$menu lg:$$menu-horizontal bg-base-200 $$rounded-box lg:mb-64">
@@ -862,8 +863,8 @@ data="{[
     <details open>
       <summary>Parent item</summary>
       <ul>
-        <li><a>level 2 item 1</a></li>
-        <li><a>level 2 item 2</a></li>
+        <li><a>Submenu 1</a></li>
+        <li><a>Submenu 2</a></li>
         <li>
           <details open>
             <summary>Parent</summary>

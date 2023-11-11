@@ -1,6 +1,7 @@
 {
   "__name": "한국어",
   "__code": "KO",
+  "__direction": "ltr",
   "__status": "",
   "Tailwind CSS Components": "Tailwind CSS 컴포넌트",
   "cta-1": "컴포넌트 보기",
@@ -217,7 +218,7 @@
   "You can apply custom style to a daisyUI themes using CSS:": "CSS를 이용해 커스터마이징한 스타일을 데이지UI 테마에 적용할 수 있습니다.",
   "How to customize an existing theme?": "기존에 있는 테마는 어떻게 커스터마이징 하나요?",
   "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.": "tailwind.config.js에서, 기존에 존재하는 데이지UI 테마를 require하고 색상값을 덮어쓰기할 수 있습니다.",
-  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:": "아래 예시에서, <code>light</code> 테마를 require 및 전개하였고 <code>primary</code>와 <code>primary-focus</code> 색상을 변경하였습니다:",
+  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:": "아래 예시에서, <code>light</code> 테마를 require 및 전개하였고 <code>primary</code>와 <code>secondary</code> 색상을 변경하였습니다:",
   "Contribute to translation": "번역에 기여하기",
   "Alert informs users about important events.": "주의는 중요한 이벤트를 사용자에게 알려줍니다.",
   "Artboard provides fixed size container to display a demo content on mobile size.": "아트보드는 모바일 크기에서 데모 콘텐츠를 표시할 수 있는 고정 크기 컨테이너를 제공합니다.",

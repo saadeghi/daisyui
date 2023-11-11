@@ -1,29 +1,40 @@
-const tailwindColors = require("tailwindcss/colors")
+// const tailwindColors = require("tailwindcss/colors")
+// const tailwindPlugin = require("tailwindcss/plugin")
+const tailwindPlugin = require("./lib/createPlugin")
 
 const postcssJs = require("postcss-js")
+const pc = require("picocolors")
 const postcssPrefix = require("./lib/addPrefix")
 
 const daisyuiInfo = require("../package.json")
-const colors = require("./theming/index")
 const utilities = require("../dist/utilities")
 const base = require("../dist/base")
 const unstyled = require("../dist/unstyled")
-const unstyledRtl = require("../dist/unstyled.rtl")
 const styled = require("../dist/styled")
-const styledRtl = require("../dist/styled.rtl")
 const utilitiesUnstyled = require("../dist/utilities-unstyled")
 const utilitiesStyled = require("../dist/utilities-styled")
 const themes = require("./theming/themes")
 const colorFunctions = require("./theming/functions")
+let colorObject = require("./theming/index")
+
+// let colorSpace
 
 const mainFunction = ({ addBase, addComponents, config }) => {
+  // colorSpace = config("daisyui.colorSpace") || "oklch"
+  // if (["oklch", "hsl"].includes(colorSpace)) {
+  //   colorObject = colorObject(colorSpace)
+  // }
   let logs = false
   if (config("daisyui.logs") != false) {
     logs = true
   }
   if (logs) {
     console.log()
-    console.log("╭── 🌼\x1b[35m daisyUI " + daisyuiInfo.version, "\x1b[0m" + daisyuiInfo.homepage)
+    console.log(
+      `╭─ 🌼 ${pc.magenta("daisyUI")} ${pc.dim(daisyuiInfo.version)} ${pc.dim(
+        daisyuiInfo.homepage
+      )}\n│`
+    )
   }
 
   // inject @base style
@@ -32,16 +43,9 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   }
 
   // inject components
-  // because rollupjs doesn't supprt dynamic require
   let file = styled
-  if (config("daisyui.styled") == false && config("daisyui.rtl") != true) {
+  if (config("daisyui.styled") == false) {
     file = unstyled
-  } else if (config("daisyui.styled") == false && config("daisyui.rtl") == true) {
-    file = unstyledRtl
-  } else if (config("daisyui.styled") != false && config("daisyui.rtl") != true) {
-    file = styled
-  } else if (config("daisyui.styled") !== false && config("daisyui.rtl") == true) {
-    file = styledRtl
   }
 
   // add prefix to class names if specified
@@ -61,8 +65,8 @@ const mainFunction = ({ addBase, addComponents, config }) => {
 
   addComponents(file)
 
-  const themeInjectorHsl = colorFunctions.injectThemes(addBase, config, themes, "hsl")
-  themeInjectorHsl
+  const themeInjector = colorFunctions.injectThemes(addBase, config, themes)
+  themeInjector
 
   // inject @utilities style needed by components
   if (config("daisyui.utils") != false) {
@@ -82,94 +86,75 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   }
 
   if (logs) {
-    console.log("│")
     if (config("daisyui.styled") == false) {
       console.log(
-        "├──",
-        "daisyui.styled",
-        "\x1b[0m" + "config is",
-        "\x1b[2m" + "false" + "\x1b[0m",
-        "– your components will have no design decisions" + "\n│"
+        `├─ ${pc.yellow("ℹ︎")} ${pc.blue("daisyui.styled")} ${pc.reset("config is")} ${pc.blue(
+          "false"
+        )} ${pc.dim("– components will have no design decisions")}\n│`
       )
     }
     if (config("daisyui.utils") == false) {
       console.log(
-        "├──",
-        "daisyui.utils",
-        "\x1b[0m" + "config is",
-        "\x1b[2m" + "false" + "\x1b[0m",
-        "– daisyUI modifier utility classes are disabled" + "\n│"
+        `├─ ${pc.yellow("ℹ︎")} ${pc.blue("daisyui.utils")} ${pc.reset("config is")} ${pc.blue(
+          "false"
+        )} ${pc.dim("– daisyUI utility classes are disabled")}\n│`
       )
     }
     if (config("daisyui.prefix") && config("daisyui.prefix") !== "") {
       console.log(
-        "├──",
-        "\x1b[2m" + "prefix" + "\x1b[0m",
-        "is enabled, daisyUI classnames must use",
-        "\x1b[2m" + `${config("daisyui.prefix")}`,
-        "\x1b[0m" + "prefix. like:",
-        "\x1b[2m" + `${config("daisyui.prefix")}btn`,
-        "\x1b[0m" + "\n│   https://daisyui.com/docs/config" + "\n│"
+        `├─ ${pc.green("✔︎")} ${pc.blue("prefix")} is enabled – ${pc.dim(
+          "daisyUI classnames must use"
+        )} ${pc.blue(config("daisyui.prefix"))} ${pc.dim("prefix. like:")} ${pc.blue(
+          `${config("daisyui.prefix")}btn`
+        )}\n│    ${pc.dim("https://daisyui.com/docs/config")}\n│`
       )
     }
-    if (config("daisyui.rtl") == true) {
+    if (themeInjector.themeOrder.length > 0) {
       console.log(
-        "├──",
-        "Using RTL, make sure you're using",
-        "\x1b[2m" + "<html dir=rtl>" + "\x1b[0m",
-        "and you have",
-        "\x1b[2mtailwindcss-flip\x1b[0m",
-        "plugin",
-        "\n│   https://daisyui.com/docs/config" + "\n│"
+        `├─ ${pc.green("✔︎")} ${themeInjector.themeOrder.length} ${
+          themeInjector.themeOrder.length > 1 ? "themes" : "theme"
+        } added\n│    ${pc.dim("How to add more: https://daisyui.com/docs/themes")}\n│`
       )
     }
-    if (themeInjectorHsl.themeOrder.length > 0) {
+    if (themeInjector.themeOrder.length === 0) {
       console.log(
-        "├──",
-        "\x1b[2m" +
-          `${themeInjectorHsl.themeOrder.length}` +
-          "\x1b[0m" +
-          ` ${themeInjectorHsl.themeOrder.length > 1 ? "themes are" : "theme is"}` +
-          ` enabled. How to add more themes:` +
-          "\n│   https://daisyui.com/docs/themes" +
-          "\n│"
-      )
-    }
-    if (themeInjectorHsl.themeOrder.length === 0) {
-      console.log(
-        "├──",
-        `All themes are disabled in config. How to add themes:` +
-          "\n│   https://daisyui.com/docs/themes" +
-          "\n│"
+        `├─ ${pc.yellow("ℹ︎")} All themes are disabled in config\n│    ${pc.dim(
+          "How to add themes: https://daisyui.com/docs/themes"
+        )}\n│`
       )
     }
     let messages = [
-      `\x1b[32m💚 Support daisyUI project\x1b[0m: ${daisyuiInfo.funding.url}`,
-      `\x1b[32m⭐️ Star daisyUI project on GitHub\x1b[0m: https://github.com/saadeghi/daisyui`,
+      `${pc.green("❤︎")} ${pc.reset("Support daisyUI project:")} ${pc.dim(
+        daisyuiInfo.funding.url
+      )}`,
+      `${pc.green("★")} ${pc.reset("Star daisyUI project on GitHub:")} ${pc.dim(
+        "https://github.com/saadeghi/daisyui"
+      )}`,
     ]
-    console.log("╰── " + messages[Math.floor(Math.random() * messages.length)])
+    console.log(`╰─ ${messages[Math.floor(Math.random() * messages.length)]}`)
     console.log()
   }
 }
 
-module.exports = require("tailwindcss/plugin")(mainFunction, {
+module.exports = tailwindPlugin(mainFunction, {
   theme: {
     extend: {
       colors: {
-        ...colors,
+        ...colorObject,
         // adding all Tailwind `neutral` shades here so they don't get overridden by daisyUI `neutral` color
-        "neutral-50": tailwindColors.neutral[50],
-        "neutral-100": tailwindColors.neutral[100],
-        "neutral-200": tailwindColors.neutral[200],
-        "neutral-300": tailwindColors.neutral[300],
-        "neutral-400": tailwindColors.neutral[400],
-        "neutral-500": tailwindColors.neutral[500],
-        "neutral-600": tailwindColors.neutral[600],
-        "neutral-700": tailwindColors.neutral[700],
-        "neutral-800": tailwindColors.neutral[800],
-        "neutral-900": tailwindColors.neutral[900],
-        "neutral-950": tailwindColors.neutral[950],
+        "neutral-50": "#fafafa",
+        "neutral-100": "#f5f5f5",
+        "neutral-200": "#e5e5e5",
+        "neutral-300": "#d4d4d4",
+        "neutral-400": "#a3a3a3",
+        "neutral-500": "#737373",
+        "neutral-600": "#525252",
+        "neutral-700": "#404040",
+        "neutral-800": "#262626",
+        "neutral-900": "#171717",
+        "neutral-950": "#0a0a0a",
       },
+      ...require("./lib/utility-classes"),
     },
   },
 })

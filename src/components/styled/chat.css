@@ -36,16 +36,16 @@
   }
 
   &-start .chat-bubble {
-    @apply rounded-bl-none;
+    @apply rounded-es-none;
     &:before {
-      left: -0.749rem;
+      inset-inline-start: -0.749rem;
     }
   }
 
   &-end .chat-bubble {
-    @apply rounded-br-none;
+    @apply rounded-ee-none;
     &:before {
-      left: 99.9%;
+      inset-inline-start: 99.9%;
     }
   }
 }

@@ -4,8 +4,8 @@ import npmDownloadsInfo from "$lib/json/npm-downloads.json"
 import contributors1 from "$lib/json/github-contributors-1.json"
 import contributors2 from "$lib/json/github-contributors-2.json"
 import openCollectiveBackers from "$lib/json/opencollective-members.json"
-import { tweets } from "@src/lib/testimonials.js"
-import { siteStats } from "@src/lib/data.js"
+import { tweets } from "$lib/testimonials.js"
+import { stats } from "$lib/data/stats.js"
 
 let stargazers_count = 25000
 let npmInstalls = 8000000
@@ -43,6 +43,6 @@ export async function load() {
     contributors,
     backers,
     tweets,
-    siteStats,
+    stats,
   }
 }

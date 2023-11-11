@@ -1,6 +1,7 @@
 {
   "__name": "Português",
   "__code": "PT",
+  "__direction": "ltr",
   "__status": "",
   "Tailwind CSS Components": "Componentes do Tailwind CSS",
   "cta-1": "Ver componentes",
@@ -217,7 +218,7 @@
   "You can apply custom style to a daisyUI themes using CSS:": "Você pode aplicar estilos personalizados aos temas daisyUI usando CSS:",
   "How to customize an existing theme?": "Como personalizar um tema existente?",
   "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.": "Em seu tailwind.config.js, você pode escolher um tema daisyUI existente e substituir algumas cores.",
-  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:": "No exemplo abaixo, eu requeri e espalhei o tema <code>light</code> e alterei suas cores <code>primary</code> e <code>primary-focus</code>:",
+  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:": "No exemplo abaixo, eu requeri e espalhei o tema <code>light</code> e alterei suas cores <code>primary</code> e <code>secondary</code>:",
   "Contribute to translation": "Contribua para a tradução",
   "Alert informs users about important events.": "O alerta informa os usuários sobre eventos importantes.",
   "Artboard provides fixed size container to display a demo content on mobile size.": "O Quadro fornece um contêiner de tamanho fixo para exibir conteúdo de demonstração em uma tela de tamanho móvel.",

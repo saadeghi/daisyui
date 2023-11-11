@@ -1,13 +1,13 @@
 <script>
   import { onMount } from "svelte"
   import Countup from "svelte-countup"
-  import SEO from "@components/SEO.svelte"
-  import Ads from "@components/Ads.svelte"
-  import HomepageInstall from "@components/homepage/Install.svelte"
-  import Footer from "@components/Footer.svelte"
-  import { t } from "@src/lib/i18n"
+  import SEO from "$components/SEO.svelte"
+  import Ads from "$components/Ads.svelte"
+  import HomepageInstall from "$components/homepage/Install.svelte"
+  import Footer from "$components/Footer.svelte"
+  import { t } from "$lib/i18n"
 
-  // import ComponentsPreview from "@components/homepage/ComponentsPreview.svelte"
+  // import ComponentsPreview from "$components/homepage/ComponentsPreview.svelte"
   let ComponentsPreview
   // const sleep = (ms) => new Promise((f) => setTimeout(f, ms))
   onMount(async () => {
@@ -118,7 +118,7 @@
     bind:this={section["hero"]}>
     <div class="shrink xl:w-1/2">
       <div
-        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:pl-10 xl:pr-0 xl:text-left"
+        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:pe-0 xl:ps-10 xl:text-start"
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div>
           <div class="flex flex-col items-center gap-6 xl:flex-row">
@@ -126,7 +126,7 @@
               data-tip={isClipboardButtonPressed ? "copied" : "copy"}
               class="tooltip tooltip-accent">
               <button
-                class="btn btn-sm cursor-copy rounded-full font-mono font-light normal-case"
+                class="btn btn-sm cursor-copy rounded-full font-mono font-light"
                 on:click={() => copyText("npm i -D daisyui@latest")}>
                 <pre><code>npm i -D daisyui</code></pre>
               </button>
@@ -146,7 +146,7 @@
           </div>
           <div class="h-4" />
           <h1
-            class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] xl:text-left">
+            class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]">
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
               {@html $t("The most popular")}
@@ -154,12 +154,12 @@
             <br />
             <span class="inline-grid">
               <span
-                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text blur-2xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
                 aria-hidden="true">
                 {@html $t("component library")}
               </span>
               <span
-                class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
+                class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]">
                 {@html $t("component library")}
               </span>
             </span>
@@ -182,14 +182,14 @@
               <a
                 data-sveltekit-preload-data="hover"
                 href="/components/"
-                class="btn md:btn-lg md:btn-wide group px-12 normal-case">
+                class="btn md:btn-lg md:btn-wide group px-12">
                 <span class="hidden sm:inline">{$t("cta-1")}</span>
                 <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
               </a>
               <a
                 data-sveltekit-preload-data="hover"
                 href="/docs/install/"
-                class="btn btn-neutral md:btn-lg md:btn-wide group px-12 normal-case">
+                class="btn btn-neutral md:btn-lg md:btn-wide group px-12">
                 {$t("cta-2")}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -211,15 +211,15 @@
       <div class="xl:h-[calc(20vh)]" />
       <div>
         <div class="max-w-[100vw] px-2 py-10 lg:px-10 xl:max-w-[50vw]">
-          <div class="font-title text-center xl:text-left">
+          <div class="font-title text-center xl:text-start">
             <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none">
               {@html $t("don't re-invent<br/>the wheel<br/>every time")}
               <img
                 loading="lazy"
                 width="72"
                 height="72"
-                alt="yawing face"
-                src="/images/emoji/yawning-face@72.webp"
+                alt="yawing face emoji"
+                src="/images/emoji/yawning-face@80.webp"
                 srcset={`/images/emoji/yawning-face.webp 2x`}
                 class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
             </h2>
@@ -254,7 +254,7 @@
                     loading="lazy"
                     width="72"
                     height="72"
-                    alt="yawing face"
+                    alt="sunglasses emoji"
                     src="/images/emoji/smiling-face-with-sunglasses@80.webp"
                     srcset={`/images/emoji/smiling-face-with-sunglasses.webp 2x`}
                     class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
@@ -274,24 +274,28 @@
     <!-- hero figure -->
 
     <div
-      class="invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 xl:visible xl:-right-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16"
+      class="invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 xl:visible xl:-end-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16"
       style={`${
         section["hero"] && scrollY > section["hero"].clientHeight * 0.2
           ? "visibility: visible;"
           : ""
       }transform:translateY(${animateValue(section["hero"], [17, 25], [120, 0])}%)`}>
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1280px]:![transform:translate3d(0,0,0)] xl:-right-20 xl:-mr-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-r-none xl:pr-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [--rtl-reverse:1] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] rtl:[--rtl-reverse:-1] rtl:[transform:rotateX(20deg)rotateZ(20deg)skewY(-8deg)scale(1)] max-[1280px]:![transform:translate3d(0,0,0)] xl:-end-20 xl:-me-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-e-none xl:pe-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
         style={section["hero"] &&
           `transform: rotateX(${animateValue(
             section["hero"],
             [7, 17],
             [20, 0]
-          )}deg)rotateZ(${animateValue(section["hero"], [7, 17], [-20, 0])}deg)skewY(${animateValue(
+          )}deg)rotateZ(calc(${animateValue(
+            section["hero"],
+            [7, 17],
+            [-20, 0]
+          )}deg * var(--rtl-reverse)))skewY(calc(${animateValue(
             section["hero"],
             [7, 17],
             [8, 0]
-          )}deg)`}
+          )}deg * var(--rtl-reverse)))`}
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div class="grid">
           <div
@@ -302,36 +306,40 @@
               class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0">
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
-                  class="relative z-[1] w-80 will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)] xl:-left-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
-                  style={`transform:translate(${animateValue(
+                  class="relative z-[1] w-80 will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)] xl:-start-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
+                  style={`filter: drop-shadow(calc(-1rem * var(--rtl-reverse)) 3rem 1rem #00000012);transform:translate(calc(${animateValue(
                     section["hero"],
                     [2, 9],
                     [0, 250]
-                  )}px,${animateValue(section["hero"], [2, 9], [0, -800])}px)`}>
-                  <div class="tabs">
+                  )}px * var(--rtl-reverse)),${animateValue(
+                    section["hero"],
+                    [2, 9],
+                    [0, -800]
+                  )}px)`}>
+                  <div class="tabs tabs-lifted">
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 1)}
                       class:tab-active={activeMenuItemOnHeroMockup === 1}
-                      class="tab tab-lifted tab-border-none w-1/3 grow whitespace-nowrap text-xs">
+                      class="tab tab-border-none whitespace-nowrap text-xs">
                       {$t("Features")}
                     </button>
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 2)}
                       class:tab-active={activeMenuItemOnHeroMockup === 2}
-                      class="tab tab-lifted tab-border-none w-1/3 grow whitespace-nowrap text-xs">
+                      class="tab tab-border-none whitespace-nowrap text-xs">
                       {$t("Links")}
                     </button>
                     <button
                       on:click={() => (activeMenuItemOnHeroMockup = 3)}
                       class:tab-active={activeMenuItemOnHeroMockup === 3}
-                      class="tab tab-lifted tab-border-none w-1/3 grow whitespace-nowrap text-xs">
+                      class="tab tab-border-none whitespace-nowrap text-xs">
                       {$t("Message")}
                     </button>
                   </div>
                   <div
                     class="bg-base-100 rounded-b-box h-60 shrink-0"
-                    class:rounded-tr-box={activeMenuItemOnHeroMockup !== 3}
-                    class:rounded-tl-box={activeMenuItemOnHeroMockup !== 1}>
+                    class:rounded-se-box={activeMenuItemOnHeroMockup !== 3}
+                    class:rounded-ss-box={activeMenuItemOnHeroMockup !== 1}>
                     {#if activeMenuItemOnHeroMockup === 1}
                       <div class="flex flex-col items-stretch p-6">
                         <div class="form-control">
@@ -470,7 +478,8 @@
                                   alt="tailwind css avatar component" />
                               </div>
                             </div>
-                            <div class="chat-bubble text-xs [.chat_&]:before:[left:-0.73rem]">
+                            <div
+                              class="chat-bubble text-xs [.chat_&]:before:[inset-inline-start:-0.73rem]">
                               {$t("Use Tailwind CSS but write fewer class names.")}
                             </div>
                           </div>
@@ -498,20 +507,28 @@
                 <div
                   class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
-                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:![transform:translate3d(0,0,0)]"
-                    style={`box-shadow:${animateValue(
+                    class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:![transform:translate3d(0,0,0)]"
+                    style={`box-shadow:calc(${animateValue(
                       section["hero"],
                       [5, 5.5],
                       [0, -1]
-                    )}rem ${animateValue(section["hero"], [5, 5.5], [0, 3])}rem ${animateValue(
+                    )}rem * var(--rtl-reverse)) ${animateValue(
+                      section["hero"],
+                      [5, 5.5],
+                      [0, 3]
+                    )}rem ${animateValue(
                       section["hero"],
                       [5, 5.5],
                       [0, 1]
-                    )}rem #00000012;transform:translate(${animateValue(
+                    )}rem #00000012;transform:translate(calc(${animateValue(
                       section["hero"],
                       [5, 15],
                       [0, 250]
-                    )}px,${animateValue(section["hero"], [5, 15], [0, -800])}px)`}>
+                    )}px * var(--rtl-reverse)),${animateValue(
+                      section["hero"],
+                      [5, 15],
+                      [0, -800]
+                    )}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -527,20 +544,28 @@
                     </span>
                   </div>
                   <div
-                    class="alert border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:![transform:translate3d(0,0,0)]"
-                    style={`box-shadow:${animateValue(
+                    class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1280px]:![transform:translate3d(0,0,0)]"
+                    style={`box-shadow:calc(${animateValue(
                       section["hero"],
                       [6, 6.5],
                       [0, -1]
-                    )}rem ${animateValue(section["hero"], [6, 6.5], [0, 3])}rem ${animateValue(
+                    )}rem * var(--rtl-reverse)) ${animateValue(
+                      section["hero"],
+                      [6, 6.5],
+                      [0, 3]
+                    )}rem ${animateValue(
                       section["hero"],
                       [6, 6.5],
                       [0, 1]
-                    )}rem #00000012;transform:translate(${animateValue(
+                    )}rem #00000012;transform:translate(calc(${animateValue(
                       section["hero"],
                       [6, 16],
                       [0, 250]
-                    )}px,${animateValue(section["hero"], [6, 16], [0, -800])}px)`}>
+                    )}px * var(--rtl-reverse)),${animateValue(
+                      section["hero"],
+                      [6, 16],
+                      [0, -800]
+                    )}px)`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -556,22 +581,30 @@
                 </div>
               </div>
 
-              <div class="flex shrink-0 gap-6 pr-4 xl:flex-col xl:pr-0">
+              <div class="flex shrink-0 gap-6 pe-4 xl:flex-col xl:pe-0">
                 <div
                   class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:![transform:translate3d(0,0,0)]"
-                  style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
+                  style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), calc(${animateValue(
                     section["hero"],
                     [0, 0.5],
                     [0, -1]
-                  )}rem ${animateValue(section["hero"], [0, 0.5], [0, 3])}rem ${animateValue(
+                  )}rem * var(--rtl-reverse)) ${animateValue(
+                    section["hero"],
+                    [0, 0.5],
+                    [0, 3]
+                  )}rem ${animateValue(
                     section["hero"],
                     [0, 0.5],
                     [0, 1]
-                  )}rem #00000012;transform:translate(${animateValue(
+                  )}rem #00000012;transform:translate(calc(${animateValue(
                     section["hero"],
                     [0, 8],
                     [0, 250]
-                  )}px,${animateValue(section["hero"], [0, 8], [0, -800])}px)`}>
+                  )}px * var(--rtl-reverse)),${animateValue(
+                    section["hero"],
+                    [0, 8],
+                    [0, -800]
+                  )}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">{$t("Design system")}</h2>
                     <div class="grid grid-cols-4 items-end gap-4">
@@ -630,19 +663,27 @@
                 </div>
                 <div
                   class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1280px]:![transform:translate3d(0,0,0)]"
-                  style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), ${animateValue(
+                  style={`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), calc(${animateValue(
                     section["hero"],
                     [4, 4.5],
                     [0, -1]
-                  )}rem ${animateValue(section["hero"], [4, 4.5], [0, 3])}rem ${animateValue(
+                  )}rem * var(--rtl-reverse)) ${animateValue(
+                    section["hero"],
+                    [4, 4.5],
+                    [0, 3]
+                  )}rem ${animateValue(
                     section["hero"],
                     [4, 4.5],
                     [0, 1]
-                  )}rem #00000012;transform:translate(${animateValue(
+                  )}rem #00000012;transform:translate(calc(${animateValue(
                     section["hero"],
                     [4, 10],
                     [0, 250]
-                  )}px,${animateValue(section["hero"], [4, 10], [0, -800])}px)`}>
+                  )}px * var(--rtl-reverse)),${animateValue(
+                    section["hero"],
+                    [4, 10],
+                    [0, -800]
+                  )}px)`}>
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">Semantic colors</h2>
                     <div class="grid grid-cols-4 gap-4">
@@ -685,7 +726,8 @@
             </div>
           </div>
           <div
-            class="col-start-1 row-start-1 w-11/12 px-6 pb-3 opacity-0 sm:px-10 sm:pb-10 xl:pt-10"
+            dir="ltr"
+            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 rtl:ps-0 sm:pb-10 lg:pe-4 rtl:lg:ps-20 xl:ps-20 xl:pt-10"
             style={`opacity:${animateValue(
               section["hero"],
               [16, 17],
@@ -723,7 +765,7 @@
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
         style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}>
         {$t("to the next level")}
       </span>
@@ -804,10 +846,10 @@
             )}
           </p>
           <div class="h-4" />
-          <div class="text-base-content/40 mx-auto w-72 text-left">
+          <div class="text-base-content/40 mx-auto w-72 text-start">
             <span class="inline-block -translate-y-2 -rotate-12">{$t("Click")}</span>
             <svg
-              class="inline-block h-8 w-20"
+              class="inline-block h-8 w-20 rtl:[transform:rotateY(180deg)]"
               viewBox="0 0 45 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -821,7 +863,7 @@
               {$t("Tailwind only")}
               <div class="relative">
                 <div
-                  class="pointer-events-none absolute left-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2">
+                  class="pointer-events-none absolute start-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2">
                   <div
                     class="bg-primary/30 col-start-1 row-start-1 scale-[2] rounded-full blur-[5rem] [transform:translate3d(0,0,0)]" />
                 </div>
@@ -862,7 +904,7 @@
 &lt;/div&gt;</pre>
             </div>
             <div class="divider xl:divider-horizontal">
-              <span class="hidden xl:inline">→</span>
+              <span class="hidden rtl:rotate-180 xl:inline">→</span>
               <span class="xl:hidden">↓</span>
             </div>
             <div>
@@ -900,7 +942,7 @@
         &lt;input type=&quot;checkbox&quot; class=&quot;<span
                   class="text-amber-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
         &lt;span class=&quot;<span
-                  class="text-amber-600">pointer-events-none absolute left-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:left-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
+                  class="text-amber-600">pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
       &lt;/div&gt;
     &lt;/label&gt;
     &lt;label class=&quot;<span
@@ -910,7 +952,7 @@
         &lt;input type=&quot;checkbox&quot; class=&quot;<span
                   class="text-amber-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
         &lt;span class=&quot;<span
-                  class="text-amber-600">pointer-events-none absolute left-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:left-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
+                  class="text-amber-600">pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
       &lt;/div&gt;
     &lt;/label&gt;
     &lt;button class=&quot;<span
@@ -921,7 +963,7 @@
 &lt;/div&gt;</pre>
             </div>
             <div class="divider xl:divider-horizontal">
-              <span class="hidden xl:inline">→</span>
+              <span class="hidden rtl:rotate-180 xl:inline">→</span>
               <span class="xl:hidden">↓</span>
             </div>
             <div>
@@ -939,7 +981,7 @@
                         type="checkbox"
                         class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2" />
                       <span
-                        class="pointer-events-none absolute left-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:left-7 peer-checked:bg-gray-900" />
+                        class="pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900" />
                     </div>
                   </label>
                   <label class="flex cursor-pointer items-center justify-between p-1">
@@ -950,7 +992,7 @@
                         name="sample-checkbox"
                         class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2" />
                       <span
-                        class="pointer-events-none absolute left-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:left-7 peer-checked:bg-gray-900" />
+                        class="pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900" />
                     </span>
                   </label>
                   <button
@@ -973,11 +1015,11 @@
       class="relative flex flex-col items-center justify-center gap-10 px-4 md:px-10 xl:flex-row-reverse xl:gap-20">
       <div>
         <div
-          class="bg-primary pointer-events-none absolute left-20 aspect-square w-96 rounded-full opacity-20 blur-3xl [transform:translate3d(0,0,0)]" />
+          class="bg-primary pointer-events-none absolute start-20 aspect-square w-96 rounded-full opacity-20 blur-3xl [transform:translate3d(0,0,0)]" />
         <div
           class="bg-success pointer-events-none absolute aspect-square w-full rounded-full opacity-10 blur-3xl [transform:translate3d(0,0,0)]" />
         <h2
-          class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-left">
+          class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-start">
           <span
             class="motion-reduce:!opacity-100"
             style={`opacity:${
@@ -1009,7 +1051,7 @@
           </span>
         </h2>
         <div class="h-10" />
-        <p class="text-base-content/60 font-title text-center font-light md:text-3xl xl:text-left">
+        <p class="text-base-content/60 font-title text-center font-light md:text-3xl xl:text-start">
           {@html $t(
             "With daisyUI, you write 80% fewer class names<br />And your HTML size will be about 70% smaller."
           )}
@@ -1027,7 +1069,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -1129,40 +1171,40 @@
 </div>
 
 <div
-  class="bg-neutral from-neutral to-neutral-focus text-neutral-content relative flex min-h-[100vh] max-w-[100vw] items-center justify-center overflow-hidden bg-gradient-to-br p-10 md:p-20"
+  class="bg-neutral text-neutral-content relative flex min-h-[100vh] max-w-[100vw] items-center justify-center overflow-hidden p-10 md:p-20"
   bind:this={section["customizable"]}>
   <div
     class="relative flex max-w-[100rem] flex-col items-center justify-center xl:flex-row xl:gap-20">
     <div class="relative z-[1] w-full py-10">
-      <h2 class="font-title text-center font-black leading-none xl:text-left">
+      <h2 class="font-title text-center font-black leading-none xl:text-start">
         <span
-          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)]"
-          style={`transform:translateX(${animateValue(
+          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)]"
+          style={`transform:translateX(calc(${animateValue(
             section["customizable"],
             [-100, 100],
             [10, 0]
-          )}rem)`}>
+          )}rem * var(--rtl-reverse)))`}>
           {@html $t("Highly customizable")}
         </span>
         <br />
         <span
-          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)]"
-          style={`transform:translateX(${animateValue(
+          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)]"
+          style={`transform:translateX(calc(${animateValue(
             section["customizable"],
             [-100, 100],
             [0, 8]
-          )}rem)`}>
+          )}rem * var(--rtl-reverse)))`}>
           {@html $t("Powered by Tailwind&nbsp;CSS utility&nbsp;classes")}
         </span>
       </h2>
       <div class="h-10" />
       <p
-        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)] md:text-2xl xl:text-left"
-        style={`transform:translateX(${animateValue(
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto [--rtl-reverse:1] [text-wrap:balance] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1280px]:![transform:translate3d(0,0,0)] md:text-2xl xl:text-start"
+        style={`transform:translateX(calc(${animateValue(
           section["customizable"],
           [-100, 100],
           [10, 2]
-        )}rem)`}>
+        )}rem * var(--rtl-reverse)))`}>
         {@html $t(
           "daisyUI is built on top of Tailwind&nbsp;CSS so you can customize everything using utility classes."
         )}
@@ -1172,7 +1214,7 @@
         <a
           data-sveltekit-preload-data="hover"
           href="/docs/customize"
-          class="btn btn-lg btn-wide group normal-case">
+          class="btn btn-lg btn-wide group">
           {$t("how-to-customize")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1180,7 +1222,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1190,11 +1232,11 @@
       </div>
     </div>
     <div class="flex flex-col">
-      <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
+      <div class="mockup-code mx-auto w-full max-w-xs bg-black/20 text-start sm:max-w-none">
         <pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre>
       </div>
       <div class="divider text-neutral-content text-opacity-30">↓</div>
-      <div class="mockup-code bg-neutral-focus mx-auto w-full max-w-xs text-left sm:max-w-none">
+      <div class="mockup-code mx-auto w-full max-w-xs bg-black/20 text-start sm:max-w-none">
         <pre><code>&lt;a class="<span>btn btn-primary</span> <span
               class="text-teal-500">rounded-full</span>"&gt;Button&lt;/a&gt;</code></pre>
       </div>
@@ -1206,15 +1248,15 @@
   class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-gradient-to-t py-16"
   bind:this={section["agnostic"]}>
   <div
-    class="bg-warning right-1/5 pointer-events-none absolute -top-full aspect-square w-full -translate-x-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
+    class="bg-warning end-1/5 pointer-events-none absolute -top-full aspect-square w-full -translate-x-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
   <div
-    class="bg-base-content top-1/5 pointer-events-none absolute -left-40 aspect-square w-2/3 rounded-full border-2 opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
+    class="bg-base-content top-1/5 pointer-events-none absolute -start-40 aspect-square w-2/3 rounded-full border-2 opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
   <div
-    class="bg-info pointer-events-none absolute left-0 top-1/2 aspect-square w-1/2 -translate-y-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
+    class="bg-info pointer-events-none absolute start-0 top-1/2 aspect-square w-1/2 -translate-y-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
   <div
     class="flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse">
     <div>
-      <h2 class="font-title text-center leading-none xl:text-left">
+      <h2 class="font-title text-center leading-none xl:text-start">
         <span class="text-[clamp(2rem,8vw,4rem)] font-black">{$t("Pure CSS.")}</span>
         <br />
         <span class="text-[clamp(2rem,8vw,4rem)] font-black">{$t("Framework agnostic.")}</span>
@@ -1223,13 +1265,13 @@
       </h2>
       <div class="h-10" />
       <p
-        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
+        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-start">
         {@html $t(
           "daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file."
         )}
       </p>
       <p
-        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-left">
+        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-start">
         {@html $t(
           "Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name."
         )}
@@ -1239,7 +1281,7 @@
         <a
           data-sveltekit-preload-data="hover"
           href="/docs/install/"
-          class="btn btn-lg btn-wide group normal-case">
+          class="btn btn-lg btn-wide group">
           {$t("cta-2")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1247,7 +1289,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block">
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1292,10 +1334,10 @@
   </div>
 </div>
 
-<div class="min-h-[600vh] py-20" bind:this={section["themes"]}>
+<div class="min-h-[320vh] py-20" bind:this={section["themes"]}>
   <div
     class="sticky top-[calc(50vh-10rem)] mx-auto grid w-[calc(100%-2rem)] max-w-[85rem] overflow-hidden rounded-2xl sm:top-20">
-    {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "business", "dracula", "luxury", "night"] as currentTheme, index}
+    {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "luxury", "night"] as currentTheme, index}
       <div
         class="col-start-1 row-start-1 flex items-start [transform:translate3d(0,0,0)]"
         data-theme={currentTheme}
@@ -1383,13 +1425,10 @@
       </p>
       <div class="h-10" />
       <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-        <a data-sveltekit-preload-data="hover" href="/theme-generator/" class="btn normal-case">
+        <a data-sveltekit-preload-data="hover" href="/theme-generator/" class="btn">
           {$t("Theme Generator")}
         </a>
-        <a
-          data-sveltekit-preload-data="hover"
-          href="/docs/themes/#-4"
-          class="btn btn-neutral normal-case">
+        <a data-sveltekit-preload-data="hover" href="/docs/themes/#-4" class="btn btn-neutral">
           {$t("Learn more about themes")}
         </a>
       </div>
@@ -1409,7 +1448,7 @@
               ? 0.1
               : Math.trunc(animateValue(section["possibilities"], [-30, -20], [0, 1]))
           }`}>
-          {data.siteStats.components}
+          {data.stats.components}
           {$t("components")}
         </span>
         <br />
@@ -1420,13 +1459,14 @@
               ? 0.1
               : Math.trunc(animateValue(section["possibilities"], [-20, -10], [0, 1]))
           }`}>
-          500+ {$t("utility classes")}
+          {data.stats.utilities}
+          {$t("utility classes")}
         </span>
         <br />
         <span class="inline-grid">
           {#if Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0}
             <span
-              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [:root[dir=rtl]_&]:leading-[1.35] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
               aria-hidden="true">
               {$t("endless possibilities")}
             </span>
@@ -1439,8 +1479,8 @@
             }`}
             class={`[&::selection]:text-base-content relative col-start-1 row-start-1 leading-tight motion-reduce:!opacity-100 [&::selection]:bg-blue-700/20 ${
               Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0
-                ? "bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
-                : "motion-reduce:!bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] motion-reduce:!bg-clip-text motion-reduce:![-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:motion-reduce:!bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]"
+                ? "bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+                : "motion-reduce:!bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] motion-reduce:!bg-clip-text motion-reduce:![-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:motion-reduce:!bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
             }`}>
             {$t("endless possibilities")}
           </span>
@@ -1546,7 +1586,7 @@
   <div
     class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16">
     {#each data.tweets as tweet, index}
-      <div class="card border-base-content/5 card-compact border text-left">
+      <div class="card border-base-content/5 card-compact border text-start">
         <div class="card-body">
           <div class="flex items-center gap-2">
             <div class="avatar">
@@ -1576,7 +1616,7 @@
   </div>
 </div>
 
-<div class="px-2 py-40 lg:px-10">
+<div class="w-full overflow-hidden px-2 py-40 lg:px-10">
   <div class="text-center">
     <div class="h-6" />
     <div>
@@ -1584,7 +1624,7 @@
         loading="lazy"
         width="80"
         height="80"
-        alt="yawing face"
+        alt="heart emoji"
         src="/images/emoji/heart-on-fire@80.webp"
         srcset={`/images/emoji/heart-on-fire.webp 2x`}
         class="pointer-events-none inline-block h-20 w-20 align-bottom" />
@@ -1658,8 +1698,8 @@
               <div class="avatar placeholder">
                 <div
                   class="mask mask-squircle w-8 text-black"
-                  style={`background-color:hsl(${Math.floor(Math.random() * 360)}, 15%, 80%)`}>
-                  <span class="font-mono text-xs uppercase">
+                  style={`background-color:hsl(${Math.floor(Math.random() * 360)} 10% 80%)`}>
+                  <span class="select-none font-mono text-xs uppercase">
                     {backer.name
                       .split(" ")
                       .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))
@@ -1739,11 +1779,7 @@
       <div class="h-10" />
       <div class="flex w-full flex-col items-center justify-center gap-2 md:flex-row">
         <span class="text-base-content/60">{$t("Or play with daisyUI on")}:</span>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="/codepen"
-          class="btn-ghost btn-sm btn normal-case">
+        <a target="_blank" rel="noopener, noreferrer" href="/codepen" class="btn-ghost btn-sm btn">
           <svg
             class="h-4 w-4 stroke-current"
             viewBox="0 0 64 64"
@@ -1760,7 +1796,7 @@
         </a>
         <a
           href="/tailwindplay"
-          class="btn-ghost btn-sm btn normal-case"
+          class="btn-ghost btn-sm btn"
           target="_blank"
           rel="noopener, noreferrer">
           <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">

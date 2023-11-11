@@ -5,12 +5,14 @@ module.exports = {
   safelist: responsiveRegex,
   theme: {
     colors: require("../theming"),
+    ...require("../lib/utility-classes"),
   },
   corePlugins: [
     "animation",
     "backgroundColor",
     "backgroundImage",
     "borderColor",
+    "borderRadius",
     "divideColor",
     "gradientColorStops",
     "placeholderColor",

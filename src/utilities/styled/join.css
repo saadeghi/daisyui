@@ -2,5 +2,5 @@
   @apply mx-0 -mt-px;
 }
 .join.join-horizontal > :where(*:not(:first-child)) {
-  @apply my-0 -ml-px;
+  @apply my-0 -ms-px;
 }

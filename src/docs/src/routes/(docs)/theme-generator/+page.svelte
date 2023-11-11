@@ -1,40 +1,80 @@
 <script>
+  /* this file is spaghetti code but it works (hopefully) */
+
   import { onMount } from "svelte"
   import { browser } from "$app/environment"
-  import SEO from "@components/SEO.svelte"
-  import ColorPicker from "@components/ColorPicker.svelte"
-  import Translate from "@components/Translate.svelte"
+  import SEO from "$components/SEO.svelte"
+  import ColorPicker from "$components/ColorPicker.svelte"
+  import Translate from "$components/Translate.svelte"
 
-  import { colord, extend } from "colord"
-  import mixPlugin from "colord/plugins/mix"
-  import namesPlugin from "colord/plugins/names"
-  import lchPlugin from "colord/plugins/lch"
-  import hwbPlugin from "colord/plugins/hwb"
-  import labPlugin from "colord/plugins/lab"
-  import xyzPlugin from "colord/plugins/xyz"
+  import { formatHex, toGamut, interpolate, wcagContrast } from "culori"
 
-  extend([mixPlugin, namesPlugin, lchPlugin, hwbPlugin, labPlugin, xyzPlugin])
+  const isDark = (color) => {
+    if (wcagContrast(color, "black") < wcagContrast(color, "white")) {
+      return true
+    }
 
-  import { default as randomColor } from "randomcolor"
+    return false
+  }
+
+  const colorObjToString = function (input, colorSpace) {
+    const cut = (number) => {
+      if (!number) {
+        return 0
+      }
+      return +number.toFixed(4)
+    }
+    if (colorSpace === "oklch") {
+      const { l, c, h } = input
+      return `${cut(l)} ${cut(c)} ${cut(h)}`
+    }
+    if (colorSpace === "hsl") {
+      const { h, s, l } = input
+      return `${cut(h)} ${cut(s)}% ${cut(l)}%`
+    }
+  }
+
+  const generateForegroundColorFrom = function (input, percentage = 0.8, colorSpace) {
+    const result = interpolate([input, isDark(input) ? "white" : "black"], colorSpace)(percentage)
+    return colorObjToString(result, colorSpace)
+  }
+
+  const generateDarkenColorFrom = function (input, percentage = 0.07, colorSpace) {
+    const result = interpolate([input, "black"], colorSpace)(percentage)
+    return colorObjToString(result, colorSpace)
+  }
 
   function changeColorValuesToObject(input) {
-    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return { h, s, l, a: 1 }
+    const [l, c, h] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
+    return { l, c, h, a: 1 }
   }
 
-  function turnColorValuesToString(input) {
-    const [h, s, l] = input.match(/\d+(\.\d+)?%|\d+(\.\d+)?/g).map(parseFloat)
-    return `${h} ${s}% ${l}%`
-  }
+  // let observer
+  // onMount(() => {
+  //   observer = new MutationObserver((mutationsList) => {
+  //     mutationsList.forEach((mutation) => {
+  //       if (mutation.type === "attributes" && mutation.attributeName === "data-theme") {
+  //         localStorage.setItem(
+  //           "theme-generator-colors",
+  //           JSON.parse(localStorage.getItem("theme-generator-default-colors"))
+  //         )
+  //       }
+  //     })
+  //   })
+  //   observer.observe(document.querySelector("html"), {
+  //     attributes: true,
+  //     attributeFilter: ["data-theme"],
+  //   })
+  // })
 
-  function getColorValueFromTheme(variable) {
+  const getColorValueFromTheme = (variable) => {
     if (browser) {
       let colorValues = getComputedStyle(document.documentElement).getPropertyValue(variable)
-      return colord(
-        `hsl(${changeColorValuesToObject(colorValues).h} ${
-          changeColorValuesToObject(colorValues).s
-        }% ${changeColorValuesToObject(colorValues).l}%)`
-      ).toHex()
+      return formatHex(
+        `oklch(${changeColorValuesToObject(colorValues).l} ${
+          changeColorValuesToObject(colorValues).c
+        } ${changeColorValuesToObject(colorValues).h})`
+      )
     }
     return null
   }
@@ -58,11 +98,6 @@
       value: getColorValueFromTheme("--p"),
     },
     {
-      name: "primary-focus",
-      variable: "--pf",
-      value: getColorValueFromTheme("--pf"),
-    },
-    {
       name: "primary-content",
       variable: "--pc",
       value: getColorValueFromTheme("--pc"),
@@ -71,11 +106,6 @@
       name: "secondary",
       variable: "--s",
       value: getColorValueFromTheme("--s"),
-    },
-    {
-      name: "secondary-focus",
-      variable: "--sf",
-      value: getColorValueFromTheme("--sf"),
     },
     {
       name: "secondary-content",
@@ -88,11 +118,6 @@
       value: getColorValueFromTheme("--a"),
     },
     {
-      name: "accent-focus",
-      variable: "--af",
-      value: getColorValueFromTheme("--af"),
-    },
-    {
       name: "accent-content",
       variable: "--ac",
       value: getColorValueFromTheme("--ac"),
@@ -101,11 +126,6 @@
       name: "neutral",
       variable: "--n",
       value: getColorValueFromTheme("--n"),
-    },
-    {
-      name: "neutral-focus",
-      variable: "--nf",
-      value: getColorValueFromTheme("--nf"),
     },
     {
       name: "neutral-content",
@@ -178,34 +198,27 @@
     return {
       name: name,
       variable: variable,
-      value: colord(colors.find((item) => item.name === source).value)
-        .darken(percentage)
-        .toHex(),
+      value: generateDarkenColorFrom(
+        colors.find((item) => item.name === source).value,
+        percentage,
+        "oklch"
+      ),
     }
   }
   function contrastMaker(name, variable, source, percentage = 0.8) {
-    if (colord(colors.find((item) => item.name === source).value).isDark()) {
-      return {
-        name: name,
-        variable: variable,
-        value: colord(colors.find((item) => item.name === source).value).mix("white", percentage),
-      }
-    } else {
-      return {
-        name: name,
-        variable: variable,
-        value: colord(colors.find((item) => item.name === source).value).mix("black", percentage),
-      }
+    return {
+      name: name,
+      variable: variable,
+      value: generateForegroundColorFrom(
+        colors.find((item) => item.name === source).value,
+        percentage,
+        "oklch"
+      ),
     }
   }
 
   function generateOptionalColors(colors) {
     let optionalColors = []
-    optionalColors.push(darken("primary-focus", "--pf", "primary"))
-    optionalColors.push(darken("secondary-focus", "--sf", "secondary"))
-    optionalColors.push(darken("accent-focus", "--af", "accent"))
-    optionalColors.push(darken("neutral-focus", "--nf", "neutral"))
-
     optionalColors.push(darken("base-200", "--b2", "base-100", 0.1))
     optionalColors.push(darken("base-300", "--b3", "base-100", 0.2))
     optionalColors.push(contrastMaker("base-content", "--bc", "base-100"))
@@ -229,17 +242,14 @@
         .forEach((color) => {
           wrapper.style.setProperty(
             color.variable,
-            turnColorValuesToString(colord(color.value).toHslString())
+            colorObjToString(toGamut("oklch")(color.value), "oklch")
           )
         })
       generateOptionalColors(colors).forEach((color) => {
-        wrapper.style.setProperty(
-          color.variable,
-          turnColorValuesToString(colord(color.value).toHslString())
-        )
+        wrapper.style.setProperty(color.variable, color.value)
       })
       if (browser) {
-        localStorage.setItem("daisyui-theme-generator-colors", JSON.stringify(colors))
+        localStorage.setItem("theme-generator-colors", JSON.stringify(colors))
       }
     } else {
       console.log(`${newColorToCheck} is not a valid color`)
@@ -247,55 +257,62 @@
   }
 
   function resetColors() {
-    if (browser && localStorage.getItem("daisyui-theme-generator-colors")) {
-      localStorage.removeItem("daisyui-theme-generator-colors")
-      colors = JSON.parse(localStorage.getItem("daisyui-theme-generator-default-colors"))
+    if (browser && localStorage.getItem("theme-generator-colors")) {
+      localStorage.removeItem("theme-generator-colors")
+      colors = JSON.parse(localStorage.getItem("theme-generator-default-colors"))
       generateColors()
     }
   }
 
   function randomBetween(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+    const result = Math.random() * (max - min) + min
+    return Math.round(result * 100) / 100
   }
 
   function randomize() {
-    localStorage.removeItem("daisyui-theme-generator-colors")
-    ;["primary", "secondary", "accent"].forEach((element) => {
-      colors[0].value = randomColor() //primary
-      colors[3].value = randomColor() //secondary
-      colors[6].value = randomColor() //accent
-      colors[9].value = colord(
-        `hsl(${randomBetween(200, 300)} ${randomBetween(10, 30)}% ${randomBetween(10, 20)}%)`
-      ).toHex() //neutral
-      colors[12].value = colord(
-        `hsl(${randomBetween(200, 300)} ${randomBetween(0, 40)}% ${
-          [randomBetween(20, 30), randomBetween(90, 100)][Math.round(Math.random())]
-        }%)`
-      ).toHex() //base-100
-      colors[16].value = colord(
-        `hsl(${randomBetween(190, 230)} ${randomBetween(50, 90)}% ${randomBetween(50, 80)}%)`
-      ).toHex() //info
-      colors[18].value = colord(
-        `hsl(${randomBetween(142, 175)} ${randomBetween(60, 80)}% ${randomBetween(20, 70)}%)`
-      ).toHex() //success
-      colors[20].value = colord(
-        `hsl(${randomBetween(30, 50)} ${randomBetween(80, 97)}% ${randomBetween(30, 70)}%)`
-      ).toHex() //warning
-      colors[22].value = colord(
-        `hsl(${randomBetween(340, 370)} ${randomBetween(70, 97)}% ${randomBetween(50, 70)}%)`
-      ).toHex() //error
-    })
+    localStorage.removeItem("theme-generator-colors")
+    // ;["primary", "secondary", "accent"].forEach((element) => {
+    colors[0].value = formatHex(
+      `oklch(${randomBetween(0.5, 0.7)} ${randomBetween(0.4, 0.5)} ${randomBetween(180, 360)})`
+    ) //primary
+    colors[2].value = formatHex(
+      `oklch(${randomBetween(0.4, 0.8)} ${randomBetween(0.4, 0.5)} ${randomBetween(70, 270)})`
+    ) //secondary
+    colors[4].value = formatHex(
+      `oklch(${randomBetween(0.4, 0.8)} ${randomBetween(0.4, 0.5)} ${randomBetween(70, 270)})`
+    ) //accent
+    colors[6].value = formatHex(
+      `oklch(${randomBetween(0.1, 0.3)} ${randomBetween(0, 0.05)} ${randomBetween(0, 360)})`
+    ) //neutral
+    colors[8].value = formatHex(
+      `oklch(${
+        [randomBetween(0.99, 1), randomBetween(0.25, 0.3)][Math.round(Math.random())]
+      } ${randomBetween(0, 0.05)} ${randomBetween(0, 360)})`
+    ) //base-100
+    colors[12].value = formatHex(
+      `oklch(${randomBetween(0.5, 0.9)} ${randomBetween(0.18, 0.293)} ${randomBetween(200, 260)})`
+    ) //info
+    colors[14].value = formatHex(
+      `oklch(${randomBetween(0.5, 0.9)} ${randomBetween(0.18, 0.293)} ${randomBetween(120, 180)})`
+    ) //success
+    colors[16].value = formatHex(
+      `oklch(${randomBetween(0.5, 0.9)} ${randomBetween(0.18, 0.293)} ${randomBetween(50, 100)})`
+    ) //warning
+    colors[18].value = formatHex(
+      `oklch(${randomBetween(0.5, 0.9)} ${randomBetween(0.18, 0.293)} ${randomBetween(12, 24)})`
+    )
+    //error
+    // })
     generateColors()
   }
 
   let wrapper
   onMount(() => {
-    if (browser) {
-      localStorage.setItem("daisyui-theme-generator-default-colors", JSON.stringify(colors))
-      if (localStorage.getItem("daisyui-theme-generator-colors")) {
-        colors = JSON.parse(localStorage.getItem("daisyui-theme-generator-colors"))
-      }
+    localStorage.setItem("theme-generator-default-colors", JSON.stringify(colors))
+    if (localStorage.getItem("theme-generator-colors")) {
+      colors = JSON.parse(localStorage.getItem("theme-generator-colors"))
     }
+
     generateColors()
   })
 </script>
@@ -361,10 +378,10 @@
       {#if browser}
         <div class="mockup-code not-prose relative">
           <div class="absolute right-2 top-2">
-            <button class="btn btn-xs normal-case" on:click={() => randomize()}>
+            <button class="btn btn-xs" on:click={() => randomize()}>
               <Translate text="Randomize" />
             </button>
-            <button class="btn btn-xs normal-case" on:click={() => resetColors()}>
+            <button class="btn btn-xs" on:click={() => resetColors()}>
               <Translate text="Reset" />
             </button>
           </div>
@@ -382,12 +399,12 @@
                   class="tooltip-open tooltip-accent tooltip-left align-middle"><span
                     class="inline-block w-1" /><ColorPicker
                     bind:value={color.value}
-                    on:set={() => generateColors(color.value)} /></span>"{color.name}": "<span
-                  class="bg-neutral-focus hover:outline-neutral-content/20 focus:outline-neutral-content rounded-sm px-1 hover:outline focus:outline"
+                    on:set={() => generateColors(color.value)} /></span>"{color.name}": "<button
+                  class="hover:outline-neutral-content/20 focus:outline-neutral-content rounded-sm bg-black/20 px-1 hover:outline focus:outline"
                   contenteditable="true"
                   bind:innerHTML={color.value}
                   on:input={() => generateColors(color.value)}
-                  on:keyup={() => generateColors(color.value)}>{color.value}</span>",
+                  on:keyup={() => generateColors(color.value)}>{color.value}</button>",
 </code>{/each}<code>{`          },
         },
       ],
@@ -435,10 +452,10 @@
           <div class="flex flex-col gap-3 md:flex-row">
             <div class="md:w-1/2">
               <!-- tabs -->
-              <div class="tabs">
-                <button class="tab tab-lifted">Tab</button>
-                <button class="tab tab-lifted tab-active">Tab</button>
-                <button class="tab tab-lifted">Tab</button>
+              <div class="tabs tabs-lifted">
+                <button class="tab">Tab</button>
+                <button class="tab tab-active">Tab</button>
+                <button class="tab">Tab</button>
               </div>
               <!-- link -->
               <div class="flex flex-col">
@@ -583,7 +600,7 @@
               </button>
             </div>
             <div class="flex-1">
-              <button class="btn btn-ghost text-xl normal-case">daisyUI</button>
+              <button class="btn btn-ghost text-xl">daisyUI</button>
             </div>
           </div>
           <div class="flex gap-3">

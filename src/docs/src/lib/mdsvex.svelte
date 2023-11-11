@@ -1,10 +1,11 @@
 <script>
   import { page } from "$app/stores"
-  import Ads from "@components/Ads.svelte"
-  import ComponentFooter from "@components/ComponentFooter.svelte"
-  import SEO from "@components/SEO.svelte"
-  import Sponsors from "@components/Sponsors.svelte"
-  import { t } from "@src/lib/i18n"
+  import Ads from "$components/Ads.svelte"
+  import ComponentFooter from "$components/ComponentFooter.svelte"
+  import SEO from "$components/SEO.svelte"
+  import Sponsors from "$components/Sponsors.svelte"
+  import { t } from "$lib/i18n"
+  export let data
   export let title
   export let desc
 </script>
@@ -20,7 +21,7 @@
       <p>{@html $t(desc)}</p>
     {/if}
     <slot />
-    <ComponentFooter />
+    <ComponentFooter pages={data?.pages} />
     <div class="not-prose flex justify-center xl:hidden">
       <Sponsors wrapperClasses="flex-col sm:flex-row" />
     </div>

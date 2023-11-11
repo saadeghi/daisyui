@@ -1,6 +1,6 @@
 .menu-horizontal {
   & > li:not(.menu-title) > details > ul {
-    @apply ml-0 mt-4 py-2 pr-2;
+    @apply ms-0 mt-4 py-2 pe-2;
   }
   & > li > details > ul {
     &:before {
@@ -13,7 +13,7 @@
 }
 .menu-vertical {
   & > li:not(.menu-title) > details > ul {
-    @apply ml-4 mt-0 py-0 pr-0;
+    @apply ms-4 mt-0 py-0 pe-0;
   }
 }
 

@@ -38,7 +38,6 @@
     "src/lib/**/*.js",
     "dist/*.js",
     "dist/{themes,styled,unstyled,full}.css",
-    "!dist/*.rtl.css",
     "src/index.js",
     "src/theming/*.js",
     "src/theming/*.d.ts",
@@ -57,13 +56,11 @@
     ]
   },
   "scripts": {
-    "init": "npm install && npm run build && cd src/docs && npm install && cd src/experiments/playground && npm install",
+    "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
     "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config src/.prettierrc.yaml --ignore-path src/.prettierignore",
     "build": "node src/build",
     "build:skipfullcss": "node src/build --skipfullcss",
     "dev": "cd src/docs && npm run dev",
-    "add": "touch src/components/unstyled/$npm_config_name.css && touch src/components/styled/$npm_config_name.css",
-    "postadd": "open src/components/unstyled/$npm_config_name.css && open src/components/styled/$npm_config_name.css",
     "playground": "cd src/experiments/playground && npm run dev",
     "release": "rm -f package-lock.json && standard-version",
     "release:patch": "rm -f package-lock.json && standard-version --release-as patch",
@@ -77,15 +74,14 @@
     "prejss-cli": "0.3.3",
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.5",
-    "rtlcss": "4.1.1",
-    "standard-version": "^9.5.0"
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "standard-version": "^9.5.0",
+    "tailwindcss": "^3.3.5"
   },
   "dependencies": {
-    "colord": "^2.9",
     "css-selector-tokenizer": "^0.8",
-    "postcss": "^8",
-    "postcss-js": "^4",
-    "tailwindcss": "^3.1"
+    "culori": "^3",
+    "picocolors": "^1",
+    "postcss-js": "^4"
   }
 }

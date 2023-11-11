@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -56,12 +57,12 @@ data="{[
 
 <Component title="With form-control and labels">
 <div class="form-control w-full max-w-xs">
-  <label class="label">
+  <label class="label" for="input1">
     <span class="label-text">Pick a file</span>
     <span class="label-text-alt">Alt label</span>
   </label>
-  <input type="file" class="file-input file-input-bordered w-full max-w-xs" />
-  <label class="label">
+  <input type="file" class="file-input file-input-bordered w-full max-w-xs" id="input1" />
+  <label class="label" for="input1">
     <span class="label-text-alt">Alt label</span>
     <span class="label-text-alt">Alt label</span>
   </label>

@@ -1,8 +1,8 @@
 .btn {
-  @apply gap-2 font-semibold no-underline;
+  @apply gap-2 font-semibold no-underline duration-200 ease-out;
   border-width: var(--border-btn, 1px);
   animation: button-pop var(--animation-btn, 0.25s) ease-out;
-  text-transform: var(--btn-text-case, uppercase);
+  transition-property: color, background-color, border-color, opacity, box-shadow, transform;
   &:active:hover,
   &:active:focus {
     animation: button-pop 0s ease-out;
@@ -11,14 +11,43 @@
 
   /* default btn */
   & {
-    @apply border-base-200 bg-base-200 text-base-content outline-base-content no-underline;
+    @apply text-base-content outline-base-content no-underline shadow-sm;
+    background-color: oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity, 1));
+    border-color: oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity, 1));
+    @supports not (color: oklch(0 0 0)) {
+      background-color: var(--btn-color, var(--fallback-b2));
+      border-color: var(--btn-color, var(--fallback-b2));
+    }
     @media (hover: hover) {
       &:hover {
         @apply border-base-300 bg-base-300;
+        background-color: color-mix(
+          in oklab,
+          oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity)) 90%,
+          black
+        );
+        border-color: color-mix(
+          in oklab,
+          oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity)) 90%,
+          black
+        );
+        @supports not (color: oklch(0 0 0)) {
+          background-color: var(--btn-color, var(--fallback-b2));
+          border-color: var(--btn-color, var(--fallback-b2));
+        }
       }
     }
     &-active {
-      @apply border-base-300 bg-base-300;
+      background-color: color-mix(
+        in oklab,
+        oklch(var(--btn-color, var(--b3)) / var(--tw-bg-opacity)) 90%,
+        black
+      );
+      border-color: color-mix(
+        in oklab,
+        oklch(var(--btn-color, var(--b3)) / var(--tw-border-opacity)) 90%,
+        black
+      );
     }
     &:focus-visible {
       @apply outline outline-2 outline-offset-2;
@@ -26,93 +55,77 @@
   }
   /* brand colors */
   &-primary {
-    @apply border-primary bg-primary text-primary-content outline-primary;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-primary-focus bg-primary-focus;
-      }
+    @apply text-primary-content outline-primary;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--p);
     }
-    &.btn-active {
-      @apply border-primary-focus bg-primary-focus;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-p);
     }
   }
   &-secondary {
-    @apply border-secondary bg-secondary text-secondary-content outline-secondary;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-secondary-focus bg-secondary-focus;
-      }
+    @apply text-secondary-content outline-secondary;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--s);
     }
-    &.btn-active {
-      @apply border-secondary-focus bg-secondary-focus;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-s);
     }
   }
   &-accent {
-    @apply border-accent bg-accent text-accent-content outline-accent;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-accent-focus bg-accent-focus;
-      }
+    @apply text-accent-content outline-accent;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--a);
     }
-    &.btn-active {
-      @apply border-accent-focus bg-accent-focus;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-a);
     }
   }
   &-neutral {
-    @apply border-neutral bg-neutral text-neutral-content outline-neutral;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-neutral-focus bg-neutral-focus;
-      }
+    @apply text-neutral-content outline-neutral;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--n);
     }
-    &.btn-active {
-      @apply border-neutral-focus bg-neutral-focus;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-n);
     }
   }
 
   /* btn with state colors */
   &-info {
-    @apply border-info bg-info text-info-content outline-info;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-info bg-info;
-      }
+    @apply text-info-content outline-info;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--in);
     }
-    &.btn-active {
-      @apply border-info bg-info;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-in);
     }
   }
   &-success {
-    @apply border-success bg-success text-success-content outline-success;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-success bg-success;
-      }
+    @apply text-success-content outline-success;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--su);
     }
-    &.btn-active {
-      @apply border-success bg-success;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-su);
     }
   }
   &-warning {
-    @apply border-warning bg-warning text-warning-content outline-warning;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-warning bg-warning;
-      }
+    @apply text-warning-content outline-warning;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--wa);
     }
-    &.btn-active {
-      @apply border-warning bg-warning;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-wa);
     }
   }
   &-error {
-    @apply border-error bg-error text-error-content outline-error;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-error bg-error;
-      }
+    @apply text-error-content outline-error;
+    @supports (color: oklch(0 0 0)) {
+      --btn-color: var(--er);
     }
-    &.btn-active {
-      @apply border-error bg-error;
+    @supports not (color: oklch(0 0 0)) {
+      --btn-color: var(--fallback-er);
     }
   }
 
@@ -136,11 +149,14 @@
     @apply border border-transparent bg-transparent text-current shadow-none outline-current;
     @media (hover: hover) {
       &:hover {
-        @apply bg-base-content border-opacity-0 bg-opacity-20;
+        @apply border-transparent;
+        @supports (color: oklch(0 0 0)) {
+          @apply bg-base-content/20;
+        }
       }
     }
     &.btn-active {
-      @apply bg-base-content border-opacity-0 bg-opacity-20;
+      @apply bg-base-content/20 border-transparent;
     }
   }
   &-link {
@@ -170,77 +186,105 @@
       @apply text-primary;
       @media (hover: hover) {
         &:hover {
-          @apply border-primary-focus bg-primary-focus text-primary-content;
+          @apply text-primary-content;
+          background-color: color-mix(in oklab, theme(colors.primary) 90%, black);
+          border-color: color-mix(in oklab, theme(colors.primary) 90%, black);
         }
       }
       &.btn-active {
-        @apply border-primary-focus bg-primary-focus text-primary-content;
+        @apply text-primary-content;
+        background-color: color-mix(in oklab, theme(colors.primary) 90%, black);
+        border-color: color-mix(in oklab, theme(colors.primary) 90%, black);
       }
     }
     &.btn-secondary {
       @apply text-secondary;
       @media (hover: hover) {
         &:hover {
-          @apply border-secondary-focus bg-secondary-focus text-secondary-content;
+          @apply text-secondary-content;
+          background-color: color-mix(in oklab, theme(colors.secondary) 90%, black);
+          border-color: color-mix(in oklab, theme(colors.secondary) 90%, black);
         }
       }
       &.btn-active {
-        @apply border-secondary-focus bg-secondary-focus text-secondary-content;
+        @apply text-secondary-content;
+        background-color: color-mix(in oklab, theme(colors.secondary) 90%, black);
+        border-color: color-mix(in oklab, theme(colors.secondary) 90%, black);
       }
     }
     &.btn-accent {
       @apply text-accent;
       @media (hover: hover) {
         &:hover {
-          @apply border-accent-focus bg-accent-focus text-accent-content;
+          @apply text-accent-content;
+          background-color: color-mix(in oklab, theme(colors.accent) 90%, black);
+          border-color: color-mix(in oklab, theme(colors.accent) 90%, black);
         }
       }
       &.btn-active {
-        @apply border-accent-focus bg-accent-focus text-accent-content;
+        @apply text-accent-content;
+        background-color: color-mix(in oklab, theme(colors.accent) 90%, black);
+        border-color: color-mix(in oklab, theme(colors.accent) 90%, black);
       }
     }
     &.btn-success {
       @apply text-success;
       @media (hover: hover) {
         &:hover {
-          @apply border-success bg-success text-success-content;
+          @apply text-success-content;
+          background-color: color-mix(in oklab, theme(colors.success) 90%, black);
+          border-color: color-mix(in oklab, theme(colors.success) 90%, black);
         }
       }
       &.btn-active {
-        @apply border-success bg-success text-success-content;
+        @apply text-success-content;
+        background-color: color-mix(in oklab, theme(colors.success) 90%, black);
+        border-color: color-mix(in oklab, theme(colors.success) 90%, black);
       }
     }
     &.btn-info {
       @apply text-info;
       @media (hover: hover) {
         &:hover {
-          @apply border-info bg-info text-info-content;
+          @apply text-info-content;
+          background-color: color-mix(in oklab, theme(colors.info) 90%, black);
+          border-color: color-mix(in oklab, theme(colors.info) 90%, black);
         }
       }
       &.btn-active {
-        @apply border-info bg-info text-info-content;
+        @apply text-info-content;
+        background-color: color-mix(in oklab, theme(colors.info) 90%, black);
+        border-color: color-mix(in oklab, theme(colors.info) 90%, black);
       }
     }
     &.btn-warning {
       @apply text-warning;
       @media (hover: hover) {
         &:hover {
-          @apply border-warning bg-warning text-warning-content;
+          @apply text-warning-content;
+          background-color: color-mix(in oklab, theme(colors.warning) 90%, black);
+          border-color: color-mix(in oklab, theme(colors.warning) 90%, black);
         }
       }
       &.btn-active {
-        @apply border-warning bg-warning text-warning-content;
+        @apply text-warning-content;
+        background-color: color-mix(in oklab, theme(colors.warning) 90%, black);
+        border-color: color-mix(in oklab, theme(colors.warning) 90%, black);
       }
     }
     &.btn-error {
       @apply text-error;
       @media (hover: hover) {
         &:hover {
-          @apply border-error bg-error text-error-content;
+          @apply text-error-content;
+          background-color: color-mix(in oklab, theme(colors.error) 90%, black);
+          border-color: color-mix(in oklab, theme(colors.error) 90%, black);
         }
       }
       &.btn-active {
-        @apply border-error bg-error text-error-content;
+        @apply text-error-content;
+        background-color: color-mix(in oklab, theme(colors.error) 90%, black);
+        border-color: color-mix(in oklab, theme(colors.error) 90%, black);
       }
     }
   }
@@ -259,16 +303,6 @@
     }
   }
 }
-/* group */
-.btn-group {
-  & > input[type="radio"]:checked.btn,
-  & > .btn-active {
-    @apply border-primary bg-primary text-primary-content;
-    &:focus-visible {
-      @apply outline-primary outline outline-2;
-    }
-  }
-}
 
 /* radio input and checkbox as button */
 .btn:is(input[type="checkbox"]:checked),
@@ -276,7 +310,8 @@
   @apply border-primary bg-primary text-primary-content;
   @media (hover: hover) {
     &:hover {
-      @apply border-primary-focus bg-primary-focus;
+      background-color: color-mix(in oklab, theme(colors.primary) 90%, black);
+      border-color: color-mix(in oklab, theme(colors.primary) 90%, black);
     }
   }
   &:focus-visible {

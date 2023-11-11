@@ -1,6 +1,7 @@
 {
   "__name": "日本語",
   "__code": "JA",
+  "__direction": "ltr",
   "__status": "",
   "Tailwind CSS Components": "Tailwind CSSコンポーネント",
   "cta-1": "コンポーネントを見る",
@@ -217,7 +218,7 @@
   "You can apply custom style to a daisyUI themes using CSS:": "CSSを使用して、カスタムスタイルをdaisyUIのテーマに適用することができます。",
   "How to customize an existing theme?": "既存のテーマをカスタマイズする方法",
   "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.": "tailwind.config.jsで、既存のdaisyUIテーマの色を上書きすることができます。",
-  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:": "以下の例は、<code>light</code>テーマを要求し、<code>primary</code>と<code>primary-focus</code>の色を変更しています:",
+  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:": "以下の例は、<code>light</code>テーマを要求し、<code>primary</code>と<code>secondary</code>の色を変更しています:",
   "Contribute to translation": "翻訳に貢献する",
   "Alert informs users about important events.": "アラートは、重要なイベントについてユーザーに通知します。",
   "Artboard provides fixed size container to display a demo content on mobile size.": "アートボードは、モバイルサイズでデモコンテンツを表示するための固定サイズのコンテナを提供します。",

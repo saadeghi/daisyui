@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
-  import { themes } from "@src/lib/data.js"
   import { themeChange } from "theme-change"
+  export let themes
   onMount(() => {
     themeChange(false)
   })

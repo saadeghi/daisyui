@@ -6,7 +6,7 @@ import { trimThemeName } from "./utils"
 
 for (let themeKey in themes) {
   if (themeKey === "default") continue
-  test(`${trimThemeName(themeKey)} has all color names`, () => {
+  test(`${trimThemeName(themeKey)}:   \tcolors`, () => {
     for (let colorName in colorNames) {
       if (colorName === "default") continue
       expect(colorFunctions.convertColorFormat(themes[themeKey])).toHaveProperty(
@@ -14,14 +14,16 @@ for (let themeKey in themes) {
       )
     }
   })
-  test(`${trimThemeName(themeKey)} has all variables`, () => {
+}
+for (let themeKey in themes) {
+  if (themeKey === "default") continue
+  test(`${trimThemeName(themeKey)}:   \tvariables`, () => {
     for (let variableName of [
       "--rounded-box",
       "--rounded-btn",
       "--rounded-badge",
       "--animation-btn",
       "--animation-input",
-      "--btn-text-case",
       "--btn-focus-scale",
       "--border-btn",
       "--tab-border",

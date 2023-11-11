@@ -1,4 +1,4 @@
-.checkbox {
+[type="checkbox"].checkbox {
   &-xs {
     @apply h-4 w-4;
   }

@@ -1,5 +1,6 @@
-.input {
-  @apply border-base-content bg-base-100 rounded-btn border border-opacity-0 text-base;
+.input,
+input.input {
+  @apply bg-base-100 rounded-btn border border-transparent text-base;
   input:focus {
     @apply outline-none;
   }
@@ -7,11 +8,12 @@
     line-height: 1em;
   }
   &-bordered {
-    @apply border-opacity-20;
+    @apply border-base-content/20;
   }
   &:focus,
   &:focus-within {
-    @apply outline-base-content/20 outline outline-2 outline-offset-2;
+    box-shadow: none;
+    @apply border-base-content/20 outline-base-content/20 outline outline-2 outline-offset-2;
   }
   &-ghost {
     @apply bg-opacity-5;
@@ -25,55 +27,55 @@
     @apply border-primary;
     &:focus,
     &:focus-within {
-      @apply outline-primary;
+      @apply outline-primary border-primary;
     }
   }
   &-secondary {
     @apply border-secondary;
     &:focus,
     &:focus-within {
-      @apply outline-secondary;
+      @apply outline-secondary border-secondary;
     }
   }
   &-accent {
     @apply border-accent;
     &:focus,
     &:focus-within {
-      @apply outline-accent;
+      @apply outline-accent border-accent;
     }
   }
   &-info {
     @apply border-info;
     &:focus,
     &:focus-within {
-      @apply outline-info;
+      @apply outline-info border-info;
     }
   }
   &-success {
     @apply border-success;
     &:focus,
     &:focus-within {
-      @apply outline-success;
+      @apply outline-success border-success;
     }
   }
   &-warning {
     @apply border-warning;
     &:focus,
     &:focus-within {
-      @apply outline-warning;
+      @apply outline-warning border-warning;
     }
   }
   &-error {
     @apply border-error;
     &:focus,
     &:focus-within {
-      @apply outline-error;
+      @apply outline-error border-error;
     }
   }
   &-disabled,
   &:disabled,
   &[disabled] {
-    @apply border-base-200 bg-base-200 placeholder-base-content cursor-not-allowed text-opacity-20 placeholder-opacity-20;
+    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 cursor-not-allowed placeholder-opacity-20;
   }
   /* &::-webkit-calendar-picker-indicator {
     display: none;

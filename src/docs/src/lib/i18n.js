@@ -63,8 +63,14 @@ const replaceStateWithQuery = (values) => {
   history.replaceState({}, "", url)
 }
 
-export const setLang = (lang) => {
+export const setLang = (lang, replaceQuery = true) => {
+  if (!langs.includes(lang)) {
+    return null
+  }
   currentLang.set(lang)
-  replaceStateWithQuery({ lang: lang })
+  replaceQuery && replaceStateWithQuery({ lang: lang })
   localStorage.setItem("lang", lang)
+  document.documentElement.setAttribute("lang", lang)
+  // set direction
+  document.documentElement.setAttribute("dir", translations[`${path}/${lang}.json`]["__direction"])
 }

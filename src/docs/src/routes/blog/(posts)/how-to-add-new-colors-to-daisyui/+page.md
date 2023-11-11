@@ -42,7 +42,7 @@ These names are enough for almost all design systems. Most successful design eve
 
 However just because daisyUI is offering these color names, it doesn't mean you're limited to these colors. You can add new color names and use them in daisyUI themes.
 
-daisyUI has `primary`, `primary-focus` and `primary-content` but let's say you need a new shade of your primary color.
+daisyUI has `primary` and `primary-content` but let's say you need a new shade of your primary color.
 
 ### Step 1: Let's add a new color called `primary-muted` to Tailwind CSS
 
@@ -56,7 +56,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-muted": "hsl(var(--primary-muted) / <alpha-value>)",
+        "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
       },
     },
   },
@@ -75,7 +75,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-muted": "hsl(var(--primary-muted) / <alpha-value>)",
+        "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
       },
     },
   },
@@ -107,7 +107,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-muted": "hsl(var(--primary-muted) / <alpha-value>)",
+        "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
       },
     },
   },

@@ -1,10 +1,10 @@
 <script>
-  import { currentLang, langs, setLang } from "@src/lib/i18n"
-  import { t } from "@src/lib/i18n"
+  import { currentLang, langs, setLang } from "$lib/i18n"
+  import { t } from "$lib/i18n"
 </script>
 
 <div title="Change Language" class="dropdown dropdown-end">
-  <div tabindex="0" class="btn btn-ghost normal-case">
+  <div tabindex="0" class="btn btn-ghost">
     <svg
       class="h-5 w-5 fill-current"
       xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@
                   {$t("__code", {}, langItem)}
                 </span>
               {/if}
-              {$t("__name", {}, langItem)}
+              <span class="font-[sans-serif]">{$t("__name", {}, langItem)}</span>
               {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
                 <span class="badge badge-sm badge-ghost">
                   {$t("__status", {}, langItem)}

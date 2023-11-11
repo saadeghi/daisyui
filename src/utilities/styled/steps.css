@@ -5,9 +5,9 @@
       grid-template-columns: auto;
       min-width: 4rem;
       &:before {
-        @apply h-2 w-full translate-x-0 translate-y-0;
+        @apply h-2 w-full translate-x-0 translate-y-0 rtl:translate-x-0;
         content: "";
-        margin-left: -100%;
+        margin-inline-start: -100%;
       }
     }
   }
@@ -19,11 +19,8 @@
       min-height: 4rem;
       justify-items: start;
       &:before {
-        @apply h-full w-2 -translate-x-1/2 -translate-y-1/2;
-        margin-left: 50%;
-        [dir="rtl"] & {
-          margin-right: auto;
-        }
+        @apply h-full w-2 -translate-x-1/2 -translate-y-1/2 rtl:translate-x-1/2;
+        margin-inline-start: 50%;
       }
     }
   }

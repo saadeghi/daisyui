@@ -62,7 +62,7 @@
 
 .prose pre[class*="language-"] {
   .token.comment {
-    color: hsl(var(--nc) / 0.5);
+    color: var(--fallback-nc, oklch(var(--nc) / 0.5));
   }
 }
 

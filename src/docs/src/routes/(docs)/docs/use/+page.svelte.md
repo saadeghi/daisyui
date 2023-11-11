@@ -5,7 +5,7 @@ published: true
 ---
 
 <script>
-  import Translate from "@components/Translate.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 <Translate text="Once you <a href='/docs/install/'>installed daisyUI</a>, you can use component classes like <code>btn</code>, <code>card</code>, etc." />
 

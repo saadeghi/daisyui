@@ -1,11 +1,10 @@
 <script>
   import { page } from "$app/stores"
-  import { pages } from "@src/lib/data.js"
   import { readEnv } from "$lib/util"
   // import { useBreakpoints } from "$lib/breakpoints"
-  import Search from "@components/Search.svelte"
-
-  import LogoContextMenu from "@components/LogoContextMenu.svelte"
+  import Search from "$components/Search.svelte"
+  import LogoContextMenu from "$components/LogoContextMenu.svelte"
+  import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
   let contextMenuEl
 
   export let closeDrawer
@@ -13,14 +12,15 @@
 
   let version = readEnv("VITE_DAISYUI_VERSION", "latest")
 
+  export let pages
   export let drawerSidebarScrollY
   $: switchNavbarStyle = drawerSidebarScrollY > 40 ? true : false
 
   // const breakpoints = useBreakpoints()
   // const showSearch = breakpoints.smaller("lg")
 
-  import { t } from "@src/lib/i18n"
-  $: innerWidth = 0
+  import { t } from "$lib/i18n"
+  $: innerWidth = undefined
 </script>
 
 <svelte:window bind:innerWidth />
@@ -50,7 +50,7 @@
   <LogoContextMenu bind:this={contextMenuEl} />
   <div class="dropdown">
     <div tabindex="0" class="link link-hover font-mono text-xs">
-      {version}
+      <span class="opacity-60">{version}</span>
     </div>
     <ul
       tabindex="0"
@@ -73,67 +73,25 @@
       switchNavbarStyle ? "shadow-sm" : ""
     }`}>
     <div class="flex w-full">
-      <Search on:search={closeDrawer} on:focus={openDrawer} />
+      <Search {pages} on:search={closeDrawer} on:focus={openDrawer} />
     </div>
   </div>
 {/if}
 
-<ul class="menu bg-base-200 menu-horizontal w-full justify-between px-4 py-2 lg:hidden">
-  <li>
-    <a href="/components/">{$t("components-btn")}</a>
-  </li>
-  <li>
-    <a href="/blog/">{$t("Blog")}</a>
-  </li>
-  <li>
-    <a target="_blank" href="https://github.com/saadeghi/daisyui" rel="noopener, noreferrer">
-      {$t("GitHub")}
-    </a>
-  </li>
-</ul>
-
 <div class="h-4" />
 
-{#each pages as { name, icon, items }}
-  <ul class="menu menu-sm lg:menu-md px-4 py-0">
-    {#if name && name != "excluded"}
-      <li />
-      <li class="menu-title flex flex-row gap-4">
-        {#if icon}
-          <span class="text-base-content">{@html icon}</span>
-        {/if}
-        <span>{$t(name)}</span>
-      </li>
-    {/if}
-    {#if name != "excluded"}
-      {#each items as { name, href, icon, badge, hidden, highlightAnotherItem, deprecated }}
-        {#if !hidden}
-          <li>
-            <a
-              {href}
-              data-sveltekit-preload-data="hover"
-              on:click={closeDrawer}
-              id={$page.url.pathname.startsWith(href + "/") ? "active-menu" : ""}
-              class={`${$page.url.pathname == href ? "active" : ""} ${
-                $page.url.pathname == highlightAnotherItem + "/" ? "active" : ""
-              } ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
-              {#if icon}
-                <span>
-                  {@html icon}
-                </span>
-              {/if}
-              <span class={deprecated ? "line-through" : undefined}>
-                {@html $t(name)}
-              </span>
-              {#if badge}
-                <span class="badge badge-sm font-mono lowercase">
-                  {$t(badge)}
-                </span>
-              {/if}
-            </a>
-          </li>
-        {/if}
-      {/each}
-    {/if}
-  </ul>
-{/each}
+<ul class="menu px-4 py-0">
+  {#each pages as { name, href, icon, badge, highlightAnotherItem, deprecated, items, collapsible, target }}
+    <SidebarMenuItem
+      {closeDrawer}
+      {name}
+      {href}
+      {icon}
+      {badge}
+      {highlightAnotherItem}
+      {deprecated}
+      {items}
+      {collapsible}
+      {target} />
+  {/each}
+</ul>

@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte"
-  import Translate from "@components/Translate.svelte"
+  import Translate from "$components/Translate.svelte"
   import { htmlToJsx } from "$lib/actions"
   let Prism
   onMount(async () => {
@@ -59,41 +59,41 @@
     </div>
   {/if}
   <div class="grid">
-    <div class="tabs z-10 -mb-px">
+    <div class="tabs tabs-lifted z-10 -mb-[var(--tab-border)] justify-self-start">
       <button
         on:click={() => (showContent = "preview")}
-        class={`tab tab-lifted ${
+        class={`tab ${
           showContent == "preview"
-            ? "tab-active [--tab-bg:hsl(var(--b1))]"
+            ? "tab-active [--tab-bg:var(--fallback-b1,oklch(var(--b1)))]"
             : "[--tab-border-color:transparent]"
         }`}>
         <Translate text="Preview" />
       </button>
       <button
         on:click={() => (showContent = "html")}
-        class={`tab tab-lifted ${
+        class={`tab ${
           showContent == "html"
-            ? "tab-active [--tab-bg:hsl(var(--n))] [--tab-border-color:hsl(var(--n))] [--tab-color:hsl(var(--nc))]"
+            ? "tab-active [--tab-bg:var(--fallback-n,oklch(var(--n)))] [--tab-border-color:var(--fallback-n,oklch(var(--n)))] [--tab-color:var(--fallback-nc,oklch(var(--nc)))]"
             : "[--tab-border-color:transparent]"
         }`}>
         HTML
       </button>
       <button
         on:click={() => (showContent = "jsx")}
-        class={`tab tab-lifted ${
+        class={`tab ${
           showContent == "jsx"
-            ? "tab-active [--tab-bg:hsl(var(--n))] [--tab-border-color:hsl(var(--n))] [--tab-color:hsl(var(--nc))]"
+            ? "tab-active [--tab-bg:var(--fallback-n,oklch(var(--n)))] [--tab-border-color:var(--fallback-n,oklch(var(--n)))] [--tab-color:var(--fallback-nc,oklch(var(--nc)))]"
             : "[--tab-border-color:transparent]"
         }`}>
         JSX
       </button>
-      <div class="tab tab-lifted mr-6 flex-1 cursor-default [--tab-border-color:transparent]" />
+      <div class="tab [--tab-border-color:transparent]" />
     </div>
 
     {#if showContent == "preview"}
-      <div class="bg-base-300 rounded-b-box rounded-tr-box relative overflow-x-auto">
+      <div class="bg-base-300 rounded-b-box rounded-se-box relative overflow-x-auto">
         <div
-          class="preview border-base-300 bg-base-100 rounded-b-box rounded-tr-box flex min-h-[6rem] min-w-[18rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden border bg-cover bg-top p-4 {classes}"
+          class="preview border-base-300 bg-base-100 rounded-b-box rounded-se-box flex min-h-[6rem] min-w-[18rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 [border-width:var(--tab-border)] {classes}"
           style={bg ? `background-image: url(${bg})` : ``}
           class:resize-x={responsive}>
           <slot />
@@ -111,7 +111,7 @@
             <slot name="html" />
           </svelte:component>
         </div>
-        <div class="col-start-1 row-start-1 flex items-start justify-end p-2">
+        <div class="col-start-1 row-start-1 flex items-start justify-end p-2 rtl:justify-start">
           <div
             data-tip={isClipboardButtonPressed ? "copied" : "copy"}
             class="tooltip tooltip-left tooltip-accent">
@@ -207,26 +207,26 @@
     padding-right: 2.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-top-right-radius: 0.75rem;
-    border-top-left-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-    border-bottom-left-radius: 0.75rem;
+    border-top-right-radius: var(--rounded-box, 1rem);
+    border-top-left-radius: var(--rounded-box, 1rem);
+    border-bottom-right-radius: var(--rounded-box, 1rem);
+    border-bottom-left-radius: var(--rounded-box, 1rem);
     margin: 0;
     min-height: 6rem;
   }
   .prose .component-preview pre[class*="language-"] .token.comment {
-    color: hsl(var(--nc) / 0.4);
+    color: var(--fallback-nc, oklch(var(--nc) / 0.4));
   }
   .prose .component-preview .preview {
     background-image: repeating-linear-gradient(
       45deg,
-      hsl(var(--b1)),
-      hsl(var(--b1)) 13px,
-      hsl(var(--b2)) 13px,
-      hsl(var(--b2)) 14px
+      var(--fallback-b1, oklch(var(--b1))),
+      var(--fallback-b1, oklch(var(--b1))) 13px,
+      var(--fallback-b2, oklch(var(--b2))) 13px,
+      var(--fallback-b2, oklch(var(--b2))) 14px
     );
     /* background-size: 40px 40px;
-    background-image: linear-gradient(to right, hsl(var(--bc) / 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--bc) / 0.04) 1px, transparent 1px); */
+    background-image: linear-gradient(to right, oklch(var(--bc) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(var(--bc) / 0.04) 1px, transparent 1px); */
   }
 </style>

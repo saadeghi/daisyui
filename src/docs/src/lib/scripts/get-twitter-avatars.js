@@ -1,7 +1,6 @@
 import https from "https"
 import fs from "fs"
 import sharp from "sharp"
-import { exec } from "child_process"
 import { tweets } from "../testimonials.js"
 
 const downloadImage = (url, filename) => {

@@ -1,8 +1,8 @@
 .tooltip {
   @apply relative inline-block text-center;
   --tooltip-tail: 0.1875rem;
-  --tooltip-color: hsl(var(--n));
-  --tooltip-text-color: hsl(var(--nc));
+  --tooltip-color: theme(colors.neutral);
+  --tooltip-text-color: theme(colors.neutral-content);
   --tooltip-tail-offset: calc(100% + 0.0625rem - var(--tooltip-tail));
 }
 .tooltip:before,
@@ -86,31 +86,31 @@
 }
 .tooltip {
   &-primary {
-    --tooltip-color: hsl(var(--p));
-    --tooltip-text-color: hsl(var(--pc));
+    --tooltip-color: theme(colors.primary);
+    --tooltip-text-color: theme(colors.primary-content);
   }
   &-secondary {
-    --tooltip-color: hsl(var(--s));
-    --tooltip-text-color: hsl(var(--sc));
+    --tooltip-color: theme(colors.secondary);
+    --tooltip-text-color: theme(colors.secondary-content);
   }
   &-accent {
-    --tooltip-color: hsl(var(--a));
-    --tooltip-text-color: hsl(var(--ac));
+    --tooltip-color: theme(colors.accent);
+    --tooltip-text-color: theme(colors.accent-content);
   }
   &-info {
-    --tooltip-color: hsl(var(--in));
-    --tooltip-text-color: hsl(var(--inc));
+    --tooltip-color: theme(colors.info);
+    --tooltip-text-color: theme(colors.info-content);
   }
   &-success {
-    --tooltip-color: hsl(var(--su));
-    --tooltip-text-color: hsl(var(--suc));
+    --tooltip-color: theme(colors.success);
+    --tooltip-text-color: theme(colors.success-content);
   }
   &-warning {
-    --tooltip-color: hsl(var(--wa));
-    --tooltip-text-color: hsl(var(--wac));
+    --tooltip-color: theme(colors.warning);
+    --tooltip-text-color: theme(colors.warning-content);
   }
   &-error {
-    --tooltip-color: hsl(var(--er));
-    --tooltip-text-color: hsl(var(--erc));
+    --tooltip-color: theme(colors.error);
+    --tooltip-text-color: theme(colors.error-content);
   }
 }

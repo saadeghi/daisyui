@@ -1,8 +1,8 @@
 <script>
   import { prefix } from "$lib/stores"
-  import PrefixEdit from "@components/PrefixEdit.svelte"
-  import Translate from "@components/Translate.svelte"
-  import { t } from "@src/lib/i18n"
+  import PrefixEdit from "$components/PrefixEdit.svelte"
+  import Translate from "$components/Translate.svelte"
+  import { t } from "$lib/i18n"
   export let data
 </script>
 
@@ -10,12 +10,12 @@
   <table class="table-xs md:table-sm table-pin-rows table w-full">
     <thead>
       <tr class="border-b-0">
-        <th class="bg-base-200 rounded-l-box flex items-center gap-2 normal-case lg:py-3">
+        <th class="bg-base-200 rounded-s-box flex items-center gap-2 lg:py-3">
           <PrefixEdit />
           <span><Translate text="Class name" /></span>
         </th>
-        <th class="bg-base-200 normal-case lg:py-3"><Translate text="Type" /></th>
-        <th class="bg-base-200 rounded-r-box lg:py-3" />
+        <th class="bg-base-200 lg:py-3"><Translate text="Type" /></th>
+        <th class="bg-base-200 rounded-e-box lg:py-3" />
       </tr>
     </thead>
     <tbody>
@@ -54,7 +54,9 @@
       {#each data as item, index}
         <tr>
           <th class="w-3/12 font-normal">
-            <span class="whitespace-nowrap font-mono lowercase">{`${$prefix}${item.class}`}</span>
+            <span class="whitespace-nowrap font-mono lowercase">
+              {`${item.prefix !== false ? $prefix : ""}${item.class}`}
+            </span>
           </th>
           <td class="w-1/12">
             {#if item.type == "component"}

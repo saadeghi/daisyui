@@ -1,6 +1,7 @@
 .mockup {
   &-code {
     @apply bg-neutral text-neutral-content rounded-box min-w-[18rem] py-5;
+    direction: ltr;
     &:before {
       content: "";
       @apply mb-4 block h-3 w-3 rounded-full opacity-30;
@@ -24,10 +25,10 @@
     }
   }
   &-window {
-    @apply rounded-box pt-5;
+    @apply rounded-box flex flex-col pt-5;
     &:before {
       content: "";
-      @apply mb-4 block aspect-square h-3 rounded-full opacity-30;
+      @apply mb-4 block aspect-square h-3 shrink-0 self-start rounded-full opacity-30 rtl:self-end;
       box-shadow:
         1.4em 0,
         2.8em 0,
@@ -84,7 +85,7 @@
   &-browser {
     @apply rounded-box;
     .mockup-browser-toolbar {
-      @apply my-3 inline-flex w-full items-center pr-[1.4em];
+      @apply my-3 inline-flex w-full items-center pr-[1.4em] rtl:flex-row-reverse;
       &:before {
         content: "";
         @apply mr-[4.8rem] inline-block aspect-square h-3 rounded-full opacity-30;
@@ -95,6 +96,7 @@
       }
       .input {
         @apply bg-base-200 relative mx-auto block h-7 w-96 overflow-hidden text-ellipsis whitespace-nowrap pl-8;
+        direction: ltr;
         &:before {
           content: "";
           @apply absolute left-2 top-1/2 aspect-square h-3 -translate-y-1/2 rounded-full border-2 border-current opacity-60;

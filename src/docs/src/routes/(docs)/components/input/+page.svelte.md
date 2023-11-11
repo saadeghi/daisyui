@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -56,12 +57,12 @@ data="{[
 
 <Component title="With form-control and labels">
 <div class="form-control w-full max-w-xs">
-  <label class="label">
+  <label class="label" for="input2">
     <span class="label-text">What is your name?</span>
     <span class="label-text-alt">Top Right label</span>
   </label>
-  <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-  <label class="label">
+  <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" id="input2" />
+  <label class="label" for="input2">
     <span class="label-text-alt">Bottom Left label</span>
     <span class="label-text-alt">Bottom Right label</span>
   </label>

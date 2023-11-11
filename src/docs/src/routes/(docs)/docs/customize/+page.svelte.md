@@ -5,7 +5,7 @@ published: true
 ---
 
 <script>
-  import Translate from "@components/Translate.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 
 <p><Translate text="daisyUI components come with many variants necessary for design systems and you won't usually need to customize anything." /></p>

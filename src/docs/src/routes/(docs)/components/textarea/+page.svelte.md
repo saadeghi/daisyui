@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -56,12 +57,12 @@ data="{[
 
 <Component title="With form control and labels">
 <div class="form-control">
-  <label class="label">
+  <label class="label" for="textarea1">
     <span class="label-text">Your bio</span>
     <span class="label-text-alt">Alt label</span>
   </label>
-  <textarea class="textarea h-24 textarea-bordered" placeholder="Bio"></textarea>
-  <label class="label">
+  <textarea class="textarea h-24 textarea-bordered" placeholder="Bio" id="textarea1"></textarea>
+  <label class="label" for="textarea1">
     <span class="label-text-alt">Your bio</span>
     <span class="label-text-alt">Alt label</span>
   </label>

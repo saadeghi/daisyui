@@ -8,7 +8,7 @@
     &:before {
       @apply bg-base-300 text-base-content top-0 col-start-1 row-start-1 h-2 w-full transform;
       content: "";
-      margin-left: -100%;
+      margin-inline-start: -100%;
     }
   }
   /* } */

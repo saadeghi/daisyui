@@ -1,15 +1,28 @@
 <script>
   import { page } from "$app/stores"
-  import { pages } from "@src/lib/data.js"
+  import { currentLang, defaultLang, t } from "$lib/i18n"
 
-  import { currentLang, defaultLang, t } from "@src/lib/i18n"
+  export let pages = []
 
-  let arrayOfPagesInOrder = []
-  pages.map((items) => {
-    items.items.forEach((item) => {
-      arrayOfPagesInOrder.push(item)
+  function extractPages(obj) {
+    const items = []
+    function recursiveExtract(obj) {
+      if (obj.href) {
+        items.push(obj)
+      }
+      if (obj.items) {
+        obj.items.forEach((item) => {
+          recursiveExtract(item)
+        })
+      }
+    }
+    obj.forEach((item) => {
+      recursiveExtract(item)
     })
-  })
+    return items
+  }
+  let arrayOfPagesInOrder = extractPages(pages)
+
   $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href == $page.url.pathname)
 </script>
 
@@ -22,7 +35,7 @@
         {#if currentPageIndex > 0 && arrayOfPagesInOrder[currentPageIndex - 1]}
           <a
             href={arrayOfPagesInOrder[currentPageIndex - 1].href}
-            class="btn btn-sm md:btn-md gap-2 normal-case lg:gap-3">
+            class="btn btn-sm md:btn-md gap-2 lg:gap-3">
             <svg
               class="h-6 w-6 fill-current md:h-8 md:w-8"
               xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +57,7 @@
         {#if currentPageIndex < arrayOfPagesInOrder.length - 1 && arrayOfPagesInOrder[currentPageIndex + 1]}
           <a
             href={arrayOfPagesInOrder[currentPageIndex + 1].href}
-            class="btn btn-neutral btn-sm md:btn-md gap-2 normal-case lg:gap-3">
+            class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3">
             <div class="flex flex-col items-end">
               <span class="text-neutral-content/50 hidden text-xs font-normal md:block">
                 {$t("Next")}
@@ -180,6 +193,17 @@
         </div>
         {#if $currentLang != defaultLang}
           <div class="flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="inline-block h-4 w-4 fill-current">
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-1.5 0a6.5 6.5 0 11-11-4.69v.447a3.5 3.5 0 001.025 2.475L8.293 10 8 10.293a1 1 0 000 1.414l1.06 1.06a1.5 1.5 0 01.44 1.061v.363a1 1 0 00.553.894l.276.139a1 1 0 001.342-.448l1.454-2.908a1.5 1.5 0 00-.281-1.731l-.772-.772a1 1 0 00-1.023-.242l-.384.128a.5.5 0 01-.606-.25l-.296-.592a.481.481 0 01.646-.646l.262.131a1 1 0 00.447.106h.188a1 1 0 00.949-1.316l-.068-.204a.5.5 0 01.149-.538l1.44-1.234A6.492 6.492 0 0116.5 10z"
+                clip-rule="evenodd" />
+            </svg>
+
             <div>
               <a
                 target="_blank"

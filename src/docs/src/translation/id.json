@@ -1,6 +1,7 @@
 {
   "__name": "Indonesia",
   "__code": "ID",
+  "__direction": "ltr",
   "__status": "",
   "Tailwind CSS Components": "Komponen Tailwind CSS",
   "cta-1": "Lihat semua komponen",
@@ -217,7 +218,7 @@
   "You can apply custom style to a daisyUI themes using CSS:": "Anda dapat mengaplikasikan style kustom kepada tema daisyUI menggunakan CSS:",
   "How to customize an existing theme?": "Bagaimana cara mengkustomisasi tema yang sudah ada?",
   "In your tailwind.config.js, you can require an existing daisyUI theme and override some colors.": "Pada tailwind.config.js, Anda dapat menambahkan tema daisyUI yang sudah ada dan mengesampingkan beberapa warna.",
-  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:": "Pada contoh di bawah, Saya mengambil dan menyebarkan tema <code>light</code> dan mengubah warna <code>primary</code> dan <code>primary-focus</code>:",
+  "In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:": "Pada contoh di bawah, Saya mengambil dan menyebarkan tema <code>light</code> dan mengubah warna <code>primary</code> dan <code>secondary</code>:",
   "Contribute to translation": "Kontribusi penerjemahan",
   "Alert informs users about important events.": "Alert menginformasikan pengguna tentang kejadian penting.",
   "Artboard provides fixed size container to display a demo content on mobile size.": "Artboard menyediakan kontainer berukuran tetap untuk menampilkan sebuah konten demo dalam ukuran mobile.",

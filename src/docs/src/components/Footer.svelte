@@ -1,9 +1,11 @@
 <script>
-  import Sponsors from "@components/Sponsors.svelte"
-  import { t } from "@src/lib/i18n"
+  import Sponsors from "$components/Sponsors.svelte"
+  import { t } from "$lib/i18n"
 
   const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50"><path fill-rule="evenodd" d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z" /></svg>`
 </script>
+
+<div class="h-20" />
 
 <div>
   <div class="bg-base-100 text-base-content">
@@ -36,6 +38,9 @@
         <a href="/docs/changelog" class="link link-hover">
           {$t("changelog")}
         </a>
+        <a href="/docs/roadmap" class="link link-hover">
+          {$t("Roadmap")}
+        </a>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -62,6 +67,7 @@
         <a href="/docs/colors/" class="link link-hover">{$t("color-system")}</a>
         <a href="/docs/config/" class="link link-hover">{$t("config")}</a>
         <a href="/blog/" class="link link-hover">{$t("Blog")}</a>
+        <a href="/store/" class="link link-hover">{$t("Store")}</a>
       </div>
       <div>
         <span class="footer-title">{$t("available-on")}</span>
@@ -175,7 +181,7 @@
         rel="noopener, noreferrer"
         target="_blank"
         class="inline-flex items-center justify-center hover:opacity-90">
-        <div class="avatar mr-3">
+        <div class="avatar me-3">
           <div class="mask mask-squircle bg-neutral h-14 w-14 p-px">
             <img
               loading="lazy"

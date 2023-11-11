@@ -1,9 +1,13 @@
 <script>
-  import { siteData } from "@src/lib/data.js"
-  import { t } from "@src/lib/i18n"
+  import { t } from "$lib/i18n"
 
   import { readEnv } from "$lib/util"
 
+  let siteData = {
+    title: "Tailwind CSS Components",
+    desc: "Free Tailwind Components",
+    card: "/images/default.jpg",
+  }
   export let formatTitle = true
   export let title = ""
   export let desc = siteData.desc

@@ -1,19 +1,20 @@
 <script>
   import { onMount } from "svelte"
-  import { themes } from "@src/lib/data.js"
-
   import { themeChange } from "theme-change"
-  import { t } from "@src/lib/i18n"
+  import { t } from "$lib/i18n"
   onMount(() => {
     themeChange(false)
   })
+  export let themes
   export let dropdownClasses = ""
   export let btnClasses = "btn-ghost"
   export let contentClasses = "mt-16"
 </script>
 
-<div title="Change Theme" class={`dropdown dropdown-end ${dropdownClasses}`}>
-  <div tabindex="0" class={`btn normal-case ${btnClasses}`}>
+<div
+  title="Change Theme"
+  class={`dropdown dropdown-end hidden [@supports(color:oklch(0_0_0))]:block ${dropdownClasses}`}>
+  <div tabindex="0" class={`btn ${btnClasses}`}>
     <svg
       width="20"
       height="20"

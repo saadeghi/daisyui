@@ -6,8 +6,9 @@ layout: components
 ---
 
 <script>
-  import Component from "@components/Component.svelte"
-  import ClassTable from "@components/ClassTable.svelte"
+  import Component from "$components/Component.svelte"
+  import ClassTable from "$components/ClassTable.svelte"
+  import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
 </script>
@@ -88,11 +89,11 @@ data="{[
 
 <Component title="With form-control and labels">
 <div class="form-control w-full max-w-xs">
-  <label class="label">
+  <label class="label" for="select1">
     <span class="label-text">Pick the best fantasy franchise</span>
     <span class="label-text-alt">Alt label</span>
   </label>
-  <select class="select select-bordered">
+  <select class="select select-bordered" id="select1">
     <option disabled selected>Pick one</option>
     <option>Star Wars</option>
     <option>Harry Potter</option>
@@ -100,7 +101,7 @@ data="{[
     <option>Planet of the Apes</option>
     <option>Star Trek</option>
   </select>
-  <label class="label">
+  <label class="label" for="select1">
     <span class="label-text-alt">Alt label</span>
     <span class="label-text-alt">Alt label</span>
   </label>
