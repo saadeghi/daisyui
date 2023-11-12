@@ -225,8 +225,8 @@
   }
   :root,
   [data-theme] {
-    background-color: hsl(var(--b1) / var(--tw-bg-opacity, 1));
-    color: hsl(var(--bc) / var(--tw-text-opacity, 1));
+    background-color: oklch(var(--b1) / var(--tw-bg-opacity, 1));
+    color: oklch(var(--bc) / var(--tw-text-opacity, 1));
   }
   html {
     -webkit-tap-highlight-color: transparent;
@@ -249,7 +249,6 @@
     --rounded-badge: 1.9rem;
     --animation-btn: 0.25s;
     --animation-input: 0.2s;
-    --btn-text-case: uppercase;
     --btn-focus-scale: 0.95;
     --border-btn: 1px;
     --tab-border: 1px;
@@ -378,7 +377,7 @@
     align-items: center;
     justify-content: center;
     border-color: transparent;
-    border-color: hsl(var(--b2) / var(--tw-border-opacity));
+    border-color: oklch(var(--b2) / var(--tw-border-opacity));
     text-align: center;
     transition-property:
       color,
@@ -424,13 +423,12 @@
     text-decoration-line: none;
     border-width: var(--border-btn, 1px);
     animation: button-pop var(--animation-btn, 0.25s) ease-out;
-    text-transform: var(--btn-text-case, uppercase);
     --tw-border-opacity: 1;
     --tw-bg-opacity: 1;
-    background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+    background-color: oklch(var(--b2) / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: hsl(var(--bc) / var(--tw-text-opacity));
-    outline-color: hsl(var(--bc) / 1);
+    color: oklch(var(--bc) / var(--tw-text-opacity));
+    outline-color: oklch(var(--bc) / 1);
   }
   .btn-disabled,
   .btn[disabled],
@@ -456,9 +454,9 @@
   @media (hover: hover) {
     .btn:hover {
       --tw-border-opacity: 1;
-      border-color: hsl(var(--b3) / var(--tw-border-opacity));
+      border-color: oklch(var(--b3) / var(--tw-border-opacity));
       --tw-bg-opacity: 1;
-      background-color: hsl(var(--b3) / var(--tw-bg-opacity));
+      background-color: oklch(var(--b3) / var(--tw-bg-opacity));
     }
     .btn.glass:hover {
       --glass-opacity: 25%;
@@ -468,17 +466,17 @@
     .btn[disabled]:hover,
     .btn:disabled:hover {
       --tw-border-opacity: 0;
-      background-color: hsl(var(--n) / var(--tw-bg-opacity));
+      background-color: oklch(var(--n) / var(--tw-bg-opacity));
       --tw-bg-opacity: 0.2;
-      color: hsl(var(--bc) / var(--tw-text-opacity));
+      color: oklch(var(--bc) / var(--tw-text-opacity));
       --tw-text-opacity: 0.2;
     }
     .btn:is(input[type="checkbox"]:checked):hover,
     .btn:is(input[type="radio"]:checked):hover {
       --tw-border-opacity: 1;
-      border-color: hsl(var(--pf) / var(--tw-border-opacity));
+      border-color: oklch(var(--pf) / var(--tw-border-opacity));
       --tw-bg-opacity: 1;
-      background-color: hsl(var(--pf) / var(--tw-bg-opacity));
+      background-color: oklch(var(--pf) / var(--tw-bg-opacity));
     }
   }
   .hero {
@@ -526,38 +524,38 @@
   .btn[disabled],
   .btn:disabled {
     --tw-border-opacity: 0;
-    background-color: hsl(var(--n) / var(--tw-bg-opacity));
+    background-color: oklch(var(--n) / var(--tw-bg-opacity));
     --tw-bg-opacity: 0.2;
-    color: hsl(var(--bc) / var(--tw-text-opacity));
+    color: oklch(var(--bc) / var(--tw-text-opacity));
     --tw-text-opacity: 0.2;
   }
   .btn-group > input[type="radio"]:checked.btn,
   .btn-group > .btn-active {
     --tw-border-opacity: 1;
-    border-color: hsl(var(--p) / var(--tw-border-opacity));
+    border-color: oklch(var(--p) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: hsl(var(--p) / var(--tw-bg-opacity));
+    background-color: oklch(var(--p) / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: hsl(var(--pc) / var(--tw-text-opacity));
+    color: oklch(var(--pc) / var(--tw-text-opacity));
   }
   .btn-group > input[type="radio"]:checked.btn:focus-visible,
   .btn-group > .btn-active:focus-visible {
     outline-style: solid;
     outline-width: 2px;
-    outline-color: hsl(var(--p) / 1);
+    outline-color: oklch(var(--p) / 1);
   }
   .btn:is(input[type="checkbox"]:checked),
   .btn:is(input[type="radio"]:checked) {
     --tw-border-opacity: 1;
-    border-color: hsl(var(--p) / var(--tw-border-opacity));
+    border-color: oklch(var(--p) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
-    background-color: hsl(var(--p) / var(--tw-bg-opacity));
+    background-color: oklch(var(--p) / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: hsl(var(--pc) / var(--tw-text-opacity));
+    color: oklch(var(--pc) / var(--tw-text-opacity));
   }
   .btn:is(input[type="checkbox"]:checked):focus-visible,
   .btn:is(input[type="radio"]:checked):focus-visible {
-    outline-color: hsl(var(--p) / 1);
+    outline-color: oklch(var(--p) / 1);
   }
   @keyframes button-pop {
     0% {
@@ -594,18 +592,18 @@
   @keyframes radiomark {
     0% {
       box-shadow:
-        0 0 0 12px hsl(var(--b1)) inset,
-        0 0 0 12px hsl(var(--b1)) inset;
+        0 0 0 12px oklch(var(--b1)) inset,
+        0 0 0 12px oklch(var(--b1)) inset;
     }
     50% {
       box-shadow:
-        0 0 0 3px hsl(var(--b1)) inset,
-        0 0 0 3px hsl(var(--b1)) inset;
+        0 0 0 3px oklch(var(--b1)) inset,
+        0 0 0 3px oklch(var(--b1)) inset;
     }
     100% {
       box-shadow:
-        0 0 0 4px hsl(var(--b1)) inset,
-        0 0 0 4px hsl(var(--b1)) inset;
+        0 0 0 4px oklch(var(--b1)) inset,
+        0 0 0 4px oklch(var(--b1)) inset;
     }
   }
   @keyframes rating-pop {
