@@ -58,6 +58,8 @@ All notable changes to this project will be documented in this file. See [commit
 - ⏺️ Button
   - buttons are not uppercase by default anymore
   - Removed `--btn-text-case` CSS variable from themes
+- ⚙️ Config
+  - Removed `rtl` config because RTL is now automatic
 - 📦 Dependencies
   - Removed `colord`, `rtlcss`, `postcss`, `tailwindcss`
   - Added `culori`, `picocolors`
@@ -100,6 +102,10 @@ All notable changes to this project will be documented in this file. See [commit
   - New `tab-content` class allows you to switch tab content
 - 🧩 `@tailwindcss/forms`
   - Fix compatibility with `@tailwindcss/forms` plugin (even though you don't need it alongside daisyUI)
+- ⚙️ Config
+  - New `themeRoot` config
+    - Now you can define target another element instead of `:root` to receive the color CSS variables.
+    - This is useful for using colors in shadow root.
 
 ### Bug Fixes
 
