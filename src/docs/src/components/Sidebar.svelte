@@ -1,10 +1,10 @@
 <script>
   import { page } from "$app/stores"
   import { readEnv } from "$lib/util"
-  // import { useBreakpoints } from "$lib/breakpoints"
   import Search from "$components/Search.svelte"
   import LogoContextMenu from "$components/LogoContextMenu.svelte"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
+  import ChangelogMenu from "$components/ChangelogMenu.svelte"
   let contextMenuEl
 
   export let closeDrawer
@@ -15,9 +15,6 @@
   export let pages
   export let drawerSidebarScrollY
   $: switchNavbarStyle = drawerSidebarScrollY > 40 ? true : false
-
-  // const breakpoints = useBreakpoints()
-  // const showSearch = breakpoints.smaller("lg")
 
   import { t } from "$lib/i18n"
   $: innerWidth = undefined
@@ -48,23 +45,7 @@
     </div>
   </a>
   <LogoContextMenu bind:this={contextMenuEl} />
-  <div class="dropdown">
-    <div tabindex="0" class="link link-hover font-mono text-xs">
-      <span class="opacity-60">{version}</span>
-    </div>
-    <ul
-      tabindex="0"
-      class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-8 w-36 p-2 shadow">
-      <li><a href="/docs/changelog/">Changelog</a></li>
-      <li />
-      <li>
-        <a target="_blank" rel="noopener, noreferrer" href="https://v2.daisyui.com/">Version 2.x</a>
-      </li>
-      <li>
-        <a target="_blank" rel="noopener, noreferrer" href="https://v1.daisyui.com/">Version 1.x</a>
-      </li>
-    </ul>
-  </div>
+  <ChangelogMenu />
 </div>
 
 {#if innerWidth < 1024}
