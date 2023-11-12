@@ -103,6 +103,9 @@ All notable changes to this project will be documented in this file. See [commit
 - Fix tab radius
 - Fix missing utility classes
 - Docs: Prefix not work on responsive classes #2445
+- Hover animations for state buttons #1790
+- Skeleton component #186
+- Uppercase buttons #2187
 
 ### Docs
 
