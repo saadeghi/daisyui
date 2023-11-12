@@ -4,6 +4,7 @@ import preprocess from "svelte-preprocess"
 import headingSlugs from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
 import rehypeExternalLinks from "rehype-external-links"
+import remarkGithub from "remark-github"
 
 const rehypePlugins = [
   headingSlugs,
@@ -30,6 +31,7 @@ const rehypePlugins = [
   ],
   [rehypeExternalLinks, { rel: ["nofollow"], target: ["_blank"] }],
 ]
+const remarkPlugins = [[remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }]]
 
 export default {
   extensions: [".svelte", ".svelte.md", ".md"],
@@ -38,6 +40,7 @@ export default {
     mdsvex({
       extensions: [".svelte.md", ".md"],
       rehypePlugins: rehypePlugins,
+      remarkPlugins: remarkPlugins,
       layout: {
         components: "src/lib/mdsvex-components.svelte",
         blog: "src/lib/mdsvex-blog.svelte",
