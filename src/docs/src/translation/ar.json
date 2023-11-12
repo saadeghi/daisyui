@@ -401,8 +401,6 @@
   "Get started": "ابدأ",
   "daisyUI 3 is available now!": "daisyUI 3 متاح الأن!",
   "Become a sponsor": "ادعمنا",
-  "": "",
-  "daisyUI 4.0 will bloom soon!": "daisyUI 4.0 سوف تزهر قريبا!",
   "Blog": "مدونة",
   "related projects": "مشاريع مشابهة",
   "Sponsors": "الرعاة",
@@ -419,5 +417,6 @@
   "Loading shows an animation to indicate that something is loading.": "يُظهر التحميل رسمًا متحركًا للإشارة إلى أنه يتم تحميل شيء ما.",
   "Loading": "جاري التحميل",
   "Join": "ضم",
-  "Join is a container for grouping multiple items, it can be used to group buttons, inputs, or any other element. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items.": "عنصر ضم هو عبارة عن حاوية لتجميع عناصر متعددة، ويمكن استخدامها لتجميع الأزرار أو المدخلات أو أي عنصر آخر. يطبق عنصر الضم حدودا على العنصر الأول والأخير. يمكن استخدام الانضمام لإنشاء قائمة أفقية أو رأسية من العناصر"
+  "Join is a container for grouping multiple items, it can be used to group buttons, inputs, or any other element. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items.": "عنصر ضم هو عبارة عن حاوية لتجميع عناصر متعددة، ويمكن استخدامها لتجميع الأزرار أو المدخلات أو أي عنصر آخر. يطبق عنصر الضم حدودا على العنصر الأول والأخير. يمكن استخدام الانضمام لإنشاء قائمة أفقية أو رأسية من العناصر",
+  "": ""
 }

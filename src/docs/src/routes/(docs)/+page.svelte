@@ -132,10 +132,10 @@
               </button>
             </div>
             <div class="flex gap-2 font-mono text-xs">
-              <span class="text-base-content/60 italic">
-                {@html $t("daisyUI 4.0 will bloom soon!")}
-              </span>
-              🌼
+              <a class="text-base-content/60 italic" href="/docs/changelog/">
+                {@html $t("daisyUI 4.0 is here!")}
+              </a>
+              🎉
             </div>
             <!-- <div class="flex gap-2">
               <a class="link link-hover link-primary rounded-full" href="/docs/changelog/">
