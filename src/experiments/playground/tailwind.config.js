@@ -10,6 +10,7 @@ module.exports = {
     // logs: true,
     // prefix: "b-",
     // darkTheme: "dark",
+    themeRoot: "*",
   },
 
   plugins: [

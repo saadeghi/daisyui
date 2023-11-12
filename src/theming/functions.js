@@ -142,6 +142,7 @@ module.exports = {
   injectThemes: function (addBase, config, themes) {
     const includedThemesObj = {}
     // add default themes
+    const themeRoot = config("daisyui.themeRoot") ?? ":root"
     Object.entries(themes).forEach(([theme, value]) => {
       includedThemesObj[theme] = this.convertColorFormat(value)
     })
