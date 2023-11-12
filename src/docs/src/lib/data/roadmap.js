@@ -253,10 +253,6 @@ export const roadmap = [
         title: "Add divider color position modifiers",
         done: true,
       },
-      {
-        title: "rewrite 'label' component to work best with 'join'",
-        done: false,
-      },
     ],
   },
   {
@@ -313,6 +309,10 @@ export const roadmap = [
     title: "Upcoming",
     done: false,
     items: [
+      {
+        title: "rewrite 'label' component to work best with 'join'",
+        done: false,
+      },
       {
         title: "New component: Banner",
         done: false,
