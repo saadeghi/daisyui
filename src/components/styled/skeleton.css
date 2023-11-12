@@ -1,7 +1,7 @@
 .skeleton {
   @apply bg-base-300 rounded-box;
   will-change: background-position;
-  animation: skeleton 2.5s ease-in-out infinite;
+  animation: skeleton 1.8s ease-in-out infinite;
   background-image: linear-gradient(
     105deg,
     transparent 0%,
