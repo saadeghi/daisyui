@@ -285,7 +285,7 @@ export const roadmap = [
       },
       {
         title: "Docs: add Arabic translation",
-        done: false,
+        done: true,
       },
       {
         title: "Docs: add German translation",

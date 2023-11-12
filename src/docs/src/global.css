@@ -172,6 +172,12 @@ pre[class*="language-"] {
 .changelog-body h1#changelog + p {
   display: none;
 }
+.changelog-body h2 {
+  margin-top: 5rem;
+}
+.changelog-body h2 a {
+  font-weight: 900;
+}
 .changelog-body img {
   @apply rounded-box border-base-content/10 border;
 }
