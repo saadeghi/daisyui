@@ -39,8 +39,11 @@ const processImage = (input, size = 72) => {
     })
 }
 
-tweets.forEach((tweet) => {
-  const url = `https://unavatar.io/twitter/${tweet.username}`
+tweets.forEach((tweet, index) => {
+  const url = `https://unavatar.io/twitter/${tweet.username}?fallback=false`
   const filename = `static/twitter-profile-pics/${tweet.username}.jpg`
-  downloadImage(url, filename)
+  setTimeout(() => {
+    downloadImage(url, filename)
+    console.log(`Updated: ${filename}`)
+  }, index * 1000)
 })

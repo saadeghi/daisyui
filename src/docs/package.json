@@ -10,6 +10,7 @@
     "preview": "npm run build && vite preview --port 3000 --open",
     "createStyleHandlerComponent:dev": "echo $'<script>import \"$components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
     "createStyleHandlerComponent:prod": "echo $'<script>import \"$components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",
+    "update-twitter-avatars": "node src/lib/scripts/get-twitter-avatars.js",
     "langdiff": "node src/lib/scripts/compare-translate-files"
   },
   "devDependencies": {

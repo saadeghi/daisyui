@@ -13,7 +13,7 @@ export let tweets = [
       "If you want to build beautiful apps in no time, daisyUI is the way to go ✨ I've been using it for the past 6 months and can't imagine living without it...",
     name: "Marc Lou",
     username: "marc_louvion",
-    bio: "HabitsGarden, Landing-AI, IndiePa.ge",
+    bio: "Solopreneur",
   },
   {
     id: "1620481690148929538",
@@ -133,5 +133,71 @@ export let tweets = [
     name: "Loftwah",
     username: "loftwah",
     bio: "DevOps Engineer",
+  },
+  {
+    id: "1707143402494873936",
+    content: "I would have never touched tailwindcss if it wasn't for DaisyUI 🤗",
+    name: "lang",
+    username: "mgilangjanuar",
+    bio: "Software developer",
+  },
+  {
+    id: "1723202429582504430",
+    content: "DaisyUI is what I use for everything now.",
+    name: "Pramod",
+    username: "pramodk73",
+    bio: "Software developer",
+  },
+  {
+    id: "1714691224219574424",
+    content: "I like to use Tailwind+DaisyUI to have a Bootstrap like experience.",
+    name: "Tiago Bastos",
+    username: "bastos",
+    bio: "Software developer",
+  },
+  {
+    id: "1712476498119307476",
+    content: "Have been using DaisyUI and it works great!",
+    name: "Thomas Mol",
+    username: "thomas_mol",
+    bio: "Maker",
+  },
+  {
+    id: "1710502398459093222",
+    content:
+      "If you want to create a quick MVP for your next project, I recommend DaisyUI. It offers a simple and elegant design.✨",
+    name: "Jairon Landa",
+    username: "jaironlanda",
+    bio: "Software developer",
+  },
+  {
+    id: "1708265819442905443",
+    content: "I'm enjoying daisyUI",
+    name: "Alexander Thomsen",
+    username: "AlexBThomsen",
+    bio: "Founder of moonbit.ai",
+  },
+  {
+    id: "1709060061790945349",
+    content:
+      "I was using bootstrap first than switched to tailwind but there's so many classes too much code, than i found daisyUI. if anyone coming from bootstrapcss background you will love daisyui for sure. 🙌",
+    name: "Jagdish kashyap",
+    username: "Jagdish1O1",
+    bio: "Software developer",
+  },
+  {
+    id: "1715485256407777529",
+    content: "DaisyUI really makes it super easy to get a clean looking MVP up and out the door.",
+    name: "Josh Cirre",
+    username: "joshcirre",
+    bio: "Entrepreneur",
+  },
+  {
+    id: "1717453198963642531",
+    content:
+      "Why did it take me so long to pair Tailwind with DaisyUI… Now I feel like a 10X developer.",
+    name: "Joel Pickin",
+    username: "joelpickin",
+    bio: "Software developer",
   },
 ]
