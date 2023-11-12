@@ -25,11 +25,7 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   }
   if (logs) {
     console.log()
-    console.log(
-      `╭─ 🌼 ${pc.magenta("daisyUI")} ${pc.dim(daisyuiInfo.version)} ${pc.dim(
-        daisyuiInfo.homepage
-      )}\n│`
-    )
+    console.log(`🌼   ${pc.magenta("daisyUI")} ${pc.dim(daisyuiInfo.version)}`)
   }
 
   // inject @base style
@@ -83,46 +79,44 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   if (logs) {
     if (config("daisyui.styled") == false) {
       console.log(
-        `├─ ${pc.yellow("ℹ︎")} ${pc.blue("daisyui.styled")} ${pc.reset("config is")} ${pc.blue(
+        `├─ ${pc.yellow("ℹ︎")} ${pc.blue("styled")} ${pc.reset("config is")} ${pc.blue(
           "false"
-        )} ${pc.dim("– components will have no design decisions")}\n│`
+        )} ${pc.dim("\tcomponents won't have design decisions")}`
       )
     }
     if (config("daisyui.utils") == false) {
       console.log(
-        `├─ ${pc.yellow("ℹ︎")} ${pc.blue("daisyui.utils")} ${pc.reset("config is")} ${pc.blue(
+        `├─ ${pc.yellow("ℹ︎")} ${pc.blue("utils")} ${pc.reset("config is")} ${pc.blue(
           "false"
-        )} ${pc.dim("– daisyUI utility classes are disabled")}\n│`
+        )} ${pc.dim("\tdaisyUI utility classes are disabled")}`
       )
     }
     if (config("daisyui.prefix") && config("daisyui.prefix") !== "") {
       console.log(
-        `├─ ${pc.green("✔︎")} ${pc.blue("prefix")} is enabled – ${pc.dim(
-          "daisyUI classnames must use"
-        )} ${pc.blue(config("daisyui.prefix"))} ${pc.dim("prefix. like:")} ${pc.blue(
-          `${config("daisyui.prefix")}btn`
-        )}\n│    ${pc.dim("https://daisyui.com/docs/config")}\n│`
+        `├─ ${pc.green("✔︎")} ${pc.blue("prefix")} is enabled${pc.dim(
+          "\t\tdaisyUI classnames must use"
+        )} ${pc.blue(config("daisyui.prefix"))} ${pc.dim("prefix")}`
       )
     }
     if (themeInjector.themeOrder.length > 0) {
       console.log(
         `├─ ${pc.green("✔︎")} ${themeInjector.themeOrder.length} ${
           themeInjector.themeOrder.length > 1 ? "themes" : "theme"
-        } added\n│    ${pc.dim("How to add more: https://daisyui.com/docs/themes")}\n│`
+        } added${pc.dim("\t\thttps://daisyui.com/docs/themes")}`
       )
     }
     if (themeInjector.themeOrder.length === 0) {
       console.log(
-        `├─ ${pc.yellow("ℹ︎")} All themes are disabled in config\n│    ${pc.dim(
-          "How to add themes: https://daisyui.com/docs/themes"
-        )}\n│`
+        `├─ ${pc.yellow("ℹ︎")} All themes are disabled in config${pc.dim(
+          "\t\thttps://daisyui.com/docs/themes"
+        )}`
       )
     }
     let messages = [
-      `${pc.green("❤︎")} ${pc.reset("Support daisyUI project:")} ${pc.dim(
+      `${pc.green("❤︎")} ${pc.reset("Support daisyUI project:")}\t${pc.dim(
         daisyuiInfo.funding.url
       )}`,
-      `${pc.green("★")} ${pc.reset("Star daisyUI project on GitHub:")} ${pc.dim(
+      `${pc.green("★")} ${pc.reset("Star daisyUI on GitHub")}\t${pc.dim(
         "https://github.com/saadeghi/daisyui"
       )}`,
     ]
