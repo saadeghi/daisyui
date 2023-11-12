@@ -26,7 +26,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Skeleton">
+<Component title="Skeleton - circle with content">
 <div class="flex flex-col gap-4 w-52">
   <div class="flex gap-4 items-center">
     <div class="skeleton w-16 h-16 rounded-full shrink-0"></div>
@@ -51,7 +51,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Skeleton">
+<Component title="Skeleton - rectangle with content">
 <div class="flex flex-col gap-4 w-52">
   <div class="skeleton h-32 w-full"></div>
   <div class="skeleton h-4 w-28"></div>
