@@ -1,7 +1,8 @@
 {
   "__name": "عربي",
   "__code": "AR",
-  "__status": "",
+  "__direction": "rtl",
+  "__status": "beta",
   "Tailwind CSS Components": "Tailwind CSS عناصر",
   "cta-1": "جميع العناصر",
   "cta-1-mobile": "العناصر",

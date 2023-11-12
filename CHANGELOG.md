@@ -66,7 +66,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Features
 
-- 💪 Performance
+- 💡 Efficiency
   - 92% less NPM module dependencies
   - 73% smaller install size and node_modules footprint
 - ✨ New components:
@@ -148,8 +148,6 @@ All notable changes to this project will be documented in this file. See [commit
 
 - improve logs ([379137c](https://github.com/saadeghi/daisyui/commit/379137c3cde98118db7b117689e93a46efffda52))
 
-## [3.9.1](https://github.com/saadeghi/daisyui/compare/v3.9.0...v3.9.1) (2023-10-05)
-
 ## [3.9.0](https://github.com/saadeghi/daisyui/compare/v3.8.3...v3.9.0) (2023-10-05)
 
 ### Features
@@ -161,8 +159,6 @@ All notable changes to this project will be documented in this file. See [commit
 ### Bug Fixes
 
 - [#2116](https://github.com/saadeghi/daisyui/issues/2116) progess bar firefox bug ([#2376](https://github.com/saadeghi/daisyui/issues/2376)) ([53889de](https://github.com/saadeghi/daisyui/commit/53889de67cb61ff223acb037f4aa7736e4fbf430))
-
-## [3.8.2](https://github.com/saadeghi/daisyui/compare/v3.8.1...v3.8.2) (2023-09-30)
 
 ## [3.8.1](https://github.com/saadeghi/daisyui/compare/v3.8.0...v3.8.1) (2023-09-27)
 
@@ -189,10 +185,6 @@ All notable changes to this project will be documented in this file. See [commit
 
 - [#2333](https://github.com/saadeghi/daisyui/issues/2333) multidirection support for `join` ([#2334](https://github.com/saadeghi/daisyui/issues/2334)) ([e8b3589](https://github.com/saadeghi/daisyui/commit/e8b3589a476bcca37d116780b599b5509d25d720))
 
-## [3.7.5](https://github.com/saadeghi/daisyui/compare/v3.7.4...v3.7.5) (2023-09-17)
-
-## [3.7.4](https://github.com/saadeghi/daisyui/compare/v3.7.3...v3.7.4) (2023-09-13)
-
 ## [3.7.3](https://github.com/saadeghi/daisyui/compare/v3.7.2...v3.7.3) (2023-09-06)
 
 ### Bug Fixes
@@ -205,15 +197,11 @@ All notable changes to this project will be documented in this file. See [commit
 
 - dropdown button border radius inside join ([7e36bb0](https://github.com/saadeghi/daisyui/commit/7e36bb039485e3bbc82419085f732fa35e569a29)), closes [#2115](https://github.com/saadeghi/daisyui/issues/2115)
 
-## [3.7.1](https://github.com/saadeghi/daisyui/compare/v3.7.0...v3.7.1) (2023-09-06)
-
 ## [3.7.0](https://github.com/saadeghi/daisyui/compare/v3.6.6...v3.7.0) (2023-09-06)
 
 ### Features
 
 - drawer-open now works in RTL mode. ([5162ff3](https://github.com/saadeghi/daisyui/commit/5162ff3baa1e64bfe896a7464be49e1c8a33b819)), closes [#1951](https://github.com/saadeghi/daisyui/issues/1951) [#1974](https://github.com/saadeghi/daisyui/issues/1974) [#2034](https://github.com/saadeghi/daisyui/issues/2034) [#2060](https://github.com/saadeghi/daisyui/issues/2060) [#2094](https://github.com/saadeghi/daisyui/issues/2094) [#2229](https://github.com/saadeghi/daisyui/issues/2229)
-
-## [3.6.6](https://github.com/saadeghi/daisyui/compare/v3.6.5...v3.6.6) (2023-09-06)
 
 ## [3.6.5](https://github.com/saadeghi/daisyui/compare/v3.6.4...v3.6.5) (2023-09-04)
 
@@ -238,10 +226,6 @@ All notable changes to this project will be documented in this file. See [commit
 ### Bug Fixes
 
 - [#2274](https://github.com/saadeghi/daisyui/issues/2274) ([260214b](https://github.com/saadeghi/daisyui/commit/260214b716a5e0d9cb4f02ff9d5a884c6a4d35ce))
-
-## [3.6.1](https://github.com/saadeghi/daisyui/compare/v3.6.0...v3.6.1) (2023-08-22)
-
-## [3.6.0](https://github.com/saadeghi/daisyui/compare/v3.5.1...v3.6.0) (2023-08-22)
 
 ## [3.5.1](https://github.com/saadeghi/daisyui/compare/v3.5.0...v3.5.1) (2023-08-03)
 
@@ -327,8 +311,6 @@ All notable changes to this project will be documented in this file. See [commit
 - [#2039](https://github.com/saadeghi/daisyui/issues/2039) ([d984d5b](https://github.com/saadeghi/daisyui/commit/d984d5b0dfab6d8f4c4e3f8caaa354f405d5fcbb))
 - [#2082](https://github.com/saadeghi/daisyui/issues/2082) ([8a3b82f](https://github.com/saadeghi/daisyui/commit/8a3b82f6f0d3d9df4319fa146de61d6b92209fac))
 
-## [3.1.7](https://github.com/saadeghi/daisyui/compare/v3.1.6...v3.1.7) (2023-06-28)
-
 ## [3.1.6](https://github.com/saadeghi/daisyui/compare/v3.1.5...v3.1.6) (2023-06-23)
 
 ### Bug Fixes
@@ -341,8 +323,6 @@ All notable changes to this project will be documented in this file. See [commit
 ### Bug Fixes
 
 - [#1888](https://github.com/saadeghi/daisyui/issues/1888) drawer now animates out ([#1988](https://github.com/saadeghi/daisyui/issues/1988)) ([b5b55c5](https://github.com/saadeghi/daisyui/commit/b5b55c5ff2970fcc1500173d0570bcee861a4e13))
-
-## [3.1.4](https://github.com/saadeghi/daisyui/compare/v3.1.3...v3.1.4) (2023-06-20)
 
 ## [3.1.3](https://github.com/saadeghi/daisyui/compare/v3.1.2...v3.1.3) (2023-06-20)
 
