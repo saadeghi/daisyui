@@ -4,36 +4,40 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [4.0.0](https://github.com/saadeghi/daisyui/compare/v3.9.4...v4.0.0) (2023-11-12)
 
+![daisyUI 4](https://raw.githubusercontent.com/saadeghi/files/main/daisyui4/daisyui-41200.jpg)
+
 ### Breaking changes
 
-- OKLCH colors
-  - daisyUI 4 uses [OKLCH colors](https://oklch.com/) internally instead of HSL.
-  - The new OKLCH color model unlock access to 30% more colors than RGB/HSL.
+- 🌈 OKLCH colors
+  - daisyUI 4 uses wide-gamut [OKLCH colors](https://oklch.com/) internally instead of HSL now.
+  - The new OKLCH color model unlock access to 30% more colors comparing to RGB/HSL.
   - All internal color variables (`--p`, `--s`, etc) now contain OKLCH values instead of HSL.
   - If you're using those CSS variables directly inside your project like `hsl(var(--p))` you have to change it to `oklch(var(--p))`
   - OKLCH colors are supported in Chrome/Edge 111+, Safari 15.4+, Firefox 113+
   - For old browsers, daisyUI provides HEX fallback colors only for the default dark/light themes.
   - Read more about OKLCH colors [here](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl).
-- Color names
-  - Removed all `*-focus` color names.
+- 🌈 Color names
+  - Removed all `*-focus` color names. They where being used only for buttons.
   - Darker colors are now generated using CSS color-mix() under the hood.
   - The following class names are removed now:
     - `primary-focus`
     - `secondary-focus`
     - `accent-focus`
     - `neutral-focus`
-- Themes
-  - All theme colors adjusted for better contrast, better harmony and better accessibility.
-- Logical CSS properties
+  - You can also make a color darker or lighter using CSS `color-mix()`. For example to make primary (`--p`) color darker, you can use this class name:  
+    `bg-[color-mix(in_oklab,oklch(var(--p)),black)]`
+- 🎨 Themes
+  - All theme colors adjusted for better contrast, better color harmony and better accessibility.
+- 🧠 Logical CSS properties
   - daisyUI 4 components use [logical CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) instead of directional rules (`mr-*`, `pl-*`, etc)
   - If you are using directional CSS rules (right/left) to modify daisyUI styles, it still works fine in LTR mode but you may want to double check.
-- RTL
+- ⬅️ RTL
   - Removed `rtl` daisyUI config
   - All components now support LTR/RTL without any config or plugin.
   - You don't need `tailwindcss-flip` plugin anymore.
   - You don't need to set `rtl: true` in `tailwind.config.js`
   - Just add `dir=rtl` to `<html>` tag and everything will be RTL on runtime.
-- Tab
+- 🗂️ Tab
   - No need to repeat modifier classes for each `tab` item.
   - these modifier classes for `tab` are removed:
     - `tab-lifted`
@@ -51,24 +55,24 @@ All notable changes to this project will be documented in this file. See [commit
     - `tabs-xs`
   - `tabs` class is now using grid, instead of flex.
   - Lifted tab now uses a single pseudo element (`:before`) instead of two (`:before` and `after`)
-- Button
+- ⏺️ Button
   - buttons are not uppercase by default anymore
   - Removed `--btn-text-case` CSS variable from themes
-- Dependencies
+- 📦 Dependencies
   - Removed `colord`, `rtlcss`, `postcss`, `tailwindcss`
   - Added `culori`, `picocolors`
 
 ### Features
 
-- Performance
+- 💪 Performance
   - 92% less NPM module dependencies
   - 73% smaller install size and node_modules footprint
-- New components:
+- ✨ New components:
   - `timeline`
   - `skeleton`
   - `diff`
   - `theme-controller`
-- New divider color modifier class names
+- ➗ New divider color modifier class names
   - `divider-primary`
   - `divider-secondary`
   - `divider-accent`
@@ -77,24 +81,24 @@ All notable changes to this project will be documented in this file. See [commit
   - `divider-warning`
   - `divider-info`
   - `divider-error`
-- New divider position modifier class names
+- ➗ New divider position modifier class names
   - `divider-start`
   - `divider-end`
-- New themes:
+- 🎨 New themes:
   - Dim
   - Nord
   - Sunset
-- Buttons
+- ⏺️ Buttons
   - Added hover color for the following other buttons:
     - `btn-info`
     - `btn-success`
     - `btn-warning`
     - `btn-error`
-- Tab
+- 🗂️ Tab
   - Empty `tab` tag now grows and fills the empty space
   - `tab` class can now be a radio input. `aria-label` value will be shown as the tab title so it's accessible for screen readers and keyboard navigation.
   - New `tab-content` class allows you to switch tab content
-- `@tailwindcss/forms`
+- 🧩 `@tailwindcss/forms`
   - Fix compatibility with `@tailwindcss/forms` plugin (even though you don't need it alongside daisyUI)
 
 ### Bug Fixes
@@ -109,12 +113,14 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Docs
 
-- New translations
+- New translations for docs
   - Arabic
   - Farsi
-- daisyUI store
-- daisyUI resources (videos, articles, courses)
+- daisyUI official store – Get professional templates made by daisyUI
+- daisyUI resources – A handpicked collection of community videos, articles and courses about daisyUI
+- Add roadmap page
 - Add docs for utiltiy classes
+- Update theme generator
 - Show browser support for components that are using new CSS rules
 
 ## [3.9.4](https://github.com/saadeghi/daisyui/compare/v3.9.3...v3.9.4) (2023-10-27)
