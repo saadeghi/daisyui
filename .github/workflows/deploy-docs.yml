@@ -43,7 +43,7 @@ jobs:
         if: env.runtime == 'npm'
         uses: actions/setup-node@v3
         with:
-          node-version: "lts/*"
+          node-version: "21.1.0"
           registry-url: https://registry.npmjs.org
 
       - name: Setup bun
