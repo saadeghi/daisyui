@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.0.1 (2023-11-12)
+
 ## [4.0.0](https://github.com/saadeghi/daisyui/compare/v3.9.4...v4.0.0) (2023-11-12)
 
 ![daisyUI 4](https://raw.githubusercontent.com/saadeghi/files/main/daisyui4/daisyui-41200.jpg)
