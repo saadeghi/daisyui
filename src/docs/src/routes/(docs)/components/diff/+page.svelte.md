@@ -14,9 +14,10 @@ layout: components
 </script>
 
 <BrowserSupport data="{{
-  chrome:105,
-  firefox:110,
-  safari:16,
+chrome:105,
+firefox:110,
+safari:16,
+iossafari: null,
 }}"/>
 
 <ClassTable

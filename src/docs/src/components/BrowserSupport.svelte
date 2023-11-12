@@ -30,11 +30,16 @@
   {#each Object.entries(data) as [browser, version]}
     <div class="inline-flex items-center gap-1 lg:gap-2">
       <div class="tooltip" data-tip={browsers[browser].name}>
-        <span class={version <= browsers[browser].safeversion ? "text-success" : "text-error"}>
+        <span
+          class={version && version <= browsers[browser].safeversion
+            ? "text-success"
+            : "text-error"}>
           {@html browsers[browser].icon}
         </span>
       </div>
-      <span class="text-base-content/50 font-mono text-xs">{version}+</span>
+      <span class="text-base-content/50 font-mono text-xs">
+        {@html version ? `${version}+` : ` <span class="text-error italic">NOT SUPPORTED</span>`}
+      </span>
     </div>
   {/each}
 </div>
