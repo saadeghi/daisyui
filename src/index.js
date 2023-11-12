@@ -15,15 +15,10 @@ const utilitiesUnstyled = require("../dist/utilities-unstyled")
 const utilitiesStyled = require("../dist/utilities-styled")
 const themes = require("./theming/themes")
 const colorFunctions = require("./theming/functions")
+const utilityClasses = require("./lib/utility-classes")
 let colorObject = require("./theming/index")
 
-// let colorSpace
-
 const mainFunction = ({ addBase, addComponents, config }) => {
-  // colorSpace = config("daisyui.colorSpace") || "oklch"
-  // if (["oklch", "hsl"].includes(colorSpace)) {
-  //   colorObject = colorObject(colorSpace)
-  // }
   let logs = false
   if (config("daisyui.logs") != false) {
     logs = true
@@ -154,7 +149,7 @@ module.exports = tailwindPlugin(mainFunction, {
         "neutral-900": "#171717",
         "neutral-950": "#0a0a0a",
       },
-      ...require("./lib/utility-classes"),
+      ...utilityClasses,
     },
   },
 })

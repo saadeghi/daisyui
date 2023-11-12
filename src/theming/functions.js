@@ -11,37 +11,28 @@ module.exports = {
     return false
   },
 
-  colorObjToString: function (input, colorSpace) {
+  colorObjToString: function (input) {
     const cut = (number) => {
       if (!number) {
         return 0
       }
       return +number.toFixed(6)
     }
-    if (colorSpace === "oklch") {
-      const { l, c, h } = input
-      return `${cut(l)} ${cut(c)} ${cut(h)}`
-    }
-    if (colorSpace === "hsl") {
-      const { h, s, l } = input
-      return `${cut(h)} ${cut(s)}% ${cut(l)}%`
-    }
+    const { l, c, h } = input
+    return `${cut(l)} ${cut(c)} ${cut(h)}`
   },
 
-  generateForegroundColorFrom: function (input, percentage = 0.8, colorSpace) {
-    const result = interpolate(
-      [input, this.isDark(input) ? "white" : "black"],
-      colorSpace
-    )(percentage)
-    return this.colorObjToString(result, colorSpace)
+  generateForegroundColorFrom: function (input, percentage = 0.8) {
+    const result = interpolate([input, this.isDark(input) ? "white" : "black"], "oklch")(percentage)
+    return this.colorObjToString(result)
   },
 
-  generateDarkenColorFrom: function (input, percentage = 0.07, colorSpace) {
-    const result = interpolate([input, "black"], colorSpace)(percentage)
-    return this.colorObjToString(result, colorSpace)
+  generateDarkenColorFrom: function (input, percentage = 0.07) {
+    const result = interpolate([input, "black"], "oklch")(percentage)
+    return this.colorObjToString(result)
   },
 
-  convertColorFormat: function (input, colorSpace) {
+  convertColorFormat: function (input) {
     if (typeof input !== "object" || input === null) {
       return input
     }
@@ -50,8 +41,8 @@ module.exports = {
 
     Object.entries(input).forEach(([rule, value]) => {
       if (colorNames.hasOwnProperty(rule)) {
-        const colorObj = toGamut(colorSpace)(value)
-        resultObj[colorNames[rule]] = this.colorObjToString(colorObj, colorSpace)
+        const colorObj = toGamut("oklch")(value)
+        resultObj[colorNames[rule]] = this.colorObjToString(colorObj)
       } else {
         resultObj[rule] = value
       }
@@ -61,13 +52,13 @@ module.exports = {
         resultObj["--b1"] = "100 0 0"
       }
       if (!Object.hasOwn(input, "base-200")) {
-        resultObj["--b2"] = this.generateDarkenColorFrom(input["base-100"], 0.07, colorSpace)
+        resultObj["--b2"] = this.generateDarkenColorFrom(input["base-100"], 0.07)
       }
       if (!Object.hasOwn(input, "base-300")) {
         if (Object.hasOwn(input, "base-200")) {
-          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-200"], 0.07, colorSpace)
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-200"], 0.07)
         } else {
-          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-100"], 0.14, colorSpace)
+          resultObj["--b3"] = this.generateDarkenColorFrom(input["base-100"], 0.14)
         }
       }
 
@@ -88,44 +79,44 @@ module.exports = {
 
       // auto generate content colors
       if (!Object.hasOwn(input, "base-content")) {
-        resultObj["--bc"] = this.generateForegroundColorFrom(input["base-100"], 0.8, colorSpace)
+        resultObj["--bc"] = this.generateForegroundColorFrom(input["base-100"], 0.8)
       }
       if (!Object.hasOwn(input, "primary-content")) {
-        resultObj["--pc"] = this.generateForegroundColorFrom(input["primary"], 0.8, colorSpace)
+        resultObj["--pc"] = this.generateForegroundColorFrom(input["primary"], 0.8)
       }
       if (!Object.hasOwn(input, "secondary-content")) {
-        resultObj["--sc"] = this.generateForegroundColorFrom(input["secondary"], 0.8, colorSpace)
+        resultObj["--sc"] = this.generateForegroundColorFrom(input["secondary"], 0.8)
       }
       if (!Object.hasOwn(input, "accent-content")) {
-        resultObj["--ac"] = this.generateForegroundColorFrom(input["accent"], 0.8, colorSpace)
+        resultObj["--ac"] = this.generateForegroundColorFrom(input["accent"], 0.8)
       }
       if (!Object.hasOwn(input, "neutral-content")) {
-        resultObj["--nc"] = this.generateForegroundColorFrom(input["neutral"], 0.8, colorSpace)
+        resultObj["--nc"] = this.generateForegroundColorFrom(input["neutral"], 0.8)
       }
       if (!Object.hasOwn(input, "info-content")) {
         if (Object.hasOwn(input, "info")) {
-          resultObj["--inc"] = this.generateForegroundColorFrom(input["info"], 0.8, colorSpace)
+          resultObj["--inc"] = this.generateForegroundColorFrom(input["info"], 0.8)
         } else {
           resultObj["--inc"] = "0 0 0"
         }
       }
       if (!Object.hasOwn(input, "success-content")) {
         if (Object.hasOwn(input, "success")) {
-          resultObj["--suc"] = this.generateForegroundColorFrom(input["success"], 0.8, colorSpace)
+          resultObj["--suc"] = this.generateForegroundColorFrom(input["success"], 0.8)
         } else {
           resultObj["--suc"] = "0 0 0"
         }
       }
       if (!Object.hasOwn(input, "warning-content")) {
         if (Object.hasOwn(input, "warning")) {
-          resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"], 0.8, colorSpace)
+          resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"], 0.8)
         } else {
           resultObj["--wac"] = "0 0 0"
         }
       }
       if (!Object.hasOwn(input, "error-content")) {
         if (Object.hasOwn(input, "error")) {
-          resultObj["--erc"] = this.generateForegroundColorFrom(input["error"], 0.8, colorSpace)
+          resultObj["--erc"] = this.generateForegroundColorFrom(input["error"], 0.8)
         } else {
           resultObj["--erc"] = "0 0 0"
         }
@@ -149,15 +140,10 @@ module.exports = {
   },
 
   injectThemes: function (addBase, config, themes) {
-    let colorSpace = "oklch"
-    // if (["oklch", "hsl"].includes(config("daisyui.colorSpace"))) {
-    //   colorSpace = config("daisyui.colorSpace")
-    // }
-    const themeRoot = config("daisyui.themeRoot") ?? ":root"
     const includedThemesObj = {}
     // add default themes
     Object.entries(themes).forEach(([theme, value]) => {
-      includedThemesObj[theme] = this.convertColorFormat(value, colorSpace)
+      includedThemesObj[theme] = this.convertColorFormat(value)
     })
 
     // add custom themes
@@ -165,10 +151,7 @@ module.exports = {
       config("daisyui.themes").forEach((item) => {
         if (typeof item === "object" && item !== null) {
           Object.entries(item).forEach(([customThemeName, customThemevalue]) => {
-            includedThemesObj[customThemeName] = this.convertColorFormat(
-              customThemevalue,
-              colorSpace
-            )
+            includedThemesObj[customThemeName] = this.convertColorFormat(customThemevalue)
           })
         }
       })

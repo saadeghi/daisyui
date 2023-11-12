@@ -17,31 +17,25 @@
     return false
   }
 
-  const colorObjToString = function (input, colorSpace) {
+  const colorObjToString = function (input) {
     const cut = (number) => {
       if (!number) {
         return 0
       }
       return +number.toFixed(4)
     }
-    if (colorSpace === "oklch") {
-      const { l, c, h } = input
-      return `${cut(l)} ${cut(c)} ${cut(h)}`
-    }
-    if (colorSpace === "hsl") {
-      const { h, s, l } = input
-      return `${cut(h)} ${cut(s)}% ${cut(l)}%`
-    }
+    const { l, c, h } = input
+    return `${cut(l)} ${cut(c)} ${cut(h)}`
   }
 
-  const generateForegroundColorFrom = function (input, percentage = 0.8, colorSpace) {
-    const result = interpolate([input, isDark(input) ? "white" : "black"], colorSpace)(percentage)
-    return colorObjToString(result, colorSpace)
+  const generateForegroundColorFrom = function (input, percentage = 0.8) {
+    const result = interpolate([input, isDark(input) ? "white" : "black"], "oklch")(percentage)
+    return colorObjToString(result)
   }
 
-  const generateDarkenColorFrom = function (input, percentage = 0.07, colorSpace) {
-    const result = interpolate([input, "black"], colorSpace)(percentage)
-    return colorObjToString(result, colorSpace)
+  const generateDarkenColorFrom = function (input, percentage = 0.07) {
+    const result = interpolate([input, "black"], "oklch")(percentage)
+    return colorObjToString(result)
   }
 
   function changeColorValuesToObject(input) {

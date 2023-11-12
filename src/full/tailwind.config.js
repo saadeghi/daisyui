@@ -1,11 +1,16 @@
 const plugin = require("tailwindcss/plugin")
 const responsiveRegex = require("../lib/responsiveRegex")
+const utilityClasses = require("../lib/utility-classes")
+
 module.exports = {
   content: [{ raw: "" }],
   safelist: responsiveRegex,
   theme: {
     colors: require("../theming"),
     ...require("../lib/utility-classes"),
+    extend: {
+      ...utilityClasses,
+    },
   },
   corePlugins: [
     "animation",
