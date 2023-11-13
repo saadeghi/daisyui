@@ -28,7 +28,7 @@ data="{[
 ]}"
 />
 
-<Translate text="Theme Controller changes the theme using CSS only. You can then use JS to save the input state in server or localStorege if you want it to persist on page refresh. <br/>Here's a React example to save checkbox state in local storate:" />
+<Translate text="Theme Controller changes the theme using CSS only. You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh. <br/>Here's a React example to save checkbox state in local storage:" />
 <a href="https://stackblitz.com/edit/react-checkbox-localstorage?file=src%2FApp.js" rel="nofollow, noreferrer" target="_blank" class="link">Stackblitz</a>
 
 <Component title="Theme Controller using a toggle" >
@@ -126,7 +126,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Theme Controller using a radio inputs">
+<Component title="Theme Controller using a radio input">
 <div class="flex flex-col">
   <div class="form-control">
     <label class="label cursor-pointer gap-4">
@@ -193,7 +193,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Theme Controller using a radio buttons">
+<Component title="Theme Controller using a radio button">
 <div class="join join-vertical">
   <input bind:group={radio} type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Default" value="default"/>
   <input bind:group={radio} type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Retro" value="retro"/>
@@ -212,7 +212,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Theme Controller using a radio buttons">
+<Component title="Theme Controller using a radio button">
 <div class="dropdown mb-72">
   <label tabindex="0" class="btn m-1">
   Theme
