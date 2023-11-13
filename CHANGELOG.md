@@ -36,8 +36,8 @@ All notable changes to this project will be documented in this file. See [commit
     - `secondary-focus`
     - `accent-focus`
     - `neutral-focus`
-  - You can also make a color darker or lighter using CSS `color-mix()`. For example to make primary (`--p`) color darker, you can use this class name:  
-    `bg-[color-mix(in_oklab,oklch(var(--p)),black)]`
+  - You can also make a color darker or lighter using CSS `color-mix()`. For example to make primary (`--p`) color darker by 7%, you can use this class name:  
+    `bg-[color-mix(in_oklab,oklch(var(--p))_7%,black)]`
 - 🎨 Themes
   - All theme colors adjusted for better contrast, better color harmony and better accessibility.
 - 🧠 Logical CSS properties
