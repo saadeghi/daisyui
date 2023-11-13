@@ -1,4 +1,4 @@
-[type="checkbox"].checkbox {
+.checkbox {
   --chkbg: theme(colors.base-content);
   --chkfg: theme(colors.base-100);
   @apply border-base-content rounded-btn h-6 w-6 cursor-pointer appearance-none border border-opacity-20;

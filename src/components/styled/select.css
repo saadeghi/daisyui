@@ -1,5 +1,5 @@
 .select,
-select.select {
+:where(select.select) {
   @apply bg-base-100 rounded-btn border border-transparent pr-10;
   &-bordered {
     @apply border-base-content/20;

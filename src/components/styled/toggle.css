@@ -1,4 +1,4 @@
-[type="checkbox"].toggle {
+.toggle {
   --tglbg: theme(colors.base-100);
   --handleoffset: 1.5rem;
   --handleoffsetcalculator: calc(var(--handleoffset) * -1);

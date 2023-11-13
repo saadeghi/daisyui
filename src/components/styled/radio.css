@@ -1,4 +1,4 @@
-[type="radio"].radio {
+.radio {
   --chkbg: var(--bc);
   @apply border-base-content h-6 w-6 cursor-pointer appearance-none rounded-full border border-opacity-20;
   &:focus {
