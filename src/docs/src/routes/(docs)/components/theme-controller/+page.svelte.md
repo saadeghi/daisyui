@@ -18,7 +18,7 @@ layout: components
 
 <BrowserSupport data="{{
   chrome:105,
-  firefox:121,
+  firefox:112,
   safari:15.4,
 }}"/>
 
