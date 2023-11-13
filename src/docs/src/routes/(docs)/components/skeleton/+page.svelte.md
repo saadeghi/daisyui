@@ -22,7 +22,7 @@ data="{[
 <Component title="Skeleton">
 <div class="skeleton w-32 h-32"></div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-``
+`<div class="skeleton w-32 h-32"></div>`
 }</pre>
 </Component>
 
