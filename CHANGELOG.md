@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 4.0.3 (2023-11-13)
 
+### Bug Fixes
+* specificity issue on form inputs
+
 ## 4.0.2 (2023-11-13)
 
 
