@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.0.2 (2023-11-13)
+
+
+### Bug Fixes
+
+* [#2499](https://github.com/saadeghi/daisyui/issues/2499) ([45ea773](https://github.com/saadeghi/daisyui/commit/45ea773a854ef43b8cbd0540b83c8f9dc77938da))
+
 ## [4.0.0](https://github.com/saadeghi/daisyui/compare/v3.9.4...v4.0.0) (2023-11-12)
 
 ![daisyUI 4](https://raw.githubusercontent.com/saadeghi/files/main/daisyui4/daisyui-41200.jpg)
