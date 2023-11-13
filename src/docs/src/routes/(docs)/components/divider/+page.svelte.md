@@ -140,7 +140,7 @@ data="{[
   <div class="divider divider-horizontal divider-end">End</div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="flex flex-col w-full">
+`<div class="flex w-full">
   <div class="$$divider $$divider-start">Start</div>
   <div class="$$divider">Default</div>
   <div class="$$divider $$divider-end">End</div>
