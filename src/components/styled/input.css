@@ -1,5 +1,4 @@
-.input,
-input.input {
+.input {
   @apply bg-base-100 rounded-btn border border-transparent text-base;
   input:focus {
     @apply outline-none;
