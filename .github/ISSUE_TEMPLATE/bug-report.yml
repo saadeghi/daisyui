@@ -15,14 +15,15 @@ body:
         2. Read [FAQ](https://github.com/saadeghi/daisyui/discussions/1949). You may find a solution there  
         3. Search [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions?discussions_q=). You may find a solution there  
         4. Make sure this bug is **NOT** specific to a JS framework or a build tool. If the issue doesn't happen on [Tailwind Play](https://daisyui.com/tailwindplay/) it means it's not an issue from daisyUI.  
-        It can be a config problem in your project ([ask here](https://github.com/saadeghi/daisyui/discussions?discussions_q=)) or it can be an issue from your framework or CSS build tools.
+        It can be a config problem in your project ([ask here](https://github.com/saadeghi/daisyui/discussions?discussions_q=)) or it can be an issue from your framework or CSS build tools.  
+        5. Open one issue per problem. Don't list multiple issues in the same page because that would be hard to track.
 
   - type: input
     id: version
     attributes:
       label: What version of daisyUI are you using?
       description: You can see the daisyUI version number on your `package.json` file.
-      placeholder: "example: v3.9.1"
+      placeholder: "example: v4.0.3"
     validations:
       required: false
 
