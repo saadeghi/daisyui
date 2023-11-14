@@ -46,13 +46,13 @@ bg-primary/50
 </div>
 
 ```json
-rounded-box     // var(--rounded-badge)
+rounded-box     // var(--rounded-box)
                 // for large sized components like card, modal, etc.
 
 rounded-btn     // var(--rounded-btn)
                 // for medium sized components like button, input, etc.
 
-rounded-badge   // var(--rounded-box)
+rounded-badge   // var(--rounded-badge)
                 // for small sized components like badge, etc.
 ```
 
