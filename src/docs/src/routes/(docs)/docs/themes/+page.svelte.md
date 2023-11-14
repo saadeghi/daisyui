@@ -233,7 +233,7 @@ module.exports = {
     themes: [
       {
         light: {
-          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          ...require("daisyui/src/theming/themes")["light"],
           primary: "blue",
           secondary: "teal",
         },
@@ -255,7 +255,7 @@ module.exports = {
     themes: [
       {
         light: {
-          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          ...require("daisyui/src/theming/themes")["light"],
           ".btn-twitter": {
             "background-color": "#1EA1F1",
             "border-color": "#1EA1F1",
