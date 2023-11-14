@@ -1,5 +1,5 @@
 ---
-title: utility classes and CSS variables
+title: Utility classes and CSS variables
 desc: Additional utility classes and CSS variables that daisyUI uses for components and themes
 published: true
 ---
