@@ -202,34 +202,19 @@ module.exports = {
           }
         }
         // theme 0 with name
+        themesToInject["[data-theme=" + themeOrder[0] + "]"] = includedThemesObj[themeOrder[0]]
         themesToInject[
-          "[data-theme=" +
-            themeOrder[0] +
-            "], " +
-            themeRoot +
-            ":has(input.theme-controller[value=" +
-            themeOrder[0] +
-            "]:checked)"
+          themeRoot + ":has(input.theme-controller[value=" + themeOrder[0] + "]:checked)"
         ] = includedThemesObj[themeOrder[0]]
         // theme 1 with name
+        themesToInject["[data-theme=" + themeOrder[1] + "]"] = includedThemesObj[themeOrder[1]]
         themesToInject[
-          "[data-theme=" +
-            themeOrder[1] +
-            "], " +
-            themeRoot +
-            ":has(input.theme-controller[value=" +
-            themeOrder[1] +
-            "]:checked)"
+          themeRoot + ":has(input.theme-controller[value=" + themeOrder[1] + "]:checked)"
         ] = includedThemesObj[themeOrder[1]]
       } else {
+        themesToInject["[data-theme=" + themeName + "]"] = includedThemesObj[themeName]
         themesToInject[
-          "[data-theme=" +
-            themeName +
-            "], " +
-            themeRoot +
-            ":has(input.theme-controller[value=" +
-            themeName +
-            "]:checked)"
+          themeRoot + ":has(input.theme-controller[value=" + themeName + "]:checked)"
         ] = includedThemesObj[themeName]
       }
     })

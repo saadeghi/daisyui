@@ -1,5 +1,5 @@
 module.exports = {
-  content: [{ raw: "" }],
+  content: [{ raw: '<input class="theme-controller" checked/>', extension: "html" }],
   experimental: {
     optimizeUniversalDefaults: true,
   },

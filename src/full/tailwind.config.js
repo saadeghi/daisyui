@@ -3,7 +3,7 @@ const responsiveRegex = require("../lib/responsiveRegex")
 const utilityClasses = require("../lib/utility-classes")
 
 module.exports = {
-  content: [{ raw: "" }],
+  content: [{ raw: '<input class="theme-controller" checked/>', extension: "html" }],
   safelist: responsiveRegex,
   theme: {
     colors: require("../theming"),
