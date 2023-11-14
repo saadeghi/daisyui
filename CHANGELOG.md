@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.0.6 (2023-11-14)
+
+
+### Bug Fixes
+
+* [#2504](https://github.com/saadeghi/daisyui/issues/2504) ([f90bc9b](https://github.com/saadeghi/daisyui/commit/f90bc9b6331948755e3be85e5a94868e1e7df4a1))
+
 ## 4.0.5 (2023-11-14)
 
 
