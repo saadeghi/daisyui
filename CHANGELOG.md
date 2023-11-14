@@ -46,6 +46,15 @@ All notable changes to this project will be documented in this file. See [commit
   - You can also make a color darker or lighter using CSS `color-mix()`. For example to make primary (`--p`) color darker by 7%, you can use this class name:  
     `bg-[color-mix(in_oklab,oklch(var(--p))_7%,black)]`
 - 🎨 Themes
+  - there's a change in property names in `daisyui/src/theming/themes.js` file.  
+    If you're customizing a built-in daisyUI theme like this:
+    ```
+     ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+    ```
+    change it to:
+    ```
+    ...require("daisyui/src/theming/themes")["light"],
+    ```
   - All theme colors adjusted for better contrast, better color harmony and better accessibility.
 - 🧠 Logical CSS properties
   - daisyUI 4 components use [logical CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) instead of directional rules (`mr-*`, `pl-*`, etc)
