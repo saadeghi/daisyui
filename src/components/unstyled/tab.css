@@ -2,8 +2,8 @@
   @apply grid items-end;
 }
 .tabs-lifted {
-  &:has(.tab-content[class^="rounded-"]) :first-child:not(.tab-active),
-  &:has(.tab-content[class*=" rounded-"]) :first-child:not(.tab-active) {
+  &:has(.tab-content[class^="rounded-"]) .tab:first-child:not(.tab-active),
+  &:has(.tab-content[class*=" rounded-"]) .tab:first-child:not(.tab-active) {
     @apply border-b-transparent;
   }
 }
