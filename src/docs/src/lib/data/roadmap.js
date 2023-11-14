@@ -361,6 +361,10 @@ export const roadmap = [
         title: "Use Container queries for responsive components",
         done: false,
       },
+      {
+        title: "Add dotted variants for button, card and badge",
+        done: false,
+      },
     ],
   },
 ]
