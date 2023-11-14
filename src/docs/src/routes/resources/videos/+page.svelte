@@ -31,6 +31,7 @@
         <figure
           class="rounded-btn grid aspect-video place-content-center overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
           <img
+            loading="lazy"
             src={video.snippet.thumbnails.high.url}
             alt={video.snippet.title}
             class="w-full"
