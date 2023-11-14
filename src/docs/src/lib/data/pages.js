@@ -38,6 +38,7 @@ export const pages = [
         name: "Themes",
         tags: "themes disable custom color generator",
         href: "/docs/themes/",
+        badge: "updated"
       },
       {
         name: "Utilities",
