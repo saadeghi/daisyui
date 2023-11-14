@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.0.4 (2023-11-14)
+
+
+### Bug Fixes
+
+* [#2505](https://github.com/saadeghi/daisyui/issues/2505) missing border on select component ([#2514](https://github.com/saadeghi/daisyui/issues/2514)) ([71981e9](https://github.com/saadeghi/daisyui/commit/71981e96329fd9656c46b196e1989d949cb1a216))
+
 ## 4.0.3 (2023-11-13)
 
 ### Bug Fixes
