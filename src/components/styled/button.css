@@ -23,12 +23,12 @@
         @apply border-base-300 bg-base-300;
         background-color: color-mix(
           in oklab,
-          oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity)) 90%,
+          oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity, 1)) 90%,
           black
         );
         border-color: color-mix(
           in oklab,
-          oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity)) 90%,
+          oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity, 1)) 90%,
           black
         );
         @supports not (color: oklch(0 0 0)) {
@@ -40,12 +40,12 @@
     &-active {
       background-color: color-mix(
         in oklab,
-        oklch(var(--btn-color, var(--b3)) / var(--tw-bg-opacity)) 90%,
+        oklch(var(--btn-color, var(--b3)) / var(--tw-bg-opacity, 1)) 90%,
         black
       );
       border-color: color-mix(
         in oklab,
-        oklch(var(--btn-color, var(--b3)) / var(--tw-border-opacity)) 90%,
+        oklch(var(--btn-color, var(--b3)) / var(--tw-border-opacity, 1)) 90%,
         black
       );
     }
