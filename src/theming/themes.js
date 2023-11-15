@@ -116,8 +116,8 @@ module.exports = {
   },
   slate: {
     "color-scheme": "dark",
-    "primary": "#088385",
-    "secondary": "#cc4304",
+    "primary": "#661AE6",
+    "secondary": "#D926AA",
     "accent": "#1FB2A5",
     "neutral": "#191D24",
     "neutral-content": "#A6ADBB",
