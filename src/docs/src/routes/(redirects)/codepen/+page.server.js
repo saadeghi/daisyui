@@ -1,2 +1,5 @@
+export const ssr = false
 import { redirect } from "@sveltejs/kit"
-throw redirect(301, "https://codepen.io/pen?template=BaqgrNP")
+export function load() {
+  throw redirect(301, "https://codepen.io/pen?template=BaqgrNP")
+}
