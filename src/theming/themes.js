@@ -114,6 +114,18 @@ module.exports = {
     "base-300": "#15191e",
     "base-content": "#A6ADBB",
   },
+  slate: {
+    "color-scheme": "dark",
+    "primary": "#088385",
+    "secondary": "#cc4304",
+    "accent": "#1FB2A5",
+    "neutral": "#191D24",
+    "neutral-content": "#A6ADBB",
+      "base-100": "#2A303C",
+     "base-200": "#242933",
+    "base-300": "#20252E",
+    "base-content": "#A6ADBB",
+  },
   dracula: {
     "color-scheme": "dark",
     "primary": "#ff79c6",
