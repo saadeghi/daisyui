@@ -9,6 +9,7 @@
     href = null,
     icon = null,
     badge = null,
+    badgeclass = null,
     highlightAnotherItem = null,
     deprecated = null,
     items = null,
@@ -55,13 +56,14 @@
             {$t(name)}
           </summary>
           <ul>
-            {#each items as { name, href, icon, badge, highlightAnotherItem, deprecated, items }}
+            {#each items as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items }}
               <SidebarMenuItem
                 {closeDrawer}
                 {name}
                 {href}
                 {icon}
                 {badge}
+                {badgeclass}
                 {highlightAnotherItem}
                 {deprecated}
                 {items} />
@@ -79,13 +81,14 @@
         {/if}
         {#if items}
           <ul>
-            {#each items as { name, href, icon, badge, highlightAnotherItem, deprecated, items }}
+            {#each items as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items }}
               <SidebarMenuItem
                 {closeDrawer}
                 {name}
                 {href}
                 {icon}
                 {badge}
+                {badgeclass}
                 {highlightAnotherItem}
                 {deprecated}
                 {items} />
@@ -113,7 +116,7 @@
           {@html $t(name)}
         </span>
         {#if badge}
-          <span class="badge badge-sm font-mono lowercase">
+          <span class={`badge badge-sm font-mono ${badgeclass && badgeclass}`}>
             {$t(badge)}
           </span>
         {/if}

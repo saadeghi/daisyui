@@ -59,13 +59,14 @@
 <div class="h-4" />
 
 <ul class="menu px-4 py-0">
-  {#each pages as { name, href, icon, badge, highlightAnotherItem, deprecated, items, collapsible, target }}
+  {#each pages as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items, collapsible, target }}
     <SidebarMenuItem
       {closeDrawer}
       {name}
       {href}
       {icon}
       {badge}
+      {badgeclass}
       {highlightAnotherItem}
       {deprecated}
       {items}
