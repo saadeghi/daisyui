@@ -10,13 +10,10 @@
   export let closeDrawer
   export let openDrawer
 
-  let version = readEnv("VITE_DAISYUI_VERSION", "latest")
-
   export let pages
   export let drawerSidebarScrollY
   $: switchNavbarStyle = drawerSidebarScrollY > 40 ? true : false
 
-  import { t } from "$lib/i18n"
   $: innerWidth = undefined
 </script>
 
