@@ -30,6 +30,7 @@
     "remark-github": "^12.0.0",
     "sharp": "^0.32.6",
     "svelte": "^4.2.3",
+    "svelte-countdown": "^1.1.2",
     "svelte-preprocess": "^5.1.0",
     "svelte-prism": "1.1.6",
     "svelte-typeahead": "^4.4.1",

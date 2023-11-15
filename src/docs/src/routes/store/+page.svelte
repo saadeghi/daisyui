@@ -1,4 +1,7 @@
 <script>
+  import SEO from "$components/SEO.svelte"
+  import Countdown from "svelte-countdown"
+
   export let data
   const products = data.products?.data
   const discounts = data.discounts?.data
@@ -6,7 +9,26 @@
     const formatted = (number / 100).toFixed(2)
     return `$${formatted.endsWith(".00") ? formatted.slice(0, -3) : formatted}`
   }
+  const dateFormat = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }
+
+  let isClipboardButtonPressed = false
+  const copyText = (text) => {
+    navigator.clipboard.writeText(text)
+    isClipboardButtonPressed = true
+    setTimeout(() => {
+      isClipboardButtonPressed = false
+    }, 2000)
+  }
 </script>
+
+<SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
 
 <div class="flex flex-col gap-4 p-10">
   {#each discounts as discount}
@@ -28,35 +50,84 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="text-base-content/50 mx-2 h-5 w-5 shrink-0 stroke-current">
+          class="text-base-content/50 mx-2 h-5 w-5 shrink-0 stroke-current max-lg:hidden">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
             d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
         </svg>
-        <div class="flex flex-col gap-1">
-          <h2 class="font-bold">
-            {discount.attributes.name} discount!
-            {#if discount.attributes.expires_at}
-              until {new Date(discount.attributes.expires_at).toLocaleString("en-us", {
-                month: "long",
-                day: "numeric",
-              })}
-            {/if}
-          </h2>
-          <div class="text-base-content/60 text-sm">
-            Use <span class="badge badge-outline font-mono tracking-widest">
-              {discount.attributes.code}
-            </span>
-            code to get
-            <b>
-              {discount.attributes.amount_type === "percent"
-                ? `${discount.attributes.amount}%`
-                : `${convertCurrency(discount.attributes.amount)}`}
-            </b>
-            discount on all products.
+        <div class="flex w-full flex-col items-center justify-between gap-10 sm:flex-row">
+          <div class="flex flex-col gap-1">
+            <h2 class="text-lg font-bold">
+              {discount.attributes.name} discount!
+            </h2>
+            <div class="text-base-content/60 text-sm">
+              Use <span
+                data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+                class="tooltip badge badge-outline">
+                <button
+                  class="font-mono tracking-widest"
+                  on:click={() => copyText(discount.attributes.code)}>
+                  {discount.attributes.code}
+                </button>
+              </span>
+              code to get
+              <b>
+                {discount.attributes.amount_type === "percent"
+                  ? `${discount.attributes.amount}%`
+                  : `${convertCurrency(discount.attributes.amount)}`}
+              </b>
+              discount on all products.
+            </div>
           </div>
+
+          {#if discount.attributes.expires_at}
+            <Countdown
+              from={new Date(discount.attributes.expires_at).toLocaleString("en-GB", dateFormat)}
+              dateFormat="DD/MM/YYYY, HH:mm:ss"
+              let:remaining>
+              {#if remaining.done === false}
+                <div class="tooltip shrink-0 after:hidden" data-tip="Remaining time">
+                  <date
+                    datetime={new Date(discount.attributes.expires_at).toLocaleString(
+                      "en-GB",
+                      dateFormat
+                    )}
+                    class="grid grid-cols-4 gap-2 text-center font-mono text-xs">
+                    <div class="border-base-content/20 rounded-btn border border-dashed p-2">
+                      <span class="countdown block text-xl">
+                        <span style={`--value:${remaining.days};`}></span>
+                      </span>
+                      <span class="text-base-content/40 text-xs">day</span>
+                    </div>
+                    <div class="border-base-content/20 rounded-btn border border-dashed p-2">
+                      <span class="countdown block text-xl">
+                        <span style={`--value:${remaining.hours};`}></span>
+                      </span>
+                      <span class="text-base-content/40 text-xs">hour</span>
+                    </div>
+                    <div class="border-base-content/20 rounded-btn border border-dashed p-2">
+                      <span class="countdown block text-xl">
+                        <span style={`--value:${remaining.minutes};`}></span>
+                      </span>
+                      <span class="text-base-content/40 text-xs">min</span>
+                    </div>
+                    <div class="border-base-content/20 rounded-btn border border-dashed p-2">
+                      <span class="countdown block text-xl">
+                        <span style={`--value:${remaining.seconds};`}></span>
+                      </span>
+                      <span class="text-base-content/40 text-xs">sec</span>
+                    </div>
+                  </date>
+                </div>
+              {:else}
+                <div class="border-base-content/20 rounded-btn shrink-0 border border-dashed p-2">
+                  Ended
+                </div>
+              {/if}
+            </Countdown>
+          {/if}
         </div>
       </div>
     {/if}
