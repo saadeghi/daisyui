@@ -326,10 +326,6 @@ export const roadmap = [
         done: false,
       },
       {
-        title: "New component: Banner",
-        done: false,
-      },
-      {
         title: "Support the upcoming Tailwind CSS v4",
         done: false,
       },
