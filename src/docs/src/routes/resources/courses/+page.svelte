@@ -1,6 +1,11 @@
 <script>
   export let data
+  import SEO from "$components/SEO.svelte"
 </script>
+
+<SEO
+  title="daisyUI community courses"
+  desc="Free Tailwind CSS courses and best Tailwind CSS tutorials" />
 
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">

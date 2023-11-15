@@ -1,6 +1,13 @@
 <script>
   export let data
+  import SEO from "$components/SEO.svelte"
 </script>
+
+<SEO
+  title={data.videos.find((video) => video.id == data.video.id).snippet.title}
+  desc={`Tailwind CSS video tutorial: ${
+    data.videos.find((video) => video.id == data.video.id).snippet.title
+  }`} />
 
 <div
   class="embed-container rounded-box"

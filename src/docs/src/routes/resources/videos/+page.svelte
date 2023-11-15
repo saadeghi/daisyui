@@ -1,7 +1,12 @@
 <script>
+  import SEO from "$components/SEO.svelte"
   import { slugify } from "$lib/util"
   export let data
 </script>
+
+<SEO
+  title="daisyUI community videos"
+  desc="Best Tailwind CSS video tutorials and Free Tailwind CSS video courses" />
 
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">
