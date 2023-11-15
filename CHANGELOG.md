@@ -6,36 +6,33 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 4.0.6 (2023-11-14)
 
-
 ### Bug Fixes
 
-* [#2504](https://github.com/saadeghi/daisyui/issues/2504) ([f90bc9b](https://github.com/saadeghi/daisyui/commit/f90bc9b6331948755e3be85e5a94868e1e7df4a1))
+- [#2504](https://github.com/saadeghi/daisyui/issues/2504) ([f90bc9b](https://github.com/saadeghi/daisyui/commit/f90bc9b6331948755e3be85e5a94868e1e7df4a1))
 
 ## 4.0.5 (2023-11-14)
 
-
 ### Bug Fixes
 
-* [#2523](https://github.com/saadeghi/daisyui/issues/2523) ([41f35fe](https://github.com/saadeghi/daisyui/commit/41f35fe89e8102c62c2e1bd1b8e0ef35745bef20))
+- [#2523](https://github.com/saadeghi/daisyui/issues/2523) ([41f35fe](https://github.com/saadeghi/daisyui/commit/41f35fe89e8102c62c2e1bd1b8e0ef35745bef20))
 
 ## 4.0.4 (2023-11-14)
 
-
 ### Bug Fixes
 
-* [#2505](https://github.com/saadeghi/daisyui/issues/2505) missing border on select component ([#2514](https://github.com/saadeghi/daisyui/issues/2514)) ([71981e9](https://github.com/saadeghi/daisyui/commit/71981e96329fd9656c46b196e1989d949cb1a216))
+- [#2505](https://github.com/saadeghi/daisyui/issues/2505) missing border on select component ([#2514](https://github.com/saadeghi/daisyui/issues/2514)) ([71981e9](https://github.com/saadeghi/daisyui/commit/71981e96329fd9656c46b196e1989d949cb1a216))
 
 ## 4.0.3 (2023-11-13)
 
 ### Bug Fixes
-* specificity issue on form inputs
+
+- specificity issue on form inputs
 
 ## 4.0.2 (2023-11-13)
 
-
 ### Bug Fixes
 
-* [#2499](https://github.com/saadeghi/daisyui/issues/2499) ([45ea773](https://github.com/saadeghi/daisyui/commit/45ea773a854ef43b8cbd0540b83c8f9dc77938da))
+- [#2499](https://github.com/saadeghi/daisyui/issues/2499) ([45ea773](https://github.com/saadeghi/daisyui/commit/45ea773a854ef43b8cbd0540b83c8f9dc77938da))
 
 ## [4.0.0](https://github.com/saadeghi/daisyui/compare/v3.9.4...v4.0.0) (2023-11-12)
 
@@ -60,7 +57,7 @@ All notable changes to this project will be documented in this file. See [commit
     - `accent-focus`
     - `neutral-focus`
   - You can also make a color darker or lighter using CSS `color-mix()`. For example to make primary (`--p`) color darker by 7%, you can use this class name:  
-    `bg-[color-mix(in_oklab,oklch(var(--p))_7%,black)]`
+    `bg-[color-mix(in_oklab,oklch(var(--p)),black_7%)]`
 - 🎨 Themes
   - there's a change in property names in `daisyui/src/theming/themes.js` file.  
     If you're customizing a built-in daisyUI theme like this:
