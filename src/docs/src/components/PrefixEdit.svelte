@@ -12,6 +12,7 @@
 <div class="tooltip tooltip-right rtl:tooltip-left font-normal" data-tip="Add custom prefix">
   <input
     class="input input-bordered input-xs w-min max-w-[3.8rem]"
+    name="prefix"
     type="text"
     placeholder="prefix–"
     on:input={onPrefixInput}

@@ -225,7 +225,8 @@
       var(--fallback-b2, oklch(var(--b2))) 13px,
       var(--fallback-b2, oklch(var(--b2))) 14px
     );
-    /* background-size: 40px 40px;
+    background-size: 40px 40px;
+    /* 
     background-image: linear-gradient(to right, oklch(var(--bc) / 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(var(--bc) / 0.04) 1px, transparent 1px); */
   }
