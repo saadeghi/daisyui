@@ -70,7 +70,8 @@
     "release:alpha": "commit-and-tag-version --prerelease alpha",
     "release:alpha:patch": "commit-and-tag-version --prerelease alpha --release-as patch",
     "release:alpha:minor": "commit-and-tag-version --prerelease alpha --release-as minor",
-    "release:alpha:major": "commit-and-tag-version --prerelease alpha --release-as major"
+    "release:alpha:major": "commit-and-tag-version --prerelease alpha --release-as major",
+    "publish:alpha": "npm publish --tag=alpha"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
