@@ -6,7 +6,8 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Features
 
-- Convert package to ESM ([aed8cd5](https://github.com/saadeghi/daisyui/commit/aed8cd5e7523569dd56ef035cbda6da86f5d422a))
+- Convert package to ESM ([aed8cd5](https://github.com/saadeghi/daisyui/commit/aed8cd5e7523569dd56ef035cbda6da86f5d422a))  
+  If you're imporing any JS file from daisyUI, make sure you're importing the exported object or funtion correctly.
 
 ## 4.0.9 (2023-11-16)
 
