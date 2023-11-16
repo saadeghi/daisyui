@@ -37,7 +37,7 @@ module.exports = {
     const resultObj = {}
 
     Object.entries(input).forEach(([rule, value]) => {
-      if (colorNames.hasOwnProperty(rule)) {
+      if (Object.hasOwn(colorNames,rule)) {
         const colorObj = toGamutOKLCH(value)
         resultObj[colorNames[rule]] = this.colorObjToString(colorObj)
       } else {
@@ -128,7 +128,7 @@ module.exports = {
       })
 
       // add other custom styles
-      if (!colorNames.hasOwnProperty(rule)) {
+      if (!Object.hasOwn(colorNames,rule)) {
         resultObj[rule] = value
       }
     })
