@@ -1,4 +1,4 @@
-module.exports = {
+export const themes = {
   aqua: {
     "color-scheme": "dark",
     "primary": "#09ecf3",

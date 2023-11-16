@@ -4,7 +4,7 @@
 // regex for all Tailwind CSS color utilities
 // (bg|to|via|from|text|ring|fill|caret|stroke|border|divide|accent|shadow|outline|decoration|placeholder|ring-offset)
 
-module.exports = [
+export const responsiveRegex = [
   {
     pattern: /.*/,
   },

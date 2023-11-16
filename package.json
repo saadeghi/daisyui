@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/saadeghi/daisyui/issues"
   },
+  "type": "module",
   "keywords": [
     "design-system",
     "tailwindcss",
@@ -65,7 +66,8 @@
     "release": "rm -f package-lock.json && commit-and-tag-version",
     "release:patch": "rm -f package-lock.json && commit-and-tag-version --release-as patch",
     "release:minor": "rm -f package-lock.json && commit-and-tag-version --release-as minor",
-    "release:major": "rm -f package-lock.json && commit-and-tag-version --release-as major"
+    "release:major": "rm -f package-lock.json && commit-and-tag-version --release-as major",
+    "publish:alpha": "rm -f package-lock.json && commit-and-tag-version -- --prerelease alpha"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

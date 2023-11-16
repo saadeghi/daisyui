@@ -1,4 +1,4 @@
-const colorNames = require("./colorNames")
+import colorNames from "./colorNames"
 
 const colorObject = {
   "transparent": "transparent",
@@ -34,4 +34,4 @@ const colorObject = {
   "error-content": "var(--fallback-erc,oklch(var(--erc)/<alpha-value>))",
 }
 
-module.exports = colorObject
+export default colorObject

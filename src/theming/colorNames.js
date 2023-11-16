@@ -1,4 +1,4 @@
-module.exports = {
+export const colorNames = {
   "primary": "--p",
   "primary-content": "--pc",
 

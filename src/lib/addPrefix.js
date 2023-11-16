@@ -1,4 +1,4 @@
-const Tokenizer = require("css-selector-tokenizer")
+import { stringify, parse } from "css-selector-tokenizer"
 
 function itMatchesOne(arr, term) {
   return arr.some((i) => term.search(i) >= 0)
@@ -61,7 +61,7 @@ function iterateSelectorNodes(selector, options) {
         return iterateSelectorNodes(node, options)
       }
 
-      if (itMatchesOne(ignore, Tokenizer.stringify(node))) return node
+      if (itMatchesOne(ignore, stringify(node))) return node
 
       return prefixNode(node, prefix)
     }),
@@ -71,7 +71,7 @@ function iterateSelectorNodes(selector, options) {
 /**
  * @type {import('postcss').PluginCreator}
  */
-module.exports = (opts = {}) => {
+export default (opts = {}) => {
   const { prefix, ignore } = {
     prefix: "",
     ignore: [],
@@ -92,13 +92,13 @@ module.exports = (opts = {}) => {
     postcssPlugin: "addprefix",
     Root(root, postcss) {
       root.walkRules((rule) => {
-        const parsed = Tokenizer.parse(rule.selector)
+        const parsed = parse(rule.selector)
         const selector = iterateSelectorNodes(parsed, { prefix, ignore })
 
-        rule.selector = Tokenizer.stringify(selector)
+        rule.selector = stringify(selector)
       })
     },
   }
 }
 
-module.exports.postcss = true
+export const postcss = true
