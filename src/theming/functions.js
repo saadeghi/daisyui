@@ -3,6 +3,9 @@ const themeDefaults = require("./themeDefaults")
 
 const { toGamut, interpolate, wcagContrast } = require("culori")
 
+const cutNumber = (number) => (number ? +number.toFixed(6) : 0);
+const toGamutOKLCH = toGamut("oklch");
+
 module.exports = {
   isDark: (color) => {
     if (wcagContrast(color, "black") < wcagContrast(color, "white")) {
@@ -12,14 +15,8 @@ module.exports = {
   },
 
   colorObjToString: function (input) {
-    const cut = (number) => {
-      if (!number) {
-        return 0
-      }
-      return +number.toFixed(6)
-    }
     const { l, c, h } = input
-    return `${cut(l)} ${cut(c)} ${cut(h)}`
+    return `${cutNumber(l)} ${cutNumber(c)} ${cutNumber(h)}`
   },
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
@@ -41,7 +38,7 @@ module.exports = {
 
     Object.entries(input).forEach(([rule, value]) => {
       if (colorNames.hasOwnProperty(rule)) {
-        const colorObj = toGamut("oklch")(value)
+        const colorObj = toGamutOKLCH(value)
         resultObj[colorNames[rule]] = this.colorObjToString(colorObj)
       } else {
         resultObj[rule] = value
