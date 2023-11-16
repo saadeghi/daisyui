@@ -1,4 +1,4 @@
-module.exports = {
+export const utilityClasses = {
   borderRadius: {
     badge: "var(--rounded-badge, 1.9rem)",
     btn: "var(--rounded-btn, 0.5rem)",

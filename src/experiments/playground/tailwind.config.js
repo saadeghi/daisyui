@@ -10,11 +10,11 @@ module.exports = {
     // logs: true,
     // prefix: "b-",
     // darkTheme: "dark",
-    themeRoot: "*",
+    // themeRoot: "*",
   },
 
   plugins: [
-    require("@tailwindcss/forms"),
+    // require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
     require("../../"),
     // require('daisyui'),

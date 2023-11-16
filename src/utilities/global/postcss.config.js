@@ -1,3 +1,3 @@
-module.exports = {
-  plugins: [require("postcss-import"), require("tailwindcss/nesting")],
+const config = {
+  plugins: ["postcss-import", "tailwindcss/nesting"],
 }

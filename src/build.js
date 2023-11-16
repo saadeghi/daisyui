@@ -1,4 +1,4 @@
-const { execSync } = require("child_process")
+import { execSync } from "child_process"
 
 execSync("node_modules/.bin/postcss --config src/base src/base/*.css --base src --dir dist")
 execSync("cat dist/base/*.css > dist/base.css")

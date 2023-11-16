@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test"
 import * as colorFunctions from "../theming/functions"
-import * as themes from "../theming/themes"
-import * as colorNames from "../theming/colorNames"
+import themes from "../theming/themes"
+import colorNames from "../theming/colorNames"
 import { trimThemeName } from "./utils"
 
 for (let themeKey in themes) {
