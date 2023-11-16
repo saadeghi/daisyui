@@ -37,12 +37,11 @@
   "types": "src/index.d.ts",
   "files": [
     "src/lib/**/*.js",
-    "dist/*.js",
+    "dist/*.cjs",
     "dist/{themes,styled,unstyled,full}.css",
     "src/index.js",
     "src/theming/*.js",
-    "src/theming/*.d.ts",
-    "src/index.d.ts"
+    "src/**/*.d.ts"
   ],
   "engines": {
     "node": ">=16.9.0"
