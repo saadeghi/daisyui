@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 4.1.0 (2023-11-16)
 
-
 ### Features
 
-* Convert package to ESM ([0bd1967](https://github.com/saadeghi/daisyui/commit/0bd1967a36215ff13eb409e47dc4c25b8d06a0b3))
+- Convert package to ESM ([aed8cd5](https://github.com/saadeghi/daisyui/commit/aed8cd5e7523569dd56ef035cbda6da86f5d422a))
 
 ## 4.0.9 (2023-11-16)
 
