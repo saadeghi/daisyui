@@ -4,7 +4,6 @@ import { variables, themesOrder } from "./themeDefaults"
 import { toGamut, interpolate, wcagContrast } from "culori"
 
 const cutNumber = (number) => (number ? +number.toFixed(6) : 0)
-const toGamutOKLCH = toGamut("oklch")
 
 export function isDark(color) {
   if (wcagContrast(color, "black") < wcagContrast(color, "white")) {
@@ -33,7 +32,7 @@ export function convertColorFormat(input) {
 
   Object.entries(input).forEach(([rule, value]) => {
     if (colorNames.hasOwnProperty(rule)) {
-      const colorObj = toGamutOKLCH(value)
+      const colorObj = toGamut("oklch")(value)
       resultObj[colorNames[rule]] = colorObjToString(colorObj)
     } else {
       resultObj[rule] = value
