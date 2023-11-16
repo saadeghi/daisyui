@@ -33,7 +33,7 @@
     "ui"
   ],
   "main": "src/index.js",
-  "typings": "src/index.d.ts",
+  "module": "src/index.js",
   "types": "src/index.d.ts",
   "files": [
     "src/lib/**/*.js",
@@ -63,14 +63,7 @@
     "build:skipfullcss": "node src/build --skipfullcss",
     "dev": "cd src/docs && npm run dev",
     "playground": "cd src/experiments/playground && npm run dev",
-    "release": "commit-and-tag-version",
-    "release:patch": "commit-and-tag-version --release-as patch",
-    "release:minor": "commit-and-tag-version --release-as minor",
-    "release:major": "commit-and-tag-version --release-as major",
-    "release:alpha": "commit-and-tag-version --prerelease alpha",
-    "release:alpha:patch": "commit-and-tag-version --prerelease alpha --release-as patch",
-    "release:alpha:minor": "commit-and-tag-version --prerelease alpha --release-as minor",
-    "release:alpha:major": "commit-and-tag-version --prerelease alpha --release-as major",
+    "release": "node src/release",
     "publish:alpha": "npm publish --tag=alpha"
   },
   "devDependencies": {
