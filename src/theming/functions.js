@@ -1,10 +1,10 @@
 const colorNames = require("./colorNames")
 const themeDefaults = require("./themeDefaults")
 
-const { toGamut, interpolate, wcagContrast } = require("culori")
+const { toGamut, interpolate, wcagContrast } = require("culori/require")
 
-const cutNumber = (number) => (number ? +number.toFixed(6) : 0);
-const toGamutOKLCH = toGamut("oklch");
+const cutNumber = (number) => (number ? +number.toFixed(6) : 0)
+const toGamutOKLCH = toGamut("oklch")
 
 module.exports = {
   isDark: (color) => {
@@ -37,7 +37,7 @@ module.exports = {
     const resultObj = {}
 
     Object.entries(input).forEach(([rule, value]) => {
-      if (Object.hasOwn(colorNames,rule)) {
+      if (Object.hasOwn(colorNames, rule)) {
         const colorObj = toGamutOKLCH(value)
         resultObj[colorNames[rule]] = this.colorObjToString(colorObj)
       } else {
@@ -128,7 +128,7 @@ module.exports = {
       })
 
       // add other custom styles
-      if (!Object.hasOwn(colorNames,rule)) {
+      if (!Object.hasOwn(colorNames, rule)) {
         resultObj[rule] = value
       }
     })
