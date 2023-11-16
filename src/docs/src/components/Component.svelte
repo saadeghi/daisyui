@@ -94,7 +94,7 @@
       <div class="bg-base-300 rounded-b-box rounded-se-box relative overflow-x-auto">
         <div
           class="preview border-base-300 bg-base-100 rounded-b-box rounded-se-box flex min-h-[6rem] min-w-[18rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 [border-width:var(--tab-border)] {classes}"
-          style={bg ? `background-image: url(${bg})` : ``}
+          style={bg ? `background-image: url(${bg});background-size:cover;` : ``}
           class:resize-x={responsive}>
           <slot />
         </div>
