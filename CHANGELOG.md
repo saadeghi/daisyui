@@ -4,30 +4,23 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [4.3.0](https://github.com/saadeghi/daisyui/compare/v4.3.0-alpha.11...v4.3.0) (2023-11-16)
 
-## [4.2.3](https://github.com/saadeghi/daisyui/compare/v4.2.2...v4.2.3) (2023-11-16)
-
-## 4.2.2 (2023-11-16)
-
-## 4.2.1 (2023-11-16)
-
+- fix Commonjs require issues
 
 ### Bug Fixes
 
-* [#2543](https://github.com/saadeghi/daisyui/issues/2543) ([6a9b9ac](https://github.com/saadeghi/daisyui/commit/6a9b9ac3cd2ddce07481d294929d807461a1e68e))
+- [#2543](https://github.com/saadeghi/daisyui/issues/2543) ([6a9b9ac](https://github.com/saadeghi/daisyui/commit/6a9b9ac3cd2ddce07481d294929d807461a1e68e))
 
 ## 4.2.0 (2023-11-16)
 
-
 ### Features
 
-* rename CDN .js files to .cjs ([d0e6aec](https://github.com/saadeghi/daisyui/commit/d0e6aec10dc576f4171bcb1050aae74640255d42))
+- rename CDN .js files to .cjs ([d0e6aec](https://github.com/saadeghi/daisyui/commit/d0e6aec10dc576f4171bcb1050aae74640255d42))
 
 ## 4.1.1 (2023-11-16)
 
-
 ### Bug Fixes
 
-* missing utility classes in CDN ([c31f445](https://github.com/saadeghi/daisyui/commit/c31f44569d9c3f58ce69525b995058d9a5d6d4d4))
+- missing utility classes in CDN ([c31f445](https://github.com/saadeghi/daisyui/commit/c31f44569d9c3f58ce69525b995058d9a5d6d4d4))
 
 ## 4.1.0 (2023-11-16)
 
