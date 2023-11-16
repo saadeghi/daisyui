@@ -14,8 +14,8 @@ on:
         type: choice
         description: Release type
         options:
-          - ":patch"
-          - ":minor"
+          - " -- --patch"
+          - " -- --minor"
   push:
     branches:
       - master

@@ -62,10 +62,9 @@
     "build:skipfullcss": "node src/build --skipfullcss",
     "dev": "cd src/docs && npm run dev",
     "playground": "cd src/experiments/playground && npm run dev",
-    "release": "rm -f package-lock.json && commit-and-tag-version",
-    "release:patch": "rm -f package-lock.json && commit-and-tag-version --release-as patch",
-    "release:minor": "rm -f package-lock.json && commit-and-tag-version --release-as minor",
-    "release:major": "rm -f package-lock.json && commit-and-tag-version --release-as major"
+    "release": "node src/release",
+    "publish:alpha": "npm publish --tag=alpha",
+    "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
@@ -73,9 +72,9 @@
     "postcss-cli": "10.1.0",
     "postcss-import": "15.1.0",
     "prejss-cli": "0.3.3",
-    "prettier": "^3.0.3",
-    "prettier-plugin-svelte": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6",
+    "prettier": "^3.1.0",
+    "prettier-plugin-svelte": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {

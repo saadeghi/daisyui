@@ -36,7 +36,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="stroke-info-content h-4 w-4 flex-shrink-0">
+                class="stroke-info-content h-4 w-4 shrink-0">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"

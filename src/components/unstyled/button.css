@@ -1,5 +1,5 @@
 .btn {
-  @apply rounded-btn inline-flex h-12 min-h-[3rem] flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent px-4 text-center;
+  @apply rounded-btn inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-transparent px-4 text-center;
   font-size: 0.875rem;
   line-height: 1em;
   /* disabled */

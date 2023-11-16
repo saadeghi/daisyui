@@ -2,21 +2,49 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## 4.0.9 (2023-11-16)
+## [4.2.3](https://github.com/saadeghi/daisyui/compare/v4.2.2...v4.2.3) (2023-11-16)
+
+## 4.2.2 (2023-11-16)
+
+## 4.2.1 (2023-11-16)
 
 
 ### Bug Fixes
 
-* divider default color not being visible on dark themes ([fffd021](https://github.com/saadeghi/daisyui/commit/fffd02162d4d5fd80895ad1256a59bccd07f71aa))
+* [#2543](https://github.com/saadeghi/daisyui/issues/2543) ([6a9b9ac](https://github.com/saadeghi/daisyui/commit/6a9b9ac3cd2ddce07481d294929d807461a1e68e))
+
+## 4.2.0 (2023-11-16)
+
+
+### Features
+
+* rename CDN .js files to .cjs ([d0e6aec](https://github.com/saadeghi/daisyui/commit/d0e6aec10dc576f4171bcb1050aae74640255d42))
+
+## 4.1.1 (2023-11-16)
+
+
+### Bug Fixes
+
+* missing utility classes in CDN ([c31f445](https://github.com/saadeghi/daisyui/commit/c31f44569d9c3f58ce69525b995058d9a5d6d4d4))
+
+## 4.1.0 (2023-11-16)
+
+### Features
+
+- Convert package to ESM ([aed8cd5](https://github.com/saadeghi/daisyui/commit/aed8cd5e7523569dd56ef035cbda6da86f5d422a))  
+  If you're imporing any JS file from daisyUI, make sure you're importing the exported object or funtion correctly.
+
+## 4.0.9 (2023-11-16)
+
+### Bug Fixes
+
+- divider default color not being visible on dark themes ([fffd021](https://github.com/saadeghi/daisyui/commit/fffd02162d4d5fd80895ad1256a59bccd07f71aa))
 
 ## 4.0.8 (2023-11-16)
 
-
 ### Bug Fixes
 
-* footer text opacity ([f4be765](https://github.com/saadeghi/daisyui/commit/f4be7652472e478a2a336e0321b4c21b63872d52))
-
-## 4.0.7 (2023-11-14)
+- footer text opacity ([f4be765](https://github.com/saadeghi/daisyui/commit/f4be7652472e478a2a336e0321b4c21b63872d52))
 
 ## 4.0.6 (2023-11-14)
 

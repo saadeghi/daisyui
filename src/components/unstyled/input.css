@@ -1,4 +1,4 @@
 .input {
-  @apply flex-shrink;
+  @apply shrink;
   @apply h-12 px-4 text-sm leading-loose;
 }
