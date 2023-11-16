@@ -9,7 +9,7 @@
   justify-content: flex-start;
 }
 .navbar-center {
-  flex-shrink: 0;
+  @apply shrink-0;
 }
 .navbar-end {
   width: 50%;

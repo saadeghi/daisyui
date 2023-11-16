@@ -1,5 +1,3 @@
-import colorNames from "./colorNames"
-
 const colorObject = {
   "transparent": "transparent",
   "current": "currentColor",

@@ -46,7 +46,7 @@ module.exports = {
     process.env.NODE_ENV === "production" ? require("daisyui") : [],
   ],
   presets: [
-    process.env.NODE_ENV === "production" ? [] : require("../components/tailwind.config.js"),
+    process.env.NODE_ENV === "production" ? [] : require("../components/tailwind.config.cjs"),
     "node_modules/tailwindcss/stubs/defaultConfig.stub.js",
   ],
 }

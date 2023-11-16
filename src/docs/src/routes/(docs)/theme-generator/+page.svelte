@@ -338,7 +338,7 @@
   </p>
 </div>
 <div class="flex flex-col gap-4 xl:flex-row">
-  <div class="flex-shrink-0 xl:min-w-[29rem]">
+  <div class="shrink-0 xl:min-w-[29rem]">
     <div class="sticky top-[5.5rem]">
       <h2 class="px-2 pb-4 text-xl font-bold">tailwind.config.js</h2>
       {#if browser}
@@ -597,7 +597,7 @@
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="stroke-info h-6 w-6 flex-shrink-0">
+              class="stroke-info h-6 w-6 shrink-0">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -611,7 +611,7 @@
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              class="h-6 w-6 flex-shrink-0 stroke-current">
+              class="h-6 w-6 shrink-0 stroke-current">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -623,7 +623,7 @@
           <div class="alert alert-success">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 flex-shrink-0 stroke-current"
+              class="h-6 w-6 shrink-0 stroke-current"
               fill="none"
               viewBox="0 0 24 24">
               <path
@@ -637,7 +637,7 @@
           <div class="alert alert-warning">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 flex-shrink-0 stroke-current"
+              class="h-6 w-6 shrink-0 stroke-current"
               fill="none"
               viewBox="0 0 24 24">
               <path
@@ -651,7 +651,7 @@
           <div class="alert alert-error">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 flex-shrink-0 stroke-current"
+              class="h-6 w-6 shrink-0 stroke-current"
               fill="none"
               viewBox="0 0 24 24">
               <path

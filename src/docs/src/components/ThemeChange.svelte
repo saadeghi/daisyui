@@ -63,7 +63,7 @@
                 <span class="flex-grow text-sm">
                   {theme}
                 </span>
-                <span class="flex h-full flex-shrink-0 flex-wrap gap-1">
+                <span class="flex h-full shrink-0 flex-wrap gap-1">
                   <span class="bg-primary w-2 rounded" />
                   <span class="bg-secondary w-2 rounded" />
                   <span class="bg-accent w-2 rounded" />
