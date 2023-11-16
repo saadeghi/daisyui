@@ -6,7 +6,10 @@
   let { tags } = data
 </script>
 
-<div class="flex flex-col-reverse justify-between gap-6 xl:flex-row" dir="ltr">
+<div
+  class="flex flex-col-reverse justify-between gap-6 xl:flex-row"
+  dir="ltr"
+  data-sveltekit-preload-data>
   <div class="w-full px-4 md:px-20" dir="ltr">
     <nav class="tabs tabs-lifted tabs-lg my-14 flex-nowrap whitespace-nowrap">
       <a

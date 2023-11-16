@@ -180,14 +180,14 @@
             <div
               class="inline-flex w-full flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0">
               <a
-                data-sveltekit-preload-data="hover"
+                data-sveltekit-preload-data
                 href="/components/"
                 class="btn md:btn-lg md:btn-wide group px-12">
                 <span class="hidden sm:inline">{$t("cta-1")}</span>
                 <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
               </a>
               <a
-                data-sveltekit-preload-data="hover"
+                data-sveltekit-preload-data
                 href="/docs/install/"
                 class="btn btn-neutral md:btn-lg md:btn-wide group px-12">
                 {$t("cta-2")}
@@ -789,7 +789,7 @@
     </p>
     <div class="h-12" />
     <div class="flex w-full justify-center">
-      <a data-sveltekit-preload-data="hover" href="/components/" class="btn btn-primary btn-wide">
+      <a data-sveltekit-preload-data href="/components/" class="btn btn-primary btn-wide">
         {$t("all-components-btn")}
       </a>
     </div>
@@ -1058,10 +1058,7 @@
         </p>
         <div class="h-10" />
         <div class="flex w-full justify-center xl:justify-start">
-          <a
-            data-sveltekit-preload-data="hover"
-            href="/docs/install/"
-            class="btn btn-lg btn-wide group">
+          <a data-sveltekit-preload-data href="/docs/install/" class="btn btn-lg btn-wide group">
             {$t("Get started")}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1211,10 +1208,7 @@
       </p>
       <div class="h-10" />
       <div class="flex w-full justify-center">
-        <a
-          data-sveltekit-preload-data="hover"
-          href="/docs/customize"
-          class="btn btn-lg btn-wide group">
+        <a data-sveltekit-preload-data href="/docs/customize" class="btn btn-lg btn-wide group">
           {$t("how-to-customize")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1278,10 +1272,7 @@
       </p>
       <div class="h-10" />
       <div class="flex w-full justify-center xl:justify-start">
-        <a
-          data-sveltekit-preload-data="hover"
-          href="/docs/install/"
-          class="btn btn-lg btn-wide group">
+        <a data-sveltekit-preload-data href="/docs/install/" class="btn btn-lg btn-wide group">
           {$t("cta-2")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1425,10 +1416,10 @@
       </p>
       <div class="h-10" />
       <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-        <a data-sveltekit-preload-data="hover" href="/theme-generator/" class="btn">
+        <a data-sveltekit-preload-data href="/theme-generator/" class="btn">
           {$t("Theme Generator")}
         </a>
-        <a data-sveltekit-preload-data="hover" href="/docs/themes/#-4" class="btn btn-neutral">
+        <a data-sveltekit-preload-data href="/docs/themes/#-4" class="btn btn-neutral">
           {$t("Learn more about themes")}
         </a>
       </div>
@@ -1492,7 +1483,7 @@
       <div class="h-10" />
       <div class="flex w-full justify-center">
         <a
-          data-sveltekit-preload-data="hover"
+          data-sveltekit-preload-data
           href="/components/"
           class="btn btn-primary md:btn-wide w-full">
           {$t("all-components-btn")}
@@ -1769,10 +1760,7 @@
       </div>
       <div class="h-16" />
       <div class="flex w-full justify-center">
-        <a
-          data-sveltekit-preload-data="hover"
-          href="/docs/install/"
-          class="btn btn-primary btn-wide">
+        <a data-sveltekit-preload-data href="/docs/install/" class="btn btn-primary btn-wide">
           {$t("See all examples")}
         </a>
       </div>

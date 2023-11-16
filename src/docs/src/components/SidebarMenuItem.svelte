@@ -102,7 +102,6 @@
         {href}
         target={target === "blank" ? "_blank" : undefined}
         rel={target === "blank" ? "noopener noreferrer" : undefined}
-        data-sveltekit-preload-data="hover"
         on:click={closeDrawer}
         class={`group ${$page.url.pathname == href ? "active" : ""} ${
           $page.url.pathname == highlightAnotherItem + "/" ? "active" : ""

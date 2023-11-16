@@ -7,7 +7,7 @@
 
 <div class="h-20" />
 
-<div>
+<div data-sveltekit-preload-data>
   <div class="bg-base-100 text-base-content">
     <footer class="footer mx-auto max-w-6xl px-4 py-20">
       <div>

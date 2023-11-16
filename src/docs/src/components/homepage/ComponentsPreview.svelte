@@ -446,7 +446,7 @@
     <div>
       <a
         class="btn btn-wide btn-primary"
-        data-sveltekit-preload-data="hover"
+        data-sveltekit-preload-data
         href="/docs/themes/"
         tabindex={index == 0 ? 0 : -1}>
         {$t("See all themes")}
@@ -608,7 +608,7 @@
     <div class="mt-6">
       <a
         class="btn btn-block"
-        data-sveltekit-preload-data="hover"
+        data-sveltekit-preload-data
         href="/docs/colors/"
         tabindex={index == 0 ? 0 : -1}>
         {$t("Learn more about colors")}

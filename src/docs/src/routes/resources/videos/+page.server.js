@@ -39,6 +39,6 @@ videos.forEach((video) => {
 
 export async function load() {
   return {
-    videos: videos,
+    videos,
   }
 }

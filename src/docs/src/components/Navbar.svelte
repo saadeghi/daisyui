@@ -62,6 +62,7 @@
 
       <div class={`flex items-center gap-2 ${hideLogoOnLargeScreen ? "lg:hidden" : ""}`}>
         <a
+          data-sveltekit-preload-data
           href="/"
           aria-current="page"
           aria-label="Homepage"
@@ -102,7 +103,7 @@
       {#if showComponentsBtn}
         <div class={`hidden flex-none items-center lg:block`}>
           <a
-            data-sveltekit-preload-data="hover"
+            data-sveltekit-preload-data
             href="/components/"
             class="btn btn-ghost drawer-button font-normal">
             <!-- <svg
