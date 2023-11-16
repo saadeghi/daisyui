@@ -12,8 +12,7 @@ export function isDark(color) {
   }
   return false
 }
-export function colorObjToString(input) {
-  const { l, c, h } = input
+export function colorObjToString({ l, c, h }) {
   return `${cutNumber(l)} ${cutNumber(c)} ${cutNumber(h)}`
 }
 export function generateForegroundColorFrom(input, percentage = 0.8) {
@@ -32,7 +31,7 @@ export function convertColorFormat(input) {
   const resultObj = {}
 
   Object.entries(input).forEach(([rule, value]) => {
-    if (colorNames.hasOwnProperty(rule)) {
+    if (Object.hasOwn(colorNames, rule)) {
       const colorObj = toGamutOKLCH(value)
       resultObj[colorNames[rule]] = colorObjToString(colorObj)
     } else {
@@ -114,15 +113,14 @@ export function convertColorFormat(input) {
     }
 
     // add css variables if not exist
-    Object.entries(variables).forEach((item) => {
-      const [variable, value] = item
+    Object.entries(variables).forEach(([variable, value]) => {
       if (!Object.hasOwn(input, variable)) {
         resultObj[variable] = value
       }
     })
 
     // add other custom styles
-    if (!colorNames.hasOwnProperty(rule)) {
+    if (!Object.hasOwn(colorNames, rule)) {
       resultObj[rule] = value
     }
   })
