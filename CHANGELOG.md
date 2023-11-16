@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.2.0 (2023-11-16)
+
+
+### Features
+
+* rename CDN .js files to .cjs ([d0e6aec](https://github.com/saadeghi/daisyui/commit/d0e6aec10dc576f4171bcb1050aae74640255d42))
+
 ## 4.1.1 (2023-11-16)
 
 
