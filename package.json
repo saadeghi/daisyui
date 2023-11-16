@@ -1,11 +1,11 @@
 {
   "name": "daisyui",
-  "version": "4.3.0-alpha.6",
+  "version": "4.3.0-alpha.5",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
-  "type": "module",
   "homepage": "https://daisyui.com",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saadeghi/daisyui.git"
@@ -16,10 +16,6 @@
   },
   "bugs": {
     "url": "https://github.com/saadeghi/daisyui/issues"
-  },
-  "exports": {
-    ".": "./src/index.js",
-    "./themes": "./src/theming/themes.js"
   },
   "keywords": [
     "design-system",
@@ -36,6 +32,7 @@
     "css",
     "ui"
   ],
+  "main": "src/index.js",
   "module": "src/index.js",
   "types": "src/index.d.ts",
   "files": [
