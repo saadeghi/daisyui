@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.0.8 (2023-11-16)
+
+
+### Bug Fixes
+
+* footer text opacity ([f4be765](https://github.com/saadeghi/daisyui/commit/f4be7652472e478a2a336e0321b4c21b63872d52))
+
 ## 4.0.7 (2023-11-14)
 
 ## 4.0.6 (2023-11-14)
