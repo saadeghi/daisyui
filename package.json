@@ -17,6 +17,9 @@
     "url": "https://github.com/saadeghi/daisyui/issues"
   },
   "type": "module",
+  "exports": {
+    "./themes": "./src/theming/themes.js"
+  },
   "keywords": [
     "design-system",
     "tailwindcss",
