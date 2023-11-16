@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "4.3.0-alpha.4",
+  "version": "4.3.0-alpha.5",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -18,6 +18,7 @@
   },
   "type": "module",
   "exports": {
+    ".": "./src/index.js",
     "./themes": "./src/theming/themes.js"
   },
   "keywords": [
