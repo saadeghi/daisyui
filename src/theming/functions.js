@@ -17,8 +17,8 @@ export function isDark(color) {
   return false
 }
 export function colorObjToString(input) {
-  const { colorLightness, colorChroma, colorHue } = input
-  return `${cutNumber(colorLightness)} ${cutNumber(colorChroma)} ${cutNumber(colorHue)}`
+  const { l, c, h } = input
+  return `${cutNumber(l)} ${cutNumber(c)} ${cutNumber(h)}`
 }
 export function generateForegroundColorFrom(input, percentage = 0.8) {
   const result = interpolate([input, isDark(input) ? "white" : "black"], "oklch")(percentage)
