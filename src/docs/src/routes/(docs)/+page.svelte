@@ -154,7 +154,7 @@
             <br />
             <span class="inline-grid">
               <span
-                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text blur-2xl [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text blur-2xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
                 aria-hidden="true">
                 {@html $t("component library")}
               </span>
@@ -299,6 +299,7 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}>
         <div class="grid">
           <div
+            style={`opacity:${animateValue(section["hero"], [15, 17], [1, 0])}`}
             class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
             class:invisible={section["hero"] && scrollY < section["hero"].clientHeight}>
             <!-- flying components -->
@@ -765,7 +766,7 @@
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
         style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}>
         {$t("to the next level")}
       </span>
@@ -1457,7 +1458,7 @@
         <span class="inline-grid">
           {#if Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0}
             <span
-              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text opacity-70 blur-3xl [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] [:root[dir=rtl]_&]:leading-[1.35] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [:root[dir=rtl]_&]:leading-[1.35] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
               aria-hidden="true">
               {$t("endless possibilities")}
             </span>
@@ -1516,10 +1517,15 @@
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [20, 30], [0, 1])}`}>
         <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup
-            initial={data.stargazers_count * 0.8}
-            value={data.stargazers_count}
-            duration={2000} />
+          <span class="motion-reduce:hidden">
+            <Countup
+              initial={data.stargazers_count * 0.8}
+              value={data.stargazers_count}
+              duration={2000} />
+          </span>
+          <span class="hidden motion-reduce:inline">
+            {data.stargazers_count.toLocaleString("en-US")}
+          </span>
         </div>
         <a
           href="https://github.com/saadeghi/daisyui"
@@ -1537,10 +1543,15 @@
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [30, 40], [0, 1])}`}>
         <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup
-            initial={data.gh_dependents.repositories * 0.8}
-            value={data.gh_dependents.repositories}
-            duration={2200} />
+          <span class="motion-reduce:hidden">
+            <Countup
+              initial={data.gh_dependents.repositories * 0.8}
+              value={data.gh_dependents.repositories}
+              duration={2200} />
+          </span>
+          <span class="hidden motion-reduce:inline">
+            {data.gh_dependents.repositories.toLocaleString("en-US")}
+          </span>
         </div>
         <a
           href="https://github.com/saadeghi/daisyui/network/dependents"
@@ -1558,7 +1569,12 @@
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [40, 50], [0, 1])}`}>
         <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
-          <Countup initial={data.npmInstalls * 0.8} value={data.npmInstalls} duration={2400} />
+          <span class="motion-reduce:hidden">
+            <Countup initial={data.npmInstalls * 0.8} value={data.npmInstalls} duration={2400} />
+          </span>
+          <span class="hidden motion-reduce:inline">
+            {data.npmInstalls.toLocaleString("en-US")}
+          </span>
         </div>
         <a
           href="https://www.npmjs.com/package/daisyui"

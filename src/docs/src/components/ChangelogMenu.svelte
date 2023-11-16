@@ -3,7 +3,7 @@
   let version = readEnv("VITE_DAISYUI_VERSION", "latest")
 </script>
 
-<div class="dropdown">
+<div class="dropdown" data-sveltekit-preload-data>
   <div tabindex="0" class="link link-hover inline-block font-mono text-xs">
     {version}
   </div>
