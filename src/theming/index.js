@@ -1,5 +1,3 @@
-const colorNames = require("./colorNames")
-
 const colorObject = {
   "transparent": "transparent",
   "current": "currentColor",
