@@ -2,7 +2,7 @@
   @apply my-4 h-4 whitespace-nowrap;
   &:before,
   &:after {
-    @apply bg-base-300;
+    @apply bg-base-content/10;
   }
   &:not(:empty) {
     @apply gap-4;
