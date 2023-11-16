@@ -63,11 +63,14 @@
     "build:skipfullcss": "node src/build --skipfullcss",
     "dev": "cd src/docs && npm run dev",
     "playground": "cd src/experiments/playground && npm run dev",
-    "release": "rm -f package-lock.json && commit-and-tag-version",
-    "release:patch": "rm -f package-lock.json && commit-and-tag-version --release-as patch",
-    "release:minor": "rm -f package-lock.json && commit-and-tag-version --release-as minor",
-    "release:major": "rm -f package-lock.json && commit-and-tag-version --release-as major",
-    "publish:alpha": "rm -f package-lock.json && commit-and-tag-version -- --prerelease alpha"
+    "release": "commit-and-tag-version",
+    "release:patch": "commit-and-tag-version --release-as patch",
+    "release:minor": "commit-and-tag-version --release-as minor",
+    "release:major": "commit-and-tag-version --release-as major",
+    "release:alpha": "commit-and-tag-version --prerelease alpha",
+    "release:alpha:patch": "commit-and-tag-version --prerelease alpha --release-as patch",
+    "release:alpha:minor": "commit-and-tag-version --prerelease alpha --release-as minor",
+    "release:alpha:major": "commit-and-tag-version --prerelease alpha --release-as major"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
