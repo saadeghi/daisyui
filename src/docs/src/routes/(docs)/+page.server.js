@@ -35,7 +35,7 @@ export async function load() {
 
   return {
     gh_dependents: {
-      repositories: parseInt(githubDeps.repositories.replace(/\,/g, "")),
+      repositories: parseInt(githubDeps.repositories?.replace(/\,/g, "")),
       packages: parseInt(githubDeps.packages.replace(/\,/g, "")),
     },
     stargazers_count,

@@ -132,7 +132,7 @@
               </button>
             </div>
             <div class="flex gap-2 font-mono text-xs">
-              <a class="text-base-content/60 italic" href="/docs/changelog/">
+              <a class="text-base-content/70 italic" href="/docs/changelog/">
                 {@html $t("daisyUI 4.0 is here!")}
               </a>
               🎉
@@ -170,7 +170,7 @@
             </span>
           </h1>
           <div class="h-4" />
-          <p class="text-base-content/60 font-title py-4 font-light md:text-lg xl:text-2xl">
+          <p class="text-base-content/70 font-title py-4 font-light md:text-lg xl:text-2xl">
             {@html $t(
               "daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>"
             )}
@@ -224,7 +224,7 @@
                 class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
             </h2>
 
-            <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
+            <p class="text-base-content/70 font-title py-4 font-light md:text-2xl">
               {@html $t(
                 "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements."
               )}
@@ -238,7 +238,7 @@
                   )}
                 </h2>
                 <div class="h-6" />
-                <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
+                <p class="text-base-content/70 font-title py-4 font-light md:text-2xl">
                   {@html $t("For every element, every page, every project,<br/>again and again")}…
                 </p>
                 <div class="h-24" />
@@ -260,7 +260,7 @@
                     class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
                 </h2>
                 <div class="h-6" />
-                <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
+                <p class="text-base-content/70 font-title py-4 font-light md:text-2xl">
                   {@html $t("It's descriptive, faster, cleaner and easier to maintain.")}
                 </p>
                 <div class="h-20" />
@@ -615,7 +615,7 @@
                           type="checkbox"
                           class="checkbox checkbox-xs"
                           tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">checkbox-xs</span>
+                        <span class="text-base-content/70 text-[.6rem]">checkbox-xs</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input
@@ -623,7 +623,7 @@
                           type="checkbox"
                           class="checkbox checkbox-sm"
                           tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">checkbox-sm</span>
+                        <span class="text-base-content/70 text-[.6rem]">checkbox-sm</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input
@@ -631,7 +631,7 @@
                           type="checkbox"
                           class="checkbox checkbox-md"
                           tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">checkbox-md</span>
+                        <span class="text-base-content/70 text-[.6rem]">checkbox-md</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input
@@ -639,25 +639,25 @@
                           type="checkbox"
                           class="checkbox checkbox-lg"
                           tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">checkbox-lg</span>
+                        <span class="text-base-content/70 text-[.6rem]">checkbox-lg</span>
                       </label>
                     </div>
                     <div class="grid grid-cols-4 items-end gap-4">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-xs" tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">radio-xs</span>
+                        <span class="text-base-content/70 text-[.6rem]">radio-xs</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-sm" tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">radio-sm</span>
+                        <span class="text-base-content/70 text-[.6rem]">radio-sm</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-md" tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">radio-md</span>
+                        <span class="text-base-content/70 text-[.6rem]">radio-md</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-lg" tabindex="-1" />
-                        <span class="text-base-content/60 text-[.6rem]">radio-lg</span>
+                        <span class="text-base-content/70 text-[.6rem]">radio-lg</span>
                       </label>
                     </div>
                   </div>
@@ -690,35 +690,35 @@
                     <div class="grid grid-cols-4 gap-4">
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-primary rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">primary</div>
+                        <div class="text-base-content/70 text-[.6rem]">primary</div>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-secondary rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">secondary</div>
+                        <div class="text-base-content/70 text-[.6rem]">secondary</div>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-accent rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">accent</div>
+                        <div class="text-base-content/70 text-[.6rem]">accent</div>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-neutral rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">neutral</div>
+                        <div class="text-base-content/70 text-[.6rem]">neutral</div>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-info rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">info</div>
+                        <div class="text-base-content/70 text-[.6rem]">info</div>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-success rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">success</div>
+                        <div class="text-base-content/70 text-[.6rem]">success</div>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-warning rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">warning</div>
+                        <div class="text-base-content/70 text-[.6rem]">warning</div>
                       </div>
                       <div class="flex flex-col items-center gap-1">
                         <div class="bg-error rounded-btn aspect-square w-10" />
-                        <div class="text-base-content/60 text-[.6rem]">error</div>
+                        <div class="text-base-content/70 text-[.6rem]">error</div>
                       </div>
                     </div>
                   </div>
@@ -771,7 +771,7 @@
         {$t("to the next level")}
       </span>
     </h2>
-    <p class="text-base-content/60 font-title py-4 font-light md:text-2xl">
+    <p class="text-base-content/70 font-title py-4 font-light md:text-2xl">
       {@html $t(
         "daisyUI adds class names to Tailwind CSS<br />for all common UI components.<br />Class names like"
       )}
@@ -841,7 +841,7 @@
               {$t("No_more_ugly_HTML_part_4")}
             </span>
           </h2>
-          <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
+          <p class="text-base-content/70 font-title relative z-[2] py-4 font-light md:text-3xl">
             {@html $t(
               "Write fewer class names<br />Use component class names<br />modify them using Tailwind CSS utilities."
             )}
@@ -1052,7 +1052,7 @@
           </span>
         </h2>
         <div class="h-10" />
-        <p class="text-base-content/60 font-title text-center font-light md:text-3xl xl:text-start">
+        <p class="text-base-content/70 font-title text-center font-light md:text-3xl xl:text-start">
           {@html $t(
             "With daisyUI, you write 80% fewer class names<br />And your HTML size will be about 70% smaller."
           )}
@@ -1260,13 +1260,13 @@
       </h2>
       <div class="h-10" />
       <p
-        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-start">
+        class="text-base-content/70 font-title mb-6 text-center font-light md:text-3xl xl:text-start">
         {@html $t(
           "daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file."
         )}
       </p>
       <p
-        class="text-base-content/60 font-title mb-6 text-center font-light md:text-3xl xl:text-start">
+        class="text-base-content/70 font-title mb-6 text-center font-light md:text-3xl xl:text-start">
         {@html $t(
           "Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name."
         )}
@@ -1410,7 +1410,7 @@
         </span>
       </h2>
       <p
-        class="text-base-content/60 font-title relative z-[2] mx-auto max-w-3xl py-4 font-light md:text-3xl">
+        class="text-base-content/70 font-title relative z-[2] mx-auto max-w-3xl py-4 font-light md:text-3xl">
         {@html $t(
           "Your website should be unique. Create a custom theme for yourself using daisyUI theme generator. The colors you pick will be applied to all daisyUI components."
         )}
@@ -1478,7 +1478,7 @@
           </span>
         </span>
       </h2>
-      <p class="text-base-content/60 font-title relative z-[2] py-4 font-light md:text-3xl">
+      <p class="text-base-content/70 font-title relative z-[2] py-4 font-light md:text-3xl">
         {$t("Mix and match daisyUI class names to create unique web pages.")}
       </p>
       <div class="h-10" />
@@ -1531,7 +1531,7 @@
           href="https://github.com/saadeghi/daisyui"
           target="_blank"
           rel="noopener, noreferrer"
-          class="text-base-content/60 hover:text-base-content hover:underline">
+          class="text-base-content/70 hover:text-base-content hover:underline">
           GitHub Stars
         </a>
       </div>
@@ -1557,7 +1557,7 @@
           href="https://github.com/saadeghi/daisyui/network/dependents"
           target="_blank"
           rel="noopener, noreferrer"
-          class="text-base-content/60 hover:text-base-content hover:underline">
+          class="text-base-content/70 hover:text-base-content hover:underline">
           {$t("open-source projects using daisyUI")}
         </a>
       </div>
@@ -1580,7 +1580,7 @@
           href="https://www.npmjs.com/package/daisyui"
           target="_blank"
           rel="noopener, noreferrer"
-          class="text-base-content/60 hover:text-base-content hover:underline">
+          class="text-base-content/70 hover:text-base-content hover:underline">
           {$t("npm-installs")}
         </a>
       </div>
@@ -1613,7 +1613,7 @@
             </div>
             <div class="flex flex-col items-start text-xs">
               <div class="text-base-content font-bold">{tweet.name}</div>
-              <div class="text-base-content/60">{tweet.bio}</div>
+              <div class="text-base-content/70">{tweet.bio}</div>
             </div>
           </div>
           <p class="text-base-content">{tweet.content}</p>
@@ -1649,7 +1649,7 @@
         href="https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md"
         rel="noopener, noreferrer"
         target="_blank"
-        class="link link-hover text-base-content/60">
+        class="link link-hover text-base-content/70">
         {$t("daisyUI welcomes contributions from developers around the world")}
       </a>
     </p>
@@ -1681,7 +1681,7 @@
         href="https://opencollective.com/daisyui"
         rel="noopener, noreferrer"
         target="_blank"
-        class="link link-hover text-base-content/60">
+        class="link link-hover text-base-content/70">
         {$t("Sponsors and backers")}
       </a>
     </p>
@@ -1782,7 +1782,7 @@
       </div>
       <div class="h-10" />
       <div class="flex w-full flex-col items-center justify-center gap-2 md:flex-row">
-        <span class="text-base-content/60">{$t("Or play with daisyUI on")}:</span>
+        <span class="text-base-content/70">{$t("Or play with daisyUI on")}:</span>
         <a target="_blank" rel="noopener, noreferrer" href="/codepen" class="btn-ghost btn-sm btn">
           <svg
             class="h-4 w-4 stroke-current"

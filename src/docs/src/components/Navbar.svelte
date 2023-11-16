@@ -65,7 +65,7 @@
           data-sveltekit-preload-data
           href="/"
           aria-current="page"
-          aria-label="Homepage"
+          aria-label="daisyUI"
           class="flex-0 btn btn-ghost gap-1 px-2 md:gap-2"
           on:contextmenu|preventDefault={(e) => contextMenuEl.openContextMenu(e)}>
           <svg
@@ -80,10 +80,7 @@
             <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
           </svg>
 
-          <div class="font-title inline-flex text-lg rtl:flex-row-reverse md:text-2xl">
-            <span class="lowercase">daisy</span>
-            <span class="uppercase text-[#1AD1A5]">UI</span>
-          </div>
+          <span class="font-title text-lg md:text-2xl">daisyUI</span>
         </a>
         <LogoContextMenu bind:this={contextMenuEl} />
         {#if showVersion}
