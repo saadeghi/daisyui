@@ -1,1 +1,2 @@
-export { themes } from "./src/theming/themes.js";
+import { themes } from "./src/theming/themes.js";
+export default { themes }["themes"];
