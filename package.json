@@ -1,6 +1,6 @@
 {
   "name": "daisyui",
-  "version": "4.3.0-alpha.2",
+  "version": "4.3.0-alpha.3",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -67,7 +67,8 @@
     "dev": "cd src/docs && npm run dev",
     "playground": "cd src/experiments/playground && npm run dev",
     "release": "node src/release",
-    "publish:alpha": "npm publish --tag=alpha"
+    "publish:alpha": "npm publish --tag=alpha",
+    "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
