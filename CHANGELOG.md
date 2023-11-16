@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.0.9 (2023-11-16)
+
+
+### Bug Fixes
+
+* divider default color not being visible on dark themes ([fffd021](https://github.com/saadeghi/daisyui/commit/fffd02162d4d5fd80895ad1256a59bccd07f71aa))
+
 ## 4.0.8 (2023-11-16)
 
 
