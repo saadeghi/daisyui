@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.1.0 (2023-11-16)
+
+
+### Features
+
+* Convert package to ESM ([0bd1967](https://github.com/saadeghi/daisyui/commit/0bd1967a36215ff13eb409e47dc4c25b8d06a0b3))
+
 ## 4.0.9 (2023-11-16)
 
 ### Bug Fixes
