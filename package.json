@@ -36,6 +36,7 @@
   "module": "src/index.js",
   "types": "src/index.d.ts",
   "files": [
+    "themes.js",
     "src/lib/**/*.js",
     "dist/*.cjs",
     "dist/{themes,styled,unstyled,full}.css",
