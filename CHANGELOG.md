@@ -12,25 +12,6 @@ All notable changes to this project will be documented in this file. See [commit
 
 - [#2543](https://github.com/saadeghi/daisyui/issues/2543) ([6a9b9ac](https://github.com/saadeghi/daisyui/commit/6a9b9ac3cd2ddce07481d294929d807461a1e68e))
 
-## 4.2.0 (2023-11-16)
-
-### Features
-
-- rename CDN .js files to .cjs ([d0e6aec](https://github.com/saadeghi/daisyui/commit/d0e6aec10dc576f4171bcb1050aae74640255d42))
-
-## 4.1.1 (2023-11-16)
-
-### Bug Fixes
-
-- missing utility classes in CDN ([c31f445](https://github.com/saadeghi/daisyui/commit/c31f44569d9c3f58ce69525b995058d9a5d6d4d4))
-
-## 4.1.0 (2023-11-16)
-
-### Features
-
-- Convert package to ESM ([aed8cd5](https://github.com/saadeghi/daisyui/commit/aed8cd5e7523569dd56ef035cbda6da86f5d422a))  
-  If you're imporing any JS file from daisyUI, make sure you're importing the exported object or funtion correctly.
-
 ## 4.0.9 (2023-11-16)
 
 ### Bug Fixes
