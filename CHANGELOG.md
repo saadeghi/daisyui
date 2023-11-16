@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.1.1 (2023-11-16)
+
+
+### Bug Fixes
+
+* missing utility classes in CDN ([c31f445](https://github.com/saadeghi/daisyui/commit/c31f44569d9c3f58ce69525b995058d9a5d6d4d4))
+
 ## 4.1.0 (2023-11-16)
 
 ### Features
