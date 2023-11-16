@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test"
 import * as colorFunctions from "../theming/functions"
-import themes from "../theming/themes"
+import { themes } from "../theming/themes"
 const { wcagContrast } = require("culori")
 
 import { trimThemeName, ContrastRatioWarningThreshold, ContrastRatioErrorThreshold } from "./utils"
