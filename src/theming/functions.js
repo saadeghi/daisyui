@@ -1,16 +1,39 @@
+const pc = require("picocolors")
 const colorNames = require("./colorNames")
 const themeDefaults = require("./themeDefaults")
 
 const { oklch, interpolate, wcagContrast } = require("culori/require")
 
-const cutNumber = (number) => (number ? +number.toFixed(6) : 0)
-
+const colorIsInvalid = (input) => {
+  console.error(
+    `├─ ${pc.red("⚠︎")} ${pc.bgRed(" Error ")} Invalid color ${pc.red(input)} in ${pc.green(
+      "tailwind.config.js"
+    )}`
+  )
+}
+const cutNumber = (number) => {
+  try {
+    if (number) {
+      return +number.toFixed(6)
+    } else {
+      return 0
+    }
+  } catch (e) {
+    // colorIsInvalid(number)
+    return false
+  }
+}
 module.exports = {
   isDark: (color) => {
-    if (wcagContrast(color, "black") < wcagContrast(color, "white")) {
-      return true
+    try {
+      if (wcagContrast(color, "black") < wcagContrast(color, "white")) {
+        return true
+      }
+      return false
+    } catch (e) {
+      // colorIsInvalid(color)
+      return false
     }
-    return false
   },
 
   colorObjToString: function (input) {
@@ -19,13 +42,26 @@ module.exports = {
   },
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
-    const result = interpolate([input, this.isDark(input) ? "white" : "black"], "oklch")(percentage)
-    return this.colorObjToString(result)
+    try {
+      const result = interpolate(
+        [input, this.isDark(input) ? "white" : "black"],
+        "oklch"
+      )(percentage)
+      return this.colorObjToString(result)
+    } catch (e) {
+      // colorIsInvalid(input)
+      return false
+    }
   },
 
   generateDarkenColorFrom: function (input, percentage = 0.07) {
-    const result = interpolate([input, "black"], "oklch")(percentage)
-    return this.colorObjToString(result)
+    try {
+      const result = interpolate([input, "black"], "oklch")(percentage)
+      return this.colorObjToString(result)
+    } catch (e) {
+      // colorIsInvalid(input)
+      return false
+    }
   },
 
   convertColorFormat: function (input) {
@@ -37,8 +73,13 @@ module.exports = {
 
     Object.entries(input).forEach(([rule, value]) => {
       if (Object.hasOwn(colorNames, rule)) {
-        const colorObj = oklch(value)
-        resultObj[colorNames[rule]] = this.colorObjToString(colorObj)
+        try {
+          const colorObj = oklch(value)
+          resultObj[colorNames[rule]] = this.colorObjToString(colorObj)
+        } catch (e) {
+          colorIsInvalid(value)
+          return false
+        }
       } else {
         resultObj[rule] = value
       }
