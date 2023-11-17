@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.0 (2023-11-17)
+
+
+### Features
+
+* invalid color value in config now shows an error ([41ee386](https://github.com/saadeghi/daisyui/commit/41ee386267ff0f37daa52730674c7a614a2e741e))
+
 ## 4.3.1 (2023-11-16)
 
 ## [4.3.0](https://github.com/saadeghi/daisyui/compare/v4.3.0-alpha.11...v4.3.0) (2023-11-16)
