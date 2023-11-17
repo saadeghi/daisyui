@@ -1,10 +1,9 @@
 const colorNames = require("./colorNames")
 const themeDefaults = require("./themeDefaults")
 
-const { toGamut, interpolate, wcagContrast } = require("culori/require")
+const { oklch, interpolate, wcagContrast } = require("culori/require")
 
 const cutNumber = (number) => (number ? +number.toFixed(6) : 0)
-const toGamutOKLCH = toGamut("oklch")
 
 module.exports = {
   isDark: (color) => {
@@ -38,7 +37,7 @@ module.exports = {
 
     Object.entries(input).forEach(([rule, value]) => {
       if (Object.hasOwn(colorNames, rule)) {
-        const colorObj = toGamutOKLCH(value)
+        const colorObj = oklch(value)
         resultObj[colorNames[rule]] = this.colorObjToString(colorObj)
       } else {
         resultObj[rule] = value
