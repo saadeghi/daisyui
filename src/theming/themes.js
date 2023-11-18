@@ -431,7 +431,7 @@ module.exports = {
     "primary": "#9FE88D",
     "secondary": "#FF7D5C",
     "accent": "#C792E9",
-    "neutral": "#162135",
+    "neutral": "#1c212b",
     "neutral-content": "#B2CCD6",
     "base-100": "#2A303C",
     "base-200": "#242933",
