@@ -14,6 +14,13 @@ layout: components
   import { replace } from '$lib/actions';
 </script>
 
+<BrowserSupport data="{{
+chrome:37,
+firefox:98,
+safari:15.4,
+iossafari: 15.4,
+}}"/>
+
 <ClassTable
 data="{[
   { type:'component', class: 'modal', desc: 'Container element' },
