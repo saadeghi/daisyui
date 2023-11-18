@@ -1,4 +1,4 @@
-import { exec } from "child_process"
+import { execSync } from "child_process"
 import fs from "fs"
 import glob from "glob"
 
@@ -20,15 +20,17 @@ export const trimThemeName = (input) => {
   return input.replace("[data-theme=", "").replace("]", "")
 }
 
-export async function executeCommands(commands) {
-  for (const command of commands) {
-    await new Promise((resolve) => {
-      exec(command, () => resolve())
-    })
+export function executeCommand(command) {
+  try {
+    execSync(command, { stdio: "inherit" })
+  } catch (error) {
+    console.error(`Error executing command: ${command}`)
+    console.error(error.message)
+    throw error
   }
 }
 
-export async function stringExistsInFile(filePath, searchString) {
+export function stringExistsInFile(filePath, searchString) {
   const firstMatchedFile = glob.sync(filePath)[0]
   if (!firstMatchedFile) {
     throw new Error(`File not found: ${filePath}`)
@@ -37,8 +39,8 @@ export async function stringExistsInFile(filePath, searchString) {
   return fileContent.includes(searchString)
 }
 
-export async function printPackageDependencies(name) {
-  fs.readFile(`files/${name}/package.json`, "utf8", (err, data) => {
+export function printPackageDependencies(name) {
+  fs.readFile(`src/tests/files/${name}/package.json`, "utf8", (err, data) => {
     if (err) throw err
     const packageJson = JSON.parse(data)
     const allDependencies = {
