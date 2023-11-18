@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.2 (2023-11-18)
+
+
+### Bug Fixes
+
+* improve default success color contrast vs base color ([ef9f542](https://github.com/saadeghi/daisyui/commit/ef9f5420e52b048f93f5ad043886bfe010f5921f))
+
 ## 4.4.1 (2023-11-18)
 
 
