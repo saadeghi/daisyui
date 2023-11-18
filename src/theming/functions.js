@@ -105,7 +105,7 @@ module.exports = {
         resultObj["--in"] = "0.7206 0.191 231.6"
       }
       if (!Object.hasOwn(input, "success")) {
-        resultObj["--su"] = "0.7441 0.213 164.75"
+        resultObj["--su"] = "64.8% 0.150 160"
       }
       if (!Object.hasOwn(input, "warning")) {
         resultObj["--wa"] = "0.8471 0.199 83.87"
