@@ -2,13 +2,27 @@ name: "🧪 Tests"
 
 on:
   workflow_dispatch:
+    inputs:
+      filter:
+        type: choice
+        description: Filter tests
+        default: " "
+        options:
+          - " "
+          - "-t framework"
+          - "-t contrast"
+          - "-t foreground"
+          - "-t variables"
+          - "-t colors"
   push:
     branches:
       - master
     paths:
       - "src/theming/**"
 jobs:
-  release:
+  tests:
+    env:
+      filter: ${{ github.event.inputs.filter || ' '}}
     timeout-minutes: 10
     name: "Build"
     runs-on: ubuntu-latest
@@ -26,4 +40,4 @@ jobs:
         run: bun run build:skipfullcss
 
       - name: Run tests
-        run: bun test
+        run: bun test ${{ env.filter }}

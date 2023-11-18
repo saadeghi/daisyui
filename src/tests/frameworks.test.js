@@ -1,4 +1,4 @@
-import { test, expect, beforeAll, afterAll } from "bun:test"
+import { test, expect, beforeAll } from "bun:test"
 import { executeCommand, stringExistsInFile } from "./utils"
 import { repos } from "./data"
 
@@ -8,12 +8,12 @@ beforeAll(() => {
 
 repos.forEach((config) => {
   test(
-    `framework test: ${config.string} exists in ${config.file}`,
+    `framework – ${config.name}: ${config.string} exists in ${config.file}`,
     () => {
+      console.log(`building ${config.repo}...`)
       executeCommand(
-        `cd src/tests/files && rm -rf ${config.name} && git clone ${config.repo} && cd ${config.name} && bun i && bun run build`
+        `cd src/tests/files && rm -rf ${config.name} && git clone ${config.repo} --quiet && cd ${config.name} && bun i --silent && bun run build`
       )
-      executeCommand(`cd src/tests/files && cd ${config.name} && bun i && bun run build`)
       expect(stringExistsInFile(`src/tests/files/${config.file}`, config.string)).toBe(true)
       executeCommand(`cd src/tests/files && rm -rf ${config.name}`)
     },
