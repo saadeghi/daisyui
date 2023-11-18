@@ -28,6 +28,19 @@
 
 <svelte:window bind:scrollY />
 
+<div class="bg-base-200 flex justify-center rounded-sm p-2">
+  <a
+    href="/store/"
+    class="alert hover:bg-base-300 text-base-content/70 flex max-w-xl justify-center py-2 text-center text-xs transition-colors duration-300 ease-out">
+    <p>
+      Limited time 50% discount on daisyUI store. Use <code
+        class="text-base-content/70 px-1 font-mono tracking-wide">
+        BLACKFRIDAY
+      </code>
+      code at checkout.
+    </p>
+  </a>
+</div>
 <div
   class={`
   bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] 
