@@ -10,7 +10,7 @@ repos.forEach((config) => {
   test(
     `framework – ${config.name}: ${config.string} exists in ${config.file}`,
     () => {
-      console.log(`building ${config.repo}...`)
+      console.log(`building ${config.repo} ...`)
       executeCommand(
         `cd src/tests/files && rm -rf ${config.name} && git clone ${config.repo} --quiet && cd ${config.name} && bun i --silent && bun run build`
       )
