@@ -18,7 +18,10 @@ on:
     branches:
       - master
     paths:
+      - "src/index.js"
+      - "src/build.js"
       - "src/theming/**"
+      - "src/lib/**"
 jobs:
   tests:
     env:
