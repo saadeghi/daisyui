@@ -288,7 +288,7 @@ data="{[
 
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="my_modal_6" class="$$modal-toggle" />
-<div class="$$modal">
+<div class="$$modal" role="dialog">
   <div class="$$modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">This modal works with a hidden checkbox!</p>
@@ -309,7 +309,7 @@ data="{[
 
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="my_modal_7" class="$$modal-toggle" />
-<div class="$$modal">
+<div class="$$modal" role="dialog">
   <div class="$$modal-box">
     <h3 class="text-lg font-bold">Hello!</h3>
     <p class="py-4">This modal works with a hidden checkbox!</p>
@@ -328,7 +328,7 @@ data="{[
 <a href="#my_modal_8" class="$$btn">open modal</a>
 
 <!-- Put this part before </body> tag -->
-<div class="$$modal" id="my_modal_8">
+<div class="$$modal" role="dialog" id="my_modal_8">
   <div class="$$modal-box">
     <h3 class="font-bold text-lg">Hello!</h3>
     <p class="py-4">This modal works with anchor links</p>

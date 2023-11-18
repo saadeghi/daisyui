@@ -10,7 +10,7 @@
 
 {#if $page.url.pathname == "/components/modal/"}
   <input type="checkbox" id="my_modal_6" class="modal-toggle" aria-label="Open or close modal" />
-  <div class="modal">
+  <div class="modal" role="dialog">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Hello!</h3>
       <p class="py-4">This modal works with a hidden checkbox!</p>
@@ -21,7 +21,7 @@
   </div>
 
   <input type="checkbox" id="my_modal_7" class="modal-toggle" aria-label="Open or close modal" />
-  <div class="modal">
+  <div class="modal" role="dialog">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
       <p class="py-4">
@@ -31,7 +31,7 @@
     <label class="modal-backdrop" for="my_modal_7">Close</label>
   </div>
 
-  <div class="modal" id="my_modal_8">
+  <div class="modal" role="dialog" id="my_modal_8">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Hello!</h3>
       <p class="py-4">This modal works with anchor links</p>
