@@ -17,6 +17,7 @@ export async function load({ params }) {
   const discountsResponse = await fetch("https://api.lemonsqueezy.com/v1/discounts", LSParams)
   if (productsResponse.ok) {
     storeInfo.products = await productsResponse.json()
+    console.log(storeInfo.products.data[1].attributes)
   }
   if (discountsResponse.ok) {
     storeInfo.discounts = await discountsResponse.json()

@@ -30,6 +30,7 @@
 
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
 
+<!-- discounts -->
 <div class="flex flex-col gap-4 p-10">
   {#each discounts as discount}
     {#if discount.attributes.is_limited_to_products !== false}
@@ -133,8 +134,12 @@
     {/if}
   {/each}
 </div>
+
+<!-- published -->
 <div class="flex flex-col gap-12">
-  {#each products as product}
+  {#each products.filter((product) => {
+    return product.attributes.status === "published"
+  }) as product}
     <div class="rounded-box relative grid grid-cols-5 gap-10 p-10">
       <div class="col-span-5 row-start-2 flex flex-col gap-10 xl:col-span-2 xl:row-start-1">
         <h2 class="text-lg font-black sm:text-3xl xl:text-4xl">
@@ -168,6 +173,45 @@
             class="rounded-box w-full" />
         </a>
       </div>
+    </div>
+  {:else}
+    <div class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20">
+      Coming soon…
+    </div>
+  {/each}
+</div>
+
+<!-- coming soon -->
+<div class="divider text-base-content/30 mb-20 mt-52">In development</div>
+<div class="grid gap-12 lg:grid-cols-3">
+  {#each products.filter((product) => {
+    return product.attributes.status === "draft"
+  }) as product}
+    <div
+      class="rounded-box border-base-300 text-base-content/30 flex h-72 flex-col items-center justify-center gap-6 border-2 border-dashed p-10 text-center [text-wrap:balance]">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="4"
+          y="10"
+          width="40"
+          height="30"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M14 6V14" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+        <path d="M25 23L14 23" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+        <path d="M34 31L14 31" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+        <path d="M34 6V14" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+      </svg>
+      <div>{product.attributes.name}</div>
     </div>
   {:else}
     <div class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20">
