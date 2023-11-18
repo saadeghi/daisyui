@@ -18,12 +18,9 @@
             <circle cx="207.5" cy="135" r="125" fill="white" />
             <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
           </svg>
-          <div class="font-title inline-flex text-3xl font-black">
-            <span class="lowercase">daisy</span>
-            <span class="uppercase text-[#1AD1A5]">UI</span>
-          </div>
+          <div class="font-title inline-flex text-3xl font-black">daisyUI</div>
         </div>
-        <p class="opacity-50">
+        <p class="text-base-content/70 mb-5">
           {@html $t("footer-tagline")}
         </p>
 
@@ -59,7 +56,7 @@
         </a>
       </div>
       <div>
-        <span class="footer-title">{$t("pages")}</span>
+        <span class="footer-title opacity-70">{$t("pages")}</span>
         <a href="/docs/install/" class="link link-hover">{$t("how-to-install")}</a>
         <a href="/docs/use/" class="link link-hover">{$t("how-to-use-components")}</a>
         <a href="/docs/customize/" class="link link-hover">{$t("how-to-customize")}</a>
@@ -70,7 +67,7 @@
         <a href="/store/" class="link link-hover">{$t("Store")}</a>
       </div>
       <div>
-        <span class="footer-title">{$t("available-on")}</span>
+        <span class="footer-title opacity-70">{$t("available-on")}</span>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -114,7 +111,7 @@
         </a>
       </div>
       <div>
-        <span class="footer-title">{$t("try-online")}</span>
+        <span class="footer-title opacity-70">{$t("try-online")}</span>
         <a
           href="/tailwindplay"
           class="link link-hover group"
@@ -129,7 +126,7 @@
         </a>
       </div>
       <div>
-        <span class="footer-title">{$t("related projects")}</span>
+        <span class="footer-title opacity-70">{$t("related projects")}</span>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -193,7 +190,7 @@
           </div>
         </div>
         <div class="text-left">
-          <p class="text-base-content text-xs text-opacity-50">{$t("created-by")}</p>
+          <p class="text-base-content/70 text-xs">{$t("created-by")}</p>
           <p class="text-base-content text-lg font-bold">Pouya Saadeghi</p>
         </div>
       </a>

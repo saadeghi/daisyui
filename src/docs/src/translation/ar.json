@@ -17,7 +17,7 @@
   "install-title": "تثبيت daisyUI",
   "install-desc": "فقط CSS. تعمل على جميع الاطارات. daisyUI يمكن استعمالها على شكل اضافة الى Tailwind CSS او مكتبة CSS مستقلة",
   "install-step-1": "ثبت daisyUI على شكل حزمة Node",
-  "install-step-2": "أضف daisyUI الى Tailwind CSS على شكل اضافة",
+  "install-step-2": "أضف daisyUI الى tailwind.config.js",
   "install-btn": "دليل التثبيت",
   "footer-tagline": "مكتبة عناصر مجانية <br /> لأطر عمل CSS الأولى",
   "pages": "صفحات",

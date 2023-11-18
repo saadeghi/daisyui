@@ -17,7 +17,7 @@
   "install-title": "安装 daisyUI",
   "install-desc": "没有任何依赖, 纯净 CSS。 可以作为 Tailwind CSS 的插件使用或者一个独立 CSS 库",
   "install-step-1": "作为 Node package 安装 daisyUI",
-  "install-step-2": "作为 Tailwind CSS 的插件增加 daisyUI",
+  "install-step-2": "在你的 tailwind.config.js 里追加 daisyUI 的设置",
   "install-btn": "安装指导",
   "footer-tagline": "Free Component library <br /> For utility first CSS frameworks",
   "pages": "页面",

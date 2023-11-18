@@ -17,7 +17,7 @@
   "install-title": "Instalar daisyUI",
   "install-desc": "CSS puro. Funciona en todos los marcos de trabajo. daisyUI se puede usar como un complemento de Tailwind CSS o como una biblioteca CSS independiente",
   "install-step-1": "Instale daisyUI como un paquete de Node",
-  "install-step-2": "Agregue daisyUI a Tailwind CSS como un complemento",
+  "install-step-2": "Agregue daisyUI a tailwind.config.js",
   "install-btn": "Guía de instalación",
   "footer-tagline": "Biblioteca de componentes gratuitos <br /> Para los marcos de trabajo CSS orientados a clases de utilidad",
   "pages": "Páginas",

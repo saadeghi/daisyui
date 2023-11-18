@@ -12,17 +12,17 @@
       <p class="mx-auto mt-5 w-full max-w-lg text-start">1. {$t("install-step-1")}:</p>
       <div class="mx-auto my-2 w-full max-w-md">
         <div class="mockup-code mx-auto w-full max-w-xs text-left shadow-lg sm:max-w-none">
-          <pre data-prefix="$"><code>npm i -D daisyui@latest</code></pre>
+          <pre data-prefix="$"><code
+              class="selection:bg-info-content selection:text-info">npm i -D daisyui@latest</code></pre>
         </div>
         <p class="mx-auto mt-5 w-full max-w-lg text-start">2. {$t("install-step-2")}:</p>
         <div class="my-2 w-full max-w-4xl">
           <div
             class="mockup-code mx-auto w-full max-w-xs text-left text-sm shadow-lg sm:max-w-none">
-            <pre><code><span
-                  class="text-neutral-content text-opacity-40">// tailwind.config.js</span>
-  module.exports = {`{`}
+            <pre><code>module.exports = {`{`}
     plugins: [
-      <span class="badge badge-secondary">require('daisyui'),</span>
+      <span
+                  class="badge badge-success selection:bg-info-content selection:text-info badge-lg">require('daisyui'),</span>
     ],
   {`}`}</code></pre>
           </div>

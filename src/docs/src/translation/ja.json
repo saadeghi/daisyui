@@ -17,7 +17,7 @@
   "install-title": "daisyUIのインストール",
   "install-desc": "TailwindCSSのプラグインとして、または独立したCSSライブラリとして使用できます <br /> 依存するライブラリはありません",
   "install-step-1": "daisyUI をNode Packageとしてインストールする",
-  "install-step-2": "プラグインとしてdaisyUIをTailwindCSSに追加する",
+  "install-step-2": "tailwind.config.js に daisyUI を追加する",
   "install-btn": "インストールガイド",
   "footer-tagline": "ユーティリティファーストのCSSフレームワークと親和性の高い<br />無料のコンポーネントライブラリ",
   "pages": "ページ",

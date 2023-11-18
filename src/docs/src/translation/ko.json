@@ -17,7 +17,7 @@
   "install-title": "데이지UI 설치하기",
   "install-desc": "순수 CSS. 모든 프레임워크에 적용할 수 있습니다. 데이지UI는 Tailwind CSS 플러그인 또는 독립된 CSS 라이브러리로 사용할 수 있습니다.",
   "install-step-1": "노드 패키지로 데이지UI 설치하기",
-  "install-step-2": "Tailwind CSS 플러그인에 데이지UI 추가하기",
+  "install-step-2": "tailwind.config.js 파일에 daisyUI 추가하기",
   "install-btn": "설치 가이드",
   "footer-tagline": "유틸리티 우선 CSS 프레임워크를 위한 <br /> 무료 컴포넌트 라이브러리",
   "pages": "페이지",

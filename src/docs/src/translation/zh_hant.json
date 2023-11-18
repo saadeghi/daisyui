@@ -17,7 +17,7 @@
   "install-title": "安裝 daisyUI",
   "install-desc": "純 CSS。支援任何框架。daisyUI 可以作為 Tailwind CSS 的外掛程式或是獨立的 CSS 元件庫使用。",
   "install-step-1": "將 daisyUI 作為 Node 套件安裝",
-  "install-step-2": "新增 daisyUI 至 Tailwind CSS 的外掛程式",
+  "install-step-2": "將 daisyUI 安裝為 Tailwind CSS 的外掛程式",
   "install-btn": "安裝指南",
   "footer-tagline": "免費的元件庫<br />為公用優先的 CSS 框架設計",
   "pages": "頁面",

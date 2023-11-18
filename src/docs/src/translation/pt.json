@@ -17,7 +17,7 @@
   "install-title": "Instale o daisyUI",
   "install-desc": "CSS puro. Funciona em todos os frameworks. O daisyUI pode ser usado como um plugin do Tailwind CSS ou como uma biblioteca CSS independente.",
   "install-step-1": "Instale o daisyUI como um pacote Node",
-  "install-step-2": "Adicione o daisyUI ao Tailwind CSS como um plugin",
+  "install-step-2": "Adicione o daisyUI ao tailwind.config.js",
   "install-btn": "Guia de instalação",
   "footer-tagline": "Biblioteca gratuita de componentes <br /> para frameworks CSS baseados em classes CSS",
   "pages": "Páginas",

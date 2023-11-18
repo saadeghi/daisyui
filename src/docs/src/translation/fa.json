@@ -17,7 +17,7 @@
   "install-title": "daisyUI را نصب کنید",
   "install-desc": "CSS خالص. روی همه فریم ورک ها کار می‌کند. daisyUI را می توان به عنوان یک افزونه Tailwind CSS یا به عنوان یک کتابخانه مستقل CSS استفاده کرد",
   "install-step-1": "daisyUI را به عنوان بسته Node نصب کنید",
-  "install-step-2": "daisyUI را به عنوان افزونه به Tailwind CSS اضافه کنید",
+  "install-step-2": "daisyUI را به tailwind.config.js اضافه کنید",
   "install-btn": "راهنمای نصب",
   "footer-tagline": "کتابخانه کامپوننت رایگان <br /> برای فریم‌ورک های Utility-First CSS",
   "pages": "صفحات",

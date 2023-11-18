@@ -90,9 +90,9 @@
       section["hero"] &&
       (scrollY / (section["hero"].offsetTop + section["hero"].clientHeight)) * 100 > 80
     ) {
-      return "text-teal-600"
+      return "text-teal-700"
     }
-    return "text-amber-600"
+    return "text-rose-600"
   }
   $: demo_1_ElementTextHandler = () => {
     if (
@@ -154,7 +154,7 @@
             <br />
             <span class="inline-grid">
               <span
-                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text blur-2xl [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text blur-2xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
                 aria-hidden="true">
                 {@html $t("component library")}
               </span>
@@ -766,7 +766,7 @@
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1280px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
         style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}>
         {$t("to the next level")}
       </span>
@@ -807,36 +807,60 @@
             <span
               class="motion-reduce:!opacity-100"
               style={`opacity:${
-                Math.trunc(animateValue(section["uglyhtml"], [-100, -25], [0, 1])) === 0
+                section["uglyhtml"] &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 >
+                  -100 &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 <
+                  -30
                   ? 0.1
-                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -25], [0, 1]))
+                  : 1
               }`}>
               {$t("No_more_ugly_HTML_part_1")}
             </span>
             <span
               class="motion-reduce:!opacity-100"
               style={`opacity:${
-                Math.trunc(animateValue(section["uglyhtml"], [-100, -20], [0, 1])) === 0
+                section["uglyhtml"] &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 >
+                  -100 &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 <
+                  -25
                   ? 0.1
-                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -20], [0, 1]))
+                  : 1
               }`}>
               {$t("No_more_ugly_HTML_part_2")}
             </span>
             <span
               class="motion-reduce:!opacity-100"
               style={`opacity:${
-                Math.trunc(animateValue(section["uglyhtml"], [-100, -15], [0, 1])) === 0
+                section["uglyhtml"] &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 >
+                  -100 &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 <
+                  -20
                   ? 0.1
-                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -15], [0, 1]))
+                  : 1
               }`}>
               {$t("No_more_ugly_HTML_part_3")}
             </span>
             <span
               class="motion-reduce:!opacity-100"
               style={`opacity:${
-                Math.trunc(animateValue(section["uglyhtml"], [-100, -10], [0, 1])) === 0
+                section["uglyhtml"] &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 >
+                  -100 &&
+                ((scrollY - section["uglyhtml"].offsetTop) / section["uglyhtml"].clientHeight) *
+                  100 <
+                  -15
                   ? 0.1
-                  : Math.trunc(animateValue(section["uglyhtml"], [-100, -10], [0, 1]))
+                  : 1
               }`}>
               {$t("No_more_ugly_HTML_part_4")}
             </span>
@@ -847,10 +871,12 @@
             )}
           </p>
           <div class="h-4" />
-          <div class="text-base-content/40 mx-auto w-72 text-start">
-            <span class="inline-block -translate-y-2 -rotate-12">{$t("Click")}</span>
+          <div class="mx-auto w-72 text-start">
+            <span class="text-base-content/70 inline-block -translate-y-2 -rotate-12">
+              {$t("Click")}
+            </span>
             <svg
-              class="inline-block h-8 w-20 rtl:[transform:rotateY(180deg)]"
+              class="text-base-content/20 inline-block h-8 w-20 rtl:[transform:rotateY(180deg)]"
               viewBox="0 0 45 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -884,21 +910,21 @@
               class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-2rem)] grow border bg-transparent text-xs xl:h-[550px]">
               <pre
                 class="w-full whitespace-pre-wrap px-6 before:hidden"><code />&lt;div class=&quot;<span
-                  class="text-teal-600">card bg-base-200 w-80</span>&quot;&gt;
-  &lt;div class=&quot;<span class="text-teal-600">card-body</span>&quot;&gt;
+                  class="text-teal-700">card bg-base-200 w-80</span>&quot;&gt;
+  &lt;div class=&quot;<span class="text-teal-700">card-body</span>&quot;&gt;
     &lt;input placeholder=&quot;Email&quot; class=&quot;<span
-                  class="text-teal-600">input input-bordered</span>&quot; /&gt;
-    &lt;label class=&quot;<span class="text-teal-600">label cursor-pointer</span>&quot;&gt;
+                  class="text-teal-700">input input-bordered</span>&quot; /&gt;
+    &lt;label class=&quot;<span class="text-teal-700">label cursor-pointer</span>&quot;&gt;
       {$t("Accept terms of use")}
       &lt;input type=&quot;checkbox&quot; class=&quot;<span
-                  class="text-teal-600">toggle</span>&quot; /&gt;
+                  class="text-teal-700">toggle</span>&quot; /&gt;
     &lt;/label&gt;
-    &lt;label class=&quot;<span class="text-teal-600">label cursor-pointer</span>&quot;&gt;
+    &lt;label class=&quot;<span class="text-teal-700">label cursor-pointer</span>&quot;&gt;
       {$t("Submit to newsletter")}
       &lt;input type=&quot;checkbox&quot; class=&quot;<span
-                  class="text-teal-600">toggle</span>&quot; /&gt;
+                  class="text-teal-700">toggle</span>&quot; /&gt;
     &lt;/label&gt;
-    &lt;button class=&quot;<span class="text-teal-600">btn btn-neutral</span>&quot;&gt;{$t(
+    &lt;button class=&quot;<span class="text-teal-700">btn btn-neutral</span>&quot;&gt;{$t(
                   "Save"
                 )}&lt;/button&gt;
   &lt;/div&gt;
@@ -932,32 +958,32 @@
               class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-2rem)] grow border bg-transparent text-xs xl:h-[550px]">
               <pre
                 class="w-full whitespace-pre-wrap px-6 before:hidden"><code />&lt;div class=&quot;<span
-                  class="text-amber-600">w-80 rounded-2xl bg-gray-100</span>&quot;&gt;
-  &lt;div class=&quot;<span class="text-amber-600">flex flex-col gap-2 p-8</span>&quot;&gt;
+                  class="text-rose-600">w-80 rounded-2xl bg-gray-100</span>&quot;&gt;
+  &lt;div class=&quot;<span class="text-rose-600">flex flex-col gap-2 p-8</span>&quot;&gt;
     &lt;input placeholder=&quot;Email&quot; class=&quot;<span
-                  class="text-amber-600">w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-100</span>&quot; /&gt;
+                  class="text-rose-600">w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-100</span>&quot; /&gt;
     &lt;label class=&quot;<span
-                  class="text-amber-600">flex cursor-pointer items-center justify-between p-1</span>&quot;&gt;
+                  class="text-rose-600">flex cursor-pointer items-center justify-between p-1</span>&quot;&gt;
       {$t("Accept terms of use")}
-      &lt;div class=&quot;<span class="text-amber-600">relative inline-block</span>&quot;&gt;
+      &lt;div class=&quot;<span class="text-rose-600">relative inline-block</span>&quot;&gt;
         &lt;input type=&quot;checkbox&quot; class=&quot;<span
-                  class="text-amber-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
+                  class="text-rose-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
         &lt;span class=&quot;<span
-                  class="text-amber-600">pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
+                  class="text-rose-600">pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
       &lt;/div&gt;
     &lt;/label&gt;
     &lt;label class=&quot;<span
-                  class="text-amber-600">flex cursor-pointer items-center justify-between p-1</span>&quot;&gt;
+                  class="text-rose-600">flex cursor-pointer items-center justify-between p-1</span>&quot;&gt;
       {$t("Submit to newsletter")}
-      &lt;div class=&quot;<span class="text-amber-600">relative inline-block</span>&quot;&gt;
+      &lt;div class=&quot;<span class="text-rose-600">relative inline-block</span>&quot;&gt;
         &lt;input type=&quot;checkbox&quot; class=&quot;<span
-                  class="text-amber-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
+                  class="text-rose-600">peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span>&quot; /&gt;
         &lt;span class=&quot;<span
-                  class="text-amber-600">pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
+                  class="text-rose-600">pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span>&quot;&gt;&lt;/span&gt;
       &lt;/div&gt;
     &lt;/label&gt;
     &lt;button class=&quot;<span
-                  class="text-amber-600">inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95</span>&quot;&gt;{$t(
+                  class="text-rose-600">inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95</span>&quot;&gt;{$t(
                   "Save"
                 )}&lt;/button&gt;
   &lt;/div&gt;
@@ -1024,9 +1050,15 @@
           <span
             class="motion-reduce:!opacity-100"
             style={`opacity:${
-              Math.trunc(animateValue(section["performance"], [-40, -30], [0, 1])) === 0
+              section["performance"] &&
+              ((scrollY - section["performance"].offsetTop) / section["performance"].clientHeight) *
+                100 >
+                -100 &&
+              ((scrollY - section["performance"].offsetTop) / section["performance"].clientHeight) *
+                100 <
+                -40
                 ? 0.1
-                : Math.trunc(animateValue(section["performance"], [-40, -30], [0, 1]))
+                : 1
             }`}>
             {$t("Fewer class names")}
           </span>
@@ -1034,9 +1066,15 @@
           <span
             class="motion-reduce:!opacity-100"
             style={`opacity:${
-              Math.trunc(animateValue(section["performance"], [-30, -20], [0, 1])) === 0
+              section["performance"] &&
+              ((scrollY - section["performance"].offsetTop) / section["performance"].clientHeight) *
+                100 >
+                -100 &&
+              ((scrollY - section["performance"].offsetTop) / section["performance"].clientHeight) *
+                100 <
+                -35
                 ? 0.1
-                : Math.trunc(animateValue(section["performance"], [-30, -20], [0, 1]))
+                : 1
             }`}>
             {$t("Faster development")}
           </span>
@@ -1044,9 +1082,15 @@
           <span
             class="motion-reduce:!opacity-100"
             style={`opacity:${
-              Math.trunc(animateValue(section["performance"], [-20, -10], [0, 1])) === 0
+              section["performance"] &&
+              ((scrollY - section["performance"].offsetTop) / section["performance"].clientHeight) *
+                100 >
+                -100 &&
+              ((scrollY - section["performance"].offsetTop) / section["performance"].clientHeight) *
+                100 <
+                -30
                 ? 0.1
-                : Math.trunc(animateValue(section["performance"], [-20, -10], [0, 1]))
+                : 1
             }`}>
             {$t("Smaller file size")}
           </span>
@@ -1366,45 +1410,85 @@
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [0, 5], [0, 1])) === 0
+            section["designdecision"] &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 >
+              -100 &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 <
+              0
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [0, 5], [0, 1]))
+              : 1
           }`}>
           {$t("Apply_your_own_design_decisions_part_1")}
         </span>
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [5, 10], [0, 1])) === 0
+            section["designdecision"] &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 >
+              -100 &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 <
+              5
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [5, 10], [0, 1]))
+              : 1
           }`}>
           {$t("Apply_your_own_design_decisions_part_2")}
         </span>
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [10, 15], [0, 1])) === 0
+            section["designdecision"] &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 >
+              -100 &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 <
+              10
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [10, 15], [0, 1]))
+              : 1
           }`}>
           {$t("Apply_your_own_design_decisions_part_3")}
         </span>
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [15, 20], [0, 1])) === 0
+            section["designdecision"] &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 >
+              -100 &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 <
+              15
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [15, 20], [0, 1]))
+              : 1
           }`}>
           {$t("Apply_your_own_design_decisions_part_4")}
         </span>
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["designdecision"], [20, 25], [0, 1])) === 0
+            section["designdecision"] &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 >
+              -100 &&
+            ((scrollY - section["designdecision"].offsetTop) /
+              section["designdecision"].clientHeight) *
+              100 <
+              20
               ? 0.1
-              : Math.trunc(animateValue(section["designdecision"], [20, 25], [0, 1]))
+              : 1
           }`}>
           {$t("Apply_your_own_design_decisions_part_5")}
         </span>
@@ -1436,9 +1520,17 @@
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["possibilities"], [-30, -20], [0, 1])) === 0
+            section["possibilities"] &&
+            ((scrollY - section["possibilities"].offsetTop) /
+              section["possibilities"].clientHeight) *
+              100 >
+              -100 &&
+            ((scrollY - section["possibilities"].offsetTop) /
+              section["possibilities"].clientHeight) *
+              100 <
+              -30
               ? 0.1
-              : Math.trunc(animateValue(section["possibilities"], [-30, -20], [0, 1]))
+              : 1
           }`}>
           {data.stats.components}
           {$t("components")}
@@ -1447,32 +1539,56 @@
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["possibilities"], [-20, -10], [0, 1])) === 0
+            section["possibilities"] &&
+            ((scrollY - section["possibilities"].offsetTop) /
+              section["possibilities"].clientHeight) *
+              100 >
+              -100 &&
+            ((scrollY - section["possibilities"].offsetTop) /
+              section["possibilities"].clientHeight) *
+              100 <
+              -25
               ? 0.1
-              : Math.trunc(animateValue(section["possibilities"], [-20, -10], [0, 1]))
+              : 1
           }`}>
           {data.stats.utilities}
           {$t("utility classes")}
         </span>
         <br />
         <span class="inline-grid">
-          {#if Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0}
+          {#if section["possibilities"] && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 > -100 && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 < -20}{:else}
             <span
-              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text opacity-70 blur-3xl [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] [:root[dir=rtl]_&]:leading-[1.35] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [:root[dir=rtl]_&]:leading-[1.35] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
               aria-hidden="true">
               {$t("endless possibilities")}
             </span>
           {/if}
           <span
             style={`opacity:${
-              Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) === 0
+              section["possibilities"] &&
+              ((scrollY - section["possibilities"].offsetTop) /
+                section["possibilities"].clientHeight) *
+                100 >
+                -100 &&
+              ((scrollY - section["possibilities"].offsetTop) /
+                section["possibilities"].clientHeight) *
+                100 <
+                -20
                 ? 0.1
-                : Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1]))
+                : 1
             }`}
             class={`[&::selection]:text-base-content relative col-start-1 row-start-1 leading-tight motion-reduce:!opacity-100 [&::selection]:bg-blue-700/20 ${
-              Math.trunc(animateValue(section["possibilities"], [-10, 0], [0, 1])) !== 0
-                ? "bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
-                : "motion-reduce:!bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] motion-reduce:!bg-clip-text motion-reduce:![-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:motion-reduce:!bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+              section["possibilities"] &&
+              ((scrollY - section["possibilities"].offsetTop) /
+                section["possibilities"].clientHeight) *
+                100 >
+                -100 &&
+              ((scrollY - section["possibilities"].offsetTop) /
+                section["possibilities"].clientHeight) *
+                100 <
+                -20
+                ? "motion-reduce:!bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] motion-reduce:!bg-clip-text motion-reduce:![-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:motion-reduce:!bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+                : "bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
             }`}>
             {$t("endless possibilities")}
           </span>
@@ -1728,7 +1844,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-4 w-4 text-teal-600">
+        class="h-4 w-4 text-teal-700">
         <path
           d="M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 018-2.828A4.5 4.5 0 0118 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 01-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 01-.69.001l-.002-.001z" />
       </svg>
@@ -1745,9 +1861,11 @@
         <span
           class="motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["try"], [5, 10], [0, 1])) === 0
+            section["try"] &&
+            ((scrollY - section["try"].offsetTop) / section["try"].clientHeight) * 100 > -100 &&
+            ((scrollY - section["try"].offsetTop) / section["try"].clientHeight) * 100 < 7
               ? 0.1
-              : Math.trunc(animateValue(section["try"], [5, 10], [0, 1]))
+              : 1
           }`}>
           {$t("Try daisyUI")}
         </span>
@@ -1755,9 +1873,11 @@
         <span
           class="font-light motion-reduce:!opacity-100"
           style={`opacity:${
-            Math.trunc(animateValue(section["try"], [10, 15], [0, 1])) === 0
+            section["try"] &&
+            ((scrollY - section["try"].offsetTop) / section["try"].clientHeight) * 100 > -100 &&
+            ((scrollY - section["try"].offsetTop) / section["try"].clientHeight) * 100 < 16
               ? 0.1
-              : Math.trunc(animateValue(section["try"], [10, 15], [0, 1]))
+              : 1
           }`}>
           {$t("on your favorite framework")}
         </span>

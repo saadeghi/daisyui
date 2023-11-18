@@ -437,7 +437,7 @@
     </div>
     <p class="font-title font-light md:text-3xl lg:text-4xl">{$t("with zero effort")}</p>
     <div class="h-4" />
-    <p class="text-base-content/60 mx-auto max-w-lg font-sans text-sm font-light">
+    <p class="text-base-content/80 mx-auto max-w-lg font-sans text-sm font-light">
       {$t(
         "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name."
       )}

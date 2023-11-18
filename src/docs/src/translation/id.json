@@ -17,7 +17,7 @@
   "install-title": "Instalasi daisyUI",
   "install-desc": "CSS murni. Bekerja di semua framework. daisyUI dapat digunakan sebagai plugin TailwindCSS atau sebagai library CSS yang independen",
   "install-step-1": "Instal daisyUI sebagai Node package",
-  "install-step-2": "Tambahkan daisyUI ke Tailwind CSS sebagai plugin",
+  "install-step-2": "Tambahkan daisyUI ke tailwind.config.js",
   "install-btn": "Panduan Instalasi",
   "footer-tagline": "Component library gratis<br /> Untuk utility-first CSS framework",
   "pages": "Halaman",
