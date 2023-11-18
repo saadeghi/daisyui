@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.1 (2023-11-18)
+
+
+### Bug Fixes
+
+* improve neutral color in dim theme ([953534c](https://github.com/saadeghi/daisyui/commit/953534c218a3a2d860575adcb66b5458e3e2fc9d))
+
 ## 4.4.0 (2023-11-17)
 
 
