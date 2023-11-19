@@ -31,7 +31,7 @@ jobs:
     if: github.repository == 'saadeghi/daisyui'
     runs-on: ubuntu-latest
     env:
-      runtime: ${{ github.event.inputs.runtime || 'bun'}}
+      runtime: ${{ github.event.inputs.runtime || github.event.inputs.runtime.default }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
