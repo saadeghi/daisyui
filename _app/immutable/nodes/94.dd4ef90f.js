@@ -1,0 +1,1 @@
+import{s as n,K as s}from"../chunks/scheduler.f50f852b.js";import{S as t,i as r}from"../chunks/index.90b433aa.js";function a(o){return s(()=>{window.location.href="/resources/videos/"}),[]}class u extends t{constructor(e){super(),r(this,e,a,null,n,{})}}export{u as component};
