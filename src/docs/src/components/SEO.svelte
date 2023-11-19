@@ -4,7 +4,7 @@
   import { readEnv } from "$lib/util"
 
   let siteData = {
-    title: "Tailwind CSS Components",
+    title: "Tailwind CSS Components ( version 4 update is here )",
     desc: "Free Tailwind Components",
     card: "/images/default.jpg",
   }
