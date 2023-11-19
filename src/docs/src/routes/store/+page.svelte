@@ -1,4 +1,5 @@
 <script>
+  import { dev } from "$app/environment"
   import SEO from "$components/SEO.svelte"
   import Countdown from "svelte-countdown"
 
@@ -34,15 +35,15 @@
 <div class="flex flex-col gap-4 p-10">
   {#each discounts as discount}
     {#if discount.attributes.is_limited_to_products !== false}
-      <meta name={discount.attributes.name} content="limited to specific products" />
+      {#if dev}<meta name={discount.attributes.name} content="limited to specific products" />{/if}
     {:else if discount.attributes.is_limited_redemptions !== false}
-      <meta name={discount.attributes.name} content="has limited redemptions" />
+      {#if dev}<meta name={discount.attributes.name} content="has limited redemptions" />{/if}
     {:else if discount.attributes.starts_at !== null && discount.attributes.starts_at > new Date().toISOString()}
-      <meta name={discount.attributes.name} content="not started" />
+      {#if dev}<meta name={discount.attributes.name} content="not started" />{/if}
     {:else if discount.attributes.expires_at !== null && discount.attributes.expires_at < new Date().toISOString()}
-      <meta name={discount.attributes.name} content="expired" />
+      {#if dev}<meta name={discount.attributes.name} content="expired" />{/if}
     {:else if discount.attributes.status !== "published"}
-      <meta name={discount.attributes.name} content="not published" />
+      {#if dev}<meta name={discount.attributes.name} content="not published" />{/if}
     {:else}
       <div class="alert">
         <svg
@@ -122,7 +123,7 @@
                     </div>
                   </date>
                 </div>
-              {:else}
+              {:else if !data}
                 <div class="border-base-content/20 rounded-btn shrink-0 border border-dashed p-2">
                   Ended
                 </div>
