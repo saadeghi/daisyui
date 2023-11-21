@@ -212,7 +212,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Theme Controller using a radio button">
+<Component title="Theme Controller using a dropdown">
 <div class="dropdown mb-72">
   <label tabindex="0" class="btn m-1">
   Theme
