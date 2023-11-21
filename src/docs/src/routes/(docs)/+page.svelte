@@ -132,7 +132,11 @@
               </button>
             </div>
             <div class="flex gap-2 font-mono text-xs">
-              <a class="text-base-content/70 italic" href="/docs/changelog/">
+              <a
+                class="text-base-content/70 italic"
+                href="https://github.com/saadeghi/daisyui/discussions/2507"
+                target="_blank"
+                rel="noopener, noreferrer">
                 {@html $t("daisyUI 4.0 is here!")}
               </a>
               🎉
