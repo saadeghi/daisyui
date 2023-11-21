@@ -93,7 +93,7 @@
             <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
           </svg>
 
-          <span class="font-title text-lg md:text-2xl">daisyUI</span>
+          <span class="font-title text-lg md:text-2xl text-base-content">daisyUI</span>
         </a>
         <LogoContextMenu bind:this={contextMenuEl} />
         {#if showVersion}
