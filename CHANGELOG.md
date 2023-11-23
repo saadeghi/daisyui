@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.6 (2023-11-23)
+
+
+### Bug Fixes
+
+* radio tab visual issue on iOS safari. Closes [#2568](https://github.com/saadeghi/daisyui/issues/2568) ([e38abad](https://github.com/saadeghi/daisyui/commit/e38abad1ee0d8383f0cc6d89e4aa751bf4741f4c))
+
 ## 4.4.5 (2023-11-23)
 
 
