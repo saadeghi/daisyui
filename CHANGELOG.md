@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.5 (2023-11-23)
+
+
+### Bug Fixes
+
+* missing menu hover bg color ([87c5ad7](https://github.com/saadeghi/daisyui/commit/87c5ad7b96bc2b3a85a162936048617f0b0a8253))
+
 ## 4.4.4 (2023-11-23)
 
 
