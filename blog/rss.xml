@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Thu, 23 Nov 2023 00:07:18 GMT</lastBuildDate>
-    <pubDate>Thu, 23 Nov 2023 00:07:18 GMT</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2023 02:24:51 GMT</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2023 02:24:51 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ How to update daisyUI from version 3 to version 4 ]]>
+          </title>
+          <description>
+            <![CDATA[ This upgrade guide helps you easily update daisyUI to version 4 without breaking anything. ]]>
+          </description>
+          <link>https://daisyui.com/blog/how-to-update-daisyui-4/</link>
+          <pubDate>Thu, 23 Nov 2023 00:00:00 GMT</pubDate>
+          <image>https://daisyui.com/images/blog/daisyui-4-update-guide.jpg</image>
+          <image>https://daisyui.com/images/blog/daisyui-4-update-guide.jpg</image>
+          <media:content url="https://daisyui.com/images/blog/daisyui-4-update-guide.jpg" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.com/images/blog/daisyui-4-update-guide.jpg" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/how-to-update-daisyui-4/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ 9 essential Tailwind CSS plugins for developers ]]>
