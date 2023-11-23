@@ -7,7 +7,7 @@ module.exports = {
       {
         light: {
           ...themes["light"],
-          primary: "x",
+          // primary: "x",
         },
         dark: {
           ...themes["dark"],
