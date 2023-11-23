@@ -12,8 +12,10 @@
   /* default btn */
   & {
     @apply text-base-content outline-base-content no-underline shadow-sm;
-    background-color: oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity, 1));
-    border-color: oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity, 1));
+    background-color: oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity));
+    --tw-bg-opacity: 1;
+    border-color: oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity));
+    --tw-border-opacity: 1;
     @supports not (color: oklch(0 0 0)) {
       background-color: var(--btn-color, var(--fallback-b2));
       border-color: var(--btn-color, var(--fallback-b2));
