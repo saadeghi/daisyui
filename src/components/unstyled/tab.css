@@ -10,9 +10,12 @@
 .tab {
   @apply relative row-start-1 inline-flex h-8 cursor-pointer select-none appearance-none flex-wrap items-center justify-center text-center text-sm leading-loose;
   --tab-padding: 1rem;
-  &:is(input[type="radio"]):after {
-    --tw-content: attr(aria-label);
-    content: var(--tw-content);
+  &:is(input[type="radio"]) {
+    @apply w-auto rounded-b-none;
+    &:after {
+      --tw-content: attr(aria-label);
+      content: var(--tw-content);
+    }
   }
   &:not(input):empty {
     @apply cursor-default;
@@ -20,7 +23,7 @@
   }
 }
 .tab-content {
-  @apply col-span-full col-end-[span_9999] row-start-2 -mt-[--tab-border] hidden border-transparent;
+  @apply col-start-1 col-end-[span_9999] row-start-2 -mt-[--tab-border] hidden border-transparent;
   border-width: var(--tab-border, 0);
   :checked + &:nth-child(2),
   .tab-active + &:nth-child(2) {
