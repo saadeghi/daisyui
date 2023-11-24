@@ -32,7 +32,7 @@
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
 
 <!-- discounts -->
-<div class="flex flex-col gap-4 p-10">
+<div class="mb-10 flex flex-col gap-4 p-10">
   {#each discounts as discount}
     {#if discount.attributes.is_limited_to_products !== false}
       {#if dev}<meta name={discount.attributes.name} content="limited to specific products" />{/if}
@@ -137,29 +137,47 @@
 </div>
 
 <!-- published -->
-<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-16">
   {#each products.filter((product) => {
     return product.attributes.status === "published"
   }) as product}
     <div class="rounded-box relative grid grid-cols-5 gap-10 p-10">
-      <div class="col-span-5 row-start-2 flex flex-col gap-10 xl:col-span-2 xl:row-start-1">
-        <h2 class="text-lg font-black sm:text-3xl xl:text-4xl">
-          {product.attributes.name}
-        </h2>
+      <div class="col-span-5 row-start-2 flex flex-col gap-8 xl:col-span-2 xl:row-start-1">
+        <div>
+          {#if product.customattributes?.bestseller}
+            <span class="badge badge-success badge-outline badge-sm italic">Best Seller</span>
+          {/if}
+          {#if product.customattributes?.specialDiscount}
+            <span class="badge badge-success badge-outline badge-sm italic">Special Discount</span>
+          {/if}
+          <h2 class="text-lg font-black sm:text-3xl xl:text-4xl">
+            {product.attributes.name}
+          </h2>
+        </div>
         <div class="flex items-center justify-between">
-          <span class="text-2xl font-light xl:text-4xl">
-            {convertCurrency(product.attributes.price)}
-          </span>
+          <div class="flex gap-2">
+            {#if product.customattributes?.originalprice}
+              <span class="text-2xl line-through opacity-40 xl:text-4xl">
+                &nbsp;{convertCurrency(product.customattributes?.originalprice)}&nbsp;
+              </span>
+            {/if}
+            <span class="text-2xl font-light xl:text-4xl">
+              {convertCurrency(product.attributes.price)}
+            </span>
+          </div>
           <a
             href={product.attributes.buy_now_url}
-            class="btn btn-primary shrink-0"
+            class="btn btn-primary shrink-0 xl:px-10"
             target="_blank"
             rel="noopener noreferrer">
             Get it now
           </a>
         </div>
         {#if product.attributes.description}
-          <div class="prose prose-sm leading-3">{@html product.attributes.description}</div>
+          <div
+            class="prose prose-sm prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs">
+            {@html product.attributes.description}
+          </div>
         {/if}
       </div>
       <div class="col-span-5 row-start-1 xl:col-span-3">

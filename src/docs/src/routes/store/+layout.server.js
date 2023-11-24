@@ -1,4 +1,5 @@
 import { env } from "$env/dynamic/private"
+import { productCustomAttributes } from "$lib/data/store.js"
 
 const LSParams = {
   headers: {
@@ -17,6 +18,13 @@ export async function load({ params }) {
   const discountsResponse = await fetch("https://api.lemonsqueezy.com/v1/discounts", LSParams)
   if (productsResponse.ok) {
     storeInfo.products = await productsResponse.json()
+    // add additional product data
+    storeInfo.products.data.forEach((item) => {
+      const itemId = item.id
+      if (productCustomAttributes[itemId]) {
+        item.customattributes = productCustomAttributes[itemId]
+      }
+    })
   }
   if (discountsResponse.ok) {
     storeInfo.discounts = await discountsResponse.json()
