@@ -66,7 +66,22 @@
   }
 }
 
-.prose pre .token.prefix.deleted,
-.prose pre .token.prefix.inserted {
+.prose pre .token.prefix {
   user-select: none;
+  display: none;
+}
+.prose pre .token.deleted-sign,
+.prose pre .token.inserted-sign {
+  position: relative;
+  border-radius: var(--rounded-btn);
+  padding: 0.2rem 0.5rem;
+  inset-inline-start: -0.5rem;
+}
+.prose pre .token.deleted {
+  color: oklch(var(--erc));
+  background: oklch(var(--er));
+}
+.prose pre .token.inserted {
+  color: oklch(var(--suc));
+  background: oklch(var(--su));
 }
