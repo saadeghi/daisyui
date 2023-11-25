@@ -1,4 +1,4 @@
-.tabs-lifted .tab:focus-visible {
+.tabs-lifted > .tab:focus-visible {
   border-end-end-radius: 0;
   border-end-start-radius: 0;
 }
@@ -33,12 +33,12 @@
     }
   }
 }
-.tabs-bordered .tab {
+.tabs-bordered > .tab {
   @apply border-base-content border-opacity-20;
   border-style: solid;
   border-bottom-width: calc(var(--tab-border, 1px) + 1px);
 }
-.tabs-lifted .tab {
+.tabs-lifted > .tab {
   border: var(--tab-border, 1px) solid transparent;
   border-width: 0 0 var(--tab-border, 1px) 0;
   border-start-start-radius: var(--tab-radius, 0.5rem);
@@ -107,11 +107,11 @@
     }
   }
 }
-.tabs-lifted
+.tabs-lifted >
   .tab-active:not(.tab-disabled):not([disabled])
   + .tabs-lifted
   .tab-active:not(.tab-disabled):not([disabled]),
-.tabs-lifted .tab:is(input:checked) + .tabs-lifted .tab:is(input:checked) {
+.tabs-lifted > .tab:is(input:checked) + .tabs-lifted .tab:is(input:checked) {
   &:before {
     background-image: var(--radius-end);
     background-position: top right;
