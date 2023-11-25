@@ -18,7 +18,7 @@ If you haven't used Svelte before, You would be surprised how easy it is to lear
 
 ## How to install SvelteKit?
 
-To start new SvelteKit project, you can use the following command:
+1. To start new SvelteKit project, you can use the following command:
 
 ```
 npm create svelte@latest my-app
@@ -37,7 +37,7 @@ Let's pick `Skeleton project`:
 └
 ```
 
-After the setup is done, go to the project directory and install dependencies and start the development server:
+2. After the setup is done, go to the project directory and install dependencies and start the development server:
 
 ```
 cd my-app
@@ -51,15 +51,15 @@ That's it! You have a new SvelteKit project.
 
 ## How to add Tailwind CSS and daisyUI to SvelteKit?
 
-Install Tailwind CSS, PostCSS, Autoprefixer and daisyUI,  
-Then generate tailwind.config.js and postcss.config.js files:
+1. Install Tailwind CSS, PostCSS, Autoprefixer and daisyUI,  
+   Then generate tailwind.config.js and postcss.config.js files:
 
 ```
 npm install -D tailwindcss postcss autoprefixer daisyui
 npx tailwindcss init -p
 ```
 
-Edit `tailwind.config.js` file. Add `content` and `plugins` to it:
+2. Edit `tailwind.config.js` file. Add `content` and `plugins` to it:
 
 ```diff
 /** @type {import('tailwindcss').Config} */
@@ -74,7 +74,7 @@ export default {
 }
 ```
 
-Add the following lines to `svelte.config.js` file:
+3. Add the following lines to `svelte.config.js` file:
 
 ```diff
 import adapter from '@sveltejs/adapter-auto';
@@ -93,7 +93,7 @@ const config = {
 export default config;
 ```
 
-Create a new `src/routes/+layout.svelte` file and import `tailwindcss/tailwind.css` in it using this command
+4. Create a new `src/routes/+layout.svelte` file and import `tailwindcss/tailwind.css` in it using this command
 
 ```sh
 echo '
@@ -105,6 +105,8 @@ echo '
 ' > src/routes/+layout.svelte
 ```
 
+## How to use daisyUI components in SvelteKit?
+
 Add a daisyUI button to `src/routes/+page.svelte` file:
 
 ```diff
@@ -113,11 +115,13 @@ Add a daisyUI button to `src/routes/+page.svelte` file:
 +<button class="btn btn-primary">Hello daisyUI</button>
 ```
 
-And run the development server again, and see the button with daisyUI styles!
+Run the development server and see the button with daisyUI styles!
 
 ```
 npm run dev -- --open
 ```
+
+Easy, right?
 
 Explore all the [daisyUI components](https://daisyui.com/components/) you can use in your project,  
 And also check out the [SvelteKit docs](https://kit.svelte.dev/) to learn more about SvelteKit.

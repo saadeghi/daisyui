@@ -1,5 +1,5 @@
 ---
-title: How to install daisyUI and Tailwind CSS in Next.js
+title: How to install daisyUI and Tailwind CSS in Next.js 14
 desc: In this article, we will learn how to use daisyUI component library in Next.js.
 published: true
 date: 2023-9-22
@@ -29,6 +29,12 @@ npx create-next-app@latest
 
 ![Install Next.js](/images/blog/install-nextjs.jpg)
 
+Go to the project directory. If you named it `my-app`:
+
+```
+cd my-app
+```
+
 ### Installing daisyUI
 
 3. Now install the latest version of daisyUI as a dev dependency:
@@ -37,12 +43,13 @@ npx create-next-app@latest
 npm i -D daisyui@latest
 ```
 
-4. Open `tailwind.config.js` file  
-   Add `require("daisyui")` to the `plugins` array:
+4. Open `tailwind.config.ts` file  
+   Add daisyUI as a plugin:
 
 ```diff
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
++ import daisyui from 'daisyui'
+const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -58,13 +65,15 @@ module.exports = {
     },
   },
 - plugins: [],
-+ plugins: [require("daisyui")],
++ plugins: [daisyui],
 }
+export default config
+
 ```
 
 ### Using daisyUI
 
-5. Open `/app/page.js` file  
+5. Open `/app/page.tsx` file  
    Replace the content with:
 
 ```jsx
@@ -88,3 +97,11 @@ npm run dev
 And open `http://localhost:3000/` to see a button with daisyUI styles.
 
 You can now use any [daisyUI component](https://daisyui.com/components/) or any [Tailwind CSS utility class](https://tailwindcss.com/) in your Next.js project.
+
+7. Extra: You can also remove the default Next.js styles from `app/globals.css`, to have a clean start. Only keep the following line:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
