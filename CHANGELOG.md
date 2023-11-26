@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.9 (2023-11-26)
+
+
+### Bug Fixes
+
+* missing responsive dropdown modifiers. closes [#2490](https://github.com/saadeghi/daisyui/issues/2490) ([ac3266a](https://github.com/saadeghi/daisyui/commit/ac3266aebfa10bff1f46c9f78eecdf6ac72792e5))
+
 ## 4.4.8 (2023-11-26)
 
 ### Bug Fixes
