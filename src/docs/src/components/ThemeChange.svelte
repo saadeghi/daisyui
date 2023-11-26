@@ -43,7 +43,7 @@
     <div class="grid grid-cols-1 gap-3 p-3">
       {#each themes as theme}
         <button
-          class="outline-base-content text-left outline-offset-4"
+          class="outline-base-content text-start outline-offset-4"
           data-set-theme={theme}
           data-act-class="[&_svg]:visible">
           <span
