@@ -133,13 +133,12 @@
             </div>
             <div class="flex gap-2 font-mono text-xs">
               <a
-                class="text-base-content/70 italic"
+                class="link link-hover text-base-content/70 italic"
                 href="https://github.com/saadeghi/daisyui/discussions/2507"
                 target="_blank"
                 rel="noopener, noreferrer">
-                {@html $t("daisyUI 4.0 is here!")}
+                {@html $t("daisyUI 4 upgrade guide")}
               </a>
-              🎉
             </div>
             <!-- <div class="flex gap-2">
               <a class="link link-hover link-primary rounded-full" href="/docs/changelog/">
@@ -1129,7 +1128,7 @@
           class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed will-change-auto motion-reduce:!transform-none"
           style={`transform:translateX(${animateValue(
             section["performance"],
-            [-100, -10],
+            [-70, -20],
             [20, 0]
           )}%)`}>
           <div class="card-body">
@@ -1150,7 +1149,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section["performance"], [-100, -10], [100, 12])}
+                value={animateValue(section["performance"], [-70, -20], [100, 12])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -1172,7 +1171,7 @@
           class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed will-change-auto motion-reduce:!transform-none xl:col-start-3"
           style={`transform:translateX(${animateValue(
             section["performance"],
-            [-100, -10],
+            [-70, -20],
             [-20, 0]
           )}%)`}>
           <div class="card-body">
@@ -1193,7 +1192,7 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section["performance"], [-100, -10], [100, 20])}
+                value={animateValue(section["performance"], [-70, -20], [100, 20])}
                 max="100" />
             </div>
             <span class="mt-2 flex gap-2 text-xs">
@@ -1291,13 +1290,13 @@
   class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-gradient-to-t py-16"
   bind:this={section["agnostic"]}>
   <div
-    class="bg-warning end-1/5 pointer-events-none absolute -top-full aspect-square w-full -translate-x-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
+    class="bg-primary end-1/5 pointer-events-none absolute -top-1/2 aspect-square w-full rounded-full opacity-5 blur-3xl" />
   <div
-    class="bg-base-content top-1/5 pointer-events-none absolute -start-40 aspect-square w-2/3 rounded-full border-2 opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
+    class="bg-success pointer-events-none absolute bottom-[-110%] left-1/2 aspect-square w-2/3 -translate-x-1/2 rounded-full border-2 opacity-20 blur-3xl" />
   <div
-    class="bg-info pointer-events-none absolute start-0 top-1/2 aspect-square w-1/2 -translate-y-1/2 rounded-full opacity-5 blur-3xl [transform:translate3d(0,0,0)]" />
+    class="bg-info pointer-events-none absolute bottom-[-130%] left-0 aspect-square w-1/2 rounded-full opacity-20 blur-3xl [transform:translate3d(0,0,0)]" />
   <div
-    class="flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse">
+    class="relative flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse">
     <div>
       <h2 class="font-title text-center leading-none xl:text-start">
         <span class="text-[clamp(2rem,8vw,4rem)] font-black">{$t("Pure CSS.")}</span>
@@ -1321,7 +1320,10 @@
       </p>
       <div class="h-10" />
       <div class="flex w-full justify-center xl:justify-start">
-        <a data-sveltekit-preload-data href="/docs/install/" class="btn btn-lg btn-wide group">
+        <a
+          data-sveltekit-preload-data
+          href="/docs/install/"
+          class="btn btn-lg btn-wide btn-outline group">
           {$t("cta-2")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
