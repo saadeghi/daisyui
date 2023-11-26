@@ -3,9 +3,6 @@
   --alert-bg: theme(colors.base-200);
   --alert-bg-mix: theme(colors.base-100);
   background-color: var(--alert-bg);
-  /* @supports (background-color: color-mix(in srgb, var(--alert-bg) 50%, var(--alert-bg-mix))) {
-    background-color: color-mix(in srgb, var(--alert-bg) 50%, var(--alert-bg-mix));
-  } */
   &-info {
     @apply text-info-content border-info/20;
     --alert-bg: theme(colors.info);

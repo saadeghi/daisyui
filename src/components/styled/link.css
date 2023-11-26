@@ -1,27 +1,27 @@
 .link {
   &-primary {
-    @apply text-primary [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.primary)_80%,black)];
+    @apply text-primary [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.primary)_80%,black)];
   }
   &-secondary {
-    @apply text-secondary [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.secondary)_80%,black)];
+    @apply text-secondary [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.secondary)_80%,black)];
   }
   &-accent {
-    @apply text-accent [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.accent)_80%,black)];
+    @apply text-accent [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.accent)_80%,black)];
   }
   &-neutral {
-    @apply text-neutral [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.neutral)_80%,black)];
+    @apply text-neutral [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.neutral)_80%,black)];
   }
   &-success {
-    @apply text-success [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.success)_80%,black)];
+    @apply text-success [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.success)_80%,black)];
   }
   &-info {
-    @apply text-info [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.info)_80%,black)];
+    @apply text-info [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.info)_80%,black)];
   }
   &-warning {
-    @apply text-warning [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.warning)_80%,black)];
+    @apply text-warning [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.warning)_80%,black)];
   }
   &-error {
-    @apply text-error [@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.error)_80%,black)];
+    @apply text-error [@supports(color:color-mix(in_oklab,black,black))]:[@media(hover:hover)]:hover:text-[color-mix(in_oklab,theme(colors.error)_80%,black)];
   }
   &:focus {
     @apply outline-none;

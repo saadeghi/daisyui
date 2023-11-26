@@ -2,14 +2,14 @@
   @apply p-2;
 }
 :where(.menu li:empty) {
-  @apply bg-base-content/10;
+  @apply bg-base-content opacity-10;
   margin: 0.5rem 1rem;
   height: 1px;
 }
 .menu :where(li ul) {
   @apply ms-4 ps-2;
   &:before {
-    @apply bg-base-content/10 absolute bottom-3 start-0 top-3 w-px;
+    @apply bg-base-content absolute bottom-3 start-0 top-3 w-px opacity-10;
     content: "";
   }
 }
