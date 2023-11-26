@@ -16,7 +16,7 @@ module.exports = [
   {
     // responsive utilites for daisyUI components
     pattern:
-      /(drawer-open|modal-middle|modal-top|modal-bottom|card-side|card-compact|card-normal|stats|divider-horizontal|divider-vertical)/,
+      /(drawer-open|modal-(middle|top|bottom)|card-(side|compact|normal)|(stats|divider)-(horizontal|vertical)|dropdown-(end|top|bottom|left|right))/,
     variants: ["sm", "md", "lg", "xl"],
   },
   {
