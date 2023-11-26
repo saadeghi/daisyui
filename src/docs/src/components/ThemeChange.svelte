@@ -14,7 +14,7 @@
 <div
   title="Change Theme"
   class={`dropdown dropdown-end hidden [@supports(color:oklch(0_0_0))]:block ${dropdownClasses}`}>
-  <div tabindex="0" class={`btn ${btnClasses}`}>
+  <div tabindex="0" role="button" class={`btn ${btnClasses}`}>
     <svg
       width="20"
       height="20"

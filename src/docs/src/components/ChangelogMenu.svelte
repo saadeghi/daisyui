@@ -4,12 +4,10 @@
 </script>
 
 <div class="dropdown" data-sveltekit-preload-data>
-  <div tabindex="0" class="link link-hover inline-block font-mono text-xs">
+  <div tabindex="0" role="button" class="link link-hover inline-block font-mono text-xs">
     {version}
   </div>
-  <ul
-    tabindex="0"
-    class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 p-2 shadow">
+  <ul class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 p-2 shadow">
     <li>
       <a href="/docs/changelog/">
         <svg
