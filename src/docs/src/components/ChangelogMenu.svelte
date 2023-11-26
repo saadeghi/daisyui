@@ -7,7 +7,8 @@
   <div tabindex="0" role="button" class="link link-hover inline-block font-mono text-xs">
     {version}
   </div>
-  <ul class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 p-2 shadow">
+  <ul
+    class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 border border-white/5 p-2 shadow-2xl outline outline-1 outline-black/5">
     <li>
       <a href="/docs/changelog/">
         <svg
