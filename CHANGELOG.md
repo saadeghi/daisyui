@@ -4,63 +4,59 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 4.4.8 (2023-11-26)
 
-## 4.4.7 (2023-11-25)
+### Bug Fixes
 
+- Fix: `button-active` color fallback for old browser
+- Fix: `link` hover color fallback for old browser
+- Fix: `menu` line color fallback for old browser
+
+## 4.4.7 (2023-11-25)
 
 ### Bug Fixes
 
-* [#2573](https://github.com/saadeghi/daisyui/issues/2573) tab styles ([#2574](https://github.com/saadeghi/daisyui/issues/2574)) ([2ddbc48](https://github.com/saadeghi/daisyui/commit/2ddbc48ab7780eb6f7d7fba181715d3bba1cca96))
+- [#2573](https://github.com/saadeghi/daisyui/issues/2573) tab styles ([#2574](https://github.com/saadeghi/daisyui/issues/2574)) ([2ddbc48](https://github.com/saadeghi/daisyui/commit/2ddbc48ab7780eb6f7d7fba181715d3bba1cca96))
 
 ## 4.4.6 (2023-11-23)
 
-
 ### Bug Fixes
 
-* radio tab visual issue on iOS safari. Closes [#2568](https://github.com/saadeghi/daisyui/issues/2568) ([e38abad](https://github.com/saadeghi/daisyui/commit/e38abad1ee0d8383f0cc6d89e4aa751bf4741f4c))
+- radio tab visual issue on iOS safari. Closes [#2568](https://github.com/saadeghi/daisyui/issues/2568) ([e38abad](https://github.com/saadeghi/daisyui/commit/e38abad1ee0d8383f0cc6d89e4aa751bf4741f4c))
 
 ## 4.4.5 (2023-11-23)
 
-
 ### Bug Fixes
 
-* missing menu hover bg color ([87c5ad7](https://github.com/saadeghi/daisyui/commit/87c5ad7b96bc2b3a85a162936048617f0b0a8253))
+- missing menu hover bg color ([87c5ad7](https://github.com/saadeghi/daisyui/commit/87c5ad7b96bc2b3a85a162936048617f0b0a8253))
 
 ## 4.4.4 (2023-11-23)
 
-
 ### Bug Fixes
 
-* [#2559](https://github.com/saadeghi/daisyui/issues/2559) ([ccb496d](https://github.com/saadeghi/daisyui/commit/ccb496d5118a902597a8ab7bc4bd084c5bc2488e))
+- [#2559](https://github.com/saadeghi/daisyui/issues/2559) ([ccb496d](https://github.com/saadeghi/daisyui/commit/ccb496d5118a902597a8ab7bc4bd084c5bc2488e))
 
 ## 4.4.3 (2023-11-23)
 
-
 ### Bug Fixes
 
-* [#2556](https://github.com/saadeghi/daisyui/issues/2556) ([b87e5bc](https://github.com/saadeghi/daisyui/commit/b87e5bc1f3c85cc6157306a58a43e173879f174d))
+- [#2556](https://github.com/saadeghi/daisyui/issues/2556) ([b87e5bc](https://github.com/saadeghi/daisyui/commit/b87e5bc1f3c85cc6157306a58a43e173879f174d))
 
 ## 4.4.2 (2023-11-18)
 
-
 ### Bug Fixes
 
-* improve default success color contrast vs base color ([ef9f542](https://github.com/saadeghi/daisyui/commit/ef9f5420e52b048f93f5ad043886bfe010f5921f))
+- improve default success color contrast vs base color ([ef9f542](https://github.com/saadeghi/daisyui/commit/ef9f5420e52b048f93f5ad043886bfe010f5921f))
 
 ## 4.4.1 (2023-11-18)
 
-
 ### Bug Fixes
 
-* improve neutral color in dim theme ([953534c](https://github.com/saadeghi/daisyui/commit/953534c218a3a2d860575adcb66b5458e3e2fc9d))
+- improve neutral color in dim theme ([953534c](https://github.com/saadeghi/daisyui/commit/953534c218a3a2d860575adcb66b5458e3e2fc9d))
 
 ## 4.4.0 (2023-11-17)
 
-
 ### Features
 
-* invalid color value in config now shows an error ([41ee386](https://github.com/saadeghi/daisyui/commit/41ee386267ff0f37daa52730674c7a614a2e741e))
-
-## 4.3.1 (2023-11-16)
+- invalid color value in config now shows an error ([41ee386](https://github.com/saadeghi/daisyui/commit/41ee386267ff0f37daa52730674c7a614a2e741e))
 
 ## [4.3.0](https://github.com/saadeghi/daisyui/compare/v4.3.0-alpha.11...v4.3.0) (2023-11-16)
 
