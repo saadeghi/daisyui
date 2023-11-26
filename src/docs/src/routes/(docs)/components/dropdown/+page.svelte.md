@@ -48,26 +48,21 @@ data="{[
 }</pre>
 </Component>
 
-### Method 2: using label and CSS focus
+### Method 2: Using CSS focus
 
 <div class="alert text-sm mb-2">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     <div>
-      We use a &lt;label tabindex="0"&gt; instead of a &lt;button&gt; because Safari has <a rel="noopener noreferrer" target="_blank" href="https://bugs.webkit.org/show_bug.cgi?id=22261">a bug</a> that prevents the button from being focused.
+      We can't use &lt;button&gt; here because Safari has <a rel="noopener noreferrer" target="_blank" href="https://bugs.webkit.org/show_bug.cgi?id=22261">a bug</a> that prevents the button from being focused. <br/>&lt;div role="button" tabindex="0"&gt; is a workaround for this bug. <br/>It is accessible and works in all browsers.
     </div>
-</div>
-
-<div class="alert text-sm">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  Using tabindex="0" is required so the dropdown can be focused.
 </div>
 
 <Component title="Dropdown menu">
 <div>
   <div class="text-sm mb-4 text-center">Click outside to close</div>
   <div class="dropdown mb-32">
-    <div tabindex="0" class="m-1 btn">Click to open</div>
-    <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+    <div tabindex="0" role="button" class="m-1 btn">Click to open</div>
+    <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
       <li><button>Item 1</button></li>
       <li><button>Item 2</button></li>
     </ul>
@@ -75,8 +70,8 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -88,16 +83,16 @@ data="{[
 
 <Component title="Dropdown / aligns to end">
 <div class="dropdown dropdown-end mb-32">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-end">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -107,16 +102,16 @@ data="{[
 
 <Component title="Dropdown top">
 <div class="dropdown dropdown-top mt-32">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-top">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -126,16 +121,16 @@ data="{[
 
 <Component title="Dropdown top / aligns to end">
 <div class="dropdown dropdown-top dropdown-end mt-32">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-top $$dropdown-end">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -146,15 +141,15 @@ data="{[
 <Component title="Dropdown bottom">
 <div class="dropdown dropdown-bottom mb-32">
   <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-bottom">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -164,16 +159,16 @@ data="{[
 
 <Component title="Dropdown bottom / aligns to end">
 <div class="dropdown dropdown-bottom dropdown-end mb-32">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-bottom $$dropdown-end">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -183,16 +178,16 @@ data="{[
 
 <Component title="Dropdown left">
 <div class="dropdown dropdown-left mb-16">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-left">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -202,16 +197,16 @@ data="{[
 
 <Component title="Dropdown left / aligns to end">
 <div class="dropdown dropdown-left dropdown-end mt-16">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-left $$dropdown-end">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -221,16 +216,16 @@ data="{[
 
 <Component title="Dropdown right">
 <div class="dropdown dropdown-right mb-16">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-right">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -240,16 +235,16 @@ data="{[
 
 <Component title="Dropdown right / aligns to end">
 <div class="dropdown dropdown-right dropdown-end mt-16">
-  <div tabindex="0" class="m-1 btn">Click</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-right $$dropdown-end">
-  <label tabindex="0" class="$$btn m-1">Click</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -261,16 +256,16 @@ data="{[
 
 <Component title="Dropdown on hover">
 <div class="dropdown dropdown-hover mb-32">
-  <div tabindex="0" class="m-1 btn">Hover</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Hover</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-hover">
-  <label tabindex="0" class="$$btn m-1">Hover</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Hover</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -282,16 +277,16 @@ data="{[
 
 <Component title="Force open">
 <div class="dropdown dropdown-open mb-32">
-  <div tabindex="0" class="m-1 btn">Button</div>
-  <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="m-1 btn">Button</div>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <li><button>Item 1</button></li>
     <li><button>Item 2</button></li>
   </ul>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown $$dropdown-open">
-  <label tabindex="0" class="$$btn m-1">Button</label>
-  <ul tabindex="0" class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="$$btn m-1">Button</div>
+  <ul class="$$dropdown-content z-[1] $$menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
   </ul>
@@ -303,7 +298,7 @@ data="{[
 
 <Component title="Card as dropdown">
 <div class="dropdown mb-32">
-  <div tabindex="0" class="m-1 btn">Click</div>
+  <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <div tabindex="0" class="w-64 p-2 shadow card card-compact dropdown-content z-[1] bg-primary text-primary-content">
     <div class="card-body">
       <h3 class="card-title">Card title!</h3>
@@ -313,7 +308,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$dropdown">
-  <label tabindex="0" class="$$btn m-1">Click</label>
+  <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <div tabindex="0" class="$$dropdown-content z-[1] $$card $$card-compact w-64 p-2 shadow bg-primary text-primary-content">
     <div class="$$card-body">
       <h3 class="$$card-title">Card title!</h3>
@@ -333,8 +328,8 @@ data="{[
     <div class="flex items-stretch">
       <button class="btn btn-ghost rounded-btn">Button</button>
       <div class="dropdown dropdown-end">
-        <div tabindex="0" class="btn btn-ghost rounded-btn">Dropdown</div>
-        <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-4">
+        <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Dropdown</div>
+        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-4">
           <li><button>Item 1</button></li> 
           <li><button>Item 2</button></li>
         </ul>
@@ -351,8 +346,8 @@ data="{[
     <div class="flex items-stretch">
       <a class="$$btn $$btn-ghost rounded-btn">Button</a>
       <div class="$$dropdown $$dropdown-end">
-        <label tabindex="0" class="$$btn $$btn-ghost rounded-btn">Dropdown</label>
-        <ul tabindex="0" class="$$menu $$dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+        <div tabindex="0" role="button" class="$$btn $$btn-ghost rounded-btn">Dropdown</div>
+        <ul class="$$menu $$dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
           <li><a>Item 1</a></li> 
           <li><a>Item 2</a></li>
         </ul>
@@ -367,7 +362,7 @@ data="{[
 <div class="mb-28 mt-6 flex gap-1 items-center">
   A normal text and a helper dropdown
   <div class="dropdown dropdown-end">
-    <div tabindex="0" class="btn btn-circle btn-ghost btn-xs text-info">
+    <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-xs text-info">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
     </div>
     <div tabindex="0" class="shadow card compact dropdown-content z-[1] bg-base-100 rounded-box w-64">
@@ -381,9 +376,9 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `A normal text and a helper dropdown
 <div class="$$dropdown $$dropdown-end">
-  <label tabindex="0" class="$$btn $$btn-circle $$btn-ghost $$btn-xs text-info">
+  <div tabindex="0" role="button" class="$$btn $$btn-circle $$btn-ghost $$btn-xs text-infodiv>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  </label>
+  </div>
   <div tabindex="0" class="$$card $$compact $$dropdown-content z-[1] shadow bg-base-100 rounded-box w-64">
     <div class="$$card-body">
       <h2 class="$$card-title">You needed more info?</h2> 

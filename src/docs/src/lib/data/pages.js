@@ -30,7 +30,7 @@ export const pages = [
       },
       {
         name: "Colors",
-        tags: "colors 🎨",
+        tags: "colors",
         href: "/docs/colors/",
         badge: "updated",
       },
@@ -64,7 +64,7 @@ export const pages = [
         items: [
           {
             name: "Button",
-            tags: "button btn 🍑",
+            tags: "button btn",
             href: "/components/button/",
             badge: "updated",
           },
@@ -72,6 +72,7 @@ export const pages = [
             name: "Dropdown",
             tags: "dropdown popover menu listbox",
             href: "/components/dropdown/",
+            badge: "updated",
           },
           {
             name: "Modal",
@@ -259,7 +260,7 @@ export const pages = [
         items: [
           {
             name: "Checkbox",
-            tags: "checkbox ✅",
+            tags: "checkbox",
             href: "/components/checkbox/",
           },
           {
@@ -326,7 +327,7 @@ export const pages = [
           },
           {
             name: "Footer",
-            tags: "footer 🦶",
+            tags: "footer",
             href: "/components/footer/",
           },
           {
@@ -346,7 +347,7 @@ export const pages = [
           },
           {
             name: "Mask",
-            tags: "mask crop 😷",
+            tags: "mask crop",
             href: "/components/mask/",
           },
           {
