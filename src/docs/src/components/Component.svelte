@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import Translate from "$components/Translate.svelte"
-  import { htmlToJsx } from "$lib/actions"
+  import { htmlToJsx, linkProcess } from "$lib/actions"
   let Prism
   onMount(async () => {
     Prism = (await import("./Prism.svelte")).default
@@ -104,11 +104,13 @@
     {#if onMount && showContent == "html"}
       <div class="grid">
         <div class="hidden" bind:this={htmlSlot}>
-          <slot name="html" />
+          <pre use:linkProcess><slot name="html" /></pre>
         </div>
         <div class="code-wrapper col-start-1 row-start-1">
           <svelte:component this={Prism} language="html">
-            <slot name="html" />
+            <div use:linkProcess>
+              <slot name="html" />
+            </div>
           </svelte:component>
         </div>
         <div class="col-start-1 row-start-1 flex items-start justify-end p-2 rtl:justify-start">
@@ -144,14 +146,14 @@
       <div class="grid">
         <div class="hidden" bind:this={jsxSlot}>
           {#if $$slots.jsx}
-            <pre use:htmlToJsx><slot name="jsx" /></pre>
+            <pre use:htmlToJsx use:linkProcess><slot name="jsx" /></pre>
           {:else}
-            <pre use:htmlToJsx><slot name="html" /></pre>
+            <pre use:htmlToJsx use:linkProcess><slot name="html" /></pre>
           {/if}
         </div>
         <div class="code-wrapper col-start-1 row-start-1">
           <svelte:component this={Prism} language="svelte">
-            <div use:htmlToJsx>
+            <div use:htmlToJsx use:linkProcess>
               {#if $$slots.jsx}
                 <slot name="jsx" />
               {:else}

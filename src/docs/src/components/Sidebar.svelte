@@ -37,10 +37,7 @@
       <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
     </svg>
 
-    <div class="font-title inline-flex text-lg md:text-2xl">
-      <span class="lowercase">daisy</span>
-      <span class="uppercase text-[#1AD1A5]">UI</span>
-    </div>
+    <div class="font-title inline-flex text-lg md:text-2xl">daisyUI</div>
   </a>
   <LogoContextMenu bind:this={contextMenuEl} />
   <ChangelogMenu />

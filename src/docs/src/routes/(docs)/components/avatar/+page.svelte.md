@@ -284,43 +284,43 @@ data="{[
 <Component title="Avatar placeholder">
 <div class="avatar placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-24">
-    <span class="text-3xl">K</span>
+    <span class="text-3xl">D</span>
   </div>
 </div> 
 <div class="avatar online placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-16">
-    <span class="text-xl">JO</span>
+    <span class="text-xl">AI</span>
   </div>
 </div> 
 <div class="avatar placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-12">
-    <span>MX</span>
+    <span>SY</span>
   </div>
 </div> 
 <div class="avatar placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-8">
-    <span class="text-xs">AA</span>
+    <span class="text-xs">UI</span>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar $$placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-24">
-    <span class="text-3xl">K</span>
+    <span class="text-3xl">D</span>
   </div>
 </div> 
 <div class="$$avatar $$online $$placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-16">
-    <span class="text-xl">JO</span>
+    <span class="text-xl">AI</span>
   </div>
 </div> 
 <div class="$$avatar $$placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-12">
-    <span>MX</span>
+    <span>SY</span>
   </div>
 </div> 
 <div class="$$avatar $$placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-8">
-    <span class="text-xs">AA</span>
+    <span class="text-xs">UI</span>
   </div>
 </div>`
 }</pre>

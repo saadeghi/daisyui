@@ -1,3 +1,6 @@
+import { readEnv } from "$lib/util"
+const root = readEnv("VITE_ROOT")
+
 export function replace(node, parameters = {}) {
   const originalContent = node.textContent ?? ""
   const defaultParameters = {
@@ -220,6 +223,26 @@ export function htmlToJsx(node) {
     // "src-set=": "srcSet=",
     "tabindex=": "tabIndex=",
     // "use-map=": "useMap=",
+  }
+  const re = new RegExp(Object.keys(stringsToReplace).join("|"), "gi")
+
+  function update() {
+    node.textContent = originalContent.replace(re, function (matched) {
+      return stringsToReplace[matched.toLowerCase()]
+    })
+  }
+
+  update()
+
+  return {
+    update,
+  }
+}
+export function linkProcess(node) {
+  const originalContent = node.textContent ?? ""
+
+  const stringsToReplace = {
+    '"/images': `"${root}/images`,
   }
   const re = new RegExp(Object.keys(stringsToReplace).join("|"), "gi")
 
