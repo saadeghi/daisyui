@@ -125,7 +125,7 @@ toggle
 range
   --filler-size // size of range thumb
   --filler-offset // offset of range thumb
-  --range-shdw // shadow color of range thumb (OKLCH values)
+  --range-shdw // shadow color of range thumb
 
 glass
   --glass-blur // blur value of glass effect
