@@ -149,7 +149,7 @@
           </div>
           <div class="h-4" />
           <h1
-            class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] xl:w-[115%] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]">
+            class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] [word-break:auto-phrase] xl:w-[115%] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]">
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20">
               {@html $t("The most popular")}
