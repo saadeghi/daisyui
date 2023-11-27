@@ -79,4 +79,24 @@ export const articles = [
     site: "Medium",
     link: "https://balajidharma.medium.com/how-to-install-daisyui-in-laravel-vite-29f606883ff6",
   },
+  {
+    title: "16 Popular CSS Frameworks That Will Help You Save Time (With Style)",
+    site: "DreamHost",
+    link: "https://www.dreamhost.com/blog/css-frameworks/",
+  },
+  {
+    title: "An Overview of 25+ UI Component Libraries in 2023",
+    site: "Builder.io",
+    link: "https://www.builder.io/blog/25-plus-ui-component-libraries",
+  },
+  {
+    title: "10 best Tailwind CSS component and template collections",
+    site: "LogRocket",
+    link: "https://blog.logrocket.com/10-best-tailwind-css-component-template-collections/#daisyui",
+  },
+  {
+    title: "9 Best Tailwind Component Libraries and How to Choose One",
+    site: "Prismic",
+    link: "https://prismic.io/blog/tailwind-component-library",
+  },
 ]
