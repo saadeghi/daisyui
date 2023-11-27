@@ -224,7 +224,7 @@ module.exports = {
 ## <Translate text="How to customize an existing theme?" />
 
 <Translate text="In your tailwind.config.js, you can require an existing daisyUI theme and override some colors." />  
-<Translate text="In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>primary-focus</code> colors:" />
+<Translate text="In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:" />
 
 ```js
 module.exports = {

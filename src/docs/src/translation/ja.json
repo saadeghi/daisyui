@@ -453,5 +453,17 @@
   "Feedback": "フィードバック",
   "Skeleton": "Skeleton スケルトン",
   "Skeleton is a component that can be used to show a loading state of a component.": "スケルトンは、コンポーネントのロード状態を表示するために使用できるコンポーネントです。",
+  "Click to open this one and close others": "Click to open this one and close others",
+  "Using Accordion and Join together": "Using Accordion and Join together",
+  "Container element": "Container element",
+  "Using <code>&lt;dialog&gt;</code> element: It needs JS to open but it has better accessibility and we can close it using <span class='kbd kbd-xs'>Esc</span> key": "Using <code>&lt;dialog&gt;</code> element: It needs JS to open but it has better accessibility and we can close it using <span class='kbd kbd-xs'>Esc</span> key",
+  "Using a hidden <code>&lt;input type='checkbox'&gt;</code> and <code>&lt;label&gt;</code> to check/uncheck the checkbox and open/close the modal": "Using a hidden <code>&lt;input type='checkbox'&gt;</code> and <code>&lt;label&gt;</code> to check/uncheck the checkbox and open/close the modal",
+  "Using <code>&lt;a&gt;</code> anchor links: A link adds a parameter to the URL and you only see the modal when the URL has that parameter": "Using <code>&lt;a&gt;</code> anchor links: A link adds a parameter to the URL and you only see the modal when the URL has that parameter",
+  "This component is deprecated and will be removed in the next major version. Use <a class='link' href='/components/join/'>Join</a> instead.": "This component is deprecated and will be removed in the next major version. Use <a class='link' href='/components/join/'>Join</a> instead.",
+  "Blog": "Blog",
+  "Sponsors": "Sponsors",
+  "Use daisyUI from CDN": "Use daisyUI from CDN",
+  "How to use daisyUI from a CDN?": "How to use daisyUI from a CDN?",
+  "etc.": "etc.",
   "": ""
 }

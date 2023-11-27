@@ -1,7 +1,7 @@
 import fs from "fs"
 import { diffString, diff } from "json-diff"
 
-const langs = ["es", "fr", "id", "ja", "ko", "pt", "ru", "zh_hans", "zh_hant"]
+const langs = ["es", "fr", "id", "ja", "ko", "pt", "ru", "uk", "zh_hans", "zh_hant", "ar", "fa"]
 
 langs.forEach((lang) => {
   fs.readFile(`src/translation/en.json`, "utf8", (err1, file1) => {
