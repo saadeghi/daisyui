@@ -115,8 +115,8 @@ tooltip
   --tooltip-tail-offset // offset of tooltip tail from target element
 
 checkbox
-  --chkbg // background color of checkbox (HSL values)
-  --chkfg // foreground color of checkbox (HSL values)
+  --chkbg // background color of checkbox
+  --chkfg // foreground color of checkbox
 
 toggle
   --tglbg // background color of toggle
@@ -125,7 +125,7 @@ toggle
 range
   --filler-size // size of range thumb
   --filler-offset // offset of range thumb
-  --range-shdw // shadow color of range thumb (HSL values)
+  --range-shdw // shadow color of range thumb (OKLCH values)
 
 glass
   --glass-blur // blur value of glass effect

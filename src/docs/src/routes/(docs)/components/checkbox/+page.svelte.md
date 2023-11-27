@@ -214,3 +214,12 @@ data="{[
 <input type="checkbox" class="$$checkbox" id="my-checkbox" />`
 }</pre>
 </Component>
+
+<Component title="Checkbox with custom colors">
+<input type="checkbox" checked="checked" class="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]" />
+<input type="checkbox" checked="checked" class="checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="checkbox" checked="checked" class="$$checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]" />
+<input type="checkbox" checked="checked" class="$$checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" />`
+}</pre>
+</Component>

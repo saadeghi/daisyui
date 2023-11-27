@@ -11,8 +11,9 @@
   &:checked,
   &[checked="true"],
   &[aria-checked="true"] {
-    @apply bg-base-content bg-no-repeat;
+    @apply bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-out;
+    background-color: var(--chkbg);
     background-image: linear-gradient(-45deg, transparent 65%, var(--chkbg) 65.99%),
       linear-gradient(45deg, transparent 75%, var(--chkbg) 75.99%),
       linear-gradient(-45deg, var(--chkbg) 40%, transparent 40.99%),
