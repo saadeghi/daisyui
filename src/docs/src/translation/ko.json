@@ -418,7 +418,7 @@
   "How to add custom styles for a specific theme?": "How to add custom styles for a specific theme?",
   "You can write custom style for your elements only for a specific theme.": "You can write custom style for your elements only for a specific theme.",
   "In this example, .btn-twitter class only will have this style on light theme.": "In this example, .btn-twitter class only will have this style on light theme.",
-  "related projects": "related projects",
+  "related projects": "관련된 프로젝트들",
   "There are 3 ways to use a modal:": "There are 3 ways to use a modal:",
   "Make sure you're using unique IDs for each modal": "Make sure you're using unique IDs for each modal",
   "Also see <a href='/components/accordion/' class='link'>accordion</a> examples": "Also see <a href='/components/accordion/' class='link'>accordion</a> examples",
