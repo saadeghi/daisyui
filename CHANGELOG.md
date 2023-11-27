@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.10 (2023-11-27)
+
+
+### Bug Fixes
+
+* hardcoded checkbox background. Closes: [#2585](https://github.com/saadeghi/daisyui/issues/2585) ([b2b87d2](https://github.com/saadeghi/daisyui/commit/b2b87d2268612952e6d21ed2554ed5e3e2a1c988))
+
 ## 4.4.9 (2023-11-26)
 
 
