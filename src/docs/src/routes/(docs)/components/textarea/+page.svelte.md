@@ -56,29 +56,29 @@ data="{[
 </Component>
 
 <Component title="With form control and labels">
-<div class="form-control">
-  <label class="label" for="textarea1">
+<label class="form-control">
+  <div class="label">
     <span class="label-text">Your bio</span>
     <span class="label-text-alt">Alt label</span>
-  </label>
-  <textarea class="textarea h-24 textarea-bordered" placeholder="Bio" id="textarea1"></textarea>
-  <label class="label" for="textarea1">
+  </div>
+  <textarea class="textarea h-24 textarea-bordered" placeholder="Bio"></textarea>
+  <div class="label">
     <span class="label-text-alt">Your bio</span>
     <span class="label-text-alt">Alt label</span>
-  </label>
-</div>
+  </div>
+</label>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$form-control">
-  <label class="$$label">
+`<label class="$$form-control">
+  <div class="$$label">
     <span class="$$label-text">Your bio</span>
     <span class="$$label-text-alt">Alt label</span>
-  </label>
+  </div>
   <textarea class="$$textarea $$textarea-bordered h-24" placeholder="Bio"></textarea>
-  <label class="$$label">
+  <div class="$$label">
     <span class="$$label-text-alt">Your bio</span>
     <span class="$$label-text-alt">Alt label</span>
-  </label>
-</div>`
+  </div>
+</label>`
 }</pre>
 </Component>
 
