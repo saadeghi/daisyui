@@ -21,10 +21,6 @@
     padding: 2px 8px;
     border-radius: var(--rounded-badge);
   }
-  & code:after,
-  & code:before {
-    content: none;
-  }
   pre {
     code {
       border-radius: 0;
