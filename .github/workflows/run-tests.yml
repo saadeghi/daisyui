@@ -14,6 +14,10 @@ on:
           - "-t foreground"
           - "-t variables"
           - "-t colors"
+  workflow_call:
+    inputs:
+      filter:
+        type: string
   push:
     branches:
       - master
@@ -27,7 +31,7 @@ jobs:
     timeout-minutes: 10
     env:
       filter: ${{ github.event.inputs.filter || ' '}}
-    name: "Build"
+    name: "Tests"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

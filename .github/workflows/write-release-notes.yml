@@ -1,0 +1,39 @@
+name: "📝 write release notes"
+
+on:
+  workflow_call:
+
+jobs:
+  write-release-notes:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Read package version from package.json
+        id: package-version
+        run: |
+          version=$(grep -o '"version": *"[^"]*"' package.json | cut -d'"' -f4)
+          echo version=$version >> $GITHUB_OUTPUT
+          if [[ $version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo $version is a stable version
+            echo is-stable=true >> $GITHUB_OUTPUT
+          else
+            echo $version is not a stable version
+          fi
+
+      - name: Add release notes to GitHub
+        uses: softprops/action-gh-release@v1
+        if: steps.package-version.outputs.is-stable == 'true'
+        with:
+          tag_name: v${{ steps.package-version.outputs.version }}
+          body: |
+            🌼 Read changelog: https://daisyui.com/docs/changelog/  
+
+            📦 Install this update:  
+            ```bash
+            npm i -D daisyui@${{ steps.package-version.outputs.version }}
+            ```
+
+            💚 Thank you for using daisyUI!
