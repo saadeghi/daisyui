@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.14 (2023-11-28)
+
+
+### Bug Fixes
+
+* `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([1c7e786](https://github.com/saadeghi/daisyui/commit/1c7e78666dc3ce79dbe8486933997b88556b7a0b))
+
 ## 4.4.13 (2023-11-28)
 
 
