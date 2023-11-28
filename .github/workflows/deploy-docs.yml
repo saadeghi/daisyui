@@ -11,6 +11,9 @@ on:
           - "bun"
           - "npm"
   workflow_call:
+    inputs:
+      daisyuiversion:
+        type: string
   push:
     branches:
       - master
@@ -26,6 +29,7 @@ jobs:
       runtime: ${{ github.event.inputs.runtime || 'npm'}}
       LEMONSQUEEZY_API_KEY: ${{ secrets.LEMONSQUEEZY_API_KEY }}
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      daisyuiversion: ${{ github.event.inputs.daisyuiversion || 'latest' }}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||
@@ -55,13 +59,13 @@ jobs:
       - name: Install docs dependencies
         run: cd src/docs && ${{ env.runtime }} install
 
-      - name: Install daisyUI latest version if production
+      - name: Install daisyUI ${{env.daisyuiversion}} version if production
         if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && ${{ env.runtime }} i daisyui@latest
+        run: cd src/docs && ${{ env.runtime }} i daisyui@${{env.daisyuiversion}}
 
       - name: Install daisyUI newest tag if staging
         if: github.repository == 'daisyui/daisyui.github.io'
-        run: cd src/docs && ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "latest" || echo "alpha")
+        run: cd src/docs && ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "${{env.daisyuiversion}}" || echo "alpha")
 
       - name: Set daisyUI version in env file if staging
         if: github.repository == 'daisyui/daisyui.github.io'
