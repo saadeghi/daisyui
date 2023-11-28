@@ -18,9 +18,15 @@
   color: var(--tooltip-text-color);
   width: max-content;
 }
-.tooltip.tooltip-open:before,
-.tooltip.tooltip-open:after,
-.tooltip:hover:before,
+.tooltip.tooltip-open:before {
+  @apply opacity-100 delay-75;
+}
+.tooltip.tooltip-open:after {
+  @apply opacity-100 delay-75;
+}
+.tooltip:hover:before {
+  @apply opacity-100 delay-75;
+}
 .tooltip:hover:after {
   @apply opacity-100 delay-75;
 }

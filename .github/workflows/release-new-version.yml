@@ -26,8 +26,8 @@ on:
       - "!src/experiments/**"
 
 jobs:
-  build:
-    name: 🔨 Build
+  build-publish:
+    name: 🔨 Build + 🚀 Publish
     if: github.repository == 'saadeghi/daisyui'
     timeout-minutes: 10
     runs-on: ubuntu-latest
@@ -87,18 +87,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-  publish-npm:
-    name: 🚀 Publish to NPM
-    if: github.repository == 'saadeghi/daisyui'
-    timeout-minutes: 5
-    runs-on: ubuntu-latest
-    needs: build
-    env:
-      runtime: ${{ github.event.inputs.runtime || 'bun'}}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
       - name: Setup Node
         if: env.runtime != 'npm'
         uses: actions/setup-node@v3
@@ -113,13 +101,13 @@ jobs:
 
   deploy-docs:
     name: 📘 Docs
-    needs: publish-npm
+    needs: build-publish
     uses: ./.github/workflows/deploy-docs.yml
     secrets: inherit
 
   run-tests:
     name: 🧪 Tests
-    needs: publish-npm
+    needs: build-publish
     uses: ./.github/workflows/run-tests.yml
     secrets: inherit
     with:
