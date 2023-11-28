@@ -123,6 +123,8 @@ jobs:
   write-release-notes:
     name: 📝 Release notes
     if: github.repository == 'saadeghi/daisyui'
-    needs: run-tests
+    needs: build-publish
     uses: ./.github/workflows/write-release-notes.yml
     secrets: inherit
+    with:
+      daisyuiversion: ${{ needs.build-publish.outputs.daisyuiversion }}
