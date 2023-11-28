@@ -1,6 +1,9 @@
 <script>
   /* this file is spaghetti code but it works (hopefully) */
 
+  import "prism-themes/themes/prism-material-dark.min.css"
+  import "$lib/style/prism-themes-modify.css"
+
   import { onMount } from "svelte"
   import { browser } from "$app/environment"
   import SEO from "$components/SEO.svelte"

@@ -1,6 +1,5 @@
 <script>
   import { page } from "$app/stores"
-  import { onMount } from "svelte"
   import "prism-themes/themes/prism-material-dark.min.css"
   import "$lib/style/prism-themes-modify.css"
   export let data

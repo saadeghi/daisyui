@@ -1,7 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  import { readEnv } from "$lib/util"
-  import Search from "$components/Search.svelte"
+  // import Search from "$components/Search.svelte"
   import LogoContextMenu from "$components/LogoContextMenu.svelte"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
@@ -49,7 +48,9 @@
       switchNavbarStyle ? "shadow-sm" : ""
     }`}>
     <div class="flex w-full">
-      <Search {pages} on:search={closeDrawer} on:focus={openDrawer} />
+      {#await import("./Search.svelte") then Module}
+        <Module.default {pages} on:search={closeDrawer} on:focus={openDrawer} />
+      {/await}
     </div>
   </div>
 {/if}

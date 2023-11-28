@@ -1,6 +1,5 @@
 <script>
   import { page } from "$app/stores"
-  import "$components/StyleHandler.svelte"
 </script>
 
 <div class="hero not-prose min-h-screen">

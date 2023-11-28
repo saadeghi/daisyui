@@ -1,7 +1,7 @@
 import https from "https"
 import fs from "fs"
 import sharp from "sharp"
-import { tweets } from "../testimonials.js"
+import { tweets } from "../data/testimonials.js"
 
 const downloadImage = (url, filename) => {
   const file = fs.createWriteStream(filename)
