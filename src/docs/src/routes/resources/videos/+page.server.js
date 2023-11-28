@@ -1,26 +1,4 @@
 import videos from "$lib/json/youtube.json"
-// filter unused properties
-// const videosFiltered = videos.map(
-//   ({
-//     statistics,
-//     snippet: {
-//       publishedAt,
-//       categoryId,
-//       thumbnails: { medium, ...restThumbnails },
-//       ...restsnippet
-//     },
-//     status: { privacyStatus, license, publicStatsViewable, ...reststatus },
-//     pageInfo,
-//     kind,
-//     etag,
-//     contentDetails,
-//     ...rest
-//   }) => ({
-//     ...rest,
-//     snippet: { ...restsnippet, thumbnails: restThumbnails },
-//     status: reststatus,
-//   })
-// )
 
 // remove extra data from json
 videos.forEach((video) => {
