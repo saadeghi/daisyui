@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.12 (2023-11-28)
+
+
+### Bug Fixes
+
+* `group-hover:tooltip-open`. closes: [#2533](https://github.com/saadeghi/daisyui/issues/2533) ([a8742dc](https://github.com/saadeghi/daisyui/commit/a8742dc466202b87eb355a8d4c33e2c465c1b45d))
+
 ## 4.4.11 (2023-11-28)
 
 
