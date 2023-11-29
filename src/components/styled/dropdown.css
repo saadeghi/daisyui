@@ -18,6 +18,12 @@
 .dropdown:focus-within .dropdown-content {
   @apply scale-100;
 }
+.dropdown[open] summary::after {
+  content: attr(data-close);
+}
+.dropdown:not([open]) summary::after {
+  content: attr(data-open);
+}
 @media (hover: hover) {
   .dropdown.dropdown-hover:hover .dropdown-content {
     @apply scale-100;
