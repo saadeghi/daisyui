@@ -48,6 +48,25 @@ data="{[
 }</pre>
 </Component>
 
+<Component title="Dropdown menu using <details> tag with toggleable text by `data-*` attributes" desc="Stays open until gets clicked again. Or you can close it using JS by removing the `open` attribute">
+<details class="dropdown mb-32">
+  <summary class="m-1 btn" data-opened-text="Close" data-closed-text="Open"></summary>
+  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+    <li><button>Item 1</button></li>
+    <li><button>Item 2</button></li>
+  </ul>
+</details>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<details class="$$dropdown">
+  <summary class="m-1 btn" data-opened-text="Close" data-closed-text="Open"></summary>
+  <ul class="p-2 shadow $$menu $$dropdown-content z-[1] bg-base-100 $$rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</details>`
+}</pre>
+</Component>
+
 ### Method 2: Using CSS focus
 
 <div class="alert text-sm mb-2">
@@ -323,14 +342,14 @@ data="{[
 <div class="navbar mb-40 bg-base-300 rounded-box w-full">
   <div class="flex-1 px-2 lg:flex-none">
     <button class="text-lg font-bold">daisyUI</button>
-  </div> 
+  </div>
   <div class="flex justify-end flex-1 px-2">
     <div class="flex items-stretch">
       <button class="btn btn-ghost rounded-btn">Button</button>
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Dropdown</div>
         <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-4">
-          <li><button>Item 1</button></li> 
+          <li><button>Item 1</button></li>
           <li><button>Item 2</button></li>
         </ul>
       </div>
@@ -341,14 +360,14 @@ data="{[
 `<div class="$$navbar bg-base-300 rounded-box">
   <div class="flex-1 px-2 lg:flex-none">
     <a class="text-lg font-bold">daisyUI</a>
-  </div> 
+  </div>
   <div class="flex justify-end flex-1 px-2">
     <div class="flex items-stretch">
       <a class="$$btn $$btn-ghost rounded-btn">Button</a>
       <div class="$$dropdown $$dropdown-end">
         <div tabindex="0" role="button" class="$$btn $$btn-ghost rounded-btn">Dropdown</div>
         <ul class="$$menu $$dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-          <li><a>Item 1</a></li> 
+          <li><a>Item 1</a></li>
           <li><a>Item 2</a></li>
         </ul>
       </div>
@@ -367,7 +386,7 @@ data="{[
     </div>
     <div tabindex="0" class="shadow card compact dropdown-content z-[1] bg-base-100 rounded-box w-64">
       <div class="card-body">
-        <h2 class="card-title">You needed more info?</h2> 
+        <h2 class="card-title">You needed more info?</h2>
         <p>Here is a description!</p>
       </div>
     </div>
@@ -381,7 +400,7 @@ data="{[
   </div>
   <div tabindex="0" class="$$card $$compact $$dropdown-content z-[1] shadow bg-base-100 rounded-box w-64">
     <div class="$$card-body">
-      <h2 class="$$card-title">You needed more info?</h2> 
+      <h2 class="$$card-title">You needed more info?</h2>
       <p>Here is a description!</p>
     </div>
   </div>

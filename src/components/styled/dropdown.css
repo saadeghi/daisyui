@@ -19,10 +19,10 @@
   @apply scale-100;
 }
 .dropdown[open] summary::after {
-  content: attr(data-close);
+  content: attr(data-opened-text);
 }
 .dropdown:not([open]) summary::after {
-  content: attr(data-open);
+  content: attr(data-closed-text);
 }
 @media (hover: hover) {
   .dropdown.dropdown-hover:hover .dropdown-content {
