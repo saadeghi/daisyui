@@ -54,6 +54,14 @@
           FAQ
           {@html newtabicon}
         </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://daisyui.lemonsqueezy.com/affiliates"
+          class="link link-hover group">
+          Affiliate Program
+          <span class="badge badge-outline badge-sm">New</span>
+        </a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("pages")}</span>
@@ -64,6 +72,7 @@
         <a href="/docs/colors/" class="link link-hover">{$t("color-system")}</a>
         <a href="/docs/config/" class="link link-hover">{$t("config")}</a>
         <a href="/blog/" class="link link-hover">{$t("Blog")}</a>
+        <a href="/resources/" class="link link-hover">{$t("Resources")}</a>
         <a href="/store/" class="link link-hover">{$t("Store")}</a>
       </div>
       <div>
