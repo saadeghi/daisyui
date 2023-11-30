@@ -39,7 +39,7 @@
 
 <svelte:window bind:scrollY />
 
-<div class="bg-base-200 flex justify-center rounded-sm p-1">
+<div class="bg-base-200 hidden flex justify-center rounded-sm p-1">
   <a
     href="/store/"
     class="alert hover:bg-base-300 text-base-content/70 flex max-w-xl justify-center rounded-full p-2 text-center text-xs transition-colors duration-300 ease-out">
