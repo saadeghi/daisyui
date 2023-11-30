@@ -46,11 +46,11 @@ Learn more about daisyUI:
 - [Official docs](https://daisyui.com/)
 - [GitHub](https://github.com/saadeghi/daisyui)
 
-![@tailwindcss/typography Tailwind CSS plugin](/images/blog/tailwindcss-typography.jpg)
+![tailwindcss/typography Tailwind CSS plugin](/images/blog/tailwindcss-typography.jpg)
 
-## 2. @tailwindcss/typography
+## 2. tailwindcss/typography
 
-[@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) is the official Tailwind CSS plugin that adds default styles for all your text content.  
+[tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) is the official Tailwind CSS plugin that adds default styles for all your text content.  
  Typography plugin is made by the Tailwind CSS team and it's a must-have plugin for any Tailwind CSS project especially if you are building a blog or a website with a lot of text content. It plays well with Markdown content since all you have to do is to add `prose` class to your container and it will automatically style all your text content.
 
 Learn more about Typography plugin:
@@ -58,15 +58,15 @@ Learn more about Typography plugin:
 - [Official docs](https://tailwindcss.com/docs/typography-plugin)
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-typography)
 
-![@tailwindcss/container-queries Tailwind CSS plugin](/images/blog/tailwindcss-container-queries.jpg)
+![tailwindcss/container-queries Tailwind CSS plugin](/images/blog/tailwindcss-container-queries.jpg)
 
-## 3. @tailwindcss/container-queries
+## 3. tailwindcss/container-queries
 
-Another plugin from Tailwind team, [@tailwindcss/container-queries](https://tailwindcss.com/docs/plugins#container-queries) adds the new cool CSS feature called [container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries) to Tailwind CSS. Container queries are similar to media queries but instead of checking the screen size, they check the size of the container. This is useful if you want to change the layout of your website based on the size of the container.
+Another plugin from Tailwind team, [tailwindcss/container-queries](https://tailwindcss.com/docs/plugins#container-queries) adds the new cool CSS feature called [container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries) to Tailwind CSS. Container queries are similar to media queries but instead of checking the screen size, they check the size of the container. This is useful if you want to change the layout of your website based on the size of the container.
 
 Container queries are [supported by all modern browsers](https://caniuse.com/css-container-query-units) and soon the class names will be added to Tailwind CSS core, but for now you can use this plugin to implement container queries in your project.
 
-Learn more about @tailwindcss/container-queries
+Learn more about tailwindcss/container-queries
 
 - [Official docs](https://tailwindcss.com/docs/plugins#container-queries)
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-container-queries)
@@ -101,13 +101,13 @@ Learn more about tailwind-scrollbar-hide:
 
 - [GitHub](https://github.com/reslear/tailwind-scrollbar-hide)
 
-![@tailwindcss/forms Tailwind CSS plugin](/images/blog/tailwindcss-forms.jpg)
+![tailwindcss/forms Tailwind CSS plugin](/images/blog/tailwindcss-forms.jpg)
 
-## 7. @tailwindcss/forms
+## 7. tailwindcss/forms
 
-[@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) is a plugin from Tailwind team that adds default styles for all your form elements. Just be careful that if you're using this plugin along with any component library (like daisyUI), you should [enable `strategy: 'class'`](https://github.com/tailwindlabs/tailwindcss-forms#using-only-global-styles-or-only-classes) for this plugin so it only adds styles to elements you choose. Otherwise it will have conflicts because both plugins add styles to the same elements.
+[tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) is a plugin from Tailwind team that adds default styles for all your form elements. Just be careful that if you're using this plugin along with any component library (like daisyUI), you should [enable `strategy: 'class'`](https://github.com/tailwindlabs/tailwindcss-forms#using-only-global-styles-or-only-classes) for this plugin so it only adds styles to elements you choose. Otherwise it will have conflicts because both plugins add styles to the same elements.
 
-Learn more about @tailwindcss/forms
+Learn more about tailwindcss/forms
 
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-forms)
 
