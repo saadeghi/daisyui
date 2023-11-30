@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/"
+>
+  <channel>
+    <title>
+      <![CDATA[ daisyUI Store ]]>
+    </title>
+    <description>
+      <![CDATA[ Professional templates made by daisyUI ]]>
+    </description>
+    <link>https://daisyui.com/store/</link>
+    <lastBuildDate>Thu, 30 Nov 2023 13:27:34 GMT</lastBuildDate>
+    <pubDate>Thu, 30 Nov 2023 13:27:34 GMT</pubDate>
+    <language>en-us</language>
+    <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    
+        <item>
+          <title>
+            <![CDATA[ 🎁 Black Friday discount (valid until 30 November) ]]>
+          </title>
+          <description>
+            <![CDATA[ New discount available: Use "BLACKFRIDAY" code at checkout to get 50% discount. Valid until 30 November ]]>
+          </description>
+          <link>https://daisyui.com/store/</link>
+          <pubDate>Sat, 11 Nov 2023 09:44:59 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.com/store/</guid>
+        </item>
+      
+  </channel>
+</rss>
