@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/"
+>
+  <channel>
+    <title>
+      <![CDATA[ daisyUI Store ]]>
+    </title>
+    <description>
+      <![CDATA[ Professional templates made by daisyUI ]]>
+    </description>
+    <link>https://daisyui.com/store/</link>
+    <lastBuildDate>Thu, 30 Nov 2023 11:22:54 GMT</lastBuildDate>
+    <pubDate>Thu, 30 Nov 2023 11:22:54 GMT</pubDate>
+    <language>en-us</language>
+    <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    
+        <item>
+          <title>
+            <![CDATA[ Auth template ]]>
+          </title>
+          <description>
+            <![CDATA[ <p>Professionally designed auth pages to use in your project right away.</p><p>Features:</p><ul><li><p>3 HTML pages made with daisyUI 4</p></li><li><p>Framework agnostic. Can be used everywhere</p></li><li><p>Compatible with all 32 daisyUI themes</p></li></ul><p>Including:</p><ul><li><p>Login page</p></li></ul><ul><li><p>Signup page</p></li><li><p>Password recovery page</p></li><li><p>Form inputs with HTML validation and validation styles</p></li><li><p>Login with Google button</p></li><li><p>Toggle and Alert examples</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/9416b3ff-8bc7-48ea-a196-056dc04efbb5/</link>
+          <pubDate>Sat, 11 Nov 2023 12:25:46 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/9416b3ff-8bc7-48ea-a196-056dc04efbb5/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ Dashboard template ]]>
+          </title>
+          <description>
+            <![CDATA[ <p>Production-ready admin dashboard template to use in your project right now.</p><p>Features:</p><ul><li><p>HTML admin dashboard layout made with daisyUI 4</p></li><li><p>Framework agnostic. Can be used everywhere</p></li><li><p>No dependencies</p></li></ul><p>Including:</p><ul><li><p>2 exclusive daisyUI themes (dark/light) + Compatible with all 32 daisyUI themes</p></li><li><p>Responsive grid layout</p></li><li><p>14 blocks of useful sections for dashboard</p></li><li><p>Sidebar with collapsible submenus</p></li><li><p>Tables and Item lists</p></li><li><p>Dropdown menus</p></li><li><p>Charts and forms</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/3c805f3d-77a5-440b-9e4d-e775005db6c9/</link>
+          <pubDate>Thu, 12 Oct 2023 21:48:00 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/3c805f3d-77a5-440b-9e4d-e775005db6c9/</guid>
+        </item>
+      
+  </channel>
+</rss>
