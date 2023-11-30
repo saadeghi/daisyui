@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.17 (2023-11-30)
+
+
+### Bug Fixes
+
+* `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) closes: [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([206b207](https://github.com/saadeghi/daisyui/commit/206b2070dc96444ff90b77def30cfb6f6c55d3da))
+* drawer and modal backdrop color ([0f994e3](https://github.com/saadeghi/daisyui/commit/0f994e320584899141f73e53fe33e76eaa71d0c4))
+* drawer scrollbars are now visible. closes: [#2598](https://github.com/saadeghi/daisyui/issues/2598) closes: [#2276](https://github.com/saadeghi/daisyui/issues/2276) ([b2ec8f7](https://github.com/saadeghi/daisyui/commit/b2ec8f7625aaadb3bc8c21fe9f2a6a07065a6de7))
+
 ## 4.4.16 (2023-11-30)
 
 
