@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.15 (2023-11-30)
+
+
+### Bug Fixes
+
+* drawer scrollbars are now visible. closes: [#2598](https://github.com/saadeghi/daisyui/issues/2598) closes: [#2276](https://github.com/saadeghi/daisyui/issues/2276) ([b2ec8f7](https://github.com/saadeghi/daisyui/commit/b2ec8f7625aaadb3bc8c21fe9f2a6a07065a6de7))
+
 ## 4.4.14 (2023-11-28)
 
 
