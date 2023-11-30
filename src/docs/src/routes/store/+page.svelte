@@ -243,13 +243,16 @@
 
 <div id="mc_embed_shell" class="card bg-base-200 mt-10">
   <div class="card-body flex flex-col gap-4">
-    <h2 class="text-xl font-black lg:text-4xl">Don't miss the upcoming products!</h2>
+    <h2 class="text-xl font-black lg:text-4xl">
+      Get notified about upcoming products and discounts!
+    </h2>
     <div>
       <p class="font-bold">
-        Subscribe to daisyUI store newsletter to get updates about new products.
+        Subscribe to daisyUI store newsletter to get updates about new products and discounts codes.
       </p>
       <p class="text-base-content/60 text-xs">
-        You will only receive a single email when a new product is added. No spam. No ads.
+        You will only receive a single email when a new product is added or when a new discount code
+        is available. No spam. No ads.
       </p>
     </div>
     <div id="mc_embed_signup">
@@ -262,6 +265,8 @@
         novalidate="">
         <!-- store group -->
         <input type="checkbox" name="group[347002][8]" value="1" class="hidden" checked />
+        <!-- discounts group -->
+        <input type="checkbox" name="group[347002][1]" value="1" class="hidden" checked />
         <div class="form-control w-full max-w-sm">
           <label class="label" for="mce-EMAIL">
             <span class="label-text">Email Address</span>
