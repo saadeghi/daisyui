@@ -8,10 +8,6 @@
     @apply pointer-events-none fixed start-0 top-0 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overflow-y-auto overscroll-contain;
     height: 100vh;
     height: 100dvh;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      @apply hidden;
-    }
     & > .drawer-overlay {
       @apply sticky top-0 place-self-stretch;
     }
