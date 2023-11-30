@@ -4,69 +4,57 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 4.4.17 (2023-11-30)
 
-
 ### Bug Fixes
 
-* `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) closes: [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([206b207](https://github.com/saadeghi/daisyui/commit/206b2070dc96444ff90b77def30cfb6f6c55d3da))
-* drawer and modal backdrop color ([0f994e3](https://github.com/saadeghi/daisyui/commit/0f994e320584899141f73e53fe33e76eaa71d0c4))
-* drawer scrollbars are now visible. closes: [#2598](https://github.com/saadeghi/daisyui/issues/2598) closes: [#2276](https://github.com/saadeghi/daisyui/issues/2276) ([b2ec8f7](https://github.com/saadeghi/daisyui/commit/b2ec8f7625aaadb3bc8c21fe9f2a6a07065a6de7))
+- `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) closes: [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([206b207](https://github.com/saadeghi/daisyui/commit/206b2070dc96444ff90b77def30cfb6f6c55d3da))
 
 ## 4.4.16 (2023-11-30)
 
-
 ### Bug Fixes
 
-* drawer and modal backdrop color ([0f994e3](https://github.com/saadeghi/daisyui/commit/0f994e320584899141f73e53fe33e76eaa71d0c4))
-* drawer scrollbars are now visible. closes: [#2598](https://github.com/saadeghi/daisyui/issues/2598) closes: [#2276](https://github.com/saadeghi/daisyui/issues/2276) ([b2ec8f7](https://github.com/saadeghi/daisyui/commit/b2ec8f7625aaadb3bc8c21fe9f2a6a07065a6de7))
+- drawer and modal backdrop color ([0f994e3](https://github.com/saadeghi/daisyui/commit/0f994e320584899141f73e53fe33e76eaa71d0c4))
 
 ## 4.4.15 (2023-11-30)
 
-
 ### Bug Fixes
 
-* drawer scrollbars are now visible. closes: [#2598](https://github.com/saadeghi/daisyui/issues/2598) closes: [#2276](https://github.com/saadeghi/daisyui/issues/2276) ([b2ec8f7](https://github.com/saadeghi/daisyui/commit/b2ec8f7625aaadb3bc8c21fe9f2a6a07065a6de7))
+- drawer scrollbars are now visible. closes: [#2598](https://github.com/saadeghi/daisyui/issues/2598) closes: [#2276](https://github.com/saadeghi/daisyui/issues/2276) ([b2ec8f7](https://github.com/saadeghi/daisyui/commit/b2ec8f7625aaadb3bc8c21fe9f2a6a07065a6de7))
 
 ## 4.4.14 (2023-11-28)
 
-
 ### Bug Fixes
 
-* `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([1c7e786](https://github.com/saadeghi/daisyui/commit/1c7e78666dc3ce79dbe8486933997b88556b7a0b))
+- `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([1c7e786](https://github.com/saadeghi/daisyui/commit/1c7e78666dc3ce79dbe8486933997b88556b7a0b))
 
 ## 4.4.13 (2023-11-28)
 
-
 ### Bug Fixes
 
-* `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([1c7e786](https://github.com/saadeghi/daisyui/commit/1c7e78666dc3ce79dbe8486933997b88556b7a0b))
+- `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([1c7e786](https://github.com/saadeghi/daisyui/commit/1c7e78666dc3ce79dbe8486933997b88556b7a0b))
 
 ## 4.4.12 (2023-11-28)
 
-
 ### Bug Fixes
 
-* `group-hover:tooltip-open`. closes: [#2533](https://github.com/saadeghi/daisyui/issues/2533) ([a8742dc](https://github.com/saadeghi/daisyui/commit/a8742dc466202b87eb355a8d4c33e2c465c1b45d))
+- `group-hover:tooltip-open`. closes: [#2533](https://github.com/saadeghi/daisyui/issues/2533) ([a8742dc](https://github.com/saadeghi/daisyui/commit/a8742dc466202b87eb355a8d4c33e2c465c1b45d))
 
 ## 4.4.11 (2023-11-28)
 
-
 ### Bug Fixes
 
-* prose code before/after:content. closes: [#2589](https://github.com/saadeghi/daisyui/issues/2589) ([e6055ee](https://github.com/saadeghi/daisyui/commit/e6055eede3cc04b9fe87c3229f22569ba79efe1c))
+- prose code before/after:content. closes: [#2589](https://github.com/saadeghi/daisyui/issues/2589) ([e6055ee](https://github.com/saadeghi/daisyui/commit/e6055eede3cc04b9fe87c3229f22569ba79efe1c))
 
 ## 4.4.10 (2023-11-27)
 
-
 ### Bug Fixes
 
-* hardcoded checkbox background. Closes: [#2585](https://github.com/saadeghi/daisyui/issues/2585) ([b2b87d2](https://github.com/saadeghi/daisyui/commit/b2b87d2268612952e6d21ed2554ed5e3e2a1c988))
+- hardcoded checkbox background. Closes: [#2585](https://github.com/saadeghi/daisyui/issues/2585) ([b2b87d2](https://github.com/saadeghi/daisyui/commit/b2b87d2268612952e6d21ed2554ed5e3e2a1c988))
 
 ## 4.4.9 (2023-11-26)
 
-
 ### Bug Fixes
 
-* missing responsive dropdown modifiers. closes [#2490](https://github.com/saadeghi/daisyui/issues/2490) ([ac3266a](https://github.com/saadeghi/daisyui/commit/ac3266aebfa10bff1f46c9f78eecdf6ac72792e5))
+- missing responsive dropdown modifiers. closes [#2490](https://github.com/saadeghi/daisyui/issues/2490) ([ac3266a](https://github.com/saadeghi/daisyui/commit/ac3266aebfa10bff1f46c9f78eecdf6ac72792e5))
 
 ## 4.4.8 (2023-11-26)
 
