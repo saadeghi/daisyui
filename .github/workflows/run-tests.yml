@@ -30,7 +30,7 @@ jobs:
   tests:
     timeout-minutes: 10
     env:
-      filter: ${{ github.event.inputs.filter || ' '}}
+      filter: ${{ inputs.filter || ' '}}
     name: "Tests"
     runs-on: ubuntu-latest
     steps:

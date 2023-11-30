@@ -28,11 +28,10 @@ on:
 jobs:
   build-publish:
     name: 🔨 Build + 🚀 Publish
-    if: github.repository == 'saadeghi/daisyui'
     timeout-minutes: 10
     runs-on: ubuntu-latest
     env:
-      runtime: ${{ github.event.inputs.runtime || 'bun'}}
+      runtime: ${{ inputs.runtime || 'bun'}}
     outputs:
       daisyuiversion: ${{ steps.package-version.outputs.version }}
     steps:
@@ -60,10 +59,11 @@ jobs:
         run: ${{ env.runtime }} run build
 
       - name: Run release command
+        if: github.repository == 'saadeghi/daisyui'
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          ${{ env.runtime }} run release${{ github.event.inputs.release-type }}
+          ${{ env.runtime }} run release${{ inputs.release-type }}
 
       - name: Read package version from package.json
         id: package-version
@@ -72,6 +72,7 @@ jobs:
           echo version=$version >> $GITHUB_OUTPUT
 
       - name: Update package version in src/docs/.env and commit
+        if: github.repository == 'saadeghi/daisyui'
         id: commit
         run: |
           echo "VITE_DAISYUI_VERSION=${{ steps.package-version.outputs.version }}" > src/docs/.env
@@ -100,6 +101,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Publish package to NPM
+        if: github.repository == 'saadeghi/daisyui'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

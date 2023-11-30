@@ -20,7 +20,7 @@ jobs:
       - name: Read package version from package.json
         id: package-version
         run: |
-          version=${{ github.event.inputs.daisyuiversion }}
+          version=${{ inputs.daisyuiversion }}
           echo version=$version >> $GITHUB_OUTPUT
           if [[ $version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo $version is a stable version
