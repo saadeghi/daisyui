@@ -1,9 +1,9 @@
 <script>
   import { page } from "$app/stores"
   // import Search from "$components/Search.svelte"
-  import LogoContextMenu from "$components/LogoContextMenu.svelte"
+  // import LogoContextMenu from "$components/LogoContextMenu.svelte"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
-  import ChangelogMenu from "$components/ChangelogMenu.svelte"
+  // import ChangelogMenu from "$components/ChangelogMenu.svelte"
   let contextMenuEl
 
   export let closeDrawer
@@ -38,8 +38,13 @@
 
     <div class="font-title inline-flex text-lg md:text-2xl">daisyUI</div>
   </a>
-  <LogoContextMenu bind:this={contextMenuEl} />
-  <ChangelogMenu />
+
+  {#await import("./LogoContextMenu.svelte") then Module}
+    <Module.default bind:this={contextMenuEl} />
+  {/await}
+  {#await import("./ChangelogMenu.svelte") then Module}
+    <Module.default />
+  {/await}
 </div>
 
 {#if innerWidth < 1024}

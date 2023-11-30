@@ -13,8 +13,8 @@
   // import ThemeChange from "$components/ThemeChange.svelte"
   // import LangChange from "$components/LangChange.svelte"
   // import Search from "$components/Search.svelte"
-  import LogoContextMenu from "$components/LogoContextMenu.svelte"
-  import ChangelogMenu from "$components/ChangelogMenu.svelte"
+  // import LogoContextMenu from "$components/LogoContextMenu.svelte"
+  // import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
   let contextMenuEl
 
@@ -38,36 +38,40 @@
 </script>
 
 <svelte:window bind:scrollY />
-
-<div class="bg-base-200 hidden flex justify-center rounded-sm p-1">
-  <a
-    href="/store/"
-    class="alert hover:bg-base-300 text-base-content/70 flex max-w-xl justify-center rounded-full p-2 text-center text-xs transition-colors duration-300 ease-out">
-    <p class=" leading-relaxed [text-wrap:balance]">
-      Use <code class="text-base-content/70 font-mono tracking-wide">BLACKFRIDAY</code>
-      code to get 50% discount on daisyUI store
-      <Countdown
-        from={new Date("2023-11-30T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
-        dateFormat="DD/MM/YYYY, HH:mm:ss"
-        let:remaining>
-        {#if remaining.done === false}
-          <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
-            <date
-              datetime={new Date("2023-11-30T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
-              class="countdown font-mono text-xs">
-              {remaining.days * 24 + remaining.hours}h&nbsp;
-              <span style={`--value:${remaining.minutes}`}></span>
-              m&nbsp;
-              <span style={`--value:${remaining.seconds}`}></span>
-              s
-            </date>
-            remaining
-          </span>
-        {/if}
-      </Countdown>
-    </p>
-  </a>
-</div>
+{#if false}
+  <div class="bg-base-200 flex justify-center rounded-sm p-1">
+    <a
+      href="/store/"
+      class="alert hover:bg-base-300 text-base-content/70 flex max-w-xl justify-center rounded-full p-2 text-center text-xs transition-colors duration-300 ease-out">
+      <p class=" leading-relaxed [text-wrap:balance]">
+        Use <code class="text-base-content/70 font-mono tracking-wide">BLACKFRIDAY</code>
+        code to get 50% discount on daisyUI store
+        <Countdown
+          from={new Date("2023-11-30T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
+          dateFormat="DD/MM/YYYY, HH:mm:ss"
+          let:remaining>
+          {#if remaining.done === false}
+            <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
+              <date
+                datetime={new Date("2023-11-30T00:00:00.000000Z").toLocaleString(
+                  "en-GB",
+                  dateFormat
+                )}
+                class="countdown font-mono text-xs">
+                {remaining.days * 24 + remaining.hours}h&nbsp;
+                <span style={`--value:${remaining.minutes}`}></span>
+                m&nbsp;
+                <span style={`--value:${remaining.seconds}`}></span>
+                s
+              </date>
+              remaining
+            </span>
+          {/if}
+        </Countdown>
+      </p>
+    </a>
+  </div>
+{/if}
 <div
   class={`
   bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] 
@@ -122,9 +126,13 @@
 
           <span class="font-title text-base-content text-lg md:text-2xl">daisyUI</span>
         </a>
-        <LogoContextMenu bind:this={contextMenuEl} />
+        {#await import("./LogoContextMenu.svelte") then Module}
+          <Module.default bind:this={contextMenuEl} />
+        {/await}
         {#if showVersion}
-          <ChangelogMenu />
+          {#await import("./ChangelogMenu.svelte") then Module}
+            <Module.default />
+          {/await}
         {/if}
       </div>
 
