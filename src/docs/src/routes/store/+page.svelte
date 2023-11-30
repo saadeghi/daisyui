@@ -238,3 +238,49 @@
     </div>
   {/each}
 </div>
+
+<div class="divider text-base-content/30 mb-20 mt-20"></div>
+
+<div id="mc_embed_shell" class="card bg-base-200 mt-10">
+  <div class="card-body flex flex-col gap-4">
+    <h2 class="text-xl font-black lg:text-4xl">Don't miss the upcoming products!</h2>
+    <div>
+      <p class="font-bold">
+        Subscribe to daisyUI store newsletter to get updates about new products.
+      </p>
+      <p class="text-base-content/60 text-xs">
+        You will only receive a single email when a new product is added. No spam. No ads.
+      </p>
+    </div>
+    <div id="mc_embed_signup">
+      <form
+        action="https://gmail.us8.list-manage.com/subscribe/post?u=42813cff910e47b1bd132369a&amp;id=9fd7333f07&amp;f_id=003d03e0f0"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_blank"
+        novalidate="">
+        <!-- store group -->
+        <input type="checkbox" name="group[347002][8]" value="1" class="hidden" checked />
+        <div class="form-control w-full max-w-sm">
+          <label class="label" for="mce-EMAIL">
+            <span class="label-text">Email Address</span>
+          </label>
+          <div class="join">
+            <input
+              type="email"
+              name="EMAIL"
+              class="join-item input input-bordered w-full max-w-sm"
+              id="mce-EMAIL"
+              placeholder="mail@site.com"
+              required />
+            <button name="subscribe" class="join-item btn btn-success">Subscribe</button>
+          </div>
+        </div>
+        <div aria-hidden="true" class="hidden">
+          <input type="text" name="b_42813cff910e47b1bd132369a_9fd7333f07" tabindex="-1" value="" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -62,11 +62,14 @@
 
         <div id="mc_embed_shell" class="card bg-base-200 mt-10">
           <div class="card-body flex flex-col gap-4">
-            <h2 class="text-4xl font-black">Don't miss new posts!</h2>
+            <h2 class="text-xl font-black lg:text-4xl">Don't miss new posts!</h2>
             <div>
-              <p class="font-bold">Subscribe to daisyUI newsletter to get updates on new posts.</p>
+              <p class="font-bold">
+                Subscribe to daisyUI blog newsletter to get updates on new posts.
+              </p>
               <p class="text-base-content/60 text-xs">
-                You will only receive an email when a new post is published. No spam. No ads.
+                You will only receive a single email when a new blog post is published. No spam. No
+                ads.
               </p>
             </div>
             <div id="mc_embed_signup">
@@ -77,6 +80,8 @@
                 name="mc-embedded-subscribe-form"
                 target="_blank"
                 novalidate="">
+                <!-- blog group -->
+                <input type="checkbox" name="group[347002][4]" value="1" class="hidden" checked />
                 <div class="form-control w-full max-w-sm">
                   <label class="label" for="mce-EMAIL">
                     <span class="label-text">Email Address</span>
