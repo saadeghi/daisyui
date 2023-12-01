@@ -1,0 +1,26 @@
+name: "Reply to fresh issue"
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  reply:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Comment on fresh issue
+        uses: badsyntax/github-action-issue-comment@master
+        if: github.event_name == 'issues'
+        with:
+          id: "auto-reply"
+          action: "create-clean"
+          template: ".github/workflows/issue-reply.hbs"
+          issue-number: ${{ github.event.issue.number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          template-inputs: |
+            {
+              "user": "${{github.event.issue.user.login}}"
+            }
