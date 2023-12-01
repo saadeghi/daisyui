@@ -241,7 +241,7 @@
   </div>
   <div class="card-body relative isolate z-[3]">
     <h2
-      class="card-title text-base-content w-[250%] text-xl font-black contrast-200 [text-wrap:balance] sm:text-2xl md:text-4xl lg:text-3xl xl:text-5xl">
+      class="card-title text-base-content text-xl font-black contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-5xl">
       <span>
         Start your next project
         <span class="italic">even faster</span>
@@ -249,7 +249,7 @@
     </h2>
     <div class="grow">
       <h2
-        class="card-title w-[250%] text-xl font-light sm:text-2xl md:text-3xl lg:text-xl xl:text-3xl">
+        class="card-title text-xl font-light sm:w-[250%] sm:text-2xl md:text-3xl lg:text-xl xl:text-3xl">
         <svg
           class="inline h-4 w-4 md:h-6 md:w-6"
           width="32"
