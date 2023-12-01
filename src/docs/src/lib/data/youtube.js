@@ -2,6 +2,11 @@ export const videoIds = [
   "tZbOO97urWs",
   "mqe9a7kHUvo",
   "mJgNSN5YAMI",
+  "F2813o7AFsw",
+  "PctfrkRo8Fg",
+  "akd7u69k27k",
+  "ZxrNzv0rEws",
+  "L2P8-crX59o",
   "KLxgQFOCZjQ",
   "l4sbqrY0XGk",
   "ovPZ_oWRdVU",
@@ -99,4 +104,5 @@ export const videoIds = [
   "Gpm3w7Mib_M",
   "sFyUWHH2sVg",
   "YPYpPn-bY_o",
+  "FihklTCyu5I",
 ]
