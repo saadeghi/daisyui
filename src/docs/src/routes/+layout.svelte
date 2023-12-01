@@ -93,6 +93,10 @@
     href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&family=Noto+Sans+JP:wght@300;900&family=Noto+Sans:wght@300;900&family=Vazirmatn:wght@300;900&display=swap"
     rel="stylesheet" />
   <meta name="theme-color" content="oklch(var(--b1))" />
+  <link rel="icon" href="/images/daisyui-logo/daisyui-logomark.svg" type="image/svg+xml" />
+  <link rel="icon" sizes="192x192" href="/images/daisyui-logo/favicon-192.png" />
+  <link rel="apple-touch-icon" href="/images/daisyui-logo/favicon-180.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
 </svelte:head>
 
 <div
