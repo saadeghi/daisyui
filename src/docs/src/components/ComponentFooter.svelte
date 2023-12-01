@@ -219,3 +219,65 @@
     </div>
   </div>
 {/if}
+
+<div
+  class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-gradient-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
+  <figure class="max-md:bg-primary/10 isolate shrink-0 md:w-2/3">
+    <a>
+      <img
+        class="pointer-events-none"
+        alt="daisyUI store"
+        src="/images/store/admin-dashboard.png" />
+    </a>
+  </figure>
+  <div
+    class="bg-accent -left-1/5 pointer-events-none absolute bottom-[-50%] aspect-square w-3/4 -translate-x-1/2 rounded-full opacity-20 blur-3xl">
+  </div>
+  <div
+    class="bg-primary pointer-events-none absolute bottom-[-120%] left-1/2 aspect-square w-full -translate-x-1/2 rounded-full opacity-20 blur-3xl">
+  </div>
+  <div
+    class="bg-base-100 pointer-events-none absolute -top-3/4 right-1/4 z-[3] aspect-square w-1/2 rounded-full opacity-60 blur-3xl">
+  </div>
+  <div class="card-body relative isolate z-[3]">
+    <h2
+      class="card-title text-base-content w-[250%] text-xl font-black contrast-200 [text-wrap:balance] sm:text-2xl md:text-4xl lg:text-3xl xl:text-5xl">
+      <span>
+        Start your next project
+        <span class="italic">even faster</span>
+      </span>
+    </h2>
+    <div class="grow">
+      <h2
+        class="card-title w-[250%] text-xl font-light sm:text-2xl md:text-3xl lg:text-xl xl:text-3xl">
+        <svg
+          class="inline h-4 w-4 md:h-6 md:w-6"
+          width="32"
+          height="32"
+          viewBox="0 0 415 415"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5" />
+          <circle cx="207.5" cy="135" r="125" fill="white" />
+          <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
+        </svg>
+        with daisyUI Admin Dashboard
+      </h2>
+    </div>
+    <a class="btn btn-block btn-primary group" href="/store">
+      More details
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+        </path>
+      </svg>
+    </a>
+  </div>
+</div>
