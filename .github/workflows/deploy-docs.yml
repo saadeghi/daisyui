@@ -82,7 +82,13 @@ jobs:
           Disallow: /' > src/docs/static/robots.txt
 
       - name: Build docs
-        run: cd src/docs && ${{ env.runtime }} run build
+        run: |
+          cd src/docs
+          if [[ ${{inputs.daisyuiversion}} ]]; then
+            VITE_DAISYUI_VERSION=${{inputs.daisyuiversion}} ${{ env.runtime }} run build
+          else
+            ${{ env.runtime }} run build
+          fi
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v3
