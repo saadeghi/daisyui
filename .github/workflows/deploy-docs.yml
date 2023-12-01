@@ -84,7 +84,7 @@ jobs:
       - name: Build docs
         run: |
           cd src/docs
-          if [[ -z "${{inputs.daisyuiversion}}" ]]; then
+          if [ -z "${{inputs.daisyuiversion}}" ]; then
             ${{ env.runtime }} run build
           else
             VITE_DAISYUI_VERSION=${{inputs.daisyuiversion}} ${{ env.runtime }} run build
