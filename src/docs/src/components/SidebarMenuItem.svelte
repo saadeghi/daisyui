@@ -104,8 +104,8 @@
         rel={target === "blank" ? "noopener noreferrer" : undefined}
         on:click={closeDrawer}
         class={`group ${$page.url.pathname == href ? "active" : ""} ${
-          $page.url.pathname == highlightAnotherItem + "/" ? "active" : ""
-        } ${$page.url.pathname.startsWith(href + "/") ? "active" : ""}`}>
+          $page.url.pathname == highlightAnotherItem ? "active" : ""
+        } ${$page.url.pathname.startsWith(href) ? "active" : ""}`}>
         {#if icon}
           <span>
             {@html icon}

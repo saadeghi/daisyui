@@ -8,6 +8,7 @@ layout: components
 <script>
   import Component from "$components/Component.svelte"
   import ClassTable from "$components/ClassTable.svelte"
+  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import BrowserSupport from "$components/BrowserSupport.svelte"
   import Translate from "$components/Translate.svelte"
   import { prefix } from '$lib/stores';
@@ -30,6 +31,8 @@ layout: components
 </script>
 
 <Translate text="You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99." />
+
+<!-- <ComponentPageTabs/> -->
 
 <ClassTable
 data="{[

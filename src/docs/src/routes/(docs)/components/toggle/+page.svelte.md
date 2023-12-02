@@ -8,11 +8,14 @@ layout: components
 <script>
   import Component from "$components/Component.svelte"
   import ClassTable from "$components/ClassTable.svelte"
+  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import BrowserSupport from "$components/BrowserSupport.svelte"
   import { prefix } from '$lib/stores';
   import { replace } from '$lib/actions';
   let indeterminate = true;
 </script>
+
+<!-- <ComponentPageTabs/> -->
 
 <ClassTable
 data="{[

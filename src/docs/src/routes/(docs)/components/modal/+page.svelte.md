@@ -8,6 +8,7 @@ layout: components
 <script>
   import Component from "$components/Component.svelte"
   import ClassTable from "$components/ClassTable.svelte"
+  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import BrowserSupport from "$components/BrowserSupport.svelte"
   import Translate from "$components/Translate.svelte"
   import { prefix } from '$lib/stores';
@@ -20,6 +21,8 @@ firefox:98,
 safari:15.4,
 iossafari: 15.4,
 }}"/>
+
+<!-- <ComponentPageTabs/> -->
 
 <ClassTable
 data="{[

@@ -8,6 +8,7 @@ layout: components
 <script>
   import Component from "$components/Component.svelte"
   import ClassTable from "$components/ClassTable.svelte"
+  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import BrowserSupport from "$components/BrowserSupport.svelte"
   import Translate from "$components/Translate.svelte"
   import { prefix } from '$lib/stores';
@@ -22,6 +23,8 @@ layout: components
   For accessibility, a role of 'progressbar' is given to each &lt;div&gt; explicitly, while 
   &lt;progress&gt; receives this role implicitly.
 </div>
+
+<!-- <ComponentPageTabs/> -->
 
 <ClassTable
 data="{[

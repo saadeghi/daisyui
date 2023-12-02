@@ -8,6 +8,7 @@ layout: components
 <script>
   import Component from "$components/Component.svelte"
   import ClassTable from "$components/ClassTable.svelte"
+  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import BrowserSupport from "$components/BrowserSupport.svelte"
   import Translate from "$components/Translate.svelte"
   import { prefix } from '$lib/stores';
@@ -21,6 +22,8 @@ layout: components
     <div><Translate text="This component is deprecated and will be removed in the next major version. Use <a class='link' href='/components/join'>Join</a> instead." /></div>
   </div>
 </div>
+
+<!-- <ComponentPageTabs/> -->
 
 <ClassTable
 data="{[
