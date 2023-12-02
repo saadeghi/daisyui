@@ -107,8 +107,8 @@
     }
   }
 }
-.tabs-lifted >
-  .tab-active:not(.tab-disabled):not([disabled])
+.tabs-lifted
+  > .tab-active:not(.tab-disabled):not([disabled])
   + .tabs-lifted
   .tab-active:not(.tab-disabled):not([disabled]),
 .tabs-lifted > .tab:is(input:checked) + .tabs-lifted .tab:is(input:checked) {
