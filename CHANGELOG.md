@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.18 (2023-12-03)
+
 ## 4.4.17 (2023-11-30)
 
 ### Bug Fixes
