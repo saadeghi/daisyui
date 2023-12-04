@@ -79,4 +79,7 @@
   /* &::-webkit-calendar-picker-indicator {
     display: none;
   } */
+  &::-webkit-date-and-time-value {
+    text-align: inherit;
+  }
 }
