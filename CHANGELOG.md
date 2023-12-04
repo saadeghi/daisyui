@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.19 (2023-12-04)
+
+
+### Bug Fixes
+
+* input type=date text-align issue in iOS ([acf5377](https://github.com/saadeghi/daisyui/commit/acf53777c4c1c1719d0da73fee72ed921fd5b75e))
+
 ## 4.4.18 (2023-12-03)
 
 ## 4.4.17 (2023-11-30)
