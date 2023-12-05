@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Tue, 05 Dec 2023 12:19:53 GMT</lastBuildDate>
-    <pubDate>Tue, 05 Dec 2023 12:19:53 GMT</pubDate>
+    <lastBuildDate>Tue, 05 Dec 2023 12:32:02 GMT</lastBuildDate>
+    <pubDate>Tue, 05 Dec 2023 12:32:02 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
@@ -25,7 +25,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ How to install SvelteKit with daisyUI? ]]>
           </title>
           <description>
-            <![CDATA[ null ]]>
+            <![CDATA[ SvelteKit is a meta framework for building web applications. It is based on Svelte, a compiler that turns your Svelte components into fast and efficient JavaScript. ]]>
           </description>
           <link>https://daisyui.com/blog/how-to-install-sveltekit-and-daisyui/</link>
           <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
