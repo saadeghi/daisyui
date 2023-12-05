@@ -1,6 +1,6 @@
 ---
 title: How to install SvelteKit with daisyUI?
-desc:
+desc: SvelteKit is a meta framework for building web applications. It is based on Svelte, a compiler that turns your Svelte components into fast and efficient JavaScript.
 published: true
 date: 2023-11-25
 author: Pouya Saadeghi
@@ -10,15 +10,13 @@ tags:
   - daisyUI
 ---
 
-[SvelteKit](https://kit.svelte.dev/) is a meta framework for building web applications. It is based on Svelte, a compiler that turns your Svelte components into fast and efficient JavaScript.
-
 The biggest advantage of using Svelte, aside from speed and developer experience, is that it's a disappearing framework. It doesn't add any runtime library to your app, so you would only ship the code that you actually use.
 
 If you haven't used Svelte before, You would be surprised how easy it is to learn compared to other frameworks.
 
 ## How to install SvelteKit?
 
-1. To start new SvelteKit project, you can use the following command:
+1. To start new [SvelteKit](https://kit.svelte.dev/) project, you can use the following command:
 
 ```
 npm create svelte@latest my-app
