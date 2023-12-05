@@ -18,6 +18,13 @@ export async function load({ params }) {
   const discountsResponse = await fetch("https://api.lemonsqueezy.com/v1/discounts", LSParams)
   if (productsResponse.ok) {
     storeInfo.products = await productsResponse.json()
+
+    // sort
+    storeInfo.products.data.sort((a, b) => {
+      const idA = parseInt(a.id)
+      const idB = parseInt(b.id)
+      return idB - idA
+    })
     // add additional product data
     storeInfo.products.data.forEach((item) => {
       const itemId = item.id

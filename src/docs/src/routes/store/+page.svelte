@@ -144,11 +144,10 @@
     <div class="rounded-box relative grid grid-cols-5 gap-10 p-10">
       <div class="col-span-5 row-start-2 flex flex-col gap-8 xl:col-span-2 xl:row-start-1">
         <div>
-          {#if product.customattributes?.bestseller}
-            <span class="badge badge-success badge-outline badge-sm italic">Best Seller</span>
-          {/if}
-          {#if product.customattributes?.specialDiscount}
-            <span class="badge badge-success badge-outline badge-sm italic">Special Discount</span>
+          {#if product.customattributes?.tags}
+            {#each product.customattributes.tags as tag}
+              <span class="badge badge-success badge-outline badge-sm italic">{tag}</span>
+            {/each}
           {/if}
           <h2 class="text-lg font-black sm:text-3xl xl:text-4xl">
             {product.attributes.name}
@@ -183,13 +182,50 @@
       <div class="col-span-5 row-start-1 xl:col-span-3">
         <a
           target="_blank"
-          href={product.attributes.buy_now_url}
+          href={product.customattributes?.screenshot
+            ? product.customattributes?.screenshot
+            : product.attributes.large_thumb_url}
           rel="noopener noreferrer"
-          class="aspect-[4/3] object-cover">
+          class="rounded-box group relative block overflow-hidden object-cover">
+          <div
+            class="absolute inset-0 z-[1] grid place-content-center bg-black/50 opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100">
+            <svg
+              class="text-white"
+              width="32"
+              height="32"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linejoin="round" />
+              <path
+                d="M21 15L21 27"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M15.0156 21.0156L27 21"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M33.2216 33.2217L41.7069 41.707"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
           <img
             src={product.attributes.large_thumb_url}
             alt={product.attributes.name}
-            class="rounded-box w-full" />
+            class="w-full" />
         </a>
       </div>
     </div>
