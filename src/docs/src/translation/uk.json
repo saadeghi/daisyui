@@ -413,7 +413,7 @@
   "Utility classes and CSS variables": "Utility classes and CSS variables",
   "Additional utility classes and CSS variables that daisyUI uses for components and themes": "Additional utility classes and CSS variables that daisyUI uses for components and themes",
   "Color utility classes": "Color utility classes",
-  "All daisyUI colors can be used as utility classes. Just like any other Tailiwnd CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities.": "All daisyUI colors can be used as utility classes. Just like any other Tailiwnd CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities.",
+  "All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities.": "All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities.",
   "Border radius": "Border radius",
   "These extended border radius are being used in daisyUI components. The values depend on the theme so you can have a different design decision about border radius of elements based on the active theme. You can use any Tailwind CSS border radius class for these names as well. Like `rounded-r-box` or `rounded-tr-btn`": "These extended border radius are being used in daisyUI components. The values depend on the theme so you can have a different design decision about border radius of elements based on the active theme. You can use any Tailwind CSS border radius class for these names as well. Like `rounded-r-box` or `rounded-tr-btn`",
   "Glass": "Glass",

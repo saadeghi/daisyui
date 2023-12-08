@@ -10,7 +10,7 @@ published: true
 
 ## <Translate text="Color utility classes" />
 
-<Translate text="All daisyUI colors can be used as utility classes. Just like any other Tailiwnd CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities." />
+<Translate text="All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities." />
 
 ```json
 bg-primary
