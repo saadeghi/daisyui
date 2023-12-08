@@ -195,3 +195,18 @@ data="{[
 </div>`
 }</pre>
 </Component>
+
+<Component title="Tabs with custom color">
+<div role="tablist" class="tabs tabs-lifted">
+  <button role="tab" class="tab">Tab 1</button>
+  <button role="tab" class="tab tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary">Tab 2</button>
+  <button role="tab" class="tab">Tab 3</button>
+</div>
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<div role="tablist" class="$$tabs $$tabs-lifted">
+  <a role="tab" class="$$tab">Tab 1</a>
+  <a role="tab" class="$$tab $$tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary">Tab 2</a>
+  <a role="tab" class="$$tab">Tab 3</a>
+</div>`
+}</pre>
+</Component>
