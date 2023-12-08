@@ -440,7 +440,7 @@
   "Utility classes and CSS variables": "公用類別與 CSS 變數",
   "Additional utility classes and CSS variables that daisyUI uses for components and themes": "daisyUI 用於元件和主題的其他公用類別和 CSS 變數",
   "Color utility classes": "色彩公用類別",
-  "All daisyUI colors can be used as utility classes. Just like any other Tailiwnd CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities.": "所有 daisyUI 色彩都可以用作公用類別。就像其他 Tailiwnd CSS 色彩一樣。例如，您可以將 `primary` 色彩與任何 Tailwind CSS 色彩公用類別一起使用。",
+  "All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color. For example you can use `primary` color with any of Tailwind CSS color utilities.": "所有 daisyUI 色彩都可以用作公用類別。就像其他 Tailwind CSS 色彩一樣。例如，您可以將 `primary` 色彩與任何 Tailwind CSS 色彩公用類別一起使用。",
   "Border radius": "邊框圓角",
   "These extended border radius are being used in daisyUI components. The values depend on the theme so you can have a different design decision about border radius of elements based on the active theme. You can use any Tailwind CSS border radius class for these names as well. Like `rounded-r-box` or `rounded-tr-btn`": "這些擴展的邊框圓角正在 daisyUI 元件中使用。數值取決於主題，因此您可以根據當前主題對元素的邊框圓角做出不同的設計決策。您也可以使用任何 Tailwind CSS 邊框圓角類別，例如 `rounded-r-box` 或 `rounded-tr-btn`",
   "Glass": "玻璃",
