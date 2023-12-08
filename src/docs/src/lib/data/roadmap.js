@@ -288,6 +288,14 @@ export const roadmap = [
         done: true,
       },
       {
+        title: "Docs: add Vietnamese translation",
+        done: true,
+      },
+      {
+        title: "Docs: add Italian translation",
+        done: true,
+      },
+      {
         title: "Docs: add German translation",
         done: false,
       },
