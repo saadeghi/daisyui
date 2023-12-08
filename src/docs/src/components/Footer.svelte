@@ -236,6 +236,7 @@
               <div class="join">
                 <input
                   type="email"
+                  autocomplete="email"
                   name="EMAIL"
                   class="join-item input input-bordered w-full max-w-sm"
                   id="mce-EMAIL"
