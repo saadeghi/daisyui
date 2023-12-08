@@ -186,7 +186,7 @@
             ? product.customattributes?.screenshot
             : product.attributes.large_thumb_url}
           rel="noopener noreferrer"
-          class="rounded-box group relative block overflow-hidden object-cover">
+          class="rounded-box group relative block aspect-[4/3] overflow-hidden object-cover">
           <div
             class="absolute inset-0 z-[1] grid place-content-center bg-black/50 opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100">
             <svg
@@ -223,9 +223,11 @@
             </svg>
           </div>
           <img
+            style={`background-image: url('${product.attributes.thumb_url}')`}
             src={product.attributes.large_thumb_url}
             alt={product.attributes.name}
-            class="w-full" />
+            loading="lazy"
+            class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover" />
         </a>
       </div>
     </div>
@@ -239,9 +241,11 @@
 <!-- coming soon -->
 <div class="divider text-base-content/30 mb-20 mt-52">In development</div>
 <div class="grid gap-12 lg:grid-cols-3">
-  {#each products.filter((product) => {
-    return product.attributes.status === "draft"
-  }) as product}
+  {#each products
+    .filter((product) => {
+      return product.attributes.status === "draft"
+    })
+    .slice(0, 3) as product}
     <div
       class="rounded-box border-base-300 text-base-content/30 flex h-72 flex-col items-center justify-center gap-6 border-2 border-dashed p-10 text-center [text-wrap:balance]">
       <svg
