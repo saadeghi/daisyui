@@ -1,5 +1,5 @@
 import { env } from "$env/dynamic/private"
-import { productCustomAttributes } from "$lib/data/store.js"
+import { productCustomAttributes, tech } from "$lib/data/store.js"
 
 const LSParams = {
   headers: {
@@ -37,6 +37,7 @@ export async function load({ params }) {
     storeInfo.discounts = await discountsResponse.json()
   }
   return {
+    tech,
     products: storeInfo.products,
     discounts: storeInfo.discounts,
   }

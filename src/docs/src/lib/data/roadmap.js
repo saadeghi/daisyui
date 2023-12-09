@@ -33,7 +33,7 @@ export const roadmap = [
       },
       {
         title:
-          "Add support for RGB, HSL, etc. color formats for daisyUI themes in tailiwnd.config.js",
+          "Add support for RGB, HSL, etc. color formats for daisyUI themes in tailwind.config.js",
         done: true,
       },
       {
@@ -285,6 +285,14 @@ export const roadmap = [
       },
       {
         title: "Docs: add Malay translation",
+        done: true,
+      },
+      {
+        title: "Docs: add Vietnamese translation",
+        done: true,
+      },
+      {
+        title: "Docs: add Italian translation",
         done: true,
       },
       {

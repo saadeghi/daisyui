@@ -158,3 +158,10 @@ data="{[
 <input type="checkbox" class="$$toggle" id="my-toggle" />`
 }</pre>
 </Component>
+
+<Component title="Toggle with custom color">
+<input type="checkbox" class="toggle [--tglbg:yellow] bg-blue-500 hover:bg-blue-700 border-blue-500" checked />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="checkbox" class="$$toggle [--tglbg:yellow] bg-blue-500 hover:bg-blue-700 border-blue-500" checked />`
+}</pre>
+</Component>

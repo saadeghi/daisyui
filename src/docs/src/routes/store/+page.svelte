@@ -173,20 +173,21 @@
           </a>
         </div>
         {#if product.attributes.description}
+          <hr />
           <div
             class="prose prose-sm prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs">
             {@html product.attributes.description}
           </div>
         {/if}
       </div>
-      <div class="col-span-5 row-start-1 xl:col-span-3">
+      <div class="col-span-5 row-start-1 flex flex-col gap-6 xl:col-span-3">
         <a
           target="_blank"
           href={product.customattributes?.screenshot
             ? product.customattributes?.screenshot
             : product.attributes.large_thumb_url}
           rel="noopener noreferrer"
-          class="rounded-box group relative block overflow-hidden object-cover">
+          class="rounded-box group relative block aspect-[4/3] overflow-hidden object-cover">
           <div
             class="absolute inset-0 z-[1] grid place-content-center bg-black/50 opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100">
             <svg
@@ -223,12 +224,27 @@
             </svg>
           </div>
           <img
+            style={`background-image: url('${product.attributes.thumb_url}')`}
             src={product.attributes.large_thumb_url}
             alt={product.attributes.name}
-            class="w-full" />
+            loading="lazy"
+            class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover" />
         </a>
+        {#if product.customattributes?.tech}
+          <div class="flex items-center justify-end gap-4">
+            <span class="text-base-content/50 text-xs italic">made with</span>
+            {#each product.customattributes.tech as tech}
+              <div
+                class="lg:border-base-content/10 tooltip grid place-content-center rounded-full border-dashed lg:border lg:p-2 xl:p-3"
+                data-tip={data.tech[tech]}>
+                <img class="aspect-square w-5 xl:w-6" src={`/logos/${tech}.svg`} alt={tech} />
+              </div>
+            {/each}
+          </div>
+        {/if}
       </div>
     </div>
+    <hr />
   {:else}
     <div class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20">
       Coming soon…
@@ -239,9 +255,11 @@
 <!-- coming soon -->
 <div class="divider text-base-content/30 mb-20 mt-52">In development</div>
 <div class="grid gap-12 lg:grid-cols-3">
-  {#each products.filter((product) => {
-    return product.attributes.status === "draft"
-  }) as product}
+  {#each products
+    .filter((product) => {
+      return product.attributes.status === "draft"
+    })
+    .slice(0, 3) as product}
     <div
       class="rounded-box border-base-300 text-base-content/30 flex h-72 flex-col items-center justify-center gap-6 border-2 border-dashed p-10 text-center [text-wrap:balance]">
       <svg
