@@ -18,7 +18,7 @@
     </a>
     <p class="text-base-content/60 text-xs italic">Professional templates made by daisyUI</p>
   </div>
-  <div class="py-20">
+  <div>
     <slot />
   </div>
 </div>
