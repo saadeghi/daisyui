@@ -1,11 +1,11 @@
-import { readEnv } from "$lib/util"
+import { LEMONSQUEEZY_API_KEY } from "$env/static/private"
 import { productCustomAttributes, tech } from "$lib/data/store.js"
 
 const LSParams = {
   headers: {
     "Accept": "application/vnd.api+json",
     "Content-type": "application/vnd.api+json",
-    "Authorization": `Bearer ${readEnv("LEMONSQUEEZY_API_KEY", "")}`,
+    "Authorization": `Bearer ${LEMONSQUEEZY_API_KEY}`,
   },
 }
 
