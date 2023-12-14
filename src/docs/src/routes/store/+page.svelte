@@ -2,6 +2,18 @@
   import { dev } from "$app/environment"
   import SEO from "$components/SEO.svelte"
   import Countdown from "svelte-countdown"
+  let scrollY
+
+  $: setIdtoUrl = function (element, offset = 120) {
+    document.addEventListener("scroll", function (e) {
+      if (
+        scrollY + offset > element.offsetTop &&
+        scrollY + offset < element.offsetTop + element.offsetHeight
+      ) {
+        location.hash = `#${element.id}`
+      }
+    })
+  }
 
   export let data
   const products = data.products?.data
@@ -29,10 +41,12 @@
   }
 </script>
 
+<svelte:window bind:scrollY />
+
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
 
 <!-- discounts -->
-<div class="mb-10 flex flex-col gap-4 p-10">
+<div class="flex flex-col gap-4 py-10">
   {#each discounts as discount}
     {#if discount.attributes.is_limited_to_products !== false}
       {#if dev}<meta name={discount.attributes.name} content="limited to specific products" />{/if}
@@ -141,7 +155,7 @@
   {#each products.filter((product) => {
     return product.attributes.status === "published"
   }) as product}
-    <div class="rounded-box relative grid grid-cols-5 gap-10 p-10">
+    <div class="rounded-box relative grid grid-cols-5 gap-10 py-10" id={product.id} use:setIdtoUrl>
       <div class="col-span-5 row-start-2 flex flex-col gap-8 xl:col-span-2 xl:row-start-1">
         <div>
           {#if product.customattributes?.tags}
@@ -173,7 +187,6 @@
           </a>
         </div>
         {#if product.attributes.description}
-          <hr />
           <div
             class="prose prose-sm prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs">
             {@html product.attributes.description}
@@ -244,7 +257,9 @@
         {/if}
       </div>
     </div>
-    <hr />
+    {#if product !== products[products.length - 1]}
+      <div class="divider text-base-content/30"></div>
+    {/if}
   {:else}
     <div class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20">
       Coming soon…
@@ -253,7 +268,7 @@
 </div>
 
 <!-- coming soon -->
-<div class="divider text-base-content/30 mb-20 mt-52">In development</div>
+<div class="divider text-base-content/30 my-20">In development</div>
 <div class="grid gap-12 lg:grid-cols-3">
   {#each products
     .filter((product) => {
@@ -293,7 +308,7 @@
   {/each}
 </div>
 
-<div class="divider text-base-content/30 mb-20 mt-20"></div>
+<div class="divider text-base-content/30 my-20"></div>
 
 <div id="mc_embed_shell" class="card bg-base-200 mt-10">
   <div class="card-body flex flex-col gap-4">
