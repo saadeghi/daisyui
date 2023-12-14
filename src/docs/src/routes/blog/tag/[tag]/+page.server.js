@@ -33,7 +33,7 @@ export async function load({ params }) {
   posts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
 
   if (posts.length === 0) {
-    throw error(404, "Not found")
+    error(404, "Not found");
   }
   return {
     params,
