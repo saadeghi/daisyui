@@ -1,4 +1,4 @@
-input {
+.input {
   &-xs {
     @apply h-6 px-2 text-xs leading-relaxed;
   }
