@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.20 (2023-12-14)
+
+
+### Bug Fixes
+
+* [#2651](https://github.com/saadeghi/daisyui/issues/2651) Allow override input size attributes ([fa54f68](https://github.com/saadeghi/daisyui/commit/fa54f68421c35f605b152d1f9dac722a0417161b))
+
 ## 4.4.19 (2023-12-04)
 
 
