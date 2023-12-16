@@ -2,18 +2,6 @@
   import { dev } from "$app/environment"
   import SEO from "$components/SEO.svelte"
   import Countdown from "svelte-countdown"
-  let scrollY
-
-  $: setIdtoUrl = function (element, offset = 120) {
-    document.addEventListener("scroll", function (e) {
-      if (
-        scrollY + offset > element.offsetTop &&
-        scrollY + offset < element.offsetTop + element.offsetHeight
-      ) {
-        location.hash = `#${element.id}`
-      }
-    })
-  }
 
   export let data
   const products = data.products?.data
@@ -40,8 +28,6 @@
     }, 2000)
   }
 </script>
-
-<svelte:window bind:scrollY />
 
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
 
@@ -155,7 +141,7 @@
   {#each products.filter((product) => {
     return product.attributes.status === "published"
   }) as product}
-    <div class="rounded-box relative grid grid-cols-5 gap-10 py-10" id={product.id} use:setIdtoUrl>
+    <div class="rounded-box relative grid grid-cols-5 gap-10 py-10" id={product.id}>
       <div class="col-span-5 row-start-2 flex flex-col gap-8 xl:col-span-2 xl:row-start-1">
         <div>
           {#if product.customattributes?.tags}
