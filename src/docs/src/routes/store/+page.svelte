@@ -64,7 +64,7 @@
             <h2 class="text-lg font-bold">
               {discount.attributes.name} discount!
             </h2>
-            <div class="text-base-content/60 text-sm">
+            <div class="text-base-content/60 text-sm [text-wrap:balance]">
               Use <span
                 data-tip={isClipboardButtonPressed ? "copied" : "copy"}
                 class="tooltip badge badge-outline">
@@ -74,7 +74,7 @@
                   {discount.attributes.code}
                 </button>
               </span>
-              code to get
+              code at checkbout to get
               <b>
                 {discount.attributes.amount_type === "percent"
                   ? `${discount.attributes.amount}%`
@@ -174,7 +174,7 @@
         </div>
         {#if product.attributes.description}
           <div
-            class="prose prose-sm prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs">
+            class="prose prose-sm prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs [text-wrap:balance]">
             {@html product.attributes.description}
           </div>
         {/if}

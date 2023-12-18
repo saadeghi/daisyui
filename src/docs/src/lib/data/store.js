@@ -2,13 +2,13 @@ export const productCustomAttributes = {
   144550: {
     screenshot: "/images/store/screenshots/agency-landingpage-react.png",
     tech: ["react", "vite", "framer", "daisyui", "tailwind"],
-    tags: ["New"],
+    tags: [],
   },
   142623: {
     screenshot: "/images/store/screenshots/saas-landingpage.png",
     tech: ["html", "alpine", "vite", "daisyui", "tailwind"],
     originalprice: 4000,
-    tags: ["New"],
+    tags: [],
   },
   130237: {
     screenshot: "/images/store/screenshots/auth.png",

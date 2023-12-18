@@ -38,36 +38,41 @@
 </script>
 
 <svelte:window bind:scrollY />
-{#if false}
-  <div class="bg-base-200 flex justify-center rounded-sm p-1">
+{#if true}
+  <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
       href="/store/"
-      class="alert hover:bg-base-300 text-base-content/70 flex max-w-xl justify-center rounded-full p-2 text-center text-xs transition-colors duration-300 ease-out">
-      <p class=" leading-relaxed [text-wrap:balance]">
-        Use <code class="text-base-content/70 font-mono tracking-wide">BLACKFRIDAY</code>
-        code to get 50% discount on daisyUI store
-        <Countdown
-          from={new Date("2023-11-30T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
-          dateFormat="DD/MM/YYYY, HH:mm:ss"
-          let:remaining>
-          {#if remaining.done === false}
-            <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
-              <date
-                datetime={new Date("2023-11-30T00:00:00.000000Z").toLocaleString(
-                  "en-GB",
-                  dateFormat
-                )}
-                class="countdown font-mono text-xs">
-                {remaining.days * 24 + remaining.hours}h&nbsp;
-                <span style={`--value:${remaining.minutes}`}></span>
-                m&nbsp;
-                <span style={`--value:${remaining.seconds}`}></span>
-                s
-              </date>
-              remaining
-            </span>
-          {/if}
-        </Countdown>
+      class="alert hover:bg-base-300 hover:border-base-300 group flex max-w-xl justify-center rounded-full p-2 text-center text-xs transition-colors duration-300 ease-out">
+      <p class="leading-relaxed [text-wrap:balance]">
+        🎁 <span class="text-base-content/70 group-hover:text-base-content">
+          Use <code
+            class="decoration-success font-mono tracking-wide underline decoration-wavy underline-offset-4">
+            YEAR2024
+          </code>
+          code to get 40% discount on daisyUI store
+          <Countdown
+            from={new Date("2023-12-26T00:00:00.000000Z").toLocaleString("en-GB", dateFormat)}
+            dateFormat="DD/MM/YYYY, HH:mm:ss"
+            let:remaining>
+            {#if remaining.done === false}
+              <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
+                <date
+                  datetime={new Date("2023-11-30T00:00:00.000000Z").toLocaleString(
+                    "en-GB",
+                    dateFormat
+                  )}
+                  class="countdown font-mono text-xs">
+                  {remaining.days * 24 + remaining.hours}h&nbsp;
+                  <span style={`--value:${remaining.minutes}`}></span>
+                  m&nbsp;
+                  <span style={`--value:${remaining.seconds}`}></span>
+                  s
+                </date>
+                remaining
+              </span>
+            {/if}
+          </Countdown>
+        </span>
       </p>
     </a>
   </div>
