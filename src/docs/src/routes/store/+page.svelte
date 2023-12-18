@@ -74,7 +74,7 @@
                   {discount.attributes.code}
                 </button>
               </span>
-              code at checkbout to get
+              code at checkout to get
               <b>
                 {discount.attributes.amount_type === "percent"
                   ? `${discount.attributes.amount}%`
