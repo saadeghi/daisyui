@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Sat, 16 Dec 2023 10:39:11 GMT</lastBuildDate>
-    <pubDate>Sat, 16 Dec 2023 10:39:11 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Dec 2023 01:37:12 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Dec 2023 01:37:12 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
@@ -30,6 +30,18 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           </description>
           <link>https://daisyui.com/store/</link>
           <pubDate>Sat, 11 Nov 2023 09:44:59 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.com/store/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ 🎁 New Year 2024 discount (valid until 26 December) ]]>
+          </title>
+          <description>
+            <![CDATA[ New discount available: Use "YEAR2024" code at checkout to get 40% discount. Valid until 26 December ]]>
+          </description>
+          <link>https://daisyui.com/store/</link>
+          <pubDate>Mon, 18 Dec 2023 01:04:54 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.com/store/</guid>
         </item>
       
