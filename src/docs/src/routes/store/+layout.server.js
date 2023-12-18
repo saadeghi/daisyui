@@ -19,11 +19,9 @@ export async function load({ params }) {
   if (productsResponse.ok) {
     storeInfo.products = await productsResponse.json()
 
-    // sort
+    // sort products by id
     storeInfo.products.data.sort((a, b) => {
-      const idA = parseInt(a.id)
-      const idB = parseInt(b.id)
-      return idB - idA
+      return parseInt(b.id) - parseInt(a.id)
     })
     // add additional product data
     storeInfo.products.data.forEach((item) => {
@@ -35,7 +33,12 @@ export async function load({ params }) {
   }
   if (discountsResponse.ok) {
     storeInfo.discounts = await discountsResponse.json()
+    // sort discounts by id
+    storeInfo.discounts.data.sort((a, b) => {
+      return parseInt(b.id) - parseInt(a.id)
+    })
   }
+  console.log(storeInfo.discounts.data)
   return {
     tech,
     products: storeInfo.products,
