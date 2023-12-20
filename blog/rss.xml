@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Mon, 18 Dec 2023 21:28:22 GMT</lastBuildDate>
-    <pubDate>Mon, 18 Dec 2023 21:28:22 GMT</pubDate>
+    <lastBuildDate>Wed, 20 Dec 2023 01:40:06 GMT</lastBuildDate>
+    <pubDate>Wed, 20 Dec 2023 01:40:06 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ daisyUI 2023 Wrapped ]]>
+          </title>
+          <description>
+            <![CDATA[ It's the end of the year and this year was amazing! For Front-end development, For CSS, For Tailwind and for daisyUI! Let's take a look at what we've accomplished in 2023. ]]>
+          </description>
+          <link>https://daisyui.com/blog/daisyui-2023-wrapped/</link>
+          <pubDate>Wed, 20 Dec 2023 00:00:00 GMT</pubDate>
+          <image>https://daisyui.com/images/blog/daisyui-is-the-best-component-library.png</image>
+          <image>https://daisyui.com/images/blog/daisyui-is-the-best-component-library.png</image>
+          <media:content url="https://daisyui.com/images/blog/daisyui-is-the-best-component-library.png" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.com/images/blog/daisyui-is-the-best-component-library.png" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/daisyui-2023-wrapped/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ How to install SvelteKit with daisyUI? ]]>
