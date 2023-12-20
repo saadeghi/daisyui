@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{html,js,svelte,ts,svx,svelte.md,json}"],
+  content: ["./src/**/*.{html,js,svelte,ts,svx,md,svelte.md,json}"],
   safelist: [
     "mr-1",
     "opacity-20",
