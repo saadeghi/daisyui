@@ -44,7 +44,7 @@ With Tailwind UI, you need to use Tailwind CSS utility classes to make a button:
 </button>
 ```
 
-Basically Tailwind UI is a set of HTML templates that you can copy and paste into your project while daiyUI is a plug-in which adds super powers to Tailwind CSS.
+Basically Tailwind UI is a set of HTML templates that you can copy and paste into your project while daisyUI is a plug-in which adds super powers to Tailwind CSS.
 
 ## Pricing and costs
 
