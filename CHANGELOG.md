@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.21 (2023-12-20)
+
+
+### Bug Fixes
+
+* [#2664](https://github.com/saadeghi/daisyui/issues/2664) ([ff7c106](https://github.com/saadeghi/daisyui/commit/ff7c1067a1f497446be4722717dfdc23a7a7d2f3))
+* update ja component names ([#2666](https://github.com/saadeghi/daisyui/issues/2666)) ([5324c7c](https://github.com/saadeghi/daisyui/commit/5324c7cc1eb5dee5877eb4eda50ab2e5feb3041c))
+
 ## 4.4.20 (2023-12-14)
 
 
