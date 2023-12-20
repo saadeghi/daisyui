@@ -68,7 +68,7 @@ Other Tailwind CSS component libraries usually use the utility-only approach whi
 
 Basically with daisyUI you use a single `btn` class to make a button and then you can customize it with utility classes. With other component libraries you use copy/paste 100 class names to make a button and then you can customize it by editing them.
 
-## How can I use dailyUI?
+## How can I use daisyUI?
 
 To use daisyUI you need to install [Node.js](https://nodejs.org/en/download) and [Tailwind CSS](https://tailwindcss.com/docs/installation).
 

@@ -100,7 +100,7 @@ We added 6 new translations to the website in 2023. daisyUI docs are now availab
 
 <img src="/images/blog/daisyui-translations.png" alt="daisyUI translations" class="rounded-box mx-auto w-2/3">
 
-This year we launched [daisyUI Store](/store/), [daisyUI Resources](/resources/videos/) and [dailyUI Blog](/blog/).
+This year we launched [daisyUI Store](/store/), [daisyUI Resources](/resources/videos/) and [daisyUI Blog](/blog/).
 
 We added new pages including [daisyUI Roadmap](/docs/roadmap/), [daisyUI utilities docs](/docs/utilities/) and also a [FAQ page](https://github.com/saadeghi/daisyui/discussions/1949).
 
