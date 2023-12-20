@@ -18,8 +18,14 @@
 }
 .prose {
   & :where(code):not(:where([class~="not-prose"] *)) {
-    padding: 2px 8px;
+    padding: 1px 8px;
     border-radius: var(--rounded-badge);
+    background-color: theme(colors.base-content/0.1);
+    font-wight: initial;
+  }
+  & :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
+  & :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+    display: none;
   }
   pre {
     code {
