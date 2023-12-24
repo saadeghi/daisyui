@@ -17,7 +17,7 @@
   --tw-prose-td-borders: theme(colors.base-content/0.2);
 }
 .prose {
-  & :where(code):not(:where([class~="not-prose"] *)) {
+  & :where(code):not(:where([class~="not-prose"] *, pre *)) {
     padding: 1px 8px;
     border-radius: var(--rounded-badge);
     background-color: theme(colors.base-content/0.1);
