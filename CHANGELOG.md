@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.4.24 (2023-12-24)
+
+
+### Bug Fixes
+
+* [#2634](https://github.com/saadeghi/daisyui/issues/2634) compile base colors ([#2635](https://github.com/saadeghi/daisyui/issues/2635)) ([ae4807b](https://github.com/saadeghi/daisyui/commit/ae4807b94408453ecd0f373c6343572efc984b16))
+* [#2682](https://github.com/saadeghi/daisyui/issues/2682) ([49c6389](https://github.com/saadeghi/daisyui/commit/49c638938d81e9aaefb725348831ef3c02d0d75f))
+* unwanted background color in `.prose pre>code` ([5d6daf3](https://github.com/saadeghi/daisyui/commit/5d6daf32c57a7d5060ab7b2b27bf8f490276e2b1))
+
 ## 4.4.23 (2023-12-20)
 
 
