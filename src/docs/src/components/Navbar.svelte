@@ -38,7 +38,7 @@
 </script>
 
 <svelte:window bind:scrollY />
-{#if true}
+{#if false}
   <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
       href="/store/"
