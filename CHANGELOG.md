@@ -7,17 +7,13 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* [#2634](https://github.com/saadeghi/daisyui/issues/2634) compile base colors ([#2635](https://github.com/saadeghi/daisyui/issues/2635)) ([ae4807b](https://github.com/saadeghi/daisyui/commit/ae4807b94408453ecd0f373c6343572efc984b16))
-* [#2682](https://github.com/saadeghi/daisyui/issues/2682) ([49c6389](https://github.com/saadeghi/daisyui/commit/49c638938d81e9aaefb725348831ef3c02d0d75f))
 * unwanted background color in `.prose pre>code` ([5d6daf3](https://github.com/saadeghi/daisyui/commit/5d6daf32c57a7d5060ab7b2b27bf8f490276e2b1))
 
 ## 4.4.23 (2023-12-20)
 
-
 ### Bug Fixes
 
 * [#2634](https://github.com/saadeghi/daisyui/issues/2634) compile base colors ([#2635](https://github.com/saadeghi/daisyui/issues/2635)) ([ae4807b](https://github.com/saadeghi/daisyui/commit/ae4807b94408453ecd0f373c6343572efc984b16))
-* [#2682](https://github.com/saadeghi/daisyui/issues/2682) ([49c6389](https://github.com/saadeghi/daisyui/commit/49c638938d81e9aaefb725348831ef3c02d0d75f))
 
 ## 4.4.22 (2023-12-20)
 
@@ -69,12 +65,6 @@ All notable changes to this project will be documented in this file. See [commit
 - drawer scrollbars are now visible. closes: [#2598](https://github.com/saadeghi/daisyui/issues/2598) closes: [#2276](https://github.com/saadeghi/daisyui/issues/2276) ([b2ec8f7](https://github.com/saadeghi/daisyui/commit/b2ec8f7625aaadb3bc8c21fe9f2a6a07065a6de7))
 
 ## 4.4.14 (2023-11-28)
-
-### Bug Fixes
-
-- `drawer-content` overflow when there's a table. closes: [#2262](https://github.com/saadeghi/daisyui/issues/2262) [#1914](https://github.com/saadeghi/daisyui/issues/1914) ([1c7e786](https://github.com/saadeghi/daisyui/commit/1c7e78666dc3ce79dbe8486933997b88556b7a0b))
-
-## 4.4.13 (2023-11-28)
 
 ### Bug Fixes
 
