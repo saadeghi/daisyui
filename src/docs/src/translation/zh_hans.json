@@ -66,6 +66,7 @@
   "Tooltip": "Tooltip 文字提示",
   "Data input": "数据输入",
   "Checkbox": "Checkbox 复选框",
+  "File input": "File input 文件输入框",
   "Text input": "Text input 文字输入框",
   "Radio": "Radio 单选框",
   "Range": "Range 范围滑块",
