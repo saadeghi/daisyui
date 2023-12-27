@@ -85,7 +85,7 @@ export const pages = [
             href: "/components/swap/",
           },
           {
-            name: "Theme Controller",
+            name: "Theme controller",
             tags: "theme controller change dark mode",
             href: "/components/theme-controller/",
             badge: "new",
@@ -264,7 +264,7 @@ export const pages = [
             href: "/components/checkbox/",
           },
           {
-            name: "File Input",
+            name: "File input",
             tags: "file upload",
             href: "/components/file-input/",
           },
