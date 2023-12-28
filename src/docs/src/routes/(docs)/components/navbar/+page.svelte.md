@@ -14,6 +14,8 @@ layout: components
   import { replace } from '$lib/actions';
 </script>
 
+<Translate text="For demonstration purposes the navbar previews use the `shadow-xl` and `rounded-box` Tailwind CSS utility classes. These are missing in the actual code examples for a more convenient copy/paste behaviour." />
+
 <!-- <ComponentPageTabs/> -->
 
 <ClassTable
