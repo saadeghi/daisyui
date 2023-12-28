@@ -38,7 +38,6 @@ export async function load({ params }) {
       return parseInt(b.id) - parseInt(a.id)
     })
   }
-  console.log(storeInfo.discounts.data)
   return {
     tech,
     products: storeInfo.products,
