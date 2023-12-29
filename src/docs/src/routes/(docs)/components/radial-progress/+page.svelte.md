@@ -15,7 +15,7 @@ layout: components
   import { replace } from '$lib/actions';
 </script>
 
-<Translate text="Radial progress needs `--value` CSS variable to work.<br />To change the size, use `--size` CSS variable which has a default value of `4rem`.<br />To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.<br />" />
+<Translate text="Radial progress needs `--value` CSS variable to work.<br />To change the size, use `--size` CSS variable which has a default value of `5rem`.<br />To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.<br />" />
 
 <div class="alert alert-info text-sm mt-2">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
