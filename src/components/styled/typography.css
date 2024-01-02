@@ -20,8 +20,11 @@
   & :where(code):not(:where([class~="not-prose"] *, pre *)) {
     padding: 1px 8px;
     border-radius: var(--rounded-badge);
-    background-color: theme(colors.base-content/0.1);
     font-weight: initial;
+    background-color: theme(colors.base-content/0.1);
+    @supports not (color: oklch(0 0 0)) {
+      background-color: theme(colors.base-300);
+    }
   }
   & :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
   & :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
