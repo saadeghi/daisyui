@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.5.0 (2024-01-02)
+
+
+### Features
+
+* added some Chinese translations ([#2707](https://github.com/saadeghi/daisyui/issues/2707)) ([c122353](https://github.com/saadeghi/daisyui/commit/c12235317c1b182a464a75ebefd670000c4da36e))
+
+
+### Bug Fixes
+
+* prose code fallback color for old browsers. closes: [#2715](https://github.com/saadeghi/daisyui/issues/2715) ([0471a04](https://github.com/saadeghi/daisyui/commit/0471a04d3d1b5ee2b946b5bfb1ddb8894ea7affc))
+
 ## 4.4.24 (2023-12-24)
 
 
