@@ -75,7 +75,7 @@ To use daisyUI you need to install [Node.js](https://nodejs.org/en/download) and
 1. install daisyUI with npm:
 
 ```bash
-npm i -D daisyui@latest
+npm i -D daisyui@3.9.4
 ```
 
 2. Then add daisyUI to your tailwind.config.js files:

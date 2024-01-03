@@ -127,7 +127,7 @@
               class="tooltip tooltip-accent">
               <button
                 class="btn btn-sm cursor-copy rounded-full font-mono font-light normal-case"
-                on:click={() => copyText("npm i -D daisyui@latest")}>
+                on:click={() => copyText("npm i -D daisyui@3.9.4")}>
                 <pre><code>npm i -D daisyui</code></pre>
               </button>
             </div>

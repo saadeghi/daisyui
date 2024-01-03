@@ -12,7 +12,7 @@
       <p class="mx-auto mt-5 w-full max-w-lg text-left">1. {$t("install-step-1")}:</p>
       <div class="mx-auto my-2 w-full max-w-md">
         <div class="mockup-code mx-auto w-full max-w-xs text-left shadow-lg sm:max-w-none">
-          <pre data-prefix="$"><code>npm i -D daisyui@latest</code></pre>
+          <pre data-prefix="$"><code>npm i -D daisyui@3.9.4</code></pre>
         </div>
         <p class="mx-auto mt-5 w-full max-w-lg text-left">2. {$t("install-step-2")}:</p>
         <div class="my-2 w-full max-w-4xl">

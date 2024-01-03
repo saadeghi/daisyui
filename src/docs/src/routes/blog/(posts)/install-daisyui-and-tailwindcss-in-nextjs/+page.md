@@ -34,7 +34,7 @@ npx create-next-app@latest
 3. Now install the latest version of daisyUI as a dev dependency:
 
 ```
-npm i -D daisyui@latest
+npm i -D daisyui@3.9.4
 ```
 
 4. Open `tailwind.config.js` file  
