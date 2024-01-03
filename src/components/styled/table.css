@@ -35,4 +35,8 @@
   :where(thead, tfoot) {
     @apply text-base-content/60 whitespace-nowrap text-xs font-bold;
   }
+
+  :where(tfoot) {
+    @apply border-t-base-200 border-t;
+  }
 }
