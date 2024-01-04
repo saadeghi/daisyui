@@ -8,7 +8,7 @@ export const productCustomAttributes = {
     screenshot: "/images/store/screenshots/saas-landingpage.png",
     tech: ["html", "react", "svelte", "alpine", "daisyui", "tailwind"],
     originalprice: 4000,
-    tags: ["React + Svelte versions added"],
+    tags: ["React + Svelte + Vue versions added"],
   },
   130237: {
     screenshot: "/images/store/screenshots/auth.png",
