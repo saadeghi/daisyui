@@ -32,7 +32,7 @@
 ## 📀 Install now!
 
 ```bash
-npm i -D daisyui@latest
+npm i -D daisyui@3.9.4
 ```
 
 Then add daisyUI to your `tailwind.config.js`:

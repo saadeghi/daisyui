@@ -74,7 +74,7 @@ composer require robsontenorio/mary
 If it's an existing Laravel project, Install daisyUI and Tailwind CSS and initialize Tailwind CSS config file:
 
 ```bash
-yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
+yarn add -D tailwindcss daisyui@3.9.4 postcss autoprefixer && npx tailwindcss init -p
 ```
 
 Change your tailwind.config.js file like this:
