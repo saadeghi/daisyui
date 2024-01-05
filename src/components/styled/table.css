@@ -25,11 +25,8 @@
     @apply [@media(hover:hover)]:hover:bg-base-300;
   }
 
-  :where(thead, tbody) {
-    :where(tr:not(:last-child)),
-    :where(tr:first-child:last-child) {
-      @apply border-b-base-200 border-b;
-    }
+  :where(thead tr, tbody tr:not(:last-child),tbody tr:first-child:last-child) {
+    @apply border-b-base-200 border-b;
   }
 
   :where(thead, tfoot) {
