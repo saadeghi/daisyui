@@ -25,7 +25,7 @@ details.collapse summary {
 .collapse-arrow > .collapse-title:after {
   @apply absolute block h-2 w-2 translate-y-[-100%] rotate-[45deg] transition-all ease-out;
   transition-duration: 0.2s;
-  top: 50%;
+  top: 1.9rem;
   inset-inline-end: 1.4rem;
   content: "";
   transform-origin: 75% 75%;
