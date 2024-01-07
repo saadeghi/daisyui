@@ -8,7 +8,7 @@
   @apply absolute;
 }
 .dropdown:is(:not(details)) .dropdown-content {
-  @apply invisible opacity-0;
+  @apply hidden;
 }
 .dropdown-end .dropdown-content {
   @apply end-0;
@@ -34,11 +34,11 @@
 .dropdown.dropdown-open .dropdown-content,
 .dropdown:not(.dropdown-hover):focus .dropdown-content,
 .dropdown:focus-within .dropdown-content {
-  @apply visible opacity-100;
+  @apply block;
 }
 @media (hover: hover) {
   .dropdown.dropdown-hover:hover .dropdown-content {
-    @apply visible opacity-100;
+    @apply block;
   }
 }
 .dropdown:is(details) summary::-webkit-details-marker {
