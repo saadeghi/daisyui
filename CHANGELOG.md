@@ -5,15 +5,9 @@ All notable changes to this project will be documented in this file. See [commit
 ## 4.6.0 (2024-01-11)
 
 
-### Features
-
-* added some Chinese translations ([#2707](https://github.com/saadeghi/daisyui/issues/2707)) ([c122353](https://github.com/saadeghi/daisyui/commit/c12235317c1b182a464a75ebefd670000c4da36e))
-
-
 ### Bug Fixes
 
 * [#2725](https://github.com/saadeghi/daisyui/issues/2725) Change top position to prevent movements when collapse opens ([#2730](https://github.com/saadeghi/daisyui/issues/2730)) ([69b40ff](https://github.com/saadeghi/daisyui/commit/69b40ff2d48e26bb2c38cf551dedf60a4211c018))
-* prose code fallback color for old browsers. closes: [#2715](https://github.com/saadeghi/daisyui/issues/2715) ([0471a04](https://github.com/saadeghi/daisyui/commit/0471a04d3d1b5ee2b946b5bfb1ddb8894ea7affc))
 
 ## 4.5.0 (2024-01-02)
 
