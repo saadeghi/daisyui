@@ -39,7 +39,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 10
+          fetch-depth: 1
           clean: false
 
       - name: Setup Node
