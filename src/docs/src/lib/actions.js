@@ -26,6 +26,7 @@ export function htmlToJsx(node) {
   const originalContent = node.textContent ?? ""
 
   const stringsToReplace = {
+    "<br>": "<br/>",
     "onclick=": "onClick=",
     '"0"': "{0}",
     "<!--": "{/*",
