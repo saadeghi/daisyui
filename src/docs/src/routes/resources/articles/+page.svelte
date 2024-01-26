@@ -7,8 +7,7 @@
 
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">
-    <span style="view-transition-name: resources-heading">daisyUI community</span>
-    articles
+    daisyUI community articles
   </h1>
   <p class="text-base-content/60 text-xs italic">
     If you have an article or blog post about daisyUI, <a
