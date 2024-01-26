@@ -146,7 +146,7 @@
         <div>
           {#if product.customattributes?.tags}
             {#each product.customattributes.tags as tag}
-              <span class="badge badge-success badge-outline badge-sm italic">{tag}</span>
+              <span class="badge badge-success badge-outline italic">{tag}</span>
             {/each}
           {/if}
           <h2 class="text-lg font-black sm:text-3xl xl:text-4xl">
@@ -160,8 +160,20 @@
                 &nbsp;{convertCurrency(product.customattributes?.originalprice)}&nbsp;
               </span>
             {/if}
-            <span class="text-2xl font-light xl:text-4xl">
-              {convertCurrency(product.attributes.price)}
+            <span class="flex flex-col">
+              <span class="text-2xl font-light xl:text-4xl">
+                {#if product.customattributes?.displayprice}
+                  {convertCurrency(product.customattributes?.displayprice)}
+                {:else}
+                  {convertCurrency(product.attributes.price)}
+                {/if}
+              </span>
+
+              {#if product.customattributes?.displaypricenote}
+                <span class="text-sm italic opacity-40">
+                  {product.customattributes?.displaypricenote}
+                </span>
+              {/if}
             </span>
           </div>
           <a
