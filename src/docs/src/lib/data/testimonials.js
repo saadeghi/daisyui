@@ -23,11 +23,12 @@ export let tweets = [
     bio: "Developer at axo.dev",
   },
   {
-    id: "1657999552312651776",
-    content: "daisyUI is amazing and I use it for all my projects",
-    name: "Cyris",
-    username: "sudo_overflow",
-    bio: "Software Engineer",
+    id: "1613920221240213504",
+    content:
+      "If you use Tailwind and want prepackaged components then I wholeheartedly recommend daisyUI! An awesome set of defaults that's super configurable 🔥",
+    name: "Scott Spence",
+    username: "spences10",
+    bio: "SvelteSociety London events organiser",
   },
   {
     id: "1556968894862180354",
@@ -37,20 +38,21 @@ export let tweets = [
     username: "TiiaAurora",
     bio: "Tech journalist",
   },
+
   {
-    id: "1658134686177153024",
-    content: "daisyUI is such a time saver",
-    name: "Ollie The Dev",
-    username: "olliethedev",
-    bio: "Amplify UI, texttodesign.ai",
+    id: "1641817678334816257",
+    content:
+      "I'm glad I found daisyUI. daisyUI is built with Tailwind CSS which makes it perfect fit for me.",
+    name: "Rem Kim",
+    username: "remkim_",
+    bio: "Founder of resolveai.co",
   },
   {
-    id: "1613920221240213504",
-    content:
-      "If you use Tailwind and want prepackaged components then I wholeheartedly recommend daisyUI! An awesome set of defaults that's super configurable 🔥",
-    name: "Scott Spence",
-    username: "spences10",
-    bio: "SvelteSociety London events organiser",
+    id: "1657999552312651776",
+    content: "daisyUI is amazing and I use it for all my projects",
+    name: "Cyris",
+    username: "sudo_overflow",
+    bio: "Software Engineer",
   },
   {
     id: "1657034356454576130",
@@ -60,12 +62,11 @@ export let tweets = [
     bio: "Indiehacker",
   },
   {
-    id: "1641817678334816257",
-    content:
-      "I'm glad I found daisyUI. daisyUI is built with Tailwind CSS which makes it perfect fit for me.",
-    name: "Rem Kim",
-    username: "remkim_",
-    bio: "Founder of resolveai.co",
+    id: "1658134686177153024",
+    content: "daisyUI is such a time saver",
+    name: "Ollie The Dev",
+    username: "olliethedev",
+    bio: "Amplify UI, texttodesign.ai",
   },
   {
     id: "1654010583673634822",
@@ -91,18 +92,18 @@ export let tweets = [
     bio: "Ex Google Workspace technical support",
   },
   {
-    id: "1500904082466295810",
-    content: "I found Tailwind CSS complicated, but daisyUI looks like something I can give a try.",
-    name: "Bonnie",
-    username: "The_GreatBonnie",
-    bio: "Technical Writer",
-  },
-  {
     id: "1538447628400091137",
     content: "If you try daisyUI, there is no turning back... 😏",
     name: "Marc Lou",
     username: "marc_louvion",
     bio: "HabitsGarden, Landing-AI, IndiePa.ge",
+  },
+  {
+    id: "1500904082466295810",
+    content: "I found Tailwind CSS complicated, but daisyUI looks like something I can give a try.",
+    name: "Bonnie",
+    username: "The_GreatBonnie",
+    bio: "Technical Writer",
   },
   {
     id: "1636132972142161927",
@@ -199,5 +200,28 @@ export let tweets = [
     name: "Joel Pickin",
     username: "joelpickin",
     bio: "Software developer",
+  },
+  {
+    id: "1744283320207196546",
+    content: "I used DaisyUI, super happy with it!",
+    name: "Nick S.",
+    username: "Nsmet93",
+    bio: "SaaS builder",
+  },
+  {
+    id: "1748264256527888407",
+    content:
+      "Using a component library such as daisyUI is such a productivity hack. No going back from that.",
+    name: "Josef Büttgen",
+    username: "josefbuettgen",
+    bio: "Developer",
+  },
+  {
+    id: "1742444997616476204",
+    content:
+      "I think DaisyUI is very cool, it's easy to use and you can build a clean UI with it. 👍 😁",
+    name: "Nihad",
+    username: "n1hkrc",
+    bio: "Frontend Software Engineer",
   },
 ]
