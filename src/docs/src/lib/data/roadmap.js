@@ -297,6 +297,14 @@ export const roadmap = [
       },
       {
         title: "Docs: add German translation",
+        done: true,
+      },
+      {
+        title: "Docs: add component design specs",
+        done: false,
+      },
+      {
+        title: "Docs: add component accessibility guidelines",
         done: false,
       },
       {
