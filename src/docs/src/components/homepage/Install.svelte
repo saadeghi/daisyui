@@ -28,7 +28,7 @@
             checked />
           <div
             role="tabpanel"
-            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full max-w-xs p-4 text-left shadow-lg sm:max-w-none">
+            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full min-w-[20rem] max-w-xs p-4 text-left shadow-lg sm:min-w-[25rem] sm:max-w-none">
             <div class="absolute right-3 top-3 z-[1]">
               <div
                 data-tip={isClipboardButtonPressed ? "copied" : "copy"}
@@ -67,7 +67,7 @@
             aria-label="PNPM" />
           <div
             role="tabpanel"
-            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full max-w-xs p-4 text-left shadow-lg sm:max-w-none">
+            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full min-w-[20rem] max-w-xs p-4 text-left shadow-lg sm:min-w-[25rem] sm:max-w-none">
             <div class="absolute right-3 top-3 z-[1]">
               <div
                 data-tip={isClipboardButtonPressed ? "copied" : "copy"}
@@ -106,7 +106,7 @@
             aria-label="Yarn" />
           <div
             role="tabpanel"
-            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full max-w-xs p-4 text-left shadow-lg sm:max-w-none">
+            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full min-w-[20rem] max-w-xs p-4 text-left shadow-lg sm:min-w-[25rem] sm:max-w-none">
             <div class="absolute right-3 top-3 z-[1]">
               <div
                 data-tip={isClipboardButtonPressed ? "copied" : "copy"}
@@ -145,7 +145,7 @@
             aria-label="Bun" />
           <div
             role="tabpanel"
-            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full max-w-xs p-4 text-left shadow-lg sm:max-w-none">
+            class="bg-neutral text-neutral-content rounded-box tab-content relative mx-auto w-full min-w-[20rem] max-w-xs p-4 text-left shadow-lg sm:min-w-[25rem] sm:max-w-none">
             <div class="absolute right-3 top-3 z-[1]">
               <div
                 data-tip={isClipboardButtonPressed ? "copied" : "copy"}
@@ -189,7 +189,7 @@
               checked />
             <div
               role="tabpanel"
-              class="bg-neutral text-neutral-content rounded-box tab-content mx-auto w-full max-w-xs p-4 text-left text-sm shadow-lg sm:max-w-none">
+              class="bg-neutral text-neutral-content rounded-box tab-content mx-auto min-h-[10.2rem] w-full min-w-[20rem] max-w-xs p-4 text-left text-sm shadow-lg sm:min-w-[25rem] sm:max-w-none">
               <pre dir="ltr"><code>module.exports = {`{`}
   plugins: [
     <span
@@ -205,7 +205,7 @@
               aria-label="ESM" />
             <div
               role="tabpanel"
-              class="bg-neutral text-neutral-content rounded-box tab-content mx-auto w-full max-w-xs p-4 text-left text-sm shadow-lg sm:max-w-none">
+              class="bg-neutral text-neutral-content rounded-box tab-content mx-auto min-h-[10.2rem] w-full min-w-[20rem] max-w-xs p-4 text-left text-sm shadow-lg sm:min-w-[25rem] sm:max-w-none">
               <pre dir="ltr"><code><span
                     class="badge badge-success selection:bg-info-content selection:text-info badge-lg">import daisyui from "daisyui"</span>
 module.exports = {`{`}
