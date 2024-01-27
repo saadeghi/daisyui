@@ -104,7 +104,7 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Dialog modal, closes when clicked outside" desc="there a second form with 'modal-backdrop' class and it covers the screen so we can close the modal when clicked outside">
+<Component title="Dialog modal, closes when clicked outside" desc="there is a second form with 'modal-backdrop' class and it covers the screen so we can close the modal when clicked outside">
 <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
 <dialog id="my_modal_2" class="modal">
   <div class="modal-box">
