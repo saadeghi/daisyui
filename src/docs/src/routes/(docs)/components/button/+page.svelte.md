@@ -100,12 +100,12 @@ data="{[
 <button class="btn btn-primary ringed ring-primary">Primary</button>
 <button class="btn btn-neutral ringed ring-neutral">Neutral</button>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<button class="btn btn-info ringed ring-info">Info</button>
-<button class="btn btn-success ringed ring-success">Success</button>
-<button class="btn btn-warning ringed ring-warning">Warning</button>
-<button class="btn btn-error ringed ring-error">Error</button>
-<button class="btn btn-primary ringed ring-primary">Primary</button>
-<button class="btn btn-neutral ringed ring-neutral">Neutral</button>`
+`<button class="$$btn $$btn-info $$ringed $$ring-info">Info</button>
+<button class="$$btn $$btn-success $$ringed $$ring-success">Success</button>
+<button class="$$btn $$btn-warning $$ringed $$ring-warning">Warning</button>
+<button class="$$btn $$btn-error $$ringed $$ring-error">Error</button>
+<button class="$$btn $$btn-primary $$ringed $$ring-primary">Primary</button>
+<button class="$$btn $$btn-neutral $$ringed $$ring-neutral">Neutral</button>`
 }</pre>
 </Component>
 
