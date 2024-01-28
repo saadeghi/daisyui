@@ -150,6 +150,11 @@
     }
   }
 
+  /* ringed  */
+  &.ringed {
+    @apply  hover:ring-2 hover:ring-offset-2 transition-all ease-out duration-200;
+  }
+
   /* btn variants */
   &-ghost {
     @apply border border-transparent bg-transparent text-current shadow-none outline-current;
