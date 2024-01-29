@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.6.1 (2024-01-29)
+
+
+### Bug Fixes
+
+* [#2775](https://github.com/saadeghi/daisyui/issues/2775) Fix opacity modifier for disabled selection ([#2776](https://github.com/saadeghi/daisyui/issues/2776)) ([65b13a8](https://github.com/saadeghi/daisyui/commit/65b13a82e9ce25414312a40cfd8763cf98f5156f))
+
 ## 4.6.0 (2024-01-11)
 
 
