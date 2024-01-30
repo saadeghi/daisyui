@@ -27,6 +27,13 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 - Fixing typos doesn't need to be an issue. You can just open a pull request.
 - Fixing a mistake in document website doesn't need to be an issue. You can just open a pull request.
 
+## Contribute translations
+
+- You can help add or fix translations by using the [Fink localization editor](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
+- Submit the translation by opening a pull request ([see guide](https://inlang.com/g/6ddyhpoi/guide-nilsjacobsen-contributeTranslationsWithFink))
+
+   [![inlang status badge](https://badge.inlang.com/?url=github.com/saadeghi/daisyui&project=/src/docs/project.inlang)](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
+
 ## Building on local
 
 ### To build the daisyUI node package on local:
