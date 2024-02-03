@@ -164,7 +164,7 @@ data="{[
 
 <Component title="Hero with overlay image">
 <div class="hero min-h-[30rem] rounded" style="background-image: url(/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-  <div class="hero-overlay rounded bg-opacity-60"></div>
+  <div class="hero-overlay rounded opacity-60"></div>
   <div class="text-center hero-content text-neutral-content">
     <div class="max-w-md">
       <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
@@ -175,7 +175,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$hero min-h-screen" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-  <div class="$$hero-overlay bg-opacity-60"></div>
+  <div class="$$hero-overlay opacity-60"></div>
   <div class="$$hero-content text-center text-neutral-content">
     <div class="max-w-md">
       <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
@@ -187,7 +187,7 @@ data="{[
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `<div class="$$hero min-h-screen" style={{backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)'}}>
-  <div class="$$hero-overlay bg-opacity-60"></div>
+  <div class="$$hero-overlay opacity-60"></div>
   <div class="$$hero-content text-center text-neutral-content">
     <div class="max-w-md">
       <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
