@@ -15,12 +15,24 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Tue, 06 Feb 2024 14:04:26 GMT</lastBuildDate>
-    <pubDate>Tue, 06 Feb 2024 14:04:26 GMT</pubDate>
+    <lastBuildDate>Wed, 07 Feb 2024 00:22:24 GMT</lastBuildDate>
+    <pubDate>Wed, 07 Feb 2024 00:22:24 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
     
+        <item>
+          <title>
+            <![CDATA[ Mobile app landing page ]]>
+          </title>
+          <description>
+            <![CDATA[ <p>Landing page for mobile app introduction.</p><p>Features:</p><ul><li><p>HTML landing page layout made with daisyUI 4</p></li><li><p>Using Alpine.js and Handlebars for HTML partials</p></li></ul><p>Including:</p><ul><li><p>2 exclusive daisyUI themes (dark/light)</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li><li><p>Responsive layout</p></li><li><p>Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons</p></li><li><p>Theme changer menu</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/71f032e3-1a23-4b79-b74e-130ada4899f2/</link>
+          <pubDate>Tue, 06 Feb 2024 23:56:31 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/71f032e3-1a23-4b79-b74e-130ada4899f2/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Agency landing page for React ]]>
