@@ -9,9 +9,7 @@
     data.videos.find((video) => video.id == data.video.id).snippet.title
   }`} />
 
-<div
-  class="embed-container rounded-box"
-  style={`view-transition-name: ${data.video.id.replace(/[^a-zA-Z]/g, "")}-img`}>
+<div class="embed-container rounded-box">
   <iframe
     title={data.videos.find((video) => video.id == data.video.id).snippet.title}
     src={`https://www.youtube.com/embed/${data.video.id}`}

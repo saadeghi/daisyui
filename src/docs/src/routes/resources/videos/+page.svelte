@@ -38,8 +38,7 @@
             loading="lazy"
             src={video.snippet.thumbnails.high.url}
             alt={video.snippet.title}
-            class="w-full"
-            style={`view-transition-name: ${video.id.replace(/[^a-zA-Z]/g, "")}-img`} />
+            class="w-full" />
         </figure>
         <div class="flex items-center justify-between gap-4">
           <div class="grow">
