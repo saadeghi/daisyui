@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.6.2 (2024-02-07)
+
+
+### Bug Fixes
+
+* [#2625](https://github.com/saadeghi/daisyui/issues/2625) Fix input spin button position ([#2777](https://github.com/saadeghi/daisyui/issues/2777)) ([4fb0a30](https://github.com/saadeghi/daisyui/commit/4fb0a3003f75c20438f86db3997b2d1cd8cdea31))
+
 ## 4.6.1 (2024-01-29)
 
 
