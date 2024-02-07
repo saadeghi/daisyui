@@ -2,3 +2,16 @@
   @apply shrink appearance-none;
   @apply h-12 px-4 text-sm leading-loose;
 }
+.input[type="number"]::-webkit-inner-spin-button,
+.input-md[type="number"]::-webkit-inner-spin-button{
+  @apply -my-4 -me-4;
+}
+.input-xs[type="number"]::-webkit-inner-spin-button{
+  @apply -my-1 -me-0;
+}
+.input-sm[type="number"]::-webkit-inner-spin-button{
+  @apply my-0 -me-0;
+}
+.input-lg[type="number"]::-webkit-inner-spin-button{
+  @apply -my-6 -me-6;
+}
