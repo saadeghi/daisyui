@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Comment on fresh issue
         uses: badsyntax/github-action-issue-comment@master
