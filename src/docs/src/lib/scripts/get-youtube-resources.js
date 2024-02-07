@@ -1,6 +1,9 @@
+import dotenv from "dotenv"
 import https from "https"
 import fs from "fs"
 import { videoIds } from "../data/youtube.js"
+
+dotenv.config({ path: ".env.local" })
 
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY
 const chunkSize = 50
