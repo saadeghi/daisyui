@@ -38,6 +38,8 @@
       {#if dev}<meta name={discount.attributes.name} content="limited to specific products" />{/if}
     {:else if discount.attributes.is_limited_redemptions !== false}
       {#if dev}<meta name={discount.attributes.name} content="has limited redemptions" />{/if}
+    {:else if discount.attributes.expires_at === null}
+      {#if dev}<meta name={discount.attributes.name} content="has no expire date" />{/if}
     {:else if discount.attributes.starts_at !== null && discount.attributes.starts_at > new Date().toISOString()}
       {#if dev}<meta name={discount.attributes.name} content="not started" />{/if}
     {:else if discount.attributes.expires_at !== null && discount.attributes.expires_at < new Date().toISOString()}
