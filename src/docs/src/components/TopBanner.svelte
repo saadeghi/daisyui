@@ -11,7 +11,7 @@
   }
 </script>
 
-{#if false}
+{#if true}
   <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
       href="/discord/"
@@ -31,7 +31,7 @@
     </a>
   </div>
 {/if}
-{#if true}
+{#if false}
   <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
       href="/store/"
