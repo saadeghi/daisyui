@@ -2,6 +2,7 @@
   import { onMount } from "svelte"
   import Translate from "$components/Translate.svelte"
   import { htmlToJsx, linkProcess } from "$lib/actions"
+  import { t } from "$lib/i18n"
   let Prism
   onMount(async () => {
     Prism = (await import("./Prism.svelte")).default
@@ -50,12 +51,12 @@
   {#if title}
     <div class="pb-2 text-sm font-bold">
       <a class="opacity-20 hover:opacity-60" href={`#${titleStr}`}>#</a>
-      <span class="component-preview-title">{title}</span>
+      <span class="component-preview-title">{$t(title)}</span>
     </div>
   {/if}
   {#if desc}
     <div class="pb-2 text-xs opacity-70">
-      {desc}
+      {$t(desc)}
     </div>
   {/if}
   <div class="grid">
