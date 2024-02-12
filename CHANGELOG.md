@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.6.3 (2024-02-12)
+
+
+### Bug Fixes
+
+* incompatibility of Astro Islands injected style and script tags. closes: [#2835](https://github.com/saadeghi/daisyui/issues/2835) ([8b1cfed](https://github.com/saadeghi/daisyui/commit/8b1cfedcc25b775c8e1290766fb4234e558c0bd5))
+
 ## 4.6.2 (2024-02-07)
 
 
