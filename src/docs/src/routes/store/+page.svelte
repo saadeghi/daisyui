@@ -6,6 +6,12 @@
   export let data
   const products = data.products?.data
   const discounts = data.discounts?.data
+  const publishedProducts = products.filter((product) => {
+    return product.attributes.status === "published"
+  })
+  const indevelopmentProducts = products.filter((product) => {
+    return product.attributes.status === "draft"
+  })
   function convertCurrency(number) {
     const formatted = (number / 100).toFixed(2)
     return `$${formatted.endsWith(".00") ? formatted.slice(0, -3) : formatted}`
@@ -139,19 +145,17 @@
 </div>
 
 <!-- published -->
-<div class="flex flex-col gap-16">
-  {#each products.filter((product) => {
-    return product.attributes.status === "published"
-  }) as product}
-    <div class="rounded-box relative grid grid-cols-5 gap-10 py-10" id={product.id}>
-      <div class="col-span-5 row-start-2 flex flex-col gap-8 xl:col-span-2 xl:row-start-1">
+<div class="mx-auto flex max-w-7xl flex-col gap-16">
+  {#each publishedProducts as product}
+    <div class="rounded-box relative grid grid-cols-12 gap-10 py-10" id={product.id}>
+      <div class="col-span-12 row-start-2 flex flex-col gap-8 xl:col-span-5 xl:row-start-1">
         <div>
           {#if product.customattributes?.tags}
             {#each product.customattributes.tags as tag}
               <span class="badge badge-success badge-outline italic">{tag}</span>
             {/each}
           {/if}
-          <h2 class="text-lg font-black sm:text-3xl xl:text-4xl">
+          <h2 class="font-title text-lg font-black [text-wrap:balance] sm:text-3xl xl:text-5xl">
             {product.attributes.name}
           </h2>
         </div>
@@ -163,7 +167,7 @@
               </span>
             {/if}
             <span class="flex flex-col">
-              <span class="text-2xl font-light xl:text-4xl">
+              <span class="font-title text-2xl font-light xl:text-5xl">
                 {#if product.customattributes?.displayprice}
                   {convertCurrency(product.customattributes?.displayprice)}
                 {:else}
@@ -180,10 +184,22 @@
           </div>
           <a
             href={product.attributes.buy_now_url}
-            class="btn btn-primary shrink-0 xl:px-10"
+            class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
             target="_blank"
             rel="noopener noreferrer">
             Get it now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
           </a>
         </div>
         {#if product.attributes.description}
@@ -193,14 +209,14 @@
           </div>
         {/if}
       </div>
-      <div class="col-span-5 row-start-1 flex flex-col gap-6 xl:col-span-3">
+      <div class="col-span-12 row-start-1 flex flex-col gap-6 xl:col-span-7">
         <a
           target="_blank"
           href={product.customattributes?.screenshot
             ? product.customattributes?.screenshot
             : product.attributes.large_thumb_url}
           rel="noopener noreferrer"
-          class="rounded-box group relative block aspect-[4/3] overflow-hidden object-cover">
+          class="rounded-box border-base-200 group relative block aspect-[4/3] overflow-hidden border object-cover">
           <div
             class="absolute inset-0 z-[1] grid place-content-center bg-black/50 opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100">
             <svg
@@ -258,7 +274,7 @@
       </div>
     </div>
     {#if product !== products[products.length - 1]}
-      <div class="divider text-base-content/30"></div>
+      <!-- <div class="divider before:bg-base-content/5 after:bg-base-content/5"></div> -->
     {/if}
   {:else}
     <div class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20">
@@ -270,11 +286,7 @@
 <!-- coming soon -->
 <div class="divider text-base-content/30 my-20">In development</div>
 <div class="grid gap-12 lg:grid-cols-3">
-  {#each products
-    .filter((product) => {
-      return product.attributes.status === "draft"
-    })
-    .slice(0, 3) as product}
+  {#each indevelopmentProducts.slice(0, 3) as product}
     <div
       class="rounded-box border-base-300 text-base-content/30 flex h-72 flex-col items-center justify-center gap-6 border-2 border-dashed p-10 text-center [text-wrap:balance]">
       <svg

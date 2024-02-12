@@ -6,10 +6,10 @@ export const productCustomAttributes = {
   144550: {
     screenshot: "/images/store/screenshots/agency-landingpage-react.png",
     tech: ["react", "vite", "framer", "daisyui"],
-    originalprice: 1900,
-    displayprice: 1400,
-    displaypricenote: "with discount",
-    tags: ['Use code "AGENCY" at checkout to get 25% discount'],
+    // originalprice: 1900,
+    // displayprice: 1400,
+    // displaypricenote: "with discount",
+    // tags: ['Use code "AGENCY" at checkout to get 25% discount'],
   },
   142623: {
     screenshot: "/images/store/screenshots/saas-landingpage.png",
