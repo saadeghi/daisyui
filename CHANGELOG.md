@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.7.0 (2024-02-12)
+
+
+### Features
+
+* use CSS scrollbar-gutter for drawer. close [#2622](https://github.com/saadeghi/daisyui/issues/2622), close [#2483](https://github.com/saadeghi/daisyui/issues/2483), close [#2782](https://github.com/saadeghi/daisyui/issues/2782), close [#2142](https://github.com/saadeghi/daisyui/issues/2142) ([863afaf](https://github.com/saadeghi/daisyui/commit/863afaf44b696d8b20916bdb749a52ead3fcc8fc))
+
 ## 4.6.3 (2024-02-12)
 
 
