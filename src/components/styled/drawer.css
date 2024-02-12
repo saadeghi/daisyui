@@ -1,6 +1,7 @@
 .drawer {
   width: 100%;
   &-side {
+    @apply overflow-x-hidden;
     & > .drawer-overlay {
       @apply cursor-pointer bg-transparent transition-colors duration-200 ease-out;
     }
