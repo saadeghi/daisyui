@@ -1,7 +1,7 @@
 .navbar {
   @apply flex items-center;
 }
-:where(.navbar > *) {
+:where(.navbar > *:not(script, style)) {
   @apply inline-flex items-center;
 }
 .navbar-start {
