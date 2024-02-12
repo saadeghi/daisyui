@@ -89,6 +89,14 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
+          href="https://daisyui.com/discord/"
+          class="link link-hover group">
+          Discord <span class="badge badge-outline badge-sm">New</span>
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
           href="https://opencollective.com/daisyui"
           class="link link-hover group">
           OpenCollective
