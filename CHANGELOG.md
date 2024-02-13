@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.7.1 (2024-02-13)
+
+
+### Bug Fixes
+
+* don't apply menu item styles to `btn` is inside menu ([ac60762](https://github.com/saadeghi/daisyui/commit/ac6076227960ac5d0771807ec1b263b4aaf16448))
+
 ## 4.7.0 (2024-02-12)
 
 
