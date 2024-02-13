@@ -1,7 +1,10 @@
 .input {
   @apply bg-base-100 rounded-btn border border-transparent text-base;
-  input:focus {
-    @apply outline-none;
+  input {
+    @apply bg-primary bg-transparent;
+    &:focus {
+      @apply outline-none;
+    }
   }
   &[list]::-webkit-calendar-picker-indicator {
     line-height: 1em;
