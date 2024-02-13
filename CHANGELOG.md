@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.7.2 (2024-02-13)
+
+
+### Bug Fixes
+
+* input element inside wrapper with input class background color. closes [#2846](https://github.com/saadeghi/daisyui/issues/2846) ([938829d](https://github.com/saadeghi/daisyui/commit/938829dd205aa857f7a3e7923371d0ea0ca3f8ca))
+
 ## 4.7.1 (2024-02-13)
 
 
