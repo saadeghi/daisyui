@@ -54,7 +54,7 @@ Contributors
 [stars]: https://badgen.net/github/stars/saadeghi/daisyui?label=GitHub%20stars&color=1AD1A5
 [installs]: https://badgen.net/npm/dt/daisyui?label=NPM%20installs&color=1AD1A5
 [jsdelivr]: https://badgen.net/jsdelivr/hits/npm/daisyui?color=1AD1A5
-[discord]: https://badgen.net/discord/members/hYXy48Z4AG?label=Discord&color=1AD1A5
+[discord]: https://badgen.net/discord/members/S6TZxycVHs?label=Discord&color=1AD1A5
 [opencollectivebadge]: https://badgen.net/opencollective/backers/daisyui?label=Open%20Collective&color=1AD1A5
 [tweet]: https://img.shields.io/twitter/url?label=Share&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 [docs-url]: https://daisyui.com/
