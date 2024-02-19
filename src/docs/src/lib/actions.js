@@ -31,6 +31,7 @@ export function htmlToJsx(node) {
     '"0"': "{0}",
     "<!--": "{/*",
     "-->": "*/}",
+    'checked="checked"': "defaultChecked",
 
     // "accent-height=": "accentHeight=",
     // "alignment-baseline=": "alignmentBaseline=",
