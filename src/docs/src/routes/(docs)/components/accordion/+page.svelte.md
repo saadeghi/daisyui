@@ -41,7 +41,7 @@ data="{[
 
 <Component title="Accordion using radio inputs">
 <div class="collapse bg-base-200">
-  <input type="radio" name="my-accordion-1" defaultChecked />
+  <input type="radio" name="my-accordion-1" checked="checked" />
   <div class="collapse-title text-xl font-medium">
     Click to open this one and close others
   </div>
@@ -69,7 +69,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$collapse bg-base-200">
-  <input type="radio" name="my-accordion-1" defaultChecked /> 
+  <input type="radio" name="my-accordion-1" checked="checked" /> 
   <div class="$$collapse-title text-xl font-medium">
     Click to open this one and close others
   </div>
@@ -100,7 +100,7 @@ data="{[
 
 <Component title="Accordion with arrow icon">
 <div class="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="my-accordion-2" defaultChecked />
+  <input type="radio" name="my-accordion-2" checked="checked" />
   <div class="collapse-title text-xl font-medium">
     Click to open this one and close others
   </div>
@@ -128,7 +128,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$collapse $$collapse-arrow bg-base-200">
-  <input type="radio" name="my-accordion-2" defaultChecked /> 
+  <input type="radio" name="my-accordion-2" checked="checked" /> 
   <div class="$$collapse-title text-xl font-medium">
     Click to open this one and close others
   </div>
@@ -159,7 +159,7 @@ data="{[
 
 <Component title="Accordion with plus/minus icon">
 <div class="collapse collapse-plus bg-base-200">
-  <input type="radio" name="my-accordion-3" defaultChecked />
+  <input type="radio" name="my-accordion-3" checked="checked" />
   <div class="collapse-title text-xl font-medium">
     Click to open this one and close others
   </div>
@@ -187,7 +187,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$collapse $$collapse-plus bg-base-200">
-  <input type="radio" name="my-accordion-3" defaultChecked /> 
+  <input type="radio" name="my-accordion-3" checked="checked" /> 
   <div class="$$collapse-title text-xl font-medium">
     Click to open this one and close others
   </div>
@@ -219,7 +219,7 @@ data="{[
 <Component title="Using Accordion and Join together" desc="to join the items together and handle border radius automatically">
 <div class="join join-vertical w-full">
   <div class="collapse collapse-arrow join-item border border-base-300">
-    <input type="radio" name="my-accordion-4" defaultChecked />
+    <input type="radio" name="my-accordion-4" checked="checked" />
     <div class="collapse-title">
       Click to open this one and close others
     </div>
@@ -249,7 +249,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$join $$join-vertical w-full">
   <div class="$$collapse $$collapse-arrow $$join-item border border-base-300">
-    <input type="radio" name="my-accordion-4" defaultChecked /> 
+    <input type="radio" name="my-accordion-4" checked="checked" /> 
     <div class="$$collapse-title text-xl font-medium">
       Click to open this one and close others
     </div>
