@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.7.2 (2024-02-13)
+
+
+### Bug Fixes
+
+* input element inside wrapper with input class background color. closes [#2846](https://github.com/saadeghi/daisyui/issues/2846) ([938829d](https://github.com/saadeghi/daisyui/commit/938829dd205aa857f7a3e7923371d0ea0ca3f8ca))
+
+## 4.7.1 (2024-02-13)
+
+
+### Bug Fixes
+
+* don't apply menu item styles to `btn` is inside menu ([ac60762](https://github.com/saadeghi/daisyui/commit/ac6076227960ac5d0771807ec1b263b4aaf16448))
+
+## 4.7.0 (2024-02-12)
+
+
+### Features
+
+* use CSS scrollbar-gutter for drawer. close [#2622](https://github.com/saadeghi/daisyui/issues/2622), close [#2483](https://github.com/saadeghi/daisyui/issues/2483), close [#2782](https://github.com/saadeghi/daisyui/issues/2782), close [#2142](https://github.com/saadeghi/daisyui/issues/2142), closes [#2004](https://github.com/saadeghi/daisyui/issues/2004) ([863afaf](https://github.com/saadeghi/daisyui/commit/863afaf44b696d8b20916bdb749a52ead3fcc8fc))
+
+## 4.6.3 (2024-02-12)
+
+
+### Bug Fixes
+
+* incompatibility of Astro Islands injected style and script tags. closes: [#2835](https://github.com/saadeghi/daisyui/issues/2835) ([8b1cfed](https://github.com/saadeghi/daisyui/commit/8b1cfedcc25b775c8e1290766fb4234e558c0bd5))
+
 ## 4.6.2 (2024-02-07)
 
 

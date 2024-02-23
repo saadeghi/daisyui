@@ -14,8 +14,14 @@ export async function load({ params }) {
     products: { data: [] },
     discounts: { data: [] },
   }
-  const productsResponse = await fetch("https://api.lemonsqueezy.com/v1/products", LSParams)
-  const discountsResponse = await fetch("https://api.lemonsqueezy.com/v1/discounts", LSParams)
+  const productsResponse = await fetch(
+    "https://api.lemonsqueezy.com/v1/products?page[size]=100",
+    LSParams
+  )
+  const discountsResponse = await fetch(
+    "https://api.lemonsqueezy.com/v1/discounts?page[size]=100",
+    LSParams
+  )
   if (productsResponse.ok) {
     storeInfo.products = await productsResponse.json()
 

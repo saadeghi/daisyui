@@ -1,15 +1,29 @@
-.drawer-open > .drawer-toggle {
-  @apply hidden;
-  & ~ .drawer-side {
-    @apply pointer-events-auto visible sticky block w-auto overscroll-auto;
-    & > *:not(.drawer-overlay) {
-      transform: translateX(0%);
-      [dir="rtl"] & {
+.drawer-open {
+  & > .drawer-toggle {
+    @apply hidden;
+    & ~ .drawer-side {
+      @apply pointer-events-auto visible sticky block w-auto overscroll-auto;
+      & > *:not(.drawer-overlay) {
         transform: translateX(0%);
+        [dir="rtl"] & {
+          transform: translateX(0%);
+        }
       }
     }
+    &:checked ~ .drawer-side {
+      @apply pointer-events-auto visible;
+    }
   }
-  &:checked ~ .drawer-side {
-    @apply pointer-events-auto visible;
+  & > .drawer-side {
+    @apply overflow-y-auto;
   }
+}
+/* these two should have the same specificity */
+html:has(.drawer-toggle:checked) {
+  @apply overflow-y-hidden;
+  scrollbar-gutter: stable;
+}
+html:has(.drawer-open.drawer-open) {
+  @apply overflow-y-auto;
+  scrollbar-gutter: auto;
 }

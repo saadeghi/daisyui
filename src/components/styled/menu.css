@@ -13,21 +13,21 @@
     content: "";
   }
 }
-.menu :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+.menu :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)),
 .menu :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
   @apply rounded-btn px-4 py-2 text-start transition duration-200 ease-out;
   text-wrap: balance;
 }
 
-:where(.menu li:not(.menu-title):not(.disabled) > *:not(ul):not(details):not(.menu-title)),
-:where(.menu li:not(.menu-title):not(.disabled) > details > summary:not(.menu-title)) {
-  &:not(summary):not(.active).focus,
-  &:not(summary):not(.active):focus,
-  &:is(summary):not(.active):focus-visible {
+:where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)),
+:where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)) {
+  &:not(summary, .active, .btn).focus,
+  &:not(summary, .active, .btn):focus,
+  &:is(summary):not(.active, .btn):focus-visible {
     @apply bg-base-content/10 text-base-content cursor-pointer outline-none;
   }
   @media (hover: hover) {
-    &:not(.active):hover {
+    &:not(.active, .btn):hover {
       @apply cursor-pointer outline-none;
       @supports (color: oklch(0 0 0)) {
         @apply bg-base-content/10;
@@ -36,8 +36,8 @@
   }
 }
 
-.menu li > *:not(ul):not(.menu-title):not(details):active,
-.menu li > *:not(ul):not(.menu-title):not(details).active,
+.menu li > *:not(ul, .menu-title, details, .btn):active,
+.menu li > *:not(ul, .menu-title, details, .btn).active,
 .menu li > details > summary:active {
   @apply bg-neutral text-neutral-content [@media(hover:hover)]:bg-neutral [@media(hover:hover)]:text-neutral-content;
 }

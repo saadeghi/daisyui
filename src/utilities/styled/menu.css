@@ -18,7 +18,7 @@
 }
 
 .menu-xs {
-  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply rounded px-2 py-1 text-xs;
   }
@@ -27,7 +27,7 @@
   }
 }
 .menu-sm {
-  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply rounded-btn px-3 py-1 text-sm;
   }
@@ -36,7 +36,7 @@
   }
 }
 .menu-md {
-  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply rounded-btn px-4 py-2 text-sm;
   }
@@ -45,7 +45,7 @@
   }
 }
 .menu-lg {
-  :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)),
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply rounded-btn px-6 py-3 text-lg;
   }
