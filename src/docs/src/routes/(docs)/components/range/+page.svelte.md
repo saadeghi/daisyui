@@ -126,3 +126,10 @@ data="{[
 <input type="range" min="0" max="100" value="70" class="$$range $$range-lg" />`
 }</pre>
 </Component>
+
+<Component title="Range with custom color">
+<input type="range" min="0" max="100" value="40" class="range [--range-shdw:yellow] max-w-xs" />
+<pre slot="html" use:replace={{ to: $prefix }}>{
+`<input type="range" min="0" max="100" value="40" class="$$range $$[--range-shdw:yellow]" />`
+}</pre>
+</Component>
