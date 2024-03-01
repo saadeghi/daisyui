@@ -52,4 +52,4 @@ That's it! Now whenever your website is RTL, all spacing and alignments will be 
 ## Conclusion
 
 Making a bidirectional website is now easier than ever.  
-Try to make it a habbit to use logical class names (like `ps-4` ,`ms-4`,…) instead of directional class names (like `pl-4`, `ml-4`,… ) in your CSS and you'll see how easy it is to make a bidirectional website.
+Try to make it a habit to use logical class names (like `ps-4` ,`ms-4`,…) instead of directional class names (like `pl-4`, `ml-4`,… ) in your CSS and you'll see how easy it is to make a bidirectional website.
