@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Sat, 24 Feb 2024 01:15:34 GMT</lastBuildDate>
-    <pubDate>Sat, 24 Feb 2024 01:15:34 GMT</pubDate>
+    <lastBuildDate>Fri, 01 Mar 2024 07:42:11 GMT</lastBuildDate>
+    <pubDate>Fri, 01 Mar 2024 07:42:11 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ How to make a bidirectional site using Tailwind CSS and daisyUI ]]>
+          </title>
+          <description>
+            <![CDATA[ Learn how to use CSS logical properties to make a bidirectional website using Tailwind CSS and daisyUI ]]>
+          </description>
+          <link>https://daisyui.com/blog/bidirectional/</link>
+          <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
+          <image>https://daisyui.com/images/blog/bidirectional.jpg</image>
+          <image>https://daisyui.com/images/blog/bidirectional.jpg</image>
+          <media:content url="https://daisyui.com/images/blog/bidirectional.jpg" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.com/images/blog/bidirectional.jpg" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/bidirectional/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ daisyUI is now on Discord! ]]>
