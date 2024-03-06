@@ -147,7 +147,7 @@
 <!-- published -->
 <div class="mx-auto flex max-w-7xl flex-col gap-16">
   {#each publishedProducts as product}
-    <div class="rounded-box relative grid grid-cols-12 gap-10 py-10" id={product.id}>
+    <div class="rounded-box relative grid grid-cols-12 gap-y-10 py-10 xl:gap-x-10" id={product.id}>
       <div class="col-span-12 row-start-2 flex flex-col gap-8 xl:col-span-5 xl:row-start-1">
         <div>
           {#if product.customattributes?.tags}
@@ -260,7 +260,7 @@
             class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover" />
         </a>
         {#if product.customattributes?.tech}
-          <div class="flex items-center justify-end gap-4">
+          <div class="flex items-center justify-center gap-4 md:justify-end">
             <span class="text-base-content/50 text-xs italic">made with</span>
             {#each product.customattributes.tech as tech}
               <div
