@@ -1,7 +1,12 @@
 export const productCustomAttributes = {
+  208203: {
+    screenshot: "/images/store/screenshots/blog-template.png",
+    tech: ["astro", "mdx", "daisyui"],
+  },
   185227: {
     screenshot: "/images/store/screenshots/app-landingpage.png",
-    tech: ["html", "alpine", "daisyui"],
+    tech: ["html", "react", "svelte", "vue", "alpine", "daisyui"],
+    tags: ["React + Svelte + Vue versions added"],
   },
   144550: {
     screenshot: "/images/store/screenshots/agency-landingpage-react.png",
@@ -38,4 +43,6 @@ export const tech = {
   daisyui: "daisyUI",
   tailwind: "Tailwind CSS",
   webcomponents: "Web Components",
+  mdx: "MDX",
+  astro: "Astro",
 }
