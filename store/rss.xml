@@ -15,18 +15,30 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Fri, 01 Mar 2024 07:43:16 GMT</lastBuildDate>
-    <pubDate>Fri, 01 Mar 2024 07:43:16 GMT</pubDate>
+    <lastBuildDate>Wed, 06 Mar 2024 05:59:10 GMT</lastBuildDate>
+    <pubDate>Wed, 06 Mar 2024 05:59:10 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
     
         <item>
           <title>
+            <![CDATA[ Blog template for Astro ]]>
+          </title>
+          <description>
+            <![CDATA[ <p>Fully working blog template made with daisyUI</p><p>Features:</p><ul><li><p>Made with Astro, Markdown, Tailwind CSS and daisyUI</p></li><li><p>SEO friendly, Lightweight and fast</p></li><li><p>Dark mode and Light mode</p></li></ul><p>Including:</p><ul><li><p>Homepage</p></li><li><p>About page</p></li><li><p>Articles page</p></li><li><p>Articles archive with pagination</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/6f22ce51-2e2d-4d5f-b1ef-051df09ce6ff/</link>
+          <pubDate>Wed, 06 Mar 2024 05:42:04 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/6f22ce51-2e2d-4d5f-b1ef-051df09ce6ff/</guid>
+        </item>
+      
+        <item>
+          <title>
             <![CDATA[ Mobile app landing page ]]>
           </title>
           <description>
-            <![CDATA[ <p>Landing page for mobile app introduction.</p><p>Features:</p><ul><li><p>HTML landing page layout made with daisyUI 4</p></li><li><p>Using Alpine.js and Handlebars for HTML partials</p></li></ul><p>Including:</p><ul><li><p>2 exclusive daisyUI themes (dark/light)</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li><li><p>Responsive layout</p></li><li><p>Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons</p></li><li><p>Theme changer menu</p></li></ul> ]]>
+            <![CDATA[ <p>Landing page for mobile app introduction.</p><p>Features:</p><ul><li><p>A landing page layout made with daisyUI 4</p></li><li><p>Available for HTML, React, Svelte, Vue 🆕</p></li></ul><p>Including:</p><ul><li><p>2 exclusive daisyUI themes (dark/light)</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li><li><p>Responsive layout</p></li><li><p>Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons</p></li><li><p>Theme changer menu</p></li></ul> ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/71f032e3-1a23-4b79-b74e-130ada4899f2/</link>
           <pubDate>Tue, 06 Feb 2024 23:56:31 GMT</pubDate>
@@ -74,7 +86,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Dashboard template ]]>
           </title>
           <description>
-            <![CDATA[ <p>Production-ready admin dashboard template to use in your project right now.</p><p>Features:</p><ul><li><p>HTML admin dashboard layout made with daisyUI 4</p></li><li><p>Framework agnostic. Can be used everywhere</p></li><li><p>No dependencies</p></li></ul><p>Including:</p><ul><li><p>2 exclusive daisyUI themes (dark/light) + Compatible with all 32 daisyUI themes</p></li><li><p>Responsive grid layout</p></li><li><p>14 blocks of useful sections for dashboard</p></li><li><p>Sidebar with collapsible submenus</p></li><li><p>Tables and Item lists</p></li><li><p>Dropdown menus</p></li><li><p>Charts and forms</p></li></ul> ]]>
+            <![CDATA[ <p>Production-ready admin dashboard template to use in your project right now.</p><p>Features:</p><ul><li><p>HTML admin dashboard layout made with daisyUI 4</p></li><li><p>Web component charts</p></li><li><p>Framework agnostic. Can be used everywhere</p></li><li><p>No dependencies</p></li></ul><p>Including:</p><ul><li><p>2 exclusive daisyUI themes (dark/light) + Compatible with all 32 daisyUI themes</p></li><li><p>Responsive grid layout</p></li><li><p>14 blocks of useful sections for dashboard</p></li><li><p>Sidebar with collapsible submenus</p></li><li><p>Tables and Item lists</p></li><li><p>Dropdown menus</p></li><li><p>Charts and forms</p></li></ul> ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/3c805f3d-77a5-440b-9e4d-e775005db6c9/</link>
           <pubDate>Thu, 12 Oct 2023 21:48:00 GMT</pubDate>
