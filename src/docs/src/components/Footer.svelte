@@ -184,6 +184,14 @@
           Theme Change
           {@html newtabicon}
         </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://tailscan.com/?ref=daisyui"
+          class="link link-hover group">
+          Tailscan
+          {@html newtabicon}
+        </a>
       </div>
     </footer>
   </div>
