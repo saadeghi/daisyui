@@ -10,6 +10,9 @@
     @apply box-content flex flex-none;
     scroll-snap-align: start;
   }
+  &-start .carousel-item {
+    scroll-snap-align: start;
+  }
   &-center .carousel-item {
     scroll-snap-align: center;
   }

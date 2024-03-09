@@ -20,6 +20,7 @@ layout: components
 data="{[
   { type:'component', class: 'carousel', desc: 'Container element' },
   { type:'component', class: 'carousel-item', desc: 'Carousel item' },
+  { type:'modifier', class: 'carousel-start', desc: 'Snap elements to start(default)' },
   { type:'modifier', class: 'carousel-center', desc: 'Snap elements to center' },
   { type:'modifier', class: 'carousel-end', desc: 'Snap elements to end' },
   { type:'modifier', class: 'carousel-vertical', desc: 'Vertical carousel' },
