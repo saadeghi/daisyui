@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 4.7.3 (2024-03-09)
 
+### Features
+* add `carousel-start` utility class
+
 ## 4.7.2 (2024-02-13)
 
 
