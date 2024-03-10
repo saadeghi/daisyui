@@ -104,7 +104,7 @@
   "Tailwind Plugin": "Tailwindプラグイン",
   "Use CDN": "CDNを使用する",
   "Install daisyUI as a Tailwind CSS plugin": "daisyUI を Tailwind CSS プラグインとしてインストールします",
-  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "<a href='https://nodejs.org/en/download/'>Node.js</a> と <a href='https://tailwindcss.com/docs/installation/'>Taiwind CSS</a>がインストールされている必要があります。",
+  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "<a href='https://nodejs.org/en/download/'>Node.js</a> と <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a>がインストールされている必要があります。",
   "How to install daisyUI as a Tailwind CSS plugin?": "daisyUI を Tailwind CSS プラグインとしてインストールするにはどうすればよいですか？",
   "Install daisyUI": "daisyUI をインストールします",
   "Then add daisyUI to your <code>tailwind.config.js</code> files": "次に、<code>tailwind.config.js</code>ファイルにdaisyUI を追加します",
