@@ -104,4 +104,9 @@ export const exampleRepos = [
     href: "https://wordpress.org/plugins/gust-daisy-ui",
     logos: ["/logos/wordpress.svg", "/logos/gust.svg"],
   },
+  {
+    name: "WordPress (Yabe Siul)",
+    href: "https://siul.yabe.land/guides/recipes/daisyui/",
+    logos: ["/logos/wordpress.svg", "/logos/siul.svg"],
+  },
 ]
