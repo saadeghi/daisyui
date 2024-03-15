@@ -5,7 +5,9 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "browserslist": ["> 7%"],
+  "browserslist": [
+    "> 7%"
+  ],
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "0.5.10",

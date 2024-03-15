@@ -157,7 +157,7 @@
             <br />
             <span class="inline-grid">
               <span
-                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text blur-xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] before:content-[attr(data-text)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+                class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text blur-xl [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] before:content-[attr(data-text)] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
                 aria-hidden="true"
                 data-text={$t("component library")}>
               </span>
@@ -200,7 +200,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 rtl:group-hover:-translate-x-1">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -284,7 +284,7 @@
           : ""
       }transform:translateY(${animateValue(section["hero"], [17, 25], [120, 0])}%)`}>
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [--rtl-reverse:1] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] rtl:[--rtl-reverse:-1] rtl:[transform:rotateX(20deg)rotateZ(20deg)skewY(-8deg)scale(1)] max-[1279px]:![transform:translate3d(0,0,0)] xl:-end-20 xl:-me-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-e-none xl:pe-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [--rtl-reverse:1] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] max-[1279px]:![transform:translate3d(0,0,0)] xl:-end-20 xl:-me-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-e-none xl:pe-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0 rtl:[--rtl-reverse:-1] rtl:[transform:rotateX(20deg)rotateZ(20deg)skewY(-8deg)scale(1)]"
         style={section["hero"] &&
           `transform: rotateX(${animateValue(
             section["hero"],
@@ -731,7 +731,7 @@
           </div>
           <div
             dir="ltr"
-            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 rtl:ps-0 sm:pb-10 lg:pe-4 rtl:lg:ps-20 xl:ps-20 xl:pt-10"
+            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 sm:pb-10 lg:pe-4 xl:ps-20 xl:pt-10 rtl:ps-0 rtl:lg:ps-20"
             style={`opacity:${animateValue(
               section["hero"],
               [16, 17],
@@ -769,7 +769,7 @@
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1279px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] motion-reduce:!tracking-normal max-[1279px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
         style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}>
         {$t("to the next level")}
       </span>
@@ -934,7 +934,7 @@
 &lt;/div&gt;</pre>
             </div>
             <div class="divider xl:divider-horizontal">
-              <span class="hidden rtl:rotate-180 xl:inline">→</span>
+              <span class="hidden xl:inline rtl:rotate-180">→</span>
               <span class="xl:hidden">↓</span>
             </div>
             <div>
@@ -993,7 +993,7 @@
 &lt;/div&gt;</pre>
             </div>
             <div class="divider xl:divider-horizontal">
-              <span class="hidden rtl:rotate-180 xl:inline">→</span>
+              <span class="hidden xl:inline rtl:rotate-180">→</span>
               <span class="xl:hidden">↓</span>
             </div>
             <div>
@@ -1114,7 +1114,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 rtl:group-hover:-translate-x-1">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -1223,7 +1223,7 @@
     <div class="relative z-[1] w-full py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-start">
         <span
-          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)]"
+          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto [--rtl-reverse:1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)] rtl:[--rtl-reverse:-1]"
           style={`transform:translateX(calc(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1233,7 +1233,7 @@
         </span>
         <br />
         <span
-          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)]"
+          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto [--rtl-reverse:1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)] rtl:[--rtl-reverse:-1]"
           style={`transform:translateX(calc(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1244,7 +1244,7 @@
       </h2>
       <div class="h-10" />
       <p
-        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto [--rtl-reverse:1] [text-wrap:balance] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)] md:text-2xl xl:text-start"
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto [text-wrap:balance] [--rtl-reverse:1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)] md:text-2xl xl:text-start rtl:[--rtl-reverse:-1]"
         style={`transform:translateX(calc(${animateValue(
           section["customizable"],
           [-100, 100],
@@ -1264,7 +1264,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 rtl:group-hover:-translate-x-1">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1331,7 +1331,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 rtl:group-hover:-translate-x-1">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1562,7 +1562,7 @@
         <span class="inline-grid">
           {#if section["possibilities"] && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 > -100 && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 < -20}{:else}
             <span
-              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [:root[dir=rtl]_&]:leading-[1.35] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+              class="pointer-events-none col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text opacity-70 blur-3xl [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] [:root[dir=rtl]_&]:leading-[1.35] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
               aria-hidden="true">
               {$t("endless possibilities")}
             </span>

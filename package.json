@@ -46,10 +46,14 @@
   "engines": {
     "node": ">=16.9.0"
   },
-  "browserslist": ["> 7%"],
+  "browserslist": [
+    "> 7%"
+  ],
   "publishConfig": {
     "access": "public",
-    "branches": ["master"]
+    "branches": [
+      "master"
+    ]
   },
   "scripts": {
     "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
