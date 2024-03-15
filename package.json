@@ -46,14 +46,10 @@
   "engines": {
     "node": ">=16.9.0"
   },
-  "browserslist": [
-    "> 7%"
-  ],
+  "browserslist": ["> 7%"],
   "publishConfig": {
     "access": "public",
-    "branches": [
-      "master"
-    ]
+    "branches": ["master"]
   },
   "scripts": {
     "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
@@ -67,19 +63,19 @@
     "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "commit-and-tag-version": "^12.0.0",
-    "postcss-cli": "10.1.0",
-    "postcss-import": "15.1.0",
+    "autoprefixer": "^10.4.18",
+    "commit-and-tag-version": "^12.2.0",
+    "postcss-cli": "11.0.0",
+    "postcss-import": "16.0.1",
     "prejss-cli": "0.3.3",
-    "prettier": "^3.1.0",
-    "prettier-plugin-svelte": "^3.1.0",
-    "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwindcss": "^3.3.5"
+    "prettier": "^3.2.5",
+    "prettier-plugin-svelte": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "tailwindcss": "^3.4.1"
   },
   "dependencies": {
     "css-selector-tokenizer": "^0.8",
-    "culori": "^3",
+    "culori": "^4",
     "picocolors": "^1",
     "postcss-js": "^4"
   }

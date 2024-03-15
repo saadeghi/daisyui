@@ -4,6 +4,6 @@
     "prod": "tailwindcss -o output.css --minify"
   },
   "dependencies": {
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.4.1"
   }
 }

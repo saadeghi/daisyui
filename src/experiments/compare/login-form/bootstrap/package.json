@@ -4,7 +4,7 @@
     "prod": "purgecss -c purgecss.config.js"
   },
   "devDependencies": {
-    "bootstrap": "^5.1.3",
-    "purgecss": "^4.1.3"
+    "bootstrap": "^5.3.3",
+    "purgecss": "^5.0.0"
   }
 }

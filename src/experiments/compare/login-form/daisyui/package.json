@@ -4,7 +4,7 @@
     "prod": "tailwindcss -o output.css --minify"
   },
   "dependencies": {
-    "daisyui": "^2.13.3",
-    "tailwindcss": "^3.0.23"
+    "daisyui": "^4.7.3",
+    "tailwindcss": "^3.4.1"
   }
 }
