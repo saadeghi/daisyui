@@ -163,7 +163,7 @@
             </div>
           </svelte:component>
         </div>
-        <div class="col-start-1 row-start-1 flex items-start justify-end p-2">
+        <div class="col-start-1 row-start-1 flex items-start justify-end p-2 rtl:justify-start">
           <div
             data-tip={isClipboardButtonPressed ? "copied" : "copy"}
             class="tooltip tooltip-left tooltip-accent">
