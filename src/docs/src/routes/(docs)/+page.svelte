@@ -185,14 +185,14 @@
               <a
                 data-sveltekit-preload-data
                 href="/components/"
-                class="btn md:btn-lg md:btn-wide group rounded-full px-12">
+                class="btn md:btn-lg group grow rounded-full px-12">
                 <span class="hidden sm:inline">{$t("cta-1")}</span>
                 <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
               </a>
               <a
                 data-sveltekit-preload-data
                 href="/docs/install/"
-                class="btn btn-neutral md:btn-lg md:btn-wide group rounded-full px-12">
+                class="btn btn-neutral md:btn-lg group grow rounded-full px-12">
                 {$t("cta-2")}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
