@@ -9,7 +9,6 @@
     @apply outline-base-content outline outline-2 outline-offset-2;
   }
   &:checked,
-  &[checked="true"],
   &[aria-checked="true"] {
     @apply bg-no-repeat;
     animation: checkmark var(--animation-input, 0.2s) ease-out;
@@ -41,7 +40,6 @@
       @apply outline-primary;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-primary bg-primary text-primary-content;
     }
@@ -54,7 +52,6 @@
       @apply outline-secondary;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-secondary bg-secondary text-secondary-content;
     }
@@ -67,7 +64,6 @@
       @apply outline-accent;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-accent bg-accent text-accent-content;
     }
@@ -80,7 +76,6 @@
       @apply outline-success;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-success bg-success text-success-content;
     }
@@ -93,7 +88,6 @@
       @apply outline-warning;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-warning bg-warning text-warning-content;
     }
@@ -106,7 +100,6 @@
       @apply outline-info;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-info bg-info text-info-content;
     }
@@ -119,7 +112,6 @@
       @apply outline-error;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-error bg-error text-error-content;
     }
