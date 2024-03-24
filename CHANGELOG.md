@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.8.0 (2024-03-24)
+
+
+### Features
+
+* checkbox/toggle with `checked="true"` won't force to show a checked value visually anymore ([17585a6](https://github.com/saadeghi/daisyui/commit/17585a6cbde8a31c7749aecca696c7a35ee5d243)), closes [#2911](https://github.com/saadeghi/daisyui/issues/2911)
+
 ## 4.7.3 (2024-03-09)
 
 ### Features
