@@ -38,7 +38,7 @@ module.exports = {
 
   colorObjToString: function (input) {
     const { l, c, h } = input
-    return `${cutNumber(l)} ${cutNumber(c)} ${cutNumber(h)}`
+    return `${parseFloat((cutNumber(l) * 100).toFixed(6))}% ${cutNumber(c)} ${cutNumber(h)}`
   },
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
@@ -86,7 +86,7 @@ module.exports = {
 
       // auto generate base colors
       if (!Object.hasOwn(input, "base-100")) {
-        resultObj["--b1"] = "100 0 0"
+        resultObj["--b1"] = "100% 0 0"
       }
       if (!Object.hasOwn(input, "base-200")) {
         resultObj["--b2"] = this.generateDarkenColorFrom(input["base-100"], 0.07)
@@ -102,16 +102,16 @@ module.exports = {
       // auto generate state colors
 
       if (!Object.hasOwn(input, "info")) {
-        resultObj["--in"] = "0.7206 0.191 231.6"
+        resultObj["--in"] = "72.06% 0.191 231.6"
       }
       if (!Object.hasOwn(input, "success")) {
         resultObj["--su"] = "64.8% 0.150 160"
       }
       if (!Object.hasOwn(input, "warning")) {
-        resultObj["--wa"] = "0.8471 0.199 83.87"
+        resultObj["--wa"] = "84.71% 0.199 83.87"
       }
       if (!Object.hasOwn(input, "error")) {
-        resultObj["--er"] = "0.7176 0.221 22.18"
+        resultObj["--er"] = "71.76% 0.221 22.18"
       }
 
       // auto generate content colors
@@ -134,28 +134,28 @@ module.exports = {
         if (Object.hasOwn(input, "info")) {
           resultObj["--inc"] = this.generateForegroundColorFrom(input["info"], 0.8)
         } else {
-          resultObj["--inc"] = "0 0 0"
+          resultObj["--inc"] = "0% 0 0"
         }
       }
       if (!Object.hasOwn(input, "success-content")) {
         if (Object.hasOwn(input, "success")) {
           resultObj["--suc"] = this.generateForegroundColorFrom(input["success"], 0.8)
         } else {
-          resultObj["--suc"] = "0 0 0"
+          resultObj["--suc"] = "0% 0 0"
         }
       }
       if (!Object.hasOwn(input, "warning-content")) {
         if (Object.hasOwn(input, "warning")) {
           resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"], 0.8)
         } else {
-          resultObj["--wac"] = "0 0 0"
+          resultObj["--wac"] = "0% 0 0"
         }
       }
       if (!Object.hasOwn(input, "error-content")) {
         if (Object.hasOwn(input, "error")) {
           resultObj["--erc"] = this.generateForegroundColorFrom(input["error"], 0.8)
         } else {
-          resultObj["--erc"] = "0 0 0"
+          resultObj["--erc"] = "0% 0 0"
         }
       }
 

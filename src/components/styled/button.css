@@ -16,7 +16,7 @@
     --tw-bg-opacity: 1;
     border-color: oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity));
     --tw-border-opacity: 1;
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       background-color: var(--btn-color, var(--fallback-b2));
       border-color: var(--btn-color, var(--fallback-b2));
     }
@@ -35,7 +35,7 @@
             black
           );
         }
-        @supports not (color: oklch(0 0 0)) {
+        @supports not (color: oklch(0% 0 0)) {
           background-color: var(--btn-color, var(--fallback-b2));
           border-color: var(--btn-color, var(--fallback-b2));
         }
@@ -62,37 +62,37 @@
   /* brand colors */
   &-primary {
     @apply text-primary-content outline-primary;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--p);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-p);
     }
   }
   &-secondary {
     @apply text-secondary-content outline-secondary;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--s);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-s);
     }
   }
   &-accent {
     @apply text-accent-content outline-accent;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--a);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-a);
     }
   }
   &-neutral {
     @apply text-neutral-content outline-neutral;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--n);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-n);
     }
   }
@@ -100,37 +100,37 @@
   /* btn with state colors */
   &-info {
     @apply text-info-content outline-info;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--in);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-in);
     }
   }
   &-success {
     @apply text-success-content outline-success;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--su);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-su);
     }
   }
   &-warning {
     @apply text-warning-content outline-warning;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--wa);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-wa);
     }
   }
   &-error {
     @apply text-error-content outline-error;
-    @supports (color: oklch(0 0 0)) {
+    @supports (color: oklch(0% 0 0)) {
       --btn-color: var(--er);
     }
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       --btn-color: var(--fallback-er);
     }
   }
@@ -156,7 +156,7 @@
     @media (hover: hover) {
       &:hover {
         @apply border-transparent;
-        @supports (color: oklch(0 0 0)) {
+        @supports (color: oklch(0% 0 0)) {
           @apply bg-base-content/20;
         }
       }

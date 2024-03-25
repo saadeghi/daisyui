@@ -128,7 +128,7 @@
       }`}>
       <slot />
     </div>
-    <div class="toast toast-center z-10 [@supports(color:oklch(0_0_0))]:hidden">
+    <div class="toast toast-center z-10 [@supports(color:oklch(0%_0_0))]:hidden">
       <div class="alert alert-warning grid-cols-[auto] py-2 text-xs">
         <span>
           <a

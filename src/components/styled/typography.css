@@ -22,7 +22,7 @@
     border-radius: var(--rounded-badge);
     font-weight: initial;
     background-color: theme(colors.base-content/0.1);
-    @supports not (color: oklch(0 0 0)) {
+    @supports not (color: oklch(0% 0 0)) {
       background-color: theme(colors.base-300);
     }
   }
