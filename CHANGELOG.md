@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.9.0 (2024-03-26)
+
+
+### Features
+
+* support OKLCH colors on Safari iOS 15 ([56175e0](https://github.com/saadeghi/daisyui/commit/56175e0b4bf6375fa906d9ca734fe4d3362c5fd1)), closes [#2703](https://github.com/saadeghi/daisyui/issues/2703)
+
 ## 4.8.0 (2024-03-24)
 
 
