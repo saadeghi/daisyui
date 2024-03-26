@@ -37,12 +37,12 @@ export const cssVars = [
 ]
 
 export const forgroundPairs = [
-  { input: "#fff", percent: 0.8, result: "0.2 0 0" },
-  { input: "#000", percent: 0.8, result: "0.8 0 0" },
-  { input: "#fff", percent: 1, result: "0 0 0" },
-  { input: "#000", percent: 1, result: "1 0 0" },
-  { input: "#1D9BF0", percent: 0.8, result: "0.133411 0.032291 245.539977" },
-  { input: "#CF212E", percent: 0.8, result: "0.910234 0.041137 24.396801" },
+  { input: "#fff", percent: 0.8, result: "20% 0 0" },
+  { input: "#000", percent: 0.8, result: "80% 0 0" },
+  { input: "#fff", percent: 1, result: "0% 0 0" },
+  { input: "#000", percent: 1, result: "100% 0 0" },
+  { input: "#1D9BF0", percent: 0.8, result: "13.3411% 0.032291 245.539977" },
+  { input: "#CF212E", percent: 0.8, result: "91.0234% 0.041137 24.396801" },
 ]
 export const repos = [
   {
@@ -66,7 +66,7 @@ export const repos = [
   {
     name: "daisyui-nuxt",
     repo: "https://github.com/daisyui/daisyui-nuxt",
-    file: "daisyui-nuxt/.output/server/chunks/app/_nuxt/entry-styles.*.mjs",
+    file: "daisyui-nuxt/.output/server/chunks/build/entry-styles.*.mjs",
     string: "btn",
   },
 ]
