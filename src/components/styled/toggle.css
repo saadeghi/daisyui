@@ -21,7 +21,6 @@
     @apply bg-current;
   }
   &:checked,
-  &[checked="true"],
   &[aria-checked="true"] {
     background-image: none;
     --handleoffsetcalculator: var(--handleoffset);
@@ -48,7 +47,6 @@
       @apply outline-primary;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-primary bg-primary text-primary-content border-opacity-10;
     }
@@ -58,7 +56,6 @@
       @apply outline-secondary;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-secondary bg-secondary text-secondary-content border-opacity-10;
     }
@@ -68,7 +65,6 @@
       @apply outline-accent;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-accent bg-accent text-accent-content border-opacity-10;
     }
@@ -78,7 +74,6 @@
       @apply outline-success;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-success bg-success text-success-content border-opacity-10;
     }
@@ -88,7 +83,6 @@
       @apply outline-warning;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-warning bg-warning text-warning-content border-opacity-10;
     }
@@ -98,7 +92,6 @@
       @apply outline-info;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-info bg-info text-info-content border-opacity-10;
     }
@@ -108,7 +101,6 @@
       @apply outline-error;
     }
     &:checked,
-    &[checked="true"],
     &[aria-checked="true"] {
       @apply border-error bg-error text-error-content border-opacity-10;
     }

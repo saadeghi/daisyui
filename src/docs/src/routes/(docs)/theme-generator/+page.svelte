@@ -28,7 +28,7 @@
       return +number.toFixed(4)
     }
     const { l, c, h } = input
-    return `${cut(l)} ${cut(c)} ${cut(h)}`
+    return `${cut(l) * 100}% ${cut(c)} ${cut(h)}`
   }
 
   const generateForegroundColorFrom = function (input, percentage = 0.8) {

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.9.0 (2024-03-26)
+
+
+### Features
+
+* support OKLCH colors on Safari iOS 15 ([56175e0](https://github.com/saadeghi/daisyui/commit/56175e0b4bf6375fa906d9ca734fe4d3362c5fd1)), closes [#2703](https://github.com/saadeghi/daisyui/issues/2703)
+
+## 4.8.0 (2024-03-24)
+
+
+### Features
+
+* checkbox/toggle with `checked="true"` won't force to show a checked value visually anymore ([17585a6](https://github.com/saadeghi/daisyui/commit/17585a6cbde8a31c7749aecca696c7a35ee5d243)), closes [#2911](https://github.com/saadeghi/daisyui/issues/2911)
+
 ## 4.7.3 (2024-03-09)
 
 ### Features
