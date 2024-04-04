@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.10.1 (2024-04-04)
+
+
+### Bug Fixes
+
+* Add border above table footer ([#2723](https://github.com/saadeghi/daisyui/issues/2723)) ([7d54475](https://github.com/saadeghi/daisyui/commit/7d544758a548d7114e5d9af1e729c3371058549f)), closes [#2690](https://github.com/saadeghi/daisyui/issues/2690) [#2692](https://github.com/saadeghi/daisyui/issues/2692)
+
 ## 4.10.0 (2024-04-04)
 
 
