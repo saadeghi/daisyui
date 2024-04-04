@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.10.0 (2024-04-04)
+
+
+### Features
+
+* modal now uses scrollbar-gutter ([#2956](https://github.com/saadeghi/daisyui/issues/2956)) ([f05e854](https://github.com/saadeghi/daisyui/commit/f05e85413a2f7d8b795d4a8d5bd517223319b9e6))
+
 ## 4.9.0 (2024-03-26)
 
 
