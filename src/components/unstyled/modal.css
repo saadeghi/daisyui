@@ -27,5 +27,5 @@
 }
 :root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
   @apply overflow-hidden;
-  @apply pr-[15px];
+  scrollbar-gutter: stable;
 }
