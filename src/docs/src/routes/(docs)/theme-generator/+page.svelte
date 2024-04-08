@@ -88,7 +88,7 @@
     "error",
   ]
 
-  $: onlyRequiredColorNames = false
+  $: onlyRequiredColorNames = true
 
   $: colors = [
     {
@@ -225,7 +225,6 @@
 
   function generateColors(newColorToCheck = "transparent") {
     if (CSS.supports("color", newColorToCheck)) {
-      colors = generateOptionalColors(colors)
       colors
         .forEach((color) => {
           wrapper.style.setProperty(
@@ -246,6 +245,7 @@
       localStorage.removeItem("theme-generator-colors")
       colors = JSON.parse(localStorage.getItem("theme-generator-default-colors"))
       generateColors()
+      generateOptionalColors(colors)
     }
   }
 
@@ -289,6 +289,7 @@
     //error
     // })
     generateColors()
+    generateOptionalColors(colors)
   }
 
   let wrapper
@@ -336,7 +337,7 @@
         <div class="mockup-code not-prose relative">
           <div class="absolute right-2 top-2">
             <button class="btn btn-xs" on:click={() => onlyRequiredColorNames = !onlyRequiredColorNames}>
-              <Translate text="Show all colors" />
+              <Translate text="Show all" />
             </button>
             <button class="btn btn-xs" on:click={() => randomize()}>
               <Translate text="Randomize" />
@@ -373,7 +374,7 @@
       require('daisyui'),
     ],
     //...
-  }  
+  }
 `}</code></pre>
         </div>
       {/if}
