@@ -26,25 +26,21 @@ export const pages = [
         name: "Config",
         tags: "setup config styled themes base logs utils rtl",
         href: "/docs/config/",
-        badge: "updated",
       },
       {
         name: "Colors",
         tags: "colors",
         href: "/docs/colors/",
-        badge: "updated",
       },
       {
         name: "Themes",
         tags: "themes disable custom color generator",
         href: "/docs/themes/",
-        badge: "updated",
       },
       {
         name: "Utilities",
         tags: "Utilities utility class",
         href: "/docs/utilities/",
-        badge: "new",
       },
       {
         name: "Layout & Typography",
@@ -66,13 +62,11 @@ export const pages = [
             name: "Button",
             tags: "button btn",
             href: "/components/button/",
-            badge: "updated",
           },
           {
             name: "Dropdown",
             tags: "dropdown popover menu listbox",
             href: "/components/dropdown/",
-            badge: "updated",
           },
           {
             name: "Modal",
@@ -88,7 +82,6 @@ export const pages = [
             name: "Theme Controller",
             tags: "theme controller change dark mode",
             href: "/components/theme-controller/",
-            badge: "new",
           },
         ],
       },
@@ -140,7 +133,6 @@ export const pages = [
             name: "Diff",
             tags: "diff compare comparison image slider",
             href: "/components/diff/",
-            badge: "new",
           },
           {
             name: "Kbd",
@@ -161,7 +153,6 @@ export const pages = [
             name: "Timeline",
             tags: "timeline",
             href: "/components/timeline/",
-            badge: "new",
           },
         ],
       },
@@ -208,7 +199,6 @@ export const pages = [
             name: "Tab",
             tags: "tabs",
             href: "/components/tab/",
-            badge: "updated",
           },
         ],
       },
@@ -240,7 +230,6 @@ export const pages = [
             name: "Skeleton",
             tags: "skeleton loading placeholder",
             href: "/components/skeleton/",
-            badge: "new",
           },
           {
             name: "Toast",
@@ -318,7 +307,6 @@ export const pages = [
             name: "Divider",
             tags: "divider",
             href: "/components/divider/",
-            badge: "updated",
           },
           {
             name: "Drawer",
@@ -398,7 +386,8 @@ export const pages = [
     href: "/store/",
     icon: '<svg class="h-5 w-5" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.0391 22V42H8.03906V22" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/><path d="M5.84231 13.7766C4.31276 17.7377 7.26307 22 11.5092 22C14.8229 22 17.5276 19.3137 17.5276 16C17.5276 19.3137 20.2139 22 23.5276 22H24.546C27.8597 22 30.546 19.3137 30.546 16C30.546 19.3137 33.2518 22 36.5655 22C40.8139 22 43.767 17.7352 42.2362 13.7723L39.2337 6H8.84523L5.84231 13.7766Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="bevel"/></svg>',
     badge: "new",
-    badgeclass: "badge-primary",
+    badgeclass: "bg-primary/10 text-[inherit] border-transparent uppercase font-sans font-bold",
+    highlight: true,
   },
   {
     name: "Blog",
