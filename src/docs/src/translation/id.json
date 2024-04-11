@@ -414,7 +414,7 @@
   "Join is a container for grouping multiple items, it can be used to group buttons, inputs, or any other element. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items.": "Join merupakan kontainer untuk menyatukan banyak item dalam satu grup, bisa digunakan untuk grup button, input, atau elemen lainnya. Join menerapkan border radius pada item pertama dan terakhir. Join dapat digunakan untuk membuat daftar item horizontal dan vertikal.",
   "Become a sponsor": "Menjadi sponsor",
   "Browser": "Browser",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.",
   "How to add custom styles for a specific theme?": "How to add custom styles for a specific theme?",
   "You can write custom style for your elements only for a specific theme.": "You can write custom style for your elements only for a specific theme.",
   "In this example, .btn-twitter class only will have this style on light theme.": "In this example, .btn-twitter class only will have this style on light theme.",

@@ -414,7 +414,7 @@
   "Browser mockup": "Symulacja przeglądarki",
   "Browser mockup shows a box that looks like a browser window.": "Symulacja przeglądarki pokazuje prostokąt przypominający okno przeglądarki.",
   "Browser": "Przeglądarka",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Musisz zmienić zmienną CSS `--value` za pomocą JS. Wartość musi być liczbą od 0 do 99.",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Musisz zmienić zmienną CSS `--value` za pomocą JS. Wartość musi być liczbą od 0 do 99.",
   "How to add custom styles for a specific theme?": "Jak dodać niestandardowe style dla określonego motywu?",
   "You can write custom style for your elements only for a specific theme.": "Możesz pisać niestandardowe style tylko dla określonego motywu.",
   "In this example, .btn-twitter class only will have this style on light theme.": "W tym przykładzie, klasa .btn-twitter będzie miała ten styl tylko w motywie jasnym.",

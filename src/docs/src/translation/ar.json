@@ -424,7 +424,7 @@
   "Using Accordion and Join together": "Using Accordion and Join together",
   "All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set.": "All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set.",
   "Browser mockup shows a box that looks like a browser window.": "Browser mockup shows a box that looks like a browser window.",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.",
   "There are 3 ways to use a modal:": "There are 3 ways to use a modal:",
   "Make sure you're using unique IDs for each modal": "Make sure you're using unique IDs for each modal",
   "Also see <a href='/components/accordion/' class='link'>accordion</a> examples": "Also see <a href='/components/accordion/' class='link'>accordion</a> examples",

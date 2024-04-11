@@ -414,7 +414,7 @@
   "Browser mockup": "Mẫu trình duyệt",
   "Browser mockup shows a box that looks like a browser window.": "Mẫu trình duyệt hiển thị một hộp trông giống như một cửa sổ trình duyệt.",
   "Browser": "Trình duyệt",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Bạn cần thay đổi biến CSS `--value` bằng JS. Giá trị phải là một số từ 0 đến 99.",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Bạn cần thay đổi biến CSS `--value` bằng JS. Giá trị phải là một số từ 0 đến 99.",
   "How to add custom styles for a specific theme?": "Làm thế nào để thêm kiểu tùy chỉnh cho một chủ đề cụ thể?",
   "You can write custom style for your elements only for a specific theme.": "Bạn có thể viết kiểu tùy chỉnh cho các phần tử của mình chỉ cho một chủ đề cụ thể.",
   "In this example, .btn-twitter class only will have this style on light theme.": "Trong ví dụ này, lớp .btn-twitter chỉ có kiểu này trên chủ đề sáng.",

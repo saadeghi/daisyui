@@ -414,7 +414,7 @@
   "Browser mockup": "Browser-Mockup",
   "Browser mockup shows a box that looks like a browser window.": "Das Browser-Mockup zeigt einen Kasten, der wie ein Browserfenster aussieht.",
   "Browser": "Browser",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Du musst die `--value` CSS-Variable mit JS ändern. Der Wert muss eine Zahl zwischen 0 und 99 sein.",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Du musst die `--value` CSS-Variable mit JS ändern. Der Wert muss eine Zahl zwischen 0 und 99 sein.",
   "How to add custom styles for a specific theme?": "Wie füge ich benutzerdefinierte Stile für ein bestimmtes Thema hinzu?",
   "You can write custom style for your elements only for a specific theme.": "Du kannst benutzerdefinierte Stile für deine Elemente nur für ein bestimmtes Thema schreiben.",
   "In this example, .btn-twitter class only will have this style on light theme.": "In diesem Beispiel wird die .btn-twitter Klasse nur auf dem hellen Thema diesen Stil haben.",

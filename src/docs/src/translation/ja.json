@@ -411,7 +411,7 @@
   "Accordion is used for showing and hiding content but only one item can stay open at a time.": "アコーディオンは、コンテンツの表示と非表示に使用されます。但し一度に表示できるコンテンツは一つです。",
   "All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set.": "同じ名前のラジオはすべて一緒に動作し、一度に開くことができるのは1つだけです。ページ上に複数のアコーディオンがある場合、各セットのラジオボタンに異なる名前を使用してください。",
   "Also see <a href='/components/accordion/' class='link'>accordion</a> examples": "<a href='/components/accordion/' class='link'>アコーディオン</a> の例も参照してください。",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "JSを使ってCSS変数 `--value` を変更する必要があります。値は0から99の間の数値でなければなりません。",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "JSを使ってCSS変数 `--value` を変更する必要があります。値は0から99の間の数値でなければなりません。",
   "Radial progress needs `--value` CSS variable to work.<br />To change the size, use `--size` CSS variable which has a default value of `4rem`.<br />To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.<br />": "Radial progressには CSS変数`--value`が必要です。<br />サイズを変更するには、CSS変数`--size`を使用します。デフォルト値は`4rem`です。<br /> 太さを変更するには、CSS変数`--thickness`を使用します。デフォルト値は、サイズの10%になります。<br />",
   "Deprecated": "非推奨",
   "Loading": "Loading",

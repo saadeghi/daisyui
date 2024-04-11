@@ -414,7 +414,7 @@
   "Browser mockup": "Browser mockup",
   "Browser mockup shows a box that looks like a browser window.": "'Browser mockup' menunjukkan kotak yang kelihatan seperti tetingkap penyemak imbas.",
   "Browser": "Browser",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Anda perlu menukar kepada pembolehubah CSS `--value` menggunakan JS. Nilai mestilah nombor antara 0 dan 99.",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "Anda perlu menukar kepada pembolehubah CSS `--value` menggunakan JS. Nilai mestilah nombor antara 0 dan 99.",
   "How to add custom styles for a specific theme?": "Bagaimana untuk menambah gaya tersuai untuk tema tertentu?",
   "You can write custom style for your elements only for a specific theme.": "Anda boleh menulis gaya tersuai untuk elemen anda hanya untuk tema tertentu.",
   "In this example, .btn-twitter class only will have this style on light theme.": "Dalam contoh ini, kelas .btn-twitter sahaja akan mempunyai gaya ini pada tema ringan.",

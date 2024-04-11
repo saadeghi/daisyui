@@ -412,7 +412,7 @@
   "Using <code>&lt;dialog&gt;</code> element: It needs JS to open but it has better accessibility and we can close it using <span class='kbd kbd-xs'>Esc</span> key": "使用 <code>&lt;dialog&gt;</code> 元素: 需要 JS 來開啟，但有更好的易用性，能夠使用 <span class='kbd kbd-xs'>Esc</span> 鍵關閉。",
   "Using a hidden <code>&lt;input type='checkbox'&gt;</code> and <code>&lt;label&gt;</code> to check/uncheck the checkbox and open/close the modal": "使用隱藏的 <code>&lt;input type='checkbox'&gt;</code> and <code>&lt;label&gt;</code> 來勾選/取消勾選核取方塊和開啟/關閉對話框。",
   "Using <code>&lt;a&gt;</code> anchor links: A link adds a parameter to the URL and you only see the modal when the URL has that parameter": "Using a hidden <code>&lt;input type='checkbox'&gt;</code> and <code>&lt;label&gt;</code> to check/uncheck the checkbox and open/close the modal\": \"\",\n  \"Using <code>&lt;a&gt;</code> anchor links: A link adds a parameter to the URL and you only see the modal when the URL has that parameter",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "您需要使用 JS 變更 `--value` CSS 參數。數值必須介於 0 到 99 之間。",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "您需要使用 JS 變更 `--value` CSS 參數。數值必須介於 0 到 99 之間。",
   "This component is deprecated and will be removed in the next major version. Use <a class='link' href='/components/join/'>Join</a> instead.": "此元件已被淘汰，並將在下個主要版本中移除。請改用<a class='link' href='/components/join/'>聯結</a>。",
   "Loading shows an animation to indicate that something is loading.": "載入指示將顯示動畫，指示某事物正在載入。",
   "Become a sponsor": "成為贊助商",

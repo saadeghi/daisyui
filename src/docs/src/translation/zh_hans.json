@@ -201,7 +201,7 @@
   "Checkboxes are used to select or deselect a value.": "复选框用于选择或取消选择值。",
   "Collapse is used for showing and hiding content.": "折叠面板用于显示和隐藏内容。",
   "Countdown gives you a transition effect of changing numbers.": "计数给了你改变数字的过渡效果。",
-  "You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99.": "你需要使用 JS 更改 `--value`CSS 变量。数值必须是一个介于 0 到 99 之间的数字。",
+  "you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.": "你需要使用 JS 更改 `--value`CSS 变量。数值必须是一个介于 0 到 99 之间的数字。",
   "Divider will be used to separate content vertically or horizontally.": "分隔线用于垂直或水平分隔内容。",
   "Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page.": "抽屉是一种可以显示/隐藏页面左侧或右侧的侧边栏的网格布局。",
   "Dropdown can open a menu or any other element when the button is clicked.": "下拉菜单可以在点击按钮时打开菜单或其他元素。",
