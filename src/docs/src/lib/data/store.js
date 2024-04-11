@@ -1,4 +1,9 @@
 export const productCustomAttributes = {
+  244268: {
+    screenshot: "/images/store/screenshots/nexus.png",
+    tech: ["react", "nextjs", "daisyui"],
+    preveiw_url: "https://nexus.daisyui.com/",
+  },
   208203: {
     screenshot: "/images/store/screenshots/blog-template.png",
     tech: ["astro", "mdx", "daisyui"],
@@ -6,7 +11,7 @@ export const productCustomAttributes = {
   185227: {
     screenshot: "/images/store/screenshots/app-landingpage.png",
     tech: ["html", "react", "svelte", "vue", "alpine", "daisyui"],
-    tags: ["React + Svelte + Vue versions added"],
+    // tags: ["React + Svelte + Vue versions added"],
   },
   144550: {
     screenshot: "/images/store/screenshots/agency-landingpage-react.png",
@@ -19,7 +24,7 @@ export const productCustomAttributes = {
   142623: {
     screenshot: "/images/store/screenshots/saas-landingpage.png",
     tech: ["html", "react", "svelte", "vue", "alpine", "daisyui"],
-    tags: ["React + Svelte + Vue versions added"],
+    // tags: ["React + Svelte + Vue versions added"],
   },
   130237: {
     screenshot: "/images/store/screenshots/auth.png",
@@ -45,4 +50,5 @@ export const tech = {
   webcomponents: "Web Components",
   mdx: "MDX",
   astro: "Astro",
+  nextjs: "Next.js",
 }
