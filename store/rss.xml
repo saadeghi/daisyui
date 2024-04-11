@@ -15,12 +15,38 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Wed, 10 Apr 2024 11:10:36 GMT</lastBuildDate>
-    <pubDate>Wed, 10 Apr 2024 11:10:36 GMT</pubDate>
+    <lastBuildDate>Thu, 11 Apr 2024 15:16:06 GMT</lastBuildDate>
+    <pubDate>Thu, 11 Apr 2024 15:16:06 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
     
+        <item>
+          <title>
+            <![CDATA[ Nexus: Dashboard for React and Next ]]>
+          </title>
+          <description>
+            <![CDATA[ <p>The ultimate dashboard template for React and Next.js</p>
+
+<p>Made with React 18 and daisyUI 4</p>
+
+<p>Available in 3 packages:</p>
+
+<ul><li><p><strong>Starter</strong> –Single page dashboard for React</p></li><li><p><strong>Standard</strong> – Multi page dashboard for React</p></li><li><p><strong>Pro</strong> – Multi page dashboard for Next.js</p></li></ul>
+
+<p><br><strong>Starter</strong> package includes:</p>
+
+<ul><li><p>Single page dashboard homepage</p></li></ul>
+
+<p><br><strong>Standard</strong> and <strong>Pro</strong> packages include:</p>
+
+<ul><li><p>Dashboard homepage</p></li><li><p>Landing page</p></li><li><p>6 ecommerce pages with tables and cards</p></li><li><p>File manager layout</p></li><li><p>Chat layout</p></li><li><p>4 auth pages including login, register, password reset</p></li><li><p>19 component page examples with all variants</p></li><li><p>7 form component examples with all variants</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/cdd028c5-dd01-41fc-a036-fd73b7a24cc0/</link>
+          <pubDate>Thu, 11 Apr 2024 13:34:41 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/cdd028c5-dd01-41fc-a036-fd73b7a24cc0/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Blog template for Astro ]]>
