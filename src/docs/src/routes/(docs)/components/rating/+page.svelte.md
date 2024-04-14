@@ -30,76 +30,76 @@ data="{[
 
 <Component title="Rating">
 <div class="rating">
-  <input type="radio" name="rating-1" class="mask mask-star" />
-  <input type="radio" name="rating-1" class="mask mask-star" checked />
-  <input type="radio" name="rating-1" class="mask mask-star" />
-  <input type="radio" name="rating-1" class="mask mask-star" />
-  <input type="radio" name="rating-1" class="mask mask-star" />
+  <input type="radio" name="rating-1" class="mask mask-star" aria-label="1 star"/>
+  <input type="radio" name="rating-1" class="mask mask-star" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-1" class="mask mask-star" aria-label="3 stars"/>
+  <input type="radio" name="rating-1" class="mask mask-star" aria-label="4 stars"/>
+  <input type="radio" name="rating-1" class="mask mask-star" aria-label="5 stars"/>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$rating">
-  <input type="radio" name="rating-1" class="$$mask $$mask-star" />
-  <input type="radio" name="rating-1" class="$$mask $$mask-star" checked />
-  <input type="radio" name="rating-1" class="$$mask $$mask-star" />
-  <input type="radio" name="rating-1" class="$$mask $$mask-star" />
-  <input type="radio" name="rating-1" class="$$mask $$mask-star" />
+  <input type="radio" name="rating-1" class="$$mask $$mask-star" aria-label="1 star"/>
+  <input type="radio" name="rating-1" class="$$mask $$mask-star" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-1" class="$$mask $$mask-star" aria-label="3 stars"/>
+  <input type="radio" name="rating-1" class="$$mask $$mask-star" aria-label="4 stars"/>
+  <input type="radio" name="rating-1" class="$$mask $$mask-star" aria-label="5 stars"/>
 </div>`
 }</pre>
 </Component>
 
 <Component title="mask-star-2 with warning color">
 <div class="rating">
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star"/>
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="3 stars"/>
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="4 stars"/>
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="5 stars"/>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$rating">
-  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" aria-label="1 star"/>
+  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" aria-label="3 stars"/>
+  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" aria-label="4 stars"/>
+  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" aria-label="5 stars"/>
 </div>`
 }</pre>
 </Component>
 
 <Component title="mask-heart with multiple colors">
 <div class="gap-1 rating">
-  <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" checked />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-yellow-400" />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400" />
-  <input type="radio" name="rating-3" class="mask mask-heart bg-green-400" />
+  <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" aria-label="1 heart"/>
+  <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" checked aria-label="2 hearts"/>
+  <input type="radio" name="rating-3" class="mask mask-heart bg-yellow-400" aria-label="3 hearts"/>
+  <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400" aria-label="4 hearts"/>
+  <input type="radio" name="rating-3" class="mask mask-heart bg-green-400" aria-label="5 hearts"/>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$rating gap-1">
-  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-red-400" />
-  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-orange-400" checked />
-  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-yellow-400" />
-  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-lime-400" />
-  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-green-400" />
+  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-red-400" aria-label="1 heart"/>
+  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-orange-400" checked aria-label="2 hearts"/>
+  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-yellow-400" aria-label="3 hearts"/>
+  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-lime-400" aria-label="4 hearts"/>
+  <input type="radio" name="rating-3" class="$$mask $$mask-heart bg-green-400" aria-label="5 hearts"/>
 </div>`
 }</pre>
 </Component>
 
 <Component title="mask-star-2 with green-500 color">
 <div class="rating">
-  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" />
-  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" checked />
-  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" />
-  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" />
-  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" />
+  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="1 star"/>
+  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="3 stars"/>
+  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="4 stars"/>
+  <input type="radio" name="rating-4" class="bg-green-500 mask mask-star-2" aria-label="5 stars"/>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$rating">
-  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" />
-  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" checked />
-  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" />
-  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" />
-  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" />
+  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" aria-label="1 star"/>
+  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" aria-label="3 stars"/>
+  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" aria-label="4 stars"/>
+  <input type="radio" name="rating-4" class="$$mask $$mask-star-2 bg-green-500" aria-label="5 stars"/>
 </div>`
 }</pre>
 </Component>
@@ -107,118 +107,118 @@ data="{[
 <Component title="Sizes">
 <div class="flex flex-col gap-2 items-center">
   <div class="rating rating-xs">
-    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
-    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="1 star"/>
+    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="3 stars"/>
+    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="4 stars"/>
+    <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="5 stars"/>
   </div>
   <div class="rating rating-sm">
-    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
-    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="1 star"/>
+    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="3 stars"/>
+    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="4 stars"/>
+    <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="5 stars"/>
   </div>
   <div class="rating rating-md">
-    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
-    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="1 star"/>
+    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="3 stars"/>
+    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="4 stars"/>
+    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="5 stars"/>
   </div>
   <div class="rating rating-lg">
-    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" checked />
-    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
-    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
+    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="1 star"/>
+    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="3 stars"/>
+    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="4 stars"/>
+    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="5 stars"/>
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<!-- xs -->
 <div class="$$rating $$rating-xs">
-  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" aria-label="1 star"/>
+  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" aria-label="3 stars"/>
+  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" aria-label="4 stars"/>
+  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" aria-label="5 stars"/>
 </div>
 <!-- sm -->
 <div class="$$rating $$rating-sm">
-  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" aria-label="1 star"/>
+  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" aria-label="3 stars"/>
+  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" aria-label="4 stars"/>
+  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" aria-label="5 stars"/>
 </div>
 <!-- md -->
 <div class="$$rating $$rating-md">
-  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" aria-label="1 star"/>
+  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" aria-label="3 stars"/>
+  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" aria-label="4 stars"/>
+  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" aria-label="5 stars"/>
 </div>
 <!-- lg -->
 <div class="$$rating $$rating-lg">
-  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" aria-label="1 star"/>
+  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" aria-label="3 stars"/>
+  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" aria-label="4 stars"/>
+  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" aria-label="5 stars"/>
 </div>`
 }</pre>
 </Component>
 
 <Component title="with `rating-hidden`" desc="`rating-hidden` is a hidden radio at the start to allow uses remove their rating.">
 <div class="rating rating-lg">
-  <input type="radio" name="rating-9" class="rating-hidden" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" checked />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
+  <input type="radio" name="rating-9" class="rating-hidden" aria-label="no stars"/>
+  <input type="radio" name="rating-9" class="mask mask-star-2" aria-label="1 star"/>
+  <input type="radio" name="rating-9" class="mask mask-star-2" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-9" class="mask mask-star-2" aria-label="3 stars"/>
+  <input type="radio" name="rating-9" class="mask mask-star-2" aria-label="4 stars"/>
+  <input type="radio" name="rating-9" class="mask mask-star-2" aria-label="5 stars"/>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$rating $$rating-lg">
-  <input type="radio" name="rating-9" class="$$rating-hidden" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" checked />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
+  <input type="radio" name="rating-9" class="$$rating-hidden" aria-label="no stars"/>
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" aria-label="1 star"/>
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" checked aria-label="2 stars"/>
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" aria-label="3 stars"/>
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" aria-label="4 stars"/>
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" aria-label="5 stars"/>
 </div>`
 }</pre>
 </Component>
 
 <Component title="half stars">
 <div class="rating rating-lg rating-half">
-  <input type="radio" name="rating-10" class="rating-hidden" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" checked />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+  <input type="radio" name="rating-10" class="rating-hidden" aria-label="no stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" aria-label="half a star"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" aria-label="1 star"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" checked aria-label="1 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" aria-label="2 stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" aria-label="2 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" aria-label="3 stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" aria-label="3 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" aria-label="4 stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" aria-label="4 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" aria-label="5 stars"/>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$rating $$rating-lg $$rating-half">
-  <input type="radio" name="rating-10" class="rating-hidden" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" checked />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" />
+  <input type="radio" name="rating-10" class="rating-hidden" aria-label="no stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" aria-label="half a star"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" aria-label="1 star"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" checked aria-label="1 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" aria-label="2 stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" aria-label="2 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" aria-label="3 stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" aria-label="3 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" aria-label="4 stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-1" aria-label="4 and a half stars"/>
+  <input type="radio" name="rating-10" class="bg-green-500 $$mask $$mask-star-2 $$mask-half-2" aria-label="5 stars"/>
 </div>`
 }</pre>
 </Component>
