@@ -206,7 +206,7 @@
     )
   }
 
-  function generateOptionalColors(colors) {
+  function generateOptionalColors() {
     colors[9].value = darken("base-200", "--b2", "base-100", 0.1)
     colors[10].value = darken("base-300", "--b3", "base-100", 0.2)
     colors[11].value = contrastMaker("base-content", "--bc", "base-100")
@@ -220,11 +220,13 @@
     colors[15].value = contrastMaker("success-content", "--suc", "success")
     colors[17].value = contrastMaker("warning-content", "--wac", "warning")
     colors[19].value = contrastMaker("error-content", "--erc", "error")
-    return colors
   }
 
   function generateColors(newColorToCheck = "transparent") {
     if (CSS.supports("color", newColorToCheck)) {
+      if (onlyRequiredColorNames) {
+        generateOptionalColors()
+      }
       colors
         .forEach((color) => {
           wrapper.style.setProperty(
@@ -244,8 +246,8 @@
     if (browser && localStorage.getItem("theme-generator-colors")) {
       localStorage.removeItem("theme-generator-colors")
       colors = JSON.parse(localStorage.getItem("theme-generator-default-colors"))
+      generateOptionalColors()
       generateColors()
-      generateOptionalColors(colors)
     }
   }
 
@@ -288,8 +290,8 @@
     )
     //error
     // })
+    generateOptionalColors()
     generateColors()
-    generateOptionalColors(colors)
   }
 
   let wrapper
@@ -339,6 +341,11 @@
             <button class="btn btn-xs" on:click={() => onlyRequiredColorNames = !onlyRequiredColorNames}>
               <Translate text="Show all" />
             </button>
+            {#if !onlyRequiredColorNames}
+            <button class="btn btn-xs" on:click={() => {generateOptionalColors(); generateColors()}}>
+                <Translate text="Generate Optional" />
+            </button>
+            {/if}
             <button class="btn btn-xs" on:click={() => randomize()}>
               <Translate text="Randomize" />
             </button>
