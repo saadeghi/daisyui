@@ -170,6 +170,7 @@ data="{[
 }</pre>
 </Component>
 
+<!--  Requires changes to how tablist works to resolve tab accessibility issues -->
 <Component title="radio tab lifted + tab content">
 <div role="tablist" class="tabs tabs-lifted w-full my-10 lg:mx-10">
   <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />

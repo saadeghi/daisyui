@@ -33,66 +33,66 @@ data="{[
 />
 
 <Component title="Radial progress">
-<div class="radial-progress" style="--value:70;" role="progressbar" aria-valuenow="70">70%</div>
+<div class="radial-progress" style="--value:70;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$radial-progress" style="--value:70;" role="progressbar" aria-valuenow="70">70%</div>`
+`<div class="$$radial-progress" style="--value:70;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`<div className="$$radial-progress" style={{"--value":70}} role="progressbar" aria-valuenow="70">70%</div>`
+`<div className="$$radial-progress" style={{"--value":70}} role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 </Component>
 
 <Component title="Different values">
-<div class="radial-progress" style="--value:0;" role="progressbar" aria-valuenow="0">0%</div>
-<div class="radial-progress" style="--value:20;" role="progressbar" aria-valuenow="20">20%</div>
-<div class="radial-progress" style="--value:60;" role="progressbar" aria-valuenow="60">60%</div>
-<div class="radial-progress" style="--value:80;" role="progressbar" aria-valuenow="80">80%</div>
-<div class="radial-progress" style="--value:100;" role="progressbar" aria-valuenow="100">100%</div>
+<div class="radial-progress" style="--value:0;" role="progressbar" aria-valuenow="0" aria-valuetext="0%">0%</div>
+<div class="radial-progress" style="--value:20;" role="progressbar" aria-valuenow="20" aria-valuetext="20%">20%</div>
+<div class="radial-progress" style="--value:60;" role="progressbar" aria-valuenow="60" aria-valuetext="60%">60%</div>
+<div class="radial-progress" style="--value:80;" role="progressbar" aria-valuenow="80" aria-valuetext="80%">80%</div>
+<div class="radial-progress" style="--value:100;" role="progressbar" aria-valuenow="100" aria-valuetext="100%">100%</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$radial-progress" style="--value:0;" role="progressbar" aria-valuenow="0">0%</div>
-<div class="$$radial-progress" style="--value:20;" role="progressbar" aria-valuenow="20">20%</div>
-<div class="$$radial-progress" style="--value:60;" role="progressbar" aria-valuenow="60">60%</div>
-<div class="$$radial-progress" style="--value:80;" role="progressbar" aria-valuenow="80">80%</div>
-<div class="$$radial-progress" style="--value:100;" role="progressbar" aria-valuenow="100">100%</div>`
+`<div class="$$radial-progress" style="--value:0;" role="progressbar" aria-valuenow="0" aria-valuetext="0%">0%</div>
+<div class="$$radial-progress" style="--value:20;" role="progressbar" aria-valuenow="20" aria-valuetext="20%">20%</div>
+<div class="$$radial-progress" style="--value:60;" role="progressbar" aria-valuenow="60" aria-valuetext="60%">60%</div>
+<div class="$$radial-progress" style="--value:80;" role="progressbar" aria-valuenow="80" aria-valuetext="80%">80%</div>
+<div class="$$radial-progress" style="--value:100;" role="progressbar" aria-valuenow="100" aria-valuetext="100%">100%</div>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`<div className="$$radial-progress" style={{"--value":0}} role="progressbar" aria-valuenow="0">0%</div>
-<div className="$$radial-progress" style={{"--value":20}} role="progressbar" aria-valuenow="20">20%</div>
-<div className="$$radial-progress" style={{"--value":60}} role="progressbar" aria-valuenow="60">60%</div>
-<div className="$$radial-progress" style={{"--value":80}} role="progressbar" aria-valuenow="80">80%</div>
-<div className="$$radial-progress" style={{"--value":100}} role="progressbar" aria-valuenow="100">100%</div>`
+`<div className="$$radial-progress" style={{"--value":0}} role="progressbar" aria-valuenow="0" aria-valuetext="0%">0%</div>
+<div className="$$radial-progress" style={{"--value":20}} role="progressbar" aria-valuenow="20" aria-valuetext="20%">20%</div>
+<div className="$$radial-progress" style={{"--value":60}} role="progressbar" aria-valuenow="60" aria-valuetext="60%">60%</div>
+<div className="$$radial-progress" style={{"--value":80}} role="progressbar" aria-valuenow="80" aria-valuetext="80%">80%</div>
+<div className="$$radial-progress" style={{"--value":100}} role="progressbar" aria-valuenow="100" aria-valuetext="100%">100%</div>`
 }</pre>
 </Component>
 
 <Component title="Custom color">
-<div class="radial-progress text-primary" style="--value:70;" role="progressbar" aria-valuenow="70">70%</div>
+<div class="radial-progress text-primary" style="--value:70;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$radial-progress text-primary" style="--value:70;" role="progressbar" aria-valuenow="70">70%</div>`
+`<div class="$$radial-progress text-primary" style="--value:70;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`<div className="$$radial-progress text-primary" style={{"--value":70}} role="progressbar" aria-valuenow="70">70%</div>`
+`<div className="$$radial-progress text-primary" style={{"--value":70}} role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 </Component>
 
 <Component title="With background color and border">
-<div class="radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar" aria-valuenow="70">70%</div>
+<div class="radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar" aria-valuenow="70">70%</div>`
+`<div class="$$radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`<div className="$$radial-progress bg-primary text-primary-content border-4 border-primary" style={{"--value":70}} role="progressbar" aria-valuenow="70">70%</div>`
+`<div className="$$radial-progress bg-primary text-primary-content border-4 border-primary" style={{"--value":70}} role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 </Component>
 
 <Component title="Custom size and custom thickness">
-<div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2px;" role="progressbar" aria-valuenow="70">70%</div>
-<div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar" aria-valuenow="70">70%</div>
+<div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2px;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>
+<div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2px;" role="progressbar" aria-valuenow="70">70%</div>
-<div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar" aria-valuenow="70">70%</div>`
+`<div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2px;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>
+<div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
-`<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }} role="progressbar" aria-valuenow="70">70%</div>
-<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2rem" }} role="progressbar" aria-valuenow="70">70%</div>`
+`<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }} role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>
+<div className="$$radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2rem" }} role="progressbar" aria-valuenow="70" aria-valuetext="70%">70%</div>`
 }</pre>
 </Component>
