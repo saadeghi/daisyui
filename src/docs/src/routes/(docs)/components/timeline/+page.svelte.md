@@ -33,7 +33,7 @@ data="{[
 
 <div class="alert text-sm mt-4">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <div><Translate text="The <span class=badge>hr</span> tag at the start or end of each item, displays a line to connect items. Set the attribute aria-hidden to true to hide the line from screenreaders for improved readability." /></div>
+  <div><Translate text="The <span class=badge>hr</span> tag at the start or end of each item, displays a line to connect items." /></div>
 </div>
 
 <Component title="Timeline with text on both sides and icon">
