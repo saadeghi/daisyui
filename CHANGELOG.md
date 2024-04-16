@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.10.2 (2024-04-16)
+
+
+### Bug Fixes
+
+* consistent disabled form inputs ([#2981](https://github.com/saadeghi/daisyui/issues/2981)) ([50dfac4](https://github.com/saadeghi/daisyui/commit/50dfac4fec4fec69f66d2747d0292d7485d7b31f))
+
 ## 4.10.1 (2024-04-04)
 
 
