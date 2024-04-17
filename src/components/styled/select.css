@@ -67,7 +67,7 @@
   &-disabled,
   &:disabled,
   &[disabled] {
-    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content cursor-not-allowed text-opacity-20 placeholder-opacity-20;
+    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 cursor-not-allowed placeholder-opacity-20;
   }
   &-multiple,
   &[multiple],

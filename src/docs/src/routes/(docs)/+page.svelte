@@ -1636,12 +1636,13 @@
           [20, 30],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [20, 30], [0, 1])}`}>
-        <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+        <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
             <Countup
-              initial={data.stargazers_count * 0.8}
-              value={data.stargazers_count}
-              duration={2000} />
+              initial={data.stargazers_count - 5}
+              value={data.stargazers_count + 5}
+              roundto={10}
+              duration={5 * 1000} />
           </span>
           <span class="hidden motion-reduce:inline">
             {data.stargazers_count.toLocaleString("en-US")}
@@ -1662,12 +1663,13 @@
           [30, 40],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [30, 40], [0, 1])}`}>
-        <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+        <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
             <Countup
-              initial={data.gh_dependents.repositories * 0.8}
-              value={data.gh_dependents.repositories}
-              duration={2200} />
+              initial={data.gh_dependents.repositories - 12}
+              value={data.gh_dependents.repositories + 12}
+              roundto={10}
+              duration={6 * 1000} />
           </span>
           <span class="hidden motion-reduce:inline">
             {data.gh_dependents.repositories.toLocaleString("en-US")}
@@ -1688,9 +1690,13 @@
           [40, 50],
           [2, 0]
         )}rem);opacity:${animateValue(section["numbers"], [40, 50], [0, 1])}`}>
-        <div class="font-title text-[clamp(2rem,6vw,5rem)] font-black tabular-nums">
+        <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
-            <Countup initial={data.npmInstalls * 0.8} value={data.npmInstalls} duration={2400} />
+            <Countup
+              initial={data.npmInstalls - 3000}
+              value={data.npmInstalls + 3000}
+              roundto={100}
+              duration={7 * 1000} />
           </span>
           <span class="hidden motion-reduce:inline">
             {data.npmInstalls.toLocaleString("en-US")}

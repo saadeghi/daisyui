@@ -30,7 +30,7 @@ layout: components
   })
 </script>
 
-<Translate text="You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99." />
+<Translate text="you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99." />
 
 <!-- <ComponentPageTabs/> -->
 

@@ -14,6 +14,7 @@
     deprecated = null,
     items = null,
     collapsible = null,
+    highlight = null,
     target = null
 
   const sanitize = (name) => {
@@ -56,7 +57,7 @@
             {$t(name)}
           </summary>
           <ul>
-            {#each items as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items }}
+            {#each items as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items, highlight }}
               <SidebarMenuItem
                 {closeDrawer}
                 {name}
@@ -66,6 +67,7 @@
                 {badgeclass}
                 {highlightAnotherItem}
                 {deprecated}
+                {highlight}
                 {items} />
             {/each}
           </ul>
@@ -81,7 +83,7 @@
         {/if}
         {#if items}
           <ul>
-            {#each items as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items }}
+            {#each items as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items, highlight }}
               <SidebarMenuItem
                 {closeDrawer}
                 {name}
@@ -91,6 +93,7 @@
                 {badgeclass}
                 {highlightAnotherItem}
                 {deprecated}
+                {highlight}
                 {items} />
             {/each}
           </ul>
@@ -105,9 +108,13 @@
         on:click={closeDrawer}
         class={`group ${$page.url.pathname == href ? "active" : ""} ${
           $page.url.pathname == highlightAnotherItem ? "active" : ""
-        } ${$page.url.pathname.startsWith(href) ? "active" : ""}`}>
+        } ${$page.url.pathname.startsWith(href) ? "active" : ""} ${
+          highlight
+            ? "from-primary to-primary/0 hover:to-primary/10 from-[-200%] to-60% [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))]"
+            : ""
+        }`}>
         {#if icon}
-          <span>
+          <span class={highlight ? " group-hover:text-primary transition-colors" : ""}>
             {@html icon}
           </span>
         {/if}
@@ -115,7 +122,7 @@
           {@html $t(name)}
         </span>
         {#if badge}
-          <span class={`badge badge-sm font-mono ${badgeclass && badgeclass}`}>
+          <span class={`badge badge-sm font-mono text-opacity-70 ${badgeclass && badgeclass}`}>
             {$t(badge)}
           </span>
         {/if}

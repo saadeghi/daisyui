@@ -4,7 +4,7 @@
     "bg-base-100 border-base-100 border-base-content/10 hover:border-base-content/20 border"
 </script>
 
-{#if true}
+{#if false}
   <div class="flex-col gap-2">
     <div class="text-base-content/50 text-xs font-bold">Sponsors</div>
 

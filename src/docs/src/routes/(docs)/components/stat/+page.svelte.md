@@ -324,7 +324,7 @@ data="{[
     <div class="stat-value">$89,400</div>
     <div class="stat-actions">
       <button class="btn btn-sm">Withdrawal</button> 
-      <button class="btn btn-sm">deposit</button>
+      <button class="btn btn-sm">Deposit</button>
     </div>
   </div>
 </div>
@@ -344,7 +344,7 @@ data="{[
     <div class="$$stat-value">$89,400</div>
     <div class="$$stat-actions">
       <button class="$$btn $$btn-sm">Withdrawal</button> 
-      <button class="$$btn $$btn-sm">deposit</button>
+      <button class="$$btn $$btn-sm">Deposit</button>
     </div>
   </div>
   

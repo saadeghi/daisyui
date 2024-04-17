@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.10.2 (2024-04-16)
+
+
+### Bug Fixes
+
+* consistent disabled form inputs ([#2981](https://github.com/saadeghi/daisyui/issues/2981)) ([50dfac4](https://github.com/saadeghi/daisyui/commit/50dfac4fec4fec69f66d2747d0292d7485d7b31f))
+
+## 4.10.1 (2024-04-04)
+
+
+### Bug Fixes
+
+* Add border above table footer ([#2723](https://github.com/saadeghi/daisyui/issues/2723)) ([7d54475](https://github.com/saadeghi/daisyui/commit/7d544758a548d7114e5d9af1e729c3371058549f)), closes [#2690](https://github.com/saadeghi/daisyui/issues/2690) [#2692](https://github.com/saadeghi/daisyui/issues/2692)
+
+## 4.10.0 (2024-04-04)
+
+
+### Features
+
+* modal now uses scrollbar-gutter ([#2956](https://github.com/saadeghi/daisyui/issues/2956)) ([f05e854](https://github.com/saadeghi/daisyui/commit/f05e85413a2f7d8b795d4a8d5bd517223319b9e6))
+
 ## 4.9.0 (2024-03-26)
 
 

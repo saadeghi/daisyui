@@ -151,15 +151,17 @@
       <div class="col-span-12 row-start-2 flex flex-col gap-8 xl:col-span-5 xl:row-start-1">
         <div>
           {#if product.customattributes?.tags}
-            {#each product.customattributes.tags as tag}
-              <span class="badge badge-success badge-outline italic">{tag}</span>
-            {/each}
+            <span class="flex gap-2">
+              {#each product.customattributes.tags as tag}
+                <span class="badge badge-success badge-outline italic">{tag}</span>
+              {/each}
+            </span>
           {/if}
           <h2 class="font-title text-lg font-black [text-wrap:balance] sm:text-3xl xl:text-5xl">
             {product.attributes.name}
           </h2>
         </div>
-        <div class="flex items-center justify-between">
+        <div class="flex items-start justify-between">
           <div class="flex gap-2">
             {#if product.customattributes?.originalprice}
               <span class="text-2xl line-through opacity-40 xl:text-4xl">
@@ -167,11 +169,24 @@
               </span>
             {/if}
             <span class="flex flex-col">
-              <span class="font-title text-2xl font-light xl:text-5xl">
+              <span class="flex items-center gap-2">
                 {#if product.customattributes?.displayprice}
-                  {convertCurrency(product.customattributes?.displayprice)}
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(product.customattributes?.displayprice)}
+                  </span>
+                {:else if product.attributes.from_price && product.attributes.to_price && product.attributes.from_price !== product.attributes.to_price}
+                  From
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(product.attributes.from_price)}
+                  </span>
+                  to
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(product.attributes.to_price)}
+                  </span>
                 {:else}
-                  {convertCurrency(product.attributes.price)}
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(product.attributes.price)}
+                  </span>
                 {/if}
               </span>
 
@@ -182,25 +197,32 @@
               {/if}
             </span>
           </div>
-          <a
-            href={product.attributes.buy_now_url}
-            class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
-            target="_blank"
-            rel="noopener noreferrer">
-            Get it now
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-            </svg>
-          </a>
+          <div class="flex flex-col items-center gap-3">
+            <a
+              href={product.attributes.buy_now_url}
+              class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
+              target="_blank"
+              rel="noopener noreferrer">
+              Get it now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </a>
+            {#if product.customattributes?.preveiw_url}
+              <a class="link text-xs" href={product.customattributes.preveiw_url} target="_blank">
+                Live Preview
+              </a>
+            {/if}
+          </div>
         </div>
         {#if product.attributes.description}
           <div
