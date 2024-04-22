@@ -30,88 +30,115 @@ layout: components
   })
 </script>
 
-<Translate text="you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99." />
+<Translate text="You need to change to `--value` CSS variable using JS. Value must be a number between 0 and 99." />
+<Translate text="Since countdown is inaccessible by default, we suggest marking the spans that use the `-value` CSS variable as aria-hidden and having a `countdown-accessible` sibling that plainly contains the value." />
+
 
 <!-- <ComponentPageTabs/> -->
 
 <ClassTable
 data="{[
   { type:'component', class: 'countdown', desc: 'Container element' },
+  { type:'component', class: 'countdown-accessible', desc: 'Container storing value for accessibility purposes' },
 ]}"
 />
 
 <Component title="Countdown">
 <span class="countdown">
-  <span style="--value:{counter};"></span>
+  <span style="--value:{counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">{counter}</span>
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown">
-  <span style="--value:${counter};"></span>
+  <span style="--value:${counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>
 </span>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown">
-  <span style={{"--value":${counter}}}></span>
+  <span style={{"--value":${counter}}} aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>
 </span>`
 }</pre>
 </Component>
 
 <Component title="Large text">
 <span class="countdown font-mono text-6xl">
-  <span style="--value:{counter};"></span>
+  <span style="--value:{counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">{counter}</span>
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown font-mono text-6xl">
-  <span style="--value:${counter};"></span>
+  <span style="--value:${counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>
 </span>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown font-mono text-6xl">
-  <span style={{"--value":${counter}}}></span>
+  <span style={{"--value":${counter}}} aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>
 </span>`
 }</pre>
 </Component>
 
 <Component title="Clock countdown">
 <span class="font-mono text-2xl countdown">
-  <span style="--value:10;"></span>h
-  <span style="--value:24;"></span>m
-  <span style="--value:{counter};"></span>s
+  <span style="--value:10;" aria-hidden="true"></span>
+  <span class="countdown-accessible">10</span>h
+  <span style="--value:24;" aria-hidden="true"></span>
+  <span class="countdown-accessible">24</span>m
+  <span style="--value:{counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">{counter}</span>ms
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown font-mono text-2xl">
-  <span style="--value:10;"></span>h
-  <span style="--value:24;"></span>m
-  <span style="--value:${counter};"></span>s
+  <span style="--value:10;" aria-hidden="true"></span>
+  <span class="countdown-accessible">10</span>h
+  <span style="--value:24;" aria-hidden="true"></span>
+  <span class="countdown-accessible">24</span>m
+  <span style="--value:${counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>s
 </span>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown font-mono text-2xl">
-  <span style={{"--value":10}}></span>h
-  <span style={{"--value":24}}></span>m
-  <span style={{"--value":${counter}}}></span>s
+  <span style={{"--value":10}} aria-hidden="true"></span>
+  <span class="countdown-accessible">10</span>h
+  <span style={{"--value":24}} aria-hidden="true"></span
+  <span class="countdown-accessible">24</span>m
+  <span style={{"--value":${counter}}} aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>s
 </span>`
 }</pre>
 </Component>
 
 <Component title="Clock countdown with colons">
 <span class="font-mono text-2xl countdown">
-  <span style="--value:10;"></span>:
-  <span style="--value:24;"></span>:
-  <span style="--value:{counter};"></span>
+  <span style="--value:10;" aria-hidden="true"></span>
+  <span class="countdown-accessible">10</span>:
+  <span style="--value:24;" aria-hidden="true"></span>
+  <span class="countdown-accessible">24</span>:
+  <span style="--value:{counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">{counter}</span>
 </span>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown font-mono text-2xl">
-  <span style="--value:10;"></span>:
-  <span style="--value:24;"></span>:
-  <span style="--value:${counter};"></span>
+  <span style="--value:10;" aria-hidden="true"></span>
+  <span class="countdown-accessible">10</span>:
+  <span style="--value:24;" aria-hidden="true"></span>
+  <span class="countdown-accessible">24</span>:
+  <span style="--value:${counter};" aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>
 </span>`
 }</pre>
 <pre slot="jsx" use:replace={{ to: $prefix }}>{
 `<span class="$$countdown font-mono text-2xl">
-  <span style={{"--value":10}}></span>:
-  <span style={{"--value":24}}></span>:
-  <span style={{"--value":${counter}}}></span>
+  <span style={{"--value":10}} aria-hidden="true"></span>
+  <span class="countdown-accessible">10</span>:
+  <span style={{"--value":24}} aria-hidden="true"></span>
+  <span class="countdown-accessible">24</span>:
+  <span style={{"--value":${counter}}} aria-hidden="true"></span>
+  <span class="countdown-accessible">${counter}</span>
 </span>`
 }</pre>
 </Component>
@@ -120,25 +147,29 @@ data="{[
 <div class="flex gap-5">
   <div>
     <span class="font-mono text-4xl countdown">
-      <span style="--value:15;"></span>
+      <span style="--value:15;" aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div>
     <span class="font-mono text-4xl countdown">
-      <span style="--value:10;"></span>
+      <span style="--value:10;" aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div>
     <span class="font-mono text-4xl countdown">
-      <span style="--value:24;"></span>
+      <span style="--value:24;" aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     minutes
   </div> 
   <div>
     <span class="font-mono text-4xl countdown">
-      <span style="--value:{counter};"></span>
+      <span style="--value:{counter};" aria-hidden="true"></span>
+      <span class="countdown-accessible">{counter}</span>
     </span>
     sec
   </div>
@@ -147,25 +178,29 @@ data="{[
 `<div class="flex gap-5">
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style="--value:15;"></span>
+      <span style="--value:15;" aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style="--value:10;"></span>
+      <span style="--value:10;" aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style="--value:24;"></span>
+      <span style="--value:24;" aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style="--value:${counter};"></span>
+      <span style="--value:${counter};" aria-hidden="true"></span>
+      <span class="countdown-accessible">${counter}</span>
     </span>
     sec
   </div>
@@ -175,25 +210,29 @@ data="{[
 `<div class="flex gap-5">
   <div>
     <span class="$$countdown font-mono text-4xl">
-        <span style={{"--value":15}}></span>
+        <span style={{"--value":15}} aria-hidden="true"></span>
+        <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div>
     <span class="$$countdown font-mono text-4xl">
-        <span style={{"--value":10}}></span>
+        <span style={{"--value":10}} aria-hidden="true"></span>
+        <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style={{"--value":24}}></span>
+      <span style={{"--value":24}} aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style={{"--value":${counter}}}></span>
+      <span style={{"--value":${counter}}} aria-hidden="true"></span>
+      <span class="countdown-accessible">${counter}</span>
     </span>
     sec
   </div>
@@ -205,25 +244,29 @@ data="{[
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:15;"></span>
+      <span style="--value:15;" aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:10;"></span>
+      <span style="--value:10;" aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:24;"></span>
+      <span style="--value:24;" aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:{counter};"></span>
+      <span style="--value:{counter};" aria-hidden="true"></span>
+      <span class="countdown-accessible">{counter}</span>
     </span>
     sec
   </div>
@@ -232,25 +275,29 @@ data="{[
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:15;"></span>
+      <span style="--value:15;" aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:10;"></span>
+      <span style="--value:10;" aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:24;"></span>
+      <span style="--value:24;" aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:${counter};"></span>
+      <span style="--value:${counter};" aria-hidden="true"></span>
+      <span class="countdown-accessible">${counter}</span>
     </span>
     sec
   </div>
@@ -260,25 +307,29 @@ data="{[
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":15}}></span>
+      <span style={{"--value":15}} aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":10}}></span>
+      <span style={{"--value":10}} aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":24}}></span>
+      <span style={{"--value":24}} aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":${counter}}}></span>
+      <span style={{"--value":${counter}}} aria-hidden="true"></span>
+      <span class="countdown-accessible">${counter}</span>
     </span>
     sec
   </div>
@@ -290,25 +341,29 @@ data="{[
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:15;"></span>
+      <span style="--value:15;" aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:10;"></span>
+      <span style="--value:10;" aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:24;"></span>
+      <span style="--value:24;" aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
-      <span style="--value:{counter};"></span>
+      <span style="--value:{counter};" aria-hidden="true"></span>
+      <span class="countdown-accessible">{counter}</span>
     </span>
     sec
   </div>
@@ -317,25 +372,29 @@ data="{[
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:15;"></span>
+      <span style="--value:15;" aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:10;"></span>
+      <span style="--value:10;" aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:24;"></span>
+      <span style="--value:24;" aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:${counter};"></span>
+      <span style="--value:${counter};" aria-hidden="true"></span>
+      <span class="countdown-accessible">${counter}</span>
     </span>
     sec
   </div>
@@ -345,25 +404,29 @@ data="{[
 `<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":15}}></span>
+      <span style={{"--value":15}} aria-hidden="true"></span>
+      <span class="countdown-accessible">15</span>
     </span>
     days
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":10}}></span>
+      <span style={{"--value":10}} aria-hidden="true"></span>
+      <span class="countdown-accessible">10</span>
     </span>
     hours
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":24}}></span>
+      <span style={{"--value":24}} aria-hidden="true"></span>
+      <span class="countdown-accessible">24</span>
     </span>
     min
   </div> 
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":${counter}}}></span>
+      <span style={{"--value":${counter}}} aria-hidden="true"></span>
+      <span class="countdown-accessible">${counter}</span>
     </span>
     sec
   </div>
