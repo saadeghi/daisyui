@@ -3,7 +3,7 @@
 }
 .countdown {
   display: inline-flex;
-  & > * {
+  & > *:not(.countdown-accessible) {
     height: 1em;
     @apply inline-block overflow-y-hidden;
     &:before {
@@ -12,5 +12,8 @@
       white-space: pre;
       top: calc(var(--value) * -1em);
     }
+  }
+  & > .countdown-accessible {
+    @apply sr-only;
   }
 }
