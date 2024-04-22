@@ -1,0 +1,23 @@
+.date-picker {
+  @apply flex flex-col gap-2 p-4;
+
+  &-header {
+    @apply flex items-center justify-between;
+  }
+
+  &-body {
+    @apply flex flex-col gap-2 p-4;
+  }
+
+  &-weekdays {
+    @apply text-base-content grid grid-cols-7 gap-1 text-center text-xs;
+  }
+
+  &-days {
+    @apply text-base-content grid grid-cols-7 gap-4 text-center text-xs;
+
+    > [aria-current="date"] {
+      @apply bg-primary text-primary-content rounded-full;
+    }
+  }
+}
