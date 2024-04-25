@@ -12,11 +12,15 @@ published: true
 <Translate text="Default config" />:
 
 ```js
-module.exports = {
+import daisyui from 'daisyui';
+
+export default {
   //...
 
   // add daisyUI plugin
-  plugins: [require("daisyui")],
+  plugins: [
+     daisyui
+  ],
 
   // daisyUI config (optional - here are the default values)
   daisyui: {
