@@ -33,12 +33,12 @@
 
   const generateForegroundColorFrom = function (input, percentage = 0.8) {
     const result = interpolate([input, isDark(input) ? "white" : "black"], "oklch")(percentage)
-    return colorObjToString(result)
+    return formatHex('oklch(' + colorObjToString(result) + ')')
   }
 
   const generateDarkenColorFrom = function (input, percentage = 0.07) {
     const result = interpolate([input, "black"], "oklch")(percentage)
-    return colorObjToString(result)
+    return formatHex('oklch(' + colorObjToString(result) + ')')
   }
 
   function changeColorValuesToObject(input) {
@@ -87,6 +87,8 @@
     "warning",
     "error",
   ]
+
+  $: onlyRequiredColorNames = true
 
   $: colors = [
     {
@@ -192,59 +194,46 @@
   ]
 
   function darken(name, variable, source, percentage = 0.2) {
-    return {
-      name: name,
-      variable: variable,
-      value: generateDarkenColorFrom(
-        colors.find((item) => item.name === source).value,
-        percentage,
-        "oklch"
-      ),
-    }
+    return generateDarkenColorFrom(
+      colors.find((item) => item.name === source).value,
+      percentage,
+    )
   }
   function contrastMaker(name, variable, source, percentage = 0.8) {
-    return {
-      name: name,
-      variable: variable,
-      value: generateForegroundColorFrom(
-        colors.find((item) => item.name === source).value,
-        percentage,
-        "oklch"
-      ),
-    }
+    return generateForegroundColorFrom(
+      colors.find((item) => item.name === source).value,
+      percentage,
+    )
   }
 
-  function generateOptionalColors(colors) {
-    let optionalColors = []
-    optionalColors.push(darken("base-200", "--b2", "base-100", 0.1))
-    optionalColors.push(darken("base-300", "--b3", "base-100", 0.2))
-    optionalColors.push(contrastMaker("base-content", "--bc", "base-100"))
+  function generateOptionalColors() {
+    colors[9].value = darken("base-200", "--b2", "base-100", 0.1)
+    colors[10].value = darken("base-300", "--b3", "base-100", 0.2)
+    colors[11].value = contrastMaker("base-content", "--bc", "base-100")
 
-    optionalColors.push(contrastMaker("primary-content", "--pc", "primary"))
-    optionalColors.push(contrastMaker("secondary-content", "--sc", "secondary"))
-    optionalColors.push(contrastMaker("accent-content", "--ac", "accent"))
-    optionalColors.push(contrastMaker("neutral-content", "--nc", "neutral"))
+    colors[1].value = contrastMaker("primary-content", "--pc", "primary")
+    colors[3].value = contrastMaker("secondary-content", "--sc", "secondary")
+    colors[5].value = contrastMaker("accent-content", "--ac", "accent")
+    colors[7].value = contrastMaker("neutral-content", "--nc", "neutral")
 
-    optionalColors.push(contrastMaker("info-content", "--inc", "info"))
-    optionalColors.push(contrastMaker("success-content", "--suc", "success"))
-    optionalColors.push(contrastMaker("warning-content", "--wac", "warning"))
-    optionalColors.push(contrastMaker("error-content", "--erc", "error"))
-    return optionalColors
+    colors[13].value = contrastMaker("info-content", "--inc", "info")
+    colors[15].value = contrastMaker("success-content", "--suc", "success")
+    colors[17].value = contrastMaker("warning-content", "--wac", "warning")
+    colors[19].value = contrastMaker("error-content", "--erc", "error")
   }
 
   function generateColors(newColorToCheck = "transparent") {
     if (CSS.supports("color", newColorToCheck)) {
+      if (onlyRequiredColorNames) {
+        generateOptionalColors()
+      }
       colors
-        .filter((item) => requiredColorNames.includes(item.name))
         .forEach((color) => {
           wrapper.style.setProperty(
             color.variable,
             colorObjToString(toGamut("oklch")(color.value), "oklch")
           )
         })
-      generateOptionalColors(colors).forEach((color) => {
-        wrapper.style.setProperty(color.variable, color.value)
-      })
       if (browser) {
         localStorage.setItem("theme-generator-colors", JSON.stringify(colors))
       }
@@ -257,6 +246,7 @@
     if (browser && localStorage.getItem("theme-generator-colors")) {
       localStorage.removeItem("theme-generator-colors")
       colors = JSON.parse(localStorage.getItem("theme-generator-default-colors"))
+      generateOptionalColors()
       generateColors()
     }
   }
@@ -300,6 +290,7 @@
     )
     //error
     // })
+    generateOptionalColors()
     generateColors()
   }
 
@@ -347,6 +338,14 @@
       {#if browser}
         <div class="mockup-code not-prose relative">
           <div class="absolute right-2 top-2">
+            <button class="btn btn-xs" on:click={() => onlyRequiredColorNames = !onlyRequiredColorNames}>
+              <Translate text="Show all" />
+            </button>
+            {#if !onlyRequiredColorNames}
+            <button class="btn btn-xs" on:click={() => {generateOptionalColors(); generateColors()}}>
+                <Translate text="Generate Optional" />
+            </button>
+            {/if}
             <button class="btn btn-xs" on:click={() => randomize()}>
               <Translate text="Randomize" />
             </button>
@@ -359,12 +358,12 @@
       themes: [
         {
           mytheme: {`}</code>
-{#each colors.filter((item) => requiredColorNames.includes(item.name)) as color}
+{#each colors.filter((item) => !onlyRequiredColorNames || requiredColorNames.includes(item.name)) as color}
               <code>          <span
                   data-tip="Pick →"
                   class:tooltip={colors.filter((item) =>
-                    requiredColorNames.includes(item.name)
-                  )[0] == color}
+                    !onlyRequiredColorNames || requiredColorNames.includes(item.name)
+                  )[0] === color}
                   class="tooltip-open tooltip-accent tooltip-left align-middle"><span
                     class="inline-block w-1" /><ColorPicker
                     bind:value={color.value}
@@ -382,7 +381,7 @@
       require('daisyui'),
     ],
     //...
-  }  
+  }
 `}</code></pre>
         </div>
       {/if}
