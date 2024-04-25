@@ -33,12 +33,12 @@
 
   const generateForegroundColorFrom = function (input, percentage = 0.8) {
     const result = interpolate([input, isDark(input) ? "white" : "black"], "oklch")(percentage)
-    return formatHex('oklch(' + colorObjToString(result) + ')')
+    return formatHex("oklch(" + colorObjToString(result) + ")")
   }
 
   const generateDarkenColorFrom = function (input, percentage = 0.07) {
     const result = interpolate([input, "black"], "oklch")(percentage)
-    return formatHex('oklch(' + colorObjToString(result) + ')')
+    return formatHex("oklch(" + colorObjToString(result) + ")")
   }
 
   function changeColorValuesToObject(input) {
@@ -194,15 +194,12 @@
   ]
 
   function darken(name, variable, source, percentage = 0.2) {
-    return generateDarkenColorFrom(
-      colors.find((item) => item.name === source).value,
-      percentage,
-    )
+    return generateDarkenColorFrom(colors.find((item) => item.name === source).value, percentage)
   }
   function contrastMaker(name, variable, source, percentage = 0.8) {
     return generateForegroundColorFrom(
       colors.find((item) => item.name === source).value,
-      percentage,
+      percentage
     )
   }
 
@@ -227,13 +224,12 @@
       if (onlyRequiredColorNames) {
         generateOptionalColors()
       }
-      colors
-        .forEach((color) => {
-          wrapper.style.setProperty(
-            color.variable,
-            colorObjToString(toGamut("oklch")(color.value), "oklch")
-          )
-        })
+      colors.forEach((color) => {
+        wrapper.style.setProperty(
+          color.variable,
+          colorObjToString(toGamut("oklch")(color.value), "oklch")
+        )
+      })
       if (browser) {
         localStorage.setItem("theme-generator-colors", JSON.stringify(colors))
       }
@@ -333,25 +329,139 @@
 </div>
 <div class="flex flex-col gap-4 xl:flex-row">
   <div class="shrink-0 xl:min-w-[29rem]">
-    <div class="sticky top-[5.5rem]">
+    <div class="sticky top-8">
       <h2 class="px-2 pb-4 text-xl font-bold">tailwind.config.js</h2>
       {#if browser}
-        <div class="mockup-code not-prose relative">
+        <div class="mockup-code not-prose relative overflow-visible">
           <div class="absolute right-2 top-2">
-            <button class="btn btn-xs" on:click={() => onlyRequiredColorNames = !onlyRequiredColorNames}>
-              <Translate text="Show all" />
-            </button>
-            {#if !onlyRequiredColorNames}
-            <button class="btn btn-xs" on:click={() => {generateOptionalColors(); generateColors()}}>
-                <Translate text="Generate Optional" />
-            </button>
-            {/if}
-            <button class="btn btn-xs" on:click={() => randomize()}>
-              <Translate text="Randomize" />
-            </button>
-            <button class="btn btn-xs" on:click={() => resetColors()}>
-              <Translate text="Reset" />
-            </button>
+            <div
+              class="tooltip tooltip-bottom tooltip-info"
+              data-tip="Fix contrast of optional colors">
+              {#if !onlyRequiredColorNames}
+                <button
+                  class="btn btn-xs btn-neutral btn-square"
+                  on:click={() => {
+                    generateOptionalColors()
+                    generateColors()
+                  }}>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44V4Z"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44V4Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M24 36H9"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M24 28H5"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M24 20H5"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M24 12H9"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              {/if}
+            </div>
+            <div
+              class="tooltip tooltip-bottom tooltip-info"
+              data-tip={onlyRequiredColorNames ? "Show optional colors" : "Hide optional colors"}>
+              <button
+                class="btn btn-xs btn-neutral btn-square"
+                on:click={() => (onlyRequiredColorNames = !onlyRequiredColorNames)}>
+                {#if !onlyRequiredColorNames}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z" />
+                  </svg>
+                {/if}
+                {#if onlyRequiredColorNames}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z" />
+                  </svg>
+                {/if}
+              </button>
+            </div>
+            <div class="tooltip tooltip-bottom tooltip-info" data-tip="Randomize">
+              <button class="btn btn-xs btn-neutral btn-square" on:click={() => randomize()}>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.25 7.75H16.255M16.25 16.25H16.255M7.75 7.75H7.755M12 11.75H12.005M7.75 16.25H7.755M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21ZM16.5 7.75C16.5 7.88807 16.3881 8 16.25 8C16.1119 8 16 7.88807 16 7.75C16 7.61193 16.1119 7.5 16.25 7.5C16.3881 7.5 16.5 7.61193 16.5 7.75ZM16.5 16.25C16.5 16.3881 16.3881 16.5 16.25 16.5C16.1119 16.5 16 16.3881 16 16.25C16 16.1119 16.1119 16 16.25 16C16.3881 16 16.5 16.1119 16.5 16.25ZM8 7.75C8 7.88807 7.88807 8 7.75 8C7.61193 8 7.5 7.88807 7.5 7.75C7.5 7.61193 7.61193 7.5 7.75 7.5C7.88807 7.5 8 7.61193 8 7.75ZM12.25 11.75C12.25 11.8881 12.1381 12 12 12C11.8619 12 11.75 11.8881 11.75 11.75C11.75 11.6119 11.8619 11.5 12 11.5C12.1381 11.5 12.25 11.6119 12.25 11.75ZM8 16.25C8 16.3881 7.88807 16.5 7.75 16.5C7.61193 16.5 7.5 16.3881 7.5 16.25C7.5 16.1119 7.61193 16 7.75 16C7.88807 16 8 16.1119 8 16.25Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="tooltip tooltip-bottom tooltip-info" data-tip="Reset">
+              <button class="btn btn-xs btn-neutral btn-square" on:click={() => resetColors()}>
+                <svg
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M36.7279 36.7279C33.4706 39.9853 28.9706 42 24 42C14.0589 42 6 33.9411 6 24C6 14.0589 14.0589 6 24 6C28.9706 6 33.4706 8.01472 36.7279 11.2721C38.3859 12.9301 42 17 42 17"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M42 8V17H33"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
           </div>
           <pre><code class="text-neutral-content/30">{`module.exports = {`}</code>
 <code>{`    daisyui: {
@@ -361,8 +471,8 @@
 {#each colors.filter((item) => !onlyRequiredColorNames || requiredColorNames.includes(item.name)) as color}
               <code>          <span
                   data-tip="Pick →"
-                  class:tooltip={colors.filter((item) =>
-                    !onlyRequiredColorNames || requiredColorNames.includes(item.name)
+                  class:tooltip={colors.filter(
+                    (item) => !onlyRequiredColorNames || requiredColorNames.includes(item.name)
                   )[0] === color}
                   class="tooltip-open tooltip-accent tooltip-left align-middle"><span
                     class="inline-block w-1" /><ColorPicker
