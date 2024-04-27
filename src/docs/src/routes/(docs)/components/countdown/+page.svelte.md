@@ -39,7 +39,7 @@ layout: components
 <ClassTable
 data="{[
   { type:'component', class: 'countdown', desc: 'Container element' },
-  { type:'component', class: 'countdown-accessible', desc: 'Container storing value for accessibility purposes' },
+  { type:'component', class: 'countdown-accessible', desc: 'Child element storing value for accessibility purposes' },
 ]}"
 />
 
