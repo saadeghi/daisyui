@@ -104,7 +104,7 @@
   "Tailwind Plugin": "Plugin di Tailwind",
   "Use CDN": "Usa CDN",
   "Install daisyUI as a Tailwind CSS plugin": "Installa daisyUI come plugin di Tailwind CSS",
-  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "Devi aver installato <a href='https://nodejs.org/en/download/'>Node.js</a> e <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a>.",
+  "You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "Devi aver installato <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> e <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a>.",
   "How to install daisyUI as a Tailwind CSS plugin?": "Come installare daisyUI come plugin di Tailwind CSS?",
   "Install daisyUI": "Installa daisyUI",
   "Then add daisyUI to your <code>tailwind.config.js</code> files": "Poi aggiungi daisyUI ai tuoi file <code>tailwind.config.js</code>",

@@ -104,7 +104,7 @@
   "Tailwind Plugin": "Tailwind প্লাগইন",
   "Use CDN": "CDN ব্যাবহার করুন",
   "Install daisyUI as a Tailwind CSS plugin": "Tailwind CSS এর প্লাগইন হিসাবে daisyUI ইনস্টল করুন",
-  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "আপনার <a href='https://nodejs.org/en/download/'>Node.js</a> এবং <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> ইন্সটল করা থাকতে হবে.",
+  "You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "আপনার <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> এবং <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> ইন্সটল করা থাকতে হবে.",
   "How to install daisyUI as a Tailwind CSS plugin?": "কিভাবে Tailwind CSS এর প্লাগইন হিসাবে daisyUI ইনস্টল করবেন?",
   "Install daisyUI": "daisyUI ইন্সটল করুন",
   "Then add daisyUI to your <code>tailwind.config.js</code> files": "তারপর আপনার <code>tailwind.config.js</code> ফাইলে daisyUI যোগ করুন",

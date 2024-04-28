@@ -104,7 +104,7 @@
   "Tailwind Plugin": "Tailwind 外掛程式",
   "Use CDN": "使用 CDN",
   "Install daisyUI as a Tailwind CSS plugin": "將 daisyUI 安裝為 Tailwind CSS 的外掛程式",
-  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "您需先安裝 <a href='https://nodejs.org/en/download/'>Node.js</a> 和 <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a>。",
+  "You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "您需先安裝 <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> 和 <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a>。",
   "How to install daisyUI as a Tailwind CSS plugin?": "如何將 daisyUI 安裝為 Tailwind CSS 的外掛程式？",
   "Install daisyUI": "安裝 daisyUI",
   "Then add daisyUI to your <code>tailwind.config.js</code> files": "然後將 daisyUI 加入<code>tailwind.config.js</code>",

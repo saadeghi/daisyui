@@ -104,7 +104,7 @@
   "Tailwind Plugin": "Tailwind 플러그인으로 사용하기",
   "Use CDN": "CDN으로 사용하기",
   "Install daisyUI as a Tailwind CSS plugin": "Tailwind CSS 플러그인으로 daisyUI 설치하기",
-  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "<a href='https://nodejs.org/en/download/'>Node.js</a>와 <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a>를 설치하셔야 합니다.",
+  "You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "<a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a>와 <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a>를 설치하셔야 합니다.",
   "How to install daisyUI as a Tailwind CSS plugin?": "Tailwind CSS 플러그인으로 daisyUI를 어떻게 설치하나요?",
   "Install daisyUI": "daisyUI를 설치하세요.",
   "Then add daisyUI to your <code>tailwind.config.js</code> files": "그리고 <code>tailwind.config.js</code> 파일에 daisyUI를 추가하세요.",

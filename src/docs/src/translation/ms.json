@@ -104,7 +104,7 @@
   "Tailwind Plugin": "Pemalam Tailwind",
   "Use CDN": "Guna CDN",
   "Install daisyUI as a Tailwind CSS plugin": "Pasang pemalam sebagai pemalam 'Tailwind CSS'",
-  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "Anda perlu <a href='https://nodejs.org/en/download/'>Node.js</a> dan <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> dipasang.",
+  "You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "Anda perlu <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> dan <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> dipasang.",
   "How to install daisyUI as a Tailwind CSS plugin?": "Cara memasang daisyUI sebagai pemalam 'Tailwind CSS'?",
   "Install daisyUI": "Pasang daisyUI",
   "Then add daisyUI to your <code>tailwind.config.js</code> files": "Kemudian tambah daisyUI pada fail <code>tailwind.config.js</code> anda",

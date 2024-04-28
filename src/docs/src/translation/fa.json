@@ -104,7 +104,7 @@
   "Tailwind Plugin": "پلاگین Tailwind",
   "Use CDN": "از CDN استفاده کنید",
   "Install daisyUI as a Tailwind CSS plugin": "daisyUI را به عنوان یک افزونه Tailwind CSS نصب کنید",
-  "You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "شما به <a href='https://nodejs.org/en/download/'>Node.js</a> و <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> نیاز دارید.",
+  "You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed.": "شما به <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> و <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> نیاز دارید.",
   "How to install daisyUI as a Tailwind CSS plugin?": "چگونه daisyUI را به عنوان یک افزونه Tailwind CSS نصب کنیم؟",
   "Install daisyUI": "daisyUI را نصب کنید",
   "Then add daisyUI to your <code>tailwind.config.js</code> files": "سپس daisyUI را به فایل <code>tailwind.config.js</code> خود اضافه کنید",
