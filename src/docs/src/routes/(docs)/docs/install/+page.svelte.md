@@ -28,6 +28,14 @@ module.exports = {
   plugins: [require("daisyui")],
 }
 ```
+or 
+```js
+import daisyui from 'daisyui';
+export default {
+  //...
+  plugins: [daisyui],
+}
+```
 
 ## <Translate text="daisyUI example repositories"/>
 
