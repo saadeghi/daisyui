@@ -1811,7 +1811,21 @@
   </div>
 </div>
 
-{#await import("../../components/homepage/Install.svelte") then Module}
-  <Module.default />
-{/await}
+<div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
+  <div class="hero-content w-full text-center">
+    <div class="w-full max-w-md">
+      <h2 class="mb-8 mt-20 text-[clamp(2rem,8vw,5rem)] font-black md:text-6xl">
+        {$t("install-title")}
+      </h2>
+      <div class="mx-auto my-2 w-full max-w-md">
+        {#await import("../../components/homepage/Install.svelte") then Module}
+          <Module.default />
+        {/await}
+        <a href="/docs/install/" class="btn-primary btn btn-wide mb-20 mt-4 shadow-lg">
+          {$t("install-btn")}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 <Footer />

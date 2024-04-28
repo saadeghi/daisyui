@@ -7,35 +7,17 @@ published: true
 <script>
   import InstallTabs from "$components/InstallTabs.svelte"
   import Translate from "$components/Translate.svelte"
+  import Install from "$components/homepage/Install.svelte"
   export let data
 </script>
 
 <InstallTabs />
 
-<Translate text="You need <a href='https://nodejs.org/en/download/'>Node.js</a> and <a href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed." />
+<Translate text="You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed." />
 
-1. <Translate text="Install daisyUI" />:
-
-```
-npm i -D daisyui@latest
-```
-
-2. <Translate text="Then add daisyUI to your <code>tailwind.config.js</code> files" />:
-
-```js
-module.exports = {
-  //...
-  plugins: [require("daisyui")],
-}
-```
-or 
-```js
-import daisyui from 'daisyui';
-export default {
-  //...
-  plugins: [daisyui],
-}
-```
+<div class="not-prose">
+  <Install/>
+</div>
 
 ## <Translate text="daisyUI example repositories"/>
 
