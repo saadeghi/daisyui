@@ -1,37 +1,72 @@
+import { GH_API_KEY } from "$env/static/private"
 import depGraphCount from "dep-graph-count"
-import githubRepoInfo from "$lib/json/github-repo.json"
-import npmDownloadsInfo from "$lib/json/npm-downloads.json"
-import contributors1 from "$lib/json/github-contributors-1.json"
-import contributors2 from "$lib/json/github-contributors-2.json"
-import openCollectiveBackers from "$lib/json/opencollective-members.json"
 import { tweets } from "$lib/data/testimonials.js"
 import { stats } from "$lib/data/stats.js"
 
-let stargazers_count = 25000
-let npmInstalls = 8000000
+let stargazers_count = 30000
+let npmInstalls = 13000000
 let contributors = []
 let backers = []
 
 export async function load() {
   let githubDeps = await depGraphCount("saadeghi", "daisyui")
 
-  if (githubRepoInfo && githubRepoInfo.stargazers_count) {
-    stargazers_count = githubRepoInfo.stargazers_count
+  const npmDownloadsInfo = await fetch(
+    "https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui",
+    {}
+  )
+
+  if (npmDownloadsInfo.ok) {
+    let data = await npmDownloadsInfo.json()
+    npmInstalls = data.downloads
+  } else {
+    console.error("Warning: Could not fetch npm download counts. Using default value")
   }
 
-  if (npmDownloadsInfo && npmDownloadsInfo.downloads) {
-    npmInstalls = npmDownloadsInfo.downloads
+  const GHParams = {
+    headers: {
+      Authorization: `token ${GH_API_KEY}`,
+    },
+  }
+  const githubRepoInfo = await fetch("https://api.github.com/repos/saadeghi/daisyui", GHParams)
+  if (githubRepoInfo.ok) {
+    let data = await githubRepoInfo.json()
+    stargazers_count = data.stargazers_count
+  } else {
+    console.error("Warning: Could not fetch github stargazers count. Using default value")
   }
 
-  if (Array.isArray(contributors1) && Array.isArray(contributors2)) {
-    contributors = contributors1.concat(contributors2)
+  const contributors1 = await fetch(
+    "https://api.github.com/repos/saadeghi/daisyui/contributors?page=1&per_page=100",
+    GHParams
+  )
+  if (contributors1.ok) {
+    contributors = await contributors1.json()
+  } else {
+    console.error("Warning: Could not fetch github contributors.")
   }
 
-  if (Array.isArray(openCollectiveBackers)) {
-    backers = openCollectiveBackers.filter(
-      (obj, index) => openCollectiveBackers.findIndex((item) => item.name === obj.name) === index
+  const contributors2 = await fetch(
+    "https://api.github.com/repos/saadeghi/daisyui/contributors?page=2&per_page=100",
+    GHParams
+  )
+  if (contributors2.ok) {
+    contributors = contributors.concat(await contributors2.json())
+  } else {
+    console.error("Warning: Could not fetch github contributors.")
+  }
+
+  const openCollectiveBackers = await fetch("https://opencollective.com/daisyui/members/all.json")
+
+  if (openCollectiveBackers.ok) {
+    backers = await openCollectiveBackers.json()
+    backers = backers.filter(
+      (obj, index) => backers.findIndex((item) => item.name === obj.name) === index
     )
+  } else {
+    console.error("Warning: Could not fetch open collective backers.")
   }
+
   // filter unused data
   contributors = contributors.map(({ login, avatar_url }) => ({ login, avatar_url }))
   backers = backers.map(({ name, image }) => ({ name, image }))

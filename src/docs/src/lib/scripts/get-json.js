@@ -1,12 +1,12 @@
 import { exec } from "child_process"
 
 const commands = [
-  "node src/lib/scripts/download-file.js 'https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui' 'src/lib/json/npm-downloads.json'",
-  "node src/lib/scripts/download-file.js 'https://api.github.com/repos/saadeghi/daisyui' 'src/lib/json/github-repo.json'",
-  "node src/lib/scripts/download-file.js 'https://api.github.com/repos/saadeghi/daisyui/contributors?page=1&per_page=100' 'src/lib/json/github-contributors-1.json'",
-  "node src/lib/scripts/download-file.js 'https://api.github.com/repos/saadeghi/daisyui/contributors?page=2&per_page=100' 'src/lib/json/github-contributors-2.json'",
-  "node src/lib/scripts/download-file.js 'https://opencollective.com/daisyui.json' 'src/lib/json/opencollective-info.json'",
-  "node src/lib/scripts/download-file.js 'https://opencollective.com/daisyui/members/all.json' 'src/lib/json/opencollective-members.json'",
+  // "node src/lib/scripts/download-file.js 'https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui' 'src/lib/json/npm-downloads.json'",
+  // "node src/lib/scripts/download-file.js 'https://api.github.com/repos/saadeghi/daisyui' 'src/lib/json/github-repo.json'",
+  // "node src/lib/scripts/download-file.js 'https://api.github.com/repos/saadeghi/daisyui/contributors?page=1&per_page=100' 'src/lib/json/github-contributors-1.json'",
+  // "node src/lib/scripts/download-file.js 'https://api.github.com/repos/saadeghi/daisyui/contributors?page=2&per_page=100' 'src/lib/json/github-contributors-2.json'",
+  // "node src/lib/scripts/download-file.js 'https://opencollective.com/daisyui.json' 'src/lib/json/opencollective-info.json'",
+  // "node src/lib/scripts/download-file.js 'https://opencollective.com/daisyui/members/all.json' 'src/lib/json/opencollective-members.json'",
   "node src/lib/scripts/get-youtube-resources.js 'src/lib/json/youtube.json'",
 ]
 let number_of_files = 0

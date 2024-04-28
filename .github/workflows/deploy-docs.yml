@@ -29,6 +29,7 @@ jobs:
       runtime: ${{ inputs.runtime || 'bun'}}
       LEMONSQUEEZY_API_KEY: ${{ secrets.LEMONSQUEEZY_API_KEY }}
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      GH_API_KEY: ${{ secrets.GH_API_KEY }}
       daisyuiversion: ${{ inputs.daisyuiversion || 'latest' }}
     if: |
       github.event_name == 'workflow_dispatch' ||
