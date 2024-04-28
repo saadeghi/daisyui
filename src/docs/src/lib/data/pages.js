@@ -1,4 +1,11 @@
-export const pagesThatDontNeedSidebar = ["/", "/blog/", "/blog/*/", "/store/", "/resources/*/"]
+export const pagesThatDontNeedSidebar = [
+  "/",
+  "/components/",
+  "/blog/",
+  "/blog/*/",
+  "/store/",
+  "/resources/*/",
+]
 
 export const pages = [
   {

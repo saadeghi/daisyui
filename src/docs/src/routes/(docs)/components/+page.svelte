@@ -9,13 +9,13 @@
 
 <SEO title="Components" desc="Tailwind CSS component examples by daisyUI" />
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
-  <div class="flex flex-col gap-6 pt-10">
+  <div class="flex flex-col gap-6 ps-6 pt-10">
     <div class="prose max-w-4xl flex-grow">
       <h1><Translate text="All daisyUI components" /></h1>
       <p>{Object.keys(components).length} <Translate text="components" /></p>
     </div>
     <div
-      class="not-prose grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+      class="not-prose grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
       {#each components as { slug, title, desc }}
         <a
           class="card card-compact hover:bg-base-200 transition-all duration-200 hover:-translate-y-1"
