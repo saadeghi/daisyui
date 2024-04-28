@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Thu, 25 Apr 2024 11:43:37 GMT</lastBuildDate>
-    <pubDate>Thu, 25 Apr 2024 11:43:37 GMT</pubDate>
+    <lastBuildDate>Sun, 28 Apr 2024 13:32:41 GMT</lastBuildDate>
+    <pubDate>Sun, 28 Apr 2024 13:32:41 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
@@ -89,14 +89,14 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       
         <item>
           <title>
-            <![CDATA[ Agency landing page for React ]]>
+            <![CDATA[ Agency landing page ]]>
           </title>
           <description>
             <![CDATA[ <p>Landing page for agencies</p>
 
 <p>Features:</p>
 
-<ul><li><p>React.js landing page layout made with daisyUI 4</p></li><li><p>Using Vite 5, React 18, Framer Motion</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li></ul>
+<ul><li><p>Available for React and Svelte</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li></ul>
 
 <p>Including:</p>
 
