@@ -285,7 +285,7 @@
 <div
   class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-gradient-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
   <figure class="max-md:bg-primary/10 isolate shrink-0 md:w-2/3">
-    <img class="pointer-events-none" alt="daisyUI store" src="/images/store/saas-landingpage.png" />
+    <img class="pointer-events-none" alt="daisyUI store" src="/images/store/nexus.png" />
   </figure>
   <div
     class="bg-accent -left-1/5 pointer-events-none absolute bottom-[-50%] aspect-square w-3/4 -translate-x-1/2 rounded-full opacity-20 blur-3xl">
@@ -298,12 +298,20 @@
   </div>
   <div class="card-body relative isolate z-[3]">
     <h2
-      class="card-title text-base-content text-xl font-black contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl">
-      <span>New template: SaaS Landing page</span>
+      class="card-title text-base-content text-xl contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl">
+      <span>
+        <span class="font-black">NEXUS</span>
+        <br />
+        <span class="font-light">
+          Dashboard template
+          <br />
+          for React and Next.js
+        </span>
+      </span>
     </h2>
     <div class="grow">
       <h2
-        class="card-title text-xl font-light sm:w-[250%] sm:text-2xl md:text-3xl lg:text-xl xl:text-3xl">
+        class="card-title text-sm font-light sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl">
         <svg
           class="inline h-4 w-4 md:h-6 md:w-6"
           width="32"
