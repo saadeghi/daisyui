@@ -26,6 +26,7 @@
       <div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
+          aria-label="copy"
           on:click={() => copyText("npm i -D daisyui@latest")}>
           {#if isClipboardButtonPressed}
             <svg
@@ -62,6 +63,7 @@
       <div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
+          aria-label="copy"
           on:click={() => copyText("pnpm add -D daisyui@latest")}>
           {#if isClipboardButtonPressed}
             <svg
@@ -98,6 +100,7 @@
       <div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
+          aria-label="copy"
           on:click={() => copyText("yarn add -D daisyui@latest")}>
           {#if isClipboardButtonPressed}
             <svg
@@ -134,6 +137,7 @@
       <div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
+          aria-label="copy"
           on:click={() => copyText("bun add -D daisyui@latest")}>
           {#if isClipboardButtonPressed}
             <svg
