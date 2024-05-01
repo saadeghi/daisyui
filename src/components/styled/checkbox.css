@@ -8,6 +8,9 @@
   &:focus-visible {
     @apply outline-base-content outline outline-2 outline-offset-2;
   }
+  &:disabled {
+    @apply border-0;
+  }
   &:checked,
   &[aria-checked="true"] {
     @apply bg-no-repeat;
