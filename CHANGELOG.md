@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.10.4 (2024-05-02)
+
+
+### Bug Fixes
+
+* show the parent element of disabled `input` as disabled ([50d26b5](https://github.com/saadeghi/daisyui/commit/50d26b576416578b4e6e06e3be200cb811d8a270)), closes [#3004](https://github.com/saadeghi/daisyui/issues/3004)
+
 ## 4.10.3 (2024-05-01)
 
 ## 4.10.2 (2024-04-16)
