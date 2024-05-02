@@ -11,6 +11,7 @@
   }
 </script>
 
+<!-- Without timer -->
 {#if false}
   <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
@@ -31,20 +32,21 @@
     </a>
   </div>
 {/if}
-{#if false}
+<!-- With timer -->
+{#if true}
   <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
       href="/store/"
       class="alert hover:bg-base-300 hover:border-base-300 group flex max-w-xl justify-center rounded-full p-2 text-center text-xs transition-colors duration-300 ease-out">
       <p class="leading-relaxed [text-wrap:balance]">
-        🐲 <span class="text-base-content/70 group-hover:text-base-content">
+        <span class="text-base-content/70 group-hover:text-base-content">
           Use <code
             class="decoration-success font-mono tracking-wide underline decoration-wavy underline-offset-4">
-            LUNAR
+            DISCORD1000
           </code>
-          code to get 30% discount on daisyUI store
+          code to get 25% discount on daisyUI store
           <Countdown
-            from={new Date("2024-02-11T23:59:00.000000Z").toLocaleString("en-GB", dateFormat)}
+            from={new Date("2024-05-05T23:59:00.000000Z").toLocaleString("en-GB", dateFormat)}
             dateFormat="DD/MM/YYYY, HH:mm:ss"
             let:remaining>
             {#if remaining.done === false}
