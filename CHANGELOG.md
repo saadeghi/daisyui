@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.10.5 (2024-05-03)
+
+
+### Bug Fixes
+
+* add missing `outline-*` color utility classes to CDN file ([b3e4800](https://github.com/saadeghi/daisyui/commit/b3e48008db3af6002fb04ca81b84aa18bb55e53c)), closes [#2944](https://github.com/saadeghi/daisyui/issues/2944)
+
 ## 4.10.4 (2024-05-02)
 
 
