@@ -30,7 +30,7 @@ jobs:
           fi
 
       - name: Add release notes to GitHub
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: steps.package-version.outputs.is-stable == 'true'
         with:
           tag_name: v${{ steps.package-version.outputs.version }}
