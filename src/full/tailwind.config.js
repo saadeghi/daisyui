@@ -20,6 +20,7 @@ module.exports = {
     "borderRadius",
     "divideColor",
     "gradientColorStops",
+    "outlineColor",
     "placeholderColor",
     "preflight",
     "ringColor",
