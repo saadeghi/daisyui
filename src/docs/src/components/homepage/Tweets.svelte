@@ -18,7 +18,7 @@
                 class="w-12">
                 <img
                   loading="lazy"
-                  src={`/twitter-profile-pics/${tweet.username}-72.webp`}
+                  src={`https://img.daisyui.com/twitter-profile-pics/${tweet.username}-72.webp`}
                   alt={tweet.name}
                   width="48"
                   height="48"

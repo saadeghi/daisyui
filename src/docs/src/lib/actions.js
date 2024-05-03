@@ -244,7 +244,8 @@ export function linkProcess(node) {
   const originalContent = node.textContent ?? ""
 
   const stringsToReplace = {
-    '"/images': `"${root}/images`,
+    // '"/images': `"${root}/images`,
+    '"/images': `"https://img.daisyui.com/images`,
   }
   const re = new RegExp(Object.keys(stringsToReplace).join("|"), "gi")
 

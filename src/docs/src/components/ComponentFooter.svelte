@@ -227,7 +227,7 @@
       <img
         class="pointer-events-none"
         alt="daisyUI store"
-        src="/images/store/admin-dashboard.png" />
+        src="https://img.daisyui.com/images/store/admin-dashboard.png" />
     </a>
   </figure>
   <div
@@ -285,7 +285,10 @@
 <div
   class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-gradient-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
   <figure class="max-md:bg-primary/10 isolate shrink-0 md:w-2/3">
-    <img class="pointer-events-none" alt="daisyUI store" src="/images/store/nexus.png" />
+    <img
+      class="pointer-events-none"
+      alt="daisyUI store"
+      src="https://img.daisyui.com/images/store/nexus.png" />
   </figure>
   <div
     class="bg-accent -left-1/5 pointer-events-none absolute bottom-[-50%] aspect-square w-3/4 -translate-x-1/2 rounded-full opacity-20 blur-3xl">

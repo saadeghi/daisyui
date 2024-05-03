@@ -54,15 +54,15 @@ data="{[
 
 <Component title="stacked images">
 <div class="stack mb-4">
-  <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Tailwind CSS example 1" class="rounded w-28" />
-  <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Tailwind CSS example 2" class="rounded w-28" />
-  <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Tailwind CSS example 3" class="rounded w-28" />
+  <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Tailwind CSS example 1" class="rounded w-28" />
+  <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Tailwind CSS example 2" class="rounded w-28" />
+  <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Tailwind CSS example 3" class="rounded w-28" />
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$stack">
-  <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" class="rounded" />
-  <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" class="rounded" />
-  <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" class="rounded" />
+  <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" class="rounded" />
+  <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" class="rounded" />
+  <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" class="rounded" />
 </div>`
 }</pre>
 </Component>

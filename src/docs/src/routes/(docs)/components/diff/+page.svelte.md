@@ -35,20 +35,20 @@ data="{[
 <Component title="Diff">
 <div class="diff rounded-btn aspect-[16/9]">
   <div class="diff-item-1">
-    <img alt="daisy" src="/images/stock/photo-1560717789-0ac7c58ac90a.jpg" />
+    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.jpg" />
   </div>
   <div class="diff-item-2">
-    <img alt="daisy" src="/images/stock/photo-1560717789-0ac7c58ac90a-blur.jpg" />
+    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.jpg" />
   </div>
   <div class="diff-resizer"></div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$diff aspect-[16/9]">
   <div class="$$diff-item-1">
-    <img alt="daisy" src="/images/stock/photo-1560717789-0ac7c58ac90a.jpg" />
+    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.jpg" />
   </div>
   <div class="$$diff-item-2">
-    <img alt="daisy" src="/images/stock/photo-1560717789-0ac7c58ac90a-bw.jpg" />
+    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-bw.jpg" />
   </div>
   <div class="$$diff-resizer"></div>
 </div>`

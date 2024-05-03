@@ -23,7 +23,7 @@
       <a
         rel="noopener, noreferrer"
         target="_blank"
-        href="/images/daisyui-logo/daisyui-logomark.svg">
+        href="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg">
         SVG logo
       </a>
     </li>
@@ -31,7 +31,7 @@
       <a
         rel="noopener, noreferrer"
         target="_blank"
-        href="/images/daisyui-logo/daisyui-logotype.svg">
+        href="https://img.daisyui.com/images/daisyui-logo/daisyui-logotype.svg">
         SVG logotype
       </a>
     </li>
@@ -40,7 +40,7 @@
       <a
         rel="noopener, noreferrer"
         target="_blank"
-        href="/images/daisyui-logo/daisyui-logomark-1024-1024.png">
+        href="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark-1024-1024.png">
         PNG logo
       </a>
     </li>
@@ -48,7 +48,7 @@
       <a
         rel="noopener, noreferrer"
         target="_blank"
-        href="/images/daisyui-logo/daisyui-logotype-3600-1024.png">
+        href="https://img.daisyui.com/images/daisyui-logo/daisyui-logotype-3600-1024.png">
         PNG logotype
       </a>
     </li>

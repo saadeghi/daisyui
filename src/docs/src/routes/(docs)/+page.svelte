@@ -222,8 +222,8 @@
                 width="72"
                 height="72"
                 alt="yawing face emoji"
-                src="/images/emoji/yawning-face@80.webp"
-                srcset={`/images/emoji/yawning-face.webp 2x`}
+                src="https://img.daisyui.com/images/emoji/yawning-face@80.webp"
+                srcset={`https://img.daisyui.com/images/emoji/yawning-face.webp 2x`}
                 class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
             </h2>
 
@@ -258,8 +258,8 @@
                     width="72"
                     height="72"
                     alt="sunglasses emoji"
-                    src="/images/emoji/smiling-face-with-sunglasses@80.webp"
-                    srcset={`/images/emoji/smiling-face-with-sunglasses.webp 2x`}
+                    src="https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses@80.webp"
+                    srcset={`https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses.webp 2x`}
                     class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom" />
                 </h2>
                 <div class="h-6" />
@@ -478,7 +478,7 @@
                                   loading="lazy"
                                   width="40"
                                   height="40"
-                                  src="/tailwind-css-component-profile-1@94w.jpg"
+                                  src="https://img.daisyui.com/tailwind-css-component-profile-1@94w.jpg"
                                   alt="tailwind css avatar component" />
                               </div>
                             </div>
@@ -1369,7 +1369,7 @@
               [1.05, 1]
             )}`}
             alt={`daisyUI ${logo}`}
-            src={`/logos/${logo}.svg`} />
+            src={`https://img.daisyui.com/logos/${logo}.svg`} />
         {/each}
       </div>
     </div>
@@ -1759,7 +1759,7 @@
             width="96"
             height="96"
             class="aspect-square h-10 w-10"
-            src={`/logos/${logo}.svg`}
+            src={`https://img.daisyui.com/logos/${logo}.svg`}
             alt={`daisyUI ${logo}`} />
         {/each}
       </div>

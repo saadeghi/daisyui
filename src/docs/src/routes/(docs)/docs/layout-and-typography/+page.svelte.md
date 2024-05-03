@@ -110,7 +110,7 @@ Something a wise person once told me about typography is:
 
 It's probably important that images look okay here by default as well:
 
-![Daisy flowers](/images/stock/photo-1560717789-0ac7c58ac90a.jpg)
+![Daisy flowers](https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.jpg)
 
 Now I'm going to show you an example of an unordered list to make sure that looks good, too:
 

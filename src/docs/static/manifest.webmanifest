@@ -1,12 +1,12 @@
 {
   "icons": [
     {
-      "src": "/images/daisyui-logo/favicon-192.png",
+      "src": "https://img.daisyui.com/images/daisyui-logo/favicon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/daisyui-logo/favicon-512.png",
+      "src": "https://img.daisyui.com/images/daisyui-logo/favicon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

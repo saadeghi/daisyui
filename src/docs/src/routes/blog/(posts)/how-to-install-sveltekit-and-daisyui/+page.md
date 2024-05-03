@@ -4,7 +4,7 @@ desc: SvelteKit is a meta framework for building web applications. It is based o
 published: true
 date: 2023-11-25
 author: Pouya Saadeghi
-thumbnail: /images/blog/install-sveltekit-daisyui.jpg
+thumbnail: https://img.daisyui.com/images/blog/install-sveltekit-daisyui.jpg
 tags:
   - Svelte
   - daisyUI

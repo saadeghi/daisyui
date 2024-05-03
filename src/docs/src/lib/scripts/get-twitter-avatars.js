@@ -41,7 +41,7 @@ const processImage = (input, size = 72) => {
 
 tweets.forEach((tweet, index) => {
   const url = `https://unavatar.io/twitter/${tweet.username}?fallback=false`
-  const filename = `static/twitter-profile-pics/${tweet.username}.jpg`
+  const filename = `../../../daisyui-images/twitter-profile-pics/${tweet.username}.jpg`
   setTimeout(() => {
     downloadImage(url, filename)
     console.log(`Updated: ${filename}`)

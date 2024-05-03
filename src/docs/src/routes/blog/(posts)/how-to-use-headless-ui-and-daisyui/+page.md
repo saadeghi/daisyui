@@ -4,7 +4,7 @@ desc: What is Headless UI and why it is suggested to use it with daisyUI?
 published: true
 date: 2023-9-28
 author: Pouya Saadeghi
-thumbnail: /images/blog/headless-ui.jpg
+thumbnail: https://img.daisyui.com/images/blog/headless-ui.jpg
 tags:
   - Headless UI
   - Component Library

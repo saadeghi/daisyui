@@ -4,7 +4,7 @@ desc: Is daisyUI against the Tailwind CSS philosophy? Are we going full circle? 
 published: true
 date: 2023-9-10
 author: Pouya Saadeghi
-thumbnail: /images/blog/daisyui-stars.jpg
+thumbnail: https://img.daisyui.com/images/blog/daisyui-stars.jpg
 tags:
   - Tailwind CSS
   - Component Library

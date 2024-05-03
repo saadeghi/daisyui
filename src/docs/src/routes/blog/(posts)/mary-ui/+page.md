@@ -4,7 +4,7 @@ desc: Mary UI is a collection of Laravel blade components made for Livewire 3 an
 published: true
 date: 2023-9-13
 author: Pouya Saadeghi
-thumbnail: /images/blog/mary-ui.jpg
+thumbnail: https://img.daisyui.com/images/blog/mary-ui.jpg
 tags:
   - Laravel
 ---
@@ -22,7 +22,7 @@ Mary UI does not ship any custom CSS and relies on daisyUI and Tailwind for out-
 Mary UI allows you to use daisyUI components in your Laravel blade files using Livewire syntax.
 
 To make a form like this:
-![Mary UI form](/images/blog/mary-ui-form.jpg)
+![Mary UI form](https://img.daisyui.com/images/blog/mary-ui-form.jpg)
 All you need would be these few lines:
 
 ```html

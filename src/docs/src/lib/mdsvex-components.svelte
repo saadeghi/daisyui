@@ -13,7 +13,7 @@
 <SEO
   title={`Tailwind ${title} ${$t("Component")}`}
   desc={`Tailwind ${title} examples: ${desc} component`}
-  img={`/images${$page.url.pathname.replace(/\/$/, "")}.jpg`} />
+  img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.jpg`} />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div class="prose prose-sm md:prose-base w-full max-w-4xl flex-grow pt-10">

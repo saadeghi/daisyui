@@ -13,8 +13,8 @@
         width="80"
         height="80"
         alt="heart emoji"
-        src="/images/emoji/heart-on-fire@80.webp"
-        srcset={`/images/emoji/heart-on-fire.webp 2x`}
+        src="https://img.daisyui.com/images/emoji/heart-on-fire@80.webp"
+        srcset={`https://img.daisyui.com/images/emoji/heart-on-fire.webp 2x`}
         class="pointer-events-none inline-block h-20 w-20 align-bottom" />
     </div>
     <div class="h-20" />

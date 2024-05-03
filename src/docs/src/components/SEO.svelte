@@ -6,7 +6,7 @@
   let siteData = {
     title: "Tailwind CSS Components ( version 4 update is here )",
     desc: "Free Tailwind Components",
-    card: "/images/default.jpg",
+    card: "https://img.daisyui.com/images/default.jpg",
   }
   export let formatTitle = true
   export let title = ""

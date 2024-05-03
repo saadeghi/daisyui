@@ -4,7 +4,7 @@ desc: "Finally we have a Discord server for daisyUI!"
 published: true
 date: 2024-02-07
 author: Pouya Saadeghi
-thumbnail: /images/blog/daisyui-discord.jpg
+thumbnail: https://img.daisyui.com/images/blog/daisyui-discord.jpg
 tags:
   - daisyUI
 ---

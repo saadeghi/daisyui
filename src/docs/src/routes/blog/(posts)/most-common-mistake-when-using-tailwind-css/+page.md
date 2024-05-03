@@ -4,7 +4,7 @@ desc: While working on daisyUI, I see a lot of people making this mistake when u
 published: true
 date: 2023-9-14
 author: Pouya Saadeghi
-thumbnail: /images/blog/tailwind-mistake.jpg
+thumbnail: https://img.daisyui.com/images/blog/tailwind-mistake.jpg
 tags:
   - Tailwind CSS
 ---

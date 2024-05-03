@@ -29,13 +29,13 @@ data="{[
 <Component title="Avatar">
 <div class="avatar">
   <div class="w-24 rounded bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar">
   <div class="w-24 rounded">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>
@@ -44,43 +44,43 @@ data="{[
 <Component title="Avatar in custom sizes">
 <div class="avatar">
   <div class="w-24 rounded bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-16 rounded bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-12 rounded bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-8 rounded bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar">
   <div class="w-32 rounded">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-20 rounded">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-16 rounded">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-8 rounded">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>`
 }</pre>
@@ -89,23 +89,23 @@ data="{[
 <Component title="Avatar rounded">
 <div class="avatar">
   <div class="w-24 rounded-xl bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 rounded-full bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar">
   <div class="w-24 rounded-xl">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-24 rounded-full">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>
@@ -114,33 +114,33 @@ data="{[
 <Component title="Avatar with mask">
 <div class="avatar">
   <div class="w-24 mask mask-squircle bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 mask mask-hexagon bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 mask mask-triangle bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar">
   <div class="w-24 $$mask $$mask-squircle">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-24 $$mask $$mask-hexagon">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-24 $$mask $$mask-triangle">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>
@@ -150,22 +150,22 @@ data="{[
 <div class="avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
 </div>
@@ -173,22 +173,22 @@ data="{[
 `<div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
 </div>`
@@ -199,17 +199,17 @@ data="{[
 <div class="avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="avatar">
     <div class="w-12  bg-base-300">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12  bg-base-300">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12  bg-base-300">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar placeholder">
@@ -222,17 +222,17 @@ data="{[
 `<div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
     </div>
   </div>
   <div class="$$avatar $$placeholder">
@@ -247,13 +247,13 @@ data="{[
 <Component title="Avatar with ring">
 <div class="avatar">
   <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar">
   <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>
@@ -262,23 +262,23 @@ data="{[
 <Component title="Avatar with presence indicator">
 <div class="avatar online">
   <div class="w-24 rounded-full bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar offline">
   <div class="w-24 rounded-full bg-base-300">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$avatar $$online">
   <div class="w-24 rounded-full">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>
 <div class="$$avatar $$offline">
   <div class="w-24 rounded-full">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
   </div>
 </div>`
 }</pre>

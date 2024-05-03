@@ -304,7 +304,7 @@
 <SEO
   title="daisyUI Theme Generator"
   desc="Tailwind CSS Theme Generator - Tailwind CSS daisyUI custom theme and custom colors"
-  img={`/images/theme-generator.jpg`} />
+  img={`https://img.daisyui.com/images/theme-generator.jpg`} />
 
 <div class="prose mb-10 pt-10">
   <h1><Translate text="daisyUI Theme Generator" /></h1>

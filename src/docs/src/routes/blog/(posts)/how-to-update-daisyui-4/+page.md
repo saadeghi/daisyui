@@ -4,7 +4,7 @@ desc: This upgrade guide helps you easily update daisyUI to version 4 without br
 published: true
 date: 2023-11-23
 author: Pouya Saadeghi
-thumbnail: /images/blog/daisyui-4-update-guide.jpg
+thumbnail: https://img.daisyui.com/images/blog/daisyui-4-update-guide.jpg
 tags:
   - daisyUI
 ---

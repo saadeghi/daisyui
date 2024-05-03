@@ -32,7 +32,7 @@ data="{[
 
 <Component title="Card">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -43,7 +43,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -57,7 +57,7 @@ data="{[
 
 <Component title="Compact card (less padding for `card-body`)">
 <div class="card w-96 bg-base-100 card-compact shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -68,7 +68,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card $$card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -82,7 +82,7 @@ data="{[
 
 <Component title="Card with badge">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">
       Shoes!
@@ -97,7 +97,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">
       Shoes!
@@ -119,7 +119,7 @@ data="{[
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
   </div>
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
@@ -127,7 +127,7 @@ data="{[
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
   </div>
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
 </div>`
 }</pre>
 </Component>
@@ -135,7 +135,7 @@ data="{[
 <Component title="Card with centered content and paddings">
 <div class="card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">Shoes!</h2>
@@ -148,7 +148,7 @@ data="{[
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="$$card-body items-center text-center">
     <h2 class="$$card-title">Shoes!</h2>
@@ -163,7 +163,7 @@ data="{[
 
 <Component title="Card with image overlay">
 <div class="card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -174,7 +174,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -282,9 +282,9 @@ data="{[
 }</pre>
 </Component>
 
-<Component title="Card glass" bg="/images/stock/photo-1481026469463-66327c86e544.jpg">
+<Component title="Card glass" bg="https://img.daisyui.com/images/stock/photo-1481026469463-66327c86e544.jpg">
 <div class="card w-96 glass">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
   <div class="card-body">
     <h2 class="card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -295,7 +295,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card w-96 glass">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -309,7 +309,7 @@ data="{[
 
 <Component title="Card with image on side">
 <div class="card card-side bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
   <div class="card-body">
     <h2 class="card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -320,7 +320,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card $$card-side bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -334,7 +334,7 @@ data="{[
 
 <Component title="Responsive card (vertical on small screen, horizontal on large screen)">
 <div class="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure>
   <div class="card-body">
     <h2 class="card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
@@ -345,7 +345,7 @@ data="{[
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
 `<div class="$$card lg:$$card-side bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure>
   <div class="$$card-body">
     <h2 class="$$card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>

@@ -4,7 +4,7 @@ desc: In search of the most efficient way to style a website there's a lot to ex
 published: true
 date: 2023-10-4
 author: Pouya Saadeghi
-thumbnail: /images/blog/my-journey-to-build-daisyui.jpg
+thumbnail: https://img.daisyui.com/images/blog/my-journey-to-build-daisyui.jpg
 tags:
   - daisyUI
   - Component Library

@@ -209,7 +209,7 @@
               loading="lazy"
               width="54"
               height="54"
-              src="/pouya-saadeghi.jpg"
+              src="https://img.daisyui.com/pouya-saadeghi.jpg"
               alt="Pouya Saadeghi"
               class="mask mask-squircle" />
           </div>

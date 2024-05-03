@@ -4,7 +4,7 @@ desc: Learn how to use CSS logical properties to make a bidirectional website us
 published: true
 date: 2024-03-01
 author: Pouya Saadeghi
-thumbnail: /images/blog/bidirectional.jpg
+thumbnail: https://img.daisyui.com/images/blog/bidirectional.jpg
 tags:
   - daisyUI
 ---

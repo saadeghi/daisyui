@@ -288,7 +288,10 @@
               <div
                 class="lg:border-base-content/10 tooltip grid place-content-center rounded-full border-dashed lg:border lg:p-2 xl:p-3"
                 data-tip={data.tech[tech]}>
-                <img class="aspect-square w-5 xl:w-6" src={`/logos/${tech}.svg`} alt={tech} />
+                <img
+                  class="aspect-square w-5 xl:w-6"
+                  src={`https://img.daisyui.com/logos/${tech}.svg`}
+                  alt={tech} />
               </div>
             {/each}
           </div>

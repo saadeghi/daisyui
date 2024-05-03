@@ -4,7 +4,7 @@ desc: It can be annoying to install, setup, config and import all the dependenci
 published: true
 date: 2023-10-6
 author: Pouya Saadeghi
-thumbnail: /images/blog/npm-init-daisyui.jpg
+thumbnail: https://img.daisyui.com/images/blog/npm-init-daisyui.jpg
 tags:
   - daisyUI
   - Tailwind CSS

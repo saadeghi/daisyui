@@ -7,7 +7,7 @@
 <SEO
   title="daisyUI Blog"
   desc="daisyUI blog - Updates, ideas and resources"
-  img="/images/blog.jpg" />
+  img="https://img.daisyui.com/images/blog.jpg" />
 {#if posts.length === 0}
   <div
     class="border-base-content/10 rounded-box flex h-96 w-full grow flex-col items-center justify-center border">

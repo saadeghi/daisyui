@@ -73,7 +73,7 @@ data="{[
     <div class="stat-figure text-secondary">
       <div class="avatar online">
         <div class="w-16 rounded-full">
-          <img alt="Tailwind CSS stat example component" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img alt="Tailwind CSS stat example component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </div>
     </div>
@@ -107,7 +107,7 @@ data="{[
     <div class="$$stat-figure text-secondary">
       <div class="$$avatar $$online">
         <div class="w-16 rounded-full">
-          <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </div>
     </div>

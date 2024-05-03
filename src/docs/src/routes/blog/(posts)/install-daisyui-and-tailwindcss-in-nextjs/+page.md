@@ -4,7 +4,7 @@ desc: In this article, we will learn how to use daisyUI component library in Nex
 published: true
 date: 2023-9-22
 author: Pouya Saadeghi
-thumbnail: /images/blog/daisyui-nextjs-component-library.jpg
+thumbnail: https://img.daisyui.com/images/blog/daisyui-nextjs-component-library.jpg
 tags:
   - Next.js
   - React
@@ -27,7 +27,7 @@ npx create-next-app@latest
 2. Answer the questions to complete the project creation process.  
    Make sure to enable `Tailwind CSS` when asked about it:
 
-![Install Next.js](/images/blog/install-nextjs.jpg)
+![Install Next.js](https://img.daisyui.com/images/blog/install-nextjs.jpg)
 
 Go to the project directory. If you named it `my-app`:
 

@@ -4,7 +4,7 @@ desc: Do you want to add new color names to daisyUI color palette? Here is how y
 published: true
 date: 2023-9-18
 author: Pouya Saadeghi
-thumbnail: /images/blog/how-to-add-new-colors-to-daisyui.jpg
+thumbnail: https://img.daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.jpg
 tags:
   - Colors
 ---
@@ -24,7 +24,7 @@ daisyUI semantic color names (`base`, `primary`, etc) are using CSS variables fo
 You can also have multiple themes at the same time without adding a single class name. Light mode, dark mode, or any other theme you want.
 
 These are the daisyUI color names:
-![Mary UI form](/images/blog/daisyui-colors.jpg)
+![Mary UI form](https://img.daisyui.com/images/blog/daisyui-colors.jpg)
 Read more about [daisyUI color system](https://daisyui.com/docs/colors) and [daisyUI themes](https://daisyui.com/docs/themes/)
 
 ## How using a color palette can help
