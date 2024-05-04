@@ -163,7 +163,7 @@ data="{[
 </Component>
 
 <Component title="Hero with overlay image">
-<div class="hero min-h-[30rem] rounded" style="background-image: url(/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+<div class="hero min-h-[30rem] rounded" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
   <div class="hero-overlay rounded bg-opacity-60"></div>
   <div class="text-center hero-content text-neutral-content">
     <div class="max-w-md">
@@ -174,7 +174,7 @@ data="{[
   </div>
 </div>
 <pre slot="html" use:replace={{ to: $prefix }}>{
-`<div class="$$hero min-h-screen" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+`<div class="$$hero min-h-screen" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
   <div class="$$hero-overlay bg-opacity-60"></div>
   <div class="$$hero-content text-center text-neutral-content">
     <div class="max-w-md">
