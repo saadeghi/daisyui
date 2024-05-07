@@ -1,8 +1,10 @@
 .btn {
   @apply gap-2 font-semibold no-underline duration-200 ease-out;
   border-width: var(--border-btn, 1px);
-  animation: button-pop var(--animation-btn, 0.25s) ease-out;
   transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  }
   &:active:hover,
   &:active:focus {
     animation: button-pop 0s ease-out;
