@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.11.0 (2024-05-07)
+
+
+### Features
+
+* add `tab-active` style for tabs with `aria-selected="true"` attribute ([213ee58](https://github.com/saadeghi/daisyui/commit/213ee58c03aa871f37c3068c20ee1e4b1292740f))
+
 ## 4.10.5 (2024-05-03)
 
 
