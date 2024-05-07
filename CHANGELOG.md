@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.11.1 (2024-05-07)
+
+
+### Bug Fixes
+
+* disable initial button animation for `prefers-reduced-motion` ([57d470e](https://github.com/saadeghi/daisyui/commit/57d470e3353a5669eb71a8a861e065f7637c01c5))
+
 ## 4.11.0 (2024-05-07)
 
 
