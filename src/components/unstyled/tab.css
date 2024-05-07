@@ -2,8 +2,8 @@
   @apply grid items-end;
 }
 .tabs-lifted {
-  &:has(.tab-content[class^="rounded-"]) .tab:first-child:not(.tab-active),
-  &:has(.tab-content[class*=" rounded-"]) .tab:first-child:not(.tab-active) {
+  &:has(.tab-content[class^="rounded-"]) .tab:first-child:not(:is(.tab-active, [aria-selected="true"])),
+  &:has(.tab-content[class*=" rounded-"]) .tab:first-child:not(:is(.tab-active, [aria-selected="true"])) {
     @apply border-b-transparent;
   }
 }
@@ -26,11 +26,11 @@
   @apply col-start-1 col-end-[span_9999] row-start-2 -mt-[--tab-border] hidden border-transparent;
   border-width: var(--tab-border, 0);
   :checked + &:nth-child(2),
-  .tab-active + &:nth-child(2) {
+  :is(.tab-active, [aria-selected="true"]) + &:nth-child(2) {
     @apply rounded-ss-none;
   }
 }
 input.tab:checked + .tab-content,
-.tab-active + .tab-content {
+:is(.tab-active, [aria-selected="true"]) + .tab-content {
   @apply block;
 }
