@@ -11,7 +11,9 @@
     %sveltekit.head%
     <script src="https://cdn.amplitude.com/libs/analytics-browser-2.7.1-min.js.gz"></script>
     <script>
-      window.amplitude.init("5cba1f8b9e0dd9bc9c5fe0a15be1f0d7")
+      window.amplitude.init("5cba1f8b9e0dd9bc9c5fe0a15be1f0d7", {
+        defaultTracking: true,
+      })
     </script>
   </head>
   <body>
