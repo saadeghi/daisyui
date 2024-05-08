@@ -10,11 +10,8 @@
     </script>
     %sveltekit.head%
     <script src="https://cdn.amplitude.com/libs/analytics-browser-2.7.1-min.js.gz"></script>
-    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.2.0-min.js.gz"></script>
-    <script src="https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz"></script>
     <script>
       window.amplitude.init("5cba1f8b9e0dd9bc9c5fe0a15be1f0d7")
-      window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 0 }))
     </script>
   </head>
   <body>
