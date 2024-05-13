@@ -77,13 +77,6 @@ export let tweets = [
     bio: "Software developer",
   },
   {
-    id: "1653415729276788737",
-    content: "I use daisyUI.",
-    name: "Ese Monday",
-    username: "EseMonday1",
-    bio: "React.js Developer",
-  },
-  {
     id: "1645460935044112385",
     content:
       "I recommend you to use DaisyUi on top of Tailwind they work together and gives more possibilities and ease.",
@@ -96,7 +89,7 @@ export let tweets = [
     content: "If you try daisyUI, there is no turning back... 😏",
     name: "Marc Lou",
     username: "marc_louvion",
-    bio: "HabitsGarden, Landing-AI, IndiePa.ge",
+    bio: "Solopreneur",
   },
   {
     id: "1500904082466295810",
@@ -136,10 +129,11 @@ export let tweets = [
     bio: "DevOps Engineer",
   },
   {
-    id: "1707143402494873936",
-    content: "I would have never touched tailwindcss if it wasn't for DaisyUI 🤗",
-    name: "lang",
-    username: "mgilangjanuar",
+    id: "1709060061790945349",
+    content:
+      "I was using bootstrap first than switched to tailwind but there's so many classes too much code, than i found daisyUI. if anyone coming from bootstrapcss background you will love daisyui for sure. 🙌",
+    name: "Jagdish kashyap",
+    username: "Jagdish1O1",
     bio: "Software developer",
   },
   {
@@ -163,13 +157,13 @@ export let tweets = [
     username: "thomas_mol",
     bio: "Maker",
   },
+
   {
-    id: "1710502398459093222",
-    content:
-      "If you want to create a quick MVP for your next project, I recommend DaisyUI. It offers a simple and elegant design.✨",
-    name: "Jairon Landa",
-    username: "jaironlanda",
-    bio: "Software developer",
+    id: "1744283320207196546",
+    content: "I used DaisyUI, super happy with it!",
+    name: "Nick S.",
+    username: "Nsmet93",
+    bio: "SaaS builder",
   },
   {
     id: "1708265819442905443",
@@ -179,11 +173,10 @@ export let tweets = [
     bio: "Founder of moonbit.ai",
   },
   {
-    id: "1709060061790945349",
-    content:
-      "I was using bootstrap first than switched to tailwind but there's so many classes too much code, than i found daisyUI. if anyone coming from bootstrapcss background you will love daisyui for sure. 🙌",
-    name: "Jagdish kashyap",
-    username: "Jagdish1O1",
+    id: "1707143402494873936",
+    content: "I would have never touched tailwindcss if it wasn't for DaisyUI 🤗",
+    name: "lang",
+    username: "mgilangjanuar",
     bio: "Software developer",
   },
   {
@@ -202,11 +195,12 @@ export let tweets = [
     bio: "Software developer",
   },
   {
-    id: "1744283320207196546",
-    content: "I used DaisyUI, super happy with it!",
-    name: "Nick S.",
-    username: "Nsmet93",
-    bio: "SaaS builder",
+    id: "1710502398459093222",
+    content:
+      "If you want to create a quick MVP for your next project, I recommend DaisyUI. It offers a simple and elegant design.✨",
+    name: "Jairon Landa",
+    username: "jaironlanda",
+    bio: "Software developer",
   },
   {
     id: "1748264256527888407",
@@ -223,5 +217,124 @@ export let tweets = [
     name: "Nihad",
     username: "n1hkrc",
     bio: "Frontend Software Engineer",
+  },
+  {
+    id: "1782792786699293175",
+    content: "I'm a big fan of DaisyUI",
+    name: "Dan Schoonmaker",
+    username: "DanSchoonmaker",
+    bio: "Software engineer",
+  },
+  {
+    id: "1783878393055805826",
+    content: "I use daisyui for every site now!",
+    name: "TikitaTech",
+    username: "TikitaTech",
+    bio: "Indie hacker",
+  },
+  {
+    id: "1783929031412363684",
+    content:
+      "daisyUI is the missing part from Tailwind CSS which is the perfect choice for devs who need easy UI design",
+    name: "Mahdi M",
+    username: "mahdix",
+    bio: "Software developer",
+  },
+  {
+    id: "1783960771673637343",
+    content: "daisyUI is a fantastic and a logical extension of CSS.",
+    name: "",
+    username: "real_JohnHurley",
+    bio: "John Hurley",
+  },
+  {
+    id: "1787693390756221027",
+    content: "daisyUI saved me months of component design.",
+    name: "Erick Rodriguez",
+    username: "ErickRodrCodes",
+    bio: "Software Engineer",
+  },
+  {
+    id: "1788477550269734950",
+    content:
+      "Adding daisyUI to the front and adding new features to the products really affect all of our metrics.",
+    name: "Manuel Gracia",
+    username: "HiImg2html",
+    bio: "Developer",
+  },
+  {
+    id: "1789414774087823499",
+    content: "DaisyUI is awesome! I strongly endorse it.",
+    name: "Mike Pengelly",
+    username: "mikepengellyCA",
+    bio: "Developer",
+  },
+  {
+    id: "1789492854123082124",
+    content: "I used DaisyUI this week with Remix and am delighted by it so far.",
+    name: "Matt Ferrante",
+    username: "ferrants",
+    bio: "Developer",
+  },
+  {
+    id: "1780311682088095782",
+    content:
+      "I love daisyUI, It's by far my favorite CSS tool and what finally got me into Tailwind. I'm shipping great looking UIs thanks to daisyUI.",
+    name: "Alejandro Barrera Aponte",
+    username: "abarreraaponte",
+    bio: "",
+  },
+  {
+    id: "1772228609706434811",
+    content:
+      "daisyUI is good, makes code much cleaner for often used sets of classes without massive amount's of extra css bloat.",
+    name: "Aaron Moy",
+    username: "MrAaronMoy",
+    bio: "Founder",
+  },
+  {
+    id: "1763203857184657800",
+    content: "Thanks daisyUI for making CSS themes so easy",
+    name: "Jaime",
+    username: "JaimeIniestaDev",
+    bio: "Backend engineer",
+  },
+  {
+    id: "1770497488258023654",
+    content: "I love daisyUI. I can offer a theme feature in my product no time!",
+    name: "Florian MG",
+    username: "florianmg_",
+    bio: "Full Stack developer",
+  },
+  {
+    id: "1771033378877501762",
+    content: "Damn, daisyUI is NICE!",
+    name: "Dorian Develops",
+    username: "DorianDevelops",
+    bio: "Indie hacker",
+  },
+  {
+    id: "1759385224360890671",
+    content:
+      "daisyUI is a great project! Grabbed the file tree component, it works great and doesn't even use JS - it's just using summary and details elements, very neat!",
+    name: "Lachlan Miller",
+    username: "Lachlan19900",
+    bio: "Vue.js team",
+  },
+  {
+    id: "1765319705441513840",
+    content:
+      "I cannot thank you enough for daisyUI. It has completely taken over my UIs. It is a breeze to get consistent, great looking user interfaces and quickly!",
+    name: "jogi",
+    username: "jogicodes",
+    bio: "Developer",
+  },
+  {
+    id: "1764616529184965114",
+    content:
+      "Just revamped my personal website using DaisyUI and I'm thrilled with the simplicity and cleanliness it brings!",
+    name: "Christian",
+    username: "achris_15",
+    bio: "Ruby on Rails Developer",
   },
 ]
