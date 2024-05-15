@@ -55,11 +55,6 @@ export const articles = [
     link: "https://blog.openreplay.com/building-react-components-with-daisyui/",
   },
   {
-    title: "How to Install DaisyUI in Tailwind CSS",
-    site: "Larainfo",
-    link: "https://larainfo.com/blogs/how-to-install-daisyui-in-tailwind-css",
-  },
-  {
     title: "DaisyUI - Make Tailwind components with ease!",
     site: "James Perkins",
     link: "https://www.jamesperkins.dev/post/daisyui-make-tailwind-components-with-ease/",
