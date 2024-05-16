@@ -13,6 +13,7 @@
   export let data
 
   onNavigate((navigation) => {
+    track("G-ER9PXT2JR4")
     if (!document.startViewTransition) return
 
     return new Promise((resolve) => {
@@ -24,8 +25,6 @@
   })
 
   onMount(() => {
-    track("G-ER9PXT2JR4")
-
     let lang = new URL(document.location).searchParams.get("lang")
     setLang(lang, false)
     if (localStorage.getItem("lang")) {
