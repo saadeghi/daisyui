@@ -7,6 +7,8 @@
   import { onMount } from "svelte"
   import { setLang } from "$lib/i18n"
   import { onNavigate } from "$app/navigation"
+  import minimalAnalytics from "@minimal-analytics/ga4"
+  const { track } = minimalAnalytics
 
   export let data
 
@@ -22,6 +24,8 @@
   })
 
   onMount(() => {
+    track("G-ER9PXT2JR4")
+
     let lang = new URL(document.location).searchParams.get("lang")
     setLang(lang, false)
     if (localStorage.getItem("lang")) {
