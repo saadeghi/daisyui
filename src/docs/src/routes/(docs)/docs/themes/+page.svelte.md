@@ -270,3 +270,23 @@ module.exports = {
   },
 }
 ```
+
+## <Translate text="How to apply Tailwind's 'dark:' selector for specific themes" />
+
+<Translate text="daisyUI can be configured to use Tailwind's <code>dark:</code> selector in your code." />
+<Translate text="To achieve this, modify your <code>tailwind.config.js</code> file to include the darkMode parameter."/>
+<Translate text="Ensure that the dark: selector applies to the daisyUI theme you designate as dark."/>
+
+<Translate text="In the example below, we have 'winter' and 'night' themes. Since 'night' is the dark theme, we configure it as shown:"/>
+
+```js
+module.exports = {
+  content: ['./src/**/*.{astro,html,svelte,vue,js,ts,jsx,tsx}'],
+  plugins: [require('daisyui')],
+  theme: { ... },
+  daisyui: {
+    themes: ['winter', 'night']
+  },
+  darkMode: ['class', '[data-theme="night"]']
+}
+```
