@@ -1,4 +1,8 @@
 export const productCustomAttributes = {
+  284327: {
+    screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.png",
+    tech: ["astro", "mdx", "daisyui"],
+  },
   244268: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.png",
     tech: ["react", "nextjs", "daisyui"],
