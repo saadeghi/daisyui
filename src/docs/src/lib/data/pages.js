@@ -230,7 +230,7 @@ export const pages = [
           },
           {
             name: "Radial progress",
-            tags: "progressbar progress loading percentage",
+            tags: "radial circle progressbar progress loading percentage",
             href: "/components/radial-progress/",
           },
           {
