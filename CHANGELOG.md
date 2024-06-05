@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.0 (2024-06-05)
+
+
+### Features
+
+* scrollbars now have transparent background and currentColor foreground ([f0ea341](https://github.com/saadeghi/daisyui/commit/f0ea3418d8556c36df86824169bf9de1a65a7815))
+
 ## 4.11.1 (2024-05-07)
 
 
