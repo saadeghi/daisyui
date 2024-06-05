@@ -2,3 +2,6 @@
 html {
   -webkit-tap-highlight-color: transparent;
 }
+* {
+  scrollbar-color: currentColor transparent;
+}
