@@ -1,7 +1,11 @@
 export const productCustomAttributes = {
   284327: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.png",
+    originalprice: 4900,
+    displayprice: 2900,
+    displaypricenote: "with discount",
     tech: ["astro", "mdx", "daisyui"],
+    tags: ['Use code "JUNE40" for 40% discount'],
   },
   244268: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.png",
@@ -23,7 +27,7 @@ export const productCustomAttributes = {
     // originalprice: 1900,
     // displayprice: 1400,
     // displaypricenote: "with discount",
-    tags: ["Svelte version added"],
+    // tags: ["Svelte version added"],
   },
   142623: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/saas-landingpage.png",
@@ -37,7 +41,11 @@ export const productCustomAttributes = {
   120591: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.png",
     tech: ["html", "webcomponents", "daisyui"],
-    tags: ["Best Seller"],
+    // tags: ["Best Seller"],
+    originalprice: 2900,
+    displayprice: 2600,
+    displaypricenote: "with discount",
+    tags: ['Use code "DASHBOARD10" for 10% discount'],
   },
 }
 
