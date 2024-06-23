@@ -1,5 +1,5 @@
 export const ssr = false
 import { redirect } from "@sveltejs/kit"
 export function load() {
-  redirect(301, "https://play.tailwindcss.com/WFjtZtmDJM")
+  redirect(301, "https://play.tailwindcss.com/IvZT5sJSsa")
 }

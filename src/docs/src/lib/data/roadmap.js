@@ -335,6 +335,10 @@ export const roadmap = [
         title: "Improve the loading of translation files",
         done: false,
       },
+      {
+        title: "refactor theme generator",
+        done: false,
+      },
     ],
   },
   {
