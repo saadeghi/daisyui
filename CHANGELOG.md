@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.5 (2024-06-23)
+
+
+### Bug Fixes
+
+* theming function ([4c83a88](https://github.com/saadeghi/daisyui/commit/4c83a8899fb6f7aef20b1c268ab903cb778b08ec))
+
 ## 4.12.4 (2024-06-23)
 
 
