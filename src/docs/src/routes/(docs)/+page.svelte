@@ -112,15 +112,6 @@ const demo_1_ElementTextHandler = $derived(() => {
                 <pre><code>npm i -D daisyui</code></pre>
               </button>
             </div>
-            <div class="flex gap-2 font-mono text-xs">
-              <a
-                class="link link-hover text-base-content/70 italic"
-                href="https://github.com/saadeghi/daisyui/discussions/2507"
-                target="_blank"
-                rel="noopener, noreferrer">
-                {@html $t("daisyUI 4 upgrade guide")}
-              </a>
-            </div>
             <!-- <div class="flex gap-2">
               <a class="link link-hover link-primary rounded-full" href="/docs/changelog/">
                 {@html $t("daisyUI 3 is available now!")}

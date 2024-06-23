@@ -300,6 +300,18 @@ export const roadmap = [
         done: true,
       },
       {
+        title: "Docs: add Bengali translation",
+        done: true,
+      },
+      {
+        title: "Docs: add Polish translation",
+        done: true,
+      },
+      {
+        title: "Docs: Update to Svelte 5",
+        done: true,
+      },
+      {
         title: "Docs: add component design specs",
         done: false,
       },
@@ -326,11 +338,37 @@ export const roadmap = [
     ],
   },
   {
-    title: "Upcoming",
+    title: "daisyUI 5 (comes after Tailwind CSS 4)",
     done: false,
     items: [
       {
-        title: "rewrite 'label' component to work best with 'join'",
+        title: "Replace Prettier with Biome",
+        done: true,
+      },
+      {
+        title: "Use native CSS nesting for all components",
+        done: false,
+      },
+      {
+        title: "Remove all JavaScript dependencies, make every source file pure CSS",
+        done: false,
+      },
+      {
+        title:
+          "Make all components available as pure CSS files instead of CSS-in-JS because Tailwind CSS 4 will support importing CSS files as plugins",
+        done: false,
+      },
+      {
+        title: "Make each theme available as pure CSS files",
+        done: false,
+      },
+      {
+        title:
+          "Remove color value fallbacks for old browsers. OKLCH colors are supported in all browsers now",
+        done: false,
+      },
+      {
+        title: "Reduce build step to minimum",
         done: false,
       },
       {
@@ -338,19 +376,7 @@ export const roadmap = [
         done: false,
       },
       {
-        title: "New component: Calendar",
-        done: false,
-      },
-      {
         title: "New component: Tag",
-        done: false,
-      },
-      {
-        title: "Support the upcoming Tailwind CSS v4",
-        done: false,
-      },
-      {
-        title: "Pre-built grid layouts",
         done: false,
       },
       {
@@ -358,11 +384,33 @@ export const roadmap = [
         done: false,
       },
       {
-        title: "Animate tab background using CSS grid",
+        title: "Use popover API for dropdowns",
         done: false,
       },
       {
-        title: "Use popover API when browsers support it",
+        title: "Use Container queries for responsive components",
+        done: false,
+      },
+      {
+        title: "Add dotted variants for button, card and badge",
+        done: false,
+      },
+      {
+        title: "Use CSS @starting-style",
+        done: false,
+      },
+      {
+        title: "Refactor `diff` component",
+        done: false,
+      },
+    ],
+  },
+  {
+    title: "Future",
+    done: false,
+    items: [
+      {
+        title: "Pre-built grid layouts",
         done: false,
       },
       {
@@ -374,11 +422,11 @@ export const roadmap = [
         done: false,
       },
       {
-        title: "Use Container queries for responsive components",
+        title: "rewrite 'label' component to work best with 'join'",
         done: false,
       },
       {
-        title: "Add dotted variants for button, card and badge",
+        title: "Animate tab background using CSS grid",
         done: false,
       },
     ],
