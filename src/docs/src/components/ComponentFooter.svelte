@@ -191,7 +191,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
               href="{`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes/(docs)${$page.url.pathname.replace(
                 /\/$/,
                 ''
-              )}/+page.svelte.md?plain=1`}">
+              )}/+page.svx?plain=1`}">
               {$t("Edit this page on GitHub")}
             </a>
           </div>

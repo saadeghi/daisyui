@@ -126,7 +126,7 @@ Let's say we want to add a new component named `.coolbutton` (don't add that act
    - `/styled/coolbutton.css` is for the visual appearance of the component with colors, spacing, etc.
 1. Add a page to documentation site:
    ```
-   /src/docs/src/routes/components/coolbutton/+page.svelte.md
+   /src/docs/src/routes/components/coolbutton/+page.svx
    ```
 1. Add page info and some HTML to your [Svelte](https://svelte.dev/) markdown ([mdsvex](https://mdsvex.pngwn.io/)) file that uses your class name
 
