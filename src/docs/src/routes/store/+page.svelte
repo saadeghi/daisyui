@@ -1,38 +1,38 @@
 <script>
-  import { dev } from "$app/environment"
-  import SEO from "$components/SEO.svelte"
-  import Countdown from "svelte-countdown"
+import { dev } from "$app/environment"
+import SEO from "$components/SEO.svelte"
+import Countdown from "svelte-countdown"
 
-  export let data
-  const products = data.products?.data
-  const discounts = data.discounts?.data
-  const publishedProducts = products.filter((product) => {
-    return product.attributes.status === "published"
-  })
-  const indevelopmentProducts = products.filter((product) => {
-    return product.attributes.status === "draft"
-  })
-  function convertCurrency(number) {
-    const formatted = (number / 100).toFixed(2)
-    return `$${formatted.endsWith(".00") ? formatted.slice(0, -3) : formatted}`
-  }
-  const dateFormat = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  }
+export let data
+const products = data.products?.data
+const discounts = data.discounts?.data
+const publishedProducts = products.filter((product) => {
+  return product.attributes.status === "published"
+})
+const indevelopmentProducts = products.filter((product) => {
+  return product.attributes.status === "draft"
+})
+function convertCurrency(number) {
+  const formatted = (number / 100).toFixed(2)
+  return `$${formatted.endsWith(".00") ? formatted.slice(0, -3) : formatted}`
+}
+const dateFormat = {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+}
 
-  let isClipboardButtonPressed = false
-  const copyText = (text) => {
-    navigator.clipboard.writeText(text)
-    isClipboardButtonPressed = true
-    setTimeout(() => {
-      isClipboardButtonPressed = false
-    }, 2000)
-  }
+let isClipboardButtonPressed = false
+const copyText = (text) => {
+  navigator.clipboard.writeText(text)
+  isClipboardButtonPressed = true
+  setTimeout(() => {
+    isClipboardButtonPressed = false
+  }, 2000)
+}
 </script>
 
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
@@ -41,17 +41,19 @@
 <div class="flex flex-col gap-4 py-10">
   {#each discounts as discount}
     {#if discount.attributes.is_limited_to_products !== false}
-      {#if dev}<meta name={discount.attributes.name} content="limited to specific products" />{/if}
+      {#if dev}<meta
+          name="{discount.attributes.name}"
+          content="limited to specific products" />{/if}
     {:else if discount.attributes.is_limited_redemptions !== false}
-      {#if dev}<meta name={discount.attributes.name} content="has limited redemptions" />{/if}
+      {#if dev}<meta name="{discount.attributes.name}" content="has limited redemptions" />{/if}
     {:else if discount.attributes.expires_at === null}
-      {#if dev}<meta name={discount.attributes.name} content="has no expire date" />{/if}
+      {#if dev}<meta name="{discount.attributes.name}" content="has no expire date" />{/if}
     {:else if discount.attributes.starts_at !== null && discount.attributes.starts_at > new Date().toISOString()}
-      {#if dev}<meta name={discount.attributes.name} content="not started" />{/if}
+      {#if dev}<meta name="{discount.attributes.name}" content="not started" />{/if}
     {:else if discount.attributes.expires_at !== null && discount.attributes.expires_at < new Date().toISOString()}
-      {#if dev}<meta name={discount.attributes.name} content="expired" />{/if}
+      {#if dev}<meta name="{discount.attributes.name}" content="expired" />{/if}
     {:else if discount.attributes.status !== "published"}
-      {#if dev}<meta name={discount.attributes.name} content="not published" />{/if}
+      {#if dev}<meta name="{discount.attributes.name}" content="not published" />{/if}
     {:else}
       <div class="alert">
         <svg
@@ -64,8 +66,9 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
+            d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z">
+          </path>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"></path>
         </svg>
         <div class="flex w-full flex-col items-center justify-between gap-10 sm:flex-row">
           <div class="flex flex-col gap-1">
@@ -74,11 +77,11 @@
             </h2>
             <div class="text-base-content/60 text-sm [text-wrap:balance]">
               Use <span
-                data-tip={isClipboardButtonPressed ? "copied" : "copy"}
+                data-tip="{isClipboardButtonPressed ? 'copied' : 'copy'}"
                 class="tooltip badge badge-outline">
                 <button
                   class="font-mono tracking-widest"
-                  on:click={() => copyText(discount.attributes.code)}>
+                  onclick="{() => copyText(discount.attributes.code)}">
                   {discount.attributes.code}
                 </button>
               </span>
@@ -94,38 +97,38 @@
 
           {#if discount.attributes.expires_at}
             <Countdown
-              from={new Date(discount.attributes.expires_at).toLocaleString("en-GB", dateFormat)}
+              from="{new Date(discount.attributes.expires_at).toLocaleString('en-GB', dateFormat)}"
               dateFormat="DD/MM/YYYY, HH:mm:ss"
               let:remaining>
               {#if remaining.done === false}
                 <div class="tooltip shrink-0 after:hidden" data-tip="Remaining time">
                   <date
-                    datetime={new Date(discount.attributes.expires_at).toLocaleString(
-                      "en-GB",
+                    datetime="{new Date(discount.attributes.expires_at).toLocaleString(
+                      'en-GB',
                       dateFormat
-                    )}
+                    )}"
                     class="grid grid-cols-4 gap-2 text-center font-mono text-xs">
                     <div class="border-base-content/20 rounded-btn border border-dashed p-2">
                       <span class="countdown block text-xl">
-                        <span style={`--value:${remaining.days};`}></span>
+                        <span style="{`--value:${remaining.days};`}"></span>
                       </span>
                       <span class="text-base-content/40 text-xs">day</span>
                     </div>
                     <div class="border-base-content/20 rounded-btn border border-dashed p-2">
                       <span class="countdown block text-xl">
-                        <span style={`--value:${remaining.hours};`}></span>
+                        <span style="{`--value:${remaining.hours};`}"></span>
                       </span>
                       <span class="text-base-content/40 text-xs">hour</span>
                     </div>
                     <div class="border-base-content/20 rounded-btn border border-dashed p-2">
                       <span class="countdown block text-xl">
-                        <span style={`--value:${remaining.minutes};`}></span>
+                        <span style="{`--value:${remaining.minutes};`}"></span>
                       </span>
                       <span class="text-base-content/40 text-xs">min</span>
                     </div>
                     <div class="border-base-content/20 rounded-btn border border-dashed p-2">
                       <span class="countdown block text-xl">
-                        <span style={`--value:${remaining.seconds};`}></span>
+                        <span style="{`--value:${remaining.seconds};`}"></span>
                       </span>
                       <span class="text-base-content/40 text-xs">sec</span>
                     </div>
@@ -147,7 +150,9 @@
 <!-- published -->
 <div class="mx-auto flex max-w-7xl flex-col gap-16">
   {#each publishedProducts as product}
-    <div class="rounded-box relative grid grid-cols-12 gap-y-10 py-10 xl:gap-x-10" id={product.id}>
+    <div
+      class="rounded-box relative grid grid-cols-12 gap-y-10 py-10 xl:gap-x-10"
+      id="{product.id}">
       <div class="col-span-12 row-start-2 flex flex-col gap-8 xl:col-span-5 xl:row-start-1">
         <div>
           {#if product.customattributes?.tags}
@@ -199,7 +204,7 @@
           </div>
           <div class="flex flex-col items-center gap-3">
             <a
-              href={product.attributes.buy_now_url}
+              href="{product.attributes.buy_now_url}"
               class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
               target="_blank"
               rel="noopener noreferrer">
@@ -214,11 +219,12 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+                </path>
               </svg>
             </a>
             {#if product.customattributes?.preveiw_url}
-              <a class="link text-xs" href={product.customattributes.preveiw_url} target="_blank">
+              <a class="link text-xs" href="{product.customattributes.preveiw_url}" target="_blank">
                 Live Preview
               </a>
             {/if}
@@ -234,9 +240,9 @@
       <div class="col-span-12 row-start-1 flex flex-col gap-6 xl:col-span-7">
         <a
           target="_blank"
-          href={product.customattributes?.screenshot
+          href="{product.customattributes?.screenshot
             ? product.customattributes?.screenshot
-            : product.attributes.large_thumb_url}
+            : product.attributes.large_thumb_url}"
           rel="noopener noreferrer"
           class="rounded-box border-base-200 group relative block aspect-[4/3] overflow-hidden border object-cover">
           <div
@@ -253,31 +259,35 @@
                 fill="none"
                 stroke="currentColor"
                 stroke-width="4"
-                stroke-linejoin="round" />
+                stroke-linejoin="round">
+              </path>
               <path
                 d="M21 15L21 27"
                 stroke="currentColor"
                 stroke-width="4"
                 stroke-linecap="round"
-                stroke-linejoin="round" />
+                stroke-linejoin="round">
+              </path>
               <path
                 d="M15.0156 21.0156L27 21"
                 stroke="currentColor"
                 stroke-width="4"
                 stroke-linecap="round"
-                stroke-linejoin="round" />
+                stroke-linejoin="round">
+              </path>
               <path
                 d="M33.2216 33.2217L41.7069 41.707"
                 stroke="currentColor"
                 stroke-width="4"
                 stroke-linecap="round"
-                stroke-linejoin="round" />
+                stroke-linejoin="round">
+              </path>
             </svg>
           </div>
           <img
-            style={`background-image: url('${product.attributes.thumb_url}')`}
-            src={product.attributes.large_thumb_url}
-            alt={product.attributes.name}
+            style="{`background-image: url('${product.attributes.thumb_url}')`}"
+            src="{product.attributes.large_thumb_url}"
+            alt="{product.attributes.name}"
             loading="lazy"
             class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover" />
         </a>
@@ -287,11 +297,11 @@
             {#each product.customattributes.tech as tech}
               <div
                 class="lg:border-base-content/10 tooltip grid place-content-center rounded-full border-dashed lg:border lg:p-2 xl:p-3"
-                data-tip={data.tech[tech]}>
+                data-tip="{data.tech[tech]}">
                 <img
                   class="aspect-square w-5 xl:w-6"
-                  src={`https://img.daisyui.com/logos/${tech}.svg`}
-                  alt={tech} />
+                  src="{`https://img.daisyui.com/logos/${tech}.svg`}"
+                  alt="{tech}" />
               </div>
             {/each}
           </div>
@@ -330,11 +340,12 @@
           stroke="currentColor"
           stroke-width="4"
           stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M14 6V14" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
-        <path d="M25 23L14 23" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
-        <path d="M34 31L14 31" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
-        <path d="M34 6V14" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          stroke-linejoin="round">
+        </rect>
+        <path d="M14 6V14" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M25 23L14 23" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M34 31L14 31" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M34 6V14" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
       </svg>
       <div>{product.attributes.name}</div>
     </div>
@@ -370,9 +381,9 @@
         target="_blank"
         novalidate="">
         <!-- store group -->
-        <input type="checkbox" name="group[347002][8]" value="1" class="hidden" checked />
+        <input type="checkbox" name="group[347002][8]" value="1" class="hidden" checked="checked" />
         <!-- discounts group -->
-        <input type="checkbox" name="group[347002][1]" value="1" class="hidden" checked />
+        <input type="checkbox" name="group[347002][1]" value="1" class="hidden" checked="checked" />
         <div class="form-control w-full max-w-sm">
           <label class="label" for="mce-EMAIL">
             <span class="label-text">Email Address</span>

@@ -2,8 +2,10 @@
   @apply grid items-end;
 }
 .tabs-lifted {
-  &:has(.tab-content[class^="rounded-"]) .tab:first-child:not(:is(.tab-active, [aria-selected="true"])),
-  &:has(.tab-content[class*=" rounded-"]) .tab:first-child:not(:is(.tab-active, [aria-selected="true"])) {
+  &:has(.tab-content[class^="rounded-"])
+    .tab:first-child:not(:is(.tab-active, [aria-selected="true"])),
+  &:has(.tab-content[class*=" rounded-"])
+    .tab:first-child:not(:is(.tab-active, [aria-selected="true"])) {
     @apply border-b-transparent;
   }
 }

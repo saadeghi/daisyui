@@ -1,5 +1,5 @@
-import https from "https"
-import fs from "fs"
+import https from "node:https"
+import fs from "node:fs"
 import sharp from "sharp"
 import { tweets } from "../data/testimonials.js"
 

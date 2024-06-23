@@ -5,10 +5,10 @@ import * as themes from "../theming/themes"
 import { trimThemeName } from "./utils"
 import { colorPairs, ContrastRatioErrorThreshold, ContrastRatioWarningThreshold } from "./data"
 
-for (let themeKey in themes) {
+for (const themeKey in themes) {
   if (themeKey === "default") continue
   // for each variable name
-  for (let variableName of colorPairs) {
+  for (const variableName of colorPairs) {
     test(`${trimThemeName(themeKey)}: \t${variableName[0].substring(2)}/${variableName[1].substring(
       2
     )} \tcontrast = ${wcagContrast(

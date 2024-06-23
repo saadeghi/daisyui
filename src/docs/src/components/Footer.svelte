@@ -1,11 +1,11 @@
 <script>
-  import Sponsors from "$components/Sponsors.svelte"
-  import { t } from "$lib/i18n"
+import Sponsors from "$components/Sponsors.svelte"
+import { t } from "$lib/i18n"
 
-  const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50"><path fill-rule="evenodd" d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z" /></svg>`
+const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50"><path fill-rule="evenodd" d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z" /></svg>`
 </script>
 
-<div class="h-20" />
+<div class="h-20"></div>
 
 <div data-sveltekit-preload-data>
   <div class="bg-base-100 text-base-content">
@@ -13,10 +13,10 @@
       <div>
         <div class="flex items-center gap-2">
           <svg width="32" height="32" viewBox="0 0 415 415" xmlns="http://www.w3.org/2000/svg">
-            <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5" />
-            <circle cx="207.5" cy="135" r="130" fill="black" fill-opacity=".3" />
-            <circle cx="207.5" cy="135" r="125" fill="white" />
-            <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
+            <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5"></rect>
+            <circle cx="207.5" cy="135" r="130" fill="black" fill-opacity=".3"></circle>
+            <circle cx="207.5" cy="135" r="125" fill="white"></circle>
+            <circle cx="207.5" cy="135" r="56" fill="#FF9903"></circle>
           </svg>
           <div class="font-title inline-flex text-3xl font-black">daisyUI</div>
         </div>
@@ -231,15 +231,40 @@
             target="_blank"
             novalidate="">
             <!-- store group -->
-            <input type="checkbox" name="group[347002][8]" value="1" class="hidden" checked />
+            <input
+              type="checkbox"
+              name="group[347002][8]"
+              value="1"
+              class="hidden"
+              checked="checked" />
             <!-- discounts group -->
-            <input type="checkbox" name="group[347002][1]" value="1" class="hidden" checked />
+            <input
+              type="checkbox"
+              name="group[347002][1]"
+              value="1"
+              class="hidden"
+              checked="checked" />
             <!-- releases group -->
-            <input type="checkbox" name="group[347002][2]" value="1" class="hidden" checked />
+            <input
+              type="checkbox"
+              name="group[347002][2]"
+              value="1"
+              class="hidden"
+              checked="checked" />
             <!-- blog group -->
-            <input type="checkbox" name="group[347002][4]" value="1" class="hidden" checked />
+            <input
+              type="checkbox"
+              name="group[347002][4]"
+              value="1"
+              class="hidden"
+              checked="checked" />
             <!-- news group -->
-            <input type="checkbox" name="group[347002][16]" value="1" class="hidden" checked />
+            <input
+              type="checkbox"
+              name="group[347002][16]"
+              value="1"
+              class="hidden"
+              checked="checked" />
             <div class="form-control w-full max-w-sm">
               <label class="label" for="mce-EMAIL">
                 <div class="label-text">

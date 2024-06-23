@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit"
-import { dirname } from "path"
+import { dirname } from "node:path"
 
 export async function load({ params }) {
   let posts = await Promise.all(
@@ -20,7 +20,7 @@ export async function load({ params }) {
   // filter posts by tag
   posts = posts.filter((item) => {
     if (!item.tags) return false
-    let normalizedTags = item.tags.map((item) => {
+    const normalizedTags = item.tags.map((item) => {
       return item.replace(/ /g, "-").toLowerCase()
     })
     return normalizedTags.includes(params.tag)
@@ -33,7 +33,7 @@ export async function load({ params }) {
   posts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
 
   if (posts.length === 0) {
-    error(404, "Not found");
+    error(404, "Not found")
   }
   return {
     params,

@@ -1,9 +1,9 @@
 <script>
-  import { prefix } from "$lib/stores"
-  import PrefixEdit from "$components/PrefixEdit.svelte"
-  import Translate from "$components/Translate.svelte"
-  import { t } from "$lib/i18n"
-  export let data
+import { prefix } from "$lib/stores"
+import PrefixEdit from "$components/PrefixEdit.svelte"
+import Translate from "$components/Translate.svelte"
+import { t } from "$lib/i18n"
+export let data
 </script>
 
 <div class="not-prose relative mb-10 mt-6 max-h-[25rem] overflow-x-auto">
@@ -15,7 +15,7 @@
           <span><Translate text="Class name" /></span>
         </th>
         <th class="bg-base-200 lg:py-3"><Translate text="Type" /></th>
-        <th class="bg-base-200 rounded-e-box lg:py-3" />
+        <th class="bg-base-200 rounded-e-box lg:py-3"></th>
       </tr>
     </thead>
     <tbody>
@@ -30,7 +30,7 @@
                 width="8"
                 height="8"
                 viewBox="0 0 512 512">
-                <polygon points="256 32 20 464 492 464 256 32" />
+                <polygon points="256 32 20 464 492 464 256 32"></polygon>
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,8 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
               </svg>
               <div class="text-xs">
                 <Translate
@@ -65,7 +66,7 @@
               </span>
             {/if}
             {#if item.type == "modifier"}
-              <div class="tooltip cursor-help" data-tip={$t("Changes the style of a component")}>
+              <div class="tooltip cursor-help" data-tip="{$t('Changes the style of a component')}">
                 <span class="badge badge-sm badge-outline w-24 whitespace-nowrap">
                   <Translate text="Modifier" />
                 </span>
@@ -74,7 +75,7 @@
             {#if item.type == "responsive"}
               <div
                 class="tooltip cursor-help"
-                data-tip={$t("Supports responsive prefixes (sm:, lg:, …)")}>
+                data-tip="{$t('Supports responsive prefixes (sm:, lg:, …)')}">
                 <span class="badge badge-sm badge-success w-24 whitespace-nowrap">
                   <Translate text="Responsive" />
                 </span>
@@ -87,5 +88,6 @@
     </tbody>
   </table>
   <div
-    class="bg-base-100 pointer-events-none sticky bottom-0 -mt-6 flex h-16 [mask-image:linear-gradient(transparent,#000000)]" />
+    class="bg-base-100 pointer-events-none sticky bottom-0 -mt-6 flex h-16 [mask-image:linear-gradient(transparent,#000000)]">
+  </div>
 </div>

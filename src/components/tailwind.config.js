@@ -8,7 +8,7 @@ module.exports = {
     extend: require("../lib/utility-classes"),
   },
   plugins: [
-    plugin(function ({ addBase, addUtilities, matchUtilities, matchComponents, theme }) {
+    plugin(({ addBase, addUtilities, matchUtilities, matchComponents, theme }) => {
       addBase(require("../../dist/base"))
       addUtilities(require("../../dist/utilities"), {
         variants: ["responsive"],

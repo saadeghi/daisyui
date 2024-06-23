@@ -1,10 +1,10 @@
 import { derived, writable } from "svelte/store"
 import { subString } from "$lib/util"
 
-const translations = import.meta.glob(`../translation/*.json`, { eager: true })
-let localesArray = []
+const translations = import.meta.glob("../translation/*.json", { eager: true })
+const localesArray = []
 Object.entries(translations).map(([path]) => {
-  let localeFileName = subString(path, "/translation/", ".json")
+  const localeFileName = subString(path, "/translation/", ".json")
   localesArray.push(localeFileName)
 })
 
@@ -21,18 +21,18 @@ function translate(currentLang, key, vars, returnFallback) {
   if (!currentLang) throw new Error(`no translation for key "${key}"`)
 
   if (!text) {
-    if (translations[`${path}/${currentLang}.json`].default[key] == undefined) {
-      if (translations[`${path}/${defaultLang}.json`].default[key] == undefined) {
+    if (translations[`${path}/${currentLang}.json`].default[key] === undefined) {
+      if (translations[`${path}/${defaultLang}.json`].default[key] === undefined) {
         // console.error(`"${defaultLang}.${key}" translation not found. Showing the string as is.`)
         return key
-      } else if (returnFallback === false) {
-        return key
-      } else {
-        console.warn(
-          `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`
-        )
-        return translations[`${path}/${defaultLang}.json`].default[key]
       }
+      if (returnFallback === false) {
+        return key
+      }
+      console.warn(
+        `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`
+      )
+      return translations[`${path}/${defaultLang}.json`].default[key]
     }
   }
 
@@ -53,8 +53,8 @@ export const t = derived(
 
 const replaceStateWithQuery = (values) => {
   const url = new URL(window.location.toString())
-  for (let [k, v] of Object.entries(values)) {
-    if (!!v) {
+  for (const [k, v] of Object.entries(values)) {
+    if (v) {
       url.searchParams.set(encodeURIComponent(k), encodeURIComponent(v))
     } else {
       url.searchParams.delete(k)
@@ -72,5 +72,5 @@ export const setLang = (lang, replaceQuery = true) => {
   localStorage.setItem("lang", lang)
   document.documentElement.setAttribute("lang", lang)
   // set direction
-  document.documentElement.setAttribute("dir", translations[`${path}/${lang}.json`]["__direction"])
+  document.documentElement.setAttribute("dir", translations[`${path}/${lang}.json`].__direction)
 }

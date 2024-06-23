@@ -7,7 +7,7 @@ module.exports = {
     colors: require("../../theming"),
   },
   plugins: [
-    plugin(function ({ addBase, addUtilities }) {
+    plugin(({ addBase, addUtilities }) => {
       addBase(require("../../../dist/base"))
       addUtilities(require("../../../dist/utilities"), {
         variants: ["responsive"],

@@ -1,6 +1,6 @@
 <script>
-  import Footer from "$components/Footer.svelte"
-  export let data
+import Footer from "$components/Footer.svelte"
+export let data
 </script>
 
 <svelte:head>

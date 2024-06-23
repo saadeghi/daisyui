@@ -32,7 +32,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 - You can help add or fix translations by using the [Fink localization editor](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
 - Submit the translation by opening a pull request ([see guide](https://inlang.com/g/6ddyhpoi/guide-nilsjacobsen-contributeTranslationsWithFink))
 
-   [![inlang status badge](https://badge.inlang.com/?url=github.com/saadeghi/daisyui&project=/src/docs/project.inlang)](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
+  [![inlang status badge](https://badge.inlang.com/?url=github.com/saadeghi/daisyui&project=/src/docs/project.inlang)](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
 
 ## Building on local
 
@@ -103,7 +103,7 @@ If your component documentation page contains `pre` blocks for code samples, be 
   <button class="btn btn-link">Link</button>
 
   <!-- add $$ to each daisyUI class name in pre block-->
-  <pre slot="html" use:replace={{ to: $prefix }}>{`<button class="$$btn">Button</button>
+  <pre slot="html" use:replace="{{ to: $prefix }}">{`<button class="$$btn">Button</button>
 <button class="$$btn $$btn-primary">Button</button>
 <button class="$$btn $$btn-secondary">Button</button>
 <button class="$$btn $$btn-accent">Button</button>

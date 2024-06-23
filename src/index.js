@@ -16,11 +16,11 @@ const utilitiesStyled = require("../dist/utilities-styled")
 const themes = require("./theming/themes")
 const colorFunctions = require("./theming/functions")
 const utilityClasses = require("./lib/utility-classes")
-let colorObject = require("./theming/index")
+const colorObject = require("./theming/index")
 
 const mainFunction = ({ addBase, addComponents, config }) => {
   let logs = false
-  if (config("daisyui.logs") != false) {
+  if (config("daisyui.logs") !== false) {
     logs = true
   }
   if (logs) {
@@ -29,13 +29,13 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   }
 
   // inject @base style
-  if (config("daisyui.base") != false) {
+  if (config("daisyui.base") !== false) {
     addBase(base)
   }
 
   // inject components
   let file = styled
-  if (config("daisyui.styled") == false) {
+  if (config("daisyui.styled") === false) {
     file = unstyled
   }
 
@@ -60,7 +60,7 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   themeInjector
 
   // inject @utilities style needed by components
-  if (config("daisyui.utils") != false) {
+  if (config("daisyui.utils") !== false) {
     addComponents(utilities, { variants: ["responsive"] })
 
     let toAdd = utilitiesUnstyled // shadow clone here to avoid mutate the original
@@ -77,14 +77,14 @@ const mainFunction = ({ addBase, addComponents, config }) => {
   }
 
   if (logs) {
-    if (config("daisyui.styled") == false) {
+    if (config("daisyui.styled") === false) {
       console.log(
         `├─ ${pc.yellow("ℹ︎")} ${pc.blue("styled")} ${pc.reset("config is")} ${pc.blue(
           "false"
         )} ${pc.dim("\tcomponents won't have design decisions")}`
       )
     }
-    if (config("daisyui.utils") == false) {
+    if (config("daisyui.utils") === false) {
       console.log(
         `├─ ${pc.yellow("ℹ︎")} ${pc.blue("utils")} ${pc.reset("config is")} ${pc.blue(
           "false"
@@ -112,7 +112,7 @@ const mainFunction = ({ addBase, addComponents, config }) => {
         )}`
       )
     }
-    let messages = [
+    const messages = [
       `${pc.green("❤︎")} ${pc.reset("Support daisyUI project:")}\t${pc.dim(
         daisyuiInfo.funding.url
       )}`,

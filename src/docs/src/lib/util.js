@@ -8,11 +8,11 @@ export const readEnv = (id, defaultValue = "") => {
 }
 
 export const getOS = () => {
-  let userAgent = window.navigator.userAgent.toLowerCase(),
-    macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i,
-    windowsPlatforms = /(win32|win64|windows|wince)/i,
-    iosPlatforms = /(iphone|ipad|ipod)/i,
-    os = null
+  const userAgent = window.navigator.userAgent.toLowerCase()
+  const macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i
+  const windowsPlatforms = /(win32|win64|windows|wince)/i
+  const iosPlatforms = /(iphone|ipad|ipod)/i
+  let os = null
 
   if (macosPlatforms.test(userAgent)) {
     os = "macos"
@@ -70,13 +70,16 @@ export const formattedDate = (date) => {
 }
 
 export const slugify = (str) => {
-  return String(str)
-    .normalize("NFKD") // split accented characters into their base characters and diacritical marks
-    .replace(/[\u0300-\u036f]/g, "") // remove all the accents, which happen to be all in the \u03xx UNICODE block.
-    .trim() // trim leading or trailing whitespace
-    .toLowerCase() // convert to lowercase
-    .replace(/[^a-z0-9 -]/g, "") // remove non-alphanumeric characters
-    .replace(/\s+/g, "-") // replace spaces with hyphens
-    .replace(/-+/g, "-") // remove consecutive hyphens
-    .replace(/^-+|-+$/g, "") // remove leading and trailing hyphens
+  return (
+    String(str)
+      .normalize("NFKD") // split accented characters into their base characters and diacritical marks
+      // biome-ignore lint/suspicious/noMisleadingCharacterClass: <explanation>
+      .replace(/[\u0300-\u036f]/g, "") // remove all the accents, which happen to be all in the \u03xx UNICODE block.
+      .trim() // trim leading or trailing whitespace
+      .toLowerCase() // convert to lowercase
+      .replace(/[^a-z0-9 -]/g, "") // remove non-alphanumeric characters
+      .replace(/\s+/g, "-") // replace spaces with hyphens
+      .replace(/-+/g, "-") // remove consecutive hyphens
+      .replace(/^-+|-+$/g, "")
+  ) // remove leading and trailing hyphens
 }

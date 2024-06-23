@@ -1,19 +1,19 @@
 import videos from "$lib/json/youtube.json"
 
 // remove extra data from json
-videos.forEach((video) => {
-  delete video.etag
-  delete video.kind
-  delete video.snippet.publishedAt
-  delete video.snippet.categoryId
-  delete video.snippet.thumbnails.default
-  delete video.snippet.thumbnails.medium
-  delete video.snippet.thumbnails.high.width
-  delete video.snippet.thumbnails.high.height
-  delete video.status.privacyStatus
-  delete video.status.license
-  delete video.status.publicStatsViewable
-})
+for (const video of videos) {
+  video.etag = undefined
+  video.kind = undefined
+  video.snippet.publishedAt = undefined
+  video.snippet.categoryId = undefined
+  video.snippet.thumbnails.default = undefined
+  video.snippet.thumbnails.medium = undefined
+  video.snippet.thumbnails.high.width = undefined
+  video.snippet.thumbnails.high.height = undefined
+  video.status.privacyStatus = undefined
+  video.status.license = undefined
+  video.status.publicStatsViewable = undefined
+}
 
 export async function load() {
   return {

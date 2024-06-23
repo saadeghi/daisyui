@@ -57,7 +57,8 @@
   },
   "scripts": {
     "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
-    "prettier": "prettier --write '**/*.{js,svelte,md,json,html,css}' --config src/.prettierrc.yaml --ignore-path src/.prettierignore",
+    "format": "biome format --write .",
+    "lint": "biome lint . --write",
     "build": "node src/build",
     "build:skipfullcss": "node src/build --skipfullcss",
     "dev": "cd src/docs && npm run dev",
@@ -67,15 +68,13 @@
     "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "commit-and-tag-version": "^12.0.0",
-    "postcss-cli": "10.1.0",
-    "postcss-import": "15.1.0",
+    "@biomejs/biome": "1.8.1",
+    "autoprefixer": "10.4.19",
+    "commit-and-tag-version": "12.4.1",
+    "postcss-cli": "11.0.0",
+    "postcss-import": "16.1.0",
     "prejss-cli": "0.3.3",
-    "prettier": "^3.1.0",
-    "prettier-plugin-svelte": "^3.1.0",
-    "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "3.4.4"
   },
   "dependencies": {
     "css-selector-tokenizer": "^0.8",

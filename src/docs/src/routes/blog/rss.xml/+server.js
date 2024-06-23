@@ -1,6 +1,6 @@
 export const prerender = true
 
-import { dirname } from "path"
+import { dirname } from "node:path"
 
 const siteTitle = "daisyUI Blog"
 const siteDesc = "Updates, ideas and resources"

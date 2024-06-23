@@ -4,14 +4,12 @@ function createPlugin(plugin, config) {
     config,
   }
 }
-createPlugin.withOptions = function (pluginFunction, configFunction = () => ({})) {
-  const optionsFunction = function (options) {
-    return {
-      __options: options,
-      handler: pluginFunction(options),
-      config: configFunction(options),
-    }
-  }
+createPlugin.withOptions = (pluginFunction, configFunction = () => ({})) => {
+  const optionsFunction = (options) => ({
+    __options: options,
+    handler: pluginFunction(options),
+    config: configFunction(options),
+  })
   optionsFunction.__isOptionsFunction = true
   optionsFunction.__pluginFunction = pluginFunction
   optionsFunction.__configFunction = configFunction

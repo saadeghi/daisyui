@@ -440,11 +440,6 @@ export const pages = [
   {
     items: [
       {
-        name: "CodePen example page",
-        tags: "codepen",
-        href: "/codepen/",
-      },
-      {
         name: "CDN",
         tags: "how cdn",
         href: "/docs/cdn/",

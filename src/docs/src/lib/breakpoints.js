@@ -6,7 +6,7 @@ export function increaseWithUnit(target, delta) {
   if (typeof target === "number") return target + delta
   const value = target.match(/^-?[0-9]+\.?[0-9]*/)?.[0] || ""
   const unit = target.slice(value.length)
-  const result = parseFloat(value) + delta
+  const result = Number.parseFloat(value) + delta
   if (Number.isNaN(result)) return target
   return result + unit
 }

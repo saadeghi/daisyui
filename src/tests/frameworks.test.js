@@ -6,7 +6,7 @@ beforeAll(() => {
   console.log("Check if daisyUI styles are added to each framework successfully")
 })
 
-repos.forEach((config) => {
+for (const config of repos) {
   test(
     `framework – ${config.name}: ${config.string} exists in ${config.file}`,
     () => {
@@ -19,4 +19,4 @@ repos.forEach((config) => {
     },
     5 * 60 * 1000
   )
-})
+}

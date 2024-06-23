@@ -1,5 +1,5 @@
 <script>
-  import { readEnv } from "$lib/util"
+import { readEnv } from "$lib/util"
 </script>
 
 <svelte:head>
@@ -31,7 +31,8 @@
       src="https://www.googletagmanager.com/ns.html?id=G-5N0NM9KW6D"
       height="0"
       width="0"
-      style="display:none;visibility:hidden" />
+      style="display:none;visibility:hidden">
+    </iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 {/if}

@@ -9,7 +9,7 @@ export function load({ params }) {
 
   // 404 if video is not embeddable
   if (video.status.embeddable === false) {
-    error(404, "Not found");
+    error(404, "Not found")
   }
 
   return {

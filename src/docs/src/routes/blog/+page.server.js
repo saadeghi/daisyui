@@ -1,4 +1,4 @@
-import { dirname } from "path"
+import { dirname } from "node:path"
 
 export async function load({ params }) {
   let posts = await Promise.all(

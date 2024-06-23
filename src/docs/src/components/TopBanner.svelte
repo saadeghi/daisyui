@@ -1,14 +1,14 @@
 <script>
-  import Countdown from "svelte-countdown"
+import Countdown from "svelte-countdown"
 
-  const dateFormat = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  }
+const dateFormat = {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+}
 </script>
 
 <!-- Without timer -->
@@ -46,21 +46,21 @@
           </code>
           code to get 25% discount on daisyUI store
           <Countdown
-            from={new Date("2024-05-05T23:59:00.000000Z").toLocaleString("en-GB", dateFormat)}
+            from="{new Date('2024-05-05T23:59:00.000000Z').toLocaleString('en-GB', dateFormat)}"
             dateFormat="DD/MM/YYYY, HH:mm:ss"
             let:remaining>
             {#if remaining.done === false}
               <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
                 <date
-                  datetime={new Date("2024-02-11T23:59:00.000000Z").toLocaleString(
-                    "en-GB",
+                  datetime="{new Date('2024-02-11T23:59:00.000000Z').toLocaleString(
+                    'en-GB',
                     dateFormat
-                  )}
+                  )}"
                   class="countdown font-mono text-xs">
                   {remaining.days * 24 + remaining.hours}h&nbsp;
-                  <span style={`--value:${remaining.minutes}`}></span>
+                  <span style="{`--value:${remaining.minutes}`}"></span>
                   m&nbsp;
-                  <span style={`--value:${remaining.seconds}`}></span>
+                  <span style="{`--value:${remaining.seconds}`}"></span>
                   s
                 </date>
                 remaining

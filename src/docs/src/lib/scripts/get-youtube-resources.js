@@ -1,6 +1,6 @@
 import dotenv from "dotenv"
-import https from "https"
-import fs from "fs"
+import https from "node:https"
+import fs from "node:fs"
 import { videoIds } from "../data/youtube.js"
 
 dotenv.config({ path: ".env.local" })

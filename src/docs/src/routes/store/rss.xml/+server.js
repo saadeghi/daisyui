@@ -7,8 +7,8 @@ const siteDesc = "Professional templates made by daisyUI"
 const storeUrl = "https://daisyui.com/store"
 
 export const GET = async () => {
-  let data = await load({})
-  let products = data.products
+  const data = await load({})
+  const products = data.products
   const body = render(products)
   return new Response(body, {
     headers: {

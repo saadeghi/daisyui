@@ -1,5 +1,5 @@
-import { execSync } from "child_process"
-import fs from "fs"
+import { execSync } from "node:child_process"
+import fs from "node:fs"
 import glob from "glob"
 
 export const trimCssVariable = (input) => {

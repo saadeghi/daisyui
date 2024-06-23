@@ -1,12 +1,12 @@
 <script>
-  import { page } from "$app/stores"
-  import Footer from "$components/Footer.svelte"
-  import Ads from "$components/Ads.svelte"
-  import Sponsors from "$components/Sponsors.svelte"
-  import "prism-themes/themes/prism-material-dark.css"
-  import "$lib/style/prism-themes-modify.css"
-  export let data
-  let { tags } = data
+import { page } from "$app/stores"
+import Footer from "$components/Footer.svelte"
+import Ads from "$components/Ads.svelte"
+import Sponsors from "$components/Sponsors.svelte"
+import "prism-themes/themes/prism-material-dark.css"
+import "$lib/style/prism-themes-modify.css"
+export let data
+let { tags } = data
 </script>
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row" dir="ltr">
@@ -30,9 +30,11 @@
                     fill="currentColor"
                     class="h-5 w-5">
                     <path
-                      d="M3.75 3a.75.75 0 00-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V16C17 8.82 11.18 3 4 3h-.25z" />
+                      d="M3.75 3a.75.75 0 00-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V16C17 8.82 11.18 3 4 3h-.25z">
+                    </path>
                     <path
-                      d="M3 8.75A.75.75 0 013.75 8H4a8 8 0 018 8v.25a.75.75 0 01-.75.75h-.5a.75.75 0 01-.75-.75V16a6 6 0 00-6-6h-.25A.75.75 0 013 9.25v-.5zM7 15a2 2 0 11-4 0 2 2 0 014 0z" />
+                      d="M3 8.75A.75.75 0 013.75 8H4a8 8 0 018 8v.25a.75.75 0 01-.75.75h-.5a.75.75 0 01-.75-.75V16a6 6 0 00-6-6h-.25A.75.75 0 013 9.25v-.5zM7 15a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
                   </svg>
                 </a>
               </div>
@@ -46,9 +48,9 @@
                 <li>
                   <a
                     data-sveltekit-reload
-                    href={`/blog/tag/${tag.replace(/ /g, "-").toLowerCase()}`}
-                    class={tag.replace(/ /g, "-").toLowerCase() ===
-                      $page.url.pathname.split("/").at(-2) && `active`}>
+                    href="{`/blog/tag/${tag.replace(/ /g, '-').toLowerCase()}`}"
+                    class="{tag.replace(/ /g, '-').toLowerCase() ===
+                      $page.url.pathname.split('/').at(-2) && `active`}">
                     {tag}
                   </a>
                 </li>
@@ -81,7 +83,12 @@
                 target="_blank"
                 novalidate="">
                 <!-- blog group -->
-                <input type="checkbox" name="group[347002][4]" value="1" class="hidden" checked />
+                <input
+                  type="checkbox"
+                  name="group[347002][4]"
+                  value="1"
+                  class="hidden"
+                  checked="checked" />
                 <div class="form-control w-full max-w-sm">
                   <label class="label" for="mce-EMAIL">
                     <span class="label-text">Email Address</span>
@@ -131,6 +138,6 @@
       <Sponsors wrapperClasses="flex-col sm:flex-row" />
     </div>
   </div>
-  <Ads slot="carbon2" />
+  <Ads adslot="carbon2" />
 </div>
 <Footer />

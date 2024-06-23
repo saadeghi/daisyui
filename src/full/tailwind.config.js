@@ -32,7 +32,7 @@ module.exports = {
     "stroke",
   ],
   plugins: [
-    plugin(function ({ addBase, addUtilities, addComponents, matchUtilities, theme }) {
+    plugin(({ addBase, addUtilities, addComponents, matchUtilities, theme }) => {
       addBase(require("../../dist/base"))
       addComponents(require("../../dist/styled"))
       addUtilities(require("../../dist/utilities"), {

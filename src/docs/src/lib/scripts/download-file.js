@@ -1,5 +1,5 @@
-import https from "https"
-import fs from "fs"
+import https from "node:https"
+import fs from "node:fs"
 
 const url = process.argv[2]
 const filename = process.argv[3]

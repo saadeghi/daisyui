@@ -1,7 +1,7 @@
 <script>
-  import SEO from "$components/SEO.svelte"
-  import { slugify } from "$lib/util"
-  export let data
+import SEO from "$components/SEO.svelte"
+import { slugify } from "$lib/util"
+export let data
 </script>
 
 <SEO
@@ -27,17 +27,17 @@
     {#each data.videos as video}
       <a
         class="rounded-box group relative flex flex-col gap-6 overflow-hidden p-4"
-        href={video.status.embeddable == true
+        href="{video.status.embeddable == true
           ? `/resources/videos/${slugify(video.snippet.title)}-${slugify(video.id)}`
-          : `https://www.youtube.com/watch?v=${video.id}`}
-        target={video.status.embeddable == false ? `_blank` : null}
-        rel={video.status.embeddable == false ? `noopener noreferrer` : null}>
+          : `https://www.youtube.com/watch?v=${video.id}`}"
+        target="{video.status.embeddable == false ? `_blank` : null}"
+        rel="{video.status.embeddable == false ? `noopener noreferrer` : null}">
         <figure
           class="rounded-btn grid aspect-video place-content-center overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
           <img
             loading="lazy"
-            src={video.snippet.thumbnails.high.url}
-            alt={video.snippet.title}
+            src="{video.snippet.thumbnails.high.url}"
+            alt="{video.snippet.title}"
             class="w-full" />
         </figure>
         <div class="flex items-center justify-between gap-4">

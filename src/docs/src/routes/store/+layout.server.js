@@ -10,7 +10,7 @@ const LSParams = {
 }
 
 export async function load({ params }) {
-  let storeInfo = {
+  const storeInfo = {
     products: { data: [] },
     discounts: { data: [] },
   }
@@ -27,21 +27,21 @@ export async function load({ params }) {
 
     // sort products by id
     storeInfo.products.data.sort((a, b) => {
-      return parseInt(b.id) - parseInt(a.id)
+      return Number.parseInt(b.id) - Number.parseInt(a.id)
     })
     // add additional product data
-    storeInfo.products.data.forEach((item) => {
+    for (const item of storeInfo.products.data) {
       const itemId = item.id
       if (productCustomAttributes[itemId]) {
         item.customattributes = productCustomAttributes[itemId]
       }
-    })
+    }
   }
   if (discountsResponse.ok) {
     storeInfo.discounts = await discountsResponse.json()
     // sort discounts by id
     storeInfo.discounts.data.sort((a, b) => {
-      return parseInt(b.id) - parseInt(a.id)
+      return Number.parseInt(b.id) - Number.parseInt(a.id)
     })
   }
   return {

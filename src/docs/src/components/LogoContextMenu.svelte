@@ -1,17 +1,17 @@
 <script>
-  let pos = { x: 0, y: 0 }
-  let showMenu = false
+let pos = { x: 0, y: 0 }
+let showMenu = false
 
-  export function openContextMenu(e) {
-    showMenu = true
-    pos = {
-      x: e.clientX,
-      y: e.clientY,
-    }
+export function openContextMenu(e) {
+  showMenu = true
+  pos = {
+    x: e.clientX,
+    y: e.clientY,
   }
-  function closeContextMenu(e) {
-    showMenu = false
-  }
+}
+function closeContextMenu(e) {
+  showMenu = false
+}
 </script>
 
 {#if showMenu}
@@ -35,7 +35,7 @@
         SVG logotype
       </a>
     </li>
-    <li />
+    <li></li>
     <li>
       <a
         rel="noopener, noreferrer"
@@ -55,4 +55,4 @@
   </ul>
 {/if}
 
-<svelte:window on:click={closeContextMenu} on:blur={closeContextMenu} />
+<svelte:window onclick="{closeContextMenu}" onblur="{closeContextMenu}" />

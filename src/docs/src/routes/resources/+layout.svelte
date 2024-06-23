@@ -1,9 +1,9 @@
 <script>
-  import { page } from "$app/stores"
-  import Footer from "$components/Footer.svelte"
-  import Ads from "$components/Ads.svelte"
-  export let data
-  let { tags } = data
+import { page } from "$app/stores"
+import Footer from "$components/Footer.svelte"
+import Ads from "$components/Ads.svelte"
+export let data
+let { tags } = data
 </script>
 
 <div
@@ -14,23 +14,25 @@
     <nav class="tabs tabs-lifted tabs-lg my-14 flex-nowrap whitespace-nowrap">
       <a
         href="/resources/videos/"
-        class={`tab ${$page.url.pathname.startsWith("/resources/videos/") ? "tab-active" : ""}`}>
+        class="{`tab ${$page.url.pathname.startsWith('/resources/videos/') ? 'tab-active' : ''}`}">
         Videos
       </a>
       <a
         href="/resources/articles/"
-        class={`tab ${$page.url.pathname.startsWith("/resources/articles/") ? "tab-active" : ""}`}>
+        class="{`tab ${
+          $page.url.pathname.startsWith('/resources/articles/') ? 'tab-active' : ''
+        }`}">
         Articles
       </a>
       <a
         href="/resources/courses/"
-        class={`tab ${$page.url.pathname.startsWith("/resources/courses/") ? "tab-active" : ""}`}>
+        class="{`tab ${$page.url.pathname.startsWith('/resources/courses/') ? 'tab-active' : ''}`}">
         Courses
       </a>
       <span class="tab"></span>
     </nav>
     <slot />
   </div>
-  <Ads slot="carbon2" />
+  <Ads adslot="carbon2" />
 </div>
 <Footer />

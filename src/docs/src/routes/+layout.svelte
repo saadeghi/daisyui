@@ -1,79 +1,79 @@
 <script>
-  import "$components/StyleHandler.svelte"
-  import Scripts from "$components/Scripts.svelte"
-  import Navbar from "$components/Navbar.svelte"
-  import Sidebar from "$components/Sidebar.svelte"
-  import { page } from "$app/stores"
-  import { onMount } from "svelte"
-  import { setLang } from "$lib/i18n"
-  import { onNavigate } from "$app/navigation"
-  import minimalAnalytics from "@minimal-analytics/ga4"
-  const { track } = minimalAnalytics
+import "$components/StyleHandler.svelte"
+import Scripts from "$components/Scripts.svelte"
+import Navbar from "$components/Navbar.svelte"
+import Sidebar from "$components/Sidebar.svelte"
+import { page } from "$app/stores"
+import { onMount } from "svelte"
+import { setLang } from "$lib/i18n"
+import { onNavigate } from "$app/navigation"
+import minimalAnalytics from "@minimal-analytics/ga4"
+const { track } = minimalAnalytics
 
-  export let data
+export let data
 
-  onNavigate((navigation) => {
-    track("G-ER9PXT2JR4")
-    if (!document.startViewTransition) return
+onNavigate((navigation) => {
+  track("G-ER9PXT2JR4")
+  if (!document.startViewTransition) return
 
-    return new Promise((resolve) => {
-      document.startViewTransition(async () => {
-        resolve()
-        await navigation.complete
-      })
+  return new Promise((resolve) => {
+    document.startViewTransition(async () => {
+      resolve()
+      await navigation.complete
     })
   })
+})
 
-  onMount(() => {
-    let lang = new URL(document.location).searchParams.get("lang")
-    setLang(lang, false)
-    if (localStorage.getItem("lang")) {
-      setLang(localStorage.getItem("lang"), false)
+onMount(() => {
+  let lang = new URL(document.location).searchParams.get("lang")
+  setLang(lang, false)
+  if (localStorage.getItem("lang")) {
+    setLang(localStorage.getItem("lang"), false)
+  }
+
+  parseSidebarScroll()
+  document.documentElement.style.scrollPaddingTop = "5rem"
+  document.documentElement.style.scrollBehavior = "smooth"
+})
+
+let drawersidebar
+let drawerSidebarScrollY = 0
+function parseSidebarScroll() {
+  drawerSidebarScrollY = drawersidebar.scrollTop
+}
+
+let checked = ""
+function closeDrawer() {
+  checked = ""
+}
+
+function openDrawer() {
+  checked = true
+}
+
+let navbarScrollPadding = "5rem"
+function addScrollPaddingToNavbar(action) {
+  navbarScrollPadding = "5rem"
+  document.documentElement.style.scrollPaddingTop = "5rem"
+}
+
+function removeScrollPaddingFromNavbar(action) {
+  navbarScrollPadding = "0rem"
+  document.documentElement.style.scrollPaddingTop = "0rem"
+}
+
+Array.prototype.matchPattern = function (inputString) {
+  for (const pattern of this) {
+    const regexPattern = pattern.replace(/\*/g, ".*")
+    const regex = new RegExp(`^${regexPattern}$`)
+
+    if (regex.test(inputString)) {
+      return true
     }
-
-    parseSidebarScroll()
-    document.documentElement.style.scrollPaddingTop = "5rem"
-    document.documentElement.style.scrollBehavior = "smooth"
-  })
-
-  let drawersidebar
-  let drawerSidebarScrollY = 0
-  function parseSidebarScroll() {
-    drawerSidebarScrollY = drawersidebar.scrollTop
   }
 
-  let checked = ""
-  function closeDrawer() {
-    checked = ""
-  }
-
-  function openDrawer() {
-    checked = true
-  }
-
-  let navbarScrollPadding = "5rem"
-  function addScrollPaddingToNavbar(action) {
-    navbarScrollPadding = "5rem"
-    document.documentElement.style.scrollPaddingTop = "5rem"
-  }
-
-  function removeScrollPaddingFromNavbar(action) {
-    navbarScrollPadding = "0rem"
-    document.documentElement.style.scrollPaddingTop = "0rem"
-  }
-
-  Array.prototype.matchPattern = function (inputString) {
-    for (const pattern of this) {
-      const regexPattern = pattern.replace(/\*/g, ".*")
-      const regex = new RegExp(`^${regexPattern}$`)
-
-      if (regex.test(inputString)) {
-        return true
-      }
-    }
-
-    return false
-  }
+  return false
+}
 </script>
 
 <svelte:head>
@@ -109,32 +109,34 @@
 </svelte:head>
 
 <div
-  class={`bg-base-100 drawer ${
-    data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? "" : "lg:drawer-open"
-  }`}>
+  class="{`bg-base-100 drawer ${
+    data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? '' : 'lg:drawer-open'
+  }`}">
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
-  <div class={`drawer-content`} inert={checked || undefined}>
+  <div class="{`drawer-content`}" inert="{checked || undefined}">
     <Navbar
       {addScrollPaddingToNavbar}
       {removeScrollPaddingFromNavbar}
-      pages={data.pages}
-      themes={data.themes}
+      pages="{data.pages}"
+      themes="{data.themes}"
       showComponentsBtn="true"
-      hideLogoOnLargeScreen={data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
+      hideLogoOnLargeScreen="{data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
         ? false
-        : true}
-      hideSidebarButtonOnLargeScreen={data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
+        : true}"
+      hideSidebarButtonOnLargeScreen="{data.pagesThatDontNeedSidebar.matchPattern(
+        $page.url.pathname
+      )
         ? false
-        : true}
+        : true}"
       showSearch="true"
       showVersion="true"
       showLanguage="true" />
     <div
-      class={`${
+      class="{`${
         data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
-          ? ""
-          : "max-w-[100vw] px-6 pb-16 xl:pr-2"
-      }`}>
+          ? ''
+          : 'max-w-[100vw] px-6 pb-16 xl:pr-2'
+      }`}">
       <slot />
     </div>
     <div class="toast toast-center z-10 [@supports(color:oklch(0%_0_0))]:hidden">
@@ -154,18 +156,19 @@
   <div
     class="drawer-side z-40"
     style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};"
-    bind:this={drawersidebar}
-    on:scroll={parseSidebarScroll}>
-    <label for="drawer" class="drawer-overlay" aria-label="Close menu" />
+    bind:this="{drawersidebar}"
+    onscroll="{parseSidebarScroll}">
+    <label for="drawer" class="drawer-overlay" aria-label="Close menu"></label>
     <aside class="bg-base-100 min-h-screen w-80">
       <svelte:component
-        this={Sidebar}
-        pages={data.pages}
+        this="{Sidebar}"
+        pages="{data.pages}"
         {closeDrawer}
         {openDrawer}
         {drawerSidebarScrollY} />
       <div
-        class="bg-base-100 pointer-events-none sticky bottom-0 flex h-40 [mask-image:linear-gradient(transparent,#000000)]" />
+        class="bg-base-100 pointer-events-none sticky bottom-0 flex h-40 [mask-image:linear-gradient(transparent,#000000)]">
+      </div>
     </aside>
   </div>
 </div>

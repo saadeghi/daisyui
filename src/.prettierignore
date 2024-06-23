@@ -1,6 +1,0 @@
-**/docs/.svelte-kit
-**/docs/build
-**/node_modules
-CHANGELOG.md
-**/dist
-**/experiments/compare/**/*.css

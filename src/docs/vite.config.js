@@ -1,4 +1,4 @@
-import path from "path"
+import path from "node:path"
 import { defineConfig } from "vite"
 import { sveltekit } from "@sveltejs/kit/vite"
 import { visualizer } from "rollup-plugin-visualizer"

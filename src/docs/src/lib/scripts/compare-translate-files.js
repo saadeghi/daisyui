@@ -1,10 +1,10 @@
-import fs from "fs"
+import fs from "node:fs"
 import { diffString, diff } from "json-diff"
 
 const langs = ["es", "fr", "id", "ja", "ko", "pt", "ru", "uk", "zh_hans", "zh_hant", "ar", "fa"]
 
-langs.forEach((lang) => {
-  fs.readFile(`src/translation/en.json`, "utf8", (err1, file1) => {
+for (const lang of langs) {
+  fs.readFile("src/translation/en.json", "utf8", (err1, file1) => {
     if (err1) {
       console.error(err1)
       return
@@ -21,4 +21,4 @@ langs.forEach((lang) => {
       )
     })
   })
-})
+}

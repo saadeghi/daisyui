@@ -1,24 +1,24 @@
 <script>
-  import SEO from "$components/SEO.svelte"
-  export let data
-  let { params, posts } = data
+import SEO from "$components/SEO.svelte"
+export let data
+let { params, posts } = data
 </script>
 
 <SEO
-  title={params.tag.replace(/-/g, " ")}
-  desc={`daisyUI blog posts with '${params.tag.replace(/-/g, " ")}' tag`} />
+  title="{params.tag.replace(/-/g, ' ')}"
+  desc="{`daisyUI blog posts with '${params.tag.replace(/-/g, ' ')}' tag`}" />
 <div class="grid justify-items-stretch gap-6">
   {#each posts as post}
     <a
       class="card sm:card-side hover:bg-base-200 max-w-sm transition-colors sm:max-w-none"
-      href={`/blog/${post.slug}`}>
+      href="{`/blog/${post.slug}`}">
       {#if post.thumbnail}
         <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pe-0">
           <img
             loading="lazy"
-            src={post.thumbnail}
+            src="{post.thumbnail}"
             class="border-base-content bg-base-300 rounded-btn border border-opacity-5"
-            alt={post.title} />
+            alt="{post.title}" />
         </figure>
       {/if}
       <div class="card-body">

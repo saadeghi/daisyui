@@ -1,9 +1,9 @@
 <script>
-  export let tweets
+export let tweets
 </script>
 
 <div>
-  <div class="h-32" />
+  <div class="h-32"></div>
   <div
     class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16">
     {#each tweets as tweet, index}
@@ -12,14 +12,14 @@
           <div class="flex items-center gap-2">
             <div class="avatar">
               <a
-                href={`https://twitter.com/${tweet.username}/status/${tweet.id}`}
+                href="{`https://twitter.com/${tweet.username}/status/${tweet.id}`}"
                 target="_blank"
                 rel="noopener, noreferrer"
                 class="w-12">
                 <img
                   loading="lazy"
-                  src={`https://img.daisyui.com/twitter-profile-pics/${tweet.username}-72.webp`}
-                  alt={tweet.name}
+                  src="{`https://img.daisyui.com/twitter-profile-pics/${tweet.username}-72.webp`}"
+                  alt="{tweet.name}"
                   width="48"
                   height="48"
                   class="pointer-events-none rounded-full" />

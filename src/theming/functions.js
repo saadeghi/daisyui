@@ -15,9 +15,8 @@ const cutNumber = (number) => {
   try {
     if (number) {
       return +number.toFixed(6)
-    } else {
-      return 0
     }
+    return 0
   } catch (e) {
     // colorIsInvalid(number)
     return false
@@ -36,9 +35,9 @@ module.exports = {
     }
   },
 
-  colorObjToString: function (input) {
+  colorObjToString: (input) => {
     const { l, c, h } = input
-    return `${parseFloat((cutNumber(l) * 100).toFixed(6))}% ${cutNumber(c)} ${cutNumber(h)}`
+    return `${Number.parseFloat((cutNumber(l) * 100).toFixed(6))}% ${cutNumber(c)} ${cutNumber(h)}`
   },
 
   generateForegroundColorFrom: function (input, percentage = 0.8) {
@@ -71,7 +70,7 @@ module.exports = {
 
     const resultObj = {}
 
-    Object.entries(input).forEach(([rule, value]) => {
+    for (const [rule, value] of Object.entries(input)) {
       if (Object.hasOwn(colorNames, rule)) {
         try {
           const colorObj = oklch(value)
@@ -119,59 +118,59 @@ module.exports = {
         resultObj["--bc"] = this.generateForegroundColorFrom(input["base-100"], 0.8)
       }
       if (!Object.hasOwn(input, "primary-content")) {
-        resultObj["--pc"] = this.generateForegroundColorFrom(input["primary"], 0.8)
+        resultObj["--pc"] = this.generateForegroundColorFrom(input.primary, 0.8)
       }
       if (!Object.hasOwn(input, "secondary-content")) {
-        resultObj["--sc"] = this.generateForegroundColorFrom(input["secondary"], 0.8)
+        resultObj["--sc"] = this.generateForegroundColorFrom(input.secondary, 0.8)
       }
       if (!Object.hasOwn(input, "accent-content")) {
-        resultObj["--ac"] = this.generateForegroundColorFrom(input["accent"], 0.8)
+        resultObj["--ac"] = this.generateForegroundColorFrom(input.accent, 0.8)
       }
       if (!Object.hasOwn(input, "neutral-content")) {
-        resultObj["--nc"] = this.generateForegroundColorFrom(input["neutral"], 0.8)
+        resultObj["--nc"] = this.generateForegroundColorFrom(input.neutral, 0.8)
       }
       if (!Object.hasOwn(input, "info-content")) {
         if (Object.hasOwn(input, "info")) {
-          resultObj["--inc"] = this.generateForegroundColorFrom(input["info"], 0.8)
+          resultObj["--inc"] = this.generateForegroundColorFrom(input.info, 0.8)
         } else {
           resultObj["--inc"] = "0% 0 0"
         }
       }
       if (!Object.hasOwn(input, "success-content")) {
         if (Object.hasOwn(input, "success")) {
-          resultObj["--suc"] = this.generateForegroundColorFrom(input["success"], 0.8)
+          resultObj["--suc"] = this.generateForegroundColorFrom(input.success, 0.8)
         } else {
           resultObj["--suc"] = "0% 0 0"
         }
       }
       if (!Object.hasOwn(input, "warning-content")) {
         if (Object.hasOwn(input, "warning")) {
-          resultObj["--wac"] = this.generateForegroundColorFrom(input["warning"], 0.8)
+          resultObj["--wac"] = this.generateForegroundColorFrom(input.warning, 0.8)
         } else {
           resultObj["--wac"] = "0% 0 0"
         }
       }
       if (!Object.hasOwn(input, "error-content")) {
         if (Object.hasOwn(input, "error")) {
-          resultObj["--erc"] = this.generateForegroundColorFrom(input["error"], 0.8)
+          resultObj["--erc"] = this.generateForegroundColorFrom(input.error, 0.8)
         } else {
           resultObj["--erc"] = "0% 0 0"
         }
       }
 
       // add css variables if not exist
-      Object.entries(themeDefaults.variables).forEach((item) => {
+      for (const item of Object.entries(themeDefaults.variables)) {
         const [variable, value] = item
         if (!Object.hasOwn(input, variable)) {
           resultObj[variable] = value
         }
-      })
+      }
 
       // add other custom styles
       if (!Object.hasOwn(colorNames, rule)) {
         resultObj[rule] = value
       }
-    })
+    }
 
     return resultObj
   },
@@ -180,32 +179,32 @@ module.exports = {
     const includedThemesObj = {}
     // add default themes
     const themeRoot = config("daisyui.themeRoot") ?? ":root"
-    Object.entries(themes).forEach(([theme, value]) => {
+    for (const [theme, value] of Object.entries(themes)) {
       includedThemesObj[theme] = this.convertColorFormat(value)
-    })
+    }
 
     // add custom themes
     if (Array.isArray(config("daisyui.themes"))) {
-      config("daisyui.themes").forEach((item) => {
+      for (const item of config("daisyui.themes")) {
         if (typeof item === "object" && item !== null) {
-          Object.entries(item).forEach(([customThemeName, customThemevalue]) => {
+          for (const [customThemeName, customThemevalue] of Object.entries(item)) {
             includedThemesObj[customThemeName] = this.convertColorFormat(customThemevalue)
-          })
+          }
         }
-      })
+      }
     }
 
     let themeOrder = []
     if (Array.isArray(config("daisyui.themes"))) {
-      config("daisyui.themes").forEach((theme) => {
+      for (const item of config("daisyui.themes")) {
         if (typeof theme === "object" && theme !== null) {
-          Object.keys(theme).forEach((customThemeName) => {
+          for (const customThemeName of Object.keys(item)) {
             themeOrder.push(customThemeName)
-          })
+          }
         } else if (Object.hasOwn(includedThemesObj, theme)) {
           themeOrder.push(theme)
         }
-      })
+      }
     } else if (config("daisyui.themes") === true) {
       themeOrder = themeDefaults.themeOrder
     } else {
@@ -234,25 +233,22 @@ module.exports = {
         } else {
           if (themeOrder[0] !== "dark" && themeOrder.includes("dark")) {
             themesToInject["@media (prefers-color-scheme: dark)"] = {
-              [themeRoot]: includedThemesObj["dark"],
+              [themeRoot]: includedThemesObj.dark,
             }
           }
         }
         // theme 0 with name
-        themesToInject["[data-theme=" + themeOrder[0] + "]"] = includedThemesObj[themeOrder[0]]
-        themesToInject[
-          themeRoot + ":has(input.theme-controller[value=" + themeOrder[0] + "]:checked)"
-        ] = includedThemesObj[themeOrder[0]]
+        themesToInject[`[data-theme=${themeOrder[0]}]`] = includedThemesObj[themeOrder[0]]
+        themesToInject[`${themeRoot}:has(input.theme-controller[value=${themeOrder[0]}]:checked)`] =
+          includedThemesObj[themeOrder[0]]
         // theme 1 with name
-        themesToInject["[data-theme=" + themeOrder[1] + "]"] = includedThemesObj[themeOrder[1]]
-        themesToInject[
-          themeRoot + ":has(input.theme-controller[value=" + themeOrder[1] + "]:checked)"
-        ] = includedThemesObj[themeOrder[1]]
+        themesToInject[`[data-theme=${themeOrder[1]}]`] = includedThemesObj[themeOrder[1]]
+        themesToInject[`${themeRoot}:has(input.theme-controller[value=${themeOrder[1]}]:checked)`] =
+          includedThemesObj[themeOrder[1]]
       } else {
-        themesToInject["[data-theme=" + themeName + "]"] = includedThemesObj[themeName]
-        themesToInject[
-          themeRoot + ":has(input.theme-controller[value=" + themeName + "]:checked)"
-        ] = includedThemesObj[themeName]
+        themesToInject[`[data-theme=${themeName}]`] = includedThemesObj[themeName]
+        themesToInject[`${themeRoot}:has(input.theme-controller[value=${themeName}]:checked)`] =
+          includedThemesObj[themeName]
       }
     })
 

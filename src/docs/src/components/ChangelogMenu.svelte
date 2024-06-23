@@ -1,6 +1,6 @@
 <script>
-  import { readEnv } from "$lib/util"
-  let version = readEnv("VITE_DAISYUI_VERSION", "latest")
+import { readEnv } from "$lib/util"
+let version = readEnv("VITE_DAISYUI_VERSION", "latest")
 </script>
 
 <div class="dropdown" data-sveltekit-preload-data>
@@ -23,24 +23,27 @@
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
           <path
             d="M4 24C4 35.0457 12.9543 44 24 44V44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C16.598 4 10.1351 8.02111 6.67677 13.9981"
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
           <path
             d="M24.005 12L24.0038 24.0088L32.4832 32.4882"
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
         </svg>
         Changelog
       </a>
     </li>
-    <li />
+    <li></li>
     <li>
       <a target="_blank" rel="noopener, noreferrer" href="https://v3.daisyui.com/">Version 3.x</a>
     </li>
@@ -50,7 +53,7 @@
     <li>
       <a target="_blank" rel="noopener, noreferrer" href="https://v1.daisyui.com/">Version 1.x</a>
     </li>
-    <li />
+    <li></li>
     <li>
       <a href="/docs/roadmap/">
         <svg
@@ -65,31 +68,36 @@
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
           <path
             d="M31 6V36"
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
           <path
             d="M17 12V42"
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
           <path
             d="M10.5 9L17 12L31 6L37.5 9"
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
           <path
             d="M10.5 39L17 42L31 36L37.5 39"
             stroke="currentColor"
             stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round">
+          </path>
         </svg>
         Roadmap
       </a>

@@ -9,7 +9,7 @@ let contributors = []
 let backers = []
 
 export async function load() {
-  let githubDeps = await depGraphCount("saadeghi", "daisyui")
+  const githubDeps = await depGraphCount("saadeghi", "daisyui")
 
   const npmDownloadsInfo = await fetch(
     "https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui",
@@ -17,7 +17,7 @@ export async function load() {
   )
 
   if (npmDownloadsInfo.ok) {
-    let data = await npmDownloadsInfo.json()
+    const data = await npmDownloadsInfo.json()
     npmInstalls = data.downloads
   } else {
     console.error("Warning: Could not fetch npm download counts. Using default value")
@@ -30,7 +30,7 @@ export async function load() {
   }
   const githubRepoInfo = await fetch("https://api.github.com/repos/saadeghi/daisyui", GHParams)
   if (githubRepoInfo.ok) {
-    let data = await githubRepoInfo.json()
+    const data = await githubRepoInfo.json()
     stargazers_count = data.stargazers_count
   } else {
     console.error("Warning: Could not fetch github stargazers count. Using default value")
@@ -73,8 +73,8 @@ export async function load() {
 
   return {
     gh_dependents: {
-      repositories: parseInt(githubDeps.repositories?.replace(/\,/g, "")),
-      packages: parseInt(githubDeps.packages?.replace(/\,/g, "")),
+      repositories: Number.parseInt(githubDeps.repositories?.replace(/\,/g, "")),
+      packages: Number.parseInt(githubDeps.packages?.replace(/\,/g, "")),
     },
     stargazers_count,
     npmInstalls,

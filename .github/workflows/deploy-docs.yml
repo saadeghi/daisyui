@@ -52,7 +52,7 @@ jobs:
 
       - name: Setup bun
         if: env.runtime == 'bun'
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v1.2.2
 
       - name: Install package dependencies
         run: ${{ env.runtime }} install

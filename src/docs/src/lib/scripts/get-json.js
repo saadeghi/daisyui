@@ -1,4 +1,4 @@
-import { exec } from "child_process"
+import { exec } from "node:child_process"
 
 const commands = [
   // "node src/lib/scripts/download-file.js 'https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui' 'src/lib/json/npm-downloads.json'",

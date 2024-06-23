@@ -6,11 +6,11 @@ module.exports = {
     themes: [
       {
         light: {
-          ...themes["light"],
+          ...themes.light,
           // primary: "x",
         },
         dark: {
-          ...themes["dark"],
+          ...themes.dark,
           primary: "#ffffff",
         },
       },

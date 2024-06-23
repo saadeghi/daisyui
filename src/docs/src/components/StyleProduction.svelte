@@ -1,4 +1,4 @@
 <script>
-  import "tailwindcss/tailwind.css"
-  import "../global.css"
+import "tailwindcss/tailwind.css"
+import "../global.css"
 </script>

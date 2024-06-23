@@ -1,45 +1,45 @@
 <script>
-  import { browser } from "$app/environment"
+import { browser } from "$app/environment"
 
-  import { page } from "$app/stores"
-  import { t } from "$lib/i18n"
-  import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
-  export let closeDrawer
-  export let name = null,
-    href = null,
-    icon = null,
-    badge = null,
-    badgeclass = null,
-    highlightAnotherItem = null,
-    deprecated = null,
-    items = null,
-    collapsible = null,
-    highlight = null,
-    target = null
+import { page } from "$app/stores"
+import { t } from "$lib/i18n"
+import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
+export let closeDrawer
+export let name = null,
+  href = null,
+  icon = null,
+  badge = null,
+  badgeclass = null,
+  highlightAnotherItem = null,
+  deprecated = null,
+  items = null,
+  collapsible = null,
+  highlight = null,
+  target = null
 
-  const sanitize = (name) => {
-    return name.toLowerCase().replace(/\W/g, "-")
+const sanitize = (name) => {
+  return name.toLowerCase().replace(/\W/g, "-")
+}
+$: getDisclosureState = (name, items) => {
+  // open the disclosure if the user has opened it before
+  if (browser && localStorage.getItem(`disclosure-${sanitize(name)}`) === "open") {
+    return "open"
   }
-  $: getDisclosureState = (name, items) => {
-    // open the disclosure if the user has opened it before
-    if (browser && localStorage.getItem(`disclosure-${sanitize(name)}`) === "open") {
-      return "open"
-    }
-    // open the disclosure if the current page is a child of the disclosure
-    if (
-      items.some((item) => item.href === $page.url.pathname) ||
-      items.some((item) => item.items?.some((subitem) => subitem.href === $page.url.pathname))
-    ) {
-      return "open"
-    }
+  // open the disclosure if the current page is a child of the disclosure
+  if (
+    items.some((item) => item.href === $page.url.pathname) ||
+    items.some((item) => item.items?.some((subitem) => subitem.href === $page.url.pathname))
+  ) {
+    return "open"
+  }
 
-    return null
+  return null
+}
+const saveDisclosureState = (id, value) => {
+  if (browser) {
+    localStorage.setItem(id, value)
   }
-  const saveDisclosureState = (id, value) => {
-    if (browser) {
-      localStorage.setItem(id, value)
-    }
-  }
+}
 </script>
 
 {#if name}
@@ -47,9 +47,10 @@
     {#if items}
       {#if collapsible}
         <details
-          id={`disclosure-${sanitize(name)}`}
-          open={getDisclosureState(name, items)}
-          on:toggle={(el) => saveDisclosureState(el.target.id, el.target.open ? "open" : "close")}>
+          id="{`disclosure-${sanitize(name)}`}"
+          open="{getDisclosureState(name, items)}"
+          ontoggle="{(el) =>
+            saveDisclosureState(el.target.id, el.target.open ? 'open' : 'close')}">
           <summary class="group">
             {#if icon}
               <span>{@html icon}</span>
@@ -103,26 +104,26 @@
     {#if !items && href}
       <a
         {href}
-        target={target === "blank" ? "_blank" : undefined}
-        rel={target === "blank" ? "noopener noreferrer" : undefined}
-        on:click={closeDrawer}
-        class={`group ${$page.url.pathname == href ? "active" : ""} ${
-          $page.url.pathname == highlightAnotherItem ? "active" : ""
-        } ${$page.url.pathname.startsWith(href) ? "active" : ""} ${
+        target="{target === 'blank' ? '_blank' : undefined}"
+        rel="{target === 'blank' ? 'noopener noreferrer' : undefined}"
+        onclick="{closeDrawer}"
+        class="{`group ${$page.url.pathname == href ? 'active' : ''} ${
+          $page.url.pathname == highlightAnotherItem ? 'active' : ''
+        } ${$page.url.pathname.startsWith(href) ? 'active' : ''} ${
           highlight
-            ? "from-primary to-primary/0 hover:to-primary/10 from-[-200%] to-60% [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))]"
-            : ""
-        }`}>
+            ? 'from-primary to-primary/0 hover:to-primary/10 from-[-200%] to-60% [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))]'
+            : ''
+        }`}">
         {#if icon}
-          <span class={highlight ? " group-hover:text-primary transition-colors" : ""}>
+          <span class="{highlight ? ' group-hover:text-primary transition-colors' : ''}">
             {@html icon}
           </span>
         {/if}
-        <span class={deprecated ? "line-through" : undefined}>
+        <span class="{deprecated ? 'line-through' : undefined}">
           {@html $t(name)}
         </span>
         {#if badge}
-          <span class={`badge badge-sm font-mono text-opacity-70 ${badgeclass && badgeclass}`}>
+          <span class="{`badge badge-sm font-mono text-opacity-70 ${badgeclass && badgeclass}`}">
             {$t(badge)}
           </span>
         {/if}
@@ -139,18 +140,20 @@
               stroke="currentColor"
               stroke-width="4"
               stroke-linecap="butt"
-              stroke-linejoin="bevel" />
+              stroke-linejoin="bevel">
+            </path>
             <path
               d="M11.5439 36.4559L36.9997 11"
               stroke="currentColor"
               stroke-width="4"
               stroke-linecap="butt"
-              stroke-linejoin="bevel" />
+              stroke-linejoin="bevel">
+            </path>
           </svg>
         {/if}
       </a>
     {/if}
   </li>
 {:else if !items}
-  <li />
+  <li></li>
 {/if}

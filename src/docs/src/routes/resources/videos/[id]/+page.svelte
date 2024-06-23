@@ -1,27 +1,27 @@
 <script>
-  export let data
-  import SEO from "$components/SEO.svelte"
+export let data
+import SEO from "$components/SEO.svelte"
 </script>
 
 <SEO
-  title={data.videos.find((video) => video.id == data.video.id).snippet.title}
-  desc={`Tailwind CSS video tutorial: ${
+  title="{data.videos.find((video) => video.id == data.video.id).snippet.title}"
+  desc="{`Tailwind CSS video tutorial: ${
     data.videos.find((video) => video.id == data.video.id).snippet.title
-  }`} />
+  }`}" />
 
 <div class="embed-container rounded-box">
   <iframe
-    title={data.videos.find((video) => video.id == data.video.id).snippet.title}
-    src={`https://www.youtube.com/embed/${data.video.id}`}
+    title="{data.videos.find((video) => video.id == data.video.id).snippet.title}"
+    src="{`https://www.youtube.com/embed/${data.video.id}`}"
     frameborder="0"
     allowfullscreen>
   </iframe>
 </div>
-<div class="h-10" />
+<div class="h-10"></div>
 <h1 class="text-3xl font-bold">
   {data.videos.find((video) => video.id == data.video.id).snippet.title}
 </h1>
-<div class="h-10" />
+<div class="h-10"></div>
 <div class="text-base-content/60 bg-base-200 rounded-box p-6">
   <p class="mx-auto max-w-2xl text-sm">
     {data.videos.find((video) => video.id == data.video.id).snippet.description}

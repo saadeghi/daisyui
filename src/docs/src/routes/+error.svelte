@@ -1,5 +1,5 @@
 <script>
-  import { page } from "$app/stores"
+import { page } from "$app/stores"
 </script>
 
 <div class="hero not-prose min-h-screen">

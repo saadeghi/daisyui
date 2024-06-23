@@ -1,4 +1,4 @@
-export let tweets = [
+export const tweets = [
   {
     id: "1633913146422198276",
     content:
