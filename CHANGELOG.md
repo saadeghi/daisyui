@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.7 (2024-06-23)
+
+
+### Bug Fixes
+
+* RTL `<select>` padding ([08bc2e6](https://github.com/saadeghi/daisyui/commit/08bc2e6935841b4dc376351177d601f36870c4e3)), closes [#3098](https://github.com/saadeghi/daisyui/issues/3098)
+
 ## 4.12.6 (2024-06-23)
 
 ## 4.12.5 (2024-06-23)
