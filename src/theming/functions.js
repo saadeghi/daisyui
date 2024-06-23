@@ -196,9 +196,9 @@ module.exports = {
 
     let themeOrder = []
     if (Array.isArray(config("daisyui.themes"))) {
-      for (const item of config("daisyui.themes")) {
+      for (const theme of config("daisyui.themes")) {
         if (typeof theme === "object" && theme !== null) {
-          for (const customThemeName of Object.keys(item)) {
+          for (const customThemeName of Object.keys(theme)) {
             themeOrder.push(customThemeName)
           }
         } else if (Object.hasOwn(includedThemesObj, theme)) {
