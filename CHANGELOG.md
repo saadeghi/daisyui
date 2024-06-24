@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.8 (2024-06-24)
+
+
+### Bug Fixes
+
+* decrease default scrollbar color contrast using color-mix ([92d98ed](https://github.com/saadeghi/daisyui/commit/92d98ed60acb8fa1300fc1665b9c1df3195a9b60))
+
 ## 4.12.7 (2024-06-23)
 
 
