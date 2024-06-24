@@ -234,6 +234,12 @@ function generateColors(newColorToCheck = "transparent") {
     console.log(`${newColorToCheck} is not a valid color`)
   }
 }
+//prevent paste span tag outside text
+function handlePastedText(event,color){
+  const text = event.clipboardData.getData('Text')
+  color.value  = text
+  event.preventDefault()
+}
 
 function resetColors() {
   if (browser && localStorage.getItem("theme-generator-colors")) {
@@ -490,6 +496,7 @@ onMount(() => {
                   contenteditable="true"
                   bind:innerHTML="{color.value}"
                   oninput="{() => generateColors(color.value)}"
+                  onpaste="{ event => handlePastedText(event,color)}"
                   onkeyup="{() => generateColors(color.value)}">{color.value}</button>",
 </code>{/each}<code>{`          },
         },
