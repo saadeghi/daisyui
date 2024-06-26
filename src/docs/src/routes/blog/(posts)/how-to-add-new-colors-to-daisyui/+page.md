@@ -86,9 +86,9 @@ module.exports = {
         light: {
           // importing the built-in 'light' theme
           // and setting the color values for '--primary-muted'
-          // (numbers are HSL values)
-          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
-          "--primary-muted": "338 83% 66%",
+          // (numbers are OKLCH values)
+          ...require("daisyui/src/theming/themes")["light"],
+          "--primary-muted": "65% 0.2 295",
         },
       },
     ],
@@ -117,22 +117,22 @@ module.exports = {
       // light theme
       {
         light: {
-          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
-          "--primary-muted": "259 94% 71%",
+          ...require("daisyui/src/theming/themes")["light"],
+          "--primary-muted": "65% 0.2 295",
         },
       },
       // cupcake theme
       {
         cupcake: {
-          ...require("daisyui/src/theming/themes")["[data-theme=cupcake]"],
-          "--primary-muted": "183 47% 79%",
+          ...require("daisyui/src/theming/themes")["cupcake"],
+          "--primary-muted": "87% 0.05 200",
         },
       },
       // dark theme
       {
         dark: {
-          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
-          "--primary-muted": "262 80% 30%",
+          ...require("daisyui/src/theming/themes")["dark"],
+          "--primary-muted": "34% 0.2 289",
         },
       },
     ],
