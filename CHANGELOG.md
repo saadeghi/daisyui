@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.9 (2024-06-26)
+
+
+### Bug Fixes
+
+* missing type for `themeRoot` config ([fade326](https://github.com/saadeghi/daisyui/commit/fade32687423b8c91db38319c71b4a5d1ab36135)), closes [#3094](https://github.com/saadeghi/daisyui/issues/3094)
+
 ## 4.12.8 (2024-06-24)
 
 
