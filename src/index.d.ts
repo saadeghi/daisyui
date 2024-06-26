@@ -101,6 +101,8 @@ interface DaisyUIConfig {
    * as extensions to Tailwind CSS classes. If you use daisyUI `prefix` option (like `daisy-`) and
    * Tailwind CSS `prefix` option (like `tw-`) together, classnames will be prefixed like
    * this: `tw-daisy-btn`.
+   *
+   * @default ''
    */
   prefix?: string
   /**
@@ -109,6 +111,12 @@ interface DaisyUIConfig {
    * @default true
    */
   logs?: boolean
+  /**
+   * The element that receives theme color CSS variables
+   *
+   * @default ':root'
+   */
+  themeRoot?: string
 }
 
 export type { DaisyUIConfig as Config, Theme, CustomTheme }
