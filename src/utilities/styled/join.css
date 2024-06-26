@@ -1,6 +1,12 @@
 .join.join-vertical > :where(*:not(:first-child)) {
   @apply mx-0 -mt-px;
+  &:is(.btn){
+    @apply mt-[calc(var(--border-btn)*-1)]
+  }
 }
 .join.join-horizontal > :where(*:not(:first-child)) {
   @apply my-0 -ms-px;
+  &:is(.btn){
+    @apply ms-[calc(var(--border-btn)*-1)];
+  }
 }
