@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.10 (2024-06-26)
+
+
+### Bug Fixes
+
+* join spacing adapting to button border width ([da94f2c](https://github.com/saadeghi/daisyui/commit/da94f2cbaeb7d4296ac0510306add812edf5e336)), closes [#3028](https://github.com/saadeghi/daisyui/issues/3028)
+
 ## 4.12.9 (2024-06-26)
 
 
