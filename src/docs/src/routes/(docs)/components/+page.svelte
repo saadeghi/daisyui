@@ -2,7 +2,7 @@
 import { page } from "$app/stores"
 import SEO from "$components/SEO.svelte"
 import Translate from "$components/Translate.svelte"
-import Ads from "$components/Ads.svelte"
+import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
 export let data
 let { components } = data
 </script>
@@ -35,5 +35,5 @@ let { components } = data
       {/each}
     </div>
   </div>
-  <Ads adslot="carbon2" />
+  <AlternativeSidebar />
 </div>

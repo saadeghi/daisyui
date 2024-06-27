@@ -1,7 +1,7 @@
 <script>
 import { page } from "$app/stores"
 import Footer from "$components/Footer.svelte"
-import Ads from "$components/Ads.svelte"
+import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
 import Sponsors from "$components/Sponsors.svelte"
 import "prism-themes/themes/prism-material-dark.css"
 import "$lib/style/prism-themes-modify.css"
@@ -138,6 +138,6 @@ let { tags } = data
       <Sponsors wrapperClasses="flex-col sm:flex-row" />
     </div>
   </div>
-  <Ads adslot="carbon2" />
+  <AlternativeSidebar />
 </div>
 <Footer />

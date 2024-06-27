@@ -1,6 +1,6 @@
 <script>
 import { page } from "$app/stores"
-import Ads from "$components/Ads.svelte"
+import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
 import ComponentFooter from "$components/ComponentFooter.svelte"
 import SEO from "$components/SEO.svelte"
 import Sponsors from "$components/Sponsors.svelte"
@@ -29,5 +29,5 @@ export let desc
       <Sponsors wrapperClasses="flex-col sm:flex-row" />
     </div>
   </div>
-  <Ads adslot="carbon2" />
+  <AlternativeSidebar />
 </div>

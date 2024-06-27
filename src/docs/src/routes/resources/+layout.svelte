@@ -1,7 +1,7 @@
 <script>
 import { page } from "$app/stores"
 import Footer from "$components/Footer.svelte"
-import Ads from "$components/Ads.svelte"
+import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
 export let data
 let { tags } = data
 </script>
@@ -33,6 +33,6 @@ let { tags } = data
     </nav>
     <slot />
   </div>
-  <Ads adslot="carbon2" />
+  <AlternativeSidebar />
 </div>
 <Footer />

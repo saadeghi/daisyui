@@ -1,7 +1,7 @@
 <script>
 import Countup from "svelte-countup"
 import SEO from "$components/SEO.svelte"
-import Ads from "$components/Ads.svelte"
+import Carbon from "$components/Carbon.svelte"
 import Footer from "$components/Footer.svelte"
 import { t } from "$lib/i18n"
 
@@ -743,8 +743,10 @@ const demo_1_ElementTextHandler = $derived(() => {
     </div>
   </div>
 
-  <div class="pointer-events-none bottom-0 flex justify-center p-4 xl:sticky xl:justify-end">
-    <Ads adslot="carbon1" />
+  <div class="pointer-events-none bottom-0 flex justify-center p-2 xl:sticky xl:justify-end">
+    <div class="pointer-events-auto h-[116px] w-full min-w-[330px] max-w-[350px]">
+      <Carbon/>
+    </div>
   </div>
 </div>
 

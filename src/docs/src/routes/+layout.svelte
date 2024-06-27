@@ -1,6 +1,5 @@
 <script>
 import "$components/StyleHandler.svelte"
-import Scripts from "$components/Scripts.svelte"
 import Navbar from "$components/Navbar.svelte"
 import Sidebar from "$components/Sidebar.svelte"
 import { page } from "$app/stores"
@@ -172,4 +171,4 @@ Array.prototype.matchPattern = function (inputString) {
     </aside>
   </div>
 </div>
-<Scripts />
+
