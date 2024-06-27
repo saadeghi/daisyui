@@ -37,6 +37,7 @@ export const productCustomAttributes = {
   130237: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/auth.png",
     tech: ["html", "daisyui"],
+    partnerid: "VMAme",
   },
   120591: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.png",

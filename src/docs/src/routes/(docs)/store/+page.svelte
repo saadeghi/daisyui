@@ -16,6 +16,11 @@ function convertCurrency(number) {
   const formatted = (number / 100).toFixed(2)
   return `$${formatted.endsWith(".00") ? formatted.slice(0, -3) : formatted}`
 }
+function extractUUID(url) {
+  const regex = /\/buy\/([a-f0-9-]{36})(?:\?|$)/
+  const match = url.match(regex)
+  return match ? match[1] : null
+}
 const dateFormat = {
   year: "numeric",
   month: "numeric",
@@ -204,7 +209,7 @@ const copyText = (text) => {
           </div>
           <div class="flex flex-col items-center gap-3">
             <a
-              href="{product.attributes.buy_now_url}"
+              href="{product.customattributes.partnerid ? `/store/redirect?product_id=${extractUUID(product.attributes.buy_now_url)}&aff=${product.customattributes.partnerid}` : product.attributes.buy_now_url}"
               class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
               target="_blank"
               rel="noopener noreferrer">
