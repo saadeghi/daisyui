@@ -209,7 +209,7 @@ const copyText = (text) => {
           </div>
           <div class="flex flex-col items-center gap-3">
             <a
-              href="{product.customattributes.partnerid ? `/store/redirect?product_id=${extractUUID(product.attributes.buy_now_url)}&aff=${product.customattributes.partnerid}` : product.attributes.buy_now_url}"
+              href="{product.customattributes.ref ? `/store/checkout?product=${extractUUID(product.attributes.buy_now_url)}&ref=${product.customattributes.ref}` : product.attributes.buy_now_url}"
               class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
               target="_blank"
               rel="noopener noreferrer">
