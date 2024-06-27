@@ -27,7 +27,7 @@ onMount(async () => {
     {/if}
   </div>
 {/if}
-{#if adslot === "carbon2"}
+{#if adslot === "carbon2" && showCarbon}
   <div>
     <div class="sticky top-20 my-6 xl:mx-2 xl:my-0 xl:mt-32 xl:w-[130px]">
       <div class="hidden xl:block">
