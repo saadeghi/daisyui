@@ -12,13 +12,8 @@
 const urlParams = new URLSearchParams(window.location.search)
 window.lemonSqueezyAffiliateConfig = {
   store: "daisyui",
-  debug: true,
-  // trackOnLoad: false,
-  // onReady: (e) => {
-  //   e.Track(urlParams.get("aff"))
-  // },
   onTrack: (e) => {
-    // window.location.href = `https://daisyui.lemonsqueezy.com/checkout/buy/${urlParams.get("product")}?aff_ref=${e.click}`
+    window.location.href = `https://daisyui.lemonsqueezy.com/checkout/buy/${urlParams.get("product")}?aff_ref=${e.click}`
   },
 }
 </script> <script src="https://lmsqueezy.com/affiliate.js" defer=""></script><!--]--><title>Loading…</title>
