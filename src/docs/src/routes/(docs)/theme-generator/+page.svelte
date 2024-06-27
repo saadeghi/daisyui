@@ -235,9 +235,9 @@ function generateColors(newColorToCheck = "transparent") {
   }
 }
 //prevent paste span tag outside text
-function handlePastedText(event,color){
-  const text = event.clipboardData.getData('Text')
-  color.value  = text
+function handlePastedText(event, color) {
+  const text = event.clipboardData.getData("Text")
+  color.value = text
   event.preventDefault()
 }
 
