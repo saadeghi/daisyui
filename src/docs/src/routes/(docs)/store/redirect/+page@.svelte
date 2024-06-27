@@ -15,10 +15,10 @@ function validate_id({ input, length }) {
   return null
 }
 
-const product_id = validate_id({ input: $page.url.searchParams.get("product_id"), length: 36 })
-// const aff = validate_id({ input: $page.url.searchParams.get("aff"), length: 5 })
+let product_id
 
 onMount(() => {
+  product_id = validate_id({ input: $page.url.searchParams.get("product_id"), length: 36 })
   window.location.href = `https://daisyui.lemonsqueezy.com/checkout/buy/${product_id}?aff_ref=${LemonSqueezy.Affiliate.GetId()}`
 })
 </script>
