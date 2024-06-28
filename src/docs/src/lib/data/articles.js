@@ -1,13 +1,23 @@
 export const articles = [
   {
-    title: "daisyUI: Tailwind CSS components for reducing markup",
+    title: "daisyUI adoption guide: Overview, examples, and alternatives",
     site: "Logrocket",
-    link: "https://blog.logrocket.com/daisyui-tailwind-components-react-apps/",
+    link: "https://blog.logrocket.com/daisyui-adoption-guide/",
   },
   {
     title: "Build a Personal Timeline with Hygraph and SvelteKit",
     site: "GraphCMS",
     link: "https://graphcms.com/blog/build-a-personal-timeline-with-graphcms-and-sveltekit",
+  },
+  {
+    title: "Customising Fonts in Tailwind CSS and daisyUI",
+    site: "Scott Spence",
+    link: "https://scottspence.com/posts/customising-fonts-in-tailwind-css-and-daisyui",
+  },
+  {
+    title: "daisyUI: Tailwind CSS components for reducing markup",
+    site: "Logrocket",
+    link: "https://blog.logrocket.com/daisyui-tailwind-components-react-apps/",
   },
   {
     title: "Weekly Web Development Resources #85",

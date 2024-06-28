@@ -5,6 +5,8 @@ export const videoIds = [
   "F2813o7AFsw",
   "PctfrkRo8Fg",
   "akd7u69k27k",
+  "CKOH37J1EnI",
+  "TW9MQLjL1uw",
   "ZxrNzv0rEws",
   "L2P8-crX59o",
   "KLxgQFOCZjQ",
@@ -106,4 +108,8 @@ export const videoIds = [
   "YPYpPn-bY_o",
   "FihklTCyu5I",
   "r0skgZkx_AQ",
+  "WinTVfAJbAw",
+  "UfkrWf5jwrA",
+  "XHin0fKGl6w",
+  "akd7u69k27k",
 ]
