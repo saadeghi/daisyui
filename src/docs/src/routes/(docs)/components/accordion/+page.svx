@@ -270,3 +270,60 @@ data="{[
 
 {/snippet}
 </Component>
+
+<Component title="Accordion always open" desc="Use checkbox instead of radio inputs to keep accordion items open.">
+<div class="collapse collapse-arrow bg-base-200">
+  <input type="checkbox" checked="checked" />
+  <div class="collapse-title text-xl font-medium">
+    Click to show/hide content
+  </div>
+  <div class="collapse-content">
+    <p>hello</p>
+  </div>
+</div>
+<div class="collapse collapse-arrow bg-base-200">
+  <input type="checkbox" />
+  <div class="collapse-title text-xl font-medium">
+    Click to show/hide content
+  </div>
+  <div class="collapse-content">
+    <p>hello</p>
+  </div>
+</div>
+<div class="collapse collapse-arrow bg-base-200">
+  <input type="checkbox" />
+  <div class="collapse-title text-xl font-medium">
+    Click to show/hide content
+  </div>
+  <div class="collapse-content">
+    <p>hello</p>
+  </div>
+</div>
+{#snippet html()}
+
+```html
+<div class="$$collapse $$collapse-arrow bg-base-200">
+  <input type="checkbox" checked="checked" />
+  <div class="$$collapse-title text-xl font-medium">Click to show/hide content</div>
+  <div class="$$collapse-content">
+    <p>hello</p>
+  </div>
+</div>
+<div class="$$collapse $$collapse-arrow bg-base-200">
+  <input type="checkbox" />
+  <div class="$$collapse-title text-xl font-medium">Click to show/hide content</div>
+  <div class="$$collapse-content">
+    <p>hello</p>
+  </div>
+</div>
+<div class="$$collapse $$collapse-arrow bg-base-200">
+  <input type="checkbox" />
+  <div class="$$collapse-title text-xl font-medium">Click to show/hide content</div>
+  <div class="$$collapse-content">
+    <p>hello</p>
+  </div>
+</div>
+```
+
+{/snippet}
+</Component>
