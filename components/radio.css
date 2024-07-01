@@ -1,119 +1,72 @@
 .radio {
-  --chkbg: var(--color-base-content);
-  @apply border-base-content/20 h-6 w-6 cursor-pointer appearance-none rounded-full border;
-  &:focus {
-    box-shadow: none;
+  @apply border-base-content/20 h-6 w-6 cursor-pointer appearance-none rounded-full border shrink-0 text-base-content relative p-[4px];
+  box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
+  &:before {
+    @apply rounded-full size-full block;
+    content: "";
   }
   &:focus-visible {
-    @apply outline-base-content outline outline-2 outline-offset-2;
+    @apply outline outline-2 outline-offset-2 outline-current;
   }
   &:checked,
   &[aria-checked="true"] {
-    @apply bg-base-content;
-    background-image: none;
     animation: radiomark var(--animation-input, 0.2s) ease-out;
-    box-shadow: 0 0 0 4px var(--color-base-100) inset,
-      0 0 0 4px var(--color-base-100) inset;
+    @apply bg-base-100 border-current;
+    &:before {
+      @apply bg-current;
+      box-shadow: 0 -1px oklch(0% 0 0 / 0.1) inset,
+        0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, 0 1px oklch(0% 0 0 / 0.1);
+    }
   }
 }
 .radio-primary {
-  --chkbg: var(--color-primary);
-  @apply border-primary [@media(hover:hover)]:hover:border-primary;
-  &:focus-visible {
-    @apply outline-primary;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    @apply border-primary bg-primary text-primary-content;
-  }
+  @apply text-primary;
 }
 .radio-secondary {
-  --chkbg: var(--color-secondary);
-  @apply border-secondary [@media(hover:hover)]:hover:border-secondary;
-  &:focus-visible {
-    @apply outline-secondary;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    @apply border-secondary bg-secondary text-secondary-content;
-  }
+  @apply text-secondary;
 }
 .radio-accent {
-  --chkbg: var(--color-accent);
-  @apply border-accent [@media(hover:hover)]:hover:border-accent;
-  &:focus-visible {
-    @apply outline-accent;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    @apply border-accent bg-accent text-accent-content;
-  }
+  @apply text-accent;
 }
 .radio-success {
-  --chkbg: var(--color-success);
-  @apply border-success [@media(hover:hover)]:hover:border-success;
-  &:focus-visible {
-    @apply outline-success;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    @apply border-success bg-success text-success-content;
-  }
+  @apply text-success;
 }
 .radio-warning {
-  --chkbg: var(--color-warning);
-  @apply border-warning [@media(hover:hover)]:hover:border-warning;
-  &:focus-visible {
-    @apply outline-warning;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    @apply border-warning bg-warning text-warning-content;
-  }
+  @apply text-warning;
 }
 .radio-info {
-  --chkbg: var(--color-info);
-  @apply border-info [@media(hover:hover)]:hover:border-info;
-  &:focus-visible {
-    @apply outline-info;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    @apply border-info bg-info text-info-content;
-  }
+  @apply text-info;
 }
 .radio-error {
-  --chkbg: var(--color-error);
-  @apply border-error [@media(hover:hover)]:hover:border-error;
-  &:focus-visible {
-    @apply outline-error;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    @apply border-error bg-error text-error-content;
-  }
+  @apply text-error;
 }
-
 .radio:disabled {
   @apply cursor-not-allowed opacity-20;
 }
 
 @keyframes radiomark {
   0% {
-    box-shadow: 0 0 0 12px var(--color-base-100) inset,
-      0 0 0 12px var(--color-base-100) inset;
+    padding: 5px;
   }
   50% {
-    box-shadow: 0 0 0 3px var(--color-base-100) inset,
-      0 0 0 3px var(--color-base-100) inset;
+    padding: 3px;
   }
   100% {
-    box-shadow: 0 0 0 4px var(--color-base-100) inset,
-      0 0 0 4px var(--color-base-100) inset;
+    padding: 4px;
   }
 }
 
-/* backward compatibility */
-.radio-mark {
-  @apply hidden;
+/* responsive */
+
+[type="radio"].radio-xs {
+  @apply size-4;
+}
+[type="radio"].radio-sm {
+  @apply size-5;
+}
+[type="radio"].radio-md {
+  @apply size-6;
+}
+[type="radio"].radio-lg {
+  @apply size-8;
 }
