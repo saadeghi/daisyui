@@ -20,25 +20,25 @@
   }
 }
 .radio-primary {
-  @apply text-primary;
+  @apply border-current text-primary;
 }
 .radio-secondary {
-  @apply text-secondary;
+  @apply border-current text-secondary;
 }
 .radio-accent {
-  @apply text-accent;
+  @apply border-current text-accent;
 }
 .radio-success {
-  @apply text-success;
+  @apply border-current text-success;
 }
 .radio-warning {
-  @apply text-warning;
+  @apply border-current text-warning;
 }
 .radio-info {
-  @apply text-info;
+  @apply border-current text-info;
 }
 .radio-error {
-  @apply text-error;
+  @apply border-current text-error;
 }
 .radio:disabled {
   @apply cursor-not-allowed opacity-20;
@@ -50,9 +50,6 @@
   }
   50% {
     padding: 3px;
-  }
-  100% {
-    padding: 4px;
   }
 }
 
