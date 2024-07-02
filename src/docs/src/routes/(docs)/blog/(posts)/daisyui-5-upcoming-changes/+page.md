@@ -16,7 +16,7 @@ daisyUI 5 is in development and it will be released after Tailwind CSS 4 is rele
 Tailwind CSS 4 is in development and I can't wait for it to be released. You can read the [official announcement](https://tailwindcss.com/blog/tailwindcss-v4-alpha) on the Tailwind CSS blog, but here are some of the highlights:
 
 - New engine which is faster, smaller and more efficient
-- Tailwind CSS 4 will use modern CSS features like `@layer`, `@property`, `color-mix()` ,`@starting-style` , anchor positioning, container queries, and more
+- Tailwind CSS 4 will use modern CSS features like `@layer`, `@property`, `color-mix()`, `@starting-style` , anchor positioning, container queries, and more
 - Automatic content detection: No need for listing all your markup files in a config file. Tailwind CSS will automatically detect the class names in all your markup files and generate the necessary CSS.
 - No need for `tailwind.config.js` file. Everything will be done directly in the CSS file.
 - Tailwind CSS 4 will use CSS variables for colors and all other tokens.
@@ -31,7 +31,7 @@ Plugins in Tailwind CSS 3 and below were expected to be CSS-in-JS. But it is exp
 
 ![tailwind css 4 plugins api syntax tweet](https://img.daisyui.com/images/blog/tailwind-css-4-plugins-api-syntax-tweet.png)
 
-This will make it easier to use daistUI as a plugin in your Tailwind CSS project, and it will also make it easier for us to maintain and update daisyUI since it will be a pure CSS file, without any build process to convert CSS to CSS-in-JS.
+This will make it easier to use daisyUI as a plugin in your Tailwind CSS project, and it will also make it easier for us to maintain and update daisyUI since it will be a pure CSS file, without any build process to convert CSS to CSS-in-JS.
 
 >With the current alpha version of Tailwind CSS 4, technically you can import the whole CSS file of daisyUI in your project but it won't act as a Tailwind CSS plugin.  
 Which means it will include all unused class names in your production CSS file.  
@@ -61,9 +61,9 @@ Instead of using Post CSS nesting, we will use native CSS nesting in the upcomin
 # No forced color format conversion
 
 Colors in Tailwind CSS 4 will be defined as CSS variables and Tailwind CSS will use CSS `color-mix()` function to change the opacity of the colors. This means we won't need to convert the colors to a specific format to be used in Tailwind CSS.  
-daisyUI built-in themes will keep using OKLCH color format as it is currently the most ergonomic P3 color format, but you can use any color format for your custom themes and we won't convert them to OKLCH in the prodcution CSS file just to be compatible with Tailwind CSS opacity utilities.
+daisyUI built-in themes will keep using OKLCH color format as it is currently the most ergonomic P3 color format, but you can use any color format for your custom themes and we won't convert them to OKLCH in the production CSS file just to be compatible with Tailwind CSS opacity utilities.
 
-A challenge for daiysUI 5 will be to generate the optional colors (like `*-content`) as before because:  
+A challenge for daisyUI 5 will be to generate the optional colors (like `*-content`) as before because:  
 - We're not going to process the color values using JS in the build time if we're not going to use pure CSS files
 - CSS `color-contrast()` function is [not supported in browsers](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-contrast) yet
 - CSS `color-contrast()` function is [not supported in Lightning CSS](https://github.com/parcel-bundler/lightningcss/issues/99) (The CSS parser used by Tailwind CSS 4) yet.
@@ -78,7 +78,7 @@ daisyUI currently uses 4 dependencies:
 - `css-selector-tokenizer` for adding prefixes
 
 If daisyUI package is going to include pure CSS files only, we can safely remove all these dependencies.  
-I'm not still sure how we can add prefixes to the daisyUI class names if the we're not going to process the styles using Post CSS, But I will find a way.
+I'm not still sure how we can add prefixes to the daisyUI class names if we're not going to process the styles using Post CSS, But I will find a way.
 
 # Container queries for responsive components
 
@@ -110,7 +110,7 @@ And each of the existing themes will be a simple CSS file that you can include i
 
 ![Reduce Tailwind CSS file size](https://img.daisyui.com/images/blog/css-file-size-daisyui-5.jpg)
 
-This year a lot of new CSS features got available in all modern browsers. And with the new Tailwind CSS 4 changes we will be able to make daiysUI styles simpler and the CSS files smaller.
+This year a lot of new CSS features got available in all modern browsers. And with the new Tailwind CSS 4 changes we will be able to make daisyUI styles simpler and the CSS files smaller.
 
 # Customizable sizing for components
 
