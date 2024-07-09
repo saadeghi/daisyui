@@ -1,0 +1,1 @@
+import{o as i,q as l,A as h}from"./runtime.BUdK6G03.js";import{j as m,z as e,w as s,A as d,B as _}from"./disclose-version.CGgwR5Q_.js";function b(f,n,c,g){var r="",t;i(()=>{r!==(r=n())&&(t&&(h(t),t=null),r!==""&&(t=l(()=>{if(m){e(d(),s[s.length-1]);return}var o=r+"",a=_(o);e(a.firstChild,a.lastChild),f.before(a)})))})}export{b as h};
