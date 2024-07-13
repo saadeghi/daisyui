@@ -15,6 +15,7 @@ export const productCustomAttributes = {
   208203: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.png",
     tech: ["astro", "mdx", "daisyui"],
+    tags: ["v1.1 released with new design"],
   },
   185227: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/app-landingpage.png",
