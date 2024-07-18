@@ -209,7 +209,7 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
               loading="lazy"
               width="54"
               height="54"
-              src="https://img.daisyui.com/pouya-saadeghi.jpg"
+              src="https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp"
               alt="Pouya Saadeghi"
               class="mask mask-squircle" />
           </div>

@@ -420,7 +420,7 @@ export let index
           <img
             width="40"
             height="40"
-            src="https://img.daisyui.com/tailwind-css-component-profile-1@94w.jpg"
+            src="https://img.daisyui.com/images/profile/demo/1@94.webp"
             alt="Tailwind button"
             aria-label="Tailwind CSS button" />
         </div>

@@ -1,6 +1,6 @@
 export const productCustomAttributes = {
   284327: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
     // originalprice: 4900,
     // displayprice: 2900,
     // displaypricenote: "with discount",
@@ -8,22 +8,22 @@ export const productCustomAttributes = {
     // tags: ['Use code "JUNE40" for 40% discount'],
   },
   244268: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["react", "nextjs", "daisyui"],
     preveiw_url: "https://nexus.daisyui.com/",
   },
   208203: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
     tech: ["astro", "mdx", "daisyui"],
     tags: ["v1.1 released with new design"],
   },
   185227: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/app-landingpage.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine", "daisyui"],
     // tags: ["React + Svelte + Vue versions added"],
   },
   144550: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
     tech: ["react", "svelte", "vite", "framer", "daisyui"],
     // originalprice: 1900,
     // displayprice: 1400,
@@ -31,17 +31,17 @@ export const productCustomAttributes = {
     // tags: ["Svelte version added"],
   },
   142623: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/saas-landingpage.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine", "daisyui"],
     // tags: ["React + Svelte + Vue versions added"],
   },
   130237: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/auth.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/auth.webp",
     tech: ["html", "daisyui"],
     // ref: "VMAme",
   },
   120591: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.png",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
     tech: ["html", "webcomponents", "daisyui"],
     // tags: ["Best Seller"],
     originalprice: 2900,

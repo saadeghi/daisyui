@@ -33,15 +33,16 @@ const processImage = (input, size = 72) => {
   sharp(input)
     .resize(size)
     .webp({ quality: 100 })
-    .toFile(input.replace(".jpg", `-${size}.webp`))
-    .then(() => {
-      // console.log(`Resized ${input}`)
+    .toBuffer((err, buffer) => {
+      fs.writeFile(input.replace(".jpg", ".webp"), buffer, (e) => {
+        fs.unlink(input, () => {})
+      })
     })
 }
 
 tweets.forEach((tweet, index) => {
-  const url = `https://unavatar.io/twitter/${tweet.username}?fallback=false`
-  const filename = `../../../daisyui-images/twitter-profile-pics/${tweet.username}.jpg`
+  const url = `https://unavatar.io/x/${tweet.username}?fallback=false`
+  const filename = `../../../daisyui-images/profile/x/${tweet.username}.jpg`
   setTimeout(() => {
     downloadImage(url, filename)
     console.log(`Updated: ${filename}`)

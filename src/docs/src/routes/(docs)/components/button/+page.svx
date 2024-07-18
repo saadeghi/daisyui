@@ -194,7 +194,7 @@ data="{[
 {/snippet}
 </Component>
 
-<Component title="Glass button" bg="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg">
+<Component title="Glass button" bg="https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp">
 <button class="btn glass">Glass button</button>
 {#snippet html()}
 

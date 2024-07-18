@@ -4,7 +4,7 @@ desc: An overview of of daisyUI 5 upcoming changes and features
 published: true
 date: 2024-07-02
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/daisyui-5-flowers.png
+thumbnail: https://img.daisyui.com/images/blog/daisyui-5-flowers.webp
 tags:
   - daisyUI
 ---
@@ -29,7 +29,7 @@ Plugins API for Tailwind CSS 4 is still in development. Currently it's not possi
 
 Plugins in Tailwind CSS 3 and below were expected to be CSS-in-JS. But it is expected to be pure CSS files in Tailwind CSS 4.
 
-![tailwind css 4 plugins api syntax tweet](https://img.daisyui.com/images/blog/tailwind-css-4-plugins-api-syntax-tweet.png)
+![tailwind css 4 plugins api syntax tweet](https://img.daisyui.com/images/blog/tailwind-css-4-plugins-api-syntax-tweet.webp)
 
 This will make it easier to use daisyUI as a plugin in your Tailwind CSS project, and it will also make it easier for us to maintain and update daisyUI since it will be a pure CSS file, without any build process to convert CSS to CSS-in-JS.
 
@@ -40,7 +40,7 @@ So let's wait for the new Tailwind CSS 4 plugins API to be released.
 
 # No JS config
 
-![Tailwind CSS 4 config](https://img.daisyui.com/images/blog/rip-tailwind-config-js.jpg)
+![Tailwind CSS 4 config](https://img.daisyui.com/images/blog/rip-tailwind-config-js.webp)
 
 
 If Tailwind CSS 4 is going to allow importing CSS files as plugins, we won't need a JS config file for daisyUI. Everything will be done in the CSS file.
@@ -86,7 +86,7 @@ Container queries are now supported in all modern browsers. We will use them for
 
 # CSS Popover API and anchor positioning
 
-![daisyUI 5 dropdown popover API](https://img.daisyui.com/images/blog/daisyui-5-dropdown-popover.jpg)
+![daisyUI 5 dropdown popover API](https://img.daisyui.com/images/blog/daisyui-5-dropdown-popover.webp)
 
 
 We've been using CSS `:focus` or `<details>` element for dropdowns in daisyUI as they were the best no-JS options we had at the time. The problem with them is, without using JS there's no way to close a dropdown by both clicking outside OR clicking the button. You had to choose one.  
@@ -108,7 +108,7 @@ And each of the existing themes will be a simple CSS file that you can include i
 
 # Smaller CSS size
 
-![Reduce Tailwind CSS file size](https://img.daisyui.com/images/blog/css-file-size-daisyui-5.jpg)
+![Reduce Tailwind CSS file size](https://img.daisyui.com/images/blog/css-file-size-daisyui-5.webp)
 
 This year a lot of new CSS features got available in all modern browsers. And with the new Tailwind CSS 4 changes we will be able to make daisyUI styles simpler and the CSS files smaller.
 

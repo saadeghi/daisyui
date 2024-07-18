@@ -57,7 +57,7 @@ data="{[
 <Component title="Hero with figure">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row">
-    <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
     <div>
       <h3 class="text-5xl font-bold">Box Office News!</h3>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -71,7 +71,7 @@ data="{[
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
       class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Box Office News!</h1>
@@ -91,7 +91,7 @@ data="{[
 <Component title="Hero with figure but reverse order">
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
-    <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
+    <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
     <div>
       <h3 class="text-5xl font-bold">Box Office News!</h3>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -105,7 +105,7 @@ data="{[
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
       class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Box Office News!</h1>
@@ -195,7 +195,7 @@ data="{[
 </Component>
 
 <Component title="Hero with overlay image">
-<div class="hero min-h-[30rem] rounded" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+<div class="hero min-h-[30rem] rounded" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
   <div class="hero-overlay rounded bg-opacity-60"></div>
   <div class="text-center hero-content text-neutral-content">
     <div class="max-w-md">
@@ -210,7 +210,7 @@ data="{[
 ```html
 <div
   class="$$hero min-h-screen"
-  style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+  style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
   <div class="$$hero-overlay bg-opacity-60"></div>
   <div class="$$hero-content text-neutral-content text-center">
     <div class="max-w-md">
@@ -233,7 +233,7 @@ data="{[
 <div
   class="$$hero min-h-screen"
   style={{
-    backgroundImage: "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+    backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
   }}>
   <div class="$$hero-overlay bg-opacity-60"></div>
   <div class="$$hero-content text-neutral-content text-center">

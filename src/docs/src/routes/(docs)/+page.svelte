@@ -469,7 +469,7 @@ const demo_1_ElementTextHandler = $derived(() => {
                                   loading="lazy"
                                   width="40"
                                   height="40"
-                                  src="https://img.daisyui.com/tailwind-css-component-profile-1@94w.jpg"
+                                  src="https://img.daisyui.com/images/profile/demo/1@94.webp"
                                   alt="tailwind css avatar component" />
                               </div>
                             </div>
@@ -1381,7 +1381,7 @@ const demo_1_ElementTextHandler = $derived(() => {
               [1.05, 1]
             )}`}"
             alt="{`daisyUI ${logo}`}"
-            src="{`https://img.daisyui.com/logos/${logo}.svg`}" />
+            src="{`https://img.daisyui.com/images/logos/${logo}.svg`}" />
         {/each}
       </div>
     </div>
@@ -1772,7 +1772,7 @@ const demo_1_ElementTextHandler = $derived(() => {
             width="96"
             height="96"
             class="aspect-square h-10 w-10"
-            src="{`https://img.daisyui.com/logos/${logo}.svg`}"
+            src="{`https://img.daisyui.com/images/logos/${logo}.svg`}"
             alt="{`daisyUI ${logo}`}" />
         {/each}
       </div>

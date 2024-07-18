@@ -233,7 +233,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
       <img
         class="pointer-events-none"
         alt="daisyUI store"
-        src="https://img.daisyui.com/images/store/admin-dashboard.png" />
+        src="https://img.daisyui.com/images/store/admin-dashboard.webp" />
     </a>
   </figure>
   <div
@@ -294,7 +294,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
     <img
       class="pointer-events-none"
       alt="daisyUI store"
-      src="https://img.daisyui.com/images/store/nexus.png" />
+      src="https://img.daisyui.com/images/store/nexus.webp" />
   </figure>
   <div
     class="bg-accent -left-1/5 pointer-events-none absolute bottom-[-50%] aspect-square w-3/4 -translate-x-1/2 rounded-full opacity-20 blur-3xl">

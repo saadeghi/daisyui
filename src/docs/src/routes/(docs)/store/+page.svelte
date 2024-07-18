@@ -305,7 +305,7 @@ const copyText = (text) => {
                 data-tip="{data.tech[tech]}">
                 <img
                   class="aspect-square w-5 xl:w-6"
-                  src="{`https://img.daisyui.com/logos/${tech}.svg`}"
+                  src="{`https://img.daisyui.com/images/logos/${tech}.svg`}"
                   alt="{tech}" />
               </div>
             {/each}
