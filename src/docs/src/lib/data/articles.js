@@ -1,5 +1,10 @@
 export const articles = [
   {
+    title: "Cookie-Based Theme Selection in SvelteKit with daisyUI",
+    site: "Scott Spence",
+    link: "https://scottspence.com/posts/cookie-based-theme-selection-in-sveltekit-with-daisyui",
+  },
+  {
     title: "daisyUI adoption guide: Overview, examples, and alternatives",
     site: "Logrocket",
     link: "https://blog.logrocket.com/daisyui-adoption-guide/",
