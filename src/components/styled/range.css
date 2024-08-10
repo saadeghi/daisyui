@@ -95,18 +95,42 @@
     &.range-xs {
       width: 1rem;
       height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 0.25rem
+      }
+      &::-moz-range-track {
+        width: 0.25rem
+      }
     }
     &.range-sm {
       width: 1.25rem;
       height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 0.25rem
+      }
+      &::-moz-range-track {
+        width: 0.25rem
+      }
     }
     &.range-md {
       width: 1.5rem;
       height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 0.5rem
+      }
+      &::-moz-range-track {
+        width: 0.5rem
+      }
     }
     &.range-lg {
       width: 2rem;
       height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 1rem
+      }
+      &::-moz-range-track {
+        width: 1rem
+      }
     }
   }
   &-primary {
