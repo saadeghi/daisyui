@@ -92,6 +92,23 @@
           0 calc(var(--filler-size) * -1 - var(--filler-offset)) 0 var(--filler-size);
       }
     }
+
+    &.range-xs {
+      width: 1rem;
+      height: 100%;
+    }
+    &.range-sm {
+      width: 1.25rem;
+      height: 100%;
+    }
+    &.range-md {
+      width: 1.5rem;
+      height: 100%;
+    }
+    &.range-lg {
+      width: 2rem;
+      height: 100%;
+    }
   }
   &-primary {
     --range-shdw: theme(colors.primary);
