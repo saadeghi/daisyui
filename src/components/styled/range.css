@@ -45,7 +45,6 @@
     writing-mode: vertical-lr;
     direction: rtl;
     height: 100%;
-    max-height: 10em;
     width: 1.5rem;
 
     &:focus-visible::-webkit-slider-thumb {
