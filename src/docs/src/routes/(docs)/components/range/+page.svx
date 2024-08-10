@@ -177,3 +177,16 @@ data="{[
 
 {/snippet}
 </Component>
+
+<Component title="Vertical and inverted">
+<input type="range" min="0" max="100" value="40" class="range range-vertical max-w-xs" />
+<input type="range" min="0" max="100" value="40" class="range range-vertical range-invert max-w-xs" />
+{#snippet html()}
+
+```html
+<input type="range" min="0" max="100" value="40" class="range range-vertical max-w-xs" />
+<input type="range" min="0" max="100" value="40" class="range range-vertical range-invert max-w-xs" />
+```
+
+{/snippet}
+</Component>
