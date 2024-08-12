@@ -61,6 +61,9 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           discount.attributes.is_limited_to_products === false &&
           discount.attributes.is_limited_redemptions === false &&
           discount.attributes.expires_at !== null &&
+          (discount.attributes.expires_at === null ||
+            new Date(discount.attributes.expires_at) > new Date()) &&
+          discount.attributes.starts_at !== null &&
           (discount.attributes.starts_at === null ||
             new Date(discount.attributes.starts_at) < new Date())
         )
