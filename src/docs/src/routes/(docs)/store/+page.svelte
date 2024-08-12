@@ -44,7 +44,7 @@ const dateFormat = {
   second: "2-digit",
 }
 
-let isClipboardButtonPressed = false
+let isClipboardButtonPressed = $state(false)
 const copyText = (text) => {
   navigator.clipboard.writeText(text)
   isClipboardButtonPressed = true
@@ -59,7 +59,7 @@ const copyText = (text) => {
 
 {:then discount}
   {#if discount.data.attributes.expires_at && new Date(discount.data.attributes.expires_at).toISOString() > currentDate}
-    <div class="alert h-24 my-10 bg-transparent" transition:slide={{ duration: 400 }}>
+    <div class="alert h-24 my-10" transition:slide={{ duration: 400 }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -84,8 +84,8 @@ const copyText = (text) => {
               data-tip="{isClipboardButtonPressed ? 'copied' : 'copy'}"
               class="tooltip badge badge-outline">
               <button
-                class="font-mono tracking-widest"
-                onclick="{() => copyText(discount.attributes.code)}">
+                class="font-mono tracking-wide"
+                onclick="{() => copyText(discount.data.attributes.code)}">
                 {discount.data.attributes.code}
               </button>
             </span>

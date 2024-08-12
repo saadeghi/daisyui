@@ -1,8 +1,8 @@
 export const productCustomAttributes = {
   284327: {
     screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
-    // originalprice: 4900,
-    // displayprice: 2900,
+    originalprice: 4900,
+    displayprice: 2900,
     // displaypricenote: "with discount",
     tech: ["astro", "mdx", "daisyui"],
     // tags: ['Use code "JUNE40" for 40% discount'],
