@@ -1,0 +1,1 @@
+import{e as c,r as h,j as k,q,S as u}from"./runtime.FCCJB71a.js";function S(r,i){var t;var f=r&&((t=r[u])==null?void 0:t.t);return r===i||f===i}function T(r={},i,f,t){c(()=>{var a,s;return h(()=>{a=s,s=[],k(()=>{r!==f(...s)&&(i(r,...s),a&&S(f(...a),r)&&i(null,...a))})}),()=>{q(()=>{s&&S(f(...s),r)&&i(null,...s)})}})}export{T as b};

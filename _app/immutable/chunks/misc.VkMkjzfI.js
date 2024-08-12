@@ -1,0 +1,1 @@
+import{z as n}from"./runtime.FCCJB71a.js";function u(l,r){var t;var e=(t=l.$$events)==null?void 0:t[r.type],a=n(e)?e.slice():e==null?[]:[e];for(var s of a)s.call(this,r)}function c(l){var e;var r=(e=l.$$slots)==null?void 0:e.default;return r===!0?l.children:r}export{u as b,c as d};

@@ -1,0 +1,1 @@
+import{r,b as s}from"./runtime.FCCJB71a.js";function b(a,d,i,o){d.addEventListener("input",()=>{o(d[a])}),r(()=>{var n=i();if(d[a]!==n)if(n==null){var f=d[a];o(f)}else d[a]=n+""})}function c(a,d,i,o,n){var f=()=>{o(i[a])};i.addEventListener(d,f),n?r(()=>{i[a]=n()}):f(),(i===document.body||i===window||i===document)&&s(()=>{i.removeEventListener(d,f)})}export{b as a,c as b};
