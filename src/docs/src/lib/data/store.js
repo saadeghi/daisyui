@@ -1,68 +1,83 @@
-export const productCustomAttributes = {
-  284327: {
+export const productCustomAttributes = [
+  {
+    id: 244268,
+    screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
+    tech: ["react", "nextjs"],
+    preveiw_url: "https://nexus.daisyui.com/",
+  },
+  {
+    id: 284327,
     screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
     originalprice: 4900,
     displayprice: 2900,
     // displaypricenote: "with discount",
-    tech: ["astro", "mdx", "daisyui"],
+    tech: ["astro", "mdx"],
     // tags: ['Use code "JUNE40" for 40% discount'],
   },
-  244268: {
-    screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
-    tech: ["react", "nextjs", "daisyui"],
-    preveiw_url: "https://nexus.daisyui.com/",
-  },
-  208203: {
+  {
+    id: 208203,
     screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
-    tech: ["astro", "mdx", "daisyui"],
+    tech: ["astro", "mdx"],
     tags: ["v1.1 released with new design"],
   },
-  185227: {
+  {
+    id: 185227,
     screenshot: "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
-    tech: ["html", "react", "svelte", "vue", "alpine", "daisyui"],
+    tech: ["html", "react", "svelte", "vue", "alpine"],
     // tags: ["React + Svelte + Vue versions added"],
   },
-  144550: {
+  {
+    id: 144550,
     screenshot: "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
-    tech: ["react", "svelte", "vite", "framer", "daisyui"],
+    tech: ["react", "svelte", "vite", "framer"],
     // originalprice: 1900,
     // displayprice: 1400,
     // displaypricenote: "with discount",
     // tags: ["Svelte version added"],
   },
-  142623: {
+  {
+    id: 142623,
     screenshot: "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
-    tech: ["html", "react", "svelte", "vue", "alpine", "daisyui"],
+    tech: ["html", "react", "svelte", "vue", "alpine"],
     // tags: ["React + Svelte + Vue versions added"],
   },
-  130237: {
+  {
+    id: 130237,
     screenshot: "https://img.daisyui.com/images/store/screenshots/auth.webp",
-    tech: ["html", "daisyui"],
+    tech: ["html"],
     // ref: "VMAme",
   },
-  120591: {
+  {
+    id: 120591,
     screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
-    tech: ["html", "webcomponents", "daisyui"],
+    tech: ["html", "webcomponents"],
     // tags: ["Best Seller"],
     originalprice: 2900,
     displayprice: 2600,
     displaypricenote: "with discount",
     tags: ['Use code "DASHBOARD10" for 10% discount'],
   },
-}
+]
 
 export const tech = {
-  html: "HTML",
-  alpine: "Alpine.js",
-  react: "React",
-  svelte: "Svelte",
-  vue: "Vue",
-  vite: "Vite",
-  framer: "Framer Motion",
-  daisyui: "daisyUI",
-  tailwind: "Tailwind CSS",
-  webcomponents: "Web Components",
-  mdx: "MDX",
-  astro: "Astro",
-  nextjs: "Next.js",
+  html: { title: "HTML", bg: "#E54C20", fg: "#FFF" },
+  alpine: { title: "Alpine.js", bg: "#77C1D2", fg: "#000" },
+  react: { title: "React", bg: "#232730", fg: "#58C4DC" },
+  svelte: { title: "Svelte", bg: "#FF3E00", fg: "#FFF" },
+  vue: { title: "Vue", bg: "#3EB27F", fg: "#FFF" },
+  vite: { title: "Vite", bg: "#FFCE2B", fg: "#000" },
+  framer: { title: "Framer Motion", bg: "#000", fg: "#FFF" },
+  tailwind: { title: "Tailwind CSS", bg: "#38BDF9", fg: "#FFF" },
+  webcomponents: { title: "Web Components", bg: "#CDE23B", fg: "#000" },
+  mdx: { title: "MDX", bg: "#0A69DA", fg: "#FFF" },
+  astro: { title: "Astro", bg: "#E944B0", fg: "#FFF" },
+  nextjs: { title: "Next.js", bg: "#000", fg: "#FFF" },
 }
+
+export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"]
+
+export const futureProducts = [
+  "Official daisyUI Figma Library",
+  "Headless UI + daisyUI component pack for React",
+  "Headless UI + daisyUI component pack for Vue",
+]
