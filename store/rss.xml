@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Tue, 13 Aug 2024 02:46:39 GMT</lastBuildDate>
-    <pubDate>Tue, 13 Aug 2024 02:46:39 GMT</pubDate>
+    <lastBuildDate>Tue, 13 Aug 2024 14:26:33 GMT</lastBuildDate>
+    <pubDate>Tue, 13 Aug 2024 14:26:33 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
@@ -65,6 +65,26 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/30796d50-e504-4d89-ad3f-f1570a9be0ee/</link>
           <pubDate>Mon, 03 Jun 2024 22:54:53 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/30796d50-e504-4d89-ad3f-f1570a9be0ee/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ SaaS landing page ]]>
+          </title>
+          <description>
+            <![CDATA[ <p>Production-ready landing page for software products.</p>
+
+<p>Features:</p>
+
+<ul><li><p>SaaS landing page layout made with daisyUI 4</p></li><li><p>Available for HTML, React, Svelte, Vue 🆕</p></li></ul>
+
+<p>Including:</p>
+
+<ul><li><p>2 exclusive daisyUI themes (dark/light)</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li><li><p>Responsive layout</p></li><li><p>Hero section, Partner logos, Features section, Integrations cards, Pricing tables, FAQ accordion section, Footer with links and contact form</p></li><li><p>Pricing table with dynamic price toggle</p></li><li><p>Theme changer menu</p></li><li><p>3D card effect</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/2d843d3e-6c74-4cc9-8c7f-f2cbd633a21e/</link>
+          <pubDate>Tue, 05 Dec 2023 16:39:32 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/2d843d3e-6c74-4cc9-8c7f-f2cbd633a21e/</guid>
         </item>
       
         <item>
@@ -125,26 +145,6 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/6fda1b31-2728-4206-8c51-39b9bbf85b3c/</link>
           <pubDate>Fri, 08 Dec 2023 14:00:55 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/6fda1b31-2728-4206-8c51-39b9bbf85b3c/</guid>
-        </item>
-      
-        <item>
-          <title>
-            <![CDATA[ SaaS landing page ]]>
-          </title>
-          <description>
-            <![CDATA[ <p>Production-ready landing page for software products.</p>
-
-<p>Features:</p>
-
-<ul><li><p>SaaS landing page layout made with daisyUI 4</p></li><li><p>Available for HTML, React, Svelte, Vue 🆕</p></li></ul>
-
-<p>Including:</p>
-
-<ul><li><p>2 exclusive daisyUI themes (dark/light)</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li><li><p>Responsive layout</p></li><li><p>Hero section, Partner logos, Features section, Integrations cards, Pricing tables, FAQ accordion section, Footer with links and contact form</p></li><li><p>Pricing table with dynamic price toggle</p></li><li><p>Theme changer menu</p></li><li><p>3D card effect</p></li></ul> ]]>
-          </description>
-          <link>https://daisyui.lemonsqueezy.com/checkout/buy/2d843d3e-6c74-4cc9-8c7f-f2cbd633a21e/</link>
-          <pubDate>Tue, 05 Dec 2023 16:39:32 GMT</pubDate>
-          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/2d843d3e-6c74-4cc9-8c7f-f2cbd633a21e/</guid>
         </item>
       
         <item>
