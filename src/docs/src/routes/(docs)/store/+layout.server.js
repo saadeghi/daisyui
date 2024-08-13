@@ -35,5 +35,8 @@ export async function load({ params }) {
     techFilters,
     products: sortedData,
     futureProducts,
+    discounts: {
+      data: [],
+    },
   }
 }
