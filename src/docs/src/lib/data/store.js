@@ -10,7 +10,8 @@ export const productCustomAttributes = [
     screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
     originalprice: 4900,
     displayprice: 2900,
-    tech: ["astro", "mdx"],
+    tech: ["astro", "nextjs", "mdx"],
+    tags: ["Next.js version added"],
   },
   {
     id: 142623,
