@@ -12,9 +12,37 @@ $effect(() => {
   return () => clearInterval(interval)
 })
 
-const fetchLimitedTimeDiscount = (async () => {
-  const response = await fetch("https://api.daisyui.com/api/discount_shorttime.json")
-  return await response.json()
+const isDiscountValid = (discount) => {
+  if (discount.data?.attributes.expires_at) {
+    const expiresAt = new Date(discount.data.attributes.expires_at).toISOString()
+    const currentDate = new Date().toISOString()
+    return expiresAt > currentDate
+  }
+  return false
+}
+const fetchDiscount = (async () => {
+  // Fetch both discount types
+  const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
+    fetch("https://api.daisyui.com/api/discount_shorttime.json"),
+    fetch("https://api.daisyui.com/api/discount_special.json"),
+  ])
+
+  // Parse the JSON responses
+  const shorttimeDiscount = await shorttimeDiscountResponse.json()
+  const specialDiscount = await specialDiscountResponse.json()
+
+  // Check if special discount exists and is still valid
+  if (isDiscountValid(specialDiscount)) {
+    return specialDiscount
+  }
+
+  // Check if short-time discount exists and is still valid
+  if (isDiscountValid(shorttimeDiscount)) {
+    return shorttimeDiscount
+  }
+
+  // If neither discount is valid, return null or handle accordingly
+  return null
 })()
 
 function convertCurrency(number) {
@@ -126,9 +154,9 @@ let sortedFilteredProducts = $derived(
 <hr class="mb-20 mt-10 mx-4"/>
 
 <div>
-  {#await fetchLimitedTimeDiscount}
+  {#await fetchDiscount}
   {:then discount}
-    {#if discount.data.attributes.expires_at && new Date(discount.data.attributes.expires_at).toISOString() > currentDate}
+    {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate}
       <div class="mx-4 mb-10">
         <div class="alert min-h-24 border-transparent bg-neutral text-neutral-content" transition:slide={{ duration: 400 }}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-4">
