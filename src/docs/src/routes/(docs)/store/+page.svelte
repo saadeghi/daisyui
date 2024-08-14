@@ -13,7 +13,7 @@ $effect(() => {
 })
 
 const fetchLimitedTimeDiscount = (async () => {
-  const response = await fetch("https://api.daisyui.com/api/discount.json")
+  const response = await fetch("https://api.daisyui.com/api/discount_shorttime.json")
   return await response.json()
 })()
 
