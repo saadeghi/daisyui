@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Tue, 13 Aug 2024 23:08:25 GMT</lastBuildDate>
-    <pubDate>Tue, 13 Aug 2024 23:08:25 GMT</pubDate>
+    <lastBuildDate>Wed, 14 Aug 2024 11:05:59 GMT</lastBuildDate>
+    <pubDate>Wed, 14 Aug 2024 11:05:59 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
@@ -49,14 +49,14 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       
         <item>
           <title>
-            <![CDATA[ Documentation template with Astro ]]>
+            <![CDATA[ Documentation template ]]>
           </title>
           <description>
-            <![CDATA[ <p>Create a modern and clean document site for your open source project using Astro and daisyUI</p>
+            <![CDATA[ <p>Create a modern and clean document site for your open source projects</p>
 
 <p>Features:</p>
 
-<ul><li><p>Made with Astro, Markdown, Tailwind CSS and daisyUI</p></li><li><p>Search functionality</p></li><li><p>SEO friendly, Lightweight and fast</p></li><li><p>Dark mode and Light mode</p></li></ul>
+<ul><li><p>Available for Astro and Next.js 🆕</p></li><li><p>Made with Markdown, Tailwind CSS and daisyUI</p></li><li><p>Search functionality</p></li><li><p>SEO friendly, Lightweight and fast</p></li><li><p>Dark mode and Light mode</p></li></ul>
 
 <p>Including:</p>
 
