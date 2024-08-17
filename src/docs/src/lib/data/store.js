@@ -4,6 +4,7 @@ export const productCustomAttributes = [
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["react", "nextjs"],
     preveiw_url: "https://nexus.daisyui.com/",
+    tags: ["updated to v1.1"],
   },
   {
     id: 284327,
