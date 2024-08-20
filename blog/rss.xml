@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Sat, 17 Aug 2024 12:07:24 GMT</lastBuildDate>
-    <pubDate>Sat, 17 Aug 2024 12:07:24 GMT</pubDate>
+    <lastBuildDate>Tue, 20 Aug 2024 18:52:03 GMT</lastBuildDate>
+    <pubDate>Tue, 20 Aug 2024 18:52:03 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ Make a blog quickly using Astro and daisyUI ]]>
+          </title>
+          <description>
+            <![CDATA[ Learn how to create a beautiful and functional blog quickly using the Blog Template for Astro. ]]>
+          </description>
+          <link>https://daisyui.com/blog/how-to-make-a-blog-quickly-using-astro-and-daisyUI/</link>
+          <pubDate>Tue, 20 Aug 2024 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/how-to-make-a-blog-quickly-using-astro-and-daisyUI/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ What to expect from daisyUI 5? ]]>
