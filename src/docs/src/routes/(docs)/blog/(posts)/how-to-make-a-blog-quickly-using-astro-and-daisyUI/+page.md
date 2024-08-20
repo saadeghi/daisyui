@@ -1,10 +1,10 @@
 ---
-title: How to make a blog quickly using Astro and daisyUI
+title: Make a blog quickly using Astro and daisyUI
 desc: Learn how to create a beautiful and functional blog quickly using the Blog Template for Astro.
-Published: true
+published: true
 date: 2024-08-20
-thumbnail: https://img.daisyui.com/images/blog/blog-template-thumbnail.webp
-author: Pouya Saadeghi
+thumbnail: https://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp
+author: Abhijeet Biswal
 tags:
   - daisyUI
   - Astro
@@ -16,7 +16,7 @@ Creating a blog can be a challenging task, but with Astro and daisyUI, you can s
 
 ## 1. How to Install the Blog Template
 
-First, you'll need to purchase and download the blog template for astro from the [daisyUI store](https://daisyui.com/store/#208203). Once you have the template, follow these steps:
+First, you'll need to purchase and download the blog template for Astro from the [daisyUI store](https://daisyui.com/store/#208203). Once you have the template, follow these steps:
 
 1. **Install Dependencies**
 
@@ -36,7 +36,7 @@ Customizing the blog template is simple. Here’s how to change key elements:
 
 ### Changing the Hero Section
 
-![Blog template hero](https://img.daisyui.com/images/blog/blogtemplate_hero.webp)
+![daisyUI Tailwind CSS blog template for Astro](https://img.daisyui.com/images/blog/tailwind-css-blog-template.webp)
 
 1. Navigate to `src/components/Hero.astro`:
 
@@ -58,7 +58,7 @@ This file contains your blog's hero section information. Here, you can edit the 
   class="max-w-xs md:max-w-lg mt-4 absolute"
 />
 
-<image src="/images/bg.png" alt="bg" height="{500}" width="{700}" />
+<img src="/images/bg.png" alt="bg" height="{500}" width="{700}" />
 ```
 
 2. Update Social Media Links
@@ -172,4 +172,4 @@ Each of these platforms provides a free tier, making it easy to get your blog on
 
 ## Conclusion
 
-With Astro and daisyUI, creating a blog is quick and easy. Our [Blog Template for Astro](https://daisyui.com/store/#208203) provides a solid foundation, and with a few customizations, you can have your blog up and running in no time. Whether you're sharing your thoughts or showcasing your work.
+With Astro and daisyUI, creating a blog is quick and easy. Our [Blog Template for Astro](https://daisyui.com/store/#208203) provides a solid foundation, and with a few customizations, you can have your blog up and running in no time, whether you're sharing your thoughts or showcasing your work.
