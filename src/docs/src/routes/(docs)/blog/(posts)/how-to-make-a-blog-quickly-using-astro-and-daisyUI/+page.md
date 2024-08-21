@@ -3,7 +3,7 @@ title: Make a blog quickly using Astro and daisyUI
 desc: Learn how to create a beautiful and functional blog quickly using the Blog Template for Astro.
 published: true
 date: 2024-08-20
-thumbnail: https://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp
+thumbnail: https://img.daisyui.com/images/blog/blog-template-tailwindcss-daisyui.webp
 author: Abhijeet Biswal
 tags:
   - daisyUI
@@ -148,7 +148,7 @@ In the digital age, a strong online presence is crucial for businesses looking t
 
 Save the file and run the development server (`npm run dev`) to see your new post on the blog.
 
-![Blog template sample blog](https://img.daisyui.com/images/blog/sample_blog.webp)
+![Blog template daisyUI Tailwind CSS](https://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp)
 
 ## 4. How to Build the Template for Production
 
