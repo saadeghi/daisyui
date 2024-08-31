@@ -76,6 +76,7 @@
     "css-selector-tokenizer": "^0.8",
     "culori": "^3",
     "picocolors": "^1",
+    "postcss": "^8",
     "postcss-js": "^4"
   }
 }
