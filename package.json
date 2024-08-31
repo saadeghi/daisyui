@@ -77,5 +77,8 @@
     "culori": "^3",
     "picocolors": "^1",
     "postcss-js": "^4"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3"
   }
 }
