@@ -37,7 +37,7 @@ function customWatcher(dir) {
       server.watcher.on('change', (file) => {
         if (cssFiles.includes(file)) {
           console.log(`File changed: ${file}`);
-          exec('cd ../../../ && node convert.js', (err, stdout, stderr) => {
+          exec('cd ../../../ && node build.js', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error executing command: ${err}`);
               return;

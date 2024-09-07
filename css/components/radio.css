@@ -1,12 +1,12 @@
 .radio {
-  @apply border-base-content/20 h-6 w-6 cursor-pointer appearance-none rounded-full border shrink-0 text-base-content relative p-[4px];
+  @apply border-base-content/20 size-6 cursor-pointer appearance-none rounded-full border shrink-0 text-base-content relative p-[4px];
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
   &:before {
     @apply rounded-full size-full block;
     content: "";
   }
   &:focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-current;
+    @apply outline-2 outline-offset-2 outline-current;
   }
   &:checked,
   &[aria-checked="true"] {
