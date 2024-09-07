@@ -1,7 +1,8 @@
 {
+  "type": "module",
   "scripts": {
-    "predev": "npm install && if ! [ -f src/components/Component.astro ]; then echo '<button class=\"btn\">Hello</button>' > src/components/Component.astro; fi && code src/components/Component.astro",
-    "dev": "astro dev --port 4000 --open",
+    "XXpredev": "npm install && if ! [ -f src/components/Component.astro ]; then echo '<button class=\"btn\">Hello</button>' > src/components/Component.astro; fi",
+    "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
   },
@@ -9,9 +10,8 @@
     "> 7%"
   ],
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.0-alpha.16",
+    "@tailwindcss/vite": "^4.0.0-alpha.23",
     "astro": "^4.11.3",
-    "daisyui": "^4.4.19",
-    "tailwindcss": "^4.0.0-alpha.16"
+    "daisyui": "file:../../.."
   }
 }

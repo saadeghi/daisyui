@@ -45,42 +45,44 @@
 .btn-outline {
   @apply text-[var(--btn-color)] bg-transparent shadow-none [&.btn-active]:text-base-content [&.btn-active]:bg-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)] [&.btn-active]:border-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)];
   &.btn-primary {
-    @apply [@media(hover:hover)]:hover:text-primary-content [&.btn-active]:text-primary-content;
+    @apply [@media(hover:hover)]:hover:text-primary-content text-primary [&.btn-active]:text-primary-content;
   }
   &.btn-secondary {
-    @apply [@media(hover:hover)]:hover:text-secondary-content [&.btn-active]:text-secondary-content;
+    @apply [@media(hover:hover)]:hover:text-secondary-content text-secondary [&.btn-active]:text-secondary-content;
   }
   &.btn-accent {
-    @apply [@media(hover:hover)]:hover:text-accent-content [&.btn-active]:text-accent-content;
+    @apply [@media(hover:hover)]:hover:text-accent-content text-accent [&.btn-active]:text-accent-content;
   }
   &.btn-neutral {
-    @apply [@media(hover:hover)]:hover:text-neutral-content [&.btn-active]:text-neutral-content;
+    @apply [@media(hover:hover)]:hover:text-neutral-content text-neutral [&.btn-active]:text-neutral-content;
   }
   &.btn-success {
-    @apply [@media(hover:hover)]:hover:text-success-content [&.btn-active]:text-success-content;
+    @apply [@media(hover:hover)]:hover:text-success-content text-success [&.btn-active]:text-success-content;
   }
   &.btn-info {
-    @apply [@media(hover:hover)]:hover:text-info-content [&.btn-active]:text-info-content;
+    @apply [@media(hover:hover)]:hover:text-info-content text-info [&.btn-active]:text-info-content;
   }
   &.btn-warning {
-    @apply [@media(hover:hover)]:hover:text-warning-content [&.btn-active]:text-warning-content;
+    @apply [@media(hover:hover)]:hover:text-warning-content text-warning [&.btn-active]:text-warning-content;
   }
   &.btn-error {
-    @apply [@media(hover:hover)]:hover:text-error-content [&.btn-active]:text-error-content;
+    @apply [@media(hover:hover)]:hover:text-error-content text-error [&.btn-active]:text-error-content;
   }
 }
 
 /* disabled */
-.btn-disabled,
-.btn[disabled],
-.btn:disabled {
-  @apply pointer-events-none bg-neutral/20 text-base-content/20 border-transparent [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:bg-neutral/20 [@media(hover:hover)]:text-base-content/20 [@media(hover:hover)]:border-transparent;
+.btn {
+    &:is(:disabled, [disabled], .btn-disabled) {
+        @apply pointer-events-none bg-neutral/20 text-base-content/20 border-transparent [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:bg-neutral/20 [@media(hover:hover)]:text-base-content/20 [@media(hover:hover)]:border-transparent;
+    }
 }
 
 /* radio input and checkbox as button */
-:where(.btn:is(input[type="checkbox"])),
-:where(.btn:is(input[type="radio"])) {
-  @apply w-auto appearance-none;
+.btn{
+    &:is(input[type="checkbox"]),
+    &:is(input[type="radio"]) {
+        @apply w-auto appearance-none;
+    }
 }
 .btn:is(input[type="checkbox"]):after,
 .btn:is(input[type="radio"]):after {

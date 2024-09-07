@@ -55,15 +55,23 @@
 
 /* responsive */
 
-[type="radio"].radio-xs {
-  @apply size-4;
+.radio-xs {
+    &:is([type="radio"]){
+        @apply size-4;
+    }
 }
-[type="radio"].radio-sm {
-  @apply size-5;
+.radio-sm {
+    &:is([type="radio"]){
+        @apply size-5;
+    }
 }
-[type="radio"].radio-md {
-  @apply size-6;
+.radio-md {
+    &:is([type="radio"]){
+        @apply size-6;
+    }
 }
-[type="radio"].radio-lg {
-  @apply size-8;
+.radio-lg {
+    &:is([type="radio"]){
+        @apply size-8;
+    }
 }

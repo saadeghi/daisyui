@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "daisyui",
   "version": "4.12.10",
   "description": "daisyUI - Tailwind CSS Components",
@@ -46,10 +47,14 @@
   "engines": {
     "node": ">=16.9.0"
   },
-  "browserslist": ["> 7%"],
+  "browserslist": [
+    "> 7%"
+  ],
   "publishConfig": {
     "access": "public",
-    "branches": ["master"]
+    "branches": [
+      "master"
+    ]
   },
   "scripts": {
     "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
@@ -67,15 +72,16 @@
     "@biomejs/biome": "1.8.1",
     "autoprefixer": "10.4.19",
     "commit-and-tag-version": "12.4.1",
+    "postcss": "^8.4.45",
     "postcss-cli": "11.0.0",
     "postcss-import": "16.1.0",
+    "postcss-js": "^4.0.1",
     "prejss-cli": "0.3.3",
     "tailwindcss": "3.4.4"
   },
   "dependencies": {
     "css-selector-tokenizer": "^0.8",
     "culori": "^3",
-    "picocolors": "^1",
-    "postcss-js": "^4"
+    "picocolors": "^1"
   }
 }

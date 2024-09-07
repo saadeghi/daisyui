@@ -86,15 +86,23 @@
 
 /* responsive */
 
-[type="checkbox"].toggle-xs {
-  @apply h-4 w-6;
+.toggle-xs {
+    &:is([type="checkbox"]){
+        @apply h-4 w-6;
+    }
 }
-[type="checkbox"].toggle-sm {
-  @apply h-5 w-8;
+.toggle-sm {
+    &:is([type="checkbox"]){
+        @apply h-5 w-8;
+    }
 }
-[type="checkbox"].toggle-md {
-  @apply h-6 w-12;
+.toggle-md {
+    &:is([type="checkbox"]){
+        @apply h-6 w-12;
+    }
 }
-[type="checkbox"].toggle-lg {
-  @apply h-8 w-16;
+.toggle-lg {
+    &:is([type="checkbox"]){
+        @apply h-8 w-16;
+    }
 }
