@@ -1,4 +1,9 @@
-@import "./themes/default.css";
+/* themes */
+@import "./themes";
+@import "./themes/light";
+@import "./themes/dark";
+
+/* components */
 @config "./components/button/config.js";
 @config "./components/toggle/config.js";
 @config "./components/radio/config.js";
