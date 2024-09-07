@@ -1,6 +1,6 @@
 export default {
   ".radio": {
-    "@apply border-base-content/20 size-6 cursor-pointer appearance-none rounded-full border shrink-0 text-base-content relative p-[4px]": {},
+    "@apply border-base-content/20 size-6 cursor-pointer appearance-none rounded-full border shrink-0 text-base-content relative p-1": {},
     "boxShadow": "0 1px oklch(0% 0 0 / 0.1) inset",
     "&:before": {
       "@apply rounded-full size-full block": {},

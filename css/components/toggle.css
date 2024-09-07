@@ -1,16 +1,15 @@
 .toggle {
-  @apply h-6 w-12 inline-flex cursor-pointer rounded-full rounded-badge border-current appearance-none border shrink-0 text-base-content/50 p-[3px];
+  @apply h-6 w-12 inline-flex cursor-pointer rounded-full rounded-badge border-current appearance-none border shrink-0 text-base-content/50 p-[.1875rem];
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
-  transition: border-color 0.1s;
   &:before {
     @apply block h-full grow-0;
     content: "";
-    transition: flex-grow 0.1s;
+    transition: flex-grow 0.2s;
   }
   &:after {
     @apply rounded-full aspect-square h-full block bg-current;
     content: "";
-    transition: background-color 0.1s, border-color 0.1s;
+    transition: background-color 0.1s;
     box-shadow: 0 -1px oklch(0% 0 0 / 0.1) inset,
       0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, 0 1px oklch(0% 0 0 / 0.1);
   }
