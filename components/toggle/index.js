@@ -1,6 +1,6 @@
 export default {
   ".toggle": {
-    "@apply h-6 w-12 inline-flex cursor-pointer rounded-full rounded-badge border-current appearance-none border shrink-0 text-base-content/50 p-[.1875rem]": {},
+    "@apply h-6 w-12 inline-flex cursor-pointer rounded-[--radius-badge] rounded-badge border-current appearance-none border shrink-0 text-base-content/50 p-[.1875rem]": {},
     "boxShadow": "0 1px oklch(0% 0 0 / 0.1) inset",
     "&:before": {
       "@apply block h-full grow-0": {},
@@ -8,7 +8,7 @@ export default {
       "transition": "flex-grow 0.2s"
     },
     "&:after": {
-      "@apply rounded-full aspect-square h-full block bg-current relative translate-x-0 start-0": {},
+      "@apply [border-radius:calc(var(--radius-badge)-3px)] aspect-square h-full block bg-current relative translate-x-0 start-0": {},
       "content": "\"\"",
       "transition": "background-color 0.1s, translate 0.2s, inset-inline-start 0.2s",
       "boxShadow": "0 -1px oklch(0% 0 0 / 0.1) inset,\n      0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, 0 1px oklch(0% 0 0 / 0.1)"

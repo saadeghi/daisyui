@@ -1,8 +1,27 @@
 export default {
   ".btn": {
-    "@apply rounded-[--radius-btn] inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center gap-2 font-semibold duration-200 ease-out [border-width:var(--spacing-button-border)] text-base-content outline-base-content no-underline shadow-sm bg-[var(--btn-color,var(--color-base-200))] border-[var(--btn-color,var(--color-base-200))] [@media(hover:hover)]:hover:bg-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)] [@media(hover:hover)]:hover:border-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)] focus-visible:outline focus-visible:outline-2 outline-offset-2 text-sm/none [transition-property:color,background-color,border-color,opacity,box-shadow,transform] active:hover:animate-[button-pop_0s_ease-out] active:hover:[transform:scale(var(--btn-focus-scale,0.97))] active:focus:animate-[button-pop_0s_ease-out] active:focus:[transform:scale(var(--btn-focus-scale,0.97))]": {},
+    "@apply rounded-[--radius-btn] inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center gap-2 font-semibold duration-200 ease-out [border-width:var(--spacing-button-border)] text-base-content outline-base-content no-underline shadow-sm bg-[var(--btn-color,var(--color-base-200))] border-[var(--btn-color,var(--color-base-200))] outline-offset-2 text-sm/none [transition-property:color,background-color,border-color,opacity,box-shadow,transform]": {},
     "borderTopColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)) 93%, white)",
     "borderBottomColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)) 98%, black)",
+    "@media (hover:hover)": [
+      {
+        "@apply hover:bg-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)]": {}
+      },
+      {
+        "@apply hover:border-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)]": {}
+      }
+    ],
+    "&:focus-visible": {
+      "@apply outline outline-2": {}
+    },
+    "&:active": {
+      "&:focus": {
+        "@apply [transform:scale(var(--btn-focus-scale,0.97))] animate-[button-pop_0s_ease-out]": {}
+      },
+      "&:hover": {
+        "@apply animate-[button-pop_0s_ease-out] [transform:scale(var(--btn-focus-scale,0.97))]": {}
+      }
+    },
     "&:is(:disabled, [disabled], .btn-disabled)": {
       "@apply pointer-events-none bg-neutral/20 text-base-content/20 border-transparent [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:bg-neutral/20 [@media(hover:hover)]:text-base-content/20 [@media(hover:hover)]:border-transparent": {}
     },
@@ -11,7 +30,7 @@ export default {
     }
   },
   ".btn-square": {
-    "@apply h-12 w-12 p-0": {},
+    "@apply size-12 p-0": {},
     "@apply p-0": {},
     "&:where(.btn-xs)": {
       "@apply size-6": {}
@@ -27,7 +46,7 @@ export default {
     }
   },
   ".btn-circle": {
-    "@apply h-12 w-12 rounded-full p-0": {},
+    "@apply size-12 rounded-full p-0": {},
     "@apply rounded-full p-0": {},
     "&:where(.btn-xs)": {
       "@apply size-6": {}
