@@ -2,56 +2,38 @@ export default {
   ".range": {
     "appearance": "none",
     "WebkitAppearance": "none",
-    "@apply rounded-[--radius-box] bg-transparent w-full cursor-pointer border-none": {},
-    "--range-thumb-size": "var(--spacing-6)",
-    "--range-track-size": "0.5em",
-    "--range-track-color": "var(--color-base-300)",
-    "height": "var(--range-thumb-size)",
+    "--range-shdw": "currentColor",
+    "@apply rounded-box overflow-hidden bg-transparent h-6 w-full cursor-pointer border-none": {},
     "&:focus": {
       "outline": "none"
     },
     "&:focus-visible": {
-      "--focus-shadow": "0 0 0 6px currentColor inset, 0 0 0 2rem var(--color-base-100) inset"
+      "--focus-shadow": "0 0 0 6px var(--color-base-100) inset, 0 0 0 2rem var(--range-shdw) inset"
     },
     "&::-webkit-slider-runnable-track": {
-      "position": "relative",
-      "height": "var(--range-thumb-size)",
-      "background": "linear-gradient(var(--range-track-color) 0 0) scroll no-repeat center / 100% calc(var(--range-track-size) + 1px)"
+      "@apply rounded-box bg-base-content/10 h-2 w-full": {}
     },
     "&::-webkit-slider-thumb": {
-      "border": "none",
+      "@apply rounded-box bg-base-100 relative h-6 w-6 border-none": {},
       "appearance": "none",
       "WebkitAppearance": "none",
-      "position": "relative",
-      "height": "var(--range-thumb-size)",
-      "--range-clip-top": "calc((var(--range-thumb-size) - var(--range-track-size))* 0.5 - 0.5px)",
-      "--range-clip-bottom": "calc(var(--range-thumb-size) - var(--range-clip-top))",
-      "background": "linear-gradient(currentColor 0 0) scroll no-repeat left center / 50% calc(var(--range-track-size) + 1px)",
-      "backgroundColor": "currentColor",
-      "boxShadow": "calc(calc(-100vmax - 1px) - var(--range-thumb-size)) 0 0 100vmax currentColor,\n        calc(var(--range-thumb-size) * -0.4) 0 0 calc(calc(var(--range-thumb-size) - var(--range-track-size)) / -2.14),\n        calc(var(--range-thumb-size) * -0.5) 0 0 calc(calc(var(--range-thumb-size) - var(--range-track-size)) / -2.14),\n        calc(var(--range-thumb-size) * -0.6) 0 0 calc(calc(var(--range-thumb-size) - var(--range-track-size)) / -2.14),\n        0 -1px oklch(0% 0 0 / 0.1) inset,\n            0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, var(--focus-shadow, 0 0)",
-      "width": "var(--range-thumb-size)",
-      "borderRadius": "var(--radius-box)",
-      "clipPath": "polygon(100% 0, 0 0, 0 var(--range-clip-top), -100vmax var(--range-clip-top), -100vmax var(--range-clip-bottom), 0 var(--range-clip-bottom), 0 100%, 100% 100%)"
+      "top": "50%",
+      "color": "var(--range-shdw)",
+      "transform": "translateY(-50%)",
+      "--filler-size": "100rem",
+      "--filler-offset": "0.6rem",
+      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n        var(--focus-shadow, 0 0),\n        calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)"
     },
-    "&::-moz-range-progress": {
-      "position": "relative",
-      "height": "var(--range-thumb-size)",
-      "background": "linear-gradient(var(--range-track-color) 0 0) scroll no-repeat center / 100% calc(var(--range-track-size) + 1px)"
+    "&::-moz-range-track": {
+      "@apply rounded-box bg-base-content/10 h-2 w-full": {}
     },
     "&::-moz-range-thumb": {
-      "border": "none",
-      "appearance": "none",
-      "WebkitAppearance": "none",
-      "position": "relative",
-      "height": "var(--range-thumb-size)",
-      "--range-clip-top": "calc((var(--range-thumb-size) - var(--range-track-size))* 0.5 - 0.5px)",
-      "--range-clip-bottom": "calc(var(--range-thumb-size) - var(--range-clip-top))",
-      "background": "linear-gradient(currentColor 0 0) scroll no-repeat left center / 50% calc(var(--range-track-size) + 1px)",
-      "backgroundColor": "currentColor",
-      "boxShadow": "calc(calc(-100vmax - 1px) - var(--range-thumb-size)) 0 0 100vmax currentColor, calc(var(--range-thumb-size) * -0.55) 0 0 calc(calc(var(--range-thumb-size) - var(--range-track-size)) / -2.15), 0 -1px oklch(0% 0 0 / 0.1) inset,\n            0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, var(--focus-shadow, 0 0)",
-      "width": "var(--range-thumb-size)",
-      "borderRadius": "var(--radius-box)",
-      "clipPath": "polygon(100% 0, 0 0, 0 var(--range-clip-top), -100vmax var(--range-clip-top), -100vmax var(--range-clip-bottom), 0 var(--range-clip-bottom), 0 100%, 100% 100%)"
+      "@apply rounded-box bg-base-100 relative h-6 w-6 border-none": {},
+      "top": "50%",
+      "color": "var(--range-shdw)",
+      "--filler-size": "100rem",
+      "--filler-offset": "0.5rem",
+      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n        var(--focus-shadow, 0 0),\n        calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)"
     }
   },
   ".range-primary": {
@@ -76,19 +58,71 @@ export default {
     "@apply text-error": {}
   },
   ".range-xs": {
-    "--range-thumb-size": "var(--spacing-4)",
-    "--range-track-size": ".25rem"
+    "@apply h-4": {},
+    "&::-webkit-slider-runnable-track": {
+      "@apply h-1": {}
+    },
+    "&::-webkit-slider-thumb": {
+      "@apply size-4": {},
+      "--filler-offset": "0.4rem"
+    },
+    "&::-moz-range-track": {
+      "@apply h-1": {}
+    },
+    "&::-moz-range-thumb": {
+      "@apply size-4": {},
+      "--filler-offset": "0.4rem"
+    }
   },
   ".range-sm": {
-    "--range-thumb-size": "var(--spacing-5)",
-    "--range-track-size": ".25rem"
+    "@apply h-5": {},
+    "&::-webkit-slider-runnable-track": {
+      "@apply h-1": {}
+    },
+    "&::-webkit-slider-thumb": {
+      "@apply size-5": {},
+      "--filler-offset": "0.5rem"
+    },
+    "&::-moz-range-track": {
+      "@apply h-1": {}
+    },
+    "&::-moz-range-thumb": {
+      "@apply size-5": {},
+      "--filler-offset": "0.5rem"
+    }
   },
   ".range-md": {
-    "--range-thumb-size": "var(--spacing-6)",
-    "--range-track-size": ".5em"
+    "@apply h-6": {},
+    "&::-webkit-slider-runnable-track": {
+      "@apply h-2": {}
+    },
+    "&::-webkit-slider-thumb": {
+      "@apply size-6": {},
+      "--filler-offset": "0.6rem"
+    },
+    "&::-moz-range-track": {
+      "@apply h-2": {}
+    },
+    "&::-moz-range-thumb": {
+      "@apply size-6": {},
+      "--filler-offset": "0.6rem"
+    }
   },
   ".range-lg": {
-    "--range-thumb-size": "var(--spacing-8)",
-    "--range-track-size": "1em"
+    "@apply h-8": {},
+    "&::-webkit-slider-runnable-track": {
+      "@apply h-4": {}
+    },
+    "&::-webkit-slider-thumb": {
+      "@apply size-8": {},
+      "--filler-offset": "1rem"
+    },
+    "&::-moz-range-track": {
+      "@apply h-4": {}
+    },
+    "&::-moz-range-thumb": {
+      "@apply size-8": {},
+      "--filler-offset": "1rem"
+    }
   }
 };
