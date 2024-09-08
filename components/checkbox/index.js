@@ -5,7 +5,7 @@ export default {
     "transition": "background-color .2s, box-shadow .2s",
     "&:before": {
       "@apply size-full block content-[''] bg-current opacity-0 rotate-45": {},
-      "transition": "clip-path .3s, opacity .1s",
+      "transition": "clip-path .3s, opacity .1s, rotate .3s, translate .3s",
       "transitionDelay": ".1s",
       "clipPath": "polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%)",
       "boxShadow": "0px 3px 0 0px oklch(100% 0 0 / 0.1) inset"
@@ -18,6 +18,12 @@ export default {
       "&:before": {
         "@apply opacity-100": {},
         "clipPath": "polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%)"
+      }
+    },
+    "&:indeterminate": {
+      "&:before": {
+        "@apply rotate-0 opacity-100 translate-y-[-35%]": {},
+        "clipPath": "polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%)"
       }
     }
   },
@@ -89,9 +95,9 @@ export default {
   },
   ".checkbox-xs": {
     "@apply p-[.1875rem]": {},
-    "&:is([type=\"checkbox\"])": {
+    "&[type=\"checkbox\"]": {
       "@apply size-4": {},
-      "&:before": {
+      "&:not(:indeterminate):before": {
         "clipPath": "polygon(10% 100%, 10% 70%, 40% 70%, 40% 70%, 70% 70%, 70% 100%)"
       },
       "&:checked,\n        &[aria-checked=\"true\"]": {
@@ -102,17 +108,17 @@ export default {
     }
   },
   ".checkbox-sm": {
-    "&:is([type=\"checkbox\"])": {
+    "&[type=\"checkbox\"]": {
       "@apply size-5": {}
     }
   },
   ".checkbox-md": {
-    "&:is([type=\"checkbox\"])": {
+    "&[type=\"checkbox\"]": {
       "@apply size-6": {}
     }
   },
   ".checkbox-lg": {
-    "&:is([type=\"checkbox\"])": {
+    "&[type=\"checkbox\"]": {
       "@apply size-8": {}
     }
   }

@@ -7,9 +7,9 @@
     transition: flex-grow 0.2s;
   }
   &:after {
-    @apply rounded-full aspect-square h-full block bg-current;
+    @apply rounded-full aspect-square h-full block bg-current relative translate-x-0 start-0;
     content: "";
-    transition: background-color 0.1s;
+    transition: background-color 0.1s, translate 0.2s, inset-inline-start 0.2s;
     box-shadow: 0 -1px oklch(0% 0 0 / 0.1) inset,
       0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, 0 1px oklch(0% 0 0 / 0.1);
   }
@@ -30,14 +30,19 @@
     }
   }
   &:indeterminate {
-    @apply justify-center;
     &:before {
       @apply grow-0;
+    }
+    &:after {
+      @apply -translate-x-1/2 start-1/2;
     }
   }
 
   &:disabled {
-    @apply border-base-content cursor-not-allowed bg-transparent opacity-30;
+      @apply cursor-not-allowed opacity-30;
+      &:after{
+          @apply border border-current bg-transparent;
+      }
   }
 }
 .toggle-primary {
