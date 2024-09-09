@@ -6,8 +6,9 @@
             @apply outline-none;
         }
     }
-    &:focus{
-        @apply border-base-content/20 outline-base-content/10 outline outline-4;
+    &:focus,
+    &:focus-within{
+        @apply border-base-content/20 outline-base-content/20 outline outline-2 outline-offset-2;
     }
     &:has(> input[disabled]),
     &:is(:disabled, [disabled], .btn-disabled) {
@@ -51,7 +52,7 @@
         background-color: color-mix(in oklab, var(--color-primary) 2%, transparent);
         &:focus,
         &:focus-within {
-            @apply outline-primary/30 border-primary;
+            @apply outline-primary border-primary;
         }
     }
 
@@ -60,7 +61,7 @@
         background-color: color-mix(in oklab, var(--color-secondary) 2%, transparent);
         &:focus,
         &:focus-within {
-            @apply outline-secondary/30 border-secondary;
+            @apply outline-secondary border-secondary;
         }
     }
 
@@ -69,7 +70,7 @@
         background-color: color-mix(in oklab, var(--color-accent) 2%, transparent);
         &:focus,
         &:focus-within {
-            @apply outline-accent/30 border-accent;
+            @apply outline-accent border-accent;
         }
     }
 
@@ -78,7 +79,7 @@
         background-color: color-mix(in oklab, var(--color-info) 2%, transparent);
         &:focus,
         &:focus-within {
-            @apply outline-info/30 border-info;
+            @apply outline-info border-info;
         }
     }
 
@@ -87,7 +88,7 @@
         background-color: color-mix(in oklab, var(--color-success) 2%, transparent);
         &:focus,
         &:focus-within {
-            @apply outline-success/30 border-success;
+            @apply outline-success border-success;
         }
     }
 
@@ -96,7 +97,7 @@
         background-color: color-mix(in oklab, var(--color-warning) 2%, transparent);
         &:focus,
         &:focus-within {
-            @apply outline-warning/30 border-warning;
+            @apply outline-warning border-warning;
         }
     }
 
@@ -105,7 +106,7 @@
         background-color: color-mix(in oklab, var(--color-error) 2%, transparent);
         &:focus,
         &:focus-within {
-            @apply outline-error/30 border-error;
+            @apply outline-error border-error;
         }
     }
 

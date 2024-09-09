@@ -1,8 +1,9 @@
 export default {
   ".btn": {
     "@apply rounded-[--radius-btn] inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center gap-2 font-semibold duration-200 ease-out [border-width:var(--spacing-button-border)] text-base-content outline-base-content no-underline shadow-sm bg-[var(--btn-color,var(--color-base-200))] border-[var(--btn-color,var(--color-base-200))] outline-offset-2 text-sm/none [transition-property:color,background-color,border-color,opacity,box-shadow,transform]": {},
-    "borderTopColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)) 93%, white)",
-    "borderBottomColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)) 98%, black)",
+    "borderColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)), white 5%)",
+    "borderTopColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)), white 10%)",
+    "borderBottomColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)), black 3%)",
     "@media (hover:hover)": [
       {
         "@apply hover:bg-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)]": {}

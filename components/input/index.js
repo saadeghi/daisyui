@@ -7,8 +7,8 @@ export default {
         "@apply outline-none": {}
       }
     },
-    "&:focus": {
-      "@apply border-base-content/20 outline-base-content/10 outline outline-4": {}
+    "&:focus,\n    &:focus-within": {
+      "@apply border-base-content/20 outline-base-content/20 outline outline-2 outline-offset-2": {}
     },
     "&:has(> input[disabled]),\n    &:is(:disabled, [disabled], .btn-disabled)": {
       "@apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 cursor-not-allowed placeholder-base-content/20": {}
@@ -47,49 +47,49 @@ export default {
       "@apply border-primary": {},
       "backgroundColor": "color-mix(in oklab, var(--color-primary) 2%, transparent)",
       "&:focus,\n        &:focus-within": {
-        "@apply outline-primary/30 border-primary": {}
+        "@apply outline-primary border-primary": {}
       }
     },
     "&.input-secondary": {
       "@apply border-secondary": {},
       "backgroundColor": "color-mix(in oklab, var(--color-secondary) 2%, transparent)",
       "&:focus,\n        &:focus-within": {
-        "@apply outline-secondary/30 border-secondary": {}
+        "@apply outline-secondary border-secondary": {}
       }
     },
     "&.input-accent": {
       "@apply border-accent": {},
       "backgroundColor": "color-mix(in oklab, var(--color-accent) 2%, transparent)",
       "&:focus,\n        &:focus-within": {
-        "@apply outline-accent/30 border-accent": {}
+        "@apply outline-accent border-accent": {}
       }
     },
     "&.input-info": {
       "@apply border-info": {},
       "backgroundColor": "color-mix(in oklab, var(--color-info) 2%, transparent)",
       "&:focus,\n        &:focus-within": {
-        "@apply outline-info/30 border-info": {}
+        "@apply outline-info border-info": {}
       }
     },
     "&.input-success": {
       "@apply border-success": {},
       "backgroundColor": "color-mix(in oklab, var(--color-success) 2%, transparent)",
       "&:focus,\n        &:focus-within": {
-        "@apply outline-success/30 border-success": {}
+        "@apply outline-success border-success": {}
       }
     },
     "&.input-warning": {
       "@apply border-warning": {},
       "backgroundColor": "color-mix(in oklab, var(--color-warning) 2%, transparent)",
       "&:focus,\n        &:focus-within": {
-        "@apply outline-warning/30 border-warning": {}
+        "@apply outline-warning border-warning": {}
       }
     },
     "&.input-error": {
       "@apply border-error": {},
       "backgroundColor": "color-mix(in oklab, var(--color-error) 2%, transparent)",
       "&:focus,\n        &:focus-within": {
-        "@apply outline-error/30 border-error": {}
+        "@apply outline-error border-error": {}
       }
     },
     "&.input-xs": {
