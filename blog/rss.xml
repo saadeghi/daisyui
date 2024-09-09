@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Fri, 06 Sep 2024 00:41:55 GMT</lastBuildDate>
-    <pubDate>Fri, 06 Sep 2024 00:41:55 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Sep 2024 11:45:38 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Sep 2024 11:45:38 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ Introducing: Documentation template for Astro and daisyUI ]]>
+          </title>
+          <description>
+            <![CDATA[ Learn to build professional documentation quickly with the Documentation Template for Astro from daisyUI. ]]>
+          </description>
+          <link>https://daisyui.com/blog/daisyui-astro-tailwind-documentation-template/</link>
+          <pubDate>Sun, 08 Sep 2024 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/docs-template-thumbnail.webp</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/docs-template-thumbnail.webp</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/docs-template-thumbnail.webp" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/blog/docs-template-thumbnail.webp" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/daisyui-astro-tailwind-documentation-template/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Make a blog quickly using Astro and daisyUI ]]>
