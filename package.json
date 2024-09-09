@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "daisyui",
-  "version": "4.12.10",
+  "version": "5.0.0-alpha.0",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -20,29 +20,24 @@
   "keywords": [
     "design-system",
     "tailwindcss",
+    "css-library",
     "components",
     "ui-library",
     "component",
     "framework",
     "tailwind",
     "daisyui",
-    "theming",
-    "postcss",
+    "themes",
     "design",
     "css",
     "ui"
   ],
-  "main": "src/index.js",
-  "typings": "src/index.d.ts",
-  "types": "src/index.d.ts",
+  "main": "index.css",
   "files": [
-    "src/lib/**/*.js",
-    "dist/*.js",
-    "dist/{themes,styled,unstyled,full}.css",
-    "src/index.js",
-    "src/theming/*.js",
-    "src/theming/*.d.ts",
-    "src/index.d.ts"
+    "themes",
+    "components",
+    "index.css",
+    "plugin.js"
   ],
   "engines": {
     "node": ">=16.9.0"
@@ -60,8 +55,7 @@
     "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
     "format": "biome format --write .",
     "lint": "biome lint . --write",
-    "build": "node src/build",
-    "build:skipfullcss": "node src/build --skipfullcss",
+    "build": "node build.js",
     "dev": "cd src/docs && npm run dev",
     "playground": "cd src/experiments/playground && npm run dev",
     "release": "node src/release",
