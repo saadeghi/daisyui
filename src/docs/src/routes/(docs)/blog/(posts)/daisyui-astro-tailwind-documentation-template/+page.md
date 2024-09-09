@@ -1,8 +1,8 @@
 ---
-title: Create Your Documentation Site in Minutes with Astro and daisyUI
+title: 'Introducing: Documentation template for Astro and daisyUI'
 desc: Learn to build professional documentation quickly with the Documentation Template for Astro from daisyUI.
 published: true
-date: 2024-08-29
+date: 2024-09-08
 thumbnail: https://img.daisyui.com/images/blog/docs-template-thumbnail.webp
 author: Abhijeet Biswal
 tags:
@@ -12,7 +12,7 @@ tags:
 
 ## Introduction
 
-Creating comprehensive and user-friendly documentation is essential for any project, but it doesn't have to be a complicated process. With the "Documentation Template for Astro" available at our [daisyUI store](https://daisyui.com/store/#284327), you can quickly build beautiful and easy-to-navigate documentation for your product or project. There is also a [Next.js version](https://daisyui.com/store/#284327) available for this template if you prefer to use Next.js for your site. This guide will take you through the steps to install, customize, and deploy your documentation site using the Astro version of the template.
+Creating user-friendly documentation is essential for any project, but it doesn’t have to be complicated. With the "Documentation Template for Astro" available at [Official daisyUI store](https://daisyui.com/store/#284327), you can quickly build beautiful and easy-to-navigate documentation for your product or project. A [Next.js version](https://daisyui.com/store/#284327)  of the template is also available if you prefer using Next.js. This guide will walk you through installing, customizing, and deploying your documentation site using the Astro template.
 
 ## 1. How to Install the Documentation Template
 
