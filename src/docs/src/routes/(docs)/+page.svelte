@@ -84,6 +84,29 @@ const demo_1_ElementTextHandler = $derived(() => {
   }
   return "Tailwind Button"
 })
+
+let daisyui5progress = $state(0);
+
+$effect(async () => {
+  const response = await fetch('https://api.daisyui.com/api/progress.json');
+  const data = await response.json();
+
+  let trueCount = 0, totalCount = 0;
+
+  function count(obj) {
+    Object.values(obj).forEach(value => {
+      if (typeof value === 'object') count(value);
+      if (typeof value === 'boolean') {
+        totalCount++;
+        trueCount += value ? 1 : 0;
+      }
+    });
+  }
+
+  count(data);
+  daisyui5progress = (trueCount / totalCount * 100).toFixed(0);
+});
+
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -112,12 +135,19 @@ const demo_1_ElementTextHandler = $derived(() => {
                 <pre><code>npm i -D daisyui</code></pre>
               </button>
             </div>
-            <!-- <div class="flex gap-2">
-              <a class="link link-hover link-primary rounded-full" href="/docs/changelog/">
-                {@html $t("daisyUI 3 is available now!")}
-              </a>
-              🎉
-            </div> -->
+            {#if daisyui5progress}
+            <div class="flex gap-2 grow w-full max-w-sm">
+              <div class="relative flex flex-col w-full">
+                <div class="text-[0.6rem] -top-4 absolute italic -translate-x-1/2 rtl:translate-x-1/2" style={`inset-inline-start:${daisyui5progress}%`}>
+                {daisyui5progress}%
+                </div>
+                <progress class="progress bg-base-200 border border-base-200 progress-warning w-full" value={daisyui5progress} max="100"></progress>
+                <div class="text-[0.6rem] tracking-wide -bottom-4 absolute italic">
+                daisyUI 5 development
+                </div>
+              </div>
+            </div>
+            {/if}
           </div>
           <div class="h-4"></div>
           <h1
