@@ -68,6 +68,8 @@
     "commit-and-tag-version": "12.4.1",
     "postcss": "^8.4.45",
     "postcss-js": "^4.0.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwindcss": "^4.0.0-alpha.23"
   }
 }

@@ -1,61 +1,61 @@
 {
-  "files": {
-    "ignore": [
-      "node_modules",
-      "dist",
-      "CHANGELOG.md",
-      "src/docs/.svelte-kit",
-      "src/docs/build",
-      "src/experiments/compare/**/*.css"
-    ]
-  },
-  "organizeImports": {
-    "enabled": false
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineEnding": "lf",
-    "lineWidth": 100,
-    "attributePosition": "auto"
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "jsxQuoteStyle": "double",
-      "quoteProperties": "preserve",
-      "trailingCommas": "es5",
-      "semicolons": "asNeeded",
-      "arrowParentheses": "always",
-      "bracketSpacing": true,
-      "bracketSameLine": false,
-      "quoteStyle": "double",
-      "attributePosition": "auto"
-    }
-  },
-  "overrides": [
-    {
-      "include": ["*.json"],
-      "formatter": {
-        "indentWidth": 2
-      }
-    },
-    {
-      "include": ["*.svelte"],
-      "linter": {
-        "rules": {
-          "style": {
-            "useConst": "off"
-          }
-        }
-      }
-    }
-  ]
+	"files": {
+		"ignore": [
+			"node_modules",
+			"dist",
+			"CHANGELOG.md",
+			"src/docs/.svelte-kit",
+			"src/docs/build",
+			"src/experiments/compare/**/*.css"
+		]
+	},
+	"organizeImports": {
+		"enabled": false
+	},
+	"formatter": {
+		"enabled": false,
+		"formatWithErrors": false,
+		"indentStyle": "space",
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 100,
+		"attributePosition": "auto"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "preserve",
+			"trailingCommas": "es5",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "always",
+			"bracketSpacing": true,
+			"bracketSameLine": false,
+			"quoteStyle": "double",
+			"attributePosition": "auto"
+		}
+	},
+	"overrides": [
+		{
+			"include": ["*.json"],
+			"formatter": {
+				"indentWidth": 2
+			}
+		},
+		{
+			"include": ["*.svelte"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useConst": "off"
+					}
+				}
+			}
+		}
+	]
 }

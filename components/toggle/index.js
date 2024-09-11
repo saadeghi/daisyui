@@ -1,6 +1,6 @@
 export default {
   ".toggle": {
-    "@apply h-6 w-12 inline-flex cursor-pointer rounded-[--radius-badge] rounded-badge border-current appearance-none border shrink-0 text-base-content/50 p-[.1875rem]": {},
+    "@apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none rounded-[--radius-badge] border border-current p-[.1875rem]": {},
     "boxShadow": "0 1px oklch(0% 0 0 / 0.1) inset",
     "&:before": {
       "@apply block h-full grow-0": {},
@@ -8,15 +8,15 @@ export default {
       "transition": "flex-grow 0.2s"
     },
     "&:after": {
-      "@apply [border-radius:calc(var(--radius-badge)-3px)] aspect-square h-full block bg-current relative translate-x-0 start-0": {},
+      "@apply relative start-0 block aspect-square h-full translate-x-0 [border-radius:calc(var(--radius-badge)-3px)] bg-current": {},
       "content": "\"\"",
-      "transition": "background-color 0.1s, translate 0.2s, inset-inline-start 0.2s",
-      "boxShadow": "0 -1px oklch(0% 0 0 / 0.1) inset,\n      0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, 0 1px oklch(0% 0 0 / 0.1)"
+      "transition": "background-color 0.1s,\n\t\t\ttranslate 0.2s,\n\t\t\tinset-inline-start 0.2s",
+      "boxShadow": "0 -1px oklch(0% 0 0 / 0.1) inset,\n\t\t\t0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,\n\t\t\t0 1px oklch(0% 0 0 / 0.1)"
     },
     "&:focus-visible": {
       "@apply outline outline-2 outline-offset-2 outline-current": {}
     },
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply bg-base-100 text-base-content": {},
       "&:before": {
         "@apply grow": {}
@@ -33,7 +33,7 @@ export default {
         "@apply grow-0": {}
       },
       "&:after": {
-        "@apply -translate-x-1/2 start-1/2": {}
+        "@apply start-1/2 -translate-x-1/2": {}
       }
     },
     "&:disabled": {
@@ -44,37 +44,37 @@ export default {
     }
   },
   ".toggle-primary": {
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply text-primary": {}
     }
   },
   ".toggle-secondary": {
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply text-secondary": {}
     }
   },
   ".toggle-accent": {
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply text-accent": {}
     }
   },
   ".toggle-success": {
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply text-success": {}
     }
   },
   ".toggle-warning": {
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply text-warning": {}
     }
   },
   ".toggle-info": {
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply text-info": {}
     }
   },
   ".toggle-error": {
-    "&:checked,\n  &[aria-checked=\"true\"]": {
+    "&:checked,\n\t&[aria-checked=\"true\"]": {
       "@apply text-error": {}
     }
   },

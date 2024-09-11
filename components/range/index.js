@@ -3,12 +3,12 @@ export default {
     "appearance": "none",
     "WebkitAppearance": "none",
     "--range-shdw": "currentColor",
-    "@apply rounded-box overflow-hidden bg-transparent h-6 w-full cursor-pointer border-none": {},
+    "@apply rounded-box h-6 w-full cursor-pointer overflow-hidden border-none bg-transparent": {},
     "&:focus": {
       "outline": "none"
     },
     "&:focus-visible": {
-      "--focus-shadow": "0 0 0 6px var(--color-base-100) inset, 0 0 0 2rem var(--range-shdw) inset"
+      "--focus-shadow": "0 0 0 6px var(--color-base-100) inset,\n\t\t\t0 0 0 2rem var(--range-shdw) inset"
     },
     "&::-webkit-slider-runnable-track": {
       "@apply rounded-box bg-base-content/10 h-2 w-full": {}
@@ -22,7 +22,7 @@ export default {
       "transform": "translateY(-50%)",
       "--filler-size": "100rem",
       "--filler-offset": "0.6rem",
-      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n        var(--focus-shadow, 0 0),\n        calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)"
+      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n\t\t\tvar(--focus-shadow, 0 0),\n\t\t\tcalc(var(--filler-size) * -1 - var(--filler-offset)) 0 0\n\t\t\t\tvar(--filler-size)"
     },
     "&::-moz-range-track": {
       "@apply rounded-box bg-base-content/10 h-2 w-full": {}
@@ -33,7 +33,7 @@ export default {
       "color": "var(--range-shdw)",
       "--filler-size": "100rem",
       "--filler-offset": "0.5rem",
-      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n        var(--focus-shadow, 0 0),\n        calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)"
+      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n\t\t\tvar(--focus-shadow, 0 0),\n\t\t\tcalc(var(--filler-size) * -1 - var(--filler-offset)) 0 0\n\t\t\t\tvar(--filler-size)"
     }
   },
   ".range-primary": {

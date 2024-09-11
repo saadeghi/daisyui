@@ -7,7 +7,7 @@ export default {
     },
     ":where(input)": {
       "animation": "rating-pop var(--animation-input, 0.25s) ease-out",
-      "@apply cursor-pointer rounded-none bg-base-content h-6 w-6 opacity-100": {}
+      "@apply bg-base-content h-6 w-6 cursor-pointer rounded-none opacity-100": {}
     },
     "& .rating-hidden": {
       "@apply w-2 bg-transparent": {}
@@ -15,12 +15,16 @@ export default {
     "input[type=\"radio\"]:checked": {
       "backgroundImage": "none"
     },
-    "input:checked ~ input,\n  input[aria-checked=\"true\"] ~ input": {
-      "@apply opacity-20": {}
-    },
-    "input:focus-visible": {
-      "@apply transition-transform duration-300 ease-out": {},
-      "transform": "translateY(-0.125em)"
+    "input": {
+      "&:checked,\n\t\t&[aria-checked=\"true\"]": {
+        "& ~ input": {
+          "@apply opacity-20": {}
+        }
+      },
+      "&:focus-visible": {
+        "@apply transition-transform duration-300 ease-out": {},
+        "transform": "translateY(-0.125em)"
+      }
     },
     "& input:active:focus": {
       "animation": "none",

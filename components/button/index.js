@@ -1,42 +1,46 @@
 export default {
   ".btn": {
-    "@apply rounded-[--radius-btn] inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center gap-2 font-semibold duration-200 ease-out text-base-content outline-base-content no-underline bg-[var(--btn-color,var(--color-base-200))] border-[var(--btn-color,var(--color-base-200))] outline-offset-2 text-sm/none [transition-property:color,background-color,border-color,opacity,box-shadow,transform]": {},
+    "@apply text-base-content outline-base-content inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[--radius-btn] px-4 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none": {},
+    "transitionProperty": "color, background-color, border-color, opacity,\n\t\tbox-shadow, transform",
+    "backgroundColor": "var(--btn-color, var(--color-base-200))",
     "borderWidth": "var(--spacing-button-border)",
-    "borderColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)), black 2%)",
-    "borderBottomColor": "color-mix(in oklab, var(--btn-color,var(--color-base-200)), black 4%)",
-    "boxShadow": "0 1px 0 0 oklch(100% 0 0/0.1) inset, 0 1px 1px 0 oklch(0% 0 0/0.07)",
-    "@media (hover:hover)": {
+    "borderColor": "color-mix(\n\t\tin oklab,\n\t\tvar(--btn-color, var(--color-base-200)),\n\t\tblack 2%\n\t)",
+    "borderBottomColor": "color-mix(\n\t\tin oklab,\n\t\tvar(--btn-color, var(--color-base-200)),\n\t\tblack 4%\n\t)",
+    "boxShadow": "0 1px 0 0 oklch(100% 0 0/0.1) inset,\n\t\t0 1px 1px 0 oklch(0% 0 0/0.07)",
+    "@media (hover: hover)": {
       "&:hover": {
-        "borderColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%)",
-        "borderBottomColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 7%)",
-        "backgroundColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%)"
+        "borderColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 5%\n\t\t\t)",
+        "borderBottomColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 7%\n\t\t\t)",
+        "backgroundColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 5%\n\t\t\t)"
       }
     },
     "&.btn-active": {
-      "borderColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%)",
-      "borderBottomColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 7%)",
-      "backgroundColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%)"
+      "borderColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\tblack 5%\n\t\t)",
+      "borderBottomColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\tblack 7%\n\t\t)",
+      "backgroundColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\tblack 5%\n\t\t)"
     },
     "&:focus-visible": {
       "@apply outline outline-2": {}
     },
     "&:active": {
       "&:focus": {
-        "@apply [transform:scale(var(--btn-focus-scale,0.97))] animate-[button-pop_0s_ease-out]": {},
-        "borderColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%)",
-        "borderBottomColor": "color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 7%)",
-        "boxShadow": "0 1px 0 0 oklch(0% 0 0/0.07) inset, 0 0 0 0 oklch(0% 0 0/0.1)"
+        "transform": "scale(var(--btn-focus-scale, 0.97))",
+        "@apply animate-[button-pop_0s_ease-out]": {},
+        "borderColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 5%\n\t\t\t)",
+        "borderBottomColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 7%\n\t\t\t)",
+        "boxShadow": "0 1px 0 0 oklch(0% 0 0/0.07) inset,\n\t\t\t\t0 0 0 0 oklch(0% 0 0/0.1)"
       },
-      "@media (hover:hover)": {
+      "@media (hover: hover)": {
         "&:hover": {
-          "@apply animate-[button-pop_0s_ease-out] [transform:scale(var(--btn-focus-scale,0.97))]": {}
+          "transform": "scale(var(--btn-focus-scale, 0.97))",
+          "@apply animate-[button-pop_0s_ease-out]": {}
         }
       }
     },
     "&:is(:disabled, [disabled], .btn-disabled)": {
-      "@apply pointer-events-none bg-neutral/20 text-base-content/20 border-transparent [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:bg-neutral/20 [@media(hover:hover)]:text-base-content/20 [@media(hover:hover)]:border-transparent": {}
+      "@apply bg-neutral/20 text-base-content/20 [@media(hover:hover)]:bg-neutral/20 [@media(hover:hover)]:text-base-content/20 pointer-events-none border-transparent [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:border-transparent": {}
     },
-    "&:is(input[type=\"checkbox\"]),\n    &:is(input[type=\"radio\"])": {
+    "&:is(input[type=\"checkbox\"]),\n\t&:is(input[type=\"radio\"])": {
       "@apply w-auto appearance-none": {}
     }
   },
@@ -105,16 +109,21 @@ export default {
     "@apply text-error-content outline-error": {}
   },
   ".btn.glass": {
-    "@apply shadow-none outline-current [@media(hover:hover)]:hover:[--glass-opacity:25%] [@media(hover:hover)]:hover:[--glass-border-opacity:15%] [&.btn-active]:[--glass-opacity:25%] [&.btn-active]:[--glass-border-opacity:15%]": {}
+    "@apply shadow-none outline-current [&.btn-active]:[--glass-border-opacity:15%] [&.btn-active]:[--glass-opacity:25%] [@media(hover:hover)]:hover:[--glass-border-opacity:15%] [@media(hover:hover)]:hover:[--glass-opacity:25%]": {}
   },
   ".btn-ghost": {
-    "@apply border border-transparent bg-transparent text-current shadow-none outline-current [@media(hover:hover)]:hover:bg-base-content/20 [@media(hover:hover)]:hover:border-transparent [&.btn-active]:bg-base-content/20 [&.btn-active]:border-transparent": {}
+    "@apply [@media(hover:hover)]:hover:bg-base-content/20 [&.btn-active]:bg-base-content/20 border border-transparent bg-transparent text-current shadow-none outline-current [&.btn-active]:border-transparent [@media(hover:hover)]:hover:border-transparent": {}
   },
   ".btn-link": {
-    "@apply text-primary border-transparent bg-transparent underline shadow-none outline-current [@media(hover:hover)]:hover:border-transparent [@media(hover:hover)]:hover:bg-transparent [@media(hover:hover)]:hover:underline [&.btn-active]:border-transparent [&.btn-active]:bg-transparent [&.btn-active]:underline": {}
+    "@apply text-primary border-transparent bg-transparent underline shadow-none outline-current [&.btn-active]:border-transparent [&.btn-active]:bg-transparent [&.btn-active]:underline [@media(hover:hover)]:hover:border-transparent [@media(hover:hover)]:hover:bg-transparent [@media(hover:hover)]:hover:underline": {}
   },
   ".btn-outline": {
-    "@apply text-[var(--btn-color)] bg-transparent shadow-none [&.btn-active]:text-base-content [&.btn-active]:bg-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)] [&.btn-active]:border-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)]": {},
+    "@apply bg-transparent text-[var(--btn-color)] shadow-none": {},
+    "&.btn-active": {
+      "@apply text-base-content": {},
+      "borderColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)) 90%,\n\t\t\tblack\n\t\t)",
+      "backgroundColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)) 90%,\n\t\t\tblack\n\t\t)"
+    },
     "&.btn-primary": {
       "@apply [@media(hover:hover)]:hover:text-primary-content text-primary [&.btn-active]:text-primary-content": {}
     },

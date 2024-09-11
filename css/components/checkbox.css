@@ -1,127 +1,167 @@
 .checkbox {
-  @apply border-base-content/20 rounded-[--radius-btn] size-6 cursor-pointer appearance-none border shrink-0 text-base-content relative p-1;
-  box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
-  transition: background-color .2s, box-shadow .2s;
-  &:before {
-    @apply size-full block content-[''] bg-current opacity-0 rotate-45;
-      transition: clip-path .3s, opacity .1s, rotate .3s, translate .3s;
-      transition-delay: .1s;
-      clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%);
-      box-shadow: 0px 3px 0 0px oklch(100% 0 0 / 0.1) inset;
-  }
-  &:focus-visible {
-    @apply outline-2 outline-offset-2 outline-current;
-  }
-  &:checked,
-  &[aria-checked="true"] {
-    box-shadow:
-          0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, 0 1px oklch(0% 0 0 / 0.1);
-    &:before {
-        @apply opacity-100;
-        clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%);
-    }
-  }
-  &:indeterminate {
-    &:before {
-      @apply rotate-0 opacity-100 translate-y-[-35%];
-      clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%);
-    }
-  }
+	@apply border-base-content/20 text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-[--radius-btn] border p-1;
+	box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
+	transition:
+		background-color 0.2s,
+		box-shadow 0.2s;
+
+	&:before {
+		@apply block size-full rotate-45 bg-current opacity-0 content-[''];
+		transition:
+			clip-path 0.3s,
+			opacity 0.1s,
+			rotate 0.3s,
+			translate 0.3s;
+		transition-delay: 0.1s;
+		clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%);
+		box-shadow: 0px 3px 0 0px oklch(100% 0 0 / 0.1) inset;
+	}
+
+	&:focus-visible {
+		@apply outline-2 outline-offset-2 outline-current;
+	}
+
+	&:checked,
+	&[aria-checked="true"] {
+		box-shadow:
+			0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,
+			0 1px oklch(0% 0 0 / 0.1);
+
+		&:before {
+			@apply opacity-100;
+			clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%);
+		}
+	}
+
+	&:indeterminate {
+		&:before {
+			@apply translate-y-[-35%] rotate-0 opacity-100;
+			clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%);
+		}
+	}
 }
+
 .checkbox-primary {
-    @apply border-primary text-primary-content;
-    &:focus-visible {
-        @apply outline-primary;
-    }
-    &:checked {
-        @apply bg-primary;
-    }
+	@apply border-primary text-primary-content;
+
+	&:focus-visible {
+		@apply outline-primary;
+	}
+
+	&:checked {
+		@apply bg-primary;
+	}
 }
+
 .checkbox-secondary {
-    @apply border-secondary text-secondary-content;
-    &:focus-visible {
-        @apply outline-secondary;
-    }
-    &:checked {
-        @apply bg-secondary;
-    }
+	@apply border-secondary text-secondary-content;
+
+	&:focus-visible {
+		@apply outline-secondary;
+	}
+
+	&:checked {
+		@apply bg-secondary;
+	}
 }
+
 .checkbox-accent {
-    @apply border-accent text-accent-content;
-    &:focus-visible {
-        @apply outline-accent;
-    }
-    &:checked {
-        @apply bg-accent;
-    }
+	@apply border-accent text-accent-content;
+
+	&:focus-visible {
+		@apply outline-accent;
+	}
+
+	&:checked {
+		@apply bg-accent;
+	}
 }
+
 .checkbox-success {
-    @apply border-success text-success-content;
-    &:focus-visible {
-        @apply outline-success;
-    }
-    &:checked {
-        @apply bg-success;
-    }
+	@apply border-success text-success-content;
+
+	&:focus-visible {
+		@apply outline-success;
+	}
+
+	&:checked {
+		@apply bg-success;
+	}
 }
+
 .checkbox-warning {
-    @apply border-warning text-warning-content;
-    &:focus-visible {
-        @apply outline-warning;
-    }
-    &:checked {
-        @apply bg-warning;
-    }
+	@apply border-warning text-warning-content;
+
+	&:focus-visible {
+		@apply outline-warning;
+	}
+
+	&:checked {
+		@apply bg-warning;
+	}
 }
+
 .checkbox-info {
-    @apply border-info text-info-content;
-    &:focus-visible {
-        @apply outline-info;
-    }
-    &:checked {
-        @apply bg-info;
-    }
+	@apply border-info text-info-content;
+
+	&:focus-visible {
+		@apply outline-info;
+	}
+
+	&:checked {
+		@apply bg-info;
+	}
 }
+
 .checkbox-error {
-    @apply border-error text-error-content;
-    &:focus-visible {
-        @apply outline-error;
-    }
-    &:checked {
-        @apply bg-error;
-    }
+	@apply border-error text-error-content;
+
+	&:focus-visible {
+		@apply outline-error;
+	}
+
+	&:checked {
+		@apply bg-error;
+	}
 }
+
 .checkbox:disabled {
-  @apply cursor-not-allowed opacity-20;
+	@apply cursor-not-allowed opacity-20;
 }
 
 .checkbox-xs {
-    @apply p-[.1875rem];
-    &[type="checkbox"]{
-        @apply size-4;
-        &:not(:indeterminate):before{
-            clip-path: polygon(10% 100%, 10% 70%, 40% 70%, 40% 70%, 70% 70%, 70% 100%);
-        }
-        &:checked,
-        &[aria-checked="true"] {
-            &:before {
-                clip-path: polygon(10% 100%, 10% 70%, 40% 70%, 40% 0%, 70% 0%, 70% 100%);
-            }
-        }
-    }
+	@apply p-[.1875rem];
+
+	&[type="checkbox"] {
+		@apply size-4;
+
+		&:not(:indeterminate):before {
+			clip-path: polygon(10% 100%, 10% 70%, 40% 70%, 40% 70%, 70% 70%, 70% 100%);
+		}
+
+		&:checked,
+		&[aria-checked="true"] {
+			&:before {
+				clip-path: polygon(10% 100%, 10% 70%, 40% 70%, 40% 0%, 70% 0%, 70% 100%);
+			}
+		}
+	}
 }
+
 .checkbox-sm {
-    &[type="checkbox"]{
-        @apply size-5;
-    }
+	&[type="checkbox"] {
+		@apply size-5;
+	}
 }
+
 .checkbox-md {
-    &[type="checkbox"]{
-        @apply size-6;
-    }
+	&[type="checkbox"] {
+		@apply size-6;
+	}
 }
+
 .checkbox-lg {
-    &[type="checkbox"]{
-        @apply size-8;
-    }
+	&[type="checkbox"] {
+		@apply size-8;
+	}
 }
