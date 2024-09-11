@@ -1,12 +1,20 @@
 .btn {
-  @apply rounded-[--radius-btn] inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center gap-2 font-semibold duration-200 ease-out [border-width:var(--spacing-button-border)] text-base-content outline-base-content no-underline bg-[var(--btn-color,var(--color-base-200))] border-[var(--btn-color,var(--color-base-200))] outline-offset-2 text-sm/none [transition-property:color,background-color,border-color,opacity,box-shadow,transform] shadow-sm;
-  border-color: color-mix(in oklab, var(--btn-color,var(--color-base-200)), white 3%);
-  border-top-color: color-mix(in oklab, var(--btn-color,var(--color-base-200)), white 6%);
-  border-bottom-color: color-mix(in oklab, var(--btn-color,var(--color-base-200)), black 3%);
+  @apply rounded-[--radius-btn] inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center gap-2 font-semibold duration-200 ease-out text-base-content outline-base-content no-underline bg-[var(--btn-color,var(--color-base-200))] border-[var(--btn-color,var(--color-base-200))] outline-offset-2 text-sm/none [transition-property:color,background-color,border-color,opacity,box-shadow,transform];
+  border-width:var(--spacing-button-border);
+  border-color: color-mix(in oklab, var(--btn-color,var(--color-base-200)), black 2%);
+  border-bottom-color: color-mix(in oklab, var(--btn-color,var(--color-base-200)), black 4%);
+  box-shadow: 0 1px 0 0 oklch(100% 0 0/0.1) inset, 0 1px 1px 0 oklch(0% 0 0/0.07);
   @media(hover:hover){
       &:hover{
-      @apply bg-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)] border-[color-mix(in_oklab,var(--btn-color,var(--color-base-200))_90%,black)];
+          border-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%);
+          border-bottom-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 7%);
+          background-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%);
     }
+  }
+  &.btn-active{
+      border-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%);
+      border-bottom-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 7%);
+      background-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%);
   }
   &:focus-visible{
       @apply outline outline-2;
@@ -14,9 +22,14 @@
   &:active{
       &:focus{
           @apply [transform:scale(var(--btn-focus-scale,0.97))] animate-[button-pop_0s_ease-out];
+          border-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 5%);
+          border-bottom-color: color-mix(in oklab,var(--btn-color,var(--color-base-200)),black 7%);
+          box-shadow: 0 1px 0 0 oklch(0% 0 0/0.07) inset, 0 0 0 0 oklch(0% 0 0/0.1);
       }
-      &:hover{
-          @apply animate-[button-pop_0s_ease-out] [transform:scale(var(--btn-focus-scale,0.97))];
+      @media(hover:hover){
+        &:hover{
+            @apply animate-[button-pop_0s_ease-out] [transform:scale(var(--btn-focus-scale,0.97))];
+        }
       }
   }
 }
@@ -27,28 +40,36 @@
   @apply size-12 rounded-full p-0;
 }
 .btn-primary {
-  @apply [--btn-color:var(--color-primary)] text-primary-content outline-primary;
+    --btn-color:var(--color-primary);
+  @apply text-primary-content outline-primary;
 }
 .btn-secondary {
-  @apply [--btn-color:var(--color-secondary)] text-secondary-content outline-secondary;
+    --btn-color:var(--color-secondary);
+  @apply text-secondary-content outline-secondary;
 }
 .btn-accent {
-  @apply [--btn-color:var(--color-accent)] text-accent-content outline-accent;
+    --btn-color:var(--color-accent);
+  @apply text-accent-content outline-accent;
 }
 .btn-neutral {
-  @apply [--btn-color:var(--color-neutral)] text-neutral-content outline-neutral;
+    --btn-color:var(--color-neutral);
+  @apply text-neutral-content outline-neutral;
 }
 .btn-info {
-  @apply [--btn-color:var(--color-info)] text-info-content outline-info;
+    --btn-color:var(--color-info);
+  @apply text-info-content outline-info;
 }
 .btn-success {
-  @apply [--btn-color:var(--color-success)] text-success-content outline-success;
+    --btn-color:var(--color-success);
+  @apply text-success-content outline-success;
 }
 .btn-warning {
-  @apply [--btn-color:var(--color-warning)] text-warning-content outline-warning;
+    --btn-color:var(--color-warning);
+  @apply text-warning-content outline-warning;
 }
 .btn-error {
-  @apply [--btn-color:var(--color-error)] text-error-content outline-error;
+    --btn-color:var(--color-error);
+  @apply text-error-content outline-error;
 }
 .btn.glass {
   @apply shadow-none outline-current [@media(hover:hover)]:hover:[--glass-opacity:25%] [@media(hover:hover)]:hover:[--glass-border-opacity:15%] [&.btn-active]:[--glass-opacity:25%] [&.btn-active]:[--glass-border-opacity:15%];
