@@ -108,6 +108,16 @@ let sortedFilteredProducts = $derived(
       return 0
     })
 )
+
+let sliders = $state(Object.fromEntries(data.products.map(product => [product.id, { currentIndex: 0 }])));
+
+function next(productId, media) {
+  sliders[productId].currentIndex = (sliders[productId].currentIndex + 1) % media.length;
+}
+
+function prev(productId, media) {
+  sliders[productId].currentIndex = (sliders[productId].currentIndex - 1 + media.length) % media.length;
+}
 </script>
 
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
@@ -123,7 +133,7 @@ let sortedFilteredProducts = $derived(
     <div class="text-xs text-base-content/50">Filter by</div>
     <div class="flex gap-2 items-center">
       {#each data.techFilters as filter}
-        {#if 
+        {#if
           // Show all options except "all" if no option is chosen
           (selectedTech === '' && filter !== 'all') ||
           // Show all options if "all" is selected
@@ -140,7 +150,7 @@ let sortedFilteredProducts = $derived(
             {#if filter === 'all'}
               <svg aria-label="Clear filters" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                 <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
-              </svg>                  
+              </svg>
             {:else}
               {data.tech[filter].title}
             {/if}
@@ -161,7 +171,7 @@ let sortedFilteredProducts = $derived(
         <div class="alert min-h-24 border-transparent bg-neutral text-neutral-content" transition:slide={{ duration: 400 }}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-4">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
-          </svg>          
+          </svg>
           <div class="flex w-full flex-col items-center justify-between gap-10 sm:flex-row" transition:fade={{ duration: 400 }}>
             <div class="flex flex-col gap-1">
               <h2 class="text-lg font-bold">
@@ -240,7 +250,7 @@ let sortedFilteredProducts = $derived(
 
 
   <div class="mx-auto flex max-w-7xl flex-col gap-16">
-    {#each sortedFilteredProducts as product}
+    {#each sortedFilteredProducts as product, index}
       <div
         class="rounded-box relative grid grid-cols-12 gap-y-10 py-10 xl:gap-x-10"
         id="{product.id}">
@@ -329,59 +339,87 @@ let sortedFilteredProducts = $derived(
           {/if}
         </div>
         <div class="col-span-12 row-start-1 flex flex-col gap-6 xl:col-span-7">
-          <a
-            target="_blank"
-            href="{product.screenshot
-              ? product.screenshot
-              : product.attributes.large_thumb_url}"
-            rel="noopener noreferrer"
-            class="rounded-box border-base-200 group relative block aspect-[4/3] overflow-hidden border object-cover">
-            <div
-              class="absolute inset-0 z-[1] grid place-content-center bg-black/50 opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100">
-              <svg
-                class="text-white"
-                width="32"
-                height="32"
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linejoin="round">
-                </path>
-                <path
-                  d="M21 15L21 27"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                </path>
-                <path
-                  d="M15.0156 21.0156L27 21"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                </path>
-                <path
-                  d="M33.2216 33.2217L41.7069 41.707"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                </path>
-              </svg>
+          <div class="aspect-[4/3] relative grid items-center group">
+            <div class="col-span-3 col-start-1 row-start-1 flex overflow-hidden items-center rounded-box border border-base-200">
+              {#each product.media as media}
+                <div class="w-full shrink-0 transition-transform duration-300"
+                    style={`transform: translateX(-${sliders[product.id].currentIndex * 100}%)`}
+                  >
+                  {#if media.type === 'video'}
+                    <div class="w-full grid rounded-box overflow-hidden">
+                      <div class="[grid-column:1/1] [grid-row:1/1] z-[1]"></div>
+                      <iframe class="w-full [grid-column:1/1] [grid-row:1/1]" src={`${media.url}?mute=1&autoplay=1&controls=0&rel=0&modestbranding=1&loop=1`} frameborder="0" style={`aspect-ratio: ${media.ratio};`}></iframe>
+                    </div>
+                  {/if}
+                  {#if media.type === 'image'}
+                    <a
+                      target="_blank"
+                      href="{media.original}"
+                      rel="noopener noreferrer"
+                      class="group relative block aspect-[4/3] overflow-hidden object-cover">
+                      <div
+                        class="absolute inset-0 z-[1] grid place-content-center bg-black/50 opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100">
+                        <svg
+                          class="text-white"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="4"
+                            stroke-linejoin="round">
+                          </path>
+                          <path
+                            d="M21 15L21 27"
+                            stroke="currentColor"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                          </path>
+                          <path
+                            d="M15.0156 21.0156L27 21"
+                            stroke="currentColor"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                          </path>
+                          <path
+                            d="M33.2216 33.2217L41.7069 41.707"
+                            stroke="currentColor"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                          </path>
+                        </svg>
+                      </div>
+                      <img
+                        style="{`background-image: url('${media.sm}')`}"
+                        src="{media.lg}"
+                        alt="{product.attributes.name}"
+                        loading="lazy"
+                        class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover" />
+                    </a>
+                  {/if}
+                </div>
+              {/each}
             </div>
-            <img
-              style="{`background-image: url('${product.attributes.thumb_url}')`}"
-              src="{product.attributes.large_thumb_url}"
-              alt="{product.attributes.name}"
-              loading="lazy"
-              class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover" />
-          </a>
+            {#if product.media.length > 1}
+              <button aria-label="Previous" onclick={() => prev(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-1 row-start-1 z-[1] m-6 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 duration-300 bg-black/50 border-transparent text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 lg:size-12">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+              <button aria-label="Next" onclick={() => next(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-3 row-start-1 z-[1] m-6 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-black/50 border-transparent text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 lg:size-12">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+            {/if}
+          </div>
           {#if product.tech}
             <div class="flex items-center justify-center gap-4 md:justify-end">
               <span class="text-base-content/50 text-xs italic">made with</span>
