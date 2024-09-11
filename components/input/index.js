@@ -52,7 +52,7 @@ export default {
     },
     "&.input-secondary": {
       "@apply border-secondary": {},
-      "backgroundColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--color-secondary) 2%,\n\t\t\ttransparent\n\t\t)",
+      "backgroundColor": "color-mix(in oklab, var(--color-secondary) 2%, transparent)",
       "&:focus,\n\t\t&:focus-within": {
         "@apply outline-secondary border-secondary": {}
       }

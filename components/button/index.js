@@ -1,23 +1,23 @@
 export default {
   ".btn": {
     "@apply text-base-content outline-base-content inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[--radius-btn] px-4 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none": {},
-    "transitionProperty": "color, background-color, border-color, opacity,\n\t\tbox-shadow, transform",
+    "transitionProperty": "color, background-color, border-color, opacity, box-shadow, transform",
     "backgroundColor": "var(--btn-color, var(--color-base-200))",
     "borderWidth": "var(--spacing-button-border)",
-    "borderColor": "color-mix(\n\t\tin oklab,\n\t\tvar(--btn-color, var(--color-base-200)),\n\t\tblack 2%\n\t)",
-    "borderBottomColor": "color-mix(\n\t\tin oklab,\n\t\tvar(--btn-color, var(--color-base-200)),\n\t\tblack 4%\n\t)",
+    "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 2%)",
+    "borderBottomColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 4%)",
     "boxShadow": "0 1px 0 0 oklch(100% 0 0/0.1) inset,\n\t\t0 1px 1px 0 oklch(0% 0 0/0.07)",
     "@media (hover: hover)": {
       "&:hover": {
-        "borderColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 5%\n\t\t\t)",
-        "borderBottomColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 7%\n\t\t\t)",
-        "backgroundColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 5%\n\t\t\t)"
+        "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)",
+        "borderBottomColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%)",
+        "backgroundColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)"
       }
     },
     "&.btn-active": {
-      "borderColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\tblack 5%\n\t\t)",
-      "borderBottomColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\tblack 7%\n\t\t)",
-      "backgroundColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\tblack 5%\n\t\t)"
+      "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)",
+      "borderBottomColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%)",
+      "backgroundColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)"
     },
     "&:focus-visible": {
       "@apply outline outline-2": {}
@@ -26,8 +26,8 @@ export default {
       "&:focus": {
         "transform": "scale(var(--btn-focus-scale, 0.97))",
         "@apply animate-[button-pop_0s_ease-out]": {},
-        "borderColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 5%\n\t\t\t)",
-        "borderBottomColor": "color-mix(\n\t\t\t\tin oklab,\n\t\t\t\tvar(--btn-color, var(--color-base-200)),\n\t\t\t\tblack 7%\n\t\t\t)",
+        "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)",
+        "borderBottomColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%)",
         "boxShadow": "0 1px 0 0 oklch(0% 0 0/0.07) inset,\n\t\t\t\t0 0 0 0 oklch(0% 0 0/0.1)"
       },
       "@media (hover: hover)": {
@@ -121,8 +121,8 @@ export default {
     "@apply bg-transparent text-[var(--btn-color)] shadow-none": {},
     "&.btn-active": {
       "@apply text-base-content": {},
-      "borderColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)) 90%,\n\t\t\tblack\n\t\t)",
-      "backgroundColor": "color-mix(\n\t\t\tin oklab,\n\t\t\tvar(--btn-color, var(--color-base-200)) 90%,\n\t\t\tblack\n\t\t)"
+      "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)) 90%, black)",
+      "backgroundColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)) 90%, black)"
     },
     "&.btn-primary": {
       "@apply [@media(hover:hover)]:hover:text-primary-content text-primary [&.btn-active]:text-primary-content": {}

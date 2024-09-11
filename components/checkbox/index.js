@@ -23,7 +23,7 @@ export default {
     "&:indeterminate": {
       "&:before": {
         "@apply translate-y-[-35%] rotate-0 opacity-100": {},
-        "clipPath": "polygon(\n\t\t\t\t20% 100%,\n\t\t\t\t20% 80%,\n\t\t\t\t50% 80%,\n\t\t\t\t50% 80%,\n\t\t\t\t80% 80%,\n\t\t\t\t80% 100%\n\t\t\t)"
+        "clipPath": "polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%)"
       }
     }
   },
@@ -98,11 +98,11 @@ export default {
     "&[type=\"checkbox\"]": {
       "@apply size-4": {},
       "&:not(:indeterminate):before": {
-        "clipPath": "polygon(\n\t\t\t\t10% 100%,\n\t\t\t\t10% 70%,\n\t\t\t\t40% 70%,\n\t\t\t\t40% 70%,\n\t\t\t\t70% 70%,\n\t\t\t\t70% 100%\n\t\t\t)"
+        "clipPath": "polygon(10% 100%, 10% 70%, 40% 70%, 40% 70%, 70% 70%, 70% 100%)"
       },
       "&:checked,\n\t\t&[aria-checked=\"true\"]": {
         "&:before": {
-          "clipPath": "polygon(\n\t\t\t\t\t10% 100%,\n\t\t\t\t\t10% 70%,\n\t\t\t\t\t40% 70%,\n\t\t\t\t\t40% 0%,\n\t\t\t\t\t70% 0%,\n\t\t\t\t\t70% 100%\n\t\t\t\t)"
+          "clipPath": "polygon(10% 100%, 10% 70%, 40% 70%, 40% 0%, 70% 0%, 70% 100%)"
         }
       }
     }
