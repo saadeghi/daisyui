@@ -1,75 +1,76 @@
 {
-  "type": "module",
-  "name": "daisyui",
-  "version": "5.0.0-alpha.0",
-  "description": "daisyUI - Tailwind CSS Components",
-  "author": "Pouya Saadeghi",
-  "license": "MIT",
-  "homepage": "https://daisyui.com",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saadeghi/daisyui.git"
-  },
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/daisyui"
-  },
-  "bugs": {
-    "url": "https://github.com/saadeghi/daisyui/issues"
-  },
-  "keywords": [
-    "design-system",
-    "tailwindcss",
-    "css-library",
-    "components",
-    "ui-library",
-    "component",
-    "framework",
-    "tailwind",
-    "daisyui",
-    "themes",
-    "design",
-    "css",
-    "ui"
-  ],
-  "main": "index.css",
-  "files": [
-    "themes",
-    "components",
-    "index.css",
-    "plugin.js"
-  ],
-  "engines": {
-    "node": ">=16.9.0"
-  },
-  "browserslist": [
-    "> 7%"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "branches": [
-      "master"
-    ]
-  },
-  "scripts": {
-    "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
-    "format": "biome format --write .",
-    "lint": "biome lint . --write",
-    "build": "node build.js",
-    "dev": "cd src/docs && npm run dev",
-    "playground": "cd src/experiments/playground && npm run dev",
-    "release": "node src/release",
-    "publish:alpha": "npm publish --tag=alpha",
-    "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.1",
-    "@tailwindcss/cli": "^4.0.0-alpha.23",
-    "commit-and-tag-version": "12.4.1",
-    "postcss": "^8.4.45",
-    "postcss-js": "^4.0.1",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6",
-    "tailwindcss": "^4.0.0-alpha.23"
-  }
+	"type": "module",
+	"name": "daisyui",
+	"version": "5.0.0-alpha.1",
+	"description": "daisyUI - Tailwind CSS Components",
+	"author": "Pouya Saadeghi",
+	"license": "MIT",
+	"homepage": "https://daisyui.com",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/saadeghi/daisyui.git"
+	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/daisyui"
+	},
+	"bugs": {
+		"url": "https://github.com/saadeghi/daisyui/issues"
+	},
+	"keywords": [
+		"design-system",
+		"tailwindcss",
+		"css-library",
+		"components",
+		"ui-library",
+		"component",
+		"framework",
+		"tailwind",
+		"daisyui",
+		"themes",
+		"design",
+		"css",
+		"ui"
+	],
+	"main": "index.css",
+	"files": [
+		"themes",
+		"components",
+		"index.css",
+		"plugin.js"
+	],
+	"engines": {
+		"node": ">=16.9.0"
+	},
+	"browserslist": [
+		"> 7%"
+	],
+	"publishConfig": {
+		"access": "public",
+		"branches": [
+			"master"
+		]
+	},
+	"scripts": {
+		"init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
+		"format": "npx prettier 'css/**/*' 'functions/**/*' '*.js' 'themes/**/*' '*.css' '.prettierrc' --write",
+		"lint": "biome lint . --write",
+		"build": "node build.js",
+		"dev": "cd src/docs && npm run dev",
+		"playground": "cd src/experiments/playground && npm run dev",
+		"release": "node src/release",
+		"publish:alpha": "npm publish --tag=alpha",
+		"alpha": "npm run release -- --alpha && npm publish --tag=alpha"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.1",
+		"@tailwindcss/cli": "^4.0.0-alpha.23",
+		"commit-and-tag-version": "12.4.1",
+		"postcss": "^8.4.45",
+		"postcss-js": "^4.0.1",
+		"postcss-prefixer": "^3.0.0",
+		"prettier": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.6",
+		"tailwindcss": "^4.0.0-alpha.23"
+	}
 }
