@@ -109,6 +109,13 @@ let sortedFilteredProducts = $derived(
     })
 )
 
+let rednerBuyNowUrl = (url, ref, params) => {
+  if (ref) {
+    return `/store/checkout?product=${extractUUID(url)}&aff=${ref}${params ? `&${params}` : ""}`
+  }
+  return `${url}${params ? `?${params}` : ""}`
+}
+
 let sliders = $state(Object.fromEntries(data.products.map(product => [product.id, { currentIndex: 0 }])));
 
 function next(productId, media) {
@@ -134,11 +141,8 @@ function prev(productId, media) {
     <div class="flex gap-2 items-center">
       {#each data.techFilters as filter}
         {#if
-          // Show all options except "all" if no option is chosen
           (selectedTech === '' && filter !== 'all') ||
-          // Show all options if "all" is selected
           (selectedTech === 'all') ||
-          // Show only the selected tech and "all" if a specific tech is selected
           (selectedTech !== '' && (filter === selectedTech || filter === 'all'))
         }
           <button
@@ -161,7 +165,7 @@ function prev(productId, media) {
   </div>
 </div>
 
-<hr class="mb-20 mt-10 mx-4"/>
+<hr class="mb-20 mt-10 mx-4 border-base-content/10"/>
 
 <div>
   {#await fetchDiscount}
@@ -305,7 +309,7 @@ function prev(productId, media) {
             </div>
             <div class="flex flex-col items-center gap-3">
               <a
-                href="{product.ref ? `/store/checkout?product=${extractUUID(product.attributes.buy_now_url)}&aff=${product.ref}` : product.attributes.buy_now_url}"
+                href="{rednerBuyNowUrl(product.attributes.buy_now_url, product.ref, product.params)}"
                 class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
                 target="_blank"
                 rel="noopener noreferrer">
@@ -339,82 +343,84 @@ function prev(productId, media) {
           {/if}
         </div>
         <div class="col-span-12 row-start-1 flex flex-col gap-6 xl:col-span-7">
-          <div class="aspect-[4/3] relative grid items-center group">
-            <div class="col-span-3 col-start-1 row-start-1 flex overflow-hidden items-center rounded-box border border-base-200">
+          <div class="relative grid items-center group place-items-center [grid-template-columns:min-content_1fr_min-content] border border-base-300 rounded-box overflow-hidden">
+            <div class="col-span-3 col-start-1 row-start-1 flex overflow-hidden items-center rounded-box">
               {#each product.media as media}
                 <div class="w-full shrink-0 transition-transform duration-300"
                     style={`transform: translateX(-${sliders[product.id].currentIndex * 100}%)`}
                   >
                   {#if media.type === 'video'}
-                    <div class="w-full grid rounded-box overflow-hidden">
+                    <div class="w-full grid">
                       <div class="[grid-column:1/1] [grid-row:1/1] z-[1]"></div>
-                      <iframe class="w-full [grid-column:1/1] [grid-row:1/1]" src={`${media.url}?mute=1&autoplay=1&controls=0&rel=0&modestbranding=1&loop=1`} frameborder="0" style={`aspect-ratio: ${media.ratio};`}></iframe>
+                      <iframe class="w-full [grid-column:1/1] [grid-row:1/1]" src="{media.url}" frameborder="0" style={`aspect-ratio: ${media.ratio};`}></iframe>
                     </div>
                   {/if}
                   {#if media.type === 'image'}
-                    <a
-                      target="_blank"
-                      href="{media.original}"
-                      rel="noopener noreferrer"
-                      class="group relative block aspect-[4/3] overflow-hidden object-cover">
-                      <div
-                        class="absolute inset-0 z-[1] grid place-content-center bg-black/50 opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-100">
-                        <svg
-                          class="text-white"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 48 48"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="4"
-                            stroke-linejoin="round">
-                          </path>
-                          <path
-                            d="M21 15L21 27"
-                            stroke="currentColor"
-                            stroke-width="4"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                          </path>
-                          <path
-                            d="M15.0156 21.0156L27 21"
-                            stroke="currentColor"
-                            stroke-width="4"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                          </path>
-                          <path
-                            d="M33.2216 33.2217L41.7069 41.707"
-                            stroke="currentColor"
-                            stroke-width="4"
-                            stroke-linecap="round"
-                            stroke-linejoin="round">
-                          </path>
-                        </svg>
-                      </div>
-                      <img
-                        style="{`background-image: url('${media.sm}')`}"
-                        src="{media.lg}"
-                        alt="{product.attributes.name}"
-                        loading="lazy"
-                        class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover" />
-                    </a>
+                    <img
+                      style="{`background-image: url('${media.sm}')`}"
+                      src="{media.lg}"
+                      alt="{product.attributes.name}"
+                      loading="lazy"
+                      class="bg-base-300 w-full bg-cover bg-center object-cover" />
                   {/if}
                 </div>
               {/each}
             </div>
             {#if product.media.length > 1}
-              <button aria-label="Previous" onclick={() => prev(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-1 row-start-1 z-[1] m-6 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 duration-300 bg-black/50 border-transparent text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 lg:size-12">
+              <button aria-label="Previous" onclick={() => prev(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-1 row-start-1 z-[1] m-4 opacity-0 -translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
               </button>
-              <button aria-label="Next" onclick={() => next(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-3 row-start-1 z-[1] m-6 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-black/50 border-transparent text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 lg:size-12">
+            {/if}
+            {#if product.screenshot}
+              <a target="_blank"
+              aria-label="Screenshot"
+              href="{product.screenshot}"
+              rel="noopener noreferrer"
+              class=" rounded-full aspect-square p-4 focus-visible:outline-white col-start-2 row-start-1 z-[1] m-4 opacity-0 scale-90 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:scale-100 focus-visible:opacity-100 focus-visible:scale-100"
+              >
+                <svg
+                  class="text-white"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M21 15L21 27"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M15.0156 21.0156L27 21"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M33.2216 33.2217L41.7069 41.707"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                  </path>
+                </svg>
+              </a>
+            {/if}
+            {#if product.media.length > 1}
+              <button aria-label="Next" onclick={() => next(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-3 row-start-1 z-[1] m-4 opacity-0 translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
               </button>

@@ -1,40 +1,76 @@
 export const productCustomAttributes = [
   {
+    id: 351127,
+    media: [
+      {
+        type: "video",
+        url: "https://www.youtube.com/embed/ebWEkM4AvjU?mute=1&autoplay=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=ebWEkM4AvjU",
+        ratio: "620/360",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/daisyui-figma-file/features.webp",
+        lg: "https://img.daisyui.com/images/store/large/daisyui-figma-file/features.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/daisyui-figma-file/components.webp",
+        lg: "https://img.daisyui.com/images/store/large/daisyui-figma-file/components.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/daisyui-figma-file/variants.webp",
+        lg: "https://img.daisyui.com/images/store/large/daisyui-figma-file/variants.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/daisyui-figma-file/colors.webp",
+        lg: "https://img.daisyui.com/images/store/large/daisyui-figma-file/colors.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/daisyui-figma-file/variable-modes.webp",
+        lg: "https://img.daisyui.com/images/store/large/daisyui-figma-file/variable-modes.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/daisyui-figma-file/figma-file.webp",
+        lg: "https://img.daisyui.com/images/store/large/daisyui-figma-file/figma-file.webp",
+      },
+    ],
+    tags: ["NEW"],
+    ref: "VMAme",
+    params: "desc=0",
+  },
+  {
     id: 244268,
     media: [
-      // {
-      //   type: "video",
-      //   url: "https://www.youtube.com/embed/ky18YtME8UQ",
-      //   ratio: "16/9",
-      // },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-2.webp",
         lg: "https://img.daisyui.com/images/store/large/nexus/nexus-2.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-1.webp",
         lg: "https://img.daisyui.com/images/store/large/nexus/nexus-1.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-3.webp",
         lg: "https://img.daisyui.com/images/store/large/nexus/nexus-3.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-4.webp",
         lg: "https://img.daisyui.com/images/store/large/nexus/nexus-4.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
       },
     ],
+    screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["react", "nextjs"],
     preveiw_url: "https://nexus.daisyui.com/",
     tags: ["updated to v1.1"],
+    params: "desc=0",
   },
   {
     id: 284327,
@@ -43,38 +79,30 @@ export const productCustomAttributes = [
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/documentation/documentation-1.webp",
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-1.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/documentation/documentation-2.webp",
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-2.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/documentation/documentation-3.webp",
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-3.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/documentation/documentation-4.webp",
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-4.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/documentation/documentation-5.webp",
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-5.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
       },
     ],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
     originalprice: 4900,
     displayprice: 2900,
     tech: ["astro", "nextjs", "mdx"],
@@ -87,73 +115,55 @@ export const productCustomAttributes = [
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-10.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-10.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-9.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-9.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-8.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-8.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-7.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-7.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-6.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-6.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-5.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-5.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-4.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-4.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-3.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-3.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-2.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-2.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/saas-landing/saas-landing-1.webp",
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-1.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
       },
     ],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
   },
   {
@@ -163,24 +173,20 @@ export const productCustomAttributes = [
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/personal-blog/personal-blog-1.webp",
         lg: "https://img.daisyui.com/images/store/large/personal-blog/personal-blog-1.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/personal-blog/personal-blog-2.webp",
         lg: "https://img.daisyui.com/images/store/large/personal-blog/personal-blog-2.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/personal-blog/personal-blog-3.webp",
         lg: "https://img.daisyui.com/images/store/large/personal-blog/personal-blog-3.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
       },
     ],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
     tech: ["astro", "mdx"],
     tags: ["v1.1 released with new design"],
   },
@@ -191,52 +197,40 @@ export const productCustomAttributes = [
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-7.webp",
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-7.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-1.webp",
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-1.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-2.webp",
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-2.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-3.webp",
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-3.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-4.webp",
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-4.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-5.webp",
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-5.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-6.webp",
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-6.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
       },
     ],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
   },
   {
@@ -246,38 +240,30 @@ export const productCustomAttributes = [
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/agency-landing/agency-landing-2.webp",
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-2.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/agency-landing/agency-landing-1.webp",
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-1.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/agency-landing/agency-landing-3.webp",
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-3.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/agency-landing/agency-landing-4.webp",
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-4.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/agency-landing/agency-landing-5.webp",
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-5.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
       },
     ],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
     tech: ["react", "svelte", "vite", "framer"],
   },
   {
@@ -287,39 +273,34 @@ export const productCustomAttributes = [
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/auth/auth-1.webp",
         lg: "https://img.daisyui.com/images/store/large/auth/auth-1.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/auth.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/auth/auth-2.webp",
         lg: "https://img.daisyui.com/images/store/large/auth/auth-2.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/auth.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/auth/auth-3.webp",
         lg: "https://img.daisyui.com/images/store/large/auth/auth-3.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/auth.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/auth/auth-4.webp",
         lg: "https://img.daisyui.com/images/store/large/auth/auth-4.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/auth.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/auth/auth-5.webp",
         lg: "https://img.daisyui.com/images/store/large/auth/auth-5.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/auth.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/auth/auth-6.webp",
         lg: "https://img.daisyui.com/images/store/large/auth/auth-6.webp",
-        original: "https://img.daisyui.com/images/store/screenshots/auth.webp",
       },
     ],
+    screenshot: "https://img.daisyui.com/images/store/screenshots/auth.webp",
     tech: ["html"],
     // ref: "VMAme",
   },
@@ -330,66 +311,50 @@ export const productCustomAttributes = [
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-1.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-1.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-2.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-2.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-3.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-3.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-4.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-4.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-5.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-5.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-6.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-6.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-7.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-7.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-8.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-8.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-9.webp",
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-9.webp",
-        original:
-          "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
       },
     ],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
     tech: ["html", "webcomponents"],
     // originalprice: 2900,
     // displayprice: 2600,

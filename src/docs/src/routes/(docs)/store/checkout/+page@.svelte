@@ -7,7 +7,8 @@ const urlParams = new URLSearchParams(window.location.search)
 window.lemonSqueezyAffiliateConfig = {
   store: "daisyui",
   onTrack: (e) => {
-    window.location.href = `https://daisyui.lemonsqueezy.com/checkout/buy/${urlParams.get("product")}?aff_ref=${e.click}`
+    const desc = urlParams.get("desc") === "0" ? "&desc=0" : "";
+    window.location.href = `https://daisyui.lemonsqueezy.com/checkout/buy/${urlParams.get("product")}?aff_ref=${e.click}${desc}`;
   },
 }
 </script>
