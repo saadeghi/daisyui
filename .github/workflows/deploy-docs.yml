@@ -79,9 +79,9 @@ jobs:
         run: |
           cd src/docs
           if [ "${{env.daisyuiversion}}" = "latest" ]; then
-            ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "latest" || echo "alpha")
-          else
             ${{ env.runtime }} i daisyui@${{env.daisyuiversion}}
+          else
+            ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "latest" || echo "alpha")
           fi
 
       - name: Set daisyUI version in env file if staging
