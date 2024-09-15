@@ -38,8 +38,30 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/daisyui-figma-file/figma-file.webp",
       },
     ],
+    quote: {
+      img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
+      name: "Pouya",
+      text: [
+        [
+          "Save thousands of hours by avoiding the time consuming task of creating all the components and variants.",
+        ],
+        [
+          "After half a year of development, The Official daisyUI Figma Library is now available for designers in Figma!",
+          "This <b>fully tokenized</b> Figma file includes all daisyUI <b>components</b>, <b>theme colors</b>, <b>variables</b> and <b>variants</b>.",
+          "A game-changer for designers and developers to use the same design system in both Figma and CSS.",
+        ],
+      ],
+    },
+    preveiw: {
+      button: "Preview",
+      url: "https://nexus.daisyui.com/",
+    },
+    preveiw_modal: {
+      button: "All Features",
+      img: "https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp",
+    },
     tags: ["NEW"],
-    ref: "VMAme",
+    ref: "8XWm0",
     params: "desc=0",
   },
   {
@@ -68,7 +90,10 @@ export const productCustomAttributes = [
     ],
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["react", "nextjs"],
-    preveiw_url: "https://nexus.daisyui.com/",
+    preveiw: {
+      button: "Live demo",
+      url: "https://nexus.daisyui.com/",
+    },
     tags: ["updated to v1.1"],
     params: "desc=0",
   },
@@ -381,7 +406,7 @@ export const tech = {
 export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"];
 
 export const futureProducts = [
-  "Official daisyUI Figma Library",
   "Headless UI + daisyUI component pack for React",
   "Headless UI + daisyUI component pack for Vue",
+  "Ecommerce template",
 ];

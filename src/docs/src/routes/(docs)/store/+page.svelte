@@ -258,7 +258,7 @@ function prev(productId, media) {
       <div
         class="rounded-box relative grid grid-cols-12 gap-y-10 py-10 xl:gap-x-10"
         id="{product.id}">
-        <div class="col-span-12 row-start-2 flex flex-col gap-8 xl:col-span-5 xl:row-start-1">
+        <div class="col-span-12 flex flex-col gap-8 xl:col-span-5 xl:row-start-1">
           <div>
             {#if product.tags}
               <span class="flex gap-2">
@@ -267,7 +267,7 @@ function prev(productId, media) {
                 {/each}
               </span>
             {/if}
-            <h2 class="font-title text-lg font-black [text-wrap:balance] sm:text-3xl xl:text-5xl">
+            <h2 class="font-title text-lg font-black [text-wrap:balance] sm:text-3xl tracking-tight" class:xl:text-6xl={index===0} class:xl:text-5xl={index>0}>
               {product.attributes.name}
             </h2>
           </div>
@@ -328,11 +328,24 @@ function prev(productId, media) {
                   </path>
                 </svg>
               </a>
-              {#if product.preveiw_url}
-                <a class="link text-xs" href="{product.preveiw_url}" target="_blank">
-                  Live Preview
-                </a>
-              {/if}
+              <div class="flex gap-x-4">
+                {#if product.preveiw}
+                  <a class="link text-xs" href="{product.preveiw.url}" target="_blank">
+                    {product.preveiw.button}
+                  </a>
+                {/if}
+                {#if product.preveiw_modal}
+                  <button class="link text-xs" onclick="{() => preveiw_modal.showModal()}">{product.preveiw_modal.button}</button>
+                  <dialog id="preveiw_modal" class="modal">
+                    <div class="modal-box p-0 shadow-none bg-transparent max-w-fit max-h-fit my-32">
+                      <img src="{product.preveiw_modal.img}" alt="{product.attributes.name}" class="max-h-screen w-auto" />
+                    </div>
+                    <form method="dialog" class="modal-backdrop">
+                      <button>close</button>
+                    </form>
+                  </dialog>
+                {/if}
+              </div>
             </div>
           </div>
           {#if product.attributes.description}
@@ -342,7 +355,7 @@ function prev(productId, media) {
             </div>
           {/if}
         </div>
-        <div class="col-span-12 row-start-1 flex flex-col gap-6 xl:col-span-7">
+        <div class="col-span-12 flex flex-col gap-6 xl:col-span-7">
           <div class="relative grid items-center group place-items-center [grid-template-columns:min-content_1fr_min-content] border border-base-300 rounded-box overflow-hidden">
             <div class="col-span-3 col-start-1 row-start-1 flex overflow-hidden items-center rounded-box">
               {#each product.media as media}
@@ -352,7 +365,7 @@ function prev(productId, media) {
                   {#if media.type === 'video'}
                     <div class="w-full grid">
                       <div class="[grid-column:1/1] [grid-row:1/1] z-[1]"></div>
-                      <iframe class="w-full [grid-column:1/1] [grid-row:1/1]" src="{media.url}" frameborder="0" style={`aspect-ratio: ${media.ratio};`}></iframe>
+                      <iframe class="w-full [grid-column:1/1] [grid-row:1/1]" style={`aspect-ratio: ${media.ratio};`} src="{media.url}" frameborder="0" title="Official daisyUI Figma Library" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                   {/if}
                   {#if media.type === 'image'}
@@ -439,6 +452,24 @@ function prev(productId, media) {
                     alt="{tech}" />
                 </div>
               {/each}
+            </div>
+          {/if}
+          {#if product.quote}
+            <div class="chat chat-end">
+            {#each product.quote.text as text, index}
+              <div class={`chat-bubble mt-1 text-xs max-w-md bg-base-200 text-base-content ${index !== product.quote.text.length - 1 ? "before:hidden [.chat-end>&]:rounded-box":""}`}>
+                {#each text as line}
+                  <p class="py-1">{@html line}</p>
+                {/each}
+              </div>
+            {/each}
+              <div class="chat-image avatar tooltip" data-tip="{product.quote.name}">
+                <div class="w-10 rounded-full">
+                  <img
+                    alt="{product.quote.name}"
+                    src="{product.quote.img}" />
+                </div>
+              </div>
             </div>
           {/if}
         </div>
