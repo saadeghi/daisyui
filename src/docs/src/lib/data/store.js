@@ -47,15 +47,15 @@ export const productCustomAttributes = [
         ],
         [
           "After half a year of development, The Official daisyUI Figma Library is now available for designers in Figma!",
-          "This <b>fully tokenized</b> Figma file includes all daisyUI <b>components</b>, <b>theme colors</b>, <b>variables</b> and <b>variants</b>.",
+          "This <b>fully tokenized</b> Figma file includes all daisyUI <b>components</b>, <b>theme colors</b>, <b>variables</b> and <b>variants</b>, with regular updates.",
           "A game-changer for designers and developers to use the same design system in both Figma and CSS.",
         ],
       ],
     },
-    preveiw: {
-      button: "Preview",
-      url: "https://nexus.daisyui.com/",
-    },
+    // preveiw: {
+    //   button: "Preview",
+    //   url: "",
+    // },
     preveiw_modal: {
       button: "All Features",
       img: "https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp",

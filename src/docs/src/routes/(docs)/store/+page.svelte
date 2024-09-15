@@ -444,7 +444,7 @@ function prev(productId, media) {
               <span class="text-base-content/50 text-xs italic">made with</span>
               {#each product.tech as tech}
                 <div
-                  class="lg:border-base-content/10 tooltip grid place-content-center rounded-full border-dashed lg:border lg:p-2 xl:p-3"
+                  class="bg-white border border-black/5 tooltip grid place-content-center rounded-full lg:p-2 xl:p-3"
                   data-tip="{data.tech[tech].title}">
                   <img
                     class="aspect-square w-5 xl:w-6"
@@ -463,7 +463,7 @@ function prev(productId, media) {
                 {/each}
               </div>
             {/each}
-              <div class="chat-image avatar tooltip" data-tip="{product.quote.name}">
+              <div class="chat-image avatar">
                 <div class="w-10 rounded-full">
                   <img
                     alt="{product.quote.name}"
