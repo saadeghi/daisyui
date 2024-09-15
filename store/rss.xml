@@ -15,12 +15,30 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Wed, 11 Sep 2024 20:41:55 GMT</lastBuildDate>
-    <pubDate>Wed, 11 Sep 2024 20:41:55 GMT</pubDate>
+    <lastBuildDate>Sun, 15 Sep 2024 22:26:18 GMT</lastBuildDate>
+    <pubDate>Sun, 15 Sep 2024 22:26:18 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
     
+        <item>
+          <title>
+            <![CDATA[ Official daisyUI Figma Library ]]>
+          </title>
+          <description>
+            <![CDATA[ <p><strong>Available in 3 plans</strong>, Including:</p>
+
+<ul><li><p>Documentation and step by step tutorial for everything</p></li><li><p>All components (56+)</p></li><li><p>All variants (2472+)</p></li><li><p>All properties</p></li><li><p>All 32 daisyUI themes</p></li><li><p>Variables for everything (colors, border-radius, typography, spacing, etc)</p></li><li><p>Variable modes (Quickly switch between daisyUI themes)</p></li><li><p>Examples for Dashboard and forms</p></li><li><p>Access to exclusive Discord channel for priority support</p></li></ul>
+
+<p><strong>After purchase you will receive:</strong></p>
+
+<ul><li><p><strong>Instant access to the downloadable Figma file</strong><br>This is useful for Figma Professional subscribers who want to share the file to their team</p></li><li><p><strong>An invitation to the Official Figma file</strong> (will be sent to your purchase email within <strong>48</strong> hours)<br>This provides access to the latest updates</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</link>
+          <pubDate>Wed, 11 Sep 2024 22:20:36 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Nexus: Dashboard for React and Next ]]>
