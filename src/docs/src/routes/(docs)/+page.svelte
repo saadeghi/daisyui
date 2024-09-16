@@ -136,7 +136,7 @@ $effect(async () => {
               </button>
             </div>
             {#if daisyui5progress}
-            <div class="flex gap-2 grow w-full max-w-sm">
+            <div class="flex gap-2 grow w-full max-w-48 max-lg:my-4 sm:max-w-sm">
               <div class="relative flex flex-col w-full">
                 <div class="text-[0.6rem] -top-4 absolute italic -translate-x-1/2 rtl:translate-x-1/2" style={`inset-inline-start:${daisyui5progress}%`}>
                 {daisyui5progress}%
