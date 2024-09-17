@@ -52,10 +52,10 @@ export const productCustomAttributes = [
         ],
       ],
     },
-    // preveiw: {
-    //   button: "Preview",
-    //   url: "",
-    // },
+    preveiw: {
+      button: "Preview",
+      url: "https://www.figma.com/community/file/1417577350704829934",
+    },
     preveiw_modal: {
       button: "All Features",
       img: "https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp",
