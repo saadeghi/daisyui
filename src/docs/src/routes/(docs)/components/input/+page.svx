@@ -59,7 +59,7 @@ data="{[
 {/snippet}
 </Component>
 
-<Component title="Text input with icon inside" desc="We can use input class for the parent and put anyting inside it">
+<Component title="Text input with icon inside" desc="We can use input class for the parent and put anything inside it">
 <div class="flex flex-col gap-4">
   <label class="input input-bordered flex items-center gap-2">
     <input type="text" class="grow" placeholder="Search" />
@@ -136,7 +136,7 @@ data="{[
 {/snippet}
 </Component>
 
-<Component title="Text input with text label inside" desc="We can use input class for the parent and put anyting inside it">
+<Component title="Text input with text label inside" desc="We can use input class for the parent and put anything inside it">
 <div class="flex flex-col gap-4">
   <label class="input input-bordered flex items-center gap-2">
     Name
