@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Wed, 18 Sep 2024 18:47:56 GMT</lastBuildDate>
-    <pubDate>Wed, 18 Sep 2024 18:47:56 GMT</pubDate>
+    <lastBuildDate>Thu, 19 Sep 2024 16:02:35 GMT</lastBuildDate>
+    <pubDate>Thu, 19 Sep 2024 16:02:35 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ The Official daisyUI Figma Library: Designers and Developers, Finally on the Same Page ]]>
+          </title>
+          <description>
+            <![CDATA[ I know how frustrating it’s been for designers to work on a daisyUI project without having access to the daisyUI design system in Figma. Recreating components from scratch is a real pain, and it’s time-consuming. ]]>
+          </description>
+          <link>https://daisyui.com/blog/figma/</link>
+          <pubDate>Thu, 19 Sep 2024 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/store/large/daisyui-figma-file/figma-file-properties.webp</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/store/large/daisyui-figma-file/figma-file-properties.webp</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/store/large/daisyui-figma-file/figma-file-properties.webp" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/store/large/daisyui-figma-file/figma-file-properties.webp" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/figma/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Introducing: Documentation template for Astro and daisyUI ]]>
