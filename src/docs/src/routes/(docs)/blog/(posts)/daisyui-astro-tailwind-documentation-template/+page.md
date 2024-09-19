@@ -6,8 +6,7 @@ date: 2024-09-08
 thumbnail: https://img.daisyui.com/images/blog/docs-template-thumbnail.webp
 author: Abhijeet Biswal
 tags:
-  - daisyUI
-  - Astro
+  - Templates
 ---
 
 ## Introduction

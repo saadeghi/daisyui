@@ -6,7 +6,7 @@ date: 2024-03-01
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/bidirectional.webp
 tags:
-  - daisyUI
+  - Guides
 ---
 
 For years, making a bidirectional website was a pain. We had to make a LTR style first, then we had to override all the directional styles to make it RTL. But with the introduction of CSS logical properties, it's now easier than ever to make a bidirectional website.
@@ -27,7 +27,7 @@ All daisyUI components are now bidirectional by default. It means we don't use `
 
 ## Step 1
 
-You need to use Tailwind CSS logical class names instead of directional class names.  
+You need to use Tailwind CSS logical class names instead of directional class names.
 Here's a list of some of the most common logical class names.
 
 | ❌ Don't use | ✅ Use    |
@@ -51,5 +51,5 @@ That's it! Now whenever your website is RTL, all spacing and alignments will be 
 
 ## Conclusion
 
-Making a bidirectional website is now easier than ever.  
+Making a bidirectional website is now easier than ever.
 Try to make it a habit to use logical class names (like `ps-4` ,`ms-4`,…) instead of directional class names (like `pl-4`, `ml-4`,… ) in your CSS and you'll see how easy it is to make a bidirectional website.

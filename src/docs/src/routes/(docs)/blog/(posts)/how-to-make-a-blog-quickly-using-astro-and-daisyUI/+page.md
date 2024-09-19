@@ -6,8 +6,7 @@ date: 2024-08-20
 thumbnail: https://img.daisyui.com/images/blog/blog-template-tailwindcss-daisyui.webp
 author: Abhijeet Biswal
 tags:
-  - daisyUI
-  - Astro
+  - Templates
 ---
 
 ## Introduction

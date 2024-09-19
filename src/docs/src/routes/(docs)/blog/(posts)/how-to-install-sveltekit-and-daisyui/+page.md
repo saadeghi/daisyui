@@ -6,8 +6,7 @@ date: 2023-11-25
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/install-sveltekit-daisyui.webp
 tags:
-  - Svelte
-  - daisyUI
+  - Frameworks
 ---
 
 The biggest advantage of using Svelte, aside from speed and developer experience, is that it's a disappearing framework. It doesn't add any runtime library to your app, so you would only ship the code that you actually use.
@@ -22,7 +21,7 @@ If you haven't used Svelte before, You would be surprised how easy it is to lear
 npm create svelte@latest my-app
 ```
 
-It asks you a few questions.  
+It asks you a few questions.
 Let's pick `Skeleton project`:
 
 ```
@@ -49,7 +48,7 @@ That's it! You have a new SvelteKit project.
 
 ## How to add Tailwind CSS and daisyUI to SvelteKit?
 
-1. Install Tailwind CSS, PostCSS, Autoprefixer and daisyUI,  
+1. Install Tailwind CSS, PostCSS, Autoprefixer and daisyUI,
    Then generate tailwind.config.js and postcss.config.js files:
 
 ```
@@ -121,5 +120,5 @@ npm run dev -- --open
 
 Easy, right?
 
-Explore all the [daisyUI components](https://daisyui.com/components/) you can use in your project,  
+Explore all the [daisyUI components](https://daisyui.com/components/) you can use in your project,
 And also check out the [SvelteKit docs](https://kit.svelte.dev/) to learn more about SvelteKit.

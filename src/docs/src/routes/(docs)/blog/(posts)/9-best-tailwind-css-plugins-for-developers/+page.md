@@ -6,7 +6,7 @@ date: 2023-10-12
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.webp
 tags:
-  - Tailwind CSS
+  - Reviews
 ---
 
 Tailwind CSS is a utility-first CSS framework that is rapidly growing in popularity and there are many plugins that can boost your workflow and make your life easier.
@@ -37,8 +37,8 @@ module.exports = {
 
 ## 1. daisyUI
 
-[daisyUI](https://daisyui.com/) is a free component library for Tailwind CSS that adds component class names to Tailwind CSS.  
-It helps you to build websites faster. daisyUI uses human-friendly and descriptive class names like `btn`, `card`, `toggle`, `alert`, `modal` etc. which helps you use less class names and keep your HTML clean.  
+[daisyUI](https://daisyui.com/) is a free component library for Tailwind CSS that adds component class names to Tailwind CSS.
+It helps you to build websites faster. daisyUI uses human-friendly and descriptive class names like `btn`, `card`, `toggle`, `alert`, `modal` etc. which helps you use less class names and keep your HTML clean.
 daisyUI also comes with a lot of built-in themes and dark mode support so you don't have to write any additional class names to enable dark mode. It works out of the box.
 
 Learn more about daisyUI:
@@ -50,7 +50,7 @@ Learn more about daisyUI:
 
 ## 2. tailwindcss/typography
 
-[tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) is the official Tailwind CSS plugin that adds default styles for all your text content.  
+[tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) is the official Tailwind CSS plugin that adds default styles for all your text content.
  Typography plugin is made by the Tailwind CSS team and it's a must-have plugin for any Tailwind CSS project especially if you are building a blog or a website with a lot of text content. It plays well with Markdown content since all you have to do is to add `prose` class to your container and it will automatically style all your text content.
 
 Learn more about Typography plugin:
@@ -134,7 +134,7 @@ Learn more about tailwindcss-3d:
 
 ## Conclusion
 
-Tailwind CSS plugins are a great way to extend Tailwind CSS and add new features to it.  
+Tailwind CSS plugins are a great way to extend Tailwind CSS and add new features to it.
 You can search for more plugins on GitHub and NPM but if you didn't find what you're looking for, you can also create your own plugin using [Tailwind CSS API](https://tailwindcss.com/docs/plugins#adding-utilities)!
 
 Thanks for reading!

@@ -330,7 +330,7 @@ function prev(productId, media) {
               </a>
               <div class="flex gap-x-4">
                 {#if product.preveiw}
-                  <a class="link text-xs" href="{product.preveiw.url}" target="_blank">
+                  <a class="link text-xs" href="{product.preveiw.url}" target="_blank" rel="noopener noreferrer">
                     {product.preveiw.button}
                   </a>
                 {/if}

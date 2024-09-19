@@ -6,8 +6,7 @@ date: 2023-9-28
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/headless-ui.webp
 tags:
-  - Headless UI
-  - Component Library
+  - Component Libraries
 ---
 
 Headless UI is a set of completely unstyled, fully accessible UI components for React and Vue. It gives you functionality without design decisions. daisyUI is a Tailwind CSS component library that provides design decisions without functionality. That's why it is suggested to use them together.
@@ -62,7 +61,7 @@ export default function MyDropDown() {
 
 3. Add daisyUI
 
-After [installing daisyUI](https://daisyui.com/docs/install/) you can use daisyUI's styles in Headless UI components.  
+After [installing daisyUI](https://daisyui.com/docs/install/) you can use daisyUI's styles in Headless UI components.
 Simply add daisyUI class names (and Tailwind CSS utility classes) where it's needed:
 
 ```jsx

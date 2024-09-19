@@ -6,7 +6,7 @@ date: 2023-9-18
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/how-to-add-new-colors-to-daisyui.webp
 tags:
-  - Colors
+  - Guides
 ---
 
 daisyUI provides semantic color names. These color names are used in all daisyUI components and the can have different values in different themes.
@@ -19,7 +19,7 @@ That is not efficient because not only you should use more class names for each 
 
 ## Solution: Semantic color names and CSS variables
 
-daisyUI solves this problem by providing semantic color names. For example, you can use `bg-base-100 text-base-content` and then set the background and foreground colors.That's it. It would be dark color on a light background when you use a light theme, It would be light color on a dark background when a dark theme is used.  
+daisyUI solves this problem by providing semantic color names. For example, you can use `bg-base-100 text-base-content` and then set the background and foreground colors.That's it. It would be dark color on a light background when you use a light theme, It would be light color on a dark background when a dark theme is used.
 daisyUI semantic color names (`base`, `primary`, etc) are using CSS variables for the color values. So you can easily change the theme of your entire site by changing the value of these variables.
 You can also have multiple themes at the same time without adding a single class name. Light mode, dark mode, or any other theme you want.
 
@@ -29,7 +29,7 @@ Read more about [daisyUI color system](https://daisyui.com/docs/colors) and [dai
 
 ## How using a color palette can help
 
-In a design system, you should have a color palette. A color palette is a set of colors that you use in your design system. This helps you to have a consistent look and feel across your entire site.  
+In a design system, you should have a color palette. A color palette is a set of colors that you use in your design system. This helps you to have a consistent look and feel across your entire site.
 A common practice is to have:
 
 - A set of brand colors (`primary`, `secondary`, `accent`)
@@ -96,7 +96,7 @@ module.exports = {
 }
 ```
 
-You can set a different value for the new color in themes as well.  
+You can set a different value for the new color in themes as well.
 Let's add the new color name to `cupcake` and `dark` theme:
 
 ```js

@@ -6,7 +6,7 @@ date: 2023-9-14
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/tailwind-mistake.webp
 tags:
-  - Tailwind CSS
+  - Guides
 ---
 
 As a maintainer of daisyUI, I help people on GitHub issues and GitHub discussions every day. I see a lot of people making this mistake when using Tailwind CSS. It's so simple to avoid but I find it so common among developers.
@@ -35,10 +35,10 @@ instead of
 <div class="btn-primary"></div>
 ```
 
-It's cool, right?  
+It's cool, right?
 It even works in dev environment.
 
-Everything is fine...  
+Everything is fine...
 😠 until we build our app for production and you realize the color is not working anymore
 
 ## Why it doesn't work?

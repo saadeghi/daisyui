@@ -6,7 +6,7 @@ date: 2023-12-20
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/daisyui-is-the-best-component-library.webp
 tags:
-  - daisyUI
+  - News
 ---
 
 It's been 3 years since the first commit of daisyUI. At first, it was just a small side project to help me with my own freelance projects. But it quickly grew into something bigger than I could have ever imagined. It's been an exciting journey and 2023 in particular was a special year for daisyUI. Let's see all the good things that happened in 2023.
@@ -73,9 +73,9 @@ This is a huge advantage for daisyUI and it's one of the reasons why daisyUI is 
 
 In 2023 we improved the code example for each component to make sure they are accessible for keyboard navigation and screen readers.
 
-> For content-specific code examples, we don't provide a generic content in the code example.  
-> For example `<img>` tags do not have an `alt` attribute because the `alt` attribute must be provided by you, based on your page's content. This is also true for `aria-label` and `aria-labelledby` attributes.  
-> If we provide a dummy text for that, it's likely for you to ship that code to production without changing it.  
+> For content-specific code examples, we don't provide a generic content in the code example.
+> For example `<img>` tags do not have an `alt` attribute because the `alt` attribute must be provided by you, based on your page's content. This is also true for `aria-label` and `aria-labelledby` attributes.
+> If we provide a dummy text for that, it's likely for you to ship that code to production without changing it.
 > That's not okay so it's better if you receive an error from your code editor or linter to remind you to add the correct `alt` or `aria-label` attribute when needed.
 
 ## A CLI for installing Tailwind CSS and daisyUI
@@ -85,7 +85,7 @@ In 2023 we released [npm init daisyui](/blog/npm-init-daisyui/) which is a CLI t
 
 ## daisyUI has a logo now!
 
-Some people say it's a fried egg 🍳 and avocado 🥑, some people say it's a flower 🌼  
+Some people say it's a fried egg 🍳 and avocado 🥑, some people say it's a flower 🌼
 But we all agree that it's cute and simple.
 
 <img src="https://img.daisyui.com/images/daisyui-logo/daisyui-logotype.svg" alt="daisyUI logo" class="w-2/3 mx-auto bg-gray-100 rounded-box">
