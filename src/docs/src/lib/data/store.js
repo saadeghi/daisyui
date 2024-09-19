@@ -130,7 +130,7 @@ export const productCustomAttributes = [
       "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
     originalprice: 4900,
     displayprice: 2900,
-    tech: ["astro", "nextjs", "mdx"],
+    tech: ["astro", "react", "nextjs", "mdx"],
     tags: ["Next.js version added"],
   },
   {
@@ -212,8 +212,8 @@ export const productCustomAttributes = [
     ],
     screenshot:
       "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
-    tech: ["astro", "mdx"],
-    tags: ["v1.1 released with new design"],
+    tech: ["astro", "react", "nextjs", "mdx"],
+    tags: ["Next.js version added"],
   },
   {
     id: 185227,
