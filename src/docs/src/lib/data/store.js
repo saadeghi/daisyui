@@ -98,7 +98,7 @@ export const productCustomAttributes = [
       ],
     },
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
-    tech: ["react", "nextjs"],
+    tech: ["html", "react", "nextjs"],
     preveiw: {
       button: "Live demo",
       url: "https://nexus.daisyui.com/",
