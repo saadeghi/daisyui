@@ -70,32 +70,39 @@ export const productCustomAttributes = [
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-2.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-2.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-02.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-1.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-1.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-01.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-3.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-3.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-03.webp",
       },
       {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-4.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-4.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-04.webp",
       },
     ],
+    quote: {
+      img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
+      name: "Pouya",
+      text: [
+        [
+          "HTML version is now available!",
+        ],
+      ],
+    },
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["react", "nextjs"],
     preveiw: {
       button: "Live demo",
       url: "https://nexus.daisyui.com/",
     },
-    tags: ["updated to v1.1"],
-    params: "desc=0",
   },
   {
     id: 284327,
