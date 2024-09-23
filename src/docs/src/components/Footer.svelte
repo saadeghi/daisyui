@@ -147,25 +147,9 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/daisyui/react-daisyui"
+          href="https://github.com/saadeghi/theme-change"
           class="link link-hover group">
-          React daisyUI
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://github.com/daief/daisyui-vue"
-          class="link link-hover group">
-          daisyUI Vue (WIP)
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://github.com/robsontenorio/mary"
-          class="link link-hover group">
-          Mary - Laravel components
+          Theme Change
           {@html newtabicon}
         </a>
         <a
@@ -179,9 +163,49 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/saadeghi/theme-change"
+          href="https://react.daisyui.com/"
           class="link link-hover group">
-          Theme Change
+          React daisyUI
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://mary-ui.com/"
+          class="link link-hover group">
+          Mary - Laravel components
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://www.saraui.com/"
+          class="link link-hover group">
+          SaraUI for SvelteKit
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://phlexyui.com/"
+          class="link link-hover group">
+          PhlexyUI for Phlex
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://protos.inhouse.work/"
+          class="link link-hover group">
+          Protos for Phlex
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://backpex.live/"
+          class="link link-hover group">
+          Backpex for Phoenix
           {@html newtabicon}
         </a>
         <a
