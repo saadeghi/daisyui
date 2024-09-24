@@ -23,7 +23,7 @@ let { components } = data
           <figure class="px-4 pt-4">
             <img
               loading="lazy"
-              src="{`https://img.daisyui.com/images/components/${slug}.jpg`}"
+              src="{`https://img.daisyui.com/images/components/${slug}.webp`}"
               class="border-base-content bg-base-300 rounded-lg border border-opacity-5"
               alt="{title}" />
           </figure>

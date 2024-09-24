@@ -4,9 +4,9 @@ desc: It's the end of the year and this year was amazing! For Front-end developm
 published: true
 date: 2023-12-20
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/daisyui-is-the-best-component-library.png
+thumbnail: https://img.daisyui.com/images/blog/daisyui-is-the-best-component-library.webp
 tags:
-  - daisyUI
+  - News
 ---
 
 It's been 3 years since the first commit of daisyUI. At first, it was just a small side project to help me with my own freelance projects. But it quickly grew into something bigger than I could have ever imagined. It's been an exciting journey and 2023 in particular was a special year for daisyUI. Let's see all the good things that happened in 2023.
@@ -19,7 +19,7 @@ It's been 3 years since the first commit of daisyUI. At first, it was just a sma
 - daisyUI NPM package recently reached the all time record of `260,000` downloads per week. It was downloaded `7.7` million times in 2023 (a `330%` increase compared to 2022).
 
 <figure>
-  <img src="https://img.daisyui.com/images/blog/daisyui-is-the-most-popular-tailwindcss-component-library.png" alt="daisyUI NPM installs" class="rounded-box">
+  <img src="https://img.daisyui.com/images/blog/daisyui-is-the-most-popular-tailwindcss-component-library.webp" alt="daisyUI NPM installs" class="rounded-box">
   <figcaption class="text-center">daisyUI NPM installs</figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ It's been 3 years since the first commit of daisyUI. At first, it was just a sma
 - In the beginning of 2023, daisyUI had `89` contributors. Now in December, it has `162` contributors from many different countries around the world.
 
 <figure>
-  <img src="https://img.daisyui.com/images/blog/daisyui-contributors.png" alt="daisyUI contributors around the world" class="rounded-box">
+  <img src="https://img.daisyui.com/images/blog/daisyui-contributors.webp" alt="daisyUI contributors around the world" class="rounded-box">
   <figcaption class="text-center">daisyUI contributors around the world</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ In 2023, we added 7 new components, 3 new themes and more than 100 utility class
 All color pairs used on daisyUI built-in themes now tested for contrast ratio and [they all pass the WCAG test](https://github.com/saadeghi/daisyui/actions/runs/7216144450/job/19661791138#step:6:20). This test runs automatically everytime there's a change in themes or theme functions to make sure we provide accessible color combinations by default.
 
 <figure>
-  <img src="https://img.daisyui.com/images/blog/daisyui-colors-are-accessible.png" alt="daisyUI colors are accessible" class="rounded-box">
+  <img src="https://img.daisyui.com/images/blog/daisyui-colors-are-accessible.webp" alt="daisyUI colors are accessible" class="rounded-box">
   <figcaption class="text-center">
 
 [See the test results](https://github.com/saadeghi/daisyui/actions/runs/7216144450/job/19661791138#step:6:20)
@@ -73,9 +73,9 @@ This is a huge advantage for daisyUI and it's one of the reasons why daisyUI is 
 
 In 2023 we improved the code example for each component to make sure they are accessible for keyboard navigation and screen readers.
 
-> For content-specific code examples, we don't provide a generic content in the code example.  
-> For example `<img>` tags do not have an `alt` attribute because the `alt` attribute must be provided by you, based on your page's content. This is also true for `aria-label` and `aria-labelledby` attributes.  
-> If we provide a dummy text for that, it's likely for you to ship that code to production without changing it.  
+> For content-specific code examples, we don't provide a generic content in the code example.
+> For example `<img>` tags do not have an `alt` attribute because the `alt` attribute must be provided by you, based on your page's content. This is also true for `aria-label` and `aria-labelledby` attributes.
+> If we provide a dummy text for that, it's likely for you to ship that code to production without changing it.
 > That's not okay so it's better if you receive an error from your code editor or linter to remind you to add the correct `alt` or `aria-label` attribute when needed.
 
 ## A CLI for installing Tailwind CSS and daisyUI
@@ -85,7 +85,7 @@ In 2023 we released [npm init daisyui](/blog/npm-init-daisyui/) which is a CLI t
 
 ## daisyUI has a logo now!
 
-Some people say it's a fried egg 🍳 and avocado 🥑, some people say it's a flower 🌼  
+Some people say it's a fried egg 🍳 and avocado 🥑, some people say it's a flower 🌼
 But we all agree that it's cute and simple.
 
 <img src="https://img.daisyui.com/images/daisyui-logo/daisyui-logotype.svg" alt="daisyUI logo" class="w-2/3 mx-auto bg-gray-100 rounded-box">
@@ -98,7 +98,7 @@ daisyUI website was redesigned in 2023. The new homepage visualizes the most imp
 
 We added 6 new translations to the website in 2023. daisyUI docs are now available in 16 languages which makes it accessible to a wider audience.
 
-<img src="https://img.daisyui.com/images/blog/daisyui-translations.png" alt="daisyUI translations" class="rounded-box mx-auto w-2/3">
+<img src="https://img.daisyui.com/images/blog/daisyui-translations.webp" alt="daisyUI translations" class="rounded-box mx-auto w-2/3">
 
 This year we launched [daisyUI Store](/store/), [daisyUI Resources](/resources/videos/) and [daisyUI Blog](/blog/).
 

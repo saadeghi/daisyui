@@ -32,7 +32,7 @@ data="{[
 
 <Component title="Card">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -47,7 +47,7 @@ data="{[
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
@@ -65,7 +65,7 @@ data="{[
 
 <Component title="Compact card (less padding for `card-body`)">
 <div class="card w-96 bg-base-100 card-compact shadow-xl">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -80,7 +80,7 @@ data="{[
 <div class="$$card $$card-compact bg-base-100 w-96 shadow-xl">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
@@ -98,7 +98,7 @@ data="{[
 
 <Component title="Card with badge">
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">
       Shoes!
@@ -117,7 +117,7 @@ data="{[
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
@@ -143,7 +143,7 @@ data="{[
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
   </div>
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
 </div>
 {#snippet html()}
 
@@ -155,7 +155,7 @@ data="{[
   </div>
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
 </div>
@@ -167,7 +167,7 @@ data="{[
 <Component title="Card with centered content and paddings">
 <div class="card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-xl" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">Shoes!</h2>
@@ -183,7 +183,7 @@ data="{[
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure class="px-10 pt-10">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes"
       class="rounded-xl" />
   </figure>
@@ -202,7 +202,7 @@ data="{[
 
 <Component title="Card with image overlay">
 <div class="card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -217,7 +217,7 @@ data="{[
 <div class="$$card bg-base-100 image-full w-96 shadow-xl">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
@@ -356,9 +356,9 @@ data="{[
 {/snippet}
 </Component>
 
-<Component title="Card glass" bg="https://img.daisyui.com/images/stock/photo-1481026469463-66327c86e544.jpg">
+<Component title="Card glass" bg="https://img.daisyui.com/images/stock/photo-1481026469463-66327c86e544.webp">
 <div class="card w-96 glass">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="car!"/></figure>
   <div class="card-body">
     <h2 class="card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
@@ -373,7 +373,7 @@ data="{[
 <div class="$$card glass w-96">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="car!" />
   </figure>
   <div class="$$card-body">
@@ -391,7 +391,7 @@ data="{[
 
 <Component title="Card with image on side">
 <div class="card card-side bg-base-100 shadow-xl">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" alt="Movie"/></figure>
   <div class="card-body">
     <h2 class="card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -406,7 +406,7 @@ data="{[
 <div class="$$card $$card-side bg-base-100 shadow-xl">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
       alt="Movie" />
   </figure>
   <div class="$$card-body">
@@ -424,7 +424,7 @@ data="{[
 
 <Component title="Responsive card (vertical on small screen, horizontal on large screen)">
 <div class="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album"/></figure>
+  <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album"/></figure>
   <div class="card-body">
     <h2 class="card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
@@ -439,7 +439,7 @@ data="{[
 <div class="$$card lg:$$card-side bg-base-100 shadow-xl">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
+      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
       alt="Album" />
   </figure>
   <div class="$$card-body">

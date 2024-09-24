@@ -4,10 +4,9 @@ desc: It can be annoying to install, setup, config and import all the dependenci
 published: true
 date: 2023-10-6
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/npm-init-daisyui.jpg
+thumbnail: https://img.daisyui.com/images/blog/npm-init-daisyui.webp
 tags:
-  - daisyUI
-  - Tailwind CSS
+  - Guides
 ---
 
 ## The manual way
@@ -102,9 +101,9 @@ npm create daisyui
 
 ## What it doesn't do?
 
-1. It doesn't setup `content` config in `tailwind.config.js` file.  
+1. It doesn't setup `content` config in `tailwind.config.js` file.
    You need to do it yourself because it depends on your file structure. You can read more about it in [Tailwind CSS docs](https://tailwindcss.com/docs/content-configuration).
-2. It doesn't add your CSS file into your HTML.  
+2. It doesn't add your CSS file into your HTML.
    You need to do it yourself because it depends on your build tool or bundler.
    You may want to import it like this:
 
@@ -118,7 +117,7 @@ npm create daisyui
    <link href="/output.css" rel="stylesheet" />
    ```
 
-3. It doesn't add any scripts in `package.json` file to build your CSS file.  
+3. It doesn't add any scripts in `package.json` file to build your CSS file.
    If you're using a bundler, it will be handled automatically. Otherwise you may need to add a script to `package.json` file to build your CSS file.
    Like this:
 
@@ -134,7 +133,7 @@ npm create daisyui
 
 ## Source code
 
-It's open source of course and the source code is here:  
+It's open source of course and the source code is here:
 https://github.com/daisyui/create-daisyui/
 
 Let me know if you have any suggestions or feedback.

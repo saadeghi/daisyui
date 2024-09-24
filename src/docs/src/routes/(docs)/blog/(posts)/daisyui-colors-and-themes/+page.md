@@ -4,16 +4,16 @@ desc: Why use semantic color names instead of Tailwind CSS color shades? Accessi
 published: true
 date: 2023-9-11
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/semantic-colors.jpg
+thumbnail: https://img.daisyui.com/images/blog/semantic-colors.webp
 tags:
-  - Colors
+  - Reviews
 ---
 
 Tailwind CSS as a general purpose utility-first CSS framework, provides all the color shades you may need for your website. Basically every shade of every color. However it's not a good idea to have all those colors in your website. You should choose a few colors and use them consistently across your website.
 
-A good design practice is to have a color system with semantic color names.  
+A good design practice is to have a color system with semantic color names.
 A standard approach is to have brand color names like `primary`, `secondary`, `accent`, and state colors like `success`, `warning`, `error`, `info`. In addition to some neutral color shades for the background, text, and border colors.
-![Semantic colors](https://img.daisyui.com/images/blog/daisyui-semantic-colors.jpg)
+![Semantic colors](https://img.daisyui.com/images/blog/daisyui-semantic-colors.webp)
 daisyUI offers a limited set of semantic color names where can have any value (thanks to CSS variables).
 
 Using this color system your website can have a different look and feel by simply changing the color values once. You don't need to change the color of each element individually.

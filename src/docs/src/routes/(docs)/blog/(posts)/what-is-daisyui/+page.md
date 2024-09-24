@@ -4,10 +4,9 @@ desc: Is daisyUI against the Tailwind CSS philosophy? Are we going full circle? 
 published: true
 date: 2023-9-10
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/daisyui-stars.jpg
+thumbnail: https://img.daisyui.com/images/blog/daisyui-stars.webp
 tags:
-  - Tailwind CSS
-  - Component Library
+  - Reviews
 ---
 
 ## What is daisyUI?
@@ -16,8 +15,8 @@ tags:
 
 ## Is daisyUI against the Tailwind CSS philosophy?
 
-No.  
-daisyUI is built on top of Tailwind CSS. Utility-first approach suggests that you should use utility classes for most of your CSS rules, but it doesn't mean you should use **utility classes only**.  
+No.
+daisyUI is built on top of Tailwind CSS. Utility-first approach suggests that you should use utility classes for most of your CSS rules, but it doesn't mean you should use **utility classes only**.
 Might be surprising to know but Tailwind CSS has an API for creating component classes (which is used by daisyUI) and Tailwind CSS itself also provides some component classes along with utility classes.
 
 > It's called utility-first, not utility-only
@@ -34,15 +33,15 @@ The truth is using **utility classes only**, is not practical for most people.
 - It's not easy to maintain. You end up with a lot of classes in your HTML files and it's hard to find and change them.
 - Using utility classes only is basically re-inventing the wheel a lot of times. You need to write a lot of CSS classes just to make a simple element which looks exactly like the one you made before.
 
-> So instead of **utility-only** let's keep it **utility-first**  
-> Let's use utility classes whenever we need customization  
+> So instead of **utility-only** let's keep it **utility-first**
+> Let's use utility classes whenever we need customization
 > and use component classes when we need speed
 
 ## But we already had Bootstrap. Are we going full circle?
 
-Here's where Tailwind CSS and the utility classes really shine.  
-The biggest problem with Bootstrap and similar component libraries was that they were not customizable. You can't change the design of a component without overriding a lot of CSS rules. Customizing Bootstrap was so hard that almost every single Bootstrap website looked the same.  
-That wouldn't be a problem when the component library is built on top of Tailwind CSS. You can customize the design of each component by simply adding utility classes to it. It can't get any easier than that.  
+Here's where Tailwind CSS and the utility classes really shine.
+The biggest problem with Bootstrap and similar component libraries was that they were not customizable. You can't change the design of a component without overriding a lot of CSS rules. Customizing Bootstrap was so hard that almost every single Bootstrap website looked the same.
+That wouldn't be a problem when the component library is built on top of Tailwind CSS. You can customize the design of each component by simply adding utility classes to it. It can't get any easier than that.
 Now you have the speed of component class names and the flexibility of utility class names.
 
 ## Who is daisyUI for?
@@ -63,7 +62,7 @@ daisyUI is not for you if you don't need pre-made components. If you want to bui
 
 ## How is daisyUI different from other Tailwind CSS component libraries?
 
-daisyUI offers short, intuitive, and easy to remember class names.  
+daisyUI offers short, intuitive, and easy to remember class names.
 Other Tailwind CSS component libraries usually use the utility-only approach which results in bloated HTML files with a lot of class names.
 
 Basically with daisyUI you use a single `btn` class to make a button and then you can customize it with utility classes. With other component libraries you use copy/paste 100 class names to make a button and then you can customize it by editing them.

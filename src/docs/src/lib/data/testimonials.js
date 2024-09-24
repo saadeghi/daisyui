@@ -241,13 +241,6 @@ export const tweets = [
     bio: "Software developer",
   },
   {
-    id: "1783960771673637343",
-    content: "daisyUI is a fantastic and a logical extension of CSS.",
-    name: "",
-    username: "real_JohnHurley",
-    bio: "John Hurley",
-  },
-  {
     id: "1787693390756221027",
     content: "daisyUI saved me months of component design.",
     name: "Erick Rodriguez",

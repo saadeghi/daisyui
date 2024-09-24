@@ -4,11 +4,9 @@ desc: In this article, we will learn how to use daisyUI component library in Nex
 published: true
 date: 2023-9-22
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/daisyui-nextjs-component-library.jpg
+thumbnail: https://img.daisyui.com/images/blog/daisyui-nextjs-component-library.webp
 tags:
-  - Next.js
-  - React
-  - JavaScript frameworks
+  - Frameworks
 ---
 
 Next.js is currently one of the popular JavaScript meta frameworks for building web applications. Since we can use daisyUI in any JavaScript framework, we can also use it in Next.js.
@@ -17,17 +15,17 @@ Installing Next.js is pretty straightforward. It also includes Tailwind CSS by d
 
 ### Installing Next.js
 
-1. Let's start by creating a new Next.js project.  
+1. Let's start by creating a new Next.js project.
    You can use the following command to create a new Next.js project:
 
 ```
 npx create-next-app@latest
 ```
 
-2. Answer the questions to complete the project creation process.  
+2. Answer the questions to complete the project creation process.
    Make sure to enable `Tailwind CSS` when asked about it:
 
-![Install Next.js](https://img.daisyui.com/images/blog/install-nextjs.jpg)
+![Install Next.js](https://img.daisyui.com/images/blog/install-nextjs.webp)
 
 Go to the project directory. If you named it `my-app`:
 
@@ -43,7 +41,7 @@ cd my-app
 npm i -D daisyui@latest
 ```
 
-4. Open `tailwind.config.ts` file  
+4. Open `tailwind.config.ts` file
    Add daisyUI as a plugin:
 
 ```diff
@@ -73,7 +71,7 @@ export default config
 
 ### Using daisyUI
 
-5. Open `/app/page.tsx` file  
+5. Open `/app/page.tsx` file
    Replace the content with:
 
 ```jsx

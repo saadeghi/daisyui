@@ -6,7 +6,7 @@ import { readEnv } from "$lib/util"
 let siteData = {
   title: "Tailwind CSS Components ( version 4 update is here )",
   desc: "Free Tailwind Components",
-  card: "https://img.daisyui.com/images/default.jpg",
+  card: "https://img.daisyui.com/images/default.webp",
 }
 export let formatTitle = true
 export let title = ""

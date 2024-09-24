@@ -60,7 +60,7 @@ rounded-badge   // var(--rounded-badge)
 
 <Translate text="These glass class to give elements a matte glass effect" />
 
-<div class="rounded p-10 max-w-3xl " style="background-image: url(/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+<div class="rounded p-10 max-w-3xl " style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
 <div class="glass w-full h-40 rounded-box grid place-content-center">Glass</div>
 </div>
 

@@ -4,11 +4,10 @@ desc: Which one is better? Which one should I use? Comparing Tailwind CSS compon
 published: true
 date: 2023-9-10
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/daisyui-vs-tailwindui.jpg
+thumbnail: https://img.daisyui.com/images/blog/daisyui-vs-tailwindui.webp
 tags:
-  - Tailwind CSS
-  - Tailwind UI
-  - Component Library
+  - Reviews
+  - Component Libraries
 ---
 
 ## Comparing daisyUI and Tailwind UI
@@ -18,7 +17,7 @@ tags:
 
 Both of these component libraries are built on top of Tailwind CSS and they both provide well-designed components for your web pages.
 
-But which one is better for you?  
+But which one is better for you?
 Which one should you use?
 
 ## Core differences
@@ -35,10 +34,10 @@ With Tailwind UI, you need to use Tailwind CSS utility classes to make a button:
 
 ```html
 <button
-  class="rounded-md bg-indigo-600 px-3.5 py-2.5 
-  text-sm font-semibold text-white shadow-sm 
-  hover:bg-indigo-500 focus-visible:outline 
-  focus-visible:outline-2 focus-visible:outline-offset-2 
+  class="rounded-md bg-indigo-600 px-3.5 py-2.5
+  text-sm font-semibold text-white shadow-sm
+  hover:bg-indigo-500 focus-visible:outline
+  focus-visible:outline-2 focus-visible:outline-offset-2
   focus-visible:outline-indigo-600">
   Button
 </button>
@@ -64,7 +63,7 @@ daisyUI comes with a built-in dark mode and also 28 other built-in themes. All t
 
 ## HTML size
 
-Generally using Tailwind CSS utility classes makes your HTML files bigger. You need to add a lot of classes to your elements to style them.  
+Generally using Tailwind CSS utility classes makes your HTML files bigger. You need to add a lot of classes to your elements to style them.
 With daisyUI, you write 80% fewer class names and your HTML size will be about 70% smaller.
 
 ## CSS size and unused styles
@@ -81,8 +80,8 @@ daisyUI doesn't include interactive elements that need JS (for example a date pi
 
 ## Accessibility
 
-Both daisyUI and Tailwind UI provide CSS and HTML code that is accessible by default.  
-The colors and design of components are chosen in a way that they are accessible for everyone.  
+Both daisyUI and Tailwind UI provide CSS and HTML code that is accessible by default.
+The colors and design of components are chosen in a way that they are accessible for everyone.
 However, accessibility is not binary and it's not installable. You should always test your website for accessibility issues and fix them according to your customer needs and the way they use your website.
 
 ## Frameworks and libraries
@@ -94,7 +93,7 @@ You can use third-party JS plugins or even handle the JS interactivity yourself 
 
 ## Which one should you use?
 
-daisyUI and Tailwind UI are both great component libraries. They both provide well-designed components for your web pages.  
+daisyUI and Tailwind UI are both great component libraries. They both provide well-designed components for your web pages.
 However, to choose the best one for your project, you need to consider your project requirements and your team's skills.
 
 Tailwind UI is better if:

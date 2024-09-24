@@ -10,6 +10,13 @@ on:
         options:
           - "bun"
           - "npm"
+      daisyuiversion:
+        type: choice
+        description: DaisyUI release tag
+        default: "latest"
+        options:
+          - "latest"
+          - "alpha"
   workflow_call:
     inputs:
       daisyuiversion:
@@ -69,7 +76,13 @@ jobs:
 
       - name: Install daisyUI newest tag if staging
         if: github.repository == 'daisyui/daisyui.github.io'
-        run: cd src/docs && ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "${{env.daisyuiversion}}" || echo "alpha")
+        run: |
+          cd src/docs
+          if [ "${{env.daisyuiversion}}" = "latest" ]; then
+            ${{ env.runtime }} i daisyui@${{env.daisyuiversion}}
+          else
+            ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "latest" || echo "alpha")
+          fi
 
       - name: Set daisyUI version in env file if staging
         if: github.repository == 'daisyui/daisyui.github.io'

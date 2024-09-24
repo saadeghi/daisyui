@@ -115,23 +115,6 @@ let { tags } = data
             </div>
           </div>
         </div>
-
-        <script
-          src="https://giscus.app/client.js"
-          data-repo="daisyui/blog-discussions"
-          data-repo-id="R_kgDOK3Q31Q"
-          data-category="comments"
-          data-category-id="DIC_kwDOK3Q31c4CbliP"
-          data-strict="0"
-          data-reactions-enabled="0"
-          data-emit-metadata="0"
-          data-input-position="top"
-          data-theme="dark_dimmed"
-          data-lang="en"
-          data-loading="lazy"
-          crossorigin="anonymous"
-          async>
-        </script>
       </div>
     </div>
     <div class="flex justify-center xl:hidden">

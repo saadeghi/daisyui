@@ -4,9 +4,9 @@ desc: In this post we will take a look at the list of best Tailwind CSS plugins 
 published: true
 date: 2023-10-12
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.jpg
+thumbnail: https://img.daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.webp
 tags:
-  - Tailwind CSS
+  - Reviews
 ---
 
 Tailwind CSS is a utility-first CSS framework that is rapidly growing in popularity and there are many plugins that can boost your workflow and make your life easier.
@@ -33,12 +33,12 @@ module.exports = {
 
 ### Here's the list of best Tailwind CSS plugins:
 
-![daisyUI is the best Tailwind CSS component library](https://img.daisyui.com/images/blog/daisyui-tailwind-components.jpg)
+![daisyUI is the best Tailwind CSS component library](https://img.daisyui.com/images/blog/daisyui-tailwind-components.webp)
 
 ## 1. daisyUI
 
-[daisyUI](https://daisyui.com/) is a free component library for Tailwind CSS that adds component class names to Tailwind CSS.  
-It helps you to build websites faster. daisyUI uses human-friendly and descriptive class names like `btn`, `card`, `toggle`, `alert`, `modal` etc. which helps you use less class names and keep your HTML clean.  
+[daisyUI](https://daisyui.com/) is a free component library for Tailwind CSS that adds component class names to Tailwind CSS.
+It helps you to build websites faster. daisyUI uses human-friendly and descriptive class names like `btn`, `card`, `toggle`, `alert`, `modal` etc. which helps you use less class names and keep your HTML clean.
 daisyUI also comes with a lot of built-in themes and dark mode support so you don't have to write any additional class names to enable dark mode. It works out of the box.
 
 Learn more about daisyUI:
@@ -46,11 +46,11 @@ Learn more about daisyUI:
 - [Official docs](https://daisyui.com/)
 - [GitHub](https://github.com/saadeghi/daisyui)
 
-![tailwindcss/typography Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-typography.jpg)
+![tailwindcss/typography Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-typography.webp)
 
 ## 2. tailwindcss/typography
 
-[tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) is the official Tailwind CSS plugin that adds default styles for all your text content.  
+[tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) is the official Tailwind CSS plugin that adds default styles for all your text content.
  Typography plugin is made by the Tailwind CSS team and it's a must-have plugin for any Tailwind CSS project especially if you are building a blog or a website with a lot of text content. It plays well with Markdown content since all you have to do is to add `prose` class to your container and it will automatically style all your text content.
 
 Learn more about Typography plugin:
@@ -58,7 +58,7 @@ Learn more about Typography plugin:
 - [Official docs](https://tailwindcss.com/docs/typography-plugin)
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-typography)
 
-![tailwindcss/container-queries Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-container-queries.jpg)
+![tailwindcss/container-queries Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-container-queries.webp)
 
 ## 3. tailwindcss/container-queries
 
@@ -71,7 +71,7 @@ Learn more about tailwindcss/container-queries
 - [Official docs](https://tailwindcss.com/docs/plugins#container-queries)
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-container-queries)
 
-![tailwindcss-flip Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-flip.jpg)
+![tailwindcss-flip Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-flip.webp)
 
 ## 4. tailwindcss-flip
 
@@ -81,7 +81,7 @@ Read more about tailwindcss-flip:
 
 - [GitHub](https://github.com/cvrajeesh/tailwindcss-flip)
 
-![tailwindcss-animate Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-animate.jpg)
+![tailwindcss-animate Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-animate.webp)
 
 ## 5. tailwindcss-animate
 
@@ -91,7 +91,7 @@ Learn more about tailwindcss-animate:
 
 - [GitHub](https://github.com/jamiebuilds/tailwindcss-animate)
 
-![tailwind-scrollbar-hide Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwind-scrollbar-hide.jpg)
+![tailwind-scrollbar-hide Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwind-scrollbar-hide.webp)
 
 ## 6. tailwind-scrollbar-hide
 
@@ -101,7 +101,7 @@ Learn more about tailwind-scrollbar-hide:
 
 - [GitHub](https://github.com/reslear/tailwind-scrollbar-hide)
 
-![tailwindcss/forms Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-forms.jpg)
+![tailwindcss/forms Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-forms.webp)
 
 ## 7. tailwindcss/forms
 
@@ -111,7 +111,7 @@ Learn more about tailwindcss/forms
 
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-forms)
 
-![tailwindcss-opentype Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-opentype.jpg)
+![tailwindcss-opentype Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-opentype.webp)
 
 ## 8. tailwindcss-opentype
 
@@ -122,7 +122,7 @@ Read more about tailwindcss-opentype:
 - [Official docs](https://tailwindcss-opentype.netlify.app/)
 - [GitHub](https://github.com/stormwarning/tailwindcss-opentype)
 
-![tailwindcss-3d Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-3d.jpg)
+![tailwindcss-3d Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-3d.webp)
 
 ## 9. tailwindcss-3d
 
@@ -134,7 +134,7 @@ Learn more about tailwindcss-3d:
 
 ## Conclusion
 
-Tailwind CSS plugins are a great way to extend Tailwind CSS and add new features to it.  
+Tailwind CSS plugins are a great way to extend Tailwind CSS and add new features to it.
 You can search for more plugins on GitHub and NPM but if you didn't find what you're looking for, you can also create your own plugin using [Tailwind CSS API](https://tailwindcss.com/docs/plugins#adding-utilities)!
 
 Thanks for reading!

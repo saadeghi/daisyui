@@ -1,5 +1,5 @@
 import { LEMONSQUEEZY_API_KEY } from "$env/static/private"
-import { productCustomAttributes, tech } from "$lib/data/store.js"
+import { productCustomAttributes, tech, techFilters, futureProducts } from "$lib/data/store.js"
 
 const LSParams = {
   headers: {
@@ -10,43 +10,33 @@ const LSParams = {
 }
 
 export async function load({ params }) {
-  const storeInfo = {
-    products: { data: [] },
-    discounts: { data: [] },
-  }
   const productsResponse = await fetch(
     "https://api.lemonsqueezy.com/v1/products?page[size]=100",
     LSParams
   )
-  const discountsResponse = await fetch(
-    "https://api.lemonsqueezy.com/v1/discounts?page[size]=100",
-    LSParams
-  )
-  if (productsResponse.ok) {
-    storeInfo.products = await productsResponse.json()
+  let sortedData
+  if (!productsResponse.ok) {
+    sortedData = []
+  } else {
+    const originalData = await productsResponse.json()
+    const additionalInfoMap = new Map(productCustomAttributes.map((item) => [item.id, item]))
+    sortedData = productCustomAttributes
+      .map(({ id }) => {
+        // Find the item in the original data by ID
+        const originalItem = originalData.data.find((item) => Number.parseInt(item.id) === id)
 
-    // sort products by id
-    storeInfo.products.data.sort((a, b) => {
-      return Number.parseInt(b.id) - Number.parseInt(a.id)
-    })
-    // add additional product data
-    for (const item of storeInfo.products.data) {
-      const itemId = item.id
-      if (productCustomAttributes[itemId]) {
-        item.customattributes = productCustomAttributes[itemId]
-      }
-    }
-  }
-  if (discountsResponse.ok) {
-    storeInfo.discounts = await discountsResponse.json()
-    // sort discounts by id
-    storeInfo.discounts.data.sort((a, b) => {
-      return Number.parseInt(b.id) - Number.parseInt(a.id)
-    })
+        // If found, merge the original item with the additional info
+        return originalItem ? { ...originalItem, ...additionalInfoMap.get(id) } : null
+      })
+      .filter((item) => item !== null) // Filter out null values
   }
   return {
     tech,
-    products: storeInfo.products,
-    discounts: storeInfo.discounts,
+    techFilters,
+    products: sortedData,
+    futureProducts,
+    discounts: {
+      data: [],
+    },
   }
 }
