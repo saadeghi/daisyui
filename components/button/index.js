@@ -1,6 +1,6 @@
 export default {
   ".btn": {
-    "@apply text-base-content outline-base-content inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] px-4 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none": {},
+    "@apply text-base-content outline-base-content inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] px-4 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle": {},
     "transitionProperty": "color, background-color, border-color, opacity, box-shadow, transform",
     "backgroundColor": "var(--btn-color, var(--color-base-200))",
     "borderWidth": "var(--spacing-button-border)",
@@ -24,7 +24,7 @@ export default {
     },
     "&:active": {
       "&:focus": {
-        "transform": "scale(var(--btn-focus-scale, 0.97))",
+        "transform": "scale(var(--btn-focus-scale, 0.98))",
         "@apply animate-[button-pop_0s_ease-out]": {},
         "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)",
         "borderBottomColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%)",
@@ -46,7 +46,7 @@ export default {
   },
   ".btn-square": {
     "@apply size-12 p-0": {},
-    "@apply p-0": {},
+    "@apply px-0": {},
     "&:where(.btn-xs)": {
       "@apply size-6": {}
     },
@@ -62,7 +62,7 @@ export default {
   },
   ".btn-circle": {
     "@apply size-12 rounded-full p-0": {},
-    "@apply rounded-full p-0": {},
+    "@apply rounded-full px-0": {},
     "&:where(.btn-xs)": {
       "@apply size-6": {}
     },
@@ -109,44 +109,31 @@ export default {
     "@apply text-error-content outline-error": {}
   },
   ".btn.glass": {
-    "@apply shadow-none outline-current [&.btn-active]:[--glass-border-opacity:15%] [&.btn-active]:[--glass-opacity:25%] [@media(hover:hover)]:hover:[--glass-border-opacity:15%] [@media(hover:hover)]:hover:[--glass-opacity:25%]": {}
+    "@apply shadow-none outline-current hover:[--glass-border-opacity:15%] hover:[--glass-opacity:25%]": {},
+    "&.btn-active": {
+      "--glass-border-opacity": "15%",
+      "--glass-opacity": "25%"
+    }
   },
   ".btn-ghost": {
-    "@apply [@media(hover:hover)]:hover:bg-base-content/20 [&.btn-active]:bg-base-content/20 border border-transparent bg-transparent text-current shadow-none outline-current [&.btn-active]:border-transparent [@media(hover:hover)]:hover:border-transparent": {}
+    "@apply hover:bg-base-content/20 border border-transparent bg-transparent text-current shadow-none outline-current hover:border-transparent": {},
+    "&.btn-active": {
+      "@apply bg-base-content/20 border-transparent": {}
+    }
   },
   ".btn-link": {
-    "@apply text-primary border-transparent bg-transparent underline shadow-none outline-current [&.btn-active]:border-transparent [&.btn-active]:bg-transparent [&.btn-active]:underline [@media(hover:hover)]:hover:border-transparent [@media(hover:hover)]:hover:bg-transparent [@media(hover:hover)]:hover:underline": {}
+    "@apply text-primary border-transparent bg-transparent underline shadow-none outline-current hover:border-transparent hover:bg-transparent hover:underline": {},
+    "&.btn-active": {
+      "@apply border-transparent bg-transparent underline": {}
+    }
   },
   ".btn-outline": {
-    "@apply bg-transparent text-[var(--btn-color)] shadow-none": {},
+    "&:not(.btn-active):not(:hover)": {
+      "@apply bg-transparent text-[var(--btn-color)] shadow-none": {}
+    },
     "&.btn-active": {
-      "@apply text-base-content": {},
       "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)) 90%, black)",
       "backgroundColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)) 90%, black)"
-    },
-    "&.btn-primary": {
-      "@apply [@media(hover:hover)]:hover:text-primary-content text-primary [&.btn-active]:text-primary-content": {}
-    },
-    "&.btn-secondary": {
-      "@apply [@media(hover:hover)]:hover:text-secondary-content text-secondary [&.btn-active]:text-secondary-content": {}
-    },
-    "&.btn-accent": {
-      "@apply [@media(hover:hover)]:hover:text-accent-content text-accent [&.btn-active]:text-accent-content": {}
-    },
-    "&.btn-neutral": {
-      "@apply [@media(hover:hover)]:hover:text-neutral-content text-neutral [&.btn-active]:text-neutral-content": {}
-    },
-    "&.btn-success": {
-      "@apply [@media(hover:hover)]:hover:text-success-content text-success [&.btn-active]:text-success-content": {}
-    },
-    "&.btn-info": {
-      "@apply [@media(hover:hover)]:hover:text-info-content text-info [&.btn-active]:text-info-content": {}
-    },
-    "&.btn-warning": {
-      "@apply [@media(hover:hover)]:hover:text-warning-content text-warning [&.btn-active]:text-warning-content": {}
-    },
-    "&.btn-error": {
-      "@apply [@media(hover:hover)]:hover:text-error-content text-error [&.btn-active]:text-error-content": {}
     }
   },
   ".btn:is(input[type=\"checkbox\"]):after,\n.btn:is(input[type=\"radio\"]):after": {

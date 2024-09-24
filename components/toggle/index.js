@@ -1,7 +1,7 @@
 export default {
   ".toggle": {
     "@apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none rounded-[var(--radius-badge)] border border-current p-[.1875rem]": {},
-    "boxShadow": "0 1px oklch(0% 0 0 / 0.1) inset",
+    "boxShadow": "0 1px color-mix(in oklab, currentColor, transparent 90%) inset",
     "transition": "color .3s",
     "&:before": {
       "@apply block h-full grow-0": {},
@@ -12,7 +12,7 @@ export default {
       "@apply relative start-0 block aspect-square h-full translate-x-0 [border-radius:calc(var(--radius-badge)-3px)] bg-current": {},
       "content": "\"\"",
       "transition": "background-color 0.1s,\n      translate 0.2s,\n      inset-inline-start 0.2s",
-      "boxShadow": "0 -1px oklch(0% 0 0 / 0.1) inset,\n      0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,\n      0 1px oklch(0% 0 0 / 0.1)"
+      "boxShadow": "0 -1px oklch(0% 0 0 / 0.1) inset,\n      0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,\n      0 1px color-mix(in oklab, currentColor, transparent 90%)"
     },
     "&:focus-visible": {
       "@apply outline outline-2 outline-offset-2 outline-current": {}

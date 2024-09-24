@@ -9,12 +9,12 @@ export default {
     "&:focus-visible": {
       "@apply outline-2 outline-offset-2 outline-current": {}
     },
-    "&:checked,\n\t&[aria-checked=\"true\"]": {
+    "&:checked,\n  &[aria-checked=\"true\"]": {
       "animation": "radiomark var(--animation-input, 0.2s) ease-out",
       "@apply bg-base-100 border-current": {},
       "&:before": {
         "@apply bg-current": {},
-        "boxShadow": "0 -1px oklch(0% 0 0 / 0.1) inset,\n\t\t\t\t0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,\n\t\t\t\t0 1px oklch(0% 0 0 / 0.1)"
+        "boxShadow": "0 -1px oklch(0% 0 0 / 0.1) inset,\n        0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,\n        0 1px oklch(0% 0 0 / 0.1)"
       }
     }
   },

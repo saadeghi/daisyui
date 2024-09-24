@@ -1,95 +1,95 @@
 .radio {
-	@apply border-base-content/20 text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-full border p-1;
-	box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
+  @apply border-base-content/20 text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-full border p-1;
+  box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
 
-	&:before {
-		@apply block size-full rounded-full;
-		content: "";
-	}
+  &:before {
+    @apply block size-full rounded-full;
+    content: "";
+  }
 
-	&:focus-visible {
-		@apply outline-2 outline-offset-2 outline-current;
-	}
+  &:focus-visible {
+    @apply outline-2 outline-offset-2 outline-current;
+  }
 
-	&:checked,
-	&[aria-checked="true"] {
-		animation: radiomark var(--animation-input, 0.2s) ease-out;
-		@apply bg-base-100 border-current;
+  &:checked,
+  &[aria-checked="true"] {
+    animation: radiomark var(--animation-input, 0.2s) ease-out;
+    @apply bg-base-100 border-current;
 
-		&:before {
-			@apply bg-current;
-			box-shadow:
-				0 -1px oklch(0% 0 0 / 0.1) inset,
-				0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,
-				0 1px oklch(0% 0 0 / 0.1);
-		}
-	}
+    &:before {
+      @apply bg-current;
+      box-shadow:
+        0 -1px oklch(0% 0 0 / 0.1) inset,
+        0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,
+        0 1px oklch(0% 0 0 / 0.1);
+    }
+  }
 }
 
 .radio-primary {
-	@apply text-primary border-current;
+  @apply text-primary border-current;
 }
 
 .radio-secondary {
-	@apply text-secondary border-current;
+  @apply text-secondary border-current;
 }
 
 .radio-accent {
-	@apply text-accent border-current;
+  @apply text-accent border-current;
 }
 
 .radio-success {
-	@apply text-success border-current;
+  @apply text-success border-current;
 }
 
 .radio-warning {
-	@apply text-warning border-current;
+  @apply text-warning border-current;
 }
 
 .radio-info {
-	@apply text-info border-current;
+  @apply text-info border-current;
 }
 
 .radio-error {
-	@apply text-error border-current;
+  @apply text-error border-current;
 }
 
 .radio:disabled {
-	@apply cursor-not-allowed opacity-20;
+  @apply cursor-not-allowed opacity-20;
 }
 
 @keyframes radiomark {
-	0% {
-		padding: 5px;
-	}
+  0% {
+    padding: 5px;
+  }
 
-	50% {
-		padding: 3px;
-	}
+  50% {
+    padding: 3px;
+  }
 }
 
 /* responsive */
 
 .radio-xs {
-	&:is([type="radio"]) {
-		@apply size-4;
-	}
+  &:is([type="radio"]) {
+    @apply size-4;
+  }
 }
 
 .radio-sm {
-	&:is([type="radio"]) {
-		@apply size-5;
-	}
+  &:is([type="radio"]) {
+    @apply size-5;
+  }
 }
 
 .radio-md {
-	&:is([type="radio"]) {
-		@apply size-6;
-	}
+  &:is([type="radio"]) {
+    @apply size-6;
+  }
 }
 
 .radio-lg {
-	&:is([type="radio"]) {
-		@apply size-8;
-	}
+  &:is([type="radio"]) {
+    @apply size-8;
+  }
 }

@@ -16,8 +16,8 @@ export default {
       "backgroundImage": "none"
     },
     "input": {
-      "&:checked,\n\t\t&[aria-checked=\"true\"]": {
-        "& ~ input": {
+      "&:checked,\n    &[aria-checked=\"true\"]": {
+        "&~input": {
           "@apply opacity-20": {}
         }
       },

@@ -1,6 +1,6 @@
 .toggle {
   @apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none rounded-[var(--radius-badge)] border border-current p-[.1875rem];
-  box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
+  box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
   transition:
     color .3s;
 
@@ -20,7 +20,7 @@
     box-shadow:
       0 -1px oklch(0% 0 0 / 0.1) inset,
       0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,
-      0 1px oklch(0% 0 0 / 0.1);
+      0 1px color-mix(in oklab, currentColor, transparent 90%);
   }
 
   &:focus-visible {
