@@ -10,7 +10,7 @@
     "> 7%"
   ],
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.0-alpha.23",
+    "@tailwindcss/vite": "^4.0.0-alpha.25",
     "astro": "^4.11.3",
     "daisyui": "file:../../.."
   }

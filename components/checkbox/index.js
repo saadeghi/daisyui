@@ -1,11 +1,11 @@
 export default {
   ".checkbox": {
-    "@apply border-base-content/20 text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-[--radius-btn] border p-1": {},
+    "@apply border-base-content/20 text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-[var(--radius-btn)] border p-1": {},
     "boxShadow": "0 1px oklch(0% 0 0 / 0.1) inset",
-    "transition": "background-color 0.2s,\n\t\tbox-shadow 0.2s",
+    "transition": "background-color 0.2s,\n    box-shadow 0.2s",
     "&:before": {
       "@apply block size-full rotate-45 bg-current opacity-0 content-['']": {},
-      "transition": "clip-path 0.3s,\n\t\t\topacity 0.1s,\n\t\t\trotate 0.3s,\n\t\t\ttranslate 0.3s",
+      "transition": "clip-path 0.3s,\n      opacity 0.1s,\n      rotate 0.3s,\n      translate 0.3s",
       "transitionDelay": "0.1s",
       "clipPath": "polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%)",
       "boxShadow": "0px 3px 0 0px oklch(100% 0 0 / 0.1) inset"
@@ -13,8 +13,8 @@ export default {
     "&:focus-visible": {
       "@apply outline-2 outline-offset-2 outline-current": {}
     },
-    "&:checked,\n\t&[aria-checked=\"true\"]": {
-      "boxShadow": "0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,\n\t\t\t0 1px oklch(0% 0 0 / 0.1)",
+    "&:checked,\n  &[aria-checked=\"true\"]": {
+      "boxShadow": "0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,\n      0 1px oklch(0% 0 0 / 0.1)",
       "&:before": {
         "@apply opacity-100": {},
         "clipPath": "polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%)"
@@ -100,7 +100,7 @@ export default {
       "&:not(:indeterminate):before": {
         "clipPath": "polygon(10% 100%, 10% 70%, 40% 70%, 40% 70%, 70% 70%, 70% 100%)"
       },
-      "&:checked,\n\t\t&[aria-checked=\"true\"]": {
+      "&:checked,\n    &[aria-checked=\"true\"]": {
         "&:before": {
           "clipPath": "polygon(10% 100%, 10% 70%, 40% 70%, 40% 0%, 70% 0%, 70% 100%)"
         }

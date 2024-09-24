@@ -63,14 +63,14 @@
 		"alpha": "npm run release -- --alpha && npm publish --tag=alpha"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.8.1",
-		"@tailwindcss/cli": "^4.0.0-alpha.23",
+		"@biomejs/biome": "^1.9.2",
+		"@tailwindcss/cli": "^4.0.0-alpha.25",
 		"commit-and-tag-version": "12.4.1",
 		"postcss": "^8.4.45",
 		"postcss-js": "^4.0.1",
 		"postcss-prefixer": "^3.0.0",
 		"prettier": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.6",
-		"tailwindcss": "^4.0.0-alpha.23"
+		"tailwindcss": "^4.0.0-alpha.25"
 	}
 }

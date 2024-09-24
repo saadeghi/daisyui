@@ -1,12 +1,12 @@
 export default {
   ".btn": {
-    "@apply text-base-content outline-base-content inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[--radius-btn] px-4 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none": {},
+    "@apply text-base-content outline-base-content inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] px-4 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none": {},
     "transitionProperty": "color, background-color, border-color, opacity, box-shadow, transform",
     "backgroundColor": "var(--btn-color, var(--color-base-200))",
     "borderWidth": "var(--spacing-button-border)",
     "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 2%)",
     "borderBottomColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 4%)",
-    "boxShadow": "0 1px 0 0 oklch(100% 0 0/0.1) inset,\n\t\t0 1px 1px 0 oklch(0% 0 0/0.07)",
+    "boxShadow": "0 1px 0 0 oklch(100% 0 0/0.1) inset,\n    0 1px 1px 0 oklch(0% 0 0/0.07)",
     "@media (hover: hover)": {
       "&:hover": {
         "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)",
@@ -28,7 +28,7 @@ export default {
         "@apply animate-[button-pop_0s_ease-out]": {},
         "borderColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%)",
         "borderBottomColor": "color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%)",
-        "boxShadow": "0 1px 0 0 oklch(0% 0 0/0.07) inset,\n\t\t\t\t0 0 0 0 oklch(0% 0 0/0.1)"
+        "boxShadow": "0 1px 0 0 oklch(0% 0 0/0.07) inset,\n        0 0 0 0 oklch(0% 0 0/0.1)"
       },
       "@media (hover: hover)": {
         "&:hover": {
@@ -40,7 +40,7 @@ export default {
     "&:is(:disabled, [disabled], .btn-disabled)": {
       "@apply bg-neutral/20 text-base-content/20 [@media(hover:hover)]:bg-neutral/20 [@media(hover:hover)]:text-base-content/20 pointer-events-none border-transparent [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:border-transparent": {}
     },
-    "&:is(input[type=\"checkbox\"]),\n\t&:is(input[type=\"radio\"])": {
+    "&:is(input[type=\"checkbox\"]),\n  &:is(input[type=\"radio\"])": {
       "@apply w-auto appearance-none": {}
     }
   },

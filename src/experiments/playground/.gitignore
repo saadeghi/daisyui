@@ -2,6 +2,7 @@
 /output.css
 /*.html
 /dist
+/.astro
 
 /src/components/*
 !/src/components/Demo.astro
