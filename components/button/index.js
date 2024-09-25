@@ -1,12 +1,12 @@
 export default {
   ".btn": {
-    "@apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle h-12 px-4": {},
+    "@apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle h-10 px-4": {},
     "transitionProperty": "color, background-color, border-color, opacity, box-shadow, transform",
     "backgroundColor": "var(--btn-bg, var(--color-base-200))",
     "borderWidth": "var(--spacing-button-border)",
     "borderColor": "color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 2%)",
     "borderBottomColor": "color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 4%)",
-    "boxShadow": "0 1px 0 0 oklch(100% 0 0/0.1) inset,\n    0 1px 1px 0 oklch(0% 0 0/0.07)",
+    "boxShadow": "0 1px 0 0 color-mix(in oklch, white 3%, transparent) inset,\n    0 1px 1px 0 oklch(0% 0 0/0.07)",
     "&:hover": {
       "borderColor": "color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%)",
       "borderBottomColor": "color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%)",
@@ -125,11 +125,11 @@ export default {
     "fontSize": "var(--font-size-sm)"
   },
   ".btn-md": {
-    "@apply h-12 px-4": {},
+    "@apply h-10 px-4": {},
     "fontSize": "var(--font-size-sm)"
   },
   ".btn-lg": {
-    "@apply h-16 px-6": {},
+    "@apply h-14 px-6": {},
     "fontSize": "var(--font-size-lg)"
   },
   ".btn-square": {

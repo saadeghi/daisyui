@@ -1,6 +1,6 @@
 export default {
   ".input": {
-    "@apply bg-base-100 rounded-btn h-12 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose align-middle": {},
+    "@apply bg-base-100 rounded-btn h-10 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose align-middle": {},
     "input": {
       "@apply border-none bg-transparent": {},
       "&:focus": {
@@ -109,7 +109,7 @@ export default {
       }
     },
     "&.input-md": {
-      "@apply h-12 px-4 text-sm leading-loose": {},
+      "@apply h-10 px-4 text-sm leading-loose": {},
       "&[type=\"number\"]": {
         "&::-webkit-inner-spin-button": {
           "@apply -my-4 -me-4": {}
@@ -117,7 +117,7 @@ export default {
       }
     },
     "&.input-lg": {
-      "@apply h-16 px-6 text-lg leading-loose": {},
+      "@apply h-14 px-6 text-lg leading-loose": {},
       "&[type=\"number\"]": {
         "&::-webkit-inner-spin-button": {
           "@apply -my-6 -me-6": {}
