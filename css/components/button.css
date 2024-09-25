@@ -1,26 +1,24 @@
 .btn {
-  @apply text-base-content outline-base-content inline-flex h-12 min-h-[3rem] shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] px-4 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle;
+  @apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle h-12 px-4;
   transition-property: color, background-color, border-color, opacity, box-shadow, transform;
-  background-color: var(--btn-color, var(--color-base-200));
+  background-color: var(--btn-bg, var(--color-base-200));
   border-width: var(--spacing-button-border);
-  border-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 2%);
-  border-bottom-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 4%);
+  border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 2%);
+  border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 4%);
   box-shadow:
     0 1px 0 0 oklch(100% 0 0/0.1) inset,
     0 1px 1px 0 oklch(0% 0 0/0.07);
 
-  @media (hover: hover) {
-    &:hover {
-      border-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%);
-      border-bottom-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%);
-      background-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%);
-    }
+  &:hover {
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+    border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+    background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
   }
 
   &.btn-active {
-    border-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%);
-    border-bottom-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%);
-    background-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%);
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+    border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+    background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
   }
 
   &:focus-visible {
@@ -31,67 +29,57 @@
     &:focus {
       transform: scale(var(--btn-focus-scale, 0.98));
       @apply animate-[button-pop_0s_ease-out];
-      border-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 5%);
-      border-bottom-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%);
+      border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+      border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
       box-shadow:
         0 1px 0 0 oklch(0% 0 0/0.07) inset,
         0 0 0 0 oklch(0% 0 0/0.1);
     }
 
-    @media (hover: hover) {
-      &:hover {
-        transform: scale(var(--btn-focus-scale, 0.97));
-        @apply animate-[button-pop_0s_ease-out];
-      }
+    &:hover {
+      transform: scale(var(--btn-focus-scale, 0.97));
+      @apply animate-[button-pop_0s_ease-out];
     }
   }
 }
 
-.btn-square {
-  @apply size-12 p-0;
-}
-
-.btn-circle {
-  @apply size-12 rounded-full p-0;
-}
-
 .btn-primary {
-  --btn-color: var(--color-primary);
+  --btn-bg: var(--color-primary);
   @apply text-primary-content outline-primary;
 }
 
 .btn-secondary {
-  --btn-color: var(--color-secondary);
+  --btn-bg: var(--color-secondary);
   @apply text-secondary-content outline-secondary;
 }
 
 .btn-accent {
-  --btn-color: var(--color-accent);
+  --btn-bg: var(--color-accent);
   @apply text-accent-content outline-accent;
 }
 
 .btn-neutral {
-  --btn-color: var(--color-neutral);
+  --btn-bg: var(--color-neutral);
   @apply text-neutral-content outline-neutral;
 }
 
 .btn-info {
-  --btn-color: var(--color-info);
+  --btn-bg: var(--color-info);
   @apply text-info-content outline-info;
 }
 
 .btn-success {
-  --btn-color: var(--color-success);
+  --btn-bg: var(--color-success);
   @apply text-success-content outline-success;
 }
 
 .btn-warning {
-  --btn-color: var(--color-warning);
+  --btn-bg: var(--color-warning);
   @apply text-warning-content outline-warning;
 }
 
 .btn-error {
-  --btn-color: var(--color-error);
+  --btn-bg: var(--color-error);
   @apply text-error-content outline-error;
 }
 
@@ -123,50 +111,102 @@
 /* outline */
 .btn-outline {
   &:not(.btn-active):not(:hover) {
-    @apply bg-transparent text-[var(--btn-color)] shadow-none;
+    @apply bg-transparent text-[var(--btn-bg)] shadow-none;
   }
 
   &.btn-active {
-    border-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)) 90%, black);
-    background-color: color-mix(in oklab, var(--btn-color, var(--color-base-200)) 90%, black);
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)) 90%, black);
+    background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)) 90%, black);
   }
 }
 
 /* disabled */
 .btn {
   &:is(:disabled, [disabled], .btn-disabled) {
-    @apply bg-neutral/20 text-base-content/20 [@media(hover:hover)]:bg-neutral/20 [@media(hover:hover)]:text-base-content/20 pointer-events-none border-transparent [@media(hover:hover)]:pointer-events-none [@media(hover:hover)]:border-transparent;
+    @apply bg-neutral/20 text-base-content/20 pointer-events-none border-transparent;
+
+    &:hover {
+      @apply bg-neutral/20 text-base-content/20 pointer-events-none border-transparent;
+    }
   }
 }
 
 /* radio input and checkbox as button */
 .btn {
 
-  &:is(input[type="checkbox"]),
-  &:is(input[type="radio"]) {
+  &:is(input[type=checkbox]),
+  &:is(input[type=radio]) {
     @apply w-auto appearance-none;
-  }
-}
 
-.btn:is(input[type="checkbox"]):after,
-.btn:is(input[type="radio"]):after {
-  @apply content-[attr(aria-label)];
-}
+    &::after {
+      @apply content-[attr(aria-label)];
+    }
 
-.btn:is(input[type="checkbox"]:checked),
-.btn:is(input[type="radio"]:checked) {
-  @apply border-primary bg-primary text-primary-content;
+    &:checked {
+      @apply border-primary bg-primary text-primary-content;
 
-  @media (hover: hover) {
-    &:hover {
-      background-color: color-mix(in oklab, var(--color-primary) 90%, black);
-      border-color: color-mix(in oklab, var(--color-primary) 90%, black);
+      &:focus-visible {
+        @apply outline-primary;
+      }
+
+      &:hover {
+        background-color: color-mix(in oklab, var(--color-primary) 90%, black);
+        border-color: color-mix(in oklab, var(--color-primary) 90%, black);
+      }
     }
   }
+}
 
-  &:focus-visible {
-    @apply outline-primary;
+.btn-xs {
+  @apply h-6 px-2;
+  font-size: var(--font-size-xs);
+}
+
+.btn-sm {
+  @apply h-8 px-3;
+  font-size: var(--font-size-sm);
+}
+
+.btn-md {
+  @apply h-12 px-4;
+  font-size: var(--font-size-sm);
+}
+
+.btn-lg {
+  @apply h-16 px-6;
+  font-size: var(--font-size-lg);
+}
+
+.btn-square {
+  @apply px-0 size-12;
+
+  &.btn-xs {
+    @apply size-6;
   }
+
+  &.btn-sm {
+    @apply size-8;
+  }
+
+  &.btn-md {
+    @apply size-12;
+  }
+
+  &.btn-lg {
+    @apply size-16;
+  }
+}
+
+.btn-circle {
+  @apply aspect-square rounded-full px-0;
+}
+
+.btn-wide {
+  @apply w-64;
+}
+
+.btn-block {
+  @apply w-full;
 }
 
 @keyframes button-pop {
@@ -180,74 +220,5 @@
 
   100% {
     transform: scale(1);
-  }
-}
-
-/* responsive */
-.btn-xs {
-  @apply h-6 min-h-[1.5rem] px-2;
-  font-size: 0.75rem;
-}
-
-.btn-sm {
-  @apply h-8 min-h-[2rem] px-3;
-  font-size: 0.875rem;
-}
-
-.btn-md {
-  @apply h-12 min-h-[3rem] px-4;
-  font-size: 0.875rem;
-}
-
-.btn-lg {
-  @apply h-16 min-h-[4rem] px-6;
-  font-size: 1.125rem;
-}
-
-.btn-wide {
-  @apply w-64;
-}
-
-.btn-block {
-  @apply w-full;
-}
-
-.btn-square {
-  @apply px-0;
-
-  &:where(.btn-xs) {
-    @apply size-6;
-  }
-
-  &:where(.btn-sm) {
-    @apply size-8;
-  }
-
-  &:where(.btn-md) {
-    @apply size-12;
-  }
-
-  &:where(.btn-lg) {
-    @apply size-16;
-  }
-}
-
-.btn-circle {
-  @apply rounded-full px-0;
-
-  &:where(.btn-xs) {
-    @apply size-6;
-  }
-
-  &:where(.btn-sm) {
-    @apply size-8;
-  }
-
-  &:where(.btn-md) {
-    @apply size-12;
-  }
-
-  &:where(.btn-lg) {
-    @apply size-16;
   }
 }

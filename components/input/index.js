@@ -1,6 +1,6 @@
 export default {
   ".input": {
-    "@apply bg-base-100 rounded-btn h-12 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose": {},
+    "@apply bg-base-100 rounded-btn h-12 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose align-middle": {},
     "input": {
       "@apply border-none bg-transparent": {},
       "&:focus": {

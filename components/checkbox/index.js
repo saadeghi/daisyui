@@ -1,6 +1,6 @@
 export default {
   ".checkbox": {
-    "@apply border-base-content/20 text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-[var(--radius-btn)] border p-1": {},
+    "@apply border-base-content/20 text-base-content relative shrink-0 size-6 cursor-pointer appearance-none rounded-[var(--radius-btn)] border p-1 align-middle": {},
     "boxShadow": "0 1px oklch(0% 0 0 / 0.1) inset",
     "transition": "background-color 0.2s,\n    box-shadow 0.2s",
     "&:before": {
@@ -94,32 +94,15 @@ export default {
     "@apply cursor-not-allowed opacity-20": {}
   },
   ".checkbox-xs": {
-    "@apply p-[.1875rem]": {},
-    "&[type=\"checkbox\"]": {
-      "@apply size-4": {},
-      "&:not(:indeterminate):before": {
-        "clipPath": "polygon(10% 100%, 10% 70%, 40% 70%, 40% 70%, 70% 70%, 70% 100%)"
-      },
-      "&:checked,\n    &[aria-checked=\"true\"]": {
-        "&:before": {
-          "clipPath": "polygon(10% 100%, 10% 70%, 40% 70%, 40% 0%, 70% 0%, 70% 100%)"
-        }
-      }
-    }
+    "@apply size-4 p-0.5": {}
   },
   ".checkbox-sm": {
-    "&[type=\"checkbox\"]": {
-      "@apply size-5": {}
-    }
+    "@apply size-5": {}
   },
   ".checkbox-md": {
-    "&[type=\"checkbox\"]": {
-      "@apply size-6": {}
-    }
+    "@apply size-6": {}
   },
   ".checkbox-lg": {
-    "&[type=\"checkbox\"]": {
-      "@apply size-8": {}
-    }
+    "@apply size-8": {}
   }
 };

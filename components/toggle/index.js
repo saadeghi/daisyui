@@ -1,6 +1,6 @@
 export default {
   ".toggle": {
-    "@apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none rounded-[var(--radius-badge)] border border-current p-[.1875rem]": {},
+    "@apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none rounded-[var(--radius-badge)] border border-current p-[.1875rem] align-middle": {},
     "boxShadow": "0 1px color-mix(in oklab, currentColor, transparent 90%) inset",
     "transition": "color .3s",
     "&:before": {

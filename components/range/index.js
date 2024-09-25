@@ -3,7 +3,7 @@ export default {
     "appearance": "none",
     "WebkitAppearance": "none",
     "--range-shdw": "currentColor",
-    "@apply rounded-box h-6 w-full cursor-pointer overflow-hidden border-none bg-transparent": {},
+    "@apply rounded-box h-6 w-full cursor-pointer overflow-hidden border-none bg-transparent align-middle": {},
     "&:focus": {
       "outline": "none"
     },
