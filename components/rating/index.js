@@ -1,6 +1,6 @@
 export default {
   ".rating": {
-    "@apply relative inline-flex": {},
+    "@apply relative inline-flex align-middle": {},
     "& input": {
       "@apply appearance-none border-none": {},
       "WebkitAppearance": "none"

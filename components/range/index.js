@@ -22,7 +22,11 @@ export default {
       "transform": "translateY(-50%)",
       "--filler-size": "100rem",
       "--filler-offset": "0.6rem",
-      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n      var(--focus-shadow, 0 0),\n      calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)"
+      "--track-shdw": "calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)",
+      "boxShadow": "0 0 0 3px var(--range-shdw) inset,\n      var(--focus-shadow, 0 0),\n      var(--track-shdw)"
+    },
+    "[dir=rtl] &::-webkit-slider-thumb": {
+      "--track-shdw": "calc(var(--filler-size) * 1 + var(--filler-offset)) 0 0 var(--filler-size)"
     },
     "&::-moz-range-track": {
       "@apply rounded-box bg-base-content/10 h-2 w-full": {}

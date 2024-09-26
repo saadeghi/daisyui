@@ -25,10 +25,15 @@
     transform: translateY(-50%);
     --filler-size: 100rem;
     --filler-offset: 0.6rem;
+    --track-shdw: calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
     box-shadow:
       0 0 0 3px var(--range-shdw) inset,
       var(--focus-shadow, 0 0),
-      calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+      var(--track-shdw);
+  }
+
+  [dir=rtl] &::-webkit-slider-thumb {
+    --track-shdw: calc(var(--filler-size) * 1 + var(--filler-offset)) 0 0 var(--filler-size);
   }
 
   &::-moz-range-track {
