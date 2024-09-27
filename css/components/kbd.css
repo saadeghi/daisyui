@@ -1,0 +1,29 @@
+.kbd {
+  @apply inline-flex items-center justify-center border-base-content/20 bg-base-200 rounded-btn border px-2 border-b-2 align-middle;
+  min-height: 2.2em;
+  min-width: 2.2em;
+}
+
+.kbd-xs {
+  @apply px-1 text-xs;
+  min-height: 1.2em;
+  min-width: 1.2em;
+}
+
+.kbd-sm {
+  @apply px-1 text-sm;
+  min-height: 1.6em;
+  min-width: 1.6em;
+}
+
+.kbd-md {
+  @apply px-2 text-base;
+  min-height: 2.2em;
+  min-width: 2.2em;
+}
+
+.kbd-lg {
+  @apply px-4 text-lg;
+  min-height: 2.5em;
+  min-width: 2.5em;
+}

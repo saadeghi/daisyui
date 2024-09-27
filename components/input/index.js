@@ -10,7 +10,7 @@ export default {
     "&:focus,\n  &:focus-within": {
       "@apply border-base-content/20 outline-base-content/20 outline outline-2 outline-offset-2": {}
     },
-    "&:has(> input[disabled]),\n  &:is(:disabled, [disabled], .btn-disabled)": {
+    "&:has(> input[disabled]),\n  &:is(:disabled, [disabled])": {
       "@apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed": {}
     },
     "&:has(> input[disabled])>input[disabled]": {
