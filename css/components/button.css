@@ -5,20 +5,19 @@
   border-width: var(--spacing-button-border);
   border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 2%);
   border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 4%);
-  box-shadow:
-    0 1px 0 0 color-mix(in oklch, white 3%, transparent) inset,
-    0 1px 1px 0 oklch(0% 0 0/0.07);
+  box-shadow: 0 1px 1px 0 oklch(0% 0 0/0.07);
 
   &:hover {
-    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
-    border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
     background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+    border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 9%);
   }
 
   &.btn-active {
-    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
-    border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
     background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+    border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 9%);
+    box-shadow: 0 0 0 0 oklch(0% 0 0/0.07);
   }
 
   &:focus-visible {
@@ -29,11 +28,10 @@
     &:focus {
       transform: scale(var(--btn-focus-scale, 0.98));
       @apply animate-[button-pop_0s_ease-out];
-      border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
-      border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
-      box-shadow:
-        0 1px 0 0 oklch(0% 0 0/0.07) inset,
-        0 0 0 0 oklch(0% 0 0/0.1);
+      background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+      border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+      border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 9%);
+      box-shadow: 0 0 0 0 oklch(0% 0 0/0.07);
     }
 
     &:hover {

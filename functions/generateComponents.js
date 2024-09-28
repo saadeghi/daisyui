@@ -18,30 +18,26 @@ export async function generateComponents() {
 
     const compiledContent = await (await compile(`
       @layer theme{${defaultTheme}${theme}}
-      @layer components{${component}}
-      @layer endcomponents
+      @layer wrapperStart{${component}}
+      @layer wrapperEnd
     `)).build([]);
 
-    const startIndex = compiledContent.indexOf('@layer components');
-    const endIndex = compiledContent.indexOf('@layer endcomponents');
+    const startIndex = compiledContent.indexOf('@layer wrapperStart');
+    const endIndex = compiledContent.indexOf('@layer wrapperEnd');
 
     if (startIndex !== -1 && endIndex !== -1) {
-      // Find the opening curly brace after '@layer components'
+      // Find the opening curly brace after '@layer wrapperStart'
       const openingBraceIndex = compiledContent.indexOf('{', startIndex);
 
-      // Find the last closing curly brace before '@layer endcomponents'
+      // Find the last closing curly brace before '@layer wrapperEnd'
       const closingBraceIndex = compiledContent.lastIndexOf('}', endIndex);
 
       if (openingBraceIndex !== -1 && closingBraceIndex !== -1 && openingBraceIndex < closingBraceIndex) {
         // Extract only the content inside the curly braces
         const componentsContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
         await fs.writeFile(path.join(import.meta.dir, '../components', `../components/${file}.css`), componentsContent);
-        console.log(`Created components/${file}`);
-      } else {
-        console.warn(`Could not find proper opening and closing braces for components in ${file}.`);
+        console.log(`Created components/${file}.css`);
       }
-    } else {
-      console.warn(`Could not find @layer components or @layer endcomponents in the compiled content for ${file}.`);
     }
 
   }

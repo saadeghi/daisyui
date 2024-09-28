@@ -37,7 +37,7 @@ function customWatcher(dir) {
       server.watcher.on('change', (file) => {
         if (cssFiles.includes(file)) {
           console.log(`File changed: ${file}`);
-          exec('cd ../../../ && node build.js', (err, stdout, stderr) => {
+          exec('cd ../../../ && bun build.js', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error executing command: ${err}`);
               return;
@@ -51,7 +51,7 @@ function customWatcher(dir) {
       server.watcher.on('unlink', (file) => {
         if (cssFiles.includes(file)) {
           console.log(`File unlinked: ${file}`);
-          exec('cd ../../../ && node convert.js', (err, stdout, stderr) => {
+          exec('cd ../../../ && bun build.js', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error executing command: ${err}`);
               return;
@@ -68,7 +68,7 @@ function customWatcher(dir) {
       server.watcher.on('add', (file) => {
         if (cssFiles.includes(file)) {
           console.log(`File added: ${file}`);
-          exec('cd ../../../ && node convert.js', (err, stdout, stderr) => {
+          exec('cd ../../../ && bun build.js', (err, stdout, stderr) => {
             if (err) {
               console.error(`Error executing command: ${err}`);
               return;
