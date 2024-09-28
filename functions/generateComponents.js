@@ -1,18 +1,20 @@
-import { compile } from './node_modules/tailwindcss/dist/lib.js'
+import { compile } from '../node_modules/tailwindcss/dist/lib.js'
 import fs from 'fs/promises';
 import path from 'path';
+import { getFileNames } from './getFileNames';
 
-const main = async () => {
+export async function generateComponents() {
   const [defaultTheme, theme] = await Promise.all([
-    fs.readFile(path.join(import.meta.dir, '/node_modules/tailwindcss/theme.css'), 'utf-8'),
-    fs.readFile(path.join(import.meta.dir, './themes/index.css'), 'utf-8'),
+    fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
+    fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),
   ]);
 
-  const componentsDir = path.join(import.meta.dir, './css/components');
-  const files = await fs.readdir(componentsDir);
+  const componentsDir = path.join(import.meta.dir, '../css/components');
+  // const files = await fs.readdir(componentsDir);
+  const files = await getFileNames(componentsDir, '.css', false);
 
   for (const file of files) {
-    const component = await fs.readFile(path.join(componentsDir, file), 'utf-8');
+    const component = await fs.readFile(path.join(componentsDir, `../components/${file}.css`), 'utf-8');
 
     const compiledContent = await (await compile(`
       @layer theme{${defaultTheme}${theme}}
@@ -33,7 +35,8 @@ const main = async () => {
       if (openingBraceIndex !== -1 && closingBraceIndex !== -1 && openingBraceIndex < closingBraceIndex) {
         // Extract only the content inside the curly braces
         const componentsContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
-        await fs.writeFile(path.join(import.meta.dir, './components', file), componentsContent);
+        await fs.writeFile(path.join(import.meta.dir, '../components', `../components/${file}.css`), componentsContent);
+        console.log(`Created components/${file}`);
       } else {
         console.warn(`Could not find proper opening and closing braces for components in ${file}.`);
       }
@@ -43,5 +46,3 @@ const main = async () => {
 
   }
 };
-
-main();
