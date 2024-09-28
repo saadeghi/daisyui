@@ -1,0 +1,293 @@
+.btn {
+    display: inline-flex;
+    height: var(--spacing-10, 2.5rem);
+    flex-shrink: 0;
+    cursor: pointer;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2, 0.5rem);
+    border-radius: var(--radius-btn);
+    padding-left: var(--spacing-4, 1rem);
+    padding-right: var(--spacing-4, 1rem);
+    text-align: center;
+    vertical-align: middle;
+    font-size: var(--font-size-sm, 0.875rem);
+    line-height: var(--line-height-none, 1);
+    --tw-font-weight: 600;
+    font-weight: 600;
+    color: var(--color-base-content, oklch(27.8078% 0.029596 256.84795));
+    text-decoration-line: none;
+    outline-offset: 2px;
+    outline-color: var(--color-base-content, oklch(27.8078% 0.029596 256.84795));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+    --tw-ease: var(--transition-timing-function-out, cubic-bezier(0, 0, 0.2, 1));
+    transition-timing-function: var(--transition-timing-function-out, cubic-bezier(0, 0, 0.2, 1));
+    -webkit-user-select: none;
+    user-select: none;
+    transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+    background-color: var(--btn-bg, var(--color-base-200));
+    border-width: var(--spacing-button-border);
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 2%);
+    border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 4%);
+    box-shadow: 0 1px 0 0 color-mix(in oklch, white 3%, transparent) inset, 0 1px 1px 0 oklch(0% 0 0/0.07);
+    &:hover {
+      border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+      border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+      background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+    }
+    &.btn-active {
+      border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+      border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+      background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+    }
+    &:focus-visible {
+      outline-style: var(--tw-outline-style);
+      outline-width: 1px;
+      outline-style: var(--tw-outline-style);
+      outline-width: 2px;
+    }
+    &:active {
+      &:focus {
+        transform: scale(var(--btn-focus-scale, 0.98));
+        animation: button-pop 0s ease-out;
+        border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+        border-bottom-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+        box-shadow: 0 1px 0 0 oklch(0% 0 0/0.07) inset, 0 0 0 0 oklch(0% 0 0/0.1);
+      }
+      &:hover {
+        transform: scale(var(--btn-focus-scale, 0.97));
+        animation: button-pop 0s ease-out;
+      }
+    }
+  }
+  .btn-primary {
+    --btn-bg: var(--color-primary);
+    color: var(--color-primary-content, oklch(89.824% 0.06192 275.75));
+    outline-color: var(--color-primary, oklch(49.12% 0.3096 275.75));
+  }
+  .btn-secondary {
+    --btn-bg: var(--color-secondary);
+    color: var(--color-secondary-content, oklch(98.71% 0.0106 342.55));
+    outline-color: var(--color-secondary, oklch(69.71% 0.329 342.55));
+  }
+  .btn-accent {
+    --btn-bg: var(--color-accent);
+    color: var(--color-accent-content, oklch(15.352% 0.0368 183.61));
+    outline-color: var(--color-accent, oklch(76.76% 0.184 183.61));
+  }
+  .btn-neutral {
+    --btn-bg: var(--color-neutral);
+    color: var(--color-neutral-content, oklch(89.4994% 0.011585 252.096176));
+    outline-color: var(--color-neutral, oklch(32.1785% 0.02476 255.701624));
+  }
+  .btn-info {
+    --btn-bg: var(--color-info);
+    color: var(--color-info-content, oklch(0% 0 0));
+    outline-color: var(--color-info, oklch(72.06% 0.191 231.6));
+  }
+  .btn-success {
+    --btn-bg: var(--color-success);
+    color: var(--color-success-content, oklch(0% 0 0));
+    outline-color: var(--color-success, oklch(64.8% 0.15 160));
+  }
+  .btn-warning {
+    --btn-bg: var(--color-warning);
+    color: var(--color-warning-content, oklch(0% 0 0));
+    outline-color: var(--color-warning, oklch(84.71% 0.199 83.87));
+  }
+  .btn-error {
+    --btn-bg: var(--color-error);
+    color: var(--color-error-content, oklch(0% 0 0));
+    outline-color: var(--color-error, oklch(71.76% 0.221 22.18));
+  }
+  .btn.glass {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    outline-color: currentColor;
+    &:hover {
+      @media (hover: hover) {
+        --glass-border-opacity: 15%;
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        --glass-opacity: 25%;
+      }
+    }
+    &.btn-active {
+      --glass-border-opacity: 15%;
+      --glass-opacity: 25%;
+    }
+  }
+  .btn-ghost {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: transparent;
+    background-color: transparent;
+    color: currentColor;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    outline-color: currentColor;
+    &:hover {
+      @media (hover: hover) {
+        border-color: transparent;
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, var(--color-base-content, oklch(27.8078% 0.029596 256.84795)) 20%, transparent);
+      }
+    }
+    &.btn-active {
+      border-color: transparent;
+      background-color: color-mix(in srgb, var(--color-base-content, oklch(27.8078% 0.029596 256.84795)) 20%, transparent);
+    }
+  }
+  .btn-link {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--color-primary, oklch(49.12% 0.3096 275.75));
+    text-decoration-line: underline;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    outline-color: currentColor;
+    &:hover {
+      @media (hover: hover) {
+        border-color: transparent;
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        background-color: transparent;
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
+    &.btn-active {
+      border-color: transparent;
+      background-color: transparent;
+      text-decoration-line: underline;
+    }
+  }
+  .btn-outline {
+    &:not(.btn-active):not(:hover) {
+      background-color: transparent;
+      color: var(--btn-bg);
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+    &.btn-active {
+      border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)) 90%, black);
+      background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)) 90%, black);
+    }
+  }
+  .btn {
+    &:is(:disabled, [disabled], .btn-disabled) {
+      pointer-events: none;
+      border-color: transparent;
+      background-color: color-mix(in srgb, var(--color-neutral, oklch(32.1785% 0.02476 255.701624)) 20%, transparent);
+      color: color-mix(in srgb, var(--color-base-content, oklch(27.8078% 0.029596 256.84795)) 20%, transparent);
+      &:hover {
+        pointer-events: none;
+        border-color: transparent;
+        background-color: color-mix(in srgb, var(--color-neutral, oklch(32.1785% 0.02476 255.701624)) 20%, transparent);
+        color: color-mix(in srgb, var(--color-base-content, oklch(27.8078% 0.029596 256.84795)) 20%, transparent);
+      }
+    }
+  }
+  .btn {
+    &:is(input[type=checkbox]), &:is(input[type=radio]) {
+      width: auto;
+      appearance: none;
+      &::after {
+        --tw-content: attr(aria-label);
+        content: var(--tw-content);
+      }
+      &:checked {
+        border-color: var(--color-primary, oklch(49.12% 0.3096 275.75));
+        background-color: var(--color-primary, oklch(49.12% 0.3096 275.75));
+        color: var(--color-primary-content, oklch(89.824% 0.06192 275.75));
+        &:focus-visible {
+          outline-color: var(--color-primary, oklch(49.12% 0.3096 275.75));
+        }
+        &:hover {
+          background-color: color-mix(in oklab, var(--color-primary) 90%, black);
+          border-color: color-mix(in oklab, var(--color-primary) 90%, black);
+        }
+      }
+    }
+  }
+  .btn-xs {
+    height: var(--spacing-6, 1.5rem);
+    padding-left: var(--spacing-2, 0.5rem);
+    padding-right: var(--spacing-2, 0.5rem);
+    font-size: var(--font-size-xs);
+  }
+  .btn-sm {
+    height: var(--spacing-8, 2rem);
+    padding-left: var(--spacing-3, 0.75rem);
+    padding-right: var(--spacing-3, 0.75rem);
+    font-size: var(--font-size-sm);
+  }
+  .btn-md {
+    height: var(--spacing-10, 2.5rem);
+    padding-left: var(--spacing-4, 1rem);
+    padding-right: var(--spacing-4, 1rem);
+    font-size: var(--font-size-sm);
+  }
+  .btn-lg {
+    height: var(--spacing-14, 3.5rem);
+    padding-left: var(--spacing-6, 1.5rem);
+    padding-right: var(--spacing-6, 1.5rem);
+    font-size: var(--font-size-lg);
+  }
+  .btn-square {
+    width: var(--spacing-12, 3rem);
+    height: var(--spacing-12, 3rem);
+    padding-left: var(--spacing-0, 0px);
+    padding-right: var(--spacing-0, 0px);
+    &.btn-xs {
+      width: var(--spacing-6, 1.5rem);
+      height: var(--spacing-6, 1.5rem);
+    }
+    &.btn-sm {
+      width: var(--spacing-8, 2rem);
+      height: var(--spacing-8, 2rem);
+    }
+    &.btn-md {
+      width: var(--spacing-12, 3rem);
+      height: var(--spacing-12, 3rem);
+    }
+    &.btn-lg {
+      width: var(--spacing-16, 4rem);
+      height: var(--spacing-16, 4rem);
+    }
+  }
+  .btn-circle {
+    aspect-ratio: 1 / 1;
+    border-radius: calc(infinity * 1px);
+    padding-left: var(--spacing-0, 0px);
+    padding-right: var(--spacing-0, 0px);
+  }
+  .btn-wide {
+    width: var(--spacing-64, 16rem);
+  }
+  .btn-block {
+    width: 100%;
+  }
+  @keyframes button-pop {
+    0% {
+      transform: scale(var(--btn-focus-scale, 0.98));
+    }
+    40% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,49 @@
+.kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-btn, 0.5rem);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+    border-color: color-mix(in srgb, var(--color-base-content, oklch(27.8078% 0.029596 256.84795)) 20%, transparent);
+    background-color: var(--color-base-200, oklch(96.1151% 0 0));
+    padding-left: var(--spacing-2, 0.5rem);
+    padding-right: var(--spacing-2, 0.5rem);
+    vertical-align: middle;
+    min-height: 2.2em;
+    min-width: 2.2em;
+  }
+  .kbd-xs {
+    padding-left: var(--spacing-1, 0.25rem);
+    padding-right: var(--spacing-1, 0.25rem);
+    font-size: var(--font-size-xs, 0.75rem);
+    line-height: var(--tw-leading, var(--font-size-xs--line-height, 1rem));
+    min-height: 1.2em;
+    min-width: 1.2em;
+  }
+  .kbd-sm {
+    padding-left: var(--spacing-1, 0.25rem);
+    padding-right: var(--spacing-1, 0.25rem);
+    font-size: var(--font-size-sm, 0.875rem);
+    line-height: var(--tw-leading, var(--font-size-sm--line-height, 1.25rem));
+    min-height: 1.6em;
+    min-width: 1.6em;
+  }
+  .kbd-md {
+    padding-left: var(--spacing-2, 0.5rem);
+    padding-right: var(--spacing-2, 0.5rem);
+    font-size: var(--font-size-base, 1rem);
+    line-height: var(--tw-leading, var(--font-size-base--line-height, 1.5rem));
+    min-height: 2.2em;
+    min-width: 2.2em;
+  }
+  .kbd-lg {
+    padding-left: var(--spacing-4, 1rem);
+    padding-right: var(--spacing-4, 1rem);
+    font-size: var(--font-size-lg, 1.125rem);
+    line-height: var(--tw-leading, var(--font-size-lg--line-height, 1.75rem));
+    min-height: 2.5em;
+    min-width: 2.5em;
+  }

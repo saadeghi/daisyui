@@ -1,0 +1,143 @@
+.toggle {
+    display: inline-flex;
+    height: var(--spacing-6, 1.5rem);
+    width: var(--spacing-12, 3rem);
+    flex-shrink: 0;
+    cursor: pointer;
+    appearance: none;
+    border-radius: var(--radius-badge);
+    border-radius: var(--radius-badge, 1.9rem);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: currentColor;
+    padding: .1875rem;
+    vertical-align: middle;
+    color: color-mix(in srgb, var(--color-base-content, oklch(27.8078% 0.029596 256.84795)) 50%, transparent);
+    box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
+    transition: color .3s;
+    &:before {
+      display: block;
+      height: 100%;
+      flex-grow: 0;
+      content: "";
+      transition: flex-grow 0.2s;
+    }
+    &:after {
+      position: relative;
+      inset-inline-start: var(--spacing-0, 0px);
+      display: block;
+      aspect-ratio: 1 / 1;
+      height: 100%;
+      --tw-translate-x: var(--spacing-0, 0px);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+      border-radius: calc(var(--radius-badge) - 3px);
+      background-color: currentColor;
+      content: "";
+      transition: background-color 0.1s, translate 0.2s, inset-inline-start 0.2s;
+      box-shadow: 0 -1px oklch(0% 0 0 / 0.1) inset, 0 8px 0 -4px oklch(100% 0 0 / 0.1) inset, 0 1px color-mix(in oklab, currentColor, transparent 90%);
+    }
+    &:focus-visible {
+      outline-style: var(--tw-outline-style);
+      outline-width: 1px;
+      outline-style: var(--tw-outline-style);
+      outline-width: 2px;
+      outline-offset: 2px;
+      outline-color: currentColor;
+    }
+    &:checked, &[aria-checked="true"] {
+      background-color: var(--color-base-100, oklch(100% 0 0));
+      color: var(--color-base-content, oklch(27.8078% 0.029596 256.84795));
+      &:before {
+        flex-grow: 1;
+      }
+      &:after {
+        background-color: currentColor;
+        @starting-style {
+          opacity: 0;
+        }
+      }
+    }
+    &:indeterminate {
+      &:before {
+        flex-grow: 0;
+      }
+      &:after {
+        inset-inline-start: calc(1/2 * 100%);
+        --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 30%;
+      &:after {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+        border-color: currentColor;
+        background-color: transparent;
+      }
+    }
+  }
+  .toggle-primary {
+    &:checked, &[aria-checked="true"] {
+      color: var(--color-primary, oklch(49.12% 0.3096 275.75));
+    }
+  }
+  .toggle-secondary {
+    &:checked, &[aria-checked="true"] {
+      color: var(--color-secondary, oklch(69.71% 0.329 342.55));
+    }
+  }
+  .toggle-accent {
+    &:checked, &[aria-checked="true"] {
+      color: var(--color-accent, oklch(76.76% 0.184 183.61));
+    }
+  }
+  .toggle-success {
+    &:checked, &[aria-checked="true"] {
+      color: var(--color-success, oklch(64.8% 0.15 160));
+    }
+  }
+  .toggle-warning {
+    &:checked, &[aria-checked="true"] {
+      color: var(--color-warning, oklch(84.71% 0.199 83.87));
+    }
+  }
+  .toggle-info {
+    &:checked, &[aria-checked="true"] {
+      color: var(--color-info, oklch(72.06% 0.191 231.6));
+    }
+  }
+  .toggle-error {
+    &:checked, &[aria-checked="true"] {
+      color: var(--color-error, oklch(71.76% 0.221 22.18));
+    }
+  }
+  .toggle-xs {
+    &:is([type="checkbox"]) {
+      height: var(--spacing-4, 1rem);
+      width: var(--spacing-6, 1.5rem);
+      padding: .0625rem;
+    }
+  }
+  .toggle-sm {
+    &:is([type="checkbox"]) {
+      height: var(--spacing-5, 1.25rem);
+      width: var(--spacing-8, 2rem);
+      padding: .125rem;
+    }
+  }
+  .toggle-md {
+    &:is([type="checkbox"]) {
+      height: var(--spacing-6, 1.5rem);
+      width: var(--spacing-12, 3rem);
+      padding: .1875rem;
+    }
+  }
+  .toggle-lg {
+    &:is([type="checkbox"]) {
+      height: var(--spacing-8, 2rem);
+      width: var(--spacing-16, 4rem);
+      padding: .25rem;
+    }
+  }

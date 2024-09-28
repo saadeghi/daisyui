@@ -55,7 +55,7 @@
 		"init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
 		"format": "npx prettier 'css/**/*' 'functions/**/*' '*.js' 'themes/**/*' '*.css' '.prettierrc' --write",
 		"lint": "biome lint . --write",
-		"build": "node build.js",
+		"build": "bun build.js && bun components.js",
 		"dev": "cd src/docs && npm run dev",
 		"playground": "cd src/experiments/playground && npm run dev",
 		"release": "node src/release",

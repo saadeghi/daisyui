@@ -1,0 +1,109 @@
+.badge {
+    display: inline-flex;
+    height: var(--spacing-5, 1.25rem);
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-badge, 1.9rem);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    font-size: var(--font-size-sm, 0.875rem);
+    line-height: var(--tw-leading, var(--font-size-sm--line-height, 1.25rem));
+    --tw-leading: var(--line-height-5, 1.25rem);
+    line-height: var(--line-height-5, 1.25rem);
+    color: var(--color-base-content, oklch(27.8078% 0.029596 256.84795));
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(0.4, 0, 0.2, 1)));
+    transition-duration: var(--tw-duration, var(--default-transition-duration, 150ms));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+    --tw-ease: var(--transition-timing-function-out, cubic-bezier(0, 0, 0.2, 1));
+    transition-timing-function: var(--transition-timing-function-out, cubic-bezier(0, 0, 0.2, 1));
+    width: fit-content;
+    padding-left: 0.563rem;
+    padding-right: 0.563rem;
+    background: var(--badge-color, var(--color-base-100));
+    border-color: var(--badge-color, var(--color-base-200));
+    &.badge-outline {
+      border-color: color-mix(in srgb, currentColor 50%, transparent);
+      background-color: transparent;
+      color: var(--badge-color, var(--color-base-content));
+    }
+  }
+  .badge-faded {
+    color: color-mix(in xyz, var(--badge-color) 80%, var(--color-base-content));
+    background: color-mix(in xyz, var(--badge-color) 10%, var(--color-base-100));
+    border-color: color-mix(in xyz, var(--badge-color) 7%, transparent);
+  }
+  .badge-primary {
+    --badge-color: var(--color-primary);
+    color: var(--color-primary-content, oklch(89.824% 0.06192 275.75));
+  }
+  .badge-secondary {
+    --badge-color: var(--color-secondary);
+    color: var(--color-secondary-content, oklch(98.71% 0.0106 342.55));
+  }
+  .badge-accent {
+    --badge-color: var(--color-accent);
+    color: var(--color-accent-content, oklch(15.352% 0.0368 183.61));
+  }
+  .badge-neutral {
+    --badge-color: var(--color-neutral);
+    color: var(--color-neutral-content, oklch(89.4994% 0.011585 252.096176));
+  }
+  .badge-info {
+    --badge-color: var(--color-info);
+    color: var(--color-info-content, oklch(0% 0 0));
+  }
+  .badge-success {
+    --badge-color: var(--color-success);
+    color: var(--color-success-content, oklch(0% 0 0));
+  }
+  .badge-warning {
+    --badge-color: var(--color-warning);
+    color: var(--color-warning-content, oklch(0% 0 0));
+  }
+  .badge-error {
+    --badge-color: var(--color-error);
+    color: var(--color-error-content, oklch(0% 0 0));
+  }
+  .badge-ghost {
+    border-color: var(--color-base-200, oklch(96.1151% 0 0));
+    background-color: var(--color-base-200, oklch(96.1151% 0 0));
+    color: var(--color-base-content, oklch(27.8078% 0.029596 256.84795));
+  }
+  .badge-xs {
+    height: var(--spacing-3, 0.75rem);
+    font-size: var(--font-size-xs, 0.75rem);
+    line-height: var(--tw-leading, var(--font-size-xs--line-height, 1rem));
+    --tw-leading: var(--line-height-3, 0.75rem);
+    line-height: var(--line-height-3, 0.75rem);
+    padding-left: 0.313rem;
+    padding-right: 0.313rem;
+  }
+  .badge-sm {
+    height: var(--spacing-4, 1rem);
+    font-size: var(--font-size-xs, 0.75rem);
+    line-height: var(--tw-leading, var(--font-size-xs--line-height, 1rem));
+    --tw-leading: var(--line-height-4, 1rem);
+    line-height: var(--line-height-4, 1rem);
+    padding-left: 0.438rem;
+    padding-right: 0.438rem;
+  }
+  .badge-md {
+    height: var(--spacing-5, 1.25rem);
+    font-size: var(--font-size-sm, 0.875rem);
+    line-height: var(--tw-leading, var(--font-size-sm--line-height, 1.25rem));
+    --tw-leading: var(--line-height-5, 1.25rem);
+    line-height: var(--line-height-5, 1.25rem);
+    padding-left: 0.563rem;
+    padding-right: 0.563rem;
+  }
+  .badge-lg {
+    height: var(--spacing-6, 1.5rem);
+    font-size: var(--font-size-base, 1rem);
+    line-height: var(--tw-leading, var(--font-size-base--line-height, 1.5rem));
+    --tw-leading: var(--line-height-6, 1.5rem);
+    line-height: var(--line-height-6, 1.5rem);
+    padding-left: 0.688rem;
+    padding-right: 0.688rem;
+  }

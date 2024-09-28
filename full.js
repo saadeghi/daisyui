@@ -17,13 +17,17 @@ const readFiles = async (directory) => {
 };
 
 const main = async () => {
-  const [defaultTheme, themeContents, componentContents] = await Promise.all([
+  const [defaultTheme, themes, components] = await Promise.all([
     fs.readFile(path.join(import.meta.dir, '/node_modules/tailwindcss/theme.css'), 'utf-8'),
     readFiles(path.join(import.meta.dir, '/themes')),
     readFiles(path.join(import.meta.dir, '/css/components'))
   ]);
 
-  const compiledContent = await (await compile(defaultTheme + themeContents.join('') + componentContents.join(''))).build([]);
+  const compiledContent = await (await compile(`
+    @layer theme{${defaultTheme}${themes.join('')}}
+    @layer components{${components.join('')}}
+    @layer utilities
+  `)).build([]);
   await fs.writeFile(path.join(import.meta.dir, './css/full.css'), compiledContent);
 };
 
