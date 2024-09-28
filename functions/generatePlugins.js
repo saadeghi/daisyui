@@ -1,8 +1,8 @@
 import fs from 'fs/promises';
 import { getFileNames } from "./getFileNames.js"
 import { cssToJs } from "./cssToJs.js"
-import { createComponentDirectory } from "./createComponentDirectory.js"
-import { writeComponentFiles } from "./writeComponentFiles.js"
+import { createDirectoryBasedOnFileNames } from "./createDirectoryBasedOnFileNames.js"
+import { createComponentPlugins } from "./createComponentPlugins.js"
 
 export const generatePlugins = async ({ srcDir, distDir }) => {
   let fileCount = 0;
@@ -10,8 +10,8 @@ export const generatePlugins = async ({ srcDir, distDir }) => {
   const cssFiles = await getFileNames(srcDir, ".css")
   for (const cssFile of cssFiles) {
     const jsContent = await cssToJs(`${srcDir}/${cssFile}.css`)
-    const componentDir = await createComponentDirectory(cssFile, distDir)
-    await writeComponentFiles(componentDir, jsContent)
+    const componentDir = await createDirectoryBasedOnFileNames(cssFile, ".css", distDir)
+    await createComponentPlugins(componentDir, jsContent)
     fileCount++;
   }
   return fileCount;

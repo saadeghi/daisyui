@@ -2,7 +2,7 @@ import { compile } from '../node_modules/tailwindcss/dist/lib.js'
 import fs from 'fs/promises';
 import path from 'path';
 
-export const generateColors = async (file) => {
+export const generateColorRules = async (file) => {
   const [defaultTheme, theme] = await Promise.all([
     fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
     fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),

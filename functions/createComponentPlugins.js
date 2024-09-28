@@ -1,13 +1,17 @@
 import { promises as fs } from "fs"
 import path from "path"
 
-export const writeComponentFiles = async (componentDir, jsContent) => {
+export const createComponentPlugins = async (componentDir, jsContent) => {
+
+  // create index.js
   const indexJsPath = path.join(componentDir, "index.js")
   await fs.writeFile(indexJsPath, `export default ${jsContent};`)
 
+  // create index.css
   const indexCssPath = path.join(componentDir, "index.css")
   await fs.writeFile(indexCssPath, `@config "./config.js";\n`)
 
+  // create config.js
   const configJsPath = path.join(componentDir, "config.js")
   const configJsContent = `import { plugin } from '../../functions/plugin.js';
 import index from './index.js';
