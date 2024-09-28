@@ -10,8 +10,10 @@ export async function generateComponents() {
   ]);
 
   const componentsDir = path.join(import.meta.dir, '../css/components');
-  // const files = await fs.readdir(componentsDir);
   const files = await getFileNames(componentsDir, '.css', false);
+
+  let fileCount = 0;
+  let totalSize = 0;
 
   for (const file of files) {
     const component = await fs.readFile(path.join(componentsDir, `../components/${file}.css`), 'utf-8');
@@ -36,9 +38,10 @@ export async function generateComponents() {
         // Extract only the content inside the curly braces
         const componentsContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
         await fs.writeFile(path.join(import.meta.dir, '../components', `../components/${file}.css`), componentsContent);
-        console.log(`Created components/${file}.css`);
+        fileCount++;
+        totalSize += Buffer.byteLength(componentsContent, 'utf8');
       }
     }
-
   }
+  return { fileCount, totalSize };
 };

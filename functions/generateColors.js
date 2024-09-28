@@ -2,7 +2,7 @@ import { compile } from '../node_modules/tailwindcss/dist/lib.js'
 import fs from 'fs/promises';
 import path from 'path';
 
-export async function generateColors(file) {
+export const generateColors = async (file) => {
   const [defaultTheme, theme] = await Promise.all([
     fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
     fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),
@@ -38,14 +38,16 @@ export async function generateColors(file) {
 
   const generatedStyles = colorNames.flatMap(color =>
     styles.flatMap(style => generateVariants(style, color))
-  ).join('\n');
+  );
 
+  const classCount = generatedStyles.length;
 
+  const generatedStylesString = generatedStyles.join('\n');
 
   const compiledContent = await (await compile(`
     @layer base{${defaultTheme}${theme}}
     @layer wrapperStart{
-      ${generatedStyles}
+      ${generatedStylesString}
     }
     @layer wrapperEnd
   `)).build([]);
@@ -64,7 +66,8 @@ export async function generateColors(file) {
       // Extract only the content inside the curly braces
       const colorsContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
       await fs.writeFile(path.join(import.meta.dir, `../${file}`), colorsContent);
-      console.log(`Created ${file}`);
     }
   }
+
+  return classCount;
 };
