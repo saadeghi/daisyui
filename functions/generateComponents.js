@@ -3,20 +3,20 @@ import fs from 'fs/promises';
 import path from 'path';
 import { getFileNames } from './getFileNames';
 
-export async function generateComponents() {
+export async function generateComponents({ srcDir, distDir }) {
   const [defaultTheme, theme] = await Promise.all([
     fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
     fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),
   ]);
 
-  const componentsDir = path.join(import.meta.dir, '../css/components');
+  const componentsDir = path.join(import.meta.dir, srcDir);
   const files = await getFileNames(componentsDir, '.css', false);
 
   let fileCount = 0;
   let totalSize = 0;
 
   for (const file of files) {
-    const component = await fs.readFile(path.join(componentsDir, `../components/${file}.css`), 'utf-8');
+    const component = await fs.readFile(path.join(componentsDir, `${distDir}/${file}.css`), 'utf-8');
 
     const compiledContent = await (await compile(`
       @layer theme{${defaultTheme}${theme}}
@@ -37,7 +37,7 @@ export async function generateComponents() {
       if (openingBraceIndex !== -1 && closingBraceIndex !== -1 && openingBraceIndex < closingBraceIndex) {
         // Extract only the content inside the curly braces
         const componentsContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
-        await fs.writeFile(path.join(import.meta.dir, '../components', `../components/${file}.css`), componentsContent);
+        await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), componentsContent);
         fileCount++;
         totalSize += Buffer.byteLength(componentsContent, 'utf8');
       }
