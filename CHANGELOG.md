@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.11 (2024-10-02)
+
+
+### Bug Fixes
+
+* join button responsive margin issue. closes [#3118](https://github.com/saadeghi/daisyui/issues/3118) ([50520b4](https://github.com/saadeghi/daisyui/commit/50520b44e7a9ab27d975e06d07ee29a011099a47))
+
 ## 4.12.10 (2024-06-26)
 
 
