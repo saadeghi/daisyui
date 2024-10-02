@@ -1,5 +1,6 @@
 .dropdown {
   @apply relative inline-block;
+  position-area: var(--anchor-v, bottom) var(--anchor-h, span-right);
 
   &>*:not(summary):focus {
     @apply outline-none;
@@ -45,16 +46,49 @@
     }
   }
 
+  /* experimental */
+  &[popover] {
+    @apply fixed;
+
+    /* align-self: anchor-center; */
+    /* left: anchor(right); */
+    /* align-self: anchor-center; */
+    @supports not (position-area: bottom) {
+      @apply m-auto;
+
+      &::backdrop {
+        @apply bg-black/10;
+      }
+    }
+
+    &:not(:popover-open) {
+      @apply hidden;
+    }
+  }
+
 }
 
 
 .dropdown-start {
+  --anchor-h: span-right;
+
   :where(.dropdown-content) {
     @apply end-auto;
   }
 
-  &.dropdown-left,
+  &.dropdown-left {
+    --anchor-h: left;
+    --anchor-v: span-bottom;
+
+    .dropdown-content {
+      @apply bottom-auto top-0;
+    }
+  }
+
   &.dropdown-right {
+    --anchor-h: right;
+    --anchor-v: span-bottom;
+
     .dropdown-content {
       @apply bottom-auto top-0;
     }
@@ -62,12 +96,25 @@
 }
 
 .dropdown-end {
+  --anchor-h: span-left;
+
   :where(.dropdown-content) {
     @apply end-0;
   }
 
-  &.dropdown-left,
+  &.dropdown-left {
+    --anchor-h: left;
+    --anchor-v: span-top;
+
+    .dropdown-content {
+      @apply bottom-0 top-auto;
+    }
+  }
+
   &.dropdown-right {
+    --anchor-h: right;
+    --anchor-v: span-top;
+
     .dropdown-content {
       @apply bottom-0 top-auto;
     }
@@ -75,24 +122,34 @@
 }
 
 .dropdown-left {
+  --anchor-h: left;
+  --anchor-v: span-bottom;
+
   .dropdown-content {
     @apply bottom-auto end-full top-0 origin-right;
   }
 }
 
 .dropdown-right {
+  --anchor-h: right;
+  --anchor-v: span-bottom;
+
   .dropdown-content {
     @apply bottom-auto start-full top-0 origin-left;
   }
 }
 
 .dropdown-bottom {
+  --anchor-v: bottom;
+
   .dropdown-content {
     @apply bottom-auto top-full origin-top;
   }
 }
 
 .dropdown-top {
+  --anchor-v: top;
+
   .dropdown-content {
     @apply bottom-full top-auto origin-bottom;
   }
