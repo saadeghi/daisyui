@@ -1,0 +1,48 @@
+.avatar-group {
+  @apply flex overflow-hidden;
+
+  :where(.avatar) {
+    @apply border-base-100 overflow-hidden rounded-full border-4;
+  }
+}
+
+.avatar {
+  @apply relative inline-flex align-middle;
+
+  &>div {
+    @apply block aspect-square overflow-hidden;
+  }
+
+  img {
+    @apply h-full w-full object-cover;
+  }
+
+}
+
+.avatar-placeholder {
+  &>div {
+    @apply flex items-center justify-center;
+  }
+}
+
+.avatar-online {
+  &:before {
+    content: "";
+    @apply bg-success outline-base-100 absolute z-10 block rounded-full outline outline-2;
+    width: 15%;
+    height: 15%;
+    top: 7%;
+    right: 7%;
+  }
+}
+
+.avatar-offline {
+  &:before {
+    content: "";
+    @apply bg-base-300 outline-base-100 absolute z-10 block rounded-full outline outline-2;
+    width: 15%;
+    height: 15%;
+    top: 7%;
+    right: 7%;
+  }
+}
