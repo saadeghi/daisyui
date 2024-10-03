@@ -48,7 +48,7 @@
 
   /* experimental */
   &[popover] {
-    @apply fixed transition duration-200 ease-out z-[1000];
+    @apply fixed transition text-inherit duration-200 ease-out z-[1000];
 
     /* align-self: anchor-center; */
     /* justify-self: anchor-center; */

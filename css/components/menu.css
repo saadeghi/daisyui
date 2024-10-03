@@ -68,6 +68,7 @@
 
       &:hover {
         @apply cursor-pointer outline-none bg-base-content/10;
+        box-shadow: 0 1px oklch(0% 0 0 / 0.01) inset, 0 -1px oklch(100% 0 0 / 0.01) inset;
       }
     }
   }
@@ -89,6 +90,7 @@
     &>*:not(ul, .menu-title, details, .btn).menu-active,
     &>details>summary:active {
       @apply bg-neutral text-neutral-content bg-neutral text-neutral-content outline-none;
+      box-shadow: 0 2px 3px -2px var(--color-neutral);
     }
 
     &.menu-disabled {

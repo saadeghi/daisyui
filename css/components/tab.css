@@ -5,9 +5,9 @@
 .tab {
   @apply hover:text-base-content relative row-start-1 inline-flex h-8 cursor-pointer select-none appearance-none flex-wrap items-center justify-center text-center text-sm leading-loose text-base-content/50;
   --tab-padding: 1rem;
-  --tab-color: theme(colors.base-content);
-  --tab-bg: theme(colors.base-100);
-  --tab-border-color: theme(colors.base-300);
+  --tab-color: var(--color-base-content);
+  --tab-bg: var(--color-base-100);
+  --tab-border-color: var(--color-base-300);
   color: var(--tab-color);
   padding-inline-start: var(--tab-padding, 1rem);
   padding-inline-end: var(--tab-padding, 1rem);

@@ -1,8 +1,8 @@
 .tooltip {
   @apply relative inline-block;
-  --tooltip-color: theme(colors.neutral);
+  --tooltip-color: var(--color-neutral);
   --tooltip-tail: 0.1875rem;
-  --tooltip-text-color: theme(colors.neutral-content);
+  --tooltip-text-color: var(--color-neutral-content);
   --tooltip-offset: calc(100% + 1px + var(--tooltip-tail, 0px));
   --tooltip-tail-offset: calc(100% + 0.0625rem - var(--tooltip-tail));
 
@@ -136,36 +136,36 @@
 }
 
 .tooltip-primary {
-  --tooltip-color: theme(colors.primary);
-  --tooltip-text-color: theme(colors.primary-content);
+  --tooltip-color: var(--color-primary);
+  --tooltip-text-color: var(--color-primary-content);
 }
 
 .tooltip-secondary {
-  --tooltip-color: theme(colors.secondary);
-  --tooltip-text-color: theme(colors.secondary-content);
+  --tooltip-color: var(--color-secondary);
+  --tooltip-text-color: var(--color-secondary-content);
 }
 
 .tooltip-accent {
-  --tooltip-color: theme(colors.accent);
-  --tooltip-text-color: theme(colors.accent-content);
+  --tooltip-color: var(--color-accent);
+  --tooltip-text-color: var(--color-accent-content);
 }
 
 .tooltip-info {
-  --tooltip-color: theme(colors.info);
-  --tooltip-text-color: theme(colors.info-content);
+  --tooltip-color: var(--color-info);
+  --tooltip-text-color: var(--color-info-content);
 }
 
 .tooltip-success {
-  --tooltip-color: theme(colors.success);
-  --tooltip-text-color: theme(colors.success-content);
+  --tooltip-color: var(--color-success);
+  --tooltip-text-color: var(--color-success-content);
 }
 
 .tooltip-warning {
-  --tooltip-color: theme(colors.warning);
-  --tooltip-text-color: theme(colors.warning-content);
+  --tooltip-color: var(--color-warning);
+  --tooltip-text-color: var(--color-warning-content);
 }
 
 .tooltip-error {
-  --tooltip-color: theme(colors.error);
-  --tooltip-text-color: theme(colors.error-content);
+  --tooltip-color: var(--color-error);
+  --tooltip-text-color: var(--color-error-content);
 }
