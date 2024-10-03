@@ -58,8 +58,16 @@
     @supports not (position-area: bottom) {
       @apply m-auto;
 
+      &.dropdown-open {
+        @apply invisible opacity-0 origin-top scale-95;
+
+        &:popover-open {
+          @apply visible opacity-100 scale-100;
+        }
+      }
+
       &::backdrop {
-        @apply bg-black/20;
+        @apply bg-black/30;
       }
     }
 
