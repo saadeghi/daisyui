@@ -8,7 +8,7 @@ import { extractClasses } from "./functions/extractClasses.js"
 import { minifyAllFiles } from "./functions/minify.js"
 
 Promise.all([
-  generateColorRules('colors.css'),
+  generateColorRules({ distDir: '../colors' }),
   generatePlugins({ type: "base", srcDir: "css/base", distDir: "base" }),
   generateRawStyles({ srcDir: '../css/base', distDir: '../base' }),
   generatePlugins({ type: "component", srcDir: "css/components", distDir: "components" }),

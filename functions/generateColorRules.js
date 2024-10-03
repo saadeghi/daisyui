@@ -2,7 +2,7 @@ import { compile } from '../node_modules/tailwindcss/dist/lib.js'
 import fs from 'fs/promises';
 import path from 'path';
 
-export const generateColorRules = async (file) => {
+export const generateColorRules = async ({ distDir }) => {
   const [defaultTheme, theme] = await Promise.all([
     fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
     fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),
@@ -79,7 +79,7 @@ export const generateColorRules = async (file) => {
 
       if (openingBraceIndex !== -1 && closingBraceIndex !== -1 && openingBraceIndex < closingBraceIndex) {
         const extractedContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
-        const colorsDir = path.join(import.meta.dir, '../colors');
+        const colorsDir = path.join(import.meta.dir, distDir);
         await fs.mkdir(colorsDir, { recursive: true });
         await fs.writeFile(path.join(colorsDir, fileName), extractedContent);
       }
@@ -89,14 +89,6 @@ export const generateColorRules = async (file) => {
   await compileAndWriteFile(generatePropertiesContent(), 'properties.css');
   await compileAndWriteFile(generateResponsiveContent(), 'responsive.css');
   await compileAndWriteFile(generateStatesContent(), 'states.css');
-
-  // Create colors.css file
-  const colorsContent = `
-@import url(colors/properties.css) layer(utilities);
-@import url(colors/responsive.css) layer(utilities);
-@import url(colors/states.css) layer(utilities);
-`;
-  await fs.writeFile(path.join(import.meta.dir, `../${file}`), colorsContent.trim());
 
   return {
     properties: colorNames.length * styles.length,
