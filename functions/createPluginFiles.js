@@ -1,7 +1,13 @@
 import { promises as fs } from "fs"
 import path from "path"
 
-export const createComponentPlugins = async (componentDir, jsContent) => {
+export const createPluginFiles = async (type, componentDir, jsContent) => {
+
+  const types = {
+    base: "addBase",
+    component: "addComponents",
+    utility: "addUtilities",
+  };
 
   // create index.js
   const indexJsPath = path.join(componentDir, "index.js")
@@ -18,8 +24,8 @@ import index from './index.js';
 
 export default {
 	plugins: [
-		plugin(({ addComponents }) => {
-			addComponents({
+		plugin(({ ${types[type]} }) => {
+		${types[type]}({
 				...index
 			});
 		})

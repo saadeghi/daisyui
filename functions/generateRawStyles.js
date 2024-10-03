@@ -3,24 +3,24 @@ import fs from 'fs/promises';
 import path from 'path';
 import { getFileNames } from './getFileNames';
 
-export async function generateComponents({ srcDir, distDir }) {
+export async function generateRawStyles({ srcDir, distDir }) {
   const [defaultTheme, theme] = await Promise.all([
     fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
     fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),
   ]);
 
-  const componentsDir = path.join(import.meta.dir, srcDir);
-  const files = await getFileNames(componentsDir, '.css', false);
+  const stylesDir = path.join(import.meta.dir, srcDir);
+  const files = await getFileNames(stylesDir, '.css', false);
 
   let fileCount = 0;
   let totalSize = 0;
 
   for (const file of files) {
-    const component = await fs.readFile(path.join(componentsDir, `${distDir}/${file}.css`), 'utf-8');
+    const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), 'utf-8');
 
     const compiledContent = await (await compile(`
       @layer theme{${defaultTheme}${theme}}
-      @layer wrapperStart{${component}}
+      @layer wrapperStart{${styleContent}}
       @layer wrapperEnd
     `)).build([]);
 
@@ -36,10 +36,10 @@ export async function generateComponents({ srcDir, distDir }) {
 
       if (openingBraceIndex !== -1 && closingBraceIndex !== -1 && openingBraceIndex < closingBraceIndex) {
         // Extract only the content inside the curly braces
-        const componentsContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
-        await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), componentsContent);
+        const stylesContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+        await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent);
         fileCount++;
-        totalSize += Buffer.byteLength(componentsContent, 'utf8');
+        totalSize += Buffer.byteLength(stylesContent, 'utf8');
       }
     }
   }

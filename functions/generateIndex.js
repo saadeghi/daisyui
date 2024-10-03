@@ -5,7 +5,7 @@ import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 const generateCSSContent = async () => {
   let content = '@import "./themes";\n';
   let themeCount = 1;
-  let componentCount = 0;
+  let ruleCount = 0;
 
   // Add theme imports
   const themes = await getDirectoriesWithTargetFile('./themes', 'index.css', ['default']);
@@ -14,14 +14,21 @@ const generateCSSContent = async () => {
     themeCount++;
   });
 
-  // Add component configs
-  const components = await getDirectoriesWithTargetFile('./components', 'config.js', []);
-  components.forEach(component => {
-    content += `@config "./components/${component}/config.js";\n`;
-    componentCount++;
+  // Add base configs
+  const base = await getDirectoriesWithTargetFile('./base', 'config.js', []);
+  base.forEach(item => {
+    content += `@config "./base/${item}/config.js";\n`;
+    ruleCount++;
   });
 
-  return { content, themeCount, componentCount };
+  // Add component configs
+  const components = await getDirectoriesWithTargetFile('./components', 'config.js', []);
+  components.forEach(item => {
+    content += `@config "./components/${item}/config.js";\n`;
+    ruleCount++;
+  });
+
+  return { content, themeCount, ruleCount };
 };
 
 // Write the generated content to a file
@@ -31,7 +38,7 @@ const writeToFile = async (content, filename) => {
 
 // Main function to generate CSS
 export const generateIndex = async (filename) => {
-  const { content: cssContent, themeCount, componentCount } = await generateCSSContent();
+  const { content: cssContent, themeCount, ruleCount } = await generateCSSContent();
   await writeToFile(cssContent, filename);
-  return themeCount + componentCount;
+  return themeCount + ruleCount;
 };

@@ -5,16 +5,26 @@ import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 export const generateFull = async (filename) => {
 
   let content = `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@4.0.0-alpha.25/preflight.min.css) layer(base);\n`;
-  content += `@import url(colors.css) layer(base);\n`;
 
   const themes = await getDirectoriesWithTargetFile('./themes', 'index.css', []);
   themes.forEach(theme => {
     content += `@import url(themes/${theme}/index.css) layer(themes);\n`;
   });
 
+
+  const baseFiles = await getFileNames('./base', ".css", false);
+  baseFiles.forEach(filePath => {
+    content += `@import url(base/${filePath}.css) layer(base);\n`;
+  });
+
   const componentFiles = await getFileNames('./components', ".css", false);
   componentFiles.forEach(filePath => {
     content += `@import url(components/${filePath}.css) layer(components);\n`;
+  });
+
+  const colorFiles = await getFileNames('./colors', ".css", false);
+  colorFiles.forEach(filePath => {
+    content += `@import url(colors/${filePath}.css) layer(utilities);\n`;
   });
 
   // Write to file

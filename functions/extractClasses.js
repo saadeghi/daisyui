@@ -10,12 +10,12 @@ const extractClassNames = (cssContent) => {
 }
 
 // Function to process a single CSS file
-const processCssFile = (filePath) => {
+const processCssFile = (srcDir, filePath) => {
   const cssContent = fs.readFileSync(filePath, 'utf8');
   const classNames = extractClassNames(cssContent);
 
   const fileName = path.basename(filePath, '.css');
-  const outputDir = path.join(__dirname, '..', 'components', fileName);
+  const outputDir = path.join(__dirname, '..', srcDir, fileName);
   const outputFilePath = path.join(outputDir, 'class.json');
 
   // Create directory if it doesn't exist
@@ -33,15 +33,15 @@ const processCssFile = (filePath) => {
 }
 
 // Function to process all CSS files
-export const extractClasses = () => {
-  // Read all CSS files from the components directory
-  const componentsDir = path.join(__dirname, '..', 'css', 'components');
-  const cssFiles = fs.readdirSync(componentsDir).filter(file => file.endsWith('.css'));
+export const extractClasses = ({ srcDir }) => {
+  // Read all CSS files from the styles directory
+  const stylesDir = path.join(__dirname, '..', 'css', srcDir);
+  const cssFiles = fs.readdirSync(stylesDir).filter(file => file.endsWith('.css'));
 
   // Process each CSS file and sum up the total number of class names
   const totalClassNames = cssFiles.reduce((total, file) => {
-    const filePath = path.join(componentsDir, file);
-    return total + processCssFile(filePath);
+    const filePath = path.join(stylesDir, file);
+    return total + processCssFile(srcDir, filePath);
   }, 0);
 
   return totalClassNames;

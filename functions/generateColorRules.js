@@ -25,49 +25,82 @@ export const generateColorRules = async (file) => {
 
   const states = ['hover', 'focus'];
 
-  const generateVariants = (style, color) => {
-    const baseClass = `.${style}-${color}{@apply ${style}-${color};}`;
-    const responsiveClasses = breakpoints.map(bp =>
-      `.${bp}\\:${style}-${color}{@apply ${bp}:${style}-${color};}`
-    );
-    const stateClasses = states.map(state =>
-      `.${state}\\:${style}-${color}:${state}{@apply ${state}:${style}-${color};}`
-    );
-    return [baseClass, ...responsiveClasses, ...stateClasses];
+  const generateBaseVariants = (style, color) => {
+    return `.${style}-${color}{@apply ${style}-${color};}`;
   };
 
-  const generatedStyles = colorNames.flatMap(color =>
-    styles.flatMap(style => generateVariants(style, color))
-  );
+  const generateResponsiveVariants = (style, color) => {
+    return breakpoints.map(bp =>
+      bp.match(/^\d/)
+        ? `.\\3${bp[0]}${bp.slice(1)}\\:${style}-${color}{@apply ${bp}:${style}-${color};}`
+        : `.${bp}\\:${style}-${color}{@apply ${bp}:${style}-${color};}`
+    );
+  };
 
-  const classCount = generatedStyles.length;
+  const generateStateVariants = (style, color) => {
+    return states.map(state =>
+      `.${state}\\:${style}-${color}:${state}{@apply ${state}:${style}-${color};}`
+    );
+  };
 
-  const generatedStylesString = generatedStyles.join('\n');
+  const generatePropertiesContent = () => {
+    return colorNames.flatMap(color =>
+      styles.map(style => generateBaseVariants(style, color))
+    ).join('\n');
+  };
 
-  const compiledContent = await (await compile(`
-    @layer base{${defaultTheme}${theme}}
-    @layer wrapperStart{
-      ${generatedStylesString}
+  const generateResponsiveContent = () => {
+    return colorNames.flatMap(color =>
+      styles.flatMap(style => generateResponsiveVariants(style, color))
+    ).join('\n');
+  };
+
+  const generateStatesContent = () => {
+    return colorNames.flatMap(color =>
+      styles.flatMap(style => generateStateVariants(style, color))
+    ).join('\n');
+  };
+
+  const compileAndWriteFile = async (content, fileName) => {
+    const compiledContent = await (await compile(`
+      @layer base{${defaultTheme}${theme}}
+      @layer wrapperStart{
+        ${content}
+      }
+      @layer wrapperEnd
+    `)).build([]);
+
+    const startIndex = compiledContent.indexOf('@layer wrapperStart');
+    const endIndex = compiledContent.indexOf('@layer wrapperEnd');
+
+    if (startIndex !== -1 && endIndex !== -1) {
+      const openingBraceIndex = compiledContent.indexOf('{', startIndex);
+      const closingBraceIndex = compiledContent.lastIndexOf('}', endIndex);
+
+      if (openingBraceIndex !== -1 && closingBraceIndex !== -1 && openingBraceIndex < closingBraceIndex) {
+        const extractedContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+        const colorsDir = path.join(import.meta.dir, '../colors');
+        await fs.mkdir(colorsDir, { recursive: true });
+        await fs.writeFile(path.join(colorsDir, fileName), extractedContent);
+      }
     }
-    @layer wrapperEnd
-  `)).build([]);
+  };
 
-  const startIndex = compiledContent.indexOf('@layer wrapperStart');
-  const endIndex = compiledContent.indexOf('@layer wrapperEnd');
+  await compileAndWriteFile(generatePropertiesContent(), 'properties.css');
+  await compileAndWriteFile(generateResponsiveContent(), 'responsive.css');
+  await compileAndWriteFile(generateStatesContent(), 'states.css');
 
-  if (startIndex !== -1 && endIndex !== -1) {
-    // Find the opening curly brace after '@layer components'
-    const openingBraceIndex = compiledContent.indexOf('{', startIndex);
+  // Create colors.css file
+  const colorsContent = `
+@import url(colors/properties.css) layer(utilities);
+@import url(colors/responsive.css) layer(utilities);
+@import url(colors/states.css) layer(utilities);
+`;
+  await fs.writeFile(path.join(import.meta.dir, `../${file}`), colorsContent.trim());
 
-    // Find the last closing curly brace before '@layer endcomponents'
-    const closingBraceIndex = compiledContent.lastIndexOf('}', endIndex);
-
-    if (openingBraceIndex !== -1 && closingBraceIndex !== -1 && openingBraceIndex < closingBraceIndex) {
-      // Extract only the content inside the curly braces
-      const colorsContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
-      await fs.writeFile(path.join(import.meta.dir, `../${file}`), colorsContent);
-    }
-  }
-
-  return classCount;
+  return {
+    properties: colorNames.length * styles.length,
+    responsive: breakpoints.length * styles.length * colorNames.length,
+    states: states.length * styles.length * colorNames.length
+  };
 };

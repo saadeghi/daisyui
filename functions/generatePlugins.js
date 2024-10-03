@@ -2,16 +2,16 @@ import fs from 'fs/promises';
 import { getFileNames } from "./getFileNames.js"
 import { cssToJs } from "./cssToJs.js"
 import { createDirectoryBasedOnFileNames } from "./createDirectoryBasedOnFileNames.js"
-import { createComponentPlugins } from "./createComponentPlugins.js"
+import { createPluginFiles } from "./createPluginFiles.js"
 
-export const generatePlugins = async ({ srcDir, distDir }) => {
+export const generatePlugins = async ({ type, srcDir, distDir }) => {
   let fileCount = 0;
   await fs.mkdir(distDir, { recursive: true })
   const cssFiles = await getFileNames(srcDir, ".css")
   for (const cssFile of cssFiles) {
     const jsContent = await cssToJs(`${srcDir}/${cssFile}.css`)
     const componentDir = await createDirectoryBasedOnFileNames(cssFile, ".css", distDir)
-    await createComponentPlugins(componentDir, jsContent)
+    await createPluginFiles(type, componentDir, jsContent)
     fileCount++;
   }
   return fileCount;

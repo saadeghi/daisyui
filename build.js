@@ -1,25 +1,34 @@
 import fs from 'fs';
 import { generateColorRules } from "./functions/generateColorRules.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
-import { generateComponents } from "./functions/generateComponents.js"
+import { generateRawStyles } from "./functions/generateRawStyles.js"
 import { generateIndex } from "./functions/generateIndex.js"
 import { generateFull } from "./functions/generateFull.js"
 import { extractClasses } from "./functions/extractClasses.js"
+import { minifyAllFiles } from "./functions/minify.js"
 
 Promise.all([
   generateColorRules('colors.css'),
-  generatePlugins({ srcDir: "css/components", distDir: "components" }),
-  generateComponents({ srcDir: '../css/components', distDir: '../components' }),
+  generatePlugins({ type: "base", srcDir: "css/base", distDir: "base" }),
+  generateRawStyles({ srcDir: '../css/base', distDir: '../base' }),
+  generatePlugins({ type: "component", srcDir: "css/components", distDir: "components" }),
+  generateRawStyles({ srcDir: '../css/components', distDir: '../components' }),
   generateIndex('index.css'),
   generateFull('full.css'),
-  extractClasses()
-]).then(([colors, plugins, components, index, full, extract]) => {
-  const results = [
-    { file: 'components/*', details: `${plugins} directories, ${components.fileCount} CSS files`, kB: components.totalSize / 1000 },
-    { file: 'colors.css', details: `${colors} rules`, kB: fs.statSync('colors.css').size / 1000 },
+  extractClasses({ srcDir: 'components' }),
+]).then(async (results) => {
+  const minifyResult = await minifyAllFiles();
+  return [...results, minifyResult];
+}).then((results) => {
+  const [colorRules, basePlugins, baseStyles, componentPlugins, componentStyles, index, full, componentClassnames, minifyResult] = results;
+  const tableData = [
+    { file: '/base', details: `${basePlugins} plugins, ${baseStyles.fileCount} CSS`, kB: baseStyles.totalSize / 1000 },
+    { file: '/components', details: `${componentPlugins} plugins, ${componentStyles.fileCount} CSS`, kB: componentStyles.totalSize / 1000 },
+    { file: '/colors', details: `${colorRules.properties} properties, ${colorRules.responsive} responsive, ${colorRules.states} states`, kB: fs.readdirSync('colors').reduce((acc, file) => acc + fs.statSync(`colors/${file}`).size, 0) / 1000 },
     { file: 'index.css', details: `${index} rules`, kB: fs.statSync('index.css').size / 1000 },
     { file: 'full.css', details: `${full} imports`, kB: fs.statSync('full.css').size / 1000 },
-    { file: 'class names', details: `${extract}` }
+    { file: 'extracted classname', details: `${componentClassnames}` },
+    { file: 'Minified', details: `${minifyResult.files} files, –${minifyResult.reduction / 1000} kB (-${minifyResult.percent}%)`, kB: minifyResult.minified / 1000 },
   ];
-  console.table(results, ['file', 'details', 'kB']);
+  console.table(tableData, ['file', 'details', 'kB']);
 })
