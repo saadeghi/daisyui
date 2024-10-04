@@ -94,7 +94,7 @@
     }
 
     &.menu-disabled {
-      @apply text-base-content/30 cursor-not-allowed select-none;
+      @apply text-base-content/20 pointer-events-none;
     }
   }
 }
