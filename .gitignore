@@ -11,6 +11,8 @@ yarn.lock
 /coverage
 .unlighthouse
 
+/base
 /components
+/utilities
 
 /*.css
