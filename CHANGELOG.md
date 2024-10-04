@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.12 (2024-10-04)
+
+
+### Bug Fixes
+
+* selector performance for RTL stat ([ad6f291](https://github.com/saadeghi/daisyui/commit/ad6f29123f2553edfdd3ba672867cf57cf336a79))
+
 ## 4.12.11 (2024-10-02)
 
 
