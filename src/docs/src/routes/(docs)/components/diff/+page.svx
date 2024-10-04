@@ -52,7 +52,7 @@ data="{[
   <div class="$$diff-item-2">
     <img
       alt="daisy"
-      src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-bw.webp" />
+      src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
   <div class="$$diff-resizer"></div>
 </div>
