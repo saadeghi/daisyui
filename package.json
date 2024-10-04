@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"name": "daisyui",
-	"version": "5.0.0-alpha.5",
+	"version": "5.0.0-alpha.6",
 	"description": "daisyUI - Tailwind CSS Components",
 	"author": "Pouya Saadeghi",
 	"license": "MIT",
@@ -68,7 +68,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.2",
-		"@tailwindcss/cli": "^4.0.0-alpha.25",
+		"@tailwindcss/cli": "^4.0.0-alpha.26",
 		"commit-and-tag-version": "12.4.1",
 		"lightningcss": "^1.27.0",
 		"postcss": "^8.4.45",
@@ -76,6 +76,6 @@
 		"postcss-prefixer": "^3.0.0",
 		"prettier": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.6",
-		"tailwindcss": "^4.0.0-alpha.25"
+		"tailwindcss": "^4.0.0-alpha.26"
 	}
 }
