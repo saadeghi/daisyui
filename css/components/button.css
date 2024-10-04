@@ -112,14 +112,16 @@
 
 /* outline */
 .btn-outline {
-  &:not(.btn-active):not(:hover) {
+  &:not(.btn-active, :hover) {
     @apply bg-transparent text-[var(--btn-bg)] shadow-none;
     --btn-flare: unset;
   }
+}
 
-  &.btn-active {
-    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)) 90%, black);
-    background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)) 90%, black);
+.btn-dashed {
+  &:not(.btn-active, :hover) {
+    @apply bg-transparent text-[var(--btn-bg)] shadow-none border-dashed;
+    --btn-flare: unset;
   }
 }
 
