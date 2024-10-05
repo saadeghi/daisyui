@@ -112,14 +112,14 @@
 
 /* outline */
 .btn-outline {
-  &:not(.btn-active, :hover) {
+  &:not(.btn-active, :hover, :focus-visible) {
     @apply bg-transparent text-[var(--btn-bg)] shadow-none;
     --btn-flare: unset;
   }
 }
 
 .btn-dashed {
-  &:not(.btn-active, :hover) {
+  &:not(.btn-active, :hover, :focus-visible) {
     @apply bg-transparent text-[var(--btn-bg)] shadow-none border-dashed;
     --btn-flare: unset;
   }
