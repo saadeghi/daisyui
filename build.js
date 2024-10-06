@@ -27,7 +27,7 @@ Promise.all([
     { file: '/base', details: `${basePlugins} plugins, ${baseStyles.fileCount} CSS`, kB: baseStyles.totalSize / 1000 },
     { file: '/components', details: `${componentPlugins} plugins, ${componentStyles.fileCount} CSS`, kB: componentStyles.totalSize / 1000 },
     { file: '/components', details: `${utilityPlugins} plugins, ${utilityStyles.fileCount} CSS`, kB: utilityStyles.totalSize / 1000 },
-    { file: '/colors', details: `${colorRules.properties} properties, ${colorRules.responsive} responsive, ${colorRules.states} states`, kB: fs.readdirSync('colors').reduce((acc, file) => acc + fs.statSync(`colors/${file}`).size, 0) / 1000 },
+    { file: '/colors', details: `${colorRules} rules`, kB: fs.readdirSync('colors').reduce((acc, file) => acc + fs.statSync(`colors/${file}`).size, 0) / 1000 },
     { file: 'index.css', details: `${index} rules`, kB: fs.statSync('index.css').size / 1000 },
     { file: 'full.css', details: `${full} imports`, kB: fs.statSync('full.css').size / 1000 },
     { file: 'extracted classname', details: `${componentClassnames}` },

@@ -29,12 +29,11 @@ export const generateColorRules = async ({ distDir }) => {
     return `.${style}-${color}{@apply ${style}-${color};}`;
   };
 
-  const generateResponsiveVariants = (style, color) => {
-    return breakpoints.map(bp =>
-      bp.match(/^\d/)
-        ? `.\\3${bp[0]}${bp.slice(1)}\\:${style}-${color}{@apply ${bp}:${style}-${color};}`
-        : `.${bp}\\:${style}-${color}{@apply ${bp}:${style}-${color};}`
-    );
+  const generateResponsiveVariants = (style, color, breakpoint) => {
+    if (breakpoint.match(/^\d/)) {
+      return `.\\3${breakpoint[0]}${breakpoint.slice(1)}\\:${style}-${color}{@apply ${style}-${color};}`;
+    }
+    return `.${breakpoint}\\:${style}-${color}{@apply ${style}-${color};}`;
   };
 
   const generateStateVariants = (style, color) => {
@@ -49,9 +48,9 @@ export const generateColorRules = async ({ distDir }) => {
     ).join('\n');
   };
 
-  const generateResponsiveContent = () => {
+  const generateResponsiveContent = (breakpoint) => {
     return colorNames.flatMap(color =>
-      styles.flatMap(style => generateResponsiveVariants(style, color))
+      styles.map(style => generateResponsiveVariants(style, color, breakpoint))
     ).join('\n');
   };
 
@@ -87,12 +86,13 @@ export const generateColorRules = async ({ distDir }) => {
   };
 
   await compileAndWriteFile(generatePropertiesContent(), 'properties.css');
-  await compileAndWriteFile(generateResponsiveContent(), 'responsive.css');
+
+  // Generate separate files for each breakpoint
+  for (const breakpoint of breakpoints) {
+    await compileAndWriteFile(generateResponsiveContent(breakpoint), `responsive-${breakpoint}.css`);
+  }
+
   await compileAndWriteFile(generateStatesContent(), 'states.css');
 
-  return {
-    properties: colorNames.length * styles.length,
-    responsive: breakpoints.length * styles.length * colorNames.length,
-    states: states.length * styles.length * colorNames.length
-  };
+  return colorNames.length * styles.length * (1 + breakpoints.length + states.length);
 };

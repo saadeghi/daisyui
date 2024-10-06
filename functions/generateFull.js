@@ -27,10 +27,14 @@ export const generateFull = async (filename) => {
     content += `@import url(utilities/${filePath}.css) layer(utilities);\n`;
   });
 
-  const colorFiles = await getFileNames('./colors', ".css", false);
-  colorFiles.forEach(filePath => {
-    content += `@import url(colors/${filePath}.css) layer(utilities);\n`;
-  });
+  content += `@import url(colors/properties.css) layer(utilities);\n`;
+  content += `@import url(colors/states.css) layer(utilities);\n`;
+  content += `@import url(colors/responsive-sm.css) layer(utilities) screen and (min-width: 40rem);\n`;
+  content += `@import url(colors/responsive-md.css) layer(utilities) screen and (min-width: 48rem);\n`;
+  content += `@import url(colors/responsive-lg.css) layer(utilities) screen and (min-width: 64rem);\n`;
+  content += `@import url(colors/responsive-xl.css) layer(utilities) screen and (min-width: 80rem);\n`;
+  content += `@import url(colors/responsive-2xl.css) layer(utilities) screen and (min-width: 96rem);\n`;
+
 
   // Write to file
   await fs.writeFile(`./${filename}`, content, 'utf8');
