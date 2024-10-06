@@ -22,6 +22,11 @@ export const generateFull = async (filename) => {
     content += `@import url(components/${filePath}.css) layer(components);\n`;
   });
 
+  const utilityFiles = await getFileNames('./utilities', ".css", false);
+  utilityFiles.forEach(filePath => {
+    content += `@import url(utilities/${filePath}.css) layer(utilities);\n`;
+  });
+
   const colorFiles = await getFileNames('./colors', ".css", false);
   colorFiles.forEach(filePath => {
     content += `@import url(colors/${filePath}.css) layer(utilities);\n`;

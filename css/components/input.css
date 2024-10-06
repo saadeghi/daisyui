@@ -1,5 +1,9 @@
 .input {
-  @apply bg-base-100 rounded-btn h-10 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose align-middle;
+  @apply bg-base-100 h-10 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose align-middle;
+  border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
+  border-start-end-radius: var(--radius-join-start-end, var(--radius-btn));
+  border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));
+  border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
 
   input {
     @apply border-none bg-transparent;

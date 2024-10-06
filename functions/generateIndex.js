@@ -28,6 +28,13 @@ const generateCSSContent = async () => {
     ruleCount++;
   });
 
+  // Add utilities configs
+  const utilities = await getDirectoriesWithTargetFile('./utilities', 'config.js', []);
+  utilities.forEach(item => {
+    content += `@config "./utilities/${item}/config.js";\n`;
+    ruleCount++;
+  });
+
   return { content, themeCount, ruleCount };
 };
 

@@ -1,6 +1,10 @@
 .btn {
-  @apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 rounded-[var(--radius-btn)] text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle h-10 px-4;
+  @apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle h-10 px-4;
   transition-property: color, background-color, background-image, border-color, opacity, box-shadow, transform;
+  border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
+  border-start-end-radius: var(--radius-join-start-end, var(--radius-btn));
+  border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));
+  border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
   --btn-color: var(--btn-bg, var(--color-base-200));
   background-color: var(--btn-color);
   border-width: var(--spacing-button-border);
