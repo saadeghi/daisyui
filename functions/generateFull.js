@@ -27,14 +27,31 @@ export const generateFull = async (filename) => {
     content += `@import url(utilities/${filePath}.css) layer(utilities);\n`;
   });
 
-  content += `@import url(colors/properties.css) layer(utilities);\n`;
-  content += `@import url(colors/states.css) layer(utilities);\n`;
-  content += `@import url(colors/responsive-sm.css) layer(utilities) screen and (min-width: 40rem);\n`;
-  content += `@import url(colors/responsive-md.css) layer(utilities) screen and (min-width: 48rem);\n`;
-  content += `@import url(colors/responsive-lg.css) layer(utilities) screen and (min-width: 64rem);\n`;
-  content += `@import url(colors/responsive-xl.css) layer(utilities) screen and (min-width: 80rem);\n`;
-  content += `@import url(colors/responsive-2xl.css) layer(utilities) screen and (min-width: 96rem);\n`;
+  // Load color files with specific ordering
+  const colorFiles = await getFileNames('./colors', ".css", false);
 
+  // Ensure that properties.css and states.css come first
+  if (colorFiles.includes('properties')) {
+    content += `@import url(colors/properties.css) layer(utilities);\n`;
+  }
+  if (colorFiles.includes('states')) {
+    content += `@import url(colors/states.css) layer(utilities);\n`;
+  }
+
+  const responsiveFiles = {
+    'responsive-sm': '40rem',
+    'responsive-md': '48rem',
+    'responsive-lg': '64rem',
+    'responsive-xl': '80rem',
+    'responsive-2xl': '96rem'
+  };
+
+  // Import responsive files in the correct order
+  Object.entries(responsiveFiles).forEach(([file, minWidth]) => {
+    if (colorFiles.includes(file)) {
+      content += `@import url(colors/${file}.css) layer(utilities) (min-width: ${minWidth});\n`;
+    }
+  });
 
   // Write to file
   await fs.writeFile(`./${filename}`, content, 'utf8');
