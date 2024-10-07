@@ -11,34 +11,44 @@ const extractClassNames = (cssContent) => {
 
 // Function to process a single CSS file
 const processCssFile = (srcDir, filePath) => {
-  const cssContent = fs.readFileSync(filePath, 'utf8');
-  const classNames = extractClassNames(cssContent);
+  try {
+    const cssContent = fs.readFileSync(filePath, 'utf8');
+    const classNames = extractClassNames(cssContent);
 
-  const fileName = path.basename(filePath, '.css');
-  const outputDir = path.join(__dirname, '..', srcDir, fileName);
-  const outputFilePath = path.join(outputDir, 'class.json');
+    const fileName = path.basename(filePath, '.css');
+    const outputDir = path.join(__dirname, '..', srcDir, fileName);
+    const outputFilePath = path.join(outputDir, 'class.json');
 
-  // Create directory if it doesn't exist
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // Create JSON string
+    const jsonString = JSON.stringify(classNames, null, 2);
+
+    // Write to a new JSON file
+    fs.writeFileSync(outputFilePath, jsonString);
+  } catch (error) {
+    console.error(`Error processing file ${filePath}: ${error.message}`);
+    throw error;
   }
-
-  // Create JSON string
-  const jsonString = JSON.stringify(classNames, null, 2);
-
-  // Write to a new JSON file
-  fs.writeFileSync(outputFilePath, jsonString);
 }
 
 // Function to process all CSS files
 export const extractClasses = ({ srcDir }) => {
-  // Read all CSS files from the styles directory
-  const stylesDir = path.join(__dirname, '..', 'css', srcDir);
-  const cssFiles = fs.readdirSync(stylesDir).filter(file => file.endsWith('.css'));
+  try {
+    // Read all CSS files from the styles directory
+    const stylesDir = path.join(__dirname, '..', 'css', srcDir);
+    const cssFiles = fs.readdirSync(stylesDir).filter(file => file.endsWith('.css'));
 
-  // Process each CSS file
-  cssFiles.forEach(file => {
-    const filePath = path.join(stylesDir, file);
-    processCssFile(srcDir, filePath);
-  });
+    // Process each CSS file
+    cssFiles.forEach(file => {
+      const filePath = path.join(stylesDir, file);
+      processCssFile(srcDir, filePath);
+    });
+  } catch (error) {
+    console.error(`Error extracting classes: ${error.message}`);
+    throw error;
+  }
 }

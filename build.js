@@ -26,47 +26,67 @@ Promise.all([
   const directories = ['base', 'components', 'utilities', 'colors', 'index.css', 'full.css'];
 
   const report = directories.flatMap((dir) => {
-    const isDirectory = fs.statSync(dir).isDirectory();
-    if (isDirectory) {
-      const files = fs.readdirSync(dir);
-      const cssFiles = files.filter((file) => file.endsWith('.css'));
+    try {
+      const isDirectory = fs.statSync(dir).isDirectory();
+      if (isDirectory) {
+        const files = fs.readdirSync(dir);
+        const cssFiles = files.filter((file) => file.endsWith('.css'));
 
-      return cssFiles.map((file) => {
-        const filePath = `${dir}/${file}`;
-        const fileContent = fs.readFileSync(filePath, 'utf8');
-        const rulesCount = fileContent.split('}').length - 1;
-        const rawSize = fs.statSync(filePath).size / 1000;
-        const gzipSize = zlib.gzipSync(fileContent).length / 1000;
-        const brotliSize = zlib.brotliCompressSync(fileContent).length / 1000;
-        const linesCount = fileContent.split('\n').length;
+        return cssFiles.map((file) => {
+          const filePath = `${dir}/${file}`;
+          try {
+            const fileContent = fs.readFileSync(filePath, 'utf8');
+            const rulesCount = fileContent.split('}').length - 1;
+            const rawSize = fs.statSync(filePath).size / 1000;
+            const gzipSize = zlib.gzipSync(fileContent).length / 1000;
+            const brotliSize = zlib.brotliCompressSync(fileContent).length / 1000;
+            const linesCount = fileContent.split('\n').length;
 
-        return {
-          file: filePath,
-          rules: rulesCount,
-          lines: linesCount,
-          raw: rawSize,
-          gzip: gzipSize,
-          brotli: brotliSize,
-        };
-      });
-    } else {
-      const fileContent = fs.readFileSync(dir, 'utf8');
-      const rulesCount = (fileContent.match(/[;}]/g) || []).length;
-      const rawSize = fs.statSync(dir).size / 1000;
-      const gzipSize = zlib.gzipSync(fileContent).length / 1000;
-      const brotliSize = zlib.brotliCompressSync(fileContent).length / 1000;
-      const linesCount = fileContent.split('\n').length;
+            return {
+              file: filePath,
+              rules: rulesCount,
+              lines: linesCount,
+              raw: rawSize,
+              gzip: gzipSize,
+              brotli: brotliSize,
+            };
+          } catch (error) {
+            console.error(`Error processing file ${filePath}: ${error.message}`);
+            return null;
+          }
+        }).filter(Boolean);
+      } else {
+        try {
+          const fileContent = fs.readFileSync(dir, 'utf8');
+          const rulesCount = (fileContent.match(/[;}]/g) || []).length;
+          const rawSize = fs.statSync(dir).size / 1000;
+          const gzipSize = zlib.gzipSync(fileContent).length / 1000;
+          const brotliSize = zlib.brotliCompressSync(fileContent).length / 1000;
+          const linesCount = fileContent.split('\n').length;
 
-      return {
-        file: dir,
-        rules: rulesCount,
-        lines: linesCount,
-        raw: rawSize,
-        gzip: gzipSize,
-        brotli: brotliSize,
-      };
+          return {
+            file: dir,
+            rules: rulesCount,
+            lines: linesCount,
+            raw: rawSize,
+            gzip: gzipSize,
+            brotli: brotliSize,
+          };
+        } catch (error) {
+          console.error(`Error processing file ${dir}: ${error.message}`);
+          return null;
+        }
+      }
+    } catch (error) {
+      console.error(`Error accessing ${dir}: ${error.message}`);
+      return null;
     }
-  });
+  }).filter(Boolean);
+
+  if (report.length === 0) {
+    console.error("No files were successfully processed.");
+    return;
+  }
 
   const sum = report.reduce((acc, curr) => {
     acc.rules += curr.rules;
@@ -81,5 +101,6 @@ Promise.all([
   report.push(sum);
   console.table(report, ['file', 'rules', 'lines', 'raw', 'gzip', 'brotli']);
 
-
-})
+}).catch(error => {
+  console.error("An error occurred during processing:", error);
+});
