@@ -11,5 +11,5 @@ export const cssToJs = async (cssFile) => {
 	const root = postcss.parse(prefixed)
 	const jsContent = postcssJs.objectify(root)
 	replaceApplyTrueWithEmptyObject(jsContent)
-	return JSON.stringify(jsContent, null, 2)
+	return JSON.stringify(jsContent, null, null)
 }
