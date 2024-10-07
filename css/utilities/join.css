@@ -5,6 +5,13 @@
   --radius-join-end-start: 0;
   --radius-join-end-end: 0;
 
+  :where(.join-item) {
+    border-start-start-radius: var(--radius-join-start-start, 0);
+    border-start-end-radius: var(--radius-join-start-end, 0);
+    border-end-start-radius: var(--radius-join-end-start, 0);
+    border-end-end-radius: var(--radius-join-end-end, 0);
+  }
+
   >.join-item:where(:first-child) {
     --radius-join-start-start: var(--radius-btn);
     --radius-join-start-end: 0;
