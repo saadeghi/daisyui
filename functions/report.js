@@ -1,0 +1,70 @@
+import zlib from 'zlib';
+import { promises as fs } from 'fs';
+import path from 'path';
+async function processFile(filePath) {
+  try {
+    const fileContent = await fs.readFile(filePath, 'utf8');
+    const stats = await fs.stat(filePath);
+    const [gzipSize, brotliSize] = await Promise.all([
+      compressFile(fileContent, zlib.gzip),
+      compressFile(fileContent, zlib.brotliCompress)
+    ]);
+
+    return {
+      file: filePath,
+      selectors: (fileContent.match(/(?:[^}]+{|@\w+\s*[^;{}]+(?:;|\{))/g) || []).length,
+      lines: fileContent.split('\n').length,
+      raw: stats.size / 1000,
+      gzip: gzipSize / 1000,
+      brotli: brotliSize / 1000,
+    };
+  } catch (error) {
+    console.error(`Error processing file ${filePath}: ${error.message}`);
+    return null;
+  }
+}
+async function processDirectory(dir) {
+  try {
+    const files = await fs.readdir(dir);
+    const cssFiles = files.filter(file => file.endsWith('.css'));
+    return Promise.all(cssFiles.map(file => processFile(path.join(dir, file))));
+  } catch (error) {
+    console.error(`Error accessing ${dir}: ${error.message}`);
+    return [];
+  }
+}
+async function compressFile(content, compressFunc) {
+  return new Promise(resolve => compressFunc(content, (_, result) => resolve(result.length)));
+}
+export const report = async (directories) => {
+
+  const report = await Promise.all(
+    directories.map(async (dir) => {
+      try {
+        const stats = await fs.stat(dir);
+        return stats.isDirectory() ? processDirectory(dir) : processFile(dir);
+      } catch (error) {
+        console.error(`Error accessing ${dir}: ${error.message}`);
+        return null;
+      }
+    })
+  );
+
+  const flatReport = report.flat().filter(Boolean);
+
+  if (flatReport.length === 0) {
+    console.error("No files were successfully processed.");
+    return;
+  }
+
+  const sum = flatReport.reduce((acc, curr) => {
+    for (const key in curr) {
+      if (key !== 'file') acc[key] = (acc[key] || 0) + curr[key];
+    }
+    return acc;
+  }, { file: 'TOTAL' });
+
+  sum.raw = Number(sum.raw.toFixed(3));
+  flatReport.push(sum);
+  console.table(flatReport, ['file', 'selectors', 'lines', 'raw', 'gzip', 'brotli']);
+}
