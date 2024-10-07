@@ -5,14 +5,11 @@ import { createDirectoryBasedOnFileNames } from "./createDirectoryBasedOnFileNam
 import { createPluginFiles } from "./createPluginFiles.js"
 
 export const generatePlugins = async ({ type, srcDir, distDir }) => {
-  let fileCount = 0;
   await fs.mkdir(distDir, { recursive: true })
   const cssFiles = await getFileNames(srcDir, ".css")
   for (const cssFile of cssFiles) {
     const jsContent = await cssToJs(`${srcDir}/${cssFile}.css`)
     const componentDir = await createDirectoryBasedOnFileNames(cssFile, ".css", distDir)
     await createPluginFiles(type, componentDir, jsContent)
-    fileCount++;
   }
-  return fileCount;
 }

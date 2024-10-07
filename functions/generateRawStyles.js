@@ -12,9 +12,6 @@ export async function generateRawStyles({ srcDir, distDir }) {
   const stylesDir = path.join(import.meta.dir, srcDir);
   const files = await getFileNames(stylesDir, '.css', false);
 
-  let fileCount = 0;
-  let totalSize = 0;
-
   for (const file of files) {
     const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), 'utf-8');
 
@@ -38,10 +35,7 @@ export async function generateRawStyles({ srcDir, distDir }) {
         // Extract only the content inside the curly braces
         const stylesContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
         await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent);
-        fileCount++;
-        totalSize += Buffer.byteLength(stylesContent, 'utf8');
       }
     }
   }
-  return { fileCount, totalSize };
 };

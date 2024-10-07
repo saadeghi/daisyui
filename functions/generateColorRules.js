@@ -93,6 +93,4 @@ export const generateColorRules = async ({ distDir }) => {
   }
 
   await compileAndWriteFile(generateStatesContent(), 'states.css');
-
-  return colorNames.length * styles.length * (1 + breakpoints.length + states.length);
 };

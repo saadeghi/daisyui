@@ -28,8 +28,6 @@ const processCssFile = (srcDir, filePath) => {
 
   // Write to a new JSON file
   fs.writeFileSync(outputFilePath, jsonString);
-
-  return classNames.length;
 }
 
 // Function to process all CSS files
@@ -38,11 +36,9 @@ export const extractClasses = ({ srcDir }) => {
   const stylesDir = path.join(__dirname, '..', 'css', srcDir);
   const cssFiles = fs.readdirSync(stylesDir).filter(file => file.endsWith('.css'));
 
-  // Process each CSS file and sum up the total number of class names
-  const totalClassNames = cssFiles.reduce((total, file) => {
+  // Process each CSS file
+  cssFiles.forEach(file => {
     const filePath = path.join(stylesDir, file);
-    return total + processCssFile(srcDir, filePath);
-  }, 0);
-
-  return totalClassNames;
+    processCssFile(srcDir, filePath);
+  });
 }

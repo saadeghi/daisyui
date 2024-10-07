@@ -1,4 +1,5 @@
 import fs from 'fs';
+import zlib from 'zlib';
 import { generateColorRules } from "./functions/generateColorRules.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
 import { generateRawStyles } from "./functions/generateRawStyles.js"
@@ -18,20 +19,67 @@ Promise.all([
   generateIndex('index.css'),
   generateFull('full.css'),
   extractClasses({ srcDir: 'components' }),
-]).then(async (results) => {
-  const minifyResult = await minifyAllFiles();
-  return [...results, minifyResult];
-}).then((results) => {
-  const [colorRules, basePlugins, baseStyles, componentPlugins, componentStyles, utilityPlugins, utilityStyles, index, full, componentClassnames, minifyResult] = results;
-  const tableData = [
-    { file: '/base', details: `${basePlugins} plugins, ${baseStyles.fileCount} CSS`, kB: baseStyles.totalSize / 1000 },
-    { file: '/components', details: `${componentPlugins} plugins, ${componentStyles.fileCount} CSS`, kB: componentStyles.totalSize / 1000 },
-    { file: '/utilities', details: `${utilityPlugins} plugins, ${utilityStyles.fileCount} CSS`, kB: utilityStyles.totalSize / 1000 },
-    { file: '/colors', details: `${colorRules} rules`, kB: fs.readdirSync('colors').reduce((acc, file) => acc + fs.statSync(`colors/${file}`).size, 0) / 1000 },
-    { file: 'index.css', details: `${index} rules`, kB: fs.statSync('index.css').size / 1000 },
-    { file: 'full.css', details: `${full} imports`, kB: fs.statSync('full.css').size / 1000 },
-    { file: 'extracted classname', details: `${componentClassnames}` },
-    { file: 'Minified', details: `${minifyResult.files} files, –${minifyResult.reduction / 1000} kB (-${minifyResult.percent}%)`, kB: minifyResult.minified / 1000 },
-  ];
-  console.table(tableData, ['file', 'details', 'kB']);
+]).then(async () => {
+  await minifyAllFiles();
+}).then(() => {
+
+  const directories = ['base', 'components', 'utilities', 'colors', 'index.css', 'full.css'];
+
+  const report = directories.flatMap((dir) => {
+    const isDirectory = fs.statSync(dir).isDirectory();
+    if (isDirectory) {
+      const files = fs.readdirSync(dir);
+      const cssFiles = files.filter((file) => file.endsWith('.css'));
+
+      return cssFiles.map((file) => {
+        const filePath = `${dir}/${file}`;
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const rulesCount = fileContent.split('}').length - 1;
+        const rawSize = fs.statSync(filePath).size / 1000;
+        const gzipSize = zlib.gzipSync(fileContent).length / 1000;
+        const brotliSize = zlib.brotliCompressSync(fileContent).length / 1000;
+        const linesCount = fileContent.split('\n').length;
+
+        return {
+          file: filePath,
+          rules: rulesCount,
+          lines: linesCount,
+          raw: rawSize,
+          gzip: gzipSize,
+          brotli: brotliSize,
+        };
+      });
+    } else {
+      const fileContent = fs.readFileSync(dir, 'utf8');
+      const rulesCount = (fileContent.match(/[;}]/g) || []).length;
+      const rawSize = fs.statSync(dir).size / 1000;
+      const gzipSize = zlib.gzipSync(fileContent).length / 1000;
+      const brotliSize = zlib.brotliCompressSync(fileContent).length / 1000;
+      const linesCount = fileContent.split('\n').length;
+
+      return {
+        file: dir,
+        rules: rulesCount,
+        lines: linesCount,
+        raw: rawSize,
+        gzip: gzipSize,
+        brotli: brotliSize,
+      };
+    }
+  });
+
+  const sum = report.reduce((acc, curr) => {
+    acc.rules += curr.rules;
+    acc.lines += curr.lines;
+    acc.raw += curr.raw;
+    acc.gzip += curr.gzip;
+    acc.brotli += curr.brotli;
+    return acc;
+  }, { file: 'TOTAL', rules: 0, lines: 0, raw: 0, gzip: 0, brotli: 0 });
+
+  sum.raw = Number(sum.raw.toFixed(3));
+  report.push(sum);
+  console.table(report, ['file', 'rules', 'lines', 'raw', 'gzip', 'brotli']);
+
+
 })

@@ -49,7 +49,8 @@ export const minifyAllFiles = async () => {
   const results = await Promise.all([
     minifyFiles(path.join('colors')),
     minifyFiles(path.join('base')),
-    minifyFiles(path.join('components'))
+    minifyFiles(path.join('components')),
+    minifyFiles(path.join('utilities'))
   ]);
 
   results.forEach(result => {

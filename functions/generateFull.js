@@ -55,9 +55,4 @@ export const generateFull = async (filename) => {
 
   // Write to file
   await fs.writeFile(`./${filename}`, content, 'utf8');
-
-  // Count the number of imports
-  const importCount = content.split('@import').length - 1;
-
-  return importCount;
 }
