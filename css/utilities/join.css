@@ -13,7 +13,7 @@
   }
 
   :first-child:not(:last-child) {
-    .join-item {
+    :where(.join-item) {
       --radius-join-start-start: var(--radius-btn);
       --radius-join-start-end: 0;
       --radius-join-end-start: var(--radius-btn);
@@ -29,7 +29,7 @@
   }
 
   :last-child:not(:first-child) {
-    .join-item {
+    :where(.join-item) {
       --radius-join-start-start: 0;
       --radius-join-start-end: var(--radius-btn);
       --radius-join-end-start: 0;
