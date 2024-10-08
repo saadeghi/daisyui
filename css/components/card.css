@@ -1,0 +1,151 @@
+.card {
+  @apply relative flex flex-col rounded-box;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  :where(figure:first-child) {
+    @apply overflow-hidden;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+    border-end-start-radius: unset;
+    border-end-end-radius: unset;
+  }
+
+  :where(figure:last-child) {
+    @apply overflow-hidden;
+    border-start-start-radius: unset;
+    border-start-end-radius: unset;
+    border-end-start-radius: inherit;
+    border-end-end-radius: inherit;
+  }
+
+  &.card-border {
+    @apply border-base-200 border;
+  }
+
+  &.image-full {
+    @apply grid;
+
+    &:before {
+      @apply relative bg-neutral rounded-box z-10 opacity-75 col-start-1 row-start-1;
+      content: "";
+    }
+
+    >* {
+      @apply col-start-1 row-start-1;
+    }
+
+    >.card-body {
+      @apply relative text-neutral-content z-20;
+    }
+
+    :where(figure) {
+      @apply overflow-hidden;
+      border-radius: inherit;
+    }
+
+    >figure img {
+      @apply h-full object-cover;
+    }
+  }
+
+  figure {
+    @apply flex items-center justify-center;
+  }
+}
+
+.card-title {
+  @apply flex items-center gap-2 text-xl font-semibold;
+}
+
+.card-body {
+  @apply flex flex-auto flex-col gap-2 p-8;
+
+  :where(p) {
+    @apply grow;
+  }
+}
+
+.card-actions {
+  @apply flex flex-wrap items-start gap-2;
+}
+
+.card-xs {
+  .card-body {
+    @apply p-2 text-xs;
+  }
+
+  .card-title {
+    @apply mb-1;
+  }
+}
+
+.card-sm {
+  .card-body {
+    @apply p-4 text-sm;
+  }
+
+  .card-title {
+    @apply mb-1;
+  }
+}
+
+.card-md {
+  .card-body {
+    @apply text-base p-8;
+  }
+
+  .card-title {
+    @apply mb-3;
+  }
+}
+
+.card-lg {
+  .card-body {
+    @apply text-base p-10;
+  }
+
+  .card-title {
+    @apply mb-4;
+  }
+}
+
+
+
+.card-side {
+  align-items: stretch;
+  flex-direction: row;
+
+  :where(figure:first-child) {
+    @apply overflow-hidden;
+    border-start-start-radius: inherit;
+    border-start-end-radius: unset;
+    border-end-start-radius: inherit;
+    border-end-end-radius: unset;
+  }
+
+  :where(figure:last-child) {
+    @apply overflow-hidden;
+    border-start-start-radius: unset;
+    border-start-end-radius: inherit;
+    border-end-start-radius: unset;
+    border-end-end-radius: inherit;
+  }
+
+  figure>* {
+    max-width: unset;
+  }
+
+  :where(figure>*) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
