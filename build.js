@@ -16,10 +16,10 @@ async function generateAllFiles() {
     generateRawStyles({ srcDir: '../css/components', distDir: '../components' }),
     generatePlugins({ type: "utility", srcDir: "css/utilities", distDir: "utilities" }),
     generateRawStyles({ srcDir: '../css/utilities', distDir: '../utilities' }),
-    generateIndex('index.css'),
-    generateFull('full.css'),
-    extractClasses({ srcDir: 'components' }),
   ]);
+  await generateIndex('index.css');
+  await generateFull('full.css');
+  await extractClasses({ srcDir: 'components' });
   await minifyAllFiles();
 }
 
