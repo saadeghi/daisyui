@@ -1,40 +1,44 @@
 import fs from 'fs/promises';
+import path from 'path';
 import { getFileNames } from './getFileNames';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 
-export const generateFull = async (filename) => {
-  try {
-    let content = `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@4.0.0-alpha.25/preflight.min.css) layer(base);\n`;
+const readFileContent = async (filePath) => {
+  return await fs.readFile(filePath, 'utf8');
+};
 
-    const themes = await getDirectoriesWithTargetFile('./themes', 'index.css', []);
-    themes.forEach(theme => {
-      content += `@import url(themes/${theme}/index.css) layer(themes);\n`;
-    });
+const readThemeCSS = async () => {
+  const themeDirs = await getDirectoriesWithTargetFile('./themes', 'index.css', []);
+  const themeContents = await Promise.all(
+    themeDirs.map(theme => readFileContent(path.join('./themes', theme, 'index.css')))
+  );
+  return themeContents.join('\n');
+};
 
-    const baseFiles = await getFileNames('./base', ".css", false);
-    baseFiles.forEach(filePath => {
-      content += `@import url(base/${filePath}.css) layer(base);\n`;
-    });
+const readCSSDirectories = async () => {
+  const directories = ['./base', './components', './utilities', './colors'];
 
-    const componentFiles = await getFileNames('./components', ".css", false);
-    componentFiles.forEach(filePath => {
-      content += `@import url(components/${filePath}.css) layer(components);\n`;
-    });
+  return Promise.all(directories.map(async (dir) => {
+    const files = await getFileNames(dir, '.css', false);
+    const contents = await Promise.all(
+      files.map(file => readFileContent(`${dir}/${file}.css`))
+    );
+    return contents.join('\n');
+  }));
+};
 
-    const utilityFiles = await getFileNames('./utilities', ".css", false);
-    utilityFiles.forEach(filePath => {
-      content += `@import url(utilities/${filePath}.css) layer(utilities);\n`;
-    });
+export const generateFull = async (file) => {
+  const contentArray = [
+    // Read preflight CSS
+    await readFileContent('node_modules/tailwindcss/preflight.css'),
 
-    // Load color files with specific ordering
-    const colorFiles = await getFileNames('./colors', ".css", false);
-    colorFiles.forEach(filePath => {
-      content += `@import url(colors/${filePath}.css) layer(utilities);\n`;
-    });
+    // Read theme CSS files
+    await readThemeCSS(),
 
-    // Write to file
-    await fs.writeFile(`./${filename}`, content, 'utf8');
-  } catch (error) {
-    throw new Error(`Failed to generate full CSS: ${error.message}`);
-  }
-}
+    // Read other CSS directories
+    ...(await readCSSDirectories())
+  ];
+
+  // Combine all content and write to file
+  await fs.writeFile(file, (await Promise.all(contentArray)).join('\n'));
+};

@@ -40,6 +40,7 @@
 		"components",
 		"utilities",
 		"index.css",
+		"chunks.css",
 		"full.css",
 		"functions/plugin.js"
 	],

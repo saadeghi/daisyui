@@ -57,14 +57,5 @@ export const report = async (directories) => {
     return;
   }
 
-  const sum = flatReport.reduce((acc, curr) => {
-    for (const key in curr) {
-      if (key !== 'file') acc[key] = (acc[key] || 0) + curr[key];
-    }
-    return acc;
-  }, { file: 'TOTAL' });
-
-  sum.raw = Number(sum.raw.toFixed(3));
-  flatReport.push(sum);
   console.table(flatReport, ['file', 'selectors', 'lines', 'raw', 'gzip', 'brotli']);
 }

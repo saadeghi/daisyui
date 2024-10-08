@@ -2,12 +2,13 @@ import { generateColorRules } from "./functions/generateColorRules.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
 import { generateRawStyles } from "./functions/generateRawStyles.js"
 import { generateIndex } from "./functions/generateIndex.js"
+import { generateChunks } from "./functions/generateChunks.js"
 import { generateFull } from "./functions/generateFull.js"
 import { extractClasses } from "./functions/extractClasses.js"
-import { minifyAllFiles } from "./functions/minify.js"
+import { minify, minifyCssInDirectory } from "./functions/minify.js"
 import { report } from "./functions/report.js"
 
-async function generateAllFiles() {
+async function generateFiles() {
   await Promise.all([
     generateColorRules({ distDir: '../colors' }),
     generatePlugins({ type: "base", srcDir: "css/base", distDir: "base" }),
@@ -18,20 +19,22 @@ async function generateAllFiles() {
     generateRawStyles({ srcDir: '../css/utilities', distDir: '../utilities' }),
   ]);
   await generateIndex('index.css');
+  await generateChunks('chunks.css');
   await generateFull('full.css');
   await extractClasses({ srcDir: 'components' });
-  await minifyAllFiles();
+  await minifyCssInDirectory(['colors', 'base', 'components', 'utilities']);
+  await minify('full.css');
 }
 
-async function main() {
+async function build() {
   try {
     console.time('Build');
-    await generateAllFiles();
+    await generateFiles();
     console.timeEnd('Build');
-    await report(['base', 'components', 'utilities', 'colors', 'index.css', 'full.css']);
+    await report(['base', 'components', 'utilities', 'colors', 'index.css', 'chunks.css', 'full.css']);
   } catch (error) {
     console.error("An error occurred during processing:", error);
   }
 }
 
-main();
+build();
