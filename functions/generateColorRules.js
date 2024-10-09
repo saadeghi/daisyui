@@ -18,11 +18,25 @@ export const generateColorRules = async ({ distDir }) => {
     ];
 
     const styles = [
-      'bg', 'to', 'via', 'from', 'text', 'ring',
-      'stroke', 'border', 'outline', 'ring-offset'
+      'bg',
+      'to',
+      'via',
+      'from',
+      'text',
+      // 'ring',
+      // 'stroke',
+      'border',
+      'outline',
+      // 'ring-offset'
     ];
 
-    const breakpoints = ['sm', 'md', 'lg', 'xl', '2xl'];
+    const breakpoints = [
+      'sm',
+      'md',
+      'lg',
+      'xl',
+      '2xl'
+    ];
 
     const states = ['hover', 'focus'];
 
