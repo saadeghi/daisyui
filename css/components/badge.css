@@ -1,8 +1,9 @@
 .badge {
-  @apply inline-flex items-center justify-center transition duration-200 ease-out h-5 text-sm leading-5 rounded-badge border text-base-content;
+  @apply inline-flex items-center justify-center duration-200 ease-out h-5 text-sm leading-5 rounded-badge border text-base-content;
   width: fit-content;
   padding-left: 0.563rem;
   padding-right: 0.563rem;
+  transition-property: color, background-color, box-shadow;
   background: var(--badge-color, var(--color-base-100));
   border-color: var(--badge-color, var(--color-base-200));
 

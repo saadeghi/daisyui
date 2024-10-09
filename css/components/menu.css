@@ -16,7 +16,8 @@
 
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-4 py-2 text-start transition duration-200 ease-out grid grid-flow-col content-start items-center gap-2;
+    @apply rounded-btn px-4 py-2 text-start duration-200 ease-out grid grid-flow-col content-start items-center gap-2;
+    transition-property: color, background-color, box-shadow;
     grid-auto-columns: minmax(auto, max-content) auto max-content;
     text-wrap: balance;
     user-select: none;

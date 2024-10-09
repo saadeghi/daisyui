@@ -8,7 +8,8 @@
 
 
   &:before {
-    @apply absolute max-w-xs rounded px-2 py-1 text-sm whitespace-normal opacity-0 transition delay-100 duration-200 ease-in-out text-center;
+    @apply absolute max-w-xs rounded px-2 py-1 text-sm whitespace-normal opacity-0 delay-100 duration-200 ease-in-out text-center;
+    transition-property: opacity;
     background-color: var(--tooltip-color);
     color: var(--tooltip-text-color);
     width: max-content;

@@ -7,7 +7,9 @@
   }
 
   .dropdown-content {
-    @apply absolute transition duration-200 ease-out;
+    @apply absolute duration-200 ease-out;
+    transition-property: opacity, scale;
+
   }
 
   &:not(details) {
