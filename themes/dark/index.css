@@ -1,4 +1,5 @@
-[data-theme="dark"] {
+[data-theme="dark"],
+:root:has(input.theme-controller[value=dark]:checked) {
   --color-base-100: oklch(25.33% 0.016 252.42);
   --color-base-200: oklch(23.26% 0.014 253.1);
   --color-base-300: oklch(21.15% 0.012 254.09);
