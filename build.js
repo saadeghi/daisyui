@@ -18,12 +18,14 @@ async function generateFiles() {
     generatePlugins({ type: "utility", srcDir: "css/utilities", distDir: "utilities" }),
     generateRawStyles({ srcDir: '../css/utilities', distDir: '../utilities' }),
   ]);
-  await generateIndex('index.css');
-  await generateChunks('chunks.css');
-  await generateFull('full.css');
-  await extractClasses({ srcDir: 'components' });
-  await minifyCssInDirectory(['colors', 'base', 'components', 'utilities']);
-  await minify('full.css');
+  await Promise.all([
+    generateIndex('index.css'),
+    generateChunks('chunks.css'),
+    generateFull('full.css'),
+    extractClasses({ srcDir: 'components' }),
+    minifyCssInDirectory(['colors', 'base', 'components', 'utilities']),
+    minify('full.css'),
+  ]);
 }
 
 async function build() {
