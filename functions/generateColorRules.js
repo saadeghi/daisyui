@@ -64,10 +64,29 @@ export const generateColorRules = async ({ distDir }) => {
       ).join('\n');
     };
 
-    const generateResponsiveContent = () => {
+    const generateResponsiveContent = (groupBreakpoints = true) => {
+      if (groupBreakpoints) {
+        return breakpoints.map(bp => {
+          const prefix = bp.match(/^\d/) ? `\\3${bp[0]}${bp.slice(1)}` : bp;
+          const classes = colorNames.flatMap(color =>
+            styles.map(style => `.${prefix}\\:${style}-${color}{@apply ${style}-${color};}`)
+          ).join('\n');
+          return `@media (min-width: ${getBreakpointWidth(bp)}) {\n${classes}\n}`;
+        }).join('\n\n');
+      }
       return colorNames.flatMap(color =>
         styles.flatMap(style => generateResponsiveVariants(style, color))
       ).join('\n');
+    };
+    const getBreakpointWidth = (breakpoint) => {
+      const widths = {
+        'sm': '40rem',
+        'md': '48rem',
+        'lg': '64rem',
+        'xl': '80rem',
+        '2xl': '96rem'
+      };
+      return widths[breakpoint] || '40rem'; // Default to 40rem if not found
     };
 
     const generateStatesContent = () => {
@@ -99,7 +118,13 @@ export const generateColorRules = async ({ distDir }) => {
         throw new Error('Invalid wrapper layer structure in compiled content');
       }
 
-      const extractedContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+      let extractedContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+
+      // For responsive.css, we need to preserve the media queries
+      if (fileName === 'responsive.css') {
+        extractedContent = extractedContent.replace(/&/g, '');
+      }
+
       const colorsDir = path.join(import.meta.dir, distDir);
       await fs.mkdir(colorsDir, { recursive: true });
       await fs.writeFile(path.join(colorsDir, fileName), extractedContent);
