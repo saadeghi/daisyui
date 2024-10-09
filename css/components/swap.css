@@ -6,8 +6,10 @@
   }
 
   >* {
-    @apply col-start-1 row-start-1 duration-200 ease-out;
+    @apply col-start-1 row-start-1;
     transition-property: transform, rotate, opacity;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 
   .swap-on,

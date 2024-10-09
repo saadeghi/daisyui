@@ -7,9 +7,10 @@
   }
 
   .dropdown-content {
-    @apply absolute duration-200 ease-out;
+    @apply absolute;
     transition-property: opacity, scale;
-
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   }
 
   &:not(details) {
@@ -50,7 +51,10 @@
 
   /* experimental */
   &[popover] {
-    @apply fixed transition text-inherit duration-200 ease-out z-[1000];
+    @apply fixed transition text-inherit z-[1000];
+    transition-property: opacity, scale;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 
     /* align-self: anchor-center; */
     /* justify-self: anchor-center; */

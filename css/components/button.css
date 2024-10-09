@@ -1,6 +1,8 @@
 .btn {
-  @apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center text-sm/none font-semibold no-underline outline-offset-2 duration-200 ease-out select-none align-middle h-10 px-4;
+  @apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center text-sm/none font-semibold no-underline outline-offset-2 select-none align-middle h-10 px-4;
   transition-property: color, background-color, background-image, border-color, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: .2s;
   border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
   border-start-end-radius: var(--radius-join-start-end, var(--radius-btn));
   border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));

@@ -29,7 +29,9 @@
     }
 
     &:focus-visible {
-      @apply transition-transform duration-300 ease-out;
+      transition-property: transform;
+      transition-duration: .3s;
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
       transform: translateY(-0.125em);
     }
   }

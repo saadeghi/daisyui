@@ -8,8 +8,8 @@
 
 
   &:before {
-    @apply absolute max-w-xs rounded px-2 py-1 text-sm whitespace-normal opacity-0 delay-100 duration-200 ease-in-out text-center;
-    transition-property: opacity;
+    @apply absolute max-w-xs rounded px-2 py-1 text-sm whitespace-normal opacity-0 text-center;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     background-color: var(--tooltip-color);
     color: var(--tooltip-text-color);
     width: max-content;
@@ -20,7 +20,8 @@
   }
 
   &:after {
-    @apply absolute opacity-0 transition delay-100 duration-200 ease-in-out;
+    @apply absolute opacity-0;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     content: "";
     border-style: solid;
     border-width: var(--tooltip-tail, 0);
@@ -80,7 +81,8 @@
 
     &:before,
     &:after {
-      @apply opacity-100 delay-75;
+      @apply opacity-100;
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
     }
   }
 }
