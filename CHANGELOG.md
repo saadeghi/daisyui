@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.13 (2024-10-09)
+
+
+### Bug Fixes
+
+* kbd default text color. closes: [#3228](https://github.com/saadeghi/daisyui/issues/3228) ([9ca1318](https://github.com/saadeghi/daisyui/commit/9ca13185641caafbcd3811d7a46776efc7b1c086))
+
 ## 4.12.12 (2024-10-04)
 
 
