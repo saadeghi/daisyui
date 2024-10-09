@@ -2,7 +2,8 @@
 /output.css
 /*.html
 /dist
-
+/.astro
+.astro/settings.json
 /src/components/*
 !/src/components/Demo.astro
 
