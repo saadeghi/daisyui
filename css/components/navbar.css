@@ -1,0 +1,25 @@
+.navbar {
+  @apply flex items-center w-full;
+  padding: var(--navbar-padding, 0.5rem);
+  min-height: 4rem;
+
+  :where(> *:not(script, style)) {
+    @apply inline-flex items-center;
+  }
+}
+
+
+
+.navbar-start {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.navbar-center {
+  @apply shrink-0;
+}
+
+.navbar-end {
+  width: 50%;
+  justify-content: flex-end;
+}

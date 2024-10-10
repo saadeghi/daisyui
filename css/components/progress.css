@@ -1,0 +1,177 @@
+.progress {
+  @apply relative w-full appearance-none overflow-hidden rounded-box bg-base-content/20 h-2;
+
+  &:indeterminate {
+    --progress-color: var(--color-base-content);
+    background-image: repeating-linear-gradient(90deg,
+        var(--progress-color) -1%,
+        var(--progress-color) 10%,
+        transparent 10%,
+        transparent 90%);
+    background-size: 200%;
+    background-position-x: 15%;
+    animation: progress-loading 5s ease-in-out infinite;
+
+    @supports (-moz-appearance: none) {
+      &::-moz-progress-bar {
+        @apply bg-transparent;
+        background-image: repeating-linear-gradient(90deg,
+            var(--progress-color) -1%,
+            var(--progress-color) 10%,
+            transparent 10%,
+            transparent 90%);
+        background-size: 200%;
+        background-position-x: 15%;
+        animation: progress-loading 5s ease-in-out infinite;
+      }
+    }
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-base-content rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-bar {
+      @apply rounded-box bg-transparent;
+    }
+
+    &::-webkit-progress-value {
+      @apply bg-base-content rounded-box;
+    }
+  }
+}
+
+.progress-primary {
+  &:indeterminate {
+    --progress-color: var(--color-primary);
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-primary rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-value {
+      @apply bg-primary;
+    }
+  }
+}
+
+.progress-secondary {
+  &:indeterminate {
+    --progress-color: var(--color-secondary);
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-secondary rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-value {
+      @apply bg-secondary;
+    }
+  }
+}
+
+.progress-accent {
+  &:indeterminate {
+    --progress-color: var(--color-accent);
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-accent rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-value {
+      @apply bg-accent;
+    }
+  }
+}
+
+.progress-info {
+  &:indeterminate {
+    --progress-color: var(--color-info);
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-info rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-value {
+      @apply bg-info;
+    }
+  }
+}
+
+.progress-success {
+  &:indeterminate {
+    --progress-color: var(--color-success);
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-success rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-value {
+      @apply bg-success;
+    }
+  }
+}
+
+.progress-warning {
+  &:indeterminate {
+    --progress-color: var(--color-warning);
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-warning rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-value {
+      @apply bg-warning;
+    }
+  }
+}
+
+.progress-error {
+  &:indeterminate {
+    --progress-color: var(--color-error);
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply bg-error rounded-box;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-value {
+      @apply bg-error;
+    }
+  }
+}
+
+@keyframes progress-loading {
+  50% {
+    background-position-x: -115%;
+  }
+}

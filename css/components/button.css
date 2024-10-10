@@ -148,7 +148,11 @@
 
   &:is(input[type=checkbox]),
   &:is(input[type=radio]) {
-    @apply w-auto appearance-none;
+    @apply appearance-none;
+
+    &:not(.btn-square, .btn-circle) {
+      @apply w-auto;
+    }
 
     &::after {
       @apply content-[attr(aria-label)];
