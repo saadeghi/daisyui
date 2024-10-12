@@ -133,9 +133,9 @@
 .btn-soft {
   &:not(.btn-active, :hover, :focus-visible) {
     @apply shadow-none;
-    color: var(--btn-bg);
-    background: color-mix(in oklab, var(--btn-bg) 8%, var(--color-base-200));
-    border-color: color-mix(in oklab, var(--btn-bg) 10%, var(--color-base-200));
+    color: var(--btn-bg, var(--color-base-content));
+    background: color-mix(in oklab, var(--btn-bg, var(--color-base-content)) 8%, var(--color-base-200));
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-content)) 10%, var(--color-base-200));
     --btn-flare: unset;
   }
 }
