@@ -46,7 +46,7 @@ const writeToFile = async (content, filename) => {
 };
 
 // Main function to generate CSS
-export const generateIndex = async (filename) => {
+export const generateIndexCss = async (filename) => {
   try {
     const { content: cssContent } = await generateCSSContent();
     await writeToFile(cssContent, filename);

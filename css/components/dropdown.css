@@ -73,7 +73,7 @@
       }
 
       &::backdrop {
-        @apply bg-black/30;
+        background-color: color-mix(in oklab, black 30%, transparent);
       }
     }
 

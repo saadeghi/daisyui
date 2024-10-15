@@ -9,7 +9,7 @@
   border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
   --btn-color: var(--btn-bg, var(--color-base-200));
   background-color: var(--btn-color);
-  border-width: var(--spacing-button-border);
+  border-width: var(--spacing-button-border, 1px);
   border-color: color-mix(in oklab, var(--btn-color), black 2%);
   box-shadow: 0 0 0 0.5px oklch(1 0 0 / 0.01) inset, var(--btn-shadow);
   background-origin: border-box;

@@ -1,7 +1,8 @@
 import { generateColorRules } from "./functions/generateColorRules.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
 import { generateRawStyles } from "./functions/generateRawStyles.js"
-import { generateIndex } from "./functions/generateIndex.js"
+import { generateIndexCss } from "./functions/generateIndexCss.js"
+import { generateIndexJs } from "./functions/generateIndexJs.js"
 import { generateChunks } from "./functions/generateChunks.js"
 import { generateFull } from "./functions/generateFull.js"
 import { extractClasses } from "./functions/extractClasses.js"
@@ -19,7 +20,8 @@ async function generateFiles() {
     generateRawStyles({ srcDir: '../css/utilities', distDir: '../utilities' }),
   ]);
 
-  await generateIndex('index.css')
+  await generateIndexCss('index.css')
+  await generateIndexJs('index.js')
   await generateChunks('chunks.css')
   await generateFull('full.css')
   await extractClasses({ srcDir: 'components' })

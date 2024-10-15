@@ -1,6 +1,8 @@
 @import "tailwindcss";
-@import "daisyui";
+@plugin "daisyui";
 
-/* @import "daisyui/themes/default.css"; */
+@import "daisyui/themes/index.css";
+@import "daisyui/themes/light/index.css";
+@import "daisyui/themes/dark/index.css";
 /* @import "daisyui/css/components/button.css"; */
 /* @import "daisyui/components/button"; */
