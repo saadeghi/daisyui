@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "XXpredev": "npm install && if ! [ -f src/components/Component.astro ]; then echo '<button class=\"btn\">Hello</button>' > src/components/Component.astro; fi",
-    "dev": "astro dev",
+    "dev": "astro dev --open",
     "build": "astro build",
     "preview": "astro preview"
   },
