@@ -19,18 +19,10 @@ export const createPluginFiles = async (type, componentDir, jsContent) => {
 
   // create config.js
   const configJsPath = path.join(componentDir, "config.js")
-  const configJsContent = `import { plugin } from '../../functions/plugin.js';
-import index from './index.js';
-
-export default {
-	plugins: [
-		plugin(({ ${types[type]} }) => {
-		${types[type]}({
-				...index
-			});
-		})
-	],
-};
+  const configJsContent = `import index from './index.js';
+export default ({ ${types[type]} }) => {
+	${types[type]}({...index})
+}
 `
   await fs.writeFile(configJsPath, configJsContent)
 }
