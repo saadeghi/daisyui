@@ -1,0 +1,114 @@
+.divider {
+  @apply flex flex-row items-center self-stretch my-4 h-4 whitespace-nowrap;
+
+  &:before,
+  &:after {
+    @apply h-0.5 w-full grow content-[''] bg-base-content/10;
+  }
+
+  &:not(:empty) {
+    @apply gap-4;
+  }
+}
+
+
+.divider-horizontal {
+  &.divider {
+    @apply mx-4 my-0 h-auto w-4 flex-col;
+
+    &:before {
+      @apply h-full w-0.5;
+    }
+
+    &:after {
+      @apply h-full w-0.5;
+    }
+  }
+}
+
+.divider-vertical {
+  &.divider {
+    @apply mx-0 my-4 h-4 w-auto flex-row;
+
+    &:before {
+      @apply h-0.5 w-full;
+    }
+
+    &:after {
+      @apply h-0.5 w-full;
+    }
+  }
+}
+
+.divider-neutral {
+
+  &:before,
+  &:after {
+    @apply bg-neutral;
+  }
+}
+
+.divider-primary {
+
+  &:before,
+  &:after {
+    @apply bg-primary;
+  }
+}
+
+.divider-secondary {
+
+  &:before,
+  &:after {
+    @apply bg-secondary;
+  }
+}
+
+.divider-accent {
+
+  &:before,
+  &:after {
+    @apply bg-accent;
+  }
+}
+
+.divider-success {
+
+  &:before,
+  &:after {
+    @apply bg-success;
+  }
+}
+
+.divider-warning {
+
+  &:before,
+  &:after {
+    @apply bg-warning;
+  }
+}
+
+.divider-info {
+
+  &:before,
+  &:after {
+    @apply bg-info;
+  }
+}
+
+.divider-error {
+
+  &:before,
+  &:after {
+    @apply bg-error;
+  }
+}
+
+
+.divider-start:before {
+  @apply hidden;
+}
+
+.divider-end:after {
+  @apply hidden;
+}
