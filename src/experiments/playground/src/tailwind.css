@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-  text: 'hi';
+  logs: true;
 }
 
 /* @plugin "daisyui/components/divider"; */
