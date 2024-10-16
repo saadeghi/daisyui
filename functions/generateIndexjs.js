@@ -1,5 +1,10 @@
 import fs from 'fs/promises';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
+const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
+
+const toSnakeCase = (str) => {
+  return str.replace(/-/g, '_');
+};
 
 // Generate the JS content
 const generateJSContent = async () => {
@@ -12,28 +17,39 @@ const generateJSContent = async () => {
     // Add base imports and content
     const base = await getDirectoriesWithTargetFile('./base', 'index.js', []);
     base.forEach(item => {
-      const importName = item.replace(/-./g, x => x[1].toUpperCase());
-      imports += `import ${importName} from './base/${item}/index.js';\n`;
+      const importName = `${toSnakeCase(item)}`;
+      imports += `import ${importName} from './base/${item}';\n`;
       addBaseContent += `    ...${importName},\n`;
+    });
+
+    // Add theme imports and content
+    const themes = await getDirectoriesWithTargetFile('./themes', 'index.css', []);
+    themes.forEach(item => {
+      if (item !== 'default') {
+        const importName = `${toSnakeCase(item)}`;
+        imports += `import ${importName} from './themes/${item}/index.css';\n`;
+        addBaseContent += `    ...${importName},\n`;
+      }
     });
 
     // Add component imports and content
     const components = await getDirectoriesWithTargetFile('./components', 'index.js', []);
     components.forEach(item => {
-      const importName = item.replace(/-./g, x => x[1].toUpperCase());
-      imports += `import ${importName} from './components/${item}/index.js';\n`;
+      const importName = `${toSnakeCase(item)}`;
+      imports += `import ${importName} from './components/${item}';\n`;
       addComponentsContent += `    ...${importName},\n`;
     });
 
     // Add utilities imports and content
     const utilities = await getDirectoriesWithTargetFile('./utilities', 'index.js', []);
     utilities.forEach(item => {
-      const importName = item.replace(/-./g, x => x[1].toUpperCase());
-      imports += `import ${importName} from './utilities/${item}/index.js';\n`;
+      const importName = `${toSnakeCase(item)}`;
+      imports += `import ${importName} from './utilities/${item}';\n`;
       addUtilitiesContent += `    ...${importName},\n`;
     });
 
     const content = `${imports}
+console.log('/*! 🌼 daisyUI ${packageJson.version} */')
 export default ({ addBase, addComponents, addUtilities }) => {
   addBase({
 ${addBaseContent.trimEnd()}
@@ -41,7 +57,9 @@ ${addBaseContent.trimEnd()}
   addComponents({
 ${addComponentsContent.trimEnd()}
   })
-  addUtilities({${addUtilitiesContent.trimEnd()} })
+  addUtilities({
+${addUtilitiesContent.trimEnd()}
+  })
 }
 `;
 
