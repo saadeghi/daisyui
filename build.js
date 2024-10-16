@@ -1,7 +1,6 @@
 import { generateColorRules } from "./functions/generateColorRules.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
 import { generateRawStyles } from "./functions/generateRawStyles.js"
-import { generateIndexCss } from "./functions/generateIndexCss.js"
 import { generateIndexJs } from "./functions/generateIndexJs.js"
 import { generateChunks } from "./functions/generateChunks.js"
 import { generateFull } from "./functions/generateFull.js"
@@ -20,7 +19,6 @@ async function generateFiles() {
     generateRawStyles({ srcDir: '../css/utilities', distDir: '../utilities' }),
   ]);
 
-  await generateIndexCss('index.css')
   await generateIndexJs('index.js')
   await generateChunks('chunks.css')
   await generateFull('full.css')
@@ -35,7 +33,7 @@ async function build() {
     console.time('Build');
     await generateFiles();
     console.timeEnd('Build');
-    await report(['base', 'components', 'utilities', 'colors', 'index.css', 'chunks.css', 'full.css']);
+    await report(['base', 'components', 'utilities', 'colors', 'chunks.css', 'full.css']);
   } catch (error) {
     console.error("An error occurred during processing:", error);
   }

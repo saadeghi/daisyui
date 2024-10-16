@@ -1,7 +1,7 @@
 import { promises as fs } from "fs"
 import path from "path"
 
-export const createPluginFiles = async (type, componentDir, jsContent) => {
+export const createPluginFiles = async (type, componentDir, jsContent, fileName) => {
 
   const types = {
     base: "addBase",
@@ -10,18 +10,14 @@ export const createPluginFiles = async (type, componentDir, jsContent) => {
   };
 
   // create index.js
-  const indexJsPath = path.join(componentDir, "index.js")
+  const indexJsPath = path.join(componentDir, "object.js")
   await fs.writeFile(indexJsPath, `export default ${jsContent};`)
 
-  // create index.css
-  const indexCssPath = path.join(componentDir, "index.css")
-  await fs.writeFile(indexCssPath, `@config "./config.js";\n`)
-
   // create config.js
-  const configJsPath = path.join(componentDir, "config.js")
-  const configJsContent = `import index from './index.js';
+  const configJsPath = path.join(componentDir, "index.js")
+  const configJsContent = `import ${fileName} from './object.js';
 export default ({ ${types[type]} }) => {
-	${types[type]}({...index})
+	${types[type]}({...${fileName}})
 }
 `
   await fs.writeFile(configJsPath, configJsContent)

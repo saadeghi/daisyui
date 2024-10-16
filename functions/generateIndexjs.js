@@ -2,10 +2,6 @@ import fs from 'fs/promises';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
 
-const toSnakeCase = (str) => {
-  return str.replace(/-/g, '_');
-};
-
 // Generate the JS content
 const generateJSContent = async () => {
   let imports = '';
@@ -17,41 +13,33 @@ const generateJSContent = async () => {
     // Add base imports and content
     const base = await getDirectoriesWithTargetFile('./base', 'index.js', []);
     base.forEach(item => {
-      const importName = `${toSnakeCase(item)}`;
+      const importName = `${item}`;
       imports += `import ${importName} from './base/${item}';\n`;
-      addBaseContent += `    ...${importName},\n`;
+      addBaseContent += `  ${importName}({ addBase });\n`;
     });
-
 
     // Add component imports and content
     const components = await getDirectoriesWithTargetFile('./components', 'index.js', []);
     components.forEach(item => {
-      const importName = `${toSnakeCase(item)}`;
+      const importName = `${item}`;
       imports += `import ${importName} from './components/${item}';\n`;
-      addComponentsContent += `    ...${importName},\n`;
+      addComponentsContent += `  ${importName}({ addComponents });\n`;
     });
 
     // Add utilities imports and content
     const utilities = await getDirectoriesWithTargetFile('./utilities', 'index.js', []);
     utilities.forEach(item => {
-      const importName = `${toSnakeCase(item)}`;
+      const importName = `${item}`;
       imports += `import ${importName} from './utilities/${item}';\n`;
-      addUtilitiesContent += `    ...${importName},\n`;
+      addUtilitiesContent += `  ${importName}({ addUtilities });\n`;
     });
 
     const content = `${imports}
 console.log('/*! 🌼 daisyUI ${packageJson.version} */')
 export default ({ addBase, addComponents, addUtilities }) => {
-  addBase({
-${addBaseContent.trimEnd()}
-  })
-  addComponents({
-${addComponentsContent.trimEnd()}
-  })
-  addUtilities({
-${addUtilitiesContent.trimEnd()}
-  })
-}
+${addBaseContent}
+${addComponentsContent}
+${addUtilitiesContent}}
 `;
 
     return { content };

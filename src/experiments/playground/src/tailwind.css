@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@plugin "daisyui";
+/* @plugin "daisyui"; */
+@plugin "daisyui/components/alert";
 
 @import "daisyui/themes/index.css";
 @import "daisyui/themes/light/index.css";

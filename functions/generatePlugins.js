@@ -10,6 +10,6 @@ export const generatePlugins = async ({ type, srcDir, distDir }) => {
   for (const cssFile of cssFiles) {
     const jsContent = await cssToJs(`${srcDir}/${cssFile}.css`)
     const componentDir = await createDirectoryBasedOnFileNames(cssFile, ".css", distDir)
-    await createPluginFiles(type, componentDir, jsContent)
+    await createPluginFiles(type, componentDir, jsContent, cssFile)
   }
 }
