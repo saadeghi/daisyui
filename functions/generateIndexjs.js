@@ -22,15 +22,6 @@ const generateJSContent = async () => {
       addBaseContent += `    ...${importName},\n`;
     });
 
-    // Add theme imports and content
-    const themes = await getDirectoriesWithTargetFile('./themes', 'index.css', []);
-    themes.forEach(item => {
-      if (item !== 'default') {
-        const importName = `${toSnakeCase(item)}`;
-        imports += `import ${importName} from './themes/${item}/index.css';\n`;
-        addBaseContent += `    ...${importName},\n`;
-      }
-    });
 
     // Add component imports and content
     const components = await getDirectoriesWithTargetFile('./components', 'index.js', []);
