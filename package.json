@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"name": "daisyui",
-	"version": "5.0.0-alpha.13",
+	"version": "5.0.0-alpha.14",
 	"description": "daisyUI - Tailwind CSS Components",
 	"author": "Pouya Saadeghi",
 	"license": "MIT",
@@ -39,7 +39,6 @@
 		"base",
 		"components",
 		"utilities",
-		"index.css",
 		"index.js",
 		"chunks.css",
 		"full.css"

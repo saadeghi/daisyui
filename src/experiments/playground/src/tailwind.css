@@ -1,8 +1,13 @@
 @import "tailwindcss";
-/* @plugin "daisyui"; */
-@plugin "daisyui/components/alert";
 
-@import "daisyui/themes/index.css";
+@plugin "daisyui" {
+  text: 'hi';
+}
+
+/* @plugin "daisyui/components/divider"; */
+/* @plugin "daisyui/components/alert"; */
+
+/* @import "daisyui/themes/index.css"; */
 @import "daisyui/themes/light/index.css";
 @import "daisyui/themes/dark/index.css";
 /* @import "daisyui/css/components/button.css"; */
