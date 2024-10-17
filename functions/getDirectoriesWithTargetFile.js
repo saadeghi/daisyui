@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-export const getDirectoriesWithTargetFile = async (directory, targetFile, ignoreDirs) => {
+export const getDirectoriesWithTargetFile = async (directory, targetFile) => {
   const files = await fs.readdir(directory);
   const filteredDirs = [];
 
@@ -9,7 +9,7 @@ export const getDirectoriesWithTargetFile = async (directory, targetFile, ignore
     const filePath = path.join(directory, file);
     const stats = await fs.stat(filePath);
 
-    if (stats.isDirectory() && !ignoreDirs.includes(file)) {
+    if (stats.isDirectory()) {
       try {
         await fs.access(path.join(filePath, targetFile));
         filteredDirs.push(file);

@@ -13,7 +13,7 @@ const generateJSContent = async () => {
 
   try {
     // Add base imports and content
-    const base = await getDirectoriesWithTargetFile('./base', 'index.js', []);
+    const base = await getDirectoriesWithTargetFile('./base', 'index.js');
     base.forEach(item => {
       const importName = `${item}`;
       imports += `import ${importName} from './base/${item}';\n`;
@@ -21,7 +21,7 @@ const generateJSContent = async () => {
     });
 
     // Add component imports and content
-    const components = await getDirectoriesWithTargetFile('./components', 'index.js', []);
+    const components = await getDirectoriesWithTargetFile('./components', 'index.js');
     components.forEach(item => {
       const importName = `${item}`;
       imports += `import ${importName} from './components/${item}';\n`;
@@ -29,7 +29,7 @@ const generateJSContent = async () => {
     });
 
     // Add utilities imports and content
-    const utilities = await getDirectoriesWithTargetFile('./utilities', 'index.js', []);
+    const utilities = await getDirectoriesWithTargetFile('./utilities', 'index.js');
     utilities.forEach(item => {
       const importName = `${item}`;
       imports += `import ${importName} from './utilities/${item}';\n`;
@@ -85,6 +85,19 @@ const writeToFile = async (content, filename) => {
     await fs.writeFile(filename, content, 'utf8');
   } catch (error) {
     throw new Error(`Failed to write file ${filename}: ${error.message}`);
+  }
+};
+
+// Main function to generate JS
+export const generateIndexJs = async (filename) => {
+  try {
+    const { content: jsContent } = await generateJSContent();
+    await writeToFile(jsContent, filename);
+  } catch (error) {
+    throw new Error(`Failed to generate index.js: ${error.message}`);
+  }
+};
+ throw new Error(`Failed to write file ${filename}: ${error.message}`);
   }
 };
 
