@@ -1,7 +1,8 @@
 import fs from 'fs/promises';
-import defaultTheme from './defaultTheme';
+import variables from './variables';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
-import { loadAllThemes } from './loadThemes';
+import { processThemes } from './processTheme';
+
 const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
 
 // Generate the JS content
@@ -12,6 +13,9 @@ const generateJSContent = async () => {
   let addUtilitiesContent = '';
 
   try {
+    // Process themes
+    const themes = await processThemes();
+
     // Add base imports and content
     const base = await getDirectoriesWithTargetFile('./base', 'index.js');
     base.forEach(item => {
@@ -36,12 +40,8 @@ const generateJSContent = async () => {
       addUtilitiesContent += `      ${importName}({ addUtilities });\n`;
     });
 
-    const allThemes = loadAllThemes();
     const content = `import { plugin } from './functions/plugin.js';
-import { processThemes, handleThemeErrors } from './functions/processThemes.js';
 ${imports}
-      const allThemes = ${JSON.stringify(allThemes)
-      };
 
 export default plugin.withOptions(
   (options = {
@@ -50,15 +50,30 @@ export default plugin.withOptions(
     themes: ['light --default', 'dark --prefersDark'],
   }) => {
     return ({ addBase, addComponents, addUtilities }) => {
-      const { logs, themes=  ['light --default', 'dark --prefersDark'], themeRoot = ":root" } = options;
+      const { logs, themes, themeRoot = ":root" } = options;
       if (options.logs !== false) {
         console.log('/*! 🌼 daisyUI ${packageJson.version} */')
       }
-      const { themeTokens, hasDefaultTheme, hasPrefersDarkTheme } = processThemes(themes, themeRoot, addBase, allThemes);
 
-      if (!handleThemeErrors(themeTokens)) {
-        return;
-      }
+      let themesContent = '';
+      options.themes.forEach(themeOption => {
+        const [themeName, flag] = themeOption.split(' ');
+        if (themes[themeName]) {
+        let selector = ':root:has(input.theme-controller[value=' + themeName + ']:checked),[data-theme='+themeName+']';
+          let themeCSS = JSON.stringify(themes[themeName]);
+
+          if (flag === '--default') {
+          selector = ':root,' + selector;
+          }
+
+          themesContent += '      addBase({' + '"' + selector + '": ' + themeCSS + '});';
+
+          if (flag === '--prefersDark') {
+            themesContent += '      addBase({"@media (prefers-color-scheme: dark)": {":root": ' + themeCSS + '}});';
+          }
+        }
+      });
+
 ${addBaseContent}
 ${addComponentsContent}
 ${addUtilitiesContent}
@@ -67,7 +82,7 @@ ${addUtilitiesContent}
   (options) => {
     return {
       theme: {
-        extend: ${JSON.stringify(defaultTheme, null, 2)}
+        extend: ${JSON.stringify(variables, null, 2)}
       }
     }
   }
@@ -89,20 +104,7 @@ const writeToFile = async (content, filename) => {
 };
 
 // Main function to generate JS
-export const generateIndexJs = async (filename) => {
-  try {
-    const { content: jsContent } = await generateJSContent();
-    await writeToFile(jsContent, filename);
-  } catch (error) {
-    throw new Error(`Failed to generate index.js: ${error.message}`);
-  }
-};
- throw new Error(`Failed to write file ${filename}: ${error.message}`);
-  }
-};
-
-// Main function to generate JS
-export const generateIndexJs = async (filename) => {
+export const generateIndex = async (filename) => {
   try {
     const { content: jsContent } = await generateJSContent();
     await writeToFile(jsContent, filename);

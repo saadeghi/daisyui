@@ -7,7 +7,7 @@ export async function generateRawStyles({ srcDir, distDir }) {
   try {
     const [defaultTheme, theme] = await Promise.all([
       fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
-      fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),
+      fs.readFile(path.join(import.meta.dir, './variables.css'), 'utf-8'),
     ]);
 
     const stylesDir = path.join(import.meta.dir, srcDir);

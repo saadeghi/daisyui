@@ -3,8 +3,13 @@ import path from 'path';
 import { getFileNames } from './getFileNames';
 
 export const wrapContent = (themeName, content) => {
-  return `[data-theme="${themeName}"],
-:root:has(input.theme-controller[value=${themeName}]:checked) {
+  if (themeName === 'light') {
+    return `:root,:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"] {
+${content}}
+`;
+  }
+
+  return `:root:has(input.theme-controller[value=${themeName}]:checked),[data-theme="${themeName}"] {
 ${content}}
 `;
 };

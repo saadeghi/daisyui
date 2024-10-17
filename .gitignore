@@ -14,5 +14,6 @@ yarn.lock
 /base
 /components
 /utilities
+/theme
 
 /*.css

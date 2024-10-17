@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const loadAllThemes = () => {
-  const themesDir = path.join(__dirname, '../themes');
+  const themesDir = path.join(__dirname, '../theme');
   const themeObjects = {};
 
   fs.readdirSync(themesDir).forEach(themeName => {

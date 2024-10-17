@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"name": "daisyui",
-	"version": "5.0.0-alpha.16",
+	"version": "5.0.0-alpha.17",
 	"description": "daisyUI - Tailwind CSS Components",
 	"author": "Pouya Saadeghi",
 	"license": "MIT",
@@ -34,14 +34,12 @@
 	],
 	"main": "index.js",
 	"files": [
-		"themes",
-		"colors",
-		"base",
-		"components",
+    "base",
+    "colors",
+    "components",
+    "functions/plugin.js",
+		"theme",
 		"utilities",
-		"functions/plugin.js",
-		"functions/processThemes.js",
-		"css/themes",
 		"index.js",
 		"chunks.css",
 		"full.css"

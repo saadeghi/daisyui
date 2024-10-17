@@ -6,7 +6,7 @@ export const generateColorRules = async ({ distDir }) => {
   try {
     const [defaultTheme, theme] = await Promise.all([
       fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
-      fs.readFile(path.join(import.meta.dir, '../themes/index.css'), 'utf-8'),
+      fs.readFile(path.join(import.meta.dir, './variables.css'), 'utf-8'),
     ]);
 
     const colorNames = [

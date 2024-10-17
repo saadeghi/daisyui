@@ -6,9 +6,9 @@ export const generateChunks = async (filename) => {
   try {
     let content = `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@4.0.0-alpha.25/preflight.min.css) layer(base);\n`;
 
-    const themes = await getDirectoriesWithTargetFile('./themes', 'index.css');
+    const themes = await getDirectoriesWithTargetFile('./theme', 'index.css');
     themes.forEach(theme => {
-      content += `@import url(themes/${theme}/index.css) layer(themes);\n`;
+      content += `@import url(theme/${theme}/index.css) layer(themes);\n`;
     });
 
     const baseFiles = await getFileNames('./base', ".css", false);
