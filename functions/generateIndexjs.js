@@ -35,25 +35,26 @@ const generateJSContent = async () => {
       addUtilitiesContent += `      ${importName}({ addUtilities });\n`;
     });
 
-    const content = `${imports}
-const plugin = {
-  withOptions: (pluginFunction, configFunction = () => ({})) => {
-    const optionsFunction = (options) => ({
-      handler: pluginFunction(options),
-      config: configFunction(options),
-    });
-    optionsFunction.__isOptionsFunction = true;
-    return optionsFunction;
-  }
-};
+    const content = `import { plugin } from './functions/plugin.js';
+import { processThemes, handleThemeErrors } from './functions/processThemes.js';
+${imports}
+
 export default plugin.withOptions(
   (options = {
-    logs: true
+    logs: true,
+    themeRoot: ":root",
+    themes: ['light --default', 'dark --prefersDark'],
   }) => {
     return ({ addBase, addComponents, addUtilities }) => {
-if (options.logs !== false) {
-  console.log('/*! 🌼 daisyUI ${packageJson.version} */')
-}
+      const { logs, themes, themeRoot = ":root" } = options;
+      if (options.logs !== false) {
+        console.log('/*! 🌼 daisyUI ${packageJson.version} */')
+      }
+      const { themeTokens, hasDefaultTheme, hasPrefersDarkTheme } = processThemes(themes, themeRoot, addBase);
+
+      if (!handleThemeErrors(themeTokens, hasDefaultTheme, addBase, themeRoot)) {
+        return;
+      }
 ${addBaseContent}
 ${addComponentsContent}
 ${addUtilitiesContent}

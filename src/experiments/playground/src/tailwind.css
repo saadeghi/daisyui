@@ -2,13 +2,17 @@
 
 @plugin "daisyui" {
   logs: true;
+  themes: src/mytheme.css --default, light, dark --prefersDark;
 }
 
 /* @plugin "daisyui/components/divider"; */
 /* @plugin "daisyui/components/alert"; */
+/* @plugin "daisyui/css/themes/theme.js" {
+  themes: src/mytheme.css --default, light, dark --prefersDark;
+} */
 
 /* @import "daisyui/themes/index.css"; */
-@import "daisyui/themes/light/index.css";
-@import "daisyui/themes/dark/index.css";
+/* @import "daisyui/themes/light/index.css"; */
+/* @import "daisyui/themes/dark/index.css"; */
 /* @import "daisyui/css/components/button.css"; */
 /* @import "daisyui/components/button"; */

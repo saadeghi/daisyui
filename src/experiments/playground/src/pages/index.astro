@@ -1,6 +1,6 @@
 ---
 import Main from "../layouts/Main.astro"
-const pages = await Astro.glob("./*.astro")
+const pages = await import.meta.glob("./*.astro")
 ---
 
 <Main>
@@ -19,10 +19,10 @@ const pages = await Astro.glob("./*.astro")
     <ul class="menu w-full max-w-lg border border-base-content/10 rounded-box">
       <li class="menu-title">Pages</li>
       {
-        pages.map((page) => (
+        Object.entries(pages).map(([path, page]) => (
           <li>
-            <a class="font-mono" href={page.url}>
-              {page.url}
+            <a class="font-mono" href={path.replace('./','/')}>
+              {path.replace('./','/')}
             </a>
           </li>
         ))
