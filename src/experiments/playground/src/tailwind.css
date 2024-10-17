@@ -1,43 +1,42 @@
 @import "tailwindcss";
 
 /* @plugin "daisyui"; */
+
 @plugin "daisyui" {
   logs: true;
   themes: cupcake --default, light, dark --prefersDark;
 }
 
-
 @plugin "daisyui/theme" {
   name: "my-custom-theme";
   default: false;
   prefersDark: false;
-  color-scheme: dark;
-  --color-base-100: oklch(37.45% 0.0778 61.78);
-  --color-base-200: oklch(35.45% 0.0778 61.78);
-  --color-base-300: oklch(32.45% 0.0778 61.78);
-  --color-base-content: oklch(97.8078% 0.029596 256.84795);
-  --color-primary: oklch(49.12% 0.3096 275.75);
-  --color-primary-content: oklch(89.824% 0.06192 275.75);
-  --color-secondary: oklch(69.71% 0.329 342.55);
-  --color-secondary-content: oklch(98.71% 0.0106 342.55);
-  --color-accent: oklch(76.76% 0.184 183.61);
-  --color-accent-content: oklch(15.352% 0.0368 183.61);
-  --color-neutral: oklch(30.45% 0.0778 61.78);
-  --color-neutral-content: oklch(89.4994% 0.011585 252.096176);
-  --color-info: oklch(72.06% 0.191 231.6);
-  --color-info-content: oklch(0% 0 0);
-  --color-success: oklch(64.8% 0.15 160);
-  --color-success-content: oklch(0% 0 0);
-  --color-warning: oklch(84.71% 0.199 83.87);
-  --color-warning-content: oklch(0% 0 0);
-  --color-error: oklch(71.76% 0.221 22.18);
-  --color-error-content: oklch(0% 0 0);
-  --radius-badge: 1.9rem;
-  --radius-btn: 0.5rem;
-  --radius-box: 1rem;
+  color-scheme: light;
+  --color-base-100: oklch(98% 0.02 240);
+  --color-base-200: oklch(95% 0.03 240);
+  --color-base-300: oklch(92% 0.04 240);
+  --color-base-content: oklch(20% 0.05 240);
+  --color-primary: oklch(55% 0.3 240);
+  --color-primary-content: oklch(98% 0.01 240);
+  --color-secondary: oklch(70% 0.25 200);
+  --color-secondary-content: oklch(98% 0.01 200);
+  --color-accent: oklch(65% 0.25 160);
+  --color-accent-content: oklch(98% 0.01 160);
+  --color-neutral: oklch(50% 0.05 240);
+  --color-neutral-content: oklch(98% 0.01 240);
+  --color-info: oklch(70% 0.2 220);
+  --color-info-content: oklch(98% 0.01 220);
+  --color-success: oklch(65% 0.25 140);
+  --color-success-content: oklch(98% 0.01 140);
+  --color-warning: oklch(80% 0.25 80);
+  --color-warning-content: oklch(20% 0.05 80);
+  --color-error: oklch(65% 0.3 30);
+  --color-error-content: oklch(98% 0.01 30);
+  --radius-badge: 0.5rem;
+  --radius-btn: 0.25rem;
+  --radius-box: 0.5rem;
   --spacing-button-border: 1px;
   --spacing-tab-border: 1px;
-
 }
 
 /* @plugin "daisyui/components/divider"; */

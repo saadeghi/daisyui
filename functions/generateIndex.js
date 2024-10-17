@@ -71,7 +71,7 @@ export default plugin.withOptions(
           addBase({ [selector]: allThemes[themeName] });
 
           if (flag === '--prefersDark') {
-            addBase({"@media (prefers-color-scheme: dark)": {themeRoot: allThemes[themeName]}});
+            addBase({"@media (prefers-color-scheme: dark)": {[themeRoot]: allThemes[themeName]}});
           }
         }
       };
