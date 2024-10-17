@@ -5,6 +5,7 @@ import { generateIndex } from "./functions/generateIndex.js"
 import { generateChunks } from "./functions/generateChunks.js"
 import { generateFull } from "./functions/generateFull.js"
 import { generateThemeFiles } from "./functions/generateThemeFiles.js"
+import { generateThemes } from "./functions/generateThemes.js"
 import { extractClasses } from "./functions/extractClasses.js"
 import { copyFile } from "./functions/copyFile.js"
 import { minify, minifyCssInDirectory } from "./functions/minify.js"
@@ -27,9 +28,11 @@ async function generateFiles() {
   await generateIndex('index.js')
   await generateChunks('chunks.css')
   await generateFull('full.css')
+  await generateThemes('themes.css')
   await extractClasses({ srcDir: 'components' })
   await minifyCssInDirectory(['colors', 'base', 'components', 'utilities'])
   await minify('full.css')
+  await minify('themes.css')
 
 }
 
@@ -38,7 +41,7 @@ async function build() {
     console.time('Build');
     await generateFiles();
     console.timeEnd('Build');
-    await report(['base', 'components', 'utilities', 'colors', 'chunks.css', 'full.css']);
+    await report(['base', 'components', 'utilities', 'colors', 'chunks.css', 'themes.css', 'full.css']);
   } catch (error) {
     console.error("An error occurred during processing:", error);
   }

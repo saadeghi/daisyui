@@ -42,7 +42,8 @@
 		"utilities",
 		"index.js",
 		"chunks.css",
-		"full.css"
+		"full.css",
+		"themes.css"
 	],
 	"engines": {
 		"node": ">=16.9.0"
