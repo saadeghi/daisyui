@@ -12,7 +12,6 @@ export const copyFile = async (from, to, newName = null) => {
     }
 
     await fs.copyFile(from, destPath);
-    console.log(`File copied successfully from ${from} to ${destPath}`);
   } catch (error) {
     console.error(`Error copying file from ${from} to ${to}:`, error);
   }

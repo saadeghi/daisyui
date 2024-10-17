@@ -8,7 +8,7 @@ const readFileContent = async (filePath) => {
 };
 
 const readThemeCSS = async () => {
-  const themeDirs = await getDirectoriesWithTargetFile('./theme', 'index.css');
+  const themeDirs = ['light', 'dark'];
   const themeContents = await Promise.all(
     themeDirs.map(theme => readFileContent(path.join('./theme', theme, 'index.css')))
   );

@@ -14,7 +14,7 @@ ${content}}
 `;
 };
 
-export const generateThemes = async ({ srcDir, distDir }) => {
+export const generateThemeFiles = async ({ srcDir, distDir }) => {
   const themeNames = await getFileNames(srcDir, '.css');
 
   for (const themeName of themeNames) {

@@ -4,7 +4,7 @@ import { generateRawStyles } from "./functions/generateRawStyles.js"
 import { generateIndex } from "./functions/generateIndex.js"
 import { generateChunks } from "./functions/generateChunks.js"
 import { generateFull } from "./functions/generateFull.js"
-import { generateThemes } from "./functions/generateThemes.js"
+import { generateThemeFiles } from "./functions/generateThemeFiles.js"
 import { extractClasses } from "./functions/extractClasses.js"
 import { copyFile } from "./functions/copyFile.js"
 import { minify, minifyCssInDirectory } from "./functions/minify.js"
@@ -14,7 +14,7 @@ async function generateFiles() {
   await Promise.all([
     generateColorRules({ distDir: '../colors' }),
     generatePlugins({ type: "base", srcDir: "css/themes", distDir: "theme" }),
-    generateThemes({ srcDir: "css/themes", distDir: "theme" }),
+    generateThemeFiles({ srcDir: "css/themes", distDir: "theme" }),
     copyFile('./functions/themePlugin.js', './theme/themePlugin.js', 'index.js'),
     generatePlugins({ type: "base", srcDir: "css/base", distDir: "base" }),
     generateRawStyles({ srcDir: '../css/base', distDir: '../base' }),
