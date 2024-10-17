@@ -21,8 +21,8 @@ const pages = await import.meta.glob("./*.astro")
       {
         Object.entries(pages).map(([path, page]) => (
           <li>
-            <a class="font-mono" href={path.replace('./','/')}>
-              {path.replace('./','/')}
+            <a class="font-mono" href={path.replace('./','/').replace('.astro','')}>
+              {path.replace('./','/').replace('.astro','')}
             </a>
           </li>
         ))
