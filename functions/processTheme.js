@@ -1,7 +1,7 @@
 import path from 'path';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile.js';
 
-export const processThemes = async () => {
+export const processTheme = async () => {
   const themeDirectories = await getDirectoriesWithTargetFile('./theme', 'object.js');
   const themes = {};
 

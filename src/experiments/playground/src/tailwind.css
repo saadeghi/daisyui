@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
+/* @plugin "daisyui"; */
 @plugin "daisyui" {
   logs: true;
-  themes: cupcake, light, dark --prefersDark;
+  themes: cupcake --default, light, dark --prefersDark;
 }
+
 
 @plugin "daisyui/theme" {
   name: "my-custom-theme";
-  default: true;
+  default: false;
   prefersDark: false;
   color-scheme: dark;
   --color-base-100: oklch(37.45% 0.0778 61.78);
