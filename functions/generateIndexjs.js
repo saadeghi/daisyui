@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import defaultTheme from './defaultTheme';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
+import { loadAllThemes } from './loadThemes';
 const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
 
 // Generate the JS content
@@ -35,9 +36,12 @@ const generateJSContent = async () => {
       addUtilitiesContent += `      ${importName}({ addUtilities });\n`;
     });
 
+    const allThemes = loadAllThemes();
     const content = `import { plugin } from './functions/plugin.js';
 import { processThemes, handleThemeErrors } from './functions/processThemes.js';
 ${imports}
+      const allThemes = ${JSON.stringify(allThemes)
+      };
 
 export default plugin.withOptions(
   (options = {
@@ -46,13 +50,13 @@ export default plugin.withOptions(
     themes: ['light --default', 'dark --prefersDark'],
   }) => {
     return ({ addBase, addComponents, addUtilities }) => {
-      const { logs, themes, themeRoot = ":root" } = options;
+      const { logs, themes=  ['light --default', 'dark --prefersDark'], themeRoot = ":root" } = options;
       if (options.logs !== false) {
         console.log('/*! 🌼 daisyUI ${packageJson.version} */')
       }
-      const { themeTokens, hasDefaultTheme, hasPrefersDarkTheme } = processThemes(themes, themeRoot, addBase);
+      const { themeTokens, hasDefaultTheme, hasPrefersDarkTheme } = processThemes(themes, themeRoot, addBase, allThemes);
 
-      if (!handleThemeErrors(themeTokens, hasDefaultTheme, addBase, themeRoot)) {
+      if (!handleThemeErrors(themeTokens)) {
         return;
       }
 ${addBaseContent}
