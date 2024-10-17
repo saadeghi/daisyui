@@ -26,7 +26,6 @@ export const generateThemes = async (outputFile) => {
     // Write the combined theme content to the output file
     await fs.writeFile(outputFile, themeContent);
 
-    console.log(`Themes have been generated and written to ${outputFile}`);
   } catch (error) {
     console.error('Error generating themes:', error);
   }
