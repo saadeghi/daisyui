@@ -1,4 +1,5 @@
 import { plugin } from '../functions/plugin.js';
+import allThemes from './object.js';
 
 export default plugin.withOptions(
   (options = {}) => {
@@ -8,17 +9,28 @@ export default plugin.withOptions(
         default: isDefault = false,
         prefersDark = false,
         'color-scheme': colorScheme,
-        ...themeTokens
+        ...customThemeTokens
       } = options;
 
-      let selector = `[data-theme="${name}"]`;
+      let selector = `:root:has(input.theme-controller[value=${name}]:checked),[data-theme="${name}"]`;
       if (isDefault) {
         selector = `:root,${selector}`;
       }
 
+      // Merge custom theme with built-in theme if it exists
+      let themeTokens = { ...customThemeTokens };
+      if (allThemes[name]) {
+        const builtinTheme = allThemes[name];
+        themeTokens = {
+          ...builtinTheme,
+          ...customThemeTokens,
+          'color-scheme': colorScheme || builtinTheme.colorScheme
+        };
+      }
+
       const baseStyles = {
         [selector]: {
-          'color-scheme': colorScheme,
+          'color-scheme': themeTokens['color-scheme'] || colorScheme,
           ...themeTokens
         }
       };

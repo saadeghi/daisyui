@@ -26,14 +26,16 @@ export const pluginOptionsHandler = (() => {
       }
     };
 
-    if (Array.isArray(themes)) {
-      themes.forEach(themeOption => {
-        const [themeName, ...flags] = themeOption.split(' ');
+    if (themes) {
+      if (Array.isArray(themes)) {
+        themes.forEach(themeOption => {
+          const [themeName, ...flags] = themeOption.split(' ');
+          applyTheme(themeName, flags);
+        });
+      } else {
+        const [themeName, ...flags] = themes.split(' ');
         applyTheme(themeName, flags);
-      });
-    } else {
-      const [themeName, ...flags] = themes.split(' ');
-      applyTheme(themeName, flags);
+      }
     }
   };
 })();
