@@ -1,8 +1,6 @@
 import fs from 'fs/promises';
-import variables from './variables';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 import { processTheme } from './processTheme';
-import { loadAllThemes } from './loadThemes';
 const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
 
 // Generate the JS content
@@ -40,51 +38,18 @@ const generateJSContent = async () => {
       addUtilitiesContent += `      ${importName}({ addUtilities });\n`;
     });
 
-    const allThemes = loadAllThemes();
     const content = `import { plugin } from './functions/plugin.js';
+import { pluginOptionsHandler } from './functions/pluginOptionsHandler.js';
+import variables from './functions/variables.js';
+import allThemes from './theme/object.js';
+
 ${imports}
-const allThemes = ${JSON.stringify(allThemes)};
+
 export default plugin.withOptions(
-  (options = {
-    logs: true,
-    themeRoot: ":root",
-    themes: ['light --default', 'dark --prefersDark'],
-  }) => {
+  (options) => {
     return ({ addBase, addComponents, addUtilities }) => {
-      const {
-        logs=true,
-        themes=['light --default', 'dark --prefersDark'],
-        themeRoot = ":root"
-      } = options;
-      if (options.logs !== false) {
-        console.log('/*! 🌼 daisyUI ${packageJson.version} */')
-      }
 
-      let themesContent = '';
-      const applyTheme = (themeName, flag) => {
-        if (allThemes[themeName]) {
-          let selector = themeRoot+':has(input.theme-controller[value=' + themeName + ']:checked),[data-theme='+themeName+']';
-          let themeCSS = JSON.stringify(allThemes[themeName]);
-          if (flag === '--default') {
-            selector = themeRoot+',' + selector;
-          }
-          addBase({ [selector]: allThemes[themeName] });
-
-          if (flag === '--prefersDark') {
-            addBase({"@media (prefers-color-scheme: dark)": {[themeRoot]: allThemes[themeName]}});
-          }
-        }
-      };
-
-      if (Array.isArray(themes)) {
-        themes.forEach(themeOption => {
-          const [themeName, flag] = themeOption.split(' ');
-          applyTheme(themeName, flag);
-        });
-      } else {
-        const [themeName, flag] = themes.split(' ');
-        applyTheme(themeName, flag);
-      }
+      pluginOptionsHandler(options, addBase, allThemes, "${packageJson.version}");
 
 ${addBaseContent}
 ${addComponentsContent}
@@ -94,7 +59,7 @@ ${addUtilitiesContent}
   (options) => {
     return {
       theme: {
-        extend: ${JSON.stringify(variables, null, 2)}
+        extend: variables
       }
     }
   }

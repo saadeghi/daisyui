@@ -6,6 +6,7 @@ import { generateChunks } from "./functions/generateChunks.js"
 import { generateFull } from "./functions/generateFull.js"
 import { generateThemeFiles } from "./functions/generateThemeFiles.js"
 import { generateThemes } from "./functions/generateThemes.js"
+import { generateThemesObject } from "./functions/generateThemesObject.js"
 import { extractClasses } from "./functions/extractClasses.js"
 import { copyFile } from "./functions/copyFile.js"
 import { minify, minifyCssInDirectory } from "./functions/minify.js"
@@ -29,6 +30,7 @@ async function generateFiles() {
   await generateChunks('chunks.css')
   await generateFull('full.css')
   await generateThemes('themes.css')
+  await generateThemesObject('./theme/object.js')
   await extractClasses({ srcDir: 'components' })
   await minifyCssInDirectory(['colors', 'base', 'components', 'utilities'])
   await minify('full.css')
