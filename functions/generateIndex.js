@@ -2,11 +2,44 @@ import fs from 'fs/promises';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
 
+const generateAddContentLogic = (itemMapEntries) => `
+  const itemMap = { ${itemMapEntries} };
+
+  const shouldIncludeItem = (name) => {
+    if (include && exclude) {
+      return include.includes(name) && !exclude.includes(name);
+    }
+    if (include) {
+      return include.includes(name);
+    }
+    if (exclude) {
+      return !exclude.includes(name);
+    }
+    return true;
+  };
+
+  Object.entries(itemMap).forEach(([name, { item, category }]) => {
+    if (shouldIncludeItem(name)) {
+      switch (category) {
+        case 'base':
+          item({ addBase });
+          break;
+        case 'utilities':
+          item({ addUtilities });
+          break;
+        case 'components':
+        default:
+          item({ addComponents });
+          break;
+      }
+    }
+  });
+`;
+
 // Generate the JS content
 const generateJSContent = async () => {
   let imports = '';
   let itemMapEntries = '';
-  let addContentLogic = '';
 
   try {
     // Function to process each category (base, components, utilities)
@@ -15,7 +48,7 @@ const generateJSContent = async () => {
       items.forEach(item => {
         const importName = `${item}`;
         imports += `import ${importName} from './${category}/${item}';\n`;
-        itemMapEntries += `    ${importName}: { item: ${importName}, category: '${category}' },\n`;
+        itemMapEntries += `${importName}: { item: ${importName}, category: '${category}' },\n`;
       });
     };
 
@@ -24,41 +57,7 @@ const generateJSContent = async () => {
     await processCategory('components');
     await processCategory('utilities');
 
-    // Generate the logic for adding content based on include/exclude options
-    addContentLogic = `
-      const itemMap = {
-${itemMapEntries}      };
-
-      const shouldIncludeItem = (name) => {
-        if (include && exclude) {
-          return include.includes(name) && !exclude.includes(name);
-        }
-        if (include) {
-          return include.includes(name);
-        }
-        if (exclude) {
-          return !exclude.includes(name);
-        }
-        return true;
-      };
-
-      Object.entries(itemMap).forEach(([name, { item, category }]) => {
-        if (shouldIncludeItem(name)) {
-          switch (category) {
-            case 'base':
-              item({ addBase });
-              break;
-            case 'utilities':
-              item({ addUtilities });
-              break;
-            case 'components':
-            default:
-              item({ addComponents });
-              break;
-          }
-        }
-      });
-    `;
+    const addContentLogic = generateAddContentLogic(itemMapEntries);
 
     const content = `import { plugin } from './functions/plugin.js';
 import { pluginOptionsHandler } from './functions/pluginOptionsHandler.js';

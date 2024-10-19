@@ -4,8 +4,8 @@
   logs: true;
   themeRoot: ":root";
   themes: light --default, dark --prefersDark;
-  include: button, toggle;
-  exclude: button, toggle;
+  include: ;
+  exclude: ;
 }
 
 @plugin "daisyui/theme" {
