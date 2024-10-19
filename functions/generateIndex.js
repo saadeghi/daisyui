@@ -1,42 +1,64 @@
 import fs from 'fs/promises';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
-import { processTheme } from './processTheme';
 const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
 
 // Generate the JS content
 const generateJSContent = async () => {
   let imports = '';
-  let addBaseContent = '';
-  let addComponentsContent = '';
-  let addUtilitiesContent = '';
+  let itemMapEntries = '';
+  let addContentLogic = '';
 
   try {
-    // Process themes
-    const themes = await processTheme();
+    // Function to process each category (base, components, utilities)
+    const processCategory = async (category) => {
+      const items = await getDirectoriesWithTargetFile(`./${category}`, 'index.js');
+      items.forEach(item => {
+        const importName = `${item}`;
+        imports += `import ${importName} from './${category}/${item}';\n`;
+        itemMapEntries += `    ${importName}: { item: ${importName}, category: '${category}' },\n`;
+      });
+    };
 
-    // Add base imports and content
-    const base = await getDirectoriesWithTargetFile('./base', 'index.js');
-    base.forEach(item => {
-      const importName = `${item}`;
-      imports += `import ${importName} from './base/${item}';\n`;
-      addBaseContent += `      ${importName}({ addBase });\n`;
-    });
+    // Process all categories
+    await processCategory('base');
+    await processCategory('components');
+    await processCategory('utilities');
 
-    // Add component imports and content
-    const components = await getDirectoriesWithTargetFile('./components', 'index.js');
-    components.forEach(item => {
-      const importName = `${item}`;
-      imports += `import ${importName} from './components/${item}';\n`;
-      addComponentsContent += `      ${importName}({ addComponents });\n`;
-    });
+    // Generate the logic for adding content based on include/exclude options
+    addContentLogic = `
+      const itemMap = {
+${itemMapEntries}      };
 
-    // Add utilities imports and content
-    const utilities = await getDirectoriesWithTargetFile('./utilities', 'index.js');
-    utilities.forEach(item => {
-      const importName = `${item}`;
-      imports += `import ${importName} from './utilities/${item}';\n`;
-      addUtilitiesContent += `      ${importName}({ addUtilities });\n`;
-    });
+      const shouldIncludeItem = (name) => {
+        if (include && exclude) {
+          return include.includes(name) && !exclude.includes(name);
+        }
+        if (include) {
+          return include.includes(name);
+        }
+        if (exclude) {
+          return !exclude.includes(name);
+        }
+        return true;
+      };
+
+      Object.entries(itemMap).forEach(([name, { item, category }]) => {
+        if (shouldIncludeItem(name)) {
+          switch (category) {
+            case 'base':
+              item({ addBase });
+              break;
+            case 'utilities':
+              item({ addUtilities });
+              break;
+            case 'components':
+            default:
+              item({ addComponents });
+              break;
+          }
+        }
+      });
+    `;
 
     const content = `import { plugin } from './functions/plugin.js';
 import { pluginOptionsHandler } from './functions/pluginOptionsHandler.js';
@@ -48,12 +70,8 @@ ${imports}
 export default plugin.withOptions(
   (options) => {
     return ({ addBase, addComponents, addUtilities }) => {
-
-      pluginOptionsHandler(options, addBase, allThemes, "${packageJson.version}");
-
-${addBaseContent}
-${addComponentsContent}
-${addUtilitiesContent}
+      const { include, exclude } = pluginOptionsHandler(options, addBase, allThemes, "${packageJson.version}");
+${addContentLogic}
     }
   },
   (options) => {

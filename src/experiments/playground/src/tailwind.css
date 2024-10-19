@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-@plugin "daisyui";
+@plugin "daisyui" {
+  logs: true;
+  themeRoot: ":root";
+  themes: light --default, dark --prefersDark;
+  include: button, toggle;
+  exclude: button, toggle;
+}
 
 @plugin "daisyui/theme" {
   name: "my-custom-theme";
