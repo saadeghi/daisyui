@@ -8,8 +8,9 @@ export const generateChunks = async (filename) => {
     let content = `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@4.0.0-alpha.25/preflight.min.css) layer(base);\n`;
 
     const themes = await getDirectoriesWithTargetFile('./theme', 'index.css');
+    const allowedThemes = ['light', 'dark'];
     themeOrder.forEach(theme => {
-      if (themes.includes(theme)) {
+      if (themes.includes(theme) && allowedThemes.includes(theme)) {
         content += `@import url(theme/${theme}/index.css) layer(themes);\n`;
       }
     });
