@@ -2,38 +2,52 @@ import fs from 'fs/promises';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
 
-const generateAddContentLogic = (itemMapEntries) => `
-  const itemMap = { ${itemMapEntries} };
+const generatePluginFunction = (itemMapEntries) => `
+  export default plugin.withOptions(
+    (options) => {
+      return ({ addBase, addComponents, addUtilities }) => {
+        const { include, exclude } = pluginOptionsHandler(options, addBase, allThemes, "${packageJson.version}");
+        const itemMap = { ${itemMapEntries} };
 
-  const shouldIncludeItem = (name) => {
-    if (include && exclude) {
-      return include.includes(name) && !exclude.includes(name);
-    }
-    if (include) {
-      return include.includes(name);
-    }
-    if (exclude) {
-      return !exclude.includes(name);
-    }
-    return true;
-  };
+        const shouldIncludeItem = (name) => {
+          if (include && exclude) {
+            return include.includes(name) && !exclude.includes(name);
+          }
+          if (include) {
+            return include.includes(name);
+          }
+          if (exclude) {
+            return !exclude.includes(name);
+          }
+          return true;
+        };
 
-  Object.entries(itemMap).forEach(([name, { item, category }]) => {
-    if (shouldIncludeItem(name)) {
-      switch (category) {
-        case 'base':
-          item({ addBase });
-          break;
-        case 'utilities':
-          item({ addUtilities });
-          break;
-        case 'components':
-        default:
-          item({ addComponents });
-          break;
+        Object.entries(itemMap).forEach(([name, { item, category }]) => {
+          if (shouldIncludeItem(name)) {
+            switch (category) {
+              case 'base':
+                item({ addBase });
+                break;
+              case 'utilities':
+                item({ addUtilities });
+                break;
+              case 'components':
+              default:
+                item({ addComponents });
+                break;
+            }
+          }
+        });
+      }
+    },
+    (options) => {
+      return {
+        theme: {
+          extend: variables
+        }
       }
     }
-  });
+  )
 `;
 
 // Generate the JS content
@@ -48,7 +62,7 @@ const generateJSContent = async () => {
       items.forEach(item => {
         const importName = `${item}`;
         imports += `import ${importName} from './${category}/${item}';\n`;
-        itemMapEntries += `${importName}: { item: ${importName}, category: '${category}' },\n`;
+        itemMapEntries += `\n          ${importName}: { item: ${importName}, category: '${category}' },`;
       });
     };
 
@@ -57,30 +71,14 @@ const generateJSContent = async () => {
     await processCategory('components');
     await processCategory('utilities');
 
-    const addContentLogic = generateAddContentLogic(itemMapEntries);
+    const addContentLogic = generatePluginFunction(itemMapEntries, packageJson.version);
 
     const content = `import { plugin } from './functions/plugin.js';
 import { pluginOptionsHandler } from './functions/pluginOptionsHandler.js';
 import variables from './functions/variables.js';
 import allThemes from './theme/object.js';
-
 ${imports}
-
-export default plugin.withOptions(
-  (options) => {
-    return ({ addBase, addComponents, addUtilities }) => {
-      const { include, exclude } = pluginOptionsHandler(options, addBase, allThemes, "${packageJson.version}");
-${addContentLogic}
-    }
-  },
-  (options) => {
-    return {
-      theme: {
-        extend: variables
-      }
-    }
-  }
-)
+${generatePluginFunction(itemMapEntries)}
 `;
     return { content };
   } catch (error) {

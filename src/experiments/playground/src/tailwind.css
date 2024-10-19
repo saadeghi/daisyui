@@ -31,9 +31,9 @@
   --color-warning-content: oklch(0% 0 0);
   --color-error: oklch(70% 0.3 30);
   --color-error-content: oklch(100% 0 0);
-  --radius-badge: 4rem;
-  --radius-btn: 4rem;
-  --radius-box: 4rem;
+  --radius-badge: 2rem;
+  --radius-btn: 2rem;
+  --radius-box: 1rem;
 }
 
 
