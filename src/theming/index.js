@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 const colorObject = {
   "transparent": "transparent",
   "current": "currentColor",
@@ -10,9 +12,6 @@ const colorObject = {
 
   "accent": "var(--fallback-a,oklch(var(--a)/<alpha-value>))",
   "accent-content": "var(--fallback-ac,oklch(var(--ac)/<alpha-value>))",
-
-  "neutral": "var(--fallback-n,oklch(var(--n)/<alpha-value>))",
-  "neutral-content": "var(--fallback-nc,oklch(var(--nc)/<alpha-value>))",
 
   "base-100": "var(--fallback-b1,oklch(var(--b1)/<alpha-value>))",
   "base-200": "var(--fallback-b2,oklch(var(--b2)/<alpha-value>))",
@@ -30,6 +29,12 @@ const colorObject = {
 
   "error": "var(--fallback-er,oklch(var(--er)/<alpha-value>))",
   "error-content": "var(--fallback-erc,oklch(var(--erc)/<alpha-value>))",
+
+  neutral: {
+    DEFAULT:  "var(--fallback-n,oklch(var(--n)/<alpha-value>))", 
+    ... colors.neutral,
+  },
+  "neutral-content": "var(--fallback-nc,oklch(var(--nc)/<alpha-value>))",
 }
 
 module.exports = colorObject
