@@ -4,7 +4,7 @@ export const pluginOptionsHandler = (() => {
     const {
       logs = true,
       themeRoot = ":root",
-      themes = ['light --default', 'dark --prefersDark'],
+      themes = ['light --default', 'dark --prefersdark'],
       include,
       exclude
     } = options || {};
@@ -22,7 +22,7 @@ export const pluginOptionsHandler = (() => {
         }
         addBase({ [selector]: allThemes[themeName] });
 
-        if (flags.includes('--prefersDark')) {
+        if (flags.includes('--prefersdark')) {
           addBase({ "@media (prefers-color-scheme: dark)": { [themeRoot]: allThemes[themeName] } });
         }
       }
