@@ -38,7 +38,7 @@ export async function generateResponsiveVariants(css) {
   return css + responsiveStyles;
 }
 
-export async function generateRawStyles({ srcDir, distDir }) {
+export async function generateRawStyles({ srcDir, distDir, responsive = false }) {
   try {
     const [defaultTheme, theme] = await Promise.all([
       fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
@@ -74,8 +74,9 @@ export async function generateRawStyles({ srcDir, distDir }) {
 
         let stylesContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
 
-        // Generate responsive variants
-        stylesContent = await generateResponsiveVariants(stylesContent);
+        if (responsive) {
+          stylesContent = await generateResponsiveVariants(stylesContent);
+        }
 
         await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent);
       } catch (fileError) {

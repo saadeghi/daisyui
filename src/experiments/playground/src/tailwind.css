@@ -3,7 +3,7 @@
 @plugin "daisyui" {
   logs: true;
   themeRoot: ":root";
-  themes: light --default, dark --prefersDark;
+  themes: light --default, dark --prefersdark;
   include: ;
   exclude: ;
 }

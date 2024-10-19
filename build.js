@@ -1,40 +1,45 @@
-import { generateColorRules } from "./functions/generateColorRules.js"
-import { generatePlugins } from "./functions/generatePlugins.js"
-import { generateRawStyles } from "./functions/generateRawStyles.js"
-import { generateIndex } from "./functions/generateIndex.js"
-import { generateChunks } from "./functions/generateChunks.js"
-import { generateFull } from "./functions/generateFull.js"
-import { generateThemeFiles } from "./functions/generateThemeFiles.js"
-import { generateThemes } from "./functions/generateThemes.js"
 import { generateThemesObject } from "./functions/generateThemesObject.js"
-import { extractClasses } from "./functions/extractClasses.js"
-import { copyFile } from "./functions/copyFile.js"
+import { generateThemeFiles } from "./functions/generateThemeFiles.js"
+import { generateColorRules } from "./functions/generateColorRules.js"
 import { minify, minifyCssInDirectory } from "./functions/minify.js"
+import { generateRawStyles } from "./functions/generateRawStyles.js"
+import { generatePlugins } from "./functions/generatePlugins.js"
+import { extractClasses } from "./functions/extractClasses.js"
+import { generateThemes } from "./functions/generateThemes.js"
+import { generateChunks } from "./functions/generateChunks.js"
+import { generateIndex } from "./functions/generateIndex.js"
+import { generateFull } from "./functions/generateFull.js"
+import { copyFile } from "./functions/copyFile.js"
+import { removeFiles } from "./functions/removeFiles.js"
 import { report } from "./functions/report.js"
 
 async function generateFiles() {
+  await removeFiles(['base', 'colors', 'components', 'theme', 'utilities', 'chunks.css', 'full.css', 'index.js', 'themes.css'])
   await Promise.all([
-    generateColorRules({ distDir: '../colors' }),
-    generatePlugins({ type: "base", srcDir: "css/themes", distDir: "theme" }),
-    generateThemeFiles({ srcDir: "css/themes", distDir: "theme" }),
     copyFile('./functions/themePlugin.js', './theme/themePlugin.js', 'index.js'),
-    generatePlugins({ type: "base", srcDir: "css/base", distDir: "base" }),
+    generateColorRules({ distDir: '../colors' }),
+    generateThemeFiles({ srcDir: "css/themes", distDir: "theme" }),
     generateRawStyles({ srcDir: '../css/base', distDir: '../base' }),
+    generateRawStyles({ srcDir: '../css/components', distDir: '../components', responsive: true }),
+    generateRawStyles({ srcDir: '../css/utilities', distDir: '../utilities', responsive: true }),
+    generatePlugins({ type: "base", srcDir: "css/themes", distDir: "theme" }),
+    generatePlugins({ type: "base", srcDir: "css/base", distDir: "base" }),
     generatePlugins({ type: "component", srcDir: "css/components", distDir: "components" }),
-    generateRawStyles({ srcDir: '../css/components', distDir: '../components' }),
     generatePlugins({ type: "utility", srcDir: "css/utilities", distDir: "utilities" }),
-    generateRawStyles({ srcDir: '../css/utilities', distDir: '../utilities' }),
   ]);
+  await Promise.all([
+    generateIndex('index.js'),
+    generateChunks('chunks.css'),
+    generateFull('full.css'),
+    generateThemes('themes.css'),
+    generateThemesObject('./theme/object.js'),
+    // extractClasses({ srcDir: 'components' }),
+    minifyCssInDirectory(['colors', 'base', 'components', 'utilities']),
+    minify('themes.css'),
+    minify('full.css'),
+  ])
 
-  await generateIndex('index.js')
-  await generateChunks('chunks.css')
-  await generateFull('full.css')
-  await generateThemes('themes.css')
-  await generateThemesObject('./theme/object.js')
-  await extractClasses({ srcDir: 'components' })
-  // await minifyCssInDirectory(['colors', 'base', 'components', 'utilities'])
-  await minify('themes.css')
-  await minify('full.css')
+
 }
 
 async function build() {

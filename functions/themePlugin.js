@@ -7,7 +7,7 @@ export default plugin.withOptions(
       const {
         name = 'custom-theme',
         default: isDefault = false,
-        prefersDark = false,
+        prefersdark = false,
         'color-scheme': colorScheme,
         ...customThemeTokens
       } = options;
@@ -35,7 +35,7 @@ export default plugin.withOptions(
         }
       };
 
-      if (prefersDark) {
+      if (prefersdark) {
         addBase({
           '@media (prefers-color-scheme: dark)': {
             ':root': baseStyles[selector]

@@ -8,7 +8,7 @@ async function processFile(filePath) {
     const stats = await fs.stat(filePath);
     const brotliSize = await compressFile(fileContent, zlib.brotliCompress);
 
-    const cssVariables = (fileContent.match(/--[\w-]+\s*:/g) || []).length;
+    const cssVariables = (fileContent.match(/--[\w-]+/g) || []).length;
 
     return {
       file: filePath,
