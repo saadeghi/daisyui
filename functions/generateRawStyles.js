@@ -2,6 +2,41 @@ import { compile } from '../node_modules/tailwindcss/dist/lib.js'
 import fs from 'fs/promises';
 import path from 'path';
 import { getFileNames } from './getFileNames';
+import breakpoints from './breakpoints';
+import postcss from 'postcss';
+import selectorParser from 'postcss-selector-parser';
+
+export async function generateResponsiveVariants(css) {
+  let responsiveStyles = '';
+
+  for (const [breakpoint, minWidth] of Object.entries(breakpoints)) {
+    const prefixedCss = await postcss([
+      (root) => {
+        root.walkRules(rule => {
+          if (rule.parent.type === 'root') {
+            rule.selector = selectorParser(selectors => {
+              selectors.each(selector => {
+                if (selector.first.type === 'class') {
+                  selector.first.value = `${breakpoint}:${selector.first.value}`;
+                }
+              });
+            }).processSync(rule.selector);
+          }
+        });
+      }
+    ]).process(css, { from: undefined });
+
+    // Escape the colon in the class name for CSS
+    const escapedCss = prefixedCss.css.replace(
+      new RegExp(`\\.${breakpoint}:`, 'g'),
+      `.${breakpoint}\\:`
+    );
+
+    responsiveStyles += `\n@media (min-width: ${minWidth}) {\n${escapedCss}\n}\n\n`;
+  }
+
+  return css + responsiveStyles;
+}
 
 export async function generateRawStyles({ srcDir, distDir }) {
   try {
@@ -30,18 +65,18 @@ export async function generateRawStyles({ srcDir, distDir }) {
           throw new Error(`Failed to find wrapper layers in compiled content for file: ${file}`);
         }
 
-        // Find the opening curly brace after '@layer wrapperStart'
         const openingBraceIndex = compiledContent.indexOf('{', startIndex);
-
-        // Find the last closing curly brace before '@layer wrapperEnd'
         const closingBraceIndex = compiledContent.lastIndexOf('}', endIndex);
 
         if (openingBraceIndex === -1 || closingBraceIndex === -1 || openingBraceIndex >= closingBraceIndex) {
           throw new Error(`Invalid wrapper structure in compiled content for file: ${file}`);
         }
 
-        // Extract only the content inside the curly braces
-        const stylesContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+        let stylesContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+
+        // Generate responsive variants
+        stylesContent = await generateResponsiveVariants(stylesContent);
+
         await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent);
       } catch (fileError) {
         console.error(`Error processing file ${file}:`, fileError);
@@ -51,4 +86,4 @@ export async function generateRawStyles({ srcDir, distDir }) {
     console.error('Error in generateRawStyles:', error);
     throw error;
   }
-};
+}

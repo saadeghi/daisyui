@@ -7,14 +7,19 @@ export const minify = async (filePath) => {
     return;
   }
   const css = await fs.promises.readFile(filePath, 'utf8');
-  const { code } = transform({
-    filename: filePath,
-    code: Buffer.from(css),
-    minify: true,
-  });
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  const modifiedCode = `/*! 🌼 daisyUI ${packageJson.version} – MIT License */ ` + code;
-  await fs.promises.writeFile(filePath, modifiedCode);
+  try {
+    const { code } = transform({
+      filename: filePath,
+      code: Buffer.from(css),
+      minify: true,
+    });
+    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const modifiedCode = `/*! 🌼 daisyUI ${packageJson.version} – MIT License */ ` + code;
+    await fs.promises.writeFile(filePath, modifiedCode);
+  } catch (error) {
+    console.error(`${filePath}:${error?.loc?.line}: ${error.message}`);
+    throw error;
+  }
 }
 
 export const minifyCssInDirectory = async (directories) => {
