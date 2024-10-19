@@ -2,7 +2,8 @@
   @apply relative inline-flex align-middle;
 
   & input {
-    @apply appearance-none border-none;
+    border: none;
+    @apply appearance-none;
     -webkit-appearance: none;
   }
 

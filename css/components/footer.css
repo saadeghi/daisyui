@@ -1,5 +1,7 @@
 .footer {
-  @apply grid w-full grid-flow-row place-items-start gap-x-4 gap-y-10 text-sm;
+  @apply grid w-full grid-flow-row place-items-start gap-x-4 gap-y-10;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 
   &>* {
     @apply grid place-items-start gap-2;
@@ -15,7 +17,8 @@
 }
 
 .footer-title {
-  @apply mb-2 font-bold uppercase opacity-60;
+  @apply mb-2 uppercase opacity-60;
+  font-weight: 700;
 }
 
 .footer-horizontal {

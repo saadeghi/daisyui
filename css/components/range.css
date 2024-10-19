@@ -2,7 +2,8 @@
   appearance: none;
   -webkit-appearance: none;
   --range-shdw: currentColor;
-  @apply rounded-box h-6 w-full cursor-pointer overflow-hidden border-none bg-transparent align-middle;
+  @apply rounded-box h-6 w-full cursor-pointer overflow-hidden bg-transparent align-middle;
+  border: none;
 
   &:focus {
     outline: none;
@@ -17,7 +18,8 @@
   }
 
   &::-webkit-slider-thumb {
-    @apply rounded-box bg-base-100 relative h-6 w-6 border-none;
+    @apply rounded-box bg-base-100 relative h-6 w-6;
+    border: none;
     appearance: none;
     -webkit-appearance: none;
     top: 50%;
@@ -40,7 +42,8 @@
   }
 
   &::-moz-range-thumb {
-    @apply rounded-box bg-base-100 relative h-6 w-6 border-none;
+    @apply rounded-box bg-base-100 relative h-6 w-6;
+    border: none;
     top: 50%;
     color: var(--range-shdw);
     --filler-offset: 0.5rem;

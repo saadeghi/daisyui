@@ -1,5 +1,7 @@
 .menu {
-  @apply flex flex-col flex-wrap text-sm p-2 w-fit;
+  @apply flex flex-col flex-wrap p-2 w-fit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 
   :where(li ul) {
     @apply relative whitespace-nowrap ms-4 ps-2;
@@ -103,7 +105,10 @@
 }
 
 .menu-title {
-  @apply text-base-content/40 px-4 py-2 text-sm font-bold;
+  @apply text-base-content/40 px-4 py-2;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
 }
 
 .menu-horizontal {
@@ -120,7 +125,8 @@
   }
 
   :where(&>li:not(.menu-title)>details>ul) {
-    @apply bg-base-100 rounded-box shadow;
+    @apply bg-base-100 rounded-box;
+    box-shadow: 0 1px 3px 0 oklch(0% 0 0/.1), 0 1px 2px -1px oklch(0% 0 0/.1);
   }
 }
 
@@ -136,7 +142,9 @@
 
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded px-2 py-1 text-xs;
+    @apply rounded px-2 py-1;
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
   .menu-title {
@@ -148,7 +156,9 @@
 
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-3 py-1 text-sm;
+    @apply rounded-btn px-3 py-1;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .menu-title {
@@ -160,7 +170,9 @@
 
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-4 py-2 text-sm;
+    @apply rounded-btn px-4 py-2;
+    font-size: 0.875;
+    line-height: 1.25rem;
   }
 
   .menu-title {
@@ -172,7 +184,9 @@
 
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-6 py-3 text-lg;
+    @apply rounded-btn px-6 py-3;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .menu-title {

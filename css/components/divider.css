@@ -3,7 +3,8 @@
 
   &:before,
   &:after {
-    @apply h-0.5 w-full grow content-[''] bg-base-content/10;
+    content: none;
+    @apply h-0.5 w-full grow bg-base-content/10;
   }
 
   &:not(:empty) {

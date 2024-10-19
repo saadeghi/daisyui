@@ -10,7 +10,7 @@
     min-width: 4rem;
 
     &:before {
-      @apply bg-base-300 text-base-content top-0 col-start-1 row-start-1 h-2 w-full transform;
+      @apply bg-base-300 text-base-content top-0 col-start-1 row-start-1 h-2 w-full;
       content: "";
       margin-inline-start: -100%;
     }
@@ -95,7 +95,8 @@
     min-width: 4rem;
 
     &:before {
-      @apply h-2 w-full translate-x-0 translate-y-0 rtl:translate-x-0;
+      @apply h-2 w-full;
+      translate: 0;
       content: "";
       margin-inline-start: -100%;
     }
@@ -115,7 +116,8 @@
     justify-items: start;
 
     &:before {
-      @apply h-full w-2 -translate-x-1/2 -translate-y-1/2 rtl:translate-x-1/2;
+      @apply h-full w-2;
+      translate: -50%;
       margin-inline-start: 50%;
     }
   }

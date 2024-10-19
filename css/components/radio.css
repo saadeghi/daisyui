@@ -1,5 +1,6 @@
 .radio {
-  @apply border-base-content/20 text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-full border p-1 align-middle;
+  @apply text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
+  border: 1px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
 
   &:before {
@@ -8,7 +9,7 @@
   }
 
   &:focus-visible {
-    @apply outline-2 outline-offset-2 outline-current;
+    outline: 2px solid currentColor;
   }
 
   &:checked,

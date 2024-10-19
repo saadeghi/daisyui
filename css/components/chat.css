@@ -40,11 +40,15 @@
 }
 
 .chat-header {
-  @apply row-start-1 text-xs;
+  @apply row-start-1;
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .chat-footer {
-  @apply row-start-3 text-xs;
+  @apply row-start-3;
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .chat-bubble {

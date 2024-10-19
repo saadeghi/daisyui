@@ -1,5 +1,7 @@
 .btn {
-  @apply text-base-content outline-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center text-sm/none font-semibold no-underline outline-offset-2 select-none align-middle h-10 px-4;
+  @apply text-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center text-sm/none no-underline outline-offset-2 select-none align-middle h-10 px-4;
+  outline-color: var(--color-base-content);
+  font-weight: 600;
   transition-property: color, background-color, background-image, border-color, opacity, box-shadow, scale;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: .2s;
@@ -9,8 +11,7 @@
   border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
   --btn-color: var(--btn-bg, var(--color-base-200));
   background-color: var(--btn-color);
-  border-width: var(--spacing-button-border, 1px);
-  border-color: color-mix(in oklab, var(--btn-color), black 2%);
+  border: var(--spacing-button-border, 1px) solid color-mix(in oklab, var(--btn-color), black 2%);
   box-shadow: 0 0 0 0.5px oklch(1 0 0 / 0.01) inset, var(--btn-shadow);
   background-origin: border-box;
   background-image: var(--btn-flare);
@@ -28,11 +29,12 @@
 
   &.btn-active {
     --btn-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
-    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0.07);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/.07);
   }
 
   &:focus-visible {
-    @apply outline outline-2;
+    outline-width: 2px;
+    outline-style: solid;
   }
 
   &:active {
@@ -92,7 +94,8 @@
 }
 
 .btn.glass {
-  @apply shadow-none outline-current hover:[--glass-border-opacity:15%] hover:[--glass-opacity:25%];
+  box-shadow: none;
+  @apply outline-current hover:[--glass-border-opacity:15%] hover:[--glass-opacity:25%];
 
   &.btn-active {
     --glass-border-opacity: 15%;
@@ -101,14 +104,17 @@
 }
 
 .btn-ghost {
-  @apply border border-transparent bg-transparent text-current shadow-none outline-current;
+  box-shadow: none;
+  border: 1px solid transparent;
+  @apply bg-transparent text-current outline-current;
   --btn-flare: unset;
 
 
 }
 
 .btn-link {
-  @apply text-primary border-transparent bg-transparent underline shadow-none outline-current hover:border-transparent hover:bg-transparent hover:underline;
+  box-shadow: none;
+  @apply text-primary border-transparent bg-transparent underline outline-current hover:border-transparent hover:bg-transparent hover:underline;
   --btn-flare: unset;
 
   &.btn-active {
@@ -118,21 +124,24 @@
 
 .btn-outline {
   &:not(.btn-active, :hover, :focus-visible) {
-    @apply bg-transparent text-[var(--btn-bg)] shadow-none;
+    box-shadow: none;
+    @apply bg-transparent text-[var(--btn-bg)];
     --btn-flare: unset;
   }
 }
 
 .btn-dash {
   &:not(.btn-active, :hover, :focus-visible) {
-    @apply bg-transparent text-[var(--btn-bg)] shadow-none border-dashed;
+    box-shadow: none;
+    border-style: dashed;
+    @apply bg-transparent text-[var(--btn-bg)];
     --btn-flare: unset;
   }
 }
 
 .btn-soft {
   &:not(.btn-active, :hover, :focus-visible) {
-    @apply shadow-none;
+    box-shadow: none;
     color: var(--btn-bg, var(--color-base-content));
     background: color-mix(in oklab, var(--btn-bg, var(--color-base-content)) 8%, var(--color-base-200));
     border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-content)) 10%, var(--color-base-200));
@@ -163,7 +172,7 @@
     }
 
     &::after {
-      @apply content-[attr(aria-label)];
+      content: attr(aria-label);
     }
 
     &:checked {

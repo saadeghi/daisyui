@@ -1,11 +1,14 @@
 .alert {
-  @apply grid w-full items-center gap-4 rounded-box text-base-content border-base-200 border py-3 px-4 text-sm;
+  @apply grid w-full items-center gap-4 rounded-box text-base-content py-3 px-4;
   background-color: var(--alert-color, var(--color-base-200));
   justify-content: start;
   justify-items: start;
   grid-auto-flow: column;
   grid-template-columns: auto minmax(auto, 1fr);
   text-align: start;
+  border: 1px solid var(--color-base-200);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 
   &.alert-outline {
     @apply bg-transparent;
@@ -13,8 +16,9 @@
   }
 
   &.alert-dash {
-    @apply bg-transparent border-dashed;
+    @apply bg-transparent;
     color: var(--alert-color);
+    border-style: dashed;
   }
 
   &.alert-soft {

@@ -8,15 +8,16 @@
 
 
   &:before {
-    @apply absolute max-w-xs rounded px-2 py-1 text-sm whitespace-normal opacity-0 text-center;
+    @apply absolute max-w-xs rounded px-2 py-1 whitespace-normal opacity-0 text-center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     background-color: var(--tooltip-bg);
     color: var(--tooltip-color);
     width: max-content;
     pointer-events: none;
     z-index: 1;
-    content: var(--tw-content);
-    --tw-content: attr(data-tip);
+    content: attr(data-tip);
   }
 
   &:after {

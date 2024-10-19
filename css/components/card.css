@@ -27,7 +27,7 @@
   }
 
   &.card-border {
-    @apply border-base-200 border;
+    border: 1px solid var(--color-base-200);
   }
 
   &.image-full {
@@ -62,7 +62,10 @@
 }
 
 .card-title {
-  @apply flex items-center gap-2 text-xl font-semibold;
+  @apply flex items-center gap-2;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
 .card-body {
@@ -79,7 +82,9 @@
 
 .card-xs {
   .card-body {
-    @apply p-2 text-xs;
+    @apply p-2;
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
   .card-title {
@@ -89,7 +94,9 @@
 
 .card-sm {
   .card-body {
-    @apply p-4 text-sm;
+    @apply p-4;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .card-title {
@@ -99,7 +106,9 @@
 
 .card-md {
   .card-body {
-    @apply text-base p-8;
+    @apply p-8;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .card-title {
@@ -109,7 +118,9 @@
 
 .card-lg {
   .card-body {
-    @apply text-base p-10;
+    @apply p-10;
+    font-size: 1rem;
+    line-height: 1rem;
   }
 
   .card-title {

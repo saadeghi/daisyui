@@ -1,12 +1,16 @@
 .input {
-  @apply bg-base-100 h-10 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose align-middle;
+  border: 1px solid transparent;
+  @apply bg-base-100 h-10 shrink appearance-none px-4 align-middle;
+  font-size: 0.875rem;
+  line-height: 2;
   border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
   border-start-end-radius: var(--radius-join-start-end, var(--radius-btn));
   border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));
   border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
 
   input {
-    @apply border-none bg-transparent;
+    @apply bg-transparent;
+    border: none;
 
     &:focus {
       @apply outline-none;
@@ -15,12 +19,15 @@
 
   &:focus,
   &:focus-within {
-    @apply border-base-content/20 outline-base-content/20 outline outline-2 outline-offset-2;
+    border-color: color-mix(in srgb, var(--color-base-content, ) 20%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--color-base-content, ) 20%, transparent);
+    outline-offset: 2px;
   }
 
   &:has(> input[disabled]),
   &:is(:disabled, [disabled]) {
     @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+    box-shadow: none;
   }
 
   &:has(> input[disabled])>input[disabled] {
@@ -43,8 +50,8 @@
     }
   }
 
-  &.input-bordered {
-    @apply border-base-content/20;
+  &.input-border {
+    @apply border-base-content/10;
     box-shadow:
       0 1px oklch(0% 0 0 / 0.1) inset,
       0 -1px oklch(100% 0 0 / 0.1) inset;
@@ -55,7 +62,8 @@
   }
 
   &.input-ghost {
-    @apply bg-base-100/5 shadow-none;
+    @apply bg-base-100/5;
+    box-shadow: none;
 
     &:focus,
     &:focus-within {
@@ -135,7 +143,9 @@
   }
 
   &.input-xs {
-    @apply h-6 px-2 text-xs leading-relaxed;
+    @apply h-6 px-2;
+    font-size: 0.75rem;
+    line-height: 1.625;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {
@@ -145,7 +155,9 @@
   }
 
   &.input-sm {
-    @apply h-8 px-3 text-sm leading-8;
+    @apply h-8 px-3;
+    font-size: 0.875rem;
+    line-height: 2rem;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {
@@ -155,7 +167,9 @@
   }
 
   &.input-md {
-    @apply h-10 px-4 text-sm leading-loose;
+    @apply h-10 px-4;
+    font-size: 0.875rem;
+    line-height: 2;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {
@@ -165,7 +179,9 @@
   }
 
   &.input-lg {
-    @apply h-14 px-6 text-lg leading-loose;
+    @apply h-14 px-6;
+    font-size: 1.125rem;
+    line-height: 2rem;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {

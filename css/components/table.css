@@ -1,5 +1,7 @@
 .table {
-  @apply relative w-full rounded-box text-left text-sm rtl:text-right;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  @apply relative w-full rounded-box text-left rtl:text-right;
 
   tr.row-hover {
 
@@ -14,11 +16,14 @@
   }
 
   :where(thead, tfoot) {
-    @apply text-base-content/60 whitespace-nowrap text-xs font-bold;
+    @apply text-base-content/60 whitespace-nowrap;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-weight: 700;
   }
 
   :where(tfoot) {
-    @apply border-t-base-200 border-t;
+    border-top: 1px solid var(--color-base-200);
   }
 
   :where(.table-pin-rows thead tr) {
@@ -34,7 +39,7 @@
   }
 
   :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child) {
-    @apply border-b-base-200 border-b;
+    border-bottom: 1px solid var(--color-base-200);
   }
 }
 
@@ -62,7 +67,8 @@
 
 .table-xs {
   :not(thead):not(tfoot) tr {
-    @apply text-xs;
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
   :where(th, td) {
@@ -72,7 +78,8 @@
 
 .table-sm {
   :not(thead):not(tfoot) tr {
-    @apply text-sm;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   :where(th, td) {
@@ -82,7 +89,8 @@
 
 .table-md {
   :not(thead):not(tfoot) tr {
-    @apply text-sm;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   :where(th, td) {
@@ -92,7 +100,8 @@
 
 .table-lg {
   :not(thead):not(tfoot) tr {
-    @apply text-base;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   :where(th, td) {

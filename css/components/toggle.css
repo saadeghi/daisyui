@@ -1,8 +1,8 @@
 .toggle {
-  @apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none rounded-[var(--radius-badge)] border border-current p-[.1875rem] align-middle;
+  border: 1px solid currentColor;
+  @apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none rounded-badge p-[.1875rem] align-middle;
   box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
-  transition:
-    color .3s;
+  transition: color .3s;
 
   &:before {
     @apply block h-full grow-0;
@@ -11,7 +11,9 @@
   }
 
   &:after {
-    @apply relative start-0 block aspect-square h-full translate-x-0 [border-radius:calc(var(--radius-badge)-3px)] bg-current;
+    @apply relative start-0 block aspect-square h-full bg-current;
+    translate: 0;
+    border-radius: calc(var(--radius-badge) - 3px);
     content: "";
     transition:
       background-color 0.1s,
@@ -24,7 +26,8 @@
   }
 
   &:focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-current;
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
   }
 
   &:checked,
@@ -50,7 +53,8 @@
     }
 
     &:after {
-      @apply start-1/2 -translate-x-1/2;
+      @apply start-1/2;
+      translate: -50% 0;
     }
   }
 
@@ -58,7 +62,8 @@
     @apply cursor-not-allowed opacity-30;
 
     &:after {
-      @apply border border-current bg-transparent;
+      @apply bg-transparent;
+      border: 1px solid currentColor;
     }
   }
 }

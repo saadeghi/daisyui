@@ -2,7 +2,8 @@
   @apply relative inline-grid select-none place-content-center cursor-pointer align-middle;
 
   input {
-    @apply appearance-none border-none;
+    @apply appearance-none;
+    border: none;
   }
 
   >* {

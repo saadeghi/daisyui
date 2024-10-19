@@ -8,13 +8,13 @@ async function processFile(filePath) {
     const stats = await fs.stat(filePath);
     const brotliSize = await compressFile(fileContent, zlib.brotliCompress);
 
-    const cssVariables = (fileContent.match(/--tw[\w-]+:/g) || []).length;
+    const cssVariables = (fileContent.match(/--[\w-]+\s*:/g) || []).length;
 
     return {
       file: filePath,
-      selectors: (fileContent.match(/(?:[^}]+{|@\w+\s*[^;{}]+(?:;|\{))/g) || []).length,
-      lines: fileContent.split('\n').length,
-      vars: cssVariables,
+      selector: (fileContent.match(/(?:[^}]+{|@\w+\s*[^;{}]+(?:;|\{))/g) || []).length,
+      line: fileContent.split('\n').length,
+      var: cssVariables,
       raw: stats.size / 1000,
       brotli: brotliSize / 1000,
     };
@@ -59,5 +59,5 @@ export const report = async (directories) => {
     return;
   }
 
-  console.table(flatReport, ['file', 'selectors', 'lines', 'vars', 'raw', 'brotli']);
+  console.table(flatReport, ['file', 'selector', 'line', 'var', 'raw', 'brotli']);
 }

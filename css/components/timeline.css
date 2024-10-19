@@ -9,7 +9,8 @@
         minmax(0, 1fr));
 
     >hr {
-      @apply w-full border-0;
+      @apply w-full;
+      border: none;
 
       &:first-child {
         @apply col-start-1 row-start-2;
@@ -47,7 +48,9 @@
 }
 
 .timeline-box {
-  @apply rounded-box bg-base-100 border-base-300 border px-4 py-2 shadow-sm;
+  border: 1px solid;
+  @apply rounded-box bg-base-100 border-base-300 px-4 py-2;
+  box-shadow: 0 1px 2px 0 oklch(0% 0 0/.05);
 }
 
 .timeline-start {

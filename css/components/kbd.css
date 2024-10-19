@@ -1,29 +1,39 @@
 .kbd {
-  @apply inline-flex items-center justify-center border-base-content/20 bg-base-200 rounded-btn border px-2 border-b-2 align-middle;
+  @apply inline-flex items-center justify-center bg-base-200 rounded-btn px-2 align-middle;
+  border: 1px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
+  border-bottom: 2px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   min-height: 2.2em;
   min-width: 2.2em;
 }
 
 .kbd-xs {
-  @apply px-1 text-xs;
+  @apply px-1;
+  font-size: 0.75rem;
+  line-height: 1rem;
   min-height: 1.2em;
   min-width: 1.2em;
 }
 
 .kbd-sm {
-  @apply px-1 text-sm;
+  @apply px-1;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   min-height: 1.6em;
   min-width: 1.6em;
 }
 
 .kbd-md {
-  @apply px-2 text-base;
+  @apply px-2;
+  font-size: 1rem;
+  line-height: 1.5rem;
   min-height: 2.2em;
   min-width: 2.2em;
 }
 
 .kbd-lg {
-  @apply px-4 text-lg;
+  @apply px-4;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   min-height: 2.5em;
   min-width: 2.5em;
 }

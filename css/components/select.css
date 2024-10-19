@@ -1,5 +1,8 @@
 .select {
-  @apply relative bg-base-100 h-10 shrink appearance-none border border-transparent px-4 text-base text-sm leading-loose align-middle;
+  border: 1px solid;
+  @apply relative bg-base-100 h-10 shrink appearance-none border-transparent px-4 align-middle;
+  font-size: 0.875rem;
+  line-height: 2;
   border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
   border-start-end-radius: var(--radius-join-start-end, var(--radius-btn));
   border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));
@@ -15,7 +18,8 @@
   background-repeat: no-repeat;
 
   input {
-    @apply border-none bg-transparent;
+    @apply bg-transparent;
+    border-style: none;
 
     &:focus {
       @apply outline-none;
@@ -24,7 +28,9 @@
 
   &:focus,
   &:focus-within {
-    @apply border-base-content/20 outline-base-content/20 outline outline-2 outline-offset-2;
+    @apply border-base-content/20 outline-base-content/20;
+    outline: 2px solid;
+    outline-offset: 2px;
   }
 
   &:has(> select[disabled]),
@@ -36,7 +42,7 @@
     @apply cursor-not-allowed;
   }
 
-  &.select-bordered {
+  &.select-border {
     @apply border-base-content/20;
     box-shadow:
       0 1px oklch(0% 0 0 / 0.1) inset,
@@ -48,7 +54,8 @@
   }
 
   &.select-ghost {
-    @apply bg-base-100/5 shadow-none;
+    @apply bg-base-100/5;
+    box-shadow: none;
 
     &:focus,
     &:focus-within {
@@ -128,18 +135,26 @@
   }
 
   &.select-xs {
-    @apply h-6 px-2 text-xs leading-relaxed;
+    @apply h-6 px-2;
+    font-size: 0.75rem;
+    line-height: 1.625;
   }
 
   &.select-sm {
-    @apply h-8 px-3 text-sm leading-8;
+    @apply h-8 px-3;
+    font-size: 0.875rem;
+    line-height: 2;
   }
 
   &.select-md {
-    @apply h-10 px-4 text-sm leading-loose;
+    @apply h-10 px-4;
+    font-size: 0.875rem;
+    line-height: 2;
   }
 
   &.select-lg {
-    @apply h-14 px-6 text-lg leading-loose;
+    @apply h-14 px-6;
+    font-size: 1.125rem;
+    line-height: 2;
   }
 }
