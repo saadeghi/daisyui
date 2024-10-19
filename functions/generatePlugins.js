@@ -7,9 +7,13 @@ import { createPluginFiles } from "./createPluginFiles.js"
 export const generatePlugins = async ({ type, srcDir, distDir }) => {
   await fs.mkdir(distDir, { recursive: true })
   const cssFiles = await getFileNames(srcDir, ".css")
-  for (const cssFile of cssFiles) {
-    const jsContent = await cssToJs(`${srcDir}/${cssFile}.css`)
-    const componentDir = await createDirectoryBasedOnFileNames(cssFile, ".css", distDir)
+
+  await Promise.all(cssFiles.map(async (cssFile) => {
+    const [jsContent, componentDir] = await Promise.all([
+      cssToJs(`${srcDir}/${cssFile}.css`),
+      createDirectoryBasedOnFileNames(cssFile, ".css", distDir)
+    ]);
+
     await createPluginFiles(type, componentDir, jsContent, cssFile)
-  }
+  }));
 }

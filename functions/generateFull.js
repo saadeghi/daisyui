@@ -14,30 +14,35 @@ const readThemeCSS = async () => {
   return themeContents.join('\n');
 };
 
-const readCSSDirectories = async () => {
+const readAllCSSDirectories = async () => {
   const directories = ['./base', './components', './utilities', './colors'];
 
-  return Promise.all(directories.map(async (dir) => {
-    const files = await getFileNames(dir, '.css', false);
-    const contents = await Promise.all(
-      files.map(file => readFileContent(`${dir}/${file}.css`))
-    );
-    return contents.join('\n');
-  }));
+  const allFiles = await Promise.all(directories.map(dir =>
+    getFileNames(dir, '.css', false)
+  ));
+
+  const allContents = await Promise.all(
+    allFiles.flatMap((files, index) =>
+      files.map(file => readFileContent(`${directories[index]}/${file}.css`))
+    )
+  );
+
+  return allContents;
 };
 
 export const generateFull = async (file) => {
-  const contentArray = [
+  const [preflightCSS, themeCSS, otherCSS] = await Promise.all([
     // Read preflight CSS
-    await readFileContent('node_modules/tailwindcss/preflight.css'),
+    readFileContent('node_modules/tailwindcss/preflight.css'),
 
     // Read theme CSS files
-    await readThemeCSS(),
+    readThemeCSS(),
 
     // Read other CSS directories
-    ...(await readCSSDirectories())
-  ];
+    readAllCSSDirectories()
+  ]);
 
   // Combine all content and write to file
-  await fs.writeFile(file, (await Promise.all(contentArray)).join('\n'));
+  const allContent = [preflightCSS, themeCSS, ...otherCSS].join('\n');
+  await fs.writeFile(file, allContent);
 };

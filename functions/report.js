@@ -40,19 +40,18 @@ async function compressFile(content, compressFunc) {
 }
 
 export const report = async (directories) => {
-  const report = await Promise.all(
-    directories.map(async (dir) => {
-      try {
-        const stats = await fs.stat(dir);
-        return stats.isDirectory() ? processDirectory(dir) : processFile(dir);
-      } catch (error) {
-        console.error(`Error accessing ${dir}: ${error.message}`);
-        return null;
-      }
-    })
-  );
+  const processItem = async (item) => {
+    try {
+      const stats = await fs.stat(item);
+      return stats.isDirectory() ? processDirectory(item) : processFile(item);
+    } catch (error) {
+      console.error(`Error accessing ${item}: ${error.message}`);
+      return null;
+    }
+  };
 
-  const flatReport = report.flat().filter(Boolean);
+  const results = await Promise.all(directories.map(processItem));
+  const flatReport = results.flat().filter(Boolean);
 
   if (flatReport.length === 0) {
     console.error("No files were successfully processed.");
@@ -60,4 +59,4 @@ export const report = async (directories) => {
   }
 
   console.table(flatReport, ['file', 'selector', 'line', 'var', 'raw', 'brotli']);
-}
+};

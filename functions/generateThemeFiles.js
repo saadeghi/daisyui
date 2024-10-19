@@ -17,7 +17,7 @@ ${content}}
 export const generateThemeFiles = async ({ srcDir, distDir }) => {
   const themeNames = await getFileNames(srcDir, '.css');
 
-  for (const themeName of themeNames) {
+  const tasks = themeNames.map(async (themeName) => {
     const srcPath = path.join(srcDir, `${themeName}.css`);
     const distPath = path.join(distDir, themeName, 'index.css');
 
@@ -26,5 +26,7 @@ export const generateThemeFiles = async ({ srcDir, distDir }) => {
 
     await fs.mkdir(path.dirname(distPath), { recursive: true });
     await fs.writeFile(distPath, wrappedContent);
-  }
+  });
+
+  await Promise.all(tasks);
 };

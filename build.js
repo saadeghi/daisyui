@@ -1,20 +1,19 @@
 import { generateThemesObject } from "./functions/generateThemesObject.js"
 import { generateThemeFiles } from "./functions/generateThemeFiles.js"
 import { generateColorRules } from "./functions/generateColorRules.js"
-import { minify, minifyCssInDirectory } from "./functions/minify.js"
 import { generateRawStyles } from "./functions/generateRawStyles.js"
+import { minify, minifyCssInDirectory } from "./functions/minify.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
-import { extractClasses } from "./functions/extractClasses.js"
+// import { extractClasses } from "./functions/extractClasses.js"
 import { generateThemes } from "./functions/generateThemes.js"
 import { generateChunks } from "./functions/generateChunks.js"
 import { generateIndex } from "./functions/generateIndex.js"
 import { generateFull } from "./functions/generateFull.js"
-import { copyFile } from "./functions/copyFile.js"
 import { removeFiles } from "./functions/removeFiles.js"
+import { copyFile } from "./functions/copyFile.js"
 import { report } from "./functions/report.js"
 
 async function generateFiles() {
-  await removeFiles(['base', 'colors', 'components', 'theme', 'utilities', 'chunks.css', 'full.css', 'index.js', 'themes.css'])
   await Promise.all([
     copyFile('./functions/themePlugin.js', './theme/themePlugin.js', 'index.js'),
     generateColorRules({ distDir: '../colors' }),
@@ -44,12 +43,13 @@ async function generateFiles() {
 
 async function build() {
   try {
+    await removeFiles(['base', 'colors', 'components', 'theme', 'utilities', 'chunks.css', 'full.css', 'index.js', 'themes.css'])
     console.time('Build');
     await generateFiles();
     console.timeEnd('Build');
     await report(['base', 'components', 'utilities', 'colors', 'chunks.css', 'themes.css', 'full.css']);
   } catch (error) {
-    console.error("An error occurred during processing:", error);
+    throw new Error("Build error: " + error.message);
   }
 }
 

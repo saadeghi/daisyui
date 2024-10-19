@@ -38,53 +38,69 @@ export async function generateResponsiveVariants(css) {
   return css + responsiveStyles;
 }
 
+async function loadThemes() {
+  const [defaultTheme, theme] = await Promise.all([
+    fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
+    fs.readFile(path.join(import.meta.dir, './variables.css'), 'utf-8'),
+  ]);
+  return { defaultTheme, theme };
+}
+
+async function compileAndExtractStyles(styleContent, defaultTheme, theme) {
+  const compiledContent = await (await compile(`
+    @layer theme{${defaultTheme}${theme}}
+    @layer wrapperStart{${styleContent}}
+    @layer wrapperEnd
+  `)).build([]);
+
+  const startIndex = compiledContent.indexOf('@layer wrapperStart');
+  const endIndex = compiledContent.indexOf('@layer wrapperEnd');
+
+  if (startIndex === -1 || endIndex === -1) {
+    throw new Error('Failed to find wrapper layers in compiled content');
+  }
+
+  const openingBraceIndex = compiledContent.indexOf('{', startIndex);
+  const closingBraceIndex = compiledContent.lastIndexOf('}', endIndex);
+
+  if (openingBraceIndex === -1 || closingBraceIndex === -1 || openingBraceIndex >= closingBraceIndex) {
+    throw new Error('Invalid wrapper structure in compiled content');
+  }
+
+  return compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+}
+
+async function processFile(file, stylesDir, distDir, defaultTheme, theme, responsive) {
+  const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), 'utf-8');
+  let stylesContent = await compileAndExtractStyles(styleContent, defaultTheme, theme);
+
+  if (responsive) {
+    stylesContent = await generateResponsiveVariants(stylesContent);
+  }
+
+  await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent);
+}
+
 export async function generateRawStyles({ srcDir, distDir, responsive = false }) {
   try {
-    const [defaultTheme, theme] = await Promise.all([
-      fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
-      fs.readFile(path.join(import.meta.dir, './variables.css'), 'utf-8'),
-    ]);
+    const { defaultTheme, theme } = await loadThemes();
 
     const stylesDir = path.join(import.meta.dir, srcDir);
     const files = await getFileNames(stylesDir, '.css', false);
 
-    for (const file of files) {
-      try {
-        const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), 'utf-8');
+    // Process all files concurrently
+    const processPromises = files.map(file =>
+      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive)
+        .catch(fileError => {
+          console.error(`Error processing file ${file}: ${fileError.message}`);
+          // You might want to throw or handle this error differently
+        })
+    );
 
-        const compiledContent = await (await compile(`
-          @layer theme{${defaultTheme}${theme}}
-          @layer wrapperStart{${styleContent}}
-          @layer wrapperEnd
-        `)).build([]);
+    // Wait for all files to be processed
+    await Promise.all(processPromises);
 
-        const startIndex = compiledContent.indexOf('@layer wrapperStart');
-        const endIndex = compiledContent.indexOf('@layer wrapperEnd');
-
-        if (startIndex === -1 || endIndex === -1) {
-          throw new Error(`Failed to find wrapper layers in compiled content for file: ${file}`);
-        }
-
-        const openingBraceIndex = compiledContent.indexOf('{', startIndex);
-        const closingBraceIndex = compiledContent.lastIndexOf('}', endIndex);
-
-        if (openingBraceIndex === -1 || closingBraceIndex === -1 || openingBraceIndex >= closingBraceIndex) {
-          throw new Error(`Invalid wrapper structure in compiled content for file: ${file}`);
-        }
-
-        let stylesContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
-
-        if (responsive) {
-          stylesContent = await generateResponsiveVariants(stylesContent);
-        }
-
-        await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent);
-      } catch (fileError) {
-        console.error(`Error processing file ${file}:`, fileError);
-      }
-    }
   } catch (error) {
-    console.error('Error in generateRawStyles:', error);
     throw error;
   }
 }
