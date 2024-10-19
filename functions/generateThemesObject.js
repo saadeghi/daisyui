@@ -20,7 +20,7 @@ export const generateThemesObject = async (outputPath) => {
   }
 
   // Convert themeObjects to a string in the desired format
-  const themeObjectsString = `export default ${JSON.stringify(themeObjects, null, 2)}`;
+  const themeObjectsString = `export default ${JSON.stringify(themeObjects, null, null)}`;
 
   // Write the string to the specified output file
   await fs.writeFile(outputPath, themeObjectsString, 'utf8');
