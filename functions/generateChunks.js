@@ -1,14 +1,17 @@
 import fs from 'fs/promises';
 import { getFileNames } from './getFileNames';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
+import themeOrder from './themeOrder';
 
 export const generateChunks = async (filename) => {
   try {
     let content = `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@4.0.0-alpha.25/preflight.min.css) layer(base);\n`;
 
     const themes = await getDirectoriesWithTargetFile('./theme', 'index.css');
-    themes.forEach(theme => {
-      content += `@import url(theme/${theme}/index.css) layer(themes);\n`;
+    themeOrder.forEach(theme => {
+      if (themes.includes(theme)) {
+        content += `@import url(theme/${theme}/index.css) layer(themes);\n`;
+      }
     });
 
     const baseFiles = await getFileNames('./base', ".css", false);
