@@ -66,6 +66,7 @@
 		"build": "bun build.js",
 		"dev": "cd src/docs && npm run dev",
 		"playground": "cd src/experiments/playground && npm run dev",
+		"wallace": "npx -y wallace-cli full.css",
 		"release": "node src/release",
 		"publish:alpha": "npm publish --tag=alpha",
 		"alpha": "npm run release -- --alpha && npm publish --tag=alpha"
