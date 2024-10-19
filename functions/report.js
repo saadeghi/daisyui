@@ -1,21 +1,21 @@
 import zlib from 'zlib';
 import { promises as fs } from 'fs';
 import path from 'path';
+
 async function processFile(filePath) {
   try {
     const fileContent = await fs.readFile(filePath, 'utf8');
     const stats = await fs.stat(filePath);
-    const [gzipSize, brotliSize] = await Promise.all([
-      compressFile(fileContent, zlib.gzip),
-      compressFile(fileContent, zlib.brotliCompress)
-    ]);
+    const brotliSize = await compressFile(fileContent, zlib.brotliCompress);
+
+    const cssVariables = (fileContent.match(/--tw[\w-]+:/g) || []).length;
 
     return {
       file: filePath,
       selectors: (fileContent.match(/(?:[^}]+{|@\w+\s*[^;{}]+(?:;|\{))/g) || []).length,
       lines: fileContent.split('\n').length,
+      vars: cssVariables,
       raw: stats.size / 1000,
-      gzip: gzipSize / 1000,
       brotli: brotliSize / 1000,
     };
   } catch (error) {
@@ -23,6 +23,7 @@ async function processFile(filePath) {
     return null;
   }
 }
+
 async function processDirectory(dir) {
   try {
     const files = await fs.readdir(dir);
@@ -33,11 +34,12 @@ async function processDirectory(dir) {
     return [];
   }
 }
+
 async function compressFile(content, compressFunc) {
   return new Promise(resolve => compressFunc(content, (_, result) => resolve(result.length)));
 }
-export const report = async (directories) => {
 
+export const report = async (directories) => {
   const report = await Promise.all(
     directories.map(async (dir) => {
       try {
@@ -57,5 +59,5 @@ export const report = async (directories) => {
     return;
   }
 
-  console.table(flatReport, ['file', 'selectors', 'lines', 'raw', 'gzip', 'brotli']);
+  console.table(flatReport, ['file', 'selectors', 'lines', 'vars', 'raw', 'brotli']);
 }

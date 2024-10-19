@@ -23,9 +23,8 @@
     top: 50%;
     color: var(--range-shdw);
     transform: translateY(-50%);
-    --filler-size: 100rem;
     --filler-offset: 0.6rem;
-    --track-shdw: calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+    --track-shdw: calc(-100rem - var(--filler-offset)) 0 0 100rem;
     box-shadow:
       0 0 0 3px var(--range-shdw) inset,
       var(--focus-shadow, 0 0),
@@ -33,7 +32,7 @@
   }
 
   [dir=rtl] &::-webkit-slider-thumb {
-    --track-shdw: calc(var(--filler-size) * 1 + var(--filler-offset)) 0 0 var(--filler-size);
+    --track-shdw: calc(100rem * 1 + var(--filler-offset)) 0 0 100rem;
   }
 
   &::-moz-range-track {
@@ -44,12 +43,11 @@
     @apply rounded-box bg-base-100 relative h-6 w-6 border-none;
     top: 50%;
     color: var(--range-shdw);
-    --filler-size: 100rem;
     --filler-offset: 0.5rem;
     box-shadow:
       0 0 0 3px var(--range-shdw) inset,
       var(--focus-shadow, 0 0),
-      calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
+      calc(-100rem - var(--filler-offset)) 0 0 100rem;
   }
 }
 

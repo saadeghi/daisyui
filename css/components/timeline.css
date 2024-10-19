@@ -39,9 +39,7 @@
     :first-child hr:last-child {
       @apply rounded-s-badge rounded-e-none;
     }
-  }
 
-  &:not(:has(.timeline-middle)) {
     :last-child hr:first-child {
       @apply rounded-e-badge rounded-s-none;
     }

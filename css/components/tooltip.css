@@ -1,17 +1,17 @@
 .tooltip {
   @apply relative inline-block;
-  --tooltip-color: var(--color-neutral);
-  --tooltip-tail: 0.1875rem;
-  --tooltip-text-color: var(--color-neutral-content);
-  --tooltip-offset: calc(100% + 1px + var(--tooltip-tail, 0px));
-  --tooltip-tail-offset: calc(100% + 0.0625rem - var(--tooltip-tail));
+  --tooltip-bg: var(--color-neutral);
+  --tooltip-tail: 3px;
+  --tooltip-color: var(--color-neutral-content);
+  --tooltip-offset: calc(100% + 1px + var(--tooltip-tail));
+  --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
 
 
   &:before {
     @apply absolute max-w-xs rounded px-2 py-1 text-sm whitespace-normal opacity-0 text-center;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
-    background-color: var(--tooltip-color);
-    color: var(--tooltip-text-color);
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-color);
     width: max-content;
     pointer-events: none;
     z-index: 1;
@@ -36,40 +36,28 @@
 .tooltip-top {
   &:before {
     transform: translateX(-50%);
-    top: auto;
-    left: 50%;
-    right: auto;
-    bottom: var(--tooltip-offset);
+    inset: auto auto var(--tooltip-offset) 50%;
   }
 }
 
 .tooltip-bottom {
   &:before {
     transform: translateX(-50%);
-    top: var(--tooltip-offset);
-    left: 50%;
-    right: auto;
-    bottom: auto;
+    inset: var(--tooltip-offset) auto auto 50%;
   }
 }
 
 .tooltip-left {
   &:before {
     transform: translateY(-50%);
-    top: 50%;
-    left: auto;
-    right: var(--tooltip-offset);
-    bottom: auto;
+    inset: 50% var(--tooltip-offset) auto auto;
   }
 }
 
 .tooltip-right {
   &:before {
     transform: translateY(-50%);
-    top: 50%;
-    left: var(--tooltip-offset);
-    right: auto;
-    bottom: auto;
+    inset: 50% auto auto var(--tooltip-offset);
   }
 }
 
@@ -97,78 +85,66 @@
 .tooltip-top {
   &:after {
     transform: translateX(-50%);
-    border-color: var(--tooltip-color) transparent transparent transparent;
-    top: auto;
-    left: 50%;
-    right: auto;
-    bottom: var(--tooltip-tail-offset);
+    border-color: var(--tooltip-bg) transparent transparent transparent;
+    inset: auto auto var(--tooltip-tail-offset) 50%;
   }
 }
 
 .tooltip-bottom {
   &:after {
     transform: translateX(-50%);
-    border-color: transparent transparent var(--tooltip-color) transparent;
-    top: var(--tooltip-tail-offset);
-    left: 50%;
-    right: auto;
-    bottom: auto;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
+    inset: var(--tooltip-tail-offset) auto auto 50%;
   }
 }
 
 .tooltip-left {
   &:after {
     transform: translateY(-50%);
-    border-color: transparent transparent transparent var(--tooltip-color);
-    top: 50%;
-    left: auto;
-    right: calc(var(--tooltip-tail-offset) + 0.0625rem);
-    bottom: auto;
+    border-color: transparent transparent transparent var(--tooltip-bg);
+    inset: 50% calc(var(--tooltip-tail-offset) + 1px) auto auto;
   }
 }
 
 .tooltip-right {
   &:after {
     transform: translateY(-50%);
-    border-color: transparent var(--tooltip-color) transparent transparent;
-    top: 50%;
-    left: calc(var(--tooltip-tail-offset) + 0.0625rem);
-    right: auto;
-    bottom: auto;
+    border-color: transparent var(--tooltip-bg) transparent transparent;
+    inset: 50% auto auto calc(var(--tooltip-tail-offset) + 1px);
   }
 }
 
 .tooltip-primary {
-  --tooltip-color: var(--color-primary);
-  --tooltip-text-color: var(--color-primary-content);
+  --tooltip-bg: var(--color-primary);
+  --tooltip-color: var(--color-primary-content);
 }
 
 .tooltip-secondary {
-  --tooltip-color: var(--color-secondary);
-  --tooltip-text-color: var(--color-secondary-content);
+  --tooltip-bg: var(--color-secondary);
+  --tooltip-color: var(--color-secondary-content);
 }
 
 .tooltip-accent {
-  --tooltip-color: var(--color-accent);
-  --tooltip-text-color: var(--color-accent-content);
+  --tooltip-bg: var(--color-accent);
+  --tooltip-color: var(--color-accent-content);
 }
 
 .tooltip-info {
-  --tooltip-color: var(--color-info);
-  --tooltip-text-color: var(--color-info-content);
+  --tooltip-bg: var(--color-info);
+  --tooltip-color: var(--color-info-content);
 }
 
 .tooltip-success {
-  --tooltip-color: var(--color-success);
-  --tooltip-text-color: var(--color-success-content);
+  --tooltip-bg: var(--color-success);
+  --tooltip-color: var(--color-success-content);
 }
 
 .tooltip-warning {
-  --tooltip-color: var(--color-warning);
-  --tooltip-text-color: var(--color-warning-content);
+  --tooltip-bg: var(--color-warning);
+  --tooltip-color: var(--color-warning-content);
 }
 
 .tooltip-error {
-  --tooltip-color: var(--color-error);
-  --tooltip-text-color: var(--color-error-content);
+  --tooltip-bg: var(--color-error);
+  --tooltip-color: var(--color-error-content);
 }

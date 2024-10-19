@@ -32,10 +32,9 @@ async function generateFiles() {
   await generateThemes('themes.css')
   await generateThemesObject('./theme/object.js')
   await extractClasses({ srcDir: 'components' })
-  await minifyCssInDirectory(['colors', 'base', 'components', 'utilities'])
-  await minify('full.css')
+  // await minifyCssInDirectory(['colors', 'base', 'components', 'utilities'])
   await minify('themes.css')
-
+  await minify('full.css')
 }
 
 async function build() {
