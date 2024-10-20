@@ -25,7 +25,7 @@
 .status-info {
   @apply bg-info;
   box-shadow: 0 2px 3px -1px color-mix(in oklab, var(--color-info) 100%, transparent);
-  background-image: url("data:image/svg+xml,%3Csvg width='1' height='5' fill='white' viewBox='0 0 1 5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='white'/%3E%3Crect y='2' width='1' height='3'/%3E%3C/svg%3E%0A");
+  /* background-image: url("data:image/svg+xml,%3Csvg width='1' height='5' fill='white' viewBox='0 0 1 5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='white'/%3E%3Crect y='2' width='1' height='3'/%3E%3C/svg%3E%0A"); */
 }
 
 .status-success {
@@ -36,13 +36,13 @@
 .status-warning {
   @apply bg-warning;
   box-shadow: 0 2px 3px -1px color-mix(in oklab, var(--color-warning) 100%, transparent);
-  background-image: url("data:image/svg+xml,%3Csvg width='1' height='5' fill='white' viewBox='0 0 1 5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='4' width='1' height='1' /%3E%3Crect width='1' height='3'/%3E%3C/svg%3E%0A");
+  /* background-image: url("data:image/svg+xml,%3Csvg width='1' height='5' fill='white' viewBox='0 0 1 5' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='4' width='1' height='1' /%3E%3Crect width='1' height='3'/%3E%3C/svg%3E%0A"); */
 }
 
 .status-error {
   @apply bg-error;
   box-shadow: 0 2px 3px -1px color-mix(in oklab, var(--color-error) 100%, transparent);
-  background-image: url("data:image/svg+xml,%3Csvg width='4' height='1' fill='white' viewBox='0 0 4 1' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='4' height='1'/%3E%3C/svg%3E%0A");
+  /* background-image: url("data:image/svg+xml,%3Csvg width='4' height='1' fill='white' viewBox='0 0 4 1' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='4' height='1'/%3E%3C/svg%3E%0A"); */
 }
 
 .status-xs {
