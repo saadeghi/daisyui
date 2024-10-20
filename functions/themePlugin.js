@@ -8,13 +8,13 @@ export default plugin.withOptions(
         name = 'custom-theme',
         default: isDefault = false,
         prefersdark = false,
-        'color-scheme': colorScheme,
+        'color-scheme': colorScheme = 'normal',
         ...customThemeTokens
       } = options;
 
       let selector = `:root:has(input.theme-controller[value=${name}]:checked),[data-theme="${name}"]`;
       if (isDefault) {
-        selector = `:root,${selector}`;
+        selector = `:where(:root),${selector}`;
       }
 
       // Merge custom theme with built-in theme if it exists

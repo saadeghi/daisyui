@@ -3,7 +3,7 @@ export const pluginOptionsHandler = (() => {
   return (options, addBase, allThemes, packageVersion) => {
     const {
       logs = true,
-      themeRoot = ":root",
+      root = ":root",
       themes = ['light --default', 'dark --prefersdark'],
       include,
       exclude
@@ -16,14 +16,14 @@ export const pluginOptionsHandler = (() => {
 
     const applyTheme = (themeName, flags) => {
       if (allThemes[themeName]) {
-        let selector = `${themeRoot}:has(input.theme-controller[value=${themeName}]:checked),[data-theme=${themeName}]`;
+        let selector = `${root}:has(input.theme-controller[value=${themeName}]:checked),[data-theme=${themeName}]`;
         if (flags.includes('--default')) {
-          selector = `${themeRoot},${selector}`;
+          selector = `:where(${root}),${selector}`;
         }
         addBase({ [selector]: allThemes[themeName] });
 
         if (flags.includes('--prefersdark')) {
-          addBase({ "@media (prefers-color-scheme: dark)": { [themeRoot]: allThemes[themeName] } });
+          addBase({ "@media (prefers-color-scheme: dark)": { [root]: allThemes[themeName] } });
         }
       }
     };
