@@ -1,5 +1,6 @@
 .btn {
-  @apply text-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center text-sm/none no-underline outline-offset-2 select-none align-middle h-10 px-4;
+  @apply text-base-content inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center no-underline outline-offset-2 select-none align-middle h-10 px-4;
+  font-size: var(--font-size-sm);
   outline-color: var(--color-base-content);
   font-weight: 600;
   transition-property: color, background-color, background-image, border-color, opacity, box-shadow, scale;
@@ -15,7 +16,7 @@
   box-shadow: 0 0 0 0.5px oklch(1 0 0 / 0.01) inset, var(--btn-shadow);
   background-origin: border-box;
   background-image: var(--btn-flare);
-  --btn-shadow: 0 1px 1px 0 oklch(0% 0 0/0.07);
+  --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-color) 30%, transparent);
   --btn-flare: linear-gradient(50deg, transparent 85%, color-mix(in oklab, var(--btn-color), white 5%)),
     linear-gradient(-50deg, transparent 85%, color-mix(in oklab, var(--btn-color), white 5%)),
     linear-gradient(0, transparent, var(--btn-color) 5% 95%, transparent),
