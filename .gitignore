@@ -10,6 +10,7 @@ yarn.lock
 *.tgz
 /coverage
 .unlighthouse
+.logs
 
 /base
 /components

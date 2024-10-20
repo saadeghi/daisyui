@@ -59,4 +59,49 @@ export const report = async (directories) => {
   }
 
   console.table(flatReport, ['file', 'selector', 'line', 'var', 'raw', 'brotli']);
+
+  // Save the report if it's different from the last one
+  const timestamp = new Date().toISOString();
+  const reportData = {
+    timestamp,
+    data: flatReport
+  };
+
+  const reportsDir = path.join(process.cwd(), '.logs');
+  try {
+    await fs.mkdir(reportsDir, { recursive: true });
+
+    // Get the most recent report file
+    const files = await fs.readdir(reportsDir);
+    const jsonFiles = files.filter(file => file.endsWith('.json'));
+    jsonFiles.sort().reverse(); // Sort in descending order
+
+    let shouldSave = true;
+
+    if (jsonFiles.length > 0) {
+      const lastReportPath = path.join(reportsDir, jsonFiles[0]);
+      const lastReportContent = await fs.readFile(lastReportPath, 'utf8');
+      const lastReport = JSON.parse(lastReportContent);
+
+      // Compare current data with last report data
+      if (JSON.stringify(reportData.data) === JSON.stringify(lastReport.data)) {
+        shouldSave = false;
+      }
+    }
+
+    if (shouldSave) {
+      const reportPath = path.join(reportsDir, `report-${timestamp}.json`);
+      await fs.writeFile(reportPath, JSON.stringify(reportData, null, 2));
+      console.log(`Report saved: ${reportPath}`);
+
+      // Update index.js with list of all report files
+      const updatedFiles = await fs.readdir(reportsDir);
+      const updatedJsonFiles = updatedFiles.filter(file => file.endsWith('.json'));
+      const indexContent = `export const reportFiles = ${JSON.stringify(updatedJsonFiles, null, 2)};`;
+      await fs.writeFile(path.join(reportsDir, 'index.js'), indexContent);
+    }
+
+  } catch (error) {
+    console.error('Error saving report or generating index:', error);
+  }
 };

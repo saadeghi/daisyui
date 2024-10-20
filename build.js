@@ -32,6 +32,8 @@ async function generateFiles() {
     generateFull('full.css'),
     generateThemes('themes.css'),
     generateThemesObject('./theme/object.js'),
+  ])
+  await Promise.all([
     // extractClasses({ srcDir: 'components' }),
     minifyCssInDirectory(['colors', 'base', 'components', 'utilities']),
     minify('themes.css'),
