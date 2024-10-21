@@ -259,6 +259,12 @@ export const pages = [
             tags: "checkbox",
             href: "/components/checkbox/",
           },
+          // date picker
+          {
+            name: "Date picker",
+            tags: "date picker",
+            href: "/components/date-picker/",
+          },
           {
             name: "File Input",
             tags: "file upload",
