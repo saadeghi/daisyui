@@ -1,0 +1,18 @@
+.prose {
+  --tw-prose-body: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+  --tw-prose-headings: var(--color-base-content);
+  --tw-prose-lead: var(--color-base-content);
+  --tw-prose-links: var(--color-base-content);
+  --tw-prose-bold: var(--color-base-content);
+  --tw-prose-counters: var(--color-base-content);
+  --tw-prose-bullets: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+  --tw-prose-hr: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  --tw-prose-quotes: var(--color-base-content);
+  --tw-prose-quote-borders: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  --tw-prose-captions: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+  --tw-prose-code: var(--color-base-content);
+  --tw-prose-pre-code: var(--color-neutral-content);
+  --tw-prose-pre-bg: var(--color-neutral);
+  --tw-prose-th-borders: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+  --tw-prose-td-borders: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+}
