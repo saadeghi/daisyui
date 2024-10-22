@@ -169,9 +169,3 @@
     }
   }
 }
-
-@keyframes progress-loading {
-  50% {
-    background-position-x: -115%;
-  }
-}

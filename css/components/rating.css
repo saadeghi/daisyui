@@ -30,10 +30,8 @@
     }
 
     &:focus-visible {
-      transition-property: transform;
-      transition-duration: .3s;
-      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      transform: translateY(-0.125em);
+      transition: translate .3s cubic-bezier(0, 0, 0.2, 1);
+      translate: 0 -0.125em;
     }
   }
 
@@ -42,7 +40,7 @@
   }
 
   & input:active:focus {
-    transform: translateY(-0.125em);
+    translate: 0 -0.125em;
   }
 
   &:is(.rating-xs) {
@@ -73,20 +71,6 @@
 .rating-half {
   :where(input:not(.rating-hidden)) {
     @apply w-3;
-  }
-}
-
-@keyframes rating-pop {
-  0% {
-    transform: translateY(-0.125em);
-  }
-
-  40% {
-    transform: translateY(-0.125em);
-  }
-
-  100% {
-    transform: translateY(0);
   }
 }
 

@@ -59,18 +59,6 @@
   @apply cursor-not-allowed opacity-20;
 }
 
-@keyframes radiomark {
-  0% {
-    padding: 5px;
-  }
-
-  50% {
-    padding: 3px;
-  }
-}
-
-/* responsive */
-
 .radio-xs {
   &:is([type="radio"]) {
     @apply size-4;
