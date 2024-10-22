@@ -4,7 +4,7 @@ yarn.lock
 .next
 /dist
 /colors
-/index.js
+/imports.js
 .idea
 .DS_Store
 *.tgz

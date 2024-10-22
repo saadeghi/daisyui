@@ -32,7 +32,8 @@
     "css",
     "ui"
   ],
-  "main": "index.js",
+  "main": "./index.js",
+  "module": "./index.js",
   "files": [
     "base",
     "colors",
@@ -42,6 +43,7 @@
     "functions/variables.js",
     "theme",
     "utilities",
+    "imports.js",
     "index.js",
     "chunks.css",
     "full.css",
@@ -72,7 +74,7 @@
     "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.2",
+    "@biomejs/biome": "^1.9.4",
     "@tailwindcss/cli": "^4.0.0-alpha.28",
     "commit-and-tag-version": "12.4.1",
     "lightningcss": "^1.27.0",

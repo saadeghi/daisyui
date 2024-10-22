@@ -7,7 +7,7 @@ import { generatePlugins } from "./functions/generatePlugins.js"
 // import { extractClasses } from "./functions/extractClasses.js"
 import { generateThemes } from "./functions/generateThemes.js"
 import { generateChunks } from "./functions/generateChunks.js"
-import { generateIndex } from "./functions/generateIndex.js"
+import { generateImports } from "./functions/generateImports.js"
 import { generateFull } from "./functions/generateFull.js"
 import { removeFiles } from "./functions/removeFiles.js"
 import { copyFile } from "./functions/copyFile.js"
@@ -27,7 +27,7 @@ async function generateFiles() {
     generatePlugins({ type: "utility", srcDir: "css/utilities", distDir: "utilities" }),
   ]);
   await Promise.all([
-    generateIndex('index.js'),
+    generateImports('imports.js'),
     generateChunks('chunks.css'),
     generateFull('full.css'),
     generateThemes('themes.css'),
@@ -45,7 +45,7 @@ async function generateFiles() {
 
 async function build() {
   try {
-    await removeFiles(['base', 'colors', 'components', 'theme', 'utilities', 'chunks.css', 'full.css', 'index.js', 'themes.css'])
+    await removeFiles(['base', 'colors', 'components', 'theme', 'utilities', 'chunks.css', 'full.css', 'imports.js', 'themes.css'])
     console.time('Build');
     await generateFiles();
     console.timeEnd('Build');
