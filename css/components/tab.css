@@ -8,15 +8,13 @@
   font-size: 0.875rem;
   line-height: 2;
   --tab-padding: 1rem;
-  --tab-color: var(--color-base-content);
   --tab-bg: var(--color-base-100);
   --tab-border-color: var(--color-base-300);
-  color: var(--tab-color);
   padding-inline-start: var(--tab-padding, 1rem);
   padding-inline-end: var(--tab-padding, 1rem);
 
   &:is(input[type="radio"]) {
-    @apply w-auto rounded-b-none;
+    @apply w-auto;
 
     &:after {
       content: attr(aria-label);
@@ -37,7 +35,7 @@
 
   &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]),
   &:is(input:checked) {
-    @apply border-base-content;
+    @apply border-base-content text-base-content;
   }
 
   &:focus {
@@ -49,17 +47,14 @@
     outline-offset: -5px;
   }
 
-  /* disabled */
-  &-disabled,
-  &[disabled] {
-    @apply text-base-content/20 cursor-not-allowed;
-  }
-
-
   &[disabled],
   &[disabled]:hover {
-    @apply text-base-content/29 cursor-not-allowed;
+    @apply text-base-content/20 cursor-not-allowed;
   }
+}
+
+.tab-disabled {
+  @apply text-base-content/20 cursor-not-allowed;
 }
 
 .tabs-border {
@@ -71,7 +66,7 @@
   }
 }
 
-.tabs-lifted {
+.tabs-lift {
   &>.tab:focus-visible {
     border-end-end-radius: 0;
     border-end-start-radius: 0;
@@ -83,6 +78,10 @@
   }
 
   &>.tab {
+    &:is(input[type="radio"]) {
+      @apply rounded-b-none;
+    }
+
     border: var(--spacing-tab-border, 1px) solid transparent;
     border-width: 0 0 var(--spacing-tab-border, 1px) 0;
     border-start-start-radius: var(--tab-radius, 0.5rem);
@@ -154,27 +153,22 @@
   }
 }
 
-.tabs-lifted {
-
-  &> :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled])+.tabs-lifted :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]),
-  &>.tab:is(input:checked)+.tabs-lifted .tab:is(input:checked) {
-    &:before {
-      background-image: var(--radius-end);
-      background-position: top right;
-    }
-  }
-}
-
-.tabs-boxed {
-  @apply bg-base-200 rounded-btn p-1;
+.tabs-box {
+  @apply rounded-btn p-1 bg-base-200;
+  box-shadow: 0 -0.5px oklch(100% 0 0/ 0.1) inset, 0 0.5px oklch(0% 0 0/ 0.05) inset;
 
   .tab {
-    @apply rounded-btn;
+    @apply rounded-btn border-none;
+
+    &:focus-visible {
+      outline-offset: 2px;
+    }
   }
 
   :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]),
   :is(input:checked) {
-    @apply bg-primary text-primary-content hover:text-primary-content;
+    @apply bg-base-100 text-base-content hover:text-base-content;
+    box-shadow: 0 1px oklch(100% 0 0/ 0.1) inset, 0 1px 1px -1px color-mix(in oklab, var(--color-neutral), transparent), 0 1px 6px -4px var(--color-neutral);
   }
 }
 
