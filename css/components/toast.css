@@ -1,0 +1,42 @@
+.toast {
+  @apply bg-transparent fixed min-w-fit flex-col whitespace-nowrap gap-2 m-4 bottom-0 end-0 start-auto top-auto;
+  translate: var(--toast-x, 0) var(--toast-y, 0);
+
+  &>* {
+    animation: toast-pop 0.25s ease-out;
+  }
+
+  &:where(.toast-start) {
+    @apply end-auto start-0;
+    --toast-x: 0;
+  }
+
+  &:where(.toast-center) {
+    @apply end-1/2 start-1/2;
+    --toast-x: -50%;
+  }
+
+  &:where(.toast-center):where(.rtl) {
+    --toast-x: 50%;
+  }
+
+  &:where(.toast-end) {
+    @apply end-0 start-auto;
+    --toast-x: 0;
+  }
+
+  &:where(.toast-bottom) {
+    @apply bottom-0 top-auto;
+    --toast-y: 0;
+  }
+
+  &:where(.toast-middle) {
+    @apply bottom-auto top-1/2;
+    --toast-y: -50%;
+  }
+
+  &:where(.toast-top) {
+    @apply bottom-auto top-0;
+    --toast-y: 0;
+  }
+}

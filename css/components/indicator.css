@@ -1,0 +1,50 @@
+.indicator {
+  @apply relative inline-flex;
+  width: max-content;
+
+  :where(.indicator-item) {
+    z-index: 1;
+    @apply absolute whitespace-nowrap;
+    bottom: auto;
+    top: 0;
+    right: 0;
+    left: auto;
+    translate: var(--inidcator-x, 50%) var(--indicator-y, -50%);
+  }
+
+  :where(.indicator-item.indicator-start) {
+    right: auto;
+    left: 0;
+    --inidcator-x: -50%;
+  }
+
+  :where(.indicator-item.indicator-center) {
+    right: 50%;
+    left: 50%;
+    --inidcator-x: -50%;
+  }
+
+  :where(.indicator-item.indicator-end) {
+    right: 0;
+    left: auto;
+    --inidcator-x: 50%;
+  }
+
+  :where(.indicator-item.indicator-bottom) {
+    bottom: 0;
+    top: auto;
+    --indicator-y: 50%;
+  }
+
+  :where(.indicator-item.indicator-middle) {
+    bottom: 50%;
+    top: 50%;
+    --indicator-y: -50%;
+  }
+
+  :where(.indicator-item.indicator-top) {
+    bottom: auto;
+    top: 0;
+    --indicator-y: -50%;
+  }
+}
