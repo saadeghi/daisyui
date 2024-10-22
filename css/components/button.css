@@ -46,18 +46,11 @@
     outline-style: solid;
   }
 
-  &:active {
-    &:focus {
-      translate: 0 .5px;
-      @apply animate-[button-push_0s_ease-out];
-      background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
-      border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
-      --btn-shadow: 0 0 0 0 oklch(0% 0 0/.07);
-    }
-
-    &:hover {
-      @apply animate-[button-push_0s_ease-out];
-    }
+  &:active:not(.btn-active) {
+    translate: 0 .5px;
+    background-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 5%);
+    border-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
+    --btn-shadow: 0 0 0 0 oklch(0% 0 0/.07);
   }
 }
 
@@ -265,14 +258,4 @@
 
 .btn-block {
   @apply w-full;
-}
-
-@keyframes button-push {
-  from {
-    translate: 0 0.5px;
-  }
-
-  to {
-    translate: 0 0;
-  }
 }
