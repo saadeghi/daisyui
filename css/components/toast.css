@@ -40,3 +40,15 @@
     --toast-y: 0;
   }
 }
+
+@keyframes toast-pop {
+  0% {
+    scale: 0.9;
+    opacity: 0;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}

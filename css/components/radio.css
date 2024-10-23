@@ -82,3 +82,13 @@
     @apply size-8;
   }
 }
+
+@keyframes radiomark {
+  0% {
+    padding: 5px;
+  }
+
+  50% {
+    padding: 3px;
+  }
+}

@@ -91,3 +91,17 @@
     @apply w-5;
   }
 }
+
+@keyframes rating-pop {
+  0% {
+    translate: 0 -0.125em;
+  }
+
+  40% {
+    translate: 0 -0.125em;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}

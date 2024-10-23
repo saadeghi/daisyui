@@ -158,7 +158,8 @@
   box-shadow: 0 -0.5px oklch(100% 0 0/ 0.1) inset, 0 0.5px oklch(0% 0 0/ 0.05) inset;
 
   .tab {
-    @apply rounded-btn border-none;
+    @apply rounded-btn;
+    border-style: none;
 
     &:focus-visible {
       outline-offset: 2px;
