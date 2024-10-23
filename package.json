@@ -75,15 +75,15 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tailwindcss/cli": "^4.0.0-alpha.28",
-    "commit-and-tag-version": "12.4.1",
+    "@tailwindcss/cli": "^4.0.0-alpha.29",
+    "commit-and-tag-version": "12.5.0",
     "lightningcss": "^1.27.0",
-    "postcss": "^8.4.45",
+    "postcss": "^8.4.47",
     "postcss-js": "^4.0.1",
     "postcss-prefixer": "^3.0.0",
-    "postcss-selector-parser": "^6.1.2",
+    "postcss-selector-parser": "^7.0.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "zlib": "^1.0.5"
   }
 }
