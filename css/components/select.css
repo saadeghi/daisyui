@@ -1,6 +1,6 @@
 .select {
   border: 1px solid;
-  @apply relative bg-base-100 h-10 shrink appearance-none border-transparent px-4 align-middle;
+  @apply relative bg-base-100 h-10 shrink appearance-none border-transparent px-4 align-middle w-full max-w-80;
   font-size: 0.875rem;
   line-height: 2;
   border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));

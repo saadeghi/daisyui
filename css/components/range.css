@@ -2,7 +2,7 @@
   appearance: none;
   -webkit-appearance: none;
   --range-shdw: currentColor;
-  @apply rounded-box h-6 w-full cursor-pointer overflow-hidden bg-transparent align-middle;
+  @apply rounded-box h-6 w-full cursor-pointer overflow-hidden bg-transparent align-middle w-full max-w-80;
   border: none;
 
   &:focus {

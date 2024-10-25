@@ -1,6 +1,6 @@
 .textarea {
   border: 1px solid transparent;
-  @apply bg-base-100 h-10 shrink appearance-none px-4 py-2 align-middle min-h-20 rounded-btn;
+  @apply bg-base-100 h-10 shrink appearance-none px-4 py-2 align-middle min-h-20 rounded-btn w-full max-w-80;
   font-size: 0.875rem;
   line-height: 2;
 
