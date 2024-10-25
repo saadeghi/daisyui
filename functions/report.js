@@ -19,8 +19,7 @@ async function processFile(filePath) {
       brotli: brotliSize / 1000,
     };
   } catch (error) {
-    console.error(`Error processing file ${filePath}: ${error.message}`);
-    return null;
+    throw new Error(`Error processing file ${filePath}: ${error.message}`);
   }
 }
 
@@ -30,8 +29,7 @@ async function processDirectory(dir) {
     const cssFiles = files.filter(file => file.endsWith('.css'));
     return Promise.all(cssFiles.map(file => processFile(path.join(dir, file))));
   } catch (error) {
-    console.error(`Error accessing ${dir}: ${error.message}`);
-    return [];
+    throw new Error(`Error accessing ${dir}: ${error.message}`);
   }
 }
 
@@ -45,8 +43,7 @@ export const report = async (directories) => {
       const stats = await fs.stat(item);
       return stats.isDirectory() ? processDirectory(item) : processFile(item);
     } catch (error) {
-      console.error(`Error accessing ${item}: ${error.message}`);
-      return null;
+      throw new Error(`Error accessing ${item}: ${error.message}`);
     }
   };
 
@@ -54,8 +51,7 @@ export const report = async (directories) => {
   const flatReport = results.flat().filter(Boolean);
 
   if (flatReport.length === 0) {
-    console.error("No files were successfully processed.");
-    return;
+    throw new Error("No files were successfully processed.");
   }
 
   console.table(flatReport, ['file', 'selector', 'line', 'var', 'raw', 'brotli']);
@@ -102,6 +98,6 @@ export const report = async (directories) => {
     }
 
   } catch (error) {
-    console.error('Error saving report or generating index:', error);
+    throw new Error('Error saving report or generating index:', error);
   }
 };

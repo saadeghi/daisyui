@@ -92,7 +92,7 @@ export async function generateRawStyles({ srcDir, distDir, responsive = false })
     const processPromises = files.map(file =>
       processFile(file, stylesDir, distDir, defaultTheme, theme, responsive)
         .catch(fileError => {
-          console.error(`Error processing file ${file}: ${fileError.message}`);
+          throw new Error(`Error processing file ${file}: ${fileError.message}`);
           // You might want to throw or handle this error differently
         })
     );

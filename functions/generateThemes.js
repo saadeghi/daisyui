@@ -37,6 +37,6 @@ export const generateThemes = async (outputFile) => {
     await fs.writeFile(outputFile, themeContent);
 
   } catch (error) {
-    console.error('Error generating themes:', error);
+    throw new Error('Error generating themes:', error);
   }
 };

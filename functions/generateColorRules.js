@@ -135,7 +135,6 @@ export const generateColorRules = async ({ distDir }) => {
 
     await compileAndWriteFile(generateStatesContent(), 'states.css');
   } catch (error) {
-    console.error('Error generating color rules:', error);
-    throw error;
+    throw new Error('Error generating color rules:', error);
   }
 };

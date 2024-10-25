@@ -17,8 +17,7 @@ export const minify = async (filePath) => {
     const modifiedCode = `/*! 🌼 daisyUI ${packageJson.version} – MIT License */ ` + code;
     await fs.promises.writeFile(filePath, modifiedCode);
   } catch (error) {
-    console.error(`${filePath}:${error?.loc?.line}: ${error.message}`);
-    throw error;
+    throw new Error(`${filePath}:${error?.loc?.line}: ${error.message}`);
   }
 }
 

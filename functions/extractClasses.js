@@ -34,8 +34,7 @@ const processCssFile = async (srcDir, filePath) => {
 
     return classNames.length;
   } catch (error) {
-    console.error(`Error processing file ${filePath}: ${error.message}`);
-    throw error;
+    throw new Error(`Error processing file ${filePath}: ${error.message}`);
   }
 }
 
@@ -61,7 +60,6 @@ export const extractClasses = async ({ srcDir }) => {
 
     return totalClassNames;
   } catch (error) {
-    console.error(`Error extracting classes: ${error.message}`);
-    throw error;
+    throw new Error(`Error extracting classes: ${error.message}`);
   }
 }

@@ -15,7 +15,7 @@ export const generateThemesObject = async (outputPath) => {
         const themeModule = await import(themeObjectPath);
         themeObjects[themeName] = themeModule.default;
       } catch (error) {
-        console.error(`Error importing theme: ${themeName}`, error);
+        throw new Error(`Error importing theme: ${themeName}`, error);
       }
     }
   }));
