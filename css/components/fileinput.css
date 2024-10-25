@@ -1,6 +1,6 @@
 .file-input {
   border: 1px solid transparent;
-  @apply w-full max-w-80 cursor-pointer select-none h-10 pe-4 appearance-none;
+  @apply w-full max-w-80 cursor-pointer select-none h-10 pe-4 appearance-none align-middle;
   font-size: 0.875rem;
   line-height: 2;
   border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
@@ -134,7 +134,7 @@
   &.file-input-sm {
     @apply h-8 pe-3;
     font-size: 0.875rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
   }
 
   &.file-input-md {
