@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "daisyui",
-  "version": "5.0.0-alpha.26",
+  "version": "5.0.0-alpha.27",
   "description": "daisyUI - Tailwind CSS Components",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -75,7 +75,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tailwindcss/cli": "^4.0.0-alpha.29",
+    "@tailwindcss/cli": "^4.0.0-alpha.30",
     "commit-and-tag-version": "12.5.0",
     "lightningcss": "^1.27.0",
     "postcss": "^8.4.47",
