@@ -33,7 +33,7 @@
     grid-column-start: span 9999;
   }
 
-  &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]),
+  &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
   &:is(input:checked) {
     @apply border-base-content text-base-content;
   }
@@ -72,9 +72,14 @@
     border-end-start-radius: 0;
   }
 
-  &:has(.tab-content[class^="rounded-"]) .tab:first-child:not(:is(.tab-active, [aria-selected="true"])),
-  &:has(.tab-content[class*=" rounded-"]) .tab:first-child:not(:is(.tab-active, [aria-selected="true"])) {
-    @apply border-b-transparent;
+  &:has(.tab-content[class^="rounded-"], .tab-content[class*=" rounded-"]) {
+    .tab {
+      &:first-child {
+        &:not(:is(.tab-active, [aria-selected="true"])) {
+          @apply border-b-transparent;
+        }
+      }
+    }
   }
 
   &>.tab {
@@ -91,7 +96,7 @@
     padding-inline-end: var(--tab-padding, 1rem);
     padding-top: var(--spacing-tab-border, 1px);
 
-    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]),
+    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
       background-color: var(--tab-bg);
       border-width: var(--spacing-tab-border, 1px) var(--spacing-tab-border, 1px) 0 var(--spacing-tab-border, 1px);
@@ -166,7 +171,7 @@
     }
   }
 
-  :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]),
+  :is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
   :is(input:checked) {
     @apply bg-base-100 text-base-content hover:text-base-content;
     box-shadow: 0 1px oklch(100% 0 0/ 0.1) inset, 0 1px 1px -1px color-mix(in oklab, var(--color-neutral), transparent), 0 1px 6px -4px var(--color-neutral);

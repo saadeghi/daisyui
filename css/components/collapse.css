@@ -1,4 +1,4 @@
-.collapse:not(td):not(tr):not(colgroup) {
+.collapse:not(td, tr, colgroup) {
   visibility: visible;
 }
 
@@ -11,42 +11,35 @@
   grid-template-rows: auto 0fr;
   transition: grid-template-rows 0.2s;
 
-  >input[type="checkbox"],
-  >input[type="radio"] {
+  >input:is([type="checkbox"], [type="radio"]) {
     grid-column-start: 1;
     grid-row-start: 1;
     appearance: none;
     opacity: 0;
   }
 
-  &[open],
-  &.collapse-open,
-  &:focus:not(.collapse-close),
-  &:not(.collapse-close):has(> input[type="checkbox"]:checked),
-  &:not(.collapse-close):has(> input[type="radio"]:checked) {
+  &:is([open], .collapse-open, :focus:not(.collapse-close)),
+  &:not(.collapse-close):has(> input:is([type="checkbox"], [type="radio"]):checked) {
     grid-template-rows: auto 1fr;
   }
 
-  &[open]>.collapse-content,
-  &.collapse-open>.collapse-content,
-  &:focus:not(.collapse-close)>.collapse-content,
-  &:not(.collapse-close)>input[type="checkbox"]:checked~.collapse-content,
-  &:not(.collapse-close)>input[type="radio"]:checked~.collapse-content {
+  &:is([open], .collapse-open, :focus:not(.collapse-close))>.collapse-content,
+  &:not(.collapse-close)> :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
     visibility: visible;
     min-height: fit-content;
   }
 
-  &:focus-visible,
-  &:has(.collapse-title:focus-visible),
-  &:has(> input[type="checkbox"]:focus-visible),
-  &:has(> input[type="radio"]:focus-visible) {
-    outline-color: hsl(var(--bc) / 1);
-    outline-style: solid;
-    outline-width: 2px;
-    outline-offset: 2px;
+  &,
+  &:has(.collapse-title, > input:is([type="checkbox"], [type="radio"])) {
+    &:focus-visible {
+      outline-color: hsl(var(--bc) / 1);
+      outline-style: solid;
+      outline-width: 2px;
+      outline-offset: 2px;
+    }
   }
 
-  &:not(.collapse-open):not(.collapse-close) {
+  &:not(.collapse-open, .collapse-close) {
 
     >input[type="checkbox"],
     >input[type="radio"]:not(:checked),
@@ -55,30 +48,19 @@
     }
   }
 
-  &:focus:not(.collapse-open):not(.collapse-close):not(.collapse[open])>.collapse-title {
+  &:focus:not(.collapse-open, .collapse-close, .collapse[open])>.collapse-title {
     cursor: unset;
   }
 
-  &[open]> :where(.collapse-content),
-  &.collapse-open> :where(.collapse-content),
-  &:focus:not(.collapse-close)> :where(.collapse-content),
-  &:not(.collapse-close)> :where(input[type="checkbox"]:checked ~ .collapse-content),
-  &:not(.collapse-close)> :where(input[type="radio"]:checked ~ .collapse-content) {
+  &:is([open], .collapse-open, :focus:not(.collapse-close))> :where(.collapse-content),
+  &:not(.collapse-close)> :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
     padding-bottom: 1rem;
     transition:
       padding 0.2s ease-out,
       background-color 0.2s ease-out;
   }
 
-  &[open] {
-    &.collapse-arrow {
-      >.collapse-title:after {
-        transform: translateY(-50%) rotate(225deg);
-      }
-    }
-  }
-
-  &.collapse-open {
+  &:is([open], .collapse-open) {
     &.collapse-arrow {
       >.collapse-title:after {
         transform: translateY(-50%) rotate(225deg);
@@ -94,8 +76,7 @@
 
   &.collapse-arrow:not(.collapse-close) {
 
-    >input[type="checkbox"]:checked~.collapse-title:after,
-    >input[type="radio"]:checked~.collapse-title:after {
+    >input:is([type="checkbox"], [type="radio"]):checked~.collapse-title:after {
       transform: translateY(-50%) rotate(225deg);
     }
   }
@@ -124,14 +105,12 @@
 
   &.collapse-plus:not(.collapse-close) {
 
-    >input[type="checkbox"]:checked~.collapse-title:after,
-    >input[type="radio"]:checked~.collapse-title:after {
+    >input:is([type="checkbox"], [type="radio"]):checked~.collapse-title:after {
       content: "−";
     }
   }
 
-  >input[type="checkbox"],
-  >input[type="radio"] {
+  >input:is([type="checkbox"], [type="radio"]) {
     z-index: 1;
     width: 100%;
     padding: 1rem;
