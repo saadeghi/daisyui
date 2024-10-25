@@ -39,10 +39,18 @@
 
   &.file-input-border {
     @apply border-base-content/10;
+    box-shadow:
+      0 1px oklch(0% 0 0 / 0.1) inset,
+      0 -1px oklch(100% 0 0 / 0.1) inset;
   }
 
   &.file-input-ghost {
-    @apply border-base-content/10;
+    &:not(&:focus) {
+      &::file-selector-button {
+        background: transparent;
+        border-color: transparent;
+      }
+    }
   }
 
   &.file-input-primary {
