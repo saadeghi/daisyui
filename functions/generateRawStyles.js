@@ -1,10 +1,10 @@
-import { compile } from '../node_modules/tailwindcss/dist/lib.js'
 import fs from 'fs/promises';
 import path from 'path';
 import { getFileNames } from './getFileNames';
 import breakpoints from './breakpoints';
 import postcss from 'postcss';
 import selectorParser from 'postcss-selector-parser';
+import { compileAndExtractStyles, loadThemes } from './compileAndExtractStyles.js';
 
 export async function generateResponsiveVariants(css) {
   let responsiveStyles = '';
@@ -36,38 +36,6 @@ export async function generateResponsiveVariants(css) {
   }
 
   return css + responsiveStyles;
-}
-
-async function loadThemes() {
-  const [defaultTheme, theme] = await Promise.all([
-    fs.readFile(path.join(import.meta.dir, '../node_modules/tailwindcss/theme.css'), 'utf-8'),
-    fs.readFile(path.join(import.meta.dir, './variables.css'), 'utf-8'),
-  ]);
-  return { defaultTheme, theme };
-}
-
-async function compileAndExtractStyles(styleContent, defaultTheme, theme) {
-  const compiledContent = await (await compile(`
-    @layer theme{${defaultTheme}${theme}}
-    @layer wrapperStart{${styleContent}}
-    @layer wrapperEnd
-  `)).build([]);
-
-  const startIndex = compiledContent.indexOf('@layer wrapperStart');
-  const endIndex = compiledContent.indexOf('@layer wrapperEnd');
-
-  if (startIndex === -1 || endIndex === -1) {
-    throw new Error('Failed to find wrapper layers in compiled content');
-  }
-
-  const openingBraceIndex = compiledContent.indexOf('{', startIndex);
-  const closingBraceIndex = compiledContent.lastIndexOf('}', endIndex);
-
-  if (openingBraceIndex === -1 || closingBraceIndex === -1 || openingBraceIndex >= closingBraceIndex) {
-    throw new Error('Invalid wrapper structure in compiled content');
-  }
-
-  return compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
 }
 
 async function processFile(file, stylesDir, distDir, defaultTheme, theme, responsive) {
