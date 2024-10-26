@@ -8,7 +8,14 @@ async function processFile(filePath) {
     const stats = await fs.stat(filePath);
     const brotliSize = await compressFile(fileContent, zlib.brotliCompress);
 
-    const cssVariables = (fileContent.match(/--[\w-]+/g) || []).length;
+    const allCssVariables = fileContent.match(/--[\w-]+/g) || [];
+    const cssVariables = allCssVariables.length;
+
+    const twVariables = allCssVariables.filter(variable => variable.startsWith('--tw'));
+    const filename = path.basename(filePath);
+    if (twVariables.length > 0 && !['typography.css', 'properties.css', 'states.css', 'responsive.css', 'full.css'].includes(filename)) {
+      console.log(`Warning: unnecessary --tw variables in ${filename}:`, twVariables);
+    }
 
     return {
       file: filePath,
