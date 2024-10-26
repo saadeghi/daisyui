@@ -1,7 +1,5 @@
 import { mdsvex } from "mdsvex"
-import { sveltePreprocess } from "svelte-preprocess"
 import adapter from "@sveltejs/adapter-static"
-// import preprocess from "svelte-preprocess"
 import headingSlugs from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
 import rehypeExternalLinks from "rehype-external-links"
@@ -48,9 +46,6 @@ export default {
         blog: "src/lib/mdsvex-blog.svelte",
         _: "src/lib/mdsvex.svelte",
       },
-    }),
-    sveltePreprocess({
-      postcss: true,
     }),
   ],
   kit: {

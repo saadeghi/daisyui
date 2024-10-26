@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+/* @plugin "../../../index.js"; */
 /* carbon */
 #carbonads {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
@@ -8,25 +11,30 @@
   border-radius: 10px;
   overflow: hidden;
 }
-#carbonads > span {
+
+#carbonads>span {
   display: block;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: end;
 }
+
 #carbonads .carbon-wrap {
   display: flex;
   width: 100%;
 }
+
 #carbonads .carbon-img {
   display: block;
   padding: .5rem;
 }
+
 #carbonads .carbon-img img {
   display: block;
   border-radius: 3px;
 }
+
 #carbonads .carbon-text {
   display: block;
   min-height: 84px;
@@ -35,6 +43,7 @@
   line-height: 1.3;
   text-align: left;
 }
+
 #carbonads .carbon-poweredby {
   display: inline-block;
   padding: 3px 6px;
@@ -48,13 +57,16 @@
   margin: 3px;
   margin-top: -17px;
 }
+
 @media only screen and (min-width: 1280px) {
   .carbonads-responsive #carbonads {
     max-width: 146px;
   }
+
   .carbonads-responsive #carbonads .carbon-wrap {
     flex-direction: column;
   }
+
   .carbonads-responsive #carbonads .carbon-poweredby {
     margin-top: 0;
   }
@@ -66,9 +78,11 @@
   width: 100%;
   max-width: 100%;
 }
+
 [data-svelte-search][data-svelte-search] label {
   display: none;
 }
+
 [data-svelte-search][data-svelte-search] input {
   background-color: transparent;
   color: inherit;
@@ -76,9 +90,11 @@
   border-radius: var(--rounded-btn);
   padding-inline-start: 2.5em;
 }
+
 [data-svelte-search][data-svelte-search] input::placeholder {
   color: inherit;
 }
+
 [data-svelte-search][data-svelte-search] input:focus {
   outline: none;
   outline-offset: 0;
@@ -86,8 +102,8 @@
   background-color: var(--fallback-b1, oklch(var(--b1)));
   color: var(--fallback-bc, oklch(var(--bc)));
 }
-[data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"]
-  .svelte-typeahead-list {
+
+[data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"] .svelte-typeahead-list {
   transform: translateY(0.5em);
   background: var(--fallback-b1, oklch(var(--b1) / 0.99));
   border: 0 solid var(--fallback-bc, oklch(var(--bc) / 0.2));
@@ -100,19 +116,23 @@
     rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected,
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected:hover {
   background: var(--fallback-n, oklch(var(--n)));
   color: var(--fallback-nc, oklch(var(--nc)));
 }
+
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li {
   color: var(--fallback-bc, oklch(var(--bc)));
   border-radius: var(--rounded-btn);
 }
+
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:hover {
   background: var(--fallback-b2, oklch(var(--b2)));
   color: var(--fallback-bc, oklch(var(--bc)));
 }
+
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:not(:last-of-type) {
   border-bottom: none;
 }
@@ -125,21 +145,25 @@ pre[class*="language-"] {
   background: unset;
   direction: ltr;
 }
+
 .prose pre[class*="language-"] {
   max-width: clamp(20rem, calc(100vw - 4rem), 80ch);
   background-color: var(--fallback-n, oklch(var(--n)));
   color: var(--fallback-nc, oklch(var(--nc)));
   border-radius: var(--rounded-box);
+
   ::selection {
     background-color: var(--fallback-nc, oklch(var(--nc)));
     color: var(--fallback-n, oklch(var(--n)));
   }
 }
+
 @media (min-width: 1024px) {
   .prose pre[class*="language-"] {
     max-width: clamp(20rem, calc(100vw - 20rem - 4rem), 80ch);
   }
 }
+
 @media (min-width: 1280px) {
   .prose pre[class*="language-"] {
     max-width: clamp(20rem, calc(100vw - 20rem - 4rem - 8rem), 80ch);
@@ -147,15 +171,18 @@ pre[class*="language-"] {
 }
 
 /* changelog */
-.changelog-body h1#changelog + p {
+.changelog-body h1#changelog+p {
   display: none;
 }
-.changelog-body > .prose > h2 {
+
+.changelog-body>.prose>h2 {
   margin-top: 5rem;
 }
-.changelog-body > .prose > h2 a {
+
+.changelog-body>.prose>h2 a {
   font-weight: 900;
 }
-.changelog-body > .prose > p img {
+
+/* .changelog-body>.prose>p img {
   @apply rounded-box border-base-content/10 border;
-}
+} */

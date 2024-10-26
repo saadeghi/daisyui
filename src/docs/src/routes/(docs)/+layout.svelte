@@ -1,5 +1,6 @@
 <script>
-import "$components/StyleHandler.svelte"
+// import "$components/StyleHandler.svelte"
+import "../../global.css"
 import Navbar from "$components/Navbar.svelte"
 import Sidebar from "$components/Sidebar.svelte"
 import { page } from "$app/stores"

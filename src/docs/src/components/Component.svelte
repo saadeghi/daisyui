@@ -220,7 +220,7 @@ onMount(() => {
   </div>
 </div>
 
-<style global lang="postcss">
+<style global>
   .prose .code-wrapper {
     max-width: 100vw;
     overflow-x: auto;
