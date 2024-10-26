@@ -211,7 +211,7 @@ $effect(async () => {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -289,14 +289,14 @@ $effect(async () => {
     <!-- hero figure -->
 
     <div
-      class="invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 xl:visible xl:-end-32 xl:bottom-auto xl:top-16 xl:w-auto xl:!transform-none xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16"
+      class="invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 xl:visible xl:-end-32 xl:bottom-auto xl:top-16 xl:w-auto xl:transform-none! xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16"
       style="{`${
         section['hero'] && scrollY > section['hero'].clientHeight * 0.2
           ? 'visibility: visible;'
           : ''
       }transform:translateY(${animateValue(section['hero'], [17, 25], [120, 0])}%)`}">
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [--rtl-reverse:1] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] rtl:[--rtl-reverse:-1] rtl:[transform:rotateX(20deg)rotateZ(20deg)skewY(-8deg)scale(1)] max-[1279px]:![transform:translate3d(0,0,0)] xl:-end-20 xl:-me-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-e-none xl:pe-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [--rtl-reverse:1] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] rtl:[--rtl-reverse:-1] rtl:[transform:rotateX(20deg)rotateZ(20deg)skewY(-8deg)scale(1)] max-[1279px]:[transform:translate3d(0,0,0)]! xl:-end-20 xl:-me-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-e-none xl:pe-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
         style="{section['hero'] &&
           `transform: rotateX(${animateValue(
             section['hero'],
@@ -315,14 +315,14 @@ $effect(async () => {
         <div class="grid">
           <div
             style="{`opacity:${animateValue(section['hero'], [15, 17], [1, 0])}`}"
-            class="z-[1] col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
+            class="z-1 col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
             class:invisible="{section['hero'] && scrollY < section['hero'].clientHeight}">
             <!-- flying components -->
             <div
               class="col-start-1 row-start-1 mx-6 flex items-end gap-6 xl:mx-0 xl:items-start xl:gap-0">
               <div class="flex gap-6 xl:w-60 xl:flex-col xl:gap-0">
                 <div
-                  class="relative z-[1] w-80 will-change-auto motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)] xl:-start-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
+                  class="relative z-1 w-80 will-change-auto motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]! xl:-start-6 xl:w-auto xl:[filter:drop-shadow(-1rem_3rem_1rem_#00000012)]"
                   style="{`filter: drop-shadow(calc(-1rem * var(--rtl-reverse)) 3rem 1rem #00000012);transform:translate(calc(${animateValue(
                     section['hero'],
                     [2, 9],
@@ -533,7 +533,7 @@ $effect(async () => {
                 <div
                   class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6">
                   <div
-                    class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1279px]:![transform:translate3d(0,0,0)]"
+                    class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:transform-none! motion-reduce:shadow-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
                     style="{`box-shadow:calc(${animateValue(
                       section['hero'],
                       [5, 5.5],
@@ -571,7 +571,7 @@ $effect(async () => {
                     </span>
                   </div>
                   <div
-                    class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-none max-[1279px]:![transform:translate3d(0,0,0)]"
+                    class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:transform-none! motion-reduce:shadow-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
                     style="{`box-shadow:calc(${animateValue(
                       section['hero'],
                       [6, 6.5],
@@ -611,7 +611,7 @@ $effect(async () => {
 
               <div class="flex shrink-0 gap-6 pe-4 xl:flex-col xl:pe-0">
                 <div
-                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1279px]:![transform:translate3d(0,0,0)]"
+                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:transform-none! motion-reduce:shadow-sm! max-[1279px]:[transform:translate3d(0,0,0)]!"
                   style="{`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), calc(${animateValue(
                     section['hero'],
                     [0, 0.5],
@@ -690,7 +690,7 @@ $effect(async () => {
                   </div>
                 </div>
                 <div
-                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:!transform-none motion-reduce:!shadow-sm max-[1279px]:![transform:translate3d(0,0,0)]"
+                  class="card bg-base-100 shadow-sm will-change-auto motion-reduce:transform-none! motion-reduce:shadow-sm! max-[1279px]:[transform:translate3d(0,0,0)]!"
                   style="{`--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), calc(${animateValue(
                     section['hero'],
                     [4, 4.5],
@@ -755,7 +755,7 @@ $effect(async () => {
           </div>
           <div
             dir="ltr"
-            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 rtl:ps-0 sm:pb-10 lg:pe-4 rtl:lg:ps-20 xl:ps-20 xl:pt-10"
+            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 rtl:ps-0 sm:pb-10 lg:pe-4 lg:rtl:ps-20 xl:ps-20 xl:pt-10"
             style="{`opacity:${animateValue(
               section['hero'],
               [16, 17],
@@ -792,12 +792,12 @@ $effect(async () => {
 <div class="w-full px-2 py-40 lg:px-10" bind:this="{section['nextlevel']}">
   <div class="text-center">
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1279px]:!tracking-normal"
+      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto [transform:translate3d(0,0,0)] motion-reduce:tracking-normal! max-[1279px]:tracking-normal!"
       style="{`letter-spacing:${animateValue(section['nextlevel'], [-100, 20], [1, 0])}rem`}">
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:!tracking-normal max-[1279px]:!tracking-normal [@supports(color:oklch(0%_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+        class="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:tracking-normal! max-[1279px]:tracking-normal! [@supports(color:oklch(0%_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
         style="{`letter-spacing:${animateValue(section['nextlevel'], [-100, 20], [0, 1])}rem`}">
         {$t("to the next level")}
       </span>
@@ -834,9 +834,9 @@ $effect(async () => {
       <div class="w-full px-2 py-40 lg:px-10">
         <div class="text-center">
           <h2
-            class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+            class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
             <span
-              class="motion-reduce:!opacity-100"
+              class="motion-reduce:opacity-100!"
               style="{`opacity:${
                 section['uglyhtml'] &&
                 ((scrollY - section['uglyhtml'].offsetTop) / section['uglyhtml'].clientHeight) *
@@ -851,7 +851,7 @@ $effect(async () => {
               {$t("No_more_ugly_HTML_part_1")}
             </span>
             <span
-              class="motion-reduce:!opacity-100"
+              class="motion-reduce:opacity-100!"
               style="{`opacity:${
                 section['uglyhtml'] &&
                 ((scrollY - section['uglyhtml'].offsetTop) / section['uglyhtml'].clientHeight) *
@@ -866,7 +866,7 @@ $effect(async () => {
               {$t("No_more_ugly_HTML_part_2")}
             </span>
             <span
-              class="motion-reduce:!opacity-100"
+              class="motion-reduce:opacity-100!"
               style="{`opacity:${
                 section['uglyhtml'] &&
                 ((scrollY - section['uglyhtml'].offsetTop) / section['uglyhtml'].clientHeight) *
@@ -881,7 +881,7 @@ $effect(async () => {
               {$t("No_more_ugly_HTML_part_3")}
             </span>
             <span
-              class="motion-reduce:!opacity-100"
+              class="motion-reduce:opacity-100!"
               style="{`opacity:${
                 section['uglyhtml'] &&
                 ((scrollY - section['uglyhtml'].offsetTop) / section['uglyhtml'].clientHeight) *
@@ -896,7 +896,7 @@ $effect(async () => {
               {$t("No_more_ugly_HTML_part_4")}
             </span>
           </h2>
-          <p class="text-base-content/70 font-title relative z-[2] py-4 font-light md:text-3xl">
+          <p class="text-base-content/70 font-title relative z-2 py-4 font-light md:text-3xl">
             {@html $t(
               "Write fewer class names<br />Use component class names<br />modify them using Tailwind CSS utilities."
             )}
@@ -924,13 +924,13 @@ $effect(async () => {
                 <div
                   class="pointer-events-none absolute start-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2">
                   <div
-                    class="bg-primary/30 col-start-1 row-start-1 scale-[2] rounded-full blur-[5rem] [transform:translate3d(0,0,0)]">
+                    class="bg-primary/30 col-start-1 row-start-1 scale-2 rounded-full blur-[5rem] [transform:translate3d(0,0,0)]">
                   </div>
                 </div>
                 <input
                   name="tailwind-va-daisyui"
                   type="checkbox"
-                  class="toggle toggle-lg toggle-primary relative z-[2]"
+                  class="toggle toggle-lg toggle-primary relative z-2"
                   bind:checked="{toggleValueForCodeCompare}" />
               </div>
               {$t("Tailwind + daisyUI")}
@@ -1085,7 +1085,7 @@ $effect(async () => {
         <h2
           class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-start">
           <span
-            class="motion-reduce:!opacity-100"
+            class="motion-reduce:opacity-100!"
             style="{`opacity:${
               section['performance'] &&
               ((scrollY - section['performance'].offsetTop) / section['performance'].clientHeight) *
@@ -1101,7 +1101,7 @@ $effect(async () => {
           </span>
           <br />
           <span
-            class="motion-reduce:!opacity-100"
+            class="motion-reduce:opacity-100!"
             style="{`opacity:${
               section['performance'] &&
               ((scrollY - section['performance'].offsetTop) / section['performance'].clientHeight) *
@@ -1117,7 +1117,7 @@ $effect(async () => {
           </span>
           <br />
           <span
-            class="motion-reduce:!opacity-100"
+            class="motion-reduce:opacity-100!"
             style="{`opacity:${
               section['performance'] &&
               ((scrollY - section['performance'].offsetTop) / section['performance'].clientHeight) *
@@ -1148,7 +1148,7 @@ $effect(async () => {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -1160,7 +1160,7 @@ $effect(async () => {
       </div>
       <div class="grid shrink-0 gap-6 xl:grid-cols-5">
         <div
-          class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed will-change-auto motion-reduce:!transform-none"
+          class="card border-base-content/10 col-span-3 col-start-1 row-start-1 flex flex-col border border-dashed will-change-auto motion-reduce:transform-none!"
           style="{`transform:translateX(${animateValue(
             section['performance'],
             [-70, -20],
@@ -1204,7 +1204,7 @@ $effect(async () => {
           </div>
         </div>
         <div
-          class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed will-change-auto motion-reduce:!transform-none xl:col-start-3"
+          class="card border-base-content/10 col-span-3 row-start-2 flex flex-col border border-dashed will-change-auto motion-reduce:transform-none! xl:col-start-3"
           style="{`transform:translateX(${animateValue(
             section['performance'],
             [-70, -20],
@@ -1257,10 +1257,10 @@ $effect(async () => {
   bind:this="{section['customizable']}">
   <div
     class="relative flex max-w-[100rem] flex-col items-center justify-center xl:flex-row xl:gap-20">
-    <div class="relative z-[1] w-full py-10">
+    <div class="relative z-1 w-full py-10">
       <h2 class="font-title text-center font-black leading-none xl:text-start">
         <span
-          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)]"
+          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
           style="{`transform:translateX(calc(${animateValue(
             section['customizable'],
             [-100, 100],
@@ -1270,7 +1270,7 @@ $effect(async () => {
         </span>
         <br />
         <span
-          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)]"
+          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
           style="{`transform:translateX(calc(${animateValue(
             section['customizable'],
             [-100, 100],
@@ -1281,7 +1281,7 @@ $effect(async () => {
       </h2>
       <div class="h-10"></div>
       <p
-        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto [--rtl-reverse:1] [text-wrap:balance] rtl:[--rtl-reverse:-1] motion-reduce:!transform-none max-[1279px]:![transform:translate3d(0,0,0)] md:text-2xl xl:text-start"
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto [--rtl-reverse:1] [text-wrap:balance] rtl:[--rtl-reverse:-1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]! md:text-2xl xl:text-start"
         style="{`transform:translateX(calc(${animateValue(
           section['customizable'],
           [-100, 100],
@@ -1301,7 +1301,7 @@ $effect(async () => {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1325,7 +1325,7 @@ $effect(async () => {
 </div>
 
 <div
-  class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-gradient-to-t py-16"
+  class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-linear-to-t py-16"
   bind:this="{section['agnostic']}">
   <div
     class="bg-primary end-1/5 pointer-events-none absolute -top-1/2 aspect-square w-full rounded-full opacity-5 blur-3xl">
@@ -1372,7 +1372,7 @@ $effect(async () => {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1382,7 +1382,7 @@ $effect(async () => {
         </a>
       </div>
     </div>
-    <div class="pointer-events-none relative z-[1] shrink-0 xl:w-1/3">
+    <div class="pointer-events-none relative z-1 shrink-0 xl:w-1/3">
       <div
         class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-none md:gap-6 xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]">
         <div></div>
@@ -1392,7 +1392,7 @@ $effect(async () => {
             loading="lazy"
             width="96"
             height="96"
-            class="aspect-square w-full will-change-auto motion-reduce:!opacity-100 motion-reduce:!filter-none motion-reduce:![scale:1]"
+            class="aspect-square w-full will-change-auto motion-reduce:opacity-100! motion-reduce:filter-none! motion-reduce:[scale:1]!"
             style="{`opacity:${animateValue(
               section['agnostic'],
               [-70 + index * 5, -60 + index * 5],
@@ -1452,9 +1452,9 @@ $effect(async () => {
   <div class="sticky top-20 w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
-        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+        class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['designdecision'] &&
             ((scrollY - section['designdecision'].offsetTop) /
@@ -1471,7 +1471,7 @@ $effect(async () => {
           {$t("Apply_your_own_design_decisions_part_1")}
         </span>
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['designdecision'] &&
             ((scrollY - section['designdecision'].offsetTop) /
@@ -1488,7 +1488,7 @@ $effect(async () => {
           {$t("Apply_your_own_design_decisions_part_2")}
         </span>
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['designdecision'] &&
             ((scrollY - section['designdecision'].offsetTop) /
@@ -1505,7 +1505,7 @@ $effect(async () => {
           {$t("Apply_your_own_design_decisions_part_3")}
         </span>
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['designdecision'] &&
             ((scrollY - section['designdecision'].offsetTop) /
@@ -1522,7 +1522,7 @@ $effect(async () => {
           {$t("Apply_your_own_design_decisions_part_4")}
         </span>
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['designdecision'] &&
             ((scrollY - section['designdecision'].offsetTop) /
@@ -1540,7 +1540,7 @@ $effect(async () => {
         </span>
       </h2>
       <p
-        class="text-base-content/70 font-title relative z-[2] mx-auto max-w-3xl py-4 font-light md:text-3xl">
+        class="text-base-content/70 font-title relative z-2 mx-auto max-w-3xl py-4 font-light md:text-3xl">
         {@html $t(
           "Your website should be unique. Create a custom theme for yourself using daisyUI theme generator. The colors you pick will be applied to all daisyUI components."
         )}
@@ -1562,9 +1562,9 @@ $effect(async () => {
   <div class="w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
-        class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
+        class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['possibilities'] &&
             ((scrollY - section['possibilities'].offsetTop) /
@@ -1583,7 +1583,7 @@ $effect(async () => {
         </span>
         <br />
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['possibilities'] &&
             ((scrollY - section['possibilities'].offsetTop) /
@@ -1633,14 +1633,14 @@ $effect(async () => {
                 section['possibilities'].clientHeight) *
                 100 <
                 -20
-                ? 'motion-reduce:!bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] motion-reduce:!bg-clip-text motion-reduce:![-webkit-text-fill-color:transparent] [@supports(color:oklch(0%_0_0))]:motion-reduce:!bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]'
+                ? 'motion-reduce:bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)]! motion-reduce:bg-clip-text! motion-reduce:[-webkit-text-fill-color:transparent]! [@supports(color:oklch(0%_0_0))]:motion-reduce:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]!'
                 : 'bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0%_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]'
             }`}">
             {$t("endless possibilities")}
           </span>
         </span>
       </h2>
-      <p class="text-base-content/70 font-title relative z-[2] py-4 font-light md:text-3xl">
+      <p class="text-base-content/70 font-title relative z-2 py-4 font-light md:text-3xl">
         {$t("Mix and match daisyUI class names to create unique web pages.")}
       </p>
       <div class="h-10"></div>
@@ -1662,7 +1662,7 @@ $effect(async () => {
       class="bg-primary pointer-events-none absolute bottom-0 left-1/2 aspect-square w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-3xl">
     </div>
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto motion-reduce:!transform-none"
+      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto motion-reduce:transform-none!"
       style="{`transform:scale(${animateValue(
         section['numbers'],
         [0, 20],
@@ -1673,7 +1673,7 @@ $effect(async () => {
     <div class="h-32"></div>
     <div class="grid gap-10 p-6 xl:grid-cols-3">
       <div
-        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:!transform-none"
+        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:transform-none!"
         style="{`transform:translateY(${animateValue(
           section['numbers'],
           [20, 30],
@@ -1700,7 +1700,7 @@ $effect(async () => {
         </a>
       </div>
       <div
-        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:!transform-none"
+        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:transform-none!"
         style="{`transform:translateY(${animateValue(
           section['numbers'],
           [30, 40],
@@ -1727,7 +1727,7 @@ $effect(async () => {
         </a>
       </div>
       <div
-        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:!transform-none"
+        class="flex flex-col items-center gap-4 will-change-auto motion-reduce:transform-none!"
         style="{`transform:translateY(${animateValue(
           section['numbers'],
           [40, 50],
@@ -1769,9 +1769,9 @@ $effect(async () => {
   <div class="sticky top-0 w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
-        class="font-title relative z-[2] mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
+        class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none">
         <span
-          class="motion-reduce:!opacity-100"
+          class="motion-reduce:opacity-100!"
           style="{`opacity:${
             section['try'] &&
             ((scrollY - section['try'].offsetTop) / section['try'].clientHeight) * 100 > -100 &&
@@ -1783,7 +1783,7 @@ $effect(async () => {
         </span>
         <br />
         <span
-          class="font-light motion-reduce:!opacity-100"
+          class="font-light motion-reduce:opacity-100!"
           style="{`opacity:${
             section['try'] &&
             ((scrollY - section['try'].offsetTop) / section['try'].clientHeight) * 100 > -100 &&

@@ -21,7 +21,7 @@ export let data
     <tbody>
       {#if $prefix}
         <tr>
-          <td colspan="3" class="!px-0">
+          <td colspan="3" class="px-0!">
             <div
               class="text-info-content bg-info relative inline-flex items-center gap-2 rounded-lg p-2 px-3">
               <svg

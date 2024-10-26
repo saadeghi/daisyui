@@ -63,7 +63,7 @@ export let contentClasses = "mt-16"
                   <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z">
                   </path>
                 </svg>
-                <span class="flex-grow text-sm">
+                <span class="grow text-sm">
                   {theme}
                 </span>
                 <span class="flex h-full shrink-0 flex-wrap gap-1">
@@ -108,7 +108,7 @@ export let contentClasses = "mt-16"
                 d="M472.31,405.11,304.24,237a4,4,0,0,0-5.66,0L237,298.58a4,4,0,0,0,0,5.66L405.12,472.31a26,26,0,0,0,36.76,0l30.43-30.43h0A26,26,0,0,0,472.31,405.11Z">
               </path>
             </svg>
-            <div class="flex-grow text-sm font-bold">{$t("Make your theme")}!</div>
+            <div class="grow text-sm font-bold">{$t("Make your theme")}!</div>
           </div>
         </div>
       </a>

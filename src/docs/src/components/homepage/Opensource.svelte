@@ -19,7 +19,7 @@ export let backers
     </div>
     <div class="h-20"></div>
     <h2
-      class="font-title relative z-[2] mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
+      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none">
       {$t("Free and open-source")}
       <br />
       <span class="font-light">{$t("Built by the community")}</span>

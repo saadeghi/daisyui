@@ -32,7 +32,7 @@ import { t } from "$lib/i18n"
             <button class:active="{$currentLang == langItem}" onclick="{() => setLang(langItem)}">
               {#if $t("__code", {}, langItem, false) !== "__code"}
                 <span
-                  class="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-50">
+                  class="badge badge-sm badge-outline pl-1.5! pr-1! pt-px font-mono text-[.6rem]! font-bold tracking-widest opacity-50">
                   {$t("__code", {}, langItem)}
                 </span>
               {/if}

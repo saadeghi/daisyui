@@ -10,7 +10,7 @@ let { components } = data
 <SEO title="Components" desc="Tailwind CSS component examples by daisyUI" />
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div class="flex flex-col gap-6 ps-6 pt-10">
-    <div class="prose max-w-4xl flex-grow">
+    <div class="prose max-w-4xl grow">
       <h1><Translate text="All daisyUI components" /></h1>
       <p>{Object.keys(components).length} <Translate text="components" /></p>
     </div>

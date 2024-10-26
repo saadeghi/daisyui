@@ -1,6 +1,21 @@
 @import "tailwindcss";
+@source './**/*.{html,js,svelte,ts,svx,md,json}';
+@plugin '@tailwindcss/typography';
 
-/* @plugin "../../../index.js"; */
+@plugin "daisyui" {
+  exclude: chat, loading, mask, properties, states, responsive;
+}
+
+@theme {
+  --font-family-title: Figtree, Noto Sans JP, Noto Sans, Vazirmatn, sans-serif;
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Vazirmatn, Arial,
+    Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation Mono, Vazirmatn, Courier New, monospace;
+}
+
 /* carbon */
 #carbonads {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
@@ -183,6 +198,7 @@ pre[class*="language-"] {
   font-weight: 900;
 }
 
-/* .changelog-body>.prose>p img {
-  @apply rounded-box border-base-content/10 border;
-} */
+.changelog-body>.prose>p img {
+  border-radius: var(--radius-box);
+  border: 1px solid rgba(var(--color-base-content), 0.1);
+}

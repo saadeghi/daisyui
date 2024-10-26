@@ -12,7 +12,7 @@ onMount(() => {
     <div
       class="border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent"
       data-set-theme="{theme}"
-      data-act-class="!outline-base-content">
+      data-act-class="outline-base-content!">
       <div
         data-theme="{theme}"
         class="bg-base-100 text-base-content w-full cursor-pointer font-sans">

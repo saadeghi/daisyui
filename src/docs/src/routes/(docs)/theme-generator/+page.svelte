@@ -699,7 +699,7 @@ onMount(() => {
           </div>
           <div class="flex gap-3">
             <!-- headings -->
-            <div class="flex flex-grow flex-col gap-3">
+            <div class="flex grow flex-col gap-3">
               <div class="text-4xl font-bold">Text Size 1</div>
               <div class="text-3xl font-bold">Text Size 2</div>
               <div class="text-2xl font-bold">Text Size 3</div>

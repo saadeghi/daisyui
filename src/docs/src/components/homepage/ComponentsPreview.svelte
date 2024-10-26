@@ -8,7 +8,7 @@ export let index
 <div class="hidden flex-col gap-6 xl:flex">
   <div class="flex gap-6">
     <div
-      class="rounded-box bg-base-200 h-full motion-reduce:!opacity-100"
+      class="rounded-box bg-base-200 h-full motion-reduce:opacity-100!"
       style="{`opacity:${animateValue(section, [16, 21], [0, 1])}`}">
       <ul class="menu">
         <li class="menu-title">
@@ -216,7 +216,7 @@ export let index
       </ul>
     </div>
     <div
-      class="rounded-box bg-base-200 h-full w-60 shrink-0 motion-reduce:!opacity-100"
+      class="rounded-box bg-base-200 h-full w-60 shrink-0 motion-reduce:opacity-100!"
       style="{`opacity:${animateValue(section, [14, 19], [0, 1])}`}">
       <ul class="menu">
         <li class="menu-title">{$t("Admin panel")}</li>
@@ -396,7 +396,7 @@ export let index
   </div>
   <div
     aria-hidden="true"
-    class="rounded-box bg-base-200 grid grow grid-cols-2 gap-4 p-6 motion-reduce:!opacity-100"
+    class="rounded-box bg-base-200 grid grow grid-cols-2 gap-4 p-6 motion-reduce:opacity-100!"
     style="{`opacity:${animateValue(section, [15, 20], [0, 1])}`}">
     <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-neutral">Neutral</button>
     <button tabindex="-1" aria-label="tailwindcss button" class="btn btn-primary">Primary</button>
@@ -412,7 +412,7 @@ export let index
 </div>
 <div class="flex grow flex-col gap-6">
   <div
-    class="navbar bg-base-200 rounded-box hidden motion-reduce:!opacity-100 xl:flex"
+    class="navbar bg-base-200 rounded-box hidden motion-reduce:opacity-100! xl:flex"
     style="{`opacity:${animateValue(section, [13, 18], [0, 1])}`}">
     <div class="grow">
       <button tabindex="-1" class="btn btn-ghost btn-circle avatar" aria-label="tailwindcss avatar">
@@ -461,7 +461,7 @@ export let index
     </ul>
   </div>
   <div
-    class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center will-change-auto motion-reduce:!transform-none max-[1280px]:!transform-none"
+    class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center will-change-auto motion-reduce:transform-none! max-[1280px]:transform-none!"
     style="{`transform:scale(${animateValue(section, [0, 10], [2, 1])})translateY(${animateValue(
       section,
       [0, 10],
@@ -489,7 +489,7 @@ export let index
     </div>
   </div>
   <div
-    class="card bg-base-200 hidden motion-reduce:!opacity-100 xl:flex"
+    class="card bg-base-200 hidden motion-reduce:opacity-100! xl:flex"
     style="{`opacity:${animateValue(section, [11, 16], [0, 1])}`}">
     <div class="card-body">
       <div class="flex h-full items-center justify-between gap-6">
@@ -554,7 +554,7 @@ export let index
   </div>
 </div>
 <div
-  class="rounded-box bg-base-200 card hidden h-full w-80 shrink-0 motion-reduce:!opacity-100 xl:flex"
+  class="rounded-box bg-base-200 card hidden h-full w-80 shrink-0 motion-reduce:opacity-100! xl:flex"
   style="{`opacity:${animateValue(section, [12, 17], [0, 1])}`}">
   <div class="card-body">
     <div class="card-title mb-4 text-sm">{$t("Semantic colors")}</div>

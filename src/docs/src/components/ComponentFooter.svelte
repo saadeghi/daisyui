@@ -227,7 +227,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
 {/if}
 
 <!-- <div
-  class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-gradient-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
+  class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-linear-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
   <figure class="max-md:bg-primary/10 isolate shrink-0 md:w-2/3">
     <a>
       <img
@@ -243,9 +243,9 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
     class="bg-primary pointer-events-none absolute bottom-[-120%] left-1/2 aspect-square w-full -translate-x-1/2 rounded-full opacity-20 blur-3xl">
   </div>
   <div
-    class="bg-base-100 pointer-events-none absolute -top-3/4 right-1/4 z-[3] aspect-square w-1/2 rounded-full opacity-60 blur-3xl">
+    class="bg-base-100 pointer-events-none absolute -top-3/4 right-1/4 z-3 aspect-square w-1/2 rounded-full opacity-60 blur-3xl">
   </div>
-  <div class="card-body relative isolate z-[3]">
+  <div class="card-body relative isolate z-3">
     <h2
       class="card-title text-base-content text-xl font-black contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl">
       <span>
@@ -277,7 +277,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -289,7 +289,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
 </div> -->
 
 <div
-  class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-gradient-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
+  class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-linear-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
   <figure class="max-md:bg-primary/10 isolate shrink-0 md:w-2/3">
     <img
       class="pointer-events-none"
@@ -303,9 +303,9 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
     class="bg-primary pointer-events-none absolute bottom-[-120%] left-1/2 aspect-square w-full -translate-x-1/2 rounded-full opacity-20 blur-3xl">
   </div>
   <div
-    class="bg-base-100 pointer-events-none absolute -top-3/4 right-1/4 z-[3] aspect-square w-1/2 rounded-full opacity-60 blur-3xl">
+    class="bg-base-100 pointer-events-none absolute -top-3/4 right-1/4 z-3 aspect-square w-1/2 rounded-full opacity-60 blur-3xl">
   </div>
-  <!-- <div class="card-body relative isolate z-[3]">
+  <!-- <div class="card-body relative isolate z-3">
     <h2
       class="card-title text-base-content text-xl contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl">
       <span>
@@ -342,7 +342,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -351,7 +351,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
       </svg>
     </a>
   </div> -->
-  <div class="card-body relative isolate z-[3]">
+  <div class="card-body relative isolate z-3">
     <h2
       class="card-title text-base-content text-xl contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl">
       <span>
@@ -386,7 +386,7 @@ $: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $pag
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
         <path
           stroke-linecap="round"
           stroke-linejoin="round"

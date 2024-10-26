@@ -320,7 +320,7 @@ function prev(productId, media) {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 md:inline-block">
+                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -364,7 +364,7 @@ function prev(productId, media) {
                   >
                   {#if media.type === 'video'}
                     <div class="w-full grid">
-                      <div class="[grid-column:1/1] [grid-row:1/1] z-[1]"></div>
+                      <div class="[grid-column:1/1] [grid-row:1/1] z-1"></div>
                       <iframe class="w-full [grid-column:1/1] [grid-row:1/1]" style={`aspect-ratio: ${media.ratio};`} src="{media.url}" frameborder="0" title="Official daisyUI Figma Library" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                   {/if}
@@ -380,7 +380,7 @@ function prev(productId, media) {
               {/each}
             </div>
             {#if product.media.length > 1}
-              <button aria-label="Previous" onclick={() => prev(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-1 row-start-1 z-[1] m-4 opacity-0 -translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0">
+              <button aria-label="Previous" onclick={() => prev(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-1 row-start-1 z-1 m-4 opacity-0 -translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
@@ -391,7 +391,7 @@ function prev(productId, media) {
               aria-label="Screenshot"
               href="{product.screenshot}"
               rel="noopener noreferrer"
-              class=" rounded-full aspect-square p-4 focus-visible:outline-white col-start-2 row-start-1 z-[1] m-4 opacity-0 scale-90 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:scale-100 focus-visible:opacity-100 focus-visible:scale-100"
+              class=" rounded-full aspect-square p-4 focus-visible:outline-white col-start-2 row-start-1 z-1 m-4 opacity-0 scale-90 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:scale-100 focus-visible:opacity-100 focus-visible:scale-100"
               >
                 <svg
                   class="text-white"
@@ -432,7 +432,7 @@ function prev(productId, media) {
               </a>
             {/if}
             {#if product.media.length > 1}
-              <button aria-label="Next" onclick={() => next(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-3 row-start-1 z-[1] m-4 opacity-0 translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0">
+              <button aria-label="Next" onclick={() => next(product.id, product.media)} class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-3 row-start-1 z-1 m-4 opacity-0 translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>

@@ -147,7 +147,7 @@ data="{[
         </ul>
       </div>
     </div>
-    <div class="flex justify-center items-center flex-grow">Content</div>
+    <div class="flex justify-center items-center grow">Content</div>
   </div> 
   <div class="drawer-side h-full absolute">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 

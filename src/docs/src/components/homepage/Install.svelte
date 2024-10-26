@@ -22,7 +22,7 @@ const copyText = (text) => {
   <div
     role="tabpanel"
     class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg">
-    <div class="absolute right-3 top-3 z-[1]">
+    <div class="absolute right-3 top-3 z-1">
       <div data-tip="{isClipboardButtonPressed ? 'copied' : 'copy'}" class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
@@ -61,7 +61,7 @@ const copyText = (text) => {
   <div
     role="tabpanel"
     class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg">
-    <div class="absolute right-3 top-3 z-[1]">
+    <div class="absolute right-3 top-3 z-1">
       <div data-tip="{isClipboardButtonPressed ? 'copied' : 'copy'}" class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
@@ -100,7 +100,7 @@ const copyText = (text) => {
   <div
     role="tabpanel"
     class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg">
-    <div class="absolute right-3 top-3 z-[1]">
+    <div class="absolute right-3 top-3 z-1">
       <div data-tip="{isClipboardButtonPressed ? 'copied' : 'copy'}" class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"
@@ -139,7 +139,7 @@ const copyText = (text) => {
   <div
     role="tabpanel"
     class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg">
-    <div class="absolute right-3 top-3 z-[1]">
+    <div class="absolute right-3 top-3 z-1">
       <div data-tip="{isClipboardButtonPressed ? 'copied' : 'copy'}" class="tooltip tooltip-accent">
         <button
           class="btn btn-sm btn-square btn-neutral cursor-copy"

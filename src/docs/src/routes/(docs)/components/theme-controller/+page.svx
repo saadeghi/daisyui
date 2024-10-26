@@ -210,14 +210,14 @@ data="{[
 </Component>
 
 <Component title="Theme Controller using a toggle with custom colors">
-<input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:theme(colors.sky.500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:theme(colors.blue.900)] row-start-1 col-start-1 col-span-2"/>
+<input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:var(--color-sky-500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:var(--color-blue-900)] row-start-1 col-start-1 col-span-2"/>
 {#snippet html()}
 
 ```html
 <input
   type="checkbox"
   value="synthwave"
-  class="$$toggle $$theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:theme(colors.sky.500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:theme(colors.blue.900)]" />
+  class="$$toggle $$theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:var(--color-sky-500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:var(--color-blue-900)]" />
 ```
 
 {/snippet}
@@ -348,7 +348,7 @@ data="{[
     Theme
     <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path></svg>
   </div>
-  <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+  <ul tabindex="0" class="dropdown-content z-1 p-2 shadow-2xl bg-base-300 rounded-box w-52">
     <li><input bind:group={radio} type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block justify-start btn-ghost" aria-label="Default" value="default"/></li>
     <li><input bind:group={radio} type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block justify-start btn-ghost" aria-label="Retro" value="retro"/></li>
     <li><input bind:group={radio} type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block justify-start btn-ghost" aria-label="Cyberpunk" value="cyberpunk"/></li>
@@ -371,7 +371,7 @@ data="{[
       <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
     </svg>
   </div>
-  <ul tabindex="0" class="$$dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
+  <ul tabindex="0" class="$$dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl">
     <li>
       <input
         type="radio"

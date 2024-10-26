@@ -271,7 +271,7 @@ data="{[
 </Component>
 
 <Component title="Checkbox with custom colors">
-<input type="checkbox" checked="checked" class="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]" />
+<input type="checkbox" checked="checked" class="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:var(--color-indigo-600)] [--chkfg:orange]" />
 <input type="checkbox" checked="checked" class="checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" />
 {#snippet html()}
 
@@ -279,7 +279,7 @@ data="{[
 <input
   type="checkbox"
   checked="checked"
-  class="$$checkbox border-orange-400 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange] checked:border-indigo-800" />
+  class="$$checkbox border-orange-400 [--chkbg:var(--color-indigo-600)] [--chkfg:orange] checked:border-indigo-800" />
 <input
   type="checkbox"
   checked="checked"

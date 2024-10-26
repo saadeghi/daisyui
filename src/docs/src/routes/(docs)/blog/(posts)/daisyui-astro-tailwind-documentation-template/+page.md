@@ -140,7 +140,7 @@ The sidebar is where your documentation sections are listed. Update it to add, r
     >
       <a href="/" class="flex-0 btn btn-ghost px-2">
         <h1
-          class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50"
+          class="text-2xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-primary/50"
         >
           Access Shield{" "}
           <span class="text-sm text-base-content opacity-50">docs</span>

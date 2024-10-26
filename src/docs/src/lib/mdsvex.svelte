@@ -16,7 +16,7 @@ export let desc
   img="{`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, '')}.webp`}" />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
-  <div class="prose prose-sm md:prose-base w-full max-w-4xl flex-grow pt-10">
+  <div class="prose prose-sm md:prose-base w-full max-w-4xl grow pt-10">
     {#if title}
       <h1>{@html $t(title)}</h1>
     {/if}
