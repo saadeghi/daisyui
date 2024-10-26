@@ -1,0 +1,3 @@
+:root:has(.modal-open, .modal[open], .modal:target, .modal-toggle:checked + .modal) {
+  @apply overflow-hidden;
+}

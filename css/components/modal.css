@@ -1,0 +1,142 @@
+.modal {
+  @apply pointer-events-none fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none justify-items-center p-0 bg-transparent text-[inherit] items-center;
+  opacity: 0;
+  transition-property: transform, opacity, visibility;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+  z-index: 999;
+
+  &:not(dialog:not(.modal-open)),
+  &::backdrop {
+    background-color: #0006;
+    animation: modal-pop 0.2s ease-out;
+  }
+
+  &.modal-open,
+  &[open],
+  &:target {
+    @apply pointer-events-auto visible opacity-100;
+
+    .modal-box {
+      translate: 0 0;
+      scale: 1;
+    }
+  }
+}
+
+.modal-action {
+  @apply flex mt-6 justify-end gap-2;
+}
+
+.modal-toggle {
+  @apply fixed h-0 w-0 appearance-none opacity-0;
+
+  &:checked+.modal {
+    @apply pointer-events-auto visible opacity-100;
+
+    .modal-box {
+      translate: 0 0;
+      scale: 1;
+    }
+  }
+}
+
+.modal-backdrop {
+  @apply -z-[1] col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+.modal-box {
+  @apply bg-base-100 col-start-1 row-start-1 w-11/12 max-w-lg p-6;
+  transition: translate .2s ease-out, scale .2s ease-out, opacity .2s ease-out;
+  border-top-left-radius: var(--radius-box);
+  border-top-right-radius: var(--radius-box);
+  border-bottom-left-radius: var(--radius-box);
+  border-bottom-right-radius: var(--radius-box);
+  scale: 90%;
+  box-shadow: oklch(0% 0 0/ 0.25) 0px 25px 50px -12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.modal-top {
+  @apply place-items-start;
+
+  :where(.modal-box) {
+    @apply w-full max-w-none h-auto;
+    max-height: calc(100vh - 5em);
+    translate: 0 -5%;
+    scale: 1;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--radius-box);
+    border-bottom-right-radius: var(--radius-box);
+  }
+}
+
+.modal-middle {
+  @apply place-items-center;
+
+  :where(.modal-box) {
+    @apply w-11/12 max-w-lg h-auto;
+    max-height: calc(100vh - 5em);
+    translate: 0 0;
+    scale: 90%;
+    border-top-left-radius: var(--radius-box);
+    border-top-right-radius: var(--radius-box);
+    border-bottom-left-radius: var(--radius-box);
+    border-bottom-right-radius: var(--radius-box);
+  }
+}
+
+.modal-bottom {
+  @apply place-items-end;
+
+  :where(.modal-box) {
+    @apply w-full max-w-none h-auto;
+    max-height: calc(100vh - 5em);
+    translate: 0 5%;
+    scale: 1;
+    border-top-left-radius: var(--radius-box);
+    border-top-right-radius: var(--radius-box);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.modal-start {
+  @apply place-items-start;
+
+  :where(.modal-box) {
+    @apply h-screen w-auto max-w-none max-h-none;
+    translate: -5% 0;
+    scale: 1;
+    border-top-left-radius: 0;
+    border-top-right-radius: var(--radius-box);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: var(--radius-box);
+  }
+}
+
+.modal-end {
+  @apply place-items-end;
+
+  :where(.modal-box) {
+    @apply h-screen w-auto max-w-none max-h-none;
+    translate: 5% 0;
+    scale: 1;
+    border-top-left-radius: var(--radius-box);
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--radius-box);
+    border-bottom-right-radius: 0;
+  }
+}
+
+@keyframes modal-pop {
+  0% {
+    opacity: 0;
+  }
+}
