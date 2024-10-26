@@ -13,7 +13,7 @@ export let contentClasses = "mt-16"
 
 <div
   title="Change Theme"
-  class="{`dropdown dropdown-end hidden [@supports(color:oklch(0%_0_0))]:block ${dropdownClasses}`}">
+  class="{`dropdown dropdown-end block ${dropdownClasses}`}">
   <div tabindex="0" role="button" class="{`btn ${btnClasses}`}">
     <svg
       width="20"

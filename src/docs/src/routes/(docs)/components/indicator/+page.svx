@@ -10,8 +10,8 @@ layout: components
   import ClassTable from "$components/ClassTable.svelte"
   import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
+
+
 </script>
 
 <!-- <ComponentPageTabs/> -->
@@ -31,7 +31,7 @@ data="{[
 
 <Component title="Empty badge as indicator">
 <div class="indicator">
-  <span class="indicator-item badge badge-secondary"></span> 
+  <span class="indicator-item badge badge-secondary"></span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
 {#snippet html()}
@@ -48,7 +48,7 @@ data="{[
 
 <Component title="Badge as indicator">
 <div class="indicator">
-  <span class="indicator-item badge badge-primary">new</span> 
+  <span class="indicator-item badge badge-primary">new</span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
 {#snippet html()}
@@ -65,7 +65,7 @@ data="{[
 
 <Component title="for button">
 <div class="indicator">
-  <span class="indicator-item badge badge-secondary">99+</span> 
+  <span class="indicator-item badge badge-secondary">99+</span>
   <button class="btn">inbox</button>
 </div>
 {#snippet html()}
@@ -81,10 +81,10 @@ data="{[
 </Component>
 
 <Component title="for tab">
-<div class="tabs tabs-lifted">
+<div class="tabs tabs-lift">
   <button class="tab">Messages</button>
   <button class="indicator tab tab-active">
-    Notifications 
+    Notifications
     <span class="indicator-item badge">8</span>
   </button>
   <button class="tab">Requests</button>
@@ -92,7 +92,7 @@ data="{[
 {#snippet html()}
 
 ```html
-<div class="$$tabs $$tabs-lifted">
+<div class="$$tabs $$tabs-lift">
   <a class="$$tab">Messages</a>
   <a class="$$indicator $$tab $$tab-active">
     Notifications
@@ -107,7 +107,7 @@ data="{[
 
 <Component title="for avatar">
 <div class="avatar indicator">
-  <span class="indicator-item badge badge-secondary">typing…</span> 
+  <span class="indicator-item badge badge-secondary">typing…</span>
   <div class="w-20 h-20 rounded-lg">
     <img alt="Tailwind CSS examples" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
@@ -149,10 +149,10 @@ data="{[
 <div class="indicator my-6 mx-10">
   <div class="indicator-item indicator-bottom">
     <button class="btn btn-primary">Apply</button>
-  </div> 
+  </div>
   <div class="border card bg-base-100">
     <div class="card-body">
-      <h2 class="card-title">Job Title</h2> 
+      <h2 class="card-title">Job Title</h2>
       <p>Rerum reiciendis beatae tenetur excepturi</p>
     </div>
   </div>
@@ -178,7 +178,7 @@ data="{[
 
 <Component title="in center of an image">
 <div class="indicator">
-  <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span> 
+  <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span>
   <img alt="Tailwind CSS examples" class="rounded" src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
 </div>
 {#snippet html()}
@@ -407,7 +407,7 @@ data="{[
 
 <Component title="Responsive" desc="changes position based on resolution">
 <div class="indicator">
-  <span class="indicator-item indicator-start sm:indicator-middle md:indicator-bottom lg:indicator-center xl:indicator-end badge badge-secondary"></span> 
+  <span class="indicator-item indicator-start sm:indicator-middle md:indicator-bottom lg:indicator-center xl:indicator-end badge badge-secondary"></span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
 {#snippet html()}

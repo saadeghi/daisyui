@@ -104,9 +104,9 @@ export let removeScrollPaddingFromNavbar
         </div>
       {/if}
     </div>
-    <div class="flex-0">
+    <div class="flex">
       {#if showComponentsBtn}
-        <div class="hidden flex-none items-center lg:block">
+        <div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
             href="/components/"
@@ -124,7 +124,7 @@ export let removeScrollPaddingFromNavbar
           </a>
         </div>
 
-        <div class="hidden flex-none items-center lg:block">
+        <div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
             href="/store/"

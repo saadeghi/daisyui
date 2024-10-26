@@ -2,9 +2,11 @@
 @source './**/*.{html,js,svelte,ts,svx,md,json}';
 @plugin '@tailwindcss/typography';
 
-@plugin "daisyui" {
+@plugin "../../../" {
+  themes: light --default, dark --prefersdark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter, dim, nord, sunset;
   exclude: chat, loading, mask, properties, states, responsive;
 }
+
 
 @theme {
   --font-family-title: Figtree, Noto Sans JP, Noto Sans, Vazirmatn, sans-serif;

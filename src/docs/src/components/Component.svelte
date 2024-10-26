@@ -85,7 +85,7 @@ onMount(() => {
     {@render html()}
   {/if} -->
   <div class="grid">
-    <div class="tabs tabs-lifted z-10 -mb-[var(--tab-border)] justify-self-start">
+    <div class="tabs tabs-lift z-10 -mb-[var(--tab-border)] justify-self-start">
       <button
         onclick="{() => (showContent = 'preview')}"
         class="{`tab ${
@@ -254,7 +254,7 @@ onMount(() => {
       var(--fallback-b2, oklch(var(--b2))) 14px
     );
     background-size: 40px 40px;
-    /* 
+    /*
     background-image: linear-gradient(to right, oklch(var(--bc) / 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(var(--bc) / 0.04) 1px, transparent 1px); */
   }
