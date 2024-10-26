@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-flex shrink-0 cursor-pointer flex-wrap items-center justify-center gap-2 text-center no-underline outline-offset-2 select-none align-middle h-10 px-4 text-base-content;
+  @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-2 text-center no-underline outline-offset-2 select-none align-middle h-10 px-4 text-base-content;
   font-size: var(--font-size-sm);
   outline-color: var(--color-base-content);
   font-weight: 600;
