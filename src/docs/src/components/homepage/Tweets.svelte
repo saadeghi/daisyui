@@ -5,7 +5,7 @@ export let tweets
 <div>
   <div class="h-32"></div>
   <div
-    class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16">
+    class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3">
     {#each tweets as tweet, index}
       <div class="card border-base-content/5 card-compact border text-start">
         <div class="card-body">

@@ -178,11 +178,9 @@
 					</div>
 					<div class="h-4"></div>
 					<h1
-						class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] [word-break:auto-phrase] xl:w-[115%] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]"
+						class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] [word-break:auto-phrase] xl:w-[115%] xl:text-start"
 					>
-						<span
-							class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20"
-						>
+						<span class="brightness-150 contrast-150">
 							{@html $t("The most popular")}
 						</span>
 						<br />
@@ -194,15 +192,13 @@
 							>
 							</span>
 							<span
-								class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-clip-text [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+								class="relative col-start-1 row-start-1 bg-clip-text [-webkit-text-fill-color:transparent] bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
 							>
 								{@html $t("component library")}
 							</span>
 						</span>
 						<br />
-						<span
-							class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20"
-						>
+						<span class="brightness-150 contrast-150">
 							{@html $t("for Tailwind CSS")}
 						</span>
 					</h1>
@@ -391,7 +387,7 @@
 				<div class="grid">
 					<div
 						style={`opacity:${animateValue(section["hero"], [15, 17], [1, 0])}`}
-						class="z-1 col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
+						class="z-1 col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible"
 						class:invisible={section["hero"] && scrollY < section["hero"].clientHeight}
 					>
 						<!-- flying components -->
@@ -602,9 +598,7 @@
 																/>
 															</div>
 														</div>
-														<div
-															class="chat-bubble text-xs [.chat_&]:before:[inset-inline-start:-0.73rem]"
-														>
+														<div class="chat-bubble text-xs">
 															{$t("Use Tailwind CSS but write fewer class names.")}
 														</div>
 													</div>
@@ -1562,7 +1556,7 @@
 		</div>
 		<div class="pointer-events-none relative z-1 shrink-0 xl:w-1/3">
 			<div
-				class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-none md:gap-6 xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]"
+				class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-none md:gap-6 xl:px-6 xl:pt-0"
 			>
 				<div></div>
 
@@ -1797,7 +1791,7 @@
 				<span class="inline-grid">
 					{#if section["possibilities"] && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 > -100 && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 < -20}{:else}
 						<span
-							class="pointer-events-none col-start-1 row-start-1 bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [:root[dir=rtl]_&]:leading-[1.35] bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+							class="pointer-events-none col-start-1 row-start-1 bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
 							aria-hidden="true"
 						>
 							{$t("endless possibilities")}
@@ -1817,7 +1811,7 @@
 								? 0.1
 								: 1
 						}`}
-						class={`[&::selection]:text-base-content relative col-start-1 row-start-1 leading-tight motion-reduce:!opacity-100 [&::selection]:bg-blue-700/20 ${
+						class={`relative col-start-1 row-start-1 leading-tight motion-reduce:!opacity-100 ${
 							section["possibilities"] &&
 							((scrollY - section["possibilities"].offsetTop) /
 								section["possibilities"].clientHeight) *

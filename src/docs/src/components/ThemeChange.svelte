@@ -47,7 +47,7 @@ export let contentClasses = "mt-16"
         <button
           class="outline-base-content text-start outline-offset-4"
           data-set-theme="{theme}"
-          data-act-class="[&_svg]:visible">
+          >
           <span
             data-theme="{theme}"
             class="bg-base-100 rounded-btn text-base-content block w-full cursor-pointer font-sans">
