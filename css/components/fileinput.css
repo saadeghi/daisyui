@@ -8,8 +8,12 @@
   border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));
   border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
 
+  &:where(::file-selector-button) {
+    @apply text-base-content
+  }
+
   &::file-selector-button {
-    @apply cursor-pointer select-none text-base-content h-full px-4 me-4;
+    @apply cursor-pointer select-none h-full px-4 me-4;
     border: var(--spacing-button-border, 1px) solid var(--btn-color);
     font-size: var(--font-size-sm);
     font-weight: 600;
@@ -152,6 +156,7 @@
   &:has(> input[disabled]),
   &:is(:disabled, [disabled]) {
     @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+    box-shadow: none;
 
     &::file-selector-button {
       @apply border-base-200 bg-base-200 cursor-not-allowed;
