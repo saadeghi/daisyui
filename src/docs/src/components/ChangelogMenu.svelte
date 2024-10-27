@@ -1,11 +1,10 @@
 <script>
-import { readEnv } from "$lib/util"
-let version = readEnv("VITE_DAISYUI_VERSION", "latest")
+  let version = $props();
 </script>
 
 <div class="dropdown" data-sveltekit-preload-data>
   <div tabindex="0" role="button" class="link link-hover inline-block font-mono text-xs">
-    {version}
+    {version.version}
   </div>
   <ul
     tabindex="0"

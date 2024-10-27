@@ -6,7 +6,7 @@ import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
 // import ChangelogMenu from "$components/ChangelogMenu.svelte"
 let contextMenuEl
 
-let { closeDrawer, openDrawer, pages, drawerSidebarScrollY } = $props()
+let { closeDrawer, openDrawer, pages, drawerSidebarScrollY,version } = $props()
 let switchNavbarStyle = $derived(drawerSidebarScrollY > 40)
 
 let innerWidth = $state(undefined)
@@ -39,7 +39,7 @@ let innerWidth = $state(undefined)
     <Module.default bind:this="{contextMenuEl}" />
   {/await}
   {#await import("./ChangelogMenu.svelte") then Module}
-    <Module.default />
+    <Module.default version={version} />
   {/await}
 </div>
 

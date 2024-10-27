@@ -163,6 +163,7 @@ Array.prototype.matchPattern = function (inputString) {
       <svelte:component
         this="{Sidebar}"
         pages="{data.pages}"
+        version="{data.daisyuiVersion}"
         {closeDrawer}
         {openDrawer}
         {drawerSidebarScrollY} />
