@@ -9,7 +9,7 @@
   border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
 
   input {
-    @apply bg-transparent;
+    @apply bg-transparent w-full;
     border: none;
 
     &:focus {

@@ -17,8 +17,8 @@
     4px 4px;
   background-repeat: no-repeat;
 
-  input {
-    @apply bg-transparent;
+  select {
+    @apply bg-transparent w-full;
     border-style: none;
 
     &:focus {
