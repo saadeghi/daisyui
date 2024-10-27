@@ -23,8 +23,8 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 350px;
-  color: var(--fallback-bc, oklch(var(--bc)));
-  background-color: var(--fallback-b2, oklch(var(--b2)));
+  color: var(--base-content);
+  background-color: var(--color-base-200);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -115,16 +115,16 @@
 [data-svelte-search][data-svelte-search] input:focus {
   outline: none;
   outline-offset: 0;
-  border: 2px solid var(--fallback-bc, oklch(var(--bc) / 0.2));
-  background-color: var(--fallback-b1, oklch(var(--b1)));
-  color: var(--fallback-bc, oklch(var(--bc)));
+  border: 2px solid color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  background-color: var(--color-base-100);
+  color: var(--base-content);
 }
 
 [data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"] .svelte-typeahead-list {
   transform: translateY(0.5em);
-  background: var(--fallback-b1, oklch(var(--b1) / 0.99));
-  border: 0 solid var(--fallback-bc, oklch(var(--bc) / 0.2));
-  border-radius: var(--rounded-box);
+  background: color-mix(in oklab, var(--color-base-100) 99%, transparent);
+  border: 0 solid color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  border-radius: var(--radius-box);
   overflow: hidden;
   padding: 0.5rem;
   backdrop-filter: blur(1rem);
@@ -136,18 +136,18 @@
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected,
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list .selected:hover {
-  background: var(--fallback-n, oklch(var(--n)));
-  color: var(--fallback-nc, oklch(var(--nc)));
+  background: var(--color-neutral);
+  color: var(--color-neutral-content);
 }
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li {
-  color: var(--fallback-bc, oklch(var(--bc)));
+  color: var(--base-content);
   border-radius: var(--rounded-btn);
 }
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:hover {
-  background: var(--fallback-b2, oklch(var(--b2)));
-  color: var(--fallback-bc, oklch(var(--bc)));
+  background: var(--color-base-200);
+  color: var(--base-content);
 }
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:not(:last-of-type) {
@@ -165,13 +165,13 @@ pre[class*="language-"] {
 
 .prose pre[class*="language-"] {
   max-width: clamp(20rem, calc(100vw - 4rem), 80ch);
-  background-color: var(--fallback-n, oklch(var(--n)));
-  color: var(--fallback-nc, oklch(var(--nc)));
-  border-radius: var(--rounded-box);
+  background-color: var(--color-neutral);
+  color: var(--color-neutral-content);
+  border-radius: var(--radius-box);
 
   ::selection {
-    background-color: var(--fallback-nc, oklch(var(--nc)));
-    color: var(--fallback-n, oklch(var(--n)));
+    background-color: var(--color-neutral-content);
+    color: var(--color-neutral);
   }
 }
 

@@ -58,7 +58,7 @@ let innerWidth = $state(undefined)
 
 <div class="h-4"></div>
 
-<ul class="menu px-4 py-0">
+<ul class="menu w-full px-4 py-0">
   {#each pages as { name, href, icon, badge, badgeclass, highlightAnotherItem, deprecated, items, collapsible, target, highlight }}
     <SidebarMenuItem
       {closeDrawer}

@@ -9,7 +9,7 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
 
 <div data-sveltekit-preload-data>
   <div class="bg-base-100 text-base-content">
-    <footer class="footer mx-auto max-w-6xl px-4 py-20">
+    <footer class="footer md:footer-horizontal mx-auto max-w-6xl px-4 py-20">
       <div>
         <div class="flex items-center gap-2">
           <svg width="32" height="32" viewBox="0 0 415 415" xmlns="http://www.w3.org/2000/svg">

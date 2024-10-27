@@ -218,7 +218,7 @@ export let index
     <div
       class="rounded-box bg-base-200 h-full w-60 shrink-0 motion-reduce:opacity-100!"
       style="{`opacity:${animateValue(section, [14, 19], [0, 1])}`}">
-      <ul class="menu">
+      <ul class="menu w-full">
         <li class="menu-title">{$t("Admin panel")}</li>
         <li>
           <button tabindex="-1" class="active">
