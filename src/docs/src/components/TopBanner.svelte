@@ -12,7 +12,7 @@ const dateFormat = {
 </script>
 
 <!-- Without timer -->
-{#if true}
+{#if false}
   <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
       href="/store/"

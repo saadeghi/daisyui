@@ -61,28 +61,17 @@ export let data
           </th>
           <td class="w-1/12">
             {#if item.type == "component"}
-              <span class="badge badge-sm badge-ghost w-24 whitespace-nowrap">
+              <span class="badge badge-sm badge-soft badge-info whitespace-nowrap">
                 <Translate text="Component" />
               </span>
             {/if}
-            {#if item.type == "modifier"}
-              <div class="tooltip cursor-help" data-tip="{$t('Changes the style of a component')}">
-                <span class="badge badge-sm badge-outline w-24 whitespace-nowrap">
-                  <Translate text="Modifier" />
-                </span>
-              </div>
-            {/if}
-            {#if item.type == "responsive"}
-              <div
-                class="tooltip cursor-help"
-                data-tip="{$t('Supports responsive prefixes (sm:, lg:, …)')}">
-                <span class="badge badge-sm badge-success w-24 whitespace-nowrap">
-                  <Translate text="Responsive" />
-                </span>
-              </div>
+            {#if ["modifier", "responsive"].includes(item.type)}
+              <span class="badge badge-sm badge-soft badge-success whitespace-nowrap">
+                <Translate text="Modifier" />
+              </span>
             {/if}
           </td>
-          <td class="w-8/12 min-w-[20rem]">{item.desc}</td>
+          <td class="w-8/12 min-w-[20rem] text-base-content/60">{item.desc}</td>
         </tr>
       {/each}
     </tbody>

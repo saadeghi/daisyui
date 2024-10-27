@@ -5,11 +5,9 @@
   },
   "scripts": {
     "get-json": "node src/lib/scripts/get-json",
-    "dev": "npm run createStyleHandlerComponent:dev --silent && vite dev --port 3000 --open",
-    "build": "npm run get-json --silent && npm run createStyleHandlerComponent:prod --silent && NODE_ENV=production vite build --logLevel error",
+    "dev": "vite dev --port 3000 --open",
+    "build": "npm run get-json --silent && NODE_ENV=production vite build --logLevel error",
     "preview": "npm run build && vite preview --port 3000 --open",
-    "createStyleHandlerComponent:dev": "echo $'<script>import \"$components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
-    "createStyleHandlerComponent:prod": "echo $'<script>import \"$components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",
     "update-twitter-avatars": "node src/lib/scripts/get-twitter-avatars.js",
     "langdiff": "node src/lib/scripts/compare-translate-files"
   },
@@ -19,7 +17,6 @@
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@tailwindcss/typography": "0.5.15",
     "@tailwindcss/vite": "^4.0.0-alpha.30",
-    "daisyui": "^5.0.0-alpha.28",
     "dep-graph-count": "1.0.0",
     "dotenv": "16.4.5",
     "json-diff": "1.0.6",

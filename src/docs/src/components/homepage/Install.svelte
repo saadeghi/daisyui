@@ -11,12 +11,12 @@
 </script>
 
 <p class="mx-auto mb-2 mt-5 w-full text-start">1. {$t("install-step-1")}:</p>
-<div role="tablist" class="tabs tabs-lift">
+<div role="tablist" class="tabs tabs-lift w-full">
 	<input
 		type="radio"
 		name="install[packagemanager]"
 		role="tab"
-		class="tab checked:text-neutral-content [--tab-bg:oklch(var(--n))] [--tab-border-color:oklch(var(--n))]"
+		class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
 		aria-label="NPM"
 		checked="checked"
 	/>
@@ -63,7 +63,7 @@
 		type="radio"
 		name="install[packagemanager]"
 		role="tab"
-		class="tab checked:text-neutral-content [--tab-bg:oklch(var(--n))] [--tab-border-color:oklch(var(--n))]"
+		class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
 		aria-label="PNPM"
 	/>
 	<div
@@ -109,7 +109,7 @@
 		type="radio"
 		name="install[packagemanager]"
 		role="tab"
-		class="tab checked:text-neutral-content [--tab-bg:oklch(var(--n))] [--tab-border-color:oklch(var(--n))]"
+		class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
 		aria-label="Yarn"
 	/>
 	<div
@@ -155,7 +155,7 @@
 		type="radio"
 		name="install[packagemanager]"
 		role="tab"
-		class="tab checked:text-neutral-content [--tab-bg:oklch(var(--n))] [--tab-border-color:oklch(var(--n))]"
+		class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
 		aria-label="Bun"
 	/>
 	<div
@@ -200,12 +200,12 @@
 </div>
 <p class="mx-auto mb-2 mt-5 w-full text-start">2. {$t("install-step-2")}:</p>
 <div class="my-2 w-full max-w-4xl">
-	<div role="tablist" class="tabs tabs-lift">
+	<div role="tablist" class="tabs tabs-lift w-full">
 		<input
 			type="radio"
 			name="install[jstype]"
 			role="tab"
-			class="tab checked:text-neutral-content [--tab-bg:oklch(var(--n))] [--tab-border-color:oklch(var(--n))]"
+			class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
 			aria-label="CommonJS"
 			checked="checked"
 		/>
@@ -217,7 +217,7 @@
 module.exports = {`{`}
   <span class="text-neutral-content/30">//...</span>
   plugins: [
-    <span class="badge badge-lg">require('daisyui'),</span>
+    <span class="text-success">require('daisyui'),</span>
   ],
 {`}`}</code
 				></pre>
@@ -226,7 +226,7 @@ module.exports = {`{`}
 			type="radio"
 			name="install[jstype]"
 			role="tab"
-			class="tab checked:text-neutral-content [--tab-bg:oklch(var(--n))] [--tab-border-color:oklch(var(--n))]"
+			class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
 			aria-label="ESM"
 		/>
 		<div
@@ -234,11 +234,11 @@ module.exports = {`{`}
 			class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
 		>
 			<pre dir="ltr"><code
-					><span class="badge badge-lg">import daisyui from "daisyui"</span>
+					><span class="text-success">import daisyui from "daisyui"</span>
 module.exports = {`{`}
   <span class="text-neutral-content/30">//...</span>
   plugins: [
-    <span class="badge badge-lg">daisyui,</span>
+    <span class="text-success">daisyui,</span>
   ],
 {`}`}</code
 				></pre>
