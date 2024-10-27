@@ -595,7 +595,7 @@ data="{[
 </Component>
 
 <Component title="Menu without padding and border radius">
-<ul class="menu bg-base-200 w-56 p-0 [&_li>*]:rounded-none">
+<ul class="menu bg-base-200 w-56 p-0">
   <li><button>Item 1</button></li>
   <li><button>Item 2</button></li>
   <li><button>Item 3</button></li>
@@ -603,7 +603,7 @@ data="{[
 {#snippet html()}
 
 ```html
-<ul class="$$menu bg-base-200 w-56 p-0 [&_li>*]:rounded-none">
+<ul class="$$menu bg-base-200 w-56 p-0">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
   <li><a>Item 3</a></li>
