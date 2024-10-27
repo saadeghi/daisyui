@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 const colorObject = {
   "transparent": "transparent",
   "current": "currentColor",
