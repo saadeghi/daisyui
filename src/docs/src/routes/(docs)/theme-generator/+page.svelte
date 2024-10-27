@@ -315,7 +315,7 @@
 
 <div class="toast toast-middle toast-center z-10">
 	<div class="alert alert-warning">
-		<span>This page is in construction. Come back later.</span>
+		<span>This page is under construction. Come back later.</span>
 	</div>
 </div>
 
