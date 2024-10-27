@@ -1,10 +1,30 @@
 import { promises as fs } from "node:fs"
-import path from "node:path"
 import postcss from "postcss"
 import postcssJs from "postcss-js"
 import prefixer from "postcss-prefixer"
 import { compileAndExtractStyles, loadThemes } from './compileAndExtractStyles.js'
 import { replaceApplyTrueWithEmptyObject } from "./replaceApplyTrueWithEmptyObject.js"
+
+// function to convert camelCase to kebab-case
+const camelToKebab = (str) => {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase()
+}
+
+// Function to transform object keys from camelCase to kebab-case
+const transformKeys = (obj) => {
+  if (typeof obj !== 'object' || obj === null) return obj
+
+  if (Array.isArray(obj)) {
+    return obj.map(transformKeys)
+  }
+
+  return Object.fromEntries(
+    Object.entries(obj).map(([key, value]) => [
+      camelToKebab(key),
+      typeof value === 'object' ? transformKeys(value) : value
+    ])
+  )
+}
 
 export const cssToJs = async (cssFile) => {
   try {
@@ -18,18 +38,20 @@ export const cssToJs = async (cssFile) => {
     const rawCss = await compileAndExtractStyles(cssContent, defaultTheme, theme)
 
     // Optional: Add prefixer if needed
-    // const prefixed = postcss([prefixer({ prefix: "dz-" })]).process(rawCss).css
+    // const prefixed = postcss([prefixer({ prefix: "daisy-" })]).process(rawCss).css
     const prefixed = rawCss
 
     // Parse the CSS and convert to JS object
     const root = postcss.parse(prefixed)
     const jsContent = postcssJs.objectify(root)
 
+    const kebabCaseContent = transformKeys(jsContent)
+
     // Apply any necessary transformations
-    replaceApplyTrueWithEmptyObject(jsContent)
+    replaceApplyTrueWithEmptyObject(kebabCaseContent)
 
     // Return stringified JS object
-    return JSON.stringify(jsContent, null, null)
+    return JSON.stringify(kebabCaseContent, null, null)
   } catch (error) {
     throw new Error(`Error converting CSS to JS: ${error.message}`)
   }
