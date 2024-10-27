@@ -65,14 +65,14 @@
 	// })
 
 	const getColorValueFromTheme = (variable) => {
-		if (browser) {
-			let colorValues = getComputedStyle(document.documentElement).getPropertyValue(variable)
-			return formatHex(
-				`oklch(${changeColorValuesToObject(colorValues).l} ${
-					changeColorValuesToObject(colorValues).c
-				} ${changeColorValuesToObject(colorValues).h})`
-			)
-		}
+		// if (browser) {
+		// 	let colorValues = getComputedStyle(document.documentElement).getPropertyValue(variable)
+		// 	return formatHex(
+		// 		`oklch(${changeColorValuesToObject(colorValues).l} ${
+		// 			changeColorValuesToObject(colorValues).c
+		// 		} ${changeColorValuesToObject(colorValues).h})`
+		// 	)
+		// }
 		return null
 	}
 
@@ -220,22 +220,22 @@
 	}
 
 	function generateColors(newColorToCheck = "transparent") {
-		if (CSS.supports("color", newColorToCheck)) {
-			if (onlyRequiredColorNames) {
-				generateOptionalColors()
-			}
-			for (const color of colors) {
-				wrapper.style.setProperty(
-					color.variable,
-					colorObjToString(toGamut("oklch")(color.value), "oklch")
-				)
-			}
-			if (browser) {
-				localStorage.setItem("theme-generator-colors", JSON.stringify(colors))
-			}
-		} else {
-			console.log(`${newColorToCheck} is not a valid color`)
-		}
+		// if (CSS.supports("color", newColorToCheck)) {
+		// 	if (onlyRequiredColorNames) {
+		// 		generateOptionalColors()
+		// 	}
+		// 	for (const color of colors) {
+		// 		wrapper.style.setProperty(
+		// 			color.variable,
+		// 			colorObjToString(toGamut("oklch")(color.value), "oklch")
+		// 		)
+		// 	}
+		// 	if (browser) {
+		// 		localStorage.setItem("theme-generator-colors", JSON.stringify(colors))
+		// 	}
+		// } else {
+		// 	console.log(`${newColorToCheck} is not a valid color`)
+		// }
 	}
 	//prevent paste span tag outside text
 	function handlePastedText(event, color) {
@@ -312,6 +312,12 @@
 	desc="Tailwind CSS Theme Generator - Tailwind CSS daisyUI custom theme and custom colors"
 	img={`https://img.daisyui.com/images/theme-generator.webp`}
 />
+
+<div class="toast toast-middle toast-center z-10">
+	<div class="alert alert-warning">
+		<span>This page is in construction. Come back later.</span>
+	</div>
+</div>
 
 <div class="prose mb-10 pt-10">
 	<h1><Translate text="daisyUI Theme Generator" /></h1>
