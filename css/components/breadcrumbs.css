@@ -1,0 +1,38 @@
+.breadcrumbs {
+  @apply max-w-full overflow-x-auto py-2;
+
+  >ul,
+  >ol {
+    @apply flex items-center whitespace-nowrap min-h-min;
+
+    >li {
+      @apply flex items-center;
+
+      >* {
+        @apply flex cursor-pointer items-center hover:underline gap-2;
+
+        &:focus {
+          @apply outline-none;
+        }
+
+        &:focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+      }
+
+      &+*:before {
+        content: "";
+        @apply ml-2 mr-3 block h-1.5 w-1.5 opacity-40;
+        rotate: 45deg;
+        border-top: 1px solid;
+        border-right: 1px solid;
+        background-color: transparent;
+
+        &:where([dir=rtl], [dir=rtl] *) {
+          rotate: -135deg;
+        }
+      }
+    }
+  }
+}
