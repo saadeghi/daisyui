@@ -5,7 +5,8 @@ import themeOrder from './themeOrder';
 
 export const generateChunks = async (filename) => {
   try {
-    let content = `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@next/preflight.min.css) layer(base);\n`;
+    let content = '';
+    // content += `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@next/preflight.min.css) layer(base);\n`;
 
     const themes = await getDirectoriesWithTargetFile('./theme', 'index.css');
     const allowedThemes = ['light', 'dark'];

@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { getFileNames } from './getFileNames';
+import { cleanCss } from './cleanCss';
 
 const readFileContent = async (filePath) => {
   return await fs.readFile(filePath, 'utf8');
@@ -30,10 +31,15 @@ const readAllCSSDirectories = async () => {
   return allContents;
 };
 
+
 export const generateFull = async (file) => {
-  const [preflightCSS, themeCSS, otherCSS] = await Promise.all([
+  const [
+    // preflightCSS,
+    themeCSS,
+    otherCSS
+  ] = await Promise.all([
     // Read preflight CSS
-    readFileContent('node_modules/tailwindcss/preflight.css'),
+    // readFileContent('node_modules/tailwindcss/preflight.css'),
 
     // Read theme CSS files
     readThemeCSS(),
@@ -43,6 +49,13 @@ export const generateFull = async (file) => {
   ]);
 
   // Combine all content and write to file
-  const allContent = [preflightCSS, themeCSS, ...otherCSS].join('\n');
+  let allContent = [
+    // preflightCSS,
+    themeCSS,
+    ...otherCSS
+  ].join('\n');
+
+  allContent = cleanCss(allContent);
+
   await fs.writeFile(file, allContent);
 };

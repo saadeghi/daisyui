@@ -4,6 +4,7 @@ import postcssJs from "postcss-js"
 import prefixer from "postcss-prefixer"
 import { compileAndExtractStyles, loadThemes } from './compileAndExtractStyles.js'
 import { replaceApplyTrueWithEmptyObject } from "./replaceApplyTrueWithEmptyObject.js"
+import { cleanCss } from './cleanCss'
 
 // function to convert camelCase to kebab-case
 const camelToKebab = (str) => {
@@ -37,9 +38,12 @@ export const cssToJs = async (cssFile) => {
     // First convert Tailwind CSS to raw CSS
     const rawCss = await compileAndExtractStyles(cssContent, defaultTheme, theme)
 
+    // Clean the CSS
+    const cleanedCss = cleanCss(rawCss)
+
     // Optional: Add prefixer if needed
     // const prefixed = postcss([prefixer({ prefix: "daisy-" })]).process(rawCss).css
-    const prefixed = rawCss
+    const prefixed = cleanedCss
 
     // Parse the CSS and convert to JS object
     const root = postcss.parse(prefixed)

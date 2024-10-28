@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { getFileNames } from './getFileNames';
+import { cleanCss } from './cleanCss';
 import breakpoints from './breakpoints';
 import postcss from 'postcss';
 import selectorParser from 'postcss-selector-parser';
@@ -45,6 +46,8 @@ async function processFile(file, stylesDir, distDir, defaultTheme, theme, respon
   if (responsive) {
     stylesContent = await generateResponsiveVariants(stylesContent);
   }
+
+  stylesContent = cleanCss(stylesContent);
 
   await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent);
 }
