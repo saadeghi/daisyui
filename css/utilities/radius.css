@@ -1,0 +1,119 @@
+.rounded-box {
+  border-radius: var(--radius-box);
+}
+
+.rounded-btn {
+  border-radius: var(--radius-btn);
+}
+
+.rounded-badge {
+  border-radius: var(--radius-badge);
+}
+
+.rounded-t-box {
+  border-top-left-radius: var(--radius-box);
+  border-top-right-radius: var(--radius-box);
+}
+
+.rounded-b-box {
+  border-bottom-left-radius: var(--radius-box);
+  border-bottom-right-radius: var(--radius-box);
+}
+
+.rounded-l-box {
+  border-top-left-radius: var(--radius-box);
+  border-bottom-left-radius: var(--radius-box);
+}
+
+.rounded-r-box {
+  border-top-right-radius: var(--radius-box);
+  border-bottom-right-radius: var(--radius-box);
+}
+
+.rounded-tl-box {
+  border-top-left-radius: var(--radius-box);
+}
+
+.rounded-tr-box {
+  border-top-right-radius: var(--radius-box);
+}
+
+.rounded-br-box {
+  border-bottom-right-radius: var(--radius-box);
+}
+
+.rounded-bl-box {
+  border-bottom-left-radius: var(--radius-box);
+}
+
+.rounded-t-btn {
+  border-top-left-radius: var(--radius-btn);
+  border-top-right-radius: var(--radius-btn);
+}
+
+.rounded-b-btn {
+  border-bottom-left-radius: var(--radius-btn);
+  border-bottom-right-radius: var(--radius-btn);
+}
+
+.rounded-l-btn {
+  border-top-left-radius: var(--radius-btn);
+  border-bottom-left-radius: var(--radius-btn);
+}
+
+.rounded-r-btn {
+  border-top-right-radius: var(--radius-btn);
+  border-bottom-right-radius: var(--radius-btn);
+}
+
+.rounded-tl-btn {
+  border-top-left-radius: var(--radius-btn);
+}
+
+.rounded-tr-btn {
+  border-top-right-radius: var(--radius-btn);
+}
+
+.rounded-br-btn {
+  border-bottom-right-radius: var(--radius-btn);
+}
+
+.rounded-bl-btn {
+  border-bottom-left-radius: var(--radius-btn);
+}
+
+.rounded-t-badge {
+  border-top-left-radius: var(--radius-badge);
+  border-top-right-radius: var(--radius-badge);
+}
+
+.rounded-b-badge {
+  border-bottom-left-radius: var(--radius-badge);
+  border-bottom-right-radius: var(--radius-badge);
+}
+
+.rounded-l-badge {
+  border-top-left-radius: var(--radius-badge);
+  border-bottom-left-radius: var(--radius-badge);
+}
+
+.rounded-r-badge {
+  border-top-right-radius: var(--radius-badge);
+  border-bottom-right-radius: var(--radius-badge);
+}
+
+.rounded-tl-badge {
+  border-top-left-radius: var(--radius-badge);
+}
+
+.rounded-tr-badge {
+  border-top-right-radius: var(--radius-badge);
+}
+
+.rounded-br-badge {
+  border-bottom-right-radius: var(--radius-badge);
+}
+
+.rounded-bl-badge {
+  border-bottom-left-radius: var(--radius-badge);
+}
