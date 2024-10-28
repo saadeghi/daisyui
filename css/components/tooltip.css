@@ -1,19 +1,16 @@
 .tooltip {
   @apply relative inline-block;
   --tooltip-bg: var(--color-neutral);
-  --tooltip-tail: 3px;
-  --tooltip-color: var(--color-neutral-content);
-  --tooltip-offset: calc(100% + 1px + var(--tooltip-tail));
-  --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
+  --tooltip-offset: calc(100% + 1px + .1875rem);
+  --tooltip-tail-offset: calc(100% + 1px - .1875rem);
 
 
   &:before {
-    @apply absolute max-w-xs rounded px-2 py-1 whitespace-normal opacity-0 text-center;
+    @apply absolute max-w-xs rounded px-2 py-1 whitespace-normal opacity-0 text-center text-neutral-content;
     font-size: 0.875rem;
     line-height: 1.25rem;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     background-color: var(--tooltip-bg);
-    color: var(--tooltip-color);
     width: max-content;
     pointer-events: none;
     z-index: 1;
@@ -25,7 +22,7 @@
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     content: "";
     border-style: solid;
-    border-width: var(--tooltip-tail, 0);
+    border-width: .1875rem;
     width: 0;
     height: 0;
     display: block;
@@ -117,35 +114,56 @@
 
 .tooltip-primary {
   --tooltip-bg: var(--color-primary);
-  --tooltip-color: var(--color-primary-content);
+
+  &:before {
+    @apply text-primary-content;
+  }
 }
 
 .tooltip-secondary {
   --tooltip-bg: var(--color-secondary);
-  --tooltip-color: var(--color-secondary-content);
+
+  &:before {
+    @apply text-secondary-content;
+  }
 }
 
 .tooltip-accent {
   --tooltip-bg: var(--color-accent);
-  --tooltip-color: var(--color-accent-content);
+
+  &:before {
+    @apply text-accent-content;
+  }
 }
 
 .tooltip-info {
   --tooltip-bg: var(--color-info);
-  --tooltip-color: var(--color-info-content);
+
+  &:before {
+    @apply text-info-content;
+  }
 }
 
 .tooltip-success {
   --tooltip-bg: var(--color-success);
-  --tooltip-color: var(--color-success-content);
+
+  &:before {
+    @apply text-success-content;
+  }
 }
 
 .tooltip-warning {
   --tooltip-bg: var(--color-warning);
-  --tooltip-color: var(--color-warning-content);
+
+  &:before {
+    @apply text-warning-content;
+  }
 }
 
 .tooltip-error {
   --tooltip-bg: var(--color-error);
-  --tooltip-color: var(--color-error-content);
+
+  &:before {
+    @apply text-error-content;
+  }
 }

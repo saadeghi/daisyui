@@ -13,6 +13,15 @@
 :host,
 html {
   line-height: 1.5;
+  font-family: var(--default-font-family,
+      ui-sans-serif,
+      system-ui,
+      sans-serif,
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol',
+      'Noto Color Emoji'
+    );
   -webkit-tap-highlight-color: transparent
 }
 

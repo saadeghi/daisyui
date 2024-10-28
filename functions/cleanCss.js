@@ -3,8 +3,8 @@ export const cleanCss = (cssContent) => {
   return cssContent
     // remove empty fallbacks
     .replace(/var\((--[^,)]+),\s*\)/g, 'var($1)')
-    // remove css variable if there's a fallback value
-    .replace(/(?<![\w-]|in\s[\w]+,\s)var\((--[\w-]+),([^)(]+)\)/g, (match, variable, fallback) => {
+    // remove spacing,width css variable if there's a fallback value
+    .replace(/(?<![\w-]|in\s[\w]+,\s)var\((--(spacing|width)[\w-]*),([^)(]+)\)/g, (match, variable, prefix, fallback) => {
       // If there's no actual fallback value, return the original match
       if (!fallback.trim()) {
         return match;
