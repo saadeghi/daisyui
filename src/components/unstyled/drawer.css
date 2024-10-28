@@ -35,7 +35,7 @@
   }
   &-end {
     grid-auto-columns: auto max-content;
-    .drawer-toggle {
+    & > .drawer-toggle {
       & ~ .drawer-content {
         @apply col-start-1;
       }

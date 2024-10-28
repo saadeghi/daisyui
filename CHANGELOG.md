@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.14 (2024-10-28)
+
+
+### Bug Fixes
+
+* nested drawer-end ([1c39933](https://github.com/saadeghi/daisyui/commit/1c39933084ef4a2b643bdc480eb44bb0cb291864)), closes [#3249](https://github.com/saadeghi/daisyui/issues/3249)
+
 ## 4.12.13 (2024-10-09)
 
 
