@@ -165,7 +165,7 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
           rel="noopener, noreferrer"
           href="https://react.daisyui.com/"
           class="link link-hover group">
-          React daisyUI
+          React-daisyUI
           {@html newtabicon}
         </a>
         <a
@@ -173,7 +173,7 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
           rel="noopener, noreferrer"
           href="https://mary-ui.com/"
           class="link link-hover group">
-          Mary - Laravel components
+          MaryUI for Laravel
           {@html newtabicon}
         </a>
         <a
@@ -211,9 +211,17 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
         <a
           target="_blank"
           rel="noopener, noreferrer"
+          href="https://github.com/dobicinaitis/tailwind-cli-extra"
+          class="link link-hover group">
+          Tailwind standalone + daisyUI
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
           href="https://tailscan.com/?ref=daisyui"
           class="link link-hover group">
-          Tailscan
+          Tailscan extension
           {@html newtabicon}
         </a>
       </div>
