@@ -19,7 +19,7 @@ export let showVersion = false
 export let showLanguage = false
 
 import { t } from "$lib/i18n"
-
+export let version
 export let scrollY
 $: switchNavbarStyle = scrollY > 40
 
@@ -89,7 +89,7 @@ export let removeScrollPaddingFromNavbar
         {/await}
         {#if showVersion}
           {#await import("./ChangelogMenu.svelte") then Module}
-            <Module.default />
+            <Module.default version={version} />
           {/await}
         {/if}
       </div>

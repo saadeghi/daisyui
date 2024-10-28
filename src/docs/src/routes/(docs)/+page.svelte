@@ -407,25 +407,25 @@
 										[0, -800]
 									)}px)`}
 								>
-									<div class="tabs tabs-lift">
+									<div class="tabs tabs-lift grid-cols-3">
 										<button
 											onclick={() => (activeMenuItemOnHeroMockup = 1)}
 											class:tab-active={activeMenuItemOnHeroMockup === 1}
-											class="tab tab-border-none whitespace-nowrap text-xs"
+											class="tab [--spacing-tab-border:0px] whitespace-nowrap text-xs"
 										>
 											{$t("Features")}
 										</button>
 										<button
 											onclick={() => (activeMenuItemOnHeroMockup = 2)}
 											class:tab-active={activeMenuItemOnHeroMockup === 2}
-											class="tab tab-border-none whitespace-nowrap text-xs"
+											class="tab [--spacing-tab-border:0px] whitespace-nowrap text-xs"
 										>
 											{$t("Links")}
 										</button>
 										<button
 											onclick={() => (activeMenuItemOnHeroMockup = 3)}
 											class:tab-active={activeMenuItemOnHeroMockup === 3}
-											class="tab tab-border-none whitespace-nowrap text-xs"
+											class="tab [--spacing-tab-border:0px] whitespace-nowrap text-xs"
 										>
 											{$t("Message")}
 										</button>

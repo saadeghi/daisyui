@@ -11,29 +11,16 @@ published: true
 <Translate text="daisyUI can be configured from your <code>tailwind.config.js</code> file." />  
 <Translate text="Default config" />:
 
-```js
-module.exports = {
-  //...
-
-  // add daisyUI plugin
-  plugins: [require("daisyui")],
-
-  // daisyUI config (optional - here are the default values)
-  daisyui: {
-    themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-    darkTheme: "dark", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-    themeRoot: ":root", // The element that receives theme color CSS variables
-  },
-
-  //...
+```css
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+  root: ":root";
+  include: ;
+  exclude: ;
+  logs: true;
 }
 ```
-
+<!-- 
 ## <Translate text="Config values explained" />:
 
 - ### styled
@@ -91,4 +78,4 @@ module.exports = {
   `String (default: ":root")`
 
   <Translate text="Which element to attach the theme CSS variables to." />
-  <Translate text="In certain situations (such as embedding daisyUI in a shadow root) it may be useful to set this to e.g. <code>*</code>, so all components will have access to the required CSS variables." />
+  <Translate text="In certain situations (such as embedding daisyUI in a shadow root) it may be useful to set this to e.g. <code>*</code>, so all components will have access to the required CSS variables." /> -->

@@ -29,7 +29,7 @@
 				<button
 					class="btn btn-sm btn-square btn-neutral cursor-copy"
 					aria-label="copy"
-					onclick={() => copyText("npm i -D daisyui@latest")}
+					onclick={() => copyText("npm i -D daisyui@alpha")}
 				>
 					{#if isClipboardButtonPressed}
 						<svg
@@ -57,7 +57,7 @@
 				</button>
 			</div>
 		</div>
-		<pre data-prefix="$"><code>npm i -D daisyui@latest</code></pre>
+		<pre data-prefix="$"><code>npm i -D daisyui@alpha</code></pre>
 	</div>
 	<input
 		type="radio"
@@ -75,7 +75,7 @@
 				<button
 					class="btn btn-sm btn-square btn-neutral cursor-copy"
 					aria-label="copy"
-					onclick={() => copyText("pnpm add -D daisyui@latest")}
+					onclick={() => copyText("pnpm add -D daisyui@alpha")}
 				>
 					{#if isClipboardButtonPressed}
 						<svg
@@ -103,7 +103,7 @@
 				</button>
 			</div>
 		</div>
-		<pre data-prefix="$"><code>pnpm add -D daisyui@latest</code></pre>
+		<pre data-prefix="$"><code>pnpm add -D daisyui@alpha</code></pre>
 	</div>
 	<input
 		type="radio"
@@ -121,7 +121,7 @@
 				<button
 					class="btn btn-sm btn-square btn-neutral cursor-copy"
 					aria-label="copy"
-					onclick={() => copyText("yarn add -D daisyui@latest")}
+					onclick={() => copyText("yarn add -D daisyui@alpha")}
 				>
 					{#if isClipboardButtonPressed}
 						<svg
@@ -149,7 +149,7 @@
 				</button>
 			</div>
 		</div>
-		<pre data-prefix="$"><code>yarn add -D daisyui@latest</code></pre>
+		<pre data-prefix="$"><code>yarn add -D daisyui@alpha</code></pre>
 	</div>
 	<input
 		type="radio"
@@ -167,7 +167,7 @@
 				<button
 					class="btn btn-sm btn-square btn-neutral cursor-copy"
 					aria-label="copy"
-					onclick={() => copyText("bun add -D daisyui@latest")}
+					onclick={() => copyText("bun add -D daisyui@alpha")}
 				>
 					{#if isClipboardButtonPressed}
 						<svg
@@ -195,7 +195,7 @@
 				</button>
 			</div>
 		</div>
-		<pre data-prefix="$"><code>bun add -D daisyui@latest</code></pre>
+		<pre data-prefix="$"><code>bun add -D daisyui@alpha</code></pre>
 	</div>
 </div>
 <p class="mx-auto mb-2 mt-5 w-full text-start">2. {$t("install-step-2")}:</p>
@@ -206,41 +206,15 @@
 			name="install[jstype]"
 			role="tab"
 			class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
-			aria-label="CommonJS"
+			aria-label="app.css"
 			checked="checked"
 		/>
 		<div
 			role="tabpanel"
 			class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
 		>
-			<pre dir="ltr"><code>
-module.exports = {`{`}
-  <span class="text-neutral-content/30">//...</span>
-  plugins: [
-    <span class="text-success">require('daisyui'),</span>
-  ],
-{`}`}</code
-				></pre>
-		</div>
-		<input
-			type="radio"
-			name="install[jstype]"
-			role="tab"
-			class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
-			aria-label="ESM"
-		/>
-		<div
-			role="tabpanel"
-			class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
-		>
-			<pre dir="ltr"><code
-					><span class="text-success">import daisyui from "daisyui"</span>
-module.exports = {`{`}
-  <span class="text-neutral-content/30">//...</span>
-  plugins: [
-    <span class="text-success">daisyui,</span>
-  ],
-{`}`}</code
+			<pre dir="ltr"><code>@import "tailwindcss";
+<span class="text-success">@plugin "daisyui";</span></code
 				></pre>
 		</div>
 	</div>

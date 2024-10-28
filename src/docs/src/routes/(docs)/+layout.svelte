@@ -114,6 +114,7 @@ Array.prototype.matchPattern = function (inputString) {
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div class="{`drawer-content`}" inert="{checked || undefined}">
     <Navbar
+      version="{data.daisyuiVersion}"
       {addScrollPaddingToNavbar}
       {removeScrollPaddingFromNavbar}
       pages="{data.pages}"
