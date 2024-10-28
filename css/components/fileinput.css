@@ -15,7 +15,7 @@
   &::file-selector-button {
     @apply cursor-pointer select-none h-full px-4 me-4;
     border: var(--spacing-button-border, 1px) solid var(--btn-color);
-    font-size: var(--font-size-sm);
+    font-size: .875rem;
     font-weight: 600;
     --btn-color: var(--btn-bg, var(--color-base-200));
     background-color: var(--btn-color);
@@ -131,19 +131,19 @@
 
   &.file-input-xs {
     @apply h-6 pe-2;
-    font-size: 0.75rem;
+    font-size: .75rem;
     line-height: 1;
   }
 
   &.file-input-sm {
     @apply h-8 pe-3;
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 1.5rem;
   }
 
   &.file-input-md {
     @apply h-10 pe-4;
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 2;
   }
 

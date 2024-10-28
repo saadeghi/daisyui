@@ -1,6 +1,6 @@
 .btn {
   @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-2 text-center no-underline outline-offset-2 select-none align-middle h-10 px-4 text-base-content;
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   outline-color: var(--color-base-content);
   font-weight: 500;
   transition-property: color, background-color, background-image, border-color, opacity, box-shadow, scale;
@@ -194,22 +194,22 @@
 
 .btn-xs {
   @apply h-6 px-2;
-  font-size: var(--font-size-xs);
+  font-size: .75rem;
 }
 
 .btn-sm {
   @apply h-8 px-3;
-  font-size: var(--font-size-sm);
+  font-size: .875rem;
 }
 
 .btn-md {
   @apply h-10 px-4;
-  font-size: var(--font-size-sm);
+  font-size: .875rem;
 }
 
 .btn-lg {
   @apply h-14 px-6;
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
 }
 
 .btn-square {

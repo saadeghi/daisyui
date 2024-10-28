@@ -13,16 +13,16 @@
   height: 100vh;
   height: 100dvh;
 
-  &>.drawer-overlay {
+  >.drawer-overlay {
     @apply sticky top-0 place-self-stretch cursor-pointer bg-transparent;
     transition: background-color 0.2s ease-out;
   }
 
-  &>* {
+  >* {
     @apply col-start-1 row-start-1;
   }
 
-  &>*:not(.drawer-overlay) {
+  >*:not(.drawer-overlay) {
     @apply will-change-transform;
     transition: translate 0.3s ease-out;
     translate: -100%;
@@ -59,7 +59,7 @@
 .drawer-end {
   grid-auto-columns: auto max-content;
 
-  .drawer-toggle {
+  >.drawer-toggle {
     &~.drawer-content {
       @apply col-start-1;
     }
@@ -83,11 +83,11 @@
 }
 
 .drawer-open {
-  &>.drawer-side {
+  >.drawer-side {
     @apply overflow-y-auto;
   }
 
-  &>.drawer-toggle {
+  >.drawer-toggle {
     @apply hidden;
 
     &~.drawer-side {
