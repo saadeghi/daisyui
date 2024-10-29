@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
+import { getFileNames } from './getFileNames';
 import themeOrder from './themeOrder';
 
 const readFileContent = async (filePath) => {
@@ -8,14 +8,14 @@ const readFileContent = async (filePath) => {
 };
 
 const readAllThemeCSS = async () => {
-  // Get all directories in the ./theme folder that contain an index.css file
-  const themeDirs = await getDirectoriesWithTargetFile('./theme', 'index.css');
+  // Get all file names in the ./theme folder with the .css extension
+  const themeDirs = await getFileNames('./theme', '.css', false);
 
-  // Read the content of each theme's index.css file and store in an object
+  // Read the content of each theme CSS file and store in an object
   const themeContents = {};
   await Promise.all(
     themeDirs.map(async themeDir => {
-      const content = await readFileContent(path.join('./theme', themeDir, 'index.css'));
+      const content = await readFileContent(path.join('./theme', `${themeDir}.css`));
       themeContents[themeDir] = content;
     })
   );

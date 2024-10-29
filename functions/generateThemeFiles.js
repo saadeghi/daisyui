@@ -19,7 +19,7 @@ export const generateThemeFiles = async ({ srcDir, distDir }) => {
 
   const tasks = themeNames.map(async (themeName) => {
     const srcPath = path.join(srcDir, `${themeName}.css`);
-    const distPath = path.join(distDir, themeName, 'index.css');
+    const distPath = path.join(distDir, `${themeName}.css`);
 
     const content = await fs.readFile(srcPath, 'utf-8');
     const wrappedContent = wrapContent(themeName, content);

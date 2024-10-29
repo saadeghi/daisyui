@@ -1,6 +1,5 @@
 import fs from 'fs/promises';
 import { getFileNames } from './getFileNames';
-import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 import themeOrder from './themeOrder';
 
 export const generateChunks = async (filename) => {
@@ -9,11 +8,11 @@ export const generateChunks = async (filename) => {
     // let content = '@layer base, themes, components, utilities;\n';
     // content += `@import url(https://cdn.jsdelivr.net/npm/tailwindcss@next/preflight.min.css) layer(base);\n`;
 
-    const themes = await getDirectoriesWithTargetFile('./theme', 'index.css');
+    const themes = await getFileNames('./theme', '.css', false);
     const allowedThemes = ['light', 'dark'];
     themeOrder.forEach(theme => {
       if (themes.includes(theme) && allowedThemes.includes(theme)) {
-        content += `@import url(theme/${theme}/index.css);\n`;
+        content += `@import url(theme/${theme}.css);\n`;
       }
     });
 
