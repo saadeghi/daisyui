@@ -1,0 +1,92 @@
+.dock {
+  @apply z-[1] fixed bottom-0 left-0 right-0 flex w-full flex-row items-center justify-around bg-base-100 h-16 text-current py-2;
+  border-top: .5px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  &:has(>*:hover)>*:not(:hover) {
+    background-color: transparent;
+  }
+
+  >* {
+    @apply relative flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px relative rounded-full mb-2 bg-transparent;
+    transition: background-color .4s ease-in-out;
+
+    &:where(:hover) {
+      @apply bg-base-200;
+    }
+
+    &:where(.dock-active) {
+      @apply bg-base-200;
+
+      &:after {
+        content: '';
+        @apply absolute w-10 h-1 bg-current rounded-full;
+        bottom: .2rem;
+      }
+    }
+
+
+    &[aria-disabled=true],
+    &[disabled] {
+
+      &,
+      &:hover {
+        @apply text-base-content/10 pointer-events-none;
+      }
+    }
+
+    .dock-label {
+      font-size: .6875rem;
+    }
+  }
+}
+
+.dock-xs {
+  @apply h-10;
+
+  .dock-active {
+    &:after {
+      bottom: -.1rem;
+    }
+  }
+
+  .dock-label {
+    font-size: .6875rem;
+  }
+}
+
+.dock-sm {
+  @apply h-12;
+
+  .dock-active {
+    &:after {
+      bottom: -.1rem;
+    }
+  }
+
+  .dock-label {
+    font-size: .6875rem;
+  }
+}
+
+.dock-md {
+  @apply h-16;
+
+  .dock-label {
+    font-size: .6875rem;
+  }
+}
+
+.dock-lg {
+  @apply h-20;
+
+  .dock-active {
+    &:after {
+      bottom: .4rem;
+    }
+  }
+
+  .dock-label {
+    font-size: .75rem;
+  }
+}
