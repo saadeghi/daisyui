@@ -171,7 +171,7 @@
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply rounded-btn px-4 py-2;
-    font-size: 0.875;
+    font-size: 0.875rem;
     line-height: 1.25rem;
   }
 
