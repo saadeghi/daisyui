@@ -45,6 +45,7 @@
   ],
   "main": "./index.js",
   "module": "./index.js",
+  "browser": "./full.css",
   "files": [
     "base",
     "colors",
