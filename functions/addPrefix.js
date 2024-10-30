@@ -2,6 +2,10 @@ export const addPrefix = (obj, prefix) => {
   const result = {};
 
   const getPrefixedKey = (key) => {
+    if (!prefix) {
+      return key;
+    }
+
     // class selectors like ".btn"
     if (key.startsWith('.')) {
       return `.${prefix}${key.slice(1)}`;
@@ -32,7 +36,7 @@ export const addPrefix = (obj, prefix) => {
       // arrays within the CSS object
       result[newKey] = value.map(item => {
         if (typeof item === 'string' && item.startsWith('.')) {
-          return `.${prefix}${item.slice(1)}`;
+          return !prefix ? item : `.${prefix}${item.slice(1)}`;
         }
         return item;
       });
