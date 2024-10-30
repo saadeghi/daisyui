@@ -14,6 +14,7 @@
 !/src/pages/index.astro
 !/src/pages/LTR.astro
 !/src/pages/RTL.astro
+!/src/pages/prefix.astro
 
 /src/layouts/*
 !/src/layouts/Main.astro

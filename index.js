@@ -8,7 +8,7 @@ import { base, components, utilities } from './imports';
 export default plugin.withOptions(
   (options) => {
     return ({ addBase, addComponents, addUtilities }) => {
-      const { include, exclude } = pluginOptionsHandler(options, addBase, themesObject, version);
+      const { include, exclude, prefix = '' } = pluginOptionsHandler(options, addBase, themesObject, version);
 
       const shouldIncludeItem = (name) => {
         if (include && exclude) {
@@ -25,17 +25,17 @@ export default plugin.withOptions(
 
       Object.entries(base).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return;
-        item({ addBase });
+        item({ addBase, prefix });
       });
 
       Object.entries(components).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return;
-        item({ addComponents });
+        item({ addComponents, prefix });
       });
 
       Object.entries(utilities).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return;
-        item({ addUtilities });
+        item({ addUtilities, prefix });
       });
 
     };

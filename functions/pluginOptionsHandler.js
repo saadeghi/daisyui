@@ -6,7 +6,8 @@ export const pluginOptionsHandler = (() => {
       root = ":root",
       themes = ['light --default', 'dark --prefersdark'],
       include,
-      exclude
+      exclude,
+      prefix = '',
     } = options || {};
 
     if (logs !== false && firstRun) {
@@ -39,6 +40,6 @@ export const pluginOptionsHandler = (() => {
         applyTheme(themeName, flags);
       }
     }
-    return { include, exclude };
+    return { include, exclude, prefix };
   };
 })();

@@ -2,7 +2,11 @@
 
 /* @plugin "@tailwindcss/typography"; */
 
-@plugin "../../../../";
+@plugin "../../../../" {
+  logs: false;
+  root: ":root";
+  prefix: "";
+}
 
 
 
