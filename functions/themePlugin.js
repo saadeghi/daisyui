@@ -9,12 +9,13 @@ export default plugin.withOptions(
         default: isDefault = false,
         prefersdark = false,
         'color-scheme': colorScheme = 'normal',
+        root = ':root',
         ...customThemeTokens
       } = options;
 
-      let selector = `:root:has(input.theme-controller[value=${name}]:checked),[data-theme="${name}"]`;
+      let selector = `${root}:has(input.theme-controller[value=${name}]:checked),[data-theme="${name}"]`;
       if (isDefault) {
-        selector = `:where(:root),${selector}`;
+        selector = `:where(${root}),${selector}`;
       }
 
       // Merge custom theme with built-in theme if it exists
@@ -38,7 +39,7 @@ export default plugin.withOptions(
       if (prefersdark) {
         addBase({
           '@media (prefers-color-scheme: dark)': {
-            ':root': baseStyles[selector]
+            [root]: baseStyles[selector] // Use the configurable root option here
           }
         });
       }
