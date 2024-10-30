@@ -19,11 +19,20 @@ export const addPrefix = (obj, prefix) => {
       return key.split(' ').map(part => part.startsWith('.') ? `.${prefix}${part.slice(1)}` : part).join(' ');
     }
     if (key.includes(':')) {
-      // pseudo-classes like ":hover"
-      return key.split(':').map((part, index) => index === 0 && part.startsWith('.') ? `.${prefix}${part.slice(1)}` : part).join(':');
+      // pseudo-classes like ":hover" and complex selectors like ":is(.btn)"
+      return key.split(':').map((part, index) => {
+        if (index === 0 && part.startsWith('.')) {
+          return `.${prefix}${part.slice(1)}`;
+        }
+        if (part.includes('(')) {
+          // Handle nested selectors within pseudo-classes like :is(.btn)
+          return part.replace(/\(([^)]+)\)/, (match, inner) => `(${inner.split(',').map(sel => sel.trim().startsWith('.') ? `.${prefix}${sel.trim().slice(1)}` : sel.trim()).join(', ')})`);
+        }
+        return part;
+      }).join(':');
     }
-    if (key.startsWith('@media') || key.startsWith('@keyframes') || key.startsWith('[')) {
-      // media queries, keyframes, and attribute selectors
+    if (key.startsWith('@media') || key.startsWith('@keyframes') || key.startsWith('@layer') || key.startsWith('@supports') || key.startsWith('@container') || key.startsWith('[')) {
+      // media queries, keyframes, layers, supports, container queries, and attribute selectors
       return key;
     }
     return key;
