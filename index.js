@@ -3,7 +3,7 @@ import { pluginOptionsHandler } from './functions/pluginOptionsHandler.js';
 import { plugin } from './functions/plugin.js';
 import variables from './functions/variables.js';
 import themesObject from './theme/object.js';
-import imports from './imports';
+import { base, components, utilities } from './imports';
 
 export default plugin.withOptions(
   (options) => {
@@ -23,21 +23,21 @@ export default plugin.withOptions(
         return true;
       };
 
-      Object.entries(imports).forEach(([name, { item, category }]) => {
+      Object.entries(base).forEach(([name, item]) => {
         if (!shouldIncludeItem(name)) return;
+        item({ addBase });
+      });
 
-        if (category === 'base') {
-          item({ addBase });
-          return;
-        }
-
-        if (category === 'utilities') {
-          item({ addUtilities });
-          return;
-        }
-
+      Object.entries(components).forEach(([name, item]) => {
+        if (!shouldIncludeItem(name)) return;
         item({ addComponents });
       });
+
+      Object.entries(utilities).forEach(([name, item]) => {
+        if (!shouldIncludeItem(name)) return;
+        item({ addUtilities });
+      });
+
     };
   },
   () => ({

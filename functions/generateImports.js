@@ -2,17 +2,32 @@ import fs from 'fs/promises';
 import { getDirectoriesWithTargetFile } from './getDirectoriesWithTargetFile';
 
 const generateJSContent = async () => {
+  // Create separate arrays for each category
+  let baseItems = [];
+  let componentItems = [];
+  let utilityItems = [];
   let imports = '';
-  let exports = '';
 
   try {
-    // Function to process each category (base, components, utilities)
+    // Function to process each category
     const processCategory = async (category) => {
       const items = await getDirectoriesWithTargetFile(`./${category}`, 'index.js');
       items.forEach(item => {
         const importName = `${item}`;
         imports += `import ${importName} from './${category}/${item}';\n`;
-        exports += `\n  ${importName}: { item: ${importName}, category: '${category}' },`;
+
+        // Add items to their respective arrays
+        switch (category) {
+          case 'base':
+            baseItems.push(importName);
+            break;
+          case 'components':
+            componentItems.push(importName);
+            break;
+          case 'utilities':
+            utilityItems.push(importName);
+            break;
+        }
       });
     };
 
@@ -21,11 +36,13 @@ const generateJSContent = async () => {
     await processCategory('components');
     await processCategory('utilities');
 
-
+    // Generate the content with separate exports
     const content = `${imports}
-export default {${exports}
-};
+export const base = {${baseItems.join(',')}};
+export const components = {${componentItems.join(',')}};
+export const utilities = {${utilityItems.join(',')}};
 `;
+
     return { content };
   } catch (error) {
     throw new Error(`Failed to generate JS content: ${error.message}`);
