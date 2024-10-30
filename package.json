@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "daisyui",
-  "version": "5.0.0-alpha.33",
+  "version": "5.0.0-alpha.34",
   "description": "daisyUI 5 - Tailwind CSS Component Library",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -50,6 +50,7 @@
     "base",
     "colors",
     "components",
+    "functions/addPrefix.js",
     "functions/plugin.js",
     "functions/pluginOptionsHandler.js",
     "functions/variables.js",
