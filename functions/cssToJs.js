@@ -1,7 +1,6 @@
 import { promises as fs } from "node:fs"
 import postcss from "postcss"
 import postcssJs from "postcss-js"
-import prefixer from "postcss-prefixer"
 import { compileAndExtractStyles, loadThemes } from './compileAndExtractStyles.js'
 import { replaceApplyTrueWithEmptyObject } from "./replaceApplyTrueWithEmptyObject.js"
 import { cleanCss } from './cleanCss'
@@ -41,12 +40,8 @@ export const cssToJs = async (cssFile) => {
     // Clean the CSS
     const cleanedCss = cleanCss(rawCss)
 
-    // Optional: Add prefixer if needed
-    // const prefixed = postcss([prefixer({ prefix: "daisy-" })]).process(rawCss).css
-    const prefixed = cleanedCss
-
     // Parse the CSS and convert to JS object
-    const root = postcss.parse(prefixed)
+    const root = postcss.parse(cleanedCss)
     const jsContent = postcssJs.objectify(root)
 
     const kebabCaseContent = transformKeys(jsContent)

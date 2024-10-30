@@ -92,7 +92,6 @@
     "lightningcss": "^1.27.0",
     "postcss": "^8.4.47",
     "postcss-js": "^4.0.1",
-    "postcss-prefixer": "^3.0.0",
     "postcss-selector-parser": "^7.0.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
