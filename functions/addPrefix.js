@@ -16,7 +16,15 @@ export const addPrefix = (obj, prefix) => {
     }
     if (key.includes(' ')) {
       // compound selectors like ".btn .icon"
-      return key.split(' ').map(part => part.startsWith('.') ? `.${prefix}${part.slice(1)}` : part).join(' ');
+      return key.split(' ').map(part => {
+        if (part.startsWith('.')) {
+          return `.${prefix}${part.slice(1)}`;
+        }
+        if (part.startsWith('&.')) {
+          return `&.${prefix}${part.slice(2)}`;
+        }
+        return part;
+      }).join(' ');
     }
     if (key.includes(':')) {
       // pseudo-classes like ":hover" and complex selectors like ":is(.btn)"
