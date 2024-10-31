@@ -152,7 +152,11 @@
 
 .btn {
   &:is(:disabled, [disabled], .btn-disabled) {
-    @apply bg-neutral/20 text-base-content/20 pointer-events-none border-transparent;
+    &:not(.btn-link) {
+      @apply bg-neutral/20;
+    }
+
+    @apply text-base-content/20 pointer-events-none border-transparent;
     --btn-gradient: unset;
 
     &:hover {
