@@ -1,45 +1,24 @@
 .tabs {
   @apply flex flex-wrap items-end align-bottom;
-  --radius-tab-ss: 0;
-  --radius-tab-se: 0;
-  --radius-tab-es: 0;
-  --radius-tab-ee: 0;
-  --radius-tabcontent-ss: 0;
-  --radius-tabcontent-se: 0;
-  --radius-tabcontent-es: 0;
-  --radius-tabcontent-ee: 0;
-  --tab-order: 0;
-  --tabcontent-order: 1;
 
-  :where(.tab-content) {
-    border-start-start-radius: var(--radius-tabcontent-ss);
-    border-start-end-radius: var(--radius-tabcontent-se);
-    border-end-start-radius: var(--radius-tabcontent-es);
-    border-end-end-radius: var(--radius-tabcontent-ee);
-  }
-}
-
-.tabs-top {
-  --tab-order: 0;
-  --tabcontent-order: 1;
-}
-
-.tabs-bottom {
-  --tab-order: 1;
-  --tabcontent-order: 0;
 }
 
 .tab {
   @apply hover:text-base-content relative inline-flex cursor-pointer select-none appearance-none flex-wrap items-center justify-center text-center text-base-content/50;
+  --tab-padding: 1rem;
+  --tab-bg: var(--color-base-100);
+  --tab-border-color: var(--color-base-300);
+  --tab-radius-ss: 0;
+  --tab-radius-se: 0;
+  --tab-radius-es: 0;
+  --tab-radius-ee: 0;
+  --tab-order: 0;
   order: var(--tab-order);
   height: 2rem;
   font-size: 0.875rem;
   line-height: 2;
-  --tab-padding: 1rem;
-  --tab-bg: var(--color-base-100);
-  --tab-border-color: var(--color-base-300);
-  padding-inline-start: var(--tab-padding, 1rem);
-  padding-inline-end: var(--tab-padding, 1rem);
+  padding-inline-start: var(--tab-padding);
+  padding-inline-end: var(--tab-padding);
 
   &:is(input[type="radio"]) {
     @apply w-auto;
@@ -95,27 +74,27 @@
 
 .tabs-lift {
   .tab {
-    --tab-border-width: 0 0 var(--spacing-tab-border) 0;
-    --radius-tab-ss: var(--radius-btn);
-    --radius-tab-se: var(--radius-btn);
-    --radius-tab-es: 0;
-    --radius-tab-ee: 0;
-    --tab-paddings: var(--spacing-tab-border) var(--tab-padding, 1rem) 0 var(--tab-padding, 1rem);
+    --tab-border: 0 0 var(--spacing-tab-border) 0;
+    --tab-radius-ss: var(--radius-btn);
+    --tab-radius-se: var(--radius-btn);
+    --tab-radius-es: 0;
+    --tab-radius-ee: 0;
+    --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
 
-    border-width: var(--tab-border-width);
-    border-start-start-radius: var(--radius-tab-ss);
-    border-start-end-radius: var(--radius-tab-se);
-    border-end-start-radius: var(--radius-tab-es);
-    border-end-end-radius: var(--radius-tab-ee);
+    border-width: var(--tab-border);
+    border-start-start-radius: var(--tab-radius-ss);
+    border-start-end-radius: var(--tab-radius-se);
+    border-end-start-radius: var(--tab-radius-es);
+    border-end-end-radius: var(--tab-radius-ee);
     padding: var(--tab-paddings);
     border-color: var(--tab-border-colors);
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
-      --tab-border-width: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
+      --tab-border: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent var(--tab-border-color);
-      --tab-paddings: 0 calc(var(--tab-padding, 1rem) - var(--spacing-tab-border)) var(--spacing-tab-border) calc(var(--tab-padding, 1rem) - var(--spacing-tab-border));
+      --tab-paddings: 0 calc(var(--tab-padding) - var(--spacing-tab-border)) var(--spacing-tab-border) calc(var(--tab-padding) - var(--spacing-tab-border));
       --tab-inset: auto auto 0 auto;
       --tab-grad: calc(69% - var(--spacing-tab-border));
       --radius-start: radial-gradient(circle at top left,
@@ -195,20 +174,23 @@
 }
 
 .tabs-top {
+
   .tab {
-    --tab-border-width: 0 0 var(--spacing-tab-border) 0;
-    --radius-tab-ss: var(--radius-btn);
-    --radius-tab-se: var(--radius-btn);
-    --radius-tab-es: 0;
-    --radius-tab-ee: 0;
-    --tab-paddings: var(--spacing-tab-border) var(--tab-padding, 1rem) 0 var(--tab-padding, 1rem);
+    --tab-order: 0;
+
+    --tab-border: 0 0 var(--spacing-tab-border) 0;
+    --tab-radius-ss: var(--radius-btn);
+    --tab-radius-se: var(--radius-btn);
+    --tab-radius-es: 0;
+    --tab-radius-ee: 0;
+    --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
-      --tab-border-width: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
+      --tab-border: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent var(--tab-border-color);
-      --tab-paddings: 0 calc(var(--tab-padding, 1rem) - var(--spacing-tab-border)) var(--spacing-tab-border) calc(var(--tab-padding, 1rem) - var(--spacing-tab-border));
+      --tab-paddings: 0 calc(var(--tab-padding) - var(--spacing-tab-border)) var(--spacing-tab-border) calc(var(--tab-padding) - var(--spacing-tab-border));
       --tab-inset: auto auto 0 auto;
       --tab-grad: calc(69% - var(--spacing-tab-border));
       --radius-start: radial-gradient(circle at top left,
@@ -233,6 +215,7 @@
   }
 
   .tab-content {
+    --tabcontent-order: 1;
     --tabcontent-margin: calc(var(--spacing-tab-border) * -1) 0 0 0;
     --radius-tabcontent-ss: 0;
     --radius-tabcontent-se: var(--radius-box);
@@ -249,22 +232,22 @@
 }
 
 .tabs-bottom {
+
   .tab {
-    --tab-border-width: var(--spacing-tab-border) 0 0 0;
-    --radius-tab-ss: 0;
-    --radius-tab-se: 0;
-    --radius-tab-es: var(--radius-btn);
-    --radius-tab-ee: var(--radius-btn);
+    --tab-order: 1;
+    --tab-border: var(--spacing-tab-border) 0 0 0;
+    --tab-radius-ss: 0;
+    --tab-radius-se: 0;
+    --tab-radius-es: var(--radius-btn);
+    --tab-radius-ee: var(--radius-btn);
     --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
-    --tab-paddings: 0 var(--tab-padding, 1rem) var(--spacing-tab-border) var(--tab-padding, 1rem);
+    --tab-paddings: 0 var(--tab-padding) var(--spacing-tab-border) var(--tab-padding);
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
-      --tab-border-width: 0 var(--spacing-tab-border) var(--spacing-tab-border) var(--spacing-tab-border);
+      --tab-border: 0 var(--spacing-tab-border) var(--spacing-tab-border) var(--spacing-tab-border);
       --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color) var(--tab-border-color);
-      --tab-paddings: var(--spacing-tab-border) calc(var(--tab-padding, 1rem) - var(--spacing-tab-border)) 0 calc(var(--tab-padding, 1rem) - var(--spacing-tab-border));
-
-
+      --tab-paddings: var(--spacing-tab-border) calc(var(--tab-padding) - var(--spacing-tab-border)) 0 calc(var(--tab-padding) - var(--spacing-tab-border));
       --tab-inset: 0 auto auto auto;
       --radius-start: radial-gradient(circle at bottom left,
           transparent var(--tab-grad),
@@ -288,6 +271,7 @@
   }
 
   .tab-content {
+    --tabcontent-order: 0;
     --tabcontent-margin: 0 0 calc(var(--spacing-tab-border) * -1) 0;
     --radius-tabcontent-ss: var(--radius-box);
     --radius-tabcontent-se: var(--radius-box);
@@ -302,7 +286,6 @@
     }
   }
 }
-
 
 .tabs-box {
   @apply rounded-btn p-1 bg-base-200;
@@ -326,9 +309,19 @@
 
 .tab-content {
   @apply hidden border-transparent order-1 w-full;
+
+  --radius-tabcontent-ss: 0;
+  --radius-tabcontent-se: 0;
+  --radius-tabcontent-es: 0;
+  --radius-tabcontent-ee: 0;
+  --tabcontent-order: 1;
   margin: var(--tabcontent-margin);
   order: var(--tabcontent-order);
   border-width: var(--spacing-tab-border);
+  border-start-start-radius: var(--radius-tabcontent-ss);
+  border-start-end-radius: var(--radius-tabcontent-se);
+  border-end-start-radius: var(--radius-tabcontent-es);
+  border-end-end-radius: var(--radius-tabcontent-ee);
 }
 
 .tabs-xs {
