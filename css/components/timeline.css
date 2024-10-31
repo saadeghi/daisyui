@@ -69,7 +69,7 @@
   --timeline-row-start: 0;
 
   .timeline-start {
-    @apply col-start-1 col-end-4 row-start-3 row-end-4 m-1 self-start justify-self-center;
+    @apply col-start-1 col-end-4 row-start-3 row-end-4 self-start justify-self-center;
   }
 
   li:has(.timeline-start) {
