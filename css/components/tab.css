@@ -1,34 +1,37 @@
 .tabs {
   @apply flex flex-wrap items-end align-bottom;
-  --radius-tab-start-start: 0;
-  --radius-tab-start-end: 0;
-  --radius-tab-end-start: 0;
-  --radius-tab-end-end: 0;
-  --radius-tab-content-start-start: 0;
-  --radius-tab-content-start-end: 0;
-  --radius-tab-content-end-start: 0;
-  --radius-tab-content-end-end: 0;
+  --radius-tab-ss: 0;
+  --radius-tab-se: 0;
+  --radius-tab-es: 0;
+  --radius-tab-ee: 0;
+  --radius-tabcontent-ss: 0;
+  --radius-tabcontent-se: 0;
+  --radius-tabcontent-es: 0;
+  --radius-tabcontent-ee: 0;
+  --tab-order: 0;
+  --tabcontent-order: 1;
 
   :where(.tab-content) {
-    border-start-start-radius: var(--radius-tab-content-start-start);
-    border-start-end-radius: var(--radius-tab-content-start-end);
-    border-end-start-radius: var(--radius-tab-content-end-start);
-    border-end-end-radius: var(--radius-tab-content-end-end);
+    border-start-start-radius: var(--radius-tabcontent-ss);
+    border-start-end-radius: var(--radius-tabcontent-se);
+    border-end-start-radius: var(--radius-tabcontent-es);
+    border-end-end-radius: var(--radius-tabcontent-ee);
   }
+}
+
+.tabs-top {
+  --tab-order: 0;
+  --tabcontent-order: 1;
 }
 
 .tabs-bottom {
-  :where(.tab) {
-    @apply order-1;
-  }
-
-  .tab-content {
-    @apply order-0;
-  }
+  --tab-order: 1;
+  --tabcontent-order: 0;
 }
 
 .tab {
-  @apply hover:text-base-content relative inline-flex cursor-pointer select-none appearance-none flex-wrap items-center justify-center text-center text-base-content/50 order-none;
+  @apply hover:text-base-content relative inline-flex cursor-pointer select-none appearance-none flex-wrap items-center justify-center text-center text-base-content/50;
+  order: var(--tab-order);
   height: 2rem;
   font-size: 0.875rem;
   line-height: 2;
@@ -59,7 +62,7 @@
 
   &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
   &:is(input:checked) {
-    @apply border-base-content text-base-content;
+    @apply text-base-content;
   }
 
   &:focus {
@@ -86,189 +89,220 @@
     @apply border-base-content/20;
     border-style: solid;
     border-width: 0;
-    border-bottom-width: calc(var(--spacing-tab-border, 1px) + 1px);
+    border-bottom-width: calc(var(--spacing-tab-border) + 1px);
   }
 }
 
 .tabs-lift {
+  .tab {
+    --tab-border-width: 0 0 var(--spacing-tab-border) 0;
+    --radius-tab-ss: var(--radius-btn);
+    --radius-tab-se: var(--radius-btn);
+    --radius-tab-es: 0;
+    --radius-tab-ee: 0;
+    --tab-paddings: var(--spacing-tab-border) var(--tab-padding, 1rem) 0 var(--tab-padding, 1rem);
+    --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
 
-  :where(.tab) {
-    border-start-start-radius: var(--radius-tab-start-start);
-    border-start-end-radius: var(--radius-tab-start-end);
-    border-end-start-radius: var(--radius-tab-end-start);
-    border-end-end-radius: var(--radius-tab-end-end);
-  }
+    border-width: var(--tab-border-width);
+    border-start-start-radius: var(--radius-tab-ss);
+    border-start-end-radius: var(--radius-tab-se);
+    border-end-start-radius: var(--radius-tab-es);
+    border-end-end-radius: var(--radius-tab-ee);
+    padding: var(--tab-paddings);
+    border-color: var(--tab-border-colors);
 
-  &,
-  &.tabs-top {
-    &>.tab {
+    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(input:checked) {
+      --tab-border-width: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
+      --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent var(--tab-border-color);
+      --tab-paddings: 0 calc(var(--tab-padding, 1rem) - var(--spacing-tab-border)) var(--spacing-tab-border) calc(var(--tab-padding, 1rem) - var(--spacing-tab-border));
+      --tab-inset: auto auto 0 auto;
+      --tab-grad: calc(69% - var(--spacing-tab-border));
+      --radius-start: radial-gradient(circle at top left,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+      --radius-end: radial-gradient(circle at top right,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+      background-color: var(--tab-bg);
 
-      border: var(--spacing-tab-border, 1px) solid transparent;
-      border-width: 0 0 var(--spacing-tab-border, 1px) 0;
-      --radius-tab-start-start: var(--tab-radius, 0.5rem);
-      --radius-tab-start-end: var(--tab-radius, 0.5rem);
-      --radius-tab-end-start: 0;
-      --radius-tab-end-end: 0;
-      border-top-color: transparent;
-      border-bottom-color: var(--tab-border-color);
-      padding-inline-start: var(--tab-padding, 1rem);
-      padding-inline-end: var(--tab-padding, 1rem);
-      padding-top: var(--spacing-tab-border, 1px);
-      padding-bottom: 0;
+      &:before {
+        z-index: 1;
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% + var(--radius-btn) * 2);
+        height: var(--radius-btn);
+        background-image: var(--radius-start), var(--radius-end);
+        background-size: var(--radius-btn);
+        background-position: top left, top right;
+        background-repeat: no-repeat;
+        inset: var(--tab-inset);
+      }
 
-      &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-      &:is(input:checked) {
-        background-color: var(--tab-bg);
-        border-width: var(--spacing-tab-border, 1px) var(--spacing-tab-border, 1px) 0 var(--spacing-tab-border, 1px);
-        border-inline-start-color: var(--tab-border-color);
-        border-inline-end-color: var(--tab-border-color);
-        border-top-color: var(--tab-border-color);
-        border-bottom-color: transparent;
-        padding-inline-start: calc(var(--tab-padding, 1rem) - var(--spacing-tab-border, 1px));
-        padding-inline-end: calc(var(--tab-padding, 1rem) - var(--spacing-tab-border, 1px));
-        padding-bottom: var(--spacing-tab-border, 1px);
-        padding-top: 0;
+      &:first-child:before {
+        background-image: var(--radius-end);
+        background-position: top right;
 
-        &:before {
-          z-index: 1;
-          content: "";
-          display: block;
-          position: absolute;
-          width: calc(100% + var(--tab-radius, 0.5rem) * 2);
-          height: var(--tab-radius, 0.5rem);
-          top: auto;
-          bottom: 0;
-          background-size: var(--tab-radius, 0.5rem);
-          background-position:
-            top left,
-            top right;
-          background-repeat: no-repeat;
-          --tab-grad: calc(69% - var(--spacing-tab-border, 1px));
-          --radius-start: radial-gradient(circle at top left,
-              transparent var(--tab-grad),
-              var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-              var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border, 1px)),
-              var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border, 1px) + 0.25px));
-          --radius-end: radial-gradient(circle at top right,
-              transparent var(--tab-grad),
-              var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-              var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border, 1px)),
-              var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border, 1px) + 0.25px));
-          background-image: var(--radius-start), var(--radius-end);
-        }
-
-        &:first-child:before {
-          background-image: var(--radius-end);
-          background-position: top right;
-
-          [dir="rtl"] & {
-            background-image: var(--radius-start);
-            background-position: top left;
-          }
-        }
-
-        &:last-child:before {
+        [dir="rtl"] & {
           background-image: var(--radius-start);
           background-position: top left;
+        }
+      }
 
-          [dir="rtl"] & {
-            background-image: var(--radius-end);
-            background-position: top right;
-          }
+      &:last-child:before {
+        background-image: var(--radius-start);
+        background-position: top left;
+
+        [dir="rtl"] & {
+          background-image: var(--radius-end);
+          background-position: top right;
         }
       }
     }
 
-    &:has(.tab-content) {
-      .tab:first-child {
-        &:not(.tab-active, [aria-selected="true"]) {
-          border-top-color: var(--tab-border-color);
-          border-bottom-color: transparent;
-        }
-      }
+    &:last-of-type {
+      margin-inline-end: var(--tab-padding);
     }
+  }
 
-    .tab-content {
-      margin-top: calc(var(--spacing-tab-border) * -1);
-      margin-bottom: 0;
-      --radius-tab-content-start-start: 0;
-      --radius-tab-content-start-end: var(--radius-box);
-      --radius-tab-content-end-start: var(--radius-box);
-      --radius-tab-content-end-end: var(--radius-box);
-    }
-
-    :checked,
-    :is(.tab-active, [aria-selected="true"]) {
-      &+.tab-content:not(:nth-child(2)) {
-        --radius-tab-content-start-start: var(--radius-box);
+  &:has(.tab-content) {
+    .tab:first-child {
+      &:not(.tab-active, [aria-selected="true"]) {
+        --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent var(--tab-border-color);
       }
     }
   }
 
-  &.tabs-bottom {
-    &>.tab {
-      border-width: var(--spacing-tab-border, 1px) 0 0 0;
-      --radius-tab-start-start: 0;
-      --radius-tab-start-end: 0;
-      --radius-tab-end-start: var(--tab-radius, 0.5rem);
-      --radius-tab-end-end: var(--tab-radius, 0.5rem);
-      border-top-color: var(--tab-border-color);
-      border-bottom-color: transparent;
-      padding-top: 0;
-      padding-bottom: var(--spacing-tab-border, 1px);
+  .tab-content {
+    --tabcontent-margin: calc(var(--spacing-tab-border) * -1) 0 0 0;
+    --radius-tabcontent-ss: 0;
+    --radius-tabcontent-se: var(--radius-box);
+    --radius-tabcontent-es: var(--radius-box);
+    --radius-tabcontent-ee: var(--radius-box);
+  }
 
-      &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-      &:is(input:checked) {
-        border-width: 0 var(--spacing-tab-border, 1px) var(--spacing-tab-border, 1px) var(--spacing-tab-border, 1px);
-        border-top-color: transparent;
-        border-bottom-color: var(--tab-border-color);
-        padding-bottom: 0;
-        padding-top: var(--spacing-tab-border, 1px);
-
-        &:before {
-          top: 0;
-          bottom: auto;
-          --radius-start: radial-gradient(circle at bottom left,
-              transparent var(--tab-grad),
-              var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-              var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border, 1px)),
-              var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border, 1px) + 0.25px));
-          --radius-end: radial-gradient(circle at bottom right,
-              transparent var(--tab-grad),
-              var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-              var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border, 1px)),
-              var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border, 1px) + 0.25px));
-        }
-      }
+  :checked,
+  :is(.tab-active, [aria-selected="true"]) {
+    &+.tab-content:not(:nth-child(2)) {
+      --radius-tabcontent-ss: var(--radius-box);
     }
-
-    &:has(.tab-content) {
-      .tab:first-child {
-        &:not(.tab-active, [aria-selected="true"]) {
-          border-top-color: transparent;
-          border-bottom-color: var(--tab-border-color);
-        }
-      }
-    }
-
-    .tab-content {
-      margin-top: 0;
-      margin-bottom: calc(var(--spacing-tab-border) * -1);
-      --radius-tab-content-start-start: var(--radius-box);
-      --radius-tab-content-start-end: var(--radius-box);
-      --radius-tab-content-end-start: 0;
-      --radius-tab-content-end-end: var(--radius-box);
-    }
-
-    :checked,
-    :is(.tab-active, [aria-selected="true"]) {
-      &+.tab-content:not(:nth-child(2)) {
-        --radius-tab-content-end-start: var(--radius-box);
-      }
-    }
-
   }
 }
+
+.tabs-top {
+  .tab {
+    --tab-border-width: 0 0 var(--spacing-tab-border) 0;
+    --radius-tab-ss: var(--radius-btn);
+    --radius-tab-se: var(--radius-btn);
+    --radius-tab-es: 0;
+    --radius-tab-ee: 0;
+    --tab-paddings: var(--spacing-tab-border) var(--tab-padding, 1rem) 0 var(--tab-padding, 1rem);
+    --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
+
+    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(input:checked) {
+      --tab-border-width: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
+      --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent var(--tab-border-color);
+      --tab-paddings: 0 calc(var(--tab-padding, 1rem) - var(--spacing-tab-border)) var(--spacing-tab-border) calc(var(--tab-padding, 1rem) - var(--spacing-tab-border));
+      --tab-inset: auto auto 0 auto;
+      --tab-grad: calc(69% - var(--spacing-tab-border));
+      --radius-start: radial-gradient(circle at top left,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+      --radius-end: radial-gradient(circle at top right,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+    }
+  }
+
+  &:has(.tab-content) {
+    .tab:first-child {
+      &:not(.tab-active, [aria-selected="true"]) {
+        --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent var(--tab-border-color);
+      }
+    }
+  }
+
+  .tab-content {
+    --tabcontent-margin: calc(var(--spacing-tab-border) * -1) 0 0 0;
+    --radius-tabcontent-ss: 0;
+    --radius-tabcontent-se: var(--radius-box);
+    --radius-tabcontent-es: var(--radius-box);
+    --radius-tabcontent-ee: var(--radius-box);
+  }
+
+  :checked,
+  :is(.tab-active, [aria-selected="true"]) {
+    &+.tab-content:not(:nth-child(2)) {
+      --radius-tabcontent-ss: var(--radius-box);
+    }
+  }
+}
+
+.tabs-bottom {
+  .tab {
+    --tab-border-width: var(--spacing-tab-border) 0 0 0;
+    --radius-tab-ss: 0;
+    --radius-tab-se: 0;
+    --radius-tab-es: var(--radius-btn);
+    --radius-tab-ee: var(--radius-btn);
+    --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
+    --tab-paddings: 0 var(--tab-padding, 1rem) var(--spacing-tab-border) var(--tab-padding, 1rem);
+
+    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(input:checked) {
+      --tab-border-width: 0 var(--spacing-tab-border) var(--spacing-tab-border) var(--spacing-tab-border);
+      --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color) var(--tab-border-color);
+      --tab-paddings: var(--spacing-tab-border) calc(var(--tab-padding, 1rem) - var(--spacing-tab-border)) 0 calc(var(--tab-padding, 1rem) - var(--spacing-tab-border));
+
+
+      --tab-inset: 0 auto auto auto;
+      --radius-start: radial-gradient(circle at bottom left,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+      --radius-end: radial-gradient(circle at bottom right,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+    }
+  }
+
+  &:has(.tab-content) {
+    .tab:first-child {
+      &:not(.tab-active, [aria-selected="true"]) {
+        --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color) var(--tab-border-color);
+      }
+    }
+  }
+
+  .tab-content {
+    --tabcontent-margin: 0 0 calc(var(--spacing-tab-border) * -1) 0;
+    --radius-tabcontent-ss: var(--radius-box);
+    --radius-tabcontent-se: var(--radius-box);
+    --radius-tabcontent-es: 0;
+    --radius-tabcontent-ee: var(--radius-box);
+  }
+
+  :checked,
+  :is(.tab-active, [aria-selected="true"]) {
+    &+.tab-content:not(:nth-child(2)) {
+      --radius-tabcontent-es: var(--radius-box);
+    }
+  }
+}
+
 
 .tabs-box {
   @apply rounded-btn p-1 bg-base-200;
@@ -292,7 +326,9 @@
 
 .tab-content {
   @apply hidden border-transparent order-1 w-full;
-  border-width: var(--spacing-tab-border, 1px);
+  margin: var(--tabcontent-margin);
+  order: var(--tabcontent-order);
+  border-width: var(--spacing-tab-border);
 }
 
 .tabs-xs {
