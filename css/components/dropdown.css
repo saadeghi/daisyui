@@ -7,30 +7,33 @@
   }
 
   .dropdown-content {
-    @apply absolute;
-    transition-property: opacity, scale;
-    transition-duration: .2s;
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    @apply absolute hidden opacity-0 origin-top;
+    scale: 95%;
   }
 
-  &:not(details) {
-    .dropdown-content {
-      @apply invisible opacity-0 origin-top;
-      scale: 95%;
-    }
+  &[popover],
+  .dropdown-content {
+    z-index: 999;
+    animation: dropdown-pop .2s;
+    transition-property: opacity, scale, display;
+    transition-behavior: allow-discrete;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   }
 
   &.dropdown-open,
   &:not(.dropdown-hover):focus,
   &:focus-within {
     .dropdown-content {
-      @apply visible opacity-100;
+      @apply opacity-100;
+      display: revert;
     }
   }
 
   &.dropdown-hover:hover {
     .dropdown-content {
-      @apply visible opacity-100;
+      @apply opacity-100;
+      display: revert;
       scale: 100%;
     }
   }
@@ -53,10 +56,7 @@
 
   /* experimental */
   &[popover] {
-    @apply fixed text-inherit z-[1000];
-    transition-property: opacity, scale;
-    transition-duration: .2s;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    @apply fixed text-inherit;
 
     /* align-self: anchor-center; */
     /* justify-self: anchor-center; */
@@ -67,11 +67,12 @@
       @apply m-auto;
 
       &.dropdown-open {
-        @apply invisible opacity-0 origin-top;
+        @apply hidden opacity-0 origin-top;
         scale: 95%;
 
         &:popover-open {
-          @apply visible opacity-100;
+          @apply opacity-100;
+          display: revert;
           scale: 100%;
         }
       }
@@ -82,7 +83,7 @@
     }
 
     &:not(.dropdown-open, :popover-open) {
-      @apply invisible opacity-0 origin-top;
+      @apply hidden opacity-0 origin-top;
       scale: 95%;
     }
   }
@@ -202,5 +203,11 @@
 
   .dropdown-content {
     @apply bottom-full top-auto origin-bottom;
+  }
+}
+
+@keyframes dropdown-pop {
+  0% {
+    opacity: 0;
   }
 }
