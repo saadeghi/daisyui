@@ -1,6 +1,6 @@
-import path from "node:path"
-import { promises as fs } from "node:fs"
-import { compile } from '../node_modules/tailwindcss/dist/lib.js'
+import path from "node:path";
+import { promises as fs } from "node:fs";
+import { compile } from '../node_modules/tailwindcss/dist/lib.js';
 
 export async function loadThemes() {
   const [defaultTheme, theme] = await Promise.all([
@@ -31,5 +31,5 @@ export async function compileAndExtractStyles(styleContent, defaultTheme, theme)
     throw new Error('Invalid wrapper structure in compiled content');
   }
 
-  return compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim();
+  return compiledContent.substring(openingBraceIndex + 1, closingBraceIndex).trim();
 }

@@ -1,13 +1,17 @@
 export const replaceApplyTrueWithEmptyObject = (obj) => {
-	for (const key in obj) {
-		if (typeof obj[key] === "object") {
-			// Recursively traverse the object
-			replaceApplyTrueWithEmptyObject(obj[key])
-		}
+  const stack = [obj];
 
-		// Check for @apply rules and replace true with {}
-		if (key.startsWith("@apply") && obj[key] === true) {
-			obj[key] = {}
-		}
-	}
-}
+  while (stack.length > 0) {
+    const currentObj = stack.pop();
+
+    for (const [key, value] of Object.entries(currentObj)) {
+      if (typeof value === "object" && value !== null) {
+        stack.push(value);
+      }
+
+      if (key.startsWith("@apply") && value === true) {
+        currentObj[key] = {};
+      }
+    }
+  }
+};

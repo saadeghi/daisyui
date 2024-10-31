@@ -16,30 +16,28 @@ export const pluginOptionsHandler = (() => {
     }
 
     const applyTheme = (themeName, flags) => {
-      if (themesObject[themeName]) {
+      const theme = themesObject[themeName];
+      if (theme) {
         let selector = `${root}:has(input.theme-controller[value=${themeName}]:checked),[data-theme=${themeName}]`;
         if (flags.includes('--default')) {
           selector = `:where(${root}),${selector}`;
         }
-        addBase({ [selector]: themesObject[themeName] });
+        addBase({ [selector]: theme });
 
         if (flags.includes('--prefersdark')) {
-          addBase({ "@media (prefers-color-scheme: dark)": { [root]: themesObject[themeName] } });
+          addBase({ "@media (prefers-color-scheme: dark)": { [root]: theme } });
         }
       }
     };
 
     if (themes) {
-      if (Array.isArray(themes)) {
-        themes.forEach(themeOption => {
-          const [themeName, ...flags] = themeOption.split(' ');
-          applyTheme(themeName, flags);
-        });
-      } else {
-        const [themeName, ...flags] = themes.split(' ');
+      const themeArray = Array.isArray(themes) ? themes : [themes];
+      themeArray.forEach(themeOption => {
+        const [themeName, ...flags] = themeOption.split(' ');
         applyTheme(themeName, flags);
-      }
+      });
     }
+
     return { include, exclude, prefix };
   };
 })();
