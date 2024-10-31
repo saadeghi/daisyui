@@ -2,36 +2,36 @@
   @apply grid gap-x-3 py-1;
 }
 
-.chat-primary {
+.chat-bubble-primary {
   @apply bg-primary text-primary-content;
 }
 
-.chat-secondary {
+.chat-bubble-secondary {
   @apply bg-secondary text-secondary-content;
 }
 
-.chat-accent {
+.chat-bubble-accent {
   @apply bg-accent text-accent-content;
 }
 
-.chat-neutral {
+.chat-bubble-neutral {
   @apply bg-neutral text-neutral-content;
 }
 
 /* state colors */
-.chat-info {
+.chat-bubble-info {
   @apply bg-info text-info-content;
 }
 
-.chat-success {
+.chat-bubble-success {
   @apply bg-success text-success-content;
 }
 
-.chat-warning {
+.chat-bubble-warning {
   @apply bg-warning text-warning-content;
 }
 
-.chat-error {
+.chat-bubble-error {
   @apply bg-error text-error-content;
 }
 
