@@ -1,6 +1,9 @@
 .tabs {
-  @apply flex flex-wrap items-end align-bottom;
-
+  @apply flex flex-wrap;
+  --tabs-height: auto;
+  --tabs-direction: row;
+  height: var(--tabs-height);
+  flex-direction: var(--tabs-direction);
 }
 
 .tab {
@@ -14,14 +17,13 @@
   --tab-radius-ee: 0;
   --tab-order: 0;
   order: var(--tab-order);
-  height: 2rem;
   font-size: 0.875rem;
   line-height: 2;
   padding-inline-start: var(--tab-padding);
   padding-inline-end: var(--tab-padding);
 
   &:is(input[type="radio"]) {
-    @apply w-auto;
+    @apply min-w-fit;
 
     &:after {
       content: attr(aria-label);
@@ -31,7 +33,7 @@
   &:checked,
   &:is(.tab-active, [aria-selected="true"]) {
     &+.tab-content {
-      @apply block;
+      @apply block h-full;
     }
   }
 
@@ -73,6 +75,9 @@
 }
 
 .tabs-lift {
+  --tabs-height: auto;
+  --tabs-direction: row;
+
   .tab {
     --tab-border: 0 0 var(--spacing-tab-border) 0;
     --tab-radius-ss: var(--radius-btn);
@@ -81,6 +86,10 @@
     --tab-radius-ee: 0;
     --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
+    --tab-corner-width: calc(100% + var(--radius-btn) * 2);
+    --tab-corner-height: var(--radius-btn);
+    --tab-corner-position: top left, top right;
+    --last-tab-margin: 0 var(--tab-padding) 0 0;
 
     border-width: var(--tab-border);
     border-start-start-radius: var(--tab-radius-ss);
@@ -114,38 +123,26 @@
         content: "";
         display: block;
         position: absolute;
-        width: calc(100% + var(--radius-btn) * 2);
-        height: var(--radius-btn);
+        width: var(--tab-corner-width);
+        height: var(--tab-corner-height);
+        background-position: var(--tab-corner-position);
         background-image: var(--radius-start), var(--radius-end);
-        background-size: var(--radius-btn);
-        background-position: top left, top right;
+        background-size: var(--radius-btn) var(--radius-btn);
         background-repeat: no-repeat;
         inset: var(--tab-inset);
       }
 
       &:first-child:before {
-        background-image: var(--radius-end);
-        background-position: top right;
-
-        [dir="rtl"] & {
-          background-image: var(--radius-start);
-          background-position: top left;
-        }
+        --radius-start: none;
       }
 
       &:last-child:before {
-        background-image: var(--radius-start);
-        background-position: top left;
-
-        [dir="rtl"] & {
-          background-image: var(--radius-end);
-          background-position: top right;
-        }
+        --radius-end: none;
       }
     }
 
     &:last-of-type {
-      margin-inline-end: var(--tab-padding);
+      margin: var(--last-tab-margin);
     }
   }
 
@@ -174,10 +171,11 @@
 }
 
 .tabs-top {
+  --tabs-height: auto;
+  --tabs-direction: row;
 
   .tab {
     --tab-order: 0;
-
     --tab-border: 0 0 var(--spacing-tab-border) 0;
     --tab-radius-ss: var(--radius-btn);
     --tab-radius-se: var(--radius-btn);
@@ -185,6 +183,10 @@
     --tab-radius-ee: 0;
     --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
+    --tab-corner-width: calc(100% + var(--radius-btn) * 2);
+    --tab-corner-height: var(--radius-btn);
+    --tab-corner-position: top left, top right;
+    --last-tab-margin: 0 var(--tab-padding) 0 0;
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
@@ -192,7 +194,6 @@
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent var(--tab-border-color);
       --tab-paddings: 0 calc(var(--tab-padding) - var(--spacing-tab-border)) var(--spacing-tab-border) calc(var(--tab-padding) - var(--spacing-tab-border));
       --tab-inset: auto auto 0 auto;
-      --tab-grad: calc(69% - var(--spacing-tab-border));
       --radius-start: radial-gradient(circle at top left,
           transparent var(--tab-grad),
           var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
@@ -232,6 +233,8 @@
 }
 
 .tabs-bottom {
+  --tabs-height: auto;
+  --tabs-direction: row;
 
   .tab {
     --tab-order: 1;
@@ -242,6 +245,10 @@
     --tab-radius-ee: var(--radius-btn);
     --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
     --tab-paddings: 0 var(--tab-padding) var(--spacing-tab-border) var(--tab-padding);
+    --tab-corner-width: calc(100% + var(--radius-btn) * 2);
+    --tab-corner-height: var(--radius-btn);
+    --tab-corner-position: top left, top right;
+    --last-tab-margin: 0 var(--tab-padding) 0 0;
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
@@ -287,6 +294,68 @@
   }
 }
 
+/* .tabs-start {
+  --tabs-height: 10rem;
+  --tabs-direction: column;
+
+  .tab {
+    --tab-order: 0;
+    --tab-border: 0 var(--spacing-tab-border) 0 0;
+    --tab-radius-ss: var(--radius-btn);
+    --tab-radius-se: 0;
+    --tab-radius-es: var(--radius-btn);
+    --tab-radius-ee: 0;
+    --tab-paddings: var(--spacing-tab-border) var(--tab-padding) var(--spacing-tab-border) calc(var(--tab-padding) + var(--spacing-tab-border));
+    --tab-border-colors: transparent var(--tab-border-color) transparent transparent;
+    --tab-corner-width: var(--radius-btn);
+    --tab-corner-height: calc(100% + var(--radius-btn) * 2);
+    --tab-corner-position: top right, bottom right;
+    --last-tab-margin: 0 0 0 0;
+
+    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(input:checked) {
+      --tab-border: var(--spacing-tab-border) 0 var(--spacing-tab-border) var(--spacing-tab-border);
+      --tab-border-colors: var(--tab-border-color) transparent var(--tab-border-color) var(--tab-border-color);
+      --tab-paddings: 0 calc(var(--spacing-tab-border) + var(--tab-padding)) 0 var(--tab-padding);
+      --tab-inset: auto 0 auto auto;
+      --radius-start: radial-gradient(circle at top left,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+      --radius-end: radial-gradient(circle at bottom left,
+          transparent var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+    }
+  }
+
+  &:has(.tab-content) {
+    .tab:first-child {
+      &:not(.tab-active, [aria-selected="true"]) {
+        --tab-border-colors: var(--tab-border-color) transparent var(--tab-border-color) var(--tab-border-color);
+      }
+    }
+  }
+
+  .tab-content {
+    --tabcontent-order: 1;
+    --tabcontent-margin: 0 0 0 calc(var(--spacing-tab-border) * -1);
+    --radius-tabcontent-ss: 0;
+    --radius-tabcontent-se: var(--radius-box);
+    --radius-tabcontent-es: var(--radius-box);
+    --radius-tabcontent-ee: var(--radius-box);
+  }
+
+  :checked,
+  :is(.tab-active, [aria-selected="true"]) {
+    &+.tab-content:not(:nth-child(2)) {
+      --radius-tabcontent-ss: var(--radius-box);
+    }
+  }
+} */
+
 .tabs-box {
   @apply rounded-btn p-1 bg-base-200;
   box-shadow: 0 -0.5px oklch(100% 0 0/ 0.1) inset, 0 0.5px oklch(0% 0 0/ 0.05) inset;
@@ -308,13 +377,13 @@
 }
 
 .tab-content {
-  @apply hidden border-transparent order-1 w-full;
-
+  @apply hidden border-transparent order-1;
   --radius-tabcontent-ss: 0;
   --radius-tabcontent-se: 0;
   --radius-tabcontent-es: 0;
   --radius-tabcontent-ee: 0;
   --tabcontent-order: 1;
+  width: 100%;
   margin: var(--tabcontent-margin);
   order: var(--tabcontent-order);
   border-width: var(--spacing-tab-border);
