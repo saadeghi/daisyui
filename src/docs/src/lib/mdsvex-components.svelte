@@ -5,9 +5,12 @@ import ComponentFooter from "$components/ComponentFooter.svelte"
 import SEO from "$components/SEO.svelte"
 import Sponsors from "$components/Sponsors.svelte"
 import { t } from "$lib/i18n"
-export let data
-export let title
-export let desc
+  let {
+    data,
+    title,
+    desc,
+    children
+  } = $props();
 </script>
 
 <SEO
@@ -23,7 +26,7 @@ export let desc
     {#if desc}
       <p>{@html $t(desc)}</p>
     {/if}
-    <slot />
+    {@render children?.()}
     <ComponentFooter pages="{data.pages}" />
     <div class="not-prose flex justify-center xl:hidden">
       <Sponsors wrapperClasses="flex-col sm:flex-row" />

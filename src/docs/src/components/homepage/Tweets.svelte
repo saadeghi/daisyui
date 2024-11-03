@@ -1,5 +1,5 @@
 <script>
-export let tweets
+  let { tweets } = $props();
 </script>
 
 <div>

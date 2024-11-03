@@ -3,7 +3,7 @@ import { prefix } from "$lib/stores"
 import PrefixEdit from "$components/PrefixEdit.svelte"
 import Translate from "$components/Translate.svelte"
 import { t } from "$lib/i18n"
-export let data
+  let { data } = $props();
 </script>
 
 <div class="not-prose relative mb-10 mt-6 max-h-[25rem] overflow-x-auto">

@@ -7,9 +7,7 @@ import Typeahead from "svelte-typeahead"
 import { getOS } from "$lib/util"
 import { t } from "$lib/i18n"
 
-export let pages = []
-export let onSearch = () => {}
-export let onFocus = () => {}
+let pages = [];
 
 function extractPages(obj) {
   const items = []
@@ -30,12 +28,12 @@ function extractPages(obj) {
 }
 let searchIndex = extractPages(pages)
 
-let os
+let os = $state()
 onMount(() => {
   os = getOS()
 })
 
-let seachboxEl
+let seachboxEl = $state()
 function handleKeydown(e) {
   if ((e.keyCode === 75 && e.metaKey) || (e.keyCode === 75 && e.ctrlKey)) {
     e.preventDefault()
@@ -49,13 +47,17 @@ function onSelect({ detail }) {
   onSearch(detail)
 }
 
-export let addScrollPaddingToNavbar = undefined
-export let removeScrollPaddingFromNavbar = undefined
+  let {
+    onSearch = () => {},
+    onFocus = () => {},
+    addScrollPaddingToNavbar = undefined,
+    removeScrollPaddingFromNavbar = undefined
+  } = $props();
 </script>
 
 <svelte:window onkeydown="{handleKeydown}" />
 
-<!-- svelte-ignore a11y-label-has-associated-control -->
+<!-- svelte-ignore a11y_label_has_associated_control -->
 <label class="{`searchbox relative mx-3 w-full`}" bind:this="{seachboxEl}">
   <svg
     class="{`pointer-events-none absolute z-10 my-3.5 ms-4 stroke-current opacity-60 ${
@@ -83,11 +85,13 @@ export let removeScrollPaddingFromNavbar = undefined
     on:select="{onSelect}"
     on:focus="{removeScrollPaddingFromNavbar}"
     on:blur="{addScrollPaddingToNavbar}"
-    let:result>
-    <div class="py-1 text-sm font-normal">
-      {searchIndex[result.index].name}
-    </div>
-  </Typeahead>
+    >
+    {#snippet children({ result })}
+        <div class="py-1 text-sm font-normal">
+        {searchIndex[result.index].name}
+      </div>
+          {/snippet}
+    </Typeahead>
   <div
     class="{`pointer-events-none absolute end-10 top-2.5 gap-1 opacity-50 rtl:flex-row-reverse ${
       $page.url.pathname == '/' ? 'hidden' : 'hidden lg:flex'

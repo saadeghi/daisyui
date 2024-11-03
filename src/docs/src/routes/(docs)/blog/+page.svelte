@@ -1,6 +1,6 @@
 <script>
 import SEO from "$components/SEO.svelte"
-export let data
+  let { data } = $props();
 let { posts } = data
 </script>
 

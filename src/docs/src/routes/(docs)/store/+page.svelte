@@ -199,47 +199,49 @@ function prev(productId, media) {
               <Countdown
                 from="{new Date(discount.data.attributes.expires_at).toLocaleString('en-GB', dateFormat)}"
                 dateFormat="DD/MM/YYYY, HH:mm:ss"
-                let:remaining>
-                {#if remaining.done === false}
-                  <div class="tooltip shrink-0 after:hidden" data-tip="Remaining time" transition:fade={{ duration: 400 }}>
-                    <date
-                      datetime="{new Date(discount.data.attributes.expires_at).toLocaleString(
-                        'en-GB',
-                        dateFormat
-                      )}"
-                      class="grid grid-cols-3 gap-2 text-center font-mono text-xs">
-                      <!-- <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style="{`--value:${remaining.days};`}"></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">day</span>
-                      </div> -->
-                      <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style="{`--value:${remaining.hours};`}"></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">hour</span>
-                      </div>
-                      <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style="{`--value:${remaining.minutes};`}"></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">min</span>
-                      </div>
-                      <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style="{`--value:${remaining.seconds};`}"></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">sec</span>
-                      </div>
-                    </date>
-                  </div>
-                {:else if !data}
-                  <div class="text-neutral-content/20 rounded-btn shrink-0 border border-dashed p-2">
-                    Ended
-                  </div>
-                {/if}
-              </Countdown>
+                >
+                {#snippet children({ remaining })}
+                                {#if remaining.done === false}
+                    <div class="tooltip shrink-0 after:hidden" data-tip="Remaining time" transition:fade={{ duration: 400 }}>
+                      <date
+                        datetime="{new Date(discount.data.attributes.expires_at).toLocaleString(
+                          'en-GB',
+                          dateFormat
+                        )}"
+                        class="grid grid-cols-3 gap-2 text-center font-mono text-xs">
+                        <!-- <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                          <span class="countdown block text-2xl">
+                            <span style="{`--value:${remaining.days};`}"></span>
+                          </span>
+                          <span class="text-neutral-content/40 text-xs">day</span>
+                        </div> -->
+                        <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                          <span class="countdown block text-2xl">
+                            <span style="{`--value:${remaining.hours};`}"></span>
+                          </span>
+                          <span class="text-neutral-content/40 text-xs">hour</span>
+                        </div>
+                        <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                          <span class="countdown block text-2xl">
+                            <span style="{`--value:${remaining.minutes};`}"></span>
+                          </span>
+                          <span class="text-neutral-content/40 text-xs">min</span>
+                        </div>
+                        <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                          <span class="countdown block text-2xl">
+                            <span style="{`--value:${remaining.seconds};`}"></span>
+                          </span>
+                          <span class="text-neutral-content/40 text-xs">sec</span>
+                        </div>
+                      </date>
+                    </div>
+                  {:else if !data}
+                    <div class="text-neutral-content/20 rounded-btn shrink-0 border border-dashed p-2">
+                      Ended
+                    </div>
+                  {/if}
+                                              {/snippet}
+                            </Countdown>
             {/if}
           </div>
         </div>

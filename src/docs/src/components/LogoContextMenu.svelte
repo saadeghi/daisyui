@@ -1,6 +1,6 @@
 <script>
-let pos = { x: 0, y: 0 }
-let showMenu = false
+let pos = $state({ x: 0, y: 0 })
+let showMenu = $state(false)
 
 export function openContextMenu(e) {
   showMenu = true

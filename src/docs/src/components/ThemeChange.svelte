@@ -5,10 +5,21 @@ import { t } from "$lib/i18n"
 onMount(() => {
   themeChange(false)
 })
-export let themes
-export let dropdownClasses = ""
-export let btnClasses = "btn-ghost"
-export let contentClasses = "mt-16"
+  /**
+   * @typedef {Object} Props
+   * @property {any} themes
+   * @property {string} [dropdownClasses]
+   * @property {string} [btnClasses]
+   * @property {string} [contentClasses]
+   */
+
+  /** @type {Props} */
+  let {
+    themes,
+    dropdownClasses = "",
+    btnClasses = "btn-ghost",
+    contentClasses = "mt-16"
+  } = $props();
 </script>
 
 <div

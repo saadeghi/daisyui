@@ -1,7 +1,7 @@
 <script>
 import SEO from "$components/SEO.svelte"
 import { slugify } from "$lib/util"
-export let data
+  let { data } = $props();
 </script>
 
 <SEO

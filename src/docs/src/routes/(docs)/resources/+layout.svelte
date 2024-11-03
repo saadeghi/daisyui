@@ -2,7 +2,7 @@
 	import { page } from "$app/stores"
 	import Footer from "$components/Footer.svelte"
 	import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
-	export let data
+	let { data, children } = $props();
 	let { tags } = data
 </script>
 
@@ -33,7 +33,7 @@
 			</a>
 			<span class="tab"></span>
 		</nav>
-		<slot />
+		{@render children?.()}
 	</div>
 	<AlternativeSidebar />
 </div>

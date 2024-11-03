@@ -6,25 +6,47 @@ import TopBanner from "$components/TopBanner.svelte"
 // import LogoContextMenu from "$components/LogoContextMenu.svelte"
 // import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
-let contextMenuEl
+let contextMenuEl = $state()
 
-export let pages
-export let themes
-export let hideLogoOnLargeScreen = false
-export let hideSidebarButton = false
-export let hideSidebarButtonOnLargeScreen = false
-export let showComponentsBtn = false
-export let showSearch = false
-export let showVersion = false
-export let showLanguage = false
 
 import { t } from "$lib/i18n"
-export let version
-export let scrollY
-$: switchNavbarStyle = scrollY > 40
 
-export let addScrollPaddingToNavbar
-export let removeScrollPaddingFromNavbar
+  /**
+   * @typedef {Object} Props
+   * @property {any} pages
+   * @property {any} themes
+   * @property {boolean} [hideLogoOnLargeScreen]
+   * @property {boolean} [hideSidebarButton]
+   * @property {boolean} [hideSidebarButtonOnLargeScreen]
+   * @property {boolean} [showComponentsBtn]
+   * @property {boolean} [showSearch]
+   * @property {boolean} [showVersion]
+   * @property {boolean} [showLanguage]
+   * @property {any} version
+   * @property {any} scrollY
+   * @property {any} addScrollPaddingToNavbar
+   * @property {any} removeScrollPaddingFromNavbar
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let {
+    pages,
+    themes,
+    hideLogoOnLargeScreen = false,
+    hideSidebarButton = false,
+    hideSidebarButtonOnLargeScreen = false,
+    showComponentsBtn = false,
+    showSearch = false,
+    showVersion = false,
+    showLanguage = false,
+    version,
+    scrollY = $bindable(),
+    addScrollPaddingToNavbar,
+    removeScrollPaddingFromNavbar,
+    children
+  } = $props();
+let switchNavbarStyle = $derived(scrollY > 40)
 </script>
 
 <svelte:window bind:scrollY />
@@ -94,7 +116,7 @@ export let removeScrollPaddingFromNavbar
         {/if}
       </div>
 
-      <slot />
+      {@render children?.()}
 
       {#if showSearch}
         <div class="hidden w-full max-w-sm lg:flex">

@@ -8,16 +8,27 @@ let siteData = {
   desc: "Free Tailwind Components",
   card: "https://img.daisyui.com/images/default.webp",
 }
-export let formatTitle = true
-export let title = ""
-export let desc = siteData.desc
-export let img = siteData.card
+  /**
+   * @typedef {Object} Props
+   * @property {boolean} [formatTitle]
+   * @property {string} [title]
+   * @property {any} [desc]
+   * @property {any} [img]
+   */
 
-$: formattedTitle = formatTitle
+  /** @type {Props} */
+  let {
+    formatTitle = true,
+    title = "",
+    desc = siteData.desc,
+    img = siteData.card
+  } = $props();
+
+let formattedTitle = $derived(formatTitle
   ? title
     ? `${$t(title)} — ${$t(siteData.title)}`
     : `${$t(siteData.title)}`
-  : title
+  : title)
 </script>
 
 <svelte:head>

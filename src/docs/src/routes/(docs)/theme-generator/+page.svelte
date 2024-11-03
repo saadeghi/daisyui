@@ -1,4 +1,6 @@
 <script>
+	import { run } from 'svelte/legacy';
+
 	/* this file is spaghetti code but it works (hopefully) */
 
 	import "prism-themes/themes/prism-material-dark.min.css"
@@ -76,7 +78,7 @@
 		return null
 	}
 
-	const requiredColorNames = [
+	const requiredColorNames = $state([
 		"primary",
 		"secondary",
 		"accent",
@@ -86,112 +88,116 @@
 		"success",
 		"warning",
 		"error",
-	]
+	])
 
-	$: onlyRequiredColorNames = true
+	let onlyRequiredColorNames = $state(true);
+	
 
-	$: colors = [
-		{
-			name: "primary",
-			variable: "--p",
-			value: getColorValueFromTheme("--p"),
-		},
-		{
-			name: "primary-content",
-			variable: "--pc",
-			value: getColorValueFromTheme("--pc"),
-		},
-		{
-			name: "secondary",
-			variable: "--s",
-			value: getColorValueFromTheme("--s"),
-		},
-		{
-			name: "secondary-content",
-			variable: "--sc",
-			value: getColorValueFromTheme("--sc"),
-		},
-		{
-			name: "accent",
-			variable: "--a",
-			value: getColorValueFromTheme("--a"),
-		},
-		{
-			name: "accent-content",
-			variable: "--ac",
-			value: getColorValueFromTheme("--ac"),
-		},
-		{
-			name: "neutral",
-			variable: "--n",
-			value: getColorValueFromTheme("--n"),
-		},
-		{
-			name: "neutral-content",
-			variable: "--nc",
-			value: getColorValueFromTheme("--nc"),
-		},
-		{
-			name: "base-100",
-			variable: "--b1",
-			value: getColorValueFromTheme("--b1"),
-		},
-		{
-			name: "base-200",
-			variable: "--b2",
-			value: getColorValueFromTheme("--b2"),
-		},
-		{
-			name: "base-300",
-			variable: "--b3",
-			value: getColorValueFromTheme("--b3"),
-		},
-		{
-			name: "base-content",
-			variable: "--bc",
-			value: getColorValueFromTheme("--bc"),
-		},
-		{
-			name: "info",
-			variable: "--in",
-			value: getColorValueFromTheme("--in"),
-		},
-		{
-			name: "info-content",
-			variable: "--inc",
-			value: getColorValueFromTheme("--inc"),
-		},
-		{
-			name: "success",
-			variable: "--su",
-			value: getColorValueFromTheme("--su"),
-		},
-		{
-			name: "success-content",
-			variable: "--suc",
-			value: getColorValueFromTheme("--suc"),
-		},
-		{
-			name: "warning",
-			variable: "--wa",
-			value: getColorValueFromTheme("--wa"),
-		},
-		{
-			name: "warning-content",
-			variable: "--wac",
-			value: getColorValueFromTheme("--wac"),
-		},
-		{
-			name: "error",
-			variable: "--er",
-			value: getColorValueFromTheme("--er"),
-		},
-		{
-			name: "error-content",
-			variable: "--erc",
-			value: getColorValueFromTheme("--erc"),
-		},
-	]
+	let colors;
+	run(() => {
+		colors = [
+			{
+				name: "primary",
+				variable: "--p",
+				value: getColorValueFromTheme("--p"),
+			},
+			{
+				name: "primary-content",
+				variable: "--pc",
+				value: getColorValueFromTheme("--pc"),
+			},
+			{
+				name: "secondary",
+				variable: "--s",
+				value: getColorValueFromTheme("--s"),
+			},
+			{
+				name: "secondary-content",
+				variable: "--sc",
+				value: getColorValueFromTheme("--sc"),
+			},
+			{
+				name: "accent",
+				variable: "--a",
+				value: getColorValueFromTheme("--a"),
+			},
+			{
+				name: "accent-content",
+				variable: "--ac",
+				value: getColorValueFromTheme("--ac"),
+			},
+			{
+				name: "neutral",
+				variable: "--n",
+				value: getColorValueFromTheme("--n"),
+			},
+			{
+				name: "neutral-content",
+				variable: "--nc",
+				value: getColorValueFromTheme("--nc"),
+			},
+			{
+				name: "base-100",
+				variable: "--b1",
+				value: getColorValueFromTheme("--b1"),
+			},
+			{
+				name: "base-200",
+				variable: "--b2",
+				value: getColorValueFromTheme("--b2"),
+			},
+			{
+				name: "base-300",
+				variable: "--b3",
+				value: getColorValueFromTheme("--b3"),
+			},
+			{
+				name: "base-content",
+				variable: "--bc",
+				value: getColorValueFromTheme("--bc"),
+			},
+			{
+				name: "info",
+				variable: "--in",
+				value: getColorValueFromTheme("--in"),
+			},
+			{
+				name: "info-content",
+				variable: "--inc",
+				value: getColorValueFromTheme("--inc"),
+			},
+			{
+				name: "success",
+				variable: "--su",
+				value: getColorValueFromTheme("--su"),
+			},
+			{
+				name: "success-content",
+				variable: "--suc",
+				value: getColorValueFromTheme("--suc"),
+			},
+			{
+				name: "warning",
+				variable: "--wa",
+				value: getColorValueFromTheme("--wa"),
+			},
+			{
+				name: "warning-content",
+				variable: "--wac",
+				value: getColorValueFromTheme("--wac"),
+			},
+			{
+				name: "error",
+				variable: "--er",
+				value: getColorValueFromTheme("--er"),
+			},
+			{
+				name: "error-content",
+				variable: "--erc",
+				value: getColorValueFromTheme("--erc"),
+			},
+		]
+	});
 
 	function darken(name, variable, source, percentage = 0.2) {
 		return generateDarkenColorFrom(colors.find((item) => item.name === source).value, percentage)
@@ -296,7 +302,7 @@
 		generateColors()
 	}
 
-	let wrapper
+	let wrapper = $state()
 	onMount(() => {
 		localStorage.setItem("theme-generator-default-colors", JSON.stringify(colors))
 		if (localStorage.getItem("theme-generator-colors")) {

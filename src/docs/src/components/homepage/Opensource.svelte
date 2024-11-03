@@ -1,7 +1,6 @@
 <script>
 import { t } from "$lib/i18n"
-export let contributors
-export let backers
+  let { contributors, backers } = $props();
 </script>
 
 <div class="w-full overflow-hidden px-2 py-40 lg:px-10">

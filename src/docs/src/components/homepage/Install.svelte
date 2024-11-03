@@ -1,6 +1,6 @@
 <script>
 	import { t } from "$lib/i18n"
-	let isClipboardButtonPressed = false
+	let isClipboardButtonPressed = $state(false)
 	const copyText = (text) => {
 		navigator.clipboard.writeText(text)
 		isClipboardButtonPressed = true

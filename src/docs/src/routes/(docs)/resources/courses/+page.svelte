@@ -1,6 +1,6 @@
 <script>
-export let data
 import SEO from "$components/SEO.svelte"
+  let { data } = $props();
 </script>
 
 <SEO

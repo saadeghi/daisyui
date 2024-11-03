@@ -2,10 +2,10 @@
 import { page } from "$app/stores"
 import "prism-themes/themes/prism-material-dark.min.css"
 import "$lib/style/prism-themes-modify.css"
-export let data
+  let { data, children } = $props();
 </script>
 
-<slot />
+{@render children?.()}
 
 {#if $page.url.pathname == "/components/modal/"}
   <input type="checkbox" id="my_modal_6" class="modal-toggle" aria-label="Open or close modal" />
@@ -35,7 +35,7 @@ export let data
       <h3 class="text-lg font-bold">Hello!</h3>
       <p class="py-4">This modal works with anchor links</p>
       <div class="modal-action">
-        <!-- svelte-ignore a11y-invalid-attribute -->
+        <!-- svelte-ignore a11y_invalid_attribute -->
         <a href="#" class="btn" rel="external">Close</a>
       </div>
     </div>

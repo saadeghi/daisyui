@@ -3,7 +3,7 @@ import { page } from "$app/stores"
 import SEO from "$components/SEO.svelte"
 import Translate from "$components/Translate.svelte"
 import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
-export let data
+  let { data } = $props();
 let { components } = data
 </script>
 

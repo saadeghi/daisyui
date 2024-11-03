@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
 import _prism from "svelte-prism/src/import"
 export const prism = _prism
 export const highlight = _prism.highlightElement

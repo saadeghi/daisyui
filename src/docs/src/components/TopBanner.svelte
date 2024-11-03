@@ -51,25 +51,27 @@ const dateFormat = {
           <Countdown
             from="{new Date('2024-05-05T23:59:00.000000Z').toLocaleString('en-GB', dateFormat)}"
             dateFormat="DD/MM/YYYY, HH:mm:ss"
-            let:remaining>
-            {#if remaining.done === false}
-              <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
-                <date
-                  datetime="{new Date('2024-02-11T23:59:00.000000Z').toLocaleString(
-                    'en-GB',
-                    dateFormat
-                  )}"
-                  class="countdown font-mono text-xs">
-                  {remaining.days * 24 + remaining.hours}h&nbsp;
-                  <span style="{`--value:${remaining.minutes}`}"></span>
-                  m&nbsp;
-                  <span style="{`--value:${remaining.seconds}`}"></span>
-                  s
-                </date>
-                remaining
-              </span>
-            {/if}
-          </Countdown>
+            >
+            {#snippet children({ remaining })}
+                        {#if remaining.done === false}
+                <span class="border-base-content/20 rounded-full border border-dashed px-2 py-1">
+                  <date
+                    datetime="{new Date('2024-02-11T23:59:00.000000Z').toLocaleString(
+                      'en-GB',
+                      dateFormat
+                    )}"
+                    class="countdown font-mono text-xs">
+                    {remaining.days * 24 + remaining.hours}h&nbsp;
+                    <span style="{`--value:${remaining.minutes}`}"></span>
+                    m&nbsp;
+                    <span style="{`--value:${remaining.seconds}`}"></span>
+                    s
+                  </date>
+                  remaining
+                </span>
+              {/if}
+                                  {/snippet}
+                    </Countdown>
         </span>
       </p>
     </a>

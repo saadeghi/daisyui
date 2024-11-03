@@ -1,7 +1,7 @@
 <script>
 import { onMount } from "svelte"
 import { themeChange } from "theme-change"
-export let themes
+  let { themes } = $props();
 onMount(() => {
   themeChange(false)
 })

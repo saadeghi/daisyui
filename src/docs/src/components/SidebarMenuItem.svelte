@@ -4,23 +4,42 @@ import { browser } from "$app/environment"
 import { page } from "$app/stores"
 import { t } from "$lib/i18n"
 import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
-export let closeDrawer
-export let name = null,
-  href = null,
-  icon = null,
-  badge = null,
-  badgeclass = null,
-  highlightAnotherItem = null,
-  deprecated = null,
-  items = null,
-  collapsible = null,
-  highlight = null,
-  target = null
+  /**
+   * @typedef {Object} Props
+   * @property {any} closeDrawer
+   * @property {any} [name]
+   * @property {any} [href]
+   * @property {any} [icon]
+   * @property {any} [badge]
+   * @property {any} [badgeclass]
+   * @property {any} [highlightAnotherItem]
+   * @property {any} [deprecated]
+   * @property {any} [items]
+   * @property {any} [collapsible]
+   * @property {any} [highlight]
+   * @property {any} [target]
+   */
+
+  /** @type {Props} */
+  let {
+    closeDrawer,
+    name = null,
+    href = null,
+    icon = null,
+    badge = null,
+    badgeclass = null,
+    highlightAnotherItem = null,
+    deprecated = null,
+    items = null,
+    collapsible = null,
+    highlight = null,
+    target = null
+  } = $props();
 
 const sanitize = (name) => {
   return name.toLowerCase().replace(/\W/g, "-")
 }
-$: getDisclosureState = (name, items) => {
+let getDisclosureState = $derived((name, items) => {
   // open the disclosure if the user has opened it before
   if (browser && localStorage.getItem(`disclosure-${sanitize(name)}`) === "open") {
     return "open"
@@ -34,7 +53,7 @@ $: getDisclosureState = (name, items) => {
   }
 
   return null
-}
+})
 const saveDisclosureState = (id, value) => {
   if (browser) {
     localStorage.setItem(id, value)

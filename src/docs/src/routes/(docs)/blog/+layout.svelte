@@ -5,7 +5,7 @@ import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
 import Sponsors from "$components/Sponsors.svelte"
 import "prism-themes/themes/prism-material-dark.css"
 import "$lib/style/prism-themes-modify.css"
-export let data
+  let { data, children } = $props();
 let { tags } = data
 </script>
 
@@ -60,7 +60,7 @@ let { tags } = data
         </div>
       </div>
       <div class="mx-auto w-full max-w-2xl">
-        <slot />
+        {@render children?.()}
 
         <div id="mc_embed_shell" class="card bg-base-200 my-10">
           <div class="card-body flex flex-col gap-4">

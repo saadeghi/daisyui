@@ -1,8 +1,6 @@
 <script>
 import { t } from "$lib/i18n"
-export let animateValue
-export let section
-export let index
+  let { animateValue, section, index } = $props();
 </script>
 
 <div class="hidden flex-col gap-6 xl:flex">

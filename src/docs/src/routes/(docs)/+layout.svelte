@@ -9,7 +9,7 @@ import { onNavigate } from "$app/navigation"
 import minimalAnalytics from "@minimal-analytics/ga4"
 const { track } = minimalAnalytics
 
-export let data
+  let { data, children } = $props();
 
 onNavigate((navigation) => {
   track("G-ER9PXT2JR4")
@@ -35,13 +35,13 @@ onMount(() => {
   document.documentElement.style.scrollBehavior = "smooth"
 })
 
-let drawersidebar
-let drawerSidebarScrollY = 0
+let drawersidebar = $state()
+let drawerSidebarScrollY = $state(0)
 function parseSidebarScroll() {
   drawerSidebarScrollY = drawersidebar.scrollTop
 }
 
-let checked = ""
+let checked = $state("")
 function closeDrawer() {
   checked = ""
 }
@@ -50,7 +50,7 @@ function openDrawer() {
   checked = true
 }
 
-let navbarScrollPadding = "5rem"
+let navbarScrollPadding = $state("5rem")
 function addScrollPaddingToNavbar(action) {
   navbarScrollPadding = "5rem"
   document.documentElement.style.scrollPaddingTop = "5rem"
@@ -137,7 +137,7 @@ Array.prototype.matchPattern = function (inputString) {
           ? ''
           : 'max-w-[100vw] px-6 pb-16 xl:pr-2'
       }`}">
-      <slot />
+      {@render children?.()}
     </div>
     <div class="toast toast-center z-10 [@supports(color:oklch(0%_0_0))]:hidden">
       <div class="alert alert-warning grid-cols-[auto] py-2 text-xs">
@@ -160,8 +160,7 @@ Array.prototype.matchPattern = function (inputString) {
     onscroll="{parseSidebarScroll}">
     <label for="drawer" class="drawer-overlay" aria-label="Close menu"></label>
     <aside class="bg-base-100 min-h-screen w-80">
-      <svelte:component
-        this="{Sidebar}"
+      <Sidebar
         pages="{data.pages}"
         version="{data.daisyuiVersion}"
         {closeDrawer}
@@ -173,4 +172,3 @@ Array.prototype.matchPattern = function (inputString) {
     </aside>
   </div>
 </div>
-

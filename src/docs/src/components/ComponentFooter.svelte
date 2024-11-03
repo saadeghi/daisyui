@@ -2,7 +2,7 @@
 import { page } from "$app/stores"
 import { currentLang, defaultLang, t } from "$lib/i18n"
 
-export let pages = []
+  let { pages = [] } = $props();
 
 function extractPages(obj) {
   const items = []
@@ -23,7 +23,7 @@ function extractPages(obj) {
 }
 let arrayOfPagesInOrder = extractPages(pages)
 
-$: currentPageIndex = arrayOfPagesInOrder.findIndex((item) => item.href === $page.url.pathname)
+let currentPageIndex = $derived(arrayOfPagesInOrder.findIndex((item) => item.href === $page.url.pathname))
 </script>
 
 {#if arrayOfPagesInOrder[currentPageIndex]}
