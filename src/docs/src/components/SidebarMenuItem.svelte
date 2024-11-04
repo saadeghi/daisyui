@@ -126,9 +126,9 @@ const saveDisclosureState = (id, value) => {
         target="{target === 'blank' ? '_blank' : undefined}"
         rel="{target === 'blank' ? 'noopener noreferrer' : undefined}"
         onclick="{closeDrawer}"
-        class="{`group ${$page.url.pathname == href ? 'active' : ''} ${
-          $page.url.pathname == highlightAnotherItem ? 'active' : ''
-        } ${$page.url.pathname.startsWith(href) ? 'active' : ''} ${
+        class="{`group ${$page.url.pathname == href ? 'menu-active' : ''} ${
+          $page.url.pathname == highlightAnotherItem ? 'menu-active' : ''
+          } ${$page.url.pathname.startsWith(href) ? 'menu-active' : ''} ${
           highlight
             ? 'from-primary to-primary/0 hover:to-primary/10 from-[-200%] to-60% [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))]'
             : ''
