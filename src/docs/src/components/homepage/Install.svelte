@@ -22,7 +22,7 @@
 	/>
 	<div
 		role="tabpanel"
-		class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
+		class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg"
 	>
 		<div class="absolute right-3 top-3 z-1">
 			<div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
@@ -68,7 +68,7 @@
 	/>
 	<div
 		role="tabpanel"
-		class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
+		class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg"
 	>
 		<div class="absolute right-3 top-3 z-1">
 			<div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
@@ -114,7 +114,7 @@
 	/>
 	<div
 		role="tabpanel"
-		class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
+		class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg"
 	>
 		<div class="absolute right-3 top-3 z-1">
 			<div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
@@ -160,7 +160,7 @@
 	/>
 	<div
 		role="tabpanel"
-		class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
+		class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg"
 	>
 		<div class="absolute right-3 top-3 z-1">
 			<div data-tip={isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
@@ -211,9 +211,10 @@
 		/>
 		<div
 			role="tabpanel"
-			class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg"
+			class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg"
 		>
-			<pre dir="ltr"><code>@import "tailwindcss";
+			<pre dir="ltr"><code
+					>@import "tailwindcss";
 <span class="text-success">@plugin "daisyui";</span></code
 				></pre>
 		</div>

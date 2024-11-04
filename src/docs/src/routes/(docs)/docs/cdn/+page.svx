@@ -5,20 +5,225 @@ published: true
 ---
 
 <script>
-  export let data
-  import InstallTabs from "$components/InstallTabs.svelte"
-  import Translate from "$components/Translate.svelte"
+  export let data;
+  import InstallTabs from "$components/InstallTabs.svelte";
+  import Translate from "$components/Translate.svelte";
+  import { writable, derived } from 'svelte/store';
+
+  let files = [
+    { path: "base/properties.css", name: "properties", size: 0.135, checked: true },
+    { path: "base/typography.css", name: "typography", size: 0.221, checked: true },
+    { path: "base/startingstyle.css", name: "starting style", size: 0.119, checked: true },
+    { path: "base/reset.css", name: "reset", size: 0.547, checked: true },
+    { path: "base/rootscrollgutter.css", name: "root scroll gutter", size: 0.15, checked: true },
+    { path: "base/rootcolor.css", name: "root color", size: 0.118, checked: true },
+    { path: "base/scrollbar.css", name: "scrollbar", size: 0.124, checked: true },
+    { path: "base/rootscrolllock.css", name: "root scroll lock", size: 0.146, checked: true },
+    { path: "components/alert.css", name: "alert", size: 0.601, checked: true },
+    { path: "components/avatar.css", name: "avatar", size: 0.438, checked: true },
+    { path: "components/badge.css", name: "badge", size: 0.788, checked: true },
+    { path: "components/breadcrumbs.css", name: "breadcrumbs", size: 0.387, checked: true },
+    { path: "components/button.css", name: "button", size: 1.744, checked: true },
+    { path: "components/card.css", name: "card", size: 0.824, checked: true },
+    { path: "components/carousel.css", name: "carousel", size: 0.416, checked: true },
+    { path: "components/chat.css", name: "chat", size: 0.965, checked: true },
+    { path: "components/checkbox.css", name: "checkbox", size: 0.901, checked: true },
+    { path: "components/collapse.css", name: "collapse", size: 1.046, checked: true },
+    { path: "components/countdown.css", name: "countdown", size: 0.349, checked: true },
+    { path: "components/divider.css", name: "divider", size: 0.622, checked: true },
+    { path: "components/dock.css", name: "dock", size: 0.658, checked: true },
+    { path: "components/drawer.css", name: "drawer", size: 0.729, checked: true },
+    { path: "components/dropdown.css", name: "dropdown", size: 0.868, checked: true },
+    { path: "components/fileinput.css", name: "file input", size: 0.905, checked: true },
+    { path: "components/footer.css", name: "footer", size: 0.358, checked: true },
+    { path: "components/hero.css", name: "hero", size: 0.331, checked: true },
+    { path: "components/indicator.css", name: "indicator", size: 0.327, checked: true },
+    { path: "components/input.css", name: "input", size: 0.862, checked: true },
+    { path: "components/kbd.css", name: "kbd", size: 0.425, checked: true },
+    { path: "components/link.css", name: "link", size: 0.502, checked: true },
+    { path: "components/loading.css", name: "loading", size: 1.576, checked: true },
+    { path: "components/mask.css", name: "mask", size: 1.707, checked: true },
+    { path: "components/menu.css", name: "menu", size: 1.28, checked: true },
+    { path: "components/mockup.css", name: "mockup", size: 0.939, checked: true },
+    { path: "components/modal.css", name: "modal", size: 0.976, checked: true },
+    { path: "components/navbar.css", name: "navbar", size: 0.309, checked: true },
+    { path: "components/progress.css", name: "progress", size: 0.682, checked: true },
+    { path: "components/radialprogress.css", name: "radial progress", size: 0.477, checked: true },
+    { path: "components/radio.css", name: "radio", size: 0.756, checked: true },
+    { path: "components/range.css", name: "range", size: 0.838, checked: true },
+    { path: "components/rating.css", name: "rating", size: 0.554, checked: true },
+    { path: "components/select.css", name: "select", size: 0.857, checked: true },
+    { path: "components/skeleton.css", name: "skeleton", size: 0.364, checked: true },
+    { path: "components/stack.css", name: "stack", size: 0.257, checked: true },
+    { path: "components/stat.css", name: "stat", size: 0.605, checked: true },
+    { path: "components/status.css", name: "status", size: 0.597, checked: true },
+    { path: "components/steps.css", name: "steps", size: 0.703, checked: true },
+    { path: "components/swap.css", name: "swap", size: 0.543, checked: true },
+    { path: "components/tab.css", name: "tab", size: 1.774, checked: true },
+    { path: "components/table.css", name: "table", size: 0.66, checked: true },
+    { path: "components/textarea.css", name: "textarea", size: 0.694, checked: true },
+    { path: "components/timeline.css", name: "timeline", size: 0.976, checked: true },
+    { path: "components/toast.css", name: "toast", size: 0.389, checked: true },
+    { path: "components/toggle.css", name: "toggle", size: 0.874, checked: true },
+    { path: "components/tooltip.css", name: "tooltip", size: 0.998, checked: true },
+    { path: "utilities/radius.css", name: "radius", size: 0.692, checked: true },
+    { path: "utilities/join.css", name: "join", size: 0.528, checked: true },
+    { path: "theme/light.css", name: "light", size: 0.7, checked: true },
+    { path: "theme/dark.css", name: "dark", size: 0.7, checked: true },
+    { path: "theme/cupcake.css", name: "cupcake", size: 0.7, checked: false },
+    { path: "theme/bumblebee.css", name: "bumblebee", size: 0.7, checked: false },
+    { path: "theme/emerald.css", name: "emerald", size: 0.7, checked: false },
+    { path: "theme/corporate.css", name: "corporate", size: 0.7, checked: false },
+    { path: "theme/synthwave.css", name: "synthwave", size: 0.7, checked: false },
+    { path: "theme/retro.css", name: "retro", size: 0.7, checked: false },
+    { path: "theme/cyberpunk.css", name: "cyberpunk", size: 0.7, checked: false },
+    { path: "theme/valentine.css", name: "valentine", size: 0.7, checked: false },
+    { path: "theme/halloween.css", name: "halloween", size: 0.7, checked: false },
+    { path: "theme/garden.css", name: "garden", size: 0.7, checked: false },
+    { path: "theme/forest.css", name: "forest", size: 0.7, checked: false },
+    { path: "theme/aqua.css", name: "aqua", size: 0.7, checked: false },
+    { path: "theme/lofi.css", name: "lofi", size: 0.7, checked: false },
+    { path: "theme/pastel.css", name: "pastel", size: 0.7, checked: false },
+    { path: "theme/fantasy.css", name: "fantasy", size: 0.7, checked: false },
+    { path: "theme/wireframe.css", name: "wireframe", size: 0.7, checked: false },
+    { path: "theme/black.css", name: "black", size: 0.7, checked: false },
+    { path: "theme/luxury.css", name: "luxury", size: 0.7, checked: false },
+    { path: "theme/dracula.css", name: "dracula", size: 0.7, checked: false },
+    { path: "theme/cmyk.css", name: "cmyk", size: 0.7, checked: false },
+    { path: "theme/autumn.css", name: "autumn", size: 0.7, checked: false },
+    { path: "theme/business.css", name: "business", size: 0.7, checked: false },
+    { path: "theme/acid.css", name: "acid", size: 0.7, checked: false },
+    { path: "theme/lemonade.css", name: "lemonade", size: 0.7, checked: false },
+    { path: "theme/night.css", name: "night", size: 0.7, checked: false },
+    { path: "theme/coffee.css", name: "coffee", size: 0.7, checked: false },
+    { path: "theme/winter.css", name: "winter", size: 0.7, checked: false },
+    { path: "theme/dim.css", name: "dim", size: 0.7, checked: false },
+    { path: "theme/nord.css", name: "nord", size: 0.7, checked: false },
+    { path: "theme/sunset.css", name: "sunset", size: 0.7, checked: false }
+  ];
+
+  let groupedFiles = [
+    { name: "Base", files: files.filter(file => file.path.startsWith("base/")) },
+    { name: "Components", files: files.filter(file => file.path.startsWith("components/")) },
+    { name: "Utilities", files: files.filter(file => file.path.startsWith("utilities/")) },
+    { name: "Themes", files: files.filter(file => file.path.startsWith("theme/")) }
+  ];
+
+  let selectedUrls = writable(files.filter(file => file.checked));
+
+  function toggleUrl(url) {
+    selectedUrls.update((current) => {
+      if (current.includes(url)) {
+        return current.filter((item) => item !== url);
+      } else {
+        return [...current, url];
+      }
+    });
+    url.checked = !url.checked;
+  }
+
+  let combinedUrl = derived(selectedUrls, ($selectedUrls) => {
+    return $selectedUrls.length
+      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@alpha/${url.path}`).join(",")}`
+      : "";
+  });
+
+  let totalSize = derived(selectedUrls, ($selectedUrls) => {
+    return $selectedUrls.reduce((sum, url) => sum + url.size, 0).toFixed(1);
+  });
+
+  let isClipboardButtonPressed = writable(false);
+
+  function copyText(text) {
+    navigator.clipboard.writeText(text);
+    isClipboardButtonPressed.set(true);
+    setTimeout(() => {
+      isClipboardButtonPressed.set(false);
+    }, 2000);
+  }
 </script>
+
 
 <InstallTabs />
 
-<Translate text="You don't need to install anything." />  
+<Translate text="You don't need to install anything." />
 <Translate text="Just add one of these to the <code>head</code> tag of your HTML" />:
 
-- daisyUI full.css <span class="badge badge-soft badge-success"><span class="font-mono">29kB</span> compressed</span> + Tailwind CSS CDN script:
+<div role="tablist" class="tabs tabs-lift w-full not-prose">
+  <input
+    type="radio"
+    name="cdn"
+    role="tab"
+    class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
+    aria-label="full.css"
+    checked="checked"
+  />
+  <div class="tab-content border-none bg-neutral text-neutral-content" role="tabpanel">
+    <div class="relative p-4 text-left">
+      <span class="font-mono select-none text-xs opacity-50 ms-4">29kB compressed</span>
+<pre class="language-html !max-w-none"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/full.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.tailwindcss.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+    </div>
+  </div>
+  <input
+    type="radio"
+    name="cdn"
+    role="tab"
+    class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
+    aria-label="customize"
+  />
+  <div class="tab-content border-none bg-neutral text-neutral-content" role="tabpanel">
+    <div class="relative p-4 text-left">
+      {#if $combinedUrl}
+        <span class="font-mono select-none text-xs opacity-50 ms-4">{$totalSize}kB compressed</span>
+  <pre class="overflow-x-scroll pt-2 pb-6"><code>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{$combinedUrl}<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span></code></pre>
+        <div class="absolute right-3 top-3 z-1">
+          <div data-tip={$isClipboardButtonPressed ? "copied" : "copy"} class="tooltip tooltip-accent">
+            <button
+              class="btn btn-sm btn-square btn-neutral cursor-copy"
+              aria-label="copy"
+              on:click={() => copyText($combinedUrl)}
+            >
+              {#if $isClipboardButtonPressed}
+                <svg
+                  class="h-5 w-5 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    d="M 16 2 C 14.742188 2 13.847656 2.890625 13.40625 4 L 5 4 L 5 29 L 27 29 L 27 4 L 18.59375 4 C 18.152344 2.890625 17.257813 2 16 2 Z M 16 4 C 16.554688 4 17 4.445313 17 5 L 17 6 L 20 6 L 20 8 L 12 8 L 12 6 L 15 6 L 15 5 C 15 4.445313 15.445313 4 16 4 Z M 7 6 L 10 6 L 10 10 L 22 10 L 22 6 L 25 6 L 25 27 L 7 27 Z M 21.28125 13.28125 L 15 19.5625 L 11.71875 16.28125 L 10.28125 17.71875 L 14.28125 21.71875 L 15 22.40625 L 15.71875 21.71875 L 22.71875 14.71875 Z"
+                  >
+                  </path>
+                </svg>
+              {:else}
+                <svg
+                  class="h-5 w-5 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 5.445313 15.445313 5 16 5 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"
+                  >
+                  </path>
+                </svg>
+              {/if}
+            </button>
+          </div>
+        </div>
+      {:else}
+        <div class="me-10 text-xs py-3">Select the parts you want to use 👇</div>
+      {/if}
+    </div>
+    <div class="py-8 flex gap-2 flex-col bg-base-200 text-base-content px-6 rounded-b-btn">
+      {#each groupedFiles as group}
+        <h3 class="block text-xs">{group.name}</h3>
+        <div class="flex gap-2 flex-wrap">
+          {#each group.files as file}
+            <input class="btn btn-xs rounded-full" aria-label={file.name} type="checkbox" on:change={() => toggleUrl(file)} checked={file.checked} />
+          {/each}
+        </div>
+      {/each}
+    </div>
+  </div>
+</div>
 
-<pre class="language-html"><code class="language-html">
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/full.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.tailwindcss.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-
-</code></pre>
