@@ -23,7 +23,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 350px;
-  color: var(--base-content);
+  color: var(--color-base-content);
   background-color: var(--color-base-200);
   border-radius: 10px;
   overflow: hidden;
@@ -104,7 +104,7 @@
   background-color: transparent;
   color: inherit;
   border: 2px solid transparent;
-  border-radius: var(--rounded-btn);
+  border-radius: var(--radius-btn);
   padding-inline-start: 2.5em;
 }
 
@@ -142,7 +142,7 @@
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li {
   color: var(--base-content);
-  border-radius: var(--rounded-btn);
+  border-radius: var(--radius-btn);
 }
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:hover {
