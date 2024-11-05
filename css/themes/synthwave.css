@@ -19,7 +19,7 @@ color-scheme: dark;
 --color-warning-content: oklch(23.5017% 0.096418 290.329844);
 --color-error: oklch(73.7005% 0.121339 32.639257);
 --color-error-content: oklch(23.5017% 0.096418 290.329844);
---radius-badge: 1.9rem;
+--radius-badge: 2rem;
 --radius-btn: 0.5rem;
 --radius-box: 1rem;
 --spacing-button-border: 1px;
