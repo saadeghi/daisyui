@@ -1,306 +1,186 @@
 <script>
-import { nanoid } from "nanoid"
-// import { createEventDispatcher } from "svelte"
+  import { createEventDispatcher } from 'svelte';
 
-// const dispatch = createEventDispatcher()
+  let isOpen = $state(false);
+  let lightness = $state(0);
+  let chroma = $state(0);
+  let hue = $state(0);
+  let isDragging = $state(false);
+  let pickerElement;
 
-function clickOutside(node) {
-  const handleClick = (event) => {
-    if (node && !node.contains(event.target) && !event.defaultPrevented) {
-      node.dispatchEvent(new CustomEvent("click_outside", node))
+  let { value = $bindable() } = $props();
+  let dispatch = createEventDispatcher();
+
+  // Parse initial value immediately and when it changes
+  $effect(() => {
+    if (value) {
+      const match = value.match(/oklch\((\d*\.?\d+)%\s+(\d*\.?\d+)\s+(\d*\.?\d+)\)/);
+      if (match) {
+        lightness = Math.max(0, Math.min(100, parseFloat(match[1])));
+        chroma = Math.max(0, Math.min(0.4, parseFloat(match[2])));
+        hue = Math.max(0, Math.min(360, parseFloat(match[3])));
+      }
+    }
+  });
+
+  let currentColor = $derived(
+    `oklch(${lightness.toFixed(3)}% ${chroma.toFixed(3)} ${hue.toFixed(3)})`
+  );
+
+  // Update the bound value whenever the color changes
+  $effect(() => {
+    value = currentColor;
+  });
+
+  function updateColor() {
+    dispatch('input', currentColor);
+    isOpen = false;
+  }
+
+  function togglePicker() {
+    isOpen = !isOpen;
+  }
+
+  function handleMouseDown(e) {
+    isDragging = true;
+    updateLCFromMouse(e);
+  }
+
+  function handleGlobalMouseMove(e) {
+    if (isDragging && pickerElement) {
+      const rect = pickerElement.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = 1 - (e.clientY - rect.top) / rect.height;
+
+      const clampedX = Math.max(0, Math.min(1, x));
+      const clampedY = Math.max(0, Math.min(1, y));
+
+      chroma = clampedX * 0.4;
+      lightness = clampedY * 100;
     }
   }
 
-  document.addEventListener("click", handleClick, true)
-
-  return {
-    destroy() {
-      document.removeEventListener("click", handleClick, true)
-    },
+  function handleGlobalMouseUp() {
+    isDragging = false;
   }
-}
 
-let {
-  id = nanoid(),
-  value = $bindable("#5E7ABC"),
-  width = "16px",
-  height = "16px",
-  onset,
-} = $props()
+  function updateLCFromMouse(e) {
+    if (pickerElement) {
+      const rect = pickerElement.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = 1 - (e.clientY - rect.top) / rect.height;
 
-let values = $state([
-  [
-    "#ffe4e6",
-    "#fce7f3",
-    "#fae8ff",
-    "#f3e8ff",
-    "#ede9fe",
-    "#e0e7ff",
-    "#dbeafe",
-    "#e0f2fe",
-    "#cffafe",
-    "#ccfbf1",
-    "#d1fae5",
-    "#dcfce7",
-    "#ecfccb",
-    "#fef9c3",
-    "#fef3c7",
-    "#ffedd5",
-    "#fee2e2",
-    "#f5f5f4",
-    "#f3f4f6",
-  ],
-  [
-    "#fecdd3",
-    "#fbcfe8",
-    "#f5d0fe",
-    "#e9d5ff",
-    "#ddd6fe",
-    "#c7d2fe",
-    "#bfdbfe",
-    "#bae6fd",
-    "#a5f3fc",
-    "#99f6e4",
-    "#a7f3d0",
-    "#bbf7d0",
-    "#d9f99d",
-    "#fef08a",
-    "#fde68a",
-    "#fed7aa",
-    "#fecaca",
-    "#e7e5e4",
-    "#e5e7eb",
-  ],
-  [
-    "#fda4af",
-    "#f9a8d4",
-    "#f0abfc",
-    "#d8b4fe",
-    "#c4b5fd",
-    "#a5b4fc",
-    "#93c5fd",
-    "#7dd3fc",
-    "#67e8f9",
-    "#5eead4",
-    "#6ee7b7",
-    "#86efac",
-    "#bef264",
-    "#fde047",
-    "#fcd34d",
-    "#fdba74",
-    "#fca5a5",
-    "#d6d3d1",
-    "#d1d5db",
-  ],
-  [
-    "#fb7185",
-    "#f472b6",
-    "#e879f9",
-    "#c084fc",
-    "#a78bfa",
-    "#818cf8",
-    "#60a5fa",
-    "#38bdf8",
-    "#22d3ee",
-    "#2dd4bf",
-    "#34d399",
-    "#4ade80",
-    "#a3e635",
-    "#facc15",
-    "#fbbf24",
-    "#fb923c",
-    "#f87171",
-    "#a8a29e",
-    "#9ca3af",
-  ],
-  [
-    "#f43f5e",
-    "#ec4899",
-    "#d946ef",
-    "#a855f7",
-    "#8b5cf6",
-    "#6366f1",
-    "#3b82f6",
-    "#0ea5e9",
-    "#06b6d4",
-    "#14b8a6",
-    "#10b981",
-    "#22c55e",
-    "#84cc16",
-    "#eab308",
-    "#f59e0b",
-    "#f97316",
-    "#ef4444",
-    "#78716c",
-    "#6b7280",
-  ],
-  [
-    "#e11d48",
-    "#db2777",
-    "#c026d3",
-    "#9333ea",
-    "#7c3aed",
-    "#4f46e5",
-    "#2563eb",
-    "#0284c7",
-    "#0891b2",
-    "#0d9488",
-    "#059669",
-    "#16a34a",
-    "#65a30d",
-    "#ca8a04",
-    "#d97706",
-    "#ea580c",
-    "#dc2626",
-    "#57534e",
-    "#4b5563",
-  ],
-  [
-    "#be123c",
-    "#be185d",
-    "#a21caf",
-    "#7e22ce",
-    "#6d28d9",
-    "#4338ca",
-    "#1d4ed8",
-    "#0369a1",
-    "#0e7490",
-    "#0f766e",
-    "#047857",
-    "#15803d",
-    "#4d7c0f",
-    "#a16207",
-    "#b45309",
-    "#c2410c",
-    "#b91c1c",
-    "#44403c",
-    "#374151",
-  ],
-  [
-    "#9f1239",
-    "#9d174d",
-    "#86198f",
-    "#6b21a8",
-    "#5b21b6",
-    "#3730a3",
-    "#1e40af",
-    "#075985",
-    "#155e75",
-    "#115e59",
-    "#065f46",
-    "#166534",
-    "#3f6212",
-    "#854d0e",
-    "#92400e",
-    "#9a3412",
-    "#991b1b",
-    "#292524",
-    "#1f2937",
-  ],
-  [
-    "#881337",
-    "#831843",
-    "#701a75",
-    "#581c87",
-    "#4c1d95",
-    "#312e81",
-    "#1e3a8a",
-    "#0c4a6e",
-    "#164e63",
-    "#134e4a",
-    "#064e3b",
-    "#14532d",
-    "#365314",
-    "#713f12",
-    "#78350f",
-    "#7c2d12",
-    "#7f1d1d",
-    "#1c1917",
-    "#111827",
-  ],
-])
+      const clampedX = Math.max(0, Math.min(1, x));
+      const clampedY = Math.max(0, Math.min(1, y));
 
-let trigger = "Escape"
-function handleKeydown(e) {
-  if (e.key === trigger) {
-    ddActive = false
+      chroma = clampedX * 0.4;
+      lightness = clampedY * 100;
+    }
   }
-}
-
-let ddActive = $state(false)
-
-async function toggleDropdown(e) {
-  ddActive = !ddActive
-}
-
-function clickOutsideDropdown() {
-  ddActive = false
-}
-
-function changeValue(innerValue) {
-  value = innerValue
-  // ddActive = false;
-  // dispatch("set", innerValue)
-  onset(innerValue)
-}
-
-let isMouseDown = $state(false)
 </script>
-  
-  <svelte:window
-    onkeydown="{handleKeydown}"
-    onmousedown="{() => (isMouseDown = true)}"
-    onmouseup="{() => (isMouseDown = false)}" />
 
-  <div class="inline-block relative"><button onclick="{(e) => toggleDropdown(e)}"  class="h-5 top-1 relative w-5 overflow-hidden">
+<svelte:window
+  on:mousemove={handleGlobalMouseMove}
+  on:mouseup={handleGlobalMouseUp}
+/>
+
+<div class="relative inline-block align-middle">
+  <button
+    class="w-6 h-6 rounded border border-gray-300 cursor-pointer"
+    style:background-color={currentColor}
+    on:click={togglePicker}
+    aria-label="Open color picker"
+  />
+
+  {#if isOpen}
+    <div class="fixed inset-0 z-40" on:click={togglePicker} />
+    <div
+      class="absolute z-50 mt-2 p-4 bg-white rounded-2xl shadow-lg"
+    >
+      <div
+        class="w-52 h-52 mb-4 cursor-crosshair relative border rounded-lg overflow-hidden border-black/10 grid"
+        bind:this={pickerElement}
+        on:mousedown={handleMouseDown}
+      >
+
+      <!-- Base chroma gradient -->
+          <div
+            class="col-[1/1] row-[1/1]"
+            style="background: linear-gradient(
+              to right,
+              oklch(100% 0 {hue}),
+              oklch(100% 0.4 {hue})
+            )"
+          ></div>
+
+          <!-- Light/Dark overlay -->
+          <div
+            class="col-[1/1] row-[1/1] mix-blend-multiply"
+            style="background: linear-gradient(
+              to bottom,
+              transparent,
+              oklch(0% 0 0)
+            )"
+          ></div>
+
+        <!-- Selection indicator -->
         <div
-          style="background: {value}; width:{width}; height:{height}; border:1px solid hsla(0 0% 100% / .1)"
-          class="color-block">
-        </div>
-    </button>{#if ddActive}<div class="values-dropdown" use:clickOutside onclick_outside="{clickOutsideDropdown}">
+          class="absolute w-4 h-4 rounded-full border-2 border-white shadow-sm pointer-events-none"
+          style:left={`${(chroma / 0.4) * 100}%`}
+          style:top={`${100 - lightness}%`}
+          style:transform="translate(-50%, -50%)"
+        />
+
+
+      </div>
+
+      <input
+        type="range"
+        min="0"
+        max="360"
+        bind:value={hue}
+        class="w-full h-5 appearance-none cursor-pointer rounded-xl px-[2px]"
+        style={`background: linear-gradient(to right,
+          oklch(${lightness}% 0.3 0),
+          oklch(${lightness}% 0.3 65),
+          oklch(${lightness}% 0.3 120),
+          oklch(${lightness}% 0.3 180),
+          oklch(${lightness}% 0.3 240),
+          oklch(${lightness}% 0.3 300),
+          oklch(${lightness}% 0.3 360)
+        )`}
+      />
+
+      <div class="mt-2 text-sm text-gray-600 tabular-nums flex gap-2">
         <div
-          class="values-dropdown-grid"
-          style="grid-template-columns: repeat({values[0].length}, auto);">
-          {#each values as val, index}
-            {#each val as innerValue, innerIndex}
-              <button
-                id="{id}-{index}-{innerIndex}"
-                class:active="{innerValue == value}"
-                style="background: {innerValue}; width:{width}; height:{height};"
-                onclick="{() => {
-                  changeValue(innerValue)
-                }}"
-                onmousemove="{() => {
-                  isMouseDown ? changeValue(innerValue) : null
-                }}"
-                class="color-block">
-              </button>
-            {/each}
-          {/each}
-        </div>
-      </div>{/if}
-  </div>
-  
-  <style>
-    .color-block {
-      border-radius: 0.2rem;
-    }
-  
-    .values-dropdown {
-      padding: 0.4rem;
-      position: absolute;
-      z-index: 1;
-      background: white;
-      border-radius: 0.3rem;
-    }
-  
-    .values-dropdown-grid {
-      grid-gap: 0.125rem;
-      display: grid;
-    }
-  
-    .values-dropdown button {
-      border: none;
-    }
-  </style>
-  
+          class="size-6 rounded"
+          style:background-color={`oklch(${lightness.toFixed(0)}% ${chroma.toFixed(2)} ${hue.toFixed(0)})`}
+        ></div>
+        oklch({lightness.toFixed(0)}% {chroma.toFixed(2)} {hue.toFixed(0)})
+      </div>
+
+      <button
+        class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-full"
+        on:click={updateColor}
+      >
+        Apply
+      </button>
+    </div>
+  {/if}
+</div>
+
+<style>
+  input[type="range"]{
+    appearance: none;
+    border: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid white;
+  }
+</style>
