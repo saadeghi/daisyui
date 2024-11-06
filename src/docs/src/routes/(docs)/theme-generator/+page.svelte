@@ -438,7 +438,7 @@
               '2rem'
             ] as value}
               <label
-                class="rounded-btn overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary"
+                class="rounded-btn overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
               >
                 <input
                   type="radio"
@@ -449,11 +449,11 @@
                   aria-label={`${value} border radius`}
                 />
                 <div
-                  class="pt-2 pe-2"
+                  class="pt-2 pe-3"
                   aria-hidden="true"
                 >
                   <div
-                    class="w-10 h-6 border-e border-t border-e-2 border-t-2 border-base-content/20 bg-base-200"
+                    class="w-8 h-6 border-e border-t border-e-2 border-t-2 border-base-content/20 bg-base-200"
                     style={`border-start-end-radius:${value}`}
                     class:border-primary={activeThemeData[key] === value}
                     class:bg-base-300={activeThemeData[key] !== value}
@@ -471,7 +471,7 @@
         ['--spacing-tab-border', 'Tab']
       ] as [key, label]}
         <div class="flex justify-between items-center">
-          <span class="text-sm">{label}</span>
+          <span class="text-xs text-base-content/60">{label}</span>
           <div class="join">
             {#each ['1px', '2px'] as value}
               <input
