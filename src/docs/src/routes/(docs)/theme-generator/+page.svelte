@@ -9,7 +9,9 @@
   import { browser } from '$app/environment';
   import { untrack } from 'svelte';
   const { data } = $props();
+  let themeCSSModal;
 
+  let dockActiveItem = $state("themes");
   let themeIdCounter = $state(1);
   let savedThemes = $state({});
   let selectedTheme = $state(null);
@@ -23,7 +25,6 @@
     prefersdark: false
   });
   let lastSavedThemeData = $state(null);
-  let isThemeCSSModalOpen = $state(false);
   let themeCSS = $state('');
   let contextMenu = $state({
     show: false,
@@ -89,7 +90,10 @@
       .map(([key, value]) => `  ${key}: ${value};`);
 
     themeCSS = `@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n}`;
-    isThemeCSSModalOpen = true;
+
+    if (themeCSSModal) {
+      themeCSSModal.showModal();
+    }
   }
 
   function copyThemeCSSToClipboard() {
@@ -289,8 +293,8 @@
   }
 </script>
 <svelte:window on:click={closeContextMenuOnClickOutside} />
-<div class="flex">
-  <div class="border-e shrink-0 w-[15rem] border-dashed border-base-200 top-16 sticky h-[calc(100vh-4rem)] overflow-y-scroll p-6 pb-20">
+<div class="flex flex-col md:flex-row relative">
+  <div class="border-e shrink-0 w-full md:w-[15rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
     <h2 class="text-lg font-bold mb-4">Themes</h2>
     <button
       class="btn btn-primary mb-4 w-full"
@@ -344,7 +348,7 @@
   </div>
 
   {#if isCreatingNew || editingTheme}
-    <div class="flex flex-col pb-20 shrink-0 w-[18rem] top-16 sticky h-[calc(100vh-4rem)] overflow-y-scroll p-6 gap-4 border-e border-dashed border-base-200">
+    <div class="flex flex-col pb-20 shrink-0 w-full md:w-[18rem] md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start" class:max-md:hidden={dockActiveItem!=="editor"}>
       <label class="input flex font-semibold text-lg input-sm w-full items-center gap-2 shrink-0">
         <input
           class="shrink w-full"
@@ -423,7 +427,7 @@
         ['--radius-btn', 'Button, input, select, etc.'],
         ['--radius-box', 'Card, modal, etc.']
       ] as [key, label]}
-        <div class="form-control w-full">
+        <div class="form-control w-full max-w-fit">
           <div class="text-xs mb-2 text-base-content/60" id={`${key}-group`}>{label}</div>
           <div
             class="flex gap-2"
@@ -470,7 +474,7 @@
         ['--spacing-button-border', 'Button'],
         ['--spacing-tab-border', 'Tab']
       ] as [key, label]}
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center w-[15rem]">
           <span class="text-xs text-base-content/60">{label}</span>
           <div class="join">
             {#each ['1px', '2px'] as value}
@@ -489,7 +493,7 @@
 
       <h3 class="divider text-xs divider-start">Options</h3>
 
-      <div class="flex gap-2 items-center justify-between">
+      <div class="flex gap-2 items-center justify-between w-[15rem]">
         <span class="text-xs flex items-center gap-1 text-base-content/60">
           Default theme
         </span>
@@ -502,7 +506,7 @@
         </label>
       </div>
 
-      <div class="flex gap-2 items-center justify-between">
+      <div class="flex gap-2 items-center justify-between w-[15rem]">
         <span class="text-xs flex items-center gap-1 text-base-content/60">
           Default dark theme
           <div class="tooltip" data-tip="prefers-color-scheme:dark">
@@ -520,7 +524,7 @@
         </label>
       </div>
 
-      <div class="flex gap-2 items-center justify-between">
+      <div class="flex gap-2 items-center justify-between w-[15rem]">
         <span class="text-xs flex items-center gap-1 text-base-content/60">
           Color scheme
           <div class="tooltip" data-tip="Color of browser-provided UI">
@@ -553,49 +557,45 @@
         Get CSS
       </button>
 
-      {#if isThemeCSSModalOpen}
-        <dialog class="modal" open>
-          <div class="modal-box border border-base-300 sm:max-w-[40rem] max-sm:modal-bottom">
-            <h3 class="font-bold text-lg mb-4">Add this to your CSS file</h3>
-            <textarea
-              data-theme="dark"
-              class="textarea textarea-border w-full max-w-none h-96 font-mono textarea-xs min-h-96"
-              bind:value={themeCSS}
-              on:input={(e) => {
-                const newThemeData = parseThemeCSS(e.target.value, activeThemeData)
-                if (newThemeData) {
-                  activeThemeData = newThemeData
-                }
-              }}
-            ></textarea>
-            <div class="modal-action">
-              <button class="btn btn-sm" on:click={copyThemeCSSToClipboard}>
-                Copy to Clipboard
-              </button>
-              <button class="btn btn-sm" on:click={() => isThemeCSSModalOpen = false}>
-                Close
-              </button>
-            </div>
-          </div>
-          <div class="modal-backdrop" on:click={() => isThemeCSSModalOpen = false}></div>
-        </dialog>
-      {/if}
     </div>
   {/if}
 
   {#if selectedTheme}
-    <div class="p-8 grow">
+    <div class="grow md:rounded-ss-xl overflow-hidden" class:max-md:hidden={dockActiveItem!=="preview"}>
       <div
-      class="p-8"
+      class="p-8 bg-base-200"
       style={Object.entries(selectedTheme)
+        .filter(([key]) => !['prefersdark', 'default', 'name'].includes(key))
         .map(([key, value]) => `${key}:${value}`)
         .join(';')}
-      >
+    >
         <Preview/>
       </div>
     </div>
   {/if}
 </div>
+
+<nav class="dock md:hidden">
+  <button class:dock-active={dockActiveItem === "themes"} on:click={()=>{dockActiveItem='themes'}}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+      <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v2A1.5 1.5 0 0 0 3.5 7h2A1.5 1.5 0 0 0 7 5.5v-2A1.5 1.5 0 0 0 5.5 2h-2ZM3.5 9A1.5 1.5 0 0 0 2 10.5v2A1.5 1.5 0 0 0 3.5 14h2A1.5 1.5 0 0 0 7 12.5v-2A1.5 1.5 0 0 0 5.5 9h-2ZM9 3.5A1.5 1.5 0 0 1 10.5 2h2A1.5 1.5 0 0 1 14 3.5v2A1.5 1.5 0 0 1 12.5 7h-2A1.5 1.5 0 0 1 9 5.5v-2ZM10.5 9A1.5 1.5 0 0 0 9 10.5v2a1.5 1.5 0 0 0 1.5 1.5h2a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 12.5 9h-2Z" />
+    </svg>
+    <span class="dock-label">Themes</span>
+  </button>
+  <button class:dock-active={dockActiveItem === "editor"} on:click={()=>{dockActiveItem='editor'}}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+      <path d="M12.613 1.258a1.535 1.535 0 0 1 2.13 2.129l-1.905 2.856a8 8 0 0 1-3.56 2.939 4.011 4.011 0 0 0-2.46-2.46 8 8 0 0 1 2.94-3.56l2.855-1.904ZM5.5 8A2.5 2.5 0 0 0 3 10.5a.5.5 0 0 1-.7.459.75.75 0 0 0-.983 1A3.5 3.5 0 0 0 8 10.5 2.5 2.5 0 0 0 5.5 8Z" />
+    </svg>
+    <span class="dock-label">Editor</span>
+  </button>
+  <button class:dock-active={dockActiveItem === "preview"} on:click={()=>{dockActiveItem='preview'}}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+      <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+      <path fill-rule="evenodd" d="M1.38 8.28a.87.87 0 0 1 0-.566 7.003 7.003 0 0 1 13.238.006.87.87 0 0 1 0 .566A7.003 7.003 0 0 1 1.379 8.28ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" clip-rule="evenodd" />
+    </svg>
+    <span class="dock-label">Preview</span>
+  </button>
+</nav>
 
 
 {#if contextMenu.show}
@@ -623,3 +623,30 @@
     </div>
   {/if}
 {/if}
+
+
+<dialog bind:this={themeCSSModal} class="modal">
+  <div class="modal-box border border-base-300 sm:max-w-[40rem] max-sm:modal-bottom">
+    <h3 class="font-bold w-full block text-lg mb-4">Add this to your CSS file</h3>
+    <textarea
+      data-theme="dark"
+      class="block resize-none textarea textarea-border w-full max-w-none h-96 font-mono textarea-xs min-h-80"
+      bind:value={themeCSS}
+      on:input={(e) => {
+        const newThemeData = parseThemeCSS(e.target.value, activeThemeData)
+        if (newThemeData) {
+          activeThemeData = newThemeData
+        }
+      }}
+    ></textarea>
+    <div class="modal-action">
+      <button class="btn btn-sm" on:click={copyThemeCSSToClipboard}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+        </svg>
+        Copy to Clipboard
+      </button>
+    </div>
+  </div>
+  <div class="modal-backdrop" on:click={() => themeCSSModal.close()}></div>
+</dialog>

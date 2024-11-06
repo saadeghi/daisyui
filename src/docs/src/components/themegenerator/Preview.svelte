@@ -1,4 +1,4 @@
-<div class="lg:columns-2 xl:columns-3 text-base-content [&>*]:break-inside-avoid">
+<div class="sm:columns-2 md:columns-1 lg:columns-2 xl:columns-3 text-base-content [&>*]:shadow-sm [&>*]:mb-4 [&>*]:break-inside-avoid">
 
     <!-- <nav class="bg-base-200 text-base-content rounded-box col-span-8 flex gap-2 items-center justify-between">
       <ul class="menu menu-sm menu-horizontal shrink-0">
@@ -23,6 +23,7 @@
       </label>
     </nav> -->
 
+    <!-- filters -->
     <div class="card card-sm bg-base-100 border border-base-200">
       <div class="card-body gap-4">
         <h2 class="flex justify-between items-center">
@@ -76,6 +77,7 @@
       </div>
     </div>
 
+    <!-- calendar -->
     <div class="card card-sm bg-base-100 border border-base-200 overflow-hidden">
       <div class="card-body gap-4">
         <div class="grid grid-cols-7 border-b border-dashed border-b-base-300 pb-3">
@@ -132,6 +134,103 @@
           <div class="shrink-0">
             <span class="badge badge-sm badge-neutral">1h</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- range -->
+    <div class="card card-sm bg-base-100 border border-base-200">
+      <div class="card-body gap-4">
+        <h2 class="flex justify-between items-center">
+          <span class="font-semibold">Price range</span>
+        </h2>
+        <div class="text-5xl font-extralight text-center">25</div>
+        <input type="range" class="range" />
+      </div>
+    </div>
+
+    <!-- product -->
+    <div class="card card-sm bg-base-100 border border-base-200">
+      <figure class="p-2">
+        <img
+          class="rounded-[calc(var(--radius-box)-.5rem)]"
+          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          alt="Shoes" />
+      </figure>
+      <div class="card-body gap-4">
+        <h2 class="flex justify-between items-center">
+          <span class="font-semibold">Nike Shoes</span>
+          <span class="badge badge-success badge-sm">SALE</span>
+        </h2>
+        <div class="flex gap-2 items-center">
+          <div class="rating rating-xs">
+            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+          </div>
+          <span class="text-xs opacity-60">420 reviews</span>
+        </div>
+        <div>
+          <span class="text-2xl font-semibold">$120</span>
+          <span class="text-sm opacity-60 line-through">$150</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- list -->
+    <div class="card card-sm bg-base-100 border border-base-200">
+      <div class="card-body gap-4">
+        <h2 class="flex justify-between items-center">
+          <span class="font-semibold">Recent orders</span>
+        </h2>
+        <div class="flex flex-col text-xs">
+          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+            Charlie Chapman
+            <span class="badge badge-xs badge-info">Send</span>
+          </div>
+          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+            Howard Hudson
+            <span class="badge badge-xs badge-error">Failed</span>
+          </div>
+          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+              Fiona Fisher
+              <span class="badge badge-xs badge-warning">In progress</span>
+            </div>
+          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+            Nick Nelson
+            <span class="badge badge-xs badge-success">Completed</span>
+          </div>
+          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+            Amanda Anderson
+            <span class="badge badge-xs badge-success">Completed</span>
+          </div>
+        </div>
+        <div class="flex gap-2 items-end h-24 [&>*]:rounded-box [&>*]:bg-base-content [&>*]:w-full">
+          <div style="height: 10%"></div>
+          <div style="height: 20%"></div>
+          <div style="height: 10%"></div>
+          <div style="height: 25%"></div>
+          <div style="height: 22%"></div>
+          <div style="height: 15%"></div>
+          <div style="height: 20%"></div>
+          <div style="height: 35%"></div>
+          <div style="height: 40%"></div>
+          <div style="height: 45%"></div>
+          <div style="height: 30%"></div>
+          <div style="height: 35%"></div>
+          <div style="height: 60%"></div>
+          <div style="height: 65%"></div>
+          <div style="height: 80%"></div>
+          <div style="height: 90%"></div>
+        </div>
+        <p class="text-xs py-3">
+          Sales volume reached $12,450 this week, showing a 15% increase from the previous period.
+        </p>
+        <div class="grid grid-cols-2 gap-2">
+          <button class="btn">Add new</button>
+          <button class="btn btn-neutral">Details</button>
         </div>
       </div>
     </div>
