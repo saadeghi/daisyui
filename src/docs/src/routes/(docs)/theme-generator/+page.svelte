@@ -438,7 +438,10 @@
         <details open>
           <summary>Built-in themes</summary>
           <ul>
-            {#each themeOrder as id}
+            <!-- {#each themeOrder as id} -->
+            {#each themesNewestFirst as [id, theme]}
+              {@const currentTheme = savedThemes[id] || theme}
+
               {#if id in data.themes}
                 <li>
                   <button
@@ -448,31 +451,31 @@
                     on:contextmenu|preventDefault={(e) => showContextMenuForTheme(e, id)}
                   >
                     <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
-                      style={`background-color: ${data.themes[id]['--color-base-100']}`}
+                      style={`background-color: ${currentTheme['--color-base-100']}`}
                     >
                       <div
                         class="size-1 rounded-full"
-                        style={`background-color: ${data.themes[id]['--color-base-content']}`}
+                        style={`background-color: ${currentTheme['--color-base-content']}`}
                       >
                       </div>
                       <div
                         class="size-1 rounded-full"
-                        style={`background-color: ${data.themes[id]['--color-primary']}`}
+                        style={`background-color: ${currentTheme['--color-primary']}`}
                       >
                       </div>
                       <div
                         class="size-1 rounded-full"
-                        style={`background-color: ${data.themes[id]['--color-secondary']}`}
+                        style={`background-color: ${currentTheme['--color-secondary']}`}
                       >
                       </div>
                       <div
                         class="size-1 rounded-full"
-                        style={`background-color: ${data.themes[id]['--color-accent']}`}
+                        style={`background-color: ${currentTheme['--color-accent']}`}
                       >
                       </div>
                     </div>
                     <div class="w-32 truncate">
-                      {data.themes[id].name || id}
+                      {currentTheme.name || id}
                     </div>
                   </button>
                 </li>
