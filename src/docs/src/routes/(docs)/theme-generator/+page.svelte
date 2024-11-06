@@ -11,6 +11,7 @@
   const { data } = $props();
   let themeCSSModal;
 
+  let dice = $state({ rotate: 0 });
   let dockActiveItem = $state("themes");
   let themeIdCounter = $state(1);
   let savedThemes = $state({});
@@ -81,9 +82,13 @@
     }
   }
 
+  let isClipboardButtonPressed = $state(false);
   function copyThemeCSSToClipboard() {
     navigator.clipboard.writeText(themeCSS)
-      .then(() => alert('CSS copied to clipboard!'))
+      .then(() => {
+        isClipboardButtonPressed = true;
+        setTimeout(() => isClipboardButtonPressed = false, 2000);
+      })
       .catch(err => console.error('Failed to copy:', err));
   }
 
@@ -170,7 +175,7 @@
     }
 
     // Generate random colors instead of using light theme as base
-    const randomColors = randomizeThemeColors(data.tailwindcolors, data.assignedBgColors);
+    const randomColors = randomizeThemeColors(data.tailwindcolors, data.colorPairs);
 
     activeThemeData = {
       id: themeId,
@@ -203,34 +208,40 @@
           savedThemes = rest;
         }
         return;
+      } else {
+        // Update both data.themes and savedThemes to ensure reactivity
+        data.themes[id] = { ...themeData };
+        savedThemes = {
+          ...savedThemes,
+          [id]: { ...themeData }
+        };
       }
-    }
-
-    if (validateThemeName(activeThemeData.name)) {
+    } else if (validateThemeName(activeThemeData.name)) {
+      // Handle non-built-in themes
       savedThemes = {
-        ...untrack(() => savedThemes),
+        ...savedThemes,
         [id]: {
           ...JSON.parse(JSON.stringify(themeData)),
           name: activeThemeData.name
         }
       };
-
-      selectedThemeName = id;
-      selectedTheme = themeData;
-
-      if (isCreatingNew) {
-        editingTheme = id;
-        isCreatingNew = false;
-      }
-
-      lastSavedThemeData = currentThemeData;
-      const storedData = {
-        themes: savedThemes,
-        selectedTheme: selectedThemeName,
-        counter: themeIdCounter
-      };
-      localStorage.setItem('theme-generator', JSON.stringify(storedData));
     }
+
+    selectedThemeName = id;
+    selectedTheme = themeData;
+
+    if (isCreatingNew) {
+      editingTheme = id;
+      isCreatingNew = false;
+    }
+
+    lastSavedThemeData = currentThemeData;
+    const storedData = {
+      themes: savedThemes,
+      selectedTheme: selectedThemeName,
+      counter: themeIdCounter
+    };
+    localStorage.setItem('theme-generator', JSON.stringify(storedData));
   });
 
   function removeOrResetTheme(name) {
@@ -283,58 +294,193 @@
     };
     localStorage.setItem('theme-generator', JSON.stringify(storedData));
   }
+
+  function resetBuiltInThemes() {
+    if (!confirm('Reset all built-in themes to their default values?')) return;
+
+    savedThemes = Object.entries(savedThemes).reduce((acc, [key, value]) => {
+      if (!(key in data.themes)) {
+        acc[key] = value;
+      }
+      return acc;
+    }, {});
+
+    if (selectedThemeName in data.themes) {
+      selectedTheme = data.themes[selectedThemeName];
+    } else {
+      selectedThemeName = 'light';
+      selectedTheme = data.themes.light;
+    }
+
+    const storedData = {
+      themes: savedThemes,
+      selectedTheme: selectedThemeName,
+      counter: themeIdCounter
+    };
+    localStorage.setItem('theme-generator', JSON.stringify(storedData));
+  }
+
+  function deleteCustomThemes() {
+    if (!confirm('Delete all custom themes?')) return;
+
+    savedThemes = Object.entries(savedThemes).reduce((acc, [key, value]) => {
+      if (key in data.themes) {
+        acc[key] = value;
+      }
+      return acc;
+    }, {});
+
+    if (!(selectedThemeName in data.themes)) {
+      selectedThemeName = 'light';
+      selectedTheme = data.themes.light;
+    }
+
+    const storedData = {
+      themes: savedThemes,
+      selectedTheme: selectedThemeName,
+      counter: themeIdCounter
+    };
+    localStorage.setItem('theme-generator', JSON.stringify(storedData));
+  }
 </script>
+
 <svelte:window on:click={closeContextMenuOnClickOutside} />
 <div class="flex flex-col md:flex-row relative">
-  <div class="border-e shrink-0 w-full md:w-[15rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
-    <h2 class="text-lg font-bold mb-4">Themes</h2>
-    <button
-      class="btn btn-primary mb-4 w-full"
-      on:click={createNewTheme}
-    >
-      Create New Theme
-    </button>
+  <div class="border-e shrink-0 w-full md:w-[15rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
+    <div class="flex gap-2 justify-between items-center mb-4">
+
+      <h2 class="font-bold ms-2">Themes</h2>
+
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-square btn-sm m-1">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-48 p-2 shadow-xl">
+          <li class="menu-title">Options</li>
+          <li>
+            <button class="text-xs" on:click={resetBuiltInThemes} title="Reset all default themes">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+              </svg>
+              Reset defaults
+            </button>
+          </li>
+          <li>
+            <button class="text-xs" on:click={deleteCustomThemes} title="Delete all custom themes">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+              </svg>
+              Delete all
+            </button>
+          </li>
+        </ul>
+      </div>
+
+    </div>
 
     <ul class="menu w-full min-w-40 p-0">
-      {#each themesNewestFirst as [id, theme]}
-        {@const currentTheme = savedThemes[id] || theme}
-        <li>
-          <button
-            class="px-2 gap-3"
-            class:menu-active={selectedThemeName === id}
-            on:click={() => loadThemeForEditing(id)}
-            on:contextmenu|preventDefault={(e) => showContextMenuForTheme(e, id)}
-          >
-            <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm"
-              style={`background-color: ${currentTheme['--color-base-100']}`}
-            >
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${currentTheme['--color-base-content']}`}
-              >
-              </div>
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${currentTheme['--color-primary']}`}
-              >
-              </div>
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${currentTheme['--color-secondary']}`}
-              >
-              </div>
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${currentTheme['--color-accent']}`}
-              >
-              </div>
-            </div>
-            <div class="w-32 truncate">
-              {currentTheme.name || id}
-            </div>
-          </button>
-        </li>
-      {/each}
+      <li>
+        <details open>
+          <summary>Custom themes</summary>
+          <ul>
+            <li>
+              <button class="text-xs text-base-content/60 flex border border-base-content/10 border-dashed border-2 my-2 flex-col h-20 items-center justify-center w-full" on:click={() => { createNewTheme(); document.activeElement.blur(); }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  Create new
+              </button>
+            </li>
+            {#each Object.entries(savedThemes).filter(([id]) => !(id in data.themes)).reverse() as [id, theme]}
+              <li>
+                <button
+                  class="px-2 gap-3"
+                  class:menu-active={selectedThemeName === id}
+                  on:click={() => loadThemeForEditing(id)}
+                  on:contextmenu|preventDefault={(e) => showContextMenuForTheme(e, id)}
+                >
+                  <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
+                    style={`background-color: ${theme['--color-base-100']}`}
+                  >
+                    <div
+                      class="size-1 rounded-full"
+                      style={`background-color: ${theme['--color-base-content']}`}
+                    >
+                    </div>
+                    <div
+                      class="size-1 rounded-full"
+                      style={`background-color: ${theme['--color-primary']}`}
+                    >
+                    </div>
+                    <div
+                      class="size-1 rounded-full"
+                      style={`background-color: ${theme['--color-secondary']}`}
+                    >
+                    </div>
+                    <div
+                      class="size-1 rounded-full"
+                      style={`background-color: ${theme['--color-accent']}`}
+                    >
+                    </div>
+                  </div>
+                  <div class="w-32 truncate">
+                    {theme.name || id}
+                  </div>
+                </button>
+              </li>
+            {/each}
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details open>
+          <summary>Built-in themes</summary>
+          <ul>
+            {#each themeOrder as id}
+              {#if id in data.themes}
+                <li>
+                  <button
+                    class="px-2 gap-3"
+                    class:menu-active={selectedThemeName === id}
+                    on:click={() => loadThemeForEditing(id)}
+                    on:contextmenu|preventDefault={(e) => showContextMenuForTheme(e, id)}
+                  >
+                    <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
+                      style={`background-color: ${data.themes[id]['--color-base-100']}`}
+                    >
+                      <div
+                        class="size-1 rounded-full"
+                        style={`background-color: ${data.themes[id]['--color-base-content']}`}
+                      >
+                      </div>
+                      <div
+                        class="size-1 rounded-full"
+                        style={`background-color: ${data.themes[id]['--color-primary']}`}
+                      >
+                      </div>
+                      <div
+                        class="size-1 rounded-full"
+                        style={`background-color: ${data.themes[id]['--color-secondary']}`}
+                      >
+                      </div>
+                      <div
+                        class="size-1 rounded-full"
+                        style={`background-color: ${data.themes[id]['--color-accent']}`}
+                      >
+                      </div>
+                    </div>
+                    <div class="w-32 truncate">
+                      {data.themes[id].name || id}
+                    </div>
+                  </button>
+                </li>
+              {/if}
+            {/each}
+          </ul>
+        </details>
+      </li>
     </ul>
 
   </div>
@@ -354,21 +500,33 @@
         </svg>
       </label>
 
-      <button
-        class="btn btn-ghost btn-sm btn-square"
-        on:click={() => {
-          const newColors = randomizeThemeColors(data.tailwindcolors, data.assignedBgColors);
-          activeThemeData = {
-            ...activeThemeData,
-            ...newColors
-          };
-        }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="fill-current">
-          <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-          <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
-        </svg>
-      </button>
+      <div class="grid gap-2 grid-cols-2">
+        <button
+          class="btn"
+          on:click={()=> {dice.rotate += 90}}
+          on:click={() => {
+            const newColors = randomizeThemeColors(data.tailwindcolors, data.colorPairs);
+            activeThemeData = {
+              ...activeThemeData,
+              ...newColors
+            };
+          }}
+        >
+          <svg style:rotate={`${dice.rotate}deg`} style:transition="rotate 0.4s ease" fill="currentColor" width="16" height="16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M192,28H64A36.04061,36.04061,0,0,0,28,64V192a36.04061,36.04061,0,0,0,36,36H192a36.04061,36.04061,0,0,0,36-36V64A36.04061,36.04061,0,0,0,192,28Zm12,164a12.01312,12.01312,0,0,1-12,12H64a12.01312,12.01312,0,0,1-12-12V64A12.01312,12.01312,0,0,1,64,52H192a12.01312,12.01312,0,0,1,12,12ZM104,88A16,16,0,1,1,88,72,16.01833,16.01833,0,0,1,104,88Zm80,0a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,184,88Zm-80,80a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,104,168Zm80,0a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,184,168Zm-40-40a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,144,128Z"/>
+          </svg>
+          Random
+        </button>
+        <button
+          class="btn btn-primary"
+          on:click={openThemeCSSModal}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="M4.78 4.97a.75.75 0 0 1 0 1.06L2.81 8l1.97 1.97a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0ZM11.22 4.97a.75.75 0 0 0 0 1.06L13.19 8l-1.97 1.97a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 0 0-1.06 0ZM8.856 2.008a.75.75 0 0 1 .636.848l-1.5 10.5a.75.75 0 0 1-1.484-.212l1.5-10.5a.75.75 0 0 1 .848-.636Z" clip-rule="evenodd" />
+          </svg>
+          Get CSS
+        </button>
+      </div>
 
       <h3 class="divider text-xs divider-start">Colors</h3>
       <div class="grid grid-cols-4 gap-4 w-fit">
@@ -403,8 +561,7 @@
                           ? key.replace(`--color-${group}-`, '')
                           : ''
                     }
-                    background={data.assignedBgColors[key] ? activeThemeData[data.assignedBgColors[key]] : undefined}
-                    textColor={data.assignerFgColors[key] ? activeThemeData[data.assignerFgColors[key]] : undefined}
+                    colorPairs={data.colorPairs}
                     themeColors={activeThemeData}
                   />
                 {/if}
@@ -539,18 +696,6 @@
         </label>
       </div>
 
-      <h3 class="divider"></h3>
-
-      <button
-        class="btn btn-primary"
-        on:click={openThemeCSSModal}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-          <path fill-rule="evenodd" d="M4.78 4.97a.75.75 0 0 1 0 1.06L2.81 8l1.97 1.97a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0ZM11.22 4.97a.75.75 0 0 0 0 1.06L13.19 8l-1.97 1.97a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 0 0-1.06 0ZM8.856 2.008a.75.75 0 0 1 .636.848l-1.5 10.5a.75.75 0 0 1-1.484-.212l1.5-10.5a.75.75 0 0 1 .848-.636Z" clip-rule="evenodd" />
-        </svg>
-        Get CSS
-      </button>
-
     </div>
   {/if}
 
@@ -619,10 +764,39 @@
 {/if}
 
 
-<dialog bind:this={themeCSSModal} class="modal">
-  <div class="modal-box border border-base-300 sm:max-w-[40rem] max-sm:modal-bottom">
-    <h3 class="font-bold w-full block text-lg mb-4">Add this to your CSS file</h3>
+<dialog bind:this={themeCSSModal} class="modal max-md:modal-bottom">
+  <div class="modal-box border border-base-300 md:max-w-[40rem] max-sm:modal-bottom">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="font-bold">Add this to your CSS file</h3>
+      <button class="btn btn-sm" on:click={copyThemeCSSToClipboard}>
+        {#if isClipboardButtonPressed}
+						<svg
+							class="h-5 w-5 fill-current"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 32 32"
+						>
+							<path
+								d="M 16 2 C 14.742188 2 13.847656 2.890625 13.40625 4 L 5 4 L 5 29 L 27 29 L 27 4 L 18.59375 4 C 18.152344 2.890625 17.257813 2 16 2 Z M 16 4 C 16.554688 4 17 4.445313 17 5 L 17 6 L 20 6 L 20 8 L 12 8 L 12 6 L 15 6 L 15 5 C 15 4.445313 15.445313 4 16 4 Z M 7 6 L 10 6 L 10 10 L 22 10 L 22 6 L 25 6 L 25 27 L 7 27 Z M 21.28125 13.28125 L 15 19.5625 L 11.71875 16.28125 L 10.28125 17.71875 L 14.28125 21.71875 L 15 22.40625 L 15.71875 21.71875 L 22.71875 14.71875 Z"
+							>
+							</path>
+						</svg>
+					{:else}
+						<svg
+							class="h-5 w-5 fill-current"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 32 32"
+						>
+							<path
+								d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 5.445313 15.445313 5 16 5 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"
+							>
+							</path>
+						</svg>
+					{/if}
+        Copy to clipboard
+      </button>
+    </div>
     <textarea
+      spellcheck="false"
       data-theme="dark"
       class="block resize-none textarea textarea-border w-full max-w-none h-96 font-mono textarea-xs min-h-80"
       bind:value={themeCSS}
@@ -633,14 +807,6 @@
         }
       }}
     ></textarea>
-    <div class="modal-action">
-      <button class="btn btn-sm" on:click={copyThemeCSSToClipboard}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
-        </svg>
-        Copy to Clipboard
-      </button>
-    </div>
   </div>
   <div class="modal-backdrop" on:click={() => themeCSSModal.close()}></div>
 </dialog>

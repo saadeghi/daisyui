@@ -21,22 +21,20 @@ const colorInitials = {
 	"--color-error": "e",
 	"--color-error-content": "ec",
 }
-const assignedBgColors = {
-	"--color-base-content": "--color-base-100",
-	"--color-primary-content": "--color-primary",
-	"--color-secondary-content": "--color-secondary",
-	"--color-accent-content": "--color-accent",
-	"--color-neutral-content": "--color-neutral",
-	"--color-info-content": "--color-info",
-	"--color-success-content": "--color-success",
-	"--color-warning-content": "--color-warning",
-	"--color-error-content": "--color-error",
-}
-const assignerFgColors = {
-	"--color-base-100": "--color-base-content",
-	"--color-base-200": "--color-base-content",
-	"--color-base-300": "--color-base-content",
-}
+
+const colorPairs = [
+	["--color-base-100", "--color-base-content"],
+	["--color-base-200", "--color-base-content"],
+	["--color-base-300", "--color-base-content"],
+	["--color-primary", "--color-primary-content"],
+	["--color-secondary", "--color-secondary-content"],
+	["--color-accent", "--color-accent-content"],
+	["--color-neutral", "--color-neutral-content"],
+	["--color-info", "--color-info-content"],
+	["--color-success", "--color-success-content"],
+	["--color-warning", "--color-warning-content"],
+	["--color-error", "--color-error-content"],
+]
 
 const tailwindcolors = {
 	"slate-50": "oklch(98% 0.003 247.858)",
@@ -287,8 +285,7 @@ const tailwindcolors = {
 export async function load() {
 	return {
 		themes,
-		assignedBgColors,
-		assignerFgColors,
+		colorPairs,
 		tailwindcolors,
 		colorInitials,
 	}

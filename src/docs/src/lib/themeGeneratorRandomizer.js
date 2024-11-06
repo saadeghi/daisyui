@@ -36,6 +36,14 @@ export function randomizeThemeColors(tailwindcolors) {
 		return null
 	}
 
+	function getRandomArray(arrays, probability = 0.2) {
+		const randomNumber = Math.random()
+		if (randomNumber < probability) {
+			return arrays[1]
+		}
+		return arrays[0]
+	}
+
 	// Initialize newColors object
 	const newColors = {
 		"--radius-badge": randomFrom(radiusValues),
@@ -48,7 +56,29 @@ export function randomizeThemeColors(tailwindcolors) {
 	newColors["color-scheme"] = isDarkTheme ? "dark" : "light"
 
 	// Base colors
-	const baseColorNames = ["slate", "gray", "zinc", "neutral", "stone"]
+	const baseColorNamesArray = [
+		["slate", "gray", "zinc", "neutral", "stone"], // base array
+		[
+			"red",
+			"orange",
+			"amber",
+			"yellow",
+			"lime",
+			"green",
+			"emerald",
+			"teal",
+			"cyan",
+			"sky",
+			"blue",
+			"indigo",
+			"violet",
+			"purple",
+			"fuchsia",
+			"pink",
+			"rose",
+		], // alternate array
+	]
+	const baseColorNames = getRandomArray(baseColorNamesArray)
 	const baseColorName = baseColorNames[Math.floor(Math.random() * baseColorNames.length)]
 	if (isDarkTheme) {
 		// Dark theme: high numbers (darker colors)

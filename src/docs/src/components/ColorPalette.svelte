@@ -1,11 +1,12 @@
 <script>
+  import ContrastMeter from "$components/themegenerator/ContrastMeter.svelte"
+
   let {
     colors,
     value = $bindable(),
     name = "",
     label = "",
-    background = undefined,
-    textColor = undefined,
+    colorPairs = [],
     themeColors = {},
     colorInitials = {}
   } = $props();
@@ -94,6 +95,7 @@
     }
     return initials.length > 0 ? initials : null;
   }
+
   function getTextColorClass(name) {
     const numberMatch = name.match(/\d+/);
     const number = numberMatch ? parseInt(numberMatch[0], 10) : null;
@@ -101,6 +103,17 @@
       return 'text-white';
     }
     return 'text-black';
+  }
+
+  function getPairColor(currentColor) {
+    for (const [color, contentColor] of colorPairs) {
+      if (currentColor === color) {
+        return themeColors[contentColor];
+      } else if (currentColor === contentColor) {
+        return themeColors[color];
+      }
+    }
+    return currentColor;
   }
 </script>
 
@@ -111,10 +124,10 @@
 
 <button
   type="button"
-  class="w-14 h-10 border-1 border-base-content/10 rounded-lg cursor-pointer grid place-items-center outline-offset-2 focus:outline-2"
+  class="w-14 h-10 border-1 border-base-content/10 rounded-lg cursor-pointer grid place-items-center outline-offset-2 focus:outline-2 outline-base-content"
   aria-label={`Choose ${name}: ${value}`}
-  style:color={label==='A' ? value : textColor}
-  style:background-color={label==='A' ? background : value}
+  style:color={label==='A' ? value : getPairColor(name)}
+  style:background-color={label==='A' ? getPairColor(name) : value}
   class:font-black={label==='A'}
   class:text-2xl={label==='A'}
   on:click={toggleModal}
@@ -125,18 +138,27 @@
   class="modal modal-bottom lg:modal-middle [&::backdrop]:hidden"
   inert={!open ? true : undefined}
 >
-  <div class="modal-box border border-base-300 lg:max-w-[50rem] max-lg:max-h-[50vh] flex flex-col gap-4">
+  <div class="modal-box p-0 border border-base-300 lg:max-w-[50rem] max-lg:max-h-[80vh] flex flex-col gap-4">
     {#if open}
-    <div class="flex gap-2 items-center">
-      <div
-        class="h-8 w-12 border-1 border-base-300 rounded-lg grid place-items-center"
-        aria-label={`Choose ${name}: ${value}`}
-        style:color={label==='A' ? value : textColor}
-        style:background-color={label==='A' ? background : value}
-        class:font-black={label==='A'}
-        class:text-xl={label==='A'}
-      >{label}</div>
-        <h2 class="text-sm"><span class="opacity-50">Pick a color for</span> {name.replace('--color-','').replace('-',' ')}</h2>
+      <div class="flex gap-2 justify-between items-center p-8 pb-0">
+        <div class="flex gap-2 items-center relative pb-4">
+          <div
+            class="h-8 w-12 border-1 border-base-300 rounded-lg grid place-items-center text-xl font-black"
+            aria-label={`Choose ${name}: ${value}`}
+            style:color={label==='A' ? value : getPairColor(name)}
+            style:background-color={label==='A' ? getPairColor(name) : value}
+          >
+          A
+          </div>
+          <div
+            class="h-px border border-px border-t-base-100/20 border-x-0 border-b-base-content/50 absolute"
+            class:w-[2.4rem]={label==='A'}
+            class:start-[1.85rem]={label==='A'}
+            class:w-[1.4rem]={label!=='A'}
+            class:start-[2.9rem]={label!=='A'}
+          ></div>
+          <h2 class="text-sm ms-5"><span class="opacity-50">Pick a color for</span> {name.replace('--color-','').replace('-',' ')}</h2>
+        </div>
       </div>
       <div
         class="lg:[writing-mode:vertical-lr] mx-auto w-fit grid grid-cols-11 lg:min-h-[20rem]"
@@ -162,7 +184,7 @@
             >
               {#if getColorInitials(color)}
                 {#if getColorInitials(color).length > 1}
-                  <span data-tip={getColorNames(color).join(', ')} class={`tooltip text-[9px] font-mono font-semibold px-px before:lowercase before:text-[10px] uppercase ${getTextColorClass(name)}`}>{getColorInitials(color)[0]}+</span>
+                  <span data-tip={getColorNames(color).join(', ')} class={`tooltip text-[9px] font-mono font-semibold px-px before:lowercase before:max-w-24 before:text-[10px] uppercase ${getTextColorClass(name)}`}>{getColorInitials(color)[0]}+</span>
                 {:else}
                   <span data-tip={getColorNames(color)[0]} class={`tooltip text-[9px] font-mono font-semibold px-px before:lowercase before:text-[10px] uppercase ${getTextColorClass(name)}`}>{getColorInitials(color)[0]}</span>
                 {/if}
@@ -171,16 +193,20 @@
           </button>
         {/each}
       </div>
-      <div class="flex gap-2 items-center">
-        <div class="input input-border input-sm flex gap-2 items-center max-w-none">
+      <div class="flex gap-2 items-center bg-base-200 px-8 py-6 justify-between items-center">
+        <div class="flex flex-col gap-1 grow">
           <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>
           <input
+            class="input input-border input-sm w-full"
             type="text"
             value={inputValue}
             on:input={handleInput}
             aria-label={`${name} value`}
           />
         </div>
+        <ContrastMeter
+          color1={value}
+          color2={getPairColor(name)}/>
       </div>
     {/if}
   </div>

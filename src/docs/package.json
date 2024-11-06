@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "@minimal-analytics/ga4": "1.8.7",
-    "culori": "4.0.1",
+    "culori": "^4.0.1",
     "lodash.debounce": "4.0.8",
     "nanoid": "5.0.7",
     "svelte-countdown": "1.1.2",

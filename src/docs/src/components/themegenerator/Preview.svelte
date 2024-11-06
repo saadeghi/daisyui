@@ -27,7 +27,7 @@
     <div class="card card-sm bg-base-100 border border-base-200">
       <div class="card-body gap-4">
         <h2 class="flex justify-between items-center">
-          <span class="font-semibold">Products</span>
+          <span class="font-semibold">Preview</span>
           <span class="text-xs link">more</span>
         </h2>
         <div>
