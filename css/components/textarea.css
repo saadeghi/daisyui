@@ -80,6 +80,16 @@
       @apply outline-accent border-accent;
     }
   }
+  
+  &.textarea-neutral {
+    @apply border-neutral;
+    background-color: color-mix(in oklab, var(--color-neutral) 2%, transparent);
+
+    &:focus,
+    &:focus-within {
+      @apply outline-neutral border-neutral;
+    }
+  }
 
   &.textarea-info {
     @apply border-info;

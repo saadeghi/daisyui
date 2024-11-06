@@ -84,7 +84,7 @@
   class="modal modal-bottom lg:modal-middle"
   inert={!open ? true : undefined}
   {open}>
-    <div class="modal-box lg:max-w-[50rem] max-lg:max-h-[50vh] flex flex-col gap-4">
+    <div class="modal-box border border-base-300 lg:max-w-[50rem] max-lg:max-h-[50vh] flex flex-col gap-4">
       {#if open}
         <div
           class="lg:[writing-mode:vertical-lr] mx-auto w-fit grid grid-cols-11 lg:min-h-[20rem]"
