@@ -4,7 +4,7 @@
   import { nameGenerator } from "$lib/nameGenerator"
   import { parseThemeCSS } from "$lib/themeGeneratorCssParser"
   import { randomizeThemeColors } from "$lib/themeGeneratorRandomizer"
-  import {validateThemeName,validateThemeStructure } from "$lib/themeGeneratorValidation"
+  import { validateThemeName, validateThemeStructure } from "$lib/themeGeneratorValidation"
   import themeOrder from "../../../../../../functions/themeOrder"
   import { browser } from '$app/environment';
   import { untrack } from 'svelte';
@@ -45,21 +45,6 @@
 
     return [...customThemes, ...builtInThemes];
   });
-
-  function isThemeModified(themeId) {
-    if (!(themeId in data.themes)) {
-      // Custom themes are always considered modified
-      return true;
-    }
-
-    if (!savedThemes[themeId]) {
-      // Built-in theme with no saved version is not modified
-      return false;
-    }
-
-    // Compare saved version with original
-    return JSON.stringify(savedThemes[themeId]) !== JSON.stringify(data.themes[themeId]);
-  }
 
   function showContextMenuForTheme(e, themeId) {
     e.preventDefault();
@@ -105,23 +90,23 @@
   $effect(() => {
     if (!browser) return;
     try {
-      const storedThemes = localStorage.getItem('daisyUI-5-theme-generator-custom-themes');
-      const storedSelectedTheme = localStorage.getItem('daisyUI-5-theme-generator-selected-theme');
-
-      if (storedThemes) {
-        const parsed = JSON.parse(storedThemes);
-        const validated = Object.entries(parsed).reduce((acc, [key, value]) => {
+      const storedData = localStorage.getItem('theme-generator');
+      if (storedData) {
+        const parsed = JSON.parse(storedData);
+        const validatedThemes = Object.entries(parsed.themes).reduce((acc, [key, value]) => {
           const sanitized = validateThemeStructure(value);
           if (sanitized) acc[key] = sanitized;
           return acc;
         }, {});
-        savedThemes = validated;
-      }
+        savedThemes = validatedThemes;
 
-      if (storedSelectedTheme && validateThemeName(storedSelectedTheme)) {
-        selectedThemeName = storedSelectedTheme;
-        const themes = untrack(() => ({ ...data.themes, ...savedThemes }));
-        selectedTheme = themes[storedSelectedTheme];
+        if (validateThemeName(parsed.selectedTheme)) {
+          selectedThemeName = parsed.selectedTheme;
+          const themes = untrack(() => ({ ...data.themes, ...savedThemes }));
+          selectedTheme = themes[parsed.selectedTheme];
+        }
+
+        themeIdCounter = parsed.counter;
       }
     } catch (error) {
       console.error('Failed to load themes:', error);
@@ -143,12 +128,12 @@
   $effect(() => {
     if (!browser) return;
     const currentThemes = untrack(() => JSON.stringify(savedThemes));
-    localStorage.setItem('daisyUI-5-theme-generator-custom-themes', currentThemes);
-  });
-
-  $effect(() => {
-    if (!browser || !selectedThemeName) return;
-    localStorage.setItem('daisyUI-5-theme-generator-selected-theme', selectedThemeName);
+    const storedData = {
+      themes: JSON.parse(currentThemes),
+      selectedTheme: selectedThemeName,
+      counter: themeIdCounter
+    };
+    localStorage.setItem('theme-generator', JSON.stringify(storedData));
   });
 
   function loadThemeForEditing(id) {
@@ -239,7 +224,12 @@
       }
 
       lastSavedThemeData = currentThemeData;
-      localStorage.setItem('daisyUI-5-theme-generator-custom-themes', JSON.stringify(savedThemes));
+      const storedData = {
+        themes: savedThemes,
+        selectedTheme: selectedThemeName,
+        counter: themeIdCounter
+      };
+      localStorage.setItem('theme-generator', JSON.stringify(storedData));
     }
   });
 
@@ -265,11 +255,9 @@
         };
         lastSavedThemeData = JSON.stringify(activeThemeData);
       }
-      localStorage.setItem('daisyUI-5-theme-generator-custom-themes', JSON.stringify(savedThemes));
     } else {
       const { [name]: _, ...rest } = savedThemes;
       savedThemes = rest;
-      localStorage.setItem('daisyUI-5-theme-generator-custom-themes', JSON.stringify(rest));
 
       if (editingTheme === name) {
         editingTheme = null;
@@ -283,13 +271,17 @@
       } else {
         selectedThemeName = 'light';
         selectedTheme = data.themes.light;
-        if (browser) {
-          localStorage.setItem('daisyUI-5-theme-generator-selected-theme', 'light');
-        }
       }
     }
 
     contextMenu.show = false;
+
+    const storedData = {
+      themes: savedThemes,
+      selectedTheme: selectedThemeName,
+      counter: themeIdCounter
+    };
+    localStorage.setItem('theme-generator', JSON.stringify(storedData));
   }
 </script>
 <svelte:window on:click={closeContextMenuOnClickOutside} />
@@ -402,6 +394,7 @@
                   <ColorPalette
                     name={key}
                     colors={data.tailwindcolors}
+                    colorInitials={data.colorInitials}
                     bind:value={activeThemeData[key]}
                     label={
                       key.endsWith('-content')
@@ -412,6 +405,7 @@
                     }
                     background={data.assignedBgColors[key] ? activeThemeData[data.assignedBgColors[key]] : undefined}
                     textColor={data.assignerFgColors[key] ? activeThemeData[data.assignerFgColors[key]] : undefined}
+                    themeColors={activeThemeData}
                   />
                 {/if}
               {/each}

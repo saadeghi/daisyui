@@ -6,6 +6,8 @@
     label = "",
     background = undefined,
     textColor = undefined,
+    themeColors = {},
+    colorInitials = {}
   } = $props();
   let open = $state(false);
   let inputValue = $state(value);
@@ -72,6 +74,34 @@
   $effect(() => {
     inputValue = value;
   });
+
+  function getColorNames(color) {
+    const names = [];
+    for (const [key, themeColor] of Object.entries(themeColors)) {
+      if (themeColor === color) {
+        names.push(key.replace("--color-", ""));
+      }
+    }
+    return names.length > 0 ? names : null;
+  }
+
+  function getColorInitials(color) {
+    const initials = [];
+    for (const [key, themeColor] of Object.entries(themeColors)) {
+      if (themeColor === color) {
+        initials.push(colorInitials[key] || null);
+      }
+    }
+    return initials.length > 0 ? initials : null;
+  }
+  function getTextColorClass(name) {
+    const numberMatch = name.match(/\d+/);
+    const number = numberMatch ? parseInt(numberMatch[0], 10) : null;
+    if (number > 500 || name.includes('black')) {
+      return 'text-white';
+    }
+    return 'text-black';
+  }
 </script>
 
 <svelte:window
@@ -92,11 +122,22 @@
 
 <dialog
   bind:this={dialog}
-  class="modal modal-bottom lg:modal-middle"
+  class="modal modal-bottom lg:modal-middle [&::backdrop]:hidden"
   inert={!open ? true : undefined}
 >
   <div class="modal-box border border-base-300 lg:max-w-[50rem] max-lg:max-h-[50vh] flex flex-col gap-4">
     {#if open}
+    <div class="flex gap-2 items-center">
+      <div
+        class="h-8 w-12 border-1 border-base-300 rounded-lg grid place-items-center"
+        aria-label={`Choose ${name}: ${value}`}
+        style:color={label==='A' ? value : textColor}
+        style:background-color={label==='A' ? background : value}
+        class:font-black={label==='A'}
+        class:text-xl={label==='A'}
+      >{label}</div>
+        <h2 class="text-sm"><span class="opacity-50">Pick a color for</span> {name.replace('--color-','').replace('-',' ')}</h2>
+      </div>
       <div
         class="lg:[writing-mode:vertical-lr] mx-auto w-fit grid grid-cols-11 lg:min-h-[20rem]"
         role="listbox"
@@ -104,7 +145,7 @@
         {#each Object.entries(colors) as [name, color]}
           <button
             type="button"
-            class="appearance-none p-px"
+            class="appearance-none p-px [writing-mode:lr]"
             aria-label={name}
             aria-selected={value === color}
             on:mousedown={() => handleDragStart(color)}
@@ -113,26 +154,26 @@
             on:keypress={() => handleDragStart(color)}
           >
             <div
-              class="rounded-full border border-base-content/10 w-7 m-px relative aspect-square select-none bg-transparent"
+              class="rounded-full border border-base-content/10 w-7 m-px relative aspect-square select-none bg-transparent grid place-items-center"
               class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={value === color}
               class:outline-white={value === color}
               class:outline-offest-[-3px]={value === color}
               style:background-color={color}
-            ></div>
+            >
+              {#if getColorInitials(color)}
+                {#if getColorInitials(color).length > 1}
+                  <span data-tip={getColorNames(color).join(', ')} class={`tooltip text-[9px] font-mono font-semibold px-px before:lowercase before:text-[10px] uppercase ${getTextColorClass(name)}`}>{getColorInitials(color)[0]}+</span>
+                {:else}
+                  <span data-tip={getColorNames(color)[0]} class={`tooltip text-[9px] font-mono font-semibold px-px before:lowercase before:text-[10px] uppercase ${getTextColorClass(name)}`}>{getColorInitials(color)[0]}</span>
+                {/if}
+              {/if}
+            </div>
           </button>
         {/each}
       </div>
       <div class="flex gap-2 items-center">
-        <div
-          class="h-8 w-12 border-1 border-base-300 rounded-lg grid place-items-center"
-          aria-label={`Choose ${name}: ${value}`}
-          style:color={label==='A' ? value : textColor}
-          style:background-color={label==='A' ? background : value}
-          class:font-black={label==='A'}
-          class:text-xl={label==='A'}
-        >{label}</div>
         <div class="input input-border input-sm flex gap-2 items-center max-w-none">
-          <span class="text-xs text-base-content/60 shrink-0">{name}:</span>
+          <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>
           <input
             type="text"
             value={inputValue}

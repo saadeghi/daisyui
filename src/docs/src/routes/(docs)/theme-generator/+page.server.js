@@ -1,4 +1,26 @@
 import themes from "../../../../../../theme/object.js"
+const colorInitials = {
+	"--color-base-100": "b1",
+	"--color-base-200": "b2",
+	"--color-base-300": "b3",
+	"--color-base-content": "bc",
+	"--color-primary": "p",
+	"--color-primary-content": "pc",
+	"--color-secondary": "s",
+	"--color-secondary-content": "sc",
+	"--color-accent": "a",
+	"--color-accent-content": "ac",
+	"--color-neutral": "n",
+	"--color-neutral-content": "nc",
+	"--color-info": "i",
+	"--color-info-content": "ic",
+	"--color-success": "s",
+	"--color-success-content": "sc",
+	"--color-warning": "w",
+	"--color-warning-content": "wc",
+	"--color-error": "e",
+	"--color-error-content": "ec",
+}
 const assignedBgColors = {
 	"--color-base-content": "--color-base-100",
 	"--color-primary-content": "--color-primary",
@@ -268,5 +290,6 @@ export async function load() {
 		assignedBgColors,
 		assignerFgColors,
 		tailwindcolors,
+		colorInitials,
 	}
 }

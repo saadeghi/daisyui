@@ -1,5 +1,5 @@
 // Validation patterns
-const themeNamePattern = /^[a-z]{3,20}$/
+const themeNamePattern = /^[a-z0-9_]{3,20}$/
 const borderRadiusPattern = /^(0|0\.25rem|0\.5rem|1rem|2rem)$/
 const borderWidthPattern = /^[12]px$/
 
@@ -20,7 +20,15 @@ export function validateColor(color) {
 }
 
 export function validateThemeName(name) {
-	return typeof name === "string" && themeNamePattern.test(name)
+	if (typeof name !== "string") {
+		console.error("Theme name must be a string")
+		return false
+	}
+	if (!themeNamePattern.test(name)) {
+		console.error("Theme name does not match the required pattern")
+		return false
+	}
+	return true
 }
 
 export function validateRadius(radius) {

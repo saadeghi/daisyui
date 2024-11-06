@@ -1,7 +1,6 @@
 export const nameGenerator = () => {
 	const adjectives = [
 		// Classic theme adjectives
-		"pretty",
 		"shiny",
 		"soft",
 		"dark",
@@ -19,19 +18,17 @@ export const nameGenerator = () => {
 		"deep",
 		"minimal",
 		"fresh",
-		"gentle",
 		"modern",
 		"dreamy",
 		"quiet",
 		"smooth",
 
 		// Time/Weather related
-		"misty",
+		"hot",
 		"rainy",
 		"sunny",
 		"night",
-		"dawn",
-		"dusk",
+		"warm",
 
 		// Unexpected/Funny
 		"sleepy",
@@ -57,7 +54,7 @@ export const nameGenerator = () => {
 
 		// slang adjectives
 		"based",
-		"bussin",
+		"bro",
 		"fire",
 		"sus",
 		"chad",
@@ -70,16 +67,17 @@ export const nameGenerator = () => {
 		"highkey",
 		"core",
 		"sheesh",
-		"poggers",
 		"cringe",
 		"yeet",
 		"goated",
-		"feral",
+		"alpha",
+		"beta",
+		"goblin",
 		"swag",
 		"fr",
 		"actually",
 		"literally",
-		"no-cap",
+		"cap",
 		"bestie",
 		"main",
 		"toxic",
@@ -88,7 +86,7 @@ export const nameGenerator = () => {
 		"emo",
 		"extra",
 		"mid",
-		"manic",
+		"drip",
 		"rizz",
 		"skibidi",
 		"real",
@@ -102,7 +100,6 @@ export const nameGenerator = () => {
 		"leaf",
 		"rose",
 		"sky",
-		"forest",
 		"river",
 		"ocean",
 		"breeze",
@@ -122,7 +119,6 @@ export const nameGenerator = () => {
 		"penguin",
 
 		// Objects/Food
-		"crystal",
 		"candy",
 		"bubble",
 		"cookie",
@@ -138,11 +134,12 @@ export const nameGenerator = () => {
 		"pickle",
 
 		// Tech/Gaming
-		"pixel",
-		"robot",
-		"cyber",
-		"gaming",
+		"npc",
+		"bot",
+		"ratio",
 		"wizard",
+		"witch",
+		"goblin",
 
 		// Unexpected/Funny
 		"toothpaste",
