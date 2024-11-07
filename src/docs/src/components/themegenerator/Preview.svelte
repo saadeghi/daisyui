@@ -1,4 +1,4 @@
-<div class="sm:columns-2 md:columns-1 lg:columns-2 xl:columns-3 text-base-content [&>*]:shadow-sm [&>*]:mb-4 [&>*]:break-inside-avoid">
+<div class="sm:columns-2 md:columns-1 lg:columns-2 xl:columns-3 text-base-content [&>*]:shadow-sm [&>*]:mb-4 [&>*]:break-inside-avoid [&_*]:[transition:background-color_100ms,border-color_100ms,border-radius_500ms_ease-out]">
 
     <!-- <nav class="bg-base-200 text-base-content rounded-box col-span-8 flex gap-2 items-center justify-between">
       <ul class="menu menu-sm menu-horizontal shrink-0">

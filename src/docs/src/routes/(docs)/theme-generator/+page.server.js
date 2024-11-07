@@ -1,4 +1,11 @@
 import themes from "../../../../../../theme/object.js"
+
+const radiusValues = [
+	["--radius-badge", "Badge, toggle, etc.", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
+	["--radius-btn", "Button, input, select, etc.", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
+	["--radius-box", "Card, modal, etc.", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
+	["--radius-tab", "Tab (lift)", ["0", "0.125rem", "0.25rem", "0.5rem", "0.75rem"]],
+]
 const colorInitials = {
 	"--color-base-100": "b1",
 	"--color-base-200": "b2",
@@ -288,5 +295,6 @@ export async function load() {
 		colorPairs,
 		tailwindcolors,
 		colorInitials,
+		radiusValues,
 	}
 }

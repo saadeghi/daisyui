@@ -11,7 +11,7 @@ async function processFile(filePath) {
     const allCssVariables = fileContent.match(/--[\w-]+/g) || [];
     const cssVariables = allCssVariables.length;
 
-    const twVariables = allCssVariables.filter(variable => variable.startsWith('--tw'));
+    const twVariables = allCssVariables.filter(variable => variable.startsWith('--tw') && variable !== '--tw-content');
     const filename = path.basename(filePath);
     if (twVariables.length > 0 && !['typography.css', 'properties.css', 'states.css', 'responsive.css', 'full.css'].includes(filename)) {
       console.log(`Warning: unnecessary --tw variables in ${filename}:`, twVariables);

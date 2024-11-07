@@ -1,6 +1,7 @@
 export function randomizeThemeColors(tailwindcolors) {
 	const randomFrom = (arr) => arr[Math.floor(Math.random() * arr.length)]
 	const radiusValues = ["0", "0.25rem", "0.5rem", "1rem", "2rem"]
+	const borderValues = ["1px", "2px"]
 
 	function randomFromRange(colors, ranges) {
 		const validColors = Object.entries(colors).filter(([name, _]) => {
@@ -48,7 +49,10 @@ export function randomizeThemeColors(tailwindcolors) {
 	const newColors = {
 		"--radius-badge": randomFrom(radiusValues),
 		"--radius-btn": randomFrom(radiusValues),
+		"--radius-tab": randomFrom(["0", "0.125rem", "0.25rem", "0.5rem", "0.75rem"]),
 		"--radius-box": randomFrom(radiusValues),
+		"--spacing-button-border": randomFrom(borderValues),
+		"--spacing-tab-border": randomFrom(borderValues),
 	}
 
 	// Decide if theme should be light or dark

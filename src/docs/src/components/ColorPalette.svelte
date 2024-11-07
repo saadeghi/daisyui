@@ -1,5 +1,7 @@
 <script>
   import ContrastMeter from "$components/themegenerator/ContrastMeter.svelte"
+  import { validateColor } from "$lib/themeGeneratorValidation"
+
 
   let {
     colors,
@@ -51,7 +53,9 @@
 
   function handleInput(event) {
     inputValue = event.target.value;
-    value = inputValue;
+    if (validateColor(inputValue)) {
+      value = inputValue;
+    }
   }
 
   function toggleModal() {
@@ -70,6 +74,9 @@
   function closeModal() {
     open = false;
     dialog.close();
+    if (!validateColor(inputValue)) {
+      inputValue = value;
+    }
   }
 
   $effect(() => {
@@ -126,6 +133,7 @@
   type="button"
   class="w-14 h-10 border-1 border-base-content/10 rounded-lg cursor-pointer grid place-items-center outline-offset-2 focus:outline-2 outline-base-content"
   aria-label={`Choose ${name}: ${value}`}
+  title={name}
   style:color={label==='A' ? value : getPairColor(name)}
   style:background-color={label==='A' ? getPairColor(name) : value}
   class:font-black={label==='A'}
@@ -176,7 +184,7 @@
             on:keypress={() => handleDragStart(color)}
           >
             <div
-              class="rounded-full border border-base-content/10 w-7 m-px relative aspect-square select-none bg-transparent grid place-items-center"
+              class="rounded-full border border-base-content/10 w-5 sm:w-7 sm:m-px relative aspect-square select-none bg-transparent grid place-items-center"
               class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={value === color}
               class:outline-white={value === color}
               class:outline-offest-[-3px]={value === color}
@@ -193,16 +201,23 @@
           </button>
         {/each}
       </div>
-      <div class="flex gap-2 items-center bg-base-200 px-8 py-6 justify-between items-center">
+      <div class="flex flex-col md:flex-row gap-2 items-center bg-base-200 px-8 py-6 justify-between items-center">
         <div class="flex flex-col gap-1 grow">
           <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>
-          <input
-            class="input input-border input-sm w-full"
-            type="text"
-            value={inputValue}
-            on:input={handleInput}
-            aria-label={`${name} value`}
-          />
+          <label class="input input-border items-center w-full flex gap-2">
+            <input
+              type="text"
+              value={inputValue}
+              on:input={handleInput}
+              aria-label={`${name} value`}
+            />
+            {#if Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
+              <span class="opacity/50 shrink-0 badge badge-xs badge-soft max-md:hidden">
+                {Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
+                <svg width="16px" height="16px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z" fill="currentColor"/></svg>
+              </span>
+            {/if}
+          </label>
         </div>
         <ContrastMeter
           color1={value}

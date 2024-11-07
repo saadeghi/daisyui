@@ -27,12 +27,6 @@
   });
   let lastSavedThemeData = $state(null);
   let themeCSS = $state('');
-  let contextMenu = $state({
-    show: false,
-    x: 0,
-    y: 0,
-    themeId: null
-  });
 
   let combinedThemes = $derived({ ...data.themes, ...savedThemes });
   let themesNewestFirst = $derived.by(() => {
@@ -47,35 +41,24 @@
     return [...customThemes, ...builtInThemes];
   });
 
-  function showContextMenuForTheme(e, themeId) {
-    e.preventDefault();
-    contextMenu = {
-      show: true,
-      x: e.clientX,
-      y: e.clientY,
-      themeId
-    };
-  }
-
-  function closeContextMenuOnClickOutside(e) {
-    if (contextMenu.show && !e.target.closest('.context-menu')) {
-      contextMenu.show = false;
-    }
-  }
-
   function openThemeCSSModal() {
     const baseProps = [
       `  name: "${activeThemeData.name}";`,
       `  color-scheme: "${activeThemeData['color-scheme']}";`,
-      `  default: ${activeThemeData.default};`,
-      `  prefersdark: ${activeThemeData.prefersdark};`,
+      `  default: ${activeThemeData.default | false};`,
+      `  prefersdark: ${activeThemeData.prefersdark | false};`,
     ];
 
     const cssProps = Object.entries(activeThemeData)
-      .filter(([key]) => key.startsWith('--'))
-      .map(([key, value]) => `  ${key}: ${value};`);
-
-    themeCSS = `@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n}`;
+        .filter(([key]) => key.startsWith('--color'))
+        .map(([key, value]) => `  ${key}: ${value};`);
+    const radiusProps = Object.entries(activeThemeData)
+        .filter(([key]) => key.startsWith('--radius'))
+        .map(([key, value]) => `  ${key}: ${value};`);
+    const borderProps = Object.entries(activeThemeData)
+        .filter(([key]) => key.startsWith('--spacing'))
+        .map(([key, value]) => `  ${key}: ${value};`);
+    themeCSS = `@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n${radiusProps.join('\n')}\n${borderProps.join('\n')}\n}`;
 
     if (themeCSSModal) {
       themeCSSModal.showModal();
@@ -101,6 +84,7 @@
         const validatedThemes = Object.entries(parsed.themes).reduce((acc, [key, value]) => {
           const sanitized = validateThemeStructure(value);
           if (sanitized) acc[key] = sanitized;
+          else console.error(`Invalid theme structure for theme ${key}. Skipping.`);
           return acc;
         }, {});
         savedThemes = validatedThemes;
@@ -109,6 +93,10 @@
           selectedThemeName = parsed.selectedTheme;
           const themes = untrack(() => ({ ...data.themes, ...savedThemes }));
           selectedTheme = themes[parsed.selectedTheme];
+        } else {
+          console.error(`Invalid selected theme name: ${parsed.selectedTheme}. Falling back to 'light'.`);
+          selectedThemeName = 'light';
+          selectedTheme = data.themes.light;
         }
 
         themeIdCounter = parsed.counter;
@@ -142,13 +130,21 @@
   });
 
   function loadThemeForEditing(id) {
-    editingTheme = id;
     const isBuiltIn = id in data.themes;
 
-    // Use the original theme data if it's built-in and not modified
-    const themeToEdit = (isBuiltIn && !savedThemes[id])
-      ? data.themes[id]
-      : savedThemes[id] || data.themes[id];
+    if (isBuiltIn) {
+      // Generate a unique custom theme ID for the selected built-in theme
+      themeIdCounter++;
+      const customThemeId = `theme_${themeIdCounter}`;
+      savedThemes = {
+        [customThemeId]: { ...data.themes[id], name: nameGenerator() },
+        ...savedThemes,
+      };
+      id = customThemeId;
+    }
+
+    editingTheme = id;
+    const themeToEdit = savedThemes[id] || data.themes[id];
 
     activeThemeData = {
       id,
@@ -163,14 +159,16 @@
   }
 
   function createNewTheme() {
-    isCreatingNew = true;
-    editingTheme = null;
+    // Generate a unique theme ID
     themeIdCounter++;
     const themeId = `theme_${themeIdCounter}`;
+
+    // Generate a new theme name
     const name = nameGenerator();
 
-    if (!validateThemeName(name)) {
-      console.error('Invalid theme name generated');
+    // Check if the generated name is already used
+    if (themeId in savedThemes || themeId in data.themes) {
+      console.error('Generated theme name already exists. Skipping theme creation.');
       return;
     }
 
@@ -180,7 +178,7 @@
     activeThemeData = {
       id: themeId,
       name,
-      ...randomColors, // Use random colors instead of data.themes.light
+      ...randomColors,
       default: false,
       prefersdark: false
     };
@@ -197,8 +195,33 @@
     const { id, ...themeData } = activeThemeData;
     const isBuiltIn = id in data.themes;
 
-    // For built-in themes, only save if there are actual changes
-    if (isBuiltIn) {
+    if (!isBuiltIn) {
+      // Handle non-built-in (custom) themes
+      savedThemes = {
+        [id]: {
+          ...JSON.parse(JSON.stringify(themeData)),
+          name: activeThemeData.name
+        },
+        ...savedThemes,
+      };
+
+      selectedThemeName = id;
+      selectedTheme = themeData;
+
+      if (isCreatingNew) {
+        editingTheme = id;
+        isCreatingNew = false;
+      }
+
+      lastSavedThemeData = currentThemeData;
+      const storedData = {
+        themes: savedThemes,
+        selectedTheme: selectedThemeName,
+        counter: themeIdCounter
+      };
+      localStorage.setItem('theme-generator', JSON.stringify(storedData));
+    } else {
+      // For built-in themes, only save if there are actual changes
       const originalData = JSON.stringify(data.themes[id]);
       const newData = JSON.stringify(themeData);
       if (originalData === newData) {
@@ -212,113 +235,51 @@
         // Update both data.themes and savedThemes to ensure reactivity
         data.themes[id] = { ...themeData };
         savedThemes = {
+          [id]: { ...themeData },
           ...savedThemes,
-          [id]: { ...themeData }
         };
       }
-    } else if (validateThemeName(activeThemeData.name)) {
-      // Handle non-built-in themes
-      savedThemes = {
-        ...savedThemes,
-        [id]: {
-          ...JSON.parse(JSON.stringify(themeData)),
-          name: activeThemeData.name
-        }
-      };
     }
+  });
 
-    selectedThemeName = id;
-    selectedTheme = themeData;
+  function removeTheme(name) {
 
-    if (isCreatingNew) {
-      editingTheme = id;
+    if (!confirm(`Delete theme "${name}"?`)) return;
+
+    const { [name]: _, ...rest } = savedThemes;
+    savedThemes = rest;
+
+    if (editingTheme === name) {
+      editingTheme = null;
       isCreatingNew = false;
     }
 
-    lastSavedThemeData = currentThemeData;
+    if (selectedThemeName === name) {
+      // Sort themeList based on themesNewestFirst order
+      const themeList = Object.keys(combinedThemes).sort((a, b) => {
+        const aIndex = themesNewestFirst.findIndex(([id]) => id === a);
+        const bIndex = themesNewestFirst.findIndex(([id]) => id === b);
+        return aIndex - bIndex;
+      });
+
+      const currentIndex = themeList.indexOf(name);
+      const newIndex = currentIndex < themeList.length - 1 ? currentIndex + 1 : currentIndex - 1;
+      const newSelectedTheme = newIndex >= 0 ? themeList[newIndex] : 'light';
+
+      selectedThemeName = newSelectedTheme;
+      selectedTheme = combinedThemes[newSelectedTheme];
+    }
+  }
+
+  // Add an effect to handle localStorage updates
+  $effect(() => {
     const storedData = {
-      themes: savedThemes,
+      themes: JSON.parse(JSON.stringify(savedThemes)),
       selectedTheme: selectedThemeName,
       counter: themeIdCounter
     };
     localStorage.setItem('theme-generator', JSON.stringify(storedData));
   });
-
-  function removeOrResetTheme(name) {
-    const isBuiltIn = name in data.themes;
-    const themeName = combinedThemes[name]?.name || name;
-    const message = isBuiltIn
-      ? `Reset theme "${themeName}" to default?`
-      : `Delete theme "${themeName}"?`;
-
-    if (!confirm(message)) return;
-
-    if (isBuiltIn) {
-      savedThemes = {
-        ...savedThemes,
-        [name]: { ...data.themes[name] }
-      };
-      if (editingTheme === name) {
-        activeThemeData = {
-          id: activeThemeData.id,
-          name,
-          ...data.themes[name]
-        };
-        lastSavedThemeData = JSON.stringify(activeThemeData);
-      }
-    } else {
-      const { [name]: _, ...rest } = savedThemes;
-      savedThemes = rest;
-
-      if (editingTheme === name) {
-        editingTheme = null;
-        isCreatingNew = false;
-      }
-    }
-
-    if (selectedThemeName === name) {
-      if (isBuiltIn) {
-        selectedTheme = data.themes[name];
-      } else {
-        selectedThemeName = 'light';
-        selectedTheme = data.themes.light;
-      }
-    }
-
-    contextMenu.show = false;
-
-    const storedData = {
-      themes: savedThemes,
-      selectedTheme: selectedThemeName,
-      counter: themeIdCounter
-    };
-    localStorage.setItem('theme-generator', JSON.stringify(storedData));
-  }
-
-  function resetBuiltInThemes() {
-    if (!confirm('Reset all built-in themes to their default values?')) return;
-
-    savedThemes = Object.entries(savedThemes).reduce((acc, [key, value]) => {
-      if (!(key in data.themes)) {
-        acc[key] = value;
-      }
-      return acc;
-    }, {});
-
-    if (selectedThemeName in data.themes) {
-      selectedTheme = data.themes[selectedThemeName];
-    } else {
-      selectedThemeName = 'light';
-      selectedTheme = data.themes.light;
-    }
-
-    const storedData = {
-      themes: savedThemes,
-      selectedTheme: selectedThemeName,
-      counter: themeIdCounter
-    };
-    localStorage.setItem('theme-generator', JSON.stringify(storedData));
-  }
 
   function deleteCustomThemes() {
     if (!confirm('Delete all custom themes?')) return;
@@ -326,6 +287,8 @@
     savedThemes = Object.entries(savedThemes).reduce((acc, [key, value]) => {
       if (key in data.themes) {
         acc[key] = value;
+      } else {
+        console.error(`Deleting custom theme: ${key}`);
       }
       return acc;
     }, {});
@@ -344,9 +307,8 @@
   }
 </script>
 
-<svelte:window on:click={closeContextMenuOnClickOutside} />
 <div class="flex flex-col md:flex-row relative">
-  <div class="border-e shrink-0 w-full md:w-[15rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
+  <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[15rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
     <div class="flex gap-2 justify-between items-center mb-4">
 
       <h2 class="font-bold ms-2">Themes</h2>
@@ -359,14 +321,6 @@
         </div>
         <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-48 p-2 shadow-xl">
           <li class="menu-title">Options</li>
-          <li>
-            <button class="text-xs" on:click={resetBuiltInThemes} title="Reset all default themes">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-              </svg>
-              Reset defaults
-            </button>
-          </li>
           <li>
             <button class="text-xs" on:click={deleteCustomThemes} title="Delete all custom themes">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
@@ -382,108 +336,97 @@
 
     <ul class="menu w-full min-w-40 p-0">
       <li>
-        <details open>
-          <summary>Custom themes</summary>
-          <ul>
-            <li>
-              <button class="text-xs text-base-content/60 flex border border-base-content/10 border-dashed border-2 my-2 flex-col h-20 items-center justify-center w-full" on:click={() => { createNewTheme(); document.activeElement.blur(); }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  </svg>
-                  Create new
-              </button>
-            </li>
-            {#each Object.entries(savedThemes).filter(([id]) => !(id in data.themes)).reverse() as [id, theme]}
-              <li>
-                <button
-                  class="px-2 gap-3"
-                  class:menu-active={selectedThemeName === id}
-                  on:click={() => loadThemeForEditing(id)}
-                  on:contextmenu|preventDefault={(e) => showContextMenuForTheme(e, id)}
-                >
-                  <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
-                    style={`background-color: ${theme['--color-base-100']}`}
-                  >
-                    <div
-                      class="size-1 rounded-full"
-                      style={`background-color: ${theme['--color-base-content']}`}
-                    >
-                    </div>
-                    <div
-                      class="size-1 rounded-full"
-                      style={`background-color: ${theme['--color-primary']}`}
-                    >
-                    </div>
-                    <div
-                      class="size-1 rounded-full"
-                      style={`background-color: ${theme['--color-secondary']}`}
-                    >
-                    </div>
-                    <div
-                      class="size-1 rounded-full"
-                      style={`background-color: ${theme['--color-accent']}`}
-                    >
-                    </div>
-                  </div>
-                  <div class="w-32 truncate">
-                    {theme.name || id}
-                  </div>
-                </button>
-              </li>
-            {/each}
-          </ul>
-        </details>
+        <button class="bg-origin-border text-xs flex border border-base-content/10 border-dashed my-2 flex-col h-20 items-center justify-center w-full" on:click={() => { createNewTheme(); document.activeElement.blur(); }} style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
+          <svg class="size-5" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path></svg>
+          <span class="opacity-60">Create new</span>
+        </button>
       </li>
-      <li>
-        <details open>
-          <summary>Built-in themes</summary>
-          <ul>
-            <!-- {#each themeOrder as id} -->
-            {#each themesNewestFirst as [id, theme]}
-              {@const currentTheme = savedThemes[id] || theme}
+      <li class="menu-title">Custom themes</li>
 
-              {#if id in data.themes}
-                <li>
-                  <button
-                    class="px-2 gap-3"
-                    class:menu-active={selectedThemeName === id}
-                    on:click={() => loadThemeForEditing(id)}
-                    on:contextmenu|preventDefault={(e) => showContextMenuForTheme(e, id)}
-                  >
-                    <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
-                      style={`background-color: ${currentTheme['--color-base-100']}`}
-                    >
-                      <div
-                        class="size-1 rounded-full"
-                        style={`background-color: ${currentTheme['--color-base-content']}`}
-                      >
-                      </div>
-                      <div
-                        class="size-1 rounded-full"
-                        style={`background-color: ${currentTheme['--color-primary']}`}
-                      >
-                      </div>
-                      <div
-                        class="size-1 rounded-full"
-                        style={`background-color: ${currentTheme['--color-secondary']}`}
-                      >
-                      </div>
-                      <div
-                        class="size-1 rounded-full"
-                        style={`background-color: ${currentTheme['--color-accent']}`}
-                      >
-                      </div>
-                    </div>
-                    <div class="w-32 truncate">
-                      {currentTheme.name || id}
-                    </div>
-                  </button>
-                </li>
-              {/if}
-            {/each}
-          </ul>
-        </details>
-      </li>
+      {#each Object.entries(savedThemes).filter(([id]) => !(id in data.themes)) as [id, theme]}
+        <li>
+          <button
+            class="px-2 gap-3"
+            class:menu-active={selectedThemeName === id}
+            on:click={() => loadThemeForEditing(id)}
+          >
+            <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
+              style={`background-color: ${theme['--color-base-100']}`}
+            >
+              <div
+                class="size-1 rounded-full"
+                style={`background-color: ${theme['--color-base-content']}`}
+              >
+              </div>
+              <div
+                class="size-1 rounded-full"
+                style={`background-color: ${theme['--color-primary']}`}
+              >
+              </div>
+              <div
+                class="size-1 rounded-full"
+                style={`background-color: ${theme['--color-secondary']}`}
+              >
+              </div>
+              <div
+                class="size-1 rounded-full"
+                style={`background-color: ${theme['--color-accent']}`}
+              >
+              </div>
+            </div>
+            <div class="w-32 truncate">
+              {theme.name || id}
+            </div>
+          </button>
+        </li>
+      {/each}
+      <li></li>
+      <li class="menu-title">daisyUI themes</li>
+      {#each themesNewestFirst as [id, theme]}
+        {@const currentTheme = savedThemes[id] || theme}
+
+        {#if id in data.themes}
+          <li>
+            <button
+              class="px-2 gap-3"
+              class:menu-active={selectedThemeName === id}
+              on:click={() => {
+                loadThemeForEditing(id);
+                const menu = document.querySelector('#themelist');
+                menu.scrollTop = 0;
+              }}
+              >
+              <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
+                style={`background-color: ${currentTheme['--color-base-100']}`}
+              >
+                <div
+                  class="size-1 rounded-full"
+                  style={`background-color: ${currentTheme['--color-base-content']}`}
+                >
+                </div>
+                <div
+                  class="size-1 rounded-full"
+                  style={`background-color: ${currentTheme['--color-primary']}`}
+                >
+                </div>
+                <div
+                  class="size-1 rounded-full"
+                  style={`background-color: ${currentTheme['--color-secondary']}`}
+                >
+                </div>
+                <div
+                  class="size-1 rounded-full"
+                  style={`background-color: ${currentTheme['--color-accent']}`}
+                >
+                </div>
+              </div>
+              <div class="w-32 truncate">
+                {currentTheme.name || id}
+              </div>
+            </button>
+          </li>
+        {/if}
+      {/each}
     </ul>
 
   </div>
@@ -505,7 +448,7 @@
 
       <div class="grid gap-2 grid-cols-2">
         <button
-          class="btn"
+          class="btn btn-soft group"
           on:click={()=> {dice.rotate += 90}}
           on:click={() => {
             const newColors = randomizeThemeColors(data.tailwindcolors, data.colorPairs);
@@ -515,18 +458,18 @@
             };
           }}
         >
-          <svg style:rotate={`${dice.rotate}deg`} style:transition="rotate 0.4s ease" fill="currentColor" width="16" height="16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          <svg class="group-active:scale-95" style:rotate={`${dice.rotate}deg`} style:transition="rotate 0.4s ease" fill="currentColor" width="16" height="16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
             <path d="M192,28H64A36.04061,36.04061,0,0,0,28,64V192a36.04061,36.04061,0,0,0,36,36H192a36.04061,36.04061,0,0,0,36-36V64A36.04061,36.04061,0,0,0,192,28Zm12,164a12.01312,12.01312,0,0,1-12,12H64a12.01312,12.01312,0,0,1-12-12V64A12.01312,12.01312,0,0,1,64,52H192a12.01312,12.01312,0,0,1,12,12ZM104,88A16,16,0,1,1,88,72,16.01833,16.01833,0,0,1,104,88Zm80,0a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,184,88Zm-80,80a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,104,168Zm80,0a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,184,168Zm-40-40a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,144,128Z"/>
           </svg>
           Random
         </button>
         <button
-          class="btn btn-primary"
+          class="btn btn-neutral"
           on:click={openThemeCSSModal}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-            <path fill-rule="evenodd" d="M4.78 4.97a.75.75 0 0 1 0 1.06L2.81 8l1.97 1.97a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0ZM11.22 4.97a.75.75 0 0 0 0 1.06L13.19 8l-1.97 1.97a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 0 0-1.06 0ZM8.856 2.008a.75.75 0 0 1 .636.848l-1.5 10.5a.75.75 0 0 1-1.484-.212l1.5-10.5a.75.75 0 0 1 .848-.636Z" clip-rule="evenodd" />
-          </svg>
+        <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+          <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
+        </svg>
           Get CSS
         </button>
       </div>
@@ -576,11 +519,7 @@
       </div>
 
       <h3 class="divider text-xs divider-start">Radius</h3>
-      {#each [
-        ['--radius-badge', 'Badge, toggle, etc.'],
-        ['--radius-btn', 'Button, input, select, etc.'],
-        ['--radius-box', 'Card, modal, etc.']
-      ] as [key, label]}
+      {#each data.radiusValues as [key, label, values]}
         <div class="form-control w-full max-w-fit">
           <div class="text-xs mb-2 text-base-content/60" id={`${key}-group`}>{label}</div>
           <div
@@ -588,15 +527,10 @@
             role="radiogroup"
             aria-labelledby={`${key}-group`}
           >
-            {#each [
-              '0',
-              '0.25rem',
-              '0.5rem',
-              '1rem',
-              '2rem'
-            ] as value}
+            {#each values as value}
               <label
                 class="rounded-btn overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
+                title={value}
               >
                 <input
                   type="radio"
@@ -699,6 +633,15 @@
         </label>
       </div>
 
+      <h3 class="divider text-xs divider-start"></h3>
+
+      <button class="btn btn-block text-error" on:click={() => removeTheme(activeThemeData.id)}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+        </svg>
+        Delete theme
+      </button>
+
     </div>
   {/if}
 
@@ -739,32 +682,6 @@
   </button>
 </nav>
 
-
-{#if contextMenu.show}
-  {@const hasActions = (contextMenu.themeId in data.themes &&
-    savedThemes[contextMenu.themeId] &&
-    JSON.stringify(savedThemes[contextMenu.themeId]) !== JSON.stringify(data.themes[contextMenu.themeId])) ||
-    (!(contextMenu.themeId in data.themes) && savedThemes[contextMenu.themeId])}
-
-  {#if hasActions}
-    <div
-      class="context-menu fixed z-50"
-      style="left: {contextMenu.x}px; top: {contextMenu.y}px"
-    >
-      <ul class="menu bg-base-100 border border-base-200 w-48 rounded-box shadow-2xl">
-        <li class="menu-title">{combinedThemes[contextMenu.themeId]?.name || contextMenu.themeId}</li>
-        <li>
-          <button on:click={() => removeOrResetTheme(contextMenu.themeId)}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-error size-4">
-              <path fill-rule="evenodd" d="M5 3.25V4H2.75a.75.75 0 0 0 0 1.5h.3l.815 8.15A1.5 1.5 0 0 0 5.357 15h5.285a1.5 1.5 0 0 0 1.493-1.35l.815-8.15h.3a.75.75 0 0 0 0-1.5H11v-.75A2.25 2.25 0 0 0 8.75 1h-1.5A2.25 2.25 0 0 0 5 3.25Zm2.25-.75a.75.75 0 0 0-.75.75V4h3v-.75a.75.75 0 0 0-.75-.75h-1.5ZM6.05 6a.75.75 0 0 1 .787.713l.275 5.5a.75.75 0 0 1-1.498.075l-.275-5.5A.75.75 0 0 1 6.05 6Zm3.9 0a.75.75 0 0 1 .712.787l-.275 5.5a.75.75 0 0 1-1.498-.075l.275-5.5a.75.75 0 0 1 .786-.711Z" clip-rule="evenodd" />
-            </svg>
-            {contextMenu.themeId in data.themes ? 'Reset to default' : 'Delete'}
-          </button>
-        </li>
-      </ul>
-    </div>
-  {/if}
-{/if}
 
 
 <dialog bind:this={themeCSSModal} class="modal max-md:modal-bottom">
