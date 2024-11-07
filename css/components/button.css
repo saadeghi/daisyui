@@ -29,10 +29,20 @@
 	background-position: top, bottom, left, right;
 	--btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-color) 30%, transparent),
 		0 4px 3px -2px color-mix(in oklab, var(--btn-color) 30%, transparent);
-	--btn-gradient: linear-gradient(to left, transparent 25%, oklch(100% 0 0/0.3), transparent 75%),
-		linear-gradient(to left, transparent 25%, oklch(100% 0 0/0.3), transparent 75%),
-		linear-gradient(-50deg, transparent 50%, color-mix(in oklab, transparent, white 4%)),
-		linear-gradient(50deg, transparent 50%, color-mix(in oklab, transparent, white 4%));
+	--btn-gradient: linear-gradient(
+			to left,
+			transparent 25%,
+			color-mix(in oklab, color-mix(in oklab, white 20%, var(--color-base-100)) 30%, transparent),
+			transparent 75%
+		),
+		linear-gradient(
+			to left,
+			transparent 25%,
+			color-mix(in oklab, color-mix(in oklab, white 20%, var(--color-base-100)) 10%, transparent),
+			transparent 75%
+		),
+		linear-gradient(-50deg, transparent 50%, color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)),
+		linear-gradient(50deg, transparent 50%, color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%));
 
 	&:hover {
 		--btn-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);
