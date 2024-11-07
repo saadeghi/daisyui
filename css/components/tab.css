@@ -80,14 +80,14 @@
 
   .tab {
     --tab-border: 0 0 var(--spacing-tab-border) 0;
-    --tab-radius-ss: var(--radius-btn);
-    --tab-radius-se: var(--radius-btn);
+    --tab-radius-ss: var(--radius-tab);
+    --tab-radius-se: var(--radius-tab);
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
     --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
-    --tab-corner-width: calc(100% + var(--radius-btn) * 2);
-    --tab-corner-height: var(--radius-btn);
+    --tab-corner-width: calc(100% + var(--radius-tab) * 2);
+    --tab-corner-height: var(--radius-tab);
     --tab-corner-position: top left, top right;
     --last-tab-margin: 0 var(--tab-padding) 0 0;
 
@@ -127,7 +127,7 @@
         height: var(--tab-corner-height);
         background-position: var(--tab-corner-position);
         background-image: var(--radius-start), var(--radius-end);
-        background-size: var(--radius-btn) var(--radius-btn);
+        background-size: var(--radius-tab) var(--radius-tab);
         background-repeat: no-repeat;
         inset: var(--tab-inset);
       }
@@ -177,14 +177,14 @@
   .tab {
     --tab-order: 0;
     --tab-border: 0 0 var(--spacing-tab-border) 0;
-    --tab-radius-ss: var(--radius-btn);
-    --tab-radius-se: var(--radius-btn);
+    --tab-radius-ss: var(--radius-tab);
+    --tab-radius-se: var(--radius-tab);
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
     --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
-    --tab-corner-width: calc(100% + var(--radius-btn) * 2);
-    --tab-corner-height: var(--radius-btn);
+    --tab-corner-width: calc(100% + var(--radius-tab) * 2);
+    --tab-corner-height: var(--radius-tab);
     --tab-corner-position: top left, top right;
     --last-tab-margin: 0 var(--tab-padding) 0 0;
 
@@ -241,12 +241,12 @@
     --tab-border: var(--spacing-tab-border) 0 0 0;
     --tab-radius-ss: 0;
     --tab-radius-se: 0;
-    --tab-radius-es: var(--radius-btn);
-    --tab-radius-ee: var(--radius-btn);
+    --tab-radius-es: var(--radius-tab);
+    --tab-radius-ee: var(--radius-tab);
     --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
     --tab-paddings: 0 var(--tab-padding) var(--spacing-tab-border) var(--tab-padding);
-    --tab-corner-width: calc(100% + var(--radius-btn) * 2);
-    --tab-corner-height: var(--radius-btn);
+    --tab-corner-width: calc(100% + var(--radius-tab) * 2);
+    --tab-corner-height: var(--radius-tab);
     --tab-corner-position: top left, top right;
     --last-tab-margin: 0 var(--tab-padding) 0 0;
 
@@ -301,14 +301,14 @@
   .tab {
     --tab-order: 0;
     --tab-border: 0 var(--spacing-tab-border) 0 0;
-    --tab-radius-ss: var(--radius-btn);
+    --tab-radius-ss: var(--radius-tab);
     --tab-radius-se: 0;
-    --tab-radius-es: var(--radius-btn);
+    --tab-radius-es: var(--radius-tab);
     --tab-radius-ee: 0;
     --tab-paddings: var(--spacing-tab-border) var(--tab-padding) var(--spacing-tab-border) calc(var(--tab-padding) + var(--spacing-tab-border));
     --tab-border-colors: transparent var(--tab-border-color) transparent transparent;
-    --tab-corner-width: var(--radius-btn);
-    --tab-corner-height: calc(100% + var(--radius-btn) * 2);
+    --tab-corner-width: var(--radius-tab);
+    --tab-corner-height: calc(100% + var(--radius-tab) * 2);
     --tab-corner-position: top right, bottom right;
     --last-tab-margin: 0 0 0 0;
 
