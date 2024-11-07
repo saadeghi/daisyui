@@ -145,7 +145,7 @@
           <span class="font-semibold">Price range</span>
         </h2>
         <div class="text-5xl font-extralight text-center">25</div>
-        <input type="range" class="range" />
+        <input type="range" class="range range-sm" />
       </div>
     </div>
 

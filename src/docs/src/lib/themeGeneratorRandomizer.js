@@ -164,8 +164,8 @@ export function randomizeThemeColors(tailwindcolors) {
 	newColors["--color-error-content"] = getContrastColor(errorColorName, semanticShade)
 
 	// Primary, Secondary, Accent colors
-	const accentShade = randomFrom(["400", "500", "600", "950"])
-	const accentColorNames = [
+	const brandShades = randomFrom(["400", "500", "600", "950"])
+	const brandColorNames = [
 		"red",
 		"orange",
 		"amber",
@@ -186,30 +186,30 @@ export function randomizeThemeColors(tailwindcolors) {
 	]
 
 	// Pick three different color families
-	const [primaryColorName, secondaryColorName, accentColorName] = shuffle(accentColorNames).slice(
+	const [primaryColorName, secondaryColorName, accentColorName] = shuffle(brandColorNames).slice(
 		0,
 		3
 	)
 
 	newColors["--color-primary"] = randomFromRange(tailwindcolors, {
 		colorNames: [primaryColorName],
-		shades: [accentShade],
+		shades: [brandShades],
 	})
 
 	newColors["--color-secondary"] = randomFromRange(tailwindcolors, {
 		colorNames: [secondaryColorName],
-		shades: [accentShade],
+		shades: [brandShades],
 	})
 
 	newColors["--color-accent"] = randomFromRange(tailwindcolors, {
 		colorNames: [accentColorName],
-		shades: [accentShade],
+		shades: [brandShades],
 	})
 
 	// Set primary/secondary/accent content colors
-	newColors["--color-primary-content"] = getContrastColor(primaryColorName, accentShade)
-	newColors["--color-secondary-content"] = getContrastColor(secondaryColorName, accentShade)
-	newColors["--color-accent-content"] = getContrastColor(accentColorName, accentShade)
+	newColors["--color-primary-content"] = getContrastColor(primaryColorName, brandShades)
+	newColors["--color-secondary-content"] = getContrastColor(secondaryColorName, brandShades)
+	newColors["--color-accent-content"] = getContrastColor(accentColorName, brandShades)
 
 	return newColors
 }

@@ -12,14 +12,14 @@ const colorInitials = {
 	"--color-accent-content": "ac",
 	"--color-neutral": "n",
 	"--color-neutral-content": "nc",
-	"--color-info": "i",
-	"--color-info-content": "ic",
-	"--color-success": "s",
-	"--color-success-content": "sc",
-	"--color-warning": "w",
-	"--color-warning-content": "wc",
-	"--color-error": "e",
-	"--color-error-content": "ec",
+	"--color-info": "in",
+	"--color-info-content": "inc",
+	"--color-success": "su",
+	"--color-success-content": "suc",
+	"--color-warning": "wa",
+	"--color-warning-content": "wac",
+	"--color-error": "er",
+	"--color-error-content": "erc",
 }
 
 const colorPairs = [
@@ -279,8 +279,8 @@ const tailwindcolors = {
 	"rose-800": "oklch(45% 0.188 13.697)",
 	"rose-900": "oklch(41% 0.159 10.272)",
 	"rose-950": "oklch(27% 0.105 12.094)",
-	black: "oklch(0% 0 0)",
 	white: "oklch(100% 0 0)",
+	black: "oklch(0% 0 0)",
 }
 export async function load() {
 	return {
