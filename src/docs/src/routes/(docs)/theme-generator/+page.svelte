@@ -336,18 +336,17 @@
 
     <ul class="menu w-full min-w-40 p-0">
       <li>
-        <button class="bg-origin-border text-xs flex border border-base-content/10 border-dashed my-2 flex-col h-20 items-center justify-center w-full" on:click={() => { createNewTheme(); document.activeElement.blur(); }} style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
+        <button class="btn bg-auto" on:click={() => { createNewTheme(); document.activeElement.blur(); }} style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
           <svg class="size-5" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path></svg>
-          <span class="opacity-60">Create new</span>
+          <span>Create new theme</span>
         </button>
       </li>
-      <li class="menu-title">Custom themes</li>
+      <li class="menu-title mt-6">Custom themes</li>
 
       {#each Object.entries(savedThemes).filter(([id]) => !(id in data.themes)) as [id, theme]}
         <li>
           <button
-            class="px-2 gap-3"
-            class:menu-active={selectedThemeName === id}
+            class={`px-2 gap-3 ${selectedThemeName === id ? 'bg-base-content/10' : ''}`}
             on:click={() => loadThemeForEditing(id)}
           >
             <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
@@ -388,7 +387,8 @@
         {#if id in data.themes}
           <li>
             <button
-              class="px-2 gap-3"
+              title="Clone this theme"
+              class="px-2 gap-3 group"
               class:menu-active={selectedThemeName === id}
               on:click={() => {
                 loadThemeForEditing(id);
@@ -423,6 +423,7 @@
               <div class="w-32 truncate">
                 {currentTheme.name || id}
               </div>
+              <svg class="size-3 opacity-0 group-hover:opacity-60" width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12.719 6.913A3.001 3.001 0 0012 1a3 3 0 00-.787 5.896c-.282 2.395-2.124 4.164-4.561 4.34A3.005 3.005 0 004.5 9.095V2A.75.75 0 003 2v7.095a3.001 3.001 0 103.658 3.643c3.26-.187 5.758-2.606 6.061-5.825zM10.5 4a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm-8.25 8a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd"/></svg>
             </button>
           </li>
         {/if}
@@ -446,9 +447,9 @@
         </svg>
       </label>
 
-      <div class="grid gap-2 grid-cols-2">
+      <div class="grid gap-2 grid-cols-2 w-full">
         <button
-          class="btn btn-soft group"
+          class="btn group"
           on:click={()=> {dice.rotate += 90}}
           on:click={() => {
             const newColors = randomizeThemeColors(data.tailwindcolors, data.colorPairs);
