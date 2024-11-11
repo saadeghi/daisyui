@@ -1,8 +1,10 @@
 <script>
   import ColorPalette from "$components/ColorPalette.svelte"
   import Preview from "$components/themegenerator/Preview.svelte"
+  import ThemeCSSModal from "$components/themegenerator/ThemeCSSModal.svelte";
+  import Dock from "$components/themegenerator/Dock.svelte";
+  import ThemeListItem from "$components/themegenerator/ThemeListItem.svelte";
   import { nameGenerator } from "$lib/nameGenerator"
-  import { parseThemeCSS } from "$lib/themeGeneratorCssParser"
   import { randomizeThemeColors } from "$lib/themeGeneratorRandomizer"
   import { validateThemeName, validateThemeStructure } from "$lib/themeGeneratorValidation"
   import themeOrder from "../../../../../../functions/themeOrder"
@@ -65,15 +67,6 @@
     }
   }
 
-  let isClipboardButtonPressed = $state(false);
-  function copyThemeCSSToClipboard() {
-    navigator.clipboard.writeText(themeCSS)
-      .then(() => {
-        isClipboardButtonPressed = true;
-        setTimeout(() => isClipboardButtonPressed = false, 2000);
-      })
-      .catch(err => console.error('Failed to copy:', err));
-  }
 
   $effect(() => {
     if (!browser) return;
@@ -344,40 +337,12 @@
       <li class="menu-title mt-6">Custom themes</li>
 
       {#each Object.entries(savedThemes).filter(([id]) => !(id in data.themes)) as [id, theme]}
-        <li>
-          <button
-            class={`px-2 gap-3 ${selectedThemeName === id ? 'bg-base-content/10' : ''}`}
-            on:click={() => loadThemeForEditing(id)}
-          >
-            <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
-              style={`background-color: ${theme['--color-base-100']}`}
-            >
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${theme['--color-base-content']}`}
-              >
-              </div>
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${theme['--color-primary']}`}
-              >
-              </div>
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${theme['--color-secondary']}`}
-              >
-              </div>
-              <div
-                class="size-1 rounded-full"
-                style={`background-color: ${theme['--color-accent']}`}
-              >
-              </div>
-            </div>
-            <div class="w-32 truncate">
-              {theme.name || id}
-            </div>
-          </button>
-        </li>
+        <ThemeListItem
+          id={id}
+          theme={theme}
+          selectedThemeName={selectedThemeName}
+          loadThemeForEditing={loadThemeForEditing}
+        />
       {/each}
       <li></li>
       <li class="menu-title">daisyUI themes</li>
@@ -385,47 +350,12 @@
         {@const currentTheme = savedThemes[id] || theme}
 
         {#if id in data.themes}
-          <li>
-            <button
-              title="Clone this theme"
-              class="px-2 gap-3 group"
-              class:menu-active={selectedThemeName === id}
-              on:click={() => {
-                loadThemeForEditing(id);
-                const menu = document.querySelector('#themelist');
-                menu.scrollTop = 0;
-              }}
-              >
-              <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
-                style={`background-color: ${currentTheme['--color-base-100']}`}
-              >
-                <div
-                  class="size-1 rounded-full"
-                  style={`background-color: ${currentTheme['--color-base-content']}`}
-                >
-                </div>
-                <div
-                  class="size-1 rounded-full"
-                  style={`background-color: ${currentTheme['--color-primary']}`}
-                >
-                </div>
-                <div
-                  class="size-1 rounded-full"
-                  style={`background-color: ${currentTheme['--color-secondary']}`}
-                >
-                </div>
-                <div
-                  class="size-1 rounded-full"
-                  style={`background-color: ${currentTheme['--color-accent']}`}
-                >
-                </div>
-              </div>
-              <div class="w-32 truncate">
-                {currentTheme.name || id}
-              </div>
-              <svg class="size-3 opacity-0 group-hover:opacity-60" width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M12.719 6.913A3.001 3.001 0 0012 1a3 3 0 00-.787 5.896c-.282 2.395-2.124 4.164-4.561 4.34A3.005 3.005 0 004.5 9.095V2A.75.75 0 003 2v7.095a3.001 3.001 0 103.658 3.643c3.26-.187 5.758-2.606 6.061-5.825zM10.5 4a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm-8.25 8a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd"/></svg>
-            </button>
-          </li>
+          <ThemeListItem
+            id={id}
+            theme={currentTheme}
+            selectedThemeName={selectedThemeName}
+            loadThemeForEditing={loadThemeForEditing}
+          />
         {/if}
       {/each}
     </ul>
@@ -661,73 +591,10 @@
   {/if}
 </div>
 
-<nav class="dock md:hidden">
-  <button class:dock-active={dockActiveItem === "themes"} on:click={()=>{dockActiveItem='themes'}}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-      <path d="M3.5 2A1.5 1.5 0 0 0 2 3.5v2A1.5 1.5 0 0 0 3.5 7h2A1.5 1.5 0 0 0 7 5.5v-2A1.5 1.5 0 0 0 5.5 2h-2ZM3.5 9A1.5 1.5 0 0 0 2 10.5v2A1.5 1.5 0 0 0 3.5 14h2A1.5 1.5 0 0 0 7 12.5v-2A1.5 1.5 0 0 0 5.5 9h-2ZM9 3.5A1.5 1.5 0 0 1 10.5 2h2A1.5 1.5 0 0 1 14 3.5v2A1.5 1.5 0 0 1 12.5 7h-2A1.5 1.5 0 0 1 9 5.5v-2ZM10.5 9A1.5 1.5 0 0 0 9 10.5v2a1.5 1.5 0 0 0 1.5 1.5h2a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 12.5 9h-2Z" />
-    </svg>
-    <span class="dock-label">Themes</span>
-  </button>
-  <button class:dock-active={dockActiveItem === "editor"} on:click={()=>{dockActiveItem='editor'}}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-      <path d="M12.613 1.258a1.535 1.535 0 0 1 2.13 2.129l-1.905 2.856a8 8 0 0 1-3.56 2.939 4.011 4.011 0 0 0-2.46-2.46 8 8 0 0 1 2.94-3.56l2.855-1.904ZM5.5 8A2.5 2.5 0 0 0 3 10.5a.5.5 0 0 1-.7.459.75.75 0 0 0-.983 1A3.5 3.5 0 0 0 8 10.5 2.5 2.5 0 0 0 5.5 8Z" />
-    </svg>
-    <span class="dock-label">Editor</span>
-  </button>
-  <button class:dock-active={dockActiveItem === "preview"} on:click={()=>{dockActiveItem='preview'}}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-      <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
-      <path fill-rule="evenodd" d="M1.38 8.28a.87.87 0 0 1 0-.566 7.003 7.003 0 0 1 13.238.006.87.87 0 0 1 0 .566A7.003 7.003 0 0 1 1.379 8.28ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" clip-rule="evenodd" />
-    </svg>
-    <span class="dock-label">Preview</span>
-  </button>
-</nav>
+<Dock bind:dockActiveItem={dockActiveItem} />
 
-
-
-<dialog bind:this={themeCSSModal} class="modal max-md:modal-bottom">
-  <div class="modal-box border border-base-300 md:max-w-[40rem] max-sm:modal-bottom">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="font-bold">Add this to your CSS file</h3>
-      <button class="btn btn-sm" on:click={copyThemeCSSToClipboard}>
-        {#if isClipboardButtonPressed}
-						<svg
-							class="h-5 w-5 fill-current"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 32 32"
-						>
-							<path
-								d="M 16 2 C 14.742188 2 13.847656 2.890625 13.40625 4 L 5 4 L 5 29 L 27 29 L 27 4 L 18.59375 4 C 18.152344 2.890625 17.257813 2 16 2 Z M 16 4 C 16.554688 4 17 4.445313 17 5 L 17 6 L 20 6 L 20 8 L 12 8 L 12 6 L 15 6 L 15 5 C 15 4.445313 15.445313 4 16 4 Z M 7 6 L 10 6 L 10 10 L 22 10 L 22 6 L 25 6 L 25 27 L 7 27 Z M 21.28125 13.28125 L 15 19.5625 L 11.71875 16.28125 L 10.28125 17.71875 L 14.28125 21.71875 L 15 22.40625 L 15.71875 21.71875 L 22.71875 14.71875 Z"
-							>
-							</path>
-						</svg>
-					{:else}
-						<svg
-							class="h-5 w-5 fill-current"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 32 32"
-						>
-							<path
-								d="M 16 3 C 14.742188 3 13.847656 3.890625 13.40625 5 L 6 5 L 6 28 L 26 28 L 26 5 L 18.59375 5 C 18.152344 3.890625 17.257813 3 16 3 Z M 16 5 C 16.554688 5 17 5.445313 17 6 L 17 7 L 20 7 L 20 9 L 12 9 L 12 7 L 15 7 L 15 6 C 15 5.445313 15.445313 5 16 5 Z M 8 7 L 10 7 L 10 11 L 22 11 L 22 7 L 24 7 L 24 26 L 8 26 Z"
-							>
-							</path>
-						</svg>
-					{/if}
-        Copy to clipboard
-      </button>
-    </div>
-    <textarea
-      spellcheck="false"
-      data-theme="dark"
-      class="block resize-none textarea textarea-border w-full max-w-none h-96 font-mono textarea-xs min-h-80"
-      bind:value={themeCSS}
-      on:input={(e) => {
-        const newThemeData = parseThemeCSS(e.target.value, activeThemeData)
-        if (newThemeData) {
-          activeThemeData = newThemeData
-        }
-      }}
-    ></textarea>
-  </div>
-  <div class="modal-backdrop" on:click={() => themeCSSModal.close()}></div>
-</dialog>
+<ThemeCSSModal
+  bind:themeCSSModal={themeCSSModal}
+  bind:themeCSS={themeCSS}
+  activeThemeData={activeThemeData}
+/>
