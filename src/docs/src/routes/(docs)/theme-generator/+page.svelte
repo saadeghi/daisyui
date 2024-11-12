@@ -11,16 +11,20 @@
   import { browser } from '$app/environment';
 
   const { data } = $props();
-  let themeCSSModal;
-  let themeIdCounter = $state(1);
+  let themeCSSModal = $state(false);
+  let themeIdCounter = $state(browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')).themes
+      ? Math.max(...JSON.parse(localStorage.getItem('themes')).themes.map(t => t.id)) + 1
+      : 1);
   let dice = $state({ rotate: 0 });
+
+  let currentThemeId = $state(browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')).currentThemeId
+    ? JSON.parse(localStorage.getItem('themes')).currentThemeId
+    : { id: themeIdCounter, type: 'builtin' });
+
   let themes = $derived({
     themes: browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')).themes
       ? JSON.parse(localStorage.getItem('themes')).themes
       : generateBuiltinThemes(themeOrder, data.themes),
-    currentThemeId: browser && localStorage.getItem('currentThemeId')
-      ? JSON.parse(localStorage.getItem('currentThemeId'))
-      : themeIdCounter,
     id: themeIdCounter
   });
 
@@ -36,7 +40,7 @@
   }
   let dockActiveItem = $state("themes");
   let currentTheme = $state({
-    id: themeIdCounter,
+    id: currentThemeId.id,
     ...data.themes.light,
     default: false,
     prefersdark: false
@@ -45,7 +49,7 @@
 
   $effect(() => {
     if (!browser) return;
-    localStorage.setItem('themes', JSON.stringify(themes));
+    localStorage.setItem('themes', JSON.stringify({ themes: themes.themes, currentThemeId }));
   });
 
   function openThemeCSSModal() {
@@ -53,11 +57,11 @@
     themeCSSModal = true;
   }
 
-  function loadThemeForEditing(id) {
-    const theme = themes.themes.find(t => t.id === id);
+  function loadThemeForEditing(id, type) {
+    const theme = themes.themes.find(t => t.id === id && t.type === type);
     if (theme) {
       currentTheme = { ...theme };
-      themes.currentThemeId = id;
+      currentThemeId = { id, type };
     }
   }
 
@@ -73,11 +77,12 @@
     };
     themes.themes.push(newTheme);
     currentTheme = { ...newTheme };
+    currentThemeId = { id: newTheme.id, type: 'custom' };
   }
 
-  function removeTheme(id) {
-    themes.themes = themes.themes.filter(t => t.id !== id);
-    if (currentTheme.id === id) {
+  function removeTheme(id, type) {
+    themes.themes = themes.themes.filter(t => t.id !== id || t.type !== type);
+    if (currentTheme.id === id && currentTheme.type === type) {
       currentTheme = { id: themeIdCounter, ...data.themes.light, default: false, prefersdark: false };
     }
   }
@@ -141,9 +146,10 @@
       {#each themes.themes?.filter(t => t.type === 'custom') as theme}
         <ThemeListItem
           id={theme.id}
+          type={theme.type}
           theme={theme}
-          selectedThemeId={themes.currentThemeId}
-          loadThemeForEditing={loadThemeForEditing}
+          isCurrent={currentThemeId.id === theme.id && currentThemeId.type === theme.type}
+          loadThemeForEditing={() => loadThemeForEditing(theme.id, theme.type)}
         />
       {/each}
       <li></li>
@@ -151,9 +157,10 @@
       {#each themes.themes?.filter(t => t.type === 'builtin') as theme}
         <ThemeListItem
           id={theme.id}
+          type={theme.type}
           theme={theme}
-          selectedThemeId={themes.currentThemeId}
-          loadThemeForEditing={loadThemeForEditing}
+          isCurrent={currentThemeId.id === theme.id && currentThemeId.type === theme.type}
+          loadThemeForEditing={() => loadThemeForEditing(theme.id, theme.type)}
         />
       {/each}
     </ul>
@@ -359,7 +366,7 @@
 
     <h3 class="divider text-xs divider-start"></h3>
 
-    <button class="btn btn-block text-error" on:click={() => removeTheme(currentTheme.id)}>
+    <button class="btn btn-block text-error" on:click={() => removeTheme(currentTheme.id, currentTheme.type)}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
         <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
       </svg>

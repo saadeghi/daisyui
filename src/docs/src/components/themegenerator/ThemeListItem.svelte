@@ -1,16 +1,17 @@
 <script>
   let {
     id,
+    type,
     theme,
-    selectedThemeId,
+    isCurrent,
     loadThemeForEditing
   } = $props();
 </script>
 
 <li>
   <button
-    class={`px-2 gap-3 ${selectedThemeId === id ? 'bg-base-content/10' : ''}`}
-    on:click={() => loadThemeForEditing(id)}
+    class={`px-2 gap-3 ${isCurrent ? 'bg-base-content/10' : ''}`}
+    on:click={() => loadThemeForEditing(id, type)}
   >
     <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
       style={`background-color: ${theme['--color-base-100']}`}
