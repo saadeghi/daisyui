@@ -2,14 +2,14 @@
   let {
     id,
     theme,
-    selectedThemeName,
+    selectedThemeId,
     loadThemeForEditing
   } = $props();
 </script>
 
 <li>
   <button
-    class={`px-2 gap-3 ${selectedThemeName === id ? 'bg-base-content/10' : ''}`}
+    class={`px-2 gap-3 ${selectedThemeId === id ? 'bg-base-content/10' : ''}`}
     on:click={() => loadThemeForEditing(id)}
   >
     <div class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
