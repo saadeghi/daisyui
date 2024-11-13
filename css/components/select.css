@@ -1,163 +1,163 @@
 .select {
-	border: 1px solid;
-	@apply bg-base-100 relative h-10 w-full max-w-80 shrink appearance-none border-transparent px-4 align-middle;
-	font-size: 0.875rem;
-	line-height: 2;
-	border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
-	border-start-end-radius: var(--radius-join-se, var(--radius-btn));
-	border-end-start-radius: var(--radius-join-es, var(--radius-btn));
-	border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
-	background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
-		linear-gradient(135deg, currentColor 50%, transparent 50%);
-	background-position:
-		calc(100% - 20px) calc(1px + 50%),
-		calc(100% - 16.1px) calc(1px + 50%);
-	background-size:
-		4px 4px,
-		4px 4px;
-	background-repeat: no-repeat;
-	padding-inline-end: 1.7rem;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+  border: 1px solid;
+  @apply bg-base-100 relative h-10 w-full max-w-80 shrink appearance-none border-transparent px-4 align-middle;
+  font-size: 0.875rem;
+  line-height: 2;
+  border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
+  border-start-end-radius: var(--radius-join-se, var(--radius-btn));
+  border-end-start-radius: var(--radius-join-es, var(--radius-btn));
+  border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1px + 50%),
+    calc(100% - 16.1px) calc(1px + 50%);
+  background-size:
+    4px 4px,
+    4px 4px;
+  background-repeat: no-repeat;
+  padding-inline-end: 1.7rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-	select {
-		@apply w-full bg-transparent;
-		border-style: none;
+  select {
+    @apply w-full bg-transparent;
+    border-style: none;
 
-		&:focus {
-			@apply outline-none;
-		}
-	}
+    &:focus {
+      @apply outline-none;
+    }
+  }
 
-	&:focus,
-	&:focus-within {
-		@apply border-base-content/20 outline-base-content/20;
-		outline: 2px solid;
-		outline-offset: 2px;
-	}
+  &:focus,
+  &:focus-within {
+    @apply border-base-content/20 outline-base-content/20;
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
 
-	&:has(> select[disabled]),
-	&:is(:disabled, [disabled]) {
-		@apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
-	}
+  &:has(> select[disabled]),
+  &:is(:disabled, [disabled]) {
+    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+  }
 
-	&:has(> select[disabled]) > select[disabled] {
-		@apply cursor-not-allowed;
-	}
+  &:has(> select[disabled]) > select[disabled] {
+    @apply cursor-not-allowed;
+  }
 
-	&.select-border {
-		@apply border-base-content/20;
-		box-shadow:
-			0 1px oklch(0% 0 0 / 0.1) inset,
-			0 -1px oklch(100% 0 0 / 0.1) inset;
+  &.select-border {
+    @apply border-base-content/20;
+    box-shadow:
+      0 1px oklch(0% 0 0 / 0.1) inset,
+      0 -1px oklch(100% 0 0 / 0.1) inset;
 
-		&:focus {
-			box-shadow: 0 1px oklch(0% 0 0 / 0.1);
-		}
-	}
+    &:focus {
+      box-shadow: 0 1px oklch(0% 0 0 / 0.1);
+    }
+  }
 
-	&.select-ghost {
-		@apply bg-base-100/5;
-		box-shadow: none;
+  &.select-ghost {
+    @apply bg-base-100/5;
+    box-shadow: none;
 
-		&:focus,
-		&:focus-within {
-			@apply text-base-content bg-base-100;
-			box-shadow: none;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply text-base-content bg-base-100;
+      box-shadow: none;
+    }
+  }
 
-	&.select-primary {
-		@apply border-primary;
-		background-color: color-mix(in oklab, var(--color-primary) 2%, transparent);
+  &.select-primary {
+    @apply border-primary;
+    background-color: color-mix(in oklab, var(--color-primary) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-primary border-primary;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-primary border-primary;
+    }
+  }
 
-	&.select-secondary {
-		@apply border-secondary;
-		background-color: color-mix(in oklab, var(--color-secondary) 2%, transparent);
+  &.select-secondary {
+    @apply border-secondary;
+    background-color: color-mix(in oklab, var(--color-secondary) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-secondary border-secondary;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-secondary border-secondary;
+    }
+  }
 
-	&.select-accent {
-		@apply border-accent;
-		background-color: color-mix(in oklab, var(--color-accent) 2%, transparent);
+  &.select-accent {
+    @apply border-accent;
+    background-color: color-mix(in oklab, var(--color-accent) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-accent border-accent;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-accent border-accent;
+    }
+  }
 
-	&.select-info {
-		@apply border-info;
-		background-color: color-mix(in oklab, var(--color-info) 2%, transparent);
+  &.select-info {
+    @apply border-info;
+    background-color: color-mix(in oklab, var(--color-info) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-info border-info;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-info border-info;
+    }
+  }
 
-	&.select-success {
-		@apply border-success;
-		background-color: color-mix(in oklab, var(--color-success) 2%, transparent);
+  &.select-success {
+    @apply border-success;
+    background-color: color-mix(in oklab, var(--color-success) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-success border-success;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-success border-success;
+    }
+  }
 
-	&.select-warning {
-		@apply border-warning;
-		background-color: color-mix(in oklab, var(--color-warning) 2%, transparent);
+  &.select-warning {
+    @apply border-warning;
+    background-color: color-mix(in oklab, var(--color-warning) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-warning border-warning;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-warning border-warning;
+    }
+  }
 
-	&.select-error {
-		@apply border-error;
-		background-color: color-mix(in oklab, var(--color-error) 2%, transparent);
+  &.select-error {
+    @apply border-error;
+    background-color: color-mix(in oklab, var(--color-error) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-error border-error;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-error border-error;
+    }
+  }
 
-	&.select-xs {
-		@apply h-6 px-2;
-		font-size: 0.75rem;
-		line-height: 1.625;
-	}
+  &.select-xs {
+    @apply h-6 px-2;
+    font-size: 0.75rem;
+    line-height: 1.625;
+  }
 
-	&.select-sm {
-		@apply h-8 px-3;
-		font-size: 0.875rem;
-		line-height: 2;
-	}
+  &.select-sm {
+    @apply h-8 px-3;
+    font-size: 0.875rem;
+    line-height: 2;
+  }
 
-	&.select-md {
-		@apply h-10 px-4;
-		font-size: 0.875rem;
-		line-height: 2;
-	}
+  &.select-md {
+    @apply h-10 px-4;
+    font-size: 0.875rem;
+    line-height: 2;
+  }
 
-	&.select-lg {
-		@apply h-14 px-6;
-		font-size: 1.125rem;
-		line-height: 2;
-	}
+  &.select-lg {
+    @apply h-14 px-6;
+    font-size: 1.125rem;
+    line-height: 2;
+  }
 }

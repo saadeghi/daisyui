@@ -1,5 +1,5 @@
 .navbar {
-  @apply flex items-center w-full;
+  @apply flex w-full items-center;
   padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
 
@@ -7,8 +7,6 @@
     @apply inline-flex items-center;
   }
 }
-
-
 
 .navbar-start {
   width: 50%;

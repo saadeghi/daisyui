@@ -1,14 +1,18 @@
 .timeline {
   @apply relative flex;
 
-  >li {
+  > li {
     @apply relative grid shrink-0 items-center;
-    grid-template-rows: var(--timeline-row-start, minmax(0, 1fr)) auto var(--timeline-row-end,
-        minmax(0, 1fr));
-    grid-template-columns: var(--timeline-col-start, minmax(0, 1fr)) auto var(--timeline-col-end,
-        minmax(0, 1fr));
+    grid-template-rows: var(--timeline-row-start, minmax(0, 1fr)) auto var(
+        --timeline-row-end,
+        minmax(0, 1fr)
+      );
+    grid-template-columns: var(--timeline-col-start, minmax(0, 1fr)) auto var(
+        --timeline-col-end,
+        minmax(0, 1fr)
+      );
 
-    >hr {
+    > hr {
       @apply w-full;
       border: none;
 
@@ -23,7 +27,7 @@
   }
 
   :where(hr) {
-    @apply h-1 bg-base-300;
+    @apply bg-base-300 h-1;
   }
 
   &:has(.timeline-middle hr) {
@@ -50,7 +54,7 @@
 .timeline-box {
   border: 1px solid;
   @apply rounded-box bg-base-100 border-base-300 px-4 py-2;
-  box-shadow: 0 1px 2px 0 oklch(0% 0 0/.05);
+  box-shadow: 0 1px 2px 0 oklch(0% 0 0/0.05);
 }
 
 .timeline-start {
@@ -79,7 +83,7 @@
   }
 
   &.timeline-vertical {
-    >li {
+    > li {
       --timeline-col-start: 0;
     }
 
@@ -96,7 +100,7 @@
 }
 
 .timeline-snap-icon {
-  >li {
+  > li {
     --timeline-col-start: 0.5rem;
     --timeline-row-start: minmax(0, 1fr);
   }
@@ -105,13 +109,13 @@
 .timeline-vertical {
   @apply flex-col;
 
-  >li {
+  > li {
     @apply justify-items-center;
     --timeline-row-start: minmax(0, 1fr);
     --timeline-row-end: minmax(0, 1fr);
 
-    >hr {
-      @apply w-1 h-full;
+    > hr {
+      @apply h-full w-1;
 
       &:first-child {
         @apply col-start-2 row-start-1;
@@ -132,8 +136,8 @@
   }
 
   &:has(.timeline-middle) {
-    >li {
-      >hr {
+    > li {
+      > hr {
         &:first-child {
           @apply rounded-b-badge rounded-t-none;
         }
@@ -147,35 +151,34 @@
 
   &:not(:has(.timeline-middle)) {
     :first-child {
-      >hr:last-child {
+      > hr:last-child {
         @apply rounded-t-badge rounded-b-none;
       }
     }
 
     :last-child {
-      >hr:first-child {
+      > hr:first-child {
         @apply rounded-b-badge rounded-t-none;
       }
     }
   }
 
   &.timeline-snap-icon {
-    >li {
+    > li {
       --timeline-col-start: minmax(0, 1fr);
       --timeline-row-start: 0.5rem;
     }
   }
-
 }
 
 .timeline-horizontal {
   @apply flex-row;
 
-  >li {
+  > li {
     @apply items-center;
 
-    >hr {
-      @apply w-full h-1;
+    > hr {
+      @apply h-1 w-full;
 
       &:first-child {
         @apply col-start-1 row-start-2;
@@ -196,8 +199,8 @@
   }
 
   &:has(.timeline-middle) {
-    >li {
-      >hr {
+    > li {
+      > hr {
         &:first-child {
           @apply rounded-e-badge rounded-s-none;
         }
@@ -211,13 +214,13 @@
 
   &:not(:has(.timeline-middle)) {
     :first-child {
-      >hr:last-child {
+      > hr:last-child {
         @apply rounded-s-badge rounded-e-none;
       }
     }
 
     :last-child {
-      >hr:first-child {
+      > hr:first-child {
         @apply rounded-e-badge rounded-s-none;
       }
     }

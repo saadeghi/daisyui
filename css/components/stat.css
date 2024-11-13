@@ -1,5 +1,5 @@
 .stats {
-  @apply inline-grid grid-flow-col rounded-box overflow-x-auto relative;
+  @apply rounded-box relative inline-grid grid-flow-col overflow-x-auto;
 }
 
 .stat {
@@ -17,7 +17,7 @@
 }
 
 .stat-title {
-  @apply col-start-1 whitespace-nowrap text-base-content/60;
+  @apply text-base-content/60 col-start-1 whitespace-nowrap;
   font-size: 0.75rem;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .stat-desc {
-  @apply col-start-1 whitespace-nowrap text-base-content/60;
+  @apply text-base-content/60 col-start-1 whitespace-nowrap;
   font-size: 0.75rem;
 }
 

@@ -1,5 +1,5 @@
 .card {
-  @apply relative flex flex-col rounded-box;
+  @apply rounded-box relative flex flex-col;
 
   &:focus {
     @apply outline-none;
@@ -34,16 +34,16 @@
     @apply grid;
 
     &:before {
-      @apply relative bg-neutral rounded-box z-10 opacity-75 col-start-1 row-start-1;
+      @apply bg-neutral rounded-box relative z-10 col-start-1 row-start-1 opacity-75;
       content: "";
     }
 
-    >* {
+    > * {
       @apply col-start-1 row-start-1;
     }
 
-    >.card-body {
-      @apply relative text-neutral-content z-20;
+    > .card-body {
+      @apply text-neutral-content relative z-20;
     }
 
     :where(figure) {
@@ -51,7 +51,7 @@
       border-radius: inherit;
     }
 
-    >figure img {
+    > figure img {
       @apply h-full object-cover;
     }
   }
@@ -128,8 +128,6 @@
   }
 }
 
-
-
 .card-side {
   align-items: stretch;
   flex-direction: row;
@@ -150,11 +148,11 @@
     border-end-end-radius: inherit;
   }
 
-  figure>* {
+  figure > * {
     max-width: unset;
   }
 
-  :where(figure>*) {
+  :where(figure > *) {
     width: 100%;
     height: 100%;
     object-fit: cover;

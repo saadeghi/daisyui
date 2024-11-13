@@ -1,17 +1,16 @@
 .divider {
-  @apply flex flex-row items-center self-stretch my-4 h-4 whitespace-nowrap;
+  @apply my-4 flex h-4 flex-row items-center self-stretch whitespace-nowrap;
 
   &:before,
   &:after {
     content: "";
-    @apply h-0.5 w-full grow bg-base-content/10;
+    @apply bg-base-content/10 h-0.5 w-full grow;
   }
 
   &:not(:empty) {
     @apply gap-4;
   }
 }
-
 
 .divider-horizontal {
   &.divider {
@@ -42,7 +41,6 @@
 }
 
 .divider-neutral {
-
   &:before,
   &:after {
     @apply bg-neutral;
@@ -50,7 +48,6 @@
 }
 
 .divider-primary {
-
   &:before,
   &:after {
     @apply bg-primary;
@@ -58,7 +55,6 @@
 }
 
 .divider-secondary {
-
   &:before,
   &:after {
     @apply bg-secondary;
@@ -66,7 +62,6 @@
 }
 
 .divider-accent {
-
   &:before,
   &:after {
     @apply bg-accent;
@@ -74,7 +69,6 @@
 }
 
 .divider-success {
-
   &:before,
   &:after {
     @apply bg-success;
@@ -82,7 +76,6 @@
 }
 
 .divider-warning {
-
   &:before,
   &:after {
     @apply bg-warning;
@@ -90,7 +83,6 @@
 }
 
 .divider-info {
-
   &:before,
   &:after {
     @apply bg-info;
@@ -98,13 +90,11 @@
 }
 
 .divider-error {
-
   &:before,
   &:after {
     @apply bg-error;
   }
 }
-
 
 .divider-start:before {
   @apply hidden;

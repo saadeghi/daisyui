@@ -19,7 +19,6 @@
   scroll-snap-type: x mandatory;
 }
 
-
 .carousel-item {
   @apply box-content flex flex-none;
   scroll-snap-align: start;

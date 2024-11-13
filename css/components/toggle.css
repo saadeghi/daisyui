@@ -2,7 +2,7 @@
   border: 1px solid currentColor;
   @apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none p-[.1875rem] align-middle;
   box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
-  transition: color .3s;
+  transition: color 0.3s;
 
   &:before {
     @apply block h-full grow-0;
@@ -69,7 +69,6 @@
 }
 
 .toggle-primary {
-
   &:checked,
   &[aria-checked="true"] {
     @apply text-primary;
@@ -77,7 +76,6 @@
 }
 
 .toggle-secondary {
-
   &:checked,
   &[aria-checked="true"] {
     @apply text-secondary;
@@ -85,7 +83,6 @@
 }
 
 .toggle-accent {
-
   &:checked,
   &[aria-checked="true"] {
     @apply text-accent;
@@ -93,7 +90,6 @@
 }
 
 .toggle-success {
-
   &:checked,
   &[aria-checked="true"] {
     @apply text-success;
@@ -101,7 +97,6 @@
 }
 
 .toggle-warning {
-
   &:checked,
   &[aria-checked="true"] {
     @apply text-warning;
@@ -109,7 +104,6 @@
 }
 
 .toggle-info {
-
   &:checked,
   &[aria-checked="true"] {
     @apply text-info;
@@ -117,7 +111,6 @@
 }
 
 .toggle-error {
-
   &:checked,
   &[aria-checked="true"] {
     @apply text-error;
@@ -128,24 +121,24 @@
 
 .toggle-xs {
   &:is([type="checkbox"]) {
-    @apply p-[.0625rem] h-4 w-6;
+    @apply h-4 w-6 p-[.0625rem];
   }
 }
 
 .toggle-sm {
   &:is([type="checkbox"]) {
-    @apply p-[.125rem] h-5 w-8;
+    @apply h-5 w-8 p-[.125rem];
   }
 }
 
 .toggle-md {
   &:is([type="checkbox"]) {
-    @apply p-[.1875rem] h-6 w-12;
+    @apply h-6 w-12 p-[.1875rem];
   }
 }
 
 .toggle-lg {
   &:is([type="checkbox"]) {
-    @apply p-[.25rem] h-8 w-16;
+    @apply h-8 w-16 p-[.25rem];
   }
 }

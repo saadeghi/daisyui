@@ -2,7 +2,7 @@
   @apply inline-flex;
   line-height: 1em;
 
-  &>* {
+  & > * {
     @apply inline-block overflow-y-hidden;
     height: 1em;
 

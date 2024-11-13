@@ -6,14 +6,14 @@ export const createPluginFiles = async (type, componentDir, jsContent, fileName)
     base: "addBase",
     component: "addComponents",
     utility: "addUtilities",
-  };
+  }
 
   // create object.js
-  const objectJsPath = path.join(componentDir, "object.js");
-  await fs.writeFile(objectJsPath, `export default ${jsContent};`);
+  const objectJsPath = path.join(componentDir, "object.js")
+  await fs.writeFile(objectJsPath, `export default ${jsContent};`)
 
   // create index.js
-  const indexJsPath = path.join(componentDir, "index.js");
+  const indexJsPath = path.join(componentDir, "index.js")
   const indexJsContent = `import ${fileName} from './object.js';
 import { addPrefix } from '../../functions/addPrefix.js';
 
@@ -21,6 +21,6 @@ export default ({ ${types[type]}, prefix = '' }) => {
   const prefixed${fileName} = addPrefix(${fileName}, prefix);
   ${types[type]}({ ...prefixed${fileName} });
 };
-`;
-  await fs.writeFile(indexJsPath, indexJsContent);
-};
+`
+  await fs.writeFile(indexJsPath, indexJsContent)
+}

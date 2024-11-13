@@ -3,14 +3,14 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
 
-  &>* {
+  & > * {
     @apply grid place-items-start gap-2;
   }
 
   &.footer-center {
-    @apply place-items-center text-center grid-flow-col-dense;
+    @apply grid-flow-col-dense place-items-center text-center;
 
-    &>* {
+    & > * {
       @apply place-items-center;
     }
   }

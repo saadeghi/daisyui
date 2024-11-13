@@ -1,18 +1,18 @@
 import { promises as fs } from "node:fs"
 import postcss from "postcss"
 import postcssJs from "postcss-js"
-import { compileAndExtractStyles, loadThemes } from './compileAndExtractStyles.js'
+import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.js"
 import { replaceApplyTrueWithEmptyObject } from "./replaceApplyTrueWithEmptyObject.js"
-import { cleanCss } from './cleanCss'
+import { cleanCss } from "./cleanCss"
 
 // function to convert camelCase to kebab-case
 const camelToKebab = (str) => {
-  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase()
+  return str.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase()
 }
 
 // Function to transform object keys from camelCase to kebab-case
 const transformKeys = (obj) => {
-  if (typeof obj !== 'object' || obj === null) return obj
+  if (typeof obj !== "object" || obj === null) return obj
 
   if (Array.isArray(obj)) {
     return obj.map(transformKeys)
@@ -21,8 +21,8 @@ const transformKeys = (obj) => {
   return Object.fromEntries(
     Object.entries(obj).map(([key, value]) => [
       camelToKebab(key),
-      typeof value === 'object' ? transformKeys(value) : value
-    ])
+      typeof value === "object" ? transformKeys(value) : value,
+    ]),
   )
 }
 

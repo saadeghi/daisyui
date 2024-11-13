@@ -13,16 +13,16 @@
   height: 100vh;
   height: 100dvh;
 
-  >.drawer-overlay {
-    @apply sticky top-0 place-self-stretch cursor-pointer bg-transparent;
+  > .drawer-overlay {
+    @apply sticky top-0 cursor-pointer place-self-stretch bg-transparent;
     transition: background-color 0.2s ease-out;
   }
 
-  >* {
+  > * {
     @apply col-start-1 row-start-1;
   }
 
-  >*:not(.drawer-overlay) {
+  > *:not(.drawer-overlay) {
     @apply will-change-transform;
     transition: translate 0.3s ease-out;
     translate: -100%;
@@ -37,20 +37,20 @@
   @apply fixed h-0 w-0 appearance-none opacity-0;
 
   &:checked {
-    &~.drawer-side {
+    & ~ .drawer-side {
       @apply pointer-events-auto visible overflow-y-auto;
 
-      &>.drawer-overlay {
+      & > .drawer-overlay {
         background-color: oklch(0% 0 0 / 40%);
       }
 
-      &>*:not(.drawer-overlay) {
+      & > *:not(.drawer-overlay) {
         translate: 0%;
       }
     }
   }
 
-  &:focus-visible~.drawer-content label.drawer-button {
+  &:focus-visible ~ .drawer-content label.drawer-button {
     outline: 2px solid;
     outline-offset: 2px;
   }
@@ -59,16 +59,16 @@
 .drawer-end {
   grid-auto-columns: auto max-content;
 
-  >.drawer-toggle {
-    &~.drawer-content {
+  > .drawer-toggle {
+    & ~ .drawer-content {
       @apply col-start-1;
     }
 
-    &~.drawer-side {
+    & ~ .drawer-side {
       @apply col-start-2 justify-items-end;
     }
 
-    &~.drawer-side>*:not(.drawer-overlay) {
+    & ~ .drawer-side > *:not(.drawer-overlay) {
       translate: 100%;
 
       [dir="rtl"] & {
@@ -76,28 +76,28 @@
       }
     }
 
-    &:checked~.drawer-side>*:not(.drawer-overlay) {
+    &:checked ~ .drawer-side > *:not(.drawer-overlay) {
       translate: 0%;
     }
   }
 }
 
 .drawer-open {
-  >.drawer-side {
+  > .drawer-side {
     @apply overflow-y-auto;
   }
 
-  >.drawer-toggle {
+  > .drawer-toggle {
     @apply hidden;
 
-    &~.drawer-side {
+    & ~ .drawer-side {
       @apply pointer-events-auto visible sticky block w-auto overscroll-auto;
 
-      &>.drawer-overlay {
+      & > .drawer-overlay {
         @apply cursor-default bg-transparent;
       }
 
-      &>*:not(.drawer-overlay) {
+      & > *:not(.drawer-overlay) {
         translate: 0%;
 
         [dir="rtl"] & {
@@ -106,7 +106,7 @@
       }
     }
 
-    &:checked~.drawer-side {
+    &:checked ~ .drawer-side {
       @apply pointer-events-auto visible;
     }
   }

@@ -1,8 +1,10 @@
 .modal {
-  @apply pointer-events-none fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none justify-items-center p-0 bg-transparent text-[inherit] items-center;
+  @apply pointer-events-none fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
   overflow-x: hidden;
   opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.1s ease-out;
   overflow-y: hidden;
   overscroll-behavior: contain;
   z-index: 999;
@@ -26,13 +28,13 @@
 }
 
 .modal-action {
-  @apply flex mt-6 justify-end gap-2;
+  @apply mt-6 flex justify-end gap-2;
 }
 
 .modal-toggle {
   @apply fixed h-0 w-0 appearance-none opacity-0;
 
-  &:checked+.modal {
+  &:checked + .modal {
     @apply pointer-events-auto visible opacity-100;
 
     .modal-box {
@@ -53,7 +55,11 @@
 
 .modal-box {
   @apply bg-base-100 col-start-1 row-start-1 w-11/12 max-w-lg p-6;
-  transition: translate .3s ease-out, scale .3s ease-out, opacity .2s ease-out .05s, box-shadow .3s ease-out;
+  transition:
+    translate 0.3s ease-out,
+    scale 0.3s ease-out,
+    opacity 0.2s ease-out 0.05s,
+    box-shadow 0.3s ease-out;
   border-top-left-radius: var(--modal-top-left-radius, var(--radius-box));
   border-top-right-radius: var(--modal-top-right-radius, var(--radius-box));
   border-bottom-left-radius: var(--modal-bottom-left-radius, var(--radius-box));
@@ -69,7 +75,7 @@
   @apply place-items-start;
 
   :where(.modal-box) {
-    @apply w-full max-w-none h-auto;
+    @apply h-auto w-full max-w-none;
     max-height: calc(100vh - 5em);
     translate: 0 -5%;
     scale: 1;
@@ -84,7 +90,7 @@
   @apply place-items-center;
 
   :where(.modal-box) {
-    @apply w-11/12 max-w-lg h-auto;
+    @apply h-auto w-11/12 max-w-lg;
     max-height: calc(100vh - 5em);
     translate: 0 2%;
     scale: 98%;
@@ -99,7 +105,7 @@
   @apply place-items-end;
 
   :where(.modal-box) {
-    @apply w-full max-w-none h-auto;
+    @apply h-auto w-full max-w-none;
     max-height: calc(100vh - 5em);
     translate: 0 5%;
     scale: 1;
@@ -114,7 +120,7 @@
   @apply place-items-start;
 
   :where(.modal-box) {
-    @apply h-screen w-auto max-w-none max-h-none;
+    @apply h-screen max-h-none w-auto max-w-none;
     translate: -5% 0;
     scale: 1;
     --modal-top-left-radius: 0;
@@ -128,7 +134,7 @@
   @apply place-items-end;
 
   :where(.modal-box) {
-    @apply h-screen w-auto max-w-none max-h-none;
+    @apply h-screen max-h-none w-auto max-w-none;
     translate: 5% 0;
     scale: 1;
     --modal-top-left-radius: var(--radius-box);

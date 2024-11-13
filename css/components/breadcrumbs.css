@@ -1,15 +1,15 @@
 .breadcrumbs {
   @apply max-w-full overflow-x-auto py-2;
 
-  >ul,
-  >ol {
-    @apply flex items-center whitespace-nowrap min-h-min;
+  > ul,
+  > ol {
+    @apply flex min-h-min items-center whitespace-nowrap;
 
-    >li {
+    > li {
       @apply flex items-center;
 
-      >* {
-        @apply flex cursor-pointer items-center hover:underline gap-2;
+      > * {
+        @apply flex cursor-pointer items-center gap-2 hover:underline;
 
         &:focus {
           @apply outline-none;
@@ -21,15 +21,15 @@
         }
       }
 
-      &+*:before {
+      & + *:before {
         content: "";
-        @apply ml-2 mr-3 block h-1.5 w-1.5 opacity-40;
+        @apply mr-3 ml-2 block h-1.5 w-1.5 opacity-40;
         rotate: 45deg;
         border-top: 1px solid;
         border-right: 1px solid;
         background-color: transparent;
 
-        &:where([dir=rtl], [dir=rtl] *) {
+        &:where([dir="rtl"], [dir="rtl"] *) {
           rotate: -135deg;
         }
       }

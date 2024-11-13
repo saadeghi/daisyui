@@ -1,15 +1,15 @@
 .dock {
-  @apply z-[1] fixed bottom-0 left-0 right-0 flex w-full flex-row items-center justify-around bg-base-100 h-16 text-current py-2;
-  border-top: .5px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
+  @apply bg-base-100 fixed right-0 bottom-0 left-0 z-[1] flex h-16 w-full flex-row items-center justify-around py-2 text-current;
+  border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
   padding-bottom: env(safe-area-inset-bottom);
 
-  &:has(>*:hover)>*:not(:hover) {
+  &:has(> *:hover) > *:not(:hover) {
     background-color: transparent;
   }
 
-  >* {
-    @apply relative flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px relative rounded-full mb-2 bg-transparent;
-    transition: background-color .4s ease-in-out;
+  > * {
+    @apply relative mb-2 flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px rounded-full bg-transparent;
+    transition: background-color 0.4s ease-in-out;
 
     &:where(:hover) {
       @apply bg-base-200;
@@ -19,16 +19,14 @@
       @apply bg-base-200;
 
       &:after {
-        content: '';
-        @apply absolute w-10 h-1 bg-current rounded-full;
-        bottom: .2rem;
+        content: "";
+        @apply absolute h-1 w-10 rounded-full bg-current;
+        bottom: 0.2rem;
       }
     }
 
-
-    &[aria-disabled=true],
+    &[aria-disabled="true"],
     &[disabled] {
-
       &,
       &:hover {
         @apply text-base-content/10 pointer-events-none;
@@ -36,7 +34,7 @@
     }
 
     .dock-label {
-      font-size: .6875rem;
+      font-size: 0.6875rem;
     }
   }
 }
@@ -46,12 +44,12 @@
 
   .dock-active {
     &:after {
-      bottom: -.1rem;
+      bottom: -0.1rem;
     }
   }
 
   .dock-label {
-    font-size: .6875rem;
+    font-size: 0.6875rem;
   }
 }
 
@@ -60,12 +58,12 @@
 
   .dock-active {
     &:after {
-      bottom: -.1rem;
+      bottom: -0.1rem;
     }
   }
 
   .dock-label {
-    font-size: .6875rem;
+    font-size: 0.6875rem;
   }
 }
 
@@ -73,7 +71,7 @@
   @apply h-16;
 
   .dock-label {
-    font-size: .6875rem;
+    font-size: 0.6875rem;
   }
 }
 
@@ -82,11 +80,11 @@
 
   .dock-active {
     &:after {
-      bottom: .4rem;
+      bottom: 0.4rem;
     }
   }
 
   .dock-label {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }

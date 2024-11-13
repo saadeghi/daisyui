@@ -7,32 +7,33 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0 solid
+  border: 0 solid;
 }
 
 :host,
 html {
   line-height: 1.5;
-  font-family: var(--default-font-family,
-      ui-sans-serif,
-      system-ui,
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji'
-    );
-  -webkit-tap-highlight-color: transparent
+  font-family: var(
+    --default-font-family,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji"
+  );
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  line-height: inherit
+  line-height: inherit;
 }
 
 hr {
   height: 0;
   color: inherit;
-  border-top-width: 1px
+  border-top-width: 1px;
 }
 
 h1,
@@ -42,19 +43,19 @@ h4,
 h5,
 h6 {
   font-size: inherit;
-  font-weight: inherit
+  font-weight: inherit;
 }
 
 a {
   color: inherit;
   -webkit-text-decoration: inherit;
-  text-decoration: inherit
+  text-decoration: inherit;
 }
 
 table {
   text-indent: 0;
   border-color: inherit;
-  border-collapse: collapse
+  border-collapse: collapse;
 }
 
 ::file-selector-button,
@@ -68,46 +69,46 @@ textarea {
   font-variation-settings: inherit;
   letter-spacing: inherit;
   color: inherit;
-  background: 0 0
+  background: 0 0;
 }
 
-input:where(:not([type=button], [type=reset], [type=submit])),
+input:where(:not([type="button"], [type="reset"], [type="submit"])),
 select,
 textarea {
-  border-width: 1px
+  border-width: 1px;
 }
 
 ::file-selector-button,
 button,
-input:where([type=button], [type=reset], [type=submit]) {
-  appearance: button
+input:where([type="button"], [type="reset"], [type="submit"]) {
+  appearance: button;
 }
 
 :-moz-focusring {
-  outline: auto
+  outline: auto;
 }
 
 :-moz-ui-invalid {
-  box-shadow: none
+  box-shadow: none;
 }
 
 ::-webkit-search-decoration {
-  -webkit-appearance: none
+  -webkit-appearance: none;
 }
 
 menu,
 ol,
 ul {
-  list-style: none
+  list-style: none;
 }
 
 textarea {
-  resize: vertical
+  resize: vertical;
 }
 
 ::placeholder {
   opacity: 1;
-  color: color-mix(in oklch, currentColor 50%, transparent)
+  color: color-mix(in oklch, currentColor 50%, transparent);
 }
 
 audio,
@@ -119,11 +120,11 @@ object,
 svg,
 video {
   display: block;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 img,
 video {
   max-width: 100%;
-  height: auto
+  height: auto;
 }

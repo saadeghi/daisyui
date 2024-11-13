@@ -10,18 +10,17 @@
 .avatar {
   @apply relative inline-flex align-middle;
 
-  &>div {
+  & > div {
     @apply block aspect-square overflow-hidden;
   }
 
   img {
     @apply h-full w-full object-cover;
   }
-
 }
 
 .avatar-placeholder {
-  &>div {
+  & > div {
     @apply flex items-center justify-center;
   }
 }

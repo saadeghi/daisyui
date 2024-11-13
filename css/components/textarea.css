@@ -1,6 +1,6 @@
 .textarea {
   border: 1px solid transparent;
-  @apply bg-base-100 h-10 shrink appearance-none px-4 py-2 align-middle min-h-20 rounded-btn w-full max-w-80;
+  @apply bg-base-100 rounded-btn h-10 min-h-20 w-full max-w-80 shrink appearance-none px-4 py-2 align-middle;
   font-size: 0.875rem;
 
   textarea {
@@ -14,8 +14,8 @@
 
   &:focus,
   &:focus-within {
-    border-color: color-mix(in srgb, var(--color-base-content, ) 20%, transparent);
-    outline: 2px solid color-mix(in srgb, var(--color-base-content, ) 20%, transparent);
+    border-color: color-mix(in srgb, var(--color-base-content,) 20%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--color-base-content,) 20%, transparent);
     outline-offset: 2px;
   }
 
@@ -25,7 +25,7 @@
     box-shadow: none;
   }
 
-  &:has(> textarea[disabled])>textarea[disabled] {
+  &:has(> textarea[disabled]) > textarea[disabled] {
     @apply cursor-not-allowed;
   }
 
@@ -80,7 +80,7 @@
       @apply outline-accent border-accent;
     }
   }
-  
+
   &.textarea-neutral {
     @apply border-neutral;
     background-color: color-mix(in oklab, var(--color-neutral) 2%, transparent);

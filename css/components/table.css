@@ -1,10 +1,9 @@
 .table {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  @apply relative w-full rounded-box text-left rtl:text-right;
+  @apply rounded-box relative w-full text-left rtl:text-right;
 
   tr.row-hover {
-
     &,
     &:nth-child(even) {
       @apply hover:bg-base-200;
@@ -35,7 +34,7 @@
   }
 
   :where(.table-pin-cols tr th) {
-    @apply bg-base-100 sticky left-0 right-0;
+    @apply bg-base-100 sticky right-0 left-0;
   }
 
   :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child) {
@@ -55,7 +54,6 @@
       }
 
       &.row-hover {
-
         &,
         &:nth-child(even) {
           @apply hover:bg-base-300;

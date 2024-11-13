@@ -1,5 +1,5 @@
 .badge {
-  @apply inline-flex items-center justify-center h-5 rounded-badge text-base-content align-middle box-content gap-2;
+  @apply rounded-badge text-base-content box-content inline-flex h-5 items-center justify-center gap-2 align-middle;
   border: 1px solid var(--badge-color, var(--color-base-200));
   font-size: 0.75rem;
   line-height: 1.25rem;
@@ -22,8 +22,16 @@
 
   &.badge-soft {
     color: var(--badge-color, var(--color-base-content));
-    background: color-mix(in oklab, var(--badge-color, var(--color-base-content)) 8%, var(--color-base-100));
-    border-color: color-mix(in oklab, var(--badge-color, var(--color-base-content)) 10%, var(--color-base-100));
+    background: color-mix(
+      in oklab,
+      var(--badge-color, var(--color-base-content)) 8%,
+      var(--color-base-100)
+    );
+    border-color: color-mix(
+      in oklab,
+      var(--badge-color, var(--color-base-content)) 10%,
+      var(--color-base-100)
+    );
   }
 }
 

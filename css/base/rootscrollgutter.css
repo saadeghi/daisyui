@@ -1,3 +1,9 @@
-:root:has(.modal-open, .modal[open], .modal:target, .modal-toggle:checked, .drawer:not(.drawer-open)>.drawer-toggle:checked) {
+:root:has(
+    .modal-open,
+    .modal[open],
+    .modal:target,
+    .modal-toggle:checked,
+    .drawer:not(.drawer-open) > .drawer-toggle:checked
+  ) {
   scrollbar-gutter: stable;
 }

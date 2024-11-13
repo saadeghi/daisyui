@@ -21,16 +21,15 @@
   }
 
   input {
-
     &:checked,
     &[aria-checked="true"] {
-      &~input {
+      & ~ input {
         @apply opacity-20;
       }
     }
 
     &:focus-visible {
-      transition: translate .3s cubic-bezier(0, 0, 0.2, 1);
+      transition: translate 0.3s cubic-bezier(0, 0, 0.2, 1);
       translate: 0 -0.125em;
     }
   }

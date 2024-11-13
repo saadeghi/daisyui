@@ -1,192 +1,192 @@
 .input {
-	border: 1px solid transparent;
-	@apply bg-base-100 h-10 w-full max-w-80 shrink appearance-none px-4 align-middle;
-	font-size: 0.875rem;
-	line-height: 2;
-	border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
-	border-start-end-radius: var(--radius-join-se, var(--radius-btn));
-	border-end-start-radius: var(--radius-join-es, var(--radius-btn));
-	border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
+  border: 1px solid transparent;
+  @apply bg-base-100 h-10 w-full max-w-80 shrink appearance-none px-4 align-middle;
+  font-size: 0.875rem;
+  line-height: 2;
+  border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
+  border-start-end-radius: var(--radius-join-se, var(--radius-btn));
+  border-end-start-radius: var(--radius-join-es, var(--radius-btn));
+  border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
 
-	input {
-		@apply w-full bg-transparent;
-		border: none;
+  input {
+    @apply w-full bg-transparent;
+    border: none;
 
-		&:focus {
-			@apply outline-none;
-		}
-	}
+    &:focus {
+      @apply outline-none;
+    }
+  }
 
-	&:focus,
-	&:focus-within {
-		border-color: color-mix(in srgb, var(--color-base-content) 20%, transparent);
-		outline: 2px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
-		outline-offset: 2px;
-	}
+  &:focus,
+  &:focus-within {
+    border-color: color-mix(in srgb, var(--color-base-content) 20%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
+    outline-offset: 2px;
+  }
 
-	&:has(> input[disabled]),
-	&:is(:disabled, [disabled]) {
-		@apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
-		box-shadow: none;
-	}
+  &:has(> input[disabled]),
+  &:is(:disabled, [disabled]) {
+    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+    box-shadow: none;
+  }
 
-	&:has(> input[disabled]) > input[disabled] {
-		@apply cursor-not-allowed;
-	}
+  &:has(> input[disabled]) > input[disabled] {
+    @apply cursor-not-allowed;
+  }
 
-	&::-webkit-date-and-time-value {
-		text-align: inherit;
-	}
+  &::-webkit-date-and-time-value {
+    text-align: inherit;
+  }
 
-	&[type="number"] {
-		&::-webkit-inner-spin-button {
-			@apply -my-4 -me-4;
-		}
-	}
+  &[type="number"] {
+    &::-webkit-inner-spin-button {
+      @apply -my-4 -me-4;
+    }
+  }
 
-	&[list] {
-		&::-webkit-calendar-picker-indicator {
-			line-height: 1em;
-		}
-	}
+  &[list] {
+    &::-webkit-calendar-picker-indicator {
+      line-height: 1em;
+    }
+  }
 
-	&.input-border {
-		@apply border-base-content/10;
-		box-shadow:
-			0 1px oklch(0% 0 0 / 0.1) inset,
-			0 -1px oklch(100% 0 0 / 0.1) inset;
+  &.input-border {
+    @apply border-base-content/10;
+    box-shadow:
+      0 1px oklch(0% 0 0 / 0.1) inset,
+      0 -1px oklch(100% 0 0 / 0.1) inset;
 
-		&:focus {
-			box-shadow: 0 1px oklch(0% 0 0 / 0.1);
-		}
-	}
+    &:focus {
+      box-shadow: 0 1px oklch(0% 0 0 / 0.1);
+    }
+  }
 
-	&.input-ghost {
-		@apply bg-base-100/5;
-		box-shadow: none;
+  &.input-ghost {
+    @apply bg-base-100/5;
+    box-shadow: none;
 
-		&:focus,
-		&:focus-within {
-			@apply text-base-content bg-base-100;
-			box-shadow: none;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply text-base-content bg-base-100;
+      box-shadow: none;
+    }
+  }
 
-	&.input-primary {
-		@apply border-primary;
-		background-color: color-mix(in oklab, var(--color-primary) 2%, transparent);
+  &.input-primary {
+    @apply border-primary;
+    background-color: color-mix(in oklab, var(--color-primary) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-primary border-primary;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-primary border-primary;
+    }
+  }
 
-	&.input-secondary {
-		@apply border-secondary;
-		background-color: color-mix(in oklab, var(--color-secondary) 2%, transparent);
+  &.input-secondary {
+    @apply border-secondary;
+    background-color: color-mix(in oklab, var(--color-secondary) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-secondary border-secondary;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-secondary border-secondary;
+    }
+  }
 
-	&.input-accent {
-		@apply border-accent;
-		background-color: color-mix(in oklab, var(--color-accent) 2%, transparent);
+  &.input-accent {
+    @apply border-accent;
+    background-color: color-mix(in oklab, var(--color-accent) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-accent border-accent;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-accent border-accent;
+    }
+  }
 
-	&.input-info {
-		@apply border-info;
-		background-color: color-mix(in oklab, var(--color-info) 2%, transparent);
+  &.input-info {
+    @apply border-info;
+    background-color: color-mix(in oklab, var(--color-info) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-info border-info;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-info border-info;
+    }
+  }
 
-	&.input-success {
-		@apply border-success;
-		background-color: color-mix(in oklab, var(--color-success) 2%, transparent);
+  &.input-success {
+    @apply border-success;
+    background-color: color-mix(in oklab, var(--color-success) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-success border-success;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-success border-success;
+    }
+  }
 
-	&.input-warning {
-		@apply border-warning;
-		background-color: color-mix(in oklab, var(--color-warning) 2%, transparent);
+  &.input-warning {
+    @apply border-warning;
+    background-color: color-mix(in oklab, var(--color-warning) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-warning border-warning;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-warning border-warning;
+    }
+  }
 
-	&.input-error {
-		@apply border-error;
-		background-color: color-mix(in oklab, var(--color-error) 2%, transparent);
+  &.input-error {
+    @apply border-error;
+    background-color: color-mix(in oklab, var(--color-error) 2%, transparent);
 
-		&:focus,
-		&:focus-within {
-			@apply outline-error border-error;
-		}
-	}
+    &:focus,
+    &:focus-within {
+      @apply outline-error border-error;
+    }
+  }
 
-	&.input-xs {
-		@apply h-6 px-2;
-		font-size: 0.75rem;
-		line-height: 1.625;
+  &.input-xs {
+    @apply h-6 px-2;
+    font-size: 0.75rem;
+    line-height: 1.625;
 
-		&[type="number"] {
-			&::-webkit-inner-spin-button {
-				@apply -my-1 -me-0;
-			}
-		}
-	}
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-1 -me-0;
+      }
+    }
+  }
 
-	&.input-sm {
-		@apply h-8 px-3;
-		font-size: 0.875rem;
-		line-height: 2rem;
+  &.input-sm {
+    @apply h-8 px-3;
+    font-size: 0.875rem;
+    line-height: 2rem;
 
-		&[type="number"] {
-			&::-webkit-inner-spin-button {
-				@apply my-0 -me-0;
-			}
-		}
-	}
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply my-0 -me-0;
+      }
+    }
+  }
 
-	&.input-md {
-		@apply h-10 px-4;
-		font-size: 0.875rem;
-		line-height: 2;
+  &.input-md {
+    @apply h-10 px-4;
+    font-size: 0.875rem;
+    line-height: 2;
 
-		&[type="number"] {
-			&::-webkit-inner-spin-button {
-				@apply -my-4 -me-4;
-			}
-		}
-	}
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-4 -me-4;
+      }
+    }
+  }
 
-	&.input-lg {
-		@apply h-14 px-6;
-		font-size: 1.125rem;
-		line-height: 2rem;
+  &.input-lg {
+    @apply h-14 px-6;
+    font-size: 1.125rem;
+    line-height: 2rem;
 
-		&[type="number"] {
-			&::-webkit-inner-spin-button {
-				@apply -my-6 -me-6;
-			}
-		}
-	}
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-6 -me-6;
+      }
+    }
+  }
 }

@@ -1,19 +1,19 @@
 .stack {
-  @apply place-items-center items-end inline-grid;
+  @apply inline-grid place-items-center items-end;
 
-  &>* {
-    @apply w-full col-start-1 row-start-1 opacity-60;
+  & > * {
+    @apply col-start-1 row-start-1 w-full opacity-60;
     transform: translateY(10%) scale(0.9);
     z-index: 1;
   }
 
-  &>*:nth-child(2) {
+  & > *:nth-child(2) {
     @apply opacity-80;
     transform: translateY(5%) scale(0.95);
     z-index: 2;
   }
 
-  &>*:nth-child(1) {
+  & > *:nth-child(1) {
     @apply opacity-100;
     transform: translateY(0) scale(1);
     z-index: 3;

@@ -2,7 +2,7 @@
   appearance: none;
   -webkit-appearance: none;
   --range-shdw: currentColor;
-  @apply rounded-box h-6 w-full cursor-pointer overflow-hidden bg-transparent align-middle w-full max-w-80;
+  @apply rounded-box h-6 w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
   border: none;
 
   &:focus {
@@ -33,7 +33,7 @@
       var(--track-shdw);
   }
 
-  [dir=rtl] &::-webkit-slider-thumb {
+  [dir="rtl"] &::-webkit-slider-thumb {
     --track-shdw: calc(100rem * 1 + var(--filler-offset)) 0 0 100rem;
   }
 
