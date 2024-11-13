@@ -12,19 +12,24 @@
 
   const { data } = $props();
   let themeCSSModal = $state(false);
-  let themeIdCounter = $state(browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')).themes
-      ? Math.max(...JSON.parse(localStorage.getItem('themes')).themes.map(t => t.id)) + 1
-      : 1);
+  // let locsto = $state(browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')));
+  let lsthemes = $state(browser && JSON.parse(localStorage.getItem('themes')) || { themes: generateBuiltinThemes(themeOrder, data.themes), currentThemeId: null });
+
+  let initialThemeIdCounter = lsthemes.themes ? Math.max(...lsthemes.themes.map(t => t.id)) + 1 : 1;
+	let themeIdCounter = $state(initialThemeIdCounter);
+
   let dice = $state({ rotate: 0 });
 
-  let currentThemeId = $state(browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')).currentThemeId
-    ? JSON.parse(localStorage.getItem('themes')).currentThemeId
-    : { id: themeIdCounter, type: 'builtin' });
+  let currentThemeId = $derived.by(
+		() => lsthemes.currentThemeId || { id: themeIdCounter, type: 'builtin' }
+	);
+
+  let themesArray = $state(
+		lsthemes.themes || generateBuiltinThemes(themeOrder, data.themes)
+	);
 
   let themes = $derived({
-    themes: browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')).themes
-      ? JSON.parse(localStorage.getItem('themes')).themes
-      : generateBuiltinThemes(themeOrder, data.themes),
+    themes: themesArray,
     id: themeIdCounter
   });
 
@@ -49,7 +54,12 @@
 
   $effect(() => {
     if (!browser) return;
-    localStorage.setItem('themes', JSON.stringify({ themes: themes.themes, currentThemeId }));
+    currentTheme;
+    themesArray;
+    const updatedThemesArray = themesArray.map(theme =>
+      theme.id === currentThemeId.id && theme.type === currentThemeId.type ? { ...theme, ...currentTheme } : theme
+    );
+    localStorage.setItem('themes', JSON.stringify({ themes: updatedThemesArray, currentThemeId: currentThemeId }));
   });
 
   function openThemeCSSModal() {
@@ -58,37 +68,37 @@
   }
 
   function loadThemeForEditing(id, type) {
-    const theme = themes.themes.find(t => t.id === id && t.type === type);
+    const theme = themesArray.find(t => t.id === id && t.type === type);
     if (theme) {
       currentTheme = { ...theme };
-      currentThemeId = { id, type };
+      lsthemes.currentThemeId = { id, type };
+      localStorage.setItem('themes', JSON.stringify({ themes: themesArray, currentThemeId: lsthemes.currentThemeId }));
     }
   }
 
   function createNewTheme() {
-    const newColors = randomizeThemeColors(data.tailwindcolors, data.colorPairs);
-    const newTheme = {
+    const newThemeData = {
       id: themeIdCounter++,
       type: 'custom',
       name: nameGenerator(),
-      ...newColors,
+      ...randomizeThemeColors(data.tailwindcolors, data.colorPairs),
       default: false,
       prefersdark: false
     };
-    themes.themes.push(newTheme);
-    currentTheme = { ...newTheme };
-    currentThemeId = { id: newTheme.id, type: 'custom' };
+    themesArray = [...themesArray, newThemeData];
+    currentTheme = { ...newThemeData };
+    lsthemes.currentThemeId = { id: newThemeData.id, type: 'custom' };
   }
 
   function removeTheme(id, type) {
-    themes.themes = themes.themes.filter(t => t.id !== id || t.type !== type);
+    themesArray = themesArray.filter(t => t.id !== id || t.type !== type);
     if (currentTheme.id === id && currentTheme.type === type) {
       currentTheme = { id: themeIdCounter, ...data.themes.light, default: false, prefersdark: false };
     }
   }
 
   function deleteCustomThemes() {
-    themes.themes = themes.themes.filter(t => t.type !== 'custom');
+    themesArray = themesArray.filter(t => t.type !== 'custom');
     currentTheme = { id: themeIdCounter, ...data.themes.light, default: false, prefersdark: false };
   }
 
@@ -123,7 +133,7 @@
         <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-48 p-2 shadow-xl">
           <li class="menu-title">Options</li>
           <li>
-            <button class="text-xs" on:click={deleteCustomThemes} title="Delete all custom themes">
+            <button class="text-xs" onclick={deleteCustomThemes} title="Delete all custom themes">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
               </svg>
@@ -137,7 +147,7 @@
 
     <ul class="menu w-full min-w-40 p-0">
       <li>
-        <button class="btn bg-auto" on:click={() => { createNewTheme(); document.activeElement.blur(); }} style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
+        <button class="btn bg-auto" onclick={() => { createNewTheme(); document.activeElement.blur(); }} style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
           <svg class="size-5" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path></svg>
           <span>Create new theme</span>
         </button>
@@ -184,9 +194,9 @@
     <div class="grid gap-2 grid-cols-2 w-full">
       <button
         class="btn group"
-        on:click={() => {
+        onclick={() => {
           dice.rotate += 90;
-          Object.assign(currentTheme, randomizeThemeColors(data.tailwindcolors, data.colorPairs));
+          currentTheme = { ...currentTheme, ...randomizeThemeColors(data.tailwindcolors, data.colorPairs) };
         }}
       >
         <svg class="group-active:scale-95" style:rotate={`${dice.rotate}deg`} style:transition="rotate 0.4s ease" fill="currentColor" width="16" height="16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +206,7 @@
       </button>
       <button
         class="btn btn-neutral"
-        on:click={openThemeCSSModal}
+        onclick={openThemeCSSModal}
       >
       <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
         <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
@@ -358,15 +368,15 @@
           type="checkbox"
           class="toggle toggle-sm"
           checked={currentTheme['color-scheme'] === 'dark'}
-          on:change={(e) => currentTheme['color-scheme'] = e.target.checked ? 'dark' : 'light'}
+          onchange={(e) => currentTheme['color-scheme'] = e.target.checked ? 'dark' : 'light'}
         />
         Dark
       </label>
     </div>
 
-    <h3 class="divider text-xs divider-start"></h3>
+    <div class="divider text-xs divider-start"></div>
 
-    <button class="btn btn-block text-error" on:click={() => removeTheme(currentTheme.id, currentTheme.type)}>
+    <button class="btn btn-block text-error" onclick={() => removeTheme(currentTheme.id, currentTheme.type)}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
         <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
       </svg>
@@ -374,7 +384,11 @@
     </button>
   </div>
 
-  <div class="grow md:rounded-ss-xl overflow-hidden" class:max-md:hidden={dockActiveItem!=="preview"}>
+  <div class="grow md:rounded-ss-xl overflow-hidden relative" class:max-md:hidden={dockActiveItem!=="preview"}>
+    <div class="absolute inste-0 z-10 bg-white text-xs grid overflow-y-scroll h-screen grid-cols-2">
+      <pre>{JSON.stringify(currentTheme, null, 2)}</pre>
+      <pre>{JSON.stringify(themesArray, null, 2)}</pre>
+    </div>
     <div
       class="p-8 bg-base-200"
       style={currentThemeStyle}
