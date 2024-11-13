@@ -7,10 +7,10 @@
 		scale;
 	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 	transition-duration: 0.2s;
-	border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
-	border-start-end-radius: var(--radius-join-start-end, var(--radius-btn));
-	border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));
-	border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
+	border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
+	border-start-end-radius: var(--radius-join-se, var(--radius-btn));
+	border-end-start-radius: var(--radius-join-es, var(--radius-btn));
+	border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
 	--btn-color: var(--btn-bg, var(--color-base-200));
 	background-color: var(--btn-color);
 	border: var(--spacing-button-border) solid color-mix(in oklab, var(--btn-color), black 5%);
@@ -41,8 +41,16 @@
 			color-mix(in oklab, color-mix(in oklab, white 20%, var(--color-base-100)) 10%, transparent),
 			transparent 75%
 		),
-		linear-gradient(-50deg, transparent 50%, color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)),
-		linear-gradient(50deg, transparent 50%, color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%));
+		linear-gradient(
+			-50deg,
+			transparent 50%,
+			color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)
+		),
+		linear-gradient(
+			50deg,
+			transparent 50%,
+			color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)
+		);
 
 	&:hover {
 		--btn-color: color-mix(in oklab, var(--btn-bg, var(--color-base-200)), black 7%);

@@ -3,10 +3,10 @@
 	@apply h-10 w-full max-w-80 cursor-pointer appearance-none pe-4 align-middle select-none;
 	font-size: 0.875rem;
 	line-height: 2;
-	border-start-start-radius: var(--radius-join-start-start, var(--radius-btn));
-	border-start-end-radius: var(--radius-join-start-end, var(--radius-btn));
-	border-end-start-radius: var(--radius-join-end-start, var(--radius-btn));
-	border-end-end-radius: var(--radius-join-end-end, var(--radius-btn));
+	border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
+	border-start-end-radius: var(--radius-join-se, var(--radius-btn));
+	border-end-start-radius: var(--radius-join-es, var(--radius-btn));
+	border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
 
 	&:where(::file-selector-button) {
 		@apply text-base-content;

@@ -385,7 +385,7 @@
   </div>
 
   <div class="grow md:rounded-ss-xl overflow-hidden relative" class:max-md:hidden={dockActiveItem!=="preview"}>
-    <div class="absolute inste-0 z-10 bg-white text-xs grid overflow-y-scroll h-screen grid-cols-2">
+    <div class="absolute hidden inste-0 z-10 bg-white text-xs grid overflow-y-scroll h-screen grid-cols-2">
       <pre>{JSON.stringify(currentTheme, null, 2)}</pre>
       <pre>{JSON.stringify(themesArray, null, 2)}</pre>
     </div>
