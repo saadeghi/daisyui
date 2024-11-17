@@ -7,107 +7,23 @@
   import { nameGenerator } from "$lib/nameGenerator";
   import { randomizeThemeColors } from "$lib/themeGeneratorRandomizer";
   import { validateThemeName, validateThemeStructure } from "$lib/themeGeneratorValidation";
-  import themeOrder from "../../../../../../functions/themeOrder";
   import { browser } from '$app/environment';
 
   const { data } = $props();
-  let themeCSSModal = $state(false);
-  // let locsto = $state(browser && localStorage.getItem('themes') && JSON.parse(localStorage.getItem('themes')));
-  let lsthemes = $state(browser && JSON.parse(localStorage.getItem('themes')) || { themes: generateBuiltinThemes(themeOrder, data.themes), currentThemeId: null });
-
-  let initialThemeIdCounter = lsthemes.themes ? Math.max(...lsthemes.themes.map(t => t.id)) + 1 : 1;
-	let themeIdCounter = $state(initialThemeIdCounter);
-
+  let showCssModal = $state(false);
   let dice = $state({ rotate: 0 });
-
-  let currentThemeId = $derived.by(
-		() => lsthemes.currentThemeId || { id: themeIdCounter, type: 'builtin' }
-	);
-
-  let themesArray = $state(
-		lsthemes.themes || generateBuiltinThemes(themeOrder, data.themes)
-	);
-
-  let themes = $derived({
-    themes: themesArray,
-    id: themeIdCounter
-  });
-
-  function generateBuiltinThemes(themeOrder, themesData) {
-    return themeOrder.map((themeName, index) => ({
-      id: index + 1,
-      type: 'builtin',
-      name: themeName,
-      ...themesData[themeName],
-      default: false,
-      prefersdark: false
-    }));
-  }
   let dockActiveItem = $state("themes");
-  let currentTheme = $state({
-    id: currentThemeId.id,
-    ...data.themes.light,
-    default: false,
-    prefersdark: false
-  });
   let themeCSS = $state('');
 
-  $effect(() => {
-    if (!browser) return;
-    currentTheme;
-    themesArray;
-    const updatedThemesArray = themesArray.map(theme =>
-      theme.id === currentThemeId.id && theme.type === currentThemeId.type ? { ...theme, ...currentTheme } : theme
-    );
-    localStorage.setItem('themes', JSON.stringify({ themes: updatedThemesArray, currentThemeId: currentThemeId }));
-  });
-
-  function openThemeCSSModal() {
-    themeCSS = generateCSS(currentTheme);
-    themeCSSModal = true;
+  const getStoredThemesByType = (type) => {
+    if (!browser) return [];
+    return JSON.parse(localStorage.getItem('gen-themes') || '[]').filter(item => item.type === type);
   }
 
-  function loadThemeForEditing(id, type) {
-    const theme = themesArray.find(t => t.id === id && t.type === type);
-    if (theme) {
-      currentTheme = { ...theme };
-      lsthemes.currentThemeId = { id, type };
-      localStorage.setItem('themes', JSON.stringify({ themes: themesArray, currentThemeId: lsthemes.currentThemeId }));
-    }
-  }
-
-  function createNewTheme() {
-    const newThemeData = {
-      id: themeIdCounter++,
-      type: 'custom',
-      name: nameGenerator(),
-      ...randomizeThemeColors(data.tailwindcolors, data.colorPairs),
-      default: false,
-      prefersdark: false
-    };
-    themesArray = [...themesArray, newThemeData];
-    currentTheme = { ...newThemeData };
-    lsthemes.currentThemeId = { id: newThemeData.id, type: 'custom' };
-  }
-
-  function removeTheme(id, type) {
-    themesArray = themesArray.filter(t => t.id !== id || t.type !== type);
-    if (currentTheme.id === id && currentTheme.type === type) {
-      currentTheme = { id: themeIdCounter, ...data.themes.light, default: false, prefersdark: false };
-    }
-  }
-
-  function deleteCustomThemes() {
-    themesArray = themesArray.filter(t => t.type !== 'custom');
-    currentTheme = { id: themeIdCounter, ...data.themes.light, default: false, prefersdark: false };
-  }
-
-  function generateCSS(theme) {
-    return Object.entries(theme)
-      .filter(([key]) => !['id', 'name', 'default', 'prefersdark'].includes(key))
-      .map(([key, value]) => `${key}: ${value};`)
-      .join('\n');
-  }
+  let builtinThemes = $state(getStoredThemesByType('builtin'));
+  let customThemes = $state(getStoredThemesByType('custom'));
+  let currentTheme = $state({});
+  let themes = $derived([...builtinThemes, ...customThemes]);
 
   let currentThemeStyle = $derived.by(() => {
     let styleString = Object.entries(currentTheme)
@@ -116,6 +32,130 @@
       .join(';');
     return styleString;
   });
+
+  $effect.pre(() => {
+    builtinThemes = data.builtinThemes;
+    const LSthemes = localStorage.getItem('gen-themes');
+    if (LSthemes) {
+      builtinThemes = JSON.parse(LSthemes).filter(item => item.type === 'builtin');
+    }
+    const LSthemeId = localStorage.getItem('gen-theme-id');
+    if (LSthemeId && JSON.parse(LSthemes).some(item => item.id === LSthemeId)) {
+      currentTheme = JSON.parse(LSthemes).find(item => item.id === LSthemeId);
+    } else {
+      const lightTheme = themes.find(item => item.name === 'light');
+      currentTheme = lightTheme;
+    }
+  });
+
+  $effect(() => {
+    const allValid = themes.every(theme => validateThemeName(theme.name) && validateThemeStructure(theme));
+    if (allValid) {
+      localStorage.setItem('gen-themes', JSON.stringify(themes));
+      localStorage.setItem('gen-theme-id', currentTheme.id);
+    }
+    if (validateThemeName(currentTheme.name) && validateThemeStructure(currentTheme)) {
+      currentTheme = themes.find(item => item.id === currentTheme.id);
+    }
+  });
+
+
+
+  const loadTheme = (id) => {
+    currentTheme = themes.find(theme => theme.id === id);
+  };
+
+  const random = () => {
+    const updateThemeColors = (themes) => {
+      return themes.map(theme => {
+        if (theme.id !== currentTheme.id) {
+          return theme;
+        }
+        return { ...theme, ...randomizeThemeColors(data.tailwindcolors, data.colorPairs) };
+      });
+    };
+    if (currentTheme.type === 'builtin') {
+      builtinThemes = updateThemeColors(builtinThemes);
+    } else if (currentTheme.type === 'custom') {
+      customThemes = updateThemeColors(customThemes);
+    }
+  };
+
+  const openThemeCSSModal=()=> {
+    themeCSS = generateCSS(currentTheme);
+    showCssModal = true
+  }
+
+  const createNewTheme=()=> {
+    const newTheme = {
+      id: crypto.randomUUID(),
+      name: nameGenerator(),
+      type: 'custom',
+      ...randomizeThemeColors(data.tailwindcolors, data.colorPairs),
+      default: false,
+      prefersdark: false,
+    };
+    customThemes = [newTheme,...customThemes];
+    currentTheme = newTheme;
+  }
+
+  const remove = (id, type) => {
+    if (type === 'builtin') {
+      const index = builtinThemes.findIndex(item => item.id === id);
+      if (index !== -1) {
+        if (confirm(`Reset "${currentTheme.name}" themes to default?`)) {
+          builtinThemes[index] = data.builtinThemes[index];
+          currentTheme = data.builtinThemes[index];
+        }
+      }
+    } else if (type === 'custom') {
+      if (confirm(`Remove "${currentTheme.name}" themes?`)) {
+        customThemes = customThemes.filter(item => item.id !== id);
+        currentTheme = themes[0];
+      }
+    }
+  }
+
+  const removeAll = () => {
+    if (confirm("Remove all custom themes?")) {
+      customThemes = [];
+      currentTheme = themes[0];
+    }
+  }
+
+  const resetAll = () => {
+    if (confirm("Reset all themes to default?")) {
+      builtinThemes = data.builtinThemes;
+      currentTheme = data.builtinThemes[0];
+    }
+  }
+
+  const generateCSS = (theme) => {
+    const baseProps = [
+      `  name: "${theme.name}";`,
+      `  default: ${theme.default ? "true" : "false"};`,
+      `  prefersdark: ${theme.prefersdark ? "true" : "false"};`,
+      `  color-scheme: "${theme['color-scheme']}";`,
+    ];
+    const cssProps = Object.entries(theme)
+        .filter(([key]) => key.startsWith('--color'))
+        .map(([key, value]) => `  ${key}: ${value};`);
+    const radiusProps = Object.entries(theme)
+        .filter(([key]) => key.startsWith('--radius'))
+        .map(([key, value]) => `  ${key}: ${value};`);
+    const borderProps = Object.entries(theme)
+        .filter(([key]) => key.startsWith('--spacing'))
+        .map(([key, value]) => `  ${key}: ${value};`);
+    return `\n@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n${radiusProps.join('\n')}\n${borderProps.join('\n')}\n}\n`;
+
+
+    // return Object.entries(theme)
+    //   .filter(([key]) => !['id', 'name', 'default', 'prefersdark'].includes(key))
+    //   .map(([key, value]) => `${key}: ${value};`)
+    //   .join('\n');
+  }
+
+
 </script>
 
 <div class="flex flex-col md:flex-row relative">
@@ -130,16 +170,23 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
           </svg>
         </div>
-        <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-48 p-2 shadow-xl">
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-52 p-2 shadow-xl">
           <li class="menu-title">Options</li>
           <li>
-            <button class="text-xs" onclick={deleteCustomThemes} title="Delete all custom themes">
+            <button class="text-xs" onclick={removeAll}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
               </svg>
-              Delete all
+              Remove my themes
             </button>
           </li>
+          <li>
+            <button class="text-xs" onclick={resetAll}>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+              </svg>
+              Reset daisyUI themes
+            </button>
         </ul>
       </div>
 
@@ -152,25 +199,27 @@
           <span>Create new theme</span>
         </button>
       </li>
-      <li class="menu-title mt-6">Custom themes</li>
-      {#each themes.themes?.filter(t => t.type === 'custom') as theme}
+      <li class="menu-title mt-6">My themes</li>
+      {#each themes?.filter(item => item.type === 'custom') as theme}
         <ThemeListItem
           id={theme.id}
           type={theme.type}
           theme={theme}
-          isCurrent={currentThemeId.id === theme.id && currentThemeId.type === theme.type}
-          loadThemeForEditing={() => loadThemeForEditing(theme.id, theme.type)}
+          isCurrent={currentTheme.id === theme.id && currentTheme.type === theme.type}
+          loadTheme={() => loadTheme(theme.id)}
         />
+      {:else}
+        <li class="menu-disabled"><div>&nbsp;</div></li>
       {/each}
       <li></li>
       <li class="menu-title">daisyUI themes</li>
-      {#each themes.themes?.filter(t => t.type === 'builtin') as theme}
+      {#each themes?.filter(item => item.type === 'builtin') as theme}
         <ThemeListItem
           id={theme.id}
           type={theme.type}
           theme={theme}
-          isCurrent={currentThemeId.id === theme.id && currentThemeId.type === theme.type}
-          loadThemeForEditing={() => loadThemeForEditing(theme.id, theme.type)}
+          isCurrent={currentTheme.id === theme.id && currentTheme.type === theme.type}
+          loadTheme={() => loadTheme(theme.id)}
         />
       {/each}
     </ul>
@@ -196,7 +245,7 @@
         class="btn group"
         onclick={() => {
           dice.rotate += 90;
-          currentTheme = { ...currentTheme, ...randomizeThemeColors(data.tailwindcolors, data.colorPairs) };
+          random()
         }}
       >
         <svg class="group-active:scale-95" style:rotate={`${dice.rotate}deg`} style:transition="rotate 0.4s ease" fill="currentColor" width="16" height="16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
@@ -206,9 +255,9 @@
       </button>
       <button
         class="btn btn-neutral"
-        onclick={openThemeCSSModal}
+        onclick={()=>openThemeCSSModal()}
       >
-      <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+      <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
         <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
       </svg>
         Get CSS
@@ -270,7 +319,7 @@
         >
           {#each values as value}
             <label
-              class="rounded-btn overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
+              class="rounded-btn overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
               title={value}
             >
               <input
@@ -286,7 +335,7 @@
                 aria-hidden="true"
               >
                 <div
-                  class="w-8 h-6 border-e border-t border-e-2 border-t-2 border-base-content/20 bg-base-200"
+                  class="w-8 h-6 border-e-2 border-t-2 border-base-content/20 bg-base-200"
                   style={`border-start-end-radius:${value}`}
                   class:border-primary={currentTheme[key] === value}
                   class:bg-base-300={currentTheme[key] !== value}
@@ -376,19 +425,22 @@
 
     <div class="divider text-xs divider-start"></div>
 
-    <button class="btn btn-block text-error" onclick={() => removeTheme(currentTheme.id, currentTheme.type)}>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-      </svg>
-      Delete theme
+    <button class="btn btn-block text-error" onclick={() => remove(currentTheme.id, currentTheme.type)}>
+      {#if currentTheme.type === 'builtin'}
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+        </svg>
+        Reset theme
+      {:else}
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-error">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+        </svg>
+        Remove theme
+      {/if}
     </button>
   </div>
 
-  <div class="grow md:rounded-ss-xl overflow-hidden relative" class:max-md:hidden={dockActiveItem!=="preview"}>
-    <div class="absolute hidden inste-0 z-10 bg-white text-xs grid overflow-y-scroll h-screen grid-cols-2">
-      <pre>{JSON.stringify(currentTheme, null, 2)}</pre>
-      <pre>{JSON.stringify(themesArray, null, 2)}</pre>
-    </div>
+  <div class="grow md:rounded-ss-xl overflow-hidden" class:max-md:hidden={dockActiveItem!=="preview"}>
     <div
       class="p-8 bg-base-200"
       style={currentThemeStyle}
@@ -401,7 +453,7 @@
 <Dock bind:dockActiveItem={dockActiveItem} />
 
 <ThemeCSSModal
-  bind:themeCSSModal={themeCSSModal}
+  bind:showCssModal
   bind:themeCSS={themeCSS}
   currentTheme={currentTheme}
 />
