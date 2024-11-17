@@ -2,7 +2,7 @@
   @apply cursor-pointer underline;
 
   &:focus {
-    @apply outline-none;
+    @apply outline-hidden;
   }
 
   &:focus-visible {

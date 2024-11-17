@@ -2,7 +2,7 @@
   @apply rounded-box relative flex flex-col;
 
   &:focus {
-    @apply outline-none;
+    @apply outline-hidden;
   }
 
   &:focus-visible {
@@ -62,14 +62,14 @@
 }
 
 .card-title {
-  @apply flex items-center gap-2;
+  @apply gap-2 flex items-center;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
 }
 
 .card-body {
-  @apply flex flex-auto flex-col gap-2 p-8;
+  @apply gap-2 p-8 flex flex-auto flex-col;
 
   :where(p) {
     @apply grow;
@@ -77,7 +77,7 @@
 }
 
 .card-actions {
-  @apply flex flex-wrap items-start gap-2;
+  @apply gap-2 flex flex-wrap items-start;
 }
 
 .card-xs {

@@ -1,101 +1,101 @@
 {
-	"type": "module",
-	"name": "daisyui",
-	"version": "5.0.0-alpha.37",
-	"description": "daisyUI 5 - Tailwind CSS Component Library",
-	"author": "Pouya Saadeghi",
-	"license": "MIT",
-	"homepage": "https://daisyui.com",
-	"repository": "github:saadeghi/daisyui",
-	"funding": "https://github.com/saadeghi/daisyui?sponsor=1",
-	"bugs": {
-		"url": "https://github.com/saadeghi/daisyui/issues"
-	},
-	"keywords": [
-		"daisyui",
-		"tailwind",
-		"tailwindcss",
-		"tailwind css",
-		"tailwind react",
-		"tailwind vue",
-		"tailwind plugin",
-		"tailwind component",
-		"tailwind next",
-		"tailwind nuxt",
-		"tailwind svelte",
-		"tailwind css plugin",
-		"tailwind astro",
-		"tailwind laravel",
-		"tailwind rails",
-		"react",
-		"css",
-		"ui",
-		"vue",
-		"component",
-		"framework",
-		"nextjs",
-		"front-end",
-		"laravel",
-		"theme",
-		"nuxt",
-		"svelte",
-		"astro",
-		"component library",
-		"css library"
-	],
-	"main": "./index.js",
-	"module": "./index.js",
-	"browser": "./full.css",
-	"files": [
-		"base",
-		"colors",
-		"components",
-		"functions/addPrefix.js",
-		"functions/plugin.js",
-		"functions/pluginOptionsHandler.js",
-		"functions/variables.js",
-		"theme",
-		"utilities",
-		"imports.js",
-		"index.js",
-		"chunks.css",
-		"full.css",
-		"themes.css"
-	],
-	"engines": {
-		"node": ">=16.9.0"
-	},
-	"browserslist": [
-		"> 7%"
-	],
-	"publishConfig": {
-		"access": "public",
-		"branches": [
-			"master"
-		]
-	},
-	"scripts": {
-		"init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
-		"format": "npx prettier 'css/**/*' 'functions/**/*' '*.js' 'theme/**/*' '*.css' '.prettierrc' --write",
-		"lint": "biome lint . --write",
-		"build": "bun build.js",
-		"dev": "cd src/docs && npm run dev",
-		"playground": "cd src/experiments/playground && npm run dev",
-		"wallace": "npx -y wallace-cli full.css",
-		"release": "node src/release",
-		"publish:alpha": "npm publish --tag=alpha",
-		"alpha": "npm run release -- --alpha && npm publish --tag=alpha"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@tailwindcss/cli": "^4.0.0-alpha.30",
-		"commit-and-tag-version": "12.5.0",
-		"lightningcss": "^1.27.0",
-		"postcss": "^8.4.47",
-		"postcss-js": "^4.0.1",
-		"postcss-selector-parser": "^7.0.0",
-		"prettier": "^3.3.3",
-		"prettier-plugin-tailwindcss": "^0.6.8",
-		"zlib": "^1.0.5"
-	}
+  "type": "module",
+  "name": "daisyui",
+  "version": "5.0.0-alpha.38",
+  "description": "daisyUI 5 - Tailwind CSS Component Library",
+  "author": "Pouya Saadeghi",
+  "license": "MIT",
+  "homepage": "https://daisyui.com",
+  "repository": "github:saadeghi/daisyui",
+  "funding": "https://github.com/saadeghi/daisyui?sponsor=1",
+  "bugs": {
+    "url": "https://github.com/saadeghi/daisyui/issues"
+  },
+  "keywords": [
+    "daisyui",
+    "tailwind",
+    "tailwindcss",
+    "tailwind css",
+    "tailwind react",
+    "tailwind vue",
+    "tailwind plugin",
+    "tailwind component",
+    "tailwind next",
+    "tailwind nuxt",
+    "tailwind svelte",
+    "tailwind css plugin",
+    "tailwind astro",
+    "tailwind laravel",
+    "tailwind rails",
+    "react",
+    "css",
+    "ui",
+    "vue",
+    "component",
+    "framework",
+    "nextjs",
+    "front-end",
+    "laravel",
+    "theme",
+    "nuxt",
+    "svelte",
+    "astro",
+    "component library",
+    "css library"
+  ],
+  "main": "./index.js",
+  "module": "./index.js",
+  "browser": "./full.css",
+  "files": [
+    "base",
+    "colors",
+    "components",
+    "functions/addPrefix.js",
+    "functions/plugin.js",
+    "functions/pluginOptionsHandler.js",
+    "functions/variables.js",
+    "theme",
+    "utilities",
+    "imports.js",
+    "index.js",
+    "chunks.css",
+    "full.css",
+    "themes.css"
+  ],
+  "engines": {
+    "node": ">=16.9.0"
+  },
+  "browserslist": [
+    "> 7%"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
+  "scripts": {
+    "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
+    "format": "npx prettier 'css/**/*' 'functions/**/*' '*.js' 'theme/**/*' '*.css' '.prettierrc' --write",
+    "lint": "biome lint . --write",
+    "build": "bun build.js",
+    "dev": "cd src/docs && npm run dev",
+    "playground": "cd src/experiments/playground && npm run dev",
+    "wallace": "npx -y wallace-cli full.css",
+    "release": "node src/release",
+    "publish:alpha": "npm publish --tag=alpha",
+    "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@tailwindcss/cli": "^4.0.0-alpha.34",
+    "commit-and-tag-version": "12.5.0",
+    "lightningcss": "^1.27.0",
+    "postcss": "^8.4.47",
+    "postcss-js": "^4.0.1",
+    "postcss-selector-parser": "^7.0.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "zlib": "^1.0.5"
+  }
 }

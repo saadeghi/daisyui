@@ -1,6 +1,6 @@
 .input {
   border: 1px solid transparent;
-  @apply bg-base-100 h-10 w-full max-w-80 shrink appearance-none px-4 align-middle;
+  @apply bg-base-100 h-10 max-w-80 px-4 w-full shrink appearance-none align-middle;
   font-size: 0.875rem;
   line-height: 2;
   border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
@@ -13,7 +13,7 @@
     border: none;
 
     &:focus {
-      @apply outline-none;
+      @apply outline-hidden;
     }
   }
 

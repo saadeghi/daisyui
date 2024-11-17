@@ -1,8 +1,8 @@
 .btn {
-  @apply text-base-content inline-flex h-10 shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-2 px-4 text-center align-middle no-underline outline-offset-2 select-none;
+  @apply text-base-content h-10 gap-2 px-4 inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center text-center align-middle no-underline outline-offset-2 select-none;
   font-size: 0.875rem;
   outline-color: var(--color-base-content);
-  font-weight: 500;
+  font-weight: 600;
   transition-property: color, background-color, background-image, border-color, opacity, box-shadow,
     scale;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -264,7 +264,7 @@
 }
 
 .btn-circle {
-  @apply size-10 rounded-full px-0;
+  @apply size-10 px-0 rounded-full;
 
   &.btn-xs {
     @apply size-6;

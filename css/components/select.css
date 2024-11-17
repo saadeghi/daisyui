@@ -1,6 +1,6 @@
 .select {
   border: 1px solid;
-  @apply bg-base-100 relative h-10 w-full max-w-80 shrink appearance-none border-transparent px-4 align-middle;
+  @apply bg-base-100 h-10 max-w-80 px-4 relative w-full shrink appearance-none border-transparent align-middle;
   font-size: 0.875rem;
   line-height: 2;
   border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
@@ -25,7 +25,7 @@
     border-style: none;
 
     &:focus {
-      @apply outline-none;
+      @apply outline-hidden;
     }
   }
 

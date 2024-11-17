@@ -1,6 +1,6 @@
 .textarea {
   border: 1px solid transparent;
-  @apply bg-base-100 rounded-btn h-10 min-h-20 w-full max-w-80 shrink appearance-none px-4 py-2 align-middle;
+  @apply bg-base-100 rounded-btn h-10 min-h-20 max-w-80 px-4 py-2 w-full shrink appearance-none align-middle;
   font-size: 0.875rem;
 
   textarea {
@@ -8,7 +8,7 @@
     border: none;
 
     &:focus {
-      @apply outline-none;
+      @apply outline-hidden;
     }
   }
 

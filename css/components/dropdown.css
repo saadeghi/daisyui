@@ -3,7 +3,7 @@
   position-area: var(--anchor-v, bottom) var(--anchor-h, span-right);
 
   & > *:not(summary):focus {
-    @apply outline-none;
+    @apply outline-hidden;
   }
 
   .dropdown-content {
@@ -156,7 +156,7 @@
     --anchor-v: span-top;
 
     .dropdown-content {
-      @apply top-auto bottom-0;
+      @apply bottom-0 top-auto;
     }
   }
 
@@ -165,7 +165,7 @@
     --anchor-v: span-top;
 
     .dropdown-content {
-      @apply top-auto bottom-0;
+      @apply bottom-0 top-auto;
     }
   }
 }
@@ -175,7 +175,7 @@
   --anchor-v: span-bottom;
 
   .dropdown-content {
-    @apply end-full top-0 bottom-auto origin-right;
+    @apply top-0 end-full bottom-auto origin-right;
   }
 }
 
@@ -184,7 +184,7 @@
   --anchor-v: span-bottom;
 
   .dropdown-content {
-    @apply start-full top-0 bottom-auto origin-left;
+    @apply top-0 start-full bottom-auto origin-left;
   }
 }
 
