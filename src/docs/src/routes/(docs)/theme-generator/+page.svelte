@@ -147,7 +147,7 @@
     const borderProps = Object.entries(theme)
         .filter(([key]) => key.startsWith('--spacing'))
         .map(([key, value]) => `  ${key}: ${value};`);
-    return `\n@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n${radiusProps.join('\n')}\n${borderProps.join('\n')}\n}\n`;
+    return `@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n${radiusProps.join('\n')}\n${borderProps.join('\n')}\n}\n`;
   }
 
 
@@ -453,6 +453,6 @@
   bind:showCssModal
   bind:themeCSS={themeCSS}
   bind:currentTheme={currentTheme}
-  bind:builtinThemes={builtinThemes}
-  bind:customThemes={customThemes}
+  builtinThemes={builtinThemes}
+  customThemes={customThemes}
 />

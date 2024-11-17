@@ -169,7 +169,7 @@
         </div>
       </div>
       <div
-        class="lg:[writing-mode:vertical-lr] mx-auto w-fit grid grid-cols-11 lg:min-h-[20rem]"
+        class="lg:[writing-mode:vertical-lr] lg:my-auto mx-auto w-fit grid grid-cols-11 lg:min-h-[20rem]"
         role="listbox"
       >
         {#each Object.entries(colors) as [name, color]}
@@ -201,7 +201,7 @@
           </button>
         {/each}
       </div>
-      <div class="flex flex-col md:flex-row gap-2 items-center bg-base-200 px-8 py-6 justify-between items-center">
+      <div class="flex flex-col md:flex-row gap-2 items-center bg-base-200 px-8 py-6 justify-between">
         <div class="flex flex-col gap-1 grow">
           <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>
           <label class="input input-border items-center w-full flex gap-2">
