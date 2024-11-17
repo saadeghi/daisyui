@@ -1,4 +1,5 @@
 <script>
+  import SEO from "$components/SEO.svelte"
   import ColorPalette from "$components/ColorPalette.svelte";
   import Preview from "$components/themegenerator/Preview.svelte";
   import ThemeCSSModal from "$components/themegenerator/ThemeCSSModal.svelte";
@@ -147,16 +148,12 @@
         .filter(([key]) => key.startsWith('--spacing'))
         .map(([key, value]) => `  ${key}: ${value};`);
     return `\n@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n${radiusProps.join('\n')}\n${borderProps.join('\n')}\n}\n`;
-
-
-    // return Object.entries(theme)
-    //   .filter(([key]) => !['id', 'name', 'default', 'prefersdark'].includes(key))
-    //   .map(([key, value]) => `${key}: ${value};`)
-    //   .join('\n');
   }
 
 
 </script>
+
+<SEO title="daisyUI and Tailwind CSS theme generator" desc="OKLCH Theme Generator for daisyUI and Tailwind CSS" />
 
 <div class="flex flex-col md:flex-row relative">
   <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[15rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
@@ -455,5 +452,7 @@
 <ThemeCSSModal
   bind:showCssModal
   bind:themeCSS={themeCSS}
-  currentTheme={currentTheme}
+  bind:currentTheme={currentTheme}
+  bind:builtinThemes={builtinThemes}
+  bind:customThemes={customThemes}
 />

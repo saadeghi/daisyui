@@ -62,3 +62,7 @@ export function validateThemeStructure(data) {
     return null
   }
 }
+
+export function validateBoolean(value) {
+  return value === "true" || value === "false"
+}

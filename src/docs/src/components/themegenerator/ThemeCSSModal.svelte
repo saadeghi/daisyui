@@ -4,11 +4,14 @@
   let {
     showCssModal = $bindable(),
     themeCSS = $bindable(),
-    currentTheme
+    currentTheme = $bindable(),
+    builtinThemes = $bindable(),
+    customThemes = $bindable(),
   } = $props();
  	$effect(() => {
 		if (showCssModal) dialog.showModal();
 	});
+
   let isClipboardButtonPressed = $state(false);
   function copyThemeCSSToClipboard() {
     navigator.clipboard.writeText(themeCSS)
@@ -17,6 +20,18 @@
         setTimeout(() => isClipboardButtonPressed = false, 2000);
       })
       .catch(err => console.error('Failed to copy:', err));
+  }
+
+  function handleThemeCSSInput(event) {
+    const newThemeData = parseThemeCSS(event.target.value, currentTheme);
+    if (newThemeData) {
+      currentTheme = newThemeData;
+      if (currentTheme.type === 'custom') {
+        customThemes = customThemes.map(theme => theme.id === currentTheme.id ? currentTheme : theme);
+      } else if (currentTheme.type === 'builtin') {
+        builtinThemes = builtinThemes.map(theme => theme.id === currentTheme.id ? currentTheme : theme);
+      }
+    }
   }
 </script>
 
@@ -62,12 +77,7 @@
       data-theme="dark"
       class="block resize-none textarea textarea-border w-full max-w-none h-96 font-mono textarea-xs min-h-80"
       bind:value={themeCSS}
-      oninput={(e) => {
-        const newThemeData = parseThemeCSS(e.target.value, currentTheme)
-        if (newThemeData) {
-          currentTheme = newThemeData
-        }
-      }}
+      oninput={handleThemeCSSInput}
     ></textarea>
   </div>
   <div class="modal-backdrop" onclick={() => dialog.close()}></div>
