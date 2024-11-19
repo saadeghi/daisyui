@@ -204,7 +204,7 @@
       <div class="flex flex-col md:flex-row gap-2 items-center bg-base-200 px-8 py-6 justify-between">
         <div class="flex flex-col gap-1 grow">
           <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>
-          <label class="input input-border items-center w-full flex gap-2">
+          <label class="input input-border items-center w-full flex gap-2 px-2">
             <input
               type="text"
               value={inputValue}
@@ -212,7 +212,7 @@
               aria-label={`${name} value`}
             />
             {#if Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
-              <span class="opacity/50 shrink-0 badge badge-xs badge-soft max-md:hidden">
+              <span class="opacity/50 shrink-0 badge badge-xs gap-1 badge-soft max-md:hidden select-none">
                 {Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
                 <svg width="16px" height="16px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z" fill="currentColor"/></svg>
               </span>

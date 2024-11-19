@@ -4,12 +4,14 @@
     type,
     theme,
     isCurrent,
-    loadTheme
+    loadTheme,
+    style,
   } = $props();
 </script>
 
 <li>
   <button
+    style={style}
     class={`px-2 gap-3 ${isCurrent ? 'bg-base-content/10' : ''}`}
     on:click={() => loadTheme(id)}
   >

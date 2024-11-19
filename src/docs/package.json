@@ -39,6 +39,7 @@
     "culori": "^4.0.1",
     "lodash.debounce": "4.0.8",
     "nanoid": "5.0.7",
+    "pako": "^2.1.0",
     "svelte-countdown": "1.1.2",
     "svelte-countup": "0.2.8"
   }

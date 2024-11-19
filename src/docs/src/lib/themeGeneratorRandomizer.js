@@ -6,7 +6,10 @@ export function randomizeThemeColors(tailwindcolors) {
   function randomFromRange(colors, ranges) {
     const validColors = Object.entries(colors).filter(([name, _]) => {
       const [colorName, shade] = name.split("-")
-      return ranges.colorNames.includes(colorName) && ranges.shades.includes(shade)
+      return (
+        (ranges.colorNames.includes(colorName) && ranges.shades.includes(shade)) ||
+        ranges.colorNames.includes(name) // Handle black and white
+      )
     })
     return validColors[Math.floor(Math.random() * validColors.length)][1]
   }
@@ -21,8 +24,10 @@ export function randomizeThemeColors(tailwindcolors) {
   }
 
   function getContrastColor(colorName, shade) {
+    if (colorName === "black") return tailwindcolors["white"]
+    if (colorName === "white") return tailwindcolors["black"]
     const shadeNum = parseInt(shade)
-    const contrastShade = shadeNum >= 400 ? "50" : "950"
+    const contrastShade = shadeNum > 400 ? "50" : "950"
     return randomFromRange(tailwindcolors, {
       colorNames: [colorName],
       shades: [contrastShade],
@@ -43,6 +48,15 @@ export function randomizeThemeColors(tailwindcolors) {
       return arrays[1]
     }
     return arrays[0]
+  }
+
+  const generateWeightedArray = (weights) => {
+    return Object.entries(weights).reduce((arr, [color, weight]) => {
+      for (let i = 0; i < weight; i++) {
+        arr.push(color)
+      }
+      return arr
+    }, [])
   }
 
   // Initialize newColors object
@@ -168,32 +182,37 @@ export function randomizeThemeColors(tailwindcolors) {
   newColors["--color-error-content"] = getContrastColor(errorColorName, semanticShade)
 
   // Primary, Secondary, Accent colors
-  const brandShades = randomFrom(["400", "500", "600", "950"])
-  const brandColorNames = [
-    "red",
-    "orange",
-    "amber",
-    "yellow",
-    "lime",
-    "green",
-    "emerald",
-    "teal",
-    "cyan",
-    "sky",
-    "blue",
-    "indigo",
-    "violet",
-    "purple",
-    "fuchsia",
-    "pink",
-    "rose",
-  ]
+  const brandShades = randomFrom(["300", "400", "500", "600"])
+  const brandColorWeights = {
+    amber: 3,
+    black: 5,
+    blue: 4,
+    cyan: 2,
+    emerald: 3,
+    fuchsia: 1,
+    gray: 1,
+    green: 3,
+    indigo: 4,
+    lime: 3,
+    neutral: 1,
+    orange: 3,
+    pink: 3,
+    purple: 3,
+    red: 3,
+    rose: 1,
+    sky: 2,
+    slate: 1,
+    stone: 1,
+    teal: 3,
+    violet: 3,
+    yellow: 3,
+    zinc: 1,
+  }
 
   // Pick three different color families
-  const [primaryColorName, secondaryColorName, accentColorName] = shuffle(brandColorNames).slice(
-    0,
-    3,
-  )
+  const [primaryColorName, secondaryColorName, accentColorName] = shuffle(
+    generateWeightedArray(brandColorWeights),
+  ).slice(0, 3)
 
   newColors["--color-primary"] = randomFromRange(tailwindcolors, {
     colorNames: [primaryColorName],

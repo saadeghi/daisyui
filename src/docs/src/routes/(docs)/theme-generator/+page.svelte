@@ -10,6 +10,21 @@
   import { validateThemeName, validateThemeStructure } from "$lib/themeGeneratorValidation";
   import { browser } from '$app/environment';
 
+  // import { pushState } from '$app/navigation';
+
+  // import pako from 'pako';
+
+  // const pack = (obj)  => {
+  //   const jsonString = JSON.stringify(obj);
+  //   const compressed = pako.deflate(jsonString);
+  //   return btoa(String.fromCharCode.apply(null, new Uint8Array(compressed)));
+  // }
+  // const unpack = (str) => {
+  //   const compressed = Uint8Array.from(atob(str), c => c.charCodeAt(0));
+  //   const jsonString = pako.inflate(compressed, { to: 'string' });
+  //   return JSON.parse(jsonString);
+  // }
+
   const { data } = $props();
   let showCssModal = $state(false);
   let dice = $state({ rotate: 0 });
@@ -33,6 +48,26 @@
       .join(';');
     return styleString;
   });
+
+  let firstItemStyle = $state('scale:1;opacity:1;');
+  const createNewTheme = (id, name, colors) => {
+    if (!customThemes.some(theme => theme.id === id)) {
+      const newTheme = {
+        id: id,
+        name: name,
+        type: 'custom',
+        ...colors,
+        default: false,
+        prefersdark: false,
+      };
+      customThemes = [newTheme, ...customThemes];
+      currentTheme = newTheme;
+      firstItemStyle = 'scale:.9; opacity: 0;';
+      setTimeout(() => {
+        firstItemStyle = 'scale:1; transition: scale .3s ease, opacity .2s ease;';
+      }, 200);
+    }
+  }
 
   $effect.pre(() => {
     builtinThemes = data.builtinThemes;
@@ -87,19 +122,6 @@
     showCssModal = true
   }
 
-  const createNewTheme=()=> {
-    const newTheme = {
-      id: crypto.randomUUID(),
-      name: nameGenerator(),
-      type: 'custom',
-      ...randomizeThemeColors(data.tailwindcolors, data.colorPairs),
-      default: false,
-      prefersdark: false,
-    };
-    customThemes = [newTheme,...customThemes];
-    currentTheme = newTheme;
-  }
-
   const remove = (id, type) => {
     if (type === 'builtin') {
       const index = builtinThemes.findIndex(item => item.id === id);
@@ -147,16 +169,73 @@
     const borderProps = Object.entries(theme)
         .filter(([key]) => key.startsWith('--spacing'))
         .map(([key, value]) => `  ${key}: ${value};`);
-    return `@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n${radiusProps.join('\n')}\n${borderProps.join('\n')}\n}\n`;
+    return `\n@plugin "daisyui/theme" {\n${baseProps.join('\n')}\n${cssProps.join('\n')}\n${radiusProps.join('\n')}\n${borderProps.join('\n')}\n}\n`;
   }
 
+  let holdTimeout;
+  let holdInterval;
+  let startTime;
+  let svgElement;
+
+  const handleMouseDown = (event) => {
+    if (holdTimeout || holdInterval) return;
+
+    startTime = Date.now();
+    svgElement = event.currentTarget.querySelector('svg');
+    svgElement.style.transition = 'rotate 3s linear';
+    holdInterval = setInterval(() => {
+      const elapsedTime = Date.now() - startTime;
+      const rotation = 90 * (elapsedTime / 1000);
+      if (rotation <= 90) {
+        svgElement.style.rotate = '90deg';
+        clearInterval(holdInterval);
+        holdInterval = null;
+      } else {
+        svgElement.style.rotate = `${rotation}deg`;
+      }
+    }, 10);
+    holdTimeout = setTimeout(() => {
+      createNewTheme(
+        crypto.randomUUID(),
+        nameGenerator(),
+        randomizeThemeColors(data.tailwindcolors, data.colorPairs)
+      );
+      // document.activeElement.blur();
+      clearTimeout(holdTimeout);
+      holdTimeout = null;
+    }, 3000);
+  };
+
+  const handleMouseUpOrLeave = () => {
+    if (!svgElement) return;
+    clearTimeout(holdTimeout);
+    clearInterval(holdInterval);
+    holdTimeout = null;
+    holdInterval = null;
+    svgElement.style.removeProperty('transition');
+    svgElement.style.removeProperty('rotate');
+  };
 
 </script>
+
+<!-- <button onclick={() => {
+  const url = new URL(window.location);
+  url.searchParams.set('theme', pack(currentTheme));
+  pushState(url);
+}}>Set param</button>
+
+<button onclick={() => {
+  const url = new URL(window.location);
+  const param = url.searchParams.get('theme');
+  if (param) {
+    console.log(unpack(param));
+  }
+}}>read param</button> -->
 
 <SEO title="daisyUI and Tailwind CSS theme generator" desc="OKLCH Theme Generator for daisyUI and Tailwind CSS" />
 
 <div class="flex flex-col md:flex-row relative">
-  <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[15rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
+  <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[14rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
     <div class="flex gap-2 justify-between items-center mb-4">
 
       <h2 class="font-bold ms-2">Themes</h2>
@@ -191,19 +270,35 @@
 
     <ul class="menu w-full min-w-40 p-0">
       <li>
-        <button class="btn bg-auto" onclick={() => { createNewTheme(); document.activeElement.blur(); }} style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
-          <svg class="size-5" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path></svg>
-          <span>Create new theme</span>
+        <button class="btn bg-auto group px-2"
+          onmousedown={handleMouseDown}
+          onmouseup={handleMouseUpOrLeave}
+          onmouseleave={handleMouseUpOrLeave}
+          onblur={handleMouseUpOrLeave}
+          onkeydown={(event) => {
+            if ((event.key === 'Enter' || event.key === ' ') && !holdTimeout && !holdInterval) {
+              handleMouseDown(event);
+            }
+          }}
+          onkeyup={(event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              handleMouseUpOrLeave(event);
+            }
+          }}
+          style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
+          <svg class="size-5 origin-[40%_60%] [transition:rotate_.2s_ease] group-hover:-rotate-12" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path></svg>
+          <span class="font-normal"><span class="font-semibold">Hold</span> to create theme</span>
         </button>
       </li>
       <li class="menu-title mt-6">My themes</li>
-      {#each themes?.filter(item => item.type === 'custom') as theme}
+      {#each themes?.filter(item => item.type === 'custom') as theme, index}
         <ThemeListItem
           id={theme.id}
           type={theme.type}
           theme={theme}
           isCurrent={currentTheme.id === theme.id && currentTheme.type === theme.type}
           loadTheme={() => loadTheme(theme.id)}
+          style={index === 0 ? firstItemStyle : ''}
         />
       {:else}
         <li class="menu-disabled"><div>&nbsp;</div></li>
@@ -223,7 +318,7 @@
 
   </div>
 
-  <div class="flex flex-col pb-20 shrink-0 w-full md:w-[18rem] md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start" class:max-md:hidden={dockActiveItem!=="editor"}>
+  <div class="flex flex-col pb-20 shrink-0 w-full md:w-[17rem] md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start" class:max-md:hidden={dockActiveItem!=="editor"}>
     <label class="input flex font-semibold text-lg input-sm w-full items-center gap-2 shrink-0">
       <input
         class="shrink w-full"
@@ -245,7 +340,7 @@
           random()
         }}
       >
-        <svg class="group-active:scale-95" style:rotate={`${dice.rotate}deg`} style:transition="rotate 0.4s ease" fill="currentColor" width="16" height="16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+        <svg class="group-active:scale-95 shrink-0" style:rotate={`${dice.rotate}deg`} style:transition="rotate 0.4s ease" fill="currentColor" width="16" height="16" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
           <path d="M192,28H64A36.04061,36.04061,0,0,0,28,64V192a36.04061,36.04061,0,0,0,36,36H192a36.04061,36.04061,0,0,0,36-36V64A36.04061,36.04061,0,0,0,192,28Zm12,164a12.01312,12.01312,0,0,1-12,12H64a12.01312,12.01312,0,0,1-12-12V64A12.01312,12.01312,0,0,1,64,52H192a12.01312,12.01312,0,0,1,12,12ZM104,88A16,16,0,1,1,88,72,16.01833,16.01833,0,0,1,104,88Zm80,0a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,184,88Zm-80,80a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,104,168Zm80,0a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,184,168Zm-40-40a16,16,0,1,1-16-16A16.01833,16.01833,0,0,1,144,128Z"/>
         </svg>
         Random
@@ -254,10 +349,10 @@
         class="btn btn-neutral"
         onclick={()=>openThemeCSSModal()}
       >
-      <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+      <svg class="shrink-0" fill="currentColor" width="16px" height="16px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
         <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
       </svg>
-        Get CSS
+        CSS
       </button>
     </div>
 
@@ -452,7 +547,7 @@
 <ThemeCSSModal
   bind:showCssModal
   bind:themeCSS={themeCSS}
-  bind:currentTheme={currentTheme}
-  builtinThemes={builtinThemes}
-  customThemes={customThemes}
+  currentTheme={currentTheme}
+  bind:builtinThemes={builtinThemes}
+  bind:customThemes={customThemes}
 />

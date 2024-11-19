@@ -1,238 +1,599 @@
-<div class="sm:columns-2 md:columns-1 lg:columns-2 xl:columns-3 text-base-content [&>*]:shadow-sm [&>*]:mb-4 [&>*]:break-inside-avoid [&_*]:[transition:background-color_100ms,border-color_100ms,border-radius_500ms_ease-out]">
+<div class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-2 text-base-content [&>.card]:bg-base-100 [&>.card]:border-[.5px] [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-12 lg:max-w-[25rem] xl:max-w-[50rem] mx-auto [&>*]:mb-4 [&>*]:lg:mb-10 [&>*]:break-inside-avoid [&_*]:[transition:background-color_100ms,border-color_100ms,border-radius_500ms_ease-out] lg:px-10 lg:pt-10 pb-20">
 
-    <!-- <nav class="bg-base-200 text-base-content rounded-box col-span-8 flex gap-2 items-center justify-between">
-      <ul class="menu menu-sm menu-horizontal shrink-0">
-        <li>
-          <details>
-            <summary>Products</summary>
-            <ul class="w-40">
-              <li><a>Add new product</a></li>
-              <li><a>Categories</a></li>
-              <li><a>Tags</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><button>Transactions</button></li>
-        <li><button>Orders</button></li>
-      </ul>
-      <label class="input-border input-sm flex input items-center gap-2 w-auto me-2">
-        <input type="text" class="grow" placeholder="Search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
-          <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
-        </svg>
+  <!-- <nav class="bg-base-200 text-base-content rounded-box col-span-8 flex gap-2 items-center justify-between">
+    <ul class="menu menu-sm menu-horizontal shrink-0">
+      <li>
+        <details>
+          <summary>Products</summary>
+          <ul class="w-40">
+            <li><a>Add new product</a></li>
+            <li><a>Categories</a></li>
+            <li><a>Tags</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><button>Transactions</button></li>
+      <li><button>Orders</button></li>
+    </ul>
+    <label class="input-border input-sm flex input items-center gap-2 w-auto me-2">
+      <input type="text" class="grow" placeholder="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+        <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
+      </svg>
+    </label>
+  </nav> -->
+
+  <!-- filters -->
+  <div class="card card-sm">
+    <div class="card-body gap-4">
+      <h2 class="flex justify-between items-center">
+        <span class="font-semibold flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+          </svg>
+          Preview
+        </span>
+        <span class="text-xs link">more</span>
+      </h2>
+      <div>
+        <span class="badge badge-soft">
+          Shoes
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-3">
+            <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+          </svg>
+        </span>
+        <span class="badge badge-soft">
+          Bags
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-3">
+            <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+          </svg>
+        </span>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
+          <label class="flex items-center gap-2 select-none cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm" checked/>
+            <span>Hoodies</span>
+          </label>
+          <span class="badge badge-xs font-mono badge-neutral">25</span>
+        </div>
+        <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
+          <label class="flex items-center gap-2 select-none cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm" checked/>
+            <span>Bags</span>
+          </label>
+          <span class="badge badge-xs font-mono badge-neutral">3</span>
+        </div>
+        <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
+          <label class="flex items-center gap-2 select-none cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm"/>
+            <span>Shoes</span>
+          </label>
+          <span class="badge badge-xs font-mono badge-warning">0</span>
+        </div>
+        <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
+          <label class="flex items-center gap-2 select-none cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm"/>
+            <span>Accessories</span>
+          </label>
+          <span class="badge badge-xs font-mono badge-neutral">4</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- calendar -->
+  <div class="card card-sm  overflow-hidden">
+    <div class="card-body gap-4">
+      <div class="grid grid-cols-7 border-b border-dashed border-b-base-300 pb-3">
+        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+          <span class="text-sm font-semibold">12</span>
+          <span class="text-[10px] font-semibold opacity-50">M</span>
+        </div>
+        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+          <span class="text-sm font-semibold">13</span>
+          <span class="text-[10px] font-semibold opacity-50">T</span>
+        </div>
+        <div class="flex flex-col items-center py-1 px-2 rounded-btn bg-primary text-primary-content">
+          <span class="text-sm font-semibold">14</span>
+          <span class="text-[10px] font-semibold opacity-50">W</span>
+        </div>
+        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+          <span class="text-sm font-semibold">15</span>
+          <span class="text-[10px] font-semibold opacity-50">T</span>
+        </div>
+        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+          <span class="text-sm font-semibold">16</span>
+          <span class="text-[10px] font-semibold opacity-50">F</span>
+        </div>
+        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+          <span class="text-sm font-semibold">17</span>
+          <span class="text-[10px] font-semibold opacity-50">S</span>
+        </div>
+        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+          <span class="text-sm font-semibold">18</span>
+          <span class="text-[10px] font-semibold opacity-50">S</span>
+        </div>
+      </div>
+      <div>
+        <label class="input input-sm input-border w-auto flex gap-2 items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
+          </svg>
+          <input type="text" placeholder="Search for events" />
+        </label>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label class="flex gap-2 items-center cursor-pointer">
+          <input type="checkbox" class="toggle toggle-sm toggle-primary" checked />
+          <span class="text-xs">Show all day events</span>
+        </label>
+      </div>
+    </div>
+    <div class="bg-base-300">
+      <div class="flex items-center gap-2 p-4">
+        <div class="grow">
+          <div class="text-sm font-medium">Team Sync Meeting</div>
+          <div class="text-xs opacity-60">Weekly product review with design and development teams</div>
+        </div>
+        <div class="shrink-0">
+          <span class="badge badge-sm badge-neutral">1h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- range -->
+  <div class="card card-sm">
+    <div class="card-body gap-4">
+      <h2 class="flex justify-between items-center">
+        <span class="font-semibold flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+          Price range
+        </span>
+      </h2>
+      <div class="text-5xl font-extralight text-center">25</div>
+      <input type="range" class="range range-sm" />
+    </div>
+  </div>
+
+  <!-- product -->
+  <div class="card card-sm">
+    <figure class="p-2">
+      <img
+        class="rounded-[calc(var(--radius-box)-.5rem)]"
+        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body gap-4">
+      <h2 class="flex justify-between items-center">
+        <span class="font-semibold">Nike Shoes</span>
+        <span class="badge badge-success badge-sm">SALE</span>
+      </h2>
+      <div class="flex gap-2 items-center">
+        <div class="rating rating-xs">
+          <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+        </div>
+        <span class="text-xs opacity-60">420 reviews</span>
+      </div>
+      <div>
+        <span class="text-2xl font-semibold">$120</span>
+        <span class="text-sm opacity-60 line-through">$150</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- form -->
+  <div class="card card-sm overflow-hidden">
+    <div class="border-b border-base-300 border-dashed">
+      <div class="flex items-center gap-2 p-4">
+        <div class="grow">
+          <div class="text-sm font-medium flex gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+            </svg>
+            Create new account
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body gap-4">
+
+      <p class="text-xs opacity-60">
+        Registeration is free and only takes a minute
+      </p>
+
+      <div class="flex flex-col gap-1">
+        <label class="input input-border flex items-center gap-2 max-w-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"></path>
+          </svg>
+          <input type="text" class="grow" placeholder="Username">
+        </label>
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label class="input input-border flex items-center gap-2 max-w-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+            <path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"></path>
+          </svg>
+          <input type="password" class="grow" placeholder="password">
+        </label>
+        <span class="text-[0.6875rem] px-1 flex gap-2 items-center text-base-content/60">
+          <span class="status inline-block status-error"></span>
+          Password must be at least 8 characters
+        </span>
+      </div>
+
+
+      <div></div>
+
+      <label class="flex gap-2 items-center text-xs text-base-content/60">
+        <input type="checkbox" class="toggle toggle-xs">
+          Accpet terms without reading them
       </label>
-    </nav> -->
+      <label class="flex gap-2 items-center text-xs text-base-content/60">
+        <input type="checkbox" class="toggle toggle-xs">
+        Subscribe to spam emails
+      </label>
 
-    <!-- filters -->
-    <div class="card card-sm bg-base-100 border border-base-200">
-      <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
-          <span class="font-semibold">Preview</span>
-          <span class="text-xs link">more</span>
-        </h2>
-        <div>
-          <span class="badge badge-soft">
-            Shoes
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-3">
-              <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+      <div class="card-actions items-center justify-between">
+        <button class="btn btn-primary">Register</button>
+        <button class="link btn-xs">Login</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- stat -->
+  <div class="stats bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+    <div class="stat">
+      <div class="stat-figure">
+        <div class="radial-progress" style="--value:91;--size:4rem;" role="progressbar">91</div>
+      </div>
+      <div class="stat-title">Page Score</div>
+      <div class="stat-value">91.00<span class="text-sm">/100</span></div>
+      <div class="stat-desc flex gap-1 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 text-success">
+          <path fill-rule="evenodd" d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z" clip-rule="evenodd" />
+        </svg>
+        No critical issues found
+      </div>
+    </div>
+  </div>
+
+  <!-- list -->
+  <div class="card card-sm">
+    <div class="card-body gap-4">
+      <h2 class="flex justify-between items-center">
+        <span class="font-semibold items-center flex gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+          </svg>
+          Recent orders
+        </span>
+      </h2>
+      <div class="flex flex-col text-xs">
+        <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+          Charlie Chapman
+          <span class="badge badge-xs badge-info">Send</span>
+        </div>
+        <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+          Howard Hudson
+          <span class="badge badge-xs badge-error">Failed</span>
+        </div>
+        <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+            Fiona Fisher
+            <span class="badge badge-xs badge-warning">In progress</span>
+          </div>
+        <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+          Nick Nelson
+          <span class="badge badge-xs badge-success">Completed</span>
+        </div>
+        <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
+          Amanda Anderson
+          <span class="badge badge-xs badge-success">Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- chart -->
+  <div class="card card-sm">
+    <div class="card-body gap-4">
+      <div class="flex gap-2 items-end h-24 [&>*]:rounded-box [&>*]:bg-base-content [&>*]:w-full">
+        <div style="height: 10%"></div>
+        <div style="height: 20%"></div>
+        <div style="height: 10%"></div>
+        <div style="height: 25%"></div>
+        <div style="height: 22%"></div>
+        <div style="height: 15%"></div>
+        <div style="height: 20%"></div>
+        <div style="height: 35%"></div>
+        <div style="height: 40%"></div>
+        <div style="height: 45%"></div>
+        <div style="height: 30%"></div>
+        <div style="height: 35%"></div>
+        <div style="height: 60%"></div>
+        <div style="height: 65%"></div>
+        <div style="height: 80%"></div>
+        <div style="height: 90%"></div>
+      </div>
+      <p class="text-xs py-3">
+        Sales volume reached $12,450 this week, showing a 15% increase from the previous period.
+      </p>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="btn">Charts</button>
+        <button class="btn btn-neutral">Details</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- stat -->
+  <div class="stats bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+    <div class="stat">
+      <div class="stat-title">{new Date().toLocaleString('default', { month: 'long' })} Revenue</div>
+      <div class="stat-value">$32,400</div>
+      <div class="stat-desc flex gap-2 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 text-success">
+          <path fill-rule="evenodd" d="M9.808 4.057a.75.75 0 0 1 .92-.527l3.116.849a.75.75 0 0 1 .528.915l-.823 3.121a.75.75 0 0 1-1.45-.382l.337-1.281a23.484 23.484 0 0 0-3.609 3.056.75.75 0 0 1-1.07.01L6 8.06l-3.72 3.72a.75.75 0 1 1-1.06-1.061l4.25-4.25a.75.75 0 0 1 1.06 0l1.756 1.755a25.015 25.015 0 0 1 3.508-2.85l-1.46-.398a.75.75 0 0 1-.526-.92Z" clip-rule="evenodd" />
+        </svg>
+        21% more than last month
+        </div>
+    </div>
+  </div>
+
+  <!-- textarea -->
+  <div class="card card-sm overflow-hidden">
+    <div class="border-b border-base-300 border-dashed">
+      <div class="flex items-center gap-2 p-4">
+        <div class="grow">
+          <div class="text-sm font-medium flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
             </svg>
-          </span>
-          <span class="badge badge-soft">
-            Bags
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-3">
-              <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
-            </svg>
-          </span>
-        </div>
-        <div class="flex flex-col">
-          <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
-            <label class="flex items-center gap-2 select-none cursor-pointer">
-              <input type="checkbox" class="checkbox checkbox-sm" checked/>
-              <span>Hoodies</span>
-            </label>
-            <span class="badge badge-xs font-mono badge-neutral">25</span>
-          </div>
-          <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
-            <label class="flex items-center gap-2 select-none cursor-pointer">
-              <input type="checkbox" class="checkbox checkbox-sm" checked/>
-              <span>Bags</span>
-            </label>
-            <span class="badge badge-xs font-mono badge-neutral">3</span>
-          </div>
-          <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
-            <label class="flex items-center gap-2 select-none cursor-pointer">
-              <input type="checkbox" class="checkbox checkbox-sm"/>
-              <span>Shoes</span>
-            </label>
-            <span class="badge badge-xs font-mono badge-warning">0</span>
-          </div>
-          <div class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2">
-            <label class="flex items-center gap-2 select-none cursor-pointer">
-              <input type="checkbox" class="checkbox checkbox-sm"/>
-              <span>Accessories</span>
-            </label>
-            <span class="badge badge-xs font-mono badge-neutral">4</span>
+            Write a new post
           </div>
         </div>
       </div>
+    </div>
+    <div class="card-body gap-4">
+
+      <div class="flex justify-between items-center">
+        <div class="join">
+          <input class="join-item btn btn-xs px-3 font-bold" type="checkbox" name="options" aria-label="B"/>
+          <input class="join-item btn btn-xs px-3 font-mono italic" type="checkbox" name="options" aria-label="I"/>
+          <input class="join-item btn btn-xs px-3 underline" type="checkbox" name="options" aria-label="U"/>
+        </div>
+        <button class="btn btn-xs">
+          Add files
+        </button>
+      </div>
+
+      <textarea class="textarea textarea-border max-w-none rounded-xl resize-none" placeholder="What's happening?"></textarea>
+
+      <p class="px-2 opacity-40 text-xs">
+        1200 characters remaining
+      </p>
+
+      <div class="card-actions grid grid-cols-2">
+        <button class="btn btn-dash">Save draft</button>
+        <button class="btn btn-primary">Publish</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- chat -->
+  <div class="card card-sm overflow-hidden">
+    <div class="card-body">
+
+      <div class="chat chat-start">
+        <div class="chat-image avatar">
+          <div class="w-10 rounded-full">
+            <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp">
+          </div>
+        </div>
+        <div class="chat-header">
+          Obi-Wan Kenobi
+          <time class="text-xs opacity-50">12:45</time>
+        </div>
+        <div class="chat-bubble chat-bubble-neutral">You were the Chosen One!</div>
+      </div>
+
+      <div class="chat chat-start">
+        <div class="chat-image avatar">
+          <div class="w-10 rounded-full">
+            <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp">
+          </div>
+        </div>
+        <div class="chat-header">
+          Obi-Wan Kenobi
+          <time class="text-xs opacity-50">12:45</time>
+        </div>
+        <div class="chat-bubble chat-bubble-neutral">You were the Chosen One!</div>
+        <div class="chat-footer opacity-50">Delivered</div>
+      </div>
+
+      <div class="chat chat-end">
+        <div class="chat-image avatar">
+          <div class="w-10 rounded-full">
+            <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp">
+          </div>
+        </div>
+        <div class="chat-header">
+          Anakin
+          <time class="text-xs opacity-50">12:46</time>
+        </div>
+        <div class="chat-bubble chat-bubble-neutral">I hate you!</div>
+        <div class="chat-footer opacity-50">Seen at 12:46</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- menu -->
+  <ul class="menu bg-base-100 rounded-box w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+    <li class="menu-title">Admin panel</li>
+    <li><span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+      </svg>
+      Databases
+      <span class="badge justify-self-end">7</span>
+    </span></li>
+    <li><span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+      </svg>
+      Products
+    </span></li>
+    <li><span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+      </svg>
+      Messages
+      <span class="badge justify-self-end">29</span>
+    </span></li>
+    <li><span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
+      </svg>
+      Access tokens
+    </span></li>
+    <li><span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+      </svg>
+      Users
+      <span class="status status-info"></span>
+    </span></li>
+    <li><span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+      </svg>
+      Settings
+    </span></li>
+  </ul>
+
+  <!-- alerts -->
+  <div class="flex flex-col gap-2">
+    <div class="alert text-xs font-bold max-sm:alert-vertical alert-info">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z" />
+      </svg>
+      There are 9 new messages
+    </div>
+    <div class="alert text-xs font-bold alert-outline max-sm:alert-vertical alert-success">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+      </svg>
+      Verification process completed
+    </div>
+    <div class="alert text-xs font-bold alert-dash max-sm:alert-vertical alert-warning">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" />
+      </svg>
+      <span><span class="link">Click</span> to verify your email</span>
+    </div>
+    <div class="alert text-xs font-bold alert-soft max-sm:alert-vertical alert-error">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+      </svg>
+      Access denied
+      <button class="btn btn-xs btn-ghost">Support</button>
+    </div>
+  </div>
+
+  <!-- music -->
+  <div class="card card-sm overflow-hidden">
+    <div class="card-body my-2">
+
+      <div class="flex justify-around items-center">
+        <button class="btn btn-square btn-neutral">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+          </svg>
+        </button>
+        <button class="btn btn-square btn-neutral btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+          </svg>
+        </button>
+        <button class="btn btn-square btn-neutral">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-2 text-center">
+        <h6 class="text-sm font-bold">Lo-fi hip hop beats</h6>
+        <p class="text-xs opacity-50">Chill music to relax/study to</p>
+      </div>
+
+    </div>
+    <div class="flex flex-col px-6 py-4 border-t border-base-300">
+      <div class="relative mt-6">
+        <div class="absolute tooltip top-2 tooltip-open before:text-xs" style="left:10%" data-tip="0:39">
+        </div>
+        <progress class="progress" value="10" max="100"></progress>
+      </div>
+      <div class="flex text-xs opacity-50 justify-between">
+        <span>0:39</span>
+        <span>4:20</span>
+      </div>
+    </div>
+    <div class="flex justify-around items-center pb-6 px-2">
+      <button class="btn btn-square">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6V42C17 42 11.7985 32.8391 11.7985 32.8391H6C4.89543 32.8391 4 31.9437 4 30.8391V17.0108C4 15.9062 4.89543 15.0108 6 15.0108H11.7985C11.7985 15.0108 17 6 24 6Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M32 15L32 15C32.6232 15.5565 33.1881 16.1797 33.6841 16.8588C35.1387 18.8504 36 21.3223 36 24C36 26.6545 35.1535 29.1067 33.7218 31.0893C33.2168 31.7885 32.6391 32.4293 32 33" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="btn btn-square">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 33L44 37L40 41" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 7L44 11L40 15" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 11H37C29.8203 11 24 16.8203 24 24C24 31.1797 29.8203 37 37 37H44" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M4 37H11C18.1797 37 24 31.1797 24 24C24 16.8203 18.1797 11 11 11H4" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+        </button>
+      <button class="btn btn-square">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 25C4 18.3502 9.39624 13 16 13H44" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 7L44 13L38 19" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 23C44 29.6498 38.6038 35 32 35H4" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 41L4 35L10 29" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="btn btn-square">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M42 30V24.4615C42 14.2655 33.9411 6 24 6C14.0589 6 6 14.2655 6 24.4615V30" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 32C34 29.7909 35.7909 28 38 28H42V42H38C35.7909 42 34 40.2091 34 38V32Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M42 32H44C45.1046 32 46 32.8954 46 34V36C46 37.1046 45.1046 38 44 38H42V32Z" fill="currentColor"/><path d="M6 32H4C2.89543 32 2 32.8954 2 34V36C2 37.1046 2.89543 38 4 38H6V32Z" fill="currentColor"/><path d="M6 28H10C12.2091 28 14 29.7909 14 32V38C14 40.2091 12.2091 42 10 42H6V28Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- code -->
+  <div class="mockup-code bg-base-100 text-base-content shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+    <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
+    <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
+    <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
+  </div>
+
+  <!-- tabs -->
+  <div role="tablist" class="tabs tabs-lift">
+    <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1">
+    <div role="tabpanel" class="tab-content border bg-base-100 border-base-300 p-6">
+      Tab content 1
     </div>
 
-    <!-- calendar -->
-    <div class="card card-sm bg-base-100 border border-base-200 overflow-hidden">
-      <div class="card-body gap-4">
-        <div class="grid grid-cols-7 border-b border-dashed border-b-base-300 pb-3">
-          <div class="flex flex-col items-center py-1 px-2 rounded-btn">
-            <span class="text-sm font-semibold">12</span>
-            <span class="text-[10px] font-semibold opacity-50">M</span>
-          </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-btn">
-            <span class="text-sm font-semibold">13</span>
-            <span class="text-[10px] font-semibold opacity-50">T</span>
-          </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-btn bg-primary text-primary-content">
-            <span class="text-sm font-semibold">14</span>
-            <span class="text-[10px] font-semibold opacity-50">W</span>
-          </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-btn">
-            <span class="text-sm font-semibold">15</span>
-            <span class="text-[10px] font-semibold opacity-50">T</span>
-          </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-btn">
-            <span class="text-sm font-semibold">16</span>
-            <span class="text-[10px] font-semibold opacity-50">F</span>
-          </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-btn">
-            <span class="text-sm font-semibold">17</span>
-            <span class="text-[10px] font-semibold opacity-50">S</span>
-          </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-btn">
-            <span class="text-sm font-semibold">18</span>
-            <span class="text-[10px] font-semibold opacity-50">S</span>
-          </div>
-        </div>
-        <div>
-          <label class="input input-sm input-border w-auto flex gap-2 items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-              <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
-            </svg>
-            <input type="text" placeholder="Search for events" />
-          </label>
-        </div>
-        <div class="flex flex-col gap-2">
-          <label class="flex gap-2 items-center cursor-pointer">
-            <input type="checkbox" class="toggle toggle-sm toggle-primary" checked />
-            <span class="text-xs">Show all day events</span>
-          </label>
-        </div>
-      </div>
-      <div class="bg-base-300">
-        <div class="flex items-center gap-2 p-4">
-          <div class="grow">
-            <div class="text-sm font-medium">Team Sync Meeting</div>
-            <div class="text-xs opacity-60">Weekly product review with design and development teams</div>
-          </div>
-          <div class="shrink-0">
-            <span class="badge badge-sm badge-neutral">1h</span>
-          </div>
-        </div>
-      </div>
+    <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" checked="checked">
+    <div role="tabpanel" class="tab-content border bg-base-100 border-base-300 p-6">
+      Tab content 2
     </div>
 
-    <!-- range -->
-    <div class="card card-sm bg-base-100 border border-base-200">
-      <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
-          <span class="font-semibold">Price range</span>
-        </h2>
-        <div class="text-5xl font-extralight text-center">25</div>
-        <input type="range" class="range range-sm" />
-      </div>
+    <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3">
+    <div role="tabpanel" class="tab-content border bg-base-100 border-base-300 p-6">
+      Tab content 3
     </div>
-
-    <!-- product -->
-    <div class="card card-sm bg-base-100 border border-base-200">
-      <figure class="p-2">
-        <img
-          class="rounded-[calc(var(--radius-box)-.5rem)]"
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes" />
-      </figure>
-      <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
-          <span class="font-semibold">Nike Shoes</span>
-          <span class="badge badge-success badge-sm">SALE</span>
-        </h2>
-        <div class="flex gap-2 items-center">
-          <div class="rating rating-xs">
-            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
-          </div>
-          <span class="text-xs opacity-60">420 reviews</span>
-        </div>
-        <div>
-          <span class="text-2xl font-semibold">$120</span>
-          <span class="text-sm opacity-60 line-through">$150</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- list -->
-    <div class="card card-sm bg-base-100 border border-base-200">
-      <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
-          <span class="font-semibold">Recent orders</span>
-        </h2>
-        <div class="flex flex-col text-xs">
-          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
-            Charlie Chapman
-            <span class="badge badge-xs badge-info">Send</span>
-          </div>
-          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
-            Howard Hudson
-            <span class="badge badge-xs badge-error">Failed</span>
-          </div>
-          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
-              Fiona Fisher
-              <span class="badge badge-xs badge-warning">In progress</span>
-            </div>
-          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
-            Nick Nelson
-            <span class="badge badge-xs badge-success">Completed</span>
-          </div>
-          <div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
-            Amanda Anderson
-            <span class="badge badge-xs badge-success">Completed</span>
-          </div>
-        </div>
-        <div class="flex gap-2 items-end h-24 [&>*]:rounded-box [&>*]:bg-base-content [&>*]:w-full">
-          <div style="height: 10%"></div>
-          <div style="height: 20%"></div>
-          <div style="height: 10%"></div>
-          <div style="height: 25%"></div>
-          <div style="height: 22%"></div>
-          <div style="height: 15%"></div>
-          <div style="height: 20%"></div>
-          <div style="height: 35%"></div>
-          <div style="height: 40%"></div>
-          <div style="height: 45%"></div>
-          <div style="height: 30%"></div>
-          <div style="height: 35%"></div>
-          <div style="height: 60%"></div>
-          <div style="height: 65%"></div>
-          <div style="height: 80%"></div>
-          <div style="height: 90%"></div>
-        </div>
-        <p class="text-xs py-3">
-          Sales volume reached $12,450 this week, showing a 15% increase from the previous period.
-        </p>
-        <div class="grid grid-cols-2 gap-2">
-          <button class="btn">Add new</button>
-          <button class="btn btn-neutral">Details</button>
-        </div>
-      </div>
-    </div>
+  </div>
 
 </div>
