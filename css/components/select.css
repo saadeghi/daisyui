@@ -18,7 +18,6 @@
   background-repeat: no-repeat;
   padding-inline-end: 1.7rem;
   text-overflow: ellipsis;
-  white-space: nowrap;
 
   select {
     @apply w-full bg-transparent;
