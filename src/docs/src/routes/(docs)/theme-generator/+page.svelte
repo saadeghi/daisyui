@@ -442,7 +442,6 @@
     <h3 class="divider text-xs divider-start">Border size</h3>
     {#each [
       ['--spacing-button-border', 'Button'],
-      ['--spacing-tab-border', 'Tab']
     ] as [key, label]}
       <div class="flex justify-between items-center w-[15rem]">
         <span class="text-xs text-base-content/60">{label}</span>

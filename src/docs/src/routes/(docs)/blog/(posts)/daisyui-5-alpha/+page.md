@@ -85,7 +85,6 @@ You can add custom themes
   --radius-btn: .5rem;
   --radius-box: .5rem;
   --spacing-button-border: 1px;
-  --spacing-tab-border: 1px;
 }
 ```
 

@@ -66,7 +66,6 @@ export function randomizeThemeColors(tailwindcolors) {
     "--radius-tab": randomFrom(["0", "0.125rem", "0.25rem", "0.5rem", "0.75rem"]),
     "--radius-box": randomFrom(radiusValues),
     "--spacing-button-border": randomFrom(borderValues),
-    "--spacing-tab-border": randomFrom(borderValues),
   }
 
   // Decide if theme should be light or dark

@@ -411,21 +411,21 @@
 										<button
 											onclick={() => (activeMenuItemOnHeroMockup = 1)}
 											class:tab-active={activeMenuItemOnHeroMockup === 1}
-											class="tab [--spacing-tab-border:0px] whitespace-nowrap text-xs py-2! me-0!"
+											class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs py-2! me-0!"
 										>
 											{$t("Features")}
 										</button>
 										<button
 											onclick={() => (activeMenuItemOnHeroMockup = 2)}
 											class:tab-active={activeMenuItemOnHeroMockup === 2}
-											class="tab [--spacing-tab-border:0px] whitespace-nowrap text-xs py-2! me-0!"
+											class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs py-2! me-0!"
 										>
 											{$t("Links")}
 										</button>
 										<button
 											onclick={() => (activeMenuItemOnHeroMockup = 3)}
 											class:tab-active={activeMenuItemOnHeroMockup === 3}
-											class="tab [--spacing-tab-border:0px] whitespace-nowrap text-xs py-2! me-0!"
+											class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs py-2! me-0!"
 										>
 											{$t("Message")}
 										</button>

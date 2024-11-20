@@ -28,6 +28,5 @@ export default {
   },
   borderWidth: {
     button: "var(--spacing-button-border)",
-    tab: "var(--spacing-tab-border)",
   },
 }
