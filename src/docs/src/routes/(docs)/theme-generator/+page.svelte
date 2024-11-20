@@ -275,6 +275,8 @@
           onmouseup={handleMouseUpOrLeave}
           onmouseleave={handleMouseUpOrLeave}
           onblur={handleMouseUpOrLeave}
+          ontouchstart={handleMouseDown}
+          ontouchend={handleMouseUpOrLeave}
           onkeydown={(event) => {
             if ((event.key === 'Enter' || event.key === ' ') && !holdTimeout && !holdInterval) {
               handleMouseDown(event);
