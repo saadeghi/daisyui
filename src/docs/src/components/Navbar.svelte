@@ -53,7 +53,7 @@ let switchNavbarStyle = $derived(scrollY > 40)
 <TopBanner />
 <div
   class="{`
-  bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] 
+  bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)]
   ${switchNavbarStyle ? 'shadow-sm' : ''}
   `}">
   <nav class="navbar w-full">
@@ -93,9 +93,9 @@ let switchNavbarStyle = $derived(scrollY > 40)
           class="flex-0 btn btn-ghost gap-1 px-2 md:gap-2"
           oncontextmenu="{(e) => {e.preventDefault();contextMenuEl.openContextMenu(e)}}">
           <svg
-            class="h-6 w-6 md:h-8 md:w-8"
-            width="32"
-            height="32"
+            class="h-5 w-5 md:h-6 md:w-6"
+            width="28"
+            height="28"
             viewBox="0 0 415 415"
             xmlns="http://www.w3.org/2000/svg">
             <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5"></rect>
@@ -104,7 +104,7 @@ let switchNavbarStyle = $derived(scrollY > 40)
             <circle cx="207.5" cy="135" r="56" fill="#FF9903"></circle>
           </svg>
 
-          <span class="font-title text-base-content text-lg md:text-2xl">daisyUI</span>
+          <span class="font-title text-base-content text-lg md:text-xl">daisyUI</span>
         </a>
         {#await import("./LogoContextMenu.svelte") then Module}
           <Module.default bind:this="{contextMenuEl}" />

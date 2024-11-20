@@ -14,6 +14,9 @@ async function processFile(filePath) {
     const twVariables = allCssVariables.filter(
       (variable) => variable.startsWith("--tw") && variable !== "--tw-content",
     )
+    const spacingVariables = allCssVariables.filter((variable) =>
+      variable.startsWith("var(--spacing)"),
+    )
     const filename = path.basename(filePath)
     if (
       twVariables.length > 0 &&
@@ -22,6 +25,9 @@ async function processFile(filePath) {
       )
     ) {
       console.log(`Warning: unnecessary --tw variables in ${filename}:`, twVariables)
+    }
+    if (spacingVariables.length > 0 && !["spacing.css", "grid.css"].includes(filename)) {
+      console.log(`Warning: dangerous var(--spacing) variables in ${filename}:`, spacingVariables)
     }
 
     return {
