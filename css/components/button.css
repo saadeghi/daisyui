@@ -259,25 +259,25 @@
 .btn-xs {
   @apply px-2;
   font-size: 0.6875rem;
-  --field-size: calc(var(--spacing-field-size) * 5);
+  --field-size: calc(var(--spacing-field-size) * 6);
 }
 
 .btn-sm {
   @apply px-3;
   font-size: 0.75rem;
-  --field-size: calc(var(--spacing-field-size) * 7);
+  --field-size: calc(var(--spacing-field-size) * 8);
 }
 
 .btn-md {
   @apply px-4;
   font-size: 0.875rem;
-  --field-size: calc(var(--spacing-field-size) * 9);
+  --field-size: calc(var(--spacing-field-size) * 10);
 }
 
 .btn-lg {
   @apply px-5;
   font-size: 1.125rem;
-  --field-size: calc(var(--spacing-field-size) * 11);
+  --field-size: calc(var(--spacing-field-size) * 12);
 }
 
 .btn-xl {

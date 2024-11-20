@@ -107,6 +107,6 @@
 
 .badge-xl {
   @apply px-[1.125rem];
-  --selector-size: calc(var(--spacing-selector-size) * 9);
+  --selector-size: calc(var(--spacing-selector-size) * 8);
   font-size: 1.125rem;
 }

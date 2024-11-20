@@ -9,8 +9,13 @@
   border-start-end-radius: var(--radius-join-se, var(--radius-field));
   border-end-start-radius: var(--radius-join-es, var(--radius-field));
   border-end-end-radius: var(--radius-join-ee, var(--radius-field));
+  border-color: var(--input-color);
+  box-shadow:
+    0 1px color-mix(in oklab, var(--input-color) 10%, transparent) inset,
+    0 -1px oklch(100% 0 0 / 0.1) inset;
   --spacing-field-size: 0.25rem;
   --field-size: calc(var(--spacing-field-size) * 9);
+  --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
   &:where(::file-selector-button) {
     @apply text-base-content;
   }
@@ -76,144 +81,12 @@
   }
 
   &:focus {
-    outline: 2px solid var(--btn-bg, color-mix(in srgb, var(--color-base-content) 20%, transparent));
+    --input-color: var(--color-base-content);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) 10%, transparent);
+    outline: 2px solid var(--input-color);
     outline-offset: 2px;
+    isolation: isolate;
   }
-
-  &.file-input-border {
-    @apply border-base-content/10;
-    box-shadow:
-      0 1px oklch(0% 0 0 / 0.1) inset,
-      0 -1px oklch(100% 0 0 / 0.1) inset;
-  }
-
-  &.file-input-ghost {
-    &:not(&:focus) {
-      &::file-selector-button {
-        background: transparent;
-        border-color: transparent;
-      }
-    }
-  }
-
-  &.file-input-primary {
-    @apply border-primary;
-    --btn-color: var(--color-primary);
-
-    &::file-selector-button {
-      color: var(--color-primary-content);
-    }
-  }
-
-  &.file-input-secondary {
-    @apply border-secondary;
-    --btn-color: var(--color-secondary);
-
-    &::file-selector-button {
-      color: var(--color-secondary-content);
-    }
-  }
-
-  &.file-input-accent {
-    @apply border-accent;
-    --btn-color: var(--color-accent);
-
-    &::file-selector-button {
-      color: var(--color-accent-content);
-    }
-  }
-
-  &.file-input-neutral {
-    @apply border-neutral;
-    --btn-color: var(--color-neutral);
-
-    &::file-selector-button {
-      color: var(--color-neutral-content);
-    }
-  }
-
-  &.file-input-info {
-    @apply border-info;
-    --btn-color: var(--color-info);
-
-    &::file-selector-button {
-      color: var(--color-info-content);
-    }
-  }
-
-  &.file-input-success {
-    @apply border-success;
-    --btn-color: var(--color-success);
-
-    &::file-selector-button {
-      color: var(--color-success-content);
-    }
-  }
-
-  &.file-input-warning {
-    @apply border-warning;
-    --btn-color: var(--color-warning);
-
-    &::file-selector-button {
-      color: var(--color-warning-content);
-    }
-  }
-
-  &.file-input-error {
-    @apply border-error;
-    --btn-color: var(--color-error);
-
-    &::file-selector-button {
-      color: var(--color-error-content);
-    }
-  }
-
-  &.file-input-xs {
-    --field-size: calc(var(--spacing-field-size) * 5);
-    font-size: 0.6875rem;
-    line-height: 1rem;
-    &::file-selector-button {
-      font-size: 0.6875rem;
-    }
-  }
-
-  &.file-input-sm {
-    --field-size: calc(var(--spacing-field-size) * 7);
-    font-size: 0.75rem;
-    line-height: 1.5rem;
-    &::file-selector-button {
-      font-size: 0.75rem;
-    }
-  }
-
-  &.file-input-md {
-    --field-size: calc(var(--spacing-field-size) * 9);
-    font-size: 0.875rem;
-    line-height: 2;
-    &::file-selector-button {
-      font-size: 0.875rem;
-    }
-  }
-
-  &.file-input-lg {
-    --field-size: calc(var(--spacing-field-size) * 11);
-    font-size: 1.125rem;
-    line-height: 2.5rem;
-    &::file-selector-button {
-      font-size: 1.125rem;
-    }
-  }
-
-  &.file-input-xl {
-    @apply pe-6;
-    --field-size: calc(var(--spacing-field-size) * 14);
-    font-size: 1.375rem;
-    line-height: 3rem;
-    &::file-selector-button {
-      font-size: 1.375rem;
-    }
-  }
-
   &:has(> input[disabled]),
   &:is(:disabled, [disabled]) {
     @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
@@ -222,5 +95,159 @@
     &::file-selector-button {
       @apply border-base-200 bg-base-200 cursor-not-allowed;
     }
+  }
+}
+.file-input-ghost {
+  @apply bg-transparent;
+  transition: background-color 0.2s;
+  box-shadow: none;
+  border-color: transparent;
+
+  &:focus,
+  &:focus-within {
+    @apply text-base-content bg-base-100;
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.file-input-neutral {
+  --btn-color: var(--color-neutral);
+  &::file-selector-button {
+    color: var(--color-neutral-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-neutral);
+  }
+}
+
+.file-input-primary {
+  --btn-color: var(--color-primary);
+  &::file-selector-button {
+    color: var(--color-primary-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-primary);
+  }
+}
+
+.file-input-secondary {
+  --btn-color: var(--color-secondary);
+  &::file-selector-button {
+    color: var(--color-secondary-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-secondary);
+  }
+}
+
+.file-input-accent {
+  --btn-color: var(--color-accent);
+  &::file-selector-button {
+    color: var(--color-accent-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-accent);
+  }
+}
+
+.file-input-info {
+  --btn-color: var(--color-info);
+  &::file-selector-button {
+    color: var(--color-info-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-info);
+  }
+}
+
+.file-input-success {
+  --btn-color: var(--color-success);
+  &::file-selector-button {
+    color: var(--color-success-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-success);
+  }
+}
+
+.file-input-warning {
+  --btn-color: var(--color-warning);
+  &::file-selector-button {
+    color: var(--color-warning-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-warning);
+  }
+}
+
+.file-input-error {
+  --btn-color: var(--color-error);
+  &::file-selector-button {
+    color: var(--color-error-content);
+  }
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-error);
+  }
+}
+.file-input-xs {
+  --field-size: calc(var(--spacing-field-size) * 6);
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  &::file-selector-button {
+    font-size: 0.6875rem;
+  }
+}
+
+.file-input-sm {
+  --field-size: calc(var(--spacing-field-size) * 8);
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  &::file-selector-button {
+    font-size: 0.75rem;
+  }
+}
+
+.file-input-md {
+  --field-size: calc(var(--spacing-field-size) * 10);
+  font-size: 0.875rem;
+  line-height: 2;
+  &::file-selector-button {
+    font-size: 0.875rem;
+  }
+}
+
+.file-input-lg {
+  --field-size: calc(var(--spacing-field-size) * 12);
+  font-size: 1.125rem;
+  line-height: 2.5rem;
+  &::file-selector-button {
+    font-size: 1.125rem;
+  }
+}
+
+.file-input-xl {
+  @apply pe-6;
+  --field-size: calc(var(--spacing-field-size) * 14);
+  font-size: 1.375rem;
+  line-height: 3rem;
+  &::file-selector-button {
+    font-size: 1.375rem;
   }
 }

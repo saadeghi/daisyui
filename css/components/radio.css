@@ -93,7 +93,7 @@
 .radio-xl {
   padding: 0.375rem;
   &:is([type="radio"]) {
-    --selector-size: calc(var(--spacing-selector-size) * 9);
+    --selector-size: calc(var(--spacing-selector-size) * 8);
   }
 }
 

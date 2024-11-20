@@ -135,7 +135,7 @@
 }
 
 .range-xl {
-  --selector-size: calc(var(--spacing-selector-size) * 9);
+  --selector-size: calc(var(--spacing-selector-size) * 8);
   &::-webkit-slider-thumb {
     --filler-offset: 1rem;
   }

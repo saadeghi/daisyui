@@ -1,6 +1,8 @@
 .toggle {
   border: 1px solid currentColor;
-  @apply rounded-selector text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none p-[.1875rem] align-middle;
+  @apply rounded-selector text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none align-middle;
+  padding: var(--toggle-padding);
+  --toggle-padding: 0.1875rem;
   box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
   transition: color 0.3s;
   --spacing-selector-size: 0.25rem;
@@ -16,7 +18,7 @@
   &:after {
     @apply start-0 relative block aspect-square h-full bg-current;
     translate: 0;
-    border-radius: calc(var(--radius-selector) - 3px);
+    border-radius: calc(var(--radius-selector) - var(--toggle-padding));
     content: "";
     transition:
       background-color 0.1s,
@@ -124,35 +126,35 @@
 
 .toggle-xs {
   &:is([type="checkbox"]) {
-    @apply p-[.0625rem];
+    --toggle-padding: 0.0625rem;
     --selector-size: calc(var(--spacing-selector-size) * 4);
   }
 }
 
 .toggle-sm {
   &:is([type="checkbox"]) {
-    @apply p-[.125rem];
+    --toggle-padding: 0.125rem;
     --selector-size: calc(var(--spacing-selector-size) * 5);
   }
 }
 
 .toggle-md {
   &:is([type="checkbox"]) {
-    @apply p-[.1875rem];
+    --toggle-padding: 0.1875rem;
     --selector-size: calc(var(--spacing-selector-size) * 6);
   }
 }
 
 .toggle-lg {
   &:is([type="checkbox"]) {
-    @apply p-[.25rem];
+    --toggle-padding: 0.25rem;
     --selector-size: calc(var(--spacing-selector-size) * 7);
   }
 }
 
 .toggle-xl {
   &:is([type="checkbox"]) {
-    @apply p-[.3125rem];
-    --selector-size: calc(var(--spacing-selector-size) * 9);
+    --toggle-padding: 0.3125rem;
+    --selector-size: calc(var(--spacing-selector-size) * 8);
   }
 }

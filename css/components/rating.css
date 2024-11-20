@@ -68,7 +68,7 @@
 
   &:is(.rating-xl) {
     input {
-      @apply size-9;
+      @apply size-8;
     }
   }
 }
@@ -81,11 +81,11 @@
 
 .rating-half {
   &.rating-xs input:not(.rating-hidden) {
-    @apply w-1.5;
+    @apply w-2;
   }
 
   &.rating-sm input:not(.rating-hidden) {
-    @apply w-2;
+    @apply w-2.5;
   }
 
   &.rating-md input:not(.rating-hidden) {
@@ -93,15 +93,16 @@
   }
 
   &.rating-lg input:not(.rating-hidden) {
-    @apply w-5;
+    @apply w-[.875rem];
+  }
+
+  &.rating-xl input:not(.rating-hidden) {
+    @apply w-4;
   }
 }
 
 @keyframes rating-pop {
-  0% {
-    translate: 0 -0.125em;
-  }
-
+  0%,
   40% {
     translate: 0 -0.125em;
   }

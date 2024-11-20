@@ -158,5 +158,5 @@
 
 .checkbox-xl {
   @apply p-[0.375rem];
-  --selector-size: calc(var(--spacing-selector-size) * 9);
+  --selector-size: calc(var(--spacing-selector-size) * 8);
 }

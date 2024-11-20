@@ -20,21 +20,27 @@
   background-repeat: no-repeat;
   padding-inline-end: 1.7rem;
   text-overflow: ellipsis;
+  box-shadow:
+    0 1px color-mix(in oklab, var(--input-color) 10%, transparent) inset,
+    0 -1px oklch(100% 0 0 / 0.1) inset;
+  border-color: var(--input-color);
+  --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
   --spacing-field-size: 0.25rem;
   --field-size: calc(var(--spacing-field-size) * 9);
   select {
-    @apply w-full bg-transparent;
+    @apply w-full appearance-none bg-transparent;
     border-style: none;
-
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-hidden;
     }
   }
 
   &:focus,
   &:focus-within {
-    @apply border-base-content/20 outline-base-content/20;
-    outline: 2px solid;
+    --input-color: var(--color-base-content);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) 10%, transparent);
+    outline: 2px solid var(--input-color);
     outline-offset: 2px;
   }
 
@@ -46,121 +52,117 @@
   &:has(> select[disabled]) > select[disabled] {
     @apply cursor-not-allowed;
   }
+}
+.select-border {
+  @apply border-base-content/20;
+  box-shadow:
+    0 1px oklch(0% 0 0 / 0.1) inset,
+    0 -1px oklch(100% 0 0 / 0.1) inset;
 
-  &.select-border {
-    @apply border-base-content/20;
-    box-shadow:
-      0 1px oklch(0% 0 0 / 0.1) inset,
-      0 -1px oklch(100% 0 0 / 0.1) inset;
-
-    &:focus {
-      box-shadow: 0 1px oklch(0% 0 0 / 0.1);
-    }
+  &:focus {
+    box-shadow: 0 1px oklch(0% 0 0 / 0.1);
   }
+}
 
-  &.select-ghost {
-    @apply bg-base-100/5;
+.select-ghost {
+  @apply bg-transparent;
+  transition: background-color 0.2s;
+  box-shadow: none;
+  border-color: transparent;
+
+  &:focus,
+  &:focus-within {
+    @apply text-base-content bg-base-100;
+    border-color: transparent;
     box-shadow: none;
-
-    &:focus,
-    &:focus-within {
-      @apply text-base-content bg-base-100;
-      box-shadow: none;
-    }
   }
+}
 
-  &.select-primary {
-    @apply border-primary;
-    background-color: color-mix(in oklab, var(--color-primary) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-primary border-primary;
-    }
+.select-neutral {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-neutral);
   }
+}
 
-  &.select-secondary {
-    @apply border-secondary;
-    background-color: color-mix(in oklab, var(--color-secondary) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-secondary border-secondary;
-    }
+.select-primary {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-primary);
   }
+}
 
-  &.select-accent {
-    @apply border-accent;
-    background-color: color-mix(in oklab, var(--color-accent) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-accent border-accent;
-    }
+.select-secondary {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-secondary);
   }
+}
 
-  &.select-info {
-    @apply border-info;
-    background-color: color-mix(in oklab, var(--color-info) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-info border-info;
-    }
+.select-accent {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-accent);
   }
+}
 
-  &.select-success {
-    @apply border-success;
-    background-color: color-mix(in oklab, var(--color-success) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-success border-success;
-    }
+.select-info {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-info);
   }
+}
 
-  &.select-warning {
-    @apply border-warning;
-    background-color: color-mix(in oklab, var(--color-warning) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-warning border-warning;
-    }
+.select-success {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-success);
   }
+}
 
-  &.select-error {
-    @apply border-error;
-    background-color: color-mix(in oklab, var(--color-error) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-error border-error;
-    }
+.select-warning {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-warning);
   }
+}
 
-  &.select-xs {
-    --field-size: calc(var(--spacing-field-size) * 5);
-    font-size: 0.6875rem;
+.select-error {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-error);
   }
+}
 
-  &.select-sm {
-    --field-size: calc(var(--spacing-field-size) * 7);
-    font-size: 0.75rem;
-  }
+.select-xs {
+  --field-size: calc(var(--spacing-field-size) * 6);
+  font-size: 0.6875rem;
+}
 
-  &.select-md {
-    --field-size: calc(var(--spacing-field-size) * 9);
-    font-size: 0.875rem;
-  }
+.select-sm {
+  --field-size: calc(var(--spacing-field-size) * 8);
+  font-size: 0.75rem;
+}
 
-  &.select-lg {
-    --field-size: calc(var(--spacing-field-size) * 11);
-    font-size: 1.125rem;
-  }
+.select-md {
+  --field-size: calc(var(--spacing-field-size) * 10);
+  font-size: 0.875rem;
+}
 
-  &.select-xl {
-    --field-size: calc(var(--spacing-field-size) * 14);
-    font-size: 1.375rem;
-  }
+.select-lg {
+  --field-size: calc(var(--spacing-field-size) * 12);
+  font-size: 1.125rem;
+}
+
+.select-xl {
+  --field-size: calc(var(--spacing-field-size) * 14);
+  font-size: 1.375rem;
 }
