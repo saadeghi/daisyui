@@ -235,7 +235,7 @@
 <SEO title="daisyUI and Tailwind CSS theme generator" desc="OKLCH Theme Generator for daisyUI and Tailwind CSS" />
 
 <div class="flex flex-col md:flex-row relative">
-  <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[14rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
+  <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[13rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
     <div class="flex gap-2 justify-between items-center mb-4">
 
       <h2 class="font-bold ms-2">Themes</h2>
@@ -289,7 +289,7 @@
           }}
           style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
           <svg class="size-5 origin-[40%_60%] [transition:rotate_.2s_ease] group-hover:-rotate-12" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path></svg>
-          <span class="font-normal"><span class="font-semibold">Hold</span> to create theme</span>
+          <span class="font-normal"><span class="font-semibold">Hold</span> to add theme</span>
         </button>
       </li>
       <li class="menu-title mt-6">My themes</li>
@@ -321,7 +321,7 @@
   </div>
 
   <div class="flex flex-col pb-20 shrink-0 w-full md:w-[17rem] md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start" class:max-md:hidden={dockActiveItem!=="editor"}>
-    <label class="input flex font-semibold text-lg input-sm w-full items-center gap-2 shrink-0">
+    <label class="input flex font-semibold input-ghost input-sm w-full items-center gap-2 shrink-0">
       <input
         class="shrink w-full"
         type="text"
@@ -405,7 +405,7 @@
     <h3 class="divider text-xs divider-start">Radius</h3>
     {#each data.radiusValues as [key, label, values]}
       <div class="form-control w-full max-w-fit">
-        <div class="text-xs mb-2 text-base-content/60" id={`${key}-group`}>{label}</div>
+        <div class="text-[0.6875rem] mb-2 text-base-content/60" id={`${key}-group`}>{label}</div>
         <div
           class="flex gap-2"
           role="radiogroup"

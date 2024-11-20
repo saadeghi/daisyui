@@ -16,6 +16,7 @@
   --tab-radius-es: 0;
   --tab-radius-ee: 0;
   --tab-order: 0;
+  --tab-radius-min: 1rem;
   border-color: transparent;
   order: var(--tab-order);
   height: 2.25rem;
@@ -98,14 +99,14 @@
 
   .tab {
     --tab-border: 0 0 1px 0;
-    --tab-radius-ss: var(--radius-selector);
-    --tab-radius-se: var(--radius-selector);
+    --tab-radius-ss: min(var(--radius-selector), var(--tab-radius-min));
+    --tab-radius-se: min(var(--radius-selector), var(--tab-radius-min));
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
     --tab-paddings: 1px var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
-    --tab-corner-width: calc(100% + var(--radius-selector) * 2);
-    --tab-corner-height: var(--radius-selector);
+    --tab-corner-width: calc(100% + min(var(--radius-selector), var(--tab-radius-min)) * 2);
+    --tab-corner-height: min(var(--radius-selector), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
     --last-tab-margin: 0 var(--tab-padding) 0 0;
 
@@ -150,7 +151,8 @@
         height: var(--tab-corner-height);
         background-position: var(--tab-corner-position);
         background-image: var(--radius-start), var(--radius-end);
-        background-size: var(--radius-selector) var(--radius-selector);
+        background-size: min(var(--radius-selector), var(--tab-radius-min))
+          min(var(--radius-selector), var(--tab-radius-min));
         background-repeat: no-repeat;
         inset: var(--tab-inset);
       }
@@ -201,14 +203,14 @@
   .tab {
     --tab-order: 0;
     --tab-border: 0 0 1px 0;
-    --tab-radius-ss: var(--radius-selector);
-    --tab-radius-se: var(--radius-selector);
+    --tab-radius-ss: min(var(--radius-selector), var(--tab-radius-min));
+    --tab-radius-se: min(var(--radius-selector), var(--tab-radius-min));
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
     --tab-paddings: 1px var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
-    --tab-corner-width: calc(100% + var(--radius-selector) * 2);
-    --tab-corner-height: var(--radius-selector);
+    --tab-corner-width: calc(100% + min(var(--radius-selector), var(--tab-radius-min)) * 2);
+    --tab-corner-height: min(var(--radius-selector), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
     --last-tab-margin: 0 var(--tab-padding) 0 0;
 
@@ -271,12 +273,12 @@
     --tab-border: 1px 0 0 0;
     --tab-radius-ss: 0;
     --tab-radius-se: 0;
-    --tab-radius-es: var(--radius-selector);
-    --tab-radius-ee: var(--radius-selector);
+    --tab-radius-es: min(var(--radius-selector), var(--tab-radius-min));
+    --tab-radius-ee: min(var(--radius-selector), var(--tab-radius-min));
     --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
     --tab-paddings: 0 var(--tab-padding) 1px var(--tab-padding);
-    --tab-corner-width: calc(100% + var(--radius-selector) * 2);
-    --tab-corner-height: var(--radius-selector);
+    --tab-corner-width: calc(100% + min(var(--radius-selector), var(--tab-radius-min)) * 2);
+    --tab-corner-height: min(var(--radius-selector), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
     --last-tab-margin: 0 var(--tab-padding) 0 0;
 
@@ -337,14 +339,14 @@
   .tab {
     --tab-order: 0;
     --tab-border: 0 1px 0 0;
-    --tab-radius-ss: var(--radius-selector);
+    --tab-radius-ss: min(var(--radius-selector),var(--tab-radius-min));
     --tab-radius-se: 0;
-    --tab-radius-es: var(--radius-selector);
+    --tab-radius-es: min(var(--radius-selector),var(--tab-radius-min));
     --tab-radius-ee: 0;
     --tab-paddings: 1px var(--tab-padding) 1px calc(var(--tab-padding) + 1px);
     --tab-border-colors: transparent var(--tab-border-color) transparent transparent;
-    --tab-corner-width: var(--radius-selector);
-    --tab-corner-height: calc(100% + var(--radius-selector) * 2);
+    --tab-corner-width: min(var(--radius-selector),var(--tab-radius-min));
+    --tab-corner-height: calc(100% + min(var(--radius-selector),var(--tab-radius-min)) * 2);
     --tab-corner-position: top right, bottom right;
     --last-tab-margin: 0 0 0 0;
 
@@ -439,6 +441,7 @@
     height: 1.25rem;
     font-size: 0.75rem;
     --tab-padding: 0.375rem;
+    --tab-radius-min: 0.5rem;
   }
 }
 
@@ -447,6 +450,7 @@
     height: 1.75rem;
     font-size: 0.875rem;
     --tab-padding: 0.5rem;
+    --tab-radius-min: 0.5rem;
   }
 }
 
@@ -455,6 +459,7 @@
     height: 2.25rem;
     font-size: 0.875rem;
     --tab-padding: 0.75rem;
+    --tab-radius-min: 1rem;
   }
 }
 
@@ -463,6 +468,7 @@
     height: 2.75rem;
     font-size: 1.125rem;
     --tab-padding: 1rem;
+    --tab-radius-min: 1.5rem;
   }
 }
 
@@ -471,5 +477,6 @@
     height: 3.5rem;
     font-size: 1.125rem;
     --tab-padding: 1.25rem;
+    --tab-radius-min: 2rem;
   }
 }
