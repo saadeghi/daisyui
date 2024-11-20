@@ -1,6 +1,5 @@
 .table {
   font-size: 0.875rem;
-  line-height: 1.25rem;
   @apply rounded-box relative w-full text-left rtl:text-right;
 
   tr.row-hover {
@@ -17,7 +16,6 @@
   :where(thead, tfoot) {
     @apply text-base-content/60 whitespace-nowrap;
     font-size: 0.875rem;
-    line-height: 1rem;
     font-weight: 600;
   }
 
@@ -65,8 +63,7 @@
 
 .table-xs {
   :not(thead, tfoot) tr {
-    font-size: 0.75rem;
-    line-height: 1rem;
+    font-size: 0.6875rem;
   }
 
   :where(th, td) {
@@ -76,8 +73,7 @@
 
 .table-sm {
   :not(thead, tfoot) tr {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 0.75rem;
   }
 
   :where(th, td) {
@@ -88,7 +84,6 @@
 .table-md {
   :not(thead, tfoot) tr {
     font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   :where(th, td) {
@@ -98,11 +93,20 @@
 
 .table-lg {
   :not(thead, tfoot) tr {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.125rem;
   }
 
   :where(th, td) {
-    @apply px-6 py-4;
+    @apply px-5 py-4;
+  }
+}
+
+.table-xl {
+  :not(thead, tfoot) tr {
+    font-size: 1.375rem;
+  }
+
+  :where(th, td) {
+    @apply px-6 py-5;
   }
 }

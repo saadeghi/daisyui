@@ -1,27 +1,39 @@
 .file-input {
-  border: 1px solid transparent;
-  @apply h-10 w-full max-w-80 cursor-pointer appearance-none pe-4 align-middle select-none;
+  border: var(--spacing-button-border) solid transparent;
+  @apply max-w-80 w-full cursor-pointer appearance-none align-middle select-none;
+  height: var(--field-size);
+  padding-inline-end: 0.75rem;
   font-size: 0.875rem;
   line-height: 2;
   border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
   border-start-end-radius: var(--radius-join-se, var(--radius-btn));
   border-end-start-radius: var(--radius-join-es, var(--radius-btn));
   border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
-
+  --spacing-field-size: 0.25rem;
+  --field-size: calc(var(--spacing-field-size) * 9);
   &:where(::file-selector-button) {
     @apply text-base-content;
   }
 
   &::file-selector-button {
-    @apply me-4 h-full cursor-pointer px-4 select-none;
-    border: var(--spacing-button-border) solid var(--btn-color);
+    @apply me-4 px-4 h-full cursor-pointer select-none;
     font-size: 0.875rem;
+    color: var(--btn-fg);
+    border-width: var(--spacing-button-border);
+    border-style: solid;
+    border-color: var(--btn-border);
+    border-start-start-radius: calc(
+      var(--radius-join-ss, var(--radius-btn) - var(--spacing-button-border))
+    );
+    border-end-start-radius: calc(
+      var(--radius-join-es, var(--radius-btn) - var(--spacing-button-border))
+    );
     font-weight: 600;
-    --btn-color: var(--btn-bg, var(--color-base-200));
-    background-color: var(--btn-color);
+    background-color: var(--btn-bg);
     text-shadow: 0 0.5px oklch(1 0 0 / 0.15);
     box-shadow:
-      0 0 0 0.5px oklch(1 0 0 / 0.01) inset,
+      0 0 0 0.5px
+        color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 20%, transparent) inset,
       var(--btn-shadow);
     background-origin: border-box;
     background-image: var(--btn-gradient);
@@ -32,10 +44,35 @@
       2rem 100%;
     background-repeat: no-repeat;
     background-position: top, bottom, left, right;
-    --btn-gradient: linear-gradient(to left, transparent 25%, oklch(100% 0 0/0.3), transparent 75%),
-      linear-gradient(to left, transparent 25%, oklch(100% 0 0/0.3), transparent 75%),
-      linear-gradient(-50deg, transparent 50%, color-mix(in oklab, transparent, white 4%)),
-      linear-gradient(50deg, transparent 50%, color-mix(in oklab, transparent, white 4%));
+    --spacing-field-size: 0.25rem;
+    --field-size: calc(var(--spacing-field-size) * 9);
+    --btn-bg: var(--btn-color, var(--color-base-200));
+    --btn-fg: var(--color-base-content);
+    --btn-border: color-mix(in oklab, var(--btn-bg), black 5%);
+    --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent),
+      0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent);
+    --btn-gradient: linear-gradient(
+        to left,
+        transparent 25%,
+        color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 40%, transparent),
+        transparent 75%
+      ),
+      linear-gradient(
+        to left,
+        transparent 25%,
+        color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 10%, transparent),
+        transparent 75%
+      ),
+      linear-gradient(
+        -50deg,
+        transparent 50%,
+        color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)
+      ),
+      linear-gradient(
+        50deg,
+        transparent 50%,
+        color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)
+      );
   }
 
   &:focus {
@@ -61,7 +98,7 @@
 
   &.file-input-primary {
     @apply border-primary;
-    --btn-bg: var(--color-primary);
+    --btn-color: var(--color-primary);
 
     &::file-selector-button {
       color: var(--color-primary-content);
@@ -70,7 +107,7 @@
 
   &.file-input-secondary {
     @apply border-secondary;
-    --btn-bg: var(--color-secondary);
+    --btn-color: var(--color-secondary);
 
     &::file-selector-button {
       color: var(--color-secondary-content);
@@ -79,7 +116,7 @@
 
   &.file-input-accent {
     @apply border-accent;
-    --btn-bg: var(--color-accent);
+    --btn-color: var(--color-accent);
 
     &::file-selector-button {
       color: var(--color-accent-content);
@@ -88,7 +125,7 @@
 
   &.file-input-neutral {
     @apply border-neutral;
-    --btn-bg: var(--color-neutral);
+    --btn-color: var(--color-neutral);
 
     &::file-selector-button {
       color: var(--color-neutral-content);
@@ -97,7 +134,7 @@
 
   &.file-input-info {
     @apply border-info;
-    --btn-bg: var(--color-info);
+    --btn-color: var(--color-info);
 
     &::file-selector-button {
       color: var(--color-info-content);
@@ -106,7 +143,7 @@
 
   &.file-input-success {
     @apply border-success;
-    --btn-bg: var(--color-success);
+    --btn-color: var(--color-success);
 
     &::file-selector-button {
       color: var(--color-success-content);
@@ -115,7 +152,7 @@
 
   &.file-input-warning {
     @apply border-warning;
-    --btn-bg: var(--color-warning);
+    --btn-color: var(--color-warning);
 
     &::file-selector-button {
       color: var(--color-warning-content);
@@ -124,7 +161,7 @@
 
   &.file-input-error {
     @apply border-error;
-    --btn-bg: var(--color-error);
+    --btn-color: var(--color-error);
 
     &::file-selector-button {
       color: var(--color-error-content);
@@ -132,27 +169,49 @@
   }
 
   &.file-input-xs {
-    @apply h-6 pe-2;
-    font-size: 0.75rem;
-    line-height: 1;
+    --field-size: calc(var(--spacing-field-size) * 5);
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    &::file-selector-button {
+      font-size: 0.6875rem;
+    }
   }
 
   &.file-input-sm {
-    @apply h-8 pe-3;
-    font-size: 0.875rem;
+    --field-size: calc(var(--spacing-field-size) * 7);
+    font-size: 0.75rem;
     line-height: 1.5rem;
+    &::file-selector-button {
+      font-size: 0.75rem;
+    }
   }
 
   &.file-input-md {
-    @apply h-10 pe-4;
+    --field-size: calc(var(--spacing-field-size) * 9);
     font-size: 0.875rem;
     line-height: 2;
+    &::file-selector-button {
+      font-size: 0.875rem;
+    }
   }
 
   &.file-input-lg {
-    @apply h-14 pe-6;
+    --field-size: calc(var(--spacing-field-size) * 11);
     font-size: 1.125rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
+    &::file-selector-button {
+      font-size: 1.125rem;
+    }
+  }
+
+  &.file-input-xl {
+    @apply pe-6;
+    --field-size: calc(var(--spacing-field-size) * 14);
+    font-size: 1.375rem;
+    line-height: 3rem;
+    &::file-selector-button {
+      font-size: 1.375rem;
+    }
   }
 
   &:has(> input[disabled]),

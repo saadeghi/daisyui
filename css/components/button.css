@@ -1,5 +1,6 @@
 .btn {
-  @apply h-10 gap-2 px-4 inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center text-center align-middle no-underline outline-offset-2 select-none;
+  @apply gap-1.5 px-4 inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center text-center align-middle no-underline outline-offset-2 select-none;
+  height: var(--field-size);
   font-size: 0.875rem;
   color: var(--btn-fg);
   outline-color: var(--color-base-content);
@@ -18,7 +19,7 @@
   border-color: var(--btn-border);
   text-shadow: 0 0.5px oklch(1 0 0 / 0.15);
   box-shadow:
-    0 0 0 0.5px color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 10%, transparent)
+    0 0 0 0.5px color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 20%, transparent)
       inset,
     var(--btn-shadow);
   background-origin: border-box;
@@ -30,6 +31,8 @@
     2rem 100%;
   background-repeat: no-repeat;
   background-position: top, bottom, left, right;
+  --spacing-field-size: 0.25rem;
+  --field-size: calc(var(--spacing-field-size) * 9);
   --btn-bg: var(--btn-color, var(--color-base-200));
   --btn-fg: var(--color-base-content);
   --btn-border: color-mix(in oklab, var(--btn-bg), black 5%);
@@ -38,7 +41,7 @@
   --btn-gradient: linear-gradient(
       to left,
       transparent 25%,
-      color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 30%, transparent),
+      color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 40%, transparent),
       transparent 75%
     ),
     linear-gradient(
@@ -224,8 +227,7 @@
 
 /* radio input and checkbox as button */
 .btn {
-  &:is(input[type="checkbox"]),
-  &:is(input[type="radio"]) {
+  &:is(input[type="checkbox"], input[type="radio"]) {
     @apply appearance-none;
 
     &:not(.btn-square, .btn-circle) {
@@ -255,67 +257,49 @@
 }
 
 .btn-xs {
-  @apply h-6 px-2;
-  font-size: 0.75rem;
+  @apply px-2;
+  font-size: 0.6875rem;
+  --field-size: calc(var(--spacing-field-size) * 5);
 }
 
 .btn-sm {
-  @apply h-8 px-3;
-  font-size: 0.875rem;
+  @apply px-3;
+  font-size: 0.75rem;
+  --field-size: calc(var(--spacing-field-size) * 7);
 }
 
 .btn-md {
-  @apply h-10 px-4;
+  @apply px-4;
   font-size: 0.875rem;
+  --field-size: calc(var(--spacing-field-size) * 9);
 }
 
 .btn-lg {
-  @apply h-14 px-6;
+  @apply px-5;
   font-size: 1.125rem;
+  --field-size: calc(var(--spacing-field-size) * 11);
+}
+
+.btn-xl {
+  @apply px-6;
+  font-size: 1.375rem;
+  --field-size: calc(var(--spacing-field-size) * 14);
 }
 
 .btn-square {
-  @apply size-10 px-0;
-
-  &.btn-xs {
-    @apply size-6;
-  }
-
-  &.btn-sm {
-    @apply size-8;
-  }
-
-  &.btn-md {
-    @apply size-10;
-  }
-
-  &.btn-lg {
-    @apply size-14;
-  }
+  @apply px-0;
+  width: var(--field-size);
+  height: var(--field-size);
 }
 
 .btn-circle {
-  @apply size-10 px-0 rounded-full;
-
-  &.btn-xs {
-    @apply size-6;
-  }
-
-  &.btn-sm {
-    @apply size-8;
-  }
-
-  &.btn-md {
-    @apply size-10;
-  }
-
-  &.btn-lg {
-    @apply size-14;
-  }
+  @apply px-0 rounded-full;
+  width: var(--field-size);
+  height: var(--field-size);
 }
 
 .btn-wide {
-  @apply w-64;
+  @apply max-w-64 w-full;
 }
 
 .btn-block {

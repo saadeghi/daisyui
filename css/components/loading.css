@@ -1,5 +1,5 @@
 .loading {
-  @apply pointer-events-none inline-block aspect-square w-6 bg-current align-middle;
+  @apply w-6 pointer-events-none inline-block aspect-square bg-current align-middle;
   mask-size: 100%;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -43,5 +43,9 @@
 }
 
 .loading-lg {
-  @apply w-10;
+  @apply w-7;
+}
+
+.loading-lg {
+  @apply w-9;
 }

@@ -1,11 +1,14 @@
 .checkbox {
   border: 1px solid;
-  @apply border-base-content/20 text-base-content rounded-btn relative size-6 shrink-0 cursor-pointer appearance-none p-1 align-middle;
+  @apply border-base-content/20 text-base-content rounded-btn p-1 relative shrink-0 cursor-pointer appearance-none align-middle;
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
   transition:
     background-color 0.2s,
     box-shadow 0.2s;
-
+  --spacing-selector-size: 0.25rem;
+  --selector-size: calc(var(--spacing-selector-size) * 6);
+  width: var(--selector-size);
+  height: var(--selector-size);
   &:before {
     @apply block size-full rotate-45 bg-current opacity-0;
     content: "";
@@ -134,17 +137,26 @@
 }
 
 .checkbox-xs {
-  @apply size-4 p-0.5;
+  @apply p-[0.125rem];
+  --selector-size: calc(var(--spacing-selector-size) * 4);
 }
 
 .checkbox-sm {
-  @apply size-5;
+  @apply p-[0.1875rem];
+  --selector-size: calc(var(--spacing-selector-size) * 5);
 }
 
 .checkbox-md {
-  @apply size-6;
+  @apply p-[0.25rem];
+  --selector-size: calc(var(--spacing-selector-size) * 6);
 }
 
 .checkbox-lg {
-  @apply size-8;
+  @apply p-[0.3125rem];
+  --selector-size: calc(var(--spacing-selector-size) * 7);
+}
+
+.checkbox-xl {
+  @apply p-[0.375rem];
+  --selector-size: calc(var(--spacing-selector-size) * 9);
 }

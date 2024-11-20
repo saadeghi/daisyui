@@ -1,13 +1,16 @@
 .input {
-  border: 1px solid transparent;
-  @apply bg-base-100 h-10 max-w-80 px-4 w-full shrink appearance-none align-middle;
+  border: var(--spacing-button-border) solid transparent;
+  @apply bg-base-100 max-w-80 w-full shrink appearance-none align-middle;
+  height: var(--field-size);
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.75rem;
   font-size: 0.875rem;
-  line-height: 2;
   border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
   border-start-end-radius: var(--radius-join-se, var(--radius-btn));
   border-end-start-radius: var(--radius-join-es, var(--radius-btn));
   border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
-
+  --spacing-field-size: 0.25rem;
+  --field-size: calc(var(--spacing-field-size) * 9);
   input {
     @apply w-full bg-transparent;
     border: none;
@@ -46,7 +49,6 @@
 
   &[list] {
     &::-webkit-calendar-picker-indicator {
-      line-height: 1em;
     }
   }
 
@@ -143,9 +145,8 @@
   }
 
   &.input-xs {
-    @apply h-6 px-2;
-    font-size: 0.75rem;
-    line-height: 1.625;
+    --field-size: calc(var(--spacing-field-size) * 5);
+    font-size: 0.6875rem;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {
@@ -155,9 +156,8 @@
   }
 
   &.input-sm {
-    @apply h-8 px-3;
-    font-size: 0.875rem;
-    line-height: 2rem;
+    --field-size: calc(var(--spacing-field-size) * 7);
+    font-size: 0.75rem;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {
@@ -167,9 +167,8 @@
   }
 
   &.input-md {
-    @apply h-10 px-4;
+    --field-size: calc(var(--spacing-field-size) * 9);
     font-size: 0.875rem;
-    line-height: 2;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {
@@ -179,9 +178,19 @@
   }
 
   &.input-lg {
-    @apply h-14 px-6;
+    --field-size: calc(var(--spacing-field-size) * 11);
     font-size: 1.125rem;
-    line-height: 2rem;
+
+    &[type="number"] {
+      &::-webkit-inner-spin-button {
+        @apply -my-6 -me-6;
+      }
+    }
+  }
+
+  &.input-xl {
+    --field-size: calc(var(--spacing-field-size) * 14);
+    font-size: 1.375rem;
 
     &[type="number"] {
       &::-webkit-inner-spin-button {

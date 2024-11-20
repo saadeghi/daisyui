@@ -1,8 +1,11 @@
 .radio {
-  @apply text-base-content relative size-6 shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
+  @apply text-base-content p-1 relative shrink-0 cursor-pointer appearance-none rounded-full align-middle;
   border: 1px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
-
+  --spacing-selector-size: 0.25rem;
+  --selector-size: calc(var(--spacing-selector-size) * 6);
+  width: var(--selector-size);
+  height: var(--selector-size);
   &:before {
     @apply block size-full rounded-full;
     content: "";
@@ -60,26 +63,37 @@
 }
 
 .radio-xs {
+  padding: 0.125rem;
   &:is([type="radio"]) {
-    @apply size-4;
+    --selector-size: calc(var(--spacing-selector-size) * 4);
   }
 }
 
 .radio-sm {
+  padding: 0.1875rem;
   &:is([type="radio"]) {
-    @apply size-5;
+    --selector-size: calc(var(--spacing-selector-size) * 5);
   }
 }
 
 .radio-md {
+  padding: 0.25rem;
   &:is([type="radio"]) {
-    @apply size-6;
+    --selector-size: calc(var(--spacing-selector-size) * 6);
   }
 }
 
 .radio-lg {
+  padding: 0.3125rem;
   &:is([type="radio"]) {
-    @apply size-8;
+    --selector-size: calc(var(--spacing-selector-size) * 7);
+  }
+}
+
+.radio-xl {
+  padding: 0.375rem;
+  &:is([type="radio"]) {
+    --selector-size: calc(var(--spacing-selector-size) * 9);
   }
 }
 

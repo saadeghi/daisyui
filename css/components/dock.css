@@ -1,5 +1,5 @@
 .dock {
-  @apply bg-base-100 fixed right-0 bottom-0 left-0 z-[1] flex h-16 w-full flex-row items-center justify-around py-2 text-current;
+  @apply bg-base-100 right-0 bottom-0 left-0 h-16 py-2 fixed z-[1] flex w-full flex-row items-center justify-around text-current;
   border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
   padding-bottom: env(safe-area-inset-bottom);
 
@@ -8,7 +8,7 @@
   }
 
   > * {
-    @apply relative mb-2 flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px rounded-full bg-transparent;
+    @apply mb-2 gap-px relative flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center rounded-full bg-transparent;
     transition: background-color 0.4s ease-in-out;
 
     &:where(:hover) {
@@ -20,7 +20,7 @@
 
       &:after {
         content: "";
-        @apply absolute h-1 w-10 rounded-full bg-current;
+        @apply h-1 w-10 absolute rounded-full bg-current;
         bottom: 0.2rem;
       }
     }
@@ -76,7 +76,7 @@
 }
 
 .dock-lg {
-  @apply h-20;
+  @apply h-18;
 
   .dock-active {
     &:after {
@@ -86,5 +86,19 @@
 
   .dock-label {
     font-size: 0.75rem;
+  }
+}
+
+.dock-xl {
+  @apply h-20;
+
+  .dock-active {
+    &:after {
+      bottom: 0.4rem;
+    }
+  }
+
+  .dock-label {
+    font-size: 0.875rem;
   }
 }

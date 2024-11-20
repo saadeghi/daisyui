@@ -1,8 +1,11 @@
 .textarea {
   border: 1px solid transparent;
-  @apply bg-base-100 rounded-btn h-10 min-h-20 max-w-80 px-4 py-2 w-full shrink appearance-none align-middle;
+  @apply bg-base-100 rounded-btn min-h-20 max-w-80 py-2 w-full shrink appearance-none align-middle;
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.75rem;
   font-size: 0.875rem;
-
+  --spacing-field-size: 0.25rem;
+  --field-size: calc(var(--spacing-field-size) * 9);
   textarea {
     @apply bg-transparent;
     border: none;
@@ -132,22 +135,22 @@
   }
 
   &.textarea-xs {
-    @apply h-6 px-2;
     font-size: 0.75rem;
   }
 
   &.textarea-sm {
-    @apply h-8 px-3;
     font-size: 0.875rem;
   }
 
   &.textarea-md {
-    @apply h-10 px-4;
     font-size: 0.875rem;
   }
 
   &.textarea-lg {
-    @apply h-14 px-6;
+    font-size: 1.125rem;
+  }
+
+  &.textarea-xl {
     font-size: 1.125rem;
   }
 }

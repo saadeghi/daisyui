@@ -17,8 +17,8 @@
   --tab-radius-ee: 0;
   --tab-order: 0;
   order: var(--tab-order);
+  height: 2.25rem;
   font-size: 0.875rem;
-  line-height: 2;
   padding-inline-start: var(--tab-padding);
   padding-inline-end: var(--tab-padding);
 
@@ -70,21 +70,21 @@
     @apply border-base-content/20;
     border-style: solid;
     border-width: 0;
-    border-bottom-width: calc(var(--spacing-tab-border) + 1px);
+    border-bottom-width: calc(1px + 1px);
   }
 }
 
 .tabs-lift {
-  --tabs-height: auto;
+  --tabs-height: 2.25rem;
   --tabs-direction: row;
 
   .tab {
-    --tab-border: 0 0 var(--spacing-tab-border) 0;
+    --tab-border: 0 0 1px 0;
     --tab-radius-ss: var(--radius-tab);
     --tab-radius-se: var(--radius-tab);
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
-    --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
+    --tab-paddings: 1px var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
     --tab-corner-width: calc(100% + var(--radius-tab) * 2);
     --tab-corner-height: var(--radius-tab);
@@ -101,26 +101,25 @@
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
-      --tab-border: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
+      --tab-border: 1px 1px 0 1px;
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
         var(--tab-border-color);
-      --tab-paddings: 0 calc(var(--tab-padding) - var(--spacing-tab-border))
-        var(--spacing-tab-border) calc(var(--tab-padding) - var(--spacing-tab-border));
+      --tab-paddings: 0 calc(var(--tab-padding) - 1px) 1px calc(var(--tab-padding) - 1px);
       --tab-inset: auto auto 0 auto;
-      --tab-grad: calc(69% - var(--spacing-tab-border));
+      --tab-grad: calc(69% - 1px);
       --radius-start: radial-gradient(
         circle at top left,
         transparent var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-        var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px)
+        var(--tab-border-color) calc(var(--tab-grad) + 1px),
+        var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px)
       );
       --radius-end: radial-gradient(
         circle at top right,
         transparent var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-        var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px)
+        var(--tab-border-color) calc(var(--tab-grad) + 1px),
+        var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px)
       );
       background-color: var(--tab-bg);
 
@@ -162,7 +161,7 @@
   }
 
   .tab-content {
-    --tabcontent-margin: calc(var(--spacing-tab-border) * -1) 0 0 0;
+    --tabcontent-margin: -1px 0 0 0;
     --radius-tabcontent-ss: 0;
     --radius-tabcontent-se: var(--radius-box);
     --radius-tabcontent-es: var(--radius-box);
@@ -178,17 +177,17 @@
 }
 
 .tabs-top {
-  --tabs-height: auto;
+  --tabs-height: 2.25rem;
   --tabs-direction: row;
 
   .tab {
     --tab-order: 0;
-    --tab-border: 0 0 var(--spacing-tab-border) 0;
+    --tab-border: 0 0 1px 0;
     --tab-radius-ss: var(--radius-tab);
     --tab-radius-se: var(--radius-tab);
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
-    --tab-paddings: var(--spacing-tab-border) var(--tab-padding) 0 var(--tab-padding);
+    --tab-paddings: 1px var(--tab-padding) 0 var(--tab-padding);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
     --tab-corner-width: calc(100% + var(--radius-tab) * 2);
     --tab-corner-height: var(--radius-tab);
@@ -197,25 +196,24 @@
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
-      --tab-border: var(--spacing-tab-border) var(--spacing-tab-border) 0 var(--spacing-tab-border);
+      --tab-border: 1px 1px 0 1px;
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
         var(--tab-border-color);
-      --tab-paddings: 0 calc(var(--tab-padding) - var(--spacing-tab-border))
-        var(--spacing-tab-border) calc(var(--tab-padding) - var(--spacing-tab-border));
+      --tab-paddings: 0 calc(var(--tab-padding) - 1px) 1px calc(var(--tab-padding) - 1px);
       --tab-inset: auto auto 0 auto;
       --radius-start: radial-gradient(
         circle at top left,
         transparent var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-        var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px)
+        var(--tab-border-color) calc(var(--tab-grad) + 1px),
+        var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px)
       );
       --radius-end: radial-gradient(
         circle at top right,
         transparent var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-        var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px)
+        var(--tab-border-color) calc(var(--tab-grad) + 1px),
+        var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px)
       );
     }
   }
@@ -231,7 +229,7 @@
 
   .tab-content {
     --tabcontent-order: 1;
-    --tabcontent-margin: calc(var(--spacing-tab-border) * -1) 0 0 0;
+    --tabcontent-margin: -1px 0 0 0;
     --radius-tabcontent-ss: 0;
     --radius-tabcontent-se: var(--radius-box);
     --radius-tabcontent-es: var(--radius-box);
@@ -247,18 +245,18 @@
 }
 
 .tabs-bottom {
-  --tabs-height: auto;
+  --tabs-height: 2.25rem;
   --tabs-direction: row;
 
   .tab {
     --tab-order: 1;
-    --tab-border: var(--spacing-tab-border) 0 0 0;
+    --tab-border: 1px 0 0 0;
     --tab-radius-ss: 0;
     --tab-radius-se: 0;
     --tab-radius-es: var(--radius-tab);
     --tab-radius-ee: var(--radius-tab);
     --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
-    --tab-paddings: 0 var(--tab-padding) var(--spacing-tab-border) var(--tab-padding);
+    --tab-paddings: 0 var(--tab-padding) 1px var(--tab-padding);
     --tab-corner-width: calc(100% + var(--radius-tab) * 2);
     --tab-corner-height: var(--radius-tab);
     --tab-corner-position: top left, top right;
@@ -266,25 +264,24 @@
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
-      --tab-border: 0 var(--spacing-tab-border) var(--spacing-tab-border) var(--spacing-tab-border);
+      --tab-border: 0 1px 1px 1px;
       --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color)
         var(--tab-border-color);
-      --tab-paddings: var(--spacing-tab-border) calc(var(--tab-padding) - var(--spacing-tab-border))
-        0 calc(var(--tab-padding) - var(--spacing-tab-border));
+      --tab-paddings: 1px calc(var(--tab-padding) - 1px) 0 calc(var(--tab-padding) - 1px);
       --tab-inset: 0 auto auto auto;
       --radius-start: radial-gradient(
         circle at bottom left,
         transparent var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-        var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px)
+        var(--tab-border-color) calc(var(--tab-grad) + 1px),
+        var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px)
       );
       --radius-end: radial-gradient(
         circle at bottom right,
         transparent var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-        var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-        var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px)
+        var(--tab-border-color) calc(var(--tab-grad) + 1px),
+        var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px)
       );
     }
   }
@@ -300,7 +297,7 @@
 
   .tab-content {
     --tabcontent-order: 0;
-    --tabcontent-margin: 0 0 calc(var(--spacing-tab-border) * -1) 0;
+    --tabcontent-margin: 0 0 -1px 0;
     --radius-tabcontent-ss: var(--radius-box);
     --radius-tabcontent-se: var(--radius-box);
     --radius-tabcontent-es: 0;
@@ -321,12 +318,12 @@
 
   .tab {
     --tab-order: 0;
-    --tab-border: 0 var(--spacing-tab-border) 0 0;
+    --tab-border: 0 1px 0 0;
     --tab-radius-ss: var(--radius-tab);
     --tab-radius-se: 0;
     --tab-radius-es: var(--radius-tab);
     --tab-radius-ee: 0;
-    --tab-paddings: var(--spacing-tab-border) var(--tab-padding) var(--spacing-tab-border) calc(var(--tab-padding) + var(--spacing-tab-border));
+    --tab-paddings: 1px var(--tab-padding) 1px calc(var(--tab-padding) + 1px);
     --tab-border-colors: transparent var(--tab-border-color) transparent transparent;
     --tab-corner-width: var(--radius-tab);
     --tab-corner-height: calc(100% + var(--radius-tab) * 2);
@@ -335,20 +332,20 @@
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
-      --tab-border: var(--spacing-tab-border) 0 var(--spacing-tab-border) var(--spacing-tab-border);
+      --tab-border: 1px 0 1px 1px;
       --tab-border-colors: var(--tab-border-color) transparent var(--tab-border-color) var(--tab-border-color);
-      --tab-paddings: 0 calc(var(--spacing-tab-border) + var(--tab-padding)) 0 var(--tab-padding);
+      --tab-paddings: 0 calc(1px + var(--tab-padding)) 0 var(--tab-padding);
       --tab-inset: auto 0 auto auto;
       --radius-start: radial-gradient(circle at top left,
           transparent var(--tab-grad),
           var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+          var(--tab-border-color) calc(var(--tab-grad) + 1px),
+          var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px));
       --radius-end: radial-gradient(circle at bottom left,
           transparent var(--tab-grad),
           var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
-          var(--tab-border-color) calc(var(--tab-grad) + var(--spacing-tab-border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--spacing-tab-border) + 0.25px));
+          var(--tab-border-color) calc(var(--tab-grad) + 1px),
+          var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px));
     }
   }
 
@@ -362,7 +359,7 @@
 
   .tab-content {
     --tabcontent-order: 1;
-    --tabcontent-margin: 0 0 0 calc(var(--spacing-tab-border) * -1);
+    --tabcontent-margin: 0 0 0 -1px;
     --radius-tabcontent-ss: 0;
     --radius-tabcontent-se: var(--radius-box);
     --radius-tabcontent-es: var(--radius-box);
@@ -412,7 +409,7 @@
   width: 100%;
   margin: var(--tabcontent-margin);
   order: var(--tabcontent-order);
-  border-width: var(--spacing-tab-border);
+  border-width: 1px;
   border-start-start-radius: var(--radius-tabcontent-ss);
   border-start-end-radius: var(--radius-tabcontent-se);
   border-end-start-radius: var(--radius-tabcontent-es);
@@ -423,34 +420,38 @@
   :where(.tab) {
     height: 1.25rem;
     font-size: 0.75rem;
-    line-height: 0.75rem;
-    --tab-padding: 0.5rem;
+    --tab-padding: 0.375rem;
   }
 }
 
 .tabs-sm {
   :where(.tab) {
-    height: 1.5rem;
+    height: 1.75rem;
     font-size: 0.875rem;
-    line-height: 0.75rem;
-    --tab-padding: 0.75rem;
+    --tab-padding: 0.5rem;
   }
 }
 
 .tabs-md {
   :where(.tab) {
-    height: 2rem;
+    height: 2.25rem;
     font-size: 0.875rem;
-    line-height: 2;
-    --tab-padding: 1rem;
+    --tab-padding: 0.75rem;
   }
 }
 
 .tabs-lg {
   :where(.tab) {
-    height: 3rem;
+    height: 2.75rem;
     font-size: 1.125rem;
-    line-height: 2;
+    --tab-padding: 1rem;
+  }
+}
+
+.tabs-xl {
+  :where(.tab) {
+    height: 3.5rem;
+    font-size: 1.125rem;
     --tab-padding: 1.25rem;
   }
 }

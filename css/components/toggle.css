@@ -1,9 +1,12 @@
 .toggle {
   border: 1px solid currentColor;
-  @apply rounded-badge text-base-content/50 inline-flex h-6 w-12 shrink-0 cursor-pointer appearance-none p-[.1875rem] align-middle;
+  @apply rounded-badge text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none p-[.1875rem] align-middle;
   box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
   transition: color 0.3s;
-
+  --spacing-selector-size: 0.25rem;
+  --selector-size: calc(var(--spacing-selector-size) * 6);
+  width: calc(var(--selector-size) * 1.75);
+  height: var(--selector-size);
   &:before {
     @apply block h-full grow-0;
     content: "";
@@ -11,7 +14,7 @@
   }
 
   &:after {
-    @apply relative start-0 block aspect-square h-full bg-current;
+    @apply start-0 relative block aspect-square h-full bg-current;
     translate: 0;
     border-radius: calc(var(--radius-badge) - 3px);
     content: "";
@@ -121,24 +124,35 @@
 
 .toggle-xs {
   &:is([type="checkbox"]) {
-    @apply h-4 w-6 p-[.0625rem];
+    @apply p-[.0625rem];
+    --selector-size: calc(var(--spacing-selector-size) * 4);
   }
 }
 
 .toggle-sm {
   &:is([type="checkbox"]) {
-    @apply h-5 w-8 p-[.125rem];
+    @apply p-[.125rem];
+    --selector-size: calc(var(--spacing-selector-size) * 5);
   }
 }
 
 .toggle-md {
   &:is([type="checkbox"]) {
-    @apply h-6 w-12 p-[.1875rem];
+    @apply p-[.1875rem];
+    --selector-size: calc(var(--spacing-selector-size) * 6);
   }
 }
 
 .toggle-lg {
   &:is([type="checkbox"]) {
-    @apply h-8 w-16 p-[.25rem];
+    @apply p-[.25rem];
+    --selector-size: calc(var(--spacing-selector-size) * 7);
+  }
+}
+
+.toggle-xl {
+  &:is([type="checkbox"]) {
+    @apply p-[.3125rem];
+    --selector-size: calc(var(--spacing-selector-size) * 9);
   }
 }
