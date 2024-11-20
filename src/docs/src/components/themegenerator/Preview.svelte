@@ -1,4 +1,4 @@
-<div class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-2 text-base-content [&>.card]:bg-base-100 [&>.card]:border-[.5px] [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-12 lg:max-w-[25rem] xl:max-w-[50rem] mx-auto [&>*]:mb-4 [&>*]:lg:mb-10 [&>*]:break-inside-avoid [&_*]:[transition:background-color_100ms,border-color_100ms,border-radius_500ms_ease-out] lg:px-10 lg:pt-10 pb-20">
+<div class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-[.5px] [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_*]:[transition:background-color_100ms,border-color_100ms,border-radius_500ms_ease-out] pb-20">
 
   <!-- <nav class="bg-base-200 text-base-content rounded-box col-span-8 flex gap-2 items-center justify-between">
     <ul class="menu menu-sm menu-horizontal shrink-0">

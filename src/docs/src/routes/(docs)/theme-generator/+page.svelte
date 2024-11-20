@@ -235,7 +235,7 @@
 <SEO title="daisyUI and Tailwind CSS theme generator" desc="OKLCH Theme Generator for daisyUI and Tailwind CSS" />
 
 <div class="flex flex-col md:flex-row relative">
-  <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[13rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
+  <div style="scroll-behavior: smooth" id="themelist" class="border-e shrink-0 w-full md:w-[14rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20" class:max-md:hidden={dockActiveItem!=="themes"}>
     <div class="flex gap-2 justify-between items-center mb-4">
 
       <h2 class="font-bold ms-2">Themes</h2>
@@ -320,7 +320,7 @@
 
   </div>
 
-  <div class="flex flex-col pb-20 shrink-0 w-full md:w-[17rem] md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start" class:max-md:hidden={dockActiveItem!=="editor"}>
+  <div class="flex flex-col pb-20 shrink-0 w-full md:w-[17rem] md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start lg:items-stretch" class:max-md:hidden={dockActiveItem!=="editor"}>
     <label class="input flex font-semibold input-ghost input-sm w-full items-center gap-2 shrink-0">
       <input
         class="shrink w-full"
@@ -445,7 +445,7 @@
     {#each [
       ['--spacing-button-border', 'Button'],
     ] as [key, label]}
-      <div class="flex justify-between items-center w-[15rem]">
+      <div class="flex justify-between items-center">
         <span class="text-xs text-base-content/60">{label}</span>
         <div class="join">
           {#each ['1px', '2px'] as value}
@@ -464,7 +464,7 @@
 
     <h3 class="divider text-xs divider-start">Options</h3>
 
-    <div class="flex gap-2 items-center justify-between w-[15rem]">
+    <div class="flex gap-2 items-center justify-between">
       <span class="text-xs flex items-center gap-1 text-base-content/60">
         Default theme
       </span>
@@ -477,7 +477,7 @@
       </label>
     </div>
 
-    <div class="flex gap-2 items-center justify-between w-[15rem]">
+    <div class="flex gap-2 items-center justify-between">
       <span class="text-xs flex items-center gap-1 text-base-content/60">
         Default dark theme
         <div class="tooltip" data-tip="prefers-color-scheme:dark">
@@ -495,9 +495,9 @@
       </label>
     </div>
 
-    <div class="flex gap-2 items-center justify-between w-[15rem]">
+    <div class="flex gap-2 items-center justify-between">
       <span class="text-xs flex items-center gap-1 text-base-content/60">
-        Color scheme
+        Dark color scheme
         <div class="tooltip" data-tip="Color of browser-provided UI">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
             <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
@@ -505,14 +505,12 @@
         </div>
       </span>
       <label class="flex gap-2 items-center cursor-pointer text-xs">
-        light
         <input
           type="checkbox"
           class="toggle toggle-sm"
           checked={currentTheme['color-scheme'] === 'dark'}
           onchange={(e) => currentTheme['color-scheme'] = e.target.checked ? 'dark' : 'light'}
         />
-        Dark
       </label>
     </div>
 
@@ -533,10 +531,17 @@
     </button>
   </div>
 
-  <div class="grow md:rounded-ss-xl overflow-hidden" class:max-md:hidden={dockActiveItem!=="preview"}>
+  <div class="grow border-base-300 border-s border-t md:rounded-ss-xl overflow-hidden" class:max-md:hidden={dockActiveItem!=="preview"}>
     <div
       class="p-8 bg-base-200"
-      style={currentThemeStyle}
+      style={`
+      ${currentThemeStyle}
+      box-shadow:1rem 0 .2rem -1rem #0001 inset;
+      --pattern-color: color-mix(in oklab, var(--color-base-content) 2%, transparent);
+      background-image: linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-attachment: fixed;
+      `}
     >
       <Preview/>
     </div>
