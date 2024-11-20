@@ -81,8 +81,8 @@ You can add custom themes
   --color-error: oklch(65% 0.3 30);
   --color-error-content: oklch(98% 0.01 30);
 
-  --radius-badge: .5rem;
-  --radius-btn: .5rem;
+  --radius-selector: .5rem;
+  --radius-field: .5rem;
   --radius-box: .5rem;
   --spacing-button-border: 1px;
 }

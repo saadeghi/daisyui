@@ -3,19 +3,49 @@
 @plugin '@tailwindcss/typography';
 
 @plugin "../../../" {
-  themes: light --default, dark --prefersdark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter, dim, nord, sunset;
+  themes:
+    light --default,
+    dark --prefersdark,
+    cupcake,
+    bumblebee,
+    emerald,
+    corporate,
+    synthwave,
+    retro,
+    cyberpunk,
+    valentine,
+    halloween,
+    garden,
+    forest,
+    aqua,
+    lofi,
+    pastel,
+    fantasy,
+    wireframe,
+    black,
+    luxury,
+    dracula,
+    cmyk,
+    autumn,
+    business,
+    acid,
+    lemonade,
+    night,
+    coffee,
+    winter,
+    dim,
+    nord,
+    sunset;
   /* exclude: chat, loading, mask, properties, states, responsive; */
 }
 
-
 @theme {
   --font-family-title: Figtree, Noto Sans JP, Noto Sans, Vazirmatn, sans-serif;
-  --font-family-sans: ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Vazirmatn, Arial,
-    Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-    Noto Color Emoji;
-  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    Liberation Mono, Vazirmatn, Courier New, monospace;
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Vazirmatn, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    Vazirmatn, Courier New, monospace;
 }
 
 /* carbon */
@@ -29,7 +59,7 @@
   overflow: hidden;
 }
 
-#carbonads>span {
+#carbonads > span {
   display: block;
   overflow: hidden;
   display: flex;
@@ -44,7 +74,7 @@
 
 #carbonads .carbon-img {
   display: block;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #carbonads .carbon-img img {
@@ -55,7 +85,7 @@
 #carbonads .carbon-text {
   display: block;
   min-height: 84px;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 12px;
   line-height: 1.3;
   text-align: left;
@@ -64,9 +94,9 @@
 #carbonads .carbon-poweredby {
   display: inline-block;
   padding: 3px 6px;
-  opacity: .5;
+  opacity: 0.5;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   text-align: end;
   font-weight: 600;
   font-size: 8px;
@@ -104,7 +134,7 @@
   background-color: transparent;
   color: inherit;
   border: 2px solid transparent;
-  border-radius: var(--radius-btn);
+  border-radius: var(--radius-field);
   padding-inline-start: 2.5em;
 }
 
@@ -120,7 +150,8 @@
   color: var(--base-content);
 }
 
-[data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"] .svelte-typeahead-list {
+[data-svelte-typeahead][data-svelte-typeahead].dropdown[aria-expanded="true"]
+  .svelte-typeahead-list {
   transform: translateY(0.5em);
   background: color-mix(in oklab, var(--color-base-100) 99%, transparent);
   border: 0 solid color-mix(in oklab, var(--color-base-content) 20%, transparent);
@@ -142,7 +173,7 @@
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li {
   color: var(--base-content);
-  border-radius: var(--radius-btn);
+  border-radius: var(--radius-field);
 }
 
 [data-svelte-typeahead][data-svelte-typeahead] .svelte-typeahead-list li:hover {
@@ -188,19 +219,19 @@ pre[class*="language-"] {
 }
 
 /* changelog */
-.changelog-body h1#changelog+p {
+.changelog-body h1#changelog + p {
   display: none;
 }
 
-.changelog-body>.prose>h2 {
+.changelog-body > .prose > h2 {
   margin-top: 5rem;
 }
 
-.changelog-body>.prose>h2 a {
+.changelog-body > .prose > h2 a {
   font-weight: 900;
 }
 
-.changelog-body>.prose>p img {
+.changelog-body > .prose > p img {
   border-radius: var(--radius-box);
   border: 1px solid rgba(var(--color-base-content), 0.1);
 }

@@ -209,25 +209,25 @@ function prev(productId, media) {
                           dateFormat
                         )}"
                         class="grid grid-cols-3 gap-2 text-center font-mono text-xs">
-                        <!-- <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                        <!-- <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
                           <span class="countdown block text-2xl">
                             <span style="{`--value:${remaining.days};`}"></span>
                           </span>
                           <span class="text-neutral-content/40 text-xs">day</span>
                         </div> -->
-                        <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                        <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
                           <span class="countdown block text-2xl">
                             <span style="{`--value:${remaining.hours};`}"></span>
                           </span>
                           <span class="text-neutral-content/40 text-xs">hour</span>
                         </div>
-                        <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                        <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
                           <span class="countdown block text-2xl">
                             <span style="{`--value:${remaining.minutes};`}"></span>
                           </span>
                           <span class="text-neutral-content/40 text-xs">min</span>
                         </div>
-                        <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                        <div class="border-neutral-content/40 rounded-field border border-dashed p-2">
                           <span class="countdown block text-2xl">
                             <span style="{`--value:${remaining.seconds};`}"></span>
                           </span>
@@ -236,7 +236,7 @@ function prev(productId, media) {
                       </date>
                     </div>
                   {:else if !data}
-                    <div class="text-neutral-content/20 rounded-btn shrink-0 border border-dashed p-2">
+                    <div class="text-neutral-content/20 rounded-field shrink-0 border border-dashed p-2">
                       Ended
                     </div>
                   {/if}

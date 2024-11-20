@@ -558,83 +558,83 @@ import { t } from "$lib/i18n"
     <div class="card-title mb-4 text-sm">{$t("Semantic colors")}</div>
     <div class="grid grid-cols-4 gap-4">
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-primary rounded-btn aspect-square w-10"></div>
+        <div class="bg-primary rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">primary</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-secondary rounded-btn aspect-square w-10"></div>
+        <div class="bg-secondary rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">secondary</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-accent rounded-btn aspect-square w-10"></div>
+        <div class="bg-accent rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">accent</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-neutral rounded-btn aspect-square w-10"></div>
+        <div class="bg-neutral rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">neutral</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-primary-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-primary-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">primary content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-secondary-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-secondary-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">secondary content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-accent-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-accent-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">accent content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-neutral-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-neutral-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">neutral content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-base-100 rounded-btn aspect-square w-10"></div>
+        <div class="bg-base-100 rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">base 100</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-base-200 rounded-btn aspect-square w-10"></div>
+        <div class="bg-base-200 rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">base 200</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-base-300 rounded-btn aspect-square w-10"></div>
+        <div class="bg-base-300 rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">base 300</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-base-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-base-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">base content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-info rounded-btn aspect-square w-10"></div>
+        <div class="bg-info rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">info</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-success rounded-btn aspect-square w-10"></div>
+        <div class="bg-success rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">success</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-warning rounded-btn aspect-square w-10"></div>
+        <div class="bg-warning rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">warning</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-error rounded-btn aspect-square w-10"></div>
+        <div class="bg-error rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">error</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-info-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-info-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">info content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-success-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-success-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">success content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-warning-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-warning-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">warning content</div>
       </div>
       <div class="flex flex-col items-center gap-1">
-        <div class="bg-error-content rounded-btn aspect-square w-10"></div>
+        <div class="bg-error-content rounded-field aspect-square w-10"></div>
         <div class="text-base-content/60 text-center text-[.6rem]">error content</div>
       </div>
     </div>

@@ -17,7 +17,7 @@
 
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn gap-2 px-4 py-2 grid grid-flow-col content-start items-center text-start;
+    @apply rounded-field gap-2 px-4 py-2 grid grid-flow-col content-start items-center text-start;
     transition-property: color, background-color, box-shadow;
     transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -139,7 +139,7 @@
 .menu-xs {
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-2 py-1;
+    @apply rounded-field px-2 py-1;
     font-size: 0.6875rem;
   }
 
@@ -151,7 +151,7 @@
 .menu-sm {
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-3 py-1;
+    @apply rounded-field px-3 py-1;
     font-size: 0.75rem;
   }
 
@@ -163,7 +163,7 @@
 .menu-md {
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-4 py-2;
+    @apply rounded-field px-4 py-2;
     font-size: 0.875rem;
   }
 
@@ -175,7 +175,7 @@
 .menu-lg {
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-6 py-3;
+    @apply rounded-field px-6 py-3;
     font-size: 1.125rem;
   }
 
@@ -187,7 +187,7 @@
 .menu-xl {
   :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-    @apply rounded-btn px-6 py-3;
+    @apply rounded-field px-6 py-3;
     font-size: 1.375rem;
   }
 

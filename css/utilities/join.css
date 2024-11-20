@@ -13,34 +13,34 @@
   }
 
   > .join-item:where(:first-child) {
-    --radius-join-ss: var(--radius-btn);
+    --radius-join-ss: var(--radius-field);
     --radius-join-se: 0;
-    --radius-join-es: var(--radius-btn);
+    --radius-join-es: var(--radius-field);
     --radius-join-ee: 0;
   }
 
   :first-child:not(:last-child) {
     :where(.join-item) {
-      --radius-join-ss: var(--radius-btn);
+      --radius-join-ss: var(--radius-field);
       --radius-join-se: 0;
-      --radius-join-es: var(--radius-btn);
+      --radius-join-es: var(--radius-field);
       --radius-join-ee: 0;
     }
   }
 
   > .join-item:where(:last-child) {
     --radius-join-ss: 0;
-    --radius-join-se: var(--radius-btn);
+    --radius-join-se: var(--radius-field);
     --radius-join-es: 0;
-    --radius-join-ee: var(--radius-btn);
+    --radius-join-ee: var(--radius-field);
   }
 
   :last-child:not(:first-child) {
     :where(.join-item) {
       --radius-join-ss: 0;
-      --radius-join-se: var(--radius-btn);
+      --radius-join-se: var(--radius-field);
       --radius-join-es: 0;
-      --radius-join-ee: var(--radius-btn);
+      --radius-join-ee: var(--radius-field);
     }
   }
 }
@@ -58,16 +58,16 @@
   @apply flex-col;
 
   > .join-item:first-child {
-    --radius-join-ss: var(--radius-btn);
-    --radius-join-se: var(--radius-btn);
+    --radius-join-ss: var(--radius-field);
+    --radius-join-se: var(--radius-field);
     --radius-join-es: 0;
     --radius-join-ee: 0;
   }
 
   :first-child:not(:last-child) {
     .join-item {
-      --radius-join-ss: var(--radius-btn);
-      --radius-join-se: var(--radius-btn);
+      --radius-join-ss: var(--radius-field);
+      --radius-join-se: var(--radius-field);
       --radius-join-es: 0;
       --radius-join-ee: 0;
     }
@@ -76,16 +76,16 @@
   > .join-item:last-child {
     --radius-join-ss: 0;
     --radius-join-se: 0;
-    --radius-join-es: var(--radius-btn);
-    --radius-join-ee: var(--radius-btn);
+    --radius-join-es: var(--radius-field);
+    --radius-join-ee: var(--radius-field);
   }
 
   :last-child:not(:first-child) {
     .join-item {
       --radius-join-ss: 0;
       --radius-join-se: 0;
-      --radius-join-es: var(--radius-btn);
-      --radius-join-ee: var(--radius-btn);
+      --radius-join-es: var(--radius-field);
+      --radius-join-ee: var(--radius-field);
     }
   }
 
@@ -101,34 +101,34 @@
   @apply flex-row;
 
   > .join-item:first-child {
-    --radius-join-ss: var(--radius-btn);
+    --radius-join-ss: var(--radius-field);
     --radius-join-se: 0;
-    --radius-join-es: var(--radius-btn);
+    --radius-join-es: var(--radius-field);
     --radius-join-ee: 0;
   }
 
   :first-child:not(:last-child) {
     .join-item {
-      --radius-join-ss: var(--radius-btn);
+      --radius-join-ss: var(--radius-field);
       --radius-join-se: 0;
-      --radius-join-es: var(--radius-btn);
+      --radius-join-es: var(--radius-field);
       --radius-join-ee: 0;
     }
   }
 
   > .join-item:last-child {
     --radius-join-ss: 0;
-    --radius-join-se: var(--radius-btn);
+    --radius-join-se: var(--radius-field);
     --radius-join-es: 0;
-    --radius-join-ee: var(--radius-btn);
+    --radius-join-ee: var(--radius-field);
   }
 
   :last-child:not(:first-child) {
     .join-item {
       --radius-join-ss: 0;
-      --radius-join-se: var(--radius-btn);
+      --radius-join-se: var(--radius-field);
       --radius-join-es: 0;
-      --radius-join-ee: var(--radius-btn);
+      --radius-join-ee: var(--radius-field);
     }
   }
 

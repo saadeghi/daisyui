@@ -77,7 +77,7 @@ layout: components
         </div>
         <hr class={`${line} h-full w-px border-s`} />
         <div class={`${item} indicator-center indicator-bottom`}>
-          --rounded-btn
+          --rounded-field
         </div>
       </div>
     </div>

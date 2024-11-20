@@ -631,7 +631,7 @@
 									class="flex w-60 flex-col justify-end gap-4 xl:w-auto xl:justify-normal xl:p-6"
 								>
 									<div
-										class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:transform-none! motion-reduce:shadow-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
+										class="alert rounded-field border-base-300 border will-change-auto motion-reduce:transform-none! motion-reduce:shadow-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
 										style={`box-shadow:calc(${animateValue(
 											section["hero"],
 											[5, 5.5],
@@ -672,7 +672,7 @@
 										</span>
 									</div>
 									<div
-										class="alert rounded-btn border-base-300 border will-change-auto motion-reduce:transform-none! motion-reduce:shadow-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
+										class="alert rounded-field border-base-300 border will-change-auto motion-reduce:transform-none! motion-reduce:shadow-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
 										style={`box-shadow:calc(${animateValue(
 											section["hero"],
 											[6, 6.5],
@@ -826,35 +826,35 @@
 										<h2 class="card-title mb-4 text-sm">Semantic colors</h2>
 										<div class="grid grid-cols-4 gap-4">
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-primary rounded-btn aspect-square w-10"></div>
+												<div class="bg-primary rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">primary</div>
 											</div>
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-secondary rounded-btn aspect-square w-10"></div>
+												<div class="bg-secondary rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">secondary</div>
 											</div>
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-accent rounded-btn aspect-square w-10"></div>
+												<div class="bg-accent rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">accent</div>
 											</div>
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-neutral rounded-btn aspect-square w-10"></div>
+												<div class="bg-neutral rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">neutral</div>
 											</div>
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-info rounded-btn aspect-square w-10"></div>
+												<div class="bg-info rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">info</div>
 											</div>
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-success rounded-btn aspect-square w-10"></div>
+												<div class="bg-success rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">success</div>
 											</div>
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-warning rounded-btn aspect-square w-10"></div>
+												<div class="bg-warning rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">warning</div>
 											</div>
 											<div class="flex flex-col items-center gap-1">
-												<div class="bg-error rounded-btn aspect-square w-10"></div>
+												<div class="bg-error rounded-field aspect-square w-10"></div>
 												<div class="text-base-content/70 text-[.6rem]">error</div>
 											</div>
 										</div>

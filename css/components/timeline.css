@@ -32,21 +32,21 @@
 
   &:has(.timeline-middle hr) {
     &:first-child {
-      @apply rounded-e-badge rounded-s-none;
+      @apply rounded-e-selector rounded-s-none;
     }
 
     &:last-child {
-      @apply rounded-s-badge rounded-e-none;
+      @apply rounded-s-selector rounded-e-none;
     }
   }
 
   &:not(:has(.timeline-middle)) {
     :first-child hr:last-child {
-      @apply rounded-s-badge rounded-e-none;
+      @apply rounded-s-selector rounded-e-none;
     }
 
     :last-child hr:first-child {
-      @apply rounded-e-badge rounded-s-none;
+      @apply rounded-e-selector rounded-s-none;
     }
   }
 }
@@ -58,7 +58,7 @@
 }
 
 .timeline-start {
-  @apply col-start-1 col-end-4 row-start-1 row-end-2 m-1 self-end justify-self-center;
+  @apply m-1 col-start-1 col-end-4 row-start-1 row-end-2 self-end justify-self-center;
 }
 
 .timeline-middle {
@@ -66,7 +66,7 @@
 }
 
 .timeline-end {
-  @apply col-start-1 col-end-4 row-start-3 row-end-4 m-1 self-start justify-self-center;
+  @apply m-1 col-start-1 col-end-4 row-start-3 row-end-4 self-start justify-self-center;
 }
 
 .timeline-compact {
@@ -115,7 +115,7 @@
     --timeline-row-end: minmax(0, 1fr);
 
     > hr {
-      @apply h-full w-1;
+      @apply w-1 h-full;
 
       &:first-child {
         @apply col-start-2 row-start-1;
@@ -139,11 +139,11 @@
     > li {
       > hr {
         &:first-child {
-          @apply rounded-b-badge rounded-t-none;
+          @apply rounded-b-selector rounded-t-none;
         }
 
         &:last-child {
-          @apply rounded-t-badge rounded-b-none;
+          @apply rounded-t-selector rounded-b-none;
         }
       }
     }
@@ -152,13 +152,13 @@
   &:not(:has(.timeline-middle)) {
     :first-child {
       > hr:last-child {
-        @apply rounded-t-badge rounded-b-none;
+        @apply rounded-t-selector rounded-b-none;
       }
     }
 
     :last-child {
       > hr:first-child {
-        @apply rounded-b-badge rounded-t-none;
+        @apply rounded-b-selector rounded-t-none;
       }
     }
   }
@@ -202,11 +202,11 @@
     > li {
       > hr {
         &:first-child {
-          @apply rounded-e-badge rounded-s-none;
+          @apply rounded-e-selector rounded-s-none;
         }
 
         &:last-child {
-          @apply rounded-s-badge rounded-e-none;
+          @apply rounded-s-selector rounded-e-none;
         }
       }
     }
@@ -215,13 +215,13 @@
   &:not(:has(.timeline-middle)) {
     :first-child {
       > hr:last-child {
-        @apply rounded-s-badge rounded-e-none;
+        @apply rounded-s-selector rounded-e-none;
       }
     }
 
     :last-child {
       > hr:first-child {
-        @apply rounded-e-badge rounded-s-none;
+        @apply rounded-e-selector rounded-s-none;
       }
     }
   }

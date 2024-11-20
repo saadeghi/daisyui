@@ -24,7 +24,7 @@ let { posts } = data
           <img
             loading="lazy"
             src="{post.thumbnail}"
-            class="border-base-content bg-base-300 rounded-btn border border-opacity-5"
+            class="border-base-content bg-base-300 rounded-field border border-opacity-5"
             alt="{post.title}" />
         </figure>
       {/if}

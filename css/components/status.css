@@ -1,5 +1,5 @@
 .status {
-  @apply bg-base-content/20 rounded-badge size-2 aspect-square bg-center bg-no-repeat align-middle;
+  @apply bg-base-content/20 rounded-selector size-2 aspect-square bg-center bg-no-repeat align-middle;
 }
 
 .status-primary {

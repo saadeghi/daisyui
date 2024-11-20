@@ -87,31 +87,31 @@
   <div class="card card-sm  overflow-hidden">
     <div class="card-body gap-4">
       <div class="grid grid-cols-7 border-b border-dashed border-b-base-300 pb-3">
-        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+        <div class="flex flex-col items-center py-1 px-2 rounded-field">
           <span class="text-sm font-semibold">12</span>
           <span class="text-[10px] font-semibold opacity-50">M</span>
         </div>
-        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+        <div class="flex flex-col items-center py-1 px-2 rounded-field">
           <span class="text-sm font-semibold">13</span>
           <span class="text-[10px] font-semibold opacity-50">T</span>
         </div>
-        <div class="flex flex-col items-center py-1 px-2 rounded-btn bg-primary text-primary-content">
+        <div class="flex flex-col items-center py-1 px-2 rounded-field bg-primary text-primary-content">
           <span class="text-sm font-semibold">14</span>
           <span class="text-[10px] font-semibold opacity-50">W</span>
         </div>
-        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+        <div class="flex flex-col items-center py-1 px-2 rounded-field">
           <span class="text-sm font-semibold">15</span>
           <span class="text-[10px] font-semibold opacity-50">T</span>
         </div>
-        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+        <div class="flex flex-col items-center py-1 px-2 rounded-field">
           <span class="text-sm font-semibold">16</span>
           <span class="text-[10px] font-semibold opacity-50">F</span>
         </div>
-        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+        <div class="flex flex-col items-center py-1 px-2 rounded-field">
           <span class="text-sm font-semibold">17</span>
           <span class="text-[10px] font-semibold opacity-50">S</span>
         </div>
-        <div class="flex flex-col items-center py-1 px-2 rounded-btn">
+        <div class="flex flex-col items-center py-1 px-2 rounded-field">
           <span class="text-sm font-semibold">18</span>
           <span class="text-[10px] font-semibold opacity-50">S</span>
         </div>

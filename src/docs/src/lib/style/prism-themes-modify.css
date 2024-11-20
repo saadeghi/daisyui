@@ -88,7 +88,7 @@
 .prose pre .token.deleted-sign,
 .prose pre .token.inserted-sign {
   position: relative;
-  border-radius: var(--radius-btn);
+  border-radius: var(--radius-field);
   padding: 0.2rem 0.5rem;
   inset-inline-start: -0.5rem;
 }

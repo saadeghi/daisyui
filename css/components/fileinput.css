@@ -5,10 +5,10 @@
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
   line-height: 2;
-  border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
-  border-start-end-radius: var(--radius-join-se, var(--radius-btn));
-  border-end-start-radius: var(--radius-join-es, var(--radius-btn));
-  border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
+  border-start-start-radius: var(--radius-join-ss, var(--radius-field));
+  border-start-end-radius: var(--radius-join-se, var(--radius-field));
+  border-end-start-radius: var(--radius-join-es, var(--radius-field));
+  border-end-end-radius: var(--radius-join-ee, var(--radius-field));
   --spacing-field-size: 0.25rem;
   --field-size: calc(var(--spacing-field-size) * 9);
   &:where(::file-selector-button) {
@@ -23,10 +23,10 @@
     border-style: solid;
     border-color: var(--btn-border);
     border-start-start-radius: calc(
-      var(--radius-join-ss, var(--radius-btn) - var(--spacing-button-border))
+      var(--radius-join-ss, var(--radius-field) - var(--spacing-button-border))
     );
     border-end-start-radius: calc(
-      var(--radius-join-es, var(--radius-btn) - var(--spacing-button-border))
+      var(--radius-join-es, var(--radius-field) - var(--spacing-button-border))
     );
     font-weight: 600;
     background-color: var(--btn-bg);

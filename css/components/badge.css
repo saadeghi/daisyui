@@ -1,5 +1,5 @@
 .badge {
-  @apply rounded-badge text-base-content gap-2 box-content inline-flex items-center justify-center align-middle;
+  @apply rounded-selector text-base-content gap-2 box-content inline-flex items-center justify-center align-middle;
   border: 1px solid var(--badge-color, var(--color-base-200));
   font-size: 0.75rem;
   line-height: 1.25rem;

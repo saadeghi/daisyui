@@ -1,5 +1,5 @@
 .kbd {
-  @apply bg-base-200 rounded-btn px-2 inline-flex items-center justify-center align-middle;
+  @apply bg-base-200 rounded-field px-2 inline-flex items-center justify-center align-middle;
   border: 1px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   border-bottom: 2px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   min-height: 2.2em;

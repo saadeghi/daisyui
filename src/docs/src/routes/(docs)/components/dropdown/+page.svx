@@ -387,9 +387,9 @@ data="{[
   </div> 
   <div class="flex justify-end flex-1 px-2">
     <div class="flex items-stretch">
-      <button class="btn btn-ghost rounded-btn">Button</button>
+      <button class="btn btn-ghost rounded-field">Button</button>
       <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Dropdown</div>
+        <div tabindex="0" role="button" class="btn btn-ghost rounded-field">Dropdown</div>
         <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52 mt-4">
           <li><button>Item 1</button></li> 
           <li><button>Item 2</button></li>
@@ -407,9 +407,9 @@ data="{[
   </div>
   <div class="flex flex-1 justify-end px-2">
     <div class="flex items-stretch">
-      <a class="$$btn $$btn-ghost rounded-btn">Button</a>
+      <a class="$$btn $$btn-ghost rounded-field">Button</a>
       <div class="$$dropdown $$dropdown-end">
-        <div tabindex="0" role="button" class="$$btn $$btn-ghost rounded-btn">Dropdown</div>
+        <div tabindex="0" role="button" class="$$btn $$btn-ghost rounded-field">Dropdown</div>
         <ul
           tabindex="0"
           class="$$menu $$dropdown-content bg-base-100 rounded-box z-1 mt-4 w-52 p-2 shadow">

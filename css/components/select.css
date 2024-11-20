@@ -5,10 +5,10 @@
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
-  border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
-  border-start-end-radius: var(--radius-join-se, var(--radius-btn));
-  border-end-start-radius: var(--radius-join-es, var(--radius-btn));
-  border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
+  border-start-start-radius: var(--radius-join-ss, var(--radius-field));
+  border-start-end-radius: var(--radius-join-se, var(--radius-field));
+  border-end-start-radius: var(--radius-join-es, var(--radius-field));
+  border-end-end-radius: var(--radius-join-ee, var(--radius-field));
   background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%);
   background-position:

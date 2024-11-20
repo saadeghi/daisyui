@@ -61,9 +61,8 @@ export function randomizeThemeColors(tailwindcolors) {
 
   // Initialize newColors object
   const newColors = {
-    "--radius-badge": randomFrom(radiusValues),
-    "--radius-btn": randomFrom(radiusValues),
-    "--radius-tab": randomFrom(["0", "0.125rem", "0.25rem", "0.5rem", "0.75rem"]),
+    "--radius-selector": randomFrom(radiusValues),
+    "--radius-field": randomFrom(radiusValues),
     "--radius-box": randomFrom(radiusValues),
     "--spacing-button-border": randomFrom(borderValues),
   }

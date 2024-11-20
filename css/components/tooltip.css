@@ -5,7 +5,7 @@
   --tooltip-tail-offset: calc(100% + 1px - 0.1875rem);
 
   &:before {
-    @apply text-neutral-content max-w-xs rounded-badge px-2 py-1 absolute text-center whitespace-normal opacity-0;
+    @apply text-neutral-content max-w-xs rounded-selector px-2 py-1 absolute text-center whitespace-normal opacity-0;
     font-size: 0.875rem;
     line-height: 1.25rem;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;

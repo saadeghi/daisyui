@@ -1,6 +1,6 @@
 .toggle {
   border: 1px solid currentColor;
-  @apply rounded-badge text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none p-[.1875rem] align-middle;
+  @apply rounded-selector text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none p-[.1875rem] align-middle;
   box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
   transition: color 0.3s;
   --spacing-selector-size: 0.25rem;
@@ -16,7 +16,7 @@
   &:after {
     @apply start-0 relative block aspect-square h-full bg-current;
     translate: 0;
-    border-radius: calc(var(--radius-badge) - 3px);
+    border-radius: calc(var(--radius-selector) - 3px);
     content: "";
     transition:
       background-color 0.1s,

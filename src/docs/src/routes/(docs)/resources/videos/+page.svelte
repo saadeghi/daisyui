@@ -33,7 +33,7 @@ import { slugify } from "$lib/util"
         target="{video.status.embeddable == false ? `_blank` : null}"
         rel="{video.status.embeddable == false ? `noopener noreferrer` : null}">
         <figure
-          class="rounded-btn grid aspect-video place-content-center overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
+          class="rounded-field grid aspect-video place-content-center overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
           <img
             loading="lazy"
             src="{video.snippet.thumbnails.high.url}"

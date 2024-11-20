@@ -22,8 +22,8 @@ export default {
     "error-content": "var(--color-error-content)",
   },
   borderRadius: {
-    badge: "var(--radius-badge)",
-    btn: "var(--radius-btn)",
+    selector: "var(--radius-selector)",
+    field: "var(--radius-field)",
     box: "var(--radius-box)",
   },
   borderWidth: {

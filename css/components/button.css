@@ -9,10 +9,10 @@
     scale;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 0.2s;
-  border-start-start-radius: var(--radius-join-ss, var(--radius-btn));
-  border-start-end-radius: var(--radius-join-se, var(--radius-btn));
-  border-end-start-radius: var(--radius-join-es, var(--radius-btn));
-  border-end-end-radius: var(--radius-join-ee, var(--radius-btn));
+  border-start-start-radius: var(--radius-join-ss, var(--radius-field));
+  border-start-end-radius: var(--radius-join-se, var(--radius-field));
+  border-end-start-radius: var(--radius-join-es, var(--radius-field));
+  border-end-end-radius: var(--radius-join-ee, var(--radius-field));
   background-color: var(--btn-bg);
   border-width: var(--spacing-button-border);
   border-style: solid;

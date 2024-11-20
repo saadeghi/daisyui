@@ -411,7 +411,7 @@
         >
           {#each values as value}
             <label
-              class="rounded-btn overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
+              class="rounded-field overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
               title={value}
             >
               <input

@@ -13,10 +13,9 @@ function builtinThemes() {
 }
 
 const radiusValues = [
-  ["--radius-badge", "Badge, toggle", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
-  ["--radius-btn", "Button, input, select", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
-  ["--radius-box", "Card, modal, range", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
-  ["--radius-tab", "Tab (lift)", ["0", "0.125rem", "0.25rem", "0.5rem", "0.75rem"]],
+  ["--radius-selector", "Checkbox, toggle, badge", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
+  ["--radius-field", "Button, input, select", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
+  ["--radius-box", "Card, modal", ["0", "0.25rem", "0.5rem", "1rem", "2rem"]],
 ]
 const colorInitials = {
   "--color-base-100": "b1",
