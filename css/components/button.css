@@ -1,5 +1,5 @@
 .btn {
-  @apply gap-1.5 px-4 inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center text-center align-middle no-underline outline-offset-2 select-none;
+  @apply gap-1.5 inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center text-center align-middle no-underline outline-offset-2 select-none;
   height: var(--field-size);
   font-size: 0.875rem;
   color: var(--btn-fg);
@@ -31,10 +31,12 @@
     2rem 100%;
   background-repeat: no-repeat;
   background-position: top, bottom, left, right;
+  padding-inline: var(--btn-p);
   --spacing-field-size: 0.25rem;
   --field-size: calc(var(--spacing-field-size) * 9);
   --btn-bg: var(--btn-color, var(--color-base-200));
   --btn-fg: var(--color-base-content);
+  --btn-p: 0.25rem;
   --btn-border: color-mix(in oklab, var(--btn-bg), black 5%);
   --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent),
     0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent);
@@ -242,7 +244,7 @@
       --btn-color: var(--color-primary);
       --btn-bg: var(--color-primary);
       --btn-fg: var(--color-primary-content);
-      --btn-border: var(--color-content);
+      --btn-border: var(--color-primary);
 
       &:focus-visible {
         @apply outline-primary;
@@ -257,32 +259,32 @@
 }
 
 .btn-xs {
-  @apply px-2;
   font-size: 0.6875rem;
+  --btn-p: 0.5rem;
   --field-size: calc(var(--spacing-field-size) * 6);
 }
 
 .btn-sm {
-  @apply px-3;
   font-size: 0.75rem;
+  --btn-p: 0.75rem;
   --field-size: calc(var(--spacing-field-size) * 8);
 }
 
 .btn-md {
-  @apply px-4;
   font-size: 0.875rem;
+  --btn-p: 1rem;
   --field-size: calc(var(--spacing-field-size) * 10);
 }
 
 .btn-lg {
-  @apply px-5;
   font-size: 1.125rem;
+  --btn-p: 1.25rem;
   --field-size: calc(var(--spacing-field-size) * 12);
 }
 
 .btn-xl {
-  @apply px-6;
   font-size: 1.375rem;
+  --btn-p: 1.5rem;
   --field-size: calc(var(--spacing-field-size) * 14);
 }
 
