@@ -16,6 +16,7 @@
   --tab-radius-es: 0;
   --tab-radius-ee: 0;
   --tab-order: 0;
+  border-color: transparent;
   order: var(--tab-order);
   height: 2.25rem;
   font-size: 0.875rem;
@@ -66,16 +67,33 @@
 }
 
 .tabs-border {
-  & > .tab {
-    @apply border-base-content/20;
-    border-style: solid;
-    border-width: 0;
-    border-bottom-width: calc(1px + 1px);
+  .tab {
+    --tab-border-color: transparent transparent var(--tab-border-color) transparent;
+    position: relative;
+    border-radius: var(--radius-field);
+    &:before {
+      --tw-content: "";
+      content: var(--tw-content);
+      background-color: var(--tab-border-color);
+      transition: background-color 0.2s ease;
+      width: 80%;
+      height: 3px;
+      border-radius: var(--radius-field);
+      bottom: 0;
+      left: 10%;
+      position: absolute;
+    }
+    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(input:checked) {
+      &:before {
+        --tab-border-color: currentColor;
+      }
+    }
   }
 }
 
 .tabs-lift {
-  --tabs-height: 2.25rem;
+  --tabs-height: auto;
   --tabs-direction: row;
 
   .tab {
@@ -177,7 +195,7 @@
 }
 
 .tabs-top {
-  --tabs-height: 2.25rem;
+  --tabs-height: auto;
   --tabs-direction: row;
 
   .tab {
@@ -245,7 +263,7 @@
 }
 
 .tabs-bottom {
-  --tabs-height: 2.25rem;
+  --tabs-height: auto;
   --tabs-direction: row;
 
   .tab {
