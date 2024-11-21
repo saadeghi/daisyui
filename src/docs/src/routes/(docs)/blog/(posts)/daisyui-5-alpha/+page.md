@@ -19,7 +19,7 @@ daisyUI 5 alpha is in development [[v5 branch](https://github.com/saadeghi/daisy
 ## Try it
 
 1. You can try this [Tailwind Play link](https://play.tailwindcss.com/iOzVcc4McC?file=css) which includes a big dump of components
-2. Or you can try the new [full.css](https://cdn.jsdelivr.net/npm/daisyui@alpha/full.css) or the new [chunks.css](https://cdn.jsdelivr.net/npm/daisyui@alpha/chunks.css)!
+2. Or you can try the new [daisyui.css](https://cdn.jsdelivr.net/npm/daisyui@alpha/daisyui.css) or the new [chunks.css](https://cdn.jsdelivr.net/npm/daisyui@alpha/chunks.css)!
 3. Or if you're brave enough to try Tailwind CSS 4 alpha + daisyUI 5 alpha,
 [Install Tailwind CSS 4 `alpha`](https://tailwindcss.com/blog/tailwindcss-v4-alpha) and then install daisyUI `alpha`
 ```

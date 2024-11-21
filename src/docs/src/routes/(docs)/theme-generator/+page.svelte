@@ -132,7 +132,7 @@
         }
       }
     } else if (type === 'custom') {
-      if (confirm(`Remove "${currentTheme.name}" themes?`)) {
+      if (confirm(`Remove "${currentTheme.name}" theme?`)) {
         customThemes = customThemes.filter(item => item.id !== id);
         currentTheme = themes[0];
       }
@@ -246,7 +246,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
           </svg>
         </div>
-        <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-52 p-2 shadow-xl">
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-48 p-2 shadow-xl">
           <li class="menu-title">Options</li>
           <li>
             <button class="text-xs" onclick={removeAll}>
