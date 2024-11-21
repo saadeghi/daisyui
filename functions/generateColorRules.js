@@ -2,7 +2,7 @@ import { compile } from "../node_modules/tailwindcss/dist/lib.js"
 import fs from "fs/promises"
 import path from "path"
 
-export const generateColorRules = async ({ distDir }) => {
+export const generateColorRules = async ({ distDir, styles, breakpoints, states }) => {
   try {
     const [defaultTheme, theme] = await Promise.all([
       fs.readFile(path.join(import.meta.dir, "../node_modules/tailwindcss/theme.css"), "utf-8"),
@@ -31,23 +31,6 @@ export const generateColorRules = async ({ distDir }) => {
       "error",
       "error-content",
     ]
-
-    const styles = [
-      "bg",
-      "to",
-      "via",
-      "from",
-      "text",
-      // 'ring',
-      // 'stroke',
-      "border",
-      "outline",
-      // 'ring-offset'
-    ]
-
-    const breakpoints = ["sm", "md", "lg", "xl", "2xl"]
-
-    const states = ["hover", "focus"]
 
     const generateBaseVariants = (style, color) => {
       return `.${style}-${color}{@apply ${style}-${color};}`
@@ -91,6 +74,7 @@ export const generateColorRules = async ({ distDir }) => {
         .flatMap((color) => styles.flatMap((style) => generateResponsiveVariants(style, color)))
         .join("\n")
     }
+
     const getBreakpointWidth = (breakpoint) => {
       const widths = {
         sm: "40rem",

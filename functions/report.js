@@ -20,7 +20,7 @@ async function processFile(filePath) {
     const filename = path.basename(filePath)
     if (
       twVariables.length > 0 &&
-      !["typography.css", "properties.css", "states.css", "responsive.css", "full.css"].includes(
+      !["typography.css", "properties.css", "states.css", "responsive.css", "daisyui.css"].includes(
         filename,
       )
     ) {

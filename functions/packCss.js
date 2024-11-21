@@ -15,21 +15,23 @@ const readThemeCSS = async () => {
   return themeContents.join("\n")
 }
 
-const readAllCSSDirectories = async () => {
+const readAllCSSDirectories = async (excludeFiles = []) => {
   const directories = ["./base", "./components", "./utilities", "./colors"]
 
   const allFiles = await Promise.all(directories.map((dir) => getFileNames(dir, ".css", false)))
 
   const allContents = await Promise.all(
     allFiles.flatMap((files, index) =>
-      files.map((file) => readFileContent(`${directories[index]}/${file}.css`)),
+      files
+        .filter((file) => !excludeFiles.includes(`${file}.css`))
+        .map((file) => readFileContent(`${directories[index]}/${file}.css`)),
     ),
   )
 
   return allContents
 }
 
-export const generateFull = async (file) => {
+export const packCss = async (file, excludeFiles = []) => {
   const [
     // preflightCSS,
     themeCSS,
@@ -42,7 +44,7 @@ export const generateFull = async (file) => {
     readThemeCSS(),
 
     // Read other CSS directories
-    readAllCSSDirectories(),
+    readAllCSSDirectories(excludeFiles),
   ])
 
   // Combine all content and write to file

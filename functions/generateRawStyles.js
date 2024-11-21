@@ -7,6 +7,8 @@ import postcss from "postcss"
 import selectorParser from "postcss-selector-parser"
 import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.js"
 
+const skipResponsive = ["mask", "typography", "loading"]
+
 export async function generateResponsiveVariants(css) {
   let responsiveStyles = ""
 
@@ -43,7 +45,7 @@ async function processFile(file, stylesDir, distDir, defaultTheme, theme, respon
   const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), "utf-8")
   let stylesContent = await compileAndExtractStyles(styleContent, defaultTheme, theme)
 
-  if (responsive) {
+  if (responsive && !skipResponsive.includes(file)) {
     stylesContent = await generateResponsiveVariants(stylesContent)
   }
 

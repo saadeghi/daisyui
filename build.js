@@ -8,7 +8,7 @@ import { generatePlugins } from "./functions/generatePlugins.js"
 import { generateThemes } from "./functions/generateThemes.js"
 import { generateChunks } from "./functions/generateChunks.js"
 import { generateImports } from "./functions/generateImports.js"
-import { generateFull } from "./functions/generateFull.js"
+import { packCss } from "./functions/packCss.js"
 import { removeFiles } from "./functions/removeFiles.js"
 import { copyFile } from "./functions/copyFile.js"
 import { report } from "./functions/report.js"
@@ -16,7 +16,12 @@ import { report } from "./functions/report.js"
 async function generateFiles() {
   await Promise.all([
     copyFile("./functions/themePlugin.js", "./theme/themePlugin.js", "index.js"),
-    generateColorRules({ distDir: "../colors" }),
+    generateColorRules({
+      distDir: "../colors",
+      styles: ["bg", "text", "border"],
+      breakpoints: ["sm", "md", "lg", "xl", "2xl"],
+      states: ["hover"],
+    }),
     generateThemeFiles({ srcDir: "css/themes", distDir: "theme" }),
     generateRawStyles({ srcDir: "../css/base", distDir: "../base" }),
     generateRawStyles({
@@ -37,7 +42,7 @@ async function generateFiles() {
   await Promise.all([
     generateImports("imports.js"),
     generateChunks("chunks.css"),
-    generateFull("full.css"),
+    packCss("daisyui.css", []),
     generateThemes("themes.css"),
     generateThemesObject("./theme/object.js"),
   ])
@@ -45,7 +50,7 @@ async function generateFiles() {
     // extractClasses({ srcDir: 'components' }),
     minifyCssInDirectory(["colors", "base", "components", "utilities"]),
     minify("themes.css"),
-    minify("full.css"),
+    minify("daisyui.css"),
   ])
 }
 
@@ -58,7 +63,7 @@ async function build() {
       "theme",
       "utilities",
       "chunks.css",
-      "full.css",
+      "daisyui.css",
       "imports.js",
       "themes.css",
     ])
@@ -72,7 +77,7 @@ async function build() {
       "colors",
       "chunks.css",
       "themes.css",
-      "full.css",
+      "daisyui.css",
     ])
   } catch (error) {
     throw new Error("Build error: " + error.message)

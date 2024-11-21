@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "daisyui",
-  "version": "5.0.0-alpha.38",
+  "version": "5.0.0-alpha.39",
   "description": "daisyUI 5 - Tailwind CSS Component Library",
   "author": "Pouya Saadeghi",
   "license": "MIT",
@@ -45,7 +45,7 @@
   ],
   "main": "./index.js",
   "module": "./index.js",
-  "browser": "./full.css",
+  "browser": "./daisyui.css",
   "files": [
     "base",
     "colors",
@@ -59,7 +59,7 @@
     "imports.js",
     "index.js",
     "chunks.css",
-    "full.css",
+    "daisyui.css",
     "themes.css"
   ],
   "engines": {
@@ -81,7 +81,7 @@
     "build": "bun build.js",
     "dev": "cd src/docs && npm run dev",
     "playground": "cd src/experiments/playground && npm run dev",
-    "wallace": "npx -y wallace-cli full.css",
+    "wallace": "npx -y wallace-cli daisyui.css",
     "release": "node src/release",
     "publish:alpha": "npm publish --tag=alpha",
     "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
