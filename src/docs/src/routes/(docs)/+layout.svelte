@@ -108,7 +108,7 @@ Array.prototype.matchPattern = function (inputString) {
 </svelte:head>
 
 <div
-  class="{`bg-base-100 drawer ${
+  class="{`bg-base-100 drawer max-w-[100rem] mx-auto ${
     data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? '' : 'lg:drawer-open'
   }`}">
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />

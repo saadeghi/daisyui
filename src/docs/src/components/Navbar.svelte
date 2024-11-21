@@ -57,7 +57,7 @@ let switchNavbarStyle = $derived(scrollY > 40)
   ${switchNavbarStyle ? 'shadow-sm' : ''}
   `}">
   <nav class="navbar w-full">
-    <div class="flex flex-1 md:gap-1 lg:gap-2">
+    <div class="flex flex-1 md:gap-1 lg:gap-2 items-center">
       <span
         class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]"
         data-tip="Menu">
