@@ -1,0 +1,12 @@
+.fieldset {
+  @apply gap-1.5 px-2 py-3 grid;
+  font-size: 0.75rem;
+  grid-template-columns: 1fr;
+}
+.legend {
+  @apply -mb-3 gap-2 py-2 text-base-content flex items-center justify-between;
+  font-weight: 600;
+}
+.label {
+  @apply gap-1.5 text-base-content/60 flex cursor-pointer items-center;
+}
