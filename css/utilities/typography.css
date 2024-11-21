@@ -1,4 +1,4 @@
-.prose {
+:root .prose {
   --tw-prose-body: color-mix(in oklab, var(--color-base-content) 80%, transparent);
   --tw-prose-headings: var(--color-base-content);
   --tw-prose-lead: var(--color-base-content);
