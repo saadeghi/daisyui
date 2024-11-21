@@ -88,7 +88,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tailwindcss/cli": "^4.0.0-alpha.34",
+    "@tailwindcss/cli": "^4.0.0-alpha.35",
     "commit-and-tag-version": "12.5.0",
     "lightningcss": "^1.27.0",
     "postcss": "^8.4.47",
