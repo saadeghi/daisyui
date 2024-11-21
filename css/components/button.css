@@ -36,7 +36,7 @@
   --field-size: calc(var(--spacing-field-size) * 9);
   --btn-bg: var(--btn-color, var(--color-base-200));
   --btn-fg: var(--color-base-content);
-  --btn-p: 0.25rem;
+  --btn-p: 1rem;
   --btn-border: color-mix(in oklab, var(--btn-bg), black 5%);
   --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent),
     0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent);
