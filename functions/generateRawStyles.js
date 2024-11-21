@@ -7,7 +7,7 @@ import postcss from "postcss"
 import selectorParser from "postcss-selector-parser"
 import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.js"
 
-const skipResponsive = ["mask", "typography", "loading"]
+const skipResponsive = ["mask", "typography", "loading", "countdown"]
 
 export async function generateResponsiveVariants(css) {
   let responsiveStyles = ""
