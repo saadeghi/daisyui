@@ -62,13 +62,13 @@
 }
 
 .card-title {
-  @apply gap-2 flex items-center;
+  @apply flex items-center gap-2;
   font-size: 1.25rem;
   font-weight: 600;
 }
 
 .card-body {
-  @apply gap-2 p-8 flex flex-auto flex-col;
+  @apply flex flex-auto flex-col gap-2 p-8;
 
   :where(p) {
     @apply grow;
@@ -76,7 +76,7 @@
 }
 
 .card-actions {
-  @apply gap-2 flex flex-wrap items-start;
+  @apply flex flex-wrap items-start gap-2;
 }
 
 .card-xs {

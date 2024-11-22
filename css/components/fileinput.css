@@ -1,6 +1,6 @@
 .file-input {
   border: var(--spacing-button-border) solid transparent;
-  @apply max-w-80 w-full cursor-pointer appearance-none align-middle select-none;
+  @apply w-full max-w-80 cursor-pointer appearance-none align-middle select-none;
   height: var(--field-size);
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
@@ -21,7 +21,7 @@
   }
 
   &::file-selector-button {
-    @apply me-4 px-4 h-full cursor-pointer select-none;
+    @apply me-4 h-full cursor-pointer px-4 select-none;
     font-size: 0.875rem;
     color: var(--btn-fg);
     border-width: var(--spacing-button-border);

@@ -1,5 +1,5 @@
 .btn {
-  @apply gap-1.5 inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center text-center align-middle no-underline outline-offset-2 select-none;
+  @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle no-underline outline-offset-2 select-none;
   height: var(--field-size);
   font-size: 0.875rem;
   color: var(--btn-fg);
@@ -295,13 +295,13 @@
 }
 
 .btn-circle {
-  @apply px-0 rounded-full;
+  @apply rounded-full px-0;
   width: var(--field-size);
   height: var(--field-size);
 }
 
 .btn-wide {
-  @apply max-w-64 w-full;
+  @apply w-full max-w-64;
 }
 
 .btn-block {

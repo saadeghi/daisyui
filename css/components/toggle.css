@@ -16,7 +16,7 @@
   }
 
   &:after {
-    @apply start-0 relative block aspect-square h-full bg-current;
+    @apply relative start-0 block aspect-square h-full bg-current;
     translate: 0;
     border-radius: calc(var(--radius-selector) - var(--toggle-padding));
     content: "";

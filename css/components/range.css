@@ -2,7 +2,7 @@
   appearance: none;
   -webkit-appearance: none;
   --range-shdw: currentColor;
-  @apply rounded-box max-w-80 w-full cursor-pointer overflow-hidden bg-transparent align-middle;
+  @apply rounded-box w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
   border: none;
   --spacing-selector-size: 0.25rem;
   --selector-size: calc(var(--spacing-selector-size) * 6);

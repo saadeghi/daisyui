@@ -1,12 +1,12 @@
 .fieldset {
-  @apply gap-1.5 px-2 py-3 grid;
+  @apply grid gap-1.5 px-2 py-3;
   font-size: 0.75rem;
   grid-template-columns: 1fr;
 }
 .legend {
-  @apply -mb-3 gap-2 py-2 text-base-content flex items-center justify-between;
+  @apply text-base-content -mb-3 flex items-center justify-between gap-2 py-2;
   font-weight: 600;
 }
 .label {
-  @apply gap-1.5 text-base-content/60 flex cursor-pointer items-center;
+  @apply text-base-content/60 flex cursor-pointer items-center gap-1.5;
 }

@@ -1,6 +1,6 @@
 .checkbox {
   border: 1px solid;
-  @apply border-base-content/20 text-base-content rounded-field p-1 relative shrink-0 cursor-pointer appearance-none align-middle;
+  @apply border-base-content/20 text-base-content rounded-field relative shrink-0 cursor-pointer appearance-none p-1 align-middle;
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
   transition:
     background-color 0.2s,

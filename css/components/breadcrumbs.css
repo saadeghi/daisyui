@@ -1,5 +1,5 @@
 .breadcrumbs {
-  @apply py-2 max-w-full overflow-x-auto;
+  @apply max-w-full overflow-x-auto py-2;
 
   > ul,
   > ol {
@@ -9,7 +9,7 @@
       @apply flex items-center;
 
       > * {
-        @apply gap-2 flex cursor-pointer items-center hover:underline;
+        @apply flex cursor-pointer items-center gap-2 hover:underline;
 
         &:focus {
           @apply outline-hidden;
@@ -23,7 +23,7 @@
 
       & + *:before {
         content: "";
-        @apply mr-3 ml-2 h-1.5 w-1.5 block opacity-40;
+        @apply mr-3 ml-2 block h-1.5 w-1.5 opacity-40;
         rotate: 45deg;
         border-top: 1px solid;
         border-right: 1px solid;

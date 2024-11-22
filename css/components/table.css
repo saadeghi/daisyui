@@ -24,15 +24,15 @@
   }
 
   :where(.table-pin-rows thead tr) {
-    @apply bg-base-100 top-0 sticky z-[1];
+    @apply bg-base-100 sticky top-0 z-[1];
   }
 
   :where(.table-pin-rows tfoot tr) {
-    @apply bg-base-100 bottom-0 sticky z-[1];
+    @apply bg-base-100 sticky bottom-0 z-[1];
   }
 
   :where(.table-pin-cols tr th) {
-    @apply bg-base-100 right-0 left-0 sticky;
+    @apply bg-base-100 sticky right-0 left-0;
   }
 
   :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child) {

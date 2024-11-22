@@ -1,5 +1,5 @@
 .radio {
-  @apply text-base-content p-1 relative shrink-0 cursor-pointer appearance-none rounded-full align-middle;
+  @apply text-base-content relative shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
   border: 1px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
   --spacing-selector-size: 0.25rem;
