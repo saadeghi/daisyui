@@ -4,6 +4,7 @@ import headingSlugs from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
 import rehypeExternalLinks from "rehype-external-links"
 import remarkGithub from "remark-github"
+import codeTitle from "remark-code-titles"
 
 const rehypePlugins = [
   headingSlugs,
@@ -30,7 +31,10 @@ const rehypePlugins = [
   ],
   [rehypeExternalLinks, { rel: ["nofollow"], target: ["_blank"] }],
 ]
-const remarkPlugins = [[remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }]]
+const remarkPlugins = [
+  [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
+  codeTitle,
+]
 
 export default {
   extensions: [".svelte", ".svx", ".md"],
