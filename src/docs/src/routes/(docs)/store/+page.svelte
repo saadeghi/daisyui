@@ -207,13 +207,15 @@ function prev(productId, media) {
                         'en-GB',
                         dateFormat
                       )}"
-                      class="grid grid-cols-3 gap-2 text-center font-mono text-xs">
-                      <!-- <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
-                        <span class="countdown block text-2xl">
-                          <span style="{`--value:${remaining.days};`}"></span>
-                        </span>
-                        <span class="text-neutral-content/40 text-xs">day</span>
-                      </div> -->
+                      class={`grid ${remaining.days > 0 ? 'grid-cols-4' : 'grid-cols-3'} gap-2 text-center font-mono text-xs`}>
+                      {#if remaining.days > 0}
+                        <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
+                          <span class="countdown block text-2xl">
+                            <span style="{`--value:${remaining.days};`}"></span>
+                          </span>
+                          <span class="text-neutral-content/40 text-xs">day</span>
+                        </div>
+                      {/if}
                       <div class="border-neutral-content/40 rounded-btn border border-dashed p-2">
                         <span class="countdown block text-2xl">
                           <span style="{`--value:${remaining.hours};`}"></span>
