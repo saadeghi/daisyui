@@ -58,7 +58,7 @@ details.collapse summary {
 .collapse-title,
 :where(.collapse > input[type="checkbox"]),
 :where(.collapse > input[type="radio"]) {
-  @apply w-full p-4 pe-12;
+  @apply p-4 pe-12;
   min-height: 3.75rem;
   transition: background-color 0.2s ease-out;
 }
