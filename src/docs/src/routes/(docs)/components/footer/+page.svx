@@ -518,7 +518,7 @@ data="{[
     <button class="link link-hover">Twitter</button>
     <button class="link link-hover">Instagram</button>
     <button class="link link-hover">Facebook</button>
-    <button class="link link-hover">Github</button>
+    <button class="link link-hover">GitHub</button>
   </nav> 
   <nav>
     <h6 class="footer-title">Explore</h6> 
@@ -564,7 +564,7 @@ data="{[
     <a class="$$link $$link-hover">Twitter</a>
     <a class="$$link $$link-hover">Instagram</a>
     <a class="$$link $$link-hover">Facebook</a>
-    <a class="$$link $$link-hover">Github</a>
+    <a class="$$link $$link-hover">GitHub</a>
   </nav>
   <nav>
     <h6 class="$$footer-title">Explore</h6>

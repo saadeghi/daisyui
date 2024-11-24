@@ -82,7 +82,7 @@ const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="2
           rel="noopener, noreferrer"
           href="https://github.com/saadeghi/daisyui"
           class="link link-hover group">
-          Github
+          GitHub
           {@html newtabicon}
         </a>
 

@@ -36,7 +36,7 @@ export const cssVars = [
   "--tab-radius",
 ]
 
-export const forgroundPairs = [
+export const foregroundPairs = [
   { input: "#fff", percent: 0.8, result: "20% 0 0" },
   { input: "#000", percent: 0.8, result: "80% 0 0" },
   { input: "#fff", percent: 1, result: "0% 0 0" },
