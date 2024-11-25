@@ -1,42 +1,36 @@
 .kbd {
-  @apply bg-base-200 rounded-field inline-flex items-center justify-center px-2 align-middle;
+  @apply bg-base-200 rounded-field inline-flex items-center justify-center align-middle;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   border: 1px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   border-bottom: 2px solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
-  min-height: 2.2em;
-  min-width: 2.2em;
+  --selector-size: calc(var(--spacing-selector-size) * 6);
+  font-size: 0.875rem;
+  height: var(--selector-size);
+  min-width: var(--selector-size);
 }
 
 .kbd-xs {
-  @apply px-1;
-  font-size: 0.6875rem;
-  min-height: 1.2em;
-  min-width: 1.2em;
+  --selector-size: calc(var(--spacing-selector-size) * 4);
+  font-size: 0.625rem;
 }
 
 .kbd-sm {
-  @apply px-1;
+  --selector-size: calc(var(--spacing-selector-size) * 5);
   font-size: 0.75rem;
-  min-height: 1.6em;
-  min-width: 1.6em;
 }
 
 .kbd-md {
-  @apply px-2;
+  --selector-size: calc(var(--spacing-selector-size) * 6);
   font-size: 0.875rem;
-  min-height: 2.2em;
-  min-width: 2.2em;
 }
 
 .kbd-lg {
-  @apply px-4;
-  font-size: 1.125rem;
-  min-height: 2.5em;
-  min-width: 2.5em;
+  --selector-size: calc(var(--spacing-selector-size) * 7);
+  font-size: 1rem;
 }
 
 .kbd-xl {
-  @apply px-4;
-  font-size: 1.375rem;
-  min-height: 2.5em;
-  min-width: 2.5em;
+  --selector-size: calc(var(--spacing-selector-size) * 8);
+  font-size: 1.125rem;
 }
