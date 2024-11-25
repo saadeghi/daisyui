@@ -24,6 +24,7 @@
     grid-auto-columns: minmax(auto, max-content) auto max-content;
     text-wrap: balance;
     user-select: none;
+    box-shadow: 0 2px 3px -2px transparent;
   }
 
   :where(li > details > summary) {
