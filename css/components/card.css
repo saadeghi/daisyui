@@ -1,13 +1,15 @@
 .card {
   @apply rounded-box relative flex flex-col;
-
+  outline-width: 2px;
+  transition: outline 0.2s ease-in-out;
+  outline: 0 solid transparent;
+  outline-offset: 2px;
   &:focus {
     @apply outline-hidden;
   }
 
   &:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+    outline-color: currentColor;
   }
 
   :where(figure:first-child) {
@@ -58,6 +60,13 @@
 
   figure {
     @apply flex items-center justify-center;
+  }
+  &:has(> input:is(input[type="checkbox"], input[type="radio"])) {
+    @apply cursor-pointer;
+    user-select: none;
+  }
+  &:has(> :checked) {
+    outline: 2px solid currentColor;
   }
 }
 
