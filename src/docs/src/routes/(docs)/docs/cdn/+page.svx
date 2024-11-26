@@ -13,7 +13,6 @@ published: true
   let files = [
     { path: "base/properties.css", name: "properties", size: 0.135, checked: true },
     { path: "base/typography.css", name: "typography", size: 0.221, checked: true },
-    { path: "base/startingstyle.css", name: "starting style", size: 0.119, checked: true },
     { path: "base/reset.css", name: "reset", size: 0.547, checked: true },
     { path: "base/rootscrollgutter.css", name: "root scroll gutter", size: 0.15, checked: true },
     { path: "base/rootcolor.css", name: "root color", size: 0.118, checked: true },

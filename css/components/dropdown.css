@@ -13,6 +13,7 @@
 
   &[popover],
   .dropdown-content {
+    @apply starting:[scale:95%] starting:[opacity:0];
     z-index: 999;
     animation: dropdown-pop 0.2s;
     transition-property: opacity, scale, display;
