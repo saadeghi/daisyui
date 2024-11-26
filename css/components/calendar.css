@@ -1,0 +1,37 @@
+.cally {
+  ::part(head) {
+    opacity: 0.5;
+    font-size: 0.7rem;
+  }
+  &::part(button) {
+    border-radius: var(--radius-field);
+    border: none;
+    padding: 0.5rem;
+    background: transparent;
+  }
+  &::part(button):hover {
+    background: var(--color-base-200);
+  }
+  ::part(day) {
+    border-radius: var(--radius-field);
+  }
+  ::part(selected) {
+    color: var(--color-base-100);
+    background: var(--color-base-content);
+    border-radius: var(--radius-field);
+  }
+  ::part(range-inner) {
+    border-radius: 0;
+  }
+  ::part(range-start) {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+  ::part(range-end) {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+  ::part(range-start range-end) {
+    border-radius: var(--radius-field);
+  }
+}
