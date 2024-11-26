@@ -9,10 +9,10 @@
 }
 
 .drawer-side {
-  @apply pointer-events-none invisible fixed start-0 top-0 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overflow-x-hidden overflow-y-hidden overscroll-contain opacity-0 transition-discrete;
+  @apply pointer-events-none invisible fixed start-0 top-0 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-start overflow-x-hidden overflow-y-hidden overscroll-contain opacity-0;
   transition:
-    opacity 0.2s ease-out 0.1s,
-    visibility 0.3s ease-out 0.1s;
+    opacity 0.2s ease-out 0.1s allow-discrete,
+    visibility 0.3s ease-out 0.1s allow-discrete;
   height: 100vh;
   height: 100dvh;
 

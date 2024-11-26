@@ -1,23 +1,28 @@
 .modal {
-  @apply pointer-events-none fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
+  @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
   overflow-x: hidden;
-  opacity: 0;
   transition:
-    transform 0.3s ease-out,
-    opacity 0.1s ease-out;
+    transform 0.3s ease-out allow-discrete,
+    visibility 0.3s ease-out allow-discrete,
+    opacity 0.1s ease-out allow-discrete;
   overflow-y: hidden;
   overscroll-behavior: contain;
   z-index: 999;
 
   &:not(dialog:not(.modal-open)),
   &::backdrop {
+    @apply opacity-100 starting:invisible starting:opacity-0;
     background-color: oklch(0% 0 0/ 0.4);
+    transition:
+      display 0.3s ease-out allow-discrete,
+      opacity 0.3s ease-out allow-discrete,
+      visibility 0.3s ease-out allow-discrete;
   }
 
   &.modal-open,
   &[open],
   &:target {
-    @apply pointer-events-auto visible opacity-100;
+    @apply pointer-events-auto visible opacity-100 starting:invisible starting:opacity-0;
 
     .modal-box {
       translate: 0 0;
@@ -35,7 +40,7 @@
   @apply fixed h-0 w-0 appearance-none opacity-0;
 
   &:checked + .modal {
-    @apply pointer-events-auto visible opacity-100;
+    @apply pointer-events-auto visible opacity-100 starting:invisible starting:opacity-0;
 
     .modal-box {
       translate: 0 0;
