@@ -7,17 +7,6 @@ import postcss from "postcss"
 import selectorParser from "postcss-selector-parser"
 import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.js"
 
-const skipResponsive = [
-  "calendar",
-  "countdown",
-  "loading",
-  "mask",
-  "mockup",
-  "skeleton",
-  "swap",
-  "typography",
-]
-
 export async function generateResponsiveVariants(css) {
   let responsiveStyles = ""
 
@@ -50,11 +39,11 @@ export async function generateResponsiveVariants(css) {
   return css + responsiveStyles
 }
 
-async function processFile(file, stylesDir, distDir, defaultTheme, theme, responsive) {
+async function processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude) {
   const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), "utf-8")
   let stylesContent = await compileAndExtractStyles(styleContent, defaultTheme, theme)
 
-  if (responsive && !skipResponsive.includes(file)) {
+  if (responsive && !exclude.includes(file)) {
     stylesContent = await generateResponsiveVariants(stylesContent)
   }
 
@@ -63,7 +52,7 @@ async function processFile(file, stylesDir, distDir, defaultTheme, theme, respon
   await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent)
 }
 
-export async function generateRawStyles({ srcDir, distDir, responsive = false }) {
+export async function generateRawStyles({ srcDir, distDir, responsive = false, exclude = [] }) {
   try {
     const { defaultTheme, theme } = await loadThemes()
 
@@ -72,10 +61,12 @@ export async function generateRawStyles({ srcDir, distDir, responsive = false })
 
     // Process all files concurrently
     const processPromises = files.map((file) =>
-      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive).catch((fileError) => {
-        throw new Error(`Error processing file ${file}: ${fileError.message}`)
-        // You might want to throw or handle this error differently
-      }),
+      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude).catch(
+        (fileError) => {
+          throw new Error(`Error processing file ${file}: ${fileError.message}`)
+          // You might want to throw or handle this error differently
+        },
+      ),
     )
 
     // Wait for all files to be processed

@@ -28,11 +28,13 @@ async function generateFiles() {
       srcDir: "../css/components",
       distDir: "../components",
       responsive: true,
+      exclude: ["calendar", "countdown", "loading", "mask", "mockup", "skeleton", "swap"],
     }),
     generateRawStyles({
       srcDir: "../css/utilities",
       distDir: "../utilities",
       responsive: true,
+      exclude: ["typography"],
     }),
     generatePlugins({ type: "base", srcDir: "css/themes", distDir: "theme" }),
     generatePlugins({ type: "base", srcDir: "css/base", distDir: "base" }),
