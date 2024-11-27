@@ -1,4 +1,8 @@
 .cally {
+  font-size: 0.7rem;
+  &::part(container) {
+    padding: 0.5rem;
+  }
   ::part(head) {
     opacity: 0.5;
     font-size: 0.7rem;
@@ -33,5 +37,250 @@
   }
   ::part(range-start range-end) {
     border-radius: var(--radius-field);
+  }
+}
+
+.react-date-picker {
+  box-sizing: border-box;
+  user-select: none;
+  background-color: var(--color-base-100);
+  border-radius: var(--radius-box);
+  border: 1px solid var(--color-base-200);
+  font-size: 0.75rem;
+  display: inline-block;
+  position: relative;
+  overflow: clip;
+  &[dir="rtl"] {
+    & .rdp-nav {
+      & .rdp-chevron {
+        transform-origin: 50%;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  & * {
+    box-sizing: border-box;
+  }
+  & .rdp-day {
+    width: 2.25rem;
+    height: 2.25rem;
+    text-align: center;
+  }
+  & .rdp-day_button {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 2px solid transparent;
+    border-radius: var(--radius-field);
+    background: 0 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    &:disabled {
+      cursor: revert;
+    }
+    &:hover {
+      background-color: var(--color-base-200);
+    }
+  }
+  & .rdp-caption_label {
+    z-index: 1;
+    white-space: nowrap;
+    border: 0;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+  }
+  & .rdp-button_next {
+    border-radius: var(--radius-field);
+    &:hover {
+      background-color: var(--color-base-200);
+    }
+  }
+  & .rdp-button_previous {
+    border-radius: var(--radius-field);
+    &:hover {
+      background-color: var(--color-base-200);
+    }
+  }
+  & .rdp-button_next,
+  & .rdp-button_previous {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    appearance: none;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: 0 0;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    position: relative;
+    &:disabled {
+      cursor: revert;
+      opacity: 0.5;
+    }
+  }
+  & .rdp-chevron {
+    fill: var(--color-base-content);
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+  }
+  & .rdp-dropdowns {
+    align-items: center;
+    gap: 0.5rem;
+    display: inline-flex;
+    position: relative;
+  }
+  & .rdp-dropdown {
+    z-index: 2;
+    opacity: 0;
+    appearance: none;
+    cursor: inherit;
+    line-height: inherit;
+    border: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    &:focus-visible {
+      & ~ .rdp-caption_label {
+        outline: 5px auto highlight;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+  & .rdp-dropdown_root {
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    &[data-disabled="true"] {
+      & .rdp-chevron {
+        opacity: 0.5;
+      }
+    }
+  }
+  & .rdp-month_caption {
+    height: 2.75rem;
+    font-size: 0.75rem;
+    font-weight: inherit;
+    place-content: center;
+    display: flex;
+  }
+  & .rdp-months {
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    padding: 0.5rem;
+    display: flex;
+    position: relative;
+  }
+  & .rdp-month_grid {
+    border-collapse: collapse;
+  }
+  & .rdp-nav {
+    height: 2.75rem;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline: 0.5rem;
+    display: flex;
+    position: absolute;
+    top: 0.25rem;
+  }
+  & .rdp-weekday {
+    opacity: 0.6;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    font-size: smaller;
+    font-weight: 500;
+  }
+  & .rdp-week_number {
+    opacity: 0.6;
+    height: 2.25rem;
+    width: 2.25rem;
+    border: none;
+    border-radius: 100%;
+    text-align: center;
+    font-size: small;
+    font-weight: 400;
+  }
+  & .rdp-today:not(.rdp-outside) {
+    color: var(--color-base-content);
+  }
+  & .rdp-selected {
+    font-weight: inherit;
+    font-size: 0.75rem;
+    & .rdp-day_button {
+      color: var(--color-base-100);
+      background-color: var(--color-base-content);
+      border-radius: var(--radius-field);
+      border: none;
+      &:hover {
+        background-color: var(--color-base-content);
+      }
+    }
+  }
+  & .rdp-outside {
+    opacity: 0.75;
+  }
+  & .rdp-disabled {
+    opacity: 0.5;
+  }
+  & .rdp-hidden {
+    visibility: hidden;
+    color: var(--color-base-content);
+  }
+  & .rdp-range_start {
+    background: linear-gradient(90deg, transparent 50%, var(--color-base-200) 50%);
+    & .rdp-day_button {
+      border-radius: var(--radius-field) 0 0 var(--radius-field);
+    }
+  }
+  & .rdp-range_start .rdp-day_button {
+    background-color: var(--color-base-content);
+    color: var(--color-base-content);
+  }
+  & .rdp-range_middle {
+    background-color: var(--color-base-200);
+  }
+  & .rdp-range_middle .rdp-day_button {
+    border-color: #0000;
+    border: unset;
+    border-radius: unset;
+    color: inherit;
+  }
+  & .rdp-range_end {
+    background: linear-gradient(90deg, var(--color-base-200) 50%, transparent 50%);
+    color: var(--color-base-content);
+    & .rdp-day_button {
+      border-radius: 0 var(--radius-field) var(--radius-field) 0;
+    }
+  }
+  & .rdp-range_end .rdp-day_button {
+    color: var(--color-base-content);
+    background-color: var(--color-base-content);
+  }
+  & .rdp-range_start.rdp-range_end {
+    background: revert;
+  }
+  & .rdp-focusable {
+    cursor: pointer;
+  }
+  & .rdp-footer {
+    border-top: 1px solid var(--color-base-200);
+    padding: 0.5rem;
   }
 }
