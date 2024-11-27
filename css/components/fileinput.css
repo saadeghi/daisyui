@@ -1,6 +1,6 @@
 .file-input {
   border: var(--spacing-button-border) solid transparent;
-  @apply w-full max-w-80 cursor-pointer appearance-none align-middle select-none;
+  @apply inline-flex w-full max-w-80 cursor-pointer appearance-none items-center align-middle select-none;
   height: var(--field-size);
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;

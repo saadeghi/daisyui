@@ -1,6 +1,6 @@
 .select {
   border: var(--spacing-button-border) solid transparent;
-  @apply bg-base-100 relative inline-flex w-full max-w-80 shrink appearance-none gap-1.5 px-4 align-middle;
+  @apply bg-base-100 relative inline-flex w-full max-w-80 shrink appearance-none items-center gap-1.5 px-4 align-middle;
   height: var(--field-size);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
