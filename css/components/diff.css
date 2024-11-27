@@ -19,6 +19,7 @@
 }
 .diff-resizer {
   @apply relative top-1/2 z-[1] col-start-1 row-start-1 h-4 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
+  cursor: ew-resize;
   transform-origin: 100% 100%;
   translate: 0.35rem -0.6rem;
   clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
