@@ -5,10 +5,14 @@
   & > *:not(summary):focus {
     @apply outline-hidden;
   }
-
   .dropdown-content {
-    @apply absolute hidden origin-top opacity-0;
-    scale: 95%;
+    @apply absolute;
+  }
+  &:is(:not(details)) {
+    .dropdown-content {
+      @apply hidden origin-top opacity-0;
+      scale: 95%;
+    }
   }
 
   &[popover],
