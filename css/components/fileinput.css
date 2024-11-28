@@ -1,4 +1,5 @@
 .file-input {
+  cursor: pointer;
   border: var(--spacing-button-border) solid transparent;
   @apply inline-flex w-full max-w-80 cursor-pointer appearance-none items-center align-middle select-none;
   height: var(--field-size);
