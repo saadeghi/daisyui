@@ -13,7 +13,7 @@ export const getDirectoriesWithTargetFile = async (directory, targetFile) => {
       try {
         await fs.access(path.join(filePath, targetFile))
         filteredDirs.push(file)
-      } catch (error) {
+      } finally {
         // File doesn't exist, skip this directory
       }
     }

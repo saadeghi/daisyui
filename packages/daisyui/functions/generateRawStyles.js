@@ -72,6 +72,7 @@ export async function generateRawStyles({ srcDir, distDir, responsive = false, e
     // Wait for all files to be processed
     await Promise.all(processPromises)
   } catch (error) {
-    throw error
+    console.error("An error occurred while generating raw styles:", error)
+    process.exit(1)
   }
 }

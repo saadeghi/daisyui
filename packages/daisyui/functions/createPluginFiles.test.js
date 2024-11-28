@@ -4,7 +4,7 @@ import { createPluginFiles } from "./createPluginFiles"
 import { promises as fs } from "fs"
 
 // Mock the fs.writeFile function
-const mockWriteFile = mock(async (filePath, content) => {})
+const mockWriteFile = mock(async () => {})
 
 fs.writeFile = mockWriteFile
 

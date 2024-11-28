@@ -4,7 +4,7 @@ import fs from "fs/promises"
 import { extractClasses } from "./extractClasses"
 
 // Mock the fs functions
-const mockReadFile = mock(async (filePath, encoding) => {
+const mockReadFile = mock(async (filePath) => {
   if (filePath.endsWith("file1.css")) {
     return ".class1 { color: red; } .class2, .class3 { color: blue; }"
   } else if (filePath.endsWith("file2.css")) {
@@ -20,8 +20,8 @@ const mockReaddir = mock(async (dirPath) => {
   throw new Error("Directory not found")
 })
 
-const mockMkdir = mock(async (dirPath, options) => {})
-const mockWriteFile = mock(async (filePath, content) => {})
+const mockMkdir = mock(async () => {})
+const mockWriteFile = mock(async () => {})
 
 fs.readFile = mockReadFile
 fs.readdir = mockReaddir

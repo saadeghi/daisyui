@@ -4,7 +4,7 @@ import { createDirectoryBasedOnFileNames } from "./createDirectoryBasedOnFileNam
 import { promises as fs } from "node:fs"
 
 // Mock the fs.mkdir function
-const mockMkdir = mock(async (dir, options) => {})
+const mockMkdir = mock(async () => {})
 
 fs.mkdir = mockMkdir
 

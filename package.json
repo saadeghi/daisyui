@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "format": "bunx prettier 'packages/daisyui/src/**/*' 'packages/daisyui/functions/**/*' '*.js' 'packages/daisyui/theme/**/*' '*.css' '.prettierrc' --write",
-    "lint": "biome lint . --write",
+    "format": "bunx prettier 'packages/daisyui/{src,theme,functions}/**/*.{css,js,json}' --write",
+    "lint": "bunx -y oxlint@latest",
     "test": "bun test",
     "build": "cd packages/daisyui && bun run build",
     "build:docs": "cd packages/docs && bun run build",
@@ -16,7 +16,6 @@
     "publish:alpha": "npm publish --tag=alpha"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
     "@tailwindcss/cli": "^4.0.0-beta.3",
     "commit-and-tag-version": "12.5.0",
     "lightningcss": "^1.27.0",

@@ -4,8 +4,8 @@ import { copyFile } from "./copyFile"
 import fs from "fs/promises"
 
 // Mock the fs functions
-const mockMkdir = mock(async (dir, options) => {})
-const mockCopyFile = mock(async (src, dest) => {})
+const mockMkdir = mock(async () => {})
+const mockCopyFile = mock(async () => {})
 
 fs.mkdir = mockMkdir
 fs.copyFile = mockCopyFile

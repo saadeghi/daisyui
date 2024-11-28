@@ -1,15 +1,14 @@
 import { expect, test, mock } from "bun:test"
 import fs from "fs/promises"
 import { generateChunks } from "./generateChunks"
-import { getFileNames } from "./getFileNames"
 
 // Mock the fs functions
-const mockWriteFile = mock(async (filePath, content, encoding) => {})
+const mockWriteFile = mock(async () => {})
 
 fs.writeFile = mockWriteFile
 
 // Mock the getFileNames function
-const mockGetFileNames = mock(async (dir, ext, recursive) => {
+const mockGetFileNames = mock(async (dir) => {
   if (dir === "./theme") {
     return ["light", "dark", "custom"]
   } else if (dir === "./base") {
