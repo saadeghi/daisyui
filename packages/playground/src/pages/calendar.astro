@@ -1,0 +1,60 @@
+---
+import "../tailwind.css";
+import ReactDayPicker from '../components/ReactDayPicker.jsx';
+import PikadayOnVue from '../components/Pikaday.vue';
+import PikadayOnReact from '../components/Pikaday.jsx';
+
+---
+
+<!-- cally -->
+
+<script type="module" src="https://unpkg.com/cally"></script>
+
+<button popovertarget="cally-popover1" class="input input-border" id="cally1" style="anchor-name:--cally1">
+  Cally
+</button>
+<div popover id="cally-popover1" class="dropdown" style="position-anchor:--cally1">
+  <calendar-date class="cally" onchange="document.getElementById('cally1').innerText = this.value">
+    <calendar-month></calendar-month>
+  </calendar-date>
+</div>
+
+
+
+<button popovertarget="cally-popover2" class="input input-border" id="cally2" style="anchor-name:--cally2">
+  Cally range
+</button>
+<div popover id="cally-popover2" class="dropdown" style="position-anchor:--cally2">
+  <calendar-range class="cally" value="2024-01-10/2024-01-20" min="2024-01-01" max="2024-12-31" locale="en-GB" months="2" onchange="document.getElementById('cally2').innerText = this.value">
+    <svg class="size-4" fill="currentColor" aria-label="Previous" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  		<path d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+   	</svg>
+    <svg class="size-4" fill="currentColor" aria-label="Next" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  		<path d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+   	</svg>
+    <div class="grid lg:grid-cols-2 gap-4">
+  		<calendar-month></calendar-month>
+  		<calendar-month offset="1"></calendar-month>
+   	</div>
+  </calendar-range>
+</div>
+
+
+<!-- react-day-picker -->
+<ReactDayPicker client:only='react' />
+
+<!-- pikaday -->
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script>
+    var picker = new Pikaday({
+      field: document.getElementById('pika'),
+    });
+</script>
+<input value="Pikaday from CDN" type="text" id="pika" class="input input-border pika-single" autocomplete="off">
+
+<!-- pikaday on Vue -->
+<PikadayOnVue client:only='vue' />
+
+<!-- pikaday on React -->
+<PikadayOnReact client:only='react' />

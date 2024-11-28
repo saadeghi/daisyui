@@ -25,6 +25,28 @@
 
 ---
 
+<div align="center">
+
+Sponsors and  backers
+
+[![][backers_org]][opencollective]
+[![][backers]][opencollective]
+
+Contributors
+
+[![][contributors_img]][contributors]
+
+</div>
+
+<div align="center">
+
+
+༼ つ ◕_◕ ༽つ  Please share
+
+[![][tweet]](https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui)
+
+</div>
+
 [version]: https://badgen.net/github/tag/saadeghi/daisyui?label=Version&color=1AD1A5
 [commit]: https://badgen.net/github/last-commit/saadeghi/daisyui?label=Last%20commit&color=1AD1A5
 [license]: https://badgen.net/github/license/saadeghi/daisyui?label=License&color=1AD1A5

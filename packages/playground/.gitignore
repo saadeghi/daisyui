@@ -1,11 +1,7 @@
-/node_modules
-/output.css
-/*.html
 /dist
 /.astro
 .astro/settings.json
-/src/components/*
-!/src/components/Demo.astro
+/src/components/Component.astro
 
 /src/pages/*
 !/src/pages/demo.astro
@@ -15,6 +11,7 @@
 !/src/pages/LTR.astro
 !/src/pages/RTL.astro
 !/src/pages/prefix.astro
+!/src/pages/calendar.astro
 
 /src/layouts/*
 !/src/layouts/Main.astro
