@@ -13,7 +13,7 @@
     "dev": "cd packages/docs && bun run dev",
     "play": "bun run build && cd packages/playground && bun run dev",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
-    "publish:alpha": "npm publish --tag=alpha"
+    "publish:alpha": "cd packages/daisyui && bun publish --tag=alpha"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0-beta.3",

@@ -22,10 +22,9 @@ on:
     branches:
       - master
     paths:
-      - "src/index.js"
-      - "src/build.js"
-      - "src/theming/**"
-      - "src/lib/**"
+      - "packages/daisyui/src/**"
+      - "packages/daisyui/src/build.js"
+      - "packages/daisyui/src/index.js"
 jobs:
   tests:
     timeout-minutes: 10
@@ -47,7 +46,7 @@ jobs:
         run: bun install
 
       - name: build package
-        run: bun run build:skipfullcss
+        run: bun run build
 
       - name: Run tests
         run: bun test ${{ env.filter }}

@@ -1,5 +1,6 @@
 {
   "type": "module",
+  "private": true,
   "name": "daisyui-docs",
   "engines": {
     "node": ">=20.18.1"

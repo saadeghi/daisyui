@@ -1,5 +1,6 @@
 {
   "type": "module",
+  "private": true,
   "name": "daisyui-playground",
   "scripts": {
     "dev": "astro dev --open",

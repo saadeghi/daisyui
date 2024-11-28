@@ -3,13 +3,6 @@ name: "🎉 Release new version"
 on:
   workflow_dispatch:
     inputs:
-      runtime:
-        type: choice
-        description: JS runtime
-        default: "bun"
-        options:
-          - "bun"
-          - "npm"
       release-type:
         type: choice
         description: Release type
@@ -20,18 +13,13 @@ on:
     branches:
       - master
     paths:
-      - "src/**"
-      - "!src/docs/**"
-      - "!src/tests/**"
-      - "!src/experiments/**"
+      - "packages/daisyui/**"
 
 jobs:
   build-publish:
     name: 🔨 Build + 🚀 Publish
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    env:
-      runtime: ${{ inputs.runtime || 'bun'}}
     outputs:
       daisyuiversion: ${{ steps.package-version.outputs.version }}
     steps:
@@ -41,51 +29,27 @@ jobs:
           fetch-depth: 1
           clean: false
 
-      - name: Setup Node
-        if: env.runtime == 'npm'
-        uses: actions/setup-node@v4
-        with:
-          node-version: "latest"
-          registry-url: https://registry.npmjs.org
-
       - name: Setup Bun
-        if: env.runtime == 'bun'
         uses: oven-sh/setup-bun@v1
 
       - name: Install package dependencies
-        run: ${{ env.runtime }} install
+        run: bun install
 
       - name: build package
-        run: ${{ env.runtime }} run build
+        run: bun run build
 
       - name: Run release command
         if: github.repository == 'saadeghi/daisyui'
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          ${{ env.runtime }} run release${{ inputs.release-type }}
+          bun run release${{ inputs.release-type }}
 
       - name: Read package version from package.json
         id: package-version
         run: |
-          version=$(grep -o '"version": *"[^"]*"' package.json | cut -d'"' -f4)
+          version=$(grep -o '"version": *"[^"]*"' packages/daisyui/package.json | cut -d'"' -f4)
           echo version=$version >> $GITHUB_OUTPUT
-
-      - name: Update package version in src/docs/.env and commit
-        if: github.repository == 'saadeghi/daisyui'
-        id: commit
-        run: |
-          echo "VITE_DAISYUI_VERSION=${{ steps.package-version.outputs.version }}" > src/docs/.env
-          git config --local user.email "pouya.saadeghi@gmail.com"
-          git config --local user.name "Pouya Saadeghi"
-          git add --all
-          if [ -z "$(git status --porcelain)" ]; then
-            echo push=false >> $GITHUB_OUTPUT
-          else
-            git commit -m "Update src/docs/.env" -a
-            echo push=true >> $GITHUB_OUTPUT
-          fi
-        shell: bash
 
       - name: Push changes
         if: steps.commit.outputs.push == 'true'
@@ -93,16 +57,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node
-        if: env.runtime != 'npm'
-        uses: actions/setup-node@v4
-        with:
-          node-version: "latest"
-          registry-url: https://registry.npmjs.org
-
       - name: Publish package to NPM
         if: github.repository == 'saadeghi/daisyui'
-        run: npm publish
+        run: bun publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
