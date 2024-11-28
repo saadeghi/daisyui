@@ -1,9 +1,0 @@
-.modal-top :where(.modal-box) {
-  @apply rounded-b-box w-full max-w-none -translate-y-10 scale-100 rounded-t-none;
-}
-.modal-middle :where(.modal-box) {
-  @apply rounded-t-box rounded-b-box w-11/12 max-w-lg translate-y-0 scale-90;
-}
-.modal-bottom :where(.modal-box) {
-  @apply rounded-t-box w-full max-w-none translate-y-10 scale-100 rounded-b-none;
-}

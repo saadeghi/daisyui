@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* @plugin "@tailwindcss/typography"; */
+
+@plugin "daisyui" {
+  logs: false;
+  root: ":root";
+  prefix: "";
+}
+
+.btn {
+  @apply m-2;
+}

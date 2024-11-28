@@ -1,7 +1,0 @@
-.diff-item-1:after {
-  @apply bg-base-100/50 border-base-100 outline-base-content/5 rounded-full border-2 shadow-sm outline outline-offset-[-3px] backdrop-blur;
-  translate: 50% -50%;
-}
-.diff-item-2 {
-  @apply border-base-100 border-r-2;
-}

@@ -1,7 +1,0 @@
-.file-input {
-  @apply h-12 shrink pe-4 text-sm leading-loose;
-  &::file-selector-button {
-    @apply me-4 inline-flex h-full shrink-0 cursor-pointer select-none flex-wrap items-center justify-center px-4 text-center text-sm transition duration-200 ease-out;
-    line-height: 1em;
-  }
-}

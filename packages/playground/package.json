@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "daisyui-playground",
+  "scripts": {
+    "dev": "astro dev --open",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "browserslist": [
+    "> 7%"
+  ],
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0-beta.3",
+    "astro": "^5.0.0-beta.12",
+    "daisyui": "workspace:*"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.6.3",
+    "react": "^18.3.1",
+    "react-day-picker": "^9.4.0",
+    "react-dom": "^18.3.1"
+  }
+}
