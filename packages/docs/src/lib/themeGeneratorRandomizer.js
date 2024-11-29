@@ -42,7 +42,7 @@ export function randomizeThemeColors(tailwindcolors) {
     return null
   }
 
-  function getRandomArray(arrays, probability = 0.2) {
+  function getRandomArray(arrays, probability = 0.3) {
     const randomNumber = Math.random()
     if (randomNumber < probability) {
       return arrays[1]

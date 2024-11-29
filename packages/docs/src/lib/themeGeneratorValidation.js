@@ -1,6 +1,6 @@
 // Validation patterns
 const themeNamePattern = /^[a-z]{3,20}$/
-const borderRadiusPattern = /^(0|0\.125rem|0\.25rem|0\.5rem|0\.75rem|1rem|2rem)$/
+const borderRadiusPattern = /^(0|0rem|0\.125rem|0\.25rem|0\.5rem|0\.75rem|1rem|2rem)$/
 const borderWidthPattern = /^[12]px$/
 
 export function validateColor(color) {
@@ -51,7 +51,7 @@ export function validateThemeStructure(data) {
       if (key.startsWith("--color-") && !validateColor(value))
         throw new Error(`Invalid color value for ${key}`)
       if (key.startsWith("--radius-") && !validateRadius(value))
-        throw new Error(`Invalid radius value for ${key}`)
+        throw new Error(`Invalid radius value for ${key}:${value}`)
       if (key.startsWith("--spacing-") && !validateBorderWidth(value))
         throw new Error(`Invalid border width value for ${key}`)
     }

@@ -175,45 +175,55 @@
   let holdTimeout;
   let holdInterval;
   let startTime;
+  let btnElement;
   let svgElement;
 
   const handleMouseDown = (event) => {
     if (holdTimeout || holdInterval) return;
 
     startTime = Date.now();
+    btnElement = event.currentTarget;
     svgElement = event.currentTarget.querySelector('svg');
     svgElement.style.transition = 'rotate 3s linear';
+    btnElement.style.transition = 'box-shadow 3s ease-out';
     holdInterval = setInterval(() => {
       const elapsedTime = Date.now() - startTime;
       const rotation = 90 * (elapsedTime / 1000);
-      if (rotation <= 90) {
+      const boxShadowOffset = (-2 * (elapsedTime / 1000) - 3.5);
+      if (rotation >= 90) {
         svgElement.style.rotate = '90deg';
         clearInterval(holdInterval);
         holdInterval = null;
       } else {
         svgElement.style.rotate = `${rotation}deg`;
+        btnElement.style.boxShadow = `0 ${boxShadowOffset}rem 0 -3rem color-mix(in oklab, var(--color-base-content) 30%, transparent) inset`;
       }
     }, 10);
     holdTimeout = setTimeout(() => {
+      new Audio('https://img.daisyui.com/fx/tap.mp3').play()
       createNewTheme(
         crypto.randomUUID(),
         nameGenerator(),
         randomizeThemeColors(data.tailwindcolors, data.colorPairs)
       );
       // document.activeElement.blur();
-      clearTimeout(holdTimeout);
-      holdTimeout = null;
+      holdInterval = null;
+      svgElement.style.removeProperty('transition');
+      svgElement.style.removeProperty('rotate');
+      btnElement.style.removeProperty('transition');
+      btnElement.style.removeProperty('box-shadow');
     }, 3000);
   };
 
   const handleMouseUpOrLeave = () => {
-    if (!svgElement) return;
     clearTimeout(holdTimeout);
     clearInterval(holdInterval);
     holdTimeout = null;
     holdInterval = null;
     svgElement.style.removeProperty('transition');
     svgElement.style.removeProperty('rotate');
+    btnElement.style.removeProperty('transition');
+    btnElement.style.removeProperty('box-shadow');
   };
 
 </script>
@@ -270,7 +280,7 @@
 
     <ul class="menu w-full min-w-40 p-0">
       <li>
-        <button class="btn bg-auto group px-2"
+        <button class="btn bg-auto group px-2 theme-generator-btn"
           onmousedown={handleMouseDown}
           onmouseup={handleMouseUpOrLeave}
           onmouseleave={handleMouseUpOrLeave}
@@ -287,7 +297,7 @@
               handleMouseUpOrLeave(event);
             }
           }}
-          style="background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%), radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%), radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);">
+        >
           <svg class="size-5 origin-[40%_60%] [transition:rotate_.2s_ease] group-hover:-rotate-12" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"></path></svg>
           <span class="font-normal"><span class="font-semibold">Hold</span> to add theme</span>
         </button>
@@ -557,3 +567,12 @@
   bind:builtinThemes={builtinThemes}
   bind:customThemes={customThemes}
 />
+
+<style>
+  .theme-generator-btn {
+    background-image:
+      radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%),
+      radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%),
+      radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);
+  }
+</style>
