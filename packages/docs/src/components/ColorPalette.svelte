@@ -129,7 +129,7 @@
   type="button"
   class="w-14 h-10 border-1 border-base-content/10 rounded-lg cursor-pointer grid place-items-center outline-offset-2 focus:outline-2 outline-base-content"
   aria-label={`Choose ${name}: ${value}`}
-  title={name}
+  title={`${name}: ${value}`}
   style:color={label === "A" ? value : getPairColor(name)}
   style:background-color={label === "A" ? getPairColor(name) : value}
   class:font-black={label === "A"}
@@ -146,8 +146,8 @@
     class="modal-box p-0 border border-base-300 lg:max-w-[50rem] max-lg:max-h-[80vh] flex flex-col gap-4"
   >
     {#if open}
-      <div class="flex gap-2 justify-between items-center p-8 pb-0">
-        <div class="flex gap-2 items-center relative pb-4">
+      <div class="flex gap-2 justify-between items-center px-8 pt-6 pb-0">
+        <div class="flex gap-2 items-center relative">
           <div
             class="h-8 w-12 border-1 border-base-300 rounded-lg grid place-items-center text-xl font-black"
             aria-label={`Choose ${name}: ${value}`}
@@ -211,7 +211,7 @@
         {/each}
       </div>
       <div
-        class="flex flex-col md:flex-row gap-2 items-center bg-base-200 px-8 py-6 justify-between"
+        class="flex flex-col md:flex-row gap-2 items-center bg-base-200 px-8 pt-4 pb-6 justify-between"
       >
         <div class="flex flex-col gap-1 grow">
           <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>

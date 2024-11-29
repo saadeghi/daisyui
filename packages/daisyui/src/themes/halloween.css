@@ -1,7 +1,7 @@
-color-scheme: dark;
---color-base-100: oklch(24.775% 0 0);
---color-base-200: oklch(23.041% 0 0);
---color-base-300: oklch(21.307% 0 0);
+color-scheme: "dark";
+--color-base-100: oklch(21% 0.006 56.043);
+--color-base-200: oklch(14% 0.004 49.25);
+--color-base-300: oklch(0% 0 0);
 --color-base-content: oklch(84.955% 0 0);
 --color-primary: oklch(77.48% 0.204 60.62);
 --color-primary-content: oklch(19.693% 0.004 196.779);
