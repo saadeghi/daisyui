@@ -32,4 +32,5 @@ export default [
   "nord",
   "sunset",
   "abyss",
+  "silk",
 ]

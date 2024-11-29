@@ -48,7 +48,11 @@ themeFiles.forEach((file) => {
       expect(match).toBeTruthy()
       if (match) {
         const [, cssValue] = match
-        if (value.startsWith("--color-")) {
+        if (value === "color-scheme") {
+          // Check that color-scheme does not have extra quotes
+          expect(cssValue).not.toMatch(/^".*"$/)
+          expect(["light", "dark"]).toContain(cssValue)
+        } else if (value.startsWith("--color-")) {
           expect(isOklch(cssValue)).toBe(true)
         } else if (value.startsWith("--radius-")) {
           expect(isRem(cssValue)).toBe(true)

@@ -1,4 +1,4 @@
-color-scheme: "light";
+color-scheme: light;
 --color-base-100: oklch(97.788% 0.004 56.375);
 --color-base-200: oklch(93.982% 0.007 61.449);
 --color-base-300: oklch(91.586% 0.006 53.44);
@@ -22,4 +22,4 @@ color-scheme: "light";
 --radius-selector: 1rem;
 --radius-field: 2rem;
 --radius-box: 1rem;
---spacing-button-border: 1px;
+--spacing-button-border: 2px;

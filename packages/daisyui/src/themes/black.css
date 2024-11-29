@@ -1,4 +1,4 @@
-color-scheme: "dark";
+color-scheme: dark;
 --color-base-100: oklch(0% 0 0);
 --color-base-200: oklch(17% 0 0);
 --color-base-300: oklch(21% 0 0);
@@ -19,7 +19,7 @@ color-scheme: "dark";
 --color-warning-content: oklch(19.359% 0.042 109.769);
 --color-error: oklch(62.795% 0.257 29.233);
 --color-error-content: oklch(12.559% 0.051 29.233);
---radius-selector: 0;
---radius-field: 0;
---radius-box: 0;
+--radius-selector: 0rem;
+--radius-field: 0rem;
+--radius-box: 0rem;
 --spacing-button-border: 1px;

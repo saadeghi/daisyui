@@ -99,7 +99,8 @@ published: true
     { path: "theme/dim.css", name: "dim", size: 0.7, checked: false },
     { path: "theme/nord.css", name: "nord", size: 0.7, checked: false },
     { path: "theme/sunset.css", name: "sunset", size: 0.7, checked: false },
-    { path: "theme/abyss.css", name: "abyss", size: 0.7, checked: false }
+    { path: "theme/abyss.css", name: "abyss", size: 0.7, checked: false },
+    { path: "theme/silk.css", name: "silk", size: 0.7, checked: false }
   ];
 
   let groupedFiles = [

@@ -1,4 +1,4 @@
-import { themes } from "$lib/data/themes.js"
+import themes from "daisyui/functions/themeOrder"
 import { pages, pagesThatDontNeedSidebar } from "$lib/data/pages.js"
 
 import { version } from "daisyui/package.json"

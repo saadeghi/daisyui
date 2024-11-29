@@ -44,7 +44,10 @@ export function validateThemeStructure(data) {
     if (!data || typeof data !== "object") throw new Error("Invalid data structure")
 
     if (!validateThemeName(data.name)) throw new Error("Invalid theme name")
-    if (!["light", "dark"].includes(data["color-scheme"])) throw new Error("Invalid color scheme")
+    if (!["light", "dark"].includes(data["color-scheme"])) {
+      console.error(data)
+      throw new Error("Invalid color scheme")
+    }
 
     // Validate all values
     for (const [key, value] of Object.entries(data)) {

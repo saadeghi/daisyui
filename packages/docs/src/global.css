@@ -36,7 +36,8 @@
     dim,
     nord,
     sunset,
-    abyss;
+    abyss,
+    silk;
   /* exclude: chat, loading, mask, properties, states, responsive; */
 }
 
