@@ -18,6 +18,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0-beta.3",
     "commit-and-tag-version": "12.5.0",
+    "culori": "^4.0.1",
     "lightningcss": "^1.28.2",
     "postcss": "^8.4.49",
     "postcss-js": "^4.0.1",
