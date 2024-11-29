@@ -6,6 +6,7 @@
   logs: false;
   root: ":root";
   prefix: "";
+  themes: all;
 }
 
 /* .btn {

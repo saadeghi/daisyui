@@ -30,7 +30,17 @@ export const pluginOptionsHandler = (() => {
       }
     }
 
-    if (themes) {
+    if (themes === "all") {
+      Object.keys(themesObject).forEach((themeName) => {
+        const flags = []
+        if (themeName === "light") {
+          flags.push("--default")
+        } else if (themeName === "dark") {
+          flags.push("--prefersdark")
+        }
+        applyTheme(themeName, flags)
+      })
+    } else if (themes) {
       const themeArray = Array.isArray(themes) ? themes : [themes]
       themeArray.forEach((themeOption) => {
         const [themeName, ...flags] = themeOption.split(" ")
