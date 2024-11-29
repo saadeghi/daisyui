@@ -8,7 +8,8 @@
   }
 
   > * {
-    @apply relative mb-2 flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px rounded-full bg-transparent;
+    @apply relative mb-2 flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
+    border-radius: calc(var(--radius-box) - 0.5rem);
     transition: background-color 0.4s ease-in-out;
 
     &:where(:hover) {
