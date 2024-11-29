@@ -1,88 +1,85 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher } from "svelte"
 
-  let isOpen = $state(false);
-  let lightness = $state(0);
-  let chroma = $state(0);
-  let hue = $state(0);
-  let isDragging = $state(false);
-  let pickerElement;
+  let isOpen = $state(false)
+  let lightness = $state(0)
+  let chroma = $state(0)
+  let hue = $state(0)
+  let isDragging = $state(false)
+  let pickerElement
 
-  let { value = $bindable() } = $props();
-  let dispatch = createEventDispatcher();
+  let { value = $bindable() } = $props()
+  let dispatch = createEventDispatcher()
 
   // Parse initial value immediately and when it changes
   $effect(() => {
     if (value) {
-      const match = value.match(/oklch\((\d*\.?\d+)%\s+(\d*\.?\d+)\s+(\d*\.?\d+)\)/);
+      const match = value.match(/oklch\((\d*\.?\d+)%\s+(\d*\.?\d+)\s+(\d*\.?\d+)\)/)
       if (match) {
-        lightness = Math.max(0, Math.min(100, parseFloat(match[1])));
-        chroma = Math.max(0, Math.min(0.4, parseFloat(match[2])));
-        hue = Math.max(0, Math.min(360, parseFloat(match[3])));
+        lightness = Math.max(0, Math.min(100, parseFloat(match[1])))
+        chroma = Math.max(0, Math.min(0.4, parseFloat(match[2])))
+        hue = Math.max(0, Math.min(360, parseFloat(match[3])))
       }
     }
-  });
+  })
 
   let currentColor = $derived(
-    `oklch(${lightness.toFixed(3)}% ${chroma.toFixed(3)} ${hue.toFixed(3)})`
-  );
+    `oklch(${lightness.toFixed(3)}% ${chroma.toFixed(3)} ${hue.toFixed(3)})`,
+  )
 
   // Update the bound value whenever the color changes
   $effect(() => {
-    value = currentColor;
-  });
+    value = currentColor
+  })
 
   function updateColor() {
-    dispatch('input', currentColor);
-    isOpen = false;
+    dispatch("input", currentColor)
+    isOpen = false
   }
 
   function togglePicker() {
-    isOpen = !isOpen;
+    isOpen = !isOpen
   }
 
   function handleMouseDown(e) {
-    isDragging = true;
-    updateLCFromMouse(e);
+    isDragging = true
+    updateLCFromMouse(e)
   }
 
   function handleGlobalMouseMove(e) {
     if (isDragging && pickerElement) {
-      const rect = pickerElement.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = 1 - (e.clientY - rect.top) / rect.height;
+      const rect = pickerElement.getBoundingClientRect()
+      const x = (e.clientX - rect.left) / rect.width
+      const y = 1 - (e.clientY - rect.top) / rect.height
 
-      const clampedX = Math.max(0, Math.min(1, x));
-      const clampedY = Math.max(0, Math.min(1, y));
+      const clampedX = Math.max(0, Math.min(1, x))
+      const clampedY = Math.max(0, Math.min(1, y))
 
-      chroma = clampedX * 0.4;
-      lightness = clampedY * 100;
+      chroma = clampedX * 0.4
+      lightness = clampedY * 100
     }
   }
 
   function handleGlobalMouseUp() {
-    isDragging = false;
+    isDragging = false
   }
 
   function updateLCFromMouse(e) {
     if (pickerElement) {
-      const rect = pickerElement.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = 1 - (e.clientY - rect.top) / rect.height;
+      const rect = pickerElement.getBoundingClientRect()
+      const x = (e.clientX - rect.left) / rect.width
+      const y = 1 - (e.clientY - rect.top) / rect.height
 
-      const clampedX = Math.max(0, Math.min(1, x));
-      const clampedY = Math.max(0, Math.min(1, y));
+      const clampedX = Math.max(0, Math.min(1, x))
+      const clampedY = Math.max(0, Math.min(1, y))
 
-      chroma = clampedX * 0.4;
-      lightness = clampedY * 100;
+      chroma = clampedX * 0.4
+      lightness = clampedY * 100
     }
   }
 </script>
 
-<svelte:window
-  on:mousemove={handleGlobalMouseMove}
-  on:mouseup={handleGlobalMouseUp}
-/>
+<svelte:window on:mousemove={handleGlobalMouseMove} on:mouseup={handleGlobalMouseUp} />
 
 <div class="relative inline-block align-middle">
   <button
@@ -94,34 +91,31 @@
 
   {#if isOpen}
     <div class="fixed inset-0 z-40" on:click={togglePicker} />
-    <div
-      class="absolute z-50 mt-2 p-4 bg-white rounded-2xl shadow-lg"
-    >
+    <div class="absolute z-50 mt-2 p-4 bg-white rounded-2xl shadow-lg">
       <div
         class="w-52 h-52 mb-4 cursor-crosshair relative border rounded-lg overflow-hidden border-black/10 grid"
         bind:this={pickerElement}
         on:mousedown={handleMouseDown}
       >
-
-      <!-- Base chroma gradient -->
-          <div
-            class="col-[1/1] row-[1/1]"
-            style="background: linear-gradient(
+        <!-- Base chroma gradient -->
+        <div
+          class="col-[1/1] row-[1/1]"
+          style="background: linear-gradient(
               to right,
               oklch(100% 0 {hue}),
               oklch(100% 0.4 {hue})
             )"
-          ></div>
+        ></div>
 
-          <!-- Light/Dark overlay -->
-          <div
-            class="col-[1/1] row-[1/1] mix-blend-multiply"
-            style="background: linear-gradient(
+        <!-- Light/Dark overlay -->
+        <div
+          class="col-[1/1] row-[1/1] mix-blend-multiply"
+          style="background: linear-gradient(
               to bottom,
               transparent,
               oklch(0% 0 0)
             )"
-          ></div>
+        ></div>
 
         <!-- Selection indicator -->
         <div
@@ -130,8 +124,6 @@
           style:top={`${100 - lightness}%`}
           style:transform="translate(-50%, -50%)"
         />
-
-
       </div>
 
       <input
@@ -156,7 +148,8 @@
           class="size-6 rounded"
           style:background-color={`oklch(${lightness.toFixed(0)}% ${chroma.toFixed(2)} ${hue.toFixed(0)})`}
         ></div>
-        oklch({lightness.toFixed(0)}% {chroma.toFixed(2)} {hue.toFixed(0)})
+        oklch({lightness.toFixed(0)}% {chroma.toFixed(2)}
+        {hue.toFixed(0)})
       </div>
 
       <button
@@ -170,7 +163,7 @@
 </div>
 
 <style>
-  input[type="range"]{
+  input[type="range"] {
     appearance: none;
     border: none;
   }

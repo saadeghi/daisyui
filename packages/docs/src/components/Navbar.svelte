@@ -1,15 +1,14 @@
 <script>
-import TopBanner from "$components/TopBanner.svelte"
-// import ThemeChange from "$components/ThemeChange.svelte"
-// import LangChange from "$components/LangChange.svelte"
-// import Search from "$components/Search.svelte"
-// import LogoContextMenu from "$components/LogoContextMenu.svelte"
-// import ChangelogMenu from "$components/ChangelogMenu.svelte"
+  import TopBanner from "$components/TopBanner.svelte"
+  // import ThemeChange from "$components/ThemeChange.svelte"
+  // import LangChange from "$components/LangChange.svelte"
+  // import Search from "$components/Search.svelte"
+  // import LogoContextMenu from "$components/LogoContextMenu.svelte"
+  // import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
-let contextMenuEl = $state()
+  let contextMenuEl = $state()
 
-
-import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n"
 
   /**
    * @typedef {Object} Props
@@ -44,60 +43,70 @@ import { t } from "$lib/i18n"
     scrollY = $bindable(),
     addScrollPaddingToNavbar,
     removeScrollPaddingFromNavbar,
-    children
-  } = $props();
-let switchNavbarStyle = $derived(scrollY > 40)
+    children,
+  } = $props()
+  let switchNavbarStyle = $derived(scrollY > 40)
 </script>
 
 <svelte:window bind:scrollY />
 <TopBanner />
 <div
-  class="{`
+  class={`
   bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)]
-  ${switchNavbarStyle ? 'shadow-sm' : ''}
-  `}">
+  ${switchNavbarStyle ? "shadow-sm" : ""}
+  `}
+>
   <nav class="navbar w-full">
     <div class="flex flex-1 md:gap-1 lg:gap-2 items-center">
       <span
         class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]"
-        data-tip="Menu">
+        data-tip="Menu"
+      >
         <label
           aria-label="Open menu"
           for="drawer"
-          class="{`btn btn-square btn-ghost drawer-button ${
-            hideSidebarButtonOnLargeScreen ? 'lg:hidden' : ''
-          } ${hideSidebarButton ? 'hidden' : ''}`}">
+          class={`btn btn-square btn-ghost drawer-button ${
+            hideSidebarButtonOnLargeScreen ? "lg:hidden" : ""
+          } ${hideSidebarButton ? "hidden" : ""}`}
+        >
           <svg
             width="20"
             height="20"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6">
+            class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16">
+              d="M4 6h16M4 12h16M4 18h16"
+            >
             </path>
           </svg>
         </label>
       </span>
 
-      <div class="{`flex items-center gap-2 ${hideLogoOnLargeScreen ? 'lg:hidden' : ''}`}">
+      <div class={`flex items-center gap-2 ${hideLogoOnLargeScreen ? "lg:hidden" : ""}`}>
         <a
           data-sveltekit-preload-data
           href="/"
           aria-current="page"
           aria-label="daisyUI"
           class="flex-0 btn btn-ghost gap-1 px-2 md:gap-2"
-          oncontextmenu="{(e) => {e.preventDefault();contextMenuEl.openContextMenu(e)}}">
+          oncontextmenu={(e) => {
+            e.preventDefault()
+            contextMenuEl.openContextMenu(e)
+          }}
+        >
           <svg
             class="h-5 w-5 md:h-6 md:w-6"
             width="28"
             height="28"
             viewBox="0 0 415 415"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5"></rect>
             <circle cx="207.5" cy="135" r="130" fill="black" fill-opacity=".3"></circle>
             <circle cx="207.5" cy="135" r="125" fill="white"></circle>
@@ -107,11 +116,11 @@ let switchNavbarStyle = $derived(scrollY > 40)
           <span class="font-title text-base-content text-lg md:text-xl">daisyUI</span>
         </a>
         {#await import("./LogoContextMenu.svelte") then Module}
-          <Module.default bind:this="{contextMenuEl}" />
+          <Module.default bind:this={contextMenuEl} />
         {/await}
         {#if showVersion}
           {#await import("./ChangelogMenu.svelte") then Module}
-            <Module.default version={version} />
+            <Module.default {version} />
           {/await}
         {/if}
       </div>
@@ -132,7 +141,8 @@ let switchNavbarStyle = $derived(scrollY > 40)
           <a
             data-sveltekit-preload-data
             href="/components/"
-            class="btn btn-ghost drawer-button font-normal">
+            class="btn btn-ghost drawer-button font-normal"
+          >
             <!-- <svg
               width="20"
               height="20"
@@ -150,7 +160,8 @@ let switchNavbarStyle = $derived(scrollY > 40)
           <a
             data-sveltekit-preload-data
             href="/store/"
-            class="btn btn-ghost drawer-button font-normal">
+            class="btn btn-ghost drawer-button font-normal"
+          >
             {$t("Store")}
           </a>
         </div>
@@ -163,12 +174,14 @@ let switchNavbarStyle = $derived(scrollY > 40)
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            class="h-5 w-5 stroke-current md:hidden">
+            class="h-5 w-5 stroke-current md:hidden"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+              d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+            >
             </path>
           </svg>
           <span class="hidden font-normal md:inline">Theme</span>
@@ -177,7 +190,8 @@ let switchNavbarStyle = $derived(scrollY > 40)
             height="12px"
             class="hidden h-2 w-2 fill-current opacity-60 sm:inline-block"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 2048 2048">
+            viewBox="0 0 2048 2048"
+          >
             <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
           </svg>
         </div>
@@ -191,11 +205,13 @@ let switchNavbarStyle = $derived(scrollY > 40)
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="h-4 w-4">
+              class="h-4 w-4"
+            >
               <path
                 fill-rule="evenodd"
                 d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5Zm-1.24 5.5h2.48L11 7.636 9.76 10.5ZM5 1a.75.75 0 0 1 .75.75v1.261a25.27 25.27 0 0 1 2.598.211.75.75 0 1 1-.2 1.487c-.22-.03-.44-.056-.662-.08A12.939 12.939 0 0 1 5.92 8.058c.237.304.488.595.752.873a.75.75 0 0 1-1.086 1.035A13.075 13.075 0 0 1 5 9.307a13.068 13.068 0 0 1-2.841 2.546.75.75 0 0 1-.827-1.252A11.566 11.566 0 0 0 4.08 8.057a12.991 12.991 0 0 1-.554-.938.75.75 0 1 1 1.323-.707c.049.09.099.181.15.271.388-.68.708-1.405.952-2.164a23.941 23.941 0 0 0-4.1.19.75.75 0 0 1-.2-1.487c.853-.114 1.72-.185 2.598-.211V1.75A.75.75 0 0 1 5 1Z"
-                clip-rule="evenodd">
+                clip-rule="evenodd"
+              >
               </path>
             </svg>
             <svg
@@ -203,7 +219,8 @@ let switchNavbarStyle = $derived(scrollY > 40)
               height="12px"
               class="hidden h-2 w-2 fill-current opacity-60 sm:inline-block"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 2048 2048">
+              viewBox="0 0 2048 2048"
+            >
               <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
             </svg>
           </div>

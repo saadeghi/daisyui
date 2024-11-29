@@ -12,7 +12,7 @@ published: true
 
 <div class="max-w-3xl">
 
-<Translate text="daisyUI is fully themeable and colorable," />  
+<Translate text="daisyUI is fully themeable and colorable," />
 <Translate text="So instead of using constant color utility classes like:" />
 
 - <span class="badge badge-xs bg-green-500"></span> bg-green-500
@@ -31,7 +31,7 @@ published: true
 
 ## <Translate text="Benefits" />
 
-<Translate text="Semantic color names make more sense because when we design interfaces, we don't just use any random color. We define a specific color palette with names like <code>primary</code>, <code>secondary</code>, etc. and we only use those specific colors in our interfaces." />  
+<Translate text="Semantic color names make more sense because when we design interfaces, we don't just use any random color. We define a specific color palette with names like <code>primary</code>, <code>secondary</code>, etc. and we only use those specific colors in our interfaces." />
 <Translate text="Also, using semantic color names makes theming easier. You wouldn't have to define dark-mode colors for every single element and you wouldn't be limited to only light/dark themes. you can have multiple themes available and each theme is just a few lines of CSS variables." />
 
 </div>
@@ -90,7 +90,7 @@ published: true
 <input type="checkbox" class="checkbox checkbox-secondary" />
 ```
 
-<Translate text="You can also use color names in utility classes just like Tailwind's original color names." />  
+<Translate text="You can also use color names in utility classes just like Tailwind's original color names." />
 <Translate text="These are utility classes that can be used with a color name:" />
 
 ```css

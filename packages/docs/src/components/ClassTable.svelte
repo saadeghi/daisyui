@@ -1,9 +1,9 @@
 <script>
-import { prefix } from "$lib/stores"
-import PrefixEdit from "$components/PrefixEdit.svelte"
-import Translate from "$components/Translate.svelte"
-import { t } from "$lib/i18n"
-  let { data } = $props();
+  import { prefix } from "$lib/stores"
+  import PrefixEdit from "$components/PrefixEdit.svelte"
+  import Translate from "$components/Translate.svelte"
+  import { t } from "$lib/i18n"
+  let { data } = $props()
 </script>
 
 <div class="not-prose relative mb-10 mt-6 max-h-[25rem] overflow-x-auto">
@@ -23,30 +23,35 @@ import { t } from "$lib/i18n"
         <tr>
           <td colspan="3" class="px-0!">
             <div
-              class="text-info-content bg-info relative inline-flex items-center gap-2 rounded-lg p-2 px-3">
+              class="text-info-content bg-info relative inline-flex items-center gap-2 rounded-lg p-2 px-3"
+            >
               <svg
                 class="fill-info absolute -top-1.5 left-8 scale-x-150"
                 xmlns="http://www.w3.org/2000/svg"
                 width="8"
                 height="8"
-                viewBox="0 0 512 512">
+                viewBox="0 0 512 512"
+              >
                 <polygon points="256 32 20 464 492 464 256 32"></polygon>
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="stroke-info-content h-4 w-4 shrink-0">
+                class="stroke-info-content h-4 w-4 shrink-0"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                >
                 </path>
               </svg>
               <div class="text-xs">
                 <Translate
-                  text="To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>" />
+                  text="To use a custom prefix, <a class='link' href='/docs/config/#prefix'>add your prefix string to config</a>"
+                />
               </div>
             </div>
           </td>
@@ -77,6 +82,6 @@ import { t } from "$lib/i18n"
     </tbody>
   </table>
   <div
-    class="bg-base-100 pointer-events-none sticky bottom-0 -mt-6 flex h-16 [mask-image:linear-gradient(transparent,#000000)]">
-  </div>
+    class="bg-base-100 pointer-events-none sticky bottom-0 -mt-6 flex h-16 [mask-image:linear-gradient(transparent,#000000)]"
+  ></div>
 </div>

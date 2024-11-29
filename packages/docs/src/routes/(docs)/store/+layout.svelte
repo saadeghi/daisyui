@@ -1,6 +1,6 @@
 <script>
-import Footer from "$components/Footer.svelte"
-  let { data, children } = $props();
+  import Footer from "$components/Footer.svelte"
+  let { data, children } = $props()
 </script>
 
 <svelte:head>

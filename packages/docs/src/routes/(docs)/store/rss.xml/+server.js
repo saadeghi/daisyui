@@ -59,7 +59,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <pubDate>${new Date(product.attributes.created_at).toUTCString()}</pubDate>
           <guid isPermaLink="false">${product.attributes.buy_now_url}/</guid>
         </item>
-      `
+      `,
       )
       .join("")}
   </channel>

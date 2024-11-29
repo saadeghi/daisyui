@@ -1,8 +1,8 @@
 <script module>
-import _prism from "svelte-prism/src/import"
-export const prism = _prism
-export const highlight = _prism.highlightElement
-export const globalConfig = { transform: (x) => x }
+  import _prism from "svelte-prism/src/import"
+  export const prism = _prism
+  export const highlight = _prism.highlightElement
+  export const globalConfig = { transform: (x) => x }
 </script>
 
 <script>
@@ -13,10 +13,10 @@ export const globalConfig = { transform: (x) => x }
   let element
   let formattedCode = $state()
 
-	import { run } from 'svelte/legacy';
+  import { run } from "svelte/legacy"
   run(() => {
-		props && (source || element) && highlightCode();
-	});
+    props && (source || element) && highlightCode()
+  })
 
   function highlightCode() {
     const grammar = prism.languages[language]
@@ -31,9 +31,10 @@ export const globalConfig = { transform: (x) => x }
   })
 </script>
 
-<code bind:this="{element}" style="display:none">
+<code bind:this={element} style="display:none">
   {@render children()}
 </code>
 
-<pre class="language-{language}" command-line data-output="2-17"><code
-    class="language-{language}">{#if language === "none"}{formattedCode}{:else}{@html formattedCode}{/if}</code></pre>
+<pre class="language-{language}" command-line data-output="2-17"><code class="language-{language}"
+    >{#if language === "none"}{formattedCode}{:else}{@html formattedCode}{/if}</code
+  ></pre>

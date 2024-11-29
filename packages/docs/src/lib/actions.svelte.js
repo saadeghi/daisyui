@@ -52,13 +52,13 @@ export function htmlToJsx(node) {
     Object.keys(stringsToReplace)
       .map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
       .join("|"),
-    "gi"
+    "gi",
   )
 
   function update() {
     node.innerHTML = originalContent.replace(
       re,
-      (matched) => stringsToReplace[matched.toLowerCase()]
+      (matched) => stringsToReplace[matched.toLowerCase()],
     )
   }
 

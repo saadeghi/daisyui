@@ -5,13 +5,13 @@
     "packages/*"
   ],
   "scripts": {
-    "format": "bunx prettier 'packages/daisyui/{src,theme,functions}/**/*.{css,js,json}' --write",
+    "build": "cd packages/daisyui && bun run build",
+    "dev": "bun run build && cd packages/docs && bun run dev",
+    "build:docs": "bun run build && cd packages/docs && bun run build",
+    "play": "bun run build && cd packages/playground && bun run dev",
+    "format": "bunx prettier 'packages/{daisyui,docs}/{src,functions}/**/*.{css,js,json,svelte}' --write",
     "lint": "bunx -y oxlint@latest",
     "test": "bun test",
-    "build": "cd packages/daisyui && bun run build",
-    "build:docs": "cd packages/docs && bun run build",
-    "dev": "cd packages/docs && bun run dev",
-    "play": "bun run build && cd packages/playground && bun run dev",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
     "publish:alpha": "cd packages/daisyui && bun publish --tag=alpha"
   },
@@ -23,6 +23,7 @@
     "postcss-js": "^4.0.1",
     "postcss-selector-parser": "^7.0.0",
     "prettier": "^3.4.1",
+    "prettier-plugin-svelte": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^4.0.0-beta.3",
     "zlib": "^1.0.5"

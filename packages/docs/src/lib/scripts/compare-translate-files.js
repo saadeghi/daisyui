@@ -17,7 +17,7 @@ for (const lang of langs) {
       console.log(
         `"en 🆚 ${lang}": ${diffString(JSON.parse(file1), JSON.parse(file2), {
           keysOnly: true,
-        })}`
+        })}`,
       )
     })
   })

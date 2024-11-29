@@ -12,7 +12,7 @@ export async function load({ params }) {
         slug,
         ...metadata,
       }
-    })
+    }),
   )
 
   // filter out empty objects

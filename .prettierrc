@@ -4,5 +4,8 @@
   "printWidth": 100,
   "semi": false,
   "trailingComma": "all",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-svelte"
+  ]
 }

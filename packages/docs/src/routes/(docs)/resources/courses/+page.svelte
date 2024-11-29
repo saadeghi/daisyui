@@ -1,11 +1,12 @@
 <script>
-import SEO from "$components/SEO.svelte"
-  let { data } = $props();
+  import SEO from "$components/SEO.svelte"
+  let { data } = $props()
 </script>
 
 <SEO
   title="daisyUI community courses"
-  desc="Free Tailwind CSS courses and best Tailwind CSS tutorials" />
+  desc="Free Tailwind CSS courses and best Tailwind CSS tutorials"
+/>
 
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">
@@ -16,7 +17,8 @@ import SEO from "$components/SEO.svelte"
       href="https://github.com/saadeghi/daisyui/blob/master/src/docs/src/lib/data/courses.js"
       target="_blank"
       rel="noopener, noreferrer"
-      class="link">
+      class="link"
+    >
       add it here
     </a>
   </p>
@@ -25,9 +27,10 @@ import SEO from "$components/SEO.svelte"
   {#each data.courses as course}
     <a
       class="rounded-box hover:bg-base-200 group relative flex items-center justify-between overflow-hidden p-4 duration-300"
-      href="{course.link}"
+      href={course.link}
       target="_blank"
-      rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <div>
         <h2 class="text-xl font-bold group-hover:underline">{course.title}</h2>
         <p class="text-base-content/60 text-sm font-bold">by {course.site}</p>
@@ -38,20 +41,23 @@ import SEO from "$components/SEO.svelte"
         height="18"
         viewBox="0 0 48 48"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           d="M19 11H37V29"
           stroke="currentColor"
           stroke-width="4"
           stroke-linecap="butt"
-          stroke-linejoin="bevel">
+          stroke-linejoin="bevel"
+        >
         </path>
         <path
           d="M11.5439 36.4559L36.9997 11"
           stroke="currentColor"
           stroke-width="4"
           stroke-linecap="butt"
-          stroke-linejoin="bevel">
+          stroke-linejoin="bevel"
+        >
         </path>
       </svg>
     </a>

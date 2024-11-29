@@ -1,12 +1,13 @@
 <script>
-import SEO from "$components/SEO.svelte"
-import { slugify } from "$lib/util"
-  let { data } = $props();
+  import SEO from "$components/SEO.svelte"
+  import { slugify } from "$lib/util"
+  let { data } = $props()
 </script>
 
 <SEO
   title="daisyUI community videos"
-  desc="Best Tailwind CSS video tutorials and Free Tailwind CSS video courses" />
+  desc="Best Tailwind CSS video tutorials and Free Tailwind CSS video courses"
+/>
 
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">
@@ -17,7 +18,8 @@ import { slugify } from "$lib/util"
       href="https://github.com/saadeghi/daisyui/blob/master/src/docs/src/lib/data/youtube.js"
       target="_blank"
       rel="noopener, noreferrer"
-      class="link">
+      class="link"
+    >
       add it here
     </a>
   </p>
@@ -27,18 +29,21 @@ import { slugify } from "$lib/util"
     {#each data.videos as video}
       <a
         class="rounded-box group relative flex flex-col gap-6 overflow-hidden p-4"
-        href="{video.status.embeddable == true
+        href={video.status.embeddable == true
           ? `/resources/videos/${slugify(video.snippet.title)}-${slugify(video.id)}`
-          : `https://www.youtube.com/watch?v=${video.id}`}"
-        target="{video.status.embeddable == false ? `_blank` : null}"
-        rel="{video.status.embeddable == false ? `noopener noreferrer` : null}">
+          : `https://www.youtube.com/watch?v=${video.id}`}
+        target={video.status.embeddable == false ? `_blank` : null}
+        rel={video.status.embeddable == false ? `noopener noreferrer` : null}
+      >
         <figure
-          class="rounded-field grid aspect-video place-content-center overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
+          class="rounded-field grid aspect-video place-content-center overflow-hidden shadow-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg"
+        >
           <img
             loading="lazy"
-            src="{video.snippet.thumbnails.high.url}"
-            alt="{video.snippet.title}"
-            class="w-full" />
+            src={video.snippet.thumbnails.high.url}
+            alt={video.snippet.title}
+            class="w-full"
+          />
         </figure>
         <div class="flex items-center justify-between gap-4">
           <div class="grow">

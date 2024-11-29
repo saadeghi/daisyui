@@ -1,12 +1,12 @@
 <script>
-import { page } from "$app/stores"
-import Footer from "$components/Footer.svelte"
-import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
-import Sponsors from "$components/Sponsors.svelte"
-import "prism-themes/themes/prism-material-dark.css"
-import "$lib/style/prism-themes-modify.css"
-  let { data, children } = $props();
-let { tags } = data
+  import { page } from "$app/stores"
+  import Footer from "$components/Footer.svelte"
+  import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
+  import Sponsors from "$components/Sponsors.svelte"
+  import "prism-themes/themes/prism-material-dark.css"
+  import "$lib/style/prism-themes-modify.css"
+  let { data, children } = $props()
+  let { tags } = data
 </script>
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row" dir="ltr">
@@ -23,17 +23,21 @@ let { tags } = data
                 <a
                   target="_blank"
                   href="https://daisyui.com/blog/rss.xml"
-                  class="hover:text-warning">
+                  class="hover:text-warning"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    class="h-5 w-5">
+                    class="h-5 w-5"
+                  >
                     <path
-                      d="M3.75 3a.75.75 0 00-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V16C17 8.82 11.18 3 4 3h-.25z">
+                      d="M3.75 3a.75.75 0 00-.75.75v.5c0 .414.336.75.75.75H4c6.075 0 11 4.925 11 11v.25c0 .414.336.75.75.75h.5a.75.75 0 00.75-.75V16C17 8.82 11.18 3 4 3h-.25z"
+                    >
                     </path>
                     <path
-                      d="M3 8.75A.75.75 0 013.75 8H4a8 8 0 018 8v.25a.75.75 0 01-.75.75h-.5a.75.75 0 01-.75-.75V16a6 6 0 00-6-6h-.25A.75.75 0 013 9.25v-.5zM7 15a2 2 0 11-4 0 2 2 0 014 0z">
+                      d="M3 8.75A.75.75 0 013.75 8H4a8 8 0 018 8v.25a.75.75 0 01-.75.75h-.5a.75.75 0 01-.75-.75V16a6 6 0 00-6-6h-.25A.75.75 0 013 9.25v-.5zM7 15a2 2 0 11-4 0 2 2 0 014 0z"
+                    >
                     </path>
                   </svg>
                 </a>
@@ -48,9 +52,10 @@ let { tags } = data
                 <li>
                   <a
                     data-sveltekit-reload
-                    href="{`/blog/tag/${tag.replace(/ /g, '-').toLowerCase()}`}"
-                    class="{tag.replace(/ /g, '-').toLowerCase() ===
-                      $page.url.pathname.split('/').at(-2) && `active`}">
+                    href={`/blog/tag/${tag.replace(/ /g, "-").toLowerCase()}`}
+                    class={tag.replace(/ /g, "-").toLowerCase() ===
+                      $page.url.pathname.split("/").at(-2) && `active`}
+                  >
                     {tag}
                   </a>
                 </li>
@@ -81,14 +86,16 @@ let { tags } = data
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form"
                 target="_blank"
-                novalidate="">
+                novalidate=""
+              >
                 <!-- blog group -->
                 <input
                   type="checkbox"
                   name="group[347002][4]"
                   value="1"
                   class="hidden"
-                  checked="checked" />
+                  checked="checked"
+                />
                 <div class="form-control w-full max-w-sm">
                   <label class="label" for="mce-EMAIL">
                     <span class="label-text">Email Address</span>
@@ -100,7 +107,8 @@ let { tags } = data
                       class="join-item input input-bordered w-full max-w-sm"
                       id="mce-EMAIL"
                       placeholder="mail@site.com"
-                      required />
+                      required
+                    />
                     <button name="subscribe" class="join-item btn btn-success">Subscribe</button>
                   </div>
                 </div>
@@ -109,7 +117,8 @@ let { tags } = data
                     type="text"
                     name="b_42813cff910e47b1bd132369a_9fd7333f07"
                     tabindex="-1"
-                    value="" />
+                    value=""
+                  />
                 </div>
               </form>
             </div>

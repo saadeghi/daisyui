@@ -3,16 +3,16 @@ import { productCustomAttributes, tech, techFilters, futureProducts } from "$lib
 
 const LSParams = {
   headers: {
-    "Accept": "application/vnd.api+json",
+    Accept: "application/vnd.api+json",
     "Content-type": "application/vnd.api+json",
-    "Authorization": `Bearer ${LEMONSQUEEZY_API_KEY}`,
+    Authorization: `Bearer ${LEMONSQUEEZY_API_KEY}`,
   },
 }
 
 export async function load({ params }) {
   const productsResponse = await fetch(
     "https://api.lemonsqueezy.com/v1/products?page[size]=100",
-    LSParams
+    LSParams,
   )
   let sortedData
   if (!productsResponse.ok) {

@@ -74,7 +74,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
         <item>
           <title>
             <![CDATA[ 🎁 ${discount.attributes.name} discount (valid until ${new Date(
-              discount.attributes.expires_at
+              discount.attributes.expires_at,
             ).toLocaleString("en-GB", dateFormat)}) ]]>
           </title>
           <description>
@@ -86,14 +86,14 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
                 : `${convertCurrency(discount.attributes.amount)}`
             } discount. Valid until ${new Date(discount.attributes.expires_at).toLocaleString(
               "en-GB",
-              dateFormat
+              dateFormat,
             )} ]]>
           </description>
           <link>${storeUrl}/</link>
           <pubDate>${new Date(discount.attributes.created_at).toUTCString()}</pubDate>
           <guid isPermaLink="false">${storeUrl}/</guid>
         </item>
-      `
+      `,
       )
       .join("")}
   </channel>

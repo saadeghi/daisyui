@@ -14,8 +14,8 @@ export async function load({ params }) {
           slug,
           ...metadata,
         }
-      }
-    )
+      },
+    ),
   )
   // filter posts by tag
   posts = posts.filter((item) => {

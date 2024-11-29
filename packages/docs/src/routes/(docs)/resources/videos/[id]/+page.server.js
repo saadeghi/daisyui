@@ -4,7 +4,7 @@ import videos from "$lib/json/youtube.json"
 
 export function load({ params }) {
   const video = videos.find(
-    (item) => `${slugify(item.snippet.title)}-${slugify(item.id)}` === params.id
+    (item) => `${slugify(item.snippet.title)}-${slugify(item.id)}` === params.id,
   )
 
   // 404 if video is not embeddable

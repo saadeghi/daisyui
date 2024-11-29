@@ -30,7 +30,7 @@ function translate(currentLang, key, vars, returnFallback) {
         return key
       }
       console.warn(
-        `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`
+        `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`,
       )
       return translations[`${path}/${defaultLang}.json`].default[key]
     }
@@ -48,7 +48,7 @@ export const t = derived(
   currentLang,
   ($currentLang) =>
     (key, vars = {}, lang = $currentLang, returnFallback = true) =>
-      translate(lang, key, vars, returnFallback)
+      translate(lang, key, vars, returnFallback),
 )
 
 const replaceStateWithQuery = (values) => {

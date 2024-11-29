@@ -13,7 +13,7 @@ export async function load() {
 
   const npmDownloadsInfo = await fetch(
     "https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui",
-    {}
+    {},
   )
 
   if (npmDownloadsInfo.ok) {
@@ -38,7 +38,7 @@ export async function load() {
 
   const contributors1 = await fetch(
     "https://api.github.com/repos/saadeghi/daisyui/contributors?page=1&per_page=100",
-    GHParams
+    GHParams,
   )
   if (contributors1.ok) {
     contributors = await contributors1.json()
@@ -48,7 +48,7 @@ export async function load() {
 
   const contributors2 = await fetch(
     "https://api.github.com/repos/saadeghi/daisyui/contributors?page=2&per_page=100",
-    GHParams
+    GHParams,
   )
   if (contributors2.ok) {
     contributors = contributors.concat(await contributors2.json())
@@ -61,7 +61,7 @@ export async function load() {
   if (openCollectiveBackers.ok) {
     backers = await openCollectiveBackers.json()
     backers = backers.filter(
-      (obj, index) => backers.findIndex((item) => item.name === obj.name) === index
+      (obj, index) => backers.findIndex((item) => item.name === obj.name) === index,
     )
   } else {
     console.error("Warning: Could not fetch open collective backers.")

@@ -8,7 +8,7 @@ export async function load({ params }) {
       return {
         ...metadata.tags,
       }
-    })
+    }),
   )
 
   const tags = []

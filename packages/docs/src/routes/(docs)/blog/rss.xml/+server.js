@@ -20,8 +20,8 @@ const get_posts = async () => {
           slug,
           ...metadata,
         }
-      }
-    )
+      },
+    ),
   )
   // filter out empty objects
   posts = posts.filter((obj) => Object.keys(obj).length !== 0)
@@ -86,7 +86,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <enclosure url="${siteUrl}${thumbnail}" type="image/jpeg" />
           <guid isPermaLink="false">${blogUrl}/${slug}/</guid>
         </item>
-      `
+      `,
       )
       .join("")}
   </channel>

@@ -91,11 +91,7 @@ export const productCustomAttributes = [
     quote: {
       img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
       name: "Pouya",
-      text: [
-        [
-          "HTML version is now available!",
-        ],
-      ],
+      text: [["HTML version is now available!"]],
     },
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["html", "react", "nextjs"],
@@ -134,8 +130,7 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-5.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
     originalprice: 4900,
     displayprice: 2900,
     tech: ["astro", "react", "nextjs", "mdx"],
@@ -195,8 +190,7 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-1.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
     ref: "K0XmL",
   },
@@ -219,8 +213,7 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/personal-blog/personal-blog-3.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
     tech: ["astro", "react", "nextjs", "mdx"],
     tags: ["Next.js version added"],
   },
@@ -263,8 +256,7 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-6.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
     ref: "K0XmL",
   },
@@ -297,8 +289,7 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-5.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
     tech: ["react", "svelte", "vite", "framer"],
   },
   {
@@ -388,15 +379,14 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-9.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
+    screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
     tech: ["html", "webcomponents"],
     // originalprice: 2900,
     // displayprice: 2600,
     // displaypricenote: "with discount",
     // tags: ['Use code "DASHBOARD10" for 10% discount'],
   },
-];
+]
 
 export const tech = {
   html: { title: "HTML", bg: "#E54C20", fg: "#FFF" },
@@ -411,12 +401,12 @@ export const tech = {
   mdx: { title: "MDX", bg: "#0A69DA", fg: "#FFF" },
   astro: { title: "Astro", bg: "#E944B0", fg: "#FFF" },
   nextjs: { title: "Next.js", bg: "#000", fg: "#FFF" },
-};
+}
 
-export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"];
+export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"]
 
 export const futureProducts = [
   "Headless UI + daisyUI component pack for React",
   "Headless UI + daisyUI component pack for Vue",
   "Ecommerce template",
-];
+]

@@ -1,6 +1,6 @@
 <script>
-import SEO from "$components/SEO.svelte"
-  let { data } = $props();
+  import SEO from "$components/SEO.svelte"
+  let { data } = $props()
 </script>
 
 <SEO title="daisyUI community articles" desc="Tailwind CSS articles and daisyUI tutorials" />
@@ -14,7 +14,8 @@ import SEO from "$components/SEO.svelte"
       href="https://github.com/saadeghi/daisyui/blob/master/src/docs/src/lib/data/articles.js"
       target="_blank"
       rel="noopener, noreferrer"
-      class="link">
+      class="link"
+    >
       add it here
     </a>
   </p>
@@ -23,9 +24,10 @@ import SEO from "$components/SEO.svelte"
   {#each data.articles as article}
     <a
       class="rounded-box hover:bg-base-200 group relative flex items-center justify-between overflow-hidden p-4 duration-300"
-      href="{article.link}"
+      href={article.link}
       target="_blank"
-      rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <div>
         <h2 class="text-xl font-bold group-hover:underline">{article.title}</h2>
         <p class="text-base-content/60 text-sm font-bold">by {article.site}</p>
@@ -36,20 +38,23 @@ import SEO from "$components/SEO.svelte"
         height="18"
         viewBox="0 0 48 48"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           d="M19 11H37V29"
           stroke="currentColor"
           stroke-width="4"
           stroke-linecap="butt"
-          stroke-linejoin="bevel">
+          stroke-linejoin="bevel"
+        >
         </path>
         <path
           d="M11.5439 36.4559L36.9997 11"
           stroke="currentColor"
           stroke-width="4"
           stroke-linecap="butt"
-          stroke-linejoin="bevel">
+          stroke-linejoin="bevel"
+        >
         </path>
       </svg>
     </a>

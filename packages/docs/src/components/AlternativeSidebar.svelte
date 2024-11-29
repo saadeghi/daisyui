@@ -1,6 +1,6 @@
 <script>
-import Sponsors from "$components/Sponsors.svelte"
-import Carbon from "$components/Carbon.svelte"
+  import Sponsors from "$components/Sponsors.svelte"
+  import Carbon from "$components/Carbon.svelte"
 </script>
 
 <div>
