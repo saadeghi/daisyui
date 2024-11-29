@@ -210,10 +210,10 @@
       )
       // document.activeElement.blur();
       holdInterval = null
-      svgElement.style.removeProperty("transition")
-      svgElement.style.removeProperty("rotate")
-      btnElement.style.removeProperty("transition")
-      btnElement.style.removeProperty("box-shadow")
+      svgElement?.style?.removeProperty("transition")
+      svgElement?.style?.removeProperty("rotate")
+      btnElement?.style?.removeProperty("transition")
+      btnElement?.style?.removeProperty("box-shadow")
     }, 3000)
   }
 
@@ -222,10 +222,10 @@
     clearInterval(holdInterval)
     holdTimeout = null
     holdInterval = null
-    svgElement.style.removeProperty("transition")
-    svgElement.style.removeProperty("rotate")
-    btnElement.style.removeProperty("transition")
-    btnElement.style.removeProperty("box-shadow")
+    svgElement?.style?.removeProperty("transition")
+    svgElement?.style?.removeProperty("rotate")
+    btnElement?.style?.removeProperty("transition")
+    btnElement?.style?.removeProperty("box-shadow")
   }
 </script>
 
@@ -661,12 +661,12 @@
     <div
       class="p-8 bg-base-200"
       style={`
-      ${currentThemeStyle}
       box-shadow:1rem 0 .2rem -1rem #0001 inset;
       --pattern-color: color-mix(in oklab, var(--color-base-content) 2%, transparent);
       background-image: linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
       background-size: 40px 40px;
       background-attachment: fixed;
+      ${currentThemeStyle}
       `}
     >
       <Preview />

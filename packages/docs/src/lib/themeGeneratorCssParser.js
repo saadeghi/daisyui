@@ -6,6 +6,24 @@ import {
   validateBoolean,
 } from "$lib/themeGeneratorValidation"
 
+const roundToThreeDecimals = (num) => Math.round(num * 1000) / 1000
+
+const convertOklchToPercentage = (color) => {
+  const oklchRegex = /^oklch\((\d*\.?\d+)(%?) (\d*\.?\d+) (\d*\.?\d+)\)$/
+  const match = color.match(oklchRegex)
+
+  if (match) {
+    let [_, lightness, unit, chroma, hue] = match
+    lightness = unit === "%" ? parseFloat(lightness) : parseFloat(lightness) * 100
+    lightness = roundToThreeDecimals(lightness)
+    chroma = roundToThreeDecimals(parseFloat(chroma))
+    hue = roundToThreeDecimals(parseFloat(hue))
+    return `oklch(${lightness}% ${chroma} ${hue})`
+  }
+
+  return color
+}
+
 export function parseThemeCSS(text, currentThemeData) {
   try {
     const regex = /^@plugin "daisyui\/theme" \{[\s\S]*\}$/m
@@ -78,11 +96,12 @@ export function parseThemeCSS(text, currentThemeData) {
           continue
         }
         try {
-          const temp = document.createElement("div")
-          temp.style.color = value
-          temp.style.color = `oklch(from ${temp.style.color})`
-          if (temp.style.color) {
-            newThemeData[key] = temp.style.color
+          const convertedColor = convertOklchToPercentage(value)
+          if (value !== convertedColor) {
+            console.log(value, "→", convertedColor)
+          }
+          if (convertedColor) {
+            newThemeData[key] = convertedColor
           } else {
             console.error(`Failed to convert color to OKLCH: ${value}`)
             hasErrors = true
