@@ -162,15 +162,42 @@
       `  prefersdark: ${theme.prefersdark ? "true" : "false"};`,
       `  color-scheme: "${theme["color-scheme"]}";`,
     ]
-    const cssProps = Object.entries(theme)
-      .filter(([key]) => key.startsWith("--color"))
-      .map(([key, value]) => `  ${key}: ${value};`)
-    const radiusProps = Object.entries(theme)
-      .filter(([key]) => key.startsWith("--radius"))
-      .map(([key, value]) => `  ${key}: ${value};`)
-    const borderProps = Object.entries(theme)
-      .filter(([key]) => key.startsWith("--spacing"))
-      .map(([key, value]) => `  ${key}: ${value};`)
+
+    const orderedColorKeys = [
+      "--color-base-100",
+      "--color-base-200",
+      "--color-base-300",
+      "--color-base-content",
+      "--color-primary",
+      "--color-primary-content",
+      "--color-secondary",
+      "--color-secondary-content",
+      "--color-accent",
+      "--color-accent-content",
+      "--color-neutral",
+      "--color-neutral-content",
+      "--color-info",
+      "--color-info-content",
+      "--color-success",
+      "--color-success-content",
+      "--color-warning",
+      "--color-warning-content",
+      "--color-error",
+      "--color-error-content",
+    ]
+
+    const cssProps = orderedColorKeys
+      .filter((key) => theme[key])
+      .map((key) => `  ${key}: ${theme[key]};`)
+
+    const radiusProps = ["--radius-selector", "--radius-field", "--radius-box"]
+      .filter((key) => theme[key])
+      .map((key) => `  ${key}: ${theme[key]};`)
+
+    const borderProps = ["--spacing-button-border"]
+      .filter((key) => theme[key])
+      .map((key) => `  ${key}: ${theme[key]};`)
+
     return `\n@plugin "daisyui/theme" {\n${baseProps.join("\n")}\n${cssProps.join("\n")}\n${radiusProps.join("\n")}\n${borderProps.join("\n")}\n}\n`
   }
 
