@@ -31,4 +31,5 @@ export const themes = [
   "dim",
   "nord",
   "sunset",
+  "abyss",
 ]

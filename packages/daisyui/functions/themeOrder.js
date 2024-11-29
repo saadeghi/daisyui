@@ -31,4 +31,5 @@ export default [
   "dim",
   "nord",
   "sunset",
+  "abyss",
 ]
