@@ -415,21 +415,21 @@
                     <button
                       onclick={() => (activeMenuItemOnHeroMockup = 1)}
                       class:tab-active={activeMenuItemOnHeroMockup === 1}
-                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs py-2! me-0!"
+                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs me-0!"
                     >
                       {$t("Features")}
                     </button>
                     <button
                       onclick={() => (activeMenuItemOnHeroMockup = 2)}
                       class:tab-active={activeMenuItemOnHeroMockup === 2}
-                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs py-2! me-0!"
+                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs me-0!"
                     >
                       {$t("Links")}
                     </button>
                     <button
                       onclick={() => (activeMenuItemOnHeroMockup = 3)}
                       class:tab-active={activeMenuItemOnHeroMockup === 3}
-                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs py-2! me-0!"
+                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs me-0!"
                     >
                       {$t("Message")}
                     </button>
@@ -441,9 +441,9 @@
                   >
                     {#if activeMenuItemOnHeroMockup === 1}
                       <div class="flex flex-col items-stretch p-6">
-                        <div class="form-control">
-                          <label class="label cursor-pointer">
-                            <span class="label-text text-xs">{$t("Faster development")}</span>
+                        <fieldset class="fieldset py-2">
+                          <label class="label cursor-pointer text-xs justify-between">
+                            {$t("Faster development")}
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-primary"
@@ -451,10 +451,10 @@
                               checked="checked"
                             />
                           </label>
-                        </div>
-                        <div class="form-control">
-                          <label class="label cursor-pointer">
-                            <span class="label-text text-xs">{$t("Cleaner HTML")}</span>
+                        </fieldset>
+                        <fieldset class="fieldset py-2">
+                          <label class="label cursor-pointer text-xs justify-between">
+                            {$t("Cleaner HTML")}
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-secondary"
@@ -462,10 +462,10 @@
                               checked="checked"
                             />
                           </label>
-                        </div>
-                        <div class="form-control">
-                          <label class="label cursor-pointer">
-                            <span class="label-text text-xs">{$t("Customizable")}</span>
+                        </fieldset>
+                        <fieldset class="fieldset py-2">
+                          <label class="label cursor-pointer text-xs justify-between">
+                            {$t("Customizable")}
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-accent"
@@ -473,10 +473,10 @@
                               checked="checked"
                             />
                           </label>
-                        </div>
-                        <div class="form-control">
-                          <label class="label cursor-pointer">
-                            <span class="label-text text-xs">{$t("Themeable")}</span>
+                        </fieldset>
+                        <fieldset class="fieldset py-2">
+                          <label class="label cursor-pointer text-xs justify-between">
+                            {$t("Themeable")}
                             <input
                               type="checkbox"
                               class="toggle toggle-sm toggle-success"
@@ -484,10 +484,10 @@
                               checked="checked"
                             />
                           </label>
-                        </div>
-                        <div class="form-control">
-                          <label class="label cursor-pointer">
-                            <span class="label-text text-xs">{$t("Pure CSS")}</span>
+                        </fieldset>
+                        <fieldset class="fieldset py-2">
+                          <label class="label cursor-pointer text-xs justify-between">
+                            {$t("Pure CSS")}
                             <input
                               type="checkbox"
                               class="toggle toggle-sm"
@@ -495,11 +495,11 @@
                               checked="checked"
                             />
                           </label>
-                        </div>
+                        </fieldset>
                       </div>
                     {/if}
                     {#if activeMenuItemOnHeroMockup === 2}
-                      <ul class="menu">
+                      <ul class="menu w-full">
                         <li class="menu-title">{$t("Dashboard")}</li>
                         <li>
                           <button>
