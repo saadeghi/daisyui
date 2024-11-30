@@ -434,7 +434,7 @@
       />
 
       <svg
-        class="justify-self-end"
+        class="justify-self-end opacity-40"
         width="16px"
         height="16px"
         viewBox="0 0 24 24"
@@ -492,7 +492,40 @@
       </button>
     </div>
 
-    <h3 class="divider text-xs divider-start">Colors</h3>
+    <h3 class="divider text-xs divider-start">
+      <span class="flex gap-1.5">
+        <svg
+          class="opacity-40"
+          width="16"
+          height="16"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M37 37C39.2091 37 41 35.2091 41 33C41 31.5272 39.6667 29.5272 37 27C34.3333 29.5272 33 31.5272 33 33C33 35.2091 34.7909 37 37 37Z"
+            fill="currentColor"
+          /><path
+            d="M20.8535 5.50439L24.389 9.03993"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+          /><path
+            d="M23.6818 8.33281L8.12549 23.8892L19.4392 35.2029L34.9955 19.6465L23.6818 8.33281Z"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linejoin="round"
+          /><path
+            d="M12 20.0732L28.961 25.6496"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+          /></svg
+        >
+        Change Colors
+      </span>
+    </h3>
     <div class="grid grid-cols-4 gap-4 w-fit">
       {#each ["base", "primary", "secondary", "accent", "neutral", "info", "success", "warning", "error"] as group}
         <div
@@ -524,10 +557,46 @@
       {/each}
     </div>
 
-    <h3 class="divider text-xs divider-start">Radius</h3>
-    {#each data.radiusValues as [key, label, values]}
+    <h3 class="divider text-xs divider-start">
+      <span class="flex gap-1.5">
+        <svg
+          class="opacity-40"
+          width="16"
+          height="16"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M24 42V27M42 24H27"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><circle
+            cx="24"
+            cy="24"
+            r="3"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><path
+            d="M42 6H24C14.0589 6 6 14.0589 6 24V42"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+        >
+        Radius
+      </span>
+    </h3>
+    {#each data.radiusValues as [key, label, desc, values]}
       <div class="form-control w-full max-w-fit">
-        <div class="text-[0.6875rem] mb-2 text-base-content/60" id={`${key}-group`}>{label}</div>
+        <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
+          <span class="text-base-content/60">{label}</span>
+          <span class="text-base-content/20 italic">{desc}</span>
+        </div>
         <div class="flex gap-2" role="radiogroup" aria-labelledby={`${key}-group`}>
           {#each values as value}
             <label
@@ -556,7 +625,62 @@
       </div>
     {/each}
 
-    <h3 class="divider text-xs divider-start">Border size</h3>
+    <h3 class="divider text-xs divider-start">
+      <span class="flex gap-1.5">
+        <svg
+          class="opacity-40"
+          width="16"
+          height="16"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M44 14L34 4L30.25 7.75L26.5 11.5L19 19L11.5 26.5L7.75 30.25L4 34L14 44L44 14Z"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><path
+            d="M30.25 7.75L7.75 30.25"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><path
+            d="M9 29L13 33"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><path
+            d="M14 24L20 30"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><path
+            d="M19 19L23 23"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><path
+            d="M24 14L30 20"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /><path
+            d="M29 9L33 13"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+        >
+        Border size
+      </span>
+    </h3>
     {#each [["--spacing-button-border", "Button"]] as [key, label]}
       <div class="flex justify-between items-center">
         <span class="text-xs text-base-content/60">{label}</span>
@@ -575,7 +699,32 @@
       </div>
     {/each}
 
-    <h3 class="divider text-xs divider-start">Options</h3>
+    <h3 class="divider text-xs divider-start">
+      <span class="flex gap-1.5">
+        <svg
+          class="opacity-40"
+          width="16"
+          height="16"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M18.2838 43.1713C14.9327 42.1736 11.9498 40.3213 9.58787 37.867C10.469 36.8227 11 35.4734 11 34.0001C11 30.6864 8.31371 28.0001 5 28.0001C4.79955 28.0001 4.60139 28.01 4.40599 28.0292C4.13979 26.7277 4 25.3803 4 24.0001C4 21.9095 4.32077 19.8938 4.91579 17.9995C4.94381 17.9999 4.97188 18.0001 5 18.0001C8.31371 18.0001 11 15.3138 11 12.0001C11 11.0488 10.7786 10.1493 10.3846 9.35011C12.6975 7.1995 15.5205 5.59002 18.6521 4.72314C19.6444 6.66819 21.6667 8.00013 24 8.00013C26.3333 8.00013 28.3556 6.66819 29.3479 4.72314C32.4795 5.59002 35.3025 7.1995 37.6154 9.35011C37.2214 10.1493 37 11.0488 37 12.0001C37 15.3138 39.6863 18.0001 43 18.0001C43.0281 18.0001 43.0562 17.9999 43.0842 17.9995C43.6792 19.8938 44 21.9095 44 24.0001C44 25.3803 43.8602 26.7277 43.594 28.0292C43.3986 28.01 43.2005 28.0001 43 28.0001C39.6863 28.0001 37 30.6864 37 34.0001C37 35.4734 37.531 36.8227 38.4121 37.867C36.0502 40.3213 33.0673 42.1736 29.7162 43.1713C28.9428 40.752 26.676 39.0001 24 39.0001C21.324 39.0001 19.0572 40.752 18.2838 43.1713Z"
+            fill="none"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linejoin="round"
+          /><path
+            d="M24 31C27.866 31 31 27.866 31 24C31 20.134 27.866 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31Z"
+            fill="none"
+            stroke="#333"
+            stroke-width="4"
+            stroke-linejoin="round"
+          /></svg
+        >
+        Options
+      </span>
+    </h3>
 
     <div class="flex gap-2 items-center justify-between">
       <span class="text-xs flex items-center gap-1 text-base-content/60"> Default theme </span>

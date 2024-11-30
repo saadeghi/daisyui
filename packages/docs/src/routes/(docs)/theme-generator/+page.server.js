@@ -13,15 +13,17 @@ function builtinThemes() {
 }
 
 const radiusValues = [
-  ["--radius-box", "boxes (card, modal, alert)", ["0rem", "0.25rem", "0.5rem", "1rem", "2rem"]],
+  ["--radius-box", "Boxes", "card, modal, alert", ["0rem", "0.25rem", "0.5rem", "1rem", "2rem"]],
   [
     "--radius-field",
-    "Fields (button, input, select)",
+    "Fields",
+    "button, input, select, tab",
     ["0rem", "0.25rem", "0.5rem", "1rem", "2rem"],
   ],
   [
     "--radius-selector",
-    "Selectors (checkbox, toggle, badge, tab)",
+    "Selectors",
+    "checkbox, toggle, badge",
     ["0rem", "0.25rem", "0.5rem", "1rem", "2rem"],
   ],
 ]
