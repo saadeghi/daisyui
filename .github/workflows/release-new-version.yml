@@ -32,11 +32,11 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
 
-      - name: Install package dependencies
-        run: bun install
+      - name: Install dependencies
+        run: bun i
 
-      - name: build package
-        run: bun run build
+      - name: Build package
+        run: bun run build:prod
 
       - name: Run release command
         if: github.repository == 'saadeghi/daisyui'
@@ -77,7 +77,7 @@ jobs:
     uses: ./.github/workflows/run-tests.yml
     secrets: inherit
     with:
-      filter: " "
+      filter: ""
 
   write-release-notes:
     name: 📝 Release notes

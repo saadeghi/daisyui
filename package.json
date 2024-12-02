@@ -6,8 +6,10 @@
   ],
   "scripts": {
     "build": "cd packages/daisyui && bun run build",
-    "dev": "bun run build && cd packages/docs && bun run dev",
+    "build:prod": "cd packages/daisyui && bun run build --prod",
     "build:docs": "bun run build && cd packages/docs && bun run build",
+    "build:docs:prod": "bun run build:prod && cd packages/docs && bun run build",
+    "dev": "bun run build && cd packages/docs && bun run dev",
     "play": "bun run build && cd packages/playground && bun run dev",
     "format": "bunx prettier 'packages/{daisyui,docs}/{src,functions}/**/*.{css,js,json,svelte}' --write",
     "lint": "bunx -y oxlint@latest",

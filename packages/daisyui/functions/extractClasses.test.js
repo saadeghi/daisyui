@@ -32,13 +32,13 @@ test("extractClasses processes CSS files and extracts class names", async () => 
   const srcDir = "styles"
   const totalClassNames = await extractClasses({ srcDir })
 
-  expect(mockReaddir).toHaveBeenCalledWith(path.join(__dirname, "..", "css", srcDir))
+  expect(mockReaddir).toHaveBeenCalledWith(path.join(__dirname, "..", "src", srcDir))
   expect(mockReadFile).toHaveBeenCalledWith(
-    path.join(__dirname, "..", "css", srcDir, "file1.css"),
+    path.join(__dirname, "..", "src", srcDir, "file1.css"),
     "utf8",
   )
   expect(mockReadFile).toHaveBeenCalledWith(
-    path.join(__dirname, "..", "css", srcDir, "file2.css"),
+    path.join(__dirname, "..", "src", srcDir, "file2.css"),
     "utf8",
   )
   expect(mockMkdir).toHaveBeenCalledWith(path.join(__dirname, "..", srcDir, "file1"), {

@@ -4,16 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       filter:
-        type: choice
+        type: string
         description: Filter tests
-        default: " "
-        options:
-          - " "
-          - "-t framework"
-          - "-t contrast"
-          - "-t foreground"
-          - "-t variables"
-          - "-t colors"
+        default: ""
   workflow_call:
     inputs:
       filter:
@@ -22,6 +15,7 @@ on:
     branches:
       - master
     paths:
+      - "packages/daisyui/functions/**"
       - "packages/daisyui/src/**"
       - "packages/daisyui/src/build.js"
       - "packages/daisyui/src/index.js"
@@ -29,7 +23,7 @@ jobs:
   tests:
     timeout-minutes: 10
     env:
-      filter: ${{ inputs.filter || ' '}}
+      filter: ${{ inputs.filter }}
     name: "Tests"
     runs-on: ubuntu-latest
     steps:
@@ -42,11 +36,16 @@ jobs:
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
 
-      - name: Install package dependencies
-        run: bun install
+      - name: Install dependencies
+        run: bun i
 
       - name: build package
-        run: bun run build
+        run: bun run build:prod
 
       - name: Run tests
-        run: bun test ${{ env.filter }}
+        run: |
+          if [ -z "${{ env.filter }}" ]; then
+            bun test
+          else
+            bun test -t ${{ env.filter }}
+          fi

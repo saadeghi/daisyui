@@ -34,10 +34,10 @@ jobs:
         uses: oven-sh/setup-bun@v1.2.2
 
       - name: Install dependencies
-        run: bun install
+        run: bun i
 
       - name: Build package
-        run: bun run build
+        run: bun run build:prod
 
       - name: Add robots.txt if not main repo
         if: github.repository != 'saadeghi/daisyui'
@@ -46,7 +46,7 @@ jobs:
           Disallow: /' > packages/docs/static/robots.txt
 
       - name: Build docs
-        run: bun run build:docs
+        run: bun run build:docs:prod
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v4
