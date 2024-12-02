@@ -1,7 +1,7 @@
 // Validation patterns
 const themeNamePattern = /^[a-z]{3,20}$/
 const borderRadiusPattern = /^(0|0rem|0\.125rem|0\.25rem|0\.5rem|0\.75rem|1rem|2rem)$/
-const borderWidthPattern = /^[12]px$/
+const borderWidthPattern = /^(0\.5px|1px|1\.5px|2px)$/
 
 export function validateColor(color) {
   if (typeof color !== "string") {

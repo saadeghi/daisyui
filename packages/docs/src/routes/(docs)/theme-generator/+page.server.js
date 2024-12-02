@@ -27,6 +27,9 @@ const radiusValues = [
     ["0rem", "0.25rem", "0.5rem", "1rem", "2rem"],
   ],
 ]
+const sizeValues = [
+  ["--border-width", "Border Width", "All components", ["0.5px", "1px", "1.5px", "2px"]],
+]
 const colorInitials = {
   "--color-base-100": "b1",
   "--color-base-200": "b2",
@@ -317,5 +320,6 @@ export async function load() {
     tailwindcolors,
     colorInitials,
     radiusValues,
+    sizeValues,
   }
 }

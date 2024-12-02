@@ -6,7 +6,8 @@
     @apply relative ms-4 ps-2 whitespace-nowrap;
 
     &:before {
-      @apply bg-base-content absolute start-0 top-3 bottom-3 w-px opacity-10;
+      @apply bg-base-content absolute start-0 top-3 bottom-3 opacity-10;
+      width: var(--border-width);
       content: "";
     }
   }

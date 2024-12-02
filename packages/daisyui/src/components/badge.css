@@ -1,9 +1,9 @@
 .badge {
   @apply rounded-selector text-base-content inline-flex items-center justify-center gap-2 align-middle;
-  border: 1px solid var(--badge-color, var(--color-base-200));
+  border: var(--border-width) solid var(--badge-color, var(--color-base-200));
   font-size: 0.875rem;
   width: fit-content;
-  padding-inline: calc(0.25rem * 3 - 1px);
+  padding-inline: calc(0.25rem * 3 - var(--border-width));
   transition-property: color, background-color, box-shadow;
   background: var(--badge-color, var(--color-base-100));
   --spacing-selector-size: 0.25rem;
@@ -17,7 +17,7 @@
   &.badge-dash {
     color: var(--badge-color, var(--color-base-content));
     @apply bg-transparent;
-    border-style: 1px dashed currentColor;
+    border-style: dashed;
   }
 
   &.badge-soft {
@@ -82,29 +82,29 @@
 .badge-xs {
   --selector-size: calc(var(--spacing-selector-size) * 4);
   font-size: 0.625rem;
-  padding-inline: calc(0.25rem * 2 - 1px);
+  padding-inline: calc(0.25rem * 2 - var(--border-width));
 }
 
 .badge-sm {
   --selector-size: calc(var(--spacing-selector-size) * 5);
   font-size: 0.75rem;
-  padding-inline: calc(0.25rem * 2.5 - 1px);
+  padding-inline: calc(0.25rem * 2.5 - var(--border-width));
 }
 
 .badge-md {
   --selector-size: calc(var(--spacing-selector-size) * 6);
   font-size: 0.875rem;
-  padding-inline: calc(0.25rem * 3 - 1px);
+  padding-inline: calc(0.25rem * 3 - var(--border-width));
 }
 
 .badge-lg {
   --selector-size: calc(var(--spacing-selector-size) * 7);
   font-size: 1rem;
-  padding-inline: calc(0.25rem * 3.5 - 1px);
+  padding-inline: calc(0.25rem * 3.5 - var(--border-width));
 }
 
 .badge-xl {
   --selector-size: calc(var(--spacing-selector-size) * 8);
   font-size: 1.125rem;
-  padding-inline: calc(0.25rem * 4 - 1px);
+  padding-inline: calc(0.25rem * 4 - var(--border-width));
 }

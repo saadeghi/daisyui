@@ -1,6 +1,6 @@
 .file-input {
   cursor: pointer;
-  border: var(--spacing-button-border) solid transparent;
+  border: var(--border-width) solid transparent;
   @apply inline-flex w-full max-w-80 cursor-pointer appearance-none items-center align-middle select-none;
   height: var(--field-size);
   padding-inline-end: 0.75rem;
@@ -25,15 +25,13 @@
     @apply me-4 h-full cursor-pointer px-4 select-none;
     font-size: 0.875rem;
     color: var(--btn-fg);
-    border-width: var(--spacing-button-border);
+    border-width: var(--border-width);
     border-style: solid;
     border-color: var(--btn-border);
     border-start-start-radius: calc(
-      var(--radius-join-ss, var(--radius-field) - var(--spacing-button-border))
+      var(--radius-join-ss, var(--radius-field) - var(--border-width))
     );
-    border-end-start-radius: calc(
-      var(--radius-join-es, var(--radius-field) - var(--spacing-button-border))
-    );
+    border-end-start-radius: calc(var(--radius-join-es, var(--radius-field) - var(--border-width)));
     font-weight: 600;
     background-color: var(--btn-bg);
     text-shadow: 0 0.5px oklch(1 0 0 / 0.15);
@@ -44,8 +42,8 @@
     background-origin: border-box;
     background-image: var(--btn-gradient);
     background-size:
-      100% calc(var(--spacing-button-border) + 0.5px),
-      100% calc(var(--spacing-button-border) + 0.5px),
+      100% calc(var(--border-width) + 0.5px),
+      100% calc(var(--border-width) + 0.5px),
       2rem 100%,
       2rem 100%;
     background-repeat: no-repeat;

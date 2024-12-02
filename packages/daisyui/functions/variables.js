@@ -27,6 +27,6 @@ export default {
     box: "var(--radius-box)",
   },
   borderWidth: {
-    button: "var(--spacing-button-border)",
+    button: "var(--border-width)",
   },
 }

@@ -27,7 +27,7 @@ const requiredValues = [
   "--radius-selector",
   "--radius-field",
   "--radius-box",
-  "--spacing-button-border",
+  "--border-width",
 ]
 
 const isOklch = (value) => /^oklch\(\d+(\.\d+)?% \d+(\.\d+)? \d+(\.\d+)?\)$/.test(value)
@@ -56,7 +56,7 @@ themeFiles.forEach((file) => {
           expect(isOklch(cssValue)).toBe(true)
         } else if (value.startsWith("--radius-")) {
           expect(isRem(cssValue)).toBe(true)
-        } else if (value === "--spacing-button-border") {
+        } else if (value === "--border-width") {
           expect(isPx(cssValue)).toBe(true)
         }
       }

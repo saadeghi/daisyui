@@ -45,7 +45,7 @@
 
   let currentThemeStyle = $derived.by(() => {
     let styleString = Object.entries(currentTheme)
-      .filter(([key]) => !["prefersdark", "default", "name"].includes(key))
+      .filter(([key]) => !["prefersdark", "default", "name", "type", "id"].includes(key))
       .map(([key, value]) => `${key}:${value}`)
       .join(";")
     return styleString
@@ -194,7 +194,7 @@
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
-    const borderProps = ["--spacing-button-border"]
+    const borderProps = ["--border-width"]
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
@@ -678,22 +678,40 @@
             stroke-linejoin="round"
           /></svg
         >
-        Border size
+        Sizes
       </span>
     </h3>
-    {#each [["--spacing-button-border", "Button"]] as [key, label]}
-      <div class="flex justify-between items-center">
-        <span class="text-xs text-base-content/60">{label}</span>
-        <div class="join">
-          {#each ["1px", "2px"] as value}
-            <input
-              type="radio"
-              name={key}
-              class="join-item btn btn-xs"
-              bind:group={currentTheme[key]}
-              {value}
-              aria-label={value}
-            />
+    {#each data.sizeValues as [key, label, desc, values]}
+      <div class="form-control w-full max-w-fit">
+        <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
+          <span class="text-base-content/60">{label}</span>
+          <span class="text-base-content/20 italic">{desc}</span>
+        </div>
+        <div class="flex gap-2" role="radiogroup" aria-labelledby={`${key}-group`}>
+          {#each values as value}
+            <label
+              class="rounded-field overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
+              title={value}
+            >
+              <input
+                type="radio"
+                name={key}
+                class="sr-only"
+                bind:group={currentTheme[key]}
+                {value}
+                aria-label={`${value} width`}
+              />
+              <div class="pt-3 px-3" aria-hidden="true">
+                <div
+                  class="w-8 h-6 text-[10px] font-mono border-base-content/20"
+                  style={`border-top-width:${value}`}
+                  class:text-primary={currentTheme[key] === value}
+                  class:border-primary={currentTheme[key] === value}
+                >
+                  {value}
+                </div>
+              </div>
+            </label>
           {/each}
         </div>
       </div>

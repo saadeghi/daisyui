@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-[.5px] [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_*]:[transition:background-color_100ms,border-color_100ms,border-radius_500ms_ease-out] pb-20"
+  class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_*]:[transition:background-color_0ms,border-color_100ms,border-radius_500ms_ease-out] pb-20"
 >
   <!-- <nav class="bg-base-200 text-base-content rounded-box col-span-8 flex gap-2 items-center justify-between">
     <ul class="menu menu-sm menu-horizontal shrink-0">
@@ -202,9 +202,7 @@
   <!-- tabs -->
   <div role="tablist" class="tabs tabs-lift">
     <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
-    <div role="tabpanel" class="tab-content border bg-base-100 border-base-300 p-6">
-      Tab content 1
-    </div>
+    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
 
     <input
       type="radio"
@@ -214,14 +212,10 @@
       aria-label="Tab 2"
       checked="checked"
     />
-    <div role="tabpanel" class="tab-content border bg-base-100 border-base-300 p-6">
-      Tab content 2
-    </div>
+    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
 
     <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3" />
-    <div role="tabpanel" class="tab-content border bg-base-100 border-base-300 p-6">
-      Tab content 3
-    </div>
+    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
   </div>
 
   <!-- range -->
