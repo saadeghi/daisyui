@@ -40,20 +40,18 @@
 }
 
 .chat-header {
-  @apply row-start-1;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  @apply row-start-1 flex gap-1;
+  font-size: 0.6875rem;
 }
 
 .chat-footer {
-  @apply row-start-3;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  @apply row-start-3 flex gap-1;
+  font-size: 0.6875rem;
 }
 
 .chat-bubble {
   @apply rounded-field bg-base-300 text-base-content relative block w-fit px-4 py-2;
-  min-height: 2.5rem;
+  min-height: 2rem;
   min-width: 2.5rem;
   max-width: 90%;
 
