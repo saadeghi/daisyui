@@ -28,6 +28,22 @@ const radiusValues = [
   ],
 ]
 const sizeValues = [
+  [
+    "--size-field",
+    "Fields",
+    "button, input, select, tab",
+    ["0.1875rem", "0.21875rem", "0.25rem", "0.28125rem", "0.3125rem"],
+    [6, 8, 10, 12, 14],
+  ],
+  [
+    "--size-selector",
+    "Selectors",
+    "checkbox, toggle, badge",
+    ["0.1875rem", "0.21875rem", "0.25rem", "0.28125rem", "0.3125rem"],
+    [4, 5, 6, 7, 8],
+  ],
+]
+const borderValues = [
   ["--border-width", "Border Width", "All components", ["0.5px", "1px", "1.5px", "2px"]],
 ]
 const colorInitials = {
@@ -321,5 +337,6 @@ export async function load() {
     colorInitials,
     radiusValues,
     sizeValues,
+    borderValues,
   }
 }

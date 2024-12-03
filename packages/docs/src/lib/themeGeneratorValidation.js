@@ -2,6 +2,7 @@
 const themeNamePattern = /^[a-z]{3,20}$/
 const borderRadiusPattern = /^(0|0rem|0\.125rem|0\.25rem|0\.5rem|0\.75rem|1rem|2rem)$/
 const borderWidthPattern = /^(0\.5px|1px|1\.5px|2px)$/
+const sizePattern = /^(0\.1875rem|0\.21875rem|0\.25rem|0\.28125rem|0\.3125rem)$/
 
 export function validateColor(color) {
   if (typeof color !== "string") {
@@ -35,8 +36,12 @@ export function validateRadius(radius) {
   return typeof radius === "string" && borderRadiusPattern.test(radius)
 }
 
-export function validateBorderWidth(spacing) {
-  return typeof spacing === "string" && borderWidthPattern.test(spacing)
+export function validateBorderWidth(size) {
+  return typeof size === "string" && borderWidthPattern.test(size)
+}
+
+export function validateSize(size) {
+  return typeof size === "string" && sizePattern.test(size)
 }
 
 export function validateThemeStructure(data) {
@@ -55,7 +60,9 @@ export function validateThemeStructure(data) {
         throw new Error(`Invalid color value for ${key}`)
       if (key.startsWith("--radius-") && !validateRadius(value))
         throw new Error(`Invalid radius value for ${key}:${value}`)
-      if (key.startsWith("--spacing-") && !validateBorderWidth(value))
+      if (key.startsWith("--size-") && !validateSize(value))
+        throw new Error(`Invalid size for ${key}`)
+      if (key.startsWith("--border-width") && !validateBorderWidth(value))
         throw new Error(`Invalid border width value for ${key}`)
     }
 

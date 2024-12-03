@@ -27,6 +27,8 @@ const requiredValues = [
   "--radius-selector",
   "--radius-field",
   "--radius-box",
+  "--size-selector",
+  "--size-field",
   "--border-width",
 ]
 

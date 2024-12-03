@@ -1,7 +1,7 @@
 .select {
   border: var(--border-width) solid transparent;
   @apply bg-base-100 relative inline-flex w-full max-w-80 shrink appearance-none items-center gap-1.5 px-4 align-middle;
-  height: var(--field-size);
+  height: var(--size);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
@@ -25,8 +25,7 @@
     0 -1px oklch(100% 0 0 / 0.1) inset;
   border-color: var(--input-color);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
-  --spacing-field-size: 0.25rem;
-  --field-size: calc(var(--spacing-field-size) * 9);
+  --size: calc(var(--size-field, 0.25rem) * 10);
   select {
     @apply w-full appearance-none bg-transparent;
     border-style: none;
@@ -143,26 +142,26 @@
 }
 
 .select-xs {
-  --field-size: calc(var(--spacing-field-size) * 6);
+  --size: calc(var(--size-field, 0.25rem) * 6);
   font-size: 0.6875rem;
 }
 
 .select-sm {
-  --field-size: calc(var(--spacing-field-size) * 8);
+  --size: calc(var(--size-field, 0.25rem) * 8);
   font-size: 0.75rem;
 }
 
 .select-md {
-  --field-size: calc(var(--spacing-field-size) * 10);
+  --size: calc(var(--size-field, 0.25rem) * 10);
   font-size: 0.875rem;
 }
 
 .select-lg {
-  --field-size: calc(var(--spacing-field-size) * 12);
+  --size: calc(var(--size-field, 0.25rem) * 12);
   font-size: 1.125rem;
 }
 
 .select-xl {
-  --field-size: calc(var(--spacing-field-size) * 14);
+  --size: calc(var(--size-field, 0.25rem) * 14);
   font-size: 1.375rem;
 }

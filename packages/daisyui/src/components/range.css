@@ -2,11 +2,10 @@
   appearance: none;
   -webkit-appearance: none;
   --range-shdw: currentColor;
-  @apply rounded-box w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
+  @apply rounded-selector w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
   border: none;
-  --spacing-selector-size: 0.25rem;
-  --selector-size: calc(var(--spacing-selector-size) * 6);
-  height: var(--selector-size);
+  --size: calc(var(--size-selector, 0.25rem) * 6);
+  height: var(--size);
   &:focus {
     outline: none;
   }
@@ -16,14 +15,14 @@
   }
 
   &::-webkit-slider-runnable-track {
-    @apply rounded-box bg-base-content/10 w-full;
-    height: calc(var(--selector-size) * 0.5);
+    @apply rounded-selector bg-base-content/10 w-full;
+    height: calc(var(--size) * 0.5);
   }
 
   &::-webkit-slider-thumb {
-    @apply rounded-box bg-base-100 relative;
-    height: var(--selector-size);
-    width: var(--selector-size);
+    @apply rounded-selector bg-base-100 relative;
+    height: var(--size);
+    width: var(--size);
     border: none;
     appearance: none;
     -webkit-appearance: none;
@@ -43,14 +42,14 @@
   }
 
   &::-moz-range-track {
-    @apply rounded-box bg-base-content/10 w-full;
-    height: calc(var(--selector-size) * 0.5);
+    @apply rounded-selector bg-base-content/10 w-full;
+    height: calc(var(--size) * 0.5);
   }
 
   &::-moz-range-thumb {
-    @apply rounded-box bg-base-100 relative;
-    height: var(--selector-size);
-    width: var(--selector-size);
+    @apply rounded-selector bg-base-100 relative;
+    height: var(--size);
+    width: var(--size);
     border: none;
     top: 50%;
     color: var(--range-shdw);
@@ -91,7 +90,7 @@
 }
 
 .range-xs {
-  --selector-size: calc(var(--spacing-selector-size) * 4);
+  --size: calc(var(--size-selector, 0.25rem) * 4);
   &::-webkit-slider-thumb {
     --filler-offset: 0.4rem;
   }
@@ -102,7 +101,7 @@
 }
 
 .range-sm {
-  --selector-size: calc(var(--spacing-selector-size) * 5);
+  --size: calc(var(--size-selector, 0.25rem) * 5);
   &::-webkit-slider-thumb {
     --filler-offset: 0.5rem;
   }
@@ -113,7 +112,7 @@
 }
 
 .range-md {
-  --selector-size: calc(var(--spacing-selector-size) * 6);
+  --size: calc(var(--size-selector, 0.25rem) * 6);
   &::-webkit-slider-thumb {
     --filler-offset: 0.6rem;
   }
@@ -124,7 +123,7 @@
 }
 
 .range-lg {
-  --selector-size: calc(var(--spacing-selector-size) * 7);
+  --size: calc(var(--size-selector, 0.25rem) * 7);
   &::-webkit-slider-thumb {
     --filler-offset: 1rem;
   }
@@ -135,7 +134,7 @@
 }
 
 .range-xl {
-  --selector-size: calc(var(--spacing-selector-size) * 8);
+  --size: calc(var(--size-selector, 0.25rem) * 8);
   &::-webkit-slider-thumb {
     --filler-offset: 1rem;
   }

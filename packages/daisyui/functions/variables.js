@@ -26,7 +26,4 @@ export default {
     field: "var(--radius-field)",
     box: "var(--radius-box)",
   },
-  borderWidth: {
-    button: "var(--border-width)",
-  },
 }

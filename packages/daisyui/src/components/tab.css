@@ -19,7 +19,7 @@
   --tab-radius-min: calc(0.75rem - var(--border-width));
   border-color: transparent;
   order: var(--tab-order);
-  height: 2.25rem;
+  height: calc(var(--size-field, 0.25rem) * 10);
   font-size: 0.875rem;
   padding-inline-start: var(--tab-padding);
   padding-inline-end: var(--tab-padding);
@@ -441,7 +441,7 @@
 
 .tabs-xs {
   :where(.tab) {
-    height: 1.25rem;
+    height: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.75rem;
     --tab-padding: 0.375rem;
     --tab-radius-min: calc(0.5rem - var(--border-width));
@@ -450,7 +450,7 @@
 
 .tabs-sm {
   :where(.tab) {
-    height: 1.75rem;
+    height: calc(var(--size-field, 0.25rem) * 8);
     font-size: 0.875rem;
     --tab-padding: 0.5rem;
     --tab-radius-min: calc(0.5rem - var(--border-width));
@@ -459,7 +459,7 @@
 
 .tabs-md {
   :where(.tab) {
-    height: 2.25rem;
+    height: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
     --tab-padding: 0.75rem;
     --tab-radius-min: calc(0.75rem - var(--border-width));
@@ -468,7 +468,7 @@
 
 .tabs-lg {
   :where(.tab) {
-    height: 2.75rem;
+    height: calc(var(--size-field, 0.25rem) * 12);
     font-size: 1.125rem;
     --tab-padding: 1rem;
     --tab-radius-min: calc(1.5rem - var(--border-width));
@@ -477,7 +477,7 @@
 
 .tabs-xl {
   :where(.tab) {
-    height: 3.5rem;
+    height: calc(var(--size-field, 0.25rem) * 14);
     font-size: 1.125rem;
     --tab-padding: 1.25rem;
     --tab-radius-min: calc(2rem - var(--border-width));

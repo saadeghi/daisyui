@@ -1,6 +1,6 @@
 .btn {
   @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle no-underline outline-offset-2 select-none;
-  height: var(--field-size);
+  height: var(--size);
   font-size: 0.875rem;
   color: var(--btn-fg);
   outline-color: var(--color-base-content);
@@ -32,8 +32,7 @@
   background-repeat: no-repeat;
   background-position: top, bottom, left, right;
   padding-inline: var(--btn-p);
-  --spacing-field-size: 0.25rem;
-  --field-size: calc(var(--spacing-field-size) * 9);
+  --size: calc(var(--size-field, 0.25rem) * 10);
   --btn-bg: var(--btn-color, var(--color-base-200));
   --btn-fg: var(--color-base-content);
   --btn-p: 1rem;
@@ -261,43 +260,43 @@
 .btn-xs {
   font-size: 0.6875rem;
   --btn-p: 0.5rem;
-  --field-size: calc(var(--spacing-field-size) * 6);
+  --size: calc(var(--size-field, 0.25rem) * 6);
 }
 
 .btn-sm {
   font-size: 0.75rem;
   --btn-p: 0.75rem;
-  --field-size: calc(var(--spacing-field-size) * 8);
+  --size: calc(var(--size-field, 0.25rem) * 8);
 }
 
 .btn-md {
   font-size: 0.875rem;
   --btn-p: 1rem;
-  --field-size: calc(var(--spacing-field-size) * 10);
+  --size: calc(var(--size-field, 0.25rem) * 10);
 }
 
 .btn-lg {
   font-size: 1.125rem;
   --btn-p: 1.25rem;
-  --field-size: calc(var(--spacing-field-size) * 12);
+  --size: calc(var(--size-field, 0.25rem) * 12);
 }
 
 .btn-xl {
   font-size: 1.375rem;
   --btn-p: 1.5rem;
-  --field-size: calc(var(--spacing-field-size) * 14);
+  --size: calc(var(--size-field, 0.25rem) * 14);
 }
 
 .btn-square {
   @apply px-0;
-  width: var(--field-size);
-  height: var(--field-size);
+  width: var(--size);
+  height: var(--size);
 }
 
 .btn-circle {
   @apply rounded-full px-0;
-  width: var(--field-size);
-  height: var(--field-size);
+  width: var(--size);
+  height: var(--size);
 }
 
 .btn-wide {

@@ -194,11 +194,15 @@
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
+    const sizeProps = ["--size-selector", "--size-field"]
+      .filter((key) => theme[key])
+      .map((key) => `  ${key}: ${theme[key]};`)
+
     const borderProps = ["--border-width"]
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
-    return `\n@plugin "daisyui/theme" {\n${baseProps.join("\n")}\n${cssProps.join("\n")}\n${radiusProps.join("\n")}\n${borderProps.join("\n")}\n}\n`
+    return `\n@plugin "daisyui/theme" {\n${baseProps.join("\n")}\n${cssProps.join("\n")}\n${radiusProps.join("\n")}\n${sizeProps.join("\n")}\n${borderProps.join("\n")}\n}\n`
   }
 
   let holdTimeout
@@ -592,7 +596,7 @@
       </span>
     </h3>
     {#each data.radiusValues as [key, label, desc, values]}
-      <div class="form-control w-full max-w-fit">
+      <div class="w-full max-w-fit">
         <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
           <span class="text-base-content/60">{label}</span>
           <span class="text-base-content/20 italic">{desc}</span>
@@ -681,38 +685,95 @@
         Sizes
       </span>
     </h3>
-    {#each data.sizeValues as [key, label, desc, values]}
-      <div class="form-control w-full max-w-fit">
+    {#each data.sizeValues as [key, label, desc, values, scale]}
+      <div class="w-full">
         <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
           <span class="text-base-content/60">{label}</span>
           <span class="text-base-content/20 italic">{desc}</span>
         </div>
-        <div class="flex gap-2" role="radiogroup" aria-labelledby={`${key}-group`}>
-          {#each values as value}
-            <label
-              class="rounded-field overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
-              title={value}
-            >
-              <input
-                type="radio"
-                name={key}
-                class="sr-only"
-                bind:group={currentTheme[key]}
-                {value}
-                aria-label={`${value} width`}
-              />
-              <div class="pt-3 px-3" aria-hidden="true">
+        <div class="flex gap-4 items-end bg-base-200 rounded-box p-4 px-6 justify-center">
+          <div class="flex gap-1">
+            {#each scale as size, index}
+              <div class="flex flex-col items-center">
                 <div
-                  class="w-8 h-6 text-[10px] font-mono border-base-content/20"
-                  style={`border-top-width:${value}`}
-                  class:text-primary={currentTheme[key] === value}
-                  class:border-primary={currentTheme[key] === value}
+                  class="flex items-end"
+                  style={`height:calc(${values[values.length - 1]} * ${scale[scale.length - 1]} )`}
                 >
-                  {value}
+                  <div
+                    class="bg-base-content w-1 rounded-full"
+                    style={`height:calc(${currentTheme[key]} * ${size} )`}
+                  ></div>
+                </div>
+                <div class="font-mono text-base-content/50 tabular-nums uppercase flex flex-col">
+                  <span class="text-[0.5rem] font-semibold"
+                    >{["xs", "sm", "md", "lg", "xl"][index]}</span
+                  >
+                  <span class="text-[0.5625rem]"
+                    >{(parseFloat(currentTheme[key]) * 16 * size).toFixed(0)}</span
+                  >
                 </div>
               </div>
-            </label>
-          {/each}
+            {/each}
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col items-center">
+              <div class="text-[0.5625rem] text-base-content/50">{label} base size</div>
+              <div class="text-3xl tabular-nums font-black" title={currentTheme[key]}>
+                {(parseFloat(currentTheme[key]) * 16).toFixed(1)}
+              </div>
+              <div class="text-[0.5rem] text-base-content/50">Pixels</div>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max={values.length - 1}
+              step="1"
+              value={values.indexOf(currentTheme[key])}
+              class="range range-xs"
+              aria-labelledby={`${key}-group`}
+              oninput={(e) => (currentTheme[key] = values[e.target.value])}
+            />
+
+            <div class="flex justify-between mx-1.5">
+              {#each values as value, index}
+                <div class="w-px h-2 bg-base-content" class:opacity-20={value !== "0.25rem"}></div>
+              {/each}
+            </div>
+          </div>
+        </div>
+      </div>
+    {/each}
+    {#each data.borderValues as [key, label, desc, values]}
+      <div class="w-full">
+        <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
+          <span class="text-base-content/60">{label}</span>
+          <span class="text-base-content/20 italic">{desc}</span>
+        </div>
+
+        <div class="relative mt-6 bg-base-200 rounded-box p-4 px-6">
+          <div class="mx-2 w-[calc(100%-1rem)]">
+            <div
+              class="tooltip w-0 relative block tooltip-open before:text-[0.6875rem] font-mono"
+              style={`left:${(values.indexOf(currentTheme[key]) / (values.length - 1)) * 100}%`}
+              data-tip={currentTheme[key]}
+            ></div>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max={values.length - 1}
+            step="1"
+            value={values.indexOf(currentTheme[key])}
+            class="range range-xs max-w-none"
+            aria-labelledby={`${key}-group`}
+            oninput={(e) => (currentTheme[key] = values[e.target.value])}
+          />
+          <div class="flex justify-between py-1 mx-1.5">
+            {#each values as value, index}
+              <div class="w-px h-2 bg-base-content" class:opacity-20={value !== "1px"}></div>
+            {/each}
+          </div>
         </div>
       </div>
     {/each}

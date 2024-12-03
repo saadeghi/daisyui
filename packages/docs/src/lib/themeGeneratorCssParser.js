@@ -2,6 +2,7 @@ import {
   validateColor,
   validateThemeName,
   validateRadius,
+  validateSize,
   validateBorderWidth,
   validateBoolean,
 } from "$lib/themeGeneratorValidation"
@@ -119,9 +120,16 @@ export function parseThemeCSS(text, currentThemeData) {
           continue
         }
         newThemeData[key] = value
-      } else if (key.startsWith("--spacing-")) {
+      } else if (key.startsWith("--size-")) {
+        if (!validateSize(value)) {
+          console.error(`Invalid size value for ${key}: ${value}`)
+          hasErrors = true
+          continue
+        }
+        newThemeData[key] = value
+      } else if (key.startsWith("--border-")) {
         if (!validateBorderWidth(value)) {
-          console.error(`Invalid border width for ${key}: ${value} (must be 1px or 2px)`)
+          console.error(`Invalid border width for ${key}: ${value}`)
           hasErrors = true
           continue
         }

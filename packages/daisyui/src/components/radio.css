@@ -2,10 +2,9 @@
   @apply text-base-content relative shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
   border: var(--border-width) solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
-  --spacing-selector-size: 0.25rem;
-  --selector-size: calc(var(--spacing-selector-size) * 6);
-  width: var(--selector-size);
-  height: var(--selector-size);
+  --size: calc(var(--size-selector, 0.25rem) * 6);
+  width: var(--size);
+  height: var(--size);
   &:before {
     @apply block size-full rounded-full;
     content: "";
@@ -65,35 +64,35 @@
 .radio-xs {
   padding: 0.125rem;
   &:is([type="radio"]) {
-    --selector-size: calc(var(--spacing-selector-size) * 4);
+    --size: calc(var(--size-selector, 0.25rem) * 4);
   }
 }
 
 .radio-sm {
   padding: 0.1875rem;
   &:is([type="radio"]) {
-    --selector-size: calc(var(--spacing-selector-size) * 5);
+    --size: calc(var(--size-selector, 0.25rem) * 5);
   }
 }
 
 .radio-md {
   padding: 0.25rem;
   &:is([type="radio"]) {
-    --selector-size: calc(var(--spacing-selector-size) * 6);
+    --size: calc(var(--size-selector, 0.25rem) * 6);
   }
 }
 
 .radio-lg {
   padding: 0.3125rem;
   &:is([type="radio"]) {
-    --selector-size: calc(var(--spacing-selector-size) * 7);
+    --size: calc(var(--size-selector, 0.25rem) * 7);
   }
 }
 
 .radio-xl {
   padding: 0.375rem;
   &:is([type="radio"]) {
-    --selector-size: calc(var(--spacing-selector-size) * 8);
+    --size: calc(var(--size-selector, 0.25rem) * 8);
   }
 }
 

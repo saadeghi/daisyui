@@ -14,6 +14,13 @@ export function randomizeThemeColors(tailwindcolors) {
     "1.5px",
     "2px",
   ]
+  const sizeValues = [
+    // "0.1875rem",
+    // "0.21875rem",
+    "0.25rem",
+    // "0.28125rem",
+    // "0.3125rem"
+  ]
 
   function randomFromRange(colors, ranges) {
     const validColors = Object.entries(colors).filter(([name, _]) => {
@@ -76,6 +83,8 @@ export function randomizeThemeColors(tailwindcolors) {
     "--radius-selector": randomFrom(radiusValues),
     "--radius-field": randomFrom(radiusValues),
     "--radius-box": randomFrom(radiusValues),
+    "--size-selector": randomFrom(sizeValues),
+    "--size-field": randomFrom(sizeValues),
     "--border-width": randomFrom(borderValues),
   }
 
