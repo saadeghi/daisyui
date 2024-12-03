@@ -5,29 +5,6 @@
 <div
   class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_*]:[transition:background-color_0ms,border-color_100ms,border-radius_500ms_ease-out] pb-20"
 >
-  <!-- <nav class="bg-base-200 text-base-content rounded-box col-span-8 flex gap-2 items-center justify-between">
-    <ul class="menu menu-sm menu-horizontal shrink-0">
-      <li>
-        <details>
-          <summary>Products</summary>
-          <ul class="w-40">
-            <li><a>Add new product</a></li>
-            <li><a>Categories</a></li>
-            <li><a>Tags</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><button>Transactions</button></li>
-      <li><button>Orders</button></li>
-    </ul>
-    <label class="input-border input-sm flex input items-center gap-2 w-auto me-2">
-      <input type="text" class="grow" placeholder="Search">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
-        <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
-      </svg>
-    </label>
-  </nav> -->
-
   <!-- filters -->
   <div class="card card-sm">
     <div class="card-body gap-4">
@@ -277,6 +254,30 @@
       <div>
         <span class="text-2xl font-semibold">$120</span>
         <span class="text-sm opacity-60 line-through">$150</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- search -->
+  <div class="card card-sm">
+    <div class="card-body gap-4">
+      <div class="join">
+        <label class="join-item input-border flex input items-center gap-2 w-auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="h-4 w-4 opacity-70 shrink-0"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <input type="text" class="grow" placeholder="Search" />
+        </label>
+        <button class="join-item btn btn-neutral">Find</button>
       </div>
     </div>
   </div>
@@ -573,7 +574,7 @@
     <div class="card-body">
       <div class="chat chat-start">
         <div class="chat-image avatar">
-          <div class="w-10 rounded-full">
+          <div class="w-8 rounded-full">
             <img
               alt="Tailwind CSS chat bubble component"
               src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
@@ -589,7 +590,7 @@
 
       <div class="chat chat-start">
         <div class="chat-image avatar">
-          <div class="w-10 rounded-full">
+          <div class="w-8 rounded-full">
             <img
               alt="Tailwind CSS chat bubble component"
               src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
@@ -606,7 +607,7 @@
 
       <div class="chat chat-end">
         <div class="chat-image avatar">
-          <div class="w-10 rounded-full">
+          <div class="w-8 rounded-full">
             <img
               alt="Tailwind CSS chat bubble component"
               src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
@@ -802,7 +803,7 @@
   </ul>
 
   <!-- alerts -->
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-2 min-h-[240px]">
     <div class="alert text-xs font-bold max-sm:alert-vertical alert-info">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -875,7 +876,7 @@
   </div>
 
   <!-- music -->
-  <div class="card card-sm overflow-hidden">
+  <div class="card card-sm overflow-hidden min-h-[310px]">
     <div class="card-body my-2">
       <div class="flex justify-around items-center">
         <button class="btn btn-square btn-neutral">
@@ -1083,5 +1084,247 @@
     class="border bg-base-100 overflow-hidden p-1 min-h-[126px] border-base-300 rounded-box shadow-[0_.1rem_.5rem_-.3rem_#0003] [&_#carbonads]:bg-transparent! [&_img]:[border-radius:calc(var(--radius-box)-.5rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-.5rem)]!"
   >
     <Carbon />
+  </div>
+
+  <ul class="timeline timeline-vertical timeline-compact">
+    <li>
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5 text-primary"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end timeline-box">Harry Potter and Sorcerer's Stack</div>
+      <hr class="bg-primary" />
+    </li>
+    <li>
+      <hr class="bg-primary" />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5 text-primary"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end timeline-box">Harry Potter and Chamber of Servers</div>
+      <hr class="bg-primary" />
+    </li>
+    <li>
+      <hr class="bg-primary" />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5 text-primary"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end timeline-box">Harry Potter and Prisoner of Azure</div>
+      <hr class="bg-primary" />
+    </li>
+    <li>
+      <hr class="bg-primary" />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5 text-primary"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end timeline-box">Harry Potter and Goblet of Firebase</div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end timeline-box">Harry Potter and Elixir of Phoenix</div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end timeline-box">Harry Potter and Half-Deployed App</div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end timeline-box">Harry Potter and Deathly Frameworks</div>
+    </li>
+  </ul>
+
+  <!-- pricing -->
+  <div class="card">
+    <div class="flex justify-center">
+      <div class="tabs tabs-box inline-flex flex-nowrap m-4 p-0 bg-base-300">
+        <input type="radio" name="my_tabs_1" role="tab" class="tab w-1/2" aria-label="Monthly" />
+        <div class="w-1/2 indicator">
+          <div class="indicator-item indicator-center badge badge-warning badge-xs">10% OFF</div>
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab w-full"
+            aria-label="Yearly"
+            checked
+          />
+        </div>
+      </div>
+    </div>
+    <div class="card-body gap-4">
+      <div class="flex flex-col">
+        <h4 class="tracking-wide opacity-50 font-bold">Starter Plan</h4>
+        <div>
+          <span class="text-4xl font-black">$99</span><span class="opacity-50">/month</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 text-xs">
+        <div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-4 text-success"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          20 Tokens per day
+        </div>
+        <div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-4 text-success"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          10 Projects
+        </div>
+        <div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-4 text-success"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          API Access
+        </div>
+        <div class="flex gap-2 items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-4 text-error"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm2.78-4.22a.75.75 0 0 1-1.06 0L8 9.06l-1.72 1.72a.75.75 0 1 1-1.06-1.06L6.94 8 5.22 6.28a.75.75 0 0 1 1.06-1.06L8 6.94l1.72-1.72a.75.75 0 1 1 1.06 1.06L9.06 8l1.72 1.72a.75.75 0 0 1 0 1.06Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Priority Support
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="card card-sm min-h-[270px]">
+    <div class="card-body gap-4">
+      <div class="grid grid-cols-2 gap-2 justify-items-start">
+        <button class="btn btn-xl">XL</button>
+        <button class="btn btn-xl btn-neutral">XL</button>
+        <button class="btn btn-lg">LG</button>
+        <button class="btn btn-lg btn-neutral">LG</button>
+        <button class="btn btn-md">MD</button>
+        <button class="btn btn-md btn-neutral">MD</button>
+        <button class="btn btn-sm">SM</button>
+        <button class="btn btn-sm btn-neutral">SM</button>
+        <button class="btn btn-xs">XS</button>
+        <button class="btn btn-xs btn-neutral">XS</button>
+      </div>
+    </div>
   </div>
 </div>
