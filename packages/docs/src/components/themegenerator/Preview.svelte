@@ -563,7 +563,7 @@
       <p class="px-2 opacity-40 text-xs">1200 characters remaining</p>
 
       <div class="card-actions grid grid-cols-2">
-        <button class="btn btn-dash">Save draft</button>
+        <button class="btn">Save draft</button>
         <button class="btn btn-primary">Publish</button>
       </div>
     </div>
@@ -802,77 +802,11 @@
     </li>
   </ul>
 
-  <!-- alerts -->
-  <div class="flex flex-col gap-2 min-h-[240px]">
-    <div class="alert text-xs font-bold max-sm:alert-vertical alert-info">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
-        />
-      </svg>
-      There are 9 new messages
-    </div>
-    <div class="alert text-xs font-bold alert-outline max-sm:alert-vertical alert-success">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
-        />
-      </svg>
-      Verification process completed
-    </div>
-    <div class="alert text-xs font-bold alert-dash max-sm:alert-vertical alert-warning">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z"
-        />
-      </svg>
-      <span><span class="link">Click</span> to verify your email</span>
-    </div>
-    <div class="alert text-xs font-bold alert-soft max-sm:alert-vertical alert-error">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-        />
-      </svg>
-      Access denied
-      <button class="btn btn-xs btn-ghost">Support</button>
-    </div>
+  <!-- code -->
+  <div class="mockup-code bg-base-100 text-base-content shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+    <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
+    <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
+    <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
   </div>
 
   <!-- music -->
@@ -929,8 +863,8 @@
         </button>
       </div>
       <div class="mt-2 text-center">
-        <h6 class="text-sm font-bold">Lo-fi hip hop beats</h6>
-        <p class="text-xs opacity-50">Chill music to relax/study to</p>
+        <h6 class="text-sm font-bold">PM Zoomcall ASMR</h6>
+        <p class="text-xs opacity-50">Project Manager talking for 2 hours</p>
       </div>
     </div>
     <div class="flex flex-col px-6 py-4 border-t border-base-300">
@@ -938,13 +872,13 @@
         <div
           class="absolute tooltip top-2 tooltip-open before:text-xs"
           style="left:10%"
-          data-tip="0:39"
+          data-tip="13:39"
         ></div>
         <progress class="progress" value="10" max="100"></progress>
       </div>
       <div class="flex text-xs opacity-50 justify-between">
-        <span>0:39</span>
-        <span>4:20</span>
+        <span>13:39</span>
+        <span>120:00</span>
       </div>
     </div>
     <div class="flex justify-around items-center pb-6 px-2">
@@ -1073,11 +1007,77 @@
     </div>
   </div>
 
-  <!-- code -->
-  <div class="mockup-code bg-base-100 text-base-content shadow-[0_.1rem_.5rem_-.3rem_#0003]">
-    <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
-    <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
-    <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
+  <!-- alerts -->
+  <div class="flex flex-col gap-2 min-h-[240px]">
+    <div class="alert text-xs font-bold max-sm:alert-vertical alert-info">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
+        />
+      </svg>
+      There are 9 new messages
+    </div>
+    <div class="alert text-xs font-bold alert-outline max-sm:alert-vertical alert-success">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+        />
+      </svg>
+      Verification process completed
+    </div>
+    <div class="alert text-xs font-bold alert-dash max-sm:alert-vertical alert-warning">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z"
+        />
+      </svg>
+      <span><span class="link">Click</span> to verify your email</span>
+    </div>
+    <div class="alert text-xs font-bold alert-soft max-sm:alert-vertical alert-error">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+        />
+      </svg>
+      Access denied
+      <button class="btn btn-xs btn-ghost">Support</button>
+    </div>
   </div>
 
   <div
@@ -1242,7 +1242,7 @@
       <div class="flex flex-col">
         <h4 class="tracking-wide opacity-50 font-bold">Starter Plan</h4>
         <div>
-          <span class="text-4xl font-black">$99</span><span class="opacity-50">/month</span>
+          <span class="text-4xl font-black">$200</span><span class="opacity-50">/month</span>
         </div>
       </div>
       <div class="flex flex-col gap-2 text-xs">

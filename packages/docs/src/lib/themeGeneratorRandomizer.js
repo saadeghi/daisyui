@@ -1,6 +1,6 @@
 export function randomizeThemeColors(tailwindcolors) {
   const randomFrom = (arr) => arr[Math.floor(Math.random() * arr.length)]
-  const radiusValues = ["0", "0.25rem", "0.5rem", "1rem", "2rem"]
+  const radiusValues = ["0rem", "0.25rem", "0.5rem", "1rem", "2rem"]
   const borderValues = [
     "0.5px",
     "1px",
