@@ -1,10 +1,11 @@
 .toggle {
   border: var(--border-width) solid currentColor;
-  @apply rounded-selector text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none align-middle;
+  @apply text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none align-middle;
+  border-radius: calc(var(--radius-selector) + var(--toggle-padding));
   padding: var(--toggle-padding);
-  --toggle-padding: 0.1875rem;
   box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
   transition: color 0.3s;
+  --toggle-padding: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: calc(var(--size) * 1.75);
   height: var(--size);
@@ -15,9 +16,8 @@
   }
 
   &:after {
-    @apply relative start-0 block aspect-square h-full bg-current;
+    @apply rounded-selector relative start-0 block aspect-square h-full bg-current;
     translate: 0;
-    border-radius: calc(var(--radius-selector) - var(--toggle-padding));
     content: "";
     transition:
       background-color 0.1s,

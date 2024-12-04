@@ -2,6 +2,7 @@
   appearance: none;
   -webkit-appearance: none;
   --range-shdw: currentColor;
+  --range-thumb: var(--color-base-100);
   @apply rounded-selector w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
   border: none;
   --size: calc(var(--size-selector, 0.25rem) * 6);
@@ -20,7 +21,8 @@
   }
 
   &::-webkit-slider-thumb {
-    @apply rounded-selector bg-base-100 relative;
+    @apply rounded-selector relative;
+    background-color: var(--range-thumb);
     height: var(--size);
     width: var(--size);
     border: none;
@@ -47,7 +49,8 @@
   }
 
   &::-moz-range-thumb {
-    @apply rounded-selector bg-base-100 relative;
+    @apply rounded-selector relative;
+    background-color: var(--range-thumb);
     height: var(--size);
     width: var(--size);
     border: none;
@@ -63,30 +66,37 @@
 
 .range-primary {
   @apply text-primary;
+  --range-thumb: var(--color-primary-content);
 }
 
 .range-secondary {
   @apply text-secondary;
+  --range-thumb: var(--color-secondary-content);
 }
 
 .range-accent {
   @apply text-accent;
+  --range-thumb: var(--color-accent-content);
 }
 
 .range-success {
   @apply text-success;
+  --range-thumb: var(--color-success-content);
 }
 
 .range-warning {
   @apply text-warning;
+  --range-thumb: var(--color-warning-content);
 }
 
 .range-info {
   @apply text-info;
+  --range-thumb: var(--color-info-content);
 }
 
 .range-error {
   @apply text-error;
+  --range-thumb: var(--color-error-content);
 }
 
 .range-xs {

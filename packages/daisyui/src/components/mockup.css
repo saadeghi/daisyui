@@ -1,5 +1,5 @@
 .mockup-code {
-  @apply bg-neutral text-neutral-content rounded-box relative min-w-[18rem] overflow-hidden overflow-x-auto py-5;
+  @apply bg-neutral text-neutral-content rounded-box relative overflow-hidden overflow-x-auto py-5;
   direction: ltr;
 
   &:before {
