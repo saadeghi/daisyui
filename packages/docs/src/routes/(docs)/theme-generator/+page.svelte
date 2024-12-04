@@ -2,6 +2,7 @@
   import SEO from "$components/SEO.svelte"
   import ColorPalette from "$components/ColorPalette.svelte"
   import Preview from "$components/themegenerator/Preview.svelte"
+  import PreviewGrid from "$components/themegenerator/PreviewGrid.svelte"
   import ThemeCSSModal from "$components/themegenerator/ThemeCSSModal.svelte"
   import Dock from "$components/themegenerator/Dock.svelte"
   import ThemeListItem from "$components/themegenerator/ThemeListItem.svelte"
@@ -24,7 +25,7 @@
   //   const jsonString = pako.inflate(compressed, { to: 'string' });
   //   return JSON.parse(jsonString);
   // }
-
+  const LS_KEY = "gen-themes-0.1"
   const { data } = $props()
   let showCssModal = $state(false)
   let dice = $state({ rotate: 0 })
@@ -33,9 +34,7 @@
 
   const getStoredThemesByType = (type) => {
     if (!browser) return []
-    return JSON.parse(localStorage.getItem("gen-themes") || "[]").filter(
-      (item) => item.type === type,
-    )
+    return JSON.parse(localStorage.getItem(LS_KEY) || "[]").filter((item) => item.type === type)
   }
 
   let builtinThemes = $state(getStoredThemesByType("builtin"))
@@ -73,13 +72,13 @@
 
   $effect.pre(() => {
     builtinThemes = data.builtinThemes
-    const LSthemes = localStorage.getItem("gen-themes")
+    const LSthemes = localStorage.getItem(LS_KEY)
     if (LSthemes) {
-      builtinThemes = JSON.parse(LSthemes).filter((item) => item.type === "builtin")
+      builtinThemes = JSON.parse(LSthemes)?.filter((item) => item.type === "builtin")
     }
     const LSthemeId = localStorage.getItem("gen-theme-id")
-    if (LSthemeId && JSON.parse(LSthemes).some((item) => item.id === LSthemeId)) {
-      currentTheme = JSON.parse(LSthemes).find((item) => item.id === LSthemeId)
+    if (LSthemeId && JSON.parse(LSthemes)?.some((item) => item.id === LSthemeId)) {
+      currentTheme = JSON.parse(LSthemes)?.find((item) => item.id === LSthemeId)
     } else {
       const lightTheme = themes.find((item) => item.name === "light")
       currentTheme = lightTheme
@@ -91,7 +90,7 @@
       (theme) => validateThemeName(theme.name) && validateThemeStructure(theme),
     )
     if (allValid) {
-      localStorage.setItem("gen-themes", JSON.stringify(themes))
+      localStorage.setItem(LS_KEY, JSON.stringify(themes))
       localStorage.setItem("gen-theme-id", currentTheme.id)
     }
     if (validateThemeName(currentTheme.name) && validateThemeStructure(currentTheme)) {
@@ -279,11 +278,11 @@
   desc="OKLCH Theme Generator for daisyUI and Tailwind CSS"
 />
 
-<div class="flex flex-col md:flex-row relative">
+<div class="grid md:grid-cols-[14rem_17rem_1fr] relative">
   <div
     style="scroll-behavior: smooth"
     id="themelist"
-    class="border-e shrink-0 w-full md:w-[14rem] border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20"
+    class="border-e shrink-0 w-full border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20"
     class:max-md:hidden={dockActiveItem !== "themes"}
   >
     <div class="flex gap-2 justify-between items-center mb-4">
@@ -426,10 +425,11 @@
   </div>
 
   <div
-    class="flex flex-col pb-20 shrink-0 w-full md:w-[17rem] md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start lg:items-stretch"
+    class="flex flex-col pb-20 shrink-0 w-full md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start lg:items-stretch"
     class:max-md:hidden={dockActiveItem !== "editor"}
   >
     <label class="input flex font-semibold input-ghost input-sm w-full items-center gap-2 shrink-0">
+      <span class="shrink-0 select-none text-xs opacity-60">Name</span>
       <input
         class="shrink w-full"
         type="text"
@@ -909,22 +909,24 @@
     </button>
   </div>
 
-  <div
-    class="grow border-base-300 border-s border-t md:rounded-ss-xl overflow-hidden"
-    class:max-md:hidden={dockActiveItem !== "preview"}
-  >
-    <div
-      class="p-8 bg-base-200"
-      style={`
-      box-shadow:1rem 0 .2rem -1rem #0001 inset;
-      --pattern-color: color-mix(in oklab, var(--color-base-content) 2%, transparent);
-      background-image: linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
-      background-size: 40px 40px;
-      background-attachment: fixed;
-      ${currentThemeStyle}
-      `}
-    >
-      <Preview />
+  <div class="overflow-x-hidden" class:max-md:hidden={dockActiveItem !== "preview"}>
+    <div class="overflow-hidden border-base-300 border-s border-t md:rounded-ss-xl">
+      <div
+        class="px-8 py-6 bg-base-200"
+        style={`
+        color: var(--color-base-content);
+        background-color: var(--color-base-200);
+        box-shadow:1rem 0 .2rem -1rem #0001 inset;
+        --pattern-color: color-mix(in oklab, var(--color-base-content) 2%, transparent);
+        background-image: linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+        background-size: 40px 40px;
+        background-attachment: fixed;
+        ${currentThemeStyle}
+        `}
+      >
+        <Preview />
+        <PreviewGrid />
+      </div>
     </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
 <script>
   import Carbon from "$components/Carbon.svelte"
+  let sliderValue = $state(50)
 </script>
+
+<h3 class="font-bold px-2 mb-6">Preview</h3>
 
 <div
   class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_*]:[transition:background-color_0ms,border-color_100ms,border-radius_500ms_ease-out] pb-20"
@@ -222,8 +225,8 @@
           Price range
         </span>
       </h2>
-      <div class="text-5xl font-extralight text-center">25</div>
-      <input type="range" class="range range-sm" />
+      <div class="text-5xl font-extralight text-center">{sliderValue}</div>
+      <input type="range" class="range range-sm" bind:value={sliderValue} />
     </div>
   </div>
 
@@ -344,7 +347,7 @@
         </label>
         <span class="text-[0.6875rem] px-1 flex gap-2 items-center text-base-content/60">
           <span class="status inline-block status-error"></span>
-          Password must be at least 8 characters
+          Password must be 8+ characters
         </span>
       </div>
 
@@ -352,7 +355,7 @@
 
       <label class="flex gap-2 items-center text-xs text-base-content/60">
         <input type="checkbox" class="toggle toggle-xs" />
-        Accpet terms without reading them
+        Accpet terms without reading
       </label>
       <label class="flex gap-2 items-center text-xs text-base-content/60">
         <input type="checkbox" class="toggle toggle-xs" />
@@ -366,14 +369,45 @@
     </div>
   </div>
 
+  <!-- chart -->
+  <div class="card card-sm">
+    <div class="card-body gap-4">
+      <div class="flex gap-2 mt-4 items-end h-24 *:rounded-sm *:bg-base-content *:w-full">
+        <div style="height: 10%"></div>
+        <div style="height: 20%"></div>
+        <div style="height: 10%"></div>
+        <div style="height: 25%"></div>
+        <div style="height: 22%"></div>
+        <div style="height: 15%"></div>
+        <div style="height: 20%"></div>
+        <div style="height: 35%"></div>
+        <div style="height: 40%"></div>
+        <div style="height: 45%"></div>
+        <div style="height: 30%"></div>
+        <div style="height: 35%"></div>
+        <div style="height: 60%"></div>
+        <div style="height: 65%"></div>
+        <div style="height: 80%"></div>
+        <div style="height: 90%"></div>
+      </div>
+      <p class="text-xs py-3">
+        Sales volume reached $12,450 this week, showing a 15% increase from the previous period.
+      </p>
+      <div class="grid grid-cols-2 gap-2">
+        <button class="btn">Charts</button>
+        <button class="btn btn-neutral">Details</button>
+      </div>
+    </div>
+  </div>
+
   <!-- stat -->
-  <div class="stats bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+  <div class="stats overflow-hidden bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
     <div class="stat">
       <div class="stat-figure">
-        <div class="radial-progress" style="--value:91;--size:4rem;" role="progressbar">91</div>
+        <div class="radial-progress" style="--value:91;--size:3rem;" role="progressbar">91</div>
       </div>
       <div class="stat-title">Page Score</div>
-      <div class="stat-value">91.00<span class="text-sm">/100</span></div>
+      <div class="stat-value">91<span class="text-sm">/100</span></div>
       <div class="stat-desc flex gap-1 items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -387,7 +421,7 @@
             clip-rule="evenodd"
           />
         </svg>
-        No critical issues found
+        All good
       </div>
     </div>
   </div>
@@ -445,37 +479,6 @@
           Amanda Anderson
           <span class="badge badge-xs badge-success">Completed</span>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- chart -->
-  <div class="card card-sm">
-    <div class="card-body gap-4">
-      <div class="flex gap-2 items-end h-24 [&>*]:rounded-box [&>*]:bg-base-content [&>*]:w-full">
-        <div style="height: 10%"></div>
-        <div style="height: 20%"></div>
-        <div style="height: 10%"></div>
-        <div style="height: 25%"></div>
-        <div style="height: 22%"></div>
-        <div style="height: 15%"></div>
-        <div style="height: 20%"></div>
-        <div style="height: 35%"></div>
-        <div style="height: 40%"></div>
-        <div style="height: 45%"></div>
-        <div style="height: 30%"></div>
-        <div style="height: 35%"></div>
-        <div style="height: 60%"></div>
-        <div style="height: 65%"></div>
-        <div style="height: 80%"></div>
-        <div style="height: 90%"></div>
-      </div>
-      <p class="text-xs py-3">
-        Sales volume reached $12,450 this week, showing a 15% increase from the previous period.
-      </p>
-      <div class="grid grid-cols-2 gap-2">
-        <button class="btn">Charts</button>
-        <button class="btn btn-neutral">Details</button>
       </div>
     </div>
   </div>
@@ -563,7 +566,7 @@
       <p class="px-2 opacity-40 text-xs">1200 characters remaining</p>
 
       <div class="card-actions grid grid-cols-2">
-        <button class="btn">Save draft</button>
+        <button class="btn">Draft</button>
         <button class="btn btn-primary">Publish</button>
       </div>
     </div>
@@ -802,13 +805,6 @@
     </li>
   </ul>
 
-  <!-- code -->
-  <div class="mockup-code bg-base-100 text-base-content shadow-[0_.1rem_.5rem_-.3rem_#0003]">
-    <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
-    <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
-    <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
-  </div>
-
   <!-- music -->
   <div class="card card-sm overflow-hidden min-h-[310px]">
     <div class="card-body my-2">
@@ -1007,6 +1003,13 @@
     </div>
   </div>
 
+  <!-- code -->
+  <div class="mockup-code bg-base-100 text-base-content shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+    <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
+    <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
+    <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
+  </div>
+
   <!-- alerts -->
   <div class="flex flex-col gap-2 min-h-[240px]">
     <div class="alert text-xs font-bold max-sm:alert-vertical alert-info">
@@ -1078,12 +1081,6 @@
       Access denied
       <button class="btn btn-xs btn-ghost">Support</button>
     </div>
-  </div>
-
-  <div
-    class="border bg-base-100 overflow-hidden p-1 min-h-[126px] border-base-300 rounded-box shadow-[0_.1rem_.5rem_-.3rem_#0003] [&_#carbonads]:bg-transparent! [&_img]:[border-radius:calc(var(--radius-box)-.5rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-.5rem)]!"
-  >
-    <Carbon />
   </div>
 
   <ul class="timeline timeline-vertical timeline-compact">
@@ -1307,24 +1304,13 @@
           Priority Support
         </div>
       </div>
+      <button class="btn btn-accent">Buy Now</button>
     </div>
   </div>
 
-  <!-- Buttons -->
-  <div class="card card-sm min-h-[270px]">
-    <div class="card-body gap-4">
-      <div class="grid grid-cols-2 gap-2 justify-items-start">
-        <button class="btn btn-xl">XL</button>
-        <button class="btn btn-xl btn-neutral">XL</button>
-        <button class="btn btn-lg">LG</button>
-        <button class="btn btn-lg btn-neutral">LG</button>
-        <button class="btn btn-md">MD</button>
-        <button class="btn btn-md btn-neutral">MD</button>
-        <button class="btn btn-sm">SM</button>
-        <button class="btn btn-sm btn-neutral">SM</button>
-        <button class="btn btn-xs">XS</button>
-        <button class="btn btn-xs btn-neutral">XS</button>
-      </div>
-    </div>
+  <div
+    class="border bg-base-100 overflow-hidden p-1 min-h-[126px] border-base-300 rounded-box shadow-[0_.1rem_.5rem_-.3rem_#0003] [&_#carbonads]:bg-transparent! [&_img]:[border-radius:calc(var(--radius-box)-.5rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-.5rem)]!"
+  >
+    <Carbon />
   </div>
 </div>
