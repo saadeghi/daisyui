@@ -2,7 +2,7 @@
   import TopBanner from "$components/TopBanner.svelte"
   // import ThemeChange from "$components/ThemeChange.svelte"
   // import LangChange from "$components/LangChange.svelte"
-  // import Search from "$components/Search.svelte"
+  import Search from "$components/Search.svelte"
   // import LogoContextMenu from "$components/LogoContextMenu.svelte"
   // import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
@@ -52,8 +52,8 @@
 <TopBanner />
 <div
   class={`
-  bg-base-100 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)]
-  ${switchNavbarStyle ? "shadow-sm" : ""}
+  bg-base-100/90 text-base-content sticky top-0 z-30 flex h-16 w-full justify-center backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)]
+  ${switchNavbarStyle ? "shadow-xs" : ""}
   `}
 >
   <nav class="navbar w-full">
@@ -129,9 +129,7 @@
 
       {#if showSearch}
         <div class="hidden w-full max-w-sm lg:flex">
-          {#await import("./Search.svelte") then Module}
-            <Module.default {pages} {removeScrollPaddingFromNavbar} {addScrollPaddingToNavbar} />
-          {/await}
+          <Search {pages} {removeScrollPaddingFromNavbar} {addScrollPaddingToNavbar} />
         </div>
       {/if}
     </div>

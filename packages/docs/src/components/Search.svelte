@@ -7,7 +7,9 @@
   import { getOS } from "$lib/util"
   import { t } from "$lib/i18n"
 
-  let pages = []
+  export let pages = []
+  export let onSearch = () => {}
+  export let onFocus = () => {}
 
   function extractPages(obj) {
     const items = []
@@ -28,12 +30,12 @@
   }
   let searchIndex = extractPages(pages)
 
-  let os = $state()
+  let os
   onMount(() => {
     os = getOS()
   })
 
-  let seachboxEl = $state()
+  let seachboxEl
   function handleKeydown(e) {
     if ((e.keyCode === 75 && e.metaKey) || (e.keyCode === 75 && e.ctrlKey)) {
       e.preventDefault()
@@ -47,17 +49,13 @@
     onSearch(detail)
   }
 
-  let {
-    onSearch = () => {},
-    onFocus = () => {},
-    addScrollPaddingToNavbar = undefined,
-    removeScrollPaddingFromNavbar = undefined,
-  } = $props()
+  export let addScrollPaddingToNavbar = undefined
+  export let removeScrollPaddingFromNavbar = undefined
 </script>
 
 <svelte:window onkeydown={handleKeydown} />
 
-<!-- svelte-ignore a11y_label_has_associated_control -->
+<!-- svelte-ignore a11y-label-has-associated-control -->
 <label class={`searchbox relative mx-3 w-full`} bind:this={seachboxEl}>
   <svg
     class={`pointer-events-none absolute z-10 my-3.5 ms-4 stroke-current opacity-60 ${
@@ -87,12 +85,11 @@
     on:select={onSelect}
     on:focus={removeScrollPaddingFromNavbar}
     on:blur={addScrollPaddingToNavbar}
+    let:result
   >
-    {#snippet children({ result })}
-      <div class="py-1 text-sm font-normal">
-        {searchIndex[result.index].name}
-      </div>
-    {/snippet}
+    <div class="py-1 text-sm font-normal">
+      {searchIndex[result.index].name}
+    </div>
   </Typeahead>
   <div
     class={`pointer-events-none absolute end-10 top-2.5 gap-1 opacity-50 rtl:flex-row-reverse ${

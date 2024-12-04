@@ -6,7 +6,6 @@ published: true
 
 <script>
   export let data;
-  import InstallTabs from "$components/InstallTabs.svelte";
   import Translate from "$components/Translate.svelte";
   import { writable, derived } from 'svelte/store';
 
@@ -143,9 +142,6 @@ published: true
     }, 2000);
   }
 </script>
-
-
-<InstallTabs />
 
 <Translate text="You don't need to install anything." />
 <Translate text="Just add one of these to the <code>head</code> tag of your HTML" />:

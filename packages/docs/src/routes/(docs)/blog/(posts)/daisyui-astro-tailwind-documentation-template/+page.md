@@ -136,7 +136,7 @@ The sidebar is where your documentation sections are listed. Update it to add, r
   ></label>
   <aside class="bg-base-100 min-h-screen w-80">
     <div
-      class="bg-base-100 sticky top-0 z-20 items-center gap-2 bg-opacity-90 px-4 py-2 backdrop-blur lg:flex"
+      class="bg-base-100/90 sticky top-0 z-20 items-center gap-2 px-4 py-2 backdrop-blur lg:flex"
     >
       <a href="/" class="flex-0 btn btn-ghost px-2">
         <h1

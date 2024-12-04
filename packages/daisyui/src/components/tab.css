@@ -398,7 +398,8 @@
 } */
 
 .tabs-box {
-  @apply rounded-field bg-base-200 p-1;
+  @apply bg-base-200 p-1;
+  border-radius: calc(var(--radius-field) + 0.25rem);
   box-shadow:
     0 -0.5px oklch(100% 0 0/ 0.1) inset,
     0 0.5px oklch(0% 0 0/ 0.05) inset;

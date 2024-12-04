@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  // import Search from "$components/Search.svelte"
+  import Search from "$components/Search.svelte"
   // import LogoContextMenu from "$components/LogoContextMenu.svelte"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
   // import ChangelogMenu from "$components/ChangelogMenu.svelte"
@@ -16,9 +16,9 @@
 
 <div
   data-sveltekit-preload-data
-  class={`bg-base-100 sticky top-0 z-20 hidden items-center gap-2 bg-opacity-90 px-4 py-2 backdrop-blur ${
+  class={`bg-base-100/90 sticky top-0 z-20 hidden navbar items-center gap-2 px-4 py-2 backdrop-blur ${
     $page.url.pathname == "/" ? "" : "lg:flex"
-  } ${switchNavbarStyle ? "shadow-sm" : ""}`}
+  } ${switchNavbarStyle ? "shadow-xs" : ""}`}
 >
   <a
     href="/"
@@ -50,14 +50,12 @@
 
 {#if innerWidth < 1024}
   <div
-    class={`bg-base-100 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 bg-opacity-90 px-2 py-3 backdrop-blur ${
+    class={`bg-base-100/90 grid-row-2 sticky top-0 z-10 grid w-full gap-y-2 px-2 py-3 backdrop-blur ${
       switchNavbarStyle ? "shadow-sm" : ""
     }`}
   >
     <div class="flex w-full">
-      {#await import("./Search.svelte") then Module}
-        <Module.default {pages} onsearch={closeDrawer} onfocus={openDrawer} />
-      {/await}
+      <Search {pages} onsearch={closeDrawer} onfocus={openDrawer} />
     </div>
   </div>
 {/if}

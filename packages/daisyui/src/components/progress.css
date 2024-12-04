@@ -1,39 +1,37 @@
 .progress {
-  @apply rounded-box bg-base-content/20 relative h-2 w-full appearance-none overflow-hidden;
-
+  @apply rounded-box bg-base-content/20 text-base-content relative h-2 w-full appearance-none overflow-hidden;
   &:indeterminate {
-    --progress-color: var(--color-base-content);
     background-image: repeating-linear-gradient(
       90deg,
-      var(--progress-color) -1%,
-      var(--progress-color) 10%,
+      currentColor -1%,
+      currentColor 10%,
       transparent 10%,
       transparent 90%
     );
     background-size: 200%;
     background-position-x: 15%;
-    animation: progress-loading 5s ease-in-out infinite;
+    animation: progress 5s ease-in-out infinite;
 
     @supports (-moz-appearance: none) {
       &::-moz-progress-bar {
         @apply bg-transparent;
         background-image: repeating-linear-gradient(
           90deg,
-          var(--progress-color) -1%,
-          var(--progress-color) 10%,
+          currentColor -1%,
+          currentColor 10%,
           transparent 10%,
           transparent 90%
         );
         background-size: 200%;
         background-position-x: 15%;
-        animation: progress-loading 5s ease-in-out infinite;
+        animation: progress 5s ease-in-out infinite;
       }
     }
   }
 
   @supports (-moz-appearance: none) {
     &::-moz-progress-bar {
-      @apply bg-base-content rounded-box;
+      @apply rounded-box bg-current;
     }
   }
 
@@ -43,139 +41,36 @@
     }
 
     &::-webkit-progress-value {
-      @apply bg-base-content rounded-box;
+      @apply rounded-box;
+      background-color: currentColor;
     }
   }
 }
 
 .progress-primary {
-  &:indeterminate {
-    --progress-color: var(--color-primary);
-  }
-
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply bg-primary rounded-box;
-    }
-  }
-
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-value {
-      @apply bg-primary;
-    }
-  }
+  @apply text-primary;
 }
 
 .progress-secondary {
-  &:indeterminate {
-    --progress-color: var(--color-secondary);
-  }
-
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply bg-secondary rounded-box;
-    }
-  }
-
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-value {
-      @apply bg-secondary;
-    }
-  }
+  @apply text-secondary;
 }
 
 .progress-accent {
-  &:indeterminate {
-    --progress-color: var(--color-accent);
-  }
-
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply bg-accent rounded-box;
-    }
-  }
-
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-value {
-      @apply bg-accent;
-    }
-  }
+  @apply text-accent;
 }
 
 .progress-info {
-  &:indeterminate {
-    --progress-color: var(--color-info);
-  }
-
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply bg-info rounded-box;
-    }
-  }
-
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-value {
-      @apply bg-info;
-    }
-  }
+  @apply text-info;
 }
 
 .progress-success {
-  &:indeterminate {
-    --progress-color: var(--color-success);
-  }
-
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply bg-success rounded-box;
-    }
-  }
-
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-value {
-      @apply bg-success;
-    }
-  }
+  @apply text-success;
 }
 
 .progress-warning {
-  &:indeterminate {
-    --progress-color: var(--color-warning);
-  }
-
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply bg-warning rounded-box;
-    }
-  }
-
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-value {
-      @apply bg-warning;
-    }
-  }
+  @apply text-warning;
 }
 
 .progress-error {
-  &:indeterminate {
-    --progress-color: var(--color-error);
-  }
-
-  @supports (-moz-appearance: none) {
-    &::-moz-progress-bar {
-      @apply bg-error rounded-box;
-    }
-  }
-
-  @supports (-webkit-appearance: none) {
-    &::-webkit-progress-value {
-      @apply bg-error;
-    }
-  }
-}
-
-@keyframes progress-loading {
-  50% {
-    background-position-x: -115%;
-  }
+  @apply text-error;
 }

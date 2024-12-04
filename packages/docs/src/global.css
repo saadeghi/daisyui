@@ -122,7 +122,7 @@
   transform: translateY(0.5em);
   background: color-mix(in oklab, var(--color-base-100) 99%, transparent);
   border: 0 solid color-mix(in oklab, var(--color-base-content) 20%, transparent);
-  border-radius: var(--radius-box);
+  border-radius: calc(var(--radius-field) - 0.5rem);
   overflow: hidden;
   padding: 0.5rem;
   backdrop-filter: blur(1rem);

@@ -18,7 +18,11 @@ export const pages = [
         name: "Install",
         tags: "how setup install npm",
         href: "/docs/install/",
-        highlightAnotherItem: "/docs/cdn",
+      },
+      {
+        name: "CDN",
+        tags: "cdn nobuild install",
+        href: "/docs/cdn/",
       },
       {
         name: "Use",

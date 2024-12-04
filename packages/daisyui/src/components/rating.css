@@ -8,7 +8,7 @@
   }
 
   :where(input) {
-    animation: rating-pop var(--animation-input, 0.25s) ease-out;
+    animation: rating var(--animation-input, 0.25s) ease-out;
     @apply bg-base-content h-6 w-6 cursor-pointer rounded-none opacity-100;
   }
 
@@ -98,16 +98,5 @@
 
   &.rating-xl input:not(.rating-hidden) {
     @apply w-4;
-  }
-}
-
-@keyframes rating-pop {
-  0%,
-  40% {
-    translate: 0 -0.125em;
-  }
-
-  100% {
-    translate: 0 0;
   }
 }

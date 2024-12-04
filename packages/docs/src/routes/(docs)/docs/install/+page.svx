@@ -5,13 +5,10 @@ published: true
 ---
 
 <script>
-  import InstallTabs from "$components/InstallTabs.svelte"
   import Translate from "$components/Translate.svelte"
   import Install from "$components/homepage/Install.svelte"
   export let data
 </script>
-
-<InstallTabs />
 
 <Translate text="You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed." />
 

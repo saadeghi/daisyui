@@ -16,7 +16,7 @@
 
   &:checked,
   &[aria-checked="true"] {
-    animation: radiomark var(--animation-input, 0.2s) ease-out;
+    animation: radio var(--animation-input, 0.2s) ease-out;
     @apply bg-base-100 border-current;
 
     &:before {
@@ -93,15 +93,5 @@
   padding: 0.375rem;
   &:is([type="radio"]) {
     --size: calc(var(--size-selector, 0.25rem) * 8);
-  }
-}
-
-@keyframes radiomark {
-  0% {
-    padding: 5px;
-  }
-
-  50% {
-    padding: 3px;
   }
 }

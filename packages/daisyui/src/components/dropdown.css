@@ -19,7 +19,7 @@
   .dropdown-content {
     @apply starting:[scale:95%] starting:[opacity:0];
     z-index: 999;
-    animation: dropdown-pop 0.2s;
+    animation: dropdown 0.2s;
     transition-property: opacity, scale, display;
     transition-behavior: allow-discrete;
     transition-duration: 0.2s;
@@ -60,8 +60,10 @@
   }
 
   /* experimental */
-  &[popover] {
+  &:where([popover]) {
     background: transparent;
+  }
+  &[popover] {
     @apply fixed text-inherit;
 
     /* align-self: anchor-center; */
@@ -207,11 +209,5 @@
 
   .dropdown-content {
     @apply top-auto bottom-full origin-bottom;
-  }
-}
-
-@keyframes dropdown-pop {
-  0% {
-    opacity: 0;
   }
 }

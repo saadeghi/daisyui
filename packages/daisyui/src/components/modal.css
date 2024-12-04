@@ -148,9 +148,3 @@
     --modal-bottom-right-radius: 0;
   }
 }
-
-@keyframes modal-pop {
-  0% {
-    opacity: 0;
-  }
-}

@@ -7,14 +7,8 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "engines": {
-    "node": ">=20.18.1"
-  },
-  "browserslist": [
-    "> 7%"
-  ],
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.0-beta.3",
+    "@tailwindcss/vite": "^4.0.0-beta.5",
     "astro": "^5.0.0-beta.12",
     "daisyui": "workspace:*"
   },

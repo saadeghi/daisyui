@@ -3,7 +3,7 @@
   translate: var(--toast-x, 0) var(--toast-y, 0);
 
   & > * {
-    animation: toast-pop 0.25s ease-out;
+    animation: toast 0.25s ease-out;
   }
 
   &:where(.toast-start) {
@@ -38,17 +38,5 @@
   &:where(.toast-top) {
     @apply top-0 bottom-auto;
     --toast-y: 0;
-  }
-}
-
-@keyframes toast-pop {
-  0% {
-    scale: 0.9;
-    opacity: 0;
-  }
-
-  100% {
-    scale: 1;
-    opacity: 1;
   }
 }

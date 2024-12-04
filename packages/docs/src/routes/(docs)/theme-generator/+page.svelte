@@ -694,7 +694,7 @@
         <div class="flex gap-4 items-end bg-base-200 rounded-box p-4 px-6 justify-center">
           <div class="flex gap-1">
             {#each scale as size, index}
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center gap-1">
                 <div
                   class="flex items-end"
                   style={`height:calc(${values[values.length - 1]} * ${scale[scale.length - 1]} )`}
@@ -737,7 +737,10 @@
 
             <div class="flex justify-between mx-1.5">
               {#each values as value, index}
-                <div class="w-px h-2 bg-base-content" class:opacity-20={value !== "0.25rem"}></div>
+                <div
+                  class="w-px h-1.5 bg-base-content"
+                  class:opacity-20={value !== "0.25rem"}
+                ></div>
               {/each}
             </div>
           </div>
@@ -771,7 +774,7 @@
           />
           <div class="flex justify-between py-1 mx-1.5">
             {#each values as value, index}
-              <div class="w-px h-2 bg-base-content" class:opacity-20={value !== "1px"}></div>
+              <div class="w-px h-1.5 bg-base-content" class:opacity-20={value !== "1px"}></div>
             {/each}
           </div>
         </div>
@@ -912,7 +915,7 @@
   <div class="overflow-x-hidden" class:max-md:hidden={dockActiveItem !== "preview"}>
     <div class="overflow-hidden border-base-300 border-s border-t md:rounded-ss-xl">
       <div
-        class="px-8 py-6 bg-base-200"
+        class="bg-base-200"
         style={`
         color: var(--color-base-content);
         background-color: var(--color-base-200);
