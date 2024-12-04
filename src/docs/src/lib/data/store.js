@@ -198,6 +198,10 @@ export const productCustomAttributes = [
     screenshot:
       "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
+    preveiw: {
+      button: "Live demo",
+      url: "https://saas-landing.daisyui.com/",
+    },
     ref: "K0XmL",
   },
   {
@@ -266,6 +270,10 @@ export const productCustomAttributes = [
     screenshot:
       "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
+    preveiw: {
+      button: "Live demo",
+      url: "https://mobile-landing.daisyui.com/",
+    },
     ref: "K0XmL",
   },
   {
