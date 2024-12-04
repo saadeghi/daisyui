@@ -16,6 +16,10 @@
 .collapse > input[type="radio"] {
   @apply appearance-none opacity-0;
 }
+:where(.collapse > input[type="checkbox"]),
+:where(.collapse > input[type="radio"]) {
+  @apply w-full h-full
+}
 .collapse-content {
   @apply invisible col-start-1 row-start-2 min-h-0;
   transition: visibility 0.2s;
