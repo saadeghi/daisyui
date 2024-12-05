@@ -197,7 +197,7 @@
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
-    const borderProps = ["--border-width"]
+    const borderProps = ["--border"]
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 

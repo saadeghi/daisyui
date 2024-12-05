@@ -1,14 +1,14 @@
 .select {
-  border: var(--border-width) solid transparent;
+  border: var(--border) solid transparent;
   @apply bg-base-100 relative inline-flex w-full max-w-80 shrink appearance-none items-center gap-1.5 px-4 align-middle;
   height: var(--size);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
-  border-start-start-radius: var(--radius-join-ss, var(--radius-field));
-  border-start-end-radius: var(--radius-join-se, var(--radius-field));
-  border-end-start-radius: var(--radius-join-es, var(--radius-field));
-  border-end-end-radius: var(--radius-join-ee, var(--radius-field));
+  border-start-start-radius: var(--join-ss, var(--radius-field));
+  border-start-end-radius: var(--join-se, var(--radius-field));
+  border-end-start-radius: var(--join-es, var(--radius-field));
+  border-end-end-radius: var(--join-ee, var(--radius-field));
   background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%);
   background-position:

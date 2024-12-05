@@ -9,12 +9,12 @@
     scale;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 0.2s;
-  border-start-start-radius: var(--radius-join-ss, var(--radius-field));
-  border-start-end-radius: var(--radius-join-se, var(--radius-field));
-  border-end-start-radius: var(--radius-join-es, var(--radius-field));
-  border-end-end-radius: var(--radius-join-ee, var(--radius-field));
+  border-start-start-radius: var(--join-ss, var(--radius-field));
+  border-start-end-radius: var(--join-se, var(--radius-field));
+  border-end-start-radius: var(--join-es, var(--radius-field));
+  border-end-end-radius: var(--join-ee, var(--radius-field));
   background-color: var(--btn-bg);
-  border-width: var(--border-width);
+  border-width: var(--border);
   border-style: solid;
   border-color: var(--btn-border);
   text-shadow: 0 0.5px oklch(1 0 0 / 0.15);
@@ -25,8 +25,8 @@
   background-origin: border-box;
   background-image: var(--btn-gradient);
   background-size:
-    100% calc(var(--border-width) + 0.5px),
-    100% calc(var(--border-width) + 0.5px),
+    100% calc(var(--border) + 0.5px),
+    100% calc(var(--border) + 0.5px),
     2rem 100%,
     2rem 100%;
   background-repeat: no-repeat;

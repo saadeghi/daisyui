@@ -1,6 +1,6 @@
 .radio {
   @apply text-base-content relative shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
-  border: var(--border-width) solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
+  border: var(--border) solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
   box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: var(--size);

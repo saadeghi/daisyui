@@ -6,7 +6,7 @@
     &:not(:last-child) {
       &:after {
         content: "";
-        border-bottom: var(--border-width) solid;
+        border-bottom: var(--border) solid;
         inset-inline: var(--radius-box);
         @apply border-base-content/10 absolute bottom-0;
       }

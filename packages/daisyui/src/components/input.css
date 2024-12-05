@@ -1,15 +1,15 @@
 .input {
   cursor: text;
-  border: var(--border-width) solid transparent;
+  border: var(--border) solid transparent;
   @apply bg-base-100 inline-flex w-full max-w-80 shrink appearance-none items-center align-middle;
   height: var(--size);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
-  border-start-start-radius: var(--radius-join-ss, var(--radius-field));
-  border-start-end-radius: var(--radius-join-se, var(--radius-field));
-  border-end-start-radius: var(--radius-join-es, var(--radius-field));
-  border-end-end-radius: var(--radius-join-ee, var(--radius-field));
+  border-start-start-radius: var(--join-ss, var(--radius-field));
+  border-start-end-radius: var(--join-se, var(--radius-field));
+  border-end-start-radius: var(--join-es, var(--radius-field));
+  border-end-end-radius: var(--join-ee, var(--radius-field));
   border-color: var(--input-color);
   box-shadow:
     0 1px color-mix(in oklab, var(--input-color) 10%, transparent) inset,

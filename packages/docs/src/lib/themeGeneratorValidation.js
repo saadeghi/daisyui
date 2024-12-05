@@ -62,7 +62,7 @@ export function validateThemeStructure(data) {
         throw new Error(`Invalid radius value for ${key}:${value}`)
       if (key.startsWith("--size-") && !validateSize(value))
         throw new Error(`Invalid size for ${key}`)
-      if (key.startsWith("--border-width") && !validateBorderWidth(value))
+      if (key.startsWith("--border") && !validateBorderWidth(value))
         throw new Error(`Invalid border width value for ${key}`)
     }
 

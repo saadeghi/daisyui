@@ -84,7 +84,7 @@ You can add custom themes
   --radius-selector: .5rem;
   --radius-field: .5rem;
   --radius-box: .5rem;
-  --border-width: 1px;
+  --border: 1px;
 }
 ```
 

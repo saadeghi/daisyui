@@ -1,5 +1,5 @@
 .toggle {
-  border: var(--border-width) solid currentColor;
+  border: var(--border) solid currentColor;
   @apply text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none align-middle;
   border-radius: calc(var(--radius-selector) + var(--toggle-padding));
   padding: var(--toggle-padding);
@@ -67,7 +67,7 @@
 
     &:after {
       @apply bg-transparent;
-      border: var(--border-width) solid currentColor;
+      border: var(--border) solid currentColor;
     }
   }
 }

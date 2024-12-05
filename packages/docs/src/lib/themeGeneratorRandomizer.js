@@ -85,7 +85,7 @@ export function randomizeThemeColors(tailwindcolors) {
     "--radius-box": randomFrom(radiusValues),
     "--size-selector": randomFrom(sizeValues),
     "--size-field": randomFrom(sizeValues),
-    "--border-width": randomFrom(borderValues),
+    "--border": randomFrom(borderValues),
   }
 
   // Decide if theme should be light or dark

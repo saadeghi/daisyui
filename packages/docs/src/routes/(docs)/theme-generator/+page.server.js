@@ -44,7 +44,7 @@ const sizeValues = [
   ],
 ]
 const borderValues = [
-  ["--border-width", "Border Width", "All components", ["0.5px", "1px", "1.5px", "2px"]],
+  ["--border", "Border Width", "All components", ["0.5px", "1px", "1.5px", "2px"]],
 ]
 const colorInitials = {
   "--color-base-100": "b1",

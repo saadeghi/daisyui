@@ -1,15 +1,15 @@
 .file-input {
   cursor: pointer;
-  border: var(--border-width) solid transparent;
+  border: var(--border) solid transparent;
   @apply inline-flex w-full max-w-80 cursor-pointer appearance-none items-center align-middle select-none;
   height: var(--size);
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
   line-height: 2;
-  border-start-start-radius: var(--radius-join-ss, var(--radius-field));
-  border-start-end-radius: var(--radius-join-se, var(--radius-field));
-  border-end-start-radius: var(--radius-join-es, var(--radius-field));
-  border-end-end-radius: var(--radius-join-ee, var(--radius-field));
+  border-start-start-radius: var(--join-ss, var(--radius-field));
+  border-start-end-radius: var(--join-se, var(--radius-field));
+  border-end-start-radius: var(--join-es, var(--radius-field));
+  border-end-end-radius: var(--join-ee, var(--radius-field));
   border-color: var(--input-color);
   box-shadow:
     0 1px color-mix(in oklab, var(--input-color) 10%, transparent) inset,
@@ -24,13 +24,11 @@
     @apply me-4 h-full cursor-pointer px-4 select-none;
     font-size: 0.875rem;
     color: var(--btn-fg);
-    border-width: var(--border-width);
+    border-width: var(--border);
     border-style: solid;
     border-color: var(--btn-border);
-    border-start-start-radius: calc(
-      var(--radius-join-ss, var(--radius-field) - var(--border-width))
-    );
-    border-end-start-radius: calc(var(--radius-join-es, var(--radius-field) - var(--border-width)));
+    border-start-start-radius: calc(var(--join-ss, var(--radius-field) - var(--border)));
+    border-end-start-radius: calc(var(--join-es, var(--radius-field) - var(--border)));
     font-weight: 600;
     background-color: var(--btn-bg);
     text-shadow: 0 0.5px oklch(1 0 0 / 0.15);
@@ -41,8 +39,8 @@
     background-origin: border-box;
     background-image: var(--btn-gradient);
     background-size:
-      100% calc(var(--border-width) + 0.5px),
-      100% calc(var(--border-width) + 0.5px),
+      100% calc(var(--border) + 0.5px),
+      100% calc(var(--border) + 0.5px),
       2rem 100%,
       2rem 100%;
     background-repeat: no-repeat;

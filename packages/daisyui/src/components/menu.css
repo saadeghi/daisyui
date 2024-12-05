@@ -7,7 +7,7 @@
 
     &:before {
       @apply bg-base-content absolute start-0 top-3 bottom-3 opacity-10;
-      width: var(--border-width);
+      width: var(--border);
       content: "";
     }
   }

@@ -29,7 +29,11 @@
   }
 
   &.card-border {
-    border: var(--border-width) solid var(--color-base-200);
+    border: var(--border) solid var(--color-base-200);
+  }
+
+  &.card-dash {
+    border: var(--border) dashed var(--color-base-200);
   }
 
   &.image-full {

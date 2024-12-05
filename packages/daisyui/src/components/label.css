@@ -1,4 +1,5 @@
 .label {
-  @apply -ms-3 me-3 flex h-full items-center px-3 text-xs text-current/60 select-none;
-  border-inline-end: var(--border-width) solid color-mix(in oklab, currentColor 10%, transparent);
+  @apply -ms-3 me-3 flex h-full items-center px-3 text-current/60 select-none;
+  border-inline-end: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
+  font-size: inherit;
 }

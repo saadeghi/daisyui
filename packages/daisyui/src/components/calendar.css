@@ -6,7 +6,7 @@
     user-select: none;
     background-color: var(--color-base-100);
     border-radius: var(--radius-box);
-    border: var(--border-width) solid var(--color-base-200);
+    border: var(--border) solid var(--color-base-200);
   }
   ::part(th) {
     font-weight: normal;
@@ -56,7 +56,7 @@
   user-select: none;
   background-color: var(--color-base-100);
   border-radius: var(--radius-box);
-  border: var(--border-width) solid var(--color-base-200);
+  border: var(--border) solid var(--color-base-200);
   font-size: 0.75rem;
   display: inline-block;
   position: relative;
@@ -288,7 +288,7 @@
     cursor: pointer;
   }
   & .rdp-footer {
-    border-top: var(--border-width) solid var(--color-base-200);
+    border-top: var(--border) solid var(--color-base-200);
     padding: 0.5rem;
   }
 }
@@ -303,7 +303,7 @@
     color: var(--color-base-content);
     background-color: var(--color-base-100);
     border-radius: var(--radius-box);
-    border: var(--border-width) solid var(--color-base-200);
+    border: var(--border) solid var(--color-base-200);
     padding: 0.5rem;
     &:before,
     &:after {
