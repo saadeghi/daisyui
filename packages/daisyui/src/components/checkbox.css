@@ -8,6 +8,8 @@
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: var(--size);
   height: var(--size);
+  background-size: calc(var(--noise) * 1000px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' stitchTiles='stitch'/%3E%3CfeBlend mode='screen'/%3E%3C/filter%3E%3Crect width='1000' height='1000' filter='url(%23noise)' opacity='.1'/%3E%3C/svg%3E");
   &:before {
     @apply block size-full rotate-45 bg-current opacity-0;
     content: "";

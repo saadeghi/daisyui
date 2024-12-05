@@ -46,7 +46,10 @@ const sizeValues = [
 const borderValues = [
   ["--border", "Border Width", "All components", ["0.5px", "1px", "1.5px", "2px"]],
 ]
-const effectValues = [["--gloss", "Gloss", "gloss effect", ["0", "1"]]]
+const effectValues = [
+  ["--gloss", "Gloss Effect", "For fields & selectors", ["0", "1"]],
+  ["--noise", "Noise Effect", "For fields & selectors", ["0", "1"]],
+]
 const colorInitials = {
   "--color-base-100": "b1",
   "--color-base-200": "b2",

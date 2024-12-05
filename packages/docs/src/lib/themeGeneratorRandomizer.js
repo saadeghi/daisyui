@@ -15,6 +15,7 @@ export function randomizeThemeColors(tailwindcolors) {
     "2px",
   ]
   const glossValues = ["0", "1"]
+  const noiseValues = ["0", "1"]
   const sizeValues = [
     // "0.1875rem",
     // "0.21875rem",
@@ -88,6 +89,7 @@ export function randomizeThemeColors(tailwindcolors) {
     "--size-field": randomFrom(sizeValues),
     "--border": randomFrom(borderValues),
     "--gloss": randomFrom(glossValues),
+    "--noise": randomFrom(noiseValues),
   }
 
   // Decide if theme should be light or dark

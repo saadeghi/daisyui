@@ -31,6 +31,7 @@ const requiredValues = [
   "--size-field",
   "--border",
   "--gloss",
+  "--noise",
 ]
 
 const isOklch = (value) => /^oklch\(\d+(\.\d+)?% \d+(\.\d+)? \d+(\.\d+)?\)$/.test(value)

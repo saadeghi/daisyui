@@ -30,12 +30,13 @@
   background-origin: border-box;
   background-image: var(--btn-gradient);
   background-size:
+    calc(var(--noise) * 1000px),
     100% calc(var(--border) + 0.5px),
     100% calc(var(--border) + 0.5px),
     2rem 100%,
     2rem 100%;
-  background-repeat: no-repeat;
-  background-position: top, bottom, left, right;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center, top, bottom, left, right;
   padding-inline: var(--btn-p);
   --size: calc(var(--size-field, 0.25rem) * 10);
   --btn-bg: var(--btn-color, var(--color-base-200));
@@ -45,7 +46,8 @@
   --btn-shadow: 0 3px 2px -2px
       color-mix(in oklab, var(--btn-bg) calc(var(--gloss) * 30%), transparent),
     0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--gloss) * 30%), transparent);
-  --btn-gradient: linear-gradient(
+  --btn-gradient: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' stitchTiles='stitch'/%3E%3CfeBlend mode='screen'/%3E%3C/filter%3E%3Crect width='1000' height='1000' filter='url(%23noise)' opacity='.1'/%3E%3C/svg%3E"),
+    linear-gradient(
       to left,
       transparent 25%,
       color-mix(
