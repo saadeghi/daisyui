@@ -4,11 +4,10 @@
   & input {
     border: none;
     @apply appearance-none;
-    -webkit-appearance: none;
   }
 
   :where(input) {
-    animation: rating var(--animation-input, 0.25s) ease-out;
+    animation: rating 0.25s ease-out;
     @apply bg-base-content h-6 w-6 cursor-pointer rounded-none opacity-100;
   }
 
@@ -29,7 +28,7 @@
     }
 
     &:focus-visible {
-      transition: translate 0.3s cubic-bezier(0, 0, 0.2, 1);
+      transition: translate 0.3s ease-out;
       translate: 0 -0.125em;
     }
   }
@@ -42,34 +41,24 @@
     translate: 0 -0.125em;
   }
 
-  &:is(.rating-xs) {
-    input {
-      @apply size-4;
-    }
+  &.rating-xs input {
+    @apply size-4;
   }
 
-  &:is(.rating-sm) {
-    input {
-      @apply size-5;
-    }
+  &.rating-sm input {
+    @apply size-5;
   }
 
-  &:is(.rating-md) {
-    input {
-      @apply size-6;
-    }
+  &.rating-md input {
+    @apply size-6;
   }
 
-  &:is(.rating-lg) {
-    input {
-      @apply size-7;
-    }
+  &.rating-lg input {
+    @apply size-7;
   }
 
-  &:is(.rating-xl) {
-    input {
-      @apply size-8;
-    }
+  &.rating-xl input {
+    @apply size-8;
   }
 }
 

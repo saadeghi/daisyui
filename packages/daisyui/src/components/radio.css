@@ -16,7 +16,7 @@
 
   &:checked,
   &[aria-checked="true"] {
-    animation: radio var(--animation-input, 0.2s) ease-out;
+    animation: radio 0.2s ease-out;
     @apply bg-base-100 border-current;
 
     &:before {
