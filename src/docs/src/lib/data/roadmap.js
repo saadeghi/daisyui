@@ -131,7 +131,7 @@ export const roadmap = [
         done: true,
       },
       {
-        title: "table redesing",
+        title: "table redesign",
         done: true,
       },
       {
@@ -268,7 +268,7 @@ export const roadmap = [
         done: true,
       },
       {
-        title: "Document utiltiy classes",
+        title: "Document utility classes",
         done: true,
       },
       {

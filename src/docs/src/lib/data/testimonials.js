@@ -33,7 +33,7 @@ export const tweets = [
   {
     id: "1556968894862180354",
     content:
-      "We use daisyUI + Tailwind with our projects. It has been extremly helpful building websites fast and give us a red design line through several different projects.",
+      "We use daisyUI + Tailwind with our projects. It has been extremely helpful building websites fast and give us a red design line through several different projects.",
     name: "TiiaAurora",
     username: "TiiaAurora",
     bio: "Tech journalist",

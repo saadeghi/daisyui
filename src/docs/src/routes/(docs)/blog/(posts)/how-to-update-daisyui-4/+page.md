@@ -55,7 +55,7 @@ Here's the primary color of light theme in daisyUI 3 and 4:
 </div>
 </div>
 
-So for using daisyUI color CSS variables directly inside your porject, change the color funtions from `hsl()` to `oklch()` like this:
+So for using daisyUI color CSS variables directly inside your project, change the color functions from `hsl()` to `oklch()` like this:
 
 <div class="grid sm:grid-cols-2 gap-x-4">
 <div class="text-center text-xs text-base-content/50 font-bold">Before</div>

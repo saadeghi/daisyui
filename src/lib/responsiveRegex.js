@@ -9,12 +9,12 @@ module.exports = [
     pattern: /.*/,
   },
   {
-    // responsive utilites for daisyUI responsive modifiers
+    // responsive utilities for daisyUI responsive modifiers
     pattern: /.(sm|md|lg|xl)/,
     variants: ["sm", "md", "lg", "xl"],
   },
   {
-    // responsive utilites for daisyUI components
+    // responsive utilities for daisyUI components
     pattern:
       /(drawer-open|modal-(middle|top|bottom)|card-(side|compact|normal)|(stats|divider)-(horizontal|vertical)|dropdown-(end|top|bottom|left|right))/,
     variants: ["sm", "md", "lg", "xl"],

@@ -52,11 +52,11 @@ export const productCustomAttributes = [
         ],
       ],
     },
-    preveiw: {
+    preview: {
       button: "Preview",
       url: "https://www.figma.com/community/file/1417577350704829934",
     },
-    preveiw_modal: {
+    preview_modal: {
       button: "All Features",
       img: "https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp",
     },
@@ -99,7 +99,7 @@ export const productCustomAttributes = [
     },
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["html", "react", "nextjs"],
-    preveiw: {
+    preview: {
       button: "Live demo",
       url: "https://nexus.daisyui.com/",
     },

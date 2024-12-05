@@ -6,7 +6,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 - Before opening a new issue, first [search for existing issues](https://github.com/saadeghi/daisyui/issues?q=) to avoid duplications.
 - Provide detailed reports to make things easier for maintainers.
-- If there's a weird bug, please provide a reproduction repository on Github (or a [CodePen page](https://daisyui.com/codepen/) or [Tailwind Play](https://daisyui.com/tailwindplay/) page)
+- If there's a weird bug, please provide a reproduction repository on GitHub (or a [CodePen page](https://daisyui.com/codepen/) or [Tailwind Play](https://daisyui.com/tailwindplay/) page)
 
 ## Fixing existing issues
 
@@ -71,7 +71,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 ## Adding a new component
 
-Before adding a new component, please make sure it's [start a discussion about it on Github](https://github.com/saadeghi/daisyui/discussions) so we can talk about how the structure and style should be.  
+Before adding a new component, please make sure it's [start a discussion about it on GitHub](https://github.com/saadeghi/daisyui/discussions) so we can talk about how the structure and style should be.  
 There is a `List of components` at the end of [/README.md](https://github.com/saadeghi/daisyui/blob/master/README.md) that I think would be a good to complete.
 
 ### File structure
