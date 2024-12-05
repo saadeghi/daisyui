@@ -1,0 +1,21 @@
+.list {
+  @apply flex flex-col;
+  .list-row {
+    @apply rounded-box relative grid grid-flow-col gap-4 p-4;
+    grid-template-columns: minmax(0, auto) 1fr;
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        border-bottom: var(--border-width) solid;
+        inset-inline: var(--radius-box);
+        @apply border-base-content/10 absolute bottom-0;
+      }
+    }
+    :not(.list-row-wrap) {
+      @apply row-start-1;
+    }
+  }
+}
+.list-row-wrap {
+  @apply row-start-2;
+}

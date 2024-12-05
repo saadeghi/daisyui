@@ -3,10 +3,10 @@
   font-size: 0.75rem;
   grid-template-columns: 1fr;
 }
-.legend {
+.fieldset-legend {
   @apply text-base-content -mb-3 flex items-center justify-between gap-2 py-2;
   font-weight: 600;
 }
-.label {
+.fieldset-label {
   @apply text-base-content/60 flex cursor-pointer items-center gap-1.5;
 }
