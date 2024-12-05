@@ -14,28 +14,28 @@ import { removeFiles } from "./functions/removeFiles.js"
 import { copyFile } from "./functions/copyFile.js"
 import { report } from "./functions/report.js"
 const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
-const isProd = process.argv.includes("--prod")
+const isDev = process.argv.includes("--dev")
 
 async function generateFiles() {
   await Promise.all([
     copyFile("./functions/themePlugin.js", "./theme/themePlugin.js", "index.js"),
-    isProd &&
+    !isDev &&
       generateColorRules({
         distDir: "../colors",
         styles: ["bg", "text", "border"],
         breakpoints: ["sm", "md", "lg", "xl", "2xl"],
         states: ["hover"],
       }),
-    isProd && generateThemeFiles({ srcDir: "src/themes", distDir: "theme" }),
-    isProd && generateRawStyles({ srcDir: "../src/base", distDir: "../base" }),
-    isProd &&
+    !isDev && generateThemeFiles({ srcDir: "src/themes", distDir: "theme" }),
+    !isDev && generateRawStyles({ srcDir: "../src/base", distDir: "../base" }),
+    !isDev &&
       generateRawStyles({
         srcDir: "../src/components",
         distDir: "../components",
         responsive: true,
         exclude: ["calendar", "countdown", "loading", "mask", "mockup", "skeleton", "swap"],
       }),
-    isProd &&
+    !isDev &&
       generateRawStyles({
         srcDir: "../src/utilities",
         distDir: "../utilities",
@@ -49,22 +49,22 @@ async function generateFiles() {
   ])
   await Promise.all([
     generateImports("imports.js"),
-    isProd && generateChunks("chunks.css"),
-    isProd && packCss("daisyui.css", []),
-    isProd && generateThemes("themes.css"),
+    !isDev && generateChunks("chunks.css"),
+    !isDev && packCss("daisyui.css", []),
+    !isDev && generateThemes("themes.css"),
     generateThemesObject("./theme/object.js"),
   ])
   await Promise.all([
     // extractClasses({ srcDir: "components" }),
-    isProd && minifyCssInDirectory(["colors", "base", "components", "utilities"]),
-    isProd && minify("themes.css"),
-    isProd && minify("daisyui.css"),
+    !isDev && minifyCssInDirectory(["colors", "base", "components", "utilities"]),
+    !isDev && minify("themes.css"),
+    !isDev && minify("daisyui.css"),
   ])
 }
 
 async function build() {
   try {
-    isProd &&
+    !isDev &&
       (await removeFiles([
         "base",
         "colors",
@@ -76,10 +76,14 @@ async function build() {
         "imports.js",
         "themes.css",
       ]))
-    console.time(`🌼 daisyUI ${packageJson.version}`)
+    console.time(
+      `${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${packageJson.version}`,
+    )
     await generateFiles()
-    console.timeEnd(`🌼 daisyUI ${packageJson.version}`)
-    isProd &&
+    console.timeEnd(
+      `${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${packageJson.version}`,
+    )
+    !isDev &&
       (await report([
         "base",
         "components",

@@ -37,7 +37,7 @@ jobs:
         run: bun i
 
       - name: Build package
-        run: bun run build:prod
+        run: bun run build
 
       - name: Add robots.txt if not main repo
         if: github.repository != 'saadeghi/daisyui'
@@ -46,7 +46,7 @@ jobs:
           Disallow: /' > packages/docs/static/robots.txt
 
       - name: Build docs
-        run: bun run build:docs:prod
+        run: bun run build:docs
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v4

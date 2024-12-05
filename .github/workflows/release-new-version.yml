@@ -36,7 +36,7 @@ jobs:
         run: bun i
 
       - name: Build package
-        run: bun run build:prod
+        run: bun run build
 
       - name: Run release command
         if: github.repository == 'saadeghi/daisyui'
