@@ -3,7 +3,7 @@
   @apply text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none align-middle;
   border-radius: calc(var(--radius-selector) + var(--toggle-padding));
   padding: var(--toggle-padding);
-  box-shadow: 0 1px color-mix(in oklab, currentColor, transparent 90%) inset;
+  box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent) inset;
   transition: color 0.3s;
   --toggle-padding: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
@@ -24,9 +24,9 @@
       translate 0.2s,
       inset-inline-start 0.2s;
     box-shadow:
-      0 -1px oklch(0% 0 0 / 0.1) inset,
-      0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,
-      0 1px color-mix(in oklab, currentColor, transparent 90%);
+      0 -1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
+      0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
+      0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent);
   }
 
   &:focus-visible {

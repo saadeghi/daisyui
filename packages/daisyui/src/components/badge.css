@@ -4,7 +4,6 @@
   font-size: 0.875rem;
   width: fit-content;
   padding-inline: calc(0.25rem * 3 - var(--border));
-  transition-property: color, background-color, box-shadow;
   background: var(--badge-color, var(--color-base-100));
   --size: calc(var(--size-selector, 0.25rem) * 6);
   height: var(--size);

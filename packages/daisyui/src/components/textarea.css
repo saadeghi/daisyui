@@ -34,11 +34,11 @@
   &.textarea-border {
     @apply border-base-content/10;
     box-shadow:
-      0 1px oklch(0% 0 0 / 0.1) inset,
-      0 -1px oklch(100% 0 0 / 0.1) inset;
+      0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
+      0 -1px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset;
 
     &:focus {
-      box-shadow: 0 1px oklch(0% 0 0 / 0.1);
+      box-shadow: 0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1));
     }
   }
 

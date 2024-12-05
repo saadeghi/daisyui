@@ -94,7 +94,7 @@
     & > *:not(ul, .menu-title, details, .btn).menu-active,
     & > details > summary:active {
       @apply bg-neutral text-neutral-content bg-neutral text-neutral-content outline-hidden;
-      box-shadow: 0 2px 3px -2px var(--color-neutral);
+      box-shadow: 0 2px calc(var(--gloss) * 3px) -2px var(--color-neutral);
     }
 
     &.menu-disabled {

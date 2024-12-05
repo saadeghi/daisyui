@@ -17,9 +17,14 @@
   border-width: var(--border);
   border-style: solid;
   border-color: var(--btn-border);
-  text-shadow: 0 0.5px oklch(1 0 0 / 0.15);
+  text-shadow: 0 0.5px oklch(1 0 0 / calc(var(--gloss) * 0.15));
   box-shadow:
-    0 0 0 0.5px color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 20%, transparent)
+    0 0 0 0.5px
+      color-mix(
+        in oklab,
+        color-mix(in oklab, white 20%, var(--btn-bg)) calc(var(--gloss) * 20%),
+        transparent
+      )
       inset,
     var(--btn-shadow);
   background-origin: border-box;
@@ -36,30 +41,47 @@
   --btn-bg: var(--btn-color, var(--color-base-200));
   --btn-fg: var(--color-base-content);
   --btn-p: 1rem;
-  --btn-border: color-mix(in oklab, var(--btn-bg), black 5%);
-  --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent),
-    0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, transparent);
+  --btn-border: color-mix(in oklab, var(--btn-bg), black calc(var(--gloss) * 5%));
+  --btn-shadow: 0 3px 2px -2px
+      color-mix(in oklab, var(--btn-bg) calc(var(--gloss) * 30%), transparent),
+    0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--gloss) * 30%), transparent);
   --btn-gradient: linear-gradient(
       to left,
       transparent 25%,
-      color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 40%, transparent),
+      color-mix(
+        in oklab,
+        color-mix(in oklab, white calc(var(--gloss) * 20%), var(--btn-bg)) 40%,
+        transparent
+      ),
       transparent 75%
     ),
     linear-gradient(
       to left,
       transparent 25%,
-      color-mix(in oklab, color-mix(in oklab, white 20%, var(--btn-bg)) 10%, transparent),
+      color-mix(
+        in oklab,
+        color-mix(in oklab, white calc(var(--gloss) * 20%), var(--btn-bg)) 10%,
+        transparent
+      ),
       transparent 75%
     ),
     linear-gradient(
       -50deg,
       transparent 50%,
-      color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)
+      color-mix(
+        in oklab,
+        transparent,
+        color-mix(in oklab, var(--color-base-100), white 50%) calc(var(--gloss) * 4%)
+      )
     ),
     linear-gradient(
       50deg,
       transparent 50%,
-      color-mix(in oklab, transparent, color-mix(in oklab, var(--color-base-100), white 50%) 4%)
+      color-mix(
+        in oklab,
+        transparent,
+        color-mix(in oklab, var(--color-base-100), white 50%) calc(var(--gloss) * 4%)
+      )
     );
 
   &:hover {

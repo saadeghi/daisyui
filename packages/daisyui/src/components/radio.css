@@ -1,7 +1,7 @@
 .radio {
   @apply text-base-content relative shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
   border: var(--border) solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
-  box-shadow: 0 1px oklch(0% 0 0 / 0.1) inset;
+  box-shadow: 0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: var(--size);
   height: var(--size);
@@ -22,9 +22,9 @@
     &:before {
       @apply bg-current;
       box-shadow:
-        0 -1px oklch(0% 0 0 / 0.1) inset,
-        0 8px 0 -4px oklch(100% 0 0 / 0.1) inset,
-        0 1px oklch(0% 0 0 / 0.1);
+        0 -1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
+        0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
+        0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1));
     }
   }
 }
