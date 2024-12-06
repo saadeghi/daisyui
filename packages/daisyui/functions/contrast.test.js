@@ -14,6 +14,9 @@ function rateContrast(contrast) {
   if (contrast >= optimalContrast) {
     return "AA"
   }
+  if (contrast <= minContrast) {
+    return "🛑"
+  }
   return ""
 }
 
@@ -59,9 +62,9 @@ test("All theme color contrasts", () => {
       const contrast = parseFloat(wcagContrast(colorValue1, colorValue2).toFixed(2))
       const result = {
         theme: themeName,
-        colorPair: `${color1.replace("--color-", "")},${color2.replace("--color-", "")}`,
-        contrast: contrast,
-        rating: rateContrast(contrast),
+        colorPair: `${color1.replace("--color-", "")}, ${color2.replace("--color-", "")}`,
+        ratio: contrast,
+        rate: rateContrast(contrast),
       }
       results.push(result)
     })
@@ -69,7 +72,7 @@ test("All theme color contrasts", () => {
 
   console.table(results)
 
-  results.forEach(({ contrast }) => {
-    expect(contrast).toBeGreaterThan(minContrast)
+  results.forEach(({ ratio }) => {
+    expect(ratio).toBeGreaterThan(minContrast)
   })
 })
