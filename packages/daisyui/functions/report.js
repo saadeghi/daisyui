@@ -53,7 +53,8 @@ async function processDirectory(dir) {
   }
 }
 
-async function compressFile(content, compressFunc, compressionLevel = 10) {
+// compression level: 0-11. 6 is jsdelivr default
+async function compressFile(content, compressFunc, compressionLevel = 11) {
   return new Promise((resolve, reject) => {
     compressFunc(
       content,
