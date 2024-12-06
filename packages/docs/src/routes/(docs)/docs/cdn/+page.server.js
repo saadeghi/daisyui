@@ -1,12 +1,8 @@
 import { brotliCompressSync, constants } from "node:zlib"
-import { statSync, readFileSync, readdirSync } from "fs"
-import { join, dirname, extname, basename } from "path"
-import { fileURLToPath } from "url"
+import { readFileSync, readdirSync } from "fs"
+import { join, extname, basename } from "path"
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-const basePath = join(__dirname, "../../../../../../daisyui/")
+const basePath = join(process.cwd(), "../daisyui/")
 
 const getBrotliSize = (filePath) => {
   try {
