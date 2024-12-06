@@ -44,25 +44,32 @@ const getCssVariables = (cssContent) => {
 
 const themes = fs.readdirSync(themesDir).filter((file) => file.endsWith(".css"))
 
-const padString = (str, length) => str.toString().padEnd(length, " ")
+test("All theme color contrasts", () => {
+  const results = []
 
-themes.forEach((theme) => {
-  const themeName = path.basename(theme, ".css")
-  const themePath = path.join(themesDir, theme)
-  const cssContent = fs.readFileSync(themePath, "utf8")
-  const variables = getCssVariables(cssContent)
+  themes.forEach((theme) => {
+    const themeName = path.basename(theme, ".css")
+    const themePath = path.join(themesDir, theme)
+    const cssContent = fs.readFileSync(themePath, "utf8")
+    const variables = getCssVariables(cssContent)
 
-  colorPairs.forEach(([color1, color2]) => {
-    const colorValue1 = variables[color1]
-    const colorValue2 = variables[color2]
-    const contrast = parseFloat(wcagContrast(colorValue1, colorValue2).toFixed(2))
-    const paddedThemeName = padString(themeName, 11) // Adjust the length as needed
-    const paddedColorPair = padString(
-      `${color1.replace("--color-", "")},${color2.replace("--color-", "")}`,
-      30,
-    ) // Adjust the length as needed
-    test(`${paddedThemeName}${paddedColorPair}${padString(contrast, 5)}\t${rateContrast(contrast)}`, () => {
-      expect(contrast).toBeGreaterThan(minContrast)
+    colorPairs.forEach(([color1, color2]) => {
+      const colorValue1 = variables[color1]
+      const colorValue2 = variables[color2]
+      const contrast = parseFloat(wcagContrast(colorValue1, colorValue2).toFixed(2))
+      const result = {
+        theme: themeName,
+        colorPair: `${color1.replace("--color-", "")},${color2.replace("--color-", "")}`,
+        contrast: contrast,
+        rating: rateContrast(contrast),
+      }
+      results.push(result)
     })
+  })
+
+  console.table(results)
+
+  results.forEach(({ contrast }) => {
+    expect(contrast).toBeGreaterThan(minContrast)
   })
 })

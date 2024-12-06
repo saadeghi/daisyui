@@ -11,7 +11,7 @@
     "build:docs:dev": "bun run build:dev && cd packages/docs && bun run build",
     "dev": "bun run build:dev && cd packages/docs && bun run dev",
     "play": "bun run build:dev && cd packages/playground && bun run dev",
-    "format": "bunx prettier 'packages/{daisyui,docs}/{src,functions}/**/*.{css,js,json,svelte}' --write",
+    "format": "bunx -y prettier 'packages/{daisyui,docs}/{src,functions}/**/*.{css,js,json,svelte}' --write",
     "lint": "bunx -y oxlint@latest",
     "test": "bun test",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
@@ -28,7 +28,6 @@
     "prettier": "^3.4.2",
     "prettier-plugin-svelte": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^4.0.0-beta.5",
-    "zlib": "^1.0.5"
+    "tailwindcss": "^4.0.0-beta.5"
   }
 }

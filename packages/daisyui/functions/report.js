@@ -1,4 +1,4 @@
-import zlib from "zlib"
+import { brotliCompress, constants } from "node:zlib"
 import { promises as fs } from "fs"
 import path from "path"
 
@@ -6,7 +6,7 @@ async function processFile(filePath) {
   try {
     const fileContent = await fs.readFile(filePath, "utf8")
     const stats = await fs.stat(filePath)
-    const brotliSize = await compressFile(fileContent, zlib.brotliCompress)
+    const brotliSize = await compressFile(fileContent, brotliCompress)
 
     const allCssVariables = fileContent.match(/--[\w-]+/g) || []
     const cssVariables = allCssVariables.length
@@ -53,8 +53,20 @@ async function processDirectory(dir) {
   }
 }
 
-async function compressFile(content, compressFunc) {
-  return new Promise((resolve) => compressFunc(content, (_, result) => resolve(result.length)))
+async function compressFile(content, compressFunc, compressionLevel = 10) {
+  return new Promise((resolve, reject) => {
+    compressFunc(
+      content,
+      { params: { [constants.BROTLI_PARAM_QUALITY]: compressionLevel } },
+      (err, result) => {
+        if (err) {
+          reject(err)
+        } else {
+          resolve(result.length)
+        }
+      },
+    )
+  })
 }
 
 export const report = async (directories) => {

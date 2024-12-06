@@ -41,11 +41,11 @@ const isPx = (value) => /^\d+(\.\d+)?px$/.test(value)
 const themesDir = join(__dirname, "../src/themes")
 const themeFiles = readdirSync(themesDir).filter((file) => file.endsWith(".css"))
 
-themeFiles.forEach((file) => {
-  const filePath = join(themesDir, file)
-  const content = readFileSync(filePath, "utf-8")
+test("All theme files should include all required values", () => {
+  themeFiles.forEach((file) => {
+    const filePath = join(themesDir, file)
+    const content = readFileSync(filePath, "utf-8")
 
-  test(`Theme file ${file} should include all required values`, () => {
     requiredValues.forEach((value) => {
       const regex = new RegExp(`${value}:\\s*([^;]+);`)
       const match = content.match(regex)
