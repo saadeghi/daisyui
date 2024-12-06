@@ -40,6 +40,99 @@
       var(--focus-shadow, 0 0),
       calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
   }
+
+  &-vertical {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    height: 100%;
+    width: 1.5rem;
+
+    &:focus-visible::-webkit-slider-thumb {
+      --focus-shadow: 0 0 0 6px theme(colors.base-100) inset, 0 0 0 2rem var(--range-shdw) inset;
+    }
+    &:focus-visible::-moz-range-thumb {
+      --focus-shadow: 0 0 0 6px theme(colors.base-100) inset, 0 0 0 2rem var(--range-shdw) inset;
+    }
+    &::-webkit-slider-runnable-track {
+      @apply w-2 h-full;
+    }
+    &::-moz-range-track {
+      @apply w-2 h-full;
+    }
+    &::-webkit-slider-thumb {
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow:
+        0 0 0 3px var(--range-shdw) inset,
+        var(--focus-shadow, 0 0),
+        0 calc(var(--filler-size) * 1 + var(--filler-offset)) 0 var(--filler-size);
+    }
+    &::-moz-range-thumb {
+      top: 0%;
+      left: 50%;
+      box-shadow:
+        0 0 0 3px var(--range-shdw) inset,
+        var(--focus-shadow, 0 0),
+        0 calc(var(--filler-size) * 1 + var(--filler-offset)) 0 var(--filler-size);
+    }
+    &.range-invert {
+      direction: ltr;
+      &::-webkit-slider-thumb {
+        box-shadow:
+          0 0 0 3px var(--range-shdw) inset,
+          var(--focus-shadow, 0 0),
+          0 calc(var(--filler-size) * -1 - var(--filler-offset)) 0 var(--filler-size);
+      }
+      &::-moz-range-thumb {
+        box-shadow:
+          0 0 0 3px var(--range-shdw) inset,
+          var(--focus-shadow, 0 0),
+          0 calc(var(--filler-size) * -1 - var(--filler-offset)) 0 var(--filler-size);
+      }
+    }
+
+    &.range-xs {
+      width: 1rem;
+      height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 0.25rem
+      }
+      &::-moz-range-track {
+        width: 0.25rem
+      }
+    }
+    &.range-sm {
+      width: 1.25rem;
+      height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 0.25rem
+      }
+      &::-moz-range-track {
+        width: 0.25rem
+      }
+    }
+    &.range-md {
+      width: 1.5rem;
+      height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 0.5rem
+      }
+      &::-moz-range-track {
+        width: 0.5rem
+      }
+    }
+    &.range-lg {
+      width: 2rem;
+      height: 100%;
+      &::-webkit-slider-runnable-track {
+        width: 1rem
+      }
+      &::-moz-range-track {
+        width: 1rem
+      }
+    }
+  }
   &-primary {
     --range-shdw: theme(colors.primary);
   }
