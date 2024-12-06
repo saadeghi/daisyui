@@ -1,5 +1,11 @@
 .label {
-  @apply -ms-3 me-3 flex h-full items-center px-3 text-current/60 select-none;
-  border-inline-end: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
-  font-size: inherit;
+  @apply px-3 text-current/60 select-none;
+}
+.input,
+.select {
+  .label {
+    @apply -ms-3 me-3 flex h-full items-center;
+    border-inline-end: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
+    font-size: inherit;
+  }
 }
