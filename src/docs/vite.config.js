@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      $components: path.resolve("/src/components"),
+      $components: path.resolve("./src/components"),
     },
   },
 })
