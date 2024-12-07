@@ -30,7 +30,7 @@ published: true
 
   let combinedUrl = derived(selectedUrls, ($selectedUrls) => {
     return $selectedUrls.length
-      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@alpha/${url.path}`).join(",")}`
+      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@5/${url.path}`).join(",")}`
       : "";
   });
 
@@ -73,10 +73,10 @@ published: true
     name="cdn"
     role="tab"
     class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
-    aria-label="customize"
+    aria-label="customize parts"
   />
   <div class="tab-content border-none bg-neutral text-neutral-content" role="tabpanel">
-    <div class="relative p-4 text-left">
+    <div class="relative p-4 text-left min-h-[9rem]">
       {#if $combinedUrl}
         <span class="font-mono select-none text-xs ms-4">
           <span class="font-mono select-none text-xs">
@@ -124,7 +124,7 @@ published: true
           </div>
         </div>
       {:else}
-        <div class="me-10 text-xs py-3">Select the parts you want to use 👇</div>
+        <div class="me-10 ms-4 text-xs py-2.5">Select the parts you want to use 👇</div>
       {/if}
     </div>
     <div class="py-8 flex gap-2 flex-col bg-base-200 text-base-content px-6 rounded-b-btn">

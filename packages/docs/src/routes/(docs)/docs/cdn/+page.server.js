@@ -9,7 +9,8 @@ const getBrotliSize = (filePath) => {
     const content = readFileSync(join(basePath, filePath))
     const compressed = brotliCompressSync(content, {
       params: {
-        [constants.BROTLI_PARAM_QUALITY]: 11,
+        // compression level: 0-11. 6 is jsdelivr default
+        [constants.BROTLI_PARAM_QUALITY]: 6,
       },
     })
     return compressed.length / 1024 // size in KB

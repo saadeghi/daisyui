@@ -7,7 +7,7 @@
 }
 
 .tab {
-  @apply hover:text-base-content text-base-content/50 relative inline-flex cursor-pointer appearance-none flex-wrap items-center justify-center text-center select-none;
+  @apply hover:text-base-content relative inline-flex cursor-pointer appearance-none flex-wrap items-center justify-center text-center select-none;
   --tab-padding: 1rem;
   --tab-bg: var(--color-base-100);
   --tab-border-color: var(--color-base-300);
@@ -38,15 +38,18 @@
       @apply block h-full;
     }
   }
+  &:not(:checked, :hover, .tab-active, [aria-selected="true"]) {
+    @apply text-base-content/50;
+  }
 
   &:not(input):empty {
     @apply cursor-default;
   }
 
-  &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+  /* &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
   &:is(input:checked) {
     @apply text-base-content;
-  }
+  } */
 
   &:focus {
     @apply outline-hidden;
