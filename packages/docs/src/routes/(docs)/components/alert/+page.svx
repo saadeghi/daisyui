@@ -1,30 +1,37 @@
 ---
 title: Alert
 desc: Alert informs users about important events.
-published: true
 layout: components
+classnames:
+  component:
+  - class: alert
+    desc: Container element
+  style:
+  - class: alert-outline
+    desc: outline style
+  - class: alert-dash
+    desc: dash outline style
+  - class: alert-soft
+    desc: soft style
+  color:
+  - class: alert-info
+    desc: info color
+  - class: alert-success
+    desc: success color
+  - class: alert-warning
+    desc: warning color
+  - class: alert-error
+    desc: error color
+  direction:
+  - class: alert-vertical
+    desc: Vertical layout, good for mobile
+  - class: alert-horizontal
+    desc: Horizontal layout, good for desktop
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type: 'component', class: 'alert', desc: 'Container element' },
-  { type: 'modifier', class: 'alert-info', desc: 'Alert with `info` color' },
-  { type: 'modifier', class: 'alert-success', desc: 'Alert with `success` color' },
-  { type: 'modifier', class: 'alert-warning', desc: 'Alert with `warning` color' },
-  { type: 'modifier', class: 'alert-error', desc: 'Alert with `error` color' },
-]}"
-/>
 
 <Component title="Alert">
 <div role="alert" class="alert shadow-lg">

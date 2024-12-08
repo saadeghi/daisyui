@@ -4,13 +4,13 @@ import { join, extname, basename } from "path"
 
 const basePath = join(process.cwd(), "../daisyui/")
 
-const getBrotliSize = (filePath) => {
+const getBrotliSize = (filePath, compressionLevel = 11) => {
+  // compression level: 0-11. 6 is jsdelivr default
   try {
     const content = readFileSync(join(basePath, filePath))
     const compressed = brotliCompressSync(content, {
       params: {
-        // compression level: 0-11. 6 is jsdelivr default
-        [constants.BROTLI_PARAM_QUALITY]: 6,
+        [constants.BROTLI_PARAM_QUALITY]: compressionLevel,
       },
     })
     return compressed.length / 1024 // size in KB
@@ -29,9 +29,11 @@ const getCssFiles = (dirPath, checkedCondition) => {
   }))
 }
 
-const baseFiles = getCssFiles(join(basePath, "base"), (file) => [].includes(file))
+const baseFiles = getCssFiles(join(basePath, "base"), (file) => true)
 const componentFiles = getCssFiles(join(basePath, "components"), (file) =>
-  ["button.css", "toggle.css", "checkbox.css"].includes(file),
+  ["button.css", "toggle.css", "checkbox.css", "input.css", "select.css", "menu.css"].includes(
+    file,
+  ),
 )
 const utilityFiles = getCssFiles(join(basePath, "utilities"), (file) => [].includes(file))
 const colorFiles = getCssFiles(join(basePath, "colors"), (file) => [].includes(file))
@@ -41,7 +43,7 @@ const files = [...baseFiles, ...componentFiles, ...utilityFiles, ...colorFiles, 
 
 // Update the files array with the Brotli-compressed sizes
 files.forEach((file) => {
-  file.size = getBrotliSize(file.path)
+  file.size = getBrotliSize(file.path, 11)
 })
 
 const groupedFiles = [
@@ -59,6 +61,6 @@ export async function load() {
   return {
     files,
     groupedFiles,
-    daisyuiCssSize: Math.floor(getBrotliSize("daisyui.css")),
+    daisyuiCssSize: Math.floor(getBrotliSize("daisyui.css", 6)),
   }
 }

@@ -1,28 +1,21 @@
 ---
 title: Hero
 desc: Hero is a component for displaying a large box or image with a title and description.
-published: true
 layout: components
+classnames:
+  component:
+  - class: hero
+    desc: Hero container
+  part:
+  - class: hero-content
+    desc: content part
+  - class: hero-overlay
+    desc: Overlay that covers the background image
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-
-
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'hero', desc: 'Container element' },
-  { type:'component', class: 'hero-content', desc: 'Container for content' },
-  { type:'component', class: 'hero-overlay', desc: 'Overlay that covers the background image' },
-]}"
-/>
 
 <Component title="Centered hero">
 <div class="hero min-h-[30rem] rounded bg-base-200">

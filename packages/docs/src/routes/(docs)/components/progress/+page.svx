@@ -1,33 +1,31 @@
 ---
 title: Progress
 desc: Progress bar can be used to show the progress of a task or to show the passing of time.
-published: true
 layout: components
+classnames:
+  component:
+  - class: progress
+    desc: For <progress> tag
+  color:
+  - class: progress-primary
+    desc: primary color
+  - class: progress-secondary
+    desc: secondary color
+  - class: progress-accent
+    desc: accent color
+  - class: progress-info
+    desc: info color
+  - class: progress-success
+    desc: success color
+  - class: progress-warning
+    desc: warning color
+  - class: progress-error
+    desc: error color
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'progress', desc: 'Progress element' },
-  { type:'modifier', class: 'progress-primary', desc: 'Adds `primary` color' },
-  { type:'modifier', class: 'progress-secondary', desc: 'Adds `secondary` color' },
-  { type:'modifier', class: 'progress-accent', desc: 'Adds `accent` color' },
-  { type:'modifier', class: 'progress-info', desc: 'Adds `info` color' },
-  { type:'modifier', class: 'progress-success', desc: 'Adds `success` color' },
-  { type:'modifier', class: 'progress-warning', desc: 'Adds `warning` color' },
-  { type:'modifier', class: 'progress-error', desc: 'Adds `error` color' },
-]}"
-/>
 
 <Component title="Progress">
 <div class="flex flex-col gap-2 items-center">

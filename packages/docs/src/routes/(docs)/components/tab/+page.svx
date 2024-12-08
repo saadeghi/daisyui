@@ -1,37 +1,49 @@
 ---
 title: Tabs
 desc: Tabs can be used to show a list of links in a tabbed format.
-published: true
 layout: components
+classnames:
+  component:
+  - class: tabs
+    desc: Container of multiple tab items
+  part:
+  - class: tab
+    desc: A single tab button (can be button, link, div, radio input, etc)
+  - class: tab-content
+    desc: Tab content that comes immediately after a tab
+  style:
+  - class: tabs-box
+    desc: box style
+  - class: tabs-border
+    desc: bottom border style
+  - class: tabs-lift
+    desc: lift style
+  modifier:
+  - class: tab-active
+    desc: Makes a single tab look active
+  - class: tab-disabled
+    desc: Makes a single tab look disabled
+  placement:
+  - class: tabs-top
+    desc: Puts tab buttons on top of the tab-content (defult)
+  - class: tab-bottom
+    desc: Puts tabs on under the tab-content
+  size:
+  - class: tabs-xs
+    desc: Extra small size
+  - class: tabs-sm
+    desc: Small size
+  - class: tabs-md
+    desc: Medium size (default)
+  - class: tabs-lg
+    desc: Large size
+  - class: tabs-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-
-
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'tabs', desc: 'Container of tab items' },
-  { type:'modifier', class: 'tabs-boxed', desc: 'Adds a box style to tabs container' },
-  { type:'modifier', class: 'tabs-bordered', desc: 'Adds bottom border to tab item' },
-  { type:'modifier', class: 'tabs-lift', desc: 'Adds lift style to tab item' },
-  { type:'responsive', class: 'tabs-xs', desc: 'Shows tab in extra small size' },
-  { type:'responsive', class: 'tabs-sm', desc: 'Shows tab in small size' },
-  { type:'responsive', class: 'tabs-md', desc: 'Shows tab in medium (default) size' },
-  { type:'responsive', class: 'tabs-lg', desc: 'Shows tab in large size' },
-  { type:'component', class: 'tab', desc: 'A tab item' },
-  { type:'modifier', class: 'tab-active', desc: 'For the active tab' },
-  { type:'modifier', class: 'tab-disabled', desc: 'For a visually disabled tab' },
-  { type:'component', class: 'tab-content', desc: 'Tab content that comes immediately after a tab' },
-]}"
-/>
 
 <Component title="Tabs">
 <div role="tablist" class="tabs">

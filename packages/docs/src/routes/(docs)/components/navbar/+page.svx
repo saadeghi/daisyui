@@ -1,29 +1,23 @@
 ---
 title: Navbar
 desc: Navbar is used to show a navigation bar on the top of the page.
-published: true
 layout: components
+classnames:
+  component:
+  - class: navbar
+    desc: Navigation bar
+  part:
+  - class: navbar-start
+    desc: For the div inside navbar, to fill 50% of width
+  - class: navbar-center
+    desc: For the div inside navbar, to be at center horizontally
+  - class: navbar-end
+    desc: For the div inside navbar, to fill second 50% of width
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'navbar', desc: 'Container element' },
-  { type:'component', class: 'navbar-start', desc: 'Child element, fills 50% of width to be on start' },
-  { type:'component', class: 'navbar-center', desc: 'Child element, fills remaining space to be on center' },
-  { type:'component', class: 'navbar-end', desc: 'Child element, fills 50% of width to be on end' },
-]}"
-/>
 
 <Component title="Navbar with title only">
 <div class="navbar bg-base-100 shadow-xl rounded-box">

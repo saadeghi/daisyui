@@ -1,34 +1,39 @@
 ---
 title: Dropdown
 desc: Dropdown can open a menu or any other element when the button is clicked.
-published: true
 layout: components
+classnames:
+  component:
+  - class: dropdown
+    desc: Dropdown container
+  part:
+  - class: dropdown-content
+    desc: Content part
+  placement:
+  - class: dropdown-start
+    desc: Align horizontally to start of button
+  - class: dropdown-center
+    desc: Align horizontally to center of button
+  - class: dropdown-end
+    desc: Align horizontally to end of button
+  - class: dropdown-top
+    desc: Open from top
+  - class: dropdown-bottom
+    desc: Open from bottom
+  - class: dropdown-left
+    desc: Open from left
+  - class: dropdown-right
+    desc: Open from right
+  modifier:
+  - class: dropdown-hover
+    desc: Opens on hover too
+  - class: dropdown-open
+    desc: Force open
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'dropdown', desc: 'Container element' },
-  { type:'component', class: 'dropdown-content', desc: 'Container for content' },
-  { type:'modifier', class: 'dropdown-end', desc: 'Aligns to end' },
-  { type:'modifier', class: 'dropdown-top', desc: 'Open from top' },
-  { type:'modifier', class: 'dropdown-bottom', desc: 'Open from bottom' },
-  { type:'modifier', class: 'dropdown-left', desc: 'Open from left' },
-  { type:'modifier', class: 'dropdown-right', desc: 'Open from right' },
-  { type:'modifier', class: 'dropdown-hover', desc: 'Opens on hover too' },
-  { type:'modifier', class: 'dropdown-open', desc: 'Force open' },
-]}"
-/>
 
 ### Method 1: using details and summary tags
 
@@ -384,14 +389,14 @@ data="{[
 <div class="navbar mb-40 bg-base-300 rounded-box w-full">
   <div class="flex-1 px-2 lg:flex-none">
     <button class="text-lg font-bold">daisyUI</button>
-  </div> 
+  </div>
   <div class="flex justify-end flex-1 px-2">
     <div class="flex items-stretch">
       <button class="btn btn-ghost rounded-field">Button</button>
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-ghost rounded-field">Dropdown</div>
         <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52 mt-4">
-          <li><button>Item 1</button></li> 
+          <li><button>Item 1</button></li>
           <li><button>Item 2</button></li>
         </ul>
       </div>
@@ -434,7 +439,7 @@ data="{[
     </div>
     <div tabindex="0" class="shadow card compact dropdown-content z-1 bg-base-100 rounded-box w-64">
       <div tabindex="0" class="card-body">
-        <h2 class="card-title">You needed more info?</h2> 
+        <h2 class="card-title">You needed more info?</h2>
         <p>Here is a description!</p>
       </div>
     </div>

@@ -1,38 +1,43 @@
 ---
 title: Tooltip
 desc: Tooltip can be used to show a message when hovering over an element.
-published: true
 layout: components
+classnames:
+  component:
+  - class: tooltip
+    desc: Container element
+  placement:
+  - class: tooltip-top
+    desc: Put tooltip on top
+  - class: tooltip-bottom
+    desc: Put tooltip on bottom
+  - class: tooltip-left
+    desc: Put tooltip on left
+  - class: tooltip-right
+    desc: Put tooltip on right
+  modifier:
+  - class: tooltip-open
+    desc: Force open tooltip
+  color:
+  - class: tooltip-primary
+    desc: primary color
+  - class: tooltip-secondary
+    desc: secondary color
+  - class: tooltip-accent
+    desc: accent color
+  - class: tooltip-info
+    desc: info color
+  - class: tooltip-success
+    desc: success color
+  - class: tooltip-warning
+    desc: warning color
+  - class: tooltip-error
+    desc: error color
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'responsive', class: 'tooltip', desc: 'Container element' },
-  { type:'component', class: 'tooltip-open', desc: 'Force open tooltip' },
-  { type:'responsive', class: 'tooltip-top', desc: 'Put tooltip on top' },
-  { type:'responsive', class: 'tooltip-bottom', desc: 'Put tooltip on bottom' },
-  { type:'responsive', class: 'tooltip-left', desc: 'Put tooltip on left' },
-  { type:'responsive', class: 'tooltip-right', desc: 'Put tooltip on right' },
-  { type:'modifier', class: 'tooltip-primary', desc: 'Adds `primary` color to tooltip' },
-  { type:'modifier', class: 'tooltip-secondary', desc: 'Adds `secondary` color to tooltip' },
-  { type:'modifier', class: 'tooltip-accent', desc: 'Adds `accent` color to tooltip' },
-  { type:'modifier', class: 'tooltip-info', desc: 'Adds `info` color to tooltip' },
-  { type:'modifier', class: 'tooltip-success', desc: 'Adds `success` color to tooltip' },
-  { type:'modifier', class: 'tooltip-warning', desc: 'Adds `warning` color to tooltip' },
-  { type:'modifier', class: 'tooltip-error', desc: 'Adds `error` color to tooltip' },
-]}"
-/>
 
 <Component title="Tooltip">
 <div class="my-6">

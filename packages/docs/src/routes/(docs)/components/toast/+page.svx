@@ -1,32 +1,29 @@
 ---
 title: Toast
 desc: Toast is a wrapper to stack elements, positioned on the corner of page.
-published: true
 layout: components
+classnames:
+  component:
+  - class: toast
+    desc: Container element that sticks to the corner of page
+  placement:
+  - class: toast-start
+    desc: align horizontally to the left
+  - class: toast-center
+    desc: align horizontally to the center
+  - class: toast-end
+    desc: align horizontally to the right (default)
+  - class: toast-top
+    desc: align vertically to top
+  - class: toast-middle
+    desc: align vertically to middle
+  - class: toast-bottom
+    desc: align vertically to bottom (default)
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type: 'component', class: 'toast', desc: 'Container element that sticks to the corner of page' },
-  { type:'responsive', class: 'toast-start', desc: 'align horizontally to the left' },
-  { type:'responsive', class: 'toast-center', desc: 'align horizontally to the center' },
-  { type:'responsive', class: 'toast-end', desc: 'align horizontally to the right (default)' },
-  { type:'responsive', class: 'toast-top', desc: 'align vertically to top' },
-  { type:'responsive', class: 'toast-middle', desc: 'align vertically to middle' },
-  { type:'responsive', class: 'toast-bottom', desc: 'align vertically to bottom (default)' },
-]}"
-/>
 
 <Component title="toast with alert inside">
 <div class="w-full h-64 relative">

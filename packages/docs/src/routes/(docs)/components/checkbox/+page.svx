@@ -1,39 +1,43 @@
 ---
 title: Checkbox
 desc: Checkboxes are used to select or deselect a value.
-published: true
 layout: components
+classnames:
+  component:
+  - class: checkbox
+    desc: Checkbox
+  color:
+  - class: checkbox-primary
+    desc: primary color
+  - class: checkbox-secondary
+    desc: secondary color
+  - class: checkbox-accent
+    desc: accent color
+  - class: checkbox-success
+    desc: success color
+  - class: checkbox-warning
+    desc: warning color
+  - class: checkbox-info
+    desc: info color
+  - class: checkbox-error
+    desc: error color
+  size:
+  - class: checkbox-xs
+    desc: Extra small size
+  - class: checkbox-sm
+    desc: Small size
+  - class: checkbox-md
+    desc: Medium size (default)
+  - class: checkbox-lg
+    desc: Large size
+  - class: checkbox-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
   let indeterminate = true;
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'form-control', desc: 'Container element' },
-  { type:'component', class: 'checkbox', desc: 'For checkbox' },
-  { type:'modifier', class: 'checkbox-primary', desc: 'Adds `primary` to checkbox' },
-  { type:'modifier', class: 'checkbox-secondary', desc: 'Adds `secondary` to checkbox' },
-  { type:'modifier', class: 'checkbox-accent', desc: 'Adds `accent` to checkbox' },
-  { type:'modifier', class: 'checkbox-success', desc: 'Adds `success` to checkbox' },
-  { type:'modifier', class: 'checkbox-warning', desc: 'Adds `warning` to checkbox' },
-  { type:'modifier', class: 'checkbox-info', desc: 'Adds `info` to checkbox' },
-  { type:'modifier', class: 'checkbox-error', desc: 'Adds `error` to checkbox' },
-  { type:'responsive', class: 'checkbox-lg', desc: 'Large checkbox' },
-  { type:'responsive', class: 'checkbox-md', desc: 'Medium checkbox (default)' },
-  { type:'responsive', class: 'checkbox-sm', desc: 'Small checkbox' },
-  { type:'responsive', class: 'checkbox-xs', desc: 'Extra small checkbox' },
-]}"
-/>
 
 <Component title="Checkbox">
 <input type="checkbox" checked="checked" class="checkbox" />
@@ -49,7 +53,7 @@ data="{[
 <Component title="With label and form-control">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox" />
   </label>
 </div>
@@ -70,7 +74,7 @@ data="{[
 <Component title="Primary color">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
   </label>
 </div>
@@ -91,7 +95,7 @@ data="{[
 <Component title="Secondary color">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox checkbox-secondary" />
   </label>
 </div>
@@ -112,7 +116,7 @@ data="{[
 <Component title="Accent color">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox checkbox-accent" />
   </label>
 </div>
@@ -133,7 +137,7 @@ data="{[
 <Component title="Success color">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
   </label>
 </div>
@@ -154,7 +158,7 @@ data="{[
 <Component title="Warning color">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox checkbox-warning" />
   </label>
 </div>
@@ -175,7 +179,7 @@ data="{[
 <Component title="Info color">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
   </label>
 </div>
@@ -196,7 +200,7 @@ data="{[
 <Component title="Error color">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" checked="checked" class="checkbox checkbox-error" />
   </label>
 </div>
@@ -216,9 +220,9 @@ data="{[
 
 <Component title="Sizes">
 <div class="flex flex-col items-center gap-2">
-  <input type="checkbox" checked="checked" class="checkbox checkbox-xs" /> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-sm" /> 
-  <input type="checkbox" checked="checked" class="checkbox checkbox-md" /> 
+  <input type="checkbox" checked="checked" class="checkbox checkbox-xs" />
+  <input type="checkbox" checked="checked" class="checkbox checkbox-sm" />
+  <input type="checkbox" checked="checked" class="checkbox checkbox-md" />
   <input type="checkbox" checked="checked" class="checkbox checkbox-lg" />
 </div>
 {#snippet html()}

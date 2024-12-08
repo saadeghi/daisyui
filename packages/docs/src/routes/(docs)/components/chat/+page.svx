@@ -1,39 +1,45 @@
 ---
 title: Chat bubble
 desc: Chat bubbles are used to show one line of conversation and all its data, including the author image, author name, time, etc.
-published: true
 layout: components
+classnames:
+  component:
+  - class: chat
+    desc: Container for one line of conversation and its data
+  part:
+  - class: chat-image
+    desc: Author image
+  - class: chat-header
+    desc: Text above the chat bubble
+  - class: chat-footer
+    desc: Text below the chat bubble
+  - class: chat-bubble
+    desc: Chat bubble
+  placement:
+  - class: chat-start
+    desc: Aligns chat to start horizontally (required)
+  - class: chat-end
+    desc: Aligns chat to end horizontally (required)
+  color:
+  - class: chat-bubble-primary
+    desc: primary color for chat-bubble
+  - class: chat-bubble-secondary
+    desc: secondary color for chat-bubble
+  - class: chat-bubble-accent
+    desc: accent color for chat-bubble
+  - class: chat-bubble-info
+    desc: info color for chat-bubble
+  - class: chat-bubble-success
+    desc: success color for chat-bubble
+  - class: chat-bubble-warning
+    desc: warning color for chat-bubble
+  - class: chat-bubble-error
+    desc: error color for chat-bubble
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'chat', desc: 'Container for one line of conversation and all its data' },
-  { type:'modifier', class: 'chat-start', desc: 'Aligns `chat` to left (required)' },
-  { type:'modifier', class: 'chat-end', desc: 'Aligns `chat` to end (required)' },
-  { type:'component', class: 'chat-image', desc: 'For the author image' },
-  { type:'component', class: 'chat-header', desc: 'For the line above the chat bubble' },
-  { type:'component', class: 'chat-footer', desc: 'For the line below the chat bubble' },
-  { type:'component', class: 'chat-bubble', desc: 'For the content of chat' },
-  { type:'modifier', class: 'chat-bubble-primary', desc: 'sets `primary` color for the `chat-bubble`' },
-  { type:'modifier', class: 'chat-bubble-secondary', desc: 'sets `secondary` color for the `chat-bubble`' },
-  { type:'modifier', class: 'chat-bubble-accent', desc: 'sets `accent` color for the `chat-bubble`' },
-  { type:'modifier', class: 'chat-bubble-info', desc: 'sets `info` color for the `chat-bubble`' },
-  { type:'modifier', class: 'chat-bubble-success', desc: 'sets `success` color for the `chat-bubble`' },
-  { type:'modifier', class: 'chat-bubble-warning', desc: 'sets `warning` color for the `chat-bubble`' },
-  { type:'modifier', class: 'chat-bubble-error', desc: 'sets `error` color for the `chat-bubble`' },
-]}"
-/>
 
 <Component title="chat-start and chat-end">
 <div class="w-full">

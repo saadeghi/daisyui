@@ -1,37 +1,42 @@
 ---
 title: Range slider
 desc: Range slider is used to select a value by sliding a handle.
-published: true
 layout: components
+classnames:
+  component:
+  - class: range
+    desc: For <input> tag
+  color:
+  - class: range-primary
+    desc: primary color
+  - class: range-secondary
+    desc: secondary color
+  - class: range-accent
+    desc: accent color
+  - class: range-success
+    desc: success color
+  - class: range-warning
+    desc: warning color
+  - class: range-info
+    desc: info color
+  - class: range-error
+    desc: error color
+  size:
+  - class: range-xs
+    desc: Extra small size
+  - class: range-sm
+    desc: Small size
+  - class: range-md
+    desc: Medium size (default)
+  - class: range-lg
+    desc: Large size
+  - class: range-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'range', desc: 'Range input' },
-  { type:'modifier', class: 'range-primary', desc: 'Adds `primary` to range' },
-  { type:'modifier', class: 'range-secondary', desc: 'Adds `secondary` to range' },
-  { type:'modifier', class: 'range-accent', desc: 'Adds `accent` to range' },
-  { type:'modifier', class: 'range-success', desc: 'Adds `success` to range' },
-  { type:'modifier', class: 'range-warning', desc: 'Adds `warning` to range' },
-  { type:'modifier', class: 'range-info', desc: 'Adds `info` to range' },
-  { type:'modifier', class: 'range-error', desc: 'Adds `error` to range' },
-  { type:'responsive', class: 'range-lg', desc: 'Large range' },
-  { type:'responsive', class: 'range-md', desc: 'Medium range (default)' },
-  { type:'responsive', class: 'range-sm', desc: 'Small range' },
-  { type:'responsive', class: 'range-xs', desc: 'Extra small range' },
-]}"
-/>
 
 <Component title="Range">
 <input type="range" min="0" max="100" value="40" class="range max-w-xs" />
@@ -150,9 +155,9 @@ data="{[
 
 <Component title="Sizes">
 <div class="flex flex-col w-full items-center gap-4">
-  <input type="range" min="0" max="100" value="40" class="range range-xs max-w-xs" /> 
-  <input type="range" min="0" max="100" value="50" class="range range-sm max-w-xs" /> 
-  <input type="range" min="0" max="100" value="60" class="range range-md max-w-xs" /> 
+  <input type="range" min="0" max="100" value="40" class="range range-xs max-w-xs" />
+  <input type="range" min="0" max="100" value="50" class="range range-sm max-w-xs" />
+  <input type="range" min="0" max="100" value="60" class="range range-md max-w-xs" />
   <input type="range" min="0" max="100" value="70" class="range range-lg max-w-xs" />
 </div>
 {#snippet html()}

@@ -1,36 +1,39 @@
 ---
 title: Steps
 desc: Steps can be used to show a list of steps in a process.
-published: true
 layout: components
+classnames:
+  component:
+  - class: steps
+    desc: Container of multiple step nodes
+  part:
+  - class: step
+    desc: A single step node
+  color:
+  - class: step-primary
+    desc: primary color
+  - class: step-secondary
+    desc: secondary color
+  - class: step-accent
+    desc: accent color
+  - class: step-info
+    desc: info color
+  - class: step-success
+    desc: success color
+  - class: step-warning
+    desc: warning color
+  - class: step-error
+    desc: error color
+  direction:
+  - class: steps-vertical
+    desc: Makes steps vertical (default)
+  - class: steps-horizontal
+    desc: Makes steps horizontal
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'steps', desc: 'Container of step items' },
-  { type:'component', class: 'step', desc: 'A step item' },
-  { type:'modifier', class: 'step-primary', desc: 'Adds `primary` color to step' },
-  { type:'modifier', class: 'step-secondary', desc: 'Adds `secondary` color to step' },
-  { type:'modifier', class: 'step-accent', desc: 'Adds `accent` color to step' },
-  { type:'modifier', class: 'step-info', desc: 'Adds `info` color to step' },
-  { type:'modifier', class: 'step-success', desc: 'Adds `success` color to step' },
-  { type:'modifier', class: 'step-warning', desc: 'Adds `warning` color to step' },
-  { type:'modifier', class: 'step-error', desc: 'Adds `error` color to step' },
-  { type:'responsive', class: 'steps-vertical', desc: 'makes `steps` vertical' },
-  { type:'responsive', class: 'steps-horizontal', desc: 'makes `steps` horizontal' },
-]}"
-/>
 
 <Component title="Horizontal">
 <ul class="steps">

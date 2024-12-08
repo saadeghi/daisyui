@@ -1,26 +1,24 @@
 ---
 title: Pagination
 desc: Pagination is a group of buttons that allow the user to navigate between a set of related content.
-published: true
 layout: components
+classnames:
+  component:
+  - class: join
+    desc: For grouping multiple items
+  part:
+  - class: join-item
+    desc: Item inside join. Can be a button, input, etc.
+  direction:
+  - class: join-vertical
+    desc: Show items vertically
+  - class: join-horizontal
+    desc: Show items horizontally
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'join', desc: 'Groups buttons together' },
-]}"
-/>
 
 <Component title="Pagination with an active button">
 <div class="join">

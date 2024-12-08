@@ -1,35 +1,36 @@
 ---
 title: Timeline
 desc: Timeline component shows a list of events in chronological order.
-published: true
 layout: components
+classnames:
+  component:
+  - class: timeline
+    desc: Timeline container
+  part:
+  - class: timeline-start
+    desc: The content inside <li> that will be at the start direction
+  - class: timeline-middle
+    desc: The content inside <li> that will be at the middle
+  - class: timeline-end
+    desc: The content inside <li> that will be at the end direction
+  modifier:
+  - class: timeline-snap-icon
+    desc: snaps the icon to the start instead of middle
+  - class: timeline-box
+    desc: Applies a box style to timeline-start or timeline-end
+  - class: timeline-compact
+    desc: forces all items on one side
+  direction:
+  - class: timeline-vertical
+    desc: vertical layout (default)
+  - class: timeline-horizontal
+    desc: horizontal layout
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
   import Translate from "$components/Translate.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type: 'component', class: 'timeline', desc: 'Container element' },
-  { type: 'responsive', class: 'timeline-compact', desc: 'forces all items on one side' },
-  { type: 'modifier', class: 'timeline-snap-icon', desc: 'snaps the icon to the start instead of middle' },
-  { type: 'responsive', class: 'timeline-vertical', desc: 'Shows the timeline vertically' },
-  { type: 'responsive', class: 'timeline-horizontal', desc: 'Shows the timeline horizontally' },
-  { type: 'component', class: 'timeline-start', desc: 'The content inside <li> that will be at the start direction' },
-  { type: 'component', class: 'timeline-middle', desc: 'The content inside <li> that will be at the middle' },
-  { type: 'component', class: 'timeline-end', desc: 'The content inside <li> that will be at the end direction' },
-  { type: 'modifier', class: 'timeline-box', desc: 'Applies a box style to timeline-start or timeline-end' },
-]}"
-/>
 
 <div class="alert text-sm mt-4">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>

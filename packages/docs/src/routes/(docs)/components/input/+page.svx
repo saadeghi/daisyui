@@ -1,41 +1,45 @@
 ---
 title: Text Input
 desc: Text Input is a simple input field.
-published: true
 layout: components
+classnames:
+  component:
+  - class: input
+    desc: For <input> tag or a wrapper of <input> tag
+  style:
+  - class: input-ghost
+    desc: ghost style
+  color:
+  - class: input-primary
+    desc: primary color
+  - class: input-secondary
+    desc: secondary color
+  - class: input-accent
+    desc: accent color
+  - class: input-info
+    desc: info color
+  - class: input-success
+    desc: success color
+  - class: input-warning
+    desc: warning color
+  - class: input-error
+    desc: error color
+  size:
+  - class: input-xs
+    desc: Extra small size
+  - class: input-sm
+    desc: Small size
+  - class: input-md
+    desc: Medium size (default)
+  - class: input-lg
+    desc: Large size
+  - class: input-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'form-control', desc: 'Container element' },
-  { type:'component', class: 'label', desc: 'For helper text' },
-  { type:'component', class: 'input', desc: 'For <input> element' },
-  { type:'modifier', class: 'input-bordered', desc: 'Adds border to input' },
-  { type:'modifier', class: 'input-ghost', desc: 'Adds ghost style to input' },
-  { type:'modifier', class: 'input-primary', desc: 'Adds `primary` color to input' },
-  { type:'modifier', class: 'input-secondary', desc: 'Adds `secondary` color to input' },
-  { type:'modifier', class: 'input-accent', desc: 'Adds `accent` color to input' },
-  { type:'modifier', class: 'input-info', desc: 'Adds `info` color to input' },
-  { type:'modifier', class: 'input-success', desc: 'Adds `success` color to input' },
-  { type:'modifier', class: 'input-warning', desc: 'Adds `warning` color to input' },
-  { type:'modifier', class: 'input-error', desc: 'Adds `error` color to input' },
-  { type:'responsive', class: 'input-lg', desc: 'Large size for input' },
-  { type:'responsive', class: 'input-md', desc: 'Medium (default) size for input' },
-  { type:'responsive', class: 'input-sm', desc: 'Small size for input' },
-  { type:'responsive', class: 'input-xs', desc: 'Extra small size for input' },
-]}"
-/>
 
 <Component title="Text input">
 <input type="text" placeholder="Type here" class="input w-full max-w-xs" />

@@ -1,38 +1,42 @@
 ---
 title: Radio
 desc: Radio buttons allow the user to select one option from a set.
-published: true
 layout: components
+classnames:
+  component:
+  - class: radio
+    desc: For radio input
+  color:
+  - class: radio-primary
+    desc: primary color
+  - class: radio-secondary
+    desc: secondary color
+  - class: radio-accent
+    desc: accent color
+  - class: radio-success
+    desc: success color
+  - class: radio-warning
+    desc: warning color
+  - class: radio-info
+    desc: info color
+  - class: radio-error
+    desc: error color
+  size:
+  - class: radio-xs
+    desc: Extra small size
+  - class: radio-sm
+    desc: Small size
+  - class: radio-md
+    desc: Medium size (default)
+  - class: radio-lg
+    desc: Large size
+  - class: radio-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'form-control', desc: 'Container element' },
-  { type:'component', class: 'radio', desc: 'For radio input' },
-  { type:'modifier', class: 'radio-primary', desc: 'Adds `primary` to radio' },
-  { type:'modifier', class: 'radio-secondary', desc: 'Adds `secondary` to radio' },
-  { type:'modifier', class: 'radio-accent', desc: 'Adds `accent` to radio' },
-  { type:'modifier', class: 'radio-success', desc: 'Adds `success` to radio' },
-  { type:'modifier', class: 'radio-warning', desc: 'Adds `warning` to radio' },
-  { type:'modifier', class: 'radio-info', desc: 'Adds `info` to radio' },
-  { type:'modifier', class: 'radio-error', desc: 'Adds `error` to radio' },
-  { type:'responsive', class: 'radio-lg', desc: 'Large radio' },
-  { type:'responsive', class: 'radio-md', desc: 'Medium radio (default)' },
-  { type:'responsive', class: 'radio-sm', desc: 'Small radio' },
-  { type:'responsive', class: 'radio-xs', desc: 'Extra small radio' },
-]}"
-/>
 
 <Component title="Radio">
 <input type="radio" name="radio-1" class="radio" checked="checked" />
@@ -155,13 +159,13 @@ data="{[
 <div class="flex flex-col">
   <div class="form-control w-52">
     <label class="cursor-pointer label">
-      <span class="label-text">Red pill</span> 
+      <span class="label-text">Red pill</span>
       <input type="radio" name="radio-10" class="radio checked:bg-red-500" checked="checked" />
     </label>
   </div>
   <div class="form-control w-52">
     <label class="cursor-pointer label">
-      <span class="label-text">Blue pill</span> 
+      <span class="label-text">Blue pill</span>
       <input type="radio" name="radio-10" class="radio checked:bg-blue-500" checked="checked" />
     </label>
   </div>

@@ -1,34 +1,34 @@
 ---
 title: Stat
-desc: Stat is used to show numbers and data in a box.
-published: true
+desc: Stat is used to show numbers and data in a block.
 layout: components
+classnames:
+  component:
+  - class: stats
+    desc: Container of multiple stat items
+  part:
+  - class: stat
+    desc: A block to display stat data about a topic
+  - class: stat-title
+    desc: Title part
+  - class: stat-value
+    desc: Value part
+  - class: stat-desc
+    desc: Description part
+  - class: stat-figure
+    desc: Figure part for icon, etc
+  - class: stat-actions
+    desc: Actions part for button, etc
+  direction:
+  - class: stats-horizontal
+    desc: Makes stats horizontal (default)
+  - class: stats-vertical
+    desc: Makes stats vertical
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'stats', desc: 'Container of multiple stat items' },
-  { type:'component', class: 'stat', desc: 'One stat item' },
-  { type:'component', class: 'stat-title', desc: 'Title text' },
-  { type:'component', class: 'stat-value', desc: 'Value text' },
-  { type:'component', class: 'stat-desc', desc: 'Description text' },
-  { type:'component', class: 'stat-figure', desc: 'For icon, image, etc' },
-  { type:'component', class: 'stat-actions', desc: 'For buttons, input, etc' },
-  { type:'responsive', class: 'stats-horizontal', desc: 'Shows items horizontally (default)' },
-  { type:'responsive', class: 'stats-vertical', desc: 'Shows items vertically' },
-]}"
-/>
 
 <Component title="Stat">
 <div class="shadow stats">
@@ -385,7 +385,7 @@ data="{[
     <div class="stat-title">Current balance</div>
     <div class="stat-value">$89,400</div>
     <div class="stat-actions">
-      <button class="btn btn-sm">Withdrawal</button> 
+      <button class="btn btn-sm">Withdrawal</button>
       <button class="btn btn-sm">Deposit</button>
     </div>
   </div>

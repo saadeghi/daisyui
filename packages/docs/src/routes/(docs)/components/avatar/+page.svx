@@ -1,30 +1,25 @@
 ---
 title: Avatar
 desc: Avatars are used to show a thumbnail representation of an individual or business in the interface.
-published: true
 layout: components
+classnames:
+  component:
+  - class: avatar
+    desc: Avatar
+  - class: avatar-group
+    desc: Container for multiple avatars
+  modifier:
+  - class: avatar-online
+    desc: shows a green dot as online indicator
+  - class: avatar-offline
+    desc: shows a gray dot as offline indicator
+  - class: avatar-placeholder
+    desc: To show letters as avatar placeholder
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'avatar', desc: 'Container element' },
-  { type:'component', class: 'avatar-group', desc: 'Container for grouping multiple avatars' },
-  { type:'modifier', class: 'online', desc: 'shows a green dot as online indicator' },
-  { type:'modifier', class: 'offline', desc: 'shows a gray dot as offline indicator' },
-  { type:'modifier', class: 'placeholder', desc: 'to show some letters as avatar placeholder' },
-]}"
-/>
 
 <Component title="Avatar">
 <div class="avatar">
@@ -327,17 +322,17 @@ data="{[
   <div class="bg-neutral text-neutral-content rounded-full w-24">
     <span class="text-3xl">D</span>
   </div>
-</div> 
+</div>
 <div class="avatar online placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-16">
     <span class="text-xl">AI</span>
   </div>
-</div> 
+</div>
 <div class="avatar placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-12">
     <span>SY</span>
   </div>
-</div> 
+</div>
 <div class="avatar placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-8">
     <span class="text-xs">UI</span>

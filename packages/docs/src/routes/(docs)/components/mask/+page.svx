@@ -1,47 +1,52 @@
 ---
 title: Mask
 desc: Mask crops the content of the element to common shapes.
-published: true
 layout: components
+classnames:
+  component:
+  - class: mask
+    desc: Masks the content with shape
+  style:
+  - class: mask-squircle
+    desc: squircle
+  - class: mask-heart
+    desc: heart
+  - class: mask-hexagon
+    desc: hexagon vertical
+  - class: mask-hexagon-2
+    desc: hexagon horizontal
+  - class: mask-decagon
+    desc: decagon
+  - class: mask-pentagon
+    desc: pentagon
+  - class: mask-diamond
+    desc: diamond
+  - class: mask-square
+    desc: square
+  - class: mask-circle
+    desc: circle
+  - class: mask-star
+    desc: star
+  - class: mask-star-2
+    desc: star (bold)
+  - class: mask-triangle
+    desc: triangle pointing top
+  - class: mask-triangle-2
+    desc: triangle pointing down
+  - class: mask-triangle-3
+    desc: triangle pointing left
+  - class: mask-triangle-4
+    desc: triangle pointing right
+  modifier:
+  - class: mask-half-1
+    desc: Crops only the first half of mask
+  - class: mask-half-2
+    desc: Crops only the second half of mask
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'mask', desc: 'Masks the content with shape' },
-  { type:'modifier', class: 'mask-squircle', desc: 'Applies `squircle` shape' },
-  { type:'modifier', class: 'mask-heart', desc: 'Applies `heart` shape' },
-  { type:'modifier', class: 'mask-hexagon', desc: 'Applies `hexagon` shape' },
-  { type:'modifier', class: 'mask-hexagon-2', desc: 'Applies `hexagon` alternative shape' },
-  { type:'modifier', class: 'mask-decagon', desc: 'Applies `decagon` shape' },
-  { type:'modifier', class: 'mask-pentagon', desc: 'Applies `pentagon` shape' },
-  { type:'modifier', class: 'mask-diamond', desc: 'Applies `diamond` shape' },
-  { type:'modifier', class: 'mask-square', desc: 'Applies `square` shape' },
-  { type:'modifier', class: 'mask-circle', desc: 'Applies `circle` shape' },
-  { type:'modifier', class: 'mask-parallelogram', desc: 'Applies `parallelogram` shape' },
-  { type:'modifier', class: 'mask-parallelogram-2', desc: 'Applies `parallelogram` alternative shape' },
-  { type:'modifier', class: 'mask-parallelogram-3', desc: 'Applies `parallelogram` alternative shape' },
-  { type:'modifier', class: 'mask-parallelogram-4', desc: 'Applies `parallelogram` alternative shape' },
-  { type:'modifier', class: 'mask-star', desc: 'Applies `star` shape' },
-  { type:'modifier', class: 'mask-star-2', desc: 'Applies `star` alternative shape' },
-  { type:'modifier', class: 'mask-triangle', desc: 'Applies `triangle` shape' },
-  { type:'modifier', class: 'mask-triangle-2', desc: 'Applies `triangle` alternative shape' },
-  { type:'modifier', class: 'mask-triangle-3', desc: 'Applies `triangle` alternative shape' },
-  { type:'modifier', class: 'mask-triangle-4', desc: 'Applies `triangle` alternative shape' },
-  { type:'modifier', class: 'mask-half-1', desc: 'Crops only the first half of mask' },
-  { type:'modifier', class: 'mask-half-2', desc: 'Crops only the second half of mask' },
-]}"
-/>
 
 <Component title="Squircle">
 <img alt="Squircle CSS mask" class="mask mask-squircle w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />

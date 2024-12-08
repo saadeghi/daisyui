@@ -92,7 +92,7 @@
   padding: 11px;
   overflow: hidden;
 
-  .camera {
+  .mockup-phone-camera {
     grid-column: 1/1;
     grid-row: 1/1;
     background: black;
@@ -103,7 +103,7 @@
     margin-top: 6px;
   }
 
-  .display {
+  .mockup-phone-display {
     grid-column: 1/1;
     grid-row: 1/1;
     @apply bg-base-100;

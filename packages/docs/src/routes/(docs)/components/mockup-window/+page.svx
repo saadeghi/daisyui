@@ -1,26 +1,16 @@
 ---
 title: Window mockup
 desc: Window mockup shows a box that looks like an operating system window.
-published: true
 layout: components
+classnames:
+  component:
+  - class: mockup-window
+    desc: OS window mockup
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'mockup-window', desc: 'Container element' },
-]}"
-/>
 
 <Component title="window mockup with border">
 <div class="border mockup-window border-base-300 w-full">

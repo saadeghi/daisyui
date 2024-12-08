@@ -1,39 +1,48 @@
 ---
 title: Menu
 desc: Menu is used to display a list of links vertically or horizontally.
-published: true
 layout: components
+classnames:
+  component:
+  - class: menu
+    desc: For <ul> tag
+  part:
+  - class: menu-title
+    desc: styles a <li> as title
+  - class: menu-dropdown
+    desc: For the collapsible <ul> if you want to show it using JS
+  - class: menu-dropdown-toggle
+    desc: For the toggle to show/hide the menu-dropdown using JS
+  modifier:
+  - class: menu-disabled
+    desc: For disabling a <li>
+  - class: menu-active
+    desc: For the element inside <li> to look active
+  - class: menu-focus
+    desc: For the element inside <li> to look focused
+  - class: menu-dropdown-show
+    desc: Shows the menu-dropdown-toggle and menu-dropdown collapsible submenu using JS
+  size:
+  - class: menu-xs
+    desc: Extra small size
+  - class: menu-sm
+    desc: Small size
+  - class: menu-md
+    desc: Medium size (default)
+  - class: menu-lg
+    desc: Large size
+  - class: menu-xl
+    desc: Extra large size
+  direction:
+  - class: menu-vertical
+    desc: Vertical menu (default)
+  - class: menu-horizontal
+    desc: Horizontal menu
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-
-
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'menu', desc: 'Container <ul> element' },
-  { type:'component', class: 'menu-title', desc: 'Specifies the title of menu' },
-  { type:'modifier', class: 'disabled', desc: 'Sets <li> as disabled' },
-  { type:'modifier', class: 'active', desc: 'Applies actives style to the element inside <li>' },
-  { type:'modifier', class: 'focus', desc: 'Applies focus style to the element inside <li>' },
-  { type:'component', class: 'menu-dropdown-toggle', desc: 'Class name for the toggle to show/hide the `menu-dropdown` using JS' },
-  { type:'component', class: 'menu-dropdown', desc: 'Class name for the collapsible <ul> if you want to show it using JS' },
-  { type:'modifier', class: 'menu-dropdown-show', desc: 'Shows the `menu-dropdown-toggle` and `menu-dropdown` collapsible submenu using JS' },
-  { type:'responsive', class: 'menu-xs', desc: 'Extra small size' },
-  { type:'responsive', class: 'menu-sm', desc: 'Small size' },
-  { type:'responsive', class: 'menu-md', desc: 'Medium size (default)' },
-  { type:'responsive', class: 'menu-lg', desc: 'Large size' },
-  { type:'responsive', class: 'menu-vertical', desc: 'Vertical menu (default)' },
-  { type:'responsive', class: 'menu-horizontal', desc: 'Horizontal menu' }
-]}"
-/>
 
 <Component title="Menu">
 <ul class="menu bg-base-200 w-56 rounded-box">

@@ -1,26 +1,16 @@
 ---
 title: Skeleton
 desc: Skeleton is a component that can be used to show a loading state of a component.
-published: true
 layout: components
+classnames:
+  component:
+  - class: skeleton
+    desc: A placeholder div with loading animation
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type: 'component', class: 'skeleton', desc: 'Shows a div with loading animation' },
-]}"
-/>
 
 <Component title="Skeleton">
 <div class="skeleton w-32 h-32"></div>

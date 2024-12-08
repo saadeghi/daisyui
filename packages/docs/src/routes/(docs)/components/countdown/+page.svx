@@ -1,18 +1,16 @@
 ---
 title: Countdown
 desc: Countdown gives you a transition effect of changing numbers.
-published: true
 layout: components
+classnames:
+  component:
+  - class: countdown
+    desc: Countdown wrapper
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
   import Translate from "$components/Translate.svelte"
-  
-  
 
   import { onMount } from "svelte"
   let counter = 59
@@ -32,14 +30,6 @@ layout: components
 
 <Translate text="you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99." />
 
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'countdown', desc: 'Container element' },
-]}"
-/>
-
 <Component title="Countdown">
 <span class="countdown">
   <span style="--value:{counter};"></span>
@@ -48,7 +38,7 @@ data="{[
 
 ```html
 <span class="$$countdown">
-  <span style="--value:${counter};"></span>
+  <span style="--value:59;"></span>
 </span>
 ```
 
@@ -58,7 +48,7 @@ data="{[
 
 ```jsx
 <span class="$$countdown">
-  <span style={{"--value":${counter}}}></span>
+  <span style={{"--value":59}}></span>
 </span>
 ```
 
@@ -73,7 +63,7 @@ data="{[
 
 ```html
 <span class="$$countdown font-mono text-6xl">
-  <span style="--value:${counter};"></span>
+  <span style="--value:59;"></span>
 </span>
 ```
 
@@ -83,7 +73,7 @@ data="{[
 
 ```jsx
 <span class="$$countdown font-mono text-6xl">
-  <span style={{"--value":${counter}}}></span>
+  <span style={{"--value":59}}></span>
 </span>
 ```
 
@@ -104,7 +94,7 @@ data="{[
   h
   <span style="--value:24;"></span>
   m
-  <span style="--value:${counter};"></span>
+  <span style="--value:59;"></span>
   s
 </span>
 ```
@@ -117,7 +107,7 @@ data="{[
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>h
   <span style={{"--value":24}}></span>m
-  <span style={{"--value":${counter}}}></span>s
+  <span style={{"--value":59}}></span>s
 </span>
 ```
 
@@ -138,7 +128,7 @@ data="{[
   :
   <span style="--value:24;"></span>
   :
-  <span style="--value:${counter};"></span>
+  <span style="--value:59;"></span>
 </span>
 ```
 
@@ -150,7 +140,7 @@ data="{[
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>:
   <span style={{"--value":24}}></span>:
-  <span style={{"--value":${counter}}}></span>
+  <span style={{"--value":59}}></span>
 </span>
 ```
 
@@ -164,19 +154,19 @@ data="{[
       <span style="--value:15;"></span>
     </span>
     days
-  </div> 
+  </div>
   <div>
     <span class="font-mono text-4xl countdown">
       <span style="--value:10;"></span>
     </span>
     hours
-  </div> 
+  </div>
   <div>
     <span class="font-mono text-4xl countdown">
       <span style="--value:24;"></span>
     </span>
     minutes
-  </div> 
+  </div>
   <div>
     <span class="font-mono text-4xl countdown">
       <span style="--value:{counter};"></span>
@@ -208,7 +198,7 @@ data="{[
   </div>
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style="--value:${counter};"></span>
+      <span style="--value:59;"></span>
     </span>
     sec
   </div>
@@ -241,7 +231,7 @@ data="{[
   </div>
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style={{"--value":${counter}}}></span>
+      <span style={{"--value":59}}></span>
     </span>
     sec
   </div>
@@ -258,19 +248,19 @@ data="{[
       <span style="--value:15;"></span>
     </span>
     days
-  </div> 
+  </div>
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
       <span style="--value:10;"></span>
     </span>
     hours
-  </div> 
+  </div>
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
       <span style="--value:24;"></span>
     </span>
     min
-  </div> 
+  </div>
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
       <span style="--value:{counter};"></span>
@@ -302,7 +292,7 @@ data="{[
   </div>
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:${counter};"></span>
+      <span style="--value:59;"></span>
     </span>
     sec
   </div>
@@ -335,7 +325,7 @@ data="{[
   </div>
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":${counter}}}></span>
+      <span style={{"--value":59}}></span>
     </span>
     sec
   </div>
@@ -352,19 +342,19 @@ data="{[
       <span style="--value:15;"></span>
     </span>
     days
-  </div> 
+  </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
       <span style="--value:10;"></span>
     </span>
     hours
-  </div> 
+  </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
       <span style="--value:24;"></span>
     </span>
     min
-  </div> 
+  </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
       <span style="--value:{counter};"></span>
@@ -396,7 +386,7 @@ data="{[
   </div>
   <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
     <span class="$$countdown font-mono text-5xl">
-      <span style="--value:${counter};"></span>
+      <span style="--value:59;"></span>
     </span>
     sec
   </div>
@@ -429,7 +419,7 @@ data="{[
   </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":${counter}}}></span>
+      <span style={{"--value":59}}></span>
     </span>
     sec
   </div>

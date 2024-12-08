@@ -1,26 +1,16 @@
 ---
 title: Code mockup
 desc: Code mockup is used to show a block of code in a box that looks like a code editor.
-published: true
 layout: components
+classnames:
+  component:
+    - class: mockup-code
+      desc: Code terminal mockup
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'mockup-code', desc: 'Container element' },
-]}"
-/>
 
 <Component title="mockup code with line prefix">
 <div class="mockup-code">
@@ -58,8 +48,8 @@ data="{[
 
 <Component title="Highlighted line">
 <div class="mockup-code">
-  <pre data-prefix="1"><code>npm i daisyui</code></pre> 
-  <pre data-prefix="2"><code>installing...</code></pre> 
+  <pre data-prefix="1"><code>npm i daisyui</code></pre>
+  <pre data-prefix="2"><code>installing...</code></pre>
   <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
 </div>
 {#snippet html()}

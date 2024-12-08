@@ -1,34 +1,45 @@
 ---
 title: Card
 desc: Cards are used to group and display content in a way that is easily readable.
-published: true
 layout: components
+classnames:
+  component:
+  - class: card
+    desc: Card
+  part:
+  - class: card-title
+    desc: Title part
+  - class: card-body
+    desc: Body part (content)
+  - class: card-actions
+    desc: Actions part (buttons, etc.)
+  style:
+  - class: card-border
+    desc: Adds border to <card>
+  - class: card-dash
+    desc: dash style
+  modifier:
+  - class: card-side
+    desc: The image in <figure> will be on to the side
+  - class: image-full
+    desc: The image in <figure> element will be the background
+  size:
+  - class: card-xs
+    desc: Extra small size
+  - class: card-sm
+    desc: Small size
+  - class: card-md
+    desc: Medium size (default)
+  - class: card-lg
+    desc: Large size
+  - class: card-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
 
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'card', desc: 'Container element' },
-  { type:'component', class: 'card-title', desc: 'Title of card' },
-  { type:'component', class: 'card-body', desc: 'Container for content' },
-  { type:'component', class: 'card-actions', desc: 'Container for buttons' },
-  { type:'modifier', class: 'card-bordered', desc: 'Adds border to <card>' },
-  { type:'modifier', class: 'image-full', desc: 'The image in <figure> element will be the background' },
-  { type:'responsive', class: 'card-normal', desc: 'Applies default paddings' },
-  { type:'responsive', class: 'card-compact', desc: 'Applies smaller padding' },
-  { type:'responsive', class: 'card-side', desc: 'The image in <figure> will be on to the side' },
-]}"
-/>
 
 <Component title="Card">
 <div class="card w-96 bg-base-100 shadow-xl">
@@ -106,7 +117,7 @@ data="{[
     </h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="justify-end card-actions">
-      <div class="badge badge-outline">Fashion</div> 
+      <div class="badge badge-outline">Fashion</div>
       <div class="badge badge-outline">Products</div>
     </div>
   </div>

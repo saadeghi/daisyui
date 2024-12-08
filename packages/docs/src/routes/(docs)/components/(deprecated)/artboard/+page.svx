@@ -1,34 +1,12 @@
 ---
 title: Artboard
 desc: Artboard provides fixed size container to display a demo content on mobile size.
-published: true
 layout: components
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type: 'component', class: 'artboard', desc: 'Container element' },
-  { type: 'modifier', class: 'artboard-demo', desc: 'Adds shadow and radius. Puts items in center' },
-  { type: 'modifier', class: 'phone-1', desc: 'Size 1 (320×568)' },
-  { type: 'modifier', class: 'phone-2', desc: 'Size 2 (375×667)' },
-  { type: 'modifier', class: 'phone-3', desc: 'Size 3 (414×736)' },
-  { type: 'modifier', class: 'phone-4', desc: 'Size 4 (375×812)' },
-  { type: 'modifier', class: 'phone-5', desc: 'Size 5 (414×896)' },
-  { type: 'modifier', class: 'phone-6', desc: 'Size 6 (320×1024)' },
-  { type: 'modifier', class: 'artboard-horizontal', desc: 'shows horizontal view' },
-]}"
-/>
 
 <Component title="Artboard size 1">
 <div class="artboard phone-1 artboard-demo">320×568</div>

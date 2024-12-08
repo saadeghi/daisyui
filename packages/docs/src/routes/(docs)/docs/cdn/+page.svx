@@ -63,7 +63,10 @@ published: true
   />
   <div class="tab-content border-none bg-neutral text-neutral-content" role="tabpanel">
     <div class="relative p-4 text-left">
-      <span class="font-mono select-none text-xs text-neutral-content ms-4">{data.daisyuiCssSize}kB compressed</span>
+      <span class="font-mono select-none text-xs text-neutral-content ms-4">
+        <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
+        {data.daisyuiCssSize}kB compressed
+      </span>
 <pre class="language-html !max-w-none"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/daisyui.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.tailwindcss.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
     </div>
@@ -80,12 +83,13 @@ published: true
       {#if $combinedUrl}
         <span class="font-mono select-none text-xs ms-4">
           <span class="font-mono select-none text-xs">
-            <span class="text-neutral-content">{$totalSize}kB compressed</span>
-             •
+            <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
+            <span class="text-neutral-content">{$totalSize}kB</span>
+            <span class="opacity-40">•</span>
             {#if $totalSize < data.daisyuiCssSize}
-              <span class="text-success">saved {Math.abs(($totalSize - data.daisyuiCssSize).toFixed(1))}kB ({((data.daisyuiCssSize - $totalSize) / data.daisyuiCssSize * 100).toFixed(1)}%)</span>
+              <span class="text-success" title="{Math.abs(($totalSize - data.daisyuiCssSize).toFixed(1))}kB smaller than daisyui.css">{((data.daisyuiCssSize - $totalSize) / data.daisyuiCssSize * 100).toFixed(1)}% smaller than daisyui.css</span>
             {:else}
-              <span class="text-warning">daisyui.css is {Math.abs((($totalSize - data.daisyuiCssSize) / data.daisyuiCssSize * 100).toFixed(1))}% more efficient</span>
+              <span class="text-warning">daisyui.css is {Math.abs((($totalSize - data.daisyuiCssSize) / data.daisyuiCssSize * 100).toFixed(1))}% smaller</span>
             {/if}
           </span>
         </span>
@@ -95,7 +99,7 @@ published: true
             <button
               class="btn btn-sm btn-square btn-neutral cursor-copy"
               aria-label="copy"
-              on:click={() => copyText($combinedUrl)}
+              on:click={() => copyText(`<link href="${$combinedUrl}" rel="stylesheet" type="text/css" />`)}
             >
               {#if $isClipboardButtonPressed}
                 <svg

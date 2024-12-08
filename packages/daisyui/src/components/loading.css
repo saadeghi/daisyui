@@ -31,21 +31,21 @@
 }
 
 .loading-xs {
-  @apply w-4;
+  width: calc(var(--size-selector, 0.25rem) * 4);
 }
 
 .loading-sm {
-  @apply w-5;
+  width: calc(var(--size-selector, 0.25rem) * 5);
 }
 
 .loading-md {
-  @apply w-6;
+  width: calc(var(--size-selector, 0.25rem) * 6);
 }
 
 .loading-lg {
-  @apply w-7;
+  width: calc(var(--size-selector, 0.25rem) * 7);
 }
 
-.loading-lg {
-  @apply w-9;
+.loading-xl {
+  width: calc(var(--size-selector, 0.25rem) * 8);
 }

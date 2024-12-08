@@ -1,39 +1,43 @@
 ---
 title: Toggle
 desc: Toggle is a checkbox that is styled to look like a switch button.
-published: true
 layout: components
+classnames:
+  component:
+  - class: toggle
+    desc: For <input type="checkbox">
+  color:
+  - class: toggle-primary
+    desc: primary color
+  - class: toggle-secondary
+    desc: secondary color
+  - class: toggle-accent
+    desc: accent color
+  - class: toggle-success
+    desc: success color
+  - class: toggle-warning
+    desc: warning color
+  - class: toggle-info
+    desc: info color
+  - class: toggle-error
+    desc: error color
+  size:
+  - class: toggle-xs
+    desc: Extra small size
+  - class: toggle-sm
+    desc: Small size
+  - class: toggle-md
+    desc: Medium size (default)
+  - class: toggle-lg
+    desc: Large size
+  - class: toggle-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
   let indeterminate = true;
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'form-control', desc: 'Container element' },
-  { type:'component', class: 'toggle', desc: 'For checkbox' },
-  { type:'modifier', class: 'toggle-primary', desc: 'Adds `primary` to toggle' },
-  { type:'modifier', class: 'toggle-secondary', desc: 'Adds `secondary` to toggle' },
-  { type:'modifier', class: 'toggle-accent', desc: 'Adds `accent` to toggle' },
-  { type:'modifier', class: 'toggle-success', desc: 'Adds `success` to toggle' },
-  { type:'modifier', class: 'toggle-warning', desc: 'Adds `warning` to toggle' },
-  { type:'modifier', class: 'toggle-info', desc: 'Adds `info` to toggle' },
-  { type:'modifier', class: 'toggle-error', desc: 'Adds `error` to toggle' },
-  { type:'responsive', class: 'toggle-lg', desc: 'Large toggle' },
-  { type:'responsive', class: 'toggle-md', desc: 'Medium toggle (default)' },
-  { type:'responsive', class: 'toggle-sm', desc: 'Small toggle' },
-  { type:'responsive', class: 'toggle-xs', desc: 'Extra small toggle' },
-]}"
-/>
 
 <Component title="Toggle">
 <input type="checkbox" class="toggle" checked="checked" />
@@ -49,7 +53,7 @@ data="{[
 <Component title="With label and form-control">
 <div class="form-control w-52">
   <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span> 
+    <span class="label-text">Remember me</span>
     <input type="checkbox" class="toggle" checked="checked" />
   </label>
 </div>
@@ -71,19 +75,19 @@ data="{[
 <div class="flex flex-col">
   <div class="form-control w-52">
     <label class="cursor-pointer label">
-      <span class="label-text">Remember me</span> 
+      <span class="label-text">Remember me</span>
       <input type="checkbox" class="toggle toggle-primary" checked="checked" />
     </label>
   </div>
   <div class="form-control w-52">
     <label class="cursor-pointer label">
-      <span class="label-text">Remember me</span> 
+      <span class="label-text">Remember me</span>
       <input type="checkbox" class="toggle toggle-secondary" checked="checked" />
     </label>
   </div>
   <div class="form-control w-52">
     <label class="cursor-pointer label">
-      <span class="label-text">Remember me</span> 
+      <span class="label-text">Remember me</span>
       <input type="checkbox" class="toggle toggle-accent" checked="checked" />
     </label>
   </div>

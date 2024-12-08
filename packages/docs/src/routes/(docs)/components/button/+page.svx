@@ -1,51 +1,66 @@
 ---
 title: Button
 desc: Buttons allow the user to take actions or make choices.
-published: true
 layout: components
+showComponentPageTabs: true
+classnames:
+  component:
+    - class: 'btn'
+      desc: Button
+  color:
+    - class: btn-neutral
+      desc: neutral color
+    - class: btn-primary
+      desc: primary color
+    - class: btn-secondary
+      desc: secondary color
+    - class: btn-accent
+      desc: accent color
+    - class: btn-info
+      desc: info color
+    - class: btn-success
+      desc: success color
+    - class: btn-warning
+      desc: warning color
+    - class: btn-error
+      desc: error color
+  style:
+    - class: btn-outline
+      desc: outline style
+    - class: btn-soft
+      desc: soft style
+    - class: btn-ghost
+      desc: ghost style
+    - class: btn-link
+      desc: looks like a link
+    - class: btn-active
+      desc: looks active
+    - class: btn-disabled
+      desc: looks disabled
+  size:
+    - class: btn-xs
+      desc: Extra small size
+    - class: btn-sm
+      desc: Small size
+    - class: btn-md
+      desc: Medium size (default)
+    - class: btn-lg
+      desc: Large size
+    - class: btn-xl
+      desc: Extra large size
+    - class: btn-wide
+      desc: more horizontal padding
+    - class: btn-block
+      desc: Full width
+    - class: btn-square
+      desc: 1:1 ratio
+    - class: btn-circle
+      desc: 1:1 ratio with rounded corners
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-{#if import.meta.env.DEV}
-<ComponentPageTabs/>
-{/if}
-
-<ClassTable
-data="{[
-  { type:'component', class: 'btn', desc: 'Button' },
-  { type:'modifier', class: 'btn-neutral', desc: 'Button with `neutral` color' },
-  { type:'modifier', class: 'btn-primary', desc: 'Button with `primary` color' },
-  { type:'modifier', class: 'btn-secondary', desc: 'Button with `secondary` color' },
-  { type:'modifier', class: 'btn-accent', desc: 'Button with `accent` color' },
-  { type:'modifier', class: 'btn-info', desc: 'Button with `info` color' },
-  { type:'modifier', class: 'btn-success', desc: 'Button with `success` color' },
-  { type:'modifier', class: 'btn-warning', desc: 'Button with `warning` color' },
-  { type:'modifier', class: 'btn-error', desc: 'Button with `error` color' },
-  { type:'modifier', class: 'btn-ghost', desc: 'Button with ghost style' },
-  { type:'modifier', class: 'btn-link', desc: 'Button styled as a link' },
-  { type:'modifier', class: 'btn-outline', desc: 'Transparent Button with colored border' },
-  { type:'modifier', class: 'btn-active', desc: 'Force button to show active state' },
-  { type:'modifier', class: 'btn-disabled', desc: 'Force button to show disabled state' },
-  { type:'modifier', class: 'glass', desc: 'Button with a glass effect' },
-  { type:'modifier', class: 'no-animation', desc: 'Disables click animation', prefix: false },
-  { type:'responsive', class: 'btn-lg', desc: 'Large button' },
-  { type:'responsive', class: 'btn-md', desc: 'Medium button (default)' },
-  { type:'responsive', class: 'btn-sm', desc: 'Small button' },
-  { type:'responsive', class: 'btn-xs', desc: 'Extra small button' },
-  { type:'responsive', class: 'btn-wide', desc: 'Wide button (more horizontal padding)' },
-  { type:'responsive', class: 'btn-block', desc: 'Full width button' },
-  { type:'responsive', class: 'btn-circle', desc: 'Circle button with a 1:1 ratio' },
-  { type:'responsive', class: 'btn-square', desc: 'Square button with a 1:1 ratio' },
-]}"
-/>
 
 <Component title="Button">
 <button class="btn">Button</button>

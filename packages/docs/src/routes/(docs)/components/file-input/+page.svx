@@ -1,41 +1,45 @@
 ---
 title: File Input
 desc: File Input is a an input field for uploading files.
-published: true
 layout: components
+classnames:
+  component:
+  - class: file-input
+    desc: For <input> element
+  style:
+  - class: file-input-ghost
+    desc: ghost style
+  color:
+  - class: file-input-primary
+    desc: primary color
+  - class: file-input-secondary
+    desc: secondary color
+  - class: file-input-accent
+    desc: accent color
+  - class: file-input-info
+    desc: info color
+  - class: file-input-success
+    desc: success color
+  - class: file-input-warning
+    desc: warning color
+  - class: file-input-error
+    desc: error color
+  size:
+  - class: file-input-xs
+    desc: Extra small size
+  - class: file-input-sm
+    desc: Small size
+  - class: file-input-md
+    desc: Medium size (default)
+  - class: file-input-lg
+    desc: Large size
+  - class: file-input-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'form-control', desc: 'Container element' },
-  { type:'component', class: 'label', desc: 'For helper text' },
-  { type:'component', class: 'file-input', desc: 'For <input> element' },
-  { type:'modifier', class: 'file-input-bordered', desc: 'Adds border to input' },
-  { type:'modifier', class: 'file-input-ghost', desc: 'Adds ghost style to input' },
-  { type:'modifier', class: 'file-input-primary', desc: 'Adds `primary` color to input' },
-  { type:'modifier', class: 'file-input-secondary', desc: 'Adds `secondary` color to input' },
-  { type:'modifier', class: 'file-input-accent', desc: 'Adds `accent` color to input' },
-  { type:'modifier', class: 'file-input-info', desc: 'Adds `info` color to input' },
-  { type:'modifier', class: 'file-input-success', desc: 'Adds `success` color to input' },
-  { type:'modifier', class: 'file-input-warning', desc: 'Adds `warning` color to input' },
-  { type:'modifier', class: 'file-input-error', desc: 'Adds `error` color to input' },
-  { type:'responsive', class: 'file-input-lg', desc: 'Large size for input' },
-  { type:'responsive', class: 'file-input-md', desc: 'Medium (default) size for input' },
-  { type:'responsive', class: 'file-input-sm', desc: 'Small size for input' },
-  { type:'responsive', class: 'file-input-xs', desc: 'Extra small size for input' },
-]}"
-/>
 
 <Component title="File input">
 <input type="file" class="file-input w-full max-w-xs" />

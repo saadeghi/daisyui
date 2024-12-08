@@ -1,32 +1,32 @@
 ---
 title: Rating
 desc: Rating is a set of radio buttons that allow the user to rate something.
-published: true
 layout: components
+classnames:
+  component:
+  - class: rating
+    desc: For a div containing radio inputs
+  modifier:
+  - class: rating-half
+    desc: To shows half of the shapes. Useful for half star ratings
+  - class: rating-hidden
+    desc: For the first radio to make it hidden so user can clear the rating
+  size:
+  - class: rating-xs
+    desc: Extra small size
+  - class: rating-sm
+    desc: Small size
+  - class: rating-md
+    desc: Medium size (default)
+  - class: rating-lg
+    desc: Large size
+  - class: rating-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'rating', desc: 'Wrapper component for radio buttons' },
-  { type:'modifier', class: 'rating-half', desc: 'To shows half of the shape' },
-  { type:'modifier', class: 'rating-hidden', desc: 'hides the input. Useful to clear the the rating' },
-  { type:'responsive', class: 'rating-lg', desc: 'Large rating' },
-  { type:'responsive', class: 'rating-md', desc: 'Medium rating (default)' },
-  { type:'responsive', class: 'rating-sm', desc: 'Small rating' },
-  { type:'responsive', class: 'rating-xs', desc: 'Extra small rating' },
-]}"
-/>
 
 <Component title="Rating">
 <div class="rating">

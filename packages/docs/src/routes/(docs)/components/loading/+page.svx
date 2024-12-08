@@ -1,38 +1,47 @@
 ---
 title: Loading
 desc: Loading shows an animation to indicate that something is loading.
-published: true
 layout: components
+classnames:
+  component:
+  - class: loading
+    desc: Loading element
+  style:
+  - class: loading-spinner
+    desc: spinner animation
+  - class: loading-dots
+    desc: dots animation
+  - class: loading-ring
+    desc: ring animation
+  - class: loading-ball
+    desc: ball animation
+  - class: loading-bars
+    desc: bars animation
+  - class: loading-infinity
+    desc: infinity animation
+  size:
+  - class: loading-xs
+    desc: Extra small size
+  - class: loading-sm
+    desc: Small size
+  - class: loading-md
+    desc: Medium size (default)
+  - class: loading-lg
+    desc: Large size
+  - class: loading-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'loading', desc: 'loading element' },
-  { type:'modifier', class: 'loading-spinner', desc: 'Shows the spinner animation' },
-  { type:'modifier', class: 'loading-dots', desc: 'Shows the dots animation' },
-  { type:'modifier', class: 'loading-ring', desc: 'Shows the ring animation' },
-  { type:'modifier', class: 'loading-ball', desc: 'Shows the ball animation' },
-  { type:'modifier', class: 'loading-bars', desc: 'Shows the bars animation' },
-  { type:'modifier', class: 'loading-infinity', desc: 'Shows the infinity animation' },
-]}"
-/>
 
 <Component title="Loading spinner">
 <span class="loading loading-spinner loading-xs"></span>
 <span class="loading loading-spinner loading-sm"></span>
 <span class="loading loading-spinner loading-md"></span>
 <span class="loading loading-spinner loading-lg"></span>
+<span class="loading loading-spinner loading-xl"></span>
 {#snippet html()}
 
 ```html
@@ -40,6 +49,7 @@ data="{[
 <span class="$$loading $$loading-spinner $$loading-sm"></span>
 <span class="$$loading $$loading-spinner $$loading-md"></span>
 <span class="$$loading $$loading-spinner $$loading-lg"></span>
+<span class="$$loading $$loading-spinner $$loading-xl"></span>
 ```
 
 {/snippet}

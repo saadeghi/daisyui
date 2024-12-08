@@ -1,35 +1,36 @@
 ---
 title: Link
 desc: Link adds the missing underline style to links.
-published: true
 layout: components
+classnames:
+  component:
+  - class: link
+    desc: Adds underline
+  style:
+  - class: link-hover
+    desc: Only shows underline on hover
+  color:
+  - class: link-neutral
+    desc: neutral color
+  - class: link-primary
+    desc: primary color
+  - class: link-secondary
+    desc: secondary color
+  - class: link-accent
+    desc: accent color
+  - class: link-success
+    desc: success color
+  - class: link-info
+    desc: info color
+  - class: link-warning
+    desc: warning color
+  - class: link-error
+    desc: error color
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'link', desc: 'Adds underline to a text' },
-  { type:'modifier', class: 'link-neutral', desc: 'Link with `neutral` color' },
-  { type:'modifier', class: 'link-primary', desc: 'Link with `primary` color' },
-  { type:'modifier', class: 'link-secondary', desc: 'Link with `secondary` color' },
-  { type:'modifier', class: 'link-accent', desc: 'Link with `accent` color' },
-  { type:'modifier', class: 'link-success', desc: 'Link with `success` color' },
-  { type:'modifier', class: 'link-info', desc: 'Link with `info` color' },
-  { type:'modifier', class: 'link-warning', desc: 'Link with `warning` color' },
-  { type:'modifier', class: 'link-error', desc: 'Link with `error` color' },
-  { type:'modifier', class: 'link-hover', desc: 'Only show underline on hover' },
-]}"
-/>
 
 <Component title="Link">
 <button class="link">I'm a simple link</button>
@@ -45,7 +46,7 @@ data="{[
 <Component title="Link">
 <p>Tailwind CSS resets the style of links by default.
   <br/>
-  Add "link" class to make it look like a 
+  Add "link" class to make it look like a
   <button class="link">normal link</button> again.
 </p>
 {#snippet html()}

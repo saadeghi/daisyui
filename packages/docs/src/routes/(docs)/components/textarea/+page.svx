@@ -1,41 +1,45 @@
 ---
 title: Textarea
 desc: Textarea allows users to enter text in multiple lines.
-published: true
 layout: components
+classnames:
+  component:
+  - class: textarea
+  desc: For <textarea> element
+  style:
+  - class: textarea-ghost
+    desc: ghost style
+  color:
+  - class: textarea-primary
+    desc: primary color
+  - class: textarea-secondary
+    desc: secondary color
+  - class: textarea-accent
+    desc: accent color
+  - class: textarea-info
+    desc: info color
+  - class: textarea-success
+    desc: success color
+  - class: textarea-warning
+    desc: warning color
+  - class: textarea-error
+    desc: error color
+  size:
+  - class: table-xs
+    desc: Extra small size
+  - class: table-sm
+    desc: Small size
+  - class: table-md
+    desc: Medium size (default)
+  - class: table-lg
+    desc: Large size
+  - class: table-xl
+    desc: Extra large size
 ---
 
 <script>
   import Component from "$components/Component.svelte"
-  import ClassTable from "$components/ClassTable.svelte"
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
-  import BrowserSupport from "$components/BrowserSupport.svelte"
-  
-  
 </script>
-
-<!-- <ComponentPageTabs/> -->
-
-<ClassTable
-data="{[
-  { type:'component', class: 'form-control', desc: 'Container element' },
-  { type:'modifier', class: 'label', desc: 'For helper text' },
-  { type:'modifier', class: 'textarea', desc: 'For <textarea> element' },
-  { type:'modifier', class: 'textarea-bordered', desc: 'Adds border to textarea' },
-  { type:'modifier', class: 'textarea-ghost', desc: 'Adds ghost style to textarea' },
-  { type:'modifier', class: 'textarea-primary', desc: 'Adds `primary` color to textarea' },
-  { type:'modifier', class: 'textarea-secondary', desc: 'Adds `secondary` color to textarea' },
-  { type:'modifier', class: 'textarea-accent', desc: 'Adds `accent` color to textarea' },
-  { type:'modifier', class: 'textarea-info', desc: 'Adds `info` color to textarea' },
-  { type:'modifier', class: 'textarea-success', desc: 'Adds `success` color to textarea' },
-  { type:'modifier', class: 'textarea-warning', desc: 'Adds `warning` color to textarea' },
-  { type:'modifier', class: 'textarea-error', desc: 'Adds `error` color to textarea' },
-  { type:'responsive', class: 'textarea-lg', desc: 'Large size for textarea' },
-  { type:'responsive', class: 'textarea-md', desc: 'Medium (default) size for textarea' },
-  { type:'responsive', class: 'textarea-sm', desc: 'Small size for textarea' },
-  { type:'responsive', class: 'textarea-xs', desc: 'Extra small size for textarea' },
-]}"
-/>
 
 <Component title="Textarea">
 <textarea class="textarea" placeholder="Bio"></textarea>
