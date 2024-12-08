@@ -48,8 +48,10 @@
             >
               <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
             </svg>
-            <div class="flex flex-col items-start">
-              <span class="text-base-content/50 hidden text-xs font-normal md:block">
+            <div class="flex flex-col items-start leading-[1.1]">
+              <span
+                class="text-base-content/50 hidden text-[0.6875rem] font-semibold tracking-wide md:block"
+              >
                 {$t("Prev")}
               </span>
               <span>{$t(arrayOfPagesInOrder[currentPageIndex - 1].name)}</span>
@@ -63,8 +65,10 @@
             href={arrayOfPagesInOrder[currentPageIndex + 1].href}
             class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3"
           >
-            <div class="flex flex-col items-end">
-              <span class="text-neutral-content/50 hidden text-xs font-normal md:block">
+            <div class="flex flex-col items-end leading-[1.1]">
+              <span
+                class="text-neutral-content/50 hidden text-[0.6875rem] font-semibold tracking-wide md:block"
+              >
                 {$t("Next")}
               </span>
               <span>{$t(arrayOfPagesInOrder[currentPageIndex + 1].name)}</span>
