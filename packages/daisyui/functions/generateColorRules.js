@@ -69,7 +69,7 @@ export const generateColorRules = async ({ distDir, styles, breakpoints, states 
                 styles.map((style) => `.${prefix}\\:${style}-${color}{@apply ${style}-${color};}`),
               )
               .join("\n")
-            return `@media (min-width: ${getBreakpointWidth(bp)}) {\n${classes}\n}`
+            return `@media ${getBreakpointWidth(bp)} {\n${classes}\n}`
           })
           .join("\n\n")
       }
@@ -86,7 +86,10 @@ export const generateColorRules = async ({ distDir, styles, breakpoints, states 
         xl: "80rem",
         "2xl": "96rem",
       }
-      return widths[breakpoint] || "40rem" // Default to 40rem if not found
+      if (breakpoint.startsWith("max-")) {
+        return `(width < ${widths[breakpoint.slice(4)] || "40rem"})`
+      }
+      return `(width >= ${widths[breakpoint] || "40rem"})`
     }
 
     const generateStatesContent = () => {
