@@ -4,21 +4,29 @@
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
+  border-color: var(--input-color);
+  box-shadow:
+    0 1px color-mix(in oklab, var(--input-color) calc(var(--gloss) * 10%), transparent) inset,
+    0 -1px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset;
   --size: calc(var(--size-field, 0.25rem) * 10);
+  --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
   textarea {
-    @apply bg-transparent;
+    @apply appearance-none bg-transparent;
     border: none;
 
-    &:focus {
+    &:focus,
+    &:focus-within {
       @apply outline-hidden;
     }
   }
 
   &:focus,
   &:focus-within {
-    border-color: color-mix(in srgb, var(--color-base-content,) 20%, transparent);
-    outline: 2px solid color-mix(in srgb, var(--color-base-content,) 20%, transparent);
+    --input-color: var(--color-base-content);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--gloss) * 10%), transparent);
+    outline: 2px solid var(--input-color);
     outline-offset: 2px;
+    isolation: isolate;
   }
 
   &:has(> textarea[disabled]),
@@ -30,126 +38,101 @@
   &:has(> textarea[disabled]) > textarea[disabled] {
     @apply cursor-not-allowed;
   }
+}
 
-  &.textarea-border {
-    @apply border-base-content/10;
-    box-shadow:
-      0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 -1px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset;
+.textarea-ghost {
+  @apply bg-transparent;
+  box-shadow: none;
+  border-color: transparent;
 
-    &:focus {
-      box-shadow: 0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1));
-    }
-  }
-
-  &.textarea-ghost {
-    @apply bg-base-100/5;
+  &:focus,
+  &:focus-within {
+    @apply text-base-content bg-base-100;
+    border-color: transparent;
     box-shadow: none;
-
-    &:focus,
-    &:focus-within {
-      @apply text-base-content bg-base-100;
-      box-shadow: none;
-    }
   }
+}
 
-  &.textarea-primary {
-    @apply border-primary;
-    background-color: color-mix(in oklab, var(--color-primary) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-primary border-primary;
-    }
+.textarea-neutral {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-neutral);
   }
+}
 
-  &.textarea-secondary {
-    @apply border-secondary;
-    background-color: color-mix(in oklab, var(--color-secondary) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-secondary border-secondary;
-    }
+.textarea-primary {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-primary);
   }
+}
 
-  &.textarea-accent {
-    @apply border-accent;
-    background-color: color-mix(in oklab, var(--color-accent) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-accent border-accent;
-    }
+.textarea-secondary {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-secondary);
   }
+}
 
-  &.textarea-neutral {
-    @apply border-neutral;
-    background-color: color-mix(in oklab, var(--color-neutral) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-neutral border-neutral;
-    }
+.textarea-accent {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-accent);
   }
+}
 
-  &.textarea-info {
-    @apply border-info;
-    background-color: color-mix(in oklab, var(--color-info) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-info border-info;
-    }
+.textarea-info {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-info);
   }
+}
 
-  &.textarea-success {
-    @apply border-success;
-    background-color: color-mix(in oklab, var(--color-success) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-success border-success;
-    }
+.textarea-success {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-success);
   }
+}
 
-  &.textarea-warning {
-    @apply border-warning;
-    background-color: color-mix(in oklab, var(--color-warning) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-warning border-warning;
-    }
+.textarea-warning {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-warning);
   }
+}
 
-  &.textarea-error {
-    @apply border-error;
-    background-color: color-mix(in oklab, var(--color-error) 2%, transparent);
-
-    &:focus,
-    &:focus-within {
-      @apply outline-error border-error;
-    }
+.textarea-error {
+  &,
+  &:focus,
+  &:focus-within {
+    --input-color: var(--color-error);
   }
+}
 
-  &.textarea-xs {
-    font-size: 0.75rem;
-  }
+.textarea-xs {
+  font-size: 0.75rem;
+}
 
-  &.textarea-sm {
-    font-size: 0.875rem;
-  }
+.textarea-sm {
+  font-size: 0.875rem;
+}
 
-  &.textarea-md {
-    font-size: 0.875rem;
-  }
+.textarea-md {
+  font-size: 0.875rem;
+}
 
-  &.textarea-lg {
-    font-size: 1.125rem;
-  }
+.textarea-lg {
+  font-size: 1.125rem;
+}
 
-  &.textarea-xl {
-    font-size: 1.125rem;
-  }
+.textarea-xl {
+  font-size: 1.125rem;
 }

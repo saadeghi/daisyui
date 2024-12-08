@@ -63,7 +63,6 @@
 
 .input-ghost {
   @apply bg-transparent;
-  transition: background-color 0.2s;
   box-shadow: none;
   border-color: transparent;
 
