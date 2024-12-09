@@ -16,10 +16,6 @@
     --toast-x: -50%;
   }
 
-  &:where(.toast-center):where(.rtl) {
-    --toast-x: 50%;
-  }
-
   &:where(.toast-end) {
     @apply start-auto end-0;
     --toast-x: 0;
