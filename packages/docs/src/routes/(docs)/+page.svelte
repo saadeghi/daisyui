@@ -442,55 +442,55 @@
                     {#if activeMenuItemOnHeroMockup === 1}
                       <div class="flex flex-col items-stretch p-6">
                         <fieldset class="fieldset py-2">
-                          <label class="label cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer text-xs justify-between">
                             {$t("Faster development")}
                             <input
                               type="checkbox"
-                              class="toggle toggle-sm toggle-primary"
+                              class="toggle toggle-xs toggle-primary"
                               name="toggle"
                               checked="checked"
                             />
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="label cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer text-xs justify-between">
                             {$t("Cleaner HTML")}
                             <input
                               type="checkbox"
-                              class="toggle toggle-sm toggle-secondary"
+                              class="toggle toggle-xs toggle-secondary"
                               name="toggle"
                               checked="checked"
                             />
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="label cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer text-xs justify-between">
                             {$t("Customizable")}
                             <input
                               type="checkbox"
-                              class="toggle toggle-sm toggle-accent"
+                              class="toggle toggle-xs toggle-accent"
                               name="toggle"
                               checked="checked"
                             />
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="label cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer text-xs justify-between">
                             {$t("Themeable")}
                             <input
                               type="checkbox"
-                              class="toggle toggle-sm toggle-success"
+                              class="toggle toggle-xs toggle-success"
                               name="toggle"
                               checked="checked"
                             />
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="label cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer text-xs justify-between">
                             {$t("Pure CSS")}
                             <input
                               type="checkbox"
-                              class="toggle toggle-sm"
+                              class="toggle toggle-xs"
                               name="toggle"
                               checked="checked"
                             />

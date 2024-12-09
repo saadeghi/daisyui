@@ -1,11 +1,10 @@
-import { mdsvex } from "mdsvex"
 import adapter from "@sveltejs/adapter-static"
 
-import { mdsvexConfig } from "./mdsvex.config.js"
+import { mdsvexConfig, mdsvexExtensions } from "./mdsvex.config.js"
 
 export default {
-  extensions: [".svelte", ...mdsvexConfig.extensions],
-  preprocess: [mdsvex(mdsvexConfig)],
+  extensions: [".svelte", ...mdsvexExtensions],
+  preprocess: [mdsvexConfig],
   kit: {
     adapter: adapter({
       pages: "build",

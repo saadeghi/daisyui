@@ -104,7 +104,7 @@
       <input
         type="radio"
         name={`tab_${uuid}`}
-        class="tab checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)] checked:text-neutral-content"
+        class="tab checked:[--tab-bg:var(--color-neutral)] border-b-transparent! checked:[--tab-border-color:var(--color-base-100)] checked:text-neutral-content"
         aria-label="HTML"
       />
       <div class="tab-content">
@@ -156,7 +156,7 @@
       <input
         type="radio"
         name={`tab_${uuid}`}
-        class="tab checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)] checked:text-neutral-content"
+        class="tab checked:[--tab-bg:var(--color-neutral)] border-b-transparent! checked:[--tab-border-color:var(--color-base-100)] checked:text-neutral-content"
         aria-label="JSX"
       />
       <div class="tab-content">
