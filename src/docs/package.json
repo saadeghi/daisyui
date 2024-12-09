@@ -8,8 +8,8 @@
     "dev": "npm run createStyleHandlerComponent:dev --silent && vite dev --port 3000 --open",
     "build": "npm run get-json --silent && npm run createStyleHandlerComponent:prod --silent && NODE_ENV=production vite build --logLevel error",
     "preview": "npm run build && vite preview --port 3000 --open",
-    "createStyleHandlerComponent:dev": "echo $'<script>import \"$components/StyleDevelopment.svelte\"</script>' > src/components/StyleHandler.svelte",
-    "createStyleHandlerComponent:prod": "echo $'<script>import \"$components/StyleProduction.svelte\"</script>' > src/components/StyleHandler.svelte",
+    "createStyleHandlerComponent:dev": "node -e \"require('fs').writeFileSync('src/components/StyleHandler.svelte', `<script>import '$components/StyleDevelopment.svelte';</script>`)\"",
+    "createStyleHandlerComponent:prod": "node -e \"require('fs').writeFileSync('src/components/StyleHandler.svelte', `<script>import '$components/StyleProduction.svelte';</script>`)\"",
     "update-twitter-avatars": "node src/lib/scripts/get-twitter-avatars.js",
     "langdiff": "node src/lib/scripts/compare-translate-files"
   },
