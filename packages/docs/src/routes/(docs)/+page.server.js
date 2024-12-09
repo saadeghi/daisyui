@@ -3,24 +3,26 @@ import depGraphCount from "dep-graph-count"
 import { tweets } from "$lib/data/testimonials.js"
 import { stats } from "$lib/data/stats.js"
 
-let stargazers_count = 30000
-let npmInstalls = 13000000
+let stargazers_count = 35000
+let npmInstalls = 18000000
 let contributors = []
 let backers = []
 
 export async function load() {
   const githubDeps = await depGraphCount("saadeghi", "daisyui")
 
-  const npmDownloadsInfo = await fetch(
-    "https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui",
-    {},
-  )
+  try {
+    const npmDownloadsInfo = await fetch(
+      "https://api.npmjs.org/downloads/point/2000-01-01:2100-01-01/daisyui",
+      {},
+    )
 
-  if (npmDownloadsInfo.ok) {
-    const data = await npmDownloadsInfo.json()
-    npmInstalls = data.downloads
-  } else {
-    console.error("Warning: Could not fetch npm download counts. Using default value")
+    if (npmDownloadsInfo.ok) {
+      const data = await npmDownloadsInfo.json()
+      npmInstalls = data.downloads
+    }
+  } catch (error) {
+    console.error("Warning: Could not fetch npm download counts. Using default value", error)
   }
 
   const GHParams = {
