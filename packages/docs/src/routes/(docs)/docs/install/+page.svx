@@ -23,22 +23,21 @@ published: true
 <div class="not-prose grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 my-10 gap-6">
 
 {#each data.exampleRepos as { name, href, logos }}
-<a class="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener, noreferrer">
-
-<figure class="px-12 pt-6 pb-2 w-full aspect-2/1 items-end overflow-visible">
-{#if logos.length === 1}
-<img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square w-full h-auto" />
-{:else}
-<div class="grid w-full">
-<img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-full h-auto" />
-<img loading="lazy" alt={logos[1]} src={logos[1]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto" />
-</div>
-{/if}
-</figure>
-<div class="card-body text-center">
-<span class="text-xs">{name}</span>
-</div>
-</a>
+  <a class="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener, noreferrer">
+    <figure class="px-12 pt-6 pb-2 w-full aspect-2/1 items-end overflow-visible">
+      {#if logos.length === 1}
+        <img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square w-full h-auto" />
+      {:else}
+        <div class="grid w-full">
+          <img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-full h-auto" />
+          <img loading="lazy" alt={logos[1]} src={logos[1]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto" />
+        </div>
+      {/if}
+    </figure>
+    <div class="card-body text-center">
+      <span class="text-xs">{name}</span>
+    </div>
+  </a>
 {/each}
 
 </div>
