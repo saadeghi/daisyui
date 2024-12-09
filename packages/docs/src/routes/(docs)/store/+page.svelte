@@ -384,24 +384,24 @@
                 </svg>
               </a>
               <div class="flex gap-x-4">
-                {#if product.preveiw}
+                {#if product.preview}
                   <a
                     class="link text-xs"
-                    href={product.preveiw.url}
+                    href={product.preview.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {product.preveiw.button}
+                    {product.preview.button}
                   </a>
                 {/if}
-                {#if product.preveiw_modal}
-                  <button class="link text-xs" onclick={() => preveiw_modal.showModal()}
-                    >{product.preveiw_modal.button}</button
+                {#if product.preview_modal}
+                  <button class="link text-xs" onclick={() => preview_modal.showModal()}
+                    >{product.preview_modal.button}</button
                   >
-                  <dialog id="preveiw_modal" class="modal">
+                  <dialog id="preview_modal" class="modal">
                     <div class="modal-box p-0 shadow-none bg-transparent max-w-fit max-h-fit my-32">
                       <img
-                        src={product.preveiw_modal.img}
+                        src={product.preview_modal.img}
                         alt={product.attributes.name}
                         class="max-h-screen w-auto"
                       />

@@ -74,7 +74,7 @@ Both daisyUI and Tailwind UI use Tailwind CSS under the hood. Tailwind UI uses t
 
 Some components in Tailwind UI are interactive and they need JavaScript to work.
 
-daisyUI however, is a dev-dependency. It doesn't need any JavaScript to work. It's a pure CSS component library and it works just well even if JavaScript is disabled on the borwser. daisyUI provides some interactive components which are possible with CSS only.
+daisyUI however, is a dev-dependency. It doesn't need any JavaScript to work. It's a pure CSS component library and it works just well even if JavaScript is disabled on the browsers. daisyUI provides some interactive components which are possible with CSS only.
 
 daisyUI doesn't include interactive elements that need JS (for example a date picker). However, you can use any JS library with daisyUI. Headless libraries like [Headless UI](https://headlessui.com/) or [Radix primitives](https://www.radix-ui.com/primitives) are recommended. You can also use any other JS plug-in that you like and you can add daisyUI classes or color values to them so they would fit your website design.
 

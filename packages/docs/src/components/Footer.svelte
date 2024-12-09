@@ -85,9 +85,8 @@
           target="_blank"
           rel="noopener, noreferrer"
           href="https://github.com/saadeghi/daisyui"
-          class="link link-hover group"
-        >
-          Github
+          class="link link-hover group">
+          GitHub
           {@html newtabicon}
         </a>
 

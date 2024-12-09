@@ -1165,8 +1165,8 @@ classnames:
     <button>Products</button>
     <ul>
       <li><button>UI Kit</button></li>
-      <li><button>Wordpress themes</button></li>
-      <li><button>Wordpress plugins</button></li>
+      <li><button>WordPress themes</button></li>
+      <li><button>WordPress plugins</button></li>
       <li>
         <button>Open source</button>
         <ul>
@@ -1213,8 +1213,8 @@ classnames:
     <a>Products</a>
     <ul>
       <li><a>UI Kit</a></li>
-      <li><a>Wordpress themes</a></li>
-      <li><a>Wordpress plugins</a></li>
+      <li><a>WordPress themes</a></li>
+      <li><a>WordPress plugins</a></li>
       <li>
         <a>Open source</a>
         <ul>

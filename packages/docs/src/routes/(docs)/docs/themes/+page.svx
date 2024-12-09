@@ -44,8 +44,8 @@ published: true
 
 ## <Translate text="How to remove unused themes?" />
 
-<Translate text="You can only include the themes you want in your project." />
-<Translate text="This will reduce the size of your CSS file." />
+<Translate text="You can include only the themes you want in your project." />  
+<Translate text="This will reduce the size of your CSS file." />  
 <Translate text="In the below example" />
 
 - <Translate text="<code>cupcake</code> will be the default theme for light mode" />

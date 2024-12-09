@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.20 (2024-12-09)
+
+## 4.12.19 (2024-12-09)
+
+## 4.12.18 (2024-12-09)
+
+## 4.12.16 (2024-12-09)
+
+
+### Bug Fixes
+
+* [#3268](https://github.com/saadeghi/daisyui/issues/3268) unstyled collapse input size ([#3293](https://github.com/saadeghi/daisyui/issues/3293)) ([824092e](https://github.com/saadeghi/daisyui/commit/824092e5988e181ed1195afda0ca489ee4b31333))
+
+## 4.12.15 (2024-12-09)
+
+
+### Bug Fixes
+
+* Safari loading animation bug. closes [#2570](https://github.com/saadeghi/daisyui/issues/2570) ([7e5f5a0](https://github.com/saadeghi/daisyui/commit/7e5f5a0ce4989224e4afccf6f75384214eed1f03))
+
 ## 4.12.14 (2024-10-28)
 
 
@@ -548,7 +568,7 @@ All notable changes to this project will be documented in this file. See [commit
 - daisyUI official store – Get professional templates made by daisyUI
 - daisyUI resources – A handpicked collection of community videos, articles and courses about daisyUI
 - Add roadmap page
-- Add docs for utiltiy classes
+- Add docs for utility classes
 - Update theme generator
 - Show browser support for components that are using new CSS rules
 
@@ -581,7 +601,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-- [#2116](https://github.com/saadeghi/daisyui/issues/2116) progess bar firefox bug ([#2376](https://github.com/saadeghi/daisyui/issues/2376)) ([53889de](https://github.com/saadeghi/daisyui/commit/53889de67cb61ff223acb037f4aa7736e4fbf430))
+- [#2116](https://github.com/saadeghi/daisyui/issues/2116) progress bar firefox bug ([#2376](https://github.com/saadeghi/daisyui/issues/2376)) ([53889de](https://github.com/saadeghi/daisyui/commit/53889de67cb61ff223acb037f4aa7736e4fbf430))
 
 ## [3.8.1](https://github.com/saadeghi/daisyui/compare/v3.8.0...v3.8.1) (2023-09-27)
 
