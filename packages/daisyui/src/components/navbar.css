@@ -2,22 +2,21 @@
   @apply flex w-full items-center;
   padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
-
-  :where(> *:not(script, style)) {
-    @apply inline-flex items-center;
-  }
 }
 
 .navbar-start {
+  @apply inline-flex items-center;
   width: 50%;
   justify-content: flex-start;
 }
 
 .navbar-center {
+  @apply inline-flex items-center;
   @apply shrink-0;
 }
 
 .navbar-end {
+  @apply inline-flex items-center;
   width: 50%;
   justify-content: flex-end;
 }

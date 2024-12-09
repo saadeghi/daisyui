@@ -72,13 +72,29 @@
   bind:this={wrapper}
 >
   {#if title}
-    <div class="pb-2 text-sm font-bold">
-      <a class="opacity-20 hover:opacity-60" href={`#${titleStr}`}>#</a>
-      <h4 class="component-preview-title">{$t(title)}</h4>
+    <div class="pb-2 text-sm font-bold flex gap-2 items-center">
+      <a
+        class="bg-base-100 hover:bg-primary/10 size-6 rounded-sm border border-primary/5 hover:border-primary/10 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200"
+        href={`#${titleStr}`}
+      >
+        <svg
+          fill="currentColor"
+          width=".75rem"
+          height=".75rem"
+          viewBox="0 0 256 256"
+          id="Flat"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"
+          />
+        </svg>
+      </a>
+      <h4 class="component-preview-title text-lg font-semibold mt-2 mb-1">{$t(title)}</h4>
     </div>
   {/if}
   {#if desc}
-    <div class="pb-2 text-xs opacity-70">
+    <div class="pb-4 text-xs opacity-70">
       {$t(desc)}
     </div>
   {/if}
