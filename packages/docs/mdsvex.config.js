@@ -74,7 +74,13 @@ const rehypePlugins = [
 const remarkPlugins = [
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
   // codeTitle,
-  [remarkCodeTitles, { containerClassName: "my-4", titleClassName: "p-1 opacity-60 text-xs" }],
+  [
+    remarkCodeTitles,
+    {
+      containerClassName: "has-[.code-tab]:my-4",
+      titleClassName: "p-1 opacity-60 text-xs code-tab",
+    },
+  ],
   [
     customClasses,
     {
