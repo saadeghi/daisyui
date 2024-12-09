@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.16 (2024-12-09)
+
+
+### Bug Fixes
+
+* [#3268](https://github.com/saadeghi/daisyui/issues/3268) unstyled collapse input size ([#3293](https://github.com/saadeghi/daisyui/issues/3293)) ([824092e](https://github.com/saadeghi/daisyui/commit/824092e5988e181ed1195afda0ca489ee4b31333))
+
 ## 4.12.15 (2024-12-09)
 
 
