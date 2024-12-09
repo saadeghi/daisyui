@@ -1,13 +1,20 @@
-import { mdsvex } from "mdsvex"
+import { mdsvex, escapeSvelte } from "mdsvex"
+import { createHighlighter } from "shiki"
 
 import remarkGithub from "remark-github"
-import codeTitle from "remark-code-titles"
 import remarkCodeTitles from "remark-flexible-code-titles"
-
+import toc from "@jsdevtools/rehype-toc"
 import rehypeSlug from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
 import rehypeExternalLinks from "rehype-external-links"
 import { visit } from "unist-util-visit"
+
+import theme from "./shiki.theme.json" with { type: "json" }
+
+const highlighter = await createHighlighter({
+  themes: [theme],
+  langs: ["javascript", "jsx", "html", "css", "json"],
+})
 
 const placeholders = {
   ":WARNING:": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4 ms-2 inline-block text-warning"><g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt"><circle cx="12" cy="16.75" r="1.25" fill="currentColor" stroke-width="2"></circle><line x1="12" y1="13" x2="12" y2="9" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></line><path d="m10.171,4.06l-7.899,13.783c-.806,1.406.209,3.157,1.829,3.157h15.798c1.62,0,2.635-1.751,1.829-3.157l-7.899-13.783c-.81-1.413-2.849-1.413-3.659,0Z" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></path></g></svg>`,
@@ -47,6 +54,19 @@ export default function customClasses(options) {
 
 const rehypePlugins = [
   rehypeSlug,
+  // [
+  //   toc,
+  //   {
+  //     position: "beforeend",
+  //     headings: ["h2", "h3", "h4"],
+  //     cssClasses: {
+  //       toc: "fixed top-[23rem] end-0 w-[9rem] text-[0.6875rem] pe-4",
+  //       link: "opacity-50 hover:opacity-80",
+  //       listItem: "",
+  //       list: "flex flex-col gap-1",
+  //     },
+  //   },
+  // ],
   [
     linkHeadings,
     {
@@ -73,12 +93,11 @@ const rehypePlugins = [
 
 const remarkPlugins = [
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
-  // codeTitle,
   [
     remarkCodeTitles,
     {
       containerClassName: "has-[.code-tab]:my-4",
-      titleClassName: "p-1 opacity-60 text-xs code-tab",
+      titleClassName: "p-1 -mb-6 italic opacity-60 text-xs code-tab",
     },
   ],
   [
@@ -100,6 +119,12 @@ const config = {
     components: "src/lib/mdsvex-components.svelte",
     blog: "src/lib/mdsvex-blog.svelte",
     _: "src/lib/mdsvex.svelte",
+  },
+  highlight: {
+    highlighter: async (code, lang = "text") => {
+      const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }))
+      return `{@html \`${html}\` }`
+    },
   },
 }
 

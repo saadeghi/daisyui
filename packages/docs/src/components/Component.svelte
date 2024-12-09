@@ -74,7 +74,7 @@
   {#if title}
     <div class="pb-2 text-sm font-bold">
       <a class="opacity-20 hover:opacity-60" href={`#${titleStr}`}>#</a>
-      <span class="component-preview-title">{$t(title)}</span>
+      <h4 class="component-preview-title">{$t(title)}</h4>
     </div>
   {/if}
   {#if desc}
@@ -92,7 +92,7 @@
     />
     <div class="tab-content border-base-300 overflow-x-auto">
       <div
-        class="preview bg-base-100 relative flex min-h-[6rem] min-w-[18rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 {classes}"
+        class="preview bg-base-100 relative flex min-h-[6rem] min-w-[18rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10 {classes}"
         style={bg ? `background-image: url(${bg});background-size:cover;` : ``}
         class:resize-x={responsive}
       >

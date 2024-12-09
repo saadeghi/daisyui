@@ -1,7 +1,5 @@
 <script>
   import { page } from "$app/stores"
-  import "prism-themes/themes/prism-material-dark.min.css"
-  import "$lib/style/prism-themes-modify.css"
   let { data, children } = $props()
 </script>
 

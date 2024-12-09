@@ -28,16 +28,17 @@ export function htmlToJsx(node) {
     '"0"': "{0}",
     "&lt;!--": "{/*",
     "--&gt;": "*/}",
-    '<span class="token attr-name">class</span>': '<span class="token attr-name">className</span>',
-    '<span class="token attr-name">for</span>': '<span class="token attr-name">htmlFor</span>',
-    '<span class="token attr-name">tabindex</span>':
-      '<span class="token attr-name">tabIndex</span>',
-    '<span class="token attr-name">checked</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checked<span class="token punctuation">"</span></span>':
-      '<span class="token attr-name">defaultChecked</span>',
-    '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>':
-      '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br /</span><span class="token punctuation">&gt;</span></span>',
-    '<span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span>':
-      '<span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">{</span>0<span class="token punctuation">}</span></span>',
+    '<span style="color:var(--shiki-attr-name)"> class</span>':
+      '<span style="color:var(--shiki-attr-name)"> className</span>',
+    '<span style="color:var(--shiki-attr-name)"> for</span>':
+      '<span style="color:var(--shiki-attr-name)"> htmlFor</span>',
+    '<span style="color:var(--shiki-attr-name)"> checked</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">checked</span><span style="color:var(--shiki-punctuation)">"</span>':
+      '<span style="color:var(--shiki-attr-name)"> defaultChecked</span>',
+    '<span style="color:var(--shiki-token)"><span style="color:var(--shiki-token)"><span style="color:var(--shiki-punctuation)"&lt;</span>br</span><span style="color:var(--shiki-punctuation)"&gt;</span></span>':
+      '<span style="color:var(--shiki-token)"><span style="color:var(--shiki-token)"><span style="color:var(--shiki-punctuation)"&lt;</span>br /</span><span style="color:var(--shiki-punctuation)"&gt;</span></span>',
+    '<span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">0</span><span style="color:var(--shiki-punctuation)">"</span>':
+      '<span style="color:var(--shiki-punctuation)">{</span><span style="color:var(--shiki-attr-value)">0</span><span style="color:var(--shiki-punctuation)">}</span>',
+    tabindex: "tabIndex",
     "clip-rule": "clipRule",
     "fill-opacity": "fillOpacity",
     "fill-rule": "fillRule",

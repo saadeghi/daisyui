@@ -20,13 +20,13 @@ classnames:
 </script>
 
 <Component title="Navbar with title only">
-<div class="navbar bg-base-100 shadow-xl rounded-box">
+<div class="navbar bg-base-100 shadow-sm">
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
 </div>
 ```
@@ -35,7 +35,7 @@ classnames:
 </Component>
 
 <Component title="Navbar with title and icon">
-<div class="navbar bg-base-100 shadow-xl rounded-box">
+<div class="navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
   </div>
@@ -48,7 +48,7 @@ classnames:
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
   </div>
@@ -74,7 +74,7 @@ classnames:
 </Component>
 
 <Component title="Navbar with icon at start and end">
-<div class="navbar bg-base-100 shadow-xl rounded-box">
+<div class="navbar bg-base-100 shadow-sm">
   <div class="flex-none">
     <button class="btn btn-square btn-ghost">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -92,7 +92,7 @@ classnames:
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-none">
     <button class="$$btn $$btn-square $$btn-ghost">
       <svg
@@ -133,19 +133,19 @@ classnames:
 </Component>
 
 <Component title="Navbar with menu and submenu">
-<div class="navbar bg-base-100 mb-32 shadow-xl rounded-box">
+<div class="navbar bg-base-100 mb-32 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
   </div>
   <div class="flex-none">
-    <ul class="menu menu-horizontal px-1 bg-base-100">
+    <ul class="menu menu-horizontal">
       <li><button>Link</button></li>
       <li>
         <details>
           <summary>
             Parent
           </summary>
-          <ul class="p-2 bg-base-100 rounded-t-none">
+          <ul class="p-2 bg-base-100">
             <li><button>Link 1</button></li>
             <li><button>Link 2</button></li>
           </ul>
@@ -157,7 +157,7 @@ classnames:
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
   </div>
@@ -182,7 +182,7 @@ classnames:
 </Component>
 
 <Component title="Navbar with search input and dropdown">
-<div class="navbar bg-base-100 mb-32 shadow-xl rounded-box">
+<div class="navbar bg-base-100 mb-32 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
   </div>
@@ -212,7 +212,7 @@ classnames:
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
   </div>
@@ -249,7 +249,7 @@ classnames:
 </Component>
 
 <Component title="Navbar with icon, indicator and dropdown">
-<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
+<div class="navbar bg-base-100 mb-40 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
   </div>
@@ -293,7 +293,7 @@ classnames:
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
   </div>
@@ -357,7 +357,7 @@ classnames:
 </Component>
 
 <Component title="Navbar with dropdown, center logo and icon">
-<div class="navbar bg-base-100 mb-40 shadow-xl rounded-box">
+<div class="navbar bg-base-100 mb-40 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -388,7 +388,7 @@ classnames:
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <div class="$$navbar-start">
     <div class="$$dropdown">
       <div tabindex="0" role="button" class="$$btn $$btn-ghost $$btn-circle">
@@ -457,7 +457,7 @@ classnames:
 </Component>
 
 <Component title="responsive (dropdown menu on small screen, center menu on large screen)" desc="Resize screen to see changes">
-<div class="navbar bg-base-100 mb-48 shadow-xl rounded-box">
+<div class="navbar bg-base-100 mb-48 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -499,7 +499,7 @@ classnames:
 {#snippet html()}
 
 ```html
-<div class="$$navbar bg-base-100">
+<div class="$$navbar bg-base-100 shadow-sm">
   <div class="$$navbar-start">
     <div class="$$dropdown">
       <div tabindex="0" role="button" class="$$btn $$btn-ghost lg:hidden">
@@ -557,13 +557,13 @@ classnames:
 </Component>
 
 <Component title="Navbar with colors">
-<div class="navbar bg-neutral text-neutral-content rounded-box">
+<div class="navbar bg-neutral text-neutral-content">
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
-<div class="navbar bg-base-300 rounded-box">
+<div class="navbar bg-base-300">
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
-<div class="navbar bg-primary text-primary-content rounded-box">
+<div class="navbar bg-primary text-primary-content">
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
 {#snippet html()}

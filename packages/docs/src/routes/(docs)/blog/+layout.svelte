@@ -3,8 +3,6 @@
   import Footer from "$components/Footer.svelte"
   import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
   import Sponsors from "$components/Sponsors.svelte"
-  import "prism-themes/themes/prism-material-dark.css"
-  import "$lib/style/prism-themes-modify.css"
   let { data, children } = $props()
   let { tags } = data
 </script>
