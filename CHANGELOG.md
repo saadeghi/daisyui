@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.15 (2024-12-09)
+
+
+### Bug Fixes
+
+* Safari loading animation bug. closes [#2570](https://github.com/saadeghi/daisyui/issues/2570) ([7e5f5a0](https://github.com/saadeghi/daisyui/commit/7e5f5a0ce4989224e4afccf6f75384214eed1f03))
+
 ## 4.12.14 (2024-10-28)
 
 
