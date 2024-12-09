@@ -171,7 +171,9 @@ pre[class*="language-"] {
 }
 
 .prose pre[class*="language-"] {
-  max-width: clamp(20rem, calc(100vw - 4rem), 80ch);
+  margin: 0;
+  font-size: 0.75rem;
+  max-width: clamp(20rem, calc(100vw - 3rem), 130ch);
   background-color: var(--color-neutral);
   color: var(--color-neutral-content);
   border-radius: var(--radius-box);
@@ -184,13 +186,13 @@ pre[class*="language-"] {
 
 @media (min-width: 1024px) {
   .prose pre[class*="language-"] {
-    max-width: clamp(20rem, calc(100vw - 20rem - 4rem), 80ch);
+    max-width: clamp(20rem, calc(100vw - 20rem - 3rem), 130ch);
   }
 }
 
 @media (min-width: 1280px) {
   .prose pre[class*="language-"] {
-    max-width: clamp(20rem, calc(100vw - 20rem - 4rem - 8rem), 80ch);
+    max-width: clamp(20rem, calc(100vw - 20rem - 3rem - 8rem), 130ch);
   }
 }
 

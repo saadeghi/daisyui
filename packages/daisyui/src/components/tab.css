@@ -176,7 +176,7 @@
   }
 
   &:has(.tab-content) {
-    .tab:first-child {
+    > .tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
         --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
           var(--tab-border-color);
@@ -244,7 +244,7 @@
   }
 
   &:has(.tab-content) {
-    .tab:first-child {
+    > .tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
         --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
           var(--tab-border-color);
@@ -313,7 +313,7 @@
   }
 
   &:has(.tab-content) {
-    .tab:first-child {
+    > .tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
         --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color)
           var(--tab-border-color);
@@ -376,7 +376,7 @@
   }
 
   &:has(.tab-content) {
-    .tab:first-child {
+    >.tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
         --tab-border-colors: var(--tab-border-color) transparent var(--tab-border-color) var(--tab-border-color);
       }
