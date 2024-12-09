@@ -11,7 +11,7 @@ published: true
 <Translate text="daisyUI can be configured from your <code>tailwind.config.js</code> file." />  
 <Translate text="Default config" />:
 
-```css
+```css:app.css
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;
   root: ":root";

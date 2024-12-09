@@ -2,6 +2,8 @@ import { mdsvex } from "mdsvex"
 
 import remarkGithub from "remark-github"
 import codeTitle from "remark-code-titles"
+import remarkCodeTitles from "remark-flexible-code-titles"
+
 import rehypeSlug from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
 import rehypeExternalLinks from "rehype-external-links"
@@ -71,7 +73,8 @@ const rehypePlugins = [
 
 const remarkPlugins = [
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
-  codeTitle,
+  // codeTitle,
+  [remarkCodeTitles, { containerClassName: "my-4", titleClassName: "p-1 opacity-60 text-xs" }],
   [
     customClasses,
     {

@@ -15,17 +15,17 @@ published: true
 
 <Translate text="To use a theme, add its name in <span class=badge>tailwind.config.js</span> and activate it by adding <span class=badge>data-theme</span> attribute to <span class=badge>HTML</span> tag:" />
 
-```css
+```css:app.css
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake;
 }
 ```
 
-```html
+```html:index.html
 <html data-theme="cupcake"></html>
 ```
 
-> <Translate text="I suggest using <a href='https://github.com/saadeghi/theme-change'><code>theme-change</code></a>, so you can switch themes and save selected theme in local storage." />
+> :INFO:  <span><Translate text="I suggest using <a href='https://github.com/saadeghi/theme-change'>theme-change</a>, so you can switch themes and save selected theme in local storage." /></span>
 
 ## <Translate text="List of themes" />
 
@@ -33,7 +33,7 @@ published: true
 
 <ThemePreviews themes={data.themes}/>
 
-```css
+```css:app.css
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter, dim, nord, sunset, abyss, silk;
 }
@@ -52,7 +52,7 @@ published: true
 - <Translate text="<code>dark</code> will be the default theme for dark mode" />
 - <Translate text="<code>cmyk</code> can be applied on any HTML tag with <code>data-theme='cmyk'</code>" />
 
-```css
+```css:app.css
 @plugin "daisyui" {
   themes: cupcake --default, dark --prefersdark, cmyk;
 }
@@ -62,7 +62,7 @@ published: true
 
 <Translate text="If you only want the default light and dark themes, set <code>themes</code> config to false." />
 
-```css
+```css:app.css
 @plugin "daisyui" {
 themes: light --default;
 }
@@ -70,7 +70,7 @@ themes: light --default;
 
 <Translate text="If you don't want to include any themes and disable all colors, set <code>themes</code> config to an empty array." />
 
-```css
+```css:app.css
 @plugin "daisyui" {
   themes: false;
 }
@@ -83,7 +83,7 @@ themes: light --default;
 
 <Translate text="You can force a section of your HTML to only use a specific theme." />
 
-```html
+```html:index.html
 <html data-theme="dark">
   <div data-theme="light">
     This div will always use light theme
@@ -102,14 +102,9 @@ themes: light --default;
 
 <Translate text="In the below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button)." />
 
-<div class="alert alert-info text-sm mb-2 max-w-3xl not-prose">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <p>
-    <Translate text="You can also add <a href='/docs/colors/' class='link'>optional color names</a> to have full control over all colors." />
-  </p>
-</div>
+> :INFO: <Translate text="You can also add <a href='/docs/colors/' class='link'>optional color names</a> to have full control over all colors." />
 
-```css
+```css:app.css
 @plugin "daisyui/theme" {
   name: "mytheme";
   default: false; /* set as default */
@@ -159,7 +154,7 @@ themes: light --default;
 
 <Translate text="You can apply custom style to a daisyUI themes using CSS:" />
 
-```css
+```css:app.css
 [data-theme="mytheme"] .btn {
   border-width: 2px;
   border-color: black;
@@ -171,7 +166,7 @@ themes: light --default;
 <Translate text="In your tailwind.config.js, you can require an existing daisyUI theme and override some colors." />
 <Translate text="In the below example, I require and spread <code>light</code> theme and change its <code>primary</code> and <code>secondary</code> colors:" />
 
-```css
+```css:app.css
 @plugin "daisyui/theme" {
   name: "light";
   default: true;

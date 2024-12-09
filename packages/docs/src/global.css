@@ -213,3 +213,50 @@ pre[class*="language-"] {
   border-radius: var(--radius-box);
   border: 1px solid rgba(var(--color-base-content), 0.1);
 }
+
+/* prose */
+.prose {
+  .code-wrapper {
+    max-width: 100vw;
+    overflow-x: auto;
+    > pre {
+      max-height: 32em;
+    }
+  }
+  .component-preview {
+    pre[class*="language-"] {
+      width: 100%;
+      max-width: 100%;
+      font-size: 14px;
+      padding-right: 2.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-top-right-radius: var(--rounded-box, 1rem);
+      border-top-left-radius: var(--rounded-box, 1rem);
+      border-bottom-right-radius: var(--rounded-box, 1rem);
+      border-bottom-left-radius: var(--rounded-box, 1rem);
+      margin: 0;
+      min-height: 6rem;
+      .token.comment {
+        color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+      }
+    }
+    .preview,
+    .tab:first-child:checked {
+      background-image: var(--preview-gradient, none),
+        repeating-conic-gradient(var(--color-base-100) 0% 25%, var(--color-base-200) 0% 50%);
+      background-size:
+        auto,
+        40px 40px;
+    }
+    .preview {
+      background-position: 10px 0;
+    }
+    .tab:first-child:checked {
+      background-position:
+        0 0,
+        10px bottom;
+      --preview-gradient: linear-gradient(to bottom, var(--color-base-100) -20%, transparent);
+    }
+  }
+}
