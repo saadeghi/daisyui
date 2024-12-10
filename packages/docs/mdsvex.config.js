@@ -13,7 +13,7 @@ import theme from "./shiki.theme.json" with { type: "json" }
 
 const highlighter = await createHighlighter({
   themes: [theme],
-  langs: ["javascript", "jsx", "html", "css", "json"],
+  langs: ["javascript", "jsx", "html", "css", "json", "bash", "markdown", "diff"],
 })
 
 const placeholders = {

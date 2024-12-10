@@ -14,7 +14,7 @@
       <img
         loading="lazy"
         src={thumbnail}
-        class="border-base-content bg-base-300 rounded-box border border-opacity-5"
+        class="border-base-content/5 bg-base-300 rounded-box border"
         alt={title}
       />
     </figure>

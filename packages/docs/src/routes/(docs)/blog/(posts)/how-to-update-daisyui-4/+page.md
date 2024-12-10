@@ -39,7 +39,7 @@ Here's the primary color of light theme in daisyUI 3 and 4:
 <div class="text-center text-xs text-base-content/50 font-bold">After</div>
 <div>
 
-```CSS
+```css
 /* the values were HSL */
 --p: 251.47 100% 56%;
 ```

@@ -26,7 +26,7 @@
             <img
               loading="lazy"
               src={`https://img.daisyui.com/images/components/${slug}.webp`}
-              class="border-base-content bg-base-300 rounded-lg border border-opacity-5"
+              class="border-base-content/5 bg-base-300 rounded-lg border"
               alt={title}
             />
           </figure>

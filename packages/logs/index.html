@@ -62,14 +62,9 @@ daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
         if (chart.key === "raw_brotli") {
           return {
             ...baseLayout,
-            yaxis: { title: "Raw", range: [0, maxValues["raw"]] },
-            yaxis2: {
-              title: "",
-              range: [0, maxValues["brotli"]],
-              overlaying: "y",
-              side: "right",
-            },
+            yaxis: { title: "Size (bytes)", range: [0, maxValues["raw"]] },
             colorway: ["#ddd", "#000"],
+            barmode: "stack", // Changed from "group" to "stack"
           }
         } else {
           return {
@@ -96,7 +91,7 @@ daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
           const yBrotli = x.map((file) => dataMap.get(file)?.brotli || 0)
           return [
             { x, y: yRaw, type: "bar", name: "Raw" },
-            { x, y: yBrotli, type: "bar", name: "Brotli", yaxis: "y2" },
+            { x, y: yBrotli, type: "bar", name: "Brotli" }, // Removed yaxis: "y2"
           ]
         } else if (key === "selector_var") {
           const ySelector = x.map((file) => dataMap.get(file)?.selector || 0)
@@ -178,7 +173,8 @@ daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
 
             this.charts.forEach((chart) => {
               if (chart.key === "raw_brotli") {
-                this.maxValues["raw"] = Math.max(
+                // Calculate max for raw values
+                const rawMax = Math.max(
                   ...this.reports.flatMap((report) =>
                     report.data
                       .filter(
@@ -190,18 +186,23 @@ daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
                       .map((item) => item["raw"] || 0),
                   ),
                 )
-                this.maxValues["brotli"] = Math.max(
-                  ...this.reports.flatMap((report) =>
-                    report.data
-                      .filter(
-                        (item) =>
-                          !this.excludedFiles.some((excludedFile) =>
-                            item.file.includes(excludedFile),
-                          ) && latestFiles.has(transformFileName(item.file)),
-                      )
-                      .map((item) => item["raw"] || 0),
+                // Calculate max for brotli values
+                const brotliMax = Math.max(
+                  ...this.reports.flatMap(
+                    (report) =>
+                      report.data
+                        .filter(
+                          (item) =>
+                            !this.excludedFiles.some((excludedFile) =>
+                              item.file.includes(excludedFile),
+                            ) && latestFiles.has(transformFileName(item.file)),
+                        )
+                        .map((item) => item["brotli"] || 0), // Changed from "raw" to "brotli"
                   ),
                 )
+                // Use the larger of the two maxes for both axes
+                this.maxValues["raw"] = Math.max(rawMax, brotliMax)
+                this.maxValues["brotli"] = Math.max(rawMax, brotliMax)
               } else if (chart.key === "selector_var") {
                 this.maxValues[chart.key] = Math.max(
                   ...this.reports.flatMap((report) =>

@@ -98,7 +98,7 @@ export default {
 
 Add Tailwind directives to `resources/css/app.css`
 
-```pcss
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
