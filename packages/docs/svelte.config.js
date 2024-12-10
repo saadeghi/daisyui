@@ -1,6 +1,6 @@
 import adapter from "@sveltejs/adapter-static"
 
-import { mdsvexConfig, mdsvexExtensions } from "./mdsvex.config.js"
+import { mdsvexConfig, mdsvexExtensions } from "./src/lib/mdsvex/mdsvex.config.js"
 
 export default {
   extensions: [".svelte", ...mdsvexExtensions],

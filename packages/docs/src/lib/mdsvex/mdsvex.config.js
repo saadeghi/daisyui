@@ -1,4 +1,6 @@
 import fs from "fs/promises"
+import path from "path"
+import { fileURLToPath } from "url"
 import { mdsvex, escapeSvelte } from "mdsvex"
 import { createHighlighter } from "shiki"
 
@@ -11,7 +13,9 @@ import rehypeExternalLinks from "rehype-external-links"
 import { visit } from "unist-util-visit"
 import { remarkRenderComponent } from "./remark-render-component.js"
 
-const theme = JSON.parse(await fs.readFile("./shiki.theme.json", "utf8"))
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const theme = JSON.parse(await fs.readFile(path.join(__dirname, "shiki.theme.json"), "utf-8"))
 
 const highlighter = await createHighlighter({
   themes: [theme],
@@ -120,9 +124,9 @@ const config = {
   rehypePlugins: rehypePlugins,
   remarkPlugins: remarkPlugins,
   layout: {
-    components: "src/lib/mdsvex-components.svelte",
-    blog: "src/lib/mdsvex-blog.svelte",
-    _: "src/lib/mdsvex.svelte",
+    components: "src/lib/mdsvex/layout-components.svelte",
+    blog: "src/lib/mdsvex/layout-blog.svelte",
+    docs: "src/lib/mdsvex/layout-docs.svelte",
   },
   highlight: {
     highlighter: async (code, lang = "text") => {

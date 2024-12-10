@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @source './**/*.{html,js,svelte,ts,svx,md,json}';
-@source '../mdsvex.config.js';
 @plugin '@tailwindcss/typography';
 
 @plugin "daisyui" {
