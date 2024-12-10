@@ -38,7 +38,7 @@ classnames:
   <div><Translate text="All radio inputs with the same name work together and only one of them can be open at a time. If you have more than one set of accordion items on a page, use different names for the radio inputs on each set." /></div>
 </div>
 
-<Component title="Accordion using radio inputs">
+### ~Accordion using radio inputs
 <div class="collapse bg-base-200">
   <input type="radio" name="my-accordion-1" checked="checked" />
   <div class="collapse-title text-xl font-medium">
@@ -66,9 +66,8 @@ classnames:
     <p>hello</p>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$collapse bg-base-200">
   <input type="radio" name="my-accordion-1" checked="checked" />
   <div class="$$collapse-title text-xl font-medium">Click to open this one and close others</div>
@@ -92,10 +91,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accordion with arrow icon">
+### ~Accordion with arrow icon
 <div class="collapse collapse-arrow bg-base-200">
   <input type="radio" name="my-accordion-2" checked="checked" />
   <div class="collapse-title text-xl font-medium">
@@ -123,9 +120,8 @@ classnames:
     <p>hello</p>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$collapse $$collapse-arrow bg-base-200">
   <input type="radio" name="my-accordion-2" checked="checked" />
   <div class="$$collapse-title text-xl font-medium">Click to open this one and close others</div>
@@ -149,10 +145,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accordion with plus/minus icon">
+### ~Accordion with plus/minus icon
 <div class="collapse collapse-plus bg-base-200">
   <input type="radio" name="my-accordion-3" checked="checked" />
   <div class="collapse-title text-xl font-medium">
@@ -180,9 +174,8 @@ classnames:
     <p>hello</p>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$collapse $$collapse-plus bg-base-200">
   <input type="radio" name="my-accordion-3" checked="checked" />
   <div class="$$collapse-title text-xl font-medium">Click to open this one and close others</div>
@@ -206,10 +199,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Using Accordion and Join together" desc="to join the items together and handle border radius automatically">
+### ~Using Accordion and Join together
+#### to join the items together and handle border radius automatically
+
 <div class="join join-vertical w-full">
   <div class="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" checked="checked" />
@@ -239,9 +232,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join $$join-vertical w-full">
   <div class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
     <input type="radio" name="my-accordion-4" checked="checked" />
@@ -267,5 +259,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

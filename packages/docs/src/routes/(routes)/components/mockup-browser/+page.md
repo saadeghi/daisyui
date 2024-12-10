@@ -15,16 +15,15 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="browser mockup with border">
+### ~browser mockup with border
 <div class="border mockup-browser border-base-300 w-full">
   <div class="mockup-browser-toolbar">
     <div class="input border border-base-300">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$mockup-browser border-base-300 border">
   <div class="$$mockup-browser-toolbar">
     <div class="$$input border-base-300 border">https://daisyui.com</div>
@@ -33,19 +32,16 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="browser mockup with background color">
+### ~browser mockup with background color
 <div class="border mockup-browser bg-base-300 w-full">
   <div class="mockup-browser-toolbar">
     <div class="input">https://daisyui.com</div>
   </div>
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$mockup-browser bg-base-300 border">
   <div class="$$mockup-browser-toolbar">
     <div class="$$input">https://daisyui.com</div>
@@ -54,5 +50,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

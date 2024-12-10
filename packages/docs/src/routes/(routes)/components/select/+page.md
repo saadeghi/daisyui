@@ -41,7 +41,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Select">
+### ~Select
 <select class="select w-full max-w-xs">
   <option disabled selected>Pick your favorite Simpson</option>
   <option>Homer</option>
@@ -50,9 +50,8 @@ classnames:
   <option>Lisa</option>
   <option>Maggie</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select w-full max-w-xs">
   <option disabled selected>Pick your favorite Simpson</option>
   <option>Homer</option>
@@ -63,18 +62,15 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Select with border">
+### ~Select with border
 <select class="select w-full max-w-xs select-bordered">
   <option disabled selected>Who shot first?</option>
   <option>Han Solo</option>
   <option>Greedo</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-bordered w-full max-w-xs">
   <option disabled selected>Who shot first?</option>
   <option>Han Solo</option>
@@ -82,19 +78,16 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Ghost (no background)">
+### ~Ghost (no background)
 <select class="select w-full max-w-xs select-ghost">
   <option disabled selected>Pick the best JS framework</option>
   <option>Svelte</option>
   <option>Vue</option>
   <option>React</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-ghost w-full max-w-xs">
   <option disabled selected>Pick the best JS framework</option>
   <option>Svelte</option>
@@ -103,10 +96,8 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With form-control and labels">
+### ~With form-control and labels
 <label class="form-control w-full max-w-xs">
   <div class="label">
     <span class="label-text">Pick the best fantasy franchise</span>
@@ -125,9 +116,8 @@ classnames:
     <span class="label-text-alt">Alt label</span>
   </div>
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="$$form-control w-full max-w-xs">
   <div class="$$label">
     <span class="$$label-text">Pick the best fantasy franchise</span>
@@ -148,10 +138,8 @@ classnames:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Primary color">
+### ~Primary color
 <select class="select w-full max-w-xs select-primary">
   <option disabled selected>What is the best TV show?</option>
   <option>Game of Thrones</option>
@@ -159,9 +147,8 @@ classnames:
   <option>Breaking Bad</option>
   <option>Walking Dead</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-primary w-full max-w-xs">
   <option disabled selected>What is the best TV show?</option>
   <option>Game of Thrones</option>
@@ -171,10 +158,8 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Secondary color">
+### ~Secondary color
 <select class="select w-full max-w-xs select-secondary">
   <option disabled selected>Pick your favorite language</option>
   <option>Java</option>
@@ -186,9 +171,8 @@ classnames:
   <option>JavaScript</option>
   <option>Python</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-secondary w-full max-w-xs">
   <option disabled selected>Pick your favorite language</option>
   <option>Java</option>
@@ -202,19 +186,16 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accent color">
+### ~Accent color
 <select class="select w-full max-w-xs select-accent">
   <option disabled selected>Dark mode or light mode?</option>
   <option>Auto</option>
   <option>Dark mode</option>
   <option>Light mode</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-accent w-full max-w-xs">
   <option disabled selected>Dark mode or light mode?</option>
   <option>Auto</option>
@@ -223,19 +204,16 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Info color">
+### ~Info color
 <select class="select w-full max-w-xs select-info">
   <option disabled selected>Select language</option>
   <option>English</option>
   <option>Japanese</option>
   <option>Italian</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-info w-full max-w-xs">
   <option disabled selected>Select language</option>
   <option>English</option>
@@ -244,10 +222,8 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Success color">
+### ~Success color
 <select class="select w-full max-w-xs select-success">
   <option disabled selected>Pick your favorite anime</option>
   <option>One Piece</option>
@@ -258,9 +234,8 @@ classnames:
   <option>Fullmetal Alchemist</option>
   <option>Jojo's Bizarre Adventure</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-success w-full max-w-xs">
   <option disabled selected>Pick your favorite anime</option>
   <option>One Piece</option>
@@ -273,10 +248,8 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Warning color">
+### ~Warning color
 <select class="select w-full max-w-xs select-warning">
   <option disabled selected>Pick a pizza</option>
   <option>Cheese</option>
@@ -285,9 +258,8 @@ classnames:
   <option>Margherita</option>
   <option>Hawaiian</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-warning w-full max-w-xs">
   <option disabled selected>Pick a pizza</option>
   <option>Cheese</option>
@@ -298,10 +270,8 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Error color">
+### ~Error color
 <select class="select w-full max-w-xs select-error">
   <option disabled selected>What is the best headless CMS</option>
   <option>Strapi</option>
@@ -309,9 +279,8 @@ classnames:
   <option>Netlify CMS</option>
   <option>Sanity</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select $$select-error w-full max-w-xs">
   <option disabled selected>What is the best headless CMS</option>
   <option>Strapi</option>
@@ -321,10 +290,8 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Sizes">
+### ~Sizes
 <div class="flex flex-col gap-4 w-full items-center">
   <select class="select select-bordered select-lg w-full max-w-xs">
     <option disabled selected>Large</option>
@@ -351,9 +318,8 @@ classnames:
     <option>Tiny Tomato</option>
   </select>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <!-- lg -->
 <select class="$$select $$select-bordered $$select-lg w-full max-w-xs">
   <option disabled selected>Large</option>
@@ -384,20 +350,15 @@ classnames:
 </select>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Disabled">
+### ~Disabled
 <select class="select w-full max-w-xs" disabled>
   <option>You can't touch this</option>
 </select>
-{#snippet html()}
 
-```html
+```~html
 <select class="$$select w-full max-w-xs" disabled>
   <option>You can't touch this</option>
 </select>
 ```
 
-{/snippet}
-</Component>

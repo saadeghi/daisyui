@@ -28,58 +28,49 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Empty badge as indicator">
+### ~Empty badge as indicator
 <div class="indicator">
   <span class="indicator-item badge badge-secondary"></span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$badge $$badge-secondary"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Badge as indicator">
+### ~Badge as indicator
 <div class="indicator">
   <span class="indicator-item badge badge-primary">new</span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$badge $$badge-primary">new</span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="for button">
+### ~for button
 <div class="indicator">
   <span class="indicator-item badge badge-secondary">99+</span>
   <button class="btn">inbox</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$badge $$badge-secondary">99+</span>
   <button class="$$btn">inbox</button>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="for tab">
+### ~for tab
 <div class="tabs tabs-lift">
   <button class="tab">Messages</button>
   <button class="indicator tab tab-active">
@@ -88,9 +79,8 @@ classnames:
   </button>
   <button class="tab">Requests</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$tabs $$tabs-lift">
   <a class="$$tab">Messages</a>
   <a class="$$indicator $$tab $$tab-active">
@@ -101,19 +91,16 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="for avatar">
+### ~for avatar
 <div class="avatar indicator">
   <span class="indicator-item badge badge-secondary">typing…</span>
   <div class="w-20 h-20 rounded-lg">
     <img alt="Tailwind CSS examples" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar $$indicator">
   <span class="$$indicator-item $$badge $$badge-secondary">typing…</span>
   <div class="h-20 w-20 rounded-lg">
@@ -124,27 +111,22 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="for an input">
+### ~for an input
 <div class="indicator">
   <span class="indicator-item badge">Required</span>
   <input type="text" placeholder="Your email address" class="input input-bordered" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$badge">Required</span>
   <input type="text" placeholder="Your email address" class="$$input $$input-bordered" />
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="A button as an indicator for a card">
+### ~A button as an indicator for a card
 <div class="indicator my-6 mx-10">
   <div class="indicator-item indicator-bottom">
     <button class="btn btn-primary">Apply</button>
@@ -156,9 +138,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <div class="$$indicator-item $$indicator-bottom">
     <button class="$$btn $$btn-primary">Apply</button>
@@ -172,17 +153,14 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="in center of an image">
+### ~in center of an image
 <div class="indicator">
   <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span>
   <img alt="Tailwind CSS examples" class="rounded" src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$indicator-center $$indicator-middle $$badge $$badge-secondary">
     Uploading Image...
@@ -193,68 +171,56 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-top (default) indicator-start">
+### ~indicator-top (default) indicator-start
 <div class="indicator">
   <span class="indicator-item indicator-start badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$indicator-start $$badge $$badge-secondary"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-top (default) indicator-center">
+### ~indicator-top (default) indicator-center
 <div class="indicator">
   <span class="indicator-item indicator-center badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$indicator-center $$badge $$badge-secondary"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-top (default) indicator-end (default)">
+### ~indicator-top (default) indicator-end (default)
 <div class="indicator">
   <span class="indicator-item badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$badge $$badge-secondary"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-middle indicator-start">
+### ~indicator-middle indicator-start
 <div class="indicator">
   <span class="indicator-item indicator-middle indicator-start badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span
     class="$$indicator-item $$indicator-middle $$indicator-start $$badge $$badge-secondary"></span>
@@ -262,17 +228,14 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-middle indicator-center">
+### ~indicator-middle indicator-center
 <div class="indicator">
   <span class="indicator-item indicator-middle indicator-center badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span
     class="$$indicator-item $$indicator-middle $$indicator-center $$badge $$badge-secondary"></span>
@@ -280,34 +243,28 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-middle indicator-end (default)">
+### ~indicator-middle indicator-end (default)
 <div class="indicator">
   <span class="indicator-item indicator-middle badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$indicator-middle $$badge $$badge-secondary"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-bottom indicator-start">
+### ~indicator-bottom indicator-start
 <div class="indicator">
   <span class="indicator-item indicator-bottom indicator-start badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span
     class="$$indicator-item $$indicator-bottom $$indicator-start $$badge $$badge-secondary"></span>
@@ -315,17 +272,14 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-bottom indicator-center">
+### ~indicator-bottom indicator-center
 <div class="indicator">
   <span class="indicator-item indicator-bottom indicator-center badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span
     class="$$indicator-item $$indicator-bottom $$indicator-center $$badge $$badge-secondary"></span>
@@ -333,27 +287,22 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="indicator-bottom indicator-end (default)">
+### ~indicator-bottom indicator-end (default)
 <div class="indicator">
   <span class="indicator-item indicator-bottom badge badge-secondary"></span>
   <div class="grid w-32 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$indicator-bottom $$badge $$badge-secondary"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="multiple indicators">
+### ~multiple indicators
 <div class="indicator">
   <span class="indicator-item indicator-top indicator-start badge badge-secondary">top+start</span>
   <span class="indicator-item indicator-top indicator-center badge badge-secondary">top+center</span>
@@ -366,9 +315,8 @@ classnames:
   <span class="indicator-item indicator-bottom indicator-end badge badge-secondary">bottom+end</span>
   <div class="grid w-60 h-32 bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span class="$$indicator-item $$indicator-top $$indicator-start $$badge $$badge-secondary">
     top+start
@@ -401,17 +349,16 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive" desc="changes position based on resolution">
+### ~Responsive
+#### changes position based on resolution
+
 <div class="indicator">
   <span class="indicator-item indicator-start sm:indicator-middle md:indicator-bottom lg:indicator-center xl:indicator-end badge badge-secondary"></span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$indicator">
   <span
     class="$$indicator-item $$indicator-start sm:$$indicator-middle md:$$indicator-bottom lg:$$indicator-center xl:$$indicator-end badge badge-secondary"></span>
@@ -419,5 +366,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

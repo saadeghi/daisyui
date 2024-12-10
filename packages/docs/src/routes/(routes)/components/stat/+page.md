@@ -30,7 +30,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Stat">
+### ~Stat
 <div class="shadow stats">
   <div class="stat">
     <div class="stat-title">Total Page Views</div>
@@ -38,9 +38,8 @@ classnames:
     <div class="stat-desc">21% more than last month</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stats shadow">
   <div class="$$stat">
     <div class="$$stat-title">Total Page Views</div>
@@ -50,10 +49,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Stat with icons or image">
+### ~Stat with icons or image
 <div class="shadow stats">
   <div class="stat">
     <div class="stat-figure text-primary">
@@ -84,9 +81,8 @@ classnames:
     <div class="stat-desc text-secondary">31 tasks remaining</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stats shadow">
   <div class="$$stat">
     <div class="$$stat-figure text-primary">
@@ -141,10 +137,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Stat">
+### ~Stat
 <div class="shadow stats">
   <div class="stat">
     <div class="stat-figure text-secondary">
@@ -171,9 +165,8 @@ classnames:
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stats shadow">
   <div class="$$stat">
     <div class="$$stat-figure text-secondary">
@@ -234,10 +227,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Centered items">
+### ~Centered items
 <div class="shadow stats">
   <div class="stat place-items-center">
     <div class="stat-title">Downloads</div>
@@ -255,9 +246,8 @@ classnames:
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stats shadow">
   <div class="$$stat place-items-center">
     <div class="$$stat-title">Downloads</div>
@@ -279,10 +269,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical">
+### ~Vertical
 <div class="shadow stats stats-vertical">
   <div class="stat">
     <div class="stat-title">Downloads</div>
@@ -300,9 +288,8 @@ classnames:
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stats $$stats-vertical shadow">
   <div class="$$stat">
     <div class="$$stat-title">Downloads</div>
@@ -324,10 +311,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive (vertical on small screen, horizontal on large screen)">
+### ~Responsive (vertical on small screen, horizontal on large screen)
 <div class="shadow stats stats-vertical lg:stats-horizontal">
   <div class="stat">
     <div class="stat-title">Downloads</div>
@@ -345,9 +330,8 @@ classnames:
     <div class="stat-desc">↘︎ 90 (14%)</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stats $$stats-vertical lg:$$stats-horizontal shadow">
   <div class="$$stat">
     <div class="$$stat-title">Downloads</div>
@@ -369,10 +353,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With custom colors and button">
+### ~With custom colors and button
 <div class="stats bg-primary text-primary-content">
   <div class="stat">
     <div class="stat-title">Account balance</div>
@@ -390,9 +372,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stats bg-primary text-primary-content">
   <div class="$$stat">
     <div class="$$stat-title">Account balance</div>
@@ -413,5 +394,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

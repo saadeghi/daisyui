@@ -49,27 +49,23 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Badge">
+### ~Badge
 <span class="badge">Badge</span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$badge">Badge</span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Badge with brand colors">
+### ~Badge with brand colors
 <div class="badge">default</div>
 <div class="badge badge-neutral">neutral</div>
 <div class="badge badge-primary">primary</div>
 <div class="badge badge-secondary">secondary</div>
 <div class="badge badge-accent">accent</div>
 <div class="badge badge-ghost">ghost</div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$badge">default</div>
 <div class="$$badge $$badge-neutral">neutral</div>
 <div class="$$badge $$badge-primary">primary</div>
@@ -78,61 +74,50 @@ classnames:
 <div class="$$badge $$badge-ghost">ghost</div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Outline badge">
+### ~Outline badge
 <div class="badge badge-outline">default</div>
 <div class="badge badge-primary badge-outline">primary</div>
 <div class="badge badge-secondary badge-outline">secondary</div>
 <div class="badge badge-accent badge-outline">accent</div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$badge $$badge-outline">default</div>
 <div class="$$badge $$badge-primary $$badge-outline">primary</div>
 <div class="$$badge $$badge-secondary $$badge-outline">secondary</div>
 <div class="$$badge $$badge-accent $$badge-outline">accent</div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Badge sizes">
+### ~Badge sizes
 <div class="badge badge-lg">987,654</div>
 <div class="badge badge-md">987,654</div>
 <div class="badge badge-sm">987,654</div>
 <div class="badge badge-xs">987,654</div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$badge $$badge-lg">987,654</div>
 <div class="$$badge $$badge-md">987,654</div>
 <div class="$$badge $$badge-sm">987,654</div>
 <div class="$$badge $$badge-xs">987,654</div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Empty badge">
+### ~Empty badge
 <div class="badge badge-primary badge-lg"></div>
 <div class="badge badge-primary badge-md"></div>
 <div class="badge badge-primary badge-sm"></div>
 <div class="badge badge-primary badge-xs"></div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$badge $$badge-primary $$badge-lg"></div>
 <div class="$$badge $$badge-primary $$badge-md"></div>
 <div class="$$badge $$badge-primary $$badge-sm"></div>
 <div class="$$badge $$badge-primary $$badge-xs"></div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Badge with state colors">
+### ~Badge with state colors
 <div class="badge badge-info gap-2">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
   info
@@ -149,9 +134,8 @@ classnames:
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
   error
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$badge $$badge-info gap-2">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -210,10 +194,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Badge in a text" classes="flex-col">
+### ~Badge in a text
 <h2 class="text-xl">
   Heading
   <span class="badge badge-lg">NEW</span>
@@ -230,9 +212,8 @@ classnames:
   Heading
   <span class="badge badge-xs">NEW</span>
 </h5>
-{#snippet html()}
 
-```html
+```~html
 <h2 class="text-xl">
   Heading
   <span class="badge badge-lg">NEW</span>
@@ -251,10 +232,8 @@ classnames:
 </h5>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Badge in a button">
+### ~Badge in a button
 <button class="btn">
   Inbox
   <div class="badge">+99</div>
@@ -263,9 +242,8 @@ classnames:
   Inbox
   <div class="badge badge-secondary">+99</div>
 </button>
-{#snippet html()}
 
-```html
+```~html
 <button class="$$btn">
   Inbox
   <div class="$$badge">+99</div>
@@ -276,5 +254,3 @@ classnames:
 </button>
 ```
 
-{/snippet}
-</Component>

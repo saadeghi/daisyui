@@ -39,27 +39,23 @@ classnames:
   let indeterminate = true;
 </script>
 
-<Component title="Toggle">
+### ~Toggle
 <input type="checkbox" class="toggle" checked="checked" />
-{#snippet html()}
 
-```html
+```~html
 <input type="checkbox" class="$$toggle" checked="checked" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With label and form-control">
+### ~With label and form-control
 <div class="form-control w-52">
   <label class="cursor-pointer label">
     <span class="label-text">Remember me</span>
     <input type="checkbox" class="toggle" checked="checked" />
   </label>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
@@ -68,10 +64,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Checkboxes with brand colors">
+### ~Checkboxes with brand colors
 <div class="flex flex-col">
   <div class="form-control w-52">
     <label class="cursor-pointer label">
@@ -92,9 +86,8 @@ classnames:
     </label>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex flex-col">
   <div class="form-control w-52">
     <label class="label cursor-pointer">
@@ -117,74 +110,59 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Checkboxes with state colors">
+### ~Checkboxes with state colors
 <div class="flex flex-col items-center gap-2">
   <input type="checkbox" class="toggle toggle-success" checked="checked" />
   <input type="checkbox" class="toggle toggle-warning" checked="checked" />
   <input type="checkbox" class="toggle toggle-info" checked="checked" />
   <input type="checkbox" class="toggle toggle-error" checked="checked" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <input type="checkbox" class="$$toggle $$toggle-success" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-warning" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-info" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-error" checked="checked" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Sizes">
+### ~Sizes
 <div class="flex flex-col items-center gap-2">
   <input type="checkbox" class="toggle toggle-xs" checked="checked" />
   <input type="checkbox" class="toggle toggle-sm" checked="checked" />
   <input type="checkbox" class="toggle toggle-md" checked="checked" />
   <input type="checkbox" class="toggle toggle-lg" checked="checked" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <input type="checkbox" class="$$toggle $$toggle-xs" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-sm" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-md" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-lg" checked="checked" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Disabled">
+### ~Disabled
 <input type="checkbox" class="toggle" disabled />
-{#snippet html()}
 
-```html
+```~html
 <input type="checkbox" class="$$toggle" disabled />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Disabled and checked">
+### ~Disabled and checked
 <input type="checkbox" class="toggle" disabled checked="checked" />
-{#snippet html()}
 
-```html
+```~html
 <input type="checkbox" class="$$toggle" disabled checked="checked" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Indeterminate">
+### ~Indeterminate
 <input type="checkbox" class="toggle" bind:indeterminate onclick={(e)=>{e.preventDefault();}} />
-{#snippet html()}
 
-```html
+```~html
 <!-- You can make a toggle indeterminate using JS -->
 <script>
   document.getElementById("my-toggle").indeterminate = true
@@ -192,19 +170,14 @@ classnames:
 <input type="checkbox" class="$$toggle" id="my-toggle" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Toggle with custom color">
+### ~Toggle with custom color
 <input type="checkbox" class="toggle [--tglbg:yellow] bg-blue-500 hover:bg-blue-700 border-blue-500" checked="checked" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="checkbox"
   class="$$toggle border-blue-500 bg-blue-500 [--tglbg:yellow] hover:bg-blue-700"
   checked="checked" />
 ```
 
-{/snippet}
-</Component>

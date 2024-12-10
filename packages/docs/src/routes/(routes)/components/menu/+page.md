@@ -44,15 +44,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Menu">
+### ~Menu
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
   <li><button>Item 2</button></li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -60,18 +59,15 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive: vertical on small screen, horizontal on large screen">
+### ~Responsive: vertical on small screen, horizontal on large screen
 <ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
   <li><button>Item 1</button></li>
   <li><button>Item 2</button></li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu $$menu-vertical lg:$$menu-horizontal bg-base-200 $$rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -79,10 +75,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with icon only">
+### ~Menu with icon only
 <ul class="menu bg-base-200 rounded-box">
   <li>
     <button>
@@ -100,9 +94,8 @@ classnames:
     </button>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box">
   <li>
     <a>
@@ -155,10 +148,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with icon only (horizontal)">
+### ~Menu with icon only (horizontal)
 <ul class="menu menu-horizontal bg-base-200 rounded-box">
   <li>
     <button>
@@ -176,9 +167,8 @@ classnames:
     </button>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box">
   <li>
     <a>
@@ -231,10 +221,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with icon only with tooltip">
+### ~Menu with icon only with tooltip
 <ul class="menu bg-base-200 rounded-box">
   <li>
     <button class="tooltip tooltip-right" data-tip="Home">
@@ -252,9 +240,8 @@ classnames:
     </button>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box">
   <li>
     <a class="tooltip tooltip-right" data-tip="Home">
@@ -307,10 +294,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with icon only (horizontal) with tooltip">
+### ~Menu with icon only (horizontal) with tooltip
 <ul class="menu menu-horizontal bg-base-200 rounded-box mt-6">
   <li>
     <button class="tooltip" data-tip="Home">
@@ -328,9 +313,8 @@ classnames:
     </button>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box mt-6">
   <li>
     <a class="$$tooltip" data-tip="Home">
@@ -383,10 +367,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu sizes" classes="flex flex-col gap-4">
+### ~Menu sizes
 <ul class="menu menu-xs bg-base-200 w-56 rounded-box">
   <li><button>xs item 1</button></li>
   <li><button>xs item 2</button></li>
@@ -403,9 +385,8 @@ classnames:
   <li><button>lg item 1</button></li>
   <li><button>lg item 2</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu $$menu-xs bg-base-200 $$rounded-box w-56">
   <li><a>xs item 1</a></li>
   <li><a>xs item 2</a></li>
@@ -424,18 +405,15 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with disabled items">
+### ~Menu with disabled items
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Enabled item</button></li>
   <li class="disabled"><button>disabled item</button></li>
   <li class="disabled"><button>disabled item</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Enabled item</a></li>
   <li class="$$disabled"><a>disabled item</a></li>
@@ -443,10 +421,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with icons">
+### ~Menu with icons
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li>
     <button>
@@ -467,9 +443,8 @@ classnames:
     </button>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li>
     <a>
@@ -525,10 +500,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with icons and badge (responsive)">
+### ~Menu with icons and badge (responsive)
 <ul class="menu bg-base-200 lg:menu-horizontal rounded-box">
   <li>
     <button>
@@ -551,9 +524,8 @@ classnames:
     </button>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 lg:$$menu-horizontal $$rounded-box">
   <li>
     <a>
@@ -600,18 +572,15 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu without padding and border radius">
+### ~Menu without padding and border radius
 <ul class="menu bg-base-200 w-56 [&_li>*]:rounded-none p-0">
   <li><button>Item 1</button></li>
   <li><button>Item 2</button></li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 w-56 [&_li>*]:rounded-none p-0">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -619,19 +588,16 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with title">
+### ~Menu with title
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li class="menu-title">Title</li>
   <li><button>Item 1</button></li>
   <li><button>Item 2</button></li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li class="$$menu-title">Title</li>
   <li><a>Item 1</a></li>
@@ -640,10 +606,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with title as a parent">
+### ~Menu with title as a parent
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li>
     <h2 class="menu-title">Title</h2>
@@ -654,9 +618,8 @@ classnames:
     </ul>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li>
     <h2 class="$$menu-title">Title</h2>
@@ -669,10 +632,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Submenu">
+### ~Submenu
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
   <li>
@@ -691,9 +652,8 @@ classnames:
   </li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li>
@@ -714,10 +674,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Collapsible submenu">
+### ~Collapsible submenu
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
   <li>
@@ -740,9 +698,8 @@ classnames:
   </li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li>
@@ -767,10 +724,10 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Collapsible submenu that works with class names" desc="you can open/close the submenu by adding/removing `menu-dropdown-show` class using JS">
+### ~Collapsible submenu that works with class names
+#### you can open/close the submenu by adding/removing `menu-dropdown-show` class using JS
+
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
   <li>
@@ -791,9 +748,8 @@ classnames:
     </ul>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li>
@@ -816,10 +772,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="File tree">
+### ~File tree
 <ul class="menu menu-xs bg-base-200 rounded-lg max-w-xs w-full">
   <li><button>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
@@ -880,9 +834,8 @@ classnames:
     reports-final-2.pdf
   </button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu $$menu-xs bg-base-200 $$rounded-lg w-full max-w-xs">
   <li>
     <a>
@@ -1069,18 +1022,15 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Menu with active item">
+### ~Menu with active item
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
   <li><button class="active">Item 2</button></li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu bg-base-200 w-56">
   <li><a>Item 1</a></li>
   <li><a class="$$active">Item 2</a></li>
@@ -1088,18 +1038,15 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Horizontal menu">
+### ~Horizontal menu
 <ul class="menu menu-horizontal bg-base-200 rounded-box">
   <li><button>Item 1</button></li>
   <li><button>Item 2</button></li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu $$menu-horizontal bg-base-200">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -1107,10 +1054,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Horizontal submenu">
+### ~Horizontal submenu
 <ul class="menu menu-horizontal bg-base-200 rounded-box">
   <li><button>Item 1</button></li>
   <li>
@@ -1122,9 +1067,8 @@ classnames:
   </li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box">
   <li><a>Item 1</a></li>
   <li>
@@ -1138,10 +1082,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Mega menu with submenu (responsive)">
+### ~Mega menu with submenu (responsive)
 <ul class="menu xl:menu-horizontal lg:min-w-max bg-base-200 rounded-box">
   <li>
     <button>Solutions</button>
@@ -1187,9 +1129,8 @@ classnames:
     </ul>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu xl:$$menu-horizontal bg-base-200 $$rounded-box lg:min-w-max">
   <li>
     <a>Solutions</a>
@@ -1237,10 +1178,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Collapsible with submenu (responsive)">
+### ~Collapsible with submenu (responsive)
 <ul class="menu lg:menu-horizontal bg-base-200 rounded-box lg:mb-64">
   <li><button>Item 1</button></li>
   <li>
@@ -1263,9 +1202,8 @@ classnames:
   </li>
   <li><button>Item 3</button></li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$menu lg:$$menu-horizontal bg-base-200 $$rounded-box lg:mb-64">
   <li><a>Item 1</a></li>
   <li>
@@ -1290,5 +1228,3 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>

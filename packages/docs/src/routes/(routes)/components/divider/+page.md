@@ -39,15 +39,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Divider">
+### ~Divider
 <div class="flex flex-col w-full">
   <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
   <div class="divider">OR</div>
   <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full flex-col">
   <div class="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
   <div class="$$divider">OR</div>
@@ -55,18 +54,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Divider horizontal">
+### ~Divider horizontal
 <div class="flex w-full">
   <div class="grid h-20 grow card bg-base-300 rounded-box place-items-center">content</div>
   <div class="divider divider-horizontal">OR</div>
   <div class="grid h-20 grow card bg-base-300 rounded-box place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full">
   <div class="card bg-base-300 rounded-box grid h-20 grow place-items-center">content</div>
   <div class="$$divider $$divider-horizontal">OR</div>
@@ -74,18 +70,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Divider with no text">
+### ~Divider with no text
 <div class="flex flex-col w-full">
   <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
   <div class="divider"></div>
   <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full flex-col">
   <div class="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
   <div class="$$divider"></div>
@@ -93,18 +86,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="responsive (lg:divider-horizontal)">
+### ~responsive (lg:divider-horizontal)
 <div class="flex flex-col w-full lg:flex-row">
   <div class="grid grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
   <div class="divider lg:divider-horizontal">OR</div>
   <div class="grid grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full flex-col lg:flex-row">
   <div class="card bg-base-300 rounded-box grid h-32 grow place-items-center">content</div>
   <div class="$$divider lg:$$divider-horizontal">OR</div>
@@ -112,10 +102,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Divider with colors">
+### ~Divider with colors
 <div class="flex flex-col w-full">
   <div class="divider">Default</div>
   <div class="divider divider-neutral">Neutral</div>
@@ -127,9 +115,8 @@ classnames:
   <div class="divider divider-info">Info</div>
   <div class="divider divider-error">Error</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full flex-col">
   <div class="$$divider">Default</div>
   <div class="$$divider $$divider-neutral">Neutral</div>
@@ -143,18 +130,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Divider in different positions">
+### ~Divider in different positions
 <div class="flex flex-col w-full">
   <div class="divider divider-start">Start</div>
   <div class="divider">Default</div>
   <div class="divider divider-end">End</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full flex-col">
   <div class="$$divider $$divider-start">Start</div>
   <div class="$$divider">Default</div>
@@ -162,18 +146,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Divider in different positions (horizontal)">
+### ~Divider in different positions (horizontal)
 <div class="flex w-full justify-center h-52">
   <div class="divider divider-horizontal divider-start">Start</div>
   <div class="divider divider-horizontal">Default</div>
   <div class="divider divider-horizontal divider-end">End</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full">
   <div class="$$divider $$divider-horizontal $$divider-start">Start</div>
   <div class="$$divider $$divider-horizontal">Default</div>
@@ -181,5 +162,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

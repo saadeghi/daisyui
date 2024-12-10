@@ -5,7 +5,7 @@ layout: components
 classnames:
   component:
   - class: textarea
-  desc: For <textarea> element
+    desc: For <textarea> element
   style:
   - class: textarea-ghost
     desc: ghost style
@@ -41,40 +41,31 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Textarea">
+### ~Textarea
 <textarea class="textarea" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Textarea with border">
+### ~Textarea with border
 <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-bordered" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Ghost (no background)">
+### ~Ghost (no background)
 <textarea class="textarea textarea-ghost" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-ghost" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With form control and labels">
+### ~With form control and labels
 <label class="form-control">
   <div class="label">
     <span class="label-text">Your bio</span>
@@ -86,9 +77,8 @@ classnames:
     <span class="label-text-alt">Alt label</span>
   </div>
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="$$form-control">
   <div class="$$label">
     <span class="$$label-text">Your bio</span>
@@ -102,87 +92,64 @@ classnames:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Primary color">
+### ~Primary color
 <textarea class="textarea textarea-primary" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-primary" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Secondary color">
+### ~Secondary color
 <textarea class="textarea textarea-secondary" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-secondary" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accent color">
+### ~Accent color
 <textarea class="textarea textarea-accent" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-accent" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Info color">
+### ~Info color
 <textarea class="textarea textarea-info" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-info" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Success color">
+### ~Success color
 <textarea class="textarea textarea-success" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-success" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Warning color">
+### ~Warning color
 <textarea class="textarea textarea-warning" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-warning" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Error color">
+### ~Error color
 <textarea class="textarea textarea-error" placeholder="Bio"></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea $$textarea-error" placeholder="Bio"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Sizes">
+### ~Sizes
 <div class="flex flex-col gap-4 w-full items-center">
   <textarea placeholder="Bio" class="textarea textarea-bordered textarea-xs w-full max-w-xs" ></textarea>
   <textarea placeholder="Bio" class="textarea textarea-bordered textarea-sm w-full max-w-xs" ></textarea>
@@ -190,9 +157,7 @@ classnames:
   <textarea placeholder="Bio" class="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
 </div>
 
-{#snippet html()}
-
-```html
+```~html
 <!-- xs -->
 <textarea
   placeholder="Bio"
@@ -211,16 +176,10 @@ classnames:
   class="$$textarea $$textarea-bordered $$textarea-lg w-full max-w-xs"></textarea>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Disabled">
+### ~Disabled
 <textarea class="textarea" placeholder="Bio" disabled></textarea>
-{#snippet html()}
 
-```html
+```~html
 <textarea class="$$textarea" placeholder="Bio" disabled></textarea>
 ```
-
-{/snippet}
-</Component>

@@ -12,18 +12,15 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Skeleton">
+### ~Skeleton
 <div class="skeleton w-32 h-32"></div>
-{#snippet html()}
 
-```html
+```~html
 <div class="skeleton h-32 w-32"></div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Skeleton - circle with content">
+### ~Skeleton - circle with content
 <div class="flex flex-col gap-4 w-52">
   <div class="flex gap-4 items-center">
     <div class="skeleton w-16 h-16 rounded-full shrink-0"></div>
@@ -34,9 +31,8 @@ classnames:
   </div>
   <div class="skeleton h-32 w-full"></div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-52 flex-col gap-4">
   <div class="flex items-center gap-4">
     <div class="$$skeleton h-16 w-16 shrink-0 rounded-full"></div>
@@ -49,19 +45,16 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Skeleton - rectangle with content">
+### ~Skeleton - rectangle with content
 <div class="flex flex-col gap-4 w-52">
   <div class="skeleton h-32 w-full"></div>
   <div class="skeleton h-4 w-28"></div>
   <div class="skeleton h-4 w-full"></div>
   <div class="skeleton h-4 w-full"></div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-52 flex-col gap-4">
   <div class="$$skeleton h-32 w-full"></div>
   <div class="$$skeleton h-4 w-28"></div>
@@ -70,5 +63,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

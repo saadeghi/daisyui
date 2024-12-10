@@ -1,12 +1,11 @@
 ---
 title: Button
 desc: Buttons allow the user to take actions or make choices.
-published: true
 layout: components
+showComponentPageTabs: true
 ---
 
 <script>
-  import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   const {
     figure,
     indicator,
@@ -23,8 +22,6 @@ layout: components
     circle: "border-base-content aspect-square w-6 shrink-0 rounded-full border border-dashed",
   }
 </script>
-
-<ComponentPageTabs/>
 
 <div class="grid gap-4 xl:grid-cols-2 lg:gap-10 mb-20 mt-10">
   <figure class={figure}>

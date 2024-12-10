@@ -12,7 +12,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Breadcrumbs">
+### ~Breadcrumbs
 <div class="text-sm breadcrumbs">
   <ul>
     <li>
@@ -24,9 +24,8 @@ classnames:
     <li>Add Document</li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$breadcrumbs text-sm">
   <ul>
     <li><a>Home</a></li>
@@ -36,10 +35,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Breadcrumbs with icons">
+### ~Breadcrumbs with icons
 <div class="text-sm breadcrumbs">
   <ul>
     <li>
@@ -62,9 +59,8 @@ classnames:
     </li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$breadcrumbs text-sm">
   <ul>
     <li>
@@ -119,10 +115,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Breadcrumbs with max-width" desc="If you set max-width or the list gets larger than the container it will scroll">
+### ~Breadcrumbs with max-width
+#### If you set max-width or the list gets larger than the container it will scroll
+
 <div class="max-w-xs text-sm breadcrumbs">
   <ul>
     <li>Long text 1</li>
@@ -132,9 +128,8 @@ classnames:
     <li>Long text 5</li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$breadcrumbs max-w-xs text-sm">
   <ul>
     <li>Long text 1</li>
@@ -146,5 +141,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

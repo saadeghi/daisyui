@@ -19,22 +19,19 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Navbar with title only">
+### ~Navbar with title only
 <div class="navbar bg-base-100 shadow-sm">
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar with title and icon">
+### ~Navbar with title and icon
 <div class="navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
@@ -45,9 +42,8 @@ classnames:
     </button>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -70,10 +66,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar with icon at start and end">
+### ~Navbar with icon at start and end
 <div class="navbar bg-base-100 shadow-sm">
   <div class="flex-none">
     <button class="btn btn-square btn-ghost">
@@ -89,9 +83,8 @@ classnames:
     </button>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-none">
     <button class="$$btn $$btn-square $$btn-ghost">
@@ -129,10 +122,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar with menu and submenu">
+### ~Navbar with menu and submenu
 <div class="navbar bg-base-100 mb-32 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
@@ -154,9 +145,8 @@ classnames:
     </ul>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -178,10 +168,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar with search input and dropdown">
+### ~Navbar with search input and dropdown
 <div class="navbar bg-base-100 mb-32 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
@@ -209,9 +197,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -245,10 +232,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar with icon, indicator and dropdown">
+### ~Navbar with icon, indicator and dropdown
 <div class="navbar bg-base-100 mb-40 shadow-sm">
   <div class="flex-1">
     <button class="btn btn-ghost text-xl">daisyUI</button>
@@ -290,9 +275,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -353,10 +337,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar with dropdown, center logo and icon">
+### ~Navbar with dropdown, center logo and icon
 <div class="navbar bg-base-100 mb-40 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
@@ -385,9 +367,8 @@ classnames:
     </button>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="$$navbar-start">
     <div class="$$dropdown">
@@ -453,10 +434,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="responsive (dropdown menu on small screen, center menu on large screen)" desc="Resize screen to see changes">
+### ~responsive (dropdown menu on small screen, center menu on large screen)
+#### Resize screen to see changes
+
 <div class="navbar bg-base-100 mb-48 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
@@ -496,9 +477,8 @@ classnames:
     <button class="btn">Button</button>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="$$navbar-start">
     <div class="$$dropdown">
@@ -553,10 +533,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar with colors">
+### ~Navbar with colors
 <div class="navbar bg-neutral text-neutral-content">
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
@@ -566,9 +544,8 @@ classnames:
 <div class="navbar bg-primary text-primary-content">
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-neutral text-neutral-content">
   <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
 </div>
@@ -580,5 +557,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

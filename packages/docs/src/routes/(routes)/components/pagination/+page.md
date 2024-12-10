@@ -20,16 +20,15 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Pagination with an active button">
+### ~Pagination with an active button
 <div class="join">
   <button class="join-item btn">1</button>
   <button class="join-item btn btn-active">2</button>
   <button class="join-item btn">3</button>
   <button class="join-item btn">4</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <button class="$$join-item $$btn">1</button>
   <button class="$$join-item $$btn $$btn-active">2</button>
@@ -38,10 +37,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Sizes">
+### ~Sizes
 <div class="flex flex-col gap-2 items-center">
   <div class="join">
     <button class="join-item btn btn-xs">1</button>
@@ -68,9 +65,8 @@ classnames:
     <button class="join-item btn btn-lg">4</button>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <button class="$$join-item $$btn $$btn-xs">1</button>
   <button class="$$join-item $$btn $$btn-xs $$btn-active">2</button>
@@ -97,10 +93,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With a disabled button">
+### ~With a disabled button
 <div class="join">
   <button class="join-item btn">1</button>
   <button class="join-item btn">2</button>
@@ -108,9 +102,8 @@ classnames:
   <button class="join-item btn">99</button>
   <button class="join-item btn">100</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <button class="$$join-item $$btn">1</button>
   <button class="$$join-item $$btn">2</button>
@@ -120,18 +113,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Extra small buttons">
+### ~Extra small buttons
 <div class="join">
   <button class="join-item btn">«</button>
   <button class="join-item btn">Page 22</button>
   <button class="join-item btn">»</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <button class="$$join-item $$btn">«</button>
   <button class="$$join-item $$btn">Page 22</button>
@@ -139,36 +129,30 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Nex/Prev outline buttons with equal width">
+### ~Nex/Prev outline buttons with equal width
 <div class="join grid grid-cols-2">
   <button class="join-item btn btn-outline">Previous page</button>
   <button class="join-item btn btn-outline">Next</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join grid grid-cols-2">
   <button class="$$join-item $$btn $$btn-outline">Previous page</button>
   <button class="$$join-item $$btn $$btn-outline">Next</button>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Using radio inputs">
+### ~Using radio inputs
 <div class="join">
   <input class="join-item btn btn-square" type="radio" name="options" aria-label="1" checked="checked" />
   <input class="join-item btn btn-square" type="radio" name="options" aria-label="2" />
   <input class="join-item btn btn-square" type="radio" name="options" aria-label="3" />
   <input class="join-item btn btn-square" type="radio" name="options" aria-label="4" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <input
     class="$$join-item $$btn $$btn-square"
@@ -182,5 +166,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

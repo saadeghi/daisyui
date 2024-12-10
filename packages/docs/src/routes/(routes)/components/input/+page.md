@@ -41,29 +41,25 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Text input">
+### ~Text input
 <input type="text" placeholder="Type here" class="input w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="text" placeholder="Type here" class="$$input w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Text input with border">
+### ~Text input with border
 <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="text" placeholder="Type here" class="$$input $$input-bordered w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Text input with icon inside" desc="We can use input class for the parent and put anything inside it">
+### ~Text input with icon inside
+#### We can use input class for the parent and put anything inside it
+
 <div class="flex flex-col gap-4">
   <label class="input input-bordered flex items-center gap-2">
     <input type="text" class="grow" placeholder="Search" />
@@ -82,9 +78,8 @@ classnames:
     <input type="password" class="grow" value="password" />
   </label>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <label class="input input-bordered flex items-center gap-2">
   <input type="text" class="grow" placeholder="Search" />
   <svg
@@ -137,10 +132,10 @@ classnames:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Text input with text label inside" desc="We can use input class for the parent and put anything inside it">
+### ~Text input with text label inside
+#### We can use input class for the parent and put anything inside it
+
 <div class="flex flex-col gap-4">
   <label class="input input-bordered flex items-center gap-2">
     Name
@@ -160,9 +155,8 @@ classnames:
     <span class="badge badge-info">Optional</span>
   </label>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <label class="input input-bordered flex items-center gap-2">
   Name
   <input type="text" class="grow" placeholder="Daisy" />
@@ -182,21 +176,16 @@ classnames:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Ghost (no background)">
+### ~Ghost (no background)
 <input type="text" placeholder="Type here" class="input input-ghost w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="text" placeholder="Type here" class="$$input $$input-ghost w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With form-control and labels">
+### ~With form-control and labels
 <label class="form-control w-full max-w-xs">
   <div class="label">
     <span class="label-text">What is your name?</span>
@@ -208,9 +197,8 @@ classnames:
     <span class="label-text-alt">Bottom Right label</span>
   </div>
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="$$form-control w-full max-w-xs">
   <div class="$$label">
     <span class="$$label-text">What is your name?</span>
@@ -224,117 +212,93 @@ classnames:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Primary color">
+### ~Primary color
 <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="Type here"
   class="$$input $$input-bordered $$input-primary w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Secondary color">
+### ~Secondary color
 <input type="text" placeholder="Type here" class="input input-bordered input-secondary w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="Type here"
   class="$$input $$input-bordered $$input-secondary w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accent color">
+### ~Accent color
 <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="Type here"
   class="$$input $$input-bordered $$input-accent w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Info color">
+### ~Info color
 <input type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="Type here"
   class="$$input $$input-bordered $$input-info w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Success color">
+### ~Success color
 <input type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="Type here"
   class="$$input $$input-bordered $$input-success w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Warning color">
+### ~Warning color
 <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="Type here"
   class="$$input $$input-bordered $$input-warning w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Error color">
+### ~Error color
 <input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="Type here"
   class="$$input $$input-bordered $$input-error w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Sizes">
+### ~Sizes
 <div class="flex flex-col gap-4 w-full items-center">
   <input type="text" placeholder="Type here" class="input input-bordered input-xs w-full max-w-xs" />
   <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
   <input type="text" placeholder="Type here" class="input input-bordered input-md w-full max-w-xs" />
   <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <!-- xs -->
 <input
   type="text"
@@ -357,14 +321,11 @@ classnames:
   class="$$input $$input-bordered $$input-lg w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Disabled">
+### ~Disabled
 <input type="text" placeholder="You can't touch this" class="input input-bordered w-full max-w-xs" disabled />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="text"
   placeholder="You can't touch this"
@@ -372,5 +333,3 @@ classnames:
   disabled />
 ```
 
-{/snippet}
-</Component>

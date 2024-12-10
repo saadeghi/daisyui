@@ -37,7 +37,7 @@ classnames:
   <div><Translate text="The <span class=badge>hr</span> tag at the start or end of each item, displays a line to connect items." /></div>
 </div>
 
-<Component title="Timeline with text on both sides and icon">
+### ~Timeline with text on both sides and icon
 <ul class="timeline">
   <li>
     <div class="timeline-start">1984</div>
@@ -83,9 +83,8 @@ classnames:
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start">1984</div>
@@ -178,10 +177,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Timeline with bottom side only">
+### ~Timeline with bottom side only
 <ul class="timeline">
   <li>
     <div class="timeline-middle">
@@ -222,9 +219,8 @@ classnames:
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-middle">
@@ -312,10 +308,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Timeline with top side only">
+### ~Timeline with top side only
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -356,9 +350,8 @@ classnames:
     </div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -446,10 +439,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Timeline with different sides">
+### ~Timeline with different sides
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -490,9 +481,8 @@ classnames:
     </div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -580,10 +570,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Timeline with colorful lines">
+### ~Timeline with colorful lines
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -624,9 +612,8 @@ classnames:
     </div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -714,10 +701,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Timeline without icons">
+### ~Timeline without icons
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -743,9 +728,8 @@ classnames:
     <div class="timeline-start timeline-box">Apple Watch</div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -773,10 +757,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical timeline with text on both sides and icon">
+### ~Vertical timeline with text on both sides and icon
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start">1984</div>
@@ -822,9 +804,8 @@ classnames:
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start">1984</div>
@@ -917,10 +898,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical timeline with bottom side only">
+### ~Vertical timeline with bottom side only
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-middle">
@@ -961,9 +940,8 @@ classnames:
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-middle">
@@ -1051,10 +1029,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical timeline with top side only">
+### ~Vertical timeline with top side only
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1095,9 +1071,8 @@ classnames:
     </div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1185,10 +1160,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical timeline with different sides">
+### ~Vertical timeline with different sides
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1229,9 +1202,8 @@ classnames:
     </div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1319,10 +1291,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical timeline with colorful lines">
+### ~Vertical timeline with colorful lines
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1363,9 +1333,8 @@ classnames:
     </div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1453,10 +1422,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical timeline without icons">
+### ~Vertical timeline without icons
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1482,9 +1449,8 @@ classnames:
     <div class="timeline-start timeline-box">Apple Watch</div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1512,10 +1478,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive: vertical by default, horizontal on large screen">
+### ~Responsive: vertical by default, horizontal on large screen
 <ul class="timeline timeline-vertical lg:timeline-horizontal">
   <li>
     <div class="timeline-start">1984</div>
@@ -1561,9 +1525,8 @@ classnames:
     <div class="timeline-end timeline-box">Apple Watch</div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-vertical lg:$$timeline-horizontal">
   <li>
     <div class="$$timeline-start">1984</div>
@@ -1656,10 +1619,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Timeline with icon snapped to the start">
+### ~Timeline with icon snapped to the start
 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
     <div class="timeline-middle">
@@ -1720,9 +1681,8 @@ classnames:
     </div>
   </li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$timeline $$timeline-snap-icon max-md:$$timeline-compact $$timeline-vertical">
   <li>
     <div class="$$timeline-middle">
@@ -1846,5 +1806,3 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>

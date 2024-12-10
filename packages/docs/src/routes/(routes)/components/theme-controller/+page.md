@@ -23,29 +23,23 @@ browserSupport:
 <Translate text="Theme Controller changes the theme using CSS only. You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh. <br/>Here's a React example to save checkbox state in local storage:" />
 <a href="https://stackblitz.com/edit/react-checkbox-localstorage?file=src%2FApp.js" rel="nofollow, noreferrer" target="_blank" class="link">Stackblitz</a>
 
-<Component title="Theme Controller using a toggle" >
+### ~Theme Controller using a toggle
 <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller"/>
-{#snippet html()}
 
-```html
+```~html
 <input type="checkbox" value="synthwave" class="$$toggle $$theme-controller" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a checkbox">
+### ~Theme Controller using a checkbox
 <input type="checkbox" value="synthwave" bind:checked={checkbox} class="checkbox theme-controller"/>
-{#snippet html()}
 
-```html
+```~html
 <input type="checkbox" value="synthwave" class="$$checkbox $$theme-controller" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a swap">
+### ~Theme Controller using a swap
 <label class="swap swap-rotate">
 
   <!-- this hidden checkbox controls the state -->
@@ -58,9 +52,8 @@ browserSupport:
   <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
 
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="$$swap $$swap-rotate">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" class="$$theme-controller" value="synthwave" />
@@ -85,18 +78,15 @@ browserSupport:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a toggle with text">
+### ~Theme Controller using a toggle with text
 <label class="flex cursor-pointer gap-2">
   <span class="label-text">Default</span>
   <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller"/>
   <span class="label-text">Synthwave</span>
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="flex cursor-pointer gap-2">
   <span class="$$label-text">Current</span>
   <input type="checkbox" value="synthwave" class="$$toggle $$theme-controller" />
@@ -104,18 +94,15 @@ browserSupport:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a toggle with icons">
+### ~Theme Controller using a toggle with icons
 <label class="flex cursor-pointer gap-2">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
   <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller"/>
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="flex cursor-pointer gap-2">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -147,18 +134,15 @@ browserSupport:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a toggle with icons inside">
+### ~Theme Controller using a toggle with icons inside
 <label class="cursor-pointer grid place-items-center">
   <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"/>
   <svg class="col-start-1 row-start-1 stroke-base-100 fill-base-100 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
   <svg class="col-start-2 row-start-1 stroke-base-100 fill-base-100 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="grid cursor-pointer place-items-center">
   <input
     type="checkbox"
@@ -195,24 +179,19 @@ browserSupport:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a toggle with custom colors">
+### ~Theme Controller using a toggle with custom colors
 <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:var(--color-sky-500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:var(--color-blue-900)] row-start-1 col-start-1 col-span-2"/>
-{#snippet html()}
 
-```html
+```~html
 <input
   type="checkbox"
   value="synthwave"
   class="$$toggle $$theme-controller col-span-2 col-start-1 row-start-1 border-sky-400 bg-amber-300 [--tglbg:var(--color-sky-500)] checked:border-blue-800 checked:bg-blue-300 checked:[--tglbg:var(--color-blue-900)]" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a radio input">
+### ~Theme Controller using a radio input
 <div class="flex flex-col">
   <div class="form-control">
     <label class="label cursor-pointer gap-4">
@@ -245,9 +224,8 @@ browserSupport:
     </label>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$form-control">
   <label class="label cursor-pointer gap-4">
     <span class="$$label-text">Default</span>
@@ -280,10 +258,8 @@ browserSupport:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a radio button">
+### ~Theme Controller using a radio button
 <div class="join join-vertical">
   <input bind:group={radio} type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Default" value="default"/>
   <input bind:group={radio} type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Retro" value="retro"/>
@@ -291,9 +267,8 @@ browserSupport:
   <input bind:group={radio} type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Valentine" value="valentine"/>
   <input bind:group={radio} type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Aqua" value="aqua"/>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join $$join-vertical">
   <input
     type="radio"
@@ -328,10 +303,8 @@ browserSupport:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Theme Controller using a dropdown">
+### ~Theme Controller using a dropdown
 <div class="dropdown mb-72">
   <div tabindex="0" role="button" class="btn m-1">
     Theme
@@ -345,9 +318,8 @@ browserSupport:
     <li><input bind:group={radio} type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block justify-start btn-ghost" aria-label="Aqua" value="aqua"/></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown mb-72">
   <div tabindex="0" role="button" class="$$btn m-1">
     Theme
@@ -405,5 +377,3 @@ browserSupport:
 </div>
 ```
 
-{/snippet}
-</Component>

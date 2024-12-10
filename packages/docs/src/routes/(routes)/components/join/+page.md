@@ -19,15 +19,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Join">
+### ~Join
 <div class="join">
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <button class="$$btn $$join-item">Button</button>
   <button class="$$btn $$join-item">Button</button>
@@ -35,18 +34,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Group items vertically">
+### ~Group items vertically
 <div class="join join-vertical">
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join $$join-vertical">
   <button class="$$btn $$join-item">Button</button>
   <button class="$$btn $$join-item">Button</button>
@@ -54,18 +50,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive: it's vertical on small screen and horizontal on large screen">
+### ~Responsive: it's vertical on small screen and horizontal on large screen
 <div class="join join-vertical lg:join-horizontal">
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
   <button class="btn join-item">Button</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join $$join-vertical lg:$$join-horizontal">
   <button class="$$btn $$join-item">Button</button>
   <button class="$$btn $$join-item">Button</button>
@@ -73,10 +66,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With extra elements in the group" desc="Even if join-item is not a direct child of the group, it still gets the style">
+### ~With extra elements in the group
+#### Even if join-item is not a direct child of the group, it still gets the style
+
 <div class="join">
   <div>
     <div>
@@ -94,9 +87,8 @@ classnames:
     <button class="btn join-item">Search</button>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <div>
     <div>
@@ -116,35 +108,29 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Custom border radius">
+### ~Custom border radius
 <div class="join">
   <input class="input input-bordered join-item w-36 lg:w-52" placeholder="Email"/>
   <button class="btn join-item rounded-r-full">Subscribe</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <input class="$$input $$input-bordered $$join-item" placeholder="Email" />
   <button class="$$btn $$join-item rounded-r-full">Subscribe</button>
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Join radio inputs with btn style">
+### ~Join radio inputs with btn style
 <div class="join">
   <input class="join-item btn" type="radio" name="options" aria-label="Radio 1" />
   <input class="join-item btn" type="radio" name="options" aria-label="Radio 2" />
   <input class="join-item btn" type="radio" name="options" aria-label="Radio 3" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$join">
   <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 1" />
   <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 2" />
@@ -152,5 +138,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

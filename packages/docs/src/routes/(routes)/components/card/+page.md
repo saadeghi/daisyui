@@ -41,7 +41,7 @@ classnames:
 </script>
 
 
-<Component title="Card">
+### ~Card
 <div class="card w-96 bg-base-100 shadow-xl">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
@@ -52,9 +52,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure>
     <img
@@ -71,10 +70,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Compact card (less padding for `card-body`)">
+### ~Compact card (less padding for `card-body`)
 <div class="card w-96 bg-base-100 card-compact shadow-xl">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
@@ -85,9 +82,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card $$card-compact bg-base-100 w-96 shadow-xl">
   <figure>
     <img
@@ -104,10 +100,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with badge">
+### ~Card with badge
 <div class="card w-96 bg-base-100 shadow-xl">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
@@ -122,9 +116,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure>
     <img
@@ -145,10 +138,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with bottom image">
+### ~Card with bottom image
 <div class="card w-96 bg-base-100 shadow-xl">
   <div class="card-body">
     <h2 class="card-title">Shoes!</h2>
@@ -156,9 +147,8 @@ classnames:
   </div>
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
@@ -172,10 +162,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with centered content and paddings">
+### ~Card with centered content and paddings
 <div class="card w-96 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
     <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-xl" />
@@ -188,9 +176,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure class="px-10 pt-10">
     <img
@@ -208,10 +195,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with image overlay">
+### ~Card with image overlay
 <div class="card w-96 bg-base-100 shadow-xl image-full">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
@@ -222,9 +207,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-base-100 image-full w-96 shadow-xl">
   <figure>
     <img
@@ -241,10 +225,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with no image">
+### ~Card with no image
 <div class="card w-96 bg-base-100 shadow-xl">
   <div class="card-body">
     <h2 class="card-title">Card title!</h2>
@@ -254,9 +236,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <div class="$$card-body">
     <h2 class="$$card-title">Card title!</h2>
@@ -268,10 +249,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with custom color">
+### ~Card with custom color
 <div class="card w-96 bg-primary text-primary-content">
   <div class="card-body">
     <h2 class="card-title">Card title!</h2>
@@ -281,9 +260,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-primary text-primary-content w-96">
   <div class="$$card-body">
     <h2 class="$$card-title">Card title!</h2>
@@ -295,10 +273,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Centered card with neutral color">
+### ~Centered card with neutral color
 <div class="card w-96 bg-neutral text-neutral-content">
   <div class="card-body items-center text-center">
     <h2 class="card-title">Cookies!</h2>
@@ -309,9 +285,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-neutral text-neutral-content w-96">
   <div class="$$card-body items-center text-center">
     <h2 class="$$card-title">Cookies!</h2>
@@ -324,10 +299,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with action on top">
+### ~Card with action on top
 <div class="card w-96 bg-base-100 shadow-xl">
   <div class="card-body">
     <div class="justify-end card-actions">
@@ -338,9 +311,8 @@ classnames:
     <p>We are using cookies for no reason.</p>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <div class="$$card-body">
     <div class="$$card-actions justify-end">
@@ -364,10 +336,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card glass" bg="https://img.daisyui.com/images/stock/photo-1481026469463-66327c86e544.webp">
+### ~Card glass
 <div class="card w-96 glass">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="car!"/></figure>
   <div class="card-body">
@@ -378,9 +348,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card glass w-96">
   <figure>
     <img
@@ -397,10 +366,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Card with image on side">
+### ~Card with image on side
 <div class="card card-side bg-base-100 shadow-xl">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" alt="Movie"/></figure>
   <div class="card-body">
@@ -411,9 +378,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card $$card-side bg-base-100 shadow-xl">
   <figure>
     <img
@@ -430,10 +396,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive card (vertical on small screen, horizontal on large screen)">
+### ~Responsive card (vertical on small screen, horizontal on large screen)
 <div class="card lg:card-side bg-base-100 shadow-xl">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album"/></figure>
   <div class="card-body">
@@ -444,9 +408,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$card lg:$$card-side bg-base-100 shadow-xl">
   <figure>
     <img
@@ -463,5 +426,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

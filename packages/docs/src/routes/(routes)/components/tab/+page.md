@@ -45,15 +45,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Tabs">
+### ~Tabs
 <div role="tablist" class="tabs">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div role="tablist" class="$$tabs">
   <a role="tab" class="$$tab">Tab 1</a>
   <a role="tab" class="$$tab $$tab-active">Tab 2</a>
@@ -61,18 +60,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Bordered">
+### ~Bordered
 <div role="tablist" class="tabs tabs-bordered">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div role="tablist" class="$$tabs $$tabs-bordered">
   <a role="tab" class="$$tab">Tab 1</a>
   <a role="tab" class="$$tab $$tab-active">Tab 2</a>
@@ -80,18 +76,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Lifted">
+### ~Lifted
 <div role="tablist" class="tabs tabs-lift">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div role="tablist" class="$$tabs $$tabs-lift">
   <a role="tab" class="$$tab">Tab 1</a>
   <a role="tab" class="$$tab $$tab-active">Tab 2</a>
@@ -99,18 +92,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Boxed">
+### ~Boxed
 <div role="tablist" class="tabs tabs-boxed">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div role="tablist" class="$$tabs $$tabs-boxed">
   <a role="tab" class="$$tab">Tab 1</a>
   <a role="tab" class="$$tab $$tab-active">Tab 2</a>
@@ -118,10 +108,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Sizes">
+### ~Sizes
 <div class="flex flex-col items-center gap-6">
   <div role="tablist" class="tabs tabs-lift tabs-xs">
     <button role="tab" class="tab">Tiny</button>
@@ -144,9 +132,8 @@ classnames:
     <button role="tab" class="tab">Large</button>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <!-- xs -->
 <div role="tablist" class="$$tabs $$tabs-lift $$tabs-xs">
   <a role="tab" class="$$tab">Tiny</a>
@@ -173,10 +160,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="radio tab bordered + tab content">
+### ~radio tab bordered + tab content
 <div role="tablist" class="tabs tabs-bordered w-full my-10 lg:mx-10">
   <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 1" />
   <div role="tabpanel" class="tab-content p-10">Tab content 1</div>
@@ -188,9 +173,7 @@ classnames:
   <div role="tabpanel" class="tab-content p-10">Tab content 3</div>
 </div>
 
-{#snippet html()}
-
-```html
+```~html
 <div role="tablist" class="$$tabs $$tabs-bordered">
   <input type="radio" name="my_tabs_1" role="tab" class="$$tab" aria-label="Tab 1" />
   <div role="tabpanel" class="$$tab-content p-10">Tab content 1</div>
@@ -209,10 +192,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="radio tab lift + tab content">
+### ~radio tab lift + tab content
 <div role="tablist" class="tabs tabs-lift w-full my-10 lg:mx-10">
   <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
   <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6 pe-32">Tab content 1</div>
@@ -224,9 +205,7 @@ classnames:
   <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6 pe-32">Tab content 3</div>
 </div>
 
-{#snippet html()}
-
-```html
+```~html
 <div role="tablist" class="$$tabs $$tabs-lift">
   <input type="radio" name="my_tabs_2" role="tab" class="$$tab" aria-label="Tab 1" />
   <div role="tabpanel" class="$$tab-content bg-base-100 border-base-300 rounded-box p-6">
@@ -251,18 +230,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Tabs with custom color">
+### ~Tabs with custom color
 <div role="tablist" class="tabs tabs-lift">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary">Tab 2</button>
   <button role="tab" class="tab">Tab 3</button>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div role="tablist" class="$$tabs $$tabs-lift">
   <a role="tab" class="$$tab">Tab 1</a>
   <a
@@ -274,5 +250,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

@@ -41,7 +41,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="chat-start and chat-end">
+### ~chat-start and chat-end
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
@@ -50,9 +50,8 @@ classnames:
     <div class="chat-bubble">You underestimate my power!</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$chat $$chat-start">
   <div class="$$chat-bubble">
     It's over Anakin,
@@ -65,10 +64,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Chat with image">
+### ~Chat with image
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-image avatar">
@@ -95,9 +92,8 @@ classnames:
     <div class="chat-bubble">Not leave it in Darkness</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$chat $$chat-start">
   <div class="$$chat-image $$avatar">
     <div class="w-10 rounded-full">
@@ -130,10 +126,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Chat with image, header and footer">
+### ~Chat with image, header and footer
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-image avatar">
@@ -166,9 +160,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$chat $$chat-start">
   <div class="$$chat-image avatar">
     <div class="w-10 rounded-full">
@@ -201,10 +194,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Chat with header and footer">
+### ~Chat with header and footer
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-header">
@@ -227,9 +218,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$chat $$chat-start">
   <div class="$$chat-header">
     Obi-Wan Kenobi
@@ -248,10 +238,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Chat Bubble with colors">
+### ~Chat Bubble with colors
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-bubble chat-bubble-primary">What kind of nonsense is this</div>
@@ -275,9 +263,8 @@ classnames:
     <div class="chat-bubble chat-bubble-error">It's never happened before.</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$chat $$chat-start">
   <div class="$$chat-bubble $$chat-bubble-primary">What kind of nonsense is this</div>
 </div>
@@ -305,5 +292,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

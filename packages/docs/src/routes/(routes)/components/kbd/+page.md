@@ -23,56 +23,47 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Kbd">
+### ~Kbd
 <kbd class="kbd">A</kbd>
-{#snippet html()}
 
-```html
+```~html
 <kbd class="$$kbd">A</kbd>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Kbd sizes">
+### ~Kbd sizes
 <kbd class="kbd kbd-lg">Shift</kbd>
 <kbd class="kbd kbd-md">Shift</kbd>
 <kbd class="kbd kbd-sm">Shift</kbd>
 <kbd class="kbd kbd-xs">Shift</kbd>
-{#snippet html()}
 
-```html
+```~html
 <kbd class="$$kbd $$kbd-lg">Shift</kbd>
 <kbd class="$$kbd $$kbd-md">Shift</kbd>
 <kbd class="$$kbd $$kbd-sm">Shift</kbd>
 <kbd class="$$kbd $$kbd-xs">Shift</kbd>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="In text">
-Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.
-{#snippet html()}
+### ~In text
 
-```html
+<span>Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.</span>
+
+```~html
 Press
 <kbd class="$$kbd $$kbd-sm">F</kbd>
 to pay respects.
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Key combination">
+### ~Key combination
 <kbd class="kbd">ctrl</kbd>
 +
 <kbd class="kbd">shift</kbd>
 +
 <kbd class="kbd">del</kbd>
-{#snippet html()}
 
-```html
+```~html
 <kbd class="$$kbd">ctrl</kbd>
 +
 <kbd class="$$kbd">shift</kbd>
@@ -80,29 +71,24 @@ to pay respects.
 <kbd class="$$kbd">del</kbd>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Function Keys">
+### ~Function Keys
 <kbd class="kbd">⌘</kbd>
 <kbd class="kbd">⌥</kbd>
 <kbd class="kbd">⇧</kbd>
 <kbd class="kbd">⌃</kbd>
-{#snippet html()}
 
-```html
+```~html
 <kbd class="$$kbd">⌘</kbd>
 <kbd class="$$kbd">⌥</kbd>
 <kbd class="$$kbd">⇧</kbd>
 <kbd class="$$kbd">⌃</kbd>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="A full keyboard">
+### ~A full keyboard
 <div class="overflow-x-auto">
-  <div class="flex justify-center gap-1 w-full">
+  <div class="flex justify-center gap-1 w-full mb-1">
     <kbd class="kbd">q</kbd>
     <kbd class="kbd">w</kbd>
     <kbd class="kbd">e</kbd>
@@ -114,7 +100,7 @@ to pay respects.
     <kbd class="kbd">o</kbd>
     <kbd class="kbd">p</kbd>
   </div>
-  <div class="flex justify-center gap-1 w-full">
+  <div class="flex justify-center gap-1 w-full mb-1">
     <kbd class="kbd">a</kbd>
     <kbd class="kbd">s</kbd>
     <kbd class="kbd">d</kbd>
@@ -125,7 +111,7 @@ to pay respects.
     <kbd class="kbd">k</kbd>
     <kbd class="kbd">l</kbd>
   </div>
-  <div class="flex justify-center gap-1 w-full">
+  <div class="flex justify-center gap-1 w-full mb-1">
     <kbd class="kbd">z</kbd>
     <kbd class="kbd">x</kbd>
     <kbd class="kbd">c</kbd>
@@ -136,9 +122,8 @@ to pay respects.
     <kbd class="kbd">/</kbd>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="my-1 flex w-full justify-center gap-1">
   <kbd class="$$kbd">q</kbd>
   <kbd class="$$kbd">w</kbd>
@@ -174,10 +159,8 @@ to pay respects.
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Arrow Keys">
+### ~Arrow Keys
 <div class="flex justify-center w-full">
   <kbd class="kbd">▲</kbd>
 </div>
@@ -188,9 +171,8 @@ to pay respects.
 <div class="flex justify-center w-full">
   <kbd class="kbd">▼</kbd>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex w-full justify-center">
   <kbd class="$$kbd">▲</kbd>
 </div>
@@ -202,6 +184,3 @@ to pay respects.
   <kbd class="$$kbd">▼</kbd>
 </div>
 ```
-
-{/snippet}
-</Component>

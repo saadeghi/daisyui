@@ -36,15 +36,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Loading spinner">
+### ~Loading spinner
 <span class="loading loading-spinner loading-xs"></span>
 <span class="loading loading-spinner loading-sm"></span>
 <span class="loading loading-spinner loading-md"></span>
 <span class="loading loading-spinner loading-lg"></span>
 <span class="loading loading-spinner loading-xl"></span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$loading $$loading-spinner $$loading-xs"></span>
 <span class="$$loading $$loading-spinner $$loading-sm"></span>
 <span class="$$loading $$loading-spinner $$loading-md"></span>
@@ -52,95 +51,78 @@ classnames:
 <span class="$$loading $$loading-spinner $$loading-xl"></span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Loading dots">
+### ~Loading dots
 <span class="loading loading-dots loading-xs"></span>
 <span class="loading loading-dots loading-sm"></span>
 <span class="loading loading-dots loading-md"></span>
 <span class="loading loading-dots loading-lg"></span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$loading $$loading-dots $$loading-xs"></span>
 <span class="$$loading $$loading-dots $$loading-sm"></span>
 <span class="$$loading $$loading-dots $$loading-md"></span>
 <span class="$$loading $$loading-dots $$loading-lg"></span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Loading ring">
+### ~Loading ring
 <span class="loading loading-ring loading-xs"></span>
 <span class="loading loading-ring loading-sm"></span>
 <span class="loading loading-ring loading-md"></span>
 <span class="loading loading-ring loading-lg"></span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$loading $$loading-ring $$loading-xs"></span>
 <span class="$$loading $$loading-ring $$loading-sm"></span>
 <span class="$$loading $$loading-ring $$loading-md"></span>
 <span class="$$loading $$loading-ring $$loading-lg"></span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Loading ball">
+### ~Loading ball
 <span class="loading loading-ball loading-xs"></span>
 <span class="loading loading-ball loading-sm"></span>
 <span class="loading loading-ball loading-md"></span>
 <span class="loading loading-ball loading-lg"></span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$loading $$loading-ball $$loading-xs"></span>
 <span class="$$loading $$loading-ball $$loading-sm"></span>
 <span class="$$loading $$loading-ball $$loading-md"></span>
 <span class="$$loading $$loading-ball $$loading-lg"></span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Loading bars">
+### ~Loading bars
 <span class="loading loading-bars loading-xs"></span>
 <span class="loading loading-bars loading-sm"></span>
 <span class="loading loading-bars loading-md"></span>
 <span class="loading loading-bars loading-lg"></span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$loading $$loading-bars $$loading-xs"></span>
 <span class="$$loading $$loading-bars $$loading-sm"></span>
 <span class="$$loading $$loading-bars $$loading-md"></span>
 <span class="$$loading $$loading-bars $$loading-lg"></span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Loading infinity">
+### ~Loading infinity
 <span class="loading loading-infinity loading-xs"></span>
 <span class="loading loading-infinity loading-sm"></span>
 <span class="loading loading-infinity loading-md"></span>
 <span class="loading loading-infinity loading-lg"></span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$loading $$loading-infinity $$loading-xs"></span>
 <span class="$$loading $$loading-infinity $$loading-sm"></span>
 <span class="$$loading $$loading-infinity $$loading-md"></span>
 <span class="$$loading $$loading-infinity $$loading-lg"></span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Loading with colors">
+### ~Loading with colors
 <span class="loading loading-spinner text-primary"></span>
 <span class="loading loading-spinner text-secondary"></span>
 <span class="loading loading-spinner text-accent"></span>
@@ -149,9 +131,8 @@ classnames:
 <span class="loading loading-spinner text-success"></span>
 <span class="loading loading-spinner text-warning"></span>
 <span class="loading loading-spinner text-error"></span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$loading $$loading-spinner text-primary"></span>
 <span class="$$loading $$loading-spinner text-secondary"></span>
 <span class="$$loading $$loading-spinner text-accent"></span>
@@ -162,5 +143,3 @@ classnames:
 <span class="$$loading $$loading-spinner text-error"></span>
 ```
 
-{/snippet}
-</Component>

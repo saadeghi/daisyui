@@ -30,65 +30,48 @@ classnames:
 
 <Translate text="you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99." />
 
-<Component title="Countdown">
+### ~Countdown
 <span class="countdown">
   <span style="--value:{counter};"></span>
 </span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$countdown">
   <span style="--value:59;"></span>
 </span>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <span class="$$countdown">
   <span style={{"--value":59}}></span>
 </span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Large text">
+### ~Large text
 <span class="countdown font-mono text-6xl">
   <span style="--value:{counter};"></span>
 </span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$countdown font-mono text-6xl">
   <span style="--value:59;"></span>
 </span>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <span class="$$countdown font-mono text-6xl">
   <span style={{"--value":59}}></span>
 </span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Clock countdown">
+### ~Clock countdown
 <span class="font-mono text-2xl countdown">
   <span style="--value:10;"></span>h
   <span style="--value:24;"></span>m
   <span style="--value:{counter};"></span>s
 </span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$countdown font-mono text-2xl">
   <span style="--value:10;"></span>
   h
@@ -98,12 +81,7 @@ classnames:
   s
 </span>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>h
   <span style={{"--value":24}}></span>m
@@ -111,18 +89,15 @@ classnames:
 </span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Clock countdown with colons">
+### ~Clock countdown with colons
 <span class="font-mono text-2xl countdown">
   <span style="--value:10;"></span>:
   <span style="--value:24;"></span>:
   <span style="--value:{counter};"></span>
 </span>
-{#snippet html()}
 
-```html
+```~html
 <span class="$$countdown font-mono text-2xl">
   <span style="--value:10;"></span>
   :
@@ -131,12 +106,7 @@ classnames:
   <span style="--value:59;"></span>
 </span>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>:
   <span style={{"--value":24}}></span>:
@@ -144,10 +114,8 @@ classnames:
 </span>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Large text with labels">
+### ~Large text with labels
 <div class="flex gap-5">
   <div>
     <span class="font-mono text-4xl countdown">
@@ -174,9 +142,8 @@ classnames:
     sec
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="flex gap-5">
   <div>
     <span class="$$countdown font-mono text-4xl">
@@ -204,12 +171,7 @@ classnames:
   </div>
 </div>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <div class="flex gap-5">
   <div>
     <span class="$$countdown font-mono text-4xl">
@@ -238,10 +200,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Large text with labels under">
+### ~Large text with labels under
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="font-mono text-5xl countdown">
@@ -268,9 +228,8 @@ classnames:
     sec
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
@@ -298,12 +257,7 @@ classnames:
   </div>
 </div>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
@@ -332,10 +286,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="In boxes">
+### ~In boxes
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="font-mono text-5xl countdown">
@@ -362,9 +314,8 @@ classnames:
     sec
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
   <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
     <span class="$$countdown font-mono text-5xl">
@@ -392,12 +343,7 @@ classnames:
   </div>
 </div>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
@@ -426,5 +372,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

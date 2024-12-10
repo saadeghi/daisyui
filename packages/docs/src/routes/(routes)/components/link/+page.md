@@ -32,26 +32,22 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Link">
+### ~Link
 <button class="link">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Link">
+### ~Link
 <p>Tailwind CSS resets the style of links by default.
   <br/>
   Add "link" class to make it look like a
   <button class="link">normal link</button> again.
 </p>
-{#snippet html()}
 
-```html
+```~html
 <p>
   Tailwind CSS resets the style of links by default.
   <br />
@@ -61,104 +57,75 @@ classnames:
 </p>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Primary color">
+### ~Primary color
 <button class="link link-primary">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-primary">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Secondary color">
+### ~Secondary color
 <button class="link link-secondary">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-secondary">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accent color">
+### ~Accent color
 <button class="link link-accent">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-accent">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Neutral color">
+### ~Neutral color
 <button class="link link-neutral">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-neutral">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Success color">
+### ~Success color
 <button class="link link-success">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-success">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Info color">
+### ~Info color
 <button class="link link-info">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-info">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Warning color">
+### ~Warning color
 <button class="link link-warning">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-warning">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Error color">
+### ~Error color
 <button class="link link-error">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-error">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Show underline only on hover">
+### ~Show underline only on hover
 <button class="link link-hover">I'm a simple link</button>
-{#snippet html()}
 
-```html
+```~html
 <a class="$$link $$link-hover">I'm a simple link</a>
 ```
 
-{/snippet}
-</Component>

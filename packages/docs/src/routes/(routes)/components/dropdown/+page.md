@@ -37,7 +37,8 @@ classnames:
 
 ### Method 1: using details and summary tags
 
-<Component title="Dropdown menu using <details> tag" desc="Stays open until gets clicked again. Or you can close it using JS by removing the `open` attribute">
+### ~
+tag" desc="Stays open until gets clicked again. Or you can close it using JS by removing the `open` attribute">
 <details class="dropdown mb-32">
   <summary class="m-1 btn">open or close</summary>
   <ul class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -45,9 +46,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </details>
-{#snippet html()}
 
-```html
+```~html
 <details class="$$dropdown">
   <summary class="btn m-1">open or close</summary>
   <ul class="$$menu $$dropdown-content bg-base-100 $$rounded-box z-1 w-52 p-2 shadow">
@@ -57,8 +57,6 @@ classnames:
 </details>
 ```
 
-{/snippet}
-</Component>
 
 ### Method 2: Using CSS focus
 
@@ -69,7 +67,7 @@ classnames:
   </div>
 </div>
 
-<Component title="Dropdown menu">
+### ~Dropdown menu
 <div>
   <div class="text-sm mb-4 text-center">Click outside to close</div>
   <div class="dropdown mb-32">
@@ -80,9 +78,8 @@ classnames:
     </ul>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -92,12 +89,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
 ### Positions
 
-<Component title="Dropdown / aligns to end">
+### ~Dropdown / aligns to end
 <div class="dropdown dropdown-end mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -105,9 +100,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -117,10 +111,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown top">
+### ~Dropdown top
 <div class="dropdown dropdown-top mt-32">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -128,9 +120,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-top">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -140,10 +131,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown top / aligns to end">
+### ~Dropdown top / aligns to end
 <div class="dropdown dropdown-top dropdown-end mt-32">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -151,9 +140,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-top $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -163,10 +151,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown bottom">
+### ~Dropdown bottom
 <div class="dropdown dropdown-bottom mb-32">
   <div tabindex="0" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -174,9 +160,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-bottom">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -186,10 +171,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown bottom / aligns to end">
+### ~Dropdown bottom / aligns to end
 <div class="dropdown dropdown-bottom dropdown-end mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -197,9 +180,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-bottom $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -209,10 +191,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown left">
+### ~Dropdown left
 <div class="dropdown dropdown-left mb-16">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -220,9 +200,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-left">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -232,10 +211,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown left / aligns to end">
+### ~Dropdown left / aligns to end
 <div class="dropdown dropdown-left dropdown-end mt-16">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -243,9 +220,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-left $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -255,10 +231,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown right">
+### ~Dropdown right
 <div class="dropdown dropdown-right mb-16">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -266,9 +240,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-right">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -278,10 +251,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown right / aligns to end">
+### ~Dropdown right / aligns to end
 <div class="dropdown dropdown-right dropdown-end mt-16">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -289,9 +260,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-right $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -301,12 +271,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
 ### Open on hover
 
-<Component title="Dropdown on hover">
+### ~Dropdown on hover
 <div class="dropdown dropdown-hover mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Hover</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -314,9 +282,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-hover">
   <div tabindex="0" role="button" class="$$btn m-1">Hover</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -326,12 +293,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
 ### Force open
 
-<Component title="Force open">
+### ~Force open
 <div class="dropdown dropdown-open mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Button</div>
   <ul tabindex="0" class="p-2 shadow menu dropdown-content z-1 bg-base-100 rounded-box w-52">
@@ -339,9 +304,8 @@ classnames:
     <li><button>Item 2</button></li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown $$dropdown-open">
   <div tabindex="0" role="button" class="$$btn m-1">Button</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -351,12 +315,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
 ### More examples
 
-<Component title="Card as dropdown">
+### ~Card as dropdown
 <div class="dropdown mb-32">
   <div tabindex="0" role="button" class="m-1 btn">Click</div>
   <div tabindex="0" class="w-64 p-2 shadow card card-compact dropdown-content z-1 bg-primary text-primary-content">
@@ -366,9 +328,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$dropdown">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <div
@@ -382,10 +343,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dropdown in navbar">
+### ~Dropdown in navbar
 <div class="navbar mb-40 bg-base-300 rounded-box w-full">
   <div class="flex-1 px-2 lg:flex-none">
     <button class="text-lg font-bold">daisyUI</button>
@@ -403,9 +362,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$navbar bg-base-300 rounded-box">
   <div class="flex-1 px-2 lg:flex-none">
     <a class="text-lg font-bold">daisyUI</a>
@@ -427,10 +385,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Helper dropdown">
+### ~Helper dropdown
 <div class="mb-28 mt-6 flex gap-1 items-center">
   A normal text and a helper dropdown
   <div class="dropdown dropdown-end">
@@ -445,9 +401,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 A normal text and a helper dropdown
 <div class="$$dropdown $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn $$btn-circle $$btn-ghost $$btn-xs text-info">
@@ -475,5 +430,3 @@ A normal text and a helper dropdown
 </div>
 ```
 
-{/snippet}
-</Component>

@@ -38,124 +38,97 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Radio">
+### ~Radio
 <input type="radio" name="radio-1" class="radio" checked="checked" />
 <input type="radio" name="radio-1" class="radio" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-1" class="$$radio" checked="checked" />
 <input type="radio" name="radio-1" class="$$radio" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Primary color">
+### ~Primary color
 <input type="radio" name="radio-2" class="radio radio-primary" checked="checked" />
 <input type="radio" name="radio-2" class="radio radio-primary" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-2" class="$$radio $$radio-primary" checked="checked" />
 <input type="radio" name="radio-2" class="$$radio $$radio-primary" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Secondary color">
+### ~Secondary color
 <input type="radio" name="radio-3" class="radio radio-secondary" checked="checked" />
 <input type="radio" name="radio-3" class="radio radio-secondary" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-3" class="$$radio $$radio-secondary" checked="checked" />
 <input type="radio" name="radio-3" class="$$radio $$radio-secondary" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accent color">
+### ~Accent color
 <input type="radio" name="radio-4" class="radio radio-accent" checked="checked" />
 <input type="radio" name="radio-4" class="radio radio-accent" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-4" class="$$radio $$radio-accent" checked="checked" />
 <input type="radio" name="radio-4" class="$$radio $$radio-accent" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Success color">
+### ~Success color
 <input type="radio" name="radio-5" class="radio radio-success" checked="checked" />
 <input type="radio" name="radio-5" class="radio radio-success" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-5" class="$$radio $$radio-success" checked="checked" />
 <input type="radio" name="radio-5" class="$$radio $$radio-success" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Warning color">
+### ~Warning color
 <input type="radio" name="radio-6" class="radio radio-warning" checked="checked" />
 <input type="radio" name="radio-6" class="radio radio-warning" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-6" class="$$radio $$radio-warning" checked="checked" />
 <input type="radio" name="radio-6" class="$$radio $$radio-warning" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Info color">
+### ~Info color
 <input type="radio" name="radio-7" class="radio radio-info" checked="checked" />
 <input type="radio" name="radio-7" class="radio radio-info" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-7" class="$$radio $$radio-info" checked="checked" />
 <input type="radio" name="radio-7" class="$$radio $$radio-info" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Error color">
+### ~Error color
 <input type="radio" name="radio-8" class="radio radio-error" checked="checked" />
 <input type="radio" name="radio-8" class="radio radio-error" />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-8" class="$$radio $$radio-error" checked="checked" />
 <input type="radio" name="radio-8" class="$$radio $$radio-error" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Disabled">
+### ~Disabled
 <input type="radio" name="radio-9" class="radio" disabled checked="checked" />
 <input type="radio" name="radio-9" class="radio" disabled />
-{#snippet html()}
 
-```html
+```~html
 <input type="radio" name="radio-9" class="$$radio" disabled checked="checked" />
 <input type="radio" name="radio-9" class="$$radio" disabled />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With label and form-control and custom colors!">
+### ~With label and form-control and custom colors!
 <div class="flex flex-col">
   <div class="form-control w-52">
     <label class="cursor-pointer label">
@@ -170,9 +143,8 @@ classnames:
     </label>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Red pill</span>
@@ -187,5 +159,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

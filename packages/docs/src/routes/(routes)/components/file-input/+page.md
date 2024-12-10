@@ -41,40 +41,31 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="File input">
+### ~File input
 <input type="file" class="file-input w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="file" class="$$file-input w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="File input with border">
+### ~File input with border
 <input type="file" class="file-input file-input-bordered w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="file" class="$$file-input $$file-input-bordered w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Ghost (no background)">
+### ~Ghost (no background)
 <input type="file" class="file-input file-input-ghost w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="file" class="$$file-input $$file-input-ghost w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With form-control and labels">
+### ~With form-control and labels
 <label class="form-control w-full max-w-xs">
   <div class="label">
     <span class="label-text">Pick a file</span>
@@ -86,9 +77,8 @@ classnames:
     <span class="label-text-alt">Alt label</span>
   </div>
 </label>
-{#snippet html()}
 
-```html
+```~html
 <label class="$$form-control w-full max-w-xs">
   <div class="$$label">
     <span class="$$label-text">Pick a file</span>
@@ -102,104 +92,80 @@ classnames:
 </label>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Primary color">
+### ~Primary color
 <input type="file" class="file-input file-input-bordered file-input-primary w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="file"
   class="$$file-input $$file-input-bordered $$file-input-primary w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Secondary color">
+### ~Secondary color
 <input type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="file"
   class="$$file-input $$file-input-bordered $$file-input-secondary w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Accent color">
+### ~Accent color
 <input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="file" class="$$file-input $$file-input-bordered $$file-input-accent w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Info color">
+### ~Info color
 <input type="file" class="file-input file-input-bordered file-input-info w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="file" class="$$file-input $$file-input-bordered $$file-input-info w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Success color">
+### ~Success color
 <input type="file" class="file-input file-input-bordered file-input-success w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="file"
   class="$$file-input $$file-input-bordered $$file-input-success w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Warning color">
+### ~Warning color
 <input type="file" class="file-input file-input-bordered file-input-warning w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="file"
   class="$$file-input $$file-input-bordered $$file-input-warning w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Error color">
+### ~Error color
 <input type="file" class="file-input file-input-bordered file-input-error w-full max-w-xs" />
-{#snippet html()}
 
-```html
+```~html
 <input type="file" class="$$file-input $$file-input-bordered $$file-input-error w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Sizes">
+### ~Sizes
 <div class="flex flex-col gap-4 w-full items-center">
   <input type="file" class="file-input file-input-bordered file-input-xs w-full max-w-xs" />
   <input type="file" class="file-input file-input-bordered file-input-sm w-full max-w-xs" />
   <input type="file" class="file-input file-input-bordered file-input-md w-full max-w-xs" />
   <input type="file" class="file-input file-input-bordered file-input-lg w-full max-w-xs" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <!-- xs -->
 <input type="file" class="$$file-input $$file-input-bordered $$file-input-xs w-full max-w-xs" />
 <!-- sm -->
@@ -210,14 +176,11 @@ classnames:
 <input type="file" class="$$file-input $$file-input-bordered $$file-input-lg w-full max-w-xs" />
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Disabled">
+### ~Disabled
 <input type="file" placeholder="You can't touch this" class="file-input file-input-bordered w-full max-w-xs" disabled />
-{#snippet html()}
 
-```html
+```~html
 <input
   type="file"
   placeholder="You can't touch this"
@@ -225,5 +188,3 @@ classnames:
   disabled />
 ```
 
-{/snippet}
-</Component>

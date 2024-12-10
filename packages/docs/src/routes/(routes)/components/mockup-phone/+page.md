@@ -17,16 +17,15 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="iPhone mockup">
+### ~iPhone mockup
 <div class="mockup-phone">
   <div class="camera"></div>
   <div class="display">
     <div class="artboard artboard-demo phone-1">Hi.</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$mockup-phone">
   <div class="$$camera"></div>
   <div class="$$display">
@@ -35,19 +34,16 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With color">
+### ~With color
 <div class="mockup-phone border-primary">
   <div class="camera"></div>
   <div class="display">
     <div class="artboard artboard-demo phone-1">Hi.</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$mockup-phone border-primary">
   <div class="$$camera"></div>
   <div class="$$display">
@@ -56,5 +52,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

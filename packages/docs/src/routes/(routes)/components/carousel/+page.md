@@ -27,7 +27,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Snap to start (default)">
+### ~Snap to start (default)
 <div class="carousel rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Carousel slider" />
@@ -51,9 +51,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Carousel slider" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel rounded-box">
   <div class="$$carousel-item">
     <img
@@ -93,10 +92,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Snap to center">
+### ~Snap to center
 <div class="carousel carousel-center rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Tailwind CSS slider" />
@@ -120,9 +117,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Tailwind CSS slider" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel $$carousel-center rounded-box">
   <div class="$$carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Pizza" />
@@ -156,10 +152,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Snap to end">
+### ~Snap to end
 <div class="carousel carousel-end rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Tailwind CSS slide component" />
@@ -183,9 +177,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Tailwind CSS slide component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel $$carousel-end rounded-box">
   <div class="$$carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Drink" />
@@ -219,10 +212,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Carousel with full width items">
+### ~Carousel with full width items
 <div class="w-64 carousel rounded-box">
   <div class="w-full carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="w-full" alt="Tailwind CSS carousel component" />
@@ -246,9 +237,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" class="w-full" alt="Tailwind CSS carousel component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel rounded-box w-64">
   <div class="$$carousel-item w-full">
     <img
@@ -295,10 +285,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical carousel">
+### ~Vertical carousel
 <div class="h-96 carousel carousel-vertical rounded-box">
   <div class="carousel-item h-full">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Free Tailwind CSS Slider" />
@@ -322,9 +310,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Free Tailwind CSS Slider" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel $$carousel-vertical rounded-box h-96">
   <div class="$$carousel-item h-full">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" />
@@ -350,10 +337,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Carousel with half width items">
+### ~Carousel with half width items
 <div class="w-96 carousel rounded-box">
   <div class="w-1/2 carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="w-full" alt="Tailwind CSS slide plugin" />
@@ -377,9 +362,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" class="w-full" alt="Tailwind CSS slide plugin" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel rounded-box w-96">
   <div class="$$carousel-item w-1/2">
     <img
@@ -419,10 +403,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Full-bleed carousel">
+### ~Full-bleed carousel
 <div class="max-w-md p-4 space-x-4 carousel carousel-center bg-neutral rounded-box">
   <div class="carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="rounded-box" alt="Tailwind CSS component" />
@@ -446,9 +428,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" class="rounded-box" alt="Tailwind CSS component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel $$carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4">
   <div class="$$carousel-item">
     <img
@@ -488,10 +469,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Carousel with indicator buttons" desc="This slider works with anchor links so the browser will snap vertically to the image when you click buttons.">
+### ~Carousel with indicator buttons
+#### This slider works with anchor links so the browser will snap vertically to the image when you click buttons.
+
 <div class="w-full carousel">
   <div id="item1" class="w-full carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" alt="Tailwind CSS gallery" />
@@ -512,9 +493,8 @@ classnames:
   <a href="#item3" class="btn btn-xs">3</a>
   <a href="#item4" class="btn btn-xs">4</a>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel w-full">
   <div id="item1" class="$$carousel-item w-full">
     <img
@@ -545,10 +525,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Carousel with next/prev buttons" desc="This slider works with anchor links so the browser will snap vertically to the image when you click buttons.">
+### ~Carousel with next/prev buttons
+#### This slider works with anchor links so the browser will snap vertically to the image when you click buttons.
+
 <div class="w-full carousel">
   <div id="slide1" class="relative w-full carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" alt="Tailwind CSS slide example" />
@@ -579,9 +559,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$carousel w-full">
   <div id="slide1" class="$$carousel-item relative w-full">
     <img
@@ -622,5 +601,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

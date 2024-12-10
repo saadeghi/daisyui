@@ -21,15 +21,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Avatar">
+### ~Avatar
 <div class="avatar">
   <div class="w-24 rounded bg-base-300">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar">
   <div class="w-24 rounded">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -37,10 +36,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar in custom sizes">
+### ~Avatar in custom sizes
 <div class="avatar">
   <div class="w-24 rounded bg-base-300">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
@@ -61,9 +58,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar">
   <div class="w-32 rounded">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -92,10 +88,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar rounded">
+### ~Avatar rounded
 <div class="avatar">
   <div class="w-24 rounded-xl bg-base-300">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
@@ -106,9 +100,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar">
   <div class="w-24 rounded-xl">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -121,10 +114,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar with mask">
+### ~Avatar with mask
 <div class="avatar">
   <div class="w-24 mask mask-squircle bg-base-300">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
@@ -140,9 +131,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar">
   <div class="$$mask $$mask-squircle w-24">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -160,10 +150,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar group">
+### ~Avatar group
 <div class="avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="avatar">
     <div class="w-12 bg-base-300">
@@ -186,9 +174,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
@@ -213,10 +200,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar group with counter">
+### ~Avatar group with counter
 <div class="avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="avatar">
     <div class="w-12  bg-base-300">
@@ -239,9 +224,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
@@ -266,18 +250,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar with ring">
+### ~Avatar with ring
 <div class="avatar">
   <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar">
   <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -285,10 +266,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar with presence indicator">
+### ~Avatar with presence indicator
 <div class="avatar online">
   <div class="w-24 rounded-full bg-base-300">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
@@ -299,9 +278,8 @@ classnames:
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar $$online">
   <div class="w-24 rounded-full">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -314,10 +292,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Avatar placeholder">
+### ~Avatar placeholder
 <div class="avatar placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-24">
     <span class="text-3xl">D</span>
@@ -338,9 +314,8 @@ classnames:
     <span class="text-xs">UI</span>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$avatar $$placeholder">
   <div class="bg-neutral text-neutral-content w-24 rounded-full">
     <span class="text-3xl">D</span>
@@ -363,5 +338,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

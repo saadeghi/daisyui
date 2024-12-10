@@ -35,16 +35,15 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Horizontal">
+### ~Horizontal
 <ul class="steps">
   <li class="step step-primary">Register</li>
   <li class="step step-primary">Choose plan</li>
   <li class="step">Purchase</li>
   <li class="step">Receive Product</li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$steps">
   <li class="$$step $$step-primary">Register</li>
   <li class="$$step $$step-primary">Choose plan</li>
@@ -53,19 +52,16 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Vertical">
+### ~Vertical
 <ul class="steps steps-vertical">
   <li class="step step-primary">Register</li>
   <li class="step step-primary">Choose plan</li>
   <li class="step">Purchase</li>
   <li class="step">Receive Product</li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$steps $$steps-vertical">
   <li class="$$step $$step-primary">Register</li>
   <li class="$$step $$step-primary">Choose plan</li>
@@ -74,19 +70,16 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="responsive (vertical on small screen, horizontal on large screen)">
+### ~responsive (vertical on small screen, horizontal on large screen)
 <ul class="steps steps-vertical lg:steps-horizontal">
   <li class="step step-primary">Register</li>
   <li class="step step-primary">Choose plan</li>
   <li class="step">Purchase</li>
   <li class="step">Receive Product</li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$steps $$steps-vertical lg:$$steps-horizontal">
   <li class="$$step $$step-primary">Register</li>
   <li class="$$step $$step-primary">Choose plan</li>
@@ -95,10 +88,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With data-content">
+### ~With data-content
 <ul class="steps">
   <li data-content="?" class="step step-neutral">Step 1</li>
   <li data-content="!" class="step step-neutral">Step 2</li>
@@ -108,9 +99,8 @@ classnames:
   <li data-content="" class="step step-neutral">Step 6</li>
   <li data-content="●" class="step step-neutral">Step 7</li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$steps">
   <li data-content="?" class="$$step $$step-neutral">Step 1</li>
   <li data-content="!" class="$$step $$step-neutral">Step 2</li>
@@ -122,19 +112,16 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Custom colors">
+### ~Custom colors
 <ul class="steps">
   <li class="step step-info">Fly to moon</li>
   <li class="step step-info">Shrink the moon</li>
   <li class="step step-info">Grab the moon</li>
   <li data-content="?" class="step step-error">Sit on toilet</li>
 </ul>
-{#snippet html()}
 
-```html
+```~html
 <ul class="$$steps">
   <li class="$$step $$step-info">Fly to moon</li>
   <li class="$$step $$step-info">Shrink the moon</li>
@@ -143,10 +130,8 @@ classnames:
 </ul>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="With scrollable wrapper">
+### ~With scrollable wrapper
 <div class="overflow-x-auto">
   <ul class="steps">
     <li class="step">start</li>
@@ -175,9 +160,8 @@ classnames:
     <li class="step step-neutral">end</li>
   </ul>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <ul class="$$steps">
     <li class="$$step">start</li>
@@ -208,5 +192,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

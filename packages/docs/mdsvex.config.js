@@ -9,6 +9,7 @@ import rehypeSlug from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
 import rehypeExternalLinks from "rehype-external-links"
 import { visit } from "unist-util-visit"
+import { remarkRenderComponent } from "./remark-render-component.js"
 
 const theme = JSON.parse(await fs.readFile("./shiki.theme.json", "utf8"))
 
@@ -35,7 +36,7 @@ function replacePlaceholders() {
   }
 }
 
-export default function customClasses(options) {
+function customClasses(options) {
   return (tree) => {
     visit(tree, (node) => {
       if (options[node.type]) {
@@ -109,6 +110,7 @@ const remarkPlugins = [
     },
   ],
   replacePlaceholders,
+  remarkRenderComponent,
 ]
 
 export const mdsvexExtensions = [".svx", ".md"]

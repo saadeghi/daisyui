@@ -12,15 +12,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="3 divs without stack">
+### ~3 divs without stack
 <div>
   <div class="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div>
   <div class="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div>
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div>
   <div class="bg-primary text-primary-content grid h-20 w-32 place-content-center rounded">1</div>
   <div class="bg-accent text-accent-content grid h-20 w-32 place-content-center rounded">2</div>
@@ -30,18 +29,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="3 divs with stack">
+### ~3 divs with stack
 <div class="stack mb-4">
   <div class="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div>
   <div class="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div>
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stack">
   <div class="bg-primary text-primary-content grid h-20 w-32 place-content-center rounded">1</div>
   <div class="bg-accent text-accent-content grid h-20 w-32 place-content-center rounded">2</div>
@@ -51,18 +47,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="stacked images">
+### ~stacked images
 <div class="stack mb-4">
   <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Tailwind CSS example 1" class="rounded w-28" />
   <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Tailwind CSS example 2" class="rounded w-28" />
   <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Tailwind CSS example 3" class="rounded w-28" />
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stack">
   <img
     src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
@@ -76,10 +69,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="stacked cards">
+### ~stacked cards
 <div class="stack mb-4">
   <div class="text-center border border-base-content card w-36 bg-base-100">
     <div class="card-body">A</div>
@@ -91,9 +82,8 @@ classnames:
     <div class="card-body">C</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stack">
   <div class="border-base-content $$card bg-base-100 w-36 border text-center">
     <div class="$$card-body">A</div>
@@ -107,10 +97,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="stacked cards with shadow">
+### ~stacked cards with shadow
 <div class="stack mb-4">
   <div class="text-center shadow-md w-36 card bg-base-200">
     <div class="card-body">A</div>
@@ -122,9 +110,8 @@ classnames:
     <div class="card-body">C</div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stack">
   <div class="$$card bg-base-200 w-36 text-center shadow-md">
     <div class="$$card-body">A</div>
@@ -138,10 +125,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="stacked cards">
+### ~stacked cards
 <div class="stack mb-4">
   <div class="shadow-md card bg-primary text-primary-content">
     <div class="card-body">
@@ -162,9 +147,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$stack">
   <div class="$$card bg-primary text-primary-content shadow-md">
     <div class="$$card-body">
@@ -187,5 +171,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

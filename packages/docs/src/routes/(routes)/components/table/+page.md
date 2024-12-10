@@ -30,7 +30,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Table">
+### ~Table
 <div class="overflow-x-auto">
   <table class="table">
     <thead>
@@ -63,9 +63,8 @@ classnames:
     </tbody>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -104,10 +103,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Table with an active row">
+### ~Table with an active row
 <div class="overflow-x-auto">
   <table class="table">
     <thead>
@@ -140,9 +137,8 @@ classnames:
     </tbody>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -181,10 +177,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Table with a row that highlights on hover">
+### ~Table with a row that highlights on hover
 <div class="overflow-x-auto">
   <table class="table">
     <thead>
@@ -217,9 +211,8 @@ classnames:
     </tbody>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -258,10 +251,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Zebra">
+### ~Zebra
 <div class="overflow-x-auto">
   <table class="table table-zebra">
     <thead>
@@ -294,9 +285,8 @@ classnames:
     </tbody>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <table class="$$table $$table-zebra">
     <!-- head -->
@@ -335,10 +325,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Table with visual elements">
+### ~Table with visual elements
 <div class="overflow-x-auto">
   <table class="table">
     <thead>
@@ -483,9 +471,8 @@ classnames:
     </tfoot>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -646,10 +633,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Table xs">
+### ~Table xs
 <div class="overflow-x-auto">
   <table class="table table-xs">
     <thead>
@@ -858,9 +843,8 @@ classnames:
     </tfoot>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <table class="$$table $$table-xs">
     <thead>
@@ -1071,10 +1055,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Table with pinned-rows">
+### ~Table with pinned-rows
 <div class="overflow-x-auto h-96">
   <table class="table table-pin-rows">
   <thead>
@@ -1237,9 +1219,8 @@ classnames:
   </tbody>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="h-96 overflow-x-auto">
   <table class="$$table $$table-pin-rows">
     <thead>
@@ -1404,10 +1385,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Table with pinned-rows and pinned-cols">
+### ~Table with pinned-rows and pinned-cols
 <div class="overflow-x-auto h-96 w-96">
   <table class="table table-xs table-pin-rows table-pin-cols">
     <thead>
@@ -1638,9 +1617,8 @@ classnames:
     </tfoot>
   </table>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="overflow-x-auto">
   <table class="$$table $$table-xs $$table-pin-rows $$table-pin-cols">
     <thead>
@@ -1873,5 +1851,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

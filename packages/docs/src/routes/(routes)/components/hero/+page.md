@@ -17,7 +17,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-<Component title="Centered hero">
+### ~Centered hero
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="text-center hero-content">
     <div class="max-w-md">
@@ -27,9 +27,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content text-center">
     <div class="max-w-md">
@@ -44,10 +43,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Hero with figure">
+### ~Hero with figure
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row">
     <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
@@ -58,9 +55,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row">
     <img
@@ -78,10 +74,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Hero with figure but reverse order">
+### ~Hero with figure but reverse order
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
     <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" class="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
@@ -92,9 +86,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
     <img
@@ -112,10 +105,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Hero with form">
+### ~Hero with form
 <div class="hero min-h-[30rem] rounded bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
     <div class="text-center lg:text-left">
@@ -146,9 +137,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
     <div class="text-center lg:text-left">
@@ -184,10 +174,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Hero with overlay image">
+### ~Hero with overlay image
 <div class="hero min-h-[30rem] rounded" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
   <div class="hero-overlay rounded"></div>
   <div class="text-center hero-content text-neutral-content">
@@ -198,9 +186,8 @@ classnames:
     </div>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div
   class="$$hero min-h-screen"
   style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
@@ -217,12 +204,7 @@ classnames:
   </div>
 </div>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 <div
   class="$$hero min-h-screen"
   style={{
@@ -242,5 +224,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

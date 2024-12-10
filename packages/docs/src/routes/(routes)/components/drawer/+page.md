@@ -52,7 +52,7 @@ classnames:
   <div>You can check/uncheck the checkbox using JavaScript or by clicking the <code>&lt;label&gt;</code> tag which is assigned to the hidden checkbox</div>
 </div>
 
-<Component title="Drawer">
+### ~Drawer
 <div class="drawer h-56 rounded overflow-hidden">
   <input id="my-drawer" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
@@ -66,9 +66,8 @@ classnames:
     </ul>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$drawer">
   <input id="my-drawer" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content">
@@ -86,10 +85,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive" desc="Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class">
+### ~Responsive
+#### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
+
 <div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
@@ -103,9 +102,8 @@ classnames:
     </ul>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$drawer lg:$$drawer-open">
   <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content flex flex-col items-center justify-center">
@@ -125,10 +123,10 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Navbar menu for desktop + sidebar drawer for mobile" desc="Change screen size to show/hide menu">
+### ~Navbar menu for desktop + sidebar drawer for mobile
+#### Change screen size to show/hide menu
+
 <div class="drawer h-56 rounded overflow-hidden">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col drawer-content">
@@ -156,9 +154,8 @@ classnames:
     </ul>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$drawer">
   <input id="my-drawer-3" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content flex flex-col">
@@ -202,10 +199,8 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Drawer that opens from right side of page">
+### ~Drawer that opens from right side of page
 <div class="drawer drawer-end h-56 rounded overflow-hidden">
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
@@ -219,9 +214,8 @@ classnames:
     </ul>
   </div>
 </div>
-{#snippet html()}
 
-```html
+```~html
 <div class="$$drawer $$drawer-end">
   <input id="my-drawer-4" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content">
@@ -239,5 +233,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>

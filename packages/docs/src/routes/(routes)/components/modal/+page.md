@@ -54,7 +54,9 @@ classnames:
 
 ### Method 1: using dialog element <span class="badge badge-success">recommended</span>
 
-<Component title="Dialog modal" desc="opens on click using ID.showModal() method. can be closed using ID.close() method">
+### ~Dialog modal
+#### opens on click using ID.showModal() method. can be closed using ID.close() method
+
 <button class="btn" onclick={() => my_modal_1.showModal()}>open modal</button>
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
@@ -68,9 +70,8 @@ classnames:
     </div>
   </div>
 </dialog>
-{#snippet html()}
 
-```html
+```~html
 <!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_1.showModal()">open modal</button>
 <dialog id="my_modal_1" class="$$modal">
@@ -86,12 +87,7 @@ classnames:
   </div>
 </dialog>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 {/* Open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>open modal</button>
 <dialog id="my_modal_1" className="$$modal">
@@ -108,10 +104,10 @@ classnames:
 </dialog>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dialog modal, closes when clicked outside" desc="there is a second form with 'modal-backdrop' class and it covers the screen so we can close the modal when clicked outside">
+### ~Dialog modal, closes when clicked outside
+#### there is a second form with 'modal-backdrop' class and it covers the screen so we can close the modal when clicked outside
+
 <button class="btn" onclick={() => my_modal_2.showModal()}>open modal</button>
 <dialog id="my_modal_2" class="modal">
   <div class="modal-box">
@@ -122,9 +118,8 @@ classnames:
     <button>close</button>
   </form>
 </dialog>
-{#snippet html()}
 
-```html
+```~html
 <!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_2.showModal()">open modal</button>
 <dialog id="my_modal_2" class="$$modal">
@@ -137,12 +132,7 @@ classnames:
   </form>
 </dialog>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 {/* Open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>open modal</button>
 <dialog id="my_modal_2" className="$$modal">
@@ -156,10 +146,8 @@ classnames:
 </dialog>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dialog modal with a close button at corner">
+### ~Dialog modal with a close button at corner
 <button class="btn" onclick={() => my_modal_3.showModal()}>open modal</button>
 <dialog id="my_modal_3" class="modal">
   <div class="modal-box">
@@ -171,9 +159,8 @@ classnames:
     <p class="py-4">Press ESC key or click on ✕ button to close</p>
   </div>
 </dialog>
-{#snippet html()}
 
-```html
+```~html
 <!-- You can open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_3.showModal()">open modal</button>
 <dialog id="my_modal_3" class="$$modal">
@@ -186,12 +173,7 @@ classnames:
   </div>
 </dialog>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 {/* You can open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_3').showModal()}>open modal</button>
 <dialog id="my_modal_3" className="$$modal">
@@ -206,10 +188,10 @@ classnames:
 </dialog>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Dialog modal with custom width" desc="You can use any w-* and max-w-* utility class to customize the width">
+### ~Dialog modal with custom width
+#### You can use any w-* and max-w-* utility class to customize the width
+
 <button class="btn" onclick={() => my_modal_4.showModal()}>open modal</button>
 <dialog id="my_modal_4" class="modal">
   <div class="modal-box w-11/12 max-w-5xl">
@@ -223,9 +205,8 @@ classnames:
     </div>
   </div>
 </dialog>
-{#snippet html()}
 
-```html
+```~html
 <!-- You can open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_4.showModal()">open modal</button>
 <dialog id="my_modal_4" class="$$modal">
@@ -241,12 +222,7 @@ classnames:
   </div>
 </dialog>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 {/* You can open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_4').showModal()}>open modal</button>
 <dialog id="my_modal_4" className="$$modal">
@@ -263,10 +239,10 @@ classnames:
 </dialog>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Responsive" desc="Modal goes bottom on mobile screen and goes middle on desktop">
+### ~Responsive
+#### Modal goes bottom on mobile screen and goes middle on desktop
+
 <button class="btn" onclick={() => my_modal_5.showModal()}>open modal</button>
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
@@ -280,9 +256,8 @@ classnames:
     </div>
   </div>
 </dialog>
-{#snippet html()}
 
-```html
+```~html
 <!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_5.showModal()">open modal</button>
 <dialog id="my_modal_5" class="$$modal $$modal-bottom sm:$$modal-middle">
@@ -298,12 +273,7 @@ classnames:
   </div>
 </dialog>
 ```
-
-{/snippet}
-
-{#snippet jsx()}
-
-```jsx
+```~jsx
 {/* Open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
 <dialog id="my_modal_5" className="$$modal modal-bottom sm:$$modal-middle">
@@ -320,17 +290,13 @@ classnames:
 </dialog>
 ```
 
-{/snippet}
-</Component>
 
 ### Method 2: using a hidden checkbox <span class="badge badge-warning">legacy</span>
 
-<Component title="Modal using label + hidden checkbox">
+### ~Modal using label + hidden checkbox
 <label for="my_modal_6" class="btn">open modal</label>
 
-{#snippet html()}
-
-```html
+```~html
 <!-- The button to open modal -->
 <label for="my_modal_6" class="$$btn">open modal</label>
 
@@ -347,15 +313,13 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
-<Component title="Modal that closes when clicked outside" desc="Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside">
+### ~Modal that closes when clicked outside
+#### Modal works with a hidden checkbox and labels can toggle the checkbox so we can use another label tag with 'modal-backdrop' class that covers the screen so we can close the modal when clicked outside
+
 <label for="my_modal_7" class="btn">open modal</label>
 
-{#snippet html()}
-
-```html
+```~html
 <!-- The button to open modal -->
 <label for="my_modal_7" class="$$btn">open modal</label>
 
@@ -370,16 +334,15 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
 
 ### Method 3: using anchor links <span class="badge badge-warning">legacy</span>
 
-<Component title="Modal using anchor link" desc="Anchor links might not work well on some SPA frameworks so if there are problems, use the first example">
-<a href="#my_modal_8" class="btn" rel="external">open modal</a>
-{#snippet html()}
+### ~Modal using anchor link
+#### Anchor links might not work well on some SPA frameworks so if there are problems, use the first example
 
-```html
+<a href="#my_modal_8" class="btn" rel="external">open modal</a>
+
+```~html
 <!-- The button to open modal -->
 <a href="#my_modal_8" class="$$btn">open modal</a>
 
@@ -395,5 +358,3 @@ classnames:
 </div>
 ```
 
-{/snippet}
-</Component>
