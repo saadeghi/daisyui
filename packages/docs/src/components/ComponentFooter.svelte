@@ -212,10 +212,10 @@
               target="_blank"
               rel="noopener, noreferrer"
               class="link"
-              href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes/(docs)${$page.url.pathname.replace(
+              href={`https://github.com/saadeghi/daisyui/blob/master/src/docs/src/routes/(routes)${$page.url.pathname.replace(
                 /\/$/,
                 "",
-              )}/+page.svx?plain=1`}
+              )}/+page.md?plain=1`}
             >
               {$t("Edit this page on GitHub")}
             </a>
