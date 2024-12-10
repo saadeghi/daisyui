@@ -96,7 +96,7 @@ export const report = async (directories) => {
     data: flatReport,
   }
 
-  const reportsDir = path.join(process.cwd(), ".logs")
+  const reportsDir = path.join(process.cwd(), "../logs")
   try {
     await fs.mkdir(reportsDir, { recursive: true })
 
@@ -119,7 +119,7 @@ export const report = async (directories) => {
     }
 
     if (shouldSave) {
-      const reportPath = path.join(reportsDir, `report-${timestamp}.json`)
+      const reportPath = path.join(reportsDir, `${timestamp}.json`)
       await fs.writeFile(reportPath, JSON.stringify(reportData, null, null))
       console.log(`Report saved: ${reportPath}`)
 

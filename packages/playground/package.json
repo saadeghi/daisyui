@@ -3,6 +3,7 @@
   "private": true,
   "name": "daisyui-playground",
   "scripts": {
+    "predev": "if ! [ -f src/components/Component.astro ]; then echo '<button class=btn>Hello</button>' > src/components/Component.astro; fi",
     "dev": "astro dev --open",
     "build": "astro build",
     "preview": "astro preview"
