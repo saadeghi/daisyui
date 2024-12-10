@@ -1,15 +1,16 @@
+import fs from "fs/promises"
 import { mdsvex, escapeSvelte } from "mdsvex"
 import { createHighlighter } from "shiki"
 
 import remarkGithub from "remark-github"
 import remarkCodeTitles from "remark-flexible-code-titles"
-import toc from "@jsdevtools/rehype-toc"
+// import toc from "@jsdevtools/rehype-toc"
 import rehypeSlug from "rehype-slug"
 import linkHeadings from "rehype-autolink-headings"
 import rehypeExternalLinks from "rehype-external-links"
 import { visit } from "unist-util-visit"
 
-import theme from "./shiki.theme.json" with { type: "json" }
+const theme = JSON.parse(await fs.readFile("./shiki.theme.json", "utf8"))
 
 const highlighter = await createHighlighter({
   themes: [theme],

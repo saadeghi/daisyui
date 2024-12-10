@@ -1,8 +1,8 @@
-const fs = require("fs").promises
-const path = require("path")
+import { promises as fs } from "fs"
+import { resolve } from "path"
 export const removeFiles = async (items = []) => {
   const removePromises = items.map(async (item) => {
-    const itemPath = path.resolve(item)
+    const itemPath = resolve(item)
 
     try {
       const stats = await fs.lstat(itemPath)
