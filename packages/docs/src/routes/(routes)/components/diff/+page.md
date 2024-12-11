@@ -35,7 +35,7 @@ classnames:
   <div class="diff-resizer"></div>
 </div>
 
-```~html
+```html
 <div class="$$diff aspect-16/9">
   <div class="$$diff-item-1">
     <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
@@ -61,7 +61,7 @@ classnames:
   <div class="diff-resizer"></div>
 </div>
 
-```~html
+```html
 <div class="$$diff aspect-16/9">
   <div class="$$diff-item-1">
     <div class="bg-primary text-primary-content grid place-content-center text-9xl font-black">
@@ -74,4 +74,3 @@ classnames:
   <div class="$$diff-resizer"></div>
 </div>
 ```
-

@@ -41,7 +41,7 @@ classnames:
 ### ~Range
 <input type="range" min="0" max="100" value="40" class="range max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range" />
 ```
 
@@ -58,7 +58,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <input type="range" min="0" max="100" value="25" class="$$range" step="25" />
 <div class="flex w-full justify-between px-2 text-xs">
   <span>|</span>
@@ -73,7 +73,7 @@ classnames:
 ### ~Primary color
 <input type="range" min="0" max="100" value="40" class="range range-primary max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-primary" />
 ```
 
@@ -81,7 +81,7 @@ classnames:
 ### ~Secondary color
 <input type="range" min="0" max="100" value="40" class="range range-secondary max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-secondary" />
 ```
 
@@ -89,7 +89,7 @@ classnames:
 ### ~Accent color
 <input type="range" min="0" max="100" value="40" class="range range-accent max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-accent" />
 ```
 
@@ -97,7 +97,7 @@ classnames:
 ### ~Success color
 <input type="range" min="0" max="100" value="40" class="range range-success max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-success" />
 ```
 
@@ -105,7 +105,7 @@ classnames:
 ### ~Warning color
 <input type="range" min="0" max="100" value="40" class="range range-warning max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-warning" />
 ```
 
@@ -113,7 +113,7 @@ classnames:
 ### ~Info color
 <input type="range" min="0" max="100" value="40" class="range range-info max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-info" />
 ```
 
@@ -121,7 +121,7 @@ classnames:
 ### ~Error color
 <input type="range" min="0" max="100" value="40" class="range range-error max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-error" />
 ```
 
@@ -134,7 +134,7 @@ classnames:
   <input type="range" min="0" max="100" value="70" class="range range-lg max-w-xs" />
 </div>
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$range-xs" />
 <input type="range" min="0" max="100" value="50" class="$$range $$range-sm" />
 <input type="range" min="0" max="100" value="60" class="$$range $$range-md" />
@@ -145,7 +145,6 @@ classnames:
 ### ~Range with custom color
 <input type="range" min="0" max="100" value="40" class="range [--range-shdw:yellow] max-w-xs" />
 
-```~html
+```html
 <input type="range" min="0" max="100" value="40" class="$$range $$[--range-shdw:yellow]" />
 ```
-

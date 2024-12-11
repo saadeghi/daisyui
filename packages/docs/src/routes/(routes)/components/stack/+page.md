@@ -19,7 +19,7 @@ classnames:
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>
 
-```~html
+```html
 <div>
   <div class="bg-primary text-primary-content grid h-20 w-32 place-content-center rounded">1</div>
   <div class="bg-accent text-accent-content grid h-20 w-32 place-content-center rounded">2</div>
@@ -37,7 +37,7 @@ classnames:
   <div class="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
 </div>
 
-```~html
+```html
 <div class="$$stack">
   <div class="bg-primary text-primary-content grid h-20 w-32 place-content-center rounded">1</div>
   <div class="bg-accent text-accent-content grid h-20 w-32 place-content-center rounded">2</div>
@@ -55,7 +55,7 @@ classnames:
   <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Tailwind CSS example 3" class="rounded w-28" />
 </div>
 
-```~html
+```html
 <div class="$$stack">
   <img
     src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
@@ -83,7 +83,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stack">
   <div class="border-base-content $$card bg-base-100 w-36 border text-center">
     <div class="$$card-body">A</div>
@@ -111,7 +111,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stack">
   <div class="$$card bg-base-200 w-36 text-center shadow-md">
     <div class="$$card-body">A</div>
@@ -148,7 +148,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stack">
   <div class="$$card bg-primary text-primary-content shadow-md">
     <div class="$$card-body">
@@ -170,4 +170,3 @@ classnames:
   </div>
 </div>
 ```
-

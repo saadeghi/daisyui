@@ -35,12 +35,12 @@ classnames:
   <span style="--value:{counter};"></span>
 </span>
 
-```~html
+```html
 <span class="$$countdown">
   <span style="--value:59;"></span>
 </span>
 ```
-```~jsx
+```jsx
 <span class="$$countdown">
   <span style={{"--value":59}}></span>
 </span>
@@ -52,12 +52,12 @@ classnames:
   <span style="--value:{counter};"></span>
 </span>
 
-```~html
+```html
 <span class="$$countdown font-mono text-6xl">
   <span style="--value:59;"></span>
 </span>
 ```
-```~jsx
+```jsx
 <span class="$$countdown font-mono text-6xl">
   <span style={{"--value":59}}></span>
 </span>
@@ -71,7 +71,7 @@ classnames:
   <span style="--value:{counter};"></span>s
 </span>
 
-```~html
+```html
 <span class="$$countdown font-mono text-2xl">
   <span style="--value:10;"></span>
   h
@@ -81,7 +81,7 @@ classnames:
   s
 </span>
 ```
-```~jsx
+```jsx
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>h
   <span style={{"--value":24}}></span>m
@@ -97,7 +97,7 @@ classnames:
   <span style="--value:{counter};"></span>
 </span>
 
-```~html
+```html
 <span class="$$countdown font-mono text-2xl">
   <span style="--value:10;"></span>
   :
@@ -106,7 +106,7 @@ classnames:
   <span style="--value:59;"></span>
 </span>
 ```
-```~jsx
+```jsx
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--value":10}}></span>:
   <span style={{"--value":24}}></span>:
@@ -143,7 +143,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="flex gap-5">
   <div>
     <span class="$$countdown font-mono text-4xl">
@@ -171,7 +171,7 @@ classnames:
   </div>
 </div>
 ```
-```~jsx
+```jsx
 <div class="flex gap-5">
   <div>
     <span class="$$countdown font-mono text-4xl">
@@ -229,7 +229,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
@@ -257,7 +257,7 @@ classnames:
   </div>
 </div>
 ```
-```~jsx
+```jsx
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
@@ -315,7 +315,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
   <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
     <span class="$$countdown font-mono text-5xl">
@@ -343,7 +343,7 @@ classnames:
   </div>
 </div>
 ```
-```~jsx
+```jsx
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
@@ -371,4 +371,3 @@ classnames:
   </div>
 </div>
 ```
-

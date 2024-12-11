@@ -47,7 +47,7 @@ classnames:
   </nav>
 </footer>
 
-```~html
+```html
 <footer class="$$footer bg-neutral text-neutral-content p-10">
   <nav>
     <h6 class="$$footer-title">Services</h6>
@@ -101,7 +101,7 @@ classnames:
   </nav>
 </footer>
 
-```~html
+```html
 <footer class="$$footer bg-base-200 text-base-content p-10">
   <aside>
     <svg
@@ -181,7 +181,7 @@ classnames:
   </form>
 </footer>
 
-```~html
+```html
 <footer class="$$footer bg-base-200 text-base-content p-10">
   <nav>
     <h6 class="$$footer-title">Services</h6>
@@ -238,7 +238,7 @@ classnames:
   </nav>
 </footer>
 
-```~html
+```html
 <footer class="$$footer bg-neutral text-neutral-content p-10">
   <aside>
     <svg
@@ -307,7 +307,7 @@ classnames:
   </aside>
 </footer>
 
-```~html
+```html
 <footer class="$$footer $$footer-center bg-base-300 text-base-content p-4">
   <aside>
     <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
@@ -330,7 +330,7 @@ classnames:
   </nav>
 </footer>
 
-```~html
+```html
 <footer class="$$footer bg-neutral text-neutral-content items-center p-4">
   <aside class="grid-flow-col items-center">
     <svg
@@ -411,7 +411,7 @@ classnames:
   </nav>
 </footer>
 
-```~html
+```html
 <footer class="$$footer bg-base-300 text-base-content p-10">
   <nav>
     <h6 class="$$footer-title">Services</h6>
@@ -514,7 +514,7 @@ classnames:
   </nav>
 </footer>
 
-```~html
+```html
 <footer class="$$footer bg-neutral text-neutral-content grid-rows-2 p-10">
   <nav>
     <h6 class="$$footer-title">Services</h6>
@@ -579,7 +579,7 @@ classnames:
   </nav>
 </footer>
 
-```~html
+```html
 <footer class="$$footer $$footer-center bg-primary text-primary-content p-10">
   <aside>
     <svg
@@ -661,7 +661,7 @@ classnames:
   </aside>
 </footer>
 
-```~html
+```html
 <footer class="$$footer $$footer-center bg-base-200 text-base-content rounded p-10">
   <nav class="grid grid-flow-col gap-4">
     <a class="$$link $$link-hover">About us</a>
@@ -752,7 +752,7 @@ classnames:
   </footer>
 </div>
 
-```~html
+```html
 <footer class="$$footer bg-base-200 text-base-content p-10">
   <nav>
     <h6 class="$$footer-title">Services</h6>
@@ -833,4 +833,3 @@ classnames:
   </nav>
 </footer>
 ```
-

@@ -26,7 +26,7 @@ classnames:
 ### ~Kbd
 <kbd class="kbd">A</kbd>
 
-```~html
+```html
 <kbd class="$$kbd">A</kbd>
 ```
 
@@ -37,7 +37,7 @@ classnames:
 <kbd class="kbd kbd-sm">Shift</kbd>
 <kbd class="kbd kbd-xs">Shift</kbd>
 
-```~html
+```html
 <kbd class="$$kbd $$kbd-lg">Shift</kbd>
 <kbd class="$$kbd $$kbd-md">Shift</kbd>
 <kbd class="$$kbd $$kbd-sm">Shift</kbd>
@@ -49,7 +49,7 @@ classnames:
 
 <span>Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.</span>
 
-```~html
+```html
 Press
 <kbd class="$$kbd $$kbd-sm">F</kbd>
 to pay respects.
@@ -63,7 +63,7 @@ to pay respects.
 +
 <kbd class="kbd">del</kbd>
 
-```~html
+```html
 <kbd class="$$kbd">ctrl</kbd>
 +
 <kbd class="$$kbd">shift</kbd>
@@ -78,7 +78,7 @@ to pay respects.
 <kbd class="kbd">⇧</kbd>
 <kbd class="kbd">⌃</kbd>
 
-```~html
+```html
 <kbd class="$$kbd">⌘</kbd>
 <kbd class="$$kbd">⌥</kbd>
 <kbd class="$$kbd">⇧</kbd>
@@ -123,7 +123,7 @@ to pay respects.
   </div>
 </div>
 
-```~html
+```html
 <div class="my-1 flex w-full justify-center gap-1">
   <kbd class="$$kbd">q</kbd>
   <kbd class="$$kbd">w</kbd>
@@ -172,7 +172,7 @@ to pay respects.
   <kbd class="kbd">▼</kbd>
 </div>
 
-```~html
+```html
 <div class="flex w-full justify-center">
   <kbd class="$$kbd">▲</kbd>
 </div>

@@ -44,7 +44,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div tabindex="0" class="$$collapse bg-base-200">
   <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
   <div class="$$collapse-content">
@@ -67,7 +67,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$collapse bg-base-200">
   <input type="checkbox" />
   <div class="$$collapse-title text-xl font-medium">Click me to show/hide content</div>
@@ -88,7 +88,7 @@ classnames:
   </div>
 </details>
 
-```~html
+```html
 <details class="$$collapse bg-base-200">
   <summary class="$$collapse-title text-xl font-medium">Click to open/close</summary>
   <div class="$$collapse-content">
@@ -113,7 +113,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div tabindex="0" class="$$collapse border-base-300 bg-base-200 border">
   <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
   <div class="$$collapse-content">
@@ -133,7 +133,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div tabindex="0" class="$$collapse $$collapse-arrow border-base-300 bg-base-200 border">
   <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
   <div class="$$collapse-content">
@@ -153,7 +153,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div tabindex="0" class="$$collapse $$collapse-plus border-base-300 bg-base-200 border">
   <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
   <div class="$$collapse-content">
@@ -173,7 +173,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div tabindex="0" class="$$collapse $$collapse-open border-base-300 bg-base-200 border">
   <div class="$$collapse-title text-xl font-medium">I have collapse-open class</div>
   <div class="$$collapse-content">
@@ -193,7 +193,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div tabindex="0" class="$$collapse $$collapse-close border-base-300 bg-base-200 border">
   <div class="$$collapse-title text-xl font-medium">I have collapse-close class</div>
   <div class="$$collapse-content">
@@ -215,7 +215,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div
   tabindex="0"
   class="bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content collapse">
@@ -240,7 +240,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="bg-base-200 collapse">
   <input type="checkbox" class="peer" />
   <div

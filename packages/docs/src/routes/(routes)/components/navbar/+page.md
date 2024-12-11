@@ -24,7 +24,7 @@ classnames:
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
 </div>
@@ -43,7 +43,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -84,7 +84,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-none">
     <button class="$$btn $$btn-square $$btn-ghost">
@@ -146,7 +146,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -198,7 +198,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -276,7 +276,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
     <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
@@ -368,7 +368,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="$$navbar-start">
     <div class="$$dropdown">
@@ -478,7 +478,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="$$navbar-start">
     <div class="$$dropdown">
@@ -545,7 +545,7 @@ classnames:
   <button class="btn btn-ghost text-xl">daisyUI</button>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-neutral text-neutral-content">
   <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
 </div>
@@ -556,4 +556,3 @@ classnames:
   <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
 </div>
 ```
-

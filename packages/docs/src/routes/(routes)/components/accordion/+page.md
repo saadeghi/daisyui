@@ -67,7 +67,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$collapse bg-base-200">
   <input type="radio" name="my-accordion-1" checked="checked" />
   <div class="$$collapse-title text-xl font-medium">Click to open this one and close others</div>
@@ -121,7 +121,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$collapse $$collapse-arrow bg-base-200">
   <input type="radio" name="my-accordion-2" checked="checked" />
   <div class="$$collapse-title text-xl font-medium">Click to open this one and close others</div>
@@ -175,7 +175,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$collapse $$collapse-plus bg-base-200">
   <input type="radio" name="my-accordion-3" checked="checked" />
   <div class="$$collapse-title text-xl font-medium">Click to open this one and close others</div>
@@ -233,7 +233,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$join $$join-vertical w-full">
   <div class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
     <input type="radio" name="my-accordion-4" checked="checked" />
@@ -258,4 +258,3 @@ classnames:
   </div>
 </div>
 ```
-

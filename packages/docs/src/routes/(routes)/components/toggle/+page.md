@@ -42,7 +42,7 @@ classnames:
 ### ~Toggle
 <input type="checkbox" class="toggle" checked="checked" />
 
-```~html
+```html
 <input type="checkbox" class="$$toggle" checked="checked" />
 ```
 
@@ -55,7 +55,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
@@ -87,7 +87,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="flex flex-col">
   <div class="form-control w-52">
     <label class="label cursor-pointer">
@@ -119,7 +119,7 @@ classnames:
   <input type="checkbox" class="toggle toggle-error" checked="checked" />
 </div>
 
-```~html
+```html
 <input type="checkbox" class="$$toggle $$toggle-success" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-warning" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-info" checked="checked" />
@@ -135,7 +135,7 @@ classnames:
   <input type="checkbox" class="toggle toggle-lg" checked="checked" />
 </div>
 
-```~html
+```html
 <input type="checkbox" class="$$toggle $$toggle-xs" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-sm" checked="checked" />
 <input type="checkbox" class="$$toggle $$toggle-md" checked="checked" />
@@ -146,7 +146,7 @@ classnames:
 ### ~Disabled
 <input type="checkbox" class="toggle" disabled />
 
-```~html
+```html
 <input type="checkbox" class="$$toggle" disabled />
 ```
 
@@ -154,7 +154,7 @@ classnames:
 ### ~Disabled and checked
 <input type="checkbox" class="toggle" disabled checked="checked" />
 
-```~html
+```html
 <input type="checkbox" class="$$toggle" disabled checked="checked" />
 ```
 
@@ -162,7 +162,7 @@ classnames:
 ### ~Indeterminate
 <input type="checkbox" class="toggle" bind:indeterminate onclick={(e)=>{e.preventDefault();}} />
 
-```~html
+```html
 <!-- You can make a toggle indeterminate using JS -->
 <script>
   document.getElementById("my-toggle").indeterminate = true
@@ -174,10 +174,9 @@ classnames:
 ### ~Toggle with custom color
 <input type="checkbox" class="toggle [--tglbg:yellow] bg-blue-500 hover:bg-blue-700 border-blue-500" checked="checked" />
 
-```~html
+```html
 <input
   type="checkbox"
   class="$$toggle border-blue-500 bg-blue-500 [--tglbg:yellow] hover:bg-blue-700"
   checked="checked" />
 ```
-

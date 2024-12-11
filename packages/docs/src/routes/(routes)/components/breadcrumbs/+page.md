@@ -25,7 +25,7 @@ classnames:
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$breadcrumbs text-sm">
   <ul>
     <li><a>Home</a></li>
@@ -60,7 +60,7 @@ classnames:
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$breadcrumbs text-sm">
   <ul>
     <li>
@@ -129,7 +129,7 @@ classnames:
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$breadcrumbs max-w-xs text-sm">
   <ul>
     <li>Long text 1</li>
@@ -140,4 +140,3 @@ classnames:
   </ul>
 </div>
 ```
-

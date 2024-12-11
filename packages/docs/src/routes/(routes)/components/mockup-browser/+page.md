@@ -23,7 +23,7 @@ classnames:
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>
 
-```~html
+```html
 <div class="$$mockup-browser border-base-300 border">
   <div class="$$mockup-browser-toolbar">
     <div class="$$input border-base-300 border">https://daisyui.com</div>
@@ -41,7 +41,7 @@ classnames:
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>
 
-```~html
+```html
 <div class="$$mockup-browser bg-base-300 border">
   <div class="$$mockup-browser-toolbar">
     <div class="$$input">https://daisyui.com</div>
@@ -49,4 +49,3 @@ classnames:
   <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
 </div>
 ```
-

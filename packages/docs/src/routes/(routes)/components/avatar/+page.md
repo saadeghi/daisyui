@@ -28,7 +28,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar">
   <div class="w-24 rounded">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -59,7 +59,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar">
   <div class="w-32 rounded">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -101,7 +101,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar">
   <div class="w-24 rounded-xl">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -132,7 +132,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar">
   <div class="$$mask $$mask-squircle w-24">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -175,7 +175,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
@@ -225,7 +225,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
   <div class="$$avatar">
     <div class="w-12">
@@ -258,7 +258,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar">
   <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -279,7 +279,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar $$online">
   <div class="w-24 rounded-full">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -315,7 +315,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$avatar $$placeholder">
   <div class="bg-neutral text-neutral-content w-24 rounded-full">
     <span class="text-3xl">D</span>
@@ -337,4 +337,3 @@ classnames:
   </div>
 </div>
 ```
-

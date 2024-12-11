@@ -26,7 +26,7 @@ browserSupport:
 ### ~Theme Controller using a toggle
 <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller"/>
 
-```~html
+```html
 <input type="checkbox" value="synthwave" class="$$toggle $$theme-controller" />
 ```
 
@@ -34,7 +34,7 @@ browserSupport:
 ### ~Theme Controller using a checkbox
 <input type="checkbox" value="synthwave" bind:checked={checkbox} class="checkbox theme-controller"/>
 
-```~html
+```html
 <input type="checkbox" value="synthwave" class="$$checkbox $$theme-controller" />
 ```
 
@@ -53,7 +53,7 @@ browserSupport:
 
 </label>
 
-```~html
+```html
 <label class="$$swap $$swap-rotate">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" class="$$theme-controller" value="synthwave" />
@@ -86,7 +86,7 @@ browserSupport:
   <span class="label-text">Synthwave</span>
 </label>
 
-```~html
+```html
 <label class="flex cursor-pointer gap-2">
   <span class="$$label-text">Current</span>
   <input type="checkbox" value="synthwave" class="$$toggle $$theme-controller" />
@@ -102,7 +102,7 @@ browserSupport:
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </label>
 
-```~html
+```html
 <label class="flex cursor-pointer gap-2">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +142,7 @@ browserSupport:
   <svg class="col-start-2 row-start-1 stroke-base-100 fill-base-100 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </label>
 
-```~html
+```html
 <label class="grid cursor-pointer place-items-center">
   <input
     type="checkbox"
@@ -183,7 +183,7 @@ browserSupport:
 ### ~Theme Controller using a toggle with custom colors
 <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller bg-amber-300 border-sky-400 [--tglbg:var(--color-sky-500)] checked:bg-blue-300 checked:border-blue-800 checked:[--tglbg:var(--color-blue-900)] row-start-1 col-start-1 col-span-2"/>
 
-```~html
+```html
 <input
   type="checkbox"
   value="synthwave"
@@ -225,7 +225,7 @@ browserSupport:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="label cursor-pointer gap-4">
     <span class="$$label-text">Default</span>
@@ -268,7 +268,7 @@ browserSupport:
   <input bind:group={radio} type="radio" name="theme-buttons" class="btn theme-controller join-item" aria-label="Aqua" value="aqua"/>
 </div>
 
-```~html
+```html
 <div class="$$join $$join-vertical">
   <input
     type="radio"
@@ -319,7 +319,7 @@ browserSupport:
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown mb-72">
   <div tabindex="0" role="button" class="$$btn m-1">
     Theme
@@ -376,4 +376,3 @@ browserSupport:
   </ul>
 </div>
 ```
-

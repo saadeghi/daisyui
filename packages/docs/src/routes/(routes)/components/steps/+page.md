@@ -43,7 +43,7 @@ classnames:
   <li class="step">Receive Product</li>
 </ul>
 
-```~html
+```html
 <ul class="$$steps">
   <li class="$$step $$step-primary">Register</li>
   <li class="$$step $$step-primary">Choose plan</li>
@@ -61,7 +61,7 @@ classnames:
   <li class="step">Receive Product</li>
 </ul>
 
-```~html
+```html
 <ul class="$$steps $$steps-vertical">
   <li class="$$step $$step-primary">Register</li>
   <li class="$$step $$step-primary">Choose plan</li>
@@ -79,7 +79,7 @@ classnames:
   <li class="step">Receive Product</li>
 </ul>
 
-```~html
+```html
 <ul class="$$steps $$steps-vertical lg:$$steps-horizontal">
   <li class="$$step $$step-primary">Register</li>
   <li class="$$step $$step-primary">Choose plan</li>
@@ -100,7 +100,7 @@ classnames:
   <li data-content="●" class="step step-neutral">Step 7</li>
 </ul>
 
-```~html
+```html
 <ul class="$$steps">
   <li data-content="?" class="$$step $$step-neutral">Step 1</li>
   <li data-content="!" class="$$step $$step-neutral">Step 2</li>
@@ -121,7 +121,7 @@ classnames:
   <li data-content="?" class="step step-error">Sit on toilet</li>
 </ul>
 
-```~html
+```html
 <ul class="$$steps">
   <li class="$$step $$step-info">Fly to moon</li>
   <li class="$$step $$step-info">Shrink the moon</li>
@@ -161,7 +161,7 @@ classnames:
   </ul>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <ul class="$$steps">
     <li class="$$step">start</li>
@@ -191,4 +191,3 @@ classnames:
   </ul>
 </div>
 ```
-

@@ -28,7 +28,7 @@ classnames:
   <button class="join-item btn">4</button>
 </div>
 
-```~html
+```html
 <div class="$$join">
   <button class="$$join-item $$btn">1</button>
   <button class="$$join-item $$btn $$btn-active">2</button>
@@ -66,7 +66,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$join">
   <button class="$$join-item $$btn $$btn-xs">1</button>
   <button class="$$join-item $$btn $$btn-xs $$btn-active">2</button>
@@ -103,7 +103,7 @@ classnames:
   <button class="join-item btn">100</button>
 </div>
 
-```~html
+```html
 <div class="$$join">
   <button class="$$join-item $$btn">1</button>
   <button class="$$join-item $$btn">2</button>
@@ -121,7 +121,7 @@ classnames:
   <button class="join-item btn">»</button>
 </div>
 
-```~html
+```html
 <div class="$$join">
   <button class="$$join-item $$btn">«</button>
   <button class="$$join-item $$btn">Page 22</button>
@@ -136,7 +136,7 @@ classnames:
   <button class="join-item btn btn-outline">Next</button>
 </div>
 
-```~html
+```html
 <div class="$$join grid grid-cols-2">
   <button class="$$join-item $$btn $$btn-outline">Previous page</button>
   <button class="$$join-item $$btn $$btn-outline">Next</button>
@@ -152,7 +152,7 @@ classnames:
   <input class="join-item btn btn-square" type="radio" name="options" aria-label="4" />
 </div>
 
-```~html
+```html
 <div class="$$join">
   <input
     class="$$join-item $$btn $$btn-square"
@@ -165,4 +165,3 @@ classnames:
   <input class="$$join-item $$btn $$btn-square" type="radio" name="options" aria-label="4" />
 </div>
 ```
-

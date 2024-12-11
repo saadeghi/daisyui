@@ -53,7 +53,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure>
     <img
@@ -83,7 +83,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card $$card-compact bg-base-100 w-96 shadow-xl">
   <figure>
     <img
@@ -117,7 +117,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure>
     <img
@@ -148,7 +148,7 @@ classnames:
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
 </div>
 
-```~html
+```html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <div class="$$card-body">
     <h2 class="$$card-title">Shoes!</h2>
@@ -177,7 +177,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <figure class="px-10 pt-10">
     <img
@@ -208,7 +208,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-base-100 image-full w-96 shadow-xl">
   <figure>
     <img
@@ -237,7 +237,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <div class="$$card-body">
     <h2 class="$$card-title">Card title!</h2>
@@ -261,7 +261,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-primary text-primary-content w-96">
   <div class="$$card-body">
     <h2 class="$$card-title">Card title!</h2>
@@ -286,7 +286,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-neutral text-neutral-content w-96">
   <div class="$$card-body items-center text-center">
     <h2 class="$$card-title">Cookies!</h2>
@@ -312,7 +312,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card bg-base-100 w-96 shadow-xl">
   <div class="$$card-body">
     <div class="$$card-actions justify-end">
@@ -349,7 +349,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card glass w-96">
   <figure>
     <img
@@ -379,7 +379,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card $$card-side bg-base-100 shadow-xl">
   <figure>
     <img
@@ -409,7 +409,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$card lg:$$card-side bg-base-100 shadow-xl">
   <figure>
     <img
@@ -425,4 +425,3 @@ classnames:
   </div>
 </div>
 ```
-

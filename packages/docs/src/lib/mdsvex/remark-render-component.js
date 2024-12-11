@@ -27,16 +27,11 @@ function createComponent(headingNode) {
 
 // Helper to check if a code block belongs to a component
 function isComponentCode(node) {
-  return node.type === "code" && node.lang && node.lang.startsWith("~")
+  return (node.type === "code" && node.lang && node.lang === "html") || node.lang === "jsx"
 }
 
 // Process a node for the current component
 function processComponentNode(node, component) {
-  // Clean up lang by removing ~ if it exists
-  if (node.type === "code" && node.lang.startsWith("~")) {
-    node.lang = node.lang.slice(1)
-  }
-
   component.nodes.push(node)
 
   if (node.type === "heading" && node.depth === 4) {
@@ -123,14 +118,12 @@ export function remarkRenderComponent() {
         return
       }
 
-      // Only process nodes marked with ~ for code blocks
+      // Only process html and jsx code blocks
       if (isComponentCode(node)) {
         componentNodes.add(node)
-        if (node.lang.slice(1) === "html" && !currentComponent.htmlCode) {
-          node.lang = node.lang.slice(1)
+        if (node.lang === "html" && !currentComponent.htmlCode) {
           processComponentNode(node, currentComponent)
-        } else if (node.lang.slice(1) === "jsx" && !currentComponent.jsxCode) {
-          node.lang = node.lang.slice(1)
+        } else if (node.lang === "jsx" && !currentComponent.jsxCode) {
           processComponentNode(node, currentComponent)
           // Remove the JSX node from the tree immediately
           if (parent && index !== null) {

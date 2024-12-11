@@ -51,7 +51,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$chat $$chat-start">
   <div class="$$chat-bubble">
     It's over Anakin,
@@ -93,7 +93,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$chat $$chat-start">
   <div class="$$chat-image $$avatar">
     <div class="w-10 rounded-full">
@@ -161,7 +161,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$chat $$chat-start">
   <div class="$$chat-image avatar">
     <div class="w-10 rounded-full">
@@ -219,7 +219,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$chat $$chat-start">
   <div class="$$chat-header">
     Obi-Wan Kenobi
@@ -264,7 +264,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$chat $$chat-start">
   <div class="$$chat-bubble $$chat-bubble-primary">What kind of nonsense is this</div>
 </div>
@@ -291,4 +291,3 @@ classnames:
   <div class="$$chat-bubble $$chat-bubble-error">It's never happened before.</div>
 </div>
 ```
-

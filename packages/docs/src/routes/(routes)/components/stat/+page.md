@@ -39,7 +39,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stats shadow">
   <div class="$$stat">
     <div class="$$stat-title">Total Page Views</div>
@@ -82,7 +82,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stats shadow">
   <div class="$$stat">
     <div class="$$stat-figure text-primary">
@@ -166,7 +166,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stats shadow">
   <div class="$$stat">
     <div class="$$stat-figure text-secondary">
@@ -247,7 +247,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stats shadow">
   <div class="$$stat place-items-center">
     <div class="$$stat-title">Downloads</div>
@@ -289,7 +289,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stats $$stats-vertical shadow">
   <div class="$$stat">
     <div class="$$stat-title">Downloads</div>
@@ -331,7 +331,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stats $$stats-vertical lg:$$stats-horizontal shadow">
   <div class="$$stat">
     <div class="$$stat-title">Downloads</div>
@@ -373,7 +373,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$stats bg-primary text-primary-content">
   <div class="$$stat">
     <div class="$$stat-title">Account balance</div>
@@ -393,4 +393,3 @@ classnames:
   </div>
 </div>
 ```
-

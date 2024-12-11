@@ -34,7 +34,7 @@ classnames:
   <div class="swap-off">OFF</div>
 </label>
 
-```~html
+```html
 <label class="$$swap">
   <input type="checkbox" />
   <div class="$$swap-on">ON</div>
@@ -50,7 +50,7 @@ classnames:
   <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z"/></svg>
 </label>
 
-```~html
+```html
 <label class="$$swap">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" />
@@ -87,7 +87,7 @@ classnames:
   <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
 </label>
 
-```~html
+```html
 <label class="$$swap swap-rotate">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" />
@@ -120,7 +120,7 @@ classnames:
   <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
 </label>
 
-```~html
+```html
 <label class="$$btn $$btn-circle $$swap $$swap-rotate">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" />
@@ -156,7 +156,7 @@ classnames:
   <div class="swap-off">😇</div>
 </label>
 
-```~html
+```html
 <label class="$$swap $$swap-flip text-9xl">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" />
@@ -179,7 +179,7 @@ classnames:
   <div class="swap-off">😭</div>
 </div>
 
-```~html
+```html
 <label class="$$swap text-6xl">
   <div class="$$swap-on">🥵</div>
   <div class="$$swap-off">🥶</div>
@@ -189,4 +189,3 @@ classnames:
   <div class="$$swap-off">😭</div>
 </label>
 ```
-

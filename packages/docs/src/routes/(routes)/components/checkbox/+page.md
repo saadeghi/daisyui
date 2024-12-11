@@ -42,7 +42,7 @@ classnames:
 ### ~Checkbox
 <input type="checkbox" checked="checked" class="checkbox" />
 
-```~html
+```html
 <input type="checkbox" checked="checked" class="$$checkbox" />
 ```
 
@@ -55,7 +55,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
@@ -73,7 +73,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
@@ -91,7 +91,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
@@ -109,7 +109,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
@@ -127,7 +127,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
@@ -145,7 +145,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
@@ -163,7 +163,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
@@ -181,7 +181,7 @@ classnames:
   </label>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$cursor-pointer $$label">
     <span class="$$label-text">Remember me</span>
@@ -199,7 +199,7 @@ classnames:
   <input type="checkbox" checked="checked" class="checkbox checkbox-lg" />
 </div>
 
-```~html
+```html
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-xs" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-sm" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-md" />
@@ -210,7 +210,7 @@ classnames:
 ### ~Disabled
 <input type="checkbox" disabled="disabled" class="checkbox" />
 
-```~html
+```html
 <input type="checkbox" class="$$checkbox" disabled />
 ```
 
@@ -218,7 +218,7 @@ classnames:
 ### ~Disabled and checked
 <input type="checkbox" disabled="disabled" class="checkbox" checked="checked" />
 
-```~html
+```html
 <input type="checkbox" class="$$checkbox" disabled checked="checked" />
 ```
 
@@ -226,7 +226,7 @@ classnames:
 ### ~Indeterminate
 <input type="checkbox" class="checkbox" bind:indeterminate onclick={(e)=>{e.preventDefault()}} />
 
-```~html
+```html
 <!-- You can make a checkbox indeterminate using JS -->
 <script>
   document.getElementById("my-checkbox").indeterminate = true
@@ -239,7 +239,7 @@ classnames:
 <input type="checkbox" checked="checked" class="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:var(--color-indigo-600)] [--chkfg:orange]" />
 <input type="checkbox" checked="checked" class="checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" />
 
-```~html
+```html
 <input
   type="checkbox"
   checked="checked"
@@ -249,4 +249,3 @@ classnames:
   checked="checked"
   class="$$checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" />
 ```
-

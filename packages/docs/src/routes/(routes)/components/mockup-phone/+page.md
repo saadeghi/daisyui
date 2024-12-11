@@ -25,7 +25,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$mockup-phone">
   <div class="$$camera"></div>
   <div class="$$display">
@@ -43,7 +43,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$mockup-phone border-primary">
   <div class="$$camera"></div>
   <div class="$$display">
@@ -51,4 +51,3 @@ classnames:
   </div>
 </div>
 ```
-

@@ -82,7 +82,7 @@ const rehypePlugins = [
         tagName: "span",
         properties: {
           className: [
-            "bg-base-100 hover:bg-primary/10 size-[1em] rounded-sm border border-primary/5 hover:border-primary/10 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200 align-text-bottom me-3",
+            "bg-base-100 hover:bg-primary/10 size-[1em] text-base-content/50 hover:text-base-content rounded-sm border border-primary/5 hover:border-primary/10 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200 align-text-bottom me-3",
           ],
         },
         children: [

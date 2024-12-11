@@ -34,7 +34,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast">
   <div class="$$alert $$alert-info">
     <span>New message arrived.</span>
@@ -55,7 +55,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-top $$toast-start">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -79,7 +79,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-top $$toast-center">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -103,7 +103,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-top $$toast-end">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -127,7 +127,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-start $$toast-middle">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -151,7 +151,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-center $$toast-middle">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -175,7 +175,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-end $$toast-middle">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -199,7 +199,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-start">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -223,7 +223,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-center">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -247,7 +247,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$toast $$toast-end">
   <div class="$$alert $$alert-info">
     <span>New mail arrived.</span>
@@ -257,4 +257,3 @@ classnames:
   </div>
 </div>
 ```
-

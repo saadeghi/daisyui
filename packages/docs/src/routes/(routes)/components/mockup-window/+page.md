@@ -17,7 +17,7 @@ classnames:
   <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
 </div>
 
-```~html
+```html
 <div class="$$mockup-window border-base-300 border">
   <div class="border-base-300 flex justify-center border-t px-4 py-16">Hello!</div>
 </div>
@@ -29,9 +29,8 @@ classnames:
   <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
 </div>
 
-```~html
+```html
 <div class="$$mockup-window bg-base-300 border">
   <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
 </div>
 ```
-

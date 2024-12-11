@@ -52,7 +52,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel rounded-box">
   <div class="$$carousel-item">
     <img
@@ -118,7 +118,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel $$carousel-center rounded-box">
   <div class="$$carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Pizza" />
@@ -178,7 +178,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel $$carousel-end rounded-box">
   <div class="$$carousel-item">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Drink" />
@@ -238,7 +238,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel rounded-box w-64">
   <div class="$$carousel-item w-full">
     <img
@@ -311,7 +311,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel $$carousel-vertical rounded-box h-96">
   <div class="$$carousel-item h-full">
     <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" />
@@ -363,7 +363,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel rounded-box w-96">
   <div class="$$carousel-item w-1/2">
     <img
@@ -429,7 +429,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel $$carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4">
   <div class="$$carousel-item">
     <img
@@ -494,7 +494,7 @@ classnames:
   <a href="#item4" class="btn btn-xs">4</a>
 </div>
 
-```~html
+```html
 <div class="$$carousel w-full">
   <div id="item1" class="$$carousel-item w-full">
     <img
@@ -560,7 +560,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$carousel w-full">
   <div id="slide1" class="$$carousel-item relative w-full">
     <img
@@ -600,4 +600,3 @@ classnames:
   </div>
 </div>
 ```
-

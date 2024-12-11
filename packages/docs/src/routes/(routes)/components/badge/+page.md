@@ -52,7 +52,7 @@ classnames:
 ### ~Badge
 <span class="badge">Badge</span>
 
-```~html
+```html
 <span class="$$badge">Badge</span>
 ```
 
@@ -65,7 +65,7 @@ classnames:
 <div class="badge badge-accent">accent</div>
 <div class="badge badge-ghost">ghost</div>
 
-```~html
+```html
 <div class="$$badge">default</div>
 <div class="$$badge $$badge-neutral">neutral</div>
 <div class="$$badge $$badge-primary">primary</div>
@@ -81,7 +81,7 @@ classnames:
 <div class="badge badge-secondary badge-outline">secondary</div>
 <div class="badge badge-accent badge-outline">accent</div>
 
-```~html
+```html
 <div class="$$badge $$badge-outline">default</div>
 <div class="$$badge $$badge-primary $$badge-outline">primary</div>
 <div class="$$badge $$badge-secondary $$badge-outline">secondary</div>
@@ -95,7 +95,7 @@ classnames:
 <div class="badge badge-sm">987,654</div>
 <div class="badge badge-xs">987,654</div>
 
-```~html
+```html
 <div class="$$badge $$badge-lg">987,654</div>
 <div class="$$badge $$badge-md">987,654</div>
 <div class="$$badge $$badge-sm">987,654</div>
@@ -109,7 +109,7 @@ classnames:
 <div class="badge badge-primary badge-sm"></div>
 <div class="badge badge-primary badge-xs"></div>
 
-```~html
+```html
 <div class="$$badge $$badge-primary $$badge-lg"></div>
 <div class="$$badge $$badge-primary $$badge-md"></div>
 <div class="$$badge $$badge-primary $$badge-sm"></div>
@@ -135,7 +135,7 @@ classnames:
   error
 </div>
 
-```~html
+```html
 <div class="$$badge $$badge-info gap-2">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +213,7 @@ classnames:
   <span class="badge badge-xs">NEW</span>
 </h5>
 
-```~html
+```html
 <h2 class="text-xl">
   Heading
   <span class="badge badge-lg">NEW</span>
@@ -243,7 +243,7 @@ classnames:
   <div class="badge badge-secondary">+99</div>
 </button>
 
-```~html
+```html
 <button class="$$btn">
   Inbox
   <div class="$$badge">+99</div>
@@ -253,4 +253,3 @@ classnames:
   <div class="$$badge $$badge-secondary">+99</div>
 </button>
 ```
-

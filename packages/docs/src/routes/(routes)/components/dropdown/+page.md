@@ -47,7 +47,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </details>
 
-```~html
+```html
 <details class="$$dropdown">
   <summary class="btn m-1">open or close</summary>
   <ul class="$$menu $$dropdown-content bg-base-100 $$rounded-box z-1 w-52 p-2 shadow">
@@ -79,7 +79,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </div>
 </div>
 
-```~html
+```html
 <div class="$$dropdown">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -101,7 +101,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -121,7 +121,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-top">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -141,7 +141,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-top $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -161,7 +161,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-bottom">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -181,7 +181,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-bottom $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -201,7 +201,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-left">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -221,7 +221,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-left $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -241,7 +241,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-right">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -261,7 +261,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-right $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -283,7 +283,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-hover">
   <div tabindex="0" role="button" class="$$btn m-1">Hover</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -305,7 +305,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </ul>
 </div>
 
-```~html
+```html
 <div class="$$dropdown $$dropdown-open">
   <div tabindex="0" role="button" class="$$btn m-1">Button</div>
   <ul tabindex="0" class="$$dropdown-content $$menu bg-base-100 rounded-box z-1 w-52 p-2 shadow">
@@ -329,7 +329,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </div>
 </div>
 
-```~html
+```html
 <div class="$$dropdown">
   <div tabindex="0" role="button" class="$$btn m-1">Click</div>
   <div
@@ -363,7 +363,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </div>
 </div>
 
-```~html
+```html
 <div class="$$navbar bg-base-300 rounded-box">
   <div class="flex-1 px-2 lg:flex-none">
     <a class="text-lg font-bold">daisyUI</a>
@@ -402,7 +402,7 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
   </div>
 </div>
 
-```~html
+```html
 A normal text and a helper dropdown
 <div class="$$dropdown $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn $$btn-circle $$btn-ghost $$btn-xs text-info">
@@ -429,4 +429,3 @@ A normal text and a helper dropdown
   </div>
 </div>
 ```
-

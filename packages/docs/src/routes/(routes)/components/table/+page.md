@@ -64,7 +64,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -138,7 +138,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -212,7 +212,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -286,7 +286,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <table class="$$table $$table-zebra">
     <!-- head -->
@@ -472,7 +472,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <table class="$$table">
     <!-- head -->
@@ -844,7 +844,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <table class="$$table $$table-xs">
     <thead>
@@ -1220,7 +1220,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="h-96 overflow-x-auto">
   <table class="$$table $$table-pin-rows">
     <thead>
@@ -1618,7 +1618,7 @@ classnames:
   </table>
 </div>
 
-```~html
+```html
 <div class="overflow-x-auto">
   <table class="$$table $$table-xs $$table-pin-rows $$table-pin-cols">
     <thead>
@@ -1850,4 +1850,3 @@ classnames:
   </table>
 </div>
 ```
-

@@ -67,7 +67,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$drawer">
   <input id="my-drawer" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content">
@@ -103,7 +103,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$drawer lg:$$drawer-open">
   <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content flex flex-col items-center justify-center">
@@ -155,7 +155,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$drawer">
   <input id="my-drawer-3" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content flex flex-col">
@@ -215,7 +215,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$drawer $$drawer-end">
   <input id="my-drawer-4" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content">
@@ -232,4 +232,3 @@ classnames:
   </div>
 </div>
 ```
-

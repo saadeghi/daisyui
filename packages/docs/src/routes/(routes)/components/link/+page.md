@@ -35,7 +35,7 @@ classnames:
 ### ~Link
 <button class="link">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link">I'm a simple link</a>
 ```
 
@@ -47,7 +47,7 @@ classnames:
   <button class="link">normal link</button> again.
 </p>
 
-```~html
+```html
 <p>
   Tailwind CSS resets the style of links by default.
   <br />
@@ -61,7 +61,7 @@ classnames:
 ### ~Primary color
 <button class="link link-primary">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-primary">I'm a simple link</a>
 ```
 
@@ -69,7 +69,7 @@ classnames:
 ### ~Secondary color
 <button class="link link-secondary">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-secondary">I'm a simple link</a>
 ```
 
@@ -77,7 +77,7 @@ classnames:
 ### ~Accent color
 <button class="link link-accent">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-accent">I'm a simple link</a>
 ```
 
@@ -85,7 +85,7 @@ classnames:
 ### ~Neutral color
 <button class="link link-neutral">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-neutral">I'm a simple link</a>
 ```
 
@@ -93,7 +93,7 @@ classnames:
 ### ~Success color
 <button class="link link-success">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-success">I'm a simple link</a>
 ```
 
@@ -101,7 +101,7 @@ classnames:
 ### ~Info color
 <button class="link link-info">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-info">I'm a simple link</a>
 ```
 
@@ -109,7 +109,7 @@ classnames:
 ### ~Warning color
 <button class="link link-warning">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-warning">I'm a simple link</a>
 ```
 
@@ -117,7 +117,7 @@ classnames:
 ### ~Error color
 <button class="link link-error">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-error">I'm a simple link</a>
 ```
 
@@ -125,7 +125,6 @@ classnames:
 ### ~Show underline only on hover
 <button class="link link-hover">I'm a simple link</button>
 
-```~html
+```html
 <a class="$$link $$link-hover">I'm a simple link</a>
 ```
-

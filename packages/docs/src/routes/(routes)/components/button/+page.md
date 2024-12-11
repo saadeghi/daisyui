@@ -66,7 +66,7 @@ classnames:
 ### ~Button
 <button class="btn">Button</button>
 
-```~html
+```html
 <button class="$$btn">Button</button>
 ```
 
@@ -80,7 +80,7 @@ classnames:
 <button class="btn btn-ghost">Ghost</button>
 <button class="btn btn-link">Link</button>
 
-```~html
+```html
 <button class="$$btn">Button</button>
 <button class="$$btn $$btn-neutral">Neutral</button>
 <button class="$$btn $$btn-primary">Primary</button>
@@ -100,7 +100,7 @@ classnames:
 <button class="btn btn-active btn-ghost">Ghost</button>
 <button class="btn btn-active btn-link">Link</button>
 
-```~html
+```html
 <button class="$$btn $$btn-active">Default</button>
 <button class="$$btn $$btn-active $$btn-neutral">Neutral</button>
 <button class="$$btn $$btn-active $$btn-primary">Primary</button>
@@ -117,7 +117,7 @@ classnames:
 <button class="btn btn-warning">Warning</button>
 <button class="btn btn-error">Error</button>
 
-```~html
+```html
 <button class="$$btn $$btn-info">Info</button>
 <button class="$$btn $$btn-success">Success</button>
 <button class="$$btn $$btn-warning">Warning</button>
@@ -131,7 +131,7 @@ classnames:
 <button class="btn btn-outline btn-secondary">Secondary</button>
 <button class="btn btn-outline btn-accent">Accent</button>
 
-```~html
+```html
 <button class="$$btn $$btn-outline">Default</button>
 <button class="$$btn $$btn-outline $$btn-primary">Primary</button>
 <button class="$$btn $$btn-outline $$btn-secondary">Secondary</button>
@@ -145,7 +145,7 @@ classnames:
 <button class="btn btn-outline btn-warning">Warning</button>
 <button class="btn btn-outline btn-error">Error</button>
 
-```~html
+```html
 <button class="$$btn $$btn-outline $$btn-info">Info</button>
 <button class="$$btn $$btn-outline $$btn-success">Success</button>
 <button class="$$btn $$btn-outline $$btn-warning">Warning</button>
@@ -159,7 +159,7 @@ classnames:
 <button class="btn btn-sm">Small</button>
 <button class="btn btn-xs">Tiny</button>
 
-```~html
+```html
 <button class="$$btn $$btn-lg">Large</button>
 <button class="$$btn">Normal</button>
 <button class="$$btn $$btn-sm">Small</button>
@@ -172,7 +172,7 @@ classnames:
 
 <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Responsive</button>
 
-```~html
+```html
 <button class="$$btn $$btn-xs sm:$$btn-sm md:$$btn-md lg:$$btn-lg">Responsive</button>
 ```
 
@@ -180,7 +180,7 @@ classnames:
 ### ~Wide button
 <button class="btn btn-wide">Wide</button>
 
-```~html
+```html
 <button class="$$btn $$btn-wide">Wide</button>
 ```
 
@@ -188,7 +188,7 @@ classnames:
 ### ~Glass button
 <button class="btn glass">Glass button</button>
 
-```~html
+```html
 <button class="$$btn $$glass">Glass button</button>
 ```
 
@@ -202,7 +202,7 @@ classnames:
 <input type="checkbox" aria-label="Checkbox" class="btn" />
 <input type="reset" value="Reset" class="btn">
 
-```~html
+```html
 <a role="button" class="$$btn">Link</a>
 <button type="submit" class="$$btn">Button</button>
 <input type="button" value="Input" class="$$btn" />
@@ -217,7 +217,7 @@ classnames:
 <button class="btn" disabled="disabled">Disabled using attribute</button>
 <button class="btn btn-disabled" tabindex="-1" aria-disabled="true">Disabled using class name</button>
 
-```~html
+```html
 <button class="$$btn" disabled="disabled">Disabled using attribute</button>
 <button class="$$btn $$btn-disabled" tabindex="-1" role="button" aria-disabled="true">
   Disabled using class name
@@ -233,7 +233,7 @@ classnames:
   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
 </button>
 
-```~html
+```html
 <button class="$$btn $$btn-square">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@ classnames:
   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
 </button>
 
-```~html
+```html
 <button class="$$btn $$btn-circle">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -311,7 +311,7 @@ classnames:
   Button
 </button>
 
-```~html
+```html
 <button class="$$btn">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -336,7 +336,7 @@ classnames:
   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
 </button>
 
-```~html
+```html
 <button class="$$btn">
   Button
   <svg
@@ -358,7 +358,7 @@ classnames:
 ### ~Button block
 <button class="btn btn-block">block</button>
 
-```~html
+```html
 <button class="$$btn $$btn-block">block</button>
 ```
 
@@ -368,7 +368,7 @@ classnames:
   <span class="loading loading-spinner"></span>
 </button>
 
-```~html
+```html
 <button class="$$btn $$btn-square">
   <span class="$$loading $$loading-spinner"></span>
 </button>
@@ -381,7 +381,7 @@ classnames:
   loading
 </button>
 
-```~html
+```html
 <button class="$$btn">
   <span class="$$loading $$loading-spinner"></span>
   loading
@@ -392,6 +392,6 @@ classnames:
 ### ~Button without click animation
 <button class="btn no-animation">I don't have click animation</button>
 
-```~html
+```html
 <button class="$$btn no-animation">I don't have click animation</button>
 ```

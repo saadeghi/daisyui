@@ -51,7 +51,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -67,7 +67,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu $$menu-vertical lg:$$menu-horizontal bg-base-200 $$rounded-box">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -95,7 +95,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box">
   <li>
     <a>
@@ -168,7 +168,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box">
   <li>
     <a>
@@ -241,7 +241,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box">
   <li>
     <a class="tooltip tooltip-right" data-tip="Home">
@@ -314,7 +314,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box mt-6">
   <li>
     <a class="$$tooltip" data-tip="Home">
@@ -386,7 +386,7 @@ classnames:
   <li><button>lg item 2</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu $$menu-xs bg-base-200 $$rounded-box w-56">
   <li><a>xs item 1</a></li>
   <li><a>xs item 2</a></li>
@@ -413,7 +413,7 @@ classnames:
   <li class="disabled"><button>disabled item</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Enabled item</a></li>
   <li class="$$disabled"><a>disabled item</a></li>
@@ -444,7 +444,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li>
     <a>
@@ -525,7 +525,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 lg:$$menu-horizontal $$rounded-box">
   <li>
     <a>
@@ -580,7 +580,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 w-56 [&_li>*]:rounded-none p-0">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -597,7 +597,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li class="$$menu-title">Title</li>
   <li><a>Item 1</a></li>
@@ -619,7 +619,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li>
     <h2 class="$$menu-title">Title</h2>
@@ -653,7 +653,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li>
@@ -699,7 +699,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li>
@@ -749,7 +749,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Item 1</a></li>
   <li>
@@ -835,7 +835,7 @@ classnames:
   </button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu $$menu-xs bg-base-200 $$rounded-lg w-full max-w-xs">
   <li>
     <a>
@@ -1030,7 +1030,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu bg-base-200 w-56">
   <li><a>Item 1</a></li>
   <li><a class="$$active">Item 2</a></li>
@@ -1046,7 +1046,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu $$menu-horizontal bg-base-200">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -1068,7 +1068,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu $$menu-horizontal bg-base-200 $$rounded-box">
   <li><a>Item 1</a></li>
   <li>
@@ -1130,7 +1130,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu xl:$$menu-horizontal bg-base-200 $$rounded-box lg:min-w-max">
   <li>
     <a>Solutions</a>
@@ -1203,7 +1203,7 @@ classnames:
   <li><button>Item 3</button></li>
 </ul>
 
-```~html
+```html
 <ul class="$$menu lg:$$menu-horizontal bg-base-200 $$rounded-box lg:mb-64">
   <li><a>Item 1</a></li>
   <li>
@@ -1227,4 +1227,3 @@ classnames:
   <li><a>Item 3</a></li>
 </ul>
 ```
-

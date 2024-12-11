@@ -84,7 +84,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start">1984</div>
@@ -220,7 +220,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-middle">
@@ -351,7 +351,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -482,7 +482,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -613,7 +613,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -729,7 +729,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -805,7 +805,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start">1984</div>
@@ -941,7 +941,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-middle">
@@ -1072,7 +1072,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1203,7 +1203,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1334,7 +1334,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1450,7 +1450,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-vertical">
   <li>
     <div class="$$timeline-start $$timeline-box">First Macintosh computer</div>
@@ -1526,7 +1526,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-vertical lg:$$timeline-horizontal">
   <li>
     <div class="$$timeline-start">1984</div>
@@ -1682,7 +1682,7 @@ classnames:
   </li>
 </ul>
 
-```~html
+```html
 <ul class="$$timeline $$timeline-snap-icon max-md:$$timeline-compact $$timeline-vertical">
   <li>
     <div class="$$timeline-middle">
@@ -1805,4 +1805,3 @@ classnames:
   </li>
 </ul>
 ```
-

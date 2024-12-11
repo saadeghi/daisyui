@@ -41,9 +41,9 @@
   bind:this={wrapper}
 >
   {#if title}
-    <div class="pb-2 text-sm font-bold flex gap-2 items-center">
+    <div class="pb-3 text-sm font-bold flex gap-2 items-center">
       <a
-        class="bg-base-100 hover:bg-primary/10 size-6 rounded-sm border border-primary/5 hover:border-primary/10 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200"
+        class="bg-base-100 hover:bg-primary/10 size-6 text-base-content/50 hover:text-base-content rounded-sm border border-primary/5 hover:border-primary/10 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200"
         href={`#${titleStr}`}
       >
         <svg
@@ -59,7 +59,9 @@
           />
         </svg>
       </a>
-      <h4 class="component-preview-title text-lg font-semibold mt-2 mb-1">{$t(title)}</h4>
+      <h4 class="component-preview-title text-lg font-semibold mt-2 mb-1">
+        {$t(title)}
+      </h4>
     </div>
   {/if}
   {#if desc}

@@ -26,7 +26,7 @@ classnames:
   <button class="btn join-item">Button</button>
 </div>
 
-```~html
+```html
 <div class="$$join">
   <button class="$$btn $$join-item">Button</button>
   <button class="$$btn $$join-item">Button</button>
@@ -42,7 +42,7 @@ classnames:
   <button class="btn join-item">Button</button>
 </div>
 
-```~html
+```html
 <div class="$$join $$join-vertical">
   <button class="$$btn $$join-item">Button</button>
   <button class="$$btn $$join-item">Button</button>
@@ -58,7 +58,7 @@ classnames:
   <button class="btn join-item">Button</button>
 </div>
 
-```~html
+```html
 <div class="$$join $$join-vertical lg:$$join-horizontal">
   <button class="$$btn $$join-item">Button</button>
   <button class="$$btn $$join-item">Button</button>
@@ -88,7 +88,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$join">
   <div>
     <div>
@@ -115,7 +115,7 @@ classnames:
   <button class="btn join-item rounded-r-full">Subscribe</button>
 </div>
 
-```~html
+```html
 <div class="$$join">
   <input class="$$input $$input-bordered $$join-item" placeholder="Email" />
   <button class="$$btn $$join-item rounded-r-full">Subscribe</button>
@@ -130,11 +130,10 @@ classnames:
   <input class="join-item btn" type="radio" name="options" aria-label="Radio 3" />
 </div>
 
-```~html
+```html
 <div class="$$join">
   <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 1" />
   <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 2" />
   <input class="$$join-item $$btn" type="radio" name="options" aria-label="Radio 3" />
 </div>
 ```
-

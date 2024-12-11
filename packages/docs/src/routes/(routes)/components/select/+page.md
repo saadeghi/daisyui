@@ -51,7 +51,7 @@ classnames:
   <option>Maggie</option>
 </select>
 
-```~html
+```html
 <select class="$$select w-full max-w-xs">
   <option disabled selected>Pick your favorite Simpson</option>
   <option>Homer</option>
@@ -70,7 +70,7 @@ classnames:
   <option>Greedo</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-bordered w-full max-w-xs">
   <option disabled selected>Who shot first?</option>
   <option>Han Solo</option>
@@ -87,7 +87,7 @@ classnames:
   <option>React</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-ghost w-full max-w-xs">
   <option disabled selected>Pick the best JS framework</option>
   <option>Svelte</option>
@@ -117,7 +117,7 @@ classnames:
   </div>
 </label>
 
-```~html
+```html
 <label class="$$form-control w-full max-w-xs">
   <div class="$$label">
     <span class="$$label-text">Pick the best fantasy franchise</span>
@@ -148,7 +148,7 @@ classnames:
   <option>Walking Dead</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-primary w-full max-w-xs">
   <option disabled selected>What is the best TV show?</option>
   <option>Game of Thrones</option>
@@ -172,7 +172,7 @@ classnames:
   <option>Python</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-secondary w-full max-w-xs">
   <option disabled selected>Pick your favorite language</option>
   <option>Java</option>
@@ -195,7 +195,7 @@ classnames:
   <option>Light mode</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-accent w-full max-w-xs">
   <option disabled selected>Dark mode or light mode?</option>
   <option>Auto</option>
@@ -213,7 +213,7 @@ classnames:
   <option>Italian</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-info w-full max-w-xs">
   <option disabled selected>Select language</option>
   <option>English</option>
@@ -235,7 +235,7 @@ classnames:
   <option>Jojo's Bizarre Adventure</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-success w-full max-w-xs">
   <option disabled selected>Pick your favorite anime</option>
   <option>One Piece</option>
@@ -259,7 +259,7 @@ classnames:
   <option>Hawaiian</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-warning w-full max-w-xs">
   <option disabled selected>Pick a pizza</option>
   <option>Cheese</option>
@@ -280,7 +280,7 @@ classnames:
   <option>Sanity</option>
 </select>
 
-```~html
+```html
 <select class="$$select $$select-error w-full max-w-xs">
   <option disabled selected>What is the best headless CMS</option>
   <option>Strapi</option>
@@ -319,7 +319,7 @@ classnames:
   </select>
 </div>
 
-```~html
+```html
 <!-- lg -->
 <select class="$$select $$select-bordered $$select-lg w-full max-w-xs">
   <option disabled selected>Large</option>
@@ -356,9 +356,8 @@ classnames:
   <option>You can't touch this</option>
 </select>
 
-```~html
+```html
 <select class="$$select w-full max-w-xs" disabled>
   <option>You can't touch this</option>
 </select>
 ```
-

@@ -39,7 +39,7 @@ classnames:
   <span>12 unread messages. Tap to see.</span>
 </div>
 
-```~html
+```html
 <div role="alert" class="$$alert">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ classnames:
   <span>New software update available.</span>
 </div>
 
-```~html
+```html
 <div role="alert" class="$$alert $$alert-info">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ classnames:
   <span>Your purchase has been confirmed!</span>
 </div>
 
-```~html
+```html
 <div role="alert" class="$$alert $$alert-success">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ classnames:
   <span>Warning: Invalid email address!</span>
 </div>
 
-```~html
+```html
 <div role="alert" class="$$alert $$alert-warning">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ classnames:
   <span>Error! Task failed successfully.</span>
 </div>
 
-```~html
+```html
 <div role="alert" class="$$alert $$alert-error">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div role="alert" class="$$alert">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@ classnames:
   <button class="btn btn-sm">See</button>
 </div>
 
-```~html
+```html
 <div role="alert" class="$$alert shadow-lg">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -215,4 +215,3 @@ classnames:
   <button class="$$btn $$btn-sm">See</button>
 </div>
 ```
-

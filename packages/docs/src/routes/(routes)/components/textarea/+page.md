@@ -44,7 +44,7 @@ classnames:
 ### ~Textarea
 <textarea class="textarea" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea" placeholder="Bio"></textarea>
 ```
 
@@ -52,7 +52,7 @@ classnames:
 ### ~Textarea with border
 <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-bordered" placeholder="Bio"></textarea>
 ```
 
@@ -60,7 +60,7 @@ classnames:
 ### ~Ghost (no background)
 <textarea class="textarea textarea-ghost" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-ghost" placeholder="Bio"></textarea>
 ```
 
@@ -78,7 +78,7 @@ classnames:
   </div>
 </label>
 
-```~html
+```html
 <label class="$$form-control">
   <div class="$$label">
     <span class="$$label-text">Your bio</span>
@@ -96,7 +96,7 @@ classnames:
 ### ~Primary color
 <textarea class="textarea textarea-primary" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-primary" placeholder="Bio"></textarea>
 ```
 
@@ -104,7 +104,7 @@ classnames:
 ### ~Secondary color
 <textarea class="textarea textarea-secondary" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-secondary" placeholder="Bio"></textarea>
 ```
 
@@ -112,7 +112,7 @@ classnames:
 ### ~Accent color
 <textarea class="textarea textarea-accent" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-accent" placeholder="Bio"></textarea>
 ```
 
@@ -120,7 +120,7 @@ classnames:
 ### ~Info color
 <textarea class="textarea textarea-info" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-info" placeholder="Bio"></textarea>
 ```
 
@@ -128,7 +128,7 @@ classnames:
 ### ~Success color
 <textarea class="textarea textarea-success" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-success" placeholder="Bio"></textarea>
 ```
 
@@ -136,7 +136,7 @@ classnames:
 ### ~Warning color
 <textarea class="textarea textarea-warning" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-warning" placeholder="Bio"></textarea>
 ```
 
@@ -144,7 +144,7 @@ classnames:
 ### ~Error color
 <textarea class="textarea textarea-error" placeholder="Bio"></textarea>
 
-```~html
+```html
 <textarea class="$$textarea $$textarea-error" placeholder="Bio"></textarea>
 ```
 
@@ -157,7 +157,7 @@ classnames:
   <textarea placeholder="Bio" class="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
 </div>
 
-```~html
+```html
 <!-- xs -->
 <textarea
   placeholder="Bio"
@@ -180,6 +180,6 @@ classnames:
 ### ~Disabled
 <textarea class="textarea" placeholder="Bio" disabled></textarea>
 
-```~html
+```html
 <textarea class="$$textarea" placeholder="Bio" disabled></textarea>
 ```

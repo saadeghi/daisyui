@@ -28,7 +28,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content text-center">
     <div class="max-w-md">
@@ -56,7 +56,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row">
     <img
@@ -87,7 +87,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
     <img
@@ -138,7 +138,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$hero bg-base-200 min-h-screen">
   <div class="$$hero-content flex-col lg:flex-row-reverse">
     <div class="text-center lg:text-left">
@@ -187,7 +187,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div
   class="$$hero min-h-screen"
   style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
@@ -204,7 +204,7 @@ classnames:
   </div>
 </div>
 ```
-```~jsx
+```jsx
 <div
   class="$$hero min-h-screen"
   style={{
@@ -223,4 +223,3 @@ classnames:
   </div>
 </div>
 ```
-

@@ -71,7 +71,7 @@ classnames:
   </div>
 </dialog>
 
-```~html
+```html
 <!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_1.showModal()">open modal</button>
 <dialog id="my_modal_1" class="$$modal">
@@ -87,7 +87,7 @@ classnames:
   </div>
 </dialog>
 ```
-```~jsx
+```jsx
 {/* Open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_1').showModal()}>open modal</button>
 <dialog id="my_modal_1" className="$$modal">
@@ -119,7 +119,7 @@ classnames:
   </form>
 </dialog>
 
-```~html
+```html
 <!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_2.showModal()">open modal</button>
 <dialog id="my_modal_2" class="$$modal">
@@ -132,7 +132,7 @@ classnames:
   </form>
 </dialog>
 ```
-```~jsx
+```jsx
 {/* Open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>open modal</button>
 <dialog id="my_modal_2" className="$$modal">
@@ -160,7 +160,7 @@ classnames:
   </div>
 </dialog>
 
-```~html
+```html
 <!-- You can open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_3.showModal()">open modal</button>
 <dialog id="my_modal_3" class="$$modal">
@@ -173,7 +173,7 @@ classnames:
   </div>
 </dialog>
 ```
-```~jsx
+```jsx
 {/* You can open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_3').showModal()}>open modal</button>
 <dialog id="my_modal_3" className="$$modal">
@@ -206,7 +206,7 @@ classnames:
   </div>
 </dialog>
 
-```~html
+```html
 <!-- You can open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_4.showModal()">open modal</button>
 <dialog id="my_modal_4" class="$$modal">
@@ -222,7 +222,7 @@ classnames:
   </div>
 </dialog>
 ```
-```~jsx
+```jsx
 {/* You can open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_4').showModal()}>open modal</button>
 <dialog id="my_modal_4" className="$$modal">
@@ -257,7 +257,7 @@ classnames:
   </div>
 </dialog>
 
-```~html
+```html
 <!-- Open the modal using ID.showModal() method -->
 <button class="$$btn" onclick="my_modal_5.showModal()">open modal</button>
 <dialog id="my_modal_5" class="$$modal $$modal-bottom sm:$$modal-middle">
@@ -273,7 +273,7 @@ classnames:
   </div>
 </dialog>
 ```
-```~jsx
+```jsx
 {/* Open the modal using document.getElementById('ID').showModal() method */}
 <button className="$$btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
 <dialog id="my_modal_5" className="$$modal modal-bottom sm:$$modal-middle">
@@ -296,7 +296,7 @@ classnames:
 ### ~Modal using label + hidden checkbox
 <label for="my_modal_6" class="btn">open modal</label>
 
-```~html
+```html
 <!-- The button to open modal -->
 <label for="my_modal_6" class="$$btn">open modal</label>
 
@@ -319,7 +319,7 @@ classnames:
 
 <label for="my_modal_7" class="btn">open modal</label>
 
-```~html
+```html
 <!-- The button to open modal -->
 <label for="my_modal_7" class="$$btn">open modal</label>
 
@@ -342,7 +342,7 @@ classnames:
 
 <a href="#my_modal_8" class="btn" rel="external">open modal</a>
 
-```~html
+```html
 <!-- The button to open modal -->
 <a href="#my_modal_8" class="$$btn">open modal</a>
 
@@ -357,4 +357,3 @@ classnames:
   </div>
 </div>
 ```
-

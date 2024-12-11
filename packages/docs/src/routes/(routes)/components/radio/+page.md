@@ -42,7 +42,7 @@ classnames:
 <input type="radio" name="radio-1" class="radio" checked="checked" />
 <input type="radio" name="radio-1" class="radio" />
 
-```~html
+```html
 <input type="radio" name="radio-1" class="$$radio" checked="checked" />
 <input type="radio" name="radio-1" class="$$radio" />
 ```
@@ -52,7 +52,7 @@ classnames:
 <input type="radio" name="radio-2" class="radio radio-primary" checked="checked" />
 <input type="radio" name="radio-2" class="radio radio-primary" />
 
-```~html
+```html
 <input type="radio" name="radio-2" class="$$radio $$radio-primary" checked="checked" />
 <input type="radio" name="radio-2" class="$$radio $$radio-primary" />
 ```
@@ -62,7 +62,7 @@ classnames:
 <input type="radio" name="radio-3" class="radio radio-secondary" checked="checked" />
 <input type="radio" name="radio-3" class="radio radio-secondary" />
 
-```~html
+```html
 <input type="radio" name="radio-3" class="$$radio $$radio-secondary" checked="checked" />
 <input type="radio" name="radio-3" class="$$radio $$radio-secondary" />
 ```
@@ -72,7 +72,7 @@ classnames:
 <input type="radio" name="radio-4" class="radio radio-accent" checked="checked" />
 <input type="radio" name="radio-4" class="radio radio-accent" />
 
-```~html
+```html
 <input type="radio" name="radio-4" class="$$radio $$radio-accent" checked="checked" />
 <input type="radio" name="radio-4" class="$$radio $$radio-accent" />
 ```
@@ -82,7 +82,7 @@ classnames:
 <input type="radio" name="radio-5" class="radio radio-success" checked="checked" />
 <input type="radio" name="radio-5" class="radio radio-success" />
 
-```~html
+```html
 <input type="radio" name="radio-5" class="$$radio $$radio-success" checked="checked" />
 <input type="radio" name="radio-5" class="$$radio $$radio-success" />
 ```
@@ -92,7 +92,7 @@ classnames:
 <input type="radio" name="radio-6" class="radio radio-warning" checked="checked" />
 <input type="radio" name="radio-6" class="radio radio-warning" />
 
-```~html
+```html
 <input type="radio" name="radio-6" class="$$radio $$radio-warning" checked="checked" />
 <input type="radio" name="radio-6" class="$$radio $$radio-warning" />
 ```
@@ -102,7 +102,7 @@ classnames:
 <input type="radio" name="radio-7" class="radio radio-info" checked="checked" />
 <input type="radio" name="radio-7" class="radio radio-info" />
 
-```~html
+```html
 <input type="radio" name="radio-7" class="$$radio $$radio-info" checked="checked" />
 <input type="radio" name="radio-7" class="$$radio $$radio-info" />
 ```
@@ -112,7 +112,7 @@ classnames:
 <input type="radio" name="radio-8" class="radio radio-error" checked="checked" />
 <input type="radio" name="radio-8" class="radio radio-error" />
 
-```~html
+```html
 <input type="radio" name="radio-8" class="$$radio $$radio-error" checked="checked" />
 <input type="radio" name="radio-8" class="$$radio $$radio-error" />
 ```
@@ -122,7 +122,7 @@ classnames:
 <input type="radio" name="radio-9" class="radio" disabled checked="checked" />
 <input type="radio" name="radio-9" class="radio" disabled />
 
-```~html
+```html
 <input type="radio" name="radio-9" class="$$radio" disabled checked="checked" />
 <input type="radio" name="radio-9" class="$$radio" disabled />
 ```
@@ -144,7 +144,7 @@ classnames:
   </div>
 </div>
 
-```~html
+```html
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Red pill</span>
@@ -158,4 +158,3 @@ classnames:
   </label>
 </div>
 ```
-
