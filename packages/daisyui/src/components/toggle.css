@@ -1,22 +1,48 @@
 .toggle {
   border: var(--border) solid currentColor;
-  @apply text-base-content/50 inline-flex shrink-0 cursor-pointer appearance-none align-middle;
+  @apply text-base-content/50 relative inline-grid shrink-0 cursor-pointer appearance-none align-middle select-none;
+  grid-template-columns: 0fr auto 1fr;
   border-radius: calc(var(--radius-selector) + var(--toggle-padding));
   padding: var(--toggle-padding);
   box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent) inset;
-  transition: color 0.3s;
+  transition:
+    color 0.3s,
+    grid-template-columns 0.2s;
   --toggle-padding: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: calc(var(--size) * 1.75);
   height: var(--size);
-  &:before {
-    @apply block h-full grow-0;
-    content: "";
-    transition: flex-grow 0.2s;
-  }
 
-  &:after {
-    @apply rounded-selector relative start-0 block aspect-square h-full bg-current;
+  > * {
+    @apply z-1 col-span-1 col-start-2 row-start-1 h-full cursor-pointer appearance-none bg-transparent p-0.5;
+    transition:
+      opacity 0.2s,
+      rotate 0.4s;
+    border: none;
+    &:focus {
+      @apply outline-hidden;
+    }
+    &:nth-child(2) {
+      @apply text-base-100;
+      rotate: 0deg;
+    }
+    &:nth-child(3) {
+      @apply text-base-100 opacity-0;
+      rotate: -15deg;
+    }
+  }
+  &:has(:checked) {
+    *:nth-child(2) {
+      @apply opacity-0;
+      rotate: 15deg;
+    }
+    *:nth-child(3) {
+      @apply opacity-100;
+      rotate: 0deg;
+    }
+  }
+  &:before {
+    @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
     translate: 0;
     content: "";
     transition:
@@ -31,20 +57,19 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' stitchTiles='stitch'/%3E%3CfeBlend mode='screen'/%3E%3C/filter%3E%3Crect width='1000' height='1000' filter='url(%23noise)' opacity='.1'/%3E%3C/svg%3E");
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &:has(:focus-visible) {
     outline: 2px solid currentColor;
     outline-offset: 2px;
   }
 
   &:checked,
-  &[aria-checked="true"] {
+  &[aria-checked="true"],
+  &:has(> input:checked) {
+    grid-template-columns: 1fr auto 0fr;
     @apply bg-base-100 text-base-content;
 
     &:before {
-      @apply grow;
-    }
-
-    &:after {
       @apply bg-current;
 
       @starting-style {
@@ -54,20 +79,13 @@
   }
 
   &:indeterminate {
-    &:before {
-      @apply grow-0;
-    }
-
-    &:after {
-      @apply start-1/2;
-      translate: -50% 0;
-    }
+    grid-template-columns: 1fr auto 1fr;
   }
 
   &:disabled {
     @apply cursor-not-allowed opacity-30;
 
-    &:after {
+    &:before {
       @apply bg-transparent;
       border: var(--border) solid currentColor;
     }
@@ -126,35 +144,40 @@
 /* responsive */
 
 .toggle-xs {
-  &:is([type="checkbox"]) {
+  &:is([type="checkbox"]),
+  &:has([type="checkbox"]) {
     --toggle-padding: 0.0625rem;
     --size: calc(var(--size-selector, 0.25rem) * 4);
   }
 }
 
 .toggle-sm {
-  &:is([type="checkbox"]) {
+  &:is([type="checkbox"]),
+  &:has([type="checkbox"]) {
     --toggle-padding: 0.125rem;
     --size: calc(var(--size-selector, 0.25rem) * 5);
   }
 }
 
 .toggle-md {
-  &:is([type="checkbox"]) {
+  &:is([type="checkbox"]),
+  &:has([type="checkbox"]) {
     --toggle-padding: 0.1875rem;
     --size: calc(var(--size-selector, 0.25rem) * 6);
   }
 }
 
 .toggle-lg {
-  &:is([type="checkbox"]) {
+  &:is([type="checkbox"]),
+  &:has([type="checkbox"]) {
     --toggle-padding: 0.25rem;
     --size: calc(var(--size-selector, 0.25rem) * 7);
   }
 }
 
 .toggle-xl {
-  &:is([type="checkbox"]) {
+  &:is([type="checkbox"]),
+  &:has([type="checkbox"]) {
     --toggle-padding: 0.3125rem;
     --size: calc(var(--size-selector, 0.25rem) * 8);
   }

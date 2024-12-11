@@ -40,18 +40,20 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-> :INFO: 
->
-> *There are 3 ways to use a modal*  
-> 1 - Using `<dialog>` element: It needs JS to open but it has better accessibility and we can close it using `Esc` key  
-> 2 - Using a hidden `<input type="checkbox">` and `<label>` to check/uncheck the checkbox and open/close the modal  
-> 3 - Using `<a>` anchor links: A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 
-> :INFO: 
->
-> Make sure you're using unique IDs for each modal
+## There are 3 methods to use modals
+1. [Using HTML `<dialog>` element](#method-1-html-dialog-element-recommended)  
+  It needs JS to open but it has better accessibility and we can close it using `Esc` key  
+2. [Using checkbox](#method-2-checkbox-legacy)  
+  A hidden `<input type="checkbox">` to conrol the sate of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
+3. [Using `<a>` anchor links](#method-3-using-anchor-links-legacy)  
+  A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 
-### Method 1: using dialog element <span class="badge badge-success">recommended</span>
+
+## Method 1. HTML dialog element `recommended`
+HTML dialog element is a native way to create modals. It is accessible and we can close the modal using `Esc` key.  
+We can open the modal using JS `ID.showModal()` method and close it using `ID.close()` method.  
+The ID must be unique for each modal.
 
 ### ~Dialog modal
 #### opens on click using ID.showModal() method. can be closed using ID.close() method
@@ -240,7 +242,7 @@ classnames:
 
 
 ### ~Responsive
-#### Modal goes bottom on mobile screen and goes middle on desktop
+#### Modal goes bottom on SM screen size, goes middle on MD screen size
 
 <button class="btn" onclick={() => my_modal_5.showModal()}>open modal</button>
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -290,9 +292,11 @@ classnames:
 ```
 
 
-### Method 2: using a hidden checkbox <span class="badge badge-warning">legacy</span>
+## Method 2. checkbox `legacy`
+A hidden checkbox can control the state of modal and labels can toggle the checkbox so we can open/close the modal.
 
-### ~Modal using label + hidden checkbox
+
+### ~Modal using checkbox
 <label for="my_modal_6" class="btn">open modal</label>
 
 ```html
@@ -334,10 +338,12 @@ classnames:
 ```
 
 
-### Method 3: using anchor links <span class="badge badge-warning">legacy</span>
+### Method 3. using anchor links `legacy`
+A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
+When modal is closed, the page will scroll to the top because of the anchor link.
+Anchor links might not work well on some SPA frameworks. If there are problems, use the other methods
 
 ### ~Modal using anchor link
-#### Anchor links might not work well on some SPA frameworks so if there are problems, use the first example
 
 <a href="#my_modal_8" class="btn" rel="external">open modal</a>
 
