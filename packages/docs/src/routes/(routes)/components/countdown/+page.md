@@ -10,7 +10,6 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
-  import Translate from "$components/Translate.svelte"
 
   import { onMount } from "svelte"
   let counter = 59
@@ -28,7 +27,9 @@ classnames:
   })
 </script>
 
-<Translate text="you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99." />
+> :INFO:
+>
+> you need to change the `--value` CSS variable using JS. Value must be a number between 0 and 99.
 
 ### ~Countdown
 <span class="countdown">

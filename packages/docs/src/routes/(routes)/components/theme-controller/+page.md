@@ -14,14 +14,15 @@ browserSupport:
 
 <script>
   import Component from "$components/Component.svelte"
-  import Translate from "$components/Translate.svelte"
 
   let checkbox = false
   let radio = 'default'
 </script>
 
-<Translate text="Theme Controller changes the theme using CSS only. You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh. <br/>Here's a React example to save checkbox state in local storage:" />
-<a href="https://stackblitz.com/edit/react-checkbox-localstorage?file=src%2FApp.js" rel="nofollow, noreferrer" target="_blank" class="link">Stackblitz</a>
+> :INFO:
+>
+> Theme Controller changes the theme using CSS only. You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh.
+> Here's a React example to save checkbox state in local storage: [Stackblitz](https://stackblitz.com/edit/react-checkbox-localstorage?file=src%2FApp.js)
 
 ### ~Theme Controller using a toggle
 <input type="checkbox" value="synthwave" bind:checked={checkbox} class="toggle theme-controller"/>

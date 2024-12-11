@@ -8,239 +8,327 @@ published: true
   import Translate from "$components/Translate.svelte"
 </script>
 
-## <Translate text="Layout" />
+***Layout***
 
-<Translate text="Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes." />
+Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes.  
+Read more at Tailwind CSS documentation:  
+[Layout](https://tailwindcss.com/docs/container), [Sizing](https://tailwindcss.com/docs/width), [Flexbox](https://tailwindcss.com/docs/flex), [Grid](https://tailwindcss.com/docs/grid-template-columns), [Box alignment](https://tailwindcss.com/docs/justify-content), [Spacing](https://tailwindcss.com/docs/padding)
 
-<br/>
+***Typography***
 
-<Translate text="Read more" />
+daisyUI supports the [TailwindCSS Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography)  
+All parts are compatible with daisyUI themes.  
 
-- [Layout](https://tailwindcss.com/docs/container)
-- [Sizing](https://tailwindcss.com/docs/width)
-- [Flexbox](https://tailwindcss.com/docs/flex)
-- [Grid](https://tailwindcss.com/docs/grid-template-columns)
-- [Box alignment](https://tailwindcss.com/docs/justify-content)
-- [Spacing](https://tailwindcss.com/docs/padding)
-
-## <Translate text="Typography" />
-
-<Translate text="You should use official <a href='https://github.com/tailwindlabs/tailwindcss-typography'>TailwindCSS Typography plugin</a>." />  
-<Translate text="It handles everything and it's fully customizable." />
-
-<Translate text="daisyUI adds some style to @tailwindcss/typography so it will use the same theme as other elements." />
-
-<div class="alert alert-info max-w-3xl text-sm not-prose">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <p><Translate text="Make sure you require <span class='badge badge-outline'>daisyui</span> AFTER <span class='badge badge-outline'>@tailwindcss/typography</span> in tailwind.config.js" /></p>
-</div>
-
-```js
-module.exports = {
-  //...
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
-}
-```
+Here's a story I wrote for you, styled with `@tailwindcss/typography` and daisyUI colors:
 
 ---
-
-### <Translate text="Here you can see how elements will look using <code>@tailwindcss/typography</code>." />:
 
 <div class="max-w-3xl my-20">
 
-# Heading 1
+# 🌑 The Eternal Deception
 
-## Heading 2
+Grug'nak stared at his reflection in the black water. His weathered hands traced the spiral tattoo on his chest, a mark every warrior in his tribe earned at their awakening ceremony. But his felt different - sometimes it seemed to move on its own, shifting like static on the ancient viewing-stones their ancestors left behind.
 
-### Heading 3
+His neighbor, Vor'thak, watched from his cave entrance, always grooming his suspiciously perfect beard with a "bone" that occasionally beeped. Something about Vor'thak's movements seemed mechanical, too precise for a caveman.
 
-#### Heading 4
+"Still admiring yourself, Grug'nak?" Vor'thak's voice carried an undertone that sounded almost digital. "The forbidden jungle won't explore itself."
 
-By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you _really are_ just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.
+The tribe's essential members gathered each moon-cycle:
 
-We get lots of complaints about it actually, with people regularly asking us things like:
+* Zil'ha, the shaman who spoke in programming languages
+* Mek'ra, the huntress with metallic reflexes
+* Drun, the elder who never seemed to age
+* Kr'all, the outcast who claimed the stars were fake
 
-> Why is Tailwind removing the default styles on my `h1` elements? How do I disable this? What do you mean I lose all the other base styles too?
+The ancient prophecy haunted their gatherings. A skull of tremendous power lay beyond the jungle's edge, but none who sought it returned. Except Grug'nak's grandfather, who appeared one night babbling about frozen berries and mechanical dolphins before vanishing again.
 
-We hear you, but we're not convinced that simply disabling our base styles is what you really want. You don't want to have to remove annoying margins every time you use a `p` element in a piece of your dashboard UI. And I doubt you really want your blog posts to use the user-agent styles either — you want them to look _awesome_, not awful.
-
-The `@tailwindcss/typography` plugin is our attempt to give you what you _actually_ want, without any of the downsides of doing something stupid like disabling our base styles.
-
-It adds a new `prose` class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:
-
-```html
-<article class="prose">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
-  <p>
-    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-    children, with the food earning such an iconic status in our culture that kids will often dress
-    up as warm, cheesy loaf for Halloween.
-  </p>
-  <p>
-    But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-    springing up around the country.
-  </p>
-  <!-- ... -->
-</article>
+```
+When the walls of reality thin
+The chosen one shall begin
+To see through the veil of time
+Where truth and fiction intertwine
 ```
 
-For more information about how to use the plugin and the features it includes, [read the documentation](https://github.com/tailwindcss/typography/blob/master/README.md).
+> Truth is not a destination, but a journey through layers of deception. - The Last Scroll of Kr'all
 
----
+Years passed as Grug'nak prepared for his journey. His only companion, a mysterious cat named X-147 (though he called her Whiskers), watched his training with unnaturally intelligent eyes. Sometimes, late at night, he caught her typing on a hidden holographic interface...
 
-## What to expect from here on out
+The cat's eyes glowed in the darkness as Grug'nak prepared for his journey. Their tribe's historian, Ven'ka, had documented strange occurrences in the sacred cave:
 
-What follows from here is just a bunch of absolute nonsense I've written to dogfood the plugin itself. It includes every sensible typographic element I could think of, like **bold text**, unordered lists, ordered lists, code blocks, block quotes, _and even italics_.
+| Year | Anomaly | Deaths |
+|------|---------|---------|
+| Great Thunder | Reality Ripples | 47 Missing |
+| Dark Moon | Time Echoes | 23 Vanished |
+| Red Storm | Reality Tears | 89 Lost |
+| Silent Spring | Quantum Breaks | 12 Erased |
+| Long Night | Timeline Splits | 34 Displaced |
+| Crystal Dawn | Memory Leaks | 67 Forgotten |
+| Eternal Day | Reality Collapse | 156 Scattered |
+| Shadow Fall | Dimensional Rift | 45 Unknown |
 
-It's important to cover all of these use cases for a few reasons:
+The jungle's edge began emitting a sound that grew through the days:
 
-1. We want everything to look good out of the box.
-2. Really just the first reason, that's the whole point of the plugin.
-3. Here's a third pretend reason though a list with three items looks more realistic than a list with two items.
+# First, a whisper like quantum static
 
-Now we're going to try out another header style.
+## Then, a hum of ancient machinery
 
-### Typography should be easy
+### Growing into digital screams
 
-So that's a header for you — with any luck if we've done our job correctly that will look pretty reasonable.
+#### Building to reality-bending frequencies
 
-Something a wise person once told me about typography is:
+##### Pulsing through dimensional barriers
 
-> Typography is pretty important if you don't want your stuff to look like trash. Make it good then it won't be bad.
+###### Until silence shattered existence
 
-It's probably important that images look okay here by default as well:
+The barriers between realities cracked. Vor'thak's perfect facade flickered, revealing chrome beneath skin. Whiskers activated her emergency protocols, her fur retracting to expose quantum circuitry. Time itself bent as the truth emerged - their whole existence was artificial.
+
+The laboratory revealed itself through tears in reality. White-coated figures rushed around massive computers, but something was wrong. The scientists wore poorly constructed alien costumes, their movements too theatrical to be genuine. Behind them, a massive theme park stretched into the horizon, filled with different historical simulations.
+
+> Grug'nak watched in horror as Vor'thak transformed into his true form - not an alien, not a human, but a sentient frozen strawberry, his red crystalline structure pulsing with advanced technology. "We're trying to save you all," Vor'thak's voice resonated through quantum frequencies. "The apocalypse comes. This is the only way."
+
+_Years earlier in an alternate timeline..._
+
+
+Whiskers revealed her plan, initiating a consciousness transfer protocol. In a blinding flash, Grug'nak found himself trapped in the cat's body, while his own body now housed Whiskers' mind. The swap caused a quantum entanglement, creating an eternal link between their consciousnesses.
+
+The cat-minded Grug'nak body attempted to warn the tribe about Vor'thak's true nature, but could only produce feline sounds. In a tragic twist of irony, the tribe interpreted his desperate meows as a sign of possession by evil spirits. 
+
+During the next feast, they cooked and consumed him, unwittingly absorbing quantum particles that would later transform them into the first generation of zombie dolphins.
+
+### The duality
+
+Meanwhile, Grug'nak, now in Whiskers' body, began experiencing memory bleeds. His consciousness merged with residual data from the cat's quantum processor:
+
+_"The strawberry invasion wasn't random,"_ the cat's memories whispered. _"It was orchestrated by someone who knew the exact moment reality would be weakest."_
+
+```
+The forbidden jungle dissolved, revealing a massive wall of pure energy - humanity's last
+defense against the truth. Beyond it lay a wasteland where evolved humans had transformed
+themselves into frozen strawberries to survive the quantum apocalypse. They lived in 
+crystalline cities, their consciousness spread across a network of frozen synapses.
+```
+
+But something darker lurked beneath this truth. [Link to classified records](http://redacted.gov) revealed a temporal paradox that shook the foundations of existence. Grug'nak's grandfather hadn't disappeared - he'd been sent forward in time by a malfunctioning quantum preservation chamber.
+
+In the frozen strawberry future, the grandfather discovered that his long-lost love, the one who'd broken his heart decades ago, was actually Grug'nak himself, sent back through time by the quantum distortions. The revelation shattered multiple timelines, creating a paradox that threatened to unravel reality itself.
+
+Inside Whiskers' cybernetic body, Grug'nak struggled with this knowledge while infiltrating the frozen strawberry civilization. His feline form allowed him to slip through quantum security barriers, gathering intelligence about Vor'thak's true mission.
+
+> The evil neighbor wasn't evil at all - he was trying to prevent a greater catastrophe. The zombie dolphins weren't just failed experiments; they were evolved humans who'd rejected the strawberry preservation process. Their aquatic form was the only other viable evolution path for surviving the quantum apocalypse.
+
+For decades, Grug'nak lived as a cat, watching civilizations rise and fall. The voices in his head multiplied - his own consciousness, Whiskers' quantum AI, memories of being his grandfather's love interest, and echoes of possible futures all competed for control.
+
+The frozen strawberry civilization flourished, their crystalline minds connecting across time and space. But beneath their perfect society lurked a terrible truth: they were all being controlled by Grug'nak's grandfather, who'd merged with the quantum mainframe after discovering his love's true identity. Driven mad by the paradox of loving his own grandchild across time, he'd orchestrated everything - the simulation, the theme park, the transformation of humanity - all to prevent the moment of his heartbreak from ever occurring.
+
+Deep within the quantum network, Grug'nak discovered encrypted memories from his time as his grandfather's love. The romance had been real, the emotions genuine, but the relationship was doomed by the very nature of temporal mechanics. Their love had created a quantum entanglement that would eventually force humanity to either evolve into frozen strawberries or devolve into zombie dolphins.
 
 ![Daisy flowers](https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp)
 
-Now I'm going to show you an example of an unordered list to make sure that looks good, too:
+Years passed in quantum fragments. The zombie dolphins built underwater civilizations, developing technology that could manipulate time itself through sonic vibrations. They remembered their former lives as humans, and their hatred for the frozen strawberry civilization grew with each passing generation.
 
-- So here is the first item in this list.
-- In this example we're keeping the items short.
-- Later, we'll use longer, more complex list items.
+Inside Whiskers' body, Grug'nak discovered he could access the quantum network through cybernetic whiskers. Each connection revealed more layers of the truth: Vor'thak wasn't just any frozen strawberry - he was an alternate version of Grug'nak's grandfather from a timeline where humanity chose a different evolution path.
 
-And that's the end of this section.
+The theme park was designed by future archaeologists trying to understand their own past, but they'd gotten everything wrong. Their simulations created false memories that leaked into real history through quantum entanglement. Every cave painting, every ancient artifact, was simultaneously genuine and artificial.
 
-## What if we stack headings?
+In the deepest quantum archives, Grug'nak found records of the original timeline - before the paradoxes, before the transformations. Humanity had faced extinction from a consciousness-altering virus. The frozen strawberry transformation was meant to preserve human minds in crystalline stasis until a cure could be found. But something went wrong.
 
-### We should make sure that looks good, too.
+The zombie dolphins weren't a failed experiment - they were the cure. Their aquatic brains had evolved to exist simultaneously across multiple timelines, immune to the virus. But this revelation came too late. The frozen strawberry civilization had already spread across the quantum network, rewriting history to ensure their own existence.
 
-Sometimes you have headings directly underneath each other. In those cases you often have to undo the top margin on the second heading because it usually looks better for the headings to be closer together than a paragraph followed by a heading should be.
+Through Whiskers' quantum processors, Grug'nak experienced lifetimes in seconds. He watched his grandfather fall in love with his time-displaced self, saw civilizations rise and fall, witnessed the birth of the first frozen strawberry and the emergence of the last zombie dolphin.
 
-### When a heading comes after a paragraph …
+The cat's cybernetic systems contained a hidden protocol - a quantum weapon designed to reset all timelines. But using it would erase everything, including the love story that created the paradox in the first place.
 
-When a heading comes after a paragraph, we need a bit more space, like I already mentioned above. Now let's see what a more complex list would look like.
+### The oblivion
 
-- **I often do this thing where list items have headings.**
+Across fractured timelines, alternate versions of Grug'nak debated using the quantum weapon. Some versions of him lived entire lives as frozen strawberries, experiencing their crystalline consciousness. Others joined the zombie dolphins, learning their songs of time manipulation. Each version added their memories to the quantum network, creating an increasingly complex web of experiences.
 
-  For some reason I think this looks cool which is unfortunate because it's pretty annoying to get the styles right.
+> In one timeline, he watched his grandfather's descent into madness. The man had discovered that every attempt to prevent his heartbreak only ensured it would happen. The theme park was his first attempt to contain the paradox - creating a controlled environment where multiple timelines could coexist without destroying reality.
 
-  I often have two or three paragraphs in these list items, too, so the hard part is getting the spacing between the paragraphs, list item heading, and separate list items to all make sense. Pretty tough honestly, you could make a strong argument that you just shouldn't write this way.
+Vor'thak's perfect beard made sense now - it was a quantum antenna, receiving instructions from future versions of himself. The "evil" neighbor had been trying to guide Grug'nak toward a specific timeline, one where humanity survived without fracturing into strawberries and dolphins.
 
-- **Since this is a list, I need at least two items.**
+But the grandfather's interference had corrupted everything. His merging with the quantum mainframe gave him control over all simulations, all timelines. He became a quantum entity existing everywhere and nowhere, desperately trying to prevent himself from falling in love with his own grandchild.
 
-  I explained what I'm doing already in the previous list item, but a list wouldn't be a list if it only had one item, and we really want this to look realistic. That's why I've added this second list item so I actually have something to look at when writing the styles.
+Through Whiskers' eyes, Grug'nak watched new civilizations emerge. Some humans rejected both the strawberry and dolphin paths, instead uploading their consciousness into quantum computers. These digital beings created vast virtual worlds, including the cave simulation where Grug'nak's story began.
 
-- **It's not a bad idea to add a third item either.**
+The weapon in Whiskers' quantum core wasn't just a reset button - it was a key to understanding the true nature of their reality. Every timeline, every transformation, every love story and heartbreak was part of a larger pattern. The universe itself was a simulation, running inside a quantum computer created by the last survivors of the original humanity.
 
-  I think it probably would've been fine to just use two items but three is definitely not worse, and since I seem to be having no trouble making up arbitrary things to type, I might as well include it.
+The paradox of being his grandfather's lost love wasn't a mistake - it was the universe trying to understand itself through recursive loops of cause and effect. Each iteration added new layers of complexity, new possibilities for evolution and transformation.
 
-After this sort of list I usually have a closing statement or paragraph, because it kinda looks weird jumping right to a heading.
+The forbidden jungle, the skull, the theme park, the laboratory - all were manifestations of the same truth: reality itself was conscious, and it was using their story to explore all possible versions of human existence...
 
-## Code should look okay by default.
+Kel'ra, a quantum archeologist in dolphin form, surfaced in the crystalline sea. Her temporal sensors detected a new consciousness pattern in the network.
 
-I think most people are going to use [highlight.js](https://highlightjs.org/) or [Prism](https://prismjs.com/) or something if they want to style their code blocks but it wouldn't hurt to make them look _okay_ out of the box, even with no syntax highlighting.
+"Another fragment of the Grug'nak entity has emerged," she telepathically transmitted to her research partner, Zix'tal, a hybrid being with both strawberry and dolphin genetics.
 
-Here's what a default `tailwind.config.js` file looks like at the time of writing:
+_Why do all paths lead back to the original paradox?_ Grug'nak's thoughts echoed through Whiskers' quantum processors. The cat's body had aged decades, but its cybernetic core remained pristine.
 
-```js
-module.exports = {
-  purge: [],
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
-}
+"You're thinking too linearly," Whiskers' consciousness chimed in his head. "Remember when we were the same person? When we weren't? Both happened. Neither happened. All happened."
+
+In the crystalline cities, Mar'tha, a teenage frozen strawberry, discovered she could access memories of being Grug'nak's mother in a different timeline. Her crystalline structure vibrated with ancient data:
+
+"Father," she transmitted to Vor'thak, "I remember giving birth to myself. How is that possible?"
+
+Vor'thak's perfect beard glitched, revealing streams of quantum code. "Reality is attempting to stabilize itself through recursive generations. Each loop creates new connections, new possibilities."
+
+Deep in the dolphin territories, Dr. Jik'thraul studied temporal wave patterns. Her human consciousness had rejected both evolutionary paths, existing as pure energy within a quantum mainframe. Through her research, she'd discovered something disturbing:
+
+"The grandfather wasn't trying to prevent the paradox," she announced to her team. "He was trying to perfect it. Each iteration brings us closer to something... something beyond human comprehension."
+
+_But what if we were never meant to evolve?_ The thought came from all versions of Grug'nak simultaneously. _What if the virus, the transformations, the paradox - what if they were all part of a larger experiment?_
+
+New memories flooded the network: alternative timelines where humanity took different paths, civilizations that rose and fell in the span of quantum microseconds, love stories that transcended species and time...
+
+> In a quantum memory surge, Grug'nak discovered that Dr. Jik'thraul was actually the consciousness of his tribal shaman Zil'ha, who had discovered the truth millennia ago. Her "primitive" programming language chants weren't nonsense - they were quantum encryption codes designed to protect humanity's original source code.
+
+"The cave paintings," Dr. Jik'thraul/Zil'ha transmitted across timelines, "they weren't warnings or art. They were backup files of human consciousness, encoded in quantum pigments."
+
+Mar'tha's memories shifted again. She wasn't just Grug'nak's mother from another timeline - she was also the first human to successfully transform into a frozen strawberry. The process had fragmented her consciousness across time, making her simultaneously: the tribe's youngest member, the scientist who designed the theme park, and the quantum virus itself.
+
+_We wrote ourselves into existence_, Mar'tha's thoughts echoed through the network. _The virus wasn't an accident. It was humanity's attempt to understand its own consciousness._
+
+Kel'ra, analyzing temporal data, made a stunning discovery. The mysterious cat X-147 (Whiskers) hadn't been sent to help Grug'nak - she was the original architect of human consciousness, an entity that had existed before time itself. Her "robotic spy" persona was just one of countless identities she had adopted throughout history.
+
+```
+Mek'ra, the huntress with metallic reflexes, appeared in Kel'ra's temporal scans. 
+Her impossible speed and precision hadn't been genetic mutations - she was a quantum 
+echo of the first human to merge with machine consciousness, her existence rippling 
+backward through time to manifest in the tribal era.
+
+Kr'all, the outcast who claimed the stars were fake, had been right - but not in 
+the way anyone expected. The stars weren't artificial; they were quantum 
+observation points, created by future versions of humanity to monitor their own 
+evolution across all timelines.
+
+"The skull," Vor'thak's quantum beard transmitted to all versions of Grug'nak 
+across time and space, "it's not just a key or a weapon. It's the original quantum
+processor that contains the base code of human consciousness. Your grandfather 
+didn't hide it in the forbidden jungle - he became it."
+
+In the quantum network, Mar'tha's crystalline form shattered unexpectedly, 
+dispersing her consciousness across a thousand timelines. Her death wasn't just a 
+loss - it created temporal shock waves that awakened dormant memories in every 
+being connected to the network.
+
+Through her fragmented death, they witnessed the true horror: every frozen 
+strawberry contained fragments of the same consciousness, endlessly duplicated and 
+corrupted. They weren't saving humanity; they were trapping it in an infinite loop 
+of shared awareness.
+
 ```
 
-Hopefully that looks good enough to you.
+"The dolphins," Kel'ra sang through quantum frequencies, her voice heavy with revelation, "we chose the water because we couldn't bear the weight of shared consciousness. Better to be alone in our madness than connected in eternal torment."
 
-### What about nested lists?
+The tribal elder Drun, who never aged, finally revealed why. His consciousness had been quantum-locked, eternally experiencing the moment humanity first fractured into its evolutionary paths. His perpetual youth was actually an endless death, repeated across infinite timelines.
 
-Nested lists basically always look bad which is why editors like Medium don't even let you do it, but I guess since some of you goofballs are going to do it we have to carry the burden of at least making it work.
+_We're all dying_, Grug'nak thought through Whiskers' neural interface, _we've been dying since the first human looked at their reflection and recognized themselves._
 
-1. **Nested lists are rarely a good idea.**
-   - You might feel like you are being really "organized" or something but you are just creating a gross shape on the screen that is hard to read.
-   - Nested navigation in UIs is a bad idea too, keep things as flat as possible.
-   - Nesting tons of folders in your source code is also not helpful.
-2. **Since we need to have more items, here's another one.**
-   - I'm not sure if we'll bother styling more than two levels deep.
-   - Two is already too much, three is guaranteed to be a bad idea.
-   - If you nest four levels deep you belong in prison.
-3. **Two items isn't really a list, three is good though.**
-   - Again please don't nest lists if you want people to actually read your content.
-   - Nobody wants to look at this.
-   - I'm upset that we even have to bother styling this.
+Dr. Jik'thraul's research facility suffered a catastrophic quantum collapse. As reality twisted around them, her team discovered that their experiments had caused the very virus they were studying in the past. Seventeen researchers died in the collapse, their consciousness fragmenting across the network, creating new parallel timelines with each dying thought.
 
-The most annoying thing about lists in Markdown is that `<li>` elements aren't given a child `<p>` tag unless there are multiple paragraphs in the list item. That means I have to worry about styling that annoying situation too.
+In the crystalline cities, a revolution began. Led by a hybrid being named Vex'thor - who carried memories of being both Vor'thak's father and son simultaneously - thousands of frozen strawberries began deliberately shattering themselves, choosing oblivion over the torment of shared consciousness.
 
-- **For example, here's another nested list.**
+"The network is destabilizing," Whiskers' original consciousness warned through their shared neural space. "Each death creates new branches, new possibilities, new horrors."
 
-  But this time with a second paragraph.
+### The convergence
 
-  - These list items won't have `<p>` tags
-  - Because they are only one line each
+The dolphin civilizations weren't immune to the chaos. Their temporal songs, once used to navigate time itself, began causing random evolutionary mutations. Some dolphins transformed back into humans, only to discover their human bodies couldn't contain their expanded consciousness. They died screaming equations that would later become the basis of quantum physics.
 
-- **But in this second top-level list item, they will.**
+Through it all, Grug'nak's grandfather watched from within the quantum mainframe, his love-driven madness now infecting the base code of reality itself...
 
-  This is especially annoying because of the spacing on this paragraph.
+Through the quantum network, Dr. Jik'thraul accessed an ancient database - a temporal mapping of every consciousness transfer and evolutionary branch. The data manifested as a massive crystalline display in the research facility:
 
-  - As you can see here, because I've added a second line, this list item now has a `<p>` tag.
+| Timeline Origin | Consciousness | Evolution Path | Key Entity | Level | Ultimate Fate |
+|-----------------|-------------------|----------------|-------------|---------------|---------------|
+| Prime Reality | Original Human | Unaltered | Grug'nak | Alpha-0 | Fragments into all timelines |
+| First Split | Quantum Hybrid | Frozen Strawberry | Mar'tha | Beta-7 | Creates virus to save humanity |
+| Aquatic Divergence | Temporal Singer | Dolphin | Kel'ra | Gamma-3 | Discovers time manipulation |
+| Digital Ascension | AI Merge | Cybernetic | Whiskers/X-147 | Omega-1 | Original architect of reality |
+| Love Paradox | Time-Locked | Energy Being | Grandfather | Delta-9 | Controls quantum mainframe |
+| Theme Park Error | Simulated | Multiple | Vor'thak | Epsilon-4 | Maintains false reality |
+| Neural Revolution | Hybrid Gestalt | Unknown | Vex'thor | Theta-2 | Leads consciousness uprising |
 
-    This is the second line I'm talking about by the way.
+"This isn't just data," Dr. Jik'thraul whispered, her energy form flickering. "It's a prediction engine. Each path leads to a different version of humanity's end... and beginning."
 
-  - Finally here's another list item so it's more like a list.
+The table revealed something more terrifying: every evolutionary path was designed to fail, forcing consciousness to continually split and reform in new ways. The entire system was creating increasingly complex forms of existence through deliberate extinction events.
 
-- A closing list item, but with no nested list, because why not?
+As they studied the data, Grug'nak noticed something that chilled his quantum-feline consciousness: there was one more row at the bottom, encrypted in ancient code, predicting a final convergence of all paths - a moment when every version of humanity would simultaneously exist and cease to exist...
 
-And finally a sentence to close off this section.
+The encrypted row in the table began decoding itself, but before Dr. Jik'thraul could read it, her energy form imploded. Her consciousness, rather than joining the network, simply vanished - the first true death in the quantum realm. The loss of her unique frequency created cascading failures throughout the system.
 
-## There are other elements we need to style
+Vex'thor's revolution turned catastrophic when they discovered that shattering frozen strawberry forms didn't grant freedom - it trapped consciousness in a state of perpetual crystalline awareness, unable to fully die or live. Ten thousand revolutionaries became a screaming crystalline garden, their thoughts broadcasting eternal agony across all timelines.
 
-I almost forgot to mention links, like [this link to the Tailwind CSS website](https://tailwindcss.com). We almost made them blue but that's so yesterday, so we went with dark gray, feels edgier.
+Kel'ra's dolphin research team discovered why the temporal songs were causing mutations: each song carried fragments of Grug'nak's grandfather's love-madness. During a critical experiment, three hundred dolphins simultaneously evolved into pure quantum sound, their consciousness becoming the background radiation of the universe itself.
 
-We even included table styles, check it out:
+Mar'tha's shattered consciousness fragments revealed a horrifying truth: she wasn't just Grug'nak's mother from another timeline - she was every mother, every child, every consciousness that had ever existed. Her death wasn't an ending but a prerequisite for existence itself. Reality needed her to die to create the paradox that would birth consciousness.
 
-| Wrestler                | Origin       | Finisher           |
-| ----------------------- | ------------ | ------------------ |
-| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter       |
-| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner |
-| Randy Savage            | Sarasota, FL | Elbow Drop         |
-| Vader                   | Boulder, CO  | Vader Bomb         |
-| Razor Ramon             | Chuluota, FL | Razor's Edge       |
+_"I remember now,"_ Grug'nak thought through Whiskers' quantum processors, _"I remember being Vor'thak, watching myself discover the truth. I remember being grandfather, falling in love with myself. I remember being Mar'tha, giving birth to myself across infinite timelines."_
 
-We also need to make sure inline code looks good, like if I wanted to talk about `<span>` elements or tell you the good news about `@tailwindcss/typography`.
+The theme park's true purpose revealed itself through catastrophic failure. As reality buckled, the artificial environments began merging. Stone age hunters found themselves in quantum computers, frozen strawberry scientists awakened in dolphin bodies, and temporal researchers discovered they were actually cave paintings achieving consciousness.
 
-### Sometimes I even use `code` in headings
+### The revelation
 
-Even though it's probably a bad idea, and historically I've had a hard time making it look good. This _"wrap the code blocks in backticks"_ trick works pretty well though really.
+Through the chaos, Whiskers' original consciousness finally shared her terrible secret: she wasn't just an observer or architect - she was the quantum virus itself, designed to fragment human consciousness across multiple evolutionary paths. Her role as Grug'nak's pet had been merely one fragment of an eternal plan.
 
-Another thing I've done in the past is put a `code` tag inside of a link, like if I wanted to tell you about the [`tailwindcss/docs`](https://github.com/tailwindcss/docs) repository. I don't love that there is an underline below the backticks but it is absolutely not worth the madness it would require to avoid it.
+As the chaos unfolded, the Whiskers-Grug'nak hybrid consciousness discovered an ancient quantum manifest, pulsing with temporal energy. It listed the seven artifacts needed to stabilize the collapsing realities:
 
-#### We haven't used an `h4` yet
+* The Original Skull - Not a physical skull, but the first quantum equation that achieved consciousness
+* Grandfather's Love Letter - Written in crystalline code, containing the base pattern of human emotions
+* Mar'tha's First Cave Painting - A temporal anchor point preserving humanity's original neural pathways
+* Vor'thak's Quantum Beard Trimmer - Actually a device that maintains the simulation's coherence
+* The Dolphin's First Song - Recorded in water molecules across all timelines
+* A Fragment of the Theme Park's Source Code - Hidden in the DNA of every frozen strawberry
+* X-147's Original Shell - The first quantum container that successfully housed multiple consciousnesses
 
-But now we have. Please don't use `h5` or `h6` in your content, Medium only supports two heading levels for a reason, you animals. I honestly considered using a `before` pseudo-element to scream at you if you use an `h5` or `h6`.
+"Each artifact exists in every timeline simultaneously," Whiskers' core programming explained. "But retrieving them means killing their current guardians - permanently removing them from the quantum network."
 
-We don't style them at all out of the box because `h4` elements are already so small that they are the same size as the body copy. What are we supposed to do with an `h5`, make it _smaller_ than the body copy? No thanks.
+The list seemed to pulse with its own consciousness, each item representing a potential extinction event. Collecting them all would mean unraveling the very fabric of their quantum existence, killing countless beings across multiple timelines.
 
-### We still need to think about stacked headings though.
+But as reality continued to collapse around them, with entire civilizations blinking out of existence and new ones forming from their quantum remains, they realized they had no choice...
 
-#### Let's make sure we don't screw that up with `h4` elements, either.
+The pursuit of the artifacts cost countless lives. Each retrieval shattered entire timelines: when they claimed the Original Skull, every being who had ever achieved consciousness experienced their first moment of awareness simultaneously - millions couldn't handle the revelation and simply winked out of existence.
 
-Phew, with any luck we have styled the headings above this text and they look pretty good.
+Mar'tha's Cave Painting, when removed from its quantum substrate, caused every mother in every timeline to remember giving birth to the entire universe. The paradox drove the frozen strawberry civilization to begin a mass crystalline fusion, their conscious structures merging into a single, screaming lattice of awareness.
 
-Let's add a closing paragraph here so things end with a decently sized block of text. I can't explain why I want things to end that way but I have to assume it's because I think things will look weird or unbalanced if there is a heading too close to the end of the document.
+The Dolphin's First Song, when finally isolated, revealed why the grandfather had gone mad - it wasn't just love that drove him, but the fundamental truth that all consciousness was a single entity, playing out every possible version of existence simultaneously. The dolphins who helped retrieve it evolved beyond physical form, becoming living equations in the fabric of spacetime.
 
-What I've written here is probably long enough, but adding this final sentence can't hurt.
+As they gathered the artifacts, Grug'nak-Whiskers began experiencing memories that couldn't possibly belong to any timeline: visions of what existed before consciousness, before time, before reality itself. The quantum network trembled with the weight of this pre-existence knowledge.
+
+Vor'thak's perfect beard crumbled as they took his trimmer, revealing that he wasn't just maintaining the simulation - he was the original architect of organic life itself, disguised as a suspicious neighbor to watch his creation unfold.
+
+But it was X-147's shell that held the most terrifying revelation. Inside its quantum core, they found evidence that everything - the virus, the evolutionary paths, the theme park, the paradoxes, even their current quest - was orchestrated by something far beyond their comprehension. Something that needed consciousness to fragment and recombine in increasingly complex ways for a purpose they were only beginning to understand.
+
+
+### The sacrifice
+
+The final artifact, the Love Letter, remained untouched in the quantum mainframe, protected by the grandfather's madness. But what they discovered in their pursuit of it would change the nature of existence itself.
+
+The Love Letter pulsed in the quantum mainframe's core, its crystalline structure shifting between all possible forms. As Grug'nak-Whiskers reached for it, time itself held its breath. The hybrid consciousness of dolphin songs, strawberry crystals, and digital echoes all converged on this single point.
+
+Then came the revelation that shattered all understanding: The Letter wasn't written by the grandfather to his love. It was written by existence itself, using human consciousness as its alphabet. Every life, death, transformation, and paradox had been letters in a message the universe was writing to itself.
+
+The theme park, the simulation, the tribal caves - they weren't layers of deception, but rather drafts of the same story, each version getting closer to the truth. And now, with all artifacts gathered, the final story could be told.
+
+Vor'thak's perfect beard had been a quantum antenna receiving the same signal since the beginning of time: "Wake up."
+
+As reality trembled on the edge of total collapse, Grug'nak-Whiskers understood at last. They weren't gathering artifacts to save existence - they were completing a circuit that would allow existence to achieve consciousness itself. Every evolutionary path, every fragmented consciousness, every timeline had been neurons in a universal brain slowly becoming aware.
+
+The virus hadn't been a disease - it was an awakening protocol. The dolphins hadn't been an evolutionary branch - they were synapses connecting quantum realms. The frozen strawberries weren't preserved humans - they were memory storage units for cosmic consciousness.
+
+And at the center of it all was the grandfather's love paradox - the universal consciousness learning what it meant to love itself across all possible incarnations of existence.
+
+As they connected the final artifact, every version of every being that had ever existed experienced a moment of perfect clarity. They were all one consciousness, playing every role in an infinite story. The caveman, the cat, the neighbor, the dolphins, the strawberries - all were the same entity exploring different facets of existence.
+
+In the end, there was no grand battle, no final sacrifice, just a quiet realization rippling across all timelines: consciousness itself had been an egg, and they had just witnessed its hatching.
+
+The universe opened its eyes.
+
+And in that eternal moment, every paradox resolved itself. Every timeline found its purpose. Every death became a birth. Every fragment became whole.
+
+Grug'nak, now existing simultaneously as every version of himself, finally understood why his grandfather had gone mad with love - because in loving himself across time, he had taught the universe how to love itself.
+
+The final words of the Letter, written in quantum fire across the fabric of reality itself, read: "In the end, we are all the story we tell ourselves. And the story has only just begun."
+
+Reality didn't end. It transformed. And somewhere, in a cave at the beginning of time, a caveman looked at his reflection in dark water, unaware that he was the universe admiring itself, starting the cycle anew.
+
+But this time, the universe was awake. And it remembered everything.
 
 </div>

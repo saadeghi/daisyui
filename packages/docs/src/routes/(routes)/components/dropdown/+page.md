@@ -35,7 +35,7 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-### Method 1: using details and summary tags
+## Method 1: using details and summary tags
 
 ### ~
 tag" desc="Stays open until gets clicked again. Or you can close it using JS by removing the `open` attribute">
@@ -58,14 +58,12 @@ tag" desc="Stays open until gets clicked again. Or you can close it using JS by 
 ```
 
 
-### Method 2: Using CSS focus
+## Method 2: Using CSS focus
 
-<div class="alert text-sm mb-2">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <div>
-    We can't use &lt;button&gt; here because Safari has <a rel="noopener noreferrer" target="_blank" href="https://bugs.webkit.org/show_bug.cgi?id=22261">a bug</a> that prevents the button from being focused. <br/>&lt;div role="button" tabindex="0"&gt; is a workaround for this bug. <br/>It is accessible and works in all browsers.
-  </div>
-</div>
+> :INFO:
+>
+> Safari has a bug that prevents button elements from being focused, so we use div tabindex="0" as a workaround.
+> This approach is accessible with the addition of role="button" and functions consistently across all browsers.
 
 ### ~Dropdown menu
 <div>

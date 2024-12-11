@@ -17,17 +17,18 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
-  import Translate from "$components/Translate.svelte"
 </script>
 
-<Translate text="Radial progress needs `--value` CSS variable to work.<br />To change the size, use `--size` CSS variable which has a default value of `5rem`.<br />To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.<br />" />
+> :INFO:
+>
+> Radial progress needs `--value` CSS variable to work.
+> To change the size, use `--size` CSS variable which has a default value of `5rem`.
+> To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.
 
-<div class="alert alert-info text-sm mt-2">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info-content shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  For radial progress we use &lt;div&gt; instead of &lt;progress&gt; tag because Browsers are unable to show the text inside &lt;progress&gt; tag and Firefox doesn't show the pseudo elements inside &lt;progress&gt; bar at all.
-  For accessibility, a role of 'progressbar' is given to each &lt;div&gt; explicitly, while
-  &lt;progress&gt; receives this role implicitly.
-</div>
+> :INFO:
+>
+> For Radial progress we need to use a `div` instead of the `progress` tag because browsers can't show text inside `progress` tag, and Firefox doesn’t render pseudo-elements inside `progress` tag at all.
+> Adding `role="progressbar"` makes it accessible to screen readers as well.
 
 
 ### ~Radial progress
@@ -37,9 +38,7 @@ classnames:
 <div class="$$radial-progress" style="--value:70;" role="progressbar">70%</div>
 ```
 ```jsx
-<div className="$$radial-progress" style={{ "--value": 70 }} role="progressbar">
-  70%
-</div>
+<div className="$$radial-progress" style={{ "--value": 70 }} role="progressbar">70%</div>
 ```
 
 

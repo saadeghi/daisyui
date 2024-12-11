@@ -25,7 +25,6 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
-  import Translate from "$components/Translate.svelte"
 </script>
 
 ### Drawer tags structure
@@ -42,15 +41,16 @@ classnames:
        ╰── // Sidebar content (menu or anything)
 ```
 
-<div class="alert text-sm mt-4">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <div><Translate text="Drawer sidebar is hidden by default. You can make it visible on larger screens using <code>lg:drawer-open</code> class (or using other responsive prefixes: <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>)" /></div>
-</div>
+> :INFO:
+>
+> Drawer sidebar is hidden by default.
+> You can make it visible on larger screens using `lg:drawer-open` class (or using other responsive prefixes: sm, md, lg, xl)
 
-<div class="alert text-sm mt-4">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <div>You can check/uncheck the checkbox using JavaScript or by clicking the <code>&lt;label&gt;</code> tag which is assigned to the hidden checkbox</div>
-</div>
+
+> :INFO:
+>
+> You can check/uncheck the checkbox using JavaScript or by clicking the `label` tag which is assigned to the hidden checkbox
+
 
 ### ~Drawer
 <div class="drawer h-56 rounded overflow-hidden">
