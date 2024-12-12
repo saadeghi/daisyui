@@ -88,7 +88,7 @@ classnames:
 </label>
 
 ```html
-<label class="$$swap swap-rotate">
+<label class="$$swap $$swap-rotate">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" />
 

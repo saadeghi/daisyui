@@ -68,7 +68,7 @@ Dropdown using details and summary opens and closes the content when the summary
 
 ```html
 <details class="$$dropdown">
-  <summary class="btn m-1">open or close</summary>
+  <summary class="$$btn m-1">open or close</summary>
   <ul class="$$menu $$dropdown-content bg-base-100 $$rounded-box z-1 w-52 p-2 shadow-sm">
     <li><a>Item 1</a></li>
     <li><a>Item 2</a></li>
@@ -115,10 +115,10 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 
 ```html
 <!-- change popover-1 and --acnhor-1 names. Use unique names for each dropdown -->
-<button class="btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
+<button class="$$btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
   Button
 </button>
-<ul class="dropdown menu w-32 rounded-box bg-base-100 shadow-sm"
+<ul class="$$dropdown $$menu w-32 rounded-box bg-base-100 shadow-sm"
   popover id="popover-1" style="position-anchor:--anchor-1">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>

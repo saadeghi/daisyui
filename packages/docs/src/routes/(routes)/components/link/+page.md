@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Link
 desc: Link adds the missing underline style to links.
 layout: components
@@ -34,10 +33,10 @@ classnames:
 </script>
 
 ### ~Link
-<button class="link">I'm a simple link</button>
+<button class="link">Click me</button>
 
 ```html
-<a class="$$link">I'm a simple link</a>
+<a class="$$link">Click me</a>
 ```
 
 
@@ -60,72 +59,72 @@ classnames:
 
 
 ### ~Primary color
-<button class="link link-primary">I'm a simple link</button>
+<button class="link link-primary">Click me</button>
 
 ```html
-<a class="$$link $$link-primary">I'm a simple link</a>
+<a class="$$link $$link-primary">Click me</a>
 ```
 
 
 ### ~Secondary color
-<button class="link link-secondary">I'm a simple link</button>
+<button class="link link-secondary">Click me</button>
 
 ```html
-<a class="$$link $$link-secondary">I'm a simple link</a>
+<a class="$$link $$link-secondary">Click me</a>
 ```
 
 
 ### ~Accent color
-<button class="link link-accent">I'm a simple link</button>
+<button class="link link-accent">Click me</button>
 
 ```html
-<a class="$$link $$link-accent">I'm a simple link</a>
+<a class="$$link $$link-accent">Click me</a>
 ```
 
 
 ### ~Neutral color
-<button class="link link-neutral">I'm a simple link</button>
+<button class="link link-neutral">Click me</button>
 
 ```html
-<a class="$$link $$link-neutral">I'm a simple link</a>
+<a class="$$link $$link-neutral">Click me</a>
 ```
 
 
 ### ~Success color
-<button class="link link-success">I'm a simple link</button>
+<button class="link link-success">Click me</button>
 
 ```html
-<a class="$$link $$link-success">I'm a simple link</a>
+<a class="$$link $$link-success">Click me</a>
 ```
 
 
 ### ~Info color
-<button class="link link-info">I'm a simple link</button>
+<button class="link link-info">Click me</button>
 
 ```html
-<a class="$$link $$link-info">I'm a simple link</a>
+<a class="$$link $$link-info">Click me</a>
 ```
 
 
 ### ~Warning color
-<button class="link link-warning">I'm a simple link</button>
+<button class="link link-warning">Click me</button>
 
 ```html
-<a class="$$link $$link-warning">I'm a simple link</a>
+<a class="$$link $$link-warning">Click me</a>
 ```
 
 
 ### ~Error color
-<button class="link link-error">I'm a simple link</button>
+<button class="link link-error">Click me</button>
 
 ```html
-<a class="$$link $$link-error">I'm a simple link</a>
+<a class="$$link $$link-error">Click me</a>
 ```
 
 
 ### ~Show underline only on hover
-<button class="link link-hover">I'm a simple link</button>
+<button class="link link-hover">Click me</button>
 
 ```html
-<a class="$$link $$link-hover">I'm a simple link</a>
+<a class="$$link $$link-hover">Click me</a>
 ```

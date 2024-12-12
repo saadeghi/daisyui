@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Loading
 desc: Loading shows an animation to indicate that something is loading.
 layout: components
@@ -58,12 +57,14 @@ classnames:
 <span class="loading loading-dots loading-sm"></span>
 <span class="loading loading-dots loading-md"></span>
 <span class="loading loading-dots loading-lg"></span>
+<span class="loading loading-dots loading-xl"></span>
 
 ```html
 <span class="$$loading $$loading-dots $$loading-xs"></span>
 <span class="$$loading $$loading-dots $$loading-sm"></span>
 <span class="$$loading $$loading-dots $$loading-md"></span>
 <span class="$$loading $$loading-dots $$loading-lg"></span>
+<span class="$$loading $$loading-dots $$loading-xl"></span>
 ```
 
 
@@ -72,12 +73,14 @@ classnames:
 <span class="loading loading-ring loading-sm"></span>
 <span class="loading loading-ring loading-md"></span>
 <span class="loading loading-ring loading-lg"></span>
+<span class="loading loading-ring loading-xl"></span>
 
 ```html
 <span class="$$loading $$loading-ring $$loading-xs"></span>
 <span class="$$loading $$loading-ring $$loading-sm"></span>
 <span class="$$loading $$loading-ring $$loading-md"></span>
 <span class="$$loading $$loading-ring $$loading-lg"></span>
+<span class="$$loading $$loading-ring $$loading-xl"></span>
 ```
 
 
@@ -86,12 +89,14 @@ classnames:
 <span class="loading loading-ball loading-sm"></span>
 <span class="loading loading-ball loading-md"></span>
 <span class="loading loading-ball loading-lg"></span>
+<span class="loading loading-ball loading-xl"></span>
 
 ```html
 <span class="$$loading $$loading-ball $$loading-xs"></span>
 <span class="$$loading $$loading-ball $$loading-sm"></span>
 <span class="$$loading $$loading-ball $$loading-md"></span>
 <span class="$$loading $$loading-ball $$loading-lg"></span>
+<span class="$$loading $$loading-ball $$loading-xl"></span>
 ```
 
 
@@ -100,12 +105,14 @@ classnames:
 <span class="loading loading-bars loading-sm"></span>
 <span class="loading loading-bars loading-md"></span>
 <span class="loading loading-bars loading-lg"></span>
+<span class="loading loading-bars loading-xl"></span>
 
 ```html
 <span class="$$loading $$loading-bars $$loading-xs"></span>
 <span class="$$loading $$loading-bars $$loading-sm"></span>
 <span class="$$loading $$loading-bars $$loading-md"></span>
 <span class="$$loading $$loading-bars $$loading-lg"></span>
+<span class="$$loading $$loading-bars $$loading-xl"></span>
 ```
 
 
@@ -114,12 +121,14 @@ classnames:
 <span class="loading loading-infinity loading-sm"></span>
 <span class="loading loading-infinity loading-md"></span>
 <span class="loading loading-infinity loading-lg"></span>
+<span class="loading loading-infinity loading-xl"></span>
 
 ```html
 <span class="$$loading $$loading-infinity $$loading-xs"></span>
 <span class="$$loading $$loading-infinity $$loading-sm"></span>
 <span class="$$loading $$loading-infinity $$loading-md"></span>
 <span class="$$loading $$loading-infinity $$loading-lg"></span>
+<span class="$$loading $$loading-infinity $$loading-xl"></span>
 ```
 
 

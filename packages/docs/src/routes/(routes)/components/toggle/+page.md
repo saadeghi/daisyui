@@ -91,19 +91,19 @@ classnames:
 ```html
 <div class="flex flex-col">
   <div class="form-control w-52">
-    <label class="label cursor-pointer">
+    <label class="$$label cursor-pointer">
       <span class="label-text">Remember me</span>
       <input type="checkbox" class="$$toggle $$toggle-primary" checked="checked" />
     </label>
   </div>
   <div class="form-control w-52">
-    <label class="label cursor-pointer">
+    <label class="$$label cursor-pointer">
       <span class="label-text">Remember me</span>
       <input type="checkbox" class="$$toggle $$toggle-secondary" checked="checked" />
     </label>
   </div>
   <div class="form-control w-52">
-    <label class="label cursor-pointer">
+    <label class="$$label cursor-pointer">
       <span class="label-text">Remember me</span>
       <input type="checkbox" class="$$toggle $$toggle-accent" checked="checked" />
     </label>

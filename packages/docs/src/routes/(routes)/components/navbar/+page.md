@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Navbar
 desc: Navbar is used to show a navigation bar on the top of the page.
 layout: components
@@ -209,7 +208,7 @@ classnames:
       <input type="text" placeholder="Search" class="$$input $$input-bordered w-24 md:w-auto" />
     </div>
     <div class="$$dropdown $$dropdown-end">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+      <div tabindex="0" role="button" class="$$btn $$btn-ghost $$btn-circle $$avatar">
         <div class="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
@@ -218,7 +217,7 @@ classnames:
       </div>
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        class="$$menu $$menu-sm $$dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
           <a class="justify-between">
             Profile
@@ -550,9 +549,11 @@ classnames:
 <div class="$$navbar bg-neutral text-neutral-content">
   <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
 </div>
+
 <div class="$$navbar bg-base-300">
   <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
 </div>
+
 <div class="$$navbar bg-primary text-primary-content">
   <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
 </div>

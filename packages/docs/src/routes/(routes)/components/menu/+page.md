@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Menu
 desc: Menu is used to display a list of links vertically or horizontally.
 layout: components
@@ -245,7 +244,7 @@ classnames:
 ```html
 <ul class="$$menu bg-base-200 $$rounded-box">
   <li>
-    <a class="tooltip tooltip-right" data-tip="Home">
+    <a class="$$tooltip $$tooltip-right" data-tip="Home">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5"
@@ -261,7 +260,7 @@ classnames:
     </a>
   </li>
   <li>
-    <a class="tooltip tooltip-right" data-tip="Details">
+    <a class="$$tooltip $$tooltip-right" data-tip="Details">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5"
@@ -277,7 +276,7 @@ classnames:
     </a>
   </li>
   <li>
-    <a class="tooltip tooltip-right" data-tip="Stats">
+    <a class="$$tooltip $$tooltip-right" data-tip="Stats">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5"
@@ -370,39 +369,49 @@ classnames:
 
 
 ### ~Menu sizes
-<ul class="menu menu-xs bg-base-200 w-56 rounded-box">
-  <li><button>xs item 1</button></li>
-  <li><button>xs item 2</button></li>
-</ul>
-<ul class="menu menu-sm bg-base-200 w-56 rounded-box">
-  <li><button>sm item 1</button></li>
-  <li><button>sm item 2</button></li>
-</ul>
-<ul class="menu menu-md bg-base-200 w-56 rounded-box">
-  <li><button>md item 1</button></li>
-  <li><button>md item 2</button></li>
-</ul>
-<ul class="menu menu-lg bg-base-200 w-56 rounded-box">
-  <li><button>lg item 1</button></li>
-  <li><button>lg item 2</button></li>
-</ul>
+<div class="grid gap-6">
+  <ul class="menu menu-xs bg-base-200 w-56 rounded-box">
+    <li><button>Xsmall 1</button></li>
+    <li><button>Xsmall 2</button></li>
+  </ul>
+  <ul class="menu menu-sm bg-base-200 w-56 rounded-box">
+    <li><button>Small 1</button></li>
+    <li><button>Small 2</button></li>
+  </ul>
+  <ul class="menu menu-md bg-base-200 w-56 rounded-box">
+    <li><button>Medium 1</button></li>
+    <li><button>Medium 2</button></li>
+  </ul>
+  <ul class="menu menu-lg bg-base-200 w-56 rounded-box">
+    <li><button>Large 1</button></li>
+    <li><button>Large 2</button></li>
+  </ul>
+  <ul class="menu menu-xl bg-base-200 w-56 rounded-box">
+    <li><button>Xlarge 1</button></li>
+    <li><button>Xlarge 2</button></li>
+  </ul>
+</div>
 
 ```html
 <ul class="$$menu $$menu-xs bg-base-200 $$rounded-box w-56">
-  <li><a>xs item 1</a></li>
-  <li><a>xs item 2</a></li>
+  <li><a>Xsmall 1</a></li>
+  <li><a>Xsmall 2</a></li>
 </ul>
 <ul class="$$menu $$menu-sm bg-base-200 $$rounded-box w-56">
-  <li><a>sm item 1</a></li>
-  <li><a>sm item 2</a></li>
+  <li><a>Small 1</a></li>
+  <li><a>Small 2</a></li>
 </ul>
 <ul class="$$menu $$menu-md bg-base-200 $$rounded-box w-56">
-  <li><a>md item 1</a></li>
-  <li><a>md item 2</a></li>
+  <li><a>Medium 1</a></li>
+  <li><a>Medium 2</a></li>
 </ul>
 <ul class="$$menu $$menu-lg bg-base-200 $$rounded-box w-56">
-  <li><a>lg item 1</a></li>
-  <li><a>lg item 2</a></li>
+  <li><a>Large 1</a></li>
+  <li><a>Large 2</a></li>
+</ul>
+<ul class="$$menu $$menu-xl bg-base-200 $$rounded-box w-56">
+  <li><a>Xlarge 1</a></li>
+  <li><a>Xlarge 2</a></li>
 </ul>
 ```
 
@@ -410,15 +419,15 @@ classnames:
 ### ~Menu with disabled items
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Enabled item</button></li>
-  <li class="disabled"><button>disabled item</button></li>
-  <li class="disabled"><button>disabled item</button></li>
+  <li class="menu-disabled"><button>disabled item</button></li>
+  <li class="menu-disabled"><button>disabled item</button></li>
 </ul>
 
 ```html
 <ul class="$$menu bg-base-200 $$rounded-box w-56">
   <li><a>Enabled item</a></li>
-  <li class="$$disabled"><a>disabled item</a></li>
-  <li class="$$disabled"><a>disabled item</a></li>
+  <li class="$$menu-disabled"><a>disabled item</a></li>
+  <li class="$$menu-disabled"><a>disabled item</a></li>
 </ul>
 ```
 
@@ -428,7 +437,7 @@ classnames:
   <li>
     <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-    Item 2
+      Item 2
     </button>
   </li>
   <li>
@@ -515,7 +524,7 @@ classnames:
     <button>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       Updates
-      <span class="badge badge-sm badge-warning">NEW</span>
+      <span class="badge badge-xs badge-warning">NEW</span>
     </button>
   </li>
   <li>
@@ -543,7 +552,7 @@ classnames:
           d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
       </svg>
       Inbox
-      <span class="$$badge $$badge-sm">99+</span>
+      <span class="$$badge $$badge-xs">99+</span>
     </a>
   </li>
   <li>
@@ -561,7 +570,7 @@ classnames:
           d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
       Updates
-      <span class="$$badge $$badge-sm $$badge-warning">NEW</span>
+      <span class="$$badge $$badge-xs $$badge-warning">NEW</span>
     </a>
   </li>
   <li>
@@ -1027,14 +1036,14 @@ classnames:
 ### ~Menu with active item
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
-  <li><button class="active">Item 2</button></li>
+  <li><button class="menu-active">Item 2</button></li>
   <li><button>Item 3</button></li>
 </ul>
 
 ```html
 <ul class="$$menu bg-base-200 w-56">
   <li><a>Item 1</a></li>
-  <li><a class="$$active">Item 2</a></li>
+  <li><a class="$$menu-active">Item 2</a></li>
   <li><a>Item 3</a></li>
 </ul>
 ```

@@ -60,14 +60,13 @@
     outline-offset: -5px;
   }
 
-  &[disabled],
-  &[disabled]:hover {
-    @apply text-base-content/20 cursor-not-allowed;
+  &[disabled] {
+    @apply pointer-events-none opacity-40;
   }
 }
 
 .tab-disabled {
-  @apply text-base-content/20 cursor-not-allowed;
+  @apply pointer-events-none opacity-40;
 }
 
 .tabs-border {
@@ -100,7 +99,7 @@
   --tabs-height: auto;
   --tabs-direction: row;
 
-  .tab {
+  > .tab {
     --tab-border: 0 0 var(--border) 0;
     --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min));
     --tab-radius-se: min(var(--radius-field), var(--tab-radius-min));

@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Radial progress
 desc: Radial progress can be used to show the progress of a task or to show the passing of time.
 layout: components
@@ -22,13 +21,13 @@ classnames:
 
 > :INFO:
 >
-> Radial progress needs `--value` CSS variable to work.
-> To change the size, use `--size` CSS variable which has a default value of `5rem`.
-> To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.
+> Radial progress needs `--value` CSS variable to work.  
+> To change the size, use `--size` CSS variable which has a default value of `5rem`.  
+> To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.  
 
 > :INFO:
 >
-> For Radial progress we need to use a `div` instead of the `progress` tag because browsers can't show text inside `progress` tag, and Firefox doesn’t render pseudo-elements inside `progress` tag at all.
+> For Radial progress we need to use a `div` instead of the `progress` tag because browsers can't show text inside `progress` tag, and Firefox doesn’t render pseudo-elements inside `progress` tag at all.  
 > Adding `role="progressbar"` makes it accessible to screen readers as well.
 
 

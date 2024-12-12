@@ -166,7 +166,7 @@ classnames:
 ```html
 <div
   tabindex="0"
-  class="bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content collapse">
+  class="bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content $$collapse">
     <div class="$$collapse-title font-semibold">How do I create an account?</div>
     <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
   </div>
@@ -187,7 +187,7 @@ classnames:
 </div>
 
 ```html
-<div class="bg-base-100 border border-base-300 collapse">
+<div class="bg-base-100 border border-base-300 $$collapse">
   <input type="checkbox" class="peer" />
   <div class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     How do I create an account?

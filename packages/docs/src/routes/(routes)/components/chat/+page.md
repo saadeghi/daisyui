@@ -163,7 +163,7 @@ classnames:
 
 ```html
 <div class="$$chat $$chat-start">
-  <div class="$$chat-image avatar">
+  <div class="$$chat-image $$avatar">
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
@@ -178,7 +178,7 @@ classnames:
   <div class="$$chat-footer opacity-50">Delivered</div>
 </div>
 <div class="$$chat $$chat-end">
-  <div class="$$chat-image avatar">
+  <div class="$$chat-image $$avatar">
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"

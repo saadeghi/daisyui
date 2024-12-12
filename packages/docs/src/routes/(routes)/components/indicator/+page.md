@@ -362,7 +362,7 @@ classnames:
 ```html
 <div class="$$indicator">
   <span
-    class="$$indicator-item $$indicator-start sm:$$indicator-middle md:$$indicator-bottom lg:$$indicator-center xl:$$indicator-end badge badge-secondary"></span>
+    class="$$indicator-item $$indicator-start sm:$$indicator-middle md:$$indicator-bottom lg:$$indicator-center xl:$$indicator-end $$badge $$badge-secondary"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```

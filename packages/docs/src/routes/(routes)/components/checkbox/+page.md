@@ -78,7 +78,7 @@ classnames:
 <div class="$$form-control">
   <label class="$$label cursor-pointer">
     <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox checkbox-primary" />
+    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-primary" />
   </label>
 </div>
 ```

@@ -49,9 +49,9 @@ classnames:
 
 ```html
 <div class="flex w-full flex-col">
-  <div class="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
   <div class="$$divider">OR</div>
-  <div class="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
 </div>
 ```
 
@@ -65,9 +65,9 @@ classnames:
 
 ```html
 <div class="flex w-full">
-  <div class="card bg-base-300 rounded-box grid h-20 grow place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-20 grow place-items-center">content</div>
   <div class="$$divider $$divider-horizontal">OR</div>
-  <div class="card bg-base-300 rounded-box grid h-20 grow place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-20 grow place-items-center">content</div>
 </div>
 ```
 
@@ -81,9 +81,9 @@ classnames:
 
 ```html
 <div class="flex w-full flex-col">
-  <div class="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
   <div class="$$divider"></div>
-  <div class="card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-20 place-items-center">content</div>
 </div>
 ```
 
@@ -97,9 +97,9 @@ classnames:
 
 ```html
 <div class="flex w-full flex-col lg:flex-row">
-  <div class="card bg-base-300 rounded-box grid h-32 grow place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-32 grow place-items-center">content</div>
   <div class="$$divider lg:$$divider-horizontal">OR</div>
-  <div class="card bg-base-300 rounded-box grid h-32 grow place-items-center">content</div>
+  <div class="$$card bg-base-300 rounded-box grid h-32 grow place-items-center">content</div>
 </div>
 ```
 

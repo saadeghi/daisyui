@@ -281,7 +281,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$card bg-base-100 image-full w-96 shadow-md">
+<div class="$$card bg-base-100 $$image-full w-96 shadow-md">
   <figure>
     <img
       src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
