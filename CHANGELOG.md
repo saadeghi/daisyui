@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 4.12.20 (2024-12-09)
+
+## 4.12.19 (2024-12-09)
+
+## 4.12.18 (2024-12-09)
+
 ## 4.12.16 (2024-12-09)
 
 
@@ -562,7 +568,7 @@ All notable changes to this project will be documented in this file. See [commit
 - daisyUI official store – Get professional templates made by daisyUI
 - daisyUI resources – A handpicked collection of community videos, articles and courses about daisyUI
 - Add roadmap page
-- Add docs for utiltiy classes
+- Add docs for utility classes
 - Update theme generator
 - Show browser support for components that are using new CSS rules
 
@@ -595,7 +601,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-- [#2116](https://github.com/saadeghi/daisyui/issues/2116) progess bar firefox bug ([#2376](https://github.com/saadeghi/daisyui/issues/2376)) ([53889de](https://github.com/saadeghi/daisyui/commit/53889de67cb61ff223acb037f4aa7736e4fbf430))
+- [#2116](https://github.com/saadeghi/daisyui/issues/2116) progress bar firefox bug ([#2376](https://github.com/saadeghi/daisyui/issues/2376)) ([53889de](https://github.com/saadeghi/daisyui/commit/53889de67cb61ff223acb037f4aa7736e4fbf430))
 
 ## [3.8.1](https://github.com/saadeghi/daisyui/compare/v3.8.0...v3.8.1) (2023-09-27)
 

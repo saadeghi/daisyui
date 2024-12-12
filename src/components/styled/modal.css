@@ -25,7 +25,7 @@
   @apply translate-y-0 scale-100;
 }
 .modal-action {
-  @apply mt-6 justify-end space-x-2;
+  @apply mt-6 justify-end space-x-2 rtl:space-x-reverse;
 }
 @keyframes modal-pop {
   0% {
