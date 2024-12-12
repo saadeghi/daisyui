@@ -157,7 +157,7 @@
               class="link"
               href={`https://x.com/intent/post?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://daisyui.com`}
             >
-              {$t("post about it!")}
+              post about it!
             </a>
           </div>
         </div>
