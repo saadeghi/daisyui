@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Stack
 desc: Stack visually puts elements on top of each other.
 layout: components

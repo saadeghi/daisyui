@@ -8,8 +8,7 @@ published: true
   import Translate from "$components/Translate.svelte"
 </script>
 
-<Translate text="daisyUI can be configured from your <code>tailwind.config.js</code> file." />  
-<Translate text="Default config" />:
+<Translate text="daisyUI can be configured from your CSS file." />:
 
 ```css:app.css
 @plugin "daisyui" {

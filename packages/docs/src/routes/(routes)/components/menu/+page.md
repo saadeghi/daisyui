@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Menu
 desc: Menu is used to display a list of links vertically or horizontally.
 layout: components

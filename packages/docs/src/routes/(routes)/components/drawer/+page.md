@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Drawer
 desc: Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page.
 layout: components

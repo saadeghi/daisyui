@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Hero
 desc: Hero is a component for displaying a large box or image with a title and description.
 layout: components

@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Checkbox
 desc: Checkboxes are used to select or deselect a value.
 layout: components

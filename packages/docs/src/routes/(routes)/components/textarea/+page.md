@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Textarea
 desc: Textarea allows users to enter text in multiple lines.
 layout: components

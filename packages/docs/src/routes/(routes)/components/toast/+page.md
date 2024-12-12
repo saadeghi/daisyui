@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Toast
 desc: Toast is a wrapper to stack elements, positioned on the corner of page.
 layout: components

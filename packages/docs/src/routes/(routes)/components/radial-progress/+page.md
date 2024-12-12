@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Radial progress
 desc: Radial progress can be used to show the progress of a task or to show the passing of time.
 layout: components

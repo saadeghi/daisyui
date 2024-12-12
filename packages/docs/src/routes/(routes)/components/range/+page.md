@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Range slider
 desc: Range slider is used to select a value by sliding a handle.
 layout: components

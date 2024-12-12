@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: File Input
 desc: File Input is a an input field for uploading files.
 layout: components

@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Select
 desc: Select is used to pick a value from a list of options.
 layout: components

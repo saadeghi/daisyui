@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Toggle
 desc: Toggle is a checkbox that is styled to look like a switch button.
 layout: components

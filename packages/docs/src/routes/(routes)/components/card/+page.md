@@ -42,11 +42,11 @@ classnames:
 
 
 ### ~Card
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card w-96 bg-base-100 shadow-md">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="justify-end card-actions">
       <button class="btn btn-primary">Buy Now</button>
     </div>
@@ -54,15 +54,15 @@ classnames:
 </div>
 
 ```html
-<div class="$$card bg-base-100 w-96 shadow-xl">
+<div class="$$card bg-base-100 w-96 shadow-md">
   <figure>
     <img
       src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
-    <h2 class="$$card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="$$card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="$$card-actions justify-end">
       <button class="$$btn $$btn-primary">Buy Now</button>
     </div>
@@ -71,29 +71,101 @@ classnames:
 ```
 
 
-### ~Compact card (less padding for `card-body`)
-<div class="card w-96 bg-base-100 card-compact shadow-xl">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
-  <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div class="justify-end card-actions">
-      <button class="btn btn-primary">Buy Now</button>
+### ~Card sizes
+<div class="grid gap-6">
+  <div class="card w-96 bg-base-100 card-xs shadow-md">
+    <div class="card-body">
+      <h2 class="card-title">Xsmall Card</h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="justify-end card-actions">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 card-sm shadow-md">
+    <div class="card-body">
+      <h2 class="card-title">Small Card</h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="justify-end card-actions">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 card-md shadow-md">
+    <div class="card-body">
+      <h2 class="card-title">Medium Card</h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="justify-end card-actions">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 card-lg shadow-md">
+    <div class="card-body">
+      <h2 class="card-title">Large Card</h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="justify-end card-actions">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="card w-96 bg-base-100 card-xl shadow-md">
+    <div class="card-body">
+      <h2 class="card-title">Xlarge Card</h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="justify-end card-actions">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
     </div>
   </div>
 </div>
 
 ```html
-<div class="$$card $$card-compact bg-base-100 w-96 shadow-xl">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes" />
-  </figure>
+<div class="$$card w-96 bg-base-100 $$card-xs shadow-md">
   <div class="$$card-body">
-    <h2 class="$$card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div class="$$card-actions justify-end">
+    <h2 class="$$card-title">Xsmall Card</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div class="justify-end $$card-actions">
+      <button class="$$btn $$btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="$$card w-96 bg-base-100 $$card-sm shadow-md">
+  <div class="$$card-body">
+    <h2 class="$$card-title">Small Card</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div class="justify-end $$card-actions">
+      <button class="$$btn $$btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="$$card w-96 bg-base-100 $$card-md shadow-md">
+  <div class="$$card-body">
+    <h2 class="$$card-title">Medium Card</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div class="justify-end $$card-actions">
+      <button class="$$btn $$btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="$$card w-96 bg-base-100 $$card-lg shadow-md">
+  <div class="$$card-body">
+    <h2 class="$$card-title">Large Card</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div class="justify-end $$card-actions">
+      <button class="$$btn $$btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="$$card w-96 bg-base-100 $$card-xl shadow-md">
+  <div class="$$card-body">
+    <h2 class="$$card-title">Xlarge Card</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div class="justify-end $$card-actions">
       <button class="$$btn $$btn-primary">Buy Now</button>
     </div>
   </div>
@@ -102,14 +174,14 @@ classnames:
 
 
 ### ~Card with badge
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card w-96 bg-base-100 shadow-md">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">
-      Shoes!
+      Card Title
       <div class="badge badge-secondary">NEW</div>
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="justify-end card-actions">
       <div class="badge badge-outline">Fashion</div>
       <div class="badge badge-outline">Products</div>
@@ -118,7 +190,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$card bg-base-100 w-96 shadow-xl">
+<div class="$$card bg-base-100 w-96 shadow-md">
   <figure>
     <img
       src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -126,10 +198,10 @@ classnames:
   </figure>
   <div class="$$card-body">
     <h2 class="$$card-title">
-      Shoes!
+      Card Title
       <div class="$$badge $$badge-secondary">NEW</div>
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="$$card-actions justify-end">
       <div class="$$badge $$badge-outline">Fashion</div>
       <div class="$$badge $$badge-outline">Products</div>
@@ -140,19 +212,19 @@ classnames:
 
 
 ### ~Card with bottom image
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card w-96 bg-base-100 shadow-md">
   <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
 </div>
 
 ```html
-<div class="$$card bg-base-100 w-96 shadow-xl">
+<div class="$$card bg-base-100 w-96 shadow-md">
   <div class="$$card-body">
-    <h2 class="$$card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="$$card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
     <img
@@ -164,13 +236,13 @@ classnames:
 
 
 ### ~Card with centered content and paddings
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card w-96 bg-base-100 shadow-md">
   <figure class="px-10 pt-10">
-    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-xl" />
+    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-box" />
   </figure>
   <div class="card-body items-center text-center">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="card-actions">
       <button class="btn btn-primary">Buy Now</button>
     </div>
@@ -178,7 +250,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$card bg-base-100 w-96 shadow-xl">
+<div class="$$card bg-base-100 w-96 shadow-md">
   <figure class="px-10 pt-10">
     <img
       src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -186,8 +258,8 @@ classnames:
       class="rounded-xl" />
   </figure>
   <div class="$$card-body items-center text-center">
-    <h2 class="$$card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="$$card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="$$card-actions">
       <button class="$$btn $$btn-primary">Buy Now</button>
     </div>
@@ -197,11 +269,11 @@ classnames:
 
 
 ### ~Card with image overlay
-<div class="card w-96 bg-base-100 shadow-xl image-full">
+<div class="card w-96 bg-base-100 shadow-md image-full">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="justify-end card-actions">
       <button class="btn btn-primary">Buy Now</button>
     </div>
@@ -209,15 +281,15 @@ classnames:
 </div>
 
 ```html
-<div class="$$card bg-base-100 image-full w-96 shadow-xl">
+<div class="$$card bg-base-100 image-full w-96 shadow-md">
   <figure>
     <img
       src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
-    <h2 class="$$card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 class="$$card-title">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="$$card-actions justify-end">
       <button class="$$btn $$btn-primary">Buy Now</button>
     </div>
@@ -227,10 +299,10 @@ classnames:
 
 
 ### ~Card with no image
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card w-96 bg-base-100 shadow-md">
   <div class="card-body">
     <h2 class="card-title">Card title!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="justify-end card-actions">
       <button class="btn btn-primary">Buy Now</button>
     </div>
@@ -238,10 +310,10 @@ classnames:
 </div>
 
 ```html
-<div class="$$card bg-base-100 w-96 shadow-xl">
+<div class="$$card bg-base-100 w-96 shadow-md">
   <div class="$$card-body">
     <h2 class="$$card-title">Card title!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="$$card-actions justify-end">
       <button class="$$btn $$btn-primary">Buy Now</button>
     </div>
@@ -254,7 +326,7 @@ classnames:
 <div class="card w-96 bg-primary text-primary-content">
   <div class="card-body">
     <h2 class="card-title">Card title!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="justify-end card-actions">
       <button class="btn">Buy Now</button>
     </div>
@@ -265,7 +337,7 @@ classnames:
 <div class="$$card bg-primary text-primary-content w-96">
   <div class="$$card-body">
     <h2 class="$$card-title">Card title!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
     <div class="$$card-actions justify-end">
       <button class="$$btn">Buy Now</button>
     </div>
@@ -301,7 +373,7 @@ classnames:
 
 
 ### ~Card with action on top
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card w-96 bg-base-100 shadow-md">
   <div class="card-body">
     <div class="justify-end card-actions">
       <button class="btn btn-square btn-sm">
@@ -313,7 +385,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$card bg-base-100 w-96 shadow-xl">
+<div class="$$card bg-base-100 w-96 shadow-md">
   <div class="$$card-body">
     <div class="$$card-actions justify-end">
       <button class="$$btn $$btn-square $$btn-sm">
@@ -337,38 +409,8 @@ classnames:
 ```
 
 
-### ~Card glass
-<div class="card w-96 glass">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="car!"/></figure>
-  <div class="card-body">
-    <h2 class="card-title">Life hack</h2>
-    <p>How to park your car at your garage?</p>
-    <div class="justify-end card-actions">
-      <button class="btn btn-primary">Learn now!</button>
-    </div>
-  </div>
-</div>
-
-```html
-<div class="$$card glass w-96">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="car!" />
-  </figure>
-  <div class="$$card-body">
-    <h2 class="$$card-title">Life hack</h2>
-    <p>How to park your car at your garage?</p>
-    <div class="$$card-actions justify-end">
-      <button class="$$btn $$btn-primary">Learn now!</button>
-    </div>
-  </div>
-</div>
-```
-
-
 ### ~Card with image on side
-<div class="card card-side bg-base-100 shadow-xl">
+<div class="card card-side bg-base-100 shadow-md">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" alt="Movie"/></figure>
   <div class="card-body">
     <h2 class="card-title">New movie is released!</h2>
@@ -380,7 +422,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$card $$card-side bg-base-100 shadow-xl">
+<div class="$$card $$card-side bg-base-100 shadow-md">
   <figure>
     <img
       src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
@@ -398,7 +440,7 @@ classnames:
 
 
 ### ~Responsive card (vertical on small screen, horizontal on large screen)
-<div class="card lg:card-side bg-base-100 shadow-xl">
+<div class="card lg:card-side bg-base-100 shadow-md">
   <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album"/></figure>
   <div class="card-body">
     <h2 class="card-title">New album is released!</h2>
@@ -410,7 +452,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$card lg:$$card-side bg-base-100 shadow-xl">
+<div class="$$card lg:$$card-side bg-base-100 shadow-md">
   <figure>
     <img
       src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"

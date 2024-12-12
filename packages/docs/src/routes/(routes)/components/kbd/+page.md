@@ -24,24 +24,26 @@ classnames:
 </script>
 
 ### ~Kbd
-<kbd class="kbd">A</kbd>
+<kbd class="kbd">K</kbd>
 
 ```html
-<kbd class="$$kbd">A</kbd>
+<kbd class="$$kbd">K</kbd>
 ```
 
 
 ### ~Kbd sizes
-<kbd class="kbd kbd-lg">Shift</kbd>
-<kbd class="kbd kbd-md">Shift</kbd>
-<kbd class="kbd kbd-sm">Shift</kbd>
-<kbd class="kbd kbd-xs">Shift</kbd>
+<kbd class="kbd kbd-xs">Xsmall</kbd>
+<kbd class="kbd kbd-sm">Small</kbd>
+<kbd class="kbd kbd-md">Medium</kbd>
+<kbd class="kbd kbd-lg">Large</kbd>
+<kbd class="kbd kbd-xl">Xlarge</kbd>
 
 ```html
-<kbd class="$$kbd $$kbd-lg">Shift</kbd>
-<kbd class="$$kbd $$kbd-md">Shift</kbd>
-<kbd class="$$kbd $$kbd-sm">Shift</kbd>
-<kbd class="$$kbd $$kbd-xs">Shift</kbd>
+<kbd class="$$kbd $$kbd-xs">Xsmall</kbd>
+<kbd class="$$kbd $$kbd-sm">Small</kbd>
+<kbd class="$$kbd $$kbd-md">Medium</kbd>
+<kbd class="$$kbd $$kbd-lg">Large</kbd>
+<kbd class="$$kbd $$kbd-xl">Xlarge</kbd>
 ```
 
 

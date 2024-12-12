@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Text Input
 desc: Text Input is a simple input field.
 layout: components

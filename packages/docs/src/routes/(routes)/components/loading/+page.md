@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Loading
 desc: Loading shows an animation to indicate that something is loading.
 layout: components

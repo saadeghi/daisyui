@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Phone mockup
 desc: Phone mockup shows a mockup of an iPhone.
 layout: components

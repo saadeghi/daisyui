@@ -33,21 +33,15 @@ classnames:
 ### ~Collapse with focus
 #### This collapse works with focus. When div loses focus, it gets closed
 
-<div tabindex="0" class="collapse bg-base-200">
-  <div class="collapse-title text-xl font-medium">
-    Focus me to see content
-  </div>
-  <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="collapse bg-base-100 border border-base-300">
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div tabindex="0" class="$$collapse bg-base-200">
-  <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
-  <div class="$$collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="$$collapse bg-base-100 border border-base-300">
+  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 ```
 
@@ -55,23 +49,17 @@ classnames:
 ### ~Collapse with checkbox
 #### This collapse works with checkbox instead of focus. It needs to get clicked again to get closed.
 
-<div class="collapse bg-base-200">
+<div class="collapse bg-base-100 border border-base-300">
   <input type="checkbox" />
-  <div class="collapse-title text-xl font-medium">
-    Click me to show/hide content
-  </div>
-  <div class="collapse-content">
-    <p>hello</p>
-  </div>
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div class="$$collapse bg-base-200">
+<div class="$$collapse bg-base-100 border border-base-300">
   <input type="checkbox" />
-  <div class="$$collapse-title text-xl font-medium">Click me to show/hide content</div>
-  <div class="$$collapse-content">
-    <p>hello</p>
-  </div>
+  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 ```
 
@@ -79,19 +67,15 @@ classnames:
 ### ~ Collapse using details and summary tag
 #### collapse-open and collapse-close doesn't work with this method. You can add/remove open attribute to the details instead
 
-<details class="collapse bg-base-200">
-  <summary class="collapse-title text-xl font-medium">Click to open/close</summary>
-  <div class="collapse-content">
-    <p>content</p>
-  </div>
+<details class="collapse bg-base-100 border border-base-300">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </details>
 
 ```html
-<details class="$$collapse bg-base-200">
-  <summary class="$$collapse-title text-xl font-medium">Click to open/close</summary>
-  <div class="$$collapse-content">
-    <p>content</p>
-  </div>
+<details class="$$collapse bg-base-100 border border-base-300">
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </details>
 ```
 
@@ -102,101 +86,71 @@ classnames:
 </div>
 
 ### ~With border and background color
-<div tabindex="0" class="collapse border border-base-300 bg-base-200">
-  <div class="collapse-title text-xl font-medium">
-    Focus me to see content
-  </div>
-  <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="collapse border border-base-300 bg-base-100 border border-base-300">
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div tabindex="0" class="$$collapse border-base-300 bg-base-200 border">
-  <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
-  <div class="$$collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="$$collapse border-base-300 bg-base-100 border border-base-300 border">
+  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 ```
 
 
 ### ~With arrow icon
-<div tabindex="0" class="collapse border border-base-300 bg-base-200 collapse-arrow">
-  <div class="collapse-title text-xl font-medium">
-    Focus me to see content
-  </div>
-  <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="collapse border border-base-300 bg-base-100 border border-base-300 collapse-arrow">
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-arrow border-base-300 bg-base-200 border">
-  <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
-  <div class="$$collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="$$collapse $$collapse-arrow border-base-300 bg-base-100 border border-base-300 border">
+  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 ```
 
 
 ### ~With arrow plus/minus icon
-<div tabindex="0" class="collapse border border-base-300 bg-base-200 collapse-plus">
-  <div class="collapse-title text-xl font-medium">
-    Focus me to see content
-  </div>
-  <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="collapse border border-base-300 bg-base-100 border border-base-300 collapse-plus">
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-plus border-base-300 bg-base-200 border">
-  <div class="$$collapse-title text-xl font-medium">Focus me to see content</div>
-  <div class="$$collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="$$collapse $$collapse-plus border-base-300 bg-base-100 border border-base-300 border">
+  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 ```
 
 
 ### ~Force open
-<div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-200">
-  <div class="collapse-title text-xl font-medium">
-    I have collapse-open class
-  </div>
-  <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-100 border border-base-300">
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-open border-base-300 bg-base-200 border">
-  <div class="$$collapse-title text-xl font-medium">I have collapse-open class</div>
-  <div class="$$collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="$$collapse $$collapse-open border-base-300 bg-base-100 border border-base-300 border">
+  <div class="$$collapse-title font-semibold">I have collapse-open class</div>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 ```
 
 
 ### ~Force close
-<div tabindex="0" class="collapse collapse-close border border-base-300 bg-base-200">
-  <div class="collapse-title text-xl font-medium">
-    I have collapse-close class
-  </div>
-  <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="collapse collapse-close border border-base-300 bg-base-100 border border-base-300">
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-close border-base-300 bg-base-200 border">
-  <div class="$$collapse-title text-xl font-medium">I have collapse-close class</div>
-  <div class="$$collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+<div tabindex="0" class="$$collapse $$collapse-close border-base-300 bg-base-100 border border-base-300 border">
+  <div class="$$collapse-title font-semibold">I have collapse-open class</div>
+  <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 ```
 
@@ -205,49 +159,42 @@ classnames:
 #### Use Tailwind CSS `group` and `group-focus` utilities to apply style when parent div is focused
 
 <div tabindex="0" class="collapse bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content">
-  <div class="collapse-title">
-    Focus me to see content
-  </div>
-  <div class="collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
-  </div>
+  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
 <div
   tabindex="0"
   class="bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content collapse">
-  <div class="$$collapse-title">Focus me to see content</div>
-  <div class="$$collapse-content">
-    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+    <div class="$$collapse-title font-semibold">How do I create an account?</div>
+    <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
   </div>
-</div>
 ```
 
 
 ### ~Custom colors for collapse that works with checkbox
 #### Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked
 
-<div class="collapse bg-base-200">
+<div class="collapse bg-base-100 border border-base-300">
   <input type="checkbox" class="peer" />
   <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-    Click me to show/hide content
+    How do I create an account?
   </div>
   <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-    <p>hello</p>
+    Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
 </div>
 
 ```html
-<div class="bg-base-200 collapse">
+<div class="bg-base-100 border border-base-300 collapse">
   <input type="checkbox" class="peer" />
-  <div
-    class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-    Click me to show/hide content
+  <div class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+    How do I create an account?
   </div>
   <div
     class="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-    <p>hello</p>
-  </div>
+      Click the "Sign Up" button in the top right corner and follow the registration process.
+    </div>
 </div>
 ```

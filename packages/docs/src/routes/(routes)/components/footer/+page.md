@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Footer
 desc: Footer can contain logo, copyright notice, and links to other pages.
 layout: components

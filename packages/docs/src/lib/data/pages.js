@@ -178,9 +178,9 @@ export const pages = [
             href: "/components/breadcrumbs/",
           },
           {
-            name: "Bottom navigation",
-            tags: "bottom navigation app bar",
-            href: "/components/bottom-navigation/",
+            name: "Dock",
+            tags: "dock bottom navigation app bar",
+            href: "/components/dock/",
           },
           {
             name: "Link",

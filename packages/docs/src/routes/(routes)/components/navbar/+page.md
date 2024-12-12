@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Navbar
 desc: Navbar is used to show a navigation bar on the top of the page.
 layout: components

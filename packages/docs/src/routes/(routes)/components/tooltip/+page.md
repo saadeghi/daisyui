@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Tooltip
 desc: Tooltip can be used to show a message when hovering over an element.
 layout: components

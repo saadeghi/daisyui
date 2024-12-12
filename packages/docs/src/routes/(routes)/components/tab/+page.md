@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Tabs
 desc: Tabs can be used to show a list of links in a tabbed format.
 layout: components

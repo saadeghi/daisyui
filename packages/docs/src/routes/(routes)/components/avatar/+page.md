@@ -218,7 +218,7 @@ classnames:
       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
-  <div class="avatar placeholder">
+  <div class="avatar avatar-placeholder">
     <div class="w-12 bg-neutral text-neutral-content">
       <span>+99</span>
     </div>
@@ -242,7 +242,7 @@ classnames:
       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
     </div>
   </div>
-  <div class="$$avatar $$placeholder">
+  <div class="$$avatar $$avatar-placeholder">
     <div class="bg-neutral text-neutral-content w-12">
       <span>+99</span>
     </div>
@@ -268,24 +268,24 @@ classnames:
 
 
 ### ~Avatar with presence indicator
-<div class="avatar online">
+<div class="avatar avatar-online">
   <div class="w-24 rounded-full bg-base-300">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
-<div class="avatar offline">
+<div class="avatar avatar-offline">
   <div class="w-24 rounded-full bg-base-300">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 
 ```html
-<div class="$$avatar $$online">
+<div class="$$avatar $$avatar-online">
   <div class="w-24 rounded-full">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
-<div class="$$avatar $$offline">
+<div class="$$avatar $$avatar-offline">
   <div class="w-24 rounded-full">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
@@ -294,44 +294,44 @@ classnames:
 
 
 ### ~Avatar placeholder
-<div class="avatar placeholder">
+<div class="avatar avatar-placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-24">
     <span class="text-3xl">D</span>
   </div>
 </div>
-<div class="avatar online placeholder">
+<div class="avatar avatar-online avatar-placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-16">
     <span class="text-xl">AI</span>
   </div>
 </div>
-<div class="avatar placeholder">
+<div class="avatar avatar-placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-12">
     <span>SY</span>
   </div>
 </div>
-<div class="avatar placeholder">
+<div class="avatar avatar-placeholder">
   <div class="bg-neutral text-neutral-content rounded-full w-8">
     <span class="text-xs">UI</span>
   </div>
 </div>
 
 ```html
-<div class="$$avatar $$placeholder">
+<div class="$$avatar $$avatar-placeholder">
   <div class="bg-neutral text-neutral-content w-24 rounded-full">
     <span class="text-3xl">D</span>
   </div>
 </div>
-<div class="$$avatar $$online $$placeholder">
+<div class="$$avatar $$avatar-online $$avatar-placeholder">
   <div class="bg-neutral text-neutral-content w-16 rounded-full">
     <span class="text-xl">AI</span>
   </div>
 </div>
-<div class="$$avatar $$placeholder">
+<div class="$$avatar $$avatar-placeholder">
   <div class="bg-neutral text-neutral-content w-12 rounded-full">
     <span>SY</span>
   </div>
 </div>
-<div class="$$avatar $$placeholder">
+<div class="$$avatar $$avatar-placeholder">
   <div class="bg-neutral text-neutral-content w-8 rounded-full">
     <span class="text-xs">UI</span>
   </div>

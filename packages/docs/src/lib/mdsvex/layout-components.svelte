@@ -9,7 +9,8 @@
   import Sponsors from "$components/Sponsors.svelte"
   import { prefix } from "$lib/stores"
   import { t } from "$lib/i18n"
-  let { data, title, desc, classnames, browserSupport, showComponentPageTabs, children } = $props()
+  let { data, title, desc, classnames, browserSupport, showComponentPageTabs, alert, children } =
+    $props()
 </script>
 
 <SEO
@@ -31,6 +32,11 @@
     {/if}
     {#if browserSupport}
       <BrowserSupport data={browserSupport} />
+    {/if}
+    {#if alert}
+      <div class="alert alert-warning">
+        {alert}
+      </div>
     {/if}
     {#if classnames}
       <div class="not-prose relative mb-10 mt-6 max-h-[25rem] overflow-x-auto">

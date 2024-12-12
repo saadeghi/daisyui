@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Steps
 desc: Steps can be used to show a list of steps in a process.
 layout: components

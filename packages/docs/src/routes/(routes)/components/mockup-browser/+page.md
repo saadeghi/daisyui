@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Browser mockup
 desc: Browser mockup shows a box that looks like a browser window.
 layout: components

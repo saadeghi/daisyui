@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Indicator
 desc: Indicators are used to place an element on the corner of another element.
 layout: components

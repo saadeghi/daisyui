@@ -1058,7 +1058,7 @@ classnames:
 
 ### ~Table with pinned-rows
 <div class="overflow-x-auto h-96">
-  <table class="table table-pin-rows">
+  <table class="table table-pin-rows bg-base-200">
   <thead>
     <tr>
       <th>A</th>
@@ -1222,7 +1222,7 @@ classnames:
 
 ```html
 <div class="h-96 overflow-x-auto">
-  <table class="$$table $$table-pin-rows">
+  <table class="$$table $$table-pin-rows bg-base-200">
     <thead>
       <tr>
         <th>A</th>

@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Pagination
 desc: Pagination is a group of buttons that allow the user to navigate between a set of related content.
 layout: components

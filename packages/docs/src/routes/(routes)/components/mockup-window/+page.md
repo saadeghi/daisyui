@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Window mockup
 desc: Window mockup shows a box that looks like an operating system window.
 layout: components

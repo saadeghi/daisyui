@@ -355,31 +355,31 @@ classnames:
 
 
 ### ~With custom colors and button
-<div class="stats bg-primary text-primary-content">
+<div class="stats bg-base-100 border border-base-300">
   <div class="stat">
     <div class="stat-title">Account balance</div>
     <div class="stat-value">$89,400</div>
     <div class="stat-actions">
-      <button class="btn btn-sm btn-success">Add funds</button>
+      <button class="btn btn-xs btn-success">Add funds</button>
     </div>
   </div>
   <div class="stat">
     <div class="stat-title">Current balance</div>
     <div class="stat-value">$89,400</div>
     <div class="stat-actions">
-      <button class="btn btn-sm">Withdrawal</button>
-      <button class="btn btn-sm">Deposit</button>
+      <button class="btn btn-xs">Withdrawal</button>
+      <button class="btn btn-xs">Deposit</button>
     </div>
   </div>
 </div>
 
 ```html
-<div class="$$stats bg-primary text-primary-content">
+<div class="$$stats bg-base-100 border border-base-300">
   <div class="$$stat">
     <div class="$$stat-title">Account balance</div>
     <div class="$$stat-value">$89,400</div>
     <div class="$$stat-actions">
-      <button class="$$btn $$btn-sm $$btn-success">Add funds</button>
+      <button class="$$btn $$btn-xs $$btn-success">Add funds</button>
     </div>
   </div>
 
@@ -387,8 +387,8 @@ classnames:
     <div class="$$stat-title">Current balance</div>
     <div class="$$stat-value">$89,400</div>
     <div class="$$stat-actions">
-      <button class="$$btn $$btn-sm">Withdrawal</button>
-      <button class="$$btn $$btn-sm">Deposit</button>
+      <button class="$$btn $$btn-xs">Withdrawal</button>
+      <button class="$$btn $$btn-xs">Deposit</button>
     </div>
   </div>
 </div>

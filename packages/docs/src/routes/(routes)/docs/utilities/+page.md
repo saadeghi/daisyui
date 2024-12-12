@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Utility classes and CSS variables
 desc: Additional utility classes and CSS variables that daisyUI uses for components and themes
 published: true

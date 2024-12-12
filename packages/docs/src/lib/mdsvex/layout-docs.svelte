@@ -5,7 +5,7 @@
   import SEO from "$components/SEO.svelte"
   import Sponsors from "$components/Sponsors.svelte"
   import { t } from "$lib/i18n"
-  let { data, title, desc, children } = $props()
+  let { data, title, desc, alert, children } = $props()
 </script>
 
 <SEO
@@ -21,6 +21,11 @@
     {/if}
     {#if desc}
       <p>{@html $t(desc)}</p>
+    {/if}
+    {#if alert}
+      <div class="alert alert-warning">
+        {alert}
+      </div>
     {/if}
     {@render children?.()}
     <ComponentFooter pages={data?.pages} />

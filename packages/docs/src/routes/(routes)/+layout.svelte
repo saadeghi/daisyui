@@ -168,7 +168,7 @@
     onscroll={parseSidebarScroll}
   >
     <label for="drawer" class="drawer-overlay" aria-label="Close menu"></label>
-    <aside class="bg-base-100 min-h-screen w-80">
+    <aside class="bg-base-100 min-h-screen w-72">
       <Sidebar
         pages={data.pages}
         version={data.daisyuiVersion}

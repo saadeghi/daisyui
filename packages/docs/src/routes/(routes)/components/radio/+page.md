@@ -1,4 +1,5 @@
 ---
+alert: This page is not up to date. Some of the examples might not work as expected.
 title: Radio
 desc: Radio buttons allow the user to select one option from a set.
 layout: components
