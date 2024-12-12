@@ -1,7 +1,7 @@
 .progress {
   @apply rounded-box bg-base-content/20 h-2;
   &::-moz-progress-bar {
-    @apply bg-base-content rounded-box;
+    @apply bg-current rounded-box;
   }
   &-primary::-moz-progress-bar {
     @apply bg-primary rounded-box;
@@ -54,7 +54,7 @@
     @apply rounded-box bg-transparent;
   }
   &::-webkit-progress-value {
-    @apply bg-base-content rounded-box;
+    @apply bg-current rounded-box;
   }
   &-primary::-webkit-progress-value {
     @apply bg-primary;
