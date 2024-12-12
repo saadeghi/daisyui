@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Rating
 desc: Rating is a set of radio buttons that allow the user to rate something.
 layout: components
@@ -29,10 +28,14 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
+> :INFO:
+>
+> Items in each rating should have unique `name` attributes to avoid conflicts with other ratings on the same page.
+
 ### ~Rating
 <div class="rating">
   <input type="radio" name="rating-1" class="mask mask-star" />
-  <input type="radio" name="rating-1" class="mask mask-star" checked="checked" />
+  <input type="radio" name="rating-1" class="mask mask-star" />
   <input type="radio" name="rating-1" class="mask mask-star" />
   <input type="radio" name="rating-1" class="mask mask-star" />
   <input type="radio" name="rating-1" class="mask mask-star" />
@@ -49,6 +52,27 @@ classnames:
 ```
 
 
+### ~Read-only Rating
+<div class="rating">
+  <div class="mask mask-star"></div>
+  <div class="mask mask-star"></div>
+  <div class="mask mask-star" aria-checked="true"></div>
+  <div class="mask mask-star"></div>
+  <div class="mask mask-star"></div>
+</div>
+
+```html
+<div class="$$rating">
+  <input type="radio" class="$$mask $$mask-star" />
+  <input type="radio" class="$$mask $$mask-star" aria-checked="true" />
+  <input type="radio" class="$$mask $$mask-star" />
+  <input type="radio" class="$$mask $$mask-star" />
+  <input type="radio" class="$$mask $$mask-star" />
+</div>
+```
+
+
+
 ### ~mask-star-2 with warning color
 <div class="rating">
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -61,11 +85,7 @@ classnames:
 ```html
 <div class="$$rating">
   <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input
-    type="radio"
-    name="rating-2"
-    class="$$mask $$mask-star-2 bg-orange-400"
-    checked="checked" />
+  <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" checked="checked" />
   <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-2" class="$$mask $$mask-star-2 bg-orange-400" />
@@ -143,17 +163,20 @@ classnames:
     <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
     <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
   </div>
+  <div class="rating rating-xl">
+    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" checked="checked" />
+    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+  </div>
 </div>
 
 ```html
 <!-- xs -->
 <div class="$$rating $$rating-xs">
   <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input
-    type="radio"
-    name="rating-5"
-    class="$$mask $$mask-star-2 bg-orange-400"
-    checked="checked" />
+  <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" checked="checked" />
   <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-5" class="$$mask $$mask-star-2 bg-orange-400" />
@@ -161,11 +184,7 @@ classnames:
 <!-- sm -->
 <div class="$$rating $$rating-sm">
   <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input
-    type="radio"
-    name="rating-6"
-    class="$$mask $$mask-star-2 bg-orange-400"
-    checked="checked" />
+  <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" checked="checked" />
   <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-6" class="$$mask $$mask-star-2 bg-orange-400" />
@@ -173,11 +192,7 @@ classnames:
 <!-- md -->
 <div class="$$rating $$rating-md">
   <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input
-    type="radio"
-    name="rating-7"
-    class="$$mask $$mask-star-2 bg-orange-400"
-    checked="checked" />
+  <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" checked="checked" />
   <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-7" class="$$mask $$mask-star-2 bg-orange-400" />
@@ -185,14 +200,18 @@ classnames:
 <!-- lg -->
 <div class="$$rating $$rating-lg">
   <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
-  <input
-    type="radio"
-    name="rating-8"
-    class="$$mask $$mask-star-2 bg-orange-400"
-    checked="checked" />
+  <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" checked="checked" />
   <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
   <input type="radio" name="rating-8" class="$$mask $$mask-star-2 bg-orange-400" />
+</div>
+<!-- xl -->
+<div class="$$rating $$rating-xl">
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2 bg-orange-400" checked="checked" />
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-9" class="$$mask $$mask-star-2 bg-orange-400" />
 </div>
 ```
 
@@ -201,57 +220,53 @@ classnames:
 #### `rating-hidden` is a hidden radio at the start to allow uses remove their rating.
 
 <div class="rating rating-lg">
-  <input type="radio" name="rating-9" class="rating-hidden" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" checked="checked" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
-  <input type="radio" name="rating-9" class="mask mask-star-2" />
+  <input type="radio" name="rating-10" class="rating-hidden" />
+  <input type="radio" name="rating-10" class="mask mask-star-2" />
+  <input type="radio" name="rating-10" class="mask mask-star-2" checked="checked" />
+  <input type="radio" name="rating-10" class="mask mask-star-2" />
+  <input type="radio" name="rating-10" class="mask mask-star-2" />
+  <input type="radio" name="rating-10" class="mask mask-star-2" />
 </div>
 
 ```html
 <div class="$$rating $$rating-lg">
-  <input type="radio" name="rating-9" class="$$rating-hidden" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" checked="checked" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
-  <input type="radio" name="rating-9" class="$$mask $$mask-star-2" />
+  <input type="radio" name="rating-10" class="$$rating-hidden" />
+  <input type="radio" name="rating-10" class="$$mask $$mask-star-2" />
+  <input type="radio" name="rating-10" class="$$mask $$mask-star-2" checked="checked" />
+  <input type="radio" name="rating-10" class="$$mask $$mask-star-2" />
+  <input type="radio" name="rating-10" class="$$mask $$mask-star-2" />
+  <input type="radio" name="rating-10" class="$$mask $$mask-star-2" />
 </div>
 ```
 
 
 ### ~half stars
 <div class="rating rating-lg rating-half">
-  <input type="radio" name="rating-10" class="rating-hidden" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" checked="checked" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
-  <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+  <input type="radio" name="rating-11" class="rating-hidden" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" checked="checked" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-1" />
+  <input type="radio" name="rating-11" class="bg-green-500 mask mask-star-2 mask-half-2" />
 </div>
 
 ```html
 <div class="$$rating $$rating-lg $$rating-half">
-  <input type="radio" name="rating-10" class="$$rating-hidden" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
-  <input
-    type="radio"
-    name="rating-10"
-    class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500"
-    checked="checked" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
-  <input type="radio" name="rating-10" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$rating-hidden" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" checked="checked" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-1 bg-green-500" />
+  <input type="radio" name="rating-11" class="$$mask $$mask-star-2 $$mask-half-2 bg-green-500" />
 </div>
 ```

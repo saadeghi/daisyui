@@ -682,7 +682,7 @@
           <label class="cursor-pointer">
             <input
               type="checkbox"
-              class="toggle toggle-sm"
+              class="toggle toggle-xs"
               checked={currentTheme[key] === "1"}
               onchange={(e) => (currentTheme[key] = e.target.checked ? "1" : "0")}
             />
@@ -873,7 +873,7 @@
     <div class="flex gap-2 items-center justify-between">
       <span class="text-xs flex items-center gap-1 text-base-content/60"> Default theme </span>
       <label class="cursor-pointer">
-        <input type="checkbox" class="toggle toggle-sm" bind:checked={currentTheme.default} />
+        <input type="checkbox" class="toggle toggle-xs" bind:checked={currentTheme.default} />
       </label>
     </div>
 
@@ -898,7 +898,7 @@
         </div>
       </span>
       <label class="cursor-pointer">
-        <input type="checkbox" class="toggle toggle-sm" bind:checked={currentTheme.prefersdark} />
+        <input type="checkbox" class="toggle toggle-xs" bind:checked={currentTheme.prefersdark} />
       </label>
     </div>
 
@@ -925,7 +925,7 @@
       <label class="flex gap-2 items-center cursor-pointer text-xs">
         <input
           type="checkbox"
-          class="toggle toggle-sm"
+          class="toggle toggle-xs"
           checked={currentTheme["color-scheme"] === "dark"}
           onchange={(e) => (currentTheme["color-scheme"] = e.target.checked ? "dark" : "light")}
         />

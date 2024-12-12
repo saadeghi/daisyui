@@ -1,7 +1,7 @@
 .input {
   cursor: text;
   border: var(--border) solid transparent;
-  @apply bg-base-100 inline-flex w-full max-w-80 shrink appearance-none items-center align-middle;
+  @apply bg-base-100 inline-flex w-full max-w-80 shrink appearance-none items-center gap-2 align-middle;
   height: var(--size);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;

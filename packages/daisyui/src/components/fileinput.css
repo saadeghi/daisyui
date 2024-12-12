@@ -21,7 +21,10 @@
   }
 
   &::file-selector-button {
-    @apply me-4 h-full cursor-pointer px-4 select-none;
+    @apply me-4 cursor-pointer px-4 select-none;
+    height: calc(100% + var(--border) * 2);
+    margin-block: calc(var(--border) * -1);
+    margin-inline-start: calc(var(--border) * -1);
     font-size: 0.875rem;
     color: var(--btn-fg);
     border-width: var(--border);
@@ -102,6 +105,12 @@
   transition: background-color 0.2s;
   box-shadow: none;
   border-color: transparent;
+  &::file-selector-button {
+    @apply ms-0 me-4 h-full cursor-pointer px-4 select-none;
+    margin-block: 0;
+    border-start-end-radius: calc(var(--join-ss, var(--radius-field) - var(--border)));
+    border-end-end-radius: calc(var(--join-es, var(--radius-field) - var(--border)));
+  }
 
   &:focus,
   &:focus-within {
@@ -245,7 +254,7 @@
 .file-input-xl {
   @apply pe-6;
   --size: calc(var(--size-field, 0.25rem) * 14);
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   line-height: 3rem;
   &::file-selector-button {
     font-size: 1.375rem;

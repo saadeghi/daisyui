@@ -20,11 +20,8 @@
 @keyframes rating {
   0%,
   40% {
-    translate: 0 -2px;
-  }
-
-  100% {
-    translate: 0 0;
+    scale: 1.1;
+    filter: brightness(1.05) contrast(1.05);
   }
 }
 @keyframes skeleton {

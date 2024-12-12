@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Hero
 desc: Hero is a component for displaying a large box or image with a title and description.
 layout: components
@@ -116,22 +115,16 @@ classnames:
     </div>
     <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <div class="card-body">
-        <div class="form-control">
-          <label class="label" for="input1">
-            <span class="label-text">Email</span>
-          </label>
-          <input type="email" placeholder="email" class="input input-bordered" required id="input1" />
-        </div>
-        <div class="form-control">
-          <label class="label" for="input2">
-            <span class="label-text">Password</span>
-          </label>
-          <input type="password" placeholder="password" class="input input-bordered" required for="input2" />
-          <label class="label">
-            <button class="label-text-alt link link-hover">Forgot password?</button>
-          </label>
-        </div>
-        <div class="form-control mt-6">
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Email</legend>
+          <input type="email" placeholder="email" class="input" required id="input1" />
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">Password</legend>
+          <input type="password" placeholder="password" class="input" required for="input2" />
+          <label class="fieldset-label">Forgot password?</label>
+        </fieldset>
+        <div class="card-actions">
           <button class="btn btn-primary">Login</button>
         </div>
       </div>

@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Toggle
 desc: Toggle is a checkbox that is styled to look like a switch button.
 layout: components
@@ -40,131 +39,83 @@ classnames:
   let indeterminate = true;
 </script>
 
+
 ### ~Toggle
-<input type="checkbox" class="toggle" checked="checked" />
+<input type="checkbox" checked="checked" class="toggle" />
 
 ```html
-<input type="checkbox" class="$$toggle" checked="checked" />
+<input type="checkbox" checked="checked" class="$$toggle" />
 ```
 
 
-### ~With label and form-control
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" class="toggle" checked="checked" />
+### ~With fieldset and fieldset-label
+<fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+  <legend class="fieldset-legend">Login options</legend>
+  <label class="fieldset-label">
+    <input type="checkbox" checked="checked" class="toggle" />
+    Remember me
   </label>
-</div>
+</fieldset>
 
 ```html
-<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" class="$$toggle" checked="checked" />
+<fieldset class="$$fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+  <legend class="$$fieldset-legend">Login options</legend>
+  <label class="$$fieldset-label">
+    <input type="checkbox" checked="checked" class="$$toggle" />
+    Remember me
   </label>
-</div>
+</fieldset>
 ```
-
-
-### ~Checkboxes with brand colors
-<div class="flex flex-col">
-  <div class="form-control w-52">
-    <label class="cursor-pointer label">
-      <span class="label-text">Remember me</span>
-      <input type="checkbox" class="toggle toggle-primary" checked="checked" />
-    </label>
-  </div>
-  <div class="form-control w-52">
-    <label class="cursor-pointer label">
-      <span class="label-text">Remember me</span>
-      <input type="checkbox" class="toggle toggle-secondary" checked="checked" />
-    </label>
-  </div>
-  <div class="form-control w-52">
-    <label class="cursor-pointer label">
-      <span class="label-text">Remember me</span>
-      <input type="checkbox" class="toggle toggle-accent" checked="checked" />
-    </label>
-  </div>
-</div>
-
-```html
-<div class="flex flex-col">
-  <div class="form-control w-52">
-    <label class="$$label cursor-pointer">
-      <span class="label-text">Remember me</span>
-      <input type="checkbox" class="$$toggle $$toggle-primary" checked="checked" />
-    </label>
-  </div>
-  <div class="form-control w-52">
-    <label class="$$label cursor-pointer">
-      <span class="label-text">Remember me</span>
-      <input type="checkbox" class="$$toggle $$toggle-secondary" checked="checked" />
-    </label>
-  </div>
-  <div class="form-control w-52">
-    <label class="$$label cursor-pointer">
-      <span class="label-text">Remember me</span>
-      <input type="checkbox" class="$$toggle $$toggle-accent" checked="checked" />
-    </label>
-  </div>
-</div>
-```
-
-
-### ~Checkboxes with state colors
-<div class="flex flex-col items-center gap-2">
-  <input type="checkbox" class="toggle toggle-success" checked="checked" />
-  <input type="checkbox" class="toggle toggle-warning" checked="checked" />
-  <input type="checkbox" class="toggle toggle-info" checked="checked" />
-  <input type="checkbox" class="toggle toggle-error" checked="checked" />
-</div>
-
-```html
-<input type="checkbox" class="$$toggle $$toggle-success" checked="checked" />
-<input type="checkbox" class="$$toggle $$toggle-warning" checked="checked" />
-<input type="checkbox" class="$$toggle $$toggle-info" checked="checked" />
-<input type="checkbox" class="$$toggle $$toggle-error" checked="checked" />
-```
-
 
 ### ~Sizes
-<div class="flex flex-col items-center gap-2">
-  <input type="checkbox" class="toggle toggle-xs" checked="checked" />
-  <input type="checkbox" class="toggle toggle-sm" checked="checked" />
-  <input type="checkbox" class="toggle toggle-md" checked="checked" />
-  <input type="checkbox" class="toggle toggle-lg" checked="checked" />
-</div>
+<input type="checkbox" checked="checked" class="toggle toggle-xs" />
+<input type="checkbox" checked="checked" class="toggle toggle-sm" />
+<input type="checkbox" checked="checked" class="toggle toggle-md" />
+<input type="checkbox" checked="checked" class="toggle toggle-lg" />
+<input type="checkbox" checked="checked" class="toggle toggle-xl" />
 
 ```html
-<input type="checkbox" class="$$toggle $$toggle-xs" checked="checked" />
-<input type="checkbox" class="$$toggle $$toggle-sm" checked="checked" />
-<input type="checkbox" class="$$toggle $$toggle-md" checked="checked" />
-<input type="checkbox" class="$$toggle $$toggle-lg" checked="checked" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-xs" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-sm" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-md" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-lg" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-xl" />
 ```
 
+### ~Colors
+<input type="checkbox" checked="checked" class="toggle toggle-primary" />
+<input type="checkbox" checked="checked" class="toggle toggle-secondary" />
+<input type="checkbox" checked="checked" class="toggle toggle-accent" />
+<input type="checkbox" checked="checked" class="toggle toggle-info" />
+<input type="checkbox" checked="checked" class="toggle toggle-success" />
+<input type="checkbox" checked="checked" class="toggle toggle-warning" />
+<input type="checkbox" checked="checked" class="toggle toggle-error" />
+
+```html
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-primary" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-secondary" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-accent" />
+
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-info" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-success" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-warning" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-error" />
+```
 
 ### ~Disabled
-<input type="checkbox" class="toggle" disabled />
+<input type="checkbox" disabled="disabled" class="toggle" />
+<input type="checkbox" disabled="disabled" class="toggle" checked="checked" />
 
 ```html
 <input type="checkbox" class="$$toggle" disabled />
-```
-
-
-### ~Disabled and checked
-<input type="checkbox" class="toggle" disabled checked="checked" />
-
-```html
 <input type="checkbox" class="$$toggle" disabled checked="checked" />
 ```
 
-
 ### ~Indeterminate
-<input type="checkbox" class="toggle" bind:indeterminate onclick={(e)=>{e.preventDefault();}} />
+<input type="checkbox" class="toggle" bind:indeterminate onclick={(e)=>{e.preventDefault()}} />
 
 ```html
-<!-- You can make a toggle indeterminate using JS -->
+<!-- You can make a checkbox indeterminate using JS -->
 <script>
   document.getElementById("my-toggle").indeterminate = true
 </script>
@@ -172,12 +123,9 @@ classnames:
 ```
 
 
-### ~Toggle with custom color
-<input type="checkbox" class="toggle [--tglbg:yellow] bg-blue-500 hover:bg-blue-700 border-blue-500" checked="checked" />
+### ~Toggle with custom colors
+<input type="checkbox" checked="checked" class="toggle border-indigo-600 bg-indigo-500 checked:bg-orange-400 checked:text-orange-800 checked:border-orange-500 " />
 
 ```html
-<input
-  type="checkbox"
-  class="$$toggle border-blue-500 bg-blue-500 [--tglbg:yellow] hover:bg-blue-700"
-  checked="checked" />
+<input type="checkbox" checked="checked" class="$$toggle border-indigo-600 bg-indigo-500 checked:bg-orange-400 checked:text-orange-800 checked:border-orange-500 " />
 ```

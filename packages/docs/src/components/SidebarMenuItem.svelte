@@ -145,7 +145,7 @@
           {@html $t(name)}
         </span>
         {#if badge}
-          <span class={`badge badge-sm font-mono text-opacity-70 ${badgeclass && badgeclass}`}>
+          <span class={`badge badge-xs font-mono text-opacity-70 ${badgeclass && badgeclass}`}>
             {$t(badge)}
           </span>
         {/if}

@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Indicator
 desc: Indicators are used to place an element on the corner of another element.
 layout: components
@@ -29,15 +28,15 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-### ~Empty badge as indicator
+### ~Status Indicator
 <div class="indicator">
-  <span class="indicator-item badge badge-secondary"></span>
+  <span class="indicator-item status status-success"></span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
 
 ```html
 <div class="$$indicator">
-  <span class="$$indicator-item $$badge $$badge-secondary"></span>
+  <span class="$$indicator-item $$status $$status-success"></span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
@@ -45,13 +44,13 @@ classnames:
 
 ### ~Badge as indicator
 <div class="indicator">
-  <span class="indicator-item badge badge-primary">new</span>
+  <span class="indicator-item badge badge-primary">New</span>
   <div class="grid w-32 h-32 rounded bg-base-300 place-items-center">content</div>
 </div>
 
 ```html
 <div class="$$indicator">
-  <span class="$$indicator-item $$badge $$badge-primary">new</span>
+  <span class="$$indicator-item $$badge $$badge-primary">New</span>
   <div class="bg-base-300 grid h-32 w-32 place-items-center">content</div>
 </div>
 ```
@@ -59,13 +58,13 @@ classnames:
 
 ### ~for button
 <div class="indicator">
-  <span class="indicator-item badge badge-secondary">99+</span>
+  <span class="indicator-item badge badge-secondary">12</span>
   <button class="btn">inbox</button>
 </div>
 
 ```html
 <div class="$$indicator">
-  <span class="$$indicator-item $$badge $$badge-secondary">99+</span>
+  <span class="$$indicator-item $$badge $$badge-secondary">12</span>
   <button class="$$btn">inbox</button>
 </div>
 ```
@@ -95,7 +94,7 @@ classnames:
 
 ### ~for avatar
 <div class="avatar indicator">
-  <span class="indicator-item badge badge-secondary">typing…</span>
+  <span class="indicator-item badge badge-secondary">Online</span>
   <div class="w-20 h-20 rounded-lg">
     <img alt="Tailwind CSS examples" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
@@ -103,7 +102,7 @@ classnames:
 
 ```html
 <div class="$$avatar $$indicator">
-  <span class="$$indicator-item $$badge $$badge-secondary">typing…</span>
+  <span class="$$indicator-item $$badge $$badge-secondary">Online</span>
   <div class="h-20 w-20 rounded-lg">
     <img
       alt="Tailwind CSS examples"
@@ -132,7 +131,7 @@ classnames:
   <div class="indicator-item indicator-bottom">
     <button class="btn btn-primary">Apply</button>
   </div>
-  <div class="border card bg-base-100">
+  <div class="border border-base-300 shadow-sm card bg-base-100">
     <div class="card-body">
       <h2 class="card-title">Job Title</h2>
       <p>Rerum reiciendis beatae tenetur excepturi</p>
@@ -145,7 +144,7 @@ classnames:
   <div class="$$indicator-item $$indicator-bottom">
     <button class="$$btn $$btn-primary">Apply</button>
   </div>
-  <div class="$$card border">
+  <div class="$$card border border-base-300 shadow-sm">
     <div class="$$card-body">
       <h2 class="$$card-title">Job Title</h2>
       <p>Rerum reiciendis beatae tenetur excepturi</p>
@@ -156,15 +155,15 @@ classnames:
 
 
 ### ~in center of an image
-<div class="indicator">
-  <span class="indicator-item indicator-center indicator-middle badge badge-secondary">Uploading Image...</span>
+<div class="indicator max-w-xs">
+  <span class="indicator-item indicator-center indicator-middle badge">Only available for Pro users</span>
   <img alt="Tailwind CSS examples" class="rounded" src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
 </div>
 
 ```html
 <div class="$$indicator">
-  <span class="$$indicator-item $$indicator-center $$indicator-middle $$badge $$badge-secondary">
-    Uploading Image...
+  <span class="$$indicator-item $$indicator-center $$indicator-middle">
+    Only available for Pro users
   </span>
   <img
     alt="Tailwind CSS examples"
@@ -305,48 +304,30 @@ classnames:
 
 ### ~multiple indicators
 <div class="indicator">
-  <span class="indicator-item indicator-top indicator-start badge badge-secondary">top+start</span>
-  <span class="indicator-item indicator-top indicator-center badge badge-secondary">top+center</span>
-  <span class="indicator-item indicator-top indicator-end badge badge-secondary">top+end</span>
-  <span class="indicator-item indicator-middle indicator-start badge badge-secondary">middle+start</span>
-  <span class="indicator-item indicator-middle indicator-center badge badge-secondary">middle+center</span>
-  <span class="indicator-item indicator-middle indicator-end badge badge-secondary">middle+end</span>
-  <span class="indicator-item indicator-bottom indicator-start badge badge-secondary">bottom+start</span>
-  <span class="indicator-item indicator-bottom indicator-center badge badge-secondary">bottom+center</span>
-  <span class="indicator-item indicator-bottom indicator-end badge badge-secondary">bottom+end</span>
-  <div class="grid w-60 h-32 bg-base-300 place-items-center">content</div>
+  <span class="indicator-item indicator-top indicator-start badge">↖︎</span>
+  <span class="indicator-item indicator-top indicator-center badge">↑</span>
+  <span class="indicator-item indicator-top indicator-end badge">↗︎</span>
+  <span class="indicator-item indicator-middle indicator-start badge">←</span>
+  <span class="indicator-item indicator-middle indicator-center badge">●</span>
+  <span class="indicator-item indicator-middle indicator-end badge">→</span>
+  <span class="indicator-item indicator-bottom indicator-start badge">↙︎</span>
+  <span class="indicator-item indicator-bottom indicator-center badge">↓</span>
+  <span class="indicator-item indicator-bottom indicator-end badge">↘︎</span>
+  <div class="grid w-60 h-32 bg-base-300 place-items-center">Box</div>
 </div>
 
 ```html
 <div class="$$indicator">
-  <span class="$$indicator-item $$indicator-top $$indicator-start $$badge $$badge-secondary">
-    top+start
-  </span>
-  <span class="$$indicator-item $$indicator-top $$indicator-center $$badge $$badge-secondary">
-    top+center
-  </span>
-  <span class="$$indicator-item $$indicator-top $$indicator-end $$badge $$badge-secondary">
-    top+end
-  </span>
-  <span class="$$indicator-item $$indicator-middle $$indicator-start $$badge $$badge-secondary">
-    middle+start
-  </span>
-  <span class="$$indicator-item $$indicator-middle $$indicator-center $$badge $$badge-secondary">
-    middle+center
-  </span>
-  <span class="$$indicator-item $$indicator-middle $$indicator-end $$badge $$badge-secondary">
-    middle+end
-  </span>
-  <span class="$$indicator-item $$indicator-bottom $$indicator-start $$badge $$badge-secondary">
-    bottom+start
-  </span>
-  <span class="$$indicator-item $$indicator-bottom $$indicator-center $$badge $$badge-secondary">
-    bottom+center
-  </span>
-  <span class="$$indicator-item $$indicator-bottom $$indicator-end $$badge $$badge-secondary">
-    bottom+end
-  </span>
-  <div class="bg-base-300 grid h-32 w-60 place-items-center">content</div>
+  <span class="$$indicator-item $$indicator-top $$indicator-start $$badge">↖︎</span>
+  <span class="$$indicator-item $$indicator-top $$indicator-center $$badge">↑</span>
+  <span class="$$indicator-item $$indicator-top $$indicator-end $$badge">↗︎</span>
+  <span class="$$indicator-item $$indicator-middle $$indicator-start $$badge">←</span>
+  <span class="$$indicator-item $$indicator-middle $$indicator-center $$badge">●</span>
+  <span class="$$indicator-item $$indicator-middle $$indicator-end $$badge">→</span>
+  <span class="$$indicator-item $$indicator-bottom $$indicator-start $$badge">↙︎</span>
+  <span class="$$indicator-item $$indicator-bottom $$indicator-center $$badge">↓</span>
+  <span class="$$indicator-item $$indicator-bottom $$indicator-end $$badge">↘︎</span>
+  <div class="bg-base-300 grid h-32 w-60 place-items-center">Box</div>
 </div>
 ```
 

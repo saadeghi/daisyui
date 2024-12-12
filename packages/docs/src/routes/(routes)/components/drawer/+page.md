@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Drawer
 desc: Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page.
 layout: components
@@ -28,15 +27,15 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
-### Drawer tags structure
+Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page, based on the screen size or based on the value of a `drawer-toggle` checkbox.  
+Drawer must be the parent element of the content and sidebar.
 
-```js
+```json:Structure
 .drawer // The root container
   ├── .drawer-toggle // A hidden checkbox to toggle the visibility of the sidebar
   ├── .drawer-content // All your page content goes here
-  │    ├── // navbar
-  │    ├── // content
-  │    ╰── // footer
+  │    ╰── // navbar, content, footer
+  │
   ╰── .drawer-side // Sidebar wrapper
        ├── .drawer-overlay // A dark overlay that covers the whole page when the drawer is open
        ╰── // Sidebar content (menu or anything)
@@ -59,7 +58,7 @@ classnames:
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
   </div>
-  <div class="drawer-side h-full absolute">
+  <div class="drawer-side z-99">
     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><button>Sidebar Item 1</button></li>
@@ -95,7 +94,7 @@ classnames:
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   </div>
-  <div class="drawer-side h-full absolute">
+  <div class="drawer-side z-99">
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><button>Sidebar Item 1</button></li>
@@ -147,7 +146,7 @@ classnames:
     </div>
     <div class="flex justify-center items-center grow">Content</div>
   </div>
-  <div class="drawer-side h-full absolute">
+  <div class="drawer-side z-99">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="p-4 menu w-60 md:w-80 min-h-full bg-base-200">
       <li><button>Sidebar Item 1</button></li>
@@ -207,7 +206,7 @@ classnames:
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
   </div>
-  <div class="drawer-side h-full absolute ms-[-54rem] w-[stretch]">
+  <div class="drawer-side z-99">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><button>Sidebar Item 1</button></li>

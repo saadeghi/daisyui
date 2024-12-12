@@ -4,14 +4,15 @@
   grid-template-rows: 3px 4px 1fr 4px 3px;
 
   & > * {
+    @apply h-full w-full;
     &:not(:nth-child(1)) {
-      @apply size-auto opacity-70;
+      @apply w-full opacity-70;
     }
     &:nth-child(2) {
       @apply z-2 opacity-90;
     }
     &:nth-child(1) {
-      @apply z-3;
+      @apply z-3 w-full;
     }
   }
   &,

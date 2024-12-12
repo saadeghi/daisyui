@@ -1,5 +1,5 @@
 .progress {
-  @apply rounded-box bg-base-content/20 text-base-content relative h-2 w-full appearance-none overflow-hidden;
+  @apply rounded-box text-base-content relative h-2 w-full appearance-none overflow-hidden bg-current/20;
   &:indeterminate {
     background-image: repeating-linear-gradient(
       90deg,

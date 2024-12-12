@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Radio
 desc: Radio buttons allow the user to select one option from a set.
 layout: components
@@ -39,6 +38,11 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
+> :INFO:
+>
+> Each set of radio inputs should have unique `name` attributes to avoid conflicts with other sets of radio inputs on the same page.
+
+
 ### ~Radio
 <input type="radio" name="radio-1" class="radio" checked="checked" />
 <input type="radio" name="radio-1" class="radio" />
@@ -48,114 +52,110 @@ classnames:
 <input type="radio" name="radio-1" class="$$radio" />
 ```
 
-
-### ~Primary color
-<input type="radio" name="radio-2" class="radio radio-primary" checked="checked" />
-<input type="radio" name="radio-2" class="radio radio-primary" />
+### ~Radio sizes
+<input type="radio" name="radio-2" class="radio radio-xs" checked="checked" />
+<input type="radio" name="radio-2.1" class="radio radio-sm" checked="checked" />
+<input type="radio" name="radio-2.2" class="radio radio-md" checked="checked" />
+<input type="radio" name="radio-2.3" class="radio radio-lg" checked="checked" />
+<input type="radio" name="radio-2.4" class="radio radio-xl" checked="checked" />
 
 ```html
-<input type="radio" name="radio-2" class="$$radio $$radio-primary" checked="checked" />
-<input type="radio" name="radio-2" class="$$radio $$radio-primary" />
+<input type="radio" name="radio-2" class="$$radio $$radio-xs" checked="checked" />
+<input type="radio" name="radio-2" class="$$radio $$radio-sm" checked="checked" />
+<input type="radio" name="radio-2" class="$$radio $$radio-md" checked="checked" />
+<input type="radio" name="radio-2" class="$$radio $$radio-lg" checked="checked" />
+<input type="radio" name="radio-2" class="$$radio $$radio-xl" checked="checked" />
+```
+
+### ~Primary color
+<input type="radio" name="radio-3" class="radio radio-primary" checked="checked" />
+<input type="radio" name="radio-3" class="radio radio-primary" />
+
+```html
+<input type="radio" name="radio-3" class="$$radio $$radio-primary" checked="checked" />
+<input type="radio" name="radio-3" class="$$radio $$radio-primary" />
 ```
 
 
 ### ~Secondary color
-<input type="radio" name="radio-3" class="radio radio-secondary" checked="checked" />
-<input type="radio" name="radio-3" class="radio radio-secondary" />
+<input type="radio" name="radio-4" class="radio radio-secondary" checked="checked" />
+<input type="radio" name="radio-4" class="radio radio-secondary" />
 
 ```html
-<input type="radio" name="radio-3" class="$$radio $$radio-secondary" checked="checked" />
-<input type="radio" name="radio-3" class="$$radio $$radio-secondary" />
+<input type="radio" name="radio-4" class="$$radio $$radio-secondary" checked="checked" />
+<input type="radio" name="radio-4" class="$$radio $$radio-secondary" />
 ```
 
 
 ### ~Accent color
-<input type="radio" name="radio-4" class="radio radio-accent" checked="checked" />
-<input type="radio" name="radio-4" class="radio radio-accent" />
+<input type="radio" name="radio-5" class="radio radio-accent" checked="checked" />
+<input type="radio" name="radio-5" class="radio radio-accent" />
 
 ```html
-<input type="radio" name="radio-4" class="$$radio $$radio-accent" checked="checked" />
-<input type="radio" name="radio-4" class="$$radio $$radio-accent" />
+<input type="radio" name="radio-5" class="$$radio $$radio-accent" checked="checked" />
+<input type="radio" name="radio-5" class="$$radio $$radio-accent" />
 ```
 
 
 ### ~Success color
-<input type="radio" name="radio-5" class="radio radio-success" checked="checked" />
-<input type="radio" name="radio-5" class="radio radio-success" />
+<input type="radio" name="radio-6" class="radio radio-success" checked="checked" />
+<input type="radio" name="radio-6" class="radio radio-success" />
 
 ```html
-<input type="radio" name="radio-5" class="$$radio $$radio-success" checked="checked" />
-<input type="radio" name="radio-5" class="$$radio $$radio-success" />
+<input type="radio" name="radio-6" class="$$radio $$radio-success" checked="checked" />
+<input type="radio" name="radio-6" class="$$radio $$radio-success" />
 ```
 
 
 ### ~Warning color
-<input type="radio" name="radio-6" class="radio radio-warning" checked="checked" />
-<input type="radio" name="radio-6" class="radio radio-warning" />
+<input type="radio" name="radio-7" class="radio radio-warning" checked="checked" />
+<input type="radio" name="radio-7" class="radio radio-warning" />
 
 ```html
-<input type="radio" name="radio-6" class="$$radio $$radio-warning" checked="checked" />
-<input type="radio" name="radio-6" class="$$radio $$radio-warning" />
+<input type="radio" name="radio-7" class="$$radio $$radio-warning" checked="checked" />
+<input type="radio" name="radio-7" class="$$radio $$radio-warning" />
 ```
 
 
 ### ~Info color
-<input type="radio" name="radio-7" class="radio radio-info" checked="checked" />
-<input type="radio" name="radio-7" class="radio radio-info" />
+<input type="radio" name="radio-8" class="radio radio-info" checked="checked" />
+<input type="radio" name="radio-8" class="radio radio-info" />
 
 ```html
-<input type="radio" name="radio-7" class="$$radio $$radio-info" checked="checked" />
-<input type="radio" name="radio-7" class="$$radio $$radio-info" />
+<input type="radio" name="radio-8" class="$$radio $$radio-info" checked="checked" />
+<input type="radio" name="radio-8" class="$$radio $$radio-info" />
 ```
 
 
 ### ~Error color
-<input type="radio" name="radio-8" class="radio radio-error" checked="checked" />
-<input type="radio" name="radio-8" class="radio radio-error" />
+<input type="radio" name="radio-9" class="radio radio-error" checked="checked" />
+<input type="radio" name="radio-9" class="radio radio-error" />
 
 ```html
-<input type="radio" name="radio-8" class="$$radio $$radio-error" checked="checked" />
-<input type="radio" name="radio-8" class="$$radio $$radio-error" />
+<input type="radio" name="radio-9" class="$$radio $$radio-error" checked="checked" />
+<input type="radio" name="radio-9" class="$$radio $$radio-error" />
 ```
 
 
 ### ~Disabled
-<input type="radio" name="radio-9" class="radio" disabled checked="checked" />
-<input type="radio" name="radio-9" class="radio" disabled />
+<input type="radio" name="radio-10" class="radio" disabled checked="checked" />
+<input type="radio" name="radio-10" class="radio" disabled />
 
 ```html
-<input type="radio" name="radio-9" class="$$radio" disabled checked="checked" />
-<input type="radio" name="radio-9" class="$$radio" disabled />
+<input type="radio" name="radio-10" class="$$radio" disabled checked="checked" />
+<input type="radio" name="radio-10" class="$$radio" disabled />
 ```
 
 
-### ~With label and form-control and custom colors!
-<div class="flex flex-col">
-  <div class="form-control w-52">
-    <label class="cursor-pointer label">
-      <span class="label-text">Red pill</span>
-      <input type="radio" name="radio-10" class="radio checked:bg-red-500" checked="checked" />
-    </label>
-  </div>
-  <div class="form-control w-52">
-    <label class="cursor-pointer label">
-      <span class="label-text">Blue pill</span>
-      <input type="radio" name="radio-10" class="radio checked:bg-blue-500" checked="checked" />
-    </label>
-  </div>
-</div>
+### ~Radio with custom colors
+<input type="radio" name="radio-11" class="radio bg-red-100 border-red-300 checked:bg-red-200 checked:text-red-600 checked:border-red-600" checked="checked" />
+<input type="radio" name="radio-11" class="radio bg-blue-100 border-blue-300 checked:bg-blue-200 checked:text-blue-600 checked:border-blue-600" checked="checked" />
 
 ```html
-<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Red pill</span>
-    <input type="radio" name="radio-10" class="$$radio checked:bg-red-500" checked="checked" />
-  </label>
-</div>
-<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Blue pill</span>
-    <input type="radio" name="radio-10" class="$$radio checked:bg-blue-500" checked="checked" />
-  </label>
-</div>
+<input
+  type="radio" name="radio-11" checked="checked"
+  class="$$radio bg-red-100 border-red-300 checked:bg-red-200 checked:text-red-600 checked:border-red-600" />
+<input
+  type="radio" name="radio-11" checked="checked"
+  class="$$radio bg-blue-100 border-blue-300 checked:bg-blue-200 checked:text-blue-600 checked:border-blue-600" />
 ```

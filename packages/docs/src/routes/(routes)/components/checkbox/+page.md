@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Checkbox
 desc: Checkboxes are used to select or deselect a value.
 layout: components
@@ -48,181 +47,68 @@ classnames:
 ```
 
 
-### ~With label and form-control
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
+### ~With fieldset and fieldset-label
+<fieldset class="fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+  <legend class="fieldset-legend">Login options</legend>
+  <label class="fieldset-label">
     <input type="checkbox" checked="checked" class="checkbox" />
+    Remember me
   </label>
-</div>
+</fieldset>
 
 ```html
-<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Remember me</span>
+<fieldset class="$$fieldset p-4 bg-base-100 border border-base-300 rounded-box w-64">
+  <legend class="$$fieldset-legend">Login options</legend>
+  <label class="$$fieldset-label">
     <input type="checkbox" checked="checked" class="$$checkbox" />
+    Remember me
   </label>
-</div>
+</fieldset>
 ```
-
-
-### ~Primary color
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
-  </label>
-</div>
-
-```html
-<div class="$$form-control">
-  <label class="$$label cursor-pointer">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-primary" />
-  </label>
-</div>
-```
-
-
-### ~Secondary color
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-secondary" />
-  </label>
-</div>
-
-```html
-<div class="$$form-control">
-  <label class="$$cursor-pointer $$label">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-secondary" />
-  </label>
-</div>
-```
-
-
-### ~Accent color
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-accent" />
-  </label>
-</div>
-
-```html
-<div class="$$form-control">
-  <label class="$$cursor-pointer $$label">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-accent" />
-  </label>
-</div>
-```
-
-
-### ~Success color
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
-  </label>
-</div>
-
-```html
-<div class="$$form-control">
-  <label class="$$cursor-pointer $$label">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-success" />
-  </label>
-</div>
-```
-
-
-### ~Warning color
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-warning" />
-  </label>
-</div>
-
-```html
-<div class="$$form-control">
-  <label class="$$cursor-pointer $$label">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-warning" />
-  </label>
-</div>
-```
-
-
-### ~Info color
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
-  </label>
-</div>
-
-```html
-<div class="$$form-control">
-  <label class="$$cursor-pointer $$label">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-info" />
-  </label>
-</div>
-```
-
-
-### ~Error color
-<div class="form-control w-52">
-  <label class="cursor-pointer label">
-    <span class="label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="checkbox checkbox-error" />
-  </label>
-</div>
-
-```html
-<div class="$$form-control">
-  <label class="$$cursor-pointer $$label">
-    <span class="$$label-text">Remember me</span>
-    <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-error" />
-  </label>
-</div>
-```
-
 
 ### ~Sizes
-<div class="flex flex-col items-center gap-2">
-  <input type="checkbox" checked="checked" class="checkbox checkbox-xs" />
-  <input type="checkbox" checked="checked" class="checkbox checkbox-sm" />
-  <input type="checkbox" checked="checked" class="checkbox checkbox-md" />
-  <input type="checkbox" checked="checked" class="checkbox checkbox-lg" />
-</div>
+<input type="checkbox" checked="checked" class="checkbox checkbox-xs" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-sm" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-md" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-lg" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-xl" />
 
 ```html
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-xs" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-sm" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-md" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-lg" />
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-xl" />
 ```
 
+### ~Colors
+<input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-secondary" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-accent" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-info" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-warning" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-error" />
+
+```html
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-primary" />
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-secondary" />
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-accent" />
+
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-info" />
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-success" />
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-warning" />
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-error" />
+```
 
 ### ~Disabled
 <input type="checkbox" disabled="disabled" class="checkbox" />
-
-```html
-<input type="checkbox" class="$$checkbox" disabled />
-```
-
-
-### ~Disabled and checked
 <input type="checkbox" disabled="disabled" class="checkbox" checked="checked" />
 
 ```html
+<input type="checkbox" class="$$checkbox" disabled />
 <input type="checkbox" class="$$checkbox" disabled checked="checked" />
 ```
-
 
 ### ~Indeterminate
 <input type="checkbox" class="checkbox" bind:indeterminate onclick={(e)=>{e.preventDefault()}} />
@@ -237,16 +123,8 @@ classnames:
 
 
 ### ~Checkbox with custom colors
-<input type="checkbox" checked="checked" class="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:var(--color-indigo-600)] [--chkfg:orange]" />
-<input type="checkbox" checked="checked" class="checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" />
+<input type="checkbox" checked="checked" class="checkbox border-indigo-600 bg-indigo-500 checked:bg-orange-400 checked:text-orange-800 checked:border-orange-500 " />
 
 ```html
-<input
-  type="checkbox"
-  checked="checked"
-  class="$$checkbox border-orange-400 [--chkbg:var(--color-indigo-600)] [--chkfg:orange] checked:border-indigo-800" />
-<input
-  type="checkbox"
-  checked="checked"
-  class="$$checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" />
+<input type="checkbox" checked="checked" class="$$checkbox border-indigo-600 bg-indigo-500 checked:bg-orange-400 checked:text-orange-800 checked:border-orange-500 " />
 ```

@@ -1,12 +1,16 @@
 .fieldset {
-  @apply grid gap-1.5 px-2 py-3;
+  @apply grid gap-1.5 py-1;
   font-size: 0.75rem;
   grid-template-columns: 1fr;
 }
 .fieldset-legend {
-  @apply text-base-content -mb-3 flex items-center justify-between gap-2 py-2;
+  @apply text-base-content -mb-1 flex items-center justify-between gap-2 py-2;
   font-weight: 600;
 }
 .fieldset-label {
-  @apply text-base-content/60 flex cursor-pointer items-center gap-1.5;
+  @apply text-base-content/60 flex items-center gap-1.5;
+  &:is(lable, a),
+  &:has(input) {
+    @apply cursor-pointer;
+  }
 }

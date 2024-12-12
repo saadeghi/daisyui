@@ -16,7 +16,7 @@
   }
 
   &::-webkit-slider-runnable-track {
-    @apply rounded-selector bg-base-content/10 w-full;
+    @apply rounded-selector w-full bg-current/10;
     height: calc(var(--size) * 0.5);
   }
 
@@ -44,7 +44,7 @@
   }
 
   &::-moz-range-track {
-    @apply rounded-selector bg-base-content/10 w-full;
+    @apply rounded-selector w-full bg-current/10;
     height: calc(var(--size) * 0.5);
   }
 

@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Select
 desc: Select is used to pick a value from a list of options.
 layout: components
@@ -43,7 +42,7 @@ classnames:
 </script>
 
 ### ~Select
-<select class="select w-full max-w-xs">
+<select class="select">
   <option disabled selected>Pick your favorite Simpson</option>
   <option>Homer</option>
   <option>Marge</option>
@@ -53,7 +52,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select w-full max-w-xs">
+<select class="$$select">
   <option disabled selected>Pick your favorite Simpson</option>
   <option>Homer</option>
   <option>Marge</option>
@@ -62,26 +61,9 @@ classnames:
   <option>Maggie</option>
 </select>
 ```
-
-
-### ~Select with border
-<select class="select w-full max-w-xs select-bordered">
-  <option disabled selected>Who shot first?</option>
-  <option>Han Solo</option>
-  <option>Greedo</option>
-</select>
-
-```html
-<select class="$$select $$select-bordered w-full max-w-xs">
-  <option disabled selected>Who shot first?</option>
-  <option>Han Solo</option>
-  <option>Greedo</option>
-</select>
-```
-
 
 ### ~Ghost (no background)
-<select class="select w-full max-w-xs select-ghost">
+<select class="select select-ghost">
   <option disabled selected>Pick the best JS framework</option>
   <option>Svelte</option>
   <option>Vue</option>
@@ -89,7 +71,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-ghost w-full max-w-xs">
+<select class="$$select $$select-ghost">
   <option disabled selected>Pick the best JS framework</option>
   <option>Svelte</option>
   <option>Vue</option>
@@ -99,12 +81,9 @@ classnames:
 
 
 ### ~With form-control and labels
-<label class="form-control w-full max-w-xs">
-  <div class="label">
-    <span class="label-text">Pick the best fantasy franchise</span>
-    <span class="label-text-alt">Alt label</span>
-  </div>
-  <select class="select select-bordered">
+<fieldset class="fieldset w-xs">
+  <legend class="fieldset-legend">Pick the best fantasy franchise</legend>
+  <select class="select">
     <option disabled selected>Pick one</option>
     <option>Star Wars</option>
     <option>Harry Potter</option>
@@ -112,19 +91,13 @@ classnames:
     <option>Planet of the Apes</option>
     <option>Star Trek</option>
   </select>
-  <div class="label">
-    <span class="label-text-alt">Alt label</span>
-    <span class="label-text-alt">Alt label</span>
-  </div>
-</label>
+  <span class="fieldset-label">Optional</span>
+</fieldset>
 
 ```html
-<label class="$$form-control w-full max-w-xs">
-  <div class="$$label">
-    <span class="$$label-text">Pick the best fantasy franchise</span>
-    <span class="$$label-text-alt">Alt label</span>
-  </div>
-  <select class="$$select $$select-bordered">
+<fieldset class="$$fieldset">
+  <legend class="$$fieldset-legend">Pick the best fantasy franchise</legend>
+  <select class="$$select">
     <option disabled selected>Pick one</option>
     <option>Star Wars</option>
     <option>Harry Potter</option>
@@ -132,16 +105,13 @@ classnames:
     <option>Planet of the Apes</option>
     <option>Star Trek</option>
   </select>
-  <div class="$$label">
-    <span class="$$label-text-alt">Alt label</span>
-    <span class="$$label-text-alt">Alt label</span>
-  </div>
-</label>
+  <span class="$$fieldset-label">Optional</span>
+</fieldset>
 ```
 
 
 ### ~Primary color
-<select class="select w-full max-w-xs select-primary">
+<select class="select select-primary">
   <option disabled selected>What is the best TV show?</option>
   <option>Game of Thrones</option>
   <option>Lost</option>
@@ -150,7 +120,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-primary w-full max-w-xs">
+<select class="$$select $$select-primary">
   <option disabled selected>What is the best TV show?</option>
   <option>Game of Thrones</option>
   <option>Lost</option>
@@ -161,7 +131,7 @@ classnames:
 
 
 ### ~Secondary color
-<select class="select w-full max-w-xs select-secondary">
+<select class="select select-secondary">
   <option disabled selected>Pick your favorite language</option>
   <option>Java</option>
   <option>Go</option>
@@ -174,7 +144,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-secondary w-full max-w-xs">
+<select class="$$select $$select-secondary">
   <option disabled selected>Pick your favorite language</option>
   <option>Java</option>
   <option>Go</option>
@@ -189,7 +159,7 @@ classnames:
 
 
 ### ~Accent color
-<select class="select w-full max-w-xs select-accent">
+<select class="select select-accent">
   <option disabled selected>Dark mode or light mode?</option>
   <option>Auto</option>
   <option>Dark mode</option>
@@ -197,7 +167,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-accent w-full max-w-xs">
+<select class="$$select $$select-accent">
   <option disabled selected>Dark mode or light mode?</option>
   <option>Auto</option>
   <option>Dark mode</option>
@@ -207,7 +177,7 @@ classnames:
 
 
 ### ~Info color
-<select class="select w-full max-w-xs select-info">
+<select class="select select-info">
   <option disabled selected>Select language</option>
   <option>English</option>
   <option>Japanese</option>
@@ -215,7 +185,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-info w-full max-w-xs">
+<select class="$$select $$select-info">
   <option disabled selected>Select language</option>
   <option>English</option>
   <option>Japanese</option>
@@ -225,7 +195,7 @@ classnames:
 
 
 ### ~Success color
-<select class="select w-full max-w-xs select-success">
+<select class="select select-success">
   <option disabled selected>Pick your favorite anime</option>
   <option>One Piece</option>
   <option>Naruto</option>
@@ -237,7 +207,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-success w-full max-w-xs">
+<select class="$$select $$select-success">
   <option disabled selected>Pick your favorite anime</option>
   <option>One Piece</option>
   <option>Naruto</option>
@@ -251,7 +221,7 @@ classnames:
 
 
 ### ~Warning color
-<select class="select w-full max-w-xs select-warning">
+<select class="select select-warning">
   <option disabled selected>Pick a pizza</option>
   <option>Cheese</option>
   <option>Veggie</option>
@@ -261,7 +231,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-warning w-full max-w-xs">
+<select class="$$select $$select-warning">
   <option disabled selected>Pick a pizza</option>
   <option>Cheese</option>
   <option>Veggie</option>
@@ -273,7 +243,7 @@ classnames:
 
 
 ### ~Error color
-<select class="select w-full max-w-xs select-error">
+<select class="select select-error">
   <option disabled selected>What is the best headless CMS</option>
   <option>Strapi</option>
   <option>Ghost</option>
@@ -282,7 +252,7 @@ classnames:
 </select>
 
 ```html
-<select class="$$select $$select-error w-full max-w-xs">
+<select class="$$select $$select-error">
   <option disabled selected>What is the best headless CMS</option>
   <option>Strapi</option>
   <option>Ghost</option>
@@ -294,71 +264,79 @@ classnames:
 
 ### ~Sizes
 <div class="flex flex-col gap-4 w-full items-center">
-  <select class="select select-bordered select-lg w-full max-w-xs">
-    <option disabled selected>Large</option>
-    <option>Large Apple</option>
-    <option>Large Orange</option>
-    <option>Large Tomato</option>
+  <select class="select select-xs">
+    <option disabled selected>Xsmall</option>
+    <option>Xsmall Apple</option>
+    <option>Xsmall Orange</option>
+    <option>Xsmall Tomato</option>
   </select>
-  <select class="select select-bordered w-full max-w-xs">
-    <option disabled selected>Normal</option>
-    <option>Normal Apple</option>
-    <option>Normal Orange</option>
-    <option>Normal Tomato</option>
-  </select>
-  <select class="select select-bordered select-sm w-full max-w-xs">
+  <select class="select select-sm">
     <option disabled selected>Small</option>
     <option>Small Apple</option>
     <option>Small Orange</option>
     <option>Small Tomato</option>
   </select>
-  <select class="select select-bordered select-xs w-full max-w-xs">
-    <option disabled selected>Tiny</option>
-    <option>Tiny Apple</option>
-    <option>Tiny Orange</option>
-    <option>Tiny Tomato</option>
+  <select class="select select-md">
+    <option disabled selected>Medium</option>
+    <option>Medium Apple</option>
+    <option>Medium Orange</option>
+    <option>Medium Tomato</option>
+  </select>
+  <select class="select select-lg">
+    <option disabled selected>Large</option>
+    <option>Large Apple</option>
+    <option>Large Orange</option>
+    <option>Large Tomato</option>
+  </select>
+  <select class="select select-xl">
+    <option disabled selected>Xlarge</option>
+    <option>Xlarge Apple</option>
+    <option>Xlarge Orange</option>
+    <option>Xlarge Tomato</option>
   </select>
 </div>
 
 ```html
-<!-- lg -->
-<select class="$$select $$select-bordered $$select-lg w-full max-w-xs">
-  <option disabled selected>Large</option>
-  <option>Large Apple</option>
-  <option>Large Orange</option>
-  <option>Large Tomato</option>
+<select class="$$select $$select-xs">
+  <option disabled selected>Xsmall</option>
+  <option>Xsmall Apple</option>
+  <option>Xsmall Orange</option>
+  <option>Xsmall Tomato</option>
 </select>
-<!-- md -->
-<select class="$$select $$select-bordered w-full max-w-xs">
-  <option disabled selected>Normal</option>
-  <option>Normal Apple</option>
-  <option>Normal Orange</option>
-  <option>Normal Tomato</option>
-</select>
-<!-- sm -->
-<select class="$$select $$select-bordered $$select-sm w-full max-w-xs">
+<select class="$$select $$select-sm">
   <option disabled selected>Small</option>
   <option>Small Apple</option>
   <option>Small Orange</option>
   <option>Small Tomato</option>
 </select>
-<!-- xs -->
-<select class="$$select $$select-bordered $$select-xs w-full max-w-xs">
-  <option disabled selected>Tiny</option>
-  <option>Tiny Apple</option>
-  <option>Tiny Orange</option>
-  <option>Tiny Tomato</option>
+<select class="$$select $$select-md">
+  <option disabled selected>Medium</option>
+  <option>Medium Apple</option>
+  <option>Medium Orange</option>
+  <option>Medium Tomato</option>
+</select>
+<select class="$$select $$select-lg">
+  <option disabled selected>Large</option>
+  <option>Large Apple</option>
+  <option>Large Orange</option>
+  <option>Large Tomato</option>
+</select>
+<select class="$$select $$select-xl">
+  <option disabled selected>Xlarge</option>
+  <option>Xlarge Apple</option>
+  <option>Xlarge Orange</option>
+  <option>Xlarge Tomato</option>
 </select>
 ```
 
 
 ### ~Disabled
-<select class="select w-full max-w-xs" disabled>
+<select class="select" disabled>
   <option>You can't touch this</option>
 </select>
 
 ```html
-<select class="$$select w-full max-w-xs" disabled>
+<select class="$$select" disabled>
   <option>You can't touch this</option>
 </select>
 ```

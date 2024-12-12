@@ -79,7 +79,7 @@ classnames:
 ```
 
 
-### ~Hexagon-2
+### ~Hexagon-2 (horizontal hexagon)
 <img alt="Hexagon-2 CSS mask" class="mask mask-hexagon-2 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 
 ```html
@@ -138,47 +138,6 @@ classnames:
   src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 ```
 
-
-### ~Parallelogram
-<img alt="Parallelogram CSS mask" class="mask mask-parallelogram w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-
-```html
-<img
-  class="$$mask $$mask-parallelogram"
-  src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-```
-
-
-### ~Parallelogram-2
-<img alt="Parallelogram-2 CSS mask" class="mask mask-parallelogram-2 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-
-```html
-<img
-  class="$$mask $$mask-parallelogram-2"
-  src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-```
-
-
-### ~Parallelogram-3
-<img alt="Parallelogram-3 CSS mask" class="mask mask-parallelogram-3 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-
-```html
-<img
-  class="$$mask $$mask-parallelogram-3"
-  src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-```
-
-
-### ~Parallelogram-4
-<img alt="Parallelogram-4 CSS mask" class="mask mask-parallelogram-4 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-
-```html
-<img
-  class="$$mask $$mask-parallelogram-4"
-  src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
-```
-
-
 ### ~Star
 <img alt="Star CSS mask" class="mask mask-star w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 
@@ -189,7 +148,7 @@ classnames:
 ```
 
 
-### ~Star-2
+### ~Star-2 (bold star)
 <img alt="Star-2 CSS mask" class="mask mask-star-2 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 
 ```html
@@ -199,7 +158,7 @@ classnames:
 ```
 
 
-### ~Triangle
+### ~Triangle (pointing top)
 <img alt="Triangle CSS mask" class="mask mask-triangle w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 
 ```html
@@ -209,7 +168,7 @@ classnames:
 ```
 
 
-### ~Triangle-2
+### ~Triangle-2 (pointing down)
 <img alt="Triangle-2 CSS mask" class="mask mask-triangle-2 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 
 ```html
@@ -219,7 +178,7 @@ classnames:
 ```
 
 
-### ~Triangle-3
+### ~Triangle-3 (pointing left)
 <img alt="Triangle-3 CSS mask" class="mask mask-triangle-3 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 
 ```html
@@ -229,7 +188,7 @@ classnames:
 ```
 
 
-### ~Triangle-4
+### ~Triangle-4 (pointing right)
 <img alt="Triangle-4 CSS mask" class="mask mask-triangle-4 w-40 h-40" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
 
 ```html

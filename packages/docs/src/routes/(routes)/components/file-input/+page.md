@@ -1,12 +1,11 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: File Input
 desc: File Input is a an input field for uploading files.
 layout: components
 classnames:
   component:
   - class: file-input
-    desc: For <input> element
+    desc: For <input type="file"> element
   style:
   - class: file-input-ghost
     desc: ghost style
@@ -43,148 +42,80 @@ classnames:
 </script>
 
 ### ~File input
-<input type="file" class="file-input w-full max-w-xs" />
+<input type="file" class="file-input" />
 
 ```html
-<input type="file" class="$$file-input w-full max-w-xs" />
+<input type="file" class="$$file-input" />
 ```
 
 
-### ~File input with border
-<input type="file" class="file-input file-input-bordered w-full max-w-xs" />
+### ~File input ghost
+<input type="file" class="file-input file-input-ghost" />
 
 ```html
-<input type="file" class="$$file-input $$file-input-bordered w-full max-w-xs" />
+<input type="file" class="$$file-input $$file-input-ghost" />
 ```
 
-
-### ~Ghost (no background)
-<input type="file" class="file-input file-input-ghost w-full max-w-xs" />
+### ~With fieldset and fieldset-label
+<fieldset class="fieldset">
+  <legend class="fieldset-legend">Pick a file</legend>
+  <input type="file" class="file-input" />
+  <label class="fieldset-label">Max size 2MB</label>
+</fieldset>
 
 ```html
-<input type="file" class="$$file-input $$file-input-ghost w-full max-w-xs" />
+<fieldset class="$$fieldset">
+  <legend class="$$fieldset-legend">Pick a file</legend>
+  <input type="file" class="$$file-input" />
+  <label class="$$fieldset-label">Max size 2MB</label>
+</fieldset>
 ```
-
-
-### ~With form-control and labels
-<label class="form-control w-full max-w-xs">
-  <div class="label">
-    <span class="label-text">Pick a file</span>
-    <span class="label-text-alt">Alt label</span>
-  </div>
-  <input type="file" class="file-input file-input-bordered w-full max-w-xs" />
-  <div class="label">
-    <span class="label-text-alt">Alt label</span>
-    <span class="label-text-alt">Alt label</span>
-  </div>
-</label>
-
-```html
-<label class="$$form-control w-full max-w-xs">
-  <div class="$$label">
-    <span class="$$label-text">Pick a file</span>
-    <span class="$$label-text-alt">Alt label</span>
-  </div>
-  <input type="file" class="$$file-input $$file-input-bordered w-full max-w-xs" />
-  <div class="$$label">
-    <span class="$$label-text-alt">Alt label</span>
-    <span class="$$label-text-alt">Alt label</span>
-  </div>
-</label>
-```
-
-
-### ~Primary color
-<input type="file" class="file-input file-input-bordered file-input-primary w-full max-w-xs" />
-
-```html
-<input
-  type="file"
-  class="$$file-input $$file-input-bordered $$file-input-primary w-full max-w-xs" />
-```
-
-
-### ~Secondary color
-<input type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
-
-```html
-<input
-  type="file"
-  class="$$file-input $$file-input-bordered $$file-input-secondary w-full max-w-xs" />
-```
-
-
-### ~Accent color
-<input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" />
-
-```html
-<input type="file" class="$$file-input $$file-input-bordered $$file-input-accent w-full max-w-xs" />
-```
-
-
-### ~Info color
-<input type="file" class="file-input file-input-bordered file-input-info w-full max-w-xs" />
-
-```html
-<input type="file" class="$$file-input $$file-input-bordered $$file-input-info w-full max-w-xs" />
-```
-
-
-### ~Success color
-<input type="file" class="file-input file-input-bordered file-input-success w-full max-w-xs" />
-
-```html
-<input
-  type="file"
-  class="$$file-input $$file-input-bordered $$file-input-success w-full max-w-xs" />
-```
-
-
-### ~Warning color
-<input type="file" class="file-input file-input-bordered file-input-warning w-full max-w-xs" />
-
-```html
-<input
-  type="file"
-  class="$$file-input $$file-input-bordered $$file-input-warning w-full max-w-xs" />
-```
-
-
-### ~Error color
-<input type="file" class="file-input file-input-bordered file-input-error w-full max-w-xs" />
-
-```html
-<input type="file" class="$$file-input $$file-input-bordered $$file-input-error w-full max-w-xs" />
-```
-
 
 ### ~Sizes
 <div class="flex flex-col gap-4 w-full items-center">
-  <input type="file" class="file-input file-input-bordered file-input-xs w-full max-w-xs" />
-  <input type="file" class="file-input file-input-bordered file-input-sm w-full max-w-xs" />
-  <input type="file" class="file-input file-input-bordered file-input-md w-full max-w-xs" />
-  <input type="file" class="file-input file-input-bordered file-input-lg w-full max-w-xs" />
+  <input type="file" class="file-input file-input-xs" />
+  <input type="file" class="file-input file-input-sm" />
+  <input type="file" class="file-input file-input-md" />
+  <input type="file" class="file-input file-input-lg" />
+  <input type="file" class="file-input file-input-xl" />
 </div>
 
 ```html
-<!-- xs -->
-<input type="file" class="$$file-input $$file-input-bordered $$file-input-xs w-full max-w-xs" />
-<!-- sm -->
-<input type="file" class="$$file-input $$file-input-bordered $$file-input-sm w-full max-w-xs" />
-<!-- md -->
-<input type="file" class="$$file-input $$file-input-bordered $$file-input-md w-full max-w-xs" />
-<!-- lg -->
-<input type="file" class="$$file-input $$file-input-bordered $$file-input-lg w-full max-w-xs" />
+<input type="file" class="$$file-input $$file-input-xs" />
+
+<input type="file" class="$$file-input $$file-input-sm" />
+
+<input type="file" class="$$file-input $$file-input-md" />
+
+<input type="file" class="$$file-input $$file-input-lg" />
+
+<input type="file" class="$$file-input $$file-input-xl" />
 ```
 
-
-### ~Disabled
-<input type="file" placeholder="You can't touch this" class="file-input file-input-bordered w-full max-w-xs" disabled />
+### ~Primary color
+<div class="grid gap-2">
+  <input type="file" class="file-input file-input-primary" />
+  <input type="file" class="file-input file-input-secondary" />
+  <input type="file" class="file-input file-input-accent" />
+  <input type="file" class="file-input file-input-info" />
+  <input type="file" class="file-input file-input-success" />
+  <input type="file" class="file-input file-input-warning" />
+  <input type="file" class="file-input file-input-error" />
+</div>
 
 ```html
-<input
-  type="file"
-  placeholder="You can't touch this"
-  class="$$file-input $$file-input-bordered w-full max-w-xs"
-  disabled />
+<input type="file" class="$$file-input $$file-input-primary" />
+<input type="file" class="$$file-input $$file-input-secondary" />
+<input type="file" class="$$file-input $$file-input-accent" />
+<input type="file" class="$$file-input $$file-input-info" />
+<input type="file" class="$$file-input $$file-input-success" />
+<input type="file" class="$$file-input $$file-input-warning" />
+<input type="file" class="$$file-input $$file-input-error" />
+```
+
+### ~Disabled
+<input type="file" placeholder="You can't touch this" class="file-input" disabled />
+
+```html
+<input type="file" placeholder="You can't touch this" class="$$file-input" disabled />
 ```

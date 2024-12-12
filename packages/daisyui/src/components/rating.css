@@ -6,9 +6,12 @@
     @apply appearance-none;
   }
 
-  :where(input) {
+  :where(*) {
     animation: rating 0.25s ease-out;
-    @apply bg-base-content h-6 w-6 cursor-pointer rounded-none opacity-100;
+    @apply bg-base-content h-6 w-6 rounded-none opacity-20;
+    &:is(input) {
+      @apply cursor-pointer;
+    }
   }
 
   & .rating-hidden {
@@ -19,73 +22,72 @@
     background-image: none;
   }
 
-  input {
+  * {
     &:checked,
-    &[aria-checked="true"] {
-      & ~ input {
-        @apply opacity-20;
-      }
+    &[aria-checked="true"],
+    &:has(~ *:checked, ~ *[aria-checked="true"]) {
+      @apply opacity-100;
     }
 
     &:focus-visible {
-      transition: translate 0.3s ease-out;
-      translate: 0 -0.125em;
+      transition: scale 0.2s ease-out;
+      scale: 1.1;
     }
   }
 
-  & input:active:focus {
+  & *:active:focus {
     animation: none;
   }
 
-  & input:active:focus {
-    translate: 0 -0.125em;
+  & *:active:focus {
+    scale: 1.1;
   }
 
-  &.rating-xs input {
+  &.rating-xs :where(*:not(.rating-hidden)) {
     @apply size-4;
   }
 
-  &.rating-sm input {
+  &.rating-sm :where(*:not(.rating-hidden)) {
     @apply size-5;
   }
 
-  &.rating-md input {
+  &.rating-md :where(*:not(.rating-hidden)) {
     @apply size-6;
   }
 
-  &.rating-lg input {
+  &.rating-lg :where(*:not(.rating-hidden)) {
     @apply size-7;
   }
 
-  &.rating-xl input {
+  &.rating-xl :where(*:not(.rating-hidden)) {
     @apply size-8;
   }
 }
 
 .rating-half {
-  :where(input:not(.rating-hidden)) {
+  :where(*:not(.rating-hidden)) {
     @apply w-3;
   }
 }
 
 .rating-half {
-  &.rating-xs input:not(.rating-hidden) {
+  &.rating-xs *:not(.rating-hidden) {
     @apply w-2;
   }
 
-  &.rating-sm input:not(.rating-hidden) {
+  &.rating-sm *:not(.rating-hidden) {
     @apply w-2.5;
   }
 
-  &.rating-md input:not(.rating-hidden) {
+  &.rating-md *:not(.rating-hidden) {
     @apply w-3;
   }
 
-  &.rating-lg input:not(.rating-hidden) {
+  &.rating-lg *:not(.rating-hidden) {
     @apply w-[.875rem];
   }
 
-  &.rating-xl input:not(.rating-hidden) {
+  &.rating-xl *:not(.rating-hidden) {
     @apply w-4;
   }
 }

@@ -4,6 +4,8 @@ import {
   validateRadius,
   validateSize,
   validateBorderWidth,
+  validateGloss,
+  validateNoise,
   validateBoolean,
 } from "$lib/themeGeneratorValidation"
 
@@ -127,9 +129,23 @@ export function parseThemeCSS(text, currentThemeData) {
           continue
         }
         newThemeData[key] = value
-      } else if (key.startsWith("--border-")) {
+      } else if (key === "--border") {
         if (!validateBorderWidth(value)) {
           console.error(`Invalid border width for ${key}: ${value}`)
+          hasErrors = true
+          continue
+        }
+        newThemeData[key] = value
+      } else if (key === "--gloss") {
+        if (!validateGloss(value)) {
+          console.error(`Invalid gloss value for ${key}: ${value}`)
+          hasErrors = true
+          continue
+        }
+        newThemeData[key] = value
+      } else if (key === "--noise") {
+        if (!validateNoise(value)) {
+          console.error(`Invalid noise value for ${key}: ${value}`)
           hasErrors = true
           continue
         }

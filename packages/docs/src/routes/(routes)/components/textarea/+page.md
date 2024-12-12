@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Textarea
 desc: Textarea allows users to enter text in multiple lines.
 layout: components
@@ -49,15 +48,6 @@ classnames:
 <textarea class="$$textarea" placeholder="Bio"></textarea>
 ```
 
-
-### ~Textarea with border
-<textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-bordered" placeholder="Bio"></textarea>
-```
-
-
 ### ~Ghost (no background)
 <textarea class="textarea textarea-ghost" placeholder="Bio"></textarea>
 
@@ -67,114 +57,60 @@ classnames:
 
 
 ### ~With form control and labels
-<label class="form-control">
-  <div class="label">
-    <span class="label-text">Your bio</span>
-    <span class="label-text-alt">Alt label</span>
-  </div>
-  <textarea class="textarea h-24 textarea-bordered" placeholder="Bio"></textarea>
-  <div class="label">
-    <span class="label-text-alt">Your bio</span>
-    <span class="label-text-alt">Alt label</span>
-  </div>
-</label>
+<fieldset class="fieldset w-xs">
+  <legend class="fieldset-legend">Your bio</legend>
+  <textarea class="textarea h-24" placeholder="Bio"></textarea>
+  <div class="fieldset-label">Optional</div>
+</fieldset>
 
 ```html
-<label class="$$form-control">
-  <div class="$$label">
-    <span class="$$label-text">Your bio</span>
-    <span class="$$label-text-alt">Alt label</span>
-  </div>
-  <textarea class="$$textarea $$textarea-bordered h-24" placeholder="Bio"></textarea>
-  <div class="$$label">
-    <span class="$$label-text-alt">Your bio</span>
-    <span class="$$label-text-alt">Alt label</span>
-  </div>
-</label>
+<fieldset class="$$fieldset">
+  <legend class="$$fieldset-legend">Your bio</legend>
+  <textarea class="$$textarea h-24" placeholder="Bio"></textarea>
+  <div class="$$fieldset-label">Optional</div>
+</fieldset>
 ```
 
-
-### ~Primary color
-<textarea class="textarea textarea-primary" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-primary" placeholder="Bio"></textarea>
-```
-
-
-### ~Secondary color
-<textarea class="textarea textarea-secondary" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-secondary" placeholder="Bio"></textarea>
-```
-
-
-### ~Accent color
-<textarea class="textarea textarea-accent" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-accent" placeholder="Bio"></textarea>
-```
-
-
-### ~Info color
-<textarea class="textarea textarea-info" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-info" placeholder="Bio"></textarea>
-```
-
-
-### ~Success color
-<textarea class="textarea textarea-success" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-success" placeholder="Bio"></textarea>
-```
-
-
-### ~Warning color
-<textarea class="textarea textarea-warning" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-warning" placeholder="Bio"></textarea>
-```
-
-
-### ~Error color
-<textarea class="textarea textarea-error" placeholder="Bio"></textarea>
-
-```html
-<textarea class="$$textarea $$textarea-error" placeholder="Bio"></textarea>
-```
-
-
-### ~Sizes
-<div class="flex flex-col gap-4 w-full items-center">
-  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-xs w-full max-w-xs" ></textarea>
-  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-sm w-full max-w-xs" ></textarea>
-  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-md w-full max-w-xs" ></textarea>
-  <textarea placeholder="Bio" class="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
+### ~Textarea colors
+<div class="grid gap-4 w-xs">
+  <textarea type="text" placeholder="Primary" class="textarea textarea-primary"></textarea>
+  <textarea type="text" placeholder="Secondary" class="textarea textarea-secondary"></textarea>
+  <textarea type="text" placeholder="Accent" class="textarea textarea-accent"></textarea>
+  <textarea type="text" placeholder="Info" class="textarea textarea-info"></textarea>
+  <textarea type="text" placeholder="Success" class="textarea textarea-success"></textarea>
+  <textarea type="text" placeholder="Warning" class="textarea textarea-warning"></textarea>
+  <textarea type="text" placeholder="Error" class="textarea textarea-error"></textarea>
 </div>
 
 ```html
-<!-- xs -->
-<textarea
-  placeholder="Bio"
-  class="$$textarea $$textarea-bordered $$textarea-xs w-full max-w-xs"></textarea>
-<!-- sm -->
-<textarea
-  placeholder="Bio"
-  class="$$textarea $$textarea-bordered $$textarea-sm w-full max-w-xs"></textarea>
-<!-- md -->
-<textarea
-  placeholder="Bio"
-  class="$$textarea $$textarea-bordered $$textarea-md w-full max-w-xs"></textarea>
-<!-- lg -->
-<textarea
-  placeholder="Bio"
-  class="$$textarea $$textarea-bordered $$textarea-lg w-full max-w-xs"></textarea>
+<textarea type="text" placeholder="Primary" class="$$input textareatextarea-primary"></textarea>
+<textarea type="text" placeholder="Secondary" class="$$input textareatextarea-secondary"></textarea>
+<textarea type="text" placeholder="Accent" class="$$input textareatextarea-accent"></textarea>
+<textarea type="text" placeholder="Info" class="$$input textareatextarea-info"></textarea>
+<textarea type="text" placeholder="Success" class="$$input textareatextarea-success"></textarea>
+<textarea type="text" placeholder="Warning" class="$$input textareatextarea-warning"></textarea>
+<textarea type="text" placeholder="Error" class="$$input textareatextarea-error"></textarea>
+```
+
+### ~Sizes
+<div class="flex flex-col gap-4 w-full items-center">
+  <textarea placeholder="Bio" class="textarea textarea-xs"></textarea>
+  <textarea placeholder="Bio" class="textarea textarea-sm"></textarea>
+  <textarea placeholder="Bio" class="textarea textarea-md"></textarea>
+  <textarea placeholder="Bio" class="textarea textarea-lg"></textarea>
+  <textarea placeholder="Bio" class="textarea textarea-xl"></textarea>
+</div>
+
+```html
+<textarea placeholder="Bio" class="$$textarea $$textarea-xs"></textarea>
+
+<textarea placeholder="Bio" class="$$textarea $$textarea-sm"></textarea>
+
+<textarea placeholder="Bio" class="$$textarea $$textarea-md"></textarea>
+
+<textarea placeholder="Bio" class="$$textarea $$textarea-lg"></textarea>
+
+<textarea placeholder="Bio" class="$$textarea $$textarea-xl"></textarea>
 ```
 
 
