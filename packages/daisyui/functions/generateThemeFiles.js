@@ -1,6 +1,6 @@
 import fs from "fs/promises"
 import path from "path"
-import { getFileNames } from "./getFileNames"
+import { getFileNames } from "./getFileNames.js"
 
 export const wrapContent = (themeName, content) => {
   if (themeName === "light") {

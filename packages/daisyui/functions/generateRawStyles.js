@@ -1,8 +1,8 @@
 import fs from "fs/promises"
 import path from "path"
-import { getFileNames } from "./getFileNames"
-import { cleanCss } from "./cleanCss"
-import breakpoints from "./breakpoints"
+import { getFileNames } from "./getFileNames.js"
+import { cleanCss } from "./cleanCss.js"
+import breakpoints from "./breakpoints.js"
 import postcss from "postcss"
 import selectorParser from "postcss-selector-parser"
 import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.js"
@@ -49,14 +49,14 @@ async function processFile(file, stylesDir, distDir, defaultTheme, theme, respon
 
   stylesContent = cleanCss(stylesContent)
 
-  await fs.writeFile(path.join(import.meta.dir, distDir, `${distDir}/${file}.css`), stylesContent)
+  await fs.writeFile(path.join(import.meta.dirname, distDir, `${distDir}/${file}.css`), stylesContent)
 }
 
 export async function generateRawStyles({ srcDir, distDir, responsive = false, exclude = [] }) {
   try {
     const { defaultTheme, theme } = await loadThemes()
 
-    const stylesDir = path.join(import.meta.dir, srcDir)
+    const stylesDir = path.join(import.meta.dirname, srcDir)
     const files = await getFileNames(stylesDir, ".css", false)
 
     // Process all files concurrently

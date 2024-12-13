@@ -1,5 +1,5 @@
 import fs from "fs/promises"
-import { getDirectoriesWithTargetFile } from "./getDirectoriesWithTargetFile"
+import { getDirectoriesWithTargetFile } from "./getDirectoriesWithTargetFile.js"
 
 const generateJSContent = async () => {
   // Create separate arrays for each category
@@ -14,7 +14,7 @@ const generateJSContent = async () => {
       const items = await getDirectoriesWithTargetFile(`./${category}`, "index.js")
       items.forEach((item) => {
         const importName = `${item}`
-        imports += `import ${importName} from './${category}/${item}';\n`
+        imports += `import ${importName} from './${category}/${item}/index.js';\n`
 
         // Add items to their respective arrays
         switch (category) {

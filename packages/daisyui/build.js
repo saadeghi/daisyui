@@ -1,4 +1,3 @@
-import fs from "fs"
 import { generateThemesObject } from "./functions/generateThemesObject.js"
 import { generateThemeFiles } from "./functions/generateThemeFiles.js"
 import { generateColorRules } from "./functions/generateColorRules.js"
@@ -13,7 +12,8 @@ import { packCss } from "./functions/packCss.js"
 import { removeFiles } from "./functions/removeFiles.js"
 import { copyFile } from "./functions/copyFile.js"
 import { report } from "./functions/report.js"
-const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
+import packageJson from "./package.json" with { type: 'json' }
+
 const isDev = process.argv.includes("--dev")
 
 async function generateFiles() {

@@ -1,7 +1,7 @@
 import fs from "fs/promises"
 import path from "path"
-import { getFileNames } from "./getFileNames"
-import { cleanCss } from "./cleanCss"
+import { getFileNames } from "./getFileNames.js"
+import { cleanCss } from "./cleanCss.js"
 
 const readFileContent = async (filePath) => {
   return await fs.readFile(filePath, "utf8")

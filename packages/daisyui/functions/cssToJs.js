@@ -3,7 +3,7 @@ import postcss from "postcss"
 import postcssJs from "postcss-js"
 import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.js"
 import { replaceApplyTrueWithEmptyObject } from "./replaceApplyTrueWithEmptyObject.js"
-import { cleanCss } from "./cleanCss"
+import { cleanCss } from "./cleanCss.js"
 
 // function to convert camelCase to kebab-case
 const camelToKebab = (str) => {

@@ -3,8 +3,8 @@ import { readdirSync, statSync, existsSync } from "fs"
 import { join } from "path"
 
 const directories = ["base", "components", "themes", "utilities"]
-const basePath = join(__dirname, "../src")
-const targetPath = join(__dirname, "..")
+const basePath = join(import.meta.dirname, "../src")
+const targetPath = join(import.meta.dirname, "..")
 
 // Helper function to check if a file exists
 const fileExists = (path) => existsSync(path)

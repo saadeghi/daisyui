@@ -1,6 +1,6 @@
 import fs from "fs/promises"
-import { getFileNames } from "./getFileNames"
-import themeOrder from "./themeOrder"
+import { getFileNames } from "./getFileNames.js"
+import themeOrder from "./themeOrder.js"
 
 export const generateChunks = async (filename) => {
   try {
