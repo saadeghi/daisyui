@@ -37,7 +37,7 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-5xl flex-wrap justify-center gap-3 p-10">
+      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-3 p-10">
         {#each contributors as contributor}
           <div class="tooltip" data-tip={contributor.login}>
             <div class="avatar">
@@ -71,7 +71,7 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-5xl flex-wrap justify-center gap-3 p-10">
+      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-3 p-10">
         {#each backers as backer}
           <div class="tooltip" data-tip={backer.name}>
             {#if backer.image}

@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Browser mockup
 desc: Browser mockup shows a box that looks like a browser window.
 layout: components
@@ -17,36 +16,36 @@ classnames:
 </script>
 
 ### ~browser mockup with border
-<div class="border mockup-browser border-base-300 w-full">
+<div class="mockup-browser border border-base-300 w-full">
   <div class="mockup-browser-toolbar">
-    <div class="input border border-base-300">https://daisyui.com</div>
+    <div class="input">https://daisyui.com</div>
   </div>
-  <div class="flex justify-center px-4 py-16 border-t border-base-300">Hello!</div>
+  <div class="grid place-content-center border-t border-base-300 h-80">Hello!</div>
 </div>
 
 ```html
-<div class="$$mockup-browser border-base-300 border">
+<div class="$$mockup-browser border-base-300 border w-full">
   <div class="$$mockup-browser-toolbar">
-    <div class="$$input border-base-300 border">https://daisyui.com</div>
+    <div class="$$input">https://daisyui.com</div>
   </div>
-  <div class="border-base-300 flex justify-center border-t px-4 py-16">Hello!</div>
+  <div class="grid place-content-center border-t border-base-300 h-80">Hello!</div>
 </div>
 ```
 
 
 ### ~browser mockup with background color
-<div class="border mockup-browser bg-base-300 w-full">
+<div class="mockup-browser bg-base-100 w-full border border-base-300">
   <div class="mockup-browser-toolbar">
     <div class="input">https://daisyui.com</div>
   </div>
-  <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+  <div class="grid place-content-center h-80">Hello!</div>
 </div>
 
 ```html
-<div class="$$mockup-browser bg-base-300 border">
+<div class="$$mockup-browser border border-base-300 w-full">
   <div class="$$mockup-browser-toolbar">
     <div class="$$input">https://daisyui.com</div>
   </div>
-  <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
+  <div class="grid place-content-center h-80">Hello!</div>
 </div>
 ```

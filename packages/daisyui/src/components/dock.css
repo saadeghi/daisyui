@@ -1,35 +1,25 @@
 .dock {
-  @apply bg-base-100 fixed right-0 bottom-0 left-0 z-[1] flex h-16 w-full flex-row items-center justify-around py-2 text-current;
+  @apply bg-base-100 fixed right-0 bottom-0 left-0 z-[1] flex h-16 w-full flex-row items-center justify-around p-2 text-current;
   border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
   padding-bottom: env(safe-area-inset-bottom);
-
-  &:has(> *:hover) > *:not(:hover) {
-    background-color: transparent;
-  }
-
   > * {
-    @apply relative mb-2 flex h-full shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px rounded-full bg-transparent;
-    transition: background-color 0.4s ease-in-out;
-
-    &:where(:hover) {
-      @apply bg-base-200;
-    }
-
+    @apply rounded-box relative mb-2 flex h-full max-w-32 shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
+    transition: opacity 0.2s ease-out;
     &:where(.dock-active) {
-      @apply bg-base-200;
-
       &:after {
         content: "";
         @apply absolute h-1 w-10 rounded-full bg-current;
         bottom: 0.2rem;
       }
     }
-
+    &:hover {
+      @apply opacity-80;
+    }
     &[aria-disabled="true"],
     &[disabled] {
       &,
       &:hover {
-        @apply text-base-content/10 pointer-events-none;
+        @apply text-base-content/10 pointer-events-none opacity-100;
       }
     }
 
@@ -40,20 +30,6 @@
 }
 
 .dock-xs {
-  @apply h-10;
-
-  .dock-active {
-    &:after {
-      bottom: -0.1rem;
-    }
-  }
-
-  .dock-label {
-    font-size: 0.6875rem;
-  }
-}
-
-.dock-sm {
   @apply h-12;
 
   .dock-active {
@@ -63,7 +39,21 @@
   }
 
   .dock-label {
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
+  }
+}
+
+.dock-sm {
+  @apply h-14;
+
+  .dock-active {
+    &:after {
+      bottom: -0.1rem;
+    }
+  }
+
+  .dock-label {
+    font-size: 0.625rem;
   }
 }
 
@@ -85,7 +75,7 @@
   }
 
   .dock-label {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
   }
 }
 
@@ -99,6 +89,6 @@
   }
 
   .dock-label {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }

@@ -14,7 +14,7 @@ export default {
     }),
   },
   onwarn: (warning, handler) => {
-    if (warning.code.startsWith("a11y-no-noninteractive-tabindex")) {
+    if (["a11y_", "non_reactive_update"].some((code) => warning.code.startsWith(code))) {
       return
     }
     handler(warning)

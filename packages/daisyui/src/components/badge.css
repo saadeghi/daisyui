@@ -9,7 +9,7 @@
   background-color: var(--badge-color, var(--color-base-100));
   --size: calc(var(--size-selector, 0.25rem) * 6);
   height: var(--size);
-  box-shadow:
+  /* box-shadow:
     0 3px 0 -2px oklch(100% 0 0 / calc(var(--gloss) * 0.08)) inset,
     0 1px
       color-mix(
@@ -18,7 +18,7 @@
           calc(var(--gloss) * 20%),
         transparent
       ),
-    0 4px 3px -2px oklch(0% 0 0 / calc(var(--gloss) * 0.08));
+    0 4px 3px -2px oklch(0% 0 0 / calc(var(--gloss) * 0.08)); */
   &.badge-outline {
     color: var(--badge-color, var(--color-base-content));
     @apply border-current bg-transparent;

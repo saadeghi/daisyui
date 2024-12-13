@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Phone mockup
 desc: Phone mockup shows a mockup of an iPhone.
 layout: components
@@ -20,35 +19,31 @@ classnames:
 
 ### ~iPhone mockup
 <div class="mockup-phone">
-  <div class="camera"></div>
-  <div class="display">
-    <div class="artboard artboard-demo phone-1">Hi.</div>
-  </div>
+  <div class="mockup-phone-camera"></div>
+  <div class="mockup-phone-display text-white grid place-content-center">It's Glowtime.</div>
 </div>
 
 ```html
 <div class="$$mockup-phone">
-  <div class="$$camera"></div>
-  <div class="$$display">
-    <div class="$$artboard $$artboard-demo $$phone-1">Hi.</div>
-  </div>
+  <div class="$$mockup-phone-camera"></div>
+  <div class="$$mockup-phone-display text-white grid place-content-center">It's Glowtime.</div>
 </div>
 ```
 
 
-### ~With color
+### ~With color and wallpaper
 <div class="mockup-phone border-primary">
-  <div class="camera"></div>
-  <div class="display">
-    <div class="artboard artboard-demo phone-1">Hi.</div>
+  <div class="mockup-phone-camera"></div>
+  <div class="mockup-phone-display">
+    <img alt="wallpaper" src="https://www.iclarified.com/images/news/94911/453966/453966.jpg">
   </div>
 </div>
 
 ```html
 <div class="$$mockup-phone border-primary">
-  <div class="$$camera"></div>
-  <div class="$$display">
-    <div class="$$artboard $$artboard-demo $$phone-1">Hi.</div>
+  <div class="$$mockup-phone-camera"></div>
+  <div class="$$mockup-phone-display">
+    <img alt="wallpaper" src="https://www.iclarified.com/images/news/94911/453966/453966.jpg">
   </div>
 </div>
 ```

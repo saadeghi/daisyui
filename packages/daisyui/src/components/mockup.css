@@ -1,5 +1,5 @@
 .mockup-code {
-  @apply bg-neutral text-neutral-content rounded-box relative overflow-hidden overflow-x-auto py-5;
+  @apply bg-neutral text-neutral-content rounded-box relative overflow-hidden overflow-x-auto py-5 text-sm;
   direction: ltr;
 
   &:before {
@@ -91,25 +91,22 @@
   background-color: #000;
   padding: 11px;
   overflow: hidden;
-
-  .mockup-phone-camera {
-    grid-column: 1/1;
-    grid-row: 1/1;
-    background: black;
-    height: 32px;
-    width: 126px;
-    border-radius: 17px;
-    z-index: 1;
-    margin-top: 6px;
-  }
-
-  .mockup-phone-display {
-    grid-column: 1/1;
-    grid-row: 1/1;
-    @apply bg-base-100;
-    overflow: hidden;
-    border-radius: 49px;
-    width: 390px;
-    height: 844px;
-  }
+}
+.mockup-phone-camera {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  background: black;
+  height: 32px;
+  width: 126px;
+  border-radius: 17px;
+  z-index: 1;
+  margin-top: 6px;
+}
+.mockup-phone-display {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  overflow: hidden;
+  border-radius: 49px;
+  width: 390px;
+  height: 845px;
 }
