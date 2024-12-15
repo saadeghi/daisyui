@@ -1,3 +1,5 @@
+import themeOrder from "./themeOrder.js"
+
 export const pluginOptionsHandler = (() => {
   let firstRun = true
   return (options, addBase, themesObject, packageVersion) => {
@@ -33,20 +35,42 @@ export const pluginOptionsHandler = (() => {
     }
 
     if (themes === "all") {
-      Object.keys(themesObject).forEach((themeName) => {
-        const flags = []
-        if (themeName === "light") {
-          flags.push("--default")
-        } else if (themeName === "dark") {
-          flags.push("--prefersdark")
+      if (themesObject["light"]) {
+        applyTheme("light", ["--default"])
+      }
+
+      if (themesObject["dark"]) {
+        addBase({ "@media (prefers-color-scheme: dark)": { [root]: themesObject["dark"] } })
+      }
+
+      themeOrder.forEach((themeName) => {
+        if (themeName !== "light" && themesObject[themeName]) {
+          applyTheme(themeName, [])
         }
-        applyTheme(themeName, flags)
       })
     } else if (themes) {
       const themeArray = Array.isArray(themes) ? themes : [themes]
+
+      // default theme
       themeArray.forEach((themeOption) => {
         const [themeName, ...flags] = themeOption.split(" ")
-        applyTheme(themeName, flags)
+        if (flags.includes("--default")) {
+          applyTheme(themeName, ["--default"])
+        }
+      })
+
+      // prefers dark theme
+      themeArray.forEach((themeOption) => {
+        const [themeName, ...flags] = themeOption.split(" ")
+        if (flags.includes("--prefersdark")) {
+          addBase({ "@media (prefers-color-scheme: dark)": { [root]: themesObject[themeName] } })
+        }
+      })
+
+      // other themes
+      themeArray.forEach((themeOption) => {
+        const [themeName] = themeOption.split(" ")
+        applyTheme(themeName, [])
       })
     }
 
