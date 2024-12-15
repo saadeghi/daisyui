@@ -24,7 +24,17 @@ test("pluginOptionsHandler should apply default themes", () => {
   expect(mockAddBase).toHaveBeenCalledWith({
     "@media (prefers-color-scheme: dark)": { ":root": { color: "black" } },
   })
-  expect(mockAddBase).toHaveBeenCalledTimes(3) // Adjusted to 3 based on the actual calls
+  expect(mockAddBase).toHaveBeenCalledWith({
+    ":root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {
+      color: "black",
+    },
+  })
+  expect(mockAddBase).toHaveBeenCalledWith({
+    ":root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
+      color: "white",
+    },
+  })
+  expect(mockAddBase).toHaveBeenCalledTimes(4)
 })
 
 test("pluginOptionsHandler should apply all themes when 'all' is specified", () => {
@@ -43,11 +53,11 @@ test("pluginOptionsHandler should apply all themes when 'all' is specified", () 
     "@media (prefers-color-scheme: dark)": { ":root": { color: "black" } },
   })
   expect(mockAddBase).toHaveBeenCalledWith({
-    ":root:has(input.theme-controller[value=custom]:checked),[data-theme=custom]": {
-      color: "blue",
+    ":root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {
+      color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledTimes(4) // Adjusted to 4 based on the actual calls
+  expect(mockAddBase).toHaveBeenCalledTimes(3)
 })
 
 test("pluginOptionsHandler should handle custom themes", () => {

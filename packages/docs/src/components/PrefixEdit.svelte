@@ -1,12 +1,17 @@
 <script>
-  import debounce from "lodash.debounce"
   import { prefix } from "$lib/stores"
+  let prefixValue = $state($prefix)
 
-  const onPrefixInput = debounce((e) => {
-    if (e.target.value !== $prefix) {
-      prefix.set(e.target.value)
-    }
-  }, 500)
+  function handleInput(e) {
+    const newValue = e.target.value.toLowerCase()
+    const validValue = newValue.match(/^[a-z]*[a-z-]{0,11}$/)?.[0] ?? prefixValue
+    e.target.value = validValue
+    prefixValue = validValue
+  }
+
+  $effect(() => {
+    prefix.set(prefixValue)
+  })
 </script>
 
 <div class="tooltip tooltip-right rtl:tooltip-left font-normal" data-tip="Add custom prefix">
@@ -15,7 +20,11 @@
     name="prefix"
     type="text"
     placeholder="prefix–"
-    oninput={onPrefixInput}
-    value={$prefix}
+    autocomplete="off"
+    pattern={`[a-z]*[a-z\-]{0,11}`}
+    minlength="0"
+    maxlength="12"
+    value={prefixValue}
+    oninput={handleInput}
   />
 </div>
