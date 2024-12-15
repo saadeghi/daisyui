@@ -3,7 +3,9 @@
   -webkit-appearance: none;
   --range-shdw: currentColor;
   --range-thumb: var(--color-base-100);
-  @apply rounded-selector w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
+  --range-padding: 0.25rem;
+  @apply w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
+  border-radius: calc(var(--radius-selector) + var(--range-padding) + 1px);
   border: none;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   height: var(--size);
@@ -12,55 +14,66 @@
   }
 
   &:focus-visible {
-    --focus-shadow: 0 0 0 6px var(--color-base-100) inset, 0 0 0 2rem var(--range-shdw) inset;
+    outline: 2px solid;
+    outline-offset: 2px;
   }
 
   &::-webkit-slider-runnable-track {
-    @apply rounded-selector w-full bg-current/10;
+    @apply w-full bg-current/10;
+    border-radius: var(--radius-selector);
     height: calc(var(--size) * 0.5);
   }
 
   &::-webkit-slider-thumb {
-    @apply rounded-selector relative;
-    background-color: var(--range-thumb);
+    @apply relative box-border;
+    border-radius: calc(var(--radius-selector) + var(--range-padding) + 1px);
+    background-color: currentColor;
     height: var(--size);
     width: var(--size);
-    border: none;
+    border: var(--range-padding) solid;
     appearance: none;
     -webkit-appearance: none;
     top: 50%;
     color: var(--range-shdw);
     transform: translateY(-50%);
-    --filler-offset: 0.6rem;
-    --track-shdw: calc(-100rem - var(--filler-offset)) 0 0 100rem;
+    --track-shdw: calc(-100rem - (var(--size) / 2)) 0 0 100rem;
     box-shadow:
-      0 0 0 3px var(--range-shdw) inset,
-      var(--focus-shadow, 0 0),
+      0 -1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
+      0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
+      0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent),
+      0 0 0 2rem var(--range-thumb) inset,
       var(--track-shdw);
   }
 
-  [dir="rtl"] &::-webkit-slider-thumb {
+  /* [dir="rtl"] &::-webkit-slider-thumb {
     --track-shdw: calc(100rem * 1 + var(--filler-offset)) 0 0 100rem;
-  }
+  } */
 
   &::-moz-range-track {
-    @apply rounded-selector w-full bg-current/10;
+    @apply w-full bg-current/10;
+    border-radius: var(--radius-selector);
     height: calc(var(--size) * 0.5);
   }
 
   &::-moz-range-thumb {
-    @apply rounded-selector relative;
-    background-color: var(--range-thumb);
+    @apply relative box-border;
+    border-radius: calc(var(--radius-selector) + var(--range-padding) + 1px);
+    background-color: currentColor;
     height: var(--size);
     width: var(--size);
-    border: none;
+    border: var(--range-padding) solid;
     top: 50%;
     color: var(--range-shdw);
-    --filler-offset: 0.5rem;
+    --track-shdw: calc(-100rem - (var(--size) / 2)) 0 0 100rem;
     box-shadow:
-      0 0 0 3px var(--range-shdw) inset,
-      var(--focus-shadow, 0 0),
-      calc(-100rem - var(--filler-offset)) 0 0 100rem;
+      0 -1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
+      0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
+      0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent),
+      0 0 0 2rem var(--range-thumb) inset,
+      var(--track-shdw);
+  }
+  &:disabled {
+    @apply cursor-not-allowed opacity-30;
   }
 }
 
@@ -101,55 +114,20 @@
 
 .range-xs {
   --size: calc(var(--size-selector, 0.25rem) * 4);
-  &::-webkit-slider-thumb {
-    --filler-offset: 0.4rem;
-  }
-
-  &::-moz-range-thumb {
-    --filler-offset: 0.4rem;
-  }
 }
 
 .range-sm {
   --size: calc(var(--size-selector, 0.25rem) * 5);
-  &::-webkit-slider-thumb {
-    --filler-offset: 0.5rem;
-  }
-
-  &::-moz-range-thumb {
-    --filler-offset: 0.5rem;
-  }
 }
 
 .range-md {
   --size: calc(var(--size-selector, 0.25rem) * 6);
-  &::-webkit-slider-thumb {
-    --filler-offset: 0.6rem;
-  }
-
-  &::-moz-range-thumb {
-    --filler-offset: 0.6rem;
-  }
 }
 
 .range-lg {
   --size: calc(var(--size-selector, 0.25rem) * 7);
-  &::-webkit-slider-thumb {
-    --filler-offset: 1rem;
-  }
-
-  &::-moz-range-thumb {
-    --filler-offset: 1rem;
-  }
 }
 
 .range-xl {
   --size: calc(var(--size-selector, 0.25rem) * 8);
-  &::-webkit-slider-thumb {
-    --filler-offset: 1rem;
-  }
-
-  &::-moz-range-thumb {
-    --filler-offset: 1rem;
-  }
 }
