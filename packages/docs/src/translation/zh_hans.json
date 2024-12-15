@@ -512,5 +512,6 @@
   "`collapse-open` and `collapse-close` doesn't work with this method. You can add/remove `open` attribute to the <details> instead": "使用这种方法时，`collapse-open` 和 `collapse-close` 不再生效，需要给 <details> 标签添加或者删除 `open` 属性来代替。",
   "Use Tailwind CSS `group` and `group-focus` utilities to apply style when parent div is focused": "使用 Tailwind Css 中的`group` 和 `group-focus` 工具类来让样式在父元素被focused时生效。",
   "Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked": "使用 Tailwind Css 中的`peer` 和 `peer-checked` 工具类来让样式在兄弟 checkbox 元素被checked时生效。",
-  "If you set max-width or the list gets larger than the container it will scroll": "当你设置了 max-width 或者 列表比容器大时将会开启滚动。"
+  "If you set max-width or the list gets larger than the container it will scroll": "当你设置了 max-width 或者 列表比容器大时将会开启滚动。",
+  "": ""
 }

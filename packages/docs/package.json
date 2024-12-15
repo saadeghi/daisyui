@@ -11,7 +11,8 @@
     "build": "bun run get-json --silent && NODE_ENV=production vite build --logLevel error",
     "preview": "bun run build && vite preview --port 3000 --open",
     "update-twitter-avatars": "bun src/lib/scripts/get-twitter-avatars.js",
-    "langdiff": "bun src/lib/scripts/compare-translate-files"
+    "stats": "open build/stats.html",
+    "langdiff": "bun src/lib/scripts/compare-translate-files.js"
   },
   "devDependencies": {
     "@jsdevtools/rehype-toc": "^3.0.2",
@@ -21,7 +22,6 @@
     "@tailwindcss/typography": "^0.5.15",
     "@tailwindcss/vite": "^4.0.0-beta.5",
     "daisyui": "workspace:*",
-    "dep-graph-count": "1.0.0",
     "dotenv": "16.4.5",
     "json-diff": "1.0.6",
     "mdsvex": "0.12.3",

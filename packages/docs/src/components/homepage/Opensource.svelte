@@ -1,6 +1,21 @@
 <script>
   import { t } from "$lib/i18n"
-  let { contributors, backers } = $props()
+  let contributors = $state([])
+  let sponsors = $state([])
+
+  async function fetchContributors() {
+    const response = await fetch("https://img.daisyui.com/generated/contributors.json")
+    contributors = await response.json()
+  }
+  async function fetchSponsors() {
+    const response = await fetch("https://img.daisyui.com/generated/sponsors.json")
+    sponsors = await response.json()
+  }
+
+  $effect(() => {
+    fetchContributors()
+    fetchSponsors()
+  })
 </script>
 
 <div class="w-full overflow-hidden px-2 py-40 lg:px-10">
@@ -37,21 +52,15 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-3 p-10">
-        {#each contributors as contributor}
-          <div class="tooltip" data-tip={contributor.login}>
+      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-4 p-10">
+        {#each contributors as contributor, index}
+          <div class="tooltip" data-tip={contributor}>
             <div class="avatar">
-              <div class="mask mask-squircle w-8">
-                <img
-                  loading="lazy"
-                  src={`${contributor.avatar_url}&s=32`}
-                  srcset={`${contributor.avatar_url}&s=64 2x, ${contributor.avatar_url}&s=96 3x`}
-                  alt={contributor.login}
-                  width="32"
-                  height="32"
-                  class="pointer-events-none transition-all duration-500 ease-in-out"
-                />
-              </div>
+              <div
+                class="mask mask-squircle size-8"
+                style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size:auto 32px;background-position: -{index *
+                  32}px 0px;"
+              ></div>
             </div>
           </div>
         {/each}
@@ -71,30 +80,25 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-3 p-10">
-        {#each backers as backer}
-          <div class="tooltip" data-tip={backer.name}>
-            {#if backer.image}
+      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-4 p-10">
+        {#each sponsors as sponsor, index}
+          <div class="tooltip" data-tip={sponsor.name}>
+            {#if sponsor.image}
               <div class="avatar">
-                <div class="mask mask-squircle w-8">
-                  <img
-                    loading="lazy"
-                    src={backer.image.replace("?default=404", "?default=identicon")}
-                    alt={backer.name}
-                    width="32"
-                    height="32"
-                    class="pointer-events-none transition-all duration-500 ease-in-out"
-                  />
-                </div>
+                <div
+                  class="mask mask-squircle size-8"
+                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size:auto 32px;background-position: -{index *
+                    32}px 0px;"
+                ></div>
               </div>
             {:else}
-              <div class="avatar placeholder">
+              <div class="avatar avatar-placeholder">
                 <div
-                  class="mask mask-squircle w-8 text-black"
-                  style={`background-color:hsl(${Math.floor(Math.random() * 360)} 10% 80%)`}
+                  class="mask mask-squircle size-8 text-black"
+                  style={`background-color:oklch(80% 0.03 ${Math.floor(Math.random() * 360)}/.7)`}
                 >
-                  <span class="select-none font-mono text-xs uppercase">
-                    {backer.name
+                  <span class="select-none text-xs uppercase">
+                    {sponsor.name
                       .split(" ")
                       .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))
                       .join("")}

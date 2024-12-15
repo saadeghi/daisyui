@@ -3,9 +3,27 @@
   import SEO from "$components/SEO.svelte"
   import Carbon from "$components/Carbon.svelte"
   import Footer from "$components/Footer.svelte"
+  import Opensource from "$components/homepage/Opensource.svelte"
   import { t } from "$lib/i18n"
 
   const { data } = $props()
+
+  let stargazers_count = $state(0)
+  let dependents_count = $state(0)
+  let npm_downloads_count_total = $state(0)
+
+  async function fetchStats() {
+    const response = await fetch("https://api.daisyui.com/stats.json")
+    const data = await response.json()
+    stargazers_count = data.stargazers_count
+    dependents_count = data.dependents_count
+    npm_downloads_count_total = data.npm_downloads_count_total
+  }
+  let statsPromise = fetchStats()
+
+  $effect(() => {
+    fetchStats()
+  })
 
   let isClipboardButtonPressed = $state(false)
   const copyText = (text) => {
@@ -1879,15 +1897,19 @@
       >
         <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
-            <Countup
-              initial={data.stargazers_count - 5}
-              value={data.stargazers_count + 5}
-              roundto={10}
-              duration={5 * 1000}
-            />
+            {#await statsPromise}
+              <div class="loading"></div>
+            {:then}
+              <Countup
+                initial={stargazers_count - 50}
+                value={stargazers_count + 50}
+                roundto={10}
+                duration={10 * 1000}
+              />
+            {/await}
           </span>
           <span class="hidden motion-reduce:inline">
-            {data.stargazers_count.toLocaleString("en-US")}
+            {stargazers_count.toLocaleString("en-US")}
           </span>
         </div>
         <a
@@ -1909,15 +1931,19 @@
       >
         <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
-            <Countup
-              initial={data.gh_dependents.repositories - 12}
-              value={data.gh_dependents.repositories + 12}
-              roundto={10}
-              duration={6 * 1000}
-            />
+            {#await statsPromise}
+              <div class="loading"></div>
+            {:then}
+              <Countup
+                initial={dependents_count - 200}
+                value={dependents_count + 200}
+                roundto={10}
+                duration={10 * 1000}
+              />
+            {/await}
           </span>
           <span class="hidden motion-reduce:inline">
-            {data.gh_dependents.repositories.toLocaleString("en-US")}
+            {dependents_count.toLocaleString("en-US")}
           </span>
         </div>
         <a
@@ -1939,15 +1965,19 @@
       >
         <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
-            <Countup
-              initial={data.npmInstalls - 3000}
-              value={data.npmInstalls + 3000}
-              roundto={100}
-              duration={7 * 1000}
-            />
+            {#await statsPromise}
+              <div class="loading"></div>
+            {:then}
+              <Countup
+                initial={npm_downloads_count_total - 500}
+                value={npm_downloads_count_total + 500}
+                roundto={100}
+                duration={20 * 1000}
+              />
+            {/await}
           </span>
           <span class="hidden motion-reduce:inline">
-            {data.npmInstalls.toLocaleString("en-US")}
+            {npm_downloads_count_total.toLocaleString("en-US")}
           </span>
         </div>
         <a
@@ -1967,9 +1997,7 @@
   <Module.default tweets={data.tweets} />
 {/await}
 
-{#await import("../../components/homepage/Opensource.svelte") then Module}
-  <Module.default contributors={data.contributors} backers={data.backers} />
-{/await}
+<Opensource />
 
 <div class="min-h-[150vh] py-20" bind:this={section["try"]}>
   <div class="sticky top-0 w-full px-2 pt-40 lg:px-10">
