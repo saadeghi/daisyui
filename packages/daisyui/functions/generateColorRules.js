@@ -6,10 +6,10 @@ export const generateColorRules = async ({ distDir, styles, breakpoints, states 
   try {
     const [defaultTheme, theme] = await Promise.all([
       fs.readFile(
-        path.join(import.meta.dir, "../../../node_modules/tailwindcss/theme.css"),
+        path.join(import.meta.dirname, "../../../node_modules/tailwindcss/theme.css"),
         "utf-8",
       ),
-      fs.readFile(path.join(import.meta.dir, "./variables.css"), "utf-8"),
+      fs.readFile(path.join(import.meta.dirname, "./variables.css"), "utf-8"),
     ])
 
     const colorNames = [
@@ -134,7 +134,7 @@ export const generateColorRules = async ({ distDir, styles, breakpoints, states 
         extractedContent = extractedContent.replace(/&/g, "")
       }
 
-      const colorsDir = path.join(import.meta.dir, distDir)
+      const colorsDir = path.join(import.meta.dirname, distDir)
       await fs.mkdir(colorsDir, { recursive: true })
       await fs.writeFile(path.join(colorsDir, fileName), extractedContent)
     }

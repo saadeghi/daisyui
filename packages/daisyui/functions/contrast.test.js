@@ -20,7 +20,7 @@ function rateContrast(contrast) {
   return ""
 }
 
-const themesDir = path.resolve(__dirname, "../src/themes")
+const themesDir = path.resolve(import.meta.dirname, "../src/themes")
 const colorPairs = [
   ["--color-base-100", "--color-base-content"],
   ["--color-base-200", "--color-base-content"],

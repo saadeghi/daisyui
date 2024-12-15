@@ -38,7 +38,7 @@ const isOklch = (value) => /^oklch\(\d+(\.\d+)?% \d+(\.\d+)? \d+(\.\d+)?\)$/.tes
 const isRem = (value) => /^\d+(\.\d+)?rem$/.test(value)
 const isPx = (value) => /^\d+(\.\d+)?px$/.test(value)
 
-const themesDir = join(__dirname, "../src/themes")
+const themesDir = join(import.meta.dirname, "../src/themes")
 const themeFiles = readdirSync(themesDir).filter((file) => file.endsWith(".css"))
 
 test("All theme files should include all required values", () => {

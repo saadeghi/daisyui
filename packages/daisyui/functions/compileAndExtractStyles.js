@@ -4,8 +4,8 @@ import { compile } from "tailwindcss"
 
 export async function loadThemes() {
   const [defaultTheme, theme] = await Promise.all([
-    fs.readFile(path.join(import.meta.dir, "../../../node_modules/tailwindcss/theme.css"), "utf-8"),
-    fs.readFile(path.join(import.meta.dir, "./variables.css"), "utf-8"),
+    fs.readFile(path.join(import.meta.dirname, "../../../node_modules/tailwindcss/theme.css"), "utf-8"),
+    fs.readFile(path.join(import.meta.dirname, "./variables.css"), "utf-8"),
   ])
   return { defaultTheme, theme }
 }

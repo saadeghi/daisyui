@@ -22,7 +22,7 @@ const processCssFile = async (srcDir, filePath) => {
     const classNames = await extractClassNames(cssContent)
 
     const fileName = path.basename(filePath, ".css")
-    const outputDir = path.join(__dirname, "..", srcDir, fileName)
+    const outputDir = path.join(import.meta.dirname, "..", srcDir, fileName)
     const outputFilePath = path.join(outputDir, "class.json")
 
     // Create directory if it doesn't exist
@@ -48,7 +48,7 @@ const processCssFile = async (srcDir, filePath) => {
 export const extractClasses = async ({ srcDir }) => {
   try {
     // Read all CSS files from the styles directory
-    const stylesDir = path.join(__dirname, "..", "src", srcDir)
+    const stylesDir = path.join(import.meta.dirname, "..", "src", srcDir)
     const cssFiles = await fs.readdir(stylesDir)
     const filteredCssFiles = cssFiles.filter((file) => file.endsWith(".css"))
 

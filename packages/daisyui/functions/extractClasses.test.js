@@ -32,27 +32,27 @@ test("extractClasses processes CSS files and extracts class names", async () => 
   const srcDir = "styles"
   const totalClassNames = await extractClasses({ srcDir })
 
-  expect(mockReaddir).toHaveBeenCalledWith(path.join(__dirname, "..", "src", srcDir))
+  expect(mockReaddir).toHaveBeenCalledWith(path.join(import.meta.dirname, "..", "src", srcDir))
   expect(mockReadFile).toHaveBeenCalledWith(
-    path.join(__dirname, "..", "src", srcDir, "file1.css"),
+    path.join(import.meta.dirname, "..", "src", srcDir, "file1.css"),
     "utf8",
   )
   expect(mockReadFile).toHaveBeenCalledWith(
-    path.join(__dirname, "..", "src", srcDir, "file2.css"),
+    path.join(import.meta.dirname, "..", "src", srcDir, "file2.css"),
     "utf8",
   )
-  expect(mockMkdir).toHaveBeenCalledWith(path.join(__dirname, "..", srcDir, "file1"), {
+  expect(mockMkdir).toHaveBeenCalledWith(path.join(import.meta.dirname, "..", srcDir, "file1"), {
     recursive: true,
   })
-  expect(mockMkdir).toHaveBeenCalledWith(path.join(__dirname, "..", srcDir, "file2"), {
+  expect(mockMkdir).toHaveBeenCalledWith(path.join(import.meta.dirname, "..", srcDir, "file2"), {
     recursive: true,
   })
   expect(mockWriteFile).toHaveBeenCalledWith(
-    path.join(__dirname, "..", srcDir, "file1", "class.json"),
+    path.join(import.meta.dirname, "..", srcDir, "file1", "class.json"),
     JSON.stringify(["class1", "class2", "class3"], null, 2),
   )
   expect(mockWriteFile).toHaveBeenCalledWith(
-    path.join(__dirname, "..", srcDir, "file2", "class.json"),
+    path.join(import.meta.dirname, "..", srcDir, "file2", "class.json"),
     JSON.stringify(["class4", "class5"], null, 2),
   )
   expect(totalClassNames).toBe(5)

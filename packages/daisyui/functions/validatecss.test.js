@@ -26,7 +26,7 @@ const getCssFiles = (dir, excludeDirs = []) => {
 }
 
 // Directory containing CSS files
-const cssDir = join(__dirname, "../")
+const cssDir = join(import.meta.dirname, "../")
 
 // Directories to exclude (absolute paths)
 const excludeDirs = [resolve(cssDir, "src"), resolve(cssDir, "functions")]

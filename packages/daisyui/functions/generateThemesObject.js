@@ -2,7 +2,7 @@ import fs from "fs/promises"
 import path from "path"
 
 export const generateThemesObject = async (outputPath) => {
-  const themesDir = path.join(__dirname, "../theme")
+  const themesDir = path.join(import.meta.dirname, "../theme")
   const themeObjects = {}
 
   const themeNames = await fs.readdir(themesDir)
