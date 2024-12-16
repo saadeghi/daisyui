@@ -2,14 +2,12 @@
   font-size: 0.7rem;
 
   &::part(container) {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     user-select: none;
-    background-color: var(--color-base-100);
-    border-radius: var(--radius-box);
-    border: var(--border) solid var(--color-base-200);
   }
   ::part(th) {
     font-weight: normal;
+    block-size: auto;
   }
   ::part(head) {
     opacity: 0.5;
@@ -29,7 +27,8 @@
     font-size: 0.7rem;
   }
   ::part(button day today) {
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-primary-content);
   }
   ::part(selected) {
     color: var(--color-base-100);
@@ -49,6 +48,9 @@
   }
   ::part(range-start range-end) {
     border-radius: var(--radius-field);
+  }
+  calendar-month {
+    width: 100%;
   }
 }
 
@@ -229,7 +231,8 @@
     font-weight: 400;
   }
   .rdp-today:not(.rdp-outside) {
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-primary-content);
   }
   .rdp-selected {
     font-weight: inherit;
@@ -436,7 +439,8 @@
 
     .is-today {
       .pika-button {
-        color: var(--color-primary);
+        background: var(--color-primary);
+        color: var(--color-primary-content);
       }
     }
     .is-selected,
