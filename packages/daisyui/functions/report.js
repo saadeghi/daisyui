@@ -12,7 +12,7 @@ async function processFile(filePath) {
     const cssVariables = allCssVariables.length
 
     const twVariables = allCssVariables.filter(
-      (variable) => variable.startsWith("--tw") && variable !== "--tw-content",
+      (variable) => variable.startsWith("--container") && variable !== "--tw-content",
     )
     const spacingVariables = allCssVariables.filter((variable) =>
       variable.startsWith("var(--spacing)"),

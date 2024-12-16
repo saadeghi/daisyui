@@ -15,7 +15,7 @@ export default function MyDatePicker() {
       </button>
       <div popover="auto" id="rdp-popover" className="dropdown" style={{ positionAnchor: "--rdp" }}>
         <DayPicker
-          className="react-date-picker"
+          className="react-day-picker"
           mode="single"
           selected={selected}
           onSelect={setSelected}

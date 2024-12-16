@@ -32,11 +32,11 @@ layout: components
 
 
 ```html
-<button popovertarget="cally-popover1" class="input input-border" id="cally1" style="anchor-name:--cally1">
+<button popovertarget="cally-popover1" class="$$input $$input-border" id="cally1" style="anchor-name:--cally1">
   Cally
 </button>
-<div popover id="cally-popover1" class="dropdown" style="position-anchor:--cally1">
-  <calendar-date class="cally" onchange={document.getElementById('cally1').innerText = this.value}>
+<div popover id="cally-popover1" class="$$dropdown" style="position-anchor:--cally1">
+  <calendar-date class="$$cally" onchange={document.getElementById('cally1').innerText = this.value}>
     <calendar-month></calendar-month>
   </calendar-date>
 </div>

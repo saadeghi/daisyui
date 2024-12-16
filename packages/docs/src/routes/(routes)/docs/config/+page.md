@@ -16,6 +16,7 @@ published: true
   root: ":root";
   include: ;
   exclude: ;
+  prefix: ;
   logs: true;
 }
 ```
