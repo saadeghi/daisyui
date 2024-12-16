@@ -179,47 +179,37 @@ themes: light --default;
 ## <Translate text="How to add custom styles for a specific theme?" />
 
 <Translate text="You can write custom style for your elements only for a specific theme." />
-<Translate text="In this example, .btn-twitter class only will have this style on light theme." />
+<Translate text="In this example, .my-btn class only will have this style on light theme." />
 
-```js
-module.exports = {
-  //...
-  daisyui: {
-    themes: [
-      {
-        light: {
-          ...require("daisyui/src/theming/themes")["light"],
-          ".btn-twitter": {
-            "background-color": "#1EA1F1",
-            "border-color": "#1EA1F1",
-          },
-          ".btn-twitter:hover": {
-            "background-color": "#1C96E1",
-            "border-color": "#1C96E1",
-          },
-        },
-      },
-    ],
-  },
+```css:app.css
+[data-theme="light"] {
+  .my-btn: {
+    background-color: #1EA1F1;
+    border-color: #1EA1F1;
+  }
+  .my-btn:hover: {
+    background-color: #1C96E1;
+    border-color: #1C96E1;
+  }
 }
 ```
 
 ## <Translate text="How to apply Tailwind's 'dark:' selector for specific themes" />
 
-<Translate text="daisyUI can be configured to use Tailwind's <code>dark:</code> selector in your code." />
-<Translate text="To achieve this, modify your <code>tailwind.config.js</code> file to include the darkMode parameter."/>
-<Translate text="Ensure that the dark: selector applies to the daisyUI theme you designate as dark."/>
+<Translate text="daisyUI can be configured to use Tailwind's `dark:` prefix" />
+<Translate text="For example if you want a padding only for a daisyUI dark theme you can use `dark:p-10`"/>
 
-<Translate text="In the example below, we have 'winter' and 'night' themes. Since 'night' is the dark theme, we configure it as shown:"/>
+<Translate text="In the example below, 'night' is darkmode theme so we add it to `@variant dark`"/>
 
-```js
-module.exports = {
-  content: ['./src/**/*.{astro,html,svelte,vue,js,ts,jsx,tsx}'],
-  plugins: [require('daisyui')],
-  theme: { ... },
-  daisyui: {
-    themes: ['winter', 'night']
-  },
-  darkMode: ['selector', '[data-theme="night"]']
+```css:app.css
+@plugin "daisyui" {
+  themes: winter --default, night --prefersdark;
 }
+
+@variant dark (&:where([data-theme=night], [data-theme=night] *));
+```
+```html:index.html
+<div class="p-10 dark:p-20">
+  I will have 10 padding on winter theme and 20 padding on night theme
+</div>
 ```

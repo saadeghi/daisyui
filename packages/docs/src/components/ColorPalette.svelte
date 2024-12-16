@@ -143,7 +143,7 @@
   inert={!open ? true : undefined}
 >
   <div
-    class="modal-box p-0 border border-base-300 lg:max-w-[50rem] max-lg:max-h-[80vh] flex flex-col gap-4"
+    class="modal-box p-0 border border-base-300 overflow-x-hidden lg:max-w-[50rem] max-lg:max-h-[80vh] flex flex-col gap-4"
   >
     {#if open}
       <div class="flex gap-2 justify-between items-center px-8 pt-6 pb-0">

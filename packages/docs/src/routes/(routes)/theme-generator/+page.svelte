@@ -162,30 +162,7 @@
       `  color-scheme: "${theme["color-scheme"]}";`,
     ]
 
-    const orderedColorKeys = [
-      "--color-base-100",
-      "--color-base-200",
-      "--color-base-300",
-      "--color-base-content",
-      "--color-primary",
-      "--color-primary-content",
-      "--color-secondary",
-      "--color-secondary-content",
-      "--color-accent",
-      "--color-accent-content",
-      "--color-neutral",
-      "--color-neutral-content",
-      "--color-info",
-      "--color-info-content",
-      "--color-success",
-      "--color-success-content",
-      "--color-warning",
-      "--color-warning-content",
-      "--color-error",
-      "--color-error-content",
-    ]
-
-    const cssProps = orderedColorKeys
+    const cssProps = data.orderedColorKeys
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
@@ -974,7 +951,7 @@
     </button>
   </div>
 
-  <div class="overflow-x-hidden" class:max-md:hidden={dockActiveItem !== "preview"}>
+  <div class="overflow-x-hidden">
     <div class="overflow-hidden border-base-300 border-s border-t md:rounded-ss-xl">
       <div
         class="bg-base-200"
@@ -989,8 +966,15 @@
         ${currentThemeStyle}
         `}
       >
-        <Preview />
-        <PreviewGrid />
+        <div class:max-md:hidden={dockActiveItem !== "preview"}>
+          <Preview />
+        </div>
+        <div
+          class="px-8 py-12 bg-base-100 border-base-300 md:border-t md:rounded-t-box"
+          class:max-md:hidden={dockActiveItem !== "variants"}
+        >
+          <PreviewGrid />
+        </div>
       </div>
     </div>
   </div>

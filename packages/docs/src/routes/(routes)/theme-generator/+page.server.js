@@ -87,6 +87,29 @@ const colorPairs = [
   ["--color-error", "--color-error-content"],
 ]
 
+const orderedColorKeys = [
+  "--color-base-100",
+  "--color-base-200",
+  "--color-base-300",
+  "--color-base-content",
+  "--color-primary",
+  "--color-primary-content",
+  "--color-secondary",
+  "--color-secondary-content",
+  "--color-accent",
+  "--color-accent-content",
+  "--color-neutral",
+  "--color-neutral-content",
+  "--color-info",
+  "--color-info-content",
+  "--color-success",
+  "--color-success-content",
+  "--color-warning",
+  "--color-warning-content",
+  "--color-error",
+  "--color-error-content",
+]
+
 const tailwindcolors = {
   "slate-50": "oklch(98% 0.003 247.858)",
   "slate-100": "oklch(96% 0.007 247.896)",
@@ -339,6 +362,7 @@ export async function load() {
     colorPairs,
     tailwindcolors,
     colorInitials,
+    orderedColorKeys,
     radiusValues,
     sizeValues,
     borderValues,

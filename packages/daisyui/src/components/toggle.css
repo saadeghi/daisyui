@@ -10,7 +10,7 @@
     grid-template-columns 0.2s;
   --toggle-padding: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
-  width: calc(var(--size) * 1.6);
+  width: calc(calc(var(--size) * 2) - calc(var(--border) + var(--toggle-padding)) * 2);
   height: var(--size);
 
   > * {

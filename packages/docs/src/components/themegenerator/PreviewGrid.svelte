@@ -184,53 +184,51 @@
   }
 </script>
 
-<div class="px-8 py-12 bg-base-100 border-base-300 border-t rounded-t-box">
-  <h3 class="font-bold px-2 my-4">Component Variants</h3>
-  <div>
-    {#each Object.entries(componentGrid) as [key, { element, icon, baseClass, types, colors, sizes, label, attributes, content }]}
-      {#each types as type}
-        {#if type}
-          <h5 class="font-semibold py-2 px-3 mt-10">{type}</h5>
-        {/if}
-        {#each colors as color}
-          <div class="flex flex-wrap gap-3 my-6">
-            {#each sizes as size}
-              {#if element === "input"}
-                <svelte:element
-                  this={element}
-                  class="{baseClass} {size} {color} {type}"
-                  {...attributes}
-                />
-              {:else}
-                <svelte:element
-                  this={element}
-                  class="{baseClass} {size} {color} {type}"
-                  {...attributes}
-                >
-                  {#if icon}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="size-[1em]"
-                    >
-                      <path
-                        d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z"
-                      />
-                    </svg>
-                  {/if}
-                  {#if label}
-                    {label}
-                  {/if}
-                  {#if content}
-                    <div>{@html content}</div>
-                  {/if}
-                </svelte:element>
-              {/if}
-            {/each}
-          </div>
-        {/each}
+<h3 class="font-bold px-2 my-4">Component Variants</h3>
+<div>
+  {#each Object.entries(componentGrid) as [key, { element, icon, baseClass, types, colors, sizes, label, attributes, content }]}
+    {#each types as type}
+      {#if type}
+        <h5 class="font-semibold py-2 px-3 mt-10">{type}</h5>
+      {/if}
+      {#each colors as color}
+        <div class="flex flex-wrap gap-3 my-6">
+          {#each sizes as size}
+            {#if element === "input"}
+              <svelte:element
+                this={element}
+                class="{baseClass} {size} {color} {type}"
+                {...attributes}
+              />
+            {:else}
+              <svelte:element
+                this={element}
+                class="{baseClass} {size} {color} {type}"
+                {...attributes}
+              >
+                {#if icon}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="size-[1em]"
+                  >
+                    <path
+                      d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z"
+                    />
+                  </svg>
+                {/if}
+                {#if label}
+                  {label}
+                {/if}
+                {#if content}
+                  <div>{@html content}</div>
+                {/if}
+              </svelte:element>
+            {/if}
+          {/each}
+        </div>
       {/each}
     {/each}
-  </div>
+  {/each}
 </div>

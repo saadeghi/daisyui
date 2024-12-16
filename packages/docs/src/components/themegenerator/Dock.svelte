@@ -2,11 +2,12 @@
   let { dockActiveItem = $bindable() } = $props()
 </script>
 
-<nav class="dock md:hidden">
+<nav class="dock dock-sm md:hidden">
   <button
     class:dock-active={dockActiveItem === "themes"}
-    on:click={() => {
+    onclick={() => {
       dockActiveItem = "themes"
+      window.scrollTo({ top: 0, behavior: "smooth" })
     }}
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
@@ -18,8 +19,9 @@
   </button>
   <button
     class:dock-active={dockActiveItem === "editor"}
-    on:click={() => {
+    onclick={() => {
       dockActiveItem = "editor"
+      window.scrollTo({ top: 0, behavior: "smooth" })
     }}
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
@@ -31,8 +33,9 @@
   </button>
   <button
     class:dock-active={dockActiveItem === "preview"}
-    on:click={() => {
+    onclick={() => {
       dockActiveItem = "preview"
+      window.scrollTo({ top: 0, behavior: "smooth" })
     }}
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
@@ -44,5 +47,28 @@
       />
     </svg>
     <span class="dock-label">Preview</span>
+  </button>
+  <button
+    class:dock-active={dockActiveItem === "variants"}
+    onclick={() => {
+      dockActiveItem = "variants"
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4"
+      ><g
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="2"
+        fill="none"
+        stroke="currentColor"
+        ><path d="M4 6l5.5 0"></path><path d="M4 10l5.5 0"></path><path d="M4 14l5.5 0"></path><path
+          d="M4 18l5.5 0"
+        ></path><path d="M14.5 6l5.5 0"></path><path d="M14.5 10l5.5 0"></path><path
+          d="M14.5 14l5.5 0"
+        ></path><path d="M14.5 18l5.5 0"></path></g
+      ></svg
+    >
+    <span class="dock-label">Variant preview</span>
   </button>
 </nav>
