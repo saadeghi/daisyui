@@ -5,7 +5,7 @@
   --tt-tail: calc(100% + 1px + 0.25rem);
 
   &:before {
-    @apply text-neutral-content rounded-field absolute max-w-xs px-2 py-1 text-center whitespace-normal opacity-0;
+    @apply text-neutral-content rounded-field absolute max-w-[20rem] px-2 py-1 text-center whitespace-normal opacity-0;
     translate: 0 .25rem;
     font-size: 0.875rem;
     line-height: 1.25rem;

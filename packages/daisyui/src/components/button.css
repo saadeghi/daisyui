@@ -3,7 +3,7 @@
   height: var(--size);
   font-size: 0.875rem;
   color: var(--btn-fg);
-  outline-color: var(--color-base-content);
+  outline-color: var(--btn-color, var(--color-base-content));
   font-weight: 600;
   transition-property: color, background-color, background-image, border-color, opacity, box-shadow,
     scale;
@@ -14,9 +14,7 @@
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
   background-color: var(--btn-bg);
-  border-width: var(--border);
-  border-style: solid;
-  border-color: var(--btn-border);
+  border: var(--border) solid var(--btn-border);
   text-shadow: 0 0.5px oklch(1 0 0 / calc(var(--gloss) * 0.15));
   box-shadow:
     0 0 0 0.5px
@@ -106,70 +104,97 @@
     --btn-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%);
     --btn-shadow: 0 0 0 0 oklch(0% 0 0/0.07);
   }
+
+  &:is(:disabled, [disabled], .btn-disabled) {
+    &:not(.btn-link) {
+      @apply bg-neutral/20;
+    }
+
+    @apply pointer-events-none;
+    --btn-border: transparent;
+    --btn-gradient: unset;
+    --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
+
+    &:hover {
+      @apply bg-neutral/20 pointer-events-none;
+      --btn-border: transparent;
+      --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
+    }
+  }
+
+  &:is(input[type="checkbox"], input[type="radio"]) {
+    @apply appearance-none;
+
+    /* &:not(.btn-square, .btn-circle) {
+      @apply w-auto;
+    } */
+
+    &::after {
+      content: attr(aria-label);
+    }
+
+    &:checked {
+      --btn-color: var(--color-primary);
+      --btn-bg: var(--color-primary);
+      --btn-fg: var(--color-primary-content);
+      --btn-border: var(--color-primary);
+
+      &:focus-visible {
+        @apply outline-primary;
+      }
+
+      &:hover {
+        --btn-bg: color-mix(in oklab, var(--color-primary) 90%, black);
+        --btn-border: color-mix(in oklab, var(--color-primary) 90%, black);
+      }
+    }
+  }
 }
 
 .btn-primary {
   --btn-color: var(--color-primary);
   --btn-fg: var(--color-primary-content);
-  @apply outline-primary;
 }
 
 .btn-secondary {
   --btn-color: var(--color-secondary);
   --btn-fg: var(--color-secondary-content);
-  @apply outline-secondary;
 }
 
 .btn-accent {
   --btn-color: var(--color-accent);
   --btn-fg: var(--color-accent-content);
-  @apply outline-accent;
 }
 
 .btn-neutral {
   --btn-color: var(--color-neutral);
   --btn-fg: var(--color-neutral-content);
-  @apply outline-neutral;
 }
 
 .btn-info {
   --btn-color: var(--color-info);
   --btn-fg: var(--color-info-content);
-  @apply outline-info;
 }
 
 .btn-success {
   --btn-color: var(--color-success);
   --btn-fg: var(--color-success-content);
-  @apply outline-success;
 }
 
 .btn-warning {
   --btn-color: var(--color-warning);
   --btn-fg: var(--color-warning-content);
-  @apply outline-warning;
 }
 
 .btn-error {
   --btn-color: var(--color-error);
   --btn-fg: var(--color-error-content);
-  @apply outline-error;
-}
-
-.btn.glass {
-  --btn-shadow: "";
-  @apply outline-current hover:[--glass-border-opacity:15%] hover:[--glass-opacity:25%];
-
-  &.btn-active {
-    --glass-border-opacity: 15%;
-    --glass-opacity: 25%;
-  }
 }
 
 .btn-ghost {
   &:not(.btn-active, :hover, :active:focus, :focus-visible) {
-    --btn-shadow: "";
     @apply outline-current;
+    --btn-shadow: "";
     --btn-bg: transparent;
     --btn-fg: currentColor;
     --btn-border: transparent;
@@ -228,56 +253,6 @@
       var(--color-base-200)
     );
     --btn-gradient: unset;
-  }
-}
-
-.btn {
-  &:is(:disabled, [disabled], .btn-disabled) {
-    &:not(.btn-link) {
-      @apply bg-neutral/20;
-    }
-
-    @apply pointer-events-none;
-    --btn-border: transparent;
-    --btn-gradient: unset;
-    --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
-
-    &:hover {
-      @apply bg-neutral/20 pointer-events-none;
-      --btn-border: transparent;
-      --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
-    }
-  }
-}
-
-/* radio input and checkbox as button */
-.btn {
-  &:is(input[type="checkbox"], input[type="radio"]) {
-    @apply appearance-none;
-
-    /* &:not(.btn-square, .btn-circle) {
-      @apply w-auto;
-    } */
-
-    &::after {
-      content: attr(aria-label);
-    }
-
-    &:checked {
-      --btn-color: var(--color-primary);
-      --btn-bg: var(--color-primary);
-      --btn-fg: var(--color-primary-content);
-      --btn-border: var(--color-primary);
-
-      &:focus-visible {
-        @apply outline-primary;
-      }
-
-      &:hover {
-        --btn-bg: color-mix(in oklab, var(--color-primary) 90%, black);
-        --btn-border: color-mix(in oklab, var(--color-primary) 90%, black);
-      }
-    }
   }
 }
 

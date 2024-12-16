@@ -1,5 +1,6 @@
 .mockup-code {
-  @apply bg-neutral text-neutral-content rounded-box relative overflow-hidden overflow-x-auto py-5 text-sm;
+  @apply bg-neutral text-neutral-content rounded-box relative overflow-hidden overflow-x-auto py-5;
+  font-size: 0.875rem;
   direction: ltr;
 
   &:before {
