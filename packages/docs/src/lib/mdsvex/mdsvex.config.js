@@ -19,7 +19,7 @@ const theme = JSON.parse(await fs.readFile(path.join(__dirname, "shiki.theme.jso
 
 const highlighter = await createHighlighter({
   themes: [theme],
-  langs: ["javascript", "jsx", "html", "css", "json", "bash", "markdown", "diff"],
+  langs: ["bash", "css", "diff", "html", "js", "json", "jsx", "md", "svelte", "ts", "tsx", "vue"],
 })
 
 const placeholders = {

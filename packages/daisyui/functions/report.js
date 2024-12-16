@@ -33,10 +33,11 @@ async function processFile(filePath) {
     return {
       file: filePath,
       selector: (fileContent.match(/(?:[^}]+{|@\w+\s*[^;{}]+(?:;|\{))/g) || []).length,
-      line: fileContent.split("\n").length,
+      // line: fileContent.split("\n").length,
       var: cssVariables,
       raw: stats.size / 1000,
       brotli: brotliSize / 1000,
+      "%": Math.round((1 - brotliSize / stats.size) * 100),
     }
   } catch (error) {
     throw new Error(`Error processing file ${filePath}: ${error.message}`)
@@ -87,7 +88,15 @@ export const report = async (directories) => {
     throw new Error("No files were successfully processed.")
   }
 
-  console.table(flatReport, ["file", "selector", "line", "var", "raw", "brotli"])
+  console.table(flatReport, [
+    "file",
+    "selector",
+    // "line",
+    "var",
+    "raw",
+    "brotli",
+    "%",
+  ])
 
   // Save the report if it's different from the last one
   const timestamp = new Date().toISOString()
