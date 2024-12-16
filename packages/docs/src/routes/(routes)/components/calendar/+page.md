@@ -14,6 +14,7 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import { prefixClassNames } from "$lib/actions.svelte.js"
 </script>
 
 <svelte:head>
@@ -98,6 +99,7 @@ import "cally";
   </calendar-date>
 </div>
 ```
+<div use:prefixClassNames>
 
 ## 2. Pikaday Calendar
 
@@ -107,7 +109,7 @@ Pikaday is a JS datepicker library and you can use it from CDN or as a JS depend
 
 ```html:html
 <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-<input type="text" class="input pika-single" id="myDatepicker">
+<input type="text" class="$$input $$pika-single" id="myDatepicker">
 <script>
   var picker = new Pikaday({ field: document.getElementById('myDatepicker') });
 </script>
@@ -129,7 +131,7 @@ export default {
 };
 </script>
 <template>
-  <input type="text" class="input pika-single" ref="myDatepicker" value="Pick a day"/>
+  <input type="text" class="$$input $$pika-single" ref="myDatepicker" value="Pick a day"/>
 </template>
 ```
 
@@ -150,7 +152,7 @@ export default function App() {
     return () => picker.destroy();
   }, []);
   return (
-    <input type="text" className="input pika-single" defaultValue="Pick a date" ref={myDatepicker} />
+    <input type="text" className="$$input $$pika-single" defaultValue="Pick a date" ref={myDatepicker} />
   );
 }
 ```
@@ -171,15 +173,17 @@ export default function App() {
   const [date, setDate] = useState<Date | undefined>();
   return (
     <>
-      <button popoverTarget="rdp-popover" className="input input-border" style={{ anchorName: "--rdp" } as React.CSSProperties}
+      <button popoverTarget="rdp-popover" className="$$input $$input-border" style={{ anchorName: "--rdp" } as React.CSSProperties}
       >
         {date ? date.toLocaleDateString() : "Pick a date"}
       </button>
-      <div popover="auto" id="rdp-popover" className="dropdown" style={{ positionAnchor: "--rdp" } as React.CSSProperties}
+      <div popover="auto" id="rdp-popover" className="$$dropdown" style={{ positionAnchor: "--rdp" } as React.CSSProperties}
       >
-        <DayPicker className="react-day-picker" mode="single" selected={date} onSelect={setDate} />
+        <DayPicker className="$$react-day-picker" mode="single" selected={date} onSelect={setDate} />
       </div>
     </>
   );
 }
 ```
+
+</div>
