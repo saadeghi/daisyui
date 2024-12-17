@@ -37,7 +37,7 @@ classnames:
 
 ```html
 <input class="$$input $$validator" type="email" required placeholder="mail@site.com" />
-<div class="validator-hint">Enter valid email address</div>
+<div class="$$validator-hint">Enter valid email address</div>
 ```
 
 ### ~Password requirement validator
