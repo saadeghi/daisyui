@@ -1,0 +1,19 @@
+.glass {
+  border: none;
+  backdrop-filter: blur(var(--glass-blur, 40px));
+  background-color: transparent;
+  background-image: linear-gradient(
+      135deg,
+      oklch(100% 0 0 / var(--glass-opacity, 30%)) 0%,
+      oklch(0% 0 0 / 0%) 100%
+    ),
+    linear-gradient(
+      var(--glass-reflect-degree, 100deg),
+      oklch(100% 0 0 / var(--glass-reflect-opacity, 5%)) 25%,
+      oklch(0% 0 0 / 0%) 25%
+    );
+  box-shadow:
+    0 0 0 1px oklch(100% 0 0 / var(--glass-border-opacity, 20%)) inset,
+    0 0 0 2px oklch(0% 0 0 / 5%);
+  text-shadow: 0 1px oklch(0% 0 0 / var(--glass-text-shadow-opacity, 5%));
+}
