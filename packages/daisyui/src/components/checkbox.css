@@ -1,6 +1,7 @@
 .checkbox {
-  border: var(--border) solid;
-  @apply border-base-content/20 text-base-content rounded-selector relative shrink-0 cursor-pointer appearance-none p-1 align-middle;
+  border: var(--border) solid
+    var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, transparent));
+  @apply text-base-content rounded-selector relative shrink-0 cursor-pointer appearance-none p-1 align-middle;
   box-shadow:
     0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
     0 0 transparent inset,
@@ -27,12 +28,13 @@
   }
 
   &:focus-visible {
-    outline: 2px solid currentColor;
+    outline: 2px solid var(--input-color, currentColor);
     outline-offset: 2px;
   }
 
   &:checked,
   &[aria-checked="true"] {
+    background-color: var(--input-color, transparent);
     box-shadow:
       0 0 transparent inset,
       0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
@@ -54,87 +56,38 @@
 }
 
 .checkbox-primary {
-  @apply border-primary text-primary-content;
-
-  &:focus-visible {
-    @apply outline-primary;
-  }
-
-  &:checked {
-    @apply bg-primary;
-  }
+  @apply text-primary-content;
+  --input-color: var(--color-primary);
 }
 
 .checkbox-secondary {
-  @apply border-secondary text-secondary-content;
-
-  &:focus-visible {
-    @apply outline-secondary;
-  }
-
-  &:checked {
-    @apply bg-secondary;
-  }
+  @apply text-secondary-content;
+  --input-color: var(--color-secondary);
 }
 
 .checkbox-accent {
-  @apply border-accent text-accent-content;
-
-  &:focus-visible {
-    @apply outline-accent;
-  }
-
-  &:checked {
-    @apply bg-accent;
-  }
-}
-
-.checkbox-success {
-  @apply border-success text-success-content;
-
-  &:focus-visible {
-    @apply outline-success;
-  }
-
-  &:checked {
-    @apply bg-success;
-  }
-}
-
-.checkbox-warning {
-  @apply border-warning text-warning-content;
-
-  &:focus-visible {
-    @apply outline-warning;
-  }
-
-  &:checked {
-    @apply bg-warning;
-  }
+  @apply text-accent-content;
+  --input-color: var(--color-accent);
 }
 
 .checkbox-info {
-  @apply border-info text-info-content;
+  @apply text-info-content;
+  --input-color: var(--color-info);
+}
 
-  &:focus-visible {
-    @apply outline-info;
-  }
+.checkbox-success {
+  @apply text-success-content;
+  --input-color: var(--color-success);
+}
 
-  &:checked {
-    @apply bg-info;
-  }
+.checkbox-warning {
+  @apply text-warning-content;
+  --input-color: var(--color-warning);
 }
 
 .checkbox-error {
-  @apply border-error text-error-content;
-
-  &:focus-visible {
-    @apply outline-error;
-  }
-
-  &:checked {
-    @apply bg-error;
-  }
+  @apply text-error-content;
+  --input-color: var(--color-error);
 }
 
 .checkbox:disabled {

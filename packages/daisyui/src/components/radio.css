@@ -1,10 +1,11 @@
 .radio {
-  @apply relative shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle text-current;
-  border: var(--border) solid color-mix(in srgb, currentColor 20%, transparent);
+  @apply relative shrink-0 cursor-pointer appearance-none rounded-full p-1 align-middle;
+  border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, transparent));
   box-shadow: 0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: var(--size);
   height: var(--size);
+  color: var(--input-color, currentColor);
   &:before {
     @apply block size-full rounded-full;
     content: "";
@@ -32,31 +33,31 @@
 }
 
 .radio-primary {
-  @apply text-primary border-current;
+  --input-color: var(--color-primary);
 }
 
 .radio-secondary {
-  @apply text-secondary border-current;
+  --input-color: var(--color-secondary);
 }
 
 .radio-accent {
-  @apply text-accent border-current;
-}
-
-.radio-success {
-  @apply text-success border-current;
-}
-
-.radio-warning {
-  @apply text-warning border-current;
+  --input-color: var(--color-accent);
 }
 
 .radio-info {
-  @apply text-info border-current;
+  --input-color: var(--color-info);
+}
+
+.radio-success {
+  --input-color: var(--color-success);
+}
+
+.radio-warning {
+  --input-color: var(--color-warning);
 }
 
 .radio-error {
-  @apply text-error border-current;
+  --input-color: var(--color-error);
 }
 
 .radio:disabled {

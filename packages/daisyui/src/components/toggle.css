@@ -1,6 +1,7 @@
 .toggle {
   border: var(--border) solid currentColor;
-  @apply text-base-content/50 relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
+  color: var(--input-color);
+  @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
   grid-template-columns: 0fr 1fr 1fr;
   border-radius: calc(var(--radius-selector) + var(--toggle-p));
   padding: var(--toggle-p);
@@ -8,11 +9,13 @@
   transition:
     color 0.3s,
     grid-template-columns 0.2s;
+  --input-color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
   --toggle-p: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: calc(calc(var(--size) * 2) - calc(var(--border) + var(--toggle-p)) * 2);
   height: var(--size);
 
+  /* icons in toggle */
   > * {
     @apply z-1 col-span-1 col-start-2 row-start-1 h-full cursor-pointer appearance-none bg-transparent p-0.5;
     transition:
@@ -67,7 +70,8 @@
   &[aria-checked="true"],
   &:has(> input:checked) {
     grid-template-columns: 1fr 1fr 0fr;
-    @apply bg-base-100 text-base-content;
+    @apply bg-base-100;
+    --input-color: var(--color-base-content);
 
     &:before {
       @apply bg-current;
@@ -95,49 +99,49 @@
 .toggle-primary {
   &:checked,
   &[aria-checked="true"] {
-    @apply text-primary;
+    --input-color: var(--color-primary);
   }
 }
 
 .toggle-secondary {
   &:checked,
   &[aria-checked="true"] {
-    @apply text-secondary;
+    --input-color: var(--color-secondary);
   }
 }
 
 .toggle-accent {
   &:checked,
   &[aria-checked="true"] {
-    @apply text-accent;
+    --input-color: var(--color-accent);
   }
 }
 
 .toggle-success {
   &:checked,
   &[aria-checked="true"] {
-    @apply text-success;
+    --input-color: var(--color-success);
   }
 }
 
 .toggle-warning {
   &:checked,
   &[aria-checked="true"] {
-    @apply text-warning;
+    --input-color: var(--color-warning);
   }
 }
 
 .toggle-info {
   &:checked,
   &[aria-checked="true"] {
-    @apply text-info;
+    --input-color: var(--color-info);
   }
 }
 
 .toggle-error {
   &:checked,
   &[aria-checked="true"] {
-    @apply text-error;
+    --input-color: var(--color-error);
   }
 }
 

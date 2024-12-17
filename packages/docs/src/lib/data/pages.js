@@ -340,6 +340,12 @@ export const pages = [
             tags: "toggle switch checkbox",
             href: "/components/toggle/",
           },
+          {
+            name: "Validator",
+            tags: "validator validaton invalid",
+            href: "/components/validator/",
+            badge: "new",
+          },
         ],
       },
       {

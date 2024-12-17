@@ -16,8 +16,11 @@
     0 -1px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset;
   --size: calc(var(--size-field, 0.25rem) * 10);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  &:is(input) {
+    @apply inline-block;
+  }
   input {
-    @apply w-full appearance-none bg-transparent;
+    @apply inline-block w-full appearance-none bg-transparent;
     border: none;
 
     &:focus,
