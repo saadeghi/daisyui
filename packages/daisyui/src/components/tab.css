@@ -8,7 +8,7 @@
 
 .tab {
   @apply hover:text-base-content relative inline-flex cursor-pointer appearance-none flex-wrap items-center justify-center text-center select-none;
-  --tab-padding: 1rem;
+  --tab-p: 1rem;
   --tab-bg: var(--color-base-100);
   --tab-border-color: var(--color-base-300);
   --tab-radius-ss: 0;
@@ -21,8 +21,8 @@
   order: var(--tab-order);
   height: calc(var(--size-field, 0.25rem) * 10);
   font-size: 0.875rem;
-  padding-inline-start: var(--tab-padding);
-  padding-inline-end: var(--tab-padding);
+  padding-inline-start: var(--tab-p);
+  padding-inline-end: var(--tab-p);
 
   &:is(input[type="radio"]) {
     @apply min-w-fit;
@@ -105,12 +105,12 @@
     --tab-radius-se: min(var(--radius-field), var(--tab-radius-min));
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
-    --tab-paddings: var(--border) var(--tab-padding) 0 var(--tab-padding);
+    --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
     --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
     --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
-    /* --last-tab-margin: 0 var(--tab-padding) 0 0; */
+    /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
     border-width: var(--tab-border);
     border-start-start-radius: var(--tab-radius-ss);
@@ -125,8 +125,8 @@
       --tab-border: var(--border) var(--border) 0 var(--border);
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
         var(--tab-border-color);
-      --tab-paddings: 0 calc(var(--tab-padding) - var(--border)) var(--border)
-        calc(var(--tab-padding) - var(--border));
+      --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
+        calc(var(--tab-p) - var(--border));
       --tab-inset: auto auto 0 auto;
       --tab-grad: calc(69% - var(--border));
       --radius-start: radial-gradient(
@@ -210,20 +210,20 @@
     --tab-radius-se: min(var(--radius-field), var(--tab-radius-min));
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
-    --tab-paddings: var(--border) var(--tab-padding) 0 var(--tab-padding);
+    --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
     --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
     --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
     --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
-    /* --last-tab-margin: 0 var(--tab-padding) 0 0; */
+    /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
       --tab-border: var(--border) var(--border) 0 var(--border);
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
         var(--tab-border-color);
-      --tab-paddings: 0 calc(var(--tab-padding) - var(--border)) var(--border)
-        calc(var(--tab-padding) - var(--border));
+      --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
+        calc(var(--tab-p) - var(--border));
       --tab-inset: auto auto 0 auto;
       --radius-start: radial-gradient(
         circle at top left,
@@ -280,19 +280,19 @@
     --tab-radius-es: min(var(--radius-field), var(--tab-radius-min));
     --tab-radius-ee: min(var(--radius-field), var(--tab-radius-min));
     --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
-    --tab-paddings: 0 var(--tab-padding) var(--border) var(--tab-padding);
+    --tab-paddings: 0 var(--tab-p) var(--border) var(--tab-p);
     --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
     --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
-    /* --last-tab-margin: 0 var(--tab-padding) 0 0; */
+    /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
       --tab-border: 0 var(--border) var(--border) var(--border);
       --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color)
         var(--tab-border-color);
-      --tab-paddings: var(--border) calc(var(--tab-padding) - var(--border)) 0
-        calc(var(--tab-padding) - var(--border));
+      --tab-paddings: var(--border) calc(var(--tab-p) - var(--border)) 0
+        calc(var(--tab-p) - var(--border));
       --tab-inset: 0 auto auto auto;
       --radius-start: radial-gradient(
         circle at bottom left,
@@ -348,7 +348,7 @@
     --tab-radius-se: 0;
     --tab-radius-es: min(var(--radius-field),var(--tab-radius-min));
     --tab-radius-ee: 0;
-    --tab-paddings: 1px var(--tab-padding) 1px calc(var(--tab-padding) + 1px);
+    --tab-paddings: 1px var(--tab-p) 1px calc(var(--tab-p) + 1px);
     --tab-border-colors: transparent var(--tab-border-color) transparent transparent;
     --tab-corner-width: min(var(--radius-field),var(--tab-radius-min));
     --tab-corner-height: calc(100% + min(var(--radius-field),var(--tab-radius-min)) * 2);
@@ -359,7 +359,7 @@
     &:is(input:checked) {
       --tab-border: 1px 0 1px 1px;
       --tab-border-colors: var(--tab-border-color) transparent var(--tab-border-color) var(--tab-border-color);
-      --tab-paddings: 0 calc(1px + var(--tab-padding)) 0 var(--tab-padding);
+      --tab-paddings: 0 calc(1px + var(--tab-p)) 0 var(--tab-p);
       --tab-inset: auto 0 auto auto;
       --radius-start: radial-gradient(circle at top left,
           transparent var(--tab-grad),
@@ -446,7 +446,7 @@
   :where(.tab) {
     height: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.75rem;
-    --tab-padding: 0.375rem;
+    --tab-p: 0.375rem;
     --tab-radius-min: calc(0.5rem - var(--border));
   }
 }
@@ -455,7 +455,7 @@
   :where(.tab) {
     height: calc(var(--size-field, 0.25rem) * 8);
     font-size: 0.875rem;
-    --tab-padding: 0.5rem;
+    --tab-p: 0.5rem;
     --tab-radius-min: calc(0.5rem - var(--border));
   }
 }
@@ -464,7 +464,7 @@
   :where(.tab) {
     height: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
-    --tab-padding: 0.75rem;
+    --tab-p: 0.75rem;
     --tab-radius-min: calc(0.75rem - var(--border));
   }
 }
@@ -473,7 +473,7 @@
   :where(.tab) {
     height: calc(var(--size-field, 0.25rem) * 12);
     font-size: 1.125rem;
-    --tab-padding: 1rem;
+    --tab-p: 1rem;
     --tab-radius-min: calc(1.5rem - var(--border));
   }
 }
@@ -482,7 +482,7 @@
   :where(.tab) {
     height: calc(var(--size-field, 0.25rem) * 14);
     font-size: 1.125rem;
-    --tab-padding: 1.25rem;
+    --tab-p: 1.25rem;
     --tab-radius-min: calc(2rem - var(--border));
   }
 }

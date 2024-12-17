@@ -3,9 +3,9 @@
   -webkit-appearance: none;
   --range-shdw: currentColor;
   --range-thumb: var(--color-base-100);
-  --range-padding: 0.25rem;
+  --range-p: 0.25rem;
   @apply w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
-  border-radius: calc(var(--radius-selector) + var(--range-padding) + 1px);
+  border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
   border: none;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   height: var(--size);
@@ -26,11 +26,11 @@
 
   &::-webkit-slider-thumb {
     @apply relative box-border;
-    border-radius: calc(var(--radius-selector) + var(--range-padding) + 1px);
+    border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
     background-color: currentColor;
     height: var(--size);
     width: var(--size);
-    border: var(--range-padding) solid;
+    border: var(--range-p) solid;
     appearance: none;
     -webkit-appearance: none;
     top: 50%;
@@ -57,11 +57,11 @@
 
   &::-moz-range-thumb {
     @apply relative box-border;
-    border-radius: calc(var(--radius-selector) + var(--range-padding) + 1px);
+    border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
     background-color: currentColor;
     height: var(--size);
     width: var(--size);
-    border: var(--range-padding) solid;
+    border: var(--range-p) solid;
     top: 50%;
     color: var(--range-shdw);
     --track-shdw: calc(-100rem - (var(--size) / 2)) 0 0 100rem;

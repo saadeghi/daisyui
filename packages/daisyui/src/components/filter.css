@@ -1,7 +1,10 @@
 .filter {
   @apply flex flex-wrap;
+  input[type="radio"] {
+    @apply w-auto;
+  }
   input {
-    @apply w-auto overflow-hidden opacity-100;
+    @apply overflow-hidden opacity-100;
     scale: 1;
     transition:
       margin 0.1s,

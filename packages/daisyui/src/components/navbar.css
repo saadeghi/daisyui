@@ -1,6 +1,6 @@
 .navbar {
   @apply flex w-full items-center;
-  padding: var(--navbar-padding, 0.5rem);
+  padding: 0.5rem;
   min-height: 4rem;
 }
 

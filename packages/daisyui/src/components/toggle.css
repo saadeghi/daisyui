@@ -2,15 +2,15 @@
   border: var(--border) solid currentColor;
   @apply text-base-content/50 relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
   grid-template-columns: 0fr 1fr 1fr;
-  border-radius: calc(var(--radius-selector) + var(--toggle-padding));
-  padding: var(--toggle-padding);
+  border-radius: calc(var(--radius-selector) + var(--toggle-p));
+  padding: var(--toggle-p);
   box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent) inset;
   transition:
     color 0.3s,
     grid-template-columns 0.2s;
-  --toggle-padding: 0.1875rem;
+  --toggle-p: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
-  width: calc(calc(var(--size) * 2) - calc(var(--border) + var(--toggle-padding)) * 2);
+  width: calc(calc(var(--size) * 2) - calc(var(--border) + var(--toggle-p)) * 2);
   height: var(--size);
 
   > * {
@@ -146,7 +146,7 @@
 .toggle-xs {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-padding: 0.0625rem;
+    --toggle-p: 0.0625rem;
     --size: calc(var(--size-selector, 0.25rem) * 4);
   }
 }
@@ -154,7 +154,7 @@
 .toggle-sm {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-padding: 0.125rem;
+    --toggle-p: 0.125rem;
     --size: calc(var(--size-selector, 0.25rem) * 5);
   }
 }
@@ -162,7 +162,7 @@
 .toggle-md {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-padding: 0.1875rem;
+    --toggle-p: 0.1875rem;
     --size: calc(var(--size-selector, 0.25rem) * 6);
   }
 }
@@ -170,7 +170,7 @@
 .toggle-lg {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-padding: 0.25rem;
+    --toggle-p: 0.25rem;
     --size: calc(var(--size-selector, 0.25rem) * 7);
   }
 }
@@ -178,7 +178,7 @@
 .toggle-xl {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-padding: 0.3125rem;
+    --toggle-p: 0.3125rem;
     --size: calc(var(--size-selector, 0.25rem) * 8);
   }
 }
