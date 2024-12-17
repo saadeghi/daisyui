@@ -163,7 +163,7 @@
         </div>
         <div class="flex items-center gap-2">
           <svg
-            class="inline-block h-4 w-4 fill-rose-500"
+            class="inline-block h-4 w-4"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"

@@ -161,7 +161,7 @@ min="1" max="10"
 ### ~Select requirement validator
 <form>
   <select class="select validator" required>
-    <option disabled selected value>Choose:</option>
+    <option disabled selected value="">Choose:</option>
     <option>Tabs</option>
     <option>Spaces</option>
   </select>
@@ -172,7 +172,7 @@ min="1" max="10"
 ```html
 <form>
   <select class="$$select $$validator" required>
-    <option disabled selected value>Choose:</option>
+    <option disabled selected value="">Choose:</option>
     <option>Tabs</option>
     <option>Spaces</option>
   </select>
