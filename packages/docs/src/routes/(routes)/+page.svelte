@@ -58,8 +58,8 @@
   let section = $state([])
 
   const demo_1_ClassNames = [
-    "bg-indigo-600 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out rounded-md hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 active:scale-95",
-    "btn btn-primary",
+    "bg-zinc-100 border font-semibold text-zinc-900 text-sm px-4 duration-200 py-2.5 transition-all hover:border-zinc-300 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 active:translate-y-[0.5px] inline-flex gap-2 rounded-sm active:border-zinc-300 active:bg-zinc-200 active:shadow-none text-center align-middle cursor-pointer border-zinc-200 dark:border-zinc-900 dark:bg-neutral-900 dark:text-zinc-300 dark:hover:border-zinc-950 dark:hover:bg-zinc-950 dark:focus-visible:outline-zinc-200 dark:active:border-zinc-950 dark:active:bg-zinc-900",
+    "btn",
   ]
   const demo_1_ClassNameHandler = $derived(() => {
     if (
@@ -79,7 +79,7 @@
     ) {
       return demo_1_ClassNames[0].slice(
         0,
-        Math.trunc(animateValue(section.hero, [75, 80], [demo_1_ClassNames[0].length, 0])),
+        Math.trunc(animateValue(section.hero, [68, 74], [demo_1_ClassNames[0].length, 0])),
       )
     }
     if (
@@ -88,7 +88,7 @@
     ) {
       return demo_1_ClassNames[1].slice(
         0,
-        Math.trunc(animateValue(section.hero, [80, 82], [0, demo_1_ClassNames[1].length])),
+        Math.trunc(animateValue(section.hero, [74, 80], [0, demo_1_ClassNames[1].length])),
       )
     }
     return ""
@@ -628,10 +628,7 @@
                           </div>
                         </div>
                         <div class="join w-full">
-                          <input
-                            class="input input-bordered input-sm join-item w-full"
-                            placeholder="Message"
-                          />
+                          <input class="input input-sm join-item w-full" placeholder="Message" />
                           <button class="btn btn-neutral btn-sm join-item">
                             <svg
                               fill="currentColor"
@@ -889,23 +886,22 @@
           </div>
           <div
             dir="ltr"
-            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 rtl:ps-0 sm:pb-10 lg:pe-4 lg:rtl:ps-20 xl:ps-20 xl:pt-10"
+            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 rtl:ps-0 sm:pb-10 lg:pe-4 lg:rtl:ps-20 xl:ps-12 xl:pt-10"
             style={`opacity:${animateValue(
               section["hero"],
               [16, 17],
               [0, 1],
             )};z-index:${animateValue(section["hero"], [20, 22], [0, 1])}`}
           >
-            <pre class="max-w-lg text-xs sm:text-base"><code class="whitespace-pre-wrap">
-<span class="text-base-content/40 italic">// {$t("Styling a simple button")}</span>
-
+            <pre class="max-w-xl text-xs sm:text-base"><code class="whitespace-pre-wrap text-xs"
+                ><span class="text-base-content/40 italic">// {$t("Styling a simple button")}</span>
 &lt;button class=&quot;<span class={`${demo_1_StyleHandler()}`}>{demo_1_ClassNameHandler()}</span
                 >&quot;&gt;
   {demo_1_ElementTextHandler()}
 &lt;/button&gt;</code
               ></pre>
             <div>
-              <div class="text-base-content/40 py-6 font-mono text-xs italic sm:text-base">
+              <div class="text-base-content/40 py-6 font-mono italic text-xs">
                 // {$t("Result")}:
               </div>
               <button class={`${demo_1_ClassNameHandler()}`}>
@@ -1093,8 +1089,7 @@
                   >&lt;div class=&quot;<span class="text-teal-700">card bg-base-200 w-80</span
                   >&quot;&gt;
   &lt;div class=&quot;<span class="text-teal-700">card-body</span>&quot;&gt;
-    &lt;input placeholder=&quot;Email&quot; class=&quot;<span class="text-teal-700"
-                    >input input-bordered</span
+    &lt;input placeholder=&quot;Email&quot; class=&quot;<span class="text-teal-700">input</span
                   >&quot; /&gt;
     &lt;label class=&quot;<span class="text-teal-700">label cursor-pointer</span>&quot;&gt;
       {$t("Accept terms of use")}
@@ -1120,11 +1115,7 @@
             <div>
               <div class="card bg-base-200 w-80">
                 <div class="card-body">
-                  <input
-                    placeholder="Email"
-                    class="input input-bordered"
-                    name="sample-input-field"
-                  />
+                  <input placeholder="Email" class="input" name="sample-input-field" />
                   <label class="label cursor-pointer">
                     {$t("Accept terms of use")}
                     <input name="sample-checkbox" type="checkbox" class="toggle" />
