@@ -25,17 +25,18 @@
 
 ## Community
 
+
 <div align="center">
 
 Premium Sponsors  
-[![][sponsors]][opencollective]
+[![Premium Sponsors](https://opencollective.com/daisyui/sponsors.svg?width=890&height=200)](https://opencollective.com/daisyui)
 
 Backers  
 [![][backers_org]][opencollective]  
-[![][backers]][opencollective]
+[![Backers](https://opencollective.com/daisyui/backers.svg?width=890&height=200)](https://opencollective.com/daisyui)
 
-Contributors
-[![][contributors_img]][contributors]
+Contributors  
+[![Contributors](https://opencollective.com/daisyui/contributors.svg?width=890&height=200)](https://github.com/saadeghi/daisyui/contributors)
 
 </div>
 
