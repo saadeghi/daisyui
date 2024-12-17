@@ -57,7 +57,7 @@ test("pluginOptionsHandler should apply all themes when 'all' is specified", () 
       color: "black",
     },
   })
-  expect(mockAddBase).toHaveBeenCalledTimes(3)
+  expect(mockAddBase).toHaveBeenCalledTimes(4)
 })
 
 test("pluginOptionsHandler should handle custom themes", () => {
