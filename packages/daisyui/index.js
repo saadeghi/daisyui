@@ -1,11 +1,9 @@
-import packageJson from "./package.json" with { type: 'json' }
+import { version } from "./package.json"
 import { pluginOptionsHandler } from "./functions/pluginOptionsHandler.js"
 import { plugin } from "./functions/plugin.js"
 import variables from "./functions/variables.js"
 import themesObject from "./theme/object.js"
 import { base, components, utilities } from "./imports.js"
-
-const { version } = packageJson;
 
 export default plugin.withOptions(
   (options) => {

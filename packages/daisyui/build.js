@@ -1,3 +1,4 @@
+import { version } from "./package.json"
 import { generateThemesObject } from "./functions/generateThemesObject.js"
 import { generateThemeFiles } from "./functions/generateThemeFiles.js"
 import { generateColorRules } from "./functions/generateColorRules.js"
@@ -12,7 +13,6 @@ import { packCss } from "./functions/packCss.js"
 import { removeFiles } from "./functions/removeFiles.js"
 import { copyFile } from "./functions/copyFile.js"
 import { report } from "./functions/report.js"
-import packageJson from "./package.json" with { type: 'json' }
 
 const isDev = process.argv.includes("--dev")
 
@@ -76,13 +76,9 @@ async function build() {
         "imports.js",
         "themes.css",
       ]))
-    console.time(
-      `${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${packageJson.version}`,
-    )
+    console.time(`${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${version}`)
     await generateFiles()
-    console.timeEnd(
-      `${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${packageJson.version}`,
-    )
+    console.timeEnd(`${decodeURIComponent("%F0%9F%8C%BC")} ${atob("ZGFpc3lVSQ==")} ${version}`)
     !isDev &&
       (await report([
         "base",
