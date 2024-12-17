@@ -44,7 +44,7 @@ export const pluginOptionsHandler = (() => {
       }
 
       themeOrder.forEach((themeName) => {
-        if (themeName !== "light" && themesObject[themeName]) {
+        if (themesObject[themeName]) {
           applyTheme(themeName, [])
         }
       })
