@@ -32,11 +32,11 @@
     }
   }
   &:has(:checked) {
-    *:nth-child(2) {
+    > :nth-child(2) {
       @apply opacity-0;
       rotate: 15deg;
     }
-    *:nth-child(3) {
+    > :nth-child(3) {
       @apply opacity-100;
       rotate: 0deg;
     }
