@@ -3,7 +3,7 @@ import path from "path"
 import { fileURLToPath } from "url"
 import { mdsvex, escapeSvelte } from "mdsvex"
 import { createHighlighter } from "shiki"
-
+// import { transformerNotationHighlight } from "@shikijs/transformers"
 import remarkGithub from "remark-github"
 import remarkCodeTitles from "remark-flexible-code-titles"
 // import toc from "@jsdevtools/rehype-toc"
@@ -18,8 +18,9 @@ const __dirname = path.dirname(__filename)
 const theme = JSON.parse(await fs.readFile(path.join(__dirname, "shiki.theme.json"), "utf-8"))
 
 const highlighter = await createHighlighter({
-  themes: [theme],
   langs: ["bash", "css", "diff", "html", "js", "json", "jsx", "md", "svelte", "ts", "tsx", "vue"],
+  themes: [theme],
+  // transformers: [transformerNotationHighlight()],
 })
 
 const placeholders = {
@@ -130,8 +131,19 @@ const config = {
   },
   highlight: {
     highlighter: async (code, lang = "text") => {
-      const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }))
-      return `{@html \`${html}\` }`
+      let html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }))
+      if (lang === "diff") {
+        html = html.replace(
+          /<span style="color:var\(--shiki-([^)]+)\)">/g,
+          '<span class="shiki-$1" style="color:var(--shiki-$1)">',
+        )
+        html = html.replace(
+          /<span class="shiki-punctuation" style="color:var\(--shiki-punctuation\)">([+-])<\/span>/g,
+          '<span class="select-none" style="color:var(--shiki-punctuation)">$1</span>',
+        )
+        return `{@html \`${html.replace('<pre class="', '<pre class="shiki-diff ')}\` }`
+      }
+      return `{@html \`${escapeSvelte(html)}\` }`
     },
   },
 }

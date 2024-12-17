@@ -270,4 +270,25 @@
     oklch(71.27% 0.2061 173.24)
   );
   --shiki-punctuation: color-mix(in oklab, white 40%, var(--color-neutral-content));
+  --shiki-added: color-mix(
+    in oklab,
+    color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
+    oklch(71.27% 0.2061 173.24)
+  );
+  --shiki-deleted: color-mix(
+    in oklab,
+    color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
+    oklch(71.27% 0.2061 20.84)
+  );
+  line-height: 1.5em;
+  .line {
+    padding-block: 0.3em;
+    border-radius: 2px;
+  }
+  .line:has(.shiki-added) {
+    background-color: color-mix(in oklab, var(--shiki-added) 20%, transparent);
+  }
+  .line:has(.shiki-deleted) {
+    background-color: color-mix(in oklab, var(--shiki-deleted) 20%, transparent);
+  }
 }

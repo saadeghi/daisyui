@@ -18,7 +18,7 @@
   "install-title": "daisyUI ইন্সটল করুন",
   "install-desc": "পিউর CSS। সবগুলো ফ্রেমওয়ার্কে কাজ করে। daisyUI কে Tailwind CSS প্লাগইন হিসেবে অথবা স্বাধীন CSS লাইব্রেরি হিসেবে ব্যবহার করা যাবে",
   "install-step-1": "নোড প্যাকেজ হিসেবে daisyUI ইন্সটল করুন",
-  "install-step-2": "daisyUI কে tailwind.config.js এর সাথে যুক্ত করুন",
+  "install-step-2": "daisyUI কে app.css এর সাথে যুক্ত করুন",
   "install-btn": "ইন্সটল সহায়িকা",
   "footer-tagline": "একটি ফ্রি কম্পোনেন্ট লাইব্রেরি <br /> ইউটিলিটি ফার্স্ট CSS frameworks এর জন্য",
   "pages": "পৃষ্ঠা সমূহ",

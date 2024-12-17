@@ -37,17 +37,17 @@ classnames:
 #### Use this if you can't use a HTML form for some reason
 
 <div class="filter">
-  <input class="btn filter-reset" type="radio" name="metaframework" aria-label="All"/>
-  <input class="btn" type="radio" name="metaframework" aria-label="Sveltekit"/>
-  <input class="btn" type="radio" name="metaframework" aria-label="Nuxt"/>
-  <input class="btn" type="radio" name="metaframework" aria-label="Next.js"/>
+  <input class="btn filter-reset" type="radio" name="metaframeworks" aria-label="All"/>
+  <input class="btn" type="radio" name="metaframeworks" aria-label="Sveltekit"/>
+  <input class="btn" type="radio" name="metaframeworks" aria-label="Nuxt"/>
+  <input class="btn" type="radio" name="metaframeworks" aria-label="Next.js"/>
 </div>
 
 ```html
 <div class="$$filter">
-  <input class="$$btn $$filter-reset" type="radio" name="metaframework" aria-label="All"/>
-  <input class="$$btn" type="radio" name="metaframework" aria-label="Sveltekit"/>
-  <input class="$$btn" type="radio" name="metaframework" aria-label="Nuxt"/>
-  <input class="$$btn" type="radio" name="metaframework" aria-label="Next.js"/>
+  <input class="$$btn $$filter-reset" type="radio" name="metaframeworks" aria-label="All"/>
+  <input class="$$btn" type="radio" name="metaframeworks" aria-label="Sveltekit"/>
+  <input class="$$btn" type="radio" name="metaframeworks" aria-label="Nuxt"/>
+  <input class="$$btn" type="radio" name="metaframeworks" aria-label="Next.js"/>
 </div>
 ```

@@ -41,7 +41,7 @@
       element: "input",
       icon: false,
       baseClass: "input max-w-32",
-      types: ["", "input-outline", "input-dash", "input-soft"],
+      types: [""],
       colors: [
         "",
         "input-primary",
@@ -184,9 +184,10 @@
   }
 </script>
 
-<h3 class="font-bold px-2 my-4">Component Variants</h3>
+<h3 class="font-bold text-lg px-2 my-4">Component Variants</h3>
 <div>
   {#each Object.entries(componentGrid) as [key, { element, icon, baseClass, types, colors, sizes, label, attributes, content }]}
+    <h5 class="font-semibold py-2 px-3 mt-10">{key}</h5>
     {#each types as type}
       {#if type}
         <h5 class="font-semibold py-2 px-3 mt-10">{type}</h5>

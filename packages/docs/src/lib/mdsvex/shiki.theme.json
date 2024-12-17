@@ -149,15 +149,15 @@
     "extensionButton.prominentHoverBackground": "#3d59a1AA",
     "focusBorder": "#545c7e33",
     "foreground": "#787c99",
-    "gitDecoration.addedResourceForeground": "#449dab",
+    "gitDecoration.addedResourceForeground": "var(--shiki-added)",
     "gitDecoration.conflictingResourceForeground": "#e0af68cc",
-    "gitDecoration.deletedResourceForeground": "#914c54",
+    "gitDecoration.deletedResourceForeground": "var(--shiki-deleted)",
     "gitDecoration.ignoredResourceForeground": "#515670",
     "gitDecoration.modifiedResourceForeground": "#6183bb",
-    "gitDecoration.renamedResourceForeground": "#449dab",
-    "gitDecoration.stageDeletedResourceForeground": "#914c54",
+    "gitDecoration.renamedResourceForeground": "var(--shiki-added)",
+    "gitDecoration.stageDeletedResourceForeground": "var(--shiki-deleted)",
     "gitDecoration.stageModifiedResourceForeground": "#6183bb",
-    "gitDecoration.untrackedResourceForeground": "#449dab",
+    "gitDecoration.untrackedResourceForeground": "var(--shiki-added)",
     "gitlens.gutterBackgroundColor": "#16161e",
     "gitlens.gutterForegroundColor": "#787c99",
     "gitlens.gutterUncommittedForegroundColor": "#7aa2f7",
@@ -210,7 +210,7 @@
     "merge.incomingHeaderBackground": "#3d59a1aa",
     "mergeEditor.change.background": "#41a6b525",
     "mergeEditor.change.word.background": "#41a6b540",
-    "mergeEditor.conflict.handled.minimapOverViewRuler": "#449dab",
+    "mergeEditor.conflict.handled.minimapOverViewRuler": "var(--shiki-added)",
     "mergeEditor.conflict.handledFocused.border": "#41a6b565",
     "mergeEditor.conflict.handledUnfocused.border": "#41a6b525",
     "mergeEditor.conflict.unhandled.minimapOverViewRuler": "#e0af68",
@@ -995,13 +995,13 @@
     {
       "scope": "markup.inserted",
       "settings": {
-        "foreground": "#449dab"
+        "foreground": "var(--shiki-added)"
       }
     },
     {
       "scope": "markup.deleted",
       "settings": {
-        "foreground": "#914c54"
+        "foreground": "var(--shiki-deleted)"
       }
     },
     {

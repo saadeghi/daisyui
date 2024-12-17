@@ -7,7 +7,7 @@
   <h3 class="font-bold px-2 mb-6">Preview</h3>
 
   <div
-    class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_*]:[transition:background-color_0ms,border-color_100ms,border-radius_500ms_ease-out] pb-20"
+    class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_:is(div,button)]:[transition:background-color_0ms,border-color_100ms,border-radius_500ms_ease-out] pb-20"
   >
     <!-- filters -->
     <div class="card card-sm">

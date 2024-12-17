@@ -115,7 +115,30 @@ Pikaday is a JS datepicker library and you can use it from CDN or as a JS depend
 </script>
 ```
 
+### Pikaday Svelte Example
+
+```:Install
+npm i pikaday
+```
+```svelte:file.svelte
+<script>
+  import Pikaday from "pikaday";
+  let myDatepicker;
+  $effect(() => {
+    if (myDatepicker) {
+      const picker = new Pikaday({
+        field: myDatepicker
+      });
+      return () => picker.destroy();
+    }
+  });
+</script>
+
+<input type="text" class="$$input $$pika-single"  bind:this={myDatepicker} value="Pick a day" />
+```
+
 ### Pikaday Vue Example
+
 ```:Install
 npm i pikaday
 ```
@@ -136,10 +159,11 @@ export default {
 ```
 
 ### Pikaday React Example
+
 ```:Install
 npm i pikaday
 ```
-```jsx:file.jsx
+```jsx:file.tsx
 import { useEffect, useRef } from "react";
 import Pikaday from "pikaday";
 
@@ -165,7 +189,7 @@ React Day Picker is a flexible date picker component for React. [Read the docs](
 ```:Install
 npm i react-day-picker
 ```
-```jsx:file.jsx
+```jsx:file.tsx
 import { useState } from "react";
 import { DayPicker } from "react-day-picker";
 
@@ -173,12 +197,10 @@ export default function App() {
   const [date, setDate] = useState<Date | undefined>();
   return (
     <>
-      <button popoverTarget="rdp-popover" className="$$input $$input-border" style={{ anchorName: "--rdp" } as React.CSSProperties}
-      >
+      <button popoverTarget="rdp-popover" className="$$input $$input-border" style={{ anchorName: "--rdp" } as React.CSSProperties}>
         {date ? date.toLocaleDateString() : "Pick a date"}
       </button>
-      <div popover="auto" id="rdp-popover" className="$$dropdown" style={{ positionAnchor: "--rdp" } as React.CSSProperties}
-      >
+      <div popover="auto" id="rdp-popover" className="$$dropdown" style={{ positionAnchor: "--rdp" } as React.CSSProperties}>
         <DayPicker className="$$react-day-picker" mode="single" selected={date} onSelect={setDate} />
       </div>
     </>

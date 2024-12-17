@@ -1,5 +1,4 @@
 ---
-alert: This page is not up to date. Some of the examples might not work as expected.
 title: Colors
 desc: How to use daisyUI colors?
 published: true
@@ -109,4 +108,4 @@ placeholder-{COLOR_NAME}
 ring-offset-{COLOR_NAME}
 ```
 
-<Translate text="So you can use <code>bg-primary</code>, <code>border-secondary</code>, etc." />
+So you can use `bg-primary`, `border-secondary`, etc

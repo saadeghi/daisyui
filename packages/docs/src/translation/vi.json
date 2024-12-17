@@ -18,7 +18,7 @@
   "install-title": "Cài đặt daisyUI",
   "install-desc": "CSS thuần túy. Hoạt động trên tất cả các framework. daisyUI có thể được sử dụng làm plugin CSS Tailwind hoặc làm thư viện CSS độc lập",
   "install-step-1": "Cài đặt daisyUI dưới dạng gói Node",
-  "install-step-2": "Thêm daisyUI vào tailwind.config.js",
+  "install-step-2": "Thêm daisyUI vào app.css",
   "install-btn": "Hướng dẫn cài đặt",
   "footer-tagline": "Thư viện thành phần miễn phí <br /> Dành cho các khung CSS tiện ích đầu tiên",
   "pages": "các trang",

@@ -18,7 +18,7 @@
   "install-title": "Pasang daisyUI",
   "install-desc": "CSS tulen. Berfungsi pada semua rangka kerja. DaisyUI boleh digunakan sebagai pemalam 'Tailwind CSS' atau sebagai pustaka CSS bebas",
   "install-step-1": "Pasang daisyUI sebagai 'Node package'",
-  "install-step-2": "Tambah daisyUI pada tailwind.config.js",
+  "install-step-2": "Tambah daisyUI pada app.css",
   "install-btn": "Panduan pemasangan",
   "footer-tagline": "Perpustakaan Komponen percuma <br /> Untuk rangka kerja CSS yang mengutamakan utiliti",
   "pages": "halaman",
