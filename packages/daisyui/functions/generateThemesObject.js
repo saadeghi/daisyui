@@ -32,4 +32,33 @@ export const generateThemesObject = async (outputPath) => {
 
   // Write the string to the specified output file
   await fs.writeFile(outputPath, themeObjectsString, "utf8")
+
+  // types
+  await generateThemesObjectDeclaration(outputPath.replace(".js", ".d.ts"), themeObjects)
+}
+
+const generateThemesObjectDeclaration = async (outputPath, themeObjects) => {
+  const themeKeys = Object.keys(themeObjects)
+  const themeProperties = Object.keys(themeObjects[themeKeys[0]])
+
+  const themeInterface = `
+interface Theme {
+  ${themeProperties.map((prop) => `"${prop}": string`).join("\n  ")}
+}
+`
+  const themesInterface = `
+interface Themes {
+  ${themeKeys.map((theme) => `${theme}: Theme`).join("\n  ")}
+  [key: string]: Theme
+}
+`
+  const declarationContent = `
+${themeInterface}
+${themesInterface}
+declare const themes: Themes
+export default themes
+`
+
+  // Write the TypeScript declaration file
+  await fs.writeFile(outputPath, declarationContent.trim(), "utf8")
 }

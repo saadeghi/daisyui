@@ -1,6 +1,6 @@
 ---
 title: Validator
-desc: Validator class changes the color of form elements based on input's validation rules.
+desc: Validator class changes the color of form elements to error or success based on input's validation rules.
 layout: components
 classnames:
   component:

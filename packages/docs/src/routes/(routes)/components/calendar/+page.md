@@ -21,6 +21,10 @@ classnames:
   <script type="module" src="https://unpkg.com/cally"></script>
 </svelte:head>
 
+> :INFO:
+>
+> You can also use the native HTML `<input type="date">` for a date picker. [Read more](/components/input/#date-input)
+
 ## daisyUI supports 3 calendar libraries
 
 daisyUI includes styles for 3 popular calendar libraries.  

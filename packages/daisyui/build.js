@@ -33,7 +33,16 @@ async function generateFiles() {
         srcDir: "../src/components",
         distDir: "../components",
         responsive: true,
-        exclude: ["calendar", "countdown", "loading", "mask", "mockup", "skeleton", "swap"],
+        exclude: [
+          "calendar",
+          "countdown",
+          "loading",
+          "mask",
+          "mockup",
+          "skeleton",
+          "swap",
+          "validator",
+        ],
       }),
     !isDev &&
       generateRawStyles({

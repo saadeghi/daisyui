@@ -241,3 +241,10 @@ classnames:
 ```html
 <input type="text" placeholder="You can't touch this" class="$$input" disabled />
 ```
+
+### ~Date input
+<input type="date" class="input"/>
+
+```html
+<input type="date" class="$$input"/>
+```
