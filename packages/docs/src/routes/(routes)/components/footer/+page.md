@@ -169,10 +169,8 @@ classnames:
   </nav>
   <form>
     <h6 class="footer-title">Newsletter</h6>
-    <fieldset class="form-control w-80">
-      <label class="label" for="input1">
-        <span class="label-text">Enter your email address</span>
-      </label>
+    <fieldset class="w-80">
+      <label for="input1">Enter your email address</label>
       <div class="join">
         <input type="text" placeholder="username@site.com" class="input input-bordered join-item" id="input1" />
         <button class="join-item btn btn-primary">Subscribe</button>
@@ -205,10 +203,8 @@ classnames:
   </nav>
   <form>
     <h6 class="$$footer-title">Newsletter</h6>
-    <fieldset class="$$form-control w-80">
-      <label class="$$label">
-        <span class="$$label-text">Enter your email address</span>
-      </label>
+    <fieldset class="w-80">
+      <label>Enter your email address</label>
       <div class="$$join">
         <input
           type="text"

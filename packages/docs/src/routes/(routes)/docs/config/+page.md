@@ -1,7 +1,6 @@
 ---
 title: Config
 desc: How to change the default configuration of daisyUI?
-published: true
 ---
 
 <script>

@@ -1,7 +1,6 @@
 ---
 title: daisyUI Roadmap
 desc: daisyUI Roadmap, milestones and upcoming features
-published: true
 ---
 
 <script>

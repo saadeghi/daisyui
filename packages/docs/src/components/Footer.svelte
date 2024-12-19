@@ -278,7 +278,7 @@
       <div class="flex flex-col items-center gap-4 text-left sm:flex-row">
         <!-- <Sponsors wrapperClasses="flex-col sm:flex-row" classes="bg-base-100" /> -->
 
-        <div id="mc_embed_signup">
+        <!-- <div id="mc_embed_signup">
           <form
             action="https://gmail.us8.list-manage.com/subscribe/post?u=42813cff910e47b1bd132369a&amp;id=9fd7333f07&amp;f_id=003d03e0f0"
             method="post"
@@ -287,49 +287,49 @@
             target="_blank"
             novalidate=""
           >
-            <!-- store group -->
             <input
+              data-group="store group"
               type="checkbox"
               name="group[347002][8]"
               value="1"
               class="hidden"
               checked="checked"
             />
-            <!-- discounts group -->
             <input
+              data-group="discounts group"
               type="checkbox"
               name="group[347002][1]"
               value="1"
               class="hidden"
               checked="checked"
             />
-            <!-- releases group -->
             <input
+              data-group="releases group"
               type="checkbox"
               name="group[347002][2]"
               value="1"
               class="hidden"
               checked="checked"
             />
-            <!-- blog group -->
             <input
+              data-group="blog group"
               type="checkbox"
               name="group[347002][4]"
               value="1"
               class="hidden"
               checked="checked"
             />
-            <!-- news group -->
             <input
+              data-group="news group"
               type="checkbox"
               name="group[347002][16]"
               value="1"
               class="hidden"
               checked="checked"
             />
-            <div class="form-control w-full max-w-sm">
-              <label class="label" for="mce-EMAIL">
-                <div class="label-text">
+            <div class="flex flex-col gap-2 w-full max-w-sm">
+              <label for="mce-EMAIL">
+                <div>
                   Enter your email address
                   <div class="label-text text-base-content/70 text-xs">
                     to get updates, news and discounts
@@ -358,7 +358,7 @@
               />
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>

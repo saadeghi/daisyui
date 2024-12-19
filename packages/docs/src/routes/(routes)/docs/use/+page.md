@@ -1,7 +1,6 @@
 ---
 title: Add component classes to your HTML
 desc: How to use daisyUI classes to style your page?
-published: true
 ---
 
 <script>

@@ -1,7 +1,6 @@
 ---
 title: Customize daisyUI components
 desc: How to customize daisyUI?
-published: true
 ---
 
 <script>

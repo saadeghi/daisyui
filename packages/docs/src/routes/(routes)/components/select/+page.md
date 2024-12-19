@@ -80,7 +80,7 @@ classnames:
 ```
 
 
-### ~With form-control and labels
+### ~With fieldset and fieldset-labels
 <fieldset class="fieldset w-xs">
   <legend class="fieldset-legend">Pick the best fantasy franchise</legend>
   <select class="select">

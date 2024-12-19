@@ -134,7 +134,6 @@ Let's say we want to add a new component named `.coolbutton` (don't add that act
    ---
    title: Coolbutton
    desc: It's a button but it's cool!
-   published: true
    layout: components
    ---
 

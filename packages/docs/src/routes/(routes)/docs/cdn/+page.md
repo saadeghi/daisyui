@@ -1,7 +1,6 @@
 ---
 title: Use daisyUI from CDN
 desc: How to use daisyUI from a CDN?
-published: true
 ---
 
 <script>

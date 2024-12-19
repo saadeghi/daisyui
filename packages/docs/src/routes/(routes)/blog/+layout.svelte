@@ -94,10 +94,8 @@
                   class="hidden"
                   checked="checked"
                 />
-                <div class="form-control w-full max-w-sm">
-                  <label class="label" for="mce-EMAIL">
-                    <span class="label-text">Email Address</span>
-                  </label>
+                <div class="flex flex-col gap-2 w-full max-w-sm">
+                  <label for="mce-EMAIL">Email Address</label>
                   <div class="join">
                     <input
                       type="email"

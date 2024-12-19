@@ -1,7 +1,6 @@
 ---
 title: Colors
 desc: How to use daisyUI colors?
-published: true
 ---
 
 <script>

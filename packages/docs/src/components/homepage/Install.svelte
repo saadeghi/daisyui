@@ -96,7 +96,7 @@
       class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg"
     >
       <pre dir="ltr"><code
-          ><span class="opacity-40">@import "tailwindcss";</span>
+          ><span class="opacity-50">@import "tailwindcss";</span>
 <span class="text-success">@plugin "daisyui";</span></code
         ></pre>
       <div class="absolute right-0 top-0 z-1">

@@ -1,7 +1,6 @@
 ---
 title: daisyUI themes
 desc: How to use daisyUI themes?
-published: true
 ---
 
 <script>

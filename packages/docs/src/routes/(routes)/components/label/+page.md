@@ -5,10 +5,9 @@ layout: components
 classnames:
   component:
   - class: label
-    desc: For labeling input fields
-  style:
-  - class: label-floating
-    desc: Floating label style
+    desc: For styling the text next to an input field (or select)
+  - class: floating-label
+    desc: For the parent of an input field (or select) and a span that floats above the input field when the field is focused
 ---
 
 <script>
@@ -75,61 +74,61 @@ classnames:
 
 
 ### ~Floating Label
-<div class="label-floating w-full max-w-xs">
+<label class="floating-label w-full max-w-xs">
   <span>Your name</span>
   <input type="text" placeholder="Your name" class="input input-md" />
-</div>
+</label>
 
 ```html
-<div class="$$label-floating">
+<label class="$$floating-label">
   <span>Your name</span>
   <input type="text" placeholder="Your name" class="$$input $$input-md" />
-</div>
+</label>
 ```
 
 ### ~Floating Label with Different Sizes
 <div class="grid gap-4 w-xs">
-  <div class="label-floating">
+  <label class="floating-label">
     <input type="text" placeholder="Extra Small" class="input input-xs" />
     <span>Extra Small</span>
-  </div>
-  <div class="label-floating">
+  </label>
+  <label class="floating-label">
     <input type="text" placeholder="Small" class="input input-sm" />
     <span>Small</span>
-  </div>
-  <div class="label-floating">
+  </label>
+  <label class="floating-label">
     <input type="text" placeholder="Medium" class="input input-md" />
     <span>Medium</span>
-  </div>
-  <div class="label-floating">
+  </label>
+  <label class="floating-label">
     <input type="text" placeholder="Large" class="input input-lg" />
     <span>Large</span>
-  </div>
-  <div class="label-floating">
+  </label>
+  <label class="floating-label">
     <input type="text" placeholder="Extra Large" class="input input-xl" />
     <span>Extra Large</span>
-  </div>
+  </label>
 </div>
 
 ```html
-<div class="$$label-floating">
+<label class="$$floating-label">
   <input type="text" placeholder="" class="$$input $$input-xs" />
   <span>Extra Small</span>
-</div>
-<div class="$$label-floating">
+</label>
+<label class="$$floating-label">
   <input type="text" placeholder="" class="$$input $$input-sm" />
   <span>Small</span>
-</div>
-<div class="$$label-floating">
+</label>
+<label class="$$floating-label">
   <input type="text" placeholder="" class="$$input $$input-md" />
   <span>Medium</span>
-</div>
-<div class="$$label-floating">
+</label>
+<label class="$$floating-label">
   <input type="text" placeholder="" class="$$input $$input-lg" />
   <span>Large</span>
-</div>
-<div class="$$label-floating">
+</label>
+<label class="$$floating-label">
   <input type="text" placeholder="" class="$$input $$input-xl" />
   <span>Extra Large</span>
-</div>
+</label>
 ```

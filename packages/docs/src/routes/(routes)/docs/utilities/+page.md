@@ -1,7 +1,6 @@
 ---
 title: Utility classes and CSS variables
 desc: daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.
-published: true
 ---
 
 <script>
