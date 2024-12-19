@@ -16,7 +16,7 @@
     }
   }
 }
-.label-floating {
+.floating-label {
   @apply relative;
   input {
     @apply block;
