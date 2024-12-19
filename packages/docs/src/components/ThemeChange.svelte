@@ -5,15 +5,6 @@
   onMount(() => {
     themeChange(false)
   })
-  /**
-   * @typedef {Object} Props
-   * @property {any} themes
-   * @property {string} [dropdownClasses]
-   * @property {string} [btnClasses]
-   * @property {string} [contentClasses]
-   */
-
-  /** @type {Props} */
   let {
     themes,
     dropdownClasses = "",

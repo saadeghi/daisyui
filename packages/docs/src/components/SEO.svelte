@@ -8,15 +8,6 @@
     desc: "Free Tailwind Components",
     card: "https://img.daisyui.com/images/default.webp",
   }
-  /**
-   * @typedef {Object} Props
-   * @property {boolean} [formatTitle]
-   * @property {string} [title]
-   * @property {any} [desc]
-   * @property {any} [img]
-   */
-
-  /** @type {Props} */
   let { formatTitle = true, title = "", desc = siteData.desc, img = siteData.card } = $props()
 
   let formattedTitle = $derived(

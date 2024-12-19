@@ -1,11 +1,4 @@
 <script>
-  /**
-   * @typedef {Object} Props
-   * @property {string} [wrapperClasses]
-   * @property {string} [classes]
-   */
-
-  /** @type {Props} */
   let {
     wrapperClasses = "flex-col",
     classes = "bg-base-100 border-base-100 border-base-content/10 hover:border-base-content/20 border",

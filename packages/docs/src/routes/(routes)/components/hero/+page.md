@@ -116,17 +116,13 @@ classnames:
     <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <div class="card-body">
         <fieldset class="fieldset">
-          <legend class="fieldset-legend">Email</legend>
-          <input type="email" placeholder="email" class="input" required id="input1" />
+          <label class="fieldset-label">Email</label>
+          <input type="email" class="input" placeholder="Email" />
+          <label class="fieldset-label">Password</label>
+          <input type="password" class="input" placeholder="Password" />
+          <div><span class="link link-hover">Forgot password?</span></div>
+          <button class="btn btn-neutral mt-4">Login</button>
         </fieldset>
-        <fieldset class="fieldset">
-          <legend class="fieldset-legend">Password</legend>
-          <input type="password" placeholder="password" class="input" required for="input2" />
-          <label class="fieldset-label">Forgot password?</label>
-        </fieldset>
-        <div class="card-actions">
-          <button class="btn btn-primary">Login</button>
-        </div>
       </div>
     </div>
   </div>
@@ -143,26 +139,16 @@ classnames:
       </p>
     </div>
     <div class="$$card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <form class="$$card-body">
-        <div class="$$form-control">
-          <label class="$$label">
-            <span class="$$label-text">Email</span>
-          </label>
-          <input type="email" placeholder="email" class="$$input $$input-bordered" required />
-        </div>
-        <div class="$$form-control">
-          <label class="$$label">
-            <span class="$$label-text">Password</span>
-          </label>
-          <input type="password" placeholder="password" class="$$input $$input-bordered" required />
-          <label class="$$label">
-            <a href="#" class="$$label-text-alt $$link $$link-hover">Forgot password?</a>
-          </label>
-        </div>
-        <div class="$$form-control mt-6">
-          <button class="$$btn $$btn-primary">Login</button>
-        </div>
-      </form>
+      <div class="$$card-body">
+        <fieldset class="$$fieldset">
+          <label class="$$fieldset-label">Email</label>
+          <input type="email" class="$$input" placeholder="Email" />
+          <label class="$$fieldset-label">Password</label>
+          <input type="password" class="$$input" placeholder="Password" />
+          <div><a class="$$link $$link-hover">Forgot password?</a></div
+          <button class="$$btn $$btn-neutral mt-4">Login</button>
+        </fieldset>
+      </div>
     </div>
   </div>
 </div>

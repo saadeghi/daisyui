@@ -4,23 +4,6 @@
   import { page } from "$app/stores"
   import { t } from "$lib/i18n"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
-  /**
-   * @typedef {Object} Props
-   * @property {any} closeDrawer
-   * @property {any} [name]
-   * @property {any} [href]
-   * @property {any} [icon]
-   * @property {any} [badge]
-   * @property {any} [badgeclass]
-   * @property {any} [highlightAnotherItem]
-   * @property {any} [deprecated]
-   * @property {any} [items]
-   * @property {any} [collapsible]
-   * @property {any} [highlight]
-   * @property {any} [target]
-   */
-
-  /** @type {Props} */
   let {
     closeDrawer,
     name = null,

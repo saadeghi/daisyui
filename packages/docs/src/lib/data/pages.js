@@ -326,8 +326,8 @@ export const pages = [
             href: "/components/select/",
           },
           {
-            name: "Text input",
-            tags: "text input",
+            name: "Input field",
+            tags: "text input date number email password search tel url time",
             href: "/components/input/",
           },
           {

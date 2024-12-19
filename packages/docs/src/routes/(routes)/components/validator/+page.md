@@ -26,6 +26,7 @@ classnames:
 ```html
 <input class="$$input $$validator" type="email" required placeholder="mail@site.com" />
 ```
+
 ### ~Validator and validator-hint
 #### If value is invalid, a hint text appears below the input.
 
@@ -39,6 +40,13 @@ classnames:
 <input class="$$input $$validator" type="email" required placeholder="mail@site.com" />
 <div class="$$validator-hint">Enter valid email address</div>
 ```
+
+> :INFO:
+>
+> `validator-hint` class will be invisible if it comes after a `validator` class, then if the input is invalid, `validator-hint` will get visible.  
+> `validator-hint` still occupies space even if it's invisible because we don't want a layout shift when the hint appears.  
+> If you prefer to hide the hint when it's not visible, add `hidden` class to `validator-hint`. It will take no space when it's hidden, and if input is invalid, it will appear and take space.
+
 
 ### ~Password requirement validator
 
@@ -67,7 +75,7 @@ classnames:
 
 ### ~Username requirement validator
 <form class="w-full max-w-sm">
-  <input type="input" class="input validator" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9_]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+  <input type="input" class="input validator" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
   <p class="validator-hint">
     Must be 3 to 30 characters
     <br/>containing only letters, numbers or dash
@@ -76,7 +84,7 @@ classnames:
 
 ```html
 <input type="input" class="$$input $$validator" required placeholder="Username" 
-  pattern="[A-Za-z][A-Za-z0-9_]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+  pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
 <p class="$$validator-hint">
   Must be 3 to 30 characters
   <br/>containing only letters, numbers or dash
@@ -159,6 +167,7 @@ min="1" max="10"
 ```
 
 ### ~Select requirement validator
+#### Click the button before picking an option to see the error color.
 <form>
   <select class="select validator" required>
     <option disabled selected value="">Choose:</option>
@@ -166,7 +175,7 @@ min="1" max="10"
     <option>Spaces</option>
   </select>
   <p class="validator-hint">Required</p>
-  <button class="btn" type="submit">CLick this to validate</button>
+  <button class="btn" type="submit">Submit form</button>
 </form>
 
 ```html
@@ -177,6 +186,6 @@ min="1" max="10"
     <option>Spaces</option>
   </select>
   <p class="$$validator-hint">Required</p>
-  <button class="$$btn" type="submit">CLick this to validate</button>
+  <button class="$$btn" type="submit">Submit form</button>
 </form>
 ```

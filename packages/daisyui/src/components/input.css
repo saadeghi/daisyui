@@ -1,7 +1,7 @@
 .input {
   cursor: text;
   border: var(--border) solid transparent;
-  @apply bg-base-100 inline-flex w-full max-w-80 shrink appearance-none items-center gap-2 align-middle;
+  @apply bg-base-100 inline-flex w-full max-w-80 shrink appearance-none items-center gap-2 align-middle whitespace-nowrap;
   height: var(--size);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
@@ -16,7 +16,7 @@
     0 -1px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset;
   --size: calc(var(--size-field, 0.25rem) * 10);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
-  &:is(input) {
+  &:where(input) {
     @apply inline-block;
   }
   input {

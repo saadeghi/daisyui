@@ -4,29 +4,44 @@
 .input,
 .select {
   .label {
-    @apply -ms-3 me-3 flex h-full items-center px-3;
-    border-inline-end: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
+    @apply flex h-full items-center px-3;
     font-size: inherit;
+    &:first-child {
+      @apply -ms-3 me-3;
+      border-inline-end: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
+    }
+    &:last-child {
+      @apply ms-3 -me-3;
+      border-inline-start: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
+    }
   }
 }
 .label-floating {
   @apply relative;
-  input::placeholder {
-    @apply text-transparent;
+  input {
+    @apply block;
+    &::placeholder {
+      @apply text-transparent;
+    }
   }
   > span {
-    @apply rounded-field bg-base-100 absolute start-3 top-1/2 z-1 px-1;
+    @apply bg-base-100 absolute start-3 top-1/2 z-1 px-1 opacity-50;
+    line-height: 1;
+    border-radius: 2px;
+    pointer-events: none;
     translate: 0 -50%;
     transition:
       top 0.1s ease-out,
       translate 0.1s ease-out,
-      scale 0.1s ease-out;
+      scale 0.1s ease-out,
+      opacity 0.1s ease-out;
   }
   &:focus-within,
   &:not(:has(input:placeholder-shown)) {
     > span {
+      @apply opacity-100;
       top: 0;
-      translate: -12.5% -50%;
+      translate: -12.5% calc(-50% - 0.125em);
       scale: 0.75;
     }
   }
