@@ -7,7 +7,17 @@ desc: How to change the default configuration of daisyUI?
   import Translate from "$components/Translate.svelte"
 </script>
 
-<Translate text="daisyUI can be configured from your CSS file." />:
+daisyUI can be configured from your CSS file.  
+
+Replace the semicolon `;` after `@plugin "daisyui"` with brackets `{}` and add the configuration inside the brackets.
+
+```diff:app.css
+- @plugin "daisyui";
++ @plugin "daisyui" {
++ }
+```
+
+Default config:
 
 ```css:app.css
 @plugin "daisyui" {
@@ -19,62 +29,82 @@ desc: How to change the default configuration of daisyUI?
   logs: true;
 }
 ```
-<!-- 
-## <Translate text="Config values explained" />:
 
-- ### styled
+## theme
 
-  `Boolean (default: true)`
+| Default value | Type | Description |
+|--|--|--|
+| `light --default, dark --prefersdark` | string or comma separated list | List of themes to enable. Use `--default` flag to set a default theme. Use `--prefersdark` flag to set a default theme for dark mode. |
 
-  <Translate text="If it's true, components will have colors and style so you won't need to design anything." />  
-  <Translate text="If it's false, components will have no color and no visual style so you can design your own style on a basic skeleton." />
+```css:Example
+@plugin "daisyui" {
+  themes: nord --default, abyss --prefersdark, cupcake, dracula;
+}
+```
+In this example, we have 4 themes: `nord`, `abyss`, `cupcake`, and `dracula`. nord is the default theme, abyss is the default theme for dark mode, and cupcake and dracula are available to use with `data-theme="cupcake"` and `data-theme="dracula"`.
 
-- ### themes
+## root
 
-  `Boolean or array (default: false)`
+| Default value | Type | Description |
+|--|--|--|
+| `":root"` | string | The CSS selector to receive the CSS variables. |
 
-  <Translate text="If it's true, all themes will be included." />
-  <Translate text="If it's false, only light and dark themes will be available." />  
-  <Translate text="If it's an array, only themes in the array will be included and the first theme will be the default theme." />
-  <Translate text="Read more about <a href='/docs/themes/'>themes</a>." />
+```css:Example
+@plugin "daisyui" {
+  root: "#my-app";
+}
+```
+In this example, we set the CSS variables on `#my-app` instead of `:root`. This way all daisyUI global CSS variables will be scoped to `#my-app`.  
+This is useful to use daisyUI in a scoped environment like a web component or a shadow DOM or a specific part of the page.
 
-- ### base
+## include
 
-  `Boolean (default: true)`
+| Default value | Type | Description |
+|--|--|--|
+| | comma separated list | List of components to include. |
 
-  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/blob/master/src/base'>a few base styles</a> will be added." />
+```css:Example
+@plugin "daisyui" {
+  include: button, input, select;
+}
+```
+In this example, we only include the button, input, and select components. All other styles of daisyUI library will be excluded.
 
-- ### utils
+## exclude
 
-  `Boolean (default: true)`
+| Default value | Type | Description |
+|--|--|--|
+| | comma separated list | List of components to exclude. |
 
-  <Translate text="If it's true, <a href='https://github.com/saadeghi/daisyui/tree/master/src/utilities'>responsive and utility classes</a> will be added." />
+```css:Example
+@plugin "daisyui" {
+  exclude: checkbox, footer, rootscrollgutter;
+}
+```
+In this example, we exclude the checkbox and footer components and the rootscrollgutter base style. All other parts of daisyUI will be available to use.
 
-- ### logs
+## prefix
 
-  `Boolean (default: true)`
+| Default value | Type | Description |
+|--|--|--|
+| `""` | string | Prefix for all daisyUI classes. |
 
-  <Translate text="If it's true, daisyUI shows logs in the terminal while CSS is building." />
+```css:Example
+@plugin "daisyui" {
+  prefix: "d-";
+}
+```
+In this example, all daisyUI classes will be prefixed with `d-`. For example, `btn` will be `d-btn`.
 
-- ### darkTheme
+## logs
+  
+| Default value | Type | Description |
+|--|--|--|
+| `true` | boolean | Enable or disable logs. |
 
-  `String (default: "dark")`
-
-  <Translate text="Allows us to pick another theme for system's auto dark mode. By default, <code>dark</code> theme (or a custom theme named <code>dark</code>) will be the default theme if no theme is specified and the user is using dark mode on their system. With this config, you can set another theme to be the default dark mode theme." />
-
-- ### prefix
-
-  `String (default: "")`
-
-  <Translate text="Adds a prefix to class name for all daisyUI classes (including component classes, modifier classes and responsive classes)." />
-  <Translate text="For example: <code>btn</code> will become <code>prefix-btn</code>." />  
-  <Translate text="If you're using a second CSS library that has similar class names, you can use this config to avoid conflicts." />
-  <Translate text="Utility classes like color names (e.g. <code>bg-primary</code>) or border-radius (e.g. <code>rounded-box</code>) will not be affected by this config because they're being added as extensions to Tailwind CSS classes." />  
-  <Translate text="If you use daisyUI <code>prefix</code> option (like <code>daisy-</code>) and Tailwind CSS <code>prefix</code> option (like <code>tw-</code>) together, classnames will be prefixed like this: <code>tw-daisy-btn</code>." />
-
-- ### themeRoot
-
-  `String (default: ":root")`
-
-  <Translate text="Which element to attach the theme CSS variables to." />
-  <Translate text="In certain situations (such as embedding daisyUI in a shadow root) it may be useful to set this to e.g. <code>*</code>, so all components will have access to the required CSS variables." /> -->
+```css:Example
+@plugin "daisyui" {
+  logs: false;
+}
+```
+In this example, we disable the logs of daisyUI. This is useful if you want to clean up the console output.
