@@ -31,6 +31,7 @@ export default [
   "dim",
   "nord",
   "sunset",
+  "caramellatte",
   "abyss",
   "silk",
 ]
