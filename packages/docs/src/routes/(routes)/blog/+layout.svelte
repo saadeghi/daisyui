@@ -49,7 +49,6 @@
               {#each tags as tag}
                 <li>
                   <a
-                    data-sveltekit-reload
                     href={`/blog/tag/${tag.replace(/ /g, "-").toLowerCase()}`}
                     class={tag.replace(/ /g, "-").toLowerCase() ===
                       $page.url.pathname.split("/").at(-2) && `active`}

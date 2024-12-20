@@ -1,15 +1,14 @@
 <script>
   import SEO from "$components/SEO.svelte"
   let { data } = $props()
-  let { params, posts } = data
 </script>
 
 <SEO
-  title={params.tag.replace(/-/g, " ")}
-  desc={`daisyUI blog posts with '${params.tag.replace(/-/g, " ")}' tag`}
+  title={data.params.tag.replace(/-/g, " ")}
+  desc={`daisyUI blog posts with '${data.params.tag.replace(/-/g, " ")}' tag`}
 />
 <div class="grid justify-items-stretch gap-6">
-  {#each posts as post}
+  {#each data.posts as post}
     <a
       class="card sm:card-side hover:bg-base-200 max-w-sm transition-colors sm:max-w-none"
       href={`/blog/${post.slug}`}
