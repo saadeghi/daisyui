@@ -4,12 +4,12 @@
   --tt-off: calc(100% + 0.5rem);
   --tt-tail: calc(100% + 1px + 0.25rem);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before{
     @apply text-neutral-content rounded-field absolute max-w-[20rem] px-2 py-1 text-center whitespace-normal opacity-0;
-    translate: 0 .25rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, translate 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     background-color: var(--tt-bg);
     width: max-content;
     pointer-events: none;
@@ -20,9 +20,8 @@
 
   &:after {
     @apply absolute opacity-0;
-    translate: 0 .25rem;
     background-color: var(--tt-bg);
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, translate 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     content: "";
     width: 0.625rem;
     height: 0.25rem;
@@ -36,87 +35,77 @@
 
 .tooltip,
 .tooltip-top {
-  &:before {
-    translate: 0 .25rem;
-    transform: translateX(-50%);
+  >.tooltip-content,
+  &[data-tip]:before {
+    transform: translateX(-50%)translateY(var(--tt-pos,.25rem));
     inset: auto auto var(--tt-off) 50%;
   }
 }
 
 .tooltip-bottom {
-  &:before {
-    translate: 0 -.25rem;
-    transform: translateX(-50%);
+  >.tooltip-content,
+  &[data-tip]:before {
+    transform: translateX(-50%)translateY(var(--tt-pos,-.25rem));
     inset: var(--tt-off) auto auto 50%;
   }
 }
 
 .tooltip-left {
-  &:before {
-    translate: .25rem 0;
-    transform: translateY(-50%);
+  >.tooltip-content,
+  &[data-tip]:before {
+    transform: translateX(calc(var(--tt-pos,0.25rem) - 0.25rem)) translateY(-50%);
     inset: 50% var(--tt-off) auto auto;
   }
 }
 
 .tooltip-right {
-  &:before {
-    translate: -.25rem 0;
-    transform: translateY(-50%);
+  >.tooltip-content,
+  &[data-tip]:before {
+    transform: translateX(calc(var(--tt-pos,-.25rem) + 0.25rem)) translateY(-50%);
     inset: 50% auto auto var(--tt-off);
   }
 }
 
 .tooltip {
   &.tooltip-open,
-  &:hover,
+  &[data-tip]:hover,
+  &:has(.tooltip-content):hover,
   &:has(:focus-visible) {
-    &:before,
+    >.tooltip-content,
+    &[data-tip]:before,
     &:after {
       @apply opacity-100;
-      translate: 0 0rem;
-      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, , translate 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      --tt-pos: 0rem;
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, , transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     }
-  }
-}
-
-.tooltip:not([data-tip]):hover{
-  &:before,
-  &:after {
-    visibility: hidden;
-    opacity: 0;
   }
 }
 
 .tooltip,
 .tooltip-top {
   &:after {
-    translate: 0 .25rem;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(var(--tt-pos,.25rem));
     inset: auto auto var(--tt-tail) 50%;
   }
 }
 
 .tooltip-bottom {
   &:after {
-    translate: 0 -.25rem;
-    transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) translateY(var(--tt-pos,-.25rem)) rotate(180deg);
     inset: var(--tt-tail) auto auto 50%;
   }
 }
 
 .tooltip-left {
   &:after {
-    translate: .25rem 0;
-    transform: translateY(-50%) translateX(4px) rotate(-90deg);
+    transform: translateX(var(--tt-pos,.25rem)) translateY(-50%) rotate(-90deg);
     inset: 50% calc(var(--tt-tail) + 1px) auto auto;
   }
 }
 
 .tooltip-right {
   &:after {
-    translate: -.25rem 0;
-    transform: translateY(-50%) translateX(-4px) rotate(90deg);
+    transform: translateX(var(--tt-pos,-.25rem)) translateY(-50%) rotate(90deg);
     inset: 50% auto auto calc(var(--tt-tail) + 1px);
   }
 }
@@ -124,7 +113,8 @@
 .tooltip-primary {
   --tt-bg: var(--color-primary);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before {
     @apply text-primary-content;
   }
 }
@@ -132,7 +122,8 @@
 .tooltip-secondary {
   --tt-bg: var(--color-secondary);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before {
     @apply text-secondary-content;
   }
 }
@@ -140,7 +131,8 @@
 .tooltip-accent {
   --tt-bg: var(--color-accent);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before {
     @apply text-accent-content;
   }
 }
@@ -148,7 +140,8 @@
 .tooltip-info {
   --tt-bg: var(--color-info);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before {
     @apply text-info-content;
   }
 }
@@ -156,7 +149,8 @@
 .tooltip-success {
   --tt-bg: var(--color-success);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before {
     @apply text-success-content;
   }
 }
@@ -164,7 +158,8 @@
 .tooltip-warning {
   --tt-bg: var(--color-warning);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before {
     @apply text-warning-content;
   }
 }
@@ -172,7 +167,8 @@
 .tooltip-error {
   --tt-bg: var(--color-error);
 
-  &:before {
+  >.tooltip-content,
+  &[data-tip]:before {
     @apply text-error-content;
   }
 }

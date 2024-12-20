@@ -6,6 +6,9 @@ classnames:
   component:
   - class: tooltip
     desc: Container element
+  part:
+  - class: tooltip-content
+    desc: Optional. Setting a div as the content of the tooltip instead of the `data-tip` text
   placement:
   - class: tooltip-top
     desc: Put tooltip on top
@@ -48,6 +51,25 @@ classnames:
 
 ```html
 <div class="$$tooltip" data-tip="hello">
+  <button class="$$btn">Hover me</button>
+</div>
+```
+
+### ~Tooltip with tooltip-content
+<div class="my-6">
+  <div class="tooltip">
+    <div class="tooltip-content">
+      <div class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black">Wow!</div>
+    </div>
+    <button class="btn">Hover me</button>
+  </div>
+</div>
+
+```html
+<div class="$$tooltip" data-tip="hello">
+  <div class="$$tooltip-content">
+    <div class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black">Wow!</div>
+  </div>
   <button class="$$btn">Hover me</button>
 </div>
 ```
