@@ -292,11 +292,7 @@ Before Tailwind CSS 4, color values of utility classes had to be generated at bu
 Tailwind CSS 4 now uses CSS variables for colors and `color-mix()` to control the opacity. This means we can use any color format we want and no transformation is needed.  
 daisyUI built-in themes still use OKLCH color format and I would recommend using OKLCH for custom themes too, but you can use any color format you want and neither daisyUI nor Tailwind CSS will convert it to another format at build time.
 
-### Theme style improvements
-
-Most daisyUI themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
-
-### New themes
+## 3. New themes
 
 daisyUI 5 includes 3 new themes:
 
@@ -304,33 +300,38 @@ daisyUI 5 includes 3 new themes:
 - `abyss` – Deep dark green, teal and phosphorus color palette
 - `silk` – Bright, clean and bold theme with fluorescent text colors
 
-### New components
+### Theme style improvements
+
+Most daisyUI themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
+
+
+## 4. New components
 
 daisyUI 5 introduces new components to help you build websites faster.
 
-#### List
+### List
 
 List is is useful for vertical layout to display information in rows. Imagine a list of products, list of people, list of articles, etc.
 
-#### Status
+### Status
 
 Status is a really small icon to visually show the current status of an element, like online, offline, error, etc.
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
-#### Fieldset
+### Fieldset
 
 Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and fieldset-label as a description.
 
-#### Label
+### Label
 
 Label provides a name or title for an input field. Label can be placed before or after the field. floating-label is a label that floats above the field when the field is focused.
 
-#### Filter
+### Filter
 
 Filter is a group of radio buttons. Choosing one of the options will hide the others and shows a reset button next to the chosen option.
 
-#### Calendar
+### Calendar
 
 daisyUI 5 provides all the necessary styles for 3 popular calendar/datepicker libraries: Cally, Pikaday, and React Day Picker.  
 This means you can use any of these libraries the style will be compatible with daisyUI colors and styles.
@@ -339,21 +340,21 @@ This means you can use any of these libraries the style will be compatible with 
 - Pikaday is a simple and easy-to-use JS datepicker and it works everywhere
 - React Day Picker is a flexible date picker for React
 
-#### Validator
+### Validator
 
 Validator class changes the color of form elements to `error` or `success` based on input's validation rules. It can also show a hint text below the input if it's invalid.
 
-#### Dock
+### Dock
 
 A replacement for "bottom navigation" component. Dock is a horizontal navigation bar that sticks to the bottom of the screen, new design, new look and more customizable.
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
-### New component features
+## 5. New component features
 
 All components have been updated with new features and improvements. Most components are adjusted to look better and consistent. A lot of CSS variables are now available for customization.
 
-#### Button
+### Button
 
 New `soft` and `dash` variants. `soft` variant makes the button look softer and `dash` variant adds a dashed border to the button.
 
@@ -367,7 +368,7 @@ Tab size scale is now customizable.
 
 Design adjustments.
 
-#### Dropdown
+### Dropdown
 
 Dropdown now supports the new HTML popover API and the new CSS anchor positioning.  
 Finally HTML has a native way to create popovers and daisyUI dropdown is now compatible with it.  
@@ -376,12 +377,12 @@ Existing methods like details/summary, and CSS focus are still available to use.
 
 New `dropdown-center` modifier added. Makes it possible to position the dropdown in the center of the anchor element, vertically or horizontally.
 
-#### Modal
+### Modal
 
 New `modal-start` and `modal-end` modifiers added. Makes it possible to position the modal at the start or end of the screen horizontally.  
 New `modal-top` in addition to `modal-bottom` modifier makes it possible to position the modal at the top of the screen as well as the bottom.
 
-#### Badge
+### Badge
 
 New `soft` and `dash` variants. `soft` variant makes the badge look softer and `dash` variant adds a dashed border to the badge.
 
@@ -391,7 +392,7 @@ Tab size scale is now customizable.
 
 Design adjustments.
 
-#### Card
+### Card
 
 Now you can make radio cards by adding a radio input as the direct child of the card.
 
@@ -399,31 +400,31 @@ Card is now available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
 New `card-dash` variant added. Adds a dashed border to the card.
 
-#### Chat bubble
+### Chat bubble
 
 Improved chat bubble tail to have clean visual appearance.
 
-#### Diff
+### Diff
 
 Previously `Diff` was now supported for iOS Safari and it was working with lag in Firefox. Now it shows the content with a tab on iOS Safari and works smoothly in Firefox.
 
-#### Kbd
+### Kbd
 
 New `kbd-xl` size added.
 
 Sizes have been adjusted to align with other components.
 
-#### Stat
+### Stat
 
 Adjusted styles to be more customizable using utility classes.
 
-#### Table
+### Table
 
 New `table-xl` size added.
 
 Sizes have been adjusted to align with other components.
 
-#### Menu
+### Menu
 
 New `menu-xl` size added.
 
@@ -431,7 +432,7 @@ Sizes have been adjusted to align with other components.
 
 Design improvements.
 
-#### Tab
+### Tab
 
 Refactored the layout. Many bugs fixed.
 
@@ -445,77 +446,77 @@ Tab size scale is now customizable.
 
 New `tabs-top` and `tabs-bottom` modifiers added. Makes it possible to position the tabs at the top or bottom of the content.
 
-#### Alert
+### Alert
 
 New `soft` and `dash` variants. `soft` variant makes the alert look softer and `dash` variant adds a dashed border to the alert.
 
 New `alert-vertical` and `alert-horizontal` modifiers added. For having more control over the layout of the alert on different screen sizes.
 
-#### Loading
+### Loading
 
 New `loading-xl` size added.
 
 Sizes have been adjusted to align with other components.
 
-#### Radial Progress
+### Radial Progress
 
 The `--value` is animated now.
 
-#### Tooltip
+### Tooltip
 
 New `tooltip-content` class added. Makes it possible to put custom content inside the tooltip.
 
-#### Checkbox
+### Checkbox
 
 New `checkbox-xl` size added.
 
 New design, new animation.
 
-#### File Input
+### File Input
 
 New `file-input-xl` size added.
 
 Design improvements.
 
-#### Label
+### Label
 
 `label` class is refactored to fit better with input fields.
 
-#### Radio
+### Radio
 
 New `radio-xl` size added.
 
 Design improvements
 
-#### Range
+### Range
 
 New `range-xl` size added.
 
 Design improvements.
 
-#### Rating
+### Rating
 
 New `rating-xl` size added.
 
 Animation improvements.
 
-#### Select
+### Select
 
 New `select-xl` size added.
 
 Design improvements.
 
-#### Input field
+### Input field
 
 New `input-xl` size added.
 
 Design improvements.
 
-#### Textarea
+### Textarea
 
 New `textarea-xl` size added.
 
-#### Toggle
+### Toggle
 
 New `toggle-xl` size added.
 
@@ -525,25 +526,25 @@ Now allows adding custom icons inside the toggle.
 
 Easier customization.
 
-#### Drawer
+### Drawer
 
 Accessibility improvements.
 
-#### Footer
+### Footer
 
 New `footer-horizontal` and `footer-vertical` modifiers added. Makes it possible to position the footer horizontally or vertically on different screen sizes.
 
-#### Join
+### Join
 
 Rewritten the style to be more compatible with different structures.
 
-#### Stack
+### Stack
 
 Rewritten the style using CSS grid instead of relative positioning.
 
 Now available in different directions: `stack-top`, `stack-bottom`, `stack-start`, and `stack-end`.
 
-#### Browser Mockup, Code Mockup, Phone Mockup, Window Mockup
+### Browser Mockup, Code Mockup, Phone Mockup, Window Mockup
 
 Style improvements.
 
