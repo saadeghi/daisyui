@@ -19,7 +19,7 @@
   &:where(input) {
     @apply inline-block;
   }
-  input {
+  :where(input) {
     @apply inline-block w-full appearance-none bg-transparent;
     border: none;
 
