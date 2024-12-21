@@ -1,11 +1,15 @@
 ---
-title: daisyUI 5 beta is here!
-desc: Everything about the new daisyUI 5 beta release
-
+alert: This page is a draft. Let me know if you found any issues.
+title: daisyUI 5 Beta release notes (WIP)
+desc: Everything about the new daisyUI 5
 ---
+
+<!--
 
 Tailwind CSS 4 is now available with huge improvements. Naturally daisyUI 5 follows with all the latest features. Over 7 months of design and development went into this. Listening to feedback. Fixing bugs. Making things even better than before.
 The result is here. daisyUI 5 (beta) brings a lot of new things, it has more tools to help you build, it's more accessible. Clean and polished. And even simpler to use!
+
+-->
 
 ## 1. Core Improvement
 
@@ -54,7 +58,7 @@ No dependencies - 0 kB
 ```
 </div>
 
-### Smaller package size
+### Smaller size
 
 daisyUI 5 NPM package is 61% smaller in size.
 
@@ -111,7 +115,7 @@ We also updated the variable names to be more readable in the output CSS:
 <div class="before-after">
 
 ```css:Before
-/* hard to read, hard to customize */
+/* hard to read variable names, hard to customize values */
 {
 --b1: 100% 0 0;
 --b2: 96.1151% 0 0;
@@ -190,11 +194,11 @@ For example if you only want to use daisyUI toggle component, include a tiny CSS
 Not possible
 ```
 ```:After
-https://cdn.jsdelivr.net/npm/daisyui@5.0.0-alpha.39/components/toggle.css
+https://cdn.jsdelivr.net/npm/daisyui@5.0.0-alpha.52/components/toggle.css
 ```
 </div>
 
-All components, all themes, and basically every single part of daisyUI library is now available as compressed. minified CSS files on CDN.
+All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5.0.0-alpha.52/chunks.css).
 
 Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now only 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
 
@@ -426,6 +430,26 @@ Size scale of these components has been improved to be more consistent:
 - **Menu**
 - **Tab**
 - **Loading**
+
+## 8. Install!
+
+> :INFO:
+>
+> This is NOT a stable release. Do NOT use in production.
+
+1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)
+2. Install daisyUI 5 Beta
+
+  ```bash:Terminal
+  npm i -D daisyui@alpha
+  ```
+3. Add daisyUI to your CSS file
+  
+  ```css:app.css
+  @import "tailwindcss";
+  @plugin "daisyui";
+  ```
+
 
 <style>
   :global(.before-after) {

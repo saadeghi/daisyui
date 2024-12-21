@@ -4,7 +4,12 @@
       element: "button",
       icon: true,
       baseClass: "btn",
-      types: ["", "btn-outline", "btn-dash", "btn-soft"],
+      types: [
+        "",
+        // "btn-outline",
+        // "btn-dash",
+        // "btn-soft"
+      ],
       colors: [
         "",
         "btn-primary",
@@ -23,7 +28,12 @@
       element: "button",
       icon: true,
       baseClass: "badge",
-      types: ["", "badge-outline", "badge-dash", "badge-soft"],
+      types: [
+        "",
+        // "badge-outline",
+        // "badge-dash",
+        // "badge-soft"
+      ],
       colors: [
         "",
         "badge-primary",
@@ -125,35 +135,40 @@
         checked: "checked",
       },
     },
-    range: {
-      element: "input",
-      icon: false,
-      baseClass: "range max-w-28",
-      types: [""],
-      colors: [
-        "",
-        "range-primary",
-        "range-secondary",
-        "range-accent",
-        "range-info",
-        "range-success",
-        "range-warning",
-        "range-error",
-      ],
-      sizes: ["range-xl", "range-lg", "range-md", "range-sm", "range-xs"],
-      label: false,
-      attributes: {
-        type: "range",
-        min: 0,
-        max: 100,
-        value: 50,
-      },
-    },
+    // range: {
+    //   element: "input",
+    //   icon: false,
+    //   baseClass: "range max-w-28",
+    //   types: [""],
+    //   colors: [
+    //     "",
+    //     "range-primary",
+    //     "range-secondary",
+    //     "range-accent",
+    //     "range-info",
+    //     "range-success",
+    //     "range-warning",
+    //     "range-error",
+    //   ],
+    //   sizes: ["range-xl", "range-lg", "range-md", "range-sm", "range-xs"],
+    //   label: false,
+    //   attributes: {
+    //     type: "range",
+    //     min: 0,
+    //     max: 100,
+    //     value: 50,
+    //   },
+    // },
     alert: {
       element: "div",
       icon: true,
       baseClass: "alert",
-      types: ["", "alert-outline", "alert-dash", "alert-soft"],
+      types: [
+        "",
+        // "alert-outline",
+        // "alert-dash",
+        // "alert-soft"
+      ],
       colors: [""],
       sizes: ["alert-info", "alert-success", "alert-warning", "alert-error"],
       label: "4 New Messages",

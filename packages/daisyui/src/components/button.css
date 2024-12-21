@@ -14,7 +14,9 @@
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
   background-color: var(--btn-bg);
-  border: var(--border) solid var(--btn-border);
+  border-width: var(--border);
+  border-style: solid;
+  border-color: var(--btn-border);
   text-shadow: 0 0.5px oklch(1 0 0 / calc(var(--gloss) * 0.15));
   box-shadow:
     0 0 0 0.5px

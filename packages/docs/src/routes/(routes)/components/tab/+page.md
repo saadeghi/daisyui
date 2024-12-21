@@ -26,7 +26,7 @@ classnames:
   placement:
   - class: tabs-top
     desc: Puts tab buttons on top of the tab-content (defult)
-  - class: tab-bottom
+  - class: tabs-bottom
     desc: Puts tabs on under the tab-content
   size:
   - class: tabs-xs

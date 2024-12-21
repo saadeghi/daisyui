@@ -23,6 +23,7 @@
     background-color: var(--tt-bg);
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     content: "";
+    pointer-events: none;
     width: 0.625rem;
     height: 0.25rem;
     display: block;

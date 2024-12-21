@@ -954,15 +954,16 @@
   <div class="overflow-x-hidden">
     <div class="overflow-hidden border-base-300 border-s border-t md:rounded-ss-xl">
       <div
-        class="bg-base-200"
+        class="bg-base-200 text-base-content"
         style={`
-        color: var(--color-base-content);
-        background-color: var(--color-base-200);
-        box-shadow:1rem 0 .2rem -1rem #0001 inset;
+        ${
+          false &&
+          `box-shadow:1rem 0 .2rem -1rem #0001 inset;
         --pattern-color: color-mix(in oklab, var(--color-base-content) 2%, transparent);
         background-image: linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
         background-size: 40px 40px;
-        background-attachment: fixed;
+        background-attachment: fixed;`
+        }
         ${currentThemeStyle}
         `}
       >
