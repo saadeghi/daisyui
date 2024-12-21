@@ -199,7 +199,7 @@
   }
   .preview {
     box-shadow: 0 0 0 1px var(--color-base-100) inset;
-    --patternsize: 1rem;
+    /* --patternsize: 1rem;
     background-image: repeating-linear-gradient(
         transparent 0px calc(var(--patternsize) * 4 - 1px),
         color-mix(in oklab, var(--color-base-content) 4%, var(--color-base-100))
@@ -221,7 +221,15 @@
         transparent 0px calc(var(--patternsize) - 1px),
         color-mix(in oklab, var(--color-base-content) 2%, var(--color-base-100))
           calc(var(--patternsize) - 1px) var(--patternsize)
-      );
+      ); */
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--color-base-100),
+      var(--color-base-100) 13px,
+      var(--color-base-200) 13px,
+      var(--color-base-200) 14px
+    );
+    background-size: 40px 40px;
   }
 }
 

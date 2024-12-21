@@ -47,9 +47,10 @@
         href={`#${titleStr}`}
       >
         <svg
+          class="size-3"
           fill="currentColor"
-          width=".75rem"
-          height=".75rem"
+          width="12"
+          height="12"
           viewBox="0 0 256 256"
           id="Flat"
           xmlns="http://www.w3.org/2000/svg"

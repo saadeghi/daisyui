@@ -1,12 +1,12 @@
 .btn {
   @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle no-underline outline-offset-2 select-none;
+  padding-inline: var(--btn-p);
+  color: var(--btn-fg);
   height: var(--size);
   font-size: 0.875rem;
-  color: var(--btn-fg);
-  outline-color: var(--btn-color, var(--color-base-content));
   font-weight: 600;
-  transition-property: color, background-color, background-image, border-color, opacity, box-shadow,
-    scale;
+  outline-color: var(--btn-color, var(--color-base-content));
+  transition-property: color, background-color, border-color, box-shadow;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 0.2s;
   border-start-start-radius: var(--join-ss, var(--radius-field));
@@ -14,30 +14,21 @@
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
   background-color: var(--btn-bg);
+  background-size: calc(var(--noise) * 100%);
+  background-image: var(--btn-noise);
   border-width: var(--border);
   border-style: solid;
   border-color: var(--btn-border);
   text-shadow: 0 0.5px oklch(1 0 0 / calc(var(--gloss) * 0.15));
   box-shadow:
-    0 0 0 0.5px
+    0 0.5px 0 0.5px
       color-mix(
         in oklab,
-        color-mix(in oklab, white 20%, var(--btn-bg)) calc(var(--gloss) * 20%),
+        color-mix(in oklab, white 30%, var(--btn-bg)) calc(var(--gloss) * 20%),
         transparent
       )
       inset,
     var(--btn-shadow);
-  background-origin: border-box;
-  background-image: var(--btn-gradient);
-  background-size:
-    calc(var(--noise) * 1000px),
-    100% calc(var(--border) + 0.5px),
-    100% calc(var(--border) + 0.5px),
-    2rem 100%,
-    2rem 100%;
-  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: center, top, bottom, left, right;
-  padding-inline: var(--btn-p);
   --size: calc(var(--size-field, 0.25rem) * 10);
   --btn-bg: var(--btn-color, var(--color-base-200));
   --btn-fg: var(--color-base-content);
@@ -46,45 +37,7 @@
   --btn-shadow: 0 3px 2px -2px
       color-mix(in oklab, var(--btn-bg) calc(var(--gloss) * 30%), transparent),
     0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--gloss) * 30%), transparent);
-  --btn-gradient: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' stitchTiles='stitch'/%3E%3CfeBlend mode='screen'/%3E%3C/filter%3E%3Crect width='1000' height='1000' filter='url(%23noise)' opacity='.1'/%3E%3C/svg%3E"),
-    linear-gradient(
-      to left,
-      transparent 25%,
-      color-mix(
-        in oklab,
-        color-mix(in oklab, white calc(var(--gloss) * 20%), var(--btn-bg)) 40%,
-        transparent
-      ),
-      transparent 75%
-    ),
-    linear-gradient(
-      to left,
-      transparent 25%,
-      color-mix(
-        in oklab,
-        color-mix(in oklab, white calc(var(--gloss) * 20%), var(--btn-bg)) 10%,
-        transparent
-      ),
-      transparent 75%
-    ),
-    linear-gradient(
-      -50deg,
-      transparent 50%,
-      color-mix(
-        in oklab,
-        transparent,
-        color-mix(in oklab, var(--color-base-100), white 50%) calc(var(--gloss) * 4%)
-      )
-    ),
-    linear-gradient(
-      50deg,
-      transparent 50%,
-      color-mix(
-        in oklab,
-        transparent,
-        color-mix(in oklab, var(--color-base-100), white 50%) calc(var(--gloss) * 4%)
-      )
-    );
+  --btn-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
 
   &:hover {
     --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%);
@@ -114,7 +67,7 @@
 
     @apply pointer-events-none;
     --btn-border: transparent;
-    --btn-gradient: unset;
+    --btn-noise: none;
     --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
 
     &:hover {
@@ -200,7 +153,7 @@
     --btn-bg: transparent;
     --btn-fg: currentColor;
     --btn-border: transparent;
-    --btn-gradient: unset;
+    --btn-noise: none;
   }
 }
 
@@ -209,7 +162,7 @@
   --btn-border: transparent;
   --btn-bg: transparent;
   --btn-fg: var(--color-primary);
-  --btn-gradient: unset;
+  --btn-noise: none;
   --btn-shadow: "";
 
   &:is(.btn-active, :hover, :active:focus, :focus-visible) {
@@ -225,7 +178,7 @@
     --btn-bg: transparent;
     --btn-fg: var(--btn-color);
     --btn-border: var(--btn-color);
-    --btn-gradient: unset;
+    --btn-noise: none;
   }
 }
 
@@ -236,7 +189,7 @@
     --btn-bg: transparent;
     --btn-fg: var(--btn-color);
     --btn-border: var(--btn-color);
-    --btn-gradient: unset;
+    --btn-noise: none;
   }
 }
 
@@ -254,7 +207,7 @@
       var(--btn-color, var(--color-base-content)) 10%,
       var(--color-base-200)
     );
-    --btn-gradient: unset;
+    --btn-noise: none;
   }
 }
 
