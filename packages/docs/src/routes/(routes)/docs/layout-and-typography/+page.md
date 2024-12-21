@@ -1,19 +1,20 @@
 ---
 title: Layout and Typography
 desc: How to use layouts and typography in daisyUI
+layout: components
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-***Layout***
+### Layout
 
 Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes.  
 Read more at Tailwind CSS documentation:  
 [Layout](https://tailwindcss.com/docs/container), [Sizing](https://tailwindcss.com/docs/width), [Flexbox](https://tailwindcss.com/docs/flex), [Grid](https://tailwindcss.com/docs/grid-template-columns), [Box alignment](https://tailwindcss.com/docs/justify-content), [Spacing](https://tailwindcss.com/docs/padding)
 
-***Typography***
+### Typography
 
 daisyUI supports the [TailwindCSS Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography)  
 All parts are compatible with daisyUI themes.  
@@ -53,7 +54,7 @@ Text formatting is crucial for emphasizing important information. Tailwind CSS T
 
 Blockquotes are an excellent way to highlight quotes or important information. They are styled beautifully with the Typography plugin.
 
-> "This is a blockquote. It stands out and draws attention to important information."
+> "This is a blockquote. It stands out and draws attention to important information. In HTML, blockquotes are created using the `<blockquote>` tag. When used with the Typography plugin and daisyUI, blockquotes receive special styling that includes indentation and a different background color - making quoted text visually distinct from the rest of the content. This styling helps create clear visual hierarchy and improves readability while maintaining semantic HTML markup."
 
 ## Lists: Organizing Information
 
@@ -140,3 +141,7 @@ daisyUI provides various color schemes that you can use to add vibrancy to your 
 Styling your Markdown-generated HTML has never been easier, thanks to the Tailwind CSS Typography plugin and daisyUI themes. By using headers, text formatting, lists, links, images, code snippets, tables, and colors, you can create rich and visually appealing content with minimal effort. Experiment with these elements and see how they look with different daisyUI themes. Happy styling!
 
 </div>
+
+<style>
+  .heading-anchorlink-icon{display:none}
+</style>

@@ -11,6 +11,24 @@
     class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 border border-white/5 p-2 shadow-2xl outline-1 outline-black/5"
   >
     <li>
+      <a href="/docs/v5-beta/">
+        <svg
+          class="text-orange-500"
+          width="14"
+          height="14"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14.586,9.439S15.7,2.858,11.138,0A8.055,8.055,0,0,1,8.1,5.831C6.149,7.546,2.481,11.4,2.52,15.51A9.435,9.435,0,0,0,7.7,24a5.975,5.975,0,0,1,2.091-4.132,4.877,4.877,0,0,0,1.869-3.278,8.786,8.786,0,0,1,4.652,7.322v.02a8.827,8.827,0,0,0,5.137-7.659c.324-3.863-1.792-9.112-3.668-10.828A10.192,10.192,0,0,1,14.586,9.439Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        daisyUI 5 Beta
+      </a>
+    </li>
+    <li></li>
+    <li>
       <a href="/docs/changelog/">
         <svg
           width="14"

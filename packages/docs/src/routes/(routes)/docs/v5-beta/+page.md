@@ -1,13 +1,17 @@
 ---
-title: Upgrade daisyUI from v4 to v5
-desc: daisyUI 5 is a major update with many new features and improvements. This guide will help you upgrade your project from daisyUI 4 to daisyUI 5.
-
+title: daisyUI 5 beta is here!
+desc: Everything about the new daisyUI 5 beta release
 
 ---
 
-## 1. Core
+Tailwind CSS 4 is now available with huge improvements. Naturally daisyUI 5 follows with all the latest features. Over 7 months of design and development went into this. Listening to feedback. Fixing bugs. Making things even better than before.
+The result is here. daisyUI 5 (beta) brings a lot of new things, it has more tools to help you build, it's more accessible. Clean and polished. And even simpler to use!
 
-### Tailwind CSS 4 compatible
+## 1. Core Improvement
+
+daisyUI 5 library is compatible with Tailwind CSS 4, has zero dependencies, smaller package size, smaller CSS size and is more customizable.
+
+### Tailwind CSS 4 compatibility
 
 daisyUI 5 works with Tailwind CSS 4. See [Tailwind CSS upgrade guide](https://tailwindcss.com/)
 
@@ -94,7 +98,7 @@ daisyUI 5 CDN file, including all possible class names, is 75% smaller in size
   </dd>
 </dl>
 
-### Readable, flexible, customizable colors variables
+### Improved color variables
 
 With Tailwind CSS 3 and daisyUI 4, we had to extract the color values of each color into CSS variables, and pass it to CSS alongside a special `<alpha-value>` variable so Tailwind could generate opacity variables for each utility color.
 
@@ -158,15 +162,21 @@ We also updated the variable names to be more readable in the output CSS:
 ```
 </div>
 
-## 2. What's new in daisyUI 5
+## 2. Build and integration improvements
 
-### New core features
-
-New features in the library core:
+Native CSS nesting is here, and we've made daisyUI more flexible - use it anywhere, import only what you need, with no build step required.
 
 ### Native CSS nesting
 
 CSS nesting is now supported on all browsers. daisyUI 5 uses CSS nesting which prevents duplication of CSS rules and results smaller CSS size in your browser!
+
+### ESM compatibility
+
+daisyUI 5 is now ESM (ECMAScript Module) compatible. Which means you can import and use specific parts of the library in JS if you need to.
+
+### Dependency-free class name prefixing
+
+daisyUI 5 can now prefix class names without a dependency.
 
 ### Micro CSS files for No-Build projects
 
@@ -188,7 +198,7 @@ All components, all themes, and basically every single part of daisyUI library i
 
 Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now only 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
 
-### Include/Exclude
+### Include and Exclude parts of the library
 
 Now for the first time, it's possbile to include/exclude specific parts of daisyUI library. For example if you only want to use the "Toggle" component, you can include only the "Toggle" component and exclude everything else!
 
@@ -216,18 +226,9 @@ Not possible
 ```
 </div>
 
-### ESM
+## 3. Design System Improvements
 
-daisyUI 5 is now ESM (ECMAScript Module) compatible. Which means you can import and use specific parts of the library if you need to.
-
-### Native prefixing
-
-daisyUI 5 can now prefix class names without a dependency.
-
-### New "X-Large" size
-All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now also support a new `xl` size modifier. This gives you more control over the size of components and allows you to create more flexible and responsive designs.
-
-### Effects
+### New "Effect" CSS variables
 
 daisyUI 5 introduces a new set of effects that can be enabled or disabled globally or per theme. These effects change the look and feel of relevant components, like buttons, checkbox, toggle, etc.
 
@@ -237,7 +238,10 @@ Currently, the following effects are available:
 
 These effects can be enabled or disabled using a CSS variable.
 
-### Size scale adjustment
+### New "X-Large" size
+All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now also support a new `xl` size modifier. This gives you more control over the size of components and allows you to create more flexible and responsive designs.
+
+### Size scale improvements
 
 With the addition of the new `xl` size modifier, the size scale of components has been adjusted to make it consistent. The new size scale is more harmonious and visually appealing.
 
@@ -260,8 +264,6 @@ Checkbox height scale | Before                        | After
 `lg` | <span class="text-error">8</span> × 4 = 32px   | <span class="text-success">7</span> × 4 = 28px
 `xl` | -                                              | <span class="text-success">8</span> × 4 = 32px
 
-
-
 ### Size scale customization
 
 Component size scales are now customizable. Previously, customizing the size of components required a lot of manual work.  
@@ -272,27 +274,33 @@ Now everything is tokenized with CSS variables, You can define the size scale of
 
 See how it works in the new [Theme Generator](/theme-generator/) page.
 
-### Border size modification
+### Border size customization
 
 Border size of buttons, inputs, tab, et are now customizable globally or per theme.
 
 - `--border` variable is used to define the border size of components like button, input, tab, etc.
 
-### New `soft` and `dash` variants
+### New component styles: `soft`, `dash`
 
-Components like button, badge, alert now have `soft` and `dash` variants. `soft` variant makes the component look softer and `dash` variant adds a dashed border to the component.
+Components like button, badge, alert now have `soft` and `dash` styles. `soft` variant makes the component look softer and `dash` variant adds a dashed border to the component.
 
-### All modifiers are responsive now
+### Responsive modifier classes
 
 daisyUI 5 makes all modifiers responsive by default. This means you can use responsive modifiers like `md:`, `lg:`, etc. with all component modifier classes, not just a selected few.
 
-### No more forced color format conversion
+### Color format flexibility
+
+daisyUI 5 supports all color formats and doesn't convert your colors to a specific format.
 
 Before Tailwind CSS 4, color values of utility classes had to be generated at build time so the only way to have CSS variables for colors and being able to use Tailwind CSS opacity modifiers was to use a specific color format and pass it tailwind to generate the opacity variables.  
 Tailwind CSS 4 now uses CSS variables for colors and `color-mix()` to control the opacity. This means we can use any color format we want and no transformation is needed.  
 daisyUI built-in themes still use OKLCH color format and I would recommend using OKLCH for custom themes too, but you can use any color format you want and neither daisyUI nor Tailwind CSS will convert it to another format at build time.
 
-## 3. New themes
+## 4. Themes and styling
+
+Themes and colors are what makes your website unique. We've made significant improvements to the themes and colors in daisyUI 5, including new themes, improved existing themes, and a new Theme Generator to help you create your own custom themes.
+
+### New themes
 
 daisyUI 5 includes 3 new themes:
 
@@ -300,12 +308,15 @@ daisyUI 5 includes 3 new themes:
 - `abyss` – Deep dark green, teal and phosphorus color palette
 - `silk` – Bright, clean and bold theme with fluorescent text colors
 
-### Theme style improvements
+### Existing themes improvements
 
 Most daisyUI themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
 
+### All-new Theme Generator
 
-## 4. New components
+Check out the new [Theme Generator](/theme-generator/) page to create your own custom theme. Create, customize or extend themes, or generate stunning new themes using the new daisyUI color palette generator algorithm.
+
+## 5. New components
 
 daisyUI 5 introduces new components to help you build websites faster.
 
@@ -350,205 +361,71 @@ A replacement for "bottom navigation" component. Dock is a horizontal navigation
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
-## 5. New component features
-
-All components have been updated with new features and improvements. Most components are adjusted to look better and consistent. A lot of CSS variables are now available for customization.
-
-### Button
-
-New `soft` and `dash` variants. `soft` variant makes the button look softer and `dash` variant adds a dashed border to the button.
-
-New behavior for hover state of btn-ghost and btn-outline: Now hover state of these buttons shows the original style, making it fully compatible with other modifiers like `btn-primary` etc.
-
-New `btn-xl` size added.
-
-Sizes have been adjusted to align with other components.
-
-Tab size scale is now customizable.
-
-Design adjustments.
-
-### Dropdown
-
-Dropdown now supports the new HTML popover API and the new CSS anchor positioning.  
-Finally HTML has a native way to create popovers and daisyUI dropdown is now compatible with it.  
-Also the new CSS anchor positioning API makes it possible to position the dropdown relative to any element on the page.  
-Existing methods like details/summary, and CSS focus are still available to use.
-
-New `dropdown-center` modifier added. Makes it possible to position the dropdown in the center of the anchor element, vertically or horizontally.
-
-### Modal
-
-New `modal-start` and `modal-end` modifiers added. Makes it possible to position the modal at the start or end of the screen horizontally.  
-New `modal-top` in addition to `modal-bottom` modifier makes it possible to position the modal at the top of the screen as well as the bottom.
-
-### Badge
-
-New `soft` and `dash` variants. `soft` variant makes the badge look softer and `dash` variant adds a dashed border to the badge.
-
-Sizes have been adjusted to align with other components.
-
-Tab size scale is now customizable.
-
-Design adjustments.
-
-### Card
-
-Now you can make radio cards by adding a radio input as the direct child of the card.
-
-Card is now available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
-
-New `card-dash` variant added. Adds a dashed border to the card.
-
-### Chat bubble
-
-Improved chat bubble tail to have clean visual appearance.
-
-### Diff
-
-Previously `Diff` was now supported for iOS Safari and it was working with lag in Firefox. Now it shows the content with a tab on iOS Safari and works smoothly in Firefox.
-
-### Kbd
-
-New `kbd-xl` size added.
-
-Sizes have been adjusted to align with other components.
-
-### Stat
-
-Adjusted styles to be more customizable using utility classes.
-
-### Table
-
-New `table-xl` size added.
-
-Sizes have been adjusted to align with other components.
-
-### Menu
-
-New `menu-xl` size added.
-
-Sizes have been adjusted to align with other components.
-
-Design improvements.
-
-### Tab
-
-Refactored the layout. Many bugs fixed.
-
-New style for the `tabs-border`
-
-New `tab-xl` size added.
-
-Tab size scale adjusted to be consistent with other components.
-
-Tab size scale is now customizable.
-
-New `tabs-top` and `tabs-bottom` modifiers added. Makes it possible to position the tabs at the top or bottom of the content.
-
-### Alert
-
-New `soft` and `dash` variants. `soft` variant makes the alert look softer and `dash` variant adds a dashed border to the alert.
-
-New `alert-vertical` and `alert-horizontal` modifiers added. For having more control over the layout of the alert on different screen sizes.
-
-### Loading
-
-New `loading-xl` size added.
-
-Sizes have been adjusted to align with other components.
-
-### Radial Progress
-
-The `--value` is animated now.
-
-### Tooltip
-
-New `tooltip-content` class added. Makes it possible to put custom content inside the tooltip.
-
-### Checkbox
-
-New `checkbox-xl` size added.
-
-New design, new animation.
-
-### File Input
-
-New `file-input-xl` size added.
-
-Design improvements.
-
-### Label
-
-`label` class is refactored to fit better with input fields.
-
-### Radio
-
-New `radio-xl` size added.
-
-Design improvements
-
-### Range
-
-New `range-xl` size added.
-
-Design improvements.
-
-### Rating
-
-New `rating-xl` size added.
-
-Animation improvements.
-
-### Select
-
-New `select-xl` size added.
-
-Design improvements.
-
-### Input field
-
-New `input-xl` size added.
-
-Design improvements.
-
-### Textarea
-
-New `textarea-xl` size added.
-
-### Toggle
-
-New `toggle-xl` size added.
-
-Design improvements.
-
-Now allows adding custom icons inside the toggle.
-
-Easier customization.
-
-### Drawer
-
-Accessibility improvements.
-
-### Footer
-
-New `footer-horizontal` and `footer-vertical` modifiers added. Makes it possible to position the footer horizontally or vertically on different screen sizes.
-
-### Join
-
-Rewritten the style to be more compatible with different structures.
-
-### Stack
-
-Rewritten the style using CSS grid instead of relative positioning.
-
-Now available in different directions: `stack-top`, `stack-bottom`, `stack-start`, and `stack-end`.
-
-### Browser Mockup, Code Mockup, Phone Mockup, Window Mockup
-
-Style improvements.
-
-
+## 5. Major component improvements
+
+These components had significant improvements in daisyUI 5, including new modifiers, new features, and better customization options:
+
+- **Button** – New hover behavior for ghost/outline styles, new soft/dash styles
+- **Dropdown** – New HTML popover API support, CSS anchor positioning, new dropdown-center modifier
+- **Modal** – New positioning options (modal-start, modal-end, modal-top)
+- **Badge** – New soft/dash styles
+- **Card** – New radio card functionality, new dash variant
+- **Alert** – New soft/dash styles, new vertical/horizontal layout options
+- **Tab** – New tabs-border style, new top/bottom positioning
+- **Tooltip** – New tooltip-content class
+- **Toggle** – New custom icons support
+- **Join** – Improved structure compatibility
+- **Stack** – New CSS grid layout, new directional options
+- **Footer** – New horizontal/vertical layout options
+- **Drawer** – Improved accessibility
+- **Diff** – Better iOS Safari support, improved Firefox performance
+
+## 6. Component design improvements
+
+These components have been improved to be more visually appealing:
+
+- **Chat bubble**
+- **Checkbox**
+- **Radio**
+- **Toggle**
+- **Range**
+- **Menu**
+- **File Input**
+- **Select**
+- **Input field**
+- **Label**
+- **Rating**
+- **Radial Progress**
+- **Mockups**
+
+## 7. Component size scale improvements
+
+These components now support the new `xl` size modifier:
+- **Button**
+- **Card**
+- **Kbd**
+- **Table**
+- **Menu**
+- **Tab**
+- **Loading**
+- **Checkbox**
+- **File Input**
+- **Radio**
+- **Range**
+- **Rating**
+- **Select**
+- **Input field**
+- **Textarea**
+- **Toggle**
+
+Size scale of these components has been improved to be more consistent:
+- **Button**
+- **Badge**
+- **Kbd**
+- **Table**
+- **Menu**
+- **Tab**
+- **Loading**
 
 <style>
   :global(.before-after) {

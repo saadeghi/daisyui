@@ -15,7 +15,9 @@
 />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
-  <div class="prose prose-sm md:prose-base w-full max-w-4xl grow pt-10">
+  <div
+    class="prose prose-sm lg:prose-h1:text-5xl lg:prose-h2:text-4xl lg:prose-h3:text-3xl md:text-sm md:prose-base w-full max-w-4xl grow pt-10"
+  >
     {#if title}
       <h1>{@html $t(title)}</h1>
     {/if}
