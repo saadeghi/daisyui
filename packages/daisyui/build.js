@@ -5,7 +5,7 @@ import { generateColorRules } from "./functions/generateColorRules.js"
 import { generateRawStyles } from "./functions/generateRawStyles.js"
 import { minify, minifyCssInDirectory } from "./functions/minify.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
-// import { extractClasses } from "./functions/extractClasses.js"
+import { extractClasses } from "./functions/extractClasses.js"
 import { generateThemes } from "./functions/generateThemes.js"
 import { generateChunks } from "./functions/generateChunks.js"
 import { generateImports } from "./functions/generateImports.js"
@@ -64,7 +64,7 @@ async function generateFiles() {
     generateThemesObject("./theme/object.js"),
   ])
   await Promise.all([
-    // extractClasses({ srcDir: "components" }),
+    extractClasses({ srcDir: "components" }),
     !isDev && minifyCssInDirectory(["colors", "base", "components", "utilities"]),
     !isDev && minify("themes.css"),
     !isDev && minify("daisyui.css"),

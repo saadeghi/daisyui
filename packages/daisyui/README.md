@@ -33,13 +33,5 @@
 [jsdelivr]: https://badgen.net/jsdelivr/hits/npm/daisyui?color=1AD1A5
 [discord]: https://badgen.net/discord/members/S6TZxycVHs?label=Discord&color=1AD1A5
 [opencollectivebadge]: https://badgen.net/opencollective/backers/daisyui?label=Open%20Collective&color=1AD1A5
-[tweet]: https://img.shields.io/twitter/url?label=Share&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 [docs-url]: https://daisyui.com/
 [logo-url]: https://raw.githubusercontent.com/saadeghi/daisyui-images/master/images/daisyui-logo/favicon-192.png
-[opencollective]: https://opencollective.com/daisyui
-[sponsors]: https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&avatarHeight=60
-[backers]: https://opencollective.com/daisyui/backers.svg?button=false&width=978&avatarHeight=36
-[backers_org]: https://opencollective.com/daisyui/organizations.svg?button=false&avatarHeight=36
-[contribute]: https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md
-[contributors_img]: https://contrib.rocks/image?repo=saadeghi/daisyui&columns=25&anon=1&max=300
-[contributors]: https://github.com/saadeghi/daisyui/graphs/contributors

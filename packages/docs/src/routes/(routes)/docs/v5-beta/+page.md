@@ -11,6 +11,28 @@ The result is here. daisyUI 5 (beta) brings a lot of new things, it has more too
 
 -->
 
+## Install
+
+> :INFO:
+>
+> This is NOT a stable release. Do NOT use in production.
+
+1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)
+2. Install daisyUI 5 Beta
+
+  ```bash:Terminal
+  npm i -D daisyui@alpha
+  ```
+3. Add daisyUI to your CSS file
+  
+  ```css:app.css
+  @import "tailwindcss";
+  @plugin "daisyui";
+  ```
+
+---
+
+
 ## 1. Core Improvement
 
 daisyUI 5 library is compatible with Tailwind CSS 4, has zero dependencies, smaller package size, smaller CSS size and is more customizable.
@@ -41,7 +63,7 @@ module.exports = {
 
 ### Zero dependencies
 
-daisyUI 5 has no dependencies. It doesn't add any dependencies to your node_modules.
+daisyUI 5 has no dependencies. Let's clean up your node_modules!
 
 <div class="before-after">
 
@@ -59,6 +81,8 @@ No dependencies - 0 kB
 </div>
 
 ### Smaller size
+
+With daisyUI as a Tailwind CSS plugin, only the needed styles are included in the final CSS file. Other than that we have made a lot of optimizations to make both package size and CSS file size smaller.
 
 daisyUI 5 NPM package is 61% smaller in size.
 
@@ -101,6 +125,8 @@ daisyUI 5 CDN file, including all possible class names, is 75% smaller in size
     </div>
   </dd>
 </dl>
+
+It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5. This is the smallest 
 
 ### Improved color variables
 
@@ -200,7 +226,7 @@ https://cdn.jsdelivr.net/npm/daisyui@5.0.0-alpha.52/components/toggle.css
 
 All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5.0.0-alpha.52/chunks.css).
 
-Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now only 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
+Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
 
 ### Include and Exclude parts of the library
 
@@ -240,7 +266,7 @@ Currently, the following effects are available:
 - `--depth`: adds a clean, subtle depth effect to the components, making them look more visually appealing
 - `--noise`: adds a slight noise effect to the components, giving them a more textured look
 
-These effects can be enabled or disabled using a CSS variable.
+These effects can be enabled or disabled using a CSS variable. Check out the new [Theme Generator](/theme-generator/) page to see how it works.
 
 ### New "X-Large" size
 All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now also support a new `xl` size modifier. This gives you more control over the size of components and allows you to create more flexible and responsive designs.
@@ -284,11 +310,14 @@ Border size of buttons, inputs, tab, et are now customizable globally or per the
 
 - `--border` variable is used to define the border size of components like button, input, tab, etc.
 
+See how it works in the new [Theme Generator](/theme-generator/) page.
+
 ### New component styles: `soft`, `dash`
 
-Components like button, badge, alert now have `soft` and `dash` styles. `soft` variant makes the component look softer and `dash` variant adds a dashed border to the component.
+Components like `button`, `badge`, `alert` now have `soft` and `dash` styles.  
+`soft` style makes the component look softer and `dash` style adds a dashed border to the component.
 
-### Responsive modifier classes
+### All modifier classes are now responsive
 
 daisyUI 5 makes all modifiers responsive by default. This means you can use responsive modifiers like `md:`, `lg:`, etc. with all component modifier classes, not just a selected few.
 
@@ -328,23 +357,33 @@ daisyUI 5 introduces new components to help you build websites faster.
 
 List is is useful for vertical layout to display information in rows. Imagine a list of products, list of people, list of articles, etc.
 
+See [List component docs](/components/list/)
+
 ### Status
 
 Status is a really small icon to visually show the current status of an element, like online, offline, error, etc.
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
+See [Status component docs](/components/status/)
+
 ### Fieldset
 
 Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and fieldset-label as a description.
+
+See [Fieldset component docs](/components/fieldset/)
 
 ### Label
 
 Label provides a name or title for an input field. Label can be placed before or after the field. floating-label is a label that floats above the field when the field is focused.
 
+See [Label component docs](/components/label/)
+
 ### Filter
 
 Filter is a group of radio buttons. Choosing one of the options will hide the others and shows a reset button next to the chosen option.
+
+See [Filter component docs](/components/filter/)
 
 ### Calendar
 
@@ -355,9 +394,13 @@ This means you can use any of these libraries the style will be compatible with 
 - Pikaday is a simple and easy-to-use JS datepicker and it works everywhere
 - React Day Picker is a flexible date picker for React
 
+See [Calendar component docs](/components/calendar/)
+
 ### Validator
 
 Validator class changes the color of form elements to `error` or `success` based on input's validation rules. It can also show a hint text below the input if it's invalid.
+
+See [Validator component docs](/components/validator/)
 
 ### Dock
 
@@ -365,90 +408,73 @@ A replacement for "bottom navigation" component. Dock is a horizontal navigation
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
+See [Dock component docs](/components/dock/)
+
 ## 5. Major component improvements
 
 These components had significant improvements in daisyUI 5, including new modifiers, new features, and better customization options:
 
-- **Button** – New hover behavior for ghost/outline styles, new soft/dash styles
-- **Dropdown** – New HTML popover API support, CSS anchor positioning, new dropdown-center modifier
-- **Modal** – New positioning options (modal-start, modal-end, modal-top)
-- **Badge** – New soft/dash styles
-- **Card** – New radio card functionality, new dash variant
-- **Alert** – New soft/dash styles, new vertical/horizontal layout options
-- **Tab** – New tabs-border style, new top/bottom positioning
-- **Tooltip** – New tooltip-content class
-- **Toggle** – New custom icons support
-- **Join** – Improved structure compatibility
-- **Stack** – New CSS grid layout, new directional options
-- **Footer** – New horizontal/vertical layout options
-- **Drawer** – Improved accessibility
-- **Diff** – Better iOS Safari support, improved Firefox performance
+- **[Button](/components/button/)** – New hover behavior for ghost/outline styles, new soft/dash styles
+- **[Dropdown](/components/dropdown/)** – New HTML popover API support, CSS anchor positioning, new dropdown-center modifier
+- **[Modal](/components/modal/)** – New positioning options (modal-start, modal-end, modal-top)
+- **[Badge](/components/badge/)** – New soft/dash styles
+- **[Card](/components/card/)** – New radio card functionality, new dash variant
+- **[Alert](/components/alert/)** – New soft/dash styles, new vertical/horizontal layout options
+- **[Tab](/components/tab/)** – New tabs-border style, new top/bottom positioning
+- **[Tooltip](/components/tooltip/)** – New tooltip-content class
+- **[Toggle](/components/toggle/)** – New custom icons support
+- **[Join](/components/join/)** – Improved structure compatibility
+- **[Stack](/components/stack/)** – New CSS grid layout, new directional options
+- **[Footer](/components/footer/)** – New horizontal/vertical layout options
+- **[Drawer](/components/drawer/)** – Improved accessibility
+- **[Diff](/components/diff/)** – Better iOS Safari support, improved Firefox performance
 
 ## 6. Component design improvements
 
 These components have been improved to be more visually appealing:
 
-- **Chat bubble**
-- **Checkbox**
-- **Radio**
-- **Toggle**
-- **Range**
-- **Menu**
-- **File Input**
-- **Select**
-- **Input field**
-- **Label**
-- **Rating**
-- **Radial Progress**
-- **Mockups**
+- **[Chat bubble](/components/chat/)**
+- **[Checkbox](/components/checkbox/)**
+- **[Radio](/components/radio/)**
+- **[Toggle](/components/toggle/)**
+- **[Range](/components/range/)**
+- **[Menu](/components/menu/)**
+- **[File Input](/components/file-input/)**
+- **[Select](/components/select/)**
+- **[Input field](/components/input/)**
+- **[Label](/components/label/)**
+- **[Rating](/components/rating/)**
+- **[Radial Progress](/components/radial-progress/)**
+- **[Mockups](/components/mockup-browser/)**
 
 ## 7. Component size scale improvements
 
 These components now support the new `xl` size modifier:
-- **Button**
-- **Card**
-- **Kbd**
-- **Table**
-- **Menu**
-- **Tab**
-- **Loading**
-- **Checkbox**
-- **File Input**
-- **Radio**
-- **Range**
-- **Rating**
-- **Select**
-- **Input field**
-- **Textarea**
-- **Toggle**
+- **[Button](/components/button/)**
+- **[Card](/components/card/)**
+- **[Kbd](/components/kbd/)**
+- **[Table](/components/table/)**
+- **[Menu](/components/menu/)**
+- **[Tab](/components/tab/)**
+- **[Loading](/components/loading/)**
+- **[Checkbox](/components/checkbox/)**
+- **[File Input](/components/file-input/)**
+- **[Radio](/components/radio/)**
+- **[Range](/components/range/)**
+- **[Rating](/components/rating/)**
+- **[Select](/components/select/)**
+- **[Input field](/components/input/)**
+- **[Textarea](/components/textarea/)**
+- **[Toggle](/components/toggle/)**
 
 Size scale of these components has been improved to be more consistent:
-- **Button**
-- **Badge**
-- **Kbd**
-- **Table**
-- **Menu**
-- **Tab**
-- **Loading**
-
-## 8. Install!
-
-> :INFO:
->
-> This is NOT a stable release. Do NOT use in production.
-
-1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)
-2. Install daisyUI 5 Beta
-
-  ```bash:Terminal
-  npm i -D daisyui@alpha
-  ```
-3. Add daisyUI to your CSS file
-  
-  ```css:app.css
-  @import "tailwindcss";
-  @plugin "daisyui";
-  ```
+- **[Button](/components/button/)**
+- **[Badge](/components/badge/)**
+- **[Kbd](/components/kbd/)**
+- **[Table](/components/table/)**
+- **[Menu](/components/menu/)**
+- **[Tab](/components/tab/)**
+- **[Loading](/components/loading/)**
 
 
 <style>

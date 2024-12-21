@@ -50,6 +50,7 @@
     "base",
     "colors",
     "components",
+    "!components/*/class.json",
     "functions/addPrefix.js",
     "functions/plugin.js",
     "functions/pluginOptionsHandler.js",

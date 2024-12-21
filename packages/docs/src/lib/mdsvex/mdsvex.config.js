@@ -104,7 +104,7 @@ const remarkPlugins = [
   [
     remarkCodeTitles,
     {
-      containerClassName: "has-[.code-tab]:my-4",
+      containerClassName: "has-[.code-tab]:my-4 overflow-x-auto",
       titleClassName: "p-1 -mb-6 italic opacity-60 text-xs code-tab",
     },
   ],
