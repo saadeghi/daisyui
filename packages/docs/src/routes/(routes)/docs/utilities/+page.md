@@ -126,7 +126,7 @@ These CSS variables can be customized for each themes
 --border: 1px;                                   /* border width of all components */
 
 /* effects */
---gloss: 1;                                      /* (binary) Adds a gloss effect for relevant components */
+--depth: 1;                                      /* (binary) Adds a depth effect for relevant components */
 --noise: 0;                                      /* (binary) Adds a background noise effect for relevant components */
 }
 ```

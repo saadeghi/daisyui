@@ -30,7 +30,7 @@ const requiredValues = [
   "--size-selector",
   "--size-field",
   "--border",
-  "--gloss",
+  "--depth",
   "--noise",
 ]
 

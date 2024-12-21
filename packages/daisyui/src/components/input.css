@@ -12,8 +12,8 @@
   border-end-end-radius: var(--join-ee, var(--radius-field));
   border-color: var(--input-color);
   box-shadow:
-    0 1px color-mix(in oklab, var(--input-color) calc(var(--gloss) * 10%), transparent) inset,
-    0 -1px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset;
+    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent) inset,
+    0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
   --size: calc(var(--size-field, 0.25rem) * 10);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
   &:where(input) {
@@ -32,7 +32,7 @@
   &:focus,
   &:focus-within {
     --input-color: var(--color-base-content);
-    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--gloss) * 10%), transparent);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent);
     outline: 2px solid var(--input-color);
     outline-offset: 2px;
     isolation: isolate;

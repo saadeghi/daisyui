@@ -5,7 +5,7 @@
   grid-template-columns: 0fr 1fr 1fr;
   border-radius: calc(var(--radius-selector) + var(--toggle-p));
   padding: var(--toggle-p);
-  box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent) inset;
+  box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent) inset;
   transition:
     color 0.3s,
     grid-template-columns 0.2s;
@@ -53,9 +53,9 @@
       translate 0.2s,
       inset-inline-start 0.2s;
     box-shadow:
-      0 -1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent);
+      0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent);
     background-size: calc(var(--noise) * 1000px);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
   }

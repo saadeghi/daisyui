@@ -3,7 +3,7 @@
     var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, transparent));
   @apply text-base-content rounded-selector relative shrink-0 cursor-pointer appearance-none p-1 align-middle;
   box-shadow:
-    0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
+    0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
     0 0 transparent inset,
     0 0 transparent;
   transition:
@@ -24,7 +24,7 @@
       translate 0.3s;
     transition-delay: 0.1s;
     clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%);
-    box-shadow: 0px 3px 0 0px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset;
+    box-shadow: 0px 3px 0 0px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
   }
 
   &:focus-visible {
@@ -37,8 +37,8 @@
     background-color: var(--input-color, transparent);
     box-shadow:
       0 0 transparent inset,
-      0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 1px oklch(0% 0 0 / calc(var(--gloss) * 0.1));
+      0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
 
     &:before {
       @apply opacity-100;

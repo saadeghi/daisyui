@@ -4,7 +4,7 @@ import {
   validateRadius,
   validateSize,
   validateBorderWidth,
-  validateGloss,
+  validateDepth,
   validateNoise,
   validateBoolean,
 } from "$lib/themeGeneratorValidation"
@@ -136,9 +136,9 @@ export function parseThemeCSS(text, currentThemeData) {
           continue
         }
         newThemeData[key] = value
-      } else if (key === "--gloss") {
-        if (!validateGloss(value)) {
-          console.error(`Invalid gloss value for ${key}: ${value}`)
+      } else if (key === "--depth") {
+        if (!validateDepth(value)) {
+          console.error(`Invalid depth value for ${key}: ${value}`)
           hasErrors = true
           continue
         }

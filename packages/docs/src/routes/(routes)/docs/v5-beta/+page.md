@@ -237,7 +237,7 @@ Not possible
 daisyUI 5 introduces a new set of effects that can be enabled or disabled globally or per theme. These effects change the look and feel of relevant components, like buttons, checkbox, toggle, etc.
 
 Currently, the following effects are available:
-- `--gloss`: adds a clean, subtle gloss effect to the components, making them look more visually appealing
+- `--depth`: adds a clean, subtle depth effect to the components, making them look more visually appealing
 - `--noise`: adds a slight noise effect to the components, giving them a more textured look
 
 These effects can be enabled or disabled using a CSS variable.

@@ -174,7 +174,7 @@
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
-    const effectProps = ["--gloss", "--noise"]
+    const effectProps = ["--depth", "--noise"]
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 

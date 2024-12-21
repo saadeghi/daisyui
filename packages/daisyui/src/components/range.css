@@ -38,9 +38,9 @@
     transform: translateY(-50%);
     --track-shdw: calc(-100rem - (var(--size) / 2)) 0 0 100rem;
     box-shadow:
-      0 -1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent),
+      0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent),
       0 0 0 2rem var(--range-thumb) inset,
       var(--track-shdw);
   }
@@ -66,9 +66,9 @@
     color: var(--range-shdw);
     --track-shdw: calc(-100rem - (var(--size) / 2)) 0 0 100rem;
     box-shadow:
-      0 -1px oklch(0% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 8px 0 -4px oklch(100% 0 0 / calc(var(--gloss) * 0.1)) inset,
-      0 1px color-mix(in oklab, currentColor calc(var(--gloss) * 10%), transparent),
+      0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent),
       0 0 0 2rem var(--range-thumb) inset,
       var(--track-shdw);
   }

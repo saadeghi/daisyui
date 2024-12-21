@@ -136,7 +136,7 @@ To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the 
   --border: 1px;
 
   /* effects */
-  --gloss: 1;
+  --depth: 1;
   --noise: 0;
 }
 ```
