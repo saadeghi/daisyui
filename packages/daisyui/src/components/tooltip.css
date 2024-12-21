@@ -4,12 +4,14 @@
   --tt-off: calc(100% + 0.5rem);
   --tt-tail: calc(100% + 1px + 0.25rem);
 
-  >.tooltip-content,
-  &[data-tip]:before{
+  > .tooltip-content,
+  &[data-tip]:before {
     @apply text-neutral-content rounded-field absolute max-w-[20rem] px-2 py-1 text-center whitespace-normal opacity-0;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+    transition:
+      opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms,
+      transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     background-color: var(--tt-bg);
     width: max-content;
     pointer-events: none;
@@ -21,7 +23,9 @@
   &:after {
     @apply absolute opacity-0;
     background-color: var(--tt-bg);
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+    transition:
+      opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms,
+      transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
     content: "";
     pointer-events: none;
     width: 0.625rem;
@@ -36,33 +40,33 @@
 
 .tooltip,
 .tooltip-top {
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
-    transform: translateX(-50%)translateY(var(--tt-pos,.25rem));
+    transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
     inset: auto auto var(--tt-off) 50%;
   }
 }
 
 .tooltip-bottom {
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
-    transform: translateX(-50%)translateY(var(--tt-pos,-.25rem));
+    transform: translateX(-50%) translateY(var(--tt-pos, -0.25rem));
     inset: var(--tt-off) auto auto 50%;
   }
 }
 
 .tooltip-left {
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
-    transform: translateX(calc(var(--tt-pos,0.25rem) - 0.25rem)) translateY(-50%);
+    transform: translateX(calc(var(--tt-pos, 0.25rem) - 0.25rem)) translateY(-50%);
     inset: 50% var(--tt-off) auto auto;
   }
 }
 
 .tooltip-right {
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
-    transform: translateX(calc(var(--tt-pos,-.25rem) + 0.25rem)) translateY(-50%);
+    transform: translateX(calc(var(--tt-pos, -0.25rem) + 0.25rem)) translateY(-50%);
     inset: 50% auto auto var(--tt-off);
   }
 }
@@ -70,14 +74,16 @@
 .tooltip {
   &.tooltip-open,
   &[data-tip]:hover,
-  &:has(.tooltip-content):hover,
+  &:hover,
   &:has(:focus-visible) {
-    >.tooltip-content,
+    > .tooltip-content,
     &[data-tip]:before,
     &:after {
       @apply opacity-100;
       --tt-pos: 0rem;
-      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, , transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      transition:
+        opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     }
   }
 }
@@ -85,28 +91,28 @@
 .tooltip,
 .tooltip-top {
   &:after {
-    transform: translateX(-50%) translateY(var(--tt-pos,.25rem));
+    transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
     inset: auto auto var(--tt-tail) 50%;
   }
 }
 
 .tooltip-bottom {
   &:after {
-    transform: translateX(-50%) translateY(var(--tt-pos,-.25rem)) rotate(180deg);
+    transform: translateX(-50%) translateY(var(--tt-pos, -0.25rem)) rotate(180deg);
     inset: var(--tt-tail) auto auto 50%;
   }
 }
 
 .tooltip-left {
   &:after {
-    transform: translateX(var(--tt-pos,.25rem)) translateY(-50%) rotate(-90deg);
+    transform: translateX(var(--tt-pos, 0.25rem)) translateY(-50%) rotate(-90deg);
     inset: 50% calc(var(--tt-tail) + 1px) auto auto;
   }
 }
 
 .tooltip-right {
   &:after {
-    transform: translateX(var(--tt-pos,-.25rem)) translateY(-50%) rotate(90deg);
+    transform: translateX(var(--tt-pos, -0.25rem)) translateY(-50%) rotate(90deg);
     inset: 50% auto auto calc(var(--tt-tail) + 1px);
   }
 }
@@ -114,7 +120,7 @@
 .tooltip-primary {
   --tt-bg: var(--color-primary);
 
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
     @apply text-primary-content;
   }
@@ -123,7 +129,7 @@
 .tooltip-secondary {
   --tt-bg: var(--color-secondary);
 
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
     @apply text-secondary-content;
   }
@@ -132,7 +138,7 @@
 .tooltip-accent {
   --tt-bg: var(--color-accent);
 
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
     @apply text-accent-content;
   }
@@ -141,7 +147,7 @@
 .tooltip-info {
   --tt-bg: var(--color-info);
 
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
     @apply text-info-content;
   }
@@ -150,7 +156,7 @@
 .tooltip-success {
   --tt-bg: var(--color-success);
 
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
     @apply text-success-content;
   }
@@ -159,7 +165,7 @@
 .tooltip-warning {
   --tt-bg: var(--color-warning);
 
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
     @apply text-warning-content;
   }
@@ -168,7 +174,7 @@
 .tooltip-error {
   --tt-bg: var(--color-error);
 
-  >.tooltip-content,
+  > .tooltip-content,
   &[data-tip]:before {
     @apply text-error-content;
   }

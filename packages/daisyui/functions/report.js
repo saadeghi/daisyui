@@ -115,14 +115,14 @@ export const report = async (directories) => {
 
     if (shouldSave) {
       const reportPath = path.join(reportsDir, `${reportData.timestamp}.json`)
-      await fs.writeFile(reportPath, JSON.stringify(reportData, null, 2))
+      await fs.writeFile(reportPath, JSON.stringify(reportData, null, 0))
 
       const updatedFiles = (await fs.readdir(reportsDir)).filter(
         (file) => file.endsWith(".json") && file !== "package.json",
       )
       await fs.writeFile(
         path.join(reportsDir, "index.js"),
-        `export const reportFiles = ${JSON.stringify(updatedFiles, null, 2)};`,
+        `export const reportFiles = ${JSON.stringify(updatedFiles, null, 0)};`,
       )
 
       console.log(`Report saved: ${reportPath}`)

@@ -148,24 +148,24 @@ Example of theming a div with hardcoded color values
 <Translate text="You can also use color names in utility classes just like Tailwind's original color names." />
 <Translate text="These are utility classes that can be used with a color name:" />
 
-```css
-bg-{COLOR_NAME} /* also available in daisyUI CDN file */
-text-{COLOR_NAME} /* also available in daisyUI CDN file */
-border-{COLOR_NAME} /* also available in daisyUI CDN file */
-from-{COLOR_NAME}
-via-{COLOR_NAME}
-to-{COLOR_NAME}
-ring-{COLOR_NAME}
-fill-{COLOR_NAME}
-caret-{COLOR_NAME}
-stroke-{COLOR_NAME}
-divide-{COLOR_NAME}
-accent-{COLOR_NAME}
-shadow-{COLOR_NAME}
-outline-{COLOR_NAME}
-decoration-{COLOR_NAME}
-placeholder-{COLOR_NAME}
-ring-offset-{COLOR_NAME}
-```
+| CSS Class | |
+| --- | --- |
+| `bg-{COLOR_NAME}` | Also available in daisyUI CDN file |
+| `text-{COLOR_NAME}` | Also available in daisyUI CDN file |
+| `border-{COLOR_NAME}` | Also available in daisyUI CDN file |
+| `from-{COLOR_NAME}` | |
+| `via-{COLOR_NAME}` | |
+| `to-{COLOR_NAME}` | |
+| `ring-{COLOR_NAME}` | |
+| `fill-{COLOR_NAME}` | |
+| `caret-{COLOR_NAME}` | |
+| `stroke-{COLOR_NAME}` | |
+| `divide-{COLOR_NAME}` | |
+| `accent-{COLOR_NAME}` | |
+| `shadow-{COLOR_NAME}` | |
+| `outline-{COLOR_NAME}` | |
+| `decoration-{COLOR_NAME}` | |
+| `placeholder-{COLOR_NAME}` | |
+| `ring-offset-{COLOR_NAME}` | |
 
-So you can use `bg-primary`, `border-secondary`, etc
+So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI color utility classes](/docs/utilities).
