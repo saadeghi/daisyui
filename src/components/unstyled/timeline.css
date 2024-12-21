@@ -31,5 +31,5 @@
   @apply col-start-2 row-start-2;
 }
 .timeline-end {
-  @apply col-start-1 col-end-4 row-start-3 row-end-4 m-1 self-start justify-self-center;
+  @apply col-start-1 col-end-4 row-start-1 row-end-2 m-1 self-start justify-self-center;
 }
