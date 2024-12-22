@@ -25,7 +25,7 @@ classnames:
     desc: Makes a single tab look disabled
   placement:
   - class: tabs-top
-    desc: Puts tab buttons on top of the tab-content (defult)
+    desc: Puts tab buttons on top of the tab-content (default)
   - class: tabs-bottom
     desc: Puts tabs on under the tab-content
   size:

@@ -17,7 +17,7 @@ classnames:
     desc: Hidden checkbox that controls the state of modal
   modifier:
   - class: modal-open
-    desc: Keeps the modal open (you can add this class uisng JS)
+    desc: Keeps the modal open (you can add this class using JS)
   placement:
   - class: modal-top
     desc: Moves the modal to top
@@ -45,7 +45,7 @@ classnames:
 1. [Using HTML `<dialog>` element](#method-1-html-dialog-element-recommended)  
   It needs JS to open but it has better accessibility and we can close it using `Esc` key  
 2. [Using checkbox](#method-2-checkbox-legacy)  
-  A hidden `<input type="checkbox">` to conrol the sate of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
+  A hidden `<input type="checkbox">` to control the sate of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
 3. [Using `<a>` anchor links](#method-3-using-anchor-links-legacy)  
   A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 

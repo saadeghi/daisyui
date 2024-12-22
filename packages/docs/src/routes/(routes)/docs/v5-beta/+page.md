@@ -253,7 +253,7 @@ daisyUI 5 can now prefix class names without a dependency.
 
 ### Micro CSS files for No-Build projects
 
-For server-side redered projects (Rails, Django, PHP, etc) or projects that don't have a JS build step (HTMX, Alpine.js, WordPress, etc), it's now possible to use specific parts of daisyUI without including the entire library or even without Tailwind CSS.
+For server-side rendered projects (Rails, Django, PHP, etc) or projects that don't have a JS build step (HTMX, Alpine.js, WordPress, etc), it's now possible to use specific parts of daisyUI without including the entire library or even without Tailwind CSS.
 
 For example if you only want to use daisyUI toggle component, include a tiny CSS file that only contains the styles for the toggle component:
 
@@ -273,7 +273,7 @@ Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now s
 
 ### Include and Exclude parts of the library
 
-Now for the first time, it's possbile to include/exclude specific parts of daisyUI library. For example if you only want to use the "Toggle" component, you can include only the "Toggle" component and exclude everything else!
+Now for the first time, it's possible to include/exclude specific parts of daisyUI library. For example if you only want to use the "Toggle" component, you can include only the "Toggle" component and exclude everything else!
 
 <div class="before-after">
 
@@ -733,8 +733,8 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 ### Dropdown
 
 🆕 Additions
-- Added suppor for the new HTML [`popover`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover) attribute. HTML popover is the new standard for creating dropdowns in HTML. It prevents any overflow edgecase issues and any z-index issues.
-- Added suppor for the new CSS [`Anchor positioning`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning) (Currently only works on Chromium-based browsers. Other browsers will position the dropdown on the middle of the screen, like a modal).
+- Added support for the new HTML [`popover`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover) attribute. HTML popover is the new standard for creating dropdowns in HTML. It prevents any overflow edgecase issues and any z-index issues.
+- Added support for the new CSS [`Anchor positioning`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning) (Currently only works on Chromium-based browsers. Other browsers will position the dropdown on the middle of the screen, like a modal).
 
 🔧 Changes
 - Uses CSS `@starting-style` now.
@@ -1186,7 +1186,7 @@ If you've been waiting for a specific bug fix, here are some of the most notable
 - [#3215: bug: Vertical scroll not functional when drawer is open on screens under 1024px width v5](https://github.com/saadeghi/daisyui/issues/3215)
 - [#3203: bug: Browser mockup component's search icon is broken in Safari v5](https://github.com/saadeghi/daisyui/issues/3203)
 - [#3202: bug: Non-animated buttons behave strangely when active in Firefox v5](https://github.com/saadeghi/daisyui/issues/3202)
-- [#3188: bug: menu item modifer not works with selector v5](https://github.com/saadeghi/daisyui/issues/3188)
+- [#3188: bug: menu item modifier not works with selector v5](https://github.com/saadeghi/daisyui/issues/3188)
 - [#3176: bug: range in rtl mode show wrong bar v5](https://github.com/saadeghi/daisyui/issues/3176)
 - [#3170: bug: Invalid CSS generated when child of an element with the "btm-nav" class has the "active" class that uses a media query v5](https://github.com/saadeghi/daisyui/issues/3170)
 - [#3169: docs: position Drawer component seem not working v5](https://github.com/saadeghi/daisyui/issues/3169)

@@ -175,7 +175,6 @@
       >
         {#each Object.entries(colors) as [name, color]}
           <button
-            type="button"
             class="appearance-none p-px [writing-mode:lr]"
             aria-label={name}
             aria-selected={value === color}
@@ -188,23 +187,20 @@
               class="rounded-full border border-base-content/10 w-5 sm:w-7 sm:m-px relative aspect-square select-none bg-transparent grid place-items-center"
               class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={value === color}
               class:outline-white={value === color}
-              class:outline-offest-[-3px]={value === color}
+              class:outline-offset-[-3px]={value === color}
               style:background-color={color}
             >
               {#if getColorInitials(color)}
-                {#if getColorInitials(color).length > 1}
-                  <span
-                    data-tip={getColorNames(color).join(", ")}
-                    class={`tooltip text-[9px] font-mono font-semibold px-px before:lowercase before:max-w-24 before:text-[10px] uppercase ${getTextColorClass(name)}`}
-                    >{getColorInitials(color)[0]}+</span
-                  >
-                {:else}
-                  <span
-                    data-tip={getColorNames(color)[0]}
-                    class={`tooltip text-[9px] font-mono font-semibold px-px before:lowercase before:text-[10px] uppercase ${getTextColorClass(name)}`}
-                    >{getColorInitials(color)[0]}</span
-                  >
-                {/if}
+                <div class={`tooltip px-px ${getTextColorClass(name)}`}>
+                  <div class="tooltip-content lowercase max-w-28 text-[10px]">
+                    {#each getColorNames(color) as name}
+                      <div>{name}</div>
+                    {/each}
+                  </div>
+                  <div class="text-[9px] font-mono uppercase font-semibold">
+                    {getColorInitials(color)[0]}{#if getColorInitials(color).length > 1}+{/if}
+                  </div>
+                </div>
               {/if}
             </div>
           </button>

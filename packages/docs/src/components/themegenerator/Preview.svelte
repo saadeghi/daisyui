@@ -312,7 +312,7 @@
         </div>
       </div>
       <div class="card-body gap-4">
-        <p class="text-xs opacity-60">Registeration is free and only takes a minute</p>
+        <p class="text-xs opacity-60">Registration is free and only takes a minute</p>
 
         <div class="flex flex-col gap-1">
           <label class="input input-border flex items-center gap-2 max-w-none">
@@ -354,7 +354,7 @@
 
         <label class="flex gap-2 items-center text-xs text-base-content/60">
           <input type="checkbox" class="toggle toggle-xs" />
-          Accpet terms without reading
+          Accept terms without reading
         </label>
         <label class="flex gap-2 items-center text-xs text-base-content/60">
           <input type="checkbox" class="toggle toggle-xs" />
