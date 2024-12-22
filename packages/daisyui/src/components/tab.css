@@ -43,7 +43,7 @@
   }
 
   &:not(input):empty {
-    @apply cursor-default;
+    @apply grow cursor-default;
   }
 
   /* &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),

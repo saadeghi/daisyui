@@ -28,11 +28,11 @@
     border-end-end-radius: inherit;
   }
 
-  &.card-border {
+  &:where(.card-border) {
     border: var(--border) solid var(--color-base-200);
   }
 
-  &.card-dash {
+  &:where(.card-dash) {
     border: var(--border) dashed var(--color-base-200);
   }
 
