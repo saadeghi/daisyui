@@ -7,10 +7,10 @@
   <h3 class="font-bold px-2 mb-6">Preview</h3>
 
   <div
-    class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 [&>.card]:border-base-300 [&>.card]:shadow-[0_.1rem_.5rem_-.3rem_#0003] lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_:is(div,button)]:[transition:background-color_0ms,border-color_100ms,border-radius_500ms_ease-out] pb-20"
+    class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_:is(div,button)]:[transition:background-color_0ms,border-color_100ms,box-shadow_300ms,border-radius_500ms_ease-out] pb-20"
   >
     <!-- filters -->
-    <div class="card card-sm">
+    <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
         <h2 class="flex justify-between items-center">
           <span class="font-semibold flex items-center gap-2">
@@ -107,7 +107,7 @@
     </div>
 
     <!-- calendar -->
-    <div class="card card-sm overflow-hidden">
+    <div class="card card-border border-base-300 card-sm overflow-hidden">
       <div class="card-body gap-4">
         <div class="grid grid-cols-7 border-b border-dashed border-b-base-300 pb-3">
           <div class="flex flex-col items-center py-1 px-2 rounded-field">
@@ -200,7 +200,7 @@
     </div>
 
     <!-- range -->
-    <div class="card card-sm">
+    <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
         <h2 class="flex justify-between items-center">
           <span class="font-semibold flex items-center gap-2">
@@ -232,7 +232,7 @@
     </div>
 
     <!-- product -->
-    <div class="card card-sm">
+    <div class="card card-border border-base-300 card-sm">
       <figure class="p-2">
         <img
           class="rounded-[calc(var(--radius-box)-.5rem)]"
@@ -263,7 +263,7 @@
     </div>
 
     <!-- search -->
-    <div class="card card-sm">
+    <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
         <div class="join">
           <label class="join-item input-border flex input items-center gap-2 w-auto">
@@ -287,7 +287,7 @@
     </div>
 
     <!-- form -->
-    <div class="card card-sm overflow-hidden">
+    <div class="card card-border border-base-300 card-sm overflow-hidden">
       <div class="border-b border-base-300 border-dashed">
         <div class="flex items-center gap-2 p-4">
           <div class="grow">
@@ -352,8 +352,6 @@
           </span>
         </div>
 
-        <div></div>
-
         <label class="flex gap-2 items-center text-xs text-base-content/60">
           <input type="checkbox" class="toggle toggle-xs" />
           Accpet terms without reading
@@ -363,15 +361,15 @@
           Subscribe to spam emails
         </label>
 
-        <div class="card-actions items-center justify-between">
+        <div class="card-actions items-center gap-6">
           <button class="btn btn-primary">Register</button>
-          <button class="link btn-xs">Login</button>
+          <button class="link">Or login</button>
         </div>
       </div>
     </div>
 
     <!-- chart -->
-    <div class="card card-sm">
+    <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
         <div class="flex gap-2 mt-4 items-end h-24 *:rounded-sm *:bg-base-content *:w-full">
           <div style="height: 10%"></div>
@@ -402,33 +400,35 @@
     </div>
 
     <!-- stat -->
-    <div class="stats overflow-hidden bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
-      <div class="stat">
-        <div class="stat-figure">
-          <div class="radial-progress" style="--value:91;--size:3rem;" role="progressbar">91</div>
-        </div>
-        <div class="stat-title">Page Score</div>
-        <div class="stat-value">91<span class="text-sm">/100</span></div>
-        <div class="stat-desc flex gap-1 items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="size-4 text-success"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          All good
+    <div class="card w-full card-border border-base-300">
+      <div class="stats overflow-hidden bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+        <div class="stat">
+          <div class="stat-figure">
+            <div class="radial-progress" style="--value:91;--size:3rem;" role="progressbar">91</div>
+          </div>
+          <div class="stat-title">Page Score</div>
+          <div class="stat-value">91<span class="text-sm">/100</span></div>
+          <div class="stat-desc flex gap-1 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="size-4 text-success"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            All good
+          </div>
         </div>
       </div>
     </div>
 
     <!-- list -->
-    <div class="card card-sm">
+    <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
         <h2 class="flex justify-between items-center">
           <span class="font-semibold items-center flex gap-2">
@@ -485,32 +485,34 @@
     </div>
 
     <!-- stat -->
-    <div class="stats bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
-      <div class="stat">
-        <div class="stat-title">
-          {new Date().toLocaleString("default", { month: "long" })} Revenue
-        </div>
-        <div class="stat-value">$32,400</div>
-        <div class="stat-desc flex gap-2 items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="size-4 text-success"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M9.808 4.057a.75.75 0 0 1 .92-.527l3.116.849a.75.75 0 0 1 .528.915l-.823 3.121a.75.75 0 0 1-1.45-.382l.337-1.281a23.484 23.484 0 0 0-3.609 3.056.75.75 0 0 1-1.07.01L6 8.06l-3.72 3.72a.75.75 0 1 1-1.06-1.061l4.25-4.25a.75.75 0 0 1 1.06 0l1.756 1.755a25.015 25.015 0 0 1 3.508-2.85l-1.46-.398a.75.75 0 0 1-.526-.92Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          21% more than last month
+    <div class="card w-full card-border border-base-300">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-title">
+            {new Date().toLocaleString("default", { month: "long" })} Revenue
+          </div>
+          <div class="stat-value">$32,400</div>
+          <div class="stat-desc flex gap-2 items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="size-4 text-success"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.808 4.057a.75.75 0 0 1 .92-.527l3.116.849a.75.75 0 0 1 .528.915l-.823 3.121a.75.75 0 0 1-1.45-.382l.337-1.281a23.484 23.484 0 0 0-3.609 3.056.75.75 0 0 1-1.07.01L6 8.06l-3.72 3.72a.75.75 0 1 1-1.06-1.061l4.25-4.25a.75.75 0 0 1 1.06 0l1.756 1.755a25.015 25.015 0 0 1 3.508-2.85l-1.46-.398a.75.75 0 0 1-.526-.92Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            21% more than last month
+          </div>
         </div>
       </div>
     </div>
 
     <!-- textarea -->
-    <div class="card card-sm overflow-hidden">
+    <div class="card card-border border-base-300 card-sm overflow-hidden">
       <div class="border-b border-base-300 border-dashed">
         <div class="flex items-center gap-2 p-4">
           <div class="grow">
@@ -574,7 +576,7 @@
     </div>
 
     <!-- chat -->
-    <div class="card card-sm overflow-hidden">
+    <div class="card card-border border-base-300 card-sm overflow-hidden">
       <div class="card-body">
         <div class="chat chat-start">
           <div class="chat-image avatar">
@@ -685,129 +687,131 @@
     </div>
 
     <!-- menu -->
-    <ul class="menu bg-base-100 rounded-box w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
-      <li class="menu-title">Admin panel</li>
-      <li>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-5 opacity-30"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
-            />
-          </svg>
-          Databases
-          <span class="badge justify-self-end">7</span>
-        </span>
-      </li>
-      <li>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-5 opacity-30"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
-            />
-          </svg>
-          Products
-        </span>
-      </li>
-      <li>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-5 opacity-30"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-            />
-          </svg>
-          Messages
-          <span class="badge justify-self-end">29</span>
-        </span>
-      </li>
-      <li>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-5 opacity-30"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
-            />
-          </svg>
-          Access tokens
-        </span>
-      </li>
-      <li>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-5 opacity-30"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-            />
-          </svg>
-          Users
-          <span class="status status-info"></span>
-        </span>
-      </li>
-      <li>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-5 opacity-30"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"
-            />
-          </svg>
-          Settings
-        </span>
-      </li>
-    </ul>
+    <div class="card card-border border-base-300">
+      <ul class="menu w-full">
+        <li class="menu-title">Admin panel</li>
+        <li>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 opacity-30"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+              />
+            </svg>
+            Databases
+            <span class="badge justify-self-end">7</span>
+          </span>
+        </li>
+        <li>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 opacity-30"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+              />
+            </svg>
+            Products
+          </span>
+        </li>
+        <li>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 opacity-30"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+            Messages
+            <span class="badge justify-self-end">29</span>
+          </span>
+        </li>
+        <li>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 opacity-30"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
+              />
+            </svg>
+            Access tokens
+          </span>
+        </li>
+        <li>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 opacity-30"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+              />
+            </svg>
+            Users
+            <span class="status status-info"></span>
+          </span>
+        </li>
+        <li>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 opacity-30"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"
+              />
+            </svg>
+            Settings
+          </span>
+        </li>
+      </ul>
+    </div>
 
     <!-- music -->
-    <div class="card card-sm overflow-hidden">
+    <div class="card card-border border-base-300 card-sm overflow-hidden">
       <div class="card-body my-2">
         <div class="flex justify-around items-center">
           <button class="btn btn-square btn-neutral">
@@ -1005,10 +1009,12 @@
     </div>
 
     <!-- code -->
-    <div class="mockup-code bg-base-100 text-base-content shadow-[0_.1rem_.5rem_-.3rem_#0003]">
-      <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
-      <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
-      <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
+    <div class="card w-full card-border border-base-300">
+      <div class="mockup-code">
+        <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
+        <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
+        <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
+      </div>
     </div>
 
     <!-- alerts -->
@@ -1219,7 +1225,7 @@
     </ul>
 
     <!-- pricing -->
-    <div class="card bg-linear-to-bl from-base-content/5 to-50%">
+    <div class="card card-border border-base-300 bg-linear-to-bl from-base-content/5 to-50%">
       <div class="flex justify-center">
         <div class="tabs tabs-box inline-flex flex-nowrap m-4 bg-base-300">
           <input type="radio" name="my_tabs_1" role="tab" class="tab w-1/2" aria-label="Monthly" />

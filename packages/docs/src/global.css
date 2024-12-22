@@ -223,7 +223,7 @@
           calc(var(--patternsize) - 1px) var(--patternsize)
       ); */
     background-image: repeating-linear-gradient(
-      45deg,
+      -45deg,
       var(--color-base-100),
       var(--color-base-100) 13px,
       var(--color-base-200) 13px,
