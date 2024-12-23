@@ -8,10 +8,15 @@
     grid-template-rows: 40px 1fr;
     grid-template-columns: auto;
     min-width: 4rem;
-
+    --step-bg: var(--color-base-300);
+    --step-fg: var(--color-base-content);
     &:before {
-      @apply bg-base-300 text-base-content top-0 col-start-1 row-start-1 h-2 w-full;
-      content: "";
+      @apply top-0 col-start-1 row-start-1 h-2 w-full;
+      border: 1px solid;
+      color: var(--step-bg);
+      background-color: var(--step-bg);
+      --tw-content: "";
+      content: var(--tw-content);
       margin-inline-start: -100%;
     }
 
@@ -19,7 +24,10 @@
       content: counter(step);
       counter-increment: step;
       z-index: 1;
-      @apply bg-base-300 text-base-content relative col-start-1 row-start-1 grid h-8 w-8 place-items-center place-self-center rounded-full;
+      color: var(--step-fg);
+      background-color: var(--step-bg);
+      border: 1px solid var(--step-bg);
+      @apply relative col-start-1 row-start-1 grid h-8 w-8 place-items-center place-self-center rounded-full;
     }
 
     &:first-child:before {
@@ -33,54 +41,50 @@
 
   .step-neutral + .step-neutral:before,
   .step-neutral:after {
-    @apply bg-neutral text-neutral-content;
+    --step-bg: var(--color-neutral);
+    --step-fg: var(--color-neutral-content);
   }
 
   .step-primary + .step-primary:before,
   .step-primary:after {
-    @apply bg-primary text-primary-content;
+    --step-bg: var(--color-primary);
+    --step-fg: var(--color-primary-content);
   }
 
   .step-secondary + .step-secondary:before,
   .step-secondary:after {
-    @apply bg-secondary text-secondary-content;
+    --step-bg: var(--color-secondary);
+    --step-fg: var(--color-secondary-content);
   }
 
   .step-accent + .step-accent:before,
   .step-accent:after {
-    @apply bg-accent text-accent-content;
+    --step-bg: var(--color-accent);
+    --step-fg: var(--color-accent-content);
   }
 
-  .step-info + .step-info:before {
-    @apply bg-info;
-  }
-
+  .step-info + .step-info:before,
   .step-info:after {
-    @apply bg-info text-info-content;
+    --step-bg: var(--color-info);
+    --step-fg: var(--color-info-content);
   }
 
-  .step-success + .step-success:before {
-    @apply bg-success;
-  }
-
+  .step-success + .step-success:before,
   .step-success:after {
-    @apply bg-success text-success-content;
+    --step-bg: var(--color-success);
+    --step-fg: var(--color-success-content);
   }
 
-  .step-warning + .step-warning:before {
-    @apply bg-warning;
-  }
-
+  .step-warning + .step-warning:before,
   .step-warning:after {
-    @apply bg-warning text-warning-content;
+    --step-bg: var(--color-warning);
+    --step-fg: var(--color-warning-content);
   }
 
-  .step-error + .step-error:before {
-    @apply bg-error;
-  }
-
+  .step-error + .step-error:before,
   .step-error:after {
-    @apply bg-error text-error-content;
+    --step-bg: var(--color-error);
+    --step-fg: var(--color-error-content);
   }
 }
 

@@ -1,7 +1,8 @@
 .file-input {
   cursor: pointer;
   border: var(--border) solid transparent;
-  @apply inline-flex w-full max-w-80 cursor-pointer appearance-none items-center align-middle select-none;
+  @apply inline-flex cursor-pointer appearance-none items-center align-middle select-none;
+  width: clamp(3rem, 20rem, 100%);
   height: var(--size);
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;

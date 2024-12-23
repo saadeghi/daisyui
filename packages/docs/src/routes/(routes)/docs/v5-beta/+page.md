@@ -700,6 +700,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🆕 Additions
 - Added `checkbox-xl` size.
+- Checkbox is now print-friendly.
 
 🔧 Changes
 - Default styles have been significantly altered based on the new theming system.
@@ -779,7 +780,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Add new `input-xl` size.
 
 🔧 Changes
-- **Breaking Change:** Input now has `w-full max-w-xs` by default. Use `max-w-none` if you want it to fill the parent width. In v4, this style was being added to all examples manually to fix the inconsistency of default HTML input width (which depends on the current font size of current font and it's different for each browser). To have a consistent width, for input sizes, we need to set a max-width. If you want to have a full-width input, use `max-w-none` class.
+- **Breaking Change:** Input now has a default width of 20rem, no need for adding `w-full max-w-xs`.
 - **Breaking Change:** Input has a border by default now. Use `input-ghost` if you want to remove the border.
 - Adjusted padding.
 - Adjust size scale to fit with other components.
@@ -798,11 +799,8 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 <!-- Input without border -->
 <input class="input"/>
 
-<!-- Input with consistent width -->
+<!-- Input with 20rem width -->
 <input class="input w-full max-w-xs"/>
-
-<!-- Input with full width -->
-<input class="input w-full"/>
 ```
 
 ```html:after
@@ -814,9 +812,6 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 <!-- Input with consistent width -->
 <input class="input"/>
-
-<!-- Input with full width -->
-<input class="input max-w-none"/>
 ```
 
 </div>
@@ -911,6 +906,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🆕 Additions
 - Added new `radio-xl` size.
+- Radio is now print-friendly.
 
 🔧 Changes
 - Improve size scale to fit with other components.
@@ -936,7 +932,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Added new `select-xl` size.
 
 🔧 Changes
-- **Breaking Change:** Select now has `w-full max-w-xs` by default. Use `max-w-none` if you want it to fill the parent width. In v4, this style was being added to all examples manually to fix the inconsistency of default HTML select width (which depends on the current font size of current font and it's different for each browser). To have a consistent width, for select sizes, we need to set a max-width. If you want to have a full-width select, use `max-w-none` class.
+- **Breaking Change:** Select now has a default width of 20rem, no need for adding `w-full max-w-xs`. `max-w-none` class.
 
 - **Breaking Change:** Select has a border by default now. Use `select-ghost` if you want to remove the border.
 - Adjusted padding, height, and font-size to match other components.
@@ -952,9 +948,6 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 <!-- Select with consistent width -->
 <select class="select w-full max-w-xs">
-
-<!-- Select with full width -->
-<select class="select w-full">
 ```
 
 ```html:after
@@ -966,9 +959,6 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 <!-- Select with consistent width -->
 <select class="select">
-
-<!-- Select with full width -->
-<select class="select max-w-none">
 ```
 
 </div>
@@ -1000,6 +990,11 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🔧 Changes
 - **Breaking Change:** `stats` background color is now transparent. Use `bg-base-100` if you need a background color.
 
+### Steps
+
+🆕 Additions
+- Steps is now print-friendly.
+
 ### Tab
 
 🆕 Additions
@@ -1022,11 +1017,17 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🆕 Additions
 - Added new `textarea-xl` size.
 
+### Timeline
+
+🆕 Additions
+- Timeline is now print-friendly.
+
 ### Toggle
 
 🆕 Additions
 - Added new `toggle-xl` size.
 - Allow using custom icons for the toggle. [Example](/components/toggle/#toggle-with-icons-inside)
+- Toggle is now print-friendly.
 
 🔧 Changes
 - Uses CSS pseudo-elements for the toggle thumb instead of box shadow which is visually more accessible.
@@ -1165,19 +1166,26 @@ Some of these bugs were fixed automatically by the new changes in changes in the
 
 And some of these bugs were related to a specific structure / style / behavior of components and changing them in a patch release would have caused breaking changes for all existing projects. We had to wait for the major release to apply these changes.  
 
-If you've been waiting for a specific bug fix, here are some of the most notable ones:
+If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug.
 
+- [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/saadeghi/daisyui/issues/3332)
 - [#3328: bug: DaisyUI 5: Even though the container element has justify-center, setting width to an `<input>` element doesn't shrink the `<input>` element v5](https://github.com/saadeghi/daisyui/issues/3328)
 - [#3325: bug: TS type declaration missing for themes/object v5](https://github.com/saadeghi/daisyui/issues/3325)
+- [#3322: bug: V5 Dropdown mispositioning using popover API and anchorpositioning v5](https://github.com/saadeghi/daisyui/issues/3322)
+- [#3320: bug: V5-alpha48 toggle misplaced in Firefox v5](https://github.com/saadeghi/daisyui/issues/3320)
 - [#3318: bug: Timeline Spacing v5](https://github.com/saadeghi/daisyui/issues/3318)
+- [#3316: bug: V5 glass does not work v5](https://github.com/saadeghi/daisyui/issues/3316)
 - [#3315: bug: Tab (legacy) visual pop when radio inputs are unchecked v5](https://github.com/saadeghi/daisyui/issues/3315)
 - [#3313: docs: DaisyUI v5 default theme v5](https://github.com/saadeghi/daisyui/issues/3313)
+- [#3312: docs: DaisyUI V5 themes color extraction v5](https://github.com/saadeghi/daisyui/issues/3312)
+- [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox v5](https://github.com/saadeghi/daisyui/issues/3294)
 - [#3281: bug: (v5): Select: does not wrap content with h-fit v5](https://github.com/saadeghi/daisyui/issues/3281)
 - [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color v5](https://github.com/saadeghi/daisyui/issues/3280)
 - [#3276: bug: dropdown-hover do not work on laptops with a touchscreen v5](https://github.com/saadeghi/daisyui/issues/3276)
 - [#3272: bug: themes that change the default font conflicts with the ones that does not. v5](https://github.com/saadeghi/daisyui/issues/3272)
 - [#3250: bug: tailwindcss neutral color compatibility with theme() v5](https://github.com/saadeghi/daisyui/issues/3250)
 - [#3245: bug: DaisyUI 5 doesn't override @tailwindcss/typography style of `<code>` element, leading to unreadable text. v5](https://github.com/saadeghi/daisyui/issues/3245)
+- [#3242: bug: DaisyUI 5: select is not wide enough, resulting in the select arrow overlapping with content v5](https://github.com/saadeghi/daisyui/issues/3242)
 - [#3231: bug: Diff component not working in Astro, Nextjs v5](https://github.com/saadeghi/daisyui/issues/3231)
 - [#3224: bug: mb-* override by timeline-compact when used with timeline-start but not timeline-end v5](https://github.com/saadeghi/daisyui/issues/3224)
 - [#3222: bug: invisible toast area blocks buttons v5](https://github.com/saadeghi/daisyui/issues/3222)
@@ -1197,6 +1205,7 @@ If you've been waiting for a specific bug fix, here are some of the most notable
 - [#3153: Weird behaviour when buttons include HTML elements (seen when adding the v3/4 loading spinner spans) v5](https://github.com/saadeghi/daisyui/issues/3153)
 - [#3148: bug: Diff component not working on Firefox. v5](https://github.com/saadeghi/daisyui/issues/3148)
 - [#3141: bug: dropdown breaks in tables with overflow applied v5](https://github.com/saadeghi/daisyui/issues/3141)
+- [#3128: bug: collapse with arrow or plus crashes edge v5](https://github.com/saadeghi/daisyui/issues/3128)
 - [#3117: bug: Media breakpoint doesn't seem to apply with menu-horizontal v5](https://github.com/saadeghi/daisyui/issues/3117)
 - [#3116: bug: Nesting Collapse in Dropdown menu results in unintended Dropdown behaviour v5](https://github.com/saadeghi/daisyui/issues/3116)
 - [#3078: bug: tabpanel on the *real* device does not fill full width. v5](https://github.com/saadeghi/daisyui/issues/3078)
@@ -1225,6 +1234,7 @@ If you've been waiting for a specific bug fix, here are some of the most notable
 - [#2689: bug: Hover styles are not working on Firefox (Windows & Android) v5](https://github.com/saadeghi/daisyui/issues/2689)
 - [#2684: bug: diff dragging does not keep up with mouse, !chrome v5](https://github.com/saadeghi/daisyui/issues/2684)
 - [#2678: bug: Tab text wrap with large content v5](https://github.com/saadeghi/daisyui/issues/2678)
+- [#2669: bug: "Important" setting from tailwind is not followed v5](https://github.com/saadeghi/daisyui/issues/2669)
 - [#2667: bug: Modal with responsive on small screen with animation jitter v5](https://github.com/saadeghi/daisyui/issues/2667)
 - [#2653: bug: Wrong inferred type when importing daisyUI v5](https://github.com/saadeghi/daisyui/issues/2653)
 - [#2643: bug: Tab in boxed mode source their colors on --p/--pc instead of --tab-bg/--tab-border-color v5](https://github.com/saadeghi/daisyui/issues/2643)
@@ -1235,6 +1245,7 @@ If you've been waiting for a specific bug fix, here are some of the most notable
 - [#2605: bug: Non join-item sibling affects last join-item v5](https://github.com/saadeghi/daisyui/issues/2605)
 - [#2597: docs: Theme Generator ignore theme v5](https://github.com/saadeghi/daisyui/issues/2597)
 - [#2571: bug: Dropdown affects height while hidden v5](https://github.com/saadeghi/daisyui/issues/2571)
+- [#2570: bug: Loading spinner on Safari v5](https://github.com/saadeghi/daisyui/issues/2570)
 - [#2564: bug: accordions and collapses don't open in safari 15.1 v5](https://github.com/saadeghi/daisyui/issues/2564)
 - [#2502: bug: Dialog-type modals dont fade in the background tint. v5](https://github.com/saadeghi/daisyui/issues/2502)
 - [#2442: bug: Carousel buttons not functioning v5](https://github.com/saadeghi/daisyui/issues/2442)

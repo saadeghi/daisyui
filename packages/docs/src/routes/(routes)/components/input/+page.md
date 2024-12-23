@@ -188,20 +188,6 @@ Inputs can be used with `validator` class to have validation styles. [See Valida
 <input type="datetime-local" class="$$input"/>
 ```
 
-### ~month input
-<input type="month" class="input"/>
-
-```html
-<input type="month" class="$$input"/>
-```
-
-### ~week input
-<input type="week" class="input"/>
-
-```html
-<input type="week" class="$$input"/>
-```
-
 ### ~Username text input with icon and validator
 <form class="w-full max-w-xs">
   <label class="input validator">

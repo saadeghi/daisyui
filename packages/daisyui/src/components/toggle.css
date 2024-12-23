@@ -45,9 +45,10 @@
     }
   }
   &:before {
-    @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
+    @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current print:[outline:.25rem_solid] print:[outline-offset:-1rem];
     translate: 0;
-    content: "";
+    --tw-content: "";
+    content: var(--tw-content);
     transition:
       background-color 0.1s,
       translate 0.2s,

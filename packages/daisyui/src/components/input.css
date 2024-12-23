@@ -1,10 +1,9 @@
 .input {
   cursor: text;
   border: var(--border) solid transparent;
-  @apply bg-base-100 inline-flex w-full max-w-80 shrink appearance-none items-center gap-2 align-middle whitespace-nowrap;
+  @apply bg-base-100 inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
+  width: clamp(3rem, 20rem, 100%);
   height: var(--size);
-  padding-inline-start: 0.75rem;
-  padding-inline-end: 0.75rem;
   font-size: 0.875rem;
   border-start-start-radius: var(--join-ss, var(--radius-field));
   border-start-end-radius: var(--join-se, var(--radius-field));
@@ -20,7 +19,7 @@
     @apply inline-block;
   }
   :where(input) {
-    @apply inline-block w-full appearance-none bg-transparent;
+    @apply inline-block h-full w-full appearance-none bg-transparent;
     border: none;
 
     &:focus,
@@ -54,7 +53,7 @@
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
-      @apply -my-4 -me-4;
+      @apply -my-3 -me-3;
     }
   }
 
@@ -147,7 +146,7 @@
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
-      @apply -my-1 -me-0;
+      @apply -my-1 -me-3;
     }
   }
 }
@@ -158,7 +157,7 @@
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
-      @apply my-0 -me-0;
+      @apply -my-2 -me-3;
     }
   }
 }
@@ -169,7 +168,7 @@
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
-      @apply -my-4 -me-4;
+      @apply -my-3 -me-3;
     }
   }
 }
@@ -180,7 +179,7 @@
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
-      @apply -my-6 -me-6;
+      @apply -my-3 -me-3;
     }
   }
 }
@@ -191,7 +190,7 @@
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
-      @apply -my-6 -me-6;
+      @apply -my-4 -me-3;
     }
   }
 }

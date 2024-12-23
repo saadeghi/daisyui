@@ -1,6 +1,7 @@
 .textarea {
   border: var(--border) solid transparent;
-  @apply bg-base-100 rounded-field min-h-20 w-full max-w-80 shrink appearance-none py-2 align-middle;
+  @apply bg-base-100 rounded-field min-h-20 shrink appearance-none py-2 align-middle;
+  width: clamp(3rem, 20rem, 100%);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;

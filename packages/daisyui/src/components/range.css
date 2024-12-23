@@ -4,7 +4,8 @@
   --range-shdw: currentColor;
   --range-thumb: var(--color-base-100);
   --range-p: 0.25rem;
-  @apply w-full max-w-80 cursor-pointer overflow-hidden bg-transparent align-middle;
+  @apply cursor-pointer overflow-hidden bg-transparent align-middle;
+  width: clamp(3rem, 20rem, 100%);
   border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
   border: none;
   --size: calc(var(--size-selector, 0.25rem) * 6);
