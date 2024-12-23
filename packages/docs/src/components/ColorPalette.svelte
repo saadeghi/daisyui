@@ -123,7 +123,7 @@
   }
 </script>
 
-<svelte:window on:mouseup={handleGlobalMouseUp} on:keydown={open ? handleKeydown : null} />
+<svelte:window onmouseup={handleGlobalMouseUp} onkeydown={open ? handleKeydown : null} />
 
 <button
   type="button"
@@ -134,7 +134,7 @@
   style:background-color={label === "A" ? getPairColor(name) : value}
   class:font-black={label === "A"}
   class:text-2xl={label === "A"}
-  on:click={toggleModal}>{label}</button
+  onclick={toggleModal}>{label}</button
 >
 
 <dialog
@@ -178,10 +178,10 @@
             class="appearance-none p-px [writing-mode:lr]"
             aria-label={name}
             aria-selected={value === color}
-            on:mousedown={() => handleDragStart(color)}
-            on:mouseover={() => handleDragOver(color)}
-            on:mouseup={() => handleDragEnd(color)}
-            on:keypress={() => handleDragStart(color)}
+            onmousedown={() => handleDragStart(color)}
+            onmouseover={() => handleDragOver(color)}
+            onmouseup={() => handleDragEnd(color)}
+            onkeypress={() => handleDragStart(color)}
           >
             <div
               class="rounded-full border border-base-content/10 w-5 sm:w-7 sm:m-px relative aspect-square select-none bg-transparent grid place-items-center"
@@ -215,7 +215,7 @@
             <input
               type="text"
               value={inputValue}
-              on:input={handleInput}
+              oninput={handleInput}
               aria-label={`${name} value`}
             />
             {#if Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
@@ -241,7 +241,7 @@
       </div>
     {/if}
   </div>
-  <div class="modal-backdrop" on:click={closeModal}>
+  <div class="modal-backdrop" onclick={closeModal}>
     <button>close</button>
   </div>
 </dialog>

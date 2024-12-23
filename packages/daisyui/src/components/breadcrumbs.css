@@ -28,10 +28,9 @@
         border-top: 1px solid;
         border-right: 1px solid;
         background-color: transparent;
-
-        &:where([dir="rtl"], [dir="rtl"] *) {
-          rotate: -135deg;
-        }
+      }
+      [dir="rtl"] & + *:before {
+        rotate: -135deg;
       }
     }
   }

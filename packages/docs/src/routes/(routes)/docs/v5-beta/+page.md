@@ -741,6 +741,10 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Uses CSS `@starting-style` now.
 - Uses `display` instead of `visibility` to show/hide the dropdown to prevent overflow issues.
 
+### Divider
+
+🆕 Additions
+- Divider is now print-friendly.
 
 ### FileInput
 
@@ -1186,6 +1190,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#3250: bug: tailwindcss neutral color compatibility with theme() v5](https://github.com/saadeghi/daisyui/issues/3250)
 - [#3245: bug: DaisyUI 5 doesn't override @tailwindcss/typography style of `<code>` element, leading to unreadable text. v5](https://github.com/saadeghi/daisyui/issues/3245)
 - [#3242: bug: DaisyUI 5: select is not wide enough, resulting in the select arrow overlapping with content v5](https://github.com/saadeghi/daisyui/issues/3242)
+- [#3232: bug: Some elements depend on using backgrounds, which break for print media](https://github.com/saadeghi/daisyui/issues/3232)
 - [#3231: bug: Diff component not working in Astro, Nextjs v5](https://github.com/saadeghi/daisyui/issues/3231)
 - [#3224: bug: mb-* override by timeline-compact when used with timeline-start but not timeline-end v5](https://github.com/saadeghi/daisyui/issues/3224)
 - [#3222: bug: invisible toast area blocks buttons v5](https://github.com/saadeghi/daisyui/issues/3222)

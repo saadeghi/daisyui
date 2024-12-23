@@ -7,8 +7,8 @@
     @apply absolute whitespace-nowrap;
     top: var(--inidcator-t, 0);
     bottom: var(--inidcator-b, auto);
-    inset-inline-start: var(--inidcator-s, auto);
-    inset-inline-end: var(--inidcator-e, 0);
+    left: var(--inidcator-s, auto);
+    right: var(--inidcator-e, 0);
     translate: var(--inidcator-x, 50%) var(--indicator-y, -50%);
   }
 }
@@ -22,6 +22,9 @@
   --inidcator-s: 50%;
   --inidcator-e: 50%;
   --inidcator-x: -50%;
+  [dir="rtl"] & {
+    --inidcator-x: 50%;
+  }
 }
 
 .indicator-end {

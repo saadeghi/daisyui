@@ -13,7 +13,8 @@
       );
 
     > hr {
-      @apply w-full;
+      border: none;
+      @apply w-full print:[border:.1px_solid_var(--color-base-300)];
 
       &:first-child {
         @apply col-start-1 row-start-2;
@@ -26,8 +27,7 @@
   }
 
   :where(hr) {
-    @apply bg-base-300 h-0;
-    border: 0.25rem solid var(--color-base-300);
+    @apply bg-base-300 h-1;
   }
 
   &:has(.timeline-middle hr) {
@@ -116,7 +116,7 @@
     --timeline-row-end: minmax(0, 1fr);
 
     > hr {
-      @apply h-full w-0;
+      @apply h-full w-1;
 
       &:first-child {
         @apply col-start-2 row-start-1;

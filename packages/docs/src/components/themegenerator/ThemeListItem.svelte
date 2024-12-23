@@ -6,7 +6,7 @@
   <button
     {style}
     class={`px-2 gap-3 ${isCurrent ? "bg-base-content/10" : ""}`}
-    on:click={() => loadTheme(id)}
+    onclick={() => loadTheme(id)}
   >
     <div
       class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"

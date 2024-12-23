@@ -872,7 +872,7 @@
         <div class="relative mt-6">
           <div
             class="absolute tooltip top-2 tooltip-open before:text-xs"
-            style="left:10%"
+            style="inset-inline-start:10%"
             data-tip="13:39"
           ></div>
           <progress class="progress" value="10" max="100"></progress>

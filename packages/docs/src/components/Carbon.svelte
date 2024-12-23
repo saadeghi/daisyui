@@ -21,4 +21,4 @@
   })
 </script>
 
-<div id="carbon-container"></div>
+<div class="print:hidden" id="carbon-container"></div>

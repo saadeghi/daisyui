@@ -88,10 +88,9 @@
     &:before {
       transform: rotateY(0deg);
       inset-inline-start: -0.75rem;
-
-      [dir="rtl"] & {
-        transform: rotateY(180deg);
-      }
+    }
+    [dir="rtl"] &:before {
+      transform: rotateY(180deg);
     }
   }
 }
@@ -118,10 +117,9 @@
     &:before {
       transform: rotateY(180deg);
       inset-inline-start: 100%;
-
-      [dir="rtl"] & {
-        transform: rotateY(0deg);
-      }
+    }
+    [dir="rtl"] &:before {
+      transform: rotateY(0deg);
     }
   }
 }

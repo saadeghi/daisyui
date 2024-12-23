@@ -4,7 +4,7 @@
   &:before,
   &:after {
     content: "";
-    @apply bg-base-content/10 h-0.5 w-full grow;
+    @apply bg-base-content/10 h-0.5 w-full grow print:[border:0.5px_solid];
   }
 
   &:not(:empty) {

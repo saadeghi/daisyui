@@ -152,7 +152,7 @@ classnames:
 
 
 ### ~Avatar group
-<div class="avatar-group -space-x-6 rtl:space-x-reverse">
+<div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12 bg-base-300">
       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
@@ -176,7 +176,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
+<div class="$$avatar-group -space-x-6">
   <div class="$$avatar">
     <div class="w-12">
       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
@@ -202,7 +202,7 @@ classnames:
 
 
 ### ~Avatar group with counter
-<div class="avatar-group -space-x-6 rtl:space-x-reverse">
+<div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12  bg-base-300">
       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Tailwind-CSS-Avatar-component" />
@@ -226,7 +226,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$avatar-group -space-x-6 rtl:space-x-reverse">
+<div class="$$avatar-group -space-x-6">
   <div class="$$avatar">
     <div class="w-12">
       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
