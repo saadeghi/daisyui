@@ -167,7 +167,7 @@
                 <pre><code>npm i -D daisyui</code></pre>
               </button>
             </div>
-            {#if daisyui5progress}
+            <!-- {#if daisyui5progress}
               <div class="flex gap-2 grow w-full max-w-48 max-lg:my-4 sm:max-w-sm">
                 <a
                   class="tooltip tooltip-accent relative flex flex-col w-full"
@@ -192,7 +192,7 @@
                   </div>
                 </a>
               </div>
-            {/if}
+            {/if} -->
           </div>
           <div class="h-4"></div>
           <h1

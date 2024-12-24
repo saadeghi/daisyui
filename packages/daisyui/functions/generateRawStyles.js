@@ -49,7 +49,10 @@ async function processFile(file, stylesDir, distDir, defaultTheme, theme, respon
 
   stylesContent = cleanCss(stylesContent)
 
-  await fs.writeFile(path.join(import.meta.dirname, distDir, `${distDir}/${file}.css`), stylesContent)
+  await fs.writeFile(
+    path.join(import.meta.dirname, distDir, `${distDir}/${file}.css`),
+    stylesContent,
+  )
 }
 
 export async function generateRawStyles({ srcDir, distDir, responsive = false, exclude = [] }) {
