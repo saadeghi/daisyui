@@ -46,9 +46,9 @@
       var(--track-shdw);
   }
 
-  /* [dir="rtl"] &::-webkit-slider-thumb {
-    --track-shdw: calc(100rem * 1 + var(--filler-offset)) 0 0 100rem;
-  } */
+  [dir="rtl"] &::-webkit-slider-thumb {
+    --track-shdw: calc(100rem + var(--size) / 2) 0 0 100rem;
+  }
 
   &::-moz-range-track {
     @apply w-full bg-current/10;

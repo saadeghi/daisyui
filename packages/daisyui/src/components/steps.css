@@ -104,6 +104,9 @@
       content: "";
       margin-inline-start: -100%;
     }
+    [dir="rtl"] &:before {
+      translate: 0;
+    }
   }
 }
 
@@ -123,6 +126,9 @@
       @apply h-full w-2;
       translate: -50% -50%;
       margin-inline-start: 50%;
+    }
+    [dir="rtl"] &:before {
+      translate: 50% -50%;
     }
   }
 }

@@ -9,6 +9,9 @@
     font-weight: normal;
     block-size: auto;
   }
+  &::part(header) {
+    direction: ltr;
+  }
   ::part(head) {
     opacity: 0.5;
     font-size: 0.7rem;

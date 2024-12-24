@@ -24,6 +24,11 @@
   border-color: var(--input-color);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
   --size: calc(var(--size-field, 0.25rem) * 10);
+  [dir="rtl"] & {
+    background-position:
+      calc(0% + 12px) calc(1px + 50%),
+      calc(0% + 16px) calc(1px + 50%);
+  }
   select {
     @apply -ms-4 -me-7 h-full w-[calc(100%+2.75rem)] appearance-none bg-transparent ps-4 pe-7;
     border-style: none;
