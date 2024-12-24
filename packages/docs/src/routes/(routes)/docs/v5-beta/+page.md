@@ -551,6 +551,7 @@ See [Dock component docs](/components/dock/)
 
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/dock.webp" alt="daisyui tailwind dock">
   
+
 ## 6. Major component improvements
 
 These components had significant improvements in daisyUI 5, including new modifiers, new features, and better customization options.

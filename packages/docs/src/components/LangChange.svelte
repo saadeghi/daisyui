@@ -26,9 +26,9 @@
   </div>
   <div
     tabindex="0"
-    class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 max-h-[calc(100vh-10rem)] w-56 overflow-y-auto border border-white/5 shadow-2xl outline outline-1 outline-black/5"
+    class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 max-h-[calc(100vh-10rem)] w-56 overflow-y-auto border border-white/5 shadow-2xl outline-1 outline-black/5"
   >
-    <ul class="menu menu-sm gap-1">
+    <ul class="menu menu-sm gap-1 w-full">
       {#each langs as langItem}
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
