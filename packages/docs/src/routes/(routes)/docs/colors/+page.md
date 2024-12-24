@@ -40,16 +40,16 @@ Example of theming a div with hardcoded color values
 
 <div class="p-10 bg-zinc-100 rounded-2xl">
   <div class="p-6 bg-zinc-50 border-2 border-zinc-200 text-zinc-800 rounded-lg [text-wrap:balance]">
-    This is a dark text on a light background,
-    it should be light text on a dark background in dark mode.
+    This is a hardcoded dark text on a light background,
+    it need double amount of class names to support dark mode.
   </div>
 </div>
 
 ```html
 <div class="bg-zinc-100">
   <div class="bg-zinc-50 border-zinc-200 text-zinc-800">
-    This is a dark text on a light background,
-    it should be light text on a dark background in dark mode.
+    This is a hardcoded dark text on a light background,
+    it need double amount of class names to support dark mode.
   </div>
 </div>
 ```
@@ -71,7 +71,7 @@ Example of theming a div with hardcoded color values
 <div class="p-10 bg-base-200 rounded-2xl">
   <div class="p-6 bg-base-100 border-2 border-base-300 text-base-content rounded-lg [text-wrap:balance]">
     This is a dark text on a light background,
-    it should be light text on a dark background in dark mode.
+    it changes to light text on a dark background in dark mode.
   </div>
 </div>
 
@@ -79,7 +79,7 @@ Example of theming a div with hardcoded color values
 <div class="bg-base-200">
   <div class="bg-base-100 border-base-300 text-base-content">
     This is a dark text on a light background,
-    it should be light text on a dark background in dark mode.
+    it changes to light text on a dark background in dark mode.
   </div>
 </div>
 ```

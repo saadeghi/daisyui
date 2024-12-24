@@ -19,7 +19,7 @@ Replace the semicolon `;` after `@plugin "daisyui"` with brackets `{}` and add t
 
 Default config:
 
-```css:app.css
+```postcss:app.css
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;
   root: ":root";
@@ -36,7 +36,7 @@ Default config:
 |--|--|--|
 | `light --default, dark --prefersdark` | string or comma separated list | List of themes to enable. Use `--default` flag to set a default theme. Use `--prefersdark` flag to set a default theme for dark mode. |
 
-```css:Example
+```postcss:Example
 @plugin "daisyui" {
   themes: nord --default, abyss --prefersdark, cupcake, dracula;
 }
@@ -49,7 +49,7 @@ In this example, we have 4 themes: `nord`, `abyss`, `cupcake`, and `dracula`. no
 |--|--|--|
 | `":root"` | string | The CSS selector to receive the CSS variables. |
 
-```css:Example
+```postcss:Example
 @plugin "daisyui" {
   root: "#my-app";
 }
@@ -63,12 +63,13 @@ This is useful to use daisyUI in a scoped environment like a web component or a 
 |--|--|--|
 | | comma separated list | List of components to include. |
 
-```css:Example
+```postcss:Example
 @plugin "daisyui" {
   include: button, input, select;
 }
 ```
-In this example, we only include the button, input, and select components. All other styles of daisyUI library will be excluded.
+In this example, we only include the button, input, and select components. All other styles of daisyUI library will be excluded.  
+[Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/master/packages/daisyui/src).
 
 ## exclude
 
@@ -76,12 +77,14 @@ In this example, we only include the button, input, and select components. All o
 |--|--|--|
 | | comma separated list | List of components to exclude. |
 
-```css:Example
+```postcss:Example
 @plugin "daisyui" {
-  exclude: checkbox, footer, rootscrollgutter;
+  exclude: checkbox, footer, typography, glass, rootcolor, rootscrollgutter;
 }
 ```
-In this example, we exclude the checkbox and footer components and the rootscrollgutter base style. All other parts of daisyUI will be available to use.
+In this example, we exclude the the listed files. All other parts of daisyUI will be available to use. This is useful if you want to opt out of some parts of daisyUI, especially the base styles like `rootscrollgutter` Or if you want to mix daisyUI for some parts and another library for the rest.  
+[Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/master/packages/daisyui/src).
+
 
 ## prefix
 
@@ -89,7 +92,7 @@ In this example, we exclude the checkbox and footer components and the rootscrol
 |--|--|--|
 | `""` | string | Prefix for all daisyUI classes. |
 
-```css:Example
+```postcss:Example
 @plugin "daisyui" {
   prefix: "d-";
 }
@@ -102,7 +105,7 @@ In this example, all daisyUI classes will be prefixed with `d-`. For example, `b
 |--|--|--|
 | `true` | boolean | Enable or disable logs. |
 
-```css:Example
+```postcss:Example
 @plugin "daisyui" {
   logs: false;
 }

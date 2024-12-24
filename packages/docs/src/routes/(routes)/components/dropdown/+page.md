@@ -100,14 +100,15 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 
 > :INFO:
 >
-> CSS Anchor Positioning is a new standard and is [not supported in Firefox and Safari yet](https://caniuse.com/css-anchor-positioning).  
-> In Firefox and Safari, the dropdown will be positioned at the center of the screen, like a modal.
+> CSS Anchor Positioning is a new standard but isn't yet supported in Firefox and Safari ([caniuse.com](https://caniuse.com/css-anchor-positioning)).  
+> In those browsers, the dropdown will appear centered like a modal.  
+> Use [this polyfill](https://github.com/oddbird/css-anchor-positioning) for Firefox and Safari compatibility.
 
 ### ~Dropdown using popover API and anchor positioning
 <button class="btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
   Button
 </button>
-<ul class="dropdown menu w-32 rounded-box bg-base-100 shadow-sm"
+<ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
   popover id="popover-1" style="position-anchor:--anchor-1">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
@@ -118,7 +119,7 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 <button class="$$btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
   Button
 </button>
-<ul class="$$dropdown $$menu w-32 rounded-box bg-base-100 shadow-sm"
+<ul class="$$dropdown $$menu w-52 rounded-box bg-base-100 shadow-sm"
   popover id="popover-1" style="position-anchor:--anchor-1">
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>

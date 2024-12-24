@@ -56,12 +56,17 @@ export const pages = [
         href: "/docs/themes/",
       },
       {
-        name: "Utilities",
+        name: "Base style",
+        tags: "base scroll gutter reset",
+        href: "/docs/base/",
+      },
+      {
+        name: "Utilities and variables",
         tags: "Utilities utility class",
         href: "/docs/utilities/",
       },
       {
-        name: "Layout & Typography",
+        name: "Layout and Typography",
         tags: "layout typography padding margin grid flex spacing font",
         href: "/docs/layout-and-typography/",
       },

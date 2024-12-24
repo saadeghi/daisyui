@@ -115,7 +115,7 @@ See [Tailwind CSS upgrade guide](https://tailwindcss.com/docs/v4-beta) for more 
 
 Reducing the number of dependencies in your project is important for many reasons. It leads to faster build times and better performance in your workflow. Fewer dependencies also make your app more secure by reducing the chance of potential for vulnerabilities from less maintained packages. Also, managing a smaller dependency tree makes maintenance easier and reduces the chance of deprecation problems or version conflict in the long term.
 
-Last year I reduced the number of dependencies in daisyUI, from ~100 (dependencies + sub-dependencies total) to 7!
+Last year I reduced the number of dependencies in daisyUI, from ~100 (dependencies + sub dependencies in total) to 7!
 
 This time we got rid of all the remaining ones!  
 daisyUI 5 has no dependencies. Hopefully this helps to clean up your node_modules a little bit.
@@ -562,20 +562,25 @@ These components had significant improvements in daisyUI 5, including new modifi
 > Some components have improved visual appeal.  
 > [:FF: Skip to the next section](#7-component-design-improvements)
 
-- **[Button](/components/button/)** – New hover behavior for ghost/outline styles, new soft/dash styles
-- **[Dropdown](/components/dropdown/)** – New HTML popover API support, CSS anchor positioning, new dropdown-center modifier
-- **[Modal](/components/modal/)** – New positioning options (modal-start, modal-end, modal-top)
-- **[Badge](/components/badge/)** – New soft/dash styles
-- **[Card](/components/card/)** – New radio card functionality, new dash variant
 - **[Alert](/components/alert/)** – New soft/dash styles, new vertical/horizontal layout options
-- **[Tab](/components/tab/)** – New tabs-border style, new top/bottom positioning
-- **[Tooltip](/components/tooltip/)** – New tooltip-content class
-- **[Toggle](/components/toggle/)** – New custom icons support
-- **[Join](/components/join/)** – Improved structure compatibility
-- **[Stack](/components/stack/)** – New CSS grid layout, new directional options
-- **[Footer](/components/footer/)** – New horizontal/vertical layout options
+- **[Badge](/components/badge/)** – New soft/dash styles
+- **[Button](/components/button/)** – New hover behavior for ghost/outline styles, new soft/dash styles
+- **[Card](/components/card/)** – New radio card functionality, new dash variant
+- **[Checkbox](/components/checkbox/)** – New design, accessibility improvements
+- **[Diff](/components/diff/)** – Better iOS Safari support, improved Firefox performance, accessibility improvements
+- **[Dock (formerly bottom-navigation)](/components/dock/)** – New design, accessibility improvements
 - **[Drawer](/components/drawer/)** – Improved accessibility
-- **[Diff](/components/diff/)** – Better iOS Safari support, improved Firefox performance
+- **[Dropdown](/components/dropdown/)** – Popover API and anchor positioning support, new dropdown-center modifier, accessibility improvements
+- **[Footer](/components/footer/)** – New horizontal/vertical layout options
+- **[Join](/components/join/)** – Improved structure compatibility
+- **[Modal](/components/modal/)** – New positioning options (modal-start, modal-end, modal-top), accessibility improvements
+- **[Radio](/components/checkbox/)** – New design, accessibility improvements
+- **[Stack](/components/stack/)** – New CSS grid layout, new directional options
+- **[Steps](/components/steps/)** – Accessibility improvements
+- **[Tab](/components/tab/)** – New tabs-border style, new top/bottom positioning, accessibility improvements
+- **[Timeline](/components/timeline/)** – Accessibility improvements
+- **[Toggle](/components/toggle/)** – New custom icons support, accessibility improvements
+- **[Tooltip](/components/tooltip/)** – New tooltip-content class
 
 ## 7. Component design improvements
 
