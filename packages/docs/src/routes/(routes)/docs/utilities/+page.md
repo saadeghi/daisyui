@@ -123,7 +123,7 @@ These CSS variables are being used internally for a specific components.
 
 > :INFO: 
 > 
-> These variables are for internal use. Some of them may be modified or removed in future versions, in which case your custom styles might lose their effect.
+> These variables are for internal use. They are not subject of breaking change and some of them may be modified or removed in future minor versions, in which case your custom styles might lose their effect, so if you want to modify these variables and your UI really depends on the customized value, make sure you are using a specific version of daisyUI.
 
 | Component       | CSS Variable                          | Description                                                                 |
 |-----------------|---------------------------------------|-----------------------------------------------------------------------------|
@@ -136,6 +136,9 @@ These CSS variables are being used internally for a specific components.
 |                 | `--btn-noise`                         | noise background of the button if enabled                                   |
 |                 | `--btn-p`                             | padding of the button                                                       |
 |                 | `--size`                              | size of the button                                                          |
+| Card            | `--card-p`                            | padding of the card body                                                    |
+|                 | `--card-fs`                           | font size of the card body                                                  |
+|                 | `--cardtitle-fs`                      | font size of the card title                                                 |
 | Checkbox        | `--size`                              | size of the checkbox                                                        |
 | Countdown       | `--value`                             | value of the countdown                                                      |
 | Dropdown        | `--anchor-v`                          | vertical position of the anchor                                             |

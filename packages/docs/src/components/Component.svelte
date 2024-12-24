@@ -74,7 +74,7 @@
     <input
       type="radio"
       name={`tab_${uuid}`}
-      class="tab [--tab-padding:.75rem]"
+      class="tab [--tab-p:.75rem]"
       aria-label={$t("Preview")}
       checked="checked"
     />

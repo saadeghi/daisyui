@@ -261,6 +261,33 @@
       max-height: 32em;
     }
   }
+  .before-after {
+    display: grid;
+    gap: 0.5rem;
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    > :is(.remark-code-title, dt) {
+      opacity: 0.6;
+      letter-spacing: 0.2em;
+      padding-inline: 0.5rem;
+      margin-bottom: -0.5rem;
+      @media (width >= 64rem) {
+        text-align: center;
+        grid-row-start: 1;
+      }
+    }
+    > dd {
+      display: flex;
+      padding: 1rem;
+      background-color: var(--color-base-200);
+      min-height: 5rem;
+      border-radius: var(--radius-box);
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  }
 }
 .shiki {
   --shiki-bg: var(--color-neutral);

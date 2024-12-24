@@ -76,12 +76,14 @@
 
 .card-title {
   @apply flex items-center gap-2;
-  font-size: 1.25rem;
+  font-size: var(--cardtitle-fs, 1.125rem);
   font-weight: 600;
 }
 
 .card-body {
-  @apply flex flex-auto flex-col gap-2 p-8;
+  @apply flex flex-auto flex-col gap-2;
+  padding: var(--card-p, 2rem);
+  font-size: var(--card-fs, 0.875rem);
 
   :where(p) {
     @apply grow;
@@ -94,56 +96,56 @@
 
 .card-xs {
   .card-body {
-    @apply p-2;
-    font-size: 0.6875rem;
+    --card-p: 0.5rem;
+    --card-fs: 0.6875rem;
   }
 
   .card-title {
-    @apply mb-1;
+    --cardtitle-fs: 0.875rem;
   }
 }
 
 .card-sm {
   .card-body {
-    @apply p-4;
-    font-size: 0.75rem;
+    --card-p: 1rem;
+    --card-fs: 0.75rem;
   }
 
   .card-title {
-    @apply mb-1;
+    --cardtitle-fs: 1rem;
   }
 }
 
 .card-md {
   .card-body {
-    @apply p-8;
-    font-size: 0.875rem;
+    --card-p: 1.5rem;
+    --card-fs: 0.875rem;
   }
 
   .card-title {
-    @apply mb-3;
+    --cardtitle-fs: 1.125rem;
   }
 }
 
 .card-lg {
   .card-body {
-    @apply p-10;
-    font-size: 1.125rem;
+    --card-p: 2rem;
+    --card-fs: 1rem;
   }
 
   .card-title {
-    @apply mb-4;
+    --cardtitle-fs: 1.25rem;
   }
 }
 
 .card-xl {
   .card-body {
-    @apply p-12;
-    font-size: 1.375rem;
+    --card-p: 2.5rem;
+    --card-fs: 1.125rem;
   }
 
   .card-title {
-    @apply mb-4;
+    --cardtitle-fs: 1.375rem;
   }
 }
 
