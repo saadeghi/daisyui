@@ -4,9 +4,7 @@ title: daisyUI 5 Alpha release notes (WIP)
 desc: Everything about the new daisyUI 5 release
 ---
 
-> :INFO:
->
-> Also check out [the changelog page](/docs/changelog/) for a detailed list changes in each component.
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-in-lab.webp" alt="daisyui 5">
 
 <details class="collapse collapse-arrow bg-base-100 border border-base-300 mt-6 mb-10">
 <summary class="collapse-title text-lg">Table of Contents</summary>
@@ -31,6 +29,11 @@ desc: Everything about the new daisyUI 5 release
 
 </div>
 </details>
+
+> :INFO:
+>
+> Also check out [the changelog page](/docs/changelog/) for a detailed list changes in each component.
+
 
 <!--
 
@@ -60,7 +63,7 @@ Let's begin!
   ```
 3. Add daisyUI to your CSS file
   
-  ```css:app.css
+  ```postcss:app.css
   @import "tailwindcss";
   @plugin "daisyui";
   ```
@@ -77,14 +80,16 @@ Let's begin!
 
 ### Tailwind CSS 4 compatibility
 
-daisyUI 5 works with Tailwind CSS 4. See [Tailwind CSS upgrade guide](https://tailwindcss.com/)
+Tailwind CSS 4 is crazy good! A lot of new features and improvements are added and also many changes to the plugin API.
+
+daisyUI 5 works with Tailwind CSS 4 and takes advantage of all the new features.
 
 With Tailwind CSS 4, you can now import daisyUI as a plugin in the CSS file.
 
 <div class="before-after">
 
 ```js:Before
-// tailwind.config.js
+// tailwind.config.{js,ts,mjs,cjs}
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   plugins: [
@@ -92,31 +97,56 @@ module.exports = {
   ],
 }
 ```
-```css:After
+```postcss:After
 /* app.css */
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+
+
+
 ```
 </div>
 
+See [Tailwind CSS upgrade guide](https://tailwindcss.com/docs/v4-beta) for more information.
+
 ### Zero dependencies
 
-daisyUI 5 has no dependencies. Let's clean up your node_modules!
+Reducing the number of dependencies in your project is important for many reasons. It leads to faster build times and better performance in your workflow. Fewer dependencies also make your app more secure by reducing the chance of potential for vulnerabilities from less maintained packages. Also, managing a smaller dependency tree makes maintenance easier and reduces the chance of deprecation problems or version conflict in the long term.
+
+Last year I reduced the number of dependencies in daisyUI, from ~100 (dependencies + sub-dependencies total) to 7!
+
+This time we got rid of all the remaining ones!  
+daisyUI 5 has no dependencies. Hopefully this helps to clean up your node_modules a little bit.
 
 <div class="before-after">
 
 ```js:Before
-Dependencies - 1123.72 kB total
-  ├╴ culori - 1060 kB
-  ├╴ picocolors - 6.22 kB
-  ├╴ postcss-js - 12.2 kB
-  ╰╴ css-selector-tokenizer - 45.3 kB
+Dependencies - Total 1.8 MB on disk (250 files)
+  ├╴ culori
+  ├╴ picocolors
+  ├╴ postcss-js
+  │  ╰╴ camelcase-css
+  ╰╴ css-selector-tokenizer
+     ├╴ cssesc
+     ╰╴ fastparse
 ```
 ```js:After
 No dependencies - 0 kB
 
+
+
+
+
+
+
+
 ```
 </div>
+
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/nature.webp" alt="daisyui-package">
+
 
 ### Smaller size
 
@@ -166,15 +196,18 @@ daisyUI 5 CDN file, including all possible class names, is 75% smaller in size
 
 It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5. This is the smallest 
 
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-cdn-size.webp" alt="daisyui 5 cdn size">
+
+
 ### Improved color variables
 
-With Tailwind CSS 3 and daisyUI 4, we had to extract the color values of each color into CSS variables, and pass it to CSS alongside a special `<alpha-value>` variable so Tailwind could generate opacity variables for each utility color.
+With Tailwind CSS 3 and daisyUI 4, we had to extract the color values of each color into CSS variables, and pass it to Tailwind CSS alongside a special `<alpha-value>` variable so Tailwind CSS could generate opacity variables for each color utility class.
 
 Tailwind CSS 4 doesn't have this limitation because it uses CSS `color-mix()` to control the opacity.
 
 With daisyUI 5 we can finally put the whole color inside CSS variables. All color formats are supported, no transformation is needed no JS object is needed.
 
-We also updated the variable names to be more readable in the output CSS:
+We also updated the variable names to be more readable in the output CSS, which means you can even customize the color values using the browser dev tools color picker.
 
 <div class="before-after">
 
@@ -230,6 +263,12 @@ We also updated the variable names to be more readable in the output CSS:
 ```
 </div>
 
+- [See the new color format in action](/theme-generator/)
+- [theme docs](/docs/themes/)
+- [color docs](/docs/colors/)
+
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/edit-daisyui-tailwindcss-colors-in-devtools.webp" alt="edit daisyui tailwindcss colors in devtools">
+
 ## 2. Build and integration improvements
 
 > :TLDR:
@@ -272,6 +311,10 @@ All components, all themes, and basically every single part of daisyUI library [
 
 Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
 
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/cdn-micro-css-files.webp" alt="Tailwind CSS component library daisyui CDN file">
+
+Check out the [CDN docs](/docs/cdn/) to customize the parts of the library you want to include in your project from the CDN.
+
 ### Include and Exclude parts of the library
 
 Now for the first time, it's possible to include/exclude specific parts of daisyUI library. For example if you only want to use the "Toggle" component, you can include only the "Toggle" component and exclude everything else!
@@ -280,8 +323,11 @@ Now for the first time, it's possible to include/exclude specific parts of daisy
 
 ```:Before
 Not possible
+
+
+
 ```
-```css:After
+```postcss:After
 @plugin "daisyui" {
   include: toggle;
 }
@@ -292,8 +338,11 @@ Or if you want to exclude a specific part of the library, you can do that too!
 
 ```:Before
 Not possible
+
+
+
 ```
-```css:After
+```postcss:After
 @plugin "daisyui" {
   exclude: scrollbar;
 }
@@ -309,6 +358,8 @@ Not possible
 > New component style modifiers: `*-soft` and `*-dash`.  
 > Color format flexibility.  
 > [:FF: Skip to the next section](#4-themes-and-styling)
+
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-theme-generator-effects.webp" alt="daisyui 5 noise effect and depth effect">
 
 ### New "Effect" CSS variables
 
@@ -346,6 +397,8 @@ The new default size scale is consistent and more visually appealing ...and it's
 | `lg`                  | <span class="text-error">8</span> × 4 = 32px | <span class="text-success">7</span> × 4 = 28px |
 | `xl`                  | -                                            | <span class="text-success">8</span> × 4 = 32px |
 
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/numbers-not-numbering.webp" alt="Numbers not Numbering">
+
 ### Size scale customization
 
 Component size scales are now customizable. Previously, customizing the size of components required a lot of manual work.  
@@ -363,6 +416,8 @@ Border size of buttons, inputs, tab, et are now customizable globally or per the
 - `--border` variable is used to define the border size of components like button, input, tab, etc.
 
 See how it works in the new [Theme Generator](/theme-generator/) page.
+
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-soft-button-dash-button.webp" alt="daisyui 5 soft button and dash button">
 
 ### New component styles: `soft`, `dash`
 
@@ -391,6 +446,7 @@ Themes and colors are what makes your website unique. We've made significant imp
 > New Theme Generator to create custom themes.  
 > [:FF: Skip to the next section](#5-new-components)
 
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-new-themes.webp" alt="daisyui 5 new tailwind css themes">
 
 ### New themes
 
@@ -404,9 +460,14 @@ daisyUI 5 includes 3 new themes:
 
 Most daisyUI themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
 
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/new-theme-generator.webp" alt="tailwind css color generator">
+
 ### All-new Theme Generator
 
 Check out the new [Theme Generator](/theme-generator/) page to create your own custom theme. Create, customize or extend themes, or generate stunning new themes using the new daisyUI color palette generator algorithm.
+
+[<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/tailwind-css-daisyui-theme-generator.webp" alt="tailwind css daisyui theme generator">](/theme-generator/)
+
 
 ## 5. New components
 
@@ -423,6 +484,8 @@ List is is useful for vertical layout to display information in rows. Imagine a 
 
 See [List component docs](/components/list/)
 
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/list.webp" alt="daisyui tailwind list">
+
 ### Status
 
 Status is a really small icon to visually show the current status of an element, like online, offline, error, etc.
@@ -431,11 +494,15 @@ Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
 See [Status component docs](/components/status/)
 
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/status.webp" alt="daisyui tailwind status">
+
 ### Fieldset
 
 Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and fieldset-label as a description.
 
 See [Fieldset component docs](/components/fieldset/)
+
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/fieldset.webp" alt="daisyui tailwind fieldset">
 
 ### Label
 
@@ -443,11 +510,15 @@ Label provides a name or title for an input field. Label can be placed before or
 
 See [Label component docs](/components/label/)
 
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/label.webp" alt="daisyui tailwind label">
+
 ### Filter
 
 Filter is a group of radio buttons. Choosing one of the options will hide the others and shows a reset button next to the chosen option.
 
 See [Filter component docs](/components/filter/)
+
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/filter.webp" alt="daisyui tailwind filter">
 
 ### Calendar
 
@@ -460,11 +531,15 @@ This means you can use any of these libraries the style will be compatible with 
 
 See [Calendar component docs](/components/calendar/)
 
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/calendar.webp" alt="daisyui tailwind calendar">
+
 ### Validator
 
 Validator class changes the color of form elements to `error` or `success` based on input's validation rules. It can also show a hint text below the input if it's invalid.
 
 See [Validator component docs](/components/validator/)
+
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/validator.webp" alt="daisyui tailwind validator">
 
 ### Dock
 
@@ -474,6 +549,8 @@ Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
 See [Dock component docs](/components/dock/)
 
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/dock.webp" alt="daisyui tailwind dock">
+  
 ## 6. Major component improvements
 
 These components had significant improvements in daisyUI 5, including new modifiers, new features, and better customization options.
@@ -522,6 +599,8 @@ These components have been improved to be more visually appealing:
 - **[Radial Progress](/components/radial-progress/)**
 - **[Mockups](/components/mockup-browser/)**
 
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="daisyui tailwind xl button">
+
 ## 8. Component size scale improvements
 
 > :TLDR:
@@ -556,6 +635,8 @@ Size scale of these components has been improved to be more consistent:
 - **[Tab](/components/tab/)**
 - **[Loading](/components/loading/)**
 
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-changelog.webp" alt="daisyui changelog">
+
 ## 9. Detailed Changelog
 
 > :TLDR:
@@ -564,15 +645,15 @@ Size scale of these components has been improved to be more consistent:
 > [:FF: Skip to the next section](#10-breaking-changes-in-class-names)
 
 Summary of changes:
-- Many components received style updates (new variants, improved aesthetics).  
-- Size scales were adjusted and standardized across components.  
-- Accessibility improvements implemented in multiple areas.  
-- Bug fixes addressed across the library.  
-- New features and expanded customization options added to various components.  
-- Several components received significant structural refactoring for improved compatibility and maintainability.  
-- Responsive design capabilities enhanced.  
-- Improved support for various browsers and devices.  
-- Print-friendliness improved for several components.  
+- Visual style updates.
+- Size adjustments.
+- Accessibility improvements.
+- Bug fixes.
+- New features and more customization options.
+- Structure changes for a few parts of component.
+- Responsive design improved.
+- Print-friendly styles for many components.
+- Some classes were renamed, some unused ones were removed (Read next section for details).
 
 [Read the detailed changelog for each component](/docs/changelog/)  
 
@@ -611,6 +692,8 @@ Summary of changes:
 - Delete width/height of items inside the `stack`, use width/height for the `stack` itself.
 
 [Read the detailed changelog for each component](/docs/changelog/)  
+
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="tailwind css daisyui xl button">
 
 ## 11. Breaking changes in design system
 
@@ -704,112 +787,114 @@ And some of these bugs were related to a specific structure / style / behavior o
 If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug.
 
 - [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/saadeghi/daisyui/issues/3332)
-- [#3328: bug: DaisyUI 5: Even though the container element has justify-center, setting width to an `<input>` element doesn't shrink the `<input>` element v5](https://github.com/saadeghi/daisyui/issues/3328)
-- [#3325: bug: TS type declaration missing for themes/object v5](https://github.com/saadeghi/daisyui/issues/3325)
-- [#3322: bug: V5 Dropdown mispositioning using popover API and anchorpositioning v5](https://github.com/saadeghi/daisyui/issues/3322)
-- [#3320: bug: V5-alpha48 toggle misplaced in Firefox v5](https://github.com/saadeghi/daisyui/issues/3320)
-- [#3318: bug: Timeline Spacing v5](https://github.com/saadeghi/daisyui/issues/3318)
-- [#3316: bug: V5 glass does not work v5](https://github.com/saadeghi/daisyui/issues/3316)
-- [#3315: bug: Tab (legacy) visual pop when radio inputs are unchecked v5](https://github.com/saadeghi/daisyui/issues/3315)
-- [#3313: docs: DaisyUI v5 default theme v5](https://github.com/saadeghi/daisyui/issues/3313)
-- [#3312: docs: DaisyUI V5 themes color extraction v5](https://github.com/saadeghi/daisyui/issues/3312)
-- [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox v5](https://github.com/saadeghi/daisyui/issues/3294)
-- [#3281: bug: (v5): Select: does not wrap content with h-fit v5](https://github.com/saadeghi/daisyui/issues/3281)
-- [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color v5](https://github.com/saadeghi/daisyui/issues/3280)
-- [#3276: bug: dropdown-hover do not work on laptops with a touchscreen v5](https://github.com/saadeghi/daisyui/issues/3276)
-- [#3272: bug: themes that change the default font conflicts with the ones that does not. v5](https://github.com/saadeghi/daisyui/issues/3272)
-- [#3250: bug: tailwindcss neutral color compatibility with theme() v5](https://github.com/saadeghi/daisyui/issues/3250)
-- [#3245: bug: DaisyUI 5 doesn't override @tailwindcss/typography style of `<code>` element, leading to unreadable text. v5](https://github.com/saadeghi/daisyui/issues/3245)
-- [#3242: bug: DaisyUI 5: select is not wide enough, resulting in the select arrow overlapping with content v5](https://github.com/saadeghi/daisyui/issues/3242)
+- [#3328: bug: setting width to an `<input>` element doesn't shrink the `<input>` element](https://github.com/saadeghi/daisyui/issues/3328)
+- [#3325: bug: TS type declaration missing for themes/object](https://github.com/saadeghi/daisyui/issues/3325)
+- [#3322: bug: V5 Dropdown mispositioning using popover API and anchorpositioning](https://github.com/saadeghi/daisyui/issues/3322)
+- [#3320: bug: V5-alpha48 toggle misplaced in Firefox](https://github.com/saadeghi/daisyui/issues/3320)
+- [#3318: bug: Timeline Spacing](https://github.com/saadeghi/daisyui/issues/3318)
+- [#3316: bug: V5 glass does not work](https://github.com/saadeghi/daisyui/issues/3316)
+- [#3315: bug: Tab (legacy) visual pop when radio inputs are unchecked](https://github.com/saadeghi/daisyui/issues/3315)
+- [#3313: docs: DaisyUI v5 default theme](https://github.com/saadeghi/daisyui/issues/3313)
+- [#3312: docs: DaisyUI V5 themes color extraction](https://github.com/saadeghi/daisyui/issues/3312)
+- [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox](https://github.com/saadeghi/daisyui/issues/3294)
+- [#3281: bug: (v5): Select: does not wrap content with h-fit](https://github.com/saadeghi/daisyui/issues/3281)
+- [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color](https://github.com/saadeghi/daisyui/issues/3280)
+- [#3276: bug: dropdown-hover do not work on laptops with a touchscreen](https://github.com/saadeghi/daisyui/issues/3276)
+- [#3272: bug: themes that change the default font conflicts with the ones that does not.](https://github.com/saadeghi/daisyui/issues/3272)
+- [#3250: bug: tailwindcss neutral color compatibility with theme()](https://github.com/saadeghi/daisyui/issues/3250)
+- [#3245: bug: DaisyUI 5 doesn't override @tailwindcss/typography style of `<code>` element, leading to unreadable text.](https://github.com/saadeghi/daisyui/issues/3245)
+- [#3242: bug: DaisyUI 5: select is not wide enough, resulting in the select arrow overlapping with content](https://github.com/saadeghi/daisyui/issues/3242)
 - [#3232: bug: Some elements depend on using backgrounds, which break for print media](https://github.com/saadeghi/daisyui/issues/3232)
-- [#3231: bug: Diff component not working in Astro, Nextjs v5](https://github.com/saadeghi/daisyui/issues/3231)
-- [#3224: bug: mb-* override by timeline-compact when used with timeline-start but not timeline-end v5](https://github.com/saadeghi/daisyui/issues/3224)
-- [#3222: bug: invisible toast area blocks buttons v5](https://github.com/saadeghi/daisyui/issues/3222)
-- [#3218: bug: 'join-vertical md:join-horizontal' failed to set horizontal style border on nest join-item v5](https://github.com/saadeghi/daisyui/issues/3218)
-- [#3216: bug: btn btn-link btn-disabled looks like button but not link v5](https://github.com/saadeghi/daisyui/issues/3216)
-- [#3215: bug: Vertical scroll not functional when drawer is open on screens under 1024px width v5](https://github.com/saadeghi/daisyui/issues/3215)
-- [#3203: bug: Browser mockup component's search icon is broken in Safari v5](https://github.com/saadeghi/daisyui/issues/3203)
-- [#3202: bug: Non-animated buttons behave strangely when active in Firefox v5](https://github.com/saadeghi/daisyui/issues/3202)
-- [#3188: bug: menu item modifier not works with selector v5](https://github.com/saadeghi/daisyui/issues/3188)
-- [#3176: bug: range in rtl mode show wrong bar v5](https://github.com/saadeghi/daisyui/issues/3176)
-- [#3170: bug: Invalid CSS generated when child of an element with the "btm-nav" class has the "active" class that uses a media query v5](https://github.com/saadeghi/daisyui/issues/3170)
-- [#3169: docs: position Drawer component seem not working v5](https://github.com/saadeghi/daisyui/issues/3169)
-- [#3166: bug: scrollbar-color causing unnecessary repaints v5](https://github.com/saadeghi/daisyui/issues/3166)
-- [#3160: docs: Navigation does not work due to call to navigator.sendBeacon() v5](https://github.com/saadeghi/daisyui/issues/3160)
-- [#3157: bug: Chat bubble visibly split with white line v5](https://github.com/saadeghi/daisyui/issues/3157)
-- [#3155: docs: Modal that closes when clicked outside v5](https://github.com/saadeghi/daisyui/issues/3155)
-- [#3153: Weird behaviour when buttons include HTML elements (seen when adding the v3/4 loading spinner spans) v5](https://github.com/saadeghi/daisyui/issues/3153)
-- [#3148: bug: Diff component not working on Firefox. v5](https://github.com/saadeghi/daisyui/issues/3148)
-- [#3141: bug: dropdown breaks in tables with overflow applied v5](https://github.com/saadeghi/daisyui/issues/3141)
-- [#3128: bug: collapse with arrow or plus crashes edge v5](https://github.com/saadeghi/daisyui/issues/3128)
-- [#3117: bug: Media breakpoint doesn't seem to apply with menu-horizontal v5](https://github.com/saadeghi/daisyui/issues/3117)
-- [#3116: bug: Nesting Collapse in Dropdown menu results in unintended Dropdown behaviour v5](https://github.com/saadeghi/daisyui/issues/3116)
-- [#3078: bug: tabpanel on the *real* device does not fill full width. v5](https://github.com/saadeghi/daisyui/issues/3078)
-- [#3071: bug: White area overlays part of the drawer's content v5](https://github.com/saadeghi/daisyui/issues/3071)
-- [#3060: bug: stepper (active step) z-index is higher then of the drawer v5](https://github.com/saadeghi/daisyui/issues/3060)
-- [#3053: bug: Lagging on the opening animation of collapse components only on Firefox v5](https://github.com/saadeghi/daisyui/issues/3053)
-- [#3040: bug: Modal Dialog Adds A None Existent Scrollbar Spacing To Backdrop v5](https://github.com/saadeghi/daisyui/issues/3040)
-- [#3027: bug: tabs boxed with radio forces unrounded bottom corners v5](https://github.com/saadeghi/daisyui/issues/3027)
-- [#2988: bug: Tabs using grid-span: 9999 v5](https://github.com/saadeghi/daisyui/issues/2988)
-- [#2987: bug: The theme color is incorrect in yarn serve mode after Docusaurus is built v5](https://github.com/saadeghi/daisyui/issues/2987)
-- [#2979: bug: menu-horizontal submenus styled differently when using menu-dropdown vs details v5](https://github.com/saadeghi/daisyui/issues/2979)
-- [#2975: bug: btn doesn't accept --fallback tokens as first option. v5](https://github.com/saadeghi/daisyui/issues/2975)
-- [#2965: bug: The .collapse-content and .collapse-title extend beyond the width of the .collapse elementi itself v5](https://github.com/saadeghi/daisyui/issues/2965)
-- [#2950: docs: Inaccessible components / wrong advice on docs. v5](https://github.com/saadeghi/daisyui/issues/2950)
-- [#2867: bug: Sidebar-drawer component overlay does not overlay table pinned rows v5](https://github.com/saadeghi/daisyui/issues/2867)
-- [#2865: bug: Disabled inputs and buttons have inconsistent styling v5](https://github.com/saadeghi/daisyui/issues/2865)
-- [#2862: bug: long string in menu does not wrap in safari (with temp solution) v5](https://github.com/saadeghi/daisyui/issues/2862)
-- [#2850: bug: Broken transition on collapse when using Firefox (macOS) v5](https://github.com/saadeghi/daisyui/issues/2850)
-- [#2833: bug: diff adjusting doesn't work on Firefox for Android v5](https://github.com/saadeghi/daisyui/issues/2833)
-- [#2802: bug: table has relative position causing issues v5](https://github.com/saadeghi/daisyui/issues/2802)
-- [#2800: bug: Long tab names are squished v5](https://github.com/saadeghi/daisyui/issues/2800)
-- [#2796: bug: custom background color of button at file input v5](https://github.com/saadeghi/daisyui/issues/2796)
-- [#2735: bug: Tab content width on Safari v5](https://github.com/saadeghi/daisyui/issues/2735)
-- [#2734: bug: CDN installation does not recognize submit button v5](https://github.com/saadeghi/daisyui/issues/2734)
-- [#2725: bug: Collapse with icon, Arrow is jumping but plus/minus icon seems ok v5](https://github.com/saadeghi/daisyui/issues/2725)
-- [#2689: bug: Hover styles are not working on Firefox (Windows & Android) v5](https://github.com/saadeghi/daisyui/issues/2689)
-- [#2684: bug: diff dragging does not keep up with mouse, !chrome v5](https://github.com/saadeghi/daisyui/issues/2684)
-- [#2678: bug: Tab text wrap with large content v5](https://github.com/saadeghi/daisyui/issues/2678)
-- [#2669: bug: "Important" setting from tailwind is not followed v5](https://github.com/saadeghi/daisyui/issues/2669)
-- [#2667: bug: Modal with responsive on small screen with animation jitter v5](https://github.com/saadeghi/daisyui/issues/2667)
-- [#2653: bug: Wrong inferred type when importing daisyUI v5](https://github.com/saadeghi/daisyui/issues/2653)
-- [#2643: bug: Tab in boxed mode source their colors on --p/--pc instead of --tab-bg/--tab-border-color v5](https://github.com/saadeghi/daisyui/issues/2643)
-- [#2637: bug: navbar do not get invisible in firefox v5](https://github.com/saadeghi/daisyui/issues/2637)
-- [#2626: bug: Submenu Display is not correct on Firefox and Safari v5](https://github.com/saadeghi/daisyui/issues/2626)
-- [#2619: bug: Skeleton not visible enough under dark themes v5](https://github.com/saadeghi/daisyui/issues/2619)
-- [#2615: bug: Accordion not animating height v5](https://github.com/saadeghi/daisyui/issues/2615)
-- [#2605: bug: Non join-item sibling affects last join-item v5](https://github.com/saadeghi/daisyui/issues/2605)
-- [#2597: docs: Theme Generator ignore theme v5](https://github.com/saadeghi/daisyui/issues/2597)
-- [#2571: bug: Dropdown affects height while hidden v5](https://github.com/saadeghi/daisyui/issues/2571)
-- [#2570: bug: Loading spinner on Safari v5](https://github.com/saadeghi/daisyui/issues/2570)
-- [#2564: bug: accordions and collapses don't open in safari 15.1 v5](https://github.com/saadeghi/daisyui/issues/2564)
-- [#2502: bug: Dialog-type modals dont fade in the background tint. v5](https://github.com/saadeghi/daisyui/issues/2502)
-- [#2442: bug: Carousel buttons not functioning v5](https://github.com/saadeghi/daisyui/issues/2442)
-- [#2415: bug: columns overlap on pinned column with rowspan, & only the first and last `<th>` tags get pinned v5](https://github.com/saadeghi/daisyui/issues/2415)
-- [#2413: bug: Joins cannot be nested v5](https://github.com/saadeghi/daisyui/issues/2413)
-- [#2410: bug: wrong chat bubble spacing in Safari when inside a column flex box v5](https://github.com/saadeghi/daisyui/issues/2410)
-- [#2375: bug: Bottom navigation scroll problem in chorme (IOS) v5](https://github.com/saadeghi/daisyui/issues/2375)
-- [#2296: bug: multiple dialog crashes the page v5](https://github.com/saadeghi/daisyui/issues/2296)
-- [#2223: bug: `<dialog>` element items are focusable, even when `<dialog>` element is closed v5](https://github.com/saadeghi/daisyui/issues/2223)
-- [#2172: bug: Accordion crashes using checkboxes inside collapse-content v5](https://github.com/saadeghi/daisyui/issues/2172)
-- [#2137: bug: Accordion. Content is jumping down and up v5](https://github.com/saadeghi/daisyui/issues/2137)
-- [#2115: bug: Dropdown inside join is not rounded v5](https://github.com/saadeghi/daisyui/issues/2115)
-- [#1929: bug: v3 Join Buttons overlap when clicked v5](https://github.com/saadeghi/daisyui/issues/1929)
-- [#1922: bug: option with 'disabled' and 'selected' attributes have a weird behavior on Chromium-based browser v5](https://github.com/saadeghi/daisyui/issues/1922)
-- [#1831: bug: gap in tooltip arrow v5](https://github.com/saadeghi/daisyui/issues/1831)
-- [#1744: bug: Aliasing issues for Radial progress v5](https://github.com/saadeghi/daisyui/issues/1744)
-- [#1732: bug: Bad placement of the buttons in the bottom-navigation in iOS PWA mode v5](https://github.com/saadeghi/daisyui/issues/1732)
-- [#1672: bug: All component's CSS ends up in build output? v5](https://github.com/saadeghi/daisyui/issues/1672)
-- [#865: Docs Reset theme generator values respectively v5](https://github.com/saadeghi/daisyui/issues/865)
-- [#694: Bug: Website theme generator keeps text formatting on paste documentation v5](https://github.com/saadeghi/daisyui/issues/694)
+- [#3231: bug: Diff component not working in Astro, Nextjs](https://github.com/saadeghi/daisyui/issues/3231)
+- [#3224: bug: mb-* override by timeline-compact when used with timeline-start but not timeline-end](https://github.com/saadeghi/daisyui/issues/3224)
+- [#3222: bug: invisible toast area blocks buttons](https://github.com/saadeghi/daisyui/issues/3222)
+- [#3218: bug: 'join-vertical md:join-horizontal' failed to set horizontal style border on nest join-item](https://github.com/saadeghi/daisyui/issues/3218)
+- [#3216: bug: btn btn-link btn-disabled looks like button but not link](https://github.com/saadeghi/daisyui/issues/3216)
+- [#3215: bug: Vertical scroll not functional when drawer is open on screens under 1024px width](https://github.com/saadeghi/daisyui/issues/3215)
+- [#3203: bug: Browser mockup component's search icon is broken in Safari](https://github.com/saadeghi/daisyui/issues/3203)
+- [#3202: bug: Non-animated buttons behave strangely when active in Firefox](https://github.com/saadeghi/daisyui/issues/3202)
+- [#3188: bug: menu item modifier not works with selector](https://github.com/saadeghi/daisyui/issues/3188)
+- [#3176: bug: range in rtl mode show wrong bar](https://github.com/saadeghi/daisyui/issues/3176)
+- [#3170: bug: Invalid CSS generated when child of an element with the "btm-nav" class has the "active" class that...](https://github.com/saadeghi/daisyui/issues/3170)
+- [#3169: docs: position Drawer component seem not working](https://github.com/saadeghi/daisyui/issues/3169)
+- [#3166: bug: scrollbar-color causing unnecessary repaints](https://github.com/saadeghi/daisyui/issues/3166)
+- [#3160: docs: Navigation does not work due to call to navigator.sendBeacon()](https://github.com/saadeghi/daisyui/issues/3160)
+- [#3157: bug: Chat bubble visibly split with white line](https://github.com/saadeghi/daisyui/issues/3157)
+- [#3155: docs: Modal that closes when clicked outside](https://github.com/saadeghi/daisyui/issues/3155)
+- [#3153: Weird behaviour when buttons include HTML elements (seen when adding the v3/4 loading spinner spans)](https://github.com/saadeghi/daisyui/issues/3153)
+- [#3148: bug: Diff component not working on Firefox.](https://github.com/saadeghi/daisyui/issues/3148)
+- [#3141: bug: dropdown breaks in tables with overflow applied](https://github.com/saadeghi/daisyui/issues/3141)
+- [#3128: bug: collapse with arrow or plus crashes edge](https://github.com/saadeghi/daisyui/issues/3128)
+- [#3117: bug: Media breakpoint doesn't seem to apply with menu-horizontal](https://github.com/saadeghi/daisyui/issues/3117)
+- [#3116: bug: Nesting Collapse in Dropdown menu results in unintended Dropdown behaviour](https://github.com/saadeghi/daisyui/issues/3116)
+- [#3078: bug: tabpanel on the *real* device does not fill full width.](https://github.com/saadeghi/daisyui/issues/3078)
+- [#3071: bug: White area overlays part of the drawer's content](https://github.com/saadeghi/daisyui/issues/3071)
+- [#3060: bug: stepper (active step) z-index is higher then of the drawer](https://github.com/saadeghi/daisyui/issues/3060)
+- [#3053: bug: Lagging on the opening animation of collapse components only on Firefox](https://github.com/saadeghi/daisyui/issues/3053)
+- [#3040: bug: Modal Dialog Adds A None Existent Scrollbar Spacing To Backdrop](https://github.com/saadeghi/daisyui/issues/3040)
+- [#3027: bug: tabs boxed with radio forces unrounded bottom corners](https://github.com/saadeghi/daisyui/issues/3027)
+- [#2988: bug: Tabs using grid-span: 9999](https://github.com/saadeghi/daisyui/issues/2988)
+- [#2987: bug: The theme color is incorrect in yarn serve mode after Docusaurus is built](https://github.com/saadeghi/daisyui/issues/2987)
+- [#2979: bug: menu-horizontal submenus styled differently when using menu-dropdown vs details](https://github.com/saadeghi/daisyui/issues/2979)
+- [#2975: bug: btn doesn't accept --fallback tokens as first option.](https://github.com/saadeghi/daisyui/issues/2975)
+- [#2965: bug: The .collapse-content and .collapse-title extend beyond the width of the .collapse elementi itself](https://github.com/saadeghi/daisyui/issues/2965)
+- [#2950: docs: Inaccessible components / wrong advice on docs.](https://github.com/saadeghi/daisyui/issues/2950)
+- [#2867: bug: Sidebar-drawer component overlay does not overlay table pinned rows](https://github.com/saadeghi/daisyui/issues/2867)
+- [#2865: bug: Disabled inputs and buttons have inconsistent styling](https://github.com/saadeghi/daisyui/issues/2865)
+- [#2862: bug: long string in menu does not wrap in safari (with temp solution)](https://github.com/saadeghi/daisyui/issues/2862)
+- [#2850: bug: Broken transition on collapse when using Firefox (macOS)](https://github.com/saadeghi/daisyui/issues/2850)
+- [#2833: bug: diff adjusting doesn't work on Firefox for Android](https://github.com/saadeghi/daisyui/issues/2833)
+- [#2802: bug: table has relative position causing issues](https://github.com/saadeghi/daisyui/issues/2802)
+- [#2800: bug: Long tab names are squished](https://github.com/saadeghi/daisyui/issues/2800)
+- [#2796: bug: custom background color of button at file input](https://github.com/saadeghi/daisyui/issues/2796)
+- [#2735: bug: Tab content width on Safari](https://github.com/saadeghi/daisyui/issues/2735)
+- [#2734: bug: CDN installation does not recognize submit button](https://github.com/saadeghi/daisyui/issues/2734)
+- [#2725: bug: Collapse with icon, Arrow is jumping but plus/minus icon seems ok](https://github.com/saadeghi/daisyui/issues/2725)
+- [#2689: bug: Hover styles are not working on Firefox (Windows & Android)](https://github.com/saadeghi/daisyui/issues/2689)
+- [#2684: bug: diff dragging does not keep up with mouse, !chrome](https://github.com/saadeghi/daisyui/issues/2684)
+- [#2678: bug: Tab text wrap with large content](https://github.com/saadeghi/daisyui/issues/2678)
+- [#2669: bug: "Important" setting from tailwind is not followed](https://github.com/saadeghi/daisyui/issues/2669)
+- [#2667: bug: Modal with responsive on small screen with animation jitter](https://github.com/saadeghi/daisyui/issues/2667)
+- [#2653: bug: Wrong inferred type when importing daisyUI](https://github.com/saadeghi/daisyui/issues/2653)
+- [#2643: bug: Tab in boxed mode source their colors on --p/--pc instead of --tab-bg/--tab-border-color](https://github.com/saadeghi/daisyui/issues/2643)
+- [#2637: bug: navbar do not get invisible in firefox](https://github.com/saadeghi/daisyui/issues/2637)
+- [#2626: bug: Submenu Display is not correct on Firefox and Safari](https://github.com/saadeghi/daisyui/issues/2626)
+- [#2619: bug: Skeleton not visible enough under dark themes](https://github.com/saadeghi/daisyui/issues/2619)
+- [#2615: bug: Accordion not animating height](https://github.com/saadeghi/daisyui/issues/2615)
+- [#2605: bug: Non join-item sibling affects last join-item](https://github.com/saadeghi/daisyui/issues/2605)
+- [#2597: docs: Theme Generator ignore theme](https://github.com/saadeghi/daisyui/issues/2597)
+- [#2571: bug: Dropdown affects height while hidden](https://github.com/saadeghi/daisyui/issues/2571)
+- [#2570: bug: Loading spinner on Safari](https://github.com/saadeghi/daisyui/issues/2570)
+- [#2564: bug: accordions and collapses don't open in safari 15.1](https://github.com/saadeghi/daisyui/issues/2564)
+- [#2502: bug: Dialog-type modals dont fade in the background tint.](https://github.com/saadeghi/daisyui/issues/2502)
+- [#2442: bug: Carousel buttons not functioning](https://github.com/saadeghi/daisyui/issues/2442)
+- [#2415: bug: columns overlap on pinned column with rowspan, & only the first and last `<th>` tags get pinned](https://github.com/saadeghi/daisyui/issues/2415)
+- [#2413: bug: Joins cannot be nested](https://github.com/saadeghi/daisyui/issues/2413)
+- [#2410: bug: wrong chat bubble spacing in Safari when inside a column flex box](https://github.com/saadeghi/daisyui/issues/2410)
+- [#2375: bug: Bottom navigation scroll problem in chorme (IOS)](https://github.com/saadeghi/daisyui/issues/2375)
+- [#2296: bug: multiple dialog crashes the page](https://github.com/saadeghi/daisyui/issues/2296)
+- [#2223: bug: `<dialog>` element items are focusable, even when `<dialog>` element is closed](https://github.com/saadeghi/daisyui/issues/2223)
+- [#2172: bug: Accordion crashes using checkboxes inside collapse-content](https://github.com/saadeghi/daisyui/issues/2172)
+- [#2137: bug: Accordion. Content is jumping down and up](https://github.com/saadeghi/daisyui/issues/2137)
+- [#2115: bug: Dropdown inside join is not rounded](https://github.com/saadeghi/daisyui/issues/2115)
+- [#1929: bug: v3 Join Buttons overlap when clicked](https://github.com/saadeghi/daisyui/issues/1929)
+- [#1922: bug: option with 'disabled' and 'selected' attributes have a weird behavior on Chromium-based browser](https://github.com/saadeghi/daisyui/issues/1922)
+- [#1831: bug: gap in tooltip arrow](https://github.com/saadeghi/daisyui/issues/1831)
+- [#1744: bug: Aliasing issues for Radial progress](https://github.com/saadeghi/daisyui/issues/1744)
+- [#1732: bug: Bad placement of the buttons in the bottom-navigation in iOS PWA mode](https://github.com/saadeghi/daisyui/issues/1732)
+- [#1672: bug: All component's CSS ends up in build output?](https://github.com/saadeghi/daisyui/issues/1672)
+- [#865: Docs Reset theme generator values respectively](https://github.com/saadeghi/daisyui/issues/865)
+- [#694: Bug: Website theme generator keeps text formatting on paste documentation](https://github.com/saadeghi/daisyui/issues/694)
 
-Please report any bugs you find in the new version on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) 🙏
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/fixed-everything.webp" alt="tailwind css">
+
+Please report any new bugs you find to [GitHub issues](https://github.com/saadeghi/daisyui/issues) 🙏
 
 ## 15. What to expect in the final release
 
 > :TLDR:
 >
-> TLDR – No major changes are planned before the final release. Only bug fixes.  
+> TLDR – No additional major changes are planned until the final release. Only bug fixes.  
 > [⤴️ Go back to the top](#)
 
 daisyUI 5.0.0 stable version will be release after the beta period. No major changes are planned before the final release. The focus will be on fixing bugs and improving documentation.  
@@ -821,3 +906,5 @@ If you tested the Beta version locally and you are 100% sure everything is worki
 Join us at [daisyUI Discord server](http://localhost:3000/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.
 
 Also check out [the changelog page](/docs/changelog/) for a detailed list changes in each component.
+
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-beta-production.webp" alt="daisyui-5-beta-production">

@@ -18,7 +18,22 @@ const __dirname = path.dirname(__filename)
 const theme = JSON.parse(await fs.readFile(path.join(__dirname, "shiki.theme.json"), "utf-8"))
 
 const highlighter = await createHighlighter({
-  langs: ["bash", "css", "diff", "html", "js", "json", "jsx", "md", "svelte", "ts", "tsx", "vue"],
+  langs: [
+    "bash",
+    "css",
+    "postcss",
+    "sass",
+    "diff",
+    "html",
+    "js",
+    "json",
+    "jsx",
+    "md",
+    "svelte",
+    "ts",
+    "tsx",
+    "vue",
+  ],
   themes: [theme],
   // transformers: [transformerNotationHighlight()],
 })

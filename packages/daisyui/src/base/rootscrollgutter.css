@@ -6,4 +6,5 @@
     .drawer:not(.drawer-open) > .drawer-toggle:checked
   ) {
   scrollbar-gutter: stable;
+  background-color: color-mix(in srgb, var(--color-base-100), oklch(0% 0 0) 40%);
 }
