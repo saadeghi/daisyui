@@ -18,7 +18,7 @@
       href="/docs/v5-beta/"
       class="btn btn-soft group btn-sm [width:clamp(20rem,100%,30rem)] rounded-full"
     >
-      🌼 daisyUI 4 alpha release notes
+      🌼 daisyUI 5 alpha release notes
     </a>
   </div>
 {/if}
