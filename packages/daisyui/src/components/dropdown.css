@@ -29,6 +29,9 @@
   &.dropdown-open,
   &:not(.dropdown-hover):focus,
   &:focus-within {
+    [tabindex]:first-child {
+      @apply pointer-events-none;
+    }
     .dropdown-content {
       @apply opacity-100;
       display: revert;

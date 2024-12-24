@@ -153,6 +153,11 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Improved focus styling for better accessibility.
 - Adjust size scale to fit with other components.
 
+### Countdown
+
+🆕 Additions
+- Accessibility improvements for screen readers.
+
 ### Diff
 
 🆕 Additions
@@ -179,6 +184,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 ### Dropdown
 
 🆕 Additions
+- Using CSS focus method, clicking the dropdown button again will now close the dropdown ✅
 - Added support for the new HTML [`popover`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover) attribute. HTML popover is the new standard for creating dropdowns in HTML. It prevents any overflow edgecase issues and any z-index issues.
 - Added support for the new CSS [`Anchor positioning`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning) (Currently only works on Chromium-based browsers. Other browsers will position the dropdown on the middle of the screen, like a modal).
 
@@ -350,6 +356,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🆕 Additions
 - Added animation to `--value` when it changes.
+- Accessibility improvements for screen readers.
 
 ### Radio
 
@@ -370,6 +377,9 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Improve size scale to fit with other components.
 
 ### Rating
+
+🆕 Additions
+- Accessibility improvements for screen readers.
 
 🔧 Changes
 - Fix the issue of unchecked radio inputs looking like checked ones.
@@ -451,6 +461,8 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Adjusted padding, font-size, and height to match other components.
 - Added ability to customize the tab height form theme CSS variables. Check out the [Theme Generator](/theme-generator/) page to see how it works.
 - Added new `tabs-top` and `tabs-bottom` positioning options.
+- Accessibility improvements for screen readers.
+
 
 🔧 Changes
 - Changed and refactored `tabs` and `tab-content` form a grid to flex, allowing us to fix the unstable margin issue at the end of the `tab-content` which was a side-effect of using infinite grid columns in v4, to push the tabs to the left while keeping the content full width. flex and flex order gives us more control over in this layout.

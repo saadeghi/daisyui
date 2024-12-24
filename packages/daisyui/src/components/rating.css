@@ -25,7 +25,8 @@
   * {
     &:checked,
     &[aria-checked="true"],
-    &:has(~ *:checked, ~ *[aria-checked="true"]) {
+    &[aria-current="true"],
+    &:has(~ *:checked, ~ *[aria-checked="true"], ~ *[aria-current="true"]) {
       @apply opacity-100;
     }
 

@@ -567,14 +567,17 @@ These components had significant improvements in daisyUI 5, including new modifi
 - **[Button](/components/button/)** – New hover behavior for ghost/outline styles, new soft/dash styles
 - **[Card](/components/card/)** – New radio card functionality, new dash variant
 - **[Checkbox](/components/checkbox/)** – New design, accessibility improvements
+- **[Countdown](/components/countdown/)** – Accessibility improvements
 - **[Diff](/components/diff/)** – Better iOS Safari support, improved Firefox performance, accessibility improvements
 - **[Dock (formerly bottom-navigation)](/components/dock/)** – New design, accessibility improvements
 - **[Drawer](/components/drawer/)** – Improved accessibility
-- **[Dropdown](/components/dropdown/)** – Popover API and anchor positioning support, new dropdown-center modifier, accessibility improvements
+- **[Dropdown](/components/dropdown/)** – Popover API, Anchor Positioning, new dropdown-center modifier, accessibility improvements, clicking the button will toggle the dropdown if it's open.
 - **[Footer](/components/footer/)** – New horizontal/vertical layout options
 - **[Join](/components/join/)** – Improved structure compatibility
 - **[Modal](/components/modal/)** – New positioning options (modal-start, modal-end, modal-top), accessibility improvements
 - **[Radio](/components/checkbox/)** – New design, accessibility improvements
+- **[Radial Progress](/components/radial-progress/)** – accessibility improvements
+- **[Rating](/components/rating/)** – accessibility improvements
 - **[Stack](/components/stack/)** – New CSS grid layout, new directional options
 - **[Steps](/components/steps/)** – Accessibility improvements
 - **[Tab](/components/tab/)** – New tabs-border style, new top/bottom positioning, accessibility improvements
@@ -790,7 +793,7 @@ Some of these bugs were fixed automatically by the new changes in changes in the
 
 And some of these bugs were related to a specific structure / style / behavior of components and changing them in a patch release would have caused breaking changes for all existing projects. We had to wait for the major release to apply these changes.  
 
-If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug.
+If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug or let me know if a bug is closed by mistake 💚
 
 - [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/saadeghi/daisyui/issues/3332)
 - [#3328: bug: setting width to an `<input>` element doesn't shrink the `<input>` element](https://github.com/saadeghi/daisyui/issues/3328)
@@ -802,6 +805,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#3315: bug: Tab (legacy) visual pop when radio inputs are unchecked](https://github.com/saadeghi/daisyui/issues/3315)
 - [#3313: docs: DaisyUI v5 default theme](https://github.com/saadeghi/daisyui/issues/3313)
 - [#3312: docs: DaisyUI V5 themes color extraction](https://github.com/saadeghi/daisyui/issues/3312)
+- [#3308: bug: Rating unchecked displays all as checked](https://github.com/saadeghi/daisyui/issues/3308)
 - [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox](https://github.com/saadeghi/daisyui/issues/3294)
 - [#3281: bug: (v5): Select: does not wrap content with h-fit](https://github.com/saadeghi/daisyui/issues/3281)
 - [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color](https://github.com/saadeghi/daisyui/issues/3280)
