@@ -201,7 +201,7 @@ module.exports = {`{`}
       role="tabpanel"
       class="bg-neutral text-neutral-content rounded-box tab-content relative w-full p-4 text-left shadow-lg">
       <pre dir="ltr"><code><span class="badge badge-lg">import daisyui from "daisyui"</span>
-module.exports = {`{`}
+export default {`{`}
   <span class="text-neutral-content/30">//...</span>
   plugins: [
     <span class="badge badge-lg">daisyui,</span>
