@@ -10,6 +10,8 @@ classnames:
   - class: textarea-ghost
     desc: ghost style
   color:
+  - class: textarea-neutral
+    desc: neutral color
   - class: textarea-primary
     desc: primary color
   - class: textarea-secondary
@@ -76,6 +78,7 @@ classnames:
   <textarea type="text" placeholder="Primary" class="textarea textarea-primary"></textarea>
   <textarea type="text" placeholder="Secondary" class="textarea textarea-secondary"></textarea>
   <textarea type="text" placeholder="Accent" class="textarea textarea-accent"></textarea>
+  <textarea type="text" placeholder="Accent" class="textarea textarea-neutral"></textarea>
   <textarea type="text" placeholder="Info" class="textarea textarea-info"></textarea>
   <textarea type="text" placeholder="Success" class="textarea textarea-success"></textarea>
   <textarea type="text" placeholder="Warning" class="textarea textarea-warning"></textarea>
@@ -83,13 +86,14 @@ classnames:
 </div>
 
 ```html
-<textarea type="text" placeholder="Primary" class="$$input textareatextarea-primary"></textarea>
-<textarea type="text" placeholder="Secondary" class="$$input textareatextarea-secondary"></textarea>
-<textarea type="text" placeholder="Accent" class="$$input textareatextarea-accent"></textarea>
-<textarea type="text" placeholder="Info" class="$$input textareatextarea-info"></textarea>
-<textarea type="text" placeholder="Success" class="$$input textareatextarea-success"></textarea>
-<textarea type="text" placeholder="Warning" class="$$input textareatextarea-warning"></textarea>
-<textarea type="text" placeholder="Error" class="$$input textareatextarea-error"></textarea>
+<textarea type="text" placeholder="Primary" class="$$textarea $$textarea-primary"></textarea>
+<textarea type="text" placeholder="Secondary" class="$$textarea $$textarea-secondary"></textarea>
+<textarea type="text" placeholder="Accent" class="$$textarea $$textarea-accent"></textarea>
+<textarea type="text" placeholder="Accent" class="$$textarea $$textarea-neutral"></textarea>
+<textarea type="text" placeholder="Info" class="$$textarea $$textarea-info"></textarea>
+<textarea type="text" placeholder="Success" class="$$textarea $$textarea-success"></textarea>
+<textarea type="text" placeholder="Warning" class="$$textarea $$textarea-warning"></textarea>
+<textarea type="text" placeholder="Error" class="$$textarea $$textarea-error"></textarea>
 ```
 
 ### ~Sizes
