@@ -10,6 +10,8 @@ classnames:
   - class: file-input-ghost
     desc: ghost style
   color:
+  - class: file-input-neutral
+    desc: neutral color
   - class: file-input-primary
     desc: primary color
   - class: file-input-secondary
@@ -97,6 +99,7 @@ classnames:
   <input type="file" class="file-input file-input-primary" />
   <input type="file" class="file-input file-input-secondary" />
   <input type="file" class="file-input file-input-accent" />
+  <input type="file" class="file-input file-input-neutral" />
   <input type="file" class="file-input file-input-info" />
   <input type="file" class="file-input file-input-success" />
   <input type="file" class="file-input file-input-warning" />
@@ -107,6 +110,7 @@ classnames:
 <input type="file" class="$$file-input $$file-input-primary" />
 <input type="file" class="$$file-input $$file-input-secondary" />
 <input type="file" class="$$file-input $$file-input-accent" />
+<input type="file" class="$$file-input $$file-input-neutral" />
 <input type="file" class="$$file-input $$file-input-info" />
 <input type="file" class="$$file-input $$file-input-success" />
 <input type="file" class="$$file-input $$file-input-warning" />
