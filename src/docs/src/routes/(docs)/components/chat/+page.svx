@@ -25,6 +25,7 @@ data="{[
   { type:'component', class: 'chat-header', desc: 'For the line above the chat bubble' },
   { type:'component', class: 'chat-footer', desc: 'For the line below the chat bubble' },
   { type:'component', class: 'chat-bubble', desc: 'For the content of chat' },
+  { type:'modifier', class: 'chat-bubble-neutral', desc: 'sets `neutral` color for the `chat-bubble`' },
   { type:'modifier', class: 'chat-bubble-primary', desc: 'sets `primary` color for the `chat-bubble`' },
   { type:'modifier', class: 'chat-bubble-secondary', desc: 'sets `secondary` color for the `chat-bubble`' },
   { type:'modifier', class: 'chat-bubble-accent', desc: 'sets `accent` color for the `chat-bubble`' },
@@ -248,6 +249,9 @@ data="{[
 <Component title="Chat Bubble with colors">
 <div class="w-full">
   <div class="chat chat-start">
+    <div class="chat-bubble chat-bubble-neutral">Hey</div>
+  </div>
+  <div class="chat chat-start">
     <div class="chat-bubble chat-bubble-primary">What kind of nonsense is this</div>
   </div>
   <div class="chat chat-start">
@@ -272,6 +276,9 @@ data="{[
 {#snippet html()}
 
 ```html
+<div class="$$chat $$chat-start">
+<div class="$$chat-bubble $$chat-bubble-neutral">Hey</div>
+</div>
 <div class="$$chat $$chat-start">
   <div class="$$chat-bubble $$chat-bubble-primary">What kind of nonsense is this</div>
 </div>
