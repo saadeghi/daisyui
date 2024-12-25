@@ -1,7 +1,7 @@
-import { sveltekit } from "@sveltejs/kit/vite"
 import path from "node:path"
-import { visualizer } from "rollup-plugin-visualizer"
 import { defineConfig } from "vite"
+import { sveltekit } from "@sveltejs/kit/vite"
+import { visualizer } from "rollup-plugin-visualizer"
 
 export default defineConfig({
   plugins: [
