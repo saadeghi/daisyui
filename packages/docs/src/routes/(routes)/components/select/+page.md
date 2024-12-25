@@ -10,6 +10,8 @@ classnames:
   - class: select-ghost
     desc: ghost style
   color:
+  - class: select-neutral
+    desc: neutral color
   - class: select-primary
     desc: primary color
   - class: select-secondary
@@ -175,6 +177,23 @@ classnames:
 </select>
 ```
 
+
+### ~Neutral color
+<select class="select select-neutral">
+  <option disabled selected>Dark mode or light mode?</option>
+  <option>Auto</option>
+  <option>Dark mode</option>
+  <option>Light mode</option>
+</select>
+
+```html
+<select class="$$select $$select-neutral">
+  <option disabled selected>Dark mode or light mode?</option>
+  <option>Auto</option>
+  <option>Dark mode</option>
+  <option>Light mode</option>
+</select>
+```
 
 ### ~Info color
 <select class="select select-info">
