@@ -10,6 +10,8 @@ classnames:
   - class: textarea-ghost
     desc: ghost style
   color:
+  - class: textarea-neutral
+    desc: neutral color
   - class: textarea-primary
     desc: primary color
   - class: textarea-secondary
@@ -76,6 +78,7 @@ classnames:
   <textarea type="text" placeholder="Primary" class="textarea textarea-primary"></textarea>
   <textarea type="text" placeholder="Secondary" class="textarea textarea-secondary"></textarea>
   <textarea type="text" placeholder="Accent" class="textarea textarea-accent"></textarea>
+  <textarea type="text" placeholder="Accent" class="textarea textarea-neutral"></textarea>
   <textarea type="text" placeholder="Info" class="textarea textarea-info"></textarea>
   <textarea type="text" placeholder="Success" class="textarea textarea-success"></textarea>
   <textarea type="text" placeholder="Warning" class="textarea textarea-warning"></textarea>
@@ -86,6 +89,7 @@ classnames:
 <textarea type="text" placeholder="Primary" class="$$textarea $$textarea-primary"></textarea>
 <textarea type="text" placeholder="Secondary" class="$$textarea $$textarea-secondary"></textarea>
 <textarea type="text" placeholder="Accent" class="$$textarea $$textarea-accent"></textarea>
+<textarea type="text" placeholder="Accent" class="$$textarea $$textarea-neutral"></textarea>
 <textarea type="text" placeholder="Info" class="$$textarea $$textarea-info"></textarea>
 <textarea type="text" placeholder="Success" class="$$textarea $$textarea-success"></textarea>
 <textarea type="text" placeholder="Warning" class="$$textarea $$textarea-warning"></textarea>
