@@ -250,7 +250,7 @@ classnames:
 
 ```html
 <!-- name of each tab group should be unique -->
-<div role="tablist" class="$$tabs $$tabs-lift">
+<div role="tablist" class="$$tabs $$tabs-lift $$tabs-bottom">
   <input type="radio" name="my_tabs_4" role="tab" class="$$tab" aria-label="Tab 1" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
 
