@@ -29,6 +29,9 @@
         0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+      @media (forced-colors: active) {
+        @apply outline -outline-offset-1;
+      }
     }
   }
 }

@@ -106,13 +106,13 @@ classnames:
 ```html
 <ul class="$$steps">
   <li class="$$step $$step-neutral">
-    <span class="step-icon">😕</span>Step 1
+    <span class="$$step-icon">😕</span>Step 1
   </li>
   <li class="$$step $$step-neutral">
-    <span class="step-icon">😃</span>Step 2
+    <span class="$$step-icon">😃</span>Step 2
   </li>
   <li class="$$step">
-    <span class="step-icon">😍</span>Step 3
+    <span class="$$step-icon">😍</span>Step 3
   </li>
 </ul>
 ```

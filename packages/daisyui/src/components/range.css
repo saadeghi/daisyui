@@ -23,6 +23,9 @@
     @apply w-full bg-current/10;
     border-radius: var(--radius-selector);
     height: calc(var(--size) * 0.5);
+    @media (forced-colors: active) {
+      border: 1px solid;
+    }
   }
 
   &::-webkit-slider-thumb {
@@ -54,6 +57,9 @@
     @apply w-full bg-current/10;
     border-radius: var(--radius-selector);
     height: calc(var(--size) * 0.5);
+    @media (forced-colors: active) {
+      border: 1px solid;
+    }
   }
 
   &::-moz-range-thumb {
