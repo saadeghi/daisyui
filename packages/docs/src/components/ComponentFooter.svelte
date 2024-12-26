@@ -132,7 +132,7 @@
               target="_blank"
               rel="noopener, noreferrer"
               class="link"
-              href="http://localhost:3000/discord/"
+              href="http://daisyui.com/discord/"
             >
               Discord server
             </a>

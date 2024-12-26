@@ -913,7 +913,7 @@ I would suggest you to start using the beta version in your projects locally (no
 
 If you tested the Beta version locally and you are 100% sure everything is working looks good visually, you can use it in production as well but beware that there might be some small bugs that we are not aware of.
 
-Join us at [daisyUI Discord server](http://localhost:3000/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.
+Join us at [daisyUI Discord server](http://daisyui.com/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.
 
 Also check out [the changelog page](/docs/changelog/) for a detailed list changes in each component.
 
