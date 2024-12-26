@@ -65,11 +65,15 @@
   }
   &:has(> input[disabled]),
   &:is(:disabled, [disabled]) {
-    @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
+    @apply border-base-200 bg-base-200 placeholder-base-content placeholder-base-content/20 cursor-not-allowed;
     box-shadow: none;
+    color: color-mix(in oklch, var(--color-base-content) 20%, transparent);
 
     &::file-selector-button {
       @apply border-base-200 bg-base-200 cursor-not-allowed;
+      --btn-border: transparent;
+      --btn-noise: none;
+      --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
     }
   }
 }
