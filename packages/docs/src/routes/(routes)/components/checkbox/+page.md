@@ -13,6 +13,8 @@ classnames:
     desc: secondary color
   - class: checkbox-accent
     desc: accent color
+  - class: checkbox-neutral
+    desc: neutral color
   - class: checkbox-success
     desc: success color
   - class: checkbox-warning
@@ -86,6 +88,7 @@ classnames:
 <input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
 <input type="checkbox" checked="checked" class="checkbox checkbox-secondary" />
 <input type="checkbox" checked="checked" class="checkbox checkbox-accent" />
+<input type="checkbox" checked="checked" class="checkbox checkbox-neutral" />
 <input type="checkbox" checked="checked" class="checkbox checkbox-info" />
 <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
 <input type="checkbox" checked="checked" class="checkbox checkbox-warning" />
@@ -95,6 +98,7 @@ classnames:
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-primary" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-secondary" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-accent" />
+<input type="checkbox" checked="checked" class="$$checkbox $$checkbox-neutral" />
 
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-info" />
 <input type="checkbox" checked="checked" class="$$checkbox $$checkbox-success" />

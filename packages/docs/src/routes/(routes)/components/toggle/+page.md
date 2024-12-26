@@ -13,6 +13,8 @@ classnames:
     desc: secondary color
   - class: toggle-accent
     desc: accent color
+  - class: toggle-neutral
+    desc: neutral color
   - class: toggle-success
     desc: success color
   - class: toggle-warning
@@ -87,6 +89,7 @@ classnames:
 <input type="checkbox" checked="checked" class="toggle toggle-primary" />
 <input type="checkbox" checked="checked" class="toggle toggle-secondary" />
 <input type="checkbox" checked="checked" class="toggle toggle-accent" />
+<input type="checkbox" checked="checked" class="toggle toggle-neutral" />
 <input type="checkbox" checked="checked" class="toggle toggle-info" />
 <input type="checkbox" checked="checked" class="toggle toggle-success" />
 <input type="checkbox" checked="checked" class="toggle toggle-warning" />
@@ -96,6 +99,7 @@ classnames:
 <input type="checkbox" checked="checked" class="$$toggle $$toggle-primary" />
 <input type="checkbox" checked="checked" class="$$toggle $$toggle-secondary" />
 <input type="checkbox" checked="checked" class="$$toggle $$toggle-accent" />
+<input type="checkbox" checked="checked" class="$$toggle $$toggle-neutral" />
 
 <input type="checkbox" checked="checked" class="$$toggle $$toggle-info" />
 <input type="checkbox" checked="checked" class="$$toggle $$toggle-success" />

@@ -73,6 +73,11 @@
   --input-color: var(--color-accent);
 }
 
+.checkbox-accent {
+  @apply text-neutral-content;
+  --input-color: var(--color-neutral);
+}
+
 .checkbox-info {
   @apply text-info-content;
   --input-color: var(--color-info);

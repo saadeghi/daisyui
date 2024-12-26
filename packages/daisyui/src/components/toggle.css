@@ -118,6 +118,13 @@
   }
 }
 
+.toggle-neutral {
+  &:checked,
+  &[aria-checked="true"] {
+    --input-color: var(--color-neutral);
+  }
+}
+
 .toggle-success {
   &:checked,
   &[aria-checked="true"] {
