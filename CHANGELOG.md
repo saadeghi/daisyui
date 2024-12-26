@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 🆕 Additions
 - Added `alert-outline`, `alert-dash`, and `alert-soft` variants.
-- Addee `alert-vertical` and `alert-horizontal` layout options.
+- Added `alert-vertical` and `alert-horizontal` layout options.
 
 🔧 Changes
 - Instead of hardcoded responsive breakpoints, you can now use the `max-sm:alert-horizontal` or any other responsive breakpoint.
@@ -124,6 +124,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Allow `<label class="card">` to be used as a radio card. If a checkbox or radio is directly inside a card, clicking the card will toggle the checkbox/radio and will show an outline around the card.
 
 🔧 Changes
+- **Breaking Change:** `card-bordered` is renamed to `card-border`.
 - Adjusted padding in card body.
 - Adjusted font size.
 
@@ -209,7 +210,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - **Breaking Change:** File input now has border by default. Use `file-input-ghost` if you want to remove the border.
 
 🗑️ Removals
-- **Breaking Change:** Removed `file-input-bordered` class (not needed anymore).
+- **Breaking Change:** Removed `file-input-bordered`. File input has a border by default now. Use `file-input-ghost` if you want to remove the border.
 
 ```diff:page.html
 - <input type="file" class="file-input file-input-bordered">
@@ -236,7 +237,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🔧 Changes
 - **Breaking Change:** Input now has a default width of 20rem, no need for adding `w-full max-w-xs`.
-- **Breaking Change:** Input has a border by default now. Use `input-ghost` if you want to remove the border.
+- **Breaking Change:** Removed `input-border`.Input has a border by default now. Use `input-ghost` if you want to remove the border.
 - Adjusted padding.
 - Adjust size scale to fit with other components.
 - Improved focus style.
@@ -393,7 +394,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🔧 Changes
 - **Breaking Change:** Select now has a default width of 20rem, no need for adding `w-full max-w-xs`. `max-w-none` class.
 
-- **Breaking Change:** Select has a border by default now. Use `select-ghost` if you want to remove the border.
+- **Breaking Change:** Removed `select-border`. Select has a border by default now. Use `select-ghost` if you want to remove the border.
 - Adjusted padding, height, and font-size to match other components.
 
 <div class="before-after">
@@ -478,6 +479,9 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🆕 Additions
 - Added new `textarea-xl` size.
+
+🔧 Changes
+- **Breaking Change:** Removed `textarea-border`. Textarea has a border by default now. Use `textarea-ghost` if you want to remove the border.
 
 ### Timeline
 
