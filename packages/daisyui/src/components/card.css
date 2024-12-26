@@ -1,5 +1,5 @@
 .card {
-  @apply rounded-box relative flex flex-col items-start;
+  @apply rounded-box relative flex flex-col;
   outline-width: 2px;
   transition: outline 0.2s ease-in-out;
   outline: 0 solid transparent;
