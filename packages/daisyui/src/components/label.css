@@ -17,7 +17,7 @@
   }
 }
 .floating-label {
-  @apply relative;
+  @apply relative block;
   input {
     @apply block;
     &::placeholder {

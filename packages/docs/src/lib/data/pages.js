@@ -124,7 +124,7 @@ export const pages = [
           },
           {
             name: "Badge",
-            tags: "badge tag label",
+            tags: "badge tag",
             href: "/components/badge/",
           },
           {
@@ -312,7 +312,7 @@ export const pages = [
           },
           {
             name: "Label",
-            tags: "label",
+            tags: "label floating",
             href: "/components/label/",
             badge: "new",
           },

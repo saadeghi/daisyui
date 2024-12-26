@@ -146,6 +146,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🆕 Additions
 - Added `checkbox-xl` size.
+- Added `checkbox-neutral` color.
 - Checkbox is now print-friendly.
 
 🔧 Changes
@@ -153,6 +154,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Improved the checkmark icon and animation.
 - Improved focus styling for better accessibility.
 - Adjust size scale to fit with other components.
+- Improve forced color mode for better accessibility.
 
 ### Countdown
 
@@ -303,6 +305,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🔧 Changes
 - Improve hover effects to menu items.
 - Adjusted padding, font-size, and height to match other components.
+- Easier style customization for the menu items.
 - **Breaking Change:** vertical menu is not `w-full` anymore. Use `w-full` if you want it to be full width.
 - **Breaking Change:** Renamed `disabled` class of menu item to `menu-disabled`.
 - **Breaking Change:** Renamed `active` class of menu item to `menu-active`.
@@ -367,6 +370,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🔧 Changes
 - Improve size scale to fit with other components.
+- Improve forced color mode for better accessibility.
 
 ### Range
 
@@ -376,6 +380,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🔧 Changes
 - improve the visual appeal of the range component.
 - Improve size scale to fit with other components.
+- Improve forced color mode for better accessibility.
 
 ### Rating
 
@@ -463,7 +468,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Adjusted padding, font-size, and height to match other components.
 - Added ability to customize the tab height form theme CSS variables. Check out the [Theme Generator](/theme-generator/) page to see how it works.
 - Added new `tabs-top` and `tabs-bottom` positioning options.
-- Accessibility improvements for screen readers.
+- Accessibility improvements for screen readers and forced color mode.
 
 
 🔧 Changes
@@ -492,11 +497,13 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🆕 Additions
 - Added new `toggle-xl` size.
+- Added `toggle-neutral` color.
 - Allow using custom icons for the toggle. [Example](/components/toggle/#toggle-with-icons-inside)
 - Toggle is now print-friendly.
 
 🔧 Changes
 - Uses CSS pseudo-elements for the toggle thumb instead of box shadow which is visually more accessible.
+- Improve forced color mode for better accessibility.
 
 ### Tooltip
 
