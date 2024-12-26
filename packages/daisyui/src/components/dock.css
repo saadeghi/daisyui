@@ -1,6 +1,8 @@
 .dock {
-  @apply bg-base-100 fixed right-0 bottom-0 left-0 z-[1] flex h-16 w-full flex-row items-center justify-around p-2 text-current;
+  @apply bg-base-100 fixed right-0 bottom-0 left-0 z-[1] flex w-full flex-row items-center justify-around p-2 text-current;
   border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
+  height: 4rem;
+  height: calc(4rem + env(safe-area-inset-bottom));
   padding-bottom: env(safe-area-inset-bottom);
   > * {
     @apply rounded-box relative mb-2 flex h-full max-w-32 shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
@@ -31,7 +33,8 @@
 }
 
 .dock-xs {
-  @apply h-12;
+  height: 3rem;
+  height: calc(3rem + env(safe-area-inset-bottom));
 
   .dock-active {
     &:after {
@@ -46,6 +49,8 @@
 
 .dock-sm {
   @apply h-14;
+  height: 3.5rem;
+  height: calc(3.5rem + env(safe-area-inset-bottom));
 
   .dock-active {
     &:after {
@@ -59,15 +64,16 @@
 }
 
 .dock-md {
-  @apply h-16;
-
+  height: 4rem;
+  height: calc(4rem + env(safe-area-inset-bottom));
   .dock-label {
     font-size: 0.6875rem;
   }
 }
 
 .dock-lg {
-  @apply h-18;
+  height: 4.5;
+  height: calc(4.5 + env(safe-area-inset-bottom));
 
   .dock-active {
     &:after {
@@ -81,7 +87,8 @@
 }
 
 .dock-xl {
-  @apply h-20;
+  height: 5rem;
+  height: calc(5rem + env(safe-area-inset-bottom));
 
   .dock-active {
     &:after {

@@ -543,9 +543,11 @@ See [Validator component docs](/components/validator/)
 
 ### Dock
 
-A replacement for "bottom navigation" component. Dock is a horizontal navigation bar that sticks to the bottom of the screen, new design, new look and more customizable.
+A redesigned replacement for "bottom navigation" component. Dock is a horizontal navigation bar that sticks to the bottom of the screen, new design, new look and more customizable.
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
+
+Compatibe with safe-area-inset-bottom on mobile devices.
 
 See [Dock component docs](/components/dock/)
 
