@@ -59,21 +59,26 @@
     translate: 0 1px;
   }
 
-  :where(li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)),
-  :where(li:not(.menu-title, .disabled) > details > summary:not(.menu-title)) {
-    &:not(.menu-active, :active, .btn) {
-      &.menu-focus,
-      &:focus-visible {
-        @apply bg-base-content/10 text-base-content cursor-pointer outline-hidden;
-      }
-
-      &:hover {
-        @apply bg-base-content/10 cursor-pointer outline-hidden;
-        box-shadow:
-          0 1px oklch(0% 0 0 / 0.01) inset,
-          0 -1px oklch(100% 0 0 / 0.01) inset;
-      }
+  :where(
+      li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title),
+      li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
+    ):not(.menu-active, :active, .btn) {
+    &.menu-focus,
+    &:focus-visible {
+      @apply bg-base-content/10 text-base-content cursor-pointer outline-hidden;
     }
+  }
+  :where(
+    li:not(.menu-title, .disabled)
+      > *:not(ul, details, .menu-title):not(.menu-active, :active, .btn):hover,
+    li:not(.menu-title, .disabled)
+      > details
+      > summary:not(.menu-title):not(.menu-active, :active, .btn):hover
+  ) {
+    @apply bg-base-content/10 cursor-pointer outline-hidden;
+    box-shadow:
+      0 1px oklch(0% 0 0 / 0.01) inset,
+      0 -1px oklch(100% 0 0 / 0.01) inset;
   }
 
   :where(li:empty) {
