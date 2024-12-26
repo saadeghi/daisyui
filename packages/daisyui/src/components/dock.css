@@ -10,6 +10,7 @@
         content: "";
         @apply absolute h-1 w-10 rounded-full bg-current;
         bottom: 0.2rem;
+        border-top: 3px solid;
       }
     }
     &:hover {
