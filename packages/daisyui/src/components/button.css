@@ -46,6 +46,7 @@
   &.btn-active {
     --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%);
     --btn-shadow: 0 0 0 0 oklch(0% 0 0/0.07);
+    isolation: isolate;
   }
 
   &:focus-visible {
