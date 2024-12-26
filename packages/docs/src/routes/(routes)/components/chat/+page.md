@@ -21,6 +21,8 @@ classnames:
   - class: chat-end
     desc: Aligns chat to end horizontally (required)
   color:
+  - class: chat-bubble-neutral
+    desc: neutral color for chat-bubble
   - class: chat-bubble-primary
     desc: primary color for chat-bubble
   - class: chat-bubble-secondary
@@ -242,6 +244,9 @@ classnames:
 ### ~Chat Bubble with colors
 <div class="w-full">
   <div class="chat chat-start">
+    <div class="chat-bubble chat-bubble-neutral">Hey</div>
+  </div>
+  <div class="chat chat-start">
     <div class="chat-bubble chat-bubble-primary">What kind of nonsense is this</div>
   </div>
   <div class="chat chat-start">
@@ -265,6 +270,9 @@ classnames:
 </div>
 
 ```html
+<div class="$$chat $$chat-start">
+  <div class="$$chat-bubble $$chat-bubble-neutral">Hey</div>
+</div>
 <div class="$$chat $$chat-start">
   <div class="$$chat-bubble $$chat-bubble-primary">What kind of nonsense is this</div>
 </div>
