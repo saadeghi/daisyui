@@ -1,5 +1,6 @@
 .diff {
   @apply relative grid w-full overflow-hidden;
+  direction: ltr;
   container-type: inline-size;
   grid-template-columns: auto 1fr;
 }
