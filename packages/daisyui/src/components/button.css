@@ -63,7 +63,8 @@
 
   &:is(:disabled, [disabled], .btn-disabled) {
     &:not(.btn-link) {
-      @apply bg-neutral/20;
+      @apply bg-base-content/10;
+      box-shadow: none;
     }
 
     @apply pointer-events-none;
