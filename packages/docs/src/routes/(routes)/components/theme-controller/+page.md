@@ -197,23 +197,23 @@ browserSupport:
 ```html
 <fieldset class="$$fieldset">
   <label class="flex gap-2 cursor-pointer items-center">
-    <input bind:group={radio} type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="default"/>
+    <input type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="default"/>
     Default
   </label>
   <label class="flex gap-2 cursor-pointer items-center">
-    <input bind:group={radio} type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="retro"/>
+    <input type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="retro"/>
     Retro
   </label>
   <label class="flex gap-2 cursor-pointer items-center">
-    <input bind:group={radio} type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="cyberpunk"/>
+    <input type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="cyberpunk"/>
     Cyberpunk
   </label>
   <label class="flex gap-2 cursor-pointer items-center">
-    <input bind:group={radio} type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="valentine"/>
+    <input type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="valentine"/>
     Valentine
   </label>
   <label class="flex gap-2 cursor-pointer items-center">
-    <input bind:group={radio} type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="aqua"/>
+    <input type="radio" name="theme-radios" class="$$radio $$radio-sm $$theme-controller" value="aqua"/>
     Aqua
   </label>
 </fieldset>
