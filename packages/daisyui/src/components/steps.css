@@ -20,7 +20,8 @@
       margin-inline-start: -100%;
     }
 
-    &:after {
+    > .step-icon,
+    &:not(:has(.step-icon)):after {
       content: counter(step);
       counter-increment: step;
       z-index: 1;
@@ -40,49 +41,57 @@
   }
 
   .step-neutral + .step-neutral:before,
-  .step-neutral:after {
+  .step-neutral:after,
+  .step-neutral > .step-icon {
     --step-bg: var(--color-neutral);
     --step-fg: var(--color-neutral-content);
   }
 
   .step-primary + .step-primary:before,
-  .step-primary:after {
+  .step-primary:after,
+  .step-primary > .step-icon {
     --step-bg: var(--color-primary);
     --step-fg: var(--color-primary-content);
   }
 
   .step-secondary + .step-secondary:before,
-  .step-secondary:after {
+  .step-secondary:after,
+  .step-secondary > .step-icon {
     --step-bg: var(--color-secondary);
     --step-fg: var(--color-secondary-content);
   }
 
   .step-accent + .step-accent:before,
-  .step-accent:after {
+  .step-accent:after,
+  .step-accent > .step-icon {
     --step-bg: var(--color-accent);
     --step-fg: var(--color-accent-content);
   }
 
   .step-info + .step-info:before,
-  .step-info:after {
+  .step-info:after,
+  .step-info > .step-icon {
     --step-bg: var(--color-info);
     --step-fg: var(--color-info-content);
   }
 
   .step-success + .step-success:before,
-  .step-success:after {
+  .step-success:after,
+  .step-success > .step-icon {
     --step-bg: var(--color-success);
     --step-fg: var(--color-success-content);
   }
 
   .step-warning + .step-warning:before,
-  .step-warning:after {
+  .step-warning:after,
+  .step-warning > .step-icon {
     --step-bg: var(--color-warning);
     --step-fg: var(--color-warning-content);
   }
 
   .step-error + .step-error:before,
-  .step-error:after {
+  .step-error:after,
+  .step-error > .step-icon {
     --step-bg: var(--color-error);
     --step-fg: var(--color-error-content);
   }

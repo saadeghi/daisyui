@@ -579,7 +579,7 @@ These components had significant improvements in daisyUI 5, including new modifi
 - **[Radial Progress](/components/radial-progress/)** – accessibility improvements
 - **[Rating](/components/rating/)** – accessibility improvements
 - **[Stack](/components/stack/)** – New CSS grid layout, new directional options
-- **[Steps](/components/steps/)** – Accessibility improvements
+- **[Steps](/components/steps/)** – Ability to add custom icon, accessibility improvements
 - **[Tab](/components/tab/)** – New tabs-border style, new top/bottom positioning, accessibility improvements
 - **[Timeline](/components/timeline/)** – Accessibility improvements
 - **[Toggle](/components/toggle/)** – New custom icons support, accessibility improvements

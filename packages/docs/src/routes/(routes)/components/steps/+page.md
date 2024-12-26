@@ -9,6 +9,8 @@ classnames:
   part:
   - class: step
     desc: A single step node
+  - class: step-icon
+    desc: For custom icon inside step
   color:
   - class: step-primary
     desc: primary color
@@ -88,6 +90,32 @@ classnames:
 </ul>
 ```
 
+### ~With custom content in step-icon
+<ul class="steps">
+  <li class="step step-neutral">
+    <span class="step-icon">😕</span>Step 1
+  </li>
+  <li class="step step-neutral">
+    <span class="step-icon">😃</span>Step 2
+  </li>
+  <li class="step">
+    <span class="step-icon">😍</span>Step 3
+  </li>
+</ul>
+
+```html
+<ul class="$$steps">
+  <li class="$$step $$step-neutral">
+    <span class="step-icon">😕</span>Step 1
+  </li>
+  <li class="$$step $$step-neutral">
+    <span class="step-icon">😃</span>Step 2
+  </li>
+  <li class="$$step">
+    <span class="step-icon">😍</span>Step 3
+  </li>
+</ul>
+```
 
 ### ~With data-content
 <ul class="steps">

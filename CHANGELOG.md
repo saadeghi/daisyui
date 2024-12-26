@@ -452,6 +452,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 ### Steps
 
 🆕 Additions
+- Add new `step-icon` class for custom icons inside step.
 - Steps is now print-friendly.
 
 ### Tab
