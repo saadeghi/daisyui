@@ -66,6 +66,12 @@ classnames:
     <button class="join-item btn btn-lg">3</button>
     <button class="join-item btn btn-lg">4</button>
   </div>
+  <div class="join">
+    <button class="join-item btn btn-xl">1</button>
+    <button class="join-item btn btn-xl btn-active">2</button>
+    <button class="join-item btn btn-xl">3</button>
+    <button class="join-item btn btn-xl">4</button>
+  </div>
 </div>
 
 ```html
@@ -92,6 +98,12 @@ classnames:
   <button class="$$join-item $$btn $$btn-lg $$btn-active">2</button>
   <button class="$$join-item $$btn $$btn-lg">3</button>
   <button class="$$join-item $$btn $$btn-lg">4</button>
+</div>
+<div class="$$join">
+  <button class="$$join-item $$btn $$btn-xl">1</button>
+  <button class="$$join-item $$btn $$btn-xl $$btn-active">2</button>
+  <button class="$$join-item $$btn $$btn-xl">3</button>
+  <button class="$$join-item $$btn $$btn-xl">4</button>
 </div>
 ```
 
