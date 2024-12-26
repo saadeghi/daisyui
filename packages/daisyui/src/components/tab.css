@@ -90,6 +90,7 @@
     &:is(input:checked) {
       &:before {
         --tab-border-color: currentColor;
+        border-top: 3px solid;
       }
     }
   }
@@ -422,6 +423,9 @@
       0 1px oklch(100% 0 0/ 0.1) inset,
       0 1px 1px -1px color-mix(in oklab, var(--color-neutral), transparent),
       0 1px 6px -4px var(--color-neutral);
+    @media (forced-colors: active) {
+      border: 1px solid;
+    }
   }
 }
 
