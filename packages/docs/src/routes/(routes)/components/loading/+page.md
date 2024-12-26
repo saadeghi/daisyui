@@ -25,7 +25,8 @@ classnames:
   - class: loading-sm
     desc: Small size
   - class: loading-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: loading-lg
     desc: Large size
   - class: loading-xl

@@ -12,6 +12,7 @@ classnames:
   placement:
   - class: tooltip-top
     desc: Put tooltip on top
+    default: true
   - class: tooltip-bottom
     desc: Put tooltip on bottom
   - class: tooltip-left

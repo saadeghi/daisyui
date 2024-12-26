@@ -12,13 +12,15 @@ classnames:
   - class: toast-center
     desc: align horizontally to the center
   - class: toast-end
-    desc: align horizontally to the right (default)
+    desc: align horizontally to the right
+    default: true
   - class: toast-top
     desc: align vertically to top
   - class: toast-middle
     desc: align vertically to middle
   - class: toast-bottom
-    desc: align vertically to bottom (default)
+    desc: align vertically to bottom
+    default: true
 ---
 
 <script>

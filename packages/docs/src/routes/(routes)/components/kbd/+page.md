@@ -12,7 +12,8 @@ classnames:
   - class: kbd-sm
     desc: Small size
   - class: kbd-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: kbd-lg
     desc: Large size
   - class: kbd-xl

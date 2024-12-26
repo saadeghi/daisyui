@@ -17,7 +17,8 @@ classnames:
   - class: rating-sm
     desc: Small size
   - class: rating-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: rating-lg
     desc: Large size
   - class: rating-xl

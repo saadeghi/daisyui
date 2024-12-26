@@ -32,7 +32,8 @@ classnames:
   - class: select-sm
     desc: Small size
   - class: select-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: select-lg
     desc: Large size
   - class: select-xl

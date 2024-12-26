@@ -34,7 +34,8 @@ classnames:
   - class: tabs-sm
     desc: Small size
   - class: tabs-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: tabs-lg
     desc: Large size
   - class: tabs-xl

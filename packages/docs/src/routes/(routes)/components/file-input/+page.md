@@ -32,7 +32,8 @@ classnames:
   - class: file-input-sm
     desc: Small size
   - class: file-input-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: file-input-lg
     desc: Large size
   - class: file-input-xl

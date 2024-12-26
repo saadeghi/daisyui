@@ -11,7 +11,8 @@ classnames:
     desc: Carousel item
   modifier:
   - class: carousel-start
-    desc: Snap elements to start (default)
+    desc: Snap elements to start
+    default: true
   - class: carousel-center
     desc: Snap elements to center
   - class: carousel-end

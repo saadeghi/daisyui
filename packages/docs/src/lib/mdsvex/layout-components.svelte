@@ -305,7 +305,12 @@
                       </div>
                     {/if}
                   </td>
-                  <td class="w-8/12 min-w-[20rem]">{item.desc}</td>
+                  <td class="w-8/12 min-w-[20rem]">
+                    {item.desc}
+                    {#if item.default}
+                      <span class="text-xs text-base-content/30">[Default]</span>
+                    {/if}
+                  </td>
                 </tr>
               {/each}
             {/each}

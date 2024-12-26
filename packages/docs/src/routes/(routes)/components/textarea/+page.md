@@ -32,7 +32,8 @@ classnames:
   - class: table-sm
     desc: Small size
   - class: table-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: table-lg
     desc: Large size
   - class: table-xl

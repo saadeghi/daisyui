@@ -1,5 +1,5 @@
 .status {
-  @apply bg-base-content/20 rounded-selector aspect-square size-2 bg-center bg-no-repeat align-middle text-black/30;
+  @apply bg-base-content/20 rounded-selector inline-block aspect-square size-2 bg-center bg-no-repeat align-middle text-black/30;
   background-image: radial-gradient(
     circle at 35% 30%,
     oklch(1 0 0 / calc(var(--depth) * 0.5)),

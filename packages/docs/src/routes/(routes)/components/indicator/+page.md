@@ -15,9 +15,11 @@ classnames:
   - class: indicator-center
     desc: align horizontally to the center
   - class: indicator-end
-    desc: align horizontally to the end (default)
+    desc: align horizontally to the end
+    default: true
   - class: indicator-top
-    desc: align vertically to top (default)
+    desc: align vertically to top
+    default: true
   - class: indicator-middle
     desc: align vertically to middle
   - class: indicator-bottom

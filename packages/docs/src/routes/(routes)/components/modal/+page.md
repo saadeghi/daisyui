@@ -22,7 +22,8 @@ classnames:
   - class: modal-top
     desc: Moves the modal to top
   - class: modal-middle
-    desc: Moves the modal to middle (default)
+    desc: Moves the modal to middle
+    default: true
   - class: modal-bottom
     desc: Moves the modal to bottom
   - class: modal-start

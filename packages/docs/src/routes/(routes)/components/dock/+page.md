@@ -20,6 +20,7 @@ classnames:
     desc: Small Dock
   - class: dock-md
     desc: Medium Dock
+    default: true
   - class: dock-lg
     desc: Large Dock
   - class: dock-xl

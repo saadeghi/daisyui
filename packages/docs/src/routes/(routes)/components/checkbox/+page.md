@@ -27,7 +27,8 @@ classnames:
   - class: checkbox-sm
     desc: Small size
   - class: checkbox-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: checkbox-lg
     desc: Large size
   - class: checkbox-xl

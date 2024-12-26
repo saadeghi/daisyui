@@ -28,7 +28,8 @@ classnames:
   - class: menu-sm
     desc: Small size
   - class: menu-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: menu-lg
     desc: Large size
   - class: menu-xl

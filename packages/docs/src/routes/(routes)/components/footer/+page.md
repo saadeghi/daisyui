@@ -14,9 +14,10 @@ classnames:
     desc: Aligns footer content to center
   direction:
   - class: footer-horizontal
-    desc: Puts footer columns next to each other horizontally (default)
+    desc: Puts footer columns next to each other horizontally
   - class: footer-vertical
     desc: Puts footer columns under each other vertically
+    default: true
 ---
 
 <script>

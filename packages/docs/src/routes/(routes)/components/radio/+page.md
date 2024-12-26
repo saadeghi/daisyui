@@ -27,7 +27,8 @@ classnames:
   - class: radio-sm
     desc: Small size
   - class: radio-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: radio-lg
     desc: Large size
   - class: radio-xl

@@ -25,9 +25,10 @@ classnames:
     desc: error color
   direction:
   - class: divider-vertical
-    desc: Divide elements on top of each other (default)
+    desc: Divide vertical elements (on top of each other)
+    default: true
   - class: divider-horizontal
-    desc: Divide elements next to each other
+    desc: Divide horizontal elements (next to each other)
   placement:
   - class: divider-start
     desc: Pushes the divider text to the start

@@ -27,7 +27,8 @@ classnames:
   - class: toggle-sm
     desc: Small size
   - class: toggle-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: toggle-lg
     desc: Large size
   - class: toggle-xl

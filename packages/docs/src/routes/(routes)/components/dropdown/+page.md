@@ -12,6 +12,7 @@ classnames:
   placement:
   - class: dropdown-start
     desc: Align horizontally to start of button
+    default: true
   - class: dropdown-center
     desc: Align horizontally to center of button
   - class: dropdown-end
@@ -20,6 +21,7 @@ classnames:
     desc: Open from top
   - class: dropdown-bottom
     desc: Open from bottom
+    default: true
   - class: dropdown-left
     desc: Open from left
   - class: dropdown-right

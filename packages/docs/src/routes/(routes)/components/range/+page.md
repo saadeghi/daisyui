@@ -27,7 +27,8 @@ classnames:
   - class: range-sm
     desc: Small size
   - class: range-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: range-lg
     desc: Large size
   - class: range-xl

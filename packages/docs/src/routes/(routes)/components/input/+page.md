@@ -30,7 +30,8 @@ classnames:
   - class: input-sm
     desc: Small size
   - class: input-md
-    desc: Medium size (default)
+    desc: Medium size
+    default: true
   - class: input-lg
     desc: Large size
   - class: input-xl

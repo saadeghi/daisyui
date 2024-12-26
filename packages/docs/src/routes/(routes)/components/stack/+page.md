@@ -11,6 +11,7 @@ classnames:
     desc: Aligns the children elements to the top
   - class: stack-bottom
     desc: Aligns the children elements to the bottom
+    default: true
   - class: stack-start
     desc: Aligns the children elements to the start (horizontally)
   - class: stack-end

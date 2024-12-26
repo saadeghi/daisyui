@@ -29,7 +29,8 @@ classnames:
   - class: status-sm
     desc: small size
   - class: status-md
-    desc: medium size (default)
+    desc: medium size
+    default: true
   - class: status-lg
     desc: large size
   - class: status-xl
