@@ -63,7 +63,7 @@ classnames:
 
 ```html
 <input type="password" class="$$input $$validator" required placeholder="Password" minlength="8" 
-  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,}" 
+  pattern="(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
   title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
 <p class="$$validator-hint">
   Must be more than 8 characters, including
@@ -84,7 +84,7 @@ classnames:
 
 ```html
 <input type="input" class="$$input $$validator" required placeholder="Username" 
-  pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+  pattern="[A-Za-z][A-Za-z0-9\\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
 <p class="$$validator-hint">
   Must be 3 to 30 characters
   <br/>containing only letters, numbers or dash
@@ -105,13 +105,13 @@ classnames:
 
 ### ~URL input requirement validator
 <form class="w-full max-w-xs">
-  <input type="url" class="input validator" required placeholder="https://" value="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-ZäöüÄÖÜ0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$" title="Must be valid URL" />
+  <input type="url" class="input validator" required placeholder="https://" value="https://" pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$" title="Must be valid URL" />
   <p class="validator-hint">Must be valid URL</p>
 </form>
 
 ```html
 <input type="url" class="$$input $$validator" required placeholder="https://" value="https://"
-  pattern="^(https?://)?([a-zA-Z0-9]([a-zA-ZäöüÄÖÜ0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$" 
+  pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$" 
   title="Must be valid URL" />
 <p class="$$validator-hint">Must be valid URL</p>
 ```
