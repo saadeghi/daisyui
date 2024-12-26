@@ -8,7 +8,7 @@
   .dropdown-content {
     @apply absolute;
   }
-  &:is(:not(details)) {
+  &:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) {
     .dropdown-content {
       @apply hidden origin-top opacity-0;
       scale: 95%;
@@ -34,14 +34,12 @@
     }
     .dropdown-content {
       @apply opacity-100;
-      display: revert;
     }
   }
 
   &.dropdown-hover:hover {
     .dropdown-content {
       @apply opacity-100;
-      display: revert;
       scale: 100%;
     }
   }
@@ -77,15 +75,9 @@
     @supports not (position-area: bottom) {
       @apply m-auto;
 
-      &.dropdown-open {
+      &.dropdown-open:not(:popover-open) {
         @apply hidden origin-top opacity-0;
         scale: 95%;
-
-        &:popover-open {
-          @apply opacity-100;
-          display: revert;
-          scale: 100%;
-        }
       }
 
       &::backdrop {
