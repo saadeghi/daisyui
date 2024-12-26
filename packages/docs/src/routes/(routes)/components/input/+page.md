@@ -168,6 +168,27 @@ For `checkbox`, `radio`, `file`, `range` use their own class names, as they are 
 
 Inputs can be used with `validator` class to have validation styles. [See Validator component](/components/validator/) for more details.
 
+### ~Text input with data list suggestion
+<input type="text" class="input" placeholder="Which browser do you use" list="browsers"/>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+  <option value="Opera">
+  <option value="Edge">
+</datalist>
+
+```html
+<input type="text" class="$$input" placeholder="Which browser do you use" list="browsers"/>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+  <option value="Opera">
+  <option value="Edge">
+</datalist>
+```
+
 ### ~Date input
 <input type="date" class="input"/>
 

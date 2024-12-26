@@ -39,112 +39,62 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 ### To build the daisyUI node package on local:
 
 1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local
-1. Install package dependencies:
-   ```
-   npm install
-   ```
-1. Build the package:
-   ```
-   npm run build
-   ```
-1. Now you can import daisyUI to your `tailwind.config.js`:
-   ```js
-   module.exports = {
-     plugins: [require("/path/to/src/directory")],
-   }
-   ```
-
-> [!NOTE]
-> If you are on Windows, you have to use a Unix shell like [Git Bash](https://gitforwindows.org/). Unfortunately, the Windows command prompt and PowerShell do not support the `cat` command, which is used in the build script.
+1. [Install Bun](https://bun.sh/) if you don't have it:
+1. Install dependencies:
+  ```
+  bun install
+  ```
+1. Build daisyUI package:
+  ```
+  bun run build
+  ```
+1. Now you can use your local build of daisyUI in another local project by installing it as a dependency using Bun (or NPM, etc):  
+  In your own local project where you want to use daisyUI:
+  ```
+  bun install /path/to/daisyui/packages/daisyui
+  ```
 
 ### To run the [documentation site](https://daisyui.com/) on local:
 
 1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local
-1. Install all dependencies and build the package and documentation site using this command:
-   ```
-   npm run init
-   ```
+1. [Install Bun](https://bun.sh/) if you don't have it:
+1. Install dependencies:
+  ```
+  bun install
+  ```
+1. Build daisyUI package:
+  ```
+  bun run build
+  ```
 1. Run the document site:
-   ```
-   npm run dev
-   ```
-
-## Adding a new component
-
-Before adding a new component, please make sure it's [start a discussion about it on GitHub](https://github.com/saadeghi/daisyui/discussions) so we can talk about how the structure and style should be.  
-There is a `List of components` at the end of [/README.md](https://github.com/saadeghi/daisyui/blob/master/README.md) that I think would be a good to complete.
+  ```
+  bun run dev
+  ```
 
 ### File structure
 
-All component styles are in [`/src`](https://github.com/saadeghi/daisyui/tree/master/src) but it's important to separate the style to 4 files:
-
-- `/src/components/unstyled`: Styles that define the layout and placement of a component  
-  (for example: [layout of `tab` and `tabs`](https://github.com/saadeghi/daisyui/blob/master/src/components/unstyled/tab.css))
-- `/src/components/styled`: Styles that define the visual appearance of a component  
-  (for example: [colors and spacing of `alert`](https://github.com/saadeghi/daisyui/blob/master/src/components/styled/alert.css))
-- `/src/utilities/unstyled`: Styles that define the layout and placement of a variant of a component that must be responsive  
-  (for example: [sizes of a `.btn`](https://github.com/saadeghi/daisyui/blob/master/src/utilities/unstyled/button.css))
-- `/src/utilities/styled`: Styles that define the visual appearance of a variant of a component that must be responsive  
-  (for example: [colors of `alert`](https://github.com/saadeghi/daisyui/blob/master/src/utilities/styled/alert.css))
-
-> Separating styles to these 4 files, allows us to use daisyUI components with/without _design decision_ styles ([See `styled` config](styled)) and allows us to define some styles as responsive utilities (to work with `lg:`, `md:`, `sm:`, etc... prefixes)
-
-### Code samples with dynamic prefix
-
-If your component documentation page contains `pre` blocks for code samples, be sure to follow the example below so that the code will be displayed with the correct prefix dynamically set by user:
-
-```svelte
-<Component title="Buttons with brand colors">
-  <button class="btn">Button</button>
-  <button class="btn btn-primary">Primary</button>
-  <button class="btn btn-secondary">Secondary</button>
-  <button class="btn btn-accent">Accent</button>
-  <button class="btn btn-ghost">Ghost</button>
-  <button class="btn btn-link">Link</button>
-
-  <!-- add $$ to each daisyUI class name in pre block-->
-  <pre slot="html" use:replace="{{ to: $prefix }}">{`<button class="$$btn">Button</button>
-<button class="$$btn $$btn-primary">Button</button>
-<button class="$$btn $$btn-secondary">Button</button>
-<button class="$$btn $$btn-accent">Button</button>
-<button class="$$btn $$btn-ghost">Button</button>
-<button class="$$btn $$btn-link">Button</button>`}</pre>
-</Component>
+```js
+packages
+├── daisyui //daisyUI package
+│   ├── index.js //entry point
+│   ├── functions
+│   ├── src
+│   │   ├── base
+│   │   ├── components
+│   │   ├── themes
+│   │   ╰── utilities
+│   ╰── // generated files
+├── docs //documentation site
+│   ╰── src
+│       ├── routes
+│       │   ╰── (routes)
+│       │       ├── blog
+│       │       ├── components //component docs
+│       │       ├── docs //docs
+│       │       ╰── ...
+│       ╰── translations
+╰── playground //playground site
+    ╰── src
+        ╰── components
+            ╰── Component.astro // Where you can test things without committing
 ```
-
-### An example
-
-Let's say we want to add a new component named `.coolbutton` (don't add that actually 😅 )
-
-1. Add these files:
-   ```
-   /src/components/unstyled/coolbutton.css
-   /src/components/styled/coolbutton.css
-   ```
-1. Add your CSS there (you can use `@apply`)
-   - `/unstyled/coolbutton.css` is for the structure of the component without any design decision
-   - `/styled/coolbutton.css` is for the visual appearance of the component with colors, spacing, etc.
-1. Add a page to documentation site:
-   ```
-   /src/docs/src/routes/components/coolbutton/+page.svx
-   ```
-1. Add page info and some HTML to your [Svelte](https://svelte.dev/) markdown ([mdsvex](https://mdsvex.pngwn.io/)) file that uses your class name
-
-   ```mdx
-   ---
-   title: Coolbutton
-   desc: It's a button but it's cool!
-   layout: components
-   ---
-
-   <button class="coolbutton">Cool!</button>
-   ```
-
-1. Build the documentation site:
-   ```
-   npm run dev
-   ```
-1. Now when you open the site on localhost, you can see your new page, showing the new component with your style:
-   ```
-   http://localhost:3000/components/coolbutton
-   ```

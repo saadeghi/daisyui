@@ -737,7 +737,7 @@ classnames:
 
 
 ### ~Collapsible submenu that works with class names
-#### you can open/close the submenu by adding/removing `menu-dropdown-show` class using JS
+#### you can open/close the submenu by adding/removing menu-dropdown-show class using JS
 
 <ul class="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>

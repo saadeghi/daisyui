@@ -37,6 +37,7 @@
   <button
     class="btn btn-square btn-sm btn-neutral"
     onclick={() => clipboard(stripSyntaxHighlighterTags(text))}
+    aria-label="Copy to clipboard"
   >
     {#if isClipboardButtonPressed}
       <svg class="h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">

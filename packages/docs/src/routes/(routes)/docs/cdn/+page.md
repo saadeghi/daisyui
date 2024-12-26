@@ -52,7 +52,7 @@ desc: How to use daisyUI from a CDN?
     aria-label="daisyui.css"
     checked="checked"
   />
-  <div class="tab-content border-none bg-neutral text-neutral-content" role="tabpanel">
+  <div class="tab-content border-none bg-neutral text-neutral-content">
     <div class="grid *:[grid-area:1/1]">
       <div class="overflow-x-auto pt-16 pb-8 px-6">
 
@@ -78,7 +78,7 @@ desc: How to use daisyUI from a CDN?
     class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
     aria-label="customize parts"
   />
-  <div class="tab-content border-none bg-neutral text-neutral-content" role="tabpanel">
+  <div class="tab-content border-none bg-neutral text-neutral-content">
     <div class="grid *:[grid-area:1/1]">
       
       <div class="overflow-x-auto pt-16 pb-8 px-6">
