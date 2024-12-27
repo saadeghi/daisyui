@@ -792,9 +792,29 @@ All color variable names have been changed to be aligned with new Tailwind CSS 4
 | `--rounded-badge`                  | `--radius-selector`         |
 | `--border-btn` and `--tab-border`  | `--border`                  |
 
+### Removed theme variables
+
 - `--animation-btn` was removed (no longer needed)
 - `--animation-input` was removed (no longer needed)
 - `--btn-focus-scale` was removed (no longer needed)
+
+### Theme custom fonts
+
+Cyberpunk and Wireframe themes no longer have custom font by default. If you want the same v4 font for them, customize these themes like:
+
+```postcss
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: cyberpunk;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+@plugin "daisyui/theme" {
+  name: wireframe;
+  font-family: Chalkboard, comic sans ms, "sans-serif";
+}
+```
 
 ## 14. Bug fixes
 
@@ -809,6 +829,7 @@ And some of these bugs were related to a specific structure / style / behavior o
 
 If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug or let me know if a bug is closed by mistake 💚
 
+- [#3346: bug: Tooltip does not shown under overflow](https://github.com/saadeghi/daisyui/issues/3346)
 - [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/saadeghi/daisyui/issues/3332)
 - [#3328: bug: setting width to an `<input>` element doesn't shrink the `<input>` element](https://github.com/saadeghi/daisyui/issues/3328)
 - [#3325: bug: TS type declaration missing for themes/object](https://github.com/saadeghi/daisyui/issues/3325)
@@ -821,6 +842,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#3312: docs: DaisyUI V5 themes color extraction](https://github.com/saadeghi/daisyui/issues/3312)
 - [#3308: bug: Rating unchecked displays all as checked](https://github.com/saadeghi/daisyui/issues/3308)
 - [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox](https://github.com/saadeghi/daisyui/issues/3294)
+- [#3285: bug: the background of btn-disabled (or disabled btn) should be transparent if combined with btn-ghost](https://github.com/saadeghi/daisyui/issues/3285)
 - [#3281: bug: (v5): Select: does not wrap content with h-fit](https://github.com/saadeghi/daisyui/issues/3281)
 - [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color](https://github.com/saadeghi/daisyui/issues/3280)
 - [#3276: bug: dropdown-hover do not work on laptops with a touchscreen](https://github.com/saadeghi/daisyui/issues/3276)
@@ -841,6 +863,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#3176: bug: range in rtl mode show wrong bar](https://github.com/saadeghi/daisyui/issues/3176)
 - [#3170: bug: Invalid CSS generated when child of an element with the "btm-nav" class has the "active" class that...](https://github.com/saadeghi/daisyui/issues/3170)
 - [#3169: docs: position Drawer component seem not working](https://github.com/saadeghi/daisyui/issues/3169)
+- [#3267: bug: Carousel not working properly in chrome](https://github.com/saadeghi/daisyui/issues/3267)
 - [#3166: bug: scrollbar-color causing unnecessary repaints](https://github.com/saadeghi/daisyui/issues/3166)
 - [#3160: docs: Navigation does not work due to call to navigator.sendBeacon()](https://github.com/saadeghi/daisyui/issues/3160)
 - [#3157: bug: Chat bubble visibly split with white line](https://github.com/saadeghi/daisyui/issues/3157)

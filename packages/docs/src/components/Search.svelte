@@ -56,7 +56,7 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
-<label class={`searchbox relative mx-3 w-full`} bind:this={seachboxEl}>
+<div class="searchbox relative mx-3 w-full [&:has(input:focus)_kbd]:hidden" bind:this={seachboxEl}>
   <svg
     class={`pointer-events-none absolute z-10 my-3.5 ms-4 stroke-current opacity-60 ${
       $page.url.pathname == "/" ? "text-current" : "text-base-content"
@@ -92,7 +92,7 @@
     </div>
   </Typeahead>
   <div
-    class={`pointer-events-none absolute end-10 top-2.5 gap-1 opacity-50 rtl:flex-row-reverse ${
+    class={`pointer-events-none absolute end-2.5 top-2.5 gap-1 opacity-50 rtl:flex-row-reverse ${
       $page.url.pathname == "/" ? "hidden" : "hidden lg:flex"
     }`}
   >
@@ -104,4 +104,4 @@
       <kbd class="kbd kbd-sm">K</kbd>
     {/if}
   </div>
-</label>
+</div>

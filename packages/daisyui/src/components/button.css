@@ -62,7 +62,7 @@
   }
 
   &:is(:disabled, [disabled], .btn-disabled) {
-    &:not(.btn-link) {
+    &:not(.btn-link, .btn-ghost) {
       @apply bg-base-content/10;
       box-shadow: none;
     }
@@ -150,12 +150,14 @@
 
 .btn-ghost {
   &:not(.btn-active, :hover, :active:focus, :focus-visible) {
-    @apply outline-current;
     --btn-shadow: "";
     --btn-bg: transparent;
-    --btn-fg: currentColor;
     --btn-border: transparent;
     --btn-noise: none;
+    &:not(:disabled, [disabled], .btn-disabled) {
+      @apply outline-current;
+      --btn-fg: currentColor;
+    }
   }
 }
 
@@ -175,7 +177,7 @@
 }
 
 .btn-outline {
-  &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+  &:not(.btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled) {
     --btn-shadow: "";
     --btn-bg: transparent;
     --btn-fg: var(--btn-color);
@@ -185,7 +187,7 @@
 }
 
 .btn-dash {
-  &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+  &:not(.btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled) {
     --btn-shadow: "";
     border-style: dashed;
     --btn-bg: transparent;
@@ -196,7 +198,7 @@
 }
 
 .btn-soft {
-  &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+  &:not(.btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled) {
     --btn-shadow: "";
     --btn-fg: var(--btn-color, var(--color-base-content));
     --btn-bg: color-mix(

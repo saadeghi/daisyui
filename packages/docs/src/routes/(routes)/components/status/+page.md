@@ -85,3 +85,23 @@ classnames:
 <div aria-label="warning" class="$$status $$status-warning"></div>
 <div aria-label="error" class="$$status $$status-error"></div>
 ```
+### ~Status with ping animation
+
+<div class="inline-grid *:[grid-area:1/1]">
+  <div class="status status-error animate-ping"></div>
+  <div class="status status-error"></div>
+</div> Server is down
+
+```html
+<div class="inline-grid *:[grid-area:1/1]">
+  <div class="$$status $$status-error animate-ping"></div>
+  <div class="$$status $$status-error"></div>
+</div> Server is down
+```
+### ~Status with bounce animation
+
+<div class="status status-info animate-bounce"></div> Unread messages
+
+```html
+<div class="$$status $$status-info animate-bounce"></div> Unread messages
+```

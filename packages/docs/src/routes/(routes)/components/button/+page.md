@@ -241,6 +241,7 @@ classnames:
 
 
 ### ~Disabled buttons
+<button class="btn btn-outline" disabled="disabled">Disabled using attribute</button>
 <button class="btn" disabled="disabled">Disabled using attribute</button>
 <button class="btn btn-disabled" tabindex="-1" aria-disabled="true">Disabled using class name</button>
 
