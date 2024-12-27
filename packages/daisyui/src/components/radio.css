@@ -102,3 +102,12 @@
     --size: calc(var(--size-selector, 0.25rem) * 8);
   }
 }
+@keyframes radio {
+  0% {
+    padding: 5px;
+  }
+
+  50% {
+    padding: 3px;
+  }
+}

@@ -74,3 +74,8 @@
 .progress-error {
   @apply text-error;
 }
+@keyframes progress {
+  50% {
+    background-position-x: -115%;
+  }
+}

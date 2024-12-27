@@ -206,3 +206,8 @@
     @apply top-auto bottom-full origin-bottom;
   }
 }
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+  }
+}

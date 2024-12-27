@@ -12,3 +12,12 @@
   background-repeat: no-repeat;
   background-position-x: -50%;
 }
+@keyframes skeleton {
+  0% {
+    background-position: 150%;
+  }
+
+  100% {
+    background-position: -50%;
+  }
+}

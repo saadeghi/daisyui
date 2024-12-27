@@ -9,6 +9,15 @@ import { compileAndExtractStyles, loadThemes } from "./compileAndExtractStyles.j
 
 export async function generateResponsiveVariants(css) {
   let responsiveStyles = ""
+  let keyframesStyles = ""
+
+  const root = postcss.parse(css)
+
+  // Extract keyframes and remove them from the root
+  root.walkAtRules("keyframes", (atRule) => {
+    keyframesStyles += atRule.toString()
+    atRule.remove()
+  })
 
   for (const [breakpoint, minWidth] of Object.entries(breakpoints)) {
     const prefixedCss = await postcss([
@@ -25,7 +34,7 @@ export async function generateResponsiveVariants(css) {
           }
         })
       },
-    ]).process(css, { from: undefined })
+    ]).process(root.toString(), { from: undefined })
 
     // Escape the colon in the class name for CSS
     const escapedCss = prefixedCss.css.replace(
@@ -36,7 +45,7 @@ export async function generateResponsiveVariants(css) {
     responsiveStyles += `\n@media (min-width: ${minWidth}) {\n${escapedCss}\n}\n\n`
   }
 
-  return css + responsiveStyles
+  return css + responsiveStyles + keyframesStyles
 }
 
 async function processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude) {

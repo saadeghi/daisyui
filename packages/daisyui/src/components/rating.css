@@ -92,3 +92,10 @@
     @apply w-4;
   }
 }
+@keyframes rating {
+  0%,
+  40% {
+    scale: 1.1;
+    filter: brightness(1.05) contrast(1.05);
+  }
+}
