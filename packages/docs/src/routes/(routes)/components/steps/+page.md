@@ -12,6 +12,8 @@ classnames:
   - class: step-icon
     desc: For custom icon inside step
   color:
+  - class: step-neutral
+    desc: neutral color
   - class: step-primary
     desc: primary color
   - class: step-secondary
