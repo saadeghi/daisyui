@@ -51,7 +51,8 @@
 }
 
 .modal-backdrop {
-  @apply -z-[1] col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
+  @apply col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
+  z-index: -1;
 
   button {
     @apply cursor-pointer;

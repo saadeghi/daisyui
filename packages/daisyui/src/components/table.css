@@ -24,11 +24,11 @@
   }
 
   :where(.table-pin-rows thead tr) {
-    @apply bg-base-100 sticky top-0 z-[1];
+    @apply bg-base-100 sticky top-0 z-1;
   }
 
   :where(.table-pin-rows tfoot tr) {
-    @apply bg-base-100 sticky bottom-0 z-[1];
+    @apply bg-base-100 sticky bottom-0 z-1;
   }
 
   :where(.table-pin-cols tr th) {

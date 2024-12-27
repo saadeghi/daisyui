@@ -37,7 +37,7 @@
   }
 }
 .diff-resizer {
-  @apply relative top-1/2 z-[1] col-start-1 row-start-1 h-4 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
+  @apply relative top-1/2 z-1 col-start-1 row-start-1 h-4 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
   cursor: ew-resize;
   transform-origin: 100% 100%;
   translate: 0.35rem -0.6rem;
@@ -51,7 +51,7 @@
 .diff-item-1 {
   @apply relative col-start-1 row-start-1;
   &:after {
-    @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-[1] size-6 rounded-full;
+    @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-1 size-6 rounded-full;
     border: 2px solid var(--color-base-100);
     content: "";
     outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);

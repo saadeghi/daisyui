@@ -28,7 +28,7 @@
 .avatar-online {
   &:before {
     content: "";
-    @apply bg-success absolute z-10 block rounded-full;
+    @apply bg-success absolute z-1 block rounded-full;
     outline: 2px solid var(--color-base-100);
     width: 15%;
     height: 15%;
@@ -40,7 +40,7 @@
 .avatar-offline {
   &:before {
     content: "";
-    @apply bg-base-300 absolute z-10 block rounded-full;
+    @apply bg-base-300 absolute z-1 block rounded-full;
     outline: 2px solid var(--color-base-100);
     width: 15%;
     height: 15%;

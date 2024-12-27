@@ -11,5 +11,5 @@
 }
 
 .hero-content {
-  @apply z-0 flex max-w-[80rem] items-center justify-center gap-4 p-4;
+  @apply flex max-w-[80rem] items-center justify-center gap-4 p-4;
 }

@@ -1,6 +1,6 @@
 import { expect, test } from "bun:test"
 import { readdirSync, readFileSync, statSync } from "fs"
-import { join, relative, resolve } from "path"
+import { join, resolve } from "path"
 import { transform } from "lightningcss"
 
 // Function to get all CSS files in a directory and its subdirectories, excluding specific directories
@@ -49,6 +49,14 @@ test("Validate all CSS files", () => {
     } catch (error) {
       console.error(`Error in CSS file: ${file}`, error)
       throw error
+    }
+
+    // Log errors if there are any
+    if (result.warnings.length > 0) {
+      console.error(`Warnings in CSS file: ${file}`)
+      result.warnings.forEach((warning) => {
+        console.error(warning)
+      })
     }
 
     // Check if there are any warnings

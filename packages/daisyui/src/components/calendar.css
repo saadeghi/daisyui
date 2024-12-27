@@ -303,7 +303,7 @@
   &:is(div) {
     user-select: none;
     font-size: 0.75rem;
-    z-index: 9999;
+    z-index: 999;
     display: inline-block;
     position: relative;
     color: var(--color-base-content);
@@ -340,7 +340,7 @@
     .pika-label {
       display: inline-block;
       position: relative;
-      z-index: 9999;
+      z-index: 999;
       overflow: hidden;
       margin: 0;
       padding: 5px 3px;
@@ -350,7 +350,7 @@
       select {
         cursor: pointer;
         position: absolute;
-        z-index: 9998;
+        z-index: 999;
         margin: 0;
         left: 0;
         top: 5px;

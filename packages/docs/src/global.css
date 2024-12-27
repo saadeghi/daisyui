@@ -330,3 +330,11 @@
     background-color: color-mix(in oklab, var(--shiki-deleted) 20%, transparent);
   }
 }
+.changelog-body {
+  max-width: 80ch;
+  .shiki {
+    .line {
+      padding-block: 0.161em;
+    }
+  }
+}

@@ -19,7 +19,7 @@
     "publish:alpha": "cd packages/daisyui && bun publish --tag=alpha"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.0-beta.7",
+    "@tailwindcss/cli": "^4.0.0-beta.8",
     "commit-and-tag-version": "12.5.0",
     "culori": "^4.0.1",
     "lightningcss": "^1.28.2",
@@ -29,6 +29,6 @@
     "prettier": "^3.4.2",
     "prettier-plugin-svelte": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^4.0.0-beta.7"
+    "tailwindcss": "^4.0.0-beta.8"
   }
 }

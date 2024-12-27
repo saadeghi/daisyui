@@ -523,3 +523,55 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🔧 Changes
 - daisyUI now only applies colors to `@tailwindcss/typography` plugin, not other modifications like padding. You can customize those according to [`@tailwindcss/typography` config](https://github.com/tailwindlabs/tailwindcss-typography) If you want other modifications from v4, [Here's the CSS](https://github.com/saadeghi/daisyui/blob/ff313a45cea023c852903138ea032ac2d0a217f4/src/components/styled/typography.css#L1)
+
+### Other removals
+
+#### 🗑️ Remove form-control, label-text, label-text-alt
+
+You can still use the same HTML still, but class names don't exist anymore and won't apply color, font-size, flex, etc.  
+I suggest using the newly added class names for `fieldset` and `legend` elements for better accessibility.
+
+<div class="before-after">
+
+```html:before
+<label class="form-control w-full max-w-xs">
+  Login
+  <div class="label">
+    <span class="label-text">Name</span>
+  </div>
+  <input class="input" placeholder="Name" />
+</label>
+```
+
+```html:after
+<fieldset class="fieldset">
+  <legend>Login</legend>
+  <label class="label" for="name">Name</label>
+  <input id="name" class="input" placeholder="Name" />
+</fieldset>
+```
+
+</div>
+
+#### 🗑️ Remove btn-group and input-group
+
+btn-group, input-group were deprecated a year ago and now finally removed.  
+If You've been using btn-group or input-group, you can use `join` instead
+
+<div class="before-after">
+
+```html:before
+<div class="btn-group">
+  <button class="btn">Button 1</button>
+  <button class="btn">Button 2</button>
+</div>
+```
+
+```html:after
+<div class="join">
+  <button class="btn join-item">Button 1</button>
+  <button class="btn join-item">Button 2</button>
+</div>
+```
+
+</div>

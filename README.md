@@ -19,9 +19,11 @@
 
 ### 🌼 [Official website →](https://daisyui.com/)
 
-### 🌼 [See all components →](https://daisyui.com/components/)
+### 🧩 [See all components →](https://daisyui.com/components/)
 
-### 🌼 [How to use →](https://daisyui.com/docs/install/)
+### 🚀 [How to use →](https://daisyui.com/docs/install/)
+
+### 🤝 [Contribute →](.github/CONTRIBUTING.md)
 
 ---
 

@@ -284,7 +284,7 @@
         </div>
         <ul
           tabindex="0"
-          class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-[1] w-48 p-2 shadow-xl"
+          class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-1 w-48 p-2 shadow-xl"
         >
           <li class="menu-title">Options</li>
           <li>
