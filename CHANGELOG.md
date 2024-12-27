@@ -285,6 +285,11 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🆕 Additions
 - Added new `kbd-xl` size.
 
+### Label
+
+🔧 Changes
+- **Breaking Change:** Label has been refactored to be more compatible with form elements. See [label docs](/components/label/) for more information.
+
 ### Loading
 
 🔧 Changes
