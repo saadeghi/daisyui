@@ -371,8 +371,11 @@ Currently, the following effects are available:
 
 These effects can be enabled or disabled using a CSS variable. Check out the new [Theme Generator](/theme-generator/) page to see how it works.
 
+
 ### New "X-Large" size
 All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now also support a new `xl` size modifier. This gives you more control over the size of components and allows you to create more flexible and responsive designs.
+
+<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="daisyui tailwind xl button">
 
 ### Size scale improvements
 
@@ -609,8 +612,17 @@ These components have been improved to be more visually appealing:
 - **[Rating](/components/rating/)**
 - **[Radial Progress](/components/radial-progress/)**
 - **[Mockups](/components/mockup-browser/)**
-
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="daisyui tailwind xl button">
+  
+<figure class="diff aspect-[1600/650] border-2 border-gray-200 rounded-box" data-theme="dark" tabindex="0">
+  <div class="diff-item-1" role="img">
+    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-5-tailwindcss-components.webp" alt="daisyUI 5"/>
+  </div>
+  <div class="diff-item-2" role="img" tabindex="0">
+    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-4-tailwindcss-components.webp" alt="daisyUI 4"/>
+  </div>
+  <div class="diff-resizer"></div>
+</figure>
+<div class="grid [direction:ltr] grid-cols-2 place-items-center tracking-widest text-xs"><span class="text-base-content/40">daisyUI 4</span><span class="text-base-content">daisyUI 5</span></div>
 
 ## 8. Component size scale improvements
 

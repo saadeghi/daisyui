@@ -1083,46 +1083,45 @@
         <div class="flex flex-col items-center gap-6 xl:flex-row">
           {#if toggleValueForCodeCompare}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-2rem)] grow border bg-transparent text-xs xl:h-[550px]"
+              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
             >
               <pre class="w-full whitespace-pre-wrap px-6 before:hidden"><code
-                  >&lt;div class=&quot;<span class="text-teal-700">card bg-base-200 w-80</span
+                  >&lt;div class=&quot;<span class="text-teal-600">card w-80 bg-base-200</span
                   >&quot;&gt;
-  &lt;div class=&quot;<span class="text-teal-700">card-body</span>&quot;&gt;
-    &lt;input placeholder=&quot;Email&quot; class=&quot;<span class="text-teal-700">input</span
+  &lt;div class=&quot;<span class="text-teal-600">card-body gap-3</span>&quot;&gt;
+    &lt;input placeholder=&quot;Email&quot; class=&quot;<span class="text-teal-600">input</span
                   >&quot; /&gt;
-    &lt;label class=&quot;<span class="text-teal-700">label cursor-pointer</span>&quot;&gt;
-      {$t("Accept terms of use")}
-      &lt;input type=&quot;checkbox&quot; class=&quot;<span class="text-teal-700">toggle</span
+    &lt;label class=&quot;<span class="text-teal-600">label</span>&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; class=&quot;<span class="text-teal-600"
+                    >toggle toggle-sm</span
                   >&quot; /&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;<span class="text-teal-700">label cursor-pointer</span>&quot;&gt;
       {$t("Submit to newsletter")}
-      &lt;input type=&quot;checkbox&quot; class=&quot;<span class="text-teal-700">toggle</span
-                  >&quot; /&gt;
     &lt;/label&gt;
-    &lt;button class=&quot;<span class="text-teal-700">btn btn-neutral</span>&quot;&gt;{$t(
+    &lt;label class=&quot;<span class="text-teal-600">label</span>&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; class=&quot;<span class="text-teal-600"
+                    >toggle toggle-sm</span
+                  >&quot; /&gt;
+      {$t("Accept terms of use")}
+    &lt;/label&gt;
+    &lt;button class=&quot;<span class="text-teal-600">btn btn-neutral</span>&quot;&gt;{$t(
                     "Save",
                   )}&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code
                 ></pre>
             </div>
-            <div class="divider xl:divider-horizontal">
-              <span class="hidden rtl:rotate-180 xl:inline">→</span>
-              <span class="xl:hidden">↓</span>
-            </div>
+            <div class="divider xl:divider-horizontal">=</div>
             <div>
-              <div class="card bg-base-200 w-80">
-                <div class="card-body">
+              <div class="card w-80 bg-base-200">
+                <div class="card-body gap-3">
                   <input placeholder="Email" class="input" name="sample-input-field" />
-                  <label class="label cursor-pointer">
-                    {$t("Accept terms of use")}
-                    <input name="sample-checkbox" type="checkbox" class="toggle" />
-                  </label>
-                  <label class="label cursor-pointer">
+                  <label class="label">
+                    <input name="sample-checkbox" type="checkbox" class="toggle toggle-sm" />
                     {$t("Submit to newsletter")}
-                    <input name="sample-checkbox" type="checkbox" class="toggle" />
+                  </label>
+                  <label class="label">
+                    <input name="sample-checkbox" type="checkbox" class="toggle toggle-sm" />
+                    {$t("Accept terms of use")}
                   </label>
                   <button class="btn btn-neutral">{$t("Save")}</button>
                 </div>
@@ -1130,94 +1129,87 @@
             </div>
           {:else}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-2rem)] grow border bg-transparent text-xs xl:h-[550px]"
+              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
             >
               <pre class="w-full whitespace-pre-wrap px-6 before:hidden"><code
-                  >&lt;div class=&quot;<span class="text-rose-600"
-                    >w-80 rounded-2xl bg-gray-100</span
+                  >&lt;div class=&quot;<span class="text-rose-600">w-80 rounded-lg bg-zinc-50</span
                   >&quot;&gt;
-  &lt;div class=&quot;<span class="text-rose-600">flex flex-col gap-2 p-8</span>&quot;&gt;
+  &lt;div class=&quot;<span class="text-rose-600">flex flex-col gap-3 p-8</span>&quot;&gt;
     &lt;input placeholder=&quot;Email&quot; class=&quot;<span class="text-rose-600"
-                    >w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-100</span
-                  >&quot; /&gt;
+                    >w-full rounded-sm border border-zinc-300 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-zinc-700 focus:ring-offset-2 focus:ring-offset-zinc-100 focus:outline-none focus-visible:border-zinc-900</span
+                  >&quot;/&gt;
     &lt;label class=&quot;<span class="text-rose-600"
-                    >flex cursor-pointer items-center justify-between p-1</span
+                    >flex cursor-pointer items-center text-sm gap-1.5 text-zinc-500</span
                   >&quot;&gt;
-      {$t("Accept terms of use")}
-      &lt;div class=&quot;<span class="text-rose-600">relative inline-block</span>&quot;&gt;
+      &lt;div class=&quot;<span class="text-rose-600">relative inline-block h-5</span>&quot;&gt;
         &lt;input type=&quot;checkbox&quot; class=&quot;<span class="text-rose-600"
-                    >peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span
-                  >&quot; /&gt;
+                    >peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 checked:focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none</span
+                  >&quot;/&gt;
         &lt;span class=&quot;<span class="text-rose-600"
-                    >pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span
+                    >pointer-events-none absolute start-0.75 top-0.75 block size-[0.875rem] rounded-full bg-zinc-400 transition-all duration-200 peer-checked:start-[0.9375rem] peer-checked:bg-zinc-900</span
                   >&quot;&gt;&lt;/span&gt;
       &lt;/div&gt;
+      {$t("Submit to newsletter")}
     &lt;/label&gt;
     &lt;label class=&quot;<span class="text-rose-600"
-                    >flex cursor-pointer items-center justify-between p-1</span
+                    >flex cursor-pointer items-center text-sm gap-1.5 text-zinc-500</span
                   >&quot;&gt;
-      {$t("Submit to newsletter")}
-      &lt;div class=&quot;<span class="text-rose-600">relative inline-block</span>&quot;&gt;
+      &lt;div class=&quot;<span class="text-rose-600">relative inline-block h-5</span>&quot;&gt;
         &lt;input type=&quot;checkbox&quot; class=&quot;<span class="text-rose-600"
-                    >peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2</span
-                  >&quot; /&gt;
+                    >peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 checked:focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none</span
+                  >&quot;/&gt;
         &lt;span class=&quot;<span class="text-rose-600"
-                    >pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900</span
+                    >pointer-events-none absolute start-0.75 top-0.75 block size-[0.875rem] rounded-full bg-zinc-400 transition-all duration-200 peer-checked:start-[0.9375rem] peer-checked:bg-zinc-900</span
                   >&quot;&gt;&lt;/span&gt;
       &lt;/div&gt;
+      {$t("Accept terms of use")}
     &lt;/label&gt;
     &lt;button class=&quot;<span class="text-rose-600"
-                    >inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95</span
-                  >&quot;&gt;{$t("Save")}&lt;/button&gt;
+                    >inline-block cursor-pointer rounded-sm bg-zinc-900 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-[0_.2rem_0.3rem_-.25rem_black] active:shadow-none transition duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-zinc-700 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-y-[1px]</span
+                  >&quot; &gt;{$t("Save")}&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code
                 ></pre>
             </div>
-            <div class="divider xl:divider-horizontal">
-              <span class="hidden rtl:rotate-180 xl:inline">→</span>
-              <span class="xl:hidden">↓</span>
-            </div>
+            <div class="divider xl:divider-horizontal">=</div>
             <div>
-              <div class="w-80 rounded-2xl bg-gray-100 text-black">
-                <div class="flex flex-col gap-2 p-8">
+              <div class="w-80 rounded-lg bg-zinc-50">
+                <div class="flex flex-col gap-3 p-8">
                   <input
-                    name="sample-email"
+                    name="Sample Email"
                     placeholder="Email"
-                    class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    class="w-full rounded-sm border border-zinc-300 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-zinc-700 focus:ring-offset-2 focus:ring-offset-zinc-100 focus:outline-none focus-visible:border-zinc-900"
                   />
-                  <label class="flex cursor-pointer items-center justify-between p-1">
-                    {$t("Accept terms of use")}
-                    <div class="relative inline-block">
+                  <label class="flex cursor-pointer items-center text-sm gap-1.5 text-zinc-500">
+                    <div class="relative inline-block h-5">
                       <input
-                        name="sample-checkbox"
                         type="checkbox"
-                        class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                        name="sample-checkbox"
+                        class="peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 checked:focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none"
                       />
                       <span
-                        class="pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900"
-                      >
-                      </span>
+                        class="pointer-events-none absolute start-0.75 top-0.75 block size-[0.875rem] rounded-full bg-zinc-400 transition-all duration-200 peer-checked:start-[0.9375rem] peer-checked:bg-zinc-900"
+                      ></span>
                     </div>
-                  </label>
-                  <label class="flex cursor-pointer items-center justify-between p-1">
                     {$t("Submit to newsletter")}
-                    <span class="relative inline-block">
+                  </label>
+                  <label class="flex cursor-pointer items-center text-sm gap-1.5 text-zinc-500">
+                    <div class="relative inline-block h-5">
                       <input
                         type="checkbox"
                         name="sample-checkbox"
-                        class="peer h-6 w-12 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white checked:border-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                        class="peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 checked:focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none"
                       />
                       <span
-                        class="pointer-events-none absolute start-1 top-1 block h-4 w-4 rounded-full bg-gray-400 transition-all duration-200 peer-checked:start-7 peer-checked:bg-gray-900"
-                      >
-                      </span>
-                    </span>
+                        class="pointer-events-none absolute start-0.75 top-0.75 block size-[0.875rem] rounded-full bg-zinc-400 transition-all duration-200 peer-checked:start-[0.9375rem] peer-checked:bg-zinc-900"
+                      ></span>
+                    </div>
+                    {$t("Accept terms of use")}
                   </label>
                   <button
-                    class="inline-block cursor-pointer rounded-md bg-gray-700 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95"
+                    class="inline-block cursor-pointer rounded-sm bg-zinc-900 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-[0_.2rem_0.3rem_-.25rem_black] active:shadow-none transition duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-zinc-700 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-y-[1px]"
+                    >{$t("Save")}</button
                   >
-                    {$t("Save")}
-                  </button>
                 </div>
               </div>
             </div>
