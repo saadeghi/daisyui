@@ -218,7 +218,7 @@ classnames:
 
 
 ### ~with `rating-hidden`
-#### `rating-hidden` is a hidden radio at the start to allow uses remove their rating.
+#### `rating-hidden` is a hidden radio at the start to allow users to remove their rating.
 
 <div class="rating rating-lg">
   <input type="radio" name="rating-10" class="rating-hidden" aria-label="clear" />

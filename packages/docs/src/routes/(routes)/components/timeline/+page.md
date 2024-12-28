@@ -1721,7 +1721,7 @@ classnames:
           clip-rule="evenodd" />
       </svg>
     </div>
-    <div class="$$timeline-end mb-10">
+    <div class="$$timeline-end md:mb-10">
       <time class="font-mono italic">1998</time>
       <div class="text-lg font-black">iMac</div>
       iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has
@@ -1769,7 +1769,7 @@ classnames:
           clip-rule="evenodd" />
       </svg>
     </div>
-    <div class="$$timeline-end mb-10">
+    <div class="$$timeline-end md:mb-10">
       <time class="font-mono italic">2007</time>
       <div class="text-lg font-black">iPhone</div>
       iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile
