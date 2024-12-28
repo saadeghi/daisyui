@@ -5,32 +5,34 @@ desc: How to install Tailwind CSS and daisyUI in a Vite project
 
 ### 1. Create a new Vite project
 
-```
+```:Terminal
 npm create vite@latest
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
 
-```
+```:Terminal
 npm install tailwindcss@next @tailwindcss/vite@next daisyui@alpha
 ```
 
 Add Tailwind CSS to Vite config
 
-```diff:vite.config.js
-  import { defineConfig } from 'vite';
-+ import tailwindcss from '@tailwindcss/vite';
+```js:vite.config.js
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
-  export default defineConfig({
-    plugins: [
-+    tailwindcss()
-    ],
-  });
+export default defineConfig({
+  plugins: [
+    tailwindcss()
+  ],
+});
 ```
 
-Add Tailwind and daisyUI to your CSS file
+Put Tailwind and daisyUI to your CSS file
   
-```postcss:app.css
+```postcss:src/style.css
 @import "tailwindcss";
 @plugin "daisyui";
 ```
+
+Now you can use daisyUI class names!

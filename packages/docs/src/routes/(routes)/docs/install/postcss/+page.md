@@ -5,7 +5,7 @@ desc: How to install Tailwind CSS and daisyUI in PostCSS
 
 ### 1. Install
 
-```
+```:Terminal
 npm i postcss postcss-cli tailwindcss@next @tailwindcss/postcss@next daisyui@alpha
 ```
 
@@ -14,17 +14,19 @@ npm i postcss postcss-cli tailwindcss@next @tailwindcss/postcss@next daisyui@alp
 Create a postcss.config.mjs file and add Tailwind CSS to it
 
 ```js:postcss.config.mjs
-export default {
+const config = {
   plugins: {
     '@tailwindcss/postcss': {},
   },
 };
+export default config;
 ```
 
-Add Tailwind and daisyUI to your CSS file
+Add Tailwind and daisyUI to your CSS file.  
+Address your HTML and other markup files in the `source` function.
   
 ```postcss:app.css
-@import "tailwindcss";
+@import "tailwindcss" source("./public/*.{html,js}");
 @plugin "daisyui";
 ```
 
@@ -42,6 +44,6 @@ Add a script to your package.json to build the CSS.
 
 Run the script to build the CSS file
 
-```
+```:Terminal
 npm run build:css
 ```

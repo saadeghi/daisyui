@@ -33,7 +33,7 @@ desc: How to use daisyUI colors?
 
 Example of theming a div with hardcoded color values
 
-<div class="grid lg:grid-cols-2 gap-4">
+<div class="lg:grid lg:grid-cols-2 gap-4">
 <div>
 
 *Using hardcoded color names*
@@ -41,7 +41,7 @@ Example of theming a div with hardcoded color values
 <div class="p-10 bg-zinc-100 rounded-2xl">
   <div class="p-6 bg-zinc-50 border-2 border-zinc-200 text-zinc-800 rounded-lg [text-wrap:balance]">
     This is a hardcoded dark text on a light background,
-    it need double amount of class names to support dark mode.
+    it needs double the amount of class names to support dark mode.
   </div>
 </div>
 
@@ -49,7 +49,7 @@ Example of theming a div with hardcoded color values
 <div class="bg-zinc-100">
   <div class="bg-zinc-50 border-zinc-200 text-zinc-800">
     This is a hardcoded dark text on a light background,
-    it need double amount of class names to support dark mode.
+    it needs double the amount of class names to support dark mode.
   </div>
 </div>
 ```
@@ -70,16 +70,16 @@ Example of theming a div with hardcoded color values
 
 <div class="p-10 bg-base-200 rounded-2xl">
   <div class="p-6 bg-base-100 border-2 border-base-300 text-base-content rounded-lg [text-wrap:balance]">
-    This is a dark text on a light background,
-    it changes to light text on a dark background in dark mode.
+    This is dark text on a light background,
+    which switches to light text on a dark background in dark mode.
   </div>
 </div>
 
 ```html
 <div class="bg-base-200">
   <div class="bg-base-100 border-base-300 text-base-content">
-    This is a dark text on a light background,
-    it changes to light text on a dark background in dark mode.
+    This is dark text on a light background,
+    which switches to light text on a dark background in dark mode.
   </div>
 </div>
 ```
@@ -103,28 +103,28 @@ Example of theming a div with hardcoded color values
 <div class="overflow-x-auto">
 <div class="whitespace-nowrap">
 
-| | Color name | CSS variable | Where to use |
-| --- | --- | --- | ---
-| <span class="badge bg-primary"></span>           | primary           | --color-primary | Primary brand color, The main color of your brand
-| <span class="badge bg-primary-content"></span>   | primary-content   | --color-primary-content | Foreground content color to use on `primary` color <br/><br/>
-| <span class="badge bg-secondary"></span>         | secondary         | --color-secondary | Secondary brand color, The optional, secondary color of your brand
-| <span class="badge bg-secondary-content"></span> | secondary-content | --color-secondary-content | Foreground content color to use on `secondary` color <br/><br/>
-| <span class="badge bg-accent"></span>            | accent            | --color-accent | Accent brand color, The optional, accent color of your brand
-| <span class="badge bg-accent-content"></span>    | accent-content    | --color-accent-content | Foreground content color to use on `accent` color <br/><br/>
-| <span class="badge bg-neutral"></span>           | neutral           | --color-neutral | Neutral dark color, For not-saturated parts of UI
-| <span class="badge bg-neutral-content"></span>   | neutral-content   | --color-neutral-content | Foreground content color to use on neutral color <br/><br/>
-| <span class="badge bg-base-100"></span>          | base-100          | --color-base-100 | Base surface color of page, used for blank backgrounds
-| <span class="badge bg-base-200"></span>          | base-200          | --color-base-200 | Base color, darker shade, to create elevations
-| <span class="badge bg-base-300"></span>          | base-300          | --color-base-300 | Base color, even more darker shade, to create elevations
-| <span class="badge bg-base-content"></span>      | base-content      | --color-base-content | Foreground content color to use on `base` color <br/><br/>
-| <span class="badge bg-info"></span>              | info              | --color-info | Info color, For informative/helpful messages
-| <span class="badge bg-info-content"></span>      | info-content      | --color-info-content | Foreground content color to use on `info` color
-| <span class="badge bg-success"></span>           | success           | --color-success | Success color, For success/safe messages
-| <span class="badge bg-success-content"></span>   | success-content   | --color-success-content | Foreground content color to use on `success` color
-| <span class="badge bg-warning"></span>           | warning           | --color-warning | Warning color, For warning/caution messages
-| <span class="badge bg-warning-content"></span>   | warning-content   | --color-warning-content | Foreground content color to use on `warning` color
-| <span class="badge bg-error"></span>             | error             | --color-error | Error color, For error/danger/destructive messages
-| <span class="badge bg-error-content"></span>     | error-content     | --color-error-content | Foreground content color to use on `error` color
+|                                                  | Color name        | CSS variable              | Where to use                                                       |
+|--------------------------------------------------|-------------------|---------------------------|--------------------------------------------------------------------|
+| <span class="badge bg-primary"></span>           | primary           | --color-primary           | Primary brand color, The main color of your brand                  |
+| <span class="badge bg-primary-content"></span>   | primary-content   | --color-primary-content   | Foreground content color to use on `primary` color <br/><br/>      |
+| <span class="badge bg-secondary"></span>         | secondary         | --color-secondary         | Secondary brand color, The optional, secondary color of your brand |
+| <span class="badge bg-secondary-content"></span> | secondary-content | --color-secondary-content | Foreground content color to use on `secondary` color <br/><br/>    |
+| <span class="badge bg-accent"></span>            | accent            | --color-accent            | Accent brand color, The optional, accent color of your brand       |
+| <span class="badge bg-accent-content"></span>    | accent-content    | --color-accent-content    | Foreground content color to use on `accent` color <br/><br/>       |
+| <span class="badge bg-neutral"></span>           | neutral           | --color-neutral           | Neutral dark color, For not-saturated parts of UI                  |
+| <span class="badge bg-neutral-content"></span>   | neutral-content   | --color-neutral-content   | Foreground content color to use on neutral color <br/><br/>        |
+| <span class="badge bg-base-100"></span>          | base-100          | --color-base-100          | Base surface color of page, used for blank backgrounds             |
+| <span class="badge bg-base-200"></span>          | base-200          | --color-base-200          | Base color, darker shade, to create elevations                     |
+| <span class="badge bg-base-300"></span>          | base-300          | --color-base-300          | Base color, even more darker shade, to create elevations           |
+| <span class="badge bg-base-content"></span>      | base-content      | --color-base-content      | Foreground content color to use on `base` color <br/><br/>         |
+| <span class="badge bg-info"></span>              | info              | --color-info              | Info color, For informative/helpful messages                       |
+| <span class="badge bg-info-content"></span>      | info-content      | --color-info-content      | Foreground content color to use on `info` color                    |
+| <span class="badge bg-success"></span>           | success           | --color-success           | Success color, For success/safe messages                           |
+| <span class="badge bg-success-content"></span>   | success-content   | --color-success-content   | Foreground content color to use on `success` color                 |
+| <span class="badge bg-warning"></span>           | warning           | --color-warning           | Warning color, For warning/caution messages                        |
+| <span class="badge bg-warning-content"></span>   | warning-content   | --color-warning-content   | Foreground content color to use on `warning` color                 |
+| <span class="badge bg-error"></span>             | error             | --color-error             | Error color, For error/danger/destructive messages                 |
+| <span class="badge bg-error-content"></span>     | error-content     | --color-error-content     | Foreground content color to use on `error` color                   |
 
 </div>
 </div>
@@ -148,24 +148,25 @@ Example of theming a div with hardcoded color values
 <Translate text="You can also use color names in utility classes just like Tailwind's original color names." />
 <Translate text="These are utility classes that can be used with a color name:" />
 
-| CSS Class | |
-| --- | --- |
-| `bg-{COLOR_NAME}` | Also available in daisyUI CDN file |
-| `text-{COLOR_NAME}` | Also available in daisyUI CDN file |
-| `border-{COLOR_NAME}` | Also available in daisyUI CDN file |
-| `from-{COLOR_NAME}` | |
-| `via-{COLOR_NAME}` | |
-| `to-{COLOR_NAME}` | |
-| `ring-{COLOR_NAME}` | |
-| `fill-{COLOR_NAME}` | |
-| `caret-{COLOR_NAME}` | |
-| `stroke-{COLOR_NAME}` | |
-| `divide-{COLOR_NAME}` | |
-| `accent-{COLOR_NAME}` | |
-| `shadow-{COLOR_NAME}` | |
-| `outline-{COLOR_NAME}` | |
-| `decoration-{COLOR_NAME}` | |
-| `placeholder-{COLOR_NAME}` | |
-| `ring-offset-{COLOR_NAME}` | |
+| CSS Class                  |                                    |
+|----------------------------|------------------------------------|
+| `bg-{COLOR_NAME}`          | Also available in daisyUI CDN file |
+| `text-{COLOR_NAME}`        | Also available in daisyUI CDN file |
+| `border-{COLOR_NAME}`      | Also available in daisyUI CDN file |
+| `from-{COLOR_NAME}`        |                                    |
+| `via-{COLOR_NAME}`         |                                    |
+| `to-{COLOR_NAME}`          |                                    |
+| `ring-{COLOR_NAME}`        |                                    |
+| `fill-{COLOR_NAME}`        |                                    |
+| `caret-{COLOR_NAME}`       |                                    |
+| `stroke-{COLOR_NAME}`      |                                    |
+| `divide-{COLOR_NAME}`      |                                    |
+| `accent-{COLOR_NAME}`      |                                    |
+| `shadow-{COLOR_NAME}`      |                                    |
+| `outline-{COLOR_NAME}`     |                                    |
+| `decoration-{COLOR_NAME}`  |                                    |
+| `placeholder-{COLOR_NAME}` |                                    |
+| `ring-offset-{COLOR_NAME}` |                                    |
+
 
 So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI color utility classes](/docs/utilities).
