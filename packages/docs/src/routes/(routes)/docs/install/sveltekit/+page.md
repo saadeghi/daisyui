@@ -36,7 +36,7 @@ Put Tailwind and daisyUI to your CSS file
 ```
 
 Import the CSS file in your Svelte page (or layout)
-```svelte:src/routes/+page.svelte
+```html:src/routes/+page.svelte
 <script>
   import "../style.css";
 </script>
