@@ -59,6 +59,10 @@
   @apply text-accent;
 }
 
+.progress-neutral {
+  @apply text-neutral;
+}
+
 .progress-info {
   @apply text-info;
 }
