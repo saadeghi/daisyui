@@ -1,5 +1,5 @@
 ---
-title: Install daisyUI as a Tailwind CSS plugin
+title: Install daisyUI as a Tailwind plugin
 desc: How to install daisyUI as a Tailwind CSS plugin?
 ---
 
@@ -15,27 +15,20 @@ desc: How to install daisyUI as a Tailwind CSS plugin?
   <Install/>
 </div>
 
-## <Translate text="daisyUI example repositories"/>
+## Framework install tutorials
 
 <Translate text="See example setup of daisyUI and Tailwind CSS on different frameworks and build tools."/>
 
-<div class="not-prose grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 my-10 gap-6">
+<div class="not-prose grid grid-cols-2 md:grid-cols-3 py-6 *:-ms-px *:-mt-px">
 
-{#each data.exampleRepos as { name, href, logos }}
-  <a class="card border-2 border-base-content/5 card-compact transition-all duration-200 hover:shadow hover:-translate-y-1" {href} target="\_blank" rel="noopener, noreferrer">
-    <figure class="px-12 pt-6 pb-2 w-full aspect-2/1 items-end overflow-visible">
-      {#if logos.length === 1}
-        <img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square w-full h-auto" />
-      {:else}
-        <div class="grid w-full">
-          <img loading="lazy" alt={logos[0]} src={logos[0]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-full h-auto" />
-          <img loading="lazy" alt={logos[1]} src={logos[1]} width="96" height="96" class="aspect-square col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto" />
-        </div>
-      {/if}
-    </figure>
-    <div class="card-body text-center">
-      <span class="text-xs">{name}</span>
+{#each data.frameworks as framework}
+  <a href="{framework.path}" class="bg-base-100 overflow-hidden group flex items-center gap-4 flex-col px-4 py-8 border border-base-content/5 hover:shadow-md hover:-translate-y-1 focus:shadow-sm focus:-translate-y-0.5 transition-all">
+    <div class="grid *:[grid-area:1/1]">
+      <div class="blur-lg scale-300 saturate-200 group-hover:[transform:scaleY(.5)] [transform:scaleY(.3)] transition-all translate-y-26 opacity-5 group-hover:opacity-20">{@html framework.logo}</div>
+      <div class="z-2">{@html framework.logo}</div>
+      <div class="z-1 group-hover:opacity-0 brightness-125 group-hover:scale-110 group-hover:duration-800 duration-0 transition-all">{@html framework.logo}</div>
     </div>
+    <div class="text-sm font-medium transition-colors group-hover:text-base-content text-base-content/60">{framework.name}</div>
   </a>
 {/each}
 

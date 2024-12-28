@@ -17,7 +17,7 @@ npm install tailwindcss@next @tailwindcss/vite@next daisyui@alpha
 
 Add Tailwind CSS to Vite config
 
-```nuxt.config.ts
+```js:nuxt.config.ts
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   vite: {
