@@ -59,11 +59,11 @@ Change the theme to see the border radius changes:
   <div class="grid place-content-center text-xs py-10 bg-base-content text-base-100 rounded-selector">rounded-selector</div>
 </div>
 
-| Class Name        | CSS Variable      | Description                                                                          |
-|--------------------|----------------------|--------------------------------------------------------------------------------------|
-| `rounded-box`     | `var(--radius-box)` | For large sized components like card, modal, alert, etc.                             |
-| `rounded-field`   | `var(--radius-field)`| For medium sized components like button, input, select, tab, etc.                    |
-| `rounded-selector` | `var(--radius-selector)` | For small sized components like checkbox, toggle, badge, etc.                         |
+| Class Name         | CSS Variable             | Description                                                                          |
+|--------------------|--------------------------|--------------------------------------------------------------------------------------|
+| `rounded-box`      | `var(--radius-box)`      | For large sized components like card, modal, alert, etc.                             |
+| `rounded-field`    | `var(--radius-field)`    | For medium sized components like button, input, select, tab, etc.                    |
+| `rounded-selector` | `var(--radius-selector)` | For small sized components like checkbox, toggle, badge, etc.                        |
 
 ## <Translate text="Glass" />
 
@@ -115,6 +115,8 @@ These CSS variables can be customized for each themes. Read more about [color na
 ## <Translate text="Component specific CSS variables" />
 
 For advanced use: These CSS variables are being used internally for a specific components. You probably won't need to customize them, but you can if you want to.
+
+If you are using a prefix for daisyUI, these CSS variables will be prefixed with that prefix as well. For example if prefix is `daisy-`, The  `--alert-color` CSS variable will be `--daisy-alert-color`.
 
 > :INFO: 
 > 

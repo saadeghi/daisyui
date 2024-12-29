@@ -1,69 +1,138 @@
-const getPrefixedKey = (key, prefix) => {
+const defaultExcludedPrefixes = ["color-", "size-", "radius-", "border", "depth", "noise"]
+
+const shouldExcludeVariable = (variableName, excludedPrefixes) => {
+  return excludedPrefixes.some((excludedPrefix) => variableName.startsWith(excludedPrefix))
+}
+
+const prefixVariable = (variableName, prefix, excludedPrefixes) => {
+  if (shouldExcludeVariable(variableName, excludedPrefixes)) {
+    return variableName
+  }
+  return `${prefix}${variableName}`
+}
+
+const getPrefixedSelector = (selector, prefix) => {
+  if (!selector.startsWith(".")) return selector
+  return `.${prefix}${selector.slice(1)}`
+}
+
+const getPrefixedKey = (key, prefix, excludedPrefixes) => {
   const prefixDot = prefix ? `.${prefix}` : ""
   const prefixAmpDot = prefix ? `&.${prefix}` : ""
 
   if (!prefix) return key
 
-  if (key.startsWith(".")) {
-    return `${prefixDot}${key.slice(1)}`
+  if (key.startsWith("--")) {
+    const variableName = key.slice(2)
+    return `--${prefixVariable(variableName, prefix, excludedPrefixes)}`
   }
-  if (key.startsWith("&.")) {
-    return `${prefixAmpDot}${key.slice(2)}`
-  }
-  if (key.includes(" ")) {
-    return key
-      .split(" ")
-      .map((part) => getPrefixedKey(part, prefix))
-      .join(" ")
-  }
-  if (key.includes(":")) {
-    return key
-      .split(":")
-      .map((part, index) => {
-        if (index === 0 && part.startsWith(".")) {
-          return `${prefixDot}${part.slice(1)}`
-        }
-        if (part.includes("(")) {
-          return part.replace(
-            /\(([^)]+)\)/,
-            (match, inner) =>
-              `(${inner
-                .split(",")
-                .map((sel) =>
-                  sel.trim().startsWith(".") ? `${prefixDot}${sel.trim().slice(1)}` : sel.trim(),
-                )
-                .join(", ")})`,
-          )
-        }
-        return part
-      })
-      .join(":")
-  }
+
   if (key.startsWith("@") || key.startsWith("[")) {
     return key
   }
+
+  if (key.startsWith("&.")) {
+    return `${prefixAmpDot}${key.slice(2)}`
+  }
+
+  if (key.startsWith(":")) {
+    return key.replace(/\.([\w-]+)/g, `.${prefix}$1`)
+  }
+
+  if (
+    key.includes(".") &&
+    !key.includes(" ") &&
+    !key.includes(">") &&
+    !key.includes("+") &&
+    !key.includes("~")
+  ) {
+    return key
+      .split(".")
+      .filter(Boolean)
+      .map((part) => prefix + part)
+      .join(".")
+      .replace(/^/, ".")
+  }
+
+  if (key.includes(">") || key.includes("+") || key.includes("~")) {
+    return key
+      .split(/\s*([>+~])\s*/)
+      .map((part) => {
+        part = part.trim()
+        // Check if part contains any CSS function (like :not(), :is(), :where(), etc)
+        if (part.includes(":(") || part.match(/:[a-z-]+\(/)) {
+          return part.replace(/\.[\w-]+(?=[\s)])/g, (match) => `.${prefix}${match.slice(1)}`)
+        }
+        if (part === ">" || part === "+" || part === "~") return ` ${part} `
+        return part.startsWith(".") ? getPrefixedSelector(part, prefix) : part
+      })
+      .join("")
+  }
+
+  if (key.includes(" ")) {
+    return key
+      .split(/\s+/)
+      .map((part) => {
+        if (part.startsWith(".")) {
+          return getPrefixedSelector(part, prefix)
+        }
+        return part
+      })
+      .join(" ")
+  }
+
+  if (key.includes(":")) {
+    const [selector, ...pseudo] = key.split(":")
+    if (selector.startsWith(".")) {
+      return `${getPrefixedSelector(selector, prefix)}:${pseudo.join(":")}`
+    }
+    return key.replace(/\.([\w-]+)/g, `.${prefix}$1`)
+  }
+
+  if (key.startsWith(".")) {
+    return getPrefixedSelector(key, prefix)
+  }
+
   return key
 }
 
-const processValue = (value, prefix) => {
-  if (Array.isArray(value)) {
-    return value.map((item) => {
-      if (typeof item === "string" && item.startsWith(".")) {
+const processArrayValue = (value, prefix, excludedPrefixes) => {
+  return value.map((item) => {
+    if (typeof item === "string") {
+      if (item.startsWith(".")) {
         return prefix ? `.${prefix}${item.slice(1)}` : item
       }
-      return item
-    })
+      return processStringValue(item, prefix, excludedPrefixes)
+    }
+    return item
+  })
+}
+
+const processStringValue = (value, prefix, excludedPrefixes) => {
+  return value.replace(/var\(--([^)]+)\)/g, (match, variableName) => {
+    if (shouldExcludeVariable(variableName, excludedPrefixes)) {
+      return match
+    }
+    return `var(--${prefix}${variableName})`
+  })
+}
+
+const processValue = (value, prefix, excludedPrefixes) => {
+  if (Array.isArray(value)) {
+    return processArrayValue(value, prefix, excludedPrefixes)
   } else if (typeof value === "object" && value !== null) {
-    return addPrefix(value, prefix)
+    return addPrefix(value, prefix, excludedPrefixes)
+  } else if (typeof value === "string") {
+    return processStringValue(value, prefix, excludedPrefixes)
   } else {
     return value
   }
 }
 
-export const addPrefix = (obj, prefix) => {
+export const addPrefix = (obj, prefix, excludedPrefixes = defaultExcludedPrefixes) => {
   return Object.entries(obj).reduce((result, [key, value]) => {
-    const newKey = getPrefixedKey(key, prefix)
-    result[newKey] = processValue(value, prefix)
+    const newKey = getPrefixedKey(key, prefix, excludedPrefixes)
+    result[newKey] = processValue(value, prefix, excludedPrefixes)
     return result
   }, {})
 }
