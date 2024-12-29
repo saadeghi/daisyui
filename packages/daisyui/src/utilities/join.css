@@ -46,8 +46,6 @@
 }
 
 .join-item {
-  box-shadow: none;
-
   &:where(*:not(:first-child)) {
     margin-inline-start: calc(var(--border, 1px) * -1);
     margin-block-start: 0;
