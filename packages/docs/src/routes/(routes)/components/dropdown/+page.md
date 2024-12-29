@@ -136,7 +136,7 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 </button>
 
 <ul className="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
-  popover id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */ }>
+  popover="true" id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */ }>
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
 </ul>
