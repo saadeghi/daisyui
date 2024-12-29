@@ -6,13 +6,6 @@ classnames:
   component:
   - class: radial-progress
     desc: Shows a radial progress
-  variable:
-  # - class: --value
-  #   desc: Integer value of progress (required)
-  # - class: --size
-  #   desc: Size of the progress circle. (default 5rem)
-  # - class: --thickness
-  #   desc: Thickness of progress circle. (default 10%)
 ---
 
 <script>
@@ -38,7 +31,9 @@ classnames:
 <div class="$$radial-progress" style="--value:70;" aria-valuenow="70" role="progressbar">70%</div>
 ```
 ```jsx
-<div className="$$radial-progress" style={{ "--value": 70 }} aria-valuenow={70} role="progressbar">70%</div>
+{/* For TSX uncomment the commented types below */}
+<div className="$$radial-progress" style={{ "--value": 70 } /* as React.CSSProperties */ } 
+  aria-valuenow={70} role="progressbar">70%</div>
 ```
 
 
@@ -57,11 +52,21 @@ classnames:
 <div class="$$radial-progress" style="--value:100;" aria-valuenow="100" role="progressbar">100%</div>
 ```
 ```jsx
-<div className="$$radial-progress" style={{"--value":0}} aria-valuenow={0} role="progressbar">0%</div>
-<div className="$$radial-progress" style={{"--value":20}} aria-valuenow={20} role="progressbar">20%</div>
-<div className="$$radial-progress" style={{"--value":60}} aria-valuenow={60} role="progressbar">60%</div>
-<div className="$$radial-progress" style={{"--value":80}} aria-valuenow={80} role="progressbar">80%</div>
-<div className="$$radial-progress" style={{"--value":100}} aria-valuenow={100} role="progressbar">100%</div>
+{/* For TSX uncomment the commented types below */}
+<div className="$$radial-progress" style={{"--value":0} /* as React.CSSProperties */ } 
+  aria-valuenow={0} role="progressbar">0%</div>
+
+<div className="$$radial-progress" style={{"--value":20} /* as React.CSSProperties */ } 
+aria-valuenow={20} role="progressbar">20%</div>
+
+<div className="$$radial-progress" style={{"--value":60} /* as React.CSSProperties */ } 
+  aria-valuenow={60} role="progressbar">60%</div>
+
+<div className="$$radial-progress" style={{"--value":80} /* as React.CSSProperties */ } 
+  aria-valuenow={80} role="progressbar">80%</div>
+
+<div className="$$radial-progress" style={{"--value":100} /* as React.CSSProperties */ } 
+  aria-valuenow={100} role="progressbar">100%</div>
 ```
 
 
@@ -72,7 +77,8 @@ classnames:
 <div class="$$radial-progress text-primary" style="--value:70;" aria-valuenow="70" role="progressbar">70%</div>
 ```
 ```jsx
-<div className="$$radial-progress text-primary" style={{ "--value": 70 }} aria-valuenow={70} role="progressbar">
+{/* For TSX uncomment the commented types below */}
+<div className="$$radial-progress text-primary" style={{ "--value": 70 } /* as React.CSSProperties */ } aria-valuenow={70} role="progressbar">
   70%
 </div>
 ```
@@ -89,9 +95,10 @@ classnames:
 </div>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <div
   className="$$radial-progress bg-primary text-primary-content border-primary border-4"
-  style={{ "--value": 70 }} aria-valuenow={70} role="progressbar">
+  style={{ "--value": 70 } /* as React.CSSProperties */ } aria-valuenow={70} role="progressbar">
   70%
 </div>
 ```
@@ -106,10 +113,12 @@ classnames:
 <div class="$$radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" aria-valuenow="70" role="progressbar">70%</div>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <div className="$$radial-progress"
-  style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }} 
+  style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" } /* as React.CSSProperties */ } 
   aria-valuenow={70} role="progressbar">70%</div>
+
 <div className="$$radial-progress"
-  style={{ "--value": "70", "--size": "12rem", "--thickness": "2rem" }} 
+  style={{ "--value": "70", "--size": "12rem", "--thickness": "2rem" } /* as React.CSSProperties */ } 
   aria-valuenow={70} role="progressbar">70%</div>
 ```

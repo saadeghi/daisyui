@@ -42,8 +42,9 @@ classnames:
 </span>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <span class="$$countdown">
-  <span style={{"--value":59}}>59</span>
+  <span style={{"--value":59} /* as React.CSSProperties */ }>59</span>
 </span>
 ```
 
@@ -59,8 +60,9 @@ classnames:
 </span>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <span class="$$countdown font-mono text-6xl">
-  <span style={{"--value":59}}>59</span>
+  <span style={{"--value":59} /* as React.CSSProperties */ }>59</span>
 </span>
 ```
 
@@ -83,10 +85,11 @@ classnames:
 </span>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <span class="$$countdown font-mono text-2xl">
-  <span style={{"--value":10}}>10</span>h
-  <span style={{"--value":24}}>24</span>m
-  <span style={{"--value":59}}>59</span>s
+  <span style={{"--value":10} /* as React.CSSProperties */ }>10</span>h
+  <span style={{"--value":24} /* as React.CSSProperties */ }>24</span>m
+  <span style={{"--value":59} /* as React.CSSProperties */ }>59</span>s
 </span>
 ```
 
@@ -108,10 +111,11 @@ classnames:
 </span>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <span class="$$countdown font-mono text-2xl">
-  <span style={{"--value":10}}>10</span>:
-  <span style={{"--value":24}}>24</span>:
-  <span style={{"--value":59}}>59</span>
+  <span style={{"--value":10} /* as React.CSSProperties */ }>10</span>:
+  <span style={{"--value":24} /* as React.CSSProperties */ }>24</span>:
+  <span style={{"--value":59} /* as React.CSSProperties */ }>59</span>
 </span>
 ```
 
@@ -173,28 +177,29 @@ classnames:
 </div>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <div class="flex gap-5">
   <div>
     <span class="$$countdown font-mono text-4xl">
-        <span style={{"--value":15}}>15</span>
+        <span style={{"--value":15} /* as React.CSSProperties */ }>15</span>
     </span>
     days
   </div>
   <div>
     <span class="$$countdown font-mono text-4xl">
-        <span style={{"--value":10}}>10</span>
+        <span style={{"--value":10} /* as React.CSSProperties */ }>10</span>
     </span>
     hours
   </div>
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style={{"--value":24}}>24</span>
+      <span style={{"--value":24} /* as React.CSSProperties */ }>24</span>
     </span>
     min
   </div>
   <div>
     <span class="$$countdown font-mono text-4xl">
-      <span style={{"--value":59}}>59</span>
+      <span style={{"--value":59} /* as React.CSSProperties */ }>59</span>
     </span>
     sec
   </div>
@@ -259,28 +264,29 @@ classnames:
 </div>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":15}}>15</span>
+      <span style={{"--value":15} /* as React.CSSProperties */ }>15</span>
     </span>
     days
   </div>
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":10}}>10</span>
+      <span style={{"--value":10} /* as React.CSSProperties */ }>10</span>
     </span>
     hours
   </div>
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":24}}>24</span>
+      <span style={{"--value":24} /* as React.CSSProperties */ }>24</span>
     </span>
     min
   </div>
   <div class="flex flex-col">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":59}}>59</span>
+      <span style={{"--value":59} /* as React.CSSProperties */ }>59</span>
     </span>
     sec
   </div>
@@ -345,28 +351,29 @@ classnames:
 </div>
 ```
 ```jsx
+{/* For TSX uncomment the commented types below */}
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":15}}>15</span>
+      <span style={{"--value":15} /* as React.CSSProperties */ }>15</span>
     </span>
     days
   </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":10}}>10</span>
+      <span style={{"--value":10} /* as React.CSSProperties */ }>10</span>
     </span>
     hours
   </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":24}}>24</span>
+      <span style={{"--value":24} /* as React.CSSProperties */ }>24</span>
     </span>
     min
   </div>
   <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
     <span class="$$countdown font-mono text-5xl">
-      <span style={{"--value":59}}>59</span>
+      <span style={{"--value":59} /* as React.CSSProperties */ }>59</span>
     </span>
     sec
   </div>

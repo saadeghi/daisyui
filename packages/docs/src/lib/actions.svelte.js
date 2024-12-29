@@ -1,16 +1,28 @@
 import { prefix } from "$lib/stores"
 
-export function prefixClassNames(node) {
+const replaceStrings = (content, replacements) => {
+  const re = new RegExp(
+    Object.keys(replacements)
+      .map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+      .join("|"),
+    "gi",
+  )
+
+  return content.replace(re, (matched) => replacements[matched.toLowerCase()])
+}
+
+export const prefixClassNames = (node) => {
   const originalContent = node.innerHTML ?? ""
   let prefixValue
+
+  const update = () => {
+    node.innerHTML = originalContent.replaceAll("$$", prefixValue)
+  }
+
   const unsubscribe = prefix.subscribe((value) => {
     prefixValue = value
     update()
   })
-
-  function update() {
-    node.innerHTML = originalContent.replaceAll("$$", prefixValue)
-  }
 
   update()
 
@@ -20,7 +32,7 @@ export function prefixClassNames(node) {
   }
 }
 
-export function htmlToJsx(node) {
+export const htmlToJsx = (node) => {
   const originalContent = node.innerHTML ?? ""
 
   const stringsToReplace = {
@@ -48,19 +60,13 @@ export function htmlToJsx(node) {
     "stroke-linejoin": "strokeLinejoin",
     "stroke-opacity": "strokeOpacity",
     "stroke-width": "strokeWidth",
+    popovertarget: "popoverTarget",
+    "anchor-name": "anchorName",
+    "position-anchor": "positionAnchor",
   }
-  const re = new RegExp(
-    Object.keys(stringsToReplace)
-      .map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
-      .join("|"),
-    "gi",
-  )
 
-  function update() {
-    node.innerHTML = originalContent.replace(
-      re,
-      (matched) => stringsToReplace[matched.toLowerCase()],
-    )
+  const update = () => {
+    node.innerHTML = replaceStrings(originalContent, stringsToReplace)
   }
 
   update()
