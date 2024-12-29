@@ -1,15 +1,22 @@
 .range {
   appearance: none;
   -webkit-appearance: none;
-  --range-shdw: currentColor;
   --range-thumb: var(--color-base-100);
+  --range-thumb-size: calc(var(--size-selector, 0.25rem) * 6);
+  --range-progress: currentColor;
+  --range-fill: 1;
   --range-p: 0.25rem;
+  --range-bg: color-mix(in oklab, currentColor 10%, transparent);
   @apply cursor-pointer overflow-hidden bg-transparent align-middle;
   width: clamp(3rem, 20rem, 100%);
   border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
   border: none;
-  --size: calc(var(--size-selector, 0.25rem) * 6);
-  height: var(--size);
+  height: var(--range-thumb-size);
+
+  [dir="rtl"] & {
+    --range-dir: -1;
+  }
+
   &:focus {
     outline: none;
   }
@@ -20,9 +27,10 @@
   }
 
   &::-webkit-slider-runnable-track {
-    @apply w-full bg-current/10;
+    @apply w-full;
+    background-color: var(--range-bg);
     border-radius: var(--radius-selector);
-    height: calc(var(--size) * 0.5);
+    height: calc(var(--range-thumb-size) * 0.5);
     @media (forced-colors: active) {
       border: 1px solid;
     }
@@ -32,31 +40,30 @@
     @apply relative box-border;
     border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
     background-color: currentColor;
-    height: var(--size);
-    width: var(--size);
+    height: var(--range-thumb-size);
+    width: var(--range-thumb-size);
     border: var(--range-p) solid;
     appearance: none;
     -webkit-appearance: none;
     top: 50%;
-    color: var(--range-shdw);
+    color: var(--range-progress);
     transform: translateY(-50%);
-    --track-shdw: calc(-100rem - (var(--size) / 2)) 0 0 100rem;
     box-shadow:
       0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent),
       0 0 0 2rem var(--range-thumb) inset,
-      var(--track-shdw);
-  }
-
-  [dir="rtl"] &::-webkit-slider-thumb {
-    --track-shdw: calc(100rem + var(--size) / 2) 0 0 100rem;
+      calc(
+          calc(var(--range-dir, 1) * -100rem) - (var(--range-dir, 1) * var(--range-thumb-size) / 2)
+        )
+        0 0 calc(100rem * var(--range-fill));
   }
 
   &::-moz-range-track {
-    @apply w-full bg-current/10;
+    @apply w-full;
+    background-color: var(--range-bg);
     border-radius: var(--radius-selector);
-    height: calc(var(--size) * 0.5);
+    height: calc(var(--range-thumb-size) * 0.5);
     @media (forced-colors: active) {
       border: 1px solid;
     }
@@ -66,18 +73,20 @@
     @apply relative box-border;
     border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
     background-color: currentColor;
-    height: var(--size);
-    width: var(--size);
+    height: var(--range-thumb-size);
+    width: var(--range-thumb-size);
     border: var(--range-p) solid;
     top: 50%;
-    color: var(--range-shdw);
-    --track-shdw: calc(-100rem - (var(--size) / 2)) 0 0 100rem;
+    color: var(--range-progress);
     box-shadow:
       0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent),
       0 0 0 2rem var(--range-thumb) inset,
-      var(--track-shdw);
+      calc(
+          calc(var(--range-dir, 1) * -100rem) - (var(--range-dir, 1) * var(--range-thumb-size) / 2)
+        )
+        0 0 calc(100rem * var(--range-fill));
   }
   &:disabled {
     @apply cursor-not-allowed opacity-30;
@@ -120,21 +129,21 @@
 }
 
 .range-xs {
-  --size: calc(var(--size-selector, 0.25rem) * 4);
+  --range-thumb-size: calc(var(--size-selector, 0.25rem) * 4);
 }
 
 .range-sm {
-  --size: calc(var(--size-selector, 0.25rem) * 5);
+  --range-thumb-size: calc(var(--size-selector, 0.25rem) * 5);
 }
 
 .range-md {
-  --size: calc(var(--size-selector, 0.25rem) * 6);
+  --range-thumb-size: calc(var(--size-selector, 0.25rem) * 6);
 }
 
 .range-lg {
-  --size: calc(var(--size-selector, 0.25rem) * 7);
+  --range-thumb-size: calc(var(--size-selector, 0.25rem) * 7);
 }
 
 .range-xl {
-  --size: calc(var(--size-selector, 0.25rem) * 8);
+  --range-thumb-size: calc(var(--size-selector, 0.25rem) * 8);
 }

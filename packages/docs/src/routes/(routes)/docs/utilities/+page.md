@@ -161,10 +161,12 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--thickness`                         | thickness of the radial progress                                            |
 |                 | `--radialprogress`                    | for calculating the radial progress position                                |
 | Radio           | `--size`                              | size of the radio                                                           |
-| Range           | `--range-shdw`                        | box shadow of the range slider                                              |
-|                 | `--track-shdw`                        | box shadow of the range slider track                                        |
+| Range           | `--range-bg`                          | background color of the range slider thumb                                  |
 |                 | `--range-thumb`                       | color of the range slider thumb                                             |
-|                 | `--range-p`                           | padding of the range slider                                                 |
+|                 | `--range-thumb-size`                  | size of the range slider thumb                                              |
+|                 | `--range-progress`                    | color of the range slider progress                                          |
+|                 | `--range-fill`                        | binary, whether to fill the range slider progress or not                    |
+|                 | `--range-p`                           | padding of the range slider thumb                                           |
 |                 | `--size`                              | size of the range slider                                                    |
 | Select          | `--input-color`                       | color of the input                                                          |
 |                 | `--size`                              | size of the select                                                          |

@@ -161,9 +161,10 @@ classnames:
 ```
 
 
-### ~Range with custom color
-<input type="range" min="0" max="100" value="40" class="range text-red-500" />
+### ~Range with custom color and no fill
+<input type="range" min="0" max="100" value="40" class="range text-blue-300 [--range-bg:orange] [--range-thumb:blue] [--range-fill:0]" />
 
 ```html
-<input type="range" min="0" max="100" value="40" class="$$range text-red-500" />
+<input type="range" min="0" max="100" value="40" 
+  class="$$range text-blue-300 [--range-bg:orange] [--range-thumb:blue] [--range-fill:0]" />
 ```
