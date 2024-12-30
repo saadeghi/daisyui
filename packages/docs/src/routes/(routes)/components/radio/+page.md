@@ -7,6 +7,8 @@ classnames:
   - class: radio
     desc: For radio input
   color:
+  - class: radio-neutral
+    desc: neutral color
   - class: radio-primary
     desc: primary color
   - class: radio-secondary
@@ -67,6 +69,17 @@ classnames:
 <input type="radio" name="radio-2" class="$$radio $$radio-lg" checked="checked" />
 <input type="radio" name="radio-2" class="$$radio $$radio-xl" checked="checked" />
 ```
+
+
+### ~Neutral color
+<input type="radio" name="radio-3" class="radio radio-neutral" checked="checked" />
+<input type="radio" name="radio-3" class="radio radio-neutral" />
+
+```html
+<input type="radio" name="radio-3" class="$$radio $$radio-neutral" checked="checked" />
+<input type="radio" name="radio-3" class="$$radio $$radio-neutral" />
+```
+
 
 ### ~Primary color
 <input type="radio" name="radio-3" class="radio radio-primary" checked="checked" />
