@@ -10,6 +10,8 @@ classnames:
   - class: input-ghost
     desc: ghost style
   color:
+  - class: input-neutral
+    desc: neutral color
   - class: input-primary
     desc: primary color
   - class: input-secondary
@@ -115,6 +117,7 @@ classnames:
 
 ### ~Input colors
 <div class="grid gap-4 w-xs">
+  <input type="text" placeholder="neutral" class="input input-neutral" />
   <input type="text" placeholder="Primary" class="input input-primary" />
   <input type="text" placeholder="Secondary" class="input input-secondary" />
   <input type="text" placeholder="Accent" class="input input-accent" />
@@ -125,6 +128,7 @@ classnames:
 </div>
 
 ```html
+<input type="text" placeholder="neutral" class="$$input $$input-neutral" />
 <input type="text" placeholder="Primary" class="$$input $$input-primary" />
 <input type="text" placeholder="Secondary" class="$$input $$input-secondary" />
 <input type="text" placeholder="Accent" class="$$input $$input-accent" />
