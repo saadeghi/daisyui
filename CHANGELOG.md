@@ -168,6 +168,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Add ability to focus on each side using tap on iOS Safari.
 
 🔧 Changes
+- Images are now in chronological order. first image is `diff-item-1` and second image is `diff-item-2`.
 - Fix Firefox lag issue.
 - Updated HTML syntax to support iOS and keyboard navigation. `tabindex="0"` allows focus on the element using keyboard navigation or tap on iOS Safari where CSS `resize` property is not supported.
 ```diff:page.html

@@ -615,10 +615,10 @@ These components have been improved to be more visually appealing:
   
 <figure class="diff aspect-[1600/650] border-2 border-gray-200 rounded-box" data-theme="dark" tabindex="0">
   <div class="diff-item-1" role="img">
-    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-5-tailwindcss-components.webp" alt="daisyUI 5"/>
+    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-4-tailwindcss-components.webp" alt="daisyUI 4"/>
   </div>
   <div class="diff-item-2" role="img" tabindex="0">
-    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-4-tailwindcss-components.webp" alt="daisyUI 4"/>
+    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-5-tailwindcss-components.webp" alt="daisyUI 5"/>
   </div>
   <div class="diff-resizer"></div>
 </figure>

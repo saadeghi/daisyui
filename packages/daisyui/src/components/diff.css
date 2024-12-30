@@ -4,7 +4,7 @@
   container-type: inline-size;
   grid-template-columns: auto 1fr;
   &:focus,
-  &:has(.diff-item-2:focus) {
+  &:has(.diff-item-1:focus) {
     @apply outline-base-content outline-2 outline-offset-1;
   }
   &:focus-visible {
@@ -14,7 +14,7 @@
       max-width: 90cqi;
     }
   }
-  &:has(.diff-item-2:focus-visible) {
+  &:has(.diff-item-1:focus-visible) {
     @apply outline-2 outline-offset-1;
     .diff-resizer {
       min-width: 10cqi;
@@ -28,7 +28,7 @@
         max-width: 10cqi;
       }
     }
-    &:has(.diff-item-2:focus) {
+    &:has(.diff-item-1:focus) {
       .diff-resizer {
         min-width: 90cqi;
         max-width: 90cqi;
@@ -48,10 +48,10 @@
     max-width 0.3s ease-out;
   /* } */
 }
-.diff-item-1 {
+.diff-item-2 {
   @apply relative col-start-1 row-start-1;
   &:after {
-    @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-1 size-6 rounded-full;
+    @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 size-6 rounded-full;
     border: 2px solid var(--color-base-100);
     content: "";
     outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
@@ -69,8 +69,8 @@
     }
   }
 }
-.diff-item-2 {
-  @apply relative col-start-1 row-start-1 overflow-hidden;
+.diff-item-1 {
+  @apply relative z-1 col-start-1 row-start-1 overflow-hidden;
   border-right: 2px solid var(--color-base-100);
   > * {
     @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
