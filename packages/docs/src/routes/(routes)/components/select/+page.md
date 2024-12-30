@@ -201,7 +201,7 @@ classnames:
   <option>System</option>
 </select>
 ```
-```html
+```jsx
 <select defaultValue="Color scheme" class="$$select $$select-accent">
   <option disabled={true}>Color scheme</option>
   <option>Light mode</option>
