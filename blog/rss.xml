@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Thu, 26 Dec 2024 17:01:33 GMT</lastBuildDate>
-    <pubDate>Thu, 26 Dec 2024 17:01:33 GMT</pubDate>
+    <lastBuildDate>Mon, 30 Dec 2024 18:32:11 GMT</lastBuildDate>
+    <pubDate>Mon, 30 Dec 2024 18:32:11 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ daisyUI 2024 Wrapped ]]>
+          </title>
+          <description>
+            <![CDATA[ Wrapping up 2024. Exciting things are coming in 2025! ]]>
+          </description>
+          <link>https://daisyui.com/blog/daisyui-2024-wrapped/</link>
+          <pubDate>Mon, 30 Dec 2024 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/2024-wrapped-star-history.webp</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/2024-wrapped-star-history.webp</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/2024-wrapped-star-history.webp" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/blog/2024-wrapped-star-history.webp" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/daisyui-2024-wrapped/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ daisyUI 5 alpha is in development ]]>
