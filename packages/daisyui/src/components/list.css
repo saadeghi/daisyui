@@ -25,6 +25,7 @@
       --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto)
         minmax(0, auto) 1fr;
     }
+    &:has(:not(:last-child)),
     &:not(:last-child) {
       &:after {
         content: "";
