@@ -12,7 +12,7 @@
   --input-color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
   --toggle-p: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
-  width: calc(calc(var(--size) * 2) - calc(var(--border) + var(--toggle-p)) * 2);
+  width: calc((var(--size) * 2) - (var(--border) + var(--toggle-p)) * 2);
   height: var(--size);
 
   /* icons in toggle */
