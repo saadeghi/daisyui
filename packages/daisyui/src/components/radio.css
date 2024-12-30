@@ -48,6 +48,10 @@
   --input-color: var(--color-accent);
 }
 
+.radio-neutral {
+  --input-color: var(--color-neutral);
+}
+
 .radio-info {
   --input-color: var(--color-info);
 }
