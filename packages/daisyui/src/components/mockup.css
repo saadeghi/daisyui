@@ -34,11 +34,14 @@
 
   &:before {
     content: "";
-    @apply mb-4 block aspect-square h-3 shrink-0 self-start rounded-full opacity-30 rtl:self-end;
+    @apply mb-4 block aspect-square h-3 shrink-0 self-start rounded-full opacity-30;
     box-shadow:
       1.4em 0,
       2.8em 0,
       4.2em 0;
+  }
+  [dir="rtl"] &:before {
+    @apply self-end;
   }
 
   pre[data-prefix] {

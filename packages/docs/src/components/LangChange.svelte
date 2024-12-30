@@ -3,8 +3,14 @@
   import { t } from "$lib/i18n"
 </script>
 
-<div title="Change Language" class="dropdown dropdown-end">
-  <div tabindex="0" role="button" class="btn btn-ghost" aria-label="Language">
+<div class="dropdown dropdown-end">
+  <div
+    tabindex="0"
+    role="button"
+    class="btn btn-ghost"
+    aria-label="Language"
+    title="Change Language"
+  >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4">
       <path
         fill-rule="evenodd"
@@ -28,21 +34,21 @@
     tabindex="0"
     class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 max-h-[calc(100vh-10rem)] w-56 overflow-y-auto border border-white/5 shadow-2xl outline-1 outline-black/5"
   >
-    <ul class="menu menu-sm gap-1 w-full">
+    <ul class="menu menu-sm w-full">
       {#each langs as langItem}
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
             <button class:active={$currentLang == langItem} onclick={() => setLang(langItem)}>
               {#if $t("__code", {}, langItem, false) !== "__code"}
                 <span
-                  class="badge badge-sm badge-outline pl-1.5! pr-1! pt-px font-mono text-[.6rem]! font-bold tracking-widest opacity-50"
+                  class="badge badge-xs badge-soft pl-1.5! pr-1! pt-px font-mono text-[.6rem]! font-bold tracking-widest opacity-50"
                 >
                   {$t("__code", {}, langItem)}
                 </span>
               {/if}
               <span class="font-[sans-serif]">{$t("__name", {}, langItem)}</span>
               {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
-                <span class="badge badge-sm badge-ghost">
+                <span class="badge badge-xs badge-soft">
                   {$t("__status", {}, langItem)}
                 </span>
               {/if}

@@ -85,45 +85,6 @@ Drawer must be the parent element of the content and sidebar.
 </div>
 ```
 
-
-### ~Responsive
-#### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
-
-<div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
-  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-  <div class="flex flex-col items-center justify-center drawer-content">
-    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-  </div>
-  <div class="drawer-side z-99">
-    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
-      <li><button>Sidebar Item 1</button></li>
-      <li><button>Sidebar Item 2</button></li>
-    </ul>
-  </div>
-</div>
-
-```html
-<div class="$$drawer lg:$$drawer-open">
-  <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
-  <div class="$$drawer-content flex flex-col items-center justify-center">
-    <!-- Page content here -->
-    <label for="my-drawer-2" class="$$btn $$btn-primary $$drawer-button lg:hidden">
-      Open drawer
-    </label>
-  </div>
-  <div class="$$drawer-side">
-    <label for="my-drawer-2" aria-label="close sidebar" class="$$drawer-overlay"></label>
-    <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
-      <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
-  </div>
-</div>
-```
-
-
 ### ~Navbar menu for desktop + sidebar drawer for mobile
 #### Change screen size to show/hide menu
 
@@ -198,6 +159,44 @@ Drawer must be the parent element of the content and sidebar.
   </div>
 </div>
 ```
+
+### ~Responsive
+#### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
+
+<div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="flex flex-col items-center justify-center drawer-content">
+    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+  </div>
+  <div class="drawer-side z-99">
+    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
+      <li><button>Sidebar Item 1</button></li>
+      <li><button>Sidebar Item 2</button></li>
+    </ul>
+  </div>
+</div>
+
+```html
+<div class="$$drawer lg:$$drawer-open">
+  <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
+  <div class="$$drawer-content flex flex-col items-center justify-center">
+    <!-- Page content here -->
+    <label for="my-drawer-2" class="$$btn $$btn-primary $$drawer-button lg:hidden">
+      Open drawer
+    </label>
+  </div>
+  <div class="$$drawer-side">
+    <label for="my-drawer-2" aria-label="close sidebar" class="$$drawer-overlay"></label>
+    <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <!-- Sidebar content here -->
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  </div>
+</div>
+```
+
 
 
 ### ~Drawer that opens from right side of page
