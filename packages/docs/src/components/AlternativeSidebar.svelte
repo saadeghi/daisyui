@@ -9,8 +9,16 @@
       <Sponsors />
     </div>
     <div class="h-6"></div>
-    <div class="carbonads-responsive mx-auto flex min-h-[100px] items-center justify-center">
-      <Carbon />
-    </div>
+    {#if import.meta.env.DEV}
+      <div
+        class="carbonads-responsive mx-auto max-xl:w-[22rem] xl:h-[13rem] bg-base-200 rounded-box flex min-h-[100px] items-center justify-center"
+      >
+        <div class="text-xs text-base-content/30">Ads</div>
+      </div>
+    {:else}
+      <div class="carbonads-responsive mx-auto flex min-h-[100px] items-center justify-center">
+        <Carbon />
+      </div>
+    {/if}
   </div>
 </div>

@@ -65,5 +65,5 @@ Contributors
 [backers]: https://opencollective.com/daisyui/backers.svg?button=false&width=978&avatarHeight=36
 [backers_org]: https://opencollective.com/daisyui/organizations.svg?button=false&avatarHeight=36
 [contribute]: https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md
-[contributors_img]: https://contrib.rocks/image?repo=saadeghi/daisyui&columns=25&anon=1&max=300
+[contributors_img]: https://opencollective.com/daisyui/contributors.svg?width=1060&button=false&avatarHeight=40
 [contributors]: https://github.com/saadeghi/daisyui/graphs/contributors

@@ -2,6 +2,9 @@
   import { navigating } from "$app/stores"
 
   $effect(() => {
+    if (import.meta.env.DEV) {
+      return
+    }
     if ($navigating) {
       const container = document.querySelector("#carbon-container")
       if (container) {
@@ -21,4 +24,4 @@
   })
 </script>
 
-<div class="print:hidden" id="carbon-container"></div>
+<div class="print:hidden w-full" id="carbon-container"></div>
