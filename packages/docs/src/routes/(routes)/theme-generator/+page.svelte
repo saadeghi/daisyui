@@ -797,7 +797,7 @@
           <div class="mx-2 w-[calc(100%-1rem)]">
             <div
               class="tooltip w-0 relative block tooltip-open before:text-[0.6875rem] font-mono"
-              style={`left:${(values.indexOf(currentTheme[key]) / (values.length - 1)) * 100}%`}
+              style={`inset-inline-start:${(values.indexOf(currentTheme[key]) / (values.length - 1)) * 100}%`}
               data-tip={currentTheme[key]}
             ></div>
           </div>

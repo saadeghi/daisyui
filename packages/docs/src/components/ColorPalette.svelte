@@ -211,7 +211,7 @@
       >
         <div class="flex flex-col gap-1 grow">
           <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>
-          <label class="input input-border items-center w-full flex gap-2 px-2">
+          <label dir="ltr" class="input input-border items-center flex gap-2 px-2">
             <input
               type="text"
               value={inputValue}

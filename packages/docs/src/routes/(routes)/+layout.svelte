@@ -141,7 +141,7 @@
       class={`${
         data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
           ? ""
-          : "max-w-[100vw] px-6 pb-16 xl:pr-2 relative"
+          : "max-w-[100vw] px-6 pb-16 xl:pe-2 relative"
       }`}
     >
       {@render children?.()}

@@ -196,7 +196,7 @@
           </div>
           <div class="h-4"></div>
           <h1
-            class="font-title text-center text-[clamp(2rem,6vw,4.2rem)] font-black leading-[1.1] [word-break:auto-phrase] xl:w-[115%] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]"
+            class="font-title text-center text-[clamp(2rem,6vw,4rem)] font-black leading-[1.1] [word-break:auto-phrase] xl:w-[115%] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]"
           >
             <span
               class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20"
@@ -225,7 +225,7 @@
             </span>
           </h1>
           <div class="h-4"></div>
-          <p class="text-base-content/70 font-title py-4 font-light md:text-lg xl:text-2xl">
+          <p class="text-base-content/70 font-title py-4 font-light md:text-lg xl:text-xl">
             {@html $t(
               "daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>",
             )}
