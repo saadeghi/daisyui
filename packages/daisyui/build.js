@@ -1,18 +1,18 @@
-import { version } from "./package.json"
 import { generateThemesObject } from "./functions/generateThemesObject.js"
 import { generateThemeFiles } from "./functions/generateThemeFiles.js"
 import { generateColorRules } from "./functions/generateColorRules.js"
 import { generateRawStyles } from "./functions/generateRawStyles.js"
 import { minify, minifyCssInDirectory } from "./functions/minify.js"
 import { generatePlugins } from "./functions/generatePlugins.js"
+import { generateImports } from "./functions/generateImports.js"
 import { extractClasses } from "./functions/extractClasses.js"
 import { generateThemes } from "./functions/generateThemes.js"
 import { generateChunks } from "./functions/generateChunks.js"
-import { generateImports } from "./functions/generateImports.js"
-import { packCss } from "./functions/packCss.js"
 import { removeFiles } from "./functions/removeFiles.js"
 import { copyFile } from "./functions/copyFile.js"
+import { packCss } from "./functions/packCss.js"
 import { report } from "./functions/report.js"
+import { version } from "./package.json"
 
 const isDev = process.argv.includes("--dev")
 
@@ -103,4 +103,4 @@ async function build() {
   }
 }
 
-build()
+build(/* 🌼 */)
