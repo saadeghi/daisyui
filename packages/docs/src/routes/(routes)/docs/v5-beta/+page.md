@@ -829,6 +829,7 @@ And some of these bugs were related to a specific structure / style / behavior o
 
 If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug or let me know if a bug is closed by mistake 💚
 
+- [#3348: docs: tsx code for method 2 (popover api) of dropdown](https://github.com/saadeghi/daisyui/issues/3348)
 - [#3346: bug: Tooltip does not shown under overflow](https://github.com/saadeghi/daisyui/issues/3346)
 - [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/saadeghi/daisyui/issues/3332)
 - [#3328: bug: setting width to an `<input>` element doesn't shrink the `<input>` element](https://github.com/saadeghi/daisyui/issues/3328)
@@ -842,6 +843,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#3312: docs: DaisyUI V5 themes color extraction](https://github.com/saadeghi/daisyui/issues/3312)
 - [#3308: bug: Rating unchecked displays all as checked](https://github.com/saadeghi/daisyui/issues/3308)
 - [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox](https://github.com/saadeghi/daisyui/issues/3294)
+- [#3287: docs: JSX Example Code of Select Causing Warning in React](https://github.com/saadeghi/daisyui/issues/3287)
 - [#3285: bug: the background of btn-disabled (or disabled btn) should be transparent if combined with btn-ghost](https://github.com/saadeghi/daisyui/issues/3285)
 - [#3281: bug: (v5): Select: does not wrap content with h-fit](https://github.com/saadeghi/daisyui/issues/3281)
 - [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color](https://github.com/saadeghi/daisyui/issues/3280)
