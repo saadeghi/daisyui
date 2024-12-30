@@ -58,7 +58,7 @@
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <div class="searchbox relative mx-3 w-full [&:has(input:focus)_kbd]:hidden" bind:this={seachboxEl}>
   <svg
-    class={`pointer-events-none absolute z-10 my-3.5 ms-4 stroke-current opacity-60 ${
+    class={`pointer-events-none absolute z-10 my-2 ms-2 stroke-current opacity-60 ${
       $page.url.pathname == "/" ? "text-current" : "text-base-content"
     }`}
     width="16"
@@ -92,7 +92,7 @@
     </div>
   </Typeahead>
   <div
-    class={`pointer-events-none absolute end-2.5 top-2.5 gap-1 opacity-50 rtl:flex-row-reverse ${
+    class={`pointer-events-none absolute end-2 top-2 gap-1 opacity-50 rtl:flex-row-reverse ${
       $page.url.pathname == "/" ? "hidden" : "hidden lg:flex"
     }`}
   >

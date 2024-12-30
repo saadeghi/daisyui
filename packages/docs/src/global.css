@@ -90,6 +90,9 @@
 }
 
 [data-svelte-search][data-svelte-search] input {
+  height: 2rem;
+  padding: 0.5rem 0rem;
+  font-size: 0.875rem;
   background-color: transparent;
   color: inherit;
   border: 2px solid transparent;
@@ -102,9 +105,8 @@
 }
 
 [data-svelte-search][data-svelte-search] input:focus {
-  outline: none;
-  outline-offset: 0;
-  border: 2px solid color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  outline: 2px solid var(--color-base-content);
+  outline-offset: 2px;
   background-color: var(--color-base-100);
   color: var(--base-content);
 }
