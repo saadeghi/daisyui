@@ -52,24 +52,39 @@ desc: How to use daisyUI from a CDN?
     aria-label="daisyui.css"
     checked="checked"
   />
-  <div class="tab-content border-none bg-neutral text-neutral-content">
-    <div class="grid *:[grid-area:1/1]">
-      <div class="overflow-x-auto pt-16 pb-8 px-6">
-
-<pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/daisyui.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
+  <div class="tab-content border-none">
+    <div class="bg-neutral text-neutral-content rounded-se-box rounded-b-box">
+      <div class="grid *:[grid-area:1/1]">
+        <div class="overflow-x-auto pt-16 pb-8 px-6">
+  
+  <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/daisyui.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-punctuation)">&lt;script</span><span style="color:var(--shiki-attr-name)"> src</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.tailwindcss.com</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)">&gt;&lt;/script&gt;</span></span></code></pre>
-
-      </div>
-      <div class="font-mono select-none text-xs m-4 justify-self-start place-self-start">
+  
+        </div>
+        <div class="font-mono select-none text-xs m-4 justify-self-start place-self-start">
           <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
           {data.daisyuiCssSize}kB compressed
         </div>
         {#if onMount}
-        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@${data.daisyuiVersion}/daisyui.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>`} />
+          <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@${data.daisyuiVersion}/daisyui.css" rel="stylesheet" type="text/css" />\n<script src="https://cdn.tailwindcss.com"></script>`} />
         {/if}
-
+  
+      </div>
     </div>
+    
+    <h3 class="block text-xl mt-6 mb-4 font-bold">Adding all themes</h3>
+    
+    <p class="mt-6">daisyui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
+    <div class="grid *:[grid-area:1/1]">
+      <div class="overflow-x-auto pt-12 pb-8 px-6 bg-neutral text-neutral-content rounded-box">
+        <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>
+      </div>
+      {#if onMount}
+        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@${data.daisyuiVersion}/themes.css" rel="stylesheet" type="text/css" />`} />
+      {/if}
+    </div>
+  
+    
   </div>
   <input
     type="radio"

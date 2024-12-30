@@ -9,7 +9,7 @@
 [![][license]](https://github.com/saadeghi/daisyui/blob/master/LICENSE)
 [![][stars]](https://github.com/saadeghi/daisyui)
 [![][installs]](https://www.npmjs.com/package/daisyui)
-[![][jsdelivr]](https://cdn.jsdelivr.net/npm/daisyui/dist/full.min.css)
+[![][jsdelivr]](https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css)
 [![][discord]](https://daisyui.com/discord/)
 [![][opencollectivebadge]](https://opencollective.com/daisyui)
 
