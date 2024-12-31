@@ -15,8 +15,9 @@ const dateFormat = {
 {#if true}
   <div class="bg-base-100 flex justify-center rounded-sm p-2">
     <a
+      target="_blank"
       href="https://v5.daisyui.com/docs/v5-beta/"
-      class="btn btn-soft group btn-sm [width:clamp(20rem,100%,30rem)] rounded-full"
+      class="btn group btn-sm [width:clamp(20rem,100%,30rem)] rounded-full"
     >
       Try daisyUI 5 beta
     </a>
