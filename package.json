@@ -16,6 +16,7 @@
     "lang:diff": "cd packages/docs && bun run langdiff",
     "lang:clean": "bun packages/docs/src/lib/scripts/removeUnusedTranslations.js",
     "lang:sort": "bun packages/docs/src/lib/scripts/sortTranslations.js",
+    "lang:fill": "bun packages/docs/src/lib/scripts/fillTranslations.js",
     "lint": "bunx -y oxlint@latest",
     "test": "bun test",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
