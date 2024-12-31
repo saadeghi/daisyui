@@ -20,7 +20,8 @@
     "lint": "bunx -y oxlint@latest",
     "test": "bun test",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
-    "publish:alpha": "cd packages/daisyui && bun publish --tag=alpha"
+    "publish:alpha": "cd packages/daisyui && bun publish --tag=alpha",
+    "publish:beta": "cd packages/daisyui && bun publish --tag=beta"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0-beta.8",

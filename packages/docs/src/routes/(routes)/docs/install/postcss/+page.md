@@ -6,7 +6,7 @@ desc: How to install Tailwind CSS and daisyUI in PostCSS
 ### 1. Install
 
 ```:Terminal
-npm i postcss postcss-cli tailwindcss@next @tailwindcss/postcss@next daisyui@alpha
+npm i postcss postcss-cli tailwindcss@next @tailwindcss/postcss@next daisyui@beta
 ```
 
 ### 2. Add Tailwind CSS and daisyUI

@@ -12,7 +12,7 @@ npx sv create
 ### 2. Install Tailwind CSS and daisyUI
 
 ```:Terminal
-npm install tailwindcss@next @tailwindcss/postcss@next daisyui@alpha
+npm install tailwindcss@next @tailwindcss/postcss@next daisyui@beta
 ```
 
 ### 3. Add Tailwind CSS and daisyUI

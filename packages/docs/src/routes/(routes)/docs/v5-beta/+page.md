@@ -1,6 +1,5 @@
 ---
-alert: This page is a draft. Let me know if you found any issues.
-title: daisyUI 5 Alpha release notes (WIP)
+title: daisyUI 5 beta release notes
 desc: Everything about the new daisyUI 5 release
 ---
 
@@ -53,13 +52,13 @@ Let's begin!
 
 ## Install
 
-🧪 This is an Alpha release. Use it for testing purposes only. Stable version will be available later.
+🧪 This is a public beta release. There may be a few bugs. The stable version will be available later.
 
 1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)
-2. Install daisyUI 5 Alpha
+2. Install daisyUI 5 beta
 
   ```bash:Terminal
-  npm i -D daisyui@alpha
+  npm i -D daisyui@beta
   ```
 3. Add daisyUI to your CSS file
   
@@ -303,11 +302,11 @@ For example if you only want to use daisyUI toggle component, include a tiny CSS
 Not possible
 ```
 ```:After
-https://cdn.jsdelivr.net/npm/daisyui@5.0.0-alpha.52/components/toggle.css
+https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/components/toggle.css
 ```
 </div>
 
-All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5.0.0-alpha.52/chunks.css).
+All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/chunks.css).
 
 Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
 

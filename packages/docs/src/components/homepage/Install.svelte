@@ -16,10 +16,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute right-0 top-0 z-1">
       {#if onMount}
-        <Clipboard text={`npm i -D daisyui@alpha`} />
+        <Clipboard text={`npm i -D daisyui@beta`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>npm i -D daisyui@alpha</code></pre>
+    <pre data-prefix="$"><code>npm i -D daisyui@beta</code></pre>
   </div>
   <input
     type="radio"
@@ -30,10 +30,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute right-0 top-0 z-1">
       {#if onMount}
-        <Clipboard text={`pnpm add -D daisyui@alpha`} />
+        <Clipboard text={`pnpm add -D daisyui@beta`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>pnpm add -D daisyui@alpha</code></pre>
+    <pre data-prefix="$"><code>pnpm add -D daisyui@beta</code></pre>
   </div>
   <input
     type="radio"
@@ -44,10 +44,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute right-0 top-0 z-1">
       {#if onMount}
-        <Clipboard text={`yarn add -D daisyui@alpha`} />
+        <Clipboard text={`yarn add -D daisyui@beta`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>yarn add -D daisyui@alpha</code></pre>
+    <pre data-prefix="$"><code>yarn add -D daisyui@beta</code></pre>
   </div>
   <input
     type="radio"
@@ -58,10 +58,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute right-0 top-0 z-1">
       {#if onMount}
-        <Clipboard text={`bun add -D daisyui@alpha`} />
+        <Clipboard text={`bun add -D daisyui@beta`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>bun add -D daisyui@alpha</code></pre>
+    <pre data-prefix="$"><code>bun add -D daisyui@beta</code></pre>
   </div>
 </div>
 <p class="mx-auto mb-2 mt-5 w-full text-start">2. {$t("install-step-2")}:</p>

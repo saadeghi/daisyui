@@ -29,7 +29,7 @@ test("All translation keys should be used (efficient match)", () => {
     console.error("\nUnused translations:")
     unusedTranslations.forEach((key) => console.error(key))
     throw new Error(
-      `Found ${unusedTranslations.size} unused translations.\n Run 'bun run removeUnusedTranslations' to clean them`,
+      `Found ${unusedTranslations.size} unused translations.\n Run 'bun run lang:clean' to clean them`,
     )
   }
 })

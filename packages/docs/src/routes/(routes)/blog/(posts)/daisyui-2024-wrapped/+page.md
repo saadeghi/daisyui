@@ -68,7 +68,7 @@ It's the result of more than 7 months of development, testing and feedback from 
 
 daisyUI 5 is a huge update, fixing many bugs, and adding many new features, components, and themes. I'm excited about all the new CSS features and Tailwind CSS 4 features that we are using in daisyUI 5. I can't wait to share it with you all!
 
-Alpha version is available for testing on [v5.daisyui.com](https://v5.daisyui.com/). Public beta will be available in a few days.  
+Beta version is available for testing on [v5.daisyui.com](https://v5.daisyui.com/).  
 
 Join our [Discord server](https://daisyui.com/discord/) to get the latest news and updates about daisyUI 5 release date
 
