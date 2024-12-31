@@ -13,6 +13,18 @@ const dateFormat = {
 
 <!-- Without timer -->
 {#if true}
+  <div class="bg-base-100 flex justify-center rounded-sm p-2">
+    <a
+      href="https://v5.daisyui.com/docs/v5-beta/"
+      class="btn btn-soft group btn-sm [width:clamp(20rem,100%,30rem)] rounded-full"
+    >
+      Try daisyUI 5 beta
+    </a>
+  </div>
+{/if}
+
+<!-- Without timer -->
+{#if false}
   <div class="bg-base-100 flex justify-center rounded-sm p-1">
     <a
       href="/store/"
