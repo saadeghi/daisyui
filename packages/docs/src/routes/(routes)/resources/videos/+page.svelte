@@ -25,10 +25,10 @@
   </p>
 </div>
 <div class="py-20">
-  <div class="grid gap-x-4 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+  <div class="grid gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {#each data.videos as video}
       <a
-        class="rounded-box group relative flex flex-col gap-6 overflow-hidden p-4"
+        class="rounded-box group relative flex flex-col gap-6 overflow-hidden p-2"
         href={video.status.embeddable == true
           ? `/resources/videos/${slugify(video.snippet.title)}-${slugify(video.id)}`
           : `https://www.youtube.com/watch?v=${video.id}`}
@@ -47,8 +47,8 @@
         </figure>
         <div class="flex items-center justify-between gap-4">
           <div class="grow">
-            <h2 class="font-bold">{video.snippet.title}</h2>
-            <p class="text-base-content/70 text-xs italic">{video.snippet.channelTitle}</p>
+            <h2 class="font-semibold text-xs">{video.snippet.title}</h2>
+            <p class="text-base-content/60 mt-2 text-[0.6875rem]">{video.snippet.channelTitle}</p>
           </div>
         </div>
       </a>

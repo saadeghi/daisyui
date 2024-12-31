@@ -1,24 +1,38 @@
 import fs from "node:fs"
-import { diffString, diff } from "json-diff"
+import path from "node:path"
+import { diffString } from "json-diff"
 
-const langs = ["es", "fr", "id", "ja", "ko", "pt", "ru", "uk", "zh_hans", "zh_hant", "ar", "fa"]
+const translationDir = "src/translation"
 
-for (const lang of langs) {
-  fs.readFile("src/translation/en.json", "utf8", (err1, file1) => {
-    if (err1) {
-      console.error(err1)
-      return
-    }
-    fs.readFile(`src/translation/${lang}.json`, "utf8", (err2, file2) => {
-      if (err2) {
-        console.error(err2)
+// Read all files from translation directory and filter out en.json
+fs.readdir(translationDir, (err, files) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+
+  const langs = files
+    .filter((file) => file.endsWith(".json") && file !== "en.json")
+    .map((file) => file.replace(".json", ""))
+
+  for (const lang of langs) {
+    fs.readFile("src/translation/en.json", "utf8", (err1, file1) => {
+      if (err1) {
+        console.error(err1)
         return
       }
-      console.log(
-        `"en 🆚 ${lang}": ${diffString(JSON.parse(file1), JSON.parse(file2), {
+      fs.readFile(`src/translation/${lang}.json`, "utf8", (err2, file2) => {
+        if (err2) {
+          console.error(err2)
+          return
+        }
+        const diff = diffString(JSON.parse(file1), JSON.parse(file2), {
           keysOnly: true,
-        })}`,
-      )
+        })
+        if (diff) {
+          console.log(`EN 🆚 ${lang.toUpperCase()}\n${diff}`)
+        }
+      })
     })
-  })
-}
+  }
+})
