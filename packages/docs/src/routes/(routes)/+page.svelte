@@ -162,7 +162,7 @@
             >
               <button
                 class="btn btn-sm cursor-copy rounded-full font-mono font-light"
-                onclick={() => copyText("npm i -D daisyui@latest")}
+                onclick={() => copyText("npm i -D daisyui@beta")}
               >
                 <pre><code>npm i -D daisyui</code></pre>
               </button>
