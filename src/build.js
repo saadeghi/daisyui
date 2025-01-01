@@ -1,6 +1,8 @@
 const { exec } = require("node:child_process")
 
 function runCommand(command) {
+  if(process.platform === "win32") command = `pwsh -e "${Buffer.from(command, "utf16le").toString("base64")}"`;
+
   return new Promise((resolve, reject) => {
     exec(command, (error, stdout, stderr) => {
       if (error) {
@@ -27,17 +29,11 @@ async function executeCommands() {
     await runCommand("node_modules/.bin/prejss-cli dist/utilities.css --format commonjs")
     // await runCommand("mv dist/utilities.js dist/utilities.cjs")
 
-    await runCommand(
-      "node_modules/.bin/postcss --config src/utilities/unstyled src/utilities/unstyled/*.css --base src --dir dist",
-      { stdio: [] }
-    )
+    await runCommand("node_modules/.bin/postcss --config src/utilities/unstyled src/utilities/unstyled/*.css --base src --dir dist")
     await runCommand("cat dist/utilities/unstyled/*.css > dist/utilities-unstyled.css")
     await runCommand("node_modules/.bin/prejss-cli dist/utilities-unstyled.css --format commonjs")
     // await runCommand("mv dist/utilities-unstyled.js dist/utilities-unstyled.cjs")
-    await runCommand(
-      "node_modules/.bin/postcss --config src/utilities/styled src/utilities/styled/*.css --base src --dir dist",
-      { stdio: [] }
-    )
+    await runCommand("node_modules/.bin/postcss --config src/utilities/styled src/utilities/styled/*.css --base src --dir dist")
     await runCommand("cat dist/utilities/styled/*.css > dist/utilities-styled.css")
     await runCommand("node_modules/.bin/prejss-cli dist/utilities-styled.css --format commonjs")
     // await runCommand("mv dist/utilities-styled.js dist/utilities-styled.cjs")
@@ -48,15 +44,11 @@ async function executeCommands() {
     await runCommand(
       "cat dist/components/unstyled/*.css dist/components/styled/*.css > dist/styled.css"
     )
-    await runCommand("node_modules/.bin/prejss-cli dist/{unstyled,styled}.css --format commonjs")
+    await runCommand("node_modules/.bin/prejss-cli dist/styled.css --format commonjs")
+    await runCommand("node_modules/.bin/prejss-cli dist/unstyled.css --format commonjs")
     // await runCommand("mv dist/unstyled.js dist/unstyled.cjs")
     // await runCommand("mv dist/styled.js dist/styled.cjs")
-    await runCommand(
-      "node_modules/.bin/postcss src/themes/index.css -o dist/themes.css --config src/themes",
-      {
-        stdio: [],
-      }
-    )
+    await runCommand("node_modules/.bin/postcss src/themes/index.css -o dist/themes.css --config src/themes")
     if (!process.argv.includes("--skipfullcss")) {
       await runCommand(
         "node_modules/.bin/postcss src/full/index.css -o dist/full.css --config src/full"
