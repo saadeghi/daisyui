@@ -54,7 +54,8 @@ Let's begin!
 
 🧪 This is a public beta release. There may be a few bugs. The stable version will be available later.
 
-1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)
+1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)  
+    If you're upgrading from Tailwind CSS 3 to Tailwind CSS 4, remove daisyUI from `tailwind.config.js` before running the [upgrade command](https://tailwindcss.com/docs/v4-beta#upgrading-from-v3).
 2. Install daisyUI 5 beta
 
   ```bash:Terminal

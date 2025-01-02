@@ -4,6 +4,7 @@
 
 <div class="dropdown" data-sveltekit-preload-data>
   <div
+    dir="ltr"
     tabindex="0"
     role="button"
     class="link link-hover inline-block font-mono text-base-content/60 text-[0.6875rem]"

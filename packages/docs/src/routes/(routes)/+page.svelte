@@ -761,60 +761,78 @@
                 >
                   <div class="card-body">
                     <h2 class="card-title mb-4 text-sm">{$t("Design system")}</h2>
-                    <div class="grid grid-cols-4 items-end gap-4">
+                    <div class="grid grid-cols-5 items-end gap-8">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input
                           name="checkbox"
                           type="checkbox"
+                          checked
                           class="checkbox checkbox-xs"
                           tabindex="-1"
                         />
-                        <span class="text-base-content/70 text-[.6rem]">checkbox-xs</span>
+                        <span class="text-base-content/70 text-[.6rem]">xs</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input
                           name="checkbox"
                           type="checkbox"
+                          checked
                           class="checkbox checkbox-sm"
                           tabindex="-1"
                         />
-                        <span class="text-base-content/70 text-[.6rem]">checkbox-sm</span>
+                        <span class="text-base-content/70 text-[.6rem]">sm</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input
                           name="checkbox"
                           type="checkbox"
+                          checked
                           class="checkbox checkbox-md"
                           tabindex="-1"
                         />
-                        <span class="text-base-content/70 text-[.6rem]">checkbox-md</span>
+                        <span class="text-base-content/70 text-[.6rem]">md</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input
                           name="checkbox"
                           type="checkbox"
+                          checked
                           class="checkbox checkbox-lg"
                           tabindex="-1"
                         />
-                        <span class="text-base-content/70 text-[.6rem]">checkbox-lg</span>
+                        <span class="text-base-content/70 text-[.6rem]">lg</span>
+                      </label>
+                      <label class="flex cursor-pointer flex-col items-center gap-1">
+                        <input
+                          name="checkbox"
+                          type="checkbox"
+                          checked
+                          class="checkbox checkbox-xl"
+                          tabindex="-1"
+                        />
+                        <span class="text-base-content/70 text-[.6rem]">xl</span>
                       </label>
                     </div>
-                    <div class="grid grid-cols-4 items-end gap-4">
+                    <div class="grid grid-cols-5 items-end gap-8">
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-xs" tabindex="-1" />
-                        <span class="text-base-content/70 text-[.6rem]">radio-xs</span>
+                        <span class="text-base-content/70 text-[.6rem]">xs</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-sm" tabindex="-1" />
-                        <span class="text-base-content/70 text-[.6rem]">radio-sm</span>
+                        <span class="text-base-content/70 text-[.6rem]">sm</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-md" tabindex="-1" />
-                        <span class="text-base-content/70 text-[.6rem]">radio-md</span>
+                        <span class="text-base-content/70 text-[.6rem]">md</span>
                       </label>
                       <label class="flex cursor-pointer flex-col items-center gap-1">
                         <input name="radio" type="radio" class="radio radio-lg" tabindex="-1" />
-                        <span class="text-base-content/70 text-[.6rem]">radio-lg</span>
+                        <span class="text-base-content/70 text-[.6rem]">lg</span>
+                      </label>
+                      <label class="flex cursor-pointer flex-col items-center gap-1">
+                        <input name="radio" type="radio" class="radio radio-xl" tabindex="-1" />
+                        <span class="text-base-content/70 text-[.6rem]">xl</span>
                       </label>
                     </div>
                   </div>
