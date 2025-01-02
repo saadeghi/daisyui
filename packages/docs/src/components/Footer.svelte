@@ -33,10 +33,10 @@
           {$t("contributing")}
           {@html newtabicon}
         </a>
-        <a href="/docs/changelog" class="link link-hover">
+        <a href="/docs/changelog/" class="link link-hover">
           {$t("changelog")}
         </a>
-        <a href="/docs/roadmap" class="link link-hover">
+        <a href="/docs/roadmap/" class="link link-hover">
           {$t("Roadmap")}
         </a>
         <a
@@ -140,7 +140,7 @@
       <div>
         <span class="footer-title opacity-70">{$t("try-online")}</span>
         <a
-          href="/tailwindplay"
+          href="/tailwindplay/"
           class="link link-hover group"
           target="_blank"
           rel="noopener, noreferrer"

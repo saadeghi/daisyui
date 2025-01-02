@@ -7,7 +7,7 @@
   <div
     tabindex="0"
     role="button"
-    class="btn btn-ghost"
+    class="btn btn-sm btn-ghost"
     aria-label="Language"
     title="Change Language"
   >

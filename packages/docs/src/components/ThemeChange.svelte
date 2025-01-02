@@ -14,7 +14,7 @@
 </script>
 
 <div title="Change Theme" class={`dropdown dropdown-end block ${dropdownClasses}`}>
-  <div tabindex="0" role="button" class={`btn ${btnClasses}`}>
+  <div tabindex="0" role="button" class={`btn btn-sm ${btnClasses}`}>
     <svg
       width="20"
       height="20"

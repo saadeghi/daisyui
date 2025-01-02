@@ -114,7 +114,7 @@
           <a
             data-sveltekit-preload-data
             href="/components/"
-            class="btn btn-ghost drawer-button font-normal"
+            class="btn btn-sm btn-ghost drawer-button font-normal"
           >
             <!-- <svg
               width="20"
@@ -133,7 +133,7 @@
           <a
             data-sveltekit-preload-data
             href="/store/"
-            class="btn btn-ghost drawer-button font-normal"
+            class="btn btn-sm btn-ghost drawer-button font-normal"
           >
             {$t("Store")}
           </a>

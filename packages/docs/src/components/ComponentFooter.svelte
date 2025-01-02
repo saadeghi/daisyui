@@ -132,7 +132,7 @@
               target="_blank"
               rel="noopener, noreferrer"
               class="link"
-              href="http://daisyui.com/discord/"
+              href="https://daisyui.com/discord/"
             >
               Discord server
             </a>
@@ -267,7 +267,7 @@
               target="_blank"
               rel="noopener, noreferrer"
               class="link"
-              href={`https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
+              href={`https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/v5/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
                 /\/$/,
                 "",
               )}/+page.md?plain=1`}
@@ -297,7 +297,7 @@
                 target="_blank"
                 rel="noopener, noreferrer"
                 class="link"
-                href={`https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/translation/${$currentLang}.json`}
+                href={`https://github.com/saadeghi/daisyui/blob/v5/packages/docs/src/translation/${$currentLang}.json`}
               >
                 {$t("Contribute to translation")}
               </a>
@@ -464,7 +464,7 @@
         Available on daisyUI store
       </h2>
     </div>
-    <a class="btn btn-block btn-primary group" href="/store">
+    <a class="btn btn-block btn-primary group" href="/store/">
       More details
       <svg
         xmlns="http://www.w3.org/2000/svg"

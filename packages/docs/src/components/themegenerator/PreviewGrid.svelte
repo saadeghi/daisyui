@@ -180,12 +180,11 @@
       baseClass: "w-full rounded-box p-12",
       types: [""],
       colors: [
-        "",
         "bg-base-100 text-base-content",
-        "bg-neutral text-neutral-content",
         "bg-primary text-primary-content",
         "bg-secondary text-secondary-content",
         "bg-accent text-accent-content",
+        "bg-neutral text-neutral-content",
         "bg-info text-info-content",
         "bg-success text-success-content",
         "bg-warning text-warning-content",

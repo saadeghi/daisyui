@@ -4,7 +4,7 @@ import { load } from "../+layout.server.js"
 
 const siteTitle = "daisyUI Store"
 const siteDesc = "Professional templates made by daisyUI"
-const storeUrl = "https://daisyui.com/store"
+const storeUrl = "https://daisyui.com/store/"
 
 export const GET = async () => {
   const data = await load({})
@@ -40,7 +40,7 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
     <pubDate>${new Date().toUTCString()}</pubDate>
     <language>en-us</language>
     <atom:link href="${storeUrl}/rss.xml" rel="self" type="application/rss+xml"/>
-    
+
     ${products
       .filter((product) => {
         return product.attributes.status === "published"

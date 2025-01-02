@@ -21,6 +21,11 @@ export const pages = [
     collapsible: true,
     items: [
       {
+        name: "Introduction",
+        tags: "Intro",
+        href: "/docs/intro/",
+      },
+      {
         name: "Install",
         tags: "how setup install npm",
         href: "/docs/install/",

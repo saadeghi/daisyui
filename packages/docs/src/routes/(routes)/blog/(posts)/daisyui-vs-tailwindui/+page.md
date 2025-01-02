@@ -64,7 +64,7 @@ daisyUI comes with a built-in dark mode and also 28 other built-in themes. All t
 ## HTML size
 
 Generally using Tailwind CSS utility classes makes your HTML files bigger. You need to add a lot of classes to your elements to style them.
-With daisyUI, you write 80% fewer class names and your HTML size will be about 70% smaller.
+With daisyUI, you write 88% fewer class names and your HTML size will be about 79% smaller.
 
 ## CSS size and unused styles
 

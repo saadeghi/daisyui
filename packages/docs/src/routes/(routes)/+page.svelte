@@ -1083,7 +1083,7 @@
         <div class="flex flex-col items-center gap-6 xl:flex-row">
           {#if toggleValueForCodeCompare}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
+              class="mockup-code border-base-content/10 text-base-content relative xl:max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
             >
               <pre class="w-full whitespace-pre-wrap px-6 before:hidden"><code
                   >&lt;div class=&quot;<span class="text-teal-600">card w-80 bg-base-200</span
@@ -1129,10 +1129,11 @@
             </div>
           {:else}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
+              class="mockup-code border-base-content/10 text-base-content relative xl:max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
             >
               <pre class="w-full whitespace-pre-wrap px-6 before:hidden"><code
-                  >&lt;div class=&quot;<span class="text-rose-600">w-80 rounded-lg bg-zinc-50</span
+                  >&lt;div class=&quot;<span class="text-rose-600"
+                    >w-80 rounded-lg bg-zinc-50 text-zinc-800</span
                   >&quot;&gt;
   &lt;div class=&quot;<span class="text-rose-600">flex flex-col gap-3 p-8</span>&quot;&gt;
     &lt;input placeholder=&quot;Email&quot; class=&quot;<span class="text-rose-600"
@@ -1173,7 +1174,7 @@
             </div>
             <div class="divider xl:divider-horizontal">=</div>
             <div>
-              <div class="w-80 rounded-lg bg-zinc-50">
+              <div class="w-80 rounded-lg bg-zinc-50 text-zinc-800">
                 <div class="flex flex-col gap-3 p-8">
                   <input
                     name="Sample Email"
@@ -1289,7 +1290,7 @@
         <div class="h-10"></div>
         <p class="text-base-content/70 font-title text-center font-light md:text-3xl xl:text-start">
           {@html $t(
-            "With daisyUI, you write 80% fewer class names<br />And your HTML size will be about 70% smaller.",
+            "With daisyUI, you write 88% fewer class names<br />And your HTML size will be about 79% smaller.",
           )}
         </p>
         <div class="h-10"></div>
@@ -1330,9 +1331,9 @@
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
                 <span>{$t("Tailwind only")}</span>
-                <span class="font-mono text-xs">107</span>
+                <span class="font-mono text-xs">114</span>
               </div>
-              <progress class="progress progress-warning w-56" value={93} max="100"></progress>
+              <progress class="progress progress-warning w-56" value={114} max="130"></progress>
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
@@ -1341,8 +1342,8 @@
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section["performance"], [-70, -20], [100, 12])}
-                max="100"
+                value={animateValue(section["performance"], [-70, -20], [130, 14])}
+                max="130"
               >
               </progress>
             </div>
@@ -1358,7 +1359,7 @@
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
               </svg>
-              86% {$t("fewer class names")}
+              88% {$t("fewer class names")}
             </span>
           </div>
         </div>
@@ -1377,19 +1378,19 @@
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
                 <span>{$t("Tailwind only")}</span>
-                <span class="font-mono text-xs">1884 byte</span>
+                <span class="font-mono text-xs">2110 byte</span>
               </div>
-              <progress class="progress progress-warning w-56" value={93} max="100"></progress>
+              <progress class="progress progress-warning w-56" value={2110} max="2500"></progress>
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
                 <span>{$t("Tailwind + daisyUI")}</span>
-                <span class="font-mono text-xs">471 byte</span>
+                <span class="font-mono text-xs">427 byte</span>
               </div>
               <progress
                 class="progress progress-success w-56"
-                value={animateValue(section["performance"], [-70, -20], [100, 20])}
-                max="100"
+                value={animateValue(section["performance"], [-65, -15], [2500, 427])}
+                max="2500"
               >
               </progress>
             </div>
@@ -1405,7 +1406,7 @@
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
               </svg>
-              74% {$t("smaller DOM size")}
+              79% {$t("smaller DOM size")}
             </span>
           </div>
         </div>
@@ -1460,7 +1461,7 @@
       </p>
       <div class="h-10"></div>
       <div class="flex w-full justify-center">
-        <a data-sveltekit-preload-data href="/docs/customize" class="btn btn-lg btn-wide group">
+        <a data-sveltekit-preload-data href="/docs/customize/" class="btn btn-lg btn-wide group">
           {$t("how-to-customize")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -2055,7 +2056,7 @@
           CodePen
         </a>
         <a
-          href="/tailwindplay"
+          href="/tailwindplay/"
           class="btn-ghost btn-sm btn"
           target="_blank"
           rel="noopener, noreferrer"

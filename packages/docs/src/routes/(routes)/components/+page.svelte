@@ -20,7 +20,7 @@
       {#each components as { slug, title, desc }}
         <a
           class="card card-compact hover:bg-base-200 transition-all duration-200 hover:-translate-y-1"
-          href={`${$page.url.pathname.replace(/\/$/, "")}/${slug}`}
+          href={`${$page.url.pathname.replace(/\/$/, "")}/${slug}/`}
         >
           <figure class="px-4 pt-4">
             <img
