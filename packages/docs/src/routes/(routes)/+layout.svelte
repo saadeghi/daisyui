@@ -82,22 +82,6 @@
     title="daisyUI Blog"
     href="https://daisyui.com/blog/rss.xml"
   />
-  <link
-    media="screen and (min-width: 520px)"
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
-  <link
-    media="screen and (min-width: 520px)"
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
-  <link
-    media="screen and (min-width: 520px)"
-    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;900&family=Noto+Sans+JP:wght@300;900&family=Noto+Sans:wght@300;900&family=Vazirmatn:wght@300;900&display=swap"
-    rel="stylesheet"
-  />
   <meta name="theme-color" content="oklch(var(--b1))" />
   <link
     rel="icon"
