@@ -57,15 +57,6 @@
           FAQ
           {@html newtabicon}
         </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://daisyui.lemonsqueezy.com/affiliates"
-          class="link link-hover group"
-        >
-          Affiliate Program
-          <span class="badge badge-outline badge-sm">New</span>
-        </a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("pages")}</span>
@@ -97,7 +88,7 @@
           href="https://daisyui.com/discord/"
           class="link link-hover group"
         >
-          Discord <span class="badge badge-outline badge-sm">New</span>
+          Discord
           {@html newtabicon}
         </a>
         <a

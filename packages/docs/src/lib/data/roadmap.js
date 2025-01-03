@@ -145,7 +145,7 @@ export const roadmap = [
     ],
   },
   {
-    title: "Docs updates",
+    title: "Docs",
     done: true,
     items: [
       {
@@ -256,8 +256,8 @@ export const roadmap = [
     ],
   },
   {
-    title: "Docs updates",
-    done: false,
+    title: "Docs",
+    done: true,
     items: [
       {
         title: "daisyUI Resources",
@@ -311,100 +311,148 @@ export const roadmap = [
         title: "Docs: Update to Svelte 5",
         done: true,
       },
+    ],
+  },
+  {
+    title: "daisyUI 5",
+    done: true,
+    items: [
       {
-        title: "Docs: add component design specs",
-        done: false,
+        title: "Tailwind CSS 4 compatibility",
+        done: true,
       },
       {
-        title: "Docs: add component accessibility guidelines",
-        done: false,
+        title: "Migrate project to Bun workspaces",
+        done: true,
       },
       {
-        title: "Docs: add FAQ to the site",
-        done: false,
+        title: "Use ESM",
+        done: true,
       },
       {
-        title: "Add 'integrations' pages with tutorials about using third-party JS packages",
-        done: false,
+        title: "Use native CSS nesting",
+        done: true,
       },
       {
-        title: "Add internal CSS variables in class name tables",
-        done: false,
+        title: "Remove all JavaScript dependencies",
+        done: true,
       },
       {
-        title: "Improve the loading of translation files",
-        done: false,
+        title: "Reduce package size by 61%",
+        done: true,
       },
       {
-        title: "refactor theme generator",
-        done: false,
+        title: "Reduce CDN file size by 75%",
+        done: true,
+      },
+      {
+        title: "Use Tailwind CSS 4 CSS variables format for color names",
+        done: true,
+      },
+      {
+        title: "Make each component and each theme available as pure CSS files",
+        done: true,
+      },
+      {
+        title: "New components: List, Status, Fieldset, Label, Filter, Calendar, Validator, Dock",
+        done: true,
+      },
+      {
+        title: "New component: Tag",
+        done: true,
+      },
+      {
+        title: "New themes: Caramelllatte, Abyss, Silk",
+        done: true,
+      },
+      {
+        title: "Add popover API support for dropdowns",
+        done: true,
+      },
+      {
+        title: "Config option to include or exclude parts of the library",
+        done: true,
+      },
+      {
+        title: "Add dash and soft styles",
+        done: true,
+      },
+      {
+        title: "Effects: optional depth and noise effects for themes",
+        done: true,
+      },
+      {
+        title: "Refactor size scale",
+        done: true,
+      },
+      {
+        title: "Customizable size scale",
+        done: true,
+      },
+      {
+        title: "Customizable border size",
+        done: true,
+      },
+      {
+        title: "Make all modifier class names responsive",
+        done: true,
+      },
+      {
+        title: "Accessibility improvements",
+        done: true,
+      },
+      {
+        title: "Design imporovements",
+        done: true,
+      },
+      {
+        title: "Adjust theme colors to the new Tailwind CSS 4 color palette",
+        done: true,
       },
     ],
   },
   {
-    title: "daisyUI 5 (comes after Tailwind CSS 4)",
+    title: "Docs",
     done: false,
     items: [
       {
-        title: "Replace Prettier with Biome",
+        title: "Add docs for copmonent specific CSS variables",
         done: true,
       },
       {
-        title: "Use native CSS nesting for all components",
+        title: "Add docs base styles",
+        done: true,
+      },
+      {
+        title: "New Theme generator",
+        done: true,
+      },
+      {
+        title: "Homepage redesign",
         done: false,
       },
       {
-        title: "Remove all JavaScript dependencies, make every source file pure CSS",
+        title: "Add missing translations",
         done: false,
       },
       {
-        title:
-          "Make all components available as pure CSS files instead of CSS-in-JS because Tailwind CSS 4 will support importing CSS files as plugins",
+        title: "Add component design specs",
         done: false,
       },
       {
-        title: "Make each theme available as pure CSS files",
+        title: "Add component accessibility guidelines",
         done: false,
       },
       {
-        title:
-          "Remove color value fallbacks for old browsers. OKLCH colors are supported in all browsers now",
+        title: "Add FAQ to the site",
         done: false,
       },
       {
-        title: "Reduce build step to minimum",
+        title: "Add integrations tutorial for third-party JS packages",
         done: false,
       },
       {
-        title: "New component: Banner",
-        done: false,
-      },
-      {
-        title: "New component: Tag",
-        done: false,
-      },
-      {
-        title: "New themes",
-        done: false,
-      },
-      {
-        title: "Use popover API for dropdowns",
-        done: false,
-      },
-      {
-        title: "Use Container queries for responsive components",
-        done: false,
-      },
-      {
-        title: "Add dotted variants for button, card and badge",
-        done: false,
-      },
-      {
-        title: "Use CSS @starting-style",
-        done: false,
-      },
-      {
-        title: "Refactor `diff` component",
+        title: "Improve the loading of translation files",
         done: false,
       },
     ],
@@ -414,23 +462,47 @@ export const roadmap = [
     done: false,
     items: [
       {
-        title: "Pre-built grid layouts",
+        title: "Pre-built CSS grid layouts",
         done: false,
       },
       {
-        title: "Use CSS color-contrast() when browsers support it",
+        title: "micro animations",
         done: false,
       },
       {
-        title: "Use CSS relative colors when browsers support them",
+        title: "More theme effects",
         done: false,
       },
       {
-        title: "rewrite 'label' component to work best with 'join'",
+        title: "CSS anchor positioning",
         done: false,
       },
       {
-        title: "Animate tab background using CSS grid",
+        title: "View transitions API",
+        done: false,
+      },
+      {
+        title: "CSS color-contrast()",
+        done: false,
+      },
+      {
+        title: "CSS relative color syntax",
+        done: false,
+      },
+      {
+        title: "CSS animation timeline",
+        done: false,
+      },
+      {
+        title: "Collapsible floating action button",
+        done: false,
+      },
+      {
+        title: "HTML invoker API",
+        done: false,
+      },
+      {
+        title: "CSS @scope",
         done: false,
       },
     ],
