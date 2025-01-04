@@ -13,7 +13,7 @@
   "all-components-btn": "Просмотри Все Компоненты",
   "components": "Компоненты",
   "themes": "Темы",
-  "github-stars": "Звёзд на Github",
+  "github-stars": "Звёзды на Github",
   "npm-installs": "Скачиваний на NPM",
   "install-title": "Установите daisyUI",
   "install-desc": "Чистый CSS. Работает со всеми фреймворками. daisyUI можно использовать как плагин Tailwind CSS или как независимую библиотеку CSS.",
