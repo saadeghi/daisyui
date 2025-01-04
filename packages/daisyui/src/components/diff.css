@@ -14,7 +14,7 @@
       max-width: 90cqi;
     }
   }
-  &:has(.diff-item-1:focus-visible) {
+  &:has(.diff-item-2:focus-visible) {
     @apply outline-2 outline-offset-1;
     .diff-resizer {
       min-width: 10cqi;
