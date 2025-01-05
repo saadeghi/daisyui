@@ -25,17 +25,19 @@
       --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto)
         minmax(0, auto) 1fr;
     }
-    &:has(:not(:last-child)),
-    &:not(:last-child) {
+    :not(.list-col-wrap) {
+      @apply row-start-1;
+    }
+  }
+  & > :not(:last-child) {
+    &.list-row,
+    .list-row {
       &:after {
         content: "";
         border-bottom: var(--border) solid;
         inset-inline: var(--radius-box);
         @apply border-base-content/5 absolute bottom-0;
       }
-    }
-    :not(.list-col-wrap) {
-      @apply row-start-1;
     }
   }
 }
