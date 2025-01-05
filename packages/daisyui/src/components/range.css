@@ -104,6 +104,11 @@
   --range-thumb: var(--color-accent-content);
 }
 
+.range-neutral {
+  @apply text-neutral;
+  --range-thumb: var(--color-neutral-content);
+}
+
 .range-success {
   @apply text-success;
   --range-thumb: var(--color-success-content);
