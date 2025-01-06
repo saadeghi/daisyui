@@ -76,7 +76,7 @@
   --input-color: var(--color-accent);
 }
 
-.checkbox-accent {
+.checkbox-neutral {
   @apply text-neutral-content;
   --input-color: var(--color-neutral);
 }
