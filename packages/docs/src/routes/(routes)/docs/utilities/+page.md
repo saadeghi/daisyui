@@ -152,6 +152,8 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--size`                              | size of the input                                                           |
 | Kbd             | `--size`                              | size of the kbd                                                             |
 | List            | `--list-grid-cols`                    | grid columns of the list                                                    |
+| Menu            | `--menu-active-fg`                    | foreground color of the active menu item                                    |
+|                 | `--menu-active-bg`                    | background color of the active menu item                                    |
 | Modal           | `--modal-tl`                          | top left border radius of the modal                                         |
 |                 | `--modal-tr`                          | top right border radius of the modal                                        |
 |                 | `--modal-bl`                          | bottom left border radius of the modal                                      |

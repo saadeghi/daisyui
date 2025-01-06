@@ -1,5 +1,7 @@
 .menu {
   @apply flex w-fit flex-col flex-wrap p-2;
+  --menu-active-fg: var(--color-neutral-content);
+  --menu-active-bg: var(--color-neutral);
   font-size: 0.875rem;
 
   :where(li ul) {
@@ -97,11 +99,13 @@
     & > *:not(ul, .menu-title, details, .btn):active,
     & > *:not(ul, .menu-title, details, .btn).menu-active,
     & > details > summary:active {
-      @apply bg-neutral text-neutral-content bg-neutral text-neutral-content outline-hidden;
+      @apply outline-hidden;
+      color: var(--menu-active-fg);
+      background-color: var(--menu-active-bg);
       background-size: calc(var(--noise) * 1000px);
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
       &:not(&:active) {
-        box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
+        box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--menu-active-bg);
       }
     }
 
