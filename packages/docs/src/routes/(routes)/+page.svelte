@@ -164,7 +164,7 @@
                 class="btn btn-sm cursor-copy rounded-full font-mono font-light"
                 onclick={() => copyText("npm i -D daisyui@beta")}
               >
-                <pre><code>npm i -D daisyui</code></pre>
+                <pre><code>npm i -D daisyui@beta</code></pre>
               </button>
             </div>
             <!-- {#if daisyui5progress}
@@ -196,39 +196,39 @@
           </div>
           <div class="h-4"></div>
           <h1
-            class="font-title text-center text-[clamp(2rem,6vw,4rem)] font-black leading-[1.1] [word-break:auto-phrase] xl:w-[115%] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]"
+            class="font-title text-center text-[clamp(1.5rem,3.5vw,4rem)] leading-[1.1] [word-break:auto-phrase] xl:w-[115%] xl:text-start [:root[dir=rtl]_&]:leading-[1.35]"
           >
-            <span
-              class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20"
-            >
-              {@html $t("The most popular")}
-            </span>
+            <span class="font-thin">{@html $t("homepage_heading_start")}</span>
             <br />
-            <span class="inline-grid">
-              <span
-                class="pointer-events-none col-start-1 row-start-1 bg-clip-text blur-xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] before:content-[attr(data-text)] bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)]"
-                aria-hidden="true"
-                data-text={$t("component library")}
-              >
-              </span>
-              <span
-                class="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-clip-text [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)]"
-              >
-                {@html $t("component library")}
-              </span>
-            </span>
-            <br />
-            <span
-              class="[&::selection]:text-base-content brightness-150 contrast-150 [&::selection]:bg-blue-700/20"
-            >
-              {@html $t("for Tailwind CSS")}
-            </span>
+            <label class="me-2 md:me-4 whitespace-nowrap font-black">
+              <input
+                type="checkbox"
+                class="checkbox [--input-color:var(--color-base-content)] text-base-100 [--size:1.2rem] lg:[--size:.6em] mb-1"
+                checked
+              />
+              {@html $t("homepage_heading_feat_1")}
+            </label>
+            <label class="me-2 md:me-4 whitespace-nowrap font-black">
+              <input
+                type="checkbox"
+                class="checkbox [--input-color:var(--color-base-content)] text-base-100 [--size:1.2rem] lg:[--size:.6em] mb-1"
+                checked
+              />
+              {@html $t("homepage_heading_feat_2")}
+            </label>
+            <label class="me-2 whitespace-nowrap font-black">
+              <input
+                type="checkbox"
+                class="checkbox [--input-color:var(--color-base-content)] text-base-100 [--size:1.2rem] lg:[--size:.6em] mb-1"
+                checked
+              />
+              {@html $t("homepage_heading_feat_3")}
+            </label>
+            <span class="font-thin">{@html $t("homepage_heading_end")}</span>
           </h1>
           <div class="h-4"></div>
-          <p class="text-base-content/70 font-title py-4 font-light md:text-lg xl:text-xl">
-            {@html $t(
-              "daisyUI adds component class names to Tailwind&nbsp;CSS<br /> so you can make beautiful websites <span class='border-base-content/20 border-b-2'>faster than ever.</span>",
-            )}
+          <p class="text-base-content/70 font-title py-4 font-light md:text-lg xl:text-2xl">
+            {@html $t("homepage_sub_heading")}
           </p>
           <div class="h-10"></div>
           <div>
@@ -247,13 +247,13 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Discord"
-                class="btn md:btn-lg group shrink-0 rounded-full [@media(min-width:768px)]:px-10 bg-[oklch(64.74%_0.124_270.62)] border-[oklch(64.74%_0.124_270.62)] hover:bg-[oklch(60%_0.124_270.62)] hover:border-[oklch(60%_0.124_270.62)]"
+                class="btn md:btn-lg group shrink-0 rounded-full [@media(min-width:768px)]:px-10"
               >
                 <svg
                   class="h-7 w-auto transition-opacity opacity-100 group-hover:opacity-0"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 124 34"
-                  ><g fill="white"
+                  ><g fill="currentColor"
                     ><path
                       d="M26.0015 6.9529C24.0021 6.03845 21.8787 5.37198 19.6623 5C19.3833 5.48048 19.0733 6.13144 18.8563 6.64292C16.4989 6.30193 14.1585 6.30193 11.8336 6.64292C11.6166 6.13144 11.2911 5.48048 11.0276 5C8.79575 5.37198 6.67235 6.03845 4.6869 6.9529C0.672601 12.8736 -0.41235 18.6548 0.130124 24.3585C2.79599 26.2959 5.36889 27.4739 7.89682 28.2489C8.51679 27.4119 9.07477 26.5129 9.55525 25.5675C8.64079 25.2265 7.77283 24.808 6.93587 24.312C7.15286 24.1571 7.36986 23.9866 7.57135 23.8161C12.6241 26.1255 18.0969 26.1255 23.0876 23.8161C23.3046 23.9866 23.5061 24.1571 23.7231 24.312C22.8861 24.808 22.0182 25.2265 21.1037 25.5675C21.5842 26.5129 22.1422 27.4119 22.7621 28.2489C25.2885 27.4739 27.8769 26.2959 30.5288 24.3585C31.1952 17.7559 29.4733 12.0212 26.0015 6.9529ZM10.2527 20.8402C8.73376 20.8402 7.49382 19.4608 7.49382 17.7714C7.49382 16.082 8.70276 14.7025 10.2527 14.7025C11.7871 14.7025 13.0425 16.082 13.0115 17.7714C13.0115 19.4608 11.7871 20.8402 10.2527 20.8402ZM20.4373 20.8402C18.9183 20.8402 17.6768 19.4608 17.6768 17.7714C17.6768 16.082 18.8873 14.7025 20.4373 14.7025C21.9717 14.7025 23.2271 16.082 23.1961 17.7714C23.1961 19.4608 21.9872 20.8402 20.4373 20.8402Z"
                     /><path
@@ -280,7 +280,7 @@
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  class="inline-block absolute w-6 fill-white transition-all scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100"
+                  class="inline-block absolute w-6 transition-all scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100"
                   ><path
                     fill-rule="evenodd"
                     d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"
@@ -1500,11 +1500,15 @@
       </div>
     </div>
     <div class="flex flex-col">
-      <div class="mockup-code mx-auto w-full max-w-xs bg-black/20 text-start sm:max-w-none">
+      <div
+        class="mockup-code mx-auto w-full max-w-xs bg-neutral-content/5 text-start sm:max-w-none"
+      >
         <pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre>
       </div>
       <div class="divider text-neutral-content text-opacity-30">↓</div>
-      <div class="mockup-code mx-auto w-full max-w-xs bg-black/20 text-start sm:max-w-none">
+      <div
+        class="mockup-code mx-auto w-full max-w-xs bg-neutral-content/5 text-start sm:max-w-none"
+      >
         <pre><code
             >&lt;a class="<span>btn btn-primary</span> <span class="text-teal-500"
               >rounded-full</span

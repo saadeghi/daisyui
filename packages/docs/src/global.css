@@ -7,7 +7,7 @@
 }
 
 @theme {
-  --font-title: Figtree, Noto Sans JP, Noto Sans, Vazirmatn, sans-serif;
+  --font-title: Outfit, Noto Sans JP, Noto Sans, Vazirmatn, sans-serif;
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Vazirmatn, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol, Noto Color Emoji;
@@ -256,6 +256,14 @@
 
 /* prose */
 .prose {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-title);
+  }
   .code-wrapper {
     max-width: 100vw;
     overflow-x: auto;
