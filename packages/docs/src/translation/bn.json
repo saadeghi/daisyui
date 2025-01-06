@@ -81,7 +81,7 @@
   "homepage_heading_feat_2": "পরিচ্ছন্ন",
   "homepage_heading_feat_3": "সহজ",
   "homepage_heading_end": "করুন",
-  "homepage_sub_heading": "daisyUI Tailwind&nbsp;CSS এ দরকারী কম্পোনেন্ট ক্লাসের নাম যোগ করে।<br /> কম লিখুন, দ্রুত তৈরি করুন, এবং পরিষ্কার কোড উপভোগ করুন।",
+  "homepage_sub_heading": "daisyUI একটি মুক্ত Tailwind CSS উপাদান লাইব্রেরি।<br/> daisyUI Tailwind&nbsp;CSS এ উপকারী উপাদান ক্লাস নাম যোগ করে。",
   "don't re-invent <br/>the wheel <br/>every time": "প্রতিবার <br/>চাকা <br/>আবিস্কার করার দরকার নেই",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "একটি Tailwind CSS প্রজেক্টে, আপনাকে প্রতিটি উপাদানের জন্য ইউটিলিটি ক্লাসের নাম লিখতে হবে। হাজার হাজার ক্লাসের নাম শুধুমাত্র সবচেয়ে মৌলিক ইলিমেন্টস স্টাইল করার জন্য লিখতে হবে।",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "<br /> <span class='text-error'><span class='font-black'>100</span> class names</span> লেখার পরিবর্তে",

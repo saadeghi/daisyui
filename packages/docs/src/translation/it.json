@@ -81,7 +81,7 @@
   "homepage_heading_feat_2": "pulito",
   "homepage_heading_feat_3": "facile",
   "homepage_heading_end": "sia",
-  "homepage_sub_heading": "daisyUI aggiunge nomi di classi di componenti utili a Tailwind&nbsp;CSS.<br /> Scrivi meno, costruisci più velocemente e goditi il codice pulito.",
+  "homepage_sub_heading": "daisyUI è una libreria di componenti gratuita per Tailwind CSS.<br/> daisyUI aggiunge nomi di classi di componenti utili a Tailwind&nbsp;CSS.",
   "don't re-invent <br/>the wheel <br/>every time": "non reinventare <br/>la ruota <br/>ogni volta",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "In un progetto con Tailwind CSS, devi scrivere classi di utility per ogni elemento. Migliaia di classi solo per decorare il più semplice degli elementi.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "invece di scrivere<br /> <span class='text-error'><span class='font-black'>100</span> nomi di classi</span>",

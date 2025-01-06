@@ -81,7 +81,7 @@
   "homepage_heading_feat_2": "きれいで",
   "homepage_heading_feat_3": "簡単に",
   "homepage_heading_end": "しましょう",
-  "homepage_sub_heading": "daisyUIはTailwind&nbsp;CSSに便利なコンポーネントクラス名を追加します。<br /> クラス名を少なく書き、開発を加速し、クリーンなコードを楽しみましょう。",
+  "homepage_sub_heading": "daisyUIは無料のTailwind CSSコンポーネントライブラリです。<br/> daisyUIはTailwind&nbsp;CSSに便利なコンポーネントクラス名を追加します。",
   "don't re-invent <br/>the wheel <br/>every time": "無駄な手間は省こう。",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Tailwind CSSのプロジェクトでは、すべての要素にユーティリティクラス名を記述する必要があります。最も基本的な要素にスタイルを適用するために何千ものクラス名が必要です。",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "<span class='text-error'><span class='font-black'>100</span> 個のクラス名</span> を書く代わりに",

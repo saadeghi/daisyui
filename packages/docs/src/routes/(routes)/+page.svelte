@@ -203,7 +203,7 @@
             <label class="me-2 md:me-4 whitespace-nowrap font-black">
               <input
                 type="checkbox"
-                class="checkbox [--input-color:var(--color-base-content)] text-base-100 [--size:1.2rem] lg:[--size:.6em] mb-1"
+                class="checkbox [--size:1.2rem] lg:[--size:.6em] mb-1"
                 checked
               />
               {@html $t("homepage_heading_feat_1")}
@@ -211,17 +211,13 @@
             <label class="me-2 md:me-4 whitespace-nowrap font-black">
               <input
                 type="checkbox"
-                class="checkbox [--input-color:var(--color-base-content)] text-base-100 [--size:1.2rem] lg:[--size:.6em] mb-1"
+                class="checkbox [--size:1.2rem] lg:[--size:.6em] mb-1"
                 checked
               />
               {@html $t("homepage_heading_feat_2")}
             </label>
             <label class="me-2 whitespace-nowrap font-black">
-              <input
-                type="checkbox"
-                class="checkbox [--input-color:var(--color-base-content)] text-base-100 [--size:1.2rem] lg:[--size:.6em] mb-1"
-                checked
-              />
+              <input type="checkbox" class="checkbox [--size:1.2rem] lg:[--size:.6em] mb-1" />
               {@html $t("homepage_heading_feat_3")}
             </label>
             <span class="font-thin">{@html $t("homepage_heading_end")}</span>

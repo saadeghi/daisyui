@@ -81,7 +81,7 @@
   "homepage_heading_feat_2": "sạch sẽ",
   "homepage_heading_feat_3": "dễ dàng",
   "homepage_heading_end": "trở nên",
-  "homepage_sub_heading": "daisyUI thêm các tên class thành phần hữu ích vào Tailwind&nbsp;CSS.<br /> Viết ít hơn, xây dựng nhanh hơn và tận hưởng mã sạch.",
+  "homepage_sub_heading": "daisyUI là thư viện thành phần miễn phí cho Tailwind CSS.<br/> daisyUI thêm các tên lớp thành phần hữu ích vào Tailwind&nbsp;CSS.",
   "don't re-invent <br/>the wheel <br/>every time": "đừng phát minh lại <br/>bánh xe <br/>mỗi lần",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Trong một dự án Tailwind CSS, bạn cần viết tên class tiện ích cho mọi phần tử. Hàng ngàn tên class chỉ để tạo kiểu cho các phần tử cơ bản nhất.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "thay vì viết<br /> <span class='text-error'><span class='font-black'>100</span> tên class</span>",
