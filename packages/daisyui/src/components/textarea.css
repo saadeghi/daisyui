@@ -119,21 +119,26 @@
 }
 
 .textarea-xs {
-  font-size: 0.75rem;
+  --size: calc(var(--size-field, 0.25rem) * 6);
+  font-size: 0.6875rem;
 }
 
 .textarea-sm {
-  font-size: 0.875rem;
+  --size: calc(var(--size-field, 0.25rem) * 8);
+  font-size: 0.75rem;
 }
 
 .textarea-md {
+  --size: calc(var(--size-field, 0.25rem) * 10);
   font-size: 0.875rem;
 }
 
 .textarea-lg {
+  --size: calc(var(--size-field, 0.25rem) * 12);
   font-size: 1.125rem;
 }
 
 .textarea-xl {
-  font-size: 1.125rem;
+  --size: calc(var(--size-field, 0.25rem) * 14);
+  font-size: 1.375rem;
 }
