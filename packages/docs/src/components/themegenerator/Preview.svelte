@@ -562,7 +562,7 @@
         </div>
 
         <textarea
-          class="textarea textarea-border max-w-none rounded-xl resize-none"
+          class="textarea textarea-border max-w-none resize-none"
           placeholder="What's happening?"
         ></textarea>
 
