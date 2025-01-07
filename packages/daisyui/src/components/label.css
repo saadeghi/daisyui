@@ -1,5 +1,5 @@
 .label {
-  @apply inline-flex items-center gap-1.5 text-current/60;
+  @apply inline-flex items-center gap-1.5 whitespace-nowrap text-current/60;
   &:has(input) {
     @apply cursor-pointer;
   }
