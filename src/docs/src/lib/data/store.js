@@ -1,5 +1,39 @@
 export const productCustomAttributes = [
   {
+    id: 426780,
+    media: [
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-01.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-01.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-02.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-02.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-03.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-03.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-04.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-04.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-05.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-05.webp",
+      },
+    ],
+    tags: ["NEW"],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/online-store.webp",
+    tech: ["nextjs", "react"],
+  },
+  {
     id: 351127,
     media: [
       {
@@ -60,7 +94,7 @@ export const productCustomAttributes = [
       button: "All Features",
       img: "https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp",
     },
-    tags: ["NEW"],
+    tags: [],
     ref: "8XWm0",
     params: "desc=0",
   },
@@ -91,11 +125,7 @@ export const productCustomAttributes = [
     quote: {
       img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
       name: "Pouya",
-      text: [
-        [
-          "HTML version is now available!",
-        ],
-      ],
+      text: [["HTML version is now available!"]],
     },
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
     tech: ["html", "react", "nextjs"],
@@ -424,7 +454,7 @@ export const tech = {
 export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"];
 
 export const futureProducts = [
-  "Headless UI + daisyUI component pack for React",
+  "Nexus Dashboard v2.0 update + Svelte version",
+  "Official daisyUI Figma Library v2.0 update",
   "Headless UI + daisyUI component pack for Vue",
-  "Ecommerce template",
 ];
