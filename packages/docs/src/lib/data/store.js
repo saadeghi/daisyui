@@ -1,5 +1,39 @@
 export const productCustomAttributes = [
   {
+    id: 426780,
+    media: [
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-01.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-01.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-02.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-02.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-03.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-03.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-04.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-04.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/online-store/online-store-05.webp",
+        lg: "https://img.daisyui.com/images/store/large/online-store/online-store-05.webp",
+      },
+    ],
+    tags: ["NEW"],
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/online-store.webp",
+    tech: ["nextjs", "react"],
+  },
+  {
     id: 351127,
     media: [
       {
@@ -60,7 +94,7 @@ export const productCustomAttributes = [
       button: "All Features",
       img: "https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp",
     },
-    tags: ["NEW"],
+    tags: [],
     ref: "8XWm0",
     params: "desc=0",
   },
@@ -130,7 +164,8 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-5.webp",
       },
     ],
-    screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
     originalprice: 4900,
     displayprice: 2900,
     tech: ["astro", "react", "nextjs", "mdx"],
@@ -190,9 +225,10 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-1.webp",
       },
     ],
-    screenshot: "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
-    preview: {
+    preveiw: {
       button: "Live demo",
       url: "https://saas-landing.daisyui.com/",
     },
@@ -217,7 +253,8 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/personal-blog/personal-blog-3.webp",
       },
     ],
-    screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
     tech: ["astro", "react", "nextjs", "mdx"],
     tags: ["Next.js version added"],
   },
@@ -260,9 +297,10 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-6.webp",
       },
     ],
-    screenshot: "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
     tech: ["html", "react", "svelte", "vue", "alpine"],
-    preview: {
+    preveiw: {
       button: "Live demo",
       url: "https://mobile-landing.daisyui.com/",
     },
@@ -297,7 +335,8 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-5.webp",
       },
     ],
-    screenshot: "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
     tech: ["react", "svelte", "vite", "framer"],
   },
   {
@@ -387,14 +426,15 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-9.webp",
       },
     ],
-    screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
+    screenshot:
+      "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
     tech: ["html", "webcomponents"],
     // originalprice: 2900,
     // displayprice: 2600,
     // displaypricenote: "with discount",
     // tags: ['Use code "DASHBOARD10" for 10% discount'],
   },
-]
+];
 
 export const tech = {
   html: { title: "HTML", bg: "#E54C20", fg: "#FFF" },
@@ -409,12 +449,12 @@ export const tech = {
   mdx: { title: "MDX", bg: "#0A69DA", fg: "#FFF" },
   astro: { title: "Astro", bg: "#E944B0", fg: "#FFF" },
   nextjs: { title: "Next.js", bg: "#000", fg: "#FFF" },
-}
+};
 
-export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"]
+export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"];
 
 export const futureProducts = [
-  "Headless UI + daisyUI component pack for React",
+  "Nexus Dashboard v2.0 update + Svelte version",
+  "Official daisyUI Figma Library v2.0 update",
   "Headless UI + daisyUI component pack for Vue",
-  "Ecommerce template",
-]
+];
