@@ -9,7 +9,13 @@
   --range-bg: color-mix(in oklab, currentColor 10%, transparent);
   @apply cursor-pointer overflow-hidden bg-transparent align-middle;
   width: clamp(3rem, 20rem, 100%);
-  border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
+  border-radius: calc(
+    var(--radius-selector) +
+      min(
+        var(--range-p),
+        calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
+      )
+  );
   border: none;
   height: var(--range-thumb-size);
 
@@ -38,7 +44,13 @@
 
   &::-webkit-slider-thumb {
     @apply relative box-border;
-    border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
+    border-radius: calc(
+      var(--radius-selector) +
+        min(
+          var(--range-p),
+          calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
+        )
+    );
     background-color: currentColor;
     height: var(--range-thumb-size);
     width: var(--range-thumb-size);
@@ -69,7 +81,13 @@
 
   &::-moz-range-thumb {
     @apply relative box-border;
-    border-radius: calc(var(--radius-selector) + var(--range-p) + 1px);
+    border-radius: calc(
+      var(--radius-selector) +
+        min(
+          var(--range-p),
+          calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
+        )
+    );
     background-color: currentColor;
     height: var(--range-thumb-size);
     width: var(--range-thumb-size);

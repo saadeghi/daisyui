@@ -3,7 +3,18 @@
   color: var(--input-color);
   @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
   grid-template-columns: 0fr 1fr 1fr;
-  border-radius: calc(var(--radius-selector) + var(--toggle-p));
+  border-radius: calc(
+    var(--radius-selector) +
+      min(
+        var(--toggle-p),
+        calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
+      ) +
+      min(
+        var(--border),
+        calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
+      )
+  );
+
   padding: var(--toggle-p);
   box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent) inset;
   transition:
