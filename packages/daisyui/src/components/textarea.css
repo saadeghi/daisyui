@@ -9,7 +9,6 @@
   box-shadow:
     0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent) inset,
     0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-  --size: calc(var(--size-field, 0.25rem) * 10);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
   textarea {
     @apply appearance-none bg-transparent;
@@ -119,26 +118,21 @@
 }
 
 .textarea-xs {
-  --size: calc(var(--size-field, 0.25rem) * 6);
   font-size: 0.6875rem;
 }
 
 .textarea-sm {
-  --size: calc(var(--size-field, 0.25rem) * 8);
   font-size: 0.75rem;
 }
 
 .textarea-md {
-  --size: calc(var(--size-field, 0.25rem) * 10);
   font-size: 0.875rem;
 }
 
 .textarea-lg {
-  --size: calc(var(--size-field, 0.25rem) * 12);
   font-size: 1.125rem;
 }
 
 .textarea-xl {
-  --size: calc(var(--size-field, 0.25rem) * 14);
   font-size: 1.375rem;
 }
