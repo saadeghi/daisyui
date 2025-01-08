@@ -15,12 +15,32 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Wed, 08 Jan 2025 19:49:06 GMT</lastBuildDate>
-    <pubDate>Wed, 08 Jan 2025 19:49:06 GMT</pubDate>
+    <lastBuildDate>Wed, 08 Jan 2025 19:49:48 GMT</lastBuildDate>
+    <pubDate>Wed, 08 Jan 2025 19:49:48 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
     
     
+        <item>
+          <title>
+            <![CDATA[ Online Store template ]]>
+          </title>
+          <description>
+            <![CDATA[ <p><strong>Fully functional LemonSqueezy store template made with daisyUI</strong></p>
+
+<p>Made with daisyUI and Next.js 15</p>
+
+<p>Add your <strong>LemonSqueezy API key</strong> to the env file, add custom data for your products and your online store will be ready in <strong>less than 5 minutes!</strong><br></p>
+
+<p>This template receives your simple list of products coming from the LemonSqueezy API, adds your custom data and attributes to the products and generates a functional online store with all the standard online store capabilities you need.</p>
+
+<p>Including Homepage, collections page with filter and sort, product page with image gallery, zoom, custom attributes, variant links, related product suggestions and more.</p> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/0e0d97fa-2646-4411-817e-f96afeb83493/</link>
+          <pubDate>Wed, 08 Jan 2025 18:52:47 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/0e0d97fa-2646-4411-817e-f96afeb83493/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Official daisyUI Figma Library ]]>
