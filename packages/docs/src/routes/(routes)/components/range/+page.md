@@ -7,6 +7,8 @@ classnames:
   - class: range
     desc: For <input type="range"> tag
   color:
+  - class: range-neutral
+    desc: neutral color
   - class: range-primary
     desc: primary color
   - class: range-secondary
@@ -84,6 +86,14 @@ classnames:
     <span>5</span>
   </div>
 </div>
+```
+
+
+### ~Neutral color
+<input type="range" min="0" max="100" value="40" class="range range-neutral" />
+
+```html
+<input type="range" min="0" max="100" value="40" class="$$range $$range-neutral" />
 ```
 
 
