@@ -99,11 +99,11 @@ classnames:
 
 ### ~Sizes
 <div class="flex flex-col gap-4 w-full items-center">
-  <textarea placeholder="Bio" class="textarea textarea-xs"></textarea>
-  <textarea placeholder="Bio" class="textarea textarea-sm"></textarea>
-  <textarea placeholder="Bio" class="textarea textarea-md"></textarea>
-  <textarea placeholder="Bio" class="textarea textarea-lg"></textarea>
-  <textarea placeholder="Bio" class="textarea textarea-xl"></textarea>
+  <textarea placeholder="Xsmall" class="textarea textarea-xs"></textarea>
+  <textarea placeholder="Small" class="textarea textarea-sm"></textarea>
+  <textarea placeholder="Medium" class="textarea textarea-md"></textarea>
+  <textarea placeholder="Large" class="textarea textarea-lg"></textarea>
+  <textarea placeholder="Xlarge" class="textarea textarea-xl"></textarea>
 </div>
 
 ```html
