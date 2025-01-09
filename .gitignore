@@ -7,3 +7,5 @@ dist
 .DS_Store
 *.tgz
 .logs
+.env.local
+.svelte-kit
