@@ -29,9 +29,48 @@ export const productCustomAttributes = [
       },
     ],
     tags: ["NEW"],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/online-store.webp",
+    links: {
+      license: "https://api.daisyui.com/license/online-store@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/online-store.webp",
+    },
     tech: ["nextjs", "react"],
+  },
+  {
+    id: 244268,
+    media: [
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-2.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-02.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-1.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-01.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-3.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-03.webp",
+      },
+      {
+        type: "image",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-4.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-04.webp",
+      },
+    ],
+    quote: {
+      img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
+      name: "Pouya",
+      text: [["HTML version is now available!"]],
+    },
+    tech: ["html", "react", "nextjs"],
+    links: {
+      license: "https://api.daisyui.com/license/nexus@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
+      preview: "https://nexus.daisyui.com/",
+    },
+    ref: "K0XmL",
   },
   {
     id: 351127,
@@ -86,54 +125,14 @@ export const productCustomAttributes = [
         ],
       ],
     },
-    preview: {
-      button: "Preview",
-      url: "https://www.figma.com/community/file/1417577350704829934",
-    },
-    preview_modal: {
-      button: "All Features",
-      img: "https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp",
+    more_images: ["https://img.daisyui.com/images/store/official-daisyui-figma-library-price.webp"],
+    links: {
+      license: "https://api.daisyui.com/license/figma@1.txt",
+      preview: "https://www.figma.com/community/file/1417577350704829934",
     },
     tags: [],
     ref: "8XWm0",
     params: "desc=0",
-  },
-  {
-    id: 244268,
-    media: [
-      {
-        type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-2.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-02.webp",
-      },
-      {
-        type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-1.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-01.webp",
-      },
-      {
-        type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-3.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-03.webp",
-      },
-      {
-        type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-4.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-04.webp",
-      },
-    ],
-    quote: {
-      img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
-      name: "Pouya",
-      text: [["HTML version is now available!"]],
-    },
-    screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
-    tech: ["html", "react", "nextjs"],
-    preview: {
-      button: "Live demo",
-      url: "https://nexus.daisyui.com/",
-    },
-    ref: "K0XmL",
   },
   {
     id: 284327,
@@ -164,8 +163,10 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/documentation/documentation-5.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
+    links: {
+      license: "https://api.daisyui.com/license/documentation@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/documentation-template.webp",
+    },
     originalprice: 4900,
     displayprice: 2900,
     tech: ["astro", "react", "nextjs", "mdx"],
@@ -225,13 +226,12 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/saas-landing/saas-landing-1.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
-    tech: ["html", "react", "svelte", "vue", "alpine"],
-    preveiw: {
-      button: "Live demo",
-      url: "https://saas-landing.daisyui.com/",
+    links: {
+      license: "https://api.daisyui.com/license/saas-landing@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/saas-landingpage.webp",
+      preview: "https://saas-landing.daisyui.com/",
     },
+    tech: ["html", "react", "svelte", "vue", "alpine"],
     ref: "K0XmL",
   },
   {
@@ -253,8 +253,10 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/personal-blog/personal-blog-3.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
+    links: {
+      license: "https://api.daisyui.com/license/blog@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
+    },
     tech: ["astro", "react", "nextjs", "mdx"],
     tags: ["Next.js version added"],
   },
@@ -297,13 +299,12 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/mobile-app-landing/mobile-app-landing-6.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
-    tech: ["html", "react", "svelte", "vue", "alpine"],
-    preveiw: {
-      button: "Live demo",
-      url: "https://mobile-landing.daisyui.com/",
+    links: {
+      license: "https://api.daisyui.com/license/mobile-landing@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/app-landingpage.webp",
+      preview: "https://mobile-landing.daisyui.com/",
     },
+    tech: ["html", "react", "svelte", "vue", "alpine"],
     ref: "K0XmL",
   },
   {
@@ -335,8 +336,10 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/agency-landing/agency-landing-5.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
+    links: {
+      license: "https://api.daisyui.com/license/agency-landing@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
+    },
     tech: ["react", "svelte", "vite", "framer"],
   },
   {
@@ -344,13 +347,13 @@ export const productCustomAttributes = [
     media: [
       {
         type: "image",
-        sm: "https://img.daisyui.com/images/store/small/auth/auth-1.webp",
-        lg: "https://img.daisyui.com/images/store/large/auth/auth-1.webp",
+        sm: "https://img.daisyui.com/images/store/small/auth/auth-2.webp",
+        lg: "https://img.daisyui.com/images/store/large/auth/auth-2.webp",
       },
       {
         type: "image",
-        sm: "https://img.daisyui.com/images/store/small/auth/auth-2.webp",
-        lg: "https://img.daisyui.com/images/store/large/auth/auth-2.webp",
+        sm: "https://img.daisyui.com/images/store/small/auth/auth-1.webp",
+        lg: "https://img.daisyui.com/images/store/large/auth/auth-1.webp",
       },
       {
         type: "image",
@@ -373,7 +376,10 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/auth/auth-6.webp",
       },
     ],
-    screenshot: "https://img.daisyui.com/images/store/screenshots/auth.webp",
+    links: {
+      license: "https://api.daisyui.com/license/auth@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/auth.webp",
+    },
     tech: ["html"],
     // ref: "VMAme",
   },
@@ -426,15 +432,17 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/html-dashboard/html-dashboard-9.webp",
       },
     ],
-    screenshot:
-      "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
+    links: {
+      license: "https://api.daisyui.com/license/html-dashboard@1.txt",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
+    },
     tech: ["html", "webcomponents"],
     // originalprice: 2900,
     // displayprice: 2600,
     // displaypricenote: "with discount",
     // tags: ['Use code "DASHBOARD10" for 10% discount'],
   },
-];
+]
 
 export const tech = {
   html: { title: "HTML", bg: "#E54C20", fg: "#FFF" },
@@ -449,12 +457,12 @@ export const tech = {
   mdx: { title: "MDX", bg: "#0A69DA", fg: "#FFF" },
   astro: { title: "Astro", bg: "#E944B0", fg: "#FFF" },
   nextjs: { title: "Next.js", bg: "#000", fg: "#FFF" },
-};
+}
 
-export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"];
+export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"]
 
 export const futureProducts = [
   "Nexus Dashboard v2.0 update + Svelte version",
   "Official daisyUI Figma Library v2.0 update",
   "Headless UI + daisyUI component pack for Vue",
-];
+]

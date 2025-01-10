@@ -178,7 +178,7 @@
 <div>
   {#await fetchDiscount then discount}
     {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate}
-      <div class="mx-4 mb-10">
+      <div class="mb-12">
         <div
           class="alert min-h-24 border-transparent bg-neutral text-neutral-content"
           transition:slide={{ duration: 400 }}
@@ -211,7 +211,7 @@
                   class="tooltip tooltip-info"
                 >
                   <button
-                    class="font-mono tracking-wide badge px-2 badge-info"
+                    class="font-mono tracking-wide badge px-2 badge-info cursor-copy"
                     onclick={() => copyText(discount.data.attributes.code)}
                   >
                     {discount.data.attributes.code}
@@ -295,58 +295,58 @@
     {/if}
   {/await}
 
-  <!-- <select class="select" id="sort-by" bind:value="{sortBy}">
+  <!-- <select class="select" id="sort-by" bind:value={sortBy}>
     <option value="">Popular</option>
     <option value="new">New</option>
   </select> -->
 
-  <div class="mx-auto flex max-w-7xl flex-col gap-16">
+  <div class="mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 xl:gap-x-12 gap-y-24">
     {#each sortedFilteredProducts as product, index}
-      <div
-        class="rounded-box relative grid grid-cols-12 gap-y-10 py-10 xl:gap-x-10"
+      <a
+        class="flex flex-col group border border-base-300 rounded-box overflow-hidden"
+        href={`/store/${product.id}`}
         id={product.id}
+        data-sveltekit-preload-data
       >
-        <div class="col-span-12 flex flex-col gap-8 xl:col-span-5 xl:row-start-1">
-          <div>
-            {#if product.tags}
-              <span class="flex gap-2">
-                {#each product.tags as tag}
-                  <span class="badge badge-success badge-outline italic">{tag}</span>
-                {/each}
-              </span>
-            {/if}
-            <h2
-              class="font-title text-lg font-black [text-wrap:balance] sm:text-3xl tracking-tight"
-              class:xl:text-6xl={index === 0}
-              class:xl:text-5xl={index > 0}
-            >
-              {product.attributes.name}
-            </h2>
-          </div>
+        <div class="grow flex items-center bg-white">
+          {#each product.media.filter((media) => media.type === "image").slice(0, 1) as media}
+            <div class="overflow-hidden w-full">
+              <img
+                style={`background-image: url('${media.sm}')`}
+                src={media.lg}
+                alt={product.attributes.name}
+                loading="lazy"
+                class="bg-base-300 w-full h-full bg-cover bg-center object-cover group-hover:scale-103 ease-out transition-transform duration-300"
+              />
+            </div>
+          {/each}
+        </div>
+
+        <div class="py-6 px-8 flex justify-between gap-4 border-t border-base-300">
+          <h2 class="text-lg font-title">
+            {product.attributes.name}
+          </h2>
+
           <div class="flex items-start justify-between">
             <div class="flex gap-2">
               {#if product.originalprice}
-                <span class="text-2xl line-through opacity-40 xl:text-4xl">
+                <span class="line-through opacity-40">
                   &nbsp;{convertCurrency(product.originalprice)}&nbsp;
                 </span>
               {/if}
               <span class="flex flex-col">
                 <span class="flex items-center gap-2">
                   {#if product.displayprice}
-                    <span class="font-title text-2xl font-light xl:text-5xl">
+                    <span class="font-title">
                       {convertCurrency(product.displayprice)}
                     </span>
                   {:else if product.attributes.from_price && product.attributes.to_price && product.attributes.from_price !== product.attributes.to_price}
-                    From
-                    <span class="font-title text-2xl font-light xl:text-5xl">
+                    <span class="text-[0.625rem] opacity-50">From</span>
+                    <span class="font-title">
                       {convertCurrency(product.attributes.from_price)}
                     </span>
-                    to
-                    <span class="font-title text-2xl font-light xl:text-5xl">
-                      {convertCurrency(product.attributes.to_price)}
-                    </span>
                   {:else}
-                    <span class="font-title text-2xl font-light xl:text-5xl">
+                    <span class="font-title">
                       {convertCurrency(product.attributes.price)}
                     </span>
                   {/if}
@@ -359,241 +359,9 @@
                 {/if}
               </span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <a
-                href={rednerBuyNowUrl(product.attributes.buy_now_url, product.ref, product.params)}
-                class="btn btn-primary shadow-primary/50 group shrink-0 rounded-full shadow xl:px-10"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get it now
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  >
-                  </path>
-                </svg>
-              </a>
-              <div class="flex gap-x-4">
-                {#if product.preview}
-                  <a
-                    class="link text-xs"
-                    href={product.preview.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {product.preview.button}
-                  </a>
-                {/if}
-                {#if product.preview_modal}
-                  <button class="link text-xs" onclick={() => preview_modal.showModal()}
-                    >{product.preview_modal.button}</button
-                  >
-                  <dialog id="preview_modal" class="modal">
-                    <div class="modal-box p-0 shadow-none bg-transparent max-w-fit max-h-fit my-32">
-                      <img
-                        src={product.preview_modal.img}
-                        alt={product.attributes.name}
-                        class="max-h-screen w-auto"
-                      />
-                    </div>
-                    <form method="dialog" class="modal-backdrop">
-                      <button>close</button>
-                    </form>
-                  </dialog>
-                {/if}
-              </div>
-            </div>
           </div>
-          {#if product.attributes.description}
-            <div
-              class="prose prose-sm prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs [text-wrap:balance]"
-            >
-              {@html product.attributes.description}
-            </div>
-          {/if}
         </div>
-        <div class="col-span-12 flex flex-col gap-6 xl:col-span-7">
-          <div
-            class="relative grid items-center group place-items-center [grid-template-columns:min-content_1fr_min-content] border border-base-300 rounded-box overflow-hidden"
-          >
-            <div
-              class="col-span-3 col-start-1 row-start-1 flex overflow-hidden items-center rounded-box"
-            >
-              {#each product.media as media}
-                <div
-                  class="w-full shrink-0 transition-transform duration-300"
-                  style={`transform: translateX(-${sliders[product.id].currentIndex * 100}%)`}
-                >
-                  {#if media.type === "video"}
-                    <div class="w-full grid">
-                      <div class="[grid-column:1/1] [grid-row:1/1] z-1"></div>
-                      <iframe
-                        class="w-full [grid-column:1/1] [grid-row:1/1]"
-                        style={`aspect-ratio: ${media.ratio};`}
-                        src={media.url}
-                        frameborder="0"
-                        title="Official daisyUI Figma Library"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                  {/if}
-                  {#if media.type === "image"}
-                    <img
-                      style={`background-image: url('${media.sm}')`}
-                      src={media.lg}
-                      alt={product.attributes.name}
-                      loading="lazy"
-                      class="bg-base-300 w-full bg-cover bg-center object-cover"
-                    />
-                  {/if}
-                </div>
-              {/each}
-            </div>
-            {#if product.media.length > 1}
-              <button
-                aria-label="Previous"
-                onclick={() => prev(product.id, product.media)}
-                class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-1 row-start-1 z-1 m-4 opacity-0 -translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="size-8"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15.75 19.5 8.25 12l7.5-7.5"
-                  />
-                </svg>
-              </button>
-            {/if}
-            {#if product.screenshot}
-              <a
-                target="_blank"
-                aria-label="Screenshot"
-                href={product.screenshot}
-                rel="noopener noreferrer"
-                class=" rounded-full aspect-square p-4 focus-visible:outline-white col-start-2 row-start-1 z-1 m-4 opacity-0 scale-90 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:scale-100 focus-visible:opacity-100 focus-visible:scale-100"
-              >
-                <svg
-                  class="text-white"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 48 48"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linejoin="round"
-                  >
-                  </path>
-                  <path
-                    d="M21 15L21 27"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                  </path>
-                  <path
-                    d="M15.0156 21.0156L27 21"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                  </path>
-                  <path
-                    d="M33.2216 33.2217L41.7069 41.707"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                  </path>
-                </svg>
-              </a>
-            {/if}
-            {#if product.media.length > 1}
-              <button
-                aria-label="Next"
-                onclick={() => next(product.id, product.media)}
-                class="rounded-full aspect-square p-4 focus-visible:outline-white col-start-3 row-start-1 z-1 m-4 opacity-0 translate-x-2 duration-300 bg-black/70 border-transparent text-white group-hover:opacity-100 group-hover:translate-x-0 focus-visible:opacity-100 focus-visible:translate-x-0"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="size-8"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </button>
-            {/if}
-          </div>
-          {#if product.tech}
-            <div class="flex items-center justify-center gap-4 md:justify-end">
-              <span class="text-base-content/50 text-xs italic">made with</span>
-              {#each product.tech as tech}
-                <div
-                  class="bg-white border border-black/5 tooltip grid place-content-center rounded-full lg:p-2 xl:p-3"
-                  data-tip={data.tech[tech].title}
-                >
-                  <img
-                    class="aspect-square w-5 xl:w-6"
-                    src={`https://img.daisyui.com/images/logos/${tech}.svg`}
-                    alt={tech}
-                  />
-                </div>
-              {/each}
-            </div>
-          {/if}
-          {#if product.quote}
-            <div class="chat chat-end">
-              {#each product.quote.text as text, index}
-                <div
-                  class={`chat-bubble mt-1 text-xs max-w-md bg-base-200 text-base-content ${index !== product.quote.text.length - 1 ? "before:hidden [.chat-end>&]:rounded-box" : ""}`}
-                >
-                  {#each text as line}
-                    <p class="py-1">{@html line}</p>
-                  {/each}
-                </div>
-              {/each}
-              <div class="chat-image avatar">
-                <div class="w-10 rounded-full">
-                  <img alt={product.quote.name} src={product.quote.img} />
-                </div>
-              </div>
-            </div>
-          {/if}
-        </div>
-      </div>
+      </a>
     {:else}
       <div
         class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20 py-32"

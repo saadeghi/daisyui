@@ -22,13 +22,10 @@ export async function load({ params }) {
     const additionalInfoMap = new Map(productCustomAttributes.map((item) => [item.id, item]))
     sortedData = productCustomAttributes
       .map(({ id }) => {
-        // Find the item in the original data by ID
         const originalItem = originalData.data.find((item) => Number.parseInt(item.id) === id)
-
-        // If found, merge the original item with the additional info
         return originalItem ? { ...originalItem, ...additionalInfoMap.get(id) } : null
       })
-      .filter((item) => item !== null) // Filter out null values
+      .filter((item) => item !== null)
   }
   return {
     tech,
