@@ -70,7 +70,7 @@ export function htmlToJsx(node) {
     // Replace parts base of patterns and replacements in stringsToReplaceRegex
     Object.keys(stringsToReplaceRegex)
       .forEach(regexPattern =>
-        originalContent = originalContent.replace(new RegExp(regexPattern), stringsToReplaceRegex[regexPattern])
+        originalContent = originalContent.replace(new RegExp(regexPattern, "gi"), stringsToReplaceRegex[regexPattern])
       )
     
     node.innerHTML = originalContent
