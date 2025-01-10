@@ -25,7 +25,6 @@ export function htmlToJsx(node) {
 
   const stringsToReplace = {
     onclick: "onClick",
-    '"0"': "{0}",
     "&lt;!--": "{/*",
     "--&gt;": "*/}",
     '<span class="token attr-name">class</span>': '<span class="token attr-name">className</span>',
@@ -48,6 +47,13 @@ export function htmlToJsx(node) {
     "stroke-opacity": "strokeOpacity",
     "stroke-width": "strokeWidth",
   }
+
+  // Couples of RegExp patterns and replacements
+  const stringsToReplaceRegex = {
+    // pattern(string) : replacement(string)
+    '"(\\d+)"' : '\{$1\}',
+  }
+  
   const re = new RegExp(
     Object.keys(stringsToReplace)
       .map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
@@ -56,10 +62,18 @@ export function htmlToJsx(node) {
   )
 
   function update() {
-    node.innerHTML = originalContent.replace(
+    originalContent = originalContent.replace(
       re,
       (matched) => stringsToReplace[matched.toLowerCase()]
     )
+
+    // Replace parts base of patterns and replacements in stringsToReplaceRegex
+    Object.keys(stringsToReplaceRegex)
+      .forEach(regexPattern =>
+        originalContent = originalContent.replace(new RegExp(regexPattern), stringsToReplaceRegex[regexPattern])
+      )
+    
+    node.innerHTML = originalContent
   }
 
   update()
