@@ -7,7 +7,7 @@ classnames:
   - class: list
     desc: A vertical flex layout to include list rows
   - class: list-row
-    desc: The itme inside list. A horizontal grid layout to include data
+    desc: The item inside list. A horizontal grid layout to include data
   modifier:
   - class: list-col-wrap
     desc: For one of direct children of list-row to push it to the next line
