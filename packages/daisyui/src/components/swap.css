@@ -19,8 +19,7 @@
     @apply opacity-0;
   }
 
-  input:checked,
-  input:indeterminate {
+  input:is(:checked, :indeterminate) {
     & ~ .swap-off {
       @apply opacity-0;
     }
@@ -49,25 +48,14 @@
     @apply rotate-45;
   }
 
-  input:checked,
-  input:indeterminate {
-    & ~ .swap-on {
-      @apply rotate-0;
-    }
-
-    & ~ .swap-off {
-      @apply -rotate-45;
-    }
+  input:is(:checked, :indeterminate) ~ .swap-on,
+  &.swap-active .swap-on {
+    @apply rotate-0;
   }
 
-  &:where(.swap-active) {
-    & ~ .swap-on {
-      @apply rotate-0;
-    }
-
-    .swap-off {
-      @apply -rotate-45;
-    }
+  input:is(:checked, :indeterminate) ~ .swap-off,
+  &.swap-active .swap-off {
+    @apply -rotate-45;
   }
 }
 
@@ -83,28 +71,15 @@
     @apply opacity-100;
   }
 
-  input:checked,
-  input:indeterminate {
-    & ~ .swap-on {
-      transform: rotateY(0deg);
-    }
-
-    & ~ .swap-off {
-      transform: rotateY(-180deg);
-      backface-visibility: hidden;
-      @apply opacity-100;
-    }
+  input:is(:checked, :indeterminate) ~ .swap-on,
+  &.swap-active .swap-on {
+    transform: rotateY(0deg);
   }
 
-  &:where(.swap-active) {
-    & ~ .swap-on {
-      transform: rotateY(0deg);
-    }
-
-    & ~ .swap-off {
-      transform: rotateY(-180deg);
-      backface-visibility: hidden;
-      @apply opacity-100;
-    }
+  input:is(:checked, :indeterminate) ~ .swap-off,
+  &.swap-active .swap-off {
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    @apply opacity-100;
   }
 }
