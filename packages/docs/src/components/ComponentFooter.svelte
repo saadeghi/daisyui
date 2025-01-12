@@ -28,10 +28,9 @@
   )
 </script>
 
-{#if arrayOfPagesInOrder[currentPageIndex]}
-  <div class="not-prose pb-10">
-    <div class="bg-base-content/10 mx-1 my-10 h-px"></div>
-
+<div class="not-prose pb-10">
+  <div class="bg-base-content/10 mx-1 my-10 h-px"></div>
+  {#if arrayOfPagesInOrder[currentPageIndex]}
     <div class="flex justify-between">
       <div>
         {#if currentPageIndex > 0 && arrayOfPagesInOrder[currentPageIndex - 1]}
@@ -86,58 +85,59 @@
         {/if}
       </div>
     </div>
-
     <div class="bg-base-content/10 mx-1 my-10 h-px"></div>
+  {/if}
 
-    <div class="flex flex-col justify-between gap-2 px-4 text-xs md:flex-row">
-      <div class="flex flex-col gap-2">
-        <div class="flex items-center gap-2">
-          <svg
-            class="inline-block size-4 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            ><g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt"
-              ><circle
-                cx="12"
-                cy="12"
-                r="10"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-miterlimit="10"
-                stroke-width="2"
-              ></circle><circle cx="12" cy="17.25" r="1.25" fill="currentColor" stroke-width="2"
-              ></circle><path
-                d="m9.244,8.369c.422-1.608,1.733-2.44,3.201-2.364,1.45.075,2.799.872,2.737,2.722-.089,2.63-2.884,2.273-3.197,4.773h.011"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-miterlimit="10"
-                stroke-width="2"
-              ></path></g
-            ></svg
+  <div class="flex flex-col justify-between gap-2 px-4 text-xs md:flex-row">
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center gap-2">
+        <svg
+          class="inline-block size-4 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          ><g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt"
+            ><circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-miterlimit="10"
+              stroke-width="2"
+            ></circle><circle cx="12" cy="17.25" r="1.25" fill="currentColor" stroke-width="2"
+            ></circle><path
+              d="m9.244,8.369c.422-1.608,1.733-2.44,3.201-2.364,1.45.075,2.799.872,2.737,2.722-.089,2.63-2.884,2.273-3.197,4.773h.011"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-miterlimit="10"
+              stroke-width="2"
+            ></path></g
+          ></svg
+        >
+        <div>
+          {$t("Do you have a question?")}
+          <a
+            target="_blank"
+            rel="noopener, noreferrer"
+            class="link"
+            href="https://github.com/saadeghi/daisyui/discussions"
           >
-          <div>
-            {$t("Do you have a question?")}
-            <a
-              target="_blank"
-              rel="noopener, noreferrer"
-              class="link"
-              href="https://github.com/saadeghi/daisyui/discussions"
-            >
-              Ask on GitHub
-            </a>
-            or
-            <a
-              target="_blank"
-              rel="noopener, noreferrer"
-              class="link"
-              href="https://daisyui.com/discord/"
-            >
-              Discord server
-            </a>
-          </div>
+            Ask on GitHub
+          </a>
+          or
+          <a
+            target="_blank"
+            rel="noopener, noreferrer"
+            class="link"
+            href="https://daisyui.com/discord/"
+          >
+            Discord server
+          </a>
         </div>
+      </div>
+      {#if arrayOfPagesInOrder[currentPageIndex]}
         <div class="flex items-center gap-2">
           <svg
             class="inline-block size-4 fill-current"
@@ -169,145 +169,145 @@
             </a>
           </div>
         </div>
-        <div class="flex items-center gap-2">
-          <svg viewBox="0 0 300 271" height="12" width="16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="currentColor"
-              d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"
-            />
-          </svg>
-          <div>
-            {$t("Do you like daisyUI?")}
-            <a
-              target="_blank"
-              rel="noopener, noreferrer"
-              class="link"
-              href={`https://x.com/intent/post?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://daisyui.com`}
-            >
-              Post about it!
-            </a>
-          </div>
-        </div>
-        <div class="flex items-center gap-2">
-          <svg class="inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            ><g
-              stroke-linejoin="round"
-              stroke-linecap="round"
-              stroke-width="2"
-              fill="none"
-              stroke="currentColor"
-              ><path
-                d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
-              ></path></g
-            ></svg
+      {/if}
+      <div class="flex items-center gap-2">
+        <svg viewBox="0 0 300 271" height="12" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="currentColor"
+            d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"
+          />
+        </svg>
+        <div>
+          {$t("Do you like daisyUI?")}
+          <a
+            target="_blank"
+            rel="noopener, noreferrer"
+            class="link"
+            href={`https://x.com/intent/post?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://daisyui.com`}
           >
-          <div>
-            {$t("Support daisyUI's development")}:
-            <a
-              target="_blank"
-              rel="noopener, noreferrer"
-              class="link"
-              href={`https://opencollective.com/daisyui`}
-            >
-              {$t("Open Collective")}
-            </a>
-          </div>
+            Post about it!
+          </a>
         </div>
       </div>
-      <div class="flex flex-col gap-2">
-        <div class="flex items-center gap-2">
-          <svg
-            class="inline-block size-4 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            ><g
-              stroke-linejoin="round"
-              stroke-linecap="round"
-              stroke-width="2"
-              fill="none"
-              stroke="currentColor"
-              ><path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path><path
-                d="M13.5 6.5l4 4"
-              ></path></g
-            ></svg
+      <div class="flex items-center gap-2">
+        <svg class="inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          ><g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2"
+            fill="none"
+            stroke="currentColor"
+            ><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+            ></path></g
+          ></svg
+        >
+        <div>
+          {$t("Support daisyUI's development")}:
+          <a
+            target="_blank"
+            rel="noopener, noreferrer"
+            class="link"
+            href={`https://opencollective.com/daisyui`}
           >
-          <div>
-            <a
-              target="_blank"
-              rel="noopener, noreferrer"
-              class="link"
-              href={`https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
-                /\/$/,
-                "",
-              )}/+page.md?plain=1`}
-            >
-              {$t("Edit this page on GitHub")}
-            </a>
-          </div>
+            {$t("Open Collective")}
+          </a>
         </div>
-        <div class="flex items-center gap-2">
-          <svg
-            class="inline-block size-4 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            ><g
-              stroke-linejoin="round"
-              stroke-linecap="round"
-              stroke-width="2"
-              fill="none"
-              stroke="currentColor"
-              ><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M14 3v4a1 1 0 0 0 1 1h4"
-              ></path><path d="M16.5 15h3"></path><path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"
-              ></path><path d="M4.5 15h3"></path><path d="M6 15v6"></path><path d="M18 15v6"
-              ></path><path d="M10 15l4 6"></path><path d="M10 21l4 -6"></path></g
-            ></svg
-          >
-          <div>
-            <a
-              target="_blank"
-              rel="noopener, noreferrer"
-              class="link"
-              href={`https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/v5/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
-                /\/$/,
-                "",
-              )}/+page.md?plain=1`}
-            >
-              Text version for AI prompts
-            </a>
-          </div>
-        </div>
-        {#if $currentLang != defaultLang}
-          <div class="flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="inline-block size-4 fill-current"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-1.5 0a6.5 6.5 0 11-11-4.69v.447a3.5 3.5 0 001.025 2.475L8.293 10 8 10.293a1 1 0 000 1.414l1.06 1.06a1.5 1.5 0 01.44 1.061v.363a1 1 0 00.553.894l.276.139a1 1 0 001.342-.448l1.454-2.908a1.5 1.5 0 00-.281-1.731l-.772-.772a1 1 0 00-1.023-.242l-.384.128a.5.5 0 01-.606-.25l-.296-.592a.481.481 0 01.646-.646l.262.131a1 1 0 00.447.106h.188a1 1 0 00.949-1.316l-.068-.204a.5.5 0 01.149-.538l1.44-1.234A6.492 6.492 0 0116.5 10z"
-                clip-rule="evenodd"
-              >
-              </path>
-            </svg>
-
-            <div>
-              <a
-                target="_blank"
-                rel="noopener, noreferrer"
-                class="link"
-                href={`https://github.com/saadeghi/daisyui/blob/v5/packages/docs/src/translation/${$currentLang}.json`}
-              >
-                {$t("Contribute to translation")}
-              </a>
-            </div>
-          </div>
-        {/if}
       </div>
     </div>
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center gap-2">
+        <svg
+          class="inline-block size-4 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          ><g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2"
+            fill="none"
+            stroke="currentColor"
+            ><path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"></path><path
+              d="M13.5 6.5l4 4"
+            ></path></g
+          ></svg
+        >
+        <div>
+          <a
+            target="_blank"
+            rel="noopener, noreferrer"
+            class="link"
+            href={`https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
+              /\/$/,
+              "",
+            )}/+page.md?plain=1`}
+          >
+            {$t("Edit this page on GitHub")}
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg
+          class="inline-block size-4 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          ><g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2"
+            fill="none"
+            stroke="currentColor"
+            ><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path
+              d="M16.5 15h3"
+            ></path><path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path><path d="M4.5 15h3"
+            ></path><path d="M6 15v6"></path><path d="M18 15v6"></path><path d="M10 15l4 6"
+            ></path><path d="M10 21l4 -6"></path></g
+          ></svg
+        >
+        <div>
+          <a
+            target="_blank"
+            rel="noopener, noreferrer"
+            class="link"
+            href={`https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/v5/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
+              /\/$/,
+              "",
+            )}/+page.md?plain=1`}
+          >
+            Text version for AI prompts
+          </a>
+        </div>
+      </div>
+      {#if $currentLang != defaultLang}
+        <div class="flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="inline-block size-4 fill-current"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-1.5 0a6.5 6.5 0 11-11-4.69v.447a3.5 3.5 0 001.025 2.475L8.293 10 8 10.293a1 1 0 000 1.414l1.06 1.06a1.5 1.5 0 01.44 1.061v.363a1 1 0 00.553.894l.276.139a1 1 0 001.342-.448l1.454-2.908a1.5 1.5 0 00-.281-1.731l-.772-.772a1 1 0 00-1.023-.242l-.384.128a.5.5 0 01-.606-.25l-.296-.592a.481.481 0 01.646-.646l.262.131a1 1 0 00.447.106h.188a1 1 0 00.949-1.316l-.068-.204a.5.5 0 01.149-.538l1.44-1.234A6.492 6.492 0 0116.5 10z"
+              clip-rule="evenodd"
+            >
+            </path>
+          </svg>
+
+          <div>
+            <a
+              target="_blank"
+              rel="noopener, noreferrer"
+              class="link"
+              href={`https://github.com/saadeghi/daisyui/blob/v5/packages/docs/src/translation/${$currentLang}.json`}
+            >
+              {$t("Contribute to translation")}
+            </a>
+          </div>
+        </div>
+      {/if}
+    </div>
   </div>
-{/if}
+</div>
 
 <!-- <div
   class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-linear-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse">
