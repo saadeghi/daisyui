@@ -1,4 +1,5 @@
 import { error } from "@sveltejs/kit"
+import { faq } from "$lib/data/store.js"
 
 export async function load({ params, parent }) {
   const parentData = await parent()
@@ -9,9 +10,9 @@ export async function load({ params, parent }) {
     throw error(404, "Product not found")
   }
 
-  // Also pass tech data for the tech badges
   return {
     product,
-    tech: parentData.tech, // Add this line to pass tech data
+    tech: parentData.tech,
+    faq,
   }
 }

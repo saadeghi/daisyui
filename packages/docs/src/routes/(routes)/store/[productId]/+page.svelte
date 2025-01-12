@@ -31,53 +31,6 @@
     }
     return `${url}${params ? `?${params}` : ""}`
   }
-
-  const faq = [
-    {
-      Q: "How can I get the file",
-      A: "Click the 'Buy now' button, fill the payment form, and you will receive an email with the download link.",
-    },
-    {
-      Q: "What happens after I buy",
-      A: "You will receive an email with the download link. If you don't see the email, check your spam folder.",
-    },
-    {
-      Q: "Will I receive updates?",
-      A: "All packages will receive bug fixes as long as they are available. You can download the latest version from the link you received in the email, or from https://app.lemonsqueezy.com/my-orders",
-    },
-    {
-      Q: "Do I get customer support",
-      A: "We offer support via Discord. You can join the server https://daisyui.com/discord and ask your questions there. We will do our best to help you.",
-    },
-    {
-      Q: "I didn't receive the email",
-      A: "Please check your spam folder. If you still can't find it, send an email to help@daisyui.com so I can help you.",
-    },
-    {
-      Q: "I bought the wrong package",
-      A: "Send me an email at help@daisyui.com and I will help you get the right package.",
-    },
-    {
-      Q: "I paid twice for the same product",
-      A: "If you paid twice for the same product, send an email to help@daisyui.com and I will refund the extra payment.",
-    },
-    {
-      Q: "There was an issue with the payment",
-      A: "If the payment failed and you didn't receive the product, it usually means the payment didn't go through. Please try again. If the money was deducted from your account, it will be refunded automatically within a week or two. If the issue persists, send an email to help@daisyui.com so I can help you.",
-    },
-    {
-      Q: "Can I get a refund",
-      A: "If there was an issue with the product, send an email to help@daisyui.com so I can help you. I will do my best to resolve the issue. We don't offer refunds for digital products, however if there was a mistake in payment, for example if you paid twice for the same product, send an email to help@daisyui.com and I will refund the extra payment.",
-    },
-    {
-      Q: "What's the license",
-      A: "Each product has its own license. The link to the license is available on this page and also in the package you receive. If you have any questions about the license, send an email to help@daisyui.com",
-    },
-    {
-      Q: "I have other questions",
-      A: "Send an email to help@daisyui.com and I will do my best to help you.",
-    },
-  ]
 </script>
 
 <SEO title={`${product.attributes.name} - daisyUI Store`} desc={product.attributes.description} />
@@ -213,7 +166,7 @@
           </div>
         {/if}
         <div
-          class="border border-base-300 grid rounded-box my-6 divide-x text-[0.6875rem] divide-base-300 overflow-hidden"
+          class="border border-base-300 grid rounded-box my-6 divide-x text-xs divide-base-300 overflow-hidden"
           style={`grid-template-columns: repeat(${Object.keys(product.links).length}, minmax(0, 1fr));`}
         >
           {#each Object.entries(product.links) as [link, value]}
@@ -222,10 +175,13 @@
               aria-label={link}
               href={value}
               rel="noopener noreferrer"
-              class="opacity-60 hover:opacity-100 flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200"
+              class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100"
             >
               {#if link === "license"}
-                <svg class="inline-block w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                <svg
+                  class="inline-block size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
                   ><g
                     stroke-linejoin="round"
                     stroke-linecap="round"
@@ -241,7 +197,7 @@
               {/if}
               {#if link === "screenshot"}
                 <svg
-                  class="inline-block w-4"
+                  class="inline-block size-4"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -258,7 +214,7 @@
               {/if}
               {#if link === "preview"}
                 <svg
-                  class="inline-block w-4"
+                  class="inline-block size-4"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -280,7 +236,7 @@
                   >
                 </svg>
               {/if}
-              {link}
+              <span>{link}</span>
             </a>
           {/each}
         </div>
@@ -412,13 +368,14 @@
     {/each}
   </div>
   <div class="my-40 max-w-2xl mx-auto">
-    <h2 class="px-4 py-10 font-semibold font-title text-3xl">daisyUI Store FAQ</h2>
+    <h2 class="px-4 py-10 font-semibold font-title text-4xl">FAQ</h2>
 
-    {#each faq as item}
+    <!-- product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
+    {#each [...(product.faq ?? []), ...data.faq] as item}
       <div class="collapse collapse-plus bg-base-100 border border-base-300 mb-4">
         <input type="radio" name="faq" checked="checked" />
-        <div class="collapse-title font-semibold">{item.Q}</div>
-        <div class="collapse-content text-xs">
+        <div class="collapse-title font-semibold text-lg">{item.Q}</div>
+        <div class="collapse-content text-sm">
           {item.A}
         </div>
       </div>

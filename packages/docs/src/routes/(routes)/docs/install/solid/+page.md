@@ -1,0 +1,45 @@
+---
+title: Install daisyUI for Solid
+desc: How to install Tailwind CSS and daisyUI in a Solid project
+---
+
+### 1. Create a new Solid project
+
+Create a new Solid project in the current directory
+
+```:Terminal
+npx degit solidjs/templates/js
+```
+
+### 2. Install Tailwind CSS and daisyUI
+
+```:Terminal
+npm install tailwindcss@next @tailwindcss/vite@next daisyui@beta
+```
+
+Add Tailwind CSS to Vite config
+
+```js:vite.config.js
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import solidPlugin from "vite-plugin-solid";
+
+export default defineConfig({
+  plugins: [tailwindcss(), solidPlugin()],
+  server: {
+    port: 3000,
+  },
+  build: {
+    target: "esnext",
+  },
+});
+```
+
+Put Tailwind and daisyUI to your CSS file
+  
+```postcss:src/index.css
+@import "tailwindcss";
+@plugin "daisyui";
+```
+
+Now you can use daisyUI class names!

@@ -5,6 +5,10 @@ desc: How to install Tailwind CSS and daisyUI in PostCSS
 
 ### 1. Install
 
+Initialize a new Node project in the current directory using `npm init -y` if it's noe a Node project already.
+
+Install PostCSS, Tailwind CSS, and daisyUI
+
 ```:Terminal
 npm i postcss postcss-cli tailwindcss@next @tailwindcss/postcss@next daisyui@beta
 ```

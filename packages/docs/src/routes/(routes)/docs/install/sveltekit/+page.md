@@ -5,8 +5,10 @@ desc: How to install Tailwind CSS and daisyUI in a SvelteKit project
 
 ### 1. Create a new SvelteKit project
 
+Create a new SvelteKit project in the current directory
+
 ```:Terminal
-npx sv create
+npx sv create ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI

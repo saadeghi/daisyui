@@ -5,6 +5,8 @@ desc: How to install Tailwind CSS and daisyUI in a Nuxt project
 
 ### 1. Create a new Nuxt project
 
+Create a new Nuxt project in the current directory
+
 ```:Terminal
 npx nuxi@latest init
 ```

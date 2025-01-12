@@ -5,8 +5,10 @@ desc: How to install Tailwind CSS and daisyUI in a Astro project
 
 ### 1. Create a new Astro project
 
+Create a new Astro project in the current directory
+
 ```:Terminal
-npm create astro@latest
+npm create astro@latest ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI

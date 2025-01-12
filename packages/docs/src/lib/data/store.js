@@ -1,6 +1,12 @@
 export const productCustomAttributes = [
   {
     id: 426780,
+    faq: [
+      {
+        Q: "Can I use this template without Lemon Squeezy?",
+        A: "If the Lemon Squeezy API key is not provided, the data will come from the local JSON file. So you can use the template without Lemon Squeezy, using a static JSON file, and for checkout and payment you can use your own solution.",
+      },
+    ],
     media: [
       {
         type: "image",
@@ -59,11 +65,11 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/nexus/nexus-04.webp",
       },
     ],
-    quote: {
-      img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
-      name: "Pouya",
-      text: [["HTML version is now available!"]],
-    },
+    // quote: {
+    //   img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
+    //   name: "Pouya",
+    //   text: [["HTML version is now available!"]],
+    // },
     tech: ["html", "react", "nextjs"],
     links: {
       license: "https://api.daisyui.com/license/nexus@1.txt",
@@ -465,4 +471,55 @@ export const futureProducts = [
   "Nexus Dashboard v2.0 update + Svelte version",
   "Official daisyUI Figma Library v2.0 update",
   "Headless UI + daisyUI component pack for Vue",
+]
+
+export const faq = [
+  {
+    Q: "How can I get the file",
+    A: "Click the 'Buy now' button, fill the payment form, and you will receive an email with the download link.",
+  },
+  {
+    Q: "Is this one time payment?",
+    A: "Yes, you pay once and you can use the product forever. No subscription, no monthly fees, no hidden costs.",
+  },
+  {
+    Q: "What happens after I buy",
+    A: "You will receive an email with the download link. If you don't see the email, check your spam folder.",
+  },
+  {
+    Q: "Will I receive updates?",
+    A: "All packages will receive bug fixes as long as they are available on the store. We will also add new versions and dependency updates if needed. You can download the latest version from the link you received in the email, or from https://app.lemonsqueezy.com/my-orders",
+  },
+  {
+    Q: "Do I get customer support",
+    A: "We offer support via Discord. You can join the server https://daisyui.com/discord and ask your questions there. We will do our best to help you.",
+  },
+  {
+    Q: "I didn't receive the email",
+    A: "Please check your spam folder. If you still can't find it, send an email to help@daisyui.com so I can help you.",
+  },
+  {
+    Q: "I bought the wrong package",
+    A: "Send me an email at help@daisyui.com and I will help you get the right package.",
+  },
+  {
+    Q: "I paid twice for the same product",
+    A: "If you paid twice for the same product, send an email to help@daisyui.com and I will refund the extra payment.",
+  },
+  {
+    Q: "There was an issue with the payment",
+    A: "If the payment failed and you didn't receive the product, it usually means the payment didn't go through. Please try again. If the money was deducted from your account, it will be refunded automatically within a week or two. If the issue persists, send an email to help@daisyui.com so I can help you.",
+  },
+  {
+    Q: "Can I get a refund",
+    A: "If there was an issue with the product, send an email to help@daisyui.com so I can help you. I will do my best to resolve the issue. We don't offer refunds for digital products, however if there was a mistake in payment, for example if you paid twice for the same product, send an email to help@daisyui.com and I will refund the extra payment.",
+  },
+  {
+    Q: "What's the license",
+    A: "Each product has its own license. The link to the license is available on this page and also in the package you receive. If you have any questions about the license, send an email to help@daisyui.com",
+  },
+  {
+    Q: "I have other questions",
+    A: "Send an email to help@daisyui.com and I will do my best to help you.",
+  },
 ]

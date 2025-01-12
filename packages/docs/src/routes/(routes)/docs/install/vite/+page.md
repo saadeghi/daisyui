@@ -5,8 +5,10 @@ desc: How to install Tailwind CSS and daisyUI in a Vite project
 
 ### 1. Create a new Vite project
 
+Create a new Vite project in the current directory
+
 ```:Terminal
-npm create vite@latest
+npm create vite@latest ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI

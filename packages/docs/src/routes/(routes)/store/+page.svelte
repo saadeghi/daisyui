@@ -49,11 +49,7 @@
     const formatted = (number / 100).toFixed(2)
     return `$${formatted.endsWith(".00") ? formatted.slice(0, -3) : formatted}`
   }
-  function extractUUID(url) {
-    const regex = /\/buy\/([a-f0-9-]{36})(?:\?|$)/
-    const match = url.match(regex)
-    return match ? match[1] : null
-  }
+
   const dateFormat = {
     year: "numeric",
     month: "numeric",
@@ -108,26 +104,6 @@
         return 0
       }),
   )
-
-  let rednerBuyNowUrl = (url, ref, params) => {
-    if (ref) {
-      return `/store/checkout?product=${extractUUID(url)}&aff=${ref}${params ? `&${params}` : ""}`
-    }
-    return `${url}${params ? `?${params}` : ""}`
-  }
-
-  let sliders = $state(
-    Object.fromEntries(data.products.map((product) => [product.id, { currentIndex: 0 }])),
-  )
-
-  function next(productId, media) {
-    sliders[productId].currentIndex = (sliders[productId].currentIndex + 1) % media.length
-  }
-
-  function prev(productId, media) {
-    sliders[productId].currentIndex =
-      (sliders[productId].currentIndex - 1 + media.length) % media.length
-  }
 </script>
 
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
