@@ -31,7 +31,7 @@ const config = {
 export default config;
 ```
 
-Put Tailwind and daisyUI to your CSS file
+Put Tailwind and daisyUI to your CSS file (and remove old styles)
   
 ```postcss:app/globals.css
 @import "tailwindcss";

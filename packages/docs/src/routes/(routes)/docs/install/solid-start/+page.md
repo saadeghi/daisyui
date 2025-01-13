@@ -1,14 +1,14 @@
 ---
-title: Install daisyUI for Nuxt
-desc: How to install Tailwind CSS and daisyUI in a Nuxt project
+title: Install daisyUI for Solid Start
+desc: How to install Tailwind CSS and daisyUI in a Solid Start project
 ---
 
-### 1. Create a new Nuxt project
+### 1. Create a new Solid Start project
 
-Create a new Nuxt project in the current directory
+Create a new Solid Start project in the current directory
 
 ```:Terminal
-npx nuxi@latest init
+npm init solid@latest ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
@@ -19,19 +19,19 @@ npm install tailwindcss@next @tailwindcss/vite@next daisyui@beta
 
 Add Tailwind CSS to Vite config
 
-```js:nuxt.config.ts
+```js:app.config.ts
+import { defineConfig } from "@solidjs/start/config";
 import tailwindcss from "@tailwindcss/vite";
-export default defineNuxtConfig({
+export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  css: ["~/assets/app.css"],
 });
 ```
 
 Put Tailwind and daisyUI to your CSS file (and remove old styles)
   
-```postcss:assets/app.css
+```postcss:src/app.css
 @import "tailwindcss";
 @plugin "daisyui";
 ```

@@ -1,14 +1,14 @@
 ---
-title: Install daisyUI for Qwik
-desc: How to install Tailwind CSS and daisyUI in a Qwik project
+title: Install daisyUI for React
+desc: How to install Tailwind CSS and daisyUI in a React project
 ---
 
-### 1. Create a new Qwik project
+### 1. Create a new React project
 
-Create a new Qwik project in the current directory
+Create a new Vite React project in the current directory
 
 ```:Terminal
-npm create qwik@latest empty ./
+npm create vite@latest ./ -- --template react
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
@@ -20,19 +20,18 @@ npm install tailwindcss@next @tailwindcss/vite@next daisyui@beta
 Add Tailwind CSS to Vite config
 
 ```js:vite.config.js
+import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
-//...
-export default defineConfig(({ command, mode }): UserConfig => {
-  return {
-    plugins: [tailwindcss(), qwikCity(), qwikVite(), tsconfigPaths()],
-    // ...
-  };
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [tailwindcss(), react()],
 });
 ```
 
 Put Tailwind and daisyUI to your CSS file (and remove old styles)
   
-```postcss:src/index.css
+```postcss:src/App.css
 @import "tailwindcss";
 @plugin "daisyui";
 ```
