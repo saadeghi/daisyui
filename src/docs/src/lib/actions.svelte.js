@@ -62,7 +62,8 @@ export function htmlToJsx(node) {
   )
 
   function update() {
-    originalContent = originalContent.replace(
+    let JSXContent = originalContent
+    JSXContent = JSXContent.replace(
       re,
       (matched) => stringsToReplace[matched.toLowerCase()]
     )
@@ -70,10 +71,10 @@ export function htmlToJsx(node) {
     // Replace parts base of patterns and replacements in stringsToReplaceRegex
     Object.keys(stringsToReplaceRegex)
       .forEach(regexPattern =>
-        originalContent = originalContent.replace(new RegExp(regexPattern, "gi"), stringsToReplaceRegex[regexPattern])
+        JSXContent = JSXContent.replace(new RegExp(regexPattern, "gi"), stringsToReplaceRegex[regexPattern])
       )
     
-    node.innerHTML = originalContent
+    node.innerHTML = JSXContent
   }
 
   update()
