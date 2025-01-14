@@ -145,7 +145,7 @@ classnames:
           <input type="email" class="$$input" placeholder="Email" />
           <label class="$$fieldset-label">Password</label>
           <input type="password" class="$$input" placeholder="Password" />
-          <div><a class="$$link $$link-hover">Forgot password?</a></div
+          <div><a class="$$link $$link-hover">Forgot password?</a></div>
           <button class="$$btn $$btn-neutral mt-4">Login</button>
         </fieldset>
       </div>
