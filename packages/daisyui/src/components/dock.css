@@ -72,8 +72,8 @@
 }
 
 .dock-lg {
-  height: 4.5;
-  height: calc(4.5 + env(safe-area-inset-bottom));
+  height: 4.5rem;
+  height: calc(4.5rem + env(safe-area-inset-bottom));
 
   .dock-active {
     &:after {
