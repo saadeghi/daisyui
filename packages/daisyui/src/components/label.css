@@ -28,7 +28,7 @@
     }
   }
   > span {
-    @apply bg-base-100 absolute start-3 top-1/2 z-1 px-1 opacity-50;
+    @apply bg-base-100 absolute start-3 top-1/2 z-1 px-1 opacity-40;
     line-height: 1;
     border-radius: 2px;
     pointer-events: none;
@@ -47,6 +47,11 @@
       translate: -12.5% calc(-50% - 0.125em);
       scale: 0.75;
       pointer-events: auto;
+    }
+  }
+  &:has(:disabled, [disabled]) {
+    > span {
+      @apply opacity-0;
     }
   }
   &:has(.input-xs) span {
