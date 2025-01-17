@@ -103,28 +103,28 @@ Example of theming a div with hardcoded color values
 <div class="overflow-x-auto">
 <div class="whitespace-nowrap">
 
-|                                                  | Color name        | CSS variable              | Where to use                                                       |
-|--------------------------------------------------|-------------------|---------------------------|--------------------------------------------------------------------|
-| <span class="badge bg-primary"></span>           | primary           | --color-primary           | Primary brand color, The main color of your brand                  |
-| <span class="badge bg-primary-content"></span>   | primary-content   | --color-primary-content   | Foreground content color to use on `primary` color <br/><br/>      |
-| <span class="badge bg-secondary"></span>         | secondary         | --color-secondary         | Secondary brand color, The optional, secondary color of your brand |
-| <span class="badge bg-secondary-content"></span> | secondary-content | --color-secondary-content | Foreground content color to use on `secondary` color <br/><br/>    |
-| <span class="badge bg-accent"></span>            | accent            | --color-accent            | Accent brand color, The optional, accent color of your brand       |
-| <span class="badge bg-accent-content"></span>    | accent-content    | --color-accent-content    | Foreground content color to use on `accent` color <br/><br/>       |
-| <span class="badge bg-neutral"></span>           | neutral           | --color-neutral           | Neutral dark color, For not-saturated parts of UI                  |
-| <span class="badge bg-neutral-content"></span>   | neutral-content   | --color-neutral-content   | Foreground content color to use on neutral color <br/><br/>        |
-| <span class="badge bg-base-100"></span>          | base-100          | --color-base-100          | Base surface color of page, used for blank backgrounds             |
-| <span class="badge bg-base-200"></span>          | base-200          | --color-base-200          | Base color, darker shade, to create elevations                     |
-| <span class="badge bg-base-300"></span>          | base-300          | --color-base-300          | Base color, even more darker shade, to create elevations           |
-| <span class="badge bg-base-content"></span>      | base-content      | --color-base-content      | Foreground content color to use on `base` color <br/><br/>         |
-| <span class="badge bg-info"></span>              | info              | --color-info              | Info color, For informative/helpful messages                       |
-| <span class="badge bg-info-content"></span>      | info-content      | --color-info-content      | Foreground content color to use on `info` color                    |
-| <span class="badge bg-success"></span>           | success           | --color-success           | Success color, For success/safe messages                           |
-| <span class="badge bg-success-content"></span>   | success-content   | --color-success-content   | Foreground content color to use on `success` color                 |
-| <span class="badge bg-warning"></span>           | warning           | --color-warning           | Warning color, For warning/caution messages                        |
-| <span class="badge bg-warning-content"></span>   | warning-content   | --color-warning-content   | Foreground content color to use on `warning` color                 |
-| <span class="badge bg-error"></span>             | error             | --color-error             | Error color, For error/danger/destructive messages                 |
-| <span class="badge bg-error-content"></span>     | error-content     | --color-error-content     | Foreground content color to use on `error` color                   |
+|                                                  | Color name        | CSS variable                | Where to use                                                       |
+|--------------------------------------------------|-------------------|-----------------------------|--------------------------------------------------------------------|
+| <span class="badge bg-primary"></span>           | primary           | `--color-primary`           | Primary brand color, The main color of your brand                  |
+| <span class="badge bg-primary-content"></span>   | primary-content   | `--color-primary-content`   | Foreground content color to use on `primary` color <br/><br/>      |
+| <span class="badge bg-secondary"></span>         | secondary         | `--color-secondary`         | Secondary brand color, The optional, secondary color of your brand |
+| <span class="badge bg-secondary-content"></span> | secondary-content | `--color-secondary-content` | Foreground content color to use on `secondary` color <br/><br/>    |
+| <span class="badge bg-accent"></span>            | accent            | `--color-accent`            | Accent brand color, The optional, accent color of your brand       |
+| <span class="badge bg-accent-content"></span>    | accent-content    | `--color-accent-content`    | Foreground content color to use on `accent` color <br/><br/>       |
+| <span class="badge bg-neutral"></span>           | neutral           | `--color-neutral`           | Neutral dark color, For not-saturated parts of UI                  |
+| <span class="badge bg-neutral-content"></span>   | neutral-content   | `--color-neutral-content`   | Foreground content color to use on neutral color <br/><br/>        |
+| <span class="badge bg-base-100"></span>          | base-100          | `--color-base-100`          | Base surface color of page, used for blank backgrounds             |
+| <span class="badge bg-base-200"></span>          | base-200          | `--color-base-200`          | Base color, darker shade, to create elevations                     |
+| <span class="badge bg-base-300"></span>          | base-300          | `--color-base-300`          | Base color, even more darker shade, to create elevations           |
+| <span class="badge bg-base-content"></span>      | base-content      | `--color-base-content`      | Foreground content color to use on `base` color <br/><br/>         |
+| <span class="badge bg-info"></span>              | info              | `--color-info`              | Info color, For informative/helpful messages                       |
+| <span class="badge bg-info-content"></span>      | info-content      | `--color-info-content`      | Foreground content color to use on `info` color                    |
+| <span class="badge bg-success"></span>           | success           | `--color-success`           | Success color, For success/safe messages                           |
+| <span class="badge bg-success-content"></span>   | success-content   | `--color-success-content`   | Foreground content color to use on `success` color                 |
+| <span class="badge bg-warning"></span>           | warning           | `--color-warning`           | Warning color, For warning/caution messages                        |
+| <span class="badge bg-warning-content"></span>   | warning-content   | `--color-warning-content`   | Foreground content color to use on `warning` color                 |
+| <span class="badge bg-error"></span>             | error             | `--color-error`             | Error color, For error/danger/destructive messages                 |
+| <span class="badge bg-error-content"></span>     | error-content     | `--color-error-content`     | Foreground content color to use on `error` color                   |
 
 </div>
 </div>

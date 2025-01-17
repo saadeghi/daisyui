@@ -455,7 +455,7 @@ Themes and colors are what makes your website unique. We've made significant imp
 
 daisyUI 5 includes 3 new themes:
 
-- `cappuccino` – Warm, cozy, light theme featuring brown and beige
+- `caramellatte` – Warm, cozy, light theme featuring brown and beige
 - `abyss` – Deep dark green, teal and phosphorus color palette
 - `silk` – Bright, clean and bold theme with fluorescent text colors
 
