@@ -1,17 +1,17 @@
 <script>
   import SEO from "$components/SEO.svelte"
+  import StoreProduct from "$components/StoreProduct.svelte"
 
   let { data } = $props()
-  const { product } = data
 
   let currentIndex = $state(0)
 
   function next() {
-    currentIndex = (currentIndex + 1) % product.media.length
+    currentIndex = (currentIndex + 1) % data.product.media.length
   }
 
   function prev() {
-    currentIndex = (currentIndex - 1 + product.media.length) % product.media.length
+    currentIndex = (currentIndex - 1 + data.product.media.length) % data.product.media.length
   }
 
   function convertCurrency(number) {
@@ -31,9 +31,39 @@
     }
     return `${url}${params ? `?${params}` : ""}`
   }
+
+  function hasAllSameTech(product1, product2) {
+    return (
+      product1.tech &&
+      product2.tech &&
+      product1.tech.length === product2.tech.length &&
+      product1.tech.every((tech) => product2.tech.includes(tech))
+    )
+  }
+  function getSimilarProducts(product, allProducts) {
+    // Filter for products with all the same tech
+    const allSameTechProducts = allProducts.filter(
+      (p) => p.id !== product.id && hasAllSameTech(product, p),
+    )
+
+    // Filter for products with at least one overlapping tech
+    const someSameTechProducts = allProducts.filter(
+      (p) => p.id !== product.id && p.tech && p.tech.some((t) => product.tech.includes(t)),
+    )
+
+    // Combine, remove duplicates, and limit to 3
+    const similarProducts = [...allSameTechProducts, ...someSameTechProducts]
+      .filter((product, index, self) => index === self.findIndex((p) => p.id === product.id))
+      .slice(0, 3)
+
+    return similarProducts
+  }
 </script>
 
-<SEO title={`${product.attributes.name} - daisyUI Store`} desc={product.attributes.description} />
+<SEO
+  title={`${data.product.attributes.name} - daisyUI Store`}
+  desc={data.product.attributes.description}
+/>
 
 <div class="mx-4">
   <a
@@ -76,14 +106,14 @@
             class="flex transition-transform duration-300"
             style={`transform: translateX(-${currentIndex * 100}%)`}
           >
-            {#each product.media as media}
+            {#each data.product.media as media}
               <div class="w-full shrink-0">
                 {#if media.type === "video"}
                   <div class="w-full" style={`aspect-ratio: ${media.ratio};`}>
                     <iframe
                       class="w-full h-full"
                       src={media.url}
-                      title={product.attributes.name}
+                      title={data.product.attributes.name}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen
                     ></iframe>
@@ -91,8 +121,9 @@
                 {:else if media.type === "image"}
                   <img
                     src={media.lg}
-                    alt={product.attributes.name}
-                    class="w-full object-cover"
+                    alt={data.product.attributes.name}
+                    class="w-full object-cover text-transparent bg-cover h-full"
+                    style={`background-image:url(${media.sm});`}
                     loading="lazy"
                   />
                 {/if}
@@ -100,7 +131,7 @@
             {/each}
           </div>
 
-          {#if product.media.length > 1}
+          {#if data.product.media.length > 1}
             <div
               class="absolute left-4 top-1/2 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity"
             >
@@ -115,10 +146,10 @@
         </div>
 
         <!-- Thumbnail Navigation -->
-        {#if product.media.length > 1}
+        {#if data.product.media.length > 1}
           <div class="overflow-x-auto -mx-4">
             <div class="flex gap-2 p-4">
-              {#each product.media as media, i}
+              {#each data.product.media as media, i}
                 <button
                   class="h-8 w-11 shrink-0 rounded-sm overflow-hidden outline-2 outline-offset-2 cursor-pointer border border-base-content/15"
                   class:outline-base-content={i === currentIndex}
@@ -128,7 +159,7 @@
                   {#if media.type === "image"}
                     <img
                       src={media.sm}
-                      alt={`${product.attributes.name} thumbnail ${i + 1}`}
+                      alt={`${data.product.attributes.name} thumbnail ${i + 1}`}
                       class="w-full h-full object-cover brightness-90"
                     />
                   {:else}
@@ -137,8 +168,8 @@
                     >
                       <img
                         class="w-full h-full object-cover blur-[2px] brightness-90"
-                        src={product.media.find((media) => media.type === "image").sm}
-                        alt={product.attributes.name}
+                        src={data.product.media.find((media) => media.type === "image").sm}
+                        alt={data.product.attributes.name}
                       />
                       <svg
                         class="size-5 text-black z-1"
@@ -167,9 +198,9 @@
         {/if}
         <div
           class="border border-base-300 grid rounded-box my-6 divide-x text-xs divide-base-300 overflow-hidden"
-          style={`grid-template-columns: repeat(${Object.keys(product.links).length}, minmax(0, 1fr));`}
+          style={`grid-template-columns: repeat(${Object.keys(data.product.links).length}, minmax(0, 1fr));`}
         >
-          {#each Object.entries(product.links) as [link, value]}
+          {#each Object.entries(data.product.links) as [link, value]}
             <a
               target="_blank"
               aria-label={link}
@@ -246,55 +277,59 @@
     <!-- Product Info -->
     <div class="flex flex-col gap-6">
       <div>
-        {#if product.tags}
+        {#if data.product.tags}
           <div class="flex gap-2">
-            {#each product.tags as tag}
+            {#each data.product.tags as tag}
               <span class="badge badge-sm badge-success badge-soft italic">{tag}</span>
             {/each}
           </div>
         {/if}
 
-        <h1 class="text-4xl font-bold">{product.attributes.name}</h1>
+        <h1 class="text-4xl font-bold">{data.product.attributes.name}</h1>
       </div>
       <div class="flex items-start justify-between">
         <div class="flex gap-2">
-          {#if product.originalprice}
+          {#if data.product.originalprice}
             <span class="text-2xl line-through opacity-40">
-              {convertCurrency(product.originalprice)}
+              {convertCurrency(data.product.originalprice)}
             </span>
           {/if}
           <span class="flex flex-col">
             <span class="flex items-center gap-2">
-              {#if product.displayprice}
+              {#if data.product.displayprice}
                 <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(product.displayprice)}
+                  {convertCurrency(data.product.displayprice)}
                 </span>
-              {:else if product.attributes.from_price && product.attributes.to_price && product.attributes.from_price !== product.attributes.to_price}
+              {:else if data.product.attributes.from_price && data.product.attributes.to_price && data.product.attributes.from_price !== data.product.attributes.to_price}
                 From
                 <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(product.attributes.from_price)}
+                  {convertCurrency(data.product.attributes.from_price)}
                 </span>
                 to
                 <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(product.attributes.to_price)}
+                  {convertCurrency(data.product.attributes.to_price)}
                 </span>
               {:else}
                 <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(product.attributes.price)}
+                  {convertCurrency(data.product.attributes.price)}
                 </span>
               {/if}
             </span>
 
-            {#if product.displaypricenote}
+            {#if data.product.displaypricenote}
               <span class="text-sm italic opacity-40">
-                {product.displaypricenote}
+                {data.product.displaypricenote}
               </span>
             {/if}
           </span>
         </div>
         <div class="flex flex-col items-center gap-3">
           <a
-            href={rednerBuyNowUrl(product.attributes.buy_now_url, product.ref, product.params)}
+            href={rednerBuyNowUrl(
+              data.product.attributes.buy_now_url,
+              data.product.ref,
+              data.product.params,
+            )}
             class="btn btn-lg btn-primary group shrink-0 rounded-full xl:px-10"
             target="_blank"
             rel="noopener noreferrer"
@@ -321,16 +356,16 @@
         </div>
       </div>
 
-      {#if product.attributes.description}
-        <div class="prose prose-sm text-xs max-w-none ps-0!">
-          {@html product.attributes.description}
+      {#if data.product.attributes.description}
+        <div class="prose prose-sm max-w-none ps-0!">
+          {@html data.product.attributes.description}
         </div>
       {/if}
 
-      {#if product.tech}
+      {#if data.product.tech}
         <div class="flex items-center gap-4 mt-4 lg:gap-8">
           <span class="text-sm text-base-content/60">Made with:</span>
-          {#each product.tech as tech}
+          {#each data.product.tech as tech}
             <div class="tooltip" data-tip={data.tech[tech].title}>
               <img
                 class="size-6 lg:size-8"
@@ -342,11 +377,11 @@
         </div>
       {/if}
 
-      {#if product.quote}
+      {#if data.product.quote}
         <div class="chat chat-end">
-          {#each product.quote.text as text, index}
+          {#each data.product.quote.text as text, index}
             <div
-              class={`chat-bubble mt-1 text-xs max-w-md bg-base-200 text-base-content ${index !== product.quote.text.length - 1 ? "before:hidden [.chat-end>&]:rounded-field" : ""}`}
+              class={`chat-bubble mt-1 text-xs max-w-md bg-base-200 text-base-content ${index !== data.product.quote.text.length - 1 ? "before:hidden [.chat-end>&]:rounded-field" : ""}`}
             >
               {#each text as line}
                 <p class="py-1">{@html line}</p>
@@ -355,7 +390,7 @@
           {/each}
           <div class="chat-image avatar">
             <div class="w-10 rounded-full">
-              <img alt={product.quote.name} src={product.quote.img} />
+              <img alt={data.product.quote.name} src={data.product.quote.img} />
             </div>
           </div>
         </div>
@@ -363,15 +398,20 @@
     </div>
   </div>
   <div class="my-40">
-    {#each product.more_images as image}
-      <img src={image} alt={product.attributes.name} class="w-full object-cover" loading="lazy" />
+    {#each data.product.more_images as image}
+      <img
+        src={image}
+        alt={data.product.attributes.name}
+        class="w-full object-cover"
+        loading="lazy"
+      />
     {/each}
   </div>
   <div class="my-40 max-w-2xl mx-auto">
     <h2 class="px-4 py-10 font-semibold font-title text-4xl">FAQ</h2>
 
-    <!-- product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
-    {#each [...(product.faq ?? []), ...data.faq] as item}
+    <!-- data.product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
+    {#each [...(data.product.faq ?? []), ...data.faq] as item}
       <div class="collapse collapse-plus bg-base-100 border border-base-300 mb-4">
         <input type="radio" name="faq" checked="checked" />
         <div class="collapse-title font-semibold text-lg">{item.Q}</div>
@@ -382,3 +422,13 @@
     {/each}
   </div>
 </div>
+
+{#if data.product.tech && data.products.products.length > 0}
+  <div class="divider text-base-content/30 my-20">More from daisyUI Store</div>
+
+  <div class="mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 xl:gap-x-16 gap-y-36">
+    {#each getSimilarProducts(data.product, data.products.products) as product}
+      <StoreProduct {product} {convertCurrency} />
+    {/each}
+  </div>
+{/if}

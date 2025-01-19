@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import SEO from "$components/SEO.svelte"
+  import StoreProduct from "$components/StoreProduct.svelte"
   import Countdown from "svelte-countdown"
   import { fade, slide } from "svelte/transition"
   let { data } = $props()
@@ -276,68 +277,9 @@
     <option value="new">New</option>
   </select> -->
 
-  <div class="mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 xl:gap-x-12 gap-y-24">
+  <div class="mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 xl:gap-x-16 gap-y-36">
     {#each sortedFilteredProducts as product, index}
-      <a
-        class="flex flex-col group border border-base-300 rounded-box overflow-hidden"
-        href={`/store/${product.id}`}
-        id={product.id}
-        data-sveltekit-preload-data
-      >
-        <div class="grow flex items-center bg-white">
-          {#each product.media.filter((media) => media.type === "image").slice(0, 1) as media}
-            <div class="overflow-hidden w-full">
-              <img
-                style={`background-image: url('${media.sm}')`}
-                src={media.lg}
-                alt={product.attributes.name}
-                loading="lazy"
-                class="bg-base-300 w-full h-full bg-cover bg-center object-cover group-hover:scale-103 ease-out transition-transform duration-300"
-              />
-            </div>
-          {/each}
-        </div>
-
-        <div class="py-6 px-8 flex justify-between gap-4 border-t border-base-300">
-          <h2 class="text-lg font-title">
-            {product.attributes.name}
-          </h2>
-
-          <div class="flex items-start justify-between">
-            <div class="flex gap-2">
-              {#if product.originalprice}
-                <span class="line-through opacity-40">
-                  &nbsp;{convertCurrency(product.originalprice)}&nbsp;
-                </span>
-              {/if}
-              <span class="flex flex-col">
-                <span class="flex items-center gap-2">
-                  {#if product.displayprice}
-                    <span class="font-title">
-                      {convertCurrency(product.displayprice)}
-                    </span>
-                  {:else if product.attributes.from_price && product.attributes.to_price && product.attributes.from_price !== product.attributes.to_price}
-                    <span class="text-[0.625rem] opacity-50">From</span>
-                    <span class="font-title">
-                      {convertCurrency(product.attributes.from_price)}
-                    </span>
-                  {:else}
-                    <span class="font-title">
-                      {convertCurrency(product.attributes.price)}
-                    </span>
-                  {/if}
-                </span>
-
-                {#if product.displaypricenote}
-                  <span class="text-sm italic opacity-40">
-                    {product.displaypricenote}
-                  </span>
-                {/if}
-              </span>
-            </div>
-          </div>
-        </div>
-      </a>
+      <StoreProduct {product} {convertCurrency} />
     {:else}
       <div
         class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20 py-32"
@@ -347,7 +289,6 @@
     {/each}
   </div>
 
-  <!-- coming soon -->
   <div class="divider text-base-content/30 my-20">In development</div>
   <div class="grid gap-12 lg:grid-cols-3">
     {#each data.futureProducts as product}
