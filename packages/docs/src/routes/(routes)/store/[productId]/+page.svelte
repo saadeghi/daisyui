@@ -431,4 +431,8 @@
       <StoreProduct {product} {convertCurrency} />
     {/each}
   </div>
+
+  <div class="divider divider-end text-base-content/30 my-20">
+    <a href="/store/" class="text-base-content opacity-50 hover:opacity-100">View all</a>
+  </div>
 {/if}
