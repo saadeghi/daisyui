@@ -143,7 +143,7 @@ $effect(async () => {
                 </div>
                 <progress class="progress bg-base-200 border border-base-200 progress-warning w-full" value={daisyui5progress} max="100"></progress>
                 <div class="text-[0.6rem] tracking-wide -bottom-4 absolute italic">
-                daisyUI 5 development
+                  daisyUI 5.0 will be available in {Math.ceil((new Date('2025-03-01') - new Date()) / (1000 * 60 * 60 * 24))} days
                 </div>
               </a>
             </div>

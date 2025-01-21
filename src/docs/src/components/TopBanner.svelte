@@ -19,7 +19,7 @@ const dateFormat = {
       href="https://v5.daisyui.com/docs/v5-beta/"
       class="btn group btn-sm [width:clamp(20rem,100%,30rem)] rounded-full"
     >
-      Try daisyUI 5 beta
+      daisyUI 5.0 will be available in {Math.ceil((new Date('2025-03-01') - new Date()) / (1000 * 60 * 60 * 24))} days. Try beta now!
     </a>
   </div>
 {/if}
