@@ -83,7 +83,7 @@
   :where(.modal-box) {
     @apply h-auto w-full max-w-none;
     max-height: calc(100vh - 5em);
-    translate: 0 -5%;
+    translate: 0 -100%;
     scale: 1;
     --modal-tl: 0;
     --modal-tr: 0;
@@ -113,7 +113,7 @@
   :where(.modal-box) {
     @apply h-auto w-full max-w-none;
     max-height: calc(100vh - 5em);
-    translate: 0 5%;
+    translate: 0 100%;
     scale: 1;
     --modal-tl: var(--radius-box);
     --modal-tr: var(--radius-box);
@@ -127,7 +127,7 @@
 
   :where(.modal-box) {
     @apply h-screen max-h-none w-auto max-w-none;
-    translate: -5% 0;
+    translate: -100% 0;
     scale: 1;
     --modal-tl: 0;
     --modal-tr: var(--radius-box);
@@ -141,7 +141,7 @@
 
   :where(.modal-box) {
     @apply h-screen max-h-none w-auto max-w-none;
-    translate: 5% 0;
+    translate: 100% 0;
     scale: 1;
     --modal-tl: var(--radius-box);
     --modal-tr: 0;
