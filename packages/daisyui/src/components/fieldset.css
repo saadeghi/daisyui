@@ -2,6 +2,7 @@
   @apply grid gap-1.5 py-1;
   font-size: 0.75rem;
   grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
 }
 .fieldset-legend {
   @apply text-base-content -mb-1 flex items-center justify-between gap-2 py-2;
