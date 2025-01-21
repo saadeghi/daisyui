@@ -20,7 +20,7 @@
   }
 
   :where(tfoot) {
-    border-top: var(--border) solid var(--color-base-200);
+    border-top: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, transparent);
   }
 
   :where(.table-pin-rows thead tr) {
@@ -36,7 +36,8 @@
   }
 
   :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child) {
-    border-bottom: var(--border) solid var(--color-base-200);
+    border-bottom: var(--border) solid
+      color-mix(in oklch, var(--color-base-content) 5%, transparent);
   }
 }
 
