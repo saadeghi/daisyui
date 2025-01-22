@@ -12,7 +12,7 @@
   let { data, children } = $props()
 
   onNavigate((navigation) => {
-    track("G-ER9PXT2JR4")
+    track("G-10F40JCSMZ")
     if (!document.startViewTransition) return
 
     return new Promise((resolve) => {
