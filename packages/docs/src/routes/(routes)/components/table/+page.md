@@ -306,7 +306,7 @@ classnames:
         <td>Blue</td>
       </tr>
       <!-- row 2 -->
-      <tr class="$$hover">
+      <tr class="hover:bg-base-300">
         <th>2</th>
         <td>Hart Hagerty</td>
         <td>Desktop Support Technician</td>
