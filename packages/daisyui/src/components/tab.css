@@ -413,8 +413,8 @@
       min(0.25rem, calc(var(--radius-field) + var(--radius-field) + var(--radius-field)))
   );
   box-shadow:
-    0 -0.5px oklch(100% 0 0/ 0.1) inset,
-    0 0.5px oklch(0% 0 0/ 0.05) inset;
+    0 -0.5px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+    0 0.5px oklch(0% 0 0 / calc(var(--depth) * 0.05)) inset;
 
   .tab {
     @apply rounded-field;
@@ -429,9 +429,10 @@
   :is(input:checked) {
     @apply bg-base-100 text-base-content hover:text-base-content;
     box-shadow:
-      0 1px oklch(100% 0 0/ 0.1) inset,
-      0 1px 1px -1px color-mix(in oklab, var(--color-neutral), transparent),
-      0 1px 6px -4px var(--color-neutral);
+      0 1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+      0 1px 1px -1px color-mix(in oklab, var(--color-neutral) calc(var(--depth) * 50%), transparent),
+      0 1px 6px -4px
+        color-mix(in oklab, var(--color-neutral) calc(var(--depth) * 100%), transparent);
     @media (forced-colors: active) {
       border: 1px solid;
     }
