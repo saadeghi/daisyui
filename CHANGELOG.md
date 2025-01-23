@@ -486,6 +486,14 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🆕 Additions
 - Added new `table-xl` size.
 
+🔧 Changes
+- **Breaking Change:** Removed `hover` class. Use `hover:bg-base-300` (or any other color) instead.
+
+```diff:page.html
+- <tr class="hover">
++ <tr class="hover:bg-base-300">
+```
+
 ### Textarea
 
 🆕 Additions
