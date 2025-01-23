@@ -69,7 +69,7 @@ This is useful to use daisyUI in a scoped environment like a web component or a 
 }
 ```
 In this example, we only include the button, input, and select components. All other styles of daisyUI library will be excluded.  
-[Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/master/packages/daisyui/src).
+[Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/v5/packages/daisyui/src/components).
 
 ## exclude
 
@@ -83,7 +83,7 @@ In this example, we only include the button, input, and select components. All o
 }
 ```
 In this example, we exclude the the listed files. All other parts of daisyUI will be available to use. This is useful if you want to opt out of some parts of daisyUI, especially the base styles like `rootscrollgutter` Or if you want to mix daisyUI for some parts and another library for the rest.  
-[Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/master/packages/daisyui/src).
+[Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/v5/packages/daisyui/src/components).
 
 
 ## prefix
