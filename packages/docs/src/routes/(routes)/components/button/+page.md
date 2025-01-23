@@ -33,6 +33,7 @@ classnames:
     desc: ghost style
   - class: btn-link
     desc: looks like a link
+  behavior:
   - class: btn-active
     desc: looks active
   - class: btn-disabled

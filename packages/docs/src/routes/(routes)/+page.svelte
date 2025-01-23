@@ -228,7 +228,7 @@
                 class="btn md:btn-lg group shrink-0 rounded-full [@media(min-width:768px)]:px-10"
               >
                 <svg
-                  class="h-7 w-auto transition-opacity opacity-100 group-hover:opacity-0"
+                  class="h-6 w-auto transition-opacity opacity-100 group-hover:opacity-0"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 124 34"
                   ><g fill="currentColor"

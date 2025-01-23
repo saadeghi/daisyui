@@ -52,7 +52,7 @@ Let's begin!
 
 ## Install
 
-🧪 This is a public beta release. There may be a few bugs. The stable version will be available later.
+🧪 This is a public beta release. There may be a few small visual bugs. The stable version will be available on March 1st.
 
 1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)  
     If you're upgrading from Tailwind CSS 3 to Tailwind CSS 4, remove daisyUI from `tailwind.config.js` before running the [upgrade command](https://tailwindcss.com/docs/v4-beta#upgrading-from-v3).
@@ -67,6 +67,10 @@ Let's begin!
   @import "tailwindcss";
   @plugin "daisyui";
   ```
+
+> :INFO:
+>
+> If you're using [Tailwind CSS 4 upgrade CLI](https://tailwindcss.com/docs/upgrade-guide) to upgrade from Tailwind CSS 3 to Tailwind CSS 4, first remove daisyUI from `tailwind.config.js` before running the upgrade command. Then after upgrading to Tailwind CSS 4, add daisyUI to your CSS file.
 
 ---
 

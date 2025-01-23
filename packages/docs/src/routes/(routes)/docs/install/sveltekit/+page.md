@@ -14,7 +14,7 @@ npx sv create ./
 ### 2. Install Tailwind CSS and daisyUI
 
 ```:Terminal
-npm install tailwindcss@next @tailwindcss/vite@next daisyui@beta
+npm install tailwindcss @tailwindcss/vite daisyui@beta
 ```
 
 Add Tailwind CSS to Vite config

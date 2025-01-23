@@ -14,7 +14,7 @@ npx create-next-app@latest ./
 ### 2. Install Tailwind CSS and daisyUI
 
 ```:Terminal
-npm install tailwindcss@next @tailwindcss/postcss@next daisyui@beta
+npm install tailwindcss @tailwindcss/postcss daisyui@beta
 ```
 
 ### 3. Add Tailwind CSS and daisyUI

@@ -45,7 +45,7 @@
 </script>
 
 {#if name}
-  <li>
+  <li data-sveltekit-preload-data>
     {#if items}
       {#if collapsible}
         <details
