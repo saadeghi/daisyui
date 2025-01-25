@@ -8,12 +8,7 @@ desc: How to install Tailwind CSS and daisyUI in a Vike project
 Create a new Vike project in the current directory
 
 ```:Terminal
-# React
-npm create bati --- --react
-# OR Vue
-npm create bati --- --vue
-# OR SolidJS
-npm create bati --- --solid
+npm create vike
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
@@ -32,19 +27,13 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [tailwindcss(), vike()],
 });
-
 ```
 
 Put Tailwind and daisyUI to your CSS file (and remove old styles)
-  
-```postcss:layouts/tailwind.css
+
+```postcss:renderer/Layout.css
 @import "tailwindcss";
 @plugin "daisyui";
-```
-
-Import the CSS file in your Vike page (or layout)
-```tsx:layouts/+LayoutDefault.tsx
-import "./tailwind.css";
 ```
 
 Now you can use daisyUI class names!
