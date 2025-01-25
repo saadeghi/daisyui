@@ -3,32 +3,9 @@ title: Install daisyUI for Vike
 desc: How to install Tailwind CSS and daisyUI in a Vike project
 ---
 
-You can use [Bâti](https://batijs.dev) to create a scaffold of a new Vike project with Tailwind CSS and daisyUI.
+### 1. Create a new Vike project
 
-> To customize your scaffold, see [Bâti](https://batijs.dev) website.
-
-You have these alternatives:
-- A. Create a new project with Tailwind CSS and daisyUI
-- B. Add Tailwind CSS and daisyUI in a Vike project
-
-## A. Create a new Vike project with Tailwind CSS and daisyUI
-
-In the current directory, create a new Vike project with Tailwind CSS and daisyUI
-
-```:Terminal
-# React
-npm create bati --- --react --daisyui
-# OR Vue
-npm create bati --- --vue --daisyui
-# OR SolidJS
-npm create bati --- --solid --daisyui
-```
-
-## B. Add Tailwind CSS and daisyUI in a Vike project
-
-### 1. (Optional) Create a new Vike project
-
-If you don't have a Vike project, you can create a new Vike project in the current directory
+Create a new Vike project in the current directory
 
 ```:Terminal
 # React
