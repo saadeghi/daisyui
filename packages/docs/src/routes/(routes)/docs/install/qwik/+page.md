@@ -7,14 +7,14 @@ desc: How to install Tailwind CSS and daisyUI in a Qwik project
 
 Create a new Qwik project in the current directory
 
-```:Terminal
+```sh:Terminal
 npm create qwik@latest empty ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
 
-```:Terminal
-npm install tailwindcss @tailwindcss/vite daisyui@beta
+```sh:Terminal
+npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@beta
 ```
 
 Add Tailwind CSS to Vite config
@@ -30,7 +30,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
 });
 ```
 
-Put Tailwind and daisyUI to your CSS file (and remove old styles)
+Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   
 ```postcss:src/index.css
 @import "tailwindcss";

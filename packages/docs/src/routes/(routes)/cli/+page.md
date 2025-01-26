@@ -15,7 +15,7 @@ npm i tailwindcss @tailwindcss/cli daisyui@beta
 
 ### 2. Add Tailwind CSS and daisyUI
 
-Add Tailwind and daisyUI to your CSS file.  
+Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)  
 Address your HTML and other markup files in the `source` function.
   
 ```postcss:app.css

@@ -7,14 +7,14 @@ desc: How to install Tailwind CSS and daisyUI in a Solid Start project
 
 Create a new Solid Start project in the current directory
 
-```:Terminal
+```sh:Terminal
 npm init solid@latest ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
 
-```:Terminal
-npm install tailwindcss @tailwindcss/vite daisyui@beta
+```sh:Terminal
+npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@beta
 ```
 
 Add Tailwind CSS to Vite config
@@ -29,7 +29,7 @@ export default defineConfig({
 });
 ```
 
-Put Tailwind and daisyUI to your CSS file (and remove old styles)
+Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   
 ```postcss:src/app.css
 @import "tailwindcss";

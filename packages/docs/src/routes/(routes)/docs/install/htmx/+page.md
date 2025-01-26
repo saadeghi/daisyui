@@ -13,13 +13,13 @@ Initialize a new Node project in the current directory using `npm init -y` if it
 
 Install Tailwind CSS CLI and daisyUI
 
-```:Terminal
+```sh:Terminal
 npm i tailwindcss @tailwindcss/cli daisyui@beta
 ```
 
 ### 2. Add Tailwind CSS and daisyUI
 
-Add Tailwind and daisyUI to your CSS file.  
+Add Tailwind CSS and daisyUI to your CSS file.  
 Address your HTML and other markup files in the `source` function.
   
 ```postcss:app.css
@@ -41,7 +41,7 @@ Add a script to your package.json to build the CSS.
 
 Run the script to build the CSS file
 
-```:Terminal
+```sh:Terminal
 npm run build:css
 ```
 This command creates a `public/output.css` file with the compiled CSS. You can link this file to your HTML file.

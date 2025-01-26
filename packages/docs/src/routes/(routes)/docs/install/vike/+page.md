@@ -7,14 +7,14 @@ desc: How to install Tailwind CSS and daisyUI in a Vike project
 
 Create a new Vike project in the current directory
 
-```:Terminal
-npm create vike
+```sh:Terminal
+npm create vike ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
 
-```:Terminal
-npm install tailwindcss @tailwindcss/vite daisyui@beta
+```sh:Terminal
+npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@beta
 ```
 
 Add Tailwind CSS to Vite config
@@ -29,7 +29,7 @@ export default defineConfig({
 });
 ```
 
-Put Tailwind and daisyUI to your CSS file (and remove old styles)
+Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
 ```postcss:renderer/Layout.css
 @import "tailwindcss";
