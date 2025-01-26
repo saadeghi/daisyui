@@ -48,7 +48,7 @@ By default, the site displays example data from the `data/lemonsqueezy-products.
 
 - Create a `.env` file in the root of your project.
 - Add the following line:
-  ```env
+  ```bash
   LEMON_SQUEEZY_API_KEY=your_api_key_here
   ```
 
