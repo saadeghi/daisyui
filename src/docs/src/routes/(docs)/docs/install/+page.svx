@@ -13,6 +13,18 @@ published: true
 
 <InstallTabs />
 
+<div class="max-w-4xl alert mb-6">
+  <span class="text-4xl">👋</span>
+  <div>
+    <div class="font-bold">
+      Are you using Tailwind CSS 4.0?
+    </div>
+    <div class="text-sm">
+      <a href="https://v5.daisyui.com/docs/v5-beta/" class="underline">Install the new daisyUI 5 Beta →</a>
+    </div>
+  </div>
+</div>
+
 <Translate text="You need <a target=_blank' href='https://nodejs.org/en/download/'>Node.js</a> and <a target='_blank' href='https://tailwindcss.com/docs/installation/'>Tailwind CSS</a> installed." />
 
 <div class="not-prose">
