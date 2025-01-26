@@ -59,7 +59,7 @@ const frameworks = [
     {
     name: "Vike",
     path: "/docs/install/vike/",
-    logo: `<svg width="281.99" height="281.99" fill="none" version="1.1" viewBox="0 0 46.998 46.998" xmlns="http://www.w3.org/2000/svg">
+    logo: `<svg class="size-16" width="281.99" height="281.99" fill="none" version="1.1" viewBox="0 0 46.998 46.998" xmlns="http://www.w3.org/2000/svg">
     <g transform="translate(-.50088 -.50061)" clip-path="url(#clip0_19_250)">
     <path d="m3.6726 14.167v3.8142l21.424 22.824 3.5066 0.4768 7.167-0.8613 11.181-11.504v-4.7831l-20.071-20.501-7.859-2.9221-3.5527 0.49214z" fill="#8f8f8f"/>
     <path d="m3.2678 43.329c-1.8037-1.9213-2.3847-3.3379-1.3276-3.2386 1.0559 0.1004 3.2808 1.6735 5.0845 3.5947 1.8037 1.9213 2.3847 3.338 1.3288 3.2386-1.0571-0.1004-3.282-1.6735-5.0856-3.5947z" fill="#a6a6a6"/>
