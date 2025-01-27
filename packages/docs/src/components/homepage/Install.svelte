@@ -5,7 +5,7 @@
 </script>
 
 <p class="mx-auto mb-2 mt-5 w-full text-start">1. {$t("install-step-1")}:</p>
-<div class="tabs tabs-lift w-full">
+<div class="tabs tabs-lift tabs-sm sm:tabs-md w-full">
   <input
     type="radio"
     name="install[packagemanager]"
@@ -80,7 +80,7 @@
 </div>
 <p class="mx-auto mb-2 mt-5 w-full text-start">2. {$t("install-step-2")}:</p>
 <div class="my-2 w-full max-w-4xl">
-  <div class="tabs tabs-lift w-full">
+  <div class="tabs tabs-lift tabs-sm sm:tabs-md w-full">
     <input
       type="radio"
       name="install[jstype]"

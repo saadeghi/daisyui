@@ -43,7 +43,7 @@ desc: How to use daisyUI from a CDN?
 
 <Translate text="You don't need to install anything." />
 <Translate text="Just add one of these to the <code>head</code> tag of your HTML" />:
-<div role="tablist" class="tabs tabs-lift w-full mt-6 not-prose">
+<div role="tablist" class="tabs tabs-lift tabs-sm sm:tabs-md w-full mt-6 not-prose">
   <input
     type="radio"
     name="cdn"
