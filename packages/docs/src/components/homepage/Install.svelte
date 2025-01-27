@@ -63,6 +63,20 @@
     </div>
     <pre data-prefix="$"><code>bun add -D daisyui@beta</code></pre>
   </div>
+  <input
+    type="radio"
+    name="install[packagemanager]"
+    class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)] text-neutral"
+    aria-label="Deno"
+  />
+  <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
+    <div class="absolute right-0 top-0 z-1">
+      {#if onMount}
+        <Clipboard text={`deno i -D npm:daisyui@beta`} />
+      {/if}
+    </div>
+    <pre data-prefix="$"><code>deno i -D npm:daisyui@beta</code></pre>
+  </div>
 </div>
 <p class="mx-auto mb-2 mt-5 w-full text-start">2. {$t("install-step-2")}:</p>
 <div class="my-2 w-full max-w-4xl">
