@@ -14,8 +14,8 @@
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
   background-color: var(--btn-bg);
-  background-size: calc(var(--noise) * 100%);
-  background-image: var(--btn-noise);
+  background-size: auto, calc(var(--noise) * 100%);
+  background-image: none, var(--btn-noise);
   border-width: var(--border);
   border-style: solid;
   border-color: var(--btn-border);
