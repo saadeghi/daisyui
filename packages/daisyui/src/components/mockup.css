@@ -99,7 +99,7 @@
 .mockup-phone-camera {
   grid-column: 1/1;
   grid-row: 1/1;
-  background: black;
+  background: #000;
   height: 32px;
   width: 126px;
   border-radius: 17px;

@@ -19,7 +19,7 @@
   @apply text-primary;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-primary) 80%, black);
+    color: color-mix(in oklab, var(--color-primary) 80%, #000);
   }
 }
 
@@ -27,7 +27,7 @@
   @apply text-secondary;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-secondary) 80%, black);
+    color: color-mix(in oklab, var(--color-secondary) 80%, #000);
   }
 }
 
@@ -35,7 +35,7 @@
   @apply text-accent;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-accent) 80%, black);
+    color: color-mix(in oklab, var(--color-accent) 80%, #000);
   }
 }
 
@@ -43,7 +43,7 @@
   @apply text-neutral;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-neutral) 80%, black);
+    color: color-mix(in oklab, var(--color-neutral) 80%, #000);
   }
 }
 
@@ -51,7 +51,7 @@
   @apply text-success;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-success) 80%, black);
+    color: color-mix(in oklab, var(--color-success) 80%, #000);
   }
 }
 
@@ -59,7 +59,7 @@
   @apply text-info;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-info) 80%, black);
+    color: color-mix(in oklab, var(--color-info) 80%, #000);
   }
 }
 
@@ -67,7 +67,7 @@
   @apply text-warning;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-warning) 80%, black);
+    color: color-mix(in oklab, var(--color-warning) 80%, #000);
   }
 }
 
@@ -75,6 +75,6 @@
   @apply text-error;
 
   &:hover {
-    color: color-mix(in oklab, var(--color-error) 80%, black);
+    color: color-mix(in oklab, var(--color-error) 80%, #000);
   }
 }
