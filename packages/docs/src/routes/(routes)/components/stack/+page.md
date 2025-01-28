@@ -24,7 +24,7 @@ classnames:
 
 > :INFO:
 >
-> You can width and height of the stack using `w-*` and `h-*` classes, so all items will have the same width and height.
+> You can use `w-*` and `h-*` classes to set the width and height of the stack, making all items the same size.
 
 ### ~3 divs in a stack
 <div class="stack h-20 w-32">
