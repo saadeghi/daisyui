@@ -11,11 +11,11 @@
     font-size: inherit;
     &:first-child {
       @apply -ms-3 me-3;
-      border-inline-end: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
+      border-inline-end: var(--border) solid color-mix(in oklab, currentColor 10%, #0000);
     }
     &:last-child {
       @apply ms-3 -me-3;
-      border-inline-start: var(--border) solid color-mix(in oklab, currentColor 10%, transparent);
+      border-inline-start: var(--border) solid color-mix(in oklab, currentColor 10%, #0000);
     }
   }
 }

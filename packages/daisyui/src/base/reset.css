@@ -23,7 +23,7 @@ html {
     "Segoe UI Symbol",
     "Noto Color Emoji"
   );
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: #0000;
 }
 
 body {
@@ -108,7 +108,7 @@ textarea {
 
 ::placeholder {
   opacity: 1;
-  color: color-mix(in oklch, currentColor 50%, transparent);
+  color: color-mix(in oklch, currentColor 50%, #0000);
 }
 
 audio,

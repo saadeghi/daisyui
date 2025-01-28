@@ -5,8 +5,8 @@
       90deg,
       currentColor -1%,
       currentColor 10%,
-      transparent 10%,
-      transparent 90%
+      #0000 10%,
+      #0000 90%
     );
     background-size: 200%;
     background-position-x: 15%;
@@ -19,8 +19,8 @@
           90deg,
           currentColor -1%,
           currentColor 10%,
-          transparent 10%,
-          transparent 90%
+          #0000 10%,
+          #0000 90%
         );
         background-size: 200%;
         background-position-x: 15%;

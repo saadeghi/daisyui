@@ -3,10 +3,9 @@
   background-image: radial-gradient(
     circle at 35% 30%,
     oklch(1 0 0 / calc(var(--depth) * 0.5)),
-    transparent
+    #0000
   );
-  box-shadow: 0 2px 3px -1px
-    color-mix(in oklab, currentColor calc(var(--depth) * 100%), transparent);
+  box-shadow: 0 2px 3px -1px color-mix(in oklab, currentColor calc(var(--depth) * 100%), #0000);
 }
 
 .status-primary {

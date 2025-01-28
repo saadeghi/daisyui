@@ -4,9 +4,9 @@
   animation: skeleton 1.8s ease-in-out infinite;
   background-image: linear-gradient(
     105deg,
-    transparent 0% 40%,
+    #0000 0% 40%,
     var(--color-base-100) 50%,
-    transparent 60% 100%
+    #0000 60% 100%
   );
   background-size: 200% auto;
   background-repeat: no-repeat;

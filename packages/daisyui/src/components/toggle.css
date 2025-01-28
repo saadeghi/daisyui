@@ -16,11 +16,11 @@
   );
 
   padding: var(--toggle-p);
-  box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent) inset;
+  box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000) inset;
   transition:
     color 0.3s,
     grid-template-columns 0.2s;
-  --input-color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+  --input-color: color-mix(in oklab, var(--color-base-content) 50%, #0000);
   --toggle-p: 0.1875rem;
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: calc((var(--size) * 2) - (var(--border) + var(--toggle-p)) * 2);
@@ -67,7 +67,7 @@
     box-shadow:
       0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
-      0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), transparent);
+      0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000);
     background-size: auto, calc(var(--noise) * 100%);
     background-image: none, var(--fx-noise);
     @media (forced-colors: active) {

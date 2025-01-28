@@ -28,9 +28,8 @@
   --btn-fg: var(--color-base-content);
   --btn-p: 1rem;
   --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
-  --btn-shadow: 0 3px 2px -2px
-      color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), transparent),
-    0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), transparent);
+  --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
+    0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
   --btn-noise: var(--fx-noise);
 
   &:hover {
@@ -62,14 +61,14 @@
     }
 
     @apply pointer-events-none;
-    --btn-border: transparent;
+    --btn-border: #0000;
     --btn-noise: none;
-    --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
+    --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
 
     &:hover {
       @apply bg-neutral/20 pointer-events-none;
-      --btn-border: transparent;
-      --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, transparent);
+      --btn-border: #0000;
+      --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
     }
   }
 
@@ -145,8 +144,8 @@
 .btn-ghost {
   &:not(.btn-active, :hover, :active:focus, :focus-visible) {
     --btn-shadow: "";
-    --btn-bg: transparent;
-    --btn-border: transparent;
+    --btn-bg: #0000;
+    --btn-border: #0000;
     --btn-noise: none;
     &:not(:disabled, [disabled], .btn-disabled) {
       @apply outline-current;
@@ -157,23 +156,23 @@
 
 .btn-link {
   @apply underline outline-current;
-  --btn-border: transparent;
-  --btn-bg: transparent;
+  --btn-border: #0000;
+  --btn-bg: #0000;
   --btn-fg: var(--color-primary);
   --btn-noise: none;
   --btn-shadow: "";
 
   &:is(.btn-active, :hover, :active:focus, :focus-visible) {
     @apply underline;
-    --btn-border: transparent;
-    --btn-bg: transparent;
+    --btn-border: #0000;
+    --btn-bg: #0000;
   }
 }
 
 .btn-outline {
   &:not(.btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled) {
     --btn-shadow: "";
-    --btn-bg: transparent;
+    --btn-bg: #0000;
     --btn-fg: var(--btn-color);
     --btn-border: var(--btn-color);
     --btn-noise: none;
@@ -184,7 +183,7 @@
   &:not(.btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled) {
     --btn-shadow: "";
     border-style: dashed;
-    --btn-bg: transparent;
+    --btn-bg: #0000;
     --btn-fg: var(--btn-color);
     --btn-border: var(--btn-color);
     --btn-noise: none;

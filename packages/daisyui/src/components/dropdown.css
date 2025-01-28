@@ -62,7 +62,7 @@
 
   /* experimental */
   &:where([popover]) {
-    background: transparent;
+    background: #0000;
   }
   &[popover] {
     @apply fixed text-inherit;
@@ -81,7 +81,7 @@
       }
 
       &::backdrop {
-        background-color: color-mix(in oklab, #000 30%, transparent);
+        background-color: color-mix(in oklab, #000 30%, #0000);
       }
     }
 

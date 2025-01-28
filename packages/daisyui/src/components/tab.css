@@ -17,7 +17,7 @@
   --tab-radius-ee: 0;
   --tab-order: 0;
   --tab-radius-min: calc(0.75rem - var(--border));
-  border-color: transparent;
+  border-color: #0000;
   order: var(--tab-order);
   height: calc(var(--size-field, 0.25rem) * 10);
   font-size: 0.875rem;
@@ -71,7 +71,7 @@
 
 .tabs-border {
   .tab {
-    --tab-border-color: transparent transparent var(--tab-border-color) transparent;
+    --tab-border-color: #0000 var(--tab-border-color) #0000;
     position: relative;
     border-radius: var(--radius-field);
     &:before {
@@ -107,7 +107,7 @@
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
     --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
-    --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
+    --tab-border-colors: #0000 var(--tab-border-color) #0000;
     --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
     --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
@@ -124,7 +124,7 @@
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
       --tab-border: var(--border) var(--border) 0 var(--border);
-      --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
+      --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
         var(--tab-border-color);
       --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
         calc(var(--tab-p) - var(--border));
@@ -132,14 +132,14 @@
       --tab-grad: calc(69% - var(--border));
       --radius-start: radial-gradient(
         circle at top left,
-        transparent var(--tab-grad),
+        #0000 var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
         var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
         var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
       );
       --radius-end: radial-gradient(
         circle at top right,
-        transparent var(--tab-grad),
+        #0000 var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
         var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
         var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
@@ -184,7 +184,7 @@
   &:has(.tab-content) {
     > .tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
-        --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
+        --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
           var(--tab-border-color);
       }
     }
@@ -218,7 +218,7 @@
     --tab-radius-es: 0;
     --tab-radius-ee: 0;
     --tab-paddings: var(--border) var(--tab-p) 0 var(--tab-p);
-    --tab-border-colors: transparent transparent var(--tab-border-color) transparent;
+    --tab-border-colors: #0000 var(--tab-border-color) #0000;
     --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
     --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
     --tab-corner-position: top left, top right;
@@ -227,21 +227,21 @@
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
       --tab-border: var(--border) var(--border) 0 var(--border);
-      --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
+      --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
         var(--tab-border-color);
       --tab-paddings: 0 calc(var(--tab-p) - var(--border)) var(--border)
         calc(var(--tab-p) - var(--border));
       --tab-inset: auto auto 0 auto;
       --radius-start: radial-gradient(
         circle at top left,
-        transparent var(--tab-grad),
+        #0000 var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
         var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
         var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
       );
       --radius-end: radial-gradient(
         circle at top right,
-        transparent var(--tab-grad),
+        #0000 var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
         var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
         var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
@@ -252,7 +252,7 @@
   &:has(.tab-content) {
     > .tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
-        --tab-border-colors: var(--tab-border-color) var(--tab-border-color) transparent
+        --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
           var(--tab-border-color);
       }
     }
@@ -286,7 +286,7 @@
     --tab-radius-se: 0;
     --tab-radius-es: min(var(--radius-field), var(--tab-radius-min));
     --tab-radius-ee: min(var(--radius-field), var(--tab-radius-min));
-    --tab-border-colors: var(--tab-border-color) transparent transparent transparent;
+    --tab-border-colors: var(--tab-border-color) #0000;
     --tab-paddings: 0 var(--tab-p) var(--border) var(--tab-p);
     --tab-corner-width: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
     --tab-corner-height: min(var(--radius-field), var(--tab-radius-min));
@@ -296,21 +296,21 @@
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
       --tab-border: 0 var(--border) var(--border) var(--border);
-      --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color)
+      --tab-border-colors: #0000 var(--tab-border-color) var(--tab-border-color)
         var(--tab-border-color);
       --tab-paddings: var(--border) calc(var(--tab-p) - var(--border)) 0
         calc(var(--tab-p) - var(--border));
       --tab-inset: 0 auto auto auto;
       --radius-start: radial-gradient(
         circle at bottom left,
-        transparent var(--tab-grad),
+        #0000 var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
         var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
         var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
       );
       --radius-end: radial-gradient(
         circle at bottom right,
-        transparent var(--tab-grad),
+        #0000 var(--tab-grad),
         var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
         var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
         var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
@@ -321,7 +321,7 @@
   &:has(.tab-content) {
     > .tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
-        --tab-border-colors: transparent var(--tab-border-color) var(--tab-border-color)
+        --tab-border-colors: #0000 var(--tab-border-color) var(--tab-border-color)
           var(--tab-border-color);
       }
     }
@@ -356,7 +356,7 @@
     --tab-radius-es: min(var(--radius-field),var(--tab-radius-min));
     --tab-radius-ee: 0;
     --tab-paddings: 1px var(--tab-p) 1px calc(var(--tab-p) + 1px);
-    --tab-border-colors: transparent var(--tab-border-color) transparent transparent;
+    --tab-border-colors: #0000 var(--tab-border-color) #0000;
     --tab-corner-width: min(var(--radius-field),var(--tab-radius-min));
     --tab-corner-height: calc(100% + min(var(--radius-field),var(--tab-radius-min)) * 2);
     --tab-corner-position: top right, bottom right;
@@ -365,16 +365,16 @@
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
     &:is(input:checked) {
       --tab-border: 1px 0 1px 1px;
-      --tab-border-colors: var(--tab-border-color) transparent var(--tab-border-color) var(--tab-border-color);
+      --tab-border-colors: var(--tab-border-color) #0000 var(--tab-border-color) var(--tab-border-color);
       --tab-paddings: 0 calc(1px + var(--tab-p)) 0 var(--tab-p);
       --tab-inset: auto 0 auto auto;
       --radius-start: radial-gradient(circle at top left,
-          transparent var(--tab-grad),
+          #0000 var(--tab-grad),
           var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
           var(--tab-border-color) calc(var(--tab-grad) + 1px),
           var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px));
       --radius-end: radial-gradient(circle at bottom left,
-          transparent var(--tab-grad),
+          #0000 var(--tab-grad),
           var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
           var(--tab-border-color) calc(var(--tab-grad) + 1px),
           var(--tab-bg) calc(var(--tab-grad) + 1px + 0.25px));
@@ -384,7 +384,7 @@
   &:has(.tab-content) {
     >.tab:first-child {
       &:not(.tab-active, [aria-selected="true"]) {
-        --tab-border-colors: var(--tab-border-color) transparent var(--tab-border-color) var(--tab-border-color);
+        --tab-border-colors: var(--tab-border-color) #0000 var(--tab-border-color) var(--tab-border-color);
       }
     }
   }
@@ -430,9 +430,8 @@
     @apply bg-base-100 text-base-content hover:text-base-content;
     box-shadow:
       0 1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
-      0 1px 1px -1px color-mix(in oklab, var(--color-neutral) calc(var(--depth) * 50%), transparent),
-      0 1px 6px -4px
-        color-mix(in oklab, var(--color-neutral) calc(var(--depth) * 100%), transparent);
+      0 1px 1px -1px color-mix(in oklab, var(--color-neutral) calc(var(--depth) * 50%), #0000),
+      0 1px 6px -4px color-mix(in oklab, var(--color-neutral) calc(var(--depth) * 100%), #0000);
     @media (forced-colors: active) {
       border: 1px solid;
     }

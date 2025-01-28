@@ -2,9 +2,9 @@
   @apply bg-base-200 rounded-field inline-flex items-center justify-center align-middle;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  border: var(--border) solid color-mix(in srgb, var(--color-base-content) 20%, transparent);
+  border: var(--border) solid color-mix(in srgb, var(--color-base-content) 20%, #0000);
   border-bottom: calc(var(--border) + 1px) solid
-    color-mix(in srgb, var(--color-base-content) 20%, transparent);
+    color-mix(in srgb, var(--color-base-content) 20%, #0000);
   --size: calc(var(--size-selector, 0.25rem) * 6);
   font-size: 0.875rem;
   height: var(--size);

@@ -2,7 +2,7 @@
   @apply rounded-box relative flex flex-col;
   outline-width: 2px;
   transition: outline 0.2s ease-in-out;
-  outline: 0 solid transparent;
+  outline: 0 solid #0000;
   outline-offset: 2px;
   &:focus {
     @apply outline-hidden;

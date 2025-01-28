@@ -1,5 +1,5 @@
 .select {
-  border: var(--border) solid transparent;
+  border: var(--border) solid #0000;
   @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-4 pe-7 align-middle;
   width: clamp(3rem, 20rem, 100%);
   height: var(--size);
@@ -8,8 +8,8 @@
   border-start-end-radius: var(--join-se, var(--radius-field));
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
-  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
-    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #0000 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, #0000 50%);
   background-position:
     calc(100% - 20px) calc(1px + 50%),
     calc(100% - 16.1px) calc(1px + 50%);
@@ -19,10 +19,10 @@
   background-repeat: no-repeat;
   text-overflow: ellipsis;
   box-shadow:
-    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent) inset,
+    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
     0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
   border-color: var(--input-color);
-  --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
   --size: calc(var(--size-field, 0.25rem) * 10);
   [dir="rtl"] & {
     background-position:
@@ -42,7 +42,7 @@
   &:focus,
   &:focus-within {
     --input-color: var(--color-base-content);
-    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
     outline: 2px solid var(--input-color);
     outline-offset: 2px;
   }
@@ -61,12 +61,12 @@
   @apply bg-transparent;
   transition: background-color 0.2s;
   box-shadow: none;
-  border-color: transparent;
+  border-color: #0000;
 
   &:focus,
   &:focus-within {
     @apply text-base-content bg-base-100;
-    border-color: transparent;
+    border-color: #0000;
     box-shadow: none;
   }
 }

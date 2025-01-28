@@ -55,7 +55,7 @@
     @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 size-6 rounded-full;
     border: 2px solid var(--color-base-100);
     content: "";
-    outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
+    outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
     outline-offset: -3px;
     backdrop-filter: blur(8px);
     box-shadow: 0 1px 2px 0 oklch(0% 0 0 / 0.1);

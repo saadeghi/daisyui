@@ -1,6 +1,6 @@
 .dock {
   @apply bg-base-100 fixed right-0 bottom-0 left-0 z-1 flex w-full flex-row items-center justify-around p-2 text-current;
-  border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, transparent);
+  border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
   height: 4rem;
   height: calc(4rem + env(safe-area-inset-bottom));
   padding-bottom: env(safe-area-inset-bottom);

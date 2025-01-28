@@ -7,7 +7,7 @@
   grid-template-columns: repeat(1, 1fr);
 
   &:not(:last-child) {
-    border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, transparent);
+    border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
     border-block-end: none;
   }
 }
@@ -40,7 +40,7 @@
   @apply grid-flow-col overflow-x-auto;
 
   .stat:not(:last-child) {
-    border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, transparent);
+    border-inline-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
     border-block-end: none;
   }
 }
@@ -50,6 +50,6 @@
 
   .stat:not(:last-child) {
     border-inline-end: none;
-    border-block-end: var(--border) dashed color-mix(in oklab, currentColor 10%, transparent);
+    border-block-end: var(--border) dashed color-mix(in oklab, currentColor 10%, #0000);
   }
 }

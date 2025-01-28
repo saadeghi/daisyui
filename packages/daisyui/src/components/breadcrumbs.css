@@ -27,7 +27,7 @@
         rotate: 45deg;
         border-top: 1px solid;
         border-right: 1px solid;
-        background-color: transparent;
+        background-color: #0000;
       }
       [dir="rtl"] & + *:before {
         rotate: -135deg;

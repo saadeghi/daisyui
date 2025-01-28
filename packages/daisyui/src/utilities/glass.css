@@ -1,7 +1,7 @@
 .glass {
   border: none;
   backdrop-filter: blur(var(--glass-blur, 40px));
-  background-color: transparent;
+  background-color: #0000;
   background-image: linear-gradient(
       135deg,
       oklch(100% 0 0 / var(--glass-opacity, 30%)) 0%,

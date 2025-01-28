@@ -1,5 +1,5 @@
 .textarea {
-  border: var(--border) solid transparent;
+  border: var(--border) solid #0000;
   @apply bg-base-100 rounded-field min-h-20 shrink appearance-none py-2 align-middle;
   width: clamp(3rem, 20rem, 100%);
   padding-inline-start: 0.75rem;
@@ -7,9 +7,9 @@
   font-size: 0.875rem;
   border-color: var(--input-color);
   box-shadow:
-    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent) inset,
+    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
     0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-  --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
   textarea {
     @apply appearance-none bg-transparent;
     border: none;
@@ -23,7 +23,7 @@
   &:focus,
   &:focus-within {
     --input-color: var(--color-base-content);
-    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
     outline: 2px solid var(--input-color);
     outline-offset: 2px;
     isolation: isolate;
@@ -43,12 +43,12 @@
 .textarea-ghost {
   @apply bg-transparent;
   box-shadow: none;
-  border-color: transparent;
+  border-color: #0000;
 
   &:focus,
   &:focus-within {
     @apply text-base-content bg-base-100;
-    border-color: transparent;
+    border-color: #0000;
     box-shadow: none;
   }
 }

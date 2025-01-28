@@ -20,7 +20,7 @@
     border-radius: var(--radius-field);
     border: none;
     padding: 0.5rem;
-    background: transparent;
+    background: #0000;
   }
   &::part(button):hover {
     background: var(--color-base-200);
@@ -88,7 +88,7 @@
     color: inherit;
     width: 2.25rem;
     height: 2.25rem;
-    border: 2px solid transparent;
+    border: 2px solid #0000;
     border-radius: var(--radius-field);
     background: 0 0;
     justify-content: center;
@@ -368,7 +368,7 @@
       border: 0;
       width: 2.25rem;
       height: 2.25rem;
-      color: transparent;
+      color: #0000;
       font-size: 1.2em;
       border-radius: var(--radius-field);
       &:hover {
