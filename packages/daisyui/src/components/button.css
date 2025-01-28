@@ -31,7 +31,7 @@
   --btn-shadow: 0 3px 2px -2px
       color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), transparent),
     0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), transparent);
-  --btn-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.2'%3E%3C/rect%3E%3C/svg%3E");
+  --btn-noise: var(--fx-noise);
 
   &:hover {
     --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), black 7%);
