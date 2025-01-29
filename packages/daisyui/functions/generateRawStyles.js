@@ -48,7 +48,16 @@ export async function generateResponsiveVariants(css) {
   return css + responsiveStyles + keyframesStyles
 }
 
-async function processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude) {
+async function processFile(
+  file,
+  stylesDir,
+  distDir,
+  defaultTheme,
+  theme,
+  responsive,
+  exclude,
+  layer,
+) {
   const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), "utf-8")
   let stylesContent = await compileAndExtractStyles(styleContent, defaultTheme, theme)
 
@@ -58,13 +67,23 @@ async function processFile(file, stylesDir, distDir, defaultTheme, theme, respon
 
   stylesContent = cleanCss(stylesContent)
 
+  if (layer) {
+    stylesContent = `@layer ${layer} {\n${stylesContent}\n}`
+  }
+
   await fs.writeFile(
     path.join(import.meta.dirname, distDir, `${distDir}/${file}.css`),
     stylesContent,
   )
 }
 
-export async function generateRawStyles({ srcDir, distDir, responsive = false, exclude = [] }) {
+export async function generateRawStyles({
+  srcDir,
+  distDir,
+  responsive = false,
+  exclude = [],
+  layer = null,
+}) {
   try {
     const { defaultTheme, theme } = await loadThemes()
 
@@ -73,10 +92,9 @@ export async function generateRawStyles({ srcDir, distDir, responsive = false, e
 
     // Process all files concurrently
     const processPromises = files.map((file) =>
-      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude).catch(
+      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude, layer).catch(
         (fileError) => {
           throw new Error(`Error processing file ${file}: ${fileError.message}`)
-          // You might want to throw or handle this error differently
         },
       ),
     )

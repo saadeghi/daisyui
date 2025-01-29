@@ -6,55 +6,68 @@ import { cleanCss } from "./cleanCss.js"
 const readFileContent = async (filePath) => {
   return await fs.readFile(filePath, "utf8")
 }
-
+const getThemeDirs = () => ["light", "dark"]
+const createThemePath = (theme) => path.join("./theme", `${theme}.css`)
+const wrapThemeContent = (contents) => `@layer base{\n${contents.join("\n")}\n}`
 const readThemeCSS = async () => {
-  const themeDirs = ["light", "dark"]
+  const themeDirs = getThemeDirs()
   const themeContents = await Promise.all(
-    themeDirs.map((theme) => readFileContent(path.join("./theme", `${theme}.css`))),
+    themeDirs.map((theme) => readFileContent(createThemePath(theme))),
   )
-  return themeContents.join("\n")
+  return wrapThemeContent(themeContents)
+}
+
+const directoryMap = {
+  "./base": false,
+  "./components": false,
+  "./utilities": false,
+  "./colors": "utilities",
+}
+
+const wrapInLayer = (content, layerName) => {
+  return layerName ? `@layer ${layerName}{\n${content}\n}` : content
+}
+
+const filterExcludedFiles = (files, excludeFiles) => {
+  return files.filter((file) => !excludeFiles.includes(`${file}.css`))
+}
+
+const readDirectoryContent = async (directory, layerName, excludeFiles = []) => {
+  const files = await getFileNames(directory, ".css", false)
+  const filteredFiles = filterExcludedFiles(files, excludeFiles)
+
+  const contents = await Promise.all(
+    filteredFiles.map(async (file) => {
+      const content = await readFileContent(`${directory}/${file}.css`)
+      return wrapInLayer(content, layerName)
+    }),
+  )
+
+  return contents
 }
 
 const readAllCSSDirectories = async (excludeFiles = []) => {
-  const directories = ["./base", "./components", "./utilities", "./colors"]
-
-  const allFiles = await Promise.all(directories.map((dir) => getFileNames(dir, ".css", false)))
+  const directories = Object.keys(directoryMap)
 
   const allContents = await Promise.all(
-    allFiles.flatMap((files, index) =>
-      files
-        .filter((file) => !excludeFiles.includes(`${file}.css`))
-        .map((file) => readFileContent(`${directories[index]}/${file}.css`)),
-    ),
+    directories.map((dir) => readDirectoryContent(dir, directoryMap[dir], excludeFiles)),
   )
 
-  return allContents
+  return allContents.flat()
 }
-
+const combineContent = (themeCSS, otherCSS) => {
+  return [themeCSS, ...otherCSS].join("\n")
+}
+const writeContentToFile = async (file, content) => {
+  const cleanedContent = cleanCss(content)
+  await fs.writeFile(file, cleanedContent)
+}
 export const packCss = async (file, excludeFiles = []) => {
-  const [
-    // preflightCSS,
-    themeCSS,
-    otherCSS,
-  ] = await Promise.all([
-    // Read preflight CSS
-    // readFileContent('node_modules/tailwindcss/preflight.css'),
-
-    // Read theme CSS files
+  const [themeCSS, otherCSS] = await Promise.all([
     readThemeCSS(),
-
-    // Read other CSS directories
     readAllCSSDirectories(excludeFiles),
   ])
 
-  // Combine all content and write to file
-  let allContent = [
-    // preflightCSS,
-    themeCSS,
-    ...otherCSS,
-  ].join("\n")
-
-  allContent = cleanCss(allContent)
-
-  await fs.writeFile(file, allContent)
+  const allContent = combineContent(themeCSS, otherCSS)
+  await writeContentToFile(file, allContent)
 }
