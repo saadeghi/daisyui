@@ -1,5 +1,6 @@
 .divider {
-  @apply my-4 flex h-4 flex-row items-center self-stretch whitespace-nowrap;
+  @apply flex h-4 flex-row items-center self-stretch whitespace-nowrap;
+  margin: var(--divider-m, 1rem 0);
 
   &:before,
   &:after {
@@ -13,8 +14,9 @@
 }
 
 .divider-horizontal {
+  --divider-m: 0 1rem;
   &.divider {
-    @apply mx-4 my-0 h-auto w-4 flex-col;
+    @apply h-auto w-4 flex-col;
 
     &:before {
       @apply h-full w-0.5;
@@ -27,8 +29,9 @@
 }
 
 .divider-vertical {
+  --divider-m: 1rem 0;
   &.divider {
-    @apply mx-0 my-4 h-4 w-auto flex-row;
+    @apply h-4 w-auto flex-row;
 
     &:before {
       @apply h-0.5 w-full;

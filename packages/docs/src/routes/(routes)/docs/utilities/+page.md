@@ -138,6 +138,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--cardtitle-fs`                      | font size of the card title                                                 |
 | Checkbox        | `--size`                              | size of the checkbox                                                        |
 | Countdown       | `--value`                             | value of the countdown                                                      |
+| Divider         | `--divider-m`                         | margin of the divider                                                       |
 | Dropdown        | `--anchor-v`                          | vertical position of the anchor                                             |
 |                 | `--anchor-h`                          | horizontal position of the anchor                                           |
 | File input      | `--input-color`                       | color of the file input                                                     |
