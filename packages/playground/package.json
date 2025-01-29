@@ -9,19 +9,16 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.0",
-    "astro": "^5.0.0-beta.12",
+    "@tailwindcss/vite": "4.0.1",
+    "astro": "5.1.10",
     "daisyui": "workspace:*"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.0",
-    "@astrojs/react": "^3.6.3",
-    "@astrojs/solid-js": "^4.4.4",
-    "@astrojs/svelte": "^6.0.2",
-    "@astrojs/vue": "^4.5.3",
-    "pikaday": "^1.8.2",
-    "react": "^18.3.1",
-    "react-day-picker": "^9.4.0",
-    "react-dom": "^18.3.1"
+    "@astrojs/react": "4.2.0",
+    "@astrojs/vue": "5.0.6",
+    "pikaday": "1.8.2",
+    "react": "19.0.0",
+    "react-day-picker": "9.5.1",
+    "react-dom": "19.0.0"
   }
 }

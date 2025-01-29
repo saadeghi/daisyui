@@ -37,6 +37,7 @@ async function generateFiles() {
           "calendar",
           "countdown",
           "loading",
+          "filter",
           "mask",
           "mockup",
           "skeleton",
