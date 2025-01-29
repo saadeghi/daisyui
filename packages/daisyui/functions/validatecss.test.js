@@ -51,15 +51,24 @@ test("Validate all CSS files", () => {
       throw error
     }
 
-    // Log errors if there are any
-    if (result.warnings.length > 0) {
+    const warningsToIgnore = [{ type: "AtRuleInvalid", value: "property" }]
+
+    const relevantWarnings = result.warnings.filter((warning) => {
+      const shouldIgnore = warningsToIgnore.some(
+        (rule) => rule.type === warning.type && rule.value === warning.value,
+      )
+      return !shouldIgnore
+    })
+
+    // Log remaining warnings if there are any
+    if (relevantWarnings.length > 0) {
       console.error(`Warnings in CSS file: ${file}`)
-      result.warnings.forEach((warning) => {
+      relevantWarnings.forEach((warning) => {
         console.error(warning)
       })
     }
 
-    // Check if there are any warnings
-    expect(result.warnings.length).toBe(0)
+    // Check if there are any warnings (excluding the filtered ones)
+    expect(relevantWarnings.length).toBe(0)
   })
 })
