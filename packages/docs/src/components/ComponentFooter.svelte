@@ -236,7 +236,7 @@
             target="_blank"
             rel="noopener, noreferrer"
             class="link"
-            href={`https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
+            href={`https://github.com/saadeghi/daisyui/blob/v5/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
               /\/$/,
               "",
             )}/+page.md?plain=1`}
