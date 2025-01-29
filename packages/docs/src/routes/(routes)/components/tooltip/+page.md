@@ -59,7 +59,7 @@ classnames:
 ```
 
 ### ~Tooltip with tooltip-content
-<div class="my-6">
+<div class="my-6 mt-12">
   <div class="tooltip">
     <div class="tooltip-content">
       <div class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black">Wow!</div>
