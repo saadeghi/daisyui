@@ -35,7 +35,7 @@
     @apply bg-base-100 sticky right-0 left-0;
   }
 
-  :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child) {
+  :where(thead tr, tbody tr:not(:last-child)) {
     border-bottom: var(--border) solid color-mix(in oklch, var(--color-base-content) 5%, #0000);
   }
 }
