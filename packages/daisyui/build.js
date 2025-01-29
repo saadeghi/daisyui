@@ -43,7 +43,7 @@ async function generateFiles() {
           "swap",
           "validator",
         ],
-        layer: "components",
+        layer: "utilities",
       }),
     !isDev &&
       generateRawStyles({
