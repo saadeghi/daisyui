@@ -79,10 +79,17 @@ In this example, we only include the button, input, and select components. All o
 
 ```postcss:Example
 @plugin "daisyui" {
+  exclude: rootscrollgutter;
+}
+```
+In this example, we exclude the `rootscrollgutter` style which is added to the `:root` when a modal or drawer is open.
+
+```postcss:Example
+@plugin "daisyui" {
   exclude: checkbox, footer, typography, glass, rootcolor, rootscrollgutter;
 }
 ```
-In this example, we exclude the the listed files. All other parts of daisyUI will be available to use. This is useful if you want to opt out of some parts of daisyUI, especially the base styles like `rootscrollgutter` Or if you want to mix daisyUI for some parts and another library for the rest.  
+In this example, we exclude the the listed files. All other parts of daisyUI will be available to use. This is useful if you want to opt out of some parts of daisyUI or if you want to mix daisyUI for some parts and another library for the rest.  
 [Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/v5/packages/daisyui/src/components).
 
 

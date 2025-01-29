@@ -137,7 +137,7 @@ classnames:
 <div role="alert" class="$$alert $$alert-warning $$alert-soft">
   <span>Warning: Invalid email address!</span>
 </div>
-<div role="alert" class="$$alert $$error $$alert-soft">
+<div role="alert" class="$$alert $$alert-error $$alert-soft">
   <span>Error! Task failed successfully.</span>
 </div>
 ```
@@ -167,7 +167,7 @@ classnames:
 <div role="alert" class="$$alert $$alert-warning $$alert-outline">
   <span>Warning: Invalid email address!</span>
 </div>
-<div role="alert" class="$$alert $$error $$alert-outline">
+<div role="alert" class="$$alert $$alert-error $$alert-outline">
   <span>Error! Task failed successfully.</span>
 </div>
 ```
@@ -197,7 +197,7 @@ classnames:
 <div role="alert" class="$$alert $$alert-warning $$alert-dash">
   <span>Warning: Invalid email address!</span>
 </div>
-<div role="alert" class="$$alert $$error $$alert-dash">
+<div role="alert" class="$$alert $$alert-error $$alert-dash">
   <span>Error! Task failed successfully.</span>
 </div>
 ```

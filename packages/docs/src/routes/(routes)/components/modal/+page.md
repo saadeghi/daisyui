@@ -50,6 +50,10 @@ classnames:
 3. [Using `<a>` anchor links](#method-3-using-anchor-links-legacy)  
   A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 
+> :INFO:
+>
+> Opening a modal adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.  
+> If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
 ## Method 1. HTML dialog element `recommended`
 HTML dialog element is a native way to create modals. It is accessible and we can close the modal using `Esc` key.  

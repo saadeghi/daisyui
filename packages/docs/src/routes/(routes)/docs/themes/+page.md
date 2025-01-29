@@ -15,6 +15,7 @@ You can also create your own custom themes or customize built-in themes.
 You can manage themes by adding brackets in front of `@plugin "daisyui"` in your CSS file.
 
 ```diff:app.css
+  @import "tailwindcss";
 - @plugin "daisyui";
 + @plugin "daisyui" {
 +   themes: light --default, dark --prefersdark;
@@ -29,6 +30,7 @@ You can also set `--prefersdark` flag for a theme to make it the default theme f
 By default, `light` and `dark` themes are enabled. Let's enable `cupcake` theme:  
 
 ```css:app.css
+@import "tailwindcss";
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake;
 }
@@ -51,6 +53,7 @@ And set `cupcake` theme for the page:
 Enable all {data.themes.length} built-in themes by setting `themes` to `all`:
 
 ```css:app.css
+@import "tailwindcss";
 @plugin "daisyui" {
   themes: all;
 }
@@ -61,6 +64,7 @@ Enable all {data.themes.length} built-in themes by setting `themes` to `all`:
 To disable `dark` theme for example, remove it from the list. Now only light theme is included:
 
 ```diff:app.css
+ @import "tailwindcss";
  @plugin "daisyui" {
 -  themes: light --default, dark --prefersdark;
 +  themes: light --default;
@@ -70,6 +74,7 @@ To disable `dark` theme for example, remove it from the list. Now only light the
 If for some reason you want to disable all themes and remove all daisyUI colors, set `themes` to `false`:
 
 ```css:app.css
+@import "tailwindcss";
 @plugin "daisyui" {
   themes: false;
 }
@@ -96,6 +101,8 @@ If for some reason you want to disable all themes and remove all daisyUI colors,
 To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the following structure:
 
 ```css:app.css
+@import "tailwindcss";
+@plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "mytheme";
   default: false; /* set as default */
@@ -146,6 +153,8 @@ To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the 
 To customize a built-in theme, you can use the same structure as adding a new theme, but with the same name as the built-in theme. For example, to customize the `light` theme:
 
 ```css:app.css
+@import "tailwindcss";
+@plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
@@ -181,6 +190,7 @@ All the other values will be inherited from the original theme.
 <Translate text="In the example below, 'night' is darkmode theme so we add it to `@variant dark`"/>
 
 ```css:app.css
+@import "tailwindcss";
 @plugin "daisyui" {
   themes: winter --default, night --prefersdark;
 }

@@ -65,13 +65,12 @@
   desc={data.product.attributes.description}
 />
 
-<div class="mx-4">
-  <a
-    class="inline-flex items-center gap-2 text-base-content opacity-50 hover:opacity-100"
-    href="/store/"
-    data-sveltekit-preload-data
-  >
-    <svg class="size-4 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+<div>
+  <a class="btn btn-ghost group" href="/store/" data-sveltekit-preload-data>
+    <svg
+      class="size-4 group-hover:-translate-x-0.5 transition-transform inline-block"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
       ><g fill="currentColor"
         ><line
           x1="17"

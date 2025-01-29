@@ -83,10 +83,9 @@
             fill="currentColor"
           /></svg
         >
-        <span
-          >Add "<span class="font-bold">{currentTheme.name}</span>" theme to your CSS file<span>
-          </span></span
-        >
+        <span>
+          Add <span class="font-bold">{currentTheme.name}</span> theme to your CSS file
+        </span>
       </h3>
       <button class="btn btn-sm" onclick={copyThemeCSSToClipboard}>
         {#if isClipboardButtonPressed}
@@ -107,6 +106,10 @@
         Copy to clipboard
       </button>
     </div>
+    <span class="text-xs">
+      <span class="text-base-content/40">Add it after</span>
+      <span class="text-base-content/50 italic font-bold">@plugin "daisyui";</span></span
+    >
     <textarea
       spellcheck="false"
       data-theme="dark"

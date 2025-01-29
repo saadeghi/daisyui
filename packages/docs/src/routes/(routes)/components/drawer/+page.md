@@ -27,6 +27,8 @@ classnames:
   import Component from "$components/Component.svelte"
 </script>
 
+### Structure
+
 Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page, based on the screen size or based on the value of a `drawer-toggle` checkbox.  
 Drawer must be the parent element of the content and sidebar.
 
@@ -41,16 +43,17 @@ Drawer must be the parent element of the content and sidebar.
        ╰── // Sidebar content (menu or anything)
 ```
 
+### Functionality
+
+Drawer sidebar is hidden by default.
+You can make it visible on larger screens using `lg:drawer-open` class (or using other responsive prefixes: sm, md, lg, xl)
+
+You can check/uncheck the checkbox using JavaScript or by clicking the `label` tag which is assigned to the hidden checkbox
+
 > :INFO:
 >
-> Drawer sidebar is hidden by default.
-> You can make it visible on larger screens using `lg:drawer-open` class (or using other responsive prefixes: sm, md, lg, xl)
-
-
-> :INFO:
->
-> You can check/uncheck the checkbox using JavaScript or by clicking the `label` tag which is assigned to the hidden checkbox
-
+> Opening a drawer adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.  
+> If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
 ### ~Drawer
 <div class="drawer h-56 rounded overflow-hidden">
