@@ -28,7 +28,8 @@
     }
   }
   > span {
-    @apply bg-base-100 absolute start-3 top-1/2 z-1 px-1 opacity-40;
+    @apply bg-base-100 absolute start-3 z-1 px-1 opacity-40;
+    top: calc(var(--size-field, 0.25rem) * 10 / 2);
     line-height: 1;
     border-radius: 2px;
     pointer-events: none;
@@ -56,17 +57,22 @@
   }
   &:has(.input-xs) span {
     font-size: 0.6875rem;
+    top: calc(var(--size-field, 0.25rem) * 6 / 2);
   }
   &:has(.input-sm) span {
     font-size: 0.75rem;
+    top: calc(var(--size-field, 0.25rem) * 8 / 2);
   }
   &:has(.input-md) span {
     font-size: 0.875rem;
+    top: calc(var(--size-field, 0.25rem) * 10 / 2);
   }
   &:has(.input-lg) span {
     font-size: 1.125rem;
+    top: calc(var(--size-field, 0.25rem) * 12 / 2);
   }
   &:has(.input-xl) span {
     font-size: 1.375rem;
+    top: calc(var(--size-field, 0.25rem) * 14 / 2);
   }
 }
