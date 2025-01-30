@@ -1,7 +1,7 @@
 .list {
   @apply flex flex-col;
   font-size: 0.875rem;
-  .list-row {
+  :where(.list-row) {
     --list-grid-cols: minmax(0, auto) 1fr;
     @apply rounded-box relative grid grid-flow-col gap-4 p-4;
     word-break: break-word;
