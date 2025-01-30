@@ -397,6 +397,102 @@
     </div>
   </div>
   <div class="my-40">
+    {#if data.product.packages}
+      <div class="overflow-x-auto border border-base-300 rounded-box whitespace-nowrap">
+        <table class="table table-xs sm:table-sm lg:table-md table-zebra">
+          <!-- Table head -->
+          <thead>
+            <tr>
+              {#each data.product.packages[0] as header, headerIndex}
+                <th class:text-center={headerIndex !== 0}>{header}</th>
+              {/each}
+            </tr>
+          </thead>
+          <!-- Table body -->
+          <tbody>
+            {#each data.product.packages.slice(1) as row}
+              <tr>
+                {#each row as cell, cellIndex}
+                  <td class:text-center={cellIndex !== 0}>
+                    {#if typeof cell === "boolean"}
+                      {#if cell}
+                        <svg
+                          aria-label="Yes"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-5 inline-block text-success"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M5 12l5 5L20 7"
+                          />
+                        </svg>
+                      {:else}
+                        <svg
+                          aria-label="No"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="size-5 inline-block text-error"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M18 6L6 18M6 6l12 12"
+                          />
+                        </svg>
+                      {/if}
+                    {:else}
+                      {cell}
+                    {/if}
+                  </td>
+                {/each}
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="my-20 flex justify-center">
+        <a
+          href={rednerBuyNowUrl(
+            data.product.attributes.buy_now_url,
+            data.product.ref,
+            data.product.params,
+          )}
+          class="btn lg:btn-lg xl:btn-xl btn-primary group shrink-0 rounded-full xl:px-10"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Buy {data.product.attributes.name}
+          <span class="flex gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              >
+              </path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    {/if}
+  </div>
+  <div class="my-40">
     {#each data.product.more_images as image}
       <img
         src={image}
