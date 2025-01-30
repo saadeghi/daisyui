@@ -234,9 +234,11 @@ classnames:
 <button type="submit" class="$$btn">Button</button>
 <input type="button" value="Input" class="$$btn" />
 <input type="submit" value="Submit" class="$$btn" />
-<input type="radio" aria-label="Radio" class="$$btn" />
-<input type="checkbox" aria-label="Checkbox" class="$$btn" />
-<input type="reset" value="Reset" class="$$btn" />
+<form style="display:contents">
+  <input type="radio" aria-label="Radio" class="btn" />
+  <input type="checkbox" aria-label="Checkbox" class="btn" />
+  <input type="reset" value="Reset" class="btn">
+</form>
 ```
 
 
