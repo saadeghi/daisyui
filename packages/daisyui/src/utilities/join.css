@@ -10,6 +10,12 @@
     border-start-end-radius: var(--join-se, 0);
     border-end-start-radius: var(--join-es, 0);
     border-end-end-radius: var(--join-ee, 0);
+    * {
+      --join-ss: var(--radius-field);
+      --join-se: var(--radius-field);
+      --join-es: var(--radius-field);
+      --join-ee: var(--radius-field);
+    }
   }
 
   > .join-item:where(:first-child) {
