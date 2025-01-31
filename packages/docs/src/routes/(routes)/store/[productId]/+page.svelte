@@ -58,6 +58,57 @@
 
     return similarProducts
   }
+
+  function getLinksIcon(link) {
+    switch (link) {
+      case "license":
+        return `
+          <svg class="inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+              <path d="M7 20l10 0"></path>
+              <path d="M6 6l6 -1l6 1"></path>
+              <path d="M12 3l0 17"></path>
+              <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+              <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>
+            </g>
+          </svg>
+        `
+      case "screenshot":
+        return `
+          <svg class="inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21L16.65 16.65"></path>
+              <path d="M11 8L11 14"></path>
+              <path d="M8 11L14 11"></path>
+            </g>
+          </svg>
+        `
+      case "preview":
+        return `
+          <svg class="inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+              <path d="M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z"></path>
+              <path d="M12 17v4"></path>
+              <path d="M8 21h8"></path>
+              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            </g>
+          </svg>
+        `
+      default:
+        return ""
+    }
+  }
+
+  let screenshotDialog = $state()
+  let licenseDialog = $state()
+  let screenshotUrl = $state("")
+  let licenseContent = $state("")
+  const openModal = async (url) => {
+    const response = await fetch(url)
+    licenseContent = await response.text()
+    licenseDialog.showModal()
+  }
 </script>
 
 <SEO
@@ -200,74 +251,54 @@
           style={`grid-template-columns: repeat(${Object.keys(data.product.links).length}, minmax(0, 1fr));`}
         >
           {#each Object.entries(data.product.links) as [link, value]}
-            <a
-              target="_blank"
-              aria-label={link}
-              href={value}
-              rel="noopener noreferrer"
-              class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100"
-            >
-              {#if link === "license"}
-                <svg
-                  class="inline-block size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  ><g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                    fill="none"
-                    stroke="currentColor"
-                    ><path d="M7 20l10 0"></path><path d="M6 6l6 -1l6 1"></path><path d="M12 3l0 17"
-                    ></path><path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path><path
-                      d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0"
-                    ></path></g
-                  ></svg
-                >
-              {/if}
-              {#if link === "screenshot"}
-                <svg
-                  class="inline-block size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                    fill="none"
-                    stroke="currentColor"
-                    ><circle cx="11" cy="11" r="8"></circle><path d="M21 21L16.65 16.65"
-                    ></path><path d="M11 8L11 14"></path><path d="M8 11L14 11"></path></g
-                  >
-                </svg>
-              {/if}
-              {#if link === "preview"}
-                <svg
-                  class="inline-block size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                    fill="none"
-                    stroke="currentColor"
-                    ><path
-                      d="M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z"
-                    ></path><path d="M12 17v4"></path><path d="M8 21h8"></path><rect
-                      x="2"
-                      y="3"
-                      width="20"
-                      height="14"
-                      rx="2"
-                    ></rect></g
-                  >
-                </svg>
-              {/if}
-              <span>{link}</span>
-            </a>
+            {#if link === "license"}
+              <button
+                class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
+                onclick={() => openModal(value)}
+              >
+                {@html getLinksIcon(link)}
+                <span>{link}</span>
+              </button>
+              <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
+                <div class="modal-box max-h-[90vh] max-w-[50rem] w-full lg:p-20">
+                  <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
+                  <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
+            {:else if link === "screenshot"}
+              <button
+                class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
+                onclick={() => {
+                  screenshotDialog.showModal()
+                  screenshotUrl = value
+                }}
+              >
+                {@html getLinksIcon(link)}
+                <span>{link}</span>
+              </button>
+              <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
+                <div class="modal-box max-h-[90vh] max-w-[90vw] w-full p-0">
+                  <img src={screenshotUrl} alt="Screenshot" class="w-full h-full object-cover" />
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
+            {:else}
+              <a
+                target="_blank"
+                aria-label={link}
+                href={value}
+                rel="noopener noreferrer"
+                class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100"
+              >
+                {@html getLinksIcon(link)}
+                <span>{link}</span>
+              </a>
+            {/if}
           {/each}
         </div>
       </div>
