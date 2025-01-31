@@ -17,10 +17,6 @@
     0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
   --size: calc(var(--size-field, 0.25rem) * 10);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-  &:where(::file-selector-button) {
-    @apply text-base-content;
-  }
-
   &::file-selector-button {
     @apply me-4 cursor-pointer px-4 select-none;
     height: calc(100% + var(--border) * 2);
