@@ -128,6 +128,11 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Adjusted padding in card body.
 - Adjusted font size.
 
+```diff:page.html
+- <div class="card card-bordered">
++ <div class="card card-border">
+```
+
 🗑️ Removals
 - Removed `card-compact`. Use `card-sm` instead.
 
@@ -479,7 +484,12 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🔧 Changes
 - Changed and refactored `tabs` and `tab-content` form a grid to flex, allowing us to fix the unstable margin issue at the end of the `tab-content` which was a side-effect of using infinite grid columns in v4, to push the tabs to the left while keeping the content full width. flex and flex order gives us more control over in this layout.
+- **Breaking Change:** Renamed `tabs-lifted` to `tabs-lift`.
 
+```diff:page.html
+- <div class="tabs tabs-lifted">
++ <div class="tabs tabs-lift">
+```
 
 ### Table
 
