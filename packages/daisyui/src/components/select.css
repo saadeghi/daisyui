@@ -31,7 +31,8 @@
   }
   select {
     @apply -ms-4 -me-7 h-full w-[calc(100%+2.75rem)] appearance-none ps-4 pe-7;
-    background-color: inherit;
+    background: inherit;
+    border-radius: inherit;
     border-style: none;
     &:focus,
     &:focus-within {
