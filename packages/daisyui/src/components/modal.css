@@ -60,7 +60,7 @@
 }
 
 .modal-box {
-  @apply bg-base-100 col-start-1 row-start-1 w-11/12 max-w-[32rem] p-6;
+  @apply bg-base-100 col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
   transition:
     translate 0.3s ease-out,
     scale 0.3s ease-out,
