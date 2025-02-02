@@ -103,32 +103,38 @@ export const productCustomAttributes = [
     media: [
       {
         type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-2.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-02.webp",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-05.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-05.webp",
       },
       {
         type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-1.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-01.webp",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-06.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-06.webp",
       },
       {
         type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-3.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-03.webp",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-07.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-07.webp",
       },
       {
         type: "image",
-        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-4.webp",
-        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-04.webp",
+        sm: "https://img.daisyui.com/images/store/small/nexus/nexus-08.webp",
+        lg: "https://img.daisyui.com/images/store/large/nexus/nexus-08.webp",
       },
     ],
     quote: {
       img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
       name: "Pouya",
-      text: [["HTML version is now available!"]],
+      text: [
+        [
+          "Nexus 2.0 is now available with Tailwind CSS 4.0 and daisyUI 5.0! New design, new pages, more themes, more features, with many improvements and bug fixes.",
+        ],
+        ["SvelteKit version added"],
+      ],
     },
     screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
-    tech: ["html", "react", "nextjs"],
+    tech: ["html", "svelte", "react", "nextjs"],
+    tags: ["Updated to daisyUI 5.0"],
     preview: {
       button: "Live demo",
       url: "https://nexus.daisyui.com/",
