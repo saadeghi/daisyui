@@ -65,11 +65,16 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/nexus/nexus-08.webp",
       },
     ],
-    // quote: {
-    //   img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
-    //   name: "Pouya",
-    //   text: [["HTML version is now available!"]],
-    // },
+    quote: {
+      img: "https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp",
+      name: "Pouya",
+      text: [
+        [
+          "Nexus 2.0 is now available with Tailwind CSS 4.0 and daisyUI 5.0! New design, new pages, more themes, more features, with many improvements and bug fixes.",
+        ],
+        ["SvelteKit version added"],
+      ],
+    },
     packages: [
       [, "Solo package", "Team package", "Enterprise package"],
       ["🛠️ Frameworks", , , ,],
@@ -84,7 +89,8 @@ export const productCustomAttributes = [
       ["Support in Discord", true, true, true],
       ["Updates and bugfixes", true, true, true],
     ],
-    tech: ["html", "react", "nextjs"],
+    tech: ["html", "svelte", "react", "nextjs"],
+    tags: ["Updated to daisyUI 5.0"],
     links: {
       license: "https://api.daisyui.com/license/nexus@1.txt",
       screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
