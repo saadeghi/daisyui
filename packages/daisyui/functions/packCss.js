@@ -8,13 +8,12 @@ const readFileContent = async (filePath) => {
 }
 const getThemeDirs = () => ["light", "dark"]
 const createThemePath = (theme) => path.join("./theme", `${theme}.css`)
-const wrapThemeContent = (contents) => `@layer base{\n${contents.join("\n")}\n}`
 const readThemeCSS = async () => {
   const themeDirs = getThemeDirs()
   const themeContents = await Promise.all(
     themeDirs.map((theme) => readFileContent(createThemePath(theme))),
   )
-  return wrapThemeContent(themeContents)
+  return themeContents.join("\n")
 }
 
 const directoryMap = {
@@ -24,22 +23,18 @@ const directoryMap = {
   "./colors": "utilities",
 }
 
-const wrapInLayer = (content, layerName) => {
-  return layerName ? `@layer ${layerName}{\n${content}\n}` : content
-}
-
 const filterExcludedFiles = (files, excludeFiles) => {
   return files.filter((file) => !excludeFiles.includes(`${file}.css`))
 }
 
-const readDirectoryContent = async (directory, layerName, excludeFiles = []) => {
+const readDirectoryContent = async (directory, excludeFiles = []) => {
   const files = await getFileNames(directory, ".css", false)
   const filteredFiles = filterExcludedFiles(files, excludeFiles)
 
   const contents = await Promise.all(
     filteredFiles.map(async (file) => {
       const content = await readFileContent(`${directory}/${file}.css`)
-      return wrapInLayer(content, layerName)
+      return content
     }),
   )
 
@@ -50,7 +45,7 @@ const readAllCSSDirectories = async (excludeFiles = []) => {
   const directories = Object.keys(directoryMap)
 
   const allContents = await Promise.all(
-    directories.map((dir) => readDirectoryContent(dir, directoryMap[dir], excludeFiles)),
+    directories.map((dir) => readDirectoryContent(dir, excludeFiles)),
   )
 
   return allContents.flat()

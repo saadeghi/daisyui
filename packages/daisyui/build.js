@@ -27,7 +27,7 @@ async function generateFiles() {
         states: ["hover"],
       }),
     !isDev && generateThemeFiles({ srcDir: "src/themes", distDir: "theme" }),
-    !isDev && generateRawStyles({ srcDir: "../src/base", distDir: "../base", layer: "base" }),
+    !isDev && generateRawStyles({ srcDir: "../src/base", distDir: "../base" }),
     !isDev &&
       generateRawStyles({
         srcDir: "../src/components",
@@ -44,7 +44,6 @@ async function generateFiles() {
           "swap",
           "validator",
         ],
-        layer: "utilities",
       }),
     !isDev &&
       generateRawStyles({
@@ -52,7 +51,6 @@ async function generateFiles() {
         distDir: "../utilities",
         responsive: true,
         exclude: ["typography", "glass", "join"],
-        layer: "utilities",
       }),
     generatePlugins({ type: "base", srcDir: "src/themes", distDir: "theme" }),
     generatePlugins({ type: "base", srcDir: "src/base", distDir: "base" }),

@@ -23,11 +23,6 @@ export function escapeBreakpointColon(css, breakpoint) {
   return css.replace(new RegExp(`\\.${breakpoint}:`, "g"), `.${breakpoint}\\:`)
 }
 
-// wrap styles in layer
-export function wrapInLayer(styles, layer) {
-  return layer ? `@layer ${layer} {\n${styles}\n}` : styles
-}
-
 // generate media query
 export function generateMediaQuery(breakpoint, minWidth, styles) {
   return `\n@media (min-width: ${minWidth}) {\n${styles}\n}\n\n`
@@ -75,7 +70,6 @@ async function processFile(
   theme,
   responsive,
   exclude,
-  layer,
 ) {
   const styleContent = await fs.readFile(path.join(stylesDir, `${distDir}/${file}.css`), "utf-8")
   let stylesContent = await compileAndExtractStyles(styleContent, defaultTheme, theme)
@@ -85,10 +79,6 @@ async function processFile(
   }
 
   stylesContent = cleanCss(stylesContent)
-
-  if (layer) {
-    stylesContent = `@layer ${layer} {\n${stylesContent}\n}`
-  }
 
   await fs.writeFile(
     path.join(import.meta.dirname, distDir, `${distDir}/${file}.css`),
@@ -101,7 +91,6 @@ export async function generateRawStyles({
   distDir,
   responsive = false,
   exclude = [],
-  layer = null,
 }) {
   try {
     const { defaultTheme, theme } = await loadThemes()
@@ -111,7 +100,7 @@ export async function generateRawStyles({
 
     // Process all files concurrently
     const processPromises = files.map((file) =>
-      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude, layer).catch(
+      processFile(file, stylesDir, distDir, defaultTheme, theme, responsive, exclude).catch(
         (fileError) => {
           throw new Error(`Error processing file ${file}: ${fileError.message}`)
         },
