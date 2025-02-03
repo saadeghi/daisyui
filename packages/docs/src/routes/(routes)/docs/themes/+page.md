@@ -195,7 +195,7 @@ All the other values will be inherited from the original theme.
   themes: winter --default, night --prefersdark;
 }
 
-@variant dark (&:where([data-theme=night], [data-theme=night] *));
+@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
 ```
 ```html:index.html
 <div class="p-10 dark:p-20">
