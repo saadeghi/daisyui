@@ -92,7 +92,7 @@ export const productCustomAttributes = [
     tech: ["html", "svelte", "react", "nextjs"],
     tags: ["Updated to daisyUI 5.0"],
     links: {
-      license: "https://api.daisyui.com/license/nexus@1.txt",
+      license: "https://api.daisyui.com/license/nexus@2.txt",
       screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
       preview: "https://nexus.daisyui.com/",
     },
