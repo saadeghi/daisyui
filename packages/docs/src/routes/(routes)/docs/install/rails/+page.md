@@ -19,7 +19,7 @@ cd my-app
 Install [Tailwind CSS 4 gem](https://github.com/rails/tailwindcss-rails) for Rails
 
 ```sh:Terminal
-./bin/bundle add tailwindcss-rails --version "4.0.0.rc5"
+./bin/bundle add tailwindcss-rails --version "4.0.0"
 ./bin/rails tailwindcss:install
 ```
 
