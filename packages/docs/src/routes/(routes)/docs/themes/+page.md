@@ -171,11 +171,11 @@ All the other values will be inherited from the original theme.
 
 ```css:app.css
 [data-theme="light"] {
-  .my-btn: {
+  .my-btn {
     background-color: #1EA1F1;
     border-color: #1EA1F1;
   }
-  .my-btn:hover: {
+  .my-btn:hover {
     background-color: #1C96E1;
     border-color: #1C96E1;
   }
