@@ -10,8 +10,7 @@
       margin 0.1s,
       opacity 0.3s,
       padding 0.3s,
-      border-width 0.1s,
-      width 0.1s allow-discrete;
+      border-width 0.1s;
     &:not(:last-child) {
       @apply me-1;
     }
