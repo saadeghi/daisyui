@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.0.1",
+    "@tailwindcss/vite": "^4.0.4",
     "astro": "5.1.10",
     "daisyui": "workspace:*"
   },

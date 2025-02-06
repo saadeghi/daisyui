@@ -20,11 +20,12 @@
     "lint": "bunx -y oxlint@latest",
     "test": "bun test",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
-    "publish:alpha": "cd packages/daisyui && bun publish --tag=alpha",
-    "publish:beta": "cd packages/daisyui && bun publish --tag=beta"
+    "update:tw": "bun i tailwindcss@latest @tailwindcss/cli@latest && cd packages/docs && bun i @tailwindcss/vite@latest && cd ../playground && bun i @tailwindcss/vite@latest",
+    "publish:alpha": "bun run build && cd packages/daisyui && bun publish --tag=alpha",
+    "publish:beta": "bun run build && cd packages/daisyui && bun publish --tag=beta"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "4.0.1",
+    "@tailwindcss/cli": "^4.0.4",
     "commit-and-tag-version": "12.5.0",
     "culori": "4.0.1",
     "lightningcss": "1.29.1",
@@ -34,6 +35,6 @@
     "prettier": "3.4.2",
     "prettier-plugin-svelte": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "tailwindcss": "4.0.1"
+    "tailwindcss": "^4.0.4"
   }
 }

@@ -21,7 +21,7 @@
     "@sveltejs/kit": "2.16.1",
     "@sveltejs/vite-plugin-svelte": "5.0.3",
     "@tailwindcss/typography": "0.5.16",
-    "@tailwindcss/vite": "4.0.1",
+    "@tailwindcss/vite": "^4.0.4",
     "daisyui": "workspace:*",
     "dotenv": "16.4.7",
     "json-diff": "1.0.6",
