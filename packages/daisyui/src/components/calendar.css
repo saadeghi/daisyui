@@ -234,8 +234,10 @@
     font-weight: 400;
   }
   .rdp-today:not(.rdp-outside) {
-    background: var(--color-primary);
-    color: var(--color-primary-content);
+    .rdp-day_button {
+      background: var(--color-primary);
+      color: var(--color-primary-content);
+    }
   }
   .rdp-selected {
     font-weight: inherit;
