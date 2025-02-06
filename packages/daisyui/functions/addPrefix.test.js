@@ -313,3 +313,29 @@ test("addPrefix with descendant combinator and :where selector", () => {
   }
   expect(addPrefix(input, prefix)).toEqual(expected)
 })
+
+// nested not selector with :has()
+test("addPrefix with descendant combinator and :not(:has()) selector", () => {
+  const input = {
+    ".filter": {
+      "&:not(:has(input:checked:not(.filter-reset)))": {
+        ".filter-reset, input[type='reset']": {
+          scale: "0",
+          "border-width": "0",
+        },
+      },
+    },
+  }
+  const prefix = "dz-"
+  const expected = {
+    ".dz-filter": {
+      "&:not(:has(input:checked:not(.dz-filter-reset)))": {
+        ".dz-filter-reset, input[type='reset']": {
+          scale: "0",
+          "border-width": "0",
+        },
+      },
+    },
+  }
+  expect(addPrefix(input, prefix)).toEqual(expected)
+})

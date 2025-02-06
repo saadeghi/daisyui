@@ -31,8 +31,17 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
     return key
   }
 
-  if (key.startsWith("&.")) {
-    return `${prefixAmpDot}${key.slice(2)}`
+  if (key.startsWith("&")) {
+    // If it's a complex selector with :not(), :has(), etc.
+    if (key.match(/:[a-z-]+\(/)) {
+      return key.replace(/\.([\w-]+)/g, `.${prefix}$1`)
+    }
+    // For simple &. cases
+    if (key.startsWith("&.")) {
+      return `${prefixAmpDot}${key.slice(2)}`
+    }
+    // For other & cases (like &:hover or &:not(...))
+    return key.replace(/\.([\w-]+)/g, `.${prefix}$1`)
   }
 
   if (key.startsWith(":")) {
