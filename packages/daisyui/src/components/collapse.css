@@ -29,15 +29,12 @@
     visibility: visible;
     min-height: fit-content;
   }
-
-  &,
-  &:has(.collapse-title, > input:is([type="checkbox"], [type="radio"])) {
-    &:focus-visible {
-      outline-color: var(--color-base-content);
-      outline-style: solid;
-      outline-width: 2px;
-      outline-offset: 2px;
-    }
+  &:focus-visible,
+  &:has(> input:is([type="checkbox"], [type="radio"]):focus-visible) {
+    outline-color: var(--color-base-content);
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 2px;
   }
 
   &:not(.collapse-open, .collapse-close) {
