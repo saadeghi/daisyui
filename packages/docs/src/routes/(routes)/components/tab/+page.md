@@ -111,17 +111,17 @@ classnames:
 
 ### ~Tab box using radio inputs
 <div role="tablist" class="tabs tabs-box">
-  <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 1" />
-  <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 2" checked="checked" />
-  <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_1" class="tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_1" class="tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_1" class="tab" aria-label="Tab 3" />
 </div>
 
 ```html
 <!-- name of each tab group should be unique -->
 <div role="tablist" class="$$tabs $$tabs-box">
-  <input type="radio" name="my_tabs_1" role="tab" class="$$tab" aria-label="Tab 1" />
-  <input type="radio" name="my_tabs_1" role="tab" class="$$tab" aria-label="Tab 2" checked="checked" />
-  <input type="radio" name="my_tabs_1" role="tab" class="$$tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_1" class="$$tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_1" class="$$tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_1" class="$$tab" aria-label="Tab 3" />
 </div>
 ```
 
@@ -190,24 +190,24 @@ classnames:
 
 ### ~radio tab border + tab content
 <div role="tablist" class="tabs tabs-border w-full my-10 lg:mx-10">
-  <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_2" class="tab" aria-label="Tab 1" />
   <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
-  <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_2" class="tab" aria-label="Tab 2" checked="checked" />
   <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 2</div>
-  <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_2" class="tab" aria-label="Tab 3" />
   <div class="tab-content border-base-300 bg-base-100 p-10">Tab content 3</div>
 </div>
 
 ```html
 <!-- name of each tab group should be unique -->
 <div role="tablist" class="$$tabs $$tabs-border">
-  <input type="radio" name="my_tabs_2" role="tab" class="$$tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_2" class="$$tab" aria-label="Tab 1" />
   <div class="$$tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
 
-  <input type="radio" name="my_tabs_2" role="tab" class="$$tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_2" class="$$tab" aria-label="Tab 2" checked="checked" />
   <div class="$$tab-content border-base-300 bg-base-100 p-10">Tab content 2</div>
 
-  <input type="radio" name="my_tabs_2" role="tab" class="$$tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_2" class="$$tab" aria-label="Tab 3" />
   <div class="$$tab-content border-base-300 bg-base-100 p-10">Tab content 3</div>
 </div>
 ```
@@ -215,24 +215,24 @@ classnames:
 
 ### ~radio tab lift + tab content
 <div role="tablist" class="tabs tabs-lift w-full my-10 lg:mx-10">
-  <input type="radio" name="my_tabs_3" role="tab" class="tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 1" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-  <input type="radio" name="my_tabs_3" role="tab" class="tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 2" checked="checked" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-  <input type="radio" name="my_tabs_3" role="tab" class="tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_3" class="tab" aria-label="Tab 3" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
 
 ```html
 <!-- name of each tab group should be unique -->
 <div role="tablist" class="$$tabs $$tabs-lift">
-  <input type="radio" name="my_tabs_3" role="tab" class="$$tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_3" class="$$tab" aria-label="Tab 1" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
 
-  <input type="radio" name="my_tabs_3" role="tab" class="$$tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_3" class="$$tab" aria-label="Tab 2" checked="checked" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
 
-  <input type="radio" name="my_tabs_3" role="tab" class="$$tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_3" class="$$tab" aria-label="Tab 3" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
 ```
@@ -241,24 +241,24 @@ classnames:
 
 ### ~radio tab lift + tab content on bottom
 <div role="tablist" class="tabs tabs-bottom tabs-lift w-full my-10 lg:mx-10">
-  <input type="radio" name="my_tabs_4" role="tab" class="tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_4" class="tab" aria-label="Tab 1" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-  <input type="radio" name="my_tabs_4" role="tab" class="tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_4" class="tab" aria-label="Tab 2" checked="checked" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-  <input type="radio" name="my_tabs_4" role="tab" class="tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_4" class="tab" aria-label="Tab 3" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
 
 ```html
 <!-- name of each tab group should be unique -->
 <div role="tablist" class="$$tabs $$tabs-lift $$tabs-bottom">
-  <input type="radio" name="my_tabs_4" role="tab" class="$$tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_4" class="$$tab" aria-label="Tab 1" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
 
-  <input type="radio" name="my_tabs_4" role="tab" class="$$tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_4" class="$$tab" aria-label="Tab 2" checked="checked" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
 
-  <input type="radio" name="my_tabs_4" role="tab" class="$$tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_4" class="$$tab" aria-label="Tab 3" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
 ```
@@ -267,24 +267,24 @@ classnames:
 
 ### ~radio tab box + tab content
 <div role="tablist" class="tabs tabs-box w-full my-10 lg:mx-10">
-  <input type="radio" name="my_tabs_5" role="tab" class="tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 1" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
-  <input type="radio" name="my_tabs_5" role="tab" class="tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 2" checked="checked" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
-  <input type="radio" name="my_tabs_5" role="tab" class="tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 3" />
   <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
 
 ```html
 <!-- name of each tab group should be unique -->
 <div role="tablist" class="$$tabs $$tabs-box">
-  <input type="radio" name="my_tabs_5" role="tab" class="$$tab" aria-label="Tab 1" />
+  <input type="radio" name="my_tabs_5" class="$$tab" aria-label="Tab 1" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
 
-  <input type="radio" name="my_tabs_5" role="tab" class="$$tab" aria-label="Tab 2" checked="checked" />
+  <input type="radio" name="my_tabs_5" class="$$tab" aria-label="Tab 2" checked="checked" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
 
-  <input type="radio" name="my_tabs_5" role="tab" class="$$tab" aria-label="Tab 3" />
+  <input type="radio" name="my_tabs_5" class="$$tab" aria-label="Tab 3" />
   <div class="$$tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
 </div>
 ```
