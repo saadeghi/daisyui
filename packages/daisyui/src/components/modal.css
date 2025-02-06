@@ -2,9 +2,9 @@
   @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
   overflow-x: hidden;
   transition:
-    transform 0.3s ease-out allow-discrete,
-    visibility 0.3s ease-out allow-discrete,
-    opacity 0.1s ease-out allow-discrete;
+    transform 0.3s ease-out,
+    visibility 0s allow-discrete,
+    opacity 0.1s ease-out;
   overflow-y: hidden;
   overscroll-behavior: contain;
   z-index: 999;
@@ -15,7 +15,7 @@
     background-color: oklch(0% 0 0/ 0.4);
     transition:
       display 0.3s ease-out allow-discrete,
-      opacity 0.3s ease-out allow-discrete,
+      opacity 0.3s ease-out,
       visibility 0.3s ease-out allow-discrete;
   }
 
