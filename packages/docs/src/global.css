@@ -360,3 +360,78 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+
+/* gallery-column-reveal */
+.gallery-column-reveal {
+  @apply grid place-items-center overflow-hidden *:[grid-area:1/1];
+  .gallery-column-reveal-columns {
+    @apply z-10 flex size-full *:w-full;
+  }
+  .gallery-column-reveal-images {
+    @apply grid *:[grid-area:1/1];
+    > *:not(:nth-child(1)) {
+      @apply opacity-0;
+      transition: opacity 300ms;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(1):hover) {
+    .gallery-column-reveal-images > *:nth-child(1) {
+      @apply opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(2):hover) {
+    .gallery-column-reveal-images > *:nth-child(2) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(3):hover) {
+    .gallery-column-reveal-images > *:nth-child(3) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(4):hover) {
+    .gallery-column-reveal-images > *:nth-child(4) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(5):hover) {
+    .gallery-column-reveal-images > *:nth-child(5) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(6):hover) {
+    .gallery-column-reveal-images > *:nth-child(6) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(7):hover) {
+    .gallery-column-reveal-images > *:nth-child(7) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(8):hover) {
+    .gallery-column-reveal-images > *:nth-child(8) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(9):hover) {
+    .gallery-column-reveal-images > *:nth-child(9) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+  &:has(.gallery-column-reveal-columns > div:nth-child(10):hover) {
+    .gallery-column-reveal-images > *:nth-child(10) {
+      @apply scale-100 opacity-100;
+      transition: opacity 0s;
+    }
+  }
+}

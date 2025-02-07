@@ -34,12 +34,13 @@ export const productCustomAttributes = [
         lg: "https://img.daisyui.com/images/store/large/online-store/online-store-05.webp",
       },
     ],
-    tags: ["NEW"],
     links: {
       license: "https://api.daisyui.com/license/online-store@1.txt",
       screenshot: "https://img.daisyui.com/images/store/screenshots/online-store.webp",
     },
     tech: ["nextjs", "react"],
+    tags: ["ecommerce", "app"],
+    badges: ["NEW"],
   },
   {
     id: 244268,
@@ -90,10 +91,11 @@ export const productCustomAttributes = [
       ["Updates and bugfixes", true, true, true],
     ],
     tech: ["html", "svelte", "react", "nextjs"],
-    tags: ["Updated to daisyUI 5.0"],
+    tags: ["dashboard"],
+    badges: ["Updated to daisyUI 5.0"],
     links: {
       license: "https://api.daisyui.com/license/nexus@2.txt",
-      screenshot: "https://img.daisyui.com/images/store/screenshots/nexus.webp",
+      screenshot: "https://img.daisyui.com/images/store/screenshots/nexus-2.webp",
       preview: "https://nexus.daisyui.com/",
     },
     ref: "K0XmL",
@@ -182,7 +184,8 @@ export const productCustomAttributes = [
       ["Organization plan Figma features", false, false, true],
       ["Advanced token management using Token Studio", false, false, true],
     ],
-    tags: [],
+    badges: [],
+    tags: ["design"],
     ref: "8XWm0",
     params: "desc=0",
   },
@@ -222,7 +225,8 @@ export const productCustomAttributes = [
     originalprice: 4900,
     displayprice: 2900,
     tech: ["astro", "react", "nextjs", "mdx"],
-    tags: ["Next.js version added"],
+    tags: ["content", "app"],
+    badges: ["Next.js version added"],
   },
   {
     id: 142623,
@@ -284,6 +288,7 @@ export const productCustomAttributes = [
       preview: "https://saas-landing.daisyui.com/",
     },
     tech: ["html", "react", "svelte", "vue", "alpine"],
+    tags: ["landing"],
     ref: "K0XmL",
   },
   {
@@ -310,7 +315,8 @@ export const productCustomAttributes = [
       screenshot: "https://img.daisyui.com/images/store/screenshots/blog-template.webp",
     },
     tech: ["astro", "react", "nextjs", "mdx"],
-    tags: ["Next.js version added"],
+    tags: ["content", "app"],
+    badges: ["Next.js version added"],
   },
   {
     id: 185227,
@@ -357,6 +363,7 @@ export const productCustomAttributes = [
       preview: "https://mobile-landing.daisyui.com/",
     },
     tech: ["html", "react", "svelte", "vue", "alpine"],
+    tags: ["landing"],
     ref: "K0XmL",
   },
   {
@@ -393,6 +400,7 @@ export const productCustomAttributes = [
       screenshot: "https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp",
     },
     tech: ["react", "svelte", "vite", "framer"],
+    tags: ["landing"],
   },
   {
     id: 130237,
@@ -433,6 +441,7 @@ export const productCustomAttributes = [
       screenshot: "https://img.daisyui.com/images/store/screenshots/auth.webp",
     },
     tech: ["html"],
+    tags: [],
     // ref: "VMAme",
   },
   {
@@ -489,10 +498,11 @@ export const productCustomAttributes = [
       screenshot: "https://img.daisyui.com/images/store/screenshots/dashboard.webp",
     },
     tech: ["html", "webcomponents"],
+    tags: ["dashboard"],
     // originalprice: 2900,
     // displayprice: 2600,
     // displaypricenote: "with discount",
-    // tags: ['Use code "DASHBOARD10" for 10% discount'],
+    // badges: ['Use code "DASHBOARD10" for 10% discount'],
   },
 ]
 
@@ -514,7 +524,7 @@ export const tech = {
 export const techFilters = ["all", "html", "react", "vue", "svelte", "astro"]
 
 export const futureProducts = [
-  "Nexus Dashboard v2.0 update + Svelte version",
+  "Updates for Tailwind CSS 4 and daisyUI 5",
   "Official daisyUI Figma Library v2.0 update",
   "Headless UI + daisyUI component pack for Vue",
 ]

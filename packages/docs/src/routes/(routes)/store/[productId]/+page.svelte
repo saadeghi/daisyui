@@ -32,29 +32,29 @@
     return `${url}${params ? `?${params}` : ""}`
   }
 
-  function hasAllSameTech(product1, product2) {
+  function hasAllSameTag(product1, product2) {
     return (
-      product1.tech &&
-      product2.tech &&
-      product1.tech.length === product2.tech.length &&
-      product1.tech.every((tech) => product2.tech.includes(tech))
+      product1.tags &&
+      product2.tags &&
+      product1.tags.length === product2.tags.length &&
+      product1.tags.every((tags) => product2.tags.includes(tags))
     )
   }
   function getSimilarProducts(product, allProducts) {
-    // Filter for products with all the same tech
-    const allSameTechProducts = allProducts.filter(
-      (p) => p.id !== product.id && hasAllSameTech(product, p),
+    // Filter for products with all the same tags
+    const allSameTagProducts = allProducts.filter(
+      (p) => p.id !== product.id && hasAllSameTag(product, p),
     )
 
-    // Filter for products with at least one overlapping tech
-    const someSameTechProducts = allProducts.filter(
-      (p) => p.id !== product.id && p.tech && p.tech.some((t) => product.tech.includes(t)),
+    // Filter for products with at least one overlapping tags
+    const someSameTagProducts = allProducts.filter(
+      (p) => p.id !== product.id && p.tags && p.tags.some((t) => product.tags.includes(t)),
     )
 
     // Combine, remove duplicates, and limit to 3
-    const similarProducts = [...allSameTechProducts, ...someSameTechProducts]
+    const similarProducts = [...allSameTagProducts, ...someSameTagProducts]
       .filter((product, index, self) => index === self.findIndex((p) => p.id === product.id))
-      .slice(0, 3)
+      .slice(0, 2)
 
     return similarProducts
   }
@@ -307,9 +307,9 @@
     <!-- Product Info -->
     <div class="flex flex-col gap-6">
       <div>
-        {#if data.product.tags}
+        {#if data.product.badges}
           <div class="flex gap-2">
-            {#each data.product.tags as tag}
+            {#each data.product.badges as tag}
               <span class="badge badge-sm badge-success badge-soft italic">{tag}</span>
             {/each}
           </div>
@@ -549,16 +549,15 @@
   </div>
 </div>
 
-{#if data.product.tech && data.products.products.length > 0}
+{#if data.product.tags && data.products.products.length > 0 && getSimilarProducts(data.product, data.products.products).length > 0}
   <div class="divider text-base-content/30 my-20">More from daisyUI Store</div>
 
-  <div class="mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 xl:gap-x-16 gap-y-36">
+  <div class="mx-auto grid md:grid-cols-2 gap-x-10 xl:gap-x-16 gap-y-36">
     {#each getSimilarProducts(data.product, data.products.products) as product}
       <StoreProduct {product} {convertCurrency} />
     {/each}
   </div>
-
-  <div class="divider divider-end text-base-content/30 my-20">
-    <a href="/store/" class="text-base-content opacity-50 hover:opacity-100">View all</a>
-  </div>
 {/if}
+<div class="divider divider-end text-base-content/30 my-20">
+  <a href="/store/" class="text-base-content opacity-50 hover:opacity-100">View all</a>
+</div>

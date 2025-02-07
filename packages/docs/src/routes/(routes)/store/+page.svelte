@@ -150,7 +150,7 @@
   </div>
 </div>
 
-<hr class="mb-20 mt-10 mx-4 border-base-content/10" />
+<hr class="mb-16 mt-10 mx-4 border-base-content/10" />
 
 <div>
   {#await fetchDiscount then discount}
@@ -277,7 +277,9 @@
     <option value="new">New</option>
   </select> -->
 
-  <div class="mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 xl:gap-x-16 gap-y-36">
+  <div
+    class="mx-auto grid lg:grid-cols-2 *:p-16 lg:px-4 *:border-dashed *:border-t *:nth-[1]:border-t-0 lg:*:nth-[2]:border-t-0 lg:*:border-e lg:*:even:border-e-0 *:border-base-content/10"
+  >
     {#each sortedFilteredProducts as product, index}
       <StoreProduct {product} {convertCurrency} />
     {:else}
