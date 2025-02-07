@@ -280,7 +280,7 @@
                 <span>{link}</span>
               </button>
               <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
-                <div class="modal-box max-h-[90vh] max-w-[90vw] w-full p-0">
+                <div class="modal-box max-md:max-h-[80vh] max-h-[80vh] max-w-[90vw] w-full p-0">
                   <img src={screenshotUrl} alt="Screenshot" class="w-full h-full object-cover" />
                 </div>
                 <form method="dialog" class="modal-backdrop">
@@ -550,7 +550,7 @@
 </div>
 
 {#if data.product.tags && data.products.products.length > 0 && getSimilarProducts(data.product, data.products.products).length > 0}
-  <div class="divider text-base-content/30 my-20">More from daisyUI Store</div>
+  <div class="divider text-base-content/30 my-20">You may also like these</div>
 
   <div class="mx-auto grid md:grid-cols-2 gap-x-10 xl:gap-x-16 gap-y-36">
     {#each getSimilarProducts(data.product, data.products.products) as product}

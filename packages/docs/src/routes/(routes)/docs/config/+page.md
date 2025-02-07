@@ -30,7 +30,7 @@ Default config:
 }
 ```
 
-## theme
+## themes
 
 | Default value | Type | Description |
 |--|--|--|
