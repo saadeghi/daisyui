@@ -46,6 +46,12 @@ export const productCustomAttributes = [
     id: 244268,
     media: [
       {
+        type: "video",
+        url: "https://www.youtube.com/embed/3CX5wfvOfpw?mute=0&autoplay=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=3CX5wfvOfpw",
+        // ratio: "620/388",
+        ratio: "1000/750",
+      },
+      {
         type: "image",
         sm: "https://img.daisyui.com/images/store/small/nexus/nexus-05.webp",
         lg: "https://img.daisyui.com/images/store/large/nexus/nexus-05.webp",

@@ -278,7 +278,7 @@
   </select> -->
 
   <div
-    class="mx-auto grid lg:grid-cols-2 *:p-16 lg:px-4 *:border-dashed *:border-t *:nth-[1]:border-t-0 lg:*:nth-[2]:border-t-0 lg:*:border-e lg:*:even:border-e-0 *:border-base-content/10"
+    class="mx-auto grid lg:grid-cols-2 *:py-16 md:*:px-16 *:px-4 lg:px-4 *:border-dashed *:border-t *:nth-[1]:border-t-0 lg:*:nth-[2]:border-t-0 lg:*:border-e lg:*:even:border-e-0 *:border-base-content/10"
   >
     {#each sortedFilteredProducts as product, index}
       <StoreProduct {product} {convertCurrency} />
