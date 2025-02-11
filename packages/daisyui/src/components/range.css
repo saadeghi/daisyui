@@ -9,13 +9,11 @@
   --range-bg: color-mix(in oklab, currentColor 10%, #0000);
   @apply cursor-pointer overflow-hidden bg-transparent align-middle;
   width: clamp(3rem, 20rem, 100%);
-  border-radius: calc(
-    var(--radius-selector) +
-      min(
-        var(--range-p),
-        calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
-      )
+  /* --radius-selector-max is a separate variable because ~ calc(min(calc(--var))) ~ gives build error in PostCSS+Nuxt */
+  --radius-selector-max: calc(
+    var(--radius-selector) + var(--radius-selector) + var(--radius-selector)
   );
+  border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
   border: none;
   height: var(--range-thumb-size);
 
@@ -44,13 +42,7 @@
 
   &::-webkit-slider-thumb {
     @apply relative box-border;
-    border-radius: calc(
-      var(--radius-selector) +
-        min(
-          var(--range-p),
-          calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
-        )
-    );
+    border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
     background-color: currentColor;
     height: var(--range-thumb-size);
     width: var(--range-thumb-size);
@@ -81,13 +73,7 @@
 
   &::-moz-range-thumb {
     @apply relative box-border;
-    border-radius: calc(
-      var(--radius-selector) +
-        min(
-          var(--range-p),
-          calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
-        )
-    );
+    border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));
     background-color: currentColor;
     height: var(--range-thumb-size);
     width: var(--range-thumb-size);
