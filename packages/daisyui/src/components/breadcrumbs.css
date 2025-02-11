@@ -1,6 +1,7 @@
 .breadcrumbs {
   @apply max-w-full overflow-x-auto py-2;
 
+  > menu,
   > ul,
   > ol {
     @apply flex min-h-min items-center whitespace-nowrap;
