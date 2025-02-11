@@ -15,8 +15,10 @@
         border-top: 3px solid;
       }
     }
-    &:hover {
-      @apply opacity-80;
+    @media (hover: hover) {
+      &:hover {
+        @apply opacity-80;
+      }
     }
     &[aria-disabled="true"],
     &[disabled] {

@@ -18,63 +18,79 @@
 .link-primary {
   @apply text-primary;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-primary) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-primary) 80%, #000);
+    }
   }
 }
 
 .link-secondary {
   @apply text-secondary;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-secondary) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-secondary) 80%, #000);
+    }
   }
 }
 
 .link-accent {
   @apply text-accent;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-accent) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-accent) 80%, #000);
+    }
   }
 }
 
 .link-neutral {
   @apply text-neutral;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-neutral) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-neutral) 80%, #000);
+    }
   }
 }
 
 .link-success {
   @apply text-success;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-success) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-success) 80%, #000);
+    }
   }
 }
 
 .link-info {
   @apply text-info;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-info) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-info) 80%, #000);
+    }
   }
 }
 
 .link-warning {
   @apply text-warning;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-warning) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-warning) 80%, #000);
+    }
   }
 }
 
 .link-error {
   @apply text-error;
 
-  &:hover {
-    color: color-mix(in oklab, var(--color-error) 80%, #000);
+  @media (hover: hover) {
+    &:hover {
+      color: color-mix(in oklab, var(--color-error) 80%, #000);
+    }
   }
 }
