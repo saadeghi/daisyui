@@ -73,6 +73,25 @@ classnames:
 </fieldset>
 ```
 
+### ~Fieldset with multiple join items
+<fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+  <legend class="fieldset-legend">Page details</legend>
+  <div class="join">
+    <input type="text" class="input join-item" placeholder="My awesome page" />
+    <button class="btn join-item">save</button>
+  </div>
+</fieldset>
+
+```html
+<fieldset class="$$fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+  <legend class="$$fieldset-legend">Page details</legend>
+  <div class="join">
+    <input type="text" class="input join-item" placeholder="My awesome page" />
+    <button class="btn join-item">save</button>
+  </div>
+</fieldset>
+```
+
 ### ~Login form with fieldset
 <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
   <legend class="fieldset-legend">Login</legend>
