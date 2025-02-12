@@ -102,9 +102,7 @@ To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the 
 
 ```css:app.css
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: mytheme;
-}
+@plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "mytheme";
   default: true; /* set as default */
