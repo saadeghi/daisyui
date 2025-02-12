@@ -495,3 +495,33 @@ classnames:
 </button>
 
 ```
+
+### ~Button with gradient background
+<button class="btn bg-linear-to-r from-primary to-secondary">Static Gradient</button>
+
+<button class="btn bg-gradient-to-r from-primary via-secondary to-accent bg-[length:300%_300%]
+  animate-[gradient-animation_5s_ease_infinite]">
+    Animated Gradient
+</button>
+<style>
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+</style>
+
+```html
+<button class="$$btn bg-linear-to-r from-primary to-secondary">Static Gradient</button>
+<button class="$$btn bg-gradient-to-r from-primary via-secondary to-accent bg-[length:300%_300%]
+  animate-[gradient-animation_5s_ease_infinite]">
+    Animated Gradient
+</button>
+<style>
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+</style>
+```
