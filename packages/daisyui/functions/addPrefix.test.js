@@ -339,3 +339,19 @@ test("addPrefix with descendant combinator and :not(:has()) selector", () => {
   }
   expect(addPrefix(input, prefix)).toEqual(expected)
 })
+
+// --tw CSS variables
+test("addPrefix should not prefix --tw variables", () => {
+  const input = {
+    "--tw-variable": "value",
+    "--custom-var": "value",
+    ".btn": "background: var(--tw-variable) var(--custom-var);",
+  }
+  const prefix = "prefix-"
+  const expected = {
+    "--tw-variable": "value",
+    "--prefix-custom-var": "value",
+    ".prefix-btn": "background: var(--tw-variable) var(--prefix-custom-var);",
+  }
+  expect(addPrefix(input, prefix)).toEqual(expected)
+})

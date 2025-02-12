@@ -1,6 +1,9 @@
 const defaultExcludedPrefixes = ["color-", "size-", "radius-", "border", "depth", "noise"]
 
 const shouldExcludeVariable = (variableName, excludedPrefixes) => {
+  if (variableName.startsWith("tw")) {
+    return true
+  }
   return excludedPrefixes.some((excludedPrefix) => variableName.startsWith(excludedPrefix))
 }
 
