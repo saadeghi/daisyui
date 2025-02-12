@@ -252,41 +252,45 @@
         >
           {#each Object.entries(data.product.links) as [link, value]}
             {#if link === "license"}
-              <button
-                class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
-                onclick={() => openModal(value)}
-              >
-                {@html getLinksIcon(link)}
-                <span>{link}</span>
-              </button>
-              <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
-                <div class="modal-box max-h-[90vh] max-w-[50rem] w-full lg:p-20">
-                  <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
-                  <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
-                </div>
-                <form method="dialog" class="modal-backdrop">
-                  <button>close</button>
-                </form>
-              </dialog>
+              <div>
+                <button
+                  class="flex flex-col w-full gap-2 items-center p-6 text-center hover:bg-base-200 focus-visible:outline focus-visible:-outline-offset-2 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
+                  onclick={() => openModal(value)}
+                >
+                  {@html getLinksIcon(link)}
+                  <span>{link}</span>
+                </button>
+                <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
+                  <div class="modal-box max-h-[90vh] max-w-[50rem] w-full lg:p-20">
+                    <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
+                    <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
+                  </div>
+                  <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                  </form>
+                </dialog>
+              </div>
             {:else if link === "screenshot"}
-              <button
-                class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
-                onclick={() => {
-                  screenshotDialog.showModal()
-                  screenshotUrl = value
-                }}
-              >
-                {@html getLinksIcon(link)}
-                <span>{link}</span>
-              </button>
-              <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
-                <div class="modal-box max-md:max-h-[80vh] max-h-[80vh] max-w-[90vw] w-full p-0">
-                  <img src={screenshotUrl} alt="Screenshot" class="w-full h-full object-cover" />
-                </div>
-                <form method="dialog" class="modal-backdrop">
-                  <button>close</button>
-                </form>
-              </dialog>
+              <div>
+                <button
+                  class="flex flex-col w-full gap-2 items-center p-6 text-center hover:bg-base-200 focus-visible:outline focus-visible:-outline-offset-2 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
+                  onclick={() => {
+                    screenshotDialog.showModal()
+                    screenshotUrl = value
+                  }}
+                >
+                  {@html getLinksIcon(link)}
+                  <span>{link}</span>
+                </button>
+                <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
+                  <div class="modal-box max-md:max-h-[80vh] max-h-[80vh] max-w-[90vw] w-full p-0">
+                    <img src={screenshotUrl} alt="Screenshot" class="w-full h-full object-cover" />
+                  </div>
+                  <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                  </form>
+                </dialog>
+              </div>
             {:else}
               <a
                 target="_blank"
@@ -387,7 +391,7 @@
       </div>
 
       {#if data.product.attributes.description}
-        <div class="prose prose-sm max-w-none ps-0!">
+        <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
           {@html data.product.attributes.description}
         </div>
       {/if}
@@ -408,21 +412,25 @@
       {/if}
 
       {#if data.product.quote}
-        <div class="chat chat-end">
+        <div>
           {#each data.product.quote.text as text, index}
-            <div
-              class={`chat-bubble mt-1 text-xs max-w-md bg-base-200 text-base-content ${index !== data.product.quote.text.length - 1 ? "before:hidden [.chat-end>&]:rounded-field" : ""}`}
-            >
-              {#each text as line}
-                <p class="py-1">{@html line}</p>
-              {/each}
+            <div class="chat chat-end p-0">
+              <div
+                class={`chat-bubble mt-1 text-xs max-w-md bg-base-200 text-base-content ${index !== data.product.quote.text.length - 1 ? "before:hidden [.chat-end>&]:rounded-field" : ""}`}
+              >
+                {#each text as line}
+                  <p class="py-1">{@html line}</p>
+                {/each}
+              </div>
+              <div class="chat-image avatar">
+                <div class="w-10 rounded-full">
+                  {#if index === data.product.quote.text.length - 1}
+                    <img alt={data.product.quote.name} src={data.product.quote.img} />
+                  {/if}
+                </div>
+              </div>
             </div>
           {/each}
-          <div class="chat-image avatar">
-            <div class="w-10 rounded-full">
-              <img alt={data.product.quote.name} src={data.product.quote.img} />
-            </div>
-          </div>
         </div>
       {/if}
     </div>
