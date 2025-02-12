@@ -145,6 +145,8 @@ Example of theming a div with hardcoded color values
 <input type="checkbox" class="checkbox checkbox-secondary" />
 ```
 
+These components automatically set the correct background color, text color, border color, etc as needed so you don't need to set those colors manually. For example `btn-primary` sets `primary` color for background and border, and sets `primary-content` color for the text automatically as default. You can customize them using utility classes if you want to change the color.
+
 <Translate text="You can also use color names in utility classes just like Tailwind's original color names." />
 <Translate text="These are utility classes that can be used with a color name:" />
 
@@ -170,3 +172,53 @@ Example of theming a div with hardcoded color values
 
 
 So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI color utility classes](/docs/utilities).
+
+## Color opacity and muted colors
+
+`base-content` is the the text color of the page by default. It's a dark color on light themes and it's a light color on dark themes. 
+
+<div class="grid md:grid-cols-2 gap-10">
+  <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="nord">
+    <div class="badge badge-xs absolute end-2 top-2">nord theme</div>
+    <div class="text-base-content">base-content text color</div>
+  </div>
+  <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="dracula">
+    <div class="badge badge-xs absolute end-2 top-2">dracula theme</div>
+    <div class="text-base-content">base-content text color</div>
+  </div>
+</div>
+
+Sometimes we need a muted text. something with less contrast. The best way to do this is using Tailwind CSS color opacity modifier by adding a `/50` (or any other value) to the end of color name. Like `text-base-content/50`
+
+<div class="grid md:grid-cols-2 gap-10">
+  <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="nord">
+    <div class="badge badge-xs absolute end-2 top-2">nord theme</div>
+    <div class="text-base-content">base-content</div>
+    <div class="text-base-content/70">base-content/70</div>
+    <div class="text-base-content/50">base-content/50</div>
+    <div class="text-base-content/30">base-content/30</div>
+  </div>
+  <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="dracula">
+    <div class="badge badge-xs absolute end-2 top-2">dracula theme</div>
+    <div class="text-base-content">base-content</div>
+    <div class="text-base-content/70">base-content/70</div>
+    <div class="text-base-content/50">base-content/50</div>
+    <div class="text-base-content/30">base-content/30</div>
+  </div>
+</div>
+
+The advantage of using opacity is that it gives a constant result on all themes, for all colors.  
+You can use it with any opacity value, you can use it for any color. For example primary-content:
+
+<div class="grid md:grid-cols-2 gap-10">
+  <div class="relative bg-primary p-10 border border-primary-content/10 rounded-box" data-theme="nord">
+    <div class="badge badge-xs absolute end-2 top-2">nord theme</div>
+    <div class="text-primary-content">primary-content</div>
+    <div class="text-primary-content/50">primary-content/50</div>
+  </div>
+  <div class="relative bg-primary p-10 border border-primary-content/10 rounded-box" data-theme="dracula">
+    <div class="badge badge-xs absolute end-2 top-2">dracula theme</div>
+    <div class="text-primary-content">primary-content</div>
+    <div class="text-primary-content/50">primary-content/50</div>
+  </div>
+</div>

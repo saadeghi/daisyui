@@ -85,14 +85,14 @@ classnames:
   <div>Using <code>&lt;details&gt;</code> tag, we can't have animations because <code>&lt;details&gt;</code> tag doesn't allow CSS transitions.</div>
 </div>
 
-### ~With border and background color
-<div tabindex="0" class="collapse border border-base-300 bg-base-100 border border-base-300">
+### ~Without border and background color
+<div tabindex="0" class="collapse">
   <div class="collapse-title font-semibold">How do I create an account?</div>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div tabindex="0" class="$$collapse border-base-300 bg-base-100 border border-base-300 border">
+<div tabindex="0" class="$$collapse">
   <div class="$$collapse-title font-semibold">How do I create an account?</div>
   <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>

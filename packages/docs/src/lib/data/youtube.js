@@ -57,8 +57,6 @@ export const videoIds = [
   "X5_ZQmddfyk",
   "RyZbYZAXAa4",
   "BkM6INWM1Yo",
-  "2tXuoNV1-WA",
-  "XI3rnvhH-Go",
   "l04LcLNM390",
   "XzUeom623Cs",
   "K5QUx6iPyfQ",
