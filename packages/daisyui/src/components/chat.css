@@ -4,6 +4,7 @@
 
 .chat-bubble {
   @apply rounded-field bg-base-300 text-base-content relative block w-fit px-4 py-2;
+  grid-row-end: 3;
   min-height: 2rem;
   min-width: 2.5rem;
   max-width: 90%;
