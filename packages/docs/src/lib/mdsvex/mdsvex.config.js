@@ -34,6 +34,7 @@ const highlighter = await createHighlighter({
     "rb",
     "sass",
     "svelte",
+    "toml",
     "ts",
     "tsx",
     "vue",
