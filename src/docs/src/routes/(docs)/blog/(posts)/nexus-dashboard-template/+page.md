@@ -2,20 +2,20 @@
 title: Nexus - Client and Admin Dashboard
 desc: A flexible admin dashboard template built for easy customization and smooth integration
 published: true
-date: 2025-01-30
+date: 2025-02-14
 author: Denish Navadiya
 thumbnail: https://img.daisyui.com/images/blog/nexus-dashboard-template-thumbnail.webp
 tags:
   - Templates
 ---
 
-Building an admin dashboard isn't easy. Developers need designs that are responsive and work across frameworks, while buyers look for simplicity, flexibility, and customization. Finding the right balance can be tricky.
+Building an admin dashboard isn't easy. Developers need responsive designs and work across frameworks, while buyers look for simplicity, flexibility, and customization. Finding the right balance can be tricky.
 
 ## Introducing Nexus
 
 We redesigned the Nexus Admin Dashboard to make things easier. Built with DaisyUI, it helps developers create responsive, great-looking dashboards while giving buyers a flexible and customizable solution.
 
-Purchase the [Nexus Dashboard](https://www.daisyui.com/store) from the daisyUI store and follow these steps to set it up.
+You can purchase the [Nexus Dashboard](https://www.daisyui.com/store) from the daisyUI store and follow these steps to set it up.
 
 ## Installation
 
@@ -135,7 +135,7 @@ To change the logo, replace the following images with your own.
 Inside `/styles/custom/**` folder:
 
 - `animation.css` includes all animation keyframes and utilities.
-- `components.css` contains slight overrides to DaisyUI components. you can remove this file if you don't need any overrides.
+`components.css` contains slight overrides to DaisyUI components. If you don't need any overrides, you can remove this file.
 - `plugins.css` handles plugin overrides, ensuring compatibility with other plugins' themes, matching Nexus and DaisyUI styles.
 - `iconify.js` is the plugin for Iconify, allowing you to add additional [icon sets](https://icon-sets.iconify.design/).
 
@@ -159,7 +159,7 @@ If you need to use the `material` theme in your project, copy the following line
 }
 ```
 
-Now, you can apply the theme by setting the `data-theme="material"` attribute on the HTML tag.
+You can now apply the theme by setting the `data-theme="material"` attribute on the HTML tag.
  
 
 ### Customizing the CSS for a component
