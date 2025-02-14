@@ -340,17 +340,17 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 ### Mockup
 
 🔧 Changes
-- **Breaking Change:** Rename `camera` class in mockup-phone to `mockup-camera`.
-- **Breaking Change:** Rename `display` class in mockup-phone to `mockup-display`.
+- **Breaking Change:** Rename `camera` class in mockup-phone to `mockup-phone-camera`.
+- **Breaking Change:** Rename `display` class in mockup-phone to `mockup-phone-display`.
 - **Breaking Change:** `mockup-phone-display`
 
 ```diff:page.html
 <div class="mockup-phone">
 -  <div class="camera"></div>
-+  <div class="mockup-camera"></div>
++  <div class="mockup-phone-camera"></div>
 
 -    <div class="display">
-+    <div class="mockup-display">
++    <div class="mockup-phone-display">
 
 -    <div class="artboard artboard-demo phone-1">Hi.</div>
 +    <div class="w-[320px] h-[568px]">Hi.</div>
