@@ -9,7 +9,7 @@ tags:
   - Templates
 ---
 
-Building admin dashboards isn’t easy. Developers need designs that are responsive and work across frameworks, while buyers look for simplicity, flexibility, and customization. Finding the right balance can be tricky.
+Building an admin dashboard isn't easy. Developers need designs that are responsive and work across frameworks, while buyers look for simplicity, flexibility, and customization. Finding the right balance can be tricky.
 
 ## Introducing Nexus
 
@@ -140,6 +140,37 @@ Inside `/styles/custom/**` folder:
 - `iconify.js` is the plugin for Iconify, allowing you to add additional [icon sets](https://icon-sets.iconify.design/).
 
 
+## How to use style into your project
+
+_**Note:** All styles (CSS) are defined in the `styles/**` folder, so you can refer to that for styling and use them directly in your project._
+
+Ensure that Tailwind CSS 4 and DaisyUI 5 are properly installed and functioning correctly.
+
+### Include a specific theme
+
+If you need to use the `material` theme in your project, copy the following lines from `styles/daisyui.css` into your project.
+
+```css
+@plugin "daisyui/theme" {
+    name: "material";
+    color-scheme: light;
+    --color-primary: #167bff;
+    /* ... */
+}
+```
+
+Now, you can apply the theme by setting the `data-theme="material"` attribute on the HTML tag.
+ 
+
+### Customizing the CSS for a component
+
+We’ve overridden some of DaisyUI’s default styles. If you want your admin to look exactly like Nexus, you’ll need to copy `styles/custom/components.css` into your project. You can either add the CSS directly to your stylesheet or import it as a separate CSS file.
+
+### Apply layout styles
+
+Copy `styles/custom/layout.css` into your project. It contains the styles for the topbar, sidebar, rightbar, and content.
+
+### Other topics
 For more detailed information on specific topics such as dependencies, framework integration, roadmap, changelog, and more, visit our [Nexus documentation](https://nexus.daisyui.com/docs/)  
 
 ## Built by a Developer, for Developers
