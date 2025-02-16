@@ -29,7 +29,7 @@
     }
 
     .dock-label {
-      font-size: 0.6875rem;
+      font-size: 0.75rem;
     }
   }
 }
@@ -61,7 +61,7 @@
   }
 
   .dock-label {
-    font-size: 0.625rem;
+    font-size: 0.6875rem;
   }
 }
 
@@ -69,7 +69,7 @@
   height: 4rem;
   height: calc(4rem + env(safe-area-inset-bottom));
   .dock-label {
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -84,7 +84,7 @@
   }
 
   .dock-label {
-    font-size: 0.625rem;
+    font-size: 0.775rem;
   }
 }
 
@@ -99,6 +99,6 @@
   }
 
   .dock-label {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
