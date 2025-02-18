@@ -66,6 +66,14 @@
     }
   }
 
+  &.collapse-open {
+    &.collapse-arrow {
+      > .collapse-title:after {
+        transform: translateY(-50%) rotate(225deg);
+      }
+    }
+  }
+
   &.collapse-arrow:focus:not(.collapse-close) {
     > .collapse-title:after {
       transform: translateY(-50%) rotate(225deg);
