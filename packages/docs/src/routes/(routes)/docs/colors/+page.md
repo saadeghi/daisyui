@@ -180,11 +180,11 @@ So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI c
 <div class="grid md:grid-cols-2 gap-10">
   <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="nord">
     <div class="badge badge-xs absolute end-2 top-2">nord theme</div>
-    <div class="text-base-content">base-content text color</div>
+    <div class="text-base-content">text-base-content</div>
   </div>
   <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="dracula">
     <div class="badge badge-xs absolute end-2 top-2">dracula theme</div>
-    <div class="text-base-content">base-content text color</div>
+    <div class="text-base-content">text-base-content</div>
   </div>
 </div>
 
@@ -193,17 +193,17 @@ Sometimes we need a muted text. something with less contrast. The best way to do
 <div class="grid md:grid-cols-2 gap-10">
   <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="nord">
     <div class="badge badge-xs absolute end-2 top-2">nord theme</div>
-    <div class="text-base-content">base-content</div>
-    <div class="text-base-content/70">base-content/70</div>
-    <div class="text-base-content/50">base-content/50</div>
-    <div class="text-base-content/30">base-content/30</div>
+    <div class="text-base-content">text-base-content</div>
+    <div class="text-base-content/70">text-base-content/70</div>
+    <div class="text-base-content/50">text-base-content/50</div>
+    <div class="text-base-content/30">text-base-content/30</div>
   </div>
   <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="dracula">
     <div class="badge badge-xs absolute end-2 top-2">dracula theme</div>
-    <div class="text-base-content">base-content</div>
-    <div class="text-base-content/70">base-content/70</div>
-    <div class="text-base-content/50">base-content/50</div>
-    <div class="text-base-content/30">base-content/30</div>
+    <div class="text-base-content">text-base-content</div>
+    <div class="text-base-content/70">text-base-content/70</div>
+    <div class="text-base-content/50">text-base-content/50</div>
+    <div class="text-base-content/30">text-base-content/30</div>
   </div>
 </div>
 
@@ -213,12 +213,12 @@ You can use it with any opacity value, you can use it for any color. For example
 <div class="grid md:grid-cols-2 gap-10">
   <div class="relative bg-primary p-10 border border-primary-content/10 rounded-box" data-theme="nord">
     <div class="badge badge-xs absolute end-2 top-2">nord theme</div>
-    <div class="text-primary-content">primary-content</div>
-    <div class="text-primary-content/50">primary-content/50</div>
+    <div class="text-primary-content">text-primary-content</div>
+    <div class="text-primary-content/50">text-primary-content/50</div>
   </div>
   <div class="relative bg-primary p-10 border border-primary-content/10 rounded-box" data-theme="dracula">
     <div class="badge badge-xs absolute end-2 top-2">dracula theme</div>
-    <div class="text-primary-content">primary-content</div>
-    <div class="text-primary-content/50">primary-content/50</div>
+    <div class="text-primary-content">text-primary-content</div>
+    <div class="text-primary-content/50">text-primary-content/50</div>
   </div>
 </div>
