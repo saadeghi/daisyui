@@ -117,7 +117,7 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 </ul>
 
 ```html
-<!-- change popover-1 and --acnhor-1 names. Use unique names for each dropdown -->
+<!-- change popover-1 and --anchor-1 names. Use unique names for each dropdown -->
 <button class="$$btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
   Button
 </button>
@@ -129,7 +129,7 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 ```
 
 ```jsx
-{/* change popover-1 and --acnhor-1 names. Use unique names for each dropdown */}
+{/* change popover-1 and --anchor-1 names. Use unique names for each dropdown */}
 {/* For TSX uncomment the commented types below */}
 <button className="$$btn" popoverTarget="popover-1" style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */}>
   Button
