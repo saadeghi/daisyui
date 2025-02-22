@@ -6,6 +6,11 @@
     @apply rounded-box relative grid grid-flow-col gap-4 p-4;
     word-break: break-word;
     grid-template-columns: var(--list-grid-cols);
+    :not(.list-col-wrap) {
+      @apply row-start-1;
+    }
+  }
+  .list-row {
     &:has(.list-col-grow:nth-child(1)) {
       --list-grid-cols: 1fr;
     }
@@ -24,9 +29,6 @@
     &:has(.list-col-grow:nth-child(6)) {
       --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto)
         minmax(0, auto) 1fr;
-    }
-    :not(.list-col-wrap) {
-      @apply row-start-1;
     }
   }
   & > :not(:last-child) {
