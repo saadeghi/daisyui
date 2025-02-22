@@ -3,16 +3,13 @@
   color: var(--input-color);
   @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
   grid-template-columns: 0fr 1fr 1fr;
+  /* --radius-selector-max is a separate variable because ~ calc(min(calc(--var))) ~ gives build error in PostCSS+Nuxt */
+  --radius-selector-max: calc(
+    var(--radius-selector) + var(--radius-selector) + var(--radius-selector)
+  );
   border-radius: calc(
-    var(--radius-selector) +
-      min(
-        var(--toggle-p),
-        calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
-      ) +
-      min(
-        var(--border),
-        calc(var(--radius-selector) + var(--radius-selector) + var(--radius-selector))
-      )
+    var(--radius-selector) + min(var(--toggle-p), var(--radius-selector-max)) +
+      min(var(--border), var(--radius-selector-max))
   );
 
   padding: var(--toggle-p);
