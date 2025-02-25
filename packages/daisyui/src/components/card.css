@@ -82,7 +82,7 @@
 
 .card-body {
   @apply flex flex-auto flex-col gap-2;
-  padding: var(--card-p, 2rem);
+  padding: var(--card-p, 1.5rem);
   font-size: var(--card-fs, 0.875rem);
 
   :where(p) {
