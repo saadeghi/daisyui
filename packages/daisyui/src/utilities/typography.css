@@ -15,4 +15,5 @@
   --tw-prose-pre-bg: var(--color-neutral);
   --tw-prose-th-borders: color-mix(in oklab, var(--color-base-content) 50%, #0000);
   --tw-prose-td-borders: color-mix(in oklab, var(--color-base-content) 20%, #0000);
+  --tw-prose-kbd: color-mix(in oklab, var(--color-base-content) 80%, #0000);
 }
