@@ -71,9 +71,15 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
       .split(/\s*([>+~])\s*/)
       .map((part) => {
         part = part.trim()
-        // Check if part contains any CSS function (like :not(), :is(), :where(), etc)
-        if (part.includes(":(") || part.match(/:[a-z-]+\(/)) {
-          return part.replace(/\.[\w-]+(?=[\s)])/g, (match) => `.${prefix}${match.slice(1)}`)
+        // Improve handling of :where and other functional pseudo-classes
+        if (
+          part.includes(":where") ||
+          part.includes(":not") ||
+          part.includes(":has") ||
+          part.match(/:[a-z-]+\(/)
+        ) {
+          // Handle both the class selector and the pseudo-class function
+          return part.replace(/\.([\w-]+)(?=[\s:)])/g, `.${prefix}$1`)
         }
         if (part === ">" || part === "+" || part === "~") return ` ${part} `
         return part.startsWith(".") ? getPrefixedSelector(part, prefix) : part

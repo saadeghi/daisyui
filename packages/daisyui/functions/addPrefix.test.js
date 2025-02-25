@@ -355,3 +355,23 @@ test("addPrefix should not prefix --tw variables", () => {
   }
   expect(addPrefix(input, prefix)).toEqual(expected)
 })
+
+// '> .child:where(:last-child)' selector
+test("addPrefix with child combinator and :where with pseudo-class", () => {
+  const input = {
+    ".parent": {
+      "> .child:where(:last-child)": {
+        color: "red",
+      },
+    },
+  }
+  const prefix = "prefix-"
+  const expected = {
+    ".prefix-parent": {
+      " > .prefix-child:where(:last-child)": {
+        color: "red",
+      },
+    },
+  }
+  expect(addPrefix(input, prefix)).toEqual(expected)
+})
