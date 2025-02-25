@@ -182,7 +182,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--tab-radius-se`                     | start end border radius of the tab                                          |
 |                 | `--tab-radius-es`                     | end start border radius of the tab                                          |
 |                 | `--tab-radius-ee`                     | end end border radius of the tab                                            |
-|                 | `--tab-order`                         | border of the tab                                                           |
+|                 | `--tab-order`                         | Order of the tab                                                            |
 |                 | `--tab-radius-min`                    | minimum border radius of the lift tab                                       |
 |                 | `--tab-paddings`                      | all padding values of the lift tab                                          |
 |                 | `--tab-border-colors`                 | all border color values of the lift tab                                     |
