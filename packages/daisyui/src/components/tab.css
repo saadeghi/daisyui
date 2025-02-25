@@ -427,7 +427,7 @@
 
   :is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
   :is(input:checked) {
-    @apply bg-base-100 text-base-content hover:text-base-content;
+    background-color: var(--tab-bg, var(--color-base-100));
     box-shadow:
       0 1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 1px 1px -1px color-mix(in oklab, var(--color-neutral) calc(var(--depth) * 50%), #0000),
