@@ -30,12 +30,20 @@ directories.forEach((dir) => {
 
     const files = readdirSync(srcDir).filter((file) => file.endsWith(".css"))
 
+    // we need .css for reset but not .js
+    const exclusions = ["reset"]
+
     files.forEach((file) => {
       const targetFile = join(targetDir, file)
       expect(fileExists(targetFile)).toBe(true)
 
       const fileName = file.replace(".css", "")
       const dirPath = join(targetDir, fileName)
+
+      if (exclusions.includes(fileName)) {
+        return
+      }
+
       expect(directoryExists(dirPath)).toBe(true)
       expect(fileExists(join(dirPath, "index.js"))).toBe(true)
       expect(fileExists(join(dirPath, "object.js"))).toBe(true)
