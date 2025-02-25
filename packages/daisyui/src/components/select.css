@@ -30,7 +30,8 @@
       calc(0% + 16px) calc(1px + 50%);
   }
   select {
-    @apply -ms-4 -me-7 h-full w-[calc(100%+2.75rem)] appearance-none ps-4 pe-7;
+    @apply -ms-4 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-4 pe-7;
+    height: calc(100% - 2px);
     background: inherit;
     border-radius: inherit;
     border-style: none;
