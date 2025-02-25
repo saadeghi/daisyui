@@ -113,6 +113,18 @@
       @apply text-base-content/20 pointer-events-none;
     }
   }
+  .dropdown:focus-within {
+    .menu-dropdown-toggle:after {
+      rotate: 45deg;
+      translate: 0 1px;
+    }
+  }
+  .dropdown-content {
+    @apply mt-2 p-2;
+    &:before {
+      @apply hidden;
+    }
+  }
 }
 
 .menu-title {
