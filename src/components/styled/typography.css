@@ -15,6 +15,7 @@
   --tw-prose-pre-bg: theme(colors.neutral);
   --tw-prose-th-borders: theme(colors.base-content/0.5);
   --tw-prose-td-borders: theme(colors.base-content/0.2);
+  --tw-prose-kbd: theme(colors.base-content/0.8);
 }
 .prose {
   & :where(code):not(:where([class~="not-prose"] *, pre *)) {
