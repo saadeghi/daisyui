@@ -5,7 +5,7 @@
 
   & > * {
     @apply h-full w-full;
-    &:not(:nth-child(1)) {
+    &:nth-child(n + 2) {
       @apply w-full opacity-70;
     }
     &:nth-child(2) {

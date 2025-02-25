@@ -200,8 +200,11 @@
 
   :checked,
   :is(.tab-active, [aria-selected="true"]) {
-    & + .tab-content:not(:nth-child(2)) {
-      --tabcontent-radius-ss: var(--radius-box);
+    & + .tab-content {
+      &:nth-child(1),
+      &:nth-child(n + 3) {
+        --tabcontent-radius-ss: var(--radius-box);
+      }
     }
   }
 }
@@ -269,8 +272,11 @@
 
   :checked,
   :is(.tab-active, [aria-selected="true"]) {
-    & + .tab-content:not(:nth-child(2)) {
-      --tabcontent-radius-ss: var(--radius-box);
+    & + .tab-content {
+      &:nth-child(1),
+      &:nth-child(n + 3) {
+        --tabcontent-radius-ss: var(--radius-box);
+      }
     }
   }
 }
