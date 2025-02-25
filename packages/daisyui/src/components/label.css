@@ -7,7 +7,7 @@
 .input,
 .select {
   .label {
-    @apply flex h-[calc(100%-0.5rem)] items-center px-3;
+    @apply flex h-[calc(100%-0.5rem)] items-center px-3 whitespace-nowrap;
     font-size: inherit;
     &:first-child {
       @apply -ms-3 me-3;
