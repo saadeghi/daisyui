@@ -115,6 +115,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Adjusted padding.
 - Improved disabled state styling.
 - **Breaking Change:** Default height reduced; customizable via `--size-field`.
+- checked button (checkbox, radio) now has outline insteaed of forced primary color. This allows customization like `checked:btn-secondary`
 
 ### Card
 

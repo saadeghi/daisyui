@@ -88,21 +88,11 @@
     }
 
     &:checked {
-      --btn-color: var(--color-primary);
-      --btn-bg: var(--color-primary);
-      --btn-fg: var(--color-primary-content);
-      --btn-border: var(--color-primary);
-
-      &:focus-visible {
-        @apply outline-primary;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          --btn-bg: color-mix(in oklab, var(--color-primary) 90%, #000);
-          --btn-border: color-mix(in oklab, var(--color-primary) 90%, #000);
-        }
-      }
+      outline-width: 2px;
+      outline-style: solid;
+      --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+      --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+      isolation: isolate;
     }
   }
 }
