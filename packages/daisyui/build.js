@@ -55,7 +55,7 @@ async function generateFiles() {
         layer: "utilities",
       }),
     generatePlugins({ type: "base", srcDir: "src/themes", distDir: "theme" }),
-    generatePlugins({ type: "base", srcDir: "src/base", distDir: "base" }),
+    generatePlugins({ type: "base", srcDir: "src/base", distDir: "base", exclude: ["reset"] }),
     generatePlugins({ type: "component", srcDir: "src/components", distDir: "components" }),
     generatePlugins({ type: "utility", srcDir: "src/utilities", distDir: "utilities" }),
   ])
