@@ -75,8 +75,8 @@ classnames:
 
 ### ~Floating Label
 <label class="floating-label w-full max-w-xs">
-  <span>Your name</span>
-  <input type="text" placeholder="Your name" class="input input-md" />
+  <span>Your Email</span>
+  <input type="email" placeholder="mail@site.com" class="input input-md" />
 </label>
 
 ```html
