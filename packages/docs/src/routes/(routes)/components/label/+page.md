@@ -81,8 +81,8 @@ classnames:
 
 ```html
 <label class="$$floating-label">
-  <span>Your name</span>
-  <input type="text" placeholder="Your name" class="$$input $$input-md" />
+  <span>Your Email</span>
+  <input type="text" placeholder="mail@site.com" class="$$input $$input-md" />
 </label>
 ```
 
