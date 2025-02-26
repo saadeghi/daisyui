@@ -19,15 +19,72 @@ const isDev = process.argv.includes("--dev")
 async function generateFiles() {
   await Promise.all([
     copyFile("./functions/themePlugin.js", "./theme/themePlugin.js", "index.js"),
+
     !isDev &&
       generateColorRules({
         distDir: "../colors",
         styles: ["bg", "text", "border"],
         breakpoints: ["sm", "md", "lg", "xl", "2xl"],
         states: ["hover"],
+        outputFiles: {
+          properties: "properties.css",
+          responsive: "responsive.css",
+          states: "states.css",
+        },
       }),
+
+    !isDev &&
+      generateColorRules({
+        distDir: "../colors",
+        styles: ["bg", "text", "border"],
+        breakpoints: [],
+        states: ["hover", "focus", "active"],
+        outputFiles: {
+          states: "states-extended.css",
+        },
+      }),
+
+    !isDev &&
+      generateColorRules({
+        distDir: "../colors",
+        styles: ["bg", "text", "border"],
+        breakpoints: ["max-sm", "max-md", "max-lg", "max-xl", "max-2xl"],
+        states: [],
+        outputFiles: {
+          responsive: "responsive-extended.css",
+        },
+      }),
+
+    !isDev &&
+      generateColorRules({
+        distDir: "../colors",
+        styles: [
+          "from",
+          "via",
+          "to",
+          "ring",
+          // "ring-offset",
+          "fill",
+          "stroke",
+          // "caret",
+          // "divide",
+          // "accent",
+          "shadow",
+          "outline",
+          // "decoration",
+          // "placeholder",
+        ],
+        breakpoints: [],
+        states: [],
+        outputFiles: {
+          properties: "properties-extended.css",
+        },
+      }),
+
     !isDev && generateThemeFiles({ srcDir: "src/themes", distDir: "theme" }),
+
     !isDev && generateRawStyles({ srcDir: "../src/base", distDir: "../base", layer: "base" }),
+
     !isDev &&
       generateRawStyles({
         srcDir: "../src/components",
@@ -46,6 +103,7 @@ async function generateFiles() {
         ],
         layer: "utilities",
       }),
+
     !isDev &&
       generateRawStyles({
         srcDir: "../src/utilities",
@@ -61,8 +119,19 @@ async function generateFiles() {
   ])
   await Promise.all([
     generateImports("imports.js"),
+
     !isDev && generateChunks("chunks.css"),
-    !isDev && packCss("daisyui.css", []),
+
+    !isDev &&
+      packCss({
+        outputFile: "daisyui.css",
+        exclude: {
+          colors: ["properties-extended", "responsive-extended", "states-extended"],
+          components: [],
+          utilities: [],
+        },
+      }),
+
     !isDev && generateThemes("themes.css"),
     generateThemesObject("./theme/object.js"),
   ])

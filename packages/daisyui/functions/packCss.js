@@ -62,12 +62,24 @@ const writeContentToFile = async (file, content) => {
   const cleanedContent = cleanCss(content)
   await fs.writeFile(file, cleanedContent)
 }
-export const packCss = async (file, excludeFiles = []) => {
+export const packCss = async ({
+  outputFile,
+  exclude = {
+    colors: [],
+    components: [],
+    utilities: [],
+  },
+}) => {
+  const allExcludeFiles = [
+    ...(exclude.colors?.map((file) => `${file}.css`) || []),
+    ...(exclude.components?.map((file) => `${file}.css`) || []),
+    ...(exclude.utilities?.map((file) => `${file}.css`) || []),
+  ]
   const [themeCSS, otherCSS] = await Promise.all([
     readThemeCSS(),
-    readAllCSSDirectories(excludeFiles),
+    readAllCSSDirectories(allExcludeFiles),
   ])
 
   const allContent = combineContent(themeCSS, otherCSS)
-  await writeContentToFile(file, allContent)
+  await writeContentToFile(outputFile, allContent)
 }

@@ -2,7 +2,17 @@ import { compile } from "tailwindcss"
 import fs from "fs/promises"
 import path from "path"
 
-export const generateColorRules = async ({ distDir, styles, breakpoints, states }) => {
+export const generateColorRules = async ({
+  distDir,
+  styles,
+  breakpoints,
+  states,
+  outputFiles = {
+    properties: null,
+    responsive: null,
+    states: null,
+  },
+}) => {
   try {
     const [defaultTheme, theme] = await Promise.all([
       fs.readFile(
@@ -99,7 +109,7 @@ export const generateColorRules = async ({ distDir, styles, breakpoints, states 
     }
 
     const compileAndWriteFile = async (content, fileName) => {
-      const compiledContent = await (
+      const compiledContent = (
         await compile(`
         @layer base{${defaultTheme}${theme}}
         @layer wrapperStart{
@@ -130,7 +140,7 @@ export const generateColorRules = async ({ distDir, styles, breakpoints, states 
       let extractedContent = compiledContent.slice(openingBraceIndex + 1, closingBraceIndex).trim()
 
       // For responsive.css, we need to preserve the media queries
-      if (fileName === "responsive.css") {
+      if (fileName === outputFiles.responsive) {
         extractedContent = extractedContent.replace(/&/g, "")
       }
 
@@ -139,10 +149,15 @@ export const generateColorRules = async ({ distDir, styles, breakpoints, states 
       await fs.writeFile(path.join(colorsDir, fileName), extractedContent)
     }
 
-    await compileAndWriteFile(generatePropertiesContent(), "properties.css")
-    await compileAndWriteFile(generateResponsiveContent(), "responsive.css")
-
-    await compileAndWriteFile(generateStatesContent(), "states.css")
+    await Promise.all(
+      [
+        outputFiles.properties &&
+          compileAndWriteFile(generatePropertiesContent(), outputFiles.properties),
+        outputFiles.responsive &&
+          compileAndWriteFile(generateResponsiveContent(), outputFiles.responsive),
+        outputFiles.states && compileAndWriteFile(generateStatesContent(), outputFiles.states),
+      ].filter(Boolean),
+    )
   } catch (error) {
     throw new Error("Error generating color rules:", error)
   }
