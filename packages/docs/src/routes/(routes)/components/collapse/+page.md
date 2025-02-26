@@ -109,16 +109,13 @@ classnames:
 
 ### ~With arrow icon
 
-<div tabindex="0" class="collapse border border-base-300 bg-base-100 border border-base-300 collapse-arrow">
+<div tabindex="0" class="collapse bg-base-100 border border-base-300 collapse-arrow">
   <div class="collapse-title font-semibold">How do I create an account?</div>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div
-  tabindex="0"
-  class="$$collapse $$collapse-arrow border-base-300 bg-base-100 border-base-300 border"
->
+<div tabindex="0" class="$$collapse $$collapse-arrow bg-base-100 border-base-300 border">
   <div class="$$collapse-title font-semibold">How do I create an account?</div>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
@@ -128,16 +125,13 @@ classnames:
 
 ### ~With arrow plus/minus icon
 
-<div tabindex="0" class="collapse border border-base-300 bg-base-100 border border-base-300 collapse-plus">
+<div tabindex="0" class="collapse bg-base-100 border border-base-300 collapse-plus">
   <div class="collapse-title font-semibold">How do I create an account?</div>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div
-  tabindex="0"
-  class="$$collapse $$collapse-plus border-base-300 bg-base-100 border-base-300 border"
->
+<div tabindex="0" class="$$collapse $$collapse-plus bg-base-100 border-base-300 border">
   <div class="$$collapse-title font-semibold">How do I create an account?</div>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
@@ -147,16 +141,13 @@ classnames:
 
 ### ~Force open
 
-<div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-100 border border-base-300">
+<div tabindex="0" class="collapse collapse-open bg-base-100 border border-base-300">
   <div class="collapse-title font-semibold">How do I create an account?</div>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div
-  tabindex="0"
-  class="$$collapse $$collapse-open border-base-300 bg-base-100 border-base-300 border"
->
+<div tabindex="0" class="$$collapse $$collapse-open bg-base-100 border-base-300 border">
   <div class="$$collapse-title font-semibold">I have collapse-open class</div>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
@@ -166,16 +157,13 @@ classnames:
 
 ### ~Force close
 
-<div tabindex="0" class="collapse collapse-close border border-base-300 bg-base-100 border border-base-300">
+<div tabindex="0" class="collapse collapse-close bg-base-100 border border-base-300">
   <div class="collapse-title font-semibold">How do I create an account?</div>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
 </div>
 
 ```html
-<div
-  tabindex="0"
-  class="$$collapse $$collapse-close border-base-300 bg-base-100 border-base-300 border"
->
+<div tabindex="0" class="$$collapse $$collapse-close bg-base-100 border-base-300 border">
   <div class="$$collapse-title font-semibold">I have collapse-open class</div>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
