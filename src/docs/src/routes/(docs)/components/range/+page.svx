@@ -177,3 +177,30 @@ data="{[
 
 {/snippet}
 </Component>
+
+<Component title="Vertical and inverted">
+<div class="flex h-full items-center gap-4 max-h-40">
+  <input type="range" min="0" max="100" value="80" class="range range-vertical range-xs max-w-xs" />
+  <input type="range" min="0" max="100" value="70" class="range range-vertical range-sm max-w-xs" />
+  <input type="range" min="0" max="100" value="60" class="range range-vertical range-md max-w-xs" />
+  <input type="range" min="0" max="100" value="50" class="range range-vertical range-lg max-w-xs" />
+  <input type="range" min="0" max="100" value="60" class="range range-vertical range-invert range-lg max-w-xs" />
+  <input type="range" min="0" max="100" value="70" class="range range-vertical range-invert range-md max-w-xs" />
+  <input type="range" min="0" max="100" value="80" class="range range-vertical range-invert range-sm max-w-xs" />
+  <input type="range" min="0" max="100" value="90" class="range range-vertical range-invert range-xs max-w-xs" />
+</div>
+{#snippet html()}
+
+```html
+<input type="range" min="0" max="100" value="80" class="range range-vertical range-xs max-w-xs" />
+<input type="range" min="0" max="100" value="70" class="range range-vertical range-sm max-w-xs" />
+<input type="range" min="0" max="100" value="60" class="range range-vertical range-md max-w-xs" />
+<input type="range" min="0" max="100" value="50" class="range range-vertical range-lg max-w-xs" />
+<input type="range" min="0" max="100" value="60" class="range range-vertical range-invert range-lg max-w-xs" />
+<input type="range" min="0" max="100" value="70" class="range range-vertical range-invert range-md max-w-xs" />
+<input type="range" min="0" max="100" value="80" class="range range-vertical range-invert range-sm max-w-xs" />
+<input type="range" min="0" max="100" value="90" class="range range-vertical range-invert range-xs max-w-xs" />
+```
+
+{/snippet}
+</Component>
