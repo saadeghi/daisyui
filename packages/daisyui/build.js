@@ -38,7 +38,7 @@ async function generateFiles() {
         distDir: "../colors",
         styles: ["bg", "text", "border"],
         breakpoints: [],
-        states: ["hover", "focus", "active"],
+        states: ["focus", "active"],
         outputFiles: {
           states: "states-extended.css",
         },
