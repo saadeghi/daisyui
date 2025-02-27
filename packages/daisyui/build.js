@@ -109,7 +109,7 @@ async function generateFiles() {
         srcDir: "../src/utilities",
         distDir: "../utilities",
         responsive: true,
-        exclude: ["typography", "glass", "join"],
+        exclude: ["typography", "glass"],
         layer: "utilities",
       }),
     generatePlugins({ type: "base", srcDir: "src/themes", distDir: "theme" }),
