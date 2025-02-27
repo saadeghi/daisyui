@@ -3,7 +3,7 @@
   overflow-x: hidden;
   transition:
     transform 0.3s ease-out,
-    visibility 0s allow-discrete,
+    visibility 0.3s allow-discrete,
     opacity 0.1s ease-out;
   overflow-y: hidden;
   overscroll-behavior: contain;
