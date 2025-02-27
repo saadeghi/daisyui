@@ -1,7 +1,7 @@
 .input {
   cursor: text;
   border: var(--border) solid #0000;
-  @apply bg-base-100 inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
+  @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
   width: clamp(3rem, 20rem, 100%);
   height: var(--size);
   font-size: 0.875rem;
@@ -16,10 +16,10 @@
   --size: calc(var(--size-field, 0.25rem) * 10);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
   &:where(input) {
-    @apply inline-block;
+    @apply inline-flex;
   }
   :where(input) {
-    @apply inline-block h-full w-full appearance-none bg-transparent;
+    @apply inline-flex h-full w-full appearance-none bg-transparent;
     border: none;
 
     &:focus,
@@ -57,9 +57,9 @@
     }
   }
 
-  &[list] {
-    &::-webkit-calendar-picker-indicator {
-    }
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset-inline-end: 0.75em;
   }
 }
 
