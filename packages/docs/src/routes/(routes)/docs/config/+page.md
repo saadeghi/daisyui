@@ -55,14 +55,14 @@ In above example, we enable all themes.
   themes: false;
 }
 ```
-In above example, we disable all themes. it's useful to disable all themes and add custom themes using [`@plugin "daisyui/theme"`](https://v5.daisyui.com/docs/themes/#-2)
+In above example, we disable all themes. it's useful to disable all themes and add custom themes using [`@plugin "daisyui/theme"`](/docs/themes/#-2)
 
 ```postcss:Example
 @plugin "daisyui" {
   themes: dracula --default;
 }
 ```
-In above example, we set dracula as the default theme. setting one value like this means only one theme will be available. Unless you add custom themes using [`@plugin "daisyui/theme"`](https://v5.daisyui.com/docs/themes/#-2)
+In above example, we set dracula as the default theme. setting one value like this means only one theme will be available. Unless you add custom themes using [`@plugin "daisyui/theme"`](/docs/themes/#-2)
 
 ## root
 
