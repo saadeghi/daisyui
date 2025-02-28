@@ -608,7 +608,7 @@ I suggest using the newly added class names for `fieldset` and `legend` elements
 #### 🗑️ Remove btn-group and input-group
 
 btn-group, input-group were deprecated a year ago and now finally removed.  
-If You've been using btn-group or input-group, you can use `join` instead
+If you've been using btn-group or input-group, you can use `join` instead
 
 <div class="before-after">
 

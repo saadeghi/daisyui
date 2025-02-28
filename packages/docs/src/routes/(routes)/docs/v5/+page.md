@@ -5,6 +5,18 @@ desc: Everything about the new daisyUI 5 release
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-in-lab.webp" alt="daisyui 5">
 
+Welcome! 🎉
+
+daisyUI, the essential companion to Tailwind CSS is now being used in 360,000 open source projects, with 19 million npm installs (300 thousand weekly installs). daisyUI is growing faster than before and today it's helping countless people creating better and faster websites.  
+
+💚 daisyUI became possible thanks to your incredible contributions, helpful feedback, and amazing support. Thank you!
+
+Since the release of daisyUI 4 in 2023, a lot of feedback, feature requests, and bug reports have been received. Big efforts went into preparing daisyUI for this major release, using the latest web standards and new CSS/HTML features, as well as all the amazing new Tailwind CSS 4 features.
+
+Here's daisyUI 5 with a lot of new features, improvements, and bug fixes. It's a huge update, I added TLDR for each section to make it easier to read.
+
+Let's begin!
+
 <details class="collapse collapse-arrow bg-base-100 border border-base-300 mt-6 mb-10">
 <summary class="collapse-title text-lg">Table of Contents</summary>
 <div class="collapse-content text-sm">
@@ -29,46 +41,12 @@ desc: Everything about the new daisyUI 5 release
 </div>
 </details>
 
-> :INFO:
->
-> Also check out [the changelog page](/docs/changelog/) for a detailed list changes in each component.
-
-
-<!--
-
-Welcome! 🎉
-
-daisyUI, the essential companion to Tailwind CSS is now being used in 330,000 open source projects, with 18 million npm installs (300 thousand weekly installs). daisyUI is growing faster than before and today it's helping countless people creating better and faster websites.  
-
-💚 daisyUI became possible thanks to your incredible contributions, helpful feedback, and amazing support. Thank you!
-
-Since the release of daisyUI 4 in 2023, a lot of feedback, feature requests, and bug reports have been received. Big efforts went into preparing daisyUI for this major release, using the latest web standards and new CSS/HTML features, as well as all the amazing new Tailwind CSS 4 features.
-
-Here's daisyUI 5 (Alpha) with a lot of new features, improvements, and bug fixes. It's a huge update, and I added TLDR for each section to make it easier to read.
-
-Let's begin!
-
--->
 
 ## Install
 
-1. First Install [Tailwind CSS 4](https://tailwindcss.com/docs/installation/using-vite)  
-    If you're upgrading from Tailwind CSS 3 to Tailwind CSS 4, remove daisyUI from `tailwind.config.js` before running the [upgrade command](https://tailwindcss.com/docs/upgrade-guide).
-2. Install daisyUI 5
-
-  ```bash:Terminal
-  npm i -D daisyui@latest
-  ```
-3. Add daisyUI to your CSS file
-  
-  ```postcss:app.css
-  @import "tailwindcss";
-  @plugin "daisyui";
-  ```
-
-> :INFO:
->
-> If you're using [Tailwind CSS 4 upgrade CLI](https://tailwindcss.com/docs/upgrade-guide) to upgrade from Tailwind CSS 3 to Tailwind CSS 4, first remove daisyUI from `tailwind.config.js` before running the upgrade command. Then after upgrading to Tailwind CSS 4, add daisyUI to your CSS file.
+- [daisyUI 5 install instructions](/docs/install/)
+- [daisyUI 4 to daisyUI 5 upgrade guide](/docs/upgrade/)
+- [Detailed changelog](/docs/changelog/)
 
 ---
 
