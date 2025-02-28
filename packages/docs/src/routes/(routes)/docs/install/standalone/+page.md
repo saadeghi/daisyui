@@ -23,7 +23,7 @@ Address your HTML and other markup files in the `source` function.
 ```postcss:input.css
 @import "tailwindcss" source(none);
 @source "./public/*.{html,php,erb}";
-@plugin "daisyui";
+@plugin "./daisyui.js";
 ```
 
 ### 4. Build CSS
