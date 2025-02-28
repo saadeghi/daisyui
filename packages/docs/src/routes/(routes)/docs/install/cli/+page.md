@@ -19,7 +19,8 @@ Add Tailwind CSS and daisyUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
   
 ```postcss:app.css
-@import "tailwindcss" source("./public/*.{html,js}");
+@import "tailwindcss" source(none);
+@source "./public/*.{html,js}";
 @plugin "daisyui";
 ```
 
