@@ -3,10 +3,7 @@
   &:has(input) {
     @apply cursor-pointer;
   }
-}
-.input,
-.select {
-  .label {
+  &:is(.input > *, .select > *) {
     @apply flex h-[calc(100%-0.5rem)] items-center px-3 whitespace-nowrap;
     font-size: inherit;
     &:first-child {
