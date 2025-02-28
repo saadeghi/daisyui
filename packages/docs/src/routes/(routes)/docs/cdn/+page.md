@@ -31,7 +31,7 @@ desc: How to use daisyUI from a CDN?
 
   let combinedUrl = derived(selectedUrls, ($selectedUrls) => {
     return $selectedUrls.length
-      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@beta/${url.path}`).join(",")}`
+      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@latest/${url.path}`).join(",")}`
       : "";
   });
 

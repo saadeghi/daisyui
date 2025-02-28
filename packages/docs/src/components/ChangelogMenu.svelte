@@ -7,7 +7,7 @@
     dir="ltr"
     tabindex="0"
     role="button"
-    class="link link-hover inline-block font-mono text-base-content/60 text-[0.6875rem]"
+    class="link link-hover text-base-content/60 inline-block font-mono text-[0.6875rem]"
   >
     {version.version}
   </div>
@@ -16,7 +16,7 @@
     class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 border border-white/5 p-2 shadow-2xl outline-1 outline-black/5"
   >
     <li>
-      <a href="/docs/v5-beta/">
+      <a href="/docs/v5/">
         <svg
           class="text-blue-500"
           width="14"
@@ -33,7 +33,7 @@
             ></path></g
           ></svg
         >
-        daisyUI 5 Beta
+        daisyUI 5
       </a>
     </li>
     <li></li>

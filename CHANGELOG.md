@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## 5.0.0 (Beta)
+## 5.0.0
 
-> This is the detailed list of changes per component. Most of these changes won't affect your project, so if you want to learn about the breaking changes only, [check out the daisyUI 5 release notes](/docs/v5-beta/)
+> This is the detailed list of changes per component. Most of these changes won't affect your project, so if you want to learn about the breaking changes only, [check out the daisyUI 5 release notes](/docs/v5/)
 
 ### Alert
 

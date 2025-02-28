@@ -152,17 +152,17 @@ These components automatically set the correct background color, text color, bor
 
 | CSS Class                  |                                                                                                                                   |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| `bg-{COLOR_NAME}`          | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties.css)                   |
-| `text-{COLOR_NAME}`        | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties.css)                   |
-| `border-{COLOR_NAME}`      | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties.css)                   |
-| `from-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
-| `via-{COLOR_NAME}`         | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
-| `to-{COLOR_NAME}`          | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
-| `ring-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
-| `fill-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
-| `stroke-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
-| `shadow-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
-| `outline-{COLOR_NAME}`     | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@beta/colors/properties-extended.css) |
+| `bg-{COLOR_NAME}`          | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties.css)                   |
+| `text-{COLOR_NAME}`        | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties.css)                   |
+| `border-{COLOR_NAME}`      | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties.css)                   |
+| `from-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
+| `via-{COLOR_NAME}`         | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
+| `to-{COLOR_NAME}`          | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
+| `ring-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
+| `fill-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
+| `stroke-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
+| `shadow-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
+| `outline-{COLOR_NAME}`     | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@latest/colors/properties-extended.css) |
 | `divide-{COLOR_NAME}`      |                                                                                                                                   |
 | `accent-{COLOR_NAME}`      |                                                                                                                                   |
 | `caret-{COLOR_NAME}`       |                                                                                                                                   |

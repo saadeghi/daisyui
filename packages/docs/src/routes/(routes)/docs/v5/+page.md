@@ -1,5 +1,5 @@
 ---
-title: daisyUI 5 beta release notes
+title: daisyUI 5 release notes
 desc: Everything about the new daisyUI 5 release
 ---
 
@@ -52,14 +52,12 @@ Let's begin!
 
 ## Install
 
-🧪 This is a public beta release. There may be a few small visual bugs. The stable version will be available on March 1st.
-
-1. First Install [Tailwind CSS 4 beta](https://tailwindcss.com/docs/v4-beta)  
-    If you're upgrading from Tailwind CSS 3 to Tailwind CSS 4, remove daisyUI from `tailwind.config.js` before running the [upgrade command](https://tailwindcss.com/docs/v4-beta#upgrading-from-v3).
-2. Install daisyUI 5 beta
+1. First Install [Tailwind CSS 4](https://tailwindcss.com/docs/installation/using-vite)  
+    If you're upgrading from Tailwind CSS 3 to Tailwind CSS 4, remove daisyUI from `tailwind.config.js` before running the [upgrade command](https://tailwindcss.com/docs/upgrade-guide).
+2. Install daisyUI 5
 
   ```bash:Terminal
-  npm i -D daisyui@beta
+  npm i -D daisyui@latest
   ```
 3. Add daisyUI to your CSS file
   
@@ -113,7 +111,7 @@ module.exports = {
 ```
 </div>
 
-See [Tailwind CSS upgrade guide](https://tailwindcss.com/docs/v4-beta) for more information.
+See [Tailwind CSS upgrade guide](https://tailwindcss.com/docs/upgrade-guide) for more information.
 
 ### Zero dependencies
 
@@ -307,11 +305,11 @@ For example if you only want to use daisyUI toggle component, include a tiny CSS
 Not possible
 ```
 ```:After
-https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/components/toggle.css
+https://cdn.jsdelivr.net/npm/daisyui@latest/components/toggle.css
 ```
 </div>
 
-All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/chunks.css).
+All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@latest/chunks.css).
 
 Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
 
@@ -833,6 +831,45 @@ And some of these bugs were related to a specific structure / style / behavior o
 
 If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug or let me know if a bug is closed by mistake 💚
 
+- [#3558: bug: (v5) label style not applying properly when using responsive breakpoints](https://github.com/saadeghi/daisyui/issues/#3558)
+- [#3556: bug: Responsive tooltip appearance](https://github.com/saadeghi/daisyui/issues/#3556)
+- [#3551: bug: Color utility classes missing from v5 CDN](https://github.com/saadeghi/daisyui/issues/#3551)
+- [#3547: bug: placeholder ignored when using floating labels](https://github.com/saadeghi/daisyui/issues/#3547)
+- [#3544: bug: Radius not working when using the prefix](https://github.com/saadeghi/daisyui/issues/#3544)
+- [#3542: docs: Duplicate classes](https://github.com/saadeghi/daisyui/issues/#3542)
+- [#3531: bug: List component has alternating columns grow with list-col-grow](https://github.com/saadeghi/daisyui/issues/#3531)
+- [#3530: docs: Some examples uses class= instead of clasName= in JSX](https://github.com/saadeghi/daisyui/issues/#3530)
+- [#3529: bug: Some examples uses class= instead of clasName= in JSX](https://github.com/saadeghi/daisyui/issues/#3529)
+- [#3527: docs: v5 theme generator on invalid color input breaks site](https://github.com/saadeghi/daisyui/issues/#3527)
+- [#3524: bug: css-syntax-error DaisyUI 5.0.0-beta.8 Error when minifying CSS, results in malformed styles / Vite build errors. NUXT/Vite](https://github.com/saadeghi/daisyui/issues/#3524)
+- [#3520: bug: (v5) Cally date picker - month switcher icons are the incorrect colour when used as popover](https://github.com/saadeghi/daisyui/issues/#3520)
+- [#3519: bug: (v5) Date, time, and datetime inputs aren't styled correctly in Safari](https://github.com/saadeghi/daisyui/issues/#3519)
+- [#3518: docs: (v5) Navbar component misspell class keyword on JSX snippet ](https://github.com/saadeghi/daisyui/issues/#3518)
+- [#3517: bug: Inconsistent padding for .card-md](https://github.com/saadeghi/daisyui/issues/#3517)
+- [#3508: bug: Responsive join always vertical (with CDN usage)](https://github.com/saadeghi/daisyui/issues/#3508)
+- [#3482: bug: v5 with a prefix does not override tailwind typography correctly](https://github.com/saadeghi/daisyui/issues/#3482)
+- [#3473: bug: (v5) File input doesn't have a background by default while plain input does](https://github.com/saadeghi/daisyui/issues/#3473)
+- [#3472: bug: nuxt + daisyui / build = WARN vite:css postcss Parse error on line 1: --radius-selector) + var(--radius-selector) + var(--radius-selector)))](https://github.com/saadeghi/daisyui/issues/#3472)
+- [#3468: bug: (v5) react-day-picker unusable inside a dropdown](https://github.com/saadeghi/daisyui/issues/#3468)
+- [#3453: bug: vite warnings when minifying css](https://github.com/saadeghi/daisyui/issues/#3453)
+- [#3451: bug: filter component not hiding other radio button choices](https://github.com/saadeghi/daisyui/issues/#3451)
+- [#3443: bug: (v5) accordion focus doesn't work](https://github.com/saadeghi/daisyui/issues/#3443)
+- [#3440: bug: V5 Dialog does not put focus on first focusable element](https://github.com/saadeghi/daisyui/issues/#3440)
+- [#3433: bug: .list-row specificity is too high](https://github.com/saadeghi/daisyui/issues/#3433)
+- [#3432: bug: Tables with one row have unnecessary underline](https://github.com/saadeghi/daisyui/issues/#3432)
+- [#3430: bug: v5 beta3 CDN Styling issues](https://github.com/saadeghi/daisyui/issues/#3430)
+- [#3427: docs: Error alerts have a css typo](https://github.com/saadeghi/daisyui/issues/#3427)
+- [#3421: bug: dividers have a default margin-inline that can't be overridden](https://github.com/saadeghi/daisyui/issues/#3421)
+- [#3418: docs: Typo on https://v5.daisyui.com/components/stack/ page](https://github.com/saadeghi/daisyui/issues/#3418)
+- [#3417: docs: (v5) `<svg>` className error](https://github.com/saadeghi/daisyui/issues/#3417)
+- [#3394: bug: V5 Floating label + validator causes placeholder text to be off centered](https://github.com/saadeghi/daisyui/issues/#3394)
+- [#3391: bug: V5 Options in select elements with a label do not respect dark mode](https://github.com/saadeghi/daisyui/issues/#3391)
+- [#3389: bug: V5 (via CDN) Colors modifier for Chat bubble not working](https://github.com/saadeghi/daisyui/issues/#3389)
+- [#3383: bug: V5 Dock Component / The active large size overlaps the line.](https://github.com/saadeghi/daisyui/issues/#3383)
+- [#3382: bug: Dropdown does not close in an intuitive way](https://github.com/saadeghi/daisyui/issues/#3382)
+- [#3381: bug: V5 - Using a Floating Label with a disabled input looks weird.](https://github.com/saadeghi/daisyui/issues/#3381)
+- [#3375: bug: v5 hover:swap-active produces unwanted behavior ](https://github.com/saadeghi/daisyui/issues/#3375)
+- [#3360: bug: The label for the select element is not displayed in a single line but is instead stacked in a multi-language environment.](https://github.com/saadeghi/daisyui/issues/#3360)
 - [#3348: docs: tsx code for method 2 (popover api) of dropdown](https://github.com/saadeghi/daisyui/issues/3348)
 - [#3346: bug: Tooltip does not shown under overflow](https://github.com/saadeghi/daisyui/issues/3346)
 - [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/saadeghi/daisyui/issues/3332)
@@ -950,14 +987,8 @@ Please report any new bugs you find to [GitHub issues](https://github.com/saadeg
 > TLDR – No additional major changes are planned until the final release. Only bug fixes.  
 > [⤴️ Go back to the top](#)
 
-daisyUI 5.0.0 stable version will be release after the beta period. No major changes are planned before the final release. The focus will be on fixing bugs and improving documentation.  
-
-I would suggest you to start using the beta version in your projects locally (not production) and report any bugs you find on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them before the final version.  
-
-If you tested the Beta version locally and you are 100% sure everything is working looks good visually, you can use it in production as well but beware that there might be some small bugs that we are not aware of.
+If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.  
 
 Join us at [daisyUI Discord server](https://daisyui.com/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.
 
 Also check out [the changelog page](/docs/changelog/) for a detailed list changes in each component.
-
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-beta-production.webp" alt="daisyui-5-beta-production">

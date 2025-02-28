@@ -14,7 +14,7 @@ npx degit solidjs/templates/js
 ### 2. Install Tailwind CSS and daisyUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@beta
+npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 ```
 
 Add Tailwind CSS to Vite config

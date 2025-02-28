@@ -10,7 +10,7 @@ Initialize a new Node project in the current directory using `npm init -y` if it
 Install PostCSS, Tailwind CSS, and daisyUI
 
 ```sh:Terminal
-npm i postcss postcss-cli tailwindcss @tailwindcss/postcss daisyui@beta
+npm i postcss postcss-cli tailwindcss @tailwindcss/postcss daisyui@latest
 ```
 
 ### 2. Add Tailwind CSS and daisyUI

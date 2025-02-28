@@ -72,7 +72,7 @@ Beta version is available for testing on [v5.daisyui.com](https://v5.daisyui.com
 
 Join our [Discord server](https://daisyui.com/discord/) to get the latest news and updates about daisyUI 5 release date
 
-[![daisyUI 5 Beta](https://img.daisyui.com/images/blog/daisyui-in-lab.webp)](https://v5.daisyui.com/docs/v5-beta/)
+[![daisyUI 5 Beta](https://img.daisyui.com/images/blog/daisyui-in-lab.webp)](https://v5.daisyui.com/docs/v5/)
 
 ## Happy new year! 🎉
 

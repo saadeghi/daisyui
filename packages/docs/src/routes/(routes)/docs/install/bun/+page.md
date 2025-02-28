@@ -16,7 +16,7 @@ bun init -y
 ### 2. Install bun-plugin-tailwind and daisyUI
 
 ```sh:Terminal
-npm install bun-plugin-tailwind daisyui@beta
+npm install bun-plugin-tailwind daisyui@latest
 ```
 
 Create a `bunfig.toml` file at root and add bun-plugin-tailwind as a plugin

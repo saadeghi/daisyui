@@ -21,7 +21,7 @@ cd my-project
 ### 2. Install Tailwind CSS, PostCSS, and daisyUI
 
 ```sh:Terminal
-npm install daisyui@beta tailwindcss@latest @tailwindcss/postcss@latest postcss@latest --force
+npm install daisyui@latest tailwindcss@latest @tailwindcss/postcss@latest postcss@latest --force
 ```
 
 Add Tailwind CSS plugin for PostCSS to a new `.postcssrc.json` file at root

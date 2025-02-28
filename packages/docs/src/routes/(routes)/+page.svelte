@@ -151,7 +151,7 @@
   >
     <div class="shrink xl:w-1/2">
       <div
-        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:pe-0 xl:ps-10 xl:text-start"
+        class="flex min-h-[calc(100vh-4rem)] items-center justify-center px-2 py-10 text-center xl:justify-start xl:ps-10 xl:pe-0 xl:text-start"
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}
       >
         <div>
@@ -162,9 +162,9 @@
             >
               <button
                 class="btn btn-sm cursor-copy rounded-full font-mono font-light"
-                onclick={() => copyText("npm i -D daisyui@beta")}
+                onclick={() => copyText("npm i -D daisyui@latest")}
               >
-                <pre><code>npm i -D daisyui@beta</code></pre>
+                <pre><code>npm i -D daisyui@latest</code></pre>
               </button>
             </div>
             <!-- {#if daisyui5progress}
@@ -204,7 +204,7 @@
           </h1>
           <div class="h-4"></div>
           <p
-            class="text-base-content/70 font-title py-4 font-light md:text-lg xl:text-2xl [text-wrap:balance]"
+            class="text-base-content/70 font-title py-4 font-light [text-wrap:balance] md:text-lg xl:text-2xl"
           >
             {@html $t("homepage_h2")}
           </p>
@@ -228,7 +228,7 @@
                 class="btn md:btn-lg group shrink-0 rounded-full [@media(min-width:768px)]:px-10"
               >
                 <svg
-                  class="h-6 w-auto transition-opacity opacity-100 group-hover:opacity-0"
+                  class="h-6 w-auto opacity-100 transition-opacity group-hover:opacity-0"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 124 34"
                   ><g fill="currentColor"
@@ -258,7 +258,7 @@
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  class="inline-block absolute w-6 transition-all scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100"
+                  class="absolute inline-block w-6 scale-90 opacity-0 transition-all group-hover:scale-100 group-hover:opacity-100"
                   ><path
                     fill="currentColor"
                     fill-rule="evenodd"
@@ -269,7 +269,7 @@
               <a
                 data-sveltekit-preload-data
                 href="/docs/install/"
-                class="btn btn-neutral md:btn-lg group grow max-w-86 rounded-full px-12"
+                class="btn btn-neutral md:btn-lg group max-w-86 grow rounded-full px-12"
               >
                 {$t("cta-2")}
                 <svg
@@ -278,7 +278,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+                  class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
                 >
                   <path
                     stroke-linecap="round"
@@ -340,7 +340,7 @@
       <div>
         <div class="max-w-[100vw] px-2 py-10 lg:px-10 xl:max-w-[50vw]">
           <div class="font-title text-center xl:text-start">
-            <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-none">
+            <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] leading-none font-bold">
               {@html $t("don't re-invent <br/>the wheel <br/>every time")}
               <img
                 loading="lazy"
@@ -361,7 +361,7 @@
             <div class="h-40"></div>
             <div class="relative h-[300vh]">
               <div class="sticky top-[16vh] xl:top-[30vh]">
-                <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
+                <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] leading-none font-light">
                   {@html $t(
                     "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>",
                   )}
@@ -375,7 +375,7 @@
             </div>
             <div class="relative h-screen">
               <div class="sticky top-[16vh] xl:top-[30vh]">
-                <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-none">
+                <h2 class="text-[clamp(2.5rem,6vw,4.5rem)] leading-none font-light">
                   {@html $t(
                     "use <span class='text-success'><span class='font-black'>semantic</span> <br />class names</span>",
                   )}
@@ -404,7 +404,7 @@
     <!-- hero figure -->
 
     <div
-      class="invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 xl:visible xl:-end-32 xl:bottom-auto xl:top-16 xl:w-auto xl:transform-none! xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pb-16 xl:pt-16"
+      class="invisible sticky bottom-4 flex w-[calc(100%-2rem)] shrink duration-700 xl:visible xl:-end-32 xl:top-16 xl:bottom-auto xl:w-auto xl:transform-none! xl:overflow-x-hidden xl:overflow-y-clip xl:bg-transparent xl:pt-16 xl:pb-16"
       style={`${
         section["hero"] && scrollY > section["hero"].clientHeight * 0.2
           ? "visibility: visible;"
@@ -412,7 +412,7 @@
       }transform:translateY(${animateValue(section["hero"], [17, 25], [120, 0])}%)`}
     >
       <div
-        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 mx-auto origin-top overflow-visible pb-4 backdrop-blur will-change-auto [--rtl-reverse:1] [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] rtl:[--rtl-reverse:-1] rtl:[transform:rotateX(20deg)rotateZ(20deg)skewY(-8deg)scale(1)] max-[1279px]:[transform:translate3d(0,0,0)]! xl:-end-20 xl:-me-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-e-none xl:pe-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] xl:backdrop-blur-0"
+        class="mockup mockup-window bg-base-200/90 xl:bg-base-200 xl:backdrop-blur-0 mx-auto origin-top [transform:rotateX(20deg)rotateZ(-20deg)skewY(8deg)scale(1)] overflow-visible pb-4 backdrop-blur will-change-auto [--rtl-reverse:1] max-[1279px]:[transform:translate3d(0,0,0)]! xl:-end-20 xl:-me-10 xl:h-[32rem] xl:w-[50rem] xl:rounded-e-none xl:pe-4 xl:shadow-[-0.05rem_0.1rem_0rem_#00000014] rtl:[transform:rotateX(20deg)rotateZ(20deg)skewY(-8deg)scale(1)] rtl:[--rtl-reverse:-1]"
         style={section["hero"] &&
           `transform: rotateX(${animateValue(
             section["hero"],
@@ -432,7 +432,7 @@
         <div class="grid">
           <div
             style={`opacity:${animateValue(section["hero"], [15, 17], [1, 0])}`}
-            class="z-1 col-start-1 row-start-1 grid overflow-y-hidden overflow-x-scroll [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
+            class="z-1 col-start-1 row-start-1 grid overflow-x-scroll overflow-y-hidden [scrollbar-width:none] xl:visible xl:overflow-x-visible xl:overflow-y-visible [&::-webkit-scrollbar]:hidden"
             class:invisible={section["hero"] && scrollY < section["hero"].clientHeight}
           >
             <!-- flying components -->
@@ -452,25 +452,25 @@
                     [0, -800],
                   )}px)`}
                 >
-                  <div class="tabs tabs-lift grid-cols-3 grid">
+                  <div class="tabs tabs-lift grid grid-cols-3">
                     <button
                       onclick={() => (activeMenuItemOnHeroMockup = 1)}
                       class:tab-active={activeMenuItemOnHeroMockup === 1}
-                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs me-0!"
+                      class="tab me-0! text-xs whitespace-nowrap [--tab-border-color:transparent]"
                     >
                       {$t("Features")}
                     </button>
                     <button
                       onclick={() => (activeMenuItemOnHeroMockup = 2)}
                       class:tab-active={activeMenuItemOnHeroMockup === 2}
-                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs me-0!"
+                      class="tab me-0! text-xs whitespace-nowrap [--tab-border-color:transparent]"
                     >
                       {$t("Links")}
                     </button>
                     <button
                       onclick={() => (activeMenuItemOnHeroMockup = 3)}
                       class:tab-active={activeMenuItemOnHeroMockup === 3}
-                      class="tab [--tab-border-color:transparent] whitespace-nowrap text-xs me-0!"
+                      class="tab me-0! text-xs whitespace-nowrap [--tab-border-color:transparent]"
                     >
                       {$t("Message")}
                     </button>
@@ -483,7 +483,7 @@
                     {#if activeMenuItemOnHeroMockup === 1}
                       <div class="flex flex-col items-stretch p-6">
                         <fieldset class="fieldset py-2">
-                          <label class="flex cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer justify-between text-xs">
                             {$t("Faster development")}
                             <input
                               type="checkbox"
@@ -494,7 +494,7 @@
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="flex cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer justify-between text-xs">
                             {$t("Cleaner HTML")}
                             <input
                               type="checkbox"
@@ -505,7 +505,7 @@
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="flex cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer justify-between text-xs">
                             {$t("Customizable")}
                             <input
                               type="checkbox"
@@ -516,7 +516,7 @@
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="flex cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer justify-between text-xs">
                             {$t("Themeable")}
                             <input
                               type="checkbox"
@@ -527,7 +527,7 @@
                           </label>
                         </fieldset>
                         <fieldset class="fieldset py-2">
-                          <label class="flex cursor-pointer text-xs justify-between">
+                          <label class="flex cursor-pointer justify-between text-xs">
                             {$t("Pure CSS")}
                             <input
                               type="checkbox"
@@ -927,14 +927,14 @@
           </div>
           <div
             dir="ltr"
-            class="col-start-1 row-start-1 w-11/12 pb-3 pe-10 ps-10 opacity-0 rtl:ps-0 sm:pb-10 lg:pe-4 lg:rtl:ps-20 xl:ps-12 xl:pt-10"
+            class="col-start-1 row-start-1 w-11/12 ps-10 pe-10 pb-3 opacity-0 sm:pb-10 lg:pe-4 xl:ps-12 xl:pt-10 rtl:ps-0 lg:rtl:ps-20"
             style={`opacity:${animateValue(
               section["hero"],
               [16, 17],
               [0, 1],
             )};z-index:${animateValue(section["hero"], [20, 22], [0, 1])}`}
           >
-            <pre class="max-w-xl text-xs sm:text-base"><code class="whitespace-pre-wrap text-xs"
+            <pre class="max-w-xl text-xs sm:text-base"><code class="text-xs whitespace-pre-wrap"
                 ><span class="text-base-content/40 italic">// {$t("Styling a simple button")}</span>
 &lt;button class=&quot;<span class={`${demo_1_StyleHandler()}`}>{demo_1_ClassNameHandler()}</span
                 >&quot;&gt;
@@ -942,7 +942,7 @@
 &lt;/button&gt;</code
               ></pre>
             <div>
-              <div class="text-base-content/40 py-6 font-mono italic text-xs">
+              <div class="text-base-content/40 py-6 font-mono text-xs italic">
                 // {$t("Result")}:
               </div>
               <button class={`${demo_1_ClassNameHandler()}`}>
@@ -956,7 +956,7 @@
   </div>
 
   <div class="pointer-events-none bottom-0 flex justify-center p-2 xl:sticky xl:justify-end">
-    <div class="pointer-events-auto h-[116px] w-full min-w-[330px] max-w-[350px]">
+    <div class="pointer-events-auto h-[116px] w-full max-w-[350px] min-w-[330px]">
       <Carbon />
     </div>
   </div>
@@ -965,13 +965,13 @@
 <div class="w-full px-2 py-40 lg:px-10" bind:this={section["nextlevel"]}>
   <div class="text-center">
     <h2
-      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto [transform:translate3d(0,0,0)] motion-reduce:tracking-normal! max-[1279px]:tracking-normal!"
+      class="font-title relative z-2 mx-auto [transform:translate3d(0,0,0)] text-[clamp(2rem,6vw,4.5rem)] leading-none font-black will-change-auto motion-reduce:tracking-normal! max-[1279px]:tracking-normal!"
       style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [1, 0])}rem`}
     >
       {$t("Take Tailwind CSS")}
       <br />
       <span
-        class="bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] motion-reduce:tracking-normal! max-[1279px]:tracking-normal! bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)]"
+        class="[transform:translate3d(0,0,0)] bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)] bg-clip-text will-change-auto [-webkit-text-fill-color:transparent] motion-reduce:tracking-normal! max-[1279px]:tracking-normal!"
         style={`letter-spacing:${animateValue(section["nextlevel"], [-100, 20], [0, 1])}rem`}
       >
         {$t("to the next level")}
@@ -1009,7 +1009,7 @@
       <div class="w-full px-2 py-40 lg:px-10">
         <div class="text-center">
           <h2
-            class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none"
+            class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] leading-none font-black"
           >
             <span
               class="motion-reduce:opacity-100!"
@@ -1099,7 +1099,7 @@
               </path>
             </svg>
           </div>
-          <div class="flex justify-center pb-10 pt-4">
+          <div class="flex justify-center pt-4 pb-10">
             <label class="flex cursor-pointer items-center gap-3">
               {$t("Tailwind only")}
               <div class="relative">
@@ -1107,7 +1107,7 @@
                   class="pointer-events-none absolute start-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2"
                 >
                   <div
-                    class="bg-primary/30 col-start-1 row-start-1 scale-2 rounded-full blur-[5rem] [transform:translate3d(0,0,0)]"
+                    class="bg-primary/30 col-start-1 row-start-1 scale-2 [transform:translate3d(0,0,0)] rounded-full blur-[5rem]"
                   ></div>
                 </div>
                 <input
@@ -1124,9 +1124,9 @@
         <div class="flex flex-col items-center gap-6 xl:flex-row">
           {#if toggleValueForCodeCompare}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative xl:max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
+              class="mockup-code border-base-content/10 text-base-content relative grow border bg-transparent text-xs xl:min-h-[550px] xl:max-w-[calc(100vw-32rem)]"
             >
-              <pre class="w-full whitespace-pre-wrap px-6 before:hidden"><code
+              <pre class="w-full px-6 whitespace-pre-wrap before:hidden"><code
                   >&lt;div class=&quot;<span class="text-teal-600">card w-80 bg-base-200</span
                   >&quot;&gt;
   &lt;div class=&quot;<span class="text-teal-600">card-body gap-3</span>&quot;&gt;
@@ -1153,7 +1153,7 @@
             </div>
             <div class="divider xl:divider-horizontal">=</div>
             <div>
-              <div class="card w-80 bg-base-200">
+              <div class="card bg-base-200 w-80">
                 <div class="card-body gap-3">
                   <input placeholder="Email" class="input" name="sample-input-field" />
                   <label class="label">
@@ -1170,9 +1170,9 @@
             </div>
           {:else}
             <div
-              class="mockup-code border-base-content/10 text-base-content relative xl:max-w-[calc(100vw-32rem)] grow border bg-transparent text-xs xl:min-h-[550px]"
+              class="mockup-code border-base-content/10 text-base-content relative grow border bg-transparent text-xs xl:min-h-[550px] xl:max-w-[calc(100vw-32rem)]"
             >
-              <pre class="w-full whitespace-pre-wrap px-6 before:hidden"><code
+              <pre class="w-full px-6 whitespace-pre-wrap before:hidden"><code
                   >&lt;div class=&quot;<span class="text-rose-600"
                     >w-80 rounded-lg bg-zinc-50 text-zinc-800</span
                   >&quot;&gt;
@@ -1222,12 +1222,12 @@
                     placeholder="Email"
                     class="w-full rounded-sm border border-zinc-300 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-zinc-700 focus:ring-offset-2 focus:ring-offset-zinc-100 focus:outline-none focus-visible:border-zinc-900"
                   />
-                  <label class="flex cursor-pointer items-center text-sm gap-1.5 text-zinc-500">
+                  <label class="flex cursor-pointer items-center gap-1.5 text-sm text-zinc-500">
                     <div class="relative inline-block h-5">
                       <input
                         type="checkbox"
                         name="sample-checkbox"
-                        class="peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 checked:focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none"
+                        class="peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:outline-none checked:focus-visible:ring-zinc-900"
                       />
                       <span
                         class="pointer-events-none absolute start-0.75 top-0.75 block size-[0.875rem] rounded-full bg-zinc-400 transition-all duration-200 peer-checked:start-[0.9375rem] peer-checked:bg-zinc-900"
@@ -1235,12 +1235,12 @@
                     </div>
                     {$t("Submit to newsletter")}
                   </label>
-                  <label class="flex cursor-pointer items-center text-sm gap-1.5 text-zinc-500">
+                  <label class="flex cursor-pointer items-center gap-1.5 text-sm text-zinc-500">
                     <div class="relative inline-block h-5">
                       <input
                         type="checkbox"
                         name="sample-checkbox"
-                        class="peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 checked:focus-visible:ring-zinc-900 focus-visible:ring-offset-2 focus-visible:outline-none"
+                        class="peer h-5 w-8 cursor-pointer appearance-none rounded-full border border-zinc-400 peer-checked:bg-white checked:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:outline-none checked:focus-visible:ring-zinc-900"
                       />
                       <span
                         class="pointer-events-none absolute start-0.75 top-0.75 block size-[0.875rem] rounded-full bg-zinc-400 transition-all duration-200 peer-checked:start-[0.9375rem] peer-checked:bg-zinc-900"
@@ -1249,7 +1249,7 @@
                     {$t("Accept terms of use")}
                   </label>
                   <button
-                    class="inline-block cursor-pointer rounded-sm bg-zinc-900 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-[0_.2rem_0.3rem_-.25rem_black] active:shadow-none transition duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-zinc-700 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-y-[1px]"
+                    class="inline-block cursor-pointer rounded-sm bg-zinc-900 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-[0_.2rem_0.3rem_-.25rem_black] transition duration-200 ease-in-out focus-visible:ring-2 focus-visible:ring-zinc-700 focus-visible:ring-offset-2 focus-visible:outline-none active:translate-y-[1px] active:shadow-none"
                     >{$t("Save")}</button
                   >
                 </div>
@@ -1262,20 +1262,20 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] overflow-hidden pb-40 pt-32" bind:this={section["performance"]}>
+<div class="min-h-[100vh] overflow-hidden pt-32 pb-40" bind:this={section["performance"]}>
   <div class="relative">
     <div
       class="relative flex flex-col items-center justify-center gap-10 px-4 md:px-10 xl:flex-row-reverse xl:gap-20"
     >
       <div>
         <div
-          class="bg-primary pointer-events-none absolute start-20 aspect-square w-96 rounded-full opacity-20 blur-3xl [transform:translate3d(0,0,0)]"
+          class="bg-primary pointer-events-none absolute start-20 aspect-square w-96 [transform:translate3d(0,0,0)] rounded-full opacity-20 blur-3xl"
         ></div>
         <div
-          class="bg-success pointer-events-none absolute aspect-square w-full rounded-full opacity-10 blur-3xl [transform:translate3d(0,0,0)]"
+          class="bg-success pointer-events-none absolute aspect-square w-full [transform:translate3d(0,0,0)] rounded-full opacity-10 blur-3xl"
         ></div>
         <h2
-          class="font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-start"
+          class="font-title text-center text-[clamp(2rem,8vw,4rem)] leading-none font-black xl:text-start"
         >
           <span
             class="motion-reduce:opacity-100!"
@@ -1344,7 +1344,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+              class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
             >
               <path
                 stroke-linecap="round"
@@ -1464,9 +1464,9 @@
     class="relative flex max-w-[100rem] flex-col items-center justify-center xl:flex-row xl:gap-20"
   >
     <div class="relative z-1 w-full py-10">
-      <h2 class="font-title text-center font-black leading-none xl:text-start">
+      <h2 class="font-title text-center leading-none font-black xl:text-start">
         <span
-          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
+          class="inline-block text-[clamp(2rem,8vw,3.6rem)] font-black will-change-auto [--rtl-reverse:1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]! rtl:[--rtl-reverse:-1]"
           style={`transform:translateX(calc(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1477,7 +1477,7 @@
         </span>
         <br />
         <span
-          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto [--rtl-reverse:1] rtl:[--rtl-reverse:-1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]!"
+          class="inline-block text-[clamp(2rem,8vw,3rem)] font-light will-change-auto [--rtl-reverse:1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]! rtl:[--rtl-reverse:-1]"
           style={`transform:translateX(calc(${animateValue(
             section["customizable"],
             [-100, 100],
@@ -1489,7 +1489,7 @@
       </h2>
       <div class="h-10"></div>
       <p
-        class="text-neutral-content/60 font-title inline-block w-full text-center font-light will-change-auto [--rtl-reverse:1] [text-wrap:balance] rtl:[--rtl-reverse:-1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]! md:text-2xl xl:text-start"
+        class="text-neutral-content/60 font-title inline-block w-full text-center font-light [text-wrap:balance] will-change-auto [--rtl-reverse:1] motion-reduce:transform-none! max-[1279px]:[transform:translate3d(0,0,0)]! md:text-2xl xl:text-start rtl:[--rtl-reverse:-1]"
         style={`transform:translateX(calc(${animateValue(
           section["customizable"],
           [-100, 100],
@@ -1510,7 +1510,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
           >
             <path
               stroke-linecap="round"
@@ -1524,13 +1524,13 @@
     </div>
     <div class="flex flex-col">
       <div
-        class="mockup-code mx-auto w-full max-w-xs bg-neutral-content/5 text-start sm:max-w-none"
+        class="mockup-code bg-neutral-content/5 mx-auto w-full max-w-xs text-start sm:max-w-none"
       >
         <pre><code>&lt;a class="<span>btn btn-primary</span>"&gt;Button&lt;/a&gt;</code></pre>
       </div>
       <div class="divider text-neutral-content text-opacity-30">↓</div>
       <div
-        class="mockup-code mx-auto w-full max-w-xs bg-neutral-content/5 text-start sm:max-w-none"
+        class="mockup-code bg-neutral-content/5 mx-auto w-full max-w-xs text-start sm:max-w-none"
       >
         <pre><code
             >&lt;a class="<span>btn btn-primary</span> <span class="text-teal-500"
@@ -1547,13 +1547,13 @@
   bind:this={section["agnostic"]}
 >
   <div
-    class="bg-primary end-1/5 pointer-events-none absolute -top-1/2 aspect-square w-full rounded-full opacity-5 blur-3xl"
+    class="bg-primary pointer-events-none absolute end-1/5 -top-1/2 aspect-square w-full rounded-full opacity-5 blur-3xl"
   ></div>
   <div
     class="bg-success pointer-events-none absolute bottom-[-110%] left-1/2 aspect-square w-2/3 -translate-x-1/2 rounded-full border-2 opacity-20 blur-3xl"
   ></div>
   <div
-    class="bg-info pointer-events-none absolute bottom-[-130%] left-0 aspect-square w-1/2 rounded-full opacity-20 blur-3xl [transform:translate3d(0,0,0)]"
+    class="bg-info pointer-events-none absolute bottom-[-130%] left-0 aspect-square w-1/2 [transform:translate3d(0,0,0)] rounded-full opacity-20 blur-3xl"
   ></div>
   <div
     class="relative flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse"
@@ -1595,7 +1595,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+            class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
           >
             <path
               stroke-linecap="round"
@@ -1618,7 +1618,7 @@
             loading="lazy"
             width="96"
             height="96"
-            class="aspect-square w-full will-change-auto motion-reduce:opacity-100! motion-reduce:filter-none! motion-reduce:[scale:1]!"
+            class="aspect-square w-full will-change-auto motion-reduce:[scale:1]! motion-reduce:opacity-100! motion-reduce:filter-none!"
             style={`opacity:${animateValue(
               section["agnostic"],
               [-70 + index * 5, -60 + index * 5],
@@ -1651,7 +1651,7 @@
   >
     {#each ["light", "valentine", "cyberpunk", "cupcake", "retro", "synthwave", "luxury", "night"] as currentTheme, index}
       <div
-        class="col-start-1 row-start-1 flex items-start [transform:translate3d(0,0,0)]"
+        class="col-start-1 row-start-1 flex [transform:translate3d(0,0,0)] items-start"
         data-theme={currentTheme}
         style={index > 0
           ? `clip-path: polygon(${animateValue(
@@ -1682,7 +1682,7 @@
   <div class="sticky top-20 w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
-        class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none"
+        class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] leading-none font-black"
       >
         <span
           class="motion-reduce:opacity-100!"
@@ -1799,7 +1799,7 @@
   <div class="w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
-        class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none"
+        class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] leading-none font-black"
       >
         <span
           class="motion-reduce:opacity-100!"
@@ -1844,7 +1844,7 @@
         <span class="inline-grid">
           {#if section["possibilities"] && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 > -100 && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 < -20}{:else}
             <span
-              class="pointer-events-none col-start-1 row-start-1 bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [transform:translate3d(0,0,0)] [:root[dir=rtl]_&]:leading-[1.35] bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]"
+              class="pointer-events-none col-start-1 row-start-1 [transform:translate3d(0,0,0)] bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [:root[dir=rtl]_&]:leading-[1.35]"
               aria-hidden="true"
             >
               {$t("endless possibilities")}
@@ -1874,8 +1874,8 @@
                 section["possibilities"].clientHeight) *
                 100 <
                 -20
-                ? "motion-reduce:bg-clip-text! motion-reduce:[-webkit-text-fill-color:transparent]! motion-reduce:bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)]!"
-                : "bg-clip-text [-webkit-text-fill-color:transparent] bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)]"
+                ? "motion-reduce:bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)]! motion-reduce:bg-clip-text! motion-reduce:[-webkit-text-fill-color:transparent]!"
+                : "bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)] bg-clip-text [-webkit-text-fill-color:transparent]"
             }`}
           >
             {$t("endless possibilities")}
@@ -1905,7 +1905,7 @@
       class="bg-primary pointer-events-none absolute bottom-0 left-1/2 aspect-square w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-3xl"
     ></div>
     <h2
-      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none will-change-auto motion-reduce:transform-none!"
+      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] leading-none font-black will-change-auto motion-reduce:transform-none!"
       style={`transform:scale(${animateValue(
         section["numbers"],
         [0, 20],
@@ -2032,7 +2032,7 @@
   <div class="sticky top-0 w-full px-2 pt-40 lg:px-10">
     <div class="text-center">
       <h2
-        class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-none"
+        class="font-title relative z-2 mx-auto text-[clamp(2.5rem,6vw,4.5rem)] leading-none font-black"
       >
         <span
           class="motion-reduce:opacity-100!"
@@ -2130,14 +2130,14 @@
 <div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
   <div class="hero-content w-full text-center">
     <div class="w-full max-w-md">
-      <h2 class="mb-8 mt-20 text-[clamp(2rem,8vw,5rem)] font-black md:text-6xl">
+      <h2 class="mt-20 mb-8 text-[clamp(2rem,8vw,5rem)] font-black md:text-6xl">
         {$t("install-title")}
       </h2>
       <div class="mx-auto my-2 w-full max-w-md">
         {#await import("../../components/homepage/Install.svelte") then Module}
           <Module.default />
         {/await}
-        <a href="/docs/install/" class="btn-primary btn btn-wide mb-20 mt-4 shadow-lg">
+        <a href="/docs/install/" class="btn-primary btn btn-wide mt-4 mb-20 shadow-lg">
           {$t("install-btn")}
         </a>
       </div>
