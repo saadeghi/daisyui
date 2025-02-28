@@ -1,0 +1,38 @@
+.breadcrumbs {
+  @apply max-w-full overflow-x-auto py-2;
+
+  > menu,
+  > ul,
+  > ol {
+    @apply flex min-h-min items-center whitespace-nowrap;
+
+    > li {
+      @apply flex items-center;
+
+      > * {
+        @apply flex cursor-pointer items-center gap-2 hover:underline;
+
+        &:focus {
+          @apply outline-hidden;
+        }
+
+        &:focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+      }
+
+      & + *:before {
+        content: "";
+        @apply mr-3 ml-2 block h-1.5 w-1.5 opacity-40;
+        rotate: 45deg;
+        border-top: 1px solid;
+        border-right: 1px solid;
+        background-color: #0000;
+      }
+      [dir="rtl"] & + *:before {
+        rotate: -135deg;
+      }
+    }
+  }
+}

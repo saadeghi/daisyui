@@ -1,0 +1,223 @@
+.menu {
+  @apply flex w-fit flex-col flex-wrap p-2;
+  --menu-active-fg: var(--color-neutral-content);
+  --menu-active-bg: var(--color-neutral);
+  font-size: 0.875rem;
+
+  :where(li ul) {
+    @apply relative ms-4 ps-2 whitespace-nowrap;
+
+    &:before {
+      @apply bg-base-content absolute start-0 top-3 bottom-3 opacity-10;
+      width: var(--border);
+      content: "";
+    }
+  }
+
+  :where(li > .menu-dropdown:not(.menu-dropdown-show)) {
+    @apply hidden;
+  }
+
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply rounded-field grid grid-flow-col content-start items-center gap-2 px-3 py-1.5 text-start;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    grid-auto-columns: minmax(auto, max-content) auto max-content;
+    text-wrap: balance;
+    user-select: none;
+  }
+
+  :where(li > details > summary) {
+    @apply outline-hidden;
+
+    &::-webkit-details-marker {
+      @apply hidden;
+    }
+  }
+
+  :where(li > details > summary),
+  :where(li > .menu-dropdown-toggle) {
+    &:after {
+      @apply justify-self-end;
+      display: block;
+      height: 0.375rem;
+      width: 0.375rem;
+      rotate: -135deg;
+      translate: 0 -1px;
+      transition-property: rotate, translate;
+      transition-duration: 0.2s;
+      content: "";
+      transform-origin: 50% 50%;
+      box-shadow: 2px 2px inset;
+      pointer-events: none;
+    }
+  }
+
+  :where(li > details[open] > summary):after,
+  :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
+    rotate: 45deg;
+    translate: 0 1px;
+  }
+
+  :where(
+      li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title),
+      li:not(.menu-title, .disabled) > details > summary:not(.menu-title)
+    ):not(.menu-active, :active, .btn) {
+    &.menu-focus,
+    &:focus-visible {
+      @apply bg-base-content/10 text-base-content cursor-pointer outline-hidden;
+    }
+  }
+  :where(
+    li:not(.menu-title, .disabled)
+      > *:not(ul, details, .menu-title):not(.menu-active, :active, .btn):hover,
+    li:not(.menu-title, .disabled)
+      > details
+      > summary:not(.menu-title):not(.menu-active, :active, .btn):hover
+  ) {
+    @apply bg-base-content/10 cursor-pointer outline-hidden;
+    box-shadow:
+      0 1px oklch(0% 0 0 / 0.01) inset,
+      0 -1px oklch(100% 0 0 / 0.01) inset;
+  }
+
+  :where(li:empty) {
+    @apply bg-base-content opacity-10;
+    margin: 0.5rem 1rem;
+    height: 1px;
+  }
+
+  :where(li) {
+    @apply relative flex shrink-0 flex-col flex-wrap items-stretch;
+
+    .badge {
+      @apply justify-self-end;
+    }
+
+    & > *:not(ul, .menu-title, details, .btn):active,
+    & > *:not(ul, .menu-title, details, .btn).menu-active,
+    & > details > summary:active {
+      @apply outline-hidden;
+      color: var(--menu-active-fg);
+      background-color: var(--menu-active-bg);
+      background-size: auto, calc(var(--noise) * 100%);
+      background-image: none, var(--fx-noise);
+      &:not(&:active) {
+        box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--menu-active-bg);
+      }
+    }
+
+    &.menu-disabled {
+      @apply text-base-content/20 pointer-events-none;
+    }
+  }
+  .dropdown:focus-within {
+    .menu-dropdown-toggle:after {
+      rotate: 45deg;
+      translate: 0 1px;
+    }
+  }
+  .dropdown-content {
+    @apply mt-2 p-2;
+    &:before {
+      @apply hidden;
+    }
+  }
+}
+
+.menu-title {
+  @apply text-base-content/40 px-3 py-2;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.menu-horizontal {
+  @apply inline-flex flex-row;
+
+  & > li:not(.menu-title) > details > ul {
+    @apply absolute ms-0 mt-4 py-2 pe-2;
+  }
+
+  & > li > details > ul {
+    &:before {
+      content: none;
+    }
+  }
+
+  :where(& > li:not(.menu-title) > details > ul) {
+    @apply bg-base-100 rounded-box;
+    box-shadow:
+      0 1px 3px 0 oklch(0% 0 0/0.1),
+      0 1px 2px -1px oklch(0% 0 0/0.1);
+  }
+}
+
+.menu-vertical {
+  @apply inline-flex flex-col;
+
+  & > li:not(.menu-title) > details > ul {
+    @apply relative ms-4 mt-0 py-0 pe-0;
+  }
+}
+
+.menu-xs {
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply rounded-field px-2 py-1;
+    font-size: 0.6875rem;
+  }
+
+  .menu-title {
+    @apply px-2 py-1;
+  }
+}
+
+.menu-sm {
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply rounded-field px-2.5 py-1;
+    font-size: 0.75rem;
+  }
+
+  .menu-title {
+    @apply px-3 py-2;
+  }
+}
+
+.menu-md {
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply rounded-field px-3 py-1.5;
+    font-size: 0.875rem;
+  }
+
+  .menu-title {
+    @apply px-3 py-2;
+  }
+}
+
+.menu-lg {
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply rounded-field px-4 py-1.5;
+    font-size: 1.125rem;
+  }
+
+  .menu-title {
+    @apply px-6 py-3;
+  }
+}
+
+.menu-xl {
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title)),
+  :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
+    @apply rounded-field px-5 py-1.5;
+    font-size: 1.375rem;
+  }
+
+  .menu-title {
+    @apply px-6 py-3;
+  }
+}

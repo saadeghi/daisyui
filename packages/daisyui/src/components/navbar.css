@@ -1,0 +1,22 @@
+.navbar {
+  @apply flex w-full items-center;
+  padding: 0.5rem;
+  min-height: 4rem;
+}
+
+.navbar-start {
+  @apply inline-flex items-center;
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.navbar-center {
+  @apply inline-flex items-center;
+  @apply shrink-0;
+}
+
+.navbar-end {
+  @apply inline-flex items-center;
+  width: 50%;
+  justify-content: flex-end;
+}

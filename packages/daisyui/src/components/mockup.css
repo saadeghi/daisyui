@@ -1,0 +1,116 @@
+.mockup-code {
+  @apply bg-neutral text-neutral-content rounded-box relative overflow-hidden overflow-x-auto py-5;
+  font-size: 0.875rem;
+  direction: ltr;
+
+  &:before {
+    content: "";
+    @apply mb-4 block h-3 w-3 rounded-full opacity-30;
+    box-shadow:
+      1.4em 0,
+      2.8em 0,
+      4.2em 0;
+  }
+
+  pre {
+    @apply pr-5;
+
+    &:before {
+      content: "";
+      margin-right: 2ch;
+    }
+
+    &[data-prefix] {
+      &:before {
+        content: attr(data-prefix);
+        @apply inline-block w-8 text-right opacity-50;
+      }
+    }
+  }
+}
+
+.mockup-window {
+  @apply rounded-box relative flex flex-col overflow-hidden overflow-x-auto pt-5;
+
+  &:before {
+    content: "";
+    @apply mb-4 block aspect-square h-3 shrink-0 self-start rounded-full opacity-30;
+    box-shadow:
+      1.4em 0,
+      2.8em 0,
+      4.2em 0;
+  }
+  [dir="rtl"] &:before {
+    @apply self-end;
+  }
+
+  pre[data-prefix] {
+    &:before {
+      content: attr(data-prefix);
+      @apply inline-block text-right;
+    }
+  }
+}
+
+.mockup-browser {
+  @apply rounded-box relative overflow-hidden overflow-x-auto;
+
+  pre[data-prefix] {
+    &:before {
+      content: attr(data-prefix);
+      @apply inline-block text-right;
+    }
+  }
+
+  .mockup-browser-toolbar {
+    @apply my-3 inline-flex w-full items-center pr-[1.4em] rtl:flex-row-reverse;
+
+    &:before {
+      content: "";
+      @apply mr-[4.8rem] inline-block aspect-square h-3 rounded-full opacity-30;
+      box-shadow:
+        1.4em 0,
+        2.8em 0,
+        4.2em 0;
+    }
+
+    .input {
+      @apply bg-base-200 mx-auto flex h-full items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap;
+      font-size: 0.75rem;
+      direction: ltr;
+
+      &:before {
+        content: "";
+        @apply size-4 opacity-30;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor' class='size-4'%3E%3Cpath fill-rule='evenodd' d='M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z' clip-rule='evenodd' /%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}
+
+.mockup-phone {
+  @apply inline-grid justify-items-center;
+  border: 6px solid #6b6b6b;
+  border-radius: 65px;
+  background-color: #000;
+  padding: 11px;
+  overflow: hidden;
+}
+.mockup-phone-camera {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  background: #000;
+  height: 32px;
+  width: 126px;
+  border-radius: 17px;
+  z-index: 1;
+  margin-top: 6px;
+}
+.mockup-phone-display {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  overflow: hidden;
+  border-radius: 49px;
+  width: 390px;
+  height: 845px;
+}

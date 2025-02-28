@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>daisyUI Report Logs</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  </head>
+  <body style="font-family: sans-serif">
+    <div x-data="reportData()" x-init="init()">
+      <div style="position: sticky; top: 0; z-index: 10; background: white">
+        <input
+          type="range"
+          :min="0"
+          :max="reports.length - 1"
+          x-model="currentIndex"
+          @input="updateAllCharts()"
+          style="width: 16rem; margin: 0 auto; display: block"
+        />
+        <pre>
+<span x-text="timeago.format(reports[currentIndex]?.timestamp)" :title="reports[currentIndex]?.timestamp"></span>
+daisyui.css <span x-text="getFullCssSize() +'B'"></span>
+daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
+            </pre>
+      </div>
+      <div class="charts-grid">
+        <template x-for="(chart, index) in charts" :key="index">
+          <div class="chart-container">
+            <div :id="'chart-' + index"></div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <script>
+      const transformFileName = (file) => {
+        let transformed = file.split("/").pop().split(".")[0]
+        return transformed === "base" ? "base.css" : transformed
+      }
+
+      const getChartLayout = (chart, allFiles, maxValues) => {
+        const baseLayout = {
+          title: chart.title,
+          xaxis: {
+            title: "",
+            tickangle: 90,
+            tickfont: { size: 10, color: "#888" },
+            ticktext: Array.from(allFiles),
+            tickvals: Array.from(allFiles),
+            ticklabelposition: "inside",
+            tickmode: "array",
+            tickheight: 200,
+          },
+          margin: { t: 30, l: 50, r: 50, b: 50 },
+          height: 600,
+          width: 1450,
+          showlegend: false,
+        }
+
+        if (chart.key === "raw_brotli") {
+          return {
+            ...baseLayout,
+            yaxis: { title: "Size (bytes)", range: [0, maxValues["raw"]] },
+            colorway: ["#ddd", "#000"],
+            barmode: "stack", // Changed from "group" to "stack"
+          }
+        } else {
+          return {
+            ...baseLayout,
+            yaxis: { title: "", range: [0, maxValues[chart.key]] },
+            colorway: ["#000", "#ddd"],
+            barmode: "stack",
+          }
+        }
+      }
+
+      const getChartData = (key, report, allFiles, excludedFiles) => {
+        const dataMap = new Map(
+          report.data
+            .filter(
+              (item) => !excludedFiles.some((excludedFile) => item.file.includes(excludedFile)),
+            )
+            .map((item) => [transformFileName(item.file), item]),
+        )
+        const x = Array.from(allFiles)
+
+        if (key === "raw_brotli") {
+          const yRaw = x.map((file) => dataMap.get(file)?.raw || 0)
+          const yBrotli = x.map((file) => dataMap.get(file)?.brotli || 0)
+          return [
+            { x, y: yRaw, type: "bar", name: "Raw" },
+            { x, y: yBrotli, type: "bar", name: "Brotli" }, // Removed yaxis: "y2"
+          ]
+        } else if (key === "selector_var") {
+          const ySelector = x.map((file) => dataMap.get(file)?.selector || 0)
+          const yVar = x.map((file) => dataMap.get(file)?.var || 0)
+          return [
+            { x, y: ySelector, type: "bar", name: "Selector" },
+            { x, y: yVar, type: "bar", name: "Var" },
+          ]
+        }
+      }
+
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("reportData", () => ({
+          getFullCssSize() {
+            const report = this.reports[this.currentIndex]
+            const fullCssData = report.data.find((item) => item.file.includes("daisyui.css"))
+            return fullCssData ? fullCssData.raw : 0
+          },
+
+          getFullCssBrotliSize() {
+            const report = this.reports[this.currentIndex]
+            const fullCssData = report.data.find((item) => item.file.includes("daisyui.css"))
+            return fullCssData ? fullCssData.brotli : 0
+          },
+
+          formatFileSize(bytes) {
+            if (bytes === 0) return "0 Bytes"
+            const k = 1024
+            const sizes = ["Bytes", "KB", "MB", "GB"]
+            const i = Math.floor(Math.log(bytes) / Math.log(k))
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i]
+          },
+          reports: [],
+          charts: [{ key: "raw_brotli" }, { key: "selector_var" }],
+          chartObjects: [],
+          currentIndex: 0,
+          maxValues: {},
+          allFiles: new Set(),
+          excludedFiles: [
+            "daisyui.css",
+            "colors/responsive.css",
+            "colors/states.css",
+            "themes",
+            "chunks",
+          ],
+
+          async init() {
+            await this.loadReports()
+            this.collectAllFiles()
+            this.calculateMaxValues()
+            this.initCharts()
+          },
+
+          async loadReports() {
+            const response = await fetch("./index.js")
+            const module = await response.text()
+            const reportFiles = eval(module.replace("export const reportFiles =", ""))
+
+            for (const file of reportFiles) {
+              const reportResponse = await fetch("./" + file)
+              const reportData = await reportResponse.json()
+              this.reports.push(reportData)
+            }
+
+            this.reports.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))
+          },
+
+          collectAllFiles() {
+            const latestReport = this.reports[this.reports.length - 1]
+            latestReport.data.forEach((item) => {
+              if (!this.excludedFiles.some((excludedFile) => item.file.includes(excludedFile))) {
+                this.allFiles.add(transformFileName(item.file))
+              }
+            })
+          },
+
+          calculateMaxValues() {
+            const latestFiles = new Set(this.allFiles)
+
+            this.charts.forEach((chart) => {
+              if (chart.key === "raw_brotli") {
+                // Calculate max for raw values
+                const rawMax = Math.max(
+                  ...this.reports.flatMap((report) =>
+                    report.data
+                      .filter(
+                        (item) =>
+                          !this.excludedFiles.some((excludedFile) =>
+                            item.file.includes(excludedFile),
+                          ) && latestFiles.has(transformFileName(item.file)),
+                      )
+                      .map((item) => item["raw"] || 0),
+                  ),
+                )
+                // Calculate max for brotli values
+                const brotliMax = Math.max(
+                  ...this.reports.flatMap(
+                    (report) =>
+                      report.data
+                        .filter(
+                          (item) =>
+                            !this.excludedFiles.some((excludedFile) =>
+                              item.file.includes(excludedFile),
+                            ) && latestFiles.has(transformFileName(item.file)),
+                        )
+                        .map((item) => item["brotli"] || 0), // Changed from "raw" to "brotli"
+                  ),
+                )
+                // Use the larger of the two maxes for both axes
+                this.maxValues["raw"] = Math.max(rawMax, brotliMax)
+                this.maxValues["brotli"] = Math.max(rawMax, brotliMax)
+              } else if (chart.key === "selector_var") {
+                this.maxValues[chart.key] = Math.max(
+                  ...this.reports.flatMap((report) =>
+                    report.data
+                      .filter(
+                        (item) =>
+                          !this.excludedFiles.some((excludedFile) =>
+                            item.file.includes(excludedFile),
+                          ) && latestFiles.has(transformFileName(item.file)),
+                      )
+                      .map((item) => (item["selector"] || 0) + (item["var"] || 0)),
+                  ),
+                )
+              }
+            })
+          },
+
+          initCharts() {
+            this.charts.forEach((chart, index) => {
+              const chartId = "chart-" + index
+              const chartData = getChartData(
+                chart.key,
+                this.reports[0],
+                this.allFiles,
+                this.excludedFiles,
+              )
+              const layout = getChartLayout(chart, this.allFiles, this.maxValues)
+              this.chartObjects[index] = Plotly.newPlot(chartId, chartData, layout, {
+                displayModeBar: false,
+              })
+            })
+          },
+
+          updateAllCharts() {
+            this.charts.forEach((chart, index) => {
+              const newData = getChartData(
+                chart.key,
+                this.reports[this.currentIndex],
+                this.allFiles,
+                this.excludedFiles,
+              )
+              const layout = getChartLayout(chart, this.allFiles, this.maxValues)
+              Plotly.react("chart-" + index, newData, layout)
+            })
+            // Trigger re-evaluation of daisyui.css size
+            this.$nextTick(() => {
+              this.getFullCssSize()
+              this.getFullCssBrotliSize()
+            })
+          },
+        }))
+      })
+    </script>
+  </body>
+</html>

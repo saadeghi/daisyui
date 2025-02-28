@@ -1,0 +1,39 @@
+.filter {
+  @apply flex flex-wrap;
+  input[type="radio"] {
+    @apply w-auto;
+  }
+  input {
+    @apply overflow-hidden opacity-100;
+    scale: 1;
+    transition:
+      margin 0.1s,
+      opacity 0.3s,
+      padding 0.3s,
+      border-width 0.1s;
+    &:not(:last-child) {
+      @apply me-1;
+    }
+    &.filter-reset {
+      @apply aspect-square;
+      &::after {
+        content: "×";
+      }
+    }
+  }
+  &:not(:has(input:checked:not(.filter-reset))) {
+    .filter-reset,
+    input[type="reset"] {
+      scale: 0;
+      border-width: 0;
+      @apply mx-0 w-0 px-0 opacity-0;
+    }
+  }
+  &:has(input:checked:not(.filter-reset)) {
+    input:not(:checked, .filter-reset, input[type="reset"]) {
+      scale: 0;
+      border-width: 0;
+      @apply mx-0 w-0 px-0 opacity-0;
+    }
+  }
+}

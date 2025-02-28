@@ -1,6 +1,0 @@
-.stats-horizontal {
-  @apply divide-x divide-y-0 overflow-x-auto rtl:[--tw-divide-x-reverse:1];
-}
-.stats-vertical {
-  @apply divide-x-0 divide-y overflow-y-auto;
-}

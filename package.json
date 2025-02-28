@@ -1,85 +1,41 @@
 {
-  "name": "daisyui",
-  "version": "4.12.24",
-  "description": "daisyUI - Tailwind CSS Components",
-  "author": "Pouya Saadeghi",
-  "license": "MIT",
-  "homepage": "https://daisyui.com",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saadeghi/daisyui.git"
-  },
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/daisyui"
-  },
-  "bugs": {
-    "url": "https://github.com/saadeghi/daisyui/issues"
-  },
-  "keywords": [
-    "design-system",
-    "tailwindcss",
-    "components",
-    "ui-library",
-    "component",
-    "framework",
-    "tailwind",
-    "daisyui",
-    "theming",
-    "postcss",
-    "design",
-    "css",
-    "ui"
+  "name": "daisyui-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "main": "src/index.js",
-  "typings": "src/index.d.ts",
-  "types": "src/index.d.ts",
-  "files": [
-    "src/lib/**/*.js",
-    "dist/*.js",
-    "dist/{themes,styled,unstyled,full}.css",
-    "src/index.js",
-    "src/theming/*.js",
-    "src/theming/*.d.ts",
-    "src/index.d.ts"
-  ],
-  "engines": {
-    "node": ">=16.9.0"
-  },
-  "browserslist": [
-    "> 7%"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "branches": [
-      "master"
-    ]
-  },
   "scripts": {
-    "init": "npm install && npm run build && cd src/docs && npm install && npm run get-json --silent && cd src/experiments/playground && npm install",
-    "format": "biome format --write .",
-    "lint": "biome lint . --write",
-    "build": "node src/build",
-    "build:skipfullcss": "node src/build --skipfullcss",
-    "dev": "cd src/docs && npm run dev",
-    "playground": "cd src/experiments/playground && npm run dev",
-    "release": "node src/release",
-    "publish:alpha": "npm publish --tag=alpha",
-    "alpha": "npm run release -- --alpha && npm publish --tag=alpha"
+    "build": "cd packages/daisyui && bun run build",
+    "build:dev": "cd packages/daisyui && bun run build --dev",
+    "build:docs": "bun run build && cd packages/docs && bun run build",
+    "build:docs:dev": "bun run build:dev && cd packages/docs && bun run build",
+    "dev": "bun run build:dev && cd packages/docs && bun run dev",
+    "play": "bun run build:dev && cd packages/playground && bun run dev",
+    "logs": "bun run build:dev && cd packages/logs && bun run dev",
+    "format": "bunx -y prettier 'packages/{daisyui,docs}/{src,functions}/**/*.{css,js,json,svelte}' --write",
+    "lang:diff": "cd packages/docs && bun run langdiff",
+    "lang:clean": "bun packages/docs/src/lib/scripts/removeUnusedTranslations.js",
+    "lang:sort": "bun packages/docs/src/lib/scripts/sortTranslations.js",
+    "lang:fill": "bun packages/docs/src/lib/scripts/fillTranslations.js",
+    "lint": "bunx -y oxlint@latest",
+    "test": "bun test",
+    "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
+    "update:tw": "bun i tailwindcss@latest @tailwindcss/cli@latest && cd packages/docs && bun i @tailwindcss/vite@latest && cd ../playground && bun i @tailwindcss/vite@latest",
+    "publish:alpha": "bun run build && cd packages/daisyui && bun publish --tag=alpha",
+    "publish:beta": "bun run build && cd packages/daisyui && bun publish --tag=beta"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.1",
-    "autoprefixer": "10.4.19",
-    "commit-and-tag-version": "12.4.1",
-    "postcss-cli": "11.0.0",
-    "postcss-import": "16.1.0",
-    "prejss-cli": "0.3.3",
-    "tailwindcss": "3.4.4"
-  },
-  "dependencies": {
-    "css-selector-tokenizer": "^0.8",
-    "culori": "^3",
-    "picocolors": "^1",
-    "postcss-js": "^4"
+    "@tailwindcss/cli": "^4.0.9",
+    "@tailwindcss/vite": "^4.0.9",
+    "commit-and-tag-version": "12.5.0",
+    "culori": "4.0.1",
+    "lightningcss": "1.29.1",
+    "postcss": "8.5.1",
+    "postcss-js": "4.0.1",
+    "postcss-selector-parser": "7.0.0",
+    "prettier": "3.4.2",
+    "prettier-plugin-svelte": "3.3.3",
+    "prettier-plugin-tailwindcss": "0.6.11",
+    "tailwindcss": "^4.0.9"
   }
 }

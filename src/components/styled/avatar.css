@@ -1,6 +1,0 @@
-.avatar-group {
-  @apply flex overflow-hidden;
-  :where(.avatar) {
-    @apply border-base-100 overflow-hidden rounded-full border-4;
-  }
-}

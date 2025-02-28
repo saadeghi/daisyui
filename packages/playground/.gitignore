@@ -1,0 +1,17 @@
+/dist
+/.astro
+.astro/settings.json
+/src/components/Component.astro
+
+/src/pages/*
+!/src/pages/demo.astro
+!/src/pages/dark.astro
+!/src/pages/light.astro
+!/src/pages/index.astro
+!/src/pages/LTR.astro
+!/src/pages/RTL.astro
+!/src/pages/prefix.astro
+!/src/pages/calendar.astro
+
+/src/layouts/*
+!/src/layouts/Main.astro

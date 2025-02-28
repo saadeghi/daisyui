@@ -1,0 +1,85 @@
+.progress {
+  @apply rounded-box text-base-content relative h-2 w-full appearance-none overflow-hidden bg-current/20;
+  &:indeterminate {
+    background-image: repeating-linear-gradient(
+      90deg,
+      currentColor -1%,
+      currentColor 10%,
+      #0000 10%,
+      #0000 90%
+    );
+    background-size: 200%;
+    background-position-x: 15%;
+    animation: progress 5s ease-in-out infinite;
+
+    @supports (-moz-appearance: none) {
+      &::-moz-progress-bar {
+        @apply bg-transparent;
+        background-image: repeating-linear-gradient(
+          90deg,
+          currentColor -1%,
+          currentColor 10%,
+          #0000 10%,
+          #0000 90%
+        );
+        background-size: 200%;
+        background-position-x: 15%;
+        animation: progress 5s ease-in-out infinite;
+      }
+    }
+  }
+
+  @supports (-moz-appearance: none) {
+    &::-moz-progress-bar {
+      @apply rounded-box bg-current;
+    }
+  }
+
+  @supports (-webkit-appearance: none) {
+    &::-webkit-progress-bar {
+      @apply rounded-box bg-transparent;
+    }
+
+    &::-webkit-progress-value {
+      @apply rounded-box;
+      background-color: currentColor;
+    }
+  }
+}
+
+.progress-primary {
+  @apply text-primary;
+}
+
+.progress-secondary {
+  @apply text-secondary;
+}
+
+.progress-accent {
+  @apply text-accent;
+}
+
+.progress-neutral {
+  @apply text-neutral;
+}
+
+.progress-info {
+  @apply text-info;
+}
+
+.progress-success {
+  @apply text-success;
+}
+
+.progress-warning {
+  @apply text-warning;
+}
+
+.progress-error {
+  @apply text-error;
+}
+@keyframes progress {
+  50% {
+    background-position-x: -115%;
+  }
+}

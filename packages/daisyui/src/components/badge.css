@@ -1,0 +1,128 @@
+.badge {
+  @apply rounded-selector text-base-content inline-flex items-center justify-center gap-2 align-middle;
+  border: var(--border) solid var(--badge-color, var(--color-base-200));
+  font-size: 0.875rem;
+  width: fit-content;
+  padding-inline: calc(0.25rem * 3 - var(--border));
+  background-size: auto, calc(var(--noise) * 100%);
+  background-image: none, var(--fx-noise);
+  background-color: var(--badge-color, var(--color-base-100));
+  --size: calc(var(--size-selector, 0.25rem) * 6);
+  height: var(--size);
+  /* box-shadow:
+    0 3px 0 -2px oklch(100% 0 0 / calc(var(--depth) * 0.08)) inset,
+    0 1px
+      color-mix(
+        in oklab,
+        color-mix(in oklab, #000 20%, var(--badge-color, var(--color-base-200)))
+          calc(var(--depth) * 20%),
+        #0000
+      ),
+    0 4px 3px -2px oklch(0% 0 0 / calc(var(--depth) * 0.08)); */
+  &.badge-outline {
+    color: var(--badge-color, var(--color-base-content));
+    @apply border-current bg-transparent;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  &.badge-dash {
+    color: var(--badge-color, var(--color-base-content));
+    @apply bg-transparent;
+    border-style: dashed;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  &.badge-soft {
+    color: var(--badge-color, var(--color-base-content));
+    background-color: color-mix(
+      in oklab,
+      var(--badge-color, var(--color-base-content)) 8%,
+      var(--color-base-100)
+    );
+    border-color: color-mix(
+      in oklab,
+      var(--badge-color, var(--color-base-content)) 10%,
+      var(--color-base-100)
+    );
+    background-image: none;
+    box-shadow: none;
+  }
+}
+
+.badge-primary {
+  --badge-color: var(--color-primary);
+  @apply text-primary-content;
+}
+
+.badge-secondary {
+  --badge-color: var(--color-secondary);
+  @apply text-secondary-content;
+}
+
+.badge-accent {
+  --badge-color: var(--color-accent);
+  @apply text-accent-content;
+}
+
+.badge-neutral {
+  --badge-color: var(--color-neutral);
+  @apply text-neutral-content;
+}
+
+.badge-info {
+  --badge-color: var(--color-info);
+  @apply text-info-content;
+}
+
+.badge-success {
+  --badge-color: var(--color-success);
+  @apply text-success-content;
+}
+
+.badge-warning {
+  --badge-color: var(--color-warning);
+  @apply text-warning-content;
+}
+
+.badge-error {
+  --badge-color: var(--color-error);
+  @apply text-error-content;
+}
+
+.badge-ghost {
+  @apply border-base-200 bg-base-200 text-base-content;
+  background-image: none;
+  box-shadow: none;
+}
+
+.badge-xs {
+  --size: calc(var(--size-selector, 0.25rem) * 4);
+  font-size: 0.625rem;
+  padding-inline: calc(0.25rem * 2 - var(--border));
+}
+
+.badge-sm {
+  --size: calc(var(--size-selector, 0.25rem) * 5);
+  font-size: 0.75rem;
+  padding-inline: calc(0.25rem * 2.5 - var(--border));
+}
+
+.badge-md {
+  --size: calc(var(--size-selector, 0.25rem) * 6);
+  font-size: 0.875rem;
+  padding-inline: calc(0.25rem * 3 - var(--border));
+}
+
+.badge-lg {
+  --size: calc(var(--size-selector, 0.25rem) * 7);
+  font-size: 1rem;
+  padding-inline: calc(0.25rem * 3.5 - var(--border));
+}
+
+.badge-xl {
+  --size: calc(var(--size-selector, 0.25rem) * 8);
+  font-size: 1.125rem;
+  padding-inline: calc(0.25rem * 4 - var(--border));
+}

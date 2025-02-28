@@ -1,0 +1,15 @@
+.hero {
+  @apply grid w-full place-items-center bg-cover bg-center;
+
+  & > * {
+    @apply col-start-1 row-start-1;
+  }
+}
+
+.hero-overlay {
+  @apply bg-neutral/50 col-start-1 row-start-1 h-full w-full;
+}
+
+.hero-content {
+  @apply flex max-w-[80rem] items-center justify-center gap-4 p-4;
+}

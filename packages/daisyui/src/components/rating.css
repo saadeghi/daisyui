@@ -1,0 +1,101 @@
+.rating {
+  @apply relative inline-flex align-middle;
+
+  & input {
+    border: none;
+    @apply appearance-none;
+  }
+
+  :where(*) {
+    animation: rating 0.25s ease-out;
+    @apply bg-base-content h-6 w-6 rounded-none opacity-20;
+    &:is(input) {
+      @apply cursor-pointer;
+    }
+  }
+
+  & .rating-hidden {
+    @apply w-2 bg-transparent;
+  }
+
+  input[type="radio"]:checked {
+    background-image: none;
+  }
+
+  * {
+    &:checked,
+    &[aria-checked="true"],
+    &[aria-current="true"],
+    &:has(~ *:checked, ~ *[aria-checked="true"], ~ *[aria-current="true"]) {
+      @apply opacity-100;
+    }
+
+    &:focus-visible {
+      transition: scale 0.2s ease-out;
+      scale: 1.1;
+    }
+  }
+
+  & *:active:focus {
+    animation: none;
+  }
+
+  & *:active:focus {
+    scale: 1.1;
+  }
+
+  &.rating-xs :where(*:not(.rating-hidden)) {
+    @apply size-4;
+  }
+
+  &.rating-sm :where(*:not(.rating-hidden)) {
+    @apply size-5;
+  }
+
+  &.rating-md :where(*:not(.rating-hidden)) {
+    @apply size-6;
+  }
+
+  &.rating-lg :where(*:not(.rating-hidden)) {
+    @apply size-7;
+  }
+
+  &.rating-xl :where(*:not(.rating-hidden)) {
+    @apply size-8;
+  }
+}
+
+.rating-half {
+  :where(*:not(.rating-hidden)) {
+    @apply w-3;
+  }
+}
+
+.rating-half {
+  &.rating-xs *:not(.rating-hidden) {
+    @apply w-2;
+  }
+
+  &.rating-sm *:not(.rating-hidden) {
+    @apply w-2.5;
+  }
+
+  &.rating-md *:not(.rating-hidden) {
+    @apply w-3;
+  }
+
+  &.rating-lg *:not(.rating-hidden) {
+    @apply w-[.875rem];
+  }
+
+  &.rating-xl *:not(.rating-hidden) {
+    @apply w-4;
+  }
+}
+@keyframes rating {
+  0%,
+  40% {
+    scale: 1.1;
+    filter: brightness(1.05) contrast(1.05);
+  }
+}

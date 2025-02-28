@@ -1,0 +1,11 @@
+{
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "semi": false,
+  "trailingComma": "all",
+  "plugins": [
+    "prettier-plugin-svelte",
+    "prettier-plugin-tailwindcss"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "private": true,
+  "name": "daisyui-playground",
+  "scripts": {
+    "predev": "if ! [ -f src/components/Component.astro ]; then echo '<button class=btn>Hello</button>' > src/components/Component.astro; fi",
+    "dev": "astro dev --open",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "5.1.10",
+    "daisyui": "workspace:*"
+  },
+  "dependencies": {
+    "@astrojs/react": "4.2.0",
+    "@astrojs/vue": "5.0.6",
+    "pikaday": "1.8.2",
+    "react": "19.0.0",
+    "react-day-picker": "9.5.1",
+    "react-dom": "19.0.0"
+  }
+}

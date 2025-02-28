@@ -1,0 +1,126 @@
+.chat {
+  @apply grid gap-x-3 py-1;
+}
+
+.chat-bubble {
+  @apply rounded-field bg-base-300 text-base-content relative block w-fit px-4 py-2;
+  grid-row-end: 3;
+  min-height: 2rem;
+  min-width: 2.5rem;
+  max-width: 90%;
+
+  &:before {
+    @apply absolute bottom-0 h-3 w-3;
+    background-color: inherit;
+    content: "";
+    mask-repeat: no-repeat;
+    mask-image: var(--mask-chat);
+    mask-position: 0px -1px;
+    mask-size: 13px;
+  }
+}
+
+.chat-bubble-primary {
+  @apply bg-primary text-primary-content;
+}
+
+.chat-bubble-secondary {
+  @apply bg-secondary text-secondary-content;
+}
+
+.chat-bubble-accent {
+  @apply bg-accent text-accent-content;
+}
+
+.chat-bubble-neutral {
+  @apply bg-neutral text-neutral-content;
+}
+
+/* state colors */
+.chat-bubble-info {
+  @apply bg-info text-info-content;
+}
+
+.chat-bubble-success {
+  @apply bg-success text-success-content;
+}
+
+.chat-bubble-warning {
+  @apply bg-warning text-warning-content;
+}
+
+.chat-bubble-error {
+  @apply bg-error text-error-content;
+}
+
+.chat-image {
+  @apply row-span-2 self-end;
+}
+
+.chat-header {
+  @apply row-start-1 flex gap-1;
+  font-size: 0.6875rem;
+}
+
+.chat-footer {
+  @apply row-start-3 flex gap-1;
+  font-size: 0.6875rem;
+}
+
+.chat-start {
+  @apply place-items-start;
+  grid-template-columns: auto 1fr;
+
+  .chat-header {
+    @apply col-start-2;
+  }
+
+  .chat-footer {
+    @apply col-start-2;
+  }
+
+  .chat-image {
+    @apply col-start-1;
+  }
+
+  .chat-bubble {
+    @apply col-start-2 rounded-es-none;
+
+    &:before {
+      transform: rotateY(0deg);
+      inset-inline-start: -0.75rem;
+    }
+    [dir="rtl"] &:before {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.chat-end {
+  @apply place-items-end;
+  grid-template-columns: 1fr auto;
+
+  .chat-header {
+    @apply col-start-1;
+  }
+
+  .chat-footer {
+    @apply col-start-1;
+  }
+
+  .chat-image {
+    @apply col-start-2;
+  }
+
+  .chat-bubble {
+    @apply col-start-1 rounded-ee-none;
+
+    &:before {
+      transform: rotateY(180deg);
+      inset-inline-start: 100%;
+    }
+    [dir="rtl"] &:before {
+      transform: rotateY(0deg);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.loading {
+  @apply pointer-events-none inline-block aspect-square bg-current align-middle;
+  width: calc(var(--size-selector, 0.25rem) * 6);
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='black' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform-origin='center'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3' stroke-linecap='round'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 12 12' to='360 12 12' dur='2s' repeatCount='indefinite'/%3E%3Canimate attributeName='stroke-dasharray' values='0,150;42,150;42,150' keyTimes='0;0.475;1' dur='1.5s' repeatCount='indefinite'/%3E%3Canimate attributeName='stroke-dashoffset' values='0;-16;-59' keyTimes='0;0.475;1' dur='1.5s' repeatCount='indefinite'/%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+.loading-spinner {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='black' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform-origin='center'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3' stroke-linecap='round'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 12 12' to='360 12 12' dur='2s' repeatCount='indefinite'/%3E%3Canimate attributeName='stroke-dasharray' values='0,150;42,150;42,150' keyTimes='0;0.475;1' dur='1.5s' repeatCount='indefinite'/%3E%3Canimate attributeName='stroke-dashoffset' values='0;-16;-59' keyTimes='0;0.475;1' dur='1.5s' repeatCount='indefinite'/%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+.loading-dots {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='12' r='3'%3E%3Canimate attributeName='cy' values='12;6;12;12' keyTimes='0;0.286;0.571;1' dur='1.05s' repeatCount='indefinite' keySplines='.33,0,.66,.33;.33,.66,.66,1'/%3E%3C/circle%3E%3Ccircle cx='12' cy='12' r='3'%3E%3Canimate attributeName='cy' values='12;6;12;12' keyTimes='0;0.286;0.571;1' dur='1.05s' repeatCount='indefinite' keySplines='.33,0,.66,.33;.33,.66,.66,1' begin='0.1s'/%3E%3C/circle%3E%3Ccircle cx='20' cy='12' r='3'%3E%3Canimate attributeName='cy' values='12;6;12;12' keyTimes='0;0.286;0.571;1' dur='1.05s' repeatCount='indefinite' keySplines='.33,0,.66,.33;.33,.66,.66,1' begin='0.2s'/%3E%3C/circle%3E%3C/svg%3E");
+}
+
+.loading-ring {
+  mask-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg' stroke='white'%3E%3Cg fill='none' fill-rule='evenodd' stroke-width='2'%3E%3Ccircle cx='22' cy='22' r='1'%3E%3Canimate attributeName='r' begin='0s' dur='1.8s' values='1;20' calcMode='spline' keyTimes='0;1' keySplines='0.165,0.84,0.44,1' repeatCount='indefinite'/%3E%3Canimate attributeName='stroke-opacity' begin='0s' dur='1.8s' values='1;0' calcMode='spline' keyTimes='0;1' keySplines='0.3,0.61,0.355,1' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='22' cy='22' r='1'%3E%3Canimate attributeName='r' begin='-0.9s' dur='1.8s' values='1;20' calcMode='spline' keyTimes='0;1' keySplines='0.165,0.84,0.44,1' repeatCount='indefinite'/%3E%3Canimate attributeName='stroke-opacity' begin='-0.9s' dur='1.8s' values='1;0' calcMode='spline' keyTimes='0;1' keySplines='0.3,0.61,0.355,1' repeatCount='indefinite'/%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+.loading-ball {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='12' cy='5' rx='4' ry='4'%3E%3Canimate attributeName='cy' values='5;20;20.5;20;5' keyTimes='0;0.469;0.5;0.531;1' dur='.8s' repeatCount='indefinite' keySplines='.33,0,.66,.33;.33,.66,.66,1'/%3E%3Canimate attributeName='rx' values='4;4;4.8;4;4' keyTimes='0;0.469;0.5;0.531;1' dur='.8s' repeatCount='indefinite'/%3E%3Canimate attributeName='ry' values='4;4;3;4;4' keyTimes='0;0.469;0.5;0.531;1' dur='.8s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3C/svg%3E");
+}
+
+.loading-bars {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='6' height='22'%3E%3Canimate attributeName='y' values='1;5;1' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite'/%3E%3Canimate attributeName='height' values='22;14;22' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite'/%3E%3Canimate attributeName='opacity' values='1;0.2;1' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='9' y='1' width='6' height='22'%3E%3Canimate attributeName='y' values='1;5;1' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite' begin='-0.65s'/%3E%3Canimate attributeName='height' values='22;14;22' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite' begin='-0.65s'/%3E%3Canimate attributeName='opacity' values='1;0.2;1' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite' begin='-0.65s'/%3E%3C/rect%3E%3Crect x='17' y='1' width='6' height='22'%3E%3Canimate attributeName='y' values='1;5;1' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite' begin='-0.5s'/%3E%3Canimate attributeName='height' values='22;14;22' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite' begin='-0.5s'/%3E%3Canimate attributeName='opacity' values='1;0.2;1' keyTimes='0;0.938;1' dur='.8s' repeatCount='indefinite' begin='-0.5s'/%3E%3C/rect%3E%3C/svg%3E");
+}
+
+.loading-infinity {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='shape-rendering:auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cpath fill='none' stroke='black' stroke-width='10' stroke-dasharray='205.271 51.318' d='M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z' stroke-linecap='round' style='transform:scale(0.8);transform-origin:50px 50px'%3E%3Canimate attributeName='stroke-dashoffset' repeatCount='indefinite' dur='2s' keyTimes='0;1' values='0;256.589'/%3E%3C/path%3E%3C/svg%3E");
+}
+
+.loading-xs {
+  width: calc(var(--size-selector, 0.25rem) * 4);
+}
+
+.loading-sm {
+  width: calc(var(--size-selector, 0.25rem) * 5);
+}
+
+.loading-md {
+  width: calc(var(--size-selector, 0.25rem) * 6);
+}
+
+.loading-lg {
+  width: calc(var(--size-selector, 0.25rem) * 7);
+}
+
+.loading-xl {
+  width: calc(var(--size-selector, 0.25rem) * 8);
+}

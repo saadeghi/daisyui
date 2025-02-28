@@ -1,0 +1,32 @@
+---
+import Main from "../layouts/Main.astro"
+const pages = await import.meta.glob("./*.astro")
+---
+
+<Main>
+  <div class="flex flex-col gap-10 min-h-screen justify-center items-center p-4">
+    <div class="w-full max-w-lg flex flex-col gap-4">
+      <h1 class="font-bold text-lg">Welcome to daisyUI playground</h1>
+      <div class="text-base-content/50 flex flex-col gap-4">
+        <p>This is a Astro project where you can test daisyUI components from the source style (not the NPM package)</p>
+        <p>
+          Start by editing this file:
+          <pre class="font-mono text-sm bg-base-200 px-1 rounded break-all whitespace-pre-wrap">/src/experiments/playground/src/components/Component.astro</pre>
+        </p>
+        <p>You can see the result and test the components in the following pages:</p>
+      </div>
+    </div>
+    <ul class="menu w-full max-w-lg border border-base-content/10 rounded-box">
+      <li class="menu-title">Pages</li>
+      {
+        Object.entries(pages).map(([path, page]) => (
+          <li>
+            <a class="font-mono" href={path.replace('./','/').replace('.astro','')}>
+              {path.replace('./','/').replace('.astro','')}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Main>

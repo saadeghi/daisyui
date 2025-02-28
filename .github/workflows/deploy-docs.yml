@@ -2,30 +2,12 @@ name: "📘 Deploy docs"
 
 on:
   workflow_dispatch:
-    inputs:
-      runtime:
-        type: choice
-        description: JS runtime
-        default: "bun"
-        options:
-          - "bun"
-          - "npm"
-      daisyuiversion:
-        type: choice
-        description: DaisyUI release tag
-        default: "latest"
-        options:
-          - "latest"
-          - "alpha"
   workflow_call:
-    inputs:
-      daisyuiversion:
-        type: string
   push:
     branches:
       - master
     paths:
-      - "src/docs/**"
+      - "packages/docs/**"
       - "CHANGELOG.md"
 
 jobs:
@@ -33,11 +15,9 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     env:
-      runtime: ${{ inputs.runtime || 'bun'}}
       LEMONSQUEEZY_API_KEY: ${{ secrets.LEMONSQUEEZY_API_KEY }}
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       GH_API_KEY: ${{ secrets.GH_API_KEY }}
-      daisyuiversion: ${{ inputs.daisyuiversion || 'latest' }}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||
@@ -50,63 +30,27 @@ jobs:
           fetch-depth: 2
           clean: false
 
-      - name: Setup Node
-        if: env.runtime == 'npm'
-        uses: actions/setup-node@v4
-        with:
-          node-version: "21.1.0"
-          registry-url: https://registry.npmjs.org
-
-      - name: Setup bun
-        if: env.runtime == 'bun'
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v1.2.2
 
-      - name: Install package dependencies
-        run: ${{ env.runtime }} install
+      - name: Install dependencies
+        run: bun i
 
       - name: Build package
-        run: ${{ env.runtime }} run build:skipfullcss
-
-      - name: Install docs dependencies
-        run: cd src/docs && ${{ env.runtime }} install
-
-      - name: Install daisyUI ${{env.daisyuiversion}} version if production
-        if: github.repository == 'saadeghi/daisyui'
-        run: cd src/docs && ${{ env.runtime }} i daisyui@${{env.daisyuiversion}}
-
-      - name: Install daisyUI newest tag if staging
-        if: github.repository == 'daisyui/daisyui.github.io'
-        run: |
-          cd src/docs
-          if [ "${{env.daisyuiversion}}" = "latest" ]; then
-            ${{ env.runtime }} i daisyui@${{env.daisyuiversion}}
-          else
-            ${{ env.runtime }} i daisyui@$([[ $(npm view daisyui version) > $(npm view daisyui dist-tags.alpha) ]] && echo "latest" || echo "alpha")
-          fi
-
-      - name: Set daisyUI version in env file if staging
-        if: github.repository == 'daisyui/daisyui.github.io'
-        run: |
-          echo 'VITE_DAISYUI_VERSION=ALPHA' > src/docs/.env
+        run: bun run build
 
       - name: Add robots.txt if not main repo
         if: github.repository != 'saadeghi/daisyui'
         run: |
           echo 'User-agent: *
-          Disallow: /' > src/docs/static/robots.txt
+          Disallow: /' > packages/docs/static/robots.txt
 
       - name: Build docs
-        run: |
-          cd src/docs
-          if [ -z "${{inputs.daisyuiversion}}" ]; then
-            ${{ env.runtime }} run build
-          else
-            VITE_DAISYUI_VERSION=${{inputs.daisyuiversion}} ${{ env.runtime }} run build
-          fi
+        run: bun run build:docs
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src/docs/build
+          publish_dir: ./packages/docs/build
           cname: ${{ secrets.CNAME }}

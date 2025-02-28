@@ -1,0 +1,46 @@
+.list {
+  @apply flex flex-col;
+  font-size: 0.875rem;
+  :where(.list-row) {
+    --list-grid-cols: minmax(0, auto) 1fr;
+    @apply rounded-box relative grid grid-flow-col gap-4 p-4;
+    word-break: break-word;
+    grid-template-columns: var(--list-grid-cols);
+    &:has(.list-col-grow:nth-child(1)) {
+      --list-grid-cols: 1fr;
+    }
+    &:has(.list-col-grow:nth-child(2)) {
+      --list-grid-cols: minmax(0, auto) 1fr;
+    }
+    &:has(.list-col-grow:nth-child(3)) {
+      --list-grid-cols: minmax(0, auto) minmax(0, auto) 1fr;
+    }
+    &:has(.list-col-grow:nth-child(4)) {
+      --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) 1fr;
+    }
+    &:has(.list-col-grow:nth-child(5)) {
+      --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto) 1fr;
+    }
+    &:has(.list-col-grow:nth-child(6)) {
+      --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto)
+        minmax(0, auto) 1fr;
+    }
+    :not(.list-col-wrap) {
+      @apply row-start-1;
+    }
+  }
+  & > :not(:last-child) {
+    &.list-row,
+    .list-row {
+      &:after {
+        content: "";
+        border-bottom: var(--border) solid;
+        inset-inline: var(--radius-box);
+        @apply border-base-content/5 absolute bottom-0;
+      }
+    }
+  }
+}
+.list-col-wrap {
+  @apply row-start-2;
+}

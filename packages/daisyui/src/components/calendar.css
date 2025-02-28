@@ -1,0 +1,524 @@
+.cally {
+  font-size: 0.7rem;
+
+  &::part(container) {
+    padding: 0.5rem 1rem;
+    user-select: none;
+  }
+  ::part(th) {
+    font-weight: normal;
+    block-size: auto;
+  }
+  &::part(header) {
+    direction: ltr;
+  }
+  ::part(head) {
+    opacity: 0.5;
+    font-size: 0.7rem;
+  }
+  &::part(button) {
+    border-radius: var(--radius-field);
+    border: none;
+    padding: 0.5rem;
+    background: #0000;
+  }
+  &::part(button):hover {
+    background: var(--color-base-200);
+  }
+  ::part(day) {
+    border-radius: var(--radius-field);
+    font-size: 0.7rem;
+  }
+  ::part(button day today) {
+    background: var(--color-primary);
+    color: var(--color-primary-content);
+  }
+  ::part(selected) {
+    color: var(--color-base-100);
+    background: var(--color-base-content);
+    border-radius: var(--radius-field);
+  }
+  ::part(range-inner) {
+    border-radius: 0;
+  }
+  ::part(range-start) {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+  ::part(range-end) {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+  ::part(range-start range-end) {
+    border-radius: var(--radius-field);
+  }
+  calendar-month {
+    width: 100%;
+  }
+}
+
+.react-day-picker {
+  user-select: none;
+  background-color: var(--color-base-100);
+  border-radius: var(--radius-box);
+  border: var(--border) solid var(--color-base-200);
+  font-size: 0.75rem;
+  display: inline-block;
+  position: relative;
+  overflow: clip;
+  &[dir="rtl"] {
+    .rdp-nav {
+      .rdp-chevron {
+        transform-origin: 50%;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .rdp-day {
+    width: 2.25rem;
+    height: 2.25rem;
+    text-align: center;
+  }
+  .rdp-day_button {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 2px solid #0000;
+    border-radius: var(--radius-field);
+    background: 0 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    &:disabled {
+      cursor: revert;
+    }
+    &:hover {
+      background-color: var(--color-base-200);
+    }
+  }
+  .rdp-caption_label {
+    z-index: 1;
+    white-space: nowrap;
+    border: 0;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+  }
+  .rdp-button_next {
+    border-radius: var(--radius-field);
+    &:hover {
+      background-color: var(--color-base-200);
+    }
+  }
+  .rdp-button_previous {
+    border-radius: var(--radius-field);
+    &:hover {
+      background-color: var(--color-base-200);
+    }
+  }
+  .rdp-button_next,
+  .rdp-button_previous {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    appearance: none;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: 0 0;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    position: relative;
+    &:disabled {
+      cursor: revert;
+      opacity: 0.5;
+    }
+  }
+  .rdp-chevron {
+    fill: var(--color-base-content);
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+  }
+  .rdp-dropdowns {
+    align-items: center;
+    gap: 0.5rem;
+    display: inline-flex;
+    position: relative;
+  }
+  .rdp-dropdown {
+    z-index: 2;
+    opacity: 0;
+    appearance: none;
+    cursor: inherit;
+    line-height: inherit;
+    border: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    &:focus-visible {
+      ~ .rdp-caption_label {
+        outline: 5px auto highlight;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+  .rdp-dropdown_root {
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    &[data-disabled="true"] {
+      .rdp-chevron {
+        opacity: 0.5;
+      }
+    }
+  }
+  .rdp-month_caption {
+    height: 2.75rem;
+    font-size: 0.75rem;
+    font-weight: inherit;
+    place-content: center;
+    display: flex;
+  }
+  .rdp-months {
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    padding: 0.5rem;
+    display: flex;
+    position: relative;
+  }
+  .rdp-month_grid {
+    border-collapse: collapse;
+  }
+  .rdp-nav {
+    height: 2.75rem;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline: 0.5rem;
+    display: flex;
+    position: absolute;
+    top: 0.25rem;
+  }
+  .rdp-weekday {
+    opacity: 0.6;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    font-size: smaller;
+    font-weight: 500;
+  }
+  .rdp-week_number {
+    opacity: 0.6;
+    height: 2.25rem;
+    width: 2.25rem;
+    border: none;
+    border-radius: 100%;
+    text-align: center;
+    font-size: small;
+    font-weight: 400;
+  }
+  .rdp-today:not(.rdp-outside) {
+    .rdp-day_button {
+      background: var(--color-primary);
+      color: var(--color-primary-content);
+    }
+  }
+  .rdp-selected {
+    font-weight: inherit;
+    font-size: 0.75rem;
+    .rdp-day_button {
+      color: var(--color-base-100);
+      background-color: var(--color-base-content);
+      border-radius: var(--radius-field);
+      border: none;
+      &:hover {
+        background-color: var(--color-base-content);
+      }
+    }
+  }
+  .rdp-outside {
+    opacity: 0.75;
+  }
+  .rdp-disabled {
+    opacity: 0.5;
+  }
+  .rdp-hidden {
+    visibility: hidden;
+    color: var(--color-base-content);
+  }
+  .rdp-range_start {
+    .rdp-day_button {
+      border-radius: var(--radius-field) 0 0 var(--radius-field);
+    }
+  }
+  .rdp-range_start .rdp-day_button {
+    background-color: var(--color-base-content);
+    color: var(--color-base-content);
+  }
+  .rdp-range_middle {
+    background-color: var(--color-base-200);
+  }
+  .rdp-range_middle .rdp-day_button {
+    border: unset;
+    border-radius: unset;
+    color: inherit;
+  }
+  .rdp-range_end {
+    color: var(--color-base-content);
+    .rdp-day_button {
+      border-radius: 0 var(--radius-field) var(--radius-field) 0;
+    }
+  }
+  .rdp-range_end .rdp-day_button {
+    color: var(--color-base-content);
+    background-color: var(--color-base-content);
+  }
+  .rdp-range_start.rdp-range_end {
+    background: revert;
+  }
+  .rdp-focusable {
+    cursor: pointer;
+  }
+  .rdp-footer {
+    border-top: var(--border) solid var(--color-base-200);
+    padding: 0.5rem;
+  }
+}
+
+.pika-single {
+  &:is(div) {
+    user-select: none;
+    font-size: 0.75rem;
+    z-index: 999;
+    display: inline-block;
+    position: relative;
+    color: var(--color-base-content);
+    background-color: var(--color-base-100);
+    border-radius: var(--radius-box);
+    border: var(--border) solid var(--color-base-200);
+    padding: 0.5rem;
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &.is-bound {
+      position: absolute;
+    }
+
+    .pika-lendar {
+      float: left;
+    }
+
+    .pika-title {
+      position: relative;
+      text-align: center;
+    }
+
+    .pika-label {
+      display: inline-block;
+      position: relative;
+      z-index: 999;
+      overflow: hidden;
+      margin: 0;
+      padding: 5px 3px;
+      background-color: var(--color-base-100);
+    }
+    .pika-title {
+      select {
+        cursor: pointer;
+        position: absolute;
+        z-index: 999;
+        margin: 0;
+        left: 0;
+        top: 5px;
+        opacity: 0;
+      }
+    }
+
+    .pika-prev,
+    .pika-next {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      outline: none;
+      border: 0;
+      width: 2.25rem;
+      height: 2.25rem;
+      color: #0000;
+      font-size: 1.2em;
+      border-radius: var(--radius-field);
+      &:hover {
+        background-color: var(--color-base-200);
+      }
+      &.is-disabled {
+        cursor: default;
+        opacity: 0.2;
+      }
+      &:before {
+        display: inline-block;
+        width: 2.25rem;
+        height: 2.25rem;
+        line-height: 2.25;
+        color: var(--color-base-content);
+      }
+    }
+    .pika-prev {
+      left: 0;
+      &:before {
+        content: "‹";
+      }
+    }
+
+    .pika-next {
+      right: 0;
+      &:before {
+        content: "›";
+      }
+    }
+
+    .pika-select {
+      display: inline-block;
+    }
+
+    .pika-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 0;
+    }
+    .pika-table {
+      th,
+      td {
+        padding: 0;
+      }
+      th {
+        opacity: 0.6;
+        text-align: center;
+        width: 2.25rem;
+        height: 2.25rem;
+      }
+    }
+
+    .pika-button {
+      cursor: pointer;
+      display: block;
+      outline: none;
+      border: 0;
+      margin: 0;
+      width: 2.25rem;
+      height: 2.25rem;
+      padding: 5px;
+      text-align: right;
+      text-align: center;
+    }
+
+    .pika-week {
+      color: var(--color-base-content);
+    }
+
+    .is-today {
+      .pika-button {
+        background: var(--color-primary);
+        color: var(--color-primary-content);
+      }
+    }
+    .is-selected,
+    .has-event {
+      .pika-button {
+        &,
+        &:hover {
+          color: var(--color-base-100);
+          background-color: var(--color-base-content);
+          border-radius: var(--radius-field);
+        }
+      }
+    }
+
+    .has-event {
+      .pika-button {
+        background: var(--color-base-primary);
+      }
+    }
+
+    .is-disabled,
+    .is-inrange {
+      .pika-button {
+        background: var(--color-base-primary);
+      }
+    }
+
+    .is-startrange {
+      .pika-button {
+        color: var(--color-base-100);
+        background: var(--color-base-content);
+        border-radius: var(--radius-field);
+      }
+    }
+
+    .is-endrange {
+      .pika-button {
+        color: var(--color-base-100);
+        background: var(--color-base-content);
+        border-radius: var(--radius-field);
+      }
+    }
+
+    .is-disabled {
+      .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: var(--color-base-content);
+        opacity: 0.3;
+      }
+    }
+
+    .is-outside-current-month {
+      .pika-button {
+        color: var(--color-base-content);
+        opacity: 0.3;
+      }
+    }
+
+    .is-selection-disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .pika-button:hover,
+    .pika-row.pick-whole-week:hover .pika-button {
+      color: var(--color-base-content);
+      background-color: var(--color-base-200);
+      border-radius: var(--radius-field);
+    }
+    .pika-table abbr {
+      text-decoration: none;
+      font-weight: normal;
+    }
+  }
+}

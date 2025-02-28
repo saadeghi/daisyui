@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@source "./src";
+
+/* @plugin "@tailwindcss/typography"; */
+
+@plugin "daisyui" {
+  themes: all;
+}
+
+/* .btn {
+  @apply m-2;
+} */

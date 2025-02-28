@@ -1,0 +1,38 @@
+.footer {
+  @apply grid w-full grid-flow-row place-items-start gap-x-4 gap-y-10;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  & > * {
+    @apply grid place-items-start gap-2;
+  }
+
+  &.footer-center {
+    @apply grid-flow-col-dense place-items-center text-center;
+
+    & > * {
+      @apply place-items-center;
+    }
+  }
+}
+
+.footer-title {
+  @apply mb-2 uppercase opacity-60;
+  font-weight: 600;
+}
+
+.footer-horizontal {
+  @apply grid-flow-col;
+
+  &.footer-center {
+    @apply grid-flow-row-dense;
+  }
+}
+
+.footer-vertical {
+  @apply grid-flow-row;
+
+  &.footer-center {
+    @apply grid-flow-col-dense;
+  }
+}
