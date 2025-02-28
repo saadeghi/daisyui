@@ -31,14 +31,21 @@
       content: attr(aria-label);
     }
   }
+  &:is(label) {
+    @apply relative;
+    input {
+      @apply absolute inset-0 cursor-pointer appearance-none opacity-0;
+    }
+  }
 
   &:checked,
+  &:is(label:has(:checked)),
   &:is(.tab-active, [aria-selected="true"]) {
     & + .tab-content {
       @apply block h-full;
     }
   }
-  &:not(:checked, :hover, .tab-active, [aria-selected="true"]) {
+  &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected="true"]) {
     @apply text-base-content/50;
   }
 
@@ -47,7 +54,8 @@
   }
 
   /* &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-  &:is(input:checked) {
+  &:is(input:checked),
+  &:is(label:has(:checked)) {
     @apply text-base-content;
   } */
 
@@ -55,7 +63,8 @@
     @apply outline-hidden;
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &:is(label:has(:checked:focus-visible)) {
     outline: 2px solid currentColor;
     outline-offset: -5px;
   }
@@ -87,7 +96,8 @@
       position: absolute;
     }
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-    &:is(input:checked) {
+    &:is(input:checked),
+    &:is(label:has(:checked)) {
       &:before {
         --tab-border-color: currentColor;
         border-top: 3px solid;
@@ -122,7 +132,7 @@
     border-color: var(--tab-border-colors);
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-    &:is(input:checked) {
+    &:is(input:checked, label:has(:checked)) {
       --tab-border: var(--border) var(--border) 0 var(--border);
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
         var(--tab-border-color);
@@ -199,6 +209,7 @@
   }
 
   :checked,
+  label:has(:checked),
   :is(.tab-active, [aria-selected="true"]) {
     & + .tab-content {
       &:nth-child(1),
@@ -228,7 +239,8 @@
     /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-    &:is(input:checked) {
+    &:is(input:checked),
+    &:is(label:has(:checked)) {
       --tab-border: var(--border) var(--border) 0 var(--border);
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
         var(--tab-border-color);
@@ -271,6 +283,7 @@
   }
 
   :checked,
+  label:has(:checked),
   :is(.tab-active, [aria-selected="true"]) {
     & + .tab-content {
       &:nth-child(1),
@@ -300,7 +313,8 @@
     /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-    &:is(input:checked) {
+    &:is(input:checked),
+    &:is(label:has(:checked)) {
       --tab-border: 0 var(--border) var(--border) var(--border);
       --tab-border-colors: #0000 var(--tab-border-color) var(--tab-border-color)
         var(--tab-border-color);
@@ -343,6 +357,7 @@
   }
 
   :checked,
+  :is(label:has(:checked)),
   :is(.tab-active, [aria-selected="true"]) {
     & + .tab-content:not(:nth-child(2)) {
       --tabcontent-radius-es: var(--radius-box);
@@ -369,7 +384,8 @@
     --last-tab-margin: 0 0 0 0;
 
     &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-    &:is(input:checked) {
+    &:is(input:checked),
+    &:is(label:has(:checked)) {
       --tab-border: 1px 0 1px 1px;
       --tab-border-colors: var(--tab-border-color) #0000 var(--tab-border-color) var(--tab-border-color);
       --tab-paddings: 0 calc(1px + var(--tab-p)) 0 var(--tab-p);
@@ -405,6 +421,7 @@
   }
 
   :checked,
+  label:has(:checked),
   :is(.tab-active, [aria-selected="true"]) {
     &+.tab-content:not(:nth-child(2)) {
       --tabcontent-radius-ss: var(--radius-box);
@@ -426,13 +443,15 @@
     @apply rounded-field;
     border-style: none;
 
-    &:focus-visible {
+    &:focus-visible,
+    &:is(label:has(:checked:focus-visible)) {
       outline-offset: 2px;
     }
   }
 
   :is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-  :is(input:checked) {
+  :is(input:checked),
+  :is(label:has(:checked)) {
     background-color: var(--tab-bg, var(--color-base-100));
     box-shadow:
       0 1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
