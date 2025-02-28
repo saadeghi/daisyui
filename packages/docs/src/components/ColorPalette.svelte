@@ -20,8 +20,10 @@
     if (event.key === "Escape") {
       closeModal()
     } else if (event.key === "Enter") {
-      value = inputValue
-      closeModal()
+      if (validateColor(inputValue)) {
+        value = inputValue
+        closeModal()
+      }
     }
   }
 
@@ -216,6 +218,15 @@
               type="text"
               value={inputValue}
               oninput={handleInput}
+              onkeydown={(event) => {
+                if (event.key === "Enter") {
+                  event.preventDefault()
+                  if (validateColor(inputValue)) {
+                    value = inputValue
+                    closeModal()
+                  }
+                }
+              }}
               aria-label={`${name} value`}
             />
             {#if Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
