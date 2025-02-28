@@ -127,7 +127,7 @@
 
 <button
   type="button"
-  class="w-14 h-10 border-1 border-base-content/10 rounded-lg cursor-pointer grid place-items-center outline-offset-2 focus:outline-2 outline-base-content"
+  class="border-base-content/10 outline-base-content grid h-10 w-14 cursor-pointer place-items-center rounded-lg border-1 outline-offset-2 focus:outline-2"
   aria-label={`Choose ${name}: ${value}`}
   title={`${name}: ${value}`}
   style:color={label === "A" ? value : getPairColor(name)}
@@ -143,13 +143,13 @@
   inert={!open ? true : undefined}
 >
   <div
-    class="modal-box p-0 border border-base-300 overflow-x-hidden lg:max-w-[50rem] max-lg:max-h-[80vh] flex flex-col gap-4"
+    class="modal-box border-base-300 flex flex-col gap-4 overflow-x-hidden border p-0 max-lg:max-h-[80vh] lg:max-w-[50rem]"
   >
     {#if open}
-      <div class="flex gap-2 justify-between items-center px-8 pt-6 pb-0">
-        <div class="flex gap-2 items-center relative">
+      <div class="flex items-center justify-between gap-2 px-8 pt-6 pb-0">
+        <div class="relative flex items-center gap-2">
           <div
-            class="h-8 w-12 border-1 border-base-300 rounded-lg grid place-items-center text-xl font-black"
+            class="border-base-300 grid h-8 w-12 place-items-center rounded-lg border-1 text-xl font-black"
             aria-label={`Choose ${name}: ${value}`}
             style:color={label === "A" ? value : getPairColor(name)}
             style:background-color={label === "A" ? getPairColor(name) : value}
@@ -157,20 +157,20 @@
             A
           </div>
           <div
-            class="h-px border border-px border-t-base-100/20 border-x-0 border-b-base-content/50 absolute"
+            class="border-px border-t-base-100/20 border-b-base-content/50 absolute h-px border border-x-0"
             class:w-[2.4rem]={label === "A"}
             class:start-[1.85rem]={label === "A"}
             class:w-[1.4rem]={label !== "A"}
             class:start-[2.9rem]={label !== "A"}
           ></div>
-          <h2 class="text-sm ms-5">
+          <h2 class="ms-5 text-sm">
             <span class="opacity-50">Pick a color for</span>
             {name.replace("--color-", "").replace("-", " ")}
           </h2>
         </div>
       </div>
       <div
-        class="lg:[writing-mode:vertical-lr] lg:my-auto mx-auto w-fit grid grid-cols-11 lg:min-h-[20rem]"
+        class="mx-auto grid w-fit grid-cols-11 lg:my-auto lg:min-h-[20rem] lg:[writing-mode:vertical-lr]"
         role="listbox"
       >
         {#each Object.entries(colors) as [name, color]}
@@ -184,7 +184,7 @@
             onkeypress={() => handleDragStart(color)}
           >
             <div
-              class="rounded-full border border-base-content/10 w-5 sm:w-7 sm:m-px relative aspect-square select-none bg-transparent grid place-items-center"
+              class="border-base-content/10 relative grid aspect-square w-5 place-items-center rounded-full border bg-transparent select-none sm:m-px sm:w-7"
               class:[box-shadow:0_0_0_2px_white,0_0_0_4px_black]={value === color}
               class:outline-white={value === color}
               class:outline-offset-[-3px]={value === color}
@@ -192,12 +192,12 @@
             >
               {#if getColorInitials(color)}
                 <div class={`tooltip px-px ${getTextColorClass(name)}`}>
-                  <div class="tooltip-content lowercase max-w-28 text-[10px]">
+                  <div class="tooltip-content max-w-28 text-[10px] lowercase">
                     {#each getColorNames(color) as name}
                       <div>{name}</div>
                     {/each}
                   </div>
-                  <div class="text-[9px] font-mono uppercase font-semibold">
+                  <div class="font-mono text-[9px] font-semibold uppercase">
                     {getColorInitials(color)[0]}{#if getColorInitials(color).length > 1}+{/if}
                   </div>
                 </div>
@@ -207,11 +207,11 @@
         {/each}
       </div>
       <div
-        class="flex flex-col md:flex-row gap-2 items-center bg-base-200 px-8 pt-4 pb-6 justify-between"
+        class="bg-base-200 flex flex-col items-center justify-between gap-2 px-8 pt-4 pb-6 md:flex-row"
       >
-        <div class="flex flex-col gap-1 grow">
-          <span class="text-xs text-base-content/60 shrink-0">Adjust Lightness, Chroma, Hue:</span>
-          <label dir="ltr" class="input input-border items-center flex gap-2 px-2">
+        <div class="flex grow flex-col gap-1">
+          <span class="text-base-content/60 shrink-0 text-xs">Adjust Lightness, Chroma, Hue:</span>
+          <label dir="ltr" class="input input-border flex items-center gap-2 px-2">
             <input
               type="text"
               value={inputValue}
@@ -220,7 +220,7 @@
             />
             {#if Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
               <span
-                class="opacity/50 shrink-0 badge badge-xs gap-1 badge-soft max-md:hidden select-none"
+                class="opacity/50 badge badge-xs badge-soft shrink-0 gap-1 select-none max-md:hidden"
               >
                 {Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
                 <svg

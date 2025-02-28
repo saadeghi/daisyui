@@ -255,15 +255,15 @@
   desc="OKLCH Theme Generator for daisyUI and Tailwind CSS"
 />
 
-<div class="grid md:grid-cols-[14rem_17rem_1fr] relative">
+<div class="relative grid md:grid-cols-[14rem_17rem_1fr]">
   <div
     style="scroll-behavior: smooth"
     id="themelist"
-    class="border-e shrink-0 w-full border-dashed border-base-200 md:top-16 md:sticky bg-base-100 overflow-x-hidden md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-4 pb-20"
+    class="border-base-200 bg-base-100 w-full shrink-0 overflow-x-hidden border-e border-dashed p-4 pb-20 md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:overflow-y-scroll"
     class:max-md:hidden={dockActiveItem !== "themes"}
   >
-    <div class="flex gap-2 justify-between items-center mb-4">
-      <h2 class="font-bold ms-2">Themes</h2>
+    <div class="mb-4 flex items-center justify-between gap-2">
+      <h2 class="ms-2 font-bold">Themes</h2>
 
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-ghost btn-square btn-sm m-1">
@@ -284,7 +284,7 @@
         </div>
         <ul
           tabindex="0"
-          class="dropdown-content menu bg-base-100 border border-base-300 rounded-box z-1 w-48 p-2 shadow-xl"
+          class="dropdown-content menu bg-base-100 border-base-300 rounded-box z-1 w-48 border p-2 shadow-xl"
         >
           <li class="menu-title">Options</li>
           <li>
@@ -295,7 +295,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-4 text-error"
+                class="text-error size-4"
               >
                 <path
                   stroke-linecap="round"
@@ -314,7 +314,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-4 text-error"
+                class="text-error size-4"
               >
                 <path
                   stroke-linecap="round"
@@ -332,7 +332,7 @@
     <ul class="menu w-full min-w-40 p-0">
       <li>
         <button
-          class="btn bg-auto group px-2 theme-generator-btn"
+          class="btn group theme-generator-btn bg-auto px-2"
           onmousedown={handleMouseDown}
           onmouseup={handleMouseUpOrLeave}
           onmouseleave={handleMouseUpOrLeave}
@@ -402,13 +402,13 @@
   </div>
 
   <div
-    class="flex flex-col pb-20 shrink-0 w-full md:top-16 md:sticky bg-base-100 md:h-[calc(100vh-4rem)] md:overflow-y-scroll p-6 gap-4 items-center md:items-start lg:items-stretch"
+    class="bg-base-100 flex w-full shrink-0 flex-col items-center gap-4 p-6 pb-20 md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:items-start md:overflow-y-scroll lg:items-stretch"
     class:max-md:hidden={dockActiveItem !== "editor"}
   >
-    <label class="input flex font-semibold input-ghost input-sm w-full items-center gap-2 shrink-0">
-      <span class="shrink-0 select-none text-xs opacity-60">Name</span>
+    <label class="input input-ghost input-sm flex w-full shrink-0 items-center gap-2 font-semibold">
+      <span class="shrink-0 text-xs opacity-60 select-none">Name</span>
       <input
-        class="shrink w-full"
+        class="w-full shrink"
         type="text"
         bind:value={currentTheme.name}
         placeholder="mytheme"
@@ -432,7 +432,7 @@
       </svg>
     </label>
 
-    <div class="grid gap-2 grid-cols-2 w-full">
+    <div class="grid w-full grid-cols-2 gap-2">
       <button
         class="btn group"
         onclick={() => {
@@ -441,7 +441,7 @@
         }}
       >
         <svg
-          class="group-active:scale-95 shrink-0"
+          class="shrink-0 group-active:scale-95"
           style:rotate={`${dice.rotate}deg`}
           style:transition="rotate 0.4s ease"
           fill="currentColor"
@@ -473,7 +473,7 @@
       </button>
     </div>
 
-    <h3 class="divider text-xs divider-start">
+    <h3 class="divider divider-start text-xs">
       <span class="flex gap-1.5">
         <svg
           class="opacity-40"
@@ -507,10 +507,10 @@
         Change Colors
       </span>
     </h3>
-    <div class="grid grid-cols-4 gap-4 w-fit">
+    <div class="grid w-fit grid-cols-4 gap-4">
       {#each ["base", "primary", "secondary", "accent", "neutral", "info", "success", "warning", "error"] as group}
         <div
-          class="flex gap-1 flex-col"
+          class="flex flex-col gap-1"
           class:col-span-4={group === "base"}
           class:col-span-2={group !== "base"}
         >
@@ -533,12 +533,12 @@
               {/if}
             {/each}
           </div>
-          <div class="text-xs text-base-content/60">{group}</div>
+          <div class="text-base-content/60 text-xs">{group}</div>
         </div>
       {/each}
     </div>
 
-    <h3 class="divider text-xs divider-start">
+    <h3 class="divider divider-start text-xs">
       <span class="flex gap-1.5">
         <svg
           class="opacity-40"
@@ -574,14 +574,14 @@
     </h3>
     {#each data.radiusValues as [key, label, desc, values]}
       <div class="w-full max-w-fit">
-        <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
-          <span class="text-base-content/60">{label}</span>
-          <span class="text-base-content/20 italic">{desc}</span>
+        <div class="mb-2 flex flex-col" id={`${key}-group`}>
+          <span class="text-base-content/70 text-[0.6875rem]">{label}</span>
+          <span class="text-base-content/40 text-[0.625rem] italic">{desc}</span>
         </div>
         <div class="flex gap-2" role="radiogroup" aria-labelledby={`${key}-group`}>
           {#each values as value}
             <label
-              class="rounded-field overflow-hidden bg-base-200 cursor-pointer hover:bg-base-300 transition-colors relative focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-base-content"
+              class="rounded-field bg-base-200 hover:bg-base-300 focus-within:outline-base-content relative cursor-pointer overflow-hidden transition-colors focus-within:outline-2 focus-within:outline-offset-2"
               title={value}
             >
               <input
@@ -592,9 +592,9 @@
                 {value}
                 aria-label={`${value} border radius`}
               />
-              <div class="pt-2 pe-3" aria-hidden="true">
+              <div class="pe-3 pt-2" aria-hidden="true">
                 <div
-                  class="w-8 h-6 border-e-2 border-t-2 border-base-content/20 bg-base-200"
+                  class="border-base-content/20 bg-base-200 h-6 w-8 border-e-2 border-t-2"
                   style={`border-start-end-radius:${value}`}
                   class:border-primary={currentTheme[key] === value}
                   class:bg-base-300={currentTheme[key] !== value}
@@ -606,7 +606,7 @@
       </div>
     {/each}
 
-    <h3 class="divider text-xs divider-start">
+    <h3 class="divider divider-start text-xs">
       <span class="flex gap-1.5">
         <svg
           class="opacity-40"
@@ -636,39 +636,22 @@
 
     {#each data.effectValues as [key, label, desc, values]}
       <div class="w-full">
-        <div class="flex gap-2 items-center justify-between">
-          <span class="text-xs flex items-center gap-1 text-base-content/60">
-            {label}
-            <div class="tooltip before:text-[0.6875rem]" data-tip={desc}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-4"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
-                />
-              </svg>
-            </div>
+        <label class="flex cursor-pointer items-center justify-between gap-2">
+          <span class="flex flex-col">
+            <span class="text-base-content/70 text-xs text-[0.6875rem]">{label}</span>
+            <span class="text-base-content/40 text-[0.625rem] italic">{desc}</span>
           </span>
-          <label class="cursor-pointer">
-            <input
-              type="checkbox"
-              class="toggle toggle-xs"
-              checked={currentTheme[key] === "1"}
-              onchange={(e) => (currentTheme[key] = e.target.checked ? "1" : "0")}
-            />
-          </label>
-        </div>
+          <input
+            type="checkbox"
+            class="toggle toggle-xs"
+            checked={currentTheme[key] === "1"}
+            onchange={(e) => (currentTheme[key] = e.target.checked ? "1" : "0")}
+          />
+        </label>
       </div>
     {/each}
 
-    <h3 class="divider text-xs divider-start">
+    <h3 class="divider divider-start text-xs">
       <span class="flex gap-1.5">
         <svg
           class="opacity-40"
@@ -726,11 +709,11 @@
     </h3>
     {#each data.sizeValues as [key, label, desc, values, scale]}
       <div class="w-full">
-        <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
-          <span class="text-base-content/60">{label}</span>
-          <span class="text-base-content/20 italic">{desc}</span>
+        <div class="mb-2 flex flex-col" id={`${key}-group`}>
+          <span class="text-base-content/70 text-[0.6875rem]">{label}</span>
+          <span class="text-base-content/40 text-[0.625rem] italic">{desc}</span>
         </div>
-        <div class="flex gap-4 items-end bg-base-200 rounded-box p-4 px-6 justify-center">
+        <div class="bg-base-200 rounded-box flex items-end justify-center gap-4 p-4 px-6">
           <div class="flex gap-1">
             {#each scale as size, index}
               <div class="flex flex-col items-center gap-1">
@@ -743,7 +726,7 @@
                     style={`height:calc(${currentTheme[key]} * ${size} )`}
                   ></div>
                 </div>
-                <div class="font-mono text-base-content/50 tabular-nums uppercase flex flex-col">
+                <div class="text-base-content/50 flex flex-col font-mono uppercase tabular-nums">
                   <span class="text-[0.5rem] font-semibold"
                     >{["xs", "sm", "md", "lg", "xl"][index]}</span
                   >
@@ -757,11 +740,11 @@
 
           <div class="flex flex-col gap-2">
             <div class="flex flex-col items-center">
-              <div class="text-[0.5625rem] text-base-content/50">{label} base size</div>
-              <div class="text-3xl tabular-nums font-black" title={currentTheme[key]}>
+              <div class="text-base-content/50 text-[0.5625rem]">{label} base size</div>
+              <div class="text-3xl font-black tabular-nums" title={currentTheme[key]}>
                 {(parseFloat(currentTheme[key]) * 16).toFixed(1)}
               </div>
-              <div class="text-[0.5rem] text-base-content/50">Pixels</div>
+              <div class="text-base-content/50 text-[0.5rem]">Pixels</div>
             </div>
             <input
               type="range"
@@ -774,10 +757,10 @@
               oninput={(e) => (currentTheme[key] = values[e.target.value])}
             />
 
-            <div class="flex justify-between mx-1.5">
+            <div class="mx-1.5 flex justify-between">
               {#each values as value, index}
                 <div
-                  class="w-px h-1.5 bg-base-content"
+                  class="bg-base-content h-1.5 w-px"
                   class:opacity-20={value !== "0.25rem"}
                 ></div>
               {/each}
@@ -788,15 +771,15 @@
     {/each}
     {#each data.borderValues as [key, label, desc, values]}
       <div class="w-full">
-        <div class="text-[0.6875rem] mb-2 flex gap-2" id={`${key}-group`}>
-          <span class="text-base-content/60">{label}</span>
-          <span class="text-base-content/20 italic">{desc}</span>
+        <div class="mb-2 flex flex-col" id={`${key}-group`}>
+          <span class="text-base-content/70 text-[0.6875rem]">{label}</span>
+          <span class="text-base-content/40 text-[0.625rem] italic">{desc}</span>
         </div>
 
-        <div class="relative mt-6 bg-base-200 rounded-box p-4 px-6">
+        <div class="bg-base-200 rounded-box relative mt-6 p-4 px-6">
           <div class="mx-2 w-[calc(100%-1rem)]">
             <div
-              class="tooltip w-0 relative block tooltip-open before:text-[0.6875rem] font-mono"
+              class="tooltip tooltip-open relative block w-0 font-mono before:text-[0.6875rem]"
               style={`inset-inline-start:${(values.indexOf(currentTheme[key]) / (values.length - 1)) * 100}%`}
               data-tip={currentTheme[key]}
             ></div>
@@ -811,16 +794,16 @@
             aria-labelledby={`${key}-group`}
             oninput={(e) => (currentTheme[key] = values[e.target.value])}
           />
-          <div class="flex justify-between py-1 mx-1.5">
+          <div class="mx-1.5 flex justify-between py-1">
             {#each values as value, index}
-              <div class="w-px h-1.5 bg-base-content" class:opacity-20={value !== "1px"}></div>
+              <div class="bg-base-content h-1.5 w-px" class:opacity-20={value !== "1px"}></div>
             {/each}
           </div>
         </div>
       </div>
     {/each}
 
-    <h3 class="divider text-xs divider-start">
+    <h3 class="divider divider-start text-xs">
       <span class="flex gap-1.5">
         <svg
           class="opacity-40"
@@ -847,15 +830,15 @@
       </span>
     </h3>
 
-    <div class="flex gap-2 items-center justify-between">
-      <span class="text-xs flex items-center gap-1 text-base-content/60"> Default theme </span>
+    <div class="flex items-center justify-between gap-2">
+      <span class="text-base-content/60 flex items-center gap-1 text-xs"> Default theme </span>
       <label class="cursor-pointer">
         <input type="checkbox" class="toggle toggle-xs" bind:checked={currentTheme.default} />
       </label>
     </div>
 
-    <div class="flex gap-2 items-center justify-between">
-      <span class="text-xs flex items-center gap-1 text-base-content/60">
+    <div class="flex items-center justify-between gap-2">
+      <span class="text-base-content/60 flex items-center gap-1 text-xs">
         Default dark theme
         <div class="tooltip before:text-[0.6875rem]" data-tip="prefers-color-scheme:dark">
           <svg
@@ -879,8 +862,8 @@
       </label>
     </div>
 
-    <div class="flex gap-2 items-center justify-between">
-      <span class="text-xs flex items-center gap-1 text-base-content/60">
+    <div class="flex items-center justify-between gap-2">
+      <span class="text-base-content/60 flex items-center gap-1 text-xs">
         Dark color scheme
         <div class="tooltip before:text-[0.6875rem]" data-tip="Color of browser-provided UI">
           <svg
@@ -899,7 +882,7 @@
           </svg>
         </div>
       </span>
-      <label class="flex gap-2 items-center cursor-pointer text-xs">
+      <label class="flex cursor-pointer items-center gap-2 text-xs">
         <input
           type="checkbox"
           class="toggle toggle-xs"
@@ -909,7 +892,7 @@
       </label>
     </div>
 
-    <div class="divider text-xs divider-start"></div>
+    <div class="divider divider-start text-xs"></div>
 
     <button
       class="btn btn-block text-error"
@@ -938,7 +921,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-4 text-error"
+          class="text-error size-4"
         >
           <path
             stroke-linecap="round"
@@ -952,13 +935,13 @@
   </div>
 
   <div class="overflow-x-hidden">
-    <div class="overflow-hidden border-base-300 border-s border-t md:rounded-ss-xl">
+    <div class="border-base-300 overflow-hidden border-s border-t md:rounded-ss-xl">
       <div class="bg-base-200 text-base-content" style={currentThemeStyle}>
         <div class:max-md:hidden={dockActiveItem !== "preview"}>
           <Preview />
         </div>
         <div
-          class="px-8 py-12 bg-base-100 border-base-300 md:border-t md:rounded-t-box"
+          class="bg-base-100 border-base-300 md:rounded-t-box px-8 py-12 md:border-t"
           class:max-md:hidden={dockActiveItem !== "variants"}
         >
           <PreviewGrid />

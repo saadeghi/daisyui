@@ -47,8 +47,8 @@ const borderValues = [
   ["--border", "Border Width", "All components", ["0.5px", "1px", "1.5px", "2px"]],
 ]
 const effectValues = [
-  ["--depth", "Depth Effect", "For fields & selectors", ["0", "1"]],
-  ["--noise", "Noise Effect", "For fields & selectors", ["0", "1"]],
+  ["--depth", "Depth Effect", "3D depth on fields & selectors", ["0", "1"]],
+  ["--noise", "Noise Effect", "Noise pattern on fields & selectors", ["0", "1"]],
 ]
 const colorInitials = {
   "--color-base-100": "b1",
