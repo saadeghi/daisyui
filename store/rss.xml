@@ -14,12 +14,12 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
     <description>
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
-    <link>https://daisyui.com/store/</link>
-    <lastBuildDate>Tue, 25 Feb 2025 15:55:27 GMT</lastBuildDate>
-    <pubDate>Tue, 25 Feb 2025 15:55:27 GMT</pubDate>
+    <link>https://daisyui.com/store//</link>
+    <lastBuildDate>Fri, 28 Feb 2025 22:36:10 GMT</lastBuildDate>
+    <pubDate>Fri, 28 Feb 2025 22:36:10 GMT</pubDate>
     <language>en-us</language>
-    <atom:link href="https://daisyui.com/store/rss.xml" rel="self" type="application/rss+xml"/>
-    
+    <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
+
     
         <item>
           <title>
@@ -43,6 +43,26 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       
         <item>
           <title>
+            <![CDATA[ Nexus Dashboard 2.0 ]]>
+          </title>
+          <description>
+            <![CDATA[ <p>The ultimate dashboard template<br>Made with Tailwind CSS 4.0 and daisyUI 5.0</p>
+
+<p><strong>Solo</strong> license includes:</p>
+
+<ul><li><p>HTML version</p></li><li><p>For one developer and one project</p></li></ul>
+
+<p><strong>Team</strong> and <strong>Enterprise</strong> license includes:</p>
+
+<ul><li><p><strong>HTML</strong>, <strong>React</strong>, <strong>Next.js</strong> and <strong>SvelteKit 🆕</strong> versions</p></li><li><p>For unlimited developers</p></li><li><p>For unlimited projects (<strong>Enterprise</strong> only)</p></li><li><p>All pages</p></li><li><p>CRM and e-commerce dashboard layouts</p></li><li><p>Landing page</p></li><li><p>10 e-commerce pages with tables, forms, cards, etc</p></li><li><p>File manager layout</p></li><li><p>4 auth pages including login, register, password reset</p></li><li><p>21 component page examples with all variants</p></li><li><p>12 form component examples with all variants</p></li><li><p>Apex charts</p></li><li><p>5 customizable themes including Light, Dark, Dim, Contrast, Material</p></li><li><p>Compatible with all daisyUI themes</p></li></ul> ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/92980261-924c-40ef-b2ad-95540a655e15/</link>
+          <pubDate>Thu, 11 Apr 2024 13:34:41 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/92980261-924c-40ef-b2ad-95540a655e15/</guid>
+        </item>
+      
+        <item>
+          <title>
             <![CDATA[ Official daisyUI Figma Library ]]>
           </title>
           <description>
@@ -61,26 +81,6 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</link>
           <pubDate>Wed, 11 Sep 2024 22:20:36 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</guid>
-        </item>
-      
-        <item>
-          <title>
-            <![CDATA[ Nexus Dashboard 2.0 ]]>
-          </title>
-          <description>
-            <![CDATA[ <p>The ultimate dashboard template<br>Made with Tailwind CSS 4.0 and daisyUI 5.0</p>
-
-<p><strong>Solo</strong> license includes:</p>
-
-<ul><li><p>HTML version</p></li><li><p>For one developer and one project</p></li></ul>
-
-<p><strong>Team</strong> and <strong>Enterprise</strong> license includes:</p>
-
-<ul><li><p><strong>HTML</strong>, <strong>React</strong>, <strong>Next.js</strong> and <strong>SvelteKit 🆕</strong> versions</p></li><li><p>For unlimited developers</p></li><li><p>For unlimited projects (<strong>Enterprise</strong> only)</p></li><li><p>All pages</p></li><li><p>CRM and e-commerce dashboard layouts</p></li><li><p>Landing page</p></li><li><p>10 e-commerce pages with tables, forms, cards, etc</p></li><li><p>File manager layout</p></li><li><p>4 auth pages including login, register, password reset</p></li><li><p>21 component page examples with all variants</p></li><li><p>12 form component examples with all variants</p></li><li><p>Apex charts</p></li><li><p>5 customizable themes including Light, Dark, Dim, Contrast, Material</p></li><li><p>Compatible with all daisyUI themes</p></li></ul> ]]>
-          </description>
-          <link>https://daisyui.lemonsqueezy.com/checkout/buy/92980261-924c-40ef-b2ad-95540a655e15/</link>
-          <pubDate>Thu, 11 Apr 2024 13:34:41 GMT</pubDate>
-          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/92980261-924c-40ef-b2ad-95540a655e15/</guid>
         </item>
       
         <item>
