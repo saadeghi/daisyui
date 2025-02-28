@@ -3,11 +3,11 @@ title: daisyUI 5 release notes
 desc: Everything about the new daisyUI 5 release
 ---
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-in-lab.webp" alt="daisyui 5">
+<div class="w-full rounded-box overflow-hidden" style="aspect-ratio: 1920/1080;"><iframe class="w-full h-full" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/bYznFmzL820?mute=0&amp;autoplay=1&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;loop=1&amp;playlist=bYznFmzL820" title="Nexus Dashboard 2.0"></iframe></div>
 
 Welcome! 🎉
 
-daisyUI, the essential companion to Tailwind CSS is now being used in 360,000 open source projects, with 19 million npm installs (300 thousand weekly installs). daisyUI is growing faster than before and today it's helping countless people creating better and faster websites.  
+daisyUI, the essential component library for Tailwind CSS is now being used in [360,000 open source projects](https://github.com/saadeghi/daisyui/network/dependents), with 19 million npm installs (350 thousand weekly installs). daisyUI is growing faster than before and today it's helping many people, startups and companies to create improve their development experience.  
 
 💚 daisyUI became possible thanks to your incredible contributions, helpful feedback, and amazing support. Thank you!
 
