@@ -38,12 +38,12 @@ jobs:
       - name: Build package
         run: bun run build
 
-      - name: Run release command
-        if: github.repository == 'saadeghi/daisyui'
-        run: |
-          git config --local user.email "pouya.saadeghi@gmail.com"
-          git config --local user.name "Pouya Saadeghi"
-          bun run release${{ inputs.release-type }}
+      # - name: Run release command
+      #   if: github.repository == 'saadeghi/daisyui'
+      #   run: |
+      #     git config --local user.email "pouya.saadeghi@gmail.com"
+      #     git config --local user.name "Pouya Saadeghi"
+      #     bun run release${{ inputs.release-type }}
 
       - name: Read package version from package.json
         id: package-version
@@ -51,17 +51,16 @@ jobs:
           version=$(grep -o '"version": *"[^"]*"' packages/daisyui/package.json | cut -d'"' -f4)
           echo version=$version >> $GITHUB_OUTPUT
 
-      - name: Push changes
-        if: steps.commit.outputs.push == 'true'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish package to NPM
-        if: github.repository == 'saadeghi/daisyui'
-        run: bun publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      # - name: Publish package to NPM
+      #   if: github.repository == 'saadeghi/daisyui'
+      #   run: bun publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   deploy-docs:
     name: 📘 Docs

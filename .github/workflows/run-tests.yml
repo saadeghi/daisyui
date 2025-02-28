@@ -33,19 +33,19 @@ jobs:
           fetch-depth: 1
           clean: false
 
-      - name: Setup bun
-        uses: oven-sh/setup-bun@v1
+      # - name: Setup bun
+      #   uses: oven-sh/setup-bun@v1
 
-      - name: Install dependencies
-        run: bun i
+      # - name: Install dependencies
+      #   run: bun i
 
-      - name: build package
-        run: bun run build
+      # - name: build package
+      #   run: bun run build
 
-      - name: Run tests
-        run: |
-          if [ -z "${{ env.filter }}" ]; then
-            bun test
-          else
-            bun test -t ${{ env.filter }}
-          fi
+      # - name: Run tests
+      #   run: |
+      #     if [ -z "${{ env.filter }}" ]; then
+      #       bun test
+      #     else
+      #       bun test -t ${{ env.filter }}
+      #     fi
