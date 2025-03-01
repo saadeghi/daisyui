@@ -36,7 +36,7 @@ Let's begin!
 12. [Breaking changes in config](#12-breaking-changes-in-config)
 13. [Breaking changes in themes](#13-breaking-changes-in-themes)
 14. [Bug fixes](#14-bug-fixes)
-15. [What to expect in the final release](#15-what-to-expect-in-the-final-release)
+15. [Get started](#15-get-started)
 
 </div>
 </details>
@@ -958,15 +958,15 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 
 Please report any new bugs you find to [GitHub issues](https://github.com/saadeghi/daisyui/issues) 🙏
 
-## 15. What to expect in the final release
+## 15. Get started with daisyUI 5
 
-> :TLDR:
->
-> TLDR – No additional major changes are planned until the final release. Only bug fixes.  
-> [⤴️ Go back to the top](#)
+[⤴️ Go back to the top](#)
+
+<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5.webp" alt="tailwind css components">
+
+1 - [Tailwind CSS 4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)  
+2 - [daisyUI 5 upgrade guide](https://tailwindcss.com/docs/upgrade/)  
 
 If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.  
 
 Join us at [daisyUI Discord server](https://daisyui.com/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.
-
-Also check out [the changelog page](/docs/changelog/) for a detailed list changes in each component.
