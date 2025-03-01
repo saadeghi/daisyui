@@ -36,7 +36,7 @@ Let's begin!
 12. [Breaking changes in config](#12-breaking-changes-in-config)
 13. [Breaking changes in themes](#13-breaking-changes-in-themes)
 14. [Bug fixes](#14-bug-fixes)
-15. [Get started](#15-get-started)
+15. [Get started with daisyUI 5](#15-get-started-with-daisyui-5)
 
 </div>
 </details>
