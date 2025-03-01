@@ -31,7 +31,7 @@ desc: How to use daisyUI from a CDN?
 
   let combinedUrl = derived(selectedUrls, ($selectedUrls) => {
     return $selectedUrls.length
-      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@latest/${url.path}`).join(",")}`
+      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@5/${url.path}`).join(",")}`
       : "";
   });
 
@@ -57,7 +57,7 @@ desc: How to use daisyUI from a CDN?
       <div class="grid *:[grid-area:1/1]">
         <div class="overflow-x-auto pt-16 pb-8 px-6">
   
-  <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/daisyui.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
+  <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-punctuation)">&lt;script</span><span style="color:var(--shiki-attr-name)"> src</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)">&gt;&lt;/script&gt;</span></span></code></pre>
   
         </div>
@@ -66,7 +66,7 @@ desc: How to use daisyUI from a CDN?
           {data.daisyuiCssSize}kB compressed
         </div>
         {#if onMount}
-          <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@${data.daisyuiVersion}/daisyui.css" rel="stylesheet" type="text/css" />\n<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>`} />
+          <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />\n<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>`} />
         {/if}
   
       </div>

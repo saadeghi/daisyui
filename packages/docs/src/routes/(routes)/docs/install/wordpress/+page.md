@@ -37,7 +37,7 @@ Then, click the `main.css` file on the explorer sidebar to open the file editor.
 Add daisyUI at the end of code in the `main.css` file
 
 ```postcss:main.css
-@plugin "https://esm.run/daisyui@latest";
+@plugin "https://esm.run/daisyui@5";
 ```
 
 Now you can use daisyUI class names!

@@ -12,7 +12,7 @@ Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get
 Run this code to download latest verison of daisyUI as a single js file and put it next to Tailwind's executable file.
 
 ```sh:Terminal
-curl -sLo daisyui.js https://esm.run/daisyui@latest/index.js
+curl -sLo daisyui.js https://esm.run/daisyui@5/index.js
 ```
 
 ### 3. Add Tailwind CSS and daisyUI

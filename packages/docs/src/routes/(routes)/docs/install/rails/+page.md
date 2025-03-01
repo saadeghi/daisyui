@@ -47,12 +47,12 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   
 ```postcss:app/assets/tailwind/application.css
 @import "tailwindcss";
-@import "https://cdn.jsdelivr.net/npm/daisyui@latest/daisyui.css";
+@import "https://cdn.jsdelivr.net/npm/daisyui@5";
 ```
 
 - You can [choose the parts you need](/docs/cdn/)
-- You can [import small CSS files separately](https://cdn.jsdelivr.net/npm/daisyui@latest/chunks.css)
-- You can [import all themes](https://cdn.jsdelivr.net/npm/daisyui@latest/themes.css) or [specific themes](https://cdn.jsdelivr.net/npm/daisyui@latest/theme/light.css)
+- You can [import small CSS files separately](https://cdn.jsdelivr.net/npm/daisyui@5/chunks.css)
+- You can [import all themes](https://cdn.jsdelivr.net/npm/daisyui@5/themes.css) or [specific themes](https://cdn.jsdelivr.net/npm/daisyui@5/theme/light.css)
 
 ### 4. Create a homepage in Rails
 

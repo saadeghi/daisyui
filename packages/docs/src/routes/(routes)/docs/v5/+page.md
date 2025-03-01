@@ -283,11 +283,11 @@ For example if you only want to use daisyUI toggle component, include a tiny CSS
 Not possible
 ```
 ```:After
-https://cdn.jsdelivr.net/npm/daisyui@latest/components/toggle.css
+https://cdn.jsdelivr.net/npm/daisyui@5/components/toggle.css
 ```
 </div>
 
-All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@latest/chunks.css).
+All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5/chunks.css).
 
 Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
 

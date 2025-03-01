@@ -15,10 +15,10 @@
 {#if true}
   <div class="bg-base-100 flex justify-center rounded-sm p-2">
     <a
-      href="/docs/v5/"
+      href="/docs/upgrade/"
       class="btn btn-soft group btn-sm [width:clamp(20rem,100%,30rem)] rounded-full"
     >
-      🎉 daisyUI 5 release notes
+      🎉 daisyUI 5.0 upgrade guide
     </a>
   </div>
 {/if}
