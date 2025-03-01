@@ -801,7 +801,7 @@ Cyberpunk and Wireframe themes no longer have custom font by default. If you wan
 > :TLDR:
 >
 > TLDR – More than 95% of all the open issues from daisyUI 4 have been fixed in this release.  
-> [:FF: Skip to the next section](#15-what-to-expect-in-the-final-release)
+> [:FF: Skip to the next section](#15-get-started-with-daisyui-5)
 
 Some of these bugs were fixed automatically by the new changes in changes in the core library, design system, themes, and components. Some of them became possible with the new capabilities of Tailwind CSS 4.  
 
