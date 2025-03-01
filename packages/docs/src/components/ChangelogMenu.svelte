@@ -76,6 +76,9 @@
     </li>
     <li></li>
     <li>
+      <a target="_blank" rel="noopener, noreferrer" href="https://v4.daisyui.com/">Version 4.x</a>
+    </li>
+    <li>
       <a target="_blank" rel="noopener, noreferrer" href="https://v3.daisyui.com/">Version 3.x</a>
     </li>
     <li>
