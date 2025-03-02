@@ -115,7 +115,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Adjusted padding.
 - Improved disabled state styling.
 - **Breaking Change:** Default height reduced; customizable via `--size-field`.
-- checked button (checkbox, radio) now has outline insteaed of forced primary color. This allows customization like `checked:btn-secondary`
+- checked button (checkbox, radio) now has outline instead of forced primary color. This allows customization like `checked:btn-secondary`
 
 ### Card
 
@@ -195,7 +195,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 
 🆕 Additions
 - Using CSS focus method, clicking the dropdown button again will now close the dropdown ✅
-- Added support for the new HTML [`popover`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover) attribute. HTML popover is the new standard for creating dropdowns in HTML. It prevents any overflow edgecase issues and any z-index issues.
+- Added support for the new HTML [`popover`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover) attribute. HTML popover is the new standard for creating dropdowns in HTML. It prevents any overflow edge case issues and any z-index issues.
 - Added support for the new CSS [`Anchor positioning`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning) (Currently only works on Chromium-based browsers. Other browsers will position the dropdown on the middle of the screen, like a modal).
 
 🔧 Changes
@@ -302,7 +302,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🔧 Changes
 - Added new `loading-xl` size.
 - Use SVG animation instead of CSS animation for better performance.
-- Fix Safari bug where the animation were stuck sometimes.
+- Fix Safari bug where the animation was stuck sometimes.
 
 ### Mask
 
@@ -478,13 +478,13 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 🆕 Additions
 - Added new `tab-xl` size.
 - Adjusted padding, font-size, and height to match other components.
-- Added ability to customize the tab height form theme CSS variables. Check out the [Theme Generator](/theme-generator/) page to see how it works.
+- Added ability to customize the tab height from theme CSS variables. Check out the [Theme Generator](/theme-generator/) page to see how it works.
 - Added new `tabs-top` and `tabs-bottom` positioning options.
 - Accessibility improvements for screen readers and forced color mode.
 
 
 🔧 Changes
-- Changed and refactored `tabs` and `tab-content` form a grid to flex, allowing us to fix the unstable margin issue at the end of the `tab-content` which was a side-effect of using infinite grid columns in v4, to push the tabs to the left while keeping the content full width. flex and flex order gives us more control over in this layout.
+- Changed and refactored `tabs` and `tab-content` from a grid to flex, allowing us to fix the unstable margin issue at the end of the `tab-content` which was a side-effect of using infinite grid columns in v4, to push the tabs to the left while keeping the content full width. flex and flex order gives us more control over in this layout.
 - **Breaking Change:** Renamed `tabs-lifted` to `tabs-lift`.
 
 ```diff:page.html
