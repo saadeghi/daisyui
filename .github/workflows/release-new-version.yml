@@ -67,8 +67,6 @@ jobs:
     needs: build-publish
     uses: ./.github/workflows/deploy-docs.yml
     secrets: inherit
-    with:
-      daisyuiversion: ${{ needs.build-publish.outputs.daisyuiversion }}
 
   run-tests:
     name: 🧪 Tests

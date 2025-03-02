@@ -47,7 +47,7 @@
             >
               <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
             </svg>
-            <div class="flex flex-col items-start leading-[1.1] gap-0.5">
+            <div class="flex flex-col items-start gap-0.5 leading-[1.1]">
               <span
                 class="text-base-content/50 hidden text-[0.5625rem] font-semibold tracking-wide md:block"
               >
@@ -64,7 +64,7 @@
             href={arrayOfPagesInOrder[currentPageIndex + 1].href}
             class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3"
           >
-            <div class="flex flex-col items-end leading-[1.1] gap-0.5">
+            <div class="flex flex-col items-end gap-0.5 leading-[1.1]">
               <span
                 class="text-neutral-content/50 hidden text-[0.5625rem] font-semibold tracking-wide md:block"
               >
@@ -372,7 +372,7 @@
 </div> -->
 
 <div
-  class="card bg-base-100 from-base-200 not-prose outline-base-content/5 relative overflow-hidden bg-linear-to-b font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse"
+  class="card not-prose outline-base-content/5 bg-primary/5 relative overflow-hidden font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse"
 >
   <figure class="max-md:bg-primary/10 isolate shrink-0 md:w-2/3">
     <img
@@ -381,15 +381,15 @@
       src="https://img.daisyui.com/images/store/figma.webp"
     />
   </figure>
-  <div
+  <!-- <div
     class="bg-accent -left-1/5 pointer-events-none absolute bottom-[-50%] aspect-square w-3/4 -translate-x-1/2 rounded-full opacity-20 blur-3xl"
   ></div>
   <div
     class="bg-primary pointer-events-none absolute bottom-[-120%] left-1/2 aspect-square w-full -translate-x-1/2 rounded-full opacity-20 blur-3xl"
-  ></div>
-  <div
+  ></div> -->
+  <!-- <div
     class="bg-base-100 pointer-events-none absolute -top-3/4 right-1/4 z-3 aspect-square w-1/2 rounded-full opacity-60 blur-3xl"
-  ></div>
+  ></div> -->
   <!-- <div class="card-body relative isolate z-3">
     <h2
       class="card-title text-base-content text-xl contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl">
@@ -438,7 +438,7 @@
   </div> -->
   <div class="card-body relative isolate z-3">
     <h2
-      class="card-title text-base-content text-xl contrast-200 [text-wrap:balance] sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
+      class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
     >
       <span>
         <span class="font-black">Official daisyUI</span>
@@ -472,7 +472,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+        class="hidden h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
       >
         <path
           stroke-linecap="round"

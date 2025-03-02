@@ -57,6 +57,15 @@
           FAQ
           {@html newtabicon}
         </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="/llms.txt"
+          class="link link-hover group"
+        >
+          llms.txt
+          {@html newtabicon}
+        </a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("pages")}</span>

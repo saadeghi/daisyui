@@ -2,16 +2,7 @@ name: "📘 Deploy docs"
 
 on:
   workflow_dispatch:
-    inputs:
-      daisyuiversion:
-        type: string
-        required: false
-        description: daisyUI version
   workflow_call:
-    inputs:
-      daisyuiversion:
-        type: string
-        required: false
   push:
     branches:
       - master
