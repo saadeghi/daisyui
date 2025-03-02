@@ -27,6 +27,8 @@ classnames:
   style:
   - class: btn-outline
     desc: outline style
+  - class: btn-dash
+    desc: dash style
   - class: btn-soft
     desc: soft style
   - class: btn-ghost

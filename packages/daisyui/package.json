@@ -6,11 +6,13 @@
   "author": "Pouya Saadeghi",
   "license": "MIT",
   "homepage": "https://daisyui.com",
-  "repository": "github:saadeghi/daisyui",
-  "funding": "https://github.com/saadeghi/daisyui?sponsor=1",
-  "bugs": {
-    "url": "https://github.com/saadeghi/daisyui/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saadeghi/daisyui.git",
+    "directory": "packages/daisyui"
   },
+  "funding": "https://github.com/saadeghi/daisyui?sponsor=1",
+  "bugs": "https://github.com/tailwindlabs/tailwindcss/issues",
   "keywords": [
     "daisyui",
     "tailwind",
