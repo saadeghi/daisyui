@@ -51,6 +51,15 @@ npm i -D daisyui@latest
 @plugin "daisyui";
 ```
 
+OR if you want [enable a built-in theme](/docs/themes/#enable-a-built-in-theme) in [config](/docs/config/):  
+
+```postcss:app.css
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake;
+}
+```
+
 Now everything should work as expected. If you're facing any challenges, you can ask for help on [daisyUI Discord server](/discord/) so you can get help from the community.
 
 ---

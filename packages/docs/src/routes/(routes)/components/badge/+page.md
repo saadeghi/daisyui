@@ -136,7 +136,7 @@ classnames:
 ```
 
 
-### ~Badge with outline style
+### ~Badge with dash style
 <div class="badge badge-dash badge-primary">Primary</div>
 <div class="badge badge-dash badge-secondary">Secondary</div>
 <div class="badge badge-dash badge-accent">Accent</div>
