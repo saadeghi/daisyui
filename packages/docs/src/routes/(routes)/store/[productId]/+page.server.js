@@ -1,5 +1,14 @@
+import yaml from "js-yaml"
+import { readFileSync } from "fs"
+import { fileURLToPath } from "url"
+import { dirname, resolve } from "path"
+
 import { error } from "@sveltejs/kit"
-import { faq } from "$lib/data/store.js"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const yamlFile = readFileSync(resolve(__dirname, "../../../../lib/data/store.yaml"), "utf8")
+const yamlData = yaml.load(yamlFile)
 
 export async function load({ params, parent }) {
   const products = await parent()
@@ -14,6 +23,6 @@ export async function load({ params, parent }) {
     products,
     product,
     tech: products.tech,
-    faq,
+    faq: yamlData.faq,
   }
 }

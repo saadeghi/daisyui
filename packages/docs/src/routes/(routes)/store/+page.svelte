@@ -109,23 +109,20 @@
 
 <SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
 
-<div class="flex gap-6 justify-between mx-4 flex-col lg:flex-row">
+<div class="mx-4 flex flex-col justify-between gap-6 lg:flex-row">
   <div class="flex flex-col gap-2">
     <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">daisyUI store</h1>
     <p class="text-base-content/60 text-sm">Official templates made by daisyUI</p>
   </div>
   <div class="flex flex-col gap-3">
-    <div class="text-xs text-base-content/50">Filter by</div>
-    <div class="flex gap-2 items-center">
+    <div class="text-base-content/50 text-end text-xs">Filter by</div>
+    <div class="flex items-center gap-2">
       {#each data.techFilters as filter}
         {#if (selectedTech === "" && filter !== "all") || selectedTech === "all" || (selectedTech !== "" && (filter === selectedTech || filter === "all"))}
           <button
             transition:slide={{ duration: 50, axis: "x" }}
             class={`btn btn-sm rounded-full ${filter === "all" ? "btn-circle" : ""} ${selectedTech === filter ? "btn-neutral" : ""}`}
-            xstyle={filter !== "all"
-              ? `background-color: ${data.tech[filter].bg};border-color: ${data.tech[filter].bg};color: ${data.tech[filter].fg};`
-              : ``}
-            aria-label={filter === "all" ? "×" : data.tech[filter].title}
+            aria-label={filter === "all" ? "×" : data.tech[filter]}
             onclick={() => handleFilterChange(filter)}
           >
             {#if filter === "all"}
@@ -141,7 +138,7 @@
                 />
               </svg>
             {:else}
-              {data.tech[filter].title}
+              {data.tech[filter]}
             {/if}
           </button>
         {/if}
@@ -150,14 +147,14 @@
   </div>
 </div>
 
-<hr class="mb-16 mt-10 mx-4 border-base-content/10" />
+<hr class="border-base-content/10 mx-4 mt-10 mb-16" />
 
 <div>
   {#await fetchDiscount then discount}
     {#if discount?.data.attributes.expires_at && new Date(discount?.data.attributes.expires_at).toISOString() > currentDate}
       <div class="mb-12">
         <div
-          class="alert min-h-24 border-transparent bg-neutral text-neutral-content"
+          class="alert bg-neutral text-neutral-content min-h-24 border-transparent"
           transition:slide={{ duration: 400 }}
         >
           <svg
@@ -166,7 +163,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mx-4"
+            class="mx-4 size-6"
           >
             <path
               stroke-linecap="round"
@@ -188,7 +185,7 @@
                   class="tooltip tooltip-info"
                 >
                   <button
-                    class="font-mono tracking-wide badge px-2 badge-info cursor-copy"
+                    class="badge badge-info cursor-copy px-2 font-mono tracking-wide"
                     onclick={() => copyText(discount.data.attributes.code)}
                   >
                     {discount.data.attributes.code}
@@ -278,7 +275,7 @@
   </select> -->
 
   <div
-    class="mx-auto grid lg:grid-cols-2 *:py-16 md:*:px-16 *:px-4 lg:px-4 *:border-dashed *:border-t *:nth-[1]:border-t-0 lg:*:nth-[2]:border-t-0 lg:*:border-e lg:*:even:border-e-0 *:border-base-content/10"
+    class="*:border-base-content/10 mx-auto grid *:border-t *:border-dashed *:px-4 *:py-16 *:nth-[1]:border-t-0 md:*:px-16 lg:grid-cols-2 lg:px-4 lg:*:border-e lg:*:even:border-e-0 lg:*:nth-[2]:border-t-0"
   >
     {#each sortedFilteredProducts as product, index}
       <StoreProduct {product} {convertCurrency} />
@@ -375,7 +372,7 @@
             class="hidden"
             checked="checked"
           />
-          <div class="flex flex-col gap-2 w-full max-w-sm">
+          <div class="flex w-full max-w-sm flex-col gap-2">
             <label for="mce-EMAIL">Email Address</label>
             <div class="join">
               <input

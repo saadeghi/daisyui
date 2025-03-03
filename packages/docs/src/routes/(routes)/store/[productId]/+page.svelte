@@ -1,6 +1,7 @@
 <script>
   import SEO from "$components/SEO.svelte"
   import StoreProduct from "$components/StoreProduct.svelte"
+  import clsx from "clsx"
 
   let { data } = $props()
 
@@ -119,7 +120,7 @@
 <div>
   <a class="btn btn-ghost group" href="/store/" data-sveltekit-preload-data>
     <svg
-      class="size-4 group-hover:-translate-x-0.5 transition-transform inline-block"
+      class="inline-block size-4 transition-transform group-hover:-translate-x-0.5"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       ><g fill="currentColor"
@@ -147,11 +148,11 @@
   </a>
 </div>
 <div class="mx-auto py-10">
-  <div class="grid xl:grid-cols-2 gap-12">
+  <div class="grid gap-12 xl:grid-cols-2">
     <!-- Product Images/Media -->
     <div class="flex flex-col gap-4">
       <div class="relative">
-        <div class="relative group rounded-box overflow-hidden border border-base-300">
+        <div class="group rounded-box border-base-300 relative overflow-hidden border">
           <div
             class="flex transition-transform duration-300"
             style={`transform: translateX(-${currentIndex * 100}%)`}
@@ -161,7 +162,7 @@
                 {#if media.type === "video"}
                   <div class="w-full" style={`aspect-ratio: ${media.ratio};`}>
                     <iframe
-                      class="w-full h-full"
+                      class="h-full w-full"
                       src={media.url}
                       title={data.product.attributes.name}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -172,7 +173,7 @@
                   <img
                     src={media.lg}
                     alt={data.product.attributes.name}
-                    class="w-full object-cover text-transparent bg-cover h-full"
+                    class="h-full w-full bg-cover object-cover text-transparent"
                     style={`background-image:url(${media.sm});`}
                     loading="lazy"
                   />
@@ -183,12 +184,12 @@
 
           {#if data.product.media.length > 1}
             <div
-              class="absolute left-4 top-1/2 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity"
+              class="absolute top-1/2 left-4 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-100"
             >
               <button class="btn btn-circle" onclick={prev}> ← </button>
             </div>
             <div
-              class="absolute right-4 top-1/2 -translate-y-1/2 group-hover:opacity-100 opacity-0 transition-opacity"
+              class="absolute top-1/2 right-4 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-100"
             >
               <button class="btn btn-circle" onclick={next}> → </button>
             </div>
@@ -197,11 +198,11 @@
 
         <!-- Thumbnail Navigation -->
         {#if data.product.media.length > 1}
-          <div class="overflow-x-auto -mx-4">
-            <div class="flex gap-2 p-4">
+          <div class="-mx-4 overflow-x-auto">
+            <div class="flex flex-wrap gap-2 p-4">
               {#each data.product.media as media, i}
                 <button
-                  class="h-8 w-11 shrink-0 rounded-sm overflow-hidden outline-2 outline-offset-2 cursor-pointer border border-base-content/15"
+                  class="border-base-content/15 h-8 w-11 shrink-0 cursor-pointer overflow-hidden rounded-sm border outline-2 outline-offset-2"
                   class:outline-base-content={i === currentIndex}
                   class:outline-transparent={i !== currentIndex}
                   onclick={() => (currentIndex = i)}
@@ -210,19 +211,19 @@
                     <img
                       src={media.sm}
                       alt={`${data.product.attributes.name} thumbnail ${i + 1}`}
-                      class="w-full h-full object-cover brightness-90"
+                      class="h-full w-full object-cover brightness-90"
                     />
                   {:else}
                     <div
-                      class="w-full h-full bg-base-200 grid place-items-center *:[grid-area:1/1]"
+                      class="bg-base-200 grid h-full w-full place-items-center *:[grid-area:1/1]"
                     >
                       <img
-                        class="w-full h-full object-cover blur-[2px] brightness-90"
+                        class="h-full w-full object-cover blur-[2px] brightness-90"
                         src={data.product.media.find((media) => media.type === "image").sm}
                         alt={data.product.attributes.name}
                       />
                       <svg
-                        class="size-5 text-black z-1"
+                        class="z-1 size-5 text-black"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         ><g
@@ -247,21 +248,21 @@
           </div>
         {/if}
         <div
-          class="border border-base-300 grid rounded-box my-6 divide-x text-xs divide-base-300 overflow-hidden"
+          class="border-base-300 rounded-box divide-base-300 my-6 grid divide-x overflow-hidden border text-xs"
           style={`grid-template-columns: repeat(${Object.keys(data.product.links).length}, minmax(0, 1fr));`}
         >
           {#each Object.entries(data.product.links) as [link, value]}
             {#if link === "license"}
               <div>
                 <button
-                  class="flex flex-col w-full gap-2 items-center p-6 text-center hover:bg-base-200 focus-visible:outline focus-visible:-outline-offset-2 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
+                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
                   onclick={() => openModal(value)}
                 >
                   {@html getLinksIcon(link)}
                   <span>{link}</span>
                 </button>
                 <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
-                  <div class="modal-box max-h-[90vh] max-w-[50rem] w-full lg:p-20">
+                  <div class="modal-box max-h-[90vh] w-full max-w-[50rem] lg:p-20">
                     <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
                     <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
                   </div>
@@ -273,7 +274,7 @@
             {:else if link === "screenshot"}
               <div>
                 <button
-                  class="flex flex-col w-full gap-2 items-center p-6 text-center hover:bg-base-200 focus-visible:outline focus-visible:-outline-offset-2 capitalize *:opacity-50 hover:*:opacity-100 cursor-pointer"
+                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
                   onclick={() => {
                     screenshotDialog.showModal()
                     screenshotUrl = value
@@ -283,8 +284,8 @@
                   <span>{link}</span>
                 </button>
                 <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
-                  <div class="modal-box max-md:max-h-[80vh] max-h-[80vh] max-w-[90vw] w-full p-0">
-                    <img src={screenshotUrl} alt="Screenshot" class="w-full h-full object-cover" />
+                  <div class="modal-box max-h-[80vh] w-full max-w-[90vw] p-0 max-md:max-h-[80vh]">
+                    <img src={screenshotUrl} alt="Screenshot" class="h-full w-full object-cover" />
                   </div>
                   <form method="dialog" class="modal-backdrop">
                     <button>close</button>
@@ -297,7 +298,7 @@
                 aria-label={link}
                 href={value}
                 rel="noopener noreferrer"
-                class="flex flex-col gap-2 items-center p-6 text-center hover:bg-base-200 capitalize *:opacity-50 hover:*:opacity-100"
+                class="hover:bg-base-200 flex flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100"
               >
                 {@html getLinksIcon(link)}
                 <span>{link}</span>
@@ -310,13 +311,39 @@
 
     <!-- Product Info -->
     <div class="flex flex-col gap-6">
-      <div>
-        {#if data.product.badges}
-          <div class="flex gap-2">
-            {#each data.product.badges as tag}
-              <span class="badge badge-sm badge-success badge-soft italic">{tag}</span>
-            {/each}
-          </div>
+      <div class="flex flex-col gap-2">
+        {#if data.product.badge}
+          <span
+            class={`badge  badge-soft flex gap-1 rounded-full ps-1 text-xs shadow-xs ${data.product.badge.class}`}
+          >
+            {#if data.product.badge.icon === "check"}
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <g fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM11.8435 6.20859C12.0967 5.88082 12.0363 5.40981 11.7086 5.15654C11.3808 4.90327 10.9098 4.96365 10.6565 5.29141L6.95615 10.0801L5.30747 8.24828C5.03038 7.94039 4.55616 7.91543 4.24828 8.19253C3.94039 8.46962 3.91544 8.94384 4.19253 9.25172L6.44253 11.7517C6.59132 11.917 6.80582 12.0078 7.02809 11.9995C7.25036 11.9911 7.45746 11.8846 7.59346 11.7086L11.8435 6.20859Z"
+                    fill="currentColor"
+                  >
+                  </path>
+                </g>
+              </svg>
+            {/if}
+            {#if data.product.badge.icon === "wait"}
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <g fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM8.75 3.75C8.75 3.33579 8.41421 3 8 3C7.58579 3 7.25 3.33579 7.25 3.75V8C7.25 8.41421 7.58579 8.75 8 8.75H11.25C11.6642 8.75 12 8.41421 12 8C12 7.58579 11.6642 7.25 11.25 7.25H8.75V3.75Z"
+                    fill="currentColor"
+                  >
+                  </path>
+                </g>
+              </svg>
+            {/if}
+            {data.product.badge.text}
+          </span>
         {/if}
 
         <h1 class="text-4xl font-bold">{data.product.attributes.name}</h1>
@@ -376,7 +403,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+                class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
               >
                 <path
                   stroke-linecap="round"
@@ -397,10 +424,10 @@
       {/if}
 
       {#if data.product.tech}
-        <div class="flex items-center gap-4 mt-4 lg:gap-8">
-          <span class="text-sm text-base-content/60">Made with:</span>
+        <div class="mt-4 flex items-center gap-4 lg:gap-8">
+          <span class="text-base-content/60 text-sm">Made with:</span>
           {#each data.product.tech as tech}
-            <div class="tooltip" data-tip={data.tech[tech].title}>
+            <div class="tooltip" data-tip={data.tech[tech]}>
               <img
                 class="size-6 lg:size-8"
                 src={`https://img.daisyui.com/images/logos/${tech}.svg`}
@@ -416,11 +443,9 @@
           {#each data.product.quote.text as text, index}
             <div class="chat chat-end p-0">
               <div
-                class={`chat-bubble mt-1 text-xs max-w-md bg-base-200 text-base-content ${index !== data.product.quote.text.length - 1 ? "before:hidden [.chat-end>&]:rounded-field" : ""}`}
+                class={`chat-bubble bg-base-200 text-base-content mt-1 max-w-md text-xs ${index !== data.product.quote.text.length - 1 ? "[.chat-end>&]:rounded-field before:hidden" : ""}`}
               >
-                {#each text as line}
-                  <p class="py-1">{@html line}</p>
-                {/each}
+                <p class="py-1">{@html text}</p>
               </div>
               <div class="chat-image avatar">
                 <div class="w-10 rounded-full">
@@ -437,8 +462,8 @@
   </div>
   <div class="my-40">
     {#if data.product.packages}
-      <div class="overflow-x-auto border border-base-300 rounded-box whitespace-nowrap">
-        <table class="table table-xs sm:table-sm lg:table-md table-zebra">
+      <div class="border-base-300 rounded-box overflow-x-auto border whitespace-nowrap">
+        <table class="table-xs sm:table-sm lg:table-md table-zebra table">
           <!-- Table head -->
           <thead>
             <tr>
@@ -458,7 +483,7 @@
                         <svg
                           aria-label="Yes"
                           xmlns="http://www.w3.org/2000/svg"
-                          class="size-5 inline-block text-success"
+                          class="text-success inline-block size-5"
                           viewBox="0 0 24 24"
                         >
                           <path
@@ -474,7 +499,7 @@
                         <svg
                           aria-label="No"
                           xmlns="http://www.w3.org/2000/svg"
-                          class="size-5 inline-block text-error"
+                          class="text-error inline-block size-5"
                           viewBox="0 0 24 24"
                         >
                           <path
@@ -505,7 +530,7 @@
             data.product.ref,
             data.product.params,
           )}
-          class="btn lg:btn-lg xl:btn-xl btn-primary group shrink-0 rounded-full xl:px-10"
+          class="btn lg:btn-lg xl:btn-xl btn-outline group shrink-0 rounded-full xl:px-10"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -517,7 +542,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 group-hover:rtl:-translate-x-1 md:inline-block"
+              class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
             >
               <path
                 stroke-linecap="round"
@@ -541,26 +566,86 @@
       />
     {/each}
   </div>
-  <div class="my-40 max-w-2xl mx-auto">
-    <h2 class="px-4 py-10 font-semibold font-title text-4xl">FAQ</h2>
-
-    <!-- data.product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
-    {#each [...(data.product.faq ?? []), ...data.faq] as item}
-      <div class="collapse collapse-plus bg-base-100 border border-base-300 mb-4">
-        <input type="radio" name="faq" checked="checked" />
-        <div class="collapse-title font-semibold text-lg">{item.Q}</div>
-        <div class="collapse-content text-sm">
-          {item.A}
+  <div class="mx-auto my-40 grid gap-2 gap-y-16 lg:grid-cols-2">
+    <div class="flex flex-col gap-6">
+      <h2 class="font-title lg:text-base-content/10 text-4xl font-semibold lg:text-[10rem]">
+        F.A.Q
+      </h2>
+      <p class="text-base-content/60 text-xs">
+        If you have any questions before purchase
+        <br />send me an email to email at pouya@daisyui.com
+        <br />I will do my best to help you.
+      </p>
+    </div>
+    <div class="">
+      <!-- data.product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
+      {#each [...(data.product.faq ?? []), ...data.faq] as item}
+        <div class="collapse-plus bg-base-100 border-base-300 collapse mb-4 border">
+          <input type="radio" name="faq" checked="checked" />
+          <div class="collapse-title text-lg font-semibold">{item.Q}</div>
+          <div class="collapse-content text-base-content/70 text-xs">
+            {item.A}
+          </div>
         </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
+  </div>
+  <div class="group grid place-items-center *:[grid-area:1/1]">
+    <div class="grid max-w-2xl grid-cols-8 grid-rows-5 place-items-center gap-4 perspective-normal">
+      <img
+        class="rounded-box col-start-1 col-end-4 row-start-2 row-end-5 translate-x-10 scale-x-80 rotate-y-18 brightness-50 transition-transform duration-500 group-has-[a:hover]:translate-x-0 group-has-[a:hover]:rotate-y-15"
+        src={data.product.media.filter((media) => media.type === "image")[1].lg}
+      />
+      <img
+        class="rounded-box col-start-6 col-end-9 row-start-2 row-end-5 -translate-x-10 scale-x-80 -rotate-y-18 brightness-50 transition-transform duration-500 group-has-[a:hover]:translate-x-0 group-has-[a:hover]:-rotate-y-15"
+        src={data.product.media.filter((media) => media.type === "image")[2].lg}
+      />
+      <img
+        class="rounded-box col-start-3 col-end-7 row-start-1 row-end-6 shadow-xl brightness-70 transition-transform duration-500 group-has-[a:hover]:scale-102"
+        src={data.product.media.filter((media) => media.type === "image")[0].lg}
+      />
+      <div
+        class="-z-1 col-start-1 col-end-9 row-start-5 row-end-6 h-10 w-full rounded-[100%] bg-black/40 blur-2xl lg:h-20"
+      ></div>
+    </div>
+    <div class="z-1 rounded-full border border-white/20 bg-white/40 p-4 backdrop-blur-lg">
+      <a
+        href={rednerBuyNowUrl(
+          data.product.attributes.buy_now_url,
+          data.product.ref,
+          data.product.params,
+        )}
+        class="btn lg:btn-lg xl:btn-xl btn-neutral group shrink-0 rounded-full xl:px-10"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Buy {data.product.attributes.name}
+        <span class="flex gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            >
+            </path>
+          </svg>
+        </span>
+      </a>
+    </div>
   </div>
 </div>
 
 {#if data.product.tags && data.products.products.length > 0 && getSimilarProducts(data.product, data.products.products).length > 0}
   <div class="divider text-base-content/30 my-20">You may also like these</div>
 
-  <div class="mx-auto grid md:grid-cols-2 gap-x-10 xl:gap-x-16 gap-y-36">
+  <div class="mx-auto grid gap-x-10 gap-y-36 md:grid-cols-2 xl:gap-x-16">
     {#each getSimilarProducts(data.product, data.products.products) as product}
       <StoreProduct {product} {convertCurrency} />
     {/each}

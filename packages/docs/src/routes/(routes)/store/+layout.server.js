@@ -1,5 +1,14 @@
+import yaml from "js-yaml"
+import { readFileSync } from "fs"
+import { fileURLToPath } from "url"
+import { dirname, resolve } from "path"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const yamlFile = readFileSync(resolve(__dirname, "../../../lib/data/store.yaml"), "utf8")
+const yamlData = yaml.load(yamlFile)
+
 import { LEMONSQUEEZY_API_KEY } from "$env/static/private"
-import { productCustomAttributes, tech, techFilters, futureProducts } from "$lib/data/store.js"
 
 const LSParams = {
   headers: {
@@ -19,8 +28,10 @@ export async function load({ params }) {
     sortedData = []
   } else {
     const originalData = await productsResponse.json()
-    const additionalInfoMap = new Map(productCustomAttributes.map((item) => [item.id, item]))
-    sortedData = productCustomAttributes
+    const additionalInfoMap = new Map(
+      yamlData.productCustomAttributes.map((item) => [item.id, item]),
+    )
+    sortedData = yamlData.productCustomAttributes
       .map(({ id }) => {
         const originalItem = originalData.data.find((item) => Number.parseInt(item.id) === id)
         return originalItem ? { ...originalItem, ...additionalInfoMap.get(id) } : null
@@ -28,10 +39,10 @@ export async function load({ params }) {
       .filter((item) => item !== null)
   }
   return {
-    tech,
-    techFilters,
+    tech: yamlData.tech,
+    techFilters: yamlData.techFilters,
     products: sortedData,
-    futureProducts,
+    futureProducts: yamlData.futureProducts,
     discounts: {
       data: [],
     },
