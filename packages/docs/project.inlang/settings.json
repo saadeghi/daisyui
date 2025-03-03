@@ -4,6 +4,7 @@
   "languageTags": [
     "en",
     "ar",
+    "ca",
     "de",
     "es",
     "fa",
@@ -29,6 +30,10 @@
     "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@1/dist/index.js"
   ],
   "plugin.inlang.json": {
-    "pathPattern": "./src/translation/{languageTag}.json"
+    "pathPattern": "./src/translation/{languageTag}.json",
+    "variableReferencePattern": [
+      "{",
+      "}"
+    ]
   }
 }
