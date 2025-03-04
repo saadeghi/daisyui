@@ -10,7 +10,7 @@ export default {
       pages: "build",
       assets: "build",
       fallback: null,
-      precompress: true,
+      // precompress: true,
     }),
   },
   onwarn: (warning, handler) => {
