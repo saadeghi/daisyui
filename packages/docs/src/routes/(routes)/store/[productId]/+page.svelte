@@ -1,7 +1,6 @@
 <script>
   import SEO from "$components/SEO.svelte"
   import StoreProduct from "$components/StoreProduct.svelte"
-  import clsx from "clsx"
 
   let { data } = $props()
 
