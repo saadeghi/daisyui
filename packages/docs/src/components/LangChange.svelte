@@ -1,6 +1,14 @@
 <script>
   import { currentLang, langs, setLang } from "$lib/i18n.svelte.js"
   import { t } from "$lib/i18n.svelte.js"
+  
+  // Create a sorted array of languages based on languageMetadata order
+  // This will be used instead of the unsorted 'langs' array
+  import { languageMetadata } from "$lib/i18n.svelte.js"
+  
+  // Filter langs to only include languages that exist in both languageMetadata and langs
+  const sortedLangs = Object.keys(languageMetadata)
+    .filter(lang => langs.includes(lang));
 </script>
 
 <div class="dropdown dropdown-end">
@@ -32,16 +40,16 @@
   </div>
   <div
     tabindex="0"
-    class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 max-h-[calc(100vh-10rem)] w-56 overflow-y-auto border border-white/5 shadow-2xl outline-1 outline-black/5"
+    class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 h-[30.5rem] max-h-[calc(100vh-8.6rem)] w-56 overflow-y-auto border border-white/5 shadow-2xl outline-1 outline-black/5"
   >
     <ul class="menu menu-sm w-full">
-      {#each langs as langItem}
+      {#each sortedLangs as langItem}
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
             <button class:menu-active={$currentLang == langItem} onclick={() => setLang(langItem)}>
               {#if $t("__code", {}, langItem, false) !== "__code"}
                 <span
-                  class="badge badge-xs badge-soft pt-px pr-1! pl-1.5! font-mono text-[.6rem]! font-bold tracking-widest opacity-50"
+                  class="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40"
                 >
                   {$t("__code", {}, langItem)}
                 </span>

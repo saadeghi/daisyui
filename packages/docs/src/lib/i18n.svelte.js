@@ -15,13 +15,13 @@ Object.entries(translationModules).map(([path]) => {
 })
 
 // Hardcoded language metadata to display in dropdown before loading translations
-const languageMetadata = {
+export const languageMetadata = {
+  en: { __name: "English", __code: "EN", __direction: "ltr" },
   ar: { __name: "العربية", __code: "AR", __direction: "rtl" },
   bn: { __name: "বাংলা", __code: "BN", __direction: "ltr" },
   ca: { __name: "Català", __code: "CA", __direction: "ltr" },
   cs: { __name: "Čeština", __code: "CS", __direction: "ltr" },
   de: { __name: "Deutsch", __code: "DE", __direction: "ltr" },
-  en: { __name: "English", __code: "EN", __direction: "ltr" },
   es: { __name: "Español", __code: "ES", __direction: "ltr" },
   fa: { __name: "فارسی", __code: "FA", __direction: "rtl" },
   fr: { __name: "Français", __code: "FR", __direction: "ltr" },
