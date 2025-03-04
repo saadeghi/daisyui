@@ -5,7 +5,7 @@ desc: How to install Tailwind CSS and daisyUI in a Laravel project
 
 ### 1. Create a new Laravel project
 
-Install PHP, Composer and Laravel Installer according to the [official Laravel documentation](https://laravel.com/docs/11.x/installation#creating-a-laravel-project)
+Install PHP, Composer and Laravel Installer according to the [official Laravel documentation](https://laravel.com/docs/12.x/installation#creating-a-laravel-project)
 
 Create a new Laravel project
 
@@ -14,37 +14,19 @@ laravel new my-app
 cd my-app
 ```
 
-### 2. Install Tailwind CSS and daisyUI
+### 2. Install daisyUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+npm i -D daisyui@latest
 ```
 
-Add Tailwind CSS to Vite config
+Add daisyUI in your CSS file
 
-```js:vite.config.js
-import { defineConfig } from 'vite';
-import tailwindcss from '@tailwindcss/vite';
-import laravel from 'laravel-vite-plugin';
-
-export default defineConfig({
-    plugins: [
-        tailwindcss(),
-        laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
-            refresh: true,
-        }),
-    ],
-});
-```
-
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
-Add the template files you want as source. [Learn more about Tailwind CSS `@source` directive](https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources).
-  
 ```postcss:resources/css/app.css
 @import "tailwindcss";
-@source "../views";
 @plugin "daisyui";
+
+// existing code...
 ```
 
 ### 3. Run your project
