@@ -34,7 +34,7 @@
     </div>
     <div class="h-20"></div>
     <h2
-      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] font-black leading-none"
+      class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] leading-none font-black"
     >
       {$t("Free and open-source")}
       <br />
@@ -52,16 +52,14 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-4 p-10">
+      <div class="flex w-full max-w-7xl flex-wrap justify-center p-10">
         {#each contributors as contributor, index}
-          <div class="tooltip" data-tip={contributor}>
-            <div class="avatar">
-              <div
-                class="mask mask-squircle size-8"
-                style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size:auto 32px;background-position: -{index *
-                  32}px 0px;"
-              ></div>
-            </div>
+          <div class="avatar tooltip p-2" data-tip={contributor}>
+            <div
+              class="mask mask-squircle size-8"
+              style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size:auto 32px;background-position: -{index *
+                32}px 0px;"
+            ></div>
           </div>
         {/each}
       </div>
@@ -80,11 +78,11 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-6xl flex-wrap justify-center gap-4 p-10">
+      <div class="flex w-full max-w-7xl flex-wrap justify-center p-10">
         {#each sponsors as sponsor, index}
           <div class="tooltip" data-tip={sponsor.name}>
             {#if sponsor.image}
-              <div class="avatar">
+              <div class="avatar p-2">
                 <div
                   class="mask mask-squircle size-8"
                   style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size:auto 32px;background-position: -{index *
@@ -92,12 +90,12 @@
                 ></div>
               </div>
             {:else}
-              <div class="avatar avatar-placeholder">
+              <div class="avatar avatar-placeholder p-2">
                 <div
                   class="mask mask-squircle size-8 text-black"
                   style={`background-color:oklch(80% 0.03 ${Math.floor(Math.random() * 360)}/.7)`}
                 >
-                  <span class="select-none text-xs uppercase">
+                  <span class="text-xs uppercase select-none">
                     {sponsor.name
                       .split(" ")
                       .map((n, i, arr) => (i === 0 || i === arr.length - 1 ? n[0] : ""))

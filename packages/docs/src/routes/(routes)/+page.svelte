@@ -21,9 +21,9 @@
   }
   let statsPromise = fetchStats()
 
-  $effect(() => {
-    fetchStats()
-  })
+  // $effect(() => {
+  //   fetchStats()
+  // })
 
   let isClipboardButtonPressed = $state(false)
   const copyText = (text) => {
@@ -112,28 +112,28 @@
     return "Tailwind Button"
   })
 
-  let daisyui5progress = $state(0)
+  // let daisyui5progress = $state(0)
 
-  $effect(async () => {
-    const response = await fetch("https://api.daisyui.com/api/progress.json")
-    const data = await response.json()
+  // $effect(async () => {
+  //   const response = await fetch("https://api.daisyui.com/api/progress.json")
+  //   const data = await response.json()
 
-    let trueCount = 0,
-      totalCount = 0
+  //   let trueCount = 0,
+  //     totalCount = 0
 
-    function count(obj) {
-      Object.values(obj).forEach((value) => {
-        if (typeof value === "object") count(value)
-        if (typeof value === "boolean") {
-          totalCount++
-          trueCount += value ? 1 : 0
-        }
-      })
-    }
+  //   function count(obj) {
+  //     Object.values(obj).forEach((value) => {
+  //       if (typeof value === "object") count(value)
+  //       if (typeof value === "boolean") {
+  //         totalCount++
+  //         trueCount += value ? 1 : 0
+  //       }
+  //     })
+  //   }
 
-    count(data)
-    daisyui5progress = ((trueCount / totalCount) * 100).toFixed(0)
-  })
+  //   count(data)
+  //   daisyui5progress = ((trueCount / totalCount) * 100).toFixed(0)
+  // })
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -1613,7 +1613,7 @@
       >
         <div></div>
 
-        {#each ["vue", "react", "svelte", "qwik", "remix", "nextjs", "solidjs", "preact", "phoenix", "nuxtjs", "astro", "angular", "vite", "laravel"] as logo, index}
+        {#each ["vue", "react", "svelte", "qwik", "laravel", "nextjs", "solidjs", "preact", "phoenix", "nuxtjs", "astro", "angular", "vite", "laravel"] as logo, index}
           <img
             loading="lazy"
             width="96"
@@ -2062,7 +2062,7 @@
       </h2>
       <div class="h-16"></div>
       <div class="pointer-events-none mx-auto flex max-w-xl flex-wrap justify-center gap-10 px-6">
-        {#each ["svelte", "vue", "react", "solidjs", "preact", "angular", "qwik", "nextjs", "nuxtjs", "remix", "11ty", "vite", "astro"] as logo, index}
+        {#each ["svelte", "vue", "react", "solidjs", "preact", "angular", "qwik", "nextjs", "nuxtjs", "laravel", "11ty", "vite", "astro"] as logo, index}
           <img
             loading="lazy"
             width="96"
