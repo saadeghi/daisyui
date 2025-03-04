@@ -5,7 +5,7 @@
   import Typeahead from "svelte-typeahead"
 
   import { getOS } from "$lib/util"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
 
   export let pages = []
   export let onSearch = () => {}

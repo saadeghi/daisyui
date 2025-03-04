@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import { htmlToJsx, prefixClassNames } from "$lib/actions.svelte.js"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   import Clipboard from "$components/Clipboard.svelte"
   let {
     title = undefined,
@@ -41,9 +41,9 @@
   bind:this={wrapper}
 >
   {#if title}
-    <div class="pb-3 text-sm font-bold flex gap-2 items-center">
+    <div class="flex items-center gap-2 pb-3 text-sm font-bold">
       <a
-        class="bg-base-100 hover:bg-primary/10 size-6 text-base-content/50 hover:text-base-content rounded-sm border border-primary/5 hover:border-primary/10 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200"
+        class="bg-base-100 hover:bg-primary/10 text-base-content/50 hover:text-base-content border-primary/5 hover:border-primary/10 hover:shadow-base-200 inline-grid size-6 place-content-center rounded-sm border hover:shadow-sm"
         href={`#${titleStr}`}
       >
         <svg
@@ -60,7 +60,7 @@
           />
         </svg>
       </a>
-      <h4 class="component-preview-title text-lg font-semibold mt-2 mb-1">
+      <h4 class="component-preview-title mt-2 mb-1 text-lg font-semibold">
         {$t(title)}
       </h4>
     </div>
@@ -80,7 +80,7 @@
     />
     <div class="tab-content border-base-300 overflow-x-auto">
       <div
-        class="preview bg-base-100 relative flex min-h-[6rem] min-w-[18rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10 {classes}"
+        class="preview bg-base-100 relative flex min-h-[6rem] max-w-4xl min-w-[18rem] flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-top p-4 xl:py-10 {classes}"
         style={bg ? `background-image: url(${bg});background-size:cover;` : ``}
         class:resize-x={responsive}
       >
@@ -92,7 +92,7 @@
       <input
         type="radio"
         name={`tab_${uuid}`}
-        class="tab checked:[--tab-bg:var(--color-neutral)] border-b-transparent! checked:[--tab-border-color:var(--color-base-100)] checked:text-neutral-content"
+        class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]"
         aria-label="HTML"
       />
       <div class="tab-content">
@@ -112,7 +112,7 @@
       <input
         type="radio"
         name={`tab_${uuid}`}
-        class="tab checked:[--tab-bg:var(--color-neutral)] border-b-transparent! checked:[--tab-border-color:var(--color-base-100)] checked:text-neutral-content"
+        class="tab checked:text-neutral-content border-b-transparent! checked:[--tab-bg:var(--color-neutral)] checked:[--tab-border-color:var(--color-base-100)]"
         aria-label="JSX"
       />
       <div class="tab-content">

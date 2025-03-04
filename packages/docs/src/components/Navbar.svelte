@@ -7,7 +7,7 @@
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
   let contextMenuEl = $state()
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   let {
     pages,
     themes,
@@ -31,12 +31,12 @@
 <TopBanner />
 <div
   class={`
-  bg-base-100/90 print:hidden text-base-content sticky top-0 z-30 flex h-16 w-full justify-center backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)]
+  bg-base-100/90 text-base-content sticky top-0 z-30 flex h-16 w-full [transform:translate3d(0,0,0)] justify-center backdrop-blur transition-shadow duration-100 print:hidden
   ${switchNavbarStyle ? "shadow-xs" : ""}
   `}
 >
   <nav class="navbar w-full">
-    <div class="flex flex-1 md:gap-1 lg:gap-2 items-center">
+    <div class="flex flex-1 items-center md:gap-1 lg:gap-2">
       <span
         class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]"
         data-tip="Menu"
@@ -73,7 +73,7 @@
           href="/"
           aria-current="page"
           aria-label="daisyUI"
-          class="flex-0 btn btn-ghost gap-1 px-2 md:gap-2"
+          class="btn btn-ghost flex-0 gap-1 px-2 md:gap-2"
           oncontextmenu={(e) => {
             e.preventDefault()
             contextMenuEl.openContextMenu(e)

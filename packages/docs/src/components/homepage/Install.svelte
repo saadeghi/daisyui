@@ -1,5 +1,5 @@
 <script>
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   import { onMount } from "svelte"
   import Clipboard from "$components/Clipboard.svelte"
 </script>

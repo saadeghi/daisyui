@@ -8,7 +8,7 @@
   import SEO from "$components/SEO.svelte"
   import Sponsors from "$components/Sponsors.svelte"
   import { prefix } from "$lib/stores"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   let { data, title, desc, classnames, browserSupport, showComponentPageTabs, alert, children } =
     $props()
 </script>
@@ -39,7 +39,7 @@
       </div>
     {/if}
     {#if classnames}
-      <div class="not-prose relative mb-10 mt-6 max-h-[25rem] overflow-x-auto">
+      <div class="not-prose relative mt-6 mb-10 max-h-[25rem] overflow-x-auto">
         <table class="table-xs md:table-sm table-pin-rows table w-full">
           <thead>
             <tr class="border-b-0">
@@ -94,7 +94,7 @@
               {#each items as item}
                 <tr>
                   <th class="w-3/12 font-normal">
-                    <span class="whitespace-nowrap font-mono lowercase">
+                    <span class="font-mono whitespace-nowrap lowercase">
                       {item.ignoreprefix ? "" : $prefix}{item.class}
                     </span>
                   </th>
@@ -330,7 +330,7 @@
                   <td class="w-8/12 min-w-[20rem]">
                     {item.desc}
                     {#if item.default}
-                      <span class="text-xs text-base-content/30">[Default]</span>
+                      <span class="text-base-content/30 text-xs">[Default]</span>
                     {/if}
                   </td>
                 </tr>

@@ -1,6 +1,6 @@
 <script>
-  import { currentLang, langs, setLang } from "$lib/i18n"
-  import { t } from "$lib/i18n"
+  import { currentLang, langs, setLang } from "$lib/i18n.svelte.js"
+  import { t } from "$lib/i18n.svelte.js"
 </script>
 
 <div class="dropdown dropdown-end">
@@ -38,20 +38,20 @@
       {#each langs as langItem}
         {#if $t("__name", {}, langItem, false) !== "__name"}
           <li>
-            <button class:active={$currentLang == langItem} onclick={() => setLang(langItem)}>
+            <button class:menu-active={$currentLang == langItem} onclick={() => setLang(langItem)}>
               {#if $t("__code", {}, langItem, false) !== "__code"}
                 <span
-                  class="badge badge-xs badge-soft pl-1.5! pr-1! pt-px font-mono text-[.6rem]! font-bold tracking-widest opacity-50"
+                  class="badge badge-xs badge-soft pt-px pr-1! pl-1.5! font-mono text-[.6rem]! font-bold tracking-widest opacity-50"
                 >
                   {$t("__code", {}, langItem)}
                 </span>
               {/if}
               <span class="font-[sans-serif]">{$t("__name", {}, langItem)}</span>
-              {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
+              <!-- {#if $t("__status", {}, langItem) !== "__status" && $t("__status", {}, langItem) !== ""}
                 <span class="badge badge-xs badge-soft">
                   {$t("__status", {}, langItem)}
                 </span>
-              {/if}
+              {/if} -->
             </button>
           </li>
         {/if}

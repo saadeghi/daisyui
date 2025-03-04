@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  import { currentLang, defaultLang, t } from "$lib/i18n"
+  import { currentLang, defaultLang, t } from "$lib/i18n.svelte.js"
 
   let { pages = [] } = $props()
 

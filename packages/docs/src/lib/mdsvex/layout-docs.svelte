@@ -4,7 +4,7 @@
   import ComponentFooter from "$components/ComponentFooter.svelte"
   import SEO from "$components/SEO.svelte"
   import Sponsors from "$components/Sponsors.svelte"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   let { data, title, desc, alert, children } = $props()
 </script>
 
@@ -16,7 +16,7 @@
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div
-    class="prose prose-sm lg:prose-h1:text-5xl lg:prose-h2:text-4xl lg:prose-h3:text-3xl md:text-sm md:prose-base w-full max-w-4xl grow pt-10"
+    class="prose prose-sm lg:prose-h1:text-5xl lg:prose-h2:text-4xl lg:prose-h3:text-3xl md:prose-base w-full max-w-4xl grow pt-10 md:text-sm"
   >
     {#if title}
       <h1>{@html $t(title)}</h1>

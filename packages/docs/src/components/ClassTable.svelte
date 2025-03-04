@@ -2,11 +2,11 @@
   import { prefix } from "$lib/stores"
   import PrefixEdit from "$components/PrefixEdit.svelte"
   import Translate from "$components/Translate.svelte"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   let { data } = $props()
 </script>
 
-<div class="not-prose relative mb-10 mt-6 max-h-[25rem] overflow-x-auto">
+<div class="not-prose relative mt-6 mb-10 max-h-[25rem] overflow-x-auto">
   <table class="table-xs md:table-sm table-pin-rows table w-full">
     <thead>
       <tr class="border-b-0">
@@ -60,7 +60,7 @@
       {#each data as item, index}
         <tr>
           <th class="w-3/12 font-normal">
-            <span class="whitespace-nowrap font-mono lowercase">
+            <span class="font-mono whitespace-nowrap lowercase">
               {`${item.prefix !== false ? $prefix : ""}${item.class}`}
             </span>
           </th>
@@ -76,7 +76,7 @@
               </span>
             {/if}
           </td>
-          <td class="w-8/12 min-w-[20rem] text-base-content/60">{item.desc}</td>
+          <td class="text-base-content/60 w-8/12 min-w-[20rem]">{item.desc}</td>
         </tr>
       {/each}
     </tbody>

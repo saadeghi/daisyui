@@ -1,5 +1,5 @@
 <script>
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   let { animateValue, section, index } = $props()
 </script>
 
@@ -511,14 +511,14 @@
     </ul>
   </div>
   <div
-    class="rounded-box flex grow flex-col px-6 pb-8 pt-12 text-center will-change-auto motion-reduce:transform-none! max-[1280px]:transform-none!"
+    class="rounded-box flex grow flex-col px-6 pt-12 pb-8 text-center will-change-auto motion-reduce:transform-none! max-[1280px]:transform-none!"
     style={`transform:scale(${animateValue(section, [0, 10], [2, 1])})translateY(${animateValue(
       section,
       [0, 10],
       [10, 0],
     )}%)`}
   >
-    <div class="font-title text-[clamp(1.5rem,6vw,3rem)] font-black leading-none">
+    <div class="font-title text-[clamp(1.5rem,6vw,3rem)] leading-none font-black">
       {$t("Unlimited themes")}
     </div>
     <p class="font-title font-light md:text-3xl lg:text-4xl">{$t("with zero effort")}</p>

@@ -4,7 +4,7 @@
   import Sidebar from "$components/Sidebar.svelte"
   import { page } from "$app/stores"
   import { onMount } from "svelte"
-  import { setLang } from "$lib/i18n"
+  import { setLang } from "$lib/i18n.svelte.js"
   import { onNavigate } from "$app/navigation"
   import minimalAnalytics from "@minimal-analytics/ga4"
   const { track } = minimalAnalytics
@@ -98,7 +98,7 @@
 </svelte:head>
 
 <div
-  class={`bg-base-100 drawer max-w-[100rem] mx-auto ${
+  class={`bg-base-100 drawer mx-auto max-w-[100rem] ${
     data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? "" : "lg:drawer-open"
   }`}
 >
@@ -125,7 +125,7 @@
       class={`${
         data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname)
           ? ""
-          : "max-w-[100vw] px-6 pb-16 xl:pe-2 relative"
+          : "relative max-w-[100vw] px-6 pb-16 xl:pe-2"
       }`}
     >
       {@render children?.()}

@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
   import { themeChange } from "theme-change"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   onMount(() => {
     themeChange(false)
   })
@@ -49,15 +49,15 @@
     <ul class="menu w-56">
       {#each themes as theme}
         <li>
-          <button class="px-2 gap-3" data-set-theme={theme} data-act-class="[&_svg]:visible">
+          <button class="gap-3 px-2" data-set-theme={theme} data-act-class="[&_svg]:visible">
             <div
               data-theme={theme}
-              class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0 bg-base-100"
+              class="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm"
             >
-              <div class="size-1 rounded-full bg-base-content"></div>
-              <div class="size-1 rounded-full bg-primary"></div>
-              <div class="size-1 rounded-full bg-secondary"></div>
-              <div class="size-1 rounded-full bg-accent"></div>
+              <div class="bg-base-content size-1 rounded-full"></div>
+              <div class="bg-primary size-1 rounded-full"></div>
+              <div class="bg-secondary size-1 rounded-full"></div>
+              <div class="bg-accent size-1 rounded-full"></div>
             </div>
             <div class="w-32 truncate">{theme}</div>
             <svg

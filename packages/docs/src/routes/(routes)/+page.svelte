@@ -4,7 +4,7 @@
   import Carbon from "$components/Carbon.svelte"
   import Footer from "$components/Footer.svelte"
   import Opensource from "$components/homepage/Opensource.svelte"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
 
   const { data } = $props()
 

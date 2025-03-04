@@ -2,7 +2,7 @@
   import { browser } from "$app/environment"
 
   import { page } from "$app/stores"
-  import { t } from "$lib/i18n"
+  import { t } from "$lib/i18n.svelte.js"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
   let {
     closeDrawer,
@@ -115,7 +115,7 @@
           $page.url.pathname == highlightAnotherItem ? "menu-active" : ""
         } ${$page.url.pathname.startsWith(href) ? "menu-active" : ""} ${
           highlight
-            ? "from-primary to-primary/0 hover:to-primary/10 from-[-200%] to-60% [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))]"
+            ? "from-primary to-primary/0 hover:to-primary/10 [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))] from-[-200%] to-60%"
             : ""
         }`}
       >
@@ -128,7 +128,7 @@
           {@html $t(name)}
         </span>
         {#if badge}
-          <span class={`badge badge-xs font-mono text-opacity-70 ${badgeclass && badgeclass}`}>
+          <span class={`badge badge-xs text-opacity-70 font-mono ${badgeclass && badgeclass}`}>
             {$t(badge)}
           </span>
         {/if}
