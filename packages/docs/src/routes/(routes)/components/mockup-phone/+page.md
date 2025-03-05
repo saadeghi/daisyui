@@ -35,7 +35,7 @@ classnames:
 <div class="mockup-phone border-primary">
   <div class="mockup-phone-camera"></div>
   <div class="mockup-phone-display">
-    <img alt="wallpaper" src="https://www.iclarified.com/images/news/94911/453966/453966.jpg">
+    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp"/>
   </div>
 </div>
 
@@ -43,7 +43,7 @@ classnames:
 <div class="$$mockup-phone border-primary">
   <div class="$$mockup-phone-camera"></div>
   <div class="$$mockup-phone-display">
-    <img alt="wallpaper" src="https://www.iclarified.com/images/news/94911/453966/453966.jpg">
+    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp"/>
   </div>
 </div>
 ```
