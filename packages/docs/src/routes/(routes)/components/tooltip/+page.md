@@ -69,7 +69,7 @@ classnames:
 </div>
 
 ```html
-<div class="$$tooltip" data-tip="hello">
+<div class="$$tooltip">
   <div class="$$tooltip-content">
     <div class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black">Wow!</div>
   </div>
