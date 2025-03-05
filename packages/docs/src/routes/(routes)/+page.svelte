@@ -2022,9 +2022,40 @@
   </div>
 </div>
 
-{#await import("../../components/homepage/Tweets.svelte") then Module}
-  <Module.default tweets={data.tweets} />
-{/await}
+<div>
+  <div class="h-32"></div>
+  <div
+    class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16"
+  >
+    {#each data.testimonials as testimonial, index}
+      <div class="card border-base-content/5 card-sm border text-start">
+        <div class="card-body">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <a
+                href={`https://twitter.com/${testimonial.username}/status/${testimonial.id}`}
+                target="_blank"
+                rel="noopener, noreferrer"
+                class="w-12"
+              >
+                <div
+                  class="size-12 rounded-full"
+                  style="background-image: url('https://img.daisyui.com/generated/x.webp'); background-size:auto 48px;background-position: -{index *
+                    48}px 0px;"
+                ></div>
+              </a>
+            </div>
+            <div class="flex flex-col items-start text-xs">
+              <div class="text-base-content font-bold">{testimonial.name}</div>
+              <div class="text-base-content/70">{testimonial.bio}</div>
+            </div>
+          </div>
+          <p class="text-base-content/70">{testimonial.content}</p>
+        </div>
+      </div>
+    {/each}
+  </div>
+</div>
 
 <Opensource />
 

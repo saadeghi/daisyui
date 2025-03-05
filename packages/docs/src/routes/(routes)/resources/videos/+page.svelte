@@ -15,7 +15,7 @@
   </h1>
   <p class="text-base-content/60 text-xs italic">
     If you have a YouTube video about daisyUI, <a
-      href="https://github.com/saadeghi/daisyui/blob/master/src/docs/src/lib/data/youtube.js"
+      href="https://github.com/daisyui/api/blob/master/youtube_ids.json"
       target="_blank"
       rel="noopener, noreferrer"
       class="link"
@@ -47,7 +47,7 @@
         </figure>
         <div class="flex items-center justify-between gap-4">
           <div class="grow">
-            <h2 class="font-semibold text-xs">{video.snippet.title}</h2>
+            <h2 class="text-xs font-semibold">{video.snippet.title}</h2>
             <p class="text-base-content/60 mt-2 text-[0.6875rem]">{video.snippet.channelTitle}</p>
           </div>
         </div>

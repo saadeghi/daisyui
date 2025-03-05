@@ -6,9 +6,8 @@
     "node": ">=20.18.1"
   },
   "scripts": {
-    "get-json": "bun ./src/lib/scripts/get-json",
     "dev": "vite dev --port 3000 --open",
-    "build": "bun run get-json --silent && NODE_ENV=production vite build --logLevel error",
+    "build": "NODE_ENV=production vite build --logLevel error",
     "preview": "bun run build && vite preview --port 3000 --open",
     "update-twitter-avatars": "bun src/lib/scripts/get-twitter-avatars.js",
     "stats": "open build/stats.html",

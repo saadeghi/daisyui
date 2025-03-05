@@ -1,19 +1,36 @@
 import { error } from "@sveltejs/kit"
 import { slugify } from "$lib/util"
-import videos from "$lib/json/youtube.json"
 
-export function load({ params }) {
-  const video = videos.find(
-    (item) => `${slugify(item.snippet.title)}-${slugify(item.id)}` === params.id,
-  )
+export async function load({ params }) {
+  try {
+    // Fetch videos from API endpoint
+    const response = await fetch("https://api.daisyui.com/api/youtube.json")
+    if (!response.ok) {
+      throw error(response.status, "Failed to fetch videos")
+    }
+    const videos = await response.json()
 
-  // 404 if video is not embeddable
-  if (video.status.embeddable === false) {
-    error(404, "Not found")
-  }
+    // Find the specific video
+    const video = videos.find(
+      (item) => `${slugify(item.snippet.title)}-${slugify(item.id)}` === params.id,
+    )
 
-  return {
-    videos,
-    video,
+    // If video not found, throw 404
+    if (!video) {
+      throw error(404, "Video not found")
+    }
+
+    // 404 if video is not embeddable
+    if (video.status.embeddable === false) {
+      throw error(404, "Not found")
+    }
+
+    return {
+      videos,
+      video,
+    }
+  } catch (err) {
+    // Handle any fetch or processing errors
+    throw error(500, err.message || "Failed to load video data")
   }
 }

@@ -11,7 +11,7 @@
   </h1>
   <p class="text-base-content/60 text-xs italic">
     If you have an article or blog post about daisyUI, <a
-      href="https://github.com/saadeghi/daisyui/blob/master/src/docs/src/lib/data/articles.js"
+      href="https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/lib/data/articles.js"
       target="_blank"
       rel="noopener, noreferrer"
       class="link"

@@ -1,5 +1,3 @@
-import { exampleRepos } from "$lib/data/exampleRepos.js"
-
 const frameworks = [
   {
     name: "Vite",
@@ -222,7 +220,6 @@ const frameworks = [
 
 export async function load() {
   return {
-    exampleRepos,
     frameworks,
   }
 }

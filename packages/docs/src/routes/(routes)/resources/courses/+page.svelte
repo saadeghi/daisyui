@@ -14,7 +14,7 @@
   </h1>
   <p class="text-base-content/60 text-xs italic">
     If you have a course or tutorial about daisyUI, <a
-      href="https://github.com/saadeghi/daisyui/blob/master/src/docs/src/lib/data/courses.js"
+      href="https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/lib/data/courses.js"
       target="_blank"
       rel="noopener, noreferrer"
       class="link"

@@ -1,4 +1,3 @@
 .svelte-kit
 .env.local
 /build
-/src/lib/json/*.json
