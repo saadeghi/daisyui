@@ -44,7 +44,7 @@ desc: How to customize daisyUI?
 3. <Translate text="You can customize components on your CSS file, using Tailwind's @apply directive:" />
 
 ```postcss
-.btn {
+@utility btn {
   @apply rounded-full;
 }
 ```
