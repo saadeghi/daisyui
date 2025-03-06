@@ -97,7 +97,7 @@ export const report = async (directories) => {
     console.table(flatReport, ["file", "selector", "var", "raw", "brotli", "%"])
 
     const reportData = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString().replace(/:/g, "-"),
       data: flatReport,
     }
 
