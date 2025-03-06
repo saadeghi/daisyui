@@ -27,16 +27,16 @@ classnames:
   - class: textarea-error
     desc: error color
   size:
-  - class: table-xs
+  - class: textarea-xs
     desc: Extra small size
-  - class: table-sm
+  - class: textarea-sm
     desc: Small size
-  - class: table-md
+  - class: textarea-md
     desc: Medium size
     default: true
-  - class: table-lg
+  - class: textarea-lg
     desc: Large size
-  - class: table-xl
+  - class: textarea-xl
     desc: Extra large size
 ---
 
