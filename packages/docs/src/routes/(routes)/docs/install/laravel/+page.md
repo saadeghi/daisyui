@@ -24,9 +24,9 @@ Add daisyUI in your CSS file
 
 ```postcss:resources/css/app.css
 @import "tailwindcss";
-@plugin "daisyui";
+/* other stuff */
 
-// existing code...
++ @plugin "daisyui";
 ```
 
 ### 3. Run your project
