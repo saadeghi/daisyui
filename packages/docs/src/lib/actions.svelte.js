@@ -51,11 +51,11 @@ export const htmlToJsx = (node) => {
     '<span style="color:var(--shiki-attr-name)">        class</span>':
       '<span style="color:var(--shiki-attr-name)">        className</span>',
     '<span style="color:var(--shiki-attr-name)">          class</span>':
-      '<span style="color:var(--shiki-attr-name)">          classclassName</span>',
+      '<span style="color:var(--shiki-attr-name)">          className</span>',
     '<span style="color:var(--shiki-attr-name)">            class</span>':
-      '<span style="color:var(--shiki-attr-name)">            classclassName</span>',
+      '<span style="color:var(--shiki-attr-name)">            className</span>',
     '<span style="color:var(--shiki-attr-name)">              class</span>':
-      '<span style="color:var(--shiki-attr-name)">              classclassName</span>',
+      '<span style="color:var(--shiki-attr-name)">              className</span>',
     '<span style="color:var(--shiki-attr-name)"> for</span>':
       '<span style="color:var(--shiki-attr-name)"> htmlFor</span>',
     '<span style="color:var(--shiki-attr-name)"> checked</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">checked</span><span style="color:var(--shiki-punctuation)">"</span>':
