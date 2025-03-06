@@ -52,7 +52,9 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-7xl flex-wrap justify-center p-10">
+      <div
+        class="flex w-full max-w-7xl flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
+      >
         {#each contributors as contributor, index}
           <div class="avatar tooltip p-2" data-tip={contributor}>
             <div
@@ -78,7 +80,9 @@
       </a>
     </p>
     <div class="flex w-full justify-center">
-      <div class="flex w-full max-w-7xl flex-wrap justify-center p-10">
+      <div
+        class="flex w-full max-w-7xl flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
+      >
         {#each sponsors as sponsor, index}
           <div class="tooltip" data-tip={sponsor.name}>
             {#if sponsor.image}

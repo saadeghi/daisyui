@@ -134,6 +134,20 @@
   //   count(data)
   //   daisyui5progress = ((trueCount / totalCount) * 100).toFixed(0)
   // })
+
+  function highlight(node) {
+    const content = node.textContent
+    node.innerHTML = content.replace(
+      /\*(.*?)\*/g,
+      "<mark class='-rotate-1 mx-1 scale-105 inline-block bg-[oklch(91.86%_0.2209_102.42)]/35 rounded-[1px] outline-2 outline-[oklch(91.86%_0.2209_102.42)]/35'>$1</mark>",
+    )
+
+    return {
+      destroy() {
+        node.innerHTML = content
+      },
+    }
+  }
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -1613,7 +1627,7 @@
       >
         <div></div>
 
-        {#each ["vue", "react", "svelte", "qwik", "laravel", "nextjs", "solidjs", "preact", "phoenix", "nuxtjs", "astro", "angular", "vite", "laravel"] as logo, index}
+        {#each ["vue", "react", "svelte", "qwik", "laravel", "nextjs", "solidjs", "preact", "phoenix", "nuxtjs", "astro", "angular", "vite", "rails"] as logo, index}
           <img
             loading="lazy"
             width="96"
@@ -2025,12 +2039,18 @@
 <div>
   <div class="h-32"></div>
   <div
-    class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-10 md:grid-cols-2 lg:grid-cols-3 lg:[&>*:nth-child(3n-1)]:translate-y-16"
+    class="mx-auto max-w-7xl gap-8 px-10 md:columns-2 lg:columns-3 xl:columns-3 max-sm:[&>*:nth-child(n+9)]:hidden"
   >
-    {#each data.testimonials as testimonial, index}
-      <div class="card border-base-content/5 card-sm border text-start">
-        <div class="card-body">
-          <div class="flex items-center gap-2">
+    {#each data.testimonials.testimonials as testimonial, index}
+      <div class="card card-sm bg-base-200 mb-8 break-inside-avoid rounded-ee-[2.5rem] text-start">
+        <div class="card-body gap-5">
+          <p
+            class="text-base-content/70 px-1 text-[0.75rem] leading-[1.75] [text-wrap:balance]"
+            use:highlight
+          >
+            {testimonial.content}
+          </p>
+          <div class="flex flex-row-reverse items-center gap-3">
             <div class="avatar">
               <a
                 href={`https://twitter.com/${testimonial.username}/status/${testimonial.id}`}
@@ -2040,17 +2060,17 @@
               >
                 <div
                   class="size-12 rounded-full"
-                  style="background-image: url('https://img.daisyui.com/generated/x.webp'); background-size:auto 48px;background-position: -{index *
-                    48}px 0px;"
+                  style={`background-image: url('https://img.daisyui.com/generated/x.webp?${data.testimonials.generated_at}'); background-size:auto 48px;background-position: -${
+                    index * 48
+                  }px 0px;`}
                 ></div>
               </a>
             </div>
-            <div class="flex flex-col items-start text-xs">
+            <div class="flex flex-col items-end text-xs">
               <div class="text-base-content font-bold">{testimonial.name}</div>
               <div class="text-base-content/70">{testimonial.bio}</div>
             </div>
           </div>
-          <p class="text-base-content/70">{testimonial.content}</p>
         </div>
       </div>
     {/each}
