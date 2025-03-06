@@ -233,7 +233,7 @@ productCustomAttributes:
     badge:
       class: badge-info
       icon: wait
-      text: daisyUI 5.0 update coming soon
+      text: Updated to daisyUI 5.0
   - id: 185227
     media:
       - type: image
