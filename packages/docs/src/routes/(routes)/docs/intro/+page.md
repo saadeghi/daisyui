@@ -31,7 +31,7 @@ daisyUI uses the Tailwind CSS plugin API to extend the available Tailwind CSS cl
 - Want to use a design system that is based on real-world UI design principles
 - Want development speed and customization at the same time
 
-**daistUI is not for you if you:**
+**daisyUI is not for you if you:**
 - Want to waste time re-inventing all the standard UI parts like buttons, cards, checkboxes, etc, for each project.
 - Want to swim in the ocean of thousands of class names and never find your way out.
 - Want to make your codebase a mess and spend hours figuring out what part of the code is responsible for what part of the UI.
@@ -40,7 +40,7 @@ daisyUI uses the Tailwind CSS plugin API to extend the available Tailwind CSS cl
 
 ## What's the difference between daisyUI and Tailwind CSS?
 
-Tailwind CSS provides low-level utility classes, wich usually inlcude only one CSS rule.  
+Tailwind CSS provides low-level utility classes, which usually include only one CSS rule.  
 daisyUI classes are a combination of multiple CSS rule that are named semantically for each part of the UI.  
 
 For example Tailwind CSS class names decide if padding should be 4px or 8px. daisyUI class names decide if a HTML element should look like a "card", a "button", a "toggle", etc, just like what we would call them semantically in a design system.
@@ -55,7 +55,7 @@ daisyUI is not a replacement for Tailwind CSS, it's a plugin that makes Tailwind
 
 Yes! It's utility-first, not utility-only.
 
-daisyUI is built on top of Tailwind CSS's component API. Tailwind CSS as a library provides utility classes and suggests using utility classes for maximum flexibility and customization. However that's means slower development and more code to write.  
+daisyUI is built on top of Tailwind CSS's component API. Tailwind CSS as a library provides utility classes and suggests using utility classes for maximum flexibility and customization. However that means slower development and more code to write.  
 That's why many people find it hard to use Tailwind CSS for designing interfaces. It takes a professional designer to make design decisions for many details of the UI to make them look good. It also takes a lot of time to write all the utility class names for each part of the UI. Even copying and pasting those huge chunks of utility class names is not helpful, as it makes the codebase hard to read and maintain.  
 
 Imagine one side of the spectrum is maximum customization and flexibility and you should make design decisions for every single detail. On the other side of the spectrum is maximum development speed and less code to write, but you have no control over the design. daisyUI and Tailwind CSS together give you the best of both worlds.  
