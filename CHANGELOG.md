@@ -116,6 +116,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - Improved disabled state styling.
 - **Breaking Change:** Default height reduced; customizable via `--size-field`.
 - checked button (checkbox, radio) now has outline instead of forced primary color. This allows customization like `checked:btn-secondary`
+- `btn-ghost` hover style is changed. In v4 `btn-ghost` had a specific hover style overriding any color modification. For example in `btn btn-ghost btn-primary` the button would'nt look primary. In v5 `btn-ghost` now looks as a ghost only before hover. It shows the original color on hover.
 
 ### Card
 
