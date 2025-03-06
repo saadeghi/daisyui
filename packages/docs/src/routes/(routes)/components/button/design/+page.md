@@ -75,7 +75,7 @@ showComponentPageTabs: true
         </div>
         <hr class={`${line} h-full w-px border-s`} />
         <div class={`${item} indicator-center indicator-bottom`}>
-          --rounded-field
+          --radius-field
         </div>
       </div>
     </div>

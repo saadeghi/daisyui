@@ -192,10 +192,10 @@
     padding-right: 2.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-top-right-radius: var(--rounded-box, 1rem);
-    border-top-left-radius: var(--rounded-box, 1rem);
-    border-bottom-right-radius: var(--rounded-box, 1rem);
-    border-bottom-left-radius: var(--rounded-box, 1rem);
+    border-top-right-radius: var(--radius-box, 1rem);
+    border-top-left-radius: var(--radius-box, 1rem);
+    border-bottom-right-radius: var(--radius-box, 1rem);
+    border-bottom-left-radius: var(--radius-box, 1rem);
     margin: 0;
     min-height: 6rem;
   }

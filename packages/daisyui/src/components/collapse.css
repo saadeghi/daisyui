@@ -6,7 +6,7 @@
   position: relative;
   display: grid;
   overflow: hidden;
-  border-radius: var(--rounded-box, 1rem);
+  border-radius: var(--radius-box, 1rem);
   width: 100%;
   grid-template-rows: max-content 0fr;
   transition: grid-template-rows 0.2s;
