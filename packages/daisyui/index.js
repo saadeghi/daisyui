@@ -1,4 +1,4 @@
-import { version } from "./package.json"
+import { version } from "./package.json" with { type: "json" }
 import { pluginOptionsHandler } from "./functions/pluginOptionsHandler.js"
 import { plugin } from "./functions/plugin.js"
 import variables from "./functions/variables.js"

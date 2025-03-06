@@ -1,7 +1,7 @@
 import themes from "daisyui/functions/themeOrder"
 import { pages, pagesThatDontNeedSidebar } from "$lib/data/pages.js"
 
-import { version } from "daisyui/package.json"
+import { version } from "daisyui/package.json" with { type: "json" }
 
 export async function load() {
   return {
