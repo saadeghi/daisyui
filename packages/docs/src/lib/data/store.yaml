@@ -232,7 +232,7 @@ productCustomAttributes:
     tags: [content, app]
     badge:
       class: badge-info
-      icon: wait
+      icon: check
       text: Updated to daisyUI 5.0
   - id: 185227
     media:
