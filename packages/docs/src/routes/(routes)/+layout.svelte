@@ -3,7 +3,6 @@
   import Navbar from "$components/Navbar.svelte"
   import Sidebar from "$components/Sidebar.svelte"
   import { page } from "$app/stores"
-  import { onMount } from "svelte"
   import { setLang } from "$lib/i18n.svelte.js"
   import { onNavigate } from "$app/navigation"
   import minimalAnalytics from "@minimal-analytics/ga4"
@@ -23,7 +22,7 @@
     })
   })
 
-  onMount(() => {
+  $effect(() => {
     let lang = new URL(document.location).searchParams.get("lang")
     setLang(lang, false)
     if (localStorage.getItem("lang")) {
