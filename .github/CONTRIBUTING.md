@@ -32,23 +32,21 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 - You can help add or fix translations by using the [Fink localization editor](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
 - Submit the translation by opening a pull request ([see guide](https://inlang.com/g/6ddyhpoi/guide-nilsjacobsen-contributeTranslationsWithFink))
 
-  [![inlang status badge](https://badge.inlang.com/?url=github.com/saadeghi/daisyui&project=/src/docs/project.inlang)](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
-
 ## Building on local
 
 ### To build the daisyUI node package on local:
 
-1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local
-1. [Install Bun](https://bun.sh/) if you don't have it:
-1. Install dependencies:
+1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local – only fork the master branch
+2. [Install Bun](https://bun.sh/) if you don't have it:
+3. Install dependencies:
   ```
   bun install
   ```
-1. Build daisyUI package:
+4. Build daisyUI package:
   ```
   bun run build
   ```
-1. Now you can use your local build of daisyUI in another local project by installing it as a dependency using Bun (or NPM, etc):  
+5. Now you can use your local build of daisyUI in another local project by installing it as a dependency using Bun (or NPM, etc):  
   In your own local project where you want to use daisyUI:
   ```
   bun install /path/to/daisyui/packages/daisyui
@@ -56,17 +54,17 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 ### To run the [documentation site](https://daisyui.com/) on local:
 
-1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local
-1. [Install Bun](https://bun.sh/) if you don't have it:
-1. Install dependencies:
+1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local – only fork the master branch
+2. [Install Bun](https://bun.sh/) if you don't have it:
+3. Install dependencies:
   ```
   bun install
   ```
-1. Build daisyUI package:
+4. Build daisyUI package:
   ```
   bun run build
   ```
-1. Run the document site:
+5. Run the document site:
   ```
   bun run dev
   ```
