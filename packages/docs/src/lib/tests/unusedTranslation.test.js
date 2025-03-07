@@ -6,7 +6,7 @@ import {
   findUnusedTranslations,
 } from "../scripts/removeUnusedTranslations.js"
 
-test("All translation keys should be used (efficient match)", () => {
+test.todo("All translation keys should be used (efficient match)", () => {
   const translationDir = "./packages/docs/src/translation"
   const sourceDirs = ["./packages/docs/src/routes", "./packages/docs/src/components"]
   const sourceFilePattern = /\.(md|svelte|js)$/

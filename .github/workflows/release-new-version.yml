@@ -7,8 +7,8 @@ on:
         type: choice
         description: Release type
         options:
-          - " -- --patch"
-          - " -- --minor"
+          - "--release-as patch"
+          - "--release-as minor"
   push:
     branches:
       - master
@@ -30,7 +30,7 @@ jobs:
           clean: false
 
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
         run: bun i
@@ -38,12 +38,13 @@ jobs:
       - name: Build package
         run: bun run build
 
-      # - name: Run release command
-      #   if: github.repository == 'saadeghi/daisyui'
-      #   run: |
-      #     git config --local user.email "pouya.saadeghi@gmail.com"
-      #     git config --local user.name "Pouya Saadeghi"
-      #     bun run release${{ inputs.release-type }}
+      - name: Run release command
+        # if: github.repository == 'saadeghi/daisyui'
+        run: |
+          git config --local user.email "pouya.saadeghi@gmail.com"
+          git config --local user.name "Pouya Saadeghi"
+          cd packages/daisyui
+          bunx commit-and-tag-version --infile ../../CHANGELOG.md ${{ inputs.release-type }}
 
       - name: Read package version from package.json
         id: package-version
@@ -51,16 +52,20 @@ jobs:
           version=$(grep -o '"version": *"[^"]*"' packages/daisyui/package.json | cut -d'"' -f4)
           echo version=$version >> $GITHUB_OUTPUT
 
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Publish package to NPM
-      #   if: github.repository == 'saadeghi/daisyui'
-      #   run: bun publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Publish package to NPM
+        # if: github.repository == 'saadeghi/daisyui'
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
+          cd packages/daisyui
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_LOGLEVEL: verbose
 
   deploy-docs:
     name: 📘 Docs
@@ -78,7 +83,7 @@ jobs:
 
   write-release-notes:
     name: 📝 Release notes
-    if: github.repository == 'saadeghi/daisyui'
+    # if: github.repository == 'saadeghi/daisyui'
     needs: build-publish
     uses: ./.github/workflows/write-release-notes.yml
     secrets: inherit
