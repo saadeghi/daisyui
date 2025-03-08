@@ -25,8 +25,8 @@
     "publish:beta": "bun run build && cd packages/daisyui && bun publish --tag=beta"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.11",
-    "@tailwindcss/vite": "^4.0.11",
+    "@tailwindcss/cli": "^4.0.12",
+    "@tailwindcss/vite": "^4.0.12",
     "commit-and-tag-version": "12.5.0",
     "culori": "4.0.1",
     "lightningcss": "1.29.2",
@@ -36,6 +36,6 @@
     "prettier": "3.5.3",
     "prettier-plugin-svelte": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "tailwindcss": "^4.0.11"
+    "tailwindcss": "^4.0.12"
   }
 }
