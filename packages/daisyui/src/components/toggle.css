@@ -53,7 +53,7 @@
     }
   }
   &:before {
-    @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current print:[outline:.25rem_solid] print:[outline-offset:-1rem];
+    @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
     translate: 0;
     --tw-content: "";
     content: var(--tw-content);
@@ -67,8 +67,16 @@
       0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000);
     background-size: auto, calc(var(--noise) * 100%);
     background-image: none, var(--fx-noise);
-    @media (forced-colors: active) {
+  }
+  @media (forced-colors: active) {
+    &:before {
       @apply outline -outline-offset-1;
+    }
+  }
+  @media print {
+    &:before {
+      outline: 0.25rem solid;
+      outline-offset: -1rem;
     }
   }
 
@@ -87,8 +95,9 @@
 
     &:before {
       @apply bg-current;
-
-      @starting-style {
+    }
+    @starting-style {
+      &:before {
         opacity: 0;
       }
     }

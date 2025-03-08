@@ -45,9 +45,18 @@
 
     &:before {
       clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%);
-      @apply opacity-100 print:rotate-0 print:bg-transparent print:[--tw-content:"✔︎"] print:[clip-path:none];
-      @media (forced-colors: active) {
+      @apply opacity-100;
+    }
+    @media (forced-colors: active) {
+      &:before {
         @apply rotate-0 bg-transparent [--tw-content:"✔︎"] [clip-path:none];
+      }
+    }
+    @media print {
+      &:before {
+        @apply rotate-0 bg-transparent;
+        --tw-content: "✔︎";
+        clip-path: none;
       }
     }
   }

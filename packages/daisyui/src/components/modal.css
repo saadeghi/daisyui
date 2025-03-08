@@ -11,23 +11,36 @@
 
   &:not(dialog:not(.modal-open)),
   &::backdrop {
-    @apply opacity-100 starting:invisible starting:opacity-0;
+    @apply opacity-100;
     background-color: oklch(0% 0 0/ 0.4);
     transition:
       display 0.3s ease-out allow-discrete,
       opacity 0.3s ease-out,
       visibility 0.3s ease-out allow-discrete;
   }
+  @starting-style {
+    &:not(dialog:not(.modal-open)),
+    &::backdrop {
+      @apply invisible opacity-0;
+    }
+  }
 
   &.modal-open,
   &[open],
   &:target {
-    @apply pointer-events-auto visible opacity-100 starting:invisible starting:opacity-0;
+    @apply pointer-events-auto visible opacity-100;
 
     .modal-box {
       translate: 0 0;
       scale: 1;
       opacity: 1;
+    }
+  }
+  @starting-style {
+    &.modal-open,
+    &[open],
+    &:target {
+      @apply invisible opacity-0;
     }
   }
 }
@@ -40,12 +53,17 @@
   @apply fixed h-0 w-0 appearance-none opacity-0;
 
   &:checked + .modal {
-    @apply pointer-events-auto visible opacity-100 starting:invisible starting:opacity-0;
+    @apply pointer-events-auto visible opacity-100;
 
     .modal-box {
       translate: 0 0;
       scale: 1;
       opacity: 1;
+    }
+  }
+  @starting-style {
+    &:checked + .modal {
+      @apply invisible opacity-0;
     }
   }
 }

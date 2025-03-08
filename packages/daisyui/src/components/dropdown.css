@@ -17,13 +17,19 @@
 
   &[popover],
   .dropdown-content {
-    @apply starting:[scale:95%] starting:[opacity:0];
     z-index: 999;
     animation: dropdown 0.2s;
     transition-property: opacity, scale, display;
     transition-behavior: allow-discrete;
     transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @starting-style {
+    &[popover],
+    .dropdown-content {
+      scale: 95%;
+      opacity: 0;
+    }
   }
 
   &.dropdown-open,

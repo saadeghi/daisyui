@@ -24,13 +24,21 @@
     @apply bg-base-100 border-current;
 
     &:before {
-      @apply bg-current print:[outline:.25rem_solid] print:[outline-offset:-1rem];
+      @apply bg-current;
       box-shadow:
         0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
         0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
-      @media (forced-colors: active) {
+    }
+    @media (forced-colors: active) {
+      &:before {
         @apply outline -outline-offset-1;
+      }
+    }
+    @media print {
+      &:before {
+        outline: 0.25rem solid;
+        outline-offset: -1rem;
       }
     }
   }

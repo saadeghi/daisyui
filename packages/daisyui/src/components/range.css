@@ -35,7 +35,9 @@
     background-color: var(--range-bg);
     border-radius: var(--radius-selector);
     height: calc(var(--range-thumb-size) * 0.5);
-    @media (forced-colors: active) {
+  }
+  @media (forced-colors: active) {
+    &::-webkit-slider-runnable-track {
       border: 1px solid;
     }
   }
@@ -66,7 +68,9 @@
     background-color: var(--range-bg);
     border-radius: var(--radius-selector);
     height: calc(var(--range-thumb-size) * 0.5);
-    @media (forced-colors: active) {
+  }
+  @media (forced-colors: active) {
+    &::-moz-range-track {
       border: 1px solid;
     }
   }
