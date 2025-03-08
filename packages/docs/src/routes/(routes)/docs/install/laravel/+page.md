@@ -22,7 +22,7 @@ npm i -D daisyui@latest
 
 Add daisyUI in your CSS file
 
-```postcss:resources/css/app.css
+```diff:resources/css/app.css
 @import "tailwindcss";
 /* other stuff */
 

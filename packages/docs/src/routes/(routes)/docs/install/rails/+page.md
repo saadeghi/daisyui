@@ -19,7 +19,7 @@ cd my-app
 Install [Tailwind CSS 4 gem](https://github.com/rails/tailwindcss-rails) for Rails
 
 ```sh:Terminal
-./bin/bundle add tailwindcss-rails --version "4.0.0"
+./bin/bundle add tailwindcss-rails
 ./bin/rails tailwindcss:install
 ```
 
@@ -44,7 +44,12 @@ npm install daisyui@latest
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   
 ```postcss:app/assets/tailwind/application.css
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../../../public/*.html";
+@source "../../../app/helpers/**/*.rb";
+@source "../../../app/javascript/**/*.js";
+@source "../../../app/views/**/*";
+
 @plugin "daisyui";
 ```
 
@@ -66,7 +71,12 @@ curl -sLo app/assets/tailwind/daisyui.js https://esm.run/daisyui@5/index.js
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
 ```postcss:app/assets/tailwind/application.css
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../../../public/*.html";
+@source "../../../app/helpers/**/*.rb";
+@source "../../../app/javascript/**/*.js";
+@source "../../../app/views/**/*";
+
 @plugin "./daisyui.js";
 ```
   
@@ -81,7 +91,12 @@ This method is recommended if you want to quickly add daisyUI without adding any
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   
 ```postcss:app/assets/tailwind/application.css
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../../../public/*.html";
+@source "../../../app/helpers/**/*.rb";
+@source "../../../app/javascript/**/*.js";
+@source "../../../app/views/**/*";
+
 @import "https://cdn.jsdelivr.net/npm/daisyui@5";
 ```
 
