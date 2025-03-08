@@ -9,15 +9,15 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "5.1.10",
+    "astro": "5.4.2",
     "daisyui": "workspace:*"
   },
   "dependencies": {
-    "@astrojs/react": "4.2.0",
-    "@astrojs/vue": "5.0.6",
+    "@astrojs/react": "4.2.1",
+    "@astrojs/vue": "5.0.7",
     "pikaday": "1.8.2",
     "react": "19.0.0",
-    "react-day-picker": "9.5.1",
+    "react-day-picker": "9.6.0",
     "react-dom": "19.0.0"
   }
 }
