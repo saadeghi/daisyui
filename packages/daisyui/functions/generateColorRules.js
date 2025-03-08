@@ -4,9 +4,14 @@ import path from "path"
 
 export const generateColorRules = async ({
   distDir,
-  styles,
+  properties,
   breakpoints,
   states,
+  opacities = {
+    properties: [],
+    responsive: [],
+    states: [],
+  },
   outputFiles = {
     properties: null,
     responsive: null,
@@ -45,27 +50,81 @@ export const generateColorRules = async ({
       "error-content",
     ]
 
+    const getStyleProperty = (style) => {
+      const stylePropertyMap = {
+        bg: "background-color",
+        text: "color",
+        border: "border-color",
+        fill: "fill",
+        stroke: "stroke",
+        outline: "outline-color",
+        accent: "accent-color",
+        caret: "caret-color",
+        ring: "--tw-ring-color",
+        "ring-offset": "--tw-ring-offset-color",
+        shadow: "--tw-shadow-color",
+        decoration: "text-decoration-color",
+        divide: "border-color",
+        placeholder: "--tw-placeholder-color",
+      }
+      return stylePropertyMap[style] || "color"
+    }
+
     const generateBaseVariants = (style, color) => {
       return `.${style}-${color}{@apply ${style}-${color};}`
     }
 
-    const generateResponsiveVariants = (style, color) => {
-      return breakpoints.map((bp) =>
+    const generateOpacityVariants = (style, color, opacityList) => {
+      return opacityList.map(
+        (opacity) =>
+          `.${style}-${color}\\/${opacity}{${getStyleProperty(style)}:color-mix(in oklab,var(--color-${color})${opacity}%,#000);}`,
+      )
+    }
+
+    const generateResponsiveVariants = (style, color, includeOpacities = []) => {
+      const baseVariants = breakpoints.map((bp) =>
         bp.match(/^\d/)
           ? `.\\3${bp[0]}${bp.slice(1)}\\:${style}-${color}{@apply ${bp}:${style}-${color};}`
           : `.${bp}\\:${style}-${color}{@apply ${bp}:${style}-${color};}`,
       )
+
+      const opacityVariants = includeOpacities.length
+        ? breakpoints.flatMap((bp) =>
+            includeOpacities.map((opacity) => {
+              const prefix = bp.match(/^\d/) ? `\\3${bp[0]}${bp.slice(1)}` : bp
+              return `.${prefix}\\:${style}-${color}\\/${opacity}{@apply ${bp}:${style}-${color}\\/${opacity};}`
+            }),
+          )
+        : []
+
+      return [...baseVariants, ...opacityVariants]
     }
 
-    const generateStateVariants = (style, color) => {
-      return states.map(
+    const generateStateVariants = (style, color, includeOpacities = []) => {
+      const baseVariants = states.map(
         (state) => `.${state}\\:${style}-${color}:${state}{@apply ${state}:${style}-${color};}`,
       )
+
+      const opacityVariants = includeOpacities.length
+        ? states.flatMap((state) =>
+            includeOpacities.map(
+              (opacity) =>
+                `.${state}\\:${style}-${color}\\/${opacity}:${state}{@apply ${state}:${style}-${color}\\/${opacity};}`,
+            ),
+          )
+        : []
+
+      return [...baseVariants, ...opacityVariants]
     }
 
     const generatePropertiesContent = () => {
       return colorNames
-        .flatMap((color) => styles.map((style) => generateBaseVariants(style, color)))
+        .flatMap((color) =>
+          properties.flatMap((style) => [
+            generateBaseVariants(style, color),
+            ...generateOpacityVariants(style, color, opacities.properties || []),
+          ]),
+        )
         .join("\n")
     }
 
@@ -76,7 +135,14 @@ export const generateColorRules = async ({
             const prefix = bp.match(/^\d/) ? `\\3${bp[0]}${bp.slice(1)}` : bp
             const classes = colorNames
               .flatMap((color) =>
-                styles.map((style) => `.${prefix}\\:${style}-${color}{@apply ${style}-${color};}`),
+                properties.flatMap((style) => {
+                  const baseClass = `.${prefix}\\:${style}-${color}{@apply ${style}-${color};}`
+                  const opacityClasses = (opacities.responsive || []).map(
+                    (opacity) =>
+                      `.${prefix}\\:${style}-${color}\\/${opacity}{@apply ${style}-${color}\\/${opacity};}`,
+                  )
+                  return [baseClass, ...opacityClasses]
+                }),
               )
               .join("\n")
             return `@media ${getBreakpointWidth(bp)} {\n${classes}\n}`
@@ -84,7 +150,11 @@ export const generateColorRules = async ({
           .join("\n\n")
       }
       return colorNames
-        .flatMap((color) => styles.flatMap((style) => generateResponsiveVariants(style, color)))
+        .flatMap((color) =>
+          properties.flatMap((style) =>
+            generateResponsiveVariants(style, color, opacities.responsive || []),
+          ),
+        )
         .join("\n")
     }
 
@@ -104,7 +174,11 @@ export const generateColorRules = async ({
 
     const generateStatesContent = () => {
       return colorNames
-        .flatMap((color) => styles.flatMap((style) => generateStateVariants(style, color)))
+        .flatMap((color) =>
+          properties.flatMap((style) =>
+            generateStateVariants(style, color, opacities.states || []),
+          ),
+        )
         .join("\n")
     }
 
@@ -159,6 +233,6 @@ export const generateColorRules = async ({
       ].filter(Boolean),
     )
   } catch (error) {
-    throw new Error("Error generating color rules:", error)
+    throw new Error(error)
   }
 }

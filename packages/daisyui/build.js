@@ -23,9 +23,14 @@ async function generateFiles() {
     !isDev &&
       generateColorRules({
         distDir: "../colors",
-        styles: ["bg", "text", "border"],
+        properties: ["bg", "text", "border"],
         breakpoints: ["sm", "md", "lg", "xl", "2xl"],
         states: ["hover"],
+        opacities: {
+          properties: ["10", "20", "30", "40", "50", "60", "70", "80", "90"],
+          responsive: [],
+          states: [],
+        },
         outputFiles: {
           properties: "properties.css",
           responsive: "responsive.css",
@@ -36,7 +41,7 @@ async function generateFiles() {
     !isDev &&
       generateColorRules({
         distDir: "../colors",
-        styles: ["bg", "text", "border"],
+        properties: ["bg", "text", "border"],
         breakpoints: [],
         states: ["focus", "active"],
         outputFiles: {
@@ -47,7 +52,7 @@ async function generateFiles() {
     !isDev &&
       generateColorRules({
         distDir: "../colors",
-        styles: ["bg", "text", "border"],
+        properties: ["bg", "text", "border"],
         breakpoints: ["max-sm", "max-md", "max-lg", "max-xl", "max-2xl"],
         states: [],
         outputFiles: {
@@ -58,7 +63,7 @@ async function generateFiles() {
     !isDev &&
       generateColorRules({
         distDir: "../colors",
-        styles: [
+        properties: [
           "from",
           "via",
           "to",
