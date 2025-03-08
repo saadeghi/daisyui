@@ -162,6 +162,10 @@ The content gets displayed when the button is focused.
 > Safari has a [CSS bug](https://bugs.webkit.org/show_bug.cgi?id=22261) since 2008 that prevents button elements from being focused, so we use div `tabindex="0"` as a workaround.
 > This approach is accessible with the addition of `role="button"` and functions consistently across all browsers.
 
+> :INFO:
+>
+> This dropdown closes when focus is lost. Avoid placing elements in it that remove focus from dropdown content. For example a `<dialog>` element inside the dropdown.
+
 ### ~Dropdown menu
 <div>
   <div class="text-sm mb-4 text-center">Click outside to close</div>
