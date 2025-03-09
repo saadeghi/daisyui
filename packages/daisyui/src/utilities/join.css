@@ -49,6 +49,22 @@
       --join-ee: var(--radius-field);
     }
   }
+
+  > .join-item:where(:only-child) {
+    --join-ss: var(--radius-field);
+    --join-se: var(--radius-field);
+    --join-es: var(--radius-field);
+    --join-ee: var(--radius-field);
+  }
+
+  :only-child {
+    :where(.join-item) {
+      --join-ss: var(--radius-field);
+      --join-se: var(--radius-field);
+      --join-es: var(--radius-field);
+      --join-ee: var(--radius-field);
+    }
+  }
 }
 
 .join-item {
@@ -93,6 +109,22 @@
     }
   }
 
+  > .join-item:only-child {
+    --join-ss: var(--radius-field);
+    --join-se: var(--radius-field);
+    --join-es: var(--radius-field);
+    --join-ee: var(--radius-field);
+  }
+
+  :only-child {
+    .join-item {
+      --join-ss: var(--radius-field);
+      --join-se: var(--radius-field);
+      --join-es: var(--radius-field);
+      --join-ee: var(--radius-field);
+    }
+  }
+
   .join-item {
     &:where(*:not(:first-child)) {
       margin-inline-start: 0;
@@ -132,6 +164,22 @@
       --join-ss: 0;
       --join-se: var(--radius-field);
       --join-es: 0;
+      --join-ee: var(--radius-field);
+    }
+  }
+
+  > .join-item:only-child {
+    --join-ss: var(--radius-field);
+    --join-se: var(--radius-field);
+    --join-es: var(--radius-field);
+    --join-ee: var(--radius-field);
+  }
+
+  :only-child {
+    .join-item {
+      --join-ss: var(--radius-field);
+      --join-se: var(--radius-field);
+      --join-es: var(--radius-field);
       --join-ee: var(--radius-field);
     }
   }
