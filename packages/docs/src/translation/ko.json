@@ -2,7 +2,6 @@
   "__code": "KO",
   "__direction": "ltr",
   "__name": "한국어",
-  "__status": "",
   "Code": "코드 모형",
   "Or": "또는",
   "cta-1-mobile": "컴포넌트",
@@ -78,7 +77,6 @@
   "Preview": "미리보기",
   "homepage_h1": "더 빠르고, 더 깔끔하고, 더 쉽게 <br />Tailwind&nbsp;CSS 개발",
   "homepage_h2": "daisyUI는 당신이 사랑할 Tailwind CSS 플러그인입니다! <br/>유용한 컴포넌트 클래스 이름을 제공하여 <br/>적은 코드로 더 빠르게 구축할 수 있도록 돕습니다.",
-  "don't re-invent <br/>the wheel <br/>every time": "매번 귀찮은 일을 반복하지 마세요",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Tailwind CSS 프로젝트에서는 모든 요소에 대해 유틸리티 클래스 이름을 작성해야 합니다. 가장 기본적인 요소들에 스타일을 적용하기 위해 수천 개의 클래스 이름을 작성해야 합니다.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "<br /> <span class='text-error'><span class='font-black'>100</span> 개의 클래스 이름</span>을 작성하는 것이 지겹지 않나요?",
   "For every element, every page, every project,<br/>again and again": "각 요소, 페이지, 프로젝트마다,<br/>다시, 또 다시",
@@ -441,5 +439,6 @@
   "Base style": "Base style",
   "daisyUI base style": "daisyUI base style",
   "daisyUI adds a few base styles to your page.": "daisyUI adds a few base styles to your page.",
-  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively."
+  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.",
+  "don't re-invent <br/>the wheel <br/>every time": "매번 귀찮은 일을 반복하지 마세요"
 }

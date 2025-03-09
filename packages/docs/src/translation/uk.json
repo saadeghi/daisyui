@@ -2,7 +2,6 @@
   "__code": "UK",
   "__direction": "ltr",
   "__name": "Українська",
-  "__status": "",
   "Code": "Code",
   "Or": "Or",
   "cta-1-mobile": "Компоненти",
@@ -78,7 +77,6 @@
   "Preview": "Preview",
   "homepage_h1": "Швидше, чистіше, легше <br />Розробка Tailwind&nbsp;CSS",
   "homepage_h2": "daisyUI - це плагін Tailwind CSS, який вам сподобається! <br/>Він надає корисні імена класів компонентів <br/>щоб допомогти вам писати менше коду і швидше будувати.",
-  "don't re-invent <br/>the wheel <br/>every time": "не потрібно винаходити <br/>велосипед кожного разу",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "У Tailwind CSS проєкті, вам потрібно писати імена класів для кожного елементу. Тисячі назв класів лише для стилізації найпростіших елементів.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "замість того, щоб писати<br /> <span class='text-error'><span class='font-black'>100</span> класів</span>",
   "For every element, every page, every project,<br/>again and again": "Для кожного елемента, кожної сторінки, кожного проєкту,<br/>знову і знову",
@@ -441,5 +439,6 @@
   "Base style": "Base style",
   "daisyUI base style": "daisyUI base style",
   "daisyUI adds a few base styles to your page.": "daisyUI adds a few base styles to your page.",
-  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively."
+  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.",
+  "don't re-invent <br/>the wheel <br/>every time": "не потрібно винаходити <br/>велосипед кожного разу"
 }

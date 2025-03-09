@@ -2,7 +2,6 @@
   "__code": "JA",
   "__direction": "ltr",
   "__name": "日本語",
-  "__status": "",
   "Code": "Code",
   "Or": "または",
   "cta-1-mobile": "コンポーネント",
@@ -78,7 +77,6 @@
   "Preview": "プレビュー",
   "homepage_h1": "速く、シンプルで、使いやすい <br />Tailwind&nbsp;CSS開発",
   "homepage_h2": "daisyUIはあなたが愛するTailwind CSSプラグインです！ <br/>それは役立つコンポーネントクラス名を提供します <br/>あなたが少ないコードでより速く構築するのを助けます。",
-  "don't re-invent <br/>the wheel <br/>every time": "無駄な手間は省こう。",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Tailwind CSSのプロジェクトでは、すべての要素にユーティリティクラス名を記述する必要があります。最も基本的な要素にスタイルを適用するために何千ものクラス名が必要です。",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "<span class='text-error'><span class='font-black'>100</span> 個のクラス名</span> を書く代わりに",
   "For every element, every page, every project,<br/>again and again": "すべての要素、すべてのページ、すべてのプロジェクトに対して、<br/>何度も何度も",
@@ -386,7 +384,6 @@
   "This will reduce the size of your CSS file.": "これはCSSファイルのサイズを削減することができます。",
   "In the below example": "以下の例では:",
   "How to disable all themes?": "すべてのテーマを無効化する方法",
-  "In the below example, I have the required colors. All other colors will be generated automatically (Like the color of button when you focus on it or the color of text on a <code>primary</code> button).": "",
   "CSS variables in daisyUI themes": "daisyUIテーマでのCSS変数",
   "There are a few optional CSS variables that you can use in daisyUI themes to customize design decisions for each theme:": "daisyUIでは、いくつかの任意なCSS変数を使用して、テーマごとのデザイン設定をカスタマイズすることができます。",
   "Custom CSS for a daisyUI theme": "daisyUIのテーマにカスタマイズされたCSSを使用する",
@@ -441,5 +438,6 @@
   "Base style": "ベーススタイル",
   "daisyUI base style": "daisyUI ベーススタイル",
   "daisyUI adds a few base styles to your page.": "daisyUI はページにいくつかのベーススタイルを追加します。",
-  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI は、ライブラリをより効果的に使用するために役立ついくつかの便利なユーティリティ クラスと CSS 変数を提供します。"
+  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI は、ライブラリをより効果的に使用するために役立ついくつかの便利なユーティリティ クラスと CSS 変数を提供します。",
+  "don't re-invent <br/>the wheel <br/>every time": "無駄な手間は省こう。"
 }

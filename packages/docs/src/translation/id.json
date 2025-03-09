@@ -2,7 +2,6 @@
   "__code": "ID",
   "__direction": "ltr",
   "__name": "Indonesia",
-  "__status": "",
   "Code": "Code",
   "Or": "Atau",
   "cta-1-mobile": "Komponen",
@@ -78,7 +77,6 @@
   "Preview": "Pratinjau",
   "homepage_h1": "Cepat, bersih, mudah <br />Pengembangan Tailwind&nbsp;CSS",
   "homepage_h2": "daisyUI adalah plugin Tailwind CSS yang akan Anda sukai! <br/>Ini menyediakan nama kelas komponen yang berguna <br/>untuk membantu Anda menulis lebih sedikit kode dan membangun lebih cepat.",
-  "don't re-invent <br/>the wheel <br/>every time": "jangan menemukan kembali roda setiap saat",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Dalam proyek Tailwind CSS, Anda perlu menulis nama kelas utility untuk setiap elemen. Ribuan nama kelas hanya untuk mengatur gaya elemen yang paling dasar.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "daripada menulis<br /> <span class='text-error'><span class='font-black'>100</span> nama kelas</span>",
   "For every element, every page, every project,<br/>again and again": "Untuk setiap elemen, setiap halaman, setiap proyek,<br/>berulang-ulang",
@@ -135,7 +133,6 @@
   "Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name.": "Instal daisyUI sebagai dev dependency dan gunakan nama kelas seperti halnya nama kelas Tailwind CSS lainnya.",
   "Apply_your_own_design_decisions_part_1": "Terapkan",
   "Apply_your_own_design_decisions_part_4": "Anda sendiri",
-  "Apply_your_own_design_decisions_part_5": "",
   "Your website should be unique. Create a custom theme for yourself using daisyUI theme generator. The colors you pick will be applied to all daisyUI components.": "Website kamu harus unik. Buat tema kustom untuk diri kamu sendiri menggunakan generator tema daisyUI. Warna yang kamu pilih akan diterapkan ke semua komponen daisyUI.",
   "Learn more about themes": "Pelajari lebih lanjut tentang tema",
   "utility classes": "utility classes",
@@ -441,5 +438,6 @@
   "Base style": "Base style",
   "daisyUI base style": "daisyUI base style",
   "daisyUI adds a few base styles to your page.": "daisyUI adds a few base styles to your page.",
-  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively."
+  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.",
+  "don't re-invent <br/>the wheel <br/>every time": "jangan menemukan kembali roda setiap saat"
 }

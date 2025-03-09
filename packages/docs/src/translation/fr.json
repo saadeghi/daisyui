@@ -2,7 +2,6 @@
   "__code": "FR",
   "__direction": "ltr",
   "__name": "Français",
-  "__status": "",
   "Code": "Code",
   "Or": "Ou",
   "cta-1-mobile": "Composants",
@@ -78,7 +77,6 @@
   "Preview": "Aperçu",
   "homepage_h1": "Rapide, propre, facile <br />Développement Tailwind&nbsp;CSS",
   "homepage_h2": "daisyUI est le plugin Tailwind CSS que vous adorerez! <br/>Il fournit des noms de classes de composants utiles <br/>pour vous aider à écrire moins de code et à construire plus rapidement.",
-  "don't re-invent <br/>the wheel <br/>every time": "ne réinventez pas la roue à chaque fois",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Dans un projet Tailwind CSS, vous devez écrire des noms de classe utilitaire pour chaque élément. Des milliers de noms de classe juste pour styliser les éléments les plus basiques.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "au lieu d'écrire<br /> <span class='text-error'><span class='font-black'>100</span> noms de classe</span>",
   "For every element, every page, every project,<br/>again and again": "Pour chaque élément, chaque page, chaque projet,<br/>encore et encore",
@@ -441,5 +439,6 @@
   "Base style": "Base style",
   "daisyUI base style": "daisyUI base style",
   "daisyUI adds a few base styles to your page.": "daisyUI adds a few base styles to your page.",
-  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively."
+  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI fournit quelques classes utilitaires et variables CSS utiles pour vous aider à utiliser la bibliothèque plus efficacement.",
+  "don't re-invent <br/>the wheel <br/>every time": "ne réinventez pas la roue à chaque fois"
 }

@@ -2,7 +2,6 @@
   "__code": "PT",
   "__direction": "ltr",
   "__name": "Português",
-  "__status": "",
   "Code": "Código",
   "Or": "Ou",
   "cta-1-mobile": "Componentes",
@@ -78,7 +77,6 @@
   "Preview": "Visualizar",
   "homepage_h1": "Rápido, limpo, fácil <br />Desenvolvimento Tailwind&nbsp;CSS",
   "homepage_h2": "daisyUI é o plugin Tailwind CSS que você vai adorar! <br/>Ele fornece nomes de classe de componentes úteis <br/>para ajudar você a escrever menos código e construir mais rápido.",
-  "don't re-invent <br/>the wheel <br/>every time": "não reinvente a roda novamente",
   "In a Tailwind CSS project, you need to write utility class names for every element. Thousands of class names just to style the most basic elements.": "Em um projeto Tailwind CSS, você precisa escrever nomes de classes de utilitário para cada elemento. Milhares de nomes de classe apenas para estilizar os elementos mais básicos.",
   "instead of writing<br /> <span class='text-error'><span class='font-black'>100</span> class names</span>": "em vez de escrever<br /> <span class='text-error'><span class='font-black'>100</span> nomes de classe</span>",
   "For every element, every page, every project,<br/>again and again": "Para cada elemento, cada página, cada projeto,<br/>novamente e novamente",
@@ -109,7 +107,6 @@
   "This allows us to focus on important things<br />instead of styling basic elements for every project.": "Isso nos permite focar em coisas importantes<br />em vez de estilizar elementos básicos para cada projeto.",
   "No_more_ugly_HTML_part_2": "HTML",
   "No_more_ugly_HTML_part_3": "feio",
-  "No_more_ugly_HTML_part_4": "",
   "Write fewer class names<br />Use component class names<br />modify them using Tailwind CSS utilities.": "Escreva menos nomes de classe<br />Use nomes de classe de componentes<br />modifique-os usando as classes do Tailwind CSS.",
   "Click": "Clique",
   "Tailwind only": "Apenas Tailwind",
@@ -441,5 +438,6 @@
   "Base style": "Base style",
   "daisyUI base style": "daisyUI base style",
   "daisyUI adds a few base styles to your page.": "daisyUI adds a few base styles to your page.",
-  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively."
+  "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.": "daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.",
+  "don't re-invent <br/>the wheel <br/>every time": "não reinvente a roda novamente"
 }
