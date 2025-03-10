@@ -36,7 +36,7 @@ export default defineConfig({
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
-  
+
 ```postcss:src/index.css
 @import "tailwindcss";
 @plugin "daisyui";

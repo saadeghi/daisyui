@@ -7,7 +7,7 @@ desc: How to change the default configuration of daisyUI?
   import Translate from "$components/Translate.svelte"
 </script>
 
-daisyUI can be configured from your CSS file.  
+daisyUI can be configured from your CSS file.
 
 Replace the semicolon `;` after `@plugin "daisyui"` with brackets `{}` and add the configuration inside the brackets.
 
@@ -75,7 +75,7 @@ In above example, we set dracula as the default theme. setting one value like th
   root: "#my-app";
 }
 ```
-In above example, we set the CSS variables on `#my-app` instead of `:root`. This way all daisyUI global CSS variables will be scoped to `#my-app`.  
+In above example, we set the CSS variables on `#my-app` instead of `:root`. This way all daisyUI global CSS variables will be scoped to `#my-app`.
 This is useful to use daisyUI in a scoped environment like a web component or a shadow DOM or a specific part of the page.
 
 ## include
@@ -89,7 +89,7 @@ This is useful to use daisyUI in a scoped environment like a web component or a 
   include: button, input, select;
 }
 ```
-In above example, we only include the button, input, and select components. All other styles of daisyUI library will be excluded.  
+In above example, we only include the button, input, and select components. All other styles of daisyUI library will be excluded.
 [Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/v5/packages/daisyui/src).
 
 ## exclude
@@ -110,7 +110,7 @@ In above example, we exclude the `rootscrollgutter` style which is added to the 
   exclude: checkbox, footer, typography, glass, rootcolor, rootscrollgutter;
 }
 ```
-In above example, we exclude the the listed files. All other parts of daisyUI will be available to use. This is useful if you want to opt out of some parts of daisyUI or if you want to mix daisyUI for some parts and another library for the rest.  
+In above example, we exclude the the listed files. All other parts of daisyUI will be available to use. This is useful if you want to opt out of some parts of daisyUI or if you want to mix daisyUI for some parts and another library for the rest.
 [Here are the file names you can include or exclude](https://github.com/saadeghi/daisyui/tree/v5/packages/daisyui/src).
 
 
@@ -128,7 +128,7 @@ In above example, we exclude the the listed files. All other parts of daisyUI wi
 In above example, all daisyUI classes will be prefixed with `d-`. For example, `btn` will be `d-btn`.
 
 ## logs
-  
+
 | Default value | Type | Description |
 |--|--|--|
 | `true` | boolean | Enable or disable logs. |
