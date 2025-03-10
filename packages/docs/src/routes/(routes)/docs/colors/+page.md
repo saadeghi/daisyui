@@ -175,7 +175,7 @@ So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI c
 
 ## Color opacity and muted colors
 
-`base-content` is the the text color of the page by default. It's a dark color on light themes and it's a light color on dark themes. 
+`base-content` is the the text color of the page by default. It's a dark color on light themes and it's a light color on dark themes.
 
 <div class="grid md:grid-cols-2 gap-10">
   <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="nord">
@@ -207,7 +207,7 @@ Sometimes we need a muted text. something with less contrast. The best way to do
   </div>
 </div>
 
-The advantage of using opacity is that it gives a constant result on all themes, for all colors.  
+The advantage of using opacity is that it gives a constant result on all themes, for all colors.
 You can use it with any opacity value, you can use it for any color. For example primary-content:
 
 <div class="grid md:grid-cols-2 gap-10">

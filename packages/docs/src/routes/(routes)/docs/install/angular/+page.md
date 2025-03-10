@@ -35,7 +35,7 @@ Add Tailwind CSS plugin for PostCSS to a new `.postcssrc.json` file at root
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
-  
+
 ```postcss:src/styles.css
 @import "tailwindcss";
 @plugin "daisyui";

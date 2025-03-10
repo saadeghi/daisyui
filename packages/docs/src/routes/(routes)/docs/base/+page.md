@@ -18,7 +18,7 @@ These are the tiny base styles that daisyUI adds to your page. These styles are 
 | `rootscrollgutter` | Adds a `scrollbar-gutter` to `:root` when modal or drawer is open, to avoid layout shift                                         |
 | `svg`              | Contains small SVG images for noise filter, chat bubble tail mask, and tooltip tail mask. Can be disabled to use custom images.  |
 
-If you want to opt out of each part, you can do it by setting the [`exclude` config](/docs/config/#exclude).  
+If you want to opt out of each part, you can do it by setting the [`exclude` config](/docs/config/#exclude).
 For example, to opt out of the scrollbar-gutter and style, scrollbar-color, you can exclude it like this:
 
 ```postcss

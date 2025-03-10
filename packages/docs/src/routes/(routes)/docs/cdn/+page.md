@@ -56,10 +56,10 @@ desc: How to use daisyUI from a CDN?
     <div class="bg-neutral text-neutral-content rounded-se-box rounded-b-box">
       <div class="grid *:[grid-area:1/1]">
         <div class="overflow-x-auto pt-16 pb-8 px-6">
-  
+
   <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-punctuation)">&lt;script</span><span style="color:var(--shiki-attr-name)"> src</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)">&gt;&lt;/script&gt;</span></span></code></pre>
-  
+
         </div>
         <div class="font-mono select-none text-xs m-4 justify-self-start place-self-start">
           <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
@@ -68,12 +68,12 @@ desc: How to use daisyUI from a CDN?
         {#if onMount}
           <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />\n<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>`} />
         {/if}
-  
+
       </div>
     </div>
-    
+
     <h3 class="block text-xl mt-6 mb-4 font-bold">Adding all themes</h3>
-    
+
     <p class="mt-6">daisyui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
     <div class="grid *:[grid-area:1/1]">
       <div class="overflow-x-auto pt-12 pb-8 px-6 bg-neutral text-neutral-content rounded-box">
@@ -83,8 +83,8 @@ desc: How to use daisyUI from a CDN?
         <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@${data.daisyuiVersion}/themes.css" rel="stylesheet" type="text/css" />`} />
       {/if}
     </div>
-  
-    
+
+
   </div>
   <input
     type="radio"
@@ -95,11 +95,11 @@ desc: How to use daisyUI from a CDN?
   />
   <div class="tab-content border-none bg-neutral text-neutral-content">
     <div class="grid *:[grid-area:1/1]">
-      
+
       <div class="overflow-x-auto pt-16 pb-2 mb-6 px-6">
-          
+
         {#if $combinedUrl}
-        
+
 <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">{$combinedUrl}</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre>
@@ -110,7 +110,7 @@ desc: How to use daisyUI from a CDN?
         {/if}
 
       </div>
-        
+
       <div class="font-mono select-none text-xs m-4 justify-self-start place-self-start">
         <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
         <span class="text-neutral-content">{$totalSize}kB</span>
@@ -128,11 +128,11 @@ desc: How to use daisyUI from a CDN?
     <div class="py-8 flex gap-2 flex-col bg-base-200 text-base-content px-6 rounded-b-btn">
       <svg width="100%" height="20px" viewBox="0 0 1000 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="var(--color-neutral)" style="margin: -3.2rem -1.5rem 0; width: calc(100% + 3rem);">
         <defs>
-         <path id="wavepath" d="M 0 2000 0 500 Q 10 495 20 500 t 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0  v1000 z" />
+          <path id="wavepath" d="M 0 2000 0 500 Q 10 495 20 500 t 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0 20 0  v1000 z" />
         </defs>
         <g >
-         <use xlink:href="#wavepath" y="-490" fill="var(--color-base-200)">
-         </use>
+          <use xlink:href="#wavepath" y="-490" fill="var(--color-base-200)">
+          </use>
         </g>
       </svg>
       <h3 class="block text-xl mt-4 mx-1 font-bold">Choose parts</h3>

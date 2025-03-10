@@ -9,7 +9,7 @@ Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get
 
 ### 2. Get daisyUI bundled JS file
 
-Run this code to download latest verison of daisyUI as a single js file and put it next to Tailwind's executable file.
+Run this code to download latest version of daisyUI as a single js file and put it next to Tailwind's executable file.
 
 ```sh:Terminal
 curl -sLo daisyui.js https://esm.run/daisyui@5/index.js
@@ -17,9 +17,9 @@ curl -sLo daisyui.js https://esm.run/daisyui@5/index.js
 
 ### 3. Add Tailwind CSS and daisyUI
 
-Add Tailwind CSS and daisyUI to your CSS file.  
+Add Tailwind CSS and daisyUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
-  
+
 ```postcss:input.css
 @import "tailwindcss" source(none);
 @source "./public/*.{html,php,erb}";

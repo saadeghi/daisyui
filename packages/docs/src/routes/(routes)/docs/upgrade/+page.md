@@ -1,6 +1,6 @@
 ---
 title: daisyUI 5 upgrade guide
-desc: This guide helps you how to update your project to Tailwind CSS 4 and daisyUI 5. 
+desc: This guide helps you how to update your project to Tailwind CSS 4 and daisyUI 5.
 ---
 
 <div class="w-full rounded-box overflow-hidden" style="aspect-ratio: 1920/1080;"><iframe class="w-full h-full" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/bYznFmzL820?mute=0&amp;autoplay=1&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;loop=1&amp;playlist=bYznFmzL820" title="Nexus Dashboard 2.0"></iframe></div>
@@ -8,17 +8,17 @@ desc: This guide helps you how to update your project to Tailwind CSS 4 and dais
 
 > :INFO:
 >
-> Before upgrading your project, read about:  
-> 1 - [Tailwind CSS 4 breaking changes](https://tailwindcss.com/docs/upgrade-guide#changes-from-v3)  
-> 2 - [daisyUI 5 release notes](/docs/v5/)  
+> Before upgrading your project, read about:
+> 1 - [Tailwind CSS 4 breaking changes](https://tailwindcss.com/docs/upgrade-guide#changes-from-v3)
+> 2 - [daisyUI 5 release notes](/docs/v5/)
 > 3 - [daisyUI 5 breaking changes](#changes-from-v4)
 
 
 ### 1. Update Tailwind CSS
 
-Tailwind CSS provides a CLI tool for automatic upgrade. It automatically applies the new Tailwind CSS changes to your project.  
+Tailwind CSS provides a CLI tool for automatic upgrade. It automatically applies the new Tailwind CSS changes to your project.
 
-1. First, remove daisyUI and plugins from your `tailwind.config.js` file, so Tailwind CSS upgrade tool can safely replace it with the CSS file.  
+1. First, remove daisyUI and plugins from your `tailwind.config.js` file, so Tailwind CSS upgrade tool can safely replace it with the CSS file.
 
 ```diff:tailwind.config.js
 module.exports = {
@@ -45,13 +45,13 @@ npx @tailwindcss/upgrade
 npm i -D daisyui@latest
 ```
 3. Add daisyUI to your CSS file
-  
+
 ```postcss:app.css
 @import "tailwindcss";
 @plugin "daisyui";
 ```
 
-OR if you want [enable a built-in theme](/docs/themes/#enable-a-built-in-theme) in [config](/docs/config/):  
+OR if you want [enable a built-in theme](/docs/themes/#enable-a-built-in-theme) in [config](/docs/config/):
 
 ```postcss:app.css
 @import "tailwindcss";
@@ -66,7 +66,7 @@ Now everything should work as expected. If you're facing any challenges, you can
 
 ## Changes from v4
 
-These are all the HTML changes from daisyUI 4 to 5. There are ~15 changes in total but you won't need to do all of them, only the ones you're using.  
+These are all the HTML changes from daisyUI 4 to 5. There are ~15 changes in total but you won't need to do all of them, only the ones you're using.
 - To read about new features in daisyUI 5 go to [release notes page](/docs/v5/)
 - For more detailed changelog go to [changelogs page](/docs/changelog/)
 
@@ -89,7 +89,7 @@ These are all the HTML changes from daisyUI 4 to 5. There are ~15 changes in tot
 | `artboard artboard-horizontal phone-5` | `w-[896px] h-[414px]` |
 | `artboard artboard-horizontal phone-6` | `w-[1024px] h-[320px]` |
 
-Example: 
+Example:
 ```diff:page.html
 - <div class="artboard phone-1">
 + <div class="w-[320px] h-[568px]">
@@ -329,7 +329,7 @@ Example:
 
 - Remove form-control, label-text, label-text-alt
 
-You can still use the same HTML still, but class names don't exist anymore and won't apply color, font-size, flex, etc.  
+You can still use the same HTML still, but class names don't exist anymore and won't apply color, font-size, flex, etc.
 I suggest using the newly added class names for `fieldset` and `legend` elements for better accessibility.
 
 <div class="before-after">
@@ -388,7 +388,7 @@ I suggest using the newly added class names for `fieldset` and `legend` elements
 
 - Remove btn-group and input-group
 
-btn-group, input-group were deprecated a year ago and now finally removed.  
+btn-group, input-group were deprecated a year ago and now finally removed.
 If you've been using btn-group or input-group, you can use `join` instead
 
 <div class="before-after">

@@ -10,14 +10,14 @@ layout: components
 
 ### Layout
 
-Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes.  
-Read more at Tailwind CSS documentation:  
+Layout, sizing, grids, spacing, etc. all will be handled by Tailwind CSS's utility classes.
+Read more at Tailwind CSS documentation:
 [Layout](https://tailwindcss.com/docs/container), [Sizing](https://tailwindcss.com/docs/width), [Flexbox](https://tailwindcss.com/docs/flex), [Grid](https://tailwindcss.com/docs/grid-template-columns), [Box alignment](https://tailwindcss.com/docs/justify-content), [Spacing](https://tailwindcss.com/docs/padding)
 
 ### Typography
 
-daisyUI supports the [TailwindCSS Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography)  
-All parts are compatible with daisyUI themes.  
+daisyUI supports the [TailwindCSS Typography plugin](https://github.com/tailwindlabs/tailwindcss-typography)
+All parts are compatible with daisyUI themes.
 
 ---
 
@@ -75,8 +75,8 @@ Ordered lists use numbers to list items. They are ideal for steps or items that 
 
 1. Step one
 2. Step two
-   1. Substep one
-   2. Substep two
+  1. Substep one
+  2. Substep two
 
 ## Links and Images: Adding Interactivity
 

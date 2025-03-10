@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
-  
+
 ```postcss:assets/app.css
 @import "tailwindcss";
 @plugin "daisyui";
