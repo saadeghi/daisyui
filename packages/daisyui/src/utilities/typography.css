@@ -16,4 +16,15 @@
   --tw-prose-th-borders: color-mix(in oklab, var(--color-base-content) 50%, #0000);
   --tw-prose-td-borders: color-mix(in oklab, var(--color-base-content) 20%, #0000);
   --tw-prose-kbd: color-mix(in oklab, var(--color-base-content) 80%, #0000);
+  :where(code):not(pre > code) {
+    background-color: var(--color-base-200);
+    border-radius: var(--radius-selector);
+    border: var(--border) solid var(--color-base-300);
+    padding-inline: 0.5em;
+    font-weight: inherit;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
 }
