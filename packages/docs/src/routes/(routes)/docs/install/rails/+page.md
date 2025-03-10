@@ -54,7 +54,7 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   <div class="tab-content bg-base-100 border-base-300 px-6 py-3">
 
 
-This method is recommended if you are not using Node.js. p
+This method is recommended if you are not using Node.js.
 This works as a Tailwind CSS plugin so only the class names you need will be added to your CSS file.
 
 Run this code to download latest version of daisyUI as a single js file
