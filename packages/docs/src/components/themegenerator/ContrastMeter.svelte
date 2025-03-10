@@ -1,8 +1,17 @@
 <script>
   import { wcagContrast } from "culori"
   let { color1, color2 } = $props()
+  function getContrast(color1, color2) {
+    try {
+      return wcagContrast(color1.trim(), color2.trim())
+    } catch (err) {
+      // wcagContrast failed with the exception
+      return 1
+    }
+  }
+
   function contrastRating(color1, color2) {
-    const contrast = wcagContrast(color1, color2)
+    const contrast = getContrast(color1, color2)
     if (contrast >= 4.5) {
       return "great"
     }
@@ -16,9 +25,9 @@
   }
 </script>
 
-<div class="tooltip" data-tip={`Contrast ${wcagContrast(color1, color2).toFixed(2)}`}>
-  <div class="flex flex-col gap-1 items-end">
-    <div class="flex items-center h-6 gap-2">
+<div class="tooltip" data-tip={`Contrast ${getContrast(color1, color2).toFixed(2)}`}>
+  <div class="flex flex-col items-end gap-1">
+    <div class="flex h-6 items-center gap-2">
       {#if ["low", "bad"].includes(contrastRating(color1, color2))}
         <span class="text-[10px]">Low contrast</span>
         <svg
@@ -64,7 +73,7 @@
       {/if}
     </div>
 
-    <progress class="progress w-24" value={wcagContrast(color1, color2).toFixed(2) - 1} max="3"
+    <progress class="progress w-24" value={getContrast(color1, color2).toFixed(2) - 1} max="3"
     ></progress>
   </div>
 </div>
