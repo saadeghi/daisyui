@@ -77,7 +77,7 @@
   justify-content: center;
   justify-items: center;
   grid-auto-flow: row;
-  grid-template-columns: max-content;
+  grid-template-columns: auto;
   text-align: center;
 }
 

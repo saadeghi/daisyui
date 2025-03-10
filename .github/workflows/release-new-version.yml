@@ -58,7 +58,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish package to NPM
-        # if: github.repository == 'saadeghi/daisyui'
+        if: github.repository == 'saadeghi/daisyui'
         run: |
           echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
           cd packages/daisyui
