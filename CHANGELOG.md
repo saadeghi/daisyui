@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.2 (2025-03-11)
+
+
+### Bug Fixes
+
+* tailwindplay issue ([24cd382](https://github.com/saadeghi/daisyui/commit/24cd382bece0f072c220c51b966c56677d8ab10a))
+
 ## 5.0.1 (2025-03-11)
 
 ### Bug Fixes
