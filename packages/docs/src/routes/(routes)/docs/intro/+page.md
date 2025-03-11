@@ -31,7 +31,7 @@ daisyUI uses the Tailwind CSS plugin API to extend the available Tailwind CSS cl
 - Want to use a design system that is based on real-world UI design principles
 - Want development speed and customization at the same time
 
-**daistUI is not for you if you:**
+**daisyUI is not for you if you:**
 - Want to waste time re-inventing all the standard UI parts like buttons, cards, checkboxes, etc, for each project.
 - Want to swim in the ocean of thousands of class names and never find your way out.
 - Want to make your codebase a mess and spend hours figuring out what part of the code is responsible for what part of the UI.
@@ -40,7 +40,7 @@ daisyUI uses the Tailwind CSS plugin API to extend the available Tailwind CSS cl
 
 ## What's the difference between daisyUI and Tailwind CSS?
 
-Tailwind CSS provides low-level utility classes, wich usually inlcude only one CSS rule.  
+Tailwind CSS provides low-level utility classes, which usually include only one CSS rule.  
 daisyUI classes are a combination of multiple CSS rule that are named semantically for each part of the UI.  
 
 For example Tailwind CSS class names decide if padding should be 4px or 8px. daisyUI class names decide if a HTML element should look like a "card", a "button", a "toggle", etc, just like what we would call them semantically in a design system.
