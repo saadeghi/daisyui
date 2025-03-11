@@ -47,6 +47,12 @@ Add the template files you want as source. [Learn more about Tailwind CSS `@sour
 @plugin "daisyui";
 ```
 
+### update taiwind.config.js 
+
+```js:tailwind.config.js
+ plugins: [forms,require('daisyui')],
+```
+
 ### 3. Run your project
 
 Run your Laravel project
