@@ -4,7 +4,7 @@
   color: var(--btn-fg);
   --tw-prose-links: var(--btn-fg);
   height: var(--size);
-  font-size: 0.875rem;
+  font-size: var(--fontsize, 0.875rem);
   font-weight: 600;
   outline-color: var(--btn-color, var(--color-base-content));
   transition-property: color, background-color, border-color, box-shadow;
@@ -219,31 +219,31 @@
 }
 
 .btn-xs {
-  font-size: 0.6875rem;
+  --fontsize: 0.6875rem;
   --btn-p: 0.5rem;
   --size: calc(var(--size-field, 0.25rem) * 6);
 }
 
 .btn-sm {
-  font-size: 0.75rem;
+  --fontsize: 0.75rem;
   --btn-p: 0.75rem;
   --size: calc(var(--size-field, 0.25rem) * 8);
 }
 
 .btn-md {
-  font-size: 0.875rem;
+  --fontsize: 0.875rem;
   --btn-p: 1rem;
   --size: calc(var(--size-field, 0.25rem) * 10);
 }
 
 .btn-lg {
-  font-size: 1.125rem;
+  --fontsize: 1.125rem;
   --btn-p: 1.25rem;
   --size: calc(var(--size-field, 0.25rem) * 12);
 }
 
 .btn-xl {
-  font-size: 1.375rem;
+  --fontsize: 1.375rem;
   --btn-p: 1.5rem;
   --size: calc(var(--size-field, 0.25rem) * 14);
 }
