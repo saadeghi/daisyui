@@ -34,8 +34,11 @@ productCustomAttributes:
         url: https://www.youtube.com/embed/3CX5wfvOfpw?mute=0&autoplay=0&controls=0&rel=0&modestbranding=1&loop=1&playlist=3CX5wfvOfpw
         ratio: 1000/750
       - type: image
-        sm: https://img.daisyui.com/images/store/small/nexus/nexus-05.webp
-        lg: https://img.daisyui.com/images/store/large/nexus/nexus-05.webp
+        sm: https://img.daisyui.com/images/store/small/nexus/nexus-main.webp
+        lg: https://img.daisyui.com/images/store/large/nexus/nexus-main.webp
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/nexus/nexus-v2.1.webp
+        lg: https://img.daisyui.com/images/store/large/nexus/nexus-v2.1.webp
       - type: image
         sm: https://img.daisyui.com/images/store/small/nexus/nexus-06.webp
         lg: https://img.daisyui.com/images/store/large/nexus/nexus-06.webp
@@ -49,6 +52,7 @@ productCustomAttributes:
       img: https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp
       name: Pouya
       text:
+        - Nexus 2.1 added with Profile settings page, Help and FAQ page, Generative AI pages.
         - Nexus 2.0 is now available with Tailwind CSS 4.0 and daisyUI 5.0! New design, new pages, more themes, more features, with many improvements and bug fixes.
         - SvelteKit version added
     packages:
@@ -168,9 +172,9 @@ productCustomAttributes:
     tech: [astro, react, nextjs, mdx]
     tags: [content, app]
     badge:
-      class: badge-info
-      icon: wait
-      text: daisyUI 5.0 update coming soon
+      class: badge-success
+      icon: check
+      text: Updated to daisyUI 5.0
   - id: 142623
     media:
       - type: image
@@ -231,7 +235,7 @@ productCustomAttributes:
     tech: [astro, react, nextjs, mdx]
     tags: [content, app]
     badge:
-      class: badge-info
+      class: badge-success
       icon: check
       text: Updated to daisyUI 5.0
   - id: 185227
