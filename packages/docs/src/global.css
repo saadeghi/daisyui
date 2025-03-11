@@ -44,7 +44,6 @@
     img {
       display: block;
       border-radius: 3px;
-      width: 100%;
     }
   }
   .carbon-text {
@@ -73,6 +72,11 @@
 @media only screen and (min-width: 1280px) {
   .carbonads-responsive #carbonads {
     max-width: 146px;
+    .carbon-img {
+      img {
+        width: 100%;
+      }
+    }
     .carbon-wrap {
       flex-direction: column;
     }

@@ -1,5 +1,4 @@
 <script>
-  import Sponsors from "$components/Sponsors.svelte"
   import { t } from "$lib/i18n.svelte.js"
 
   const newtabicon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50"><path fill-rule="evenodd" d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z" /></svg>`
@@ -167,24 +166,6 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/kidonng/unocss-preset-daisy"
-          class="link link-hover group"
-        >
-          daisyUI UnoCSS preset
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://react.daisyui.com/"
-          class="link link-hover group"
-        >
-          React-daisyUI
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
           href="https://mary-ui.com/"
           class="link link-hover group"
         >
@@ -198,42 +179,6 @@
           class="link link-hover group"
         >
           SaraUI for SvelteKit
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://phlexyui.com/"
-          class="link link-hover group"
-        >
-          PhlexyUI for Phlex
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://protos.inhouse.work/"
-          class="link link-hover group"
-        >
-          Protos for Phlex
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://backpex.live/"
-          class="link link-hover group"
-        >
-          Backpex for Phoenix
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://github.com/dobicinaitis/tailwind-cli-extra"
-          class="link link-hover group"
-        >
-          Tailwind standalone + daisyUI
           {@html newtabicon}
         </a>
         <a
