@@ -57,7 +57,7 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 This method is recommended if you are not using Node.js.  
 This works as a Tailwind CSS plugin so only the class names you need will be added to your CSS file.
 
-Run this code to download latest verison of daisyUI as a single js file
+Run this code to download latest version of daisyUI as a single js file
 
 ```sh:Terminal
 curl -sLo app/assets/tailwind/daisyui.js https://esm.run/daisyui@5/index.js

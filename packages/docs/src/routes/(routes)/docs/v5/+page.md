@@ -174,7 +174,7 @@ daisyUI 5 CDN file, including all possible class names, is 75% smaller in size
   </dd>
 </dl>
 
-It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5. This is the smallest size ever for the daisyUI CDN file, including all the possible daisyUI components and colors, available for all Tailwind CSS responsive prefixes. This is a CSS file, minified, comporessed and cached on CDN.
+It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5. This is the smallest size ever for the daisyUI CDN file, including all the possible daisyUI components and colors, available for all Tailwind CSS responsive prefixes. This is a CSS file, minified, compressed and cached on CDN.
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-cdn-size.webp" alt="daisyui 5 cdn size">
 
@@ -530,7 +530,7 @@ A redesigned replacement for "bottom navigation" component. Dock is a horizontal
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
-Compatibe with safe-area-inset-bottom on mobile devices.
+Compatible with safe-area-inset-bottom on mobile devices.
 
 See [Dock component docs](/components/dock/)
 
