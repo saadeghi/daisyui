@@ -19,9 +19,9 @@ npm install tailwindcss@latest @tailwindcss/cli@latest daisyui@latest
 
 ### 2. Add Tailwind CSS and daisyUI
 
-Add Tailwind CSS and daisyUI to your CSS file.  
+Add Tailwind CSS and daisyUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
-  
+
 ```postcss:app.css
 @import "tailwindcss" source(none);
 @source "./public/*.{html,js}";

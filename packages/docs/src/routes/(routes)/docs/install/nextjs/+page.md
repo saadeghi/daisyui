@@ -32,7 +32,7 @@ export default config;
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
-  
+
 ```postcss:app/globals.css
 @import "tailwindcss";
 @plugin "daisyui";

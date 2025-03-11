@@ -21,13 +21,13 @@ You can manage themes by adding brackets in front of `@plugin "daisyui"` in your
 +   themes: light --default, dark --prefersdark;
 + }
 ```
-`themes` is a comma-separated list of theme names you want to enable.  
-You can set `--default` flag for a theme to make it the default theme.  
+`themes` is a comma-separated list of theme names you want to enable.
+You can set `--default` flag for a theme to make it the default theme.
 You can also set `--prefersdark` flag for a theme to make it the default theme for dark mode (prefers-color-scheme: dark).
 
 ## Enable a built-in theme
 
-By default, `light` and `dark` themes are enabled. Let's enable `cupcake` theme:  
+By default, `light` and `dark` themes are enabled. Let's enable `cupcake` theme:
 
 ```css:app.css
 @import "tailwindcss";

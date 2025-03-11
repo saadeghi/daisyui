@@ -7,7 +7,7 @@ desc: Everything about the new daisyUI 5 release
 
 Welcome! 🎉
 
-daisyUI, the essential component library for Tailwind CSS is now being used in [360,000 open source projects](https://github.com/saadeghi/daisyui/network/dependents), with 19 million npm installs (350 thousand weekly installs). daisyUI is growing faster than before and today it's helping many people, startups and companies to create improve their development experience.  
+daisyUI, the essential component library for Tailwind CSS is now being used in [360,000 open source projects](https://github.com/saadeghi/daisyui/network/dependents), with 19 million npm installs (350 thousand weekly installs). daisyUI is growing faster than before and today it's helping many people, startups and companies to create improve their development experience.
 
 💚 daisyUI became possible thanks to your incredible contributions, helpful feedback, and amazing support. Thank you!
 
@@ -55,7 +55,7 @@ Let's begin!
 
 > :TLDR:
 >
-> TLDR – daisyUI 5 is compatible with Tailwind CSS 4, has zero dependencies, a smaller package size, smaller CSS size, and is more customizable. CSS variables are now more readable and more flexible.  
+> TLDR – daisyUI 5 is compatible with Tailwind CSS 4, has zero dependencies, a smaller package size, smaller CSS size, and is more customizable. CSS variables are now more readable and more flexible.
 > [:FF: Skip to the next section](#2-build-and-integration-improvements)
 
 ### Tailwind CSS 4 compatibility
@@ -97,7 +97,7 @@ Reducing the number of dependencies in your project is important for many reason
 
 Last year I reduced the number of dependencies in daisyUI, from ~100 (dependencies + sub dependencies in total) to 7!
 
-This time we got rid of all the remaining ones!  
+This time we got rid of all the remaining ones!
 daisyUI 5 has no dependencies. Hopefully this helps to clean up your node_modules a little bit.
 
 <div class="before-after">
@@ -174,7 +174,7 @@ daisyUI 5 CDN file, including all possible class names, is 75% smaller in size
   </dd>
 </dl>
 
-It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5. This is the smallest size ever for the daisyUI CDN file, including all the possible daisyUI components and colors, available for all Tailwind CSS responsive prefixes. This is a CSS file, minified, comporessed and cached on CDN.
+It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5. This is the smallest size ever for the daisyUI CDN file, including all the possible daisyUI components and colors, available for all Tailwind CSS responsive prefixes. This is a CSS file, minified, compressed and cached on CDN.
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-cdn-size.webp" alt="daisyui 5 cdn size">
 
@@ -253,10 +253,10 @@ We also updated the variable names to be more readable in the output CSS, which 
 
 > :TLDR:
 >
-> TLDR – Import only the parts you need.  
-> Micro CSS files are now available for no-build projects.  
-> Native CSS nesting reduces CSS size.  
-> It's ESM compatible and has dependency-free class name prefixing.  
+> TLDR – Import only the parts you need.
+> Micro CSS files are now available for no-build projects.
+> Native CSS nesting reduces CSS size.
+> It's ESM compatible and has dependency-free class name prefixing.
 > [:FF: Skip to the next section](#3-design-system-improvements)
 
 ### Native CSS nesting
@@ -333,10 +333,10 @@ Not possible
 
 > :TLDR:
 >
-> TLDR – New "Effect" CSS variables.  
-> Size improvements + new `xl` size modifier.  
-> New component style modifiers: `*-soft` and `*-dash`.  
-> Color format flexibility.  
+> TLDR – New "Effect" CSS variables.
+> Size improvements + new `xl` size modifier.
+> New component style modifiers: `*-soft` and `*-dash`.
+> Color format flexibility.
 > [:FF: Skip to the next section](#4-themes-and-styling)
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-theme-generator-effects.webp" alt="daisyui 5 noise effect and depth effect">
@@ -361,7 +361,7 @@ All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now
 
 With the addition of the new `xl` size modifier, the size scale of components has been adjusted to make it consistent. The new size scale is more harmonious and visually appealing.
 
-In daisyUI 4, the size difference between sizes was not following a consistent scale.  
+In daisyUI 4, the size difference between sizes was not following a consistent scale.
 The new default size scale is consistent and more visually appealing ...and it's customizable!
 
 | Button height scale | Before                                        | After                                           |
@@ -384,7 +384,7 @@ The new default size scale is consistent and more visually appealing ...and it's
 
 ### Size scale customization
 
-Component size scales are now customizable. Previously, customizing the size of components required a lot of manual work.  
+Component size scales are now customizable. Previously, customizing the size of components required a lot of manual work.
 Now everything is tokenized with CSS variables, You can define the size scale of the components globally or per theme, making them shorter or taller, based on your design needs.
 
 - `--size-field` variable is used to define the base size of fields like input, button, tab, etc.
@@ -404,7 +404,7 @@ See how it works in the new [Theme Generator](/theme-generator/) page.
 
 ### New component styles: `soft`, `dash`
 
-Components like `button`, `badge`, `alert` now have `soft` and `dash` styles.  
+Components like `button`, `badge`, `alert` now have `soft` and `dash` styles.
 `soft` style makes the component look softer and `dash` style adds a dashed border to the component.
 
 ### All modifier classes are now responsive
@@ -415,8 +415,8 @@ daisyUI 5 makes all modifiers responsive by default. This means you can use resp
 
 daisyUI 5 supports all color formats and doesn't convert your colors to a specific format.
 
-Before Tailwind CSS 4, color values of utility classes had to be generated at build time so the only way to have CSS variables for colors and being able to use Tailwind CSS opacity modifiers was to use a specific color format and pass it tailwind to generate the opacity variables.  
-Tailwind CSS 4 now uses CSS variables for colors and `color-mix()` to control the opacity. This means we can use any color format we want and no transformation is needed.  
+Before Tailwind CSS 4, color values of utility classes had to be generated at build time so the only way to have CSS variables for colors and being able to use Tailwind CSS opacity modifiers was to use a specific color format and pass it tailwind to generate the opacity variables.
+Tailwind CSS 4 now uses CSS variables for colors and `color-mix()` to control the opacity. This means we can use any color format we want and no transformation is needed.
 daisyUI built-in themes still use OKLCH color format and I would recommend using OKLCH for custom themes too, but you can use any color format you want and neither daisyUI nor Tailwind CSS will convert it to another format at build time.
 
 ## 4. Themes and styling
@@ -425,8 +425,8 @@ Themes and colors are what makes your website unique. We've made significant imp
 
 > :TLDR:
 >
-> TLDR – New themes + improved existing themes.  
-> New Theme Generator to create custom themes.  
+> TLDR – New themes + improved existing themes.
+> New Theme Generator to create custom themes.
 > [:FF: Skip to the next section](#5-new-components)
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-new-themes.webp" alt="daisyui 5 new tailwind css themes">
@@ -458,7 +458,7 @@ daisyUI 5 introduces new components to help you build websites faster.
 
 > :TLDR:
 >
-> TLDR – New components: `List`, `Status`, `Fieldset`, `Label`, `Filter`, `Calendar`, `Validator`, `Dock`.  
+> TLDR – New components: `List`, `Status`, `Fieldset`, `Label`, `Filter`, `Calendar`, `Validator`, `Dock`.
 > [:FF: Skip to the next section](#6-major-component-improvements)
 
 ### List
@@ -505,7 +505,7 @@ See [Filter component docs](/components/filter/)
 
 ### Calendar
 
-daisyUI 5 provides all the necessary styles for 3 popular calendar/datepicker libraries: Cally, Pikaday, and React Day Picker.  
+daisyUI 5 provides all the necessary styles for 3 popular calendar/datepicker libraries: Cally, Pikaday, and React Day Picker.
 This means you can use any of these libraries the style will be compatible with daisyUI colors and styles.
 
 - Cally is a web component calendar datepicker and it works everywhere
@@ -530,12 +530,12 @@ A redesigned replacement for "bottom navigation" component. Dock is a horizontal
 
 Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
-Compatibe with safe-area-inset-bottom on mobile devices.
+Compatible with safe-area-inset-bottom on mobile devices.
 
 See [Dock component docs](/components/dock/)
 
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/dock.webp" alt="daisyui tailwind dock">
-  
+
 
 ## 6. Major component improvements
 
@@ -543,8 +543,8 @@ These components had significant improvements in daisyUI 5, including new modifi
 
 > :TLDR:
 >
-> TLDR – Some components got significant improvements, including new modifiers, new features, and better customization options.  
-> Some components have improved visual appeal.  
+> TLDR – Some components got significant improvements, including new modifiers, new features, and better customization options.
+> Some components have improved visual appeal.
 > [:FF: Skip to the next section](#7-component-design-improvements)
 
 - **[Alert](/components/alert/)** – New soft/dash styles, new vertical/horizontal layout options
@@ -574,7 +574,7 @@ These components had significant improvements in daisyUI 5, including new modifi
 
 > :TLDR:
 >
-> TLDR – Several components received visual enhancements for improved aesthetics.  
+> TLDR – Several components received visual enhancements for improved aesthetics.
 > [:FF: Skip to the next section](#8-component-size-scale-improvements)
 
 These components have been improved to be more visually appealing:
@@ -592,7 +592,7 @@ These components have been improved to be more visually appealing:
 - **[Rating](/components/rating/)**
 - **[Radial Progress](/components/radial-progress/)**
 - **[Mockups](/components/mockup-browser/)**
-  
+
 <figure class="diff aspect-[1600/650] border-2 border-gray-200 rounded-box" data-theme="dark" tabindex="0">
   <div class="diff-item-1" role="img">
     <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-4-tailwindcss-components.webp" alt="daisyUI 4"/>
@@ -608,7 +608,7 @@ These components have been improved to be more visually appealing:
 
 > :TLDR:
 >
-> TLDR – Size scale improvements for better consistency and flexibility.  
+> TLDR – Size scale improvements for better consistency and flexibility.
 > [:FF: Skip to the next section](#9-detailed-changelog)
 
 These components now support the new `xl` size modifier:
@@ -644,7 +644,7 @@ Size scale of these components has been improved to be more consistent:
 
 > :TLDR:
 >
-> TLDR - It's a long list of changes. Most of them won't affect you, so I've summarized the most important ones here and you can read the detailed changelog for each component [in the changelog page](/docs/changelog/).  
+> TLDR - It's a long list of changes. Most of them won't affect you, so I've summarized the most important ones here and you can read the detailed changelog for each component [in the changelog page](/docs/changelog/).
 > [:FF: Skip to the next section](#10-breaking-changes-in-class-names)
 
 Summary of changes:
@@ -658,14 +658,14 @@ Summary of changes:
 - Print-friendly styles for many components.
 - Some classes were renamed, some unused ones were removed (Read next section for details).
 
-[Read the detailed changelog for each component](/docs/changelog/)  
+[Read the detailed changelog for each component](/docs/changelog/)
 
 
 ## 10. Breaking changes in class names
 
 > :TLDR:
 >
-> TLDR - Some class names were renamed, some unused ones were removed.  
+> TLDR - Some class names were renamed, some unused ones were removed.
 > [:FF: Skip to the next section](#11-breaking-changes-in-design-system)
 
 - Add `md:footer-horizontal` to `footer` component to make it horizontal on medium screens.
@@ -694,7 +694,7 @@ Summary of changes:
 - Delete `mask-parallelogram-4`. No longer exists.
 - Delete width/height of items inside the `stack`, use width/height for the `stack` itself.
 
-[Read the detailed changelog for each component](/docs/changelog/)  
+[Read the detailed changelog for each component](/docs/changelog/)
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="tailwind css daisyui xl button">
 
@@ -702,23 +702,23 @@ Summary of changes:
 
 > :TLDR:
 >
-> Default sizes for some UI elements have been adjusted for improved consistency. They are also customizable now.  
+> Default sizes for some UI elements have been adjusted for improved consistency. They are also customizable now.
 > [:FF: Skip to the next section](#12-breaking-changes-in-config)
 
 - `btn`, `input`, `select` now have a smaller height by default [see size scale improvements](#size-scale-improvements)
 - `checkbox`, `radio`, `toggle`, `range`, `rating` now have a smaller height by default [see size scale improvements](#size-scale-improvements)
 
-You can customize the default size scale using the new `--size-field` and `--size-selector` CSS variables in your theme.  
+You can customize the default size scale using the new `--size-field` and `--size-selector` CSS variables in your theme.
 Check out the new [Theme Generator](/theme-generator/) page to see it in action.
 
-[Read the detailed changelog for each component](/docs/changelog/)  
+[Read the detailed changelog for each component](/docs/changelog/)
 
 ## 12. Breaking changes in config
 
 > :TLDR:
 >
-> TLDR – Use the new config format in the CSS file. No need for `tailwind.config.js` anymore.  
-> The new config format is easier to use, it's more flexible, and it's more powerful.  
+> TLDR – Use the new config format in the CSS file. No need for `tailwind.config.js` anymore.
+> The new config format is easier to use, it's more flexible, and it's more powerful.
 > [:FF: Skip to the next section](#13-breaking-changes-in-themes)
 
 - Tailwind CSS 4 allows config directly from the CSS file, so instead of `tailwind.config.js` you need to put the daisyUI config in the CSS file. [See the new config format](/docs/config/).
@@ -735,12 +735,12 @@ Read more about [daisyUI config](/docs/config/).
 
 > :TLDR:
 >
-> TLDR – Automatic `*-content` color calculation is removed. Theme variable names have changed for better consistency and readability.  Previous themes are available for easy migration.  
+> TLDR – Automatic `*-content` color calculation is removed. Theme variable names have changed for better consistency and readability.  Previous themes are available for easy migration.
 > [:FF: Skip to the next section](#14-bug-fixes)
 
 Automatic `*-content` color calculation based on background color was removed. Now that Tailwind CSS supports CSS variables for colors, we no longer process and convert color values at build time. You can use any color format you want and neither daisyUI nor Tailwind CSS will convert it to another format at build time.
 
-Most themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.  
+Most themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
 If you prefer using the previous colors, I [prepared a repo, including all daisyUI 4 theme colors](https://github.com/daisyui/v4-themes-for-v5/) easy to copy/paste in daisyUI 5.
 
 All color variable names have been changed to be aligned with new Tailwind CSS 4 syntax. And to be more readable and easier to customize [See the new color format](#improved-color-variables)
@@ -800,12 +800,12 @@ Cyberpunk and Wireframe themes no longer have custom font by default. If you wan
 
 > :TLDR:
 >
-> TLDR – More than 95% of all the open issues from daisyUI 4 have been fixed in this release.  
+> TLDR – More than 95% of all the open issues from daisyUI 4 have been fixed in this release.
 > [:FF: Skip to the next section](#15-get-started-with-daisyui-5)
 
-Some of these bugs were fixed automatically by the new changes in changes in the core library, design system, themes, and components. Some of them became possible with the new capabilities of Tailwind CSS 4.  
+Some of these bugs were fixed automatically by the new changes in changes in the core library, design system, themes, and components. Some of them became possible with the new capabilities of Tailwind CSS 4.
 
-And some of these bugs were related to a specific structure / style / behavior of components and changing them in a patch release would have caused breaking changes for all existing projects. We had to wait for the major release to apply these changes.  
+And some of these bugs were related to a specific structure / style / behavior of components and changing them in a patch release would have caused breaking changes for all existing projects. We had to wait for the major release to apply these changes.
 
 If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug or let me know if a bug is closed by mistake 💚
 
@@ -964,9 +964,9 @@ Please report any new bugs you find to [GitHub issues](https://github.com/saadeg
 
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5.webp" alt="tailwind css components">
 
-1 - [Tailwind CSS 4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)  
-2 - [daisyUI 5 upgrade guide](https://tailwindcss.com/docs/upgrade/)  
+1 - [Tailwind CSS 4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)
+2 - [daisyUI 5 upgrade guide](https://tailwindcss.com/docs/upgrade/)
 
-If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.  
+If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.
 
 Join us at [daisyUI Discord server](https://daisyui.com/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.
