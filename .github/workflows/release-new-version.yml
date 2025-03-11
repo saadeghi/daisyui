@@ -39,7 +39,6 @@ jobs:
         run: bun run build
 
       - name: Run release command
-        # if: github.repository == 'saadeghi/daisyui'
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
@@ -83,7 +82,6 @@ jobs:
 
   write-release-notes:
     name: 📝 Release notes
-    # if: github.repository == 'saadeghi/daisyui'
     needs: build-publish
     uses: ./.github/workflows/write-release-notes.yml
     secrets: inherit
