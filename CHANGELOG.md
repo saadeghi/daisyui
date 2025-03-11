@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.0.1 (2025-03-11)
 
+### Bug Fixes
+
+* bug: (v5) I can't override inline the font-size of a button without using important. closes: [#3641](https://github.com/saadeghi/daisyui/issues/3641)
+* bug: text content in the alert component isn't responsive. closes: [#3638](https://github.com/saadeghi/daisyui/issues/3638)
+* bug: code in prose (typography plugin) is not styled by daisy. closes: [#3631](https://github.com/saadeghi/daisyui/issues/3631)
+* bug: Modal looses backdrop transition after build. closes: [#3628](https://github.com/saadeghi/daisyui/issues/3628)
+* bug: (v5) unintended outline when using join and radio button. closes: [#3615](https://github.com/saadeghi/daisyui/issues/3615)
+* bug: fieldset + select + icon. closes: [#3613](https://github.com/saadeghi/daisyui/issues/3613)
+* bug: (v5) Text opacity and custom fonts not working in daisyUI v5 CDN version. closes: [#3612](https://github.com/saadeghi/daisyui/issues/3612)
+* bug: "join" applies incorrect border radius when used with a single item. closes: [#3611](https://github.com/saadeghi/daisyui/issues/3611)
+* bug: (v5) Button colors do not play well with typography. closes: [#3606](https://github.com/saadeghi/daisyui/issues/3606)
+* bug: (v5) Collapse uses variable --rounded-box but it should use --radius-box. closes: [#3600](https://github.com/saadeghi/daisyui/issues/3600)
+* bug: Deno requires with attribute on import. closes: [#3597](https://github.com/saadeghi/daisyui/issues/3597)
+* bug: The development guides does not work on Windows machine. closes: [#3567](https://github.com/saadeghi/daisyui/issues/3567)
+* docs: Badge component code highlight error. closes: [#3627](https://github.com/saadeghi/daisyui/issues/3627)
+* docs: Add warning about Modal placement inside Dropdown components. closes: [#3616](https://github.com/saadeghi/daisyui/issues/3616)
+
 ## 5.0.0
 
 > This is the detailed list of changes per component. Most of these changes won't affect your project, so if you want to learn about the breaking changes only, [check out the daisyUI 5 release notes](/docs/v5/)
