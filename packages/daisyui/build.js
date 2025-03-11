@@ -12,7 +12,7 @@ import { removeFiles } from "./functions/removeFiles.js"
 import { copyFile } from "./functions/copyFile.js"
 import { packCss } from "./functions/packCss.js"
 import { report } from "./functions/report.js"
-import { version } from "./package.json" with { type: "json" }
+import { version } from "./package.json"
 
 const isDev = process.argv.includes("--dev")
 
