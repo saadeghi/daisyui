@@ -37,7 +37,7 @@ export const languageMetadata = {
   uk: { __name: "Українська", __code: "UK", __direction: "ltr" },
   vi: { __name: "Tiếng Việt", __code: "VI", __direction: "ltr" },
   zh_hans: { __name: "简体中文", __code: "ZH", __direction: "ltr" },
-  zh_hant: { __name: "繁體中文", __code: "ZH", __direction: "ltr" }
+  zh_hant: { __name: "繁體中文", __code: "ZH", __direction: "ltr" },
 }
 
 const path = "../translation"
@@ -47,199 +47,197 @@ export const langs = localesArray
 
 // Store for loaded translations - initialize with default language
 const loadedTranslations = writable({
-  [defaultLang]: defaultTranslation
+  [defaultLang]: defaultTranslation,
 })
 
 // Function to check if a language is valid
-const isValidLanguage = (lang) => langs.includes(lang);
+const isValidLanguage = (lang) => langs.includes(lang)
 
 // Function to update URL query parameter
 const updateUrlQueryParam = (key, value) => {
-  const url = new URL(window.location.toString());
+  const url = new URL(window.location.toString())
   if (value) {
-    url.searchParams.set(encodeURIComponent(key), encodeURIComponent(value));
+    url.searchParams.set(encodeURIComponent(key), encodeURIComponent(value))
   } else {
-    url.searchParams.delete(key);
+    url.searchParams.delete(key)
   }
-  return url;
-};
+  return url
+}
 
 // Function to replace state with query
 const replaceStateWithQuery = (values) => {
-  const url = new URL(window.location.toString());
+  const url = new URL(window.location.toString())
   for (const [k, v] of Object.entries(values)) {
     if (v) {
-      url.searchParams.set(encodeURIComponent(k), encodeURIComponent(v));
+      url.searchParams.set(encodeURIComponent(k), encodeURIComponent(v))
     } else {
-      url.searchParams.delete(k);
+      url.searchParams.delete(k)
     }
   }
-  history.replaceState({}, "", url);
-};
+  history.replaceState({}, "", url)
+}
 
 // Function to save language to localStorage
 const saveLanguageToStorage = (lang) => {
-  localStorage.setItem("lang", lang);
-};
+  localStorage.setItem("lang", lang)
+}
 
 // Function to update language in the store
 const updateLanguageStore = (lang) => {
-  currentLang.set(lang);
-};
+  currentLang.set(lang)
+}
 
 // Function to get translation module path
-const getTranslationModulePath = (lang) => `${path}/${lang}.json`;
+const getTranslationModulePath = (lang) => `${path}/${lang}.json`
 
 // Function to update loaded translations store
 const updateLoadedTranslations = (lang, translationData) => {
-  loadedTranslations.update(translations => ({
+  loadedTranslations.update((translations) => ({
     ...translations,
-    [lang]: translationData
-  }));
-};
+    [lang]: translationData,
+  }))
+}
 
 // Function to load a translation file
 async function loadTranslation(lang) {
   // If already loaded, don't reload
-  const translations = get(loadedTranslations);
-  if (translations[lang]) return translations[lang];
-  
+  const translations = get(loadedTranslations)
+  if (translations[lang]) return translations[lang]
+
   try {
     // Dynamically import the translation file
-    const modulePath = getTranslationModulePath(lang);
-    const module = await translationModules[modulePath]();
-    
+    const modulePath = getTranslationModulePath(lang)
+    const module = await translationModules[modulePath]()
+
     // Update the loaded translations store
-    updateLoadedTranslations(lang, module.default);
-    
-    return module.default;
+    updateLoadedTranslations(lang, module.default)
+
+    return module.default
   } catch (error) {
-    console.error(`Failed to load translations for ${lang}:`, error);
-    return null;
+    console.error(`Failed to load translations for ${lang}:`, error)
+    return null
   }
 }
 
 // Function to replace variables in a translation string
 const replaceVariables = (text, vars) => {
   Object.keys(vars || {}).forEach((k) => {
-    const regex = new RegExp(`{{${k}}}`, "g");
-    text = text.replace(regex, vars[k]);
-  });
-  return text;
-};
+    const regex = new RegExp(`{{${k}}}`, "g")
+    text = text.replace(regex, vars[k])
+  })
+  return text
+}
 
 // Function to get translation text for a given key and language
 const getTranslationText = (translations, lang, key) => {
-  return translations[lang]?.[key];
-};
+  return translations[lang]?.[key]
+}
 
 // Function to handle missing translation keys
 const handleMissingTranslation = (translations, currentLang, key, returnFallback) => {
   if (translations[currentLang]?.[key] === undefined) {
     if (translations[defaultLang]?.[key] === undefined) {
-      return key;
+      return key
     }
     if (returnFallback === false) {
-      return key;
+      return key
     }
     console.warn(
-      `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`
-    );
-    return translations[defaultLang][key];
+      `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`,
+    )
+    return translations[defaultLang][key]
   }
-  return null;
-};
+  return null
+}
 
 // Function to translate a key synchronously
 const translateSync = (currentLang, key, vars, returnFallback) => {
-  if (!key) throw new Error("no key provided to $t()");
+  if (!key) throw new Error("no key provided to $t()")
 
   // Special case for language metadata
   if (key.startsWith("__") && languageMetadata[currentLang]?.[key]) {
-    return languageMetadata[currentLang][key];
+    return languageMetadata[currentLang][key]
   }
 
   // Get current loaded translations
-  const translations = get(loadedTranslations);
+  const translations = get(loadedTranslations)
 
   // If language not loaded yet, return key or fallback
   if (!translations[currentLang]) {
-    loadTranslation(currentLang);
+    loadTranslation(currentLang)
     if (returnFallback === false) {
-      return key;
+      return key
     }
-    const defaultText = getTranslationText(translations, defaultLang, key);
-    return defaultText ? replaceVariables(defaultText, vars) : key;
+    const defaultText = getTranslationText(translations, defaultLang, key)
+    return defaultText ? replaceVariables(defaultText, vars) : key
   }
 
   // Get the translation text
-  let text = getTranslationText(translations, currentLang, key);
+  let text = getTranslationText(translations, currentLang, key)
 
   if (!text) {
-    text = handleMissingTranslation(translations, currentLang, key, returnFallback);
+    text = handleMissingTranslation(translations, currentLang, key, returnFallback)
   }
 
-  return replaceVariables(text, vars);
-};
+  return replaceVariables(text, vars)
+}
 
 export const t = derived(
   currentLang,
   ($currentLang) =>
     (key, vars = {}, lang = $currentLang, returnFallback = true) =>
-      translateSync(lang, key, vars, returnFallback)
+      translateSync(lang, key, vars, returnFallback),
 )
 
 // Function to update the document's language and direction attributes
 const updateDocumentLanguageAttributes = (lang) => {
-  document.documentElement.setAttribute("lang", lang);
-  const direction = languageMetadata[lang]?.__direction || "ltr";
-  document.documentElement.setAttribute("dir", direction);
-};
+  document.documentElement.setAttribute("lang", lang)
+  const direction = languageMetadata[lang]?.__direction || "ltr"
+  document.documentElement.setAttribute("dir", direction)
+}
 
 // Function to handle storage event for language changes
 const handleStorageEvent = (event) => {
-  if (event.key === 'lang' && event.newValue && langs.includes(event.newValue)) {
-    setLang(event.newValue, false);
+  if (event.key === "lang" && event.newValue && langs.includes(event.newValue)) {
+    setLang(event.newValue, false)
   }
-};
+}
 
 // Function to handle navigation end event
 const handleNavigationEnd = () => {
-  const savedLang = localStorage.getItem("lang");
+  const savedLang = localStorage.getItem("lang")
   if (savedLang && langs.includes(savedLang)) {
     if (get(currentLang) !== savedLang) {
-      setLang(savedLang, false);
+      setLang(savedLang, false)
     }
   }
-};
+}
 
 // Initialize from localStorage if available
-if (typeof window !== 'undefined') {
-
-    window.addEventListener('storage', handleStorageEvent);
-    document.addEventListener('sveltekit:navigation-end', handleNavigationEnd);
-
+if (typeof window !== "undefined") {
+  window.addEventListener("storage", handleStorageEvent)
+  document.addEventListener("sveltekit:navigation-end", handleNavigationEnd)
 }
 
 // Function to get a valid language from localStorage or default
 const getValidLanguage = () => {
-  const savedLang = localStorage.getItem("lang") || defaultLang;
-  return langs.includes(savedLang) ? savedLang : defaultLang;
-};
+  const savedLang = localStorage.getItem("lang") || defaultLang
+  return langs.includes(savedLang) ? savedLang : defaultLang
+}
 
 // Function to set the language
 export const setLang = async (lang, replaceQuery = true) => {
   if (!isValidLanguage(lang)) {
-    return null;
+    return null
   }
-  
+
   // Load the translations for the new language
-  await loadTranslation(lang);
-  
-  updateLanguageStore(lang);
+  await loadTranslation(lang)
+
+  updateLanguageStore(lang)
   if (replaceQuery) {
-    replaceStateWithQuery({ lang });
+    replaceStateWithQuery({ lang })
   }
-  saveLanguageToStorage(lang);
-  updateDocumentLanguageAttributes(lang);
-};
+  saveLanguageToStorage(lang)
+  updateDocumentLanguageAttributes(lang)
+}

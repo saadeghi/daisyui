@@ -11,9 +11,9 @@
     <div class="h-6"></div>
     {#if import.meta.env.DEV}
       <div
-        class="carbonads-responsive mx-auto max-xl:w-[22rem] xl:h-[13rem] bg-base-200 rounded-box flex min-h-[100px] items-center justify-center"
+        class="carbonads-responsive bg-base-200 rounded-box mx-auto flex min-h-[100px] items-center justify-center max-xl:w-[22rem] xl:h-[13rem]"
       >
-        <div class="text-xs text-base-content/30">Ads</div>
+        <div class="text-base-content/30 text-xs">Ads</div>
       </div>
     {:else}
       <div class="carbonads-responsive mx-auto flex min-h-[100px] items-center justify-center">

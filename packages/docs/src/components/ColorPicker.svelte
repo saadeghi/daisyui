@@ -83,7 +83,7 @@
 
 <div class="relative inline-block align-middle">
   <button
-    class="w-6 h-6 rounded border border-gray-300 cursor-pointer"
+    class="h-6 w-6 cursor-pointer rounded border border-gray-300"
     style:background-color={currentColor}
     on:click={togglePicker}
     aria-label="Open color picker"
@@ -91,9 +91,9 @@
 
   {#if isOpen}
     <div class="fixed inset-0 z-40" on:click={togglePicker} />
-    <div class="absolute z-50 mt-2 p-4 bg-white rounded-2xl shadow-lg">
+    <div class="absolute z-50 mt-2 rounded-2xl bg-white p-4 shadow-lg">
       <div
-        class="w-52 h-52 mb-4 cursor-crosshair relative border rounded-lg overflow-hidden border-black/10 grid"
+        class="relative mb-4 grid h-52 w-52 cursor-crosshair overflow-hidden rounded-lg border border-black/10"
         bind:this={pickerElement}
         on:mousedown={handleMouseDown}
       >
@@ -119,7 +119,7 @@
 
         <!-- Selection indicator -->
         <div
-          class="absolute w-4 h-4 rounded-full border-2 border-white shadow-sm pointer-events-none"
+          class="pointer-events-none absolute h-4 w-4 rounded-full border-2 border-white shadow-sm"
           style:left={`${(chroma / 0.4) * 100}%`}
           style:top={`${100 - lightness}%`}
           style:transform="translate(-50%, -50%)"
@@ -131,7 +131,7 @@
         min="0"
         max="360"
         bind:value={hue}
-        class="w-full h-5 appearance-none cursor-pointer rounded-xl px-[2px]"
+        class="h-5 w-full cursor-pointer appearance-none rounded-xl px-[2px]"
         style={`background: linear-gradient(to right,
           oklch(${lightness}% 0.3 0),
           oklch(${lightness}% 0.3 65),
@@ -143,7 +143,7 @@
         )`}
       />
 
-      <div class="mt-2 text-sm text-gray-600 tabular-nums flex gap-2">
+      <div class="mt-2 flex gap-2 text-sm text-gray-600 tabular-nums">
         <div
           class="size-6 rounded"
           style:background-color={`oklch(${lightness.toFixed(0)}% ${chroma.toFixed(2)} ${hue.toFixed(0)})`}
@@ -153,7 +153,7 @@
       </div>
 
       <button
-        class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-full"
+        class="mt-4 w-full rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
         on:click={updateColor}
       >
         Apply

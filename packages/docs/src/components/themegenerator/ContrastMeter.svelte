@@ -17,8 +17,8 @@
 </script>
 
 <div class="tooltip" data-tip={`Contrast ${wcagContrast(color1, color2).toFixed(2)}`}>
-  <div class="flex flex-col gap-1 items-end">
-    <div class="flex items-center h-6 gap-2">
+  <div class="flex flex-col items-end gap-1">
+    <div class="flex h-6 items-center gap-2">
       {#if ["low", "bad"].includes(contrastRating(color1, color2))}
         <span class="text-[10px]">Low contrast</span>
         <svg

@@ -16,7 +16,7 @@
 
 <div
   data-sveltekit-preload-data
-  class={`bg-base-100/90 sticky top-0 z-20 hidden navbar items-center gap-2 px-4 py-2 backdrop-blur ${
+  class={`bg-base-100/90 navbar sticky top-0 z-20 hidden items-center gap-2 px-4 py-2 backdrop-blur ${
     $page.url.pathname == "/" ? "" : "lg:flex"
   } ${switchNavbarStyle ? "shadow-xs" : ""}`}
 >
@@ -24,7 +24,7 @@
     href="/"
     aria-current="page"
     aria-label="Homepage"
-    class="flex-0 btn btn-ghost px-2"
+    class="btn btn-ghost flex-0 px-2"
     oncontextmenu={(e) => {
       e.preventDefault()
       contextMenuEl.openContextMenu(e)

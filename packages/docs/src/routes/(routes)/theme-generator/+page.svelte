@@ -963,7 +963,8 @@
 
 <style>
   .theme-generator-btn {
-    background-image: radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%),
+    background-image:
+      radial-gradient(ellipse at 50% 270%, #0069ff47, transparent 60%),
       radial-gradient(ellipse at 20% 150%, #00ffca47, transparent 60%),
       radial-gradient(ellipse at 70% 200%, #6a00ff47, transparent 60%);
   }

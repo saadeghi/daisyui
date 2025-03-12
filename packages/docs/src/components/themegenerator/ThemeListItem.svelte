@@ -5,11 +5,11 @@
 <li>
   <button
     {style}
-    class={`px-2 gap-3 ${isCurrent ? "bg-base-content/10" : ""}`}
+    class={`gap-3 px-2 ${isCurrent ? "bg-base-content/10" : ""}`}
     onclick={() => loadTheme(id)}
   >
     <div
-      class="grid grid-cols-2 gap-0.5 p-1 rounded-md shadow-sm shrink-0"
+      class="grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm"
       style={`background-color: ${theme["--color-base-100"]}`}
     >
       <div

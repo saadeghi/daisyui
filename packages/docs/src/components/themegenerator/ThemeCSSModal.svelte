@@ -41,9 +41,9 @@
 </script>
 
 <dialog class="modal max-md:modal-bottom" bind:this={dialog} onclose={() => (showCssModal = false)}>
-  <div class="modal-box border border-base-300 md:max-w-[40rem] max-sm:modal-bottom">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="flex gap-2 items-center">
+  <div class="modal-box border-base-300 max-sm:modal-bottom border md:max-w-[40rem]">
+    <div class="mb-4 flex items-center justify-between">
+      <h3 class="flex items-center gap-2">
         <svg
           class="text-success"
           width="16"
@@ -108,12 +108,12 @@
     </div>
     <span class="text-xs">
       <span class="text-base-content/40">Add it after</span>
-      <span class="text-base-content/50 italic font-bold">@plugin "daisyui";</span></span
+      <span class="text-base-content/50 font-bold italic">@plugin "daisyui";</span></span
     >
     <textarea
       spellcheck="false"
       data-theme="dark"
-      class="block resize-none textarea textarea-border w-full max-w-none h-96 font-mono textarea-xs min-h-80"
+      class="textarea textarea-border textarea-xs block h-96 min-h-80 w-full max-w-none resize-none font-mono"
       bind:value={themeCSS}
       oninput={handleThemeCSSInput}
     ></textarea>

@@ -3,7 +3,7 @@
 </script>
 
 <div class="grid min-h-[80vh] font-[sans-serif]">
-  <div class="text-center place-content-center">
+  <div class="place-content-center text-center">
     <h1 class="text-4xl font-black opacity-10">Error</h1>
     <p>{$page.error.message}</p>
     <a class="underline" href="/">Go back</a>

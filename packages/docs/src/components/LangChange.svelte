@@ -1,14 +1,13 @@
 <script>
   import { currentLang, langs, setLang } from "$lib/i18n.svelte.js"
   import { t } from "$lib/i18n.svelte.js"
-  
+
   // Create a sorted array of languages based on languageMetadata order
   // This will be used instead of the unsorted 'langs' array
   import { languageMetadata } from "$lib/i18n.svelte.js"
-  
+
   // Filter langs to only include languages that exist in both languageMetadata and langs
-  const sortedLangs = Object.keys(languageMetadata)
-    .filter(lang => langs.includes(lang));
+  const sortedLangs = Object.keys(languageMetadata).filter((lang) => langs.includes(lang))
 </script>
 
 <div class="dropdown dropdown-end">

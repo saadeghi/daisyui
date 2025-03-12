@@ -32,7 +32,7 @@
 
 <div
   data-tip={isClipboardButtonPressed ? "copied" : "copy"}
-  class="tooltip tooltip-left tooltip-accent m-2 [justify-self:right] self-start"
+  class="tooltip tooltip-left tooltip-accent m-2 self-start [justify-self:right]"
 >
   <button
     class="btn btn-square btn-sm btn-neutral"

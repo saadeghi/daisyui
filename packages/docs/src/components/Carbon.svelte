@@ -24,4 +24,4 @@
   })
 </script>
 
-<div class="print:hidden w-full" id="carbon-container"></div>
+<div class="w-full print:hidden" id="carbon-container"></div>

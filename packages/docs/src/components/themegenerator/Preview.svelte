@@ -4,16 +4,16 @@
 </script>
 
 <div class="px-8 py-6">
-  <h3 class="font-bold px-2 mb-6">Preview</h3>
+  <h3 class="mb-6 px-2 font-bold">Preview</h3>
 
   <div
-    class="sm:columns-2 md:columns-1 lg:columns-1 xl:columns-3 text-base-content [&>.card]:bg-base-100 lg:gap-6 mx-auto [&>*]:mb-6 [&>*]:break-inside-avoid [&_:is(div,button)]:[transition:background-color_0ms,border-color_100ms,box-shadow_300ms,border-radius_500ms_ease-out] pb-20"
+    class="text-base-content [&>.card]:bg-base-100 mx-auto pb-20 sm:columns-2 md:columns-1 lg:columns-1 lg:gap-6 xl:columns-3 [&_:is(div,button)]:[transition:background-color_0ms,border-color_100ms,box-shadow_300ms,border-radius_500ms_ease-out] [&>*]:mb-6 [&>*]:break-inside-avoid"
   >
     <!-- filters -->
     <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
-          <span class="font-semibold flex items-center gap-2">
+        <h2 class="flex items-center justify-between">
+          <span class="flex items-center gap-2 font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,7 +35,7 @@
             </svg>
             Preview
           </span>
-          <span class="text-xs link">more</span>
+          <span class="link text-xs">more</span>
         </h2>
         <div>
           <span class="badge badge-soft">
@@ -67,40 +67,40 @@
         </div>
         <div class="flex flex-col">
           <div
-            class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2"
+            class="border-b-base-content/5 flex items-center justify-between gap-2 border-b border-dashed py-2"
           >
-            <label class="flex items-center gap-2 select-none cursor-pointer">
+            <label class="flex cursor-pointer items-center gap-2 select-none">
               <input type="checkbox" class="checkbox checkbox-sm" checked />
               <span>Hoodies</span>
             </label>
-            <span class="badge badge-xs font-mono badge-neutral">25</span>
+            <span class="badge badge-xs badge-neutral font-mono">25</span>
           </div>
           <div
-            class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2"
+            class="border-b-base-content/5 flex items-center justify-between gap-2 border-b border-dashed py-2"
           >
-            <label class="flex items-center gap-2 select-none cursor-pointer">
+            <label class="flex cursor-pointer items-center gap-2 select-none">
               <input type="checkbox" class="checkbox checkbox-sm" checked />
               <span>Bags</span>
             </label>
-            <span class="badge badge-xs font-mono badge-neutral">3</span>
+            <span class="badge badge-xs badge-neutral font-mono">3</span>
           </div>
           <div
-            class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2"
+            class="border-b-base-content/5 flex items-center justify-between gap-2 border-b border-dashed py-2"
           >
-            <label class="flex items-center gap-2 select-none cursor-pointer">
+            <label class="flex cursor-pointer items-center gap-2 select-none">
               <input type="checkbox" class="checkbox checkbox-sm" />
               <span>Shoes</span>
             </label>
-            <span class="badge badge-xs font-mono badge-warning">0</span>
+            <span class="badge badge-xs badge-warning font-mono">0</span>
           </div>
           <div
-            class="flex justify-between items-center gap-2 border-b border-dashed border-b-base-content/5 py-2"
+            class="border-b-base-content/5 flex items-center justify-between gap-2 border-b border-dashed py-2"
           >
-            <label class="flex items-center gap-2 select-none cursor-pointer">
+            <label class="flex cursor-pointer items-center gap-2 select-none">
               <input type="checkbox" class="checkbox checkbox-sm" />
               <span>Accessories</span>
             </label>
-            <span class="badge badge-xs font-mono badge-neutral">4</span>
+            <span class="badge badge-xs badge-neutral font-mono">4</span>
           </div>
         </div>
       </div>
@@ -109,40 +109,40 @@
     <!-- calendar -->
     <div class="card card-border border-base-300 card-sm overflow-hidden">
       <div class="card-body gap-4">
-        <div class="grid grid-cols-7 border-b border-dashed border-b-base-300 pb-3">
-          <div class="flex flex-col items-center py-1 px-2 rounded-field">
+        <div class="border-b-base-300 grid grid-cols-7 border-b border-dashed pb-3">
+          <div class="rounded-field flex flex-col items-center px-2 py-1">
             <span class="text-sm font-semibold">12</span>
             <span class="text-[10px] font-semibold opacity-50">M</span>
           </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-field">
+          <div class="rounded-field flex flex-col items-center px-2 py-1">
             <span class="text-sm font-semibold">13</span>
             <span class="text-[10px] font-semibold opacity-50">T</span>
           </div>
           <div
-            class="flex flex-col items-center py-1 px-2 rounded-field bg-primary text-primary-content"
+            class="rounded-field bg-primary text-primary-content flex flex-col items-center px-2 py-1"
           >
             <span class="text-sm font-semibold">14</span>
             <span class="text-[10px] font-semibold opacity-50">W</span>
           </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-field">
+          <div class="rounded-field flex flex-col items-center px-2 py-1">
             <span class="text-sm font-semibold">15</span>
             <span class="text-[10px] font-semibold opacity-50">T</span>
           </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-field">
+          <div class="rounded-field flex flex-col items-center px-2 py-1">
             <span class="text-sm font-semibold">16</span>
             <span class="text-[10px] font-semibold opacity-50">F</span>
           </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-field">
+          <div class="rounded-field flex flex-col items-center px-2 py-1">
             <span class="text-sm font-semibold">17</span>
             <span class="text-[10px] font-semibold opacity-50">S</span>
           </div>
-          <div class="flex flex-col items-center py-1 px-2 rounded-field">
+          <div class="rounded-field flex flex-col items-center px-2 py-1">
             <span class="text-sm font-semibold">18</span>
             <span class="text-[10px] font-semibold opacity-50">S</span>
           </div>
         </div>
         <div>
-          <label class="input input-sm input-border w-auto flex gap-2 items-center">
+          <label class="input input-sm input-border flex w-auto items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -159,7 +159,7 @@
           </label>
         </div>
         <div class="flex flex-col gap-2">
-          <label class="flex gap-2 items-center cursor-pointer">
+          <label class="flex cursor-pointer items-center gap-2">
             <input type="checkbox" class="toggle toggle-sm toggle-primary" checked />
             <span class="text-xs">Show all day events</span>
           </label>
@@ -202,8 +202,8 @@
     <!-- range -->
     <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
-          <span class="font-semibold flex items-center gap-2">
+        <h2 class="flex items-center justify-between">
+          <span class="flex items-center gap-2 font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -226,7 +226,7 @@
             Price range
           </span>
         </h2>
-        <div class="text-5xl font-extralight text-center">{sliderValue}</div>
+        <div class="text-center text-5xl font-extralight">{sliderValue}</div>
         <input type="range" class="range range-sm" bind:value={sliderValue} />
       </div>
     </div>
@@ -241,11 +241,11 @@
         />
       </figure>
       <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
+        <h2 class="flex items-center justify-between">
           <span class="font-semibold">Nike Shoes</span>
           <span class="badge badge-success badge-sm">SALE</span>
         </h2>
-        <div class="flex gap-2 items-center">
+        <div class="flex items-center gap-2">
           <div class="rating rating-xs">
             <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
             <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
@@ -257,7 +257,7 @@
         </div>
         <div>
           <span class="text-2xl font-semibold">$120</span>
-          <span class="text-sm opacity-60 line-through">$150</span>
+          <span class="text-sm line-through opacity-60">$150</span>
         </div>
       </div>
     </div>
@@ -266,12 +266,12 @@
     <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
         <div class="join">
-          <label class="join-item input-border flex input items-center gap-2 w-auto">
+          <label class="join-item input-border input flex w-auto items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="h-4 w-4 opacity-70 shrink-0"
+              class="h-4 w-4 shrink-0 opacity-70"
             >
               <path
                 fill-rule="evenodd"
@@ -288,10 +288,10 @@
 
     <!-- form -->
     <div class="card card-border border-base-300 card-sm overflow-hidden">
-      <div class="border-b border-base-300 border-dashed">
+      <div class="border-base-300 border-b border-dashed">
         <div class="flex items-center gap-2 p-4">
           <div class="grow">
-            <div class="text-sm font-medium flex gap-2 items-center">
+            <div class="flex items-center gap-2 text-sm font-medium">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -315,7 +315,7 @@
         <p class="text-xs opacity-60">Registration is free and only takes a minute</p>
 
         <div class="flex flex-col gap-1">
-          <label class="input input-border flex items-center gap-2 max-w-none">
+          <label class="input input-border flex max-w-none items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -331,7 +331,7 @@
         </div>
 
         <div class="flex flex-col gap-1">
-          <label class="input input-border flex items-center gap-2 max-w-none">
+          <label class="input input-border flex max-w-none items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -346,17 +346,17 @@
             </svg>
             <input type="password" class="grow" placeholder="password" />
           </label>
-          <span class="text-[0.6875rem] px-1 flex gap-2 items-center text-base-content/60">
-            <span class="status inline-block status-error"></span>
+          <span class="text-base-content/60 flex items-center gap-2 px-1 text-[0.6875rem]">
+            <span class="status status-error inline-block"></span>
             Password must be 8+ characters
           </span>
         </div>
 
-        <label class="flex gap-2 items-center text-xs text-base-content/60">
+        <label class="text-base-content/60 flex items-center gap-2 text-xs">
           <input type="checkbox" class="toggle toggle-xs" />
           Accept terms without reading
         </label>
-        <label class="flex gap-2 items-center text-xs text-base-content/60">
+        <label class="text-base-content/60 flex items-center gap-2 text-xs">
           <input type="checkbox" class="toggle toggle-xs" />
           Subscribe to spam emails
         </label>
@@ -371,7 +371,7 @@
     <!-- chart -->
     <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
-        <div class="flex gap-2 mt-4 items-end h-24 *:rounded-sm *:bg-base-content *:w-full">
+        <div class="*:bg-base-content mt-4 flex h-24 items-end gap-2 *:w-full *:rounded-sm">
           <div style="height: 10%"></div>
           <div style="height: 20%"></div>
           <div style="height: 10%"></div>
@@ -389,7 +389,7 @@
           <div style="height: 80%"></div>
           <div style="height: 90%"></div>
         </div>
-        <p class="text-xs py-3">
+        <p class="py-3 text-xs">
           Sales volume reached $12,450 this week, showing a 15% increase from the previous period.
         </p>
         <div class="grid grid-cols-2 gap-2">
@@ -400,20 +400,20 @@
     </div>
 
     <!-- stat -->
-    <div class="card w-full card-border border-base-300">
-      <div class="stats overflow-hidden bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
+    <div class="card card-border border-base-300 w-full">
+      <div class="stats bg-base-100 w-full overflow-hidden shadow-[0_.1rem_.5rem_-.3rem_#0003]">
         <div class="stat">
           <div class="stat-figure">
             <div class="radial-progress" style="--value:91;--size:3rem;" role="progressbar">91</div>
           </div>
           <div class="stat-title">Page Score</div>
           <div class="stat-value">91<span class="text-sm">/100</span></div>
-          <div class="stat-desc flex gap-1 items-center">
+          <div class="stat-desc flex items-center gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="size-4 text-success"
+              class="text-success size-4"
             >
               <path
                 fill-rule="evenodd"
@@ -430,8 +430,8 @@
     <!-- list -->
     <div class="card card-border border-base-300 card-sm">
       <div class="card-body gap-4">
-        <h2 class="flex justify-between items-center">
-          <span class="font-semibold items-center flex gap-2">
+        <h2 class="flex items-center justify-between">
+          <span class="flex items-center gap-2 font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -451,31 +451,31 @@
         </h2>
         <div class="flex flex-col text-xs">
           <div
-            class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2"
+            class="border-t-base-content/5 flex items-center justify-between gap-2 border-t border-dashed py-2"
           >
             Charlie Chapman
             <span class="badge badge-xs badge-info">Send</span>
           </div>
           <div
-            class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2"
+            class="border-t-base-content/5 flex items-center justify-between gap-2 border-t border-dashed py-2"
           >
             Howard Hudson
             <span class="badge badge-xs badge-error">Failed</span>
           </div>
           <div
-            class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2"
+            class="border-t-base-content/5 flex items-center justify-between gap-2 border-t border-dashed py-2"
           >
             Fiona Fisher
             <span class="badge badge-xs badge-warning">In progress</span>
           </div>
           <div
-            class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2"
+            class="border-t-base-content/5 flex items-center justify-between gap-2 border-t border-dashed py-2"
           >
             Nick Nelson
             <span class="badge badge-xs badge-success">Completed</span>
           </div>
           <div
-            class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2"
+            class="border-t-base-content/5 flex items-center justify-between gap-2 border-t border-dashed py-2"
           >
             Amanda Anderson
             <span class="badge badge-xs badge-success">Completed</span>
@@ -485,19 +485,19 @@
     </div>
 
     <!-- stat -->
-    <div class="card w-full card-border border-base-300">
+    <div class="card card-border border-base-300 w-full">
       <div class="stats">
         <div class="stat">
           <div class="stat-title">
             {new Date().toLocaleString("default", { month: "long" })} Revenue
           </div>
           <div class="stat-value">$32,400</div>
-          <div class="stat-desc flex gap-2 items-center">
+          <div class="stat-desc flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="size-4 text-success"
+              class="text-success size-4"
             >
               <path
                 fill-rule="evenodd"
@@ -513,10 +513,10 @@
 
     <!-- textarea -->
     <div class="card card-border border-base-300 card-sm overflow-hidden">
-      <div class="border-b border-base-300 border-dashed">
+      <div class="border-base-300 border-b border-dashed">
         <div class="flex items-center gap-2 p-4">
           <div class="grow">
-            <div class="text-sm font-medium flex items-center gap-2">
+            <div class="flex items-center gap-2 text-sm font-medium">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -537,7 +537,7 @@
         </div>
       </div>
       <div class="card-body gap-4">
-        <div class="flex justify-between items-center">
+        <div class="flex items-center justify-between">
           <div class="join">
             <input
               class="join-item btn btn-xs px-3 font-bold"
@@ -566,7 +566,7 @@
           placeholder="What's happening?"
         ></textarea>
 
-        <p class="px-2 opacity-40 text-xs">1200 characters remaining</p>
+        <p class="px-2 text-xs opacity-40">1200 characters remaining</p>
 
         <div class="card-actions grid grid-cols-2">
           <button class="btn">Draft</button>
@@ -629,7 +629,7 @@
         </div>
       </div>
 
-      <div class="dock dock-sm bg-base-300 px-2 relative">
+      <div class="dock dock-sm bg-base-300 relative px-2">
         <button class="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -813,7 +813,7 @@
     <!-- music -->
     <div class="card card-border border-base-300 card-sm overflow-hidden">
       <div class="card-body my-2">
-        <div class="flex justify-around items-center">
+        <div class="flex items-center justify-around">
           <button class="btn btn-square btn-neutral">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -868,21 +868,21 @@
           <p class="text-xs opacity-50">Project Manager talking for 2 hours</p>
         </div>
       </div>
-      <div class="flex flex-col px-6 py-4 border-t border-base-300">
+      <div class="border-base-300 flex flex-col border-t px-6 py-4">
         <div class="relative mt-6">
           <div
-            class="absolute tooltip top-2 tooltip-open before:text-xs"
+            class="tooltip tooltip-open absolute top-2 before:text-xs"
             style="inset-inline-start:10%"
             data-tip="13:39"
           ></div>
           <progress class="progress" value="10" max="100"></progress>
         </div>
-        <div class="flex text-xs opacity-50 justify-between">
+        <div class="flex justify-between text-xs opacity-50">
           <span>13:39</span>
           <span>120:00</span>
         </div>
       </div>
-      <div class="flex justify-around items-center pb-6 px-2">
+      <div class="flex items-center justify-around px-2 pb-6">
         <button class="btn btn-square">
           <svg
             width="16"
@@ -1009,7 +1009,7 @@
     </div>
 
     <!-- code -->
-    <div class="card w-full card-border border-base-300">
+    <div class="card card-border border-base-300 w-full">
       <div class="mockup-code">
         <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
         <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
@@ -1019,7 +1019,7 @@
 
     <!-- alerts -->
     <div class="flex flex-col gap-4">
-      <div class="alert text-xs font-bold max-sm:alert-vertical alert-info">
+      <div class="alert max-sm:alert-vertical alert-info text-xs font-bold">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -1036,7 +1036,7 @@
         </svg>
         There are 9 new messages
       </div>
-      <div class="alert text-xs font-bold alert-outline max-sm:alert-vertical alert-success">
+      <div class="alert alert-outline max-sm:alert-vertical alert-success text-xs font-bold">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -1053,7 +1053,7 @@
         </svg>
         Verification process completed
       </div>
-      <div class="alert text-xs font-bold alert-dash max-sm:alert-vertical alert-warning">
+      <div class="alert alert-dash max-sm:alert-vertical alert-warning text-xs font-bold">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -1070,7 +1070,7 @@
         </svg>
         <span><span class="link">Click</span> to verify your email</span>
       </div>
-      <div class="alert text-xs font-bold alert-soft max-sm:alert-vertical alert-error">
+      <div class="alert alert-soft max-sm:alert-vertical alert-error text-xs font-bold">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -1097,7 +1097,7 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            class="h-5 w-5 text-primary"
+            class="text-primary h-5 w-5"
           >
             <path
               fill-rule="evenodd"
@@ -1116,7 +1116,7 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            class="h-5 w-5 text-primary"
+            class="text-primary h-5 w-5"
           >
             <path
               fill-rule="evenodd"
@@ -1135,7 +1135,7 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            class="h-5 w-5 text-primary"
+            class="text-primary h-5 w-5"
           >
             <path
               fill-rule="evenodd"
@@ -1154,7 +1154,7 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            class="h-5 w-5 text-primary"
+            class="text-primary h-5 w-5"
           >
             <path
               fill-rule="evenodd"
@@ -1225,11 +1225,11 @@
     </ul>
 
     <!-- pricing -->
-    <div class="card card-border border-base-300 bg-linear-to-bl from-base-content/5 to-50%">
+    <div class="card card-border border-base-300 from-base-content/5 bg-linear-to-bl to-50%">
       <div class="flex justify-center">
-        <div class="tabs tabs-box inline-flex flex-nowrap m-4 bg-base-300">
+        <div class="tabs tabs-box bg-base-300 m-4 inline-flex flex-nowrap">
           <input type="radio" name="my_tabs_1" role="tab" class="tab w-1/2" aria-label="Monthly" />
-          <div class="w-1/2 indicator">
+          <div class="indicator w-1/2">
             <div class="indicator-item badge badge-warning badge-xs">SALE</div>
             <input
               type="radio"
@@ -1244,18 +1244,18 @@
       </div>
       <div class="card-body gap-4">
         <div class="flex flex-col">
-          <h4 class="tracking-wide opacity-50 font-bold">Starter Plan</h4>
+          <h4 class="font-bold tracking-wide opacity-50">Starter Plan</h4>
           <div>
             <span class="text-4xl font-black">$200</span><span class="opacity-50">/month</span>
           </div>
         </div>
-        <div class="flex flex-col text-xs my-2">
-          <div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
+        <div class="my-2 flex flex-col text-xs">
+          <div class="border-b-accent/5 flex items-center gap-2 border-b pb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="size-4 text-success"
+              class="text-success size-4"
             >
               <path
                 fill-rule="evenodd"
@@ -1265,12 +1265,12 @@
             </svg>
             20 Tokens per day
           </div>
-          <div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
+          <div class="border-b-accent/5 flex items-center gap-2 border-b pb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="size-4 text-success"
+              class="text-success size-4"
             >
               <path
                 fill-rule="evenodd"
@@ -1280,12 +1280,12 @@
             </svg>
             10 Projects
           </div>
-          <div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
+          <div class="border-b-accent/5 flex items-center gap-2 border-b pb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="size-4 text-success"
+              class="text-success size-4"
             >
               <path
                 fill-rule="evenodd"
@@ -1295,12 +1295,12 @@
             </svg>
             API Access
           </div>
-          <div class="flex gap-2 items-center">
+          <div class="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="size-4 text-error"
+              class="text-error size-4"
             >
               <path
                 fill-rule="evenodd"
@@ -1316,7 +1316,7 @@
     </div>
 
     <div
-      class="border bg-base-100 overflow-hidden p-1 border-base-300 rounded-box shadow-[0_.1rem_.5rem_-.3rem_#0003] [&_#carbonads]:bg-transparent! [&_img]:[border-radius:calc(var(--radius-box)-.5rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-.5rem)]!"
+      class="bg-base-100 border-base-300 rounded-box overflow-hidden border p-1 shadow-[0_.1rem_.5rem_-.3rem_#0003] [&_#carbonads]:bg-transparent! [&_img]:[border-radius:calc(var(--radius-box)-.5rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-.5rem)]!"
     >
       <Carbon />
     </div>

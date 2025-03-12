@@ -198,16 +198,16 @@
   }
 </script>
 
-<h3 class="font-bold text-lg px-2 my-4">Component Variants</h3>
+<h3 class="my-4 px-2 text-lg font-bold">Component Variants</h3>
 <div>
   {#each Object.entries(componentGrid) as [key, { element, icon, baseClass, types, colors, sizes, label, attributes, content }]}
-    <h5 class="font-semibold py-2 px-3 mt-10">{key}</h5>
+    <h5 class="mt-10 px-3 py-2 font-semibold">{key}</h5>
     {#each types as type}
       {#if type}
-        <h5 class="font-semibold py-2 px-3 mt-10">{type}</h5>
+        <h5 class="mt-10 px-3 py-2 font-semibold">{type}</h5>
       {/if}
       {#each colors as color}
-        <div class="flex flex-wrap gap-3 my-6">
+        <div class="my-6 flex flex-wrap gap-3">
           {#each sizes as size}
             {#if element === "input"}
               <svelte:element

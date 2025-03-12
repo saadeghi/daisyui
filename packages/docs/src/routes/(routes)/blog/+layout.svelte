@@ -93,7 +93,7 @@
                   class="hidden"
                   checked="checked"
                 />
-                <div class="flex flex-col gap-2 w-full max-w-sm">
+                <div class="flex w-full max-w-sm flex-col gap-2">
                   <label for="mce-EMAIL">Email Address</label>
                   <div class="join">
                     <input
