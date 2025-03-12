@@ -4,8 +4,15 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.0.3 (2025-03-12)
 
-## 5.0.2 (2025-03-11)
+### Bug Fixes
 
+* fix: CDN color opacity utilities
+* fix: dropdown-end position
+* fix: diff outline
+* fix: diff-resizer size and placement
+* fix: checked button style
+
+## 5.0.2 (2025-03-11)
 
 ### Bug Fixes
 
