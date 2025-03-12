@@ -4,3 +4,6 @@ pnpm-lock.yaml
 yarn.lock
 bun.lockb
 bun.lock
+
+# files
+packages/daisyui/functions/variables.css

@@ -3,7 +3,7 @@
   direction: ltr;
   container-type: inline-size;
   grid-template-columns: auto 1fr;
-  &:focus,
+  &:focus-visible,
   &:has(.diff-item-1:focus) {
     @apply outline-base-content outline-2 outline-offset-1;
   }
@@ -38,10 +38,9 @@
 }
 .diff-resizer {
   @apply relative top-1/2 z-1 col-start-1 row-start-1 h-2 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
-  transform: scaleY(3);
+  transform: scaleY(3) translate(0.35rem, 0.08rem);
   cursor: ew-resize;
   transform-origin: 100% 100%;
-  translate: 0.35rem 0.35rem;
   clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
   /* @supports (-webkit-touch-callout: none) { */
   transition:
@@ -52,7 +51,9 @@
 .diff-item-2 {
   @apply relative col-start-1 row-start-1;
   &:after {
-    @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 size-6 rounded-full;
+    @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 rounded-full;
+    width: 1.2rem;
+    height: 1.8rem;
     border: 2px solid var(--color-base-100);
     content: "";
     outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);

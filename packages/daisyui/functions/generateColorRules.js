@@ -77,7 +77,7 @@ export const generateColorRules = async ({
     const generateOpacityVariants = (style, color, opacityList) => {
       return opacityList.map(
         (opacity) =>
-          `.${style}-${color}\\/${opacity}{${getStyleProperty(style)}:color-mix(in oklab,var(--color-${color})${opacity}%,#000);}`,
+          `.${style}-${color}\\/${opacity}{${getStyleProperty(style)}:color-mix(in oklab,var(--color-${color})${opacity}%,#0000);}`,
       )
     }
 

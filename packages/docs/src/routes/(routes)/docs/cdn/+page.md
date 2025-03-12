@@ -77,10 +77,10 @@ desc: How to use daisyUI from a CDN?
     <p class="mt-6">daisyui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
     <div class="grid *:[grid-area:1/1]">
       <div class="overflow-x-auto pt-12 pb-8 px-6 bg-neutral text-neutral-content rounded-box">
-        <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@{data.daisyuiVersion}/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>
+        <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>
       </div>
       {#if onMount}
-        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@${data.daisyuiVersion}/themes.css" rel="stylesheet" type="text/css" />`} />
+        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@$5/themes.css" rel="stylesheet" type="text/css" />`} />
       {/if}
     </div>
   
@@ -139,7 +139,7 @@ desc: How to use daisyUI from a CDN?
       <p class="block text-xs mx-1 mb-1 tracking-wider">Combined and compress into one CSS file, hosted on the fastest CDN</p>
       {#each data.groupedFiles as group}
         <h4 class="block text-xs mt-4 mx-1 mb-1 font-semibold tracking-wider opacity-40">{group.name}</h4>
-        <div class="flex gap-y-3 gap-x-2 flex-wrap">
+        <div class="flex gap-y-2 gap-x-1 flex-wrap">
           {#each group.files as file}
             <input class="btn btn-xs rounded-full" aria-label={file.name} type="checkbox" onchange={() => toggleUrl(file)} checked={file.checked} />
           {/each}
@@ -148,3 +148,5 @@ desc: How to use daisyUI from a CDN?
     </div>
   </div>
 </div>
+
+Every part of daisyUI is [available on CDN](https://cdn.jsdelivr.net/npm/daisyui@5/) as separate CSS files.
