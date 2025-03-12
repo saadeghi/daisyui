@@ -8,7 +8,7 @@ desc: How to install Tailwind CSS and daisyUI in a Rsbuild project
 Create a new Rsbuild project in the current directory
 
 ```sh:Terminal
-pnpm create rsbuild@latest
+npx create-rsbuild -d ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI
@@ -16,7 +16,7 @@ pnpm create rsbuild@latest
 Rsbuild has built-in support for PostCSS
 
 ```sh:Terminal
-pnpm add tailwindcss @tailwindcss/postcss daisyui@latest
+npm add tailwindcss @tailwindcss/postcss daisyui@latest
 ```
 
 Create a postcss.config.mjs file and add Tailwind CSS to it
@@ -30,7 +30,7 @@ const config = {
 export default config;
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and daisyUI in your CSS file at `src/` (and remove old styles).
   
 ```postcss:src/App.css
 @import "tailwindcss";
@@ -38,6 +38,3 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 ```
 
 Now you can use daisyUI class names!
-
-
-[For example](https://github.com/zwlcoding/rsbuild-daisyui-example).
