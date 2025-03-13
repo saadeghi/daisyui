@@ -135,19 +135,6 @@ $effect(async () => {
                 <pre><code>npm i -D daisyui</code></pre>
               </button>
             </div>
-            {#if daisyui5progress}
-            <div class="flex gap-2 grow w-full max-w-48 max-lg:my-4 sm:max-w-sm">
-              <a class="tooltip tooltip-accent relative flex flex-col w-full" href="https://github.com/saadeghi/daisyui/discussions/3246" target="_blank" rel="nofollow" data-tip="Try the beta version">
-                <div class="text-[0.6rem] -top-4 absolute italic -translate-x-1/2 rtl:translate-x-1/2" style={`inset-inline-start:${daisyui5progress}%`}>
-                {daisyui5progress}%
-                </div>
-                <progress class="progress bg-base-200 border border-base-200 progress-warning w-full" value={daisyui5progress} max="100"></progress>
-                <div class="text-[0.6rem] tracking-wide -bottom-4 absolute italic">
-                  daisyUI 5.0 will be available in {Math.ceil((new Date('2025-03-01') - new Date()) / (1000 * 60 * 60 * 24))} days
-                </div>
-              </a>
-            </div>
-            {/if}
           </div>
           <div class="h-4"></div>
           <h1
