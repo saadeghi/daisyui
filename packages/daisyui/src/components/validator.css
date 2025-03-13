@@ -1,12 +1,14 @@
 .validator {
-  &:user-valid,
-  &:has(:user-valid) {
-    &,
-    &:focus,
-    &:checked,
-    &[aria-checked="true"],
-    &:focus-within {
-      --input-color: var(--color-success);
+  &:not(.validator-invalid) {
+    &:user-valid,
+    &:has(:user-valid) {
+      &,
+      &:focus,
+      &:checked,
+      &[aria-checked="true"],
+      &:focus-within {
+        --input-color: var(--color-success);
+      }
     }
   }
   &:user-invalid,
