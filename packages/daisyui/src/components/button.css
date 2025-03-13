@@ -36,11 +36,6 @@
   .prose & {
     @apply no-underline;
   }
-  @media (hover: hover) {
-    &:hover {
-      --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-    }
-  }
 
   &.btn-active {
     --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
@@ -99,42 +94,98 @@
 }
 
 .btn-primary {
-  --btn-color: var(--color-primary);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-primary-hover, color-mix(in oklab, var(--color-primary), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-primary);
+    }
+  }
   --btn-fg: var(--color-primary-content);
 }
 
 .btn-secondary {
-  --btn-color: var(--color-secondary);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-secondary-hover, color-mix(in oklab, var(--color-secondary), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-secondary);
+    }
+  }
   --btn-fg: var(--color-secondary-content);
 }
 
 .btn-accent {
-  --btn-color: var(--color-accent);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-accent-hover, color-mix(in oklab, var(--color-accent), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-accent);
+    }
+  }
   --btn-fg: var(--color-accent-content);
 }
 
 .btn-neutral {
-  --btn-color: var(--color-neutral);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-neutral-hover, color-mix(in oklab, var(--color-neutral), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-neutral);
+    }
+  }
   --btn-fg: var(--color-neutral-content);
 }
 
 .btn-info {
-  --btn-color: var(--color-info);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-info-hover, color-mix(in oklab, var(--color-info), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-info);
+    }
+  }
   --btn-fg: var(--color-info-content);
 }
 
 .btn-success {
-  --btn-color: var(--color-success);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-success-hover, color-mix(in oklab, var(--color-success), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-success);
+    }
+  }
   --btn-fg: var(--color-success-content);
 }
 
 .btn-warning {
-  --btn-color: var(--color-warning);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-warning-hover, color-mix(in oklab, var(--color-warning), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-warning);
+    }
+  }
   --btn-fg: var(--color-warning-content);
 }
 
 .btn-error {
-  --btn-color: var(--color-error);
+  @media (hover: hover) {
+    &:hover {
+      --btn-color: var(--color-error-hover, color-mix(in oklab, var(--color-error), #000 7%));
+    }
+    &:not(:hover) {
+      --btn-color: var(--color-error);
+    }
+  }
   --btn-fg: var(--color-error-content);
 }
 
