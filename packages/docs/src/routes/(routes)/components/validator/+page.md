@@ -31,7 +31,7 @@ classnames:
 ```
 
 ### ~Validator and validator-invalid
-#### writing an invalid email address only applies error color to the input.
+#### writing a valid email address does not apply success color to the input.
 
 <form class="w-full max-w-xs">
   <input class="input validator validator-invalid" type="email" required placeholder="mail@site.com" autocomplete="false" />
