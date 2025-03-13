@@ -78,7 +78,7 @@ productCustomAttributes:
       license: https://api.daisyui.com/license/nexus@2.txt
       screenshot: https://img.daisyui.com/images/store/screenshots/nexus-2.webp
       preview: https://nexus.daisyui.com/
-    ref: K0XmL
+    ref: Db6q2
   - id: 351127
     media:
       - type: video
@@ -213,7 +213,7 @@ productCustomAttributes:
       preview: https://saas-landing.daisyui.com/
     tech: [html, react, svelte, vue, alpine]
     tags: [landing]
-    ref: K0XmL
+    ref: Db6q2
     badge:
       class: badge-success
       icon: check
@@ -267,7 +267,7 @@ productCustomAttributes:
       preview: https://mobile-landing.daisyui.com/
     tech: [html, react, svelte, vue, alpine]
     tags: [landing]
-    ref: K0XmL
+    ref: Db6q2
     badge:
       class: badge-success
       icon: check
