@@ -51,6 +51,13 @@ export const pluginOptionsHandler = (() => {
     } else if (themes) {
       const themeArray = Array.isArray(themes) ? themes : [themes]
 
+      // For single theme with --default flag, skip the other applications
+      if (themeArray.length === 1 && themeArray[0].includes("--default")) {
+        const [themeName, ...flags] = themeArray[0].split(" ")
+        applyTheme(themeName, flags)
+        return { include, exclude, prefix }
+      }
+
       // default theme
       themeArray.forEach((themeOption) => {
         const [themeName, ...flags] = themeOption.split(" ")

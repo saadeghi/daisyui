@@ -84,3 +84,35 @@ test("pluginOptionsHandler should return include, exclude, and prefix", () => {
   expect(result.exclude).toEqual(["exclude"])
   expect(result.prefix).toEqual("prefix")
 })
+
+test("pluginOptionsHandler should not create duplicate styles for single light theme", () => {
+  mockAddBase.mockReset()
+
+  const options = { themes: ["light --default"] }
+
+  pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  // Should be called exactly once
+  expect(mockAddBase).toHaveBeenCalledTimes(1)
+  expect(mockAddBase).toHaveBeenCalledWith({
+    ":where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light]": {
+      color: "white",
+    },
+  })
+})
+
+test("pluginOptionsHandler should not create duplicate styles for single dark theme", () => {
+  mockAddBase.mockReset()
+
+  const options = { themes: ["dark --default"] }
+
+  pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  // Should be called exactly once
+  expect(mockAddBase).toHaveBeenCalledTimes(1)
+  expect(mockAddBase).toHaveBeenCalledWith({
+    ":where(:root),:root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {
+      color: "black",
+    },
+  })
+})

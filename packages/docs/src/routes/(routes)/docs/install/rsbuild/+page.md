@@ -8,7 +8,7 @@ desc: How to install Tailwind CSS and daisyUI in a Rsbuild project
 Create a new Rsbuild project in the current directory
 
 ```sh:Terminal
-npx create-rsbuild -d ./
+npm create rsbuild -d ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI

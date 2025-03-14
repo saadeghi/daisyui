@@ -47,7 +47,8 @@
     --btn-bg: var(--btn-color, var(--color-base-200));
     --btn-fg: var(--color-base-content);
     --btn-border: color-mix(in oklab, var(--btn-bg), #000 5%);
-    --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000),
+    --btn-shadow:
+      0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000),
       0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000);
     --btn-noise: var(--fx-noise);
   }

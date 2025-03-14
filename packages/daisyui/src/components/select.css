@@ -8,7 +8,8 @@
   border-start-end-radius: var(--join-se, var(--radius-field));
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
-  background-image: linear-gradient(45deg, #0000 50%, currentColor 50%),
+  background-image:
+    linear-gradient(45deg, #0000 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, #0000 50%);
   background-position:
     calc(100% - 20px) calc(1px + 50%),
@@ -35,6 +36,7 @@
     background: inherit;
     border-radius: inherit;
     border-style: none;
+    background-image: none;
     &:focus,
     &:focus-within {
       @apply outline-hidden;

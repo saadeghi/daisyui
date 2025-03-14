@@ -8,7 +8,7 @@ desc: How to install Tailwind CSS and daisyUI in a Next.js project
 Create a new Next.js project in the current directory
 
 ```sh:Terminal
-npx create-next-app@latest ./
+npm create next-app@latest ./
 ```
 
 ### 2. Install Tailwind CSS and daisyUI

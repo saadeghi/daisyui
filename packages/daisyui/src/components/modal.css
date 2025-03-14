@@ -17,6 +17,10 @@
   &[open],
   &:target {
     background-color: oklch(0% 0 0/ 0.4);
+    transition:
+      transform 0.3s ease-out,
+      background-color 0.3s ease-out,
+      opacity 0.1s ease-out;
   }
   &.modal-open,
   &[open],

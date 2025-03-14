@@ -28,7 +28,7 @@ desc: How to install daisyUI as a Tailwind CSS plugin?
       <div class="z-2">{@html framework.logo}</div>
       <div class="z-1 group-hover:opacity-0 brightness-125 group-hover:scale-110 group-hover:duration-800 duration-0 transition-all">{@html framework.logo}</div>
     </div>
-    <div class="text-xs sm:text-sm font-medium transition-colors group-hover:text-base-content text-base-content/60">{framework.name}</div>
+    <div class="text-xs sm:text-sm font-medium transition-colors group-hover:text-base-content text-base-content/60 [text-wrap:balance] text-center">{framework.name}</div>
   </a>
 {/each}
 
