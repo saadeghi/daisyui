@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.0.4 (2025-03-14)
 
+* fix: prevent duplicate theme to be added if there's only one default theme - improves CSS size for single theme sites.
+* fix: select in `<label>` double caret. closes: #3613
+* fix: dialog does not put focus on first focusable element. closes: #3440
+
+
 ## 5.0.3 (2025-03-12)
 
 ### Bug Fixes
