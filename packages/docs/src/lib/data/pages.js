@@ -36,17 +36,24 @@ export const pages = [
         tags: "cdn nobuild install",
         href: "/docs/cdn/",
       },
-      {
-        name: "Upgrade guide",
-        tags: "",
-        href: "/docs/upgrade/",
-        badge: "v5.0",
-      },
+      {},
       {
         name: "Use",
         tags: "how use",
         href: "/docs/use/",
       },
+      {
+        name: "Upgrade guide",
+        tags: "",
+        href: "/docs/upgrade/",
+      },
+      {
+        name: "Code editor and LLM setup",
+        tags: "llm editor vscode cursor zed",
+        href: "/docs/editor/",
+        badge: "new",
+      },
+      {},
       {
         name: "Customize components",
         tags: "customize components",
