@@ -20,7 +20,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-primary) 80%, #000);
+      color: var(--color-primary-hover, color-mix(in oklab, var(--color-primary) 80%, #000));
     }
   }
 }
@@ -30,7 +30,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-secondary) 80%, #000);
+      color: var(--color-secondary-hover, color-mix(in oklab, var(--color-secondary) 80%, #000));
     }
   }
 }
@@ -40,7 +40,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-accent) 80%, #000);
+      color: var(--color-accent-hover, color-mix(in oklab, var(--color-accent) 80%, #000));
     }
   }
 }
@@ -50,7 +50,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-neutral) 80%, #000);
+      color: var(--color-neutral-hover, color-mix(in oklab, var(--color-neutral) 80%, #000));
     }
   }
 }
@@ -60,7 +60,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-success) 80%, #000);
+      color: var(--color-success-hover, color-mix(in oklab, var(--color-success) 80%, #000));
     }
   }
 }
@@ -70,7 +70,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-info) 80%, #000);
+      color: var(--color-info-hover, color-mix(in oklab, var(--color-info) 80%, #000));
     }
   }
 }
@@ -80,7 +80,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-warning) 80%, #000);
+      color: var(--color-warning-hover, color-mix(in oklab, var(--color-warning) 80%, #000));
     }
   }
 }
@@ -90,7 +90,7 @@
 
   @media (hover: hover) {
     &:hover {
-      color: color-mix(in oklab, var(--color-error) 80%, #000);
+      color: var(--color-error-hover, color-mix(in oklab, var(--color-error) 80%, #000));
     }
   }
 }
