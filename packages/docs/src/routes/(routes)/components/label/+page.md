@@ -112,23 +112,23 @@ classnames:
 
 ```html
 <label class="$$floating-label">
-  <input type="text" placeholder="" class="$$input $$input-xs" />
+  <input type="text" placeholder="Extra Small" class="$$input $$input-xs" />
   <span>Extra Small</span>
 </label>
 <label class="$$floating-label">
-  <input type="text" placeholder="" class="$$input $$input-sm" />
+  <input type="text" placeholder="Small" class="$$input $$input-sm" />
   <span>Small</span>
 </label>
 <label class="$$floating-label">
-  <input type="text" placeholder="" class="$$input $$input-md" />
+  <input type="text" placeholder="Medium" class="$$input $$input-md" />
   <span>Medium</span>
 </label>
 <label class="$$floating-label">
-  <input type="text" placeholder="" class="$$input $$input-lg" />
+  <input type="text" placeholder="Large" class="$$input $$input-lg" />
   <span>Large</span>
 </label>
 <label class="$$floating-label">
-  <input type="text" placeholder="" class="$$input $$input-xl" />
+  <input type="text" placeholder="Extra Large" class="$$input $$input-xl" />
   <span>Extra Large</span>
 </label>
 ```
