@@ -7,7 +7,15 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* Floating labels font sizes ([c89b4bc](https://github.com/saadeghi/daisyui/commit/c89b4bc8eff819a7ca43aaaa002f046c8b617d94)), closes [#3676](https://github.com/saadeghi/daisyui/issues/3676)
+* fix: Floating labels font sizes. closes: #3676
+* fix: . select > select caret. closes: #3613
+* fix: theme generator untrimmed color issue. closes: #3636
+* fix: btn-active working with Tailwind variant prefixes. closes: #3652
+* fix: badge-outline border-* override. closes: #3657
+* fix: Swap Indeterminate rotate style. closes: #3678
+* fix: hero-content isolation issue. closes: #3682
+* fix: checked button style for outline and dash. closes: #3591
+* fix: fieldset-label cursor
 
 ## 5.0.4 (2025-03-14)
 
