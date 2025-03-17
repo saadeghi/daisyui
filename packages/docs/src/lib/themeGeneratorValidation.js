@@ -24,11 +24,11 @@ export function validateColor(color) {
 
 export function validateThemeName(name) {
   if (typeof name !== "string") {
-    console.error("Theme name must be a string")
+    console.error("Theme name must be a string", name)
     return false
   }
   if (!themeNamePattern.test(name)) {
-    console.error("Theme name does not match the required pattern")
+    console.error("Theme name does not match the required pattern", name)
     return false
   }
   return true

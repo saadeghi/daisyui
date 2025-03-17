@@ -53,7 +53,7 @@
   }
 
   function handleInput(event) {
-    inputValue = event.target.value
+    inputValue = event.target.value.trim()
     if (validateColor(inputValue)) {
       value = inputValue
     }

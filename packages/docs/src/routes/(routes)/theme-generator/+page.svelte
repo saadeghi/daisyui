@@ -34,7 +34,17 @@
 
   const getStoredThemesByType = (type) => {
     if (!browser) return []
-    return JSON.parse(localStorage.getItem(LS_KEY) || "[]").filter((item) => item.type === type)
+    const themes = JSON.parse(localStorage.getItem(LS_KEY) || "[]")
+    return themes
+      .map((theme) => ({
+        ...theme,
+        ...Object.fromEntries(
+          Object.entries(theme)
+            .filter(([key]) => key.startsWith("--color-"))
+            .map(([key, value]) => [key, value.trim()]),
+        ),
+      }))
+      .filter((item) => item.type === type)
   }
 
   let builtinThemes = $state(getStoredThemesByType("builtin"))
