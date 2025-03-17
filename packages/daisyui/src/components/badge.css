@@ -19,14 +19,14 @@
         #0000
       ),
     0 4px 3px -2px oklch(0% 0 0 / calc(var(--depth) * 0.08)); */
-  &.badge-outline {
+  &:where(.badge-outline) {
     color: var(--badge-color, var(--color-base-content));
     @apply border-current bg-transparent;
     background-image: none;
     box-shadow: none;
   }
 
-  &.badge-dash {
+  &:where(.badge-dash) {
     color: var(--badge-color, var(--color-base-content));
     @apply bg-transparent;
     border-style: dashed;
