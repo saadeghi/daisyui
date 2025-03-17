@@ -10,7 +10,6 @@
 }
 .fieldset-label {
   @apply text-base-content/60 flex items-center gap-1.5;
-  &:is(label, a),
   &:has(input) {
     @apply cursor-pointer;
   }
