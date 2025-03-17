@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.6 (2025-03-17)
+
+
+### Bug Fixes
+
+* badge color ([56390f5](https://github.com/saadeghi/daisyui/commit/56390f5ec32188643b8c2f83033c3175ab424c64))
+
 ## 5.0.5 (2025-03-17)
 
 
