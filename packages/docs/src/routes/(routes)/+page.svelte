@@ -2041,9 +2041,11 @@
   <div
     class="mx-auto max-w-7xl gap-8 px-10 md:columns-2 lg:columns-3 xl:columns-3 max-sm:[&>*:nth-child(n+9)]:hidden"
   >
-    {#each data.testimonials.testimonials as testimonial, index}
+    {#each [...data.testimonials.testimonials]
+      .map((t, i) => ({ ...t, originalIndex: i }))
+      .sort(() => Math.random() - 0.5) as testimonial, index}
       <div class="card card-sm bg-base-200 mb-8 break-inside-avoid rounded-ee-[2.5rem] text-start">
-        <div class="card-body gap-5">
+        <div class="card-body gap-4">
           <p
             class="text-base-content/70 px-1 text-[0.75rem] leading-[1.75] [text-wrap:balance]"
             use:highlight
@@ -2056,12 +2058,12 @@
                 href={`https://twitter.com/${testimonial.username}/status/${testimonial.id}`}
                 target="_blank"
                 rel="noopener, noreferrer"
-                class="w-12"
+                class="outline-base-content w-12 rounded-full outline-offset-2 hover:brightness-90 focus-visible:outline-2"
               >
                 <div
                   class="size-12 rounded-full"
-                  style={`background-image: url('https://img.daisyui.com/generated/x.webp?${data.testimonials.generated_at}'); background-size:auto 48px;background-position: -${
-                    index * 48
+                  style={`background-image: url('http://localhost:4000/x.webp?${data.testimonials.generated_at}'); background-size:auto 48px;background-repeat:no-repeat;background-position: -${
+                    testimonial.originalIndex * 48
                   }px 0px;`}
                 ></div>
               </a>

@@ -53,13 +53,13 @@
     </p>
     <div class="flex w-full justify-center">
       <div
-        class="flex w-full max-w-7xl flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
+        class="max-w-8xl flex w-full flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
       >
         {#each contributors as contributor, index}
           <div class="avatar tooltip p-2" data-tip={contributor}>
             <div
               class="mask mask-squircle size-8"
-              style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size:auto 32px;background-position: -{index *
+              style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size:auto 32px;background-repeat:no-repeat;background-position: -{index *
                 32}px 0px;"
             ></div>
           </div>
@@ -81,7 +81,7 @@
     </p>
     <div class="flex w-full justify-center">
       <div
-        class="flex w-full max-w-7xl flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
+        class="max-w-8xl flex w-full flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
       >
         {#each sponsors as sponsor, index}
           <div class="tooltip" data-tip={sponsor.name}>
@@ -89,7 +89,7 @@
               <div class="avatar p-2">
                 <div
                   class="mask mask-squircle size-8"
-                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size:auto 32px;background-position: -{index *
+                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size:auto 32px;background-repeat:no-repeat;background-position: -{index *
                     32}px 0px;"
                 ></div>
               </div>
