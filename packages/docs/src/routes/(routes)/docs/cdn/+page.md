@@ -80,7 +80,7 @@ desc: How to use daisyUI from a CDN?
         <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>
       </div>
       {#if onMount}
-        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@$5/themes.css" rel="stylesheet" type="text/css" />`} />
+        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />`} />
       {/if}
     </div>
   
