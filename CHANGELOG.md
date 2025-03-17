@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.5 (2025-03-17)
+
+
+### Bug Fixes
+
+* Floating labels font sizes ([c89b4bc](https://github.com/saadeghi/daisyui/commit/c89b4bc8eff819a7ca43aaaa002f046c8b617d94)), closes [#3676](https://github.com/saadeghi/daisyui/issues/3676)
+
 ## 5.0.4 (2025-03-14)
 
 * fix: prevent duplicate theme to be added if there's only one default theme - improves CSS size for single theme sites.
