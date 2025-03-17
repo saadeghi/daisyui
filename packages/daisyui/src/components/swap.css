@@ -43,7 +43,6 @@
 
 .swap-rotate {
   .swap-on,
-  .swap-indeterminate,
   input:indeterminate ~ .swap-on {
     @apply rotate-45;
   }
