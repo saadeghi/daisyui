@@ -36,10 +36,13 @@
     background: inherit;
     border-radius: inherit;
     border-style: none;
-    background-image: none;
     &:focus,
     &:focus-within {
       @apply outline-hidden;
+    }
+    &:not(:last-child) {
+      @apply -me-5.5;
+      background-image: none;
     }
   }
 
