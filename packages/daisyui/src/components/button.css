@@ -42,12 +42,6 @@
     }
   }
 
-  &.btn-active {
-    --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
-    --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
-    isolation: isolate;
-  }
-
   &:focus-visible {
     outline-width: 2px;
     outline-style: solid;
@@ -96,6 +90,12 @@
     --btn-fg: var(--color-primary-content);
     isolation: isolate;
   }
+}
+
+.btn-active {
+  --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+  --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+  isolation: isolate;
 }
 
 .btn-primary {
