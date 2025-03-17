@@ -7,6 +7,7 @@
   "scripts": {
     "build": "cd packages/daisyui && bun run build",
     "build:dev": "cd packages/daisyui && bun run build --dev",
+    "build:standalone": "bun run rollup -c",
     "build:docs": "bun run build && cd packages/docs && bun run build",
     "build:docs:dev": "bun run build:dev && cd packages/docs && bun run build",
     "dev": "bun run build:dev && cd packages/docs && bun run dev",
@@ -36,6 +37,8 @@
     "prettier": "3.5.3",
     "prettier-plugin-svelte": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "tailwindcss": "^4.0.12"
+    "tailwindcss": "^4.0.12",
+    "@rollup/plugin-json": "^6.1.0",
+    "rollup": "^4.36.0"
   }
 }
