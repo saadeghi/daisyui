@@ -2062,7 +2062,7 @@
               >
                 <div
                   class="size-12 rounded-full"
-                  style={`background-image: url('http://localhost:4000/x.webp?${data.testimonials.generated_at}'); background-size:auto 48px;background-repeat:no-repeat;background-position: -${
+                  style={`background-image: url('https://img.daisyui.com/generated/x.webp?${data.testimonials.generated_at}'); background-size:auto 48px;background-repeat:no-repeat;background-position: -${
                     testimonial.originalIndex * 48
                   }px 0px;`}
                 ></div>
