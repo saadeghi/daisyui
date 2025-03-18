@@ -22,7 +22,7 @@
         <p class="text-base-content/70 mb-5">
           {@html $t("footer-tagline")}
         </p>
-
+        <a href="/docs/faq/" class="link link-hover">{$t("FAQ")}</a>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -50,15 +50,6 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/saadeghi/daisyui/discussions/1949"
-          class="link link-hover group"
-        >
-          FAQ
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
           href="/llms.txt"
           class="link link-hover group"
         >
@@ -77,7 +68,6 @@
         <a href="/blog/" class="link link-hover">{$t("Blog")}</a>
         <a href="/resources/" class="link link-hover">{$t("Resources")}</a>
         <a href="/store/" class="link link-hover">{$t("Store")}</a>
-        <a href="/docs/faq/" class="link link-hover">{$t("FAQ")}</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("available-on")}</span>
@@ -170,16 +160,34 @@
           href="https://mary-ui.com/"
           class="link link-hover group"
         >
-          MaryUI for Laravel
+          MaryUI (Laravel)
           {@html newtabicon}
         </a>
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://www.saraui.com/"
+          href="https://github.com/willpinha/daisy-components"
           class="link link-hover group"
         >
-          SaraUI for SvelteKit
+          willpinha/daisy-components
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://github.com/phcurado/daisy_ui_components"
+          class="link link-hover group"
+        >
+          phcurado/daisy_ui_components (Phoenix)
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
+          href="https://github.com/Dzoukr/Feliz.DaisyUI"
+          class="link link-hover group"
+        >
+          Dzoukr/Feliz.DaisyUI (F#)
           {@html newtabicon}
         </a>
         <a
@@ -199,7 +207,7 @@
   >
     <div class="flex w-full max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
       <a
-        href="https://github.com/saadeghi"
+        href="https://x.com/saadeghi"
         rel="noopener, noreferrer"
         target="_blank"
         class="inline-flex items-center justify-center hover:opacity-90"
@@ -221,9 +229,7 @@
           <p class="text-base-content text-lg font-bold">Pouya Saadeghi</p>
         </div>
       </a>
-      <div class="flex flex-col items-center gap-4 text-left sm:flex-row">
-        <!-- <Sponsors wrapperClasses="flex-col sm:flex-row" classes="bg-base-100" /> -->
-
+      <div class="max-w-md grow text-left">
         <!-- <div id="mc_embed_signup">
           <form
             action="https://gmail.us8.list-manage.com/subscribe/post?u=42813cff910e47b1bd132369a&amp;id=9fd7333f07&amp;f_id=003d03e0f0"
@@ -305,6 +311,42 @@
             </div>
           </form>
         </div> -->
+
+        <form
+          action="https://app.kit.com/forms/7041226/subscriptions"
+          method="post"
+          target="_blank"
+          class="flex flex-col"
+        >
+          <p class="text-base-content/70 mb-4 text-xs font-bold">
+            Get the daisyUI updates and news
+          </p>
+          <div class="join mb-2">
+            <input
+              type="email"
+              class="join-item input"
+              name="email_address"
+              placeholder="email@site.com"
+              required
+            />
+            <button class="join-item btn btn-neutral">Subscribe</button>
+          </div>
+          <p class="text-base-content/60 text-[0.625rem] tracking-wide">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="text-success inline-block size-3"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            We don't share your email address with anyone
+          </p>
+        </form>
       </div>
     </div>
   </footer>

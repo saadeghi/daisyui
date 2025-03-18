@@ -2,7 +2,6 @@
   import { page } from "$app/stores"
   import Footer from "$components/Footer.svelte"
   import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
-  import Sponsors from "$components/Sponsors.svelte"
   let { data, children } = $props()
   let { tags } = data
 </script>
@@ -120,9 +119,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="flex justify-center xl:hidden">
-      <Sponsors wrapperClasses="flex-col sm:flex-row" />
     </div>
   </div>
   <AlternativeSidebar />

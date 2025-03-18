@@ -29,7 +29,7 @@ const getCssFiles = (dirPath, checkedCondition) => {
   }))
 }
 
-const baseFiles = getCssFiles(join(basePath, "base"), (file) => true)
+const baseFiles = getCssFiles(join(basePath, "base"), () => true)
 const componentFiles = getCssFiles(join(basePath, "components"), (file) =>
   ["button.css", "toggle.css", "checkbox.css", "input.css", "select.css", "menu.css"].includes(
     file,

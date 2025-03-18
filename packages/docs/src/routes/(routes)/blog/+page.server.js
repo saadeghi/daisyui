@@ -1,6 +1,6 @@
 import { dirname } from "node:path"
 
-export async function load({ params }) {
+export async function load() {
   let posts = await Promise.all(
     Object.entries(import.meta.glob("./[(]posts[)]/*/+page.md")).map(async ([path, resolver]) => {
       const { metadata } = await resolver()

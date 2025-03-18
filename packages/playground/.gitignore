@@ -12,6 +12,7 @@
 !/src/pages/RTL.astro
 !/src/pages/prefix.astro
 !/src/pages/calendar.astro
+!/src/pages/all.astro
 
 /src/layouts/*
 !/src/layouts/Main.astro

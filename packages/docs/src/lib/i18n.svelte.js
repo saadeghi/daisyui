@@ -53,17 +53,6 @@ const loadedTranslations = writable({
 // Function to check if a language is valid
 const isValidLanguage = (lang) => langs.includes(lang)
 
-// Function to update URL query parameter
-const updateUrlQueryParam = (key, value) => {
-  const url = new URL(window.location.toString())
-  if (value) {
-    url.searchParams.set(encodeURIComponent(key), encodeURIComponent(value))
-  } else {
-    url.searchParams.delete(key)
-  }
-  return url
-}
-
 // Function to replace state with query
 const replaceStateWithQuery = (values) => {
   const url = new URL(window.location.toString())
@@ -217,12 +206,6 @@ const handleNavigationEnd = () => {
 if (typeof window !== "undefined") {
   window.addEventListener("storage", handleStorageEvent)
   document.addEventListener("sveltekit:navigation-end", handleNavigationEnd)
-}
-
-// Function to get a valid language from localStorage or default
-const getValidLanguage = () => {
-  const savedLang = localStorage.getItem("lang") || defaultLang
-  return langs.includes(savedLang) ? savedLang : defaultLang
 }
 
 // Function to set the language

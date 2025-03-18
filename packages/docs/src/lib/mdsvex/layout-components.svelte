@@ -6,7 +6,6 @@
   import BrowserSupport from "$components/BrowserSupport.svelte"
   import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import SEO from "$components/SEO.svelte"
-  import Sponsors from "$components/Sponsors.svelte"
   import { prefix } from "$lib/stores"
   import { t } from "$lib/i18n.svelte.js"
   let { data, title, desc, classnames, browserSupport, showComponentPageTabs, alert, children } =
@@ -345,9 +344,6 @@
     {/if}
     {@render children?.()}
     <ComponentFooter pages={data.pages} />
-    <div class="not-prose flex justify-center xl:hidden">
-      <Sponsors wrapperClasses="flex-col sm:flex-row" />
-    </div>
   </div>
   <AlternativeSidebar />
 </div>

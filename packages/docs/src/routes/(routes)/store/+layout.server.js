@@ -14,7 +14,7 @@ const LSParams = {
   },
 }
 
-export async function load({ params }) {
+export async function load() {
   const productsResponse = await fetch(
     "https://api.lemonsqueezy.com/v1/products?page[size]=100",
     LSParams,

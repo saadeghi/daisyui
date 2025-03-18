@@ -2,7 +2,7 @@ import themes from "daisyui/theme/object"
 import themeOrder from "daisyui/functions/themeOrder"
 
 function builtinThemes() {
-  return themeOrder.map((themeName, index) => ({
+  return themeOrder.map((themeName) => ({
     id: crypto.randomUUID(),
     type: "builtin",
     name: themeName,

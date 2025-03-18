@@ -1,4 +1,4 @@
-import { expect, test } from "bun:test"
+import { test } from "bun:test"
 import { readdirSync, readFileSync, existsSync } from "fs"
 import { join } from "path"
 

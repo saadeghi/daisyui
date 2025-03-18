@@ -3,7 +3,6 @@
   import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
   import ComponentFooter from "$components/ComponentFooter.svelte"
   import SEO from "$components/SEO.svelte"
-  import Sponsors from "$components/Sponsors.svelte"
   import { t } from "$lib/i18n.svelte.js"
   let { data, title, desc, alert, children } = $props()
 </script>
@@ -31,9 +30,6 @@
     {/if}
     {@render children?.()}
     <ComponentFooter pages={data?.pages} />
-    <div class="not-prose flex justify-center xl:hidden">
-      <Sponsors wrapperClasses="flex-col sm:flex-row" />
-    </div>
   </div>
   <AlternativeSidebar />
 </div>
