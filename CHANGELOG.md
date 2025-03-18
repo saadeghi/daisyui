@@ -14,21 +14,21 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* fix: Floating labels font sizes. closes: #3676
-* fix: . select > select caret. closes: #3613
-* fix: theme generator untrimmed color issue. closes: #3636
-* fix: btn-active working with Tailwind variant prefixes. closes: #3652
-* fix: badge-outline border-* override. closes: #3657
-* fix: Swap Indeterminate rotate style. closes: #3678
-* fix: hero-content isolation issue. closes: #3682
-* fix: checked button style for outline and dash. closes: #3591
+* fix: Floating labels font sizes. closes: [#3676](https://github.com/saadeghi/daisyui/issues/3676)
+* fix: . select > select caret. closes: [#3613](https://github.com/saadeghi/daisyui/issues/3613)
+* fix: theme generator untrimmed color issue. closes: [#3636](https://github.com/saadeghi/daisyui/issues/3636)
+* fix: btn-active working with Tailwind variant prefixes. closes: [#3652](https://github.com/saadeghi/daisyui/issues/3652)
+* fix: badge-outline border-* override. closes: [#3657](https://github.com/saadeghi/daisyui/issues/3657)
+* fix: Swap Indeterminate rotate style. closes: [#3678](https://github.com/saadeghi/daisyui/issues/3678)
+* fix: hero-content isolation issue. closes: [#3682](https://github.com/saadeghi/daisyui/issues/3682)
+* fix: checked button style for outline and dash. closes: [#3591](https://github.com/saadeghi/daisyui/issues/3591)
 * fix: fieldset-label cursor
 
 ## 5.0.4 (2025-03-14)
 
 * fix: prevent duplicate theme to be added if there's only one default theme - improves CSS size for single theme sites.
-* fix: select in `<label>` double caret. closes: #3613
-* fix: dialog does not put focus on first focusable element. closes: #3440
+* fix: select in `<label>` double caret. closes: [#3613](https://github.com/saadeghi/daisyui/issues/3613)
+* fix: dialog does not put focus on first focusable element. closes: [#3440](https://github.com/saadeghi/daisyui/issues/3440)
 
 
 ## 5.0.3 (2025-03-12)
