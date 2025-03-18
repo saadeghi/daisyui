@@ -20,7 +20,6 @@ const getPrefixedSelector = (selector, prefix) => {
 }
 
 const getPrefixedKey = (key, prefix, excludedPrefixes) => {
-  const prefixDot = prefix ? `.${prefix}` : ""
   const prefixAmpDot = prefix ? `&.${prefix}` : ""
 
   if (!prefix) return key

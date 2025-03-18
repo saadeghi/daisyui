@@ -17,7 +17,7 @@
     "lang:clean": "bun packages/docs/src/lib/scripts/removeUnusedTranslations.js",
     "lang:sort": "bun packages/docs/src/lib/scripts/sortTranslations.js",
     "lang:fill": "bun packages/docs/src/lib/scripts/fillTranslations.js",
-    "lint": "bunx -y oxlint@latest",
+    "lint": "bunx -y oxlint@latest --ignore-pattern packages/playground",
     "test": "bun test",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
     "update:tw": "bun i tailwindcss@latest @tailwindcss/cli@latest && cd packages/docs && bun i @tailwindcss/vite@latest && cd ../playground && bun i @tailwindcss/vite@latest",

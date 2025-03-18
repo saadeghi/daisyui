@@ -78,6 +78,7 @@ const shouldSaveNewReport = async (lastReportPath, currentData) => {
 
     return JSON.stringify(currentNormalized) !== JSON.stringify(lastNormalized)
   } catch (error) {
+    console.log(error)
     return true
   }
 }

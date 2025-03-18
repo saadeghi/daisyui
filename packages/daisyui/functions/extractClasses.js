@@ -4,11 +4,11 @@ import path from "path"
 // Function to extract class names from CSS content
 const extractClassNames = async (cssContent) => {
   const classRegex =
-    /\.([a-zA-Z_-][a-zA-Z0-9_-]*)(?=\s*[\{,:\(])|:where\(\.([a-zA-Z_-][a-zA-Z0-9_-]*)\)/g
+    /\.([a-zA-Z_-][a-zA-Z0-9_-]*)(?=\s*[{,:(])|:where\(\.([a-zA-Z_-][a-zA-Z0-9_-]*)\)/g
   const matches = cssContent.match(classRegex)
   const classNames = matches
     ? matches.map((match) => {
-        const cleanedMatch = match.replace(/:where\(\.|[\{,:\(\)]/g, "").trim()
+        const cleanedMatch = match.replace(/:where\(\.|[{,:()]/g, "").trim()
         return cleanedMatch.startsWith(".") ? cleanedMatch.slice(1) : cleanedMatch
       })
     : []

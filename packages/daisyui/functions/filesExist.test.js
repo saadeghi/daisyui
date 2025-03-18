@@ -13,7 +13,8 @@ const fileExists = (path) => existsSync(path)
 const directoryExists = (path) => {
   try {
     return statSync(path).isDirectory()
-  } catch (e) {
+  } catch (error) {
+    console.log(error)
     return false
   }
 }
