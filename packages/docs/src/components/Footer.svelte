@@ -77,6 +77,7 @@
         <a href="/blog/" class="link link-hover">{$t("Blog")}</a>
         <a href="/resources/" class="link link-hover">{$t("Resources")}</a>
         <a href="/store/" class="link link-hover">{$t("Store")}</a>
+        <a href="/docs/faq/" class="link link-hover">{$t("FAQ")}</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("available-on")}</span>

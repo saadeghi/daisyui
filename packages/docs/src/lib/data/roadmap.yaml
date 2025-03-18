@@ -211,6 +211,8 @@
       done: true
     - title: New Theme generator
       done: true
+    - title: New logo
+      done: false
     - title: Homepage redesign
       done: false
     - title: Add missing translations
@@ -220,7 +222,7 @@
     - title: Add component accessibility guidelines
       done: false
     - title: Add FAQ to the site
-      done: false
+      done: true
     - title: Add integrations tutorial for third-party JS packages
       done: false
     - title: Improve the loading of translation files
