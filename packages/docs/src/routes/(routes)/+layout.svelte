@@ -74,44 +74,6 @@
   }
 </script>
 
-<svelte:head>
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="daisyUI Blog"
-    href="https://daisyui.com/blog/rss.xml"
-  />
-  <meta name="theme-color" content="oklch(var(--b1))" />
-  <link
-    rel="icon"
-    href="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg"
-    type="image/svg+xml"
-  />
-  <link
-    rel="icon"
-    sizes="192x192"
-    href="https://img.daisyui.com/images/daisyui-logo/favicon-192.png"
-  />
-  <link rel="apple-touch-icon" href="https://img.daisyui.com/images/daisyui-logo/favicon-180.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <link
-    media="screen and (min-width: 520px)"
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
-  <link
-    media="screen and (min-width: 520px)"
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
-  <link
-    media="screen and (min-width: 520px)"
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Noto+Sans+JP:wght@300;900&family=Noto+Sans:wght@300;900&family=Vazirmatn:wght@300;900&display=swap"
-    rel="stylesheet"
-  />
-</svelte:head>
-
 <div
   class={`bg-base-100 drawer mx-auto max-w-[100rem] ${
     data.pagesThatDontNeedSidebar.matchPattern($page.url.pathname) ? "" : "lg:drawer-open"
