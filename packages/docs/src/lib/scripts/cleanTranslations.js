@@ -38,7 +38,7 @@ const getTranslationsFromFile = (file) => {
 export const loadAllTranslations = (files) =>
   files.reduce((acc, file) => ({ ...acc, ...getTranslationsFromFile(file) }), {})
 
-const isTranslationUsed = (content, key, value) => {
+const isTranslationUsed = (content, key) => {
   // Escape special regex characters in the key
   const escapeRegex = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
   const escapedKey = escapeRegex(key)
@@ -94,7 +94,7 @@ const removeUnusedTranslations = (content, unusedTranslations) => {
   const unusedNormalized = new Set(Array.from(unusedTranslations).map(normalizeForComparison))
 
   return Object.fromEntries(
-    Object.entries(content).filter(([key, value]) => {
+    Object.entries(content).filter(([key]) => {
       const normalizedKey = normalizeForComparison(key)
       return !unusedNormalized.has(normalizedKey)
     }),

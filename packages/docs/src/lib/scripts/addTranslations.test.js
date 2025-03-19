@@ -1,7 +1,6 @@
 import { unified } from "unified"
 import remarkParse from "remark-parse"
 import remarkGfm from "remark-gfm"
-import { visit } from "unist-util-visit"
 import { expect, test, beforeEach, afterEach } from "bun:test"
 import { mkdirSync, writeFileSync, rmSync } from "fs"
 import { join } from "path"

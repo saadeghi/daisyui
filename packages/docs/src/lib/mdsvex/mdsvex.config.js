@@ -146,6 +146,7 @@ const remarkPlugins = [
 export const mdsvexExtensions = [".svx", ".md"]
 
 const config = {
+  smartypants: false,
   extensions: mdsvexExtensions,
   remarkPlugins: remarkPlugins,
   rehypePlugins: rehypePlugins, // Keep rehypePlugins after remarkPlugins

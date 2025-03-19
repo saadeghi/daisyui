@@ -485,7 +485,7 @@
   "Want to swim in the ocean of thousands of class names and never find your way out.": "Want to swim in the ocean of thousands of class names and never find your way out.",
   "Want to make your codebase a mess and spend hours figuring out what part of the code is responsible for what part of the UI.": "Want to make your codebase a mess and spend hours figuring out what part of the code is responsible for what part of the UI.",
   "Want to waste your time and money re-inventing the wheel instead of shipping your actual project.": "Want to waste your time and money re-inventing the wheel instead of shipping your actual project.",
-  "For example Tailwind CSS class names decide if padding should be 4px or 8px. daisyUI class names decide if a HTML element should look like a \"card\", a \"button\", a \"toggle\", etc, just like what we would call them semantically in a design system.": "For example Tailwind CSS class names decide if padding should be 4px or 8px. daisyUI class names decide if a HTML element should look like a \"card\", a \"button\", a \"toggle\", etc, just like what we would call them semantically in a design system.",
+  "For example Tailwind CSS class names decide if padding should be 4px or 8px. daisyUI class names decide if a HTML element should look like a `card`, a `button`, a `toggle`, etc, just like what we would call them semantically in a design system.": "For example Tailwind CSS class names decide if padding should be 4px or 8px. daisyUI class names decide if a HTML element should look like a `card`, a `button`, a `toggle`, etc, just like what we would call them semantically in a design system.",
   "This makes it easier to design interfaces with less code and more consistency. For example if you want to make a card using Tailwind CSS you would have to write one or multiple utility class names for each single CSS rule. Doing this over and over again for each element, for each page, for each project is time consuming and hard to manage. It also makes it harder to maintain your code as you have to always figure out what part of the code is responsible for what part of the UI.": "This makes it easier to design interfaces with less code and more consistency. For example if you want to make a card using Tailwind CSS you would have to write one or multiple utility class names for each single CSS rule. Doing this over and over again for each element, for each page, for each project is time consuming and hard to manage. It also makes it harder to maintain your code as you have to always figure out what part of the code is responsible for what part of the UI.",
   "daisyUI is not a replacement for Tailwind CSS, it's a plugin that makes Tailwind CSS more powerful and easier to use.": "daisyUI is not a replacement for Tailwind CSS, it's a plugin that makes Tailwind CSS more powerful and easier to use.",
   "Yes! It's utility-first, not utility-only.": "Yes! It's utility-first, not utility-only.",
@@ -925,7 +925,6 @@
   "A hidden checkbox can control the state of modal and labels can toggle the checkbox so we can open/close the modal.": "A hidden checkbox can control the state of modal and labels can toggle the checkbox so we can open/close the modal.",
   "open modal": "open modal",
   "is required for responsivness of the dock in iOS.": "is required for responsivness of the dock in iOS.",
-  "don't re-invent <br/>the wheel <br/>every time": "nie wynajduj koła <br/>za każdym razem",
   "Put Tailwind CSS and daisyUI in your CSS file at `src/` (and remove old styles).": "Put Tailwind CSS and daisyUI in your CSS file at `src/` (and remove old styles).",
   "Install WordPress according to the [Official WordPress guide](https://wordpress.org/download/).": "Install WordPress according to the [Official WordPress guide](https://wordpress.org/download/).",
   "In this guide, we will use the [WindPress](https://wind.press) plugin to install Tailwind CSS and daisyUI in a WordPress project.": "In this guide, we will use the [WindPress](https://wind.press) plugin to install Tailwind CSS and daisyUI in a WordPress project.",
@@ -1156,5 +1155,7 @@
   "When modal is closed, the page will scroll to the top because of the anchor link.": "When modal is closed, the page will scroll to the top because of the anchor link.",
   "Anchor links might not work well on some SPA frameworks. If there are problems, use the other methods": "Anchor links might not work well on some SPA frameworks. If there are problems, use the other methods",
   "The `hr` tag at the beginning or end of each item, displays a line to connect items.": "The `hr` tag at the beginning or end of each item, displays a line to connect items.",
-  "Inbox": "Inbox"
+  "Inbox": "Inbox",
+  "In chat window type this and write your prompt": "In chat window type this and write your prompt",
+  "don't re-invent <br/>the wheel <br/>every time": "nie wynajduj koła <br/>za każdym razem"
 }

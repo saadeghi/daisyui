@@ -249,6 +249,7 @@
   }
 }
 .shiki {
+  text-align: left;
   --shiki-bg: var(--color-neutral);
   --shiki-token: color-mix(
     in oklab,

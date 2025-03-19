@@ -73,29 +73,6 @@ const extractTextFromNode = (node) => {
   return ""
 }
 
-const isInsideCodeBlock = (node, parent) => {
-  if (parent?.type === "code") return true
-  let currentNode = node
-  while (currentNode?.parent) {
-    if (currentNode.parent.type === "code") return true
-    if (isNodeInCodeBlockContext(currentNode)) return true
-    currentNode = currentNode.parent
-  }
-  return false
-}
-
-const isNodeInCodeBlockContext = (node) => {
-  if (!node.parent?.type === "root") return false
-  const nodeStart = node.position?.start?.offset
-  const codeBlocks = node.parent.children.filter(
-    (child) => child.type === "code" && ["html", "jsx"].includes(child.lang),
-  )
-  return codeBlocks.some(
-    (block) =>
-      nodeStart > block.position?.start?.offset && nodeStart < block.position?.end?.offset + 100,
-  )
-}
-
 // Text Filtering
 const shouldSkipText = (text) => {
   // Array of regex patterns with comments explaining each one
@@ -111,30 +88,30 @@ const shouldSkipText = (text) => {
     /^.*\|.*\n\|.*$/, // Skip table-like content with pipe characters
     /^.*\|.*\|.*$/, // Skip lines with multiple pipe characters (likely tables)
     /<[a-z][\s\S]*>/i, // Skip HTML-like content
-    
+
     // HTML tags and attributes
     /^<\w+.*$/i, // Skip strings starting with HTML tags like "<input"
     /^\/>$/, // Skip closing tag fragments like "/>"
     /^class=["'].*["']>$/, // Skip class attributes
     /^min=["'].*["'].*\/>$/, // Skip HTML attribute combinations ending with "/>"
-    
+
     // Special characters and keyboard keys
     /^(ctrl|shift|del)$/, // Skip keyboard key names
     /^[◀︎▶︎↖︎↗︎↙︎↘︎]$/, // Skip arrow symbols
-    /^\.\.\.$/,  // Skip ellipsis
-    
+    /^\.\.\.$/, // Skip ellipsis
+
     // Svelte specific tags
     /^\[svelte:.*\].*$/, // Skip svelte tag references like "[svelte:head]..."
     /^<\/svelte:.*>$/, // Skip closing svelte tags like "</svelte:head>"
-    
+
     // Time formats and units
     /^\d+[hm]$/, // Skip time units like "10h", "24m"
     /^\d+:$/, // Skip time formats like "10:", "24:"
-    
+
     // URLs and domains
     /^https:\/\/$/, // Skip URL protocol
     /^\.\w+$/, // Skip domain extensions like ".com"
-    
+
     // HTML attributes
     /^(type|class|required|placeholder|min|max|title)=["'].*["']$/, // Skip HTML attributes
   ]
@@ -146,34 +123,48 @@ const shouldSkipText = (text) => {
 
   // Additional checks for specific strings that might not be caught by regex
   const specificStringsToSkip = [
-    "...", "ctrl", "shift", "del", "◀︎", "▶︎", "↖︎", "↗︎", "↙︎", "↘︎", 
-    "https://", ".com", "10h", "24m", "10:", "24:"
-  ];
-  
-  if (specificStringsToSkip.includes(text)) return true;
+    "...",
+    "ctrl",
+    "shift",
+    "del",
+    "◀︎",
+    "▶︎",
+    "↖︎",
+    "↗︎",
+    "↙︎",
+    "↘︎",
+    "https://",
+    ".com",
+    "10h",
+    "24m",
+    "10:",
+    "24:",
+  ]
+
+  if (specificStringsToSkip.includes(text)) return true
 
   // Additional check for code blocks using triple backticks
   if (text.includes("```")) return true
 
   // Skip lines with HTML-like content
   if (text.startsWith("<") && (text.includes("/>") || text.includes(">"))) return true
-  
+
   // Skip class attributes
   if (text.includes("class=")) return true
-  
+
   return false
 }
 
 // Additional function to detect if content is within a code block
 export const isWithinCodeBlock = (content, position) => {
   const codeBlockMatches = [...content.matchAll(/```[\s\S]*?```/g)]
-  
+
   for (const match of codeBlockMatches) {
     if (position >= match.index && position < match.index + match[0].length) {
       return true
     }
   }
-  
+
   return false
 }
 
@@ -203,22 +194,6 @@ export const processTableCells = (node) => {
   })
 
   return tableCellTexts
-}
-
-const extractCellText = (cell) => {
-  let text = ""
-  cell.children?.forEach((child) => {
-    if (["text", "inlineCode"].includes(child.type)) {
-      text += child.value.trim()
-    } else if (child.type === "paragraph") {
-      child.children?.forEach((grandChild) => {
-        if (grandChild.type === "text") {
-          text += grandChild.value.trim()
-        }
-      })
-    }
-  })
-  return text
 }
 
 export const shouldSkipTableCell = (text) =>
@@ -255,7 +230,7 @@ export const processMarkdownFile = (filePath) => {
 
   // Check for code blocks in the entire content
   const codeBlocks = [...processableContent.matchAll(/```[\s\S]*?```/g)]
-  const codeBlockRanges = codeBlocks.map(match => [match.index, match.index + match[0].length])
+  const codeBlockRanges = codeBlocks.map((match) => [match.index, match.index + match[0].length])
 
   // Split the content by actual newlines in the source
   const lines = processableContent.split(/\r?\n/)
@@ -273,9 +248,9 @@ export const processMarkdownFile = (filePath) => {
 
     // Skip processing if this line is within a code block
     const inCodeBlock = codeBlockRanges.some(
-      ([start, end]) => currentPosition >= start && currentPosition < end
+      ([start, end]) => currentPosition >= start && currentPosition < end,
     )
-    
+
     if (!inCodeBlock) {
       // Process each line as separate markdown content
       const lineAst = unified().use(remarkParse).use(remarkGfm).parse(line)
