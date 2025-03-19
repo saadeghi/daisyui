@@ -1,6 +1,6 @@
 ---
 title: "A daisyUI + Next.js template that converts your Lemon Squeezy API into an online store"
-desc: Convert yout Lemon Squeezy API data into a professional online store.
+desc: Convert your Lemon Squeezy API data into a professional online store.
 published: true
 date: 2025-01-23
 thumbnail: https://img.daisyui.com/images/blog/online-store-template-thumbnail.webp
