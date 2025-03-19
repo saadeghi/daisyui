@@ -175,7 +175,7 @@ So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI c
 
 ## Color opacity and muted colors
 
-`base-content` is the the text color of the page by default. It's a dark color on light themes and it's a light color on dark themes. 
+`base-content` is the text color of the page by default. It's a dark color on light themes and it's a light color on dark themes. 
 
 <div class="grid md:grid-cols-2 gap-10">
   <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="nord">

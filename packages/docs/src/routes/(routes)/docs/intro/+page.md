@@ -55,7 +55,7 @@ daisyUI is not a replacement for Tailwind CSS, it's a plugin that makes Tailwind
 
 Yes! It's utility-first, not utility-only.
 
-daisyUI is built on top of Tailwind CSS's component API. Tailwind CSS as a library provides utility classes and suggests using utility classes for maximum flexibility and customization. However that's means slower development and more code to write.  
+daisyUI is built on top of Tailwind CSS's component API. Tailwind CSS as a library provides utility classes and suggests using utility classes for maximum flexibility and customization. However that means slower development and more code to write.  
 That's why many people find it hard to use Tailwind CSS for designing interfaces. It takes a professional designer to make design decisions for many details of the UI to make them look good. It also takes a lot of time to write all the utility class names for each part of the UI. Even copying and pasting those huge chunks of utility class names is not helpful, as it makes the codebase hard to read and maintain.  
 
 Imagine one side of the spectrum is maximum customization and flexibility and you should make design decisions for every single detail. On the other side of the spectrum is maximum development speed and less code to write, but you have no control over the design. daisyUI and Tailwind CSS together give you the best of both worlds.  
