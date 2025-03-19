@@ -56,15 +56,10 @@ In 2023, we added 7 new components, 3 new themes and more than 100 utility class
 
 ## Accessibility
 
-All color pairs used on daisyUI built-in themes now tested for contrast ratio and [they all pass the WCAG test](https://github.com/saadeghi/daisyui/actions/runs/7216144450/job/19661791138#step:6:20). This test runs automatically everytime there's a change in themes or theme functions to make sure we provide accessible color combinations by default.
+All color pairs used on daisyUI built-in themes now tested for contrast ratio and they all pass the WCAG test. This test runs automatically everytime there's a change in themes or theme functions to make sure we provide accessible color combinations by default.
 
 <figure>
   <img src="https://img.daisyui.com/images/blog/daisyui-colors-are-accessible.webp" alt="daisyUI colors are accessible" class="rounded-box">
-  <figcaption class="text-center">
-
-[See the test results](https://github.com/saadeghi/daisyui/actions/runs/7216144450/job/19661791138#step:6:20)
-
-  </figcaption>
 </figure>
 
 In 2023 all daisyUI theme colors were adjusted to improve contrast ratio while providing a better visual experience. As long as you use the correct color pairs to build your UI (for example using `bg-primary` and `text-primary-content` together), you can be sure that your UI is accessible by default, on all themes.
