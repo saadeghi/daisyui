@@ -3,6 +3,10 @@ title: daisyUI 5 release notes
 desc: Everything about the new daisyUI 5 release
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 <div class="w-full rounded-box overflow-hidden" style="aspect-ratio: 1920/1080;"><iframe class="w-full h-full" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/bYznFmzL820?mute=0&amp;autoplay=1&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;loop=1&amp;playlist=bYznFmzL820" title="Nexus Dashboard 2.0"></iframe></div>
 
 Welcome! 🎉

@@ -3,6 +3,10 @@ title: Install daisyUI for Next.js
 desc: How to install Tailwind CSS and daisyUI in a Next.js project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Next.js project
 
 Create a new Next.js project in the current directory

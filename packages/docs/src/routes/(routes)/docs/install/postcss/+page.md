@@ -3,6 +3,10 @@ title: Install daisyUI for PostCSS
 desc: How to install Tailwind CSS and daisyUI in PostCSS
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Install
 
 Initialize a new Node project in the current directory using `npm init -y` if it's not a Node project already.

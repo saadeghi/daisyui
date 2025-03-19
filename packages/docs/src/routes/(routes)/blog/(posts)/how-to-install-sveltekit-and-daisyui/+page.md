@@ -9,6 +9,10 @@ tags:
   - Frameworks
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 The biggest advantage of using Svelte, aside from speed and developer experience, is that it's a disappearing framework. It doesn't add any runtime library to your app, so you would only ship the code that you actually use.
 
 If you haven't used Svelte before, You would be surprised how easy it is to learn compared to other frameworks.

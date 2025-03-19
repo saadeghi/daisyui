@@ -7,6 +7,8 @@ showComponentPageTabs: true
 ---
 
 <script>
+  import Translate from "$components/Translate.svelte"
+  
   const {
     figure,
     indicator,

@@ -9,6 +9,10 @@ tags:
   - News
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 It's been 3 years since the first commit of daisyUI. At first, it was just a small side project to help me with my own freelance projects. But it quickly grew into something bigger than I could have ever imagined. It's been an exciting journey and 2023 in particular was a special year for daisyUI. Let's see all the good things that happened in 2023.
 
 ## 2023 in numbers 📊

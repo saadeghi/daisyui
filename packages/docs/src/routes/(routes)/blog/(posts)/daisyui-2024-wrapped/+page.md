@@ -9,6 +9,10 @@ tags:
   - News
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 daisyUI started as a side project, a small collection of Tailwind CSS components. Now it's one of the first choices for many developers when they start a new project with Tailwind CSS. Thank you to everyone who used and contributed to daisyUI - this project wouldn't be possible without you 💚
 
 ## 2024 stats

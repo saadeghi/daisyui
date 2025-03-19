@@ -3,6 +3,10 @@ title: Install daisyUI for Vite
 desc: How to install Tailwind CSS and daisyUI in a Vite project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Vite project
 
 Create a new Vite project in the current directory

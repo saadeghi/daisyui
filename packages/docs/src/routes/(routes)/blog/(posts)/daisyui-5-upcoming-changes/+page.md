@@ -9,6 +9,10 @@ tags:
   - News
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 daisyUI 5 is in development and it will be released after Tailwind CSS 4 is released. Here's what you can expect from daisyUI 5 and how it will be different from the current version.
 
 # Compatibility with Tailwind CSS 4

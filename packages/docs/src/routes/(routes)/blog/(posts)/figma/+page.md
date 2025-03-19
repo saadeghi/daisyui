@@ -9,6 +9,10 @@ tags:
   - News
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## Designers, You’ve Been Asking for This!
 
 Designers have been asking for an official daisyUI Figma file for a long time. No more recreating components or dealing with mismatches. The [**Official daisyUI Figma Library**](https://daisyui.com/store/) is finally here, fully tokenized, complete with everything you need, and exactly what you’ve been hoping for.

@@ -15,6 +15,7 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 
 ### ~Fieldset fieldset-legend and fieldset-label

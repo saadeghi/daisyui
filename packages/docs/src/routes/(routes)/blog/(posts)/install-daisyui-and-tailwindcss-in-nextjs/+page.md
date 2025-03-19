@@ -9,6 +9,10 @@ tags:
   - Frameworks
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 Next.js is currently one of the popular JavaScript meta frameworks for building web applications. Since we can use daisyUI in any JavaScript framework, we can also use it in Next.js.
 
 Installing Next.js is pretty straightforward. It also includes Tailwind CSS by default. After installing Next.js, we can install daisyUI as a plugin and start using it in our Next.js project.

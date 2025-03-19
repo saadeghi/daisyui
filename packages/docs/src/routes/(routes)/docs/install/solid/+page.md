@@ -3,6 +3,10 @@ title: Install daisyUI for Solid
 desc: How to install Tailwind CSS and daisyUI in a Solid project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Solid project
 
 Create a new Solid project in the current directory

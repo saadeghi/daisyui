@@ -9,6 +9,10 @@ tags:
   - Reviews
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 Tailwind CSS is a utility-first CSS framework that is rapidly growing in popularity and there are many plugins that can boost your workflow and make your life easier.
 
 **Let's begin!**

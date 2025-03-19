@@ -3,6 +3,10 @@ title: Install daisyUI for Vike
 desc: How to install Tailwind CSS and daisyUI in a Vike project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Vike project
 
 Create a new Vike project in the current directory

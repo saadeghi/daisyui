@@ -18,6 +18,7 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 
 > For pagination, we use [join component](/components/join) to show multiple links or buttons next to each other.

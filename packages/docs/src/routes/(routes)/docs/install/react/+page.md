@@ -3,6 +3,10 @@ title: Install daisyUI for React
 desc: How to install Tailwind CSS and daisyUI in a React project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new React project
 
 Create a new Vite React project in the current directory

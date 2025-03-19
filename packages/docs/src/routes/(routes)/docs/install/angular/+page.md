@@ -3,6 +3,10 @@ title: Install daisyUI for Angular
 desc: How to install Tailwind CSS and daisyUI in a Angular project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Angular project
 
 Install Angular CLI globally

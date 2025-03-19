@@ -9,6 +9,10 @@ tags:
   - Guides
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## The manual way
 
 Setting up Tailwind CSS and PostCSS and then adding daisyUI is not that hard at all, but it can be annoying to do the same process again and again on every project.

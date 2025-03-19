@@ -9,6 +9,10 @@ tags:
   - Templates
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## Introduction
 
 Setting up an online store can be a complex task or a really expensive one. We recently added a new ["Online Store Template"](https://www.daisyui.com/store/#426780) to daisyUI store which can help you build a professional online store with minimal effort. This template is built using Next.js and receives data from the Lemon Squeezy API. It is fully customizable and can be deployed to any platform that supports Next.js.

@@ -9,6 +9,10 @@ tags:
   - Guides
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 As a maintainer of daisyUI, I help people on GitHub issues and GitHub discussions every day. I see a lot of people making this mistake when using Tailwind CSS. It's so simple to avoid but I find it so common among developers.
 
 ## The mistake

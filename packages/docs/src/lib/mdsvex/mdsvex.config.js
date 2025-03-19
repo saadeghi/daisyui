@@ -8,10 +8,11 @@ import remarkGithub from "remark-github"
 import remarkCodeTitles from "remark-flexible-code-titles"
 // import toc from "@jsdevtools/rehype-toc"
 import rehypeSlug from "rehype-slug"
-import linkHeadings from "rehype-autolink-headings"
+import { remarkLinkHeadings } from "./remark-link-headings.js"
 import rehypeExternalLinks from "rehype-external-links"
 import { visit } from "unist-util-visit"
 import { remarkRenderComponent } from "./remark-render-component.js"
+import { remarkTranslate } from "./remark-translate.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -96,28 +97,28 @@ const rehypePlugins = [
   //     },
   //   },
   // ],
-  [
-    linkHeadings,
-    {
-      behavior: "prepend",
-      content: {
-        type: "element",
-        tagName: "span",
-        properties: {
-          className: [
-            "heading-anchorlink-icon bg-base-content/5 hover:bg-primary/10 size-[1em] text-base-content/30 hover:text-primary/50 rounded-field border border-base-content/5 hover:border-primary/20 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200 align-text-bottom me-3 lg:absolute lg:ms-[-1.5em] lg:mt-1 transition-all group",
-          ],
-        },
-        children: [
-          {
-            type: "text",
-            value:
-              '<svg class="group-hover:scale-100 scale-90 transition-transform" fill="currentColor" width=".5em" height=".5em" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg" ><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>',
-          },
-        ],
-      },
-    },
-  ],
+  // [
+  //   linkHeadings,
+  //   {
+  //     behavior: "prepend",
+  //     content: {
+  //       type: "element",
+  //       tagName: "span",
+  //       properties: {
+  //         className: [
+  //           "heading-anchorlink-icon bg-base-content/5 hover:bg-primary/10 size-[1em] text-base-content/30 hover:text-primary/50 rounded-field border border-base-content/5 hover:border-primary/20 inline-grid place-content-center hover:shadow-sm hover:shadow-base-200 align-text-bottom me-3 lg:absolute lg:ms-[-1.5em] lg:mt-1 transition-all group",
+  //         ],
+  //       },
+  //       children: [
+  //         {
+  //           type: "text",
+  //           value:
+  //             '<svg class="group-hover:scale-100 scale-90 transition-transform" fill="currentColor" width=".5em" height=".5em" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg" ><path d="M216,148H172V108h44a12,12,0,0,0,0-24H172V40a12,12,0,0,0-24,0V84H108V40a12,12,0,0,0-24,0V84H40a12,12,0,0,0,0,24H84v40H40a12,12,0,0,0,0,24H84v44a12,12,0,0,0,24,0V172h40v44a12,12,0,0,0,24,0V172h44a12,12,0,0,0,0-24Zm-108,0V108h40v40Z"/></svg>',
+  //         },
+  //       ],
+  //     },
+  //   },
+  // ],
   [rehypeExternalLinks, { rel: ["nofollow"], target: ["_blank"] }],
 ]
 
@@ -138,14 +139,16 @@ const remarkPlugins = [
   ],
   replacePlaceholders,
   remarkRenderComponent,
+  remarkLinkHeadings,
+  remarkTranslate,
 ]
 
 export const mdsvexExtensions = [".svx", ".md"]
 
 const config = {
   extensions: mdsvexExtensions,
-  rehypePlugins: rehypePlugins,
   remarkPlugins: remarkPlugins,
+  rehypePlugins: rehypePlugins, // Keep rehypePlugins after remarkPlugins
   layout: {
     components: "src/lib/mdsvex/layout-components.svelte",
     blog: "src/lib/mdsvex/layout-blog.svelte",

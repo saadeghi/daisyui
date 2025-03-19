@@ -9,6 +9,10 @@ tags:
   - Reviews
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## The early days
 
 It was about 15 years ago when I first started getting into web development and from the beginning, CSS was my favorite part. I loved the ability to style the same content in different ways. I was amazed by the power of CSS and how it could change the whole look and feel of a website with a few lines of code.

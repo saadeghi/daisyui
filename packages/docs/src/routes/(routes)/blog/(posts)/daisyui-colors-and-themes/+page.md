@@ -9,6 +9,10 @@ tags:
   - Reviews
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 Tailwind CSS as a general purpose utility-first CSS framework, provides all the color shades you may need for your website. Basically every shade of every color. However it's not a good idea to have all those colors in your website. You should choose a few colors and use them consistently across your website.
 
 A good design practice is to have a color system with semantic color names.

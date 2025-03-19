@@ -39,6 +39,7 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
   let indeterminate = true;
 </script>
 

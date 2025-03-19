@@ -9,6 +9,10 @@ tags:
   - Guides
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## daisyUI 4 breaking changes
 
 Since the launch of daisyUI 3 in July 2023, my focus has been on pushing the boundaries and enhancing the daisyUI experience. New features in CSS opened doors to new possibilities for daisyUI and now with the release of daisyUI 4, we can enjoy all the new features and improvements.

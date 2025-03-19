@@ -3,6 +3,10 @@ title: Install daisyUI for Rails
 desc: How to install Tailwind CSS and daisyUI in a Rails project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Rails project
 
 Install Ruby on Rails according to the [official Rails guide](https://guides.rubyonrails.org/getting_started.html).

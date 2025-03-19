@@ -41,6 +41,7 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 
 ### ~chat-start and chat-end

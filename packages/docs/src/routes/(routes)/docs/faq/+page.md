@@ -22,9 +22,9 @@ If you really need `@tailwindcss/forms` alongside with daisyUI (which I doubt, b
 ## Themes are not working
 - [Add the themes you want](https://daisyui.com/docs/themes/#enable-a-built-in-theme)
 - Enable a theme using [`data-theme`](https://daisyui.com/docs/themes/#enable-a-built-in-theme) on your `<html>` tag:  
-- If you're using a custom theme make sure you're using [all the required CSS variables](https://daisyui.com/docs/themes/#-2)
+- If you're using a custom theme make sure you're using [all the required CSS variables](https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme)
 
 ## Tailwind's `dark:` prefix is not working
 With daisyUI, you don't need to manually set colors using [`dark:` variant](https://daisyui.com/docs/colors/)  
 As long as you use [daisyUI colors](https://daisyui.com/docs/colors/) they will work on all themes, light or dark.  
-If you really want to use Tailwind's `dark:` variant, [here's how to do it](https://daisyui.com/docs/themes/#-5).
+If you really want to use Tailwind's `dark:` variant, [here's how to do it](https://daisyui.com/docs/themes/#how-to-apply-tailwinds-dark-selector-for-specific-themes).

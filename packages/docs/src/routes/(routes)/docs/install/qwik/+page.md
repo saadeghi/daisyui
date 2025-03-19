@@ -3,6 +3,10 @@ title: Install daisyUI for Qwik
 desc: How to install Tailwind CSS and daisyUI in a Qwik project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Qwik project
 
 Create a new Qwik project in the current directory

@@ -35,12 +35,13 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 
 
 ## There are 3 methods to use a dropdowns
 1. [details and summary elements](#method-1-details-and-summary)  
-2. [popover API and anchor positioning `new`](#method-2-popover-api-and-anchor-positioning-new)  
+2. [popover API and anchor positioning `new`](#method-2-popover-api-and-anchor-positioning-)  
 3. [CSS focus](#method-3-css-focus)  
 
 

@@ -3,6 +3,10 @@ title: daisyUI 5 upgrade guide
 desc: This guide helps you how to update your project to Tailwind CSS 4 and daisyUI 5. 
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 <div class="w-full rounded-box overflow-hidden" style="aspect-ratio: 1920/1080;"><iframe class="w-full h-full" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/bYznFmzL820?mute=0&amp;autoplay=1&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;loop=1&amp;playlist=bYznFmzL820" title="Nexus Dashboard 2.0"></iframe></div>
 
 
@@ -11,7 +15,7 @@ desc: This guide helps you how to update your project to Tailwind CSS 4 and dais
 > Before upgrading your project, read about:  
 > 1 - [Tailwind CSS 4 breaking changes](https://tailwindcss.com/docs/upgrade-guide#changes-from-v3)  
 > 2 - [daisyUI 5 release notes](/docs/v5/)  
-> 3 - [daisyUI 5 breaking changes](#changes-from-v4)
+> 3 - [daisyUI 5 breaking changes](/docs/upgrade#changes-from-v4)
 
 
 ### 1. Update Tailwind CSS

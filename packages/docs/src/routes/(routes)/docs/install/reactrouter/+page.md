@@ -3,6 +3,10 @@ title: Install daisyUI for React Router
 desc: How to install daisyUI in a React Router project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new React Router project
 
 Create a new React Router project in the current directory

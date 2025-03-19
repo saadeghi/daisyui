@@ -1801,7 +1801,11 @@
         <a data-sveltekit-preload-data href="/theme-generator/" class="btn">
           {$t("Theme Generator")}
         </a>
-        <a data-sveltekit-preload-data href="/docs/themes/#-4" class="btn btn-neutral">
+        <a
+          data-sveltekit-preload-data
+          href="/docs/themes/#how-to-add-custom-styles-for-a-specific-theme"
+          class="btn btn-neutral"
+        >
           {$t("Learn more about themes")}
         </a>
       </div>

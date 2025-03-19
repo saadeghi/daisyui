@@ -14,6 +14,7 @@ browserSupport:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
 
   let checkbox = false
   let radio = 'default'

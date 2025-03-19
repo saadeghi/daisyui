@@ -3,6 +3,10 @@ title: Use daisyUI with Tailwind CSS Standalone CLI
 desc: How to run daisyUI with Tailwind CSS Standalone CLI without Node.js
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Get Tailwind CSS executable
 
 Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get the latest version of Tailwind CSS executable.

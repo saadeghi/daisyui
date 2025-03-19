@@ -10,6 +10,7 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
 
   import { onMount } from "svelte"
   let counter = 59

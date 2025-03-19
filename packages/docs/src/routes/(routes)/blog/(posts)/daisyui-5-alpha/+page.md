@@ -9,6 +9,10 @@ tags:
   - News
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 daisyUI 5 alpha is in development [[v5 branch](https://github.com/saadeghi/daisyui/tree/v5)]
 
 - There's no docs or changelog yet

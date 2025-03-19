@@ -9,6 +9,10 @@ tags:
   - Templates
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## Introduction
 
 Creating a blog can be a challenging task, but with Astro and daisyUI, you can set up a stylish and functional blog in no time. Whether you're a seasoned developer or just starting, this guide will walk you through the process of getting your blog up and running using our "[Blog Template for Astro](https://daisyui.com/store/#208203)."
@@ -98,6 +102,10 @@ import FeaturedPost from "../components/FeaturedPost.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 <HomeLayout title="Home" description="Welcome to my blog">
   <div class="w-full">
     <Hero />
@@ -137,6 +145,10 @@ author: antonio
 authorImage: /images/about.jpeg
 category: seo
 ---
+
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
 
 ## **Introduction**
 

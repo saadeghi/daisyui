@@ -10,6 +10,10 @@ tags:
   - Component Libraries
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## Comparing daisyUI and Tailwind UI
 
 - daisyUI is a plugin for Tailwind CSS which adds additional class names and theming to your project.

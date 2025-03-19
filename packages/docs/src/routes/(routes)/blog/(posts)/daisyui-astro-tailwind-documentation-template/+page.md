@@ -9,6 +9,10 @@ tags:
   - Templates
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## Introduction
 
 Creating user-friendly documentation is essential for any project, but it doesn’t have to be complicated. With the "Documentation Template for Astro" available at [Official daisyUI store](https://daisyui.com/store/#284327), you can quickly build beautiful and easy-to-navigate documentation for your product or project. A [Next.js version](https://daisyui.com/store/#284327)  of the template is also available if you prefer using Next.js. This guide will walk you through installing, customizing, and deploying your documentation site using the Astro template.
@@ -56,6 +60,10 @@ import Integration from "../components/home/Integration.astro";
 import Contributors from "../components/home/Contributors.astro";
 import Testimonial from "../components/home/Testimonial.astro";
 ---
+
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
 
 <div>
   <Hero />
@@ -174,6 +182,10 @@ Open the new file and add your content using Markdown. Here's a basic structure:
 title: Getting Started
 description: "Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis."
 ---
+
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
 
 ## Overview
 

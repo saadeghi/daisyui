@@ -9,6 +9,10 @@ tags:
   - Component Libraries
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 Headless UI is a set of completely unstyled, fully accessible UI components for React and Vue. It gives you functionality without design decisions. daisyUI is a Tailwind CSS component library that provides design decisions without functionality. That's why it is suggested to use them together.
 
 ## Why use Headless UI?

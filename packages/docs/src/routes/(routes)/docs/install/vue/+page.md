@@ -3,6 +3,10 @@ title: Install daisyUI for Vue
 desc: How to install Tailwind CSS and daisyUI in a Vue project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Vue project
 
 Create a new Vite Vue project in the current directory

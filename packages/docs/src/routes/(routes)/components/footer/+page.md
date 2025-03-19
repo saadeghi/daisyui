@@ -22,6 +22,7 @@ classnames:
 
 <script>
   import Component from "$components/Component.svelte"
+  import Translate from "$components/Translate.svelte"
 </script>
 
 ### ~Footer (vertical be default, horizontal for sm and up)

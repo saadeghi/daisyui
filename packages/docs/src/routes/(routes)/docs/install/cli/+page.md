@@ -3,6 +3,10 @@ title: Use daisyUI with Tailwind CSS CLI
 desc: How to install and use daisyUI with Tailwind CSS CLI
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Install
 
 Initialize a new Node project in the current directory using `npm init -y` if it's not a Node project already.

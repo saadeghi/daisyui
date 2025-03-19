@@ -3,6 +3,10 @@ title: Install daisyUI for Rsbuild
 desc: How to install Tailwind CSS and daisyUI in a Rsbuild project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Rsbuild project
 
 Create a new Rsbuild project in the current directory

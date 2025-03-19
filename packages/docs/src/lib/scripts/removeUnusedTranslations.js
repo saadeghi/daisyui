@@ -44,21 +44,20 @@ export function findUsedTranslations(sourceFiles, translations) {
   for (const file of sourceFiles) {
     try {
       const content = readFileSync(file, "utf-8")
-      const contentLower = content.toLowerCase()
 
       for (const key in translations) {
+        // Normalize the content and translation value by removing newlines and extra spaces
+        const normalizedContent = content.replace(/\s+/g, " ").trim()
+        const normalizedTranslation = translations[key].replace(/\s+/g, " ").trim()
+
         // Check for the translation key itself
-        if (content.includes(key)) {
+        if (normalizedContent.includes(key)) {
           usedTranslations.add(key)
           continue
         }
 
         // Check for the translation value
-        const keyToFind = translations[key].toLowerCase()
-        const cleanKeyToFind = keyToFind.replace(/[^a-z0-9]/g, "")
-        const cleanContent = contentLower.replace(/[^a-z0-9]/g, "")
-
-        if (cleanContent.includes(cleanKeyToFind)) {
+        if (normalizedContent.includes(normalizedTranslation)) {
           usedTranslations.add(key)
         }
       }

@@ -6,4 +6,8 @@ layout: components
 showComponentPageTabs: true
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 soon

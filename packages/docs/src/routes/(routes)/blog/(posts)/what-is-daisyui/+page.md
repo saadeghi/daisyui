@@ -9,6 +9,10 @@ tags:
   - Reviews
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## What is daisyUI?
 
 [daisyUI](https://daisyui.com/) is a component library for Tailwind CSS. While Tailwind CSS provides utility classes for each CSS rule, daisyUI provides additional component class names to Tailwind CSS to make it faster and easier to build web pages.

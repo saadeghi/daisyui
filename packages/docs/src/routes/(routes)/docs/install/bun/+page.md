@@ -3,6 +3,10 @@ title: Use daisyUI in a Bun dev server
 desc: How to use Tailwind CSS and daisyUI in a Bun dev server
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 Using Bun 1.2.4+ you can serve HTML and CSS files directly in a [dev server](https://bun.sh/docs/bundler/fullstack). Here's how to setup daisyUI for it.
 
 ### 1. Create a new Bun project

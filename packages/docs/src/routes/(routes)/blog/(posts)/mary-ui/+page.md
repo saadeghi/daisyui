@@ -9,6 +9,10 @@ tags:
   - Frameworks
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ## What is Mary UI?
 
 [Mary UI](https://mary-ui.com/) is a collection of Laravel blade components made for Livewire 3.

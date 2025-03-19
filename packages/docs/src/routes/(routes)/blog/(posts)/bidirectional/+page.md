@@ -9,6 +9,10 @@ tags:
   - Guides
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 For years, making a bidirectional website was a pain. We had to make a LTR style first, then we had to override all the directional styles to make it RTL. But with the introduction of CSS logical properties, it's now easier than ever to make a bidirectional website.
 
 ## CSS Logical Properties

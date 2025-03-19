@@ -3,6 +3,10 @@ title: Use daisyUI with HTMX
 desc: How to install and use daisyUI with HTMX
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 > :INFO:
 >
 > This guide uses daisyUI as a Node.js dependency. If you don't want to use Node.js, try the [CDN version of daisyUI](/docs/cdn/).

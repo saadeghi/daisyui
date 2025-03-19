@@ -3,6 +3,10 @@ title: Install daisyUI for SvelteKit
 desc: How to install Tailwind CSS and daisyUI in a SvelteKit project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new SvelteKit project
 
 Create a new SvelteKit project in the current directory

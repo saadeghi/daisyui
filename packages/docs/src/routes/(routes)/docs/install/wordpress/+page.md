@@ -3,6 +3,10 @@ title: Install daisyUI for WordPress
 desc: How to install Tailwind CSS and daisyUI in a WordPress project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new WordPress project
 
 Install WordPress according to the [Official WordPress guide](https://wordpress.org/download/).

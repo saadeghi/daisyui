@@ -3,6 +3,10 @@ title: Install daisyUI for Nuxt
 desc: How to install Tailwind CSS and daisyUI in a Nuxt project
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 ### 1. Create a new Nuxt project
 
 Create a new Nuxt project in the current directory

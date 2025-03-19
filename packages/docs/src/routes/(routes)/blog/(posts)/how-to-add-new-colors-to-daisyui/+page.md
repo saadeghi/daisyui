@@ -9,6 +9,10 @@ tags:
   - Guides
 ---
 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
 daisyUI provides semantic color names. These color names are used in all daisyUI components and the can have different values in different themes.
 
 ## The problem with constant color names
