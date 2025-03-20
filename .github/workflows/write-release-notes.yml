@@ -17,6 +17,18 @@ jobs:
           fetch-depth: 10
           clean: false
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun i
+
+      - name: Build package
+        run: bun run build
+
+      - name: Build bundle
+        run: bun run bundle
+
       - name: Read package version from package.json
         id: package-version
         run: |
@@ -35,9 +47,9 @@ jobs:
         with:
           tag_name: v${{ steps.package-version.outputs.version }}
           body: |
-            🌼 Read changelog: https://daisyui.com/docs/changelog/  
+            🌼 Read changelog: https://daisyui.com/docs/changelog/
 
-            📦 Install this update:  
+            📦 Install this update:
             ```bash
             npm i -D daisyui@${{ steps.package-version.outputs.version }}
             ```

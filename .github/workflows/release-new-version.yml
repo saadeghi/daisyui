@@ -66,11 +66,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_CONFIG_LOGLEVEL: verbose
 
-  # deploy-docs:
-  #   name: 📘 Docs
-  #   needs: build-publish
-  #   uses: ./.github/workflows/deploy-docs.yml
-  #   secrets: inherit
+  deploy-docs:
+    name: 📘 Docs
+    needs: build-publish
+    uses: ./.github/workflows/deploy-docs.yml
+    secrets: inherit
 
   run-tests:
     name: 🧪 Tests
