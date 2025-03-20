@@ -25,7 +25,7 @@ const handleTextWithCode = (text) => {
 
   for (let i = 0; i < text.length; i++) {
     const char = text[i]
-    
+
     if (char === "`") {
       if (inCode) {
         // End of code block
@@ -65,7 +65,7 @@ const handleTextWithCode = (text) => {
   }
 
   // Otherwise, combine all parts
-  const combinedHtml = parts.map(p => p.value).join(" ")
+  const combinedHtml = parts.map((p) => p.value).join(" ")
   return { type: "html", value: combinedHtml }
 }
 
