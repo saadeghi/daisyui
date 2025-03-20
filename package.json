@@ -18,6 +18,7 @@
     "lang:sort": "bun packages/docs/src/lib/scripts/sortTranslations.js",
     "lang:fill": "bun packages/docs/src/lib/scripts/fillTranslations.js",
     "lang:add": "bun packages/docs/src/lib/scripts/addTranslations.js",
+    "bundle": "bun packages/daisyui/functions/bundle.js",
     "lint": "bunx -y oxlint@latest --ignore-pattern packages/playground",
     "test": "bun test",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",

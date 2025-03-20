@@ -43,3 +43,8 @@ jobs:
             ```
 
             💚 Thank you for using daisyUI!
+          files: |
+            packages/bundle/daisyui.js
+            packages/bundle/daisyui.mjs
+            packages/bundle/daisyui-theme.js
+            packages/bundle/daisyui-theme.mjs
