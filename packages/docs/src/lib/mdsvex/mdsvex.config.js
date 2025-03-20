@@ -123,6 +123,8 @@ const rehypePlugins = [
 ]
 
 const remarkPlugins = [
+  remarkRenderComponent,
+  remarkTranslate,
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
   [
     remarkCodeTitles,
@@ -138,9 +140,8 @@ const remarkPlugins = [
     },
   ],
   replacePlaceholders,
-  remarkRenderComponent,
+  
   remarkLinkHeadings,
-  remarkTranslate,
 ]
 
 export const mdsvexExtensions = [".svx", ".md"]

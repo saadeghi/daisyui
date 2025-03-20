@@ -10,6 +10,65 @@ const createTranslateNode = (text) => ({
   value: `<Translate text="${escapeQuotes(text)}" />`,
 })
 
+// Helper function to handle text with code blocks
+const handleTextWithCode = (text) => {
+  // If the text is already wrapped in HTML tags, return as is
+  if (text.startsWith("<") && text.endsWith(">")) {
+    return { type: "html", value: text }
+  }
+
+  // Split text into parts: text and code blocks
+  const parts = []
+  let currentText = ""
+  let inCode = false
+  let codeContent = ""
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i]
+    
+    if (char === "`") {
+      if (inCode) {
+        // End of code block
+        if (currentText.trim()) {
+          parts.push(createTranslateNode(currentText.trim()))
+          currentText = ""
+        }
+        parts.push({ type: "html", value: `<code>${codeContent}</code>` })
+        codeContent = ""
+        inCode = false
+      } else {
+        // Start of code block
+        if (currentText.trim()) {
+          parts.push(createTranslateNode(currentText.trim()))
+          currentText = ""
+        }
+        inCode = true
+      }
+      continue
+    }
+
+    if (inCode) {
+      codeContent += char
+    } else {
+      currentText += char
+    }
+  }
+
+  // Handle any remaining text
+  if (currentText.trim()) {
+    parts.push(createTranslateNode(currentText.trim()))
+  }
+
+  // If we only have one part and it's a translate node, return it directly
+  if (parts.length === 1 && parts[0].type === "html" && parts[0].value.startsWith("<Translate")) {
+    return parts[0]
+  }
+
+  // Otherwise, combine all parts
+  const combinedHtml = parts.map(p => p.value).join(" ")
+  return { type: "html", value: combinedHtml }
+}
+
 export function remarkTranslate() {
   return (tree, file) => {
     // Skip processing if file is CHANGELOG.md
@@ -38,7 +97,7 @@ export function remarkTranslate() {
           // but preserves the original text for ID generation
           const wrapperNode = {
             type: "html",
-            value: `<span data-heading-text="${escapeQuotes(headingText)}">${createTranslateNode(headingText).value}</span>`,
+            value: `<span data-heading-text="${escapeQuotes(headingText)}">${handleTextWithCode(headingText).value}</span>`,
           }
 
           // Replace text nodes with our wrapper
@@ -66,13 +125,12 @@ export function remarkTranslate() {
                 // For each element in the cell
                 cell.children.forEach((child, index) => {
                   if (child.type === "text" && child.value.trim()) {
-                    // Replace text with Translate component
-                    cell.children[index] = createTranslateNode(child.value.trim())
+                    cell.children[index] = handleTextWithCode(child.value.trim())
                   } else if (child.type === "paragraph" && child.children) {
                     // For paragraphs inside cells
                     child.children.forEach((grandChild, grandIndex) => {
                       if (grandChild.type === "text" && grandChild.value.trim()) {
-                        child.children[grandIndex] = createTranslateNode(grandChild.value.trim())
+                        child.children[grandIndex] = handleTextWithCode(grandChild.value.trim())
                       }
                     })
                   } else if (child.type === "inlineCode") {
@@ -94,29 +152,38 @@ export function remarkTranslate() {
     // Process paragraphs
     visit(tree, "paragraph", (node) => {
       if (node.children && node.children.length) {
-        node.children.forEach((child, index) => {
+        let i = 0
+        while (i < node.children.length) {
+          const child = node.children[i]
           if (child.type === "text") {
             // Split text by line breaks to preserve formatting
             const lines = child.value.split(/(\n+)/)
             if (lines.length > 1) {
               // If there are line breaks, create multiple translate nodes
               const newNodes = []
-              lines.forEach((line, i) => {
-                if (i % 2 === 0 && line.trim()) {
+              lines.forEach((line, lineIndex) => {
+                if (lineIndex % 2 === 0 && line.trim()) {
                   // Text content
-                  newNodes.push(createTranslateNode(line))
+                  newNodes.push(handleTextWithCode(line))
                 } else {
                   // Line breaks
                   newNodes.push({ type: "text", value: line })
                 }
               })
-              node.children.splice(index, 1, ...newNodes)
+              node.children.splice(i, 1, ...newNodes)
+              i += newNodes.length
             } else if (child.value.trim()) {
               // Simple text without line breaks
-              node.children[index] = createTranslateNode(child.value)
+              const nodes = [handleTextWithCode(child.value)]
+              node.children.splice(i, 1, ...nodes)
+              i += nodes.length
+            } else {
+              i++
             }
+          } else {
+            i++
           }
-        })
+        }
       }
     })
 
@@ -125,11 +192,17 @@ export function remarkTranslate() {
       if (node.children && node.children.length) {
         node.children.forEach((child) => {
           if (child.type === "paragraph" && child.children) {
-            child.children.forEach((grandChild, index) => {
+            let i = 0
+            while (i < child.children.length) {
+              const grandChild = child.children[i]
               if (grandChild.type === "text" && grandChild.value.trim()) {
-                child.children[index] = createTranslateNode(grandChild.value)
+                const nodes = [handleTextWithCode(grandChild.value)]
+                child.children.splice(i, 1, ...nodes)
+                i += nodes.length
+              } else {
+                i++
               }
-            })
+            }
           }
         })
       }
@@ -138,11 +211,17 @@ export function remarkTranslate() {
     // Process emphasis and strong
     visit(tree, ["emphasis", "strong"], (node) => {
       if (node.children && node.children.length) {
-        node.children.forEach((child, index) => {
+        let i = 0
+        while (i < node.children.length) {
+          const child = node.children[i]
           if (child.type === "text" && child.value.trim()) {
-            node.children[index] = createTranslateNode(child.value)
+            const nodes = [handleTextWithCode(child.value)]
+            node.children.splice(i, 1, ...nodes)
+            i += nodes.length
+          } else {
+            i++
           }
-        })
+        }
       }
     })
 
@@ -151,11 +230,17 @@ export function remarkTranslate() {
       if (node.children && node.children.length) {
         node.children.forEach((child) => {
           if (child.type === "paragraph" && child.children) {
-            child.children.forEach((grandChild, index) => {
+            let i = 0
+            while (i < child.children.length) {
+              const grandChild = child.children[i]
               if (grandChild.type === "text" && grandChild.value.trim()) {
-                child.children[index] = createTranslateNode(grandChild.value)
+                const nodes = [handleTextWithCode(grandChild.value)]
+                child.children.splice(i, 1, ...nodes)
+                i += nodes.length
+              } else {
+                i++
               }
-            })
+            }
           }
         })
       }
