@@ -11,13 +11,13 @@ on:
     inputs:
       filter:
         type: string
-  # push:
-  #   branches:
-  #     - master
-  #   paths:
-  #     - "packages/daisyui/functions/**"
-  #     - "packages/daisyui/src/**"
-  #     - "packages/docs/src/**"
+  push:
+    branches:
+      - master
+    paths:
+      - "packages/daisyui/functions/**"
+      - "packages/daisyui/src/**"
+      - "packages/docs/src/**"
 jobs:
   tests:
     timeout-minutes: 10

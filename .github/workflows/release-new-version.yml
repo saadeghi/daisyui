@@ -16,12 +16,18 @@ on:
       - "packages/daisyui/**"
 
 jobs:
+  run-tests:
+    name: 🧪 Tests
+    uses: ./.github/workflows/run-tests.yml
+    secrets: inherit
+    with:
+      filter: ""
+
   build-publish:
     name: 🔨 Build + 🚀 Publish
+    needs: run-tests
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    outputs:
-      daisyuiversion: ${{ steps.package-version.outputs.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,12 +51,6 @@ jobs:
           cd packages/daisyui
           bunx commit-and-tag-version --infile ../../CHANGELOG.md ${{ inputs.release-type }}
 
-      - name: Read package version from package.json
-        id: package-version
-        run: |
-          version=$(grep -o '"version": *"[^"]*"' packages/daisyui/package.json | cut -d'"' -f4)
-          echo version=$version >> $GITHUB_OUTPUT
-
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
@@ -72,18 +72,8 @@ jobs:
     uses: ./.github/workflows/deploy-docs.yml
     secrets: inherit
 
-  run-tests:
-    name: 🧪 Tests
-    needs: build-publish
-    uses: ./.github/workflows/run-tests.yml
-    secrets: inherit
-    with:
-      filter: ""
-
   write-release-notes:
     name: 📝 Release notes
-    needs: build-publish
+    needs: deploy-docs
     uses: ./.github/workflows/write-release-notes.yml
     secrets: inherit
-    with:
-      daisyuiversion: ${{ needs.build-publish.outputs.daisyuiversion }}
