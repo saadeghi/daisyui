@@ -14,23 +14,23 @@
   <div
     tabindex="0"
     role="button"
-    class="btn btn-sm btn-ghost"
+    class="btn btn-sm btn-ghost gap-1 text-[.5625rem] font-bold"
     aria-label="Language"
     title="Change Language"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4">
+    <svg class="text-base-content/70 size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path
-        fill-rule="evenodd"
-        d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5Zm-1.24 5.5h2.48L11 7.636 9.76 10.5ZM5 1a.75.75 0 0 1 .75.75v1.261a25.27 25.27 0 0 1 2.598.211.75.75 0 1 1-.2 1.487c-.22-.03-.44-.056-.662-.08A12.939 12.939 0 0 1 5.92 8.058c.237.304.488.595.752.873a.75.75 0 0 1-1.086 1.035A13.075 13.075 0 0 1 5 9.307a13.068 13.068 0 0 1-2.841 2.546.75.75 0 0 1-.827-1.252A11.566 11.566 0 0 0 4.08 8.057a12.991 12.991 0 0 1-.554-.938.75.75 0 1 1 1.323-.707c.049.09.099.181.15.271.388-.68.708-1.405.952-2.164a23.941 23.941 0 0 0-4.1.19.75.75 0 0 1-.2-1.487c.853-.114 1.72-.185 2.598-.211V1.75A.75.75 0 0 1 5 1Z"
-        clip-rule="evenodd"
-      >
-      </path>
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="2"
+        fill="none"
+        stroke="currentColor"
+        d="M12 21a9 9 0 1 0 0-18m0 18a9 9 0 1 1 0-18m0 18c2.761 0 3.941-5.163 3.941-9S14.761 3 12 3m0 18c-2.761 0-3.941-5.163-3.941-9S9.239 3 12 3M3.5 9h17m-17 6h17"
+      ></path>
     </svg>
-
+    <!-- {$t("__code")} -->
     <svg
-      width="12px"
-      height="12px"
-      class="hidden h-2 w-2 fill-current opacity-60 sm:inline-block"
+      class="mt-px hidden size-2 fill-current opacity-60 sm:inline-block"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2048 2048"
     >

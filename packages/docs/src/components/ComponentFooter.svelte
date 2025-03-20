@@ -372,9 +372,9 @@
 </div> -->
 
 <div
-  class="card not-prose outline-base-content/5 bg-primary/5 relative overflow-hidden font-sans shadow-lg outline -outline-offset-1 md:flex-row-reverse"
+  class="card not-prose outline-base-content/5 bg-primary/5 relative overflow-hidden font-sans shadow-lg outline -outline-offset-1 [direction:ltr] md:flex-row-reverse"
 >
-  <figure class="max-md:bg-primary/10 isolate shrink-0 md:w-2/3">
+  <figure class="max-md:bg-primary/10 isolate md:w-2/3">
     <img
       class="pointer-events-none"
       alt="daisyUI store"
@@ -460,7 +460,7 @@
         <span class="text-2xl font-light"> Official daisyUI Dashboard Template </span>
       </span>
     </h2>
-    <div class="grow">
+    <div class="mb-4 grow">
       <h2
         class="card-title text-sm font-light opacity-50 sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
       >

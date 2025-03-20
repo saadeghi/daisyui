@@ -7,9 +7,16 @@
     dir="ltr"
     tabindex="0"
     role="button"
-    class="link link-hover text-base-content/60 inline-block font-mono text-[0.6875rem]"
+    class="link link-hover text-base-content/60 inline-block font-mono text-[0.625rem]"
   >
     {version.version}
+    <svg
+      class="text-base-content/60 -mt-0.25 hidden size-2 fill-current sm:inline-block"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 2048 2048"
+    >
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
   </div>
   <ul
     tabindex="0"

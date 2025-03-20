@@ -122,8 +122,9 @@
       class="inline-block size-4 transition-transform group-hover:-translate-x-0.5"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
-      ><g fill="currentColor"
-        ><line
+    >
+      <g fill="currentColor">
+        <line
           x1="17"
           y1="10"
           x2="3"
@@ -133,16 +134,19 @@
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="1.5"
-        ></line><polyline
+        >
+        </line>
+        <polyline
           points="8 5 3 10 8 15"
           fill="none"
           stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="1.5"
-        ></polyline></g
-      ></svg
-    >
+        >
+        </polyline>
+      </g>
+    </svg>
     <span class="text-sm">Back to store</span>
   </a>
 </div>
@@ -402,7 +406,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
+                class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block"
               >
                 <path
                   stroke-linecap="round"

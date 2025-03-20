@@ -123,6 +123,7 @@ const rehypePlugins = [
 ]
 
 const remarkPlugins = [
+  replacePlaceholders,
   remarkRenderComponent,
   remarkTranslate,
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
@@ -139,8 +140,6 @@ const remarkPlugins = [
       blockquote: "alert not-italic items-start text-xs leading-loose *:m-0!",
     },
   ],
-  replacePlaceholders,
-  
   remarkLinkHeadings,
 ]
 
