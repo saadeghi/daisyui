@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.9 (2025-03-21)
+
+
+### Bug Fixes
+
+* Join style on iOS. closes: [#3691](https://github.com/saadeghi/daisyui/issues/3691) ([5afa08c](https://github.com/saadeghi/daisyui/commit/5afa08c387e95486bf83da94ec026d95d0b40b25))
+
 ## 5.0.8 (2025-03-21)
 
 
