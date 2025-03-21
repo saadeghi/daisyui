@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.8 (2025-03-21)
+
+
+### Bug Fixes
+
+* alert unwanted gap if there's one child only. closes: [#3702](https://github.com/saadeghi/daisyui/issues/3702) ([6d3eb06](https://github.com/saadeghi/daisyui/commit/6d3eb068dd8e69543d1388b919e20604ee4cd4a0))
+
 ## 5.0.7 (2025-03-21)
 
 ## 5.0.6 (2025-03-17)
