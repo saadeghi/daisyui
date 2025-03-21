@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync, existsSync } from "fs"
+import fs from "fs"
 import { join, resolve } from "path"
 import { visit } from "unist-util-visit"
 import { unified } from "unified"
@@ -17,23 +17,23 @@ const config = {
 }
 
 // File System Operations
-export const getFiles = (dir, pattern) => {
-  if (!existsSync(dir)) {
+export const getFiles = (fs, dir, pattern) => {
+  if (!fs.existsSync(dir)) {
     // console.log(`Directory not found: ${dir}`)
     return []
   }
 
-  return readdirSync(dir, { withFileTypes: true }).flatMap((file) => {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((file) => {
     const filePath = join(dir, file.name)
     return file.isDirectory()
-      ? getFiles(filePath, pattern)
+      ? getFiles(fs, filePath, pattern)
       : pattern.test(file.name)
         ? [filePath]
         : []
   })
 }
 
-const readMarkdownFile = (filePath) => readFileSync(filePath, "utf-8")
+const readMarkdownFile = (fs, filePath) => fs.readFileSync(filePath, "utf-8")
 
 // Path Validation
 const normalizeFilePath = (path) => path.replace(/\\/g, "/")
@@ -56,7 +56,7 @@ export const shouldSkipFile = (filePath) => {
 export const removeMetadata = (content) =>
   content.startsWith("---") ? content.slice(content.indexOf("---", 3) + 3) : content
 
-const cleanContent = (content) =>
+export const cleanContent = (content) =>
   content.replace(/<script[\s\S]*?<\/script>/g, "").replace(/{#each[\s\S]*?\/each}/g, "")
 
 // AST Processing
@@ -200,18 +200,18 @@ export const shouldSkipTableCell = (text) =>
   Boolean(text.match(/^[-:]+$/)) || Boolean(text.match(/^\s*$/)) || /{COLOR_NAME}/.test(text)
 
 // Translation File Operations
-export const loadTranslations = (filePath) => {
+export const loadTranslations = (fs, filePath) => {
   try {
-    return existsSync(filePath) ? JSON.parse(readFileSync(filePath, "utf-8")) : {}
+    return fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, "utf-8")) : {}
   } catch (error) {
     console.error(`Error loading translations from ${filePath}:`, error)
     return {}
   }
 }
 
-const saveTranslations = (filePath, translations) => {
+export const saveTranslations = (fs, filePath, translations) => {
   try {
-    writeFileSync(filePath, JSON.stringify(translations, null, 2))
+    fs.writeFileSync(filePath, JSON.stringify(translations, null, 2))
     return true
   } catch (error) {
     console.error(`Error saving translations to ${filePath}:`, error)
@@ -220,12 +220,12 @@ const saveTranslations = (filePath, translations) => {
 }
 
 // Main Processing Functions
-export const processMarkdownFile = (filePath) => {
+export const processMarkdownFile = (fs, filePath) => {
   if (shouldSkipFile(filePath)) {
     return []
   }
 
-  const content = readMarkdownFile(filePath)
+  const content = readMarkdownFile(fs, filePath)
   const processableContent = cleanContent(removeMetadata(content))
 
   // Check for code blocks in the entire content
@@ -284,22 +284,22 @@ export const processMarkdownFile = (filePath) => {
 }
 
 // Main Execution
-export const main = (sourceDirs, pattern, translationFilePath) => {
-  const mdFiles = sourceDirs.flatMap((dir) => getFiles(resolve(dir), pattern))
+export const main = (fs, sourceDirs, pattern, translationFilePath) => {
+  const mdFiles = sourceDirs.flatMap((dir) => getFiles(fs, resolve(dir), pattern))
   // console.log(`Found ${mdFiles.length} markdown files`)
 
   const allTranslations = new Set()
   let processedCount = 0
 
   mdFiles.forEach((file) => {
-    const translations = processMarkdownFile(file)
+    const translations = processMarkdownFile(fs, file)
     if (translations.length > 0) {
       processedCount++
       translations.forEach((text) => allTranslations.add(text))
     }
   })
 
-  const existingTranslations = loadTranslations(translationFilePath)
+  const existingTranslations = loadTranslations(fs, translationFilePath)
   const newTranslations = Array.from(allTranslations).reduce((acc, text) => {
     if (!existingTranslations[text]) {
       acc[text] = text
@@ -307,7 +307,7 @@ export const main = (sourceDirs, pattern, translationFilePath) => {
     return acc
   }, {})
 
-  const success = saveTranslations(translationFilePath, {
+  const success = saveTranslations(fs, translationFilePath, {
     ...existingTranslations,
     ...newTranslations,
   })
@@ -325,6 +325,6 @@ const sourceDirs = ["./packages/docs/src/routes"]
 const mdFilePattern = /\.md$/
 const translationFilePath = "./packages/docs/src/translation/en.json"
 
-const result = main(sourceDirs, mdFilePattern, translationFilePath)
+const result = main(fs, sourceDirs, mdFilePattern, translationFilePath)
 console.log(`Processed ${result.processedFiles} of ${result.totalFiles} files`)
 console.log(`Added ${result.newTranslationsCount} new translations`)
