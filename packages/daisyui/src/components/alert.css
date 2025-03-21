@@ -4,7 +4,7 @@
   justify-content: start;
   justify-items: start;
   grid-auto-flow: column;
-  grid-template-columns: auto minmax(auto, 1fr);
+  grid-template-columns: auto;
   text-align: start;
   border: var(--border) solid var(--color-base-200);
   font-size: 0.875rem;
@@ -21,6 +21,9 @@
         #0000
       ),
     0 4px 3px -2px oklch(0% 0 0 / calc(var(--depth) * 0.08));
+  &:has(:nth-child(2)) {
+    grid-template-columns: auto minmax(auto, 1fr);
+  }
   &.alert-outline {
     @apply bg-transparent;
     color: var(--alert-color);
@@ -79,12 +82,18 @@
   grid-auto-flow: row;
   grid-template-columns: auto;
   text-align: center;
+  &:has(:nth-child(2)) {
+    grid-template-columns: auto;
+  }
 }
 
 .alert-horizontal {
   justify-content: start;
   justify-items: start;
   grid-auto-flow: column;
-  grid-template-columns: auto minmax(auto, 1fr);
+  grid-template-columns: auto;
   text-align: start;
+  &:has(:nth-child(2)) {
+    grid-template-columns: auto minmax(auto, 1fr);
+  }
 }

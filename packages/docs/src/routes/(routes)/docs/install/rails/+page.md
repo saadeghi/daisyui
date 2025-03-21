@@ -69,7 +69,7 @@ This works as a Tailwind CSS plugin so only the class names you need will be add
 Run this code to download latest version of daisyUI as a single js file
 
 ```sh:Terminal
-curl -sLo app/assets/tailwind/daisyui.js https://esm.run/daisyui@5/index.js
+curl -sLo app/assets/tailwind/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
