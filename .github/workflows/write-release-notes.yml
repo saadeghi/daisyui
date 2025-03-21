@@ -2,7 +2,9 @@ name: "📝 write release notes"
 
 on:
   workflow_call:
-
+    inputs:
+      daisyuiversion:
+        type: string
 jobs:
   write-release-notes:
     timeout-minutes: 5
@@ -29,7 +31,7 @@ jobs:
       - name: Read package version from package.json
         id: package-version
         run: |
-          version=$(grep -o '"version": *"[^"]*"' packages/daisyui/package.json | cut -d'"' -f4)
+          version=${{ inputs.daisyuiversion }}
           echo version=$version >> $GITHUB_OUTPUT
           if [[ $version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo $version is a stable version
