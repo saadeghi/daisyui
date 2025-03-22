@@ -6,6 +6,9 @@ classnames:
   component:
   - class: validator
     desc: For input, select, textarea
+  style:
+  - class: validator-invalid
+    desc: Only shows error color
   part:
   - class: validator-hint
     desc: for the hint text that appears after the input if it's invalid
@@ -26,6 +29,17 @@ classnames:
 
 ```html
 <input class="$$input $$validator" type="email" required placeholder="mail@site.com" />
+```
+
+### ~Validator and validator-invalid
+#### writing a valid email address does not apply success color to the input.
+
+<form class="w-full max-w-xs">
+  <input class="input validator validator-invalid" type="email" required placeholder="mail@site.com" autocomplete="false" />
+</form>
+
+```html
+<input class="$$input $$validator $$validator-invalid" type="email" required placeholder="mail@site.com" />
 ```
 
 ### ~Validator and validator-hint
