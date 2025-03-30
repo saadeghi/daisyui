@@ -1,4 +1,36 @@
 productCustomAttributes:
+  - id: 479479
+    media:
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/blink/blink-08.webp
+        lg: https://img.daisyui.com/images/store/large/blink/blink-08.webp
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/blink/blink-01.webp
+        lg: https://img.daisyui.com/images/store/large/blink/blink-01.webp
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/blink/blink-03.webp
+        lg: https://img.daisyui.com/images/store/large/blink/blink-03.webp
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/blink/blink-06.webp
+        lg: https://img.daisyui.com/images/store/large/blink/blink-06.webp
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/blink/blink-05.webp
+        lg: https://img.daisyui.com/images/store/large/blink/blink-05.webp
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/blink/blink-04.webp
+        lg: https://img.daisyui.com/images/store/large/blink/blink-04.webp
+      - type: image
+        sm: https://img.daisyui.com/images/store/small/blink/blink-07.webp
+        lg: https://img.daisyui.com/images/store/large/blink/blink-07.webp
+    links:
+      license: https://api.daisyui.com/license/agency-landing@1.txt
+      screenshot: https://img.daisyui.com/images/store/screenshots/blink.webp
+    tech: [react, svelte, vite]
+    tags: [landing]
+    badge:
+      class: badge-success
+      icon: check
+      text: Updated to daisyUI 5.0
   - id: 426780
     faq:
       - Q: Can I use this template without Lemon Squeezy?
@@ -272,32 +304,6 @@ productCustomAttributes:
       class: badge-success
       icon: check
       text: Updated to daisyUI 5.0
-  - id: 144550
-    media:
-      - type: image
-        sm: https://img.daisyui.com/images/store/small/agency-landing/agency-landing-2.webp
-        lg: https://img.daisyui.com/images/store/large/agency-landing/agency-landing-2.webp
-      - type: image
-        sm: https://img.daisyui.com/images/store/small/agency-landing/agency-landing-1.webp
-        lg: https://img.daisyui.com/images/store/large/agency-landing/agency-landing-1.webp
-      - type: image
-        sm: https://img.daisyui.com/images/store/small/agency-landing/agency-landing-3.webp
-        lg: https://img.daisyui.com/images/store/large/agency-landing/agency-landing-3.webp
-      - type: image
-        sm: https://img.daisyui.com/images/store/small/agency-landing/agency-landing-4.webp
-        lg: https://img.daisyui.com/images/store/large/agency-landing/agency-landing-4.webp
-      - type: image
-        sm: https://img.daisyui.com/images/store/small/agency-landing/agency-landing-5.webp
-        lg: https://img.daisyui.com/images/store/large/agency-landing/agency-landing-5.webp
-    links:
-      license: https://api.daisyui.com/license/agency-landing@1.txt
-      screenshot: https://img.daisyui.com/images/store/screenshots/agency-landingpage-react.webp
-    tech: [react, svelte, vite, framer]
-    tags: [landing]
-    badge:
-      class: badge-info
-      icon: wait
-      text: daisyUI 5.0 update coming soon
   - id: 130237
     media:
       - type: image
@@ -386,7 +392,7 @@ tech:
 techFilters: [all, html, react, vue, svelte, astro]
 
 futureProducts:
-  - Updates for Tailwind CSS 4 and daisyUI 5
+  - Scalo startup template
   - Official daisyUI Figma Library v2.0 update
   - Headless UI + daisyUI component pack for Vue
 

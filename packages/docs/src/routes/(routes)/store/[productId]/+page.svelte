@@ -202,19 +202,22 @@
         <!-- Thumbnail Navigation -->
         {#if data.product.media.length > 1}
           <div class="-mx-4 overflow-x-auto">
-            <div class="flex flex-wrap gap-2 p-4">
+            <div
+              class="grid grid-cols-6 gap-2 p-4 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 xl:grid-cols-8"
+            >
               {#each data.product.media as media, i}
                 <button
-                  class="border-base-content/15 h-8 w-11 shrink-0 cursor-pointer overflow-hidden rounded-sm border outline-2 outline-offset-2"
+                  class="border-base-content/15 aspect-[4/3] shrink-0 cursor-pointer overflow-hidden rounded-sm border outline-2 outline-offset-2"
                   class:outline-base-content={i === currentIndex}
                   class:outline-transparent={i !== currentIndex}
                   onclick={() => (currentIndex = i)}
                 >
                   {#if media.type === "image"}
                     <img
-                      src={media.sm}
+                      src={media.lg}
                       alt={`${data.product.attributes.name} thumbnail ${i + 1}`}
-                      class="h-full w-full object-cover brightness-90"
+                      class="h-full w-full bg-cover object-cover brightness-90"
+                      style={`background-image:url(${media.sm});`}
                     />
                   {:else}
                     <div
@@ -226,7 +229,7 @@
                         alt={data.product.attributes.name}
                       />
                       <svg
-                        class="z-1 size-5 text-black"
+                        class="z-1 size-6 text-black"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         ><g
