@@ -74,7 +74,7 @@ desc: How to use daisyUI from a CDN?
     
     <h3 class="block text-xl mt-6 mb-4 font-bold">Adding all themes</h3>
     
-    <p class="mt-6">daisyui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
+    <p class="mt-6 mb-4">daisyui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
     <div class="grid *:[grid-area:1/1]">
       <div class="overflow-x-auto [direction:ltr] pt-12 pb-8 px-6 bg-neutral text-neutral-content rounded-box">
         <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>

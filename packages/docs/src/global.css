@@ -119,6 +119,13 @@
       content: none;
     }
   }
+
+  :where(code):not(pre > code) {
+    margin-inline: 0.25em;
+  }
+  :where(kbd):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    margin-inline: 0.25em;
+  }
 }
 
 .code-wrapper {
