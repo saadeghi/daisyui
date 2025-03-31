@@ -1,5 +1,23 @@
 productCustomAttributes:
   - id: 479479
+    title: Blink template
+    desc: >-
+      Blink is a template for agencies, companies, startups, or small businesses
+      <br/>Available for React and Svelte
+
+
+      Features:
+        - Made with Tailwind CSS and daisyUI
+        - Compatible with all daisyUI themes
+        - Clean, responsive, easy to customize
+        - Dark and light theme switch button
+
+      Including:
+        - Landing page
+        - Pricing page and pricing table
+        - Projects (portfolio) page
+        - About page
+        - Contact form
     media:
       - type: image
         sm: https://img.daisyui.com/images/store/small/blink/blink-08.webp
@@ -32,6 +50,21 @@ productCustomAttributes:
       icon: check
       text: Updated to daisyUI 5.0
   - id: 426780
+    title: Online Store template
+    desc: >-
+      **Fully functional LemonSqueezy store template made with daisyUI**
+
+
+      Made with daisyUI and Next.js 15
+
+
+      Add your **LemonSqueezy API key** to the env file, add custom data for your products and your online store will be ready in **less than 5 minutes**!
+
+
+      This template receives your simple list of products coming from the LemonSqueezy API, adds your custom data and attributes to the products and generates a functional online store with all the standard online store capabilities you need.
+
+
+      Including Homepage, collections page with filter and sort, product page with image gallery, zoom, custom attributes, variant links, related product suggestions and more.
     faq:
       - Q: Can I use this template without Lemon Squeezy?
         A: If the Lemon Squeezy API key is not provided, the data will come from the local JSON file. So you can use the template without Lemon Squeezy, using a static JSON file, and for checkout and payment you can use your own solution.
@@ -61,6 +94,40 @@ productCustomAttributes:
       icon: wait
       text: daisyUI 5.0 update coming soon
   - id: 244268
+    title: Nexus Dashboard
+    desc: >-
+      The ultimate dashboard template
+
+
+      Made with Tailwind CSS 4.0 and daisyUI 5.0
+
+
+      Including:
+        - All pages
+        - CRM and e-commerce dashboard layouts
+        - Landing page
+        - 10 e-commerce pages with tables, forms, cards, etc
+        - File manager app layout
+        - Chat app layout
+        - 4 pages for the gen-AI app (home, images, content creator, library) 🆕
+        - 4 auth pages including login, register, password reset
+        - Profile settings page and support/FAQ page
+        - 21 component page examples with all variants
+        - 12 form component examples with all variants
+        - Apex charts
+        - 5 customizable themes including Light, Dark, Dim, Contrast, Material
+        - Compatible with all daisyUI themes
+
+
+      Solo license:
+        - Includes HTML version
+        - For one developer, one project
+
+
+      Team and Enterprise license:
+        - includes HTML, React, Next.js and SvelteKit versions
+        - For unlimited developers
+        - For unlimited projects (Enterprise only)
     media:
       - type: video
         url: https://www.youtube.com/embed/3CX5wfvOfpw?mute=0&autoplay=0&controls=0&rel=0&modestbranding=1&loop=1&playlist=3CX5wfvOfpw
@@ -112,6 +179,27 @@ productCustomAttributes:
       preview: https://nexus.daisyui.com/
     ref: Db6q2
   - id: 351127
+    title: Official daisyUI Figma Library
+    desc: >-
+      **Available in 3 plans**, Including:
+        - Documentation and step by step tutorial for everything
+        - All components (56+)
+        - All variants (2472+)
+        - All properties
+        - daisyUI themes
+        - Variables for everything (colors, border-radius, typography, spacing, etc)
+        - Variable modes (Quickly switch between daisyUI themes)
+        - Examples for Dashboard and forms
+        - Access to Discord channel for priority support
+
+      After purchase you will receive:
+        1. Instant access to the downloadable Figma file (.fig file)
+           - This is useful for Figma paid subscribers
+           - Allows you to customize the library and share it to your team
+        2. An invitation to the Official Figma file
+           - For Starter and Standard plans
+           - This is useful for free Figma users who can't share a library file
+           - Invitation will be sent to your purchase email within 48 hours
     media:
       - type: video
         url: https://www.youtube.com/embed/ebWEkM4AvjU?mute=1&autoplay=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=ebWEkM4AvjU
@@ -148,6 +236,8 @@ productCustomAttributes:
       preview: https://www.figma.com/community/file/1417577350704829934
     packages:
       - [null, Starter package, Standard package, Pro package]
+      - [Invitation to read-only shared file (for free Figma users), true, true, Not needed]
+      - [Customizable .fig file (for paid Figma subscribers), true, true, true]
       - [All components (56), true, true, true]
       - [All variants (2472+), true, true, true]
       - ["All properties (booleans, nested instances, etc)", true, true, true]
@@ -180,6 +270,24 @@ productCustomAttributes:
       icon: wait
       text: daisyUI 5.0 update in development
   - id: 284327
+    title: Documentation template
+    desc: >-
+      Create a modern and clean document site for your open source projects
+
+
+      Features:
+        - Available for Astro and Next.js
+        - Made with Markdown, Tailwind CSS and daisyUI
+        - Search functionality
+        - SEO friendly, Lightweight and fast
+        - Dark mode and Light mode
+
+
+      Including:
+        - Homepage with features sections, code demo, contributors images, testimonials and installation guide
+        - Document pages made from Markdown files with Sidebar, page content links, sponsors section
+        - Search bar using Algolia DocSearch
+        - Theme switch button with dark theme and light theme (compatible with all daisyUI themes)
     media:
       - type: image
         sm: https://img.daisyui.com/images/store/small/documentation/documentation-1.webp
@@ -199,8 +307,8 @@ productCustomAttributes:
     links:
       license: https://api.daisyui.com/license/documentation@1.txt
       screenshot: https://img.daisyui.com/images/store/screenshots/documentation-template.webp
-    originalprice: 4900
-    displayprice: 2900
+    # originalprice: 4900
+    # displayprice: 2900
     tech: [astro, react, nextjs, mdx]
     tags: [content, app]
     badge:
@@ -208,6 +316,24 @@ productCustomAttributes:
       icon: check
       text: Updated to daisyUI 5.0
   - id: 142623
+    title: SaaS landing page
+    desc: >-
+      Production-ready landing page for software products.
+
+
+      Features:
+        - SaaS landing page layout made with daisyUI 5
+        - Available for HTML, React, Svelte, Vue
+
+
+      Including:
+        - 2 exclusive daisyUI themes (dark/light)
+        - Compatible with all daisyUI themes (32 themes)
+        - Responsive layout
+        - Hero section, Partner logos, Features section, Integrations cards, Pricing tables, FAQ accordion section, Footer with links and contact form
+        - Pricing table with dynamic price toggle
+        - Theme changer menu
+        - 3D card effect
     media:
       - type: image
         sm: https://img.daisyui.com/images/store/small/saas-landing/saas-landing-10.webp
@@ -251,6 +377,25 @@ productCustomAttributes:
       icon: check
       text: Updated to daisyUI 5.0
   - id: 208203
+    title: Blog template
+    desc: >-
+      Fully working multi page blog template made with daisyUI
+
+
+      Available for Astro and Next.js
+
+
+      Features:
+        - Made with Markdown, Tailwind CSS and daisyUI
+        - SEO friendly, Lightweight and fast
+        - Dark mode and Light mode
+
+
+      Including:
+        - Homepage
+        - About page
+        - Article page
+        - Articles archive with pagination
     media:
       - type: image
         sm: https://img.daisyui.com/images/store/small/personal-blog/personal-blog-1.webp
@@ -271,6 +416,22 @@ productCustomAttributes:
       icon: check
       text: Updated to daisyUI 5.0
   - id: 185227
+    title: Mobile app landing page
+    desc: >-
+      Landing page for mobile app introduction.
+
+
+      Features:
+        - A landing page layout made with daisyUI 5
+        - Available for HTML, React, Svelte, Vue
+
+
+      Including:
+        - 2 exclusive daisyUI themes (dark/light)
+        - Compatible with all daisyUI themes (32 themes)
+        - Responsive layout
+        - Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons
+        - Theme changer menu
     media:
       - type: image
         sm: https://img.daisyui.com/images/store/small/mobile-app-landing/mobile-app-landing-7.webp
@@ -305,6 +466,24 @@ productCustomAttributes:
       icon: check
       text: Updated to daisyUI 5.0
   - id: 130237
+    title: Auth template
+    desc: >-
+      Professionally designed auth pages to use in your project right away.
+
+
+      Features:
+        - 3 HTML pages made with daisyUI 5
+        - Framework agnostic. Can be used everywhere
+        - Compatible with all 32 daisyUI themes
+
+
+      Including:
+        - Login page
+        - Signup page
+        - Password recovery page
+        - Form inputs with HTML validation and validation styles
+        - Login with Google button
+        - Toggle and Alert examples
     media:
       - type: image
         sm: https://img.daisyui.com/images/store/small/auth/auth-2.webp
@@ -334,6 +513,26 @@ productCustomAttributes:
       icon: check
       text: Updated to daisyUI 5.0
   - id: 120591
+    title: HTML Dashboard template
+    desc: >-
+      Production-ready admin dashboard template to use in your project right now.
+
+
+      Features:
+        - HTML admin dashboard layout made with daisyUI 5
+        - Web component charts
+        - Framework agnostic. Can be used everywhere
+        - No dependencies
+
+
+      Including:
+        - 2 exclusive daisyUI themes (dark/light) + Compatible with all 32 daisyUI themes
+        - Responsive grid layout
+        - 14 blocks of useful sections for dashboard
+        - Sidebar with collapsible submenus
+        - Tables and Item lists
+        - Dropdown menus
+        - Charts and forms
     media:
       - type: image
         sm: https://img.daisyui.com/images/store/small/html-dashboard/html-dashboard-1.webp

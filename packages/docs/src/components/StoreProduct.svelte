@@ -15,7 +15,7 @@
           <img
             style={`background-image: url('${media.sm}')`}
             src={media.lg}
-            alt={product.attributes.name}
+            alt={product.title}
             loading="lazy"
             class="bg-base-300 h-full w-full bg-cover bg-center object-cover"
           />
@@ -54,7 +54,7 @@
   <div class="flex justify-between gap-4 pt-6">
     <div class="flex flex-col gap-1">
       <h2 class="font-title text-lg">
-        {product.attributes.name}
+        {product.title}
       </h2>
       <div>
         {#if product.badge}

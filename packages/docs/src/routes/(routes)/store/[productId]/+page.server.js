@@ -1,3 +1,4 @@
+import { compile } from "mdsvex"
 import yaml from "js-yaml"
 import { readFileSync } from "fs"
 
@@ -14,10 +15,14 @@ export async function load({ params, parent }) {
   if (!product) {
     throw error(404, "Product not found")
   }
+  const mdDesc = await compile(product.desc, {
+    smartypants: false,
+  })
+  const compiledDesc = mdDesc.code
 
   return {
     products,
-    product,
+    product: { ...product, desc: compiledDesc },
     tech: products.tech,
     faq: yamlData.faq,
   }

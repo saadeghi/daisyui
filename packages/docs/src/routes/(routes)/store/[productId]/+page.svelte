@@ -352,7 +352,7 @@
           </span>
         {/if}
 
-        <h1 class="text-4xl font-bold">{data.product.attributes.name}</h1>
+        <h1 class="text-4xl font-bold">{data.product.title}</h1>
       </div>
       <div class="flex items-start justify-between">
         <div class="flex gap-2">
@@ -423,11 +423,16 @@
         </div>
       </div>
 
-      {#if data.product.attributes.description}
+      {#if data.product.desc}
+        <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
+          {@html data.product.desc}
+        </div>
+      {/if}
+      <!-- {#if data.product.attributes.description}
         <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
           {@html data.product.attributes.description}
         </div>
-      {/if}
+      {/if} -->
 
       {#if data.product.tech}
         <div class="mt-4 flex items-center gap-4 lg:gap-8">
