@@ -39,11 +39,6 @@
   &.image-full {
     @apply grid;
 
-    &:before {
-      @apply bg-neutral rounded-box relative col-start-1 row-start-1 opacity-75;
-      content: "";
-    }
-
     > * {
       @apply col-start-1 row-start-1;
     }
@@ -59,6 +54,7 @@
 
     > figure img {
       @apply h-full object-cover;
+      filter: brightness(28%);
     }
   }
 
