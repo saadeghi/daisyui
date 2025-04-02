@@ -5,16 +5,16 @@
 
 {#if data.frameworks.find((item) => item.path === $page.url.pathname)}
   <div
-    class="rounded-box bg-base-content/5 my-4 flex max-w-[56rem] gap-10 p-10 max-lg:flex-col lg:ms-8 lg:max-w-[54rem]"
+    class="rounded-box from-base-content/5 mt-4 flex max-w-[56rem] gap-4 bg-gradient-to-br p-6 sm:mb-4 sm:gap-10 sm:p-10 lg:ms-8 lg:max-w-[54rem]"
   >
-    <div class="size-18 shrink-0 *:size-full max-lg:ms-2">
+    <div class="mt-2 size-10 shrink-0 *:size-full sm:size-20">
       {@html data.frameworks.find((item) => item.path === $page.url.pathname).logo}
     </div>
     <div>
-      <div class="ms-2 mb-2 text-lg font-bold tracking-wide">
+      <div class="ms-2 mb-0.5 text-sm font-bold tracking-wide sm:mb-2 sm:text-lg">
         {data.frameworks.find((item) => item.path === $page.url.pathname).name}
       </div>
-      <div class="text-base-content/70 ms-2 mb-2 text-sm">
+      <div class="text-base-content/70 ms-2 mb-0.5 text-[0.625rem] sm:mb-2 sm:text-sm">
         {data.frameworks.find((item) => item.path === $page.url.pathname).desc}
       </div>
       <div>
