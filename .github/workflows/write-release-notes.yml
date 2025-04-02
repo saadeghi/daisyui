@@ -32,12 +32,13 @@ jobs:
         id: package-version
         run: |
           version=${{ inputs.daisyuiversion }}
-          echo version=$version >> $GITHUB_OUTPUT
+          echo "version=$version" >> $GITHUB_OUTPUT
           if [[ $version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo $version is a stable version
-            echo is-stable=true >> $GITHUB_OUTPUT
+            echo "$version is a stable version"
+            echo "is-stable=true" >> $GITHUB_OUTPUT
           else
-            echo $version is not a stable version
+            echo "$version is not a stable version"
+            echo "is-stable=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Add release notes to GitHub
