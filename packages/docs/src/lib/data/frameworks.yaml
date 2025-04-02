@@ -1,5 +1,8 @@
 - name: Vite
   path: /docs/install/vite/
+  desc: Vite is fast front-end JavaScript build tool
+  github: https://github.com/vitejs/vite
+  site: https://vite.dev/
   logo: >-
     <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 404">
       <path d="m399.6 59.5-184 329a10 10 0 0 1-17.4.1L10.6 59.6A10 10 0 0 1 21 44.8l184.2 32.9q1.8.3 3.6 0L389 44.8a10 10 0 0 1 10.5 14.7" fill="url(#a)"/>
@@ -18,6 +21,9 @@
     </svg>
 - name: Tailwind CSS CLI
   path: /docs/install/cli/
+  desc: The official Tailwind CSS command-line interface.
+  github: https://github.com/tailwindlabs/tailwindcss
+  site: https://tailwindcss.com/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33"><g
     clip-path="url(#prefix__clip0)"><path fill="#38bdf8" fill-rule="evenodd"
@@ -33,6 +39,9 @@
     fill="#fff" d="M0 0h54v32.4H0z"/></clipPath></defs></svg>
 - name: Tailwind CSS Standalone without Node
   path: /docs/install/standalone/
+  desc: A standalone executable file to use Tailwind CSS without a JS runtime like Node. Useful for projects that want to use Tailwind CSS but do not have a Node setup.
+  github: https://github.com/tailwindlabs/tailwindcss
+  site: https://tailwindcss.com/blog/standalone-cli
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33"><g
     clip-path="url(#prefix__clip0)"><path fill="#38bdf8" fill-rule="evenodd"
@@ -48,6 +57,9 @@
     fill="#fff" d="M0 0h54v32.4H0z"/></clipPath></defs></svg>
 - name: Post CSS
   path: /docs/install/postcss/
+  desc: PostCSS is a CSS processor for transforming CSS using JavaScript plugins.
+  github: https://github.com/postcss/postcss
+  site: https://postcss.org/
   logo: >-
     <svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -952,9 +964,15 @@
     L188.001,166.481 Z"></path></g></svg>
 - name: SvelteKit
   path: /docs/install/sveltekit/
+  desc: SvelteKit is a meta framework for building web applications with Svelte.
+  github: https://github.com/sveltejs/kit
+  site: https://kit.svelte.dev/
   logo: "<svg width=\"308px\" height=\"308px\" viewBox=\"-26 0 308 308\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" preserveAspectRatio=\"xMidYMid\"><path d=\"M239.681566,40.706757 C211.113272,-0.181889366 154.69089,-12.301439 113.894816,13.6910393 L42.2469062,59.3555354 C22.6760042,71.6680028 9.1958152,91.6538543 5.11196889,114.412133 C1.69420521,133.371174 4.6982178,152.928576 13.6483951,169.987905 C7.51549676,179.291145 3.33259428,189.7413 1.3524912,200.706787 C-2.77083771,223.902098 2.62286977,247.780539 16.3159596,266.951444 C44.8902975,307.843936 101.312954,319.958266 142.10271,293.967161 L213.75062,248.302665 C233.322905,235.991626 246.803553,216.005094 250.885557,193.246067 C254.302867,174.287249 251.30121,154.730228 242.355449,137.668922 C248.486748,128.365895 252.667894,117.916162 254.646134,106.951413 C258.772188,83.7560394 253.378243,59.8765465 239.682665,40.706757\" fill=\"#FF3E00\"></path>\n\t\t\t\t<path d=\"M106.888658,270.841265 C83.7871855,276.848065 59.3915045,267.805346 45.7864111,248.192566 C37.5477583,236.66102 34.3023491,222.296573 36.7830958,208.343155 C37.1989333,206.075414 37.7711933,203.839165 38.4957755,201.650433 L39.845476,197.534835 L43.5173097,200.231763 C51.9971301,206.462491 61.4784803,211.199728 71.5527203,214.239302 L74.2164003,215.047419 L73.9710252,217.705878 C73.6455499,221.487851 74.6696022,225.262925 76.8616703,228.361972 C80.9560313,234.269749 88.3011363,236.995968 95.2584831,235.190159 C96.8160691,234.773852 98.3006859,234.121384 99.6606718,233.25546 L171.331634,187.582718 C174.877468,185.349963 177.321139,181.729229 178.065299,177.605596 C178.808171,173.400048 177.830501,169.072361 175.351884,165.594581 C171.255076,159.685578 163.908134,156.9582 156.947927,158.762547 C155.392392,159.178888 153.90975,159.83088 152.551509,160.695872 L125.202489,178.130144 C120.705281,180.989558 115.797437,183.144784 110.64897,184.521162 C87.547692,190.527609 63.1523949,181.484801 49.5475471,161.872188 C41.3085624,150.340895 38.0631179,135.976391 40.5442317,122.023052 C43.0002744,108.333716 51.1099574,96.3125326 62.8835328,88.9089537 L134.548175,43.2323647 C139.047294,40.3682559 143.958644,38.21032 149.111311,36.8336525 C172.21244,30.8273594 196.607527,39.8700206 210.212459,59.4823515 C218.451112,71.013898 221.696522,85.3783452 219.215775,99.3317627 C218.798144,101.59911 218.225915,103.835236 217.503095,106.024485 L216.153395,110.140083 L212.483484,107.447276 C204.004261,101.212984 194.522,96.4735732 184.44615,93.4336926 L181.78247,92.6253012 L182.027845,89.9668419 C182.350522,86.1852063 181.326723,82.4111645 179.1372,79.3110228 C175.042839,73.4032457 167.697734,70.677026 160.740387,72.4828355 C159.182801,72.8991426 157.698185,73.5516104 156.338199,74.4175344 L84.6672364,120.0922 C81.1218886,122.323199 78.6795938,125.943704 77.9387928,130.066574 C77.1913232,134.271925 78.1673502,138.601163 80.6469865,142.078963 C84.7438467,147.987899 92.0907405,150.71526 99.0509435,148.910997 C100.608143,148.493836 102.092543,147.841423 103.452857,146.976298 L130.798305,129.548621 C135.293566,126.685437 140.201191,124.528302 145.350175,123.152382 C168.451453,117.145935 192.846751,126.188743 206.451598,145.801356 C214.690583,157.332649 217.936027,171.697153 215.454914,185.650492 C212.997261,199.340539 204.888162,211.362752 193.115613,218.769811 L121.450695,264.442553 C116.951576,267.306662 112.040226,269.464598 106.887559,270.841265\" fill=\"#FFFFFF\"></path></svg>"
 - name: Astro
   path: /docs/install/astro/
+  desc: Astro is JavaScript web framework and site generator focusing on reducing client-side JavaScript. Astro supports components from different front-end libraries such as Vue, Svelte, React, etc.
+  github: https://github.com/withastro/astro
+  site: https://astro.build/
   logo: >-
     <svg width="85" height="107" viewBox="0 0 85 107" fill="none"
     xmlns="http://www.w3.org/2000/svg">
@@ -970,6 +988,9 @@
         </svg>
 - name: React
   path: /docs/install/react/
+  desc: React is a JavaScript framework for building user interfaces
+  github: https://github.com/facebook/react
+  site: https://react.dev/
   logo: >-
     <svg viewBox="0 -14 256 256" version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -1091,6 +1112,9 @@
     128.000001,90.8080696 L128.000001,90.8080696 Z" fill="#00D8FF"></path></svg>
 - name: Laravel
   path: /docs/install/laravel/
+  desc: Laravel is a popular full stack PHP Framework
+  github: https://github.com/laravel/laravel
+  site: https://laravel.com/
   logo: >-
     <svg width="800px" height="800px" viewBox="-4 0 264 264" version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -1169,6 +1193,9 @@
     L103.216659,197.616575 Z" fill="#FF2D20"></path></svg>
 - name: Rails
   path: /docs/install/rails/
+  desc: Ruby on Rails is a web framework focusing on simplicity and rapid development
+  github: https://github.com/rails/rails
+  site: https://rubyonrails.org/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" fill="#d30001" viewBox="0 0 411
     155"><path d="M242.3 76.8h-19.5c-13.9 0-18.6 12.6-18.6
@@ -1200,6 +1227,9 @@
     6.7Z"/></svg>
 - name: Next.js
   path: /docs/install/nextjs/
+  desc: Next.js is a meta framework for React, providing server-side rendering, static site generation, and routing
+  github: https://github.com/vercel/next.js
+  site: https://nextjs.org/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"
     width="18"><mask height="180" id=":r8:mask0_408_134"
@@ -1220,6 +1250,9 @@
     stop-opacity="0"></stop></linearGradient></defs></svg>
 - name: Vue
   path: /docs/install/vue/
+  desc: Vue is a JavaScript framework for building user interfaces.
+  github: https://github.com/vuejs/core
+  site: https://vuejs.org/
   logo: >-
     <svg viewBox="0 0 32 32"
     xmlns="http://www.w3.org/2000/svg"><title>file_type_vue</title><path
@@ -1231,6 +1264,9 @@
     style="fill:#35495e"/></svg>
 - name: Nuxt
   path: /docs/install/nuxt/
+  desc: Nuxt is a meta framework for Vue, providing server-side rendering, static site generation, and routing
+  github: https://github.com/nuxt/nuxt
+  site: https://nuxt.com/
   logo: >-
     <svg width="200" height="200" viewBox="0 0 300 200" fill="none"
     xmlns="http://www.w3.org/2000/svg"><path d="M168 200H279C282.542 200 285.932
@@ -1249,6 +1285,9 @@
 
 - name: Elixir Phoenix
   path: /docs/install/phoenix/
+  desc: Phoenix is a web framework built with Elixir programming language
+  github: https://github.com/phoenixframework/phoenix
+  site: https://www.phoenixframework.org/
   logo: >-
     <svg viewBox="0 0 71 48" class="h-12" aria-hidden="true">
       <path d="m26.371 33.477-.552-.1c-3.92-.729-6.397-3.1-7.57-6.829-.733-2.324.597-4.035 3.035-4.148 1.995-.092 3.362 1.055 4.57 2.39 1.557 1.72 2.984 3.558 4.514 5.305 2.202 2.515 4.797 4.134 8.347 3.634 3.183-.448 5.958-1.725 8.371-3.828.363-.316.761-.592 1.144-.886l-.241-.284c-2.027.63-4.093.841-6.205.735-3.195-.16-6.24-.828-8.964-2.582-2.486-1.601-4.319-3.746-5.19-6.611-.704-2.315.736-3.934 3.135-3.6.948.133 1.746.56 2.463 1.165.583.493 1.143 1.015 1.738 1.493 2.8 2.25 6.712 2.375 10.265-.068-5.842-.026-9.817-3.24-13.308-7.313-1.366-1.594-2.7-3.216-4.095-4.785-2.698-3.036-5.692-5.71-9.79-6.623C12.8-.623 7.745.14 2.893 2.361 1.926 2.804.997 3.319 0 4.149c.494 0 .763.006 1.032 0 2.446-.064 4.28 1.023 5.602 3.024.962 1.457 1.415 3.104 1.761 4.798.513 2.515.247 5.078.544 7.605.761 6.494 4.08 11.026 10.26 13.346 2.267.852 4.591 1.135 7.172.555ZM10.751 3.852c-.976.246-1.756-.148-2.56-.962 1.377-.343 2.592-.476 3.897-.528-.107.848-.607 1.306-1.336 1.49Zm32.002 37.924c-.085-.626-.62-.901-1.04-1.228-1.857-1.446-4.03-1.958-6.333-2-1.375-.026-2.735-.128-4.031-.61-.595-.22-1.26-.505-1.244-1.272.015-.78.693-1 1.31-1.184.505-.15 1.026-.247 1.6-.382-1.46-.936-2.886-1.065-4.787-.3-2.993 1.202-5.943 1.06-8.926-.017-1.684-.608-3.179-1.563-4.735-2.408l-.043.03a2.96 2.96 0 0 0 .04-.029c-.038-.117-.107-.12-.197-.054l.122.107c1.29 2.115 3.034 3.817 5.004 5.271 3.793 2.8 7.936 4.471 12.784 3.73A66.714 66.714 0 0 1 37 40.877c1.98-.16 3.866.398 5.753.899Zm-9.14-30.345c-.105-.076-.206-.266-.42-.069 1.745 2.36 3.985 4.098 6.683 5.193 4.354 1.767 8.773 2.07 13.293.51 3.51-1.21 6.033-.028 7.343 3.38.19-3.955-2.137-6.837-5.843-7.401-2.084-.318-4.01.373-5.962.94-5.434 1.575-10.485.798-15.094-2.553Zm27.085 15.425c.708.059 1.416.123 2.124.185-1.6-1.405-3.55-1.517-5.523-1.404-3.003.17-5.167 1.903-7.14 3.972-1.739 1.824-3.31 3.87-5.903 4.604.043.078.054.117.066.117.35.005.699.021 1.047.005 3.768-.17 7.317-.965 10.14-3.7.89-.86 1.685-1.817 2.544-2.71.716-.746 1.584-1.159 2.645-1.07Zm-8.753-4.67c-2.812.246-5.254 1.409-7.548 2.943-1.766 1.18-3.654 1.738-5.776 1.37-.374-.066-.75-.114-1.124-.17l-.013.156c.135.07.265.151.405.207.354.14.702.308 1.07.395 4.083.971 7.992.474 11.516-1.803 2.221-1.435 4.521-1.707 7.013-1.336.252.038.503.083.756.107.234.022.479.255.795.003-2.179-1.574-4.526-2.096-7.094-1.872Zm-10.049-9.544c1.475.051 2.943-.142 4.486-1.059-.452.04-.643.04-.827.076-2.126.424-4.033-.04-5.733-1.383-.623-.493-1.257-.974-1.889-1.457-2.503-1.914-5.374-2.555-8.514-2.5.05.154.054.26.108.315 3.417 3.455 7.371 5.836 12.369 6.008Zm24.727 17.731c-2.114-2.097-4.952-2.367-7.578-.537 1.738.078 3.043.632 4.101 1.728.374.388.763.768 1.182 1.106 1.6 1.29 4.311 1.352 5.896.155-1.861-.726-1.861-.726-3.601-2.452Zm-21.058 16.06c-1.858-3.46-4.981-4.24-8.59-4.008a9.667 9.667 0 0 1 2.977 1.39c.84.586 1.547 1.311 2.243 2.055 1.38 1.473 3.534 2.376 4.962 2.07-.656-.412-1.238-.848-1.592-1.507Zm17.29-19.32c0-.023.001-.045.003-.068l-.006.006.006-.006-.036-.004.021.018.012.053Zm-20 14.744a7.61 7.61 0 0 0-.072-.041.127.127 0 0 0 .015.043c.005.008.038 0 .058-.002Zm-.072-.041-.008-.034-.008.01.008-.01-.022-.006.005.026.024.014Z" fill="#FD4F00"></path>
@@ -1256,6 +1295,9 @@
 
 - name: Solid
   path: /docs/install/solid/
+  desc: Solid is a JavaScript front-end framework known for fine-grained reactivity and performance
+  github: https://github.com/solidjs/solid
+  site: https://www.solidjs.com/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166
     155.3"><defs><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="27.5"
@@ -1285,6 +1327,9 @@
     fill="url(#d)"/></svg>
 - name: Solid Start
   path: /docs/install/solid-start/
+  desc: SolidStart is a meta framework for Solid.js
+  github: https://github.com/solidjs/solid-start
+  site: https://start.solidjs.com/
   logo: >-
     <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg"
     role="presentation"><path d="M233.205 430.856L304.742 425.279C304.742
@@ -1344,6 +1389,9 @@
     offset="1" stop-color="#79CFFF"></stop></linearGradient></defs></svg>
 - name: Qwik
   path: /docs/install/qwik/
+  desc: Qwik is a front-end JavaScript framework focusing on performance and speed
+  github: https://github.com/BuilderIO/qwik
+  site: https://qwik.builder.io/
   logo: >-
     <svg viewBox="0 0 50 53" fill="none"
     xmlns="http://www.w3.org/2000/svg"><path d="M40.973 52.5351L32.0861
@@ -1365,6 +1413,9 @@
 
 - name: Angular
   path: /docs/install/angular/
+  desc: Angular is a JavaScript framework for building web applications
+  github: https://github.com/angular/angular
+  site: https://angular.dev/
   logo: >-
     <svg viewBox="0 0 700 741" fill="currentColor"
     xmlns="http://www.w3.org/2000/svg">
@@ -1376,6 +1427,9 @@
 
 - name: Vike
   path: /docs/install/vike/
+  desc: Vike is a JavaScript framework providing integration with different front-end, backend, database and auth stacks
+  github: https://github.com/vikejs/vike
+  site: https://vike.dev/
   logo: >-
     <svg width="281.99" height="281.99" fill="none" version="1.1" viewBox="0 0
     46.998 46.998" xmlns="http://www.w3.org/2000/svg">
@@ -1461,6 +1515,9 @@
     </svg>
 - name: HTMX
   path: /docs/install/htmx/
+  desc: HTMX is a no-build JavaScript library that adds reactivity and DOM manipulation to HTML files using HTML attributes
+  github: https://github.com/bigskysoftware/htmx
+  site: https://htmx.org/
   logo: >-
     <svg viewBox="0 0 256 168" version="1.1" xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid">
@@ -1470,6 +1527,9 @@
     </svg>
 - name: WordPress
   path: /docs/install/wordpress/
+  desc: A popular PHP content management system for blogs, news sites, ecommerce and more
+  github: https://github.com/WordPress/WordPress
+  site: https://wordpress.org/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
       <path fill="currentColor" d="M13.6052 0.923525C16.1432 0.923525 18.6137 1.67953 20.7062 3.09703C22.7447 4.47403 24.3512 6.41803 25.3097 8.68603C26.9837 12.6415 26.5382 17.164 24.1352 20.7145C22.7582 22.753 20.8142 24.3595 18.5462 25.318C14.5907 26.992 10.0682 26.5465 6.51772 24.1435C4.47922 22.7665 2.87272 20.8225 1.91422 18.5545C0.240225 14.599 0.685725 10.0765 3.08872 6.52603C4.46572 4.48753 6.40973 2.88103 8.67772 1.92253C10.2302 1.26103 11.9177 0.923525 13.6052 0.923525ZM13.6052 0.113525C6.15322 0.113525 0.105225 6.16153 0.105225 13.6135C0.105225 21.0655 6.15322 27.1135 13.6052 27.1135C21.0572 27.1135 27.1052 21.0655 27.1052 13.6135C27.1052 6.16153 21.0572 0.113525 13.6052 0.113525Z"></path>
@@ -1477,6 +1537,9 @@
     </svg>
 - name: Bun dev server
   path: /docs/install/bun/
+  desc: Bun is a fast and efficient all-in-one JavaScript runtime, bundler, build tool, dev server, package manager, writtern in Zig programming language
+  github: https://github.com/oven-sh/bun
+  site: https://bun.sh/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 70"><g
     clip-path="url(#A)"><path d="M71.09
@@ -1540,6 +1603,9 @@
 
 - name: Rsbuild
   path: /docs/install/rsbuild/
+  desc: Rsbuild is a build tool written in Rust
+  github: https://github.com/web-infra-dev/rsbuild
+  site: https://rsbuild.dev/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2500
     2345"><script xmlns=""/><g clip-path="url(#a)"><path d="M297.7 1807.3a4380.6
@@ -1974,6 +2040,9 @@
     .8h2500v2343.8H0z"/></clipPath></defs><script xmlns=""/></svg>
 - name: React Router
   path: /docs/install/reactrouter/
+  desc: React Router is a client and server-side routing library for React
+  github: https://github.com/remix-run/react-router
+  site: https://reactrouter.com/
   logo: >-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"
     fill="none"><path fill="#F44250" d="M29.587 19.6a3.2 3.2 0 0 1-.936 2.262
@@ -1993,5 +2062,8 @@
 
 - name: Eleventy
   path: /docs/install/11ty/
+  desc: 11ty is a simple static site generator
+  github: https://github.com/11ty/eleventy
+  site: https://www.11ty.dev/
   logo: >-
     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 1569.4 2186" xml:space="preserve" aria-hidden="true" focusable="false"><g><path class="st0" d="M562.2 1410.1c-9 0-13.5-12-13.5-36.1V778.9c0-11.5-2.3-16.9-7-16.2-28.4 7.2-42.7 10.8-43.1 10.8-7.9.7-11.8-7.2-11.8-23.7v-51.7c0-14.3 4.3-22.4 12.9-24.2l142.2-36.6c1.1-.3 2.7-.5 4.8-.5 7.9 0 11.8 8.4 11.8 25.3v712c0 24.1-4.7 36.1-14 36.1l-82.3-.1zM930.5 1411.2c-14.4 0-26.8-1-37.4-3-10.6-2-21.6-6.5-33.1-13.5s-20.9-16.6-28.3-28.8-13.4-29.3-18-51.2-7-47.9-7-78.1V960.4c0-7.2-2-10.8-5.9-10.8h-33.4c-9 0-13.5-8.6-13.5-25.8v-29.1c0-17.6 4.5-26.4 13.5-26.4h33.4c3.9 0 5.9-4.8 5.9-14.5l9.7-209.5c1.1-19 5.7-28.5 14-28.5h53.9c9 0 13.5 9.5 13.5 28.5v209.5c0 9.7 2.1 14.5 6.5 14.5H973c9 0 13.5 8.8 13.5 26.4v29.1c0 17.2-4.5 25.8-13.5 25.8h-68.9c-2.5 0-4.2.6-5.1 1.9-.9 1.2-1.3 4.2-1.3 8.9v277.9c0 20.8 1.3 38.2 4 52s6.6 24 11.8 30.4 10.4 10.8 15.6 12.9c5.2 2.2 11.6 3.2 19.1 3.2h38.2c9.7 0 14.5 6.7 14.5 19.9v32.3c0 14.7-5.2 22.1-15.6 22.1l-54.8.1zM1137.2 1475.8c8.2 0 15.4-6.7 21.5-20.2s9.2-32.6 9.2-57.4c0-5.8-3.6-25.7-10.8-59.8l-105.6-438.9c-.7-5-1.1-9-1.1-11.9 0-12.9 2.7-19.4 8.1-19.4h65.2c5 0 9.1 1.7 12.4 5.1s5.8 10.3 7.5 20.7l70 370.5c1.4 4.3 2.3 6.5 2.7 6.5 1.4 0 2.2-2 2.2-5.9l54.9-369.5c1.4-10.8 3.7-18 6.7-21.8s6.9-5.7 11.6-5.7h45.2c6.1 0 9.2 7 9.2 21 0 3.2-.4 7.4-1.1 12.4l-95.9 499.3c-7.5 41.3-15.8 72.9-24.8 94.8s-19 36.8-30.2 44.7c-11.1 7.9-25.8 12-44.2 12.4h-5.4c-29.1 0-48.8-7.7-59.2-23.2-2.9-3.2-4.3-11.5-4.3-24.8 0-26.6 4.3-39.9 12.9-39.9.7 0 7.2 1.8 19.4 5.4 12.4 3.8 20.3 5.6 23.9 5.6z"></path><g><path class="st0" d="M291.2 1411.1c-9 0-13.5-12-13.5-36.1V779.9c0-11.5-2.3-16.9-7-16.2-28.4 7.2-42.7 10.8-43.1 10.8-7.9.7-11.8-7.2-11.8-23.7v-51.7c0-14.3 4.3-22.4 12.9-24.2L371 638.2c1.1-.3 2.7-.5 4.8-.5 7.9 0 11.8 8.4 11.8 25.3v712c0 24.1-4.7 36.1-14 36.1h-82.4z"></path></g></g></svg>

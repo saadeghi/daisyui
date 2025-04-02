@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "@minimal-analytics/ga4": "1.8.7",
-    "@tailwindcss/vite": "4.1.0",
     "culori": "4.0.1",
     "js-yaml": "4.1.0",
     "nanoid": "5.1.5",
