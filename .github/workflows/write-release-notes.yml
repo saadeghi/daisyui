@@ -15,6 +15,7 @@ jobs:
         with:
           fetch-depth: 10
           clean: false
+          ref: master
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
