@@ -28,8 +28,6 @@ jobs:
     needs: run-tests
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    outputs:
-      daisyuiversion: ${{ steps.package-version.outputs.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -86,5 +84,3 @@ jobs:
     needs: deploy-docs
     uses: ./.github/workflows/write-release-notes.yml
     secrets: inherit
-    with:
-      daisyuiversion: ${{ needs.build-publish.outputs.daisyuiversion }}
