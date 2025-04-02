@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.12 (2025-04-02)
+
+
+### Bug Fixes
+
+* icon position of date input inside input wrapper on chromium-based ([#3725](https://github.com/saadeghi/daisyui/issues/3725)) closes: [#3708](https://github.com/saadeghi/daisyui/issues/3708) ([b1560a6](https://github.com/saadeghi/daisyui/commit/b1560a69ffe23527bded2790d00d478bc0166ea2))
+
 ## 5.0.11 (2025-04-02)
 
 
