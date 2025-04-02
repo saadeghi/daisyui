@@ -12,7 +12,7 @@
     "directory": "packages/daisyui"
   },
   "funding": "https://github.com/saadeghi/daisyui?sponsor=1",
-  "bugs": "https://github.com/tailwindlabs/tailwindcss/issues",
+  "bugs": "https://github.com/saadeghi/daisyui/issues",
   "keywords": [
     "daisyui",
     "tailwind",
