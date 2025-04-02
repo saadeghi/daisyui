@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.11 (2025-04-02)
+
+
+### Bug Fixes
+
+* card image-full radius color bleed. closes: [#3734](https://github.com/saadeghi/daisyui/issues/3734) ([d6fb204](https://github.com/saadeghi/daisyui/commit/d6fb20479c76e7c6462baa77ddfb512d76ca7a2c))
+
 ## 5.0.10 (2025-04-02)
 
 
