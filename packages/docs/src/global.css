@@ -126,6 +126,9 @@
   :where(kbd):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
     margin-inline: 0.25em;
   }
+  :where(p a) {
+    margin-inline: 0.25em;
+  }
 }
 
 .code-wrapper {
