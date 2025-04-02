@@ -28,6 +28,10 @@
     }
   }
 
+  :where(input[type="date"])  {
+    @apply inline-block;
+  }
+
   &:focus,
   &:focus-within {
     --input-color: var(--color-base-content);
