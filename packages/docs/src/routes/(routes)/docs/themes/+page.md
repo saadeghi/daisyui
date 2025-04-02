@@ -148,6 +148,16 @@ To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the 
 }
 ```
 
+If you're using CDN and you want to use a custom theme, use it like this:
+
+```css:app.css
+:root:has(input.theme-controller[value=mytheme]:checked),[data-theme="mytheme"] { /* mytheme is the name of the custom theme */
+  color-scheme: light;
+  --color-base-100: oklch(98% 0.02 240);
+  /* ...rest of CSS variables like above example */
+}
+```
+
 ## <Translate text="How to customize an existing theme?" />
 
 To customize a built-in theme, you can use the same structure as adding a new theme, but with the same name as the built-in theme. For example, to customize the `light` theme:

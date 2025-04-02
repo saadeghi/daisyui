@@ -1,6 +1,7 @@
 {
   "name": "daisyui-monorepo",
   "private": true,
+  "packageManager": "bun@1.2.8",
   "workspaces": [
     "packages/*"
   ],

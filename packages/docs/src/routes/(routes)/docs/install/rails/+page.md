@@ -70,6 +70,7 @@ Run this code to download latest version of daisyUI as a single js file
 
 ```sh:Terminal
 curl -sLo app/assets/tailwind/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
+curl -sLo app/assets/tailwind/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
@@ -82,6 +83,11 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @source "../../../app/views/**/*";
 
 @plugin "./daisyui.js";
+
+/* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
+@plugin "./daisyui-theme.js"{
+  /* custom theme here */
+}
 ```
   
   </div>

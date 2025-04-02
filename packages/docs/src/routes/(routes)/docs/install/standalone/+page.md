@@ -17,6 +17,7 @@ Run this code to download latest version of daisyUI as a single js file and put 
 
 ```sh:Terminal
 curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
+curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
 ```
 
 ### 3. Add Tailwind CSS and daisyUI
@@ -28,6 +29,11 @@ Address your HTML and other markup files in the `source` function.
 @import "tailwindcss" source(none);
 @source "./public/*.{html,php,erb}";
 @plugin "./daisyui.js";
+
+/* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
+@plugin "./daisyui-theme.js"{
+  /* custom theme here */
+}
 ```
 
 ### 4. Build CSS
