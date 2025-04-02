@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.10 (2025-04-02)
+
+
+### Bug Fixes
+
+* `:not(:has())` selectors getting prefix. closes: [#3739](https://github.com/saadeghi/daisyui/issues/3739) ([771b6eb](https://github.com/saadeghi/daisyui/commit/771b6eb8a89ff2e1bc7a4e2d912e5e55c570c5ce))
+
 ## 5.0.9 (2025-03-21)
 
 
