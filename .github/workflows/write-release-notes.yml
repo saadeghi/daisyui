@@ -23,10 +23,10 @@ jobs:
         run: bun i
 
       - name: Build package
-        run: bun run build
+        run: bun run --bun build
 
       - name: Build bundle
-        run: bun run bundle
+        run: bun run --bun bundle
 
       - name: Read package version from package.json
         id: package-version

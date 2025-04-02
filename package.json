@@ -5,15 +5,15 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "cd packages/daisyui && bun run build",
-    "build:dev": "cd packages/daisyui && bun run build --dev",
-    "build:docs": "bun run build && cd packages/docs && bun run build",
-    "build:docs:dev": "bun run build:dev && cd packages/docs && bun run build",
-    "dev": "bun run build:dev && cd packages/docs && bun run dev",
-    "play": "bun run build:dev && cd packages/playground && bun run dev",
-    "logs": "bun run build:dev && cd packages/logs && bun run dev",
+    "build": "cd packages/daisyui && bun run --bun build",
+    "build:dev": "cd packages/daisyui && bun run --bun build --dev",
+    "build:docs": "bun run --bun build && cd packages/docs && bun run --bun build",
+    "build:docs:dev": "bun run --bun build:dev && cd packages/docs && bun run --bun build",
+    "dev": "bun run --bun build:dev && cd packages/docs && bun run --bun dev",
+    "play": "bun run --bun build:dev && cd packages/playground && bun run --bun dev",
+    "logs": "bun run --bun build:dev && cd packages/logs && bun run --bun dev",
     "format": "bunx -y prettier 'packages/{daisyui,docs}/{src,functions}/**/*.{css,js,json,svelte}' --write",
-    "lang:diff": "cd packages/docs && bun run langdiff",
+    "lang:diff": "cd packages/docs && bun run --bun langdiff",
     "lang:clean": "bun packages/docs/src/lib/scripts/cleanTranslations.js",
     "lang:sort": "bun packages/docs/src/lib/scripts/sortTranslations.js",
     "lang:fill": "bun packages/docs/src/lib/scripts/fillTranslations.js",
@@ -23,12 +23,12 @@
     "test": "bun test",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
     "update:tw": "bun i tailwindcss@latest @tailwindcss/cli@latest && cd packages/docs && bun i @tailwindcss/vite@latest && cd ../playground && bun i @tailwindcss/vite@latest",
-    "publish:alpha": "bun run build && cd packages/daisyui && bun publish --tag=alpha",
-    "publish:beta": "bun run build && cd packages/daisyui && bun publish --tag=beta"
+    "publish:alpha": "bun run --bun build && cd packages/daisyui && bun publish --tag=alpha",
+    "publish:beta": "bun run --bun build && cd packages/daisyui && bun publish --tag=beta"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.15",
-    "@tailwindcss/vite": "^4.0.15",
+    "@tailwindcss/cli": "4.0.15",
+    "@tailwindcss/vite": "4.0.15",
     "commit-and-tag-version": "12.5.0",
     "culori": "4.0.1",
     "lightningcss": "1.29.3",
@@ -38,6 +38,6 @@
     "prettier": "3.5.3",
     "prettier-plugin-svelte": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "tailwindcss": "^4.0.15"
+    "tailwindcss": "4.0.15"
   }
 }

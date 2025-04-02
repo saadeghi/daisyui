@@ -44,7 +44,7 @@ jobs:
         run: bun i
 
       - name: Build package
-        run: bun run build
+        run: bun run --bun build
 
       - name: Run release command
         run: |

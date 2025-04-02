@@ -41,7 +41,7 @@ jobs:
           Disallow: /' > packages/docs/static/robots.txt
 
       - name: Build docs
-        run: bun run build:docs
+        run: bun run --bun build:docs
 
       - name: Deploy docs to github pages
         uses: peaceiris/actions-gh-pages@v4

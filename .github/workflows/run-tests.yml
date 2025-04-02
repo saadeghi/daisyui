@@ -39,7 +39,7 @@ jobs:
         run: bun i
 
       - name: build package
-        run: bun run build
+        run: bun run --bun build
 
       - name: Run tests
         run: |
