@@ -66,24 +66,30 @@ const getPrefixedKey = (key, prefix, excludedPrefixes) => {
   }
 
   if (key.includes(">") || key.includes("+") || key.includes("~")) {
-    return key
-      .split(/\s*([>+~])\s*/)
-      .map((part) => {
-        part = part.trim()
-        // Improve handling of :where and other functional pseudo-classes
-        if (
-          part.includes(":where") ||
-          part.includes(":not") ||
-          part.includes(":has") ||
-          part.match(/:[a-z-]+\(/)
-        ) {
-          // Handle both the class selector and the pseudo-class function
-          return part.replace(/\.([\w-]+)(?=[\s:)])/g, `.${prefix}$1`)
-        }
-        if (part === ">" || part === "+" || part === "~") return ` ${part} `
-        return part.startsWith(".") ? getPrefixedSelector(part, prefix) : part
-      })
-      .join("")
+    // For comma-separated selectors
+    if (key.includes(",")) {
+      return key
+        .split(/\s*,\s*/)
+        .map((part) => {
+          // Replace class names with prefixed versions for each part
+          return part.replace(/\.([\w-]+)/g, `.${prefix}$1`)
+        })
+        .join(", ")
+    }
+
+    // For simple combinators (not comma-separated)
+    let processedKey = key.replace(/\.([\w-]+)/g, `.${prefix}$1`)
+
+    // Add a space before combinators at the beginning
+    if (
+      processedKey.startsWith(">") ||
+      processedKey.startsWith("+") ||
+      processedKey.startsWith("~")
+    ) {
+      processedKey = ` ${processedKey}`
+    }
+
+    return processedKey
   }
 
   if (key.includes(" ")) {

@@ -375,3 +375,27 @@ test("addPrefix with child combinator and :where with pseudo-class", () => {
   }
   expect(addPrefix(input, prefix)).toEqual(expected)
 })
+
+// has in not
+test("addPrefix with nested combinators and :not(:has()) selector", () => {
+  const input = {
+    ".steps": {
+      ".step": {
+        "> .step-icon, &:not(:has(.step-icon)):after": {
+          color: "red",
+        },
+      },
+    },
+  }
+  const prefix = "prefix-"
+  const expected = {
+    ".prefix-steps": {
+      ".prefix-step": {
+        "> .prefix-step-icon, &:not(:has(.prefix-step-icon)):after": {
+          color: "red",
+        },
+      },
+    },
+  }
+  expect(addPrefix(input, prefix)).toEqual(expected)
+})

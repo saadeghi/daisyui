@@ -15,7 +15,7 @@
   "dependencies": {
     "@astrojs/react": "4.2.1",
     "@astrojs/vue": "5.0.7",
-    "@tailwindcss/vite": "4.0.15",
+    "@tailwindcss/vite": "4.1.0",
     "pikaday": "1.8.2",
     "react": "19.0.0",
     "react-day-picker": "9.6.3",
