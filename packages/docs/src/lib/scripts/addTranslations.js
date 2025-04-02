@@ -3,7 +3,6 @@ import { join, resolve } from "path"
 import { visit } from "unist-util-visit"
 import { unified } from "unified"
 import remarkParse from "remark-parse"
-import remarkGfm from "remark-gfm"
 
 // Configuration
 const config = {
@@ -253,7 +252,7 @@ export const processMarkdownFile = (fs, filePath) => {
 
     if (!inCodeBlock) {
       // Process each line as separate markdown content
-      const lineAst = unified().use(remarkParse).use(remarkGfm).parse(line)
+      const lineAst = unified().use(remarkParse).parse(line)
 
       visit(lineAst, "paragraph", (node) => {
         // Get text from paragraph children
