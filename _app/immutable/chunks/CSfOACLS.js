@@ -1,0 +1,1 @@
+import{d as s,h as n}from"./B_Mm4G8F.js";function b(o,i,d,f,a){var r=()=>{f(d[o])};d.addEventListener(i,r),a?s(()=>{d[o]=a()}):r(),(d===document.body||d===window||d===document)&&n(()=>{d.removeEventListener(i,r)})}export{b};
