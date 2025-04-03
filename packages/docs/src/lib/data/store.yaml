@@ -41,7 +41,7 @@ productCustomAttributes:
         sm: https://img.daisyui.com/images/store/small/blink/blink-07.webp
         lg: https://img.daisyui.com/images/store/large/blink/blink-07.webp
     links:
-      license: https://api.daisyui.com/license/agency-landing@1.txt
+      license: https://api.daisyui.com/license/blink@1.txt
       screenshot: https://img.daisyui.com/images/store/screenshots/blink.webp
     tech: [react, svelte, vite]
     tags: [landing]
