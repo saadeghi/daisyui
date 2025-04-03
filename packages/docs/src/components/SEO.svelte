@@ -1,6 +1,6 @@
 <script>
   import { t } from "$lib/i18n.svelte.js"
-  import { page } from "$app/stores"
+  import { page } from "$app/state"
   import { langs } from "$lib/i18n.svelte.js"
 
   let siteData = {
@@ -23,13 +23,6 @@
     if (lang === "zh_hant") return "zh-tw"
     return lang
   }
-
-  const removeHashFromUrl = (url) => {
-    if (typeof url === "string" && url.includes("#")) {
-      return url.split("#")[0]
-    }
-    return url
-  }
 </script>
 
 <svelte:head>
@@ -50,7 +43,7 @@
     <link
       rel="alternate"
       hreflang={iso15924to31661(lang)}
-      href={`${removeHashFromUrl($page.url)}?lang=${lang}`}
+      href={`https://daisyui.com${page.url.pathname}?lang=${lang}`}
     />
   {/each}
 </svelte:head>

@@ -68,6 +68,7 @@
         <a href="/blog/" class="link link-hover">{$t("Blog")}</a>
         <a href="/resources/" class="link link-hover">{$t("Resources")}</a>
         <a href="/store/" class="link link-hover">{$t("Store")}</a>
+        <a href="/store/351127/" class="link link-hover">Official daisyUI Figma Library</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("available-on")}</span>
