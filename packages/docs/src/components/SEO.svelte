@@ -23,6 +23,13 @@
     if (lang === "zh_hant") return "zh-tw"
     return lang
   }
+
+  const removeHashFromUrl = (url) => {
+    if (typeof url === "string" && url.includes("#")) {
+      return url.split("#")[0]
+    }
+    return url
+  }
 </script>
 
 <svelte:head>
@@ -43,7 +50,7 @@
     <link
       rel="alternate"
       hreflang={iso15924to31661(lang)}
-      href={`${$page.url.pathname}?lang=${lang}`}
+      href={`${removeHashFromUrl($page.url)}?lang=${lang}`}
     />
   {/each}
 </svelte:head>

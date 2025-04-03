@@ -14,7 +14,12 @@
 </script>
 
 <div title="Change Theme" class={`dropdown dropdown-end block ${dropdownClasses}`}>
-  <div tabindex="0" role="button" class={`btn btn-sm gap-1 ${btnClasses}`}>
+  <div
+    tabindex="0"
+    role="button"
+    class={`btn btn-sm gap-1 ${btnClasses}`}
+    aria-label="Change Theme"
+  >
     <div
       class="bg-base-100 border-base-content/10 grid shrink-0 grid-cols-2 gap-0.5 rounded-md border p-1"
     >

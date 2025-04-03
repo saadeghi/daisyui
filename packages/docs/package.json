@@ -20,7 +20,6 @@
     "@sveltejs/vite-plugin-svelte": "5.0.3",
     "@tailwindcss/typography": "0.5.16",
     "daisyui": "workspace:*",
-    "dotenv": "16.4.7",
     "json-diff": "1.0.6",
     "mdsvex": "0.12.3",
     "rehype-external-links": "3.0.0",
@@ -29,7 +28,6 @@
     "remark-github": "12.0.0",
     "remark-parse": "11.0.0",
     "rollup-plugin-visualizer": "5.14.0",
-    "sharp": "0.33.5",
     "shiki": "3.2.1",
     "super-sitemap": "^1.0.3",
     "svelte": "5.25.6",
@@ -42,7 +40,6 @@
     "@minimal-analytics/ga4": "1.8.7",
     "culori": "4.0.1",
     "js-yaml": "4.1.0",
-    "nanoid": "5.1.5",
     "pako": "2.1.0",
     "svelte-countdown": "1.1.2",
     "svelte-countup": "0.2.8"
