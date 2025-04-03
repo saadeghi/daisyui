@@ -31,6 +31,7 @@
     "rollup-plugin-visualizer": "5.14.0",
     "sharp": "0.33.5",
     "shiki": "3.2.1",
+    "super-sitemap": "^1.0.3",
     "svelte": "5.25.6",
     "svelte-typeahead": "5.0.0",
     "theme-change": "2.5.0",

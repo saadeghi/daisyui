@@ -1,5 +1,7 @@
 <script>
   import { t } from "$lib/i18n.svelte.js"
+  import { page } from "$app/stores"
+  import { langs } from "$lib/i18n.svelte.js"
 
   let siteData = {
     title: "Tailwind CSS Components ( version 5 update is here )",
@@ -15,6 +17,12 @@
         : `${$t(siteData.title)}`
       : title,
   )
+
+  const iso15924to31661 = (lang) => {
+    if (lang === "zh_hans") return "zh-cn"
+    if (lang === "zh_hant") return "zh-tw"
+    return lang
+  }
 </script>
 
 <svelte:head>
@@ -28,4 +36,14 @@
   <meta property="og:title" content={formattedTitle} />
   <meta property="og:description" content={desc} />
   <meta property="og:image" content={img} />
+
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  {#each langs as lang}
+    <link
+      rel="alternate"
+      hreflang={iso15924to31661(lang)}
+      href={`${$page.url.origin}${$page.url.pathname}?lang=${lang}`}
+    />
+  {/each}
 </svelte:head>

@@ -115,7 +115,7 @@
           $page.url.pathname == highlightAnotherItem ? "menu-active" : ""
         } ${$page.url.pathname.startsWith(href) ? "menu-active" : ""} ${
           highlight
-            ? "from-primary to-primary/0 hover:to-primary/10 [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))] from-[-200%] to-60%"
+            ? "from-primary to-primary/0 hover:to-primary/10 outline-primary/5 bg-linear-50 from-[-300%] to-60% outline-1 -outline-offset-1"
             : ""
         }`}
       >
