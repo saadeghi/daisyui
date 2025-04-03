@@ -43,7 +43,7 @@
     <link
       rel="alternate"
       hreflang={iso15924to31661(lang)}
-      href={`${$page.url.origin}${$page.url.pathname}?lang=${lang}`}
+      href={`${$page.url.pathname}?lang=${lang}`}
     />
   {/each}
 </svelte:head>
