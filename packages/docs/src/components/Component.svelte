@@ -3,6 +3,8 @@
   import { htmlToJsx, prefixClassNames } from "$lib/actions.svelte.js"
   import { t } from "$lib/i18n.svelte.js"
   import Clipboard from "$components/Clipboard.svelte"
+  import { prefix } from "$lib/stores"
+
   let {
     title = undefined,
     desc = undefined,
@@ -18,6 +20,8 @@
   let wrapper = $state()
   let htmlSlot = $state()
   let jsxSlot = $state()
+  let htmlContent = $state("")
+  let jsxContent = $state("")
 
   let titleStr = $derived(
     title
@@ -32,6 +36,20 @@
     if (document.getElementById(location.hash.slice(1)) && location.hash.slice(1) === titleStr) {
       document.getElementById(location.hash.slice(1)).click()
     }
+  })
+
+  // Subscribe to prefix changes
+  $effect(() => {
+    const unsubscribe = prefix.subscribe((value) => {
+      if (htmlSlot) {
+        htmlContent = htmlSlot.firstChild.innerHTML
+      }
+      if (jsxSlot) {
+        jsxContent = jsxSlot.firstChild.innerHTML
+      }
+    })
+
+    return () => unsubscribe()
   })
 </script>
 
@@ -104,7 +122,7 @@
             {@render html()}
           </div>
           {#if onMount}
-            <Clipboard strip={true} text={htmlSlot?.firstChild.innerHTML} />
+            <Clipboard strip={true} text={htmlContent} />
           {/if}
         </div>
       </div>
@@ -136,7 +154,7 @@
             </div>
           </div>
           {#if onMount}
-            <Clipboard strip={true} text={jsxSlot?.firstChild.innerHTML} />
+            <Clipboard strip={true} text={jsxContent} />
           {/if}
         </div>
       </div>
