@@ -24,9 +24,6 @@ jobs:
       - name: Build package
         run: bun run --bun build
 
-      - name: Build bundle
-        run: bun run --bun bundle
-
       - name: Read package version from package.json
         id: package-version
         run: |

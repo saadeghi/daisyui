@@ -45,6 +45,9 @@ jobs:
       - name: Build package
         run: bun run --bun build
 
+      - name: Build bundle
+        run: bun run --bun bundle
+
       - name: Run release command
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
