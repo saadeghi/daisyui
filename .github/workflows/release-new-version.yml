@@ -53,7 +53,7 @@ jobs:
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
           cd packages/daisyui
-          bunx commit-and-tag-version --infile ../../CHANGELOG.md ${{ inputs.release-type }}
+          bunx commit-and-tag-version --commit-all --infile ../../CHANGELOG.md ${{ inputs.release-type }}
 
       - name: Read package version from package.json
         id: package-version
