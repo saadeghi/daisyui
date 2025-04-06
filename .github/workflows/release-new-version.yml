@@ -52,6 +52,7 @@ jobs:
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
+          git add .
           cd packages/daisyui
           bunx commit-and-tag-version --commit-all --infile ../../CHANGELOG.md ${{ inputs.release-type }}
 
