@@ -356,9 +356,9 @@
     --tabcontent-radius-ee: var(--radius-box);
   }
 
-  :checked,
-  :is(label:has(:checked)),
-  :is(.tab-active, [aria-selected="true"]) {
+  > :checked,
+  > :is(label:has(:checked)),
+  > :is(.tab-active, [aria-selected="true"]) {
     & + .tab-content:not(:nth-child(2)) {
       --tabcontent-radius-es: var(--radius-box);
     }
@@ -449,9 +449,9 @@
     }
   }
 
-  :is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
-  :is(input:checked),
-  :is(label:has(:checked)) {
+  > :is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+  > :is(input:checked),
+  > :is(label:has(:checked)) {
     background-color: var(--tab-bg, var(--color-base-100));
     box-shadow:
       0 1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
