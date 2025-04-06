@@ -44,9 +44,9 @@ Add daisyUI's llms.txt file to your repo so that Copilot can use it by default.
 
 ## <img src="https://img.daisyui.com/images/logos/zed.webp" alt="VSCode" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Zed
 
-- In chat window type this and press <kbd class="kbd">Enter ↵</kbd>
+- In chat window click <kbd class="kbd">+</kbd>, click <kbd class="kbd">🌐 Fetch</kbd> and add this URL:
   ```sh
-  /fetch https://daisyui.com/llms.txt
+  https://daisyui.com/llms.txt
   ```
 
 ## <img src="https://img.daisyui.com/images/logos/windsurf.webp" alt="VSCode" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Windsurf
