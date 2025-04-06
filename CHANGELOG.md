@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.13 (2025-04-06)
+
+
+### Bug Fixes
+
+* checkbox style inside tab-content. closes: [#3753](https://github.com/saadeghi/daisyui/issues/3753) ([fe16212](https://github.com/saadeghi/daisyui/commit/fe16212ae23b3cb6be54f1364509b512d933fdf4))
+
 ## 5.0.12 (2025-04-02)
 
 
