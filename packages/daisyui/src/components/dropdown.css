@@ -130,6 +130,9 @@
   :where(.dropdown-content) {
     @apply end-1/2;
     translate: 50% 0;
+    [dir="rtl"] & {
+      translate: -50% 0;
+    }
   }
 
   &.dropdown-left {

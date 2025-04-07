@@ -214,7 +214,7 @@
     min-height: fit-content;
     padding-bottom: 1rem;
     transition:
-      padding 0.2sease-out,
+      padding 0.2s ease-out,
       background-color 0.2sease-out;
   }
 }
