@@ -135,11 +135,11 @@
   grid-column-start: 1;
   grid-row-start: 2;
   min-height: 0;
-  transition: visibility 0.2s;
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: unset;
   transition:
+    visibility 0.2s,
     padding 0.2s ease-out,
     background-color 0.2s ease-out;
 }
@@ -215,6 +215,6 @@
     padding-bottom: 1rem;
     transition:
       padding 0.2s ease-out,
-      background-color 0.2sease-out;
+      background-color 0.2s ease-out;
   }
 }
