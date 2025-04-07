@@ -431,10 +431,12 @@
 
 .tabs-box {
   @apply bg-base-200 p-1;
-  border-radius: calc(
-    var(--radius-field) +
-      min(0.25rem, calc(var(--radius-field) + var(--radius-field) + var(--radius-field)))
-  );
+  /*
+    using --tabs-box-radius CSS variable to avoid Nuxt build issue
+    https://github.com/saadeghi/daisyui/issues/3724
+  */
+  --tabs-box-radius: calc(var(--radius-field) + var(--radius-field) + var(--radius-field));
+  border-radius: calc(var(--radius-field) + min(0.25rem, var(--tabs-box-radius)));
   box-shadow:
     0 -0.5px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
     0 0.5px oklch(0% 0 0 / calc(var(--depth) * 0.05)) inset;
