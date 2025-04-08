@@ -72,7 +72,7 @@
 <div class="mx-auto max-w-4xl px-4 py-20">
   <div class="text-center">
     <span class="badge badge-outline">
-      Comaring {data.first.name} vs. {data.second.name}. Which one is better in {new Date().getFullYear()}?
+      Comparing {data.first.name} vs. {data.second.name}. Which one is better in {new Date().getFullYear()}?
     </span>
   </div>
   <div class="h-6"></div>
@@ -102,8 +102,8 @@
   <p class="font-title text-base-content/60 mx-auto max-w-xl text-center text-sm">
     Looking for a {data.first.name} alternative? This page compares {data.first.name}
     and {data.second.name}, two popular UI component libraries. We are comparing features, size,
-    effic, and developer experience, to help you choose which component library is better for your
-    next project.
+    efficiency, and developer experience, to help you choose which component library is better for
+    your next project.
   </p>
   <div class="h-16"></div>
   <table class="table">
@@ -178,7 +178,7 @@
   <div class="divider"></div>
   <p class="text-base-content/30 mx-auto max-w-xl text-center text-xs">
     This comparison page is for informational purposes only and does not mean to criticize libraries
-    or projects. Information are based on GitHub public data, NPM registry data and official
+    or projects. Information is based on GitHub public data, NPM registry data and official
     documentation websites of the libraries. If you found any outdated information, please open a PR
     to update it. All trademarks, logos and brand names are the property of their respective owners.
   </p>
