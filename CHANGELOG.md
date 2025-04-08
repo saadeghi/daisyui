@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.17 (2025-04-08)
+
+
+### Bug Fixes
+
+* Bundle file for version. ([7fd2640](https://github.com/saadeghi/daisyui/commit/7fd264003b81953de4b342fe66e1559e4146f6c5)), closes [#3765](https://github.com/saadeghi/daisyui/issues/3765)
+
 ## 5.0.16 (2025-04-07)
 
 ### Bug Fixes
