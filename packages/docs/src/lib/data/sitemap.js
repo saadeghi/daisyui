@@ -71,3 +71,18 @@ export async function getProductIds() {
     return []
   }
 }
+
+export function getComparePages() {
+  const yamlFile = readFileSync("src/lib/data/landings.yaml", "utf8")
+  const yamlData = yaml.load(yamlFile)
+
+  if (!yamlData.compare?.data) {
+    return []
+  }
+
+  // Get all framework keys except daisyui
+  const frameworks = Object.keys(yamlData.compare.data).filter((key) => key !== "daisyui")
+
+  // Create comparison URLs in the format "framework-vs-daisyui"
+  return frameworks.map((framework) => `${framework}-vs-daisyui`)
+}

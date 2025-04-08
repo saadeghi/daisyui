@@ -5,6 +5,7 @@ export const pagesThatDontNeedSidebar = [
   "/blog/*/",
   "/store/",
   "/store/*/",
+  "/compare/*/",
   "/resources/*/",
   "/theme-generator/",
 ]

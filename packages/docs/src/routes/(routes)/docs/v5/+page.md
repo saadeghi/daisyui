@@ -406,7 +406,7 @@ See how it works in the new [Theme Generator](/theme-generator/) page.
 
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-soft-button-dash-button.webp" alt="daisyui 5 soft button and dash button">
 
-### New component styles: `soft`, `dash`
+### New component styles: "soft" and "dash"
 
 Components like `button`, `badge`, `alert` now have `soft` and `dash` styles.  
 `soft` style makes the component look softer and `dash` style adds a dashed border to the component.

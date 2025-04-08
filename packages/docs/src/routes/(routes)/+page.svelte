@@ -1,5 +1,6 @@
 <script>
   import Countup from "svelte-countup"
+  import Install from "$components/homepage/Install.svelte"
   import SEO from "$components/SEO.svelte"
   import Carbon from "$components/Carbon.svelte"
   import Footer from "$components/Footer.svelte"
@@ -2446,7 +2447,7 @@
       </h2>
       <div class="h-16"></div>
       <div class="pointer-events-none mx-auto flex max-w-xl flex-wrap justify-center gap-10 px-6">
-        {#each ["svelte", "vue", "react", "solidjs", "preact", "angular", "qwik", "nextjs", "nuxtjs", "laravel", "11ty", "vite", "astro"] as logo, index}
+        {#each ["svelte", "vue", "react", "solidjs", "rails", "preact", "angular", "astro", "qwik", "nextjs", "nuxtjs", "laravel", "phoenix", "vite"] as logo, index}
           <img
             loading="lazy"
             width="96"
@@ -2518,9 +2519,7 @@
         {$t("install-title")}
       </h2>
       <div class="mx-auto my-2 w-full max-w-md">
-        {#await import("../../components/homepage/Install.svelte") then Module}
-          <Module.default />
-        {/await}
+        <Install />
         <a href="/docs/install/" class="btn-primary btn btn-wide mt-4 mb-20 shadow-lg">
           {$t("install-btn")}
         </a>

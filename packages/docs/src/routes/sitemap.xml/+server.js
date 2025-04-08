@@ -1,18 +1,17 @@
 import { error } from "@sveltejs/kit"
 import * as sitemap from "super-sitemap"
-import { getTags, getVideoIds, getProductIds } from "$lib/data/sitemap"
+import { getTags, getVideoIds, getProductIds, getComparePages } from "$lib/data/sitemap"
 
 export const prerender = true
 
 export const GET = async () => {
-  let productIds
-  let blogTags
-  let videoIds
+  let productIds, blogTags, videoIds, comparePages
   try {
-    ;[productIds, blogTags, videoIds] = await Promise.all([
+    ;[productIds, blogTags, videoIds, comparePages] = await Promise.all([
       getProductIds(),
       getTags(),
       getVideoIds(),
+      getComparePages(),
     ])
   } catch (err) {
     throw error(500, "Could not load data for param values.")
@@ -25,6 +24,7 @@ export const GET = async () => {
       "/store/[productId]": productIds,
       "/blog/tag/[tag]": blogTags,
       "/resources/videos/[id]": videoIds,
+      "/compare/[item]": comparePages,
     },
   })
 }
