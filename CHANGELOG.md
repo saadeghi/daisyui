@@ -4,9 +4,22 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.0.16 (2025-04-07)
 
+### Bug Fixes
+
+* fix: collapse-content transition duplicate, transition typo (#3761)
+* fix tabs-box render issue on Nuxt. closes: #3724
+
 ## 5.0.15 (2025-04-07)
 
+### Bug Fixes
+
+* dropdown-center RTL, modal gutter, collapse-content animation
+
 ## 5.0.14 (2025-04-07)
+
+### Bug Fixes
+
+* workaround for lightningcss issue of color mix in `&:before`. closes: #3758, closes: #3755
 
 ## 5.0.13 (2025-04-06)
 

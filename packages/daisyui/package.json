@@ -66,6 +66,11 @@
     "daisyui.css",
     "themes.css"
   ],
+  "commit-and-tag-version": {
+    "scripts": {
+      "postbump": "cd ../.. && bun run --bun bundle && git add --all packages/bundle/"
+    }
+  },
   "scripts": {
     "build": "bun build.js"
   }

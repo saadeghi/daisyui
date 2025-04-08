@@ -45,14 +45,17 @@ jobs:
       - name: Build package
         run: bun run --bun build
 
-      - name: Build bundle
-        run: bun run --bun bundle
+      # - name: Build bundle
+      #   run: bun run --bun bundle
 
-      - name: Run release command
+      - name: Config Git
         run: |
           git config --local user.email "pouya.saadeghi@gmail.com"
           git config --local user.name "Pouya Saadeghi"
-          git add --all packages/bundle/
+
+      - name: Run release command
+        run: |
+          # git add --all packages/bundle/
           cd packages/daisyui
           bunx commit-and-tag-version --commit-all --infile ../../CHANGELOG.md ${{ inputs.release-type }}
 
