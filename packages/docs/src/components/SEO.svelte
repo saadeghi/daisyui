@@ -38,6 +38,7 @@
   <meta property="og:image" content={img} />
 
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <link rel="canonical" href={`https://daisyui.com${page.url.pathname}`} />
 
   {#each langs as lang}
     <link
