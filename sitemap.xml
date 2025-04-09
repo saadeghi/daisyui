@@ -841,6 +841,9 @@
     <loc>https://daisyui.com/compare/daisyui-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/flowbite-vs-daisyui</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/flowbite-vs-mui</loc>
   </url>
   <url>
@@ -874,6 +877,12 @@
     <loc>https://daisyui.com/compare/flowbite-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/mui-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/mui-vs-flowbite</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/mui-vs-shadcn</loc>
   </url>
   <url>
@@ -904,6 +913,15 @@
     <loc>https://daisyui.com/compare/mui-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/shadcn-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/shadcn-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/shadcn-vs-mui</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/shadcn-vs-preline</loc>
   </url>
   <url>
@@ -931,6 +949,18 @@
     <loc>https://daisyui.com/compare/shadcn-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/preline-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/preline-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/preline-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/preline-vs-shadcn</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/preline-vs-hyperui</loc>
   </url>
   <url>
@@ -955,6 +985,21 @@
     <loc>https://daisyui.com/compare/preline-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/hyperui-vs-preline</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/hyperui-vs-merakiui</loc>
   </url>
   <url>
@@ -976,6 +1021,24 @@
     <loc>https://daisyui.com/compare/hyperui-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-preline</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/merakiui-vs-hyperui</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/merakiui-vs-nuxtui</loc>
   </url>
   <url>
@@ -994,6 +1057,27 @@
     <loc>https://daisyui.com/compare/merakiui-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-preline</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-hyperui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/nuxtui-vs-merakiui</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/nuxtui-vs-heroui</loc>
   </url>
   <url>
@@ -1009,6 +1093,30 @@
     <loc>https://daisyui.com/compare/nuxtui-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/heroui-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-preline</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-hyperui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-merakiui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/heroui-vs-nuxtui</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/heroui-vs-bootstrap</loc>
   </url>
   <url>
@@ -1021,6 +1129,33 @@
     <loc>https://daisyui.com/compare/heroui-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-preline</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-hyperui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-merakiui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-nuxtui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bootstrap-vs-heroui</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/bootstrap-vs-chakra</loc>
   </url>
   <url>
@@ -1030,13 +1165,112 @@
     <loc>https://daisyui.com/compare/bootstrap-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/chakra-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-preline</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-hyperui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-merakiui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-nuxtui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-heroui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/chakra-vs-bootstrap</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/chakra-vs-bulma</loc>
   </url>
   <url>
     <loc>https://daisyui.com/compare/chakra-vs-radix</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/compare/bulma-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-preline</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-hyperui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-merakiui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-nuxtui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-heroui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-bootstrap</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/bulma-vs-chakra</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/compare/bulma-vs-radix</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-daisyui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-flowbite</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-mui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-shadcn</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-preline</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-hyperui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-merakiui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-nuxtui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-heroui</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-bootstrap</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-chakra</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/compare/radix-vs-bulma</loc>
   </url>
   <url>
     <loc>https://daisyui.com/llms.txt</loc>
