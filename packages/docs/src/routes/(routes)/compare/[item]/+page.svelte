@@ -213,14 +213,14 @@
             class="from-base-content/10 rounded-box mt-16 flex flex-col items-center gap-2 bg-linear-10 from-[-25%] to-[75%] py-16 text-center"
           >
             {#if data.first.key !== "daisyui" && data.second.key !== "daisyui"}
-              <div class="mb-6 flex items-center gap-6">
+              <div class="mb-6 flex items-center gap-1 md:gap-6">
                 <div class="flex size-10 items-center">{@html data.first.logo}</div>
                 <span class="text-error">vs</span>
                 <div class="flex size-10 items-center">
                   {@html libraries.find((lib) => lib.key === "daisyui").logo}
                 </div>
               </div>
-              <a href="/compare/{data.first.key}-vs-daisyui" class="btn btn-sm">
+              <a href="/compare/{data.first.key}-vs-daisyui" class="btn btn-xs md:btn-sm">
                 Compare {data.first.name} with daisyUI
               </a>
             {:else}
@@ -233,14 +233,14 @@
             class="from-base-content/10 rounded-box mt-16 flex flex-col items-center gap-2 -bg-linear-10 from-[-25%] to-[75%] py-16 text-center"
           >
             {#if data.first.key !== "daisyui" && data.second.key !== "daisyui"}
-              <div class="mb-6 flex items-center gap-6">
+              <div class="mb-6 flex items-center gap-1 md:gap-6">
                 <div class="flex size-10 items-center">
                   {@html libraries.find((lib) => lib.key === "daisyui").logo}
                 </div>
                 <span class="text-error">vs</span>
                 <div class="flex size-10 items-center">{@html data.second.logo}</div>
               </div>
-              <a href="/compare/daisyui-vs-{data.second.key}" class="btn btn-sm">
+              <a href="/compare/daisyui-vs-{data.second.key}" class="btn btn-xs md:btn-sm">
                 Compare daisyUI with {data.second.name}
               </a>
             {:else}
