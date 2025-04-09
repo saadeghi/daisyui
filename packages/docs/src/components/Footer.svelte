@@ -217,12 +217,6 @@
           </a>
         </div>
         <a href="/docs/faq/" class="link link-hover">{$t("FAQ")}</a>
-        <a href="/docs/changelog/" class="link link-hover">
-          {$t("changelog")}
-        </a>
-        <a href="/docs/roadmap/" class="link link-hover">
-          {$t("Roadmap")}
-        </a>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -231,6 +225,12 @@
         >
           {$t("license")}
           {@html newtabicon}
+        </a>
+        <a href="/docs/roadmap/" class="link link-hover">
+          {$t("Roadmap")}
+        </a>
+        <a href="/docs/changelog/" class="link link-hover">
+          {$t("changelog")}
         </a>
         <a
           target="_blank"
@@ -253,27 +253,31 @@
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("pages")}</span>
-        <a href="/docs/install/" class="link link-hover">{$t("how-to-install")}</a>
-        <a href="/docs/use/" class="link link-hover">{$t("how-to-use-components")}</a>
-        <a href="/docs/customize/" class="link link-hover">{$t("how-to-customize")}</a>
-        <a href="/docs/themes/" class="link link-hover">{$t("how-to-use-themes")}</a>
-        <a href="/docs/colors/" class="link link-hover">{$t("color-system")}</a>
-        <a href="/docs/config/" class="link link-hover">{$t("config")}</a>
-        <a href="/resources/" class="link link-hover">{$t("Resources")}</a>
-        <a href="/blog/" class="link link-hover">{$t("Blog")}</a>
-        <a href="/store/" class="link link-hover">{$t("Store")}</a>
-        <a href="/store/351127/" class="link link-hover">Official daisyUI Figma Library</a>
+        <a class="link link-hover" href="/docs/install/">{$t("how-to-install")}</a>
+        <a class="link link-hover" href="/docs/use/">{$t("how-to-use-components")}</a>
+        <a class="link link-hover" href="/docs/customize/">{$t("how-to-customize")}</a>
+        <a class="link link-hover" href="/docs/themes/">{$t("how-to-use-themes")}</a>
+        <a class="link link-hover" href="/docs/colors/">{$t("color-system")}</a>
+        <a class="link link-hover" href="/docs/config/">{$t("config")}</a>
+        <a class="link link-hover" href="/resources/">{$t("Resources")}</a>
+        <a class="link link-hover" href="/blog/">{$t("Blog")}</a>
+        <a class="link link-hover" href="/store/">{$t("Store")}</a>
+        <a class="link link-hover" href="/store/351127/">Official daisyUI Figma Library</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
-        <a href="/compare/flowbite-vs-daisyui" class="link link-hover">Flowbite vs daisyUI</a>
-        <a href="/compare/mui-vs-daisyui" class="link link-hover">MUI vs daisyUI</a>
-        <a href="/compare/shadcn-vs-daisyui" class="link link-hover">shadcn vs daisyUI</a>
-        <a href="/compare/preline-vs-daisyui" class="link link-hover">Preline UI vs daisyUI</a>
-        <a href="/compare/hyperui-vs-daisyui" class="link link-hover">HyperUI vs daisyUI</a>
-        <a href="/compare/merakiui-vs-daisyui" class="link link-hover">Meraki UI vs daisyUI</a>
-        <a href="/compare/nuxtui-vs-daisyui" class="link link-hover">NuxtUI vs daisyUI</a>
-        <a href="/compare/heroui-vs-daisyui" class="link link-hover">HeroUI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/shadcn-vs-daisyui">shadcn/ui vs daisyUI</a>
+        <a class="link link-hover" href="/compare/flowbite-vs-daisyui">Flowbite vs daisyUI</a>
+        <a class="link link-hover" href="/compare/radix-vs-daisyui">Radix vs daisyUI</a>
+        <a class="link link-hover" href="/compare/mui-vs-daisyui">MUI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/bulma-vs-daisyui">Bulma vs daisyUI</a>
+        <a class="link link-hover" href="/compare/nuxtui-vs-daisyui">NuxtUI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/heroui-vs-daisyui">HeroUI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/hyperui-vs-daisyui">HyperUI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/merakiui-vs-daisyui">Meraki UI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/bootstrap-vs-daisyui">Bootstrap vs daisyUI</a>
+        <a class="link link-hover" href="/compare/preline-vs-daisyui">Preline UI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/chakra-vs-daisyui">Chakra UI vs daisyUI</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("related projects")}</span>
@@ -298,6 +302,15 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
+          href="https://github.com/Dzoukr/Feliz.DaisyUI"
+          class="link link-hover group"
+        >
+          Feliz.DaisyUI (F#)
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
           href="https://github.com/willpinha/daisy-components"
           class="link link-hover group"
         >
@@ -311,15 +324,6 @@
           class="link link-hover group"
         >
           phcurado components (Phoenix)
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
-          href="https://github.com/Dzoukr/Feliz.DaisyUI"
-          class="link link-hover group"
-        >
-          Feliz.DaisyUI (F#)
           {@html newtabicon}
         </a>
         <a

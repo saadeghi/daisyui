@@ -80,9 +80,14 @@ export function getComparePages() {
     return []
   }
 
-  // Get all framework keys except daisyui
-  const frameworks = Object.keys(yamlData.compare.data).filter((key) => key !== "daisyui")
+  const frameworks = Object.keys(yamlData.compare.data)
+  const comparePages = []
 
-  // Create comparison URLs in the format "framework-vs-daisyui"
-  return frameworks.map((framework) => `${framework}-vs-daisyui`)
+  for (let i = 0; i < frameworks.length; i++) {
+    for (let j = i + 1; j < frameworks.length; j++) {
+      comparePages.push(`${frameworks[i]}-vs-${frameworks[j]}`)
+    }
+  }
+
+  return comparePages
 }

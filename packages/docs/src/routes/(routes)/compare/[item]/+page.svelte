@@ -3,11 +3,16 @@
   import Install from "$components/homepage/Install.svelte"
   import Footer from "$components/Footer.svelte"
   import { t } from "$lib/i18n.svelte.js"
-  export let data
+  import { goto } from "$app/navigation"
+  let { data } = $props()
 
-  const firstAttributes = Object.entries(data.first.attributes)
-  const secondAttributes = Object.entries(data.second.attributes)
+  const firstAttributes = $derived(Object.entries(data.first.attributes))
+  const secondAttributes = $derived(Object.entries(data.second.attributes))
   const attributeRules = data.attributeRules
+  const libraries = data.libraries
+
+  let selectedFirst = $state(data.first.key)
+  let selectedSecond = $state(data.second.key)
 
   function isPositiveAttribute(value) {
     return typeof value === "object" && "positive" in value
@@ -34,7 +39,6 @@
       return "text-green-500"
     }
 
-    // Add special handling for "?" comparison
     if (val1 === "?" || val2 === "?") {
       if (rule === "less") {
         return val1 === "?" ? "text-red-500" : "text-green-500"
@@ -62,17 +66,34 @@
   function formatValue(value) {
     return typeof value === "boolean" ? (value ? "Yes" : "No") : value
   }
+
+  function handleFirstSelect(event) {
+    selectedFirst = event.target.value
+    updateRoute()
+  }
+
+  function handleSecondSelect(event) {
+    selectedSecond = event.target.value
+    updateRoute()
+  }
+
+  function updateRoute() {
+    if (selectedFirst && selectedSecond) {
+      goto(`/compare/${selectedFirst}-vs-${selectedSecond}`)
+    }
+  }
 </script>
 
 <SEO
-  title={`${data.first.name} vs ${data.second.name} - daisyUI`}
+  title={`${data.first.name} vs ${data.second.name} - daisyUI is a ${data.first.name} alternative`}
   desc={`Comparison between ${data.first.name} and ${data.second.name}`}
 />
 
 <div class="mx-auto max-w-4xl px-4 py-20">
   <div class="text-center">
     <span class="badge badge-outline">
-      Comparing {data.first.name} vs. {data.second.name}. Which one is better in {new Date().getFullYear()}?
+      Comparing {data.first.name} vs. {data.second.name}. Which one is better in
+      {new Date().getFullYear()}?
     </span>
   </div>
   <div class="h-6"></div>
@@ -102,8 +123,8 @@
   <p class="font-title text-base-content/60 mx-auto max-w-xl text-center text-sm">
     Looking for a {data.first.name} alternative? This page compares {data.first.name}
     and {data.second.name}, two popular UI component libraries. We are comparing features, size,
-    efficiency, and developer experience, to help you choose which component library is better for
-    your next project.
+    efficiency and usage data to help you choose which component library is better for your next
+    project.
   </p>
   <div class="h-16"></div>
   <table class="table">
@@ -111,18 +132,40 @@
       <tr>
         <th class="ps-0 pe-2">
           <div
-            class="from-base-300 rounded-box flex flex-col items-center gap-2 bg-linear-to-b from-[-25%] py-8 text-center"
+            class="from-base-content/10 rounded-box mb-16 flex flex-col items-center gap-2 bg-linear-170 from-[-25%] to-[75%] pt-16 text-center"
           >
             <div class="flex size-12 items-center lg:size-20">{@html data.first.logo}</div>
-            <div>{data.first.name}</div>
+            <div>
+              {data.first.name}
+              <!-- <select class="select select-sm" value={selectedFirst} on:change={handleFirstSelect}>
+                {#each data.libraries as library}
+                  <option value={library.key} disabled={library.key === selectedSecond}>
+                    {library.name}
+                  </option>
+                {/each}
+              </select> -->
+            </div>
           </div>
         </th>
         <th class="ps-2 pe-0">
           <div
-            class="from-base-300 rounded-box flex flex-col items-center gap-2 bg-linear-to-b from-[-25%] py-8 text-center"
+            class="from-base-content/10 rounded-box mb-16 flex flex-col items-center gap-2 -bg-linear-170 from-[-25%] to-[75%] pt-16 text-center"
           >
             <div class="flex size-12 items-center lg:size-20">{@html data.second.logo}</div>
-            <div>{data.second.name}</div>
+            <div>
+              {data.second.name}
+              <!-- <select
+                class="select select-sm"
+                value={selectedSecond}
+                on:change={handleSecondSelect}
+              >
+                {#each data.libraries as library}
+                  <option value={library.key} disabled={library.key === selectedFirst}>
+                    {library.name}
+                  </option>
+                {/each}
+              </select> -->
+            </div>
           </div>
         </th>
       </tr>
@@ -163,6 +206,50 @@
         </tr>
       {/each}
     </tbody>
+    <tfoot>
+      <tr>
+        <th class="ps-0 pe-2">
+          <div
+            class="from-base-content/10 rounded-box mt-16 flex flex-col items-center gap-2 bg-linear-10 from-[-25%] to-[75%] py-16 text-center"
+          >
+            {#if data.first.key !== "daisyui" && data.second.key !== "daisyui"}
+              <div class="mb-6 flex items-center gap-6">
+                <div class="flex size-10 items-center">{@html data.first.logo}</div>
+                <span class="text-error">vs</span>
+                <div class="flex size-10 items-center">
+                  {@html libraries.find((lib) => lib.key === "daisyui").logo}
+                </div>
+              </div>
+              <a href="/compare/{data.first.key}-vs-daisyui" class="btn btn-sm">
+                Compare {data.first.name} with daisyUI
+              </a>
+            {:else}
+              <div class="flex size-12 items-center lg:size-20">{@html data.first.logo}</div>
+            {/if}
+          </div>
+        </th>
+        <th class="ps-2 pe-0">
+          <div
+            class="from-base-content/10 rounded-box mt-16 flex flex-col items-center gap-2 -bg-linear-10 from-[-25%] to-[75%] py-16 text-center"
+          >
+            {#if data.first.key !== "daisyui" && data.second.key !== "daisyui"}
+              <div class="mb-6 flex items-center gap-6">
+                <div class="flex size-10 items-center">
+                  {@html libraries.find((lib) => lib.key === "daisyui").logo}
+                </div>
+                <span class="text-error">vs</span>
+                <div class="flex size-10 items-center">{@html data.second.logo}</div>
+              </div>
+              <a href="/compare/daisyui-vs-{data.second.key}" class="btn btn-sm">
+                Compare daisyUI with {data.second.name}
+              </a>
+            {:else}
+              <div class="flex size-12 items-center lg:size-20">{@html data.second.logo}</div>
+            {/if}
+          </div>
+        </th>
+      </tr>
+    </tfoot>
   </table>
   <div class="h-64"></div>
   <h2 class="font-title text-3xl font-semibold">Install daisyUI</h2>

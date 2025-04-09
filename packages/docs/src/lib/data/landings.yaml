@@ -57,7 +57,7 @@ compare:
         Global customizations:
           value: Yes
           positive: true
-          desc: daisyUI provides tokens and root level CSS variables to provide customization of how the page looks and feels. Including, colors, sizes, spacing, radius and more.
+          desc: daisyUI provides tokens, root-level CSS variables and component-level CSS variables that let you adjust colors, sizes, spacing, radius, and other styles to match your design.
         works without Node.js:
           value: Yes
           positive: true
@@ -89,7 +89,7 @@ compare:
     flowbite:
       name: Flowbite
       logo: |
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 33" fill="none" xmlns:v="https://vecta.io/nano"><path d="M24.519 13.443c-.074.51-.411 1.204-.797 1.807-.487.761-1.26 1.294-2.145 1.479l-3.898.815a3 3 0 0 0-1.621.936l-2.556 2.857c-.48.537-.816.409-.816-.311-.006.027-1.268 3.283 2.078 5.213 1.286.742 3.136.475 4.422-.266l6.812-3.929a10.31 10.31 0 0 0 4.944-6.833l.062-.342-6.485-1.424z" fill="url(#A)"/><path d="M22.753 9.518c1.286.742 1.811 1.846 1.811 3.329 0 .201-.016.4-.044.596l2.745 1.179 3.74.245c.479-2.772-.46-5.624-2.142-7.892-1.266-1.706-2.895-3.187-4.854-4.317-1.591-.918-3.244-1.522-4.906-1.854L17.236 3.22l-.59 2.775 6.106 3.522z" fill="url(#B)"/><path d="M.784 11.552l.552-1.428c1.178-2.689 3.447-4.483 6.239-5.398a10.34 10.34 0 0 1 8.385.874l.686.396L19.103.803C11.291-.757 3.307 3.833.794 11.522l-.01.03z" fill="url(#C)"/><path d="M18.92 25.97a4.16 4.16 0 0 1-4.155 0c-.175-.101-.339-.214-.495-.336l-2.261 1.555-1.949 3.149c2.163 1.8 4.972 2.379 7.779 2.057a15.96 15.96 0 0 0 6.169-2.041 16.09 16.09 0 0 0 4.06-3.317l-1.162-2.823-1.88-1.765-6.106 3.522z" fill="url(#D)"/><path d="M14.27 25.634a4.15 4.15 0 0 1-1.583-3.259v-.128-10.675c0-.604.178-.706.701-.404-.806-.465-2.668-2.061-4.967-.735-1.286.742-2.344 2.379-2.344 3.862v7.858c0 2.939 1.522 6.004 3.718 7.96l.266.224 4.21-4.704z" fill="url(#E)"/><path d="M27.911 5.812l.962 1.192a10.3 10.3 0 0 1 1.79 8.23c-.603 2.873-2.405 5.35-4.95 6.818l-.686.396 3.042 4.588c5.258-5.978 5.272-15.181-.137-21.2l-.021-.024z" fill="url(#F)"/><path d="M6.344 14.294a4.15 4.15 0 0 1 2.078-3.595 4.16 4.16 0 0 1 .539-.26l-.217-2.733-1.524-3.127c-2.642.971-4.779 2.979-5.903 5.568C.469 12.096 0 14.246 0 16.505c0 1.835.303 3.568.846 5.172l3.028.406 2.47-.744v-7.044h0z" fill="url(#G)"/><path d="M8.96 10.44a4.16 4.16 0 0 1 3.616.26l.111.064 8.895 5.131c.624.36.567.714-.138.862l.513-.107c.675-.141 1.292-.486 1.764-.989a4.09 4.09 0 0 0 1.109-2.813 4.15 4.15 0 0 0-2.078-3.595l-6.812-3.929c-2.548-1.469-5.602-1.783-8.395-.861l-.327.118L8.96 10.44z" fill="url(#H)"/><path d="M19.322 32.152l-1.514.237c-2.92.326-5.841-.608-8.03-2.566a10.32 10.32 0 0 1-3.435-7.692v-.792l-5.498.338c2.553 7.539 10.523 12.152 18.446 10.482l.031-.007z" fill="url(#I)"/><defs><linearGradient id="A" x1="20.06" y1="24.27" x2="23.208" y2="13.307" href="#J"><stop stop-color="#1724c9"/><stop offset="1" stop-color="#1c64f2"/></linearGradient><linearGradient id="B" x1="27.309" y1="10.9" x2="19.03" y2="2.65" href="#J"><stop stop-color="#1c64f2"/><stop offset="1" stop-color="#0092ff"/></linearGradient><linearGradient id="C" x1="16.165" y1="5.521" x2="3.674" y2="6.31" href="#J"><stop stop-color="#0092ff"/><stop offset="1" stop-color="#45b2ff"/></linearGradient><linearGradient id="D" x1="15.32" y1="29.163" x2="26.537" y2="26.136" href="#J"><stop stop-color="#1c64f2"/><stop offset="1" stop-color="#0092ff"/></linearGradient><linearGradient id="E" x1="7.269" y1="16.183" x2="15.233" y2="24.435" href="#J"><stop stop-color="#1724c9"/><stop offset="1" stop-color="#1c64f2"/></linearGradient><linearGradient id="F" x1="25.451" y1="22.136" x2="31.007" y2="10.935" href="#J"><stop stop-color="#0092ff"/><stop offset="1" stop-color="#45b2ff"/></linearGradient><linearGradient id="G" x1="5.364" y1="9.631" x2="2.391" y2="20.806" href="#J"><stop stop-color="#1c64f2"/><stop offset="1" stop-color="#0092ff"/></linearGradient><linearGradient id="H" x1="20.543" y1="9.099" x2="9.678" y2="11.804" href="#J"><stop stop-color="#1724c9"/><stop offset="1" stop-color="#1c64f2"/></linearGradient><linearGradient id="I" x1="6.407" y1="21.857" x2="13.333" y2="32.275" href="#J"><stop stop-color="#0092ff"/><stop offset="1" stop-color="#45b2ff"/></linearGradient><linearGradient id="J" gradientUnits="userSpaceOnUse"/></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 33" fill="none"><path d="M24.519 13.443c-.074.51-.411 1.204-.797 1.807-.487.761-1.26 1.294-2.145 1.479l-3.898.815a3 3 0 0 0-1.621.936l-2.556 2.857c-.48.537-.816.409-.816-.311-.006.027-1.268 3.283 2.078 5.213 1.286.742 3.136.475 4.422-.266l6.812-3.929a10.31 10.31 0 0 0 4.944-6.833l.062-.342-6.485-1.424z" fill="url(#A)"/><path d="M22.753 9.518c1.286.742 1.811 1.846 1.811 3.329 0 .201-.016.4-.044.596l2.745 1.179 3.74.245c.479-2.772-.46-5.624-2.142-7.892-1.266-1.706-2.895-3.187-4.854-4.317-1.591-.918-3.244-1.522-4.906-1.854L17.236 3.22l-.59 2.775 6.106 3.522z" fill="url(#B)"/><path d="M.784 11.552l.552-1.428c1.178-2.689 3.447-4.483 6.239-5.398a10.34 10.34 0 0 1 8.385.874l.686.396L19.103.803C11.291-.757 3.307 3.833.794 11.522l-.01.03z" fill="url(#C)"/><path d="M18.92 25.97a4.16 4.16 0 0 1-4.155 0c-.175-.101-.339-.214-.495-.336l-2.261 1.555-1.949 3.149c2.163 1.8 4.972 2.379 7.779 2.057a15.96 15.96 0 0 0 6.169-2.041 16.09 16.09 0 0 0 4.06-3.317l-1.162-2.823-1.88-1.765-6.106 3.522z" fill="url(#D)"/><path d="M14.27 25.634a4.15 4.15 0 0 1-1.583-3.259v-.128-10.675c0-.604.178-.706.701-.404-.806-.465-2.668-2.061-4.967-.735-1.286.742-2.344 2.379-2.344 3.862v7.858c0 2.939 1.522 6.004 3.718 7.96l.266.224 4.21-4.704z" fill="url(#E)"/><path d="M27.911 5.812l.962 1.192a10.3 10.3 0 0 1 1.79 8.23c-.603 2.873-2.405 5.35-4.95 6.818l-.686.396 3.042 4.588c5.258-5.978 5.272-15.181-.137-21.2l-.021-.024z" fill="url(#F)"/><path d="M6.344 14.294a4.15 4.15 0 0 1 2.078-3.595 4.16 4.16 0 0 1 .539-.26l-.217-2.733-1.524-3.127c-2.642.971-4.779 2.979-5.903 5.568C.469 12.096 0 14.246 0 16.505c0 1.835.303 3.568.846 5.172l3.028.406 2.47-.744v-7.044h0z" fill="url(#G)"/><path d="M8.96 10.44a4.16 4.16 0 0 1 3.616.26l.111.064 8.895 5.131c.624.36.567.714-.138.862l.513-.107c.675-.141 1.292-.486 1.764-.989a4.09 4.09 0 0 0 1.109-2.813 4.15 4.15 0 0 0-2.078-3.595l-6.812-3.929c-2.548-1.469-5.602-1.783-8.395-.861l-.327.118L8.96 10.44z" fill="url(#H)"/><path d="M19.322 32.152l-1.514.237c-2.92.326-5.841-.608-8.03-2.566a10.32 10.32 0 0 1-3.435-7.692v-.792l-5.498.338c2.553 7.539 10.523 12.152 18.446 10.482l.031-.007z" fill="url(#I)"/><defs><linearGradient id="A" x1="20.06" y1="24.27" x2="23.208" y2="13.307" href="#J"><stop stop-color="#1724c9"/><stop offset="1" stop-color="#1c64f2"/></linearGradient><linearGradient id="B" x1="27.309" y1="10.9" x2="19.03" y2="2.65" href="#J"><stop stop-color="#1c64f2"/><stop offset="1" stop-color="#0092ff"/></linearGradient><linearGradient id="C" x1="16.165" y1="5.521" x2="3.674" y2="6.31" href="#J"><stop stop-color="#0092ff"/><stop offset="1" stop-color="#45b2ff"/></linearGradient><linearGradient id="D" x1="15.32" y1="29.163" x2="26.537" y2="26.136" href="#J"><stop stop-color="#1c64f2"/><stop offset="1" stop-color="#0092ff"/></linearGradient><linearGradient id="E" x1="7.269" y1="16.183" x2="15.233" y2="24.435" href="#J"><stop stop-color="#1724c9"/><stop offset="1" stop-color="#1c64f2"/></linearGradient><linearGradient id="F" x1="25.451" y1="22.136" x2="31.007" y2="10.935" href="#J"><stop stop-color="#0092ff"/><stop offset="1" stop-color="#45b2ff"/></linearGradient><linearGradient id="G" x1="5.364" y1="9.631" x2="2.391" y2="20.806" href="#J"><stop stop-color="#1c64f2"/><stop offset="1" stop-color="#0092ff"/></linearGradient><linearGradient id="H" x1="20.543" y1="9.099" x2="9.678" y2="11.804" href="#J"><stop stop-color="#1724c9"/><stop offset="1" stop-color="#1c64f2"/></linearGradient><linearGradient id="I" x1="6.407" y1="21.857" x2="13.333" y2="32.275" href="#J"><stop stop-color="#0092ff"/><stop offset="1" stop-color="#45b2ff"/></linearGradient><linearGradient id="J" gradientUnits="userSpaceOnUse"/></defs></svg>
       attributes:
         License:
           value: MIT
@@ -115,7 +115,7 @@ compare:
         Dependencies:
           value: 22
           positive: false
-          desc: Flowbite has 22 third-party dependencies. More third-party dependencies mean more vulnerability to security issues, compatibility issues, and dependency deprecation.
+          desc: Flowbite has 22 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
         Dependency size:
           value: 9.6MB
           positive: false
@@ -194,7 +194,7 @@ compare:
         Dependencies:
           value: 85
           positive: false
-          desc: MUI has 85 third-party dependencies. More third-party dependencies mean more vulnerability to security issues, compatibility issues, and dependency deprecation.
+          desc: MUI has 85 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
         Dependency size:
           value: 22.8MB
           positive: false
@@ -273,7 +273,7 @@ compare:
         Dependencies:
           value: 159
           positive: false
-          desc: shadcn CLI installs 159 third-party dependencies (Not including React and Tailwind CSS). More third-party dependencies mean more vulnerability to security issues, compatibility issues, and dependency deprecation.
+          desc: shadcn CLI installs 159 third-party dependencies (Not including React and Tailwind CSS). Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
         Dependency size:
           value: 91MB
           positive: false
@@ -599,7 +599,7 @@ compare:
         Dependencies:
           value: 259
           positive: false
-          desc: NuxtUI has 259 third-party dependencies. More third-party dependencies mean more vulnerability to security issues, compatibility issues, and dependency deprecation.
+          desc: NuxtUI has 259 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
         Dependency size:
           value: 151MB
           positive: false
@@ -615,7 +615,7 @@ compare:
           desc: Weekly downloads from NPM
         CDN:
           value: No
-          positive: true
+          positive: false
           desc: NuxtUI CSS file is not available on CDN
         Global customizations:
           value: No
@@ -674,11 +674,11 @@ compare:
         JavaScript size:
           value: 1.2MB
           positive: false
-          desc: JavaScript bundle size (minified)
+          desc: Imported JavaScript bundle size (minified)
         Dependencies:
           value: 208
           positive: false
-          desc: HeroUI has 208 third-party dependencies. More third-party dependencies mean more vulnerability to security issues, compatibility issues, and dependency deprecation.
+          desc: HeroUI has 208 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
         Dependency size:
           value: 37MB
           positive: true
@@ -694,7 +694,7 @@ compare:
           desc: Weekly downloads from NPM
         CDN:
           value: No
-          positive: true
+          positive: false
           desc: HeroUI CSS file is not available on CDN
         Global customizations:
           value: No
@@ -726,4 +726,323 @@ compare:
           desc: HeroUI doesn not use native CSS nesting
         Open GitHub issues:
           value: 280
+          desc: As of April 2025
+
+    bootstrap:
+      name: Bootstrap
+      logo: |
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94"><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="#712cf9"></path></svg>
+      attributes:
+        License:
+          value: MIT
+          desc: Open source MIT License
+        Frameworks:
+          value: ALL
+          positive: true
+          desc: Bootstrap is framework agnostic and works everywhere
+        Unique components:
+          value: 28
+          desc: Bootstrap has 32 Components, 28 of them are unique – for example pagination and button group are considered as same.
+        Built-in Themes:
+          value: 2
+          desc: Bootstrap has light and dark themes
+        Supports more than two themes:
+          value: No
+          positive: false
+          desc: Does not support more than 2 themes at the same time
+        JavaScript size:
+          value: 24.6KB
+          positive: false
+          desc: JavaScript bundle size (minified)
+        Dependencies:
+          value: 0
+          positive: true
+          desc: Bootstrap has no dependencies.
+        Dependency size:
+          value: 0
+          positive: true
+          desc:
+        GitHub stars:
+          value: 172000
+          desc:
+        Used by open source projects:
+          value: 6300000
+          desc: Based on GitHub's public repositories
+        NPM downloads:
+          value: 4700000
+          desc: Weekly downloads from NPM
+        CDN:
+          value: Yes
+          positive: true
+          desc: Bootstrap CSS file is available on CDN
+        Global customizations:
+          value: Yes
+          positive: true
+          desc: Bootstrap provides component-level CSS variables that let you adjust colors, sizes, spacing, radius, and other styles to match your design.
+        works without Node.js:
+          value: Yes
+          positive: true
+          desc: Bootstrap does not require a Node.js environment
+        No-build version:
+          value: No
+          positive: false
+          desc: Bootstrap does not provide micro CSS files for each component
+        P3 colors:
+          value: No
+          positive: false
+          desc: Bootstrap does not use wide-gamut P3 colors by default
+        RTL support:
+          value: Yes
+          positive: true
+          desc: Bootstrap supports right-to-left (RTL) layouts
+        Runtime CSS customization:
+          value: Yes
+          positive: true
+          desc: Bootstrap uses CSS variables for design customization at runtime
+        Native CSS nesting:
+          value: No
+          positive: false
+          desc: Bootstrap doesn not use native CSS nesting
+        Open GitHub issues:
+          value: 479
+          desc: As of April 2025
+
+    chakra:
+      name: Chakra UI
+      logo: |
+        <svg viewBox="0 0 40 36"><path d="M34.5655 17.9244L28.0585 16.7206L27.3139 18.0099L25.4813 21.1828L20.7231 29.4212C20.5147 29.7819 19.9653 29.6335 19.9653 29.2166V22.2928V21.5412C19.9653 21.1509 19.6901 20.8153 19.3087 20.7404L11.8954 19.2841L5.25929 18.0708C5.26937 18.4155 5.35079 18.7586 5.50582 19.0761L10.9828 28.5803C11.7469 29.9063 13.1577 30.7221 14.6835 30.7201L25.1868 30.7061C26.7118 30.7041 28.1198 29.8854 28.8808 28.5585L34.2409 19.2113C34.4694 18.8138 34.5768 18.3679 34.5655 17.9244Z" fill="url(#paint0_linear_«r1»)"></path><path d="M12.642 17.9885L14.4774 14.8034L19.2073 6.59529C19.4154 6.2342 19.9653 6.38242 19.9653 6.79963V14.471C19.9653 14.8617 20.2411 15.1976 20.6231 15.272L28.0585 16.7207L34.5655 17.9245C34.5572 17.5987 34.4841 17.2747 34.3464 16.9717C34.314 16.9004 34.2792 16.8299 34.2397 16.7613L28.8728 7.42387C28.1102 6.09724 26.7007 5.27994 25.1753 5.27994H14.6361C13.1082 5.27994 11.6968 6.09981 10.9352 7.42979L5.58357 16.7749C5.57125 16.7963 5.56056 16.8184 5.54894 16.8401C5.34348 17.2237 5.24692 17.6483 5.25929 18.0708L11.8954 19.2841L12.642 17.9885Z" fill="url(#paint1_linear_«r1»)"></path><defs><linearGradient id="paint0_linear_«r1»" x1="33.9534" y1="23.645" x2="5.78627" y2="23.9059" gradientUnits="userSpaceOnUse"><stop stop-color="#3585A3"></stop><stop offset="1" stop-color="#00DEAE"></stop></linearGradient><linearGradient id="paint1_linear_«r1»" x1="6.67767" y1="12.4545" x2="31.7007" y2="11.8021" gradientUnits="userSpaceOnUse"><stop stop-color="#3585A3"></stop><stop offset="1" stop-color="#00DEAE"></stop></linearGradient></defs></svg>
+      attributes:
+        License:
+          value: MIT
+          desc: Open source MIT License
+        Frameworks:
+          value: Only React
+          positive: false
+          desc: Chakra UI works only with React
+        Unique components:
+          value: 48
+          desc: Chakra UI has 59 Components, 48 of them are unique – for example pagination and button group are considered as same.
+        Built-in Themes:
+          value: 2
+          desc: Chakra UI has light and dark themes
+        Supports more than two themes:
+          value: No
+          positive: false
+          desc: Does not support more than 2 themes at the same time
+        JavaScript size:
+          value: 765kB
+          positive: false
+          desc: Imported JavaScript bundle size (minified)
+        Dependencies:
+          value: 146
+          positive: false
+          desc: Chakra UI has 146 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
+        Dependency size:
+          value: 25MB
+          positive: true
+          desc:
+        GitHub stars:
+          value: 38900
+          desc:
+        Used by open source projects:
+          value: 372000
+          desc: Based on GitHub's public repositories
+        NPM downloads:
+          value: 721000
+          desc: Weekly downloads from NPM
+        CDN:
+          value: No
+          positive: false
+          desc: Chakra UI CSS file is not available on CDN
+        Global customizations:
+          value: No
+          positive: false
+          desc: Chakra UI requires changing JavaScript props one by one at build time to do design token customization
+        works without Node.js:
+          value: No
+          positive: false
+          desc: Chakra UI requires a Node.js environment
+        No-build version:
+          value: No
+          positive: false
+          desc: Chakra UI does not provide micro CSS files for each component
+        P3 colors:
+          value: No
+          positive: false
+          desc: Chakra UI does not use wide-gamut P3 colors by default
+        RTL support:
+          value: No
+          positive: false
+          desc: Chakra UI does not support right-to-left (RTL) layouts
+        Runtime CSS customization:
+          value: No
+          positive: false
+          desc: Chakra UI customizations requires changing JavaScript props at build time
+        Native CSS nesting:
+          value: No
+          positive: false
+          desc: Chakra UI doesn not use native CSS nesting
+        Open GitHub issues:
+          value: 2
+          desc: As of April 2025
+
+    bulma:
+      name: Bulma
+      logo: |
+        <svg viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M170 132.571V27.5908C170 25.5451 170.915 23.93 172.746 22.7456C174.576 21.5612 176.729 20.969 179.206 20.969H210.377C232.019 20.969 242.84 30.4441 242.84 49.3943C242.84 62.5303 238.264 71.0902 229.112 75.074C234.603 77.2275 238.748 80.2692 241.548 84.1992C244.347 88.1292 245.747 93.8627 245.747 101.4V104.791C245.747 116.743 242.84 125.437 237.026 130.875C231.211 136.312 223.351 139.031 213.445 139.031H179.206C176.514 139.031 174.307 138.385 172.584 137.093C170.861 135.801 170 134.293 170 132.571ZM190.834 120.619H209.085C219.529 120.619 224.751 114.751 224.751 103.015V100.431C224.751 94.401 223.432 90.0404 220.794 87.3486C218.156 84.6568 214.253 83.3109 209.085 83.3109H190.834V120.619ZM190.834 66.8371H208.923C213.122 66.8371 216.326 65.5989 218.533 63.1225C220.74 60.646 221.844 57.2544 221.844 52.9475C221.844 48.7483 220.686 45.4374 218.371 43.0148C216.057 40.5922 212.853 39.3809 208.762 39.3809H190.834V66.8371ZM260.283 103.015V27.4293C260.283 25.2759 261.306 23.6608 263.351 22.5841C265.397 21.5074 267.873 20.969 270.781 20.969C273.688 20.969 276.164 21.5074 278.21 22.5841C280.256 23.6608 281.279 25.2759 281.279 27.4293V103.015C281.279 115.397 287.2 121.588 299.044 121.588C310.888 121.588 316.81 115.397 316.81 103.015V27.4293C316.81 25.2759 317.833 23.6608 319.879 22.5841C321.925 21.5074 324.401 20.969 327.308 20.969C330.215 20.969 332.692 21.5074 334.738 22.5841C336.783 23.6608 337.806 25.2759 337.806 27.4293V103.015C337.806 115.72 334.28 125.061 327.227 131.036C320.175 137.012 310.781 140 299.044 140C287.308 140 277.914 137.039 270.861 131.117C263.809 125.195 260.283 115.828 260.283 103.015ZM356.703 132.409V27.4293C356.703 25.2759 357.725 23.6608 359.771 22.5841C361.817 21.5074 364.293 20.969 367.201 20.969C370.108 20.969 372.584 21.5074 374.63 22.5841C376.676 23.6608 377.699 25.2759 377.699 27.4293V120.619H417.106C419.044 120.619 420.579 121.534 421.709 123.365C422.84 125.195 423.405 127.349 423.405 129.825C423.405 132.301 422.84 134.455 421.709 136.285C420.579 138.116 419.044 139.031 417.106 139.031H365.908C363.432 139.031 361.279 138.439 359.448 137.254C357.618 136.07 356.703 134.455 356.703 132.409ZM434.872 132.409V31.467C434.872 27.9138 435.868 25.2759 437.86 23.5532C439.852 21.8304 442.355 20.969 445.37 20.969C449.354 20.969 452.423 21.6689 454.576 23.0686C456.729 24.4684 459.098 27.4832 461.682 32.1131L481.548 68.2907L501.413 32.1131C503.997 27.4832 506.393 24.4684 508.6 23.0686C510.808 21.6689 513.903 20.969 517.887 20.969C520.902 20.969 523.405 21.8304 525.397 23.5532C527.389 25.2759 528.385 27.9138 528.385 31.467V132.409C528.385 134.455 527.335 136.07 525.236 137.254C523.136 138.439 520.686 139.031 517.887 139.031C514.98 139.031 512.503 138.439 510.458 137.254C508.412 136.07 507.389 134.455 507.389 132.409V62.961L488.493 96.5545C486.985 99.354 484.616 100.754 481.386 100.754C478.264 100.754 475.949 99.354 474.441 96.5545L455.868 61.6689V132.409C455.868 134.455 454.818 136.07 452.719 137.254C450.619 138.439 448.17 139.031 445.37 139.031C442.463 139.031 439.987 138.439 437.941 137.254C435.895 136.07 434.872 134.455 434.872 132.409ZM539.529 130.31C539.529 130.094 539.637 129.556 539.852 128.694L571.023 27.1063C571.669 24.8452 573.257 23.0956 575.787 21.8573C578.318 20.6191 581.198 20 584.428 20C587.658 20 590.565 20.6191 593.149 21.8573C595.734 23.0956 597.349 24.8452 597.995 27.1063L629.166 128.694C629.381 129.556 629.489 130.094 629.489 130.31C629.489 132.678 628.035 134.724 625.128 136.447C622.221 138.17 619.26 139.031 616.245 139.031C612.261 139.031 609.892 137.631 609.139 134.832L603.001 113.351H566.016L559.879 134.832C559.125 137.631 556.756 139.031 552.773 139.031C549.65 139.031 546.662 138.197 543.809 136.528C540.956 134.859 539.529 132.786 539.529 130.31ZM570.377 96.8775H598.479L584.428 47.2948L570.377 96.8775Z" fill="currentColor"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 110L10 40L50 0L100 50L70 80L110 120L50 160L0 110Z" fill="#00D1B2"></path>
+        </svg>
+      attributes:
+        License:
+          value: MIT
+          desc: Open source MIT License
+        Frameworks:
+          value: ALL
+          positive: true
+          desc: Bulma is framework agnostic and works everywhere
+        Unique components:
+          value: 20
+          desc: Bulma has 21 Components, 20 of them are unique – for example pagination and button group are considered as same.
+        Built-in Themes:
+          value: 2
+          desc: Bulma has light and dark themes
+        Supports more than two themes:
+          value: Yes
+          positive: true
+          desc: Bulma support more than 2 themes at the same time
+        JavaScript size:
+          value: 7.4kB
+          positive: false
+          desc: Imported JavaScript bundle size (minified) – Bulma does not include any JavaScript by default but all interactivities require custom JavaScript. There's an unofficial @vizuaalog/bulmajs package that provides interactivity, which is 7.4kB.
+        Dependencies:
+          value: 1
+          positive: false
+          desc: Bulma does not have any dependencies but all interactivities require custom JavaScript. There's an unofficial @vizuaalog/bulmajs package that provides interactivity.
+        Dependency size:
+          value: 21kB
+          positive: true
+          desc: Bulma does not have any dependencies but all interactivities require custom JavaScript. There's an unofficial @vizuaalog/bulmajs package that provides interactivity.
+        GitHub stars:
+          value: 49700
+          desc:
+        Used by open source projects:
+          value: 259000
+          desc: Based on GitHub's public repositories
+        NPM downloads:
+          value: 201000
+          desc: Weekly downloads from NPM
+        CDN:
+          value: Yes
+          positive: true
+          desc: Bulma CSS file is available on CDN
+        Global customizations:
+          value: Yes
+          positive: true
+          desc: Bulma provides component-level CSS variables that let you adjust colors, sizes, spacing, radius, and other styles to match your design.
+        works without Node.js:
+          value: Yes
+          positive: true
+          desc: Bulma does not requires a Node.js environment
+        No-build version:
+          value: No
+          positive: false
+          desc: Bulma does not provide micro CSS files for each component
+        P3 colors:
+          value: No
+          positive: false
+          desc: Bulma does not use wide-gamut P3 colors by default
+        RTL support:
+          value: Yes
+          positive: true
+          desc: Bulma supports right-to-left (RTL) layouts
+        Runtime CSS customization:
+          value: Yes
+          positive: true
+          desc: Bulma uses CSS variables for design customization at runtime
+        Native CSS nesting:
+          value: No
+          positive: false
+          desc: Bulma doesn not use native CSS nesting
+        Open GitHub issues:
+          value: 317
+          desc: As of April 2025
+
+    radix:
+      name: Radix
+      logo: |
+        <svg viewBox="0 0 76 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><path d="M43.9022 20.0061H46.4499C46.2647 19.0375 46.17 18.1161 46.17 17.0058V12.3753C46.17 9.25687 44.3893 7.72127 41.1943 7.72127C38.3003 7.72127 36.3324 9.23324 36.0777 11.8083H38.9254C39.0181 10.698 39.8052 9.96561 41.1017 9.96561C42.4446 9.96561 43.3243 10.6743 43.3243 12.1391V12.7061L39.8052 13.1077C37.4206 13.3912 35.5684 14.3834 35.5684 16.7931C35.5684 18.9666 37.2353 20.2659 39.5274 20.2659C41.4027 20.2659 42.9845 19.4863 43.6401 18.1161C43.6689 18.937 43.9022 20.0061 43.9022 20.0061ZM40.3377 18.1634C39.157 18.1634 38.5087 17.5727 38.5087 16.6278C38.5087 15.3757 39.4579 15.0922 40.7082 14.9268L43.3243 14.6197V15.352C43.3243 17.242 41.8658 18.1634 40.3377 18.1634ZM56.2588 20.0061H59.176V3H56.2125V9.96561C55.6569 8.76075 54.3141 7.72127 52.4851 7.72127C49.3058 7.72127 47.099 10.2963 47.099 14.0054C47.099 17.7381 49.3058 20.2896 52.4851 20.2896C54.2678 20.2896 55.68 19.2973 56.2588 18.0925V20.0061ZM56.282 14.218C56.282 16.5569 55.1938 18.0689 53.3185 18.0689C51.3969 18.0689 50.1856 16.486 50.1856 14.0054C50.1856 11.5485 51.3969 9.94198 53.3185 9.94198C55.1938 9.94198 56.282 11.454 56.282 13.7928V14.218ZM60.9066 5.97304H64.0553V3.01996H60.9066V5.97304ZM60.9992 20.0061H63.9627V8.00476H60.9992V20.0061ZM67.6638 20.0061L70.6041 15.8954L73.5212 20.0061H76.9246L72.3636 13.7219L76.5542 8.00476H73.3823L70.7661 11.7138L68.1731 8.00476H64.7697L69.0066 13.8637L64.4919 20.0061H67.6638Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M24.9132 20V14.0168H28.7986L32.4513 20H35.7006L31.6894 13.5686C33.5045 12.986 35.0955 11.507 35.0955 9.01961C35.0955 5.7479 32.7994 4 28.9571 4H22V20H24.9132ZM24.9132 6.35294V11.6863H28.821C31.0395 11.6863 32.1599 10.7675 32.1599 9.01961C32.1599 7.27171 30.9395 6.35294 28.621 6.35294H24.9132Z"></path><path d="M7 23C3.13401 23 0 19.6422 0 15.5C0 11.3578 3.13401 8 7 8V23Z"></path><path d="M7 0H0V7H7V0Z"></path><path d="M11.5 7C13.433 7 15 5.433 15 3.5C15 1.567 13.433 0 11.5 0C9.56704 0 8 1.567 8 3.5C8 5.433 9.56704 7 11.5 7Z"></path></svg>
+      attributes:
+        License:
+          value: MIT
+          desc: Open source MIT License
+        Frameworks:
+          value: Only React
+          positive: false
+          desc: Radix Themes only works with React
+        Unique components:
+          value: 28
+          desc: Radix Themes has 37 components, 28 of them are unique – for example radio and radio group are considered as same.
+        Built-in Themes:
+          value: 2
+          desc: Radix has 2 themes, colors are customizable but either for light or dark themes.
+        Supports more than two themes:
+          value: No
+          positive: false
+          desc: Does not support more than 2 themes at the same time
+        JavaScript size:
+          value: 284kB
+          positive: false
+          desc: Imported JavaScript bundle size (minified)
+        Dependencies:
+          value: 72
+          positive: false
+          desc: Radix Themes has 72 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
+        Dependency size:
+          value: 11.9MB
+          positive: false
+          desc:
+        GitHub stars:
+          value: 6600
+          desc:
+        Used by open source projects:
+          value: "?"
+          desc: No data available
+        NPM downloads:
+          value: 165000
+          desc: Weekly downloads from NPM
+        CDN:
+          value: No
+          positive: false
+          desc: Radix Themes CSS file is not available on CDN
+        Global customizations:
+          value: No
+          positive: false
+          desc: Radix Themes requires changing JavaScript props one by one at build time to do design token customization
+        works without Node.js:
+          value: No
+          positive: false
+          desc: Radix Themes requires a Node.js environment
+        No-build version:
+          value: No
+          positive: false
+          desc: Radix Themes does not provide micro CSS files for each component
+        P3 colors:
+          value: Yes
+          positive: true
+          desc: Radix Themes uses wide-gamut P3 colors
+        RTL support:
+          value: Yes
+          positive: true
+          desc: Radix Themes supports right-to-left (RTL) layouts
+        Runtime CSS customization:
+          value: No
+          positive: false
+          desc: Radix Themes customizations requires changing JavaScript props at build time
+        Native CSS nesting:
+          value: No
+          positive: false
+          desc: Radix Themes doesn not use native CSS nesting
+        Open GitHub issues:
+          value: 104
           desc: As of April 2025

@@ -11,10 +11,16 @@ export function entries() {
     return []
   }
 
-  const frameworks = Object.keys(compareData.data).filter((key) => key !== "daisyui")
-  return frameworks.map((framework) => ({
-    item: `${framework}-vs-daisyui`,
-  }))
+  const frameworks = Object.keys(compareData.data)
+  const entries = []
+
+  for (let i = 0; i < frameworks.length; i++) {
+    for (let j = i + 1; j < frameworks.length; j++) {
+      entries.push({ item: `${frameworks[i]}-vs-${frameworks[j]}` })
+    }
+  }
+
+  return entries
 }
 
 export async function load({ params }) {
@@ -31,21 +37,23 @@ export async function load({ params }) {
     throw error(404, "Not found")
   }
 
-  // Ensure daisyUI is always second
-  if (secondKey !== "daisyui") {
-    throw error(404, "Not found")
-  }
-
-  const first = compareData.data[firstKey]
-  const second = compareData.data[secondKey]
+  const first = { ...compareData.data[firstKey], key: firstKey }
+  const second = { ...compareData.data[secondKey], key: secondKey }
 
   if (!first || !second) {
     throw error(404, "Not found")
   }
 
+  const libraries = Object.entries(compareData.data).map(([key, value]) => ({
+    key: key,
+    name: value.name,
+    logo: value.logo,
+  }))
+
   return {
     first,
     second,
     attributeRules: compareData.attributeRules,
+    libraries: libraries,
   }
 }
