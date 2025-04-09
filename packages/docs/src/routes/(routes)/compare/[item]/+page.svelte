@@ -100,7 +100,7 @@
   <h1 class="font-title group text-center text-2xl font-semibold lg:text-5xl">
     {data.first.name}
     <svg
-      class="text-error -mr-4 -ml-6 inline-block h-[2em] group-hover:animate-[vibrate_0.35s_infinite]"
+      class="-mr-[.25em] -ml-[.5em] inline-block h-[2em] text-red-500 group-hover:scale-105 group-hover:animate-[vibrate_0.35s_infinite] group-hover:[filter:drop-shadow(0_2px_black)]"
       viewBox="0 0 256 256"
       aria-label="versus"
     >
@@ -221,7 +221,7 @@
                 </div>
               </div>
               <a href="/compare/{data.first.key}-vs-daisyui" class="btn btn-xs md:btn-sm">
-                Compare {data.first.name} with daisyUI
+                Compare {data.first.name} vs daisyUI
               </a>
             {:else}
               <div class="flex size-12 items-center lg:size-20">{@html data.first.logo}</div>
@@ -241,7 +241,7 @@
                 <div class="flex size-10 items-center">{@html data.second.logo}</div>
               </div>
               <a href="/compare/daisyui-vs-{data.second.key}" class="btn btn-xs md:btn-sm">
-                Compare daisyUI with {data.second.name}
+                Compare daisyUI vs {data.second.name}
               </a>
             {:else}
               <div class="flex size-12 items-center lg:size-20">{@html data.second.logo}</div>

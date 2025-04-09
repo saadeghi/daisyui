@@ -84,8 +84,10 @@ export function getComparePages() {
   const comparePages = []
 
   for (let i = 0; i < frameworks.length; i++) {
-    for (let j = i + 1; j < frameworks.length; j++) {
-      comparePages.push(`${frameworks[i]}-vs-${frameworks[j]}`)
+    for (let j = 0; j < frameworks.length; j++) {
+      if (i !== j) {
+        comparePages.push(`${frameworks[i]}-vs-${frameworks[j]}`)
+      }
     }
   }
 

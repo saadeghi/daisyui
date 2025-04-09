@@ -15,8 +15,10 @@ export function entries() {
   const entries = []
 
   for (let i = 0; i < frameworks.length; i++) {
-    for (let j = i + 1; j < frameworks.length; j++) {
-      entries.push({ item: `${frameworks[i]}-vs-${frameworks[j]}` })
+    for (let j = 0; j < frameworks.length; j++) {
+      if (i !== j) {
+        entries.push({ item: `${frameworks[i]}-vs-${frameworks[j]}` })
+      }
     }
   }
 

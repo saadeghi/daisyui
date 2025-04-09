@@ -921,7 +921,7 @@ compare:
           desc: Bulma does not have any dependencies but all interactivities require custom JavaScript. There's an unofficial @vizuaalog/bulmajs package that provides interactivity.
         Dependency size:
           value: 21kB
-          positive: true
+          positive: false
           desc: Bulma does not have any dependencies but all interactivities require custom JavaScript. There's an unofficial @vizuaalog/bulmajs package that provides interactivity.
         GitHub stars:
           value: 49700
