@@ -99,7 +99,7 @@ classnames:
 ```
 
 ### ~Buttons colors
-<button class="btn">Default</button>
+<button class="btn btn-neutral">Neutral</button>
 <button class="btn btn-primary">Primary</button>
 <button class="btn btn-secondary">Secondary</button>
 <button class="btn btn-accent">Accent</button>
@@ -109,7 +109,7 @@ classnames:
 <button class="btn btn-error">Error</button>
 
 ```html
-<button class="$$btn">Default</button>
+<button class="$$btn $$btn-neutral">Neutral</button>
 <button class="$$btn $$btn-primary">Primary</button>
 <button class="$$btn $$btn-secondary">Secondary</button>
 <button class="$$btn $$btn-accent">Accent</button>
