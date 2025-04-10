@@ -969,7 +969,7 @@ Please report any new bugs you find to [GitHub issues](https://github.com/saadeg
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5.webp" alt="tailwind css components">
 
 1 - [Tailwind CSS 4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)  
-2 - [daisyUI 5 upgrade guide](https://tailwindcss.com/docs/upgrade/)  
+2 - [daisyUI 5 upgrade guide](https://daisyui.com/docs/upgrade/)  
 
 If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.  
 
