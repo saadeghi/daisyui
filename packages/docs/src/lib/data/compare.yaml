@@ -680,7 +680,7 @@ data:
         desc: HeroUI has 208 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
       Dependency size:
         value: 37MB
-        positive: true
+        positive: false
         desc:
       GitHub stars:
         value: 23800
@@ -838,7 +838,7 @@ data:
         desc: Chakra UI has 146 third-party dependencies. Using more third-party dependencies increases the risk of security vulnerabilities, compatibility problems, and long-term maintenance headaches from deprecated packages.
       Dependency size:
         value: 25MB
-        positive: true
+        positive: false
         desc:
       GitHub stars:
         value: 38900
