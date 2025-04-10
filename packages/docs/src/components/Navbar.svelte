@@ -1,12 +1,11 @@
 <script>
+  import { goto } from "$app/navigation"
   import TopBanner from "$components/TopBanner.svelte"
   import ThemeChange from "$components/ThemeChange.svelte"
   import LangChange from "$components/LangChange.svelte"
   import Search from "$components/Search.svelte"
-  import LogoContextMenu from "$components/LogoContextMenu.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
-  let contextMenuEl = $state()
   import { t } from "$lib/i18n.svelte.js"
   let {
     pages,
@@ -76,7 +75,7 @@
           class="btn btn-ghost flex-0 gap-1 px-2 md:gap-2"
           oncontextmenu={(e) => {
             e.preventDefault()
-            contextMenuEl.openContextMenu(e)
+            goto("/brand")
           }}
         >
           <svg
@@ -94,7 +93,6 @@
 
           <span class="font-title text-base-content text-lg md:text-xl">daisyUI</span>
         </a>
-        <LogoContextMenu bind:this={contextMenuEl} />
         {#if showVersion}
           <ChangelogMenu {version} />
         {/if}

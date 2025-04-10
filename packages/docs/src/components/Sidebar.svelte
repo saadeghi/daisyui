@@ -1,10 +1,9 @@
 <script>
+  import { goto } from "$app/navigation"
   import { page } from "$app/stores"
   import Search from "$components/Search.svelte"
-  // import LogoContextMenu from "$components/LogoContextMenu.svelte"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
-  // import ChangelogMenu from "$components/ChangelogMenu.svelte"
-  let contextMenuEl
+  import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
   let { closeDrawer, openDrawer, pages, drawerSidebarScrollY, version } = $props()
   let switchNavbarStyle = $derived(drawerSidebarScrollY > 40)
@@ -27,7 +26,7 @@
     class="btn btn-ghost flex-0 px-2"
     oncontextmenu={(e) => {
       e.preventDefault()
-      contextMenuEl.openContextMenu(e)
+      goto("/brand")
     }}
   >
     <svg width="32" height="32" viewBox="0 0 415 415" xmlns="http://www.w3.org/2000/svg">
@@ -39,13 +38,7 @@
 
     <div class="font-title inline-flex text-lg md:text-2xl">daisyUI</div>
   </a>
-
-  {#await import("./LogoContextMenu.svelte") then Module}
-    <Module.default bind:this={contextMenuEl} />
-  {/await}
-  {#await import("./ChangelogMenu.svelte") then Module}
-    <Module.default {version} />
-  {/await}
+  <ChangelogMenu {version} />
 </div>
 
 {#if innerWidth < 1024}

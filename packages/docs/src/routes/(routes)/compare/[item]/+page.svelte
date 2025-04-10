@@ -121,7 +121,10 @@
   </h1>
   <div class="h-6"></div>
   <p class="font-title text-base-content/60 mx-auto max-w-xl text-center text-sm">
-    Looking for a {data.first.name} alternative? This page compares {data.first.name}
+    Looking for a <a
+      href={`/alternative/${data.first.key === "daisyui" ? data.second.key : data.first.key}`}
+      >{data.first.key === "daisyui" ? data.second.name : data.first.name} alternative</a
+    >? This page compares {data.first.name}
     and {data.second.name}, two popular UI component libraries. We are comparing features, size,
     efficiency and usage data to help you choose which component library is better for your next
     project.

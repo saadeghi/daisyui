@@ -23,6 +23,19 @@
     if (lang === "zh_hant") return "zh-tw"
     return lang
   }
+
+  const getCanonicalUrl = (pathname) => {
+    const compareRegex = /^\/compare\/(.+)-vs-(.+)\/$/
+    const match = pathname.match(compareRegex)
+
+    if (match) {
+      const [, first, second] = match
+      const [smaller, larger] = [first, second].sort()
+      return `https://daisyui.com/compare/${smaller}-vs-${larger}/`
+    }
+
+    return `https://daisyui.com${pathname}`
+  }
 </script>
 
 <svelte:head>
@@ -38,7 +51,7 @@
   <meta property="og:image" content={img} />
 
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-  <link rel="canonical" href={`https://daisyui.com${page.url.pathname}`} />
+  <link rel="canonical" href={getCanonicalUrl(page.url.pathname)} />
 
   {#each langs as lang}
     <link

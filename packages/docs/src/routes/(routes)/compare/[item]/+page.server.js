@@ -2,11 +2,11 @@ import yaml from "js-yaml"
 import { readFileSync } from "fs"
 import { error } from "@sveltejs/kit"
 
-const yamlFile = readFileSync("src/lib/data/landings.yaml", "utf8")
+const yamlFile = readFileSync("src/lib/data/compare.yaml", "utf8")
 const yamlData = yaml.load(yamlFile)
 
 export function entries() {
-  const compareData = yamlData.compare
+  const compareData = yamlData
   if (!compareData?.data) {
     return []
   }
@@ -26,7 +26,7 @@ export function entries() {
 }
 
 export async function load({ params }) {
-  const compareData = yamlData.compare
+  const compareData = yamlData
 
   if (!compareData || !compareData.data || !compareData.attributeRules) {
     throw error(404, "Not found")

@@ -1,6 +1,7 @@
 <script>
   import Countup from "svelte-countup"
   import Install from "$components/homepage/Install.svelte"
+  import ComponentsPreview from "$components/homepage/ComponentsPreview.svelte"
   import SEO from "$components/SEO.svelte"
   import Carbon from "$components/Carbon.svelte"
   import Footer from "$components/Footer.svelte"
@@ -1683,9 +1684,7 @@
           class="border-base-200 flex w-full items-stretch justify-center gap-6 rounded-2xl border p-6 xl:h-[40rem] xl:justify-normal"
           style={`--tw-border-opacity:${animateValue(section["themes"], [10, 15], [0, 1])}`}
         >
-          {#await import("../../components/homepage/ComponentsPreview.svelte") then Module}
-            <Module.default {animateValue} section={section["themes"]} {index} />
-          {/await}
+          <ComponentsPreview {animateValue} section={section["themes"]} {index} />
         </div>
       </div>
     {/each}
