@@ -10,7 +10,8 @@
     }
   }
   &:user-invalid,
-  &:has(:user-invalid) {
+  &:has(:user-invalid),
+  &[aria-invalid] {
     &,
     &:focus,
     &:checked,
