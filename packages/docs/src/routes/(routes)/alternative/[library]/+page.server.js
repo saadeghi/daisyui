@@ -1,19 +1,24 @@
 import yaml from "js-yaml"
-import { readFileSync } from "fs"
 import { error } from "@sveltejs/kit"
 
-const loadYamlData = (filePath) => {
+const fetchYamlData = async (url) => {
   try {
-    const fileContents = readFileSync(filePath, "utf8")
-    return yaml.load(fileContents)
+    const response = await fetch(url)
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data: ${response.status}`)
+    }
+
+    const yamlText = await response.text()
+    return yaml.load(yamlText)
   } catch (e) {
-    console.error(`Error loading or parsing YAML file: ${filePath}`, e)
+    console.error(`Error loading or parsing YAML from ${url}`, e)
     throw error(500, "Server configuration error: Could not load data")
   }
 }
 
-const alternativeData = loadYamlData("src/lib/data/alternative.yaml")
-const compareData = loadYamlData("src/lib/data/compare.yaml")
+const fetchAlternativeData = () => fetchYamlData("https://api.daisyui.com/data/alternative.yaml")
+const fetchCompareData = () => fetchYamlData("https://api.daisyui.com/data/compare.yaml")
 
 const getDeterministicIndex = (seedString, maxIndex) => {
   if (maxIndex <= 0) return 0
@@ -135,7 +140,7 @@ const generateComparisonText = (type, isBetter, daisyUIData, libraryData, string
   return text
 }
 
-const generateAllComparisons = (daisyUIData, libraryData, stringsData, index) => {
+const generateAllComparisons = (daisyUIData, libraryData, stringsData, index, attributeRules) => {
   const getSafeValue = (data, attribute) => data?.attributes?.[attribute] // Return the whole definition
 
   const daisyUIStarsDef = getSafeValue(daisyUIData, "GitHub stars")
@@ -146,8 +151,6 @@ const generateAllComparisons = (daisyUIData, libraryData, stringsData, index) =>
   const libraryComponentsDef = getSafeValue(libraryData, "Unique components")
   const daisyUIDepsDef = getSafeValue(daisyUIData, "Dependencies")
   const libraryDepsDef = getSafeValue(libraryData, "Dependencies")
-
-  const attributeRules = compareData.attributeRules || {}
 
   return {
     stars: generateComparisonText(
@@ -255,8 +258,15 @@ const defineSections = (
   maxVariants,
   variantIndex,
   getReplacedTextFunc, // Renamed for clarity
+  attributeRules, // New parameter
 ) => {
-  const comparisons = generateAllComparisons(daisyUIData, libraryData, stringsData, variantIndex)
+  const comparisons = generateAllComparisons(
+    daisyUIData,
+    libraryData,
+    stringsData,
+    variantIndex,
+    attributeRules,
+  )
 
   return [
     {
@@ -356,134 +366,153 @@ const filterSections = (sections, daisyUIData, libraryData, attributeRules, isBe
 }
 
 export const load = async ({ params }) => {
-  const stringsData = alternativeData.strings
+  try {
+    const [alternativeData, compareData] = await Promise.all([
+      fetchAlternativeData(),
+      fetchCompareData(),
+    ])
 
-  if (!compareData?.data || !compareData.attributeRules || !stringsData) {
-    console.error(
-      "YAML data structure error: Missing 'compare.data', 'compare.attributeRules', or 'alternative.strings'",
-    )
-    throw error(500, "Server configuration error: Invalid data structure")
-  }
+    const stringsData = alternativeData.strings
 
-  validateStringsData(stringsData)
-
-  const libraryData = compareData.data[params.library]
-  const daisyUIData = compareData.data.daisyui
-
-  if (!libraryData || !daisyUIData || params.library === "daisyui") {
-    throw error(404, `Library data not found for: ${params.library}`)
-  }
-
-  const allStringKeys = Object.keys(stringsData)
-  const minLengths = allStringKeys.map((key) => {
-    const data = stringsData[key]
-    if (Array.isArray(data)) return data.length
-    if (data.better && data.worse) return Math.min(data.better.length, data.worse.length)
-    return 0
-  })
-
-  const maxVariants = Math.min(15, ...minLengths.filter((len) => len > 0))
-
-  if (maxVariants === 0) {
-    throw error(
-      500,
-      "Server configuration error: Insufficient text variants found across sections.",
-    )
-  }
-  const variantIndex = getDeterministicIndex(libraryData.name, maxVariants)
-
-  // Helper function to generate text, now includes daisyUIData
-  const getReplacedText = (key, index) => {
-    const textArray = stringsData[key]
-    let sourceArray = []
-
-    if (Array.isArray(textArray)) {
-      sourceArray = textArray
-    } else if (textArray && textArray.better && textArray.worse) {
-      // Default to 'better' if structure doesn't match simple array,
-      // actual comparison happens in generateComparisonText
-      console.warn(`Using default text logic for key '${key}', expected simple array.`)
-      sourceArray = textArray.better
+    if (!compareData?.data || !compareData.attributeRules || !stringsData) {
+      console.error(
+        "YAML data structure error: Missing 'compare.data', 'compare.attributeRules', or 'alternative.strings'",
+      )
+      throw error(500, "Server configuration error: Invalid data structure")
     }
 
-    const text = getItemByIndex(sourceArray, index)
-    if (!text) {
-      console.error(`Failed to retrieve text for key '${key}' at index ${index}`)
-      return `[Missing text: ${key}]`
+    validateStringsData(stringsData)
+
+    const libraryData = compareData.data[params.library]
+    const daisyUIData = compareData.data.daisyui
+
+    if (!libraryData || !daisyUIData || params.library === "daisyui") {
+      throw error(404, `Library data not found for: ${params.library}`)
     }
 
-    // Perform replacements
-    const replacements = {
-      "{libraryName}": libraryData.name,
-      "{depsCount}": libraryData.attributes?.Dependencies?.value ?? "N/A",
-      "{otherJSSize}": libraryData.attributes?.["JavaScript size"]?.value ?? "N/A",
-      "{otherFrameworks}": libraryData.attributes?.Frameworks?.value ?? "specific frameworks",
-      "{daisyThemes}": daisyUIData.attributes?.["Built-in Themes"]?.value ?? "many",
-      "{otherThemes}": libraryData.attributes?.["Built-in Themes"]?.value ?? "few",
-    }
+    const allStringKeys = Object.keys(stringsData)
+    const minLengths = allStringKeys.map((key) => {
+      const data = stringsData[key]
+      if (Array.isArray(data)) return data.length
+      if (data.better && data.worse) return Math.min(data.better.length, data.worse.length)
+      return 0
+    })
 
-    let replacedText = text
-    for (const [placeholder, value] of Object.entries(replacements)) {
-      replacedText = replacedText.replace(
-        new RegExp(placeholder.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
-        String(value),
+    const maxVariants = Math.min(15, ...minLengths.filter((len) => len > 0))
+
+    if (maxVariants === 0) {
+      throw error(
+        500,
+        "Server configuration error: Insufficient text variants found across sections.",
       )
     }
-    return replacedText
-  }
+    const variantIndex = getDeterministicIndex(libraryData.name, maxVariants)
 
-  const intro = getReplacedText("intro", variantIndex)
-  const overview = getReplacedText("overview", variantIndex)
+    // Helper function to generate text, now includes daisyUIData
+    const getReplacedText = (key, index) => {
+      const textArray = stringsData[key]
+      let sourceArray = []
 
-  const allSections = defineSections(
-    overview,
-    daisyUIData,
-    libraryData,
-    stringsData,
-    maxVariants,
-    variantIndex,
-    getReplacedText,
-  )
+      if (Array.isArray(textArray)) {
+        sourceArray = textArray
+      } else if (textArray && textArray.better && textArray.worse) {
+        // Default to 'better' if structure doesn't match simple array,
+        // actual comparison happens in generateComparisonText
+        console.warn(`Using default text logic for key '${key}', expected simple array.`)
+        sourceArray = textArray.better
+      }
 
-  const filteredSections = filterSections(
-    allSections,
-    daisyUIData,
-    libraryData,
-    compareData.attributeRules,
-    checkIsDaisyUIBetter,
-  )
+      const text = getItemByIndex(sourceArray, index)
+      if (!text) {
+        console.error(`Failed to retrieve text for key '${key}' at index ${index}`)
+        return `[Missing text: ${key}]`
+      }
 
-  // Regenerate comparisons for the final return object, ensuring consistency
-  const finalComparisons = generateAllComparisons(
-    daisyUIData,
-    libraryData,
-    stringsData,
-    variantIndex,
-  )
+      // Perform replacements
+      const replacements = {
+        "{libraryName}": libraryData.name,
+        "{depsCount}": libraryData.attributes?.Dependencies?.value ?? "N/A",
+        "{otherJSSize}": libraryData.attributes?.["JavaScript size"]?.value ?? "N/A",
+        "{otherFrameworks}": libraryData.attributes?.Frameworks?.value ?? "specific frameworks",
+        "{daisyThemes}": daisyUIData.attributes?.["Built-in Themes"]?.value ?? "many",
+        "{otherThemes}": libraryData.attributes?.["Built-in Themes"]?.value ?? "few",
+      }
 
-  return {
-    library: {
-      key: params.library,
-      ...libraryData,
-    },
-    daisyui: {
-      key: "daisyui",
-      ...daisyUIData,
-    },
-    sections: filteredSections,
-    attributeRules: compareData.attributeRules,
-    comparisons: finalComparisons, // Use the consistently generated comparisons
-    introText: intro,
+      let replacedText = text
+      for (const [placeholder, value] of Object.entries(replacements)) {
+        replacedText = replacedText.replace(
+          new RegExp(placeholder.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
+          String(value),
+        )
+      }
+      return replacedText
+    }
+
+    const intro = getReplacedText("intro", variantIndex)
+    const overview = getReplacedText("overview", variantIndex)
+
+    const allSections = defineSections(
+      overview,
+      daisyUIData,
+      libraryData,
+      stringsData,
+      maxVariants,
+      variantIndex,
+      getReplacedText,
+      compareData.attributeRules, // Pass attributeRules to defineSections
+    )
+
+    const filteredSections = filterSections(
+      allSections,
+      daisyUIData,
+      libraryData,
+      compareData.attributeRules,
+      checkIsDaisyUIBetter,
+    )
+
+    // Regenerate comparisons for the final return object, ensuring consistency
+    const finalComparisons = generateAllComparisons(
+      daisyUIData,
+      libraryData,
+      stringsData,
+      variantIndex,
+      compareData.attributeRules,
+    )
+
+    return {
+      library: {
+        key: params.library,
+        ...libraryData,
+      },
+      daisyui: {
+        key: "daisyui",
+        ...daisyUIData,
+      },
+      sections: filteredSections,
+      attributeRules: compareData.attributeRules,
+      comparisons: finalComparisons, // Use the consistently generated comparisons
+      introText: intro,
+    }
+  } catch (err) {
+    console.error("Error in load function:", err)
+    throw error(500, "Failed to load comparison data")
   }
 }
 
-export const entries = () => {
-  if (!compareData?.data) {
-    console.warn("No comparison data found in YAML for generating entries.")
+export const entries = async () => {
+  try {
+    const compareData = await fetchCompareData()
+
+    if (!compareData?.data) {
+      console.warn("No comparison data found in YAML for generating entries.")
+      return []
+    }
+
+    return Object.keys(compareData.data)
+      .filter((key) => key !== "daisyui")
+      .map((key) => ({ library: key }))
+  } catch (err) {
+    console.error("Error generating entries:", err)
     return []
   }
-
-  return Object.keys(compareData.data)
-    .filter((key) => key !== "daisyui")
-    .map((key) => ({ library: key }))
 }

@@ -1,11 +1,23 @@
 import yaml from "js-yaml"
-import { readFileSync } from "fs"
 
-const yamlFile = readFileSync("src/lib/data/roadmap.yaml", "utf8")
-const roadmap = yaml.load(yamlFile)
+export async function load() {
+  try {
+    const response = await fetch("https://api.daisyui.com/data/roadmap.yaml")
 
-export function load() {
-  return {
-    roadmap,
+    if (!response.ok) {
+      throw new Error(`Failed to fetch roadmap: ${response.status}`)
+    }
+
+    const yamlFile = await response.text()
+    const roadmap = yaml.load(yamlFile)
+
+    return {
+      roadmap,
+    }
+  } catch (error) {
+    console.error("Error loading roadmap:", error)
+    return {
+      roadmap: [],
+    }
   }
 }

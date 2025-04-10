@@ -1,12 +1,24 @@
 import yaml from "js-yaml"
-import { readFileSync } from "fs"
 import { error } from "@sveltejs/kit"
 
-const yamlFile = readFileSync("src/lib/data/compare.yaml", "utf8")
-const yamlData = yaml.load(yamlFile)
+async function fetchCompareData() {
+  try {
+    const response = await fetch("https://api.daisyui.com/data/compare.yaml")
 
-export function entries() {
-  const compareData = yamlData
+    if (!response.ok) {
+      throw new Error(`Failed to fetch compare data: ${response.status}`)
+    }
+
+    const yamlFile = await response.text()
+    return yaml.load(yamlFile)
+  } catch (err) {
+    console.error("Error fetching compare data:", err)
+    return null
+  }
+}
+
+export async function entries() {
+  const compareData = await fetchCompareData()
   if (!compareData?.data) {
     return []
   }
@@ -26,7 +38,7 @@ export function entries() {
 }
 
 export async function load({ params }) {
-  const compareData = yamlData
+  const compareData = await fetchCompareData()
 
   if (!compareData || !compareData.data || !compareData.attributeRules) {
     throw error(404, "Not found")

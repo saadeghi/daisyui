@@ -1,7 +1,6 @@
 import { error } from "@sveltejs/kit"
 import * as sitemap from "super-sitemap"
 import yaml from "js-yaml"
-import { readFileSync } from "fs"
 import { LEMONSQUEEZY_API_KEY } from "$env/static/private"
 
 export const prerender = true
@@ -39,13 +38,19 @@ const fetchProductIds = async (apiKey) => {
   }
 }
 
-const loadCompareData = (filePath) => {
+const fetchCompareData = async () => {
   try {
-    const yamlFile = readFileSync(filePath, "utf8")
+    const response = await fetch("https://api.daisyui.com/data/compare.yaml")
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch compare data: ${response.status}`)
+    }
+
+    const yamlFile = await response.text()
     const yamlData = yaml.load(yamlFile)
     return yamlData?.data ?? {}
   } catch (err) {
-    console.error(`Error reading or parsing YAML file at ${filePath}:`, err)
+    console.error("Error fetching or parsing compare data:", err)
     return {}
   }
 }
@@ -73,7 +78,7 @@ export const GET = async () => {
   let alternativeLibraries = []
 
   try {
-    const compareData = loadCompareData("src/lib/data/compare.yaml")
+    const compareData = await fetchCompareData()
     const frameworks = Object.keys(compareData)
 
     comparePages = generateCompareSlugs(frameworks)
