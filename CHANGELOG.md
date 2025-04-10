@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.18 (2025-04-10)
+
+
+### Bug Fixes
+
+* validator working with `aria-invalid` ([f4688a3](https://github.com/saadeghi/daisyui/commit/f4688a32d6a8cd0929e914e43bd91d8b8c4cd726))
+
 ## 5.0.17 (2025-04-08)
 
 
