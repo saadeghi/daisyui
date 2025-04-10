@@ -97,7 +97,6 @@ classnames:
 <div class="badge badge-soft badge-primary">Primary</div>
 <div class="badge badge-soft badge-secondary">Secondary</div>
 <div class="badge badge-soft badge-accent">Accent</div>
-<div class="badge badge-soft badge-neutral">Neutral</div>
 <div class="badge badge-soft badge-info">Info</div>
 <div class="badge badge-soft badge-success">Success</div>
 <div class="badge badge-soft badge-warning">Warning</div>
@@ -107,19 +106,16 @@ classnames:
 <div class="$$badge $$badge-soft $$badge-primary">Primary</div>
 <div class="$$badge $$badge-soft $$badge-secondary">Secondary</div>
 <div class="$$badge $$badge-soft $$badge-accent">Accent</div>
-<div class="$$badge $$badge-soft $$badge-neutral">Neutral</div>
 <div class="$$badge $$badge-soft $$badge-info">Info</div>
 <div class="$$badge $$badge-soft $$badge-success">Success</div>
 <div class="$$badge $$badge-soft $$badge-warning">Warning</div>
 <div class="$$badge $$badge-soft $$badge-error">Error</div>
 ```
 
-
 ### ~Badge with outline style
 <div class="badge badge-outline badge-primary">Primary</div>
 <div class="badge badge-outline badge-secondary">Secondary</div>
 <div class="badge badge-outline badge-accent">Accent</div>
-<div class="badge badge-outline badge-neutral">Neutral</div>
 <div class="badge badge-outline badge-info">Info</div>
 <div class="badge badge-outline badge-success">Success</div>
 <div class="badge badge-outline badge-warning">Warning</div>
@@ -129,7 +125,6 @@ classnames:
 <div class="$$badge $$badge-outline $$badge-primary">Primary</div>
 <div class="$$badge $$badge-outline $$badge-secondary">Secondary</div>
 <div class="$$badge $$badge-outline $$badge-accent">Accent</div>
-<div class="$$badge $$badge-outline $$badge-neutral">Neutral</div>
 <div class="$$badge $$badge-outline $$badge-info">Info</div>
 <div class="$$badge $$badge-outline $$badge-success">Success</div>
 <div class="$$badge $$badge-outline $$badge-warning">Warning</div>
@@ -141,7 +136,6 @@ classnames:
 <div class="badge badge-dash badge-primary">Primary</div>
 <div class="badge badge-dash badge-secondary">Secondary</div>
 <div class="badge badge-dash badge-accent">Accent</div>
-<div class="badge badge-dash badge-neutral">Neutral</div>
 <div class="badge badge-dash badge-info">Info</div>
 <div class="badge badge-dash badge-success">Success</div>
 <div class="badge badge-dash badge-warning">Warning</div>
@@ -151,13 +145,25 @@ classnames:
 <div class="$$badge $$badge-dash $$badge-primary">Primary</div>
 <div class="$$badge $$badge-dash $$badge-secondary">Secondary</div>
 <div class="$$badge $$badge-dash $$badge-accent">Accent</div>
-<div class="$$badge $$badge-dash $$badge-neutral">Neutral</div>
 <div class="$$badge $$badge-dash $$badge-info">Info</div>
 <div class="$$badge $$badge-dash $$badge-success">Success</div>
 <div class="$$badge $$badge-dash $$badge-warning">Warning</div>
 <div class="$$badge $$badge-dash $$badge-error">Error</div>
 ```
 
+### ~neutral badges: outline and dash variants
+#### These badges use dark text, only use them on light backgrounds
+<div class="bg-white p-6 w-full lg:-my-6 rounded-box flex gap-2 justify-center">
+  <div class="badge badge-neutral badge-outline">Outline</div>
+  <div class="badge badge-neutral badge-dash">Dash</div>
+</div>
+
+```html
+<div class="bg-white p-6">
+  <button class="$$btn $$btn-neutral $$btn-outline">Outline</button>
+  <button class="$$btn $$btn-neutral $$btn-dash">Dash</button>
+</div>
+```
 
 ### ~Badge ghost
 <div class="badge badge-ghost">ghost</div>

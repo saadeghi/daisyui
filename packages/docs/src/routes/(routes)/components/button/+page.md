@@ -99,7 +99,7 @@ classnames:
 ```
 
 ### ~Buttons colors
-<button class="btn btn-neutral">Neutral</button>
+<button class="btn">Default</button>
 <button class="btn btn-primary">Primary</button>
 <button class="btn btn-secondary">Secondary</button>
 <button class="btn btn-accent">Accent</button>
@@ -109,7 +109,7 @@ classnames:
 <button class="btn btn-error">Error</button>
 
 ```html
-<button class="$$btn $$btn-neutral">Neutral</button>
+<button class="$$btn">Default</button>
 <button class="$$btn $$btn-primary">Primary</button>
 <button class="$$btn $$btn-secondary">Secondary</button>
 <button class="$$btn $$btn-accent">Accent</button>
@@ -180,6 +180,20 @@ classnames:
 <button class="$$btn $$btn-dash $$btn-success">Success</button>
 <button class="$$btn $$btn-dash $$btn-warning">Warning</button>
 <button class="$$btn $$btn-dash $$btn-error">Error</button>
+```
+
+### ~neutral buttons: outline and dash variants
+#### These buttons use dark text, only use them on light backgrounds
+<div class="bg-white p-6 w-full lg:-my-6 rounded-box flex gap-2 justify-center">
+  <button class="btn btn-neutral btn-outline">Outline</button>
+  <button class="btn btn-neutral btn-dash">Dash</button>
+</div>
+
+```html
+<div class="bg-white p-6">
+  <button class="$$btn $$btn-neutral $$btn-outline">Outline</button>
+  <button class="$$btn $$btn-neutral $$btn-dash">Dash</button>
+</div>
 ```
 
 ### ~Active buttons
