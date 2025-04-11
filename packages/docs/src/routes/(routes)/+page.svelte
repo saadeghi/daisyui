@@ -183,6 +183,23 @@
                 <pre><code>npm i -D daisyui@latest</code></pre>
               </button>
             </div>
+
+            <a
+              href="https://www.youtube.com/watch?v=bYznFmzL820"
+              target="_blank"
+              rel="nofollow"
+              class="group text-base-content/70 hover:text-base-content flex items-center gap-2 rounded-lg pe-2 text-[0.625rem] transition-all duration-300"
+            >
+              <img
+                class="rounded-lg grayscale transition-all duration-500 group-hover:grayscale-0"
+                width="60"
+                height="33"
+                src="https://img.daisyui.com/images/content/v5-video-thumb.png"
+                alt="daisyUI 5"
+              />
+              Watch <br />daisyUI 5.0 intro
+            </a>
+
             <!-- {#if daisyui5progress}
               <div class="flex gap-2 grow w-full max-w-48 max-lg:my-4 sm:max-w-sm">
                 <a
