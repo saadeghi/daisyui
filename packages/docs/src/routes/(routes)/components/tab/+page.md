@@ -95,7 +95,7 @@ classnames:
 ```
 
 
-### ~Tab box
+### ~tabs-box
 <div role="tablist" class="tabs tabs-box">
   <button role="tab" class="tab">Tab 1</button>
   <button role="tab" class="tab tab-active">Tab 2</button>
