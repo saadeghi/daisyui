@@ -4,7 +4,7 @@
   container-type: inline-size;
   grid-template-columns: auto 1fr;
   &:focus-visible,
-  &:has(.diff-item-1:focus) {
+  &:has(.diff-item-1:focus-visible) {
     @apply outline-base-content outline-2 outline-offset-1;
   }
   &:focus-visible {
