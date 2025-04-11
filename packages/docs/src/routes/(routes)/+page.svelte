@@ -188,7 +188,7 @@
               href="https://www.youtube.com/watch?v=bYznFmzL820"
               target="_blank"
               rel="nofollow"
-              class="group text-base-content/70 hover:text-base-content flex items-center gap-2 rounded-lg pe-2 text-[0.625rem] transition-all duration-300"
+              class="group text-base-content/70 hover:text-base-content flex items-center gap-2 rounded-lg pe-2 text-left text-[0.625rem] transition-all duration-300"
             >
               <img
                 class="rounded-lg grayscale transition-all duration-500 group-hover:grayscale-0"

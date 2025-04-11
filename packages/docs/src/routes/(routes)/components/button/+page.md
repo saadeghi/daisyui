@@ -182,7 +182,7 @@ classnames:
 <button class="$$btn $$btn-dash $$btn-error">Error</button>
 ```
 
-### ~neutral buttons: outline and dash variants
+### ~neutral button with outline or dash style
 #### These buttons use dark text, only use them on light backgrounds
 <div class="bg-white p-6 w-full lg:-my-6 rounded-box flex gap-2 justify-center">
   <button class="btn btn-neutral btn-outline">Outline</button>

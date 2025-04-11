@@ -151,7 +151,7 @@ classnames:
 <div class="$$badge $$badge-dash $$badge-error">Error</div>
 ```
 
-### ~neutral badges: outline and dash variants
+### ~neutral badge with outline or dash style
 #### These badges use dark text, only use them on light backgrounds
 <div class="bg-white p-6 w-full lg:-my-6 rounded-box flex gap-2 justify-center">
   <div class="badge badge-neutral badge-outline">Outline</div>
@@ -160,8 +160,8 @@ classnames:
 
 ```html
 <div class="bg-white p-6">
-  <button class="$$btn $$btn-neutral $$btn-outline">Outline</button>
-  <button class="$$btn $$btn-neutral $$btn-dash">Dash</button>
+  <div class="$$badge $$badge-neutral $$badge-outline">Outline</div>
+  <div class="$$badge $$badge-neutral $$badge-dash">Dash</div>
 </div>
 ```
 
