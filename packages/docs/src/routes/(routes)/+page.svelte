@@ -194,7 +194,7 @@
                 class="rounded-lg grayscale transition-all duration-500 group-hover:grayscale-0"
                 width="60"
                 height="33"
-                src="https://img.daisyui.com/images/content/v5-video-thumb.png"
+                src="https://img.daisyui.com/images/content/v5-video-thumb.webp"
                 alt="daisyUI 5"
               />
               Watch <br />daisyUI 5.0 intro
