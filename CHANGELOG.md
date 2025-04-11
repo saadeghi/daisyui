@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.19 (2025-04-11)
+
+
+### Bug Fixes
+
+* diff not working on iOS, fix docs. closes: [#3715](https://github.com/saadeghi/daisyui/issues/3715) ([cc9da38](https://github.com/saadeghi/daisyui/commit/cc9da38d08617d03e5948ebe72d90c015506e311))
+
 ## 5.0.18 (2025-04-10)
 
 
