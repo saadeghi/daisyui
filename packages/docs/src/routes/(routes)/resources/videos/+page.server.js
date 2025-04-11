@@ -1,6 +1,7 @@
+import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 export async function load() {
   try {
-    const response = await fetch("https://api.daisyui.com/api/youtube.json")
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/api/youtube.json`)
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }

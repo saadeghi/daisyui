@@ -1,7 +1,8 @@
+import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+import { LEMONSQUEEZY_API_KEY } from "$env/static/private"
 import { error } from "@sveltejs/kit"
 import * as sitemap from "super-sitemap"
 import yaml from "js-yaml"
-import { LEMONSQUEEZY_API_KEY } from "$env/static/private"
 
 export const prerender = true
 
@@ -40,7 +41,7 @@ const fetchProductIds = async (apiKey) => {
 
 const fetchCompareData = async () => {
   try {
-    const response = await fetch("https://api.daisyui.com/data/compare.yaml")
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/compare.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch compare data: ${response.status}`)

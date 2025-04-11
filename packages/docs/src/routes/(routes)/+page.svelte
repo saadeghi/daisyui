@@ -1,4 +1,5 @@
 <script>
+  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import Countup from "svelte-countup"
   import Install from "$components/homepage/Install.svelte"
   import ComponentsPreview from "$components/homepage/ComponentsPreview.svelte"
@@ -15,7 +16,7 @@
   let npm_downloads_count_total = $state(0)
 
   async function fetchStats() {
-    const response = await fetch("https://api.daisyui.com/stats.json")
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/stats.json`)
     const data = await response.json()
     stargazers_count = data.stargazers_count
     dependents_count = data.dependents_count
@@ -117,7 +118,7 @@
   // let daisyui5progress = $state(0)
 
   // $effect(async () => {
-  //   const response = await fetch("https://api.daisyui.com/api/progress.json")
+  //   const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/api/progress.json`)
   //   const data = await response.json()
 
   //   let trueCount = 0,

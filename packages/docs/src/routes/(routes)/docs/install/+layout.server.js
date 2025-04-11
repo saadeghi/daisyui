@@ -1,8 +1,9 @@
+import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import yaml from "js-yaml"
 
 export async function load() {
   try {
-    const response = await fetch("https://api.daisyui.com/data/frameworks.yaml")
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/frameworks.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch frameworks: ${response.status}`)

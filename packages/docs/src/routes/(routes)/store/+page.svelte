@@ -1,4 +1,5 @@
 <script>
+  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import { onMount } from "svelte"
   import SEO from "$components/SEO.svelte"
   import StoreProduct from "$components/StoreProduct.svelte"
@@ -24,8 +25,8 @@
   const fetchDiscount = (async () => {
     // Fetch both discount types
     const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
-      fetch("https://api.daisyui.com/api/discount_shorttime.json"),
-      fetch("https://api.daisyui.com/api/discount_special.json"),
+      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_shorttime.json`),
+      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_special.json`),
     ])
 
     // Parse the JSON responses

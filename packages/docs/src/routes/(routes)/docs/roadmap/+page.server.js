@@ -1,8 +1,9 @@
+import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import yaml from "js-yaml"
 
 export async function load() {
   try {
-    const response = await fetch("https://api.daisyui.com/data/roadmap.yaml")
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/roadmap.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch roadmap: ${response.status}`)

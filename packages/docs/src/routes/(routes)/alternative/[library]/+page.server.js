@@ -1,3 +1,4 @@
+import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import yaml from "js-yaml"
 import { error } from "@sveltejs/kit"
 
@@ -17,8 +18,8 @@ const fetchYamlData = async (url) => {
   }
 }
 
-const fetchAlternativeData = () => fetchYamlData("https://api.daisyui.com/data/alternative.yaml")
-const fetchCompareData = () => fetchYamlData("https://api.daisyui.com/data/compare.yaml")
+const fetchAlternativeData = () => fetchYamlData(`${PUBLIC_DAISYUI_API_PATH}/data/alternative.yaml`)
+const fetchCompareData = () => fetchYamlData(`${PUBLIC_DAISYUI_API_PATH}/data/compare.yaml`)
 
 const getDeterministicIndex = (seedString, maxIndex) => {
   if (maxIndex <= 0) return 0
