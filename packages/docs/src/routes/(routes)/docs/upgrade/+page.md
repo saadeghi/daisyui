@@ -309,11 +309,25 @@ Example:
 
 ### Tab
 
+- Renamed `tabs-bordered` to `tabs-border`.
+
+```diff:page.html
+- <div class="tabs tabs-bordered">
++ <div class="tabs tabs-border">
+```
+
 - Renamed `tabs-lifted` to `tabs-lift`.
 
 ```diff:page.html
 - <div class="tabs tabs-lifted">
 + <div class="tabs tabs-lift">
+```
+
+- Renamed `tabs-boxed` to `tabs-box`.
+
+```diff:page.html
+- <div class="tabs tabs-boxed">
++ <div class="tabs tabs-box">
 ```
 
 ### Table
