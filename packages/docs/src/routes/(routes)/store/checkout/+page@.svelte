@@ -56,3 +56,8 @@
     </path>
   </svg>
 </div>
+<div
+  style="position: absolute; bottom: 2rem; left: 2rem; font-size: 11px; opacity: 0.3; font-family: sans-serif;"
+>
+  If this is not loading, <br />please disable Ad Blockers.
+</div>

@@ -584,7 +584,7 @@
       </h2>
       <p class="text-base-content/60 text-xs">
         If you have any questions before purchase
-        <br />send me an email to email at pouya@daisyui.com
+        <br />send me an email to pouya@daisyui.com
         <br />I will do my best to help you.
       </p>
     </div>
