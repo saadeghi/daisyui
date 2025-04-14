@@ -66,56 +66,41 @@
         <div id="mc_embed_shell" class="card bg-base-200 my-10">
           <div class="card-body flex flex-col gap-4">
             <h2 class="text-xl font-black lg:text-4xl">Don't miss new posts!</h2>
-            <div>
-              <p class="font-bold">
-                Subscribe to daisyUI blog newsletter to get updates on new posts.
+            <form
+              action="https://app.kit.com/forms/7041226/subscriptions"
+              method="post"
+              target="_blank"
+              class="flex flex-col"
+            >
+              <p class="text-base-content/70 mb-4 text-xs font-bold">
+                Subscribe to daisyUI newsletter to get the updates.
               </p>
-              <p class="text-base-content/60 text-xs">
-                You will only receive a single email when a new blog post is published. No spam. No
-                ads.
-              </p>
-            </div>
-            <div id="mc_embed_signup">
-              <form
-                action="https://gmail.us8.list-manage.com/subscribe/post?u=42813cff910e47b1bd132369a&amp;id=9fd7333f07&amp;f_id=003d03e0f0"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                target="_blank"
-                novalidate=""
-              >
-                <!-- blog group -->
+              <div class="join mb-2">
                 <input
-                  type="checkbox"
-                  name="group[347002][4]"
-                  value="1"
-                  class="hidden"
-                  checked="checked"
+                  type="email"
+                  class="join-item input"
+                  name="email_address"
+                  placeholder="email@site.com"
+                  required
                 />
-                <div class="flex w-full max-w-sm flex-col gap-2">
-                  <label for="mce-EMAIL">Email Address</label>
-                  <div class="join">
-                    <input
-                      type="email"
-                      name="EMAIL"
-                      class="join-item input input-bordered w-full max-w-sm"
-                      id="mce-EMAIL"
-                      placeholder="mail@site.com"
-                      required
-                    />
-                    <button name="subscribe" class="join-item btn btn-success">Subscribe</button>
-                  </div>
-                </div>
-                <div aria-hidden="true" class="hidden">
-                  <input
-                    type="text"
-                    name="b_42813cff910e47b1bd132369a_9fd7333f07"
-                    tabindex="-1"
-                    value=""
+                <button class="join-item btn btn-neutral">Subscribe</button>
+              </div>
+              <p class="text-base-content/60 text-[0.625rem] tracking-wide">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="text-success inline-block size-3"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z"
+                    clip-rule="evenodd"
                   />
-                </div>
-              </form>
-            </div>
+                </svg>
+                We don't share your email address with anyone
+              </p>
+            </form>
           </div>
         </div>
       </div>

@@ -337,6 +337,34 @@ classnames:
 </div>
 ```
 
+### ~tabs-box with a horizontal scroll when there's no space
+<div class="overflow-x-auto max-w-60">
+  <div class="tabs-lift tabs min-w-max">
+    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 1" />
+    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 1</div>
+    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 2" checked="checked" />
+    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 2</div>
+    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 3" />
+    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 3</div>
+    <input type="radio" name="my_tabs_7" class="tab z-1" aria-label="Tab title 4" />
+    <div class="sticky start-0 tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 4</div>
+  </div>
+</div>
+
+```html
+<div class="overflow-x-auto max-w-60">
+  <div class="$$tabs-lift $$tabs min-w-max">
+    <input type="radio" name="my_tabs_7" class="$$tab z-1" aria-label="Tab title 1" />
+    <div class="sticky start-0 $$tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 1</div>
+    <input type="radio" name="my_tabs_7" class="$$tab z-1" aria-label="Tab title 2" checked="checked" />
+    <div class="sticky start-0 $$tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 2</div>
+    <input type="radio" name="my_tabs_7" class="$$tab z-1" aria-label="Tab title 3" />
+    <div class="sticky start-0 $$tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 3</div>
+    <input type="radio" name="my_tabs_7" class="$$tab z-1" aria-label="Tab title 4" />
+    <div class="sticky start-0 $$tab-content max-w-60 border-base-300 bg-base-100 p-6">Tab content 4</div>
+  </div>
+</div>
+```
 
 ### ~Tabs with custom color
 <div role="tablist" class="tabs tabs-lift">

@@ -167,6 +167,10 @@ The content gets displayed when the button is focused.
 >
 > This dropdown closes when focus is lost. Avoid placing elements in it that remove focus from dropdown content. For example a `<dialog>` element inside the dropdown.
 
+> :SUCCESS:
+>
+> To close the dropdown after click, you can use something like `onclick="document.activeElement.blur()"`. [Example](https://play.tailwindcss.com/pc8zXb89lM)
+
 ### ~Dropdown menu
 <div>
   <div class="text-sm mb-4 text-center">Click outside to close</div>
