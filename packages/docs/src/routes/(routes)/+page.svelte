@@ -1642,33 +1642,25 @@
     </div>
     <div class="pointer-events-none relative z-1 shrink-0 xl:w-1/3">
       <div
-        class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-none md:gap-6 xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]"
+        class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-lg xl:max-w-none md:gap-10 xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]"
       >
         <div></div>
 
         {#each ["vue", "react", "svelte", "qwik", "laravel", "nextjs", "solidjs", "preact", "phoenix", "nuxtjs", "astro", "angular", "vite", "rails"] as logo, index}
           <img
             loading="lazy"
-            width="96"
-            height="96"
+            width="80"
+            height="80"
             class="aspect-square w-full will-change-auto motion-reduce:[scale:1]! motion-reduce:opacity-100! motion-reduce:filter-none!"
             style={`opacity:${animateValue(
               section["agnostic"],
-              [-70 + index * 5, -60 + index * 5],
+              [-65 + index * 5, -55 + index * 5],
               [0, 1],
-            )};filter: brightness(${animateValue(
+            )}; transform:translateY(${animateValue(
               section["agnostic"],
-              [-70 + index * 5, -60 + index * 5],
-              [2, 1],
-            )})blur(${animateValue(
-              section["agnostic"],
-              [-70 + index * 5, -60 + index * 5],
-              [2, 0],
-            )}px);scale:${animateValue(
-              section["agnostic"],
-              [-70 + index * 5, -60 + index * 5],
-              [1.05, 1],
-            )}`}
+              [-65 + index * 5, -55 + index * 5],
+              [1, 0],
+            )}rem);`}
             alt={`daisyUI ${logo}`}
             src={`https://img.daisyui.com/images/logos/${logo}.svg`}
           />
