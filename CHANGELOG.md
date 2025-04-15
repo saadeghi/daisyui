@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.20 (2025-04-15)
+
+
+### Bug Fixes
+
+* modal-start scroll gutter. closes: [#3787](https://github.com/saadeghi/daisyui/issues/3787) ([52414ef](https://github.com/saadeghi/daisyui/commit/52414efd62cd8fd905ff5e5af61c06d0d98c8f41))
+
 ## 5.0.19 (2025-04-11)
 
 
