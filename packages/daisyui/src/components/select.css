@@ -52,6 +52,7 @@
     box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
     outline: 2px solid var(--input-color);
     outline-offset: 2px;
+    isolation: isolate;
   }
 
   &:has(> select[disabled]),
