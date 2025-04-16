@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.23 (2025-04-16)
+
+
+### Bug Fixes
+
+* add isolate to drawer-content to avoid z-index overflow. closes: [#3790](https://github.com/saadeghi/daisyui/issues/3790) ([488804f](https://github.com/saadeghi/daisyui/commit/488804f4cc3260a0e0cf33e96b00c50b4b69bedc))
+
 ## 5.0.22 (2025-04-16)
 
 
