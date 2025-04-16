@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.22 (2025-04-16)
+
+
+### Bug Fixes
+
+* add isolate to collapse. closes: [#3713](https://github.com/saadeghi/daisyui/issues/3713) ([24b4742](https://github.com/saadeghi/daisyui/commit/24b47422b9e98509a9b3914a1cb778c867535199))
+
 ## 5.0.21 (2025-04-16)
 
 ## 5.0.20 (2025-04-15)
