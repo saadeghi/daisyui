@@ -5,7 +5,7 @@
 }
 
 .drawer-content {
-  @apply col-start-2 row-start-1 min-w-0;
+  @apply isolate col-start-2 row-start-1 min-w-0;
 }
 
 .drawer-side {
