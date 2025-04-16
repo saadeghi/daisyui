@@ -2,7 +2,7 @@
   @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
   overflow-x: hidden;
   transition:
-    transform 0.3s ease-out,
+    translate 0.3s ease-out,
     visibility 0.3s allow-discrete,
     background-color 0.3s ease-out,
     opacity 0.1s ease-out;
@@ -16,17 +16,13 @@
   &.modal-open,
   &[open],
   &:target {
-    background-color: oklch(0% 0 0/ 0.4);
-    transition:
-      transform 0.3s ease-out,
-      background-color 0.3s ease-out,
-      opacity 0.1s ease-out;
-  }
-  &.modal-open,
-  &[open],
-  &:target {
     @apply pointer-events-auto visible opacity-100;
-
+    background-color: oklch(0% 0 0/ 0.4);
+    /* this cause glitch on Chrome */
+    /* transition:
+      translate 0.3s ease-out,
+      background-color 0.3s ease-out,
+      opacity 0.1s ease-out; */
     .modal-box {
       translate: 0 0;
       scale: 1;

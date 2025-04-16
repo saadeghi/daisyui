@@ -11,6 +11,6 @@
   background-image: linear-gradient(var(--color-base-100), var(--color-base-100));
   --root-bg: color-mix(in srgb, var(--color-base-100), oklch(0% 0 0) 40%);
 }
-:where(.modal-top, .modal-bottom) {
-  scrollbar-gutter: stable both-edges;
+:where(.modal[open], .modal-open, .modal-toggle:checked + .modal):not(.modal-start, .modal-end) {
+  scrollbar-gutter: stable;
 }
