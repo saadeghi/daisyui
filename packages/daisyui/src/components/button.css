@@ -48,6 +48,7 @@
   &:focus-visible {
     outline-width: 2px;
     outline-style: solid;
+    isolation: isolate;
   }
 
   &:active:not(.btn-active) {
