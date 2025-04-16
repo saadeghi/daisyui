@@ -7,14 +7,6 @@
   > * {
     @apply rounded-box relative mb-2 flex h-full max-w-32 shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
     transition: opacity 0.2s ease-out;
-    &:where(.dock-active) {
-      &:after {
-        content: "";
-        @apply absolute h-1 w-10 rounded-full bg-current;
-        bottom: 0.2rem;
-        border-top: 3px solid;
-      }
-    }
     @media (hover: hover) {
       &:hover {
         @apply opacity-80;
@@ -27,13 +19,23 @@
         @apply text-base-content/10 pointer-events-none opacity-100;
       }
     }
-
     .dock-label {
       font-size: 0.6875rem;
     }
+    &:after {
+      content: "";
+      @apply absolute h-1 w-6 rounded-full bg-transparent;
+      bottom: 0.2rem;
+      border-top: 3px solid transparent;
+      transition: background-color 0.1s ease-out, text-color 0.1s ease-out, width 0.1s ease-out;
+    }
   }
 }
-
+.dock-active {
+  &:after {
+    @apply w-10 text-current bg-current;
+  }
+}
 .dock-xs {
   height: 3rem;
   height: calc(3rem + env(safe-area-inset-bottom));

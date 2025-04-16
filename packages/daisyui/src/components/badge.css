@@ -16,13 +16,15 @@
     --badge-fg: var(--badge-color);
     --badge-bg: #0000;
     background-image: none;
+    border-color: currentColor;
   }
 
   &.badge-dash {
     --badge-fg: var(--badge-color);
     --badge-bg: #0000;
-    border-style: dashed;
     background-image: none;
+    border-color: currentColor;
+    border-style: dashed;
   }
 
   &.badge-soft {
