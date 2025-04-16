@@ -172,7 +172,7 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}
       >
         <div>
-          <div class="flex flex-col items-center gap-6 xl:flex-row">
+          <div class="flex flex-col items-center gap-6 xl:flex-row animate-[reveal-top-slow_0.5s]">
             <div
               data-tip={isClipboardButtonPressed ? "copied" : "copy"}
               class="tooltip tooltip-accent"
@@ -245,7 +245,7 @@
           <div class="h-10"></div>
           <div>
             <div
-              class="inline-flex w-full flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0"
+              class="inline-flex w-full flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0 animate-[reveal-slow_0.5s]"
             >
               <!-- <a
                 data-sveltekit-preload-data
@@ -1136,17 +1136,10 @@
             <label class="flex cursor-pointer items-center gap-3">
               {$t("Tailwind only")}
               <div class="relative">
-                <div
-                  class="pointer-events-none absolute start-1/2 top-1/2 grid h-20 w-60 -translate-x-1/2 -translate-y-1/2"
-                >
-                  <div
-                    class="bg-primary/30 col-start-1 row-start-1 scale-2 [transform:translate3d(0,0,0)] rounded-full blur-[5rem]"
-                  ></div>
-                </div>
                 <input
                   name="tailwind-va-daisyui"
                   type="checkbox"
-                  class="toggle toggle-lg toggle-primary relative z-2"
+                  class="toggle toggle-xl toggle-primary relative z-2"
                   bind:checked={toggleValueForCodeCompare}
                 />
               </div>
@@ -1295,18 +1288,12 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] overflow-hidden pt-32 pb-40" bind:this={section["performance"]}>
+<div class="min-h-[100vh] overflow-hidden pt-32 pb-40" bind:this={section["performance"]} style="background: radial-gradient(circle at 30% 50%, var(--color-info) -200%, transparent 35%), radial-gradient(circle at 70% 60%, var(--color-success) -200%, transparent 30%);">
   <div class="relative">
     <div
       class="relative flex flex-col items-center justify-center gap-10 px-4 md:px-10 xl:flex-row-reverse xl:gap-20"
     >
       <div>
-        <div
-          class="bg-primary pointer-events-none absolute start-20 aspect-square w-96 [transform:translate3d(0,0,0)] rounded-full opacity-20 blur-3xl"
-        ></div>
-        <div
-          class="bg-success pointer-events-none absolute aspect-square w-full [transform:translate3d(0,0,0)] rounded-full opacity-10 blur-3xl"
-        ></div>
         <h2
           class="font-title text-center text-[clamp(2rem,8vw,4rem)] leading-none font-black xl:text-start"
         >
@@ -1578,16 +1565,7 @@
 <div
   class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-linear-to-t py-16"
   bind:this={section["agnostic"]}
->
-  <div
-    class="bg-primary pointer-events-none absolute end-1/5 -top-1/2 aspect-square w-full rounded-full opacity-5 blur-3xl"
-  ></div>
-  <div
-    class="bg-success pointer-events-none absolute bottom-[-110%] left-1/2 aspect-square w-2/3 -translate-x-1/2 rounded-full border-2 opacity-20 blur-3xl"
-  ></div>
-  <div
-    class="bg-info pointer-events-none absolute bottom-[-130%] left-0 aspect-square w-1/2 [transform:translate3d(0,0,0)] rounded-full opacity-20 blur-3xl"
-  ></div>
+  style="background: radial-gradient(circle at 30% 60%, var(--color-info) -200%, transparent 30%), radial-gradient(circle at 70% 50%, var(--color-warning) -200%, transparent 30%);">
   <div
     class="relative flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse"
   >
@@ -1871,7 +1849,7 @@
         <span class="inline-grid">
           {#if section["possibilities"] && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 > -100 && ((scrollY - section["possibilities"].offsetTop) / section["possibilities"].clientHeight) * 100 < -20}{:else}
             <span
-              class="pointer-events-none col-start-1 row-start-1 [transform:translate3d(0,0,0)] bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [:root[dir=rtl]_&]:leading-[1.35]"
+              class="pointer-events-none col-start-1 row-start-1 [transform:translate3d(0,0,0)] bg-[linear-gradient(90deg,var(--color-secondary)_4%,color-mix(in_oklch,var(--color-secondary),var(--color-error))_22%,var(--color-primary)_45%,color-mix(in_oklch,var(--color-primary),var(--color-accent))_67%,var(--color-accent)_100.2%)] bg-clip-text opacity-70 blur-xl [-webkit-text-fill-color:transparent] [:root[dir=rtl]_&]:leading-[1.35]"
               aria-hidden="true"
             >
               {$t("endless possibilities")}
@@ -1926,11 +1904,10 @@
   </div>
 </div>
 
-<div class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={section["numbers"]}>
+<div
+  class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={section["numbers"]}
+  style="background: radial-gradient(at 40% 40%, var(--color-primary) -200%, transparent 30%), radial-gradient(at 60% 60%, var(--color-secondary) -200%, transparent 30%);">
   <div class="sticky top-0 pt-40 text-center">
-    <div
-      class="bg-primary pointer-events-none absolute bottom-0 left-1/2 aspect-square w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-3xl"
-    ></div>
     <h2
       class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] leading-none font-black will-change-auto motion-reduce:transform-none!"
       style={`transform:scale(${animateValue(

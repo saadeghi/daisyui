@@ -396,6 +396,42 @@
   }
 }
 
+@keyframes reveal {
+  0% {
+    transform: translateY(0.25em);
+    opacity: 0;
+  }
+}
+@keyframes reveal-slow {
+  0%, 20% {
+    transform: translateY(0.25em);
+    opacity: 0;
+  }
+}
+@keyframes reveal-slower {
+  0%, 40% {
+    transform: translateY(0.25em);
+    opacity: 0;
+  }
+}
+@keyframes reveal-top {
+  0% {
+    transform: translateY(-0.25em);
+    opacity: 0;
+  }
+}
+@keyframes reveal-top-slow {
+  0%, 20% {
+    transform: translateY(-0.25em);
+    opacity: 0;
+  }
+}
+@keyframes reveal-top-slower {
+  0%, 40% {
+    transform: translateY(-0.25em);
+    opacity: 0;
+  }
+}
 @keyframes vibrate {
   2% {
     transform: translate(0px, 0px) rotate(0.5deg);

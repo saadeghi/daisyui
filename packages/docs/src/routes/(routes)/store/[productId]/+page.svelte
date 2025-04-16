@@ -1,6 +1,7 @@
 <script>
   import SEO from "$components/SEO.svelte"
   import StoreProduct from "$components/StoreProduct.svelte"
+  import { preventDefault } from "svelte/legacy"
 
   let { data } = $props()
 
@@ -260,13 +261,13 @@
           {#each Object.entries(data.product.links) as [link, value]}
             {#if link === "license"}
               <div>
-                <button
+                <a href={value}
                   class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
-                  onclick={() => openModal(value)}
+                  onclick={(e) => (e.preventDefault(),openModal(value))}
                 >
                   {@html getLinksIcon(link)}
                   <span>{link}</span>
-                </button>
+              </a>
                 <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
                   <div class="modal-box max-h-[90vh] w-full max-w-[50rem] lg:p-20">
                     <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
@@ -279,16 +280,17 @@
               </div>
             {:else if link === "screenshot"}
               <div>
-                <button
+                <a href={value}
                   class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
-                  onclick={() => {
+                  onclick={(e) => {
+                    e.preventDefault(),
                     screenshotDialog.showModal()
                     screenshotUrl = value
                   }}
                 >
                   {@html getLinksIcon(link)}
                   <span>{link}</span>
-                </button>
+                </a>
                 <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
                   <div class="modal-box max-h-[80vh] w-full max-w-[90vw] p-0 max-md:max-h-[80vh]">
                     <img src={screenshotUrl} alt="Screenshot" class="h-full w-full object-cover" />
@@ -423,6 +425,14 @@
         </div>
       </div>
 
+      {#if data.product.banner}
+        <div class="alert alert-soft">
+          <svg class="size-5 self-start mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></g></svg>
+          <div class="prose text-xs ps-0!">
+            {@html data.product.banner}
+          </div>
+        </div>
+      {/if}
       {#if data.product.desc}
         <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
           {@html data.product.desc}

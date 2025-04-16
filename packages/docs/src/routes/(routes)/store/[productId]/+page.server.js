@@ -28,14 +28,25 @@ export async function load({ params, parent }) {
   if (!product) {
     throw error(404, "Product not found")
   }
-  const mdDesc = await compile(product.desc, {
-    smartypants: false,
-  })
-  const compiledDesc = mdDesc.code
+  // const mdDesc = await compile(product.desc, {
+  //   smartypants: false,
+  // })
+  // const compiledDesc = mdDesc.code
+
+  async function md(markdown) {
+    const compiledMd = await compile(markdown, {
+      smartypants: false,
+    })
+    return compiledMd.code
+  }
 
   return {
     products,
-    product: { ...product, desc: compiledDesc },
+    product: {
+      ...product,
+      desc: product.desc && await md(product.desc),
+      banner: product.banner && await md(product.banner)
+    },
     tech: products.tech,
     faq: yamlData.faq,
   }
