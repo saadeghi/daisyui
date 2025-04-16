@@ -1,13 +1,15 @@
 .toast {
-  @apply fixed start-auto end-0 top-auto bottom-0 m-4 flex min-w-fit flex-col gap-2 bg-transparent whitespace-nowrap;
+  @apply fixed start-auto end-4 top-auto bottom-4 flex flex-col gap-2 bg-transparent;
   translate: var(--toast-x, 0) var(--toast-y, 0);
+  width: max-content;
+  max-width: calc(100vw - 2rem);
 
   & > * {
     animation: toast 0.25s ease-out;
   }
 
   &:where(.toast-start) {
-    @apply start-0 end-auto;
+    @apply start-4 end-auto;
     --toast-x: 0;
   }
 
@@ -17,12 +19,12 @@
   }
 
   &:where(.toast-end) {
-    @apply start-auto end-0;
+    @apply start-auto end-4;
     --toast-x: 0;
   }
 
   &:where(.toast-bottom) {
-    @apply top-auto bottom-0;
+    @apply top-auto bottom-4;
     --toast-y: 0;
   }
 
@@ -32,7 +34,7 @@
   }
 
   &:where(.toast-top) {
-    @apply top-0 bottom-auto;
+    @apply top-4 bottom-auto;
     --toast-y: 0;
   }
 }
