@@ -172,7 +172,7 @@
         class:invisible={section["hero"] && scrollY > section["hero"].clientHeight}
       >
         <div>
-          <div class="flex flex-col items-center gap-6 xl:flex-row animate-[reveal-top-slow_0.5s]">
+          <div class="flex animate-[reveal-top-slow_0.5s] flex-col items-center gap-6 xl:flex-row">
             <div
               data-tip={isClipboardButtonPressed ? "copied" : "copy"}
               class="tooltip tooltip-accent"
@@ -245,7 +245,7 @@
           <div class="h-10"></div>
           <div>
             <div
-              class="inline-flex w-full flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0 animate-[reveal-slow_0.5s]"
+              class="inline-flex w-full animate-[reveal-slow_0.5s] flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0"
             >
               <!-- <a
                 data-sveltekit-preload-data
@@ -1288,7 +1288,11 @@
   </div>
 </div>
 
-<div class="min-h-[100vh] overflow-hidden pt-32 pb-40" bind:this={section["performance"]} style="background: radial-gradient(circle at 30% 50%, var(--color-info) -200%, transparent 35%), radial-gradient(circle at 70% 60%, var(--color-success) -200%, transparent 30%);">
+<div
+  class="min-h-[100vh] overflow-hidden pt-32 pb-40"
+  bind:this={section["performance"]}
+  style="background: radial-gradient(circle at 30% 50%, var(--color-info) -200%, transparent 35%), radial-gradient(circle at 70% 60%, var(--color-success) -200%, transparent 30%);"
+>
   <div class="relative">
     <div
       class="relative flex flex-col items-center justify-center gap-10 px-4 md:px-10 xl:flex-row-reverse xl:gap-20"
@@ -1565,7 +1569,8 @@
 <div
   class="from-base-100 to-base-300 relative flex min-h-[100vh] items-center justify-center bg-linear-to-t py-16"
   bind:this={section["agnostic"]}
-  style="background: radial-gradient(circle at 30% 60%, var(--color-info) -200%, transparent 30%), radial-gradient(circle at 70% 50%, var(--color-warning) -200%, transparent 30%);">
+  style="background: radial-gradient(circle at 30% 60%, var(--color-info) -200%, transparent 30%), radial-gradient(circle at 70% 50%, var(--color-warning) -200%, transparent 30%);"
+>
   <div
     class="relative flex max-w-[100rem] flex-col-reverse items-center justify-center gap-10 p-4 md:gap-20 md:p-20 xl:flex-row-reverse"
   >
@@ -1620,7 +1625,7 @@
     </div>
     <div class="pointer-events-none relative z-1 shrink-0 xl:w-1/3">
       <div
-        class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-lg xl:max-w-none md:gap-10 xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]"
+        class="grid max-w-sm grid-cols-4 gap-4 px-10 pt-10 md:max-w-lg md:gap-10 xl:max-w-none xl:px-6 xl:pt-0 [&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1rem/2)] md:[&>*:nth-child(2n-1)]:-translate-y-[calc(50%+1.5rem/2)]"
       >
         <div></div>
 
@@ -1905,8 +1910,10 @@
 </div>
 
 <div
-  class="min-h-[200vh] w-full px-2 lg:px-10" bind:this={section["numbers"]}
-  style="background: radial-gradient(at 40% 40%, var(--color-primary) -200%, transparent 30%), radial-gradient(at 60% 60%, var(--color-secondary) -200%, transparent 30%);">
+  class="min-h-[200vh] w-full px-2 lg:px-10"
+  bind:this={section["numbers"]}
+  style="background: radial-gradient(at 40% 40%, var(--color-primary) -200%, transparent 30%), radial-gradient(at 60% 60%, var(--color-secondary) -200%, transparent 30%);"
+>
   <div class="sticky top-0 pt-40 text-center">
     <h2
       class="font-title relative z-2 mx-auto text-[clamp(2rem,6vw,4.5rem)] leading-none font-black will-change-auto motion-reduce:transform-none!"

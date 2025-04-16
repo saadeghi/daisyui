@@ -403,13 +403,15 @@
   }
 }
 @keyframes reveal-slow {
-  0%, 20% {
+  0%,
+  20% {
     transform: translateY(0.25em);
     opacity: 0;
   }
 }
 @keyframes reveal-slower {
-  0%, 40% {
+  0%,
+  40% {
     transform: translateY(0.25em);
     opacity: 0;
   }
@@ -421,13 +423,15 @@
   }
 }
 @keyframes reveal-top-slow {
-  0%, 20% {
+  0%,
+  20% {
     transform: translateY(-0.25em);
     opacity: 0;
   }
 }
 @keyframes reveal-top-slower {
-  0%, 40% {
+  0%,
+  40% {
     transform: translateY(-0.25em);
     opacity: 0;
   }

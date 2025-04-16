@@ -137,7 +137,11 @@
           <div
             class="from-base-content/10 rounded-box mb-16 flex flex-col items-center gap-2 bg-linear-170 from-[-25%] to-[75%] pt-16 text-center"
           >
-            <div class="flex w-full *:mx-auto *:h-full max-w-18 h-12 items-center lg:h-20 lg:max-w-30">{@html data.first.logo}</div>
+            <div
+              class="flex h-12 w-full max-w-18 items-center *:mx-auto *:h-full lg:h-20 lg:max-w-30"
+            >
+              {@html data.first.logo}
+            </div>
             <div>
               {data.first.name}
               <!-- <select class="select select-sm" value={selectedFirst} on:change={handleFirstSelect}>
@@ -154,7 +158,11 @@
           <div
             class="from-base-content/10 rounded-box mb-16 flex flex-col items-center gap-2 -bg-linear-170 from-[-25%] to-[75%] pt-16 text-center"
           >
-            <div class="flex w-full *:mx-auto *:h-full max-w-18 h-12 items-center lg:h-20 lg:max-w-30">{@html data.second.logo}</div>
+            <div
+              class="flex h-12 w-full max-w-18 items-center *:mx-auto *:h-full lg:h-20 lg:max-w-30"
+            >
+              {@html data.second.logo}
+            </div>
             <div>
               {data.second.name}
               <!-- <select
@@ -227,7 +235,11 @@
                 Compare {data.first.name} vs daisyUI
               </a>
             {:else}
-              <div class="flex w-full *:mx-auto *:h-full max-w-18 h-12 items-center lg:h-20 lg:max-w-30">{@html data.first.logo}</div>
+              <div
+                class="flex h-12 w-full max-w-18 items-center *:mx-auto *:h-full lg:h-20 lg:max-w-30"
+              >
+                {@html data.first.logo}
+              </div>
             {/if}
           </div>
         </th>
@@ -247,7 +259,11 @@
                 Compare daisyUI vs {data.second.name}
               </a>
             {:else}
-              <div class="flex w-full *:mx-auto *:h-full max-w-18 h-12 items-center lg:h-20 lg:max-w-30">{@html data.second.logo}</div>
+              <div
+                class="flex h-12 w-full max-w-18 items-center *:mx-auto *:h-full lg:h-20 lg:max-w-30"
+              >
+                {@html data.second.logo}
+              </div>
             {/if}
           </div>
         </th>

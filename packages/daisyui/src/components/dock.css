@@ -27,13 +27,16 @@
       @apply absolute h-1 w-6 rounded-full bg-transparent;
       bottom: 0.2rem;
       border-top: 3px solid transparent;
-      transition: background-color 0.1s ease-out, text-color 0.1s ease-out, width 0.1s ease-out;
+      transition:
+        background-color 0.1s ease-out,
+        text-color 0.1s ease-out,
+        width 0.1s ease-out;
     }
   }
 }
 .dock-active {
   &:after {
-    @apply w-10 text-current bg-current;
+    @apply w-10 bg-current text-current;
   }
 }
 .dock-xs {

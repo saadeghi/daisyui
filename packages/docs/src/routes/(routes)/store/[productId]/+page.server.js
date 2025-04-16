@@ -44,8 +44,8 @@ export async function load({ params, parent }) {
     products,
     product: {
       ...product,
-      desc: product.desc && await md(product.desc),
-      banner: product.banner && await md(product.banner)
+      desc: product.desc && (await md(product.desc)),
+      banner: product.banner && (await md(product.banner)),
     },
     tech: products.tech,
     faq: yamlData.faq,

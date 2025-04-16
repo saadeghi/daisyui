@@ -133,7 +133,7 @@ const generateComparisonText = (type, isBetter, daisyUIData, libraryData, string
 
   for (const [key, value] of Object.entries(replacements)) {
     text = text.replace(
-      new RegExp(key.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
+      new RegExp(key.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
       String(value),
     )
   }
@@ -442,7 +442,7 @@ export const load = async ({ params }) => {
       let replacedText = text
       for (const [placeholder, value] of Object.entries(replacements)) {
         replacedText = replacedText.replace(
-          new RegExp(placeholder.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
+          new RegExp(placeholder.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "g"),
           String(value),
         )
       }

@@ -1230,12 +1230,12 @@
         <div class="tabs tabs-box bg-base-300 m-4 inline-flex flex-nowrap">
           <input type="radio" name="my_tabs_1" role="tab" class="tab w-1/2" aria-label="Monthly" />
           <input
-              type="radio"
-              name="my_tabs_1"
-              role="tab"
-              class="tab w-full"
-              aria-label="Yearly"
-              checked
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab w-full"
+            aria-label="Yearly"
+            checked
           />
           <div class="indicator w-1/2">
             <div class="indicator-item badge badge-warning badge-xs">SALE</div>
