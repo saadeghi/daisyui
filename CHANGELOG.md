@@ -7,12 +7,18 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* add isolate to collapse. closes: [#3713](https://github.com/saadeghi/daisyui/issues/3713) ([24b4742](https://github.com/saadeghi/daisyui/commit/24b47422b9e98509a9b3914a1cb778c867535199))
+- add isolate to collapse. closes: [#3713](https://github.com/saadeghi/daisyui/issues/3713) ([24b4742](https://github.com/saadeghi/daisyui/commit/24b47422b9e98509a9b3914a1cb778c867535199))
+- fix: outline in join element. closes: #3722
+- fix: toast position. closes: #3738, closes: #3702
 
 ## 5.0.21 (2025-04-16)
 
-## 5.0.20 (2025-04-15)
+### Bug Fixes
 
+- fix: badge-outline border color. closes: #3784
+- fix: dock-active accepts variants. closes: #3170
+
+## 5.0.20 (2025-04-15)
 
 ### Bug Fixes
 

@@ -80,23 +80,47 @@ Add the app name to myapp/settings.py
 
 ### 3. Get Tailwind CSS executable
 
-Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get the latest version of Tailwind CSS executable.
+Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get the latest version of Tailwind CSS executable for your OS. And put it in `myapp/static/css/` folder.
 
-Put it in `myapp/static/css/` folder.
+For example:
+
+```sh:Terminal
+# Run the corresponding command for your OS
+
+# Linux
+curl -sLo myapp/static/css/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-arm64
+curl -sLo myapp/static/css/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-arm64-musl
+curl -sLo myapp/static/css/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
+curl -sLo myapp/static/css/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64-musl
+
+# MacOS
+curl -sLo myapp/static/css/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
+curl -sLo myapp/static/css/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-x64
+
+# Windows
+curl -sLo myapp\static\css\tailwindcss.exe https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-windows-x64.exe
+```
+
+Make the file executable (For Linux and MacOS):
+
+```sh:Terminal
+chmod +x myapp/static/css/tailwindcss
+```
 
 ### 4. Get daisyUI bundled JS file
 
-Run this code to download the latest version of daisyUI as a single js file. It puts the file at `myapp/static/css/daisyui.js` next to the Tailwind CSS executable.
+Run this code to download the latest version of daisyUI as a single js file. It puts the file at `myapp/static/css/` next to the Tailwind CSS executable.
 
 ```sh:Terminal
 curl -sLo myapp/static/css/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
+curl -sLo myapp/static/css/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
 ```
 
 ### 5. Create an input.css file
 
 Create a file `myapp/static/css/input.css` and add the following code:
 
-```css:input.css
+```css:myapp/static/css/input.css
 @import "tailwindcss" source(none);
 @plugin "./daisyui.js";
 @source "../../templates";
@@ -104,10 +128,13 @@ Create a file `myapp/static/css/input.css` and add the following code:
 
 ### 6. Run the Tailwind CSS executable to generate output.css
 
-Using `--watch` will automatically update the output.css file when you change the input.css file. For CI/CD, run the command without `--watch` to generate the output.css file once.
+Using `--watch` will automatically update the output.css file when you change the input.css file.  
+For CI/CD, run the command without `--watch` to generate the output.css file once.
 
 ```sh:Terminal
 myapp/static/css/tailwindcss -i myapp/static/css/input.css -o myapp/static/css/output.css --watch
+# For Windows
+myapp\static\css\tailwindcss.exe -i myapp/static/css/input.css -o myapp/static/css/output.css --watch
 ```
 
 ### 7. Run the Django server

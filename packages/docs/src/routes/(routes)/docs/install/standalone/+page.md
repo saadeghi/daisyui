@@ -9,7 +9,32 @@ desc: How to run daisyUI with Tailwind CSS Standalone CLI without Node.js
 
 ### 1. Get Tailwind CSS executable
 
-Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get the latest version of Tailwind CSS executable.
+Follow [Tailwind CSS guide](https://tailwindcss.com/blog/standalone-cli) and get the latest version of Tailwind CSS executable for your OS.
+
+For example:
+
+```sh:Terminal
+# Run the corresponding command for your OS
+
+# Linux
+curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-arm64
+curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-arm64-musl
+curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
+curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64-musl
+
+# MacOS
+curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
+curl -sLo tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-x64
+
+# Windows
+curl -sLo tailwindcss.exe https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-windows-x64.exe
+```
+
+Make the file executable (For Linux and MacOS):
+
+```sh:Terminal
+chmod +x tailwindcss
+```
 
 ### 2. Get daisyUI bundled JS file
 
@@ -24,7 +49,7 @@ curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-t
 
 Add Tailwind CSS and daisyUI to your CSS file.  
 Address your HTML and other markup files in the `source` function.
-  
+
 ```postcss:input.css
 @import "tailwindcss" source(none);
 @source "./public/*.{html,php,erb}";
@@ -38,10 +63,14 @@ Address your HTML and other markup files in the `source` function.
 
 ### 4. Build CSS
 
-Run this command to build the CSS file using Tailwind CSS executable
+Run this command to build the CSS file using Tailwind CSS executable.  
+Using `--watch` will automatically update the output.css file when you change the input.css file.  
+For CI/CD, run the command without `--watch` to generate the output.css file once.
 
 ```sh:Terminal
-./tailwindcss -i input.css -o output.css
+./tailwindcss -i input.css -o output.css --watch
+# For Windows
+tailwindcss.exe -i input.css -o output.css --watch
 ```
 
 Now you can use daisyUI class names!
