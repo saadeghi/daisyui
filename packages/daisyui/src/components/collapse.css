@@ -10,6 +10,7 @@
   width: 100%;
   grid-template-rows: max-content 0fr;
   transition: grid-template-rows 0.2s;
+  isolation: isolate;
 
   > input:is([type="checkbox"], [type="radio"]) {
     grid-column-start: 1;
