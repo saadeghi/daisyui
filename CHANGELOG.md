@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.24 (2025-04-17)
+
+
+### Bug Fixes
+
+* join outline issues. closes: [#3722](https://github.com/saadeghi/daisyui/issues/3722) ([78bf76d](https://github.com/saadeghi/daisyui/commit/78bf76ddffde31022b56c0df28f8eea3a7aeeeaa))
+
 ## 5.0.23 (2025-04-16)
 
 
