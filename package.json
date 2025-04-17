@@ -22,6 +22,7 @@
     "bundle": "bun packages/daisyui/functions/bundle.js",
     "lint": "bunx -y oxlint@latest --ignore-pattern packages/playground",
     "test": "bun test",
+    "api": "cd ../daisyui-api && bun run dev",
     "wallace": "bunx -y wallace-cli packages/daisyui/daisyui.css",
     "update:tw": "bun i tailwindcss@latest @tailwindcss/cli@latest @tailwindcss/vite@latest",
     "publish:alpha": "bun run --bun build && cd packages/daisyui && bun publish --tag=alpha",

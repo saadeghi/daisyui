@@ -26,7 +26,7 @@ body:
 
         ℹ️ Please provide a link to a small, minimal example source code where issue can be reproduced. Without a link it will be hard to guess what is the cause of the problem and it will take more time to fix.
 
-        ℹ️ You can use a [Tailwind Play](https://daisyui.com/tailwindplay/) page or a [Stackblitz page](https://stackblitz.com/@saadeghi/collections/daisyui) or a public GitHub repo.
+        ℹ️ You can use a [Tailwind Play](https://daisyui.com/tailwindplay/) page or a [Stackblitz page](https://stackblitz.com/edit/daisyui5) or a public GitHub repo.
 
       placeholder: "https://"
     validations:
@@ -37,7 +37,7 @@ body:
     attributes:
       label: What version of daisyUI are you using?
       description: You can see the daisyUI version number on your `package.json` file.
-      placeholder: "example: v5.0.0"
+      placeholder: "example: v5.0.23"
     validations:
       required: false
 
