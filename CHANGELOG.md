@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.25 (2025-04-17)
+
+
+### Bug Fixes
+
+* kbd border width ([eaa78a8](https://github.com/saadeghi/daisyui/commit/eaa78a8e58dc4401efb13acd63860a39aaa2e548))
+
 ## 5.0.24 (2025-04-17)
 
 
