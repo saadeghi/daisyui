@@ -82,7 +82,7 @@ For CI/CD, run the command without `--watch` to generate the output.css file onc
 ```sh:Terminal
 ./static/tailwindcss -i static/input.css -o static/output.css --watch
 # For Windows
-static\tailwindcss.exe -i static\input.css -o static\output.css --watch
+static\tailwindcss.exe -i static\\input.css -o static\\output.css --watch
 ```
 
 ### 5. Run the Zola server
