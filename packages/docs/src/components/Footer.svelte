@@ -19,10 +19,10 @@
           </svg>
           <div class="font-title inline-flex text-3xl font-black">daisyUI</div>
         </div>
-        <p class="text-base-content/70 mb-5">
+        <p class="text-base-content/70 mb-2">
           {@html $t("footer-tagline")}
         </p>
-        <div class="mb-4 flex gap-2 lg:gap-4">
+        <div class="mb-2 grid grid-cols-5 gap-2 lg:gap-3">
           <a
             title="GitHub"
             target="_blank"
@@ -159,6 +159,26 @@
             </svg>
           </a>
           <a
+            title="StackBlitz"
+            target="_blank"
+            rel="noopener, noreferrer"
+            href="/stackblitz"
+            class="opacity-50 hover:opacity-100"
+          >
+            <svg
+              class="size-4.5"
+              aria-label="StackBlitz"
+              viewBox="0 0 56 78"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23.4273 48.2853C23.7931 47.5845 23.0614 46.8837 22.3298 46.8837H1.11228C0.0148224 46.8837 -0.350997 45.8326 0.380642 45.1318L40.9866 0.282084C41.7182 -0.418693 43.1815 0.282084 42.8157 1.33325L32.9386 30.0651C32.5727 30.7659 32.9386 31.4666 33.6702 31.4666H54.8877C55.9852 31.4666 56.351 32.5178 55.6194 33.2186L15.0134 77.7179C14.2818 78.4187 12.8185 77.7179 13.1843 76.6667L23.4273 48.2853Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a
             title="CodePen"
             target="_blank"
             rel="noopener, noreferrer"
@@ -266,16 +286,14 @@
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
+        <a class="link link-hover" href="/compare/mui-vs-daisyui">MUI vs daisyUI</a>
         <a class="link link-hover" href="/compare/shadcn-vs-daisyui">shadcn/ui vs daisyUI</a>
+        <a class="link link-hover" href="/compare/bootstrap-vs-daisyui">Bootstrap vs daisyUI</a>
         <a class="link link-hover" href="/compare/flowbite-vs-daisyui">Flowbite vs daisyUI</a>
         <a class="link link-hover" href="/compare/radix-vs-daisyui">Radix vs daisyUI</a>
-        <a class="link link-hover" href="/compare/mui-vs-daisyui">MUI vs daisyUI</a>
         <a class="link link-hover" href="/compare/bulma-vs-daisyui">Bulma vs daisyUI</a>
         <a class="link link-hover" href="/compare/nuxtui-vs-daisyui">NuxtUI vs daisyUI</a>
         <a class="link link-hover" href="/compare/heroui-vs-daisyui">HeroUI vs daisyUI</a>
-        <a class="link link-hover" href="/compare/hyperui-vs-daisyui">HyperUI vs daisyUI</a>
-        <a class="link link-hover" href="/compare/merakiui-vs-daisyui">Meraki UI vs daisyUI</a>
-        <a class="link link-hover" href="/compare/bootstrap-vs-daisyui">Bootstrap vs daisyUI</a>
         <a class="link link-hover" href="/compare/preline-vs-daisyui">Preline UI vs daisyUI</a>
         <a class="link link-hover" href="/compare/chakra-vs-daisyui">Chakra UI vs daisyUI</a>
       </div>
@@ -465,7 +483,7 @@
               placeholder="email@site.com"
               required
             />
-            <button class="join-item btn btn-neutral">Subscribe</button>
+            <button class="join-item btn btn-outline">Subscribe</button>
           </div>
           <p class="text-base-content/60 text-[0.625rem] tracking-wide">
             <svg

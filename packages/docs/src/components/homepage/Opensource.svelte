@@ -53,12 +53,12 @@
     </p>
     <div class="flex w-full justify-center">
       <div
-        class="max-w-8xl flex w-full flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
+        class="flex w-full max-w-6xl flex-wrap justify-center p-10 max-sm:[&>*:nth-child(n+50)]:hidden"
       >
         {#each contributors as contributor, index}
-          <div class="avatar tooltip p-2" data-tip={contributor}>
+          <div class="avatar tooltip group p-1" data-tip={contributor}>
             <div
-              class="mask mask-squircle size-8"
+              class="mask mask-squircle size-8 [transition:opacity_1s_ease-out_15s,scale_1s_ease-out_15s,filter_1s_ease-out_15s] pointer-fine:scale-70 pointer-fine:opacity-30 pointer-fine:contrast-70 pointer-fine:grayscale pointer-fine:group-hover:scale-120 pointer-fine:group-hover:opacity-100 pointer-fine:group-hover:contrast-100 pointer-fine:group-hover:grayscale-0 pointer-fine:group-hover:[transition:opacity_0s_ease-out_0s,scale_0.05s_ease-out_0s,filter_0s_ease-out_0s]"
               style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size:auto 32px;background-repeat:no-repeat;background-position: -{index *
                 32}px 0px;"
             ></div>
