@@ -39,6 +39,7 @@
     outline: 2px solid var(--input-color);
     outline-offset: 2px;
     isolation: isolate;
+    z-index: 1;
   }
 
   &:has(> input[disabled]),
@@ -77,7 +78,6 @@
     @apply text-base-content bg-base-100;
     border-color: #0000;
     box-shadow: none;
-    isolation: isolate;
   }
 }
 
