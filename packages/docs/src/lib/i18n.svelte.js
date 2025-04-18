@@ -25,6 +25,7 @@ export const languageMetadata = {
   es: { __name: "Español", __code: "ES", __direction: "ltr" },
   fa: { __name: "فارسی", __code: "FA", __direction: "rtl" },
   fr: { __name: "Français", __code: "FR", __direction: "ltr" },
+  hu: { __name: "Magyar", __code: "HU", __direction: "ltr" },
   id: { __name: "Bahasa Indonesia", __code: "ID", __direction: "ltr" },
   it: { __name: "Italiano", __code: "IT", __direction: "ltr" },
   ja: { __name: "日本語", __code: "JA", __direction: "ltr" },
