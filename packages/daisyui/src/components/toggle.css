@@ -18,7 +18,7 @@
     color 0.3s,
     grid-template-columns 0.2s;
   --input-color: color-mix(in oklab, var(--color-base-content) 50%, #0000);
-  --toggle-p: 0.1875rem;
+  --toggle-p: calc(var(--size) * 0.125);
   --size: calc(var(--size-selector, 0.25rem) * 6);
   width: calc((var(--size) * 2) - (var(--border) + var(--toggle-p)) * 2);
   height: var(--size);
@@ -178,7 +178,6 @@
 .toggle-xs {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-p: 0.0625rem;
     --size: calc(var(--size-selector, 0.25rem) * 4);
   }
 }
@@ -186,7 +185,6 @@
 .toggle-sm {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-p: 0.125rem;
     --size: calc(var(--size-selector, 0.25rem) * 5);
   }
 }
@@ -194,7 +192,6 @@
 .toggle-md {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-p: 0.1875rem;
     --size: calc(var(--size-selector, 0.25rem) * 6);
   }
 }
@@ -202,7 +199,6 @@
 .toggle-lg {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-p: 0.25rem;
     --size: calc(var(--size-selector, 0.25rem) * 7);
   }
 }
@@ -210,7 +206,6 @@
 .toggle-xl {
   &:is([type="checkbox"]),
   &:has([type="checkbox"]) {
-    --toggle-p: 0.3125rem;
     --size: calc(var(--size-selector, 0.25rem) * 8);
   }
 }
