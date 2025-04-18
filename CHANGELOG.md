@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.26 (2025-04-18)
+
+
+### Bug Fixes
+
+* drawer z-index issue. closes [#3797](https://github.com/saadeghi/daisyui/issues/3797) ([00c20c3](https://github.com/saadeghi/daisyui/commit/00c20c389a0d4f77420027f3a8736fb1cb8e01e6))
+
 ## 5.0.25 (2025-04-17)
 
 
