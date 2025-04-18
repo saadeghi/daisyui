@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.27 (2025-04-18)
+
+
+### Bug Fixes
+
+* toggle padding value inconsistencies. closes: [#3746](https://github.com/saadeghi/daisyui/issues/3746) ([59e1575](https://github.com/saadeghi/daisyui/commit/59e1575f420217b7ab71f19ce1a17f1ded80b3f5))
+
 ## 5.0.26 (2025-04-18)
 
 
