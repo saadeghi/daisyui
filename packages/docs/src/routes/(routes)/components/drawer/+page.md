@@ -4,23 +4,23 @@ desc: Drawer is a grid layout that can show/hide a sidebar on the left or right 
 layout: components
 classnames:
   component:
-  - class: drawer
-    desc: The wrapper for sidebar and content
+    - class: drawer
+      desc: The wrapper for sidebar and content
   part:
-  - class: drawer-toggle
-    desc: The hidden checkbox that controls the state of drawer
-  - class: drawer-content
-    desc: Content part
-  - class: drawer-side
-    desc: Sidebar part
-  - class: drawer-overlay
-    desc: Label that covers the page when drawer is open
+    - class: drawer-toggle
+      desc: The hidden checkbox that controls the state of drawer
+    - class: drawer-content
+      desc: Content part
+    - class: drawer-side
+      desc: Sidebar part
+    - class: drawer-overlay
+      desc: Label that covers the page when drawer is open
   placement:
-  - class: drawer-end
-    desc: puts drawer to the other side
+    - class: drawer-end
+      desc: puts drawer to the other side
   modifier:
-  - class: drawer-open
-    desc: Forces the drawer to be open
+    - class: drawer-open
+      desc: Forces the drawer to be open
 ---
 
 <script>
@@ -57,6 +57,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 > If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
 ### ~Drawer
+
 <div class="drawer h-56 rounded overflow-hidden">
   <input id="my-drawer" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
@@ -90,6 +91,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 ```
 
 ### ~Navbar menu for desktop + sidebar drawer for mobile
+
 #### Change screen size to show/hide menu
 
 <div class="drawer h-56 rounded overflow-hidden">
@@ -132,12 +134,14 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            class="inline-block h-6 w-6 stroke-current">
+            class="inline-block h-6 w-6 stroke-current"
+          >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
           </svg>
         </label>
       </div>
@@ -165,6 +169,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 ```
 
 ### ~Responsive
+
 #### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
 
 <div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
@@ -172,7 +177,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   </div>
-  <div class="drawer-side z-99">
+  <div class="drawer-side max-lg:z-99">
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><button>Sidebar Item 1</button></li>
@@ -201,9 +206,8 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 </div>
 ```
 
-
-
 ### ~Drawer that opens from right side of page
+
 <div class="drawer drawer-end h-56 rounded overflow-hidden">
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
