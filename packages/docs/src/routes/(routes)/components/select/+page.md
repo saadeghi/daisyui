@@ -4,40 +4,40 @@ desc: Select is used to pick a value from a list of options.
 layout: components
 classnames:
   component:
-  - class: select
-    desc: For <select> element
+    - class: select
+      desc: For <select> element
   style:
-  - class: select-ghost
-    desc: ghost style
+    - class: select-ghost
+      desc: ghost style
   color:
-  - class: select-neutral
-    desc: neutral color
-  - class: select-primary
-    desc: primary color
-  - class: select-secondary
-    desc: secondary color
-  - class: select-accent
-    desc: accent color
-  - class: select-info
-    desc: info color
-  - class: select-success
-    desc: success color
-  - class: select-warning
-    desc: warning color
-  - class: select-error
-    desc: error color
+    - class: select-neutral
+      desc: neutral color
+    - class: select-primary
+      desc: primary color
+    - class: select-secondary
+      desc: secondary color
+    - class: select-accent
+      desc: accent color
+    - class: select-info
+      desc: info color
+    - class: select-success
+      desc: success color
+    - class: select-warning
+      desc: warning color
+    - class: select-error
+      desc: error color
   size:
-  - class: select-xs
-    desc: Extra small size
-  - class: select-sm
-    desc: Small size
-  - class: select-md
-    desc: Medium size
-    default: true
-  - class: select-lg
-    desc: Large size
-  - class: select-xl
-    desc: Extra large size
+    - class: select-xs
+      desc: Extra small size
+    - class: select-sm
+      desc: Small size
+    - class: select-md
+      desc: Medium size
+      default: true
+    - class: select-lg
+      desc: Large size
+    - class: select-xl
+      desc: Extra large size
 ---
 
 <script>
@@ -46,6 +46,7 @@ classnames:
 </script>
 
 ### ~Select
+
 <select class="select">
   <option disabled selected>Pick a color</option>
   <option>Crimson</option>
@@ -61,6 +62,7 @@ classnames:
   <option>Velvet</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick a color" className="$$select">
   <option disabled={true}>Pick a color</option>
@@ -71,6 +73,7 @@ classnames:
 ```
 
 ### ~Ghost (no background)
+
 <select class="select select-ghost">
   <option disabled selected>Pick a font</option>
   <option>Inter</option>
@@ -86,6 +89,7 @@ classnames:
   <option>Raleway</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick a font" class="$$select $$select-ghost">
   <option disabled={true}>Pick a font</option>
@@ -95,8 +99,8 @@ classnames:
 </select>
 ```
 
+### ~With fieldset and labels
 
-### ~With fieldset and fieldset-labels
 <fieldset class="fieldset w-xs">
   <legend class="fieldset-legend">Browsers</legend>
   <select class="select">
@@ -105,7 +109,7 @@ classnames:
     <option>FireFox</option>
     <option>Safari</option>
   </select>
-  <span class="fieldset-label">Optional</span>
+  <span class="label">Optional</span>
 </fieldset>
 
 ```html
@@ -117,9 +121,10 @@ classnames:
     <option>FireFox</option>
     <option>Safari</option>
   </select>
-  <span class="$$fieldset-label">Optional</span>
+  <span class="$$label">Optional</span>
 </fieldset>
 ```
+
 ```jsx
 <fieldset class="$$fieldset">
   <legend class="$$fieldset-legend">Browsers</legend>
@@ -129,12 +134,12 @@ classnames:
     <option>FireFox</option>
     <option>Safari</option>
   </select>
-  <span class="$$fieldset-label">Optional</span>
+  <span class="$$label">Optional</span>
 </fieldset>
 ```
 
-
 ### ~Primary color
+
 <select class="select select-primary">
   <option disabled selected>Pick a text editor</option>
   <option>VScode</option>
@@ -150,6 +155,7 @@ classnames:
   <option>Another VScode fork</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick a text editor" class="$$select $$select-primary">
   <option disabled={true}>Pick a text editor</option>
@@ -159,8 +165,8 @@ classnames:
 </select>
 ```
 
-
 ### ~Secondary color
+
 <select class="select select-secondary">
   <option disabled selected>Pick a language</option>
   <option>Zig</option>
@@ -176,6 +182,7 @@ classnames:
   <option>Rust</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick a language" class="$$select $$select-secondary">
   <option disabled={true}>Pick a language</option>
@@ -185,8 +192,8 @@ classnames:
 </select>
 ```
 
-
 ### ~Accent color
+
 <select class="select select-accent">
   <option selected disabled>Color scheme</option>
   <option>Light mode</option>
@@ -202,6 +209,7 @@ classnames:
   <option>System</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Color scheme" class="$$select $$select-accent">
   <option disabled={true}>Color scheme</option>
@@ -211,8 +219,8 @@ classnames:
 </select>
 ```
 
-
 ### ~Neutral color
+
 <select class="select select-neutral">
   <option disabled selected>Server location</option>
   <option>North America</option>
@@ -228,6 +236,7 @@ classnames:
   <option>South East Asia</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Server location" class="$$select $$select-neutral">
   <option disabled={true}>Server location</option>
@@ -238,6 +247,7 @@ classnames:
 ```
 
 ### ~Info color
+
 <select class="select select-info">
   <option disabled selected>Pick a Framework</option>
   <option>React</option>
@@ -253,6 +263,7 @@ classnames:
   <option>Angular</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick a Framework" className="$$select $$select-info">
   <option disabled={true}>Pick a Framework</option>
@@ -263,6 +274,7 @@ classnames:
 ```
 
 ### ~Success color
+
 <select class="select select-success">
   <option disabled selected>Pick a Runtime</option>
   <option>npm</option>
@@ -278,6 +290,7 @@ classnames:
   <option>yarn</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick a Runtime" className="$$select $$select-success">
   <option disabled={true}>Pick a Runtime</option>
@@ -288,6 +301,7 @@ classnames:
 ```
 
 ### ~Warning color
+
 <select class="select select-warning">
   <option disabled selected>Pick an OS</option>
   <option>Windows</option>
@@ -303,6 +317,7 @@ classnames:
   <option>Linux</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick an OS" className="$$select $$select-warning">
   <option disabled={true}>Pick an OS</option>
@@ -313,6 +328,7 @@ classnames:
 ```
 
 ### ~Error color
+
 <select class="select select-error">
   <option disabled selected>Pick an AI Model</option>
   <option>GPT-4</option>
@@ -328,6 +344,7 @@ classnames:
   <option>Llama</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Pick an AI Model" className="$$select $$select-error">
   <option disabled={true}>Pick an AI Model</option>
@@ -338,6 +355,7 @@ classnames:
 ```
 
 ### ~Sizes
+
 <div class="flex flex-col gap-4 w-full items-center">
   <select class="select select-xs">
     <option disabled selected>Xsmall</option>
@@ -403,6 +421,7 @@ classnames:
   <option>Xlarge Tomato</option>
 </select>
 ```
+
 ```jsx
 <select defaultValue="Xsmall" class="$$select $$select-xs">
   <option disabled={true}>Xsmall</option>
@@ -436,8 +455,8 @@ classnames:
 </select>
 ```
 
-
 ### ~Disabled
+
 <select class="select" disabled>
   <option>You can't touch this</option>
 </select>
@@ -447,6 +466,7 @@ classnames:
   <option>You can't touch this</option>
 </select>
 ```
+
 ```jsx
 <select class="$$select" disabled={true}>
   <option>You can't touch this</option>

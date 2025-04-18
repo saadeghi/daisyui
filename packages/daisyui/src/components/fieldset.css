@@ -8,6 +8,7 @@
   @apply text-base-content -mb-1 flex items-center justify-between gap-2 py-2;
   font-weight: 600;
 }
+/* deprecated in favor of label - but stays in source code to avoid breaking change */
 .fieldset-label {
   @apply text-base-content/60 flex items-center gap-1.5;
   &:has(input) {

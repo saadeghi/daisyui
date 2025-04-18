@@ -621,20 +621,20 @@ Using CSS focus
 - The content can be any HTML element (not just `<ul>`)
 
 ### fieldset
-Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and fieldset-label as a description
+Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and label as a description
 
 [fieldset docs](https://daisyui.com/components/fieldset/)
 
 #### Class names
-- Component: `fieldset`
-- Parts: `fieldset-legend`, `fieldset-label`
+- Component: `fieldset`, `label`
+- Parts: `fieldset-legend`
 
 #### Syntax
 ```html
 <fieldset class="fieldset">
   <legend class="fieldset-legend">{title}</legend>
   {CONTENT}
-  <p class="fieldset-label">{description}</p>
+  <p class="label">{description}</p>
 </fieldset>
 ```
 

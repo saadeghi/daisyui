@@ -11,7 +11,7 @@ desc: Everything about the new daisyUI 5 release
 
 Welcome! 🎉
 
-daisyUI, the essential component library for Tailwind CSS is now being used in [360,000 open source projects](https://github.com/saadeghi/daisyui/network/dependents), with 19 million npm installs (350 thousand weekly installs). daisyUI is growing faster than before and today it's helping many people, startups and companies to create improve their development experience.  
+daisyUI, the essential component library for Tailwind CSS is now being used in [360,000 open source projects](https://github.com/saadeghi/daisyui/network/dependents), with 19 million npm installs (350 thousand weekly installs). daisyUI is growing faster than before and today it's helping many people, startups and companies to create improve their development experience.
 
 💚 daisyUI became possible thanks to your incredible contributions, helpful feedback, and amazing support. Thank you!
 
@@ -45,7 +45,6 @@ Let's begin!
 </div>
 </details>
 
-
 ## Install
 
 - [daisyUI 5 install instructions](/docs/install/)
@@ -53,7 +52,6 @@ Let's begin!
 - [Detailed changelog](/docs/changelog/)
 
 ---
-
 
 ## 1. Core Improvement
 
@@ -81,6 +79,7 @@ module.exports = {
   ],
 }
 ```
+
 ```postcss:After
 /* app.css */
 @import "tailwindcss";
@@ -91,6 +90,7 @@ module.exports = {
 
 
 ```
+
 </div>
 
 See [Tailwind CSS upgrade guide](https://tailwindcss.com/docs/upgrade-guide) for more information.
@@ -116,6 +116,7 @@ Dependencies - Total 1.8 MB on disk (250 files)
      ├╴ cssesc
      ╰╴ fastparse
 ```
+
 ```js:After
 No dependencies - 0 kB
 
@@ -127,10 +128,10 @@ No dependencies - 0 kB
 
 
 ```
+
 </div>
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/nature.webp" alt="daisyui-package">
-
 
 ### Smaller size
 
@@ -182,7 +183,6 @@ It is now safe and efficient to use the CDN file in production. The compressed C
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-cdn-size.webp" alt="daisyui 5 cdn size">
 
-
 ### Improved color variables
 
 With Tailwind CSS 3 and daisyUI 4, we had to extract the color values of each color into CSS variables, and pass it to Tailwind CSS alongside a special `<alpha-value>` variable so Tailwind CSS could generate opacity variables for each color utility class.
@@ -220,6 +220,7 @@ We also updated the variable names to be more readable in the output CSS, which 
 --erc: 0% 0 0;
 }
 ```
+
 ```css:After
 /* standard color format, easy to customize in browser */
 {
@@ -245,6 +246,7 @@ We also updated the variable names to be more readable in the output CSS, which 
 --color-error-content: oklch(0% 0 0);
 }
 ```
+
 </div>
 
 - [See the new color format in action](/theme-generator/)
@@ -286,9 +288,11 @@ For example if you only want to use daisyUI toggle component, include a tiny CSS
 ```:Before
 Not possible
 ```
+
 ```:After
 https://cdn.jsdelivr.net/npm/daisyui@5/components/toggle.css
 ```
+
 </div>
 
 All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5/chunks.css).
@@ -311,11 +315,13 @@ Not possible
 
 
 ```
+
 ```postcss:After
 @plugin "daisyui" {
   include: toggle;
 }
 ```
+
 </div>
 Or if you want to exclude a specific part of the library, you can do that too!
 <div class="before-after">
@@ -326,11 +332,13 @@ Not possible
 
 
 ```
+
 ```postcss:After
 @plugin "daisyui" {
   exclude: scrollbar;
 }
 ```
+
 </div>
 
 ## 3. Design System Improvements
@@ -350,13 +358,14 @@ Not possible
 daisyUI 5 introduces a new set of effects that can be enabled or disabled globally or per theme. These effects change the look and feel of relevant components, like buttons, checkbox, toggle, etc.
 
 Currently, the following effects are available:
+
 - `--depth`: adds a clean, subtle depth effect to the components, making them look more visually appealing
 - `--noise`: adds a slight noise effect to the components, giving them a more textured look
 
 These effects can be enabled or disabled using a CSS variable. Check out the new [Theme Generator](/theme-generator/) page to see how it works.
 
-
 ### New "X-Large" size
+
 All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now also support a new `xl` size modifier. This gives you more control over the size of components and allows you to create more flexible and responsive designs.
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="daisyui tailwind xl button">
@@ -369,18 +378,18 @@ In daisyUI 4, the size difference between sizes was not following a consistent s
 The new default size scale is consistent and more visually appealing ...and it's customizable!
 
 | Button height scale | Before                                        | After                                           |
-|---------------------|-----------------------------------------------|-------------------------------------------------|
-| `xs`                | 6  × 4 = 24px                                 | <span class="text-success">6</span>  × 4 = 24px |
-| `sm`                | 8  × 4 = 32px                                 | <span class="text-success">8</span>  × 4 = 32px |
+| ------------------- | --------------------------------------------- | ----------------------------------------------- |
+| `xs`                | 6 × 4 = 24px                                  | <span class="text-success">6</span> × 4 = 24px  |
+| `sm`                | 8 × 4 = 32px                                  | <span class="text-success">8</span> × 4 = 32px  |
 | `md`                | <span class="text-error">12</span> × 4 = 48px | <span class="text-success">10</span> × 4 = 40px |
 | `lg`                | <span class="text-error">16</span> × 4 = 64px | <span class="text-success">12</span> × 4 = 48px |
 | `xl`                | -                                             | <span class="text-success">14</span> × 4 = 56px |
 
 | Checkbox height scale | Before                                       | After                                          |
-|-----------------------|----------------------------------------------|------------------------------------------------|
-| `xs`                  | 4  × 4 = 16px                                | <span class="text-success">4</span> × 4 = 16px |
-| `sm`                  | 5  × 4 = 20px                                | <span class="text-success">5</span> × 4 = 20px |
-| `md`                  | 6  × 4 = 24px                                | <span class="text-success">6</span> × 4 = 24px |
+| --------------------- | -------------------------------------------- | ---------------------------------------------- |
+| `xs`                  | 4 × 4 = 16px                                 | <span class="text-success">4</span> × 4 = 16px |
+| `sm`                  | 5 × 4 = 20px                                 | <span class="text-success">5</span> × 4 = 20px |
+| `md`                  | 6 × 4 = 24px                                 | <span class="text-success">6</span> × 4 = 24px |
 | `lg`                  | <span class="text-error">8</span> × 4 = 32px | <span class="text-success">7</span> × 4 = 28px |
 | `xl`                  | -                                            | <span class="text-success">8</span> × 4 = 32px |
 
@@ -455,7 +464,6 @@ Check out the new [Theme Generator](/theme-generator/) page to create your own c
 
 [<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/tailwind-css-daisyui-theme-generator.webp" alt="tailwind css daisyui theme generator">](/theme-generator/)
 
-
 ## 5. New components
 
 daisyUI 5 introduces new components to help you build websites faster.
@@ -485,7 +493,7 @@ See [Status component docs](/components/status/)
 
 ### Fieldset
 
-Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and fieldset-label as a description.
+Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and label as a description.
 
 See [Fieldset component docs](/components/fieldset/)
 
@@ -539,7 +547,7 @@ Compatible with safe-area-inset-bottom on mobile devices.
 See [Dock component docs](/components/dock/)
 
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/dock.webp" alt="daisyui tailwind dock">
-  
+
 
 ## 6. Major component improvements
 
@@ -596,7 +604,7 @@ These components have been improved to be more visually appealing:
 - **[Rating](/components/rating/)**
 - **[Radial Progress](/components/radial-progress/)**
 - **[Mockups](/components/mockup-browser/)**
-  
+
 <figure class="diff aspect-[1600/650] border-2 border-gray-200 rounded-box" data-theme="dark" tabindex="0">
   <div class="diff-item-1" role="img">
     <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-4-tailwindcss-components.webp" alt="daisyUI 4"/>
@@ -616,6 +624,7 @@ These components have been improved to be more visually appealing:
 > [:FF: Skip to the next section](#9-detailed-changelog)
 
 These components now support the new `xl` size modifier:
+
 - **[Button](/components/button/)**
 - **[Card](/components/card/)**
 - **[Kbd](/components/kbd/)**
@@ -634,6 +643,7 @@ These components now support the new `xl` size modifier:
 - **[Toggle](/components/toggle/)**
 
 Size scale of these components has been improved to be more consistent:
+
 - **[Button](/components/button/)**
 - **[Badge](/components/badge/)**
 - **[Kbd](/components/kbd/)**
@@ -652,6 +662,7 @@ Size scale of these components has been improved to be more consistent:
 > [:FF: Skip to the next section](#10-breaking-changes-in-class-names)
 
 Summary of changes:
+
 - Visual style updates.
 - Size adjustments.
 - Accessibility improvements.
@@ -662,8 +673,7 @@ Summary of changes:
 - Print-friendly styles for many components.
 - Some classes were renamed, some unused ones were removed (Read next section for details).
 
-[Read the detailed changelog for each component](/docs/changelog/)  
-
+[Read the detailed changelog for each component](/docs/changelog/)
 
 ## 10. Breaking changes in class names
 
@@ -698,7 +708,7 @@ Summary of changes:
 - Delete `mask-parallelogram-4`. No longer exists.
 - Delete width/height of items inside the `stack`, use width/height for the `stack` itself.
 
-[Read the detailed changelog for each component](/docs/changelog/)  
+[Read the detailed changelog for each component](/docs/changelog/)
 
 <img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="tailwind css daisyui xl button">
 
@@ -715,7 +725,7 @@ Summary of changes:
 You can customize the default size scale using the new `--size-field` and `--size-selector` CSS variables in your theme.  
 Check out the new [Theme Generator](/theme-generator/) page to see it in action.
 
-[Read the detailed changelog for each component](/docs/changelog/)  
+[Read the detailed changelog for each component](/docs/changelog/)
 
 ## 12. Breaking changes in config
 
@@ -739,7 +749,7 @@ Read more about [daisyUI config](/docs/config/).
 
 > :TLDR:
 >
-> TLDR – Automatic `*-content` color calculation is removed. Theme variable names have changed for better consistency and readability.  Previous themes are available for easy migration.  
+> TLDR – Automatic `*-content` color calculation is removed. Theme variable names have changed for better consistency and readability. Previous themes are available for easy migration.  
 > [:FF: Skip to the next section](#14-bug-fixes)
 
 Automatic `*-content` color calculation based on background color was removed. Now that Tailwind CSS supports CSS variables for colors, we no longer process and convert color values at build time. You can use any color format you want and neither daisyUI nor Tailwind CSS will convert it to another format at build time.
@@ -750,7 +760,7 @@ If you prefer using the previous colors, I [prepared a repo, including all daisy
 All color variable names have been changed to be aligned with new Tailwind CSS 4 syntax. And to be more readable and easier to customize [See the new color format](#improved-color-variables)
 
 | Before                             | After                       |
-|------------------------------------|-----------------------------|
+| ---------------------------------- | --------------------------- |
 | `--p`                              | `--color-primary`           |
 | `--pc`                             | `--color-primary-content`   |
 | `--s`                              | `--color-secondary`         |
@@ -791,12 +801,23 @@ Cyberpunk and Wireframe themes no longer have custom font by default. If you wan
 
 @plugin "daisyui/theme" {
   name: cyberpunk;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
 }
 
 @plugin "daisyui/theme" {
   name: wireframe;
-  font-family: Chalkboard, comic sans ms, "sans-serif";
+  font-family:
+    Chalkboard,
+    comic sans ms,
+    "sans-serif";
 }
 ```
 
@@ -807,9 +828,9 @@ Cyberpunk and Wireframe themes no longer have custom font by default. If you wan
 > TLDR – More than 95% of all the open issues from daisyUI 4 have been fixed in this release.  
 > [:FF: Skip to the next section](#15-get-started-with-daisyui-5)
 
-Some of these bugs were fixed automatically by the new changes in changes in the core library, design system, themes, and components. Some of them became possible with the new capabilities of Tailwind CSS 4.  
+Some of these bugs were fixed automatically by the new changes in changes in the core library, design system, themes, and components. Some of them became possible with the new capabilities of Tailwind CSS 4.
 
-And some of these bugs were related to a specific structure / style / behavior of components and changing them in a patch release would have caused breaking changes for all existing projects. We had to wait for the major release to apply these changes.  
+And some of these bugs were related to a specific structure / style / behavior of components and changing them in a patch release would have caused breaking changes for all existing projects. We had to wait for the major release to apply these changes.
 
 If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug or let me know if a bug is closed by mistake 💚
 
@@ -877,7 +898,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#3242: bug: DaisyUI 5: select is not wide enough, resulting in the select arrow overlapping with content](https://github.com/saadeghi/daisyui/issues/3242)
 - [#3232: bug: Some elements depend on using backgrounds, which break for print media](https://github.com/saadeghi/daisyui/issues/3232)
 - [#3231: bug: Diff component not working in Astro, Nextjs](https://github.com/saadeghi/daisyui/issues/3231)
-- [#3224: bug: mb-* override by timeline-compact when used with timeline-start but not timeline-end](https://github.com/saadeghi/daisyui/issues/3224)
+- [#3224: bug: mb-\* override by timeline-compact when used with timeline-start but not timeline-end](https://github.com/saadeghi/daisyui/issues/3224)
 - [#3222: bug: invisible toast area blocks buttons](https://github.com/saadeghi/daisyui/issues/3222)
 - [#3218: bug: 'join-vertical md:join-horizontal' failed to set horizontal style border on nest join-item](https://github.com/saadeghi/daisyui/issues/3218)
 - [#3216: bug: btn btn-link btn-disabled looks like button but not link](https://github.com/saadeghi/daisyui/issues/3216)
@@ -899,7 +920,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#3128: bug: collapse with arrow or plus crashes edge](https://github.com/saadeghi/daisyui/issues/3128)
 - [#3117: bug: Media breakpoint doesn't seem to apply with menu-horizontal](https://github.com/saadeghi/daisyui/issues/3117)
 - [#3116: bug: Nesting Collapse in Dropdown menu results in unintended Dropdown behaviour](https://github.com/saadeghi/daisyui/issues/3116)
-- [#3078: bug: tabpanel on the *real* device does not fill full width.](https://github.com/saadeghi/daisyui/issues/3078)
+- [#3078: bug: tabpanel on the _real_ device does not fill full width.](https://github.com/saadeghi/daisyui/issues/3078)
 - [#3071: bug: White area overlays part of the drawer's content](https://github.com/saadeghi/daisyui/issues/3071)
 - [#3060: bug: stepper (active step) z-index is higher then of the drawer](https://github.com/saadeghi/daisyui/issues/3060)
 - [#3053: bug: Lagging on the opening animation of collapse components only on Firefox](https://github.com/saadeghi/daisyui/issues/3053)
@@ -969,8 +990,8 @@ Please report any new bugs you find to [GitHub issues](https://github.com/saadeg
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5.webp" alt="tailwind css components">
 
 1 - [Tailwind CSS 4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)  
-2 - [daisyUI 5 upgrade guide](https://daisyui.com/docs/upgrade/)  
+2 - [daisyUI 5 upgrade guide](https://daisyui.com/docs/upgrade/)
 
-If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.  
+If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.
 
 Join us at [daisyUI Discord server](https://daisyui.com/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.

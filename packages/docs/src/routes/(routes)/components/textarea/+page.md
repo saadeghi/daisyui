@@ -4,40 +4,40 @@ desc: Textarea allows users to enter text in multiple lines.
 layout: components
 classnames:
   component:
-  - class: textarea
-    desc: For <textarea> element
+    - class: textarea
+      desc: For <textarea> element
   style:
-  - class: textarea-ghost
-    desc: ghost style
+    - class: textarea-ghost
+      desc: ghost style
   color:
-  - class: textarea-neutral
-    desc: neutral color
-  - class: textarea-primary
-    desc: primary color
-  - class: textarea-secondary
-    desc: secondary color
-  - class: textarea-accent
-    desc: accent color
-  - class: textarea-info
-    desc: info color
-  - class: textarea-success
-    desc: success color
-  - class: textarea-warning
-    desc: warning color
-  - class: textarea-error
-    desc: error color
+    - class: textarea-neutral
+      desc: neutral color
+    - class: textarea-primary
+      desc: primary color
+    - class: textarea-secondary
+      desc: secondary color
+    - class: textarea-accent
+      desc: accent color
+    - class: textarea-info
+      desc: info color
+    - class: textarea-success
+      desc: success color
+    - class: textarea-warning
+      desc: warning color
+    - class: textarea-error
+      desc: error color
   size:
-  - class: textarea-xs
-    desc: Extra small size
-  - class: textarea-sm
-    desc: Small size
-  - class: textarea-md
-    desc: Medium size
-    default: true
-  - class: textarea-lg
-    desc: Large size
-  - class: textarea-xl
-    desc: Extra large size
+    - class: textarea-xs
+      desc: Extra small size
+    - class: textarea-sm
+      desc: Small size
+    - class: textarea-md
+      desc: Medium size
+      default: true
+    - class: textarea-lg
+      desc: Large size
+    - class: textarea-xl
+      desc: Extra large size
 ---
 
 <script>
@@ -46,6 +46,7 @@ classnames:
 </script>
 
 ### ~Textarea
+
 <textarea class="textarea" placeholder="Bio"></textarea>
 
 ```html
@@ -53,29 +54,31 @@ classnames:
 ```
 
 ### ~Ghost (no background)
+
 <textarea class="textarea textarea-ghost" placeholder="Bio"></textarea>
 
 ```html
 <textarea class="$$textarea $$textarea-ghost" placeholder="Bio"></textarea>
 ```
 
-
 ### ~With form control and labels
+
 <fieldset class="fieldset w-xs">
   <legend class="fieldset-legend">Your bio</legend>
   <textarea class="textarea h-24" placeholder="Bio"></textarea>
-  <div class="fieldset-label">Optional</div>
+  <div class="label">Optional</div>
 </fieldset>
 
 ```html
 <fieldset class="$$fieldset">
   <legend class="$$fieldset-legend">Your bio</legend>
   <textarea class="$$textarea h-24" placeholder="Bio"></textarea>
-  <div class="$$fieldset-label">Optional</div>
+  <div class="$$label">Optional</div>
 </fieldset>
 ```
 
 ### ~Textarea colors
+
 <div class="grid gap-4 w-xs">
   <textarea type="text" placeholder="Primary" class="textarea textarea-primary"></textarea>
   <textarea type="text" placeholder="Secondary" class="textarea textarea-secondary"></textarea>
@@ -99,6 +102,7 @@ classnames:
 ```
 
 ### ~Sizes
+
 <div class="flex flex-col gap-4 w-full items-center">
   <textarea placeholder="Xsmall" class="textarea textarea-xs"></textarea>
   <textarea placeholder="Small" class="textarea textarea-sm"></textarea>
@@ -119,8 +123,8 @@ classnames:
 <textarea placeholder="Bio" class="$$textarea $$textarea-xl"></textarea>
 ```
 
-
 ### ~Disabled
+
 <textarea class="textarea" placeholder="Bio" disabled></textarea>
 
 ```html

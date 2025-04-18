@@ -66,6 +66,7 @@
       translate: -12.5% calc(-50% - 0.125em);
       scale: 0.75;
       pointer-events: auto;
+      z-index: 2;
     }
   }
   &:has(:disabled, [disabled]) {
