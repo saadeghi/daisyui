@@ -4,27 +4,27 @@ desc: Timeline component shows a list of events in chronological order.
 layout: components
 classnames:
   component:
-  - class: timeline
-    desc: Timeline container
+    - class: timeline
+      desc: Timeline container
   part:
-  - class: timeline-start
-    desc: The content inside <li> that will be at the start direction
-  - class: timeline-middle
-    desc: The content inside <li> that will be at the middle
-  - class: timeline-end
-    desc: The content inside <li> that will be at the end direction
+    - class: timeline-start
+      desc: The content inside <li> that will be at the start direction
+    - class: timeline-middle
+      desc: The content inside <li> that will be at the middle
+    - class: timeline-end
+      desc: The content inside <li> that will be at the end direction
   modifier:
-  - class: timeline-snap-icon
-    desc: snaps the icon to the start instead of middle
-  - class: timeline-box
-    desc: Applies a box style to timeline-start or timeline-end
-  - class: timeline-compact
-    desc: forces all items on one side
+    - class: timeline-snap-icon
+      desc: snaps the icon to the start instead of middle
+    - class: timeline-box
+      desc: Applies a box style to timeline-start or timeline-end
+    - class: timeline-compact
+      desc: forces all items on one side
   direction:
-  - class: timeline-vertical
-    desc: vertical layout (default)
-  - class: timeline-horizontal
-    desc: horizontal layout
+    - class: timeline-horizontal
+      desc: horizontal layout (default)
+    - class: timeline-vertical
+      desc: vertical layout
 ---
 
 <script>
@@ -32,12 +32,12 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
-
 > :INFO:
 >
 > The `hr` tag at the beginning or end of each item, displays a line to connect items.
 
 ### ~Timeline with text on both sides and icon
+
 <ul class="timeline">
   <li>
     <div class="timeline-start">1984</div>
@@ -93,11 +93,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">First Macintosh computer</div>
@@ -111,11 +113,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -129,11 +133,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPod</div>
@@ -147,11 +153,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -165,20 +173,22 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">Apple Watch</div>
   </li>
 </ul>
 ```
-
 
 ### ~Timeline with bottom side only
+
 <ul class="timeline">
   <li>
     <div class="timeline-middle">
@@ -228,11 +238,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">First Macintosh computer</div>
@@ -245,11 +257,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -262,11 +276,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPod</div>
@@ -279,11 +295,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -296,11 +314,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">Apple Watch</div>
@@ -308,8 +328,8 @@ classnames:
 </ul>
 ```
 
-
 ### ~Timeline with top side only
+
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -360,11 +380,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -377,11 +399,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -394,11 +418,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -411,11 +437,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -428,19 +456,21 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
   </li>
 </ul>
 ```
 
-
 ### ~Timeline with different sides
+
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -491,11 +521,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -507,11 +539,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -525,11 +559,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -541,11 +577,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -559,19 +597,21 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
   </li>
 </ul>
 ```
 
-
 ### ~Timeline with colorful lines
+
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -622,11 +662,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="text-primary h-5 w-5">
+        class="text-primary h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr class="bg-primary" />
@@ -638,11 +680,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="text-primary h-5 w-5">
+        class="text-primary h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -656,11 +700,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="text-primary h-5 w-5">
+        class="text-primary h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -672,11 +718,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -690,19 +738,21 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
   </li>
 </ul>
 ```
 
-
 ### ~Timeline without icons
+
 <ul class="timeline">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -757,8 +807,8 @@ classnames:
 </ul>
 ```
 
-
 ### ~Vertical timeline with text on both sides and icon
+
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start">1984</div>
@@ -814,11 +864,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">First Macintosh computer</div>
@@ -832,11 +884,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -850,11 +904,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPod</div>
@@ -868,11 +924,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -886,11 +944,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">Apple Watch</div>
@@ -898,8 +958,8 @@ classnames:
 </ul>
 ```
 
-
 ### ~Vertical timeline with bottom side only
+
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-middle">
@@ -949,11 +1009,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">First Macintosh computer</div>
@@ -966,11 +1028,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -983,11 +1047,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPod</div>
@@ -1000,11 +1066,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -1017,11 +1085,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">Apple Watch</div>
@@ -1029,8 +1099,8 @@ classnames:
 </ul>
 ```
 
-
 ### ~Vertical timeline with top side only
+
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1081,11 +1151,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -1098,11 +1170,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -1115,11 +1189,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -1132,11 +1208,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -1149,19 +1227,21 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
   </li>
 </ul>
 ```
 
-
 ### ~Vertical timeline with different sides
+
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1212,11 +1292,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -1228,11 +1310,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -1246,11 +1330,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -1262,11 +1348,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -1280,19 +1368,21 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
   </li>
 </ul>
 ```
 
-
 ### ~Vertical timeline with colorful lines
+
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1343,11 +1433,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="text-primary h-5 w-5">
+        class="text-primary h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr class="bg-primary" />
@@ -1359,11 +1451,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="text-primary h-5 w-5">
+        class="text-primary h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -1377,11 +1471,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="text-primary h-5 w-5">
+        class="text-primary h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <hr />
@@ -1393,11 +1489,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -1411,19 +1509,21 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
   </li>
 </ul>
 ```
 
-
 ### ~Vertical timeline without icons
+
 <ul class="timeline timeline-vertical">
   <li>
     <div class="timeline-start timeline-box">First Macintosh computer</div>
@@ -1478,8 +1578,8 @@ classnames:
 </ul>
 ```
 
-
 ### ~Responsive: vertical by default, horizontal on large screen
+
 <ul class="timeline timeline-vertical lg:timeline-horizontal">
   <li>
     <div class="timeline-start">1984</div>
@@ -1535,11 +1635,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">First Macintosh computer</div>
@@ -1553,11 +1655,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iMac</div>
@@ -1571,11 +1675,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPod</div>
@@ -1589,11 +1695,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">iPhone</div>
@@ -1607,11 +1715,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end $$timeline-box">Apple Watch</div>
@@ -1619,8 +1729,8 @@ classnames:
 </ul>
 ```
 
-
 ### ~Timeline with icon snapped to the start
+
 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
     <div class="timeline-middle">
@@ -1690,11 +1800,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-start mb-10 md:text-end">
@@ -1715,11 +1827,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end md:mb-10">
@@ -1738,11 +1852,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-start mb-10 md:text-end">
@@ -1763,11 +1879,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-end md:mb-10">
@@ -1788,11 +1906,13 @@ classnames:
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="h-5 w-5">
+        class="h-5 w-5"
+      >
         <path
           fill-rule="evenodd"
           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-          clip-rule="evenodd" />
+          clip-rule="evenodd"
+        />
       </svg>
     </div>
     <div class="$$timeline-start mb-10 md:text-end">

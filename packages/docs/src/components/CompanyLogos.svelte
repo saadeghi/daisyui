@@ -4,7 +4,10 @@
     <div class="grid w-full grid-cols-[repeat(7,1fr)] place-items-center gap-16">
       <div></div>
 
-      <div class="tooltip flex flex-col gap-4 text-center" data-tip="Used for Chameleon and SAM 2">
+      <div
+        class="tooltip group flex flex-col gap-4 text-center"
+        data-tip="Used for Chameleon and SAM 2"
+      >
         <div>
           <svg
             class="mx-auto h-10 w-auto max-w-none"
@@ -12,7 +15,7 @@
             viewBox="0 0 300 194"
             fill="none"
           >
-            <g fill="#0081fb">
+            <g class="fill-current transition-colors duration-500 group-hover:fill-[#0081fb]">
               <path
                 d="M31.46 127.56c0 11.12 2.44 19.66 5.63 24.82 3.45 6 9.86 9.68 16.78 9.63 8.2 0 15.71-2.04 30.17-22.04 11.58-16.03 25.23-38.53 34.42-52.63l15.55-23.9c10.8-16.6 23.31-35.05 37.65-47.56C183.37 5.67 195.99 0 208.7 0c21.34 0 41.66 12.36 57.22 35.55 17.02 25.4 25.29 57.39 25.29 90.4 0 19.63-3.87 34.05-10.45 45.44-6.36 11.02-18.75 22.02-39.6 22.02V162c17.85 0 22.31-16.41 22.31-35.18 0-26.75-6.24-56.45-19.98-77.66-9.75-15.05-22.39-24.24-36.29-24.24-15.04 0-27.14 11.34-40.74 31.56-7.23 10.74-14.65 23.84-22.98 38.61l-9.17 16.25c-18.43 32.68-23.1 40.12-32.31 52.4-16.15 21.51-29.94 29.66-48.11 29.66-21.54 0-35.16-9.33-43.59-23.38C3.42 158.57.04 143.54.04 126.42l31.42 1.14z"
               />
@@ -28,7 +31,7 @@
         <span class="text-base-content/70 text-xs whitespace-nowrap">Meta Research</span>
       </div>
 
-      <div class="tooltip flex flex-col gap-4 text-center" data-tip="Used for Alibaba Arthas">
+      <div class="tooltip group flex flex-col gap-4 text-center" data-tip="Used for Alibaba Arthas">
         <div>
           <svg
             class="mx-auto h-10 w-auto max-w-none"
@@ -37,8 +40,8 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#FF6600]"
               d="M86.81 61.4C81.02 61.67 81.61 58.65 85 53.99C92.94 43.36 107.95 28.53 108.46 18.04C109.37 4.33 95.58 -0.140001 81.41 -1.13552e-06C71.53 0.119999 61.33 2.95 54.36 5.44C30.37 13.91 15.28 27.49 5.79 42.51C-4.28 57.4 -0.98 72.3 20.29 72.11C36.62 71.95 47.19 66.93 58.26 61.29C58.32 61.29 27.7 70.02 16.45 63.58C16.43 63.58 16.42 63.58 16.39 63.56C15.23 62.9 13.82 61.99 13.64 59.45C13.27 54.14 22.42 48.62 27.37 46.85V37.64C31.01 39.05 34.97 39.84 39.11 39.84C47.06 39.84 54.33 36.98 59.97 32.24C60.2 33.02 60.3 33.91 60.24 34.92H62.47C62.76 32.56 61.43 30.68 61.43 30.68C59.43 27.5 55.93 27.55 55.93 27.55C55.93 27.55 57.83 28.37 59.11 30.34C53.92 34.67 47.27 37.3 39.98 37.3C36.87 37.3 33.9 36.82 31.09 35.94L38.35 28.73L36.34 23.49C50.97 18.37 63.26 14.44 83.28 10.97L78.81 7.21L81.15 5.77C93.23 9.18 101.13 11.68 100.7 18.09C100.5 19.14 100.13 20.36 99.49 21.76C95.98 28.72 85.52 40.33 81.29 45.18C78.5 48.4 75.77 51.55 73.81 54.56C71.8 57.58 70.56 60.4 70.49 63.09C70.75 84.15 132.58 53.25 144.55 45.05C126.86 52.66 107.81 60.01 86.81 61.39H86.82L86.81 61.4Z"
-              fill="#FF6600"
             />
           </svg>
         </div>
@@ -46,7 +49,7 @@
       </div>
 
       <div
-        class="tooltip flex flex-col gap-4 text-center"
+        class="tooltip group flex flex-col gap-4 text-center"
         data-tip="Used for Amazon IVS and aws-samples"
       >
         <div>
@@ -60,16 +63,19 @@
               fill="currentColor"
             />
             <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#f90]"
               d="M273.5 143.7c-32.9 24.3-80.7 37.2-121.8 37.2-57.6 0-109.5-21.3-148.7-56.7-3.1-2.8-.3-6.6 3.4-4.4 42.4 24.6 94.7 39.5 148.8 39.5 36.5 0 76.6-7.6 113.5-23.2 5.5-2.5 10.2 3.6 4.8 7.6zm13.7-15.6c-4.2-5.4-27.8-2.6-38.5-1.3-3.2.4-3.7-2.4-.8-4.5 18.8-13.2 49.7-9.4 53.3-5 3.6 4.5-1 35.4-18.6 50.2-2.7 2.3-5.3 1.1-4.1-1.9 4-9.9 12.9-32.2 8.7-37.5z"
               fill-rule="evenodd"
-              fill="#f90"
             />
           </svg>
         </div>
         <span class="text-base-content/70 text-xs whitespace-nowrap">Amazon</span>
       </div>
 
-      <div class="tooltip flex flex-col gap-4 text-center" data-tip="Used for Adobe Nala sites">
+      <div
+        class="tooltip group flex flex-col gap-4 text-center"
+        data-tip="Used for Adobe Nala sites"
+      >
         <div>
           <svg
             class="mx-auto h-10 w-auto max-w-none"
@@ -78,15 +84,15 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#EB1000]"
               d="M36.228 20.7199L24.276 50.4119H38.648L43.68 64.7839H0.0999756L27.176 0.0878906H46.02L73.008 64.7839H53.832L36.228 20.7199Z"
-              fill="#EB1000"
             />
           </svg>
         </div>
         <span class="text-base-content/70 text-xs whitespace-nowrap">Adobe</span>
       </div>
 
-      <div class="tooltip flex flex-col gap-4 text-center" data-tip="Used for RAD Lab">
+      <div class="tooltip group flex flex-col gap-4 text-center" data-tip="Used for RAD Lab">
         <div>
           <svg
             class="mx-auto h-10 w-auto max-w-none"
@@ -94,24 +100,27 @@
             viewBox="0 0 272 92"
           >
             <path
-              fill="#ea4335"
+              class="fill-current transition-colors duration-500 group-hover:fill-[#ea4335]"
               d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"
             />
             <path
-              fill="#fbbc05"
+              class="fill-current transition-colors duration-500 group-hover:fill-[#fbbc05]"
               d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"
             />
             <path
-              fill="#4285f4"
+              class="fill-current transition-colors duration-500 group-hover:fill-[#4285f4]"
               d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z"
             />
-            <path fill="#34a853" d="M225 3v65h-9.5V3h9.5z" />
             <path
-              fill="#ea4335"
+              class="fill-current transition-colors duration-500 group-hover:fill-[#34a853]"
+              d="M225 3v65h-9.5V3h9.5z"
+            />
+            <path
+              class="fill-current transition-colors duration-500 group-hover:fill-[#ea4335]"
               d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z"
             />
             <path
-              fill="#4285f4"
+              class="fill-current transition-colors duration-500 group-hover:fill-[#4285f4]"
               d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91S16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03s10.84 25.03 24.7 25.03c8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z"
             />
           </svg>

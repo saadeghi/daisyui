@@ -1,4 +1,4 @@
-const version = "5.0.23"
+const version = ""
 import { pluginOptionsHandler } from "./functions/pluginOptionsHandler.js"
 import { plugin } from "./functions/plugin.js"
 import variables from "./functions/variables.js"

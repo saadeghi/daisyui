@@ -997,6 +997,8 @@
   </div>
 </div>
 
+<div class="h-12"></div>
+
 <CompanyLogos />
 
 <div class="w-full px-2 py-40 lg:px-10" bind:this={section["nextlevel"]}>
@@ -1904,7 +1906,7 @@
         <a
           data-sveltekit-preload-data
           href="/components/"
-          class="btn btn-primary md:btn-wide w-full"
+          class="btn btn-outline md:btn-wide w-full"
         >
           {$t("all-components-btn")}
         </a>
