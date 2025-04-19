@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@minimal-analytics/ga4": "1.8.7",
+    "@neoconfetti/svelte": "^2.2.2",
     "culori": "4.0.1",
     "js-yaml": "4.1.0",
     "pako": "2.1.0",

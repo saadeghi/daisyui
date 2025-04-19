@@ -2,7 +2,7 @@
   import SEO from "$components/SEO.svelte"
   import ColorPalette from "$components/ColorPalette.svelte"
   import Preview from "$components/themegenerator/Preview.svelte"
-  import PreviewGrid from "$components/themegenerator/PreviewGrid.svelte"
+  // import PreviewGrid from "$components/themegenerator/PreviewGrid.svelte"
   import ThemeCSSModal from "$components/themegenerator/ThemeCSSModal.svelte"
   import Dock from "$components/themegenerator/Dock.svelte"
   import ThemeListItem from "$components/themegenerator/ThemeListItem.svelte"
@@ -10,27 +10,60 @@
   import { randomizeThemeColors } from "$lib/themeGeneratorRandomizer"
   import { validateThemeName, validateThemeStructure } from "$lib/themeGeneratorValidation"
   import { browser } from "$app/environment"
+  // import { pushState, replaceState } from "$app/navigation"
+  import { onMount, tick } from "svelte"
 
-  // import { pushState } from '$app/navigation';
+  import { confetti } from "@neoconfetti/svelte"
+  import pako from "pako"
 
-  // import pako from 'pako';
+  // Add state to control confetti visibility
+  let showConfetti = $state(false)
+  let confettiTarget = null
 
-  // const pack = (obj)  => {
-  //   const jsonString = JSON.stringify(obj);
-  //   const compressed = pako.deflate(jsonString);
-  //   return btoa(String.fromCharCode.apply(null, new Uint8Array(compressed)));
-  // }
-  // const unpack = (str) => {
-  //   const compressed = Uint8Array.from(atob(str), c => c.charCodeAt(0));
-  //   const jsonString = pako.inflate(compressed, { to: 'string' });
-  //   return JSON.parse(jsonString);
-  // }
+  // Function to trigger confetti effect
+  const triggerConfetti = async () => {
+    showConfetti = false
+    await tick()
+    showConfetti = true
+    setTimeout(() => {
+      showConfetti = false
+    }, 3000)
+  }
+
+  function toBase64Url(uint8array) {
+    return btoa(String.fromCharCode(...uint8array))
+      .replace(/\+/g, "-") // + => -
+      .replace(/\//g, "_") // / => _
+      .replace(/=+$/, "") // remove padding
+  }
+
+  function fromBase64Url(str) {
+    const base64 = str
+      .replace(/-/g, "+")
+      .replace(/_/g, "/")
+      .padEnd(str.length + ((4 - (str.length % 4)) % 4), "=")
+    return new Uint8Array([...atob(base64)].map((c) => c.charCodeAt(0)))
+  }
+
+  const pack = (obj) => {
+    const jsonString = JSON.stringify(obj)
+    const compressed = pako.deflate(jsonString)
+    // return btoa(String.fromCharCode.apply(null, new Uint8Array(compressed)))
+    return toBase64Url(compressed)
+  }
+  const unpack = (str) => {
+    // const compressed = Uint8Array.from(atob(str), (c) => c.charCodeAt(0))
+    const compressed = fromBase64Url(str)
+    const jsonString = pako.inflate(compressed, { to: "string" })
+    return JSON.parse(jsonString)
+  }
   const LS_KEY = "gen-themes-0.2"
   const { data } = $props()
   let showCssModal = $state(false)
   let dice = $state({ rotate: 0 })
-  let dockActiveItem = $state("themes")
+  let dockActiveItem = $state("editor")
   let themeCSS = $state("")
+  let highlightedThemeId = $state(null)
 
   const getStoredThemesByType = (type) => {
     if (!browser) return []
@@ -80,12 +113,125 @@
     }
   }
 
-  $effect.pre(() => {
+  function getThemeFromUrl() {
+    if (!browser) return null
+
+    const url = new URL(window.location)
+
+    // Check if we have theme parameters in the URL
+    if (url.hash.startsWith("#theme=")) {
+      try {
+        // Try to get the theme from the hash
+        const themeData = unpack(url.hash.substring(7))
+        // Ensure the theme has a name and id
+        if (!themeData.name) {
+          themeData.name = nameGenerator()
+        }
+        themeData.id = crypto.randomUUID()
+        themeData.type = "custom"
+        return themeData
+      } catch (e) {
+        console.error("Failed to parse theme from URL hash", e)
+      }
+    }
+
+    // Check if we have theme parameters in search params
+    const themeParams = {}
+    let hasThemeParams = false
+
+    for (const [key, value] of url.searchParams.entries()) {
+      if (
+        key === "name" ||
+        key === "color-scheme" ||
+        key === "default" ||
+        key === "prefersdark" ||
+        key.startsWith("--color-") ||
+        key.startsWith("--radius-") ||
+        key.startsWith("--size-") ||
+        key === "--border" ||
+        key === "--depth" ||
+        key === "--noise"
+      ) {
+        themeParams[key] = key === "default" || key === "prefersdark" ? value === "true" : value
+        hasThemeParams = true
+      }
+    }
+
+    if (hasThemeParams) {
+      // Create a theme object from the URL parameters
+      const urlTheme = {
+        id: crypto.randomUUID(),
+        type: "custom",
+        name: themeParams.name || nameGenerator(),
+        "color-scheme": themeParams["color-scheme"] || "light",
+        default: themeParams.default || false,
+        prefersdark: themeParams.prefersdark || false,
+        ...themeParams,
+      }
+
+      return urlTheme
+    }
+
+    return null
+  }
+
+  function findMatchingCustomTheme(theme, customThemes) {
+    if (!theme) return null
+
+    // Check if a theme with same properties already exists in custom themes
+    return customThemes.find((customTheme) => {
+      // Check name
+      if (customTheme.name !== theme.name) return false
+
+      // Check all color values
+      for (const [key, value] of Object.entries(theme)) {
+        if (key.startsWith("--color-") && customTheme[key] !== value) {
+          return false
+        }
+      }
+
+      return true
+    })
+  }
+
+  onMount(() => {
+    // First, try to get theme from URL
+    const urlTheme = getThemeFromUrl()
+
+    // Then, load themes from localStorage
     builtinThemes = data.builtinThemes
     const LSthemes = localStorage.getItem(LS_KEY)
     if (LSthemes) {
-      builtinThemes = JSON.parse(LSthemes)?.filter((item) => item.type === "builtin")
+      const parsedThemes = JSON.parse(LSthemes)
+      builtinThemes = parsedThemes?.filter((item) => item.type === "builtin")
+      customThemes = parsedThemes?.filter((item) => item.type === "custom")
     }
+
+    // If we have a URL theme, check if it matches an existing custom theme
+    if (urlTheme) {
+      const isValid = validateThemeStructure(urlTheme)
+      if (isValid) {
+        const matchingTheme = findMatchingCustomTheme(urlTheme, customThemes)
+
+        if (matchingTheme) {
+          // Select the matching theme
+          currentTheme = matchingTheme
+        } else {
+          // Add this theme to custom themes and select it
+          customThemes = [urlTheme, ...customThemes]
+          currentTheme = urlTheme
+          highlightedThemeId = urlTheme.id
+          setTimeout(triggerConfetti, 500)
+
+          setTimeout(() => {
+            highlightedThemeId = null
+          }, 2000)
+        }
+        return // Skip the regular theme selection process
+      }
+    }
+
+    // If no URL theme or invalid URL theme, proceed with regular theme selection
     const LSthemeId = localStorage.getItem("gen-theme-id")
     if (LSthemeId && JSON.parse(LSthemes)?.some((item) => item.id === LSthemeId)) {
       currentTheme = JSON.parse(LSthemes)?.find((item) => item.id === LSthemeId)
@@ -95,6 +241,15 @@
     }
   })
 
+  function setThemeInUrl(theme) {
+    if (!browser) return
+    const { id, type, ...themeWithoutIdType } = theme
+    const url = new URL(window.location)
+    url.hash = `theme=${pack(themeWithoutIdType)}`
+    // replaceState(url, {})
+    history.replaceState({}, "", url)
+  }
+
   $effect(() => {
     const allValid = themes.every(
       (theme) => validateThemeName(theme.name) && validateThemeStructure(theme),
@@ -102,6 +257,7 @@
     if (allValid) {
       localStorage.setItem(LS_KEY, JSON.stringify(themes))
       localStorage.setItem("gen-theme-id", currentTheme.id)
+      setThemeInUrl(currentTheme)
     }
     if (validateThemeName(currentTheme.name) && validateThemeStructure(currentTheme)) {
       currentTheme = themes.find((item) => item.id === currentTheme.id)
@@ -260,9 +416,14 @@
   }
 }}>read param</button> -->
 
+<svelte:head>
+  <link rel="canonical" href="https://daisyui.com/theme-generator/" />
+</svelte:head>
+
 <SEO
   title="daisyUI and Tailwind CSS theme generator"
   desc="OKLCH Theme Generator for daisyUI and Tailwind CSS"
+  img={`https://img.daisyui.com/images/theme-generator.webp`}
 />
 
 <div class="relative grid md:grid-cols-[14rem_17rem_1fr]">
@@ -385,6 +546,20 @@
         </button>
       </li>
       <li class="menu-title mt-6">My themes</li>
+      <div class="pointer-events-none flex items-center justify-center"></div>
+      {#if showConfetti}
+        <div class="pointer-events-none flex items-center justify-center">
+          <div
+            use:confetti={{
+              particleCount: 100,
+              particleSize: 5,
+              force: 0.6,
+              stageWidth: 200,
+              stageHeight: 600,
+            }}
+          ></div>
+        </div>
+      {/if}
       {#each themes?.filter((item) => item.type === "custom") as theme, index}
         <ThemeListItem
           id={theme.id}
@@ -393,6 +568,7 @@
           isCurrent={currentTheme.id === theme.id && currentTheme.type === theme.type}
           loadTheme={() => loadTheme(theme.id)}
           style={index === 0 ? firstItemStyle : ""}
+          classes={theme.id === highlightedThemeId ? "[animation:received_2s_both]" : ""}
         />
       {:else}
         <li class="menu-disabled"><div>&nbsp;</div></li>
@@ -826,14 +1002,14 @@
             d="M18.2838 43.1713C14.9327 42.1736 11.9498 40.3213 9.58787 37.867C10.469 36.8227 11 35.4734 11 34.0001C11 30.6864 8.31371 28.0001 5 28.0001C4.79955 28.0001 4.60139 28.01 4.40599 28.0292C4.13979 26.7277 4 25.3803 4 24.0001C4 21.9095 4.32077 19.8938 4.91579 17.9995C4.94381 17.9999 4.97188 18.0001 5 18.0001C8.31371 18.0001 11 15.3138 11 12.0001C11 11.0488 10.7786 10.1493 10.3846 9.35011C12.6975 7.1995 15.5205 5.59002 18.6521 4.72314C19.6444 6.66819 21.6667 8.00013 24 8.00013C26.3333 8.00013 28.3556 6.66819 29.3479 4.72314C32.4795 5.59002 35.3025 7.1995 37.6154 9.35011C37.2214 10.1493 37 11.0488 37 12.0001C37 15.3138 39.6863 18.0001 43 18.0001C43.0281 18.0001 43.0562 17.9999 43.0842 17.9995C43.6792 19.8938 44 21.9095 44 24.0001C44 25.3803 43.8602 26.7277 43.594 28.0292C43.3986 28.01 43.2005 28.0001 43 28.0001C39.6863 28.0001 37 30.6864 37 34.0001C37 35.4734 37.531 36.8227 38.4121 37.867C36.0502 40.3213 33.0673 42.1736 29.7162 43.1713C28.9428 40.752 26.676 39.0001 24 39.0001C21.324 39.0001 19.0572 40.752 18.2838 43.1713Z"
             fill="none"
             stroke="currentColor"
-            stroke-width="4"
             stroke-linejoin="round"
+            stroke-width="4"
           /><path
             d="M24 31C27.866 31 31 27.866 31 24C31 20.134 27.866 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31Z"
             fill="none"
             stroke="currentColor"
-            stroke-width="4"
             stroke-linejoin="round"
+            stroke-width="4"
           /></svg
         >
         Options
@@ -946,15 +1122,9 @@
 
   <div class="overflow-x-hidden">
     <div class="border-base-300 overflow-hidden border-s border-t md:rounded-ss-xl">
-      <div class="bg-base-200 text-base-content" style={currentThemeStyle}>
+      <div style={currentThemeStyle}>
         <div class:max-md:hidden={dockActiveItem !== "preview"}>
-          <Preview />
-        </div>
-        <div
-          class="bg-base-100 border-base-300 md:rounded-t-box px-8 py-12 md:border-t"
-          class:max-md:hidden={dockActiveItem !== "variants"}
-        >
-          <PreviewGrid />
+          <Preview currentThemeStyle={currentTheme} />
         </div>
       </div>
     </div>

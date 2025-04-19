@@ -10,10 +10,19 @@
       window.scrollTo({ top: 0, behavior: "smooth" })
     }}
   >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-      <path
-        d="M3.5 2A1.5 1.5 0 0 0 2 3.5v2A1.5 1.5 0 0 0 3.5 7h2A1.5 1.5 0 0 0 7 5.5v-2A1.5 1.5 0 0 0 5.5 2h-2ZM3.5 9A1.5 1.5 0 0 0 2 10.5v2A1.5 1.5 0 0 0 3.5 14h2A1.5 1.5 0 0 0 7 12.5v-2A1.5 1.5 0 0 0 5.5 9h-2ZM9 3.5A1.5 1.5 0 0 1 10.5 2h2A1.5 1.5 0 0 1 14 3.5v2A1.5 1.5 0 0 1 12.5 7h-2A1.5 1.5 0 0 1 9 5.5v-2ZM10.5 9A1.5 1.5 0 0 0 9 10.5v2a1.5 1.5 0 0 0 1.5 1.5h2a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 12.5 9h-2Z"
-      />
+    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <g
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="2"
+        fill="none"
+        stroke="currentColor"
+      >
+        <rect width="7" height="9" x="3" y="3" rx="1"> </rect>
+        <rect width="7" height="5" x="14" y="3" rx="1"> </rect>
+        <rect width="7" height="9" x="14" y="12" rx="1"> </rect>
+        <rect width="7" height="5" x="3" y="16" rx="1"> </rect>
+      </g>
     </svg>
     <span class="dock-label">Themes</span>
   </button>
@@ -47,28 +56,5 @@
       />
     </svg>
     <span class="dock-label">Preview</span>
-  </button>
-  <button
-    class:dock-active={dockActiveItem === "variants"}
-    onclick={() => {
-      dockActiveItem = "variants"
-      window.scrollTo({ top: 0, behavior: "smooth" })
-    }}
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4"
-      ><g
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        stroke-width="2"
-        fill="none"
-        stroke="currentColor"
-        ><path d="M4 6l5.5 0"></path><path d="M4 10l5.5 0"></path><path d="M4 14l5.5 0"></path><path
-          d="M4 18l5.5 0"
-        ></path><path d="M14.5 6l5.5 0"></path><path d="M14.5 10l5.5 0"></path><path
-          d="M14.5 14l5.5 0"
-        ></path><path d="M14.5 18l5.5 0"></path></g
-      ></svg
-    >
-    <span class="dock-label">Variant preview</span>
   </button>
 </nav>

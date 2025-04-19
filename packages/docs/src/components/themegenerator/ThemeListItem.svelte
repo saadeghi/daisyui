@@ -1,11 +1,11 @@
 <script>
-  let { id, type, theme, isCurrent, loadTheme, style } = $props()
+  let { id, type, theme, isCurrent, loadTheme, style, classes = "" } = $props()
 </script>
 
 <li>
   <button
     {style}
-    class={`gap-3 px-2 ${isCurrent ? "bg-base-content/10" : ""}`}
+    class={`${classes} gap-3 px-2 ${isCurrent ? "bg-base-content/10" : ""}`}
     onclick={() => loadTheme(id)}
   >
     <div
