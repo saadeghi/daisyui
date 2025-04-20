@@ -26,7 +26,7 @@
     <div class="h-6"></div>
     <div class="px-6">
       <img
-        class="max-smsize-20 pointer-events-none inline-block align-bottom"
+        class="pointer-events-none inline-block align-bottom"
         src="https://img.daisyui.com/images/daisyui/mark-rotating.svg"
         alt="daisyUI logo"
         width="400"

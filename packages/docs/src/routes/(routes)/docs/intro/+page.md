@@ -9,7 +9,7 @@ desc: What is daisyUI and why should you use it?
 
 <div class="text-center">
   <img
-    class="max-smsize-20 pointer-events-none inline-block align-bottom"
+    class="pointer-events-none inline-block align-bottom"
     src="https://img.daisyui.com/images/daisyui/mark-rotating.svg"
     alt="daisyUI logo"
     width="400"

@@ -244,6 +244,7 @@
             </svg>
           </a>
         </div>
+        <a href="/brand/" class="link link-hover">Logo and branding</a>
         <a href="/docs/faq/" class="link link-hover">{$t("FAQ")}</a>
         <a
           target="_blank"
