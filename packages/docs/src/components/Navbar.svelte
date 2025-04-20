@@ -1,5 +1,6 @@
 <script>
   import { goto } from "$app/navigation"
+  import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import TopBanner from "$components/TopBanner.svelte"
   import ThemeChange from "$components/ThemeChange.svelte"
   import LangChange from "$components/LangChange.svelte"
@@ -34,7 +35,7 @@
   ${switchNavbarStyle ? "shadow-xs" : ""}
   `}
 >
-  <nav class="navbar w-full">
+  <nav class="navbar w-full py-0">
     <div class="flex flex-1 items-center md:gap-1 lg:gap-2">
       <span
         class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]"
@@ -72,26 +73,13 @@
           href="/"
           aria-current="page"
           aria-label="daisyUI"
-          class="btn btn-ghost flex-0 gap-1 px-2 md:gap-2"
+          class="me-2 flex w-35 shrink-0 items-center gap-2"
           oncontextmenu={(e) => {
             e.preventDefault()
             goto("/brand")
           }}
         >
-          <svg
-            class="h-5 w-5 md:h-6 md:w-6"
-            width="28"
-            height="28"
-            viewBox="0 0 415 415"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="82.5" y="290" width="250" height="125" rx="62.5" fill="#1AD1A5"></rect>
-            <circle cx="207.5" cy="135" r="130" fill="black" fill-opacity=".3"></circle>
-            <circle cx="207.5" cy="135" r="125" fill="white"></circle>
-            <circle cx="207.5" cy="135" r="56" fill="#FF9903"></circle>
-          </svg>
-
-          <span class="font-title text-base-content text-lg md:text-xl">daisyUI</span>
+          <LogoHorizontal />
         </a>
         {#if showVersion}
           <ChangelogMenu {version} />

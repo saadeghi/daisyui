@@ -7,7 +7,7 @@
     dir="ltr"
     tabindex="0"
     role="button"
-    class="link link-hover text-base-content/60 inline-block font-mono text-[0.625rem]"
+    class="link link-hover text-base-content/60 relative -top-1 inline-block font-mono text-[0.625rem]"
   >
     {version.version}
     <svg

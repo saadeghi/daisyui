@@ -8,6 +8,17 @@ layout: docs
   import Translate from "$components/Translate.svelte"
 </script>
 
+<div class="text-center">
+  <img
+    class="max-smsize-20 pointer-events-none inline-block align-bottom"
+    src="https://img.daisyui.com/images/daisyui/mark-rotating.svg"
+    alt="daisyUI logo"
+    width="400"
+    height="400"
+    loading="lazy"
+  />
+</div>
+
 ## daisyUI Name
 
 daisyUI name must be written as "daisyUI" with a lowercase "d" and uppercase "UI" with no spaces.
@@ -25,12 +36,14 @@ Exception: daisyUI package stays lower case `daisyui` as it is a package name an
 ### Examples
 
 ✅ Correct usage:
+
 - Color Picker for daisyUI
 - Theme Generator made with daisyUI
 - My Project: Built with daisyUI
 - Unofficial daisyUI datepicker
 
 ❌ Incorrect usage:
+
 - daisyUI Color Picker
 - daisyUI Laravel
 - Official daisyUI Extension
@@ -43,17 +56,68 @@ Please do not modify, distort, or alter the logo.
 
 <div class="grid sm:grid-cols-2 gap-4">
   <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-white rounded-box py-12 px-4 flex flex-col gap-6 items-center">
-    <img class="size-32" src="https://raw.githubusercontent.com/daisyui/images/refs/heads/main/images/daisyui-logo/daisyui-logomark.svg" alt="daisyUI Logo" />
+    <img class="size-32" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="daisyUI Logo" />
     <div class="flex gap-2 sm:gap-6 text-xs text-black">
-      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://raw.githubusercontent.com/daisyui/images/refs/heads/main/images/daisyui-logo/daisyui-logomark.svg">SVG</a>
-      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://raw.githubusercontent.com/daisyui/images/refs/heads/main/images/daisyui-logo/favicon-1024.png">PNG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/mark-static.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/mark-compressed.svg">Minified SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/daisyui-logo-2000.png">PNG</a>
     </div>
   </div>
   <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-black rounded-box py-12 px-4 flex flex-col gap-6 items-center">
-    <img class="size-32" src="https://raw.githubusercontent.com/daisyui/images/refs/heads/main/images/daisyui-logo/daisyui-logomark.svg" alt="daisyUI Logo" />
+    <img class="size-32" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="daisyUI Logo" />
     <div class="flex gap-2 sm:gap-6 text-xs text-white">
-      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://raw.githubusercontent.com/daisyui/images/refs/heads/main/images/daisyui-logo/daisyui-logomark.svg">SVG</a>
-      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://raw.githubusercontent.com/daisyui/images/refs/heads/main/images/daisyui-logo/favicon-1024.png">PNG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/mark-static.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/mark-compressed.svg">Minified SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/daisyui-logo-2000.png">PNG</a>
+    </div>
+  </div>
+</div>
+
+<div class="grid sm:grid-cols-2 gap-4">
+  <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-white rounded-box py-12 px-4 flex flex-col gap-6 items-center">
+    <img class="w-64 " src="https://img.daisyui.com/images/daisyui/type-dark.svg" alt="daisyUI Logo" />
+    <div class="flex gap-2 sm:gap-6 text-xs text-black">
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/type-dark.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/type-dark.png">PNG</a>
+    </div>
+  </div>
+  <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-black rounded-box py-12 px-4 flex flex-col gap-6 items-center">
+    <img class="w-64 " src="https://img.daisyui.com/images/daisyui/type-light.svg" alt="daisyUI Logo" />
+    <div class="flex gap-2 sm:gap-6 text-xs text-white">
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/type-light.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/type-light.png">PNG</a>
+    </div>
+  </div>
+</div>
+
+<div class="grid sm:grid-cols-2 gap-4">
+  <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-white rounded-box py-12 px-4 flex flex-col gap-6 items-center">
+    <img class="w-64 " src="https://img.daisyui.com/images/daisyui/horizontal-dark.svg" alt="daisyUI Logo" />
+    <div class="flex gap-2 sm:gap-6 text-xs text-black">
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/horizontal-dark.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/horizontal-dark.png">PNG</a>
+    </div>
+  </div>
+  <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-black rounded-box py-12 px-4 flex flex-col gap-6 items-center">
+    <img class="w-64 " src="https://img.daisyui.com/images/daisyui/horizontal-light.svg" alt="daisyUI Logo" />
+    <div class="flex gap-2 sm:gap-6 text-xs text-white">
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/horizontal-light.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/horizontal-light.png">PNG</a>
+    </div>
+  </div>
+</div>
+
+<div class="grid sm:grid-cols-2 gap-4">
+  <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-white rounded-box py-12 px-4 flex flex-col gap-6 items-center">
+    <img class="size-32" src="https://img.daisyui.com/images/daisyui/mark-rotating.svg" alt="daisyUI Logo" />
+    <div class="flex gap-2 sm:gap-6 text-xs text-black">
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/mark-rotating.svg">SVG</a>
+    </div>
+  </div>
+  <div class="m-2 outline-2 outline-offset-4 outline-base-content/5 bg-black rounded-box py-12 px-4 flex flex-col gap-6 items-center">
+    <img class="size-32" src="https://img.daisyui.com/images/daisyui/mark-rotating.svg" alt="daisyUI Logo" />
+    <div class="flex gap-2 sm:gap-6 text-xs text-white">
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/mark-rotating.svg">SVG</a>
     </div>
   </div>
 </div>

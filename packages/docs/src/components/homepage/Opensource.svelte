@@ -18,18 +18,20 @@
   })
 </script>
 
-<div class="w-full overflow-hidden px-2 py-40 lg:px-10">
+<div
+  class="w-full overflow-hidden px-2 py-40 lg:px-10"
+  style="background: radial-gradient(circle at 40% 35%, var(--color-info) -200%, transparent 35%), radial-gradient(circle at 60% 40%, var(--color-success) -200%, transparent 30%);"
+>
   <div class="text-center">
     <div class="h-6"></div>
-    <div>
+    <div class="px-6">
       <img
+        class="max-smsize-20 pointer-events-none inline-block align-bottom"
+        src="https://img.daisyui.com/images/daisyui/mark-rotating.svg"
+        alt="daisyUI logo"
+        width="400"
+        height="400"
         loading="lazy"
-        width="80"
-        height="80"
-        alt="heart emoji"
-        src="https://img.daisyui.com/images/emoji/heart-on-fire@80.webp"
-        srcset={`https://img.daisyui.com/images/emoji/heart-on-fire.webp 2x`}
-        class="pointer-events-none inline-block h-20 w-20 align-bottom"
       />
     </div>
     <div class="h-20"></div>

@@ -34,4 +34,4 @@
 [discord]: https://badgen.net/discord/members/S6TZxycVHs?label=Discord&color=1AD1A5
 [opencollectivebadge]: https://badgen.net/opencollective/backers/daisyui?label=Open%20Collective&color=1AD1A5
 [docs-url]: https://daisyui.com/
-[logo-url]: https://raw.githubusercontent.com/saadeghi/daisyui-images/master/images/daisyui-logo/favicon-192.png
+[logo-url]: https://img.daisyui.com/images/daisyui/daisyui-logo-192.png

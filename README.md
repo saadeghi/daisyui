@@ -29,7 +29,7 @@
 
 <div align="center">
 
-Sponsors and  backers
+Sponsors and backers
 
 [![][backers_org]][opencollective]
 [![][backers]][opencollective]
@@ -42,8 +42,7 @@ Contributors
 
 <div align="center">
 
-
-༼ つ ◕_◕ ༽つ  Please share
+༼ つ ◕_◕ ༽つ Please share
 
 [![][tweet]](https://twitter.com/intent/tweet?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://github.com/saadeghi/daisyui)
 
@@ -59,7 +58,7 @@ Contributors
 [opencollectivebadge]: https://badgen.net/opencollective/backers/daisyui?label=Open%20Collective&color=1AD1A5
 [tweet]: https://img.shields.io/twitter/url?label=Share&url=https%3A%2F%2Fgithub.com%2Fsaadeghi%2Fdaisyui
 [docs-url]: https://daisyui.com/
-[logo-url]: https://raw.githubusercontent.com/saadeghi/daisyui-images/master/images/daisyui-logo/favicon-192.png
+[logo-url]: https://img.daisyui.com/images/daisyui/daisyui-logo-192.png
 [opencollective]: https://opencollective.com/daisyui
 [sponsors]: https://opencollective.com/daisyui/tiers/premium-sponsor.svg?button=false&avatarHeight=60
 [backers]: https://opencollective.com/daisyui/backers.svg?button=false&width=978&avatarHeight=36

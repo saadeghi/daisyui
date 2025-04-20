@@ -7,6 +7,17 @@ desc: What is daisyUI and why should you use it?
   import Translate from "$components/Translate.svelte"
 </script>
 
+<div class="text-center">
+  <img
+    class="max-smsize-20 pointer-events-none inline-block align-bottom"
+    src="https://img.daisyui.com/images/daisyui/mark-rotating.svg"
+    alt="daisyUI logo"
+    width="400"
+    height="400"
+    loading="lazy"
+  />
+</div>
+
 ## What is daisyUI?
 
 daisyUI is a collection of CSS class names. These class names are a high-level abstraction of Tailwind CSS utility classes.  
@@ -22,6 +33,7 @@ daisyUI uses the Tailwind CSS plugin API to extend the available Tailwind CSS cl
 ## Why should I use daisyUI?
 
 **daisyUI is for you if you:**
+
 - Are tired of writing thousands of utility class names repeatedly
 - Want more readable and maintainable code
 - Need to design interfaces faster with less code
@@ -32,11 +44,11 @@ daisyUI uses the Tailwind CSS plugin API to extend the available Tailwind CSS cl
 - Want development speed and customization at the same time
 
 **daisyUI is not for you if you:**
+
 - Want to waste time re-inventing all the standard UI parts like buttons, cards, checkboxes, etc, for each project.
 - Want to swim in the ocean of thousands of class names and never find your way out.
 - Want to make your codebase a mess and spend hours figuring out what part of the code is responsible for what part of the UI.
 - Want to waste your time and money re-inventing the wheel instead of shipping your actual project.
-
 
 ## What's the difference between daisyUI and Tailwind CSS?
 
@@ -90,7 +102,7 @@ You can support daisyUI by using it in your projects, sharing it with your frien
 ## Can I use daisyUI without Tailwind CSS?
 
 Yes, daisyUI can be used standalone without Tailwind CSS. However, it's recommended to use daisyUI with Tailwind CSS. Here's why:  
-daisyUI provides pieces of UI you can use to make a website. Like Button, Toggle, Card, etc. You need something to glue these pieces together! For example you need flex box, grid, padding, margin, etc. Tailwind CSS provides these low-level utility classes that you can use to glue the UI pieces together. So daisyUI and Tailwind CSS are a perfect match. You can use daisyUI to design the UI parts and Tailwind CSS for layout, spacing, font-size and other low-level CSS rules.  
+daisyUI provides pieces of UI you can use to make a website. Like Button, Toggle, Card, etc. You need something to glue these pieces together! For example you need flex box, grid, padding, margin, etc. Tailwind CSS provides these low-level utility classes that you can use to glue the UI pieces together. So daisyUI and Tailwind CSS are a perfect match. You can use daisyUI to design the UI parts and Tailwind CSS for layout, spacing, font-size and other low-level CSS rules.
 
 Alternatively if you don't want to use Tailwind CSS, you can use daisyUI for components and write your own styles for layout, spacing, etc.
 
@@ -101,6 +113,5 @@ Yes, you can mix and match daisyUI with any UI framework that add styles based o
 ## Which frameworks can I use daisyUI with?
 
 ALL of them! daisyUI is framework agnostic. You can use it anywhere you can use CSS.
-
 
 ---

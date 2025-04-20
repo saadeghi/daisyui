@@ -87,7 +87,7 @@ In 2023 we released [npm init daisyui](/blog/npm-init-daisyui/) which is a CLI t
 Some people say it's a fried egg 🍳 and avocado 🥑, some people say it's a flower 🌼
 But we all agree that it's cute and simple.
 
-<img src="https://img.daisyui.com/images/daisyui-logo/daisyui-logotype.svg" alt="daisyUI logo" class="w-2/3 mx-auto bg-gray-100 rounded-box">
+<img src="https://img.daisyui.com/images/logo/horizontal-dark.svg" alt="daisyUI logo" class="w-2/3 mx-auto bg-gray-100 rounded-box">
 
 ## Website redesign
 
