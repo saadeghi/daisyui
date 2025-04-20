@@ -185,7 +185,7 @@
 </script>
 
 <div
-  class={`text-base-content pt-6 transition-colors duration-500 ${previewtabs === "Color Palette" ? "bg-base-100" : "bg-base-200"}`}
+  class={`text-base-content pt-6 transition-colors duration-500 ${previewtabs === "Components Demo" ? "bg-base-200" : "bg-base-100"}`}
 >
   <div class="flex items-center justify-between gap-4 px-8 ps-10">
     <h2 class="font-title text-lg md:max-lg:hidden">{previewtabs}</h2>

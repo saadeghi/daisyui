@@ -1,4 +1,6 @@
 <script>
+  import { browser } from "$app/environment"
+
   import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
   import Countup from "svelte-countup"
   import Install from "$components/homepage/Install.svelte"
@@ -13,22 +15,12 @@
 
   const { data } = $props()
 
-  let stargazers_count = $state(0)
-  let dependents_count = $state(0)
-  let npm_downloads_count_total = $state(0)
-
+  let stats = $state({})
   async function fetchStats() {
+    if (!browser) return
     const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/stats.json`)
-    const data = await response.json()
-    stargazers_count = data.stargazers_count
-    dependents_count = data.dependents_count
-    npm_downloads_count_total = data.npm_downloads_count_total
+    return await response.json()
   }
-  let statsPromise = fetchStats()
-
-  // $effect(() => {
-  //   fetchStats()
-  // })
 
   let isClipboardButtonPressed = $state(false)
   const copyText = (text) => {
@@ -50,20 +42,18 @@
     return capped * scale + to[0]
   }
   const animateValue = (targetElement, scrollPercentage, animateRange) => {
-    if (targetElement) {
-      return scaleValue(
-        ((scrollY - targetElement.offsetTop) / targetElement.clientHeight) * 100,
-        scrollPercentage,
-        animateRange,
-      )
-    }
-    return 0
+    if (!targetElement) return 0
+    return scaleValue(
+      ((scrollY - targetElement.offsetTop) / targetElement.clientHeight) * 100,
+      scrollPercentage,
+      animateRange,
+    )
   }
 
   let section = $state([])
 
   const demo_1_ClassNames = [
-    "bg-zinc-100 border font-semibold text-zinc-900 text-sm px-4 duration-200 py-2.5 transition-all hover:border-zinc-300 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 active:translate-y-[0.5px] inline-flex gap-2 rounded-sm active:border-zinc-300 active:bg-zinc-200 active:shadow-none text-center align-middle cursor-pointer border-zinc-200 dark:border-zinc-900 dark:bg-neutral-900 dark:text-zinc-300 dark:hover:border-zinc-950 dark:hover:bg-zinc-950 dark:focus-visible:outline-zinc-200 dark:active:border-zinc-950 dark:active:bg-zinc-900",
+    "bg-zinc-100 border font-semibold text-zinc-900 text-sm px-4 duration-200 py-2.5 transition-all hover:border-zinc-300 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 active:translate-y-[0.5px] inline-flex gap-2 rounded-sm active:border-zinc-300 active:bg-zinc-200 active:shadow-none text-center align-middle cursor-pointer border-zinc-200 dark:border-zinc-700 dark:bg-neutral-700 dark:text-zinc-300 dark:hover:border-zinc-950 dark:hover:bg-zinc-950 dark:focus-visible:outline-zinc-200 dark:active:border-zinc-950 dark:active:bg-zinc-900",
     "btn",
   ]
   const demo_1_ClassNameHandler = $derived(() => {
@@ -80,20 +70,20 @@
     if (
       section.hero &&
       (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 65 &&
-      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 < 80
+      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 < 72
     ) {
       return demo_1_ClassNames[0].slice(
         0,
-        Math.trunc(animateValue(section.hero, [68, 74], [demo_1_ClassNames[0].length, 0])),
+        Math.trunc(animateValue(section.hero, [68, 71], [demo_1_ClassNames[0].length, 0])),
       )
     }
     if (
       section.hero &&
-      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 80
+      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 72
     ) {
       return demo_1_ClassNames[1].slice(
         0,
-        Math.trunc(animateValue(section.hero, [74, 80], [0, demo_1_ClassNames[1].length])),
+        Math.trunc(animateValue(section.hero, [71, 72], [0, demo_1_ClassNames[1].length])),
       )
     }
     return ""
@@ -101,7 +91,7 @@
   const demo_1_StyleHandler = $derived(() => {
     if (
       section.hero &&
-      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 80
+      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 72
     ) {
       return "text-teal-700"
     }
@@ -110,7 +100,7 @@
   const demo_1_ElementTextHandler = $derived(() => {
     if (
       section.hero &&
-      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 80
+      (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 72
     ) {
       return "daisyUI Button"
     }
@@ -1943,19 +1933,17 @@
       >
         <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
-            {#await statsPromise}
-              <div class="loading"></div>
-            {:then}
+            {#await fetchStats() then stats}
               <Countup
-                initial={stargazers_count - 50}
-                value={stargazers_count + 50}
+                initial={stats.stargazers_count - 50}
+                value={stats.stargazers_count + 50}
                 roundto={10}
                 duration={10 * 1000}
               />
             {/await}
           </span>
           <span class="hidden motion-reduce:inline">
-            {stargazers_count.toLocaleString("en-US")}
+            {stats.stargazers_count?.toLocaleString("en-US")}
           </span>
         </div>
         <a
@@ -1977,19 +1965,17 @@
       >
         <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
-            {#await statsPromise}
-              <div class="loading"></div>
-            {:then}
+            {#await fetchStats() then stats}
               <Countup
-                initial={dependents_count - 200}
-                value={dependents_count + 200}
+                initial={stats.dependents_count - 200}
+                value={stats.dependents_count + 200}
                 roundto={10}
                 duration={10 * 1000}
               />
             {/await}
           </span>
           <span class="hidden motion-reduce:inline">
-            {dependents_count.toLocaleString("en-US")}
+            {stats.dependents_count?.toLocaleString("en-US")}
           </span>
         </div>
         <a
@@ -2011,19 +1997,17 @@
       >
         <div class="font-title text-[clamp(2rem,6vw,4rem)] font-black tabular-nums">
           <span class="motion-reduce:hidden">
-            {#await statsPromise}
-              <div class="loading"></div>
-            {:then}
+            {#await fetchStats() then stats}
               <Countup
-                initial={npm_downloads_count_total - 500}
-                value={npm_downloads_count_total + 500}
+                initial={stats.npm_downloads_count_total - 500}
+                value={stats.npm_downloads_count_total + 500}
                 roundto={100}
                 duration={20 * 1000}
               />
             {/await}
           </span>
           <span class="hidden motion-reduce:inline">
-            {npm_downloads_count_total.toLocaleString("en-US")}
+            {stats.npm_downloads_count_total?.toLocaleString("en-US")}
           </span>
         </div>
         <a
