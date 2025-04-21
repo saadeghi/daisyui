@@ -33,7 +33,7 @@
         </figure>
       {/if}
       <div class="card-body">
-        <h2 class="card-title">
+        <h2 class="card-title font-title">
           {post.title}
         </h2>
         <p class="text-xs opacity-60">

@@ -355,7 +355,7 @@
           </span>
         {/if}
 
-        <h1 class="text-4xl font-bold">{data.product.title}</h1>
+        <h1 class="font-title text-4xl font-bold">{data.product.title}</h1>
       </div>
       <div class="flex items-start justify-between">
         <div class="flex gap-2">
@@ -615,10 +615,12 @@
     <div class="">
       <!-- data.product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
       {#each [...(data.product.faq ?? []), ...data.faq] as item}
-        <div class="collapse-plus bg-base-100 border-base-300 collapse mb-4 border">
-          <input type="radio" name="faq" checked="checked" />
-          <div class="collapse-title text-lg font-semibold">{item.Q}</div>
-          <div class="collapse-content text-base-content/70 text-xs">
+        <div class="collapse-plus collapse">
+          <input type="radio" name="faq" checked="checked" class="min-h-0!" />
+          <div class="collapse-title min-h-0! text-sm font-semibold">{item.Q}</div>
+          <div
+            class="collapse-content text-base-content/70 border-base-content/10 ms-4 border-s-2 px-6 text-xs"
+          >
             {item.A}
           </div>
         </div>

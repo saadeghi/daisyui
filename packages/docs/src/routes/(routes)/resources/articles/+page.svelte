@@ -29,7 +29,7 @@
       rel="noopener noreferrer"
     >
       <div>
-        <h2 class="text-xl font-bold group-hover:underline">{article.title}</h2>
+        <h2 class="font-title text-xl font-bold group-hover:underline">{article.title}</h2>
         <p class="text-base-content/60 text-sm font-bold">by {article.site}</p>
       </div>
       <svg

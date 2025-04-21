@@ -434,7 +434,7 @@
     class:max-md:hidden={dockActiveItem !== "themes"}
   >
     <div class="mb-4 flex items-center justify-between gap-2">
-      <h2 class="ms-2 font-bold">Themes</h2>
+      <h2 class="font-title ms-2 font-semibold">Themes</h2>
 
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-ghost btn-square btn-sm m-1">
