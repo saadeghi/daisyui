@@ -78,6 +78,7 @@ Please do not modify, distort, or alter the logo.
     <img class="w-64 " src="https://img.daisyui.com/images/daisyui/type-dark.svg" alt="daisyUI Logo" />
     <div class="flex gap-2 sm:gap-6 text-xs text-black">
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/type-dark.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/type-dark-compressed.svg">Minified SVG</a>
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/type-dark.png">PNG</a>
     </div>
   </div>
@@ -85,6 +86,7 @@ Please do not modify, distort, or alter the logo.
     <img class="w-64 " src="https://img.daisyui.com/images/daisyui/type-light.svg" alt="daisyUI Logo" />
     <div class="flex gap-2 sm:gap-6 text-xs text-white">
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/type-light.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/type-light-compressed.svg">Minified SVG</a>
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/type-light.png">PNG</a>
     </div>
   </div>
@@ -95,6 +97,7 @@ Please do not modify, distort, or alter the logo.
     <img class="w-64 " src="https://img.daisyui.com/images/daisyui/horizontal-dark.svg" alt="daisyUI Logo" />
     <div class="flex gap-2 sm:gap-6 text-xs text-black">
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/horizontal-dark.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/horizontal-dark-compressed.svg">Minified SVG</a>
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-black" href="https://img.daisyui.com/images/daisyui/horizontal-dark.png">PNG</a>
     </div>
   </div>
@@ -102,6 +105,7 @@ Please do not modify, distort, or alter the logo.
     <img class="w-64 " src="https://img.daisyui.com/images/daisyui/horizontal-light.svg" alt="daisyUI Logo" />
     <div class="flex gap-2 sm:gap-6 text-xs text-white">
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/horizontal-light.svg">SVG</a>
+      <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/horizontal-light-compressed.svg">Minified SVG</a>
       <a target="_blank" rel="noopener, noreferrer" class="no-underline hover:underline text-white" href="https://img.daisyui.com/images/daisyui/horizontal-light.png">PNG</a>
     </div>
   </div>

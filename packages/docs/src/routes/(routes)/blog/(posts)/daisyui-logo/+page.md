@@ -26,7 +26,7 @@ Today we're having a brand refresh for daisyUI!
   />
 </div>
 
-The new logo moves away from the minimal geometric shapes and focuses on a more playful and friendly design. I've been picky about the logo for a long time, and I think this new design represents daisyUI in a a more accurate way.
+The new logo moves away from the minimal geometric shapes and focuses on a more playful and friendly design. I've been picky about the logo for a long time, and I think this new design represents daisyUI in a more accurate way.
 
 [Here you can get the files in PNG and SVG formats](/brand/). And if you're using daisyUI logo in your project, please consider using the new logo.
 
