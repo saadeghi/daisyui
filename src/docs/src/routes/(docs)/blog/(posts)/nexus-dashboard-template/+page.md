@@ -1,21 +1,30 @@
 ---
-title: Nexus - Client and Admin Dashboard
-desc: A flexible admin dashboard template built for easy customization and smooth integration
+title: Nexus - Admin and Client Dashboard
+desc: A modern, flexible admin and client dashboard template built with daisyUI. Clean, responsive, and easy to customize and integrate.
 published: true
-date: 2025-02-14
+date: 2025-04-22
 author: Denish Navadiya
 thumbnail: https://img.daisyui.com/images/blog/nexus-dashboard-template-thumbnail.webp
 tags:
   - Templates
 ---
 
-Building an admin dashboard isn't easy. Developers need responsive designs and work across frameworks, while buyers look for simplicity, flexibility, and customization. Finding the right balance can be tricky.
+Building an admin dashboard isn’t easy. Developers need responsive designs that work across frameworks. Buyers want something simple, flexible, and easy to customize. It’s hard to get all of that right. We solve those problems. 
 
-## Introducing Nexus
+## Nexus 2.2 is here! Admin and client dashboard template
 
-We redesigned the Nexus Admin Dashboard to make things easier. Built with DaisyUI, it helps developers create responsive, great-looking dashboards while giving buyers a flexible and customizable solution.
+- You can purchase the Nexus Dashboard from the [daisyUI store](https://daisyui.com/store/244268/) and follow installations steps to set it up.
+- If you already purchased, get the new version for free from https://app.lemonsqueezy.com/my-orders
+- To upgrade to a higher plan, email us at help@daisyui.com to receive a discount code.
 
-You can purchase the [Nexus Dashboard](https://www.daisyui.com/store) from the daisyUI store and follow these steps to set it up.
+## Dev Story
+
+It started with React and Next.js, building out the basics like an ecommerce dashboard, file manager, and a few core components. Then came the HTML version, more ecommerce pages, and chart support.
+SvelteKit followed with a CRM dashboard, cleaner forms, and improved components.
+
+Now with v2.2, it's moving into Gen AI with new pages, a fresh dashboard, and a built-in calendar.
+
+Each update includes the latest dependencies and fixes for any bugs we've found or that others have reported. Check out the official [Nexus docs](https://nexus.daisyui.com/docs/) for the changelog and upcoming plans.
 
 ## Installation
 
@@ -47,31 +56,14 @@ npm run preview
 
 ## Customization
 
-### Logo
+### Changing the logo
 
 To change the logo, replace the following images with your own.
 
-- `/public/images/logo/logo-light.png`  
+- `/public/images/logo/logo-light.png`
 - `/public/images/logo/logo-dark.png`
 
-### Tailwind CSS Specific
-
-`/styles/tailwind.css` includes base variants and utilities (like dark mode, container, etc.). You can add or modify this file for your specific needs.
-
-```css
-@import "tailwindcss";
-
-@variant dark {
-    /* variant: dark */
-}
-
-@utility container {
-    /* utility: container */    
-}
-
-/* add: your tailwindcss specific things  */
-```
-### Theme
+### Customizing daisyUI themes
 
 `/styles/daisyui.css` contains the DaisyUI plugin and themes. You can add or modify themes and their options, including layout colors (background, sidebar, and topbar).
 
@@ -97,7 +89,9 @@ To change the logo, replace the following images with your own.
 /* add: new theme here */
 ```
 
-### Typography
+We've customized some DaisyUI styles. To match Nexus exactly, copy styles/custom/components.css into your project.
+
+### Change the font
 
 `/styles/typography.css` contains all typography-related styles. We use Google Fonts (@import url('...')) for the font family, which you can change to your preference.
 
@@ -117,9 +111,9 @@ To change the logo, replace the following images with your own.
 }
 ```
 
-### Layout    
+### Customizing the dashboard layout
 
-`/styles/custom/layout.css` contains the layout CSS, where you can modify all aspects related to the admin layout, including the sidebar, topbar, rightbar, and content area.  
+`/styles/custom/layout.css` contains the layout CSS, where you can modify all aspects related to the admin layout, including the sidebar, topbar, rightbar, and content area.
 
 ```css
 :root {
@@ -130,12 +124,13 @@ To change the logo, replace the following images with your own.
 /* update: layout related styles ... */
 ```
 
-### Custom CSS
+### Customizing styles
 
 Inside `/styles/custom/**` folder:
 
+- `layout.css` contains the styles for the topbar, sidebar, rightbar.
 - `animation.css` includes all animation keyframes and utilities.
-`components.css` contains slight overrides to DaisyUI components. If you don't need any overrides, you can remove this file.
+  `components.css` contains minor overrides to DaisyUI components. If you don't need any overrides, you can remove this file.
 - `plugins.css` handles plugin overrides, ensuring compatibility with other plugins' themes, matching Nexus and DaisyUI styles.
 - `iconify.js` is the plugin for Iconify, allowing you to add additional [icon sets](https://icon-sets.iconify.design/).
 
@@ -160,26 +155,16 @@ If you need to use the `material` theme in your project, copy the following line
 ```
 
 You can now apply the theme by setting the `data-theme="material"` attribute on the HTML tag.
- 
 
-### Customizing the CSS for a component
+### More details
+For detailed information on specific topics such as dependencies, framework integration, roadmap, changelog, and more, visit official [Nexus documentation](https://nexus.daisyui.com/docs/)
 
-We’ve overridden some of DaisyUI’s default styles. If you want your admin to look exactly like Nexus, you’ll need to copy `styles/custom/components.css` into your project. You can either add the CSS directly to your stylesheet or import it as a separate CSS file.
-
-### Apply layout styles
-
-Copy `styles/custom/layout.css` into your project. It contains the styles for the topbar, sidebar, rightbar, and content.
-
-### Other topics
-For more detailed information on specific topics such as dependencies, framework integration, roadmap, changelog, and more, visit our [Nexus documentation](https://nexus.daisyui.com/docs/)  
-
-## Built by a Developer, for Developers
-
+## Every project needs a dashboard
 
 Nexus, built with DaisyUI, makes dashboard creation simple and efficient. It’s easy to customize, integrates smoothly, and saves you valuable time. Try it today!
 
-We value your feedback! Share your thoughts by filling out [feedback form](https://forms.gle/byxiWEUw6SM84AXA9)  
+We value your feedback! Share your thoughts by filling out the [feedback form](https://forms.gle/byxiWEUw6SM84AXA9)
 
 ## Need help?
 
-Have questions or need help? Join our [Discord community](https://daisyui.com/discord/) for support and troubleshooting.
+Got questions or need help? Join our [Discord](https://daisyui.com/discord/) for support and troubleshooting, or just drop us an email at help@daisyui.com
