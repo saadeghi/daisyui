@@ -25,7 +25,7 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
-### ~Footer (vertical be default, horizontal for sm and up)
+### ~Footer (vertical by default, horizontal for sm and up)
 <footer class="p-10 footer sm:footer-horizontal bg-neutral text-neutral-content rounded">
   <nav>
     <h6 class="footer-title">Services</h6>
