@@ -74,8 +74,8 @@
 
 .tooltip {
   &.tooltip-open,
-  &[data-tip]:hover,
-  &:hover,
+  &[data-tip]:not([data-tip=""]):hover,
+  &:not(:has(.tooltip-content:empty)):has(.tooltip-content):hover,
   &:has(:focus-visible) {
     > .tooltip-content,
     &[data-tip]:before,
