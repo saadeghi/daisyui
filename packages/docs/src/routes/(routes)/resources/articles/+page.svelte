@@ -3,7 +3,11 @@
   let { data } = $props()
 </script>
 
-<SEO title="daisyUI community articles" desc="Tailwind CSS articles and daisyUI tutorials" />
+<SEO
+  title="daisyUI community articles"
+  desc="Tailwind CSS articles and daisyUI tutorials"
+  img="https://img.daisyui.com/images/resources.webp"
+/>
 
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">

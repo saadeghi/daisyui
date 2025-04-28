@@ -108,8 +108,11 @@
   )
 </script>
 
-<SEO title="Official daisyUI Store" desc="daisyUI Store - Professional templates made by daisyUI" />
-
+<SEO
+  title="Official daisyUI Store"
+  desc="daisyUI Store - Professional templates made by daisyUI"
+  img="https://img.daisyui.com/images/store.webp"
+/>
 <div class="mx-4 flex flex-col justify-between gap-6 lg:flex-row">
   <div class="flex flex-col gap-2">
     <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">daisyUI store</h1>
