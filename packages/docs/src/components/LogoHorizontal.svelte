@@ -1,4 +1,5 @@
 <script>
+  // <animateTransform> is causing performance issues in Safari so we are disabling it on this page
   const gradientId = Math.random().toString(36).substring(2, 15)
 </script>
 
@@ -106,13 +107,13 @@
         transform="rotate(15 296.044 164.833)"
         fill="#FFA17A"
       />
-      <animateTransform
+      <!-- <animateTransform
         attributeName="transform"
         type="translate"
         values="0,0; 0,-3; 0,0; 0,0; 0,0"
         dur="5s"
         repeatCount="indefinite"
-      />
+      /> -->
     </g>
     <g>
       <rect
@@ -124,13 +125,13 @@
         transform="rotate(-15 123.752 172.934)"
         fill="#FFAB89"
       />
-      <animateTransform
+      <!-- <animateTransform
         attributeName="transform"
         type="translate"
         values="0,0; 0,-3; 0,0; 0,0; 0,0"
         dur="5s"
         repeatCount="indefinite"
-      />
+      /> -->
     </g>
     <g data-name="mouth">
       <path
