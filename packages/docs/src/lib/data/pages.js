@@ -44,20 +44,20 @@ export const pages = [
         href: "/docs/upgrade/",
       },
       {
-        name: "daisyUI 5 release notes",
+        name: "V5 release notes",
         tags: "",
         href: "/docs/v5/",
       },
       {
-        name: "Code editor and LLM setup",
+        name: "Code editor & LLM setup",
         tags: "llm editor vscode cursor zed",
         href: "/docs/editor/",
         badge: "new",
       },
       {},
       {
-        name: "Customize components",
-        tags: "customize components",
+        name: "Customize",
+        tags: "customize",
         href: "/docs/customize/",
       },
       {
@@ -81,12 +81,12 @@ export const pages = [
         href: "/docs/base/",
       },
       {
-        name: "Utilities and variables",
+        name: "Utilities & variables",
         tags: "Utilities utility class",
         href: "/docs/utilities/",
       },
       {
-        name: "Layout and Typography",
+        name: "Layout & Typography",
         tags: "layout typography padding margin grid flex spacing font",
         href: "/docs/layout-and-typography/",
       },

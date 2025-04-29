@@ -16,7 +16,7 @@
 
 <div
   data-sveltekit-preload-data
-  class={`bg-base-100/90 navbar sticky top-0 z-20 hidden items-center gap-2 px-4 py-2 backdrop-blur ${
+  class={`bg-base-100/90 navbar sticky top-0 z-20 hidden items-center gap-2 px-4 py-0 backdrop-blur ${
     $page.url.pathname == "/" ? "" : "lg:flex"
   } ${switchNavbarStyle ? "shadow-xs" : ""}`}
 >

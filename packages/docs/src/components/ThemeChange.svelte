@@ -17,11 +17,11 @@
   <div
     tabindex="0"
     role="button"
-    class={`btn btn-sm gap-1 ${btnClasses}`}
+    class={`btn group btn-sm gap-1.5 px-1.5 ${btnClasses}`}
     aria-label="Change Theme"
   >
     <div
-      class="bg-base-100 border-base-content/10 grid shrink-0 grid-cols-2 gap-0.5 rounded-md border p-1"
+      class="bg-base-100 group-hover:border-base-content/20 border-base-content/10 grid shrink-0 grid-cols-2 gap-0.5 rounded-md border p-1 transition-colors"
     >
       <div class="bg-base-content size-1 rounded-full"></div>
       <div class="bg-primary size-1 rounded-full"></div>
@@ -31,7 +31,7 @@
     <svg
       width="12px"
       height="12px"
-      class="mt-px hidden h-2 w-2 fill-current opacity-60 sm:inline-block"
+      class="mt-px hidden size-2 fill-current opacity-60 sm:inline-block"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 2048 2048"
     >

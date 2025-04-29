@@ -60,11 +60,17 @@
     >
   </p>
   <h1 class="font-title text-3xl font-bold lg:text-4xl">
-    daisyUI is a {data.library.name} Alternative
+    daisyUI is a better {data.library.name} Alternative
   </h1>
   <div class="h-6"></div>
-  <p class="text-base-content/80 text-lg italic">
+  <p class="text-base-content/70 mb-8 text-lg italic">
     {data.introText.replaceAll("{libraryName}", data.library.name)}
+  </p>
+  <p class="text-base-content/70 mb-8 text-lg">
+    {data.library.intro}
+  </p>
+  <p class="text-base-content/70 mb-8 text-lg">
+    {data.daisyui.intro}
   </p>
 
   <div class="h-16"></div>
@@ -115,6 +121,18 @@
       {/if}
     </section>
   {/each}
+
+  <section class="mb-20">
+    <h2 class="font-title mb-8 text-2xl font-semibold lg:text-3xl">
+      Why daisyUI is better than {data.library.name}
+    </h2>
+    <p class="text-base-content/70 mb-8 text-lg">
+      {data.library.nottouse}
+    </p>
+    <p class="text-base-content/70 mb-8 text-lg">
+      {data.daisyui.touse}
+    </p>
+  </section>
 
   <div class="h-16"></div>
   <h2 class="font-title text-3xl font-semibold">Install daisyUI</h2>

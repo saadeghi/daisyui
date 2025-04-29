@@ -94,7 +94,7 @@
         </div>
       {/if}
     </div>
-    <div class="flex">
+    <div class="flex xl:gap-1">
       {#if showComponentsBtn}
         <div class="hidden flex-none items-center lg:inline-block">
           <a
@@ -121,7 +121,7 @@
             href="/store/"
             class="btn btn-sm btn-ghost drawer-button font-normal"
           >
-            {$t("Store")}
+            {$t("Official Store")}
           </a>
         </div>
       {/if}

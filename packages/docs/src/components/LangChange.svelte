@@ -14,7 +14,7 @@
   <div
     tabindex="0"
     role="button"
-    class="btn btn-sm btn-ghost gap-1 text-[.5625rem] font-bold"
+    class="btn btn-sm btn-ghost gap-1 px-1.5 text-[.5625rem] font-bold"
     aria-label="Language"
     title="Change Language"
   >

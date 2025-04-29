@@ -59,7 +59,7 @@
 <div class="searchbox relative mx-3 w-full [&:has(input:focus)_kbd]:hidden" bind:this={seachboxEl}>
   <svg
     class={`pointer-events-none absolute z-10 my-2 ms-2 stroke-current opacity-60 ${
-      $page.url.pathname == "/" ? "text-current" : "text-base-content"
+      $page.url.pathname == "/" ? "hidden text-current" : "text-base-content"
     }`}
     width="16"
     height="16"

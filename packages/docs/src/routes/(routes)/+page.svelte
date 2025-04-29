@@ -663,7 +663,7 @@
                                   loading="lazy"
                                   width="40"
                                   height="40"
-                                  src="https://img.daisyui.com/images/profile/demo/1@94.webp"
+                                  src="https://img.daisyui.com/images/profile/demo/superperson@94.webp"
                                   alt="tailwind css avatar component"
                                 />
                               </div>

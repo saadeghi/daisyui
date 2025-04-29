@@ -4,39 +4,39 @@ desc: Chat bubbles are used to show one line of conversation and all its data, i
 layout: components
 classnames:
   component:
-  - class: chat
-    desc: Container for one line of conversation and its data
+    - class: chat
+      desc: Container for one line of conversation and its data
   part:
-  - class: chat-image
-    desc: Author image
-  - class: chat-header
-    desc: Text above the chat bubble
-  - class: chat-footer
-    desc: Text below the chat bubble
-  - class: chat-bubble
-    desc: Chat bubble
+    - class: chat-image
+      desc: Author image
+    - class: chat-header
+      desc: Text above the chat bubble
+    - class: chat-footer
+      desc: Text below the chat bubble
+    - class: chat-bubble
+      desc: Chat bubble
   placement:
-  - class: chat-start
-    desc: Aligns chat to start horizontally (required)
-  - class: chat-end
-    desc: Aligns chat to end horizontally (required)
+    - class: chat-start
+      desc: Aligns chat to start horizontally (required)
+    - class: chat-end
+      desc: Aligns chat to end horizontally (required)
   color:
-  - class: chat-bubble-neutral
-    desc: neutral color for chat-bubble
-  - class: chat-bubble-primary
-    desc: primary color for chat-bubble
-  - class: chat-bubble-secondary
-    desc: secondary color for chat-bubble
-  - class: chat-bubble-accent
-    desc: accent color for chat-bubble
-  - class: chat-bubble-info
-    desc: info color for chat-bubble
-  - class: chat-bubble-success
-    desc: success color for chat-bubble
-  - class: chat-bubble-warning
-    desc: warning color for chat-bubble
-  - class: chat-bubble-error
-    desc: error color for chat-bubble
+    - class: chat-bubble-neutral
+      desc: neutral color for chat-bubble
+    - class: chat-bubble-primary
+      desc: primary color for chat-bubble
+    - class: chat-bubble-secondary
+      desc: secondary color for chat-bubble
+    - class: chat-bubble-accent
+      desc: accent color for chat-bubble
+    - class: chat-bubble-info
+      desc: info color for chat-bubble
+    - class: chat-bubble-success
+      desc: success color for chat-bubble
+    - class: chat-bubble-warning
+      desc: warning color for chat-bubble
+    - class: chat-bubble-error
+      desc: error color for chat-bubble
 ---
 
 <script>
@@ -45,6 +45,7 @@ classnames:
 </script>
 
 ### ~chat-start and chat-end
+
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
@@ -67,13 +68,13 @@ classnames:
 </div>
 ```
 
-
 ### ~Chat with image
+
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-bubble">It was said that you would, destroy the Sith, not join them.</div>
@@ -81,7 +82,7 @@ classnames:
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-bubble">It was you who would bring balance to the Force</div>
@@ -89,7 +90,7 @@ classnames:
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-bubble">Not leave it in Darkness</div>
@@ -102,7 +103,8 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+      />
     </div>
   </div>
   <div class="$$chat-bubble">It was said that you would, destroy the Sith, not join them.</div>
@@ -112,7 +114,8 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+      />
     </div>
   </div>
   <div class="$$chat-bubble">It was you who would bring balance to the Force</div>
@@ -122,20 +125,21 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+      />
     </div>
   </div>
   <div class="$$chat-bubble">Not leave it in Darkness</div>
 </div>
 ```
 
-
 ### ~Chat with image, header and footer
+
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-header">
@@ -150,7 +154,7 @@ classnames:
   <div class="chat chat-end">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
       </div>
     </div>
     <div class="chat-header">
@@ -170,7 +174,8 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+      />
     </div>
   </div>
   <div class="$$chat-header">
@@ -185,7 +190,8 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp"
+      />
     </div>
   </div>
   <div class="$$chat-header">
@@ -197,8 +203,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Chat with header and footer
+
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-header">
@@ -241,8 +247,8 @@ classnames:
 </div>
 ```
 
-
 ### ~Chat Bubble with colors
+
 <div class="w-full">
   <div class="chat chat-start">
     <div class="chat-bubble chat-bubble-primary">What kind of nonsense is this</div>
@@ -275,10 +281,14 @@ classnames:
   <div class="$$chat-bubble $$chat-bubble-primary">What kind of nonsense is this</div>
 </div>
 <div class="$$chat $$chat-start">
-  <div class="$$chat-bubble $$chat-bubble-secondary">Put me on the Council and not make me a Master!??</div>
+  <div class="$$chat-bubble $$chat-bubble-secondary">
+    Put me on the Council and not make me a Master!??
+  </div>
 </div>
 <div class="$$chat $$chat-start">
-  <div class="$$chat-bubble $$chat-bubble-accent">That's never been done in the history of the Jedi.</div>
+  <div class="$$chat-bubble $$chat-bubble-accent">
+    That's never been done in the history of the Jedi.
+  </div>
 </div>
 <div class="$$chat $$chat-start">
   <div class="$$chat-bubble $$chat-bubble-neutral">It's insulting!</div>

@@ -266,11 +266,11 @@
   <div class="px-8 py-6">
     {#if previewtabs === "Components Demo"}
       <div
-        class="text-base-content [&>.card]:bg-base-100 mx-auto grid gap-6 pb-20 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 [&_.carbon-responsive-wrap]:flex-nowrap! [&_.carbon-responsive-wrap]:text-[11px]! [&_:is(div,button)]:[transition:background-color_0ms,border-color_100ms,box-shadow_300ms,border-radius_500ms_ease-out] [&>*]:mb-6 [&>*]:break-inside-avoid"
+        class="text-base-content mx-auto grid gap-6 pb-20 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 [&_.carbon-responsive-wrap]:flex-nowrap! [&_.carbon-responsive-wrap]:text-[11px]! [&_:is(div,button)]:[transition:background-color_0ms,border-color_100ms,box-shadow_300ms,border-radius_500ms_ease-out] [&>*]:mb-6"
       >
         <div class="flex flex-col gap-4">
           <!-- filters -->
-          <div class="card card-border border-base-300 card-sm">
+          <div class="card bg-base-100 card-border border-base-300 card-sm">
             <div class="card-body gap-4">
               <h2 class="flex items-center justify-between">
                 <span class="flex items-center gap-2 font-semibold">
@@ -367,7 +367,7 @@
           </div>
 
           <!-- calendar -->
-          <div class="card card-border border-base-300 card-sm overflow-hidden">
+          <div class="card bg-base-100 card-border border-base-300 card-sm overflow-hidden">
             <div class="card-body gap-4">
               <div class="border-b-base-300 grid grid-cols-7 border-b border-dashed pb-3">
                 <div class="rounded-field flex flex-col items-center px-2 py-1">
@@ -462,7 +462,7 @@
           </div>
 
           <!-- range -->
-          <div class="card card-border border-base-300 card-sm">
+          <div class="card bg-base-100 card-border border-base-300 card-sm">
             <div class="card-body gap-4">
               <h2 class="flex items-center justify-between">
                 <span class="flex items-center gap-2 font-semibold">
@@ -494,7 +494,7 @@
           </div>
 
           <!-- product -->
-          <div class="card card-border border-base-300 card-sm">
+          <div class="card bg-base-100 card-border border-base-300 card-sm">
             <figure class="p-2">
               <img
                 class="rounded-[calc(var(--radius-box)-.5rem)]"
@@ -530,7 +530,7 @@
           </div>
 
           <!-- search -->
-          <div class="card card-border border-base-300 card-sm">
+          <div class="card bg-base-100 card-border border-base-300 card-sm">
             <div class="card-body gap-4">
               <div class="join">
                 <label class="join-item input-border input flex w-auto items-center gap-2">
@@ -554,7 +554,7 @@
           </div>
 
           <!-- form -->
-          <div class="card card-border border-base-300 card-sm overflow-hidden">
+          <div class="card bg-base-100 card-border border-base-300 card-sm overflow-hidden">
             <div class="border-base-300 border-b border-dashed">
               <div class="flex items-center gap-2 p-4">
                 <div class="grow">
@@ -637,7 +637,7 @@
         </div>
         <div class="flex flex-col gap-4">
           <!-- chart -->
-          <div class="card card-border border-base-300 card-sm">
+          <div class="card bg-base-100 card-border border-base-300 card-sm">
             <div class="card-body gap-4">
               <div class="*:bg-base-content mt-4 flex h-24 items-end gap-2 *:w-full *:rounded-sm">
                 <div style="height: 10%"></div>
@@ -669,7 +669,7 @@
           </div>
 
           <!-- stat -->
-          <div class="card card-border border-base-300 w-full">
+          <div class="card bg-base-100 card-border border-base-300 w-full">
             <div
               class="stats bg-base-100 w-full overflow-hidden shadow-[0_.1rem_.5rem_-.3rem_#0003]"
             >
@@ -701,7 +701,7 @@
           </div>
 
           <!-- list -->
-          <div class="card card-border border-base-300 card-sm">
+          <div class="card bg-base-100 card-border border-base-300 card-sm">
             <div class="card-body gap-4">
               <h2 class="flex items-center justify-between">
                 <span class="flex items-center gap-2 font-semibold">
@@ -758,7 +758,7 @@
           </div>
 
           <!-- stat -->
-          <div class="card card-border border-base-300 w-full">
+          <div class="card bg-base-100 card-border border-base-300 w-full">
             <div class="stats">
               <div class="stat">
                 <div class="stat-title">
@@ -785,7 +785,7 @@
           </div>
 
           <!-- textarea -->
-          <div class="card card-border border-base-300 card-sm overflow-hidden">
+          <div class="card bg-base-100 card-border border-base-300 card-sm overflow-hidden">
             <div class="border-base-300 border-b border-dashed">
               <div class="flex items-center gap-2 p-4">
                 <div class="grow">
@@ -849,14 +849,14 @@
           </div>
 
           <!-- chat -->
-          <div class="card card-border border-base-300 card-sm overflow-hidden">
+          <div class="card bg-base-100 card-border border-base-300 card-sm overflow-hidden">
             <div class="card-body">
               <div class="chat chat-start">
                 <div class="chat-image avatar">
                   <div class="w-8 rounded-full">
                     <img
                       alt="Tailwind CSS chat bubble component"
-                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      src="https://img.daisyui.com/images/profile/demo/yellingwoman@94.webp"
                     />
                   </div>
                 </div>
@@ -864,7 +864,7 @@
                   Obi-Wan Kenobi
                   <time class="text-xs opacity-50">12:45</time>
                 </div>
-                <div class="chat-bubble chat-bubble-neutral">You were the Chosen One!</div>
+                <div class="chat-bubble chat-bubble-neutral">It's over Anakin</div>
               </div>
 
               <div class="chat chat-start">
@@ -872,15 +872,11 @@
                   <div class="w-8 rounded-full">
                     <img
                       alt="Tailwind CSS chat bubble component"
-                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      src="https://img.daisyui.com/images/profile/demo/yellingwoman@94.webp"
                     />
                   </div>
                 </div>
-                <div class="chat-header">
-                  Obi-Wan Kenobi
-                  <time class="text-xs opacity-50">12:45</time>
-                </div>
-                <div class="chat-bubble chat-bubble-neutral">You were the Chosen One!</div>
+                <div class="chat-bubble chat-bubble-neutral">I have the high ground</div>
                 <div class="chat-footer opacity-50">Delivered</div>
               </div>
 
@@ -889,15 +885,11 @@
                   <div class="w-8 rounded-full">
                     <img
                       alt="Tailwind CSS chat bubble component"
-                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      src="https://img.daisyui.com/images/profile/demo/yellingcat@94.webp"
                     />
                   </div>
                 </div>
-                <div class="chat-header">
-                  Anakin
-                  <time class="text-xs opacity-50">12:46</time>
-                </div>
-                <div class="chat-bubble chat-bubble-neutral">I hate you!</div>
+                <div class="chat-bubble chat-bubble-neutral">You underestimate my power</div>
                 <div class="chat-footer opacity-50">Seen at 12:46</div>
               </div>
             </div>
@@ -960,7 +952,7 @@
           </div>
 
           <!-- menu -->
-          <div class="card card-border border-base-300">
+          <div class="card bg-base-100 card-border border-base-300">
             <ul class="menu w-full">
               <li class="menu-title">Admin panel</li>
               <li>
@@ -1085,7 +1077,7 @@
         </div>
         <div class="flex flex-col gap-4">
           <!-- music -->
-          <div class="card card-border border-base-300 card-sm overflow-hidden">
+          <div class="card bg-base-100 card-border border-base-300 card-sm overflow-hidden">
             <div class="card-body my-2">
               <div class="flex items-center justify-around">
                 <button class="btn btn-square btn-neutral">
@@ -1283,12 +1275,10 @@
           </div>
 
           <!-- code -->
-          <div class="card card-border border-base-300 w-full">
-            <div class="mockup-code">
-              <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
-              <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
-              <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
-            </div>
+          <div class="mockup-code">
+            <pre class="text-sm" data-prefix="$"><code>npm i daisyui</code></pre>
+            <pre class="text-sm" data-prefix=">"><code>installing...</code></pre>
+            <pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
           </div>
 
           <!-- alerts -->
@@ -1500,7 +1490,9 @@
           </ul>
 
           <!-- pricing -->
-          <div class="card card-border border-base-300 from-base-content/5 bg-linear-to-bl to-50%">
+          <div
+            class="card bg-base-100 card-border border-base-300 from-base-content/5 bg-linear-to-bl to-50%"
+          >
             <div class="flex justify-center">
               <div class="tabs tabs-box bg-base-300 m-4 inline-flex flex-nowrap">
                 <input
@@ -1597,11 +1589,11 @@
             </div>
           </div>
 
-          <div
+          <!-- <div
             class="bg-base-100 border-base-300 rounded-box overflow-hidden border p-1 shadow-[0_.1rem_.5rem_-.3rem_#0003] [&_#carbonads]:bg-transparent! [&_img]:[border-radius:calc(var(--radius-box)-.5rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-1rem)_calc(var(--radius-box)-.5rem)]!"
           >
             <Carbon />
-          </div>
+          </div> -->
         </div>
       </div>
     {/if}
