@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.29 (2025-04-29)
+
+
+### Bug Fixes
+
+* table-zebra active row color. closes: [#3823](https://github.com/saadeghi/daisyui/issues/3823) ([cad94c2](https://github.com/saadeghi/daisyui/commit/cad94c24c06a197a45085d20254205119f632836))
+
 ## 5.0.28 (2025-04-23)
 
 ## 5.0.27 (2025-04-18)
