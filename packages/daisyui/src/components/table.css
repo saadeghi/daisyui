@@ -43,7 +43,7 @@
 .table-zebra {
   tbody {
     tr {
-      &:nth-child(even) {
+      &:where(:nth-child(even)) {
         @apply bg-base-200;
 
         :where(.table-pin-cols tr th) {
@@ -53,7 +53,7 @@
 
       &.row-hover {
         &,
-        &:nth-child(even) {
+        &:where(:nth-child(even)) {
           @apply hover:bg-base-300;
         }
       }
