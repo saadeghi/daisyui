@@ -76,7 +76,7 @@ classnames:
 
 ### ~Username requirement validator
 <form class="w-full max-w-xs">
-  <input type="input" class="input validator" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+  <input type="text" class="input validator" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
   <p class="validator-hint">
     Must be 3 to 30 characters
     <br/>containing only letters, numbers or dash
@@ -84,7 +84,7 @@ classnames:
 </form>
 
 ```html
-<input type="input" class="$$input $$validator" required placeholder="Username" 
+<input type="text" class="$$input $$validator" required placeholder="Username" 
   pattern="[A-Za-z][A-Za-z0-9\\-]*" minlength="3" maxlength="30" title="Only letters, numbers or dash" />
 <p class="$$validator-hint">
   Must be 3 to 30 characters
