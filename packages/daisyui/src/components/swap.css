@@ -28,6 +28,7 @@
   input:checked ~ .swap-on,
   input:indeterminate ~ .swap-indeterminate {
     @apply opacity-100;
+    backface-visibility: visible;
   }
 }
 
@@ -67,7 +68,6 @@
   input:indeterminate ~ .swap-on {
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    @apply opacity-100;
   }
 
   input:is(:checked, :indeterminate) ~ .swap-on,
