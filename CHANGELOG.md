@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.33 (2025-04-30)
+
+
+### Bug Fixes
+
+* swap indeterminate not being visible with flip animation. closes: [#3806](https://github.com/saadeghi/daisyui/issues/3806) ([42a2fb5](https://github.com/saadeghi/daisyui/commit/42a2fb57b6c9b530a04566def27e232b39289fb6))
+
 ## 5.0.32 (2025-04-30)
 
 
