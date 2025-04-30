@@ -7,6 +7,12 @@
     <loc>https://daisyui.com/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/angular-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/astro-component-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/blog/</loc>
   </url>
   <url>
@@ -271,6 +277,9 @@
     <loc>https://daisyui.com/components/validator/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/django-component-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/docs/base/</loc>
   </url>
   <url>
@@ -442,6 +451,33 @@
     <loc>https://daisyui.com/docs/v5/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/electron-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/htmx-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/laravel-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/lit-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/nextjs-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/nuxt-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/qwik-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/rails-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/react-component-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/resources/articles/</loc>
   </url>
   <url>
@@ -451,10 +487,22 @@
     <loc>https://daisyui.com/resources/videos/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/solid-component-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/store/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/svelte-component-library/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/theme-generator/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/unocss-component-library/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/vue-component-library/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/store/144550/</loc>
