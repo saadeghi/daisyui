@@ -1,15 +1,19 @@
 ---
-title: Nexus - Admin and Client Dashboard
+title: Nexus 2.2 dashboard template is here!
 desc: A modern, flexible admin and client dashboard template built with daisyUI. Clean, responsive, and easy to customize and integrate.
 published: true
-date: 2025-04-22
+date: 2025-04-30
 author: Denish Navadiya
 thumbnail: https://img.daisyui.com/images/blog/nexus-dashboard-template-thumbnail.webp
 tags:
   - Templates
 ---
 
-Building an admin dashboard isn’t easy. Developers need responsive designs that work across frameworks. Buyers want something simple, flexible, and easy to customize. It’s hard to get all of that right. We solve those problems. 
+<script>
+  import Translate from "$components/Translate.svelte"
+</script>
+
+Building an admin dashboard isn’t easy. Developers need responsive designs that work across frameworks. Buyers want something simple, flexible, and easy to customize. It’s hard to get all of that right. We solve those problems.
 
 ## Nexus 2.2 is here! Admin and client dashboard template
 
@@ -40,19 +44,19 @@ Start the development server (This will run your project in development mode):
 
 ```bash
 npm run dev
-``` 
+```
 
 Build for production:
 
 ```bash
 npm run build
-``` 
+```
 
 Preview the production build:
 
 ```bash
 npm run preview
-``` 
+```
 
 ## Customization
 
@@ -69,21 +73,21 @@ To change the logo, replace the following images with your own.
 
 ```css
 @plugin "daisyui" {
-    /* daisyUI options */
+  /* daisyUI options */
 }
 
 @plugin "daisyui/theme" {
-    name: "light";
+  name: "light";
 
-    /* update: primary */
-    --color-primary: #167bff;
-    --color-primary-content: #ffffff;
-    /* ... */
+  /* update: primary */
+  --color-primary: #167bff;
+  --color-primary-content: #ffffff;
+  /* ... */
 
-    /* update: layout */
-    --layout-background: #fafbfc;
-    --layout-sidebar-background: #ffffff;
-    --layout-topbar-background: #ffffff;
+  /* update: layout */
+  --layout-background: #fafbfc;
+  --layout-sidebar-background: #ffffff;
+  --layout-topbar-background: #ffffff;
 }
 
 /* add: new theme here */
@@ -97,17 +101,17 @@ We've customized some DaisyUI styles. To match Nexus exactly, copy styles/custom
 
 ```css
 /* update: font family url */
-@import url("https://..."); 
+@import url("https://...");
 
 @theme {
-    /* update: font family variable */
-    --font-body: "DM Sans", sans-serif;
-    
-     /* update: font size */
-    --text-sm: 14px;       
-    --text-base: 16px;
-    
-    /* add: more options related to font  */
+  /* update: font family variable */
+  --font-body: "DM Sans", sans-serif;
+
+  /* update: font size */
+  --text-sm: 14px;
+  --text-base: 16px;
+
+  /* add: more options related to font  */
 }
 ```
 
@@ -117,8 +121,8 @@ We've customized some DaisyUI styles. To match Nexus exactly, copy styles/custom
 
 ```css
 :root {
-    /* update: sidebar width,as you want */
-    --layout-sidebar-width: 256px;
+  /* update: sidebar width,as you want */
+  --layout-sidebar-width: 256px;
 }
 
 /* update: layout related styles ... */
@@ -134,7 +138,6 @@ Inside `/styles/custom/**` folder:
 - `plugins.css` handles plugin overrides, ensuring compatibility with other plugins' themes, matching Nexus and DaisyUI styles.
 - `iconify.js` is the plugin for Iconify, allowing you to add additional [icon sets](https://icon-sets.iconify.design/).
 
-
 ## How to use style into your project
 
 _**Note:** All styles (CSS) are defined in the `styles/**` folder, so you can refer to that for styling and use them directly in your project._
@@ -147,16 +150,17 @@ If you need to use the `material` theme in your project, copy the following line
 
 ```css
 @plugin "daisyui/theme" {
-    name: "material";
-    color-scheme: light;
-    --color-primary: #167bff;
-    /* ... */
+  name: "material";
+  color-scheme: light;
+  --color-primary: #167bff;
+  /* ... */
 }
 ```
 
 You can now apply the theme by setting the `data-theme="material"` attribute on the HTML tag.
 
 ### More details
+
 For detailed information on specific topics such as dependencies, framework integration, roadmap, changelog, and more, visit official [Nexus documentation](https://nexus.daisyui.com/docs/)
 
 ## Every project needs a dashboard
