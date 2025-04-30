@@ -156,6 +156,7 @@ const config = {
     components: "src/lib/mdsvex/layout-components.svelte",
     blog: "src/lib/mdsvex/layout-blog.svelte",
     docs: "src/lib/mdsvex/layout-docs.svelte",
+    contentLanding: "src/lib/mdsvex/layout-contentLanding.svelte",
   },
   highlight: {
     highlighter: async (code, lang = "text") => {

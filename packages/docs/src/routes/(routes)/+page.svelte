@@ -2171,7 +2171,7 @@
 <div class="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
   <div class="hero-content w-full text-center">
     <div class="w-full max-w-md">
-      <h2 class="mt-20 mb-8 text-[clamp(2rem,8vw,5rem)] font-black md:text-6xl">
+      <h2 class="font-title mt-20 mb-8 text-[clamp(2rem,8vw,5rem)] font-semibold md:text-6xl">
         {$t("install-title")}
       </h2>
       <div class="mx-auto my-2 w-full max-w-md">

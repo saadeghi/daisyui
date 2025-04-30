@@ -259,8 +259,7 @@
             </svg>
           </a>
         </div>
-        <a href="/brand/" class="link link-hover">Logo and branding</a>
-        <a href="/docs/faq/" class="link link-hover">{$t("FAQ")}</a>
+        <a href="/brand/" class="link link-hover">daisyUI Logo and brand</a>
         <a
           target="_blank"
           rel="noopener, noreferrer"
@@ -270,6 +269,7 @@
           {$t("license")}
           {@html newtabicon}
         </a>
+        <a href="/docs/faq/" class="link link-hover">{$t("FAQ")}</a>
         <a href="/docs/roadmap/" class="link link-hover">
           {$t("Roadmap")}
         </a>
@@ -306,7 +306,26 @@
         <a class="link link-hover" href="/resources/">{$t("Resources")}</a>
         <a class="link link-hover" href="/blog/">{$t("Blog")}</a>
         <a class="link link-hover" href="/store/">{$t("Store")}</a>
-        <a class="link link-hover" href="/store/351127/">Official daisyUI Figma Library</a>
+        <a class="link link-hover" href="/store/351127/">daisyUI Figma Library</a>
+      </div>
+      <div>
+        <span class="footer-title opacity-70">{$t("Frameworks")}</span>
+        <a class="link link-hover" href="/angular-component-library">Angular</a>
+        <a class="link link-hover" href="/astro-component-library">Astro</a>
+        <a class="link link-hover" href="/django-component-library">Django</a>
+        <!-- <a class="link link-hover" href="/electron-component-library">Electron</a> -->
+        <!-- <a class="link link-hover" href="/htmx-component-library">Htmx</a> -->
+        <a class="link link-hover" href="/laravel-component-library">Laravel</a>
+        <!-- <a class="link link-hover" href="/lit-component-library">Lit</a> -->
+        <a class="link link-hover" href="/nextjs-component-library">Nextjs</a>
+        <a class="link link-hover" href="/nuxt-component-library">Nuxt</a>
+        <!-- <a class="link link-hover" href="/qwik-component-library">Qwik</a> -->
+        <a class="link link-hover" href="/rails-component-library">Rails</a>
+        <a class="link link-hover" href="/react-component-library">React</a>
+        <!-- <a class="link link-hover" href="/solid-component-library">Solid</a> -->
+        <a class="link link-hover" href="/svelte-component-library">Svelte</a>
+        <!-- <a class="link link-hover" href="/unocss-component-library">UnoCSS</a> -->
+        <a class="link link-hover" href="/vue-component-library">Vue</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
@@ -321,6 +340,7 @@
         <a class="link link-hover" href="/compare/preline-vs-daisyui">Preline UI vs daisyUI</a>
         <a class="link link-hover" href="/compare/chakra-vs-daisyui">Chakra UI vs daisyUI</a>
       </div>
+
       <div>
         <span class="footer-title opacity-70">{$t("related projects")}</span>
         <a
@@ -353,19 +373,10 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/willpinha/daisy-components"
-          class="link link-hover group"
-        >
-          willpinha components
-          {@html newtabicon}
-        </a>
-        <a
-          target="_blank"
-          rel="noopener, noreferrer"
           href="https://github.com/phcurado/daisy_ui_components"
           class="link link-hover group"
         >
-          phcurado components (Phoenix)
+          Phcurado (Phoenix)
           {@html newtabicon}
         </a>
         <a
@@ -404,7 +415,7 @@
         </div>
         <div class="text-left">
           <p class="text-base-content/70 text-xs">{$t("created-by")}</p>
-          <p class="text-base-content text-lg font-bold">Pouya Saadeghi</p>
+          <p class="text-base-content font-title text-lg font-semibold">Pouya Saadeghi</p>
         </div>
       </a>
       <div class="max-w-md grow text-left">

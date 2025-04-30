@@ -8,6 +8,7 @@ export const pagesThatDontNeedSidebar = [
   "/compare/*/",
   "/alternative/*/",
   "/resources/*/",
+  "/*-component-library/",
   "/theme-generator/",
 ]
 
