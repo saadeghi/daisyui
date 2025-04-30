@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.30 (2025-04-30)
+
+
+### Bug Fixes
+
+* tooltip showing when data-tip or tooltip-content is empty. closes: [#3819](https://github.com/saadeghi/daisyui/issues/3819) ([2414ca5](https://github.com/saadeghi/daisyui/commit/2414ca56e3bf30ff8052733cf743db03fd199d58))
+
 ## 5.0.29 (2025-04-29)
 
 
