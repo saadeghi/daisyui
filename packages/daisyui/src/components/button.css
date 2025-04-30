@@ -188,7 +188,7 @@
     --btn-border: var(--btn-color);
     --btn-noise: none;
   }
-  
+
   @media (hover: none) {
     &:hover:not(
         .btn-active,
@@ -226,7 +226,7 @@
     --btn-border: var(--btn-color);
     --btn-noise: none;
   }
-  
+
   @media (hover: none) {
     &:hover:not(
         .btn-active,
@@ -263,16 +263,9 @@
     );
     --btn-noise: none;
   }
-  
+
   @media (hover: none) {
-    &:hover:not(
-        .btn-active,
-        :active,
-        :focus-visible,
-        :disabled,
-        [disabled],
-        .btn-disabled
-      ) {
+    &:hover:not(.btn-active, :active, :focus-visible, :disabled, [disabled], .btn-disabled) {
       --btn-shadow: "";
       --btn-fg: var(--btn-color, var(--color-base-content));
       --btn-bg: color-mix(
