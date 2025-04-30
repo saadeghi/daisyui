@@ -24,13 +24,17 @@ cd my-app
 npm i -D daisyui@latest
 ```
 
-Add daisyUI in your CSS file
+Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
-```diff:resources/css/app.css
+```css:resources/css/app.css
 @import "tailwindcss";
-/* other stuff */
 
-+ @plugin "daisyui";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+
+@plugin "daisyui";
 ```
 
 ### 3. Run your project
