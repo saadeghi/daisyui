@@ -24,6 +24,7 @@
   border-style: solid;
   border-color: var(--btn-border);
   text-shadow: 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 0.15));
+  touch-action: manipulation;
   box-shadow:
     0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%)) inset,
     var(--btn-shadow);
