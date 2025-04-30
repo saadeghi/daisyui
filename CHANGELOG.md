@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.32 (2025-04-30)
+
+
+### Bug Fixes
+
+* prevent double-tap zoom on buttons on mobile ([02a401a](https://github.com/saadeghi/daisyui/commit/02a401a44ac32a224e0ddeb0303d29f95b97f392))
+
 ## 5.0.31 (2025-04-30)
 
 
