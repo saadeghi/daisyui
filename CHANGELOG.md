@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.31 (2025-04-30)
+
+
+### Bug Fixes
+
+* button hover state persisting on mobile screen. closes: [#3817](https://github.com/saadeghi/daisyui/issues/3817) ([75c92c9](https://github.com/saadeghi/daisyui/commit/75c92c93573e0b033db0e7d674ec00dece1ee41c))
+
 ## 5.0.30 (2025-04-30)
 
 
