@@ -20,6 +20,6 @@ async function fetchFrameworksData() {
 export async function load({ params }) {
   const frameworksData = await fetchFrameworksData()
   return {
-    frameworksData,
+    frameworksData: frameworksData.map(({ name, logo }) => ({ name, logo })),
   }
 }
