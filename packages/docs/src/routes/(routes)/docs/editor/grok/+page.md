@@ -13,6 +13,8 @@ desc: Setup Grok to correctly generate daisyUI code based on your prompt.
 
 [daisyui.com/llms.txt](https://daisyui.com/llms.txt) file is a compact, text version of daisyUI docs to help AI generate accurate daisyUI code based on your prompt.
 
+#### Through Deep Search
+
 In Chat window, enable `꩜ Deep Search` feature, and add this before your prompt:
 
 ```md:prompt
@@ -24,3 +26,11 @@ For example:
 ```md:prompt
 https://daisyui.com/llms.txt give me a light daisyUI 5 theme with tropical color palette
 ```
+
+#### Through Workspace (SuperGrok Only)
+
+This method gives much faster result as you don't need the `꩜ Deep Search` feature.
+
+You can create a dedicated `Workspace` where you can upload the `llms.txt` file. To download the file, visit [https://daisyui.com/llms.txt](https://daisyui.com/llms.txt), right-click, and select "Save As...". Once downloaded, upload the file as an attachment in the Grok Workspace.
+
+From then on, every conversation in this Workspace will have access to the daisyUI documentation.
