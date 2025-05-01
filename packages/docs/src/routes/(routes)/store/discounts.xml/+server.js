@@ -21,7 +21,8 @@ const dateFormat = {
 
 export const GET = async () => {
   const data = await load({})
-  const discounts = data.discounts.data
+  // const discounts = data.discounts.data
+  const discounts = []
   const body = render(discounts)
   return new Response(body, {
     headers: {
