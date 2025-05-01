@@ -43,7 +43,7 @@ Here's why this combination works so well:
 
 This powerful combination allows Django developers to create beautiful interfaces without compromising on Django's renowned backend capabilities.
 
-<div class="mx-[50%] -translate-x-1/2 my-12 w-screen">
+<div dir="ltr" class="left-[50%] rtl:left-[-50%] relative translate-x-[-50%] rtl:translate-x-[50%] my-12 w-[calc(100vw-2rem)]">
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 

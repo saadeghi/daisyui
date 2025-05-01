@@ -43,7 +43,7 @@ Here's why this combination works so well:
 
 This powerful combination gives you the best of both worlds: beautiful, professionally designed UI components and the exceptional performance that Astro is known for.
 
-<div class="mx-[50%] -translate-x-1/2 my-12 w-screen">
+<div dir="ltr" class="left-[50%] rtl:left-[-50%] relative translate-x-[-50%] rtl:translate-x-[50%] my-12 w-[calc(100vw-2rem)]">
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 

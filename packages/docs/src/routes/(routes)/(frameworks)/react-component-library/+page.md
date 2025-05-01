@@ -40,7 +40,7 @@ Here's why React and daisyUI work so well together:
 
 This combination dramatically speeds up development while keeping your React application lightweight and performant.
 
-<div class="mx-[50%] -translate-x-1/2 my-12 w-screen">
+<div dir="ltr" class="left-[50%] rtl:left-[-50%] relative translate-x-[-50%] rtl:translate-x-[50%] my-12 w-[calc(100vw-2rem)]">
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 

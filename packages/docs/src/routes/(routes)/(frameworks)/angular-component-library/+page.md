@@ -43,7 +43,7 @@ Here's why Angular and daisyUI make such a strong pair:
 
 This combination significantly accelerates development while maintaining the structure and performance that Angular projects demand.
 
-<div class="mx-[50%] -translate-x-1/2 my-12 w-screen">
+<div dir="ltr" class="left-[50%] rtl:left-[-50%] relative translate-x-[-50%] rtl:translate-x-[50%] my-12 w-[calc(100vw-2rem)]">
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 

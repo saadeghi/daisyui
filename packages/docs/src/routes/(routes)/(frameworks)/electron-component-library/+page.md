@@ -25,7 +25,7 @@ Electron is a framework for building cross-platform desktop applications using w
 
 daisyUI is an excellent component library for Electron applications because it provides a comprehensive set of beautifully designed UI components that create a cohesive desktop experience across platforms. Since daisyUI is purely CSS-based with zero JavaScript dependencies, it maintains Electron's performance without adding additional overhead. Electron developers can use daisyUI's semantic class names to create consistent interfaces while leveraging Electron's native capabilities. The library's 35+ built-in themes enable easy implementation of light/dark mode switching and custom branding, which are essential for desktop applications. This combination significantly accelerates development of professional-looking desktop applications while maintaining the flexibility that makes Electron powerful.
 
-<div class="mx-[50%] -translate-x-1/2 my-12 w-screen">
+<div dir="ltr" class="left-[50%] rtl:left-[-50%] relative translate-x-[-50%] rtl:translate-x-[50%] my-12 w-[calc(100vw-2rem)]">
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 

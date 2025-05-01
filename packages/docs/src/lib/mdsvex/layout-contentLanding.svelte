@@ -81,7 +81,7 @@
             <a href="/components/" class="link link-hover text-xs"> See components </a>
           </div>
         </div>
-        <ul class="my-2 flex gap-4 max-sm:flex-col max-sm:items-center sm:justify-around">
+        <ul class="my-2 flex gap-4 max-sm:flex-col max-sm:items-center sm:justify-around" dir="ltr">
           {#await fetchStats() then stats}
             <li class="flex gap-2">
               <svg
