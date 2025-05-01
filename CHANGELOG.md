@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.35 (2025-05-01)
+
+
+### Bug Fixes
+
+* allow tooltip font size customization. closes: [#3830](https://github.com/saadeghi/daisyui/issues/3830) ([c1b9d69](https://github.com/saadeghi/daisyui/commit/c1b9d6911a0e53b6459cde32fe424ad0ab73cc84))
+
 ## 5.0.34 (2025-05-01)
 
 
