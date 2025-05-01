@@ -23,10 +23,8 @@
       @apply text-error visible block;
     }
   }
-  & ~ .validator-hint {
-    @apply invisible;
-  }
 }
 .validator-hint {
-  @apply mt-2 text-xs;
+  @apply invisible mt-2;
+  font-size: 0.75rem;
 }
