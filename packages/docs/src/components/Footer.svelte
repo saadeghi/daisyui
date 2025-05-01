@@ -518,7 +518,7 @@
               placeholder="email@site.com"
               required
             />
-            <button class="join-item btn btn-outline">Subscribe</button>
+            <button class="join-item btn btn-neutral">Subscribe</button>
           </div>
           <p class="text-base-content/60 text-[0.625rem] tracking-wide">
             <svg

@@ -18,7 +18,7 @@ Here's how to use daisyUI llms.txt in Windsurf:
 
 - In chat window type this and write your prompt
 
-```sh
+```md:prompt
 @web https://daisyui.com/llms.txt
 ```
 
@@ -47,6 +47,6 @@ I suggest using [Context7](https://context7.com/) [MCP server](https://github.co
 5. Now you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
    For example:
 
-```
+```md:prompt
 give me a light daisyUI 5 theme with tropical color palette. use context7
 ```

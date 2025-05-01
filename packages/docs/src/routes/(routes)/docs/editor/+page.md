@@ -15,6 +15,7 @@ const editors = [
   { name: "ChatGPT", slug: "chatgpt" },
   { name: "Gemini", slug: "gemini" },
   { name: "Grok", slug: "grok" },
+  { name: "Cline – VSCode", slug: "cline" },
 ]
 </script>
 

@@ -121,13 +121,13 @@
   }
 
   :where(code):not(pre > code) {
-    margin-inline: 0.25em;
+    margin-inline: 0.5ch;
   }
   :where(kbd):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    margin-inline: 0.25em;
+    margin-inline: 0.5ch;
   }
-  :where(p a) {
-    margin-inline: 0.25em;
+  :where(p a, li a) {
+    margin-inline: 0.5ch;
   }
 }
 
@@ -264,29 +264,29 @@
   --shiki-token: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
-    oklch(71.27% 0.2061 242.69)
+    oklch(75% 0.3 242.69)
   );
   --shiki-comment: color-mix(in oklab, transparent, var(--color-neutral-content) 30%);
   --shiki-attr-name: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
-    oklch(71.27% 0.2061 337.94)
+    oklch(75% 0.3 337.94)
   );
   --shiki-attr-value: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
-    oklch(71.27% 0.2061 173.24)
+    oklch(75% 0.3 173.24)
   );
   --shiki-punctuation: color-mix(in oklab, white 40%, var(--color-neutral-content));
   --shiki-added: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
-    oklch(71.27% 0.2061 173.24)
+    oklch(75% 0.3 173.24)
   );
   --shiki-deleted: color-mix(
     in oklab,
     color-mix(in oklab, white 40%, var(--color-neutral-content)) 20%,
-    oklch(71.27% 0.2061 20.84)
+    oklch(70% 0.2061 20.84)
   );
   line-height: 1.5em;
   .line {

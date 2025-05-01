@@ -18,7 +18,7 @@ Here's how to use daisyUI llms.txt in VSCode:
 
 In chat window type this and VSCode will use daisyUI's llms.txt file to generate code.
 
-```
+```md:prompt
 #fetch https://daisyui.com/llms.txt
 ```
 
@@ -71,6 +71,6 @@ I suggest using [Context7](https://context7.com/) [MCP server](https://github.co
 4. Now in `Agent Mode` you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
    For example:
 
-   ```
+   ```md:prompt
    give me a light daisyUI 5 theme with tropical color palette. use context7
    ```

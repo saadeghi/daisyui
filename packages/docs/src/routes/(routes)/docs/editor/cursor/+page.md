@@ -18,7 +18,7 @@ Here's how to use daisyUI llms.txt in Cursor:
 
 In chat window type this and Cursor will use daisyUI's llms.txt file to generate code.
 
-```
+```md:prompt
 @web https://daisyui.com/llms.txt
 ```
 
@@ -28,7 +28,7 @@ In chat window type this and Cursor will use daisyUI's llms.txt file to generate
 2. Type `Add new custom docs`
 3. Add this:
 
-   ```
+   ```md
    https://daisyui.com/llms.txt
    ```
 
@@ -69,6 +69,6 @@ I suggest using [Context7](https://context7.com/) [MCP server](https://github.co
 
 5. Now in `Agent Mode` you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
    For example:
-   ```
+   ```md:prompt
    give me a light daisyUI 5 theme with tropical color palette. use context7
    ```

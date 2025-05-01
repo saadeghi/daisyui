@@ -160,7 +160,9 @@
           {/await}
         </ul>
       </div>
-      <CompanyLogos />
+      <div class="text-base-content">
+        <CompanyLogos />
+      </div>
     </div>
   </div>
 </div>

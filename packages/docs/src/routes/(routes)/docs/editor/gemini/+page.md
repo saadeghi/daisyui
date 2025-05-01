@@ -15,12 +15,12 @@ desc: Setup Gemini to correctly generate daisyUI code based on your prompt.
 
 In Chat window, enable `🔍 Deep research` feature, and add this before your prompt:
 
-```
+```md:prompt
 https://daisyui.com/llms.txt
 ```
 
 For example:
 
-```
+```md:prompt
 https://daisyui.com/llms.txt give me a light daisyUI 5 theme with tropical color palette
 ```

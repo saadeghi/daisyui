@@ -17,11 +17,11 @@ Here's how to use daisyUI llms.txt in Zed:
 ### Quick use
 
 - In Thread chat type this before your prompt
-  ```sh
+  ```md:prompt
   @fetch https://daisyui.com/llms.txt
   ```
 - Or in Text thread chat type this before your prompt
-  ```sh
+  ```md:prompt
   /fetch https://daisyui.com/llms.txt
   ```
 
@@ -45,6 +45,6 @@ I suggest using [Context7](https://context7.com/) [MCP server](https://github.co
 
 4. Now in `Agent Mode` you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
     For example:
-   ```
+   ```md:prompt
    give me a light daisyUI 5 theme with tropical color palette. use context7
    ```
