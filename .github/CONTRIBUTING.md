@@ -96,3 +96,185 @@ packages
         ╰── components
             ╰── Component.astro // Where you can test things without committing
 ```
+
+### packages/daisyui workflow
+
+```mermaid
+---
+title: daisyUI build flow
+---
+graph TD
+
+    subgraph Build["src/"]
+        E[Themes]
+        F[base]
+        G[components]
+        H[utilities]
+    end
+
+    Build
+
+
+    Build
+
+
+
+    subgraph FinalPackage["components/"]
+
+        E
+        E
+        E
+        F
+        F
+        F
+        G
+        J12[components/*.css]
+        G
+        J13[components/*/index.js]
+        G
+        J14[components/*/object.js]
+        G
+        J15["*/class.json"]
+        H
+        H
+        H
+    end
+
+    FinalPackage
+	J13
+	J12
+	J12
+	subgraph s1["CSS"]
+		J2["daisyui.css - CDN"]
+		J3["themes.css"]
+		J4["chunks.css"]
+	end
+	J4
+	J12 --- J4
+	J4
+	J4
+	J4
+	J3
+	J12["*.css"] --- J2
+	J2
+	J2
+	J2
+	J2
+	J2
+	subgraph s2["@plugin "daisyui""]
+		J19["import.js"]
+		J1["index.js - Plugin"]
+	end
+	J1
+	J19
+	J19
+	J19
+	J13 --- J19
+	J19 --- J1["index.js"]
+	subgraph s3["utilities/"]
+		J16["utilities/*.css"]
+		J17["utilities/*/index.js"]
+		J18["utilities/*/object.js"]
+	end
+	H
+	J18["*/object.js"]
+	J17 --- J19
+	H
+	J17["*/index.js"]
+	J16 --- J2
+	J16 --- J4
+	H
+	J16["*.css"]
+	subgraph s4["base/"]
+		J11["base/*/object.js"]
+		J9["base/*.css"]
+		J10["base/*/index.js"]
+	end
+	subgraph s5["colors/"]
+		J5["colors/*.css"]
+	end
+	subgraph s6["themes/"]
+		J6["theme/*.css"]
+		J8["theme/*/object.js"]
+		J7["theme/*/index.js"]
+	end
+	J10 --- J19
+	F
+	J10
+	J9 --- J2
+	J9 --- J4
+	F
+	J9["*.css"]
+	F
+	J11
+	J7 --- J19["imports.js"]
+	E
+	J7
+	E
+	J8
+	J6 --- J2
+	J6 --- J3
+	J6 --- J4
+	E["themes"]
+	J6["*.css"]
+	J5 --- J2["daisyui.css"]
+	J5 --- J4
+	J5
+	J8["*/object.js"] --- J7["*/index.js"]
+	J14["*/object.js"] --- J13["*/index.js"]
+	J11["*/object.js"] --- J10["*/index.js"]
+	J5
+	J18 --- J17
+	subgraph s7["build"]
+		n3@{ label: "Rectangle" }
+	end
+	Build
+	J5
+	s7
+	s5
+	subgraph s8["functions/"]
+		n10["...other build functions"]
+		D["functions/variables.css"]
+		n8["variables.js"]
+		n7["themeOrder.js"]
+		n6["pluginOptionsHandler.js"]
+		n5["plugin.js"]
+		n4["addPrefix.js"]
+		n1["themePlugin.js"]
+	end
+	n1
+	H["utilities/*.css"] --- s3
+	G["components/*.css"] --- FinalPackage
+	F["base/*.css"] --- s4
+	E["themes/*.css"] --- s6
+	n3@{ shape: "flip-tri", label: "build.js" } --- Build
+	n4 --- J1
+	n8 --- J1
+	n5 --- J1
+	n6 --- J1
+	n7 --- n6
+	subgraph s9["@plugin "daisyui/theme""]
+		n2["theme/index.js"]
+		n9["/object.js"]
+	end
+	n1 --- n2["/index.js"]
+	J8 --- n9
+	D["variables.css"] --> J5["*.css"]
+	style J1 fill:#FFDE59,color:#000000
+	style n2 color:#000000,fill:#FFDE59
+	n5 --- n1
+	n9 --- n1
+	n4
+	J7
+	n4 --- J17
+	n4 --- J10
+	n4 --- J13
+	style J12 fill:#5E17EB,color:#FFFFFF
+	style J16 fill:#5E17EB,color:#FFFFFF
+	style J9 fill:#5E17EB,color:#FFFFFF
+	style J5 fill:#5E17EB,color:#FFFFFF
+	style J6 fill:#5E17EB,color:#FFFFFF
+	style J3 fill:#5E17EB,color:#FFFFFF
+	style J2 fill:#5E17EB,color:#FFFFFF
+	style J4 fill:#5E17EB,color:#FFFFFF
+```
