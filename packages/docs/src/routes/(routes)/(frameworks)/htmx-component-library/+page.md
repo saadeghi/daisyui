@@ -6,12 +6,14 @@ layout: contentLanding
 
 <script>
   import Translate from "$components/Translate.svelte"
+  import Testimonials from "$components/Testimonials.svelte"
   export let data
 </script>
 
-<div class="mx-auto max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
-<div class="max-w-64 w-full [&>svg]:w-full [&>svg]:h-auto mx-auto">
+<div class="mx-auto not-prose max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
+<div class="max-w-96 items-center w-full grid grid-cols-2 gap-6 lg:gap-12 [&>svg]:w-full [&>svg]:h-auto mx-auto">
 {@html data.frameworksData.find(item => item.name === "HTMX")?.logo}
+<img class="w-full h-auto" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="Best HTMX component library" />
 </div>
 </div>
 
@@ -40,6 +42,10 @@ Here's why this combination works so beautifully:
 - **Dynamic theming**: daisyUI's 35+ built-in themes can be easily switched using HTMX triggers, allowing for dynamic theme changes without custom JavaScript.
 
 This powerful combination gives you beautiful, interactive interfaces with remarkably little code, embracing the web platform rather than fighting against it.
+
+<div class="mx-[50%] -translate-x-1/2 my-12 w-screen">
+  <Testimonials items={data.testimonials} limit="6" />
+</div>
 
 ## Install Tailwind CSS and daisyUI for HTMX
 
