@@ -53,8 +53,5 @@ export async function load() {
     techFilters: yamlData.techFilters,
     products: sortedData,
     futureProducts: yamlData.futureProducts,
-    discounts: {
-      data: [],
-    },
   }
 }

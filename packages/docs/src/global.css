@@ -121,13 +121,13 @@
   }
 
   :where(code):not(pre > code) {
-    margin-inline: 0.5ch;
+    margin-inline: 0.25em;
   }
   :where(kbd):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    margin-inline: 0.5ch;
+    margin-inline: 0.25em;
   }
   :where(p a, li a) {
-    margin-inline: 0.5ch;
+    margin-inline: 0.25em;
   }
 }
 
