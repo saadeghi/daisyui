@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.34 (2025-05-01)
+
+
+### Bug Fixes
+
+* validator-hint respecting `user-valid:` variant. closes: [#3668](https://github.com/saadeghi/daisyui/issues/3668), [#3669](https://github.com/saadeghi/daisyui/issues/3669) ([8ffbebb](https://github.com/saadeghi/daisyui/commit/8ffbebb77c97a61bb1b3dda25f9d674dd074d0a5))
+
 ## 5.0.33 (2025-04-30)
 
 
