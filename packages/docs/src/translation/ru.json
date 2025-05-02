@@ -2,7 +2,6 @@
   "__code": "RU",
   "__direction": "ltr",
   "__name": "Русский",
-  "__status": "",
   "Code": "Code",
   "Or": "Или",
   "cta-1-mobile": "Компоненты",
@@ -1155,8 +1154,7 @@
   "The `hr` tag at the beginning or end of each item, displays a line to connect items.": "The `hr` tag at the beginning or end of each item, displays a line to connect items.",
   "Inbox": "Inbox",
   "In chat window type this and write your prompt": "In chat window type this and write your prompt",
-  "component library": "библиотека компонентов",
-  "for Tailwind CSS": "для Tailwind CSS",
   "don't re-invent <br/>the wheel <br/>every time": "не изобретайте <br/>колесо каждый раз",
-  "": ""
+  "component library": "библиотека компонентов",
+  "for Tailwind CSS": "для Tailwind CSS"
 }
