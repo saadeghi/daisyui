@@ -1,5 +1,37 @@
 <script>
   let { items, limit = -1 } = $props()
+  
+  // Default sprite metadata in case JSON doesn't provide it
+  let spriteMetadata = $state({
+    imagesPerRow: 0,
+    rows: 0,
+    avatarSize: 72
+  })
+  
+  $effect(() => {
+    // Extract sprite metadata if available in the items
+    if (items && items.sprite) {
+      spriteMetadata = items.sprite
+    } else {
+      // Legacy format - assume single row
+      spriteMetadata = {
+        imagesPerRow: items?.testimonials?.length || 0,
+        rows: 1,
+        avatarSize: 72
+      }
+    }
+    console.log("Testimonials sprite metadata:", spriteMetadata)
+  })
+  
+  // Calculate background position based on index and sprite metadata
+  function getBackgroundPosition(index) {
+    const row = Math.floor(index / spriteMetadata.imagesPerRow)
+    const col = index % spriteMetadata.imagesPerRow
+    // Scale down positions to match the display size (48px vs 72px source)
+    const scale = 48 / spriteMetadata.avatarSize
+    return `${-col * spriteMetadata.avatarSize * scale}px ${-row * spriteMetadata.avatarSize * scale}px`
+  }
+  
   function highlight(node) {
     const content = node.textContent
     node.innerHTML = content.replace(
@@ -40,9 +72,10 @@
             >
               <div
                 class="size-12 rounded-full"
-                style={`background-image: url('https://img.daisyui.com/generated/x.webp?${items.generated_at}'); background-size:auto 48px;background-repeat:no-repeat;background-position: -${
-                  testimonial.originalIndex * 48
-                }px 0px;`}
+                style={`background-image: url('https://img.daisyui.com/generated/x.webp?${items.generated_at}'); 
+                       background-size: ${spriteMetadata.imagesPerRow * 48}px auto;
+                       background-repeat: no-repeat;
+                       background-position: ${getBackgroundPosition(testimonial.originalIndex)};`}
               ></div>
             </a>
           </div>
