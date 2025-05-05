@@ -2,20 +2,50 @@
   import { t } from "$lib/i18n.svelte.js"
   let contributors = $state([])
   let sponsors = $state([])
+  let contributorSpriteMeta = $state({ imagesPerRow: 0, rows: 0, avatarSize: 64 })
 
   async function fetchContributors() {
     const response = await fetch("https://img.daisyui.com/generated/contributors.json")
-    contributors = await response.json()
+    const data = await response.json()
+    // Handle both the new format (with sprite metadata) and old format (array only)
+    if (data.contributors && data.sprite) {
+      contributors = data.contributors
+      contributorSpriteMeta = data.sprite
+    } else {
+      // Legacy format - assume single row
+      contributors = Array.isArray(data) ? data : []
+      contributorSpriteMeta = {
+        imagesPerRow: contributors.length,
+        rows: 1,
+        avatarSize: 64,
+      }
+    }
+    console.log("Loaded contributors metadata:", contributorSpriteMeta)
   }
+
   async function fetchSponsors() {
     const response = await fetch("https://img.daisyui.com/generated/sponsors.json")
-    sponsors = await response.json()
+    const data = await response.json()
+    sponsors = Array.isArray(data) ? data : []
+    console.log("Loaded sponsors:", sponsors.length)
   }
 
   $effect(() => {
     fetchContributors()
     fetchSponsors()
   })
+
+  function getBackgroundPosition(index) {
+    const row = Math.floor(index / contributorSpriteMeta.imagesPerRow)
+    const col = index % contributorSpriteMeta.imagesPerRow
+    // Scale down positions by 50% to match the display size (size-8 = 32px)
+    return `${-col * (contributorSpriteMeta.avatarSize / 2)}px ${-row * (contributorSpriteMeta.avatarSize / 2)}px`
+  }
+
+  // For sponsors which are still in a single row format
+  function getSponsorPosition(index) {
+    return `-${index * 32}px 0px`
+  }
 </script>
 
 <div
@@ -61,8 +91,11 @@
           <div class="avatar tooltip group p-1" data-tip={contributor}>
             <div
               class="mask mask-squircle size-8 [transition:opacity_1s_ease-out_15s,scale_1s_ease-out_15s,filter_1s_ease-out_15s] pointer-fine:scale-70 pointer-fine:opacity-30 pointer-fine:contrast-70 pointer-fine:grayscale pointer-fine:group-hover:scale-120 pointer-fine:group-hover:opacity-100 pointer-fine:group-hover:contrast-100 pointer-fine:group-hover:grayscale-0 pointer-fine:group-hover:[transition:opacity_0s_ease-out_0s,scale_0.05s_ease-out_0s,filter_0s_ease-out_0s]"
-              style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size:auto 32px;background-repeat:no-repeat;background-position: -{index *
-                32}px 0px;"
+              style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size: {contributorSpriteMeta.imagesPerRow *
+                (contributorSpriteMeta.avatarSize /
+                  2)}px auto; background-repeat: no-repeat; background-position: {getBackgroundPosition(
+                index,
+              )};"
             ></div>
           </div>
         {/each}
@@ -91,8 +124,9 @@
               <div class="avatar p-2">
                 <div
                   class="mask mask-squircle size-8"
-                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size:auto 32px;background-repeat:no-repeat;background-position: -{index *
-                    32}px 0px;"
+                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size:auto 32px;background-repeat:no-repeat;background-position: {getSponsorPosition(
+                    index,
+                  )};"
                 ></div>
               </div>
             {:else}
