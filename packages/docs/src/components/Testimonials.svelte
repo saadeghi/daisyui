@@ -1,13 +1,13 @@
 <script>
   let { items, limit = -1 } = $props()
-  
+
   // Default sprite metadata in case JSON doesn't provide it
   let spriteMetadata = $state({
     imagesPerRow: 0,
     rows: 0,
-    avatarSize: 72
+    avatarSize: 72,
   })
-  
+
   $effect(() => {
     // Extract sprite metadata if available in the items
     if (items && items.sprite) {
@@ -17,12 +17,11 @@
       spriteMetadata = {
         imagesPerRow: items?.testimonials?.length || 0,
         rows: 1,
-        avatarSize: 72
+        avatarSize: 72,
       }
     }
-    console.log("Testimonials sprite metadata:", spriteMetadata)
   })
-  
+
   // Calculate background position based on index and sprite metadata
   function getBackgroundPosition(index) {
     const row = Math.floor(index / spriteMetadata.imagesPerRow)
@@ -31,7 +30,7 @@
     const scale = 48 / spriteMetadata.avatarSize
     return `${-col * spriteMetadata.avatarSize * scale}px ${-row * spriteMetadata.avatarSize * scale}px`
   }
-  
+
   function highlight(node) {
     const content = node.textContent
     node.innerHTML = content.replace(
