@@ -99,7 +99,7 @@
           <div class="avatar tooltip group p-1" data-tip={contributor}>
             <div
               class="mask mask-squircle size-8 [transition:opacity_1s_ease-out_15s,scale_1s_ease-out_15s,filter_1s_ease-out_15s] pointer-fine:scale-70 pointer-fine:opacity-30 pointer-fine:contrast-70 pointer-fine:grayscale pointer-fine:group-hover:scale-120 pointer-fine:group-hover:opacity-100 pointer-fine:group-hover:contrast-100 pointer-fine:group-hover:grayscale-0 pointer-fine:group-hover:[transition:opacity_0s_ease-out_0s,scale_0.05s_ease-out_0s,filter_0s_ease-out_0s]"
-              style="background-image: url('https://img.daisyui.com/generated/contributors.webp'); background-size: {contributorSpriteMeta.imagesPerRow *
+              style="background-image: url('https://img.daisyui.com/generated/contributors.webp?v=2'); background-size: {contributorSpriteMeta.imagesPerRow *
                 (contributorSpriteMeta.avatarSize /
                   2)}px auto; background-repeat: no-repeat; background-position: {getBackgroundPosition(
                 index,
@@ -133,7 +133,7 @@
               <div class="avatar p-2">
                 <div
                   class="mask mask-squircle size-8"
-                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size: {sponsorSpriteMeta.imagesPerRow *
+                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp?v=2'); background-size: {sponsorSpriteMeta.imagesPerRow *
                     (sponsorSpriteMeta.avatarSize /
                       2)}px auto; background-repeat: no-repeat; background-position: {getBackgroundPosition(
                     index,
