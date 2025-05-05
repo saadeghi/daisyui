@@ -3,6 +3,7 @@
   let contributors = $state([])
   let sponsors = $state([])
   let contributorSpriteMeta = $state({ imagesPerRow: 0, rows: 0, avatarSize: 64 })
+  let sponsorSpriteMeta = $state({ imagesPerRow: 0, rows: 0, avatarSize: 64 })
 
   async function fetchContributors() {
     const response = await fetch("https://img.daisyui.com/generated/contributors.json")
@@ -26,8 +27,20 @@
   async function fetchSponsors() {
     const response = await fetch("https://img.daisyui.com/generated/sponsors.json")
     const data = await response.json()
-    sponsors = Array.isArray(data) ? data : []
-    console.log("Loaded sponsors:", sponsors.length)
+    // Handle both the new format (with sprite metadata) and old format (array only)
+    if (data.sponsors && data.sprite) {
+      sponsors = data.sponsors
+      sponsorSpriteMeta = data.sprite
+    } else {
+      // Legacy format - assume single row
+      sponsors = Array.isArray(data) ? data : []
+      sponsorSpriteMeta = {
+        imagesPerRow: sponsors.length,
+        rows: 1,
+        avatarSize: 64,
+      }
+    }
+    console.log("Loaded sponsors:", sponsors.length, sponsorSpriteMeta)
   }
 
   $effect(() => {
@@ -35,16 +48,11 @@
     fetchSponsors()
   })
 
-  function getBackgroundPosition(index) {
-    const row = Math.floor(index / contributorSpriteMeta.imagesPerRow)
-    const col = index % contributorSpriteMeta.imagesPerRow
+  function getBackgroundPosition(index, meta) {
+    const row = Math.floor(index / meta.imagesPerRow)
+    const col = index % meta.imagesPerRow
     // Scale down positions by 50% to match the display size (size-8 = 32px)
-    return `${-col * (contributorSpriteMeta.avatarSize / 2)}px ${-row * (contributorSpriteMeta.avatarSize / 2)}px`
-  }
-
-  // For sponsors which are still in a single row format
-  function getSponsorPosition(index) {
-    return `-${index * 32}px 0px`
+    return `${-col * (meta.avatarSize / 2)}px ${-row * (meta.avatarSize / 2)}px`
   }
 </script>
 
@@ -95,6 +103,7 @@
                 (contributorSpriteMeta.avatarSize /
                   2)}px auto; background-repeat: no-repeat; background-position: {getBackgroundPosition(
                 index,
+                contributorSpriteMeta,
               )};"
             ></div>
           </div>
@@ -124,8 +133,11 @@
               <div class="avatar p-2">
                 <div
                   class="mask mask-squircle size-8"
-                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size:auto 32px;background-repeat:no-repeat;background-position: {getSponsorPosition(
+                  style="background-image: url('https://img.daisyui.com/generated/sponsors.webp'); background-size: {sponsorSpriteMeta.imagesPerRow *
+                    (sponsorSpriteMeta.avatarSize /
+                      2)}px auto; background-repeat: no-repeat; background-position: {getBackgroundPosition(
                     index,
+                    sponsorSpriteMeta,
                   )};"
                 ></div>
               </div>
