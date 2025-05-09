@@ -755,7 +755,7 @@ Indicators are used to place an element on the corner of another element
 
 #### Rules
 - Add all indicator elements (with `indicator-item` class) before the main content
-- {placement} is optional and can have one of each horizonal/vertical class names. default is `indicator-end indicator-top`
+- {placement} is optional and can have one of each horizontal/vertical class names. default is `indicator-end indicator-top`
 
 ### input
 Text Input is a simple input field
