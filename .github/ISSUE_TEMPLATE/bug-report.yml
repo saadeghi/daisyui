@@ -11,7 +11,7 @@ body:
 
         👉 Before you submit a new bug, please do the following steps:
 
-        1. Update your diasyUI (and other dependencies) to the latest version (`npm i -D daisyui@latest`)
+        1. Update your daisyUI (and other dependencies) to the latest version (`npm i -D daisyui@latest`)
         2. Read [FAQ](https://daisyui.com/docs/faq/). You may find a solution there
         3. Search [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions?discussions_q=). You may find a solution there
         4. Make sure this bug is **NOT** specific to a JS framework or a build tool. If the issue doesn't happen on [Tailwind Play](https://daisyui.com/tailwindplay/) it means it's not an issue from daisyUI.
