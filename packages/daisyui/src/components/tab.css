@@ -41,10 +41,11 @@
   &:checked,
   &:is(label:has(:checked)),
   &:is(.tab-active, [aria-selected="true"]) {
-    & + .tab-content {
-      @apply block h-full;
-    }
+  & ~ .tab-content {
+    @apply block;
+    height: calc(100% - var(--tab-height, 2.5rem));
   }
+}
   &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected="true"]) {
     @apply text-base-content/50;
   }
