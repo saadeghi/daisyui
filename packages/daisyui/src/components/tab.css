@@ -17,9 +17,10 @@
   --tab-radius-ee: 0;
   --tab-order: 0;
   --tab-radius-min: calc(0.75rem - var(--border));
+  --tab-height: calc(var(--size-field, 0.25rem) * 10);
   border-color: #0000;
   order: var(--tab-order);
-  height: calc(var(--size-field, 0.25rem) * 10);
+  height: var(--tab-height);
   font-size: 0.875rem;
   padding-inline-start: var(--tab-p);
   padding-inline-end: var(--tab-p);
@@ -42,7 +43,8 @@
   &:is(label:has(:checked)),
   &:is(.tab-active, [aria-selected="true"]) {
     & + .tab-content {
-      @apply block h-full;
+      @apply block;
+      height: calc(100% - var(-tab-height));
     }
   }
   &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected="true"]) {
@@ -484,8 +486,8 @@
 
 .tabs-xs {
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.75rem;
+    --tab-height: calc(var(--size-field, 0.25rem) * 6);
     --tab-p: 0.375rem;
     --tab-radius-min: calc(0.5rem - var(--border));
   }
@@ -493,8 +495,8 @@
 
 .tabs-sm {
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 8);
     font-size: 0.875rem;
+    --tab-height: calc(var(--size-field, 0.25rem) * 8);
     --tab-p: 0.5rem;
     --tab-radius-min: calc(0.5rem - var(--border));
   }
@@ -502,8 +504,8 @@
 
 .tabs-md {
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
+    --tab-height: calc(var(--size-field, 0.25rem) * 10);
     --tab-p: 0.75rem;
     --tab-radius-min: calc(0.75rem - var(--border));
   }
@@ -511,8 +513,8 @@
 
 .tabs-lg {
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 12);
     font-size: 1.125rem;
+    --tab-height: calc(var(--size-field, 0.25rem) * 12);
     --tab-p: 1rem;
     --tab-radius-min: calc(1.5rem - var(--border));
   }
@@ -520,8 +522,8 @@
 
 .tabs-xl {
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 14);
     font-size: 1.125rem;
+    --tab-height: calc(var(--size-field, 0.25rem) * 14);
     --tab-p: 1.25rem;
     --tab-radius-min: calc(2rem - var(--border));
   }
