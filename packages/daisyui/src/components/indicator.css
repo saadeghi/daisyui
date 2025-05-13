@@ -16,6 +16,11 @@
   --inidicator-s: 0;
   --inidicator-e: auto;
   --inidicator-x: -50%;
+  [dir="rtl"] & {
+    --inidicator-s: auto;
+    --inidicator-e: 0;
+    --inidicator-x: 50%;
+  }
 }
 
 .indicator-center {
@@ -31,6 +36,11 @@
   --inidicator-s: auto;
   --inidicator-e: 0;
   --inidicator-x: 50%;
+  [dir="rtl"] & {
+    --inidicator-s: 0;
+    --inidicator-e: auto;
+    --inidicator-x: -50%;
+  }
 }
 
 .indicator-bottom {
