@@ -958,7 +958,7 @@ classnames:
 </ul>
 ```
 
-### ~Vertical timeline with bottom side only
+### ~Vertical timeline with right side only
 
 <ul class="timeline timeline-vertical">
   <li>
@@ -1099,7 +1099,7 @@ classnames:
 </ul>
 ```
 
-### ~Vertical timeline with top side only
+### ~Vertical timeline with left side only
 
 <ul class="timeline timeline-vertical">
   <li>
