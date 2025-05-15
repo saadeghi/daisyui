@@ -12,7 +12,7 @@ export default plugin.withOptions((options = {}) => {
       ...customThemeTokens
     } = options
 
-    let selector = `${root}:has(input.theme-controller[value=${name}]:checked),[data-theme="${name}"]`
+    let selector = `${root}:has(input.theme-controller[value=${name}]:checked),${root !== ":root" ? `${root} ` : ""}[data-theme="${name}"]`
     if (isDefault) {
       selector = `:where(${root}),${selector}`
     }
