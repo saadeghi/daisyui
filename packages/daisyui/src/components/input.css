@@ -28,6 +28,11 @@
     }
   }
 
+  :where(input[type="url"]),
+  :where(input[type="email"]) {
+    direction: ltr;
+  }
+
   :where(input[type="date"]) {
     @apply inline-block;
   }
