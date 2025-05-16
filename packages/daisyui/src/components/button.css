@@ -154,6 +154,16 @@
       --btn-fg: currentColor;
     }
   }
+
+  @media (hover: none) {
+    &:hover:not(.btn-active, :active, :focus-visible, :disabled, [disabled], .btn-disabled) {
+      --btn-shadow: "";
+      --btn-bg: #0000;
+      --btn-border: #0000;
+      --btn-noise: none;
+      --btn-fg: currentColor;
+    }
+  }
 }
 
 .btn-link {
@@ -168,6 +178,12 @@
     @apply underline;
     --btn-border: #0000;
     --btn-bg: #0000;
+  }
+
+  @media (hover: none) {
+    &:hover:not(.btn-active, :active, :focus-visible, :disabled, [disabled], .btn-disabled) {
+      @apply no-underline;
+    }
   }
 }
 
