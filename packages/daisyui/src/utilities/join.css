@@ -72,6 +72,10 @@
     margin-inline-start: calc(var(--border, 1px) * -1);
     margin-block-start: 0;
   }
+
+  &:where(*:is(:disabled, [disabled], .btn-disabled)) {
+    border-width: var(--border, 1px) 0 var(--border, 1px) var(--border, 1px);
+  }
 }
 
 .join-vertical {
