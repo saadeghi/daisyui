@@ -1,0 +1,1 @@
+import{e as c,S as o,d,aj as i,aw as m}from"./DS2HlwQr.js";function j(e,n,a){c(()=>{var r=o(()=>n(e,a==null?void 0:a())||{});if(a&&(r!=null&&r.update)){var s=!1,t={};d(()=>{var f=a();i(f),s&&m(t,f)&&(t=f,r.update(f))}),s=!0}if(r!=null&&r.destroy)return()=>r.destroy()})}export{j as a};
