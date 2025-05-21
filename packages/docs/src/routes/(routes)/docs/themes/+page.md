@@ -25,6 +25,8 @@ You can manage themes by adding brackets in front of `@plugin "daisyui"` in your
 - You can set `--default` flag for a theme to make it the default theme.
 - You can also set `--prefersdark` flag for a theme to make it the default theme for dark mode (prefers-color-scheme: dark).
 
+> When utilizing `--prefersdark`, be sure to include a [theme‑controller](/components/theme-controller/). Without it, `<html data-theme>` will be ignored, and the preferred system theme will always be used instead.
+
 ## Enable a built-in theme
 
 By default, `light` and `dark` themes are enabled. Let's enable `cupcake` theme:  
