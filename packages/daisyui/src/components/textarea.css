@@ -5,6 +5,7 @@
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
   font-size: 0.875rem;
+  touch-action: manipulation;
   border-color: var(--input-color);
   box-shadow:
     0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,

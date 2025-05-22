@@ -4,6 +4,7 @@
   width: clamp(3rem, 20rem, 100%);
   height: var(--size);
   font-size: 0.875rem;
+  touch-action: manipulation;
   border-start-start-radius: var(--join-ss, var(--radius-field));
   border-start-end-radius: var(--join-se, var(--radius-field));
   border-end-start-radius: var(--join-es, var(--radius-field));
