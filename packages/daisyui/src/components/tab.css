@@ -44,7 +44,7 @@
   &:is(.tab-active, [aria-selected="true"]) {
     & + .tab-content {
       @apply block;
-      height: calc(100% - var(--tab-height));
+      height: calc(100% - var(--tab-height) + var(--border));
     }
   }
   &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected="true"]) {
