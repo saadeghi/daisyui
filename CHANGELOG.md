@@ -8,6 +8,12 @@ All notable changes to this project will be documented in this file. See [commit
 ### Bug Fixes
 
 * Safari iOS page zoom when user focuses Text Input. closes: [#3871](https://github.com/saadeghi/daisyui/issues/3871) ([1b5b997](https://github.com/saadeghi/daisyui/commit/1b5b9971e3ca5dbaf82f64e23903bad3f419d584))
+* bug: The collapse input/title has a fixed min-height applied with high specificity [#3885](https://github.com/saadeghi/daisyui/issues/3885)
+* bug: Button Link and Ghost hover states persisting on mobile devices [#3888](https://github.com/saadeghi/daisyui/issues/3888)
+* bug: URL and email inputs with icons don't maintain LTR in RTL mode [#3886](https://github.com/saadeghi/daisyui/issues/3886)
+* bug: disabled button should not change border size [#3877](https://github.com/saadeghi/daisyui/issues/3877)
+* bug: indicator direction not reflecting on RTL [#3851](https://github.com/saadeghi/daisyui/issues/3851)
+* bug: validator on aria-invalid="false" should not be considered as invalid [#3855](https://github.com/saadeghi/daisyui/issues/3855)
 
 ## 5.0.35 (2025-05-01)
 

@@ -80,25 +80,25 @@ classnames:
 ### ~Textarea colors
 
 <div class="grid gap-4 w-xs">
-  <textarea type="text" placeholder="Primary" class="textarea textarea-primary"></textarea>
-  <textarea type="text" placeholder="Secondary" class="textarea textarea-secondary"></textarea>
-  <textarea type="text" placeholder="Accent" class="textarea textarea-accent"></textarea>
-  <textarea type="text" placeholder="Neutral" class="textarea textarea-neutral"></textarea>
-  <textarea type="text" placeholder="Info" class="textarea textarea-info"></textarea>
-  <textarea type="text" placeholder="Success" class="textarea textarea-success"></textarea>
-  <textarea type="text" placeholder="Warning" class="textarea textarea-warning"></textarea>
-  <textarea type="text" placeholder="Error" class="textarea textarea-error"></textarea>
+  <textarea placeholder="Primary" class="textarea textarea-primary"></textarea>
+  <textarea placeholder="Secondary" class="textarea textarea-secondary"></textarea>
+  <textarea placeholder="Accent" class="textarea textarea-accent"></textarea>
+  <textarea placeholder="Neutral" class="textarea textarea-neutral"></textarea>
+  <textarea placeholder="Info" class="textarea textarea-info"></textarea>
+  <textarea placeholder="Success" class="textarea textarea-success"></textarea>
+  <textarea placeholder="Warning" class="textarea textarea-warning"></textarea>
+  <textarea placeholder="Error" class="textarea textarea-error"></textarea>
 </div>
 
 ```html
-<textarea type="text" placeholder="Primary" class="$$textarea $$textarea-primary"></textarea>
-<textarea type="text" placeholder="Secondary" class="$$textarea $$textarea-secondary"></textarea>
-<textarea type="text" placeholder="Accent" class="$$textarea $$textarea-accent"></textarea>
-<textarea type="text" placeholder="Neutral" class="$$textarea $$textarea-neutral"></textarea>
-<textarea type="text" placeholder="Info" class="$$textarea $$textarea-info"></textarea>
-<textarea type="text" placeholder="Success" class="$$textarea $$textarea-success"></textarea>
-<textarea type="text" placeholder="Warning" class="$$textarea $$textarea-warning"></textarea>
-<textarea type="text" placeholder="Error" class="$$textarea $$textarea-error"></textarea>
+<textarea placeholder="Primary" class="$$textarea $$textarea-primary"></textarea>
+<textarea placeholder="Secondary" class="$$textarea $$textarea-secondary"></textarea>
+<textarea placeholder="Accent" class="$$textarea $$textarea-accent"></textarea>
+<textarea placeholder="Neutral" class="$$textarea $$textarea-neutral"></textarea>
+<textarea placeholder="Info" class="$$textarea $$textarea-info"></textarea>
+<textarea placeholder="Success" class="$$textarea $$textarea-success"></textarea>
+<textarea placeholder="Warning" class="$$textarea $$textarea-warning"></textarea>
+<textarea placeholder="Error" class="$$textarea $$textarea-error"></textarea>
 ```
 
 ### ~Sizes
