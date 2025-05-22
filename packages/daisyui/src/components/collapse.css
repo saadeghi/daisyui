@@ -120,12 +120,8 @@
     width: 100%;
     padding: 1rem;
     padding-inline-end: 3rem;
-    min-height: 3.75rem;
+    min-height: 1lh;
     transition: background-color 0.2s ease-out;
-
-    @supports (min-height: 1lh) {
-      min-height: 1lh;
-    }
   }
 }
 
@@ -209,12 +205,8 @@
   width: 100%;
   padding: 1rem;
   padding-inline-end: 3rem;
-  min-height: 3.75rem;
+  min-height: 1lh;
   transition: background-color 0.2s ease-out;
-
-  @supports (min-height: 1lh) {
-    min-height: 1lh;
-  }
 }
 .collapse-open {
   grid-template-rows: max-content 1fr;
