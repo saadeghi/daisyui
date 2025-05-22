@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.37 (2025-05-22)
+
+
+### Bug Fixes
+
+* tab-content height. closes: [#3843](https://github.com/saadeghi/daisyui/issues/3843) ([0b5d958](https://github.com/saadeghi/daisyui/commit/0b5d958c93b8b57f1622c943b904e3f84c7d0145))
+
 ## 5.0.36 (2025-05-22)
 
 
