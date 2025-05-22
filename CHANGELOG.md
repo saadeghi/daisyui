@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.36 (2025-05-22)
+
+
+### Bug Fixes
+
+* Safari iOS page zoom when user focuses Text Input. closes: [#3871](https://github.com/saadeghi/daisyui/issues/3871) ([1b5b997](https://github.com/saadeghi/daisyui/commit/1b5b9971e3ca5dbaf82f64e23903bad3f419d584))
+
 ## 5.0.35 (2025-05-01)
 
 
