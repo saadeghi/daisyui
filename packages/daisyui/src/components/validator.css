@@ -11,7 +11,7 @@
   }
   &:user-invalid,
   &:has(:user-invalid),
-  &[aria-invalid] {
+  &[aria-invalid]:not([aria-invalid="false"]) {
     &,
     &:focus,
     &:checked,
