@@ -2,6 +2,7 @@
   @apply flex flex-wrap;
   --tabs-height: auto;
   --tabs-direction: row;
+  --tab-height: calc(var(--size-field, 0.25rem) * 10);
   height: var(--tabs-height);
   flex-direction: var(--tabs-direction);
 }
@@ -19,7 +20,7 @@
   --tab-radius-min: calc(0.75rem - var(--border));
   border-color: #0000;
   order: var(--tab-order);
-  height: calc(var(--size-field, 0.25rem) * 10);
+  height: var(--tab-height);
   font-size: 0.875rem;
   padding-inline-start: var(--tab-p);
   padding-inline-end: var(--tab-p);
@@ -42,7 +43,8 @@
   &:is(label:has(:checked)),
   &:is(.tab-active, [aria-selected="true"]) {
     & + .tab-content {
-      @apply block h-full;
+      @apply block;
+      height: calc(100% - var(--tab-height) + var(--border));
     }
   }
   &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected="true"]) {
@@ -483,8 +485,8 @@
 }
 
 .tabs-xs {
+  --tab-height: calc(var(--size-field, 0.25rem) * 6);
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.75rem;
     --tab-p: 0.375rem;
     --tab-radius-min: calc(0.5rem - var(--border));
@@ -492,8 +494,8 @@
 }
 
 .tabs-sm {
+  --tab-height: calc(var(--size-field, 0.25rem) * 8);
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 8);
     font-size: 0.875rem;
     --tab-p: 0.5rem;
     --tab-radius-min: calc(0.5rem - var(--border));
@@ -501,8 +503,8 @@
 }
 
 .tabs-md {
+  --tab-height: calc(var(--size-field, 0.25rem) * 10);
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
     --tab-p: 0.75rem;
     --tab-radius-min: calc(0.75rem - var(--border));
@@ -510,8 +512,8 @@
 }
 
 .tabs-lg {
+  --tab-height: calc(var(--size-field, 0.25rem) * 12);
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 12);
     font-size: 1.125rem;
     --tab-p: 1rem;
     --tab-radius-min: calc(1.5rem - var(--border));
@@ -519,8 +521,8 @@
 }
 
 .tabs-xl {
+  --tab-height: calc(var(--size-field, 0.25rem) * 14);
   :where(.tab) {
-    height: calc(var(--size-field, 0.25rem) * 14);
     font-size: 1.125rem;
     --tab-p: 1.25rem;
     --tab-radius-min: calc(2rem - var(--border));
