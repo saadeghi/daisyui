@@ -13,6 +13,6 @@ export const copyFile = async (from, to, newName = null) => {
 
     await fs.copyFile(from, destPath)
   } catch (error) {
-    throw new Error(`Error copying file from ${from} to ${to}:`, error)
+    throw new Error(`Error copying file from ${from} to ${to}: ${error.message}`)  
   }
 }
