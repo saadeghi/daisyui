@@ -40,8 +40,6 @@ And set `cupcake` theme for the page:
 <html data-theme="cupcake"></html>
 ```
 
-> :INFO:  <span><Translate text="I suggest using <a href='https://github.com/saadeghi/theme-change'>theme-change</a>, so you can switch themes and save selected theme in local storage." /></span>
-
 ## <Translate text="List of themes" />
 
 <Translate text="Try them:" />
