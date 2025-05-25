@@ -72,7 +72,7 @@ classnames:
   </div>
   <div class="stat">
     <div class="stat-figure text-secondary">
-      <div class="avatar online">
+      <div class="avatar avatar-online">
         <div class="w-16 rounded-full">
           <img alt="Tailwind CSS stat example component" src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
         </div>
@@ -130,7 +130,7 @@ classnames:
 
   <div class="$$stat">
     <div class="$$stat-figure text-secondary">
-      <div class="$$avatar $$online">
+      <div class="$$avatar $$avatar-online">
         <div class="w-16 rounded-full">
           <img src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
         </div>
