@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.38 (2025-05-26)
+
+
+### Bug Fixes
+
+* correct CSS syntax error in variables.css ([#3910](https://github.com/saadeghi/daisyui/issues/3910)) ([cd4820f](https://github.com/saadeghi/daisyui/commit/cd4820f7c73af0aaea4fba662fba642883725f7a))
+
 ## 5.0.37 (2025-05-22)
 
 
