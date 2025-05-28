@@ -269,7 +269,7 @@
   }
   .rdp-range_start .rdp-day_button {
     background-color: var(--color-base-content);
-    color: var(--color-base-content);
+    color: var(--color-base-100);
   }
   .rdp-range_middle {
     background-color: var(--color-base-200);
@@ -286,8 +286,8 @@
     }
   }
   .rdp-range_end .rdp-day_button {
-    color: var(--color-base-content);
     background-color: var(--color-base-content);
+    color: var(--color-base-100);
   }
   .rdp-range_start.rdp-range_end {
     background: revert;
