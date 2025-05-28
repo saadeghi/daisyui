@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.39 (2025-05-28)
+
+
+### Bug Fixes
+
+* calendar - react daypicker range bg color. closes: [#3918](https://github.com/saadeghi/daisyui/issues/3918) ([d9df966](https://github.com/saadeghi/daisyui/commit/d9df966a93f6164774c5a7043b97eeddc799f09d))
+
 ## 5.0.38 (2025-05-26)
 
 
