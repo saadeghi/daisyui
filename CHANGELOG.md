@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.40 (2025-05-28)
+
+
+### Bug Fixes
+
+* Chat bubble mask not working with tailwind prefixes. closes: [#3847](https://github.com/saadeghi/daisyui/issues/3847) ([c7856f2](https://github.com/saadeghi/daisyui/commit/c7856f267bc8653b04abf0250ba77f9523c85872))
+
 ## 5.0.39 (2025-05-28)
 
 
