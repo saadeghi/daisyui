@@ -18,7 +18,7 @@
     @apply hidden;
   }
 
-  :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)),
+  :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn, .checkbox)),
   :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
     @apply rounded-field grid grid-flow-col content-start items-center gap-2 px-3 py-1.5 text-start;
     transition-property: color, background-color, box-shadow;
@@ -72,10 +72,10 @@
   }
   :where(
     li:not(.menu-title, .disabled)
-      > *:not(ul, details, .menu-title):not(.menu-active, :active, .btn):hover,
+      > *:not(ul, details, .menu-title):not(.menu-active, :active, .btn, .checkbox):hover,
     li:not(.menu-title, .disabled)
       > details
-      > summary:not(.menu-title):not(.menu-active, :active, .btn):hover
+      > summary:not(.menu-title):not(.menu-active, :active, .btn, .checkbox):hover
   ) {
     @apply bg-base-content/10 cursor-pointer outline-hidden;
     box-shadow:
@@ -96,8 +96,8 @@
       @apply justify-self-end;
     }
 
-    & > *:not(ul, .menu-title, details, .btn):active,
-    & > *:not(ul, .menu-title, details, .btn).menu-active,
+    & > *:not(ul, .menu-title, details, .btn, .checkbox):active,
+    & > *:not(ul, .menu-title, details, .btn, .checkbox).menu-active,
     & > details > summary:active {
       @apply outline-hidden;
       color: var(--menu-active-fg);
