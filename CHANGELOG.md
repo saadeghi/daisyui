@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.42 (2025-05-29)
+
+
+### Bug Fixes
+
+* checkbox in menu should not be grid. closes: [#3922](https://github.com/saadeghi/daisyui/issues/3922) ([7f1ca83](https://github.com/saadeghi/daisyui/commit/7f1ca83e2545967dc1270c1db2ddb6f55830266f))
+
 ## 5.0.41 (2025-05-29)
 
 ## 5.0.40 (2025-05-28)
