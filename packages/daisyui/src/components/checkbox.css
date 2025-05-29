@@ -1,7 +1,7 @@
 .checkbox {
   border: var(--border) solid
     var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
-  @apply text-base-content rounded-selector relative shrink-0 cursor-pointer appearance-none p-1 align-middle;
+  @apply text-base-content rounded-selector relative inline-block shrink-0 cursor-pointer appearance-none p-1 align-middle;
   box-shadow:
     0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
     0 0 #0000 inset,
