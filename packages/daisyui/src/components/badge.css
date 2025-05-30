@@ -12,35 +12,36 @@
   --badge-fg: var(--color-base-content);
   --size: calc(var(--size-selector, 0.25rem) * 6);
   height: var(--size);
-  &.badge-outline {
-    --badge-fg: var(--badge-color);
-    --badge-bg: #0000;
-    background-image: none;
-    border-color: currentColor;
-  }
+}
 
-  &.badge-dash {
-    --badge-fg: var(--badge-color);
-    --badge-bg: #0000;
-    background-image: none;
-    border-color: currentColor;
-    border-style: dashed;
-  }
+.badge-outline {
+  color: var(--badge-color);
+  --badge-bg: #0000;
+  background-image: none;
+  border-color: currentColor;
+}
 
-  &.badge-soft {
-    color: var(--badge-color, var(--color-base-content));
-    background-color: color-mix(
-      in oklab,
-      var(--badge-color, var(--color-base-content)) 8%,
-      var(--color-base-100)
-    );
-    border-color: color-mix(
-      in oklab,
-      var(--badge-color, var(--color-base-content)) 10%,
-      var(--color-base-100)
-    );
-    background-image: none;
-  }
+.badge-dash {
+  color: var(--badge-color);
+  --badge-bg: #0000;
+  background-image: none;
+  border-color: currentColor;
+  border-style: dashed;
+}
+
+.badge-soft {
+  color: var(--badge-color, var(--color-base-content));
+  background-color: color-mix(
+    in oklab,
+    var(--badge-color, var(--color-base-content)) 8%,
+    var(--color-base-100)
+  );
+  border-color: color-mix(
+    in oklab,
+    var(--badge-color, var(--color-base-content)) 10%,
+    var(--color-base-100)
+  );
+  background-image: none;
 }
 
 .badge-primary {
