@@ -1,0 +1,11 @@
+User-agent: AhrefsBot
+Disallow: /resources/
+Disallow: /blog/
+Disallow: /store/
+Disallow: /compare/
+Disallow: /alternative/
+Disallow: /docs/install/
+Disallow: /*-component-library/
+
+User-agent: *
+Allow: /
