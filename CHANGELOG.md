@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.43 (2025-05-30)
+
+
+### Bug Fixes
+
+* badge-outline, badge-dash, badge-soft can be used with tailwind responsive variants. closes: [#3643](https://github.com/saadeghi/daisyui/issues/3643) ([2470fe2](https://github.com/saadeghi/daisyui/commit/2470fe20f9d69976d6ce7c98fa883909c6202e59))
+
 ## 5.0.42 (2025-05-29)
 
 
