@@ -4,7 +4,7 @@
   <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
   <script>
     console.log(
-      "If this page is not loading, please disable ad blockers or software that blocks scripts. We do not track your IP address or personal information. This script is required to assigne affiliate ID required for the purchase.",
+      "If this page is not loading, please disable ad blockers or software that blocks scripts. We do not track your IP address or personal information. This script is required to assign affiliate ID required for the purchase.",
     )
     const urlParams = new URLSearchParams(window.location.search)
     const productId = urlParams.get("product")

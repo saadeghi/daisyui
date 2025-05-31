@@ -47,7 +47,7 @@ classnames:
 1. [Using HTML `<dialog>` element](#method-1-html-dialog-element)  
   It needs JS to open but it has better accessibility and we can close it using `Esc` key  
 2. [Using checkbox](#method-2-checkbox)  
-  A hidden `<input type="checkbox">` to control the sate of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
+  A hidden `<input type="checkbox">` to control the state of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
 3. [Using `<a>` anchor links](#method-3-using-anchor-links)  
   A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 
