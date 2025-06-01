@@ -48,100 +48,65 @@ However just because daisyUI is offering these color names, it doesn't mean you'
 
 daisyUI has `primary` and `primary-content` but let's say you need a new shade of your primary color.
 
-### Step 1: Let's add a new color called `primary-muted` to Tailwind CSS
+### Step 1
+
+Let's add a new color called `primary-muted` to Tailwind CSS
 
 This allows us to use this new color name with all Tailwind CSS color utilities. For example, `bg-primary-muted` would set the background color to the new color.
 
-```js
-// tailwind.config.js
-module.exports = {
-  plugins: [require("daisyui")],
+`bg-primary-muted` utility class will set the background color to green by default.
 
-  theme: {
-    extend: {
-      colors: {
-        "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
-      },
-    },
-  },
+```diff:app.css
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default, dark --prefersdark;
 }
+
++ @theme{
++   --color-primary-muted: green;
++ }
 ```
 
-### Step 2: Let's use the new `primary-muted` color in daisyUI `light` themes.
+### Step 2
 
-Now we add the new color to a theme and set color values for it.
+Let's use the new `primary-muted` color in daisyUI `light` and `dark` themes.
 
-```js
-// tailwind.config.js
-module.exports = {
-  plugins: [require("daisyui")],
+`bg-primary-muted` utility class will set the background color to red in the light theme and blue in the dark theme.
 
-  theme: {
-    extend: {
-      colors: {
-        "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
-      },
-    },
-  },
-
-  daisyui: {
-    themes: [
-      {
-        light: {
-          // importing the built-in 'light' theme
-          // and setting the color values for '--primary-muted'
-          // (numbers are OKLCH values)
-          ...require("daisyui/src/theming/themes")["light"],
-          "--primary-muted": "65% 0.2 295",
-        },
-      },
-    ],
-  },
+```diff:app.css
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default, dark --prefersdark;
 }
-```
 
-You can set a different value for the new color in themes as well.
-Let's add the new color name to `cupcake` and `dark` theme:
-
-```js
-// tailwind.config.js
-module.exports = {
-  plugins: [require("daisyui")],
-
-  theme: {
-    extend: {
-      colors: {
-        "primary-muted": "oklch(var(--primary-muted) / <alpha-value>)",
-      },
-    },
-  },
-
-  daisyui: {
-    themes: [
-      // light theme
-      {
-        light: {
-          ...require("daisyui/src/theming/themes")["light"],
-          "--primary-muted": "65% 0.2 295",
-        },
-      },
-      // cupcake theme
-      {
-        cupcake: {
-          ...require("daisyui/src/theming/themes")["cupcake"],
-          "--primary-muted": "87% 0.05 200",
-        },
-      },
-      // dark theme
-      {
-        dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
-          "--primary-muted": "34% 0.2 289",
-        },
-      },
-    ],
-  },
+@theme{
+  --color-primary-muted: green;
 }
+
++ @plugin "daisyui/theme" {
++   name: "light";
++   --color-primary-muted: red;
++ }
++ @plugin "daisyui/theme" {
++   name: "dark";
++   --color-primary-muted: blue;
++ }
 ```
 
 Now you can simply use `bg-primary-muted` (or other Tailwind CSS color utilities) wherever you want and it will have different colors on each theme.
+
+To see the result, use this HTML code:
+
+```html:index.html
+<div class="bg-primary-muted">
+  This div will have green background by default
+</div>
+
+<div data-theme="light" class="bg-primary-muted">
+  This div will have red background in light theme
+</div>
+
+<div data-theme="dark" class="bg-primary-muted">
+  This div will have blue background in dark theme
+</div>
+```
