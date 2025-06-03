@@ -382,6 +382,15 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
+          href="https://github.com/aalaap/laravel-livewire-daisyui-starter-kit"
+          class="link link-hover group"
+        >
+          Laravel Starter Kit with daisyUI
+          {@html newtabicon}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener, noreferrer"
           href="https://tailscan.com/?ref=daisyui"
           class="link link-hover group"
         >
