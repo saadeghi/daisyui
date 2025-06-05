@@ -41,11 +41,11 @@
             </path>
           </g>
         </svg>
-        Get daisyUI T-shirts, Hoodies, Mugs, Stickers, and more!
+        Get daisyUI t-shirts, <span class="max-sm:hidden"> hoodies, mugs,</span> stickers and more!
         <svg
           width="15"
           height="15"
-          class="mx-1 inline-block size-4 rotate-12 align-middle"
+          class="mx-1 inline-block size-4 rotate-12 align-middle max-sm:hidden"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           ><g
