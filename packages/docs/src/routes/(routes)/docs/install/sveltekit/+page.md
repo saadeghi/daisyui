@@ -44,7 +44,7 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 Import the CSS file in your Svelte page (or layout)
 ```html:src/routes/+page.svelte
 <script>
-  import "../style.css";
+  import "../app.css";
 </script>
 ```
 
