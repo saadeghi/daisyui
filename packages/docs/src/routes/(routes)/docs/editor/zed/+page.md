@@ -33,7 +33,7 @@ I suggest using [Context7](https://context7.com/) [MCP server](https://github.co
 
 1. Press <kbd class="kbd">⌘ CMD</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd> (or <kbd class="kbd">⌃ Ctrl</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd> on Windows)
 2. Type `agent: add context server`
-3. Add this name and srver:
+3. Add this name and server:
 
    ```sh:name
    context7
