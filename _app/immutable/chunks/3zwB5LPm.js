@@ -1,1 +1,0 @@
-import{e as c,S as o,d,ah as i,av as m}from"./DQM5xBMX.js";function h(e,n,a){c(()=>{var r=o(()=>n(e,a==null?void 0:a())||{});if(a&&(r!=null&&r.update)){var s=!1,t={};d(()=>{var f=a();i(f),s&&m(t,f)&&(t=f,r.update(f))}),s=!0}if(r!=null&&r.destroy)return()=>r.destroy()})}export{h as a};
