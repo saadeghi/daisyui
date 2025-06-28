@@ -18,7 +18,7 @@ npm create vite@latest ./ -- --template react
 ### 2. Install Tailwind CSS and daisyUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+npm install tailwindcss@latest @vitejs/plugin-react@latest daisyui@latest
 ```
 
 Add Tailwind CSS to Vite config
