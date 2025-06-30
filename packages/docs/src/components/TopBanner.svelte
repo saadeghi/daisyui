@@ -12,7 +12,7 @@
 </script>
 
 <!-- Without timer -->
-{#if true}
+{#if false}
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       target="_blank"
