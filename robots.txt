@@ -6,6 +6,8 @@ Disallow: /compare/
 Disallow: /alternative/
 Disallow: /docs/install/
 Disallow: /*-component-library/
+Disallow: /cdn-cgi/
+Disallow: /?lang=*
 
 User-agent: *
 Allow: /
