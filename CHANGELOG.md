@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.44 (2025-07-06)
+
+
+### Bug Fixes
+
+* responsive RTL dropdown position. closes: [#3956](https://github.com/saadeghi/daisyui/issues/3956) ([03cf030](https://github.com/saadeghi/daisyui/commit/03cf030ca8341d5fe0ffce2f6e22791a4b065273))
+
 ## 5.0.43 (2025-05-30)
 
 
