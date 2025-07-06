@@ -103,6 +103,10 @@
 
   :where(.dropdown-content) {
     @apply end-auto;
+    translate: 0 0;
+    [dir="rtl"] & {
+      translate: 0 0;
+    }
   }
 
   &.dropdown-left {
@@ -162,6 +166,9 @@
   :where(.dropdown-content) {
     @apply end-0;
     translate: 0 0;
+    [dir="rtl"] & {
+      translate: 0 0;
+    }
   }
 
   &.dropdown-left {
