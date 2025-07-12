@@ -139,9 +139,16 @@
     padding: 0;
     display: inline-flex;
     position: relative;
-    &:disabled {
+
+    &:disabled,
+    &[aria-disabled="true"] {
       cursor: revert;
       opacity: 0.5;
+    }
+
+    &:disabled:hover,
+    &[aria-disabled="true"]:hover {
+      background-color: transparent;
     }
   }
   .rdp-chevron {
