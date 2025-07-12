@@ -1,10 +1,44 @@
 import { visit } from "unist-util-visit"
 
+// Helper to escape quotes for HTML attributes
+function escapeQuotes(text) {
+  return text.replace(/"/g, "&quot;").replace(/'/g, "&#39;")
+}
+
 // Helper to get text from a heading node
 function getHeadingText(node) {
   if (!node.children || !node.children.length) return ""
-  const textNode = node.children.find((child) => child.type === "text")
-  return textNode ? textNode.value : ""
+  
+  // For ID generation, we want plain text without formatting
+  let plainText = ""
+  
+  node.children.forEach((child) => {
+    if (child.type === "text") {
+      plainText += child.value
+    } else if (child.type === "inlineCode") {
+      plainText += child.value  // Just the code content, no backticks for ID
+    } else if (child.type === "emphasis") {
+      const content = child.children?.map(c => 
+        c.type === "text" ? c.value : 
+        c.type === "inlineCode" ? c.value : ""
+      ).join("") || ""
+      plainText += content
+    } else if (child.type === "strong") {
+      const content = child.children?.map(c => 
+        c.type === "text" ? c.value : 
+        c.type === "inlineCode" ? c.value : ""
+      ).join("") || ""
+      plainText += content
+    } else if (child.type === "link") {
+      const linkText = child.children?.map(c => 
+        c.type === "text" ? c.value : 
+        c.type === "inlineCode" ? c.value : ""
+      ).join("") || ""
+      plainText += linkText
+    }
+  })
+  
+  return plainText
 }
 
 // Check if a node is a component heading
@@ -18,6 +52,7 @@ function createComponent(headingNode) {
     type: "component",
     title: getHeadingText(headingNode).slice(1), // Remove the ~ prefix
     description: "",
+    descriptionNodes: [], // Store the actual nodes for proper rendering
     demo: [],
     htmlCode: null,
     jsxCode: null,
@@ -36,6 +71,7 @@ function processComponentNode(node, component) {
 
   if (node.type === "heading" && node.depth === 4) {
     component.description = getHeadingText(node)
+    component.descriptionNodes = node.children // Preserve original formatting
   } else if (node.type === "code") {
     if (node.lang === "html" && !component.htmlCode) {
       component.htmlCode = node
@@ -51,12 +87,54 @@ function processComponentNode(node, component) {
   }
 }
 
+// Helper function to convert nodes to HTML string with proper escaping
+function nodesToHtml(nodes) {
+  if (!nodes || !Array.isArray(nodes)) return ""
+  
+  return nodes.map(node => {
+    if (node.type === "text") {
+      return node.value
+    } else if (node.type === "inlineCode") {
+      return `<code>${node.value}</code>`
+    } else if (node.type === "emphasis") {
+      const content = node.children?.map(child => 
+        child.type === "text" ? child.value : 
+        child.type === "inlineCode" ? `<code>${child.value}</code>` : ""
+      ).join("") || ""
+      return `<em>${content}</em>`
+    } else if (node.type === "strong") {
+      const content = node.children?.map(child => 
+        child.type === "text" ? child.value : 
+        child.type === "inlineCode" ? `<code>${child.value}</code>` : ""
+      ).join("") || ""
+      return `<strong>${content}</strong>`
+    } else if (node.type === "link") {
+      const linkText = node.children?.map(child => 
+        child.type === "text" ? child.value : 
+        child.type === "inlineCode" ? `<code>${child.value}</code>` : ""
+      ).join("") || ""
+      // FIXED: Use single quotes for href to avoid quote conflicts
+      return `<a href='${node.url}'>${linkText}</a>`
+    }
+    return ""
+  }).join("")
+}
+
 // Transform a component into its final nodes
 function componentToNodes(comp) {
+  // Use the properly formatted description with HTML
+  const formattedDescription = comp.descriptionNodes.length > 0 
+    ? nodesToHtml(comp.descriptionNodes)
+    : comp.description
+
+  // Escape quotes in both title and description for HTML attributes
+  const escapedTitle = escapeQuotes(comp.title)
+  const escapedDescription = escapeQuotes(formattedDescription)
+
   const nodes = [
     {
       type: "html",
-      value: `<Component title="${comp.title}" desc="${comp.description}">\n`,
+      value: `<Component title="${escapedTitle}" desc="${escapedDescription}">\n`,
     },
     ...comp.demo,
     {
