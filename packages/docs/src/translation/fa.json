@@ -2,7 +2,6 @@
   "__code": "FA",
   "__direction": "rtl",
   "__name": "فارسی",
-  "__status": "",
   "Code": "Code",
   "Or": "یا",
   "cta-1-mobile": "کامپوننت‌ها",
@@ -1128,7 +1127,6 @@
   "Radial progress needs `--value` CSS variable to work.": "برای کارکرد درست، Radial progress به متغیر CSS `--value` نیاز دارد.",
   "To change the size, use `--size` CSS variable which has a default value of `5rem`.": "برای تغییر اندازه، از متغیر CSS `--size` استفاده کنید که مقدار پیش‌فرض آن `5rem` است.",
   "To change the thickness, use `--thickness` CSS variable which is 10% of the size by default.": "برای تغییر ضخامت، از متغیر CSS `--thickness` استفاده کنید که به‌طور پیش‌فرض 10% اندازه است.",
-  "For Radial progress we need to use a `div` instead of the `progress` tag because browsers can't show text inside `progress` tag, and Firefox doesn't render pseudo-elements inside `progress` tag at all.": "برای Radial progress باید از یک تگ `div` به‌جای تگ `progress` استفاده کرد، زیرا مرورگرها نمی‌توانند متن را در داخل تگ `progress` نشان دهنده و فایرفاکس اصلاً عناصر شبه‌عنصر را در داخل تگ `progress` رندر نمی‌کند.",
   "Adding `role=\"progressbar\"` makes it accessible to screen readers as well.": "افزودن `role=\"progressbar\"` آن را برای صفحه‌خوان‌ها نیز در دسترس قرار می‌دهد.",
   "By default, the second child of the `list-row` will fill the remaining space. You can use `list-col-grow` on another child to make it fill the remaining space instead.": "به‌طور پیش‌فرض، فرزند دوم `list-row` فضای باقی‌مانده را پر می‌کند. می‌توانید از `list-col-grow` در فرزند دیگری استفاده کنید تا به‌جای آن فضای باقی‌مانده را پر کند.",
   "Title": "عنوان",
@@ -1155,5 +1153,6 @@
   "The `hr` tag at the beginning or end of each item, displays a line to connect items.": "تگ `hr` در ابتدا یا انتهای هر آیتم، یک خط برای اتصال آیتم‌ها نمایش می‌دهد.",
   "Inbox": "صندوق ورودی",
   "In chat window type this and write your prompt": "در پنجره چت این را تایپ کنید و درخواست خود را بنویسید",
-  "don't re-invent <br/>the wheel <br/>every time": "چرخ را دوباره <br/>اختراع نکنید"
+  "don't re-invent <br/>the wheel <br/>every time": "چرخ را دوباره <br/>اختراع نکنید",
+  "For Radial progress we need to use a `div` instead of the `progress` tag because browsers can't show text inside `progress` tag, and Firefox doesn't render pseudo-elements inside `progress` tag at all.": "برای Radial progress باید از یک تگ `div` به‌جای تگ `progress` استفاده کرد، زیرا مرورگرها نمی‌توانند متن را در داخل تگ `progress` نشان دهنده و فایرفاکس اصلاً عناصر شبه‌عنصر را در داخل تگ `progress` رندر نمی‌کند."
 }
