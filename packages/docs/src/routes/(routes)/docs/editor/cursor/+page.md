@@ -36,7 +36,7 @@ In chat window type this and Cursor will use daisyUI's llms.txt file to generate
 
 ### Project-level permanent setup
 
-You can setup daisyUI's llms.txt file to your repo so Cursor can use it by default. ([Read more at Cursor docs](https://docs.cursor.com/context/rules))
+You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. ([Read more at Cursor docs](https://docs.cursor.com/context/rules))
 
 Run this command to save the llms.txt file to `.cursor/rules/daisyui.mdc`
 
@@ -46,16 +46,21 @@ curl -L https://daisyui.com/llms.txt --create-dirs -o .cursor/rules/daisyui.mdc
 
 ### MCP server
 
-MCP is a an API to communicate with AI models. You can add MCP servers and Cursor will communicate with them to get more accurate results.
+MCP is a an API to communicate with AI models. You can add MCP servers and Cursor will communicate with them to get more accurate results.  
+You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Cursor.
 
-I suggest using [Context7](https://context7.com/) [MCP server](https://github.com/upstash/context7-mcp) which provides many libraries including daisyUI.
+<div class="tabs tabs-lift max-sm:tabs-sm">
+  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### Setup Context7 MCP server
 
 1. Go to Cursor settings <kbd class="kbd">⌘ CMD</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">J</kbd> (or <kbd class="kbd">⌃ Ctrl</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">J</kbd> on Windows)
 2. Click `MCP` from the left sidebar
 3. Click `Add new global MCP server`
 4. Add this:
 
-   ```diff:.cursor/mcp.json
+   ```diff:~/.cursor/mcp.json
    {
      "mcpServers": {
    +   "Context7": {
@@ -67,8 +72,44 @@ I suggest using [Context7](https://context7.com/) [MCP server](https://github.co
    }
    ```
 
-5. Now in `Agent Mode` you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
-   For example:
-   ```md:prompt
-   give me a light daisyUI 5 theme with tropical color palette. use context7
+#### Usage
+
+Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.  
+For example:
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette. use context7
+```
+
+  </div>
+
+  <input type="radio" name="mcp_options" class="tab" aria-label="GitMCP" />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### Setup daisyUI GitMCP server
+
+1. Go to Cursor settings <kbd class="kbd">⌘ CMD</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">J</kbd> (or <kbd class="kbd">⌃ Ctrl</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">J</kbd> on Windows)
+2. Click `MCP` from the left sidebar
+3. Click `Add new global MCP server`
+4. Add this:
+
+   ```diff:~/.cursor/mcp.json
+   {
+     "mcpServers": {
+   +   "daisyui Docs": {
+   +     "url": "https://gitmcp.io/saadeghi/daisyui"
+   +   }
+     }
+   }
    ```
+
+#### Usage
+
+Now in `Agent Mode` you can ask AI anything about daisyUI.
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette
+```
+
+</div>
+</div>

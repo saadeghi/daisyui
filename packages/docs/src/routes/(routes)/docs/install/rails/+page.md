@@ -32,7 +32,7 @@ Install [Tailwind CSS 4 gem](https://github.com/rails/tailwindcss-rails) for Rai
 There are 3 ways to add daisyUI to your Rails project
 
 <div class="tabs tabs-lift max-sm:tabs-sm">
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Node dependency" />
+  <input type="radio" name="install_options" class="tab" aria-label="Node dependency" />
   <div class="tab-content bg-base-100 border-base-300 px-6 py-3">
 
 This method is recommended if are already using Node.js.  
@@ -46,7 +46,7 @@ npm install daisyui@latest
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
-  
+
 ```postcss:app/assets/tailwind/application.css
 @import "tailwindcss" source(none);
 @source "../../../public/*.html";
@@ -59,9 +59,8 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
   </div>
 
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="Bundle file" checked="checked" />
+  <input type="radio" name="install_options" class="tab" aria-label="Bundle file" checked="checked" />
   <div class="tab-content bg-base-100 border-base-300 px-6 py-3">
-
 
 This method is recommended if you are not using Node.js.  
 This works as a Tailwind CSS plugin so only the class names you need will be added to your CSS file.
@@ -89,17 +88,17 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   /* custom theme here */
 }
 ```
-  
+
   </div>
 
-  <input type="radio" name="my_tabs_3" class="tab" aria-label="CDN" />
+  <input type="radio" name="install_options" class="tab" aria-label="CDN" />
   <div class="tab-content bg-base-100 border-base-300 px-6 py-3">
-  
+
 
 This method is recommended if you want to quickly add daisyUI without adding any file.
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
-  
+
 ```postcss:app/assets/tailwind/application.css
 @import "tailwindcss" source(none);
 @source "../../../public/*.html";
@@ -114,10 +113,8 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 - You can [import small CSS files separately](https://cdn.jsdelivr.net/npm/daisyui@5/chunks.css)
 - You can [import all themes](https://cdn.jsdelivr.net/npm/daisyui@5/themes.css) or [specific themes](https://cdn.jsdelivr.net/npm/daisyui@5/theme/light.css)
 
-
 </div>
 </div>
-
 
 ### 4. Create a homepage in Rails
 

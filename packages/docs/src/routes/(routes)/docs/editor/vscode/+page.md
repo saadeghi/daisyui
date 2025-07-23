@@ -24,53 +24,98 @@ In chat window type this and VSCode will use daisyUI's llms.txt file to generate
 
 ### Project-level permanent setup
 
-You can setup daisyUI's llms.txt file to your repo so Copilot can use it by default. ([Read more at VSCode docs](https://code.visualstudio.com/docs/copilot/copilot-customization))
+You can setup daisyUI's llms.txt file to your workspace so Copilot can use it by default. ([Read more at VSCode docs](https://code.visualstudio.com/docs/copilot/copilot-customization))
 
-1. Run this command to save the llms.txt file to `.vscode/daisyui.md`
+Run this command to save the llms.txt file to `.github/daisyui.instructions.md`
 
-   ```sh:Terminal
-   curl -L https://daisyui.com/llms.txt --create-dirs -o .vscode/daisyui.md
-   ```
-
-2. In `.vscode/settings.json` Add this:
-
-   ```json:.vscode/settings.json
-   {
-     "github.copilot.chat.codeGeneration.instructions": [
-       {
-         "file": "./.vscode/daisyui.md"
-       }
-     ]
-   }
-   ```
+```sh:Terminal
+curl -L https://daisyui.com/llms.txt --create-dirs -o .github/daisyui.instructions.md
+```
 
 ### MCP server
 
-MCP is a an API to communicate with AI models. You can add MCP servers and Copilot will communicate with them to get more accurate results.
+MCP is a an API to communicate with AI models. You can add MCP servers and Copilot will communicate with them to get more accurate results.  
+You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in VSCode.
 
-I suggest using [Context7](https://context7.com/) [MCP server](https://github.com/upstash/context7-mcp) which provides many libraries including daisyUI.
+<div class="tabs tabs-lift max-sm:tabs-sm">
+  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
 
-1. Go to MCP settings in VSCode: [`vscode://settings/mcp`](vscode://settings/mcp)
-2. Click `Edit in settings.json`
-3. Add this:
+#### Option 1. Setup Context7 MCP server for VSCode
 
-   ```diff:settings.json
-   {
-     "mcp": {
-       "servers": {
-   +     "Context7": {
-   +       "type": "stdio",
-   +       "command": "npx",
-   +       "args": ["-y", "@upstash/context7-mcp@latest"]
-   +     }
-       }
-     }
-   }
-   ```
+Click this button to install Context7 MCP server in VSCode:
 
-4. Now in `Agent Mode` you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
-   For example:
+<a href="vscode:mcp/install?%7B%22name%22%3A%22context7%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40upstash%2Fcontext7-mcp%40latest%22%5D%7D" class="btn btn-primary">
+  <img src="https://img.daisyui.com/images/logos/vscode.webp" alt="VSCode" width="24" height="24" class="inline-block me-2">
+  Install Context7 MCP
+</a>
 
-   ```md:prompt
-   give me a light daisyUI 5 theme with tropical color palette. use context7
-   ```
+#### Option 2. Setup Context7 MCP server for current workspace only
+
+1.  Create a `.vscode/mcp.json` file in your project root if it doesn't exist.
+2.  Add Context7 MCP server:
+
+```diff:.vscode/mcp.json
+{
+  "servers": {
++   "context7": {
++     "type": "stdio",
++     "command": "npx",
++     "args": [
++       "-y",
++       "@upstash/context7-mcp@latest"
++     ]
++   }
+  }
+}
+```
+
+#### Usage
+
+Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.  
+ For example:
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette. use context7
+```
+
+  </div>
+
+  <input type="radio" name="mcp_options" class="tab" aria-label="GitMCP" />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### Option 1. Setup daisyUI GitMCP server for VSCode
+
+Click this button to install GitMCP server in VSCode:
+
+<a href="vscode:mcp/install?%7B%22name%22%3A%22daisyUI%22%2C%22type%22%3A%22sse%22%2C%22url%22%3A%22https%3A%2F%2Fgitmcp.io%2Fsaadeghi%2Fdaisyui%22%7D" class="btn btn-primary">
+  <img src="https://img.daisyui.com/images/logos/vscode.webp" alt="VSCode" width="24" height="24" class="inline-block me-2">
+  Install daisyUI GitMCP
+</a>
+
+#### Option 2. Setup daisyUI GitMCP server for current workspace only
+
+1.  Create a `.vscode/mcp.json` file in your project root if it doesn't exist.
+2.  Add daisyUI GitMCP server:
+
+```diff:.vscode/mcp.json
+{
+  "servers": {
++   "daisyUI": {
++     "type": "sse",
++     "url": "https://gitmcp.io/saadeghi/daisyui"
++   }
+  }
+}
+```
+
+#### Usage
+
+Now in `Agent Mode` you can ask AI anything about daisyUI.
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette
+```
+
+</div>
+</div>

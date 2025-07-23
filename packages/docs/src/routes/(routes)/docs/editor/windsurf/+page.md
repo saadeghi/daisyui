@@ -24,16 +24,21 @@ Here's how to use daisyUI llms.txt in Windsurf:
 
 ### MCP server
 
-MCP is a an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.
+MCP is a an API to communicate with AI models. You can add MCP servers and Windsurf will communicate with them to get more accurate results.  
+You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Windsurf.
 
-I suggest using [Context7](https://context7.com/) [MCP server](https://github.com/upstash/context7-mcp) which provides many libraries including daisyUI.
+<div class="tabs tabs-lift max-sm:tabs-sm">
+  <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### Setup Context7 MCP server
 
 1. Press <kbd class="kbd">⌘ CMD</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd> (or <kbd class="kbd">⌃ Ctrl</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd> on Windows)
 2. Type `Windsurf: MCP Configuration Panel`
 3. Click `Add custom server +`
 4. Add this:
 
-```diff:mcp_config.json
+```diff:~/.codeium/windsurf/mcp_config.json
 {
   "mcpServers": {
 +   "context7": {
@@ -44,9 +49,44 @@ I suggest using [Context7](https://context7.com/) [MCP server](https://github.co
 }
 ```
 
-5. Now you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
-   For example:
+#### Usage
+
+Now you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
+For example:
 
 ```md:prompt
 give me a light daisyUI 5 theme with tropical color palette. use context7
 ```
+
+  </div>
+
+  <input type="radio" name="mcp_options" class="tab" aria-label="GitMCP" />
+  <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
+
+#### Setup daisyUI GitMCP server
+
+1. Press <kbd class="kbd">⌘ CMD</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd> (or <kbd class="kbd">⌃ Ctrl</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd> on Windows)
+2. Type `Windsurf: MCP Configuration Panel`
+3. Click `Add custom server +`
+4. Add this:
+
+```diff:~/.codeium/windsurf/mcp_config.json
+{
+  "mcpServers": {
++   "daisyui Docs": {
++     "serverUrl": "https://gitmcp.io/saadeghi/daisyui"
++   }
+  }
+}
+```
+
+#### Usage
+
+Now you can ask AI anything about daisyUI.
+
+```md:prompt
+give me a light daisyUI 5 theme with tropical color palette
+```
+
+</div>
+</div>
