@@ -155,21 +155,23 @@ A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this
   --radius-selector: 1rem; /* border radius of selectors (checkbox, toggle, badge) */
   --radius-field: 0.25rem; /* border radius of fields (button, input, select, tab) */
   --radius-box: 0.5rem; /* border radius of boxes (card, modal, alert) */
+  /* preferred values for --radius-* : 0rem, 0.25rem, 0.5rem, 1rem, 2rem */
 
-  --size-selector: 0.25rem; /* base size of selectors (checkbox, toggle, badge) */
-  --size-field: 0.25rem; /* base size of fields (button, input, select, tab) */
+  --size-selector: 0.25rem; /* base size of selectors (checkbox, toggle, badge). Value must be 0.25rem unless we intentionally want bigger selectors. In so it can be 0.28125 or 0.3125. If we intentionally want smaller selectors, it can be 0.21875 or 0.1875 */
+  --size-field: 0.25rem; /* base size of fields (button, input, select, tab). Value must be 0.25rem unless we intentionally want bigger fields. In so it can be 0.28125 or 0.3125. If we intentionally want smaller fields, it can be 0.21875 or 0.1875 */
 
-  --border: 1px; /* border size */
+  --border: 1px; /* border size. Value must be 1px unless we intentionally want thicker borders. In so it can be 1.5px or 2px. If we intentionally want thinner borders, it can be 0.5px */
 
-  --depth: 1; /* only 0 or 1 – Adds a shadow and subtle 3D effect to components */
-  --noise: 0; /* only 0 or 1 - Adds a subtle noise effect to components */
+  --depth: 1; /* only 0 or 1 – Adds a shadow and subtle 3D depth effect to components */
+  --noise: 0; /* only 0 or 1 - Adds a subtle noise (grain) effect to components */
 }
 ```
 #### Rules
 - All CSS variables above are required
 - Colors can be OKLCH or hex or other formats
+- If you're generating a custom theme, do not include the comments from the example above. Just provide the code.
 
-You can use https://daisyui.com/theme-generator/ to create your own theme
+People can use https://daisyui.com/theme-generator/ visual tool to create their own theme.
 
 ## daisyUI 5 components
 
