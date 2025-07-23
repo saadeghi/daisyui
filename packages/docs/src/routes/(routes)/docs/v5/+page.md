@@ -470,7 +470,7 @@ daisyUI 5 introduces new components to help you build websites faster.
 
 > :TLDR:
 >
-> TLDR – New components: `List`, `Status`, `Fieldset`, `Label`, `Filter`, `Calendar`, `Validator`, `Dock`.  
+> TLDR – New components: List, Status, Fieldset, Label, Filter, Calendar, Validator, Dock.  
 > [:FF: Skip to the next section](#6-major-component-improvements)
 
 ### List
@@ -547,7 +547,6 @@ Compatible with safe-area-inset-bottom on mobile devices.
 See [Dock component docs](/components/dock/)
 
 <img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/dock.webp" alt="daisyui tailwind dock">
-
 
 ## 6. Major component improvements
 
