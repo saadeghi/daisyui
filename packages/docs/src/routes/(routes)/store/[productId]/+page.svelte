@@ -7,15 +7,15 @@
 
   let { data } = $props()
 
-  let currentIndex = $state(0)
+  // let currentIndex = $state(0)
 
-  function next() {
-    currentIndex = (currentIndex + 1) % data.product.media.length
-  }
+  // function next() {
+  //   currentIndex = (currentIndex + 1) % data.product.media.length
+  // }
 
-  function prev() {
-    currentIndex = (currentIndex - 1 + data.product.media.length) % data.product.media.length
-  }
+  // function prev() {
+  //   currentIndex = (currentIndex - 1 + data.product.media.length) % data.product.media.length
+  // }
 
   function convertCurrency(number) {
     const formatted = (number / 100).toFixed(2)
@@ -327,110 +327,194 @@
 {/await}
 
 <div class="mx-auto py-10">
-  <div class="grid gap-12 xl:grid-cols-2">
+  <div class="grid gap-12 xl:grid-cols-12">
     <!-- Product Images/Media -->
-    <div class="flex flex-col gap-4">
-      <div class="relative">
-        <div class="group rounded-box border-base-300 relative overflow-hidden border">
-          <div
-            class="flex transition-transform duration-300"
-            style={`transform: translateX(-${currentIndex * 100}%)`}
-          >
-            {#each data.product.media as media}
-              <div class="w-full shrink-0">
-                {#if media.type === "video"}
-                  <div class="w-full" style={`aspect-ratio: ${media.ratio};`}>
-                    <iframe
-                      class="h-full w-full"
-                      src={media.url}
-                      title={data.product.attributes.name}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                {:else if media.type === "image"}
-                  <img
-                    src={media.lg}
-                    alt={data.product.attributes.name}
-                    class="h-full w-full bg-cover object-cover text-transparent"
-                    style={`background-image:url(${media.sm});`}
-                    loading="lazy"
-                  />
-                {/if}
-              </div>
-            {/each}
-          </div>
+    <div class="flex flex-col gap-4 xl:col-span-7">
+      <div class="relative max-xl:-mx-4 max-xl:overflow-x-auto md:max-xl:-mx-20">
+        <div class="flex gap-6 xl:flex-col xl:gap-16">
+          <div class="w-px shrink-0 xl:hidden"></div>
+          {#each data.product.media as media, index}
+            <div
+              class="revealer rounded-box no-shadow-[0px_-1px_12px_-3px_rgba(0,_0,_0,_0.2),0px_0px_2px_0px_rgba(0,_0,_0,_0.1)] w-[calc(90%-2rem)] shrink-0 overflow-hidden shadow-[0_3px_oklch(0%_0_0/0.05),0_0_0_1px_oklch(0%_0_0/0.05)] xl:w-full"
+              data-style="
+                --index:{1 + index};
+                top: calc(80px + (var(--index) * 10px));
+                {index % 2 === 0 ? `rotate: ${0 + index / 2}deg;` : `rotate:  ${0 - index / 2}deg;`}
+                {index % 2 === 0
+                ? `margin-inline-start: ${2 + index}px;`
+                : `margin-inline-start:  ${2 - index}px;`}"
+            >
+              {#if media.type === "video"}
+                <div class="w-full" style={`aspect-ratio: ${media.ratio};`}>
+                  <iframe
+                    class="h-full w-full"
+                    src={media.url}
+                    title={data.product.attributes.name}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              {:else if media.type === "image"}
+                <img
+                  src={media.lg}
+                  alt={data.product.attributes.name}
+                  class="h-full w-full bg-cover object-cover text-transparent"
+                  style={`background-image:url(${media.sm});`}
+                  loading="lazy"
+                />
+              {/if}
+            </div>
+          {/each}
+          <div class="w-px shrink-0 xl:hidden"></div>
+        </div>
+      </div>
+    </div>
 
-          {#if data.product.media.length > 1}
-            <div
-              class="absolute top-1/2 left-4 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-100"
+    <!-- Product Info -->
+    <div class="xl:col-span-5">
+      <div class="sticky top-20 flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          {#if data.product.badge}
+            <span
+              class={`badge  badge-soft flex gap-1 rounded-full ps-1 text-xs shadow-xs ${data.product.badge.class}`}
             >
-              <button class="btn btn-circle" onclick={prev}> ← </button>
-            </div>
-            <div
-              class="absolute top-1/2 right-4 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-100"
-            >
-              <button class="btn btn-circle" onclick={next}> → </button>
-            </div>
+              {#if data.product.badge.icon === "check"}
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <g fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM11.8435 6.20859C12.0967 5.88082 12.0363 5.40981 11.7086 5.15654C11.3808 4.90327 10.9098 4.96365 10.6565 5.29141L6.95615 10.0801L5.30747 8.24828C5.03038 7.94039 4.55616 7.91543 4.24828 8.19253C3.94039 8.46962 3.91544 8.94384 4.19253 9.25172L6.44253 11.7517C6.59132 11.917 6.80582 12.0078 7.02809 11.9995C7.25036 11.9911 7.45746 11.8846 7.59346 11.7086L11.8435 6.20859Z"
+                      fill="currentColor"
+                    >
+                    </path>
+                  </g>
+                </svg>
+              {/if}
+              {#if data.product.badge.icon === "wait"}
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <g fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM8.75 3.75C8.75 3.33579 8.41421 3 8 3C7.58579 3 7.25 3.33579 7.25 3.75V8C7.25 8.41421 7.58579 8.75 8 8.75H11.25C11.6642 8.75 12 8.41421 12 8C12 7.58579 11.6642 7.25 11.25 7.25H8.75V3.75Z"
+                      fill="currentColor"
+                    >
+                    </path>
+                  </g>
+                </svg>
+              {/if}
+              {data.product.badge.text}
+            </span>
           {/if}
+
+          <h1 class="font-title text-4xl font-bold">{data.product.title}</h1>
+        </div>
+        <div class="flex items-start justify-between">
+          <div class="flex gap-2">
+            {#if data.product.originalprice}
+              <span class="text-2xl line-through opacity-40">
+                {convertCurrency(data.product.originalprice)}
+              </span>
+            {/if}
+            <span class="flex flex-col">
+              <span class="flex items-center gap-2">
+                {#if data.product.displayprice}
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(data.product.displayprice)}
+                  </span>
+                {:else if data.product.attributes.from_price && data.product.attributes.to_price && data.product.attributes.from_price !== data.product.attributes.to_price}
+                  From
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(data.product.attributes.from_price)}
+                  </span>
+                  to
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(data.product.attributes.to_price)}
+                  </span>
+                {:else}
+                  <span class="font-title text-2xl font-light xl:text-5xl">
+                    {convertCurrency(data.product.attributes.price)}
+                  </span>
+                {/if}
+              </span>
+
+              {#if data.product.displaypricenote}
+                <span class="text-sm italic opacity-40">
+                  {data.product.displaypricenote}
+                </span>
+              {/if}
+            </span>
+          </div>
+          <div class="flex flex-col items-center gap-3">
+            <a
+              href={rednerBuyNowUrl(
+                data.product.attributes.buy_now_url,
+                data.product.ref,
+                data.product.params,
+              )}
+              class="btn btn-lg btn-primary group shrink-0 rounded-full xl:px-10"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buy now
+              <span class="flex gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  >
+                  </path>
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
 
-        <!-- Thumbnail Navigation -->
-        {#if data.product.media.length > 1}
-          <div class="-mx-4 overflow-x-auto">
-            <div
-              class="grid grid-cols-6 gap-2 p-4 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 xl:grid-cols-8"
+        {#if data.product.banner}
+          <div class="alert alert-soft">
+            <svg
+              class="mt-2 size-5 self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              ><g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                fill="none"
+                stroke="currentColor"
+                ><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"
+                ></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path
+                  d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"
+                ></path></g
+              ></svg
             >
-              {#each data.product.media as media, i}
-                <button
-                  class="border-base-content/15 aspect-[4/3] shrink-0 cursor-pointer overflow-hidden rounded-sm border outline-2 outline-offset-2"
-                  class:outline-base-content={i === currentIndex}
-                  class:outline-transparent={i !== currentIndex}
-                  onclick={() => (currentIndex = i)}
-                >
-                  {#if media.type === "image"}
-                    <img
-                      src={media.lg}
-                      alt={`${data.product.attributes.name} thumbnail ${i + 1}`}
-                      class="h-full w-full bg-cover object-cover brightness-90"
-                      style={`background-image:url(${media.sm});`}
-                    />
-                  {:else}
-                    <div
-                      class="bg-base-200 grid h-full w-full place-items-center *:[grid-area:1/1]"
-                    >
-                      <img
-                        class="h-full w-full object-cover blur-[2px] brightness-90"
-                        src={data.product.media.find((media) => media.type === "image").sm}
-                        alt={data.product.attributes.name}
-                      />
-                      <svg
-                        class="z-1 size-6 text-black"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        ><g
-                          stroke-linejoin="round"
-                          stroke-linecap="round"
-                          stroke-width="1.5"
-                          fill="none"
-                          ><path
-                            d="M14.9531 12.3948C14.8016 13.0215 14.0857 13.4644 12.6539 14.3502C11.2697 15.2064 10.5777 15.6346 10.0199 15.4625C9.78934 15.3913 9.57925 15.2562 9.40982 15.07C9 14.6198 9 13.7465 9 12C9 10.2535 9 9.38018 9.40982 8.92995C9.57925 8.74381 9.78934 8.60868 10.0199 8.53753C10.5777 8.36544 11.2697 8.79357 12.6539 9.64983C14.0857 10.5356 14.8016 10.9785 14.9531 11.6052C15.0156 11.8639 15.0156 12.1361 14.9531 12.3948Z"
-                            stroke="currentColor"
-                          ></path><path
-                            d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-                            stroke="currentColor"
-                          ></path></g
-                        ></svg
-                      >
-                    </div>
-                  {/if}
-                </button>
-              {/each}
+            <div class="prose ps-0! text-xs">
+              {@html data.product.banner}
             </div>
           </div>
         {/if}
+        {#if data.product.desc}
+          <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
+            {@html data.product.desc}
+          </div>
+        {/if}
+        <!-- {#if data.product.attributes.description}
+        <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
+          {@html data.product.attributes.description}
+        </div>
+      {/if} -->
+
         <div
-          class="border-base-300 rounded-box divide-base-300 my-6 grid divide-x overflow-hidden border text-xs"
+          class="border-base-300 rounded-box divide-base-300 bg-base-100/60 sticky bottom-4 my-6 grid divide-x overflow-hidden border text-xs backdrop-blur-sm"
           style={`grid-template-columns: repeat(${Object.keys(data.product.links).length}, minmax(0, 1fr));`}
         >
           {#each Object.entries(data.product.links) as [link, value]}
@@ -438,7 +522,7 @@
               <div>
                 <a
                   href={value}
-                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
+                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
                   onclick={(e) => (e.preventDefault(), openModal(value))}
                 >
                   {@html getLinksIcon(link)}
@@ -458,7 +542,7 @@
               <div>
                 <a
                   href={value}
-                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
+                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
                   onclick={(e) => {
                     e.preventDefault(), screenshotDialog.showModal()
                     screenshotUrl = value
@@ -490,184 +574,43 @@
             {/if}
           {/each}
         </div>
-      </div>
-    </div>
 
-    <!-- Product Info -->
-    <div class="flex flex-col gap-6">
-      <div class="flex flex-col gap-2">
-        {#if data.product.badge}
-          <span
-            class={`badge  badge-soft flex gap-1 rounded-full ps-1 text-xs shadow-xs ${data.product.badge.class}`}
-          >
-            {#if data.product.badge.icon === "check"}
-              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                <g fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM11.8435 6.20859C12.0967 5.88082 12.0363 5.40981 11.7086 5.15654C11.3808 4.90327 10.9098 4.96365 10.6565 5.29141L6.95615 10.0801L5.30747 8.24828C5.03038 7.94039 4.55616 7.91543 4.24828 8.19253C3.94039 8.46962 3.91544 8.94384 4.19253 9.25172L6.44253 11.7517C6.59132 11.917 6.80582 12.0078 7.02809 11.9995C7.25036 11.9911 7.45746 11.8846 7.59346 11.7086L11.8435 6.20859Z"
-                    fill="currentColor"
-                  >
-                  </path>
-                </g>
-              </svg>
-            {/if}
-            {#if data.product.badge.icon === "wait"}
-              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                <g fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM8.75 3.75C8.75 3.33579 8.41421 3 8 3C7.58579 3 7.25 3.33579 7.25 3.75V8C7.25 8.41421 7.58579 8.75 8 8.75H11.25C11.6642 8.75 12 8.41421 12 8C12 7.58579 11.6642 7.25 11.25 7.25H8.75V3.75Z"
-                    fill="currentColor"
-                  >
-                  </path>
-                </g>
-              </svg>
-            {/if}
-            {data.product.badge.text}
-          </span>
+        {#if data.product.tech}
+          <div class="flex items-center gap-4 lg:gap-8">
+            <span class="text-base-content/60 text-sm">Made with:</span>
+            {#each data.product.tech as tech}
+              <div class="tooltip" data-tip={data.tech[tech]}>
+                <img
+                  class="size-6 lg:size-8"
+                  src={`https://img.daisyui.com/images/logos/${tech}.svg`}
+                  alt={tech}
+                />
+              </div>
+            {/each}
+          </div>
         {/if}
 
-        <h1 class="font-title text-4xl font-bold">{data.product.title}</h1>
-      </div>
-      <div class="flex items-start justify-between">
-        <div class="flex gap-2">
-          {#if data.product.originalprice}
-            <span class="text-2xl line-through opacity-40">
-              {convertCurrency(data.product.originalprice)}
-            </span>
-          {/if}
-          <span class="flex flex-col">
-            <span class="flex items-center gap-2">
-              {#if data.product.displayprice}
-                <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(data.product.displayprice)}
-                </span>
-              {:else if data.product.attributes.from_price && data.product.attributes.to_price && data.product.attributes.from_price !== data.product.attributes.to_price}
-                From
-                <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(data.product.attributes.from_price)}
-                </span>
-                to
-                <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(data.product.attributes.to_price)}
-                </span>
-              {:else}
-                <span class="font-title text-2xl font-light xl:text-5xl">
-                  {convertCurrency(data.product.attributes.price)}
-                </span>
-              {/if}
-            </span>
-
-            {#if data.product.displaypricenote}
-              <span class="text-sm italic opacity-40">
-                {data.product.displaypricenote}
-              </span>
-            {/if}
-          </span>
-        </div>
-        <div class="flex flex-col items-center gap-3">
-          <a
-            href={rednerBuyNowUrl(
-              data.product.attributes.buy_now_url,
-              data.product.ref,
-              data.product.params,
-            )}
-            class="btn btn-lg btn-primary group shrink-0 rounded-full xl:px-10"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Buy now
-            <span class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+        {#if data.product.quote}
+          <div>
+            {#each data.product.quote.text as text, index}
+              <div class="chat chat-end p-0">
+                <div
+                  class={`chat-bubble bg-base-200 text-base-content mt-1 max-w-md text-xs ${index !== data.product.quote.text.length - 1 ? "[.chat-end>&]:rounded-field before:hidden" : ""}`}
                 >
-                </path>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-
-      {#if data.product.banner}
-        <div class="alert alert-soft">
-          <svg class="mt-2 size-5 self-start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            ><g
-              stroke-linejoin="round"
-              stroke-linecap="round"
-              stroke-width="2"
-              fill="none"
-              stroke="currentColor"
-              ><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path
-                d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"
-              ></path><path
-                d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"
-              ></path></g
-            ></svg
-          >
-          <div class="prose ps-0! text-xs">
-            {@html data.product.banner}
-          </div>
-        </div>
-      {/if}
-      {#if data.product.desc}
-        <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
-          {@html data.product.desc}
-        </div>
-      {/if}
-      <!-- {#if data.product.attributes.description}
-        <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
-          {@html data.product.attributes.description}
-        </div>
-      {/if} -->
-
-      {#if data.product.tech}
-        <div class="mt-4 flex items-center gap-4 lg:gap-8">
-          <span class="text-base-content/60 text-sm">Made with:</span>
-          {#each data.product.tech as tech}
-            <div class="tooltip" data-tip={data.tech[tech]}>
-              <img
-                class="size-6 lg:size-8"
-                src={`https://img.daisyui.com/images/logos/${tech}.svg`}
-                alt={tech}
-              />
-            </div>
-          {/each}
-        </div>
-      {/if}
-
-      {#if data.product.quote}
-        <div>
-          {#each data.product.quote.text as text, index}
-            <div class="chat chat-end p-0">
-              <div
-                class={`chat-bubble bg-base-200 text-base-content mt-1 max-w-md text-xs ${index !== data.product.quote.text.length - 1 ? "[.chat-end>&]:rounded-field before:hidden" : ""}`}
-              >
-                <p class="py-1">{@html text}</p>
-              </div>
-              <div class="chat-image avatar">
-                <div class="w-10 rounded-full">
-                  {#if index === data.product.quote.text.length - 1}
-                    <img alt={data.product.quote.name} src={data.product.quote.img} />
-                  {/if}
+                  <p class="py-1">{@html text}</p>
+                </div>
+                <div class="chat-image avatar">
+                  <div class="w-10 rounded-full">
+                    {#if index === data.product.quote.text.length - 1}
+                      <img alt={data.product.quote.name} src={data.product.quote.img} />
+                    {/if}
+                  </div>
                 </div>
               </div>
-            </div>
-          {/each}
-        </div>
-      {/if}
+            {/each}
+          </div>
+        {/if}
+      </div>
     </div>
   </div>
   <div class="my-40">
@@ -820,7 +763,9 @@
         class="-z-1 col-start-1 col-end-9 row-start-5 row-end-6 h-10 w-full rounded-[100%] bg-black/40 blur-2xl lg:h-20"
       ></div>
     </div>
-    <div class="z-1 rounded-full border border-white/20 bg-white/40 p-4 backdrop-blur-lg">
+    <div
+      class="relative z-1 rounded-full border border-white/20 bg-white/40 p-4 backdrop-blur-lg max-sm:top-[40%]"
+    >
       <a
         href={rednerBuyNowUrl(
           data.product.attributes.buy_now_url,
