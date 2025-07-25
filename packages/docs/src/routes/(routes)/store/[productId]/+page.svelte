@@ -529,7 +529,7 @@
                   <span>{link}</span>
                 </a>
                 <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
-                  <div class="modal-box max-h-[90vh] w-full max-w-[50rem] lg:p-20">
+                  <div class="modal-box max-h-[80vh] w-full max-w-[50rem] lg:p-20">
                     <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
                     <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
                   </div>
