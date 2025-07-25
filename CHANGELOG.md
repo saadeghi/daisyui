@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.47 (2025-07-25)
+
+
+### Bug Fixes
+
+* browser search icon color in dark theme. closes: [#4006](https://github.com/saadeghi/daisyui/issues/4006) ([922256d](https://github.com/saadeghi/daisyui/commit/922256d6543ba35434f583c327b6f6cc5169e20f))
+
 ## 5.0.46 (2025-07-06)
 
 ## 5.0.45 (2025-07-06)
