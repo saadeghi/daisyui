@@ -522,14 +522,16 @@
               <div>
                 <a
                   href={value}
-                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
+                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
                   onclick={(e) => (e.preventDefault(), openModal(value))}
                 >
                   {@html getLinksIcon(link)}
                   <span>{link}</span>
                 </a>
                 <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
-                  <div class="modal-box max-h-[80vh] w-full max-w-[50rem] lg:p-20">
+                  <div
+                    class="modal-box max-h-[80vh] w-full max-w-[50rem] max-md:max-h-[80vh] lg:p-20"
+                  >
                     <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
                     <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
                   </div>
@@ -542,7 +544,7 @@
               <div>
                 <a
                   href={value}
-                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-6 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2"
+                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
                   onclick={(e) => {
                     e.preventDefault(), screenshotDialog.showModal()
                     screenshotUrl = value
