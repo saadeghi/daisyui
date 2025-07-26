@@ -94,11 +94,6 @@ export function Button(props: ButtonProps) {
 }
 ```
 
-### Display Effect
-
-<img width="1006" height="406" alt="image" src="https://github.com/user-attachments/assets/291e283c-04e4-46d3-abcb-51198ad5183a" />
-
-
 ### daisyUI Class Name Reference
 
 - For more components and usage, please refer to the [daisyUI official documentation](https://daisyui.com/)
