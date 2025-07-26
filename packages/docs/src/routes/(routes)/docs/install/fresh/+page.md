@@ -3,65 +3,103 @@ title: Install daisyUI for Deno Fresh
 desc: How to install Tailwind CSS and daisyUI in a Deno Fresh project
 ---
 
-<script>
-  import Translate from "$components/Translate.svelte"
-</script>
+This document records the complete process of integrating and using daisyUI in a Fresh v2.0 alpha project.
+The Fresh framework now supports the new Tailwind CSS plugin and Deno loader, with "nodeModulesDir": "auto" set by default, making the integration of daisyUI simpler and more efficient.
 
-### 1. Create a new Fresh project
+## Project Initialization
 
-Install Deno, according to the [official Deno docs](https://docs.deno.com/runtime/)
+### 1. Create a Fresh Project
 
-Create a new Fresh project called `myapp` and navigate to it
+Use `jsr` to initialize a new Fresh project.
 
-```sh:Terminal
-deno run -A -r https://fresh.deno.dev myapp --tailwind=false --vscode=false
-cd myapp
+```bash
+deno run -Ar jsr:@fresh/init@2.0.0-alpha.46
 ```
 
-Add `"nodeModulesDir": "auto",` to `deno.json` file
+**Configuration Options:**
 
-```diff:deno.json
-{
-+ "nodeModulesDir": "auto",
-  "lock": false,
+- **Project Name**：`fresh2-daisyui`
+- **Tailwind CSS Support**：`y`
+- **VS Code Support**：`y`
 
-  //...rest of the file
+### 2. Enter Project Directory
 
+```bash
+cd fresh2-daisyui
+```
+
+## Installation and Configuration
+
+### 3. Add daisyUI Dependency
+
+Add daisyUI as an npm dependency to the project.
+
+```bash
+deno i -D npm:daisyui@latest
+```
+
+**Installation Result:**
+
+- Successfully installed `daisyui@5.0.47`
+- Received a warning about npm lifecycle scripts (can be ignored in the current scenario)
+
+### 4. Configure Tailwind CSS
+
+daisyUI needs to be configured as a plugin in `./static/styles.css`.
+
+```typescript
+@import "tailwindcss";
+@plugin "daisyui";
+/* Existing other parts */
+```
+
+## Startup and Development
+
+### 5. Start the Development Server
+
+```bash
+deno task dev
+```
+
+**Server Information:**
+
+- **Local Address**: `http://localhost:8000/`
+- Automatically listens for file changes and restarts
+- After startup, daisyUI styles are automatically loaded
+
+## Using daisyUI Components
+
+### 6. Create a Button Component Example
+
+Create a button component in the `components` directory, using daisyUI's style classes for reference.
+
+```tsx
+// components/Button.tsx
+import type { ComponentChildren } from "preact";
+
+export interface ButtonProps {
+  id?: string;
+  onClick?: () => void;
+  children?: ComponentChildren;
+  disabled?: boolean;
+}
+
+export function Button(props: ButtonProps) {
+  return (
+    <button
+      className="btn btn-dash btn-primary"
+      {...props}
+      class="px-2 py-1 border-gray-500 border-2 rounded-sm bg-white hover:bg-gray-200 transition-colors"
+    />
+  );
 }
 ```
 
-### 2. Add Tailwind CSS and daisyUI
+### Display Effect
 
-Install Tailwind CSS, daisyUI and fresh-plugin-tailwindcss
+<img width="1006" height="406" alt="image" src="https://github.com/user-attachments/assets/291e283c-04e4-46d3-abcb-51198ad5183a" />
 
-```sh:Terminal
-deno i -D npm:tailwindcss@latest npm:daisyui@latest jsr:@pakornv/fresh-plugin-tailwindcss
-```
 
-Add Tailwind CSS and daisyUI to your CSS file
+### daisyUI Class Name Reference
 
-```postcss:static/styles.css
-@import "tailwindcss";
-@plugin "daisyui";
-```
-
-Add these lines to `fresh.config.ts` file
-
-```diff:fresh.config.ts
-  import { defineConfig } from "$fresh/server.ts";
-+ import tailwind from "@pakornv/fresh-plugin-tailwindcss";
-
-  export default defineConfig({
-+   plugins: [tailwind()],
-  });
-```
-
-### 3. Run the server
-
-Run the Deno server with the following command
-
-```sh:Terminal
-deno task start
-```
-
-Now you can use daisyUI class names!
+- For more components and usage, please refer to the [daisyUI official documentation](https://daisyui.com/)
