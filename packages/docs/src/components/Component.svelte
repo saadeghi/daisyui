@@ -85,7 +85,11 @@
   {/if}
   {#if desc}
     <div class="pb-4 text-xs opacity-70">
-      {$t(desc)}
+      {#if desc.includes('<')}
+        {@html desc}
+      {:else}
+        {$t(desc)}
+      {/if}
     </div>
   {/if}
   <div class="tabs tabs-lift">
