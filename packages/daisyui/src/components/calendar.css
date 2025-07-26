@@ -29,6 +29,9 @@
     border-radius: var(--radius-field);
     font-size: 0.7rem;
   }
+  ::part(day):hover {
+  background: var(--color-base-200);
+  }
   ::part(button day today) {
     background: var(--color-primary);
     color: var(--color-primary-content);
