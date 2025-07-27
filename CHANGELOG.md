@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.48 (2025-07-27)
+
+
+### Bug Fixes
+
+* apply theme-aware hover styling to Cally day buttons. closes: [#3991](https://github.com/saadeghi/daisyui/issues/3991) ([9960287](https://github.com/saadeghi/daisyui/commit/99602876204533c49cfd18a04133bc07e8a6c2ba))
+
 ## 5.0.47 (2025-07-25)
 
 
