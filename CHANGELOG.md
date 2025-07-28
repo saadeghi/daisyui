@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.49 (2025-07-28)
+
+
+### Bug Fixes
+
+* react-day-picker disableNavigation not styling properly. closes: [#3990](https://github.com/saadeghi/daisyui/issues/3990) ([29123bc](https://github.com/saadeghi/daisyui/commit/29123bc7fbd9279d459bd2ba1258a93f35a34b32))
+
 ## 5.0.48 (2025-07-27)
 
 
