@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.50 (2025-07-29)
+
+
+### Bug Fixes
+
+* use semantic fallbacks for checkbox states, improve indeterminate visibility. closes: [#3979](https://github.com/saadeghi/daisyui/issues/3979) ([d19f38a](https://github.com/saadeghi/daisyui/commit/d19f38a98fe6d3ba9e2be5111d46055e1a04f609))
+
 ## 5.0.49 (2025-07-28)
 
 
