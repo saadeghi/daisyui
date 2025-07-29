@@ -5,19 +5,19 @@ import tailwindcss from "@tailwindcss/vite"
 import { visualizer } from "rollup-plugin-visualizer"
 
 export default defineConfig({
-	plugins: [
-		tailwindcss(),
-		sveltekit(),
-		visualizer({
-			emitFile: true,
-			filename: "stats.html",
-			template: "treemap",
-			brotliSize: true,
-		}),
-	],
-	resolve: {
-		alias: {
-			$components: path.resolve("/src/components"),
-		},
-	},
+  plugins: [
+    tailwindcss(),
+    sveltekit(),
+    visualizer({
+      emitFile: true,
+      filename: "stats.html",
+      template: "treemap",
+      brotliSize: true,
+    }),
+  ],
+  resolve: {
+    alias: {
+      $components: path.resolve(__dirname, "src/components"),
+    },
+  },
 })
