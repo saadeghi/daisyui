@@ -105,14 +105,14 @@
               <span class="font-title">
                 {convertCurrency(product.displayprice)}
               </span>
-            {:else if product.attributes.from_price && product.attributes.to_price && product.attributes.from_price !== product.attributes.to_price}
+            {:else if product.from_price && product.to_price && product.from_price !== product.to_price}
               <span class="text-[0.625rem] italic opacity-50">from</span>
               <span class="font-title">
-                {convertCurrency(product.attributes.from_price)}
+                {convertCurrency(product.from_price)}
               </span>
             {:else}
               <span class="font-title">
-                {convertCurrency(product.attributes.price)}
+                {convertCurrency(product.price)}
               </span>
             {/if}
           </span>

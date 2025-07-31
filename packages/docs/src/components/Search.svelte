@@ -97,8 +97,7 @@
     }`}
   >
     {#if ["macos"].includes(os)}
-      <kbd class="kbd kbd-sm">⌘</kbd>
-      <kbd class="kbd kbd-sm">K</kbd>
+      <kbd class="kbd kbd-sm font-mono"><span class="me-1 text-sm">⌘</span>K</kbd>
     {:else if ["windows", "linux"].includes(os)}
       <kbd class="kbd kbd-sm">ctrl</kbd>
       <kbd class="kbd kbd-sm">K</kbd>

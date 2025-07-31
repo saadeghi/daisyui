@@ -1,40 +1,24 @@
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
-import { LEMONSQUEEZY_API_KEY } from "$env/static/private"
 import { error } from "@sveltejs/kit"
 import * as sitemap from "super-sitemap"
 import yaml from "js-yaml"
 
 export const prerender = true
 
-const fetchProductIds = async (apiKey) => {
-  if (!apiKey) {
-    console.warn("LEMONSQUEEZY_API_KEY is not set. Skipping product fetch.")
-    return []
-  }
-  const params = {
-    headers: {
-      Accept: "application/vnd.api+json",
-      "Content-type": "application/vnd.api+json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-  }
-
+const fetchProductIds = async () => {
   try {
-    const response = await fetch("https://api.lemonsqueezy.com/v1/products?page[size]=100", params)
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/store.yaml`)
 
     if (!response.ok) {
-      console.error(
-        "Error fetching Lemon Squeezy product data:",
-        response.status,
-        await response.text().catch(() => ""),
-      )
-      return []
+      throw new Error(`Failed to fetch store data: ${response.status}`)
     }
 
-    const originalData = await response.json()
-    return originalData?.data?.map((product) => String(product.id)) ?? []
+    const yamlText = await response.text()
+    const yamlData = yaml.load(yamlText)
+
+    return yamlData?.productCustomAttributes?.map((product) => String(product.id)) ?? []
   } catch (err) {
-    console.error("Error fetching or processing Lemon Squeezy product data:", err)
+    console.error("Error fetching or processing store data:", err)
     return []
   }
 }
@@ -84,7 +68,7 @@ export const GET = async () => {
 
     comparePages = generateCompareSlugs(frameworks)
     alternativeLibraries = generateAlternativeSlugs(frameworks)
-    productIds = await fetchProductIds(LEMONSQUEEZY_API_KEY)
+    productIds = await fetchProductIds()
   } catch (err) {
     throw error(500, `Could not load data for sitemap: ${err.message}`)
   }

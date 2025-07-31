@@ -14,8 +14,8 @@ jobs:
   deploy-docs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    env:
-      LEMONSQUEEZY_API_KEY: ${{ secrets.LEMONSQUEEZY_API_KEY }}
+    # env:
+    #   LEMONSQUEEZY_API_KEY: ${{ secrets.LEMONSQUEEZY_API_KEY }}
     if: |
       github.event_name == 'workflow_dispatch' ||
       github.event_name == 'workflow_call' ||

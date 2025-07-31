@@ -43,21 +43,21 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
 
     ${products
       .filter((product) => {
-        return product.attributes.status === "published"
+        return true
       })
       .map(
         (product) =>
           `
         <item>
           <title>
-            <![CDATA[ ${product.attributes.name} ]]>
+            <![CDATA[ ${product.title} ]]>
           </title>
           <description>
-            <![CDATA[ ${product.attributes.description} ]]>
+            <![CDATA[ ${product.desc || ""} ]]>
           </description>
-          <link>${product.attributes.buy_now_url}/</link>
-          <pubDate>${new Date(product.attributes.created_at).toUTCString()}</pubDate>
-          <guid isPermaLink="false">${product.attributes.buy_now_url}/</guid>
+          <link>${product.buy_now_url}/</link>
+          <pubDate>${new Date(product.created_at).toUTCString()}</pubDate>
+          <guid isPermaLink="false">${product.buy_now_url}/</guid>
         </item>
       `,
       )

@@ -95,13 +95,13 @@
       .filter((product) => selectedTech === "" || product.tech?.includes(selectedTech))
       .sort((a, b) => {
         if (sortBy === "price") {
-          return a.attributes.price - b.attributes.price
+          return a.price - b.price
         }
         if (sortBy === "id") {
           return a.id - b.id
         }
         if (sortBy === "new") {
-          return new Date(b.attributes.created_at) - new Date(a.attributes.created_at)
+          return new Date(b.created_at) - new Date(a.created_at)
         }
         return 0
       }),

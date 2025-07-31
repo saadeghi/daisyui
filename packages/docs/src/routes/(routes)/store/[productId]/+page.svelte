@@ -173,10 +173,7 @@
   })()
 </script>
 
-<SEO
-  title={`${data.product.attributes.name} - daisyUI Store`}
-  desc={data.product.attributes.description}
-/>
+<SEO title={`${data.product.title} - daisyUI Store`} desc={data.product.desc} />
 
 <div>
   <a class="btn btn-ghost group" href="/store/" data-sveltekit-preload-data>
@@ -349,7 +346,7 @@
                   <iframe
                     class="h-full w-full"
                     src={media.url}
-                    title={data.product.attributes.name}
+                    title={data.product.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
@@ -357,7 +354,7 @@
               {:else if media.type === "image"}
                 <img
                   src={media.lg}
-                  alt={data.product.attributes.name}
+                  alt={data.product.title}
                   class="h-full w-full bg-cover object-cover text-transparent"
                   style={`background-image:url(${media.sm});`}
                   loading="lazy"
@@ -423,18 +420,18 @@
                   <span class="font-title text-2xl font-light xl:text-5xl">
                     {convertCurrency(data.product.displayprice)}
                   </span>
-                {:else if data.product.attributes.from_price && data.product.attributes.to_price && data.product.attributes.from_price !== data.product.attributes.to_price}
+                {:else if data.product.from_price && data.product.to_price && data.product.from_price !== data.product.to_price}
                   From
                   <span class="font-title text-2xl font-light xl:text-5xl">
-                    {convertCurrency(data.product.attributes.from_price)}
+                    {convertCurrency(data.product.from_price)}
                   </span>
                   to
                   <span class="font-title text-2xl font-light xl:text-5xl">
-                    {convertCurrency(data.product.attributes.to_price)}
+                    {convertCurrency(data.product.to_price)}
                   </span>
                 {:else}
                   <span class="font-title text-2xl font-light xl:text-5xl">
-                    {convertCurrency(data.product.attributes.price)}
+                    {convertCurrency(data.product.price)}
                   </span>
                 {/if}
               </span>
@@ -449,7 +446,7 @@
           <div class="flex flex-col items-center gap-3">
             <a
               href={rednerBuyNowUrl(
-                data.product.attributes.buy_now_url,
+                data.product.buy_now_url,
                 data.product.ref,
                 data.product.params,
               )}
@@ -532,7 +529,7 @@
                   <div
                     class="modal-box max-h-[80vh] w-full max-w-[50rem] max-md:max-h-[80vh] lg:p-20"
                   >
-                    <h3 class="text-lg font-bold">{data.product.attributes.name} License</h3>
+                    <h3 class="text-lg font-bold">{data.product.title} License</h3>
                     <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
                   </div>
                   <form method="dialog" class="modal-backdrop">
@@ -680,16 +677,12 @@
 
       <div class="my-20 flex justify-center">
         <a
-          href={rednerBuyNowUrl(
-            data.product.attributes.buy_now_url,
-            data.product.ref,
-            data.product.params,
-          )}
+          href={rednerBuyNowUrl(data.product.buy_now_url, data.product.ref, data.product.params)}
           class="btn lg:btn-lg xl:btn-xl btn-outline group shrink-0 rounded-full xl:px-10"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Buy {data.product.attributes.name}
+          Buy {data.product.title}
           <span class="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -713,12 +706,7 @@
   </div>
   <div class="my-40">
     {#each data.product.more_images as image}
-      <img
-        src={image}
-        alt={data.product.attributes.name}
-        class="w-full object-cover"
-        loading="lazy"
-      />
+      <img src={image} alt={data.product.title} class="w-full object-cover" loading="lazy" />
     {/each}
   </div>
   <div class="mx-auto my-40 grid gap-2 gap-y-16 lg:grid-cols-2">
@@ -769,16 +757,12 @@
       class="relative z-1 rounded-full border border-white/20 bg-white/40 p-4 backdrop-blur-lg max-sm:top-[40%]"
     >
       <a
-        href={rednerBuyNowUrl(
-          data.product.attributes.buy_now_url,
-          data.product.ref,
-          data.product.params,
-        )}
+        href={rednerBuyNowUrl(data.product.buy_now_url, data.product.ref, data.product.params)}
         class="btn lg:btn-lg xl:btn-xl btn-neutral group shrink-0 rounded-full xl:px-10"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Buy {data.product.attributes.name}
+        Buy {data.product.title}
         <span class="flex gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -801,11 +785,11 @@
   </div>
 </div>
 
-{#if data.product.tags && data.products.products.length > 0 && getSimilarProducts(data.product, data.products.products).length > 0}
+{#if data.product.tags && data.products.length > 0 && getSimilarProducts(data.product, data.products).length > 0}
   <div class="divider text-base-content/30 my-20">You may also like these</div>
 
   <div class="mx-auto grid gap-x-10 gap-y-36 md:grid-cols-2 xl:gap-x-16">
-    {#each getSimilarProducts(data.product, data.products.products) as product}
+    {#each getSimilarProducts(data.product, data.products) as product}
       <StoreProduct {product} {convertCurrency} />
     {/each}
   </div>

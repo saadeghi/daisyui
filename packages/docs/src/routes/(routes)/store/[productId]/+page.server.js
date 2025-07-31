@@ -21,9 +21,9 @@ const fetchStoreData = async () => {
 
 export async function load({ params, parent }) {
   const yamlData = await fetchStoreData()
-  const products = await parent()
+  const data = await parent()
   // Convert both to strings or numbers for comparison
-  const product = products.products.find((p) => String(p.id) === String(params.productId))
+  const product = data.products.find((p) => String(p.id) === String(params.productId))
 
   if (!product) {
     throw error(404, "Product not found")
@@ -41,13 +41,13 @@ export async function load({ params, parent }) {
   }
 
   return {
-    products,
+    products: data,
     product: {
       ...product,
       desc: product.desc && (await md(product.desc)),
       banner: product.banner && (await md(product.banner)),
     },
-    tech: products.tech,
+    tech: data.tech,
     faq: yamlData.faq,
   }
 }
