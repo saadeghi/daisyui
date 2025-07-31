@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Tue, 29 Jul 2025 17:33:35 GMT</lastBuildDate>
-    <pubDate>Tue, 29 Jul 2025 17:33:35 GMT</pubDate>
+    <lastBuildDate>Thu, 31 Jul 2025 04:33:56 GMT</lastBuildDate>
+    <pubDate>Thu, 31 Jul 2025 04:33:56 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -26,15 +26,15 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Online Store template 2.0 ]]>
           </title>
           <description>
-            <![CDATA[ <p><strong>Fully functional store template for LemonSqueezy or Gumroad</strong></p>
+            <![CDATA[ **Fully functional store template for Lemon Squeezy or Gumroad**
 
-<p>Made with daisyUI 5 and Next.js 15</p>
+Made with daisyUI 5 and Next.js 15
 
-<p>Add your <strong>LemonSqueezy API key</strong> or <strong>Gumroad API key</strong> to the env file, add custom data for your products and your online store will be ready in <strong>less than 5 minutes!</strong><br></p>
+Add your **LemonSqueezy API key** or **Gumroad API key** to the env file, add custom data for your products and your online store will be ready in **less than 5 minutes**!
 
-<p>This template receives your simple list of products coming from the LemonSqueezy API or Gumroad API, adds your custom data and attributes to the products and generates a functional online store with all the standard online store capabilities you need.</p>
+This template receives your simple list of products coming from the LemonSqueezy API or Gumroad API, adds your custom data and attributes to the products and generates a functional online store with all the standard online store capabilities you need.
 
-<p>Including Homepage, collections page with filter and sort, product page with image gallery, zoom, custom attributes, variant links, related product suggestions and more.</p> ]]>
+Including Homepage, collections page with filter and sort, product page with image gallery, zoom, custom attributes, variant links, related product suggestions and more. ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/0e0d97fa-2646-4411-817e-f96afeb83493/</link>
           <pubDate>Wed, 08 Jan 2025 18:52:47 GMT</pubDate>
@@ -46,22 +46,39 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Nexus Dashboard 2.3 ]]>
           </title>
           <description>
-            <![CDATA[ <p>The ultimate dashboard template<br>Made with Tailwind CSS 4.1 and daisyUI 5.0</p>
+            <![CDATA[ The ultimate dashboard template
 
-<p>Including:</p>
+Made with Tailwind CSS 4 and daisyUI 5
 
-<ul><li><p>All pages</p></li><li><p>CRM, e-commerce and gen-AI dashboard layouts</p></li><li><p>Landing page</p></li><li><p>10 e-commerce pages with tables, forms, cards, etc</p></li><li><p>File manager app layout</p></li><li><p>Chat app layout</p></li><li><p>4 pages for the gen-AI app (home, images, content creator, library) 🆕</p></li><li><p>4 auth pages including login, register, password reset</p></li><li><p>Profile settings page and support/FAQ page</p></li><li><p>22 component page examples with all variants</p></li><li><p>12 form component examples with all variants</p></li><li><p>Apex charts</p></li><li><p>6 customizable themes including Light, Dark, Dim, Contrast, Material, Material dark</p></li><li><p>Compatible with all daisyUI themes</p></li></ul>
+Including:
+  - All pages
+  - CRM and e-commerce dashboard layouts
+  - Landing page
+  - 10 e-commerce pages with tables, forms, cards, etc
+  - File manager app layout
+  - Chat app layout
+  - 4 pages for the gen-AI app (home, images, content creator, library) 🆕
+  - 4 auth pages including login, register, password reset
+  - Profile settings page and support/FAQ page
+  - 21 component page examples with all variants
+  - 12 form component examples with all variants
+  - Apex charts
+  - 5 customizable themes including Light, Dark, Dim, Contrast, Material
+  - Compatible with all daisyUI themes
 
-<p><strong>Solo</strong> license:</p>
 
-<ul><li><p>Includes <strong>HTML</strong> version</p></li><li><p>For one developer, one project</p></li></ul>
+Solo license:
+  - Includes HTML version
+  - For one developer, one project
 
-<p><strong>Team</strong> and <strong>Enterprise</strong> license:</p>
 
-<ul><li><p>includes <strong>HTML</strong>, <strong>React</strong>, <strong>Next.js</strong>, <strong>SvelteKit</strong> and 🆕 <strong>Nuxt</strong> versions</p></li><li><p>For unlimited developers</p></li><li><p>For unlimited projects (<strong>Enterprise</strong> only)</p></li></ul> ]]>
+Team and Enterprise license:
+  - includes HTML, React, Next.js, Nuxt and SvelteKit versions
+  - For unlimited developers
+  - For unlimited projects (Enterprise only) ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/2a4d3f50-8ffd-4857-a8d8-513a66bc273a/</link>
-          <pubDate>Thu, 11 Apr 2024 13:34:41 GMT</pubDate>
+          <pubDate>Sun, 28 Apr 2024 19:32:45 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/2a4d3f50-8ffd-4857-a8d8-513a66bc273a/</guid>
         </item>
       
@@ -70,12 +87,36 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Scalo Startup Template 2.0 ]]>
           </title>
           <description>
-            <![CDATA[ <p>The Ultimate Startup Front-end Template<br>Made with Tailwind CSS 4.0 and daisyUI 5.0 <br><br>Including</p>
+            <![CDATA[ Scalo is the ultimate startup front-end template
 
-<ul><li><p>20 pages</p></li><li><p>2 Landings (Automation and developer)</p></li><li><p>4 Pricing sections (Lifetime, Subscription, User-based &amp; comparison)</p></li><li><p>Auth pages (Login, Register, 2 Factor, Forgot &amp; Reset Password)</p></li><li><p>Settings (Profile, Account, Notification &amp; Manage plans)</p></li><li><p>Testimonial Sections (Simple &amp; Swiper)</p></li><li><p>FAQs &amp; Contact Us pages</p></li><li><p>Included with light &amp; dark theme</p></li><li><p>Compatible with all daisyUI themes</p></li></ul> ]]>
+Made with Tailwind CSS 4 and daisyUI 5
+
+Including:
+  - 36 Pages
+  - 2 Landings (Automation and developer)
+  - 7 Pricing sections (Lifetime, Subscription, User-based & comparison-based)
+  - 6 Auth pages (Login, Register, 2FA, Forgot password, Reset password, Verify)
+  - Settings (Profile, Account, Notification & Manage plans)
+  - Company pages (Team, Careers, Blogs, Timeline, Privacy & more)
+  - Extra pages (Coming soon page, Maintenance page, Notify & Error pages)
+  - Testimonial Sections (Simple + Swiper)
+  - FAQs + Contact Us pages
+  - Included with light & dark themes
+  - Compatible with all daisyUI themes
+
+
+Solo license:
+  - Includes HTML version
+  - For one developer, one project
+
+
+Team and Enterprise license:
+  - includes HTML, React, Next.js, SvelteKit and 🆕 Nuxt versions
+  - For unlimited developers
+  - For unlimited projects (Enterprise only) ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/ad10b14b-ccdf-4b66-9fee-db5a5e89865d/</link>
-          <pubDate>Mon, 24 Mar 2025 04:42:11 GMT</pubDate>
+          <pubDate>Tue, 11 Feb 2025 11:06:12 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/ad10b14b-ccdf-4b66-9fee-db5a5e89865d/</guid>
         </item>
       
@@ -84,12 +125,21 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Official daisyUI Figma Library ]]>
           </title>
           <description>
-            <![CDATA[ <p><strong>Available in 3 plans</strong>, Including:</p>
+            <![CDATA[ 🎉 New version is available for Pro plan. Will be available for all plans next week.
 
-<ul><li><p>Documentation and step by step tutorial for everything</p></li><li><p>All daisyUI components (61+)</p></li><li><p>All daisyUI variants (2500+)</p></li><li><p>All properties</p></li><li><p>Variables for all colors of all 35 daisyUI themes</p></li><li><p>Variables for everything (colors, border-radius, typography, spacing, etc)</p></li><li><p>16 simultaneous themes (Quickly switch between daisyUI themes)</p></li><li><p>Examples for Dashboard and forms</p></li><li><p>Access to exclusive Discord channel for priority support</p></li></ul> ]]>
+**Available in 3 plans**, Including:
+  - Documentation and step by step tutorial for everything
+  - All daisyUI components (61+)
+  - All daisyUI variants (2500+)
+  - All properties
+  - Variables for all colors of all 35 daisyUI themes
+  - Variables for everything (colors, border-radius, typography, spacing, etc)
+  - 16 simultaneous themes (Quickly switch between daisyUI themes)
+  - Examples for Dashboard and forms
+  - Access to exclusive Discord channel for priority support ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</link>
-          <pubDate>Wed, 11 Sep 2024 22:20:36 GMT</pubDate>
+          <pubDate>Tue, 03 Dec 2024 06:10:00 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</guid>
         </item>
       
@@ -98,13 +148,20 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Blink template ]]>
           </title>
           <description>
-            <![CDATA[ <p>Blink is a template for agencies, companies, startups, or small businesses<br>Available for React and Svelte<br>Features:</p>
+            <![CDATA[ Blink is a template for agencies, companies, startups, or small businesses <br/>Available for React and Svelte
 
-<ul><li><p>Made with Tailwind CSS and daisyUI</p></li><li><p>Compatible with all daisyUI themes</p></li><li><p>Clean, responsive, easy to customize</p></li><li><p>Dark and light theme switch button</p></li></ul>
+Features:
+  - Made with Tailwind CSS and daisyUI
+  - Compatible with all daisyUI themes
+  - Clean, responsive, easy to customize
+  - Dark and light theme switch button
 
-<p>Including:</p>
-
-<ul><li><p>Landing page</p></li><li><p>Pricing page and pricing table</p></li><li><p>Projects (portfolio) page</p></li><li><p>About page</p></li><li><p>Contact form</p></li></ul> ]]>
+Including:
+  - Landing page
+  - Pricing page and pricing table
+  - Projects (portfolio) page
+  - About page
+  - Contact form ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/3c54e186-2f58-431b-9af0-1bd2acf1fdd8/</link>
           <pubDate>Sun, 30 Mar 2025 22:15:24 GMT</pubDate>
@@ -116,15 +173,21 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Documentation template ]]>
           </title>
           <description>
-            <![CDATA[ <p>Create a modern and clean document site for your open source projects</p>
+            <![CDATA[ Create a modern and clean document site for your open source projects
 
-<p>Features:</p>
+Features:
+  - Available for Astro and Next.js
+  - Made with Markdown, Tailwind CSS and daisyUI
+  - Search functionality
+  - SEO friendly, Lightweight and fast
+  - Dark mode and Light mode
 
-<ul><li><p>Available for Astro and Next.js</p></li><li><p>Made with Markdown, Tailwind CSS and daisyUI</p></li><li><p>Search functionality</p></li><li><p>SEO friendly, Lightweight and fast</p></li><li><p>Dark mode and Light mode</p></li></ul>
 
-<p>Including:</p>
-
-<ul><li><p>Homepage with features sections, code demo, contributors images, testimonials and installation guide</p></li><li><p>Document pages made from Markdown files with Sidebar, page content links, sponsors section</p></li><li><p>Search bar using Algolia DocSearch</p></li><li><p>Theme switch button with dark theme and light theme (compatible with all daisyUI themes)</p></li></ul> ]]>
+Including:
+  - Homepage with features sections, code demo, contributors images, testimonials and installation guide
+  - Document pages made from Markdown files with Sidebar, page content links, sponsors section
+  - Search bar using Algolia DocSearch
+  - Theme switch button with dark theme and light theme (compatible with all daisyUI themes) ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/30796d50-e504-4d89-ad3f-f1570a9be0ee/</link>
           <pubDate>Mon, 03 Jun 2024 22:54:53 GMT</pubDate>
@@ -136,18 +199,24 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ SaaS landing page ]]>
           </title>
           <description>
-            <![CDATA[ <p>Production-ready landing page for software products.</p>
+            <![CDATA[ Production-ready landing page for software products.
 
-<p>Features:</p>
+Features:
+  - SaaS landing page layout made with daisyUI 5
+  - Available for HTML, React, Svelte, Vue
 
-<ul><li><p>SaaS landing page layout made with daisyUI 5</p></li><li><p>Available for HTML, React, Svelte, Vue</p></li></ul>
 
-<p>Including:</p>
-
-<ul><li><p>2 exclusive daisyUI themes (dark/light)</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li><li><p>Responsive layout</p></li><li><p>Hero section, Partner logos, Features section, Integrations cards, Pricing tables, FAQ accordion section, Footer with links and contact form</p></li><li><p>Pricing table with dynamic price toggle</p></li><li><p>Theme changer menu</p></li><li><p>3D card effect</p></li></ul> ]]>
+Including:
+  - 2 exclusive daisyUI themes (dark/light)
+  - Compatible with all daisyUI themes (32 themes)
+  - Responsive layout
+  - Hero section, Partner logos, Features section, Integrations cards, Pricing tables, FAQ accordion section, Footer with links and contact form
+  - Pricing table with dynamic price toggle
+  - Theme changer menu
+  - 3D card effect ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/2d843d3e-6c74-4cc9-8c7f-f2cbd633a21e/</link>
-          <pubDate>Tue, 05 Dec 2023 16:39:32 GMT</pubDate>
+          <pubDate>Sat, 23 Dec 2023 11:26:42 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/2d843d3e-6c74-4cc9-8c7f-f2cbd633a21e/</guid>
         </item>
       
@@ -156,15 +225,21 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Blog template ]]>
           </title>
           <description>
-            <![CDATA[ <p>Fully working multi page blog template made with daisyUI<br>Available for Astro and Next.js</p>
+            <![CDATA[ Fully working multi page blog template made with daisyUI
 
-<p>Features:</p>
+Available for Astro and Next.js
 
-<ul><li><p>Made with Markdown, Tailwind CSS and daisyUI</p></li><li><p>SEO friendly, Lightweight and fast</p></li><li><p>Dark mode and Light mode</p></li></ul>
+Features:
+  - Made with Markdown, Tailwind CSS and daisyUI
+  - SEO friendly, Lightweight and fast
+  - Dark mode and Light mode
 
-<p>Including:</p>
 
-<ul><li><p>Homepage</p></li><li><p>About page</p></li><li><p>Article page</p></li><li><p>Articles archive with pagination</p></li></ul> ]]>
+Including:
+  - Homepage
+  - About page
+  - Article page
+  - Articles archive with pagination ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/6f22ce51-2e2d-4d5f-b1ef-051df09ce6ff/</link>
           <pubDate>Wed, 06 Mar 2024 05:42:04 GMT</pubDate>
@@ -176,15 +251,19 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Mobile app landing page ]]>
           </title>
           <description>
-            <![CDATA[ <p>Landing page for mobile app introduction.</p>
+            <![CDATA[ Landing page for mobile app introduction.
 
-<p>Features:</p>
+Features:
+  - A landing page layout made with daisyUI 5
+  - Available for HTML, React, Svelte, Vue
 
-<ul><li><p>A landing page layout made with daisyUI 5</p></li><li><p>Available for HTML, React, Svelte, Vue</p></li></ul>
 
-<p>Including:</p>
-
-<ul><li><p>2 exclusive daisyUI themes (dark/light)</p></li><li><p>Compatible with all daisyUI themes (32 themes)</p></li><li><p>Responsive layout</p></li><li><p>Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons</p></li><li><p>Theme changer menu</p></li></ul> ]]>
+Including:
+  - 2 exclusive daisyUI themes (dark/light)
+  - Compatible with all daisyUI themes (32 themes)
+  - Responsive layout
+  - Navbar, Hero section with gradient background, mobile mockups, stats, features section, testimonial slider, FAQ, footer with email form and social media icons
+  - Theme changer menu ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/71f032e3-1a23-4b79-b74e-130ada4899f2/</link>
           <pubDate>Tue, 06 Feb 2024 23:56:31 GMT</pubDate>
@@ -196,17 +275,21 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ Auth template ]]>
           </title>
           <description>
-            <![CDATA[ <p>Professionally designed auth pages to use in your project right away.</p>
+            <![CDATA[ Professionally designed auth pages to use in your project right away.
 
-<p>Features:</p>
+Features:
+  - 3 HTML pages made with daisyUI 5
+  - Framework agnostic. Can be used everywhere
+  - Compatible with all 32 daisyUI themes
 
-<ul><li><p>3 HTML pages made with daisyUI 5</p></li><li><p>Framework agnostic. Can be used everywhere</p></li><li><p>Compatible with all 32 daisyUI themes</p></li></ul>
 
-<p>Including:</p>
-
-<ul><li><p>Login page</p></li></ul>
-
-<ul><li><p>Signup page</p></li><li><p>Password recovery page</p></li><li><p>Form inputs with HTML validation and validation styles</p></li><li><p>Login with Google button</p></li><li><p>Toggle and Alert examples</p></li></ul> ]]>
+Including:
+  - Login page
+  - Signup page
+  - Password recovery page
+  - Form inputs with HTML validation and validation styles
+  - Login with Google button
+  - Toggle and Alert examples ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/9416b3ff-8bc7-48ea-a196-056dc04efbb5/</link>
           <pubDate>Sat, 11 Nov 2023 12:25:46 GMT</pubDate>
@@ -218,15 +301,23 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
             <![CDATA[ HTML Dashboard template ]]>
           </title>
           <description>
-            <![CDATA[ <p>Production-ready admin dashboard template to use in your project right now.</p>
+            <![CDATA[ Production-ready admin dashboard template to use in your project right now.
 
-<p>Features:</p>
+Features:
+  - HTML admin dashboard layout made with daisyUI 5
+  - Web component charts
+  - Framework agnostic. Can be used everywhere
+  - No dependencies
 
-<ul><li><p>HTML admin dashboard layout made with daisyUI 5</p></li><li><p>Web component charts</p></li><li><p>Framework agnostic. Can be used everywhere</p></li><li><p>No dependencies</p></li></ul>
 
-<p>Including:</p>
-
-<ul><li><p>2 exclusive daisyUI themes (dark/light) + Compatible with all 32 daisyUI themes</p></li><li><p>Responsive grid layout</p></li><li><p>14 blocks of useful sections for dashboard</p></li><li><p>Sidebar with collapsible submenus</p></li><li><p>Tables and Item lists</p></li><li><p>Dropdown menus</p></li><li><p>Charts and forms</p></li></ul> ]]>
+Including:
+  - 2 exclusive daisyUI themes (dark/light) + Compatible with all 32 daisyUI themes
+  - Responsive grid layout
+  - 14 blocks of useful sections for dashboard
+  - Sidebar with collapsible submenus
+  - Tables and Item lists
+  - Dropdown menus
+  - Charts and forms ]]>
           </description>
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/3c805f3d-77a5-440b-9e4d-e775005db6c9/</link>
           <pubDate>Thu, 12 Oct 2023 21:48:00 GMT</pubDate>
