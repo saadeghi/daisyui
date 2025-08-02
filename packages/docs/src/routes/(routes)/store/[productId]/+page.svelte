@@ -612,7 +612,7 @@
       </div>
     </div>
   </div>
-  <div class="my-40">
+  <div class="my-40" id="packages">
     {#if data.product.packages}
       <div class="border-base-300 rounded-box overflow-x-auto border whitespace-nowrap">
         <table class="table-xs sm:table-sm lg:table-md table-zebra table">
@@ -709,7 +709,7 @@
       <img src={image} alt={data.product.title} class="w-full object-cover" loading="lazy" />
     {/each}
   </div>
-  <div class="mx-auto my-40 grid gap-2 gap-y-16 lg:grid-cols-2">
+  <div class="mx-auto my-40 grid gap-2 gap-y-16 lg:grid-cols-2" id="faq">
     <div class="flex flex-col gap-6">
       <h2 class="font-title lg:text-base-content/10 text-4xl font-semibold lg:text-[10rem]">
         F.A.Q
@@ -729,7 +729,7 @@
           <div
             class="collapse-content text-base-content/70 border-base-content/10 ms-4 border-s-2 px-6 text-xs"
           >
-            {item.A}
+            {@html item.A}
           </div>
         </div>
       {/each}
