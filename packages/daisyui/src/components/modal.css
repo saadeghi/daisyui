@@ -9,6 +9,7 @@
   overflow-y: hidden;
   overscroll-behavior: contain;
   z-index: 999;
+  scrollbar-gutter: auto;
   &::backdrop {
     @apply hidden;
   }
