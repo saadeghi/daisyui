@@ -15,8 +15,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Tue, 05 Aug 2025 13:52:16 GMT</lastBuildDate>
-    <pubDate>Tue, 05 Aug 2025 13:52:16 GMT</pubDate>
+    <lastBuildDate>Tue, 05 Aug 2025 13:53:29 GMT</lastBuildDate>
+    <pubDate>Tue, 05 Aug 2025 13:53:29 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
@@ -42,26 +42,6 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</link>
           <pubDate>Tue, 03 Dec 2024 06:10:00 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/1aa19ca5-c3db-4438-9a33-434cd72ff07f/</guid>
-        </item>
-      
-        <item>
-          <title>
-            <![CDATA[ Online Store template 2.0 ]]>
-          </title>
-          <description>
-            <![CDATA[ **Fully functional store template for Lemon Squeezy or Gumroad**
-
-Made with daisyUI 5 and Next.js 15
-
-Add your **LemonSqueezy API key** or **Gumroad API key** to the env file, add custom data for your products and your online store will be ready in **less than 5 minutes**!
-
-This template receives your simple list of products coming from the LemonSqueezy API or Gumroad API, adds your custom data and attributes to the products and generates a functional online store with all the standard online store capabilities you need.
-
-Including Homepage, collections page with filter and sort, product page with image gallery, zoom, custom attributes, variant links, related product suggestions and more. ]]>
-          </description>
-          <link>https://daisyui.lemonsqueezy.com/checkout/buy/0e0d97fa-2646-4411-817e-f96afeb83493/</link>
-          <pubDate>Wed, 08 Jan 2025 18:52:47 GMT</pubDate>
-          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/0e0d97fa-2646-4411-817e-f96afeb83493/</guid>
         </item>
       
         <item>
@@ -107,6 +87,26 @@ Team and Enterprise license:
           <link>https://daisyui.lemonsqueezy.com/checkout/buy/2a4d3f50-8ffd-4857-a8d8-513a66bc273a/</link>
           <pubDate>Sun, 28 Apr 2024 19:32:45 GMT</pubDate>
           <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/2a4d3f50-8ffd-4857-a8d8-513a66bc273a/</guid>
+        </item>
+      
+        <item>
+          <title>
+            <![CDATA[ Online Store template 2.0 ]]>
+          </title>
+          <description>
+            <![CDATA[ **Fully functional store template for Lemon Squeezy or Gumroad**
+
+Made with daisyUI 5 and Next.js 15
+
+Add your **LemonSqueezy API key** or **Gumroad API key** to the env file, add custom data for your products and your online store will be ready in **less than 5 minutes**!
+
+This template receives your simple list of products coming from the LemonSqueezy API or Gumroad API, adds your custom data and attributes to the products and generates a functional online store with all the standard online store capabilities you need.
+
+Including Homepage, collections page with filter and sort, product page with image gallery, zoom, custom attributes, variant links, related product suggestions and more. ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/0e0d97fa-2646-4411-817e-f96afeb83493/</link>
+          <pubDate>Wed, 08 Jan 2025 18:52:47 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/0e0d97fa-2646-4411-817e-f96afeb83493/</guid>
         </item>
       
         <item>
