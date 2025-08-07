@@ -51,12 +51,12 @@
       link: "https://swag.daisyui.com/collections/stickers",
       img: "https://img.daisyui.com/images/store/banner/sticker.webp",
     },
-    // {
-    //   title: "Official daisyUI",
-    //   desc: "Figma Library",
-    //   link: "https://daisyui.com/store/351127/",
-    //   img: "https://img.daisyui.com/images/store/banner/figma.webp",
-    // },
+    {
+      title: "Official daisyUI",
+      desc: "Figma Library",
+      link: "https://daisyui.com/store/351127/",
+      img: "https://img.daisyui.com/images/store/banner/figma.webp",
+    },
   ]
 
   let randomBanner = $state(null)
