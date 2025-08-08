@@ -8,60 +8,82 @@
       desc: "dashboard template from daisyUI",
       link: "https://daisyui.com/store/244268/",
       img: "https://img.daisyui.com/images/store/banner/nexus.webp",
+      chance: 3,
     },
     {
       title: "dasiyUI swag!",
       desc: "T-shirts and more",
       link: "https://swag.daisyui.com/collections/shirts",
       img: "https://img.daisyui.com/images/store/banner/swag.webp",
+      chance: 1,
     },
     {
       title: "dasiyUI swag!",
       desc: "T-shirts and more",
       link: "https://swag.daisyui.com/collections/shirts",
       img: "https://img.daisyui.com/images/store/banner/tshirt.webp",
+      chance: 1,
     },
     {
       title: "dasiyUI swag!",
       desc: "Hats and more",
       link: "https://swag.daisyui.com/collections/hats",
       img: "https://img.daisyui.com/images/store/banner/cicd-hat.webp",
+      chance: 2,
     },
     {
       title: "dasiyUI swag!",
       desc: "Hats and more",
       link: "https://swag.daisyui.com/collections/hats",
       img: "https://img.daisyui.com/images/store/banner/cute-beanie.webp",
+      chance: 2,
     },
     {
       title: "dasiyUI mugs",
       desc: "See more →",
       link: "https://swag.daisyui.com/collections/mugs",
       img: "https://img.daisyui.com/images/store/banner/lighthouse-mug.webp",
+      chance: 1,
     },
     {
       title: "dasiyUI mugs",
       desc: "See more →",
       link: "https://swag.daisyui.com/collections/mugs",
       img: "https://img.daisyui.com/images/store/banner/techdebt-mug.webp",
+      chance: 1,
     },
     {
       title: "dasiyUI stickers",
       desc: "Great for laptop",
       link: "https://swag.daisyui.com/collections/stickers",
       img: "https://img.daisyui.com/images/store/banner/sticker.webp",
+      chance: 1,
     },
     {
       title: "Official daisyUI",
       desc: "Figma Library",
       link: "https://daisyui.com/store/351127/",
       img: "https://img.daisyui.com/images/store/banner/figma.webp",
+      chance: 3,
     },
   ]
 
   let randomBanner = $state(null)
   onMount(() => {
-    randomBanner = bannerItems[Math.floor(Math.random() * bannerItems.length)]
+    // Calculate total weight
+    const totalWeight = bannerItems.reduce((sum, item) => sum + item.chance, 0)
+
+    // Generate random number between 0 and totalWeight
+    let random = Math.random() * totalWeight
+
+    // Find the item based on weighted probability
+    for (const item of bannerItems) {
+      random -= item.chance
+      if (random <= 0) {
+        randomBanner = item
+        break
+      }
+    }
   })
 </script>
 
