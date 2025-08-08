@@ -79,7 +79,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     <!-- Page content here -->
     <label for="my-drawer" class="$$btn $$btn-primary $$drawer-button">Open drawer</label>
   </div>
-  <div class="$$drawer-side">
+  <div class="$$drawer-side z-99">
     <label for="my-drawer" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
       <!-- Sidebar content here -->
@@ -157,7 +157,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     <!-- Page content here -->
     Content
   </div>
-  <div class="$$drawer-side">
+  <div class="$$drawer-side z-99">
     <label for="my-drawer-3" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu bg-base-200 min-h-full w-80 p-4">
       <!-- Sidebar content here -->
@@ -195,7 +195,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
       Open drawer
     </label>
   </div>
-  <div class="$$drawer-side">
+  <div class="$$drawer-side max-lg:z-99">
     <label for="my-drawer-2" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
       <!-- Sidebar content here -->
@@ -229,7 +229,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     <!-- Page content here -->
     <label for="my-drawer-4" class="$$drawer-button $$btn $$btn-primary">Open drawer</label>
   </div>
-  <div class="$$drawer-side">
+  <div class="$$drawer-side z-99">
     <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
       <!-- Sidebar content here -->
