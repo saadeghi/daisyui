@@ -1,6 +1,7 @@
 <script>
   import ContrastMeter from "$components/themegenerator/ContrastMeter.svelte"
   import { validateColor } from "$lib/themeGeneratorValidation"
+  import { hexToOklch, oklchToHex, validateHex, validateOklch } from "$lib/colorUtils"
 
   let {
     colors,
@@ -13,6 +14,8 @@
   } = $props()
   let open = $state(false)
   let inputValue = $state(value)
+  let hexValue = $state("")
+  let oklchValue = $state("")
   let isDragging = $state(false)
   let dialog
 
@@ -59,6 +62,31 @@
     }
   }
 
+  function handleColorPickerChange(hex) {
+    hexValue = hex
+    oklchValue = hexToOklch(hex)
+    inputValue = oklchValue
+    value = oklchValue
+  }
+
+  function handleHexChange(hex) {
+    hexValue = hex
+    if (validateHex(hex)) {
+      oklchValue = hexToOklch(hex)
+      inputValue = oklchValue
+      value = oklchValue
+    }
+  }
+
+  function handleOklchChange(oklch) {
+    oklchValue = oklch
+    if (validateOklch(oklch)) {
+      hexValue = oklchToHex(oklch)
+      inputValue = oklch
+      value = oklch
+    }
+  }
+
   function toggleModal() {
     if (open) {
       closeModal()
@@ -82,6 +110,34 @@
 
   $effect(() => {
     inputValue = value
+    if (value) {
+      if (value.startsWith('oklch(')) {
+        oklchValue = value
+        hexValue = oklchToHex(value)
+      } else if (validateHex(value)) {
+        hexValue = value
+        oklchValue = hexToOklch(value)
+      } else {
+        // For predefined colors, try to convert to hex for the color picker
+        try {
+          const temp = document.createElement('div')
+          temp.style.color = value
+          if (temp.style.color) {
+            // Convert to hex using canvas for better accuracy
+            const canvas = document.createElement('canvas')
+            const ctx = canvas.getContext('2d')
+            ctx.fillStyle = value
+            const data = ctx.getImageData(0, 0, 1, 1).data
+            hexValue = `#${data[0].toString(16).padStart(2, '0')}${data[1].toString(16).padStart(2, '0')}${data[2].toString(16).padStart(2, '0')}`
+            oklchValue = hexToOklch(hexValue)
+          }
+        } catch (e) {
+          // Fallback to default values
+          hexValue = "#000000"
+          oklchValue = "oklch(0% 0 0)"
+        }
+      }
+    }
   })
 
   function getColorNames(color) {
@@ -209,11 +265,47 @@
         {/each}
       </div>
       <div
-        class="bg-base-200 flex flex-col items-center justify-between gap-2 px-8 pt-4 pb-6 md:flex-row"
+        class="bg-base-200 flex flex-col gap-4 px-8 pt-4 pb-6"
       >
-        <div class="flex grow flex-col gap-1">
-          <span class="text-base-content/60 shrink-0 text-xs">Adjust Lightness, Chroma, Hue:</span>
-          <label dir="ltr" class="input input-border flex items-center gap-2 px-2">
+        <!-- Color Picker Row -->
+        <div class="flex items-center gap-3">
+          <span class="text-base-content/60 text-xs">Color Picker:</span>
+          <input 
+            type="color" 
+            value={hexValue} 
+            oninput={(e) => handleColorPickerChange(e.target.value)}
+            class="h-8 w-16 rounded border border-base-content/20"
+          />
+        </div>
+        
+        <!-- Hex Input Row -->
+        <div class="flex items-center gap-3">
+          <span class="text-base-content/60 text-xs">Hex:</span>
+          <input 
+            type="text" 
+            value={hexValue}
+            oninput={(e) => handleHexChange(e.target.value)}
+            placeholder="#000000"
+            class="input input-sm flex-1"
+          />
+        </div>
+        
+        <!-- OKLCH Input Row -->
+        <div class="flex items-center gap-3">
+          <span class="text-base-content/60 text-xs">OKLCH:</span>
+          <input 
+            type="text" 
+            value={oklchValue}
+            oninput={(e) => handleOklchChange(e.target.value)}
+            placeholder="oklch(50% 0.1 240)"
+            class="input input-sm flex-1"
+          />
+        </div>
+        
+        <!-- Custom Input Row -->
+        <div class="flex items-center gap-3">
+          <span class="text-base-content/60 text-xs">Custom:</span>
+          <label dir="ltr" class="input input-border flex items-center gap-2 px-2 flex-1">
             <input
               type="text"
               value={inputValue}
@@ -227,6 +319,7 @@
                   }
                 }
               }}
+              placeholder="oklch(50% 0.1 240) or #000000"
               aria-label={`${name} value`}
             />
             {#if Object.entries(colors).find(([key, color]) => color === inputValue)?.[0]}
@@ -248,6 +341,7 @@
             {/if}
           </label>
         </div>
+        
         <ContrastMeter color1={value} color2={getPairColor(name)} />
       </div>
     {/if}
