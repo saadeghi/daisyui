@@ -403,7 +403,7 @@
 
           <h1 class="font-title text-4xl font-bold">{data.product.title}</h1>
         </div>
-        <div class="flex items-start justify-between">
+        <div class="flex items-start justify-between gap-2">
           <div class="flex gap-2">
             {#if data.product.originalprice}
               <span class="text-2xl line-through opacity-40">
@@ -447,7 +447,7 @@
                   data.product.ref,
                   data.product.params,
                 )}
-                class="btn btn-lg btn-success group shrink-0 rounded-full xl:px-10"
+                class="btn btn-lg btn-success group shrink-0 rounded-full whitespace-nowrap xl:px-10"
                 target={data.product.buy_now_url ? "_blank" : undefined}
                 rel={data.product.buy_now_url ? "noopener noreferrer" : undefined}
               >
@@ -473,7 +473,7 @@
             {:else}
               <a
                 href="#packages"
-                class="btn btn-lg btn-success group shrink-0 rounded-full xl:px-10"
+                class="btn btn-lg btn-success group shrink-0 rounded-full whitespace-nowrap xl:px-10"
               >
                 Buy now
                 <span class="flex gap-2">
@@ -651,7 +651,9 @@
               </div>
             {/if}
             <!-- Sticky header: Package name and price -->
-            <div class="bg-base-200 rounded-box border-base-300/50 sticky top-16 z-11">
+            <div
+              class="rounded-box from-base-200 via-base-200 sticky top-16 z-11 bg-gradient-to-b via-80%"
+            >
               <div class="card-body pb-4">
                 <!-- Package name -->
                 <h3
@@ -672,7 +674,7 @@
             </div>
 
             <!-- Scrollable features content -->
-            <div class="flex-1 overflow-y-auto py-1">
+            <div class="flex-1 overflow-y-auto">
               <div class="card-body pt-4">
                 <!-- Features list -->
                 <div class="flex flex-col gap-4 lg:gap-6">
@@ -731,7 +733,9 @@
 
             <!-- Sticky footer: Buy button -->
             {#if checkoutRow && checkoutRow[packageIndex + 1]}
-              <div class="rounded-box bg-base-200 sticky bottom-0 z-10">
+              <div
+                class="rounded-box from-base-200 via-base-200 sticky bottom-0 z-10 bg-gradient-to-t via-80%"
+              >
                 <div class="card-body pt-4">
                   <div class="card-actions justify-center">
                     <a
