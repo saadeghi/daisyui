@@ -1,0 +1,1 @@
+import{component as l}from"./4.DYjwWYWl.js";const e=!0,o="always",t=Object.freeze(Object.defineProperty({__proto__:null,prerender:e,trailingSlash:o},Symbol.toStringTag,{value:"Module"}));export{l as component,t as universal};
