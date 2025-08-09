@@ -28,7 +28,10 @@
     return match ? match[1] : null
   }
 
-  function rednerBuyNowUrl(url, ref, params) {
+  function renderBuyNowUrl(url, ref, params) {
+    if (!url) {
+      return "#packages"
+    }
     if (ref) {
       return `/store/checkout?product=${extractUUID(url)}&aff=${ref}${params ? `&${params}` : ""}`
     }
@@ -328,21 +331,14 @@
     <!-- Product Images/Media -->
     <div class="flex flex-col gap-4 xl:col-span-7">
       <div class="relative max-xl:-mx-4 max-xl:overflow-x-auto md:max-xl:-mx-20">
-        <div class="flex gap-6 xl:flex-col xl:gap-16">
+        <div class="flex gap-6 max-xl:w-screen xl:flex-col xl:gap-16">
           <div class="w-px shrink-0 xl:hidden"></div>
           {#each data.product.media as media, index}
             <div
-              class="revealer rounded-box no-shadow-[0px_-1px_12px_-3px_rgba(0,_0,_0,_0.2),0px_0px_2px_0px_rgba(0,_0,_0,_0.1)] w-[calc(90%-2rem)] shrink-0 overflow-hidden shadow-[0_3px_oklch(0%_0_0/0.05),0_0_0_1px_oklch(0%_0_0/0.05)] xl:w-full"
-              data-style="
-                --index:{1 + index};
-                top: calc(80px + (var(--index) * 10px));
-                {index % 2 === 0 ? `rotate: ${0 + index / 2}deg;` : `rotate:  ${0 - index / 2}deg;`}
-                {index % 2 === 0
-                ? `margin-inline-start: ${2 + index}px;`
-                : `margin-inline-start:  ${2 - index}px;`}"
+              class="rounded-box no-shadow-[0px_-1px_12px_-3px_rgba(0,_0,_0,_0.2),0px_0px_2px_0px_rgba(0,_0,_0,_0.1)] shrink-0 overflow-hidden shadow-[0_3px_oklch(0%_0_0/0.05),0_0_0_1px_oklch(0%_0_0/0.05)] max-xl:h-[45vh] xl:w-full"
             >
               {#if media.type === "video"}
-                <div class="w-full" style={`aspect-ratio: ${media.ratio};`}>
+                <div class="max-xl:h-full xl:w-full" style={`aspect-ratio: ${media.ratio};`}>
                   <iframe
                     class="h-full w-full"
                     src={media.url}
@@ -444,61 +440,64 @@
             </span>
           </div>
           <div class="flex flex-col items-center gap-3">
-            <a
-              href={rednerBuyNowUrl(
-                data.product.buy_now_url,
-                data.product.ref,
-                data.product.params,
-              )}
-              class="btn btn-lg btn-primary group shrink-0 rounded-full xl:px-10"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Buy now
-              <span class="flex gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            {#if data.product.buy_now_url}
+              <a
+                href={renderBuyNowUrl(
+                  data.product.buy_now_url,
+                  data.product.ref,
+                  data.product.params,
+                )}
+                class="btn btn-lg btn-success group shrink-0 rounded-full xl:px-10"
+                target={data.product.buy_now_url ? "_blank" : undefined}
+                rel={data.product.buy_now_url ? "noopener noreferrer" : undefined}
+              >
+                Buy now
+                <span class="flex gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block"
                   >
-                  </path>
-                </svg>
-              </span>
-            </a>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    >
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            {:else}
+              <a
+                href="#packages"
+                class="btn btn-lg btn-success group shrink-0 rounded-full xl:px-10"
+              >
+                Buy now
+                <span class="flex gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    >
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            {/if}
           </div>
         </div>
 
-        {#if data.product.banner}
-          <div class="alert alert-soft">
-            <svg
-              class="mt-2 size-5 self-start"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              ><g
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke-width="2"
-                fill="none"
-                stroke="currentColor"
-                ><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"
-                ></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path
-                  d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"
-                ></path></g
-              ></svg
-            >
-            <div class="prose ps-0! text-xs">
-              {@html data.product.banner}
-            </div>
-          </div>
-        {/if}
         {#if data.product.desc}
           <div class="prose prose-sm max-w-none ps-0! [&_ul>li>p]:my-0">
             {@html data.product.desc}
@@ -519,7 +518,7 @@
               <div>
                 <a
                   href={value}
-                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
+                  class="flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 *:transition-opacity hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
                   onclick={(e) => (e.preventDefault(), openModal(value))}
                 >
                   {@html getLinksIcon(link)}
@@ -541,7 +540,7 @@
               <div>
                 <a
                   href={value}
-                  class="hover:bg-base-200 flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
+                  class="flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 *:transition-opacity hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
                   onclick={(e) => {
                     e.preventDefault(), screenshotDialog.showModal()
                     screenshotUrl = value
@@ -565,7 +564,7 @@
                 aria-label={link}
                 href={value}
                 rel="noopener noreferrer"
-                class="hover:bg-base-200 flex flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100"
+                class="flex flex-col items-center gap-2 p-6 text-center capitalize *:opacity-50 hover:*:opacity-100"
               >
                 {@html getLinksIcon(link)}
                 <span>{link}</span>
@@ -612,98 +611,206 @@
       </div>
     </div>
   </div>
-  <div class="my-40" id="packages">
+  <div class="mt-40 mb-20" id="packages">
     {#if data.product.packages}
-      <div class="border-base-300 rounded-box overflow-x-auto border whitespace-nowrap">
-        <table class="table-xs sm:table-sm lg:table-md table-zebra table">
-          <!-- Table head -->
-          <thead>
-            <tr>
-              {#each data.product.packages[0] as header, headerIndex}
-                <th class:text-center={headerIndex !== 0}>{header}</th>
-              {/each}
-            </tr>
-          </thead>
-          <!-- Table body -->
-          <tbody>
-            {#each data.product.packages.slice(1) as row}
-              <tr>
-                {#each row as cell, cellIndex}
-                  <td class:text-center={cellIndex !== 0}>
-                    {#if typeof cell === "boolean"}
-                      {#if cell}
-                        <svg
-                          aria-label="Yes"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="text-success inline-block size-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            d="M5 12l5 5L20 7"
-                          />
-                        </svg>
-                      {:else}
-                        <svg
-                          aria-label="No"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="text-error inline-block size-5"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="3"
-                            d="M18 6L6 18M6 6l12 12"
-                          />
-                        </svg>
-                      {/if}
-                    {:else}
-                      {cell}
+      <!-- Extract package headers (excluding first column) -->
+      {@const packageHeaders = data.product.packages[0].slice(1)}
+
+      <!-- Extract all rows except header -->
+      {@const packageRows = data.product.packages.slice(1)}
+
+      <!-- Extract price and checkout rows -->
+      {@const priceRow = packageRows.find((row) => row[0] === "price")}
+      {@const checkoutRow = packageRows.find((row) => row[0] === "checkout")}
+      {@const popularRow = packageRows.find((row) => row[0] === "popular")}
+
+      <!-- Filter out price, checkout, and popular rows from feature rows -->
+      {@const featureRows = packageRows.filter(
+        (row) => row[0] !== "price" && row[0] !== "checkout" && row[0] !== "popular",
+      )}
+
+      <div class="grid gap-6 lg:grid-cols-3 xl:gap-8">
+        {#each packageHeaders as packageName, packageIndex}
+          {@const isHighlighted = popularRow && popularRow[packageIndex + 1] === true}
+          <div
+            class={`card bg-base-200 relative flex flex-col border ${isHighlighted ? "border-success/20 -m-1 border-4" : "border-base-300"}`}
+          >
+            {#if isHighlighted}
+              <div
+                class="badge badge-success badge-xs font-title absolute start-4 -top-2.5 z-12 font-semibold tracking-widest uppercase"
+              >
+                <svg class="size-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+                  <path
+                    d="m11.95,4.323c-.12-.371-.435-.635-.818-.69l-2.918-.424-1.304-2.641c-.344-.699-1.477-.698-1.82-.001l-1.304,2.643-2.917.424c-.385.055-.699.32-.819.69-.12.37-.021.769.257,1.04l2.111,2.058-.499,2.905c-.065.383.089.763.402.991.313.229.725.26,1.069.079l2.609-1.372,2.61,1.372c.149.078.311.117.472.117.21,0,.419-.066.597-.196.313-.229.468-.608.402-.991l-.499-2.905,2.11-2.058c.279-.271.378-.67.258-1.04Z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  >
+                  </path>
+                </svg>
+                Popular
+              </div>
+            {/if}
+            <!-- Sticky header: Package name and price -->
+            <div class="bg-base-200 rounded-box border-base-300/50 sticky top-16 z-11">
+              <div class="card-body pb-4">
+                <!-- Package name -->
+                <h3
+                  class="card-title font-title mb-2 justify-center text-center text-xl font-semibold"
+                >
+                  {packageName}
+                </h3>
+
+                <!-- Price -->
+                {#if priceRow && priceRow[packageIndex + 1] && typeof priceRow[packageIndex + 1] === "number"}
+                  <div class="text-center">
+                    <div class="font-title text-2xl font-thin tabular-nums">
+                      {convertCurrency(priceRow[packageIndex + 1])}
+                    </div>
+                  </div>
+                {/if}
+              </div>
+            </div>
+
+            <!-- Scrollable features content -->
+            <div class="flex-1 overflow-y-auto py-1">
+              <div class="card-body pt-4">
+                <!-- Features list -->
+                <div class="flex flex-col gap-4 lg:gap-6">
+                  {#each featureRows as row}
+                    {@const featureName = row[0]}
+                    {@const featureValue = row[packageIndex + 1]}
+
+                    {#if featureName && featureValue !== null}
+                      <div class="flex items-center justify-between text-xs">
+                        <span class="text-base-content/70">{featureName}</span>
+                        <div class="flex items-center">
+                          {#if typeof featureValue === "boolean"}
+                            {#if featureValue}
+                              <svg
+                                aria-label="Yes"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="text-success size-5"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="3"
+                                  d="M5 12l5 5L20 7"
+                                />
+                              </svg>
+                            {:else}
+                              <svg
+                                aria-label="No"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="text-error size-5"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="3"
+                                  d="M18 6L6 18M6 6l12 12"
+                                />
+                              </svg>
+                            {/if}
+                          {:else}
+                            <span class="font-medium whitespace-nowrap">{featureValue}</span>
+                          {/if}
+                        </div>
+                      </div>
                     {/if}
-                  </td>
-                {/each}
-              </tr>
-            {/each}
-          </tbody>
-        </table>
+                  {/each}
+                </div>
+              </div>
+            </div>
+
+            <!-- Sticky footer: Buy button -->
+            {#if checkoutRow && checkoutRow[packageIndex + 1]}
+              <div class="rounded-box bg-base-200 sticky bottom-0 z-10">
+                <div class="card-body pt-4">
+                  <div class="card-actions justify-center">
+                    <a
+                      href={checkoutRow[packageIndex + 1]}
+                      class={`btn btn-block btn-success ${isHighlighted ? "btn-lg" : ""}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Buy Now</span>
+                      <!-- <span class="font-title tabular-nums"
+                        >{convertCurrency(priceRow[packageIndex + 1])}</span
+                      > -->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {/if}
+          </div>
+        {/each}
       </div>
 
-      <div class="my-20 flex justify-center">
-        <a
-          href={rednerBuyNowUrl(data.product.buy_now_url, data.product.ref, data.product.params)}
-          class="btn lg:btn-lg xl:btn-xl btn-outline group shrink-0 rounded-full xl:px-10"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Buy {data.product.title}
-          <span class="flex gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+      {#if data.product.packages && !checkoutRow}
+        <div class="my-20 flex justify-center">
+          <a
+            href={renderBuyNowUrl(data.product.buy_now_url, data.product.ref, data.product.params)}
+            class="btn lg:btn-lg xl:btn-xl btn-outline group shrink-0 rounded-full xl:px-10"
+            target={data.product.buy_now_url ? "_blank" : undefined}
+            rel={data.product.buy_now_url ? "noopener noreferrer" : undefined}
+          >
+            Buy {data.product.title}
+            <span class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block rtl:rotate-180 group-hover:rtl:-translate-x-1"
               >
-              </path>
-            </svg>
-          </span>
-        </a>
-      </div>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                >
+                </path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      {/if}
     {/if}
   </div>
+  {#if data.product.banner}
+    <div class="alert lg:p-12">
+      <svg
+        class="mt-2 size-6 -rotate-6 self-start lg:size-8"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <g
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke-width="2"
+          fill="none"
+          stroke="currentColor"
+        >
+          <rect x="3" y="8" width="18" height="4" rx="1"> </rect>
+          <path d="M12 8v13"> </path>
+          <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"> </path>
+          <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5">
+          </path>
+        </g>
+      </svg>
+      <div class="prose lg:text-md text-xs max-lg:ps-0">
+        <div class="font-title text-lg font-semibold">{@html data.product.bannerTitle}</div>
+        {@html data.product.banner}
+      </div>
+    </div>
+  {/if}
   <div class="my-40">
     {#each data.product.more_images as image}
       <img src={image} alt={data.product.title} class="w-full object-cover" loading="lazy" />
@@ -757,10 +864,10 @@
       class="relative z-1 rounded-full border border-white/20 bg-white/40 p-4 backdrop-blur-lg max-sm:top-[40%]"
     >
       <a
-        href={rednerBuyNowUrl(data.product.buy_now_url, data.product.ref, data.product.params)}
+        href={renderBuyNowUrl(data.product.buy_now_url, data.product.ref, data.product.params)}
         class="btn lg:btn-lg xl:btn-xl btn-neutral group shrink-0 rounded-full xl:px-10"
-        target="_blank"
-        rel="noopener noreferrer"
+        target={data.product.buy_now_url ? "_blank" : undefined}
+        rel={data.product.buy_now_url ? "noopener noreferrer" : undefined}
       >
         Buy {data.product.title}
         <span class="flex gap-2">
@@ -786,7 +893,7 @@
 </div>
 
 {#if data.product.tags && data.products.length > 0 && getSimilarProducts(data.product, data.products).length > 0}
-  <div class="divider text-base-content/30 my-20">You may also like these</div>
+  <div class="divider text-base-content/30 my-20">You will also like these</div>
 
   <div class="mx-auto grid gap-x-10 gap-y-36 md:grid-cols-2 xl:gap-x-16">
     {#each getSimilarProducts(data.product, data.products) as product}
@@ -795,5 +902,5 @@
   </div>
 {/if}
 <div class="divider divider-end text-base-content/30 my-20">
-  <a href="/store/" class="text-base-content opacity-50 hover:opacity-100">View all</a>
+  <a href="/store/" class="text-base-content opacity-50 hover:opacity-100">View all products</a>
 </div>
