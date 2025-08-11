@@ -41,7 +41,7 @@ export async function load({ params, parent }) {
   }
 
   return {
-    products: data,
+    products: data.products,
     product: {
       ...product,
       desc: product.desc && (await md(product.desc)),
