@@ -8,6 +8,7 @@ Disallow: /docs/install/
 Disallow: /*-component-library/
 Disallow: /cdn-cgi/
 Disallow: /?lang=*
+Disallow: /*?lang=
 
 User-agent: *
 Allow: /
