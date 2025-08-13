@@ -49,7 +49,9 @@
   }
 
   &:has(> input[disabled]),
-  &:is(:disabled, [disabled]) {
+  &:is(:disabled, [disabled]),
+  fieldset:disabled &,
+  form:disabled & {
     @apply border-base-200 bg-base-200 placeholder-base-content text-base-content/40 placeholder-base-content/20 cursor-not-allowed;
     box-shadow: none;
   }
