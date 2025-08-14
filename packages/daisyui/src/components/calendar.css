@@ -30,7 +30,7 @@
     font-size: 0.7rem;
   }
   ::part(day):hover {
-  background: var(--color-base-200);
+    background: var(--color-base-200);
   }
   ::part(button day today) {
     background: var(--color-primary);
@@ -40,6 +40,10 @@
     color: var(--color-base-100);
     background: var(--color-base-content);
     border-radius: var(--radius-field);
+  }
+  ::part(selected):hover {
+    color: var(--color-base-content);
+    background: var(--color-base-200);
   }
   ::part(range-inner) {
     border-radius: 0;
