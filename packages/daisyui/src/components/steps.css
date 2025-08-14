@@ -10,6 +10,16 @@
     min-width: 4rem;
     --step-bg: var(--color-base-300);
     --step-fg: var(--color-base-content);
+
+    @media (max-width: 768px) {
+      min-width: 3rem;
+      font-size: 0.75rem;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+      padding: 0 0.25rem;
+    }
+
     &:before {
       @apply top-0 col-start-1 row-start-1 h-2 w-full;
       border: 1px solid;
@@ -122,6 +132,15 @@
     grid-template-columns: auto;
     min-width: 4rem;
 
+    @media (max-width: 768px) {
+      min-width: 3rem;
+      font-size: 0.75rem;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+      padding: 0 0.25rem;
+    }
+
     &:before {
       @apply h-2 w-full;
       translate: 0;
@@ -145,6 +164,13 @@
     grid-template-rows: auto;
     min-height: 4rem;
     justify-items: start;
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+    }
 
     &:before {
       @apply h-full w-2;
