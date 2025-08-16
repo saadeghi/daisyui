@@ -83,14 +83,6 @@ classnames:
 ```
 
 
-### ~Neutral color
-<button class="link link-neutral">Click me</button>
-
-```html
-<a class="$$link $$link-neutral">Click me</a>
-```
-
-
 ### ~Success color
 <button class="link link-success">Click me</button>
 
