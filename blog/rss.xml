@@ -15,11 +15,27 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Updates, ideas and resources ]]>
     </description>
     <link>https://daisyui.com/blog/</link>
-    <lastBuildDate>Sat, 16 Aug 2025 17:04:40 GMT</lastBuildDate>
-    <pubDate>Sat, 16 Aug 2025 17:04:40 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Aug 2025 00:44:24 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Aug 2025 00:44:24 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
     
+        <item>
+          <title>
+            <![CDATA[ Not going full circle with class names ]]>
+          </title>
+          <description>
+            <![CDATA[ "Are we going full circle?" This is one of the questions I get asked about when people see component class names and utility classes together. ]]>
+          </description>
+          <link>https://daisyui.com/blog/full-circle/</link>
+          <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/ouroboros.webp</image>
+          <image>https://daisyui.comhttps://img.daisyui.com/images/blog/ouroboros.webp</image>
+          <media:content url="https://daisyui.comhttps://img.daisyui.com/images/blog/ouroboros.webp" medium="image" type="image/jpg" />
+          <enclosure url="https://daisyui.comhttps://img.daisyui.com/images/blog/ouroboros.webp" type="image/jpeg" />
+          <guid isPermaLink="false">https://daisyui.com/blog/full-circle/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Nexus 2.2 dashboard template is here! ]]>
