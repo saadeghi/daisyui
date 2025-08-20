@@ -12,6 +12,11 @@
     transition:
       opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms,
       transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+      transform: translateX(-50%);
+    }
     background-color: var(--tt-bg);
     width: max-content;
     pointer-events: none;
@@ -26,6 +31,10 @@
     transition:
       opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms,
       transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
     content: "";
     pointer-events: none;
     width: 0.625rem;
@@ -85,6 +94,11 @@
       transition:
         opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
         transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+        --tt-pos: 0rem;
+      }
     }
   }
 }

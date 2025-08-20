@@ -23,6 +23,11 @@
     transition-behavior: allow-discrete;
     transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+      transition: none;
+    }
   }
   @starting-style {
     &[popover],

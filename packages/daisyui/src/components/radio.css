@@ -23,6 +23,10 @@
     animation: radio 0.2s ease-out;
     @apply bg-base-100 border-current;
 
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+
     &:before {
       @apply bg-current;
       box-shadow:

@@ -10,6 +10,10 @@
   width: 100%;
   grid-template-rows: max-content 0fr;
   transition: grid-template-rows 0.2s;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
   isolation: isolate;
 
   > input:is([type="checkbox"], [type="radio"]) {
@@ -57,12 +61,20 @@
     transition:
       padding 0.2s ease-out,
       background-color 0.2s ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
   &:is([open]) {
     &.collapse-arrow {
       > .collapse-title:after {
         transform: translateY(-50%) rotate(225deg);
+
+        @media (prefers-reduced-motion: reduce) {
+          transform: translateY(-50%) rotate(45deg);
+        }
       }
     }
   }
@@ -71,6 +83,10 @@
     &.collapse-arrow {
       > .collapse-title:after {
         transform: translateY(-50%) rotate(225deg);
+
+        @media (prefers-reduced-motion: reduce) {
+          transform: translateY(-50%) rotate(45deg);
+        }
       }
     }
   }
@@ -143,6 +159,10 @@
     visibility 0.2s,
     padding 0.2s ease-out,
     background-color 0.2s ease-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .collapse:is(details) {
@@ -172,6 +192,10 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 0.2s;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
     top: 1.9rem;
     inset-inline-end: 1.4rem;
     content: "";
@@ -190,6 +214,10 @@
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
     top: 0.9rem;
     inset-inline-end: 1.4rem;
     content: "+";
@@ -217,5 +245,9 @@
     transition:
       padding 0.2s ease-out,
       background-color 0.2s ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 }

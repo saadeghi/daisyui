@@ -9,6 +9,10 @@
   :where(*) {
     animation: rating 0.25s ease-out;
     @apply bg-base-content h-6 w-6 rounded-none opacity-20;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
     &:is(input) {
       @apply cursor-pointer;
     }
@@ -33,6 +37,10 @@
     &:focus-visible {
       transition: scale 0.2s ease-out;
       scale: 1.1;
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
     }
   }
 

@@ -12,6 +12,12 @@
     background-position-x: 15%;
     animation: progress 5s ease-in-out infinite;
 
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+      background-image: linear-gradient(90deg, currentColor 0%, currentColor 100%);
+      background-size: 100%;
+    }
+
     @supports (-moz-appearance: none) {
       &::-moz-progress-bar {
         @apply bg-transparent;
@@ -25,6 +31,12 @@
         background-size: 200%;
         background-position-x: 15%;
         animation: progress 5s ease-in-out infinite;
+
+        @media (prefers-reduced-motion: reduce) {
+          animation: none;
+          background-image: linear-gradient(90deg, currentColor 0%, currentColor 100%);
+          background-size: 100%;
+        }
       }
     }
   }

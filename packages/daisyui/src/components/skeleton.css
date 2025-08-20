@@ -11,6 +11,11 @@
   background-size: 200% auto;
   background-repeat: no-repeat;
   background-position-x: -50%;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    background-image: none;
+  }
 }
 @keyframes skeleton {
   0% {

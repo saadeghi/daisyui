@@ -4,6 +4,10 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
 
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+
   &::-webkit-scrollbar {
     @apply hidden;
   }
