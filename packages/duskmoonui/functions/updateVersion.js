@@ -12,8 +12,8 @@ const updateIndexJsVersion = (indexJsPath, version) => {
 }
 
 export const updateVersion = () => {
-  const packageJsonPath = "packages/daisyui/package.json"
-  const indexJsPath = "packages/daisyui/index.js"
+  const packageJsonPath = "packages/duskmoonui/package.json"
+  const indexJsPath = "packages/duskmoonui/index.js"
 
   try {
     const version = readPackageVersion(packageJsonPath)

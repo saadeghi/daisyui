@@ -90,7 +90,7 @@ This is useful to use duskmoonUI in a scoped environment like a web component or
 }
 ```
 In above example, we only include the button, input, and select components. All other styles of duskmoonUI library will be excluded.
-[Here are the file names you can include or exclude](https://github.com/duskmoon-dev/duskmoon-ui/tree/master/packages/daisyui/src).
+[Here are the file names you can include or exclude](https://github.com/duskmoon-dev/duskmoon-ui/tree/master/packages/duskmoonui/src).
 
 ## exclude
 
@@ -111,7 +111,7 @@ In above example, we exclude the `rootscrollgutter` style which is added to the 
 }
 ```
 In above example, we exclude the the listed files. All other parts of duskmoonUI will be available to use. This is useful if you want to opt out of some parts of duskmoonUI or if you want to mix duskmoonUI for some parts and another library for the rest.
-[Here are the file names you can include or exclude](https://github.com/duskmoon-dev/duskmoon-ui/tree/master/packages/daisyui/src).
+[Here are the file names you can include or exclude](https://github.com/duskmoon-dev/duskmoon-ui/tree/master/packages/duskmoonui/src).
 
 
 ## prefix

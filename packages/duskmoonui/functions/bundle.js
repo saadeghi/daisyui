@@ -7,7 +7,7 @@ const FOOTER =
 await Promise.all([
   updateVersion(),
   Bun.build({
-    entrypoints: ["packages/daisyui/index.js"],
+    entrypoints: ["packages/duskmoonui/index.js"],
     outdir: "packages/bundle",
     naming: "duskmoonui.mjs",
     format: "esm",
@@ -15,7 +15,7 @@ await Promise.all([
     footer: FOOTER,
   }),
   Bun.build({
-    entrypoints: ["packages/daisyui/theme/index.js"],
+    entrypoints: ["packages/duskmoonui/theme/index.js"],
     outdir: "packages/bundle",
     naming: "duskmoonui-theme.mjs",
     format: "esm",
@@ -23,7 +23,7 @@ await Promise.all([
     footer: FOOTER,
   }),
   Bun.build({
-    entrypoints: ["packages/daisyui/index.js"],
+    entrypoints: ["packages/duskmoonui/index.js"],
     outdir: "packages/bundle",
     naming: "duskmoonui.js",
     format: "cjs",
@@ -31,7 +31,7 @@ await Promise.all([
     footer: FOOTER,
   }),
   Bun.build({
-    entrypoints: ["packages/daisyui/theme/index.js"],
+    entrypoints: ["packages/duskmoonui/theme/index.js"],
     outdir: "packages/bundle",
     naming: "duskmoonui-theme.js",
     format: "cjs",

@@ -13,7 +13,7 @@ on:
     branches:
       - master
     paths:
-      - "packages/daisyui/**"
+      - "packages/duskmoonui/**"
 
 jobs:
   run-tests:
@@ -53,13 +53,13 @@ jobs:
       - name: Run release command
         run: |
           # git add --all packages/bundle/
-          cd packages/daisyui
+          cd packages/duskmoonui
           bunx commit-and-tag-version --commit-all --infile ../../CHANGELOG.md ${{ inputs.release-type }}
 
       - name: Read package version from package.json
         id: package-version
         run: |
-          version=$(grep -o '"version": *"[^"]*"' packages/daisyui/package.json | cut -d'"' -f4)
+          version=$(grep -o '"version": *"[^"]*"' packages/duskmoonui/package.json | cut -d'"' -f4)
           echo version=$version >> $GITHUB_OUTPUT
 
       - name: Push changes
@@ -71,7 +71,7 @@ jobs:
         if: github.repository == 'duskmoon-dev/duskmoon-ui'
         run: |
           echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
-          cd packages/daisyui
+          cd packages/duskmoonui
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

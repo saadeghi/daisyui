@@ -276,7 +276,7 @@ npm i -D duskmoonui
 
 ```css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 To see more detailed instructions, check out the [duskmoonUI installation guide](https://duskmoonui.com/docs/install/).
