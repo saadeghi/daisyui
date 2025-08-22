@@ -1,5 +1,5 @@
 {
-  "name": "daisyui-monorepo",
+  "name": "duskmoon-ui-monorepo",
   "private": true,
   "packageManager": "bun@1.2.8",
   "workspaces": [

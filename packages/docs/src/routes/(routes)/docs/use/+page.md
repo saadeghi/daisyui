@@ -1,12 +1,12 @@
 ---
 title: Add component classes to your HTML
-desc: How to use daisyUI classes to style your page?
+desc: How to use duskmoonUI classes to style your page?
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
-<Translate text="Once you <a href='/docs/install/'>installed daisyUI</a>, you can use component classes like <code>btn</code>, <code>card</code>, etc." />
+<Translate text="Once you <a href='/docs/install/'>installed duskmoonUI</a>, you can use component classes like <code>btn</code>, <code>card</code>, etc." />
 
 So instead of making a button using only utility classes
 
@@ -27,7 +27,7 @@ You can just use a component class like this
 
 <button class="btn">Button</button>
 
-Then you can modify the component with daisyUI additional utility classes
+Then you can modify the component with duskmoonUI additional utility classes
 
 ```html
 <button class="btn btn-primary">Button</button>

@@ -1,6 +1,6 @@
 ---
-title: daisyUI 5 release notes
-desc: Everything about the new daisyUI 5 release
+title: duskmoonUI 5 release notes
+desc: Everything about the new duskmoonUI 5 release
 ---
 
 <script>
@@ -11,13 +11,13 @@ desc: Everything about the new daisyUI 5 release
 
 Welcome! 🎉
 
-daisyUI, the essential component library for Tailwind CSS is now being used in [360,000 open source projects](https://github.com/saadeghi/daisyui/network/dependents), with 19 million npm installs (350 thousand weekly installs). daisyUI is growing faster than before and today it's helping many people, startups and companies to create improve their development experience.
+duskmoonUI, the essential component library for Tailwind CSS is now being used in [360,000 open source projects](https://github.com/duskmoon-dev/duskmoon-ui/network/dependents), with 19 million npm installs (350 thousand weekly installs). duskmoonUI is growing faster than before and today it's helping many people, startups and companies to create improve their development experience.
 
-💚 daisyUI became possible thanks to your incredible contributions, helpful feedback, and amazing support. Thank you!
+💚 duskmoonUI became possible thanks to your incredible contributions, helpful feedback, and amazing support. Thank you!
 
-Since the release of daisyUI 4 in 2023, a lot of feedback, feature requests, and bug reports have been received. Big efforts went into preparing daisyUI for this major release, using the latest web standards and new CSS/HTML features, as well as all the amazing new Tailwind CSS 4 features.
+Since the release of duskmoonUI 4 in 2023, a lot of feedback, feature requests, and bug reports have been received. Big efforts went into preparing duskmoonUI for this major release, using the latest web standards and new CSS/HTML features, as well as all the amazing new Tailwind CSS 4 features.
 
-Here's daisyUI 5 with a lot of new features, improvements, and bug fixes. It's a huge update, I added TLDR for each section to make it easier to read.
+Here's duskmoonUI 5 with a lot of new features, improvements, and bug fixes. It's a huge update, I added TLDR for each section to make it easier to read.
 
 Let's begin!
 
@@ -40,15 +40,15 @@ Let's begin!
 12. [Breaking changes in config](#12-breaking-changes-in-config)
 13. [Breaking changes in themes](#13-breaking-changes-in-themes)
 14. [Bug fixes](#14-bug-fixes)
-15. [Get started with daisyUI 5](#15-get-started-with-daisyui-5)
+15. [Get started with duskmoonUI 5](#15-get-started-with-duskmoonui-5)
 
 </div>
 </details>
 
 ## Install
 
-- [daisyUI 5 install instructions](/docs/install/)
-- [daisyUI 4 to daisyUI 5 upgrade guide](/docs/upgrade/)
+- [duskmoonUI 5 install instructions](/docs/install/)
+- [duskmoonUI 4 to duskmoonUI 5 upgrade guide](/docs/upgrade/)
 - [Detailed changelog](/docs/changelog/)
 
 ---
@@ -57,16 +57,16 @@ Let's begin!
 
 > :TLDR:
 >
-> TLDR – daisyUI 5 is compatible with Tailwind CSS 4, has zero dependencies, a smaller package size, smaller CSS size, and is more customizable. CSS variables are now more readable and more flexible.  
+> TLDR – duskmoonUI 5 is compatible with Tailwind CSS 4, has zero dependencies, a smaller package size, smaller CSS size, and is more customizable. CSS variables are now more readable and more flexible.
 > [:FF: Skip to the next section](#2-build-and-integration-improvements)
 
 ### Tailwind CSS 4 compatibility
 
 Tailwind CSS 4 is crazy good! A lot of new features and improvements are added and also many changes to the plugin API.
 
-daisyUI 5 works with Tailwind CSS 4 and takes advantage of all the new features.
+duskmoonUI 5 works with Tailwind CSS 4 and takes advantage of all the new features.
 
-With Tailwind CSS 4, you can now import daisyUI as a plugin in the CSS file.
+With Tailwind CSS 4, you can now import duskmoonUI as a plugin in the CSS file.
 
 <div class="before-after">
 
@@ -75,7 +75,7 @@ With Tailwind CSS 4, you can now import daisyUI as a plugin in the CSS file.
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   plugins: [
-    require('daisyui');
+    require('duskmoonui');
   ],
 }
 ```
@@ -83,7 +83,7 @@ module.exports = {
 ```postcss:After
 /* app.css */
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 
 
 
@@ -99,10 +99,10 @@ See [Tailwind CSS upgrade guide](https://tailwindcss.com/docs/upgrade-guide) for
 
 Reducing the number of dependencies in your project is important for many reasons. It leads to faster build times and better performance in your workflow. Fewer dependencies also make your app more secure by reducing the chance of potential for vulnerabilities from less maintained packages. Also, managing a smaller dependency tree makes maintenance easier and reduces the chance of deprecation problems or version conflict in the long term.
 
-Last year I reduced the number of dependencies in daisyUI, from ~100 (dependencies + sub dependencies in total) to 7!
+Last year I reduced the number of dependencies in duskmoonUI, from ~100 (dependencies + sub dependencies in total) to 7!
 
 This time we got rid of all the remaining ones!  
-daisyUI 5 has no dependencies. Hopefully this helps to clean up your node_modules a little bit.
+duskmoonUI 5 has no dependencies. Hopefully this helps to clean up your node_modules a little bit.
 
 <div class="before-after">
 
@@ -131,13 +131,13 @@ No dependencies - 0 kB
 
 </div>
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/nature.webp" alt="daisyui-package">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/nature.webp" alt="duskmoonui-package">
 
 ### Smaller size
 
-With daisyUI as a Tailwind CSS plugin, only the needed styles are included in the final CSS file. Other than that we have made a lot of optimizations to make both package size and CSS file size smaller.
+With duskmoonUI as a Tailwind CSS plugin, only the needed styles are included in the final CSS file. Other than that we have made a lot of optimizations to make both package size and CSS file size smaller.
 
-daisyUI 5 NPM package is 61% smaller in size.
+duskmoonUI 5 NPM package is 61% smaller in size.
 
 <dl class="before-after">
   <dt>Before</dt>
@@ -158,7 +158,7 @@ daisyUI 5 NPM package is 61% smaller in size.
   </dd>
 </dl>
 
-daisyUI 5 CDN file, including all possible class names, is 75% smaller in size
+duskmoonUI 5 CDN file, including all possible class names, is 75% smaller in size
 
 <dl class="before-after">
   <dt>Before</dt>
@@ -172,24 +172,24 @@ daisyUI 5 CDN file, including all possible class names, is 75% smaller in size
   <dt>After</dt>
   <dd>
     <div>
-      daisyui.css – 34 kB compressed
+      duskmoonui.css – 34 kB compressed
       <br/>
       <progress class="progress progress-success" value="34" max="145"></progress>
     </div>
   </dd>
 </dl>
 
-It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5. This is the smallest size ever for the daisyUI CDN file, including all the possible daisyUI components and colors, available for all Tailwind CSS responsive prefixes. This is a CSS file, minified, compressed and cached on CDN.
+It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in duskmoonUI 5. This is the smallest size ever for the duskmoonUI CDN file, including all the possible duskmoonUI components and colors, available for all Tailwind CSS responsive prefixes. This is a CSS file, minified, compressed and cached on CDN.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-cdn-size.webp" alt="daisyui 5 cdn size">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-5-cdn-size.webp" alt="duskmoonui 5 cdn size">
 
 ### Improved color variables
 
-With Tailwind CSS 3 and daisyUI 4, we had to extract the color values of each color into CSS variables, and pass it to Tailwind CSS alongside a special `<alpha-value>` variable so Tailwind CSS could generate opacity variables for each color utility class.
+With Tailwind CSS 3 and duskmoonUI 4, we had to extract the color values of each color into CSS variables, and pass it to Tailwind CSS alongside a special `<alpha-value>` variable so Tailwind CSS could generate opacity variables for each color utility class.
 
 Tailwind CSS 4 doesn't have this limitation because it uses CSS `color-mix()` to control the opacity.
 
-With daisyUI 5 we can finally put the whole color inside CSS variables. All color formats are supported, no transformation is needed no JS object is needed.
+With duskmoonUI 5 we can finally put the whole color inside CSS variables. All color formats are supported, no transformation is needed no JS object is needed.
 
 We also updated the variable names to be more readable in the output CSS, which means you can even customize the color values using the browser dev tools color picker.
 
@@ -253,7 +253,7 @@ We also updated the variable names to be more readable in the output CSS, which 
 - [theme docs](/docs/themes/)
 - [color docs](/docs/colors/)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/edit-daisyui-tailwindcss-colors-in-devtools.webp" alt="edit daisyui tailwindcss colors in devtools">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/edit-duskmoonui-tailwindcss-colors-in-devtools.webp" alt="edit duskmoonui tailwindcss colors in devtools">
 
 ## 2. Build and integration improvements
 
@@ -267,21 +267,21 @@ We also updated the variable names to be more readable in the output CSS, which 
 
 ### Native CSS nesting
 
-CSS nesting is now supported on all browsers. daisyUI 5 uses CSS nesting which prevents duplication of CSS rules and results smaller CSS size in your browser!
+CSS nesting is now supported on all browsers. duskmoonUI 5 uses CSS nesting which prevents duplication of CSS rules and results smaller CSS size in your browser!
 
 ### ESM compatibility
 
-daisyUI 5 is now ESM (ECMAScript Module) compatible. Which means you can import and use specific parts of the library in JS if you need to.
+duskmoonUI 5 is now ESM (ECMAScript Module) compatible. Which means you can import and use specific parts of the library in JS if you need to.
 
 ### Dependency-free class name prefixing
 
-daisyUI 5 can now prefix class names without a dependency.
+duskmoonUI 5 can now prefix class names without a dependency.
 
 ### Micro CSS files for No-Build projects
 
-For server-side rendered projects (Rails, Django, PHP, etc) or projects that don't have a JS build step (HTMX, Alpine.js, WordPress, etc), it's now possible to use specific parts of daisyUI without including the entire library or even without Tailwind CSS.
+For server-side rendered projects (Rails, Django, PHP, etc) or projects that don't have a JS build step (HTMX, Alpine.js, WordPress, etc), it's now possible to use specific parts of duskmoonUI without including the entire library or even without Tailwind CSS.
 
-For example if you only want to use daisyUI toggle component, include a tiny CSS file that only contains the styles for the toggle component:
+For example if you only want to use duskmoonUI toggle component, include a tiny CSS file that only contains the styles for the toggle component:
 
 <div class="before-after">
 
@@ -290,22 +290,22 @@ Not possible
 ```
 
 ```:After
-https://cdn.jsdelivr.net/npm/daisyui@5/components/toggle.css
+https://cdn.jsdelivr.net/npm/duskmoonui@5/components/toggle.css
 ```
 
 </div>
 
-All components, all themes, and basically every single part of daisyUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/daisyui@5/chunks.css).
+All components, all themes, and basically every single part of duskmoonUI library [is now available as compressed. minified CSS files on CDN](https://cdn.jsdelivr.net/npm/duskmoonui@5/chunks.css).
 
-Also, with the 75% smaller daisyui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in daisyUI 5.
+Also, with the 75% smaller duskmoonui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in duskmoonUI 5.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/cdn-micro-css-files.webp" alt="Tailwind CSS component library daisyui CDN file">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/cdn-micro-css-files.webp" alt="Tailwind CSS component library duskmoonui CDN file">
 
 Check out the [CDN docs](/docs/cdn/) to customize the parts of the library you want to include in your project from the CDN.
 
 ### Include and Exclude parts of the library
 
-Now for the first time, it's possible to include/exclude specific parts of daisyUI library. For example if you only want to use the "Toggle" component, you can include only the "Toggle" component and exclude everything else!
+Now for the first time, it's possible to include/exclude specific parts of duskmoonUI library. For example if you only want to use the "Toggle" component, you can include only the "Toggle" component and exclude everything else!
 
 <div class="before-after">
 
@@ -317,7 +317,7 @@ Not possible
 ```
 
 ```postcss:After
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   include: toggle;
 }
 ```
@@ -334,7 +334,7 @@ Not possible
 ```
 
 ```postcss:After
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   exclude: scrollbar;
 }
 ```
@@ -351,11 +351,11 @@ Not possible
 > Color format flexibility.  
 > [:FF: Skip to the next section](#4-themes-and-styling)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-theme-generator-effects.webp" alt="daisyui 5 noise effect and depth effect">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-theme-generator-effects.webp" alt="duskmoonui 5 noise effect and depth effect">
 
 ### New "Effect" CSS variables
 
-daisyUI 5 introduces a new set of effects that can be enabled or disabled globally or per theme. These effects change the look and feel of relevant components, like buttons, checkbox, toggle, etc.
+duskmoonUI 5 introduces a new set of effects that can be enabled or disabled globally or per theme. These effects change the look and feel of relevant components, like buttons, checkbox, toggle, etc.
 
 Currently, the following effects are available:
 
@@ -368,13 +368,13 @@ These effects can be enabled or disabled using a CSS variable. Check out the new
 
 All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now also support a new `xl` size modifier. This gives you more control over the size of components and allows you to create more flexible and responsive designs.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="daisyui tailwind xl button">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/xl-button.webp" alt="duskmoonui tailwind xl button">
 
 ### Size scale improvements
 
 With the addition of the new `xl` size modifier, the size scale of components has been adjusted to make it consistent. The new size scale is more harmonious and visually appealing.
 
-In daisyUI 4, the size difference between sizes was not following a consistent scale.  
+In duskmoonUI 4, the size difference between sizes was not following a consistent scale.
 The new default size scale is consistent and more visually appealing ...and it's customizable!
 
 | Button height scale | Before                                        | After                                           |
@@ -393,7 +393,7 @@ The new default size scale is consistent and more visually appealing ...and it's
 | `lg`                  | <span class="text-error">8</span> × 4 = 32px | <span class="text-success">7</span> × 4 = 28px |
 | `xl`                  | -                                            | <span class="text-success">8</span> × 4 = 32px |
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/numbers-not-numbering.webp" alt="Numbers not Numbering">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/numbers-not-numbering.webp" alt="Numbers not Numbering">
 
 ### Size scale customization
 
@@ -413,7 +413,7 @@ Border size of buttons, inputs, tab, et are now customizable globally or per the
 
 See how it works in the new [Theme Generator](/theme-generator/) page.
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-soft-button-dash-button.webp" alt="daisyui 5 soft button and dash button">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-soft-button-dash-button.webp" alt="duskmoonui 5 soft button and dash button">
 
 ### New component styles: "soft" and "dash"
 
@@ -422,19 +422,19 @@ Components like `button`, `badge`, `alert` now have `soft` and `dash` styles.
 
 ### All modifier classes are now responsive
 
-daisyUI 5 makes all modifiers responsive by default. This means you can use responsive modifiers like `md:`, `lg:`, etc. with all component modifier classes, not just a selected few.
+duskmoonUI 5 makes all modifiers responsive by default. This means you can use responsive modifiers like `md:`, `lg:`, etc. with all component modifier classes, not just a selected few.
 
 ### Color format flexibility
 
-daisyUI 5 supports all color formats and doesn't convert your colors to a specific format.
+duskmoonUI 5 supports all color formats and doesn't convert your colors to a specific format.
 
 Before Tailwind CSS 4, color values of utility classes had to be generated at build time so the only way to have CSS variables for colors and being able to use Tailwind CSS opacity modifiers was to use a specific color format and pass it tailwind to generate the opacity variables.  
 Tailwind CSS 4 now uses CSS variables for colors and `color-mix()` to control the opacity. This means we can use any color format we want and no transformation is needed.  
-daisyUI built-in themes still use OKLCH color format and I would recommend using OKLCH for custom themes too, but you can use any color format you want and neither daisyUI nor Tailwind CSS will convert it to another format at build time.
+duskmoonUI built-in themes still use OKLCH color format and I would recommend using OKLCH for custom themes too, but you can use any color format you want and neither duskmoonUI nor Tailwind CSS will convert it to another format at build time.
 
 ## 4. Themes and styling
 
-Themes and colors are what makes your website unique. We've made significant improvements to the themes and colors in daisyUI 5, including new themes, improved existing themes, and a new Theme Generator to help you create your own custom themes.
+Themes and colors are what makes your website unique. We've made significant improvements to the themes and colors in duskmoonUI 5, including new themes, improved existing themes, and a new Theme Generator to help you create your own custom themes.
 
 > :TLDR:
 >
@@ -442,11 +442,11 @@ Themes and colors are what makes your website unique. We've made significant imp
 > New Theme Generator to create custom themes.  
 > [:FF: Skip to the next section](#5-new-components)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5-new-themes.webp" alt="daisyui 5 new tailwind css themes">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-5-new-themes.webp" alt="duskmoonui 5 new tailwind css themes">
 
 ### New themes
 
-daisyUI 5 includes 3 new themes:
+duskmoonUI 5 includes 3 new themes:
 
 - `caramellatte` – Warm, cozy, light theme featuring brown and beige
 - `abyss` – Deep dark green, teal and phosphorus color palette
@@ -454,19 +454,19 @@ daisyUI 5 includes 3 new themes:
 
 ### Existing themes improvements
 
-Most daisyUI themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
+Most duskmoonUI themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/new-theme-generator.webp" alt="tailwind css color generator">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/new-theme-generator.webp" alt="tailwind css color generator">
 
 ### All-new Theme Generator
 
-Check out the new [Theme Generator](/theme-generator/) page to create your own custom theme. Create, customize or extend themes, or generate stunning new themes using the new daisyUI color palette generator algorithm.
+Check out the new [Theme Generator](/theme-generator/) page to create your own custom theme. Create, customize or extend themes, or generate stunning new themes using the new duskmoonUI color palette generator algorithm.
 
-[<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/tailwind-css-daisyui-theme-generator.webp" alt="tailwind css daisyui theme generator">](/theme-generator/)
+[<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/tailwind-css-duskmoonui-theme-generator.webp" alt="tailwind css duskmoonui theme generator">](/theme-generator/)
 
 ## 5. New components
 
-daisyUI 5 introduces new components to help you build websites faster.
+duskmoonUI 5 introduces new components to help you build websites faster.
 
 > :TLDR:
 >
@@ -479,7 +479,7 @@ List is is useful for vertical layout to display information in rows. Imagine a 
 
 See [List component docs](/components/list/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/list.webp" alt="daisyui tailwind list">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/list.webp" alt="duskmoonui tailwind list">
 
 ### Status
 
@@ -489,7 +489,7 @@ Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
 See [Status component docs](/components/status/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/status.webp" alt="daisyui tailwind status">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/status.webp" alt="duskmoonui tailwind status">
 
 ### Fieldset
 
@@ -497,7 +497,7 @@ Fieldset is a container for grouping related form elements. It includes fieldset
 
 See [Fieldset component docs](/components/fieldset/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/fieldset.webp" alt="daisyui tailwind fieldset">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/fieldset.webp" alt="duskmoonui tailwind fieldset">
 
 ### Label
 
@@ -505,7 +505,7 @@ Label provides a name or title for an input field. Label can be placed before or
 
 See [Label component docs](/components/label/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/label.webp" alt="daisyui tailwind label">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/label.webp" alt="duskmoonui tailwind label">
 
 ### Filter
 
@@ -513,12 +513,12 @@ Filter is a group of radio buttons. Choosing one of the options will hide the ot
 
 See [Filter component docs](/components/filter/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/filter.webp" alt="daisyui tailwind filter">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/filter.webp" alt="duskmoonui tailwind filter">
 
 ### Calendar
 
-daisyUI 5 provides all the necessary styles for 3 popular calendar/datepicker libraries: Cally, Pikaday, and React Day Picker.  
-This means you can use any of these libraries the style will be compatible with daisyUI colors and styles.
+duskmoonUI 5 provides all the necessary styles for 3 popular calendar/datepicker libraries: Cally, Pikaday, and React Day Picker.
+This means you can use any of these libraries the style will be compatible with duskmoonUI colors and styles.
 
 - Cally is a web component calendar datepicker and it works everywhere
 - Pikaday is a simple and easy-to-use JS datepicker and it works everywhere
@@ -526,7 +526,7 @@ This means you can use any of these libraries the style will be compatible with 
 
 See [Calendar component docs](/components/calendar/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/calendar.webp" alt="daisyui tailwind calendar">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/calendar.webp" alt="duskmoonui tailwind calendar">
 
 ### Validator
 
@@ -534,7 +534,7 @@ Validator class changes the color of form elements to `error` or `success` based
 
 See [Validator component docs](/components/validator/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/validator.webp" alt="daisyui tailwind validator">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/validator.webp" alt="duskmoonui tailwind validator">
 
 ### Dock
 
@@ -546,11 +546,11 @@ Compatible with safe-area-inset-bottom on mobile devices.
 
 See [Dock component docs](/components/dock/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/dock.webp" alt="daisyui tailwind dock">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/dock.webp" alt="duskmoonui tailwind dock">
 
 ## 6. Major component improvements
 
-These components had significant improvements in daisyUI 5, including new modifiers, new features, and better customization options.
+These components had significant improvements in duskmoonUI 5, including new modifiers, new features, and better customization options.
 
 > :TLDR:
 >
@@ -606,14 +606,14 @@ These components have been improved to be more visually appealing:
 
 <figure class="diff aspect-[1600/650] border-2 border-gray-200 rounded-box" data-theme="dark" tabindex="0">
   <div class="diff-item-1" role="img">
-    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-4-tailwindcss-components.webp" alt="daisyUI 4"/>
+    <img class="m-0!" src="https://img.duskmoonui.com/images/blog/duskmoonui-4-tailwindcss-components.webp" alt="duskmoonUI 4"/>
   </div>
   <div class="diff-item-2" role="img" tabindex="0">
-    <img class="m-0!" src="https://img.daisyui.com/images/blog/daisyui-5-tailwindcss-components.webp" alt="daisyUI 5"/>
+    <img class="m-0!" src="https://img.duskmoonui.com/images/blog/duskmoonui-5-tailwindcss-components.webp" alt="duskmoonUI 5"/>
   </div>
   <div class="diff-resizer"></div>
 </figure>
-<div class="grid [direction:ltr] grid-cols-2 place-items-center tracking-widest text-xs"><span class="text-base-content/40">daisyUI 4</span><span class="text-base-content">daisyUI 5</span></div>
+<div class="grid [direction:ltr] grid-cols-2 place-items-center tracking-widest text-xs"><span class="text-base-content/40">duskmoonUI 4</span><span class="text-base-content">duskmoonUI 5</span></div>
 
 ## 8. Component size scale improvements
 
@@ -651,7 +651,7 @@ Size scale of these components has been improved to be more consistent:
 - **[Tab](/components/tab/)**
 - **[Loading](/components/loading/)**
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-changelog.webp" alt="daisyui changelog">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-changelog.webp" alt="duskmoonui changelog">
 
 ## 9. Detailed Changelog
 
@@ -709,7 +709,7 @@ Summary of changes:
 
 [Read the detailed changelog for each component](/docs/changelog/)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="tailwind css daisyui xl button">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/xl-button.webp" alt="tailwind css duskmoonui xl button">
 
 ## 11. Breaking changes in design system
 
@@ -734,15 +734,15 @@ Check out the new [Theme Generator](/theme-generator/) page to see it in action.
 > The new config format is easier to use, it's more flexible, and it's more powerful.  
 > [:FF: Skip to the next section](#13-breaking-changes-in-themes)
 
-- Tailwind CSS 4 allows config directly from the CSS file, so instead of `tailwind.config.js` you need to put the daisyUI config in the CSS file. [See the new config format](/docs/config/).
-- `themes` config is a comma separated list of theme names. Read more about [daisyUI config](/docs/config/) and [daisyUI themes](/docs/themes/).
+- Tailwind CSS 4 allows config directly from the CSS file, so instead of `tailwind.config.js` you need to put the duskmoonUI config in the CSS file. [See the new config format](/docs/config/).
+- `themes` config is a comma separated list of theme names. Read more about [duskmoonUI config](/docs/config/) and [duskmoonUI themes](/docs/themes/).
 - `darkTheme` config was removed. Instead you can use `--prefersdark` flag directly in the `themes` list.
 - `themeRoot` config was renamed to `root`.
 - `styled: false` config was removed in favor of providing micro CSS files and the ability to include/exclude parts of the library. Disabling themes will remove all colors, but component are no longer distributed into two chunk of unstyled styled. You can now include/exclude each component individually.
 - `base: false` config was removed in favor of include/exclude config where you can include/exclude each component individually.
 - `utils: false` config was removed in favor of include/exclude config where you can include/exclude each component individually.
 
-Read more about [daisyUI config](/docs/config/).
+Read more about [duskmoonUI config](/docs/config/).
 
 ## 13. Breaking changes in themes
 
@@ -751,10 +751,10 @@ Read more about [daisyUI config](/docs/config/).
 > TLDR – Automatic `*-content` color calculation is removed. Theme variable names have changed for better consistency and readability. Previous themes are available for easy migration.  
 > [:FF: Skip to the next section](#14-bug-fixes)
 
-Automatic `*-content` color calculation based on background color was removed. Now that Tailwind CSS supports CSS variables for colors, we no longer process and convert color values at build time. You can use any color format you want and neither daisyUI nor Tailwind CSS will convert it to another format at build time.
+Automatic `*-content` color calculation based on background color was removed. Now that Tailwind CSS supports CSS variables for colors, we no longer process and convert color values at build time. You can use any color format you want and neither duskmoonUI nor Tailwind CSS will convert it to another format at build time.
 
 Most themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.  
-If you prefer using the previous colors, I [prepared a repo, including all daisyUI 4 theme colors](https://github.com/daisyui/v4-themes-for-v5/) easy to copy/paste in daisyUI 5.
+If you prefer using the previous colors, I [prepared a repo, including all duskmoonUI 4 theme colors](https://github.com/duskmoonui/v4-themes-for-v5/) easy to copy/paste in duskmoonUI 5.
 
 All color variable names have been changed to be aligned with new Tailwind CSS 4 syntax. And to be more readable and easier to customize [See the new color format](#improved-color-variables)
 
@@ -796,9 +796,9 @@ All color variable names have been changed to be aligned with new Tailwind CSS 4
 Cyberpunk and Wireframe themes no longer have custom font by default. If you want the same v4 font for them, customize these themes like:
 
 ```postcss
-@plugin "daisyui";
+@plugin "duskmoonui";
 
-@plugin "daisyui/theme" {
+@plugin "duskmoonui/theme" {
   name: cyberpunk;
   font-family:
     ui-monospace,
@@ -811,7 +811,7 @@ Cyberpunk and Wireframe themes no longer have custom font by default. If you wan
     monospace;
 }
 
-@plugin "daisyui/theme" {
+@plugin "duskmoonui/theme" {
   name: wireframe;
   font-family:
     Chalkboard,
@@ -824,8 +824,8 @@ Cyberpunk and Wireframe themes no longer have custom font by default. If you wan
 
 > :TLDR:
 >
-> TLDR – More than 95% of all the open issues from daisyUI 4 have been fixed in this release.  
-> [:FF: Skip to the next section](#15-get-started-with-daisyui-5)
+> TLDR – More than 95% of all the open issues from duskmoonUI 4 have been fixed in this release.
+> [:FF: Skip to the next section](#15-get-started-with-duskmoonui-5)
 
 Some of these bugs were fixed automatically by the new changes in changes in the core library, design system, themes, and components. Some of them became possible with the new capabilities of Tailwind CSS 4.
 
@@ -833,164 +833,164 @@ And some of these bugs were related to a specific structure / style / behavior o
 
 If you've been waiting for a specific bug fix, here are the bugs that have been fixed in this release. Let me know if I miss any bug or let me know if a bug is closed by mistake 💚
 
-- [#3558: bug: (v5) label style not applying properly when using responsive breakpoints](https://github.com/saadeghi/daisyui/issues/#3558)
-- [#3556: bug: Responsive tooltip appearance](https://github.com/saadeghi/daisyui/issues/#3556)
-- [#3551: bug: Color utility classes missing from v5 CDN](https://github.com/saadeghi/daisyui/issues/#3551)
-- [#3547: bug: placeholder ignored when using floating labels](https://github.com/saadeghi/daisyui/issues/#3547)
-- [#3544: bug: Radius not working when using the prefix](https://github.com/saadeghi/daisyui/issues/#3544)
-- [#3542: docs: Duplicate classes](https://github.com/saadeghi/daisyui/issues/#3542)
-- [#3531: bug: List component has alternating columns grow with list-col-grow](https://github.com/saadeghi/daisyui/issues/#3531)
-- [#3530: docs: Some examples uses class= instead of clasName= in JSX](https://github.com/saadeghi/daisyui/issues/#3530)
-- [#3529: bug: Some examples uses class= instead of clasName= in JSX](https://github.com/saadeghi/daisyui/issues/#3529)
-- [#3527: docs: v5 theme generator on invalid color input breaks site](https://github.com/saadeghi/daisyui/issues/#3527)
-- [#3524: bug: css-syntax-error DaisyUI 5.0.0-beta.8 Error when minifying CSS, results in malformed styles / Vite build errors. NUXT/Vite](https://github.com/saadeghi/daisyui/issues/#3524)
-- [#3520: bug: (v5) Cally date picker - month switcher icons are the incorrect colour when used as popover](https://github.com/saadeghi/daisyui/issues/#3520)
-- [#3519: bug: (v5) Date, time, and datetime inputs aren't styled correctly in Safari](https://github.com/saadeghi/daisyui/issues/#3519)
-- [#3518: docs: (v5) Navbar component misspell class keyword on JSX snippet ](https://github.com/saadeghi/daisyui/issues/#3518)
-- [#3517: bug: Inconsistent padding for .card-md](https://github.com/saadeghi/daisyui/issues/#3517)
-- [#3508: bug: Responsive join always vertical (with CDN usage)](https://github.com/saadeghi/daisyui/issues/#3508)
-- [#3482: bug: v5 with a prefix does not override tailwind typography correctly](https://github.com/saadeghi/daisyui/issues/#3482)
-- [#3473: bug: (v5) File input doesn't have a background by default while plain input does](https://github.com/saadeghi/daisyui/issues/#3473)
-- [#3472: bug: nuxt + daisyui / build = WARN vite:css postcss Parse error on line 1: --radius-selector) + var(--radius-selector) + var(--radius-selector)))](https://github.com/saadeghi/daisyui/issues/#3472)
-- [#3468: bug: (v5) react-day-picker unusable inside a dropdown](https://github.com/saadeghi/daisyui/issues/#3468)
-- [#3453: bug: vite warnings when minifying css](https://github.com/saadeghi/daisyui/issues/#3453)
-- [#3451: bug: filter component not hiding other radio button choices](https://github.com/saadeghi/daisyui/issues/#3451)
-- [#3443: bug: (v5) accordion focus doesn't work](https://github.com/saadeghi/daisyui/issues/#3443)
-- [#3440: bug: V5 Dialog does not put focus on first focusable element](https://github.com/saadeghi/daisyui/issues/#3440)
-- [#3433: bug: .list-row specificity is too high](https://github.com/saadeghi/daisyui/issues/#3433)
-- [#3432: bug: Tables with one row have unnecessary underline](https://github.com/saadeghi/daisyui/issues/#3432)
-- [#3430: bug: v5 beta3 CDN Styling issues](https://github.com/saadeghi/daisyui/issues/#3430)
-- [#3427: docs: Error alerts have a css typo](https://github.com/saadeghi/daisyui/issues/#3427)
-- [#3421: bug: dividers have a default margin-inline that can't be overridden](https://github.com/saadeghi/daisyui/issues/#3421)
-- [#3418: docs: Typo on https://v5.daisyui.com/components/stack/ page](https://github.com/saadeghi/daisyui/issues/#3418)
-- [#3417: docs: (v5) `<svg>` className error](https://github.com/saadeghi/daisyui/issues/#3417)
-- [#3394: bug: V5 Floating label + validator causes placeholder text to be off centered](https://github.com/saadeghi/daisyui/issues/#3394)
-- [#3391: bug: V5 Options in select elements with a label do not respect dark mode](https://github.com/saadeghi/daisyui/issues/#3391)
-- [#3389: bug: V5 (via CDN) Colors modifier for Chat bubble not working](https://github.com/saadeghi/daisyui/issues/#3389)
-- [#3383: bug: V5 Dock Component / The active large size overlaps the line.](https://github.com/saadeghi/daisyui/issues/#3383)
-- [#3382: bug: Dropdown does not close in an intuitive way](https://github.com/saadeghi/daisyui/issues/#3382)
-- [#3381: bug: V5 - Using a Floating Label with a disabled input looks weird.](https://github.com/saadeghi/daisyui/issues/#3381)
-- [#3375: bug: v5 hover:swap-active produces unwanted behavior ](https://github.com/saadeghi/daisyui/issues/#3375)
-- [#3360: bug: The label for the select element is not displayed in a single line but is instead stacked in a multi-language environment.](https://github.com/saadeghi/daisyui/issues/#3360)
-- [#3348: docs: tsx code for method 2 (popover api) of dropdown](https://github.com/saadeghi/daisyui/issues/3348)
-- [#3346: bug: Tooltip does not shown under overflow](https://github.com/saadeghi/daisyui/issues/3346)
-- [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/saadeghi/daisyui/issues/3332)
-- [#3328: bug: setting width to an `<input>` element doesn't shrink the `<input>` element](https://github.com/saadeghi/daisyui/issues/3328)
-- [#3325: bug: TS type declaration missing for themes/object](https://github.com/saadeghi/daisyui/issues/3325)
-- [#3322: bug: V5 Dropdown mispositioning using popover API and anchorpositioning](https://github.com/saadeghi/daisyui/issues/3322)
-- [#3320: bug: V5-alpha48 toggle misplaced in Firefox](https://github.com/saadeghi/daisyui/issues/3320)
-- [#3318: bug: Timeline Spacing](https://github.com/saadeghi/daisyui/issues/3318)
-- [#3316: bug: V5 glass does not work](https://github.com/saadeghi/daisyui/issues/3316)
-- [#3315: bug: Tab (legacy) visual pop when radio inputs are unchecked](https://github.com/saadeghi/daisyui/issues/3315)
-- [#3313: docs: DaisyUI v5 default theme](https://github.com/saadeghi/daisyui/issues/3313)
-- [#3312: docs: DaisyUI V5 themes color extraction](https://github.com/saadeghi/daisyui/issues/3312)
-- [#3308: bug: Rating unchecked displays all as checked](https://github.com/saadeghi/daisyui/issues/3308)
-- [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox](https://github.com/saadeghi/daisyui/issues/3294)
-- [#3287: docs: JSX Example Code of Select Causing Warning in React](https://github.com/saadeghi/daisyui/issues/3287)
-- [#3285: bug: the background of btn-disabled (or disabled btn) should be transparent if combined with btn-ghost](https://github.com/saadeghi/daisyui/issues/3285)
-- [#3281: bug: (v5): Select: does not wrap content with h-fit](https://github.com/saadeghi/daisyui/issues/3281)
-- [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color](https://github.com/saadeghi/daisyui/issues/3280)
-- [#3276: bug: dropdown-hover do not work on laptops with a touchscreen](https://github.com/saadeghi/daisyui/issues/3276)
-- [#3272: bug: themes that change the default font conflicts with the ones that does not.](https://github.com/saadeghi/daisyui/issues/3272)
-- [#3250: bug: tailwindcss neutral color compatibility with theme()](https://github.com/saadeghi/daisyui/issues/3250)
-- [#3245: bug: DaisyUI 5 doesn't override @tailwindcss/typography style of `<code>` element, leading to unreadable text.](https://github.com/saadeghi/daisyui/issues/3245)
-- [#3242: bug: DaisyUI 5: select is not wide enough, resulting in the select arrow overlapping with content](https://github.com/saadeghi/daisyui/issues/3242)
-- [#3232: bug: Some elements depend on using backgrounds, which break for print media](https://github.com/saadeghi/daisyui/issues/3232)
-- [#3231: bug: Diff component not working in Astro, Nextjs](https://github.com/saadeghi/daisyui/issues/3231)
-- [#3224: bug: mb-\* override by timeline-compact when used with timeline-start but not timeline-end](https://github.com/saadeghi/daisyui/issues/3224)
-- [#3222: bug: invisible toast area blocks buttons](https://github.com/saadeghi/daisyui/issues/3222)
-- [#3218: bug: 'join-vertical md:join-horizontal' failed to set horizontal style border on nest join-item](https://github.com/saadeghi/daisyui/issues/3218)
-- [#3216: bug: btn btn-link btn-disabled looks like button but not link](https://github.com/saadeghi/daisyui/issues/3216)
-- [#3215: bug: Vertical scroll not functional when drawer is open on screens under 1024px width](https://github.com/saadeghi/daisyui/issues/3215)
-- [#3203: bug: Browser mockup component's search icon is broken in Safari](https://github.com/saadeghi/daisyui/issues/3203)
-- [#3202: bug: Non-animated buttons behave strangely when active in Firefox](https://github.com/saadeghi/daisyui/issues/3202)
-- [#3188: bug: menu item modifier not works with selector](https://github.com/saadeghi/daisyui/issues/3188)
-- [#3176: bug: range in rtl mode show wrong bar](https://github.com/saadeghi/daisyui/issues/3176)
-- [#3170: bug: Invalid CSS generated when child of an element with the "btm-nav" class has the "active" class that...](https://github.com/saadeghi/daisyui/issues/3170)
-- [#3169: docs: position Drawer component seem not working](https://github.com/saadeghi/daisyui/issues/3169)
-- [#3267: bug: Carousel not working properly in chrome](https://github.com/saadeghi/daisyui/issues/3267)
-- [#3166: bug: scrollbar-color causing unnecessary repaints](https://github.com/saadeghi/daisyui/issues/3166)
-- [#3160: docs: Navigation does not work due to call to navigator.sendBeacon()](https://github.com/saadeghi/daisyui/issues/3160)
-- [#3157: bug: Chat bubble visibly split with white line](https://github.com/saadeghi/daisyui/issues/3157)
-- [#3155: docs: Modal that closes when clicked outside](https://github.com/saadeghi/daisyui/issues/3155)
-- [#3153: Weird behaviour when buttons include HTML elements (seen when adding the v3/4 loading spinner spans)](https://github.com/saadeghi/daisyui/issues/3153)
-- [#3148: bug: Diff component not working on Firefox.](https://github.com/saadeghi/daisyui/issues/3148)
-- [#3141: bug: dropdown breaks in tables with overflow applied](https://github.com/saadeghi/daisyui/issues/3141)
-- [#3128: bug: collapse with arrow or plus crashes edge](https://github.com/saadeghi/daisyui/issues/3128)
-- [#3117: bug: Media breakpoint doesn't seem to apply with menu-horizontal](https://github.com/saadeghi/daisyui/issues/3117)
-- [#3116: bug: Nesting Collapse in Dropdown menu results in unintended Dropdown behaviour](https://github.com/saadeghi/daisyui/issues/3116)
-- [#3078: bug: tabpanel on the _real_ device does not fill full width.](https://github.com/saadeghi/daisyui/issues/3078)
-- [#3071: bug: White area overlays part of the drawer's content](https://github.com/saadeghi/daisyui/issues/3071)
-- [#3060: bug: stepper (active step) z-index is higher then of the drawer](https://github.com/saadeghi/daisyui/issues/3060)
-- [#3053: bug: Lagging on the opening animation of collapse components only on Firefox](https://github.com/saadeghi/daisyui/issues/3053)
-- [#3040: bug: Modal Dialog Adds A None Existent Scrollbar Spacing To Backdrop](https://github.com/saadeghi/daisyui/issues/3040)
-- [#3027: bug: tabs boxed with radio forces unrounded bottom corners](https://github.com/saadeghi/daisyui/issues/3027)
-- [#2988: bug: Tabs using grid-span: 9999](https://github.com/saadeghi/daisyui/issues/2988)
-- [#2987: bug: The theme color is incorrect in yarn serve mode after Docusaurus is built](https://github.com/saadeghi/daisyui/issues/2987)
-- [#2979: bug: menu-horizontal submenus styled differently when using menu-dropdown vs details](https://github.com/saadeghi/daisyui/issues/2979)
-- [#2975: bug: btn doesn't accept --fallback tokens as first option.](https://github.com/saadeghi/daisyui/issues/2975)
-- [#2965: bug: The .collapse-content and .collapse-title extend beyond the width of the .collapse elementi itself](https://github.com/saadeghi/daisyui/issues/2965)
-- [#2950: docs: Inaccessible components / wrong advice on docs.](https://github.com/saadeghi/daisyui/issues/2950)
-- [#2867: bug: Sidebar-drawer component overlay does not overlay table pinned rows](https://github.com/saadeghi/daisyui/issues/2867)
-- [#2865: bug: Disabled inputs and buttons have inconsistent styling](https://github.com/saadeghi/daisyui/issues/2865)
-- [#2862: bug: long string in menu does not wrap in safari (with temp solution)](https://github.com/saadeghi/daisyui/issues/2862)
-- [#2850: bug: Broken transition on collapse when using Firefox (macOS)](https://github.com/saadeghi/daisyui/issues/2850)
-- [#2833: bug: diff adjusting doesn't work on Firefox for Android](https://github.com/saadeghi/daisyui/issues/2833)
-- [#2802: bug: table has relative position causing issues](https://github.com/saadeghi/daisyui/issues/2802)
-- [#2800: bug: Long tab names are squished](https://github.com/saadeghi/daisyui/issues/2800)
-- [#2796: bug: custom background color of button at file input](https://github.com/saadeghi/daisyui/issues/2796)
-- [#2735: bug: Tab content width on Safari](https://github.com/saadeghi/daisyui/issues/2735)
-- [#2734: bug: CDN installation does not recognize submit button](https://github.com/saadeghi/daisyui/issues/2734)
-- [#2725: bug: Collapse with icon, Arrow is jumping but plus/minus icon seems ok](https://github.com/saadeghi/daisyui/issues/2725)
-- [#2689: bug: Hover styles are not working on Firefox (Windows & Android)](https://github.com/saadeghi/daisyui/issues/2689)
-- [#2684: bug: diff dragging does not keep up with mouse, !chrome](https://github.com/saadeghi/daisyui/issues/2684)
-- [#2678: bug: Tab text wrap with large content](https://github.com/saadeghi/daisyui/issues/2678)
-- [#2669: bug: "Important" setting from tailwind is not followed](https://github.com/saadeghi/daisyui/issues/2669)
-- [#2667: bug: Modal with responsive on small screen with animation jitter](https://github.com/saadeghi/daisyui/issues/2667)
-- [#2653: bug: Wrong inferred type when importing daisyUI](https://github.com/saadeghi/daisyui/issues/2653)
-- [#2643: bug: Tab in boxed mode source their colors on --p/--pc instead of --tab-bg/--tab-border-color](https://github.com/saadeghi/daisyui/issues/2643)
-- [#2637: bug: navbar do not get invisible in firefox](https://github.com/saadeghi/daisyui/issues/2637)
-- [#2626: bug: Submenu Display is not correct on Firefox and Safari](https://github.com/saadeghi/daisyui/issues/2626)
-- [#2619: bug: Skeleton not visible enough under dark themes](https://github.com/saadeghi/daisyui/issues/2619)
-- [#2615: bug: Accordion not animating height](https://github.com/saadeghi/daisyui/issues/2615)
-- [#2605: bug: Non join-item sibling affects last join-item](https://github.com/saadeghi/daisyui/issues/2605)
-- [#2597: docs: Theme Generator ignore theme](https://github.com/saadeghi/daisyui/issues/2597)
-- [#2571: bug: Dropdown affects height while hidden](https://github.com/saadeghi/daisyui/issues/2571)
-- [#2570: bug: Loading spinner on Safari](https://github.com/saadeghi/daisyui/issues/2570)
-- [#2564: bug: accordions and collapses don't open in safari 15.1](https://github.com/saadeghi/daisyui/issues/2564)
-- [#2502: bug: Dialog-type modals dont fade in the background tint.](https://github.com/saadeghi/daisyui/issues/2502)
-- [#2442: bug: Carousel buttons not functioning](https://github.com/saadeghi/daisyui/issues/2442)
-- [#2415: bug: columns overlap on pinned column with rowspan, & only the first and last `<th>` tags get pinned](https://github.com/saadeghi/daisyui/issues/2415)
-- [#2413: bug: Joins cannot be nested](https://github.com/saadeghi/daisyui/issues/2413)
-- [#2410: bug: wrong chat bubble spacing in Safari when inside a column flex box](https://github.com/saadeghi/daisyui/issues/2410)
-- [#2375: bug: Bottom navigation scroll problem in chorme (IOS)](https://github.com/saadeghi/daisyui/issues/2375)
-- [#2296: bug: multiple dialog crashes the page](https://github.com/saadeghi/daisyui/issues/2296)
-- [#2223: bug: `<dialog>` element items are focusable, even when `<dialog>` element is closed](https://github.com/saadeghi/daisyui/issues/2223)
-- [#2172: bug: Accordion crashes using checkboxes inside collapse-content](https://github.com/saadeghi/daisyui/issues/2172)
-- [#2137: bug: Accordion. Content is jumping down and up](https://github.com/saadeghi/daisyui/issues/2137)
-- [#2115: bug: Dropdown inside join is not rounded](https://github.com/saadeghi/daisyui/issues/2115)
-- [#1929: bug: v3 Join Buttons overlap when clicked](https://github.com/saadeghi/daisyui/issues/1929)
-- [#1922: bug: option with 'disabled' and 'selected' attributes have a weird behavior on Chromium-based browser](https://github.com/saadeghi/daisyui/issues/1922)
-- [#1831: bug: gap in tooltip arrow](https://github.com/saadeghi/daisyui/issues/1831)
-- [#1744: bug: Aliasing issues for Radial progress](https://github.com/saadeghi/daisyui/issues/1744)
-- [#1732: bug: Bad placement of the buttons in the bottom-navigation in iOS PWA mode](https://github.com/saadeghi/daisyui/issues/1732)
-- [#1672: bug: All component's CSS ends up in build output?](https://github.com/saadeghi/daisyui/issues/1672)
-- [#865: Docs Reset theme generator values respectively](https://github.com/saadeghi/daisyui/issues/865)
-- [#694: Bug: Website theme generator keeps text formatting on paste documentation](https://github.com/saadeghi/daisyui/issues/694)
+- [#3558: bug: (v5) label style not applying properly when using responsive breakpoints](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3558)
+- [#3556: bug: Responsive tooltip appearance](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3556)
+- [#3551: bug: Color utility classes missing from v5 CDN](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3551)
+- [#3547: bug: placeholder ignored when using floating labels](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3547)
+- [#3544: bug: Radius not working when using the prefix](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3544)
+- [#3542: docs: Duplicate classes](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3542)
+- [#3531: bug: List component has alternating columns grow with list-col-grow](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3531)
+- [#3530: docs: Some examples uses class= instead of clasName= in JSX](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3530)
+- [#3529: bug: Some examples uses class= instead of clasName= in JSX](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3529)
+- [#3527: docs: v5 theme generator on invalid color input breaks site](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3527)
+- [#3524: bug: css-syntax-error DaisyUI 5.0.0-beta.8 Error when minifying CSS, results in malformed styles / Vite build errors. NUXT/Vite](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3524)
+- [#3520: bug: (v5) Cally date picker - month switcher icons are the incorrect colour when used as popover](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3520)
+- [#3519: bug: (v5) Date, time, and datetime inputs aren't styled correctly in Safari](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3519)
+- [#3518: docs: (v5) Navbar component misspell class keyword on JSX snippet ](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3518)
+- [#3517: bug: Inconsistent padding for .card-md](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3517)
+- [#3508: bug: Responsive join always vertical (with CDN usage)](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3508)
+- [#3482: bug: v5 with a prefix does not override tailwind typography correctly](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3482)
+- [#3473: bug: (v5) File input doesn't have a background by default while plain input does](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3473)
+- [#3472: bug: nuxt + duskmoonui / build = WARN vite:css postcss Parse error on line 1: --radius-selector) + var(--radius-selector) + var(--radius-selector)))](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3472)
+- [#3468: bug: (v5) react-day-picker unusable inside a dropdown](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3468)
+- [#3453: bug: vite warnings when minifying css](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3453)
+- [#3451: bug: filter component not hiding other radio button choices](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3451)
+- [#3443: bug: (v5) accordion focus doesn't work](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3443)
+- [#3440: bug: V5 Dialog does not put focus on first focusable element](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3440)
+- [#3433: bug: .list-row specificity is too high](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3433)
+- [#3432: bug: Tables with one row have unnecessary underline](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3432)
+- [#3430: bug: v5 beta3 CDN Styling issues](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3430)
+- [#3427: docs: Error alerts have a css typo](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3427)
+- [#3421: bug: dividers have a default margin-inline that can't be overridden](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3421)
+- [#3418: docs: Typo on https://v5.duskmoonui.com/components/stack/ page](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3418)
+- [#3417: docs: (v5) `<svg>` className error](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3417)
+- [#3394: bug: V5 Floating label + validator causes placeholder text to be off centered](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3394)
+- [#3391: bug: V5 Options in select elements with a label do not respect dark mode](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3391)
+- [#3389: bug: V5 (via CDN) Colors modifier for Chat bubble not working](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3389)
+- [#3383: bug: V5 Dock Component / The active large size overlaps the line.](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3383)
+- [#3382: bug: Dropdown does not close in an intuitive way](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3382)
+- [#3381: bug: V5 - Using a Floating Label with a disabled input looks weird.](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3381)
+- [#3375: bug: v5 hover:swap-active produces unwanted behavior ](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3375)
+- [#3360: bug: The label for the select element is not displayed in a single line but is instead stacked in a multi-language environment.](https://github.com/duskmoon-dev/duskmoon-ui/issues/#3360)
+- [#3348: docs: tsx code for method 2 (popover api) of dropdown](https://github.com/duskmoon-dev/duskmoon-ui/issues/3348)
+- [#3346: bug: Tooltip does not shown under overflow](https://github.com/duskmoon-dev/duskmoon-ui/issues/3346)
+- [#3332: bug: v5 Label with select has non-working drop down arrow](https://github.com/duskmoon-dev/duskmoon-ui/issues/3332)
+- [#3328: bug: setting width to an `<input>` element doesn't shrink the `<input>` element](https://github.com/duskmoon-dev/duskmoon-ui/issues/3328)
+- [#3325: bug: TS type declaration missing for themes/object](https://github.com/duskmoon-dev/duskmoon-ui/issues/3325)
+- [#3322: bug: V5 Dropdown mispositioning using popover API and anchorpositioning](https://github.com/duskmoon-dev/duskmoon-ui/issues/3322)
+- [#3320: bug: V5-alpha48 toggle misplaced in Firefox](https://github.com/duskmoon-dev/duskmoon-ui/issues/3320)
+- [#3318: bug: Timeline Spacing](https://github.com/duskmoon-dev/duskmoon-ui/issues/3318)
+- [#3316: bug: V5 glass does not work](https://github.com/duskmoon-dev/duskmoon-ui/issues/3316)
+- [#3315: bug: Tab (legacy) visual pop when radio inputs are unchecked](https://github.com/duskmoon-dev/duskmoon-ui/issues/3315)
+- [#3313: docs: DaisyUI v5 default theme](https://github.com/duskmoon-dev/duskmoon-ui/issues/3313)
+- [#3312: docs: DaisyUI V5 themes color extraction](https://github.com/duskmoon-dev/duskmoon-ui/issues/3312)
+- [#3308: bug: Rating unchecked displays all as checked](https://github.com/duskmoon-dev/duskmoon-ui/issues/3308)
+- [#3294: bug: (v5) dropdown displayed in viewport top left corner in Firefox](https://github.com/duskmoon-dev/duskmoon-ui/issues/3294)
+- [#3287: docs: JSX Example Code of Select Causing Warning in React](https://github.com/duskmoon-dev/duskmoon-ui/issues/3287)
+- [#3285: bug: the background of btn-disabled (or disabled btn) should be transparent if combined with btn-ghost](https://github.com/duskmoon-dev/duskmoon-ui/issues/3285)
+- [#3281: bug: (v5): Select: does not wrap content with h-fit](https://github.com/duskmoon-dev/duskmoon-ui/issues/3281)
+- [#3280: bug: (v5) Button: btn-ghost does not allow combine with text color](https://github.com/duskmoon-dev/duskmoon-ui/issues/3280)
+- [#3276: bug: dropdown-hover do not work on laptops with a touchscreen](https://github.com/duskmoon-dev/duskmoon-ui/issues/3276)
+- [#3272: bug: themes that change the default font conflicts with the ones that does not.](https://github.com/duskmoon-dev/duskmoon-ui/issues/3272)
+- [#3250: bug: tailwindcss neutral color compatibility with theme()](https://github.com/duskmoon-dev/duskmoon-ui/issues/3250)
+- [#3245: bug: DaisyUI 5 doesn't override @tailwindcss/typography style of `<code>` element, leading to unreadable text.](https://github.com/duskmoon-dev/duskmoon-ui/issues/3245)
+- [#3242: bug: DaisyUI 5: select is not wide enough, resulting in the select arrow overlapping with content](https://github.com/duskmoon-dev/duskmoon-ui/issues/3242)
+- [#3232: bug: Some elements depend on using backgrounds, which break for print media](https://github.com/duskmoon-dev/duskmoon-ui/issues/3232)
+- [#3231: bug: Diff component not working in Astro, Nextjs](https://github.com/duskmoon-dev/duskmoon-ui/issues/3231)
+- [#3224: bug: mb-\* override by timeline-compact when used with timeline-start but not timeline-end](https://github.com/duskmoon-dev/duskmoon-ui/issues/3224)
+- [#3222: bug: invisible toast area blocks buttons](https://github.com/duskmoon-dev/duskmoon-ui/issues/3222)
+- [#3218: bug: 'join-vertical md:join-horizontal' failed to set horizontal style border on nest join-item](https://github.com/duskmoon-dev/duskmoon-ui/issues/3218)
+- [#3216: bug: btn btn-link btn-disabled looks like button but not link](https://github.com/duskmoon-dev/duskmoon-ui/issues/3216)
+- [#3215: bug: Vertical scroll not functional when drawer is open on screens under 1024px width](https://github.com/duskmoon-dev/duskmoon-ui/issues/3215)
+- [#3203: bug: Browser mockup component's search icon is broken in Safari](https://github.com/duskmoon-dev/duskmoon-ui/issues/3203)
+- [#3202: bug: Non-animated buttons behave strangely when active in Firefox](https://github.com/duskmoon-dev/duskmoon-ui/issues/3202)
+- [#3188: bug: menu item modifier not works with selector](https://github.com/duskmoon-dev/duskmoon-ui/issues/3188)
+- [#3176: bug: range in rtl mode show wrong bar](https://github.com/duskmoon-dev/duskmoon-ui/issues/3176)
+- [#3170: bug: Invalid CSS generated when child of an element with the "btm-nav" class has the "active" class that...](https://github.com/duskmoon-dev/duskmoon-ui/issues/3170)
+- [#3169: docs: position Drawer component seem not working](https://github.com/duskmoon-dev/duskmoon-ui/issues/3169)
+- [#3267: bug: Carousel not working properly in chrome](https://github.com/duskmoon-dev/duskmoon-ui/issues/3267)
+- [#3166: bug: scrollbar-color causing unnecessary repaints](https://github.com/duskmoon-dev/duskmoon-ui/issues/3166)
+- [#3160: docs: Navigation does not work due to call to navigator.sendBeacon()](https://github.com/duskmoon-dev/duskmoon-ui/issues/3160)
+- [#3157: bug: Chat bubble visibly split with white line](https://github.com/duskmoon-dev/duskmoon-ui/issues/3157)
+- [#3155: docs: Modal that closes when clicked outside](https://github.com/duskmoon-dev/duskmoon-ui/issues/3155)
+- [#3153: Weird behaviour when buttons include HTML elements (seen when adding the v3/4 loading spinner spans)](https://github.com/duskmoon-dev/duskmoon-ui/issues/3153)
+- [#3148: bug: Diff component not working on Firefox.](https://github.com/duskmoon-dev/duskmoon-ui/issues/3148)
+- [#3141: bug: dropdown breaks in tables with overflow applied](https://github.com/duskmoon-dev/duskmoon-ui/issues/3141)
+- [#3128: bug: collapse with arrow or plus crashes edge](https://github.com/duskmoon-dev/duskmoon-ui/issues/3128)
+- [#3117: bug: Media breakpoint doesn't seem to apply with menu-horizontal](https://github.com/duskmoon-dev/duskmoon-ui/issues/3117)
+- [#3116: bug: Nesting Collapse in Dropdown menu results in unintended Dropdown behaviour](https://github.com/duskmoon-dev/duskmoon-ui/issues/3116)
+- [#3078: bug: tabpanel on the _real_ device does not fill full width.](https://github.com/duskmoon-dev/duskmoon-ui/issues/3078)
+- [#3071: bug: White area overlays part of the drawer's content](https://github.com/duskmoon-dev/duskmoon-ui/issues/3071)
+- [#3060: bug: stepper (active step) z-index is higher then of the drawer](https://github.com/duskmoon-dev/duskmoon-ui/issues/3060)
+- [#3053: bug: Lagging on the opening animation of collapse components only on Firefox](https://github.com/duskmoon-dev/duskmoon-ui/issues/3053)
+- [#3040: bug: Modal Dialog Adds A None Existent Scrollbar Spacing To Backdrop](https://github.com/duskmoon-dev/duskmoon-ui/issues/3040)
+- [#3027: bug: tabs boxed with radio forces unrounded bottom corners](https://github.com/duskmoon-dev/duskmoon-ui/issues/3027)
+- [#2988: bug: Tabs using grid-span: 9999](https://github.com/duskmoon-dev/duskmoon-ui/issues/2988)
+- [#2987: bug: The theme color is incorrect in yarn serve mode after Docusaurus is built](https://github.com/duskmoon-dev/duskmoon-ui/issues/2987)
+- [#2979: bug: menu-horizontal submenus styled differently when using menu-dropdown vs details](https://github.com/duskmoon-dev/duskmoon-ui/issues/2979)
+- [#2975: bug: btn doesn't accept --fallback tokens as first option.](https://github.com/duskmoon-dev/duskmoon-ui/issues/2975)
+- [#2965: bug: The .collapse-content and .collapse-title extend beyond the width of the .collapse elementi itself](https://github.com/duskmoon-dev/duskmoon-ui/issues/2965)
+- [#2950: docs: Inaccessible components / wrong advice on docs.](https://github.com/duskmoon-dev/duskmoon-ui/issues/2950)
+- [#2867: bug: Sidebar-drawer component overlay does not overlay table pinned rows](https://github.com/duskmoon-dev/duskmoon-ui/issues/2867)
+- [#2865: bug: Disabled inputs and buttons have inconsistent styling](https://github.com/duskmoon-dev/duskmoon-ui/issues/2865)
+- [#2862: bug: long string in menu does not wrap in safari (with temp solution)](https://github.com/duskmoon-dev/duskmoon-ui/issues/2862)
+- [#2850: bug: Broken transition on collapse when using Firefox (macOS)](https://github.com/duskmoon-dev/duskmoon-ui/issues/2850)
+- [#2833: bug: diff adjusting doesn't work on Firefox for Android](https://github.com/duskmoon-dev/duskmoon-ui/issues/2833)
+- [#2802: bug: table has relative position causing issues](https://github.com/duskmoon-dev/duskmoon-ui/issues/2802)
+- [#2800: bug: Long tab names are squished](https://github.com/duskmoon-dev/duskmoon-ui/issues/2800)
+- [#2796: bug: custom background color of button at file input](https://github.com/duskmoon-dev/duskmoon-ui/issues/2796)
+- [#2735: bug: Tab content width on Safari](https://github.com/duskmoon-dev/duskmoon-ui/issues/2735)
+- [#2734: bug: CDN installation does not recognize submit button](https://github.com/duskmoon-dev/duskmoon-ui/issues/2734)
+- [#2725: bug: Collapse with icon, Arrow is jumping but plus/minus icon seems ok](https://github.com/duskmoon-dev/duskmoon-ui/issues/2725)
+- [#2689: bug: Hover styles are not working on Firefox (Windows & Android)](https://github.com/duskmoon-dev/duskmoon-ui/issues/2689)
+- [#2684: bug: diff dragging does not keep up with mouse, !chrome](https://github.com/duskmoon-dev/duskmoon-ui/issues/2684)
+- [#2678: bug: Tab text wrap with large content](https://github.com/duskmoon-dev/duskmoon-ui/issues/2678)
+- [#2669: bug: "Important" setting from tailwind is not followed](https://github.com/duskmoon-dev/duskmoon-ui/issues/2669)
+- [#2667: bug: Modal with responsive on small screen with animation jitter](https://github.com/duskmoon-dev/duskmoon-ui/issues/2667)
+- [#2653: bug: Wrong inferred type when importing duskmoonUI](https://github.com/duskmoon-dev/duskmoon-ui/issues/2653)
+- [#2643: bug: Tab in boxed mode source their colors on --p/--pc instead of --tab-bg/--tab-border-color](https://github.com/duskmoon-dev/duskmoon-ui/issues/2643)
+- [#2637: bug: navbar do not get invisible in firefox](https://github.com/duskmoon-dev/duskmoon-ui/issues/2637)
+- [#2626: bug: Submenu Display is not correct on Firefox and Safari](https://github.com/duskmoon-dev/duskmoon-ui/issues/2626)
+- [#2619: bug: Skeleton not visible enough under dark themes](https://github.com/duskmoon-dev/duskmoon-ui/issues/2619)
+- [#2615: bug: Accordion not animating height](https://github.com/duskmoon-dev/duskmoon-ui/issues/2615)
+- [#2605: bug: Non join-item sibling affects last join-item](https://github.com/duskmoon-dev/duskmoon-ui/issues/2605)
+- [#2597: docs: Theme Generator ignore theme](https://github.com/duskmoon-dev/duskmoon-ui/issues/2597)
+- [#2571: bug: Dropdown affects height while hidden](https://github.com/duskmoon-dev/duskmoon-ui/issues/2571)
+- [#2570: bug: Loading spinner on Safari](https://github.com/duskmoon-dev/duskmoon-ui/issues/2570)
+- [#2564: bug: accordions and collapses don't open in safari 15.1](https://github.com/duskmoon-dev/duskmoon-ui/issues/2564)
+- [#2502: bug: Dialog-type modals dont fade in the background tint.](https://github.com/duskmoon-dev/duskmoon-ui/issues/2502)
+- [#2442: bug: Carousel buttons not functioning](https://github.com/duskmoon-dev/duskmoon-ui/issues/2442)
+- [#2415: bug: columns overlap on pinned column with rowspan, & only the first and last `<th>` tags get pinned](https://github.com/duskmoon-dev/duskmoon-ui/issues/2415)
+- [#2413: bug: Joins cannot be nested](https://github.com/duskmoon-dev/duskmoon-ui/issues/2413)
+- [#2410: bug: wrong chat bubble spacing in Safari when inside a column flex box](https://github.com/duskmoon-dev/duskmoon-ui/issues/2410)
+- [#2375: bug: Bottom navigation scroll problem in chorme (IOS)](https://github.com/duskmoon-dev/duskmoon-ui/issues/2375)
+- [#2296: bug: multiple dialog crashes the page](https://github.com/duskmoon-dev/duskmoon-ui/issues/2296)
+- [#2223: bug: `<dialog>` element items are focusable, even when `<dialog>` element is closed](https://github.com/duskmoon-dev/duskmoon-ui/issues/2223)
+- [#2172: bug: Accordion crashes using checkboxes inside collapse-content](https://github.com/duskmoon-dev/duskmoon-ui/issues/2172)
+- [#2137: bug: Accordion. Content is jumping down and up](https://github.com/duskmoon-dev/duskmoon-ui/issues/2137)
+- [#2115: bug: Dropdown inside join is not rounded](https://github.com/duskmoon-dev/duskmoon-ui/issues/2115)
+- [#1929: bug: v3 Join Buttons overlap when clicked](https://github.com/duskmoon-dev/duskmoon-ui/issues/1929)
+- [#1922: bug: option with 'disabled' and 'selected' attributes have a weird behavior on Chromium-based browser](https://github.com/duskmoon-dev/duskmoon-ui/issues/1922)
+- [#1831: bug: gap in tooltip arrow](https://github.com/duskmoon-dev/duskmoon-ui/issues/1831)
+- [#1744: bug: Aliasing issues for Radial progress](https://github.com/duskmoon-dev/duskmoon-ui/issues/1744)
+- [#1732: bug: Bad placement of the buttons in the bottom-navigation in iOS PWA mode](https://github.com/duskmoon-dev/duskmoon-ui/issues/1732)
+- [#1672: bug: All component's CSS ends up in build output?](https://github.com/duskmoon-dev/duskmoon-ui/issues/1672)
+- [#865: Docs Reset theme generator values respectively](https://github.com/duskmoon-dev/duskmoon-ui/issues/865)
+- [#694: Bug: Website theme generator keeps text formatting on paste documentation](https://github.com/duskmoon-dev/duskmoon-ui/issues/694)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/fixed-everything.webp" alt="tailwind css">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/fixed-everything.webp" alt="tailwind css">
 
-Please report any new bugs you find to [GitHub issues](https://github.com/saadeghi/daisyui/issues) 🙏
+Please report any new bugs you find to [GitHub issues](https://github.com/duskmoon-dev/duskmoon-ui/issues) 🙏
 
-## 15. Get started with daisyUI 5
+## 15. Get started with duskmoonUI 5
 
 [⤴️ Go back to the top](#)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/daisyui-5.webp" alt="tailwind css components">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-5.webp" alt="tailwind css components">
 
 1 - [Tailwind CSS 4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)  
-2 - [daisyUI 5 upgrade guide](https://daisyui.com/docs/upgrade/)
+2 - [duskmoonUI 5 upgrade guide](https://duskmoonui.com/docs/upgrade/)
 
-If you found any issue, report on the [GitHub issues page](https://github.com/saadeghi/daisyui/issues) so we can fix them.
+If you found any issue, report on the [GitHub issues page](https://github.com/duskmoon-dev/duskmoon-ui/issues) so we can fix them.
 
-Join us at [daisyUI Discord server](https://daisyui.com/discord/) to get the news and updates about the final release or talk about daisyUI with other developers.
+Join us at [duskmoonUI Discord server](https://duskmoonui.com/discord/) to get the news and updates about the final release or talk about duskmoonUI with other developers.

@@ -1,6 +1,6 @@
 ---
 title: Astro component library
-desc: daisyUI is the best Tailwind CSS component library for Astro projects
+desc: duskmoonUI is the best Tailwind CSS component library for Astro projects
 layout: contentLanding
 ---
 
@@ -13,7 +13,7 @@ layout: contentLanding
 <div class="mx-auto not-prose max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
 <div class="max-w-96 items-center w-full grid grid-cols-2 gap-6 lg:gap-12 [&>svg]:w-full [&>svg]:h-auto mx-auto">
 {@html data.frameworksData.find(item => item.name === "Astro")?.logo}
-<img class="w-full h-auto" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="Best Astro component library" />
+<img class="w-full h-auto" src="https://img.duskmoonui.com/images/duskmoonui/mark-static.svg" alt="Best Astro component library" />
 </div>
 </div>
 
@@ -27,17 +27,17 @@ The framework's "Islands Architecture" is particularly brilliant. Instead of hyd
 
 This approach results in dramatically faster websites, better core web vitals scores, and improved user experience, especially on mobile devices or slower connections.
 
-## Astro + daisyUI
+## Astro + duskmoonUI
 
-As someone who's built several production sites with Astro, I can confirm that daisyUI is an exceptional Tailwind CSS component library for Astro projects.
+As someone who's built several production sites with Astro, I can confirm that duskmoonUI is an exceptional Tailwind CSS component library for Astro projects.
 
 Here's why this combination works so well:
 
-- **Performance synergy**: daisyUI's zero-JavaScript approach perfectly complements Astro's mission to ship minimal JavaScript to browsers, resulting in lightning-fast websites.
+- **Performance synergy**: duskmoonUI's zero-JavaScript approach perfectly complements Astro's mission to ship minimal JavaScript to browsers, resulting in lightning-fast websites.
 
-- **Framework agnostic**: Just like Astro lets you mix components from different frameworks, daisyUI provides consistent styling across all of them with simple class names.
+- **Framework agnostic**: Just like Astro lets you mix components from different frameworks, duskmoonUI provides consistent styling across all of them with simple class names.
 
-- **Content-focused design**: daisyUI's clean, minimal component designs align beautifully with Astro's content-first philosophy.
+- **Content-focused design**: duskmoonUI's clean, minimal component designs align beautifully with Astro's content-first philosophy.
 
 - **Flexible theming**: The library's 35+ built-in themes and customization options through CSS variables integrate seamlessly with Astro's build process.
 
@@ -47,14 +47,14 @@ This powerful combination gives you the best of both worlds: beautiful, professi
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 
-## Install Tailwind CSS and daisyUI for Astro
+## Install Tailwind CSS and duskmoonUI for Astro
 
-Setting up daisyUI in your Astro project is refreshingly straightforward.
+Setting up duskmoonUI in your Astro project is refreshingly straightforward.
 
 First, create your Astro project using the Astro CLI if you haven't already. Astro has excellent built-in support for Tailwind CSS, making the next steps easy.
 
-Install Tailwind CSS following Astro's official documentation, then add daisyUI as a Tailwind plugin with just a few lines of configuration.
+Install Tailwind CSS following Astro's official documentation, then add duskmoonUI as a Tailwind plugin with just a few lines of configuration.
 
-Once set up, you can immediately start using daisyUI's component classes in both your Astro templates and any framework components you may be using, creating beautiful interfaces with minimal effort.
+Once set up, you can immediately start using duskmoonUI's component classes in both your Astro templates and any framework components you may be using, creating beautiful interfaces with minimal effort.
 
-For step-by-step installation instructions specifically for Astro projects, check out our detailed guide: [How to install daisyUI with Astro](/docs/install/astro/).
+For step-by-step installation instructions specifically for Astro projects, check out our detailed guide: [How to install duskmoonUI with Astro](/docs/install/astro/).

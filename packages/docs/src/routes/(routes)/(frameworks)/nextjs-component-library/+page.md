@@ -1,6 +1,6 @@
 ---
 title: Next.js component library
-desc: daisyUI is the best Tailwind CSS component library for Next.js projects
+desc: duskmoonUI is the best Tailwind CSS component library for Next.js projects
 layout: contentLanding
 ---
 
@@ -13,7 +13,7 @@ layout: contentLanding
 <div class="mx-auto not-prose max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
 <div class="max-w-96 items-center w-full grid grid-cols-2 gap-6 lg:gap-12 [&>svg]:w-full [&>svg]:h-auto mx-auto">
 {@html data.frameworksData.find(item => item.name === "Next.js")?.logo}
-<img class="w-full h-auto" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="Best Next.js component library" />
+<img class="w-full h-auto" src="https://img.duskmoonui.com/images/duskmoonui/mark-static.svg" alt="Best Next.js component library" />
 </div>
 </div>
 
@@ -27,15 +27,15 @@ What really sets Next.js apart is its flexibility with rendering methods. You ca
 
 For production applications, Next.js delivers with advanced features like image optimization, incremental static regeneration, and edge functions. These features ensure your sites are not only developer-friendly but also provide an exceptional user experience.
 
-## Next.js + daisyUI
+## Next.js + duskmoonUI
 
-As someone who builds Next.js applications daily, I can confidently say that daisyUI is the ideal Tailwind CSS component library for Next.js projects.
+As someone who builds Next.js applications daily, I can confidently say that duskmoonUI is the ideal Tailwind CSS component library for Next.js projects.
 
 Here's why this combination works so beautifully:
 
-- **Zero JavaScript overhead**: Since daisyUI is purely CSS-based, it adds absolutely no JavaScript to your Next.js bundle, keeping your applications lightning fast.
+- **Zero JavaScript overhead**: Since duskmoonUI is purely CSS-based, it adds absolutely no JavaScript to your Next.js bundle, keeping your applications lightning fast.
 
-- **Works with all rendering methods**: Whether you're using server components, client components, or static generation, daisyUI components render perfectly every time.
+- **Works with all rendering methods**: Whether you're using server components, client components, or static generation, duskmoonUI components render perfectly every time.
 
 - **Improved developer experience**: The semantic class names make your Next.js components more readable and maintainable compared to long chains of Tailwind utility classes.
 
@@ -47,14 +47,14 @@ This powerful combination results in faster development cycles and more performa
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 
-## Install Tailwind CSS and daisyUI for Next.js
+## Install Tailwind CSS and duskmoonUI for Next.js
 
-Getting started with daisyUI in your Next.js project couldn't be simpler.
+Getting started with duskmoonUI in your Next.js project couldn't be simpler.
 
 Start by creating a new Next.js application using `create-next-app`. Next.js has excellent built-in support for Tailwind CSS, making the integration process straightforward.
 
-Install Tailwind CSS and daisyUI as dependencies, add a few lines to your Tailwind configuration, and you're ready to go.
+Install Tailwind CSS and duskmoonUI as dependencies, add a few lines to your Tailwind configuration, and you're ready to go.
 
-You can immediately start using daisyUI's component classes in your Next.js pages and components to create beautiful, responsive interfaces.
+You can immediately start using duskmoonUI's component classes in your Next.js pages and components to create beautiful, responsive interfaces.
 
-For step-by-step installation instructions and best practices, check out our detailed guide: [How to install daisyUI with Next.js](/docs/install/nextjs/).
+For step-by-step installation instructions and best practices, check out our detailed guide: [How to install duskmoonUI with Next.js](/docs/install/nextjs/).

@@ -5,17 +5,17 @@
 </script>
 
 <SEO
-  title="daisyUI community videos"
+  title="duskmoonUI community videos"
   desc="Best Tailwind CSS video tutorials and Free Tailwind CSS video courses"
-  img="https://img.daisyui.com/images/resources.webp"
+  img="https://img.duskmoonui.com/images/resources.webp"
 />
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">
-    daisyUI community videos
+    duskmoonUI community videos
   </h1>
   <p class="text-base-content/60 text-xs italic">
-    If you have a YouTube video about daisyUI, <a
-      href="https://github.com/daisyui/api/blob/master/youtube_ids.json"
+    If you have a YouTube video about duskmoonUI, <a
+      href="https://github.com/duskmoonui/api/blob/master/youtube_ids.json"
       target="_blank"
       rel="noopener, noreferrer"
       class="link"

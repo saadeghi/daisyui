@@ -2,9 +2,9 @@ export const prerender = true
 
 import { load } from "../+layout.server.js"
 
-const siteTitle = "daisyUI Store"
-const siteDesc = "Professional templates made by daisyUI"
-const storeUrl = "https://daisyui.com/store/"
+const siteTitle = "duskmoonUI Store"
+const siteDesc = "Professional templates made by duskmoonUI"
+const storeUrl = "https://duskmoonui.com/store/"
 
 export const GET = async () => {
   const data = await load({})

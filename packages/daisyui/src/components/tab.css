@@ -435,7 +435,7 @@
   @apply bg-base-200 p-1;
   /*
     using --tabs-box-radius CSS variable to avoid Nuxt build issue
-    https://github.com/saadeghi/daisyui/issues/3724
+    https://github.com/duskmoon-dev/duskmoon-ui/issues/3724
   */
   --tabs-box-radius: calc(var(--radius-field) + var(--radius-field) + var(--radius-field));
   border-radius: calc(var(--radius-field) + min(0.25rem, var(--tabs-box-radius)));

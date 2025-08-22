@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Django
-desc: How to install Tailwind CSS and daisyUI in a Django project, without Node.js
+title: Install duskmoonUI for Django
+desc: How to install Tailwind CSS and duskmoonUI in a Django project, without Node.js
 ---
 
 <script>
@@ -37,7 +37,7 @@ Create a template file
     <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <button class="btn btn-primary">Hello daisyUI</button>
+    <button class="btn btn-primary">Hello duskmoonUI</button>
 </body>
 </html>
 ```
@@ -107,13 +107,13 @@ Make the file executable (For Linux and MacOS):
 chmod +x myapp/static/css/tailwindcss
 ```
 
-### 4. Get daisyUI bundled JS file
+### 4. Get duskmoonUI bundled JS file
 
-Run this code to download the latest version of daisyUI as a single js file. It puts the file at `myapp/static/css/` next to the Tailwind CSS executable.
+Run this code to download the latest version of duskmoonUI as a single js file. It puts the file at `myapp/static/css/` next to the Tailwind CSS executable.
 
 ```sh:Terminal
-curl -sLo myapp/static/css/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLo myapp/static/css/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLo myapp/static/css/duskmoonui.js https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui.js
+curl -sLo myapp/static/css/duskmoonui-theme.js https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui-theme.js
 ```
 
 ### 5. Create an input.css file
@@ -122,7 +122,7 @@ Create a file `myapp/static/css/input.css` and add the following code:
 
 ```css:myapp/static/css/input.css
 @import "tailwindcss" source(none);
-@plugin "./daisyui.js";
+@plugin "./duskmoonui.js";
 @source "../../templates";
 ```
 
@@ -145,4 +145,4 @@ Run the Django server on another terminal tab
 python manage.py runserver
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

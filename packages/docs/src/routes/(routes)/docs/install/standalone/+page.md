@@ -1,6 +1,6 @@
 ---
-title: Use daisyUI with Tailwind CSS Standalone CLI
-desc: How to run daisyUI with Tailwind CSS Standalone CLI without Node.js
+title: Use duskmoonUI with Tailwind CSS Standalone CLI
+desc: How to run duskmoonUI with Tailwind CSS Standalone CLI without Node.js
 ---
 
 <script>
@@ -36,27 +36,27 @@ Make the file executable (For Linux and MacOS):
 chmod +x tailwindcss
 ```
 
-### 2. Get daisyUI bundled JS file
+### 2. Get duskmoonUI bundled JS file
 
-Run this code to download latest version of daisyUI as a single js file and put it next to Tailwind's executable file.
+Run this code to download latest version of duskmoonUI as a single js file and put it next to Tailwind's executable file.
 
 ```sh:Terminal
-curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLO https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui.js
+curl -sLO https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui-theme.js
 ```
 
-### 3. Add Tailwind CSS and daisyUI
+### 3. Add Tailwind CSS and duskmoonUI
 
-Add Tailwind CSS and daisyUI to your CSS file.  
+Add Tailwind CSS and duskmoonUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
 
 ```postcss:input.css
 @import "tailwindcss" source(none);
 @source "./public/*.{html,php,erb}";
-@plugin "./daisyui.js";
+@plugin "./duskmoonui.js";
 
-/* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
-@plugin "./daisyui-theme.js"{
+/* Optional for custom themes – Docs: https://duskmoonui.com/docs/themes/#how-to-add-a-new-custom-theme */
+@plugin "./duskmoonui-theme.js"{
   /* custom theme here */
 }
 ```
@@ -73,4 +73,4 @@ For CI/CD, run the command without `--watch` to generate the output.css file onc
 tailwindcss.exe -i input.css -o output.css --watch
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

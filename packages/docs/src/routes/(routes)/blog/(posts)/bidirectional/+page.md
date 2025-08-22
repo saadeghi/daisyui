@@ -1,10 +1,10 @@
 ---
-title: How to make a bidirectional site using Tailwind CSS and daisyUI
-desc: Learn how to use CSS logical properties to make a bidirectional website using Tailwind CSS and daisyUI
+title: How to make a bidirectional site using Tailwind CSS and duskmoonUI
+desc: Learn how to use CSS logical properties to make a bidirectional website using Tailwind CSS and duskmoonUI
 published: true
 date: 2024-03-01
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/bidirectional.webp
+thumbnail: https://img.duskmoonui.com/images/blog/bidirectional.webp
 tags:
   - Guides
 ---
@@ -21,13 +21,13 @@ For years, making a bidirectional website was a pain. We had to make a LTR style
 
 To use CSS logical properties, you just need to replace directional properties with logical properties. For example, instead of using `margin-left`, you can use `margin-inline-start`. This way, the margin will be on the start side of the content, regardless of the direction of the content.
 
-## It's even easier with Tailwind CSS and daisyUI
+## It's even easier with Tailwind CSS and duskmoonUI
 
 [Tailwind CSS (3.3+) already supports CSS logical properties](https://tailwindcss.com/blog/tailwindcss-v3-3#simplified-rtl-support-with-logical-properties). This means that you can use logical properties in your Tailwind CSS classes.
 
-And [daisyUI 4](https://github.com/saadeghi/daisyui/discussions/2507) fully adapts to the logical properties and makes it even easier to make a bidirectional website.
+And [duskmoonUI 4](https://github.com/duskmoon-dev/duskmoon-ui/discussions/2507) fully adapts to the logical properties and makes it even easier to make a bidirectional website.
 
-All daisyUI components are now bidirectional by default. It means we don't use `left` or `right` anymore, we use `start` and `end` instead and it will automatically adapt to the direction of the content.
+All duskmoonUI components are now bidirectional by default. It means we don't use `left` or `right` anymore, we use `start` and `end` instead and it will automatically adapt to the direction of the content.
 
 ## Step 1
 
@@ -51,7 +51,7 @@ Add `dir=rtl` to the root element of your website for RTL languages. This will a
 
 ## Step 3
 
-That's it! Now whenever your website is RTL, all spacing and alignments will be automatically adjusted to the RTL direction. daisyUI components are bidirectional by default, so you don't need to do anything else.
+That's it! Now whenever your website is RTL, all spacing and alignments will be automatically adjusted to the RTL direction. duskmoonUI components are bidirectional by default, so you don't need to do anything else.
 
 ## Conclusion
 

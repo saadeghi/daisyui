@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for SvelteKit
-desc: How to install Tailwind CSS and daisyUI in a SvelteKit project
+title: Install duskmoonUI for SvelteKit
+desc: How to install Tailwind CSS and duskmoonUI in a SvelteKit project
 ---
 
 <script>
@@ -15,10 +15,10 @@ Create a new SvelteKit project in the current directory
 npx sv create ./
 ```
 
-### 2. Install Tailwind CSS and daisyUI
+### 2. Install Tailwind CSS and duskmoonUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+npm install tailwindcss@latest @tailwindcss/vite@latest duskmoonui@latest
 ```
 
 Add Tailwind CSS to Vite config
@@ -34,11 +34,11 @@ export default defineConfig({
 
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
   
 ```postcss:src/app.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 Import the CSS file in your Svelte page (or layout)
@@ -48,4 +48,4 @@ Import the CSS file in your Svelte page (or layout)
 </script>
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

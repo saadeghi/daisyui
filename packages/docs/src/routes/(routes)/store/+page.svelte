@@ -109,14 +109,14 @@
 </script>
 
 <SEO
-  title="Official daisyUI Store"
-  desc="daisyUI Store - Professional templates made by daisyUI"
-  img="https://img.daisyui.com/images/store.webp"
+  title="Official duskmoonUI Store"
+  desc="duskmoonUI Store - Professional templates made by duskmoonUI"
+  img="https://img.duskmoonui.com/images/store.webp"
 />
 <div class="mx-4 flex flex-col justify-between gap-6 lg:flex-row">
   <div class="flex flex-col gap-2">
-    <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">daisyUI store</h1>
-    <p class="text-base-content/60 text-sm">Official templates made by daisyUI</p>
+    <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">duskmoonUI store</h1>
+    <p class="text-base-content/60 text-sm">Official templates made by duskmoonUI</p>
   </div>
   <div class="flex flex-col gap-3">
     <div class="text-base-content/50 text-end text-xs">Filter by</div>
@@ -348,7 +348,7 @@
         class="flex flex-col"
       >
         <p class="text-base-content/70 mb-4 text-xs font-bold">
-          Subscribe to daisyUI newsletter to get the updates.
+          Subscribe to duskmoonUI newsletter to get the updates.
         </p>
         <div class="join mb-2">
           <input

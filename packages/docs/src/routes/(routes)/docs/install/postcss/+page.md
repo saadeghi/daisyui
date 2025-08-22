@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for PostCSS
-desc: How to install Tailwind CSS and daisyUI in PostCSS
+title: Install duskmoonUI for PostCSS
+desc: How to install Tailwind CSS and duskmoonUI in PostCSS
 ---
 
 <script>
@@ -11,13 +11,13 @@ desc: How to install Tailwind CSS and daisyUI in PostCSS
 
 Initialize a new Node project in the current directory using `npm init -y` if it's not a Node project already.
 
-Install PostCSS, Tailwind CSS, and daisyUI
+Install PostCSS, Tailwind CSS, and duskmoonUI
 
 ```sh:Terminal
-npm i postcss postcss-cli tailwindcss @tailwindcss/postcss daisyui@latest
+npm i postcss postcss-cli tailwindcss @tailwindcss/postcss duskmoonui@latest
 ```
 
-### 2. Add Tailwind CSS and daisyUI
+### 2. Add Tailwind CSS and duskmoonUI
 
 Create a postcss.config.mjs file and add Tailwind CSS to it
 
@@ -30,13 +30,13 @@ const config = {
 export default config;
 ```
 
-Add Tailwind CSS and daisyUI to your CSS file.  
+Add Tailwind CSS and duskmoonUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
   
 ```postcss:app.css
 @import "tailwindcss" source(none);
 @source "./public/*.{html,js}";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 ### 3. Build CSS
@@ -62,4 +62,4 @@ This command creates a `public/output.css` file with the compiled CSS. You can l
 <link href="./output.css" rel="stylesheet">
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

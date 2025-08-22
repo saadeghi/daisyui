@@ -1,6 +1,6 @@
 ---
-title: Install Tailwind CSS and daisyUI for Zola
-desc: How to install Tailwind CSS and daisyUI in a Zola project, without Node.js
+title: Install Tailwind CSS and duskmoonUI for Zola
+desc: How to install Tailwind CSS and duskmoonUI in a Zola project, without Node.js
 ---
 
 <script>
@@ -47,28 +47,28 @@ Make the file executable (For Linux and MacOS):
 chmod +x static/tailwindcss
 ```
 
-### 3. Get daisyUI bundled JS file
+### 3. Get duskmoonUI bundled JS file
 
-Run this code to download latest version of daisyUI as a single js file and put it next to Tailwind's executable file.
+Run this code to download latest version of duskmoonUI as a single js file and put it next to Tailwind's executable file.
 
 ```sh:Terminal
-curl -sLo static/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLo static/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLo static/duskmoonui.js https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui.js
+curl -sLo static/duskmoonui-theme.js https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui-theme.js
 ```
 
-### 4. Add Tailwind CSS and daisyUI
+### 4. Add Tailwind CSS and duskmoonUI
 
-Add Tailwind CSS and daisyUI to your CSS file.  
+Add Tailwind CSS and duskmoonUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
 
 ```postcss:input.css
 @import "tailwindcss" source(none);
 @source "../templates/*.{html,md}";
 @source "../content/*.{html,md}";
-@plugin "./daisyui.js";
+@plugin "./duskmoonui.js";
 
-/* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
-@plugin "./daisyui-theme.js"{
+/* Optional for custom themes – Docs: https://duskmoonui.com/docs/themes/#how-to-add-a-new-custom-theme */
+@plugin "./duskmoonui-theme.js"{
   /* custom theme here */
 }
 ```
@@ -93,4 +93,4 @@ Run the Zola server on another terminal tab
 zola serve
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

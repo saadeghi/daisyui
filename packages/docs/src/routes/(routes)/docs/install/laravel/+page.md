@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Laravel
-desc: How to install Tailwind CSS and daisyUI in a Laravel project
+title: Install duskmoonUI for Laravel
+desc: How to install Tailwind CSS and duskmoonUI in a Laravel project
 ---
 
 <script>
@@ -18,13 +18,13 @@ laravel new my-app
 cd my-app
 ```
 
-### 2. Install daisyUI
+### 2. Install duskmoonUI
 
 ```sh:Terminal
-npm i -D daisyui@latest
+npm i -D duskmoonui@latest
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
 
 ```css:resources/css/app.css
 @import "tailwindcss";
@@ -34,7 +34,7 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
 @source "../../storage/framework/views/*.php";
 
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 ### 3. Run your project
@@ -50,4 +50,4 @@ And on another terminal tab, run Vite
 npm run dev
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

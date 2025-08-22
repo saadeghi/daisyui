@@ -9,9 +9,9 @@
     const urlParams = new URLSearchParams(window.location.search)
     const productId = urlParams.get("product")
     const desc = urlParams.get("desc") === "0" ? "&desc=0" : ""
-    const baseUrl = `https://daisyui.lemonsqueezy.com/checkout/buy/${productId}`
+    const baseUrl = `https://duskmoonui.lemonsqueezy.com/checkout/buy/${productId}`
     window.lemonSqueezyAffiliateConfig = {
-      store: "daisyui",
+      store: "duskmoonui",
       onTrack: (e) => {
         window.location.href = `${baseUrl}?aff_ref=${e.click}${desc}`
       },

@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Elixir Phoenix
-desc: How to install Tailwind CSS and daisyUI in a Elixir Phoenix project
+title: Install duskmoonUI for Elixir Phoenix
+desc: How to install Tailwind CSS and duskmoonUI in a Elixir Phoenix project
 ---
 
 <script>
@@ -9,7 +9,7 @@ desc: How to install Tailwind CSS and daisyUI in a Elixir Phoenix project
 
 > :SUCCESS:
 > 
-> Elixir Phoenix `1.8.0-rc.0` and later comes with Tailwind CSS 4 and daisyUI 5 out of the box!
+> Elixir Phoenix `1.8.0-rc.0` and later comes with Tailwind CSS 4 and duskmoonUI 5 out of the box!
 
 ### 1. Create a new Phoenix project
 
@@ -31,4 +31,4 @@ Run your Phoenix project
 mix phx.server
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

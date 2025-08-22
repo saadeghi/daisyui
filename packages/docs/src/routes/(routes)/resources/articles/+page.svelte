@@ -4,18 +4,18 @@
 </script>
 
 <SEO
-  title="daisyUI community articles"
-  desc="Tailwind CSS articles and daisyUI tutorials"
-  img="https://img.daisyui.com/images/resources.webp"
+  title="duskmoonUI community articles"
+  desc="Tailwind CSS articles and duskmoonUI tutorials"
+  img="https://img.duskmoonui.com/images/resources.webp"
 />
 
 <div class="flex flex-col items-center gap-6">
   <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">
-    daisyUI community articles
+    duskmoonUI community articles
   </h1>
   <p class="text-base-content/60 text-xs italic">
-    If you have an article or blog post about daisyUI, <a
-      href="https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/lib/data/articles.js"
+    If you have an article or blog post about duskmoonUI, <a
+      href="https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/docs/src/lib/data/articles.js"
       target="_blank"
       rel="noopener, noreferrer"
       class="link"

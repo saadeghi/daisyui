@@ -1,6 +1,6 @@
 ---
-title: daisyUI 5 upgrade guide
-desc: This guide helps you how to update your project to Tailwind CSS 4 and daisyUI 5. 
+title: duskmoonUI 5 upgrade guide
+desc: This guide helps you how to update your project to Tailwind CSS 4 and duskmoonUI 5.
 ---
 
 <script>
@@ -14,24 +14,24 @@ desc: This guide helps you how to update your project to Tailwind CSS 4 and dais
 >
 > Before upgrading your project, read about:  
 > 1 - [Tailwind CSS 4 breaking changes](https://tailwindcss.com/docs/upgrade-guide#changes-from-v3)  
-> 2 - [daisyUI 5 release notes](/docs/v5/)  
-> 3 - [daisyUI 5 breaking changes](/docs/upgrade#changes-from-v4)
+> 2 - [duskmoonUI 5 release notes](/docs/v5/)
+> 3 - [duskmoonUI 5 breaking changes](/docs/upgrade#changes-from-v4)
 
 
 ### 1. Update Tailwind CSS
 
 Tailwind CSS provides a CLI tool for automatic upgrade. It automatically applies the new Tailwind CSS changes to your project.  
 
-1. First, remove daisyUI and plugins from your `tailwind.config.js` file, so Tailwind CSS upgrade tool can safely replace it with the CSS file.  
+1. First, remove duskmoonUI and plugins from your `tailwind.config.js` file, so Tailwind CSS upgrade tool can safely replace it with the CSS file.
 
 ```diff:tailwind.config.js
 module.exports = {
    content: ['./your-files/**/*.{html,js}'],
    // other stuff...
--  daisyui: {
+-  duskmoonui: {
 -    themes: ['light', 'dark', 'cupcake'],
 -  },
-- plugins: [require("daisyui")],
+- plugins: [require("duskmoonui")],
 }
 ```
 
@@ -41,37 +41,37 @@ module.exports = {
 npx @tailwindcss/upgrade
 ```
 
-### 2. Update daisyUI
+### 2. Update duskmoonUI
 
-1. Install daisyUI 5
+1. Install duskmoonUI 5
 
 ```bash:Terminal
-npm i -D daisyui@latest
+npm i -D duskmoonui@latest
 ```
-3. Add daisyUI to your CSS file
+3. Add duskmoonUI to your CSS file
   
 ```postcss:app.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 OR if you want [enable a built-in theme](/docs/themes/#enable-a-built-in-theme) in [config](/docs/config/):  
 
 ```postcss:app.css
 @import "tailwindcss";
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: light --default, dark --prefersdark, cupcake;
 }
 ```
 
-Now everything should work as expected. If you're facing any challenges, you can ask for help on [daisyUI Discord server](/discord/) so you can get help from the community.
+Now everything should work as expected. If you're facing any challenges, you can ask for help on [duskmoonUI Discord server](/discord/) so you can get help from the community.
 
 ---
 
 ## Changes from v4
 
-These are all the HTML changes from daisyUI 4 to 5. There are ~15 changes in total but you won't need to do all of them, only the ones you're using.  
-- To read about new features in daisyUI 5 go to [release notes page](/docs/v5/)
+These are all the HTML changes from duskmoonUI 4 to 5. There are ~15 changes in total but you won't need to do all of them, only the ones you're using.
+- To read about new features in duskmoonUI 5 go to [release notes page](/docs/v5/)
 - For more detailed changelog go to [changelogs page](/docs/changelog/)
 
 ### Artboard
@@ -107,7 +107,7 @@ Example:
 - <div class="avatar online">
 + <div class="avatar avatar-online">
   <div class="w-24 rounded-full">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```
@@ -115,7 +115,7 @@ Example:
 - <div class="avatar offline">
 + <div class="avatar avatar-offline">
   <div class="w-24 rounded-full">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```
@@ -210,7 +210,7 @@ Example:
 
 ### Mask
 
-- Removed `mask-parallelogram`, `mask-parallelogram-2`, `mask-parallelogram-3`, and `mask-parallelogram-4`. These mask styles are no longer included in the library. If you need them, [manually use the CSS](https://github.com/saadeghi/daisyui/blob/ff313a45cea023c852903138ea032ac2d0a217f4/src/components/styled/mask.css#L23)
+- Removed `mask-parallelogram`, `mask-parallelogram-2`, `mask-parallelogram-3`, and `mask-parallelogram-4`. These mask styles are no longer included in the library. If you need them, [manually use the CSS](https://github.com/duskmoon-dev/duskmoon-ui/blob/ff313a45cea023c852903138ea032ac2d0a217f4/src/components/styled/mask.css#L23)
 
 ### Menu
 

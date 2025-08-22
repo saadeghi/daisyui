@@ -4,7 +4,7 @@ desc: In this post we will take a look at the list of best Tailwind CSS plugins 
 published: true
 date: 2023-10-12
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/9-best-tailwind-css-plugins-for-developers.webp
+thumbnail: https://img.duskmoonui.com/images/blog/9-best-tailwind-css-plugins-for-developers.webp
 tags:
   - Reviews
 ---
@@ -21,36 +21,36 @@ Tailwind CSS is a utility-first CSS framework that is rapidly growing in popular
 
 Installing Tailwind CSS plugins is easy.
 
-1. First you install the package. For example to install daisyUI plugin, you run:
+1. First you install the package. For example to install duskmoonUI plugin, you run:
 
 ```
-npm i daisyui
+npm i duskmoonui
 ```
 
 2. Then you add the plugin to `tailwind.config.js` file in `plugins` array:
 
 ```js
 module.exports = {
-  plugins: [require("daisyui")],
+  plugins: [require("duskmoonui")],
 }
 ```
 
 ### Here's the list of best Tailwind CSS plugins:
 
-![daisyUI is the best Tailwind CSS component library](https://img.daisyui.com/images/blog/daisyui-tailwind-components.webp)
+![duskmoonUI is the best Tailwind CSS component library](https://img.duskmoonui.com/images/blog/duskmoonui-tailwind-components.webp)
 
-## 1. daisyUI
+## 1. duskmoonUI
 
-[daisyUI](https://daisyui.com/) is a free component library for Tailwind CSS that adds component class names to Tailwind CSS.
-It helps you to build websites faster. daisyUI uses human-friendly and descriptive class names like `btn`, `card`, `toggle`, `alert`, `modal` etc. which helps you use less class names and keep your HTML clean.
-daisyUI also comes with a lot of built-in themes and dark mode support so you don't have to write any additional class names to enable dark mode. It works out of the box.
+[duskmoonUI](https://duskmoonui.com/) is a free component library for Tailwind CSS that adds component class names to Tailwind CSS.
+It helps you to build websites faster. duskmoonUI uses human-friendly and descriptive class names like `btn`, `card`, `toggle`, `alert`, `modal` etc. which helps you use less class names and keep your HTML clean.
+duskmoonUI also comes with a lot of built-in themes and dark mode support so you don't have to write any additional class names to enable dark mode. It works out of the box.
 
-Learn more about daisyUI:
+Learn more about duskmoonUI:
 
-- [Official docs](https://daisyui.com/)
-- [GitHub](https://github.com/saadeghi/daisyui)
+- [Official docs](https://duskmoonui.com/)
+- [GitHub](https://github.com/duskmoon-dev/duskmoon-ui)
 
-![tailwindcss/typography Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-typography.webp)
+![tailwindcss/typography Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwindcss-typography.webp)
 
 ## 2. tailwindcss/typography
 
@@ -62,7 +62,7 @@ Learn more about Typography plugin:
 - [Official docs](https://tailwindcss.com/docs/typography-plugin)
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-typography)
 
-![tailwindcss/container-queries Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-container-queries.webp)
+![tailwindcss/container-queries Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwindcss-container-queries.webp)
 
 ## 3. tailwindcss/container-queries
 
@@ -75,7 +75,7 @@ Learn more about tailwindcss/container-queries
 - [Official docs](https://tailwindcss.com/docs/plugins#container-queries)
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-container-queries)
 
-![tailwindcss-flip Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-flip.webp)
+![tailwindcss-flip Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwindcss-flip.webp)
 
 ## 4. tailwindcss-flip
 
@@ -85,7 +85,7 @@ Read more about tailwindcss-flip:
 
 - [GitHub](https://github.com/cvrajeesh/tailwindcss-flip)
 
-![tailwindcss-animate Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-animate.webp)
+![tailwindcss-animate Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwindcss-animate.webp)
 
 ## 5. tailwindcss-animate
 
@@ -95,7 +95,7 @@ Learn more about tailwindcss-animate:
 
 - [GitHub](https://github.com/jamiebuilds/tailwindcss-animate)
 
-![tailwind-scrollbar-hide Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwind-scrollbar-hide.webp)
+![tailwind-scrollbar-hide Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwind-scrollbar-hide.webp)
 
 ## 6. tailwind-scrollbar-hide
 
@@ -105,17 +105,17 @@ Learn more about tailwind-scrollbar-hide:
 
 - [GitHub](https://github.com/reslear/tailwind-scrollbar-hide)
 
-![tailwindcss/forms Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-forms.webp)
+![tailwindcss/forms Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwindcss-forms.webp)
 
 ## 7. tailwindcss/forms
 
-[tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) is a plugin from Tailwind team that adds default styles for all your form elements. Just be careful that if you're using this plugin along with any component library (like daisyUI), you should [enable `strategy: 'class'`](https://github.com/tailwindlabs/tailwindcss-forms#using-only-global-styles-or-only-classes) for this plugin so it only adds styles to elements you choose. Otherwise it will have conflicts because both plugins add styles to the same elements.
+[tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) is a plugin from Tailwind team that adds default styles for all your form elements. Just be careful that if you're using this plugin along with any component library (like duskmoonUI), you should [enable `strategy: 'class'`](https://github.com/tailwindlabs/tailwindcss-forms#using-only-global-styles-or-only-classes) for this plugin so it only adds styles to elements you choose. Otherwise it will have conflicts because both plugins add styles to the same elements.
 
 Learn more about tailwindcss/forms
 
 - [GitHub](https://github.com/tailwindlabs/tailwindcss-forms)
 
-![tailwindcss-opentype Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-opentype.webp)
+![tailwindcss-opentype Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwindcss-opentype.webp)
 
 ## 8. tailwindcss-opentype
 
@@ -126,7 +126,7 @@ Read more about tailwindcss-opentype:
 - [Official docs](https://tailwindcss-opentype.netlify.app/)
 - [GitHub](https://github.com/stormwarning/tailwindcss-opentype)
 
-![tailwindcss-3d Tailwind CSS plugin](https://img.daisyui.com/images/blog/tailwindcss-3d.webp)
+![tailwindcss-3d Tailwind CSS plugin](https://img.duskmoonui.com/images/blog/tailwindcss-3d.webp)
 
 ## 9. tailwindcss-3d
 

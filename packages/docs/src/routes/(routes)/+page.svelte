@@ -103,12 +103,12 @@
       section.hero &&
       (scrollY / (section.hero.offsetTop + section.hero.clientHeight)) * 100 > 72
     ) {
-      return "daisyUI Button"
+      return "duskmoonUI Button"
     }
     return "Tailwind Button"
   })
 
-  // let daisyui5progress = $state(0)
+  // let duskmoonui5progress = $state(0)
 
   // $effect(async () => {
   //   const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/api/progress.json`)
@@ -128,14 +128,14 @@
   //   }
 
   //   count(data)
-  //   daisyui5progress = ((trueCount / totalCount) * 100).toFixed(0)
+  //   duskmoonui5progress = ((trueCount / totalCount) * 100).toFixed(0)
   // })
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
 
 <SEO
-  title="daisyUI"
+  title="duskmoonUI"
   desc="Best Tailwind Components Library - Free UI components for Tailwind CSS"
 />
 
@@ -158,9 +158,9 @@
             >
               <button
                 class="btn btn-sm cursor-copy rounded-full font-mono font-light"
-                onclick={() => copyText("npm i -D daisyui@latest")}
+                onclick={() => copyText("npm i -D duskmoonui@latest")}
               >
-                <pre><code>npm i -D daisyui@latest</code></pre>
+                <pre><code>npm i -D duskmoonui@latest</code></pre>
               </button>
             </div>
 
@@ -174,34 +174,34 @@
                 class="rounded-lg grayscale transition-all duration-500 group-hover:grayscale-0"
                 width="60"
                 height="33"
-                src="https://img.daisyui.com/images/content/v5-video-thumb.webp"
-                alt="daisyUI 5"
+                src="https://img.duskmoonui.com/images/content/v5-video-thumb.webp"
+                alt="duskmoonUI 5"
               />
-              Watch <br />daisyUI 5.0 intro
+              Watch <br />duskmoonUI 5.0 intro
             </a>
 
-            <!-- {#if daisyui5progress}
+            <!-- {#if duskmoonui5progress}
               <div class="flex gap-2 grow w-full max-w-48 max-lg:my-4 sm:max-w-sm">
                 <a
                   class="tooltip tooltip-accent relative flex flex-col w-full"
-                  href="https://github.com/saadeghi/daisyui/discussions/3246"
+                  href="https://github.com/duskmoon-dev/duskmoon-ui/discussions/3246"
                   target="_blank"
                   rel="nofollow"
                   data-tip="Try the alpha version"
                 >
                   <div
                     class="text-[0.6rem] -top-4 absolute italic -translate-x-1/2 rtl:translate-x-1/2"
-                    style={`inset-inline-start:${daisyui5progress}%`}
+                    style={`inset-inline-start:${duskmoonui5progress}%`}
                   >
-                    {daisyui5progress}%
+                    {duskmoonui5progress}%
                   </div>
                   <progress
                     class="progress bg-base-200 border border-base-200 progress-warning w-full"
-                    value={daisyui5progress}
+                    value={duskmoonui5progress}
                     max="100"
                   ></progress>
                   <div class="text-[0.6rem] tracking-wide -bottom-4 absolute italic">
-                    daisyUI 5 development
+                    duskmoonUI 5 development
                   </div>
                 </a>
               </div>
@@ -359,8 +359,8 @@
                 width="72"
                 height="72"
                 alt="yawing face emoji"
-                src="https://img.daisyui.com/images/emoji/yawning-face@80.webp"
-                srcset={`https://img.daisyui.com/images/emoji/yawning-face.webp 2x`}
+                src="https://img.duskmoonui.com/images/emoji/yawning-face@80.webp"
+                srcset={`https://img.duskmoonui.com/images/emoji/yawning-face.webp 2x`}
                 class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom"
               />
             </h2>
@@ -396,8 +396,8 @@
                     width="72"
                     height="72"
                     alt="sunglasses emoji"
-                    src="https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses@80.webp"
-                    srcset={`https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses.webp 2x`}
+                    src="https://img.duskmoonui.com/images/emoji/smiling-face-with-sunglasses@80.webp"
+                    srcset={`https://img.duskmoonui.com/images/emoji/smiling-face-with-sunglasses.webp 2x`}
                     class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom"
                   />
                 </h2>
@@ -650,7 +650,7 @@
                                   loading="lazy"
                                   width="40"
                                   height="40"
-                                  src="https://img.daisyui.com/images/profile/demo/superperson@94.webp"
+                                  src="https://img.duskmoonui.com/images/profile/demo/superperson@94.webp"
                                   alt="tailwind css avatar component"
                                 />
                               </div>
@@ -995,7 +995,7 @@
     </h2>
     <p class="text-base-content/70 font-title py-4 font-light md:text-2xl">
       {@html $t(
-        "daisyUI adds class names to Tailwind CSS<br />for all common UI components.<br />Class names like",
+        "duskmoonUI adds class names to Tailwind CSS<br />for all common UI components.<br />Class names like",
       )}
       <a target="_blank" href="/components/button/" class="link">btn</a>
       ,
@@ -1120,13 +1120,13 @@
               {$t("Tailwind only")}
               <div class="relative">
                 <input
-                  name="tailwind-va-daisyui"
+                  name="tailwind-va-duskmoonui"
                   type="checkbox"
                   class="toggle toggle-xl toggle-primary relative z-2"
                   bind:checked={toggleValueForCodeCompare}
                 />
               </div>
-              {$t("Tailwind + daisyUI")}
+              {$t("Tailwind + duskmoonUI")}
             </label>
           </div>
         </div>
@@ -1338,7 +1338,7 @@
         <div class="h-10"></div>
         <p class="text-base-content/70 font-title text-center font-light md:text-3xl xl:text-start">
           {@html $t(
-            "With daisyUI, you write 88% fewer class names<br />And your HTML size will be about 79% smaller.",
+            "With duskmoonUI, you write 88% fewer class names<br />And your HTML size will be about 79% smaller.",
           )}
         </p>
         <div class="h-10"></div>
@@ -1385,7 +1385,7 @@
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
-                <span>{$t("Tailwind + daisyUI")}</span>
+                <span>{$t("Tailwind + duskmoonUI")}</span>
                 <span class="font-mono text-xs">14</span>
               </div>
               <progress
@@ -1432,7 +1432,7 @@
             </div>
             <div class="flex flex-col gap-2">
               <div class="flex justify-between text-sm">
-                <span>{$t("Tailwind + daisyUI")}</span>
+                <span>{$t("Tailwind + duskmoonUI")}</span>
                 <span class="font-mono text-xs">427 byte</span>
               </div>
               <progress
@@ -1504,7 +1504,7 @@
         )}rem * var(--rtl-reverse)))`}
       >
         {@html $t(
-          "daisyUI is built on top of Tailwind&nbsp;CSS so you can customize everything using utility classes.",
+          "duskmoonUI is built on top of Tailwind&nbsp;CSS so you can customize everything using utility classes.",
         )}
       </p>
       <div class="h-10"></div>
@@ -1570,14 +1570,14 @@
         class="text-base-content/70 font-title mb-6 text-center font-light md:text-3xl xl:text-start"
       >
         {@html $t(
-          "daisyUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file.",
+          "duskmoonUI is a plugin for Tailwind CSS. It works on all JS frameworks and doesn't need a JS bundle file.",
         )}
       </p>
       <p
         class="text-base-content/70 font-title mb-6 text-center font-light md:text-3xl xl:text-start"
       >
         {@html $t(
-          "Install daisyUI as a dev dependency and use the class names just like any other Tailwind CSS class name.",
+          "Install duskmoonUI as a dev dependency and use the class names just like any other Tailwind CSS class name.",
         )}
       </p>
       <div class="h-10"></div>
@@ -1627,8 +1627,8 @@
               [-65 + index * 5, -55 + index * 5],
               [1, 0],
             )}rem);`}
-            alt={`daisyUI ${logo}`}
-            src={`https://img.daisyui.com/images/logos/${logo}.svg`}
+            alt={`duskmoonUI ${logo}`}
+            src={`https://img.duskmoonui.com/images/logos/${logo}.svg`}
           />
         {/each}
       </div>
@@ -1768,7 +1768,7 @@
         class="text-base-content/70 font-title relative z-2 mx-auto max-w-3xl py-4 font-light md:text-3xl"
       >
         {@html $t(
-          "Your website should be unique. Create a custom theme for yourself using daisyUI theme generator. The colors you pick will be applied to all daisyUI components.",
+          "Your website should be unique. Create a custom theme for yourself using duskmoonUI theme generator. The colors you pick will be applied to all duskmoonUI components.",
         )}
       </p>
       <div class="h-10"></div>
@@ -1876,7 +1876,7 @@
         </span>
       </h2>
       <p class="text-base-content/70 font-title relative z-2 py-4 font-light md:text-3xl">
-        {$t("Mix and match daisyUI class names to create unique web pages.")}
+        {$t("Mix and match duskmoonUI class names to create unique web pages.")}
       </p>
       <div class="h-10"></div>
       <div class="flex w-full justify-center">
@@ -1906,7 +1906,7 @@
         [0.7, 1],
       )});opacity:${animateValue(section["numbers"], [0, 20], [0, 1])}`}
     >
-      {@html $t("daisyUI is the most popular<br />component library for Tailwind&nbsp;CSS")}
+      {@html $t("duskmoonUI is the most popular<br />component library for Tailwind&nbsp;CSS")}
     </h2>
     <div class="h-32"></div>
     <div class="grid gap-10 p-6 xl:grid-cols-3">
@@ -1934,7 +1934,7 @@
           </span>
         </div>
         <a
-          href="https://github.com/saadeghi/daisyui"
+          href="https://github.com/duskmoon-dev/duskmoon-ui"
           target="_blank"
           rel="noopener, noreferrer"
           class="text-base-content/70 hover:text-base-content hover:underline"
@@ -1966,12 +1966,12 @@
           </span>
         </div>
         <a
-          href="https://github.com/saadeghi/daisyui/network/dependents"
+          href="https://github.com/duskmoon-dev/duskmoon-ui/network/dependents"
           target="_blank"
           rel="noopener, noreferrer"
           class="text-base-content/70 hover:text-base-content hover:underline"
         >
-          {$t("open-source projects using daisyUI")}
+          {$t("open-source projects using duskmoonUI")}
         </a>
       </div>
       <div
@@ -1998,7 +1998,7 @@
           </span>
         </div>
         <a
-          href="https://www.npmjs.com/package/daisyui"
+          href="https://www.npmjs.com/package/duskmoonui"
           target="_blank"
           rel="noopener, noreferrer"
           class="text-base-content/70 hover:text-base-content hover:underline"
@@ -2035,7 +2035,7 @@
               : 1
           }`}
         >
-          {$t("Try daisyUI")}
+          {$t("Try duskmoonUI")}
         </span>
         <br />
         <span
@@ -2059,8 +2059,8 @@
             width="96"
             height="96"
             class="aspect-square h-10 w-10"
-            src={`https://img.daisyui.com/images/logos/${logo}.svg`}
-            alt={`daisyUI ${logo}`}
+            src={`https://img.duskmoonui.com/images/logos/${logo}.svg`}
+            alt={`duskmoonUI ${logo}`}
           />
         {/each}
       </div>
@@ -2072,7 +2072,7 @@
       </div>
       <div class="h-10"></div>
       <div class="flex w-full flex-col items-center justify-center gap-2 md:flex-row">
-        <span class="text-base-content/70">{$t("Or play with daisyUI on")}:</span>
+        <span class="text-base-content/70">{$t("Or play with duskmoonUI on")}:</span>
         <a target="_blank" rel="noopener, noreferrer" href="/codepen" class="btn-ghost btn-sm btn">
           <svg
             class="h-4 w-4 stroke-current"

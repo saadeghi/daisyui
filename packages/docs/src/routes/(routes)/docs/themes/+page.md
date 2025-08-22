@@ -1,6 +1,6 @@
 ---
-title: daisyUI themes
-desc: How to use daisyUI themes?
+title: duskmoonUI themes
+desc: How to use duskmoonUI themes?
 ---
 
 <script>
@@ -9,15 +9,15 @@ desc: How to use daisyUI themes?
   export let data
 </script>
 
-daisyUI comes with {data.themes.length} built-in themes that instantly transform your website's entire look - a time-saver that lets you focus on building rather than deciding on colors.  
+duskmoonUI comes with {data.themes.length} built-in themes that instantly transform your website's entire look - a time-saver that lets you focus on building rather than deciding on colors.
 You can also create your own custom themes or customize built-in themes.
 
-You can manage themes by adding brackets in front of `@plugin "daisyui"` in your CSS file.
+You can manage themes by adding brackets in front of `@plugin "duskmoonui"` in your CSS file.
 
 ```diff:app.css
   @import "tailwindcss";
-- @plugin "daisyui";
-+ @plugin "daisyui" {
+- @plugin "duskmoonui";
++ @plugin "duskmoonui" {
 +   themes: light --default, dark --prefersdark;
 + }
 ```
@@ -31,7 +31,7 @@ By default, `light` and `dark` themes are enabled. Let's enable `cupcake` theme:
 
 ```css:app.css
 @import "tailwindcss";
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: light --default, dark --prefersdark, cupcake;
 }
 ```
@@ -54,7 +54,7 @@ Enable all {data.themes.length} built-in themes by setting `themes` to `all`:
 
 ```css:app.css
 @import "tailwindcss";
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: all;
 }
 ```
@@ -65,17 +65,17 @@ To disable `dark` theme for example, remove it from the list. Now only light the
 
 ```diff:app.css
  @import "tailwindcss";
- @plugin "daisyui" {
+ @plugin "duskmoonui" {
 -  themes: light --default, dark --prefersdark;
 +  themes: light --default;
  }
 ```
 
-If for some reason you want to disable all themes and remove all daisyUI colors, set `themes` to `false`:
+If for some reason you want to disable all themes and remove all duskmoonUI colors, set `themes` to `false`:
 
 ```css:app.css
 @import "tailwindcss";
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: false;
 }
 ```
@@ -98,12 +98,12 @@ If for some reason you want to disable all themes and remove all daisyUI colors,
 
 ## <Translate text="How to add a new custom theme?" />
 
-To add a new theme, use `@plugin "daisyui/theme" {}` in your CSS file, with the following structure:
+To add a new theme, use `@plugin "duskmoonui/theme" {}` in your CSS file, with the following structure:
 
 ```css:app.css
 @import "tailwindcss";
-@plugin "daisyui";
-@plugin "daisyui/theme" {
+@plugin "duskmoonui";
+@plugin "duskmoonui/theme" {
   name: "mytheme";
   default: true; /* set as default */
   prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
@@ -164,8 +164,8 @@ To customize a built-in theme, you can use the same structure as adding a new th
 
 ```css:app.css
 @import "tailwindcss";
-@plugin "daisyui";
-@plugin "daisyui/theme" {
+@plugin "duskmoonui";
+@plugin "duskmoonui/theme" {
   name: "light";
   default: true;
   --color-primary: blue;
@@ -194,14 +194,14 @@ All the other values will be inherited from the original theme.
 
 ## <Translate text="How to apply Tailwind's 'dark:' selector for specific themes" />
 
-<Translate text="daisyUI can be configured to use Tailwind's `dark:` prefix" />
-<Translate text="For example if you want a padding only for a daisyUI dark theme you can use `dark:p-10`"/>
+<Translate text="duskmoonUI can be configured to use Tailwind's `dark:` prefix" />
+<Translate text="For example if you want a padding only for a duskmoonUI dark theme you can use `dark:p-10`"/>
 
 <Translate text="In the example below, 'night' is darkmode theme so we add it to `@variant dark`"/>
 
 ```css:app.css
 @import "tailwindcss";
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: winter --default, night --prefersdark;
 }
 

@@ -5,9 +5,9 @@
 </script>
 
 <SEO
-  title="daisyUI Blog"
-  desc="daisyUI blog - Updates, ideas and resources"
-  img="https://img.daisyui.com/images/blog.webp"
+  title="duskmoonUI Blog"
+  desc="duskmoonUI blog - Updates, ideas and resources"
+  img="https://img.duskmoonui.com/images/blog.webp"
 />
 {#if posts.length === 0}
   <div

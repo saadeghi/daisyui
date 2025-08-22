@@ -1,6 +1,6 @@
 ---
-title: daisyUI Roadmap
-desc: daisyUI Roadmap, milestones and upcoming features
+title: duskmoonUI Roadmap
+desc: duskmoonUI Roadmap, milestones and upcoming features
 ---
 
 <script>

@@ -18,14 +18,14 @@
 <SEO
   {title}
   {desc}
-  img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
+  img={`https://img.duskmoonui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
 />
 <div class="mx-auto max-w-4xl px-4 py-20">
   <div
     class="prose prose-sm lg:prose-h1:text-5xl lg:prose-h2:text-4xl lg:prose-h3:text-3xl md:prose-base w-full max-w-4xl grow pt-10 md:text-sm"
   >
     <a class="btn btn-xs not-prose btn-soft group mb-2" href="/components/">
-      See all daisyUI components
+      See all duskmoonUI components
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -58,12 +58,12 @@
           <div class="flex flex-col gap-2 max-lg:items-center max-lg:text-center">
             <div class="max-w-46"><LogoHorizontal /></div>
             <h2 class="mx-2">
-              {@html $t("daisyUI is the most popular<br />component library for Tailwind&nbsp;CSS")}
+              {@html $t("duskmoonUI is the most popular<br />component library for Tailwind&nbsp;CSS")}
             </h2>
           </div>
           <div class="flex flex-col items-center gap-2">
             <a href="/docs/install/" class="btn-primary btn group rounded-full">
-              How to install daisyUI?
+              How to install duskmoonUI?
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

@@ -7,28 +7,28 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* use semantic fallbacks for checkbox states, improve indeterminate visibility. closes: [#3979](https://github.com/saadeghi/daisyui/issues/3979) ([d19f38a](https://github.com/saadeghi/daisyui/commit/d19f38a98fe6d3ba9e2be5111d46055e1a04f609))
+* use semantic fallbacks for checkbox states, improve indeterminate visibility. closes: [#3979](https://github.com/duskmoon-dev/duskmoon-ui/issues/3979) ([d19f38a](https://github.com/duskmoon-dev/duskmoon-ui/commit/d19f38a98fe6d3ba9e2be5111d46055e1a04f609))
 
 ## 5.0.49 (2025-07-28)
 
 
 ### Bug Fixes
 
-* react-day-picker disableNavigation not styling properly. closes: [#3990](https://github.com/saadeghi/daisyui/issues/3990) ([29123bc](https://github.com/saadeghi/daisyui/commit/29123bc7fbd9279d459bd2ba1258a93f35a34b32))
+* react-day-picker disableNavigation not styling properly. closes: [#3990](https://github.com/duskmoon-dev/duskmoon-ui/issues/3990) ([29123bc](https://github.com/duskmoon-dev/duskmoon-ui/commit/29123bc7fbd9279d459bd2ba1258a93f35a34b32))
 
 ## 5.0.48 (2025-07-27)
 
 
 ### Bug Fixes
 
-* apply theme-aware hover styling to Cally day buttons. closes: [#3991](https://github.com/saadeghi/daisyui/issues/3991) ([9960287](https://github.com/saadeghi/daisyui/commit/99602876204533c49cfd18a04133bc07e8a6c2ba))
+* apply theme-aware hover styling to Cally day buttons. closes: [#3991](https://github.com/duskmoon-dev/duskmoon-ui/issues/3991) ([9960287](https://github.com/duskmoon-dev/duskmoon-ui/commit/99602876204533c49cfd18a04133bc07e8a6c2ba))
 
 ## 5.0.47 (2025-07-25)
 
 
 ### Bug Fixes
 
-* browser search icon color in dark theme. closes: [#4006](https://github.com/saadeghi/daisyui/issues/4006) ([922256d](https://github.com/saadeghi/daisyui/commit/922256d6543ba35434f583c327b6f6cc5169e20f))
+* browser search icon color in dark theme. closes: [#4006](https://github.com/duskmoon-dev/duskmoon-ui/issues/4006) ([922256d](https://github.com/duskmoon-dev/duskmoon-ui/commit/922256d6543ba35434f583c327b6f6cc5169e20f))
 
 ## 5.0.46 (2025-07-06)
 
@@ -39,21 +39,21 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* responsive RTL dropdown position. closes: [#3956](https://github.com/saadeghi/daisyui/issues/3956) ([03cf030](https://github.com/saadeghi/daisyui/commit/03cf030ca8341d5fe0ffce2f6e22791a4b065273))
+* responsive RTL dropdown position. closes: [#3956](https://github.com/duskmoon-dev/duskmoon-ui/issues/3956) ([03cf030](https://github.com/duskmoon-dev/duskmoon-ui/commit/03cf030ca8341d5fe0ffce2f6e22791a4b065273))
 
 ## 5.0.43 (2025-05-30)
 
 
 ### Bug Fixes
 
-* badge-outline, badge-dash, badge-soft can be used with tailwind responsive variants. closes: [#3643](https://github.com/saadeghi/daisyui/issues/3643) ([2470fe2](https://github.com/saadeghi/daisyui/commit/2470fe20f9d69976d6ce7c98fa883909c6202e59))
+* badge-outline, badge-dash, badge-soft can be used with tailwind responsive variants. closes: [#3643](https://github.com/duskmoon-dev/duskmoon-ui/issues/3643) ([2470fe2](https://github.com/duskmoon-dev/duskmoon-ui/commit/2470fe20f9d69976d6ce7c98fa883909c6202e59))
 
 ## 5.0.42 (2025-05-29)
 
 
 ### Bug Fixes
 
-* checkbox in menu should not be grid. closes: [#3922](https://github.com/saadeghi/daisyui/issues/3922) ([7f1ca83](https://github.com/saadeghi/daisyui/commit/7f1ca83e2545967dc1270c1db2ddb6f55830266f))
+* checkbox in menu should not be grid. closes: [#3922](https://github.com/duskmoon-dev/duskmoon-ui/issues/3922) ([7f1ca83](https://github.com/duskmoon-dev/duskmoon-ui/commit/7f1ca83e2545967dc1270c1db2ddb6f55830266f))
 
 ## 5.0.41 (2025-05-29)
 
@@ -62,90 +62,90 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* Chat bubble mask not working with tailwind prefixes. closes: [#3847](https://github.com/saadeghi/daisyui/issues/3847) ([c7856f2](https://github.com/saadeghi/daisyui/commit/c7856f267bc8653b04abf0250ba77f9523c85872))
+* Chat bubble mask not working with tailwind prefixes. closes: [#3847](https://github.com/duskmoon-dev/duskmoon-ui/issues/3847) ([c7856f2](https://github.com/duskmoon-dev/duskmoon-ui/commit/c7856f267bc8653b04abf0250ba77f9523c85872))
 
 ## 5.0.39 (2025-05-28)
 
 
 ### Bug Fixes
 
-* calendar - react daypicker range bg color. closes: [#3918](https://github.com/saadeghi/daisyui/issues/3918) ([d9df966](https://github.com/saadeghi/daisyui/commit/d9df966a93f6164774c5a7043b97eeddc799f09d))
+* calendar - react daypicker range bg color. closes: [#3918](https://github.com/duskmoon-dev/duskmoon-ui/issues/3918) ([d9df966](https://github.com/duskmoon-dev/duskmoon-ui/commit/d9df966a93f6164774c5a7043b97eeddc799f09d))
 
 ## 5.0.38 (2025-05-26)
 
 
 ### Bug Fixes
 
-* correct CSS syntax error in variables.css ([#3910](https://github.com/saadeghi/daisyui/issues/3910)) ([cd4820f](https://github.com/saadeghi/daisyui/commit/cd4820f7c73af0aaea4fba662fba642883725f7a))
+* correct CSS syntax error in variables.css ([#3910](https://github.com/duskmoon-dev/duskmoon-ui/issues/3910)) ([cd4820f](https://github.com/duskmoon-dev/duskmoon-ui/commit/cd4820f7c73af0aaea4fba662fba642883725f7a))
 
 ## 5.0.37 (2025-05-22)
 
 
 ### Bug Fixes
 
-* tab-content height. closes: [#3843](https://github.com/saadeghi/daisyui/issues/3843) ([0b5d958](https://github.com/saadeghi/daisyui/commit/0b5d958c93b8b57f1622c943b904e3f84c7d0145))
+* tab-content height. closes: [#3843](https://github.com/duskmoon-dev/duskmoon-ui/issues/3843) ([0b5d958](https://github.com/duskmoon-dev/duskmoon-ui/commit/0b5d958c93b8b57f1622c943b904e3f84c7d0145))
 
 ## 5.0.36 (2025-05-22)
 
 
 ### Bug Fixes
 
-* Safari iOS page zoom when user focuses Text Input. closes: [#3871](https://github.com/saadeghi/daisyui/issues/3871) ([1b5b997](https://github.com/saadeghi/daisyui/commit/1b5b9971e3ca5dbaf82f64e23903bad3f419d584))
-* bug: The collapse input/title has a fixed min-height applied with high specificity [#3885](https://github.com/saadeghi/daisyui/issues/3885)
-* bug: Button Link and Ghost hover states persisting on mobile devices [#3888](https://github.com/saadeghi/daisyui/issues/3888)
-* bug: URL and email inputs with icons don't maintain LTR in RTL mode [#3886](https://github.com/saadeghi/daisyui/issues/3886)
-* bug: disabled button should not change border size [#3877](https://github.com/saadeghi/daisyui/issues/3877)
-* bug: indicator direction not reflecting on RTL [#3851](https://github.com/saadeghi/daisyui/issues/3851)
-* bug: validator on aria-invalid="false" should not be considered as invalid [#3855](https://github.com/saadeghi/daisyui/issues/3855)
+* Safari iOS page zoom when user focuses Text Input. closes: [#3871](https://github.com/duskmoon-dev/duskmoon-ui/issues/3871) ([1b5b997](https://github.com/duskmoon-dev/duskmoon-ui/commit/1b5b9971e3ca5dbaf82f64e23903bad3f419d584))
+* bug: The collapse input/title has a fixed min-height applied with high specificity [#3885](https://github.com/duskmoon-dev/duskmoon-ui/issues/3885)
+* bug: Button Link and Ghost hover states persisting on mobile devices [#3888](https://github.com/duskmoon-dev/duskmoon-ui/issues/3888)
+* bug: URL and email inputs with icons don't maintain LTR in RTL mode [#3886](https://github.com/duskmoon-dev/duskmoon-ui/issues/3886)
+* bug: disabled button should not change border size [#3877](https://github.com/duskmoon-dev/duskmoon-ui/issues/3877)
+* bug: indicator direction not reflecting on RTL [#3851](https://github.com/duskmoon-dev/duskmoon-ui/issues/3851)
+* bug: validator on aria-invalid="false" should not be considered as invalid [#3855](https://github.com/duskmoon-dev/duskmoon-ui/issues/3855)
 
 ## 5.0.35 (2025-05-01)
 
 
 ### Bug Fixes
 
-* allow tooltip font size customization. closes: [#3830](https://github.com/saadeghi/daisyui/issues/3830) ([c1b9d69](https://github.com/saadeghi/daisyui/commit/c1b9d6911a0e53b6459cde32fe424ad0ab73cc84))
+* allow tooltip font size customization. closes: [#3830](https://github.com/duskmoon-dev/duskmoon-ui/issues/3830) ([c1b9d69](https://github.com/duskmoon-dev/duskmoon-ui/commit/c1b9d6911a0e53b6459cde32fe424ad0ab73cc84))
 
 ## 5.0.34 (2025-05-01)
 
 
 ### Bug Fixes
 
-* validator-hint respecting `user-valid:` variant. closes: [#3668](https://github.com/saadeghi/daisyui/issues/3668), [#3669](https://github.com/saadeghi/daisyui/issues/3669) ([8ffbebb](https://github.com/saadeghi/daisyui/commit/8ffbebb77c97a61bb1b3dda25f9d674dd074d0a5))
+* validator-hint respecting `user-valid:` variant. closes: [#3668](https://github.com/duskmoon-dev/duskmoon-ui/issues/3668), [#3669](https://github.com/duskmoon-dev/duskmoon-ui/issues/3669) ([8ffbebb](https://github.com/duskmoon-dev/duskmoon-ui/commit/8ffbebb77c97a61bb1b3dda25f9d674dd074d0a5))
 
 ## 5.0.33 (2025-04-30)
 
 
 ### Bug Fixes
 
-* swap indeterminate not being visible with flip animation. closes: [#3806](https://github.com/saadeghi/daisyui/issues/3806) ([42a2fb5](https://github.com/saadeghi/daisyui/commit/42a2fb57b6c9b530a04566def27e232b39289fb6))
+* swap indeterminate not being visible with flip animation. closes: [#3806](https://github.com/duskmoon-dev/duskmoon-ui/issues/3806) ([42a2fb5](https://github.com/duskmoon-dev/duskmoon-ui/commit/42a2fb57b6c9b530a04566def27e232b39289fb6))
 
 ## 5.0.32 (2025-04-30)
 
 
 ### Bug Fixes
 
-* prevent double-tap zoom on buttons on mobile ([02a401a](https://github.com/saadeghi/daisyui/commit/02a401a44ac32a224e0ddeb0303d29f95b97f392))
+* prevent double-tap zoom on buttons on mobile ([02a401a](https://github.com/duskmoon-dev/duskmoon-ui/commit/02a401a44ac32a224e0ddeb0303d29f95b97f392))
 
 ## 5.0.31 (2025-04-30)
 
 
 ### Bug Fixes
 
-* button hover state persisting on mobile screen. closes: [#3817](https://github.com/saadeghi/daisyui/issues/3817) ([75c92c9](https://github.com/saadeghi/daisyui/commit/75c92c93573e0b033db0e7d674ec00dece1ee41c))
+* button hover state persisting on mobile screen. closes: [#3817](https://github.com/duskmoon-dev/duskmoon-ui/issues/3817) ([75c92c9](https://github.com/duskmoon-dev/duskmoon-ui/commit/75c92c93573e0b033db0e7d674ec00dece1ee41c))
 
 ## 5.0.30 (2025-04-30)
 
 
 ### Bug Fixes
 
-* tooltip showing when data-tip or tooltip-content is empty. closes: [#3819](https://github.com/saadeghi/daisyui/issues/3819) ([2414ca5](https://github.com/saadeghi/daisyui/commit/2414ca56e3bf30ff8052733cf743db03fd199d58))
+* tooltip showing when data-tip or tooltip-content is empty. closes: [#3819](https://github.com/duskmoon-dev/duskmoon-ui/issues/3819) ([2414ca5](https://github.com/duskmoon-dev/duskmoon-ui/commit/2414ca56e3bf30ff8052733cf743db03fd199d58))
 
 ## 5.0.29 (2025-04-29)
 
 
 ### Bug Fixes
 
-* table-zebra active row color. closes: [#3823](https://github.com/saadeghi/daisyui/issues/3823) ([cad94c2](https://github.com/saadeghi/daisyui/commit/cad94c24c06a197a45085d20254205119f632836))
+* table-zebra active row color. closes: [#3823](https://github.com/duskmoon-dev/duskmoon-ui/issues/3823) ([cad94c2](https://github.com/duskmoon-dev/duskmoon-ui/commit/cad94c24c06a197a45085d20254205119f632836))
 
 ## 5.0.28 (2025-04-23)
 
@@ -154,42 +154,42 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* toggle padding value inconsistencies. closes: [#3746](https://github.com/saadeghi/daisyui/issues/3746) ([59e1575](https://github.com/saadeghi/daisyui/commit/59e1575f420217b7ab71f19ce1a17f1ded80b3f5))
+* toggle padding value inconsistencies. closes: [#3746](https://github.com/duskmoon-dev/duskmoon-ui/issues/3746) ([59e1575](https://github.com/duskmoon-dev/duskmoon-ui/commit/59e1575f420217b7ab71f19ce1a17f1ded80b3f5))
 
 ## 5.0.26 (2025-04-18)
 
 
 ### Bug Fixes
 
-* drawer z-index issue. closes [#3797](https://github.com/saadeghi/daisyui/issues/3797) ([00c20c3](https://github.com/saadeghi/daisyui/commit/00c20c389a0d4f77420027f3a8736fb1cb8e01e6))
+* drawer z-index issue. closes [#3797](https://github.com/duskmoon-dev/duskmoon-ui/issues/3797) ([00c20c3](https://github.com/duskmoon-dev/duskmoon-ui/commit/00c20c389a0d4f77420027f3a8736fb1cb8e01e6))
 
 ## 5.0.25 (2025-04-17)
 
 
 ### Bug Fixes
 
-* kbd border width ([eaa78a8](https://github.com/saadeghi/daisyui/commit/eaa78a8e58dc4401efb13acd63860a39aaa2e548))
+* kbd border width ([eaa78a8](https://github.com/duskmoon-dev/duskmoon-ui/commit/eaa78a8e58dc4401efb13acd63860a39aaa2e548))
 
 ## 5.0.24 (2025-04-17)
 
 
 ### Bug Fixes
 
-* join outline issues. closes: [#3722](https://github.com/saadeghi/daisyui/issues/3722) ([78bf76d](https://github.com/saadeghi/daisyui/commit/78bf76ddffde31022b56c0df28f8eea3a7aeeeaa))
+* join outline issues. closes: [#3722](https://github.com/duskmoon-dev/duskmoon-ui/issues/3722) ([78bf76d](https://github.com/duskmoon-dev/duskmoon-ui/commit/78bf76ddffde31022b56c0df28f8eea3a7aeeeaa))
 
 ## 5.0.23 (2025-04-16)
 
 
 ### Bug Fixes
 
-* add isolate to drawer-content to avoid z-index overflow. closes: [#3790](https://github.com/saadeghi/daisyui/issues/3790) ([488804f](https://github.com/saadeghi/daisyui/commit/488804f4cc3260a0e0cf33e96b00c50b4b69bedc))
+* add isolate to drawer-content to avoid z-index overflow. closes: [#3790](https://github.com/duskmoon-dev/duskmoon-ui/issues/3790) ([488804f](https://github.com/duskmoon-dev/duskmoon-ui/commit/488804f4cc3260a0e0cf33e96b00c50b4b69bedc))
 
 ## 5.0.22 (2025-04-16)
 
 
 ### Bug Fixes
 
-- add isolate to collapse. closes: [#3713](https://github.com/saadeghi/daisyui/issues/3713) ([24b4742](https://github.com/saadeghi/daisyui/commit/24b47422b9e98509a9b3914a1cb778c867535199))
+- add isolate to collapse. closes: [#3713](https://github.com/duskmoon-dev/duskmoon-ui/issues/3713) ([24b4742](https://github.com/duskmoon-dev/duskmoon-ui/commit/24b47422b9e98509a9b3914a1cb778c867535199))
 - fix: outline in join element. closes: #3722
 - fix: toast position. closes: #3738, closes: #3702
 
@@ -204,28 +204,28 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* modal-start scroll gutter. closes: [#3787](https://github.com/saadeghi/daisyui/issues/3787) ([52414ef](https://github.com/saadeghi/daisyui/commit/52414efd62cd8fd905ff5e5af61c06d0d98c8f41))
+* modal-start scroll gutter. closes: [#3787](https://github.com/duskmoon-dev/duskmoon-ui/issues/3787) ([52414ef](https://github.com/duskmoon-dev/duskmoon-ui/commit/52414efd62cd8fd905ff5e5af61c06d0d98c8f41))
 
 ## 5.0.19 (2025-04-11)
 
 
 ### Bug Fixes
 
-* diff not working on iOS, fix docs. closes: [#3715](https://github.com/saadeghi/daisyui/issues/3715) ([cc9da38](https://github.com/saadeghi/daisyui/commit/cc9da38d08617d03e5948ebe72d90c015506e311))
+* diff not working on iOS, fix docs. closes: [#3715](https://github.com/duskmoon-dev/duskmoon-ui/issues/3715) ([cc9da38](https://github.com/duskmoon-dev/duskmoon-ui/commit/cc9da38d08617d03e5948ebe72d90c015506e311))
 
 ## 5.0.18 (2025-04-10)
 
 
 ### Bug Fixes
 
-* validator working with `aria-invalid` ([f4688a3](https://github.com/saadeghi/daisyui/commit/f4688a32d6a8cd0929e914e43bd91d8b8c4cd726))
+* validator working with `aria-invalid` ([f4688a3](https://github.com/duskmoon-dev/duskmoon-ui/commit/f4688a32d6a8cd0929e914e43bd91d8b8c4cd726))
 
 ## 5.0.17 (2025-04-08)
 
 
 ### Bug Fixes
 
-* Bundle file for version. ([7fd2640](https://github.com/saadeghi/daisyui/commit/7fd264003b81953de4b342fe66e1559e4146f6c5)), closes [#3765](https://github.com/saadeghi/daisyui/issues/3765)
+* Bundle file for version. ([7fd2640](https://github.com/duskmoon-dev/duskmoon-ui/commit/7fd264003b81953de4b342fe66e1559e4146f6c5)), closes [#3765](https://github.com/duskmoon-dev/duskmoon-ui/issues/3765)
 
 ## 5.0.16 (2025-04-07)
 
@@ -251,42 +251,42 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* checkbox style inside tab-content. closes: [#3753](https://github.com/saadeghi/daisyui/issues/3753) ([fe16212](https://github.com/saadeghi/daisyui/commit/fe16212ae23b3cb6be54f1364509b512d933fdf4))
+* checkbox style inside tab-content. closes: [#3753](https://github.com/duskmoon-dev/duskmoon-ui/issues/3753) ([fe16212](https://github.com/duskmoon-dev/duskmoon-ui/commit/fe16212ae23b3cb6be54f1364509b512d933fdf4))
 
 ## 5.0.12 (2025-04-02)
 
 
 ### Bug Fixes
 
-* icon position of date input inside input wrapper on chromium-based ([#3725](https://github.com/saadeghi/daisyui/issues/3725)) closes: [#3708](https://github.com/saadeghi/daisyui/issues/3708) ([b1560a6](https://github.com/saadeghi/daisyui/commit/b1560a69ffe23527bded2790d00d478bc0166ea2))
+* icon position of date input inside input wrapper on chromium-based ([#3725](https://github.com/duskmoon-dev/duskmoon-ui/issues/3725)) closes: [#3708](https://github.com/duskmoon-dev/duskmoon-ui/issues/3708) ([b1560a6](https://github.com/duskmoon-dev/duskmoon-ui/commit/b1560a69ffe23527bded2790d00d478bc0166ea2))
 
 ## 5.0.11 (2025-04-02)
 
 
 ### Bug Fixes
 
-* card image-full radius color bleed. closes: [#3734](https://github.com/saadeghi/daisyui/issues/3734) ([d6fb204](https://github.com/saadeghi/daisyui/commit/d6fb20479c76e7c6462baa77ddfb512d76ca7a2c))
+* card image-full radius color bleed. closes: [#3734](https://github.com/duskmoon-dev/duskmoon-ui/issues/3734) ([d6fb204](https://github.com/duskmoon-dev/duskmoon-ui/commit/d6fb20479c76e7c6462baa77ddfb512d76ca7a2c))
 
 ## 5.0.10 (2025-04-02)
 
 
 ### Bug Fixes
 
-* `:not(:has())` selectors getting prefix. closes: [#3739](https://github.com/saadeghi/daisyui/issues/3739) ([771b6eb](https://github.com/saadeghi/daisyui/commit/771b6eb8a89ff2e1bc7a4e2d912e5e55c570c5ce))
+* `:not(:has())` selectors getting prefix. closes: [#3739](https://github.com/duskmoon-dev/duskmoon-ui/issues/3739) ([771b6eb](https://github.com/duskmoon-dev/duskmoon-ui/commit/771b6eb8a89ff2e1bc7a4e2d912e5e55c570c5ce))
 
 ## 5.0.9 (2025-03-21)
 
 
 ### Bug Fixes
 
-* Join style on iOS. closes: [#3691](https://github.com/saadeghi/daisyui/issues/3691) ([5afa08c](https://github.com/saadeghi/daisyui/commit/5afa08c387e95486bf83da94ec026d95d0b40b25))
+* Join style on iOS. closes: [#3691](https://github.com/duskmoon-dev/duskmoon-ui/issues/3691) ([5afa08c](https://github.com/duskmoon-dev/duskmoon-ui/commit/5afa08c387e95486bf83da94ec026d95d0b40b25))
 
 ## 5.0.8 (2025-03-21)
 
 
 ### Bug Fixes
 
-* alert unwanted gap if there's one child only. closes: [#3702](https://github.com/saadeghi/daisyui/issues/3702) ([6d3eb06](https://github.com/saadeghi/daisyui/commit/6d3eb068dd8e69543d1388b919e20604ee4cd4a0))
+* alert unwanted gap if there's one child only. closes: [#3702](https://github.com/duskmoon-dev/duskmoon-ui/issues/3702) ([6d3eb06](https://github.com/duskmoon-dev/duskmoon-ui/commit/6d3eb068dd8e69543d1388b919e20604ee4cd4a0))
 
 ## 5.0.7 (2025-03-21)
 
@@ -295,28 +295,28 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* badge color ([56390f5](https://github.com/saadeghi/daisyui/commit/56390f5ec32188643b8c2f83033c3175ab424c64))
+* badge color ([56390f5](https://github.com/duskmoon-dev/duskmoon-ui/commit/56390f5ec32188643b8c2f83033c3175ab424c64))
 
 ## 5.0.5 (2025-03-17)
 
 
 ### Bug Fixes
 
-* fix: Floating labels font sizes. closes: [#3676](https://github.com/saadeghi/daisyui/issues/3676)
-* fix: . select > select caret. closes: [#3613](https://github.com/saadeghi/daisyui/issues/3613)
-* fix: theme generator untrimmed color issue. closes: [#3636](https://github.com/saadeghi/daisyui/issues/3636)
-* fix: btn-active working with Tailwind variant prefixes. closes: [#3652](https://github.com/saadeghi/daisyui/issues/3652)
-* fix: badge-outline border-* override. closes: [#3657](https://github.com/saadeghi/daisyui/issues/3657)
-* fix: Swap Indeterminate rotate style. closes: [#3678](https://github.com/saadeghi/daisyui/issues/3678)
-* fix: hero-content isolation issue. closes: [#3682](https://github.com/saadeghi/daisyui/issues/3682)
-* fix: checked button style for outline and dash. closes: [#3591](https://github.com/saadeghi/daisyui/issues/3591)
+* fix: Floating labels font sizes. closes: [#3676](https://github.com/duskmoon-dev/duskmoon-ui/issues/3676)
+* fix: . select > select caret. closes: [#3613](https://github.com/duskmoon-dev/duskmoon-ui/issues/3613)
+* fix: theme generator untrimmed color issue. closes: [#3636](https://github.com/duskmoon-dev/duskmoon-ui/issues/3636)
+* fix: btn-active working with Tailwind variant prefixes. closes: [#3652](https://github.com/duskmoon-dev/duskmoon-ui/issues/3652)
+* fix: badge-outline border-* override. closes: [#3657](https://github.com/duskmoon-dev/duskmoon-ui/issues/3657)
+* fix: Swap Indeterminate rotate style. closes: [#3678](https://github.com/duskmoon-dev/duskmoon-ui/issues/3678)
+* fix: hero-content isolation issue. closes: [#3682](https://github.com/duskmoon-dev/duskmoon-ui/issues/3682)
+* fix: checked button style for outline and dash. closes: [#3591](https://github.com/duskmoon-dev/duskmoon-ui/issues/3591)
 * fix: fieldset-label cursor
 
 ## 5.0.4 (2025-03-14)
 
 * fix: prevent duplicate theme to be added if there's only one default theme - improves CSS size for single theme sites.
-* fix: select in `<label>` double caret. closes: [#3613](https://github.com/saadeghi/daisyui/issues/3613)
-* fix: dialog does not put focus on first focusable element. closes: [#3440](https://github.com/saadeghi/daisyui/issues/3440)
+* fix: select in `<label>` double caret. closes: [#3613](https://github.com/duskmoon-dev/duskmoon-ui/issues/3613)
+* fix: dialog does not put focus on first focusable element. closes: [#3440](https://github.com/duskmoon-dev/duskmoon-ui/issues/3440)
 
 
 ## 5.0.3 (2025-03-12)
@@ -333,30 +333,30 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-* tailwindplay issue ([24cd382](https://github.com/saadeghi/daisyui/commit/24cd382bece0f072c220c51b966c56677d8ab10a))
+* tailwindplay issue ([24cd382](https://github.com/duskmoon-dev/duskmoon-ui/commit/24cd382bece0f072c220c51b966c56677d8ab10a))
 
 ## 5.0.1 (2025-03-11)
 
 ### Bug Fixes
 
-* bug: (v5) I can't override inline the font-size of a button without using important. closes: [#3641](https://github.com/saadeghi/daisyui/issues/3641)
-* bug: text content in the alert component isn't responsive. closes: [#3638](https://github.com/saadeghi/daisyui/issues/3638)
-* bug: code in prose (typography plugin) is not styled by daisy. closes: [#3631](https://github.com/saadeghi/daisyui/issues/3631)
-* bug: Modal looses backdrop transition after build. closes: [#3628](https://github.com/saadeghi/daisyui/issues/3628)
-* bug: (v5) unintended outline when using join and radio button. closes: [#3615](https://github.com/saadeghi/daisyui/issues/3615)
-* bug: fieldset + select + icon. closes: [#3613](https://github.com/saadeghi/daisyui/issues/3613)
-* bug: (v5) Text opacity and custom fonts not working in daisyUI v5 CDN version. closes: [#3612](https://github.com/saadeghi/daisyui/issues/3612)
-* bug: "join" applies incorrect border radius when used with a single item. closes: [#3611](https://github.com/saadeghi/daisyui/issues/3611)
-* bug: (v5) Button colors do not play well with typography. closes: [#3606](https://github.com/saadeghi/daisyui/issues/3606)
-* bug: (v5) Collapse uses variable --rounded-box but it should use --radius-box. closes: [#3600](https://github.com/saadeghi/daisyui/issues/3600)
-* bug: Deno requires with attribute on import. closes: [#3597](https://github.com/saadeghi/daisyui/issues/3597)
-* bug: The development guides does not work on Windows machine. closes: [#3567](https://github.com/saadeghi/daisyui/issues/3567)
-* docs: Badge component code highlight error. closes: [#3627](https://github.com/saadeghi/daisyui/issues/3627)
-* docs: Add warning about Modal placement inside Dropdown components. closes: [#3616](https://github.com/saadeghi/daisyui/issues/3616)
+* bug: (v5) I can't override inline the font-size of a button without using important. closes: [#3641](https://github.com/duskmoon-dev/duskmoon-ui/issues/3641)
+* bug: text content in the alert component isn't responsive. closes: [#3638](https://github.com/duskmoon-dev/duskmoon-ui/issues/3638)
+* bug: code in prose (typography plugin) is not styled by daisy. closes: [#3631](https://github.com/duskmoon-dev/duskmoon-ui/issues/3631)
+* bug: Modal looses backdrop transition after build. closes: [#3628](https://github.com/duskmoon-dev/duskmoon-ui/issues/3628)
+* bug: (v5) unintended outline when using join and radio button. closes: [#3615](https://github.com/duskmoon-dev/duskmoon-ui/issues/3615)
+* bug: fieldset + select + icon. closes: [#3613](https://github.com/duskmoon-dev/duskmoon-ui/issues/3613)
+* bug: (v5) Text opacity and custom fonts not working in duskmoonui v5 CDN version. closes: [#3612](https://github.com/duskmoon-dev/duskmoon-ui/issues/3612)
+* bug: "join" applies incorrect border radius when used with a single item. closes: [#3611](https://github.com/duskmoon-dev/duskmoon-ui/issues/3611)
+* bug: (v5) Button colors do not play well with typography. closes: [#3606](https://github.com/duskmoon-dev/duskmoon-ui/issues/3606)
+* bug: (v5) Collapse uses variable --rounded-box but it should use --radius-box. closes: [#3600](https://github.com/duskmoon-dev/duskmoon-ui/issues/3600)
+* bug: Deno requires with attribute on import. closes: [#3597](https://github.com/duskmoon-dev/duskmoon-ui/issues/3597)
+* bug: The development guides does not work on Windows machine. closes: [#3567](https://github.com/duskmoon-dev/duskmoon-ui/issues/3567)
+* docs: Badge component code highlight error. closes: [#3627](https://github.com/duskmoon-dev/duskmoon-ui/issues/3627)
+* docs: Add warning about Modal placement inside Dropdown components. closes: [#3616](https://github.com/duskmoon-dev/duskmoon-ui/issues/3616)
 
 ## 5.0.0
 
-> This is the detailed list of changes per component. Most of these changes won't affect your project, so if you want to learn about the breaking changes only, [check out the daisyUI 5 release notes](/docs/v5/)
+> This is the detailed list of changes per component. Most of these changes won't affect your project, so if you want to learn about the breaking changes only, [check out the duskmoonui 5 release notes](/docs/v5/)
 
 ### Alert
 
@@ -406,7 +406,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - <div class="avatar online">
 + <div class="avatar avatar-online">
   <div class="w-24 rounded-full">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```
@@ -414,7 +414,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - <div class="avatar offline">
 + <div class="avatar avatar-offline">
   <div class="w-24 rounded-full">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```
@@ -534,11 +534,11 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - <figure class="diff aspect-16/9">
 + <figure class="diff aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img">
-    <img alt="image 1" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
+    <img alt="image 1" src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
   </div>
 -  <div class="diff-item-2" role="img">
 +  <div class="diff-item-2" role="img" tabindex="0">
-    <img alt="image 2" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
+    <img alt="image 2" src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
   <div class="diff-resizer"></div>
 </figure>
@@ -660,7 +660,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 ### Mask
 
 🗑️ Removals
-- **Breaking Change:** Removed `mask-parallelogram`, `mask-parallelogram-2`, `mask-parallelogram-3`, and `mask-parallelogram-4`. These mask styles are no longer included in the library. If you need them, [manually use the CSS](https://github.com/saadeghi/daisyui/blob/ff313a45cea023c852903138ea032ac2d0a217f4/src/components/styled/mask.css#L23)
+- **Breaking Change:** Removed `mask-parallelogram`, `mask-parallelogram-2`, `mask-parallelogram-3`, and `mask-parallelogram-4`. These mask styles are no longer included in the library. If you need them, [manually use the CSS](https://github.com/duskmoon-dev/duskmoon-ui/blob/ff313a45cea023c852903138ea032ac2d0a217f4/src/components/styled/mask.css#L23)
 
 ### Menu
 
@@ -895,7 +895,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 ### Typography
 
 🔧 Changes
-- daisyUI now only applies colors to `@tailwindcss/typography` plugin, not other modifications like padding. You can customize those according to [`@tailwindcss/typography` config](https://github.com/tailwindlabs/tailwindcss-typography) If you want other modifications from v4, [Here's the CSS](https://github.com/saadeghi/daisyui/blob/ff313a45cea023c852903138ea032ac2d0a217f4/src/components/styled/typography.css#L1)
+- duskmoonUI now only applies colors to `@tailwindcss/typography` plugin, not other modifications like padding. You can customize those according to [`@tailwindcss/typography` config](https://github.com/tailwindlabs/tailwindcss-typography) If you want other modifications from v4, [Here's the CSS](https://github.com/duskmoon-dev/duskmoon-ui/blob/ff313a45cea023c852903138ea032ac2d0a217f4/src/components/styled/typography.css#L1)
 
 ### Other removals
 

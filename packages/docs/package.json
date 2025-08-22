@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "name": "daisyui-docs",
+  "name": "duskmoonui-docs",
   "engines": {
     "node": ">=20.18.1"
   },
@@ -19,7 +19,7 @@
     "@sveltejs/kit": "2.20.2",
     "@sveltejs/vite-plugin-svelte": "5.0.3",
     "@tailwindcss/typography": "0.5.16",
-    "daisyui": "workspace:*",
+    "duskmoonui": "workspace:*",
     "json-diff": "1.0.6",
     "mdsvex": "0.12.3",
     "rehype-external-links": "3.0.0",

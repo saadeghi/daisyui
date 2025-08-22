@@ -1,10 +1,10 @@
 ---
 title: The most common mistake when using Tailwind CSS (and how to fix it)
-desc: While working on daisyUI, I see a lot of people making this mistake when using Tailwind CSS.
+desc: While working on duskmoonUI, I see a lot of people making this mistake when using Tailwind CSS.
 published: true
 date: 2023-9-14
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/tailwind-mistake.webp
+thumbnail: https://img.duskmoonui.com/images/blog/tailwind-mistake.webp
 tags:
   - Guides
 ---
@@ -13,7 +13,7 @@ tags:
   import Translate from "$components/Translate.svelte"
 </script>
 
-As a maintainer of daisyUI, I help people on GitHub issues and GitHub discussions every day. I see a lot of people making this mistake when using Tailwind CSS. It's so simple to avoid but I find it so common among developers.
+As a maintainer of duskmoonUI, I help people on GitHub issues and GitHub discussions every day. I see a lot of people making this mistake when using Tailwind CSS. It's so simple to avoid but I find it so common among developers.
 
 ## The mistake
 
@@ -31,7 +31,7 @@ However it would be cool if we do some totally necessary engineering and make it
 <div class="bg-{{ color }}-500"></div>
 ```
 
-You might even want to do the same thing with daisyUI class names:
+You might even want to do the same thing with duskmoonUI class names:
 
 ```html
 <div class="btn btn-{{ type }}"></div>

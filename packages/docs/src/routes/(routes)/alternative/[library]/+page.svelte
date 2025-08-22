@@ -25,11 +25,11 @@
 </script>
 
 <SEO
-  title="{data.library.name} Alternative in {new Date().getFullYear()} - Why daisyUI is better?"
+  title="{data.library.name} Alternative in {new Date().getFullYear()} - Why duskmoonUI is better?"
   desc="Looking for a {data.library
-    .name} alternative? daisyUI is the best CSS components library and a better alternative to {data
+    .name} alternative? duskmoonUI is the best CSS components library and a better alternative to {data
     .library
-    .name}. Compare features, size, and performance to see why developers choose daisyUI over {data
+    .name}. Compare features, size, and performance to see why developers choose duskmoonUI over {data
     .library.name}."
   keywords={seoKeywords.join(", ")}
 />
@@ -45,7 +45,7 @@
     <div
       class="bg-base-100 flex size-24 -rotate-5 items-center rounded-full p-4 align-middle shadow-2xl outline-4 outline-offset-6 outline-black/5 lg:size-48"
     >
-      {@html data.daisyui.logo}
+      {@html data.duskmoonui.logo}
     </div>
     <div
       class="bg-base-300 flex size-16 translate-y-[7%] rotate-5 items-center rounded-full p-4 align-middle outline-2 outline-offset-6 outline-black/0 blur-[0.5px] grayscale lg:size-32"
@@ -56,11 +56,11 @@
   <p class="text-base-content/80 mb-4 text-lg italic">
     <a
       class="link badge text-base-content/60 link-hover text-xs"
-      href={`/compare/${data.library.key}-vs-daisyui`}>Compare {data.library.name} with daisyUI</a
+      href={`/compare/${data.library.key}-vs-duskmoonui`}>Compare {data.library.name} with duskmoonUI</a
     >
   </p>
   <h1 class="font-title text-3xl font-bold lg:text-4xl">
-    daisyUI is a better {data.library.name} Alternative
+    duskmoonUI is a better {data.library.name} Alternative
   </h1>
   <div class="h-6"></div>
   <p class="text-base-content/70 mb-8 text-lg italic">
@@ -70,7 +70,7 @@
     {data.library.intro}
   </p>
   <p class="text-base-content/70 mb-8 text-lg">
-    {data.daisyui.intro}
+    {data.duskmoonui.intro}
   </p>
 
   <div class="h-16"></div>
@@ -86,7 +86,7 @@
       {#if section.attributes?.length}
         <div class="grid gap-8">
           {#each section.attributes as attribute}
-            {#if data.library.attributes[attribute] && data.daisyui.attributes[attribute]}
+            {#if data.library.attributes[attribute] && data.duskmoonui.attributes[attribute]}
               <div class="card bg-base-200">
                 <div class="card-body">
                   <h3 class="card-title mb-2">{attribute}</h3>
@@ -94,9 +94,9 @@
                     <div>
                       <div class="text-green-500">
                         <span class="rounded-lg border-2 px-4 py-1 text-2xl font-semibold">
-                          {formatValue(data.daisyui.attributes[attribute].value)}
+                          {formatValue(data.duskmoonui.attributes[attribute].value)}
                         </span>
-                        <div class="text-base-content/60 mt-2 text-sm">daisyUI</div>
+                        <div class="text-base-content/60 mt-2 text-sm">duskmoonUI</div>
                       </div>
                     </div>
                     <div>
@@ -111,7 +111,7 @@
                     </div>
                   </div>
                   <p class="text-base-content/60 mt-4 text-sm">
-                    {data.daisyui.attributes[attribute].desc}
+                    {data.duskmoonui.attributes[attribute].desc}
                   </p>
                 </div>
               </div>
@@ -124,18 +124,18 @@
 
   <section class="mb-20">
     <h2 class="font-title mb-8 text-2xl font-semibold lg:text-3xl">
-      Why daisyUI is better than {data.library.name}
+      Why duskmoonUI is better than {data.library.name}
     </h2>
     <p class="text-base-content/70 mb-8 text-lg">
       {data.library.nottouse}
     </p>
     <p class="text-base-content/70 mb-8 text-lg">
-      {data.daisyui.touse}
+      {data.duskmoonui.touse}
     </p>
   </section>
 
   <div class="h-16"></div>
-  <h2 class="font-title text-3xl font-semibold">Install daisyUI</h2>
+  <h2 class="font-title text-3xl font-semibold">Install duskmoonUI</h2>
   <div class="h-8"></div>
   <Install />
   <div class="h-8"></div>

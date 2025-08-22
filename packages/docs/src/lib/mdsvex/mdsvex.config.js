@@ -128,7 +128,7 @@ const remarkPlugins = [
   replacePlaceholders,
   remarkRenderComponent,
   remarkTranslate,
-  [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
+  [remarkGithub, { repository: "https://github.com/duskmoon-dev/duskmoon-ui" }],
   [
     remarkCodeTitles,
     {

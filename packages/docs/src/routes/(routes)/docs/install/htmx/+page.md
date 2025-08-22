@@ -1,6 +1,6 @@
 ---
-title: Use daisyUI with HTMX
-desc: How to install and use daisyUI with HTMX
+title: Use duskmoonUI with HTMX
+desc: How to install and use duskmoonUI with HTMX
 ---
 
 <script>
@@ -9,27 +9,27 @@ desc: How to install and use daisyUI with HTMX
 
 > :INFO:
 >
-> This guide uses daisyUI as a Node.js dependency. If you don't want to use Node.js, try the [CDN version of daisyUI](/docs/cdn/).
+> This guide uses duskmoonUI as a Node.js dependency. If you don't want to use Node.js, try the [CDN version of duskmoonUI](/docs/cdn/).
 
 ### 1. Install
 
 Initialize a new Node project in the current directory using `npm init -y` if it's not a Node project already.
 
-Install Tailwind CSS CLI and daisyUI
+Install Tailwind CSS CLI and duskmoonUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/cli@latest daisyui@latest
+npm install tailwindcss@latest @tailwindcss/cli@latest duskmoonui@latest
 ```
 
-### 2. Add Tailwind CSS and daisyUI
+### 2. Add Tailwind CSS and duskmoonUI
 
-Add Tailwind CSS and daisyUI to your CSS file.  
+Add Tailwind CSS and duskmoonUI to your CSS file.
 Address your HTML and other markup files in the `source` function.
   
 ```postcss:app.css
 @import "tailwindcss" source(none);
 @source "./public/*.{html,js}";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 ### 3. Build CSS
@@ -55,4 +55,4 @@ This command creates a `public/output.css` file with the compiled CSS. You can l
 <link href="./output.css" rel="stylesheet">
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

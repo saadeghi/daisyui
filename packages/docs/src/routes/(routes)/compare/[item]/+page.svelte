@@ -85,7 +85,7 @@
 </script>
 
 <SEO
-  title={`${data.first.name} vs ${data.second.name} - daisyUI is a ${data.first.name} alternative`}
+  title={`${data.first.name} vs ${data.second.name} - duskmoonUI is a ${data.first.name} alternative`}
   desc={`Comparison between ${data.first.name} and ${data.second.name}`}
 />
 
@@ -122,8 +122,8 @@
   <div class="h-6"></div>
   <p class="font-title text-base-content/60 mx-auto max-w-xl text-center text-sm">
     Looking for a <a
-      href={`/alternative/${data.first.key === "daisyui" ? data.second.key : data.first.key}`}
-      >{data.first.key === "daisyui" ? data.second.name : data.first.name} alternative</a
+      href={`/alternative/${data.first.key === "duskmoonui" ? data.second.key : data.first.key}`}
+      >{data.first.key === "duskmoonui" ? data.second.name : data.first.name} alternative</a
     >? This page compares {data.first.name}
     and {data.second.name}, two popular UI component libraries. We are comparing features, size,
     efficiency and usage data to help you choose which component library is better for your next
@@ -223,16 +223,16 @@
           <div
             class="from-base-content/10 rounded-box mt-16 flex flex-col items-center gap-2 bg-linear-10 from-[-25%] to-[75%] py-16 text-center"
           >
-            {#if data.first.key !== "daisyui" && data.second.key !== "daisyui"}
+            {#if data.first.key !== "duskmoonui" && data.second.key !== "duskmoonui"}
               <div class="mb-6 flex items-center gap-1 md:gap-6">
                 <div class="flex size-10 items-center">{@html data.first.logo}</div>
                 <span class="text-error">vs</span>
                 <div class="flex size-10 items-center">
-                  {@html libraries.find((lib) => lib.key === "daisyui").logo}
+                  {@html libraries.find((lib) => lib.key === "duskmoonui").logo}
                 </div>
               </div>
-              <a href="/compare/{data.first.key}-vs-daisyui" class="btn btn-xs md:btn-sm">
-                Compare {data.first.name} vs daisyUI
+              <a href="/compare/{data.first.key}-vs-duskmoonui" class="btn btn-xs md:btn-sm">
+                Compare {data.first.name} vs duskmoonUI
               </a>
             {:else}
               <div
@@ -247,16 +247,16 @@
           <div
             class="from-base-content/10 rounded-box mt-16 flex flex-col items-center gap-2 -bg-linear-10 from-[-25%] to-[75%] py-16 text-center"
           >
-            {#if data.first.key !== "daisyui" && data.second.key !== "daisyui"}
+            {#if data.first.key !== "duskmoonui" && data.second.key !== "duskmoonui"}
               <div class="mb-6 flex items-center gap-1 md:gap-6">
                 <div class="flex size-10 items-center">
-                  {@html libraries.find((lib) => lib.key === "daisyui").logo}
+                  {@html libraries.find((lib) => lib.key === "duskmoonui").logo}
                 </div>
                 <span class="text-error">vs</span>
                 <div class="flex size-10 items-center">{@html data.second.logo}</div>
               </div>
-              <a href="/compare/daisyui-vs-{data.second.key}" class="btn btn-xs md:btn-sm">
-                Compare daisyUI vs {data.second.name}
+              <a href="/compare/duskmoonui-vs-{data.second.key}" class="btn btn-xs md:btn-sm">
+                Compare duskmoonUI vs {data.second.name}
               </a>
             {:else}
               <div
@@ -271,7 +271,7 @@
     </tfoot>
   </table>
   <div class="h-64"></div>
-  <h2 class="font-title text-3xl font-semibold">Install daisyUI</h2>
+  <h2 class="font-title text-3xl font-semibold">Install duskmoonUI</h2>
   <div class="h-8"></div>
   <Install />
   <div class="h-8"></div>

@@ -19,7 +19,7 @@ classnames:
 ### ~browser mockup with border
 <div class="mockup-browser border border-base-300 w-full">
   <div class="mockup-browser-toolbar">
-    <div class="input">https://daisyui.com</div>
+    <div class="input">https://duskmoonui.com</div>
   </div>
   <div class="grid place-content-center border-t border-base-300 h-80">Hello!</div>
 </div>
@@ -27,7 +27,7 @@ classnames:
 ```html
 <div class="$$mockup-browser border-base-300 border w-full">
   <div class="$$mockup-browser-toolbar">
-    <div class="$$input">https://daisyui.com</div>
+    <div class="$$input">https://duskmoonui.com</div>
   </div>
   <div class="grid place-content-center border-t border-base-300 h-80">Hello!</div>
 </div>
@@ -37,7 +37,7 @@ classnames:
 ### ~browser mockup with background color
 <div class="mockup-browser bg-base-100 w-full border border-base-300">
   <div class="mockup-browser-toolbar">
-    <div class="input">https://daisyui.com</div>
+    <div class="input">https://duskmoonui.com</div>
   </div>
   <div class="grid place-content-center h-80">Hello!</div>
 </div>
@@ -45,7 +45,7 @@ classnames:
 ```html
 <div class="$$mockup-browser border border-base-300 w-full">
   <div class="$$mockup-browser-toolbar">
-    <div class="$$input">https://daisyui.com</div>
+    <div class="$$input">https://duskmoonui.com</div>
   </div>
   <div class="grid place-content-center h-80">Hello!</div>
 </div>

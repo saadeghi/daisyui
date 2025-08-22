@@ -176,7 +176,7 @@
   })()
 </script>
 
-<SEO title={`${data.product.title} - daisyUI Store`} desc={data.product.desc} />
+<SEO title={`${data.product.title} - duskmoonUI Store`} desc={data.product.desc} />
 
 <div>
   <a class="btn btn-ghost group" href="/store/" data-sveltekit-preload-data>
@@ -580,7 +580,7 @@
               <div class="tooltip" data-tip={data.tech[tech]}>
                 <img
                   class="size-6 lg:size-8"
-                  src={`https://img.daisyui.com/images/logos/${tech}.svg`}
+                  src={`https://img.duskmoonui.com/images/logos/${tech}.svg`}
                   alt={tech}
                 />
               </div>
@@ -827,7 +827,7 @@
       </h2>
       <p class="text-base-content/60 text-xs">
         If you have any questions before purchase
-        <br />send me an email to pouya@daisyui.com
+        <br />send me an email to pouya@duskmoonui.com
         <br />I will do my best to help you.
       </p>
     </div>

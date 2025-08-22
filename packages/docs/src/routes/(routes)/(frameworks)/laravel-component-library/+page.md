@@ -1,6 +1,6 @@
 ---
 title: Laravel component library
-desc: daisyUI is the best Tailwind CSS component library for Laravel projects
+desc: duskmoonUI is the best Tailwind CSS component library for Laravel projects
 layout: contentLanding
 ---
 
@@ -13,7 +13,7 @@ layout: contentLanding
 <div class="mx-auto not-prose max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
 <div class="max-w-96 items-center w-full grid grid-cols-2 gap-6 lg:gap-12 [&>svg]:w-full [&>svg]:h-auto mx-auto">
 {@html data.frameworksData.find(item => item.name === "Laravel")?.logo}
-<img class="w-full h-auto" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="Best Laravel component library" />
+<img class="w-full h-auto" src="https://img.duskmoonui.com/images/duskmoonui/mark-static.svg" alt="Best Laravel component library" />
 </div>
 </div>
 
@@ -27,19 +27,19 @@ The framework follows the MVC pattern and provides tools for every aspect of mod
 
 What truly sets Laravel apart is its Blade templating engine, which combines the familiarity of PHP with convenient shortcuts and powerful directives, making front-end development feel natural even to back-end developers.
 
-## Laravel + daisyUI
+## Laravel + duskmoonUI
 
-As a Laravel developer, I've found daisyUI to be an exceptional Tailwind CSS component library that perfectly complements Laravel's elegant design philosophy.
+As a Laravel developer, I've found duskmoonUI to be an exceptional Tailwind CSS component library that perfectly complements Laravel's elegant design philosophy.
 
 Here's why this combination works so well in practice:
 
-- **Blade template harmony**: daisyUI's semantic class names like `card` and `btn-primary` integrate beautifully with Laravel's Blade templates, keeping your markup clean and readable.
+- **Blade template harmony**: duskmoonUI's semantic class names like `card` and `btn-primary` integrate beautifully with Laravel's Blade templates, keeping your markup clean and readable.
 
 - **Theme switching made easy**: The library's 35+ built-in themes pair perfectly with Laravel's session management, making theme switching functionality simple to implement.
 
-- **Full-stack performance**: Being pure CSS with zero JavaScript dependencies, daisyUI keeps your front end lightweight while letting Laravel handle complex back-end operations.
+- **Full-stack performance**: Being pure CSS with zero JavaScript dependencies, duskmoonUI keeps your front end lightweight while letting Laravel handle complex back-end operations.
 
-- **Fast prototyping**: Just as Laravel accelerates back-end development, daisyUI speeds up UI creation, allowing you to build complete features in record time.
+- **Fast prototyping**: Just as Laravel accelerates back-end development, duskmoonUI speeds up UI creation, allowing you to build complete features in record time.
 
 This powerful combination gives Laravel developers everything they need to create beautiful, performant full-stack applications without compromise.
 
@@ -47,14 +47,14 @@ This powerful combination gives Laravel developers everything they need to creat
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 
-## Install Tailwind CSS and daisyUI for Laravel
+## Install Tailwind CSS and duskmoonUI for Laravel
 
-Setting up daisyUI in your Laravel project is refreshingly simple.
+Setting up duskmoonUI in your Laravel project is refreshingly simple.
 
-First, create your Laravel project using Composer if you haven't already. Laravel's modern front-end stack makes integrating Tailwind CSS and daisyUI straightforward.
+First, create your Laravel project using Composer if you haven't already. Laravel's modern front-end stack makes integrating Tailwind CSS and duskmoonUI straightforward.
 
-You can use either Laravel Mix or Vite (recommended for newer projects) to compile your assets. Install Tailwind CSS following Laravel's official documentation, then add daisyUI as a Tailwind plugin with minimal configuration.
+You can use either Laravel Mix or Vite (recommended for newer projects) to compile your assets. Install Tailwind CSS following Laravel's official documentation, then add duskmoonUI as a Tailwind plugin with minimal configuration.
 
-Once set up, you can immediately start using daisyUI's component classes directly in your Blade templates, creating beautiful interfaces that perfectly complement Laravel's back-end capabilities.
+Once set up, you can immediately start using duskmoonUI's component classes directly in your Blade templates, creating beautiful interfaces that perfectly complement Laravel's back-end capabilities.
 
-For detailed, Laravel-specific installation instructions and best practices, check out our comprehensive guide: [How to install daisyUI with Laravel](/docs/install/laravel/).
+For detailed, Laravel-specific installation instructions and best practices, check out our comprehensive guide: [How to install duskmoonUI with Laravel](/docs/install/laravel/).

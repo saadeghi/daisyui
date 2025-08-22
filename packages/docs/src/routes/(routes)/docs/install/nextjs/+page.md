@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Next.js
-desc: How to install Tailwind CSS and daisyUI in a Next.js project
+title: Install duskmoonUI for Next.js
+desc: How to install Tailwind CSS and duskmoonUI in a Next.js project
 ---
 
 <script>
@@ -15,13 +15,13 @@ Create a new Next.js project in the current directory
 npm create next-app@latest ./
 ```
 
-### 2. Install Tailwind CSS and daisyUI
+### 2. Install Tailwind CSS and duskmoonUI
 
 ```sh:Terminal
-npm install tailwindcss @tailwindcss/postcss daisyui@latest
+npm install tailwindcss @tailwindcss/postcss duskmoonui@latest
 ```
 
-### 3. Add Tailwind CSS and daisyUI
+### 3. Add Tailwind CSS and duskmoonUI
 
 Add Tailwind CSS to your PostCSS config file
 
@@ -35,11 +35,11 @@ const config = {
 export default config;
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
   
 ```postcss:app/globals.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

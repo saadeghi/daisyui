@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>daisyUI Report Logs</title>
+    <title>duskmoonUI Report Logs</title>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" defer></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
@@ -21,8 +21,8 @@
         />
         <pre>
 <span x-text="timeago.format(reports[currentIndex]?.timestamp)" :title="reports[currentIndex]?.timestamp"></span>
-daisyui.css <span x-text="getFullCssSize() +'B'"></span>
-daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
+duskmoonui.css <span x-text="getFullCssSize() +'B'"></span>
+duskmoonui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
             </pre>
       </div>
       <div class="charts-grid">
@@ -107,13 +107,13 @@ daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
         Alpine.data("reportData", () => ({
           getFullCssSize() {
             const report = this.reports[this.currentIndex]
-            const fullCssData = report.data.find((item) => item.file.includes("daisyui.css"))
+            const fullCssData = report.data.find((item) => item.file.includes("duskmoonui.css"))
             return fullCssData ? fullCssData.raw : 0
           },
 
           getFullCssBrotliSize() {
             const report = this.reports[this.currentIndex]
-            const fullCssData = report.data.find((item) => item.file.includes("daisyui.css"))
+            const fullCssData = report.data.find((item) => item.file.includes("duskmoonui.css"))
             return fullCssData ? fullCssData.brotli : 0
           },
 
@@ -131,7 +131,7 @@ daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
           maxValues: {},
           allFiles: new Set(),
           excludedFiles: [
-            "daisyui.css",
+            "duskmoonui.css",
             "colors/responsive.css",
             "colors/states.css",
             "themes",
@@ -247,7 +247,7 @@ daisyui brt <span x-text="getFullCssBrotliSize() +'B'"></span>
               const layout = getChartLayout(chart, this.allFiles, this.maxValues)
               Plotly.react("chart-" + index, newData, layout)
             })
-            // Trigger re-evaluation of daisyui.css size
+            // Trigger re-evaluation of duskmoonui.css size
             this.$nextTick(() => {
               this.getFullCssSize()
               this.getFullCssBrotliSize()

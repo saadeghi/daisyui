@@ -92,7 +92,7 @@ const checkIsDaisyUIBetter = (attribute, attributeRules, daisyValueDef, otherVal
   return false
 }
 
-const generateComparisonText = (type, isBetter, daisyUIData, libraryData, stringsData, index) => {
+const generateComparisonText = (type, isBetter, duskmoonUIData, libraryData, stringsData, index) => {
   const texts = stringsData[type]
   if (!texts) {
     console.error(`Missing strings for type: ${type} in YAML`)
@@ -127,7 +127,7 @@ const generateComparisonText = (type, isBetter, daisyUIData, libraryData, string
     "{depsCount}": libraryData.attributes?.Dependencies?.value ?? "N/A",
     "{otherJSSize}": libraryData.attributes?.["JavaScript size"]?.value ?? "N/A",
     "{otherFrameworks}": libraryData.attributes?.Frameworks?.value ?? "specific frameworks",
-    "{daisyThemes}": daisyUIData.attributes?.["Built-in Themes"]?.value ?? "many",
+    "{daisyThemes}": duskmoonUIData.attributes?.["Built-in Themes"]?.value ?? "many",
     "{otherThemes}": libraryData.attributes?.["Built-in Themes"]?.value ?? "few",
   }
 
@@ -141,23 +141,23 @@ const generateComparisonText = (type, isBetter, daisyUIData, libraryData, string
   return text
 }
 
-const generateAllComparisons = (daisyUIData, libraryData, stringsData, index, attributeRules) => {
+const generateAllComparisons = (duskmoonUIData, libraryData, stringsData, index, attributeRules) => {
   const getSafeValue = (data, attribute) => data?.attributes?.[attribute] // Return the whole definition
 
-  const daisyUIStarsDef = getSafeValue(daisyUIData, "GitHub stars")
+  const duskmoonUIStarsDef = getSafeValue(duskmoonUIData, "GitHub stars")
   const libraryStarsDef = getSafeValue(libraryData, "GitHub stars")
-  const daisyUIDownloadsDef = getSafeValue(daisyUIData, "NPM downloads")
+  const duskmoonUIDownloadsDef = getSafeValue(duskmoonUIData, "NPM downloads")
   const libraryDownloadsDef = getSafeValue(libraryData, "NPM downloads")
-  const daisyUIComponentsDef = getSafeValue(daisyUIData, "Unique components")
+  const duskmoonUIComponentsDef = getSafeValue(duskmoonUIData, "Unique components")
   const libraryComponentsDef = getSafeValue(libraryData, "Unique components")
-  const daisyUIDepsDef = getSafeValue(daisyUIData, "Dependencies")
+  const duskmoonUIDepsDef = getSafeValue(duskmoonUIData, "Dependencies")
   const libraryDepsDef = getSafeValue(libraryData, "Dependencies")
 
   return {
     stars: generateComparisonText(
       "stars",
-      checkIsDaisyUIBetter("GitHub stars", attributeRules, daisyUIStarsDef, libraryStarsDef),
-      daisyUIData,
+      checkIsDaisyUIBetter("GitHub stars", attributeRules, duskmoonUIStarsDef, libraryStarsDef),
+      duskmoonUIData,
       libraryData,
       stringsData,
       index,
@@ -167,10 +167,10 @@ const generateAllComparisons = (daisyUIData, libraryData, stringsData, index, at
       checkIsDaisyUIBetter(
         "NPM downloads",
         attributeRules,
-        daisyUIDownloadsDef,
+        duskmoonUIDownloadsDef,
         libraryDownloadsDef,
       ),
-      daisyUIData,
+      duskmoonUIData,
       libraryData,
       stringsData,
       index,
@@ -180,18 +180,18 @@ const generateAllComparisons = (daisyUIData, libraryData, stringsData, index, at
       checkIsDaisyUIBetter(
         "Unique components",
         attributeRules,
-        daisyUIComponentsDef,
+        duskmoonUIComponentsDef,
         libraryComponentsDef,
       ),
-      daisyUIData,
+      duskmoonUIData,
       libraryData,
       stringsData,
       index,
     ),
     dependencies: generateComparisonText(
       "dependencies",
-      checkIsDaisyUIBetter("Dependencies", attributeRules, daisyUIDepsDef, libraryDepsDef),
-      daisyUIData,
+      checkIsDaisyUIBetter("Dependencies", attributeRules, duskmoonUIDepsDef, libraryDepsDef),
+      duskmoonUIData,
       libraryData,
       stringsData,
       index,
@@ -253,7 +253,7 @@ const validateStringsData = (stringsData) => {
 
 const defineSections = (
   overviewText,
-  daisyUIData,
+  duskmoonUIData,
   libraryData,
   stringsData,
   maxVariants,
@@ -262,7 +262,7 @@ const defineSections = (
   attributeRules, // New parameter
 ) => {
   const comparisons = generateAllComparisons(
-    daisyUIData,
+    duskmoonUIData,
     libraryData,
     stringsData,
     variantIndex,
@@ -339,12 +339,12 @@ const defineSections = (
   ]
 }
 
-const filterSections = (sections, daisyUIData, libraryData, attributeRules, isBetterFunc) => {
+const filterSections = (sections, duskmoonUIData, libraryData, attributeRules, isBetterFunc) => {
   return sections
     .map((section) => {
       const sectionAttributes = Array.isArray(section.attributes) ? section.attributes : []
       const attributesWhereDaisyIsBetter = sectionAttributes.filter((attr) => {
-        const daisyAttr = daisyUIData.attributes?.[attr]
+        const daisyAttr = duskmoonUIData.attributes?.[attr]
         const libraryAttr = libraryData.attributes?.[attr]
         // Ensure both attributes exist before comparing
         return (
@@ -354,11 +354,11 @@ const filterSections = (sections, daisyUIData, libraryData, attributeRules, isBe
         )
       })
 
-      // Keep section if it's overview OR if daisyUI is better in at least one attribute
+      // Keep section if it's overview OR if duskmoonUI is better in at least one attribute
       return attributesWhereDaisyIsBetter.length > 0 || section.id === "overview"
         ? {
             ...section,
-            // Show only attributes where daisyUI is better
+            // Show only attributes where duskmoonUI is better
             attributes: attributesWhereDaisyIsBetter,
           }
         : null // Return null if section should be filtered out
@@ -385,9 +385,9 @@ export const load = async ({ params }) => {
     validateStringsData(stringsData)
 
     const libraryData = compareData.data[params.library]
-    const daisyUIData = compareData.data.daisyui
+    const duskmoonUIData = compareData.data.duskmoonui
 
-    if (!libraryData || !daisyUIData || params.library === "daisyui") {
+    if (!libraryData || !duskmoonUIData || params.library === "duskmoonui") {
       throw error(404, `Library data not found for: ${params.library}`)
     }
 
@@ -409,7 +409,7 @@ export const load = async ({ params }) => {
     }
     const variantIndex = getDeterministicIndex(libraryData.name, maxVariants)
 
-    // Helper function to generate text, now includes daisyUIData
+    // Helper function to generate text, now includes duskmoonUIData
     const getReplacedText = (key, index) => {
       const textArray = stringsData[key]
       let sourceArray = []
@@ -435,7 +435,7 @@ export const load = async ({ params }) => {
         "{depsCount}": libraryData.attributes?.Dependencies?.value ?? "N/A",
         "{otherJSSize}": libraryData.attributes?.["JavaScript size"]?.value ?? "N/A",
         "{otherFrameworks}": libraryData.attributes?.Frameworks?.value ?? "specific frameworks",
-        "{daisyThemes}": daisyUIData.attributes?.["Built-in Themes"]?.value ?? "many",
+        "{daisyThemes}": duskmoonUIData.attributes?.["Built-in Themes"]?.value ?? "many",
         "{otherThemes}": libraryData.attributes?.["Built-in Themes"]?.value ?? "few",
       }
 
@@ -454,7 +454,7 @@ export const load = async ({ params }) => {
 
     const allSections = defineSections(
       overview,
-      daisyUIData,
+      duskmoonUIData,
       libraryData,
       stringsData,
       maxVariants,
@@ -465,7 +465,7 @@ export const load = async ({ params }) => {
 
     const filteredSections = filterSections(
       allSections,
-      daisyUIData,
+      duskmoonUIData,
       libraryData,
       compareData.attributeRules,
       checkIsDaisyUIBetter,
@@ -473,7 +473,7 @@ export const load = async ({ params }) => {
 
     // Regenerate comparisons for the final return object, ensuring consistency
     const finalComparisons = generateAllComparisons(
-      daisyUIData,
+      duskmoonUIData,
       libraryData,
       stringsData,
       variantIndex,
@@ -485,9 +485,9 @@ export const load = async ({ params }) => {
         key: params.library,
         ...libraryData,
       },
-      daisyui: {
-        key: "daisyui",
-        ...daisyUIData,
+      duskmoonui: {
+        key: "duskmoonui",
+        ...duskmoonUIData,
       },
       sections: filteredSections,
       attributeRules: compareData.attributeRules,
@@ -510,7 +510,7 @@ export const entries = async () => {
     }
 
     return Object.keys(compareData.data)
-      .filter((key) => key !== "daisyui")
+      .filter((key) => key !== "duskmoonui")
       .map((key) => ({ library: key }))
   } catch (err) {
     console.error("Error generating entries:", err)

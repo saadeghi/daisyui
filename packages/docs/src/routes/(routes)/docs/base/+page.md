@@ -1,13 +1,13 @@
 ---
-title: daisyUI base style
-desc: daisyUI adds a few base styles to your page.
+title: duskmoonUI base style
+desc: duskmoonUI adds a few base styles to your page.
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-These are the tiny base styles that daisyUI adds to your page. These styles are less than a kilobyte in total, so you don't need to worry about the size
+These are the tiny base styles that duskmoonUI adds to your page. These styles are less than a kilobyte in total, so you don't need to worry about the size
 
 | Name               | Description                                                                                                                      |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------|
@@ -22,7 +22,7 @@ If you want to opt out of each part, you can do it by setting the [`exclude` con
 For example, to opt out of the scrollbar-gutter and style, scrollbar-color, you can exclude it like this:
 
 ```postcss
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   exclude: rootscrollgutter, rootcolor;
 }
 ```
@@ -30,9 +30,9 @@ For example, to opt out of the scrollbar-gutter and style, scrollbar-color, you 
 Or if you're using CDN, you can disable it from your [customized CDN file](/docs/cdn/) if you need to.
 
 ## Source code
-- [properties](https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/base/properties.css)
-- [rootcolor](https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/base/rootcolor.css)
-- [scrollbar](https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/base/scrollbar.css)
-- [rootscrolllock](https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/base/rootscrolllock.css)
-- [rootscrollgutter](https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/base/rootscrollgutter.css)
-- [svg](https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/base/svg.css)
+- [properties](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/properties.css)
+- [rootcolor](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/rootcolor.css)
+- [scrollbar](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/scrollbar.css)
+- [rootscrolllock](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/rootscrolllock.css)
+- [rootscrollgutter](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/rootscrollgutter.css)
+- [svg](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/svg.css)

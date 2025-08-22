@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Waku
-desc: How to install daisyUI in a Waku project
+title: Install duskmoonUI for Waku
+desc: How to install duskmoonUI in a Waku project
 ---
 
 <script>
@@ -16,17 +16,17 @@ npm create waku@latest -- --project-name=myapp
 cd myapp
 ```
 
-### 2. Install daisyUI
+### 2. Install duskmoonUI
 
 ```sh:Terminal
-npm i daisyui
+npm i duskmoonui
 ```
 
-Put daisyUI in your CSS file (and remove old styles)
+Put duskmoonUI in your CSS file (and remove old styles)
 
 ```diff:src/styles.css
   @import "tailwindcss";
-+ @plugin "daisyui";
++ @plugin "duskmoonui";
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

@@ -43,16 +43,16 @@ jobs:
         with:
           tag_name: v${{ steps.package-version.outputs.version }}
           body: |
-            🌼 Read changelog: https://daisyui.com/docs/changelog/
+            🌼 Read changelog: https://duskmoonui.com/docs/changelog/
 
             📦 Install this update:
             ```bash
-            npm i -D daisyui@${{ steps.package-version.outputs.version }}
+            npm i -D duskmoonui@${{ steps.package-version.outputs.version }}
             ```
 
-            💚 Thank you for using daisyUI!
+            💚 Thank you for using duskmoonUI!
           files: |
-            packages/bundle/daisyui.js
-            packages/bundle/daisyui.mjs
-            packages/bundle/daisyui-theme.js
-            packages/bundle/daisyui-theme.mjs
+            packages/bundle/duskmoonui.js
+            packages/bundle/duskmoonui.mjs
+            packages/bundle/duskmoonui-theme.js
+            packages/bundle/duskmoonui-theme.mjs

@@ -344,7 +344,7 @@
       .filter((key) => theme[key])
       .map((key) => `  ${key}: ${theme[key]};`)
 
-    return `\n@plugin "daisyui/theme" {\n${baseProps.join("\n")}\n${cssProps.join("\n")}\n${radiusProps.join("\n")}\n${sizeProps.join("\n")}\n${effectProps.join("\n")}\n}\n`
+    return `\n@plugin "duskmoonui/theme" {\n${baseProps.join("\n")}\n${cssProps.join("\n")}\n${radiusProps.join("\n")}\n${sizeProps.join("\n")}\n${effectProps.join("\n")}\n}\n`
   }
 
   let holdTimeout
@@ -375,7 +375,7 @@
       }
     }, 10)
     holdTimeout = setTimeout(() => {
-      new Audio("https://img.daisyui.com/fx/tap.mp3").play()
+      new Audio("https://img.duskmoonui.com/fx/tap.mp3").play()
       createNewTheme(
         crypto.randomUUID(),
         nameGenerator(),
@@ -417,13 +417,13 @@
 }}>read param</button> -->
 
 <svelte:head>
-  <link rel="canonical" href="https://daisyui.com/theme-generator/" />
+  <link rel="canonical" href="https://duskmoonui.com/theme-generator/" />
 </svelte:head>
 
 <SEO
-  title="daisyUI and Tailwind CSS theme generator"
-  desc="OKLCH Theme Generator for daisyUI and Tailwind CSS"
-  img={`https://img.daisyui.com/images/theme-generator.webp`}
+  title="duskmoonUI and Tailwind CSS theme generator"
+  desc="OKLCH Theme Generator for duskmoonUI and Tailwind CSS"
+  img={`https://img.duskmoonui.com/images/theme-generator.webp`}
 />
 
 <div class="relative grid md:grid-cols-[14rem_17rem_1fr]">
@@ -493,7 +493,7 @@
                   d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
                 />
               </svg>
-              Reset daisyUI themes
+              Reset duskmoonUI themes
             </button>
           </li>
         </ul>
@@ -574,7 +574,7 @@
         <li class="menu-disabled"><div>&nbsp;</div></li>
       {/each}
       <li></li>
-      <li class="menu-title">daisyUI themes</li>
+      <li class="menu-title">duskmoonUI themes</li>
       {#each themes?.filter((item) => item.type === "builtin") as theme}
         <ThemeListItem
           id={theme.id}

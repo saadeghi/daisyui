@@ -5,7 +5,7 @@
 
 <SEO
   title={data.params.tag.replace(/-/g, " ")}
-  desc={`daisyUI blog posts with '${data.params.tag.replace(/-/g, " ")}' tag`}
+  desc={`duskmoonUI blog posts with '${data.params.tag.replace(/-/g, " ")}' tag`}
 />
 <div class="grid justify-items-stretch gap-6">
   {#each data.posts as post}

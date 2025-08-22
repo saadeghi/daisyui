@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Deno Fresh
-desc: How to install Tailwind CSS and daisyUI in a Deno Fresh project
+title: Install duskmoonUI for Deno Fresh
+desc: How to install Tailwind CSS and duskmoonUI in a Deno Fresh project
 ---
 
 <script>
@@ -30,19 +30,19 @@ Add `"nodeModulesDir": "auto",` to `deno.json` file
 }
 ```
 
-### 2. Add Tailwind CSS and daisyUI
+### 2. Add Tailwind CSS and duskmoonUI
 
-Install Tailwind CSS, daisyUI and fresh-plugin-tailwindcss
+Install Tailwind CSS, duskmoonUI and fresh-plugin-tailwindcss
 
 ```sh:Terminal
-deno i -D npm:tailwindcss@latest npm:daisyui@latest jsr:@pakornv/fresh-plugin-tailwindcss
+deno i -D npm:tailwindcss@latest npm:duskmoonui@latest jsr:@pakornv/fresh-plugin-tailwindcss
 ```
 
-Add Tailwind CSS and daisyUI to your CSS file
+Add Tailwind CSS and duskmoonUI to your CSS file
 
 ```postcss:static/styles.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 Add these lines to `fresh.config.ts` file
@@ -64,4 +64,4 @@ Run the Deno server with the following command
 deno task start
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

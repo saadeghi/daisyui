@@ -4,7 +4,7 @@
   import Translate from "$components/Translate.svelte"
 </script>
 
-<SEO title={`daisyUI Changelog`} desc={`daisyUI Changelog`} />
+<SEO title={`duskmoonUI Changelog`} desc={`duskmoonUI Changelog`} />
 
 <div class="changelog-body prose">
   <Changelog />

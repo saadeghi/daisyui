@@ -1,6 +1,6 @@
 ---
 title: Qwik component library
-desc: daisyUI is the best Tailwind CSS component library for Qwik projects
+desc: duskmoonUI is the best Tailwind CSS component library for Qwik projects
 layout: contentLanding
 ---
 
@@ -13,7 +13,7 @@ layout: contentLanding
 <div class="mx-auto not-prose max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
 <div class="max-w-96 items-center w-full grid grid-cols-2 gap-6 lg:gap-12 [&>svg]:w-full [&>svg]:h-auto mx-auto">
 {@html data.frameworksData.find(item => item.name === "Qwik")?.logo}
-<img class="w-full h-auto" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="Best Qwik component library" />
+<img class="w-full h-auto" src="https://img.duskmoonui.com/images/duskmoonui/mark-static.svg" alt="Best Qwik component library" />
 </div>
 </div>
 
@@ -27,19 +27,19 @@ This approach results in incredibly fast initial page loads and near-instant int
 
 I appreciate how Qwik still feels approachable despite its innovative architecture. Its component model uses familiar JSX syntax combined with powerful reactivity primitives, making it surprisingly easy to adopt.
 
-## Qwik + daisyUI
+## Qwik + duskmoonUI
 
-As someone who's built several Qwik applications, I can confidently say that daisyUI is the perfect Tailwind CSS component library to pair with this performance-oriented framework.
+As someone who's built several Qwik applications, I can confidently say that duskmoonUI is the perfect Tailwind CSS component library to pair with this performance-oriented framework.
 
 Here's why this combination works so brilliantly:
 
-- **Zero hydration cost**: daisyUI's pure CSS approach adds no JavaScript overhead to your application, preserving Qwik's exceptional resumability and load performance.
+- **Zero hydration cost**: duskmoonUI's pure CSS approach adds no JavaScript overhead to your application, preserving Qwik's exceptional resumability and load performance.
 
-- **Fine-grained efficiency**: Just as Qwik only loads the JavaScript needed for specific interactions, daisyUI's component classes only apply the styles you actually use.
+- **Fine-grained efficiency**: Just as Qwik only loads the JavaScript needed for specific interactions, duskmoonUI's component classes only apply the styles you actually use.
 
-- **Clean component syntax**: daisyUI's semantic class names keep your Qwik components readable and maintainable, enhancing developer experience.
+- **Clean component syntax**: duskmoonUI's semantic class names keep your Qwik components readable and maintainable, enhancing developer experience.
 
-- **Simple theme switching**: Implementing dark mode or custom themes is straightforward with daisyUI's 35+ built-in themes, which integrate perfectly with Qwik's state management.
+- **Simple theme switching**: Implementing dark mode or custom themes is straightforward with duskmoonUI's 35+ built-in themes, which integrate perfectly with Qwik's state management.
 
 This powerful combination gives you all the performance benefits of Qwik with professionally designed UI components that accelerate your development.
 
@@ -47,14 +47,14 @@ This powerful combination gives you all the performance benefits of Qwik with pr
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 
-## Install Tailwind CSS and daisyUI for Qwik
+## Install Tailwind CSS and duskmoonUI for Qwik
 
-Setting up daisyUI with your Qwik project is refreshingly simple.
+Setting up duskmoonUI with your Qwik project is refreshingly simple.
 
-Start by creating a Qwik project using the Qwik CLI if you haven't already. Qwik's excellent integration with Vite makes adding Tailwind CSS and daisyUI particularly smooth.
+Start by creating a Qwik project using the Qwik CLI if you haven't already. Qwik's excellent integration with Vite makes adding Tailwind CSS and duskmoonUI particularly smooth.
 
-Install Tailwind CSS following Qwik's official documentation, then add daisyUI as a Tailwind plugin with just a few lines of configuration.
+Install Tailwind CSS following Qwik's official documentation, then add duskmoonUI as a Tailwind plugin with just a few lines of configuration.
 
-Once set up, you can immediately start using daisyUI's component classes in your Qwik components, creating beautiful interfaces while maintaining Qwik's exceptional performance characteristics.
+Once set up, you can immediately start using duskmoonUI's component classes in your Qwik components, creating beautiful interfaces while maintaining Qwik's exceptional performance characteristics.
 
-For step-by-step installation instructions tailored specifically for Qwik developers, check out our detailed guide: [How to install daisyUI with Qwik](/docs/install/qwik/).
+For step-by-step installation instructions tailored specifically for Qwik developers, check out our detailed guide: [How to install duskmoonUI with Qwik](/docs/install/qwik/).

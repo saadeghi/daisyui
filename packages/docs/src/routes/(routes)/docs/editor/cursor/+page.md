@@ -1,6 +1,6 @@
 ---
-title: Cursor setup for daisyUI
-desc: Setup Cursor editor to correctly generate daisyUI code based on your prompt.
+title: Cursor setup for duskmoonUI
+desc: Setup Cursor editor to correctly generate duskmoonUI code based on your prompt.
 ---
 
 <script>
@@ -9,17 +9,17 @@ desc: Setup Cursor editor to correctly generate daisyUI code based on your promp
 
 > To setup Tailwind CSS syntax support and IntelliSense, see [Tailwind CSS docs](https://tailwindcss.com/docs/editor-setup).
 
-## <img src="https://img.daisyui.com/images/logos/cursor.webp" alt="Cursor" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Cursor LLM setup
+## <img src="https://img.duskmoonui.com/images/logos/cursor.webp" alt="Cursor" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Cursor LLM setup
 
-[daisyui.com/llms.txt](https://daisyui.com/llms.txt) file is a compact, text version of daisyUI docs to help AI generate accurate daisyUI code based on your prompt.  
-Here's how to use daisyUI llms.txt in Cursor:
+[duskmoonui.com/llms.txt](https://duskmoonui.com/llms.txt) file is a compact, text version of duskmoonUI docs to help AI generate accurate duskmoonUI code based on your prompt.
+Here's how to use duskmoonUI llms.txt in Cursor:
 
 ### Quick use
 
-In chat window type this and Cursor will use daisyUI's llms.txt file to generate code.
+In chat window type this and Cursor will use duskmoonUI's llms.txt file to generate code.
 
 ```md:prompt
-@web https://daisyui.com/llms.txt
+@web https://duskmoonui.com/llms.txt
 ```
 
 ### Permanent setup
@@ -29,25 +29,25 @@ In chat window type this and Cursor will use daisyUI's llms.txt file to generate
 3. Add this:
 
    ```md
-   https://daisyui.com/llms.txt
+   https://duskmoonui.com/llms.txt
    ```
 
-4. Now in chat window you can type `@docs` and choose `daisyUI` to provide daisyUI docs to Cursor.
+4. Now in chat window you can type `@docs` and choose `duskmoonUI` to provide duskmoonUI docs to Cursor.
 
 ### Project-level permanent setup
 
-You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. ([Read more at Cursor docs](https://docs.cursor.com/context/rules))
+You can setup duskmoonUI's llms.txt file to your workspace so Cursor can use it by default. ([Read more at Cursor docs](https://docs.cursor.com/context/rules))
 
-Run this command to save the llms.txt file to `.cursor/rules/daisyui.mdc`
+Run this command to save the llms.txt file to `.cursor/rules/duskmoonui.mdc`
 
 ```sh:Terminal
-curl -L https://daisyui.com/llms.txt --create-dirs -o .cursor/rules/daisyui.mdc
+curl -L https://duskmoonui.com/llms.txt --create-dirs -o .cursor/rules/duskmoonui.mdc
 ```
 
 ### MCP server
 
 MCP is a an API to communicate with AI models. You can add MCP servers and Cursor will communicate with them to get more accurate results.  
-You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Cursor.
+You can use [Context7](https://context7.com/) or [duskmoonUI GitMCP](https://gitmcp.io/duskmoon-dev/duskmoon-ui) as MCP server in Cursor.
 
 <div class="tabs tabs-lift max-sm:tabs-sm">
   <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
@@ -74,11 +74,11 @@ You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp
 
 #### Usage
 
-Now in `Agent Mode` you can ask AI anything about daisyUI. write `use context7` at the end of your prompt.  
+Now in `Agent Mode` you can ask AI anything about duskmoonUI. write `use context7` at the end of your prompt.
 For example:
 
 ```md:prompt
-give me a light daisyUI 5 theme with tropical color palette. use context7
+give me a light duskmoonUI 5 theme with tropical color palette. use context7
 ```
 
   </div>
@@ -86,7 +86,7 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
   <input type="radio" name="mcp_options" class="tab" aria-label="GitMCP" />
   <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
 
-#### Setup daisyUI GitMCP server
+#### Setup duskmoonUI GitMCP server
 
 1. Go to Cursor settings <kbd class="kbd">⌘ CMD</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">J</kbd> (or <kbd class="kbd">⌃ Ctrl</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">J</kbd> on Windows)
 2. Click `MCP` from the left sidebar
@@ -96,8 +96,8 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
    ```diff:~/.cursor/mcp.json
    {
      "mcpServers": {
-   +   "daisyui Docs": {
-   +     "url": "https://gitmcp.io/saadeghi/daisyui"
+   +   "duskmoonui Docs": {
+   +     "url": "https://gitmcp.io/duskmoon-dev/duskmoon-ui"
    +   }
      }
    }
@@ -105,10 +105,10 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
 
 #### Usage
 
-Now in `Agent Mode` you can ask AI anything about daisyUI.
+Now in `Agent Mode` you can ask AI anything about duskmoonUI.
 
 ```md:prompt
-give me a light daisyUI 5 theme with tropical color palette
+give me a light duskmoonUI 5 theme with tropical color palette
 ```
 
 </div>

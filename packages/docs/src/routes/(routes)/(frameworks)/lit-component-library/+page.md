@@ -1,6 +1,6 @@
 ---
 title: Lit component library
-desc: daisyUI is the best Tailwind CSS component library for Lit projects
+desc: duskmoonUI is the best Tailwind CSS component library for Lit projects
 layout: contentLanding
 ---
 
@@ -13,7 +13,7 @@ layout: contentLanding
 <div class="mx-auto not-prose max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
 <div class="max-w-96 items-center w-full grid grid-cols-2 gap-6 lg:gap-12 [&>svg]:w-full [&>svg]:h-auto mx-auto">
 {@html data.frameworksData.find(item => item.name === "Lit")?.logo}
-<img class="w-full h-auto" src="https://img.daisyui.com/images/daisyui/mark-static.svg" alt="Best Lit component library" />
+<img class="w-full h-auto" src="https://img.duskmoonui.com/images/duskmoonui/mark-static.svg" alt="Best Lit component library" />
 </div>
 </div>
 
@@ -27,19 +27,19 @@ I'm particularly impressed by Lit's minimal footprint - just ~5KB minified and c
 
 Lit's reactive update system is remarkably efficient. When your data changes, only the specific DOM parts affected by that change get updated, avoiding unnecessary re-renders that plague some heavier frameworks.
 
-## Lit + daisyUI
+## Lit + duskmoonUI
 
-After building several projects with Lit, I've found daisyUI to be the ideal Tailwind CSS component library to pair with this powerful web components library.
+After building several projects with Lit, I've found duskmoonUI to be the ideal Tailwind CSS component library to pair with this powerful web components library.
 
 Here's why this combination works so beautifully:
 
 - **Standards-based synergy**: Both technologies embrace web standards rather than proprietary approaches, creating components that work anywhere on the web.
 
-- **Zero dependency conflicts**: daisyUI's pure CSS approach means it adds no JavaScript overhead or potential conflicts with Lit's reactive system.
+- **Zero dependency conflicts**: duskmoonUI's pure CSS approach means it adds no JavaScript overhead or potential conflicts with Lit's reactive system.
 
-- **Clean template syntax**: daisyUI's semantic class names keep your Lit templates readable and maintainable, improving the developer experience.
+- **Clean template syntax**: duskmoonUI's semantic class names keep your Lit templates readable and maintainable, improving the developer experience.
 
-- **Reactive theming**: Lit's reactive properties system works perfectly with daisyUI's theming capabilities, making dynamic theme switching straightforward to implement.
+- **Reactive theming**: Lit's reactive properties system works perfectly with duskmoonUI's theming capabilities, making dynamic theme switching straightforward to implement.
 
 This powerful combination lets you create lightweight, standards-based web components with professional styling that can be used in any framework or vanilla JavaScript project.
 
@@ -47,14 +47,14 @@ This powerful combination lets you create lightweight, standards-based web compo
   <Testimonials items={data.testimonials} limit="6" />
 </div>
 
-## Install Tailwind CSS and daisyUI for Lit
+## Install Tailwind CSS and duskmoonUI for Lit
 
-Setting up daisyUI in your Lit project is refreshingly simple.
+Setting up duskmoonUI in your Lit project is refreshingly simple.
 
 Start by creating a Lit project using your preferred method - whether that's with Lit's official starter kits, Vite, or another build system.
 
-Install Tailwind CSS and configure it according to their documentation for your specific build system. Then add daisyUI as a Tailwind plugin with just a few lines of configuration.
+Install Tailwind CSS and configure it according to their documentation for your specific build system. Then add duskmoonUI as a Tailwind plugin with just a few lines of configuration.
 
-Once set up, you can immediately start using daisyUI's component classes in your Lit templates, creating beautiful web components that work anywhere on the web.
+Once set up, you can immediately start using duskmoonUI's component classes in your Lit templates, creating beautiful web components that work anywhere on the web.
 
-For detailed, Lit-specific installation instructions and example components, check out our comprehensive guide: [How to install daisyUI with Lit](/docs/install/lit/).
+For detailed, Lit-specific installation instructions and example components, check out our comprehensive guide: [How to install duskmoonUI with Lit](/docs/install/lit/).

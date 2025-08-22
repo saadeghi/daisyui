@@ -4,7 +4,7 @@ desc: '"Are we going full circle?" This is one of the questions I get asked abou
 published: true
 date: 2025-08-18
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/ouroboros.webp
+thumbnail: https://img.duskmoonui.com/images/blog/ouroboros.webp
 tags:
   - Reviews
 ---
@@ -75,9 +75,9 @@ You need to write all these class names every time you want a button. It's slow 
 
 Here's what we really need: the fast development of component classes combined with the easy customization of utility classes.
 
-This is what daisyUI gives you. Component classes for speed, utility classes for customization, working together.
+This is what duskmoonUI gives you. Component classes for speed, utility classes for customization, working together.
 
-With daisyUI, you get the same button like this:
+With duskmoonUI, you get the same button like this:
 
 ```html
 <button class="btn btn-primary">Button</button>
@@ -110,7 +110,7 @@ The answer is in how atomic design works.
 
 Think of Tailwind CSS utility classes as atoms - the smallest building blocks. Classes like `p-4`, `bg-blue-500`, `rounded-lg` are individual CSS properties that you can combine.
 
-daisyUI components are like molecules - bigger pieces made from these atoms. A `btn` component combines padding, background, border, text styles, and hover states. A `card` component combines background, shadow, padding, and border radius.
+duskmoonUI components are like molecules - bigger pieces made from these atoms. A `btn` component combines padding, background, border, text styles, and hover states. A `card` component combines background, shadow, padding, and border radius.
 
 When both the atoms (utilities) and molecules (components) are part of the same system, we get something powerful: Consistency in design tokens and visual harmony. It's crucial that you can customize everything and Tailwind CSS is great at this. It's also important that we can quickly add UI parts without worrying about details, and we want both of these to happen seamlessly. Yes, a component library can bring its own utility classes (Like Bootstrap, MUI, or even Radix did) but they can't compete with Tailwind CSS at customizability since Tailwind CSS simply provides utiltiy classes for every single CSS property you would need!
 
@@ -120,11 +120,11 @@ This is why you can write `btn bg-red-500 px-8` and everything works perfectly. 
 
 ❌ Instead of thinking about this as going full circle like this
 
-![Full Circle](https://img.daisyui.com/images/blog/full-circle.webp)
+![Full Circle](https://img.duskmoonui.com/images/blog/full-circle.webp)
 
 ✅ It's better to see it as a spectrum like this
 
-![Full spectrum](https://img.daisyui.com/images/blog/spectrum.webp)
+![Full spectrum](https://img.duskmoonui.com/images/blog/spectrum.webp)
 
 where you can get the benefits of both approaches:
 
@@ -132,6 +132,6 @@ where you can get the benefits of both approaches:
 
 - 🤔 Utility-only Tailwind CSS: Easy customization, slow development.
 
-- 😍 daisyUI: Fast development AND easy customization.
+- 😍 duskmoonUI: Fast development AND easy customization.
 
 It's best of both worlds!

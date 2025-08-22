@@ -555,7 +555,7 @@ The content gets displayed when the button is focused.
 ### ~Dropdown in navbar
 <div class="navbar mb-40 bg-base-200 w-full">
   <div class="ps-4">
-    <button class="text-lg font-bold">daisyUI</button>
+    <button class="text-lg font-bold">duskmoonUI</button>
   </div>
   <div class="flex justify-end grow px-2">
     <div class="flex items-stretch">
@@ -574,7 +574,7 @@ The content gets displayed when the button is focused.
 ```html
 <div class="$$navbar bg-base-200">
   <div class="ps-4">
-    <a class="text-lg font-bold">daisyUI</a>
+    <a class="text-lg font-bold">duskmoonUI</a>
   </div>
   <div class="flex grow justify-end px-2">
     <div class="flex items-stretch">

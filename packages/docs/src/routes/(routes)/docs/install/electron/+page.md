@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Electron
-desc: How to install Tailwind CSS and daisyUI in a Electron project
+title: Install duskmoonUI for Electron
+desc: How to install Tailwind CSS and duskmoonUI in a Electron project
 ---
 
 <script>
@@ -28,10 +28,10 @@ npm pkg set scripts.start="electron ."
 npm pkg set scripts.build:css="tailwindcss -i src/input.css -o public/output.css"
 ```
 
-### 2. Install Electron, Tailwind CSS, and daisyUI
+### 2. Install Electron, Tailwind CSS, and duskmoonUI
 
 ```sh:Terminal
-npm install electron tailwindcss@latest @tailwindcss/cli@latest daisyui@latest
+npm install electron tailwindcss@latest @tailwindcss/cli@latest duskmoonui@latest
 ```
 
 ### 3. Create files
@@ -63,7 +63,7 @@ Create a `src/index.html` file with the following content
     <link rel="stylesheet" type="text/css" href="../public/output.css">
   </head>
   <body>
-    <button class="btn">Hello daisyUI</button>
+    <button class="btn">Hello duskmoonUI</button>
   </body>
 </html>
 ```
@@ -72,7 +72,7 @@ Create a `src/input.css` file with the following content
 
 ```postcss:src/input.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 ### 3. Build the CSS and run the project
@@ -82,4 +82,4 @@ npm run build:css
 npm start
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

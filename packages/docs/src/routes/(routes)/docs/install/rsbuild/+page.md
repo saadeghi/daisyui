@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Rsbuild
-desc: How to install Tailwind CSS and daisyUI in a Rsbuild project
+title: Install duskmoonUI for Rsbuild
+desc: How to install Tailwind CSS and duskmoonUI in a Rsbuild project
 ---
 
 <script>
@@ -15,12 +15,12 @@ Create a new Rsbuild project in the current directory
 npm create rsbuild -d ./
 ```
 
-### 2. Install Tailwind CSS and daisyUI
+### 2. Install Tailwind CSS and duskmoonUI
 
 Rsbuild has built-in support for PostCSS
 
 ```sh:Terminal
-npm add tailwindcss @tailwindcss/postcss daisyui@latest
+npm add tailwindcss @tailwindcss/postcss duskmoonui@latest
 ```
 
 Create a postcss.config.mjs file and add Tailwind CSS to it
@@ -34,11 +34,11 @@ const config = {
 export default config;
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file at `src/` (and remove old styles).
+Put Tailwind CSS and duskmoonUI in your CSS file at `src/` (and remove old styles).
   
 ```postcss:src/App.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

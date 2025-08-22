@@ -2,7 +2,7 @@ import { brotliCompressSync, constants } from "node:zlib"
 import { readFileSync, readdirSync } from "fs"
 import { join, extname, basename } from "path"
 
-const basePath = join(process.cwd(), "../daisyui/")
+const basePath = join(process.cwd(), "../duskmoonui/")
 
 const getBrotliSize = (filePath, compressionLevel = 11) => {
   // compression level: 0-11. 6 is jsdelivr default
@@ -61,6 +61,6 @@ export async function load() {
   return {
     files,
     groupedFiles,
-    daisyuiCssSize: Math.floor(getBrotliSize("daisyui.css", 6)),
+    duskmoonuiCssSize: Math.floor(getBrotliSize("duskmoonui.css", 6)),
   }
 }

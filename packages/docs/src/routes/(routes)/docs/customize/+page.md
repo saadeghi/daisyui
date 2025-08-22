@@ -1,13 +1,13 @@
 ---
-title: Customize daisyUI components
-desc: How to customize daisyUI?
+title: Customize duskmoonUI components
+desc: How to customize duskmoonUI?
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-<p><Translate text="daisyUI components come with many variants necessary for design systems and you won't usually need to customize anything." /></p>
+<p><Translate text="duskmoonUI components come with many variants necessary for design systems and you won't usually need to customize anything." /></p>
 
 <p><Translate text="But you can still customize components in many ways." /></p>
 
@@ -19,7 +19,7 @@ desc: How to customize daisyUI?
 
 <button class="btn">Button</button>
 
-1. <Translate text="You can use daisyUI utility classes:" />
+1. <Translate text="You can use duskmoonUI utility classes:" />
 
 ```html
 <button class="btn btn-primary">One</button>

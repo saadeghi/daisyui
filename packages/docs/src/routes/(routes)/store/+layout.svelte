@@ -5,7 +5,7 @@
 
 <svelte:head>
   <script>
-    window.lemonSqueezyAffiliateConfig = { store: "daisyui" }
+    window.lemonSqueezyAffiliateConfig = { store: "duskmoonui" }
   </script>
   <script src="https://lmsqueezy.com/affiliate.js" defer></script>
 </svelte:head>

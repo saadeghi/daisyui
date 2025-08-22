@@ -1,4 +1,4 @@
-declare module 'daisyui/functions/variables' {
+declare module 'duskmoonui/functions/variables' {
   const variables: {
     colors: {
       "base-100": string;

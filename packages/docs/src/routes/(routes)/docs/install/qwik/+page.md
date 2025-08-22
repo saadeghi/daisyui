@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Qwik
-desc: How to install Tailwind CSS and daisyUI in a Qwik project
+title: Install duskmoonUI for Qwik
+desc: How to install Tailwind CSS and duskmoonUI in a Qwik project
 ---
 
 <script>
@@ -15,10 +15,10 @@ Create a new Qwik project in the current directory
 npm create qwik@latest empty ./
 ```
 
-### 2. Install Tailwind CSS and daisyUI
+### 2. Install Tailwind CSS and duskmoonUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+npm install tailwindcss@latest @tailwindcss/vite@latest duskmoonui@latest
 ```
 
 Add Tailwind CSS to Vite config
@@ -34,11 +34,11 @@ export default defineConfig(({ command, mode }): UserConfig => {
 });
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
   
 ```postcss:src/index.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!
