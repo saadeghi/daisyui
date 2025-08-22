@@ -30,9 +30,9 @@ For example, to opt out of the scrollbar-gutter and style, scrollbar-color, you 
 Or if you're using CDN, you can disable it from your [customized CDN file](/docs/cdn/) if you need to.
 
 ## Source code
-- [properties](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/properties.css)
-- [rootcolor](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/rootcolor.css)
-- [scrollbar](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/scrollbar.css)
-- [rootscrolllock](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/rootscrolllock.css)
-- [rootscrollgutter](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/rootscrollgutter.css)
-- [svg](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/daisyui/src/base/svg.css)
+- [properties](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/duskmoonui/src/base/properties.css)
+- [rootcolor](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/duskmoonui/src/base/rootcolor.css)
+- [scrollbar](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/duskmoonui/src/base/scrollbar.css)
+- [rootscrolllock](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/duskmoonui/src/base/rootscrolllock.css)
+- [rootscrollgutter](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/duskmoonui/src/base/rootscrollgutter.css)
+- [svg](https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/duskmoonui/src/base/svg.css)

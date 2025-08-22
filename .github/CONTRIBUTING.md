@@ -1,66 +1,66 @@
-# Contributing to daisyUI
+# Contributing to duskmoonui
 
-daisyUI welcomes contributions from anyone willing to help 🤝
+duskmoonui welcomes contributions from anyone willing to help 🤝
 
 ## Reporting issues
 
-- Before opening a new issue, first [search for existing issues](https://github.com/saadeghi/daisyui/issues?q=) to avoid duplications.
+- Before opening a new issue, first [search for existing issues](https://github.com/duskmoon-dev/duskmoon-ui/issues?q=) to avoid duplications.
 - Provide detailed reports to make things easier for maintainers.
-- If there's a weird bug, please provide a reproduction repository on GitHub (or a [CodePen page](https://daisyui.com/codepen/) or [Tailwind Play](https://daisyui.com/tailwindplay/) page)
+- If there's a weird bug, please provide a reproduction repository on GitHub (or a [CodePen page](https://duskmoonui.com/codepen/) or [Tailwind Play](https://duskmoonui.com/tailwindplay/) page)
 
 ## Fixing existing issues
 
-- You can help by [fixing existing issues](https://github.com/saadeghi/daisyui/issues?q=)
+- You can help by [fixing existing issues](https://github.com/duskmoon-dev/duskmoon-ui/issues?q=)
 - Don't work on issues assigned to others (to avoid duplicate efforts)
 - Before starting to work on an issue, please first add a comment and ask to get assigned to that issue. This way everyone will know you're working on that and it avoids duplicate efforts.
 - Commit messages must start with: `fix: #1 [description]` which `1` is the number of issue, so the issue will close automatically and it gets added to changelog file on a release.
 
 ## Feature requests
 
-- If you have an idea to discuss with the community, please [open a discussion](https://github.com/saadeghi/daisyui/discussions)
-- For feature requests, [open a new issue](https://github.com/saadeghi/daisyui/issues/new)
+- If you have an idea to discuss with the community, please [open a discussion](https://github.com/duskmoon-dev/duskmoon-ui/discussions)
+- For feature requests, [open a new issue](https://github.com/duskmoon-dev/duskmoon-ui/issues/new)
 - All feature requests may not fit this library and some may get rejected. Don't take it personally.
 
 ## Pull requests
 
-- A pull request must fix [an open issue](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue+is%3Aopen) **assigned to you**. If there's no issue, please create one first. If it's not assigned to you, please ask for it in the comments. This is for avoiding duplicate efforts.
+- A pull request must fix [an open issue](https://github.com/duskmoon-dev/duskmoon-ui/issues?q=is%3Aissue+is%3Aopen) **assigned to you**. If there's no issue, please create one first. If it's not assigned to you, please ask for it in the comments. This is for avoiding duplicate efforts.
 - Fixing typos doesn't need to be an issue. You can just open a pull request.
 - Fixing a mistake in document website doesn't need to be an issue. You can just open a pull request.
 
 ## Contribute translations
 
-- You can help add or fix translations by using the [Fink localization editor](https://fink.inlang.com/github.com/saadeghi/daisyui?ref=badge)
+- You can help add or fix translations by using the [Fink localization editor](https://fink.inlang.com/github.com/duskmoon-dev/duskmoon-ui?ref=badge)
 - Submit the translation by opening a pull request ([see guide](https://inlang.com/g/6ddyhpoi/guide-nilsjacobsen-contributeTranslationsWithFink))
 
 ## Building on local
 
-### To build the daisyUI node package on local:
+### To build the duskmoonui node package on local:
 
-1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local – only fork the master branch
+1. [[Fork](https://github.com/duskmoon-dev/duskmoon-ui/fork) and] clone the repo on local – only fork the master branch
 2. [Install Bun](https://bun.sh/) if you don't have it:
 3. Install dependencies:
   ```
   bun install
   ```
-4. Build daisyUI package:
+4. Build duskmoonui package:
   ```
   bun run build
   ```
-5. Now you can use your local build of daisyUI in another local project by installing it as a dependency using Bun (or NPM, etc):  
-  In your own local project where you want to use daisyUI:
+5. Now you can use your local build of duskmoonui in another local project by installing it as a dependency using Bun (or NPM, etc):
+  In your own local project where you want to use duskmoonui:
   ```
-  bun install /path/to/daisyui/packages/daisyui
+  bun install /path/to/duskmoon-ui/packages/duskmoonui
   ```
 
-### To run the [documentation site](https://daisyui.com/) on local:
+### To run the [documentation site](https://duskmoonui.com/) on local:
 
-1. [[Fork](https://github.com/saadeghi/daisyui/fork) and] clone the repo on local – only fork the master branch
+1. [[Fork](https://github.com/duskmoon-dev/duskmoon-ui/fork) and] clone the repo on local – only fork the master branch
 2. [Install Bun](https://bun.sh/) if you don't have it:
 3. Install dependencies:
   ```
   bun install
   ```
-4. Build daisyUI package:
+4. Build duskmoonui package:
   ```
   bun run build
   ```
@@ -73,7 +73,7 @@ daisyUI welcomes contributions from anyone willing to help 🤝
 
 ```js
 packages
-├── daisyui //daisyUI package
+├── duskmoonui //duskmoonui package
 │   ├── index.js //entry point
 │   ├── functions
 │   ├── src
@@ -97,11 +97,11 @@ packages
             ╰── Component.astro // Where you can test things without committing
 ```
 
-### packages/daisyui workflow
+### packages/duskmoonui workflow
 
 ```mermaid
 ---
-title: daisyUI build flow
+title: duskmoonui build flow
 ---
 graph TD
 
@@ -145,7 +145,7 @@ graph TD
 	J12
 	J12
 	subgraph s1["CSS"]
-		J2["daisyui.css - CDN"]
+		J2["duskmoonui.css - CDN"]
 		J3["themes.css"]
 		J4["chunks.css"]
 	end
@@ -161,7 +161,7 @@ graph TD
 	J2
 	J2
 	J2
-	subgraph s2["@plugin "daisyui""]
+	subgraph s2["@plugin "duskmoonui""]
 		J19["import.js"]
 		J1["index.js - Plugin"]
 	end
@@ -217,7 +217,7 @@ graph TD
 	J6 --- J4
 	E["themes"]
 	J6["*.css"]
-	J5 --- J2["daisyui.css"]
+	J5 --- J2["duskmoonui.css"]
 	J5 --- J4
 	J5
 	J8["*/object.js"] --- J7["*/index.js"]
@@ -253,7 +253,7 @@ graph TD
 	n5 --- J1
 	n6 --- J1
 	n7 --- n6
-	subgraph s9["@plugin "daisyui/theme""]
+	subgraph s9["@plugin "duskmoonui/theme""]
 		n2["theme/index.js"]
 		n9["/object.js"]
 	end

@@ -1,20 +1,20 @@
 {
   "type": "module",
-  "name": "daisyui",
+  "name": "duskmoonui",
   "version": "5.0.50",
-  "description": "daisyUI 5 - The Tailwind CSS Component Library",
+  "description": "duskmoonui - The Tailwind CSS Component Library",
   "author": "Pouya Saadeghi",
   "license": "MIT",
-  "homepage": "https://daisyui.com",
+  "homepage": "https://duskmoonui.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/saadeghi/daisyui.git",
-    "directory": "packages/daisyui"
+    "url": "https://github.com/duskmoon-dev/duskmoon-ui.git",
+    "directory": "packages/duskmoonui"
   },
-  "funding": "https://github.com/saadeghi/daisyui?sponsor=1",
-  "bugs": "https://github.com/saadeghi/daisyui/issues",
+  "funding": "https://github.com/duskmoon-dev/duskmoon-ui?sponsor=1",
+  "bugs": "https://github.com/duskmoon-dev/duskmoon-ui/issues",
   "keywords": [
-    "daisyui",
+    "duskmoonui",
     "tailwind",
     "tailwindcss",
     "tailwind css",
@@ -47,7 +47,7 @@
   ],
   "main": "./index.js",
   "module": "./index.js",
-  "browser": "./daisyui.css",
+  "browser": "./duskmoonui.css",
   "files": [
     "base",
     "colors",
@@ -63,7 +63,7 @@
     "imports.js",
     "index.js",
     "chunks.css",
-    "daisyui.css",
+    "duskmoonui.css",
     "themes.css"
   ],
   "commit-and-tag-version": {

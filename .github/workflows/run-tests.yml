@@ -15,8 +15,8 @@ on:
   #   branches:
   #     - master
   #   paths:
-  #     - "packages/daisyui/functions/**"
-  #     - "packages/daisyui/src/**"
+  #     - "packages/duskmoonui/functions/**"
+  #     - "packages/duskmoonui/src/**"
   #     - "packages/docs/src/**"
 jobs:
   tests:

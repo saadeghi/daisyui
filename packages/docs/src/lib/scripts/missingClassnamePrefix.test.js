@@ -21,7 +21,7 @@ function getFiles(dir, pattern) {
 }
 
 // Step 1: Find all class.json files and extract class names
-const classJsonFiles = getFiles("./packages/daisyui/components", /class\.json$/)
+const classJsonFiles = getFiles("./packages/duskmoonui/components", /class\.json$/)
 if (classJsonFiles.length === 0) {
   console.error("No class.json files found in duskmoonui/components")
 } else {
