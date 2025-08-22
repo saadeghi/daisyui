@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.0 (2025-08-22)
+
+
+### Features
+
+* Rename daisyui to duskmoonui ([#2](https://github.com/duskmoon-dev/duskmoon-ui/issues/2)) ([1dd94bd](https://github.com/duskmoon-dev/duskmoon-ui/commit/1dd94bdfbcf16b49a9c453e7d68d9ea61114977b))
+
 ## 5.0.50 (2025-07-29)
 
 
