@@ -27,11 +27,11 @@ classnames:
 >
 > You can also use the native HTML `<input type="date">` for a date picker. [Read more](/components/input/#date-input)
 
-## daisyUI supports 3 calendar libraries
+## duskmoonUI supports 3 calendar libraries
 
-daisyUI includes styles for 3 popular calendar libraries.  
+duskmoonUI includes styles for 3 popular calendar libraries.
 Use any of them, based on your needs.  
-You don't need to import the CSS files for these libraries. daisyUI will style them automatically.
+You don't need to import the CSS files for these libraries. duskmoonUI will style them automatically.
 
 - [Cally web component](https://github.com/WickyNilliams/cally) - Works everywhere
 - [Pikaday](https://github.com/Pikaday/Pikaday) - Works everywhere
@@ -42,7 +42,7 @@ You don't need to import the CSS files for these libraries. daisyUI will style t
 Cally is a web component calendar and it works everywhere. [Read the docs](https://github.com/WickyNilliams/cally)
 
 ### ~Cally calendar example
-#### Example using daisyUI styles
+#### Example using duskmoonUI styles
 
 <calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
   <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
@@ -69,7 +69,7 @@ import "cally";
 ```
 
 ### ~Cally date picker example
-#### Example using daisyUI styles and daisyUI dropdown
+#### Example using duskmoonUI styles and duskmoonUI dropdown
 
 <button popovertarget="cally-popover1" class="input input-border" id="cally1" style="anchor-name:--cally1">
   Pick a date

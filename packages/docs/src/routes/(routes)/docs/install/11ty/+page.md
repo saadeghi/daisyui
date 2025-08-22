@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Eleventy
-desc: How to install Tailwind CSS and daisyUI in a Eleventy project
+title: Install duskmoonUI for Eleventy
+desc: How to install Tailwind CSS and duskmoonUI in a Eleventy project
 ---
 
 <script>
@@ -15,10 +15,10 @@ npm pkg set scripts.dev="eleventy --serve"
 npm pkg set scripts.build="eleventy"
 ```
 
-### 2. Install 11ty, PostCSS, Tailwind CSS, Tailwind CSS Typography plugin, and daisyUI
+### 2. Install 11ty, PostCSS, Tailwind CSS, Tailwind CSS Typography plugin, and duskmoonUI
 
 ```sh:Terminal
-npm install @11ty/eleventy postcss tailwindcss@latest @tailwindcss/postcss@latest @tailwindcss/typography@latest daisyui@latest
+npm install @11ty/eleventy postcss tailwindcss@latest @tailwindcss/postcss@latest @tailwindcss/typography@latest duskmoonui@latest
 ```
 
 ### 3. Create a layout template
@@ -56,7 +56,7 @@ layout: layouts/default.njk
 ### Markdown heading 3
 
 <div class="not-prose">
-  <button class="btn">daisyUI Button</button>
+  <button class="btn">duskmoonUI Button</button>
 </div>
 ```
 
@@ -65,7 +65,7 @@ layout: layouts/default.njk
 ```postcss:src/styles/index.css
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 ### 6. Create a eleventy.config.mjs file at root
@@ -107,4 +107,4 @@ export default function (eleventyConfig) {
 npm run dev
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

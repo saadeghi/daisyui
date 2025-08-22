@@ -17,7 +17,7 @@
     <a
       target="_blank"
       rel="nofollow noopener"
-      href="https://swag.daisyui.com/"
+      href="https://swag.duskmoonui.com/"
       class="alert bg-base-300 flex w-full justify-center rounded-t-none border-none p-2 text-center text-xs shadow-none"
     >
       <div class="font-mono text-[0.6875rem]">
@@ -41,7 +41,7 @@
             </path>
           </g>
         </svg>
-        Get daisyUI t-shirts, <span class="max-sm:hidden"> hoodies, mugs,</span> stickers and more!
+        Get duskmoonUI t-shirts, <span class="max-sm:hidden"> hoodies, mugs,</span> stickers and more!
         <svg
           width="15"
           height="15"

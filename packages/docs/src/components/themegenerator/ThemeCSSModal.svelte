@@ -108,7 +108,7 @@
     </div>
     <span class="text-xs">
       <span class="text-base-content/40">Add it after</span>
-      <span class="text-base-content/50 font-bold italic">@plugin "daisyui";</span></span
+      <span class="text-base-content/50 font-bold italic">@plugin "duskmoonui";</span></span
     >
     <textarea
       spellcheck="false"

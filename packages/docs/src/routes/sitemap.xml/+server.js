@@ -43,7 +43,7 @@ const fetchCompareData = async () => {
 const generateCompareSlugs = (frameworks = []) =>
   frameworks.flatMap((f1) => frameworks.filter((f2) => f1 !== f2).map((f2) => `${f1}-vs-${f2}`))
 
-const generateAlternativeSlugs = (frameworks = []) => frameworks.filter((key) => key !== "daisyui")
+const generateAlternativeSlugs = (frameworks = []) => frameworks.filter((key) => key !== "duskmoonui")
 
 const processPath = (entry) => {
   const updatedEntry = { ...entry, path: entry.path === "/" ? entry.path : `${entry.path}/` }
@@ -74,7 +74,7 @@ export const GET = async () => {
   }
 
   return await sitemap.response({
-    origin: "https://daisyui.com",
+    origin: "https://duskmoonui.com",
     additionalPaths: ["/llms.txt"],
     excludeRoutePatterns: [
       ".*\\/design$",

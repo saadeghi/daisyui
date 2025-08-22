@@ -22,12 +22,12 @@ classnames:
 
 ### ~Navbar with title only
 <div class="navbar bg-base-100 shadow-sm">
-  <button class="btn btn-ghost text-xl">daisyUI</button>
+  <button class="btn btn-ghost text-xl">duskmoonUI</button>
 </div>
 
 ```html
 <div class="$$navbar bg-base-100 shadow-sm">
-  <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+  <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
 </div>
 ```
 
@@ -35,7 +35,7 @@ classnames:
 ### ~Navbar with title and icon
 <div class="navbar bg-base-100 shadow-sm">
   <div class="flex-1">
-    <button class="btn btn-ghost text-xl">daisyUI</button>
+    <button class="btn btn-ghost text-xl">duskmoonUI</button>
   </div>
   <div class="flex-none">
     <button class="btn btn-square btn-ghost">
@@ -47,7 +47,7 @@ classnames:
 ```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
-    <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+    <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
   </div>
   <div class="flex-none">
     <button class="$$btn $$btn-square $$btn-ghost">
@@ -66,7 +66,7 @@ classnames:
     </button>
   </div>
   <div class="flex-1">
-    <button class="btn btn-ghost text-xl">daisyUI</button>
+    <button class="btn btn-ghost text-xl">duskmoonUI</button>
   </div>
   <div class="flex-none">
     <button class="btn btn-square btn-ghost">
@@ -83,7 +83,7 @@ classnames:
     </button>
   </div>
   <div class="flex-1">
-    <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+    <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
   </div>
   <div class="flex-none">
     <button class="$$btn $$btn-square $$btn-ghost">
@@ -97,7 +97,7 @@ classnames:
 ### ~Navbar with menu and submenu
 <div class="navbar bg-base-100 mb-32 shadow-sm">
   <div class="flex-1">
-    <button class="btn btn-ghost text-xl">daisyUI</button>
+    <button class="btn btn-ghost text-xl">duskmoonUI</button>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal">
@@ -120,7 +120,7 @@ classnames:
 ```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
-    <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+    <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
   </div>
   <div class="flex-none">
     <ul class="$$menu $$menu-horizontal px-1">
@@ -143,14 +143,14 @@ classnames:
 ### ~Navbar with search input and dropdown
 <div class="navbar bg-base-100 mb-32 shadow-sm">
   <div class="flex-1">
-    <button class="btn btn-ghost text-xl">daisyUI</button>
+    <button class="btn btn-ghost text-xl">duskmoonUI</button>
   </div>
   <div class="flex gap-2">
     <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          <img alt="Tailwind CSS Navbar component" src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul tabindex="0" class="mt-3 z-1 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -170,7 +170,7 @@ classnames:
 ```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
-    <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+    <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
   </div>
   <div class="flex gap-2">
     <input type="text" placeholder="Search" class="$$input $$input-bordered w-24 md:w-auto" />
@@ -179,7 +179,7 @@ classnames:
         <div class="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul
@@ -203,7 +203,7 @@ classnames:
 ### ~Navbar with icon, indicator and dropdown
 <div class="navbar bg-base-100 mb-40 shadow-sm">
   <div class="flex-1">
-    <button class="btn btn-ghost text-xl">daisyUI</button>
+    <button class="btn btn-ghost text-xl">duskmoonUI</button>
   </div>
   <div class="flex-none">
     <div class="dropdown dropdown-end">
@@ -226,7 +226,7 @@ classnames:
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          <img alt="Tailwind CSS Navbar component" src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul tabindex="0" class="mt-3 z-1 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -246,7 +246,7 @@ classnames:
 ```html
 <div class="$$navbar bg-base-100 shadow-sm">
   <div class="flex-1">
-    <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+    <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
   </div>
   <div class="flex-none">
     <div class="$$dropdown $$dropdown-end">
@@ -273,7 +273,7 @@ classnames:
         <div class="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul
@@ -309,7 +309,7 @@ classnames:
     </div>
   </div>
   <div class="navbar-center">
-    <button class="btn btn-ghost text-xl">daisyUI</button>
+    <button class="btn btn-ghost text-xl">duskmoonUI</button>
   </div>
   <div class="navbar-end">
     <button class="btn btn-ghost btn-circle">
@@ -341,7 +341,7 @@ classnames:
     </div>
   </div>
   <div class="$$navbar-center">
-    <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+    <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
   </div>
   <div class="$$navbar-end">
     <button class="$$btn $$btn-ghost $$btn-circle">
@@ -379,7 +379,7 @@ classnames:
         <li><button>Item 3</button></li>
       </ul>
     </div>
-    <button class="btn btn-ghost text-xl">daisyUI</button>
+    <button class="btn btn-ghost text-xl">duskmoonUI</button>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
@@ -422,7 +422,7 @@ classnames:
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a class="$$btn $$btn-ghost text-xl">daisyUI</a>
+    <a class="$$btn $$btn-ghost text-xl">duskmoonUI</a>
   </div>
   <div class="$$navbar-center hidden lg:flex">
     <ul class="$$menu $$menu-horizontal px-1">
@@ -448,25 +448,25 @@ classnames:
 
 ### ~Navbar with colors
 <div class="navbar bg-neutral text-neutral-content">
-  <button class="btn btn-ghost text-xl">daisyUI</button>
+  <button class="btn btn-ghost text-xl">duskmoonUI</button>
 </div>
 <div class="navbar bg-base-300">
-  <button class="btn btn-ghost text-xl">daisyUI</button>
+  <button class="btn btn-ghost text-xl">duskmoonUI</button>
 </div>
 <div class="navbar bg-primary text-primary-content">
-  <button class="btn btn-ghost text-xl">daisyUI</button>
+  <button class="btn btn-ghost text-xl">duskmoonUI</button>
 </div>
 
 ```html
 <div class="$$navbar bg-neutral text-neutral-content">
-  <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
+  <button class="$$btn $$btn-ghost text-xl">duskmoonUI</button>
 </div>
 
 <div class="$$navbar bg-base-300">
-  <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
+  <button class="$$btn $$btn-ghost text-xl">duskmoonUI</button>
 </div>
 
 <div class="$$navbar bg-primary text-primary-content">
-  <button class="$$btn $$btn-ghost text-xl">daisyUI</button>
+  <button class="$$btn $$btn-ghost text-xl">duskmoonUI</button>
 </div>
 ```

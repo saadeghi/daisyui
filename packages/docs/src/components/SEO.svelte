@@ -6,7 +6,7 @@
   let siteData = {
     title: "Tailwind CSS Components ( version 5 update is here )",
     desc: "Free Tailwind Components",
-    card: "https://img.daisyui.com/images/default.webp",
+    card: "https://img.duskmoonui.com/images/default.webp",
   }
   let { formatTitle = true, title = "", desc = siteData.desc, img = siteData.card } = $props()
 
@@ -31,10 +31,10 @@
     if (match) {
       const [, first, second] = match
       const [smaller, larger] = [first, second].sort()
-      return `https://daisyui.com/compare/${smaller}-vs-${larger}/`
+      return `https://duskmoonui.com/compare/${smaller}-vs-${larger}/`
     }
 
-    return `https://daisyui.com${pathname}`
+    return `https://duskmoonui.com${pathname}`
   }
 </script>
 
@@ -57,7 +57,7 @@
     <link
       rel="alternate"
       hreflang={iso15924to31661(lang)}
-      href={`https://daisyui.com${page.url.pathname}?lang=${lang}`}
+      href={`https://duskmoonui.com${page.url.pathname}?lang=${lang}`}
     />
   {/each}
 </svelte:head>

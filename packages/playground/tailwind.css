@@ -4,7 +4,7 @@
 
 /* @plugin "@tailwindcss/typography"; */
 
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: all;
 }
 

@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for React Router
-desc: How to install daisyUI in a React Router project
+title: Install duskmoonUI for React Router
+desc: How to install duskmoonUI in a React Router project
 ---
 
 <script>
@@ -15,19 +15,19 @@ Create a new React Router project in the current directory
 npm create react-router@latest ./
 ```
 
-### 2. Install daisyUI
+### 2. Install duskmoonUI
 
 ```sh:Terminal
-npm install daisyui@latest
+npm install duskmoonui@latest
 ```
 
-### 3. Add daisyUI
+### 3. Add duskmoonUI
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
   
 ```postcss:app/app.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

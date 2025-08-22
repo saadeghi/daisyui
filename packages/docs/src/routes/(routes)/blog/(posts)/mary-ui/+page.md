@@ -1,10 +1,10 @@
 ---
-title: "Mary UI: Laravel blade components made with daisyUI"
-desc: Mary UI is a collection of Laravel blade components made for Livewire 3 and styled around daisyUI and Tailwind CSS
+title: "Mary UI: Laravel blade components made with duskmoonUI"
+desc: Mary UI is a collection of Laravel blade components made for Livewire 3 and styled around duskmoonUI and Tailwind CSS
 published: true
 date: 2023-9-13
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/mary-ui.webp
+thumbnail: https://img.duskmoonui.com/images/blog/mary-ui.webp
 tags:
   - Frameworks
 ---
@@ -16,17 +16,17 @@ tags:
 ## What is Mary UI?
 
 [Mary UI](https://mary-ui.com/) is a collection of Laravel blade components made for Livewire 3.
-These components are built on top of [daisyUI](https://daisyui.com/) and [Tailwind CSS](https://tailwindcss.com/).
+These components are built on top of [duskmoonUI](https://duskmoonui.com/) and [Tailwind CSS](https://tailwindcss.com/).
 If you're a Laravel developer and you're using Livewire, you'll love Mary UI because it makes it faster and easier to build web pages.
 
-Mary UI does not ship any custom CSS and relies on daisyUI and Tailwind for out-of-box styling. You can customize most of components styles, by inline overriding daisyUI and Tailwind CSS classes.
+Mary UI does not ship any custom CSS and relies on duskmoonUI and Tailwind for out-of-box styling. You can customize most of components styles, by inline overriding duskmoonUI and Tailwind CSS classes.
 
 ## How does it look like?
 
-Mary UI allows you to use daisyUI components in your Laravel blade files using Livewire syntax.
+Mary UI allows you to use duskmoonUI components in your Laravel blade files using Livewire syntax.
 
 To make a form like this:
-![Mary UI form](https://img.daisyui.com/images/blog/mary-ui-form.webp)
+![Mary UI form](https://img.duskmoonui.com/images/blog/mary-ui-form.webp)
 All you need would be these few lines:
 
 ```html
@@ -75,10 +75,10 @@ Install Mary UI using composer:
 composer require robsontenorio/mary
 ```
 
-If it's an existing Laravel project, Install daisyUI and Tailwind CSS and initialize Tailwind CSS config file:
+If it's an existing Laravel project, Install duskmoonUI and Tailwind CSS and initialize Tailwind CSS config file:
 
 ```bash
-yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
+yarn add -D tailwindcss duskmoonui@latest postcss autoprefixer && npx tailwindcss init -p
 ```
 
 Change your tailwind.config.js file like this:
@@ -95,8 +95,8 @@ export default {
     "./vendor/robsontenorio/mary/src/View/Components/**/*.php",
   ],
 
-  // Add daisyUI
-  plugins: [require("daisyui")],
+  // Add duskmoonUI
+  plugins: [require("duskmoonui")],
 }
 ```
 

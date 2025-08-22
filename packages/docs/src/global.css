@@ -2,7 +2,7 @@
 @source './**/*.{html,js,svelte,ts,svx,md,json}';
 @plugin '@tailwindcss/typography';
 
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: all;
 }
 

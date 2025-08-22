@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Vike
-desc: How to install Tailwind CSS and daisyUI in a Vike project
+title: Install duskmoonUI for Vike
+desc: How to install Tailwind CSS and duskmoonUI in a Vike project
 ---
 
 <script>
@@ -15,10 +15,10 @@ Create a new Vike project in the current directory
 npm create vike ./
 ```
 
-### 2. Install Tailwind CSS and daisyUI
+### 2. Install Tailwind CSS and duskmoonUI
 
 ```sh:Terminal
-npm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+npm install tailwindcss@latest @tailwindcss/vite@latest duskmoonui@latest
 ```
 
 Add Tailwind CSS to Vite config
@@ -33,11 +33,11 @@ export default defineConfig({
 });
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
 
 ```postcss:renderer/Layout.css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

@@ -26,10 +26,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute top-0 right-0 z-1">
       {#if onMount}
-        <Clipboard text={`npm i -D daisyui@latest`} />
+        <Clipboard text={`npm i -D duskmoonui@latest`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>npm i -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>npm i -D duskmoonui@latest</code></pre>
   </div>
   <label
     class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
@@ -56,10 +56,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute top-0 right-0 z-1">
       {#if onMount}
-        <Clipboard text={`pnpm add -D daisyui@latest`} />
+        <Clipboard text={`pnpm add -D duskmoonui@latest`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>pnpm add -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>pnpm add -D duskmoonui@latest</code></pre>
   </div>
   <label
     class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
@@ -87,10 +87,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute top-0 right-0 z-1">
       {#if onMount}
-        <Clipboard text={`yarn add -D daisyui@latest`} />
+        <Clipboard text={`yarn add -D duskmoonui@latest`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>yarn add -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>yarn add -D duskmoonui@latest</code></pre>
   </div>
 
   <label
@@ -142,10 +142,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute top-0 right-0 z-1">
       {#if onMount}
-        <Clipboard text={`bun add -D daisyui@latest`} />
+        <Clipboard text={`bun add -D duskmoonui@latest`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>bun add -D daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>bun add -D duskmoonui@latest</code></pre>
   </div>
   <label
     class="tab has-checked:text-neutral-content! text-neutral gap-1.5 [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
@@ -172,10 +172,10 @@
   <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
     <div class="absolute top-0 right-0 z-1">
       {#if onMount}
-        <Clipboard text={`deno i -D npm:daisyui@latest`} />
+        <Clipboard text={`deno i -D npm:duskmoonui@latest`} />
       {/if}
     </div>
-    <pre data-prefix="$"><code>deno i -D npm:daisyui@latest</code></pre>
+    <pre data-prefix="$"><code>deno i -D npm:duskmoonui@latest</code></pre>
   </div>
 </div>
 <p class="mx-auto mt-5 mb-2 w-full text-start">2. {$t("install-step-2")}:</p>
@@ -191,11 +191,11 @@
     <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
       <pre dir="ltr"><code
           ><span class="opacity-50">@import "tailwindcss";</span>
-<span class="text-success">@plugin "daisyui";</span></code
+<span class="text-success">@plugin "duskmoonui";</span></code
         ></pre>
       <div class="absolute top-0 right-0 z-1">
         {#if onMount}
-          <Clipboard text={`@plugin "daisyui";`} />
+          <Clipboard text={`@plugin "duskmoonui";`} />
         {/if}
       </div>
     </div>

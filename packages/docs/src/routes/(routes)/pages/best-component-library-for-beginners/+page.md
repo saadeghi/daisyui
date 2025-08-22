@@ -1,6 +1,6 @@
 ---
 title: Best Component Library for Beginners
-desc: Let's see why daisyUI is the best Tailwind CSS component library for beginners
+desc: Let's see why duskmoonUI is the best Tailwind CSS component library for beginners
 layout: contentLanding
 ---
 
@@ -10,7 +10,7 @@ layout: contentLanding
 
 Learning CSS can be tough when you're just starting out. Making things look good on a webpage takes time to master.
 
-This guide shows how daisyUI can make your learning journey easier and more fun.
+This guide shows how duskmoonUI can make your learning journey easier and more fun.
 
 ## The Problem with CSS When You're Starting Out
 
@@ -155,13 +155,13 @@ When you're new to web development, you have a few ways to style your websites:
 
 None of these options are perfect when you're learning. You either spend hours writing CSS, create a website that looks like a thousand others, or turn your HTML into an unreadable mess of class names.
 
-## How daisyUI Helps New Developers
+## How duskmoonUI Helps New Developers
 
-daisyUI works with Tailwind CSS to make building websites easier. It gives you ready-made components (like buttons, cards, and menus) that you can use right away.
+duskmoonUI works with Tailwind CSS to make building websites easier. It gives you ready-made components (like buttons, cards, and menus) that you can use right away.
 
 Here's an example of how much simpler it makes things:
 
-❌ Without daisyUI, you'd write all this for a button:
+❌ Without duskmoonUI, you'd write all this for a button:
 
 ```html
 <button
@@ -171,7 +171,7 @@ Here's an example of how much simpler it makes things:
 </button>
 ```
 
-✅ With daisyUI, you just write this:
+✅ With duskmoonUI, you just write this:
 
 ```html
 <button class="btn">Click Me</button>
@@ -179,11 +179,11 @@ Here's an example of how much simpler it makes things:
 
 That's a lot less to type and remember!
 
-## Why daisyUI Is Great for Learning
+## Why duskmoonUI Is Great for Learning
 
 ### 1. Simple Class Names That Make Sense
 
-Instead of remembering complicated class names, daisyUI uses words that describe what the thing actually is:
+Instead of remembering complicated class names, duskmoonUI uses words that describe what the thing actually is:
 
 - `btn` for buttons
 - `card` for cards
@@ -191,27 +191,27 @@ Instead of remembering complicated class names, daisyUI uses words that describe
 
 This makes your code easier to read and understand. It's like using plain English in your HTML.
 
-[See all daisyUI components here](https://daisyui.com/components/)
+[See all duskmoonUI components here](https://duskmoonui.com/components/)
 
 ### 2. Works With Whatever You Want to Learn Next
 
-When you're learning, you might want to try different frameworks like React or Vue later on. daisyUI works with:
+When you're learning, you might want to try different frameworks like React or Vue later on. duskmoonUI works with:
 
 - Plain HTML files (what most people start with)
 - React, Vue, or Svelte (popular frameworks you might learn next)
 - Any other framework you might try
 
-This means you can keep using what you've learned about daisyUI as you grow your skills.
+This means you can keep using what you've learned about duskmoonUI as you grow your skills.
 
 ### 3. It's Just CSS - No JavaScript Required
 
-daisyUI is only CSS, which means:
+duskmoonUI is only CSS, which means:
 
 - You don't have to learn JavaScript to use it
 - There's less that can break in your code
 - Your websites will load faster
 
-For example, a dropdown menu in daisyUI needs no JavaScript:
+For example, a dropdown menu in duskmoonUI needs no JavaScript:
 
 ```html
 <!-- A dropdown without JavaScript -->
@@ -228,7 +228,7 @@ This is great when you're just starting out and don't want to deal with too many
 
 ### 4. Easy Way to Learn About Themes
 
-Themes are ways to change how your whole website looks at once. With daisyUI, changing themes is super easy:
+Themes are ways to change how your whole website looks at once. With duskmoonUI, changing themes is super easy:
 
 ```html
 <html data-theme="light">
@@ -244,7 +244,7 @@ Change "light" to "dark" or one of the other 35 built-in themes, and your whole 
 
 ### 5. Grows With You As You Learn
 
-daisyUI is designed to be helpful no matter how much you know:
+duskmoonUI is designed to be helpful no matter how much you know:
 
 - **Just starting?** Use the basic components as they come
 
@@ -262,21 +262,21 @@ daisyUI is designed to be helpful no matter how much you know:
 
 You won't outgrow it as your skills improve.
 
-## How to Start Using daisyUI
+## How to Start Using duskmoonUI
 
-If you prefer to set things up manually, here's how to add daisyUI to an existing Tailwind CSS project:
+If you prefer to set things up manually, here's how to add duskmoonUI to an existing Tailwind CSS project:
 
-1. Install daisyUI as a development dependency:
+1. Install duskmoonUI as a development dependency:
 
 ```bash
-npm i -D daisyui
+npm i -D duskmoonui
 ```
 
-2. Add daisyUI to your CSS file:
+2. Add duskmoonUI to your CSS file:
 
 ```css
 @import "tailwindcss";
 @plugin "daisyui";
 ```
 
-To see more detailed instructions, check out the [daisyUI installation guide](https://daisyui.com/docs/install/).
+To see more detailed instructions, check out the [duskmoonUI installation guide](https://duskmoonui.com/docs/install/).

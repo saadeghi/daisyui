@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "name": "daisyui-playground",
+  "name": "duskmoonui-playground",
   "scripts": {
     "predev": "if ! [ -f src/components/Component.astro ]; then echo '<button class=btn>Hello</button>' > src/components/Component.astro; fi",
     "dev": "astro dev --open",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "astro": "5.5.3",
-    "daisyui": "workspace:*"
+    "duskmoonui": "workspace:*"
   },
   "dependencies": {
     "@astrojs/react": "4.2.1",

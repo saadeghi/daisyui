@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Elysia
-desc: How to install Tailwind CSS and daisyUI in a Elysia project
+title: Install duskmoonUI for Elysia
+desc: How to install Tailwind CSS and duskmoonUI in a Elysia project
 ---
 
 <script>
@@ -24,18 +24,18 @@ Install `@elysiajs/static`
 bun install @elysiajs/static
 ```
 
-### 2. Install Tailwind CSS and daisyUI
+### 2. Install Tailwind CSS and duskmoonUI
 
 ```sh:Terminal
-bun install tailwindcss@latest @tailwindcss/cli@latest daisyui@latest
+bun install tailwindcss@latest @tailwindcss/cli@latest duskmoonui@latest
 ```
 
-Add Tailwind CSS and daisyUI to your CSS file
+Add Tailwind CSS and duskmoonUI to your CSS file
 
 ```postcss:src/app.css
 @import "tailwindcss" source(none);
 @source "../public";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
 ### 3. Setup server file
@@ -95,7 +95,7 @@ Create a `public/index.html` file with the following content
     <link rel="stylesheet" href="/output.css">
   </head>
   <body>
-    <button class="btn btn-primary">Hello daisyUI</button>
+    <button class="btn btn-primary">Hello duskmoonUI</button>
   </body>
 </html>
 ```
@@ -106,4 +106,4 @@ Run the server
 bun run dev
 ```
 
-Now you can use daisyUI class names!
+Now you can use duskmoonUI class names!

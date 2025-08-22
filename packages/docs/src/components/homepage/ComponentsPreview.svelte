@@ -467,7 +467,7 @@
           <img
             width="40"
             height="40"
-            src="https://img.daisyui.com/images/profile/demo/superperson@94.webp"
+            src="https://img.duskmoonui.com/images/profile/demo/superperson@94.webp"
             alt="Tailwind button"
             aria-label="Tailwind CSS button"
           />
@@ -525,7 +525,7 @@
     <div class="h-4"></div>
     <p class="text-base-content/80 mx-auto max-w-lg font-sans text-sm font-light">
       {$t(
-        "daisyUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using daisyUI color names, you get Dark Mode and even more themes without adding a new class name.",
+        "duskmoonUI adds a set of customizable color names to Tailwind CSS and these new colors use CSS variables for the values. Using duskmoonUI color names, you get Dark Mode and even more themes without adding a new class name.",
       )}
     </p>
     <div class="h-4"></div>

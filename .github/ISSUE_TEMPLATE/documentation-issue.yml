@@ -1,16 +1,16 @@
 name: 📕 Documentation Issue
-description: If you found an issue on daisyui.com website
+description: If you found an issue on duskmoonui.com website
 title: "docs: "
 body:
   - type: markdown
     attributes:
       value: |
-        Please first search in [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions) and make sure this issue is not addressed before.
+        Please first search in [existing issues](https://github.com/duskmoon-dev/duskmoon-ui/issues?q=is%3Aissue) and [discussion forum](https://github.com/duskmoon-dev/duskmoon-ui/discussions) and make sure this issue is not addressed before.
   - type: input
     id: page
     attributes:
       label: On which page do you see this issue?
-      placeholder: "example: https://daisyui.com/"
+      placeholder: "example: https://duskmoonui.com/"
     validations:
       required: false
   - type: textarea

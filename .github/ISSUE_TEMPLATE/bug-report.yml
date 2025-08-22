@@ -1,5 +1,5 @@
 name: 🐞 Report a new Bug
-description: If you found a new bug on daisyUI package, report it here.
+description: If you found a new bug on duskmoonUI package, report it here.
 title: "bug: "
 body:
   - type: markdown
@@ -7,15 +7,15 @@ body:
       value: |
 
         Thank you for submitting a bug report 💚
-        If you need help about your project and it's **NOT** a daisyUI bug, please [ask your question in discussion forum](https://github.com/saadeghi/daisyui/discussions/new?category=q-a).
+        If you need help about your project and it's **NOT** a duskmoonUI bug, please [ask your question in discussion forum](https://github.com/duskmoon-dev/duskmoon-ui/discussions/new?category=q-a).
 
         👉 Before you submit a new bug, please do the following steps:
 
-        1. Update your daisyUI (and other dependencies) to the latest version (`npm i -D daisyui@latest`)
-        2. Read [FAQ](https://daisyui.com/docs/faq/). You may find a solution there
-        3. Search [existing issues](https://github.com/saadeghi/daisyui/issues?q=is%3Aissue) and [discussion forum](https://github.com/saadeghi/daisyui/discussions?discussions_q=). You may find a solution there
-        4. Make sure this bug is **NOT** specific to a JS framework or a build tool. If the issue doesn't happen on [Tailwind Play](https://daisyui.com/tailwindplay/) it means it's not an issue from daisyUI.
-        It can be a config problem in your project ([ask here](https://github.com/saadeghi/daisyui/discussions?discussions_q=)) or it can be an issue from your framework or CSS build tools.
+        1. Update your duskmoonUI (and other dependencies) to the latest version (`npm i -D duskmoonui@latest`)
+        2. Read [FAQ](https://duskmoonui.com/docs/faq/). You may find a solution there
+        3. Search [existing issues](https://github.com/duskmoon-dev/duskmoon-ui/issues?q=is%3Aissue) and [discussion forum](https://github.com/duskmoon-dev/duskmoon-ui/discussions?discussions_q=). You may find a solution there
+        4. Make sure this bug is **NOT** specific to a JS framework or a build tool. If the issue doesn't happen on [Tailwind Play](https://duskmoonui.com/tailwindplay/) it means it's not an issue from duskmoonUI.
+        It can be a config problem in your project ([ask here](https://github.com/duskmoon-dev/duskmoon-ui/discussions?discussions_q=)) or it can be an issue from your framework or CSS build tools.
         5. Open one issue per problem. Don't list multiple issues in the same page because that would be hard to track.
 
   - type: input
@@ -26,7 +26,7 @@ body:
 
         ℹ️ Please provide a link to a small, minimal example source code where issue can be reproduced. Without a link it will be hard to guess what is the cause of the problem and it will take more time to fix.
 
-        ℹ️ You can use a [Tailwind Play](https://daisyui.com/tailwindplay/) page or a [Stackblitz page](https://stackblitz.com/edit/daisyui5) or a public GitHub repo.
+        ℹ️ You can use a [Tailwind Play](https://duskmoonui.com/tailwindplay/) page or a [Stackblitz page](https://stackblitz.com/edit/duskmoonui5) or a public GitHub repo.
 
       placeholder: "https://"
     validations:
@@ -35,8 +35,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: What version of daisyUI are you using?
-      description: You can see the daisyUI version number on your `package.json` file.
+      label: What version of duskmoonUI are you using?
+      description: You can see the duskmoonUI version number on your `package.json` file.
       placeholder: "example: v5.0.23"
     validations:
       required: false

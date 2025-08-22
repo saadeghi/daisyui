@@ -129,7 +129,7 @@ async function generateFiles() {
 
     !isDev &&
       packCss({
-        outputFile: "daisyui.css",
+        outputFile: "duskmoonui.css",
         exclude: {
           colors: ["properties-extended", "responsive-extended", "states-extended"],
           components: [],
@@ -144,7 +144,7 @@ async function generateFiles() {
     extractClasses({ srcDir: "components" }),
     !isDev && minifyCssInDirectory(["colors", "base", "components", "utilities"]),
     !isDev && minify("themes.css"),
-    !isDev && minify("daisyui.css"),
+    !isDev && minify("duskmoonui.css"),
   ])
 }
 
@@ -158,7 +158,7 @@ async function build() {
         "theme",
         "utilities",
         "chunks.css",
-        "daisyui.css",
+        "duskmoonui.css",
         "imports.js",
         "themes.css",
       ]))
@@ -173,7 +173,7 @@ async function build() {
         "colors",
         "chunks.css",
         "themes.css",
-        "daisyui.css",
+        "duskmoonui.css",
       ]))
   } catch (error) {
     throw new Error("Build error: " + error.message)

@@ -7,11 +7,11 @@
   let { components } = data
 </script>
 
-<SEO title="Components" desc="Tailwind CSS component examples by daisyUI" />
+<SEO title="Components" desc="Tailwind CSS component examples by duskmoonUI" />
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div class="flex flex-col gap-6 ps-6 pt-10">
     <div class="prose max-w-4xl grow">
-      <h1><Translate text="All daisyUI components" /></h1>
+      <h1><Translate text="All duskmoonUI components" /></h1>
       <p>{Object.keys(components).length} <Translate text="components" /></p>
     </div>
     <div
@@ -25,7 +25,7 @@
           <figure class="px-4 pt-4">
             <img
               loading="lazy"
-              src={`https://img.daisyui.com/images/components/${slug}.webp`}
+              src={`https://img.duskmoonui.com/images/components/${slug}.webp`}
               class="border-base-content/5 bg-base-300 rounded-lg border"
               alt={title}
             />

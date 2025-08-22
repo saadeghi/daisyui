@@ -100,7 +100,7 @@ classnames:
 <div class="avatar indicator">
   <span class="indicator-item badge badge-secondary">Justice</span>
   <div class="w-20 h-20 rounded-lg">
-    <img alt="Tailwind CSS examples" src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+    <img alt="Tailwind CSS examples" src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp" />
   </div>
 </div>
 
@@ -110,7 +110,7 @@ classnames:
   <div class="h-20 w-20 rounded-lg">
     <img
       alt="Tailwind CSS examples"
-      src="https://img.daisyui.com/images/profile/demo/batperson@192.webp"
+      src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp"
     />
   </div>
 </div>
@@ -162,7 +162,7 @@ classnames:
 
 <div class="indicator max-w-xs">
   <span class="indicator-item indicator-center indicator-middle badge">Only available for Pro users</span>
-  <img alt="Tailwind CSS examples" class="rounded" src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
+  <img alt="Tailwind CSS examples" class="rounded" src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
 </div>
 
 ```html
@@ -172,7 +172,7 @@ classnames:
   </span>
   <img
     alt="Tailwind CSS examples"
-    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+    src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
   />
 </div>
 ```

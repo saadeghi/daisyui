@@ -1,9 +1,9 @@
 ---
-title: Make a blog quickly using Astro and daisyUI
+title: Make a blog quickly using Astro and duskmoonUI
 desc: Learn how to create a beautiful and functional blog quickly using the Blog Template for Astro.
 published: true
 date: 2024-08-20
-thumbnail: https://img.daisyui.com/images/blog/blog-template-tailwindcss-daisyui.webp
+thumbnail: https://img.duskmoonui.com/images/blog/blog-template-tailwindcss-duskmoonui.webp
 author: Abhijeet Biswal
 tags:
   - Templates
@@ -15,11 +15,11 @@ tags:
 
 ## Introduction
 
-Creating a blog can be a challenging task, but with Astro and daisyUI, you can set up a stylish and functional blog in no time. Whether you're a seasoned developer or just starting, this guide will walk you through the process of getting your blog up and running using our "[Blog Template for Astro](https://daisyui.com/store/#208203)."
+Creating a blog can be a challenging task, but with Astro and duskmoonUI, you can set up a stylish and functional blog in no time. Whether you're a seasoned developer or just starting, this guide will walk you through the process of getting your blog up and running using our "[Blog Template for Astro](https://duskmoonui.com/store/#208203)."
 
 ## 1. How to Install the Blog Template
 
-First, you'll need to purchase and download the blog template for Astro from the [daisyUI store](https://daisyui.com/store/#208203). Once you have the template, follow these steps:
+First, you'll need to purchase and download the blog template for Astro from the [duskmoonUI store](https://duskmoonui.com/store/#208203). Once you have the template, follow these steps:
 
 1. **Install Dependencies**
 
@@ -39,7 +39,7 @@ Customizing the blog template is simple. Here’s how to change key elements:
 
 ### Changing the Hero Section
 
-![daisyUI Tailwind CSS blog template for Astro](https://img.daisyui.com/images/blog/tailwind-css-blog-template.webp)
+![duskmoonUI Tailwind CSS blog template for Astro](https://img.duskmoonui.com/images/blog/tailwind-css-blog-template.webp)
 
 1. Navigate to `src/components/Hero.astro`:
 
@@ -159,7 +159,7 @@ In the digital age, a strong online presence is crucial for businesses looking t
 
 Save the file and run the development server (`npm run dev`) to see your new post on the blog.
 
-![Blog template daisyUI Tailwind CSS](https://img.daisyui.com/images/blog/daisyui-tailwindcss-blog-tempalte.webp)
+![Blog template duskmoonUI Tailwind CSS](https://img.duskmoonui.com/images/blog/duskmoonui-tailwindcss-blog-tempalte.webp)
 
 ## 4. How to Build the Template for Production
 
@@ -183,4 +183,4 @@ Each of these platforms provides a free tier, making it easy to get your blog on
 
 ## Conclusion
 
-With Astro and daisyUI, creating a blog is quick and easy. Our [Blog Template for Astro](https://daisyui.com/store/#208203) provides a solid foundation, and with a few customizations, you can have your blog up and running in no time, whether you're sharing your thoughts or showcasing your work.
+With Astro and duskmoonUI, creating a blog is quick and easy. Our [Blog Template for Astro](https://duskmoonui.com/store/#208203) provides a solid foundation, and with a few customizations, you can have your blog up and running in no time, whether you're sharing your thoughts or showcasing your work.

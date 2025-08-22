@@ -17,7 +17,7 @@
             data-sveltekit-preload-data
             href="/"
             aria-current="page"
-            aria-label="daisyUI"
+            aria-label="duskmoonUI"
             class="-ms-4 flex w-35 shrink-0 items-center gap-2 md:-mt-4 md:w-50"
             oncontextmenu={(e) => {
               e.preventDefault()
@@ -35,7 +35,7 @@
             title="GitHub"
             target="_blank"
             rel="noopener, noreferrer"
-            href="https://github.com/saadeghi/daisyui"
+            href="https://github.com/duskmoon-dev/duskmoon-ui"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -63,7 +63,7 @@
             title="Discord"
             target="_blank"
             rel="noopener, noreferrer"
-            href="https://daisyui.com/discord/"
+            href="https://duskmoonui.com/discord/"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -93,7 +93,7 @@
             title="OpenCollective"
             target="_blank"
             rel="noopener, noreferrer"
-            href="https://opencollective.com/daisyui"
+            href="https://opencollective.com/duskmoonui"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -114,7 +114,7 @@
             title="NPM"
             target="_blank"
             rel="noopener, noreferrer"
-            href="https://www.npmjs.com/package/daisyui"
+            href="https://www.npmjs.com/package/duskmoonui"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -130,7 +130,7 @@
             title="X"
             target="_blank"
             rel="noopener, noreferrer"
-            href="https://x.com/daisyui_"
+            href="https://x.com/duskmoonui_"
             class="opacity-50 hover:opacity-100"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -145,7 +145,7 @@
             title="Unpkg CDN"
             target="_blank"
             rel="noopener, noreferrer"
-            href="https://unpkg.com/browse/daisyui/"
+            href="https://unpkg.com/browse/duskmoonui/"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -165,7 +165,7 @@
             title="JSdeliver CDN"
             target="_blank"
             rel="noopener, noreferrer"
-            href="https://www.jsdelivr.com/package/npm/daisyui"
+            href="https://www.jsdelivr.com/package/npm/duskmoonui"
             class="opacity-50 hover:opacity-100"
           >
             <svg
@@ -259,11 +259,11 @@
             </svg>
           </a>
         </div>
-        <a href="/brand/" class="link link-hover">daisyUI Logo and brand</a>
+        <a href="/brand/" class="link link-hover">duskmoonUI Logo and brand</a>
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/saadeghi/daisyui/blob/master/LICENSE"
+          href="https://github.com/duskmoon-dev/duskmoon-ui/blob/master/LICENSE"
           class="link link-hover group"
         >
           {$t("license")}
@@ -279,7 +279,7 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/saadeghi/daisyui/blob/master/.github/CONTRIBUTING.md"
+          href="https://github.com/duskmoon-dev/duskmoon-ui/blob/master/.github/CONTRIBUTING.md"
           class="link link-hover group"
         >
           {$t("contributing")}
@@ -306,7 +306,7 @@
         <a class="link link-hover" href="/resources/">{$t("Resources")}</a>
         <a class="link link-hover" href="/blog/">{$t("Blog")}</a>
         <a class="link link-hover" href="/store/">{$t("Store")}</a>
-        <a class="link link-hover" href="/store/351127/">daisyUI Figma Library</a>
+        <a class="link link-hover" href="/store/351127/">duskmoonUI Figma Library</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Frameworks")}</span>
@@ -329,16 +329,16 @@
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
-        <a class="link link-hover" href="/compare/mui-vs-daisyui">MUI vs daisyUI</a>
-        <a class="link link-hover" href="/compare/shadcn-vs-daisyui">shadcn/ui vs daisyUI</a>
-        <a class="link link-hover" href="/compare/bootstrap-vs-daisyui">Bootstrap vs daisyUI</a>
-        <a class="link link-hover" href="/compare/flowbite-vs-daisyui">Flowbite vs daisyUI</a>
-        <a class="link link-hover" href="/compare/radix-vs-daisyui">Radix vs daisyUI</a>
-        <a class="link link-hover" href="/compare/bulma-vs-daisyui">Bulma vs daisyUI</a>
-        <a class="link link-hover" href="/compare/nuxtui-vs-daisyui">NuxtUI vs daisyUI</a>
-        <a class="link link-hover" href="/compare/heroui-vs-daisyui">HeroUI vs daisyUI</a>
-        <a class="link link-hover" href="/compare/preline-vs-daisyui">Preline UI vs daisyUI</a>
-        <a class="link link-hover" href="/compare/chakra-vs-daisyui">Chakra UI vs daisyUI</a>
+        <a class="link link-hover" href="/compare/mui-vs-duskmoonui">MUI vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/shadcn-vs-duskmoonui">shadcn/ui vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/bootstrap-vs-duskmoonui">Bootstrap vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/flowbite-vs-duskmoonui">Flowbite vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/radix-vs-duskmoonui">Radix vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/bulma-vs-duskmoonui">Bulma vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/nuxtui-vs-duskmoonui">NuxtUI vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/heroui-vs-duskmoonui">HeroUI vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/preline-vs-duskmoonui">Preline UI vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/chakra-vs-duskmoonui">Chakra UI vs duskmoonUI</a>
       </div>
 
       <div>
@@ -382,16 +382,16 @@
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://github.com/aalaap/laravel-livewire-daisyui-starter-kit"
+          href="https://github.com/aalaap/laravel-livewire-duskmoonui-starter-kit"
           class="link link-hover group"
         >
-          Laravel Starter Kit with daisyUI
+          Laravel Starter Kit with duskmoonUI
           {@html newtabicon}
         </a>
         <a
           target="_blank"
           rel="noopener, noreferrer"
-          href="https://tailscan.com/?ref=daisyui"
+          href="https://tailscan.com/?ref=duskmoonui"
           class="link link-hover group"
         >
           Tailscan extension
@@ -416,7 +416,7 @@
               loading="lazy"
               width="54"
               height="54"
-              src="https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp"
+              src="https://img.duskmoonui.com/images/profile/people/pouya-saadeghi.webp"
               alt="Pouya Saadeghi"
               class="mask mask-squircle"
             />
@@ -517,7 +517,7 @@
           class="flex flex-col"
         >
           <p class="text-base-content/70 mb-4 text-xs font-bold">
-            Get the daisyUI updates and news
+            Get the duskmoonUI updates and news
           </p>
           <div class="join mb-2">
             <input

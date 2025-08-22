@@ -82,7 +82,7 @@
   <input id="drawer" type="checkbox" class="drawer-toggle" bind:checked />
   <div class={`drawer-content`} inert={checked || undefined}>
     <Navbar
-      version={data.daisyuiVersion}
+      version={data.duskmoonuiVersion}
       {addScrollPaddingToNavbar}
       {removeScrollPaddingFromNavbar}
       pages={data.pages}
@@ -132,7 +132,7 @@
     <aside class="bg-base-100 min-h-screen w-80">
       <Sidebar
         pages={data.pages}
-        version={data.daisyuiVersion}
+        version={data.duskmoonuiVersion}
         {closeDrawer}
         {openDrawer}
         {drawerSidebarScrollY}

@@ -14,12 +14,12 @@
           <div class="mb-8 px-6">
             <div class="flex items-center gap-3">
               <a href="/blog" class="inline-block hover:opacity-80">
-                <h1 class="font-title text-base-content text-xl font-extrabold">daisyUI blog</h1>
+                <h1 class="font-title text-base-content text-xl font-extrabold">duskmoonUI blog</h1>
               </a>
               <div class="tooltip tooltip-right" data-tip="RSS">
                 <a
                   target="_blank"
-                  href="https://daisyui.com/blog/rss.xml"
+                  href="https://duskmoonui.com/blog/rss.xml"
                   class="hover:text-warning"
                 >
                   <svg
@@ -73,7 +73,7 @@
               class="flex flex-col"
             >
               <p class="text-base-content/70 mb-4 text-xs font-bold">
-                Subscribe to daisyUI newsletter to get the updates.
+                Subscribe to duskmoonUI newsletter to get the updates.
               </p>
               <div class="join mb-2">
                 <input

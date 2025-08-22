@@ -1,6 +1,6 @@
 ---
-title: Use daisyUI from CDN
-desc: How to use daisyUI from a CDN?
+title: Use duskmoonUI from CDN
+desc: How to use duskmoonUI from a CDN?
 ---
 
 <script>
@@ -31,7 +31,7 @@ desc: How to use daisyUI from a CDN?
 
   let combinedUrl = derived(selectedUrls, ($selectedUrls) => {
     return $selectedUrls.length
-      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/daisyui@5/${url.path}`).join(",")}`
+      ? `https://cdn.jsdelivr.net/combine/${$selectedUrls.map((url) => `npm/duskmoonui@5/${url.path}`).join(",")}`
       : "";
   });
 
@@ -49,7 +49,7 @@ desc: How to use daisyUI from a CDN?
     name="cdn"
     role="tab"
     class="tab checked:text-neutral-content! [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
-    aria-label="daisyui.css"
+    aria-label="duskmoonui.css"
     checked="checked"
   />
   <div class="tab-content border-none">
@@ -57,16 +57,16 @@ desc: How to use daisyUI from a CDN?
       <div class="grid *:[grid-area:1/1]">
         <div class="overflow-x-auto pt-16 pb-8 px-6 [direction:ltr]">
   
-  <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
+  <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/duskmoonui@5</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-punctuation)">&lt;script</span><span style="color:var(--shiki-attr-name)"> src</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)">&gt;&lt;/script&gt;</span></span></code></pre>
   
         </div>
         <div class="font-mono select-none text-xs m-4 justify-self-start place-self-start">
           <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
-          {data.daisyuiCssSize}kB compressed
+          {data.duskmoonuiCssSize}kB compressed
         </div>
         {#if onMount}
-          <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />\n<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>`} />
+          <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/duskmoonui@5" rel="stylesheet" type="text/css" />\n<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>`} />
         {/if}
   
       </div>
@@ -74,13 +74,13 @@ desc: How to use daisyUI from a CDN?
     
     <h3 class="block text-xl mt-6 mb-4 font-bold">Adding all themes</h3>
     
-    <p class="mt-6 mb-4">daisyui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
+    <p class="mt-6 mb-4">duskmoonui.css includes light and dark themes. For other themes, add themes.css file as well:</p>
     <div class="grid *:[grid-area:1/1]">
       <div class="overflow-x-auto [direction:ltr] pt-12 pb-8 px-6 bg-neutral text-neutral-content rounded-box">
-        <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/daisyui@5/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>
+        <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;link</span><span style="color:var(--shiki-attr-name)"> href</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/duskmoonui@5/themes.css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> rel</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">stylesheet</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> type</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">text/css</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)"> /&gt;</span></span></code></pre>
       </div>
       {#if onMount}
-        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />`} />
+        <Clipboard text={`<link href="https://cdn.jsdelivr.net/npm/duskmoonui@5/themes.css" rel="stylesheet" type="text/css" />`} />
       {/if}
     </div>
   
@@ -115,10 +115,10 @@ desc: How to use daisyUI from a CDN?
         <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
         <span class="text-neutral-content">{$totalSize}kB</span>
         <span class="opacity-40">•</span>
-        {#if $totalSize < data.daisyuiCssSize}
-          <span class="text-success" title="{Math.abs(($totalSize - data.daisyuiCssSize).toFixed(1))}kB smaller than daisyui.css">{((data.daisyuiCssSize - $totalSize) / data.daisyuiCssSize * 100).toFixed(1)}% smaller than daisyui.css</span>
+        {#if $totalSize < data.duskmoonuiCssSize}
+          <span class="text-success" title="{Math.abs(($totalSize - data.duskmoonuiCssSize).toFixed(1))}kB smaller than duskmoonui.css">{((data.duskmoonuiCssSize - $totalSize) / data.duskmoonuiCssSize * 100).toFixed(1)}% smaller than duskmoonui.css</span>
         {:else}
-          <span class="text-warning">daisyui.css is {Math.abs((($totalSize - data.daisyuiCssSize) / data.daisyuiCssSize * 100).toFixed(1))}% smaller</span>
+          <span class="text-warning">duskmoonui.css is {Math.abs((($totalSize - data.duskmoonuiCssSize) / data.duskmoonuiCssSize * 100).toFixed(1))}% smaller</span>
         {/if}
       </div>
       {#if onMount}
@@ -149,4 +149,4 @@ desc: How to use daisyUI from a CDN?
   </div>
 </div>
 
-Every part of daisyUI is [available on CDN](https://cdn.jsdelivr.net/npm/daisyui@5/) as separate CSS files.
+Every part of duskmoonUI is [available on CDN](https://cdn.jsdelivr.net/npm/duskmoonui@5/) as separate CSS files.

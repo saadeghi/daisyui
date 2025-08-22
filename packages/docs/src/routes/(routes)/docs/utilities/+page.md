@@ -1,6 +1,6 @@
 ---
 title: Utility classes and CSS variables
-desc: daisyUI provides a few useful utility classes and CSS variables to help you use the library more effectively.
+desc: duskmoonUI provides a few useful utility classes and CSS variables to help you use the library more effectively.
 ---
 
 <script>
@@ -9,7 +9,7 @@ desc: daisyUI provides a few useful utility classes and CSS variables to help yo
 
 ## <Translate text="Color utility classes" />
 
-All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color.  
+All duskmoonUI colors can be used as utility classes. Just like any other Tailwind CSS color.
 For example you can use `primary` color with any of Tailwind CSS color utilities.
 
 Read more about [color names](/docs/colors).
@@ -49,7 +49,7 @@ You can also control the opacity of the color like
 ## <Translate text="Border radius" />
 
 Tailwind CSS provides fixed values for border radius, such as `rounded-sm`, `rounded-lg`, `rounded-xl`, etc.  
-daisyUI provides a few more border radius values which are tokenized for components and can be customized based on the theme.
+duskmoonUI provides a few more border radius values which are tokenized for components and can be customized based on the theme.
 
 Change the theme to see the border radius changes:
 
@@ -69,7 +69,7 @@ Change the theme to see the border radius changes:
 
 `glass` creates a glass effect on the element.
 
-<div class="rounded-box p-10 " style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
+<div class="rounded-box p-10 " style="background-image: url(https://img.duskmoonui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
 <div class="glass h-40 rounded-box grid place-content-center">Glass</div>
 </div>
 
@@ -116,11 +116,11 @@ These CSS variables can be customized for each themes. Read more about [color na
 
 For advanced use: These CSS variables are being used internally for a specific components. You probably won't need to customize them, but you can if you want to.
 
-If you are using a prefix for daisyUI, these CSS variables will be prefixed with that prefix as well. For example if prefix is `daisy-`, The `--alert-color` CSS variable will be `--daisy-alert-color`.
+If you are using a prefix for duskmoonUI, these CSS variables will be prefixed with that prefix as well. For example if prefix is `daisy-`, The `--alert-color` CSS variable will be `--daisy-alert-color`.
 
 > :INFO:
 >
-> These variables are for internal use. They are not subject of semantic versioning and some of them may be modified or removed in future minor versions, in which case your custom styles might lose their effect, so if you want to modify these variables and your UI really depends on the customized value, make sure you are using a fixed version of daisyUI, not the latest version.
+> These variables are for internal use. They are not subject of semantic versioning and some of them may be modified or removed in future minor versions, in which case your custom styles might lose their effect, so if you want to modify these variables and your UI really depends on the customized value, make sure you are using a fixed version of duskmoonUI, not the latest version.
 
 | Component       | CSS Variable                  | Description                                              |
 | --------------- | ----------------------------- | -------------------------------------------------------- |
@@ -237,7 +237,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 
    ```postcss:css
    @import "tailwindcss";
-   @plugin "daisyui";
+   @plugin "duskmoonui";
 
    .alert {
      --alert-color: blue;

@@ -29,11 +29,11 @@ const convertOklchToPercentage = (color) => {
 
 export function parseThemeCSS(text, currentThemeData) {
   try {
-    const regex = /^@plugin "daisyui\/theme" \{[\s\S]*\}$/m
+    const regex = /^@plugin "duskmoonui\/theme" \{[\s\S]*\}$/m
     const isValidStructure = regex.test(text)
 
     if (!isValidStructure) {
-      console.error('Invalid CSS structure: Must start with @plugin "daisyui/theme" {')
+      console.error('Invalid CSS structure: Must start with @plugin "duskmoonui/theme" {')
       return null
     }
 

@@ -1,6 +1,6 @@
 ---
 title: Colors
-desc: How to use daisyUI colors?
+desc: How to use duskmoonUI colors?
 ---
 
 <script>
@@ -9,7 +9,7 @@ desc: How to use daisyUI colors?
 
 ## <Translate text="Introduction" />
 
-<Translate text="daisyUI is fully themeable and colorable," />
+<Translate text="duskmoonUI is fully themeable and colorable," />
 <Translate text="So instead of using constant color utility classes like:" />
 
 - <span class="badge badge-xs bg-green-500"></span> bg-green-500
@@ -24,7 +24,7 @@ desc: How to use daisyUI colors?
 - <span class="badge badge-xs bg-accent"></span> bg-accent
 - <Translate text="etc." />
 
-<Translate text="Each color name contains CSS variables and each daisyUI theme applies color values to the utility classes when it is applied." />
+<Translate text="Each color name contains CSS variables and each duskmoonUI theme applies color values to the utility classes when it is applied." />
 
 ## <Translate text="Benefits" />
 
@@ -96,7 +96,7 @@ Example of theming a div with hardcoded color values
 </div>
 
 
-## <Translate text="List of all daisyUI color names" />
+## <Translate text="List of all duskmoonUI color names" />
 
 <Translate text="You can use these color names in your theme or in utility classes." />
 
@@ -131,7 +131,7 @@ Example of theming a div with hardcoded color values
 
 ## <Translate text="How to use" />
 
-<Translate text="Some daisyUI components come with modifier class names and that modifier class name will apply a color." />
+<Translate text="Some duskmoonUI components come with modifier class names and that modifier class name will apply a color." />
 
 <Translate text="For example" />:
 
@@ -152,17 +152,17 @@ These components automatically set the correct background color, text color, bor
 
 | CSS Class                  |                                                                                                                                   |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| `bg-{COLOR_NAME}`          | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties.css)                   |
-| `text-{COLOR_NAME}`        | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties.css)                   |
-| `border-{COLOR_NAME}`      | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties.css)                   |
-| `from-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `via-{COLOR_NAME}`         | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `to-{COLOR_NAME}`          | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `ring-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `fill-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `stroke-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `shadow-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `outline-{COLOR_NAME}`     | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
+| `bg-{COLOR_NAME}`          | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties.css)                   |
+| `text-{COLOR_NAME}`        | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties.css)                   |
+| `border-{COLOR_NAME}`      | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties.css)                   |
+| `from-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
+| `via-{COLOR_NAME}`         | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
+| `to-{COLOR_NAME}`          | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
+| `ring-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
+| `fill-{COLOR_NAME}`        | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
+| `stroke-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
+| `shadow-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
+| `outline-{COLOR_NAME}`     | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/duskmoonui@5/colors/properties-extended.css) |
 | `divide-{COLOR_NAME}`      |                                                                                                                                   |
 | `accent-{COLOR_NAME}`      |                                                                                                                                   |
 | `caret-{COLOR_NAME}`       |                                                                                                                                   |
@@ -171,7 +171,7 @@ These components automatically set the correct background color, text color, bor
 | `ring-offset-{COLOR_NAME}` |                                                                                                                                   |
 
 
-So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI color utility classes](/docs/utilities).
+So you can use `bg-primary`, `border-secondary`, etc. Read more about [duskmoonUI color utility classes](/docs/utilities).
 
 ## Color opacity and muted colors
 

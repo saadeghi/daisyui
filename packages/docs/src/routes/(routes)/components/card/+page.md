@@ -44,7 +44,7 @@ classnames:
 
 ### ~Card
 <div class="card w-96 bg-base-100 shadow-sm">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
+  <figure><img src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Card Title</h2>
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
@@ -58,7 +58,7 @@ classnames:
 <div class="$$card bg-base-100 w-96 shadow-sm">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
@@ -303,7 +303,7 @@ classnames:
 
 ### ~Card with badge
 <div class="card w-96 bg-base-100 shadow-sm">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
+  <figure><img src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">
       Card Title
@@ -321,7 +321,7 @@ classnames:
 <div class="$$card bg-base-100 w-96 shadow-sm">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
@@ -345,7 +345,7 @@ classnames:
     <h2 class="card-title">Card Title</h2>
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
+  <figure><img src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
 </div>
 
 ```html
@@ -356,7 +356,7 @@ classnames:
   </div>
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
 </div>
@@ -366,7 +366,7 @@ classnames:
 ### ~Card with centered content and paddings
 <div class="card w-96 bg-base-100 shadow-sm">
   <figure class="px-10 pt-10">
-    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-box" />
+    <img src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-box" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">Card Title</h2>
@@ -381,7 +381,7 @@ classnames:
 <div class="$$card bg-base-100 w-96 shadow-sm">
   <figure class="px-10 pt-10">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes"
       class="rounded-xl" />
   </figure>
@@ -398,7 +398,7 @@ classnames:
 
 ### ~Card with image overlay
 <div class="card w-96 bg-base-100 shadow-sm image-full">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
+  <figure><img src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
   <div class="card-body">
     <h2 class="card-title">Card Title</h2>
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
@@ -412,7 +412,7 @@ classnames:
 <div class="$$card bg-base-100 $$image-full w-96 shadow-sm">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
       alt="Shoes" />
   </figure>
   <div class="$$card-body">
@@ -539,7 +539,7 @@ classnames:
 
 ### ~Card with image on side
 <div class="card card-side bg-base-100 shadow-sm">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" alt="Movie"/></figure>
+  <figure><img src="https://img.duskmoonui.com/images/stock/photo-1635805737707-575885ab0820.webp" alt="Movie"/></figure>
   <div class="card-body">
     <h2 class="card-title">New movie is released!</h2>
     <p>Click the button to watch on Jetflix app.</p>
@@ -553,7 +553,7 @@ classnames:
 <div class="$$card $$card-side bg-base-100 shadow-sm">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+      src="https://img.duskmoonui.com/images/stock/photo-1635805737707-575885ab0820.webp"
       alt="Movie" />
   </figure>
   <div class="$$card-body">
@@ -569,7 +569,7 @@ classnames:
 
 ### ~Responsive card (vertical on small screen, horizontal on large screen)
 <div class="card lg:card-side bg-base-100 shadow-sm">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album"/></figure>
+  <figure><img src="https://img.duskmoonui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album"/></figure>
   <div class="card-body">
     <h2 class="card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
@@ -583,7 +583,7 @@ classnames:
 <div class="$$card lg:$$card-side bg-base-100 shadow-sm">
   <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+      src="https://img.duskmoonui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
       alt="Album" />
   </figure>
   <div class="$$card-body">

@@ -72,7 +72,7 @@
           data-sveltekit-preload-data
           href="/"
           aria-current="page"
-          aria-label="daisyUI"
+          aria-label="duskmoonUI"
           class="me-2 flex w-35 shrink-0 items-center gap-2"
           oncontextmenu={(e) => {
             e.preventDefault()

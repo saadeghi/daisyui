@@ -1,42 +1,42 @@
-# daisyUI 5
-daisyUI 5 is a CSS library for Tailwind CSS 4
-daisyUI 5 provides class names for common UI components
+# duskmoonUI 5
+duskmoonUI 5 is a CSS library for Tailwind CSS 4
+duskmoonUI 5 provides class names for common UI components
 
-- [daisyUI 5 docs](http://daisyui.com)
-- [Guide: How to use this file in LLMs and code editors](https://daisyui.com/docs/editor/)
-- [daisyUI 5 release notes](https://daisyui.com/docs/v5/)
-- [daisyUI 4 to 5 upgrade guide](https://daisyui.com/docs/upgrade/)
+- [duskmoonUI 5 docs](http://duskmoonui.com)
+- [Guide: How to use this file in LLMs and code editors](https://duskmoonui.com/docs/editor/)
+- [duskmoonUI 5 release notes](https://duskmoonui.com/docs/v5/)
+- [duskmoonUI 4 to 5 upgrade guide](https://duskmoonui.com/docs/upgrade/)
 
-## daisyUI 5 install notes
-[install guide](https://daisyui.com/docs/install/)
-1. daisyUI 5 requires Tailwind CSS 4
+## duskmoonUI 5 install notes
+[install guide](https://duskmoonui.com/docs/install/)
+1. duskmoonUI 5 requires Tailwind CSS 4
 2. `tailwind.config.js` file is deprecated in Tailwind CSS v4. do not use `tailwind.config.js`. Tailwind CSS v4 only needs `@import "tailwindcss";` in the CSS file if it's a node dependency.
-3. daisyUI 5 can be installed using `npm i -D daisyui@latest` and then adding `@plugin "daisyui";` to the CSS file
-4. daisyUI is suggested to be installed as a dependency but if you really want to use it from CDN, you can use Tailwind CSS and daisyUI CDN files:
+3. duskmoonUI 5 can be installed using `npm i -D duskmoonui@latest` and then adding `@plugin "duskmoonui";` to the CSS file
+4. duskmoonUI is suggested to be installed as a dependency but if you really want to use it from CDN, you can use Tailwind CSS and duskmoonUI CDN files:
 ```html
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/duskmoonui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 ```
-5. A CSS file with Tailwind CSS and daisyUI looks like this (if it's a node dependency)
+5. A CSS file with Tailwind CSS and duskmoonUI looks like this (if it's a node dependency)
 ```css
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
-## daisyUI 5 usage rules
-1. We can give styles to a HTML element by adding daisyUI class names to it. By adding a component class name, part class names (if there's any available for that component), and modifier class names (if there's any available for that component)
-2. Components can be customized using Tailwind CSS utility classes if the customization is not possible using the existing daisyUI classes. For example `btn px-10` sets a custom horizontal padding to a `btn`
-3. If customization of daisyUI styles using Tailwind CSS utility classes didn't work because of CSS specificity issues, you can use the `!` at the end of the Tailwind CSS utility class to override the existing styles. For example `btn bg-red-500!` sets a custom background color to a `btn` forcefully. This is a last resort solution and should be used sparingly
-4. If a specific component or something similar to it doesn't exist in daisyUI, you can create your own component using Tailwind CSS utility
+## duskmoonUI 5 usage rules
+1. We can give styles to a HTML element by adding duskmoonUI class names to it. By adding a component class name, part class names (if there's any available for that component), and modifier class names (if there's any available for that component)
+2. Components can be customized using Tailwind CSS utility classes if the customization is not possible using the existing duskmoonUI classes. For example `btn px-10` sets a custom horizontal padding to a `btn`
+3. If customization of duskmoonUI styles using Tailwind CSS utility classes didn't work because of CSS specificity issues, you can use the `!` at the end of the Tailwind CSS utility class to override the existing styles. For example `btn bg-red-500!` sets a custom background color to a `btn` forcefully. This is a last resort solution and should be used sparingly
+4. If a specific component or something similar to it doesn't exist in duskmoonUI, you can create your own component using Tailwind CSS utility
 5. when using Tailwind CSS `flex` and `grid` for layout, it should be responsive using Tailwind CSS responsive utility prefixes.
-6. Only allowed class names are existing daisyUI class names or Tailwind CSS utility classes.
-7. Ideally, you won't need to write any custom CSS. Using daisyUI class names or Tailwind CSS utility classes is preferred.
+6. Only allowed class names are existing duskmoonUI class names or Tailwind CSS utility classes.
+7. Ideally, you won't need to write any custom CSS. Using duskmoonUI class names or Tailwind CSS utility classes is preferred.
 8. suggested - if you need placeholder images, use https://picsum.photos/200/300 with the size you want
 9. suggested - when designing , don't add a custom font unless it's necessary
 10. don't add `bg-base-100 text-base-content` to body unless it's necessary
 11. For design decisions, use Refactoring UI book best practices
 
-daisyUI 5 class names are one of the following categories. these type names are only for reference and are not used in the actual code
+duskmoonUI 5 class names are one of the following categories. these type names are only for reference and are not used in the actual code
 - `component`: the required component class
 - `part`: a child part of a component
 - `style`: sets a specific style to component or part
@@ -48,20 +48,20 @@ daisyUI 5 class names are one of the following categories. these type names are 
 - `modifier`: modifies the component or part in a specific way
 
 ## Config
-daisyUI 5 config docs: https://daisyui.com/docs/config/
-daisyUI without config:
+duskmoonUI 5 config docs: https://duskmoonui.com/docs/config/
+duskmoonUI without config:
 ```css
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
-daisyUI config with `light` theme only:
+duskmoonUI config with `light` theme only:
 ```css
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: light --default;
 }
 ```
-daisyUI with all the default configs:
+duskmoonUI with all the default configs:
 ```css
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: light --default, dark --prefersdark;
   root: ":root";
   include: ;
@@ -73,9 +73,9 @@ daisyUI with all the default configs:
 An example config:
 In below config, all the built-in themes are enabled while bumblebee is the default theme and synthwave is the prefersdark theme (default dark mode)
 All the other themes are enabled and can be used by adding `data-theme="THEME_NAME"` to the `<html>` element
-root scrollbar gutter is excluded. `daisy-` prefix is used for all daisyUI classes and console.log is disabled
+root scrollbar gutter is excluded. `daisy-` prefix is used for all duskmoonUI classes and console.log is disabled
 ```css
-@plugin "daisyui" {
+@plugin "duskmoonui" {
   themes: light, dark, cupcake, bumblebee --default, emerald, corporate, synthwave --prefersdark, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter, dim, nord, sunset, caramellatte, abyss, silk;
   root: ":root";
   include: ;
@@ -84,9 +84,9 @@ root scrollbar gutter is excluded. `daisy-` prefix is used for all daisyUI class
   logs: false;
 }
 ```
-## daisyUI 5 colors
+## duskmoonUI 5 colors
 
-### daisyUI color names
+### duskmoonUI color names
 - `primary`: Primary brand color, The main color of your brand
 - `primary-content`: Foreground content color to use on primary color
 - `secondary`: Secondary brand color, The optional, secondary color of your brand
@@ -108,24 +108,24 @@ root scrollbar gutter is excluded. `daisy-` prefix is used for all daisyUI class
 - `error`: Error color, For error/danger/destructive messages
 - `error-content`: Foreground content color to use on error color
 
-### daisyUI color rules
-1. daisyUI adds semantic color names to Tailwind CSS colors
-2. daisyUI color names can be used in utility classes, like other Tailwind CSS color names. for example, `bg-primary` will use the primary color for the background
-3. daisyUI color names include variables as value so they can change based the theme
-4. There's no need to use `dark:` for daisyUI color names
-5. Ideally only daisyUI color names should be used for colors so the colors can change automatically based on the theme
+### duskmoonUI color rules
+1. duskmoonUI adds semantic color names to Tailwind CSS colors
+2. duskmoonUI color names can be used in utility classes, like other Tailwind CSS color names. for example, `bg-primary` will use the primary color for the background
+3. duskmoonUI color names include variables as value so they can change based the theme
+4. There's no need to use `dark:` for duskmoonUI color names
+5. Ideally only duskmoonUI color names should be used for colors so the colors can change automatically based on the theme
 6. If a Tailwind CSS color name (like `red-500`) is used, it will be same red color on all themes
-7. If a daisyUI color name (like `primary`) is used, it will change color based on the theme
+7. If a duskmoonUI color name (like `primary`) is used, it will change color based on the theme
 8. Using Tailwind CSS color names for text colors should be avoided because Tailwind CSS color `text-gray-800` on `bg-base-100` would be unreadable on a dark theme - because on dark theme, `bg-base-100` is a dark color
 9. `*-content` colors should have a good contrast compared to their associated colors
 10. suggestion - when designing a page use `base-*` colors for majority of the page. use `primary` color for important elements
 
-### daisyUI custom theme with custom colors
-A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this:
+### duskmoonUI custom theme with custom colors
+A CSS file with Tailwind CSS, duskmoonUI and a custom duskmoonUI theme looks like this:
 ```css
 @import "tailwindcss";
-@plugin "daisyui";
-@plugin "daisyui/theme" {
+@plugin "duskmoonui";
+@plugin "duskmoonui/theme" {
   name: "mytheme";
   default: true; /* set as default */
   prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
@@ -171,14 +171,14 @@ A CSS file with Tailwind CSS, daisyUI and a custom daisyUI theme looks like this
 - Colors can be OKLCH or hex or other formats
 - If you're generating a custom theme, do not include the comments from the example above. Just provide the code.
 
-People can use https://daisyui.com/theme-generator/ visual tool to create their own theme.
+People can use https://duskmoonui.com/theme-generator/ visual tool to create their own theme.
 
-## daisyUI 5 components
+## duskmoonUI 5 components
 
 ### accordion
 Accordion is used for showing and hiding content but only one item can stay open at a time
 
-[accordion docs](https://daisyui.com/components/accordion/)
+[accordion docs](https://duskmoonui.com/components/accordion/)
 
 #### Class names
 - component: `collapse`
@@ -206,7 +206,7 @@ where content is:
 ### alert
 Alert informs users about important events
 
-[alert docs](https://daisyui.com/components/alert/)
+[alert docs](https://duskmoonui.com/components/alert/)
 
 #### Class names
 - component: `alert`
@@ -226,7 +226,7 @@ Alert informs users about important events
 ### avatar
 Avatars are used to show a thumbnail
 
-[avatar docs](https://daisyui.com/components/avatar/)
+[avatar docs](https://duskmoonui.com/components/avatar/)
 
 #### Class names
 - component: `avatar`, `avatar-group`
@@ -250,7 +250,7 @@ Avatars are used to show a thumbnail
 ### badge
 Badges are used to inform the user of the status of specific data
 
-[badge docs](https://daisyui.com/components/badge/)
+[badge docs](https://duskmoonui.com/components/badge/)
 
 #### Class names
 - component: `badge`
@@ -271,7 +271,7 @@ Badges are used to inform the user of the status of specific data
 ### breadcrumbs
 Breadcrumbs helps users to navigate
 
-[breadcrumbs docs](https://daisyui.com/components/breadcrumbs/)
+[breadcrumbs docs](https://duskmoonui.com/components/breadcrumbs/)
 
 #### Class names
 - component: `breadcrumbs`
@@ -291,7 +291,7 @@ Breadcrumbs helps users to navigate
 ### button
 Buttons allow the user to take actions
 
-[button docs](https://daisyui.com/components/button/)
+[button docs](https://duskmoonui.com/components/button/)
 
 #### Class names
 - component: `btn`
@@ -314,7 +314,7 @@ Buttons allow the user to take actions
 ### calendar
 Calendar includes styles for different calendar libraries
 
-[calendar docs](https://daisyui.com/components/calendar/)
+[calendar docs](https://duskmoonui.com/components/calendar/)
 
 #### Class names
 - component
@@ -337,12 +337,12 @@ For React Day Picker:
 ```
 
 #### Rules
-- daisyUI supports Cally, Pikaday, React Day Picker
+- duskmoonUI supports Cally, Pikaday, React Day Picker
 
 ### card
 Cards are used to group and display content
 
-[card docs](https://daisyui.com/components/card/)
+[card docs](https://duskmoonui.com/components/card/)
 
 #### Class names
 - component: `card`
@@ -372,7 +372,7 @@ Cards are used to group and display content
 ### carousel
 Carousel show images or content in a scrollable area
 
-[carousel docs](https://daisyui.com/components/carousel/)
+[carousel docs](https://duskmoonui.com/components/carousel/)
 
 #### Class names
 - component: `carousel`
@@ -393,7 +393,7 @@ Carousel show images or content in a scrollable area
 ### chat
 Chat bubbles are used to show one line of conversation and all its data, including the author image, author name, time, etc
 
-[chat docs](https://daisyui.com/components/chat/)
+[chat docs](https://duskmoonui.com/components/chat/)
 
 #### Class names
 - component: `chat`
@@ -419,7 +419,7 @@ Chat bubbles are used to show one line of conversation and all its data, includi
 ### checkbox
 Checkboxes are used to select or deselect a value
 
-[checkbox docs](https://daisyui.com/components/checkbox/)
+[checkbox docs](https://duskmoonui.com/components/checkbox/)
 
 #### Class names
 - component: `checkbox`
@@ -437,7 +437,7 @@ Checkboxes are used to select or deselect a value
 ### collapse
 Collapse is used for showing and hiding content
 
-[collapse docs](https://daisyui.com/components/collapse/)
+[collapse docs](https://duskmoonui.com/components/collapse/)
 
 #### Class names
 - component: `collapse`
@@ -460,7 +460,7 @@ Collapse is used for showing and hiding content
 ### countdown
 Countdown gives you a transition effect when you change a number between 0 to 99
 
-[countdown docs](https://daisyui.com/components/countdown/)
+[countdown docs](https://duskmoonui.com/components/countdown/)
 
 #### Class names
 - component: `countdown`
@@ -480,7 +480,7 @@ Countdown gives you a transition effect when you change a number between 0 to 99
 ### diff
 Diff component shows a side-by-side comparison of two items
 
-[diff docs](https://daisyui.com/components/diff/)
+[diff docs](https://duskmoonui.com/components/diff/)
 
 #### Class names
 - component: `diff`
@@ -501,7 +501,7 @@ Diff component shows a side-by-side comparison of two items
 ### divider
 Divider will be used to separate content vertically or horizontally
 
-[divider docs](https://daisyui.com/components/divider/)
+[divider docs](https://duskmoonui.com/components/divider/)
 
 #### Class names
 - component: `divider`
@@ -521,7 +521,7 @@ Divider will be used to separate content vertically or horizontally
 ### dock
 Dock (also know as Bottom navigation or Bottom bar) is a UI element that provides navigation options to the user. Dock sticks to the bottom of the screen
 
-[dock docs](https://daisyui.com/components/dock/)
+[dock docs](https://duskmoonui.com/components/dock/)
 
 #### Class names
 - component: `dock`
@@ -549,7 +549,7 @@ where content is a list of buttons:
 ### drawer
 Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page
 
-[drawer docs](https://daisyui.com/components/drawer/)
+[drawer docs](https://duskmoonui.com/components/drawer/)
 
 #### Class names
 - component: `drawer`
@@ -585,7 +585,7 @@ and {SIDEBAR} can be a menu like:
 ### dropdown
 Dropdown can open a menu or any other element when the button is clicked
 
-[dropdown docs](https://daisyui.com/components/dropdown/)
+[dropdown docs](https://duskmoonui.com/components/dropdown/)
 
 #### Class names
 - component: `dropdown`
@@ -625,7 +625,7 @@ Using CSS focus
 ### fieldset
 Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and label as a description
 
-[fieldset docs](https://daisyui.com/components/fieldset/)
+[fieldset docs](https://duskmoonui.com/components/fieldset/)
 
 #### Class names
 - Component: `fieldset`, `label`
@@ -646,7 +646,7 @@ Fieldset is a container for grouping related form elements. It includes fieldset
 ### file-input
 File Input is a an input field for uploading files
 
-[file-input docs](https://daisyui.com/components/file-input/)
+[file-input docs](https://duskmoonui.com/components/file-input/)
 
 #### Class Names:
 - Component: `file-input`
@@ -665,7 +665,7 @@ File Input is a an input field for uploading files
 ### filter
 Filter is a group of radio buttons. Choosing one of the options will hide the others and shows a reset button next to the chosen option
 
-[filter docs](https://daisyui.com/components/filter/)
+[filter docs](https://duskmoonui.com/components/filter/)
 
 #### Class names
 - component: `filter`
@@ -698,7 +698,7 @@ Without HTML form
 ### footer
 Footer can contain logo, copyright notice, and links to other pages
 
-[footer docs](https://daisyui.com/components/footer/)
+[footer docs](https://duskmoonui.com/components/footer/)
 
 #### Class names
 - component: `footer`
@@ -720,7 +720,7 @@ where content can contain several `<nav>` tags with `footer-title` and links ins
 ### hero
 Hero is a component for displaying a large box or image with a title and description
 
-[hero docs](https://daisyui.com/components/hero/)
+[hero docs](https://duskmoonui.com/components/hero/)
 
 #### Class names
 - component: `hero`
@@ -740,7 +740,7 @@ Hero is a component for displaying a large box or image with a title and descrip
 ### indicator
 Indicators are used to place an element on the corner of another element
 
-[indicator docs](https://daisyui.com/components/indicator/)
+[indicator docs](https://duskmoonui.com/components/indicator/)
 
 #### Class names
 - component: `indicator`
@@ -762,7 +762,7 @@ Indicators are used to place an element on the corner of another element
 ### input
 Text Input is a simple input field
 
-[input docs](https://daisyui.com/components/input/)
+[input docs](https://duskmoonui.com/components/input/)
 
 #### Class names
 - component: `input`
@@ -783,7 +783,7 @@ Text Input is a simple input field
 ### join
 Join is a container for grouping multiple items, it can be used to group buttons, inputs, etc. Join applies border radius to the first and last item. Join can be used to create a horizontal or vertical list of items
 
-[join docs](https://daisyui.com/components/join/)
+[join docs](https://duskmoonui.com/components/join/)
 
 #### Class names
 - component: `join`, `join-item`
@@ -803,7 +803,7 @@ Join is a container for grouping multiple items, it can be used to group buttons
 ### kbd
 Kbd is used to display keyboard shortcuts
 
-[kbd docs](https://daisyui.com/components/kbd/)
+[kbd docs](https://duskmoonui.com/components/kbd/)
 
 #### Class names
 - component: `kbd`
@@ -820,7 +820,7 @@ Kbd is used to display keyboard shortcuts
 ### label
 Label is used to provide a name or title for an input field. Label can be placed before or after the field
 
-[label docs](https://daisyui.com/components/label/)
+[label docs](https://duskmoonui.com/components/label/)
 
 #### Class names
 - component: `label`, `floating-label`
@@ -848,7 +848,7 @@ For floating label:
 ### link
 Link adds the missing underline style to links
 
-[link docs](https://daisyui.com/components/link/)
+[link docs](https://duskmoonui.com/components/link/)
 
 #### Class names
 - component: `link`
@@ -866,7 +866,7 @@ Link adds the missing underline style to links
 ### list
 List is a vertical layout to display information in rows
 
-[list docs](https://daisyui.com/components/list/)
+[list docs](https://duskmoonui.com/components/list/)
 
 #### Class Names:
 - Component: `list`, `list-row`
@@ -887,7 +887,7 @@ List is a vertical layout to display information in rows
 ### loading
 Loading shows an animation to indicate that something is loading
 
-[loading docs](https://daisyui.com/components/loading/)
+[loading docs](https://duskmoonui.com/components/loading/)
 
 #### Class names
 - component: `loading`
@@ -905,7 +905,7 @@ Loading shows an animation to indicate that something is loading
 ### mask
 Mask crops the content of the element to common shapes
 
-[mask docs](https://daisyui.com/components/mask/)
+[mask docs](https://duskmoonui.com/components/mask/)
 
 #### Class names
 - component: `mask`
@@ -925,7 +925,7 @@ Mask crops the content of the element to common shapes
 ### menu
 Menu is used to display a list of links vertically or horizontally
 
-[menu docs](https://daisyui.com/components/menu/)
+[menu docs](https://duskmoonui.com/components/menu/)
 
 #### Class names
 - component: `menu`
@@ -958,7 +958,7 @@ Horizontal menu:
 ### mockup-browser
 Browser mockup shows a box that looks like a browser window
 
-[mockup-browser docs](https://daisyui.com/components/mockup-browser/)
+[mockup-browser docs](https://duskmoonui.com/components/mockup-browser/)
 
 #### Class names
 - component: `mockup-browser`
@@ -981,7 +981,7 @@ Browser mockup shows a box that looks like a browser window
 ### mockup-code
 Code mockup is used to show a block of code in a box that looks like a code editor
 
-[mockup-code docs](https://daisyui.com/components/mockup-code/)
+[mockup-code docs](https://duskmoonui.com/components/mockup-code/)
 
 #### Class names
 - component: `mockup-code`
@@ -989,7 +989,7 @@ Code mockup is used to show a block of code in a box that looks like a code edit
 #### Syntax
 ```html
 <div class="mockup-code">
-  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  <pre data-prefix="$"><code>npm i duskmoonui</code></pre>
 </div>
 ```
 
@@ -1001,7 +1001,7 @@ Code mockup is used to show a block of code in a box that looks like a code edit
 ### mockup-phone
 Phone mockup shows a mockup of an iPhone
 
-[mockup-phone docs](https://daisyui.com/components/mockup-phone/)
+[mockup-phone docs](https://duskmoonui.com/components/mockup-phone/)
 
 #### Class names
 - component: `mockup-phone`
@@ -1021,7 +1021,7 @@ Phone mockup shows a mockup of an iPhone
 ### mockup-window
 Window mockup shows a box that looks like an operating system window
 
-[mockup-window docs](https://daisyui.com/components/mockup-window/)
+[mockup-window docs](https://duskmoonui.com/components/mockup-window/)
 
 #### Class names
 - component: `mockup-window`
@@ -1036,7 +1036,7 @@ Window mockup shows a box that looks like an operating system window
 ### modal
 Modal is used to show a dialog or a box when you click a button
 
-[modal docs](https://daisyui.com/components/modal/)
+[modal docs](https://duskmoonui.com/components/modal/)
 
 #### Class names
 - component: `modal`
@@ -1081,7 +1081,7 @@ Using anchor links (legacy)
 ### navbar
 Navbar is used to show a navigation bar on the top of the page
 
-[navbar docs](https://daisyui.com/components/navbar/)
+[navbar docs](https://duskmoonui.com/components/navbar/)
 
 #### Class names
 - component: `navbar`
@@ -1100,7 +1100,7 @@ Navbar is used to show a navigation bar on the top of the page
 ### pagination
 Pagination is a group of buttons
 
-[pagination docs](https://daisyui.com/components/pagination/)
+[pagination docs](https://duskmoonui.com/components/pagination/)
 
 #### Class names
 - component: `join`
@@ -1119,7 +1119,7 @@ Pagination is a group of buttons
 ### progress
 Progress bar can be used to show the progress of a task or to show the passing of time
 
-[progress docs](https://daisyui.com/components/progress/)
+[progress docs](https://duskmoonui.com/components/progress/)
 
 #### Class names
 - component: `progress`
@@ -1137,7 +1137,7 @@ Progress bar can be used to show the progress of a task or to show the passing o
 ### radial-progress
 Radial progress can be used to show the progress of a task or to show the passing of time
 
-[radial-progress docs](https://daisyui.com/components/radial-progress/)
+[radial-progress docs](https://duskmoonui.com/components/radial-progress/)
 
 #### Class names
 - component: `radial-progress`
@@ -1156,7 +1156,7 @@ Radial progress can be used to show the progress of a task or to show the passin
 ### radio
 Radio buttons allow the user to select one option
 
-[radio docs](https://daisyui.com/components/radio/)
+[radio docs](https://duskmoonui.com/components/radio/)
 
 #### Class names
 - component: `radio`
@@ -1176,7 +1176,7 @@ Radio buttons allow the user to select one option
 ### range
 Range slider is used to select a value by sliding a handle
 
-[range docs](https://daisyui.com/components/range/)
+[range docs](https://duskmoonui.com/components/range/)
 
 #### Class names
 - component: `range`
@@ -1195,7 +1195,7 @@ Range slider is used to select a value by sliding a handle
 ### rating
 Rating is a set of radio buttons that allow the user to rate something
 
-[rating docs](https://daisyui.com/components/rating/)
+[rating docs](https://duskmoonui.com/components/rating/)
 
 #### Class names
 - component: `rating`
@@ -1217,7 +1217,7 @@ Rating is a set of radio buttons that allow the user to rate something
 ### select
 Select is used to pick a value from a list of options
 
-[select docs](https://daisyui.com/components/select/)
+[select docs](https://duskmoonui.com/components/select/)
 
 #### Class names
 - component: `select`
@@ -1238,7 +1238,7 @@ Select is used to pick a value from a list of options
 ### skeleton
 Skeleton is a component that can be used to show a loading state
 
-[skeleton docs](https://daisyui.com/components/skeleton/)
+[skeleton docs](https://duskmoonui.com/components/skeleton/)
 
 #### Class names
 - component: `skeleton`
@@ -1254,7 +1254,7 @@ Skeleton is a component that can be used to show a loading state
 ### stack
 Stack visually puts elements on top of each other
 
-[stack docs](https://daisyui.com/components/stack/)
+[stack docs](https://duskmoonui.com/components/stack/)
 
 #### Class Names:
 - Component: `stack`
@@ -1272,7 +1272,7 @@ Stack visually puts elements on top of each other
 ### stat
 Stat is used to show numbers and data in a block
 
-[stat docs](https://daisyui.com/components/stat/)
+[stat docs](https://duskmoonui.com/components/stat/)
 
 #### Class names
 - Component: `stats`
@@ -1294,7 +1294,7 @@ Stat is used to show numbers and data in a block
 ### status
 Status is a really small icon to visually show the current status of an element, like online, offline, error, etc
 
-[status docs](https://daisyui.com/components/status/)
+[status docs](https://duskmoonui.com/components/status/)
 
 #### Class Names:
 - Component: `status`
@@ -1313,7 +1313,7 @@ Status is a really small icon to visually show the current status of an element,
 ### steps
 Steps can be used to show a list of steps in a process
 
-[steps docs](https://daisyui.com/components/steps/)
+[steps docs](https://duskmoonui.com/components/steps/)
 
 #### Class Names:
 - Component: `steps`
@@ -1337,7 +1337,7 @@ Steps can be used to show a list of steps in a process
 ### swap
 Swap allows you to toggle the visibility of two elements using a checkbox or a class name
 
-[swap docs](https://daisyui.com/components/swap/)
+[swap docs](https://duskmoonui.com/components/swap/)
 
 #### Class Names:
 - Component: `swap`
@@ -1371,7 +1371,7 @@ Using class name
 ### tab
 Tabs can be used to show a list of links in a tabbed format
 
-[tab docs](https://daisyui.com/components/tab/)
+[tab docs](https://duskmoonui.com/components/tab/)
 
 #### Class Names:
 - Component: `tabs`
@@ -1403,7 +1403,7 @@ Using radio inputs:
 ### table
 Table can be used to show a list of data in a table format
 
-[table docs](https://daisyui.com/components/table/)
+[table docs](https://duskmoonui.com/components/table/)
 
 #### Class Names:
 - Component: `table`
@@ -1435,7 +1435,7 @@ Table can be used to show a list of data in a table format
 ### textarea
 Textarea allows users to enter text in multiple lines
 
-[textarea docs](https://daisyui.com/components/textarea/)
+[textarea docs](https://duskmoonui.com/components/textarea/)
 
 #### Class Names:
 - Component: `textarea`
@@ -1454,7 +1454,7 @@ Textarea allows users to enter text in multiple lines
 ### theme-controller
 If a checked checkbox input or a checked radio input with theme-controller class exists in the page, The page will have the same theme as that input's value
 
-[theme-controller docs](https://daisyui.com/components/theme-controller/)
+[theme-controller docs](https://duskmoonui.com/components/theme-controller/)
 
 #### Class names
 - component: `theme-controller`
@@ -1465,12 +1465,12 @@ If a checked checkbox input or a checked radio input with theme-controller class
 ```
 
 #### Rules
-- The value attribute of the input element should be a valid daisyUI theme name
+- The value attribute of the input element should be a valid duskmoonUI theme name
 
 ### timeline
 Timeline component shows a list of events in chronological order
 
-[timeline docs](https://daisyui.com/components/timeline/)
+[timeline docs](https://duskmoonui.com/components/timeline/)
 
 #### Class Names:
 - Component: `timeline`
@@ -1498,7 +1498,7 @@ Timeline component shows a list of events in chronological order
 ### toast
 Toast is a wrapper to stack elements, positioned on the corner of page
 
-[toast docs](https://daisyui.com/components/toast/)
+[toast docs](https://duskmoonui.com/components/toast/)
 
 #### Class Names:
 - Component: `toast`
@@ -1515,7 +1515,7 @@ Toast is a wrapper to stack elements, positioned on the corner of page
 ### toggle
 Toggle is a checkbox that is styled to look like a switch button
 
-[toggle docs](https://daisyui.com/components/toggle/)
+[toggle docs](https://duskmoonui.com/components/toggle/)
 
 #### Class Names:
 - Component: `toggle`
@@ -1533,7 +1533,7 @@ Toggle is a checkbox that is styled to look like a switch button
 ### validator
 Validator class changes the color of form elements to error or success based on input's validation rules
 
-[validator docs](https://daisyui.com/components/validator/)
+[validator docs](https://duskmoonui.com/components/validator/)
 
 #### Class names
 - component: `validator`

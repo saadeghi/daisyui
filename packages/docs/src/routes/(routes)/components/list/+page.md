@@ -29,7 +29,7 @@ classnames:
   <ul class="list bg-base-100 rounded-box shadow-md">
     <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
     <li class="list-row">
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/1@94.webp"/></div>
       <div>
         <div>Dio Lupa</div>
         <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
@@ -42,7 +42,7 @@ classnames:
       </button>
     </li>
     <li class="list-row">
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/4@94.webp"/></div>
       <div>
         <div>Ellie Beilish</div>
         <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
@@ -55,7 +55,7 @@ classnames:
       </button>
     </li>
     <li class="list-row">
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/3@94.webp"/></div>
       <div>
         <div>Sabrino Gardener</div>
         <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
@@ -76,7 +76,7 @@ classnames:
   <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
   
   <li class="$$list-row">
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/1@94.webp"/></div>
     <div>
       <div>Dio Lupa</div>
       <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
@@ -90,7 +90,7 @@ classnames:
   </li>
   
   <li class="$$list-row">
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/4@94.webp"/></div>
     <div>
       <div>Ellie Beilish</div>
       <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
@@ -104,7 +104,7 @@ classnames:
   </li>
   
   <li class="$$list-row">
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/3@94.webp"/></div>
     <div>
       <div>Sabrino Gardener</div>
       <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
@@ -127,7 +127,7 @@ classnames:
     <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
     <li class="list-row">
       <div class="text-4xl font-thin opacity-30 tabular-nums">01</div>
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/1@94.webp"/></div>
       <div class="list-col-grow">
         <div>Dio Lupa</div>
         <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
@@ -138,7 +138,7 @@ classnames:
     </li>
     <li class="list-row">
       <div class="text-4xl font-thin opacity-30 tabular-nums">02</div>
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/4@94.webp"/></div>
       <div class="list-col-grow">
         <div>Ellie Beilish</div>
         <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
@@ -149,7 +149,7 @@ classnames:
     </li>
     <li class="list-row">
       <div class="text-4xl font-thin opacity-30 tabular-nums">03</div>
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/3@94.webp"/></div>
       <div class="list-col-grow">
         <div>Sabrino Gardener</div>
         <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
@@ -168,7 +168,7 @@ classnames:
   
   <li class="$$list-row">
     <div class="text-4xl font-thin opacity-30 tabular-nums">01</div>
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/1@94.webp"/></div>
     <div class="$$list-col-grow">
       <div>Dio Lupa</div>
       <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
@@ -180,7 +180,7 @@ classnames:
   
   <li class="$$list-row">
     <div class="text-4xl font-thin opacity-30 tabular-nums">02</div>
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/4@94.webp"/></div>
     <div class="$$list-col-grow">
       <div>Ellie Beilish</div>
       <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
@@ -192,7 +192,7 @@ classnames:
   
   <li class="$$list-row">
     <div class="text-4xl font-thin opacity-30 tabular-nums">03</div>
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/3@94.webp"/></div>
     <div class="$$list-col-grow">
       <div>Sabrino Gardener</div>
       <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
@@ -210,7 +210,7 @@ classnames:
   <ul class="list bg-base-100 rounded-box shadow-md">
     <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
     <li class="list-row">
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/1@94.webp"/></div>
       <div>
         <div>Dio Lupa</div>
         <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
@@ -226,7 +226,7 @@ classnames:
       </button>
     </li>
     <li class="list-row">
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/4@94.webp"/></div>
       <div>
         <div>Ellie Beilish</div>
         <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
@@ -242,7 +242,7 @@ classnames:
       </button>
     </li>
     <li class="list-row">
-      <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
+      <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/3@94.webp"/></div>
       <div>
         <div>Sabrino Gardener</div>
         <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
@@ -266,7 +266,7 @@ classnames:
   <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
   
   <li class="$$list-row">
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/1@94.webp"/></div>
     <div>
       <div>Dio Lupa</div>
       <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
@@ -283,7 +283,7 @@ classnames:
   </li>
   
   <li class="$$list-row">
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/4@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/4@94.webp"/></div>
     <div>
       <div>Ellie Beilish</div>
       <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
@@ -300,7 +300,7 @@ classnames:
   </li>
   
   <li class="$$list-row">
-    <div><img class="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/3@94.webp"/></div>
+    <div><img class="size-10 rounded-box" src="https://img.duskmoonui.com/images/profile/demo/3@94.webp"/></div>
     <div>
       <div>Sabrino Gardener</div>
       <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>

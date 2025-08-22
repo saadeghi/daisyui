@@ -122,7 +122,7 @@
             target="_blank"
             rel="noopener, noreferrer"
             class="link"
-            href="https://github.com/saadeghi/daisyui/discussions"
+            href="https://github.com/duskmoon-dev/duskmoon-ui/discussions"
           >
             Ask on GitHub
           </a>
@@ -131,7 +131,7 @@
             target="_blank"
             rel="noopener, noreferrer"
             class="link"
-            href="https://daisyui.com/discord/"
+            href="https://duskmoonui.com/discord/"
           >
             Discord server
           </a>
@@ -163,7 +163,7 @@
               target="_blank"
               rel="noopener, noreferrer"
               class="link"
-              href={`https://github.com/saadeghi/daisyui/issues?q=${arrayOfPagesInOrder[currentPageIndex].name}`}
+              href={`https://github.com/duskmoon-dev/duskmoon-ui/issues?q=${arrayOfPagesInOrder[currentPageIndex].name}`}
             >
               {$t("open an issue on GitHub")}
             </a>
@@ -178,12 +178,12 @@
           />
         </svg>
         <div>
-          {$t("Do you like daisyUI?")}
+          {$t("Do you like duskmoonUI?")}
           <a
             target="_blank"
             rel="noopener, noreferrer"
             class="link"
-            href={`https://x.com/intent/post?text=daisyUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://daisyui.com`}
+            href={`https://x.com/intent/post?text=duskmoonUI%20%0D%0AComponents%20for%20Tailwind%20CSS%20%0D%0Ahttps://duskmoonui.com`}
           >
             Post about it!
           </a>
@@ -202,12 +202,12 @@
           ></svg
         >
         <div>
-          {$t("Support daisyUI's development")}:
+          {$t("Support duskmoonUI's development")}:
           <a
             target="_blank"
             rel="noopener, noreferrer"
             class="link"
-            href={`https://opencollective.com/daisyui`}
+            href={`https://opencollective.com/duskmoonui`}
           >
             {$t("Open Collective")}
           </a>
@@ -236,7 +236,7 @@
             target="_blank"
             rel="noopener, noreferrer"
             class="link"
-            href={`https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
+            href={`https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
               /\/$/,
               "",
             )}/+page.md?plain=1`}
@@ -268,7 +268,7 @@
             target="_blank"
             rel="noopener, noreferrer"
             class="link"
-            href={`https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
+            href={`https://raw.githubusercontent.com/duskmoon-dev/duskmoon-ui/refs/heads/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(
               /\/$/,
               "",
             )}/+page.md?plain=1`}
@@ -298,7 +298,7 @@
               target="_blank"
               rel="noopener, noreferrer"
               class="link"
-              href={`https://github.com/saadeghi/daisyui/blob/master/packages/docs/src/translation/${$currentLang}.json`}
+              href={`https://github.com/duskmoon-dev/duskmoon-ui/blob/master/packages/docs/src/translation/${$currentLang}.json`}
             >
               {$t("Contribute to translation")}
             </a>
@@ -315,8 +315,8 @@
     <a>
       <img
         class="pointer-events-none"
-        alt="daisyUI store"
-        src="https://img.daisyui.com/images/store/admin-dashboard.webp" />
+        alt="duskmoonUI store"
+        src="https://img.duskmoonui.com/images/store/admin-dashboard.webp" />
     </a>
   </figure>
   <div
@@ -349,7 +349,7 @@
           <circle cx="207.5" cy="135" r="125" fill="white" />
           <circle cx="207.5" cy="135" r="56" fill="#FF9903" />
         </svg>
-        with daisyUI Admin Dashboard
+        with duskmoonUI Admin Dashboard
       </h2>
     </div>
     <a class="btn btn-block btn-primary group" href="/store">
@@ -377,8 +377,8 @@
   <figure class="max-md:bg-primary/10 isolate md:w-2/3">
     <img
       class="pointer-events-none"
-      alt="daisyUI store"
-      src="https://img.daisyui.com/images/store/nexus.webp"
+      alt="duskmoonUI store"
+      src="https://img.duskmoonui.com/images/store/nexus.webp"
     />
   </figure>
   <div class="card-body relative isolate z-3">
@@ -457,14 +457,14 @@
         </svg>
         <span class="font-black lg:tracking-[1.5rem]">NEXUS</span>
         <br />
-        <span class="text-2xl font-light"> Official daisyUI Dashboard Template </span>
+        <span class="text-2xl font-light"> Official duskmoonUI Dashboard Template </span>
       </span>
     </h2>
     <div class="mb-4 grow">
       <h2
         class="card-title text-sm font-light opacity-50 sm:w-[250%] sm:text-lg md:text-lg lg:text-lg xl:text-xl"
       >
-        Available on daisyUI store
+        Available on duskmoonUI store
       </h2>
     </div>
     <a class="btn btn-block btn-primary group" href="/store">
@@ -491,7 +491,7 @@
       class="card-title text-base-content text-xl [text-wrap:balance] contrast-200 sm:w-[250%] sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl"
     >
       <span>
-        <span class="font-black">Official daisyUI</span>
+        <span class="font-black">Official duskmoonUI</span>
         <br />
         <span class="font-black"> Figma Library </span>
       </span>
@@ -511,7 +511,7 @@
           <circle cx="207.5" cy="135" r="125" fill="white"></circle>
           <circle cx="207.5" cy="135" r="56" fill="#FF9903"></circle>
         </svg>
-        Available on daisyUI store
+        Available on duskmoonUI store
       </h2>
     </div>
     <a class="btn btn-block btn-primary group" href="/store/">

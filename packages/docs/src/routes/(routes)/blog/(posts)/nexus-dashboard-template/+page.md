@@ -1,10 +1,10 @@
 ---
 title: Nexus 2.2 dashboard template is here!
-desc: A modern, flexible admin and client dashboard template built with daisyUI. Clean, responsive, and easy to customize and integrate.
+desc: A modern, flexible admin and client dashboard template built with duskmoonUI. Clean, responsive, and easy to customize and integrate.
 published: true
 date: 2025-04-30
 author: Denish Navadiya
-thumbnail: https://img.daisyui.com/images/blog/nexus-dashboard-template-thumbnail.webp
+thumbnail: https://img.duskmoonui.com/images/blog/nexus-dashboard-template-thumbnail.webp
 tags:
   - Templates
 ---
@@ -17,9 +17,9 @@ Building an admin dashboard isn’t easy. Developers need responsive designs tha
 
 ## Nexus 2.2 is here! Admin and client dashboard template
 
-- You can purchase the Nexus Dashboard from the [daisyUI store](https://daisyui.com/store/244268/) and follow installations steps to set it up.
+- You can purchase the Nexus Dashboard from the [duskmoonUI store](https://duskmoonui.com/store/244268/) and follow installations steps to set it up.
 - If you already purchased, get the new version for free from https://app.lemonsqueezy.com/my-orders
-- To upgrade to a higher plan, email us at help@daisyui.com to receive a discount code.
+- To upgrade to a higher plan, email us at help@duskmoonui.com to receive a discount code.
 
 ## Dev Story
 
@@ -28,7 +28,7 @@ SvelteKit followed with a CRM dashboard, cleaner forms, and improved components.
 
 Now with v2.2, it's moving into Gen AI with new pages, a fresh dashboard, and a built-in calendar.
 
-Each update includes the latest dependencies and fixes for any bugs we've found or that others have reported. Check out the official [Nexus docs](https://nexus.daisyui.com/docs/) for the changelog and upcoming plans.
+Each update includes the latest dependencies and fixes for any bugs we've found or that others have reported. Check out the official [Nexus docs](https://nexus.duskmoonui.com/docs/) for the changelog and upcoming plans.
 
 ## Installation
 
@@ -67,16 +67,16 @@ To change the logo, replace the following images with your own.
 - `/public/images/logo/logo-light.png`
 - `/public/images/logo/logo-dark.png`
 
-### Customizing daisyUI themes
+### Customizing duskmoonUI themes
 
-`/styles/daisyui.css` contains the DaisyUI plugin and themes. You can add or modify themes and their options, including layout colors (background, sidebar, and topbar).
+`/styles/duskmoonui.css` contains the DaisyUI plugin and themes. You can add or modify themes and their options, including layout colors (background, sidebar, and topbar).
 
 ```css
-@plugin "daisyui" {
-  /* daisyUI options */
+@plugin "duskmoonui" {
+  /* duskmoonUI options */
 }
 
-@plugin "daisyui/theme" {
+@plugin "duskmoonui/theme" {
   name: "light";
 
   /* update: primary */
@@ -146,10 +146,10 @@ Ensure that Tailwind CSS 4 and DaisyUI 5 are properly installed and functioning 
 
 ### Include a specific theme
 
-If you need to use the `material` theme in your project, copy the following lines from `styles/daisyui.css` into your project.
+If you need to use the `material` theme in your project, copy the following lines from `styles/duskmoonui.css` into your project.
 
 ```css
-@plugin "daisyui/theme" {
+@plugin "duskmoonui/theme" {
   name: "material";
   color-scheme: light;
   --color-primary: #167bff;
@@ -161,7 +161,7 @@ You can now apply the theme by setting the `data-theme="material"` attribute on 
 
 ### More details
 
-For detailed information on specific topics such as dependencies, framework integration, roadmap, changelog, and more, visit official [Nexus documentation](https://nexus.daisyui.com/docs/)
+For detailed information on specific topics such as dependencies, framework integration, roadmap, changelog, and more, visit official [Nexus documentation](https://nexus.duskmoonui.com/docs/)
 
 ## Every project needs a dashboard
 
@@ -171,4 +171,4 @@ We value your feedback! Share your thoughts by filling out the [feedback form](h
 
 ## Need help?
 
-Got questions or need help? Join our [Discord](https://daisyui.com/discord/) for support and troubleshooting, or just drop us an email at help@daisyui.com
+Got questions or need help? Join our [Discord](https://duskmoonui.com/discord/) for support and troubleshooting, or just drop us an email at help@duskmoonui.com

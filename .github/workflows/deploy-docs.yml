@@ -36,7 +36,7 @@ jobs:
         run: bun i
 
       - name: Add robots.txt if not main repo
-        if: github.repository != 'saadeghi/daisyui'
+        if: github.repository != 'duskmoon-dev/duskmoon-ui'
         run: |
           echo 'User-agent: *
           Disallow: /' > packages/docs/static/robots.txt

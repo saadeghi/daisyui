@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI as a Tailwind plugin
-desc: How to install daisyUI as a Tailwind CSS plugin?
+title: Install duskmoonUI as a Tailwind plugin
+desc: How to install duskmoonUI as a Tailwind CSS plugin?
 ---
 
 <script>
@@ -17,7 +17,7 @@ desc: How to install daisyUI as a Tailwind CSS plugin?
 
 ## Framework install tutorials
 
-<Translate text="See example setup of daisyUI and Tailwind CSS on different frameworks and build tools."/>
+<Translate text="See example setup of duskmoonUI and Tailwind CSS on different frameworks and build tools."/>
 
 <div class="not-prose grid grid-cols-2 md:grid-cols-3 py-6 *:-ms-px *:-mt-px">
 

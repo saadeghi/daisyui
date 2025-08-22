@@ -1,13 +1,13 @@
 ---
-title: Claude desktop setup for daisyUI
-desc: Setup Claude desktop to correctly generate daisyUI code based on your prompt.
+title: Claude desktop setup for duskmoonUI
+desc: Setup Claude desktop to correctly generate duskmoonUI code based on your prompt.
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-## <img src="https://img.daisyui.com/images/logos/claude.webp" alt="Claude" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Claude desktop LLM setup
+## <img src="https://img.duskmoonui.com/images/logos/claude.webp" alt="Claude" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Claude desktop LLM setup
 
 ### Quick use
 
@@ -16,7 +16,7 @@ coming soon…
 ### MCP server
 
 MCP is a an API to communicate with AI models. You can add MCP servers and Claude will communicate with them to get more accurate results.  
-You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp.io/saadeghi/daisyui) as MCP server in Claude desktop.
+You can use [Context7](https://context7.com/) or [duskmoonUI GitMCP](https://gitmcp.io/duskmoon-dev/duskmoon-ui) as MCP server in Claude desktop.
 
 <div class="tabs tabs-lift max-sm:tabs-sm">
   <input type="radio" name="mcp_options" class="tab" aria-label="Context7" checked />
@@ -42,11 +42,11 @@ You can use [Context7](https://context7.com/) or [daisyUI GitMCP](https://gitmcp
 
 #### Usage
 
-Now you can ask AI anything about daisyUI, and write `use context7` at the end of your prompt.  
+Now you can ask AI anything about duskmoonUI, and write `use context7` at the end of your prompt.
 For example:
 
 ```md:prompt
-give me a light daisyUI 5 theme with tropical color palette. use context7
+give me a light duskmoonUI 5 theme with tropical color palette. use context7
 ```
 
   </div>
@@ -54,7 +54,7 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
   <input type="radio" name="mcp_options" class="tab" aria-label="GitMCP" />
   <div class="tab-content bg-base-100 border-base-300 px-12 py-3">
 
-#### Setup daisyUI GitMCP server
+#### Setup duskmoonUI GitMCP server
 
 1. Go to Settings > Developer
 2. Click `Edit Config` button
@@ -63,11 +63,11 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
    ```diff:claude_desktop_config.json
    {
      "mcpServers": {
-   +   "daisyui Docs": {
+   +   "duskmoonui Docs": {
    +     "command": "npx",
    +     "args": [
    +       "mcp-remote",
-   +       "https://gitmcp.io/saadeghi/daisyui"
+   +       "https://gitmcp.io/duskmoon-dev/duskmoon-ui"
    +     ]
    +   }
      }
@@ -76,10 +76,10 @@ give me a light daisyUI 5 theme with tropical color palette. use context7
 
 #### Usage
 
-Now you can ask AI anything about daisyUI.
+Now you can ask AI anything about duskmoonUI.
 
 ```md:prompt
-give me a light daisyUI 5 theme with tropical color palette
+give me a light duskmoonUI 5 theme with tropical color palette
 ```
 
 </div>

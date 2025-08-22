@@ -7,7 +7,7 @@ export const courses = [
   {
     title: "Building with SvelteKit and GraphCMS - Styling with Tailwind and DaisyUI",
     site: "Netlify",
-    link: "https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms/styling-with-tailwind-and-daisyui",
+    link: "https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms/styling-with-tailwind-and-duskmoonui",
   },
   {
     title: "Svelte for Beginners by Mike Karan",
@@ -35,7 +35,7 @@ export const courses = [
     link: "https://www.freecodecamp.org/news/build-your-developer-portfolio-from-scratch-with-sveltekit-and-graphcms/",
   },
   {
-    title: "Building a React Admin Panel with refine and daisyUI",
+    title: "Building a React Admin Panel with refine and duskmoonUI",
     site: "Refine.dev",
     link: "https://refine.dev/blog/daisy-ui-react-admin-panel/",
   },

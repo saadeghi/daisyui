@@ -15,26 +15,26 @@ classnames:
 
 ### ~mockup code with line prefix
 <div class="mockup-code w-full">
-  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  <pre data-prefix="$"><code>npm i duskmoonui</code></pre>
 </div>
 
 ```html
 <div class="$$mockup-code w-full">
-  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  <pre data-prefix="$"><code>npm i duskmoonui</code></pre>
 </div>
 ```
 
 
 ### ~Multi line
 <div class="mockup-code w-full">
-  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  <pre data-prefix="$"><code>npm i duskmoonui</code></pre>
   <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
   <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
 </div>
 
 ```html
 <div class="$$mockup-code w-full">
-  <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  <pre data-prefix="$"><code>npm i duskmoonui</code></pre>
   <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
   <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
 </div>
@@ -43,14 +43,14 @@ classnames:
 
 ### ~Highlighted line
 <div class="mockup-code w-full">
-  <pre data-prefix="1"><code>npm i daisyui</code></pre>
+  <pre data-prefix="1"><code>npm i duskmoonui</code></pre>
   <pre data-prefix="2"><code>installing...</code></pre>
   <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
 </div>
 
 ```html
 <div class="$$mockup-code w-full">
-  <pre data-prefix="1"><code>npm i daisyui</code></pre>
+  <pre data-prefix="1"><code>npm i duskmoonui</code></pre>
   <pre data-prefix="2"><code>installing...</code></pre>
   <pre data-prefix="3" class="bg-warning text-warning-content"><code>Error!</code></pre>
 </div>

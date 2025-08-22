@@ -1,6 +1,6 @@
 ---
-title: Install daisyUI for Rails
-desc: How to install Tailwind CSS and daisyUI in a Rails project
+title: Install duskmoonUI for Rails
+desc: How to install Tailwind CSS and duskmoonUI in a Rails project
 ---
 
 <script>
@@ -27,9 +27,9 @@ Install [Tailwind CSS 4 gem](https://github.com/rails/tailwindcss-rails) for Rai
 ./bin/rails tailwindcss:install
 ```
 
-### 3. Add daisyUI
+### 3. Add duskmoonUI
 
-There are 3 ways to add daisyUI to your Rails project
+There are 3 ways to add duskmoonUI to your Rails project
 
 <div class="tabs tabs-lift max-sm:tabs-sm">
   <input type="radio" name="install_options" class="tab" aria-label="Node dependency" />
@@ -38,14 +38,14 @@ There are 3 ways to add daisyUI to your Rails project
 This method is recommended if are already using Node.js.  
 This works as a Tailwind CSS plugin so only the class names you need will be added to your CSS file.
 
-Initialize a package.json (if you don't have one) and install daisyUI
+Initialize a package.json (if you don't have one) and install duskmoonUI
 
 ```sh:Terminal
 npm init -y
-npm install daisyui@latest
+npm install duskmoonui@latest
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
 
 ```postcss:app/assets/tailwind/application.css
 @import "tailwindcss" source(none);
@@ -54,7 +54,7 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @source "../../../app/javascript/**/*.js";
 @source "../../../app/views/**/*";
 
-@plugin "daisyui";
+@plugin "duskmoonui";
 ```
 
   </div>
@@ -65,14 +65,14 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 This method is recommended if you are not using Node.js.  
 This works as a Tailwind CSS plugin so only the class names you need will be added to your CSS file.
 
-Run this code to download latest version of daisyUI as a single js file
+Run this code to download latest version of duskmoonUI as a single js file
 
 ```sh:Terminal
-curl -sLo app/assets/tailwind/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLo app/assets/tailwind/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLo app/assets/tailwind/duskmoonui.js https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui.js
+curl -sLo app/assets/tailwind/duskmoonui-theme.js https://github.com/duskmoon-dev/duskmoon-ui/releases/latest/download/duskmoonui-theme.js
 ```
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
 
 ```postcss:app/assets/tailwind/application.css
 @import "tailwindcss" source(none);
@@ -81,10 +81,10 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @source "../../../app/javascript/**/*.js";
 @source "../../../app/views/**/*";
 
-@plugin "./daisyui.js";
+@plugin "./duskmoonui.js";
 
-/* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
-@plugin "./daisyui-theme.js"{
+/* Optional for custom themes – Docs: https://duskmoonui.com/docs/themes/#how-to-add-a-new-custom-theme */
+@plugin "./duskmoonui-theme.js"{
   /* custom theme here */
 }
 ```
@@ -95,9 +95,9 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
   <div class="tab-content bg-base-100 border-base-300 px-6 py-3">
 
 
-This method is recommended if you want to quickly add daisyUI without adding any file.
+This method is recommended if you want to quickly add duskmoonUI without adding any file.
 
-Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
+Put Tailwind CSS and duskmoonUI in your CSS file (and remove old styles)
 
 ```postcss:app/assets/tailwind/application.css
 @import "tailwindcss" source(none);
@@ -106,19 +106,19 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @source "../../../app/javascript/**/*.js";
 @source "../../../app/views/**/*";
 
-@import "https://cdn.jsdelivr.net/npm/daisyui@5";
+@import "https://cdn.jsdelivr.net/npm/duskmoonui@5";
 ```
 
 - You can [choose the parts you need](/docs/cdn/)
-- You can [import small CSS files separately](https://cdn.jsdelivr.net/npm/daisyui@5/chunks.css)
-- You can [import all themes](https://cdn.jsdelivr.net/npm/daisyui@5/themes.css) or [specific themes](https://cdn.jsdelivr.net/npm/daisyui@5/theme/light.css)
+- You can [import small CSS files separately](https://cdn.jsdelivr.net/npm/duskmoonui@5/chunks.css)
+- You can [import all themes](https://cdn.jsdelivr.net/npm/duskmoonui@5/themes.css) or [specific themes](https://cdn.jsdelivr.net/npm/duskmoonui@5/theme/light.css)
 
 </div>
 </div>
 
 ### 4. Create a homepage in Rails
 
-Now you can use daisyUI class names! Let's create a simple page and try a button
+Now you can use duskmoonUI class names! Let's create a simple page and try a button
 
 ```rb:app/controllers/pages_controller.rb
 class PagesController < ApplicationController
@@ -134,7 +134,7 @@ end
 ```
 
 ```erb:app/views/pages/home.html.erb
-<button class="btn btn-primary">Hello daisyUI!</button>
+<button class="btn btn-primary">Hello duskmoonUI!</button>
 ```
 
 ### 5. Start Rails

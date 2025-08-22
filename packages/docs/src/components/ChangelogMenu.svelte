@@ -40,7 +40,7 @@
             ></path></g
           ></svg
         >
-        daisyUI 5
+        duskmoonUI 5
       </a>
     </li>
     <li></li>
@@ -83,16 +83,16 @@
     </li>
     <li></li>
     <li>
-      <a target="_blank" rel="noopener, noreferrer" href="https://v4.daisyui.com/">Version 4.x</a>
+      <a target="_blank" rel="noopener, noreferrer" href="https://v4.duskmoonui.com/">Version 4.x</a>
     </li>
     <li>
-      <a target="_blank" rel="noopener, noreferrer" href="https://v3.daisyui.com/">Version 3.x</a>
+      <a target="_blank" rel="noopener, noreferrer" href="https://v3.duskmoonui.com/">Version 3.x</a>
     </li>
     <li>
-      <a target="_blank" rel="noopener, noreferrer" href="https://v2.daisyui.com/">Version 2.x</a>
+      <a target="_blank" rel="noopener, noreferrer" href="https://v2.duskmoonui.com/">Version 2.x</a>
     </li>
     <li>
-      <a target="_blank" rel="noopener, noreferrer" href="https://v1.daisyui.com/">Version 1.x</a>
+      <a target="_blank" rel="noopener, noreferrer" href="https://v1.duskmoonui.com/">Version 1.x</a>
     </li>
     <li></li>
     <li>

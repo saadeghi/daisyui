@@ -2,10 +2,10 @@ export const prerender = true
 
 import { dirname } from "node:path"
 
-const siteTitle = "daisyUI Blog"
+const siteTitle = "duskmoonUI Blog"
 const siteDesc = "Updates, ideas and resources"
-const siteUrl = "https://daisyui.com"
-const blogUrl = "https://daisyui.com/blog"
+const siteUrl = "https://duskmoonui.com"
+const blogUrl = "https://duskmoonui.com/blog"
 
 const get_posts = async () => {
   let posts = await Promise.all(

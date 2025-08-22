@@ -10,7 +10,7 @@ const checkVariableWarnings = (variables, filename) => {
 
   if (
     twVariables.length > 0 &&
-    !["typography.css", "properties.css", "states.css", "responsive.css", "daisyui.css"].includes(
+    !["typography.css", "properties.css", "states.css", "responsive.css", "duskmoonui.css"].includes(
       filename,
     )
   ) {

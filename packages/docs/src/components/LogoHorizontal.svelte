@@ -5,12 +5,12 @@
 
 <svg
   class="h-auto w-full"
-  aria-label="daisyUI logo"
+  aria-label="duskmoonUI logo"
   viewBox="0 0 1653 600"
   xmlns="http://www.w3.org/2000/svg"
 >
   <svg
-    aria-label="daisyUI logomark"
+    aria-label="duskmoonUI logomark"
     x="75"
     y="75"
     width="450"
@@ -265,7 +265,7 @@
     </defs>
   </svg>
   <svg
-    aria-label="daisyUI logotype"
+    aria-label="duskmoonUI logotype"
     x="600"
     y="150"
     width="977"
