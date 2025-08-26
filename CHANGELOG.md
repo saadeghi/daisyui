@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.51 (2025-08-26)
+
+
+### Bug Fixes
+
+* styles for disabled inputs and select in fieldset ([c60350d](https://github.com/saadeghi/daisyui/commit/c60350df71f8f5fdc199a2806ef62b4377827c63)), closes [#4021](https://github.com/saadeghi/daisyui/issues/4021)
+
 ## 5.0.50 (2025-07-29)
 
 
