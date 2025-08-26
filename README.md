@@ -15,15 +15,65 @@
 
 </div>
 
-# duskmoonUI 5
+# duskmoonUI
 
-### 🌼 [Official website →](https://duskmoonui.com/)
+duskmoonUI is a lightweight and modular component library for [Tailwind CSS](https://tailwindcss.com/). It provides a set of accessible and customizable components that can be easily integrated into your project.
 
-### 🧩 [See all components →](https://duskmoonui.com/components/)
+## 🚀 Getting Started
 
-### 🚀 [How to use →](https://duskmoonui.com/docs/install/)
+### 1. Installation
 
-### 🤝 [Contribute →](.github/CONTRIBUTING.md)
+Install duskmoonUI as a dev dependency using your favorite package manager:
+
+**npm**
+```bash
+npm i -D duskmoonui@latest
+```
+
+**pnpm**
+```bash
+pnpm add -D duskmoonui@latest
+```
+
+**Yarn**
+```bash
+yarn add -D duskmoonui@latest
+```
+
+**Bun**
+```bash
+bun add -D duskmoonui@latest
+```
+
+### 2. Add to your CSS
+
+Add duskmoonUI to your main CSS file:
+```css
+@import "tailwindcss";
+@plugin "duskmoonui";
+```
+
+That's it! You can now use duskmoonUI components in your project.
+
+## ✨ Features
+
+*   **Lightweight and Modular:** Only include the components you need.
+*   **Accessible:** Components are designed with accessibility in mind.
+*   **Customizable:** Easily extend and customize the components to match your brand.
+*   **Framework-agnostic:** Use it with any framework that supports Tailwind CSS.
+*   **Free and Open-Source:** duskmoonUI is free to use and open-source.
+
+## 🤝 Contributing
+
+We welcome contributions from the community. Please read our [contributing guide](.github/CONTRIBUTING.md) to learn how you can get involved.
+
+## 💬 Community
+
+Join our [Discord server](https://duskmoonui.com/discord/) to connect with other duskmoonUI users and get help from the community.
+
+## 📄 License
+
+duskmoonUI is licensed under the [MIT License](LICENSE).
 
 ---
 
