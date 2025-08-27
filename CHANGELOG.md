@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.52 (2025-08-27)
+
+
+### Bug Fixes
+
+* date input alignment in labels on iOS Safari ([#3995](https://github.com/saadeghi/daisyui/issues/3995)) ([ee1bd67](https://github.com/saadeghi/daisyui/commit/ee1bd67209b7bd58db315552ee80bb0310a7a405)), closes [#3952](https://github.com/saadeghi/daisyui/issues/3952)
+
 ## 5.0.51 (2025-08-26)
 
 
