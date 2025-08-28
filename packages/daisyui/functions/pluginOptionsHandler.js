@@ -29,7 +29,10 @@ export const pluginOptionsHandler = (() => {
         addBase({ [selector]: theme })
 
         if (flags.includes("--prefersdark")) {
-          addBase({ "@media (prefers-color-scheme: dark)": { [root]: theme } })
+          // Use :root:not([data-theme]) for dark mode specificity
+          const darkSelector =
+            root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
+          addBase({ "@media (prefers-color-scheme: dark)": { [darkSelector]: theme } })
         }
       }
     }
@@ -40,7 +43,9 @@ export const pluginOptionsHandler = (() => {
       }
 
       if (themesObject["dark"]) {
-        addBase({ "@media (prefers-color-scheme: dark)": { [root]: themesObject["dark"] } })
+        const darkSelector =
+          root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
+        addBase({ "@media (prefers-color-scheme: dark)": { [darkSelector]: themesObject["dark"] } })
       }
 
       themeOrder.forEach((themeName) => {
@@ -70,7 +75,11 @@ export const pluginOptionsHandler = (() => {
       themeArray.forEach((themeOption) => {
         const [themeName, ...flags] = themeOption.split(" ")
         if (flags.includes("--prefersdark")) {
-          addBase({ "@media (prefers-color-scheme: dark)": { [root]: themesObject[themeName] } })
+          const darkSelector =
+            root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
+          addBase({
+            "@media (prefers-color-scheme: dark)": { [darkSelector]: themesObject[themeName] },
+          })
         }
       })
 

@@ -22,7 +22,7 @@ test("pluginOptionsHandler should apply default themes", () => {
     },
   })
   expect(mockAddBase).toHaveBeenCalledWith({
-    "@media (prefers-color-scheme: dark)": { ":root": { color: "black" } },
+    "@media (prefers-color-scheme: dark)": { ":root:not([data-theme])": { color: "black" } },
   })
   expect(mockAddBase).toHaveBeenCalledWith({
     ":root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {
@@ -50,7 +50,7 @@ test("pluginOptionsHandler should apply all themes when 'all' is specified", () 
     },
   })
   expect(mockAddBase).toHaveBeenCalledWith({
-    "@media (prefers-color-scheme: dark)": { ":root": { color: "black" } },
+    "@media (prefers-color-scheme: dark)": { ":root:not([data-theme])": { color: "black" } },
   })
   expect(mockAddBase).toHaveBeenCalledWith({
     ":root:has(input.theme-controller[value=dark]:checked),[data-theme=dark]": {

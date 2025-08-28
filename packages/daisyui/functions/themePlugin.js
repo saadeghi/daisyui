@@ -36,9 +36,12 @@ export default plugin.withOptions((options = {}) => {
     }
 
     if (prefersdark) {
+      // Use :root:not([data-theme]) for dark mode specificity
+      const darkSelector =
+        root === ":root" ? ":root:not([data-theme])" : `${root}:not([data-theme])`
       addBase({
         "@media (prefers-color-scheme: dark)": {
-          [root]: baseStyles[selector], // Use the configurable root option here
+          [darkSelector]: baseStyles[selector],
         },
       })
     }
