@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.54 (2025-08-28)
+
+
+### Bug Fixes
+
+* prefersdark theme overriding the default theme in custom themes. closes: [#3921](https://github.com/saadeghi/daisyui/issues/3921) ([bd6b064](https://github.com/saadeghi/daisyui/commit/bd6b06496f0e6a3605477d1911ec70e0c74a4bcb))
+
 ## 5.0.53 (2025-08-28)
 
 
