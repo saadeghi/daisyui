@@ -363,7 +363,7 @@ Anchor links might not work well on some SPA frameworks. If there are problems, 
     <h3 class="text-lg font-bold">Hello!</h3>
     <p class="py-4">This modal works with anchor links</p>
     <div class="$$modal-action">
-      <a href="#" class="$$btn">Yay!</a>
+      <button onclick="history.back()" class="$$btn">Yay!</button>
     </div>
   </div>
 </div>
