@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.0.53 (2025-08-28)
+
+
+### Bug Fixes
+
+* improve text contrast for selected cally dates on hover ([#4056](https://github.com/saadeghi/daisyui/issues/4056)) ([904505f](https://github.com/saadeghi/daisyui/commit/904505ffe50df844c755a98ae31ec3478cbf0409)), closes [#4042](https://github.com/saadeghi/daisyui/issues/4042)
+
 ## 5.0.52 (2025-08-27)
 
 
