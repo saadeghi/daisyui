@@ -8,12 +8,10 @@
 
   > * {
     @apply col-start-1 row-start-1;
-    transition-property: transform, rotate, opacity;
-    transition-duration: 0.2s;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: transform, rotate, opacity;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
   }
 

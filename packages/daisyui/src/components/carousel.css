@@ -1,11 +1,9 @@
 .carousel {
   @apply inline-flex overflow-x-scroll;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   scrollbar-width: none;
-
-  @media (prefers-reduced-motion: reduce) {
-    scroll-behavior: auto;
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
   }
 
   &::-webkit-scrollbar {

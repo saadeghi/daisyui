@@ -10,32 +10,24 @@
     );
     background-size: 200%;
     background-position-x: 15%;
-    animation: progress 5s ease-in-out infinite;
-
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
-      background-image: linear-gradient(90deg, currentColor 0%, currentColor 100%);
-      background-size: 100%;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: progress 5s ease-in-out infinite;
     }
 
     @supports (-moz-appearance: none) {
       &::-moz-progress-bar {
         @apply bg-transparent;
-        background-image: repeating-linear-gradient(
-          90deg,
-          currentColor -1%,
-          currentColor 10%,
-          #0000 10%,
-          #0000 90%
-        );
-        background-size: 200%;
-        background-position-x: 15%;
-        animation: progress 5s ease-in-out infinite;
-
-        @media (prefers-reduced-motion: reduce) {
-          animation: none;
-          background-image: linear-gradient(90deg, currentColor 0%, currentColor 100%);
-          background-size: 100%;
+        @media (prefers-reduced-motion: no-preference) {
+          animation: progress 5s ease-in-out infinite;
+          background-image: repeating-linear-gradient(
+            90deg,
+            currentColor -1%,
+            currentColor 10%,
+            #0000 10%,
+            #0000 90%
+          );
+          background-size: 200%;
+          background-position-x: 15%;
         }
       }
     }
