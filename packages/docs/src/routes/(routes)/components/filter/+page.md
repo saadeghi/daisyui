@@ -52,3 +52,20 @@ classnames:
   <input class="$$btn" type="radio" name="metaframeworks" aria-label="Next.js"/>
 </div>
 ```
+### ~Filter using HTML form, checkboxes and reset button
+#### For having multiple choices, use checkboxes. It doesn't need the filter class name.
+
+<form>
+  <input class="btn" type="checkbox" name="frameworks" aria-label="Svelte"/>
+  <input class="btn" type="checkbox" name="frameworks" aria-label="Vue"/>
+  <input class="btn" type="checkbox" name="frameworks" aria-label="React"/>
+  <input class="btn btn-square" type="reset" value="×"/>
+</form>
+
+```html
+<form>
+  <input class="$$btn $$btn-square" type="reset" value="×"/>
+  <input class="$$btn" type="checkbox" name="frameworks" aria-label="Svelte"/>
+  <input class="$$btn" type="checkbox" name="frameworks" aria-label="Vue"/>
+  <input class="$$btn" type="checkbox" name="frameworks" aria-label="React"/>
+</form>
