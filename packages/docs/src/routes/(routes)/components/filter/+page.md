@@ -55,15 +55,15 @@ classnames:
 ### ~Filter using HTML form, checkboxes and reset button
 #### A HTML form for filtering items with multiple selections
 
-<form class="filter">
-  <input class="btn btn-square" type="reset" value="×"/>
+<form>
   <input class="btn" type="checkbox" name="frameworks" aria-label="Svelte"/>
   <input class="btn" type="checkbox" name="frameworks" aria-label="Vue"/>
   <input class="btn" type="checkbox" name="frameworks" aria-label="React"/>
+  <input class="btn btn-square" type="reset" value="×"/>
 </form>
 
 ```html
-<form class="$$filter">
+<form>
   <input class="$$btn $$btn-square" type="reset" value="×"/>
   <input class="$$btn" type="checkbox" name="frameworks" aria-label="Svelte"/>
   <input class="$$btn" type="checkbox" name="frameworks" aria-label="Vue"/>
