@@ -53,7 +53,7 @@ classnames:
 </div>
 ```
 ### ~Filter using HTML form, checkboxes and reset button
-#### A HTML form for filtering items with multiple selections
+#### For having multiple choices, use checkboxes. It doesn't need the filter class name.
 
 <form>
   <input class="btn" type="checkbox" name="frameworks" aria-label="Svelte"/>
