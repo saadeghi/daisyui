@@ -1,7 +1,6 @@
 .skeleton {
   @apply bg-base-300 rounded-box motion-reduce:[transition-duration:15s];
   will-change: background-position;
-  animation: skeleton 1.8s ease-in-out infinite;
   background-image: linear-gradient(
     105deg,
     #0000 0% 40%,
@@ -11,6 +10,10 @@
   background-size: 200% auto;
   background-repeat: no-repeat;
   background-position-x: -50%;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: skeleton 1.8s ease-in-out infinite;
+  }
 }
 @keyframes skeleton {
   0% {

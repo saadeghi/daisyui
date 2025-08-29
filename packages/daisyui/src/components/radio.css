@@ -20,8 +20,10 @@
 
   &:checked,
   &[aria-checked="true"] {
-    animation: radio 0.2s ease-out;
     @apply bg-base-100 border-current;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: radio 0.2s ease-out;
+    }
 
     &:before {
       @apply bg-current;
