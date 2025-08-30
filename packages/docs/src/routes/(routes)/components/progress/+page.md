@@ -1,6 +1,7 @@
 ---
 title: Progress
 desc: Progress bar can be used to show the progress of a task or to show the passing of time.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/progress.css
 layout: components
 classnames:
   component:

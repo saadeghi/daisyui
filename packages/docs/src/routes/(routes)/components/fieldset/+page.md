@@ -1,6 +1,7 @@
 ---
 title: Fieldset
 desc: Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and label as a description.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/fieldset.css
 layout: components
 classnames:
   component:

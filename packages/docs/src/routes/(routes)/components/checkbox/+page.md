@@ -1,6 +1,7 @@
 ---
 title: Checkbox
 desc: Checkboxes are used to select or deselect a value.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/checkbox.css
 layout: components
 classnames:
   component:

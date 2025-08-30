@@ -1,6 +1,7 @@
 ---
 title: Filter
 desc: Filter is a group of radio buttons. Choosing one of the options will hide the others and shows a reset button next to the chosen option.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/filter.css
 layout: components
 classnames:
   component:

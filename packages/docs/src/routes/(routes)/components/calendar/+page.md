@@ -1,6 +1,7 @@
 ---
 title: Calendar
 desc: Calendar includes styles for different calendar libraries.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/calendar.css
 layout: components
 classnames:
   component:

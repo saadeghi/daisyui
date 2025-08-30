@@ -1,6 +1,7 @@
 ---
 title: Countdown
 desc: Countdown gives you a transition effect when you change a number between 0 to 99.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/countdown.css
 layout: components
 classnames:
   component:

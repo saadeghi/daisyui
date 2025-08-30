@@ -1,6 +1,7 @@
 ---
 title: Table
 desc: Table can be used to show a list of data in a table format.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/table.css
 layout: components
 classnames:
   component:

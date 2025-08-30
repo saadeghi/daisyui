@@ -1,6 +1,7 @@
 ---
 title: Radio
 desc: Radio buttons allow the user to select one option from a set.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/radio.css
 layout: components
 classnames:
   component:

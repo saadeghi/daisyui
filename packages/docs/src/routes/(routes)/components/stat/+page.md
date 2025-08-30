@@ -1,6 +1,7 @@
 ---
 title: Stat
 desc: Stat is used to show numbers and data in a block.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/stat.css
 layout: components
 classnames:
   component:

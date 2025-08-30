@@ -1,6 +1,7 @@
 ---
 title: Accordion
 desc: Accordion is used for showing and hiding content but only one item can stay open at a time.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/collapse.css
 layout: components
 classnames:
   component:

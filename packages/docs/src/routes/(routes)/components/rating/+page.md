@@ -1,6 +1,7 @@
 ---
 title: Rating
 desc: Rating is a set of radio buttons that allow the user to rate something.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/rating.css
 layout: components
 classnames:
   component:

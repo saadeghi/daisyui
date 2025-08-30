@@ -1,6 +1,7 @@
 ---
 title: Timeline
 desc: Timeline component shows a list of events in chronological order.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/timeline.css
 layout: components
 classnames:
   component:

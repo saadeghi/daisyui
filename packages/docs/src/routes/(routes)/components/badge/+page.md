@@ -1,6 +1,7 @@
 ---
 title: Badge
 desc: Badges are used to inform the user of the status of specific data.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/badge.css
 layout: components
 classnames:
   component:

@@ -1,6 +1,7 @@
 ---
 title: Carousel
 desc: Carousel show images or content in a scrollable area.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/carousel.css
 layout: components
 classnames:
   component:

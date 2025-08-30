@@ -1,6 +1,7 @@
 ---
 title: Button
 desc: Buttons allow the user to take actions or make choices.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/button.css
 layout: components
 showComponentPageTabs: true
 classnames:

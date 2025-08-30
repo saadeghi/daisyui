@@ -1,6 +1,7 @@
 ---
 title: Dropdown
 desc: Dropdown can open a menu or any other element when the button is clicked.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/dropdown.css
 layout: components
 classnames:
   component:

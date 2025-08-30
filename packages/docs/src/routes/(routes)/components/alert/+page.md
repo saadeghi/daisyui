@@ -1,6 +1,7 @@
 ---
 title: Alert
 desc: Alert informs users about important events.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/alert.css
 layout: components
 classnames:
   component:

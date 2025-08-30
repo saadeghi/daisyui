@@ -1,6 +1,7 @@
 ---
 title: Browser mockup
 desc: Browser mockup shows a box that looks like a browser window.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/mockup.css
 layout: components
 classnames:
   component:

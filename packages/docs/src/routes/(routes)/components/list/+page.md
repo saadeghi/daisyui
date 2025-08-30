@@ -1,6 +1,7 @@
 ---
 title: List
 desc: List is a vertical layout to display information in rows.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/list.css
 layout: components
 classnames:
   component:

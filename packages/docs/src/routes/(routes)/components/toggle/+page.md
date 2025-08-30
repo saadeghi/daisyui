@@ -1,6 +1,7 @@
 ---
 title: Toggle
 desc: Toggle is a checkbox that is styled to look like a switch button.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/toggle.css
 layout: components
 classnames:
   component:

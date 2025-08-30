@@ -1,6 +1,7 @@
 ---
 title: Indicator
 desc: Indicators are used to place an element on the corner of another element.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/indicator.css
 layout: components
 classnames:
   component:

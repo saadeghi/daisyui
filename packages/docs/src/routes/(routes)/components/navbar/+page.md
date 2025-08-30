@@ -1,6 +1,7 @@
 ---
 title: Navbar
 desc: Navbar is used to show a navigation bar on the top of the page.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/navbar.css
 layout: components
 classnames:
   component:

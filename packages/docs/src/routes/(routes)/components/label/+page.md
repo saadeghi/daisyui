@@ -1,6 +1,7 @@
 ---
 title: Label
 desc: Label is used to provide a name or title for an input field. Label can be placed before or after the field.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/label.css
 layout: components
 classnames:
   component:

@@ -1,6 +1,7 @@
 ---
 title: Card
 desc: Cards are used to group and display content in a way that is easily readable.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/card.css
 layout: components
 classnames:
   component:

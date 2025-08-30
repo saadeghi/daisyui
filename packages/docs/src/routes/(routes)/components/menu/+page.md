@@ -1,6 +1,7 @@
 ---
 title: Menu
 desc: Menu is used to display a list of links vertically or horizontally.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/menu.css
 layout: components
 classnames:
   component:

@@ -1,6 +1,7 @@
 ---
 title: Tabs
 desc: Tabs can be used to show a list of links in a tabbed format.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/tab.css
 layout: components
 classnames:
   component:

@@ -1,6 +1,7 @@
 ---
 title: Toast
 desc: Toast is a wrapper to stack elements, positioned on the corner of page.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/toast.css
 layout: components
 classnames:
   component:

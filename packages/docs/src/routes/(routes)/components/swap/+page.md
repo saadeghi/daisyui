@@ -1,6 +1,7 @@
 ---
 title: Swap
 desc: Swap allows you to toggle the visibility of two elements using a checkbox or a class name.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/swap.css
 layout: components
 classnames:
   component:

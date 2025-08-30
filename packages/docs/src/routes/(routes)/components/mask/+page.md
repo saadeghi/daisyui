@@ -1,6 +1,7 @@
 ---
 title: Mask
 desc: Mask crops the content of the element to common shapes.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/mask.css
 layout: components
 classnames:
   component:

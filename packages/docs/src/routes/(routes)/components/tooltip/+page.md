@@ -1,6 +1,7 @@
 ---
 title: Tooltip
 desc: Tooltip can be used to show a message when hovering over an element.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/tooltip.css
 layout: components
 classnames:
   component:

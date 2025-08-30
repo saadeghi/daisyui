@@ -1,6 +1,7 @@
 ---
 title: Pagination
 desc: Pagination is a group of buttons that allow the user to navigate between a set of related content.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/join.css
 layout: components
 classnames:
   component:

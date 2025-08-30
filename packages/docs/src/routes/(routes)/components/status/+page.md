@@ -1,6 +1,7 @@
 ---
 title: Status
 desc: Status is a really small icon to visually show the current status of an element, like online, offline, error, etc.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/status.css
 layout: components
 classnames:
   component:

@@ -1,6 +1,7 @@
 ---
 title: Text Input
 desc: Text Input is a simple input field.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/input.css
 layout: components
 classnames:
   component:

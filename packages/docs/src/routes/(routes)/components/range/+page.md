@@ -1,6 +1,7 @@
 ---
 title: Range slider
 desc: Range slider is used to select a value by sliding a handle.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/range.css
 layout: components
 classnames:
   component:

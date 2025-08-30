@@ -1,6 +1,7 @@
 ---
 title: Select
 desc: Select is used to pick a value from a list of options.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/select.css
 layout: components
 classnames:
   component:

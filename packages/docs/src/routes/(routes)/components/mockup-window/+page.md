@@ -1,6 +1,7 @@
 ---
 title: Window mockup
 desc: Window mockup shows a box that looks like an operating system window.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/mockup.css
 layout: components
 classnames:
   component:

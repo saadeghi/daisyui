@@ -1,6 +1,7 @@
 ---
 title: Collapse
 desc: Collapse is used for showing and hiding content.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/collapse.css
 layout: components
 classnames:
   component:

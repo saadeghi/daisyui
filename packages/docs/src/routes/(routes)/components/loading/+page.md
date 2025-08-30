@@ -1,6 +1,7 @@
 ---
 title: Loading
 desc: Loading shows an animation to indicate that something is loading.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/loading.css
 layout: components
 classnames:
   component:

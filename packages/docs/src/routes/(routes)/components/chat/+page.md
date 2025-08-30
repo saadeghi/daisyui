@@ -1,6 +1,7 @@
 ---
 title: Chat bubble
 desc: Chat bubbles are used to show one line of conversation and all its data, including the author image, author name, time, etc.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/chat.css
 layout: components
 classnames:
   component:

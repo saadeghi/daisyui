@@ -1,6 +1,7 @@
 ---
 title: Breadcrumbs
 desc: Breadcrumbs helps users to navigate through the website.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/breadcrumbs.css
 layout: components
 classnames:
   component:

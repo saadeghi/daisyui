@@ -1,6 +1,7 @@
 ---
 title: Diff
 desc: Diff component shows a side-by-side comparison of two items.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/diff.css
 layout: components
 classnames:
   component:

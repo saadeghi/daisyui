@@ -1,6 +1,7 @@
 ---
 title: Link
 desc: Link adds the missing underline style to links.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/link.css
 layout: components
 classnames:
   component:

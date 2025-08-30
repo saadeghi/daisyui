@@ -2,14 +2,24 @@
   import { page } from "$app/stores"
   import AlternativeSidebar from "$components/AlternativeSidebar.svelte"
   import ComponentFooter from "$components/ComponentFooter.svelte"
+  import ComponentCopyDocsDropdown from "$components/ComponentCopyDocsDropdown.svelte"
   import PrefixEdit from "$components/PrefixEdit.svelte"
   import BrowserSupport from "$components/BrowserSupport.svelte"
   import ComponentPageTabs from "$components/ComponentPageTabs.svelte"
   import SEO from "$components/SEO.svelte"
   import { prefix } from "$lib/stores"
   import { t } from "$lib/i18n.svelte.js"
-  let { data, title, desc, classnames, browserSupport, showComponentPageTabs, alert, children } =
-    $props()
+  let {
+    data,
+    title,
+    desc,
+    source,
+    classnames,
+    browserSupport,
+    showComponentPageTabs,
+    alert,
+    children,
+  } = $props()
 </script>
 
 <SEO
@@ -20,9 +30,17 @@
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
   <div class="prose prose-sm md:prose-base w-full max-w-4xl grow pt-10">
-    {#if title}
-      <h1>{@html $t(title)}</h1>
-    {/if}
+    <div class="flex gap-2">
+      <div class="grow">
+        {#if title}
+          <h1 class="mb-0 max-md:text-lg md:mb-0">{@html $t(title)}</h1>
+        {/if}
+      </div>
+      <ComponentCopyDocsDropdown
+        markdownUrl={`https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/docs/src/routes/(routes)${$page.url.pathname.replace(/\/$/, "")}/+page.md`}
+        sourceCodeUrl={source || null}
+      />
+    </div>
     {#if desc}
       <p>{@html $t(desc)}</p>
     {/if}

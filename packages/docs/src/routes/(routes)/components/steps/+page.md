@@ -1,6 +1,7 @@
 ---
 title: Steps
 desc: Steps can be used to show a list of steps in a process.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/steps.css
 layout: components
 classnames:
   component:

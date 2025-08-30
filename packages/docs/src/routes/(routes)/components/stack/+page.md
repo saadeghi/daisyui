@@ -1,6 +1,7 @@
 ---
 title: Stack
 desc: Stack visually puts elements on top of each other.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/stack.css
 layout: components
 classnames:
   component:

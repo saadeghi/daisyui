@@ -1,6 +1,7 @@
 ---
 title: Textarea
 desc: Textarea allows users to enter text in multiple lines.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/textarea.css
 layout: components
 classnames:
   component:

@@ -1,6 +1,7 @@
 ---
 title: Kbd
 desc: Kbd is used to display keyboard shortcuts.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/kbd.css
 layout: components
 classnames:
   component:

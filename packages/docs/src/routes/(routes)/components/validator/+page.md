@@ -1,6 +1,7 @@
 ---
 title: Validator
 desc: Validator class changes the color of form elements to error or success based on input's validation rules.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/validator.css
 layout: components
 classnames:
   component:

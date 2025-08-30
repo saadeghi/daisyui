@@ -1,6 +1,7 @@
 ---
 title: File Input
 desc: File Input is a an input field for uploading files.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/fileinput.css
 layout: components
 classnames:
   component:

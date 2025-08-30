@@ -1,6 +1,7 @@
 ---
 title: Skeleton
 desc: Skeleton is a component that can be used to show a loading state of a component.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/skeleton.css
 layout: components
 classnames:
   component:

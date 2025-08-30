@@ -1,6 +1,7 @@
 ---
 title: Modal
 desc: Modal is used to show a dialog or a box when you click a button.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/modal.css
 layout: components
 classnames:
   component:

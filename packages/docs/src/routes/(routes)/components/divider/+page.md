@@ -1,6 +1,7 @@
 ---
 title: Divider
 desc: Divider will be used to separate content vertically or horizontally.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/divider.css
 layout: components
 classnames:
   component:

@@ -1,6 +1,7 @@
 ---
 title: Phone mockup
 desc: Phone mockup shows a mockup of an iPhone.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/mockup.css
 layout: components
 classnames:
   component:

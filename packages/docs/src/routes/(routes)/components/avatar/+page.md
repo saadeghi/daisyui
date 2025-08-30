@@ -1,6 +1,7 @@
 ---
 title: Avatar
 desc: Avatars are used to show a thumbnail representation of an individual or business in the interface.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/avatar.css
 layout: components
 classnames:
   component:

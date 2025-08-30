@@ -1,6 +1,7 @@
 ---
 title: Footer
 desc: Footer can contain logo, copyright notice, and links to other pages.
+source: https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/footer.css
 layout: components
 classnames:
   component:
