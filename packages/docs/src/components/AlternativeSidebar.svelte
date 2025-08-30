@@ -103,7 +103,7 @@
     {/if}
     {#if randomBanner}
       <div
-        class="border-base-300 bg-base-200 rounded-box mt-8 overflow-hidden border max-xl:hidden"
+        class="bg-base-200 rounded-box border-base-300 mt-8 overflow-hidden border-[length:var(--border)] max-xl:hidden"
       >
         <a href={randomBanner.link} target="_blank" rel="noopener noreferrer" class="group">
           <img

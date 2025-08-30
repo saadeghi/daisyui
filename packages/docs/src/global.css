@@ -23,6 +23,7 @@
   gap: 0.25rem;
   align-items: end;
   .carbon-responsive-wrap {
+    border: solid var(--border) var(--carbon-bg-secondary);
     overflow: hidden;
     --carbon-bg-primary: var(--color-base-200);
     --carbon-bg-secondary: var(--color-base-300);

@@ -40,7 +40,7 @@
   </div>
   <div
     tabindex="0"
-    class={`dropdown-content bg-base-200 text-base-content rounded-box top-px h-[30.5rem] max-h-[calc(100vh-8.6rem)] overflow-y-auto border border-white/5 shadow-2xl outline-1 outline-black/5 ${contentClasses}`}
+    class={`dropdown-content bg-base-200 text-base-content rounded-box top-px h-[30.5rem] max-h-[calc(100vh-8.6rem)] overflow-y-auto border-[length:var(--border)] border-white/5 shadow-2xl outline-[length:var(--border)] outline-black/5 ${contentClasses}`}
   >
     <ul class="menu w-56">
       <li class="menu-title text-xs">{$t("change-theme-btn")}</li>

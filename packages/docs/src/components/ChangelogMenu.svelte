@@ -20,7 +20,7 @@
   </div>
   <ul
     tabindex="0"
-    class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 border border-white/5 p-2 shadow-2xl outline-1 outline-black/5"
+    class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 border-[length:var(--border)] border-white/5 p-2 shadow-2xl outline-[length:var(--border)] outline-black/5"
   >
     <li>
       <a href="/docs/v5/">

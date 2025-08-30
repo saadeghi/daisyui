@@ -63,7 +63,7 @@
   </button>
 
   <div class="dropdown dropdown-end not-prose">
-    <div tabindex="0" class="join-item btn btn-square btn-sm -ms-px" role="button">
+    <div tabindex="0" class="join-item btn btn-square btn-sm -ms-[var(--border)]" role="button">
       <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
         <path
           fill-rule="evenodd"
@@ -76,7 +76,7 @@
     </div>
     <ul
       tabindex="0"
-      class="dropdown-content menu-sm menu bg-base-200 rounded-box my-2 w-52 border border-white/5 shadow-2xl outline-1 outline-black/5"
+      class="dropdown-content menu-sm menu bg-base-200 rounded-box my-2 w-52 border border-white/5 shadow-2xl outline-[length:var(--border)] outline-black/5"
     >
       <li>
         <a
@@ -152,7 +152,7 @@
             >
             </path>
           </svg>
-          Markdown docs
+          Markdown doc
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

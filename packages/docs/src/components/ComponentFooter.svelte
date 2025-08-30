@@ -29,7 +29,7 @@
 </script>
 
 <div class="not-prose pb-10">
-  <div class="bg-base-content/10 mx-1 my-10 h-px"></div>
+  <div class="bg-base-content/10 mx-1 my-10 h-[var(--border)]"></div>
   {#if arrayOfPagesInOrder[currentPageIndex]}
     <div class="flex justify-between">
       <div>
@@ -85,7 +85,7 @@
         {/if}
       </div>
     </div>
-    <div class="bg-base-content/10 mx-1 my-10 h-px"></div>
+    <div class="bg-base-content/10 mx-1 my-10 h-[var(--border)]"></div>
   {/if}
 
   <div class="flex flex-col justify-between gap-2 px-4 text-xs md:flex-row">
@@ -372,7 +372,7 @@
 </div> -->
 
 <div
-  class="card not-prose outline-base-content/5 bg-primary/5 relative overflow-hidden font-sans shadow-lg outline -outline-offset-1 [direction:ltr] md:flex-row-reverse"
+  class="card not-prose outline-base-content/5 bg-primary/5 relative overflow-hidden font-sans shadow-lg outline-[length:var(--border)] -outline-offset-[var(--border)] [direction:ltr] md:flex-row-reverse"
 >
   <figure class="max-md:bg-primary/10 isolate md:w-2/3">
     <img
