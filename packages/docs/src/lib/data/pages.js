@@ -41,21 +41,21 @@ export const pages = [
         href: "/docs/use/",
       },
       {
-        name: "Upgrade guide",
-        tags: "",
-        href: "/docs/upgrade/",
-      },
-      {
-        name: "V5 release notes",
-        tags: "",
-        href: "/docs/v5/",
-      },
-      {
         name: "Code editor & LLM setup",
         tags: "llm editor vscode cursor zed",
         href: "/docs/editor/",
         badge: "new",
       },
+      {
+        name: "v5 upgrade guide",
+        tags: "",
+        href: "/docs/upgrade/",
+      },
+      // {
+      //   name: "V5 release notes",
+      //   tags: "",
+      //   href: "/docs/v5/",
+      // },
       {},
       {
         name: "Customize",

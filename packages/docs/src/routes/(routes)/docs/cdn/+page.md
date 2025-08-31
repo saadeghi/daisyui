@@ -104,19 +104,18 @@ desc: How to use daisyUI from a CDN?
 <span class="line"></span>
 <span class="line"></span></code></pre>
 
-
         {:else}
           <div class="h-[3.5rem] opacity-50">Select the parts you want to use 👇</div>
         {/if}
 
       </div>
-        
+
       <div class="font-mono select-none text-xs m-4 justify-self-start place-self-start">
         <svg class="opacity-40 inline-block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"><path d="m16 16 2 2 4-4"></path><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><path d="M3.29 7L12 12 20.71 7"></path><path d="M12 22L12 12"></path></g></svg>
         <span class="text-neutral-content">{$totalSize}kB</span>
         <span class="opacity-40">•</span>
         {#if $totalSize < data.daisyuiCssSize}
-          <span class="text-success" title="{Math.abs(($totalSize - data.daisyuiCssSize).toFixed(1))}kB smaller than daisyui.css">{((data.daisyuiCssSize - $totalSize) / data.daisyuiCssSize * 100).toFixed(1)}% smaller than daisyui.css</span>
+          <span class="text-[color-mix(in_oklab,color-mix(in_oklab,white_40%,var(--color-neutral-content))_20%,oklch(75%_0.3_173.24))]" title="{Math.abs(($totalSize - data.daisyuiCssSize).toFixed(1))}kB smaller than daisyui.css">{((data.daisyuiCssSize - $totalSize) / data.daisyuiCssSize * 100).toFixed(1)}% smaller than daisyui.css</span>
         {:else}
           <span class="text-warning">daisyui.css is {Math.abs((($totalSize - data.daisyuiCssSize) / data.daisyuiCssSize * 100).toFixed(1))}% smaller</span>
         {/if}
@@ -146,6 +145,7 @@ desc: How to use daisyUI from a CDN?
         </div>
       {/each}
     </div>
+
   </div>
 </div>
 

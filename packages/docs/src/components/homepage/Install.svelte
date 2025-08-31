@@ -191,7 +191,10 @@
     <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
       <pre dir="ltr"><code
           ><span class="opacity-50">@import "tailwindcss";</span>
-<span class="text-success">@plugin "daisyui";</span></code
+<span
+            class="text-[color-mix(in_oklab,color-mix(in_oklab,white_40%,var(--color-neutral-content))_20%,oklch(75%_0.3_173.24))]"
+            >@plugin "daisyui";</span
+          ></code
         ></pre>
       <div class="absolute top-0 right-0 z-1">
         {#if onMount}
