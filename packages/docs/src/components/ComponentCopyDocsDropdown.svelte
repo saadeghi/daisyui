@@ -25,7 +25,7 @@
   <button
     class="btn join-item btn-sm lg:min-w-28"
     aria-label="Copy markdown to clipboard"
-    on:click={copyMarkdownFromUrl}
+    onclick={copyMarkdownFromUrl}
   >
     {#if clipboardState === "done"}
       <svg class="size-3.5 stroke-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
