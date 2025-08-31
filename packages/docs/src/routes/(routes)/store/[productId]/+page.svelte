@@ -353,7 +353,6 @@
                   alt={data.product.title}
                   class="h-full w-full bg-cover object-cover text-transparent"
                   style={`background-image:url(${media.sm});`}
-                  loading="lazy"
                 />
               {/if}
             </div>
@@ -475,22 +474,23 @@
                 href="#packages"
                 class="btn btn-lg btn-success group shrink-0 rounded-full whitespace-nowrap xl:px-10"
               >
-                Buy now
+                Get now
                 <span class="flex gap-2">
                   <svg
+                    class="hidden size-6 transition-transform duration-300 group-hover:translate-y-0.5 md:inline-block"
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="hidden size-6 transition-transform duration-300 group-hover:translate-x-1 md:inline-block"
                   >
-                    <path
-                      stroke-linecap="round"
+                    <g
                       stroke-linejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                      fill="none"
+                      stroke="currentColor"
                     >
-                    </path>
+                      <path d="M12 5v14"></path>
+                      <path d="m19 12-7 7-7-7"></path>
+                    </g>
                   </svg>
                 </span>
               </a>
@@ -633,7 +633,7 @@
         {#each packageHeaders as packageName, packageIndex}
           {@const isHighlighted = popularRow && popularRow[packageIndex + 1] === true}
           <div
-            class={`card bg-base-200 relative flex flex-col border ${isHighlighted ? "border-success/20 -m-1 border-4" : "border-base-300"}`}
+            class={`card group bg-base-200 relative flex flex-col border ${isHighlighted ? "border-success/20 -m-1 border-4" : "border-base-300"}`}
           >
             {#if isHighlighted}
               <div
@@ -675,15 +675,22 @@
 
             <!-- Scrollable features content -->
             <div class="flex-1 overflow-y-auto">
-              <div class="card-body pt-4">
+              <div class="card-body px-4 pt-4">
                 <!-- Features list -->
-                <div class="flex flex-col gap-4 lg:gap-6">
-                  {#each featureRows as row}
+                <div class="flex flex-col gap-1">
+                  {#each featureRows as row, rowIndex}
                     {@const featureName = row[0]}
                     {@const featureValue = row[packageIndex + 1]}
+                    {@const prevFeatureValue = packageIndex > 0 ? row[packageIndex] : undefined}
+                    {@const isDifferent =
+                      packageIndex > 0 &&
+                      JSON.stringify(featureValue) !== JSON.stringify(prevFeatureValue)}
 
-                    {#if featureName && featureValue !== null}
-                      <div class="flex items-center justify-between text-xs">
+                    {#if featureName && featureValue !== null && featureValue !== undefined}
+                      <div
+                        class={`flex items-center justify-between px-4 py-1 text-xs ${isDifferent ? "group-hover:bg-success/15 rounded-field group-hover:scale-102" : ""}`}
+                        style={`transition: scale 0.2s ease-in-out ${rowIndex * 30}ms, background-color 0.2s ease-in-out ${rowIndex * 30}ms`}
+                      >
                         <span class="text-base-content/70">{featureName}</span>
                         <div class="flex items-center">
                           {#if typeof featureValue === "boolean"}
