@@ -5,7 +5,9 @@
   max-width: calc(100vw - 2rem);
 
   & > * {
-    animation: toast 0.25s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: toast 0.25s ease-out;
+    }
   }
 
   &:where(.toast-start) {
