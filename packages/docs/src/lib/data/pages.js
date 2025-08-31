@@ -186,6 +186,12 @@ export const pages = [
             href: "/components/diff/",
           },
           {
+            name: "Hover Gallery",
+            tags: "hover gallery image slider",
+            href: "/components/hover-gallery/",
+            badge: "new",
+          },
+          {
             name: "Kbd",
             tags: "kbd keyboard",
             href: "/components/kbd/",
