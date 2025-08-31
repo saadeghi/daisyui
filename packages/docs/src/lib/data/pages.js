@@ -44,7 +44,7 @@ export const pages = [
         name: "Code editor & LLM setup",
         tags: "llm editor vscode cursor zed",
         href: "/docs/editor/",
-        badge: "new",
+        badge: "updated",
       },
       {
         name: "v5 upgrade guide",
@@ -112,6 +112,12 @@ export const pages = [
             name: "Dropdown",
             tags: "dropdown popover menu listbox",
             href: "/components/dropdown/",
+          },
+          {
+            name: "FAB / Speed Dial",
+            tags: "fab speed dial floating",
+            href: "/components/fab/",
+            badge: "new",
           },
           {
             name: "Modal",
@@ -188,7 +194,6 @@ export const pages = [
             name: "List",
             tags: "list",
             href: "/components/list/",
-            badge: "new",
           },
           {
             name: "Stat",
@@ -199,7 +204,6 @@ export const pages = [
             name: "Status",
             tags: "status online offline away busy",
             href: "/components/status/",
-            badge: "new",
           },
           {
             name: "Table",
@@ -308,7 +312,6 @@ export const pages = [
             name: "Calendar",
             tags: "calendar date picker datepicker date",
             href: "/components/calendar/",
-            badge: "new",
           },
           {
             name: "Checkbox",
@@ -319,7 +322,6 @@ export const pages = [
             name: "Fieldset",
             tags: "fieldset form control",
             href: "/components/fieldset/",
-            badge: "new",
           },
           {
             name: "File Input",
@@ -330,13 +332,11 @@ export const pages = [
             name: "Filter",
             tags: "filter",
             href: "/components/filter/",
-            badge: "new",
           },
           {
             name: "Label",
             tags: "label floating",
             href: "/components/label/",
-            badge: "new",
           },
           {
             name: "Radio",
@@ -357,6 +357,7 @@ export const pages = [
             name: "Select",
             tags: "select option menu",
             href: "/components/select/",
+            badge: "updated",
           },
           {
             name: "Input field",
@@ -377,7 +378,6 @@ export const pages = [
             name: "Validator",
             tags: "validator validaton invalid",
             href: "/components/validator/",
-            badge: "new",
           },
         ],
       },
@@ -460,7 +460,7 @@ export const pages = [
     tags: "theme generator custom color generator",
     href: "/theme-generator/",
     icon: '<svg class="size-5 text-fuchsia-400" width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.1005 8.1005L24.3431 12.3431M30 4V10V4ZM39.8995 8.1005L35.6569 12.3431L39.8995 8.1005ZM44 18H38H44ZM39.8995 27.8995L35.6569 23.6569L39.8995 27.8995ZM30 32V26V32ZM20.1005 27.8995L24.3431 23.6569L20.1005 27.8995ZM16 18H22H16Z" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/><path d="M29.5856 18.4143L5.54395 42.4559" stroke="currentColor" stroke-width="4" stroke-linecap="butt" stroke-linejoin="bevel"/></svg>',
-    badge: "new",
+    // badge: "new",
   },
   {},
   {
@@ -528,7 +528,7 @@ export const pages = [
     // icon: '<svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"><path d="M12.3529 13L14 15.5M14 15.5L15.6471 18M14 15.5L15.6471 13M14 15.5L12.3529 18M17.7059 13H19.3529M19.3529 13H21M19.3529 13V18M7 13H8.64706M8.64706 13H10.2941M8.64706 13V18" stroke="currentColor"></path><path d="M15 22H10.7273C7.46607 22 5.83546 22 4.70307 21.2022C4.37862 20.9736 4.09058 20.7025 3.8477 20.3971C3 19.3313 3 17.7966 3 14.7273V12.1818C3 9.21865 3 7.73706 3.46894 6.55375C4.22281 4.65142 5.81714 3.15088 7.83836 2.44135C9.09563 2 10.6698 2 13.8182 2C15.6173 2 16.5168 2 17.2352 2.2522C18.3902 2.65765 19.3012 3.5151 19.732 4.60214C20 5.27832 20 6.12494 20 7.81818V10" stroke="currentColor"></path><path d="M3 12C3 10.1591 4.49238 8.66667 6.33333 8.66667C6.99912 8.66667 7.78404 8.78333 8.43137 8.60988C9.00652 8.45576 9.45576 8.00652 9.60988 7.43136C9.78333 6.78404 9.66667 5.99912 9.66667 5.33333C9.66667 3.49238 11.1591 2 13 2" stroke="currentColor"></path></g></svg>',
     icon: '<svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="1.75" fill="none"><path d="M20.5 16.9286V10C20.5 6.22876 20.5 4.34315 19.3284 3.17157C18.1569 2 16.2712 2 12.5 2H11.5C7.72876 2 5.84315 2 4.67157 3.17157C3.5 4.34315 3.5 6.22876 3.5 10V19.5" stroke="currentColor"></path><path d="M20.5 17H6C4.61929 17 3.5 18.1193 3.5 19.5C3.5 20.8807 4.61929 22 6 22H20.5" stroke="currentColor"></path><path d="M20.5 22C19.1193 22 18 20.8807 18 19.5C18 18.1193 19.1193 17 20.5 17" stroke="currentColor"></path><path d="M12.3077 12L10.847 7.47891C10.7552 7.19466 10.4734 7 10.1538 7C9.83425 7 9.55249 7.19466 9.46066 7.47891L8 12M15 7V12M8.53846 10.5H11.7692" stroke="currentColor"></path></g></svg>',
     target: "blank",
-    badge: "new",
+    badge: "updated",
   },
   {
     items: [
