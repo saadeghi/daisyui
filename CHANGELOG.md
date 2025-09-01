@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.1 (2025-09-01)
+
+
+### Bug Fixes
+
+* `<select>` double arrow on Firefox ([748fd54](https://github.com/saadeghi/daisyui/commit/748fd5445c941f9c8239198cfcd48d7318646de7))
+
 ## 5.1.0 (2025-09-01)
 
 ### Features
