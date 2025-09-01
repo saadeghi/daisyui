@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.1.0 (2025-09-01)
 
+### Features
+
+* feat: New component - Hover Gallery  
+* feat: New component - FAB / Speed Dial  
+* feat: Styled native HTML `<select>` element (works in Chromium, other browsers use the old OS style)  
+* feat: Support prefers-reduced-motion for all animations
+
+### Bug Fixes
+
+* fix: theme-controller prefix  
+* fix: support `aria-current` for tab  
+* fix: add scrollbar-gutter auto to prevent modal scrollbar shift  
+* fix: increase drawer z-index to prevent overlap issues  
+
 ## 5.0.55 (2025-09-01)
 
 ## 5.0.54 (2025-08-28)
