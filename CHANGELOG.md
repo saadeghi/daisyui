@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.3 (2025-09-01)
+
+
+### Bug Fixes
+
+* `<label class="select">` base-select style and misalignment. closes: [#4082](https://github.com/saadeghi/daisyui/issues/4082) ([d1556fa](https://github.com/saadeghi/daisyui/commit/d1556fa5d1728a7918ef0fab9e486fb0ce63be49))
+
 ## 5.1.2 (2025-09-01)
 
 
