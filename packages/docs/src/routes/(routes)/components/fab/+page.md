@@ -22,22 +22,6 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
-### ~A single FAB (Floating Action Button)
-
-#### If you only want one button in the corner of page
-
-<div class="h-42">
-  <div class="fab absolute">
-    <button class="btn btn-lg btn-circle btn-primary">F</button>
-  </div>
-</div>
-
-```html
-<div class="fab">
-  <button class="btn btn-lg btn-circle btn-primary">F</button>
-</div>
-```
-
 ### ~FAB and Speed Dial (vertical)
 
 #### Click or focus the A button in the corner
@@ -199,7 +183,7 @@ classnames:
 </div>
 ```
 
-### ~FAB and Speed Dial with wide buttons
+### ~FAB and Speed Dial with rectangle buttons
 
 #### You can remove the btn-circle class if you want normal buttons
 
@@ -283,6 +267,22 @@ classnames:
   <div>Label A <button class="btn btn-lg btn-circle">A</button></div>
   <div>Label B <button class="btn btn-lg btn-circle">B</button></div>
   <div>Label C <button class="btn btn-lg btn-circle">C</button></div>
+</div>
+```
+
+### ~A single FAB (Floating Action Button)
+
+#### If you only want one button in the corner of page
+
+<div class="h-42">
+  <div class="fab absolute">
+    <button class="btn btn-lg btn-circle btn-primary">F</button>
+  </div>
+</div>
+
+```html
+<div class="fab">
+  <button class="btn btn-lg btn-circle btn-primary">F</button>
 </div>
 ```
 

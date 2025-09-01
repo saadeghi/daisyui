@@ -657,7 +657,7 @@ A FAB that opens a 3 other buttons in the corner of page vertically and they hav
   <div>{Label3}<button class="btn btn-lg btn-circle">{Icon3}</button></div>
 </div>
 ```
-FAB with wide buttons. These are not circular buttons so they can have more content.
+FAB with rectangle buttons. These are not circular buttons so they can have more content.
 ```html
 <div class="fab">
   <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
