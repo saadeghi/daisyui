@@ -16,7 +16,7 @@ classnames:
 
 ### How it works
 
-Each image creates a column, hovering each column, reveals that image. For example, here we have 4 images. Try hovering on each column.
+The first image is visible by default, the other image will create invisible columns and hovering each column, reveals that image. For example, here we have 4 images. Try hovering on each column to see 2nd, 3rd and 4th image.
 
 <div class="flex justify-center not-prose">
   <div class="grid *:[grid-area:1/1] rounded-box overflow-hidden">
@@ -26,8 +26,7 @@ Each image creates a column, hovering each column, reveals that image. For examp
       <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
       <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
     </figure>
-    <div class="grid grid-cols-4 pointer-events-none font-mono *:to-black/10 *:via-transparent *:from-white/10 *:bg-linear-80 *:grid *:place-content-center text-white text-shadow-lg">
-      <div>1</div>
+    <div class="grid grid-cols-3 pointer-events-none font-mono *:to-black/10 *:via-transparent *:from-white/10 *:bg-linear-80 *:grid *:place-content-center text-white text-shadow-lg">
       <div>2</div>
       <div>3</div>
       <div>4</div>
