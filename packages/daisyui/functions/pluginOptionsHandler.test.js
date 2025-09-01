@@ -116,3 +116,18 @@ test("pluginOptionsHandler should not create duplicate styles for single dark th
     },
   })
 })
+
+test("pluginOptionsHandler should prefix theme-controller class when prefix is set", () => {
+  mockAddBase.mockReset()
+
+  const options = { themes: ["light --default"], prefix: "myprefix-" }
+
+  pluginOptionsHandler(options, mockAddBase, mockThemesObject, "1.0.0")
+
+  expect(mockAddBase).toHaveBeenCalledWith({
+    ":where(:root),:root:has(input.myprefix-theme-controller[value=light]:checked),[data-theme=light]":
+      {
+        color: "white",
+      },
+  })
+})

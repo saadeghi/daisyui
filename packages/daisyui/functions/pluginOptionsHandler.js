@@ -22,7 +22,9 @@ export const pluginOptionsHandler = (() => {
     const applyTheme = (themeName, flags) => {
       const theme = themesObject[themeName]
       if (theme) {
-        let selector = `${root}:has(input.theme-controller[value=${themeName}]:checked),[data-theme=${themeName}]`
+        // Use prefix for theme-controller class name
+        const themeControllerClass = `${prefix}theme-controller`
+        let selector = `${root}:has(input.${themeControllerClass}[value=${themeName}]:checked),[data-theme=${themeName}]`
         if (flags.includes("--default")) {
           selector = `:where(${root}),${selector}`
         }
