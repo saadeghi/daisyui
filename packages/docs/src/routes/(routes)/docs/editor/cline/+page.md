@@ -7,7 +7,7 @@ desc: Setup Cline VSCode extension to correctly generate duskmoonUI code based o
   import Translate from "$components/Translate.svelte"
 </script>
 
-## <img src="https://img.duskmoonui.com/images/logos/cline.webp" alt="Cline VSCode extension" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Cline VSCode extension
+## <img src="https://img.daisyui.com/images/logos/cline.webp" alt="Cline VSCode extension" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Cline VSCode extension
 
 [duskmoonui.com/llms.txt](https://duskmoonui.com/llms.txt) file is a compact, text version of duskmoonUI docs to help AI generate accurate duskmoonUI code based on your prompt.
 Here's how to use duskmoonUI llms.txt in Cline:

@@ -6,7 +6,7 @@
 <SEO
   title="duskmoonUI community courses"
   desc="Free Tailwind CSS courses and best Tailwind CSS tutorials"
-  img="https://img.duskmoonui.com/images/resources.webp"
+  img="https://img.daisyui.com/images/resources.webp"
 />
 
 <div class="flex flex-col items-center gap-6">

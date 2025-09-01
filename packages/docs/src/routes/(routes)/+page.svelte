@@ -174,7 +174,7 @@
                 class="rounded-lg grayscale transition-all duration-500 group-hover:grayscale-0"
                 width="60"
                 height="33"
-                src="https://img.duskmoonui.com/images/content/v5-video-thumb.webp"
+                src="https://img.daisyui.com/images/content/v5-video-thumb.webp"
                 alt="duskmoonUI 5"
               />
               Watch <br />duskmoonUI 5.0 intro
@@ -359,8 +359,8 @@
                 width="72"
                 height="72"
                 alt="yawing face emoji"
-                src="https://img.duskmoonui.com/images/emoji/yawning-face@80.webp"
-                srcset={`https://img.duskmoonui.com/images/emoji/yawning-face.webp 2x`}
+                src="https://img.daisyui.com/images/emoji/yawning-face@80.webp"
+                srcset={`https://img.daisyui.com/images/emoji/yawning-face.webp 2x`}
                 class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom"
               />
             </h2>
@@ -396,8 +396,8 @@
                     width="72"
                     height="72"
                     alt="sunglasses emoji"
-                    src="https://img.duskmoonui.com/images/emoji/smiling-face-with-sunglasses@80.webp"
-                    srcset={`https://img.duskmoonui.com/images/emoji/smiling-face-with-sunglasses.webp 2x`}
+                    src="https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses@80.webp"
+                    srcset={`https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses.webp 2x`}
                     class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom"
                   />
                 </h2>
@@ -650,7 +650,7 @@
                                   loading="lazy"
                                   width="40"
                                   height="40"
-                                  src="https://img.duskmoonui.com/images/profile/demo/superperson@94.webp"
+                                  src="https://img.daisyui.com/images/profile/demo/superperson@94.webp"
                                   alt="tailwind css avatar component"
                                 />
                               </div>
@@ -1628,7 +1628,7 @@
               [1, 0],
             )}rem);`}
             alt={`duskmoonUI ${logo}`}
-            src={`https://img.duskmoonui.com/images/logos/${logo}.svg`}
+            src={`https://img.daisyui.com/images/logos/${logo}.svg`}
           />
         {/each}
       </div>
@@ -2059,7 +2059,7 @@
             width="96"
             height="96"
             class="aspect-square h-10 w-10"
-            src={`https://img.duskmoonui.com/images/logos/${logo}.svg`}
+            src={`https://img.daisyui.com/images/logos/${logo}.svg`}
             alt={`duskmoonUI ${logo}`}
           />
         {/each}

@@ -108,7 +108,7 @@ Contributors
 [opencollectivebadge]: https://badgen.net/opencollective/backers/duskmoonui?label=Open%20Collective&color=1AD1A5
 [tweet]: https://img.shields.io/twitter/url?label=Share&url=https%3A%2F%2Fgithub.com%2Fduskmoon-dev%2Fduskmoon-ui
 [docs-url]: https://duskmoonui.com/
-[logo-url]: https://img.duskmoonui.com/images/duskmoonui/duskmoonui-logo-192.png
+[logo-url]: https://img.daisyui.com/images/duskmoonui/duskmoonui-logo-192.png
 [opencollective]: https://opencollective.com/duskmoonui
 [sponsors]: https://opencollective.com/duskmoonui/tiers/premium-sponsor.svg?button=false&avatarHeight=60
 [backers]: https://opencollective.com/duskmoonui/backers.svg?button=false&width=978&avatarHeight=36

@@ -4,7 +4,7 @@ desc: It can be annoying to install, setup, config and import all the dependenci
 published: true
 date: 2023-10-6
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/npm-init-duskmoonui.webp
+thumbnail: https://img.daisyui.com/images/blog/npm-init-duskmoonui.webp
 tags:
   - Guides
 ---

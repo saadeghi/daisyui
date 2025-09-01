@@ -107,7 +107,7 @@ Example:
 - <div class="avatar online">
 + <div class="avatar avatar-online">
   <div class="w-24 rounded-full">
-    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```
@@ -115,7 +115,7 @@ Example:
 - <div class="avatar offline">
 + <div class="avatar avatar-offline">
   <div class="w-24 rounded-full">
-    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```

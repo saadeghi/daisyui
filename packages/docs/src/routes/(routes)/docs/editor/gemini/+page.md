@@ -7,7 +7,7 @@ desc: Setup Gemini to correctly generate duskmoonUI code based on your prompt.
   import Translate from "$components/Translate.svelte"
 </script>
 
-## <img src="https://img.duskmoonui.com/images/logos/gemini.webp" alt="Gemini" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Gemini LLM setup
+## <img src="https://img.daisyui.com/images/logos/gemini.webp" alt="Gemini" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Gemini LLM setup
 
 ### Quick use
 

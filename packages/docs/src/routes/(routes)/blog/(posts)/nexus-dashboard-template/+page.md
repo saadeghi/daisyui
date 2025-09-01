@@ -4,7 +4,7 @@ desc: A modern, flexible admin and client dashboard template built with duskmoon
 published: true
 date: 2025-04-30
 author: Denish Navadiya
-thumbnail: https://img.duskmoonui.com/images/blog/nexus-dashboard-template-thumbnail.webp
+thumbnail: https://img.daisyui.com/images/blog/nexus-dashboard-template-thumbnail.webp
 tags:
   - Templates
 ---

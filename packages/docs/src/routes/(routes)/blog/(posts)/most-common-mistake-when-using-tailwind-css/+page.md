@@ -4,7 +4,7 @@ desc: While working on duskmoonUI, I see a lot of people making this mistake whe
 published: true
 date: 2023-9-14
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/tailwind-mistake.webp
+thumbnail: https://img.daisyui.com/images/blog/tailwind-mistake.webp
 tags:
   - Guides
 ---

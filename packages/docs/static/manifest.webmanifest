@@ -1,12 +1,12 @@
 {
   "icons": [
     {
-      "src": "https://img.duskmoonui.com/images/duskmoonui/duskmoonui-logo-192.png",
+      "src": "https://img.daisyui.com/images/duskmoonui/duskmoonui-logo-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://img.duskmoonui.com/images/duskmoonui/duskmoonui-logo-512.png",
+      "src": "https://img.daisyui.com/images/duskmoonui/duskmoonui-logo-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

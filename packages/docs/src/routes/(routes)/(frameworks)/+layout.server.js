@@ -19,7 +19,7 @@ async function fetchFrameworksData() {
 
 export async function load() {
   const frameworksData = await fetchFrameworksData()
-  const testimonialsResponse = await fetch("https://img.duskmoonui.com/generated/testimonials.json")
+  const testimonialsResponse = await fetch("https://img.daisyui.com/generated/testimonials.json")
   const testimonials = await testimonialsResponse.json()
 
   return {

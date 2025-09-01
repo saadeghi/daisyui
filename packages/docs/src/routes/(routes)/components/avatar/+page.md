@@ -26,14 +26,14 @@ classnames:
 
 <div class="avatar">
   <div class="w-24 rounded bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 
 ```html
 <div class="$$avatar">
   <div class="w-24 rounded">
-    <img src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
   </div>
 </div>
 ```
@@ -42,35 +42,35 @@ classnames:
 
 <div class="avatar">
   <div class="w-24 rounded bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-16 rounded bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-12 rounded bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-8 rounded bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/superperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 
 ```html
 <div class="$$avatar">
   <div class="w-32 rounded">
-    <img src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/superperson@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-20 rounded">
     <img
-      src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp"
+      src="https://img.daisyui.com/images/profile/demo/superperson@192.webp"
       alt="Tailwind-CSS-Avatar-component"
     />
   </div>
@@ -78,7 +78,7 @@ classnames:
 <div class="$$avatar">
   <div class="w-16 rounded">
     <img
-      src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp"
+      src="https://img.daisyui.com/images/profile/demo/superperson@192.webp"
       alt="Tailwind-CSS-Avatar-component"
     />
   </div>
@@ -86,7 +86,7 @@ classnames:
 <div class="$$avatar">
   <div class="w-8 rounded">
     <img
-      src="https://img.duskmoonui.com/images/profile/demo/superperson@192.webp"
+      src="https://img.daisyui.com/images/profile/demo/superperson@192.webp"
       alt="Tailwind-CSS-Avatar-component"
     />
   </div>
@@ -97,24 +97,24 @@ classnames:
 
 <div class="avatar">
   <div class="w-24 rounded-xl bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/yellingwoman@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/yellingwoman@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 rounded-full bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/yellingcat@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 
 ```html
 <div class="$$avatar">
   <div class="w-24 rounded-xl">
-    <img src="https://img.duskmoonui.com/images/profile/demo/yellingwoman@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/yellingwoman@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="w-24 rounded-full">
-    <img src="https://img.duskmoonui.com/images/profile/demo/yellingcat@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
   </div>
 </div>
 ```
@@ -123,34 +123,34 @@ classnames:
 
 <div class="avatar">
   <div class="w-24 mask mask-heart bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/distracted3@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/distracted3@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 mask mask-squircle bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/distracted1@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/distracted1@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar">
   <div class="w-24 mask mask-hexagon-2 bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/distracted2@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/distracted2@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 
 ```html
 <div class="$$avatar">
   <div class="$$mask $$mask-heart w-24">
-    <img src="https://img.duskmoonui.com/images/profile/demo/distracted3@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/distracted3@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="$$mask $$mask-squircle w-24">
-    <img src="https://img.duskmoonui.com/images/profile/demo/distracted1@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/distracted1@192.webp" />
   </div>
 </div>
 <div class="$$avatar">
   <div class="$$mask $$mask-hexagon-2 w-24">
-    <img src="https://img.duskmoonui.com/images/profile/demo/distracted2@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/distracted2@192.webp" />
   </div>
 </div>
 ```
@@ -160,22 +160,22 @@ classnames:
 <div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="https://img.duskmoonui.com/images/profile/demo/spiderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="https://img.duskmoonui.com/images/profile/demo/averagebulk@192.webp" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12 bg-base-300">
-      <img src="https://img.duskmoonui.com/images/profile/demo/wonderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/profile/demo/wonderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
 </div>
@@ -184,22 +184,22 @@ classnames:
 <div class="$$avatar-group -space-x-6">
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp" />
+      <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.duskmoonui.com/images/profile/demo/spiderperson@192.webp" />
+      <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.duskmoonui.com/images/profile/demo/averagebulk@192.webp" />
+      <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.duskmoonui.com/images/profile/demo/wonderperson@192.webp" />
+      <img src="https://img.daisyui.com/images/profile/demo/wonderperson@192.webp" />
     </div>
   </div>
 </div>
@@ -210,17 +210,17 @@ classnames:
 <div class="avatar-group -space-x-6">
   <div class="avatar">
     <div class="w-12  bg-base-300">
-      <img src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12  bg-base-300">
-      <img src="https://img.duskmoonui.com/images/profile/demo/spiderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar">
     <div class="w-12  bg-base-300">
-      <img src="https://img.duskmoonui.com/images/profile/demo/averagebulk@192.webp" alt="Tailwind-CSS-Avatar-component" />
+      <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" alt="Tailwind-CSS-Avatar-component" />
     </div>
   </div>
   <div class="avatar avatar-placeholder">
@@ -234,17 +234,17 @@ classnames:
 <div class="$$avatar-group -space-x-6">
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.duskmoonui.com/images/profile/demo/batperson@192.webp" />
+      <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.duskmoonui.com/images/profile/demo/spiderperson@192.webp" />
+      <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
     </div>
   </div>
   <div class="$$avatar">
     <div class="w-12">
-      <img src="https://img.duskmoonui.com/images/profile/demo/averagebulk@192.webp" />
+      <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
     </div>
   </div>
   <div class="$$avatar $$avatar-placeholder">
@@ -259,14 +259,14 @@ classnames:
 
 <div class="avatar">
   <div class="w-24 rounded-full ring-2 ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="https://img.duskmoonui.com/images/profile/demo/spiderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 
 ```html
 <div class="$$avatar">
   <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring-2 ring-offset-2">
-    <img src="https://img.duskmoonui.com/images/profile/demo/spiderperson@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
   </div>
 </div>
 ```
@@ -275,24 +275,24 @@ classnames:
 
 <div class="avatar avatar-online">
   <div class="w-24 rounded-full bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/gordon@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 <div class="avatar avatar-offline">
   <div class="w-24 rounded-full bg-base-300">
-    <img src="https://img.duskmoonui.com/images/profile/demo/idiotsandwich@192.webp" alt="Tailwind-CSS-Avatar-component" />
+    <img src="https://img.daisyui.com/images/profile/demo/idiotsandwich@192.webp" alt="Tailwind-CSS-Avatar-component" />
   </div>
 </div>
 
 ```html
 <div class="$$avatar $$avatar-online">
   <div class="w-24 rounded-full">
-    <img src="https://img.duskmoonui.com/images/profile/demo/gordon@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
   </div>
 </div>
 <div class="$$avatar $$avatar-offline">
   <div class="w-24 rounded-full">
-    <img src="https://img.duskmoonui.com/images/profile/demo/idiotsandwich@192.webp" />
+    <img src="https://img.daisyui.com/images/profile/demo/idiotsandwich@192.webp" />
   </div>
 </div>
 ```

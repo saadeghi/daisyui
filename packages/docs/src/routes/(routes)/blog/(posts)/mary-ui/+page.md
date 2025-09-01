@@ -4,7 +4,7 @@ desc: Mary UI is a collection of Laravel blade components made for Livewire 3 an
 published: true
 date: 2023-9-13
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/mary-ui.webp
+thumbnail: https://img.daisyui.com/images/blog/mary-ui.webp
 tags:
   - Frameworks
 ---
@@ -26,7 +26,7 @@ Mary UI does not ship any custom CSS and relies on duskmoonUI and Tailwind for o
 Mary UI allows you to use duskmoonUI components in your Laravel blade files using Livewire syntax.
 
 To make a form like this:
-![Mary UI form](https://img.duskmoonui.com/images/blog/mary-ui-form.webp)
+![Mary UI form](https://img.daisyui.com/images/blog/mary-ui-form.webp)
 All you need would be these few lines:
 
 ```html

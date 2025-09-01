@@ -10,7 +10,7 @@
 <SEO
   {title}
   {desc}
-  img={`https://img.duskmoonui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
+  img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
 />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">

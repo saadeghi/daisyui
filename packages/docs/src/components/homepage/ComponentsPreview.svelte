@@ -467,7 +467,7 @@
           <img
             width="40"
             height="40"
-            src="https://img.duskmoonui.com/images/profile/demo/superperson@94.webp"
+            src="https://img.daisyui.com/images/profile/demo/superperson@94.webp"
             alt="Tailwind button"
             aria-label="Tailwind CSS button"
           />

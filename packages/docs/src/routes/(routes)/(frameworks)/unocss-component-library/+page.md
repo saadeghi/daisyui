@@ -13,7 +13,7 @@ layout: contentLanding
 <div class="mx-auto not-prose max-w-4xl py-12 p-6 from-base-300 rounded-box outline-base-content/5 mt-12 mb-6 items-center justify-center gap-8 bg-linear-to-b bg-center outline-2 outline-offset-6">
 <div class="max-w-96 items-center w-full grid grid-cols-2 gap-6 lg:gap-12 [&>svg]:w-full [&>svg]:h-auto mx-auto">
 {@html data.frameworksData.find(item => item.name === "UnoCSS")?.logo}
-<img class="w-full h-auto" src="https://img.duskmoonui.com/images/duskmoonui/mark-static.svg" alt="Best UnoCSS component library" />
+<img class="w-full h-auto" src="https://img.daisyui.com/images/duskmoonui/mark-static.svg" alt="Best UnoCSS component library" />
 </div>
 </div>
 

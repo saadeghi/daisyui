@@ -427,7 +427,7 @@ classnames:
           <div class="flex items-center gap-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="https://img.duskmoonui.com/images/profile/demo/2@94.webp" alt="Avatar Tailwind CSS Component" />
+                <img src="https://img.daisyui.com/images/profile/demo/2@94.webp" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -456,7 +456,7 @@ classnames:
           <div class="flex items-center gap-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="https://img.duskmoonui.com/images/profile/demo/3@94.webp" alt="Avatar Tailwind CSS Component" />
+                <img src="https://img.daisyui.com/images/profile/demo/3@94.webp" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -485,7 +485,7 @@ classnames:
           <div class="flex items-center gap-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="https://img.duskmoonui.com/images/profile/demo/4@94.webp" alt="Avatar Tailwind CSS Component" />
+                <img src="https://img.daisyui.com/images/profile/demo/4@94.webp" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -514,7 +514,7 @@ classnames:
           <div class="flex items-center gap-3">
             <div class="avatar">
               <div class="w-12 h-12 mask mask-squircle">
-                <img src="https://img.duskmoonui.com/images/profile/demo/5@94.webp" alt="Avatar Tailwind CSS Component" />
+                <img src="https://img.daisyui.com/images/profile/demo/5@94.webp" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -576,7 +576,7 @@ classnames:
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle h-12 w-12">
                 <img
-                  src="https://img.duskmoonui.com/images/profile/demo/2@94.webp"
+                  src="https://img.daisyui.com/images/profile/demo/2@94.webp"
                   alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
@@ -608,7 +608,7 @@ classnames:
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle h-12 w-12">
                 <img
-                  src="https://img.duskmoonui.com/images/profile/demo/3@94.webp"
+                  src="https://img.daisyui.com/images/profile/demo/3@94.webp"
                   alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
@@ -640,7 +640,7 @@ classnames:
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle h-12 w-12">
                 <img
-                  src="https://img.duskmoonui.com/images/profile/demo/4@94.webp"
+                  src="https://img.daisyui.com/images/profile/demo/4@94.webp"
                   alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
@@ -672,7 +672,7 @@ classnames:
             <div class="$$avatar">
               <div class="$$mask $$mask-squircle h-12 w-12">
                 <img
-                  src="https://img.duskmoonui.com/images/profile/demo/5@94.webp"
+                  src="https://img.daisyui.com/images/profile/demo/5@94.webp"
                   alt="Avatar Tailwind CSS Component" />
               </div>
             </div>

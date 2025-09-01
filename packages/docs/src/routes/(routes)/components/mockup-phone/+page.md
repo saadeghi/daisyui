@@ -36,7 +36,7 @@ classnames:
 <div class="mockup-phone border-primary">
   <div class="mockup-phone-camera"></div>
   <div class="mockup-phone-display">
-    <img alt="wallpaper" src="https://img.duskmoonui.com/images/stock/453966.webp"/>
+    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp"/>
   </div>
 </div>
 
@@ -44,7 +44,7 @@ classnames:
 <div class="$$mockup-phone border-primary">
   <div class="$$mockup-phone-camera"></div>
   <div class="$$mockup-phone-display">
-    <img alt="wallpaper" src="https://img.duskmoonui.com/images/stock/453966.webp"/>
+    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp"/>
   </div>
 </div>
 ```

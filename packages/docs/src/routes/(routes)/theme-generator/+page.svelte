@@ -375,7 +375,7 @@
       }
     }, 10)
     holdTimeout = setTimeout(() => {
-      new Audio("https://img.duskmoonui.com/fx/tap.mp3").play()
+      new Audio("https://img.daisyui.com/fx/tap.mp3").play()
       createNewTheme(
         crypto.randomUUID(),
         nameGenerator(),
@@ -423,7 +423,7 @@
 <SEO
   title="duskmoonUI and Tailwind CSS theme generator"
   desc="OKLCH Theme Generator for duskmoonUI and Tailwind CSS"
-  img={`https://img.duskmoonui.com/images/theme-generator.webp`}
+  img={`https://img.daisyui.com/images/theme-generator.webp`}
 />
 
 <div class="relative grid md:grid-cols-[14rem_17rem_1fr]">

@@ -3,7 +3,7 @@ title: "A duskmoonUI + Next.js template that converts your Lemon Squeezy API int
 desc: Convert your Lemon Squeezy API data into a professional online store.
 published: true
 date: 2025-01-23
-thumbnail: https://img.duskmoonui.com/images/blog/online-store-template-thumbnail.webp
+thumbnail: https://img.daisyui.com/images/blog/online-store-template-thumbnail.webp
 author: Abhijeet Biswal
 tags:
   - Templates
@@ -48,7 +48,7 @@ By default, the site displays example data from the `data/lemonsqueezy-products.
 
 2. **Add the API Key to the Environment File**
 
-![env file example](https://img.duskmoonui.com/images/blog/store-env.webp)
+![env file example](https://img.daisyui.com/images/blog/store-env.webp)
 
 - Create a `.env` file in the root of your project.
 - Add the following line:
@@ -102,7 +102,7 @@ To personalize your store’s content and design, edit the following files:
 
 To customize the core pages of your store, update these files:
 
-![pages route](https://img.duskmoonui.com/images/blog/pages-route-example.webp)
+![pages route](https://img.daisyui.com/images/blog/pages-route-example.webp)
 
 - **Homepage** (`/page.tsx`):
 

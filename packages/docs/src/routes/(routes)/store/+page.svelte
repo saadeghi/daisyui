@@ -111,7 +111,7 @@
 <SEO
   title="Official duskmoonUI Store"
   desc="duskmoonUI Store - Professional templates made by duskmoonUI"
-  img="https://img.duskmoonui.com/images/store.webp"
+  img="https://img.daisyui.com/images/store.webp"
 />
 <div class="mx-4 flex flex-col justify-between gap-6 lg:flex-row">
   <div class="flex flex-col gap-2">

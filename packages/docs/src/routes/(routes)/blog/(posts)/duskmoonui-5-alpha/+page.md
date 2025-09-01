@@ -4,7 +4,7 @@ desc: duskmoonUI 5 alpha is in development and I'm looking for your suggestions,
 published: true
 date: 2024-10-21
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/duskmoonui-alpha.webp
+thumbnail: https://img.daisyui.com/images/blog/duskmoonui-alpha.webp
 tags:
   - News
 ---

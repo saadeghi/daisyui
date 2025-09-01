@@ -413,7 +413,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - <div class="avatar online">
 + <div class="avatar avatar-online">
   <div class="w-24 rounded-full">
-    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```
@@ -421,7 +421,7 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - <div class="avatar offline">
 + <div class="avatar avatar-offline">
   <div class="w-24 rounded-full">
-    <img src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>
 ```
@@ -541,11 +541,11 @@ To be clear, `mockup-phone` is not removed. It just doesn't need the `artboard` 
 - <figure class="diff aspect-16/9">
 + <figure class="diff aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img">
-    <img alt="image 1" src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
+    <img alt="image 1" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
   </div>
 -  <div class="diff-item-2" role="img">
 +  <div class="diff-item-2" role="img" tabindex="0">
-    <img alt="image 2" src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
+    <img alt="image 2" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
   <div class="diff-resizer"></div>
 </figure>

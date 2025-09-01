@@ -4,7 +4,7 @@ desc: Do you want to add new color names to duskmoonUI color palette? Here is ho
 published: true
 date: 2023-9-18
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/how-to-add-new-colors-to-duskmoonui.webp
+thumbnail: https://img.daisyui.com/images/blog/how-to-add-new-colors-to-duskmoonui.webp
 tags:
   - Guides
 ---
@@ -28,7 +28,7 @@ duskmoonUI semantic color names (`base`, `primary`, etc) are using CSS variables
 You can also have multiple themes at the same time without adding a single class name. Light mode, dark mode, or any other theme you want.
 
 These are the duskmoonUI color names:
-![Mary UI form](https://img.duskmoonui.com/images/blog/duskmoonui-colors.webp)
+![Mary UI form](https://img.daisyui.com/images/blog/duskmoonui-colors.webp)
 Read more about [duskmoonUI color system](https://duskmoonui.com/docs/colors) and [duskmoonUI themes](https://duskmoonui.com/docs/themes/)
 
 ## How using a color palette can help

@@ -4,7 +4,7 @@ desc: Is duskmoonUI against the Tailwind CSS philosophy? Are we going full circl
 published: true
 date: 2023-9-10
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/duskmoonui-stars.webp
+thumbnail: https://img.daisyui.com/images/blog/duskmoonui-stars.webp
 tags:
   - Reviews
 ---

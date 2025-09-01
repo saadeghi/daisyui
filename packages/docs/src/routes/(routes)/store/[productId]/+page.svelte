@@ -580,7 +580,7 @@
               <div class="tooltip" data-tip={data.tech[tech]}>
                 <img
                   class="size-6 lg:size-8"
-                  src={`https://img.duskmoonui.com/images/logos/${tech}.svg`}
+                  src={`https://img.daisyui.com/images/logos/${tech}.svg`}
                   alt={tech}
                 />
               </div>

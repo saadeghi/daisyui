@@ -18,7 +18,7 @@
 <SEO
   {title}
   {desc}
-  img={`https://img.duskmoonui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
+  img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
 />
 <div class="mx-auto max-w-4xl px-4 py-20">
   <div

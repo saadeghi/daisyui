@@ -9,7 +9,7 @@ desc: Setup VSCode to correctly generate duskmoonUI code based on your prompt.
 
 > To setup Tailwind CSS syntax support and IntelliSense, see [Tailwind CSS docs](https://tailwindcss.com/docs/editor-setup).
 
-## <img src="https://img.duskmoonui.com/images/logos/vscode.webp" alt="VSCode" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> VSCode and Copilot LLM setup
+## <img src="https://img.daisyui.com/images/logos/vscode.webp" alt="VSCode" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> VSCode and Copilot LLM setup
 
 [duskmoonui.com/llms.txt](https://duskmoonui.com/llms.txt) file is a compact, text version of duskmoonUI docs to help AI generate accurate duskmoonUI code based on your prompt.
 Here's how to use duskmoonUI llms.txt in VSCode:
@@ -46,7 +46,7 @@ You can use [Context7](https://context7.com/) or [duskmoonUI GitMCP](https://git
 Click this button to install Context7 MCP server in VSCode:
 
 <a href="vscode:mcp/install?%7B%22name%22%3A%22context7%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40upstash%2Fcontext7-mcp%40latest%22%5D%7D" class="btn btn-primary">
-  <img src="https://img.duskmoonui.com/images/logos/vscode.webp" alt="VSCode" width="24" height="24" class="inline-block me-2">
+  <img src="https://img.daisyui.com/images/logos/vscode.webp" alt="VSCode" width="24" height="24" class="inline-block me-2">
   Install Context7 MCP
 </a>
 
@@ -89,7 +89,7 @@ give me a light duskmoonUI 5 theme with tropical color palette. use context7
 Click this button to install GitMCP server in VSCode:
 
 <a href="vscode:mcp/install?%7B%22name%22%3A%22duskmoonUI%22%2C%22type%22%3A%22sse%22%2C%22url%22%3A%22https%3A%2F%2Fgitmcp.io%2Fsaadeghi%2Fduskmoonui%22%7D" class="btn btn-primary">
-  <img src="https://img.duskmoonui.com/images/logos/vscode.webp" alt="VSCode" width="24" height="24" class="inline-block me-2">
+  <img src="https://img.daisyui.com/images/logos/vscode.webp" alt="VSCode" width="24" height="24" class="inline-block me-2">
   Install duskmoonUI GitMCP
 </a>
 

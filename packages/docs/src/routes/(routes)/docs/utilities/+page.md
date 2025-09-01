@@ -69,7 +69,7 @@ Change the theme to see the border radius changes:
 
 `glass` creates a glass effect on the element.
 
-<div class="rounded-box p-10 " style="background-image: url(https://img.duskmoonui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
+<div class="rounded-box p-10 " style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
 <div class="glass h-40 rounded-box grid place-content-center">Glass</div>
 </div>
 

@@ -7,7 +7,7 @@ desc: Setup Grok to correctly generate duskmoonUI code based on your prompt.
   import Translate from "$components/Translate.svelte"
 </script>
 
-## <img src="https://img.duskmoonui.com/images/logos/grok.webp" alt="Grok" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Grok LLM setup
+## <img src="https://img.daisyui.com/images/logos/grok.webp" alt="Grok" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Grok LLM setup
 
 ### Quick use
 

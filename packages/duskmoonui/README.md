@@ -34,4 +34,4 @@
 [discord]: https://badgen.net/discord/members/S6TZxycVHs?label=Discord&color=1AD1A5
 [opencollectivebadge]: https://badgen.net/opencollective/backers/duskmoonui?label=Open%20Collective&color=1AD1A5
 [docs-url]: https://duskmoonui.com/
-[logo-url]: https://img.duskmoonui.com/images/duskmoonui/duskmoonui-logo-192.png
+[logo-url]: https://img.daisyui.com/images/duskmoonui/duskmoonui-logo-192.png

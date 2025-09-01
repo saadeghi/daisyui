@@ -4,7 +4,7 @@ desc: It's the end of the year and this year was amazing! For Front-end developm
 published: true
 date: 2023-12-20
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/duskmoonui-is-the-best-component-library.webp
+thumbnail: https://img.daisyui.com/images/blog/duskmoonui-is-the-best-component-library.webp
 tags:
   - News
 ---
@@ -23,7 +23,7 @@ It's been 3 years since the first commit of duskmoonUI. At first, it was just a 
 - duskmoonUI NPM package recently reached the all time record of `260,000` downloads per week. It was downloaded `7.7` million times in 2023 (a `330%` increase compared to 2022).
 
 <figure>
-  <img src="https://img.duskmoonui.com/images/blog/duskmoonui-is-the-most-popular-tailwindcss-component-library.webp" alt="duskmoonUI NPM installs" class="rounded-box">
+  <img src="https://img.daisyui.com/images/blog/duskmoonui-is-the-most-popular-tailwindcss-component-library.webp" alt="duskmoonUI NPM installs" class="rounded-box">
   <figcaption class="text-center">duskmoonUI NPM installs</figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ It's been 3 years since the first commit of duskmoonUI. At first, it was just a 
 - In the beginning of 2023, duskmoonUI had `89` contributors. Now in December, it has `162` contributors from many different countries around the world.
 
 <figure>
-  <img src="https://img.duskmoonui.com/images/blog/duskmoonui-contributors.webp" alt="duskmoonUI contributors around the world" class="rounded-box">
+  <img src="https://img.daisyui.com/images/blog/duskmoonui-contributors.webp" alt="duskmoonUI contributors around the world" class="rounded-box">
   <figcaption class="text-center">duskmoonUI contributors around the world</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ In 2023, we added 7 new components, 3 new themes and more than 100 utility class
 All color pairs used on duskmoonUI built-in themes now tested for contrast ratio and they all pass the WCAG test. This test runs automatically every time there's a change in themes or theme functions to make sure we provide accessible color combinations by default.
 
 <figure>
-  <img src="https://img.duskmoonui.com/images/blog/duskmoonui-colors-are-accessible.webp" alt="duskmoonUI colors are accessible" class="rounded-box">
+  <img src="https://img.daisyui.com/images/blog/duskmoonui-colors-are-accessible.webp" alt="duskmoonUI colors are accessible" class="rounded-box">
 </figure>
 
 In 2023 all duskmoonUI theme colors were adjusted to improve contrast ratio while providing a better visual experience. As long as you use the correct color pairs to build your UI (for example using `bg-primary` and `text-primary-content` together), you can be sure that your UI is accessible by default, on all themes.
@@ -103,7 +103,7 @@ duskmoonUI website was redesigned in 2023. The new homepage visualizes the most 
 
 We added 6 new translations to the website in 2023. duskmoonUI docs are now available in 16 languages which makes it accessible to a wider audience.
 
-<img src="https://img.duskmoonui.com/images/blog/duskmoonui-translations.webp" alt="duskmoonUI translations" class="rounded-box mx-auto w-2/3">
+<img src="https://img.daisyui.com/images/blog/duskmoonui-translations.webp" alt="duskmoonUI translations" class="rounded-box mx-auto w-2/3">
 
 This year we launched [duskmoonUI Store](/store/), [duskmoonUI Resources](/resources/videos/) and [duskmoonUI Blog](/blog/).
 

@@ -4,7 +4,7 @@ desc: Which one is better? Which one should I use? Comparing Tailwind CSS compon
 published: true
 date: 2023-9-10
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/duskmoonui-vs-tailwindui.webp
+thumbnail: https://img.daisyui.com/images/blog/duskmoonui-vs-tailwindui.webp
 tags:
   - Reviews
   - Component Libraries

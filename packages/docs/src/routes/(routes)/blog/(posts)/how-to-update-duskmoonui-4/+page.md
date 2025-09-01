@@ -4,7 +4,7 @@ desc: This upgrade guide helps you easily update duskmoonUI to version 4 without
 published: true
 date: 2023-11-23
 author: Pouya Saadeghi
-thumbnail: https://img.duskmoonui.com/images/blog/duskmoonui-4-update-guide.webp
+thumbnail: https://img.daisyui.com/images/blog/duskmoonui-4-update-guide.webp
 tags:
   - Guides
 ---
