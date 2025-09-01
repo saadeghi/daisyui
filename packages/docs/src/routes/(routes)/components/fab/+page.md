@@ -456,7 +456,7 @@ classnames:
 
 #### There's no space for a text label in a quarter circle, so tooltips are used to indicate the button's function
 
-<div class="h-42">
+<div class="h-48">
   <div class="fab fab-flower absolute">
     <div tabindex="0" role="button" class="btn btn-lg btn-info btn-circle">F</div>
     <button class="fab-main-action btn btn-circle btn-lg btn-success">M</button>
