@@ -622,6 +622,105 @@ Using CSS focus
 - For CSS focus dropdowns, use `tabindex="0"` and `role="button"` on the button
 - The content can be any HTML element (not just `<ul>`)
 
+### fab
+FAB (Floating Action Button) stays in the bottom corner of screen. It includes a focusable and accessible element with button role. Clicking or focusing it shows additional buttons (known as Speed Dial buttons) in a vertical arrangement or a flower shape (quarter circle)
+
+[fab docs](https://daisyui.com/components/fab/)
+
+#### Class names
+- component: `fab`
+- part: `fab-close`, `fab-main-action`
+- modifier: `fab-flower`
+
+#### Syntax
+A single FAB in the corder of screen
+```html
+<div class="fab">
+  <button class="btn btn-lg btn-circle">{IconOriginal}</button>
+</div>
+```
+A FAB that opens a 3 other buttons in the corner of page vertically
+```html
+<div class="fab">
+  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
+  <button class="btn btn-lg btn-circle">{Icon1}</button>
+  <button class="btn btn-lg btn-circle">{Icon2}</button>
+  <button class="btn btn-lg btn-circle">{Icon3}</button>
+</div>
+```
+A FAB that opens a 3 other buttons in the corner of page vertically and they have label text
+```html
+<div class="fab">
+  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
+  <div>{Label1}<button class="btn btn-lg btn-circle">{Icon1}</button></div>
+  <div>{Label2}<button class="btn btn-lg btn-circle">{Icon2}</button></div>
+  <div>{Label3}<button class="btn btn-lg btn-circle">{Icon3}</button></div>
+</div>
+```
+FAB with rectangle buttons. These are not circular buttons so they can have more content.
+```html
+<div class="fab">
+  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
+  <button class="btn btn-lg">{Label1}</button>
+  <button class="btn btn-lg">{Label2}</button>
+  <button class="btn btn-lg">{Label3}</button>
+</div>
+```
+FAB with close button. When FAB is open, the original button is replaced with a close button
+```html
+<div class="fab">
+  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
+  <div class="fab-close">Close <span class="btn btn-circle btn-lg btn-error">✕</span></div>
+  <div>{Label1}<button class="btn btn-lg btn-circle">{Icon1}</button></div>
+  <div>{Label2}<button class="btn btn-lg btn-circle">{Icon2}</button></div>
+  <div>{Label3}<button class="btn btn-lg btn-circle">{Icon3}</button></div>
+</div>
+```
+FAB with Main Action button. When FAB is open, the original button is replaced with a main action button
+```html
+<div class="fab">
+  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
+  <div class="fab-main-action">
+    {LabelMainAction}<button class="btn btn-circle btn-secondary btn-lg">{IconMainAction}</button>
+  </div>
+  <div>{Label1}<button class="btn btn-lg btn-circle">{Icon1}</button></div>
+  <div>{Label2}<button class="btn btn-lg btn-circle">{Icon2}</button></div>
+  <div>{Label3}<button class="btn btn-lg btn-circle">{Icon3}</button></div>
+</div>
+```
+FAB Flower. It opens the buttons in a flower shape (quarter circle) arrangement instead of vertical
+```html
+<div class="fab fab-flower">
+  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
+  <button class="fab-main-action btn btn-circle btn-lg">{IconMainAction}</button>
+  <button class="btn btn-lg btn-circle">{Icon1}</button>
+  <button class="btn btn-lg btn-circle">{Icon2}</button>
+  <button class="btn btn-lg btn-circle">{Icon3}</button>
+</div>
+```
+FAB Flower with tooltips. There's no space for a text label in a quarter circle, so tooltips are used to indicate the button's function
+```html
+<div class="fab fab-flower">
+  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">{IconOriginal}</div>
+  <button class="fab-main-action btn btn-circle btn-lg">{IconMainAction}</button>
+  <div class="tooltip tooltip-left" data-tip="{Label1}">
+    <button class="btn btn-lg btn-circle">{Icon1}</button>
+  </div>
+  <div class="tooltip tooltip-left" data-tip="{Label2}">
+    <button class="btn btn-lg btn-circle">{Icon2}</button>
+  </div>
+  <div class="tooltip tooltip-left" data-tip="{Label3}">
+    <button class="btn btn-lg btn-circle">{Icon3}</button>
+  </div>
+</div>
+```
+#### Rules
+- {Icon*} should be replaced with the appropriate icon for each button. SVG icons are recommended
+- {IconOriginal} is the icon that we see before opening the FAB
+- {IconMainAction} is the icon we see after opening the FAB
+- {Icon1}, {Icon2}, {Icon3} are the icons for the additional buttons
+- {Label*} is the label text for each button
+
 ### fieldset
 Fieldset is a container for grouping related form elements. It includes fieldset-legend as a title and label as a description
 
@@ -736,6 +835,30 @@ Hero is a component for displaying a large box or image with a title and descrip
 - Use `hero-content` for the text content
 - Use `hero-overlay` inside the hero to overlay the background image with a color
 - Content can contain a figure
+
+### hover-gallery
+Hover Gallery is container of images. The first image is visible be default and when we hover it horizontally, other images show up. Hover Gallery is useful for product cards in ecommerce sites, portfoilios or in image galleries. Hover Gallery can include up to 10 images.
+
+[indicator docs](https://daisyui.com/components/hover-gallery/)
+
+#### Class names
+- component: `hover-gallery`
+
+#### Syntax
+```html
+<figure class="hover-gallery max-w-60">
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
+  <img src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
+</figure>
+```
+
+#### Rules
+- hover-gallery can be a `<div>` or a `<figure>`
+- hover-gallery can include up to 10 images
+- hover-gallery needs a max width otherwise if fills the container width
+- images must be same dimensions for a proper alignment
 
 ### indicator
 Indicators are used to place an element on the corner of another element
@@ -1547,3 +1670,7 @@ Validator class changes the color of form elements to error or success based on 
 
 #### Rules
 - Use with `input`, `select`, `textarea`
+
+## Notes
+- Get the latest version of this file at https://daisyui.com/llms.txt
+- Compatible with daisyUI 5.1
