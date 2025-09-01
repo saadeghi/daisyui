@@ -123,7 +123,7 @@
     </div>
   </div>
   <div
-    class="drawer-side z-40"
+    class="drawer-side z-1001"
     style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};"
     bind:this={drawersidebar}
     onscroll={parseSidebarScroll}
