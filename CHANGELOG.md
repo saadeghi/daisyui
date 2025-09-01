@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.2 (2025-09-01)
+
+
+### Bug Fixes
+
+* tooltip animation ([38049bc](https://github.com/saadeghi/daisyui/commit/38049bc3f7896937f6085345bd44421ae3c73ee3))
+
 ## 5.1.1 (2025-09-01)
 
 
