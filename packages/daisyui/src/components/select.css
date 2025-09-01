@@ -33,7 +33,7 @@
   }
   select {
     @apply -ms-4 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-4 pe-7;
-    height: calc(100% - 2px);
+    /* height: calc(100% - 2px); */
     background: inherit;
     border-radius: inherit;
     border-style: none;
@@ -66,42 +66,45 @@
   &:has(> select[disabled]) > select[disabled] {
     @apply cursor-not-allowed;
   }
-  @supports (appearance: base-select) {
-    appearance: base-select;
-  }
-  &::picker(select) {
+  &,
+  & select {
     @supports (appearance: base-select) {
       appearance: base-select;
     }
-    color: inherit;
-    max-height: 80dvh;
-    border: var(--border) solid var(--color-base-200);
-    @apply rounded-box my-2 p-2;
-    background-color: inherit;
-    box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0/0.2);
-    box-shadow:
-      0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
-      0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
-  }
-  &::picker-icon {
-    @apply hidden;
-  }
-  /* option::checkmark {
+    &::picker(select) {
+      @supports (appearance: base-select) {
+        appearance: base-select;
+      }
+      color: inherit;
+      max-height: 80dvh;
+      border: var(--border) solid var(--color-base-200);
+      @apply rounded-box my-2 p-2;
+      background-color: inherit;
+      box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0/0.2);
+      box-shadow:
+        0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
+        0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
+    }
+    &::picker-icon {
+      @apply hidden;
+    }
+    /* option::checkmark {
     @apply hidden;
   } */
-  option {
-    @apply rounded-field px-3 py-1.5;
-    transition-property: color, background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    &:not(:disabled) {
-      &:hover,
-      &:focus-visible {
-        @apply bg-base-content/10 cursor-pointer outline-hidden;
-      }
-      &:active {
-        @apply bg-neutral text-neutral-content;
-        box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
+    option {
+      @apply rounded-field px-3 py-1.5;
+      transition-property: color, background-color;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      &:not(:disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply bg-base-content/10 cursor-pointer outline-hidden;
+        }
+        &:active {
+          @apply bg-neutral text-neutral-content;
+          box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
+        }
       }
     }
   }
