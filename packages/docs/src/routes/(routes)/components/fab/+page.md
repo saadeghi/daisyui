@@ -36,14 +36,14 @@ classnames:
 </div>
 
 ```html
-<div class="fab">
+<div class="$$fab">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">F</div>
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-primary">F</div>
 
   <!-- buttons that show up when FAB is open -->
-  <button class="btn btn-lg btn-circle">A</button>
-  <button class="btn btn-lg btn-circle">B</button>
-  <button class="btn btn-lg btn-circle">C</button>
+  <button class="$$btn $$btn-lg $$btn-circle">A</button>
+  <button class="$$btn $$btn-lg $$btn-circle">B</button>
+  <button class="$$btn $$btn-lg $$btn-circle">C</button>
 </div>
 ```
 
@@ -82,9 +82,9 @@ classnames:
 </div>
 
 ```html
-<div class="fab">
+<div class="$$fab">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-secondary">
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-secondary">
     <svg
       aria-label="New"
       xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ classnames:
   </div>
 
   <!-- buttons that show up when FAB is open -->
-  <button class="btn btn-lg btn-circle">
+  <button class="$$btn $$btn-lg $$btn-circle">
     <svg
       aria-label="Camera"
       xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ classnames:
       />
     </svg>
   </button>
-  <button class="btn btn-lg btn-circle">
+  <button class="$$btn $$btn-lg $$btn-circle">
     <svg
       aria-label="Gallery"
       xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ classnames:
       />
     </svg>
   </button>
-  <button class="btn btn-lg btn-circle">
+  <button class="$$btn $$btn-lg $$btn-circle">
     <svg
       aria-label="Voice"
       xmlns="http://www.w3.org/2000/svg"
@@ -172,14 +172,14 @@ classnames:
 </div>
 
 ```html
-<div class="fab">
+<div class="$$fab">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-success">F</div>
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-success">F</div>
 
   <!-- buttons that show up when FAB is open -->
-  <div>Label B <button class="btn btn-lg btn-circle">A</button></div>
-  <div>Label C <button class="btn btn-lg btn-circle">B</button></div>
-  <div>Label D <button class="btn btn-lg btn-circle">C</button></div>
+  <div>Label B <button class="$$btn $$btn-lg $$btn-circle">A</button></div>
+  <div>Label C <button class="$$btn $$btn-lg $$btn-circle">B</button></div>
+  <div>Label D <button class="$$btn $$btn-lg $$btn-circle">C</button></div>
 </div>
 ```
 
@@ -197,14 +197,14 @@ classnames:
 </div>
 
 ```html
-<div class="fab">
+<div class="$$fab">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-success">F</div>
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-success">F</div>
 
   <!-- buttons that show up when FAB is open -->
-  <button class="btn btn-lg">Button A</button>
-  <button class="btn btn-lg">Button B</button>
-  <button class="btn btn-lg">Button C</button>
+  <button class="$$btn $$btn-lg">Button A</button>
+  <button class="$$btn $$btn-lg">Button B</button>
+  <button class="$$btn $$btn-lg">Button C</button>
 </div>
 ```
 
@@ -223,17 +223,17 @@ classnames:
 </div>
 
 ```html
-<div class="fab">
+<div class="$$fab">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-info">F</div>
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-info">F</div>
 
   <!-- close button should not be focusable so it can close the FAB when clicked. It's just a visual placeholder -->
-  <div class="fab-close">Close <span class="btn btn-circle btn-lg btn-error">✕</span></div>
+  <div class=$$fab-close">Close <span class="$$btn $$btn-circle $$btn-lg $$btn-error">✕</span></div>
 
   <!-- buttons that show up when FAB is open -->
-  <div>Label A <button class="btn btn-lg btn-circle">A</button></div>
-  <div>Label B <button class="btn btn-lg btn-circle">B</button></div>
-  <div>Label C <button class="btn btn-lg btn-circle">C</button></div>
+  <div>Label A <button class="$$btn $$btn-lg $$btn-circle">A</button></div>
+  <div>Label B <button class="$$btn $$btn-lg $$btn-circle">B</button></div>
+  <div>Label C <button class="$$btn $$btn-lg $$btn-circle">C</button></div>
 </div>
 ```
 
@@ -254,19 +254,19 @@ classnames:
 </div>
 
 ```html
-<div class="fab">
+<div class="$$fab">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">F</div>
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-primary">F</div>
 
   <!-- Main Action button replaces the original button when FAB is open -->
-  <div class="fab-main-action">
-    Main Action <button class="btn btn-circle btn-secondary btn-lg">M</button>
+  <div class="$$fab-main-action">
+    Main Action <button class="$$btn $$btn-circle $$btn-secondary $$btn-lg">M</button>
   </div>
 
   <!-- buttons that show up when FAB is open -->
-  <div>Label A <button class="btn btn-lg btn-circle">A</button></div>
-  <div>Label B <button class="btn btn-lg btn-circle">B</button></div>
-  <div>Label C <button class="btn btn-lg btn-circle">C</button></div>
+  <div>Label A <button class="$$btn $$btn-lg $$btn-circle">A</button></div>
+  <div>Label B <button class="$$btn $$btn-lg $$btn-circle">B</button></div>
+  <div>Label C <button class="$$btn $$btn-lg $$btn-circle">C</button></div>
 </div>
 ```
 
@@ -281,8 +281,8 @@ classnames:
 </div>
 
 ```html
-<div class="fab">
-  <button class="btn btn-lg btn-circle btn-primary">F</button>
+<div class="$$fab">
+  <button class="$$btn $$btn-lg $$btn-circle $$btn-primary">F</button>
 </div>
 ```
 
@@ -302,18 +302,18 @@ classnames:
 </div>
 
 ```html
-<div class="fab fab-flower">
+<div class="$$fab $$fab-flower">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-success">F</div>
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-success">F</div>
 
   <!-- Main Action button replaces the original button when FAB is open -->
-  <button class="fab-main-action btn btn-circle btn-lg">M</button>
+  <button class="$$fab-main-action $$btn $$btn-circle $$btn-lg">M</button>
 
   <!-- buttons that show up when FAB is open -->
-  <button class="btn btn-lg btn-circle">A</button>
-  <button class="btn btn-lg btn-circle">B</button>
-  <button class="btn btn-lg btn-circle">C</button>
-  <button class="btn btn-lg btn-circle">D</button>
+  <button class="$$btn $$btn-lg $$btn-circle">A</button>
+  <button class="$$btn $$btn-lg $$btn-circle">B</button>
+  <button class="$$btn $$btn-lg $$btn-circle">C</button>
+  <button class="$$btn $$btn-lg $$btn-circle">D</button>
 </div>
 ```
 
@@ -357,9 +357,9 @@ classnames:
 </div>
 
 ```html
-<div class="fab fab-flower absolute">
+<div class="$$fab $$fab-flower">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-circle btn-lg">
+  <div tabindex="0" role="button" class="$$btn $$btn-circle $$btn-lg">
     <svg
       aria-label="New"
       xmlns="http://www.w3.org/2000/svg"
@@ -374,7 +374,7 @@ classnames:
   </div>
 
   <!-- Main Action button replaces the original button when FAB is open -->
-  <button class="fab-main-action btn btn-circle btn-lg btn-primary">
+  <button class="$$fab-main-action $$btn $$btn-circle $$btn-lg $$btn-primary">
     <svg
       aria-label="New post"
       xmlns="http://www.w3.org/2000/svg"
@@ -391,7 +391,7 @@ classnames:
   </button>
 
   <!-- buttons that show up when FAB is open -->
-  <button class="btn btn-circle btn-lg">
+  <button class="$$btn $$btn-circle $$btn-lg">
     <svg
       aria-label="New camera photo"
       xmlns="http://www.w3.org/2000/svg"
@@ -407,7 +407,7 @@ classnames:
       />
     </svg>
   </button>
-  <button class="btn btn-circle btn-lg">
+  <button class="$$btn $$btn-circle $$btn-lg">
     <svg
       aria-label="New poll"
       xmlns="http://www.w3.org/2000/svg"
@@ -420,7 +420,7 @@ classnames:
       />
     </svg>
   </button>
-  <button class="btn btn-circle btn-lg">
+  <button class="$$btn $$btn-circle $$btn-lg">
     <svg
       aria-label="New gallery photo"
       xmlns="http://www.w3.org/2000/svg"
@@ -435,7 +435,7 @@ classnames:
       />
     </svg>
   </button>
-  <button class="btn btn-circle btn-lg">
+  <button class="$$btn $$btn-circle $$btn-lg">
     <svg
       aria-label="New voice"
       xmlns="http://www.w3.org/2000/svg"
@@ -476,25 +476,25 @@ classnames:
 </div>
 
 ```html
-<div class="fab fab-flower">
+<div class="$$fab $$fab-flower">
   <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
-  <div tabindex="0" role="button" class="btn btn-lg btn-info btn-circle">F</div>
+  <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-info $$btn-circle">F</div>
 
   <!-- Main Action button replaces the original button when FAB is open -->
-  <button class="fab-main-action btn btn-circle btn-lg btn-success">M</button>
+  <button class="$$fab-main-action $$btn $$btn-circle $$btn-lg $$btn-success">M</button>
 
   <!-- buttons that show up when FAB is open -->
-  <div class="tooltip tooltip-left" data-tip="Label A">
-    <button class="btn btn-lg btn-circle">A</button>
+  <div class="$$tooltip $$tooltip-left" data-tip="Label A">
+    <button class="$$btn $$btn-lg $$btn-circle">A</button>
   </div>
-  <div class="tooltip tooltip-left" data-tip="Label B">
-    <button class="btn btn-lg btn-circle">B</button>
+  <div class="$$tooltip $$tooltip-left" data-tip="Label B">
+    <button class="$$btn $$btn-lg $$btn-circle">B</button>
   </div>
-  <div class="tooltip" data-tip="Label C">
-    <button class="btn btn-lg btn-circle">C</button>
+  <div class="$$tooltip" data-tip="Label C">
+    <button class="$$btn $$btn-lg $$btn-circle">C</button>
   </div>
-  <div class="tooltip" data-tip="Label D">
-    <button class="btn btn-lg btn-circle">D</button>
+  <div class="$$tooltip" data-tip="Label D">
+    <button class="$$btn $$btn-lg $$btn-circle">D</button>
   </div>
 </div>
 ```
