@@ -41,13 +41,13 @@
 
   &:checked,
   &:is(label:has(:checked)),
-  &:is(.tab-active, [aria-selected="true"]) {
+  &:is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
     & + .tab-content {
       @apply block;
       height: calc(100% - var(--tab-height) + var(--border));
     }
   }
-  &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected="true"]) {
+  &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
     @apply text-base-content/50;
   }
 
@@ -55,7 +55,7 @@
     @apply grow cursor-default;
   }
 
-  /* &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+  /* &:is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]):not(.tab-disabled, [disabled]),
   &:is(input:checked),
   &:is(label:has(:checked)) {
     @apply text-base-content;
@@ -97,7 +97,7 @@
       left: 10%;
       position: absolute;
     }
-    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]):not(.tab-disabled, [disabled]),
     &:is(input:checked),
     &:is(label:has(:checked)) {
       &:before {
@@ -133,7 +133,7 @@
     padding: var(--tab-paddings);
     border-color: var(--tab-border-colors);
 
-    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]):not(.tab-disabled, [disabled]),
     &:is(input:checked, label:has(:checked)) {
       --tab-border: var(--border) var(--border) 0 var(--border);
       --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
@@ -195,7 +195,7 @@
 
   &:has(.tab-content) {
     > .tab:first-child {
-      &:not(.tab-active, [aria-selected="true"]) {
+      &:not(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
         --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
           var(--tab-border-color);
       }
@@ -212,7 +212,7 @@
 
   :checked,
   label:has(:checked),
-  :is(.tab-active, [aria-selected="true"]) {
+  :is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
     & + .tab-content {
       &:nth-child(1),
       &:nth-child(n + 3) {
@@ -240,7 +240,7 @@
     --tab-corner-position: top left, top right;
     /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
-    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]):not(.tab-disabled, [disabled]),
     &:is(input:checked),
     &:is(label:has(:checked)) {
       --tab-border: var(--border) var(--border) 0 var(--border);
@@ -268,7 +268,7 @@
 
   &:has(.tab-content) {
     > .tab:first-child {
-      &:not(.tab-active, [aria-selected="true"]) {
+      &:not(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
         --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
           var(--tab-border-color);
       }
@@ -286,7 +286,7 @@
 
   :checked,
   label:has(:checked),
-  :is(.tab-active, [aria-selected="true"]) {
+  :is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
     & + .tab-content {
       &:nth-child(1),
       &:nth-child(n + 3) {
@@ -314,7 +314,7 @@
     --tab-corner-position: top left, top right;
     /* --last-tab-margin: 0 var(--tab-p) 0 0; */
 
-    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]):not(.tab-disabled, [disabled]),
     &:is(input:checked),
     &:is(label:has(:checked)) {
       --tab-border: 0 var(--border) var(--border) var(--border);
@@ -342,7 +342,7 @@
 
   &:has(.tab-content) {
     > .tab:first-child {
-      &:not(.tab-active, [aria-selected="true"]) {
+      &:not(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
         --tab-border-colors: #0000 var(--tab-border-color) var(--tab-border-color)
           var(--tab-border-color);
       }
@@ -360,7 +360,7 @@
 
   > :checked,
   > :is(label:has(:checked)),
-  > :is(.tab-active, [aria-selected="true"]) {
+  > :is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
     & + .tab-content:not(:nth-child(2)) {
       --tabcontent-radius-es: var(--radius-box);
     }
@@ -385,7 +385,7 @@
     --tab-corner-position: top right, bottom right;
     --last-tab-margin: 0 0 0 0;
 
-    &:is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+    &:is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]):not(.tab-disabled, [disabled]),
     &:is(input:checked),
     &:is(label:has(:checked)) {
       --tab-border: 1px 0 1px 1px;
@@ -407,7 +407,7 @@
 
   &:has(.tab-content) {
     >.tab:first-child {
-      &:not(.tab-active, [aria-selected="true"]) {
+      &:not(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
         --tab-border-colors: var(--tab-border-color) #0000 var(--tab-border-color) var(--tab-border-color);
       }
     }
@@ -424,7 +424,7 @@
 
   :checked,
   label:has(:checked),
-  :is(.tab-active, [aria-selected="true"]) {
+  :is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]) {
     &+.tab-content:not(:nth-child(2)) {
       --tabcontent-radius-ss: var(--radius-box);
     }
@@ -453,7 +453,7 @@
     }
   }
 
-  > :is(.tab-active, [aria-selected="true"]):not(.tab-disabled, [disabled]),
+  > :is(.tab-active, [aria-selected=true], [aria-current=true], [aria-current=page]):not(.tab-disabled, [disabled]),
   > :is(input:checked),
   > :is(label:has(:checked)) {
     background-color: var(--tab-bg, var(--color-base-100));
