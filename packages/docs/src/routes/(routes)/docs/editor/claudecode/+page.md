@@ -7,7 +7,7 @@ desc: Setup Claude Code to correctly generate duskmoonUI code based on your prom
   import Translate from "$components/Translate.svelte"
 </script>
 
-## <img src="https://img.daisyui.com/images/logos/claude.webp" alt="Claude" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Claude Code LLM setup
+## <img src="https://img.duskmoonui.com/images/logos/claude.webp" alt="Claude" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Claude Code LLM setup
 
 ### MCP server
 

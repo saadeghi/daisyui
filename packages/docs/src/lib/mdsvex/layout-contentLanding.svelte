@@ -1,6 +1,6 @@
 <script>
   import { browser } from "$app/environment"
-  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+  import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
   import { page } from "$app/stores"
   import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import CompanyLogos from "$components/CompanyLogos.svelte"
@@ -10,7 +10,7 @@
   let { title, desc, children } = $props()
   async function fetchStats() {
     if (!browser) return
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/stats.json`)
+    const response = await fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/stats.json`)
     return await response.json()
   }
 </script>
@@ -18,7 +18,7 @@
 <SEO
   {title}
   {desc}
-  img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
+  img={`https://img.duskmoonui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
 />
 <div class="mx-auto max-w-4xl px-4 py-20">
   <div

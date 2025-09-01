@@ -416,7 +416,7 @@
               loading="lazy"
               width="54"
               height="54"
-              src="https://img.daisyui.com/images/profile/people/pouya-saadeghi.webp"
+              src="https://img.duskmoonui.com/images/profile/people/pouya-saadeghi.webp"
               alt="Pouya Saadeghi"
               class="mask mask-squircle"
             />

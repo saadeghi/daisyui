@@ -74,7 +74,7 @@ classnames:
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-bubble">It was said that you would, destroy the Sith, not join them.</div>
@@ -82,7 +82,7 @@ classnames:
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-bubble">It was you who would bring balance to the Force</div>
@@ -90,7 +90,7 @@ classnames:
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-bubble">Not leave it in Darkness</div>
@@ -103,7 +103,7 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+        src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp"
       />
     </div>
   </div>
@@ -114,7 +114,7 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+        src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp"
       />
     </div>
   </div>
@@ -125,7 +125,7 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+        src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp"
       />
     </div>
   </div>
@@ -139,7 +139,7 @@ classnames:
   <div class="chat chat-start">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp" />
       </div>
     </div>
     <div class="chat-header">
@@ -154,7 +154,7 @@ classnames:
   <div class="chat chat-end">
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">
-        <img alt="Tailwind CSS chat bubble component" src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp" />
+        <img alt="Tailwind CSS chat bubble component" src="https://img.duskmoonui.com/images/profile/demo/anakeen@192.webp" />
       </div>
     </div>
     <div class="chat-header">
@@ -174,7 +174,7 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/profile/demo/kenobee@192.webp"
+        src="https://img.duskmoonui.com/images/profile/demo/kenobee@192.webp"
       />
     </div>
   </div>
@@ -190,7 +190,7 @@ classnames:
     <div class="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/profile/demo/anakeen@192.webp"
+        src="https://img.duskmoonui.com/images/profile/demo/anakeen@192.webp"
       />
     </div>
   </div>

@@ -316,7 +316,7 @@
       <img
         class="pointer-events-none"
         alt="duskmoonUI store"
-        src="https://img.daisyui.com/images/store/admin-dashboard.webp" />
+        src="https://img.duskmoonui.com/images/store/admin-dashboard.webp" />
     </a>
   </figure>
   <div
@@ -378,7 +378,7 @@
     <img
       class="pointer-events-none"
       alt="duskmoonUI store"
-      src="https://img.daisyui.com/images/store/nexus.webp"
+      src="https://img.duskmoonui.com/images/store/nexus.webp"
     />
   </figure>
   <div class="card-body relative isolate z-3">

@@ -1,10 +1,10 @@
-import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
 import { error } from "@sveltejs/kit"
 import yaml from "js-yaml"
 
 const fetchStoreData = async () => {
   try {
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/store.yaml`)
+    const response = await fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/data/store.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch store data: ${response.status}`)

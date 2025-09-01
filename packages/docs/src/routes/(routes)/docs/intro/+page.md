@@ -10,7 +10,7 @@ desc: What is duskmoonUI and why should you use it?
 <div class="text-center">
   <img
     class="pointer-events-none inline-block align-bottom"
-    src="https://img.daisyui.com/images/duskmoonui/mark-rotating.svg"
+    src="https://img.duskmoonui.com/images/duskmoonui/mark-rotating.svg"
     alt="duskmoonUI logo"
     width="400"
     height="400"

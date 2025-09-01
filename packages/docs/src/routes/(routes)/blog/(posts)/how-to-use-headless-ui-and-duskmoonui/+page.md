@@ -4,7 +4,7 @@ desc: What is Headless UI and why it is suggested to use it with duskmoonUI?
 published: true
 date: 2023-9-28
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/headless-ui.webp
+thumbnail: https://img.duskmoonui.com/images/blog/headless-ui.webp
 tags:
   - Component Libraries
 ---

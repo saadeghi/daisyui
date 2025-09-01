@@ -1,4 +1,4 @@
-import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
 import { error } from "@sveltejs/kit"
 import * as sitemap from "super-sitemap"
 import yaml from "js-yaml"
@@ -7,7 +7,7 @@ export const prerender = true
 
 const fetchProductIds = async () => {
   try {
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/store.yaml`)
+    const response = await fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/data/store.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch store data: ${response.status}`)
@@ -25,7 +25,7 @@ const fetchProductIds = async () => {
 
 const fetchCompareData = async () => {
   try {
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/compare.yaml`)
+    const response = await fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/data/compare.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch compare data: ${response.status}`)

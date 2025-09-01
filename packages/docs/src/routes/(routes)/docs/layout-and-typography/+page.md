@@ -90,7 +90,7 @@ Links are essential for navigation and adding interactivity to your content. Tai
 
 Images are a great way to enhance your content visually. The Typography plugin makes sure they are displayed beautifully.
 
-![Daisy flowers](https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp)
+![Daisy flowers](https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp)
 
 ## Code: Showcasing Your Work
 

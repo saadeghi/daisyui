@@ -4,7 +4,7 @@ desc: '"Are we going full circle?" This is one of the questions I get asked abou
 published: true
 date: 2025-08-18
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/ouroboros.webp
+thumbnail: https://img.duskmoonui.com/images/blog/ouroboros.webp
 tags:
   - Reviews
 ---
@@ -120,11 +120,11 @@ This is why you can write `btn bg-red-500 px-8` and everything works perfectly. 
 
 ❌ Instead of thinking about this as going full circle like this
 
-![Full Circle](https://img.daisyui.com/images/blog/full-circle.webp)
+![Full Circle](https://img.duskmoonui.com/images/blog/full-circle.webp)
 
 ✅ It's better to see it as a spectrum like this
 
-![Full spectrum](https://img.daisyui.com/images/blog/spectrum.webp)
+![Full spectrum](https://img.duskmoonui.com/images/blog/spectrum.webp)
 
 where you can get the benefits of both approaches:
 

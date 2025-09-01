@@ -1,5 +1,5 @@
 <script>
-  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+  import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
   import SEO from "$components/SEO.svelte"
   import StoreProduct from "$components/StoreProduct.svelte"
   import Countdown from "svelte-countdown"
@@ -153,8 +153,8 @@
   const fetchDiscount = (async () => {
     // Fetch both discount types
     const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_shorttime.json`),
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_special.json`),
+      fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/api/discount_shorttime.json`),
+      fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/api/discount_special.json`),
     ])
 
     // Parse the JSON responses
@@ -580,7 +580,7 @@
               <div class="tooltip" data-tip={data.tech[tech]}>
                 <img
                   class="size-6 lg:size-8"
-                  src={`https://img.daisyui.com/images/logos/${tech}.svg`}
+                  src={`https://img.duskmoonui.com/images/logos/${tech}.svg`}
                   alt={tech}
                 />
               </div>

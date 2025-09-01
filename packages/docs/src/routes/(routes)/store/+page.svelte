@@ -1,5 +1,5 @@
 <script>
-  import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+  import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
   import { onMount } from "svelte"
   import SEO from "$components/SEO.svelte"
   import StoreProduct from "$components/StoreProduct.svelte"
@@ -25,8 +25,8 @@
   const fetchDiscount = (async () => {
     // Fetch both discount types
     const [shorttimeDiscountResponse, specialDiscountResponse] = await Promise.all([
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_shorttime.json`),
-      fetch(`${PUBLIC_DAISYUI_API_PATH}/api/discount_special.json`),
+      fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/api/discount_shorttime.json`),
+      fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/api/discount_special.json`),
     ])
 
     // Parse the JSON responses
@@ -111,7 +111,7 @@
 <SEO
   title="Official duskmoonUI Store"
   desc="duskmoonUI Store - Professional templates made by duskmoonUI"
-  img="https://img.daisyui.com/images/store.webp"
+  img="https://img.duskmoonui.com/images/store.webp"
 />
 <div class="mx-4 flex flex-col justify-between gap-6 lg:flex-row">
   <div class="flex flex-col gap-2">

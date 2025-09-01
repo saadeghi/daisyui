@@ -4,7 +4,7 @@ desc: "Finally we have a Discord server for duskmoonUI!"
 published: true
 date: 2024-02-07
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/duskmoonui-discord.webp
+thumbnail: https://img.duskmoonui.com/images/blog/duskmoonui-discord.webp
 tags:
   - News
 ---

@@ -4,7 +4,7 @@ desc: Wrapping up 2024. Exciting things are coming in 2025!
 published: true
 date: 2024-12-30
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/blog/2024-wrapped-star-history.webp
+thumbnail: https://img.duskmoonui.com/images/blog/2024-wrapped-star-history.webp
 tags:
   - News
 ---
@@ -22,7 +22,7 @@ duskmoonUI started as a side project, a small collection of Tailwind CSS compone
 - GitHub repository grew from `27,000` to `34,000` stars in the past year, placing it among GitHub's top 400 repositories worldwide!
 - duskmoonUI NPM package was downloaded `13 million` times this year, 2x more than last year!
 
-![duskmoonUI NPM downloads](https://img.daisyui.com/images/blog/2024-wrapped-npm-weekly.webp)
+![duskmoonUI NPM downloads](https://img.duskmoonui.com/images/blog/2024-wrapped-npm-weekly.webp)
 
 ## Official duskmoonUI Figma Library
 
@@ -34,7 +34,7 @@ We know maintaining and updating a Figma library is a lot of work, so we decided
 
 Get the official duskmoonUI Figma Library from [duskmoonUI Store](/store/)
 
-[![duskmoonUI Figma Library](https://img.daisyui.com/images/blog/2024-wrapped-figma.webp)](/store/)
+[![duskmoonUI Figma Library](https://img.duskmoonui.com/images/blog/2024-wrapped-figma.webp)](/store/)
 
 ## New templates added
 
@@ -53,7 +53,7 @@ No developer wants unexpected visual changes after a dependency update. In 2024,
 
 The duskmoonUI Discord server was launched in 2024 to provide a place for the community to ask questions, share their projects, and get help from other developers. The server has grown to `3800` members. [Join us!](https://duskmoonui.com/discord/)
 
-[![duskmoonUI Discord server](https://img.daisyui.com/images/blog/2024-wrapped-discord.webp)](https://duskmoonui.com/discord/)
+[![duskmoonUI Discord server](https://img.duskmoonui.com/images/blog/2024-wrapped-discord.webp)](https://duskmoonui.com/discord/)
 
 ## Thank you duskmoonUI contributors 💚
 
@@ -76,7 +76,7 @@ Beta version is available for testing on [v5.duskmoonui.com](https://v5.duskmoon
 
 Join our [Discord server](https://duskmoonui.com/discord/) to get the latest news and updates about duskmoonUI 5 release date
 
-[![duskmoonUI 5 Beta](https://img.daisyui.com/images/blog/duskmoonui-in-lab.webp)](https://v5.duskmoonui.com/docs/v5/)
+[![duskmoonUI 5 Beta](https://img.duskmoonui.com/images/blog/duskmoonui-in-lab.webp)](https://v5.duskmoonui.com/docs/v5/)
 
 ## Happy new year! 🎉
 

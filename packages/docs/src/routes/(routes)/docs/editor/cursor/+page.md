@@ -9,7 +9,7 @@ desc: Setup Cursor editor to correctly generate duskmoonUI code based on your pr
 
 > To setup Tailwind CSS syntax support and IntelliSense, see [Tailwind CSS docs](https://tailwindcss.com/docs/editor-setup).
 
-## <img src="https://img.daisyui.com/images/logos/cursor.webp" alt="Cursor" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Cursor LLM setup
+## <img src="https://img.duskmoonui.com/images/logos/cursor.webp" alt="Cursor" width="40" height="40" class="inline-block me-2 -mt-1 not-prose"> Cursor LLM setup
 
 [duskmoonui.com/llms.txt](https://duskmoonui.com/llms.txt) file is a compact, text version of duskmoonUI docs to help AI generate accurate duskmoonUI code based on your prompt.
 Here's how to use duskmoonUI llms.txt in Cursor:

@@ -28,10 +28,10 @@ classnames:
 ### ~Diff
 <figure class="diff rounded-field aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img" tabindex="0">
-    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
+    <img alt="daisy" src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
   </div>
   <div class="diff-item-2" role="img">
-    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
+    <img alt="daisy" src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
   <div class="diff-resizer"></div>
 </figure>
@@ -39,12 +39,12 @@ classnames:
 ```html
 <figure class="$$diff aspect-16/9" tabindex="0">
   <div class="$$diff-item-1" role="img" tabindex="0">
-    <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
+    <img alt="daisy" src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
   </div>
   <div class="$$diff-item-2" role="img">
     <img
       alt="daisy"
-      src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
+      src="https://img.duskmoonui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
   </div>
   <div class="$$diff-resizer"></div>
 </figure>

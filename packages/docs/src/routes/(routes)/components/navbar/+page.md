@@ -150,7 +150,7 @@ classnames:
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          <img alt="Tailwind CSS Navbar component" src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul tabindex="0" class="mt-3 z-1 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -179,7 +179,7 @@ classnames:
         <div class="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul
@@ -226,7 +226,7 @@ classnames:
     <div class="dropdown dropdown-end">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          <img alt="Tailwind CSS Navbar component" src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul tabindex="0" class="mt-3 z-1 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -273,7 +273,7 @@ classnames:
         <div class="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src="https://img.duskmoonui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
       <ul

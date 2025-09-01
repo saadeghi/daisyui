@@ -4,7 +4,7 @@ desc: I know how frustrating it’s been for designers to work on a duskmoonUI p
 published: true
 date: 2024-09-19
 author: Pouya Saadeghi
-thumbnail: https://img.daisyui.com/images/store/large/duskmoonui-figma-file/figma-file-properties.webp
+thumbnail: https://img.duskmoonui.com/images/store/large/duskmoonui-figma-file/figma-file-properties.webp
 tags:
   - News
 ---
@@ -39,4 +39,4 @@ The [**Official duskmoonUI Figma Library**](https://duskmoonui.com/store/) makes
 
 Ready to try it? Check out the [**Official duskmoonUI Figma Library**](https://duskmoonui.com/store/) and see how much easier your work can be.
 
-![Official duskmoonUI Figma File](https://img.daisyui.com/images/store/large/duskmoonui-figma-file/features.webp)
+![Official duskmoonUI Figma File](https://img.duskmoonui.com/images/store/large/duskmoonui-figma-file/features.webp)

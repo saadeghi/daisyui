@@ -1,9 +1,9 @@
-import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
 import yaml from "js-yaml"
 
 async function fetchFrameworksData() {
   try {
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/frameworks.yaml`)
+    const response = await fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/data/frameworks.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.status}`)
@@ -19,7 +19,7 @@ async function fetchFrameworksData() {
 
 export async function load() {
   const frameworksData = await fetchFrameworksData()
-  const testimonialsResponse = await fetch("https://img.daisyui.com/generated/testimonials.json")
+  const testimonialsResponse = await fetch("https://img.duskmoonui.com/generated/testimonials.json")
   const testimonials = await testimonialsResponse.json()
 
   return {

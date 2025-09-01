@@ -498,7 +498,7 @@
             <figure class="p-2">
               <img
                 class="rounded-[calc(var(--radius-box)-.5rem)]"
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                src="https://img.duskmoonui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                 alt="Shoes"
               />
             </figure>
@@ -856,7 +856,7 @@
                   <div class="w-8 rounded-full">
                     <img
                       alt="Tailwind CSS chat bubble component"
-                      src="https://img.daisyui.com/images/profile/demo/yellingwoman@94.webp"
+                      src="https://img.duskmoonui.com/images/profile/demo/yellingwoman@94.webp"
                     />
                   </div>
                 </div>
@@ -872,7 +872,7 @@
                   <div class="w-8 rounded-full">
                     <img
                       alt="Tailwind CSS chat bubble component"
-                      src="https://img.daisyui.com/images/profile/demo/yellingwoman@94.webp"
+                      src="https://img.duskmoonui.com/images/profile/demo/yellingwoman@94.webp"
                     />
                   </div>
                 </div>
@@ -885,7 +885,7 @@
                   <div class="w-8 rounded-full">
                     <img
                       alt="Tailwind CSS chat bubble component"
-                      src="https://img.daisyui.com/images/profile/demo/yellingcat@94.webp"
+                      src="https://img.duskmoonui.com/images/profile/demo/yellingcat@94.webp"
                     />
                   </div>
                 </div>

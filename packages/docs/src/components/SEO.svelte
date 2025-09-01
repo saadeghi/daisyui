@@ -6,7 +6,7 @@
   let siteData = {
     title: "Tailwind CSS Components ( version 5 update is here )",
     desc: "Free Tailwind Components",
-    card: "https://img.daisyui.com/images/default.webp",
+    card: "https://img.duskmoonui.com/images/default.webp",
   }
   let { formatTitle = true, title = "", desc = siteData.desc, img = siteData.card } = $props()
 

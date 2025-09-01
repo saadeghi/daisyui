@@ -3,7 +3,7 @@ title: 'Introducing: Documentation template for Astro and duskmoonUI'
 desc: Learn to build professional documentation quickly with the Documentation Template for Astro from duskmoonUI.
 published: true
 date: 2024-09-08
-thumbnail: https://img.daisyui.com/images/blog/docs-template-thumbnail.webp
+thumbnail: https://img.duskmoonui.com/images/blog/docs-template-thumbnail.webp
 author: Abhijeet Biswal
 tags:
   - Templates
@@ -43,7 +43,7 @@ This template comes with a customizable landing page (home page) and a dedicated
 
 ### 1. Customizing the Landing Page
 
-![Docs Home Page](https://img.daisyui.com/images/blog/docs-home-page.webp)
+![Docs Home Page](https://img.duskmoonui.com/images/blog/docs-home-page.webp)
 
 The landing page is the first thing visitors see, so it’s essential to make it visually appealing and informative. Here’s a quick guide on how to customize it:
 
@@ -79,7 +79,7 @@ Modify the imported components (Hero, Features, etc.) to fit your branding and c
 
 ### 2. Customizing the Documentation Page
 
-![Docs Page](https://img.daisyui.com/images/blog/docs-page.webp)
+![Docs Page](https://img.duskmoonui.com/images/blog/docs-page.webp)
 
 Personalizing the documentation page is straightforward. Here’s how you can customize key sections:
 
@@ -203,7 +203,7 @@ Authentication is a crucial aspect of any web application, ensuring that users a
 
 Save the file and run the development server (`npm run dev`) to see your new page in the documentation site.
 
-![Docs markdown sample](https://img.daisyui.com/images/blog/docs-markdown-sample.webp)
+![Docs markdown sample](https://img.duskmoonui.com/images/blog/docs-markdown-sample.webp)
 
 ## 4. How to Build the Template for Production
 

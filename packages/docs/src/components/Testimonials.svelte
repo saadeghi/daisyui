@@ -71,7 +71,7 @@
             >
               <div
                 class="size-12 rounded-full"
-                style={`background-image: url('https://img.daisyui.com/generated/x.webp?${items.generated_at}');
+                style={`background-image: url('https://img.duskmoonui.com/generated/x.webp?${items.generated_at}');
                        background-size: ${spriteMetadata.imagesPerRow * 48}px auto;
                        background-repeat: no-repeat;
                        background-position: ${getBackgroundPosition(testimonial.originalIndex)};`}

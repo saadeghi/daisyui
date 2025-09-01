@@ -131,7 +131,7 @@ No dependencies - 0 kB
 
 </div>
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/nature.webp" alt="duskmoonui-package">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/nature.webp" alt="duskmoonui-package">
 
 ### Smaller size
 
@@ -181,7 +181,7 @@ duskmoonUI 5 CDN file, including all possible class names, is 75% smaller in siz
 
 It is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in duskmoonUI 5. This is the smallest size ever for the duskmoonUI CDN file, including all the possible duskmoonUI components and colors, available for all Tailwind CSS responsive prefixes. This is a CSS file, minified, compressed and cached on CDN.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/duskmoonui-5-cdn-size.webp" alt="duskmoonui 5 cdn size">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-5-cdn-size.webp" alt="duskmoonui 5 cdn size">
 
 ### Improved color variables
 
@@ -253,7 +253,7 @@ We also updated the variable names to be more readable in the output CSS, which 
 - [theme docs](/docs/themes/)
 - [color docs](/docs/colors/)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/edit-duskmoonui-tailwindcss-colors-in-devtools.webp" alt="edit duskmoonui tailwindcss colors in devtools">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/edit-duskmoonui-tailwindcss-colors-in-devtools.webp" alt="edit duskmoonui tailwindcss colors in devtools">
 
 ## 2. Build and integration improvements
 
@@ -299,7 +299,7 @@ All components, all themes, and basically every single part of duskmoonUI librar
 
 Also, with the 75% smaller duskmoonui.css (formerly full.css) CDN file, it is now safe and efficient to use the CDN file in production. The compressed CSS file, is now 34 kB only thanks to native CSS nesting and huge amount of optimizations in duskmoonUI 5.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/cdn-micro-css-files.webp" alt="Tailwind CSS component library duskmoonui CDN file">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/cdn-micro-css-files.webp" alt="Tailwind CSS component library duskmoonui CDN file">
 
 Check out the [CDN docs](/docs/cdn/) to customize the parts of the library you want to include in your project from the CDN.
 
@@ -351,7 +351,7 @@ Not possible
 > Color format flexibility.  
 > [:FF: Skip to the next section](#4-themes-and-styling)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/duskmoonui-theme-generator-effects.webp" alt="duskmoonui 5 noise effect and depth effect">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-theme-generator-effects.webp" alt="duskmoonui 5 noise effect and depth effect">
 
 ### New "Effect" CSS variables
 
@@ -368,7 +368,7 @@ These effects can be enabled or disabled using a CSS variable. Check out the new
 
 All components that previously had `xs`, `sm`, `md`, and `lg` size modifiers now also support a new `xl` size modifier. This gives you more control over the size of components and allows you to create more flexible and responsive designs.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="duskmoonui tailwind xl button">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/xl-button.webp" alt="duskmoonui tailwind xl button">
 
 ### Size scale improvements
 
@@ -393,7 +393,7 @@ The new default size scale is consistent and more visually appealing ...and it's
 | `lg`                  | <span class="text-error">8</span> × 4 = 32px | <span class="text-success">7</span> × 4 = 28px |
 | `xl`                  | -                                            | <span class="text-success">8</span> × 4 = 32px |
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/numbers-not-numbering.webp" alt="Numbers not Numbering">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/numbers-not-numbering.webp" alt="Numbers not Numbering">
 
 ### Size scale customization
 
@@ -413,7 +413,7 @@ Border size of buttons, inputs, tab, et are now customizable globally or per the
 
 See how it works in the new [Theme Generator](/theme-generator/) page.
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/duskmoonui-soft-button-dash-button.webp" alt="duskmoonui 5 soft button and dash button">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-soft-button-dash-button.webp" alt="duskmoonui 5 soft button and dash button">
 
 ### New component styles: "soft" and "dash"
 
@@ -442,7 +442,7 @@ Themes and colors are what makes your website unique. We've made significant imp
 > New Theme Generator to create custom themes.  
 > [:FF: Skip to the next section](#5-new-components)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/duskmoonui-5-new-themes.webp" alt="duskmoonui 5 new tailwind css themes">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-5-new-themes.webp" alt="duskmoonui 5 new tailwind css themes">
 
 ### New themes
 
@@ -456,13 +456,13 @@ duskmoonUI 5 includes 3 new themes:
 
 Most duskmoonUI themes have been adjusted to look better and consistent. color contrast and accessibility got even better and the colors are more harmonious. These changes make the color more visually appealing and easier to read.
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/new-theme-generator.webp" alt="tailwind css color generator">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/new-theme-generator.webp" alt="tailwind css color generator">
 
 ### All-new Theme Generator
 
 Check out the new [Theme Generator](/theme-generator/) page to create your own custom theme. Create, customize or extend themes, or generate stunning new themes using the new duskmoonUI color palette generator algorithm.
 
-[<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/tailwind-css-duskmoonui-theme-generator.webp" alt="tailwind css duskmoonui theme generator">](/theme-generator/)
+[<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/tailwind-css-duskmoonui-theme-generator.webp" alt="tailwind css duskmoonui theme generator">](/theme-generator/)
 
 ## 5. New components
 
@@ -479,7 +479,7 @@ List is is useful for vertical layout to display information in rows. Imagine a 
 
 See [List component docs](/components/list/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/list.webp" alt="duskmoonui tailwind list">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/list.webp" alt="duskmoonui tailwind list">
 
 ### Status
 
@@ -489,7 +489,7 @@ Available in 5 sizes: `xs`, `sm`, `md`, `lg`, and `xl`.
 
 See [Status component docs](/components/status/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/status.webp" alt="duskmoonui tailwind status">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/status.webp" alt="duskmoonui tailwind status">
 
 ### Fieldset
 
@@ -497,7 +497,7 @@ Fieldset is a container for grouping related form elements. It includes fieldset
 
 See [Fieldset component docs](/components/fieldset/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/fieldset.webp" alt="duskmoonui tailwind fieldset">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/fieldset.webp" alt="duskmoonui tailwind fieldset">
 
 ### Label
 
@@ -505,7 +505,7 @@ Label provides a name or title for an input field. Label can be placed before or
 
 See [Label component docs](/components/label/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/label.webp" alt="duskmoonui tailwind label">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/label.webp" alt="duskmoonui tailwind label">
 
 ### Filter
 
@@ -513,7 +513,7 @@ Filter is a group of radio buttons. Choosing one of the options will hide the ot
 
 See [Filter component docs](/components/filter/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/filter.webp" alt="duskmoonui tailwind filter">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/filter.webp" alt="duskmoonui tailwind filter">
 
 ### Calendar
 
@@ -526,7 +526,7 @@ This means you can use any of these libraries the style will be compatible with 
 
 See [Calendar component docs](/components/calendar/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/calendar.webp" alt="duskmoonui tailwind calendar">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/calendar.webp" alt="duskmoonui tailwind calendar">
 
 ### Validator
 
@@ -534,7 +534,7 @@ Validator class changes the color of form elements to `error` or `success` based
 
 See [Validator component docs](/components/validator/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/validator.webp" alt="duskmoonui tailwind validator">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/validator.webp" alt="duskmoonui tailwind validator">
 
 ### Dock
 
@@ -546,7 +546,7 @@ Compatible with safe-area-inset-bottom on mobile devices.
 
 See [Dock component docs](/components/dock/)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/dock.webp" alt="duskmoonui tailwind dock">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/dock.webp" alt="duskmoonui tailwind dock">
 
 ## 6. Major component improvements
 
@@ -606,10 +606,10 @@ These components have been improved to be more visually appealing:
 
 <figure class="diff aspect-[1600/650] border-2 border-gray-200 rounded-box" data-theme="dark" tabindex="0">
   <div class="diff-item-1" role="img">
-    <img class="m-0!" src="https://img.daisyui.com/images/blog/duskmoonui-4-tailwindcss-components.webp" alt="duskmoonUI 4"/>
+    <img class="m-0!" src="https://img.duskmoonui.com/images/blog/duskmoonui-4-tailwindcss-components.webp" alt="duskmoonUI 4"/>
   </div>
   <div class="diff-item-2" role="img" tabindex="0">
-    <img class="m-0!" src="https://img.daisyui.com/images/blog/duskmoonui-5-tailwindcss-components.webp" alt="duskmoonUI 5"/>
+    <img class="m-0!" src="https://img.duskmoonui.com/images/blog/duskmoonui-5-tailwindcss-components.webp" alt="duskmoonUI 5"/>
   </div>
   <div class="diff-resizer"></div>
 </figure>
@@ -651,7 +651,7 @@ Size scale of these components has been improved to be more consistent:
 - **[Tab](/components/tab/)**
 - **[Loading](/components/loading/)**
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/duskmoonui-changelog.webp" alt="duskmoonui changelog">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-changelog.webp" alt="duskmoonui changelog">
 
 ## 9. Detailed Changelog
 
@@ -709,7 +709,7 @@ Summary of changes:
 
 [Read the detailed changelog for each component](/docs/changelog/)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/xl-button.webp" alt="tailwind css duskmoonui xl button">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/xl-button.webp" alt="tailwind css duskmoonui xl button">
 
 ## 11. Breaking changes in design system
 
@@ -978,7 +978,7 @@ If you've been waiting for a specific bug fix, here are the bugs that have been 
 - [#865: Docs Reset theme generator values respectively](https://github.com/duskmoon-dev/duskmoon-ui/issues/865)
 - [#694: Bug: Website theme generator keeps text formatting on paste documentation](https://github.com/duskmoon-dev/duskmoon-ui/issues/694)
 
-<img class="w-lg mx-auto rounded-box" src="https://img.daisyui.com/images/blog/fixed-everything.webp" alt="tailwind css">
+<img class="w-lg mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/fixed-everything.webp" alt="tailwind css">
 
 Please report any new bugs you find to [GitHub issues](https://github.com/duskmoon-dev/duskmoon-ui/issues) 🙏
 
@@ -986,7 +986,7 @@ Please report any new bugs you find to [GitHub issues](https://github.com/duskmo
 
 [⤴️ Go back to the top](#)
 
-<img class="mx-auto rounded-box" src="https://img.daisyui.com/images/blog/duskmoonui-5.webp" alt="tailwind css components">
+<img class="mx-auto rounded-box" src="https://img.duskmoonui.com/images/blog/duskmoonui-5.webp" alt="tailwind css components">
 
 1 - [Tailwind CSS 4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)  
 2 - [duskmoonUI 5 upgrade guide](https://duskmoonui.com/docs/upgrade/)

@@ -1,11 +1,11 @@
-import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
 import { error } from "@sveltejs/kit"
 import { slugify } from "$lib/util"
 
 export async function load({ params }) {
   try {
     // Fetch videos from API endpoint
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/api/youtube.json`)
+    const response = await fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/api/youtube.json`)
     if (!response.ok) {
       throw error(response.status, "Failed to fetch videos")
     }

@@ -1,10 +1,10 @@
-import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
+import { PUBLIC_DUSKMOONUI_API_PATH } from "$env/static/public"
 import yaml from "js-yaml"
 import { error } from "@sveltejs/kit"
 
 async function fetchCompareData() {
   try {
-    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/compare.yaml`)
+    const response = await fetch(`${PUBLIC_DUSKMOONUI_API_PATH}/data/compare.yaml`)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch compare data: ${response.status}`)
