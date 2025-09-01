@@ -51,13 +51,24 @@ test("Validate all CSS files", () => {
       throw error
     }
 
-    const warningsToIgnore = [{ type: "AtRuleInvalid", value: "property" }]
+    const warningsToIgnore = [
+      { type: "AtRuleInvalid", value: "property" },
+      { type: "SelectorError", value: { type: "UnsupportedPseudoElement", value: "picker" } },
+      { type: "SelectorError", value: { type: "UnsupportedPseudoElement", value: "picker-icon" } },
+    ]
 
     const relevantWarnings = result.warnings.filter((warning) => {
-      const shouldIgnore = warningsToIgnore.some(
-        (rule) => rule.type === warning.type && rule.value === warning.value,
-      )
-      return !shouldIgnore
+      return !warningsToIgnore.some((rule) => {
+        // Deep compare for nested value objects
+        if (typeof rule.value === "object" && typeof warning.value === "object") {
+          return (
+            rule.type === warning.type &&
+            rule.value.type === warning.value.type &&
+            rule.value.value === warning.value.value
+          )
+        }
+        return rule.type === warning.type && rule.value === warning.value
+      })
     })
 
     // Log remaining warnings if there are any

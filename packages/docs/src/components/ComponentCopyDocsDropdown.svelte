@@ -25,7 +25,7 @@
   <button
     class="btn join-item btn-sm lg:min-w-28"
     aria-label="Copy markdown to clipboard"
-    on:click={copyMarkdownFromUrl}
+    onclick={copyMarkdownFromUrl}
   >
     {#if clipboardState === "done"}
       <svg class="size-3.5 stroke-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@
       <li>
         <a
           class="group"
-          href={`https://chat.openai.com/?hints=search&q=I+am+using+daisyUI+5.%0ARead+this+doc+so+I+can+ask+questions+about+it.%0A%0A${encodeURIComponent(markdownUrl)}%0A`}
+          href={`https://chat.openai.com/?hints=search&q=I%20am%20using%20daisyUI%205.%0ARead%20this%20doc%20so%20I%20can%20ask%20questions%20about%20it.%0A%0A${encodeURIComponent(markdownUrl)}%0A`}
           target="_blank"
           rel="noopener noreferrer"
         >

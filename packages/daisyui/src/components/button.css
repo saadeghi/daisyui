@@ -46,7 +46,8 @@
     }
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &:has(:focus-visible) {
     outline-width: 2px;
     outline-style: solid;
     isolation: isolate;

@@ -66,6 +66,41 @@
   &:has(> select[disabled]) > select[disabled] {
     @apply cursor-not-allowed;
   }
+  appearance: base-select;
+  &::picker(select) {
+    color: inherit;
+    appearance: base-select;
+    max-height: 80dvh;
+    border: var(--border) solid var(--color-base-200);
+    @apply rounded-box my-2 p-2;
+    background-color: inherit;
+    box-shadow: 0 2px calc(var(--depth) * 3px) -2px oklch(0% 0 0/0.2);
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
+      0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
+  }
+  &::picker-icon {
+    @apply hidden;
+  }
+  /* option::checkmark {
+    @apply hidden;
+  } */
+  option {
+    @apply rounded-field px-3 py-1.5;
+    transition-property: color, background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    &:not(:disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply bg-base-content/10 cursor-pointer outline-hidden;
+      }
+      &:active {
+        @apply bg-neutral text-neutral-content;
+        box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
+      }
+    }
+  }
 }
 
 .select-ghost {
@@ -149,24 +184,39 @@
 .select-xs {
   --size: calc(var(--size-field, 0.25rem) * 6);
   font-size: 0.6875rem;
+  option {
+    @apply px-2 py-1;
+  }
 }
 
 .select-sm {
   --size: calc(var(--size-field, 0.25rem) * 8);
   font-size: 0.75rem;
+  option {
+    @apply px-2.5 py-1;
+  }
 }
 
 .select-md {
   --size: calc(var(--size-field, 0.25rem) * 10);
   font-size: 0.875rem;
+  option {
+    @apply px-3 py-1.5;
+  }
 }
 
 .select-lg {
   --size: calc(var(--size-field, 0.25rem) * 12);
   font-size: 1.125rem;
+  option {
+    @apply px-4 py-1.5;
+  }
 }
 
 .select-xl {
   --size: calc(var(--size-field, 0.25rem) * 14);
   font-size: 1.375rem;
+  option {
+    @apply px-5 py-1.5;
+  }
 }

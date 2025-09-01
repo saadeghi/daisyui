@@ -164,7 +164,7 @@
               </button>
             </div>
 
-            <a
+            <!-- <a
               href="https://www.youtube.com/watch?v=bYznFmzL820"
               target="_blank"
               rel="nofollow"
@@ -178,7 +178,7 @@
                 alt="daisyUI 5"
               />
               Watch <br />daisyUI 5.0 intro
-            </a>
+            </a> -->
 
             <!-- {#if daisyui5progress}
               <div class="flex gap-2 grow w-full max-w-48 max-lg:my-4 sm:max-w-sm">

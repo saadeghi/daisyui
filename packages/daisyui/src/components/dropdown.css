@@ -18,11 +18,13 @@
   &[popover],
   .dropdown-content {
     z-index: 999;
-    animation: dropdown 0.2s;
-    transition-property: opacity, scale, display;
-    transition-behavior: allow-discrete;
-    transition-duration: 0.2s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media (prefers-reduced-motion: no-preference) {
+      animation: dropdown 0.2s;
+      transition-property: opacity, scale, display;
+      transition-behavior: allow-discrete;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
   @starting-style {
     &[popover],

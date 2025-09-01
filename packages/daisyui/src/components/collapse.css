@@ -9,8 +9,10 @@
   border-radius: var(--radius-box, 1rem);
   width: 100%;
   grid-template-rows: max-content 0fr;
-  transition: grid-template-rows 0.2s;
   isolation: isolate;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: grid-template-rows 0.2s;
+  }
 
   > input:is([type="checkbox"], [type="radio"]) {
     grid-column-start: 1;
@@ -54,15 +56,19 @@
   &:not(.collapse-close)
     > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
     padding-bottom: 1rem;
-    transition:
-      padding 0.2s ease-out,
-      background-color 0.2s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        padding 0.2s ease-out,
+        background-color 0.2s ease-out;
+    }
   }
 
   &:is([open]) {
     &.collapse-arrow {
       > .collapse-title:after {
-        transform: translateY(-50%) rotate(225deg);
+        @media (prefers-reduced-motion: no-preference) {
+          transform: translateY(-50%) rotate(225deg);
+        }
       }
     }
   }
@@ -70,7 +76,9 @@
   &.collapse-open {
     &.collapse-arrow {
       > .collapse-title:after {
-        transform: translateY(-50%) rotate(225deg);
+        @media (prefers-reduced-motion: no-preference) {
+          transform: translateY(-50%) rotate(225deg);
+        }
       }
     }
   }
@@ -139,10 +147,12 @@
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: unset;
-  transition:
-    visibility 0.2s,
-    padding 0.2s ease-out,
-    background-color 0.2s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      visibility 0.2s,
+      padding 0.2s ease-out,
+      background-color 0.2s ease-out;
+  }
 }
 
 .collapse:is(details) {
@@ -169,9 +179,11 @@
     height: 0.5rem;
     width: 0.5rem;
     transform: translateY(-100%) rotate(45deg);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 0.2s;
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.2s;
+    }
     top: 1.9rem;
     inset-inline-end: 1.4rem;
     content: "";
@@ -187,9 +199,11 @@
     display: block;
     height: 0.5rem;
     width: 0.5rem;
-    transition-property: all;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media (prefers-reduced-motion: no-preference) {
+      transition-property: all;
+      transition-duration: 300ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
     top: 0.9rem;
     inset-inline-end: 1.4rem;
     content: "+";
@@ -214,8 +228,10 @@
     visibility: visible;
     min-height: fit-content;
     padding-bottom: 1rem;
-    transition:
-      padding 0.2s ease-out,
-      background-color 0.2s ease-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        padding 0.2s ease-out,
+        background-color 0.2s ease-out;
+    }
   }
 }
