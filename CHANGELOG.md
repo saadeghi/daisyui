@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.5 (2025-09-02)
+
+
+### Bug Fixes
+
+* checkbox background color ([fd938ab](https://github.com/saadeghi/daisyui/commit/fd938abb3da1ef42fb3290d9db64ad61b95a430f))
+
 ## 5.1.4 (2025-09-02)
 
 
