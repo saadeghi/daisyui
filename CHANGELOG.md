@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.6 (2025-09-02)
+
+
+### Bug Fixes
+
+* nested select height. closes: [#4087](https://github.com/saadeghi/daisyui/issues/4087) ([4498a5f](https://github.com/saadeghi/daisyui/commit/4498a5f28b486dd70dc8b5b27d5c9e66270f0b13))
+
 ## 5.1.5 (2025-09-02)
 
 
