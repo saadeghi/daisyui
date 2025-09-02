@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.4 (2025-09-02)
+
+
+### Bug Fixes
+
+* improve base-select optgroup style. closes: [#4083](https://github.com/saadeghi/daisyui/issues/4083) ([059f64e](https://github.com/saadeghi/daisyui/commit/059f64ec590108e773de816a635d2b346f92dfa3))
+
 ## 5.1.3 (2025-09-01)
 
 
