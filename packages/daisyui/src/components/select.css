@@ -33,7 +33,8 @@
   }
   select {
     @apply -ms-4 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-4 pe-7;
-    /* height: calc(100% - 2px); */
+    height: calc(100% - calc(var(--border) * 2));
+    align-items: center;
     background: inherit;
     border-radius: inherit;
     border-style: none;
