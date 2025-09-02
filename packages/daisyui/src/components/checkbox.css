@@ -37,7 +37,7 @@
 
   &:checked,
   &[aria-checked="true"] {
-    background-color: var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
+    background-color: var(--input-color, #0000);
     box-shadow:
       0 0 #0000 inset,
       0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
