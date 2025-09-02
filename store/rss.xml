@@ -15,12 +15,39 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
       <![CDATA[ Professional templates made by daisyUI ]]>
     </description>
     <link>https://daisyui.com/store//</link>
-    <lastBuildDate>Tue, 02 Sep 2025 12:05:27 GMT</lastBuildDate>
-    <pubDate>Tue, 02 Sep 2025 12:05:27 GMT</pubDate>
+    <lastBuildDate>Tue, 02 Sep 2025 12:20:32 GMT</lastBuildDate>
+    <pubDate>Tue, 02 Sep 2025 12:20:32 GMT</pubDate>
     <language>en-us</language>
     <atom:link href="https://daisyui.com/store//rss.xml" rel="self" type="application/rss+xml"/>
 
     
+        <item>
+          <title>
+            <![CDATA[ Blog template 2.0 ]]>
+          </title>
+          <description>
+            <![CDATA[ Fully working multi page blog template made with daisyUI
+
+Available for Astro and Next.js
+
+Features:
+  - Made with Markdown, Tailwind CSS and daisyUI
+  - Layout options for personal blog and company blog
+  - SEO friendly, Lightweight and fast
+  - Dark mode and Light mode
+
+
+Including:
+  - Homepage (with two layout options)
+  - About page
+  - Article page
+  - Articles archive with pagination (with two layout options) ]]>
+          </description>
+          <link>https://daisyui.lemonsqueezy.com/checkout/buy/6f22ce51-2e2d-4d5f-b1ef-051df09ce6ff/</link>
+          <pubDate>Wed, 06 Mar 2024 05:42:04 GMT</pubDate>
+          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/6f22ce51-2e2d-4d5f-b1ef-051df09ce6ff/</guid>
+        </item>
+      
         <item>
           <title>
             <![CDATA[ Official daisyUI Figma Library ]]>
@@ -222,33 +249,6 @@ Including:
           <link>https://www.creem.io/payment/prod_4bRdZVMQb6QfydHMXMBjG5/</link>
           <pubDate>Sat, 23 Dec 2023 11:26:42 GMT</pubDate>
           <guid isPermaLink="false">https://www.creem.io/payment/prod_4bRdZVMQb6QfydHMXMBjG5/</guid>
-        </item>
-      
-        <item>
-          <title>
-            <![CDATA[ Blog template 2.0 ]]>
-          </title>
-          <description>
-            <![CDATA[ Fully working multi page blog template made with daisyUI
-
-Available for Astro and Next.js
-
-Features:
-  - Made with Markdown, Tailwind CSS and daisyUI
-  - Layout options for personal blog and company blog
-  - SEO friendly, Lightweight and fast
-  - Dark mode and Light mode
-
-
-Including:
-  - Homepage (with two layout options)
-  - About page
-  - Article page
-  - Articles archive with pagination (with two layout options) ]]>
-          </description>
-          <link>https://daisyui.lemonsqueezy.com/checkout/buy/6f22ce51-2e2d-4d5f-b1ef-051df09ce6ff/</link>
-          <pubDate>Wed, 06 Mar 2024 05:42:04 GMT</pubDate>
-          <guid isPermaLink="false">https://daisyui.lemonsqueezy.com/checkout/buy/6f22ce51-2e2d-4d5f-b1ef-051df09ce6ff/</guid>
         </item>
       
         <item>
