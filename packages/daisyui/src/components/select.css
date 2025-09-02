@@ -76,7 +76,7 @@
         appearance: base-select;
       }
       color: inherit;
-      max-height: 80dvh;
+      max-height: 70dvh;
       border: var(--border) solid var(--color-base-200);
       @apply rounded-box my-2 p-2;
       background-color: inherit;
@@ -91,6 +91,14 @@
     /* option::checkmark {
     @apply hidden;
   } */
+    optgroup {
+      @apply pt-[0.5em];
+      option {
+        &:nth-child(1) {
+          @apply mt-[0.5em];
+        }
+      }
+    }
     option {
       @apply rounded-field px-3 py-1.5;
       transition-property: color, background-color;
