@@ -228,7 +228,9 @@ classnames:
   <div tabindex="0" role="button" class="$$btn $$btn-lg $$btn-circle $$btn-info">F</div>
 
   <!-- close button should not be focusable so it can close the FAB when clicked. It's just a visual placeholder -->
-  <div class=$$fab-close">Close <span class="$$btn $$btn-circle $$btn-lg $$btn-error">✕</span></div>
+  <div class="$$fab-close">
+    Close <span class="$$btn $$btn-circle $$btn-lg $$btn-error">✕</span>
+  </div>
 
   <!-- buttons that show up when FAB is open -->
   <div>Label A <button class="$$btn $$btn-lg $$btn-circle">A</button></div>
