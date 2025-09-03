@@ -64,7 +64,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
   </div>
-  <div class="drawer-side z-99">
+  <div class="drawer-side z-1002">
     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><button>Sidebar Item 1</button></li>
@@ -114,7 +114,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     </div>
     <div class="flex justify-center items-center grow">Content</div>
   </div>
-  <div class="drawer-side z-99">
+  <div class="drawer-side z-1002">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="p-4 menu w-60 md:w-80 min-h-full bg-base-200">
       <li><button>Sidebar Item 1</button></li>
@@ -178,7 +178,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   </div>
-  <div class="drawer-side max-lg:z-99">
+  <div class="drawer-side max-lg:z-1002">
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><button>Sidebar Item 1</button></li>
@@ -214,7 +214,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="flex flex-col items-center justify-center drawer-content">
     <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
   </div>
-  <div class="drawer-side z-99">
+  <div class="drawer-side z-1002">
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
       <li><button>Sidebar Item 1</button></li>
