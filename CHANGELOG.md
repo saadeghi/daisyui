@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.7 (2025-09-04)
+
+
+### Bug Fixes
+
+* base-select style in CDN file. closes: [#4095](https://github.com/saadeghi/daisyui/issues/4095) ([40f59aa](https://github.com/saadeghi/daisyui/commit/40f59aaf26dc97d1aed6ee1c28cb0b02de6bf704))
+
 ## 5.1.6 (2025-09-02)
 
 
