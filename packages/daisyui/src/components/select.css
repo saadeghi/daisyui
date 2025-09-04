@@ -73,9 +73,6 @@
       appearance: base-select;
     }
     &::picker(select) {
-      @supports (appearance: base-select) {
-        appearance: base-select;
-      }
       color: inherit;
       max-height: 70dvh;
       border: var(--border) solid var(--color-base-200);
@@ -85,6 +82,11 @@
       box-shadow:
         0 20px 25px -5px rgb(0 0 0 / calc(var(--depth) * 0.1)),
         0 8px 10px -6px rgb(0 0 0 / calc(var(--depth) * 0.1));
+    }
+    @supports (appearance: base-select) {
+      &::picker(select) {
+        appearance: base-select;
+      }
     }
     &::picker-icon {
       @apply hidden;
