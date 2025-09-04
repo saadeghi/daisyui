@@ -27,7 +27,7 @@ classnames:
 #### Click or focus the A button in the corner
 
 <div class="h-42">
-  <div class="fab absolute">
+  <div class="fab absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">F</div>
     <button class="btn btn-lg btn-circle">A</button>
     <button class="btn btn-lg btn-circle">B</button>
@@ -56,7 +56,7 @@ classnames:
 ### ~FAB and Speed Dial with SVG icons
 
 <div class="h-42">
-  <div class="fab absolute">
+  <div class="fab absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-secondary">
       <svg aria-label="New" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -163,7 +163,7 @@ classnames:
 #### Text labels for each button
 
 <div class="h-42">
-  <div class="fab absolute">
+  <div class="fab absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-success">F</div>
     <div>Label B <button class="btn btn-lg btn-circle">A</button></div>
     <div>Label C <button class="btn btn-lg btn-circle">B</button></div>
@@ -188,7 +188,7 @@ classnames:
 #### You can remove the btn-circle class if you want normal buttons
 
 <div class="h-42">
-  <div class="fab absolute">
+  <div class="fab absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-success">F</div>
     <button class="btn btn-lg">Button A</button>
     <button class="btn btn-lg">Button B</button>
@@ -213,7 +213,7 @@ classnames:
 #### When FAB is open the original button gets replaced by a Close Button
 
 <div class="h-42">
-  <div class="fab absolute">
+  <div class="fab absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-info">F</div>
     <div class="fab-close">Close <span class="btn btn-circle btn-lg btn-error">✕</span></div>
     <div>Label A <button class="btn btn-lg btn-circle">A</button></div>
@@ -244,7 +244,7 @@ classnames:
 #### When FAB is open the original button gets replaced by a Main Action Button
 
 <div class="h-42">
-  <div class="fab absolute">
+  <div class="fab absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">F</div>
     <div class="fab-main-action">
       Main Action <button class="btn btn-circle btn-secondary btn-lg">M</button>
@@ -277,7 +277,7 @@ classnames:
 #### If you only want one button in the corner of page
 
 <div class="h-42">
-  <div class="fab absolute">
+  <div class="fab absolute z-1">
     <button class="btn btn-lg btn-circle btn-primary">F</button>
   </div>
 </div>
@@ -293,7 +293,7 @@ classnames:
 #### fab-flower modifier class will open the button in a quarter circle instead of a vertical. fab-flower can fit 1 to 4 buttons, not including the original button, the fab-close button or the fab-main-action button.
 
 <div class="h-42">
-  <div class="fab fab-flower absolute">
+  <div class="fab fab-flower absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-success">F</div>
     <button class="fab-main-action btn btn-circle btn-lg">M</button>
     <button class="btn btn-lg btn-circle">A</button>
@@ -322,7 +322,7 @@ classnames:
 ### ~FAB and Flower Speed Dial with SVG icons
 
 <div class="h-42">
-  <div class="fab fab-flower absolute">
+  <div class="fab fab-flower absolute z-1">
     <div tabindex="0" role="button" class="btn btn-circle btn-lg">
       <svg       aria-label="New" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-6">
         <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
@@ -459,7 +459,7 @@ classnames:
 #### There's no space for a text label in a quarter circle, so tooltips are used to indicate the button's function
 
 <div class="h-48">
-  <div class="fab fab-flower absolute">
+  <div class="fab fab-flower absolute z-1">
     <div tabindex="0" role="button" class="btn btn-lg btn-info btn-circle">F</div>
     <button class="fab-main-action btn btn-circle btn-lg btn-success">M</button>
     <div class="tooltip tooltip-left" data-tip="Label A">
