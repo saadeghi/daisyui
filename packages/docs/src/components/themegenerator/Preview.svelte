@@ -179,8 +179,8 @@
   const colorGroup3 = [
     { name: "Info", class: "bg-info text-info-content", variable: "--color-info" },
     { name: "Success", class: "bg-success text-success-content", variable: "--color-success" },
-    { name: "Warning", class: "bg-warning text-warning-content", variable: "--color-success" },
-    { name: "Error", class: "bg-error text-error-content", variable: "--color-success" },
+    { name: "Warning", class: "bg-warning text-warning-content", variable: "--color-warning" },
+    { name: "Error", class: "bg-error text-error-content", variable: "--color-error" },
   ]
 </script>
 
@@ -1676,7 +1676,7 @@
                 >
                   {color.name}
                 </div>
-                <div class="truncate font-mono text-[0.625rem] tabular-nums">
+                <div class="font-mono text-[0.625rem] tracking-widest tabular-nums">
                   {currentThemeStyle.currentThemeStyle[color.variable]}
                 </div>
               </div>
@@ -1694,7 +1694,7 @@
                 >
                   {color.name}
                 </div>
-                <div class="truncate font-mono text-[0.625rem] tabular-nums">
+                <div class="font-mono text-[0.625rem] tracking-widest tabular-nums">
                   {currentThemeStyle.currentThemeStyle[color.variable]}
                 </div>
               </div>
