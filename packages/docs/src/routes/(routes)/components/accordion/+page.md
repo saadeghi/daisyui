@@ -39,110 +39,110 @@ classnames:
 
 
 ### ~Accordion using radio inputs
-<div class="collapse bg-base-100 border border-base-300">
+<details class="collapse bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-1" checked="checked" />
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
-<div class="collapse bg-base-100 border border-base-300">
+</details>
+<details class="collapse bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-1" />
-  <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <summary class="collapse-title font-semibold">I forgot my password. What should I do?</summary>
   <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-</div>
-<div class="collapse bg-base-100 border border-base-300">
+</details>
+<details class="collapse bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-1" />
-  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+  <summary class="collapse-title font-semibold">How do I update my profile information?</summary>
   <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-</div>
+</details>
 
 ```html
-<div class="$$collapse bg-base-100 border border-base-300">
+<details class="$$collapse bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-1" checked="checked" />
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
-<div class="$$collapse bg-base-100 border border-base-300">
+</details>
+<details class="$$collapse bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-1" />
-  <div class="$$collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <summary class="$$collapse-title font-semibold">I forgot my password. What should I do?</summary>
   <div class="$$collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-</div>
-<div class="$$collapse bg-base-100 border border-base-300">
+</details>
+<details class="$$collapse bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-1" />
-  <div class="$$collapse-title font-semibold">How do I update my profile information?</div>
+  <summary class="$$collapse-title font-semibold">How do I update my profile information?</summary>
   <div class="$$collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-</div>
+</details>
 ```
 
 
 ### ~Accordion with arrow icon
-<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+<details class="collapse collapse-arrow bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
-<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+</details>
+<details class="collapse collapse-arrow bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-2" />
-  <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <summary class="collapse-title font-semibold">I forgot my password. What should I do?</summary>
   <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-</div>
-<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+</details>
+<details class="collapse collapse-arrow bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-2" />
-  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+  <summary class="collapse-title font-semibold">How do I update my profile information?</summary>
   <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-</div>
+</details>
 
 ```html
-<div class="$$collapse $$collapse-arrow bg-base-100 border border-base-300">
+<details class="$$collapse $$collapse-arrow bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
-<div class="$$collapse $$collapse-arrow bg-base-100 border border-base-300">
+</details>
+<details class="$$collapse $$collapse-arrow bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-2" />
-  <div class="$$collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <summary class="$$collapse-title font-semibold">I forgot my password. What should I do?</summary>
   <div class="$$collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-</div>
-<div class="$$collapse $$collapse-arrow bg-base-100 border border-base-300">
+</details>
+<details class="$$collapse $$collapse-arrow bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-2" />
-  <div class="$$collapse-title font-semibold">How do I update my profile information?</div>
+  <summary class="$$collapse-title font-semibold">How do I update my profile information?</summary>
   <div class="$$collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-</div>
+</details>
 ```
 
 
 ### ~Accordion with plus/minus icon
-<div class="collapse collapse-plus bg-base-100 border border-base-300">
+<details class="collapse collapse-plus bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-3" checked="checked" />
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
-<div class="collapse collapse-plus bg-base-100 border border-base-300">
+</details>
+<details class="collapse collapse-plus bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-3" />
-  <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <summary class="collapse-title font-semibold">I forgot my password. What should I do?</summary>
   <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-</div>
-<div class="collapse collapse-plus bg-base-100 border border-base-300">
+</details>
+<details class="collapse collapse-plus bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-3" />
-  <div class="collapse-title font-semibold">How do I update my profile information?</div>
+  <summary class="collapse-title font-semibold">How do I update my profile information?</summary>
   <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-</div>
+</details>
 
 ```html
-<div class="$$collapse $$collapse-plus bg-base-100 border border-base-300">
+<details class="$$collapse $$collapse-plus bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-3" checked="checked" />
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
-<div class="$$collapse $$collapse-plus bg-base-100 border border-base-300">
+</details>
+<details class="$$collapse $$collapse-plus bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-3" />
-  <div class="$$collapse-title font-semibold">I forgot my password. What should I do?</div>
+  <summary class="$$collapse-title font-semibold">I forgot my password. What should I do?</summary>
   <div class="$$collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-</div>
-<div class="$$collapse $$collapse-plus bg-base-100 border border-base-300">
+</details>
+<details class="$$collapse $$collapse-plus bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-3" />
-  <div class="$$collapse-title font-semibold">How do I update my profile information?</div>
+  <summary class="$$collapse-title font-semibold">How do I update my profile information?</summary>
   <div class="$$collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-</div>
+</details>
 ```
 
 
@@ -150,39 +150,39 @@ classnames:
 #### to join the items together and handle border radius automatically
 
 <div class="join join-vertical bg-base-100">
-  <div class="collapse collapse-arrow join-item border border-base-300">
+  <details class="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" checked="checked" />
-    <div class="collapse-title font-semibold">How do I create an account?</div>
+    <summary class="collapse-title font-semibold">How do I create an account?</summary>
     <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-  </div>
-  <div class="collapse collapse-arrow join-item border border-base-300">
+  </details>
+  <details class="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" />
-    <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+    <summary class="collapse-title font-semibold">I forgot my password. What should I do?</summary>
     <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-  </div>
-  <div class="collapse collapse-arrow join-item border border-base-300">
+  </details>
+  <details class="collapse collapse-arrow join-item border border-base-300">
     <input type="radio" name="my-accordion-4" />
-    <div class="collapse-title font-semibold">How do I update my profile information?</div>
+    <summary class="collapse-title font-semibold">How do I update my profile information?</summary>
     <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-  </div>
+  </details>
 </div>
 
 ```html
 <div class="$$join $$join-vertical bg-base-100">
-  <div class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
+  <details class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
     <input type="radio" name="my-accordion-4" checked="checked" />
-    <div class="$$collapse-title font-semibold">How do I create an account?</div>
+    <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
     <div class="$$collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-  </div>
-  <div class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
+  </details>
+  <details class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
     <input type="radio" name="my-accordion-4" />
-    <div class="$$collapse-title font-semibold">I forgot my password. What should I do?</div>
+    <summary class="$$collapse-title font-semibold">I forgot my password. What should I do?</summary>
     <div class="$$collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-  </div>
-  <div class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
+  </details>
+  <details class="$$collapse $$collapse-arrow $$join-item border-base-300 border">
     <input type="radio" name="my-accordion-4" />
-    <div class="$$collapse-title font-semibold">How do I update my profile information?</div>
+    <summary class="$$collapse-title font-semibold">How do I update my profile information?</summary>
     <div class="$$collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-  </div>
+  </details>
 </div>
 ```

@@ -187,12 +187,12 @@ Accordion is used for showing and hiding content but only one item can stay open
 
 #### Syntax
 ```html
-<div class="collapse {MODIFIER}">{CONTENT}</div>
+<details class="collapse {MODIFIER}">{CONTENT}</details>
 ```
 where content is:
 ```html
 <input type="radio" name="{name}" checked="{checked}" />
-<div class="collapse-title">{title}</div>
+<summary class="collapse-title">{title}</summary>
 <div class="collapse-content">{CONTENT}</div>
 ```
 
@@ -446,10 +446,10 @@ Collapse is used for showing and hiding content
 
 #### Syntax
 ```html
-<div tabindex="0" class="collapse {MODIFIER}">
-  <div class="collapse-title">{title}</div>
+<details tabindex="0" class="collapse {MODIFIER}">
+  <summary class="collapse-title">{title}</summary>
   <div class="collapse-content">{CONTENT}</div>
-</div>
+</details>
 ```
 
 #### Rules

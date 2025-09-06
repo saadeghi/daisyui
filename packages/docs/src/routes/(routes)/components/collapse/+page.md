@@ -36,38 +36,38 @@ classnames:
 
 #### This collapse works with focus. When div loses focus, it gets closed
 
-<div tabindex="0" class="collapse bg-base-100 border border-base-300">
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="collapse bg-base-100 border border-base-300">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div tabindex="0" class="$$collapse bg-base-100 border-base-300 border">
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="$$collapse bg-base-100 border-base-300 border">
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~Collapse with checkbox
 
 #### This collapse works with checkbox instead of focus. It needs to get clicked again to get closed.
 
-<div class="collapse bg-base-100 border border-base-300">
+<details class="collapse bg-base-100 border border-base-300">
   <input type="checkbox" />
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div class="$$collapse bg-base-100 border-base-300 border">
+<details class="$$collapse bg-base-100 border-base-300 border">
   <input type="checkbox" />
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~ Collapse using details and summary tag
@@ -95,131 +95,131 @@ classnames:
 
 ### ~Without border and background color
 
-<div tabindex="0" class="collapse">
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="collapse">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div tabindex="0" class="$$collapse">
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="$$collapse">
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~With arrow icon
 
-<div tabindex="0" class="collapse bg-base-100 border border-base-300 collapse-arrow">
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="collapse bg-base-100 border border-base-300 collapse-arrow">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-arrow bg-base-100 border-base-300 border">
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="$$collapse $$collapse-arrow bg-base-100 border-base-300 border">
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~With arrow plus/minus icon
 
-<div tabindex="0" class="collapse bg-base-100 border border-base-300 collapse-plus">
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="collapse bg-base-100 border border-base-300 collapse-plus">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-plus bg-base-100 border-base-300 border">
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="$$collapse $$collapse-plus bg-base-100 border-base-300 border">
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~Force open
 
-<div tabindex="0" class="collapse collapse-open bg-base-100 border border-base-300">
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="collapse collapse-open bg-base-100 border border-base-300">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-open bg-base-100 border-base-300 border">
-  <div class="$$collapse-title font-semibold">I have collapse-open class</div>
+<details tabindex="0" class="$$collapse $$collapse-open bg-base-100 border-base-300 border">
+  <summary class="$$collapse-title font-semibold">I have collapse-open class</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~Force close
 
-<div tabindex="0" class="collapse collapse-close bg-base-100 border border-base-300">
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="collapse collapse-close bg-base-100 border border-base-300">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div tabindex="0" class="$$collapse $$collapse-close bg-base-100 border-base-300 border">
-  <div class="$$collapse-title font-semibold">I have collapse-open class</div>
+<details tabindex="0" class="$$collapse $$collapse-close bg-base-100 border-base-300 border">
+  <summary class="$$collapse-title font-semibold">I have collapse-open class</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~Custom colors for collapse that works with focus
 
 #### Use Tailwind CSS `group` and `group-focus` utilities to apply style when parent div is focused
 
-<div tabindex="0" class="collapse bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content">
-  <div class="collapse-title font-semibold">How do I create an account?</div>
+<details tabindex="0" class="collapse bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content">
+  <summary class="collapse-title font-semibold">How do I create an account?</summary>
   <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-</div>
+</details>
 
 ```html
-<div
+<details
   tabindex="0"
   class="bg-primary text-primary-content focus:bg-secondary focus:text-secondary-content $$collapse"
 >
-  <div class="$$collapse-title font-semibold">How do I create an account?</div>
+  <summary class="$$collapse-title font-semibold">How do I create an account?</summary>
   <div class="$$collapse-content text-sm">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
 
 ### ~Custom colors for collapse that works with checkbox
 
 #### Use Tailwind CSS `peer` and `peer-checked` utilities to apply style when sibling checkbox is checked
 
-<div class="collapse bg-base-100 border border-base-300">
+<details class="collapse bg-base-100 border border-base-300">
   <input type="checkbox" class="peer" />
-  <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+  <summary class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     How do I create an account?
-  </div>
+  </summary>
   <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 
 ```html
-<div class="bg-base-100 border-base-300 $$collapse border">
+<details class="bg-base-100 border-base-300 $$collapse border">
   <input type="checkbox" class="peer" />
-  <div
+  <summary
     class="$$collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"
   >
     How do I create an account?
-  </div>
+  </summary>
   <div
     class="$$collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"
   >
     Click the "Sign Up" button in the top right corner and follow the registration process.
   </div>
-</div>
+</details>
 ```
