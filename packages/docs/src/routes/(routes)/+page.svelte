@@ -227,13 +227,29 @@
               class="inline-flex w-full animate-[reveal-slow_0.5s] flex-col items-stretch justify-center gap-2 px-4 md:flex-row xl:justify-start xl:px-0"
             >
               <!-- <a
-                data-sveltekit-preload-data
-                href="/components/"
-                class="btn md:btn-lg grow rounded-full px-12">
-                <span class="hidden sm:inline">{$t("cta-1")}</span>
-                <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
+                class="btn md:btn-lg rounded-full"
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/saadeghi/daisyui"
+              >
+                <svg class="h-5 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <path
+                    fill="currentColor"
+                    d="M16,2.345c7.735,0,14,6.265,14,14-.002,6.015-3.839,11.359-9.537,13.282-.7,.14-.963-.298-.963-.665,0-.473,.018-1.978,.018-3.85,0-1.312-.437-2.152-.945-2.59,3.115-.35,6.388-1.54,6.388-6.912,0-1.54-.543-2.783-1.435-3.762,.14-.35,.63-1.785-.14-3.71,0,0-1.173-.385-3.85,1.435-1.12-.315-2.31-.472-3.5-.472s-2.38,.157-3.5,.472c-2.677-1.802-3.85-1.435-3.85-1.435-.77,1.925-.28,3.36-.14,3.71-.892,.98-1.435,2.24-1.435,3.762,0,5.355,3.255,6.563,6.37,6.913-.403,.35-.77,.963-.893,1.872-.805,.368-2.818,.963-4.077-1.155-.263-.42-1.05-1.452-2.152-1.435-1.173,.018-.472,.665,.017,.927,.595,.332,1.277,1.575,1.435,1.978,.28,.787,1.19,2.293,4.707,1.645,0,1.173,.018,2.275,.018,2.607,0,.368-.263,.787-.963,.665-5.719-1.904-9.576-7.255-9.573-13.283,0-7.735,6.265-14,14-14Z"
+                  >
+                  </path>
+                </svg>
+                GitHub
               </a> -->
               <a
+                data-sveltekit-preload-data
+                href="/components/"
+                class="btn md:btn-lg grow rounded-full px-12"
+              >
+                <span class="hidden sm:inline">{$t("cta-1")}</span>
+                <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
+              </a>
+              <!-- <a
                 href="/discord/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -278,7 +294,7 @@
                     d="M19,14 L19,19 C19,20.1045695 18.1045695,21 17,21 L5,21 C3.8954305,21 3,20.1045695 3,19 L3,7 C3,5.8954305 3.8954305,5 5,5 L10,5 L10,7 L5,7 L5,19 L17,19 L17,14 L19,14 Z M18.9971001,6.41421356 L11.7042068,13.7071068 L10.2899933,12.2928932 L17.5828865,5 L12.9971001,5 L12.9971001,3 L20.9971001,3 L20.9971001,11 L18.9971001,11 L18.9971001,6.41421356 Z"
                   ></path></svg
                 >
-              </a>
+              </a> -->
               <a
                 data-sveltekit-preload-data
                 href="/docs/install/"
