@@ -13,7 +13,13 @@
   import CompanyLogos from "$components/CompanyLogos.svelte"
   import MediaLogos from "$components/MediaLogos.svelte"
   import { t } from "$lib/i18n.svelte.js"
-
+  import minimalAnalytics from "@minimal-analytics/ga4"
+  const { track } = minimalAnalytics
+  $effect(() => {
+    window.minimalAnalytics = {
+      trackingId: "G-10F40JCSMZ",
+    }
+  })
   const { data } = $props()
 
   let stats = $state({})
@@ -158,7 +164,13 @@
             >
               <button
                 class="btn btn-sm cursor-copy rounded-full font-mono font-light"
-                onclick={() => copyText("npm i -D daisyui@latest")}
+                onclick={() => {
+                  copyText("npm i -D daisyui@latest")
+                  track({
+                    type: "landingpage_click",
+                    event: { "ep.button_name": "Hero: Copy to clipboard" },
+                  })
+                }}
               >
                 <pre><code>npm i -D daisyui@latest</code></pre>
               </button>
@@ -245,6 +257,11 @@
                 data-sveltekit-preload-data
                 href="/components/"
                 class="btn md:btn-lg grow rounded-full px-12"
+                onclick={() =>
+                  track({
+                    type: "landingpage_click",
+                    event: { "ep.button_name": "Hero: Components" },
+                  })}
               >
                 <span class="hidden sm:inline">{$t("cta-1")}</span>
                 <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
@@ -299,6 +316,11 @@
                 data-sveltekit-preload-data
                 href="/docs/install/"
                 class="btn btn-neutral md:btn-lg group max-w-86 grow rounded-full px-12"
+                onclick={() =>
+                  track({
+                    type: "landingpage_click",
+                    event: { "ep.button_name": "Hero: How to use" },
+                  })}
               >
                 {$t("cta-2")}
                 <svg
