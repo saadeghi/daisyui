@@ -1,0 +1,1 @@
+import{s as r}from"./1j8-8f4K.js";const e=()=>{const s=r;return{page:{subscribe:s.page.subscribe},navigating:{subscribe:s.navigating.subscribe},updated:s.updated}},a={subscribe(s){return e().page.subscribe(s)}},i={subscribe(s){return e().navigating.subscribe(s)}};export{i as n,a as p};

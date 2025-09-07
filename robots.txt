@@ -1,4 +1,5 @@
 User-agent: AhrefsBot
+User-agent: AhrefsSiteAudit
 Disallow: /resources/
 Disallow: /blog/
 Disallow: /store/
@@ -12,3 +13,5 @@ Disallow: /*?lang=
 
 User-agent: *
 Allow: /
+
+Sitemap: https://daisyui.com/sitemap.xml
