@@ -74,7 +74,7 @@
     }
     &::picker(select) {
       color: inherit;
-      max-height: 70dvh;
+      max-height: min(24rem, 70dvh);
       border: var(--border) solid var(--color-base-200);
       @apply rounded-box my-2 p-2;
       background-color: inherit;
