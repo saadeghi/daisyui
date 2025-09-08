@@ -6,8 +6,16 @@
   import LangChange from "$components/LangChange.svelte"
   import Search from "$components/Search.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
+  import { track } from "$lib/analytics.svelte.js"
 
   import { t } from "$lib/i18n.svelte.js"
+
+  $effect(() => {
+    window.minimalAnalytics = {
+      trackingId: "G-10F40JCSMZ",
+    }
+  })
+
   let {
     pages,
     themes,
@@ -101,6 +109,7 @@
             data-sveltekit-preload-data
             href="/components/"
             class="btn btn-sm btn-ghost drawer-button font-normal"
+            onclick={() => track("Navbar > Components")}
           >
             <svg
               class="size-4"
@@ -147,6 +156,7 @@
             data-sveltekit-preload-data
             href="/store/"
             class="btn btn-sm btn-ghost drawer-button font-normal"
+            onclick={() => track("Navbar > Store")}
           >
             <svg
               class="size-4"

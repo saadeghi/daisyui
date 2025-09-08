@@ -21,7 +21,7 @@
         avatarSize: 64,
       }
     }
-    console.log("Loaded contributors metadata:", contributorSpriteMeta)
+    // console.log("Loaded contributors metadata:", contributorSpriteMeta)
   }
 
   async function fetchSponsors() {
@@ -40,7 +40,7 @@
         avatarSize: 64,
       }
     }
-    console.log("Loaded sponsors:", sponsors.length, sponsorSpriteMeta)
+    // console.log("Loaded sponsors:", sponsors.length, sponsorSpriteMeta)
   }
 
   $effect(() => {

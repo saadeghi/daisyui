@@ -13,13 +13,14 @@
   import CompanyLogos from "$components/CompanyLogos.svelte"
   import MediaLogos from "$components/MediaLogos.svelte"
   import { t } from "$lib/i18n.svelte.js"
-  import minimalAnalytics from "@minimal-analytics/ga4"
-  const { track } = minimalAnalytics
+  import { track } from "$lib/analytics.svelte.js"
+
   $effect(() => {
     window.minimalAnalytics = {
       trackingId: "G-10F40JCSMZ",
     }
   })
+
   const { data } = $props()
 
   let stats = $state({})
@@ -166,10 +167,7 @@
                 class="btn btn-sm cursor-copy rounded-full font-mono font-light"
                 onclick={() => {
                   copyText("npm i -D daisyui@latest")
-                  track({
-                    type: "landingpage_click",
-                    event: { "ep.button_name": "Hero: Copy to clipboard" },
-                  })
+                  track("Homepage > Hero > Copy to clipboard")
                 }}
               >
                 <pre><code>npm i -D daisyui@latest</code></pre>
@@ -257,11 +255,7 @@
                 data-sveltekit-preload-data
                 href="/components/"
                 class="btn md:btn-lg grow rounded-full px-12"
-                onclick={() =>
-                  track({
-                    type: "landingpage_click",
-                    event: { "ep.button_name": "Hero: Components" },
-                  })}
+                onclick={() => track("Homepage > Hero > Components")}
               >
                 <span class="hidden sm:inline">{$t("cta-1")}</span>
                 <span class="inline sm:hidden">{$t("cta-1-mobile")}</span>
@@ -316,11 +310,7 @@
                 data-sveltekit-preload-data
                 href="/docs/install/"
                 class="btn btn-neutral md:btn-lg group max-w-86 grow rounded-full px-12"
-                onclick={() =>
-                  track({
-                    type: "landingpage_click",
-                    event: { "ep.button_name": "Hero: How to use" },
-                  })}
+                onclick={() => track("Homepage > Hero > HowToUse")}
               >
                 {$t("cta-2")}
                 <svg
@@ -1050,7 +1040,12 @@
     </p>
     <div class="h-12"></div>
     <div class="flex w-full justify-center">
-      <a data-sveltekit-preload-data href="/components/" class="btn btn-primary btn-wide">
+      <a
+        data-sveltekit-preload-data
+        href="/components/"
+        class="btn btn-primary btn-wide"
+        onclick={() => track("Homepage > NextLevel > Components")}
+      >
         {$t("all-components-btn")}
       </a>
     </div>
@@ -1154,7 +1149,10 @@
             </svg>
           </div>
           <div class="flex justify-center pt-4 pb-10">
-            <label class="flex cursor-pointer items-center gap-3">
+            <label
+              class="flex cursor-pointer items-center gap-3"
+              onclick={() => track("Homepage > UglyHtml > Toggle")}
+            >
               {$t("Tailwind only")}
               <div class="relative">
                 <input
@@ -1381,7 +1379,12 @@
         </p>
         <div class="h-10"></div>
         <div class="flex w-full justify-center xl:justify-start">
-          <a data-sveltekit-preload-data href="/docs/install/" class="btn btn-lg btn-wide group">
+          <a
+            data-sveltekit-preload-data
+            href="/docs/install/"
+            class="btn btn-lg btn-wide group"
+            onclick={() => track("Homepage > FewerClassNames > HowToInstall")}
+          >
             {$t("Get started")}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1547,7 +1550,12 @@
       </p>
       <div class="h-10"></div>
       <div class="flex w-full justify-center">
-        <a data-sveltekit-preload-data href="/docs/customize/" class="btn btn-lg btn-wide group">
+        <a
+          data-sveltekit-preload-data
+          href="/docs/customize/"
+          class="btn btn-lg btn-wide group"
+          onclick={() => track("Homepage > Customizable > HowToCustomize")}
+        >
           {$t("how-to-customize")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1624,6 +1632,7 @@
           data-sveltekit-preload-data
           href="/docs/install/"
           class="btn btn-lg btn-wide btn-outline group"
+          onclick={() => track("Homepage > PureCSS > HowToInstall")}
         >
           {$t("cta-2")}
           <svg
@@ -1811,13 +1820,19 @@
       </p>
       <div class="h-10"></div>
       <div class="flex w-full flex-col justify-center gap-4 md:flex-row">
-        <a data-sveltekit-preload-data href="/theme-generator/" class="btn">
+        <a
+          data-sveltekit-preload-data
+          href="/theme-generator/"
+          class="btn"
+          onclick={() => track("Homepage > DesignDecisions > ThemesGenerator")}
+        >
           {$t("Theme Generator")}
         </a>
         <a
           data-sveltekit-preload-data
           href="/docs/themes/#how-to-add-custom-styles-for-a-specific-theme"
           class="btn btn-neutral"
+          onclick={() => track("Homepage > DesignDecisions > ThemesGuide")}
         >
           {$t("Learn more about themes")}
         </a>
@@ -1922,6 +1937,7 @@
           data-sveltekit-preload-data
           href="/components/"
           class="btn btn-outline md:btn-wide w-full"
+          onclick={() => track("Homepage > ComponentsStat > Components")}
         >
           {$t("all-components-btn")}
         </a>
@@ -2104,7 +2120,12 @@
       </div>
       <div class="h-16"></div>
       <div class="flex w-full justify-center">
-        <a data-sveltekit-preload-data href="/docs/install/" class="btn btn-primary btn-wide">
+        <a
+          data-sveltekit-preload-data
+          href="/docs/install/"
+          class="btn btn-primary btn-wide"
+          onclick={() => track("Homepage > TrydaisyUI > HowToInstall")}
+        >
           {$t("See all examples")}
         </a>
       </div>
@@ -2164,7 +2185,11 @@
       </h2>
       <div class="mx-auto my-2 w-full max-w-md">
         <Install />
-        <a href="/docs/install/" class="btn-primary btn btn-wide mt-4 mb-20 shadow-lg">
+        <a
+          href="/docs/install/"
+          class="btn-primary btn btn-wide mt-4 mb-20 shadow-lg"
+          onclick={() => track("Homepage > InstalldaisyUILastCall > HowToInstall")}
+        >
           {$t("install-btn")}
         </a>
       </div>
