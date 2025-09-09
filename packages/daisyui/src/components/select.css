@@ -1,6 +1,6 @@
 .select {
   border: var(--border) solid #0000;
-  @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-4 pe-7 align-middle;
+  @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-1.5 ps-3 pe-7 align-middle;
   width: clamp(3rem, 20rem, 100%);
   height: var(--size);
   font-size: 0.875rem;
@@ -32,7 +32,7 @@
       calc(0% + 16px) calc(1px + 50%);
   }
   select {
-    @apply -ms-4 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-4 pe-7;
+    @apply -ms-4 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-3 pe-7;
     height: calc(100% - calc(var(--border) * 2));
     align-items: center;
     background: inherit;
