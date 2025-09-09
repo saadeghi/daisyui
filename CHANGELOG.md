@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.9 (2025-09-09)
+
+
+### Bug Fixes
+
+* select horizontal padding. closes: [#3890](https://github.com/saadeghi/daisyui/issues/3890) ([449378e](https://github.com/saadeghi/daisyui/commit/449378e93adba1fb71aba2c26515f4b9643244f9))
+
 ## 5.1.8 (2025-09-07)
 
 ## 5.1.7 (2025-09-04)
