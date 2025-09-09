@@ -109,4 +109,9 @@ export const articles = [
     site: "Prismic",
     link: "https://prismic.io/blog/tailwind-component-library",
   },
+  {
+    title: "Template design directly in CMS admin panel ( with DaisyUI and TailwindCSS )",
+    site: "LinkedIn",
+    link: "https://www.linkedin.com/pulse/cms-template-redesign-mobile-device-ide21-nebojsa-tomic-edsvf",
+  },
 ]
