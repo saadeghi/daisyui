@@ -1,10 +1,5 @@
 export const articles = [
   {
-    title: "Template design directly in CMS admin panel ( with DaisyUI and TailwindCSS )",
-    site: "LinkedIn",
-    link: "https://www.linkedin.com/pulse/cms-template-redesign-mobile-device-ide21-nebojsa-tomic-edsvf",
-  },
-  {
     title: "Cookie-Based Theme Selection in SvelteKit with daisyUI",
     site: "Scott Spence",
     link: "https://scottspence.com/posts/cookie-based-theme-selection-in-sveltekit-with-daisyui",
@@ -113,5 +108,10 @@ export const articles = [
     title: "9 Best Tailwind Component Libraries and How to Choose One",
     site: "Prismic",
     link: "https://prismic.io/blog/tailwind-component-library",
+  },
+  {
+    title: "Template design directly in CMS admin panel ( with DaisyUI and TailwindCSS )",
+    site: "LinkedIn",
+    link: "https://www.linkedin.com/pulse/cms-template-redesign-mobile-device-ide21-nebojsa-tomic-edsvf",
   },
 ]
