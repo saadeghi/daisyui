@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.10 (2025-09-10)
+
+
+### Bug Fixes
+
+* diff focus and resizer position on Safari. closes: [#4104](https://github.com/saadeghi/daisyui/issues/4104) ([712d0ff](https://github.com/saadeghi/daisyui/commit/712d0ff17975b6ee880cd59d3574f309e8f74c81))
+
 ## 5.1.9 (2025-09-09)
 
 
