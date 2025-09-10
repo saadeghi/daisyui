@@ -42,9 +42,9 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @plugin "daisyui";
 ```
 
-> If you are using VS Code as your editor and you get an error (`Unknown at rule @plugin`), then update your file association for `.css` files.
+> If you are using VS Code as your editor and you get a warning (`Unknown at rule @plugin`), then update your file association for `.css` files.
 >
-> To do so, you have to (1) go to settings, (2) search for 'associations', and (3) under `Files:Associations` add a new entry with item being `*.css` and value being `tailwindcss`. This should remove the error for you.
+> To do so, you have to (1) go to settings, (2) search for 'associations', and (3) under `Files:Associations` add a new entry with item being `*.css` and value being `tailwindcss`. This should remove the warning for you.
 
 Import the CSS file on top of your astro Layout file
 ```js:src/layouts/Layout.astro
