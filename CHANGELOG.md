@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.12 (2025-09-14)
+
+
+### Bug Fixes
+
+* nested select margin (closes: [#4114](https://github.com/saadeghi/daisyui/issues/4114)) ([af7ffbd](https://github.com/saadeghi/daisyui/commit/af7ffbd74ab91d773dcb7ca67453bba63d4a3fa8))
+
 ## 5.1.11 (2025-09-14)
 
 
