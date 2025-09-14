@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.11 (2025-09-14)
+
+
+### Bug Fixes
+
+* --fx-noise SVG scale on Firefox. closes: [#3583](https://github.com/saadeghi/daisyui/issues/3583) ([84df795](https://github.com/saadeghi/daisyui/commit/84df7958bb3c02acec9a13ea240007a5ee199e5f))
+
 ## 5.1.10 (2025-09-10)
 
 
