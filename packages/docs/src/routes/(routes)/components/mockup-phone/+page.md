@@ -19,40 +19,36 @@ classnames:
   import Translate from "$components/Translate.svelte"
 </script>
 
-> :INFO:
->
-> The `mockup-phone` component does not set its own width.
-> You must control the width from the wrapper (e.g., `w-full`, `w-[320px]`, or `max-w-sm`).
-> The component will then maintain the correct `390 / 845` aspect ratio automatically.  
-> This design keeps the component flexible: it adapts to any wrapper width while preserving the phone’s proportions and styling.
-
 ### ~iPhone mockup
-<div class="mockup-phone w-[390px]">
+
+<div class="mockup-phone">
   <div class="mockup-phone-camera"></div>
-  <div class="mockup-phone-display text-white grid place-content-center">It's Glowtime.</div>
+  <div class="mockup-phone-display text-white bg-neutral-900 grid place-content-center">It's Glowtime.</div>
 </div>
 
 ```html
-<div class="$$mockup-phone w-[390px]">
+<div class="$$mockup-phone">
   <div class="$$mockup-phone-camera"></div>
-  <div class="$$mockup-phone-display text-white grid place-content-center">It's Glowtime.</div>
+  <div class="$$mockup-phone-display text-whi0e grid place-content-center bg-neutral-900">
+    It's Glowtime.
+  </div>
 </div>
 ```
 
-
 ### ~With color and wallpaper
-<div class="mockup-phone border-primary w-[390px]">
+
+<div class="mockup-phone border-[#ff8938]">
   <div class="mockup-phone-camera"></div>
   <div class="mockup-phone-display">
-    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp"/>
+    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp?1"/>
   </div>
 </div>
 
 ```html
-<div class="$$mockup-phone border-primary w-[390px]">
+<div class="$$mockup-phone border-[#ff8938]">
   <div class="$$mockup-phone-camera"></div>
   <div class="$$mockup-phone-display">
-    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp"/>
+    <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp" />
   </div>
 </div>
 ```
