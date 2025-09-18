@@ -473,3 +473,30 @@ classnames:
   <option>You can't touch this</option>
 </select>
 ```
+
+### ~AppearanceNone uses OS Native picker
+
+<select class="select appearance-none">
+  <option disabled selected>Pick a color</option>
+  <option>Crimson</option>
+  <option>Amber</option>
+  <option>Velvet</option>
+</select>
+
+```html
+<select class="$$select $$appearance-none">
+  <option disabled selected>Pick a color</option>
+  <option>Crimson</option>
+  <option>Amber</option>
+  <option>Velvet</option>
+</select>
+```
+
+```jsx
+<select defaultValue="Pick a color" className="$$select $$appearance-none">
+  <option disabled={true}>Pick a color</option>
+  <option>Crimson</option>
+  <option>Amber</option>
+  <option>Velvet</option>
+</select>
+```
