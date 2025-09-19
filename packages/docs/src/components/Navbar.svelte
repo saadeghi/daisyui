@@ -112,7 +112,7 @@
             onclick={() => track("Navbar > Components")}
           >
             <svg
-              class="size-4"
+              class="size-4 opacity-50"
               width="16"
               height="16"
               viewBox="0 0 48 48"
@@ -158,8 +158,8 @@
             class="btn btn-sm btn-ghost drawer-button font-normal"
             onclick={() => track("Navbar > Store")}
           >
-            <svg
-              class="size-4"
+            <!-- <svg
+              class="size-4 opacity-50"
               width="16"
               height="16"
               viewBox="0 0 48 48"
@@ -182,8 +182,76 @@
                 stroke-linejoin="bevel"
               >
               </path>
+            </svg> -->
+            <svg
+              class="size-4 opacity-50"
+              width="16"
+              height="16"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+            >
+              <g stroke="currentColor" fill="none" stroke-linejoin="miter" stroke-linecap="butt">
+                <line
+                  x1="3"
+                  y1="11"
+                  x2="29"
+                  y2="11"
+                  fill="none"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line>
+                <line
+                  x1="12"
+                  y1="11"
+                  x2="12"
+                  y2="29"
+                  fill="none"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line>
+                <path
+                  d="m26,29H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h20c1.657,0,3,1.343,3,3v20c0,1.657-1.343,3-3,3Z"
+                  fill="none"
+                  stroke-linecap="square"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></path>
+              </g>
             </svg>
-            {$t("Template Store")}
+            {$t("Templates")}
+          </a>
+        </div>
+        <div class="hidden flex-none items-center lg:inline-block">
+          <a
+            data-sveltekit-preload-data
+            href="/store/351127/"
+            class="btn btn-sm btn-ghost drawer-button font-normal"
+            onclick={() => track("Navbar > Store")}
+          >
+            <svg
+              class="size-4 opacity-50"
+              width="16"
+              height="16"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="1.75"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="15" cy="12" r="3"></circle>
+                <path
+                  d="M9 21C10.6569 21 12 19.6569 12 18V15H9C7.34315 15 6 16.3431 6 18C6 19.6569 7.34315 21 9 21Z"
+                ></path>
+                <path d="M12 9V15H9C7.34315 15 6 13.6569 6 12C6 10.3431 7.34315 9 9 9H12Z"></path>
+                <path d="M12 3V9H9C7.34315 9 6 7.65685 6 6C6 4.34315 7.34315 3 9 3H12Z"></path>
+                <path d="M12 3V9H15C16.6569 9 18 7.65685 18 6C18 4.34315 16.6569 3 15 3H12Z"></path>
+              </g>
+            </svg>
+            {$t("Figma")}
           </a>
         </div>
       {/if}

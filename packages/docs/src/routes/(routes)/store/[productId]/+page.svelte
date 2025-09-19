@@ -629,7 +629,10 @@
         (row) => row[0] !== "price" && row[0] !== "checkout" && row[0] !== "popular",
       )}
 
-      <div class="grid gap-6 lg:grid-cols-3 xl:gap-8">
+      <div
+        style="--packages-count: {packageHeaders.length}"
+        class="grid gap-6 lg:grid-cols-[repeat(var(--packages-count),minmax(0,1fr))] xl:gap-8"
+      >
         {#each packageHeaders as packageName, packageIndex}
           {@const isHighlighted = popularRow && popularRow[packageIndex + 1] === true}
           <div
