@@ -71,6 +71,23 @@ desc: How to use daisyUI from a CDN?
   
       </div>
     </div>
+
+    <div class="prose mt-6 mb-4">
+      <p>
+        The <code>@tailwindcss/browser</code> script doesn't work well with elements that are added to the page dynamically. If you run into issues, consider using <a href="https://unocss.dev/integrations/runtime" target="_blank" rel="noopener noreferrer">UnoCSS runtime</a> as an alternative. It offers similar functionality:
+        <div class="grid *:[grid-area:1/1] my-4">
+          <div class="overflow-x-auto [direction:ltr] pt-12 pb-8 px-6 bg-neutral text-neutral-content rounded-box">
+            <pre class="shiki tokyo-night" style="background-color:var(--shiki-bg);color:var(--shiki-punctuation)" tabindex="0"><code><span class="line"><span style="color:var(--shiki-punctuation)">&lt;script</span><span style="color:var(--shiki-attr-name)"> src</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">https://cdn.jsdelivr.net/npm/@unocss/runtime</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-name)"> crossorigin</span><span style="color:var(--shiki-punctuation)">=</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-attr-value)">anonymous</span><span style="color:var(--shiki-punctuation)">"</span><span style="color:var(--shiki-punctuation)">&gt;&lt;/script&gt;</span></span></code></pre>
+          </div>
+          {#if onMount}
+            <Clipboard text={`<script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" crossorigin="anonymous"></script>`} />
+          {/if}
+        </div>
+      </p>
+      <p>
+        Also, note that the CDN version of daisyUI only provides opacity modifiers in integer multiples of 10. For example <code>bg-base-100/10</code> works but <code>bg-base-100/15</code> doesn't.
+      </p>
+    </div>
     
     <h3 class="block text-xl mt-6 mb-4 font-bold">Adding all themes</h3>
     
