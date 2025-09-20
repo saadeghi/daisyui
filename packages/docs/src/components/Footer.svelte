@@ -310,22 +310,22 @@
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Frameworks")}</span>
-        <a class="link link-hover" href="/angular-component-library">Angular</a>
-        <a class="link link-hover" href="/astro-component-library">Astro</a>
-        <a class="link link-hover" href="/django-component-library">Django</a>
-        <!-- <a class="link link-hover" href="/electron-component-library">Electron</a> -->
-        <!-- <a class="link link-hover" href="/htmx-component-library">Htmx</a> -->
-        <a class="link link-hover" href="/laravel-component-library">Laravel</a>
-        <!-- <a class="link link-hover" href="/lit-component-library">Lit</a> -->
-        <a class="link link-hover" href="/nextjs-component-library">Nextjs</a>
-        <a class="link link-hover" href="/nuxt-component-library">Nuxt</a>
-        <!-- <a class="link link-hover" href="/qwik-component-library">Qwik</a> -->
-        <a class="link link-hover" href="/rails-component-library">Rails</a>
-        <a class="link link-hover" href="/react-component-library">React</a>
-        <!-- <a class="link link-hover" href="/solid-component-library">Solid</a> -->
-        <a class="link link-hover" href="/svelte-component-library">Svelte</a>
-        <!-- <a class="link link-hover" href="/unocss-component-library">UnoCSS</a> -->
-        <a class="link link-hover" href="/vue-component-library">Vue</a>
+        <a class="link link-hover" href="/angular-component-library">Angular Component Library</a>
+        <a class="link link-hover" href="/astro-component-library">Astro Component Library</a>
+        <a class="link link-hover" href="/django-component-library">Django Component Library</a>
+        <!-- <a class="link link-hover" href="/electron-component-library">Electron Component Library</a> -->
+        <a class="link link-hover" href="/htmx-component-library">HTMX Component Library</a>
+        <a class="link link-hover" href="/laravel-component-library">Laravel Component Library</a>
+        <!-- <a class="link link-hover" href="/lit-component-library">Lit Component Library</a> -->
+        <a class="link link-hover" href="/nextjs-component-library">Nextjs Component Library</a>
+        <a class="link link-hover" href="/nuxt-component-library">Nuxt Component Library</a>
+        <!-- <a class="link link-hover" href="/qwik-component-library">Qwik Component Library</a> -->
+        <a class="link link-hover" href="/rails-component-library">Rails Component Library</a>
+        <a class="link link-hover" href="/react-component-library">React Component Library</a>
+        <!-- <a class="link link-hover" href="/solid-component-library">Solid Component Library</a> -->
+        <a class="link link-hover" href="/svelte-component-library">Svelte Component Library</a>
+        <!-- <a class="link link-hover" href="/unocss-component-library">UnoCSS Component Library</a> -->
+        <a class="link link-hover" href="/vue-component-library">Vue Component Library</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
@@ -385,7 +385,7 @@
           href="https://github.com/aalaap/laravel-livewire-daisyui-starter-kit"
           class="link link-hover group"
         >
-          Laravel Starter Kit with daisyUI
+          Laravel Starter Kit
           {@html newtabicon}
         </a>
         <a

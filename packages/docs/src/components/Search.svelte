@@ -57,7 +57,7 @@
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <div class="searchbox relative mx-3 w-full [&:has(input:focus)_kbd]:hidden" bind:this={seachboxEl}>
-  <svg
+  <!-- <svg
     class={`pointer-events-none absolute z-10 my-2 ms-2 stroke-current opacity-60 ${
       $page.url.pathname == "/" ? "hidden text-current" : "text-base-content"
     }`}
@@ -74,7 +74,7 @@
       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
     >
     </path>
-  </svg>
+  </svg> -->
   <Typeahead
     placeholder={$t("Search") + "…"}
     limit={8}

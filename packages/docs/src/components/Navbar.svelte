@@ -198,7 +198,7 @@
                   y2="11"
                   fill="none"
                   stroke-miterlimit="10"
-                  stroke-width="2"
+                  stroke-width="2.5"
                 ></line>
                 <line
                   x1="12"
@@ -207,14 +207,14 @@
                   y2="29"
                   fill="none"
                   stroke-miterlimit="10"
-                  stroke-width="2"
+                  stroke-width="2.5"
                 ></line>
                 <path
                   d="m26,29H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h20c1.657,0,3,1.343,3,3v20c0,1.657-1.343,3-3,3Z"
                   fill="none"
                   stroke-linecap="square"
                   stroke-miterlimit="10"
-                  stroke-width="2"
+                  stroke-width="2.5"
                 ></path>
               </g>
             </svg>

@@ -59,7 +59,8 @@
   color: inherit;
   border: 2px solid transparent;
   border-radius: var(--radius-field);
-  padding-inline-start: 2.5em;
+  /* padding-inline-start: 2.5em; */
+  padding-inline-start: 0.75em;
 }
 
 [data-svelte-search][data-svelte-search] input::placeholder {
