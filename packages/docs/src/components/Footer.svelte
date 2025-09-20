@@ -306,7 +306,7 @@
         <a class="link link-hover" href="/resources/">{$t("Resources")}</a>
         <a class="link link-hover" href="/blog/">{$t("Blog")}</a>
         <a class="link link-hover" href="/store/">{$t("Store")}</a>
-        <a class="link link-hover" href="/store/351127/">daisyUI Figma Library</a>
+        <a class="link link-hover" href="/store/daisyui-figma-library/">daisyUI Figma Library</a>
       </div>
       <div>
         <span class="footer-title opacity-70">{$t("Frameworks")}</span>

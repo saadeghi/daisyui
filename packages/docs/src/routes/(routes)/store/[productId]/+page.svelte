@@ -49,17 +49,17 @@
   function getSimilarProducts(product, allProducts) {
     // Filter for products with all the same tags
     const allSameTagProducts = allProducts.filter(
-      (p) => p.id !== product.id && hasAllSameTag(product, p),
+      (p) => p._key !== product._key && hasAllSameTag(product, p),
     )
 
     // Filter for products with at least one overlapping tags
     const someSameTagProducts = allProducts.filter(
-      (p) => p.id !== product.id && p.tags && p.tags.some((t) => product.tags.includes(t)),
+      (p) => p._key !== product._key && p.tags && p.tags.some((t) => product.tags.includes(t)),
     )
 
     // Combine, remove duplicates, and limit to 3
     const similarProducts = [...allSameTagProducts, ...someSameTagProducts]
-      .filter((product, index, self) => index === self.findIndex((p) => p.id === product.id))
+      .filter((product, index, self) => index === self.findIndex((p) => p._key === product._key))
       .slice(0, 2)
 
     return similarProducts
@@ -843,9 +843,9 @@
     </div>
     <div class="">
       <!-- data.product.faq might not exist, so we need to use the nullish coalescing operator to provide a default value -->
-      {#each [...(data.product.faq ?? []), ...data.faq] as item}
+      {#each [...(data.product.faq ?? []), ...data.faq] as item, index}
         <div class="collapse-plus collapse">
-          <input type="radio" name="faq" checked="checked" class="min-h-0!" />
+          <input type="radio" name="faq" class="min-h-0!" checked={index === 0} />
           <div class="collapse-title min-h-0! text-sm font-semibold">{item.Q}</div>
           <div
             class="collapse-content text-base-content/70 border-base-content/10 ms-4 border-s-2 px-6 text-xs"
@@ -911,7 +911,7 @@
 
   <div class="mx-auto grid gap-x-10 gap-y-36 md:grid-cols-2 xl:gap-x-16">
     {#each getSimilarProducts(data.product, data.products) as product}
-      <StoreProduct {product} {convertCurrency} />
+      <StoreProduct {product} productKey={product._key} {convertCurrency} />
     {/each}
   </div>
 {/if}

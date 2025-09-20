@@ -6,7 +6,7 @@
     {
       title: "Nexus",
       desc: "dashboard template from daisyUI",
-      link: "https://daisyui.com/store/244268/",
+      link: "https://daisyui.com/store/nexus/",
       img: "https://img.daisyui.com/images/store/banner/nexus.webp",
       chance: 3,
     },
@@ -62,7 +62,7 @@
     {
       title: "Official daisyUI",
       desc: "Figma Library",
-      link: "https://daisyui.com/store/351127/",
+      link: "https://daisyui.com/store/daisyui-figma-library/",
       img: "https://img.daisyui.com/images/store/banner/figma.webp",
       chance: 3,
     },

@@ -16,7 +16,7 @@ const fetchProductIds = async () => {
     const yamlText = await response.text()
     const yamlData = yaml.load(yamlText)
 
-    return yamlData?.productCustomAttributes?.map((product) => String(product.id)) ?? []
+    return yamlData?.productOrder?.map((id) => String(id)) ?? []
   } catch (err) {
     console.error("Error fetching or processing store data:", err)
     return []

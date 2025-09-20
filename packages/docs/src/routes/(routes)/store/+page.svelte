@@ -70,41 +70,56 @@
     }, 2000)
   }
 
-  let sortBy = $state("")
-  let selectedTech = $state("")
+  let sortBy = $state("updated")
+  let selectedTech = $state("all")
 
   onMount(() => {
     const urlParams = new URLSearchParams(window.location.search)
-    const filter = urlParams.get("filter") || ""
+    const filter = urlParams.get("filter") || "all"
     selectedTech = filter
   })
 
   // Update URL parameters when filter changes
   function updateURLParameter(param, value) {
     const url = new URL(window.location)
-    url.searchParams.set(param, value)
+    if (value === "") {
+      url.searchParams.delete(param)
+    } else {
+      url.searchParams.set(param, value)
+    }
     window.history.pushState({}, "", url)
   }
   function handleFilterChange(filter) {
-    selectedTech = filter === "all" ? "" : filter
+    selectedTech = filter === "all" ? "all" : filter
     updateURLParameter("filter", selectedTech)
+    if (filter === "all") {
+      updateURLParameter("filter", "")
+    }
   }
 
   let sortedFilteredProducts = $derived(
     data.products
-      .filter((product) => selectedTech === "" || product.tech?.includes(selectedTech))
-      .sort((a, b) => {
-        if (sortBy === "price") {
-          return a.price - b.price
-        }
-        if (sortBy === "id") {
-          return a.id - b.id
-        }
-        if (sortBy === "new") {
-          return new Date(b.created_at) - new Date(a.created_at)
-        }
-        return 0
-      }),
+      ? data.products
+          .filter(
+            (product) =>
+              !selectedTech || selectedTech === "all" || product.tech?.includes(selectedTech),
+          )
+          .sort((a, b) => {
+            if (sortBy === "price") {
+              return a.price - b.price
+            }
+            if (sortBy === "id") {
+              return a.id - b.id
+            }
+            if (sortBy === "new") {
+              return new Date(b.created_at) - new Date(a.created_at)
+            }
+            if (sortBy === "updated") {
+              return new Date(b.updated_at) - new Date(a.updated_at)
+            }
+            return 0
+          })
+      : [],
   )
 </script>
 
@@ -113,41 +128,132 @@
   desc="daisyUI Store - Professional templates made by daisyUI"
   img="https://img.daisyui.com/images/store.webp"
 />
-<div class="mx-4 flex flex-col justify-between gap-6 lg:flex-row">
+<div class="mx-4 flex flex-col items-center justify-between gap-6 lg:flex-row">
   <div class="flex flex-col gap-2">
     <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">daisyUI store</h1>
     <p class="text-base-content/60 text-sm">Official templates made by daisyUI</p>
   </div>
-  <div class="flex flex-col gap-3">
-    <div class="text-base-content/50 text-end text-xs">Filter by</div>
-    <div class="flex items-center gap-2">
-      {#each data.techFilters as filter}
-        {#if (selectedTech === "" && filter !== "all") || selectedTech === "all" || (selectedTech !== "" && (filter === selectedTech || filter === "all"))}
-          <button
-            transition:slide={{ duration: 50, axis: "x" }}
-            class={`btn btn-sm rounded-full ${filter === "all" ? "btn-circle" : ""} ${selectedTech === filter ? "btn-neutral" : ""}`}
-            aria-label={filter === "all" ? "×" : data.tech[filter]}
-            onclick={() => handleFilterChange(filter)}
-          >
-            {#if filter === "all"}
-              <svg
-                aria-label="Clear filters"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="size-5"
+  <div>
+    <button class="btn btn-sm btn-ghost" onclick={() => sort_filter.showModal()}>
+      <svg class="size-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke-width="2"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path d="M20 7h-9"></path>
+          <path d="M14 17H5"></path>
+          <circle cx="17" cy="17" r="3"></circle>
+          <circle cx="7" cy="7" r="3"></circle>
+        </g>
+      </svg>
+      {selectedTech && selectedTech !== "all"
+        ? `Showing ${data.tech[selectedTech]} templates`
+        : "Sort and filter"}
+    </button>
+    <dialog id="sort_filter" class="modal max-md:modal-bottom">
+      <div class="modal-box flex flex-col gap-12 lg:p-12">
+        <div class="flex flex-col gap-3">
+          <div class="text-base-content/50 text-sm font-semibold">
+            <svg
+              class="me-2 inline-block size-4 opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                fill="none"
+                stroke="currentColor"
               >
                 <path
-                  d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"
+                  d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"
+                ></path>
+              </g>
+            </svg>
+            Filter by
+          </div>
+          <div class="tabs tabs-box max-sm:tabs-sm justify-between">
+            {#each data.techFilters as filter}
+              <label class="tab w-1/3">
+                <input
+                  type="radio"
+                  name="tech-filter"
+                  value={filter}
+                  bind:group={selectedTech}
+                  onchange={() => handleFilterChange(filter)}
                 />
-              </svg>
-            {:else}
-              {data.tech[filter]}
-            {/if}
-          </button>
-        {/if}
-      {/each}
-    </div>
+                {#if filter === "all"}
+                  All
+                {:else}
+                  <img
+                    class="me-2 size-3 lg:size-4"
+                    src={`https://img.daisyui.com/images/logos/${filter}.svg`}
+                    alt={filter}
+                  />
+                  {data.tech[filter]}
+                {/if}
+              </label>
+            {/each}
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="text-base-content/50 text-sm font-semibold">
+            <svg
+              class="me-2 inline-block size-4 opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M3 9l4 -4l4 4m-4 -4v14"></path>
+                <path d="M21 15l-4 4l-4 -4m4 4v-14"></path>
+              </g>
+            </svg>
+            Sort by
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="tabs tabs-box max-sm:tabs-sm justify-between">
+              <input
+                aria-label="Updated"
+                class="tab w-1/3"
+                type="radio"
+                name="sort-by"
+                value="updated"
+                bind:group={sortBy}
+              />
+              <input
+                aria-label="New"
+                class="tab w-1/3"
+                type="radio"
+                name="sort-by"
+                value="new"
+                bind:group={sortBy}
+              />
+              <input
+                aria-label="Popular"
+                class="tab w-1/3"
+                type="radio"
+                name="sort-by"
+                value=""
+                bind:group={sortBy}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
   </div>
 </div>
 
@@ -334,16 +440,11 @@
     {/if}
   {/await}
 
-  <!-- <select class="select" id="sort-by" bind:value={sortBy}>
-    <option value="">Popular</option>
-    <option value="new">New</option>
-  </select> -->
-
   <div
     class="*:border-base-content/10 mx-auto grid *:border-t *:border-dashed *:px-4 *:py-16 *:nth-[1]:border-t-0 md:*:px-16 lg:grid-cols-2 lg:px-4 lg:*:border-e lg:*:even:border-e-0 lg:*:nth-[2]:border-t-0"
   >
-    {#each sortedFilteredProducts as product, index}
-      <StoreProduct {product} {convertCurrency} />
+    {#each sortedFilteredProducts as product}
+      <StoreProduct {product} productKey={product._key} {convertCurrency} />
     {:else}
       <div
         class="lg:col-span-3 flex justify-center items-center font-bold text-base-content/20 py-32"

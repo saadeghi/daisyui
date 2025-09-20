@@ -70,7 +70,7 @@
   <div class="bg-base-100 flex justify-center rounded-sm">
     <a
       data-sveltekit-preload-data
-      href="/store/244268/"
+      href="/store/nexus/"
       class="alert bg-base-300 flex w-full justify-center rounded-none border-none p-2 text-center text-xs shadow-none"
     >
       <p class="leading-relaxed [text-wrap:balance]">

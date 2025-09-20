@@ -19,19 +19,27 @@ const fetchStoreData = async () => {
   }
 }
 
+const fetchProduct = async (id) => {
+  try {
+    const response = await fetch(`${PUBLIC_DAISYUI_API_PATH}/data/store/${id}.yaml`)
+    if (!response.ok) {
+      throw new Error(`Failed to fetch product ${id}: ${response.status}`)
+    }
+    const yamlText = await response.text()
+    return yaml.load(yamlText)
+  } catch (e) {
+    console.error(`Error loading product ${id}`, e)
+    return null
+  }
+}
+
 export async function load({ params, parent }) {
   const yamlData = await fetchStoreData()
   const data = await parent()
-  // Convert both to strings or numbers for comparison
-  const product = data.products.find((p) => String(p.id) === String(params.productId))
-
+  const product = await fetchProduct(params.productId)
   if (!product) {
     throw error(404, "Product not found")
   }
-  // const mdDesc = await compile(product.desc, {
-  //   smartypants: false,
-  // })
-  // const compiledDesc = mdDesc.code
 
   async function md(markdown) {
     const compiledMd = await compile(markdown, {
@@ -44,6 +52,7 @@ export async function load({ params, parent }) {
     products: data.products,
     product: {
       ...product,
+      _key: params.productId,
       desc: product.desc && (await md(product.desc)),
       banner: product.banner && (await md(product.banner)),
     },

@@ -1,11 +1,11 @@
 <script>
-  let { product, convertCurrency } = $props()
+  let { product, productKey, convertCurrency } = $props()
 </script>
 
 <a
   class="group flex flex-col"
-  href={`/store/${product.id}`}
-  id={product.id}
+  href={`/store/${productKey}`}
+  id={productKey}
   data-sveltekit-preload-data
 >
   <div class="flex grow items-center">

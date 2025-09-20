@@ -224,7 +224,7 @@
         <div class="hidden flex-none items-center lg:inline-block">
           <a
             data-sveltekit-preload-data
-            href="/store/351127/"
+            href="/store/daisyui-figma-library/"
             class="btn btn-sm btn-ghost drawer-button font-normal"
             onclick={() => track("Navbar > Store")}
           >
