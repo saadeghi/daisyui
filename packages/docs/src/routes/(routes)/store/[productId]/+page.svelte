@@ -524,17 +524,6 @@
                   {@html getLinksIcon(link)}
                   <span>{link}</span>
                 </a>
-                <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
-                  <div
-                    class="modal-box max-h-[80vh] w-full max-w-[50rem] max-md:max-h-[80vh] lg:p-20"
-                  >
-                    <h3 class="text-lg font-bold">{data.product.title} License</h3>
-                    <pre class="py-4 whitespace-pre-wrap">{licenseContent}</pre>
-                  </div>
-                  <form method="dialog" class="modal-backdrop">
-                    <button>close</button>
-                  </form>
-                </dialog>
               </div>
             {:else if link === "screenshot"}
               <div>
@@ -549,14 +538,6 @@
                   {@html getLinksIcon(link)}
                   <span>{link}</span>
                 </a>
-                <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
-                  <div class="modal-box max-h-[80vh] w-full max-w-[90vw] p-0 max-md:max-h-[80vh]">
-                    <img src={screenshotUrl} alt="Screenshot" class="h-full w-full object-cover" />
-                  </div>
-                  <form method="dialog" class="modal-backdrop">
-                    <button>close</button>
-                  </form>
-                </dialog>
               </div>
             {:else}
               <a
@@ -573,9 +554,27 @@
           {/each}
         </div>
 
+        <dialog class="modal max-md:modal-bottom" bind:this={licenseDialog}>
+          <div class="modal-box max-h-[80vh] w-full max-w-[50rem] max-md:max-h-[80vh] lg:p-20">
+            <h3 class="text-lg font-bold">{data.product.title} License</h3>
+            <pre class="py-4 text-xs whitespace-pre-wrap">{licenseContent}</pre>
+          </div>
+          <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+          </form>
+        </dialog>
+        <dialog class="modal max-md:modal-bottom" bind:this={screenshotDialog}>
+          <div class="modal-box max-h-[80vh] w-full max-w-[90vw] p-0 max-md:max-h-[80vh]">
+            <img src={screenshotUrl} alt="Screenshot" class="h-full w-full object-cover" />
+          </div>
+          <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+          </form>
+        </dialog>
+
         {#if data.product.tech}
-          <div class="flex items-center gap-4 lg:gap-8">
-            <span class="text-base-content/60 text-sm">Made with:</span>
+          <div class="flex items-center gap-4 lg:gap-6">
+            <span class="text-base-content/60 text-xs whitespace-nowrap">Made with:</span>
             {#each data.product.tech as tech}
               <div class="tooltip" data-tip={data.tech[tech]}>
                 <img
@@ -657,22 +656,36 @@
             <div
               class="rounded-box from-base-200 via-base-200 sticky top-16 z-11 bg-gradient-to-b via-80%"
             >
-              <div class="card-body pb-4">
-                <!-- Package name -->
-                <h3
-                  class="card-title font-title mb-2 justify-center text-center text-xl font-semibold"
-                >
-                  {packageName}
-                </h3>
-
-                <!-- Price -->
-                {#if priceRow && priceRow[packageIndex + 1] && typeof priceRow[packageIndex + 1] === "number"}
-                  <div class="text-center">
-                    <div class="font-title text-2xl font-thin tabular-nums">
-                      {convertCurrency(priceRow[packageIndex + 1])}
-                    </div>
+              <div class="card-body flex flex-row items-center gap-4 pb-4">
+                {#if data.product.media.find((media) => media.type === "image")}
+                  <div class="stack shrink-0 -rotate-3 max-sm:hidden lg:max-xl:hidden">
+                    <img
+                      class="rounded-box border-[0.5px] bg-white shadow-xs"
+                      style={`width: ${packageIndex + 3}rem; filter: saturate(${0.8 + packageIndex * 0.2}) contrast(${0.9 + packageIndex * 0.1}); padding: ${0.1 + packageIndex * 0.1}rem; border-color: color-mix(in oklab, var(--color-black) ${10 + packageIndex * 5}%, transparent);`}
+                      src={data.product.media.find((media) => media.type === "image")?.lg || ""}
+                      alt={data.product.title}
+                    />
+                    {#each Array(packageIndex).fill() as _, index}
+                      <div
+                        class="rounded-box border-base-content/20 border-[0.5px] bg-white"
+                        style={`margin-top: 0.${index + 1}rem; border-color: color-mix(in oklab, var(--color-black) ${10 + packageIndex * 5}%, transparent);`}
+                      ></div>
+                    {/each}
                   </div>
                 {/if}
+                <div class="max-sm:w-full max-sm:text-center">
+                  <!-- Package name -->
+                  <h3 class="card-title font-title mb-2 justify-center lg:text-xl">
+                    {packageName}
+                  </h3>
+
+                  <!-- Price -->
+                  {#if priceRow && priceRow[packageIndex + 1] && typeof priceRow[packageIndex + 1] === "number"}
+                    <div class="font-title text-lg tabular-nums sm:text-2xl sm:font-thin">
+                      {convertCurrency(priceRow[packageIndex + 1])}
+                    </div>
+                  {/if}
+                </div>
               </div>
             </div>
 

@@ -176,7 +176,7 @@
             </svg>
             Filter by
           </div>
-          <div class="tabs tabs-box max-sm:tabs-sm justify-between">
+          <div class="tabs tabs-box max-sm:tabs-sm">
             {#each data.techFilters as filter}
               <label class="tab w-1/3">
                 <input
@@ -221,7 +221,7 @@
             Sort by
           </div>
           <div class="flex flex-col gap-2">
-            <div class="tabs tabs-box max-sm:tabs-sm justify-between">
+            <div class="tabs tabs-box max-sm:tabs-sm">
               <input
                 aria-label="Updated"
                 class="tab w-1/3"
