@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.14 (2025-09-22)
+
+
+### Bug Fixes
+
+* chat bubble tail size. closes: [#4130](https://github.com/saadeghi/daisyui/issues/4130) ([d3de565](https://github.com/saadeghi/daisyui/commit/d3de5654479b905039d5a7c900e90c97c061b250))
+
 ## 5.1.13 (2025-09-17)
 
 ## 5.1.12 (2025-09-14)
