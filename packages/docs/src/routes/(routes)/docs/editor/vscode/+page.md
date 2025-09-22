@@ -36,7 +36,7 @@ echo -e '---\napplyTo: "**"\n---\n'"$content" > .github/instructions/daisyui.ins
 
 - The above command will create `.github/instructions` folder if it doesn't exist.
 - Then it will fetch the content of `llms.txt` file.
-- Finally it will save it to `.github/instructions/daisyui.instructions.md` file with an addiotional [`applyTo: "**"`](https://code.visualstudio.com/docs/copilot/customization/custom-instructions) frontmatter so Copilot can use it for all files in your project if needed.
+- Finally it will save it as a `.md` file with an addiotional [`applyTo: "**"`](https://code.visualstudio.com/docs/copilot/customization/custom-instructions) frontmatter so Copilot can use it for all files in your project if needed.
 
 ### MCP server
 
