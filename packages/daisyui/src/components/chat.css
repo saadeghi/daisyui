@@ -17,7 +17,7 @@
     mask-repeat: no-repeat;
     mask-image: var(--mask-chat);
     mask-position: 0px -1px;
-    mask-size: 13px;
+    mask-size: 0.8125rem;
   }
 }
 
