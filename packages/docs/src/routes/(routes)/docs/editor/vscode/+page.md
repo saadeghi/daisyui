@@ -26,11 +26,17 @@ In chat window type this and VSCode will use daisyUI's llms.txt file to generate
 
 You can setup daisyUI's llms.txt file to your workspace so Copilot can use it by default. ([Read more at VSCode docs](https://code.visualstudio.com/docs/copilot/copilot-customization))
 
-Run this command to save the llms.txt file to `.github/daisyui.instructions.md`
+Run this command to save the llms.txt file to `.github/instructions/daisyui.instructions.md`
 
 ```sh:Terminal
-curl -L https://daisyui.com/llms.txt --create-dirs -o .github/daisyui.instructions.md
+mkdir -p .github/instructions
+content=$(curl -sL https://daisyui.com/llms.txt)
+echo -e '---\napplyTo: "**"\n---\n'"$content" > .github/instructions/daisyui.instructions.md
 ```
+
+- The above command will create `.github/instructions` folder if it doesn't exist.
+- Then it will fetch the content of `llms.txt` file.
+- Finally it will save it to `.github/instructions/daisyui.instructions.md` file with an addiotional [`applyTo: "**"`](https://code.visualstudio.com/docs/copilot/customization/custom-instructions) frontmatter so Copilot can use it for all files in your project if needed.
 
 ### MCP server
 
