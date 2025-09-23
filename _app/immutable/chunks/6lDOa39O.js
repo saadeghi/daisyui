@@ -1,0 +1,1 @@
+import{P as c,R as o,Q as i,aj as d,aw as m}from"./CXBktu9n.js";function j(e,n,a){c(()=>{var r=o(()=>n(e,a==null?void 0:a())||{});if(a&&(r!=null&&r.update)){var s=!1,t={};i(()=>{var f=a();d(f),s&&m(t,f)&&(t=f,r.update(f))}),s=!0}if(r!=null&&r.destroy)return()=>r.destroy()})}export{j as a};
