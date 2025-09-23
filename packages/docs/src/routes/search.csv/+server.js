@@ -1,14 +1,21 @@
 export const prerender = true
 
-import { readFileSync, readdirSync, statSync } from "fs"
-import { join, relative } from "path"
+import { readFileSync, readdirSync, statSync } from "node:fs"
+import { join, dirname } from "node:path"
 import { fileURLToPath } from "url"
-import { dirname } from "path"
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import yaml from "js-yaml"
+import { dev } from "$app/environment"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
+
+// Use import.meta.glob for build time (production) - this gets resolved at build time
+const markdownModules = import.meta.glob("../(routes)/**/*.md", {
+  eager: true,
+  query: "?raw",
+  import: "default",
+})
 
 const initialSearchCSV = `daisyUI Components,/components/
 daisyUI Store,/store/
@@ -33,18 +40,40 @@ const IGNORED_PATHS = [
 ]
 
 // Function to check if a file path should be ignored
-function shouldIgnoreFile(filePath, routesDir) {
-  const relativePath = relative(routesDir, filePath)
-
+function shouldIgnoreFile(filePath) {
   return IGNORED_PATHS.some((ignoredPath) => {
     // Check if the file is in an ignored directory or subdirectory
-    return relativePath.startsWith(ignoredPath) || relativePath.includes(`/${ignoredPath}`)
+    return filePath.includes(ignoredPath)
   })
 }
 
-// Function to recursively find all .md files
+// Function to get markdown files using import.meta.glob (for production builds)
+function getMarkdownFilesFromModules() {
+  const files = []
+
+  for (const [path, content] of Object.entries(markdownModules)) {
+    // Convert the import path to a more readable path
+    const relativePath = path.replace("../(routes)/", "")
+
+    if (!shouldIgnoreFile(relativePath)) {
+      files.push({
+        path: relativePath,
+        content: content,
+      })
+    }
+  }
+
+  return files
+}
+
+// Function to recursively find all .md files (for development)
 function findMarkdownFiles(dir, fileList = []) {
   try {
+    if (!readdirSync || !statSync) {
+      console.error("File system operations not available")
+      return []
+    }
+
     const files = readdirSync(dir)
 
     files.forEach((file) => {
@@ -63,6 +92,71 @@ function findMarkdownFiles(dir, fileList = []) {
     console.error("Error reading directory:", dir, error)
     return []
   }
+}
+
+// Function to get markdown files using file system (for development)
+function getMarkdownFilesFromFileSystem(routesDir) {
+  const markdownFiles = findMarkdownFiles(routesDir)
+  const files = []
+
+  for (const filePath of markdownFiles) {
+    try {
+      const relativePath = filePath.replace(routesDir + "/", "")
+
+      if (!shouldIgnoreFile(relativePath)) {
+        const content = readFileSync(filePath, "utf-8")
+        files.push({
+          path: relativePath,
+          content: content,
+        })
+      }
+    } catch (error) {
+      console.error(`Error reading file ${filePath}:`, error)
+    }
+  }
+
+  return files
+}
+
+// Main function to get all markdown files (hybrid approach)
+function getAllMarkdownFiles() {
+  // Always try import.meta.glob first, since it should work in both dev and production
+  const moduleKeys = Object.keys(markdownModules)
+
+  if (moduleKeys.length > 0) {
+    return getMarkdownFilesFromModules()
+  }
+
+  // Fallback to file system operations if import.meta.glob didn't work
+
+  // Try different possible paths for the routes directory
+  const possiblePaths = [
+    // During development, __dirname points to source
+    join(__dirname, "../(routes)"),
+    // During build, use process.cwd() to get project root
+    join(process.cwd(), "src/routes/(routes)"),
+    // Additional fallbacks
+    join(process.cwd(), "packages/docs/src/routes/(routes)"),
+    join(process.cwd(), "./src/routes/(routes)"),
+  ]
+
+  for (const routesDir of possiblePaths) {
+    try {
+      if (readdirSync && statSync) {
+        statSync(routesDir)
+        // Check if this directory actually contains markdown files
+        const files = getMarkdownFilesFromFileSystem(routesDir)
+        if (files.length > 0) {
+          return files
+        }
+      }
+    } catch (e) {
+      // Continue to next path
+    }
+  }
+
+  console.error("Could not find routes directory")
+  return []
 }
 
 // Function to parse frontmatter from markdown content
@@ -188,19 +282,17 @@ function extractHeadings(content) {
 }
 
 // Function to convert file path to URL
-function filePathToUrl(filePath, routesDir) {
-  const relativePath = relative(routesDir, filePath)
-
+function filePathToUrl(filePath) {
   // Remove +page.md and convert to URL format
-  let url = relativePath.replace(/\/\+page\.md$/, "/")
+  let url = filePath.replace(/\/?\+page\.md$/, "/")
 
   // Handle root +page.md files
-  if (url === "+page.md") {
+  if (url === "+page.md" || url === "") {
     url = "/"
   }
 
   // Remove parentheses from route groups
-  url = url.replace(/\([^)]*\)/g, "")
+  url = url.replace(/\([^)]*\)\//g, "")
 
   // Clean up multiple slashes
   url = url.replace(/\/+/g, "/")
@@ -288,11 +380,8 @@ async function generateStoreEntries() {
 
 export async function GET() {
   try {
-    // Path to the routes directory - relative to this file
-    const routesDir = join(__dirname, "../(routes)")
-
-    // Find all markdown files
-    const markdownFiles = findMarkdownFiles(routesDir)
+    // Get all markdown files using the hybrid approach
+    const markdownFilesList = getAllMarkdownFiles()
 
     const csvRows = []
     const pageEntries = []
@@ -306,43 +395,33 @@ export async function GET() {
     csvRows.push(...storeEntries)
 
     // First pass: collect all page entries
-    for (const filePath of markdownFiles) {
+    for (const file of markdownFilesList) {
       try {
-        // Check if this file should be ignored
-        if (shouldIgnoreFile(filePath, routesDir)) {
-          continue
-        }
-
-        const content = readFileSync(filePath, "utf-8")
+        const content = file.content
         const frontmatter = parseFrontmatter(content)
 
         // Get page title from frontmatter or filename
         const title = frontmatter.title || frontmatter.desc || "Untitled"
 
         // Convert file path to URL
-        const url = filePathToUrl(filePath, routesDir)
+        const url = filePathToUrl(file.path)
 
         // Add page entry
         pageEntries.push(`${escapeCsvValue(title)},${escapeCsvValue(url)}`)
       } catch (fileError) {
-        console.error(`Error processing file ${filePath}:`, fileError)
+        console.error(`Error processing file ${file.path}:`, fileError)
         // Continue processing other files
       }
     }
 
     // Second pass: collect all heading entries
-    for (const filePath of markdownFiles) {
+    for (const file of markdownFilesList) {
       try {
-        // Check if this file should be ignored
-        if (shouldIgnoreFile(filePath, routesDir)) {
-          continue
-        }
-
-        const content = readFileSync(filePath, "utf-8")
+        const content = file.content
         const headings = extractHeadings(content)
 
         // Convert file path to URL
-        const url = filePathToUrl(filePath, routesDir)
+        const url = filePathToUrl(file.path)
 
         // Add heading entries
         headings.forEach((heading) => {
@@ -351,7 +430,7 @@ export async function GET() {
           )
         })
       } catch (fileError) {
-        console.error(`Error processing file ${filePath}:`, fileError)
+        console.error(`Error processing file ${file.path}:`, fileError)
         // Continue processing other files
       }
     }
