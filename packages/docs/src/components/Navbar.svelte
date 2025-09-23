@@ -4,7 +4,6 @@
   import TopBanner from "$components/TopBanner.svelte"
   import ThemeChange from "$components/ThemeChange.svelte"
   import LangChange from "$components/LangChange.svelte"
-  import Search from "$components/Search.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
   import { track } from "$lib/analytics.svelte.js"
 
@@ -30,6 +29,8 @@
     scrollY = $bindable(),
     addScrollPaddingToNavbar,
     removeScrollPaddingFromNavbar,
+    onOpenSearch,
+    onPreFetchSearch,
     children,
   } = $props()
   let switchNavbarStyle = $derived(scrollY > 40)
@@ -97,8 +98,40 @@
       {@render children?.()}
 
       {#if showSearch}
-        <div class="hidden w-full max-w-sm lg:flex">
-          <Search {pages} {removeScrollPaddingFromNavbar} {addScrollPaddingToNavbar} />
+        <div class="-mt-1 w-full max-w-[15rem] max-lg:hidden xl:ms-4">
+          <button
+            class="input input-ghost hover:bg-base-200 focus-visible:bg-base-200 cursor-pointer transition-colors focus:outline-none"
+            onclick={() => {
+              onOpenSearch?.()
+            }}
+            onmouseenter={() => {
+              // Pre-fetch search data on hover
+              onPreFetchSearch?.()
+            }}
+            onfocus={() => {
+              onPreFetchSearch?.()
+            }}
+            ontouchstart={() => {
+              onPreFetchSearch?.()
+            }}
+          >
+            <svg
+              class="hidden size-4 shrink-0 opacity-60"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+            >
+              <g fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.5 7a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-.82 4.74a6 6 0 1 1 1.06-1.06l2.79 2.79a.75.75 0 1 1-1.06 1.06l-2.79-2.79Z"
+                  fill="currentColor"
+                ></path>
+              </g>
+            </svg>
+            <span class="grow text-left">Search…</span>
+            <kbd class="kbd kbd-sm font-mono"><span class="me-1 text-sm">⌘</span>K</kbd>
+          </button>
         </div>
       {/if}
     </div>

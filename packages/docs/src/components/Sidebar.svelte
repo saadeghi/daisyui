@@ -2,11 +2,18 @@
   import LogoHorizontal from "$components/LogoHorizontal.svelte"
   import { goto } from "$app/navigation"
   import { page } from "$app/stores"
-  import Search from "$components/Search.svelte"
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
-  let { closeDrawer, openDrawer, pages, drawerSidebarScrollY, version } = $props()
+  let {
+    closeDrawer,
+    openDrawer,
+    pages,
+    drawerSidebarScrollY,
+    version,
+    onOpenSearch,
+    onPreFetchSearch,
+  } = $props()
   let switchNavbarStyle = $derived(drawerSidebarScrollY > 40)
 
   let innerWidth = $state(undefined)
@@ -43,7 +50,40 @@
     }`}
   >
     <div class="flex w-full">
-      <Search {pages} onsearch={closeDrawer} onfocus={openDrawer} />
+      <button
+        class="input input-ghost hover:bg-base-200 focus-visible:bg-base-200 cursor-pointer transition-colors focus:outline-none"
+        onclick={() => {
+          onOpenSearch?.()
+          closeDrawer()
+        }}
+        onmouseenter={() => {
+          // Pre-fetch search data on hover
+          onPreFetchSearch?.()
+        }}
+        onfocus={() => {
+          onPreFetchSearch?.()
+        }}
+        ontouchstart={() => {
+          onPreFetchSearch?.()
+        }}
+      >
+        <svg
+          class="hidden size-4 shrink-0 opacity-60"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+        >
+          <g fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.5 7a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-.82 4.74a6 6 0 1 1 1.06-1.06l2.79 2.79a.75.75 0 1 1-1.06 1.06l-2.79-2.79Z"
+              fill="currentColor"
+            ></path>
+          </g>
+        </svg>
+        <span class="grow text-left">Search…</span>
+        <kbd class="kbd kbd-sm font-mono"><span class="me-1 text-sm">⌘</span>K</kbd>
+      </button>
     </div>
   </div>
 {/if}

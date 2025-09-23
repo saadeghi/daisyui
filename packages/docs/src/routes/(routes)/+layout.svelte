@@ -2,6 +2,7 @@
   import "../../global.css"
   import Navbar from "$components/Navbar.svelte"
   import Sidebar from "$components/Sidebar.svelte"
+  import Search from "$components/Search.svelte"
   import { page } from "$app/stores"
   import { setLang } from "$lib/i18n.svelte.js"
   import { onNavigate } from "$app/navigation"
@@ -9,6 +10,21 @@
   const { track } = minimalAnalytics
 
   let { data, children } = $props()
+
+  // Search modal control
+  let searchComponent = $state()
+
+  function handleOpenSearch() {
+    if (searchComponent) {
+      searchComponent.openModal()
+    }
+  }
+
+  function handlePreFetchSearch() {
+    if (searchComponent) {
+      searchComponent.preFetchData()
+    }
+  }
 
   onNavigate((navigation) => {
     track("G-10F40JCSMZ")
@@ -97,6 +113,8 @@
       showSearch="true"
       showVersion="true"
       showLanguage="true"
+      onOpenSearch={handleOpenSearch}
+      onPreFetchSearch={handlePreFetchSearch}
     />
     <div
       class={`${
@@ -136,6 +154,8 @@
         {closeDrawer}
         {openDrawer}
         {drawerSidebarScrollY}
+        onOpenSearch={handleOpenSearch}
+        onPreFetchSearch={handlePreFetchSearch}
       />
       <div
         class="bg-base-100 pointer-events-none sticky bottom-0 flex h-40 [mask-image:linear-gradient(transparent,#000000)]"
@@ -143,3 +163,6 @@
     </aside>
   </div>
 </div>
+
+<!-- Search Modal -->
+<Search bind:this={searchComponent} />

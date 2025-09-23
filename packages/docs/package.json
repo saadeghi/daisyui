@@ -31,7 +31,6 @@
     "shiki": "3.2.1",
     "super-sitemap": "^1.0.3",
     "svelte": "5.25.6",
-    "svelte-typeahead": "5.0.0",
     "theme-change": "2.5.0",
     "unist-util-visit": "5.0.0",
     "vite": "6.2.4"
