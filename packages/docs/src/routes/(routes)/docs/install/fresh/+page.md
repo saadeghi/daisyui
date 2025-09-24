@@ -7,7 +7,7 @@ desc: How to install Tailwind CSS and daisyUI in a Deno Fresh project
   import Translate from "$components/Translate.svelte"
 </script>
 
-### 1. Create a Fresh Project
+### 1. Create a new Fresh project
 
 Use `jsr` to initialize a new Fresh project in the current directory
 
