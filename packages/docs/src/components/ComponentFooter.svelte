@@ -1,6 +1,7 @@
 <script>
   import { page } from "$app/stores"
   import { currentLang, defaultLang, t } from "$lib/i18n.svelte.js"
+  import { onMount } from "svelte"
 
   let { pages = [] } = $props()
 
@@ -26,6 +27,44 @@
   let currentPageIndex = $derived(
     arrayOfPagesInOrder.findIndex((item) => item.href === $page.url.pathname),
   )
+
+  onMount(() => {
+    function handleKeyDown(event) {
+      // Only trigger if no input element is focused and no modifier keys are pressed
+      if (
+        event.target.tagName === "INPUT" ||
+        event.target.tagName === "TEXTAREA" ||
+        event.target.isContentEditable ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.altKey
+      ) {
+        return
+      }
+
+      if (event.key === "j" && currentPageIndex < arrayOfPagesInOrder.length - 1) {
+        // Navigate to next page
+        event.preventDefault()
+        const nextPage = arrayOfPagesInOrder[currentPageIndex + 1]
+        if (nextPage) {
+          window.location.href = nextPage.href
+        }
+      } else if (event.key === "k" && currentPageIndex > 0) {
+        // Navigate to previous page
+        event.preventDefault()
+        const prevPage = arrayOfPagesInOrder[currentPageIndex - 1]
+        if (prevPage) {
+          window.location.href = prevPage.href
+        }
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  })
 </script>
 
 <div class="not-prose pb-10">
