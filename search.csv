@@ -772,7 +772,7 @@ Warning color,/components/select/#warning-color
 Error color,/components/select/#error-color
 Sizes,/components/select/#sizes
 Disabled,/components/select/#disabled
-AppearanceNone uses OS Native picker,/components/select/#appearancenone-uses-os-native-picker
+Using OS native style for the options dropdown,/components/select/#using-os-native-style-for-the-options-dropdown
 Dock,/components/dock/#dock
 Dock Extra Small size,/components/dock/#dock-extra-small-size
 Dock Small size,/components/dock/#dock-small-size
