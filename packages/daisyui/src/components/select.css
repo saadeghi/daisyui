@@ -31,6 +31,10 @@
       calc(0% + 12px) calc(1px + 50%),
       calc(0% + 16px) calc(1px + 50%);
   }
+  &[multiple] {
+    @apply h-auto py-3 pe-3;
+    background-image: none;
+  }
   select {
     @apply -ms-3 -me-7 w-[calc(100%+2.75rem)] appearance-none ps-3 pe-7;
     height: calc(100% - calc(var(--border) * 2));
