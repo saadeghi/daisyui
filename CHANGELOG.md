@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.15 (2025-09-24)
+
+
+### Bug Fixes
+
+* Collapse arrow position. closes: [#4133](https://github.com/saadeghi/daisyui/issues/4133) ([02eba47](https://github.com/saadeghi/daisyui/commit/02eba471b50957a1b26cdbf75e225aa256312998))
+
 ## 5.1.14 (2025-09-22)
 
 
