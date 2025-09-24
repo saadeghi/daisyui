@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.16 (2025-09-24)
+
+
+### Bug Fixes
+
+* Collapse gets closed when interactive input inside is focused. closes: [#4128](https://github.com/saadeghi/daisyui/issues/4128) ([f55cf0e](https://github.com/saadeghi/daisyui/commit/f55cf0e96ce7c8426c0bf971b694ee2ee39f1548))
+
 ## 5.1.15 (2025-09-24)
 
 
