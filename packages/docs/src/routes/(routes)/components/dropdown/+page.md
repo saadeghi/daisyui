@@ -612,7 +612,6 @@ The content gets displayed when the button is focused.
 </div>
 
 ```html
-A normal text and a helper dropdown
 <div class="$$dropdown $$dropdown-end">
   <div tabindex="0" role="button" class="$$btn $$btn-circle $$btn-ghost $$btn-xs text-info">
     <svg
