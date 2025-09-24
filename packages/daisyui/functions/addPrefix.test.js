@@ -421,3 +421,10 @@ test("addPrefix with 0 prefix should not affect CSS variables", () => {
   }
   expect(addPrefix(input, prefix)).toEqual(expected)
 })
+
+test("addPrefix should not prefix .prose selector", () => {
+  const input = { ".prose": "color: red;" }
+  const prefix = "prefix-"
+  const expected = { ".prose": "color: red;" }
+  expect(addPrefix(input, prefix)).toEqual(expected)
+})
