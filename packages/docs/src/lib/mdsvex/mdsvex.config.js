@@ -1,5 +1,5 @@
 import fs from "fs/promises"
-import path from "path"
+import path, { join } from "path"
 import { fileURLToPath } from "url"
 import { mdsvex, escapeSvelte } from "mdsvex"
 import { createHighlighter } from "shiki"
@@ -153,10 +153,10 @@ const config = {
   remarkPlugins: remarkPlugins,
   rehypePlugins: rehypePlugins, // Keep rehypePlugins after remarkPlugins
   layout: {
-    components: "src/lib/mdsvex/layout-components.svelte",
-    blog: "src/lib/mdsvex/layout-blog.svelte",
-    docs: "src/lib/mdsvex/layout-docs.svelte",
-    contentLanding: "src/lib/mdsvex/layout-contentLanding.svelte",
+    components: join(__dirname, "layout-components.svelte"),
+    blog: join(__dirname, "layout-blog.svelte"),
+    docs: join(__dirname, "layout-docs.svelte"),
+    contentLanding: join(__dirname, "layout-contentLanding.svelte"),
   },
   highlight: {
     highlighter: async (code, lang = "text") => {
