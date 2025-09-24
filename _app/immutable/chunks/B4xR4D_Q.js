@@ -1,0 +1,1 @@
+import{O as s,aa as n}from"./NAaXnvSU.js";function b(o,a,r,f,i){var d=()=>{f(r[o])};r.addEventListener(a,d),i?s(()=>{r[o]=i()}):d(),(r===document.body||r===window||r===document)&&n(()=>{r.removeEventListener(a,d)})}export{b};
