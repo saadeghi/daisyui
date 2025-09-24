@@ -3,6 +3,7 @@ daisyUI Store,/store/
 Official daisyUI Figma Library,/store/daisyui-figma-library/
 Theme Generator,/theme-generator/
 daisyUI on Tailwind CSS Playground,/tailwindplay/
+daisyUI Blog,/blog/
 daisyUI Discord,/discord/
 daisyUI Swag Store,https://swag.daisyui.com/
 daisyUI GitHub,https://github.com/saadeghi/daisyui
@@ -712,7 +713,7 @@ Vertical timeline with colorful lines,/components/timeline/#vertical-timeline-wi
 Vertical timeline without icons,/components/timeline/#vertical-timeline-without-icons
 "Responsive: vertical by default, horizontal on large screen",/components/timeline/#responsive-vertical-by-default-horizontal-on-large-screen
 Timeline with icon snapped to the start,/components/timeline/#timeline-with-icon-snapped-to-the-start
-Toggle,/components/toggle/#toggle
+Toggle (switch),/components/toggle/#toggle-switch
 With fieldset and label,/components/toggle/#with-fieldset-and-label
 Sizes,/components/toggle/#sizes
 Colors,/components/toggle/#colors
