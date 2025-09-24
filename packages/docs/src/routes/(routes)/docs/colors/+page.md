@@ -36,7 +36,7 @@ Example of theming a div with hardcoded color values
 <div class="lg:grid lg:grid-cols-2 gap-4">
 <div>
 
-*Using hardcoded color names*
+_Using hardcoded color names_
 
 <div class="p-10 bg-zinc-100 rounded-2xl">
   <div class="p-6 bg-zinc-50 border-2 border-zinc-200 text-zinc-800 rounded-lg [text-wrap:balance]">
@@ -47,12 +47,13 @@ Example of theming a div with hardcoded color values
 
 ```html
 <div class="bg-zinc-100">
-  <div class="bg-zinc-50 border-zinc-200 text-zinc-800">
-    This is a hardcoded dark text on a light background,
-    it needs double the amount of class names to support dark mode.
+  <div class="border-zinc-200 bg-zinc-50 text-zinc-800">
+    This is a hardcoded dark text on a light background, it needs double the amount of class names
+    to support dark mode.
   </div>
 </div>
 ```
+
 - 🪦 Fixed color names, hardcoded based on the value
 - 🚫 No automatic dark mode
 - 😵‍💫 You have to add dark-mode colors for every element
@@ -62,11 +63,10 @@ Example of theming a div with hardcoded color values
 - ⛓️‍💥 high chance of inconsistency
 - 😰 You are limited to 2 themes only: light and dark
 
-
 </div>
 <div>
 
-*Using semantic color names*
+_Using semantic color names_
 
 <div class="p-10 bg-base-200 rounded-2xl">
   <div class="p-6 bg-base-100 border-2 border-base-300 text-base-content rounded-lg [text-wrap:balance]">
@@ -78,11 +78,12 @@ Example of theming a div with hardcoded color values
 ```html
 <div class="bg-base-200">
   <div class="bg-base-100 border-base-300 text-base-content">
-    This is dark text on a light background,
-    which switches to light text on a dark background in dark mode.
+    This is dark text on a light background, which switches to light text on a dark background in
+    dark mode.
   </div>
 </div>
 ```
+
 - 🎯 Semantic names, based on the purpose of the color
 - ✨ Automatic dark mode
 - 🌓 No need to add any dark-mode class names
@@ -95,7 +96,6 @@ Example of theming a div with hardcoded color values
 </div>
 </div>
 
-
 ## <Translate text="List of all daisyUI color names" />
 
 <Translate text="You can use these color names in your theme or in utility classes." />
@@ -104,7 +104,7 @@ Example of theming a div with hardcoded color values
 <div class="whitespace-nowrap">
 
 |                                                  | Color name        | CSS variable                | Where to use                                                       |
-|--------------------------------------------------|-------------------|-----------------------------|--------------------------------------------------------------------|
+| ------------------------------------------------ | ----------------- | --------------------------- | ------------------------------------------------------------------ |
 | <span class="badge bg-primary"></span>           | primary           | `--color-primary`           | Primary brand color, The main color of your brand                  |
 | <span class="badge bg-primary-content"></span>   | primary-content   | `--color-primary-content`   | Foreground content color to use on `primary` color <br/><br/>      |
 | <span class="badge bg-secondary"></span>         | secondary         | `--color-secondary`         | Secondary brand color, The optional, secondary color of your brand |
@@ -150,8 +150,8 @@ These components automatically set the correct background color, text color, bor
 <Translate text="You can also use color names in utility classes just like Tailwind's original color names." />
 <Translate text="These are utility classes that can be used with a color name:" />
 
-| CSS Class                  |                                                                                                                                   |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| CSS Class                  |                                                                                                                                |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `bg-{COLOR_NAME}`          | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties.css)                   |
 | `text-{COLOR_NAME}`        | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties.css)                   |
 | `border-{COLOR_NAME}`      | Also available on CDN [/colors/properties.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties.css)                   |
@@ -163,19 +163,30 @@ These components automatically set the correct background color, text color, bor
 | `stroke-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
 | `shadow-{COLOR_NAME}`      | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
 | `outline-{COLOR_NAME}`     | Also available on CDN [/colors/properties-extended.css](https://cdn.jsdelivr.net/npm/daisyui@5/colors/properties-extended.css) |
-| `divide-{COLOR_NAME}`      |                                                                                                                                   |
-| `accent-{COLOR_NAME}`      |                                                                                                                                   |
-| `caret-{COLOR_NAME}`       |                                                                                                                                   |
-| `decoration-{COLOR_NAME}`  |                                                                                                                                   |
-| `placeholder-{COLOR_NAME}` |                                                                                                                                   |
-| `ring-offset-{COLOR_NAME}` |                                                                                                                                   |
-
+| `divide-{COLOR_NAME}`      |                                                                                                                                |
+| `accent-{COLOR_NAME}`      |                                                                                                                                |
+| `caret-{COLOR_NAME}`       |                                                                                                                                |
+| `decoration-{COLOR_NAME}`  |                                                                                                                                |
+| `placeholder-{COLOR_NAME}` |                                                                                                                                |
+| `ring-offset-{COLOR_NAME}` |                                                                                                                                |
 
 So you can use `bg-primary`, `border-secondary`, etc. Read more about [daisyUI color utility classes](/docs/utilities).
 
+### Opacity values
+
+You can also use opacity values with color names.
+
+```html
+<div class="bg-primary/50">Primary background with 50% opacity</div>
+```
+
+- If you're using daisyUI as a Tailwind CSS plugin, the number can be any value between 0 and 100.
+
+- If you're using the daisyUI CDN file, only opacity values of 10, 20, 30, 40, 50, 60, 70, 80, 90 are available.
+
 ## Color opacity and muted colors
 
-`base-content` is the text color of the page by default. It's a dark color on light themes and it's a light color on dark themes. 
+`base-content` is the text color of the page by default. It's a dark color on light themes and it's a light color on dark themes.
 
 <div class="grid md:grid-cols-2 gap-10">
   <div class="relative bg-base-100 p-10 border border-base-content/10 rounded-box" data-theme="nord">
