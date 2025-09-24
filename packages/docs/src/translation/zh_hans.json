@@ -1155,5 +1155,15 @@
   "The `hr` tag at the beginning or end of each item, displays a line to connect items.": "位于每个项目开头或结尾的 `hr` 标签会显示一条线来连接项目。",
   "Inbox": "收件箱",
   "In chat window type this and write your prompt": "在聊天窗口中输入此内容并写下您的提示",
-  "don't re-invent <br/>the wheel <br/>every time": "无需每次<br/>都重复<br/>造轮子"
+  "don't re-invent <br/>the wheel <br/>every time": "无需每次<br/>都重复<br/>造轮子",
+  "Hover Gallery": "Hover Gallery 悬停画廊",
+  "Hover Gallery is container of images.": "悬停画廊（Hover Gallery）是一个图片容器。",
+  "The first image is visible be default and when we hover it horizontally, other images show up.": "首张图片默认可见，当水平悬停时，其他图片会依次显现。",
+  "Hover Gallery is useful for product cards in ecommerce sites, portfoilios or in image galleries.": "悬停画廊适用于电商网站上的商品展示卡、作品集或图片库场景。",
+  "Hover Gallery can include up to 10 images.": "悬停画廊最多可以包含10张图片。",
+  "The first image is visible by default, the other image will create invisible columns and hovering each column, reveals that image.": "首张图片默认可见，其余图片将生成不可见的列，悬停每列即可显示对应图片。",
+  "For example, here we have 4 images.": "例如，当前包含4张图片。",
+  "Try hovering on each column to see 2nd, 3rd and 4th image.": "尝试悬停在每列上，查看第2、第3、第4张图片。",
+  "Move your mouse on the image horizontally": "在图片上水平移动鼠标。",
+  "Hover Gallery in a card": "卡片内的悬停画廊",
 }
