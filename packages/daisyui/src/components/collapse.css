@@ -21,12 +21,12 @@
     opacity: 0;
   }
 
-  &:is([open], :focus:not(.collapse-close)),
+  &:is([open], :focus:not(.collapse-close), :focus-within:not(.collapse-close)),
   &:not(.collapse-close):has(> input:is([type="checkbox"], [type="radio"]):checked) {
     grid-template-rows: max-content 1fr;
   }
 
-  &:is([open], :focus:not(.collapse-close)) > .collapse-content,
+  &:is([open], :focus:not(.collapse-close), :focus-within:not(.collapse-close)) > .collapse-content,
   &:not(.collapse-close)
     > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
     visibility: visible;
@@ -48,11 +48,15 @@
     }
   }
 
-  &:focus:not(.collapse-close, .collapse[open]) > .collapse-title {
-    cursor: unset;
+  &:focus:not(.collapse-close, .collapse[open]),
+  &:focus-within:not(.collapse-close, .collapse[open]) {
+    > .collapse-title {
+      cursor: unset;
+    }
   }
 
-  &:is([open], :focus:not(.collapse-close)) > :where(.collapse-content),
+  &:is([open], :focus:not(.collapse-close), :focus-within:not(.collapse-close))
+    > :where(.collapse-content),
   &:not(.collapse-close)
     > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
     padding-bottom: 1rem;
@@ -83,7 +87,8 @@
     }
   }
 
-  &.collapse-arrow:focus:not(.collapse-close) {
+  &.collapse-arrow:focus:not(.collapse-close),
+  &.collapse-arrow:focus-within:not(.collapse-close) {
     > .collapse-title:after {
       transform: translateY(-50%) rotate(225deg);
     }
