@@ -474,7 +474,7 @@ classnames:
 </select>
 ```
 
-### ~AppearanceNone uses OS Native picker
+### ~Using OS native style for the options dropdown
 
 <select class="select appearance-none">
   <option disabled selected>Pick a color</option>
