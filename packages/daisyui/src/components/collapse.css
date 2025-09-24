@@ -184,7 +184,7 @@
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-duration: 0.2s;
     }
-    top: 1.9rem;
+    top: 50%;
     inset-inline-end: 1.4rem;
     content: "";
     transform-origin: 75% 75%;
