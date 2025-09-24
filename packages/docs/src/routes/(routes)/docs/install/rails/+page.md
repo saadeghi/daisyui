@@ -68,8 +68,8 @@ This works as a Tailwind CSS plugin so only the class names you need will be add
 Run this code to download latest version of daisyUI as a single js file
 
 ```sh:Terminal
-curl -sLo app/assets/tailwind/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLo app/assets/tailwind/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLo app/assets/tailwind/daisyui.mjs https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.mjs
+curl -sLo app/assets/tailwind/daisyui-theme.mjs https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.mjs
 ```
 
 Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
@@ -81,10 +81,10 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 @source "../../../app/javascript/**/*.js";
 @source "../../../app/views/**/*";
 
-@plugin "./daisyui.js";
+@plugin "./daisyui.mjs";
 
 /* Optional for custom themes – Docs: https://daisyui.com/docs/themes/#how-to-add-a-new-custom-theme */
-@plugin "./daisyui-theme.js"{
+@plugin "./daisyui-theme.mjs"{
   /* custom theme here */
 }
 ```
