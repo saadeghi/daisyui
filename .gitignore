@@ -4,6 +4,7 @@ package-lock.json
 bun.lockb
 bun.lock
 dist
+tmp
 
 .DS_Store
 *.tgz
