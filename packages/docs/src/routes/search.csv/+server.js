@@ -5,7 +5,6 @@ import { join, dirname } from "node:path"
 import { fileURLToPath } from "url"
 import { PUBLIC_DAISYUI_API_PATH } from "$env/static/public"
 import yaml from "js-yaml"
-import { dev } from "$app/environment"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -153,6 +152,7 @@ function getAllMarkdownFiles() {
       }
     } catch (e) {
       // Continue to next path
+      console.warn(`Directory not found: ${routesDir}`, e)
     }
   }
 

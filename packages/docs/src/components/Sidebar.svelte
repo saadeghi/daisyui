@@ -5,15 +5,8 @@
   import SidebarMenuItem from "$components/SidebarMenuItem.svelte"
   import ChangelogMenu from "$components/ChangelogMenu.svelte"
 
-  let {
-    closeDrawer,
-    openDrawer,
-    pages,
-    drawerSidebarScrollY,
-    version,
-    onOpenSearch,
-    onPreFetchSearch,
-  } = $props()
+  let { closeDrawer, pages, drawerSidebarScrollY, version, onOpenSearch, onPreFetchSearch } =
+    $props()
   let switchNavbarStyle = $derived(drawerSidebarScrollY > 40)
 
   let innerWidth = $state(undefined)

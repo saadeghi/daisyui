@@ -1,5 +1,5 @@
 export const stats = {
-  components: "61",
+  components: "63",
   utilities: "500+",
   themes: "35",
 }

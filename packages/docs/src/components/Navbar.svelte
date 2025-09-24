@@ -16,7 +16,6 @@
   })
 
   let {
-    pages,
     themes,
     hideLogoOnLargeScreen = false,
     hideSidebarButton = false,
@@ -27,8 +26,6 @@
     showLanguage = false,
     version,
     scrollY = $bindable(),
-    addScrollPaddingToNavbar,
-    removeScrollPaddingFromNavbar,
     onOpenSearch,
     onPreFetchSearch,
     children,

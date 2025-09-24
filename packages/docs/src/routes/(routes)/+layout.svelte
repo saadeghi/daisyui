@@ -61,21 +61,6 @@
     checked = ""
   }
 
-  function openDrawer() {
-    checked = true
-  }
-
-  let navbarScrollPadding = $state("5rem")
-  function addScrollPaddingToNavbar(action) {
-    navbarScrollPadding = "5rem"
-    document.documentElement.style.scrollPaddingTop = "5rem"
-  }
-
-  function removeScrollPaddingFromNavbar(action) {
-    navbarScrollPadding = "0rem"
-    document.documentElement.style.scrollPaddingTop = "0rem"
-  }
-
   Array.prototype.matchPattern = function (inputString) {
     for (const pattern of this) {
       const regexPattern = pattern.replace(/\*/g, ".*")
@@ -99,8 +84,6 @@
   <div class={`drawer-content`} inert={checked || undefined}>
     <Navbar
       version={data.daisyuiVersion}
-      {addScrollPaddingToNavbar}
-      {removeScrollPaddingFromNavbar}
       pages={data.pages}
       themes={data.themes}
       showComponentsBtn="true"
@@ -142,7 +125,7 @@
   </div>
   <div
     class="drawer-side z-40"
-    style="scroll-behavior: smooth; scroll-padding-top: {navbarScrollPadding};"
+    style="scroll-behavior: smooth; scroll-padding-top: 5rem;"
     bind:this={drawersidebar}
     onscroll={parseSidebarScroll}
   >
@@ -152,7 +135,6 @@
         pages={data.pages}
         version={data.daisyuiVersion}
         {closeDrawer}
-        {openDrawer}
         {drawerSidebarScrollY}
         onOpenSearch={handleOpenSearch}
         onPreFetchSearch={handlePreFetchSearch}

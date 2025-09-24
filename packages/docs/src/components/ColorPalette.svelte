@@ -14,6 +14,7 @@
   let open = $state(false)
   let inputValue = $state(value)
   let isDragging = $state(false)
+  // eslint-disable-next-line no-unassigned-vars
   let dialog
 
   function handleKeydown(event) {

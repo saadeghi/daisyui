@@ -6,6 +6,7 @@
   let chroma = $state(0)
   let hue = $state(0)
   let isDragging = $state(false)
+  // eslint-disable-next-line no-unassigned-vars
   let pickerElement
 
   let { value = $bindable() } = $props()

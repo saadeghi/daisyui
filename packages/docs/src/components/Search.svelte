@@ -6,6 +6,7 @@
   let searchQuery = $state("")
   let isSearchLoading = $state(false)
   let selectedIndex = $state(-1) // -1 means input is focused, 0+ means result item is focused
+  // eslint-disable-next-line no-unassigned-vars
   let searchModal // Dialog element binding
   let recentSearches = $state([])
   let bookmarkedSearches = $state([])
@@ -324,6 +325,7 @@ Card,/components/card/`
   }
 
   // Cache DOM elements for performance
+  // eslint-disable-next-line no-unassigned-vars
   let searchInput
 
   // Function to scroll selected item into view

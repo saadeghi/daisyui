@@ -42,9 +42,6 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
     <atom:link href="${storeUrl}/rss.xml" rel="self" type="application/rss+xml"/>
 
     ${products
-      .filter((product) => {
-        return true
-      })
       .map(
         (product) =>
           `
