@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.1.17 (2025-09-24)
 
+### Bug Fixes
+
+* fix: .prose class not working with daisyUI prefix. closes: [#4119](https://github.com/saadeghi/daisyui/issues/4119)
+
 ## 5.1.16 (2025-09-24)
 
 
