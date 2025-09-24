@@ -22,6 +22,7 @@ daisyUI Store,/store/
 Official daisyUI Figma Library,/store/daisyui-figma-library/
 Theme Generator,/theme-generator/
 daisyUI on Tailwind CSS Playground,/tailwindplay/
+daisyUI Blog,/blog/
 daisyUI Discord,/discord/
 daisyUI Swag Store,https://swag.daisyui.com/
 daisyUI GitHub,https://github.com/saadeghi/daisyui
@@ -31,7 +32,7 @@ daisyUI llms.txt,/llms.txt`
 // List of paths to ignore (relative to routes directory)
 const IGNORED_PATHS = [
   "(frameworks)/",
-  "blog/",
+  "blog/(posts)/",
   "docs/v5/",
   "pages/",
   "docs/upgrade/",

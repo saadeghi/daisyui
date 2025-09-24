@@ -44,7 +44,7 @@ classnames:
   let indeterminate = true;
 </script>
 
-### ~Toggle
+### ~Toggle (switch)
 
 <input type="checkbox" checked="checked" class="toggle" />
 

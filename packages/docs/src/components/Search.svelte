@@ -122,7 +122,7 @@ Card,/components/card/`
     // Normalize the search query by trimming whitespace and collapsing multiple spaces
     const normalizedQuery = searchQuery.trim().replace(/\s+/g, " ")
 
-    if (!normalizedQuery) {
+    if (!normalizedQuery || normalizedQuery.length <= 1) {
       // Show recent searches and bookmarks if available, otherwise show initial data
       if (recentSearches.length > 0 || bookmarkedSearches.length > 0) {
         // Combine recent and bookmarked searches (recent first)
@@ -207,9 +207,12 @@ Card,/components/card/`
     })
   })
 
-  // Update selected index when filtered results change
+  // Derived state for displayed results (limited to 20 items)
+  let displayedResults = $derived(filteredResults.slice(0, 20))
+
+  // Update selected index when displayed results change
   $effect(() => {
-    selectedIndex = filteredResults.length > 0 ? 0 : -1
+    selectedIndex = displayedResults.length > 0 ? 0 : -1
   })
 
   // LocalStorage management functions
@@ -339,9 +342,9 @@ Card,/components/card/`
   function handleKeyDown(event) {
     if (event.key === "ArrowDown") {
       event.preventDefault()
-      if (filteredResults.length === 0) return
+      if (displayedResults.length === 0) return
 
-      if (selectedIndex < filteredResults.length - 1) {
+      if (selectedIndex < displayedResults.length - 1) {
         selectedIndex++
       } else {
         // Loop back to first item
@@ -350,23 +353,23 @@ Card,/components/card/`
       scrollToSelectedItem()
     } else if (event.key === "ArrowUp") {
       event.preventDefault()
-      if (filteredResults.length === 0) return
+      if (displayedResults.length === 0) return
 
       if (selectedIndex > 0) {
         selectedIndex--
       } else {
         // Loop to last result
-        selectedIndex = filteredResults.length - 1
+        selectedIndex = displayedResults.length - 1
       }
       scrollToSelectedItem()
     } else if (event.key === "Enter") {
       event.preventDefault()
-      if (filteredResults.length === 0) return
+      if (displayedResults.length === 0) return
 
       // Use the currently selected item (selectedIndex should always be valid when there are results)
-      if (filteredResults[selectedIndex]) {
-        addToRecentSearches(filteredResults[selectedIndex])
-        window.location.href = filteredResults[selectedIndex].url
+      if (displayedResults[selectedIndex]) {
+        addToRecentSearches(displayedResults[selectedIndex])
+        window.location.href = displayedResults[selectedIndex].url
         const modal = document.getElementById("searchModal")
         if (modal && typeof modal.close === "function") {
           modal.close()
@@ -501,6 +504,12 @@ Card,/components/card/`
       event.preventDefault()
       openSearchModal()
     }
+
+    // Pressing / to open search
+    if (event.key === "/") {
+      event.preventDefault()
+      openSearchModal()
+    }
   }
 
   // Add global keyboard listener
@@ -520,16 +529,18 @@ Card,/components/card/`
     <!-- Container for items with action buttons (recent and bookmarked) -->
     <div
       id="search-result-{index}"
-      class="has-[a:focus-visible]:bg-primary focus-visible:bg-primary rounded-box focus-visible:text-primary-content aria-selected:bg-primary aria-selected:text-primary-content flex w-full items-center p-4 focus-visible:outline-none"
-      tabindex="0"
+      class="has-[a:focus-visible]:bg-neutral rounded-box aria-selected:bg-neutral aria-selected:text-neutral-content flex w-full items-center p-4"
       aria-selected={isSelected}
       onmouseenter={() => {
+        selectedIndex = index
+      }}
+      onfocuscapture={() => {
         selectedIndex = index
       }}
     >
       <a
         href={result.url}
-        class="min-w-0 flex-1 cursor-pointer appearance-none focus-visible:outline-none"
+        class="flex min-w-0 flex-1 cursor-pointer appearance-none items-center focus-visible:outline-none"
         onclick={() => handleResultClick(result)}
       >
         {@render resultContent(result)}
@@ -591,11 +602,14 @@ Card,/components/card/`
     <!-- Simple link for search results and popular pages -->
     <a
       id="search-result-{index}"
-      class="has-[a:focus-visible]:bg-primary focus-visible:bg-primary rounded-box focus-visible:text-primary-content aria-selected:bg-primary aria-selected:text-primary-content block w-full p-4 focus-visible:outline-none"
+      class="has-[a:focus-visible]:bg-neutral focus-visible:bg-neutral rounded-box focus-visible:text-neutral-content aria-selected:bg-neutral aria-selected:text-neutral-content flex w-full items-center p-4 focus-visible:outline-none"
       href={result.url}
       tabindex="0"
       aria-selected={isSelected}
       onmouseenter={() => {
+        selectedIndex = index
+      }}
+      onfocuscapture={() => {
         selectedIndex = index
       }}
       onclick={() => handleResultClick(result)}
@@ -606,58 +620,207 @@ Card,/components/card/`
 {/snippet}
 
 {#snippet resultContent(result)}
-  {#if result.isSection}
-    <div class="text-sm">
-      <span class="text-[0.625rem] opacity-60">{result.parentPageTitle}</span>
-      <span class="block">
-        <svg
-          class="mx-2 inline-block size-3 opacity-50"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-        >
-          <g
-            stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2"
+  <!-- icons -->
+  <div class="shrink-0 ps-3 pe-8 max-lg:hidden">
+    {#if result.url.startsWith("/docs/install")}
+      <svg
+        class="size-4 text-orange-400"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 48 48"
+        fill="none"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke="currentColor"
+      >
+        <path
+          d="M26 6H9C7.34315 6 6 7.34315 6 9V31C6 32.6569 7.34315 34 9 34H39C40.6569 34 42 32.6569 42 31V25"
+        ></path>
+        <path d="M24 34V42"></path>
+        <path d="M14 42L34 42"></path>
+        <path d="M32 13L37 18L42 13"></path>
+        <path d="M37 6L37 18"></path>
+      </svg>
+    {:else if result.url.startsWith("/docs/faq")}
+      <svg class="size-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt">
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
             fill="none"
             stroke="currentColor"
+            stroke-linecap="square"
+            stroke-miterlimit="10"
+            stroke-width="2"
+          ></circle>
+          <circle cx="12" cy="17.25" r="1.25" fill="currentColor" stroke-width="2"></circle>
+          <path
+            d="m9.244,8.369c.422-1.608,1.733-2.44,3.201-2.364,1.45.075,2.799.872,2.737,2.722-.089,2.63-2.884,2.273-3.197,4.773h.011"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="square"
+            stroke-miterlimit="10"
+            stroke-width="2"
+          ></path>
+        </g>
+      </svg>
+    {:else if result.url.startsWith("/docs/")}
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 48 48"
+        class="size-4 text-orange-400"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 7H16C20.4183 7 24 10.5817 24 15V42C24 38.6863 21.3137 36 18 36H5V7Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linejoin="bevel"
+        >
+        </path>
+        <path
+          d="M43 7H32C27.5817 7 24 10.5817 24 15V42C24 38.6863 26.6863 36 30 36H43V7Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linejoin="bevel"
+        >
+        </path>
+      </svg>
+    {:else if result.url.startsWith("/components/")}
+      <svg
+        class="size-4 text-green-600"
+        width="18"
+        height="18"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20 29H6V43H20V29Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="butt"
+          stroke-linejoin="bevel"
+        >
+        </path>
+        <path
+          d="M24 4L34 21H14L24 4Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="butt"
+          stroke-linejoin="bevel"
+        >
+        </path>
+        <path
+          d="M36 44C40.4183 44 44 40.4183 44 36C44 31.5817 40.4183 28 36 28C31.5817 28 28 31.5817 28 36C28 40.4183 31.5817 44 36 44Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="butt"
+          stroke-linejoin="bevel"
+        >
+        </path>
+      </svg>
+    {:else if result.url.startsWith("/store/")}
+      <svg
+        class="size-4 text-blue-400"
+        width="16"
+        height="16"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M40.0391 22V42H8.03906V22"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="butt"
+          stroke-linejoin="bevel"
+        >
+        </path>
+        <path
+          d="M5.84231 13.7766C4.31276 17.7377 7.26307 22 11.5092 22C14.8229 22 17.5276 19.3137 17.5276 16C17.5276 19.3137 20.2139 22 23.5276 22H24.546C27.8597 22 30.546 19.3137 30.546 16C30.546 19.3137 33.2518 22 36.5655 22C40.8139 22 43.767 17.7352 42.2362 13.7723L39.2337 6H8.84523L5.84231 13.7766Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linejoin="bevel"
+        >
+        </path>
+      </svg>
+    {:else}
+      <svg class="size-4 text-pink-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          d="M19.5 14.25V11.625C19.5 9.76104 17.989 8.25 16.125 8.25H14.625C14.0037 8.25 13.5 7.74632 13.5 7.125V5.625C13.5 3.76104 11.989 2.25 10.125 2.25H8.25M10.5 2.25H5.625C5.00368 2.25 4.5 2.75368 4.5 3.375V20.625C4.5 21.2463 5.00368 21.75 5.625 21.75H18.375C18.9963 21.75 19.5 21.2463 19.5 20.625V11.25C19.5 6.27944 15.4706 2.25 10.5 2.25Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+    {/if}
+  </div>
+  <div>
+    {#if result.isSection}
+      <div class="text-sm">
+        <span class="text-[0.625rem] opacity-60">{result.parentPageTitle}</span>
+        <span class="block">
+          <svg
+            class="mx-2 inline-block size-3 opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
           >
-            <path d="M15 10L20 15 15 20"></path>
-            <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
-          </g>
-        </svg>
-        {#if result.highlightedTitle}
-          {@html result.highlightedTitle}
+            <g
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="2"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M15 10L20 15 15 20"></path>
+              <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+            </g>
+          </svg>
+          {#if result.highlightedTitle}
+            {@html result.highlightedTitle}
+          {:else}
+            {result.title}
+          {/if}
+        </span>
+      </div>
+      <div class="ms-8 pt-1 font-mono text-[0.625rem] tracking-tighter opacity-30">
+        {#if result.highlightedUrl}
+          {@html result.highlightedUrl}
         {:else}
-          {result.title}
+          {result.url}
         {/if}
-      </span>
-    </div>
-    <div class="ms-8 pt-1 font-mono text-[0.625rem] tracking-tighter opacity-30">
-      {#if result.highlightedUrl}
-        {@html result.highlightedUrl}
-      {:else}
-        {result.url}
-      {/if}
-    </div>
-  {:else}
-    <div class="flex items-center gap-2 text-sm">
-      <span>
-        {#if result.highlightedTitle}
-          {@html result.highlightedTitle}
+      </div>
+    {:else}
+      <div class="flex items-center gap-2 text-sm">
+        <span>
+          {#if result.highlightedTitle}
+            {@html result.highlightedTitle}
+          {:else}
+            {result.title}
+          {/if}
+        </span>
+      </div>
+      <div class="pt-1 font-mono text-[0.625rem] tracking-tighter opacity-30">
+        {#if result.highlightedUrl}
+          {@html result.highlightedUrl}
         {:else}
-          {result.title}
+          {result.url}
         {/if}
-      </span>
-    </div>
-    <div class="pt-1 font-mono text-[0.625rem] tracking-tighter opacity-30">
-      {#if result.highlightedUrl}
-        {@html result.highlightedUrl}
-      {:else}
-        {result.url}
-      {/if}
-    </div>
-  {/if}
+      </div>
+    {/if}
+  </div>
 {/snippet}
 
 <!-- search modal -->
@@ -697,33 +860,28 @@ Card,/components/card/`
           placeholder="Type to search..."
           bind:value={searchQuery}
         />
-        {#if filteredResults.length > 0}
+
+        {#if isSearchLoading}
+          <span class="loading loading-dots loading-xs"></span>
+        {:else if filteredResults.length > 0}
           <span class="badge badge-xs">
             {filteredResults.length} result{filteredResults.length === 1 ? "" : "s"}
           </span>
         {/if}
       </label>
 
-      <div>
-        <!-- Loading state -->
-        {#if isSearchLoading}
-          <div class="flex flex-col items-center justify-center gap-4 py-8">
-            <span class="loading loading-spinner loading-md"></span>
-            <span class="ml-2">Loading...</span>
-          </div>
-        {/if}
-
+      <div class="pb-2">
         <!-- Search results -->
-        {#if !isSearchLoading && searchQuery.trim() && filteredResults.length > 0}
+        {#if !isSearchLoading && searchQuery.trim() && searchQuery.trim().length > 1 && filteredResults.length > 0}
           <div data-sveltekit-preload-data class="px-2">
-            {#each filteredResults as result, index}
+            {#each displayedResults as result, index}
               {@render searchResultItem(result, index, "search")}
             {/each}
           </div>
         {/if}
 
         <!-- No results message -->
-        {#if !isSearchLoading && searchQuery.trim() && filteredResults.length === 0}
+        {#if !isSearchLoading && searchQuery.trim() && searchQuery.trim().length > 1 && filteredResults.length === 0}
           <button
             class="text-base-content/60 block w-full appearance-none py-8 text-center"
             onclick={() => {
@@ -801,15 +959,15 @@ Card,/components/card/`
         {/if}
 
         <!-- Initial state - show recent/bookmarked items or popular components -->
-        {#if !isSearchLoading && !searchQuery.trim() && filteredResults.length > 0}
-          <div class="px-2 pb-2">
+        {#if (!searchQuery.trim() || searchQuery.trim().length <= 1) && filteredResults.length > 0}
+          <div class="px-2">
             <!-- Recent Searches Section -->
             {#if recentSearches.length > 0}
               <div
                 class="text-base-content px-4 py-2 font-mono text-[0.625rem] tracking-wider uppercase opacity-40"
               >
                 <svg
-                  class="inline-block size-3"
+                  class="inline-block size-4"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                 >
@@ -854,7 +1012,7 @@ Card,/components/card/`
                 class:mt-4={recentSearches.length > 0}
               >
                 <svg
-                  class="inline-block size-3"
+                  class="inline-block size-4"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 18 18"
                 >
@@ -883,7 +1041,7 @@ Card,/components/card/`
                 class="text-base-content px-4 py-2 font-mono text-[0.625rem] tracking-wider uppercase opacity-40"
               >
                 <svg
-                  class="inline-block size-3"
+                  class="inline-block size-4"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -900,7 +1058,7 @@ Card,/components/card/`
                 </svg>
                 Popular Pages
               </div>
-              {#each filteredResults as result, index}
+              {#each displayedResults as result, index}
                 {@render searchResultItem(result, index, "popular")}
               {/each}
             {/if}
