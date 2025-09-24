@@ -184,9 +184,8 @@ Create a new Elysia project,/docs/install/elysia/#create-a-new-elysia-project
 Install Tailwind CSS and daisyUI,/docs/install/elysia/#install-tailwind-css-and-daisyui
 Setup server file,/docs/install/elysia/#setup-server-file
 Add a index.html file,/docs/install/elysia/#add-a-indexhtml-file
-Create a new Fresh project,/docs/install/fresh/#create-a-new-fresh-project
-Add Tailwind CSS and daisyUI,/docs/install/fresh/#add-tailwind-css-and-daisyui
-Run the server,/docs/install/fresh/#run-the-server
+Create a Fresh Project,/docs/install/fresh/#create-a-fresh-project
+Install daisyUI,/docs/install/fresh/#install-daisyui
 Create a new React project,/docs/install/react/#create-a-new-react-project
 Install Tailwind CSS and daisyUI,/docs/install/react/#install-tailwind-css-and-daisyui
 Create a new Nuxt project,/docs/install/nuxt/#create-a-new-nuxt-project
