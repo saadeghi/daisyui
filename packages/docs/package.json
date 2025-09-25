@@ -29,7 +29,7 @@
     "remark-parse": "11.0.0",
     "rollup-plugin-visualizer": "6.0.3",
     "shiki": "3.13.0",
-    "super-sitemap": "^1.0.5",
+    "super-sitemap": "1.0.5",
     "svelte": "5.39.6",
     "theme-change": "2.5.0",
     "unist-util-visit": "5.0.0",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@minimal-analytics/ga4": "1.8.7",
-    "@neoconfetti/svelte": "^2.2.2",
+    "@neoconfetti/svelte": "2.2.2",
     "culori": "4.0.2",
     "js-yaml": "4.1.0",
     "pako": "2.1.0",
