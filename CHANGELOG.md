@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.22 (2025-09-25)
+
+
+### Bug Fixes
+
+* unwanted box shadow of `kbd` inside `prose` ([233c58a](https://github.com/saadeghi/daisyui/commit/233c58ab241f7e51a111de9e30dd50b8884a45e7))
+
 ## 5.1.21 (2025-09-25)
 
 ### Bug Fixes
