@@ -31,7 +31,7 @@
       calc(0% + 12px) calc(1px + 50%),
       calc(0% + 16px) calc(1px + 50%);
   }
-  &[multiple] {
+  &:where([multiple]) {
     @apply h-auto py-3 pe-3;
     background-image: none;
   }
