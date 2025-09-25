@@ -22,7 +22,17 @@ In chat window type this and Cursor will use daisyUI's llms.txt file to generate
 @web https://daisyui.com/llms.txt
 ```
 
-### Permanent setup
+### Project-level permanent setup
+
+You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. ([Read more at Cursor docs](https://docs.cursor.com/context/rules))
+
+Run this command to save the llms.txt file to `.cursor/rules/daisyui.mdc`
+
+```sh:Terminal
+curl -L https://daisyui.com/llms.txt --create-dirs -o .cursor/rules/daisyui.mdc
+```
+
+### Add as an optional document to Cursor
 
 1. Press <kbd class="kbd">⌘ CMD</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd>. Or if it's Windows, press <kbd class="kbd">⌃ Ctrl</kbd> + <kbd class="kbd">⇧ Shift</kbd> + <kbd class="kbd">P</kbd>.
 2. Type `Add new custom docs`
@@ -34,15 +44,6 @@ In chat window type this and Cursor will use daisyUI's llms.txt file to generate
 
 4. Now in chat window you can type `@docs` and choose `daisyUI` to provide daisyUI docs to Cursor.
 
-### Project-level permanent setup
-
-You can setup daisyUI's llms.txt file to your workspace so Cursor can use it by default. ([Read more at Cursor docs](https://docs.cursor.com/context/rules))
-
-Run this command to save the llms.txt file to `.cursor/rules/daisyui.mdc`
-
-```sh:Terminal
-curl -L https://daisyui.com/llms.txt --create-dirs -o .cursor/rules/daisyui.mdc
-```
 
 ### MCP server
 
