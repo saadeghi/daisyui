@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.20 (2025-09-25)
+
+
+### Bug Fixes
+
+* allow height customization for select with multiple attribute ([8292854](https://github.com/saadeghi/daisyui/commit/8292854752c39f243587d3003219c1d5960f8de1))
+
 ## 5.1.19 (2025-09-25)
 
 ## 5.1.18 (2025-09-24)
