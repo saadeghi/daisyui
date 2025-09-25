@@ -4,9 +4,6 @@ export const cleanCss = (cssContent) => {
   const spacingWidthFallbackRegex =
     /var\((--(spacing|width)[\w-]*),\s*((?:[^)(]+|\((?:[^)(]+|\([^)(]*\))*\))*)\)/g
   const spacingVarRegex = /var\(--spacing\)/g
-  // Unwrap @supports (color:color-mix(in lab, red, red)) blocks, keeping their contents
-  const colorMixSupportsUnwrapRegex =
-    /@supports\s*\(\s*color\s*:\s*color-mix\s*\(\s*in\s+lab\s*,\s*red\s*,\s*red\s*\)\s*\)\s*\{([\s\S]*?)\}/g
 
   // Remove empty fallbacks
   cssContent = cssContent.replace(emptyFallbackRegex, "var($1)")
@@ -23,13 +20,5 @@ export const cleanCss = (cssContent) => {
   // Replace all `var(--spacing)` with `0.25rem`
   cssContent = cssContent.replace(spacingVarRegex, "0.25rem")
 
-  // Unwrap @supports color-mix rules, keeping their contents
-  cssContent = cssContent.replace(colorMixSupportsUnwrapRegex, (match, inner) => inner)
-
-  // Minify the CSS by removing unnecessary whitespace
-  cssContent = cssContent
-    .replace(/\s*\n\s*/g, " ")
-    .replace(/\s{2,}/g, " ")
-    .trim()
   return cssContent
 }

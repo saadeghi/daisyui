@@ -54,10 +54,3 @@ test("does not remove var() with fallback if not spacing or width", () => {
   const output = "color: var(--primary-color, red);"
   expect(cleanCss(input)).toBe(output)
 })
-
-test("unwraps @supports (color:color-mix(in lab, red, red)) and keeps contents", () => {
-  const input = `.app {\n@supports (color:color-mix(in lab, red, red)){\n  color: red;\n  background: blue;\n}\n}`
-  const output = `.app { color: red; background: blue; }`
-  // Allow for possible extra blank lines
-  expect(cleanCss(input).replace(/\n+/g, "\n")).toBe(output.replace(/\n+/g, "\n"))
-})
