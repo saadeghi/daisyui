@@ -9,6 +9,7 @@
   border-radius: var(--radius-box, 1rem);
   width: 100%;
   grid-template-rows: max-content 0fr;
+  grid-template-columns: minmax(0, 1fr);
   isolation: isolate;
   @media (prefers-reduced-motion: no-preference) {
     transition: grid-template-rows 0.2s;
@@ -21,19 +22,21 @@
     opacity: 0;
   }
 
-  &:is([open], :focus:not(.collapse-close), :focus-within:not(.collapse-close)),
+  &:is([open], [tabindex]:focus:not(.collapse-close), [tabindex]:focus-within:not(.collapse-close)),
   &:not(.collapse-close):has(> input:is([type="checkbox"], [type="radio"]):checked) {
     grid-template-rows: max-content 1fr;
   }
 
-  &:is([open], :focus:not(.collapse-close), :focus-within:not(.collapse-close)) > .collapse-content,
+  &:is([open], [tabindex]:focus:not(.collapse-close), [tabindex]:focus-within:not(.collapse-close))
+    > .collapse-content,
   &:not(.collapse-close)
     > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
     visibility: visible;
     min-height: fit-content;
   }
   &:focus-visible,
-  &:has(> input:is([type="checkbox"], [type="radio"]):focus-visible) {
+  &:has(> input:is([type="checkbox"], [type="radio"]):focus-visible),
+  &:has(summary:focus-visible) {
     outline-color: var(--color-base-content);
     outline-style: solid;
     outline-width: 2px;
@@ -48,14 +51,14 @@
     }
   }
 
-  &:focus:not(.collapse-close, .collapse[open]),
-  &:focus-within:not(.collapse-close, .collapse[open]) {
+  &[tabindex]:focus:not(.collapse-close, .collapse[open]),
+  &[tabindex]:focus-within:not(.collapse-close, .collapse[open]) {
     > .collapse-title {
       cursor: unset;
     }
   }
 
-  &:is([open], :focus:not(.collapse-close), :focus-within:not(.collapse-close))
+  &:is([open], [tabindex]:focus:not(.collapse-close), [tabindex]:focus-within:not(.collapse-close))
     > :where(.collapse-content),
   &:not(.collapse-close)
     > :where(input:is([type="checkbox"], [type="radio"]):checked ~ .collapse-content) {
@@ -87,8 +90,8 @@
     }
   }
 
-  &.collapse-arrow:focus:not(.collapse-close),
-  &.collapse-arrow:focus-within:not(.collapse-close) {
+  &[tabindex].collapse-arrow:focus:not(.collapse-close),
+  &.collapse-arrow[tabindex]:focus-within:not(.collapse-close) {
     > .collapse-title:after {
       transform: translateY(-50%) rotate(225deg);
     }
@@ -116,7 +119,7 @@
     }
   }
 
-  &.collapse-plus:focus:not(.collapse-close) {
+  &[tabindex].collapse-plus:focus:not(.collapse-close) {
     > .collapse-title:after {
       content: "−";
     }
