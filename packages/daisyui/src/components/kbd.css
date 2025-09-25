@@ -9,6 +9,7 @@
   font-size: 0.875rem;
   height: var(--size);
   min-width: var(--size);
+  box-shadow: none;
 }
 
 .kbd-xs {
