@@ -9,6 +9,9 @@ export function remarkLinkHeadings() {
         node.children.forEach((child) => {
           if (child.type === "text") {
             headingText += child.value
+          } else if (child.type === "inlineCode") {
+            // Include inline code content
+            headingText += child.value
           } else if (child.type === "html" && child.value.includes('<Translate text="')) {
             // Extract text from Translate component
             const match = child.value.match(/<Translate text="([^"]+)"/)
@@ -18,11 +21,11 @@ export function remarkLinkHeadings() {
           }
         })
 
-        // Create id from heading text
+        // Create id from heading text - replace spaces with hyphens and remove special chars but keep alphanumeric
         const id = headingText
           .toLowerCase()
-          .replace(/[^\w\s-]/g, "")
           .replace(/\s+/g, "-")
+          .replace(/[^a-z0-9-]/g, "")
 
         // Create the link icon element wrapped in an anchor tag
         const linkIconWithAnchor = {

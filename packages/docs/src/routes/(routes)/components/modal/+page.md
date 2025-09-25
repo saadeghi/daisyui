@@ -45,11 +45,11 @@ classnames:
 
 
 ## There are 3 methods to use modals
-1. [Using HTML `<dialog>` element](#method-1-html-dialog-element)  
+1. [Using HTML `<dialog>` element](#method-1-html-dialog-element-recommended)  
   It needs JS to open but it has better accessibility and we can close it using `Esc` key  
-2. [Using checkbox](#method-2-checkbox)  
+2. [Using checkbox](#method-2-checkbox-legacy)  
   A hidden `<input type="checkbox">` to control the state of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
-3. [Using `<a>` anchor links](#method-3-using-anchor-links)  
+3. [Using `<a>` anchor links](#method-3-using-anchor-links-legacy)  
   A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 
 > :INFO:

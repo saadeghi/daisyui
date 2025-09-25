@@ -42,7 +42,7 @@ classnames:
 
 ## There are 3 methods to use a dropdowns
 1. [details and summary elements](#method-1-details-and-summary)  
-2. [popover API and anchor positioning `new`](#method-2-popover-api-and-anchor-positioning)  
+2. [popover API and anchor positioning `new`](#method-2-popover-api-and-anchor-positioning-new)  
 3. [CSS focus](#method-3-css-focus)  
 
 
