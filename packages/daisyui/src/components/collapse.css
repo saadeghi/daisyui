@@ -165,7 +165,20 @@
 
 .collapse:is(details) {
   width: 100%;
-
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (transition: content-visibility allow-discrete) and (interpolate-size: allow-keywords) {
+      &::details-content {
+        transition:
+          content-visibility 0.2s allow-discrete,
+          height 0.2s;
+        height: 0;
+        interpolate-size: allow-keywords;
+      }
+      &:where([open], .collapse-open)::details-content {
+        height: auto;
+      }
+    }
+  }
   & summary {
     position: relative;
     display: block;
