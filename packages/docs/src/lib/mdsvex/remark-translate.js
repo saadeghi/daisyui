@@ -28,18 +28,18 @@ const handleTextWithCode = (text) => {
 
     if (char === "`") {
       if (inCode) {
-        // End of code block
-        if (currentText.trim()) {
-          parts.push(createTranslateNode(currentText.trim()))
+        // End of code block - preserve spaces by not trimming
+        if (currentText) {
+          parts.push(createTranslateNode(currentText))
           currentText = ""
         }
         parts.push({ type: "html", value: `<code>${codeContent}</code>` })
         codeContent = ""
         inCode = false
       } else {
-        // Start of code block
-        if (currentText.trim()) {
-          parts.push(createTranslateNode(currentText.trim()))
+        // Start of code block - preserve spaces by not trimming
+        if (currentText) {
+          parts.push(createTranslateNode(currentText))
           currentText = ""
         }
         inCode = true
@@ -54,9 +54,9 @@ const handleTextWithCode = (text) => {
     }
   }
 
-  // Handle any remaining text
-  if (currentText.trim()) {
-    parts.push(createTranslateNode(currentText.trim()))
+  // Handle any remaining text - preserve spaces by not trimming
+  if (currentText) {
+    parts.push(createTranslateNode(currentText))
   }
 
   // If we only have one part and it's a translate node, return it directly
@@ -64,8 +64,8 @@ const handleTextWithCode = (text) => {
     return parts[0]
   }
 
-  // Otherwise, combine all parts
-  const combinedHtml = parts.map((p) => p.value).join(" ")
+  // Otherwise, combine all parts without adding extra spaces
+  const combinedHtml = parts.map((p) => p.value).join("")
   return { type: "html", value: combinedHtml }
 }
 
@@ -124,13 +124,13 @@ export function remarkTranslate() {
               if (cell.children) {
                 // For each element in the cell
                 cell.children.forEach((child, index) => {
-                  if (child.type === "text" && child.value.trim()) {
-                    cell.children[index] = handleTextWithCode(child.value.trim())
+                  if (child.type === "text" && child.value) {
+                    cell.children[index] = handleTextWithCode(child.value)
                   } else if (child.type === "paragraph" && child.children) {
                     // For paragraphs inside cells
                     child.children.forEach((grandChild, grandIndex) => {
-                      if (grandChild.type === "text" && grandChild.value.trim()) {
-                        child.children[grandIndex] = handleTextWithCode(grandChild.value.trim())
+                      if (grandChild.type === "text" && grandChild.value) {
+                        child.children[grandIndex] = handleTextWithCode(grandChild.value)
                       }
                     })
                   } else if (child.type === "inlineCode") {
@@ -149,8 +149,13 @@ export function remarkTranslate() {
       }
     })
 
-    // Process paragraphs
-    visit(tree, "paragraph", (node) => {
+    // Process paragraphs (but skip those inside table cells as they're already processed)
+    visit(tree, "paragraph", (node, index, parent) => {
+      // Skip paragraphs inside table cells - they are already processed by table processing above
+      if (parent && parent.type === "tableCell") {
+        return
+      }
+
       if (node.children && node.children.length) {
         let i = 0
         while (i < node.children.length) {
@@ -162,7 +167,7 @@ export function remarkTranslate() {
               // If there are line breaks, create multiple translate nodes
               const newNodes = []
               lines.forEach((line, lineIndex) => {
-                if (lineIndex % 2 === 0 && line.trim()) {
+                if (lineIndex % 2 === 0 && line) {
                   // Text content
                   newNodes.push(handleTextWithCode(line))
                 } else {
@@ -172,7 +177,7 @@ export function remarkTranslate() {
               })
               node.children.splice(i, 1, ...newNodes)
               i += newNodes.length
-            } else if (child.value.trim()) {
+            } else if (child.value) {
               // Simple text without line breaks
               const nodes = [handleTextWithCode(child.value)]
               node.children.splice(i, 1, ...nodes)
@@ -195,7 +200,7 @@ export function remarkTranslate() {
             let i = 0
             while (i < child.children.length) {
               const grandChild = child.children[i]
-              if (grandChild.type === "text" && grandChild.value.trim()) {
+              if (grandChild.type === "text" && grandChild.value) {
                 const nodes = [handleTextWithCode(grandChild.value)]
                 child.children.splice(i, 1, ...nodes)
                 i += nodes.length
@@ -214,7 +219,7 @@ export function remarkTranslate() {
         let i = 0
         while (i < node.children.length) {
           const child = node.children[i]
-          if (child.type === "text" && child.value.trim()) {
+          if (child.type === "text" && child.value) {
             const nodes = [handleTextWithCode(child.value)]
             node.children.splice(i, 1, ...nodes)
             i += nodes.length
@@ -233,7 +238,7 @@ export function remarkTranslate() {
             let i = 0
             while (i < child.children.length) {
               const grandChild = child.children[i]
-              if (grandChild.type === "text" && grandChild.value.trim()) {
+              if (grandChild.type === "text" && grandChild.value) {
                 const nodes = [handleTextWithCode(grandChild.value)]
                 child.children.splice(i, 1, ...nodes)
                 i += nodes.length
