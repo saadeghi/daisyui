@@ -15,11 +15,21 @@ export async function loadThemes() {
 
 export async function compileAndExtractStyles(styleContent, defaultTheme, theme) {
   const compiledContent = (
-    await compile(`
+    await compile(
+      `
     @layer theme{${defaultTheme}${theme}}
     @layer wrapperStart{${styleContent}}
     @layer wrapperEnd
-  `)
+  `,
+      {
+        // Polyfills:
+        // None = 0,
+        // AtProperty = 1,
+        // ColorMix = 2,
+        // All = 3
+        polyfills: 1, // AtProperty only, excludes ColorMix
+      },
+    )
   ).build([])
 
   const startIndex = compiledContent.indexOf("@layer wrapperStart")
