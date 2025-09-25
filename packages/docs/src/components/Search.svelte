@@ -501,6 +501,15 @@ Card,/components/card/`
 
   // Handle keyboard shortcuts
   function handleGlobalKeydown(event) {
+    // Don't trigger shortcuts if user is typing in an input/textarea or contenteditable element
+    if (
+      event.target.tagName === "INPUT" ||
+      event.target.tagName === "TEXTAREA" ||
+      event.target.isContentEditable
+    ) {
+      return
+    }
+
     // Cmd+K or Ctrl+K to open search
     if ((event.metaKey || event.ctrlKey) && event.key === "k") {
       event.preventDefault()
