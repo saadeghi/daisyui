@@ -19,7 +19,8 @@ applyTo: "**"
 
 ## Writing code
 
-- Becareful about the syntax, always double check it
+- Do not guess, do not hallucinate, write code based on the information and facts you have, if you don't have enough information, ask for more information
+- Be careful about the syntax, always double check it
 - If you're asked to fix a specific issue, only fix that issue, do not change anything else unless necessary
 - Do not randomly change indentation, formatting, or style of existing code unless asked
 - If you're asked to refactor code, make sure to keep the same functionality and behavior
@@ -31,6 +32,7 @@ applyTo: "**"
 - Always write small, pure functions that do one thing only. avoid side effects, avoid large functions if possible
 - Always use best practices and latest standards
 - Prioritize performance security, clean code, readability and accessibility
+- Use early returns to reduce nesting
 
 ## Security
 
@@ -54,7 +56,7 @@ applyTo: "**"
 - We use Bun test runner for testing. Read Bun docs for more info: https://bun.sh/docs/cli/test
 - For tests, use the available Bun test features and syntax, if you need to install an addional package, ask first
 - Always write testable code
-- After generating new code, write a temporary test file at `/tmp/FILENAME.test.js` to check the functionality of the generated code. `tmp` folder is ignored in git.
+- After generating new code, write a temporary test file at `/tmp/FILENAME.test.js` to check the functionality of the generated code. `tmp` folder is ignored in git and you don't need to remove the remove the test file after you're done
 - If you're asked to write a permanent test file, write the test file within the project structure, do not write it in `/tmp`
 
 ## Debugging
