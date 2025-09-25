@@ -43,6 +43,10 @@
 /* prose */
 
 .prose {
+  code {
+    direction: ltr;
+    display: inline-block;
+  }
   @media (min-width: 64rem) {
     padding-inline-start: 2rem;
   }

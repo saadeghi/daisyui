@@ -126,6 +126,58 @@
     </div>
     <div class="bg-base-content/10 mx-1 my-10 h-[var(--border)]"></div>
   {/if}
+  {#if $page.url.pathname.startsWith("/docs/install/") && $page.url.pathname !== "/docs/install/"}
+    <div class="flex justify-end">
+      <div>
+        <a class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3" href="/docs/use/">
+          <div class="flex flex-col items-end gap-0.5 leading-[1.1]">
+            <span
+              class="text-neutral-content/50 hidden text-[0.5625rem] font-semibold tracking-wide md:block"
+            >
+              {$t("Next")}
+            </span>
+            <span>{$t("Use")}</span>
+          </div>
+          <svg
+            class="h-6 w-6 fill-current md:h-8 md:w-8 rtl:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"> </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="bg-base-content/10 mx-1 my-10 h-[var(--border)]"></div>
+  {/if}
+  {#if $page.url.pathname.startsWith("/docs/editor/") && $page.url.pathname !== "/docs/editor/"}
+    <div class="flex justify-end">
+      <div>
+        <a class="btn btn-neutral btn-sm md:btn-md gap-2 lg:gap-3" href="/docs/customize/">
+          <div class="flex flex-col items-end gap-0.5 leading-[1.1]">
+            <span
+              class="text-neutral-content/50 hidden text-[0.5625rem] font-semibold tracking-wide md:block"
+            >
+              {$t("Next")}
+            </span>
+            <span>{$t("Customize")}</span>
+          </div>
+          <svg
+            class="h-6 w-6 fill-current md:h-8 md:w-8 rtl:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"> </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="bg-base-content/10 mx-1 my-10 h-[var(--border)]"></div>
+  {/if}
 
   <div class="flex flex-col justify-between gap-2 px-4 text-xs md:flex-row">
     <div class="flex flex-col gap-2">

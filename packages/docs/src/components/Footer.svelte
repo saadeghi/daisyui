@@ -32,7 +32,7 @@
         </p>
         <div class="mb-2 grid grid-cols-5 gap-2 lg:gap-3">
           <a
-            title="GitHub"
+            aria-label="GitHub"
             target="_blank"
             rel="noopener, noreferrer"
             href="https://github.com/saadeghi/daisyui"
@@ -60,7 +60,7 @@
           </a>
 
           <a
-            title="Discord"
+            aria-label="Discord"
             target="_blank"
             rel="noopener, noreferrer"
             href="https://daisyui.com/discord/"
@@ -90,7 +90,7 @@
             </svg>
           </a>
           <a
-            title="OpenCollective"
+            aria-label="OpenCollective"
             target="_blank"
             rel="noopener, noreferrer"
             href="https://opencollective.com/daisyui"
@@ -111,7 +111,7 @@
             </svg>
           </a>
           <a
-            title="NPM"
+            aria-label="NPM"
             target="_blank"
             rel="noopener, noreferrer"
             href="https://www.npmjs.com/package/daisyui"
@@ -127,7 +127,7 @@
             >
           </a>
           <a
-            title="X"
+            aria-label="X"
             target="_blank"
             rel="noopener, noreferrer"
             href="https://x.com/daisyui_"
@@ -142,7 +142,7 @@
             </svg>
           </a>
           <a
-            title="Unpkg CDN"
+            aria-label="Unpkg CDN"
             target="_blank"
             rel="noopener, noreferrer"
             href="https://unpkg.com/browse/daisyui/"
@@ -162,7 +162,7 @@
             </svg>
           </a>
           <a
-            title="JSdeliver CDN"
+            aria-label="JSdeliver CDN"
             target="_blank"
             rel="noopener, noreferrer"
             href="https://www.jsdelivr.com/package/npm/daisyui"
@@ -182,7 +182,7 @@
             </svg>
           </a>
           <a
-            title="StackBlitz"
+            aria-label="StackBlitz"
             target="_blank"
             rel="noopener, noreferrer"
             href="/stackblitz"
@@ -202,7 +202,7 @@
             </svg>
           </a>
           <a
-            title="CodePen"
+            aria-label="CodePen"
             target="_blank"
             rel="noopener, noreferrer"
             href="/codepen"
@@ -229,7 +229,7 @@
             </svg>
           </a>
           <a
-            title="Tailwind Play"
+            aria-label="Tailwind Play"
             target="_blank"
             rel="noopener, noreferrer"
             href="/tailwindplay"
