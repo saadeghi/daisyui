@@ -56,7 +56,7 @@ applyTo: "**"
 - We use Bun test runner for testing. Read Bun docs for more info: https://bun.sh/docs/cli/test
 - For tests, use the available Bun test features and syntax, if you need to install an addional package, ask first
 - Always write testable code
-- After generating new code, write a temporary test file at `/tmp/FILENAME.test.js` to check the functionality of the generated code. `tmp` folder is ignored in git and you don't need to remove the remove the test file after you're done
+- After generating new code, write a temporary test file at `/tmp/FILENAME.test.js` to check the functionality of the generated code. `tmp` folder is ignored in git and you don't need to remove the test file after you're done
 - If you're asked to write a permanent test file, write the test file within the project structure, do not write it in `/tmp`
 
 ## Debugging
