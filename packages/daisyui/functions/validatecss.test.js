@@ -55,6 +55,7 @@ test("Validate all CSS files", () => {
       { type: "AtRuleInvalid", value: "property" },
       { type: "SelectorError", value: { type: "UnsupportedPseudoElement", value: "picker" } },
       { type: "SelectorError", value: { type: "UnsupportedPseudoElement", value: "picker-icon" } },
+      { type: "SelectorError", value: { type: "UnsupportedPseudoClass", value: "env" } },
     ]
 
     const relevantWarnings = result.warnings.filter((warning) => {
