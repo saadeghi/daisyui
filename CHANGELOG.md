@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.23 (2025-09-25)
+
+
+### Bug Fixes
+
+* `<details>` collapse animation. closes: [#4128](https://github.com/saadeghi/daisyui/issues/4128) ([f2a453a](https://github.com/saadeghi/daisyui/commit/f2a453abd40cddac5cb9c36caebf407840f445c9))
+
 ## 5.1.22 (2025-09-25)
 
 
