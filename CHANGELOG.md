@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.1.21 (2025-09-25)
 
+### Bug Fixes
+
+* fix: collapse focus-within issue. closes: [#4128](https://github.com/saadeghi/daisyui/issues/4128)
+* fix: text truncate issue. closes: [#2965](https://github.com/saadeghi/daisyui/issues/2965)
+
 ## 5.1.20 (2025-09-25)
 
 
@@ -12,6 +17,10 @@ All notable changes to this project will be documented in this file. See [commit
 * allow height customization for select with multiple attribute ([8292854](https://github.com/saadeghi/daisyui/commit/8292854752c39f243587d3003219c1d5960f8de1))
 
 ## 5.1.19 (2025-09-25)
+
+### Bug Fixes
+
+* Update dependencies
 
 ## 5.1.18 (2025-09-24)
 
