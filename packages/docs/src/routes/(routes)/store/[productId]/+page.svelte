@@ -589,7 +589,7 @@
                   href={value}
                   class="flex w-full cursor-pointer flex-col items-center gap-2 p-4 text-center capitalize transition-colors *:opacity-50 *:transition-opacity hover:*:opacity-100 focus-visible:outline focus-visible:-outline-offset-2 md:p-6"
                   onclick={(e) => {
-                    e.preventDefault(), screenshotDialog.showModal()
+                    ;(e.preventDefault(), screenshotDialog.showModal())
                     screenshotUrl = value
                   }}
                 >

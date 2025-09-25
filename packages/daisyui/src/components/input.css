@@ -73,14 +73,14 @@
     position: absolute;
     inset-inline-end: 0.75em;
   }
-  
+
   &:has(> input[type="date"]) {
     :where(input[type="date"]) {
       @apply inline-flex;
       -webkit-appearance: none;
       appearance: none;
     }
-    
+
     input[type="date"]::-webkit-calendar-picker-indicator {
       position: absolute;
       inset-inline-end: 0.75em;
