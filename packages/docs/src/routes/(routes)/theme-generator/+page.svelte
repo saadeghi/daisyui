@@ -20,6 +20,9 @@
   let showConfetti = $state(false)
   let confettiTarget = null
 
+  // Global picker mode state
+  let pickerMode = $state("palette") // "palette" or "slider"
+
   // Function to trigger confetti effect
   const triggerConfetti = async () => {
     showConfetti = false
@@ -64,6 +67,7 @@
   let dockActiveItem = $state("editor")
   let themeCSS = $state("")
   let highlightedThemeId = $state(null)
+  let colorModalsOpen = $state(0) // Track number of open color modals
 
   const getStoredThemesByType = (type) => {
     if (!browser) return []
@@ -257,12 +261,28 @@
     if (allValid) {
       localStorage.setItem(LS_KEY, JSON.stringify(themes))
       localStorage.setItem("gen-theme-id", currentTheme.id)
-      setThemeInUrl(currentTheme)
+      // Only update URL when no color modals are open to prevent lag during dragging
+      if (colorModalsOpen === 0) {
+        setThemeInUrl(currentTheme)
+      }
     }
     if (validateThemeName(currentTheme.name) && validateThemeStructure(currentTheme)) {
       currentTheme = themes.find((item) => item.id === currentTheme.id)
     }
   })
+
+  // Function to handle color modal state changes
+  function handleColorModalStateChange(isOpen) {
+    if (isOpen) {
+      colorModalsOpen++
+    } else {
+      colorModalsOpen--
+      // Update URL when modal closes if no other modals are open
+      if (colorModalsOpen === 0) {
+        setThemeInUrl(currentTheme)
+      }
+    }
+  }
 
   const loadTheme = (id) => {
     currentTheme = themes.find((theme) => theme.id === id)
@@ -715,6 +735,8 @@
                       : ""}
                   colorPairs={data.colorPairs}
                   themeColors={currentTheme}
+                  bind:pickerMode
+                  onModalStateChange={handleColorModalStateChange}
                 />
               {/if}
             {/each}
