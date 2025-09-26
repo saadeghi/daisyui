@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.24 (2025-09-26)
+
+
+### Bug Fixes
+
+* cally selected day hover color. closes: [#4085](https://github.com/saadeghi/daisyui/issues/4085) ([f115ca9](https://github.com/saadeghi/daisyui/commit/f115ca9adaae365616ad5592a8c8e3a55e776a11))
+
 ## 5.1.23 (2025-09-25)
 
 
