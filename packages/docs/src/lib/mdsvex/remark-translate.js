@@ -10,6 +10,51 @@ const createTranslateNode = (text) => ({
   value: `<Translate text="${escapeQuotes(text)}" />`,
 })
 
+// Helper function to split combined text into potential translation units
+const splitTextIntoSentences = (text) => {
+  // Split by line breaks (which represent <br> in markdown when using two spaces)
+  const parts = text.split(/\s*\n\s*/).filter((part) => part.trim())
+
+  // Also try splitting by periods followed by uppercase letters (sentence boundaries)
+  const allParts = []
+  for (const part of parts) {
+    // Split sentences but be careful not to split on periods inside code blocks
+    const sentences = part.split(/(?<=\.)\s+(?=[A-Z])/)
+    allParts.push(...sentences)
+  }
+
+  return allParts.map((part) => part.trim()).filter((part) => part.length > 0)
+}
+
+// Helper function to handle combined text that might need to be split
+const handleCombinedText = (combinedText) => {
+  // First, try to process as a single unit
+  const singleResult = handleTextWithCode(combinedText)
+
+  // If the text contains line breaks, try splitting into sentences
+  if (combinedText.includes("\n")) {
+    const sentences = splitTextIntoSentences(combinedText)
+    if (sentences.length > 1) {
+      // Create separate translation nodes for each sentence
+      const nodes = sentences.map((sentence) => handleTextWithCode(sentence))
+
+      // If we have multiple sentences, return them as separate nodes with line breaks
+      const result = []
+      for (let i = 0; i < nodes.length; i++) {
+        result.push(nodes[i])
+        if (i < nodes.length - 1) {
+          // Add a line break between sentences
+          result.push({ type: "html", value: "<br>" })
+        }
+      }
+      return result
+    }
+  }
+
+  // Return as single translation node
+  return [singleResult]
+}
+
 // Helper function to handle text with code blocks
 const handleTextWithCode = (text) => {
   // If the text is already wrapped in HTML tags, return as is
@@ -17,56 +62,9 @@ const handleTextWithCode = (text) => {
     return { type: "html", value: text }
   }
 
-  // Split text into parts: text and code blocks
-  const parts = []
-  let currentText = ""
-  let inCode = false
-  let codeContent = ""
-
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i]
-
-    if (char === "`") {
-      if (inCode) {
-        // End of code block - preserve spaces by not trimming
-        if (currentText) {
-          parts.push(createTranslateNode(currentText))
-          currentText = ""
-        }
-        parts.push({ type: "html", value: `<code>${codeContent}</code>` })
-        codeContent = ""
-        inCode = false
-      } else {
-        // Start of code block - preserve spaces by not trimming
-        if (currentText) {
-          parts.push(createTranslateNode(currentText))
-          currentText = ""
-        }
-        inCode = true
-      }
-      continue
-    }
-
-    if (inCode) {
-      codeContent += char
-    } else {
-      currentText += char
-    }
-  }
-
-  // Handle any remaining text - preserve spaces by not trimming
-  if (currentText) {
-    parts.push(createTranslateNode(currentText))
-  }
-
-  // If we only have one part and it's a translate node, return it directly
-  if (parts.length === 1 && parts[0].type === "html" && parts[0].value.startsWith("<Translate")) {
-    return parts[0]
-  }
-
-  // Otherwise, combine all parts without adding extra spaces
-  const combinedHtml = parts.map((p) => p.value).join("")
-  return { type: "html", value: combinedHtml }
+  // For translation keys, preserve backticks as they appear in the original markdown
+  // The Translate component will handle converting them to <code> tags during rendering
+  return createTranslateNode(text)
 }
 
 export function remarkTranslate() {
@@ -157,36 +155,63 @@ export function remarkTranslate() {
       }
 
       if (node.children && node.children.length) {
-        let i = 0
-        while (i < node.children.length) {
-          const child = node.children[i]
-          if (child.type === "text") {
-            // Split text by line breaks to preserve formatting
-            const lines = child.value.split(/(\n+)/)
-            if (lines.length > 1) {
-              // If there are line breaks, create multiple translate nodes
-              const newNodes = []
-              lines.forEach((line, lineIndex) => {
-                if (lineIndex % 2 === 0 && line) {
-                  // Text content
-                  newNodes.push(handleTextWithCode(line))
-                } else {
-                  // Line breaks
-                  newNodes.push({ type: "text", value: line })
-                }
-              })
-              node.children.splice(i, 1, ...newNodes)
-              i += newNodes.length
-            } else if (child.value) {
-              // Simple text without line breaks
-              const nodes = [handleTextWithCode(child.value)]
-              node.children.splice(i, 1, ...nodes)
-              i += nodes.length
+        // Check if the paragraph contains mixed content (text, inlineCode, or break)
+        const hasMixedContent =
+          (node.children.some((child) => child.type === "inlineCode") ||
+            node.children.some((child) => child.type === "break")) &&
+          node.children.some((child) => child.type === "text")
+
+        if (hasMixedContent) {
+          // Combine all children into a single translation string, preserving backticks
+          let combinedText = ""
+          for (const child of node.children) {
+            if (child.type === "text") {
+              combinedText += child.value
+            } else if (child.type === "inlineCode") {
+              combinedText += `\`${child.value}\``
+            } else if (child.type === "break") {
+              combinedText += "\n"
+            }
+          }
+
+          // Handle the combined text, potentially splitting into multiple translation units
+          const translationNodes = handleCombinedText(combinedText)
+
+          // Replace all children with the translation nodes
+          node.children = translationNodes
+        } else {
+          // Process each child individually as before
+          let i = 0
+          while (i < node.children.length) {
+            const child = node.children[i]
+            if (child.type === "text") {
+              // Split text by line breaks to preserve formatting
+              const lines = child.value.split(/(\n+)/)
+              if (lines.length > 1) {
+                // If there are line breaks, create multiple translate nodes
+                const newNodes = []
+                lines.forEach((line, lineIndex) => {
+                  if (lineIndex % 2 === 0 && line) {
+                    // Text content
+                    newNodes.push(handleTextWithCode(line))
+                  } else {
+                    // Line breaks
+                    newNodes.push({ type: "text", value: line })
+                  }
+                })
+                node.children.splice(i, 1, ...newNodes)
+                i += newNodes.length
+              } else if (child.value) {
+                // Simple text without line breaks
+                const nodes = [handleTextWithCode(child.value)]
+                node.children.splice(i, 1, ...nodes)
+                i += nodes.length
+              } else {
+                i++
+              }
             } else {
               i++
             }
-          } else {
-            i++
           }
         }
       }

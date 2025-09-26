@@ -42,6 +42,7 @@
     "js-yaml": "4.1.0",
     "pako": "2.1.0",
     "svelte-countdown": "1.1.2",
-    "svelte-countup": "0.2.8"
+    "svelte-countup": "0.2.8",
+    "unified": "^11.0.5"
   }
 }

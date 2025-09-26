@@ -118,6 +118,21 @@ const replaceVariables = (text, vars) => {
   return text
 }
 
+// Function to convert backticks to HTML code tags in translated text
+const convertBackticksToCode = (text) => {
+  return text.replace(/`([^`]+)`/g, (match, content) => {
+    // Escape HTML entities in the content
+    const escapedContent = content
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+    
+    return `<code>${escapedContent}</code>`
+  })
+}
+
 // Function to get translation text for a given key and language
 const getTranslationText = (translations, lang, key) => {
   return translations[lang]?.[key]
@@ -135,7 +150,7 @@ const handleMissingTranslation = (translations, currentLang, key, returnFallback
     console.warn(
       `"${currentLang}.${key}" translation not found. Showing "${defaultLang}.${key}" instead.`,
     )
-    return translations[defaultLang][key]
+    return convertBackticksToCode(translations[defaultLang][key])
   }
   return null
 }
@@ -159,7 +174,8 @@ const translateSync = (currentLang, key, vars, returnFallback) => {
       return key
     }
     const defaultText = getTranslationText(translations, defaultLang, key)
-    return defaultText ? replaceVariables(defaultText, vars) : key
+    const processedDefault = defaultText ? convertBackticksToCode(defaultText) : key
+    return defaultText ? replaceVariables(processedDefault, vars) : key
   }
 
   // Get the translation text
@@ -169,7 +185,9 @@ const translateSync = (currentLang, key, vars, returnFallback) => {
     text = handleMissingTranslation(translations, currentLang, key, returnFallback)
   }
 
-  return replaceVariables(text, vars)
+  // Convert backticks to HTML code tags and replace variables
+  const processedText = convertBackticksToCode(text)
+  return replaceVariables(processedText, vars)
 }
 
 export const t = derived(
