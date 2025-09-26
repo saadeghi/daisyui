@@ -30,7 +30,7 @@
     font-size: 0.7rem;
   }
   ::part(day):hover {
-    &:not(::part(selected), ::part(button today)) {
+    &:not(selected, today) {
       background: var(--color-base-200);
     }
   }
