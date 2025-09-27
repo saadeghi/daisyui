@@ -135,7 +135,8 @@ In above example, all daisyUI classes will be prefixed with `d-`. For example, `
   prefix: "d-";
 }
 ```
-In above example, all daisyUI classes will be prefixed with `d-` and then further prefixed with `tw:`. The only exception is the `theme-controller` class. See [Theme Controller component](https://daisyui.com/components/theme-controller/) for more information. Tailwind CSS classes will be prefixed with `tw:`. To understand how Tailwind CSS prefix works, see [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option) on official Tailwind CSS documentation.
+In above example, all daisyUI classes will be prefixed with `d-` and then further prefixed with `tw:`. The only exception is the `theme-controller` class. See [Theme Controller component](https://daisyui.com/components/theme-controller/) for more information. Tailwind CSS classes will be prefixed with `tw:`. To understand how Tailwind CSS prefix works, see [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option), and [Using a preifx](https://tailwindcss.com/docs/upgrade-guide#using-a-prefix) on official Tailwind CSS documentation.
+For example, `btn` will be `tw:d-btn`.
 
 ## logs
   
