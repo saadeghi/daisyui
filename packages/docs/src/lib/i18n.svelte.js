@@ -123,12 +123,12 @@ const convertBackticksToCode = (text) => {
   return text.replace(/`([^`]+)`/g, (match, content) => {
     // Escape HTML entities in the content
     const escapedContent = content
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;')
-    
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;")
+
     return `<code>${escapedContent}</code>`
   })
 }

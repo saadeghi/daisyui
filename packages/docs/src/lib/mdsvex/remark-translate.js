@@ -77,6 +77,39 @@ export function remarkTranslate() {
       return
     }
 
+    // Skip processing files that contain CSS code blocks to prevent build issues
+    // This is necessary because the translation plugin can interfere with how
+    // the build system processes CSS content within fenced code blocks
+    let hasCssCodeBlock = false
+    visit(tree, "code", (node) => {
+      if (
+        node.lang &&
+        (node.lang.includes("css") || node.lang.includes("scss") || node.lang.includes("sass"))
+      ) {
+        hasCssCodeBlock = true
+      }
+    })
+
+    if (hasCssCodeBlock) {
+      return // Skip translation for files with CSS/SCSS/Sass code blocks
+    }
+
+    // Mark fenced code blocks (```code```) to skip translation
+    // but continue processing inline code (`inlineCode`) and all other content
+    const skipNodes = new Set()
+    visit(tree, "code", (node) => {
+      // The "code" node type represents fenced code blocks (```code```)
+      // We want to skip translation for these specific nodes
+      skipNodes.add(node)
+    })
+
+    // Helper function to check if we should skip processing a node or its ancestors
+    const shouldSkip = (node, parent) => {
+      if (skipNodes.has(node)) return true
+      if (parent && skipNodes.has(parent)) return true
+      return false
+    }
+
     // For headings, preserve original text in a property and add a wrapper with id
     visit(tree, "heading", (node) => {
       if (node.children && node.children.length) {
