@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.25 (2025-09-28)
+
+
+### Bug Fixes
+
+* tabs-box radius. closes: [#3904](https://github.com/saadeghi/daisyui/issues/3904) ([d359621](https://github.com/saadeghi/daisyui/commit/d35962122b65f42a2132e83fb3b8785c96db2a88))
+
 ## 5.1.24 (2025-09-26)
 
 
