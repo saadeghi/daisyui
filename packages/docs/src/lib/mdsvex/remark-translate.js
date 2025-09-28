@@ -188,14 +188,15 @@ export function remarkTranslate() {
       }
 
       if (node.children && node.children.length) {
-        // Check if the paragraph contains mixed content (text, inlineCode, or break)
+        // Check if the paragraph contains mixed content (text, inlineCode, break, or link)
         const hasMixedContent =
           (node.children.some((child) => child.type === "inlineCode") ||
-            node.children.some((child) => child.type === "break")) &&
+            node.children.some((child) => child.type === "break") ||
+            node.children.some((child) => child.type === "link")) &&
           node.children.some((child) => child.type === "text")
 
         if (hasMixedContent) {
-          // Combine all children into a single translation string, preserving backticks
+          // Combine all children into a single translation string, preserving backticks and links
           let combinedText = ""
           for (const child of node.children) {
             if (child.type === "text") {
@@ -204,6 +205,19 @@ export function remarkTranslate() {
               combinedText += `\`${child.value}\``
             } else if (child.type === "break") {
               combinedText += "\n"
+            } else if (child.type === "link") {
+              // Output as HTML <a> tag, with <code> for inlineCode inside
+              let linkText = ""
+              for (const linkChild of child.children || []) {
+                if (linkChild.type === "text") {
+                  linkText += escapeQuotes(linkChild.value)
+                } else if (linkChild.type === "inlineCode") {
+                  linkText += `<code>${escapeQuotes(linkChild.value)}</code>`
+                } else {
+                  // fallback: just ignore other types for now
+                }
+              }
+              combinedText += `<a href=\"${escapeQuotes(child.url)}\">${linkText}</a>`
             }
           }
 
@@ -242,6 +256,21 @@ export function remarkTranslate() {
               } else {
                 i++
               }
+            } else if (child.type === "link") {
+              // Output as HTML <a> tag, with <code> for inlineCode inside
+              let linkText = ""
+              for (const linkChild of child.children || []) {
+                if (linkChild.type === "text") {
+                  linkText += escapeQuotes(linkChild.value)
+                } else if (linkChild.type === "inlineCode") {
+                  linkText += `<code>${escapeQuotes(linkChild.value)}</code>`
+                } else {
+                  // fallback: just ignore other types for now
+                }
+              }
+              const linkHtml = `<a href=\"${escapeQuotes(child.url)}\">${linkText}</a>`
+              node.children[i] = handleTextWithCode(linkHtml)
+              i++
             } else {
               i++
             }
