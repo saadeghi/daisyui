@@ -6,7 +6,7 @@ date: 2025-08-18
 author: Pouya Saadeghi
 thumbnail: https://img.daisyui.com/images/blog/ouroboros.webp
 tags:
-  - Reviews
+  - Insights
 ---
 
 <script>
