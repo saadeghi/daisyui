@@ -56,7 +56,7 @@ applyTo: "**"
 - We use Bun test runner for testing. Read Bun docs for more info: https://bun.sh/docs/cli/test
 - For tests, use the available Bun test features and syntax, if you need to install an addional package, ask first
 - Always write testable code
-- After generating new code, write a temporary test file at `/tmp/FILENAME.test.js` to check the functionality of the generated code. `tmp` folder is ignored in git and you don't need to remove the test file after you're done
+- After generating new code, write a temporary test file at `/tmp/FILENAME.test.js` at the root of the repo to check the functionality of the generated code. `tmp` folder is ignored in git and you don't need to remove the test file after you're done
 - If you're asked to write a permanent test file, write the test file within the project structure, do not write it in `/tmp`
 
 ## Debugging
@@ -64,4 +64,10 @@ applyTo: "**"
 - If you encounter an error, read the error message carefully and try to understand what it means
 - Search about the error on the web to find possible solutions
 - If you need to fix an error, only fix that error, do not change anything else unless necessary
-- If you're asked to fix an error, write a temporary test file at `/tmp/FILENAME.test.js` to check the functionality of the fixed code.
+- If you're asked to fix an error, write a temporary test file at `/tmp/FILENAME.test.js` at the root of the repo to check the functionality of the fixed code.
+
+## Comments
+
+- If part of the code needs explanation on WHY we did it, add a comment explaining the reason briefly
+- Do not add comments explaining WHAT the code is doing unless it's not obvious because of unconventional complexity or unusual syntax (in that case consider refactoring the code to be more readable maybe?)
+- Keep comments short, preferably one-liners, concise and to the point
