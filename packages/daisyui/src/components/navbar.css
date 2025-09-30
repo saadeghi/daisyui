@@ -4,6 +4,10 @@
   min-height: 4rem;
 }
 
+:where(.navbar) {
+  @apply relative;
+}
+
 .navbar-start {
   @apply inline-flex items-center;
   width: 50%;
