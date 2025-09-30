@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.26 (2025-09-30)
+
+
+### Bug Fixes
+
+* navbar default position ([f75a5ed](https://github.com/saadeghi/daisyui/commit/f75a5edfc8018575445f27086d26622cc9af2e35))
+
 ## 5.1.25 (2025-09-28)
 
 
