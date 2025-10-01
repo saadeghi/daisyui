@@ -38,6 +38,8 @@ export const generateColorRules = async ({
       "secondary-content",
       "accent",
       "accent-content",
+      "tertiary",
+      "tertiary-content",
       "neutral",
       "neutral-content",
       "info",

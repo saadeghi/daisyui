@@ -10,6 +10,8 @@ export default {
     "secondary-content": "var(--color-secondary-content)",
     accent: "var(--color-accent)",
     "accent-content": "var(--color-accent-content)",
+    tertiary: "var(--color-tertiary)",
+    "tertiary-content": "var(--color-tertiary-content)",
     neutral: "var(--color-neutral)",
     "neutral-content": "var(--color-neutral-content)",
     info: "var(--color-info)",

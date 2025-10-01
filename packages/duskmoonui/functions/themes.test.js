@@ -14,6 +14,8 @@ const requiredValues = [
   "--color-secondary-content",
   "--color-accent",
   "--color-accent-content",
+  "--color-tertiary",
+  "--color-tertiary-content",
   "--color-neutral",
   "--color-neutral-content",
   "--color-info",

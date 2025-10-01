@@ -9,6 +9,8 @@ color-scheme: light;
 --color-secondary-content: oklch(15.55% 0.039 111.09);
 --color-accent: oklch(85.39% 0.201 100.73);
 --color-accent-content: oklch(17.078% 0.04 100.73);
+--color-tertiary: oklch(65% 0.15 120);
+--color-tertiary-content: oklch(35% 0.08 120);
 --color-neutral: oklch(30.98% 0.075 108.6);
 --color-neutral-content: oklch(86.196% 0.015 108.6);
 --color-info: oklch(86.19% 0.047 224.14);
