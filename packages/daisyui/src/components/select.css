@@ -19,6 +19,8 @@
     4px 4px,
     4px 4px;
   background-repeat: no-repeat;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   box-shadow:
     0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
@@ -79,6 +81,7 @@
     &::picker(select) {
       color: inherit;
       max-height: min(24rem, 70dvh);
+      max-width: anchor-size(width);
       border: var(--border) solid var(--color-base-200);
       @apply rounded-box my-2 p-2;
       background-color: inherit;
@@ -111,6 +114,8 @@
       transition-property: color, background-color;
       transition-duration: 0.2s;
       transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      white-space: nowrap;
+      overflow: hidden;
       &:not(:disabled) {
         &:hover,
         &:focus-visible {
