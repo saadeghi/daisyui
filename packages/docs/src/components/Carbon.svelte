@@ -14,7 +14,8 @@
       const script = document.createElement("script")
       script.async = true
       script.id = "_carbonads_js"
-      script.src = "//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=duskmoonuicom&format=cover"
+      script.src =
+        "//cdn.carbonads.com/carbon.js?serve=CEAI423U&placement=duskmoonuicom&format=cover"
 
       const container = document.querySelector("#carbon-container")
       if (container) {

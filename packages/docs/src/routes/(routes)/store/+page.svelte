@@ -115,7 +115,9 @@
 />
 <div class="mx-4 flex flex-col justify-between gap-6 lg:flex-row">
   <div class="flex flex-col gap-2">
-    <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">duskmoonUI store</h1>
+    <h1 class="font-title text-base-content text-3xl font-extrabold lg:text-4xl">
+      duskmoonUI store
+    </h1>
     <p class="text-base-content/60 text-sm">Official templates made by duskmoonUI</p>
   </div>
   <div class="flex flex-col gap-3">

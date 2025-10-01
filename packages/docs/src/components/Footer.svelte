@@ -331,13 +331,16 @@
         <span class="footer-title opacity-70">{$t("Compare libraries")}</span>
         <a class="link link-hover" href="/compare/mui-vs-duskmoonui">MUI vs duskmoonUI</a>
         <a class="link link-hover" href="/compare/shadcn-vs-duskmoonui">shadcn/ui vs duskmoonUI</a>
-        <a class="link link-hover" href="/compare/bootstrap-vs-duskmoonui">Bootstrap vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/bootstrap-vs-duskmoonui"
+          >Bootstrap vs duskmoonUI</a
+        >
         <a class="link link-hover" href="/compare/flowbite-vs-duskmoonui">Flowbite vs duskmoonUI</a>
         <a class="link link-hover" href="/compare/radix-vs-duskmoonui">Radix vs duskmoonUI</a>
         <a class="link link-hover" href="/compare/bulma-vs-duskmoonui">Bulma vs duskmoonUI</a>
         <a class="link link-hover" href="/compare/nuxtui-vs-duskmoonui">NuxtUI vs duskmoonUI</a>
         <a class="link link-hover" href="/compare/heroui-vs-duskmoonui">HeroUI vs duskmoonUI</a>
-        <a class="link link-hover" href="/compare/preline-vs-duskmoonui">Preline UI vs duskmoonUI</a>
+        <a class="link link-hover" href="/compare/preline-vs-duskmoonui">Preline UI vs duskmoonUI</a
+        >
         <a class="link link-hover" href="/compare/chakra-vs-duskmoonui">Chakra UI vs duskmoonUI</a>
       </div>
 

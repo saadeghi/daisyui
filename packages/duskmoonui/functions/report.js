@@ -10,9 +10,13 @@ const checkVariableWarnings = (variables, filename) => {
 
   if (
     twVariables.length > 0 &&
-    !["typography.css", "properties.css", "states.css", "responsive.css", "duskmoonui.css"].includes(
-      filename,
-    )
+    ![
+      "typography.css",
+      "properties.css",
+      "states.css",
+      "responsive.css",
+      "duskmoonui.css",
+    ].includes(filename)
   ) {
     console.log(`Warning: unnecessary --tw variables in ${filename}:`, twVariables)
   }

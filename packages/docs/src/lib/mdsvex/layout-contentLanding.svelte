@@ -58,7 +58,9 @@
           <div class="flex flex-col gap-2 max-lg:items-center max-lg:text-center">
             <div class="max-w-46"><LogoHorizontal /></div>
             <h2 class="mx-2">
-              {@html $t("duskmoonUI is the most popular<br />component library for Tailwind&nbsp;CSS")}
+              {@html $t(
+                "duskmoonUI is the most popular<br />component library for Tailwind&nbsp;CSS",
+              )}
             </h2>
           </div>
           <div class="flex flex-col items-center gap-2">

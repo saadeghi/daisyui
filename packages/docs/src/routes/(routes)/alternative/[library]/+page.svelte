@@ -56,7 +56,8 @@
   <p class="text-base-content/80 mb-4 text-lg italic">
     <a
       class="link badge text-base-content/60 link-hover text-xs"
-      href={`/compare/${data.library.key}-vs-duskmoonui`}>Compare {data.library.name} with duskmoonUI</a
+      href={`/compare/${data.library.key}-vs-duskmoonui`}
+      >Compare {data.library.name} with duskmoonUI</a
     >
   </p>
   <h1 class="font-title text-3xl font-bold lg:text-4xl">

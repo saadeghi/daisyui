@@ -18,7 +18,8 @@ const fetchYamlData = async (url) => {
   }
 }
 
-const fetchAlternativeData = () => fetchYamlData(`${PUBLIC_DUSKMOONUI_API_PATH}/data/alternative.yaml`)
+const fetchAlternativeData = () =>
+  fetchYamlData(`${PUBLIC_DUSKMOONUI_API_PATH}/data/alternative.yaml`)
 const fetchCompareData = () => fetchYamlData(`${PUBLIC_DUSKMOONUI_API_PATH}/data/compare.yaml`)
 
 const getDeterministicIndex = (seedString, maxIndex) => {
@@ -92,7 +93,14 @@ const checkIsDaisyUIBetter = (attribute, attributeRules, daisyValueDef, otherVal
   return false
 }
 
-const generateComparisonText = (type, isBetter, duskmoonUIData, libraryData, stringsData, index) => {
+const generateComparisonText = (
+  type,
+  isBetter,
+  duskmoonUIData,
+  libraryData,
+  stringsData,
+  index,
+) => {
   const texts = stringsData[type]
   if (!texts) {
     console.error(`Missing strings for type: ${type} in YAML`)
@@ -141,7 +149,13 @@ const generateComparisonText = (type, isBetter, duskmoonUIData, libraryData, str
   return text
 }
 
-const generateAllComparisons = (duskmoonUIData, libraryData, stringsData, index, attributeRules) => {
+const generateAllComparisons = (
+  duskmoonUIData,
+  libraryData,
+  stringsData,
+  index,
+  attributeRules,
+) => {
   const getSafeValue = (data, attribute) => data?.attributes?.[attribute] // Return the whole definition
 
   const duskmoonUIStarsDef = getSafeValue(duskmoonUIData, "GitHub stars")

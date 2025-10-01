@@ -1,0 +1,6 @@
+[install]
+auto = "auto"
+exact = false
+
+[workspace]
+members = ["packages/*"]

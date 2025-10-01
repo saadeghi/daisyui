@@ -30,7 +30,7 @@
     font-size: 0.7rem;
   }
   ::part(day):hover {
-  background: var(--color-base-200);
+    background: var(--color-base-200);
   }
   ::part(button day today) {
     background: var(--color-primary);

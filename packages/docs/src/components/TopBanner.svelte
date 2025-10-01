@@ -41,7 +41,8 @@
             </path>
           </g>
         </svg>
-        Get duskmoonUI t-shirts, <span class="max-sm:hidden"> hoodies, mugs,</span> stickers and more!
+        Get duskmoonUI t-shirts, <span class="max-sm:hidden"> hoodies, mugs,</span> stickers and
+        more!
         <svg
           width="15"
           height="15"
