@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.1 (2025-10-01)
+
+
+### Bug Fixes
+
+* Resolve failing tests by improving color contrast and CSS validation ([74a11de](https://github.com/duskmoon-dev/duskmoon-ui/commit/74a11de734141303b9c3793879c1ae2ad7af45eb))
+
 ## 5.1.0 (2025-08-22)
 
 
