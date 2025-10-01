@@ -1,6 +1,8 @@
 export default [
   "light",
   "dark",
+  "duskmoon-light",
+  "duskmoon-dark",
   "cupcake",
   "bumblebee",
   "emerald",
