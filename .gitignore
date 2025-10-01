@@ -10,3 +10,5 @@ dist
 .logs
 .env.local
 .svelte-kit
+
+/.devenv*
