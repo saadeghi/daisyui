@@ -2,6 +2,7 @@
 title: daisyUI is an easy component library
 desc: Why daisyUI is the easiest Tailwind CSS component library for real-world projects
 layout: contentLanding
+keywords: easy component library, simple component library, easy to use, user-friendly components, hassle-free styling
 ---
 
 <script>
@@ -23,7 +24,7 @@ All of this makes building websites feel more complicated than it should be.
 
 ## Why daisyUI is actually easy
 
-daisyUI is a [Tailwind CSS](/pages/tailwind-css/) plugin that skips the usual pain. Here's what makes it different:
+daisyUI is a Tailwind CSS plugin that skips the usual pain. Here's what makes it different:
 
 ### 1. Class names that make sense
 
@@ -49,7 +50,7 @@ Everything is just CSS. You don't have to mess with JavaScript to get things lik
 
 ### 3. Use it anywhere
 
-It works with plain HTML, React, Vue, Svelte—whatever you want. You're not locked in.
+It works with plain HTML, React, Vue, Svelte, whatever you want. You're not locked in.
 
 ### 4. Themes are easy
 
@@ -63,7 +64,7 @@ Switch your site's look by changing a single attribute. There are 35+ built-in t
 
 ### 5. Fits your skill level
 
-If you're new, just use the components as they are. If you want to customize, add Tailwind classes. It grows with you. If you want something even more lightweight, check out [daisyUI is a minimal CSS framework](/pages/minimal-css-framework/).
+If you're new, just use the components as they are. If you want to customize, add Tailwind classes. It grows with you. If you want something even more lightweight, check out daisyUI is a minimal CSS framework.
 
 ## How to start
 
@@ -80,6 +81,6 @@ npm i -D daisyui
 @plugin "daisyui";
 ```
 
-For more details, check the [daisyUI installation guide](https://daisyui.com/docs/install/).
+For more details, check the [daisyUI installation guide](/docs/install/).
 
 With daisyUI, you can focus on building your site instead of fighting with your tools.

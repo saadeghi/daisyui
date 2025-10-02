@@ -2,6 +2,7 @@
 title: daisyUI, a beginner friendly CSS framework for school projects
 desc: How daisyUI makes it simple to build and style school projects quickly, without the hassle of complex libraries
 layout: contentLanding
+keywords: school project, student projects, beginner friendly css framework, CSS for students, academic projects, quick setup
 ---
 
 <script>
@@ -19,10 +20,10 @@ All of this is overkill for a simple project or assignment.
 
 ## Why daisyUI is perfect for school projects
 
-daisyUI is built on top of [Tailwind CSS](/pages/tailwind-css/), but it’s much easier to use. You get ready-made components, simple class names, and you don’t have to worry about JavaScript or framework lock-in. You can get started in minutes, not hours.
+daisyUI is built on top of Tailwind CSS, but it’s much easier to use. You get ready-made components, simple class names, and you don’t have to worry about JavaScript or framework lock-in. You can get started in minutes, not hours.
 
 
-- Works with plain HTML—no build tools required
+- Works with plain HTML, no build tools required
 - No extra dependencies or complex configs
 - Easy to customize and theme
 - Lightweight and fast

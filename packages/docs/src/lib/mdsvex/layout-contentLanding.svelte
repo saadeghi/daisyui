@@ -17,6 +17,7 @@
 
 <SEO
   {title}
+  formatTitle={false}
   {desc}
   img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
 />

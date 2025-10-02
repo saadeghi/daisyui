@@ -13,6 +13,7 @@ import rehypeExternalLinks from "rehype-external-links"
 import { visit } from "unist-util-visit"
 import { remarkRenderComponent } from "./remark-render-component.js"
 import { remarkTranslate } from "./remark-translate.js"
+import { remarkKeywordLinks } from "./remark-keyword-links.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -127,6 +128,7 @@ const rehypePlugins = [
 const remarkPlugins = [
   replacePlaceholders,
   remarkRenderComponent,
+  remarkKeywordLinks,
   remarkTranslate,
   [remarkGithub, { repository: "https://github.com/saadeghi/daisyui" }],
   [
