@@ -29,7 +29,7 @@ Tailwind CSS is a utility-first CSS framework. Instead of writing custom CSS, yo
 - **Easy to refactor**: Want to change a color or spacing? Just update the class in your HTML.
 - **Scales with your project**: Works for small sites and huge apps alike.
 
-Here's what a button looks like with Tailwind CSS:
+Here's what a really simple button looks like with Tailwind CSS:
 
 ```html
 <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Click Me</button>
