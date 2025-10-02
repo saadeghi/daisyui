@@ -207,7 +207,7 @@
     } */
   }
 
-  &:has(.tab-content) {
+  &:has(> .tab-content) {
     > .tab:first-child {
       &:not(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]) {
         --tab-border-colors: var(--tab-border-color) var(--tab-border-color) #0000
@@ -216,7 +216,7 @@
     }
   }
 
-  .tab-content {
+  > .tab-content {
     --tabcontent-margin: calc(-1 * var(--border)) 0 0 0;
     --tabcontent-radius-ss: 0;
     --tabcontent-radius-se: var(--radius-box);
@@ -458,7 +458,9 @@
     https://github.com/saadeghi/daisyui/issues/3724
   */
   --tabs-box-radius: calc(var(--radius-field) + var(--radius-field) + var(--radius-field));
-  border-radius: calc(var(--radius-field) + min(0.25rem, var(--tabs-box-radius)));
+  border-radius: calc(
+    min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius))
+  );
   box-shadow:
     0 -0.5px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
     0 0.5px oklch(0% 0 0 / calc(var(--depth) * 0.05)) inset;
@@ -488,14 +490,22 @@
       border: 1px solid;
     }
   }
+  .tab-content {
+    @apply mt-1;
+    border-radius: calc(
+      min(calc(var(--tab-height) / 2), var(--radius-field)) + min(0.25rem, var(--tabs-box-radius)) -
+        var(--border)
+    );
+  }
 }
 
 .tab-content {
   @apply order-1 hidden border-transparent;
-  --tabcontent-radius-ss: 0;
-  --tabcontent-radius-se: 0;
-  --tabcontent-radius-es: 0;
-  --tabcontent-radius-ee: 0;
+  --tabcontent-radius-ss: var(--radius-box);
+  --tabcontent-radius-se: var(--radius-box);
+  --tabcontent-radius-es: var(--radius-box);
+  --tabcontent-radius-ee: var(--radius-box);
+
   --tabcontent-order: 1;
   width: 100%;
   margin: var(--tabcontent-margin);

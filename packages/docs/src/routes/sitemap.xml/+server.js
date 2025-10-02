@@ -73,6 +73,8 @@ export const GET = async () => {
     throw error(500, `Could not load data for sitemap: ${err.message}`)
   }
 
+  const excludedPaths = ["/llms.txt/"]
+
   return await sitemap.response({
     origin: "https://daisyui.com",
     additionalPaths: ["/llms.txt"],
@@ -88,6 +90,7 @@ export const GET = async () => {
       "/compare/[item]": comparePages,
       "/alternative/[library]": alternativeLibraries,
     },
-    processPaths: (paths) => paths.map(processPath),
+    processPaths: (paths) =>
+      paths.map(processPath).filter((entry) => !excludedPaths.includes(entry.path)),
   })
 }

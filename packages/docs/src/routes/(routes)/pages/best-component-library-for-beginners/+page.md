@@ -157,7 +157,7 @@ None of these options are perfect when you're learning. You either spend hours w
 
 ## How daisyUI Helps New Developers
 
-daisyUI works with Tailwind CSS to make building websites easier. It gives you ready-made components (like buttons, cards, and menus) that you can use right away.
+daisyUI works with [Tailwind CSS](/pages/tailwind-css/) to make building websites easier. It gives you ready-made components (like buttons, cards, and menus) that you can use right away.
 
 Here's an example of how much simpler it makes things:
 
