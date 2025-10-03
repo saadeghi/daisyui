@@ -556,6 +556,7 @@ Collapse using details and summary tag,/components/collapse/#collapse-using-deta
 Without border and background color,/components/collapse/#without-border-and-background-color
 With arrow icon,/components/collapse/#with-arrow-icon
 With arrow plus/minus icon,/components/collapse/#with-arrow-plusminus-icon
+Moving collapse icon to the start,/components/collapse/#moving-collapse-icon-to-the-start
 Force open,/components/collapse/#force-open
 Force close,/components/collapse/#force-close
 Custom colors for collapse that works with focus,/components/collapse/#custom-colors-for-collapse-that-works-with-focus
