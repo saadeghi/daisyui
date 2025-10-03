@@ -81,7 +81,8 @@
     &::picker(select) {
       color: inherit;
       max-height: min(24rem, 70dvh);
-      max-width: anchor-size(width);
+      margin-inline: 0.5rem;
+      translate: -0.5rem 0;
       border: var(--border) solid var(--color-base-200);
       @apply rounded-box my-2 p-2;
       background-color: inherit;
@@ -114,8 +115,7 @@
       transition-property: color, background-color;
       transition-duration: 0.2s;
       transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      white-space: nowrap;
-      overflow: hidden;
+      white-space: normal;
       &:not(:disabled) {
         &:hover,
         &:focus-visible {
@@ -126,6 +126,12 @@
           box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--color-neutral);
         }
       }
+    }
+  }
+  [dir="rtl"] & {
+    &::picker(select),
+    select::picker(select) {
+      translate: 0.5rem 0;
     }
   }
 }
