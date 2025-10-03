@@ -136,6 +136,23 @@ classnames:
 </div>
 ```
 
+### ~Moving collapse icon to the start
+#### We can move the icon using utility classes like `after:start-5 after:end-auto` and we can customize the padding like `pe-4 ps-12`
+
+<div tabindex="0" class="collapse bg-base-100 border border-base-300 collapse-arrow">
+  <div class="collapse-title font-semibold after:start-5 after:end-auto pe-4 ps-12">How do I create an account?</div>
+  <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+</div>
+
+```html
+<div tabindex="0" class="$$collapse $$collapse-arrow bg-base-100 border-base-300 border">
+  <div class="$$collapse-title font-semibold after:start-5 after:end-auto pe-4 ps-12">How do I create an account?</div>
+  <div class="$$collapse-content text-sm">
+    Click the "Sign Up" button in the top right corner and follow the registration process.
+  </div>
+</div>
+```
+
 ### ~Force open
 
 <div tabindex="0" class="collapse collapse-open bg-base-100 border border-base-300">
