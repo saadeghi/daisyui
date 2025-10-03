@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.27 (2025-10-03)
+
+
+### Bug Fixes
+
+* prevent select line break on long text when select is not open and prevent page overflow when select is open. closes: [#4105](https://github.com/saadeghi/daisyui/issues/4105) ([6782522](https://github.com/saadeghi/daisyui/commit/67825229b33d6613cc59ff0e4b73d86b2664d81c))
+
 ## 5.1.26 (2025-09-30)
 
 
