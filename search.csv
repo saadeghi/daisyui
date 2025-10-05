@@ -112,6 +112,7 @@ Install daisyUI for UnoCSS,/docs/install/unocss/
 Use daisyUI with Tailwind CSS Standalone CLI,/docs/install/standalone/
 Use daisyUI with Tailwind CSS CLI,/docs/install/cli/
 Install Tailwind CSS and daisyUI for Zola,/docs/install/zola/
+Install daisyUI for Ember,/docs/install/ember/
 Install daisyUI for SvelteKit,/docs/install/sveltekit/
 Install daisyUI for Eleventy,/docs/install/11ty/
 Install daisyUI for Django,/docs/install/django/
@@ -815,6 +816,8 @@ Get daisyUI bundled JS file,/docs/install/zola/#get-daisyui-bundled-js-file
 Add Tailwind CSS and daisyUI,/docs/install/zola/#add-tailwind-css-and-daisyui
 Build CSS,/docs/install/zola/#build-css
 Run the Zola server,/docs/install/zola/#run-the-zola-server
+Create a new Ember project,/docs/install/ember/#create-a-new-ember-project
+Install Tailwind CSS and daisyUI,/docs/install/ember/#install-tailwind-css-and-daisyui
 Create a new SvelteKit project,/docs/install/sveltekit/#create-a-new-sveltekit-project
 Install Tailwind CSS and daisyUI,/docs/install/sveltekit/#install-tailwind-css-and-daisyui
 Initialize a new Node project and add dev and build scripts,/docs/install/11ty/#initialize-a-new-node-project-and-add-dev-and-build-scripts
