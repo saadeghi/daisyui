@@ -53,7 +53,7 @@ Put Tailwind CSS and daisyUI in your CSS file (and remove old styles)
 
 Import the CSS file in your index.html 
 ```html:index.html
-<script>
+<script type="module">
   import "./app/styles.css";
 </script>
 ```
