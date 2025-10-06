@@ -221,3 +221,11 @@
     @apply px-6 py-3;
   }
 }
+
+:where(:not(ul, details, .menu-title, .btn)).menu-active {
+  @apply outline-hidden;
+  color: var(--menu-active-fg);
+  background-color: var(--menu-active-bg);
+  background-size: auto, calc(var(--noise) * 100%);
+  background-image: none, var(--fx-noise);
+}
