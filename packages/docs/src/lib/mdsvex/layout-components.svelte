@@ -23,7 +23,8 @@
 </script>
 
 <SEO
-  title={`Tailwind ${title} ${$t("Component")}`}
+  title={`Tailwind ${title} ${$t("Component")} – daisyUI`}
+  formatTitle={false}
   desc={`Tailwind ${title} examples: ${desc} component`}
   img={`https://img.daisyui.com/images${$page.url.pathname.replace(/\/$/, "")}.webp`}
 />

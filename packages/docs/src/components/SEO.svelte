@@ -4,8 +4,8 @@
   import { langs } from "$lib/i18n.svelte.js"
 
   let siteData = {
-    title: "Tailwind CSS Components ( version 5 update is here )",
-    desc: "Free Tailwind Components",
+    title: "daisyUI Tailwind CSS Component UI Library",
+    desc: "Free Tailwind Component examples",
     card: "https://img.daisyui.com/images/default.webp",
   }
   let { formatTitle = true, title = "", desc = siteData.desc, img = siteData.card } = $props()

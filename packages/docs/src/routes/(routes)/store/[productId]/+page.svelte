@@ -176,7 +176,11 @@
   })()
 </script>
 
-<SEO title={`${data.product.title} - daisyUI Store`} desc={data.product.desc} />
+<SEO
+  title={`${data.product.title} – daisyUI and Tailwind CSS templates`}
+  formatTitle={false}
+  desc={data.product.desc}
+/>
 
 <div>
   <a class="btn btn-ghost group" href="/store/" data-sveltekit-preload-data>

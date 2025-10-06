@@ -442,7 +442,8 @@
 
 <SEO
   title="daisyUI and Tailwind CSS theme generator"
-  desc="OKLCH Theme Generator for daisyUI and Tailwind CSS"
+  formatTitle={false}
+  desc="Color Theme Generator for daisyUI and Tailwind CSS"
   img={`https://img.daisyui.com/images/theme-generator.webp`}
 />
 
