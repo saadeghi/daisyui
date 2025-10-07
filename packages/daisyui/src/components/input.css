@@ -4,7 +4,7 @@
   @apply bg-base-100 relative inline-flex shrink appearance-none items-center gap-2 px-3 align-middle whitespace-nowrap;
   width: clamp(3rem, 20rem, 100%);
   height: var(--size);
-  font-size: 0.875rem;
+  font-size: max(var(--font-size, 0.875rem), 0.875rem);
   touch-action: manipulation;
   border-start-start-radius: var(--join-ss, var(--radius-field));
   border-start-end-radius: var(--join-se, var(--radius-field));
@@ -46,6 +46,16 @@
     outline-offset: 2px;
     isolation: isolate;
     z-index: 1;
+  }
+
+  /* increase font size in iOS so the page won't zoom */
+  @media (pointer: coarse) {
+    @supports (-webkit-touch-callout: none) {
+      &:focus,
+      &:focus-within {
+        --font-size: 1rem;
+      }
+    }
   }
 
   &:has(> input[disabled]),
@@ -170,7 +180,7 @@
 
 .input-xs {
   --size: calc(var(--size-field, 0.25rem) * 6);
-  font-size: 0.6875rem;
+  font-size: max(var(--font-size, 0.6875rem), 0.6875rem);
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
@@ -181,7 +191,7 @@
 
 .input-sm {
   --size: calc(var(--size-field, 0.25rem) * 8);
-  font-size: 0.75rem;
+  font-size: max(var(--font-size, 0.75rem), 0.75rem);
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
@@ -192,7 +202,7 @@
 
 .input-md {
   --size: calc(var(--size-field, 0.25rem) * 10);
-  font-size: 0.875rem;
+  font-size: max(var(--font-size, 0.875rem), 0.875rem);
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
@@ -203,7 +213,7 @@
 
 .input-lg {
   --size: calc(var(--size-field, 0.25rem) * 12);
-  font-size: 1.125rem;
+  font-size: max(var(--font-size, 1.125rem), 1.125rem);
 
   &[type="number"] {
     &::-webkit-inner-spin-button {
@@ -214,7 +224,7 @@
 
 .input-xl {
   --size: calc(var(--size-field, 0.25rem) * 14);
-  font-size: 1.375rem;
+  font-size: max(var(--font-size, 1.375rem), 1.375rem);
 
   &[type="number"] {
     &::-webkit-inner-spin-button {

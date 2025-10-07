@@ -4,7 +4,7 @@
   width: clamp(3rem, 20rem, 100%);
   padding-inline-start: 0.75rem;
   padding-inline-end: 0.75rem;
-  font-size: 0.875rem;
+  font-size: max(var(--font-size, 0.875rem), 0.875rem);
   touch-action: manipulation;
   border-color: var(--input-color);
   box-shadow:
@@ -28,6 +28,16 @@
     outline: 2px solid var(--input-color);
     outline-offset: 2px;
     isolation: isolate;
+  }
+
+  /* increase font size in iOS so the page won't zoom */
+  @media (pointer: coarse) {
+    @supports (-webkit-touch-callout: none) {
+      &:focus,
+      &:focus-within {
+        --font-size: 1rem;
+      }
+    }
   }
 
   &:has(> textarea[disabled]),
@@ -119,21 +129,21 @@
 }
 
 .textarea-xs {
-  font-size: 0.6875rem;
+  font-size: max(var(--font-size, 0.6875rem), 0.6875rem);
 }
 
 .textarea-sm {
-  font-size: 0.75rem;
+  font-size: max(var(--font-size, 0.75rem), 0.75rem);
 }
 
 .textarea-md {
-  font-size: 0.875rem;
+  font-size: max(var(--font-size, 0.875rem), 0.875rem);
 }
 
 .textarea-lg {
-  font-size: 1.125rem;
+  font-size: max(var(--font-size, 1.125rem), 1.125rem);
 }
 
 .textarea-xl {
-  font-size: 1.375rem;
+  font-size: max(var(--font-size, 1.375rem), 1.375rem);
 }
