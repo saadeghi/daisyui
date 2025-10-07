@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.28 (2025-10-07)
+
+
+### Bug Fixes
+
+* fab 7th child visibility issue. closes: [#4157](https://github.com/saadeghi/daisyui/issues/4157) ([78128dc](https://github.com/saadeghi/daisyui/commit/78128dc4adfebfc17b81692ee186216300a9d5f4))
+
 ## 5.1.27 (2025-10-03)
 
 
