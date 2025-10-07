@@ -56,20 +56,11 @@
   .font-sans {
     font-family: sans-serif;
   }
-  .grid {
-    display: grid;
-  }
-  .min-h-\[80vh\] {
-    min-height: 80vh;
-  }
   .place-content-center {
     place-content: center;
   }
   .text-center {
     text-align: center;
-  }
-  .font-\[sans-serif\] {
-    font-family: sans-serif;
   }
   .text-4xl {
     font-size: 2.25rem;

@@ -203,11 +203,11 @@ Inputs can be used with `validator` class to have validation styles. [See Valida
 
 <input type="text" class="input" placeholder="Which browser do you use" list="browsers"/>
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Safari">
-  <option value="Opera">
-  <option value="Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Safari"></option>
+  <option value="Opera"></option>
+  <option value="Edge"></option>
 </datalist>
 
 ```html
