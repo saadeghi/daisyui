@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.29 (2025-10-07)
+
+
+### Bug Fixes
+
+* (iOS) increase font size of small text input and textarea on focus so page wont zoom in ([3b35fbb](https://github.com/saadeghi/daisyui/commit/3b35fbbd171c22d623f33218751e3beff3c60dba)), closes [#3871](https://github.com/saadeghi/daisyui/issues/3871) [#1145](https://github.com/saadeghi/daisyui/issues/1145)
+
 ## 5.1.28 (2025-10-07)
 
 
