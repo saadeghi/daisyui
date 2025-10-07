@@ -2,13 +2,14 @@
 title: daisyUI is a minimal CSS framework
 desc: Why daisyUI is the simple, minimal alternative to heavy component libraries and complex CSS frameworks
 layout: contentLanding
+keywords: minimal css framework, lightweight css framework, no dependencies, small bundle size, performance focused, bloat-free
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-Building modern UIs often means dealing with a lot of bloat. Many [component libraries](/pages/easy-component-library/) are tied to a specific framework, come with a pile of dependencies, and add a lot of weight to your project. You end up with:
+Building modern UIs often means dealing with a lot of bloat. Many component libraries are tied to a specific framework, come with a pile of dependencies, and add a lot of weight to your project. You end up with:
 
 - Huge bundle sizes that slow down your site
 - Dozens of dependencies to keep updated (and hope they don't break)
@@ -19,7 +20,7 @@ All of this makes your project harder to manage and slows down your workflow.
 
 ## Why daisyUI is different
 
-daisyUI is a minimal CSS framework built on top of [Tailwind CSS](/pages/tailwind-css/). It gives you the building blocks you need—like buttons, cards, and alerts—without the baggage:
+daisyUI is a minimal CSS framework built on top of Tailwind CSS. It gives you the building blocks you need, like buttons, cards, and alerts, without the baggage:
 
 - No JavaScript required
 - No framework lock-in (works with any frontend stack)
@@ -55,6 +56,6 @@ And here's the same button with daisyUI:
 <button class="btn">Click Me</button>
 ```
 
-With daisyUI, you get the same features—hover, focus, disabled states, and more—without the wall of class names. Your code is easier to read and maintain.
+With daisyUI, you get the same features, hover, focus, disabled states, and more, without the wall of class names. Your code is easier to read and maintain. daisyUI is so easy to use, even a beginner can use it for a school project.
 
-If you want a minimal, practical way to build UIs—without the headaches—daisyUI is a great choice.
+If you want a minimal, practical way to build UIs, without the headaches, daisyUI is a great choice.

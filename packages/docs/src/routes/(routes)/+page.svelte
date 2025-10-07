@@ -142,7 +142,8 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <SEO
-  title="daisyUI"
+  title="daisyUI Tailwind Components"
+  formatTitle={false}
   desc="Best Tailwind Components Library - Free UI components for Tailwind CSS"
 />
 

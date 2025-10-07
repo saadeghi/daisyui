@@ -2,6 +2,7 @@
 title: Tailwind CSS
 desc: Why Tailwind CSS is the most practical way to build scalable UIs, and how daisyUI makes it even better
 layout: contentLanding
+keywords: tailwind css, utility-first
 ---
 
 <script>
@@ -50,4 +51,4 @@ daisyUI is a plugin for Tailwind CSS that gives you ready-made component classes
 
 You still get all the flexibility of Tailwind, but with less typing and more readable code. Plus, daisyUI comes with themes, so you can change your site's look with a single attribute.
 
-If you want to build scalable UIs quickly—and enjoy the process—Tailwind CSS and daisyUI are a great combo.
+If you want to build scalable UIs quickly, and enjoy the process, Tailwind CSS and daisyUI are a great combo.

@@ -2,15 +2,14 @@
 title: Best Component Library for Beginners
 desc: Let's see why daisyUI is the best Tailwind CSS component library for beginners
 layout: contentLanding
+keywords: beginner, beginner component library, learning CSS, web development beginners, CSS for beginners, component library for beginners
 ---
 
 <script>
   import Translate from "$components/Translate.svelte"
 </script>
 
-Learning CSS can be tough when you're just starting out. Making things look good on a webpage takes time to master.
-
-This guide shows how daisyUI can make your learning journey easier and more fun.
+Learning CSS can be tough when you're just starting out. Making things look good on a webpage takes time to master. daisyUI is an easy component library that can help. This guide shows how daisyUI can make your learning journey easier and more fun.
 
 ## The Problem with CSS When You're Starting Out
 
@@ -157,7 +156,7 @@ None of these options are perfect when you're learning. You either spend hours w
 
 ## How daisyUI Helps New Developers
 
-daisyUI works with [Tailwind CSS](/pages/tailwind-css/) to make building websites easier. It gives you ready-made components (like buttons, cards, and menus) that you can use right away.
+daisyUI works with Tailwind CSS to make building websites easier. It gives you ready-made components (like buttons, cards, and menus) that you can use right away.
 
 Here's an example of how much simpler it makes things:
 
@@ -191,7 +190,7 @@ Instead of remembering complicated class names, daisyUI uses words that describe
 
 This makes your code easier to read and understand. It's like using plain English in your HTML.
 
-[See all daisyUI components here](https://daisyui.com/components/)
+[See all daisyUI components here](/components/)
 
 ### 2. Works With Whatever You Want to Learn Next
 
@@ -279,4 +278,4 @@ npm i -D daisyui
 @plugin "daisyui";
 ```
 
-To see more detailed instructions, check out the [daisyUI installation guide](https://daisyui.com/docs/install/).
+To see more detailed instructions, check out the [daisyUI installation guide](/docs/install/).

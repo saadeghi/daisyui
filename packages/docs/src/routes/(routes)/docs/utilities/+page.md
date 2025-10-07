@@ -151,6 +151,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--indicator-x`               | horizontal position of the indicator                     |
 | Input           | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the input                                        |
+|                 | `--font-size`                 | font-size of the input                                   |
 | Kbd             | `--size`                      | size of the kbd                                          |
 | List            | `--list-grid-cols`            | grid columns of the list                                 |
 | Menu            | `--menu-active-fg`            | foreground color of the active menu item                 |
@@ -201,6 +202,7 @@ If you are using a prefix for daisyUI, these CSS variables will be prefixed with
 |                 | `--tabcontent-order`          | order of the tab content                                 |
 | Textarea        | `--input-color`               | color of the input                                       |
 |                 | `--size`                      | size of the textarea                                     |
+|                 | `--font-size`                 | font-size of the textarea                                |
 | Timeline        | `--timeline-row-start`        | start position of the timeline row                       |
 |                 | `--timeline-row-end`          | end position of the timeline row                         |
 |                 | `--timeline-col-start`        | start position of the timeline column                    |

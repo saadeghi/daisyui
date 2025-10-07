@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.29 (2025-10-07)
+
+
+### Bug Fixes
+
+* (iOS) increase font size of small text input and textarea on focus so page wont zoom in ([3b35fbb](https://github.com/saadeghi/daisyui/commit/3b35fbbd171c22d623f33218751e3beff3c60dba)), closes [#3871](https://github.com/saadeghi/daisyui/issues/3871) [#1145](https://github.com/saadeghi/daisyui/issues/1145)
+
+## 5.1.28 (2025-10-07)
+
+
+### Bug Fixes
+
+* fab 7th child visibility issue. closes: [#4157](https://github.com/saadeghi/daisyui/issues/4157) ([78128dc](https://github.com/saadeghi/daisyui/commit/78128dc4adfebfc17b81692ee186216300a9d5f4))
+
+## 5.1.27 (2025-10-03)
+
+
+### Bug Fixes
+
+* prevent select line break on long text when select is not open and prevent page overflow when select is open. closes: [#4105](https://github.com/saadeghi/daisyui/issues/4105) ([6782522](https://github.com/saadeghi/daisyui/commit/67825229b33d6613cc59ff0e4b73d86b2664d81c))
+
 ## 5.1.26 (2025-09-30)
 
 

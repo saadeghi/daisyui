@@ -53,9 +53,6 @@
   > :nth-child(6) {
     transition-delay: 120ms;
   }
-  > :nth-child(7) {
-    @apply hidden;
-  }
   /* checkbox method experiment - not a good idea because it needs a second click to close */
   /* > label {
     @apply relative;
@@ -89,6 +86,9 @@
       transform: translateX(calc(cos(var(--flip-degree)) * var(--position)))
         translateY(calc(sin(var(--flip-degree)) * calc(-1 * var(--position))));
     }
+  }
+  > :nth-child(n + 7) {
+    @apply hidden;
   }
   &:has(:nth-child(3)) {
     --position: 140%;
