@@ -26,13 +26,13 @@ While scoping styles within JavaScript components (such as CSS-in-JS or componen
 
 Customizing styles in a poorly structured CSS system can be risky. Changing the style of one part of a page may unintentionally break another, especially if styles are not modular and flexible. Without a clear and adaptable structure, even small changes can have unpredictable side effects, making maintenance a headache for developers and designers alike.
 
-## Introducing Tailwind CSS
+## Why use Tailwind CSS?
 
 Tailwind CSS revolutionizes the way we write styles by allowing developers to define styles directly in their HTML. This utility-first approach makes it easy to build consistent, scalable interfaces without worrying about naming conventions or style conflicts. Tailwind is currently the only truly scalable way to write CSS, enabling teams to move fast and maintain a clean, maintainable codebase.
 
 Despite its strengths, Tailwind CSS has its own challenges. The need to write many utility classes can slow down development and make HTML files harder to read and maintain. Managing countless class names can be overwhelming, especially in large projects.
 
-## How daisyUI Supercharges Tailwind CSS
+## Bonus: Use daisyUI with Tailwind CSS to go even faster!
 
 daisyUI addresses these challenges by providing a set of semantic component class names on top of Tailwind. With daisyUI, you can develop faster using intuitive component classes, and still customize everything with Tailwind's utility classes when needed. This reduces the number of class names in your HTML, making your codebase smaller and easier to maintain. You no longer need to handle every single CSS property—just use a semantic class like `timeline` for a timeline component, instead of building it from scratch with hundreds of utility classes.
 
