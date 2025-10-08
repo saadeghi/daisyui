@@ -72,7 +72,9 @@
     }
   },
   "scripts": {
-    "build": "bun build.js"
+    "build": "bun build.js",
+    "build:simple": "bun build-simple.js",
+    "prebuild": "bun prebuild.js"
   },
   "dependencies": {
     "culori": "^4.0.2",

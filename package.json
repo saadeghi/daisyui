@@ -8,7 +8,7 @@
   "scripts": {
     "build": "cd packages/duskmoonui && bun run --bun build",
     "build:dev": "cd packages/duskmoonui && bun run --bun build --dev",
-    "build:docs": "bun run --bun build && cd packages/docs && bun run --bun build",
+    "build:docs": "cd packages/duskmoonui && bun run --bun build:simple && cd ../docs && bun run --bun build",
     "build:docs:dev": "bun run --bun build:dev && cd packages/docs && bun run --bun build",
     "dev": "bun run --bun build:dev && cd packages/docs && bun run --bun dev",
     "play": "bun run --bun build:dev && cd packages/playground && bun run --bun dev",
