@@ -1,12 +1,11 @@
 .modal {
   @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
-  overflow-x: hidden;
+  overflow: clip;
   transition:
     translate 0.3s ease-out,
     visibility 0.3s allow-discrete,
     background-color 0.3s ease-out,
     opacity 0.1s ease-out;
-  overflow-y: hidden;
   overscroll-behavior: contain;
   z-index: 999;
   scrollbar-gutter: auto;
@@ -72,7 +71,7 @@
 }
 
 .modal-box {
-  @apply bg-base-100 col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
+  @apply bg-base-100 visible col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
   transition:
     translate 0.3s ease-out,
     scale 0.3s ease-out,
