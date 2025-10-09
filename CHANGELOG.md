@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.30 (2025-10-09)
+
+
+### Bug Fixes
+
+* focus the first focusable element when modal opens. closes: [#3440](https://github.com/saadeghi/daisyui/issues/3440) ([c1e2f0c](https://github.com/saadeghi/daisyui/commit/c1e2f0ccfbd5c324f90bbe84168b6261fb56148a))
+
 ## 5.1.29 (2025-10-07)
 
 
