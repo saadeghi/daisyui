@@ -28,7 +28,8 @@ browserSupport:
 
 > :INFO:
 >
-> Tailwind CSS only applies prefixes to utility classes (and component classes). It doesn't add prefix to bases styles with CSS `:where()` selector. So, the Tailwind CSS Prefix is not applied on `theme-controller` class. See [Config -> prefix](https://daisyui.com/docs/config/#prefix) for more information on prefixes.
+> If you're using [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option), it won't add prefix to `theme-controller` class.  
+If you're using [daisyUI prefix](/docs/config/#prefix), it will add prefix to `theme-controller` class.
 
 
 ### ~Theme Controller using a toggle
