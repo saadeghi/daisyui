@@ -2,7 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## 5.2.0 (2025-10-10)
+## [5.2.0](https://github.com/saadeghi/daisyui/compare/v5.1.31...v5.2.0) (2025-10-10)
+
+
+### Features
+
+* new variants for drawer: `is-drawer-open` and `is-drawer-close` to style elements based on drawer state. Allowing us to create icon-only drawer sidebar.
+* countdown now supports 0 to 999 with dynamic width ([6b63563](https://github.com/saadeghi/daisyui/commit/6b6356371b3df2735ce947adfdf8c95f9daba37d))
+* **countdown:** animate independently the 2 digits of the number ([d3a32e2](https://github.com/saadeghi/daisyui/commit/d3a32e2d55d53cf3aefd4746a7c0a0731e999235)), closes [#4143](https://github.com/saadeghi/daisyui/issues/4143)
+* detect if page has vertical scrollbar visible and set scrollbar-gutter ([abf02cc](https://github.com/saadeghi/daisyui/commit/abf02cc347f78edab891ba3a0d1285440af01538))
+* icon-only drawer sidebar, new variants `is-drawer-open` and `is-drawer-close` ([32e919e](https://github.com/saadeghi/daisyui/commit/32e919e1bb73a3320fddf6d5381a1ad6699d65fd))
+
+
+### Bug Fixes
+
+* **dropdown:** do not open dropdown on click (but open it on kbd focus) ([39e4cb5](https://github.com/saadeghi/daisyui/commit/39e4cb54abddda75c03c0c1a5948d1d1b28fa967)), closes [#3880](https://github.com/saadeghi/daisyui/issues/3880)
+* enable tailwind conditional classes on menu-active ([4a8d227](https://github.com/saadeghi/daisyui/commit/4a8d227521f928217c7de112d24b102fe71013e8))
+* Tailwind CSS `collapse` utility class conflict ([c39d839](https://github.com/saadeghi/daisyui/commit/c39d8393214696bc054882ddb21d14aab6b6bacc))
+* fix scrollbar gutter layout shift on Windows when modal or drawer has a different scrollbar visibility than the body
 
 ## 5.1.32 (2025-10-10)
 
