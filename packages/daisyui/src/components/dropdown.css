@@ -8,11 +8,10 @@
   .dropdown-content {
     @apply absolute;
   }
-  &:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) {
-    .dropdown-content {
-      @apply hidden origin-top opacity-0;
-      scale: 95%;
-    }
+  &:not(details, .dropdown-open, .dropdown-hover:hover, :focus-within) .dropdown-content,
+  &.dropdown-hover:not(:hover) [tabindex]:first-child:focus:not(:focus-visible) ~ .dropdown-content {
+    @apply hidden origin-top opacity-0;
+    scale: 95%;
   }
 
   &[popover],
