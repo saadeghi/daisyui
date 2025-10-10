@@ -5,14 +5,15 @@
   }
 
   & > * {
-    @apply inline-block overflow-y-hidden relative invisible;
+    @apply invisible relative inline-block overflow-y-hidden tabular-nums;
     height: 1em;
+    min-width: 2ch;
     --value-v: calc(mod(max(0, var(--value)), 100));
     --value-1: calc(round(to-zero, var(--value-v) / 10, 1));
 
     &:before,
     &:after {
-      @apply absolute visible;
+      @apply visible absolute;
       content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A";
       white-space: pre;
       text-align: center;
