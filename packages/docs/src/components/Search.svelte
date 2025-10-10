@@ -843,7 +843,7 @@ Card,/components/card/`
   onkeydown={handleKeyDown}
 >
   <div
-    class="modal-box relative w-11/12 max-w-2xl p-0 max-md:h-[75vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)]"
+    class="modal-box relative w-11/12 max-w-2xl p-0 max-md:h-[85vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)]"
   >
     <div class="rounded-box h-full overflow-y-auto" style="scroll-padding-top: 3.5rem;">
       <label
