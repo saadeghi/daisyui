@@ -140,7 +140,7 @@ Probably you don't have to do this, but if you need to use both [Tailwind CSS pr
 In above example:
 - Tailwind class names will be prefixed with `tw:`, for example `p-4` will be `tw:p-4`.  
 - All daisyUI classes will be prefixed with `d-`, and `tw:`, for example `btn` will be `tw:d-btn`.
-- daisyUI class name [theme-controller](components/theme-controller/) is an exception and it only gets the daisyUI prefix, like this: `d-theme-controller`.
+- daisyUI class name [theme-controller](/components/theme-controller/) is an exception and it only gets the daisyUI prefix, like this: `d-theme-controller`.
 
 For example, `btn` will be `tw:d-btn`.
 
