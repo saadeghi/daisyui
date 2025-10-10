@@ -22,6 +22,11 @@ classnames:
   modifier:
     - class: drawer-open
       desc: Forces the drawer to be open
+  variant:
+    - class: "is-drawer-open:"
+      desc: Applies styles when the drawer is open
+    - class: "is-drawer-close:"
+      desc: Applies styles when the drawer is closed
 ---
 
 <script>
@@ -57,16 +62,16 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 > Opening a drawer adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.  
 > If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
-### ~Drawer
+### ~Drawer sidebar
 
 <div class="drawer h-56 rounded overflow-hidden">
-  <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+  <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
-    <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+    <label for="my-drawer-1" class="btn drawer-button">Open drawer</label>
   </div>
   <div class="drawer-side z-1002">
-    <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
+    <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200">
       <li><button>Sidebar Item 1</button></li>
       <li><button>Sidebar Item 2</button></li>
     </ul>
@@ -75,14 +80,14 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 ```html
 <div class="$$drawer">
-  <input id="my-drawer" type="checkbox" class="$$drawer-toggle" />
+  <input id="my-drawer-1" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content">
     <!-- Page content here -->
-    <label for="my-drawer" class="$$btn $$btn-primary $$drawer-button">Open drawer</label>
+    <label for="my-drawer-1" class="$$btn $$$$drawer-button">Open drawer</label>
   </div>
   <div class="$$drawer-side">
-    <label for="my-drawer" aria-label="close sidebar" class="$$drawer-overlay"></label>
-    <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
+    <label for="my-drawer-1" aria-label="close sidebar" class="$$drawer-overlay"></label>
+    <ul class="$$menu bg-base-200 min-h-full w-80 p-4">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>
@@ -96,11 +101,11 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 #### Change screen size to show/hide menu
 
 <div class="drawer h-56 rounded overflow-hidden">
-  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col drawer-content">
     <div class="w-full navbar bg-base-300">
       <div class="flex-none lg:hidden">
-        <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
+        <label for="my-drawer-2" aria-label="open sidebar" class="btn btn-square btn-ghost">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
       </div>
@@ -115,7 +120,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     <div class="flex justify-center items-center grow">Content</div>
   </div>
   <div class="drawer-side z-1002">
-    <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="p-4 menu w-60 md:w-80 min-h-full bg-base-200">
       <li><button>Sidebar Item 1</button></li>
       <li><button>Sidebar Item 2</button></li>
@@ -125,12 +130,12 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 ```html
 <div class="$$drawer">
-  <input id="my-drawer-3" type="checkbox" class="$$drawer-toggle" />
+  <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content flex flex-col">
     <!-- Navbar -->
     <div class="$$navbar bg-base-300 w-full">
       <div class="flex-none lg:hidden">
-        <label for="my-drawer-3" aria-label="open sidebar" class="$$btn $$btn-square $$btn-ghost">
+        <label for="my-drawer-2" aria-label="open sidebar" class="$$btn $$btn-square $$btn-ghost">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -159,6 +164,44 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
     Content
   </div>
   <div class="$$drawer-side">
+    <label for="my-drawer-2" aria-label="close sidebar" class="$$drawer-overlay"></label>
+    <ul class="$$menu bg-base-200 min-h-full w-80 p-4">
+      <!-- Sidebar content here -->
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  </div>
+</div>
+```
+
+### ~Responsive: Sidebar is always visible on large screen, can be toggled on small screen
+
+#### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
+
+<div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
+  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <div class="flex flex-col items-center justify-center drawer-content">
+    <label for="my-drawer-3" class="btn drawer-button lg:hidden">Open drawer</label>
+  </div>
+  <div class="drawer-side max-lg:z-1002">
+    <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200">
+      <li><button>Sidebar Item 1</button></li>
+      <li><button>Sidebar Item 2</button></li>
+    </ul>
+  </div>
+</div>
+
+```html
+<div class="$$drawer lg:$$drawer-open">
+  <input id="my-drawer-3" type="checkbox" class="$$drawer-toggle" />
+  <div class="$$drawer-content flex flex-col items-center justify-center">
+    <!-- Page content here -->
+    <label for="my-drawer-3" class="$$btn $$$$drawer-button lg:hidden">
+      Open drawer
+    </label>
+  </div>
+  <div class="$$drawer-side">
     <label for="my-drawer-3" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <ul class="$$menu bg-base-200 min-h-full w-80 p-4">
       <!-- Sidebar content here -->
@@ -169,54 +212,107 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 </div>
 ```
 
-### ~Responsive
 
-#### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
+### ~Icon-only drawer sidebar when it's closed. Using is-drawer-close and is-drawer-open variants
 
-<div class="drawer lg:drawer-open h-56 rounded overflow-hidden">
-  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-  <div class="flex flex-col items-center justify-center drawer-content">
-    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+#### In this example instead of completely hiding the drawer sidebar, we only show the icons when the drawer is closed. To add styles based on the state of the drawer, we use the `is-drawer-open` and `is-drawer-close` variants. For example `is-drawer-close:hidden` or `is-drawer-open:w-80`. Also we have tooltips when the drawer is closed and a switch button to open/close the drawer and rotates the button icon based on the state of the drawer.
+
+<div class="drawer drawer-open h-56 rounded overflow-hidden">
+  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+  <div class="h-56 drawer-content">
+    <!-- Page content here -->
   </div>
-  <div class="drawer-side max-lg:z-1002">
-    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
-      <li><button>Sidebar Item 1</button></li>
-      <li><button>Sidebar Item 2</button></li>
-    </ul>
+  <div class="drawer-side is-drawer-close:overflow-visible h-full max-lg:z-1002">
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="is-drawer-close:w-17 is-drawer-open:w-64 h-full bg-base-200 flex flex-col items-start">
+      <ul class="menu p-4 w-full grow">
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left" data-tip="Homepage">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5">
+              <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+              <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            </svg>
+            <span class="is-drawer-close:hidden">Homepage</span>
+          </button>
+        </li>
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left" data-tip="Settings">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5">>
+              <path d="M20 7h-9"></path>
+              <path d="M14 17H5"></path>
+              <circle cx="17" cy="17" r="3"></circle>
+              <circle cx="7" cy="7" r="3"></circle>
+            </svg>
+            <span class="is-drawer-close:hidden">Settings</span>
+          </button>
+        </li>
+      </ul>
+      <div class="m-3.5 is-drawer-close:tooltip is-drawer-close:tooltip-right rtl:is-drawer-close:tooltip-left" data-tip="Open">
+        <label for="my-drawer-4" class="btn btn-ghost btn-circle drawer-button is-drawer-open:rotate-y-180">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5">
+            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+            <path d="M9 4v16"></path>
+            <path d="M14 10l2 2l-2 2"></path>
+          </svg>
+        </label>
+      </div>
+    </div>
   </div>
 </div>
 
 ```html
-<div class="$$drawer lg:$$drawer-open">
-  <input id="my-drawer-2" type="checkbox" class="$$drawer-toggle" />
-  <div class="$$drawer-content flex flex-col items-center justify-center">
+<div class="$$drawer $$drawer-open">
+  <input id="my-drawer-4" type="checkbox" class="$$drawer-toggle" />
+  <div class="$$drawer-content">
     <!-- Page content here -->
-    <label for="my-drawer-2" class="$$btn $$btn-primary $$drawer-button lg:hidden">
-      Open drawer
-    </label>
   </div>
-  <div class="$$drawer-side">
-    <label for="my-drawer-2" aria-label="close sidebar" class="$$drawer-overlay"></label>
-    <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
+  
+  <div class="$$drawer-side is-drawer-close:overflow-visible">
+    <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
+    <div class="is-drawer-close:w-17 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
       <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
+      <ul class="$$menu w-full grow p-4">
+
+        <!-- list item -->
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span class="is-drawer-close:hidden">Homepage</span>
+          </button>
+        </li>
+
+        <!-- list item -->
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+            <span class="is-drawer-close:hidden">Settings</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- button to open/close drawer -->
+      <div class="m-3.5 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
+        <label for="my-drawer-4" class="$$btn $$btn-ghost $$btn-circle $$drawer-button is-drawer-open:rotate-y-180">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="inline-block size-4 my-1.5"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M9 4v16"></path><path d="M14 10l2 2l-2 2"></path></svg>
+        </label>
+      </div>
+
+    </div>
   </div>
 </div>
 ```
 
-### ~Drawer that opens from right side of page
+
+### ~Drawer sidebar that opens from right side of page
 
 <div class="drawer drawer-end h-56 rounded overflow-hidden">
-  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+  <input id="my-drawer-5" type="checkbox" class="drawer-toggle" />
   <div class="flex flex-col items-center justify-center drawer-content">
-    <label for="my-drawer-4" class="btn btn-primary drawer-button">Open drawer</label>
+    <label for="my-drawer-5" class="btn drawer-button">Open drawer</label>
   </div>
   <div class="drawer-side z-1002">
-    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200 text-base-content">
+    <label for="my-drawer-5" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-60 md:w-80 min-h-full bg-base-200">
       <li><button>Sidebar Item 1</button></li>
       <li><button>Sidebar Item 2</button></li>
     </ul>
@@ -225,14 +321,14 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 ```html
 <div class="$$drawer $$drawer-end">
-  <input id="my-drawer-4" type="checkbox" class="$$drawer-toggle" />
+  <input id="my-drawer-5" type="checkbox" class="$$drawer-toggle" />
   <div class="$$drawer-content">
     <!-- Page content here -->
-    <label for="my-drawer-4" class="$$drawer-button $$btn $$btn-primary">Open drawer</label>
+    <label for="my-drawer-5" class="$$drawer-button $$btn $$btn-primary">Open drawer</label>
   </div>
   <div class="$$drawer-side">
-    <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
-    <ul class="$$menu bg-base-200 text-base-content min-h-full w-80 p-4">
+    <label for="my-drawer-5" aria-label="close sidebar" class="$$drawer-overlay"></label>
+    <ul class="$$menu bg-base-200 min-h-full w-80 p-4">
       <!-- Sidebar content here -->
       <li><a>Sidebar Item 1</a></li>
       <li><a>Sidebar Item 2</a></li>

@@ -7,7 +7,7 @@ import { base, components, utilities } from "./imports.js"
 
 export default plugin.withOptions(
   (options) => {
-    return ({ addBase, addComponents, addUtilities }) => {
+    return ({ addBase, addComponents, addUtilities, addVariant }) => {
       const {
         include,
         exclude,
@@ -41,6 +41,16 @@ export default plugin.withOptions(
         if (!shouldIncludeItem(name)) return
         item({ addUtilities, prefix })
       })
+
+      // drawer variants. Can not be nested in layers so defined here
+      addVariant(
+        "is-drawer-close",
+        "&:where(.drawer-toggle:not(:checked) ~ .drawer-side, .drawer-toggle:not(:checked) ~ .drawer-side *)",
+      )
+      addVariant(
+        "is-drawer-open",
+        "&:where(.drawer-toggle:checked ~ .drawer-side, .drawer-toggle:checked ~ .drawer-side *)",
+      )
     }
   },
   () => ({

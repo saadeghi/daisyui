@@ -2,6 +2,8 @@
 description: daisyUI 5
 alwaysApply: true
 applyTo: "**"
+downloadedFrom: https://daisyui.com/llms.txt
+version: 5.2.x
 ---
 
 # daisyUI 5
@@ -42,7 +44,7 @@ daisyUI 5 provides class names for common UI components
 10. don't add `bg-base-100 text-base-content` to body unless it's necessary
 11. For design decisions, use Refactoring UI book best practices
 
-daisyUI 5 class names are one of the following categories. these type names are only for reference and are not used in the actual code
+daisyUI 5 class names are one of the following categories. These type names are only for reference and are not used in the actual code
 - `component`: the required component class
 - `part`: a child part of a component
 - `style`: sets a specific style to component or part
@@ -52,6 +54,7 @@ daisyUI 5 class names are one of the following categories. these type names are 
 - `placement`: sets a specific placement to component or part
 - `direction`: sets a specific direction to component or part
 - `modifier`: modifies the component or part in a specific way
+- `variant`: prefixes for utility classes that conditionally apply styles. syntax is `variant:utility-class`
 
 ## Config
 daisyUI 5 config docs: https://daisyui.com/docs/config/
@@ -464,7 +467,7 @@ Collapse is used for showing and hiding content
 - Can also be a details/summary tag
 
 ### countdown
-Countdown gives you a transition effect when you change a number between 0 to 99
+Countdown gives you a transition effect when you change a number between 0 to 999
 
 [countdown docs](https://daisyui.com/components/countdown/)
 
@@ -479,7 +482,7 @@ Countdown gives you a transition effect when you change a number between 0 to 99
 ```
 
 #### Rules
-- The `--value` CSS variable and text must be a number between 0 and 99
+- The `--value` CSS variable and text must be a number between 0 and 999
 - you need to change the span text and the `--value` CSS variable using JS
 - you need to add `aria-live="polite"` and `aria-label="{number}"` so screen readers can properly read changes
 
@@ -562,6 +565,7 @@ Drawer is a grid layout that can show/hide a sidebar on the left or right side o
 - part: `drawer-toggle`, `drawer-content`, `drawer-side`, `drawer-overlay`
 - placement: `drawer-end`
 - modifier: `drawer-open`
+- variant: `is-drawer-open:`, `is-drawer-close:`
 
 #### Syntax
 ```html
@@ -578,6 +582,68 @@ and {SIDEBAR} can be a menu like:
   <li><a>Item 1</a></li>
   <li><a>Item 2</a></li>
 </ul>
+```
+To open/close the drawer, use a label that points to the `drawer-toggle` input:
+```html
+<label for="my-drawer" class="btn drawer-button">Open/close drawer</label>
+```
+Example: This sidebar is always visible on large screen, can be toggled on small screen:
+```html
+<div class="drawer lg:drawer-open">
+  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col items-center justify-center">
+    <!-- Page content here -->
+    <label for="my-drawer-3" class="btn drawer-button lg:hidden">
+      Open drawer
+    </label>
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+    <ul class="menu bg-base-200 min-h-full w-80 p-4">
+      <!-- Sidebar content here -->
+      <li><button>Sidebar Item 1</button></li>
+      <li><button>Sidebar Item 2</button></li>
+    </ul>
+  </div>
+</div>
+```
+
+Example: This sidebar is always visible. When it's close we only see iocns, when it's open we see icons and text
+```html
+<div class="drawer lg:drawer-open">
+  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Page content here -->
+  </div>
+  <div class="drawer-side is-drawer-close:overflow-visible">
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="is-drawer-close:w-17 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
+      <!-- Sidebar content here -->
+      <ul class="menu w-full grow p-4">
+        <!-- list item -->
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
+            🏠
+            <span class="is-drawer-close:hidden">Homepage</span>
+          </button>
+        </li>
+        <!-- list item -->
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
+            ⚙️
+            <span class="is-drawer-close:hidden">Settings</span>
+          </button>
+        </li>
+      </ul>
+      <!-- button to open/close drawer -->
+      <div class="m-3.5 is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Open">
+        <label for="my-drawer-4" class="btn btn-ghost btn-circle drawer-button is-drawer-open:rotate-y-180">
+          ↔️
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 #### Rules
@@ -1677,6 +1743,3 @@ Validator class changes the color of form elements to error or success based on 
 #### Rules
 - Use with `input`, `select`, `textarea`
 
-## Notes
-- Compatible with daisyUI 5.1
-- Get the latest version of this file at https://daisyui.com/llms.txt

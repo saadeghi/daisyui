@@ -151,6 +151,7 @@ export const pages = [
           {
             name: "Countdown",
             href: "/components/countdown/",
+            badge: "updated",
           },
           {
             name: "Diff",
@@ -333,6 +334,7 @@ export const pages = [
           {
             name: "Drawer",
             href: "/components/drawer/",
+            badge: "updated",
           },
           {
             name: "Footer",

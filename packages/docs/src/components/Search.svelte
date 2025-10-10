@@ -843,7 +843,7 @@ Card,/components/card/`
   onkeydown={handleKeyDown}
 >
   <div
-    class="modal-box relative w-11/12 max-w-2xl p-0 max-md:h-[75vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)]"
+    class="modal-box relative w-11/12 max-w-2xl p-0 max-md:h-[85vh] md:mt-[10vh] md:h-[clamp(13rem,80vh,80vh)]"
   >
     <div class="rounded-box h-full overflow-y-auto" style="scroll-padding-top: 3.5rem;">
       <label
@@ -1074,6 +1074,20 @@ Card,/components/card/`
               {/each}
             {/if}
           </div>
+        {/if}
+
+        {#if isSearchLoading}
+          {#each Array(3) as _}
+            <div class="rounded-boxflex w-full items-center p-4">
+              <div class="flex min-w-0 flex-1 items-center">
+                <div class="skeleton me-4 size-14 rounded"></div>
+                <div>
+                  <div class="skeleton mb-2 h-6 w-20 rounded"></div>
+                  <div class="skeleton h-4 w-40 rounded"></div>
+                </div>
+              </div>
+            </div>
+          {/each}
         {/if}
       </div>
     </div>
