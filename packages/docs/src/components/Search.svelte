@@ -1075,6 +1075,20 @@ Card,/components/card/`
             {/if}
           </div>
         {/if}
+
+        {#if isSearchLoading}
+          {#each Array(3) as _}
+            <div class="rounded-boxflex w-full items-center p-4">
+              <div class="flex min-w-0 flex-1 items-center">
+                <div class="skeleton me-4 size-14 rounded"></div>
+                <div>
+                  <div class="skeleton mb-2 h-6 w-20 rounded"></div>
+                  <div class="skeleton h-4 w-40 rounded"></div>
+                </div>
+              </div>
+            </div>
+          {/each}
+        {/if}
       </div>
     </div>
   </div>
