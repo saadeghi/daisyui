@@ -1,39 +1,42 @@
 .modal {
   @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
-  overflow: clip;
   transition:
-    translate 0.3s ease-out,
     visibility 0.3s allow-discrete,
     background-color 0.3s ease-out,
     opacity 0.1s ease-out;
+  overflow: clip;
   overscroll-behavior: contain;
   z-index: 999;
   scrollbar-gutter: auto;
+
   &::backdrop {
     @apply hidden;
   }
 
   &.modal-open,
   &[open],
-  &:target {
+  &:target,
+  .modal-toggle:checked + & {
     @apply pointer-events-auto visible opacity-100;
-    background-color: oklch(0% 0 0/ 0.4);
-    /* this cause glitch on Chrome */
-    /* transition:
-      translate 0.3s ease-out,
+    transition:
+      visibility 0s allow-discrete,
       background-color 0.3s ease-out,
-      opacity 0.1s ease-out; */
+      opacity 0.1s ease-out;
+    background-color: oklch(0% 0 0/ 0.4);
+
     .modal-box {
       translate: 0 0;
       scale: 1;
       opacity: 1;
     }
   }
+
   @starting-style {
     &.modal-open,
     &[open],
-    &:target {
-      @apply invisible opacity-0;
+    &:target,
+    .modal-toggle:checked + & {
+      @apply opacity-0;
     }
   }
 }
@@ -44,21 +47,6 @@
 
 .modal-toggle {
   @apply fixed h-0 w-0 appearance-none opacity-0;
-
-  &:checked + .modal {
-    @apply pointer-events-auto visible opacity-100;
-    background-color: oklch(0% 0 0/ 0.4);
-    .modal-box {
-      translate: 0 0;
-      scale: 1;
-      opacity: 1;
-    }
-  }
-  @starting-style {
-    &:checked + .modal {
-      @apply invisible opacity-0;
-    }
-  }
 }
 
 .modal-backdrop {
@@ -71,7 +59,7 @@
 }
 
 .modal-box {
-  @apply bg-base-100 visible col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
+  @apply bg-base-100 col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
   transition:
     translate 0.3s ease-out,
     scale 0.3s ease-out,
