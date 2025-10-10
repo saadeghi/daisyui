@@ -62,7 +62,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 > Opening a drawer adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.  
 > If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
-### ~Drawer
+### ~Drawer sidebar
 
 <div class="drawer h-56 rounded overflow-hidden">
   <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
@@ -174,7 +174,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 </div>
 ```
 
-### ~Responsive
+### ~Responsive: Sidebar is always visible on large screen, can be toggled on small screen
 
 #### Sidebar is always visible on large screen, can be toggled on small screen because of lg:drawer-open class
 
@@ -213,7 +213,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 ```
 
 
-### ~Icon-only drawer when it's closed. Using is-drawer-close and is-drawer-open variants
+### ~Icon-only drawer sidebar when it's closed. Using is-drawer-close and is-drawer-open variants
 
 #### In this example instead of completely hiding the drawer sidebar, we only show the icons when the drawer is closed. To add styles based on the state of the drawer, we use the `is-drawer-open` and `is-drawer-close` variants. For example `is-drawer-close:hidden` or `is-drawer-open:w-80`. Also we have tooltips when the drawer is closed and a switch button to open/close the drawer and rotates the button icon based on the state of the drawer.
 
@@ -303,7 +303,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 ```
 
 
-### ~Drawer that opens from right side of page
+### ~Drawer sidebar that opens from right side of page
 
 <div class="drawer drawer-end h-56 rounded overflow-hidden">
   <input id="my-drawer-5" type="checkbox" class="drawer-toggle" />
