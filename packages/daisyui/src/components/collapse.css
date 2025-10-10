@@ -1,10 +1,10 @@
 .collapse:not(td, tr, colgroup) {
   visibility: revert-layer;
+  display: grid;
 }
 
 .collapse {
   position: relative;
-  display: grid;
   overflow: hidden;
   border-radius: var(--radius-box, 1rem);
   width: 100%;
