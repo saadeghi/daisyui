@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.1.31 (2025-10-10)
+
+
+### Bug Fixes
+
+* **modal:** make sure elements inside modal are hidden when not open ([#4161](https://github.com/saadeghi/daisyui/issues/4161)) ([5ddae21](https://github.com/saadeghi/daisyui/commit/5ddae21f05fdf670b0d31d16b875566b530f8e2c)), closes [#3440](https://github.com/saadeghi/daisyui/issues/3440) [#3835](https://github.com/saadeghi/daisyui/issues/3835) [#2223](https://github.com/saadeghi/daisyui/issues/2223)
+
 ## 5.1.30 (2025-10-09)
 
 
