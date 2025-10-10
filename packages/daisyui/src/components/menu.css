@@ -222,6 +222,7 @@
   }
 }
 
+/* allow usecases like group-hover:menu-active to make a menu item active when the menu is hovered */
 :where(:not(ul, details, .menu-title, .btn)).menu-active {
   @apply outline-hidden;
   color: var(--menu-active-fg);
