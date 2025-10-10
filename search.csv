@@ -411,10 +411,11 @@ Card with image on side,/components/card/#card-with-image-on-side
 "Responsive card (vertical on small screen, horizontal on large screen)",/components/card/#responsive-card-vertical-on-small-screen-horizontal-on-large-screen
 Structure,/components/drawer/#structure
 Functionality,/components/drawer/#functionality
-Drawer,/components/drawer/#drawer
+Drawer sidebar,/components/drawer/#drawer-sidebar
 Navbar menu for desktop + sidebar drawer for mobile,/components/drawer/#navbar-menu-for-desktop-sidebar-drawer-for-mobile
-Responsive,/components/drawer/#responsive
-Drawer that opens from right side of page,/components/drawer/#drawer-that-opens-from-right-side-of-page
+"Responsive: Sidebar is always visible on large screen, can be toggled on small screen",/components/drawer/#responsive-sidebar-is-always-visible-on-large-screen-can-be-toggled-on-small-screen
+Icon-only drawer sidebar when it's closed. Using is-drawer-close and is-drawer-open variants,/components/drawer/#icon-only-drawer-sidebar-when-its-closed-using-is-drawer-close-and-is-drawer-open-variants
+Drawer sidebar that opens from right side of page,/components/drawer/#drawer-sidebar-that-opens-from-right-side-of-page
 Status Indicator,/components/indicator/#status-indicator
 Badge as indicator,/components/indicator/#badge-as-indicator
 for button,/components/indicator/#for-button
