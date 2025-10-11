@@ -36,7 +36,7 @@ classnames:
 
 ### Structure
 
-Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page, based on the screen size or based on the value of a `drawer-toggle` checkbox.  
+Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page, based on the screen size or based on the value of a `drawer-toggle` checkbox.
 Drawer must be the parent element of the content and sidebar.
 
 ```json:Structure
@@ -59,7 +59,8 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
 
 > :INFO:
 >
-> Opening a drawer adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.  
+> Opening a drawer adds a [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter) to the page to avoid layout shift on operating systems that have a fixed scrollbar.
+> On recent Chromium based browsers vertical scrollbar presence is detected automatically. On Safari and on mobile devices the scrollbar is displayed as overlay so there will not be gutter. On Firefox you need to detect the presence of vertical scrollbar and set the `scrollbar-gutter: stable` or `scrollbar-gutter: unset` on `:root` element yourself.
 > If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
 ### ~Drawer sidebar
@@ -266,7 +267,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="$$drawer-content">
     <!-- Page content here -->
   </div>
-  
+
   <div class="$$drawer-side is-drawer-close:overflow-visible">
     <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <div class="is-drawer-close:w-17 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
