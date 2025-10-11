@@ -11,3 +11,5 @@ tmp
 .logs
 .env.local
 .svelte-kit
+
+.*.instructions.md
