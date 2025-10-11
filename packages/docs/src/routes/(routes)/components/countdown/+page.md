@@ -62,7 +62,7 @@ classnames:
 
 ```html
 <span class="$$countdown font-mono text-6xl">
-  <span style="--$$value:59; --$$value-pad: 2;" aria-live="polite" aria-label="59">59</span>
+  <span style="--$$value:59; --$$digits: 2;" aria-live="polite" aria-label="59">59</span>
 </span>
 ```
 ```jsx
@@ -111,9 +111,9 @@ classnames:
 <span class="$$countdown font-mono text-2xl">
   <span style="--$$value:10;" aria-live="polite" aria-label="10">10</span>
   :
-  <span style="--$$value:24; --$$value-pad: 2;" aria-live="polite" aria-label="24">24</span>
+  <span style="--$$value:24; --$$digits: 2;" aria-live="polite" aria-label="24">24</span>
   :
-  <span style="--$$value:59; --$$value-pad: 2;" aria-live="polite" aria-label="59">59</span>
+  <span style="--$$value:59; --$$digits: 2;" aria-live="polite" aria-label="59">59</span>
 </span>
 ```
 ```jsx

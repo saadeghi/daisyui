@@ -9,7 +9,7 @@ desc: daisyUI provides a few useful utility classes and CSS variables to help yo
 
 ## <Translate text="Color utility classes" />
 
-All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color.
+All daisyUI colors can be used as utility classes. Just like any other Tailwind CSS color.  
 For example you can use `primary` color with any of Tailwind CSS color utilities.
 
 Read more about [color names](/docs/colors).
@@ -48,7 +48,7 @@ You can also control the opacity of the color like
 
 ## <Translate text="Border radius" />
 
-Tailwind CSS provides fixed values for border radius, such as `rounded-sm`, `rounded-lg`, `rounded-xl`, etc.
+Tailwind CSS provides fixed values for border radius, such as `rounded-sm`, `rounded-lg`, `rounded-xl`, etc.  
 daisyUI provides a few more border radius values which are tokenized for components and can be customized based on the theme.
 
 Change the theme to see the border radius changes:
