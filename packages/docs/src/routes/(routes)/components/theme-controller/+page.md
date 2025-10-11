@@ -22,13 +22,13 @@ browserSupport:
 
 > :INFO:
 >
-> Theme Controller changes the theme using CSS only.  
-> You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh.  
+> Theme Controller changes the theme using CSS only.
+> You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh.
 > Here's a React example to save checkbox state in local storage: [Stackblitz](https://stackblitz.com/edit/react-checkbox-localstorage?file=src%2FApp.js)
 
 > :INFO:
 >
-> If you're using [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option), it won't add prefix to `theme-controller` class.  
+> If you're using [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option), it won't add prefix to `theme-controller` class.
 If you're using [daisyUI prefix](/docs/config/#prefix), it will add prefix to `theme-controller` class.
 
 
@@ -278,7 +278,7 @@ If you're using [daisyUI prefix](/docs/config/#prefix), it will add prefix to `t
     Theme
     <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path></svg>
   </div>
-  <ul tabindex="0" class="dropdown-content z-1 p-2 shadow-2xl bg-base-300 rounded-box w-52">
+  <ul tabindex="-1" class="dropdown-content z-1 p-2 shadow-2xl bg-base-300 rounded-box w-52">
     <li><input bind:group={radio} type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-block justify-start btn-ghost" aria-label="Default" value="default"/></li>
     <li><input bind:group={radio} type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-block justify-start btn-ghost" aria-label="Retro" value="retro"/></li>
     <li><input bind:group={radio} type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-block justify-start btn-ghost" aria-label="Cyberpunk" value="cyberpunk"/></li>
@@ -300,7 +300,7 @@ If you're using [daisyUI prefix](/docs/config/#prefix), it will add prefix to `t
       <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
     </svg>
   </div>
-  <ul tabindex="0" class="$$dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl">
+  <ul tabindex="-1" class="$$dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl">
     <li>
       <input
         type="radio"

@@ -182,7 +182,7 @@ Every component is pure CSS, working perfectly with keyboard navigation, screen 
 <!-- Interactive dropdown without JavaScript -->
 <div class="dropdown">
   <label tabindex="0" class="btn m-1">Options</label>
-  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
+  <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
     <li><a href="/profile">Profile</a></li>
     <li><a href="/settings">Settings</a></li>
     <li><a href="/logout">Logout</a></li>
