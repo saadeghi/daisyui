@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.2.1 (2025-10-11)
+
+
+### Bug Fixes
+
+* countdown alignment problems ([#4166](https://github.com/saadeghi/daisyui/issues/4166)) ([83198ca](https://github.com/saadeghi/daisyui/commit/83198ca1ff0b98a2aff12bade01231836f3cd93c)), closes [#3872](https://github.com/saadeghi/daisyui/issues/3872)
+
 ## [5.2.0](https://github.com/saadeghi/daisyui/compare/v5.1.31...v5.2.0) (2025-10-10)
 
 
