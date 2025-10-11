@@ -5,7 +5,7 @@
   }
 
   & > * {
-    @apply invisible relative inline-block overflow-y-hidden;
+    @apply invisible relative inline-block overflow-y-clip;
     transition: width 0.4s ease-out 0.2s;
     height: 1em;
     --value-v: calc(mod(max(0, var(--value)), 1000));
