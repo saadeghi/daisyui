@@ -68,7 +68,7 @@ classnames:
 ```jsx
 {/* For TSX uncomment the commented types below */}
 <span class="$$countdown font-mono text-6xl">
-  <span style={{"--$$value":59, "--$$value-pad":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
+  <span style={{"--$$value":59, "--$$digits":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
 </span>
 ```
 
@@ -121,7 +121,7 @@ classnames:
 <span class="$$countdown font-mono text-2xl">
   <span style={{"--$$value":10} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>10</span>:
   <span style={{"--$$value":24} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>24</span>:
-  <span style={{"--$$value":59, "--$$value-pad":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
+  <span style={{"--$$value":59, "--$$digits":2} /* as React.CSSProperties */ } aria-live="polite" aria-label={counter}>59</span>
 </span>
 ```
 
