@@ -92,12 +92,12 @@
     <div class="h-6"></div>
     {#if import.meta.env.DEV}
       <div
-        class="carbonads-responsive bg-base-200 rounded-box mx-auto flex min-h-[100px] items-center justify-center max-xl:w-[22rem] xl:h-[13rem]"
+        class="carbonads-responsive bg-base-200 rounded-box mx-auto flex min-h-[121px] items-center justify-center max-xl:w-[22rem] xl:h-[13rem]"
       >
         <div class="text-base-content/30 text-xs">Ads</div>
       </div>
     {:else}
-      <div class="carbonads-responsive mx-auto flex min-h-[100px] items-center justify-center">
+      <div class="carbonads-responsive mx-auto flex min-h-[121px] items-center justify-center">
         <Carbon />
       </div>
     {/if}
