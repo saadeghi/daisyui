@@ -208,7 +208,7 @@ daisyUI is pure CSS. Your entire component library adds zero runtime JavaScript:
 <!-- Complete interactive dropdown - no JavaScript required -->
 <div class="dropdown">
   <label tabindex="0" class="btn m-1">Menu</label>
-  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
+  <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow">
     <li><a href="/home">Home</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="/contact">Contact</a></li>

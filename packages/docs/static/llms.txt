@@ -684,7 +684,7 @@ Using CSS focus
 ```html
 <div class="dropdown">
   <div tabindex="0" role="button">Button</div>
-  <ul tabindex="0" class="dropdown-content">{CONTENT}</ul>
+  <ul tabindex="-1" class="dropdown-content">{CONTENT}</ul>
 </div>
 ```
 

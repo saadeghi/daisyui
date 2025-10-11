@@ -19,7 +19,7 @@
     </svg>
   </div>
   <ul
-    tabindex="0"
+    tabindex="-1"
     class="dropdown-content menu menu-sm bg-base-200 rounded-box mt-7 w-36 border-[length:var(--border)] border-white/5 p-2 shadow-2xl outline-[length:var(--border)] outline-black/5"
   >
     <li>
