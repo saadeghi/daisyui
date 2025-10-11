@@ -7,7 +7,7 @@
   & > * {
     @apply invisible relative inline-block overflow-y-clip;
     transition: width 0.4s ease-out 0.2s;
-    height: 1em;
+
     --value-v: calc(mod(max(0, var(--value)), 1000));
     --value-hundreds: calc(round(to-zero, var(--value-v) / 100, 1));
     --value-tens: calc(round(to-zero, mod(var(--value-v), 100) / 10, 1));
@@ -19,6 +19,8 @@
       1
     );
     --first-digits: calc(round(to-zero, var(--value-v) / 10, 1));
+    --em: round(up, calc(1em * 1px), 1);
+    height: var(--em);
     width: calc(1ch + var(--show-tens) * 1ch + var(--show-hundreds) * 1ch);
     direction: ltr;
 
@@ -38,14 +40,14 @@
 
     &:before {
       width: calc(1ch + var(--show-hundreds) * 1ch);
-      top: calc(var(--first-digits) * -1em);
+      top: calc(var(--first-digits) * var(--em) * -1);
       inset-inline-end: 0;
       opacity: var(--show-tens);
     }
 
     &:after {
       width: 1ch;
-      top: calc(var(--value-ones) * -1em);
+      top: calc(var(--value-ones) * var(--em) * -1);
       inset-inline-start: 0;
     }
   }
