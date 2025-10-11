@@ -2,7 +2,7 @@
 title: Tailwind CSS
 desc: Why Tailwind CSS is the most practical way to build scalable UIs, and how daisyUI makes it even better
 layout: contentLanding
-keywords: tailwind css, utility-first
+keywords: CSS framework, utility-first
 ---
 
 <script>
