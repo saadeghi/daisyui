@@ -45,12 +45,12 @@ classnames:
 
 
 ## There are 3 methods to use modals
-1. [Using HTML `<dialog>` element](#method-1-html-dialog-element-recommended)
-  It needs JS to open but it has better accessibility and we can close it using `Esc` key
-2. [Using checkbox](#method-2-checkbox-legacy)
-  A hidden `<input type="checkbox">` to control the state of modal and `<label>` to check/uncheck the checkbox and open/close the modal
-3. [Using `<a>` anchor links](#method-3-using-anchor-links-legacy)
-  A link adds a parameter to the URL and you only see the modal when the URL has that parameter
+1. [Using HTML `<dialog>` element](#method-1-html-dialog-element-recommended)  
+  It needs JS to open but it has better accessibility and we can close it using `Esc` key  
+2. [Using checkbox](#method-2-checkbox-legacy)  
+  A hidden `<input type="checkbox">` to control the state of modal and `<label>` to check/uncheck the checkbox and open/close the modal  
+3. [Using `<a>` anchor links](#method-3-using-anchor-links-legacy)  
+  A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 
 > :INFO:
 >
@@ -59,8 +59,8 @@ classnames:
 > If you don't want to use this feature, [you can exclude `rootscrollgutter`](/docs/config/#exclude).
 
 ## Method 1. HTML dialog element `recommended`
-HTML dialog element is a native way to create modals. It is accessible and we can close the modal using `Esc` key.
-We can open the modal using JS `ID.showModal()` method and close it using `ID.close()` method.
+HTML dialog element is a native way to create modals. It is accessible and we can close the modal using `Esc` key.  
+We can open the modal using JS `ID.showModal()` method and close it using `ID.close()` method.  
 The ID must be unique for each modal.
 
 ### ~Dialog modal
@@ -347,7 +347,7 @@ A hidden checkbox can control the state of modal and labels can toggle the check
 
 
 ### Method 3. using anchor links `legacy`
-A link adds a parameter to the URL and you only see the modal when the URL has that parameter
+A link adds a parameter to the URL and you only see the modal when the URL has that parameter  
 When modal is closed, the page will scroll to the top because of the anchor link.
 Anchor links might not work well on some SPA frameworks. If there are problems, use the other methods
 

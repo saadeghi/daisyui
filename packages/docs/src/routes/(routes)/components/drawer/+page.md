@@ -36,7 +36,7 @@ classnames:
 
 ### Structure
 
-Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page, based on the screen size or based on the value of a `drawer-toggle` checkbox.
+Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page, based on the screen size or based on the value of a `drawer-toggle` checkbox.  
 Drawer must be the parent element of the content and sidebar.
 
 ```json:Structure
@@ -267,7 +267,7 @@ You can check/uncheck the checkbox using JavaScript or by clicking the `label` t
   <div class="$$drawer-content">
     <!-- Page content here -->
   </div>
-
+  
   <div class="$$drawer-side is-drawer-close:overflow-visible">
     <label for="my-drawer-4" aria-label="close sidebar" class="$$drawer-overlay"></label>
     <div class="is-drawer-close:w-17 is-drawer-open:w-64 bg-base-200 flex flex-col items-start min-h-full">
