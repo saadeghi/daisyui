@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 5.2.2 (2025-10-11)
+
+
+### Bug Fixes
+
+* countdown RTL bug and allow defining number of digits ([426de84](https://github.com/saadeghi/daisyui/commit/426de84e061f511d95d1a44c877fb65395f3afdf))
+
 ## 5.2.1 (2025-10-11)
 
 
