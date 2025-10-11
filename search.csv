@@ -379,7 +379,7 @@ Vertical,/components/stat/#vertical
 "Responsive (vertical on small screen, horizontal on large screen)",/components/stat/#responsive-vertical-on-small-screen-horizontal-on-large-screen
 With custom colors and button,/components/stat/#with-custom-colors-and-button
 Countdown,/components/countdown/#countdown
-Large text,/components/countdown/#large-text
+Large text with 2 digits,/components/countdown/#large-text-with-2-digits
 Clock countdown,/components/countdown/#clock-countdown
 Clock countdown with colons,/components/countdown/#clock-countdown-with-colons
 Large text with labels,/components/countdown/#large-text-with-labels
