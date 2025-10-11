@@ -1,99 +1,113 @@
 .alert {
-  @apply rounded-box text-base-content grid items-center gap-4 px-4 py-3;
-  background-color: var(--alert-color, var(--color-base-200));
-  justify-content: start;
-  justify-items: start;
-  grid-auto-flow: column;
-  grid-template-columns: auto;
-  text-align: start;
-  border: var(--border) solid var(--color-base-200);
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  background-size: auto, calc(var(--noise) * 100%);
-  background-image: none, var(--fx-noise);
-  box-shadow:
-    0 3px 0 -2px oklch(100% 0 0 / calc(var(--depth) * 0.08)) inset,
-    0 1px
-      color-mix(
+  @layer components.base {
+    @apply rounded-box text-base-content grid items-center gap-4 px-4 py-3;
+    background-color: var(--alert-color, var(--color-base-200));
+    justify-content: start;
+    justify-items: start;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    text-align: start;
+    border: var(--border) solid var(--color-base-200);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background-size: auto, calc(var(--noise) * 100%);
+    background-image: none, var(--fx-noise);
+    box-shadow:
+      0 3px 0 -2px oklch(100% 0 0 / calc(var(--depth) * 0.08)) inset,
+      0 1px
+        color-mix(
+          in oklab,
+          color-mix(in oklab, #000 20%, var(--alert-color, var(--color-base-200)))
+            calc(var(--depth) * 20%),
+          #0000
+        ),
+      0 4px 3px -2px oklch(0% 0 0 / calc(var(--depth) * 0.08));
+    &:has(:nth-child(2)) {
+      grid-template-columns: auto minmax(auto, 1fr);
+    }
+    &.alert-outline {
+      @apply bg-transparent;
+      color: var(--alert-color);
+      box-shadow: none;
+      background-image: none;
+    }
+
+    &.alert-dash {
+      @apply bg-transparent;
+      color: var(--alert-color);
+      border-style: dashed;
+      box-shadow: none;
+      background-image: none;
+    }
+
+    &.alert-soft {
+      color: var(--alert-color, var(--color-base-content));
+      background: color-mix(
         in oklab,
-        color-mix(in oklab, #000 20%, var(--alert-color, var(--color-base-200)))
-          calc(var(--depth) * 20%),
-        #0000
-      ),
-    0 4px 3px -2px oklch(0% 0 0 / calc(var(--depth) * 0.08));
-  &:has(:nth-child(2)) {
-    grid-template-columns: auto minmax(auto, 1fr);
-  }
-  &.alert-outline {
-    @apply bg-transparent;
-    color: var(--alert-color);
-    box-shadow: none;
-    background-image: none;
-  }
-
-  &.alert-dash {
-    @apply bg-transparent;
-    color: var(--alert-color);
-    border-style: dashed;
-    box-shadow: none;
-    background-image: none;
-  }
-
-  &.alert-soft {
-    color: var(--alert-color, var(--color-base-content));
-    background: color-mix(
-      in oklab,
-      var(--alert-color, var(--color-base-content)) 8%,
-      var(--color-base-100)
-    );
-    border-color: color-mix(
-      in oklab,
-      var(--alert-color, var(--color-base-content)) 10%,
-      var(--color-base-100)
-    );
-    box-shadow: none;
-    background-image: none;
+        var(--alert-color, var(--color-base-content)) 8%,
+        var(--color-base-100)
+      );
+      border-color: color-mix(
+        in oklab,
+        var(--alert-color, var(--color-base-content)) 10%,
+        var(--color-base-100)
+      );
+      box-shadow: none;
+      background-image: none;
+    }
   }
 }
 
 .alert-info {
-  @apply text-info-content border-info;
-  --alert-color: var(--color-info);
+  @layer components.modifier {
+    @apply text-info-content border-info;
+    --alert-color: var(--color-info);
+  }
 }
 
 .alert-success {
-  @apply text-success-content border-success;
-  --alert-color: var(--color-success);
+  @layer components.modifier {
+    @apply text-success-content border-success;
+    --alert-color: var(--color-success);
+  }
 }
 
 .alert-warning {
-  @apply text-warning-content border-warning;
-  --alert-color: var(--color-warning);
+  @layer components.modifier {
+    @apply text-warning-content border-warning;
+    --alert-color: var(--color-warning);
+  }
 }
 
 .alert-error {
-  @apply text-error-content border-error;
-  --alert-color: var(--color-error);
+  @layer components.modifier {
+    @apply text-error-content border-error;
+    --alert-color: var(--color-error);
+  }
 }
 
 .alert-vertical {
-  justify-content: center;
-  justify-items: center;
-  grid-auto-flow: row;
-  grid-template-columns: auto;
-  text-align: center;
-  &:has(:nth-child(2)) {
+  @layer components.modifier {
+    justify-content: center;
+    justify-items: center;
+    grid-auto-flow: row;
     grid-template-columns: auto;
+    text-align: center;
+    &:has(:nth-child(2)) {
+      grid-template-columns: auto;
+    }
   }
 }
 
 .alert-horizontal {
-  justify-content: start;
-  justify-items: start;
-  grid-auto-flow: column;
-  grid-template-columns: auto;
-  text-align: start;
-  &:has(:nth-child(2)) {
-    grid-template-columns: auto minmax(auto, 1fr);
+  @layer components.modifier {
+    justify-content: start;
+    justify-items: start;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    text-align: start;
+    &:has(:nth-child(2)) {
+      grid-template-columns: auto minmax(auto, 1fr);
+    }
   }
 }
