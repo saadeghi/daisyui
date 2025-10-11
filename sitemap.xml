@@ -367,6 +367,9 @@
     <loc>https://daisyui.com/docs/install/cli/</loc>
   </url>
   <url>
+    <loc>https://daisyui.com/docs/install/dioxus/</loc>
+  </url>
+  <url>
     <loc>https://daisyui.com/docs/install/django/</loc>
   </url>
   <url>
@@ -401,6 +404,9 @@
   </url>
   <url>
     <loc>https://daisyui.com/docs/install/postcss/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/docs/install/preact/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/docs/install/qwik/</loc>
@@ -500,6 +506,9 @@
   </url>
   <url>
     <loc>https://daisyui.com/pages/css-framework-for-school-project/</loc>
+  </url>
+  <url>
+    <loc>https://daisyui.com/pages/css-library-for-html/</loc>
   </url>
   <url>
     <loc>https://daisyui.com/pages/easy-component-library/</loc>

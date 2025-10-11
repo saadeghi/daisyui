@@ -117,8 +117,10 @@ Install daisyUI for SvelteKit,/docs/install/sveltekit/
 Install daisyUI for Eleventy,/docs/install/11ty/
 Install daisyUI for Django,/docs/install/django/
 Install daisyUI for Solid,/docs/install/solid/
+Install daisyUI for Dioxus,/docs/install/dioxus/
 Install daisyUI for Vike,/docs/install/vike/
 Use daisyUI with HTMX,/docs/install/htmx/
+Install daisyUI for Preact,/docs/install/preact/
 Install daisyUI for Next.js,/docs/install/nextjs/
 Install daisyUI for Solid Start,/docs/install/solid-start/
 Install daisyUI for Deno Fresh,/docs/install/fresh/
@@ -839,11 +841,17 @@ Run the Tailwind CSS executable to generate output.css,/docs/install/django/#run
 Run the Django server,/docs/install/django/#run-the-django-server
 Create a new Solid project,/docs/install/solid/#create-a-new-solid-project
 Install Tailwind CSS and daisyUI,/docs/install/solid/#install-tailwind-css-and-daisyui
+Create a new Dioxus project,/docs/install/dioxus/#create-a-new-dioxus-project
+Install Tailwind CSS CLI and daisyUI,/docs/install/dioxus/#install-tailwind-css-cli-and-daisyui
+Setup `src/main.rs`,/docs/install/dioxus/#setup-srcmainrs
+Run the dev server,/docs/install/dioxus/#run-the-dev-server
 Create a new Vike project,/docs/install/vike/#create-a-new-vike-project
 Install Tailwind CSS and daisyUI,/docs/install/vike/#install-tailwind-css-and-daisyui
 Install,/docs/install/htmx/#install
 Add Tailwind CSS and daisyUI,/docs/install/htmx/#add-tailwind-css-and-daisyui
 Build CSS,/docs/install/htmx/#build-css
+Create a new Preact project,/docs/install/preact/#create-a-new-preact-project
+Install Tailwind CSS and daisyUI,/docs/install/preact/#install-tailwind-css-and-daisyui
 Create a new Next.js project,/docs/install/nextjs/#create-a-new-nextjs-project
 Install Tailwind CSS and daisyUI,/docs/install/nextjs/#install-tailwind-css-and-daisyui
 Add Tailwind CSS and daisyUI,/docs/install/nextjs/#add-tailwind-css-and-daisyui
