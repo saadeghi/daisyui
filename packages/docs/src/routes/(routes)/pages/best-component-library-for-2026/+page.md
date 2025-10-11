@@ -47,7 +47,7 @@ Each dependency brings its own sub-dependencies, creating a fragile web of code 
 All these dependencies add up. A typical React + Material-UI application can easily exceed 1MB of JavaScript just for the component library:
 
 - **React + ReactDOM**: ~140KB gzipped
-- **Material-UI core**: ~350KB gzipped
+- **Material-UI core**: ~350KB gzipped  
 - **Emotion styling engine**: ~50KB gzipped
 - **Various utilities and dependencies**: ~200KB gzipped
 
@@ -60,7 +60,7 @@ JavaScript-heavy frameworks require complex build processes:
 ```bash
 # Typical modern build pipeline
 npm run build:css
-npm run build:js
+npm run build:js 
 npm run optimize:images
 npm run bundle:analyze
 npm run test:unit
@@ -149,7 +149,7 @@ CSS Grid, Flexbox, custom properties, container queries, and advanced selectors 
 Core Web Vitals are now a Google ranking factor. Users expect fast, responsive experiences:
 
 - **Largest Contentful Paint (LCP)**: Should occur within 2.5 seconds
-- **First Input Delay (FID)**: Should be less than 100 milliseconds
+- **First Input Delay (FID)**: Should be less than 100 milliseconds  
 - **Cumulative Layout Shift (CLS)**: Should be less than 0.1
 
 Heavy JavaScript frameworks make these targets harder to achieve. CSS-only solutions start with a performance advantage.
@@ -398,7 +398,7 @@ document.addEventListener('click', (e) => {
 Track the improvements:
 
 - **Bundle size reduction**: Often 70-90% smaller
-- **Build time improvement**: 2-5x faster builds
+- **Build time improvement**: 2-5x faster builds  
 - **Performance gains**: Better Core Web Vitals scores
 - **Development speed**: Faster iteration cycles
 

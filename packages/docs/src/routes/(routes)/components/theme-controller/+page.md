@@ -22,13 +22,13 @@ browserSupport:
 
 > :INFO:
 >
-> Theme Controller changes the theme using CSS only.
-> You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh.
+> Theme Controller changes the theme using CSS only.  
+> You can then use JS to save the input state in the server or localStorage if you want it to persist on page refresh.  
 > Here's a React example to save checkbox state in local storage: [Stackblitz](https://stackblitz.com/edit/react-checkbox-localstorage?file=src%2FApp.js)
 
 > :INFO:
 >
-> If you're using [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option), it won't add prefix to `theme-controller` class.
+> If you're using [Tailwind CSS prefix](https://tailwindcss.com/docs/styling-with-utility-classes#using-the-prefix-option), it won't add prefix to `theme-controller` class.  
 If you're using [daisyUI prefix](/docs/config/#prefix), it will add prefix to `theme-controller` class.
 
 

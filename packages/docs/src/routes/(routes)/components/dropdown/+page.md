@@ -41,13 +41,13 @@ classnames:
 
 
 ## There are 3 methods to use a dropdowns
-1. [details and summary elements](#method-1-details-and-summary)
-2. [popover API and anchor positioning `new`](#method-2-popover-api-and-anchor-positioning-new)
-3. [CSS focus](#method-3-css-focus)
+1. [details and summary elements](#method-1-details-and-summary)  
+2. [popover API and anchor positioning `new`](#method-2-popover-api-and-anchor-positioning-new)  
+3. [CSS focus](#method-3-css-focus)  
 
 
 ## Method 1. details and summary
-details and summary are native HTML elements that can be used to create dropdowns.
+details and summary are native HTML elements that can be used to create dropdowns.  
 Dropdown using details and summary opens and closes the content when the summary is clicked. You can also open/close it using JS by adding/removing the `open` attribute
 
 ```:Structure
@@ -82,8 +82,8 @@ Dropdown using details and summary opens and closes the content when the summary
 
 ## Method 2. popover API and anchor positioning `new`
 
-Popover API is the new HTML standard for creating dropdowns. It opens the dropdown on a top layer, which means there's no need to z-index management and there's no overflow issue.
-Anchor positioning is a new CSS standard for positioning elements relative to an anchor.
+Popover API is the new HTML standard for creating dropdowns. It opens the dropdown on a top layer, which means there's no need to z-index management and there's no overflow issue.  
+Anchor positioning is a new CSS standard for positioning elements relative to an anchor.  
 
 ```:Structure
 <button
@@ -99,13 +99,13 @@ Anchor positioning is a new CSS standard for positioning elements relative to an
 
 > :INFO:
 >
-> `popovertarget` is the unique ID of the popover content.
+> `popovertarget` is the unique ID of the popover content.  
 > `anchor-name`/`position-anchor` is the unique name of the anchor.
 
 > :INFO:
 >
-> CSS Anchor Positioning is a new standard but isn't yet supported in Firefox and Safari ([caniuse.com](https://caniuse.com/css-anchor-positioning)).
-> In those browsers, the dropdown will appear centered like a modal.
+> CSS Anchor Positioning is a new standard but isn't yet supported in Firefox and Safari ([caniuse.com](https://caniuse.com/css-anchor-positioning)).  
+> In those browsers, the dropdown will appear centered like a modal.  
 > There's also [this polyfill](https://github.com/oddbird/css-anchor-positioning) that can be helpful.
 
 ### ~Dropdown using popover API and anchor positioning
@@ -153,14 +153,14 @@ The content gets displayed when the button is focused.
                                                             │
 <div>                                                       │
   <div tabindex="0" role="button">Click to open</div>  ─────╯
-  <div tabindex="0">Content</div>   ───────╮
+  <div tabindex="0">Content</div>   ───────╮ 
 </div>                                     │
                            Content shown when button is focused
 ```
 
 > :INFO:
 >
-> Why div?
+> Why div?  
 > Safari has a [CSS bug](https://bugs.webkit.org/show_bug.cgi?id=22261) since 2008 that prevents button elements from being focused, so we use div `tabindex="0"` as a workaround.
 > This approach is accessible with the addition of `role="button"` and functions consistently across all browsers.
 
