@@ -1,7 +1,8 @@
 .countdown {
   @apply inline-flex;
   &.countdown {
-    line-height: 1em;
+    --em: round(up, 1em, 1px);
+    line-height: var(--em);
   }
 
   & > * {
@@ -19,7 +20,6 @@
       1
     );
     --first-digits: calc(round(to-zero, var(--value-v) / 10, 1));
-    --em: round(up, calc(1em * 1px), 1);
     height: var(--em);
     width: calc(1ch + var(--show-tens) * 1ch + var(--show-hundreds) * 1ch);
     direction: ltr;
