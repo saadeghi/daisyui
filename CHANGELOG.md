@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## 5.2.3 (2025-10-11)
 
+### Bug Fixes
+
+* fix: style for nested validator with aria-invalid attribute. closes: [#4176](https://github.com/saadeghi/daisyui/issues/4176)
+
 ## 5.2.2 (2025-10-11)
 
 
