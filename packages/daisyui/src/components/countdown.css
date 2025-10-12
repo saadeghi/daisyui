@@ -1,10 +1,11 @@
 .countdown {
-  /* this stays in utilities layer with a self nesting selector to make sure line height is consistent regardless of the parent */
   &.countdown {
     line-height: 1em;
   }
+
   @layer daisyui.component {
     @apply inline-flex;
+
     & > * {
       @apply invisible relative inline-block overflow-y-clip;
       transition: width 0.4s ease-out 0.2s;
