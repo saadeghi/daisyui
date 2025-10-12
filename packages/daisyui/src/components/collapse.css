@@ -1,12 +1,10 @@
 .collapse:not(td, tr, colgroup) {
-  @layer daisyui.component {
-    visibility: revert-layer;
-    display: grid;
-  }
+  visibility: revert-layer;
 }
 
 .collapse {
   @layer daisyui.component {
+    display: grid;
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-box, 1rem);

@@ -7,7 +7,6 @@
     grid-auto-flow: column;
     grid-template-columns: auto;
     text-align: start;
-    border: var(--border) solid var(--color-base-200);
     font-size: 0.875rem;
     line-height: 1.25rem;
     background-size: auto, calc(var(--noise) * 100%);
@@ -56,6 +55,8 @@
       background-image: none;
     }
   }
+  /* override the border style of Tailwind CSS Typography plugin */
+  border: var(--border) solid var(--color-base-200);
 }
 
 .alert-info {
