@@ -1,45 +1,59 @@
 .carousel {
-  @apply inline-flex overflow-x-scroll;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth;
-  }
+  @layer daisyui.component {
+    @apply inline-flex overflow-x-scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
 
-  &::-webkit-scrollbar {
-    @apply hidden;
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
   }
 }
 
 .carousel-vertical {
-  @apply flex-col overflow-y-scroll;
-  scroll-snap-type: y mandatory;
+  @layer daisyui.modifier {
+    @apply flex-col overflow-y-scroll;
+    scroll-snap-type: y mandatory;
+  }
 }
 
 .carousel-horizontal {
-  @apply flex-row overflow-x-scroll;
-  scroll-snap-type: x mandatory;
+  @layer daisyui.modifier {
+    @apply flex-row overflow-x-scroll;
+    scroll-snap-type: x mandatory;
+  }
 }
 
 .carousel-item {
-  @apply box-content flex flex-none;
-  scroll-snap-align: start;
-}
-
-.carousel-start {
-  .carousel-item {
+  @layer daisyui.modifier {
+    @apply box-content flex flex-none;
     scroll-snap-align: start;
   }
 }
 
+.carousel-start {
+  @layer daisyui.modifier {
+    .carousel-item {
+      scroll-snap-align: start;
+    }
+  }
+}
+
 .carousel-center {
-  .carousel-item {
-    scroll-snap-align: center;
+  @layer daisyui.modifier {
+    .carousel-item {
+      scroll-snap-align: center;
+    }
   }
 }
 
 .carousel-end {
-  .carousel-item {
-    scroll-snap-align: end;
+  @layer daisyui.modifier {
+    .carousel-item {
+      scroll-snap-align: end;
+    }
   }
 }
