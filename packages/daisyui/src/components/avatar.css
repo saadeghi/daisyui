@@ -1,5 +1,5 @@
 .avatar-group {
-  @layer components.base {
+  @layer daisyui.component {
     @apply flex overflow-hidden;
 
     .avatar {
@@ -10,7 +10,7 @@
 }
 
 .avatar {
-  @layer components.base {
+  @layer daisyui.component {
     @apply relative inline-flex align-middle;
 
     & > div {
@@ -24,7 +24,7 @@
 }
 
 .avatar-placeholder {
-  @layer components.base {
+  @layer daisyui.component {
     & > div {
       @apply flex items-center justify-center;
     }
@@ -32,7 +32,7 @@
 }
 
 .avatar-online {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     &:before {
       content: "";
       @apply bg-success absolute z-1 block rounded-full;
@@ -46,7 +46,7 @@
 }
 
 .avatar-offline {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     &:before {
       content: "";
       @apply bg-base-300 absolute z-1 block rounded-full;
