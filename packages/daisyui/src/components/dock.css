@@ -1,109 +1,123 @@
 .dock {
-  @apply bg-base-100 fixed right-0 bottom-0 left-0 z-1 flex w-full flex-row items-center justify-around p-2 text-current;
-  border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
-  height: 4rem;
-  height: calc(4rem + env(safe-area-inset-bottom));
-  padding-bottom: env(safe-area-inset-bottom);
-  > * {
-    @apply rounded-box relative mb-2 flex h-full max-w-32 shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
-    transition: opacity 0.2s ease-out;
-    @media (hover: hover) {
-      &:hover {
-        @apply opacity-80;
+  @layer daisyui.component {
+    @apply bg-base-100 fixed right-0 bottom-0 left-0 z-1 flex w-full flex-row items-center justify-around p-2 text-current;
+    border-top: 0.5px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
+    height: 4rem;
+    height: calc(4rem + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    > * {
+      @apply rounded-box relative mb-2 flex h-full max-w-32 shrink-1 basis-full cursor-pointer flex-col items-center justify-center gap-px bg-transparent;
+      transition: opacity 0.2s ease-out;
+      @media (hover: hover) {
+        &:hover {
+          @apply opacity-80;
+        }
       }
-    }
-    &[aria-disabled="true"],
-    &[disabled] {
-      &,
-      &:hover {
-        @apply text-base-content/10 pointer-events-none opacity-100;
+      &[aria-disabled="true"],
+      &[disabled] {
+        &,
+        &:hover {
+          @apply text-base-content/10 pointer-events-none opacity-100;
+        }
       }
-    }
-    .dock-label {
-      font-size: 0.6875rem;
-    }
-    &:after {
-      content: "";
-      @apply absolute h-1 w-6 rounded-full bg-transparent;
-      bottom: 0.2rem;
-      border-top: 3px solid transparent;
-      transition:
-        background-color 0.1s ease-out,
-        text-color 0.1s ease-out,
-        width 0.1s ease-out;
+      .dock-label {
+        font-size: 0.6875rem;
+      }
+      &:after {
+        content: "";
+        @apply absolute h-1 w-6 rounded-full bg-transparent;
+        bottom: 0.2rem;
+        border-top: 3px solid transparent;
+        transition:
+          background-color 0.1s ease-out,
+          text-color 0.1s ease-out,
+          width 0.1s ease-out;
+      }
     }
   }
 }
 .dock-active {
-  &:after {
-    @apply w-10 bg-current text-current;
+  @layer daisyui.modifier {
+    &:after {
+      @apply w-10 bg-current text-current;
+    }
   }
 }
 .dock-xs {
-  height: 3rem;
-  height: calc(3rem + env(safe-area-inset-bottom));
+  @layer daisyui.modifier {
+    height: 3rem;
+    height: calc(3rem + env(safe-area-inset-bottom));
 
-  .dock-active {
-    &:after {
-      bottom: -0.1rem;
+    .dock-active {
+      &:after {
+        bottom: -0.1rem;
+      }
     }
-  }
 
-  .dock-label {
-    font-size: 0.625rem;
+    .dock-label {
+      font-size: 0.625rem;
+    }
   }
 }
 
 .dock-sm {
-  @apply h-14;
-  height: 3.5rem;
-  height: calc(3.5rem + env(safe-area-inset-bottom));
+  @layer daisyui.modifier {
+    @apply h-14;
+    height: 3.5rem;
+    height: calc(3.5rem + env(safe-area-inset-bottom));
 
-  .dock-active {
-    &:after {
-      bottom: -0.1rem;
+    .dock-active {
+      &:after {
+        bottom: -0.1rem;
+      }
     }
-  }
 
-  .dock-label {
-    font-size: 0.625rem;
+    .dock-label {
+      font-size: 0.625rem;
+    }
   }
 }
 
 .dock-md {
-  height: 4rem;
-  height: calc(4rem + env(safe-area-inset-bottom));
-  .dock-label {
-    font-size: 0.6875rem;
+  @layer daisyui.modifier {
+    height: 4rem;
+    height: calc(4rem + env(safe-area-inset-bottom));
+    .dock-label {
+      font-size: 0.6875rem;
+    }
   }
 }
 
 .dock-lg {
-  height: 4.5rem;
-  height: calc(4.5rem + env(safe-area-inset-bottom));
+  @layer daisyui.modifier {
+    height: 4.5rem;
+    height: calc(4.5rem + env(safe-area-inset-bottom));
 
-  .dock-active {
-    &:after {
-      bottom: 0.4rem;
+    .dock-active {
+      &:after {
+        bottom: 0.4rem;
+      }
     }
-  }
 
-  .dock-label {
-    font-size: 0.6875rem;
+    .dock-label {
+      font-size: 0.6875rem;
+    }
   }
 }
 
 .dock-xl {
-  height: 5rem;
-  height: calc(5rem + env(safe-area-inset-bottom));
+  @layer daisyui.modifier {
+    height: 5rem;
+    height: calc(5rem + env(safe-area-inset-bottom));
 
-  .dock-active {
-    &:after {
-      bottom: 0.4rem;
+    .dock-active {
+      &:after {
+        bottom: 0.4rem;
+      }
     }
-  }
 
-  .dock-label {
-    font-size: 0.75rem;
+    .dock-label {
+      font-size: 0.75rem;
+    }
   }
 }

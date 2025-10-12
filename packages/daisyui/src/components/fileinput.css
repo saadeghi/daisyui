@@ -1,236 +1,265 @@
 .file-input {
-  cursor: pointer;
-  border: var(--border) solid #0000;
-  @apply bg-base-100 inline-flex cursor-pointer appearance-none items-center align-middle select-none;
-  width: clamp(3rem, 20rem, 100%);
-  height: var(--size);
-  padding-inline-end: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 2;
-  border-start-start-radius: var(--join-ss, var(--radius-field));
-  border-start-end-radius: var(--join-se, var(--radius-field));
-  border-end-start-radius: var(--join-es, var(--radius-field));
-  border-end-end-radius: var(--join-ee, var(--radius-field));
-  border-color: var(--input-color);
-  box-shadow:
-    0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
-    0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-  --size: calc(var(--size-field, 0.25rem) * 10);
-  --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-  &::file-selector-button {
-    @apply me-4 cursor-pointer px-4 select-none;
-    height: calc(100% + var(--border) * 2);
-    margin-block: calc(var(--border) * -1);
-    margin-inline-start: calc(var(--border) * -1);
+  @layer daisyui.component {
+    cursor: pointer;
+    border: var(--border) solid #0000;
+    @apply bg-base-100 inline-flex cursor-pointer appearance-none items-center align-middle select-none;
+    width: clamp(3rem, 20rem, 100%);
+    height: var(--size);
+    padding-inline-end: 0.75rem;
     font-size: 0.875rem;
-    color: var(--btn-fg);
-    border-width: var(--border);
-    border-style: solid;
-    border-color: var(--btn-border);
-    border-start-start-radius: calc(var(--join-ss, var(--radius-field) - var(--border)));
-    border-end-start-radius: calc(var(--join-es, var(--radius-field) - var(--border)));
-    font-weight: 600;
-    background-color: var(--btn-bg);
-    background-size: calc(var(--noise) * 100%);
-    background-image: var(--btn-noise);
-    text-shadow: 0 0.5px oklch(1 0 0 / calc(var(--depth) * 0.15));
+    line-height: 2;
+    border-start-start-radius: var(--join-ss, var(--radius-field));
+    border-start-end-radius: var(--join-se, var(--radius-field));
+    border-end-start-radius: var(--join-es, var(--radius-field));
+    border-end-end-radius: var(--join-ee, var(--radius-field));
+    border-color: var(--input-color);
     box-shadow:
-      0 0.5px 0 0.5px
-        color-mix(
-          in oklab,
-          color-mix(in oklab, white 30%, var(--btn-bg)) calc(var(--depth) * 20%),
-          #0000
-        )
-        inset,
-      var(--btn-shadow);
+      0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
+      0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
     --size: calc(var(--size-field, 0.25rem) * 10);
-    --btn-bg: var(--btn-color, var(--color-base-200));
-    --btn-fg: var(--color-base-content);
-    --btn-border: color-mix(in oklab, var(--btn-bg), #000 5%);
-    --btn-shadow:
-      0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000),
-      0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000);
-    --btn-noise: var(--fx-noise);
-  }
-
-  &:focus {
-    --input-color: var(--color-base-content);
-    box-shadow: 0 1px color-mix(in oklab, var(--input-color) 10%, #0000);
-    outline: 2px solid var(--input-color);
-    outline-offset: 2px;
-    isolation: isolate;
-  }
-  &:has(> input[disabled]),
-  &:is(:disabled, [disabled]) {
-    @apply border-base-200 bg-base-200 placeholder-base-content placeholder-base-content/20 cursor-not-allowed;
-    box-shadow: none;
-    color: color-mix(in oklch, var(--color-base-content) 20%, #0000);
-
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
     &::file-selector-button {
-      @apply border-base-200 bg-base-200 cursor-not-allowed;
-      --btn-border: #0000;
-      --btn-noise: none;
-      --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+      @apply me-4 cursor-pointer px-4 select-none;
+      height: calc(100% + var(--border) * 2);
+      margin-block: calc(var(--border) * -1);
+      margin-inline-start: calc(var(--border) * -1);
+      font-size: 0.875rem;
+      color: var(--btn-fg);
+      border-width: var(--border);
+      border-style: solid;
+      border-color: var(--btn-border);
+      border-start-start-radius: calc(var(--join-ss, var(--radius-field) - var(--border)));
+      border-end-start-radius: calc(var(--join-es, var(--radius-field) - var(--border)));
+      font-weight: 600;
+      background-color: var(--btn-bg);
+      background-size: calc(var(--noise) * 100%);
+      background-image: var(--btn-noise);
+      text-shadow: 0 0.5px oklch(1 0 0 / calc(var(--depth) * 0.15));
+      box-shadow:
+        0 0.5px 0 0.5px
+          color-mix(
+            in oklab,
+            color-mix(in oklab, white 30%, var(--btn-bg)) calc(var(--depth) * 20%),
+            #0000
+          )
+          inset,
+        var(--btn-shadow);
+      --size: calc(var(--size-field, 0.25rem) * 10);
+      --btn-bg: var(--btn-color, var(--color-base-200));
+      --btn-fg: var(--color-base-content);
+      --btn-border: color-mix(in oklab, var(--btn-bg), #000 5%);
+      --btn-shadow:
+        0 3px 2px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000),
+        0 4px 3px -2px color-mix(in oklab, var(--btn-bg) 30%, #0000);
+      --btn-noise: var(--fx-noise);
+    }
+
+    &:focus {
+      --input-color: var(--color-base-content);
+      box-shadow: 0 1px color-mix(in oklab, var(--input-color) 10%, #0000);
+      outline: 2px solid var(--input-color);
+      outline-offset: 2px;
+      isolation: isolate;
+    }
+    &:has(> input[disabled]),
+    &:is(:disabled, [disabled]) {
+      @apply border-base-200 bg-base-200 placeholder-base-content placeholder-base-content/20 cursor-not-allowed;
+      box-shadow: none;
+      color: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+
+      &::file-selector-button {
+        @apply border-base-200 bg-base-200 cursor-not-allowed;
+        --btn-border: #0000;
+        --btn-noise: none;
+        --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+      }
     }
   }
 }
 .file-input-ghost {
-  @apply bg-transparent;
-  transition: background-color 0.2s;
-  box-shadow: none;
-  border-color: #0000;
-  &::file-selector-button {
-    @apply ms-0 me-4 h-full cursor-pointer px-4 select-none;
-    margin-block: 0;
-    border-start-end-radius: calc(var(--join-ss, var(--radius-field) - var(--border)));
-    border-end-end-radius: calc(var(--join-es, var(--radius-field) - var(--border)));
-  }
-
-  &:focus,
-  &:focus-within {
-    @apply text-base-content bg-base-100;
-    border-color: #0000;
+  @layer daisyui.modifier {
+    @apply bg-transparent;
+    transition: background-color 0.2s;
     box-shadow: none;
+    border-color: #0000;
+    &::file-selector-button {
+      @apply ms-0 me-4 h-full cursor-pointer px-4 select-none;
+      margin-block: 0;
+      border-start-end-radius: calc(var(--join-ss, var(--radius-field) - var(--border)));
+      border-end-end-radius: calc(var(--join-es, var(--radius-field) - var(--border)));
+    }
+
+    &:focus,
+    &:focus-within {
+      @apply text-base-content bg-base-100;
+      border-color: #0000;
+      box-shadow: none;
+    }
   }
 }
 
 .file-input-neutral {
-  --btn-color: var(--color-neutral);
-  &::file-selector-button {
-    color: var(--color-neutral-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-neutral);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-neutral);
+    &::file-selector-button {
+      color: var(--color-neutral-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-neutral);
+    }
   }
 }
 
 .file-input-primary {
-  --btn-color: var(--color-primary);
-  &::file-selector-button {
-    color: var(--color-primary-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-primary);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-primary);
+    &::file-selector-button {
+      color: var(--color-primary-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-primary);
+    }
   }
 }
 
 .file-input-secondary {
-  --btn-color: var(--color-secondary);
-  &::file-selector-button {
-    color: var(--color-secondary-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-secondary);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-secondary);
+    &::file-selector-button {
+      color: var(--color-secondary-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-secondary);
+    }
   }
 }
 
 .file-input-accent {
-  --btn-color: var(--color-accent);
-  &::file-selector-button {
-    color: var(--color-accent-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-accent);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-accent);
+    &::file-selector-button {
+      color: var(--color-accent-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-accent);
+    }
   }
 }
 
 .file-input-info {
-  --btn-color: var(--color-info);
-  &::file-selector-button {
-    color: var(--color-info-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-info);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-info);
+    &::file-selector-button {
+      color: var(--color-info-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-info);
+    }
   }
 }
-
 .file-input-success {
-  --btn-color: var(--color-success);
-  &::file-selector-button {
-    color: var(--color-success-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-success);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-success);
+    &::file-selector-button {
+      color: var(--color-success-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-success);
+    }
   }
 }
 
 .file-input-warning {
-  --btn-color: var(--color-warning);
-  &::file-selector-button {
-    color: var(--color-warning-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-warning);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-warning);
+    &::file-selector-button {
+      color: var(--color-warning-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-warning);
+    }
   }
 }
 
 .file-input-error {
-  --btn-color: var(--color-error);
-  &::file-selector-button {
-    color: var(--color-error-content);
-  }
-  &,
-  &:focus,
-  &:focus-within {
-    --input-color: var(--color-error);
+  @layer daisyui.modifier {
+    --btn-color: var(--color-error);
+    &::file-selector-button {
+      color: var(--color-error-content);
+    }
+    &,
+    &:focus,
+    &:focus-within {
+      --input-color: var(--color-error);
+    }
   }
 }
 .file-input-xs {
-  --size: calc(var(--size-field, 0.25rem) * 6);
-  font-size: 0.6875rem;
-  line-height: 1rem;
-  &::file-selector-button {
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 6);
     font-size: 0.6875rem;
+    line-height: 1rem;
+    &::file-selector-button {
+      font-size: 0.6875rem;
+    }
   }
 }
 
 .file-input-sm {
-  --size: calc(var(--size-field, 0.25rem) * 8);
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  &::file-selector-button {
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 8);
     font-size: 0.75rem;
+    line-height: 1.5rem;
+    &::file-selector-button {
+      font-size: 0.75rem;
+    }
   }
 }
 
 .file-input-md {
-  --size: calc(var(--size-field, 0.25rem) * 10);
-  font-size: 0.875rem;
-  line-height: 2;
-  &::file-selector-button {
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
+    line-height: 2;
+    &::file-selector-button {
+      font-size: 0.875rem;
+    }
   }
 }
 
 .file-input-lg {
-  --size: calc(var(--size-field, 0.25rem) * 12);
-  font-size: 1.125rem;
-  line-height: 2.5rem;
-  &::file-selector-button {
+  @layer daisyui.modifier {
+    --size: calc(var(--size-field, 0.25rem) * 12);
     font-size: 1.125rem;
+    line-height: 2.5rem;
+    &::file-selector-button {
+      font-size: 1.125rem;
+    }
   }
 }
 
 .file-input-xl {
-  @apply pe-6;
-  --size: calc(var(--size-field, 0.25rem) * 14);
-  font-size: 1.125rem;
-  line-height: 3rem;
-  &::file-selector-button {
-    font-size: 1.375rem;
+  @layer daisyui.modifier {
+    @apply pe-6;
+    --size: calc(var(--size-field, 0.25rem) * 14);
+    font-size: 1.125rem;
+    line-height: 3rem;
+    &::file-selector-button {
+      font-size: 1.375rem;
+    }
   }
 }

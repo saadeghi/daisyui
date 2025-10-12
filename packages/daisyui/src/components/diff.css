@@ -1,82 +1,90 @@
 .diff {
-  @apply relative grid w-full overflow-hidden select-none;
-  grid-template-rows: 1fr 1.8rem 1fr;
-  direction: ltr;
-  container-type: inline-size;
-  grid-template-columns: auto 1fr;
-  &:focus-visible,
-  &:has(.diff-item-1:focus-visible) {
-    @apply outline-base-content outline-2 outline-offset-1;
-  }
-  &:focus-visible {
-    @apply outline-base-content outline-2 outline-offset-1;
-    .diff-resizer {
-      min-width: 95cqi;
-      max-width: 95cqi;
+  @layer daisyui.component {
+    @apply relative grid w-full overflow-hidden select-none;
+    grid-template-rows: 1fr 1.8rem 1fr;
+    direction: ltr;
+    container-type: inline-size;
+    grid-template-columns: auto 1fr;
+    &:focus-visible,
+    &:has(.diff-item-1:focus-visible) {
+      @apply outline-base-content outline-2 outline-offset-1;
     }
-  }
-  &:has(.diff-item-1:focus-visible) {
-    @apply outline-2 outline-offset-1;
-    .diff-resizer {
-      min-width: 5cqi;
-      max-width: 5cqi;
-    }
-  }
-  @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
-    &:focus {
-      .diff-resizer {
-        min-width: 5cqi;
-        max-width: 5cqi;
-      }
-    }
-    &:has(.diff-item-1:focus) {
+    &:focus-visible {
+      @apply outline-base-content outline-2 outline-offset-1;
       .diff-resizer {
         min-width: 95cqi;
         max-width: 95cqi;
       }
     }
+    &:has(.diff-item-1:focus-visible) {
+      @apply outline-2 outline-offset-1;
+      .diff-resizer {
+        min-width: 5cqi;
+        max-width: 5cqi;
+      }
+    }
+    @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+      &:focus {
+        .diff-resizer {
+          min-width: 5cqi;
+          max-width: 5cqi;
+        }
+      }
+      &:has(.diff-item-1:focus) {
+        .diff-resizer {
+          min-width: 95cqi;
+          max-width: 95cqi;
+        }
+      }
+    }
   }
 }
 .diff-resizer {
-  @apply relative z-1 col-start-1 row-start-2 h-4 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
-  transform: scaleY(3) translate(0.35rem, 0.35rem);
-  cursor: ew-resize;
-  transform-origin: 100% 100%;
-  clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
-  transition:
-    min-width 0.3s ease-out,
-    max-width 0.3s ease-out;
+  @layer daisyui.component {
+    @apply relative z-1 col-start-1 row-start-2 h-4 w-[50cqi] max-w-[calc(100cqi-1rem)] min-w-[1rem] resize-x overflow-hidden opacity-0;
+    transform: scaleY(3) translate(0.35rem, 0.35rem);
+    cursor: ew-resize;
+    transform-origin: 100% 100%;
+    clip-path: inset(calc(100% - 0.75rem) 0 0 calc(100% - 0.75rem));
+    transition:
+      min-width 0.3s ease-out,
+      max-width 0.3s ease-out;
+  }
 }
 .diff-item-2 {
-  @apply relative col-start-1 row-span-3 row-start-1;
-  &:after {
-    @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 rounded-full;
-    width: 1.2rem;
-    height: 1.8rem;
-    border: 2px solid var(--color-base-100);
-    content: "";
-    outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
-    outline-offset: -3px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 1px 2px 0 oklch(0% 0 0 / 0.1);
-    translate: 50% -50%;
-  }
-  > * {
-    @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
-  }
-  @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+  @layer daisyui.component {
+    @apply relative col-start-1 row-span-3 row-start-1;
     &:after {
-      content: none;
+      @apply bg-base-100/50 pointer-events-none absolute top-1/2 right-px bottom-0 z-2 rounded-full;
+      width: 1.2rem;
+      height: 1.8rem;
+      border: 2px solid var(--color-base-100);
+      content: "";
+      outline: 1px solid color-mix(in oklab, var(--color-base-content) 5%, #0000);
+      outline-offset: -3px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 2px 0 oklch(0% 0 0 / 0.1);
+      translate: 50% -50%;
+    }
+    > * {
+      @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
+    }
+    @supports (-webkit-overflow-scrolling: touch) and (overflow: -webkit-paged-x) {
+      &:after {
+        content: none;
+      }
     }
   }
 }
 .diff-item-1 {
-  @apply relative z-1 col-start-1 row-span-3 row-start-1 overflow-hidden;
-  border-right: 2px solid var(--color-base-100);
-  &:focus-visible {
-    @apply outline-none;
-  }
-  > * {
-    @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
+  @layer daisyui.component {
+    @apply relative z-1 col-start-1 row-span-3 row-start-1 overflow-hidden;
+    border-right: 2px solid var(--color-base-100);
+    &:focus-visible {
+      @apply outline-none;
+    }
+    > * {
+      @apply pointer-events-none absolute top-0 bottom-0 left-0 h-full w-[100cqi] max-w-none object-cover object-center;
+    }
   }
 }
