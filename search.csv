@@ -122,6 +122,7 @@ Install daisyUI for Vike,/docs/install/vike/
 Use daisyUI with HTMX,/docs/install/htmx/
 Install daisyUI for Preact,/docs/install/preact/
 Install daisyUI for Next.js,/docs/install/nextjs/
+Install daisyUI for Yew,/docs/install/yew/
 Install daisyUI for Solid Start,/docs/install/solid-start/
 Install daisyUI for Deno Fresh,/docs/install/fresh/
 Install daisyUI for PostCSS,/docs/install/postcss/
@@ -807,7 +808,7 @@ Create a new Vite project,/docs/install/unocss/#create-a-new-vite-project
 Create a UnoCSS config file,/docs/install/unocss/#create-a-unocss-config-file
 Add UnoCSS to your JS file,/docs/install/unocss/#add-unocss-to-your-js-file
 Get Tailwind CSS executable,/docs/install/standalone/#get-tailwind-css-executable
-Get daisyUI bundled JS file,/docs/install/standalone/#get-daisyui-bundled-js-file
+Get daisyUI bundle JS file,/docs/install/standalone/#get-daisyui-bundle-js-file
 Add Tailwind CSS and daisyUI,/docs/install/standalone/#add-tailwind-css-and-daisyui
 Build CSS,/docs/install/standalone/#build-css
 Install,/docs/install/cli/#install
@@ -834,9 +835,7 @@ Create a eleventy.config.mjs file at root,/docs/install/11ty/#create-a-eleventyc
 Run the project,/docs/install/11ty/#run-the-project
 Create a new Django project,/docs/install/django/#create-a-new-django-project
 Create a homepage in Django,/docs/install/django/#create-a-homepage-in-django
-Get Tailwind CSS executable,/docs/install/django/#get-tailwind-css-executable
-Get daisyUI bundled JS file,/docs/install/django/#get-daisyui-bundled-js-file
-Create an input.css file,/docs/install/django/#create-an-inputcss-file
+Add Tailwind CSS and daisyUI,/docs/install/django/#add-tailwind-css-and-daisyui
 Run the Tailwind CSS executable to generate output.css,/docs/install/django/#run-the-tailwind-css-executable-to-generate-outputcss
 Run the Django server,/docs/install/django/#run-the-django-server
 Create a new Solid project,/docs/install/solid/#create-a-new-solid-project
@@ -856,6 +855,13 @@ Create a new Next.js project,/docs/install/nextjs/#create-a-new-nextjs-project
 Install Tailwind CSS and daisyUI,/docs/install/nextjs/#install-tailwind-css-and-daisyui
 Add Tailwind CSS and daisyUI,/docs/install/nextjs/#add-tailwind-css-and-daisyui
 Note about using Turbopack,/docs/install/nextjs/#note-about-using-turbopack
+"Install Rust, WebAssembly Target and Trunk",/docs/install/yew/#install-rust-webassembly-target-and-trunk
+Create a Yew project,/docs/install/yew/#create-a-yew-project
+Update `src/main.rs` file,/docs/install/yew/#update-srcmainrs-file
+Create `index.html` file,/docs/install/yew/#create-indexhtml-file
+Add Tailwind CSS and daisyUI,/docs/install/yew/#add-tailwind-css-and-daisyui
+Add a hook to build `output.css` automatically,/docs/install/yew/#add-a-hook-to-build-outputcss-automatically
+Run the app,/docs/install/yew/#run-the-app
 Create a new Solid Start project,/docs/install/solid-start/#create-a-new-solid-start-project
 Install Tailwind CSS and daisyUI,/docs/install/solid-start/#install-tailwind-css-and-daisyui
 Create a new Fresh project,/docs/install/fresh/#create-a-new-fresh-project
