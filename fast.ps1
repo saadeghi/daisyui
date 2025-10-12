@@ -6,10 +6,6 @@
 # - Creates input.css
 # - Runs Tailwind CSS to generate output.css
 
-param(
-    [string]$DestPath = "."
-)
-
 $ErrorActionPreference = "Stop"
 
 # Configuration
@@ -24,53 +20,22 @@ $INPUT_CSS_CONTENT = @'
 @plugin "./daisyui.mjs";
 '@
 
-# Pure functions
-function Get-Arch {
-    switch ($env:PROCESSOR_ARCHITECTURE) {
-        "AMD64" { return "x64" }
-        "ARM64" { return "arm64" }
-        default { return "unknown" }
-    }
-}
-
-function Build-Filename {
-    param([string]$Arch)
-    return "tailwindcss-windows-$Arch.exe"
-}
-
-function Build-Url {
-    param([string]$BaseUrl, [string]$Filename)
-    return "$BaseUrl/$Filename"
-}
-
 # Main
 try {
-    $arch = Get-Arch
+    Write-Host "  >> Installing Tailwind CSS for Windows x64"
     
-    if ($arch -eq "unknown") {
-        Write-Host "  ❌ Unsupported system" -ForegroundColor Red
-        exit 1
-    }
+    curl.exe -sLo tailwindcss.exe "$TAILWIND_BASE_URL/tailwindcss-windows-x64.exe"
     
-    New-Item -ItemType Directory -Force -Path $DestPath | Out-Null
-    Set-Location $DestPath
+    Write-Host "  >> Installing daisyUI"
+    curl.exe -sLo daisyui.mjs "$DAISYUI_BASE_URL/daisyui.mjs"
+    curl.exe -sLo daisyui-theme.mjs "$DAISYUI_BASE_URL/daisyui-theme.mjs"
     
-    Write-Host "  🚚 Installing Tailwind CSS for Windows $arch"
-    
-    $filename = Build-Filename -Arch $arch
-    $url = Build-Url -BaseUrl $TAILWIND_BASE_URL -Filename $filename
-    Invoke-WebRequest -Uri $url -OutFile "tailwindcss.exe" -UseBasicParsing
-    
-    Write-Host "  🚚 Installing daisyUI"
-    Invoke-WebRequest -Uri (Build-Url -BaseUrl $DAISYUI_BASE_URL -Filename "daisyui.mjs") -OutFile "daisyui.mjs" -UseBasicParsing
-    Invoke-WebRequest -Uri (Build-Url -BaseUrl $DAISYUI_BASE_URL -Filename "daisyui-theme.mjs") -OutFile "daisyui-theme.mjs" -UseBasicParsing
-    
-    Set-Content -Path "input.css" -Value $INPUT_CSS_CONTENT
-    Write-Host "  ✅ Adding input.css"
-    Write-Host ".\tailwindcss.exe -i input.css -o output.css"
-    & .\tailwindcss.exe -i input.css -o output.css
+    Set-Content -Path "input.css" -Value $INPUT_CSS_CONTENT -NoNewline
+    Write-Host "  >> Adding input.css"
+    Write-Host "     .\tailwindcss.exe -i input.css -o output.css"
+    & .\tailwindcss.exe -i input.css -o output.css | Write-Host
 }
 catch {
-    Write-Host "  ❌ Installation failed" -ForegroundColor Red
+    Write-Host "  [X] Installation failed"
     exit 1
 }
