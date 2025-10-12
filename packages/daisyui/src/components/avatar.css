@@ -24,7 +24,7 @@
 }
 
 .avatar-placeholder {
-  @layer daisyui.component {
+  @layer daisyui.modifier {
     & > div {
       @apply flex items-center justify-center;
     }
