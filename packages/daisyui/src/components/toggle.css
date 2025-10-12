@@ -1,211 +1,239 @@
 .toggle {
-  border: var(--border) solid currentColor;
-  color: var(--input-color);
-  @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
-  grid-template-columns: 0fr 1fr 1fr;
-  /* --radius-selector-max is a separate variable because ~ calc(min(calc(--var))) ~ gives build error in PostCSS+Nuxt */
-  --radius-selector-max: calc(
-    var(--radius-selector) + var(--radius-selector) + var(--radius-selector)
-  );
-  border-radius: calc(
-    var(--radius-selector) + min(var(--toggle-p), var(--radius-selector-max)) +
-      min(var(--border), var(--radius-selector-max))
-  );
+  @layer daisyui.component {
+    border: var(--border) solid currentColor;
+    color: var(--input-color);
+    @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
+    grid-template-columns: 0fr 1fr 1fr;
+    /* --radius-selector-max is a separate variable because ~ calc(min(calc(--var))) ~ gives build error in PostCSS+Nuxt */
+    --radius-selector-max: calc(
+      var(--radius-selector) + var(--radius-selector) + var(--radius-selector)
+    );
+    border-radius: calc(
+      var(--radius-selector) + min(var(--toggle-p), var(--radius-selector-max)) +
+        min(var(--border), var(--radius-selector-max))
+    );
 
-  padding: var(--toggle-p);
-  box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000) inset;
-  transition:
-    color 0.3s,
-    grid-template-columns 0.2s;
-  --input-color: color-mix(in oklab, var(--color-base-content) 50%, #0000);
-  --toggle-p: calc(var(--size) * 0.125);
-  --size: calc(var(--size-selector, 0.25rem) * 6);
-  width: calc((var(--size) * 2) - (var(--border) + var(--toggle-p)) * 2);
-  height: var(--size);
-
-  /* icons in toggle */
-  > * {
-    @apply z-1 col-span-1 col-start-2 row-start-1 h-full cursor-pointer appearance-none bg-transparent p-0.5;
+    padding: var(--toggle-p);
+    box-shadow: 0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000) inset;
     transition:
-      opacity 0.2s,
-      rotate 0.4s;
-    border: none;
-    &:focus {
-      @apply outline-hidden;
-    }
-    &:nth-child(2) {
-      @apply text-base-100;
-      rotate: 0deg;
-    }
-    &:nth-child(3) {
-      @apply text-base-100 opacity-0;
-      rotate: -15deg;
-    }
-  }
-  &:has(:checked) {
-    > :nth-child(2) {
-      @apply opacity-0;
-      rotate: 15deg;
-    }
-    > :nth-child(3) {
-      @apply opacity-100;
-      rotate: 0deg;
-    }
-  }
-  &:before {
-    @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
-    translate: 0;
-    --tw-content: "";
-    content: var(--tw-content);
-    transition:
-      background-color 0.1s,
-      translate 0.2s,
-      inset-inline-start 0.2s;
-    box-shadow:
-      0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
-      0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
-      0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000);
-    background-size: auto, calc(var(--noise) * 100%);
-    background-image: none, var(--fx-noise);
-  }
-  @media (forced-colors: active) {
-    &:before {
-      @apply outline -outline-offset-1;
-    }
-  }
-  @media print {
-    &:before {
-      outline: 0.25rem solid;
-      outline-offset: -1rem;
-    }
-  }
+      color 0.3s,
+      grid-template-columns 0.2s;
+    --input-color: color-mix(in oklab, var(--color-base-content) 50%, #0000);
+    --toggle-p: calc(var(--size) * 0.125);
+    --size: calc(var(--size-selector, 0.25rem) * 6);
+    width: calc((var(--size) * 2) - (var(--border) + var(--toggle-p)) * 2);
+    height: var(--size);
 
-  &:focus-visible,
-  &:has(:focus-visible) {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
-  }
-
-  &:checked,
-  &[aria-checked="true"],
-  &:has(> input:checked) {
-    grid-template-columns: 1fr 1fr 0fr;
-    @apply bg-base-100;
-    --input-color: var(--color-base-content);
-
-    &:before {
-      @apply bg-current;
-    }
-    @starting-style {
-      &:before {
-        opacity: 0;
+    /* icons in toggle */
+    > * {
+      @apply z-1 col-span-1 col-start-2 row-start-1 h-full cursor-pointer appearance-none bg-transparent p-0.5;
+      transition:
+        opacity 0.2s,
+        rotate 0.4s;
+      border: none;
+      &:focus {
+        @apply outline-hidden;
+      }
+      &:nth-child(2) {
+        @apply text-base-100;
+        rotate: 0deg;
+      }
+      &:nth-child(3) {
+        @apply text-base-100 opacity-0;
+        rotate: -15deg;
       }
     }
-  }
-
-  &:indeterminate {
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-  }
-
-  &:disabled {
-    @apply cursor-not-allowed opacity-30;
-
+    &:has(:checked) {
+      > :nth-child(2) {
+        @apply opacity-0;
+        rotate: 15deg;
+      }
+      > :nth-child(3) {
+        @apply opacity-100;
+        rotate: 0deg;
+      }
+    }
     &:before {
-      @apply bg-transparent;
-      border: var(--border) solid currentColor;
+      @apply rounded-selector relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
+      translate: 0;
+      --tw-content: "";
+      content: var(--tw-content);
+      transition:
+        background-color 0.1s,
+        translate 0.2s,
+        inset-inline-start 0.2s;
+      box-shadow:
+        0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
+        0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+        0 1px color-mix(in oklab, currentColor calc(var(--depth) * 10%), #0000);
+      background-size: auto, calc(var(--noise) * 100%);
+      background-image: none, var(--fx-noise);
+    }
+    @media (forced-colors: active) {
+      &:before {
+        @apply outline -outline-offset-1;
+      }
+    }
+    @media print {
+      &:before {
+        outline: 0.25rem solid;
+        outline-offset: -1rem;
+      }
+    }
+
+    &:focus-visible,
+    &:has(:focus-visible) {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+
+    &:checked,
+    &[aria-checked="true"],
+    &:has(> input:checked) {
+      grid-template-columns: 1fr 1fr 0fr;
+      @apply bg-base-100;
+      --input-color: var(--color-base-content);
+
+      &:before {
+        @apply bg-current;
+      }
+      @starting-style {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+
+    &:indeterminate {
+      grid-template-columns: 0.5fr 1fr 0.5fr;
+    }
+
+    &:disabled {
+      @apply cursor-not-allowed opacity-30;
+
+      &:before {
+        @apply bg-transparent;
+        border: var(--border) solid currentColor;
+      }
     }
   }
 }
 
 .toggle-primary {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-primary);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-primary);
+    }
   }
 }
 
 .toggle-secondary {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-secondary);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-secondary);
+    }
   }
 }
 
 .toggle-accent {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-accent);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-accent);
+    }
   }
 }
 
 .toggle-neutral {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-neutral);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-neutral);
+    }
   }
 }
 
 .toggle-success {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-success);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-success);
+    }
   }
 }
 
 .toggle-warning {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-warning);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-warning);
+    }
   }
 }
 
 .toggle-info {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-info);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-info);
+    }
   }
 }
 
 .toggle-error {
-  &:checked,
-  &[aria-checked="true"] {
-    --input-color: var(--color-error);
+  @layer daisyui.modifier {
+    &:checked,
+    &[aria-checked="true"] {
+      --input-color: var(--color-error);
+    }
   }
 }
 
 /* responsive */
 
 .toggle-xs {
-  &:is([type="checkbox"]),
-  &:has([type="checkbox"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 4);
+  @layer daisyui.modifier {
+    &:is([type="checkbox"]),
+    &:has([type="checkbox"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 4);
+    }
   }
 }
 
 .toggle-sm {
-  &:is([type="checkbox"]),
-  &:has([type="checkbox"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 5);
+  @layer daisyui.modifier {
+    &:is([type="checkbox"]),
+    &:has([type="checkbox"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 5);
+    }
   }
 }
 
 .toggle-md {
-  &:is([type="checkbox"]),
-  &:has([type="checkbox"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 6);
+  @layer daisyui.modifier {
+    &:is([type="checkbox"]),
+    &:has([type="checkbox"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 6);
+    }
   }
 }
 
 .toggle-lg {
-  &:is([type="checkbox"]),
-  &:has([type="checkbox"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 7);
+  @layer daisyui.modifier {
+    &:is([type="checkbox"]),
+    &:has([type="checkbox"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 7);
+    }
   }
 }
 
 .toggle-xl {
-  &:is([type="checkbox"]),
-  &:has([type="checkbox"]) {
-    --size: calc(var(--size-selector, 0.25rem) * 8);
+  @layer daisyui.modifier {
+    &:is([type="checkbox"]),
+    &:has([type="checkbox"]) {
+      --size: calc(var(--size-selector, 0.25rem) * 8);
+    }
   }
 }

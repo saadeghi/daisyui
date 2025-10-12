@@ -1,45 +1,60 @@
 .toast {
-  @apply fixed start-auto end-4 top-auto bottom-4 flex flex-col gap-2 bg-transparent;
-  translate: var(--toast-x, 0) var(--toast-y, 0);
-  width: max-content;
-  max-width: calc(100vw - 2rem);
+  @layer daisyui.component {
+    @apply fixed start-auto end-4 top-auto bottom-4 flex flex-col gap-2 bg-transparent;
+    translate: var(--toast-x, 0) var(--toast-y, 0);
+    width: max-content;
+    max-width: calc(100vw - 2rem);
 
-  & > * {
-    @media (prefers-reduced-motion: no-preference) {
-      animation: toast 0.25s ease-out;
+    & > * {
+      @media (prefers-reduced-motion: no-preference) {
+        animation: toast 0.25s ease-out;
+      }
     }
   }
+}
 
-  &:where(.toast-start) {
+.toast-start {
+  @layer daisyui.modifier {
     @apply start-4 end-auto;
     --toast-x: 0;
   }
+}
 
-  &:where(.toast-center) {
+.toast-center {
+  @layer daisyui.modifier {
     @apply start-1/2 end-1/2;
     --toast-x: -50%;
   }
+}
 
-  &:where(.toast-end) {
+.toast-end {
+  @layer daisyui.modifier {
     @apply start-auto end-4;
     --toast-x: 0;
   }
+}
 
-  &:where(.toast-bottom) {
+.toast-bottom {
+  @layer daisyui.modifier {
     @apply top-auto bottom-4;
     --toast-y: 0;
   }
+}
 
-  &:where(.toast-middle) {
+.toast-middle {
+  @layer daisyui.modifier {
     @apply top-1/2 bottom-auto;
     --toast-y: -50%;
   }
+}
 
-  &:where(.toast-top) {
+.toast-top {
+  @layer daisyui.modifier {
     @apply top-4 bottom-auto;
     --toast-y: 0;
   }
 }
+
 @keyframes toast {
   0% {
     scale: 0.9;
