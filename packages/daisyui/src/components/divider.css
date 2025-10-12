@@ -1,122 +1,148 @@
 .divider {
-  @apply flex h-4 flex-row items-center self-stretch whitespace-nowrap;
-  margin: var(--divider-m, 1rem 0);
-  /*
+  @layer daisyui.component {
+    @apply flex h-4 flex-row items-center self-stretch whitespace-nowrap;
+    margin: var(--divider-m, 1rem 0);
+    /*
     used --divider-color to avoid this issue
     https://github.com/tailwindlabs/tailwindcss/issues/17556
     https://lightningcss.dev/playground/index.html#%7B%22minify%22%3Afalse%2C%22customMedia%22%3Atrue%2C%22cssModules%22%3Afalse%2C%22analyzeDependencies%22%3Afalse%2C%22targets%22%3A%7B%22chrome%22%3A6225920%7D%2C%22include%22%3A0%2C%22exclude%22%3A0%2C%22source%22%3A%22.broken%20%7B%5Cn%20%20%26%3A%3Abefore%2C%20%26%3A%3Aafter%20%7B%5Cn%20%20%20%20background%3A%20blue%3B%5Cn%20%20%20%20%40media%20print%20%7B%5Cn%20%20%20%20%20%20background%3A%20orange%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.fine%20%7B%5Cn%20%20%26%3A%3Abefore%2C%20%26%3A%3Aafter%20%7B%5Cn%20%20%20%20background%3A%20blue%3B%5Cn%20%20%7D%5Cn%7D%22%2C%22visitorEnabled%22%3Afalse%2C%22visitor%22%3A%22%7B%5Cn%20%20Color(color)%20%7B%5Cn%20%20%20%20if%20(color.type%20%3D%3D%3D%20'rgb')%20%7B%5Cn%20%20%20%20%20%20color.g%20%3D%200%3B%5Cn%20%20%20%20%20%20return%20color%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22unusedSymbols%22%3A%5B%5D%2C%22version%22%3A%22local%22%7D
     https://github.com/tailwindlabs/tailwindcss/pull/17562
   */
-  --divider-color: color-mix(in oklab, var(--color-base-content) 10%, transparent);
+    --divider-color: color-mix(in oklab, var(--color-base-content) 10%, transparent);
 
-  &:before,
-  &:after {
-    content: "";
-    @apply h-0.5 w-full grow;
-    background-color: var(--divider-color);
-  }
-  @media print {
     &:before,
     &:after {
-      border: 0.5px solid;
+      content: "";
+      @apply h-0.5 w-full grow;
+      background-color: var(--divider-color);
     }
-  }
+    @media print {
+      &:before,
+      &:after {
+        border: 0.5px solid;
+      }
+    }
 
-  &:not(:empty) {
-    @apply gap-4;
+    &:not(:empty) {
+      @apply gap-4;
+    }
   }
 }
 
 .divider-horizontal {
-  --divider-m: 0 1rem;
-  &.divider {
-    @apply h-auto w-4 flex-col;
+  @layer daisyui.modifier {
+    --divider-m: 0 1rem;
+    &.divider {
+      @apply h-auto w-4 flex-col;
 
-    &:before {
-      @apply h-full w-0.5;
-    }
+      &:before {
+        @apply h-full w-0.5;
+      }
 
-    &:after {
-      @apply h-full w-0.5;
+      &:after {
+        @apply h-full w-0.5;
+      }
     }
   }
 }
 
 .divider-vertical {
-  --divider-m: 1rem 0;
-  &.divider {
-    @apply h-4 w-auto flex-row;
+  @layer daisyui.modifier {
+    --divider-m: 1rem 0;
+    &.divider {
+      @apply h-4 w-auto flex-row;
 
-    &:before {
-      @apply h-0.5 w-full;
-    }
+      &:before {
+        @apply h-0.5 w-full;
+      }
 
-    &:after {
-      @apply h-0.5 w-full;
+      &:after {
+        @apply h-0.5 w-full;
+      }
     }
   }
 }
 
 .divider-neutral {
-  &:before,
-  &:after {
-    @apply bg-neutral;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-neutral;
+    }
   }
 }
 
 .divider-primary {
-  &:before,
-  &:after {
-    @apply bg-primary;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-primary;
+    }
   }
 }
 
 .divider-secondary {
-  &:before,
-  &:after {
-    @apply bg-secondary;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-secondary;
+    }
   }
 }
 
 .divider-accent {
-  &:before,
-  &:after {
-    @apply bg-accent;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-accent;
+    }
   }
 }
 
 .divider-success {
-  &:before,
-  &:after {
-    @apply bg-success;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-success;
+    }
   }
 }
 
 .divider-warning {
-  &:before,
-  &:after {
-    @apply bg-warning;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-warning;
+    }
   }
 }
 
 .divider-info {
-  &:before,
-  &:after {
-    @apply bg-info;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-info;
+    }
   }
 }
 
 .divider-error {
-  &:before,
-  &:after {
-    @apply bg-error;
+  @layer daisyui.modifier {
+    &:before,
+    &:after {
+      @apply bg-error;
+    }
   }
 }
 
 .divider-start:before {
-  @apply hidden;
+  @layer daisyui.modifier {
+    @apply hidden;
+  }
 }
 
 .divider-end:after {
-  @apply hidden;
+  @layer daisyui.modifier {
+    @apply hidden;
+  }
 }
