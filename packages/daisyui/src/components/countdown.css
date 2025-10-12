@@ -1,9 +1,10 @@
 .countdown {
+  &.countdown {
+    line-height: 1em;
+  }
+
   @layer daisyui.component {
     @apply inline-flex;
-    &.countdown {
-      line-height: 1em;
-    }
 
     & > * {
       @apply invisible relative inline-block overflow-y-clip;
