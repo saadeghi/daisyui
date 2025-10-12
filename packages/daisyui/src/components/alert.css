@@ -1,5 +1,10 @@
 .alert {
+  /* override the border style of Tailwind CSS Typography plugin */
+  border-width: var(--border);
+  border-color: var(--alert-border-color, var(--color-base-200));
   @layer daisyui.component {
+    border-style: solid;
+    --alert-border-color: var(--color-base-200);
     @apply rounded-box text-base-content grid items-center gap-4 px-4 py-3;
     background-color: var(--alert-color, var(--color-base-200));
     justify-content: start;
@@ -24,66 +29,73 @@
     &:has(:nth-child(2)) {
       grid-template-columns: auto minmax(auto, 1fr);
     }
-    &.alert-outline {
-      @apply bg-transparent;
-      color: var(--alert-color);
-      box-shadow: none;
-      background-image: none;
-    }
-
-    &.alert-dash {
-      @apply bg-transparent;
-      color: var(--alert-color);
-      border-style: dashed;
-      box-shadow: none;
-      background-image: none;
-    }
-
-    &.alert-soft {
-      color: var(--alert-color, var(--color-base-content));
-      background: color-mix(
-        in oklab,
-        var(--alert-color, var(--color-base-content)) 8%,
-        var(--color-base-100)
-      );
-      border-color: color-mix(
-        in oklab,
-        var(--alert-color, var(--color-base-content)) 10%,
-        var(--color-base-100)
-      );
-      box-shadow: none;
-      background-image: none;
-    }
   }
-  /* override the border style of Tailwind CSS Typography plugin */
-  border: var(--border) solid var(--color-base-200);
 }
 
 .alert-info {
   @layer daisyui.modifier {
-    @apply text-info-content border-info;
+    @apply text-info-content;
+    --alert-border-color: var(--color-info);
     --alert-color: var(--color-info);
   }
 }
 
 .alert-success {
   @layer daisyui.modifier {
-    @apply text-success-content border-success;
+    @apply text-success-content;
+    --alert-border-color: var(--color-success);
     --alert-color: var(--color-success);
   }
 }
 
 .alert-warning {
   @layer daisyui.modifier {
-    @apply text-warning-content border-warning;
+    @apply text-warning-content;
+    --alert-border-color: var(--color-warning);
     --alert-color: var(--color-warning);
   }
 }
 
 .alert-error {
   @layer daisyui.modifier {
-    @apply text-error-content border-error;
+    @apply text-error-content;
+    --alert-border-color: var(--color-error);
     --alert-color: var(--color-error);
+  }
+}
+
+.alert-soft {
+  @layer daisyui.style {
+    color: var(--alert-color, var(--color-base-content));
+    background: color-mix(
+      in oklab,
+      var(--alert-color, var(--color-base-content)) 8%,
+      var(--color-base-100)
+    );
+    --alert-border-color: color-mix(
+      in oklab,
+      var(--alert-color, var(--color-base-content)) 10%,
+      var(--color-base-100)
+    );
+    box-shadow: none;
+    background-image: none;
+  }
+}
+.alert-outline {
+  @layer daisyui.style {
+    @apply bg-transparent;
+    color: var(--alert-color);
+    box-shadow: none;
+    background-image: none;
+  }
+}
+.alert-dash {
+  @layer daisyui.style {
+    @apply bg-transparent;
+    color: var(--alert-color);
+    border-style: dashed;
+    box-shadow: none;
+    background-image: none;
   }
 }
 
