@@ -1,5 +1,5 @@
 .label {
-  @layer components.base {
+  @layer daisyui.component {
     @apply inline-flex items-center gap-1.5 whitespace-nowrap text-current/60;
     &:has(input) {
       @apply cursor-pointer;
@@ -19,7 +19,7 @@
   }
 }
 .floating-label {
-  @layer components.base {
+  @layer daisyui.component {
     @apply relative block;
     input {
       @apply block;

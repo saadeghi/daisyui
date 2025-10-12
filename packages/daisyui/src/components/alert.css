@@ -1,5 +1,5 @@
 .alert {
-  @layer components.base {
+  @layer daisyui.component {
     @apply rounded-box text-base-content grid items-center gap-4 px-4 py-3;
     background-color: var(--alert-color, var(--color-base-200));
     justify-content: start;
@@ -59,35 +59,35 @@
 }
 
 .alert-info {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply text-info-content border-info;
     --alert-color: var(--color-info);
   }
 }
 
 .alert-success {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply text-success-content border-success;
     --alert-color: var(--color-success);
   }
 }
 
 .alert-warning {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply text-warning-content border-warning;
     --alert-color: var(--color-warning);
   }
 }
 
 .alert-error {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply text-error-content border-error;
     --alert-color: var(--color-error);
   }
 }
 
 .alert-vertical {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     justify-content: center;
     justify-items: center;
     grid-auto-flow: row;
@@ -100,7 +100,7 @@
 }
 
 .alert-horizontal {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     justify-content: start;
     justify-items: start;
     grid-auto-flow: column;

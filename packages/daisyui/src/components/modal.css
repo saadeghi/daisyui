@@ -1,5 +1,5 @@
 .modal {
-  @layer components.base {
+  @layer daisyui.component {
     @apply pointer-events-none invisible fixed inset-0 m-0 grid h-full max-h-none w-full max-w-none items-center justify-items-center bg-transparent p-0 text-[inherit];
     transition:
       visibility 0.3s allow-discrete,
@@ -15,7 +15,7 @@
     }
   }
 
-  @layer components.modifier {
+  @layer daisyui.modifier {
     &.modal-open,
     &[open],
     &:target,
@@ -46,19 +46,19 @@
 }
 
 .modal-action {
-  @layer components.base {
+  @layer daisyui.component {
     @apply mt-6 flex justify-end gap-2;
   }
 }
 
 .modal-toggle {
-  @layer components.base {
+  @layer daisyui.component {
     @apply fixed h-0 w-0 appearance-none opacity-0;
   }
 }
 
 .modal-backdrop {
-  @layer components.base {
+  @layer daisyui.component {
     @apply col-start-1 row-start-1 grid self-stretch justify-self-stretch text-transparent;
     z-index: -1;
 
@@ -69,7 +69,7 @@
 }
 
 .modal-box {
-  @layer components.base {
+  @layer daisyui.component {
     @apply bg-base-100 col-start-1 row-start-1 max-h-screen w-11/12 max-w-[32rem] p-6;
     transition:
       translate 0.3s ease-out,
@@ -89,7 +89,7 @@
 }
 
 .modal-top {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply place-items-start;
 
     .modal-box {
@@ -106,7 +106,7 @@
 }
 
 .modal-middle {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply place-items-center;
 
     .modal-box {
@@ -123,7 +123,7 @@
 }
 
 .modal-bottom {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply place-items-end;
 
     .modal-box {
@@ -140,7 +140,7 @@
 }
 
 .modal-start {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply place-items-start;
 
     .modal-box {
@@ -156,7 +156,7 @@
 }
 
 .modal-end {
-  @layer components.modifier {
+  @layer daisyui.modifier {
     @apply place-items-end;
 
     .modal-box {
