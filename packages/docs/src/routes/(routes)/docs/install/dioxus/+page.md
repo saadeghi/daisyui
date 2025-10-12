@@ -9,7 +9,7 @@ desc: How to install Tailwind CSS and daisyUI in a Dioxus project
 
 ### 1. Create a new Dioxus project
 
-[Install Rust and Dioxus CLI](https://dioxuslabs.com/learn/0.6/getting_started/) if you haven't already.
+[Install Rust, WebAssembly Target and Dioxus CLI](https://dioxuslabs.com/learn/0.6/getting_started/) if you haven't already.
 
 Create a new Dioxus project in the current directory
 
