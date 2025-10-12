@@ -52,8 +52,8 @@ chmod +x static/tailwindcss
 Run this code to download latest version of daisyUI as a single js file and put it next to Tailwind's executable file.
 
 ```sh:Terminal
-curl -sLo static/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLo static/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLo static/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.mjs
+curl -sLo static/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.mjs
 ```
 
 ### 4. Add Tailwind CSS and daisyUI

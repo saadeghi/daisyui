@@ -112,8 +112,8 @@ chmod +x myapp/static/css/tailwindcss
 Run this code to download the latest version of daisyUI as a single js file. It puts the file at `myapp/static/css/` next to the Tailwind CSS executable.
 
 ```sh:Terminal
-curl -sLo myapp/static/css/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
-curl -sLo myapp/static/css/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js
+curl -sLo myapp/static/css/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.mjs
+curl -sLo myapp/static/css/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.mjs
 ```
 
 ### 5. Create an input.css file
