@@ -1,177 +1,197 @@
 .card {
-  @apply rounded-box relative flex flex-col;
-  outline-width: 2px;
-  transition: outline 0.2s ease-in-out;
-  outline: 0 solid #0000;
-  outline-offset: 2px;
-  &:focus {
-    @apply outline-hidden;
-  }
-
-  &:focus-visible {
-    outline-color: currentColor;
-  }
-
-  :where(figure:first-child) {
-    @apply overflow-hidden;
-    border-start-start-radius: inherit;
-    border-start-end-radius: inherit;
-    border-end-start-radius: unset;
-    border-end-end-radius: unset;
-  }
-
-  :where(figure:last-child) {
-    @apply overflow-hidden;
-    border-start-start-radius: unset;
-    border-start-end-radius: unset;
-    border-end-start-radius: inherit;
-    border-end-end-radius: inherit;
-  }
-
-  &:where(.card-border) {
-    border: var(--border) solid var(--color-base-200);
-  }
-
-  &:where(.card-dash) {
-    border: var(--border) dashed var(--color-base-200);
-  }
-
-  &.image-full {
-    @apply grid;
-
-    > * {
-      @apply col-start-1 row-start-1;
+  @layer daisyui.component {
+    @apply rounded-box relative flex flex-col;
+    outline-width: 2px;
+    transition: outline 0.2s ease-in-out;
+    outline: 0 solid #0000;
+    outline-offset: 2px;
+    &:focus {
+      @apply outline-hidden;
     }
 
-    > .card-body {
-      @apply text-neutral-content relative;
+    &:focus-visible {
+      outline-color: currentColor;
     }
 
-    :where(figure) {
+    :where(figure:first-child) {
       @apply overflow-hidden;
-      border-radius: inherit;
+      border-start-start-radius: inherit;
+      border-start-end-radius: inherit;
+      border-end-start-radius: unset;
+      border-end-end-radius: unset;
     }
 
-    > figure img {
-      @apply h-full object-cover;
-      filter: brightness(28%);
+    :where(figure:last-child) {
+      @apply overflow-hidden;
+      border-start-start-radius: unset;
+      border-start-end-radius: unset;
+      border-end-start-radius: inherit;
+      border-end-end-radius: inherit;
     }
-  }
 
-  figure {
-    @apply flex items-center justify-center;
-  }
-  &:has(> input:is(input[type="checkbox"], input[type="radio"])) {
-    @apply cursor-pointer;
-    user-select: none;
-  }
-  &:has(> :checked) {
-    outline: 2px solid currentColor;
+    &:where(.card-border) {
+      border: var(--border) solid var(--color-base-200);
+    }
+
+    &:where(.card-dash) {
+      border: var(--border) dashed var(--color-base-200);
+    }
+
+    &.image-full {
+      @apply grid;
+
+      > * {
+        @apply col-start-1 row-start-1;
+      }
+
+      > .card-body {
+        @apply text-neutral-content relative;
+      }
+
+      :where(figure) {
+        @apply overflow-hidden;
+        border-radius: inherit;
+      }
+
+      > figure img {
+        @apply h-full object-cover;
+        filter: brightness(28%);
+      }
+    }
+
+    figure {
+      @apply flex items-center justify-center;
+    }
+    &:has(> input:is(input[type="checkbox"], input[type="radio"])) {
+      @apply cursor-pointer;
+      user-select: none;
+    }
+    &:has(> :checked) {
+      outline: 2px solid currentColor;
+    }
   }
 }
 
 .card-title {
-  @apply flex items-center gap-2;
-  font-size: var(--cardtitle-fs, 1.125rem);
-  font-weight: 600;
+  @layer daisyui.modifier {
+    @apply flex items-center gap-2;
+    font-size: var(--cardtitle-fs, 1.125rem);
+    font-weight: 600;
+  }
 }
 
 .card-body {
-  @apply flex flex-auto flex-col gap-2;
-  padding: var(--card-p, 1.5rem);
-  font-size: var(--card-fs, 0.875rem);
+  @layer daisyui.modifier {
+    @apply flex flex-auto flex-col gap-2;
+    padding: var(--card-p, 1.5rem);
+    font-size: var(--card-fs, 0.875rem);
 
-  :where(p) {
-    @apply grow;
+    :where(p) {
+      @apply grow;
+    }
   }
 }
 
 .card-actions {
-  @apply flex flex-wrap items-start gap-2;
+  @layer daisyui.modifier {
+    @apply flex flex-wrap items-start gap-2;
+  }
 }
 
 .card-xs {
-  .card-body {
-    --card-p: 0.5rem;
-    --card-fs: 0.6875rem;
-  }
+  @layer daisyui.modifier {
+    .card-body {
+      --card-p: 0.5rem;
+      --card-fs: 0.6875rem;
+    }
 
-  .card-title {
-    --cardtitle-fs: 0.875rem;
+    .card-title {
+      --cardtitle-fs: 0.875rem;
+    }
   }
 }
 
 .card-sm {
-  .card-body {
-    --card-p: 1rem;
-    --card-fs: 0.75rem;
-  }
+  @layer daisyui.modifier {
+    .card-body {
+      --card-p: 1rem;
+      --card-fs: 0.75rem;
+    }
 
-  .card-title {
-    --cardtitle-fs: 1rem;
+    .card-title {
+      --cardtitle-fs: 1rem;
+    }
   }
 }
 
 .card-md {
-  .card-body {
-    --card-p: 1.5rem;
-    --card-fs: 0.875rem;
-  }
+  @layer daisyui.modifier {
+    .card-body {
+      --card-p: 1.5rem;
+      --card-fs: 0.875rem;
+    }
 
-  .card-title {
-    --cardtitle-fs: 1.125rem;
+    .card-title {
+      --cardtitle-fs: 1.125rem;
+    }
   }
 }
 
 .card-lg {
-  .card-body {
-    --card-p: 2rem;
-    --card-fs: 1rem;
-  }
+  @layer daisyui.modifier {
+    .card-body {
+      --card-p: 2rem;
+      --card-fs: 1rem;
+    }
 
-  .card-title {
-    --cardtitle-fs: 1.25rem;
+    .card-title {
+      --cardtitle-fs: 1.25rem;
+    }
   }
 }
 
 .card-xl {
-  .card-body {
-    --card-p: 2.5rem;
-    --card-fs: 1.125rem;
-  }
+  @layer daisyui.modifier {
+    .card-body {
+      --card-p: 2.5rem;
+      --card-fs: 1.125rem;
+    }
 
-  .card-title {
-    --cardtitle-fs: 1.375rem;
+    .card-title {
+      --cardtitle-fs: 1.375rem;
+    }
   }
 }
 
 .card-side {
-  align-items: stretch;
-  flex-direction: row;
+  @layer daisyui.modifier {
+    align-items: stretch;
+    flex-direction: row;
 
-  :where(figure:first-child) {
-    @apply overflow-hidden;
-    border-start-start-radius: inherit;
-    border-start-end-radius: unset;
-    border-end-start-radius: inherit;
-    border-end-end-radius: unset;
-  }
+    :where(figure:first-child) {
+      @apply overflow-hidden;
+      border-start-start-radius: inherit;
+      border-start-end-radius: unset;
+      border-end-start-radius: inherit;
+      border-end-end-radius: unset;
+    }
 
-  :where(figure:last-child) {
-    @apply overflow-hidden;
-    border-start-start-radius: unset;
-    border-start-end-radius: inherit;
-    border-end-start-radius: unset;
-    border-end-end-radius: inherit;
-  }
+    :where(figure:last-child) {
+      @apply overflow-hidden;
+      border-start-start-radius: unset;
+      border-start-end-radius: inherit;
+      border-end-start-radius: unset;
+      border-end-end-radius: inherit;
+    }
 
-  figure > * {
-    max-width: unset;
-  }
+    figure > * {
+      max-width: unset;
+    }
 
-  :where(figure > *) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    :where(figure > *) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

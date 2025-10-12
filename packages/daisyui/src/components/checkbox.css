@@ -1,141 +1,174 @@
 .checkbox {
-  border: var(--border) solid
-    var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
-  @apply text-base-content rounded-selector relative inline-block shrink-0 cursor-pointer appearance-none p-1 align-middle;
-  box-shadow:
-    0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
-    0 0 #0000 inset,
-    0 0 #0000;
-  transition:
-    background-color 0.2s,
-    box-shadow 0.2s;
-  --size: calc(var(--size-selector, 0.25rem) * 6);
-  width: var(--size);
-  height: var(--size);
-  background-size: auto, calc(var(--noise) * 100%);
-  background-image: none, var(--fx-noise);
-  &:before {
-    --tw-content: "";
-    content: var(--tw-content);
-    @apply block size-full rotate-45 bg-current opacity-0;
-    transition:
-      clip-path 0.3s,
-      opacity 0.1s,
-      rotate 0.3s,
-      translate 0.3s;
-    transition-delay: 0.1s;
-    clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%);
-    box-shadow: 0px 3px 0 0px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
-    font-size: 1rem;
-    line-height: 0.75;
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--input-color, currentColor);
-    outline-offset: 2px;
-  }
-
-  &:checked,
-  &[aria-checked="true"] {
-    background-color: var(--input-color, #0000);
+  @layer daisyui.component {
+    border: var(--border) solid
+      var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
+    @apply text-base-content rounded-selector relative inline-block shrink-0 cursor-pointer appearance-none p-1 align-middle;
     box-shadow:
+      0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset,
       0 0 #0000 inset,
-      0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
-      0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
-
+      0 0 #0000;
+    transition:
+      background-color 0.2s,
+      box-shadow 0.2s;
+    --size: calc(var(--size-selector, 0.25rem) * 6);
+    width: var(--size);
+    height: var(--size);
+    background-size: auto, calc(var(--noise) * 100%);
+    background-image: none, var(--fx-noise);
     &:before {
-      clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%);
-      @apply opacity-100;
+      --tw-content: "";
+      content: var(--tw-content);
+      @apply block size-full rotate-45 bg-current opacity-0;
+      transition:
+        clip-path 0.3s,
+        opacity 0.1s,
+        rotate 0.3s,
+        translate 0.3s;
+      transition-delay: 0.1s;
+      clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 70% 80%, 70% 100%);
+      box-shadow: 0px 3px 0 0px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
+      font-size: 1rem;
+      line-height: 0.75;
     }
-    @media (forced-colors: active) {
+
+    &:focus-visible {
+      outline: 2px solid var(--input-color, currentColor);
+      outline-offset: 2px;
+    }
+
+    &:checked,
+    &[aria-checked="true"] {
+      background-color: var(--input-color, #0000);
+      box-shadow:
+        0 0 #0000 inset,
+        0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset,
+        0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
+
       &:before {
-        @apply rotate-0 bg-transparent [--tw-content:"✔︎"] [clip-path:none];
+        clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 0%, 70% 0%, 70% 100%);
+        @apply opacity-100;
+      }
+      @media (forced-colors: active) {
+        &:before {
+          @apply rotate-0 bg-transparent [--tw-content:"✔︎"] [clip-path:none];
+        }
+      }
+      @media print {
+        &:before {
+          @apply rotate-0 bg-transparent;
+          --tw-content: "✔︎";
+          clip-path: none;
+        }
       }
     }
-    @media print {
-      &:before {
-        @apply rotate-0 bg-transparent;
-        --tw-content: "✔︎";
-        clip-path: none;
-      }
-    }
-  }
 
-  &:indeterminate {
-    background-color: var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
-    &:before {
-      @apply rotate-0 opacity-100;
-      translate: 0 -35%;
-      clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%);
+    &:indeterminate {
+      background-color: var(
+        --input-color,
+        color-mix(in oklab, var(--color-base-content) 20%, #0000)
+      );
+      &:before {
+        @apply rotate-0 opacity-100;
+        translate: 0 -35%;
+        clip-path: polygon(20% 100%, 20% 80%, 50% 80%, 50% 80%, 80% 80%, 80% 100%);
+      }
     }
   }
 }
 
 .checkbox-primary {
-  @apply text-primary-content;
-  --input-color: var(--color-primary);
+  @layer daisyui.modifier {
+    @apply text-primary-content;
+    --input-color: var(--color-primary);
+  }
 }
 
 .checkbox-secondary {
-  @apply text-secondary-content;
-  --input-color: var(--color-secondary);
+  @layer daisyui.modifier {
+    @apply text-secondary-content;
+    --input-color: var(--color-secondary);
+  }
 }
 
 .checkbox-accent {
-  @apply text-accent-content;
-  --input-color: var(--color-accent);
+  @layer daisyui.modifier {
+    @apply text-accent-content;
+    --input-color: var(--color-accent);
+  }
 }
 
 .checkbox-neutral {
-  @apply text-neutral-content;
-  --input-color: var(--color-neutral);
+  @layer daisyui.modifier {
+    @apply text-neutral-content;
+    --input-color: var(--color-neutral);
+  }
 }
 
 .checkbox-info {
-  @apply text-info-content;
-  --input-color: var(--color-info);
+  @layer daisyui.modifier {
+    @apply text-info-content;
+    --input-color: var(--color-info);
+  }
 }
 
 .checkbox-success {
-  @apply text-success-content;
-  --input-color: var(--color-success);
+  @layer daisyui.modifier {
+    @apply text-success-content;
+    --input-color: var(--color-success);
+  }
 }
 
 .checkbox-warning {
-  @apply text-warning-content;
-  --input-color: var(--color-warning);
+  @layer daisyui.modifier {
+    @apply text-warning-content;
+    --input-color: var(--color-warning);
+  }
 }
 
 .checkbox-error {
-  @apply text-error-content;
-  --input-color: var(--color-error);
+  @layer daisyui.modifier {
+    @apply text-error-content;
+    --input-color: var(--color-error);
+  }
 }
 
 .checkbox:disabled {
-  @apply cursor-not-allowed opacity-20;
+  @layer daisyui.modifier {
+    @apply cursor-not-allowed opacity-20;
+  }
 }
 
 .checkbox-xs {
-  @apply p-[0.125rem];
-  --size: calc(var(--size-selector, 0.25rem) * 4);
+  @layer daisyui.modifier {
+    @apply p-[0.125rem];
+    --size: calc(var(--size-selector, 0.25rem) * 4);
+  }
 }
 
 .checkbox-sm {
-  @apply p-[0.1875rem];
-  --size: calc(var(--size-selector, 0.25rem) * 5);
+  @layer daisyui.modifier {
+    @apply p-[0.1875rem];
+    --size: calc(var(--size-selector, 0.25rem) * 5);
+  }
 }
 
 .checkbox-md {
-  @apply p-[0.25rem];
-  --size: calc(var(--size-selector, 0.25rem) * 6);
+  @layer daisyui.modifier {
+    @apply p-[0.25rem];
+    --size: calc(var(--size-selector, 0.25rem) * 6);
+  }
 }
 
 .checkbox-lg {
-  @apply p-[0.3125rem];
-  --size: calc(var(--size-selector, 0.25rem) * 7);
+  @layer daisyui.modifier {
+    @apply p-[0.3125rem];
+    --size: calc(var(--size-selector, 0.25rem) * 7);
+  }
 }
 
 .checkbox-xl {
-  @apply p-[0.375rem];
-  --size: calc(var(--size-selector, 0.25rem) * 8);
+  @layer daisyui.modifier {
+    @apply p-[0.375rem];
+    --size: calc(var(--size-selector, 0.25rem) * 8);
+  }
 }
