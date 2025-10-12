@@ -13,9 +13,6 @@
     &::backdrop {
       @apply hidden;
     }
-  }
-
-  @layer daisyui.modifier {
     &.modal-open,
     &[open],
     &:target,
